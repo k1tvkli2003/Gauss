@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { Platform, View } from "react-native";
+import { Platform, Text, View } from "react-native";
 import { WebView } from "react-native-webview";
 import { colors } from "@/theme/colors";
 
@@ -107,11 +107,12 @@ export function MathText({ content, fontSize = 17, color = colors.text }: Props)
   );
 
   if (Platform.OS === "web") {
-    // RN-web: WebView is unreliable; render a basic fallback.
+    // RN-web: WebView is unreliable; render a plain-text fallback (no KaTeX).
     return (
       <View>
-        {/* eslint-disable-next-line react-native/no-raw-text */}
-        <span style={{ color, fontSize, direction: "rtl" } as any}>{content}</span>
+        <Text style={{ color, fontSize, writingDirection: "rtl", textAlign: "right" }}>
+          {content}
+        </Text>
       </View>
     );
   }
