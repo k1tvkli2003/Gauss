@@ -1,6 +1,7 @@
 import React from "react";
 import { Pressable, Text, View } from "react-native";
 import { colors } from "@/theme/colors";
+import { pressScale } from "@/lib/press";
 import { MathText } from "./MathText";
 
 interface Props {
@@ -43,7 +44,7 @@ export function OptionButton({
     <Pressable
       onPress={onPress}
       disabled={reveal}
-      style={{ borderColor, backgroundColor: bg }}
+      style={({ pressed }) => [{ borderColor, backgroundColor: bg }, pressScale(pressed && !reveal)]}
       className="mb-3 flex-row-reverse items-center rounded-xl border px-4 py-3"
     >
       <View

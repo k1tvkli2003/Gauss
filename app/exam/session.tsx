@@ -5,6 +5,7 @@ import { useRouter } from "expo-router";
 import { colors, subjectMeta } from "@/theme/colors";
 import { categoryLabel } from "@/data/categories";
 import { toFa } from "@/lib/format";
+import { pressScale } from "@/lib/press";
 import { DifficultyBadge } from "@/components/DifficultyBadge";
 import { MathText } from "@/components/MathText";
 import { OptionButton } from "@/components/OptionButton";
@@ -28,6 +29,7 @@ export default function ExamSession() {
     goTo,
     setScratch,
     finishAndSave,
+    reset,
   } = useExamStore();
 
   const [submitting, setSubmitting] = useState(false);
@@ -68,6 +70,24 @@ export default function ExamSession() {
 
   const toggleReveal = () => setRevealed((r) => ({ ...r, [index]: !r[index] }));
 
+  const confirmAbandon = () => {
+    Alert.alert(
+      "خروج از آزمون",
+      "پیشرفت این آزمون ذخیره نمی‌شه. مطمئنی می‌خوای بیرون بری؟",
+      [
+        { text: "ادامه می‌دم", style: "cancel" },
+        {
+          text: "خروج",
+          style: "destructive",
+          onPress: () => {
+            reset();
+            router.replace("/");
+          },
+        },
+      ],
+    );
+  };
+
   const doFinish = async () => {
     setSubmitting(true);
     try {
@@ -93,13 +113,13 @@ export default function ExamSession() {
         <View className="flex-row items-center gap-3">
           <Timer resetKey={index} />
           <Pressable
-            onPress={confirmFinish}
+            onPress={confirmAbandon}
             disabled={submitting}
-            style={{ backgroundColor: colors.neonGreen }}
-            className="rounded-lg px-4 py-2"
+            style={{ borderColor: colors.border }}
+            className="rounded-lg border px-3 py-2"
           >
-            <Text style={{ color: colors.bg }} className="font-bold">
-              پایان
+            <Text style={{ color: colors.muted }} className="text-xs font-semibold">
+              ✕ خروج
             </Text>
           </Pressable>
         </View>
@@ -167,25 +187,8 @@ export default function ExamSession() {
             </Pressable>
           </View>
 
-          {/* Nav footer */}
-          <View className="flex-row-reverse items-center justify-between border-t border-ink-500 px-5 py-3">
-            <NavBtn label="بعدی ›" onPress={next} disabled={isLast} primary />
-            <View className="flex-row items-center gap-2">
-              <Pressable
-                onPress={() => {
-                  skip();
-                  if (!isLast) next();
-                }}
-                className="rounded-lg bg-ink-700 px-4 py-2"
-              >
-                <Text style={{ color: colors.muted }}>رد کردن</Text>
-              </Pressable>
-            </View>
-            <NavBtn label="‹ قبلی" onPress={prev} disabled={index === 0} />
-          </View>
-
-          {/* Question dots */}
-          <View className="flex-row flex-wrap justify-center gap-2 px-5 pb-3">
+          {/* Question dots (44px tap targets) */}
+          <View className="flex-row flex-wrap justify-center gap-2 px-5 pt-3">
             {questions.map((_, i) => {
               const a = attempts[i];
               let bg = colors.raised;
@@ -196,11 +199,11 @@ export default function ExamSession() {
                 <Pressable
                   key={i}
                   onPress={() => goTo(i)}
-                  style={{ width: 26, height: 26, borderRadius: 8, backgroundColor: bg }}
+                  style={{ width: 40, height: 40, borderRadius: 12, backgroundColor: bg }}
                   className="items-center justify-center"
                 >
                   <Text
-                    style={{ color: i === index ? colors.bg : colors.text, fontSize: 11 }}
+                    style={{ color: i === index ? colors.bg : colors.text, fontSize: 13 }}
                     className="font-bold"
                   >
                     {toFa(i + 1)}
@@ -208,6 +211,38 @@ export default function ExamSession() {
                 </Pressable>
               );
             })}
+          </View>
+
+          {/* Nav row */}
+          <View className="flex-row-reverse items-center justify-between px-5 pt-2">
+            <NavBtn label="بعدی ›" onPress={next} disabled={isLast} primary />
+            <Pressable
+              onPress={() => {
+                skip();
+                if (!isLast) next();
+              }}
+              className="rounded-lg bg-ink-700 px-4 py-2"
+            >
+              <Text style={{ color: colors.muted }}>رد کردن</Text>
+            </Pressable>
+            <NavBtn label="‹ قبلی" onPress={prev} disabled={index === 0} />
+          </View>
+
+          {/* Primary action — bottom thumb zone */}
+          <View className="border-t border-ink-500 px-5 py-3">
+            <Pressable
+              onPress={confirmFinish}
+              disabled={submitting}
+              style={({ pressed }) => [
+                { backgroundColor: colors.neonGreen, opacity: submitting ? 0.6 : 1 },
+                pressScale(pressed && !submitting),
+              ]}
+              className="items-center rounded-2xl py-3"
+            >
+              <Text style={{ color: colors.bg }} className="text-base font-bold">
+                پایان و دیدن کارنامه
+              </Text>
+            </Pressable>
           </View>
         </View>
 
@@ -244,10 +279,13 @@ function NavBtn({
     <Pressable
       onPress={onPress}
       disabled={disabled}
-      style={{
-        backgroundColor: disabled ? colors.card : primary ? colors.neonBlue : colors.raised,
-        opacity: disabled ? 0.4 : 1,
-      }}
+      style={({ pressed }) => [
+        {
+          backgroundColor: disabled ? colors.card : primary ? colors.neonBlue : colors.raised,
+          opacity: disabled ? 0.4 : 1,
+        },
+        pressScale(pressed && !disabled),
+      ]}
       className="rounded-lg px-5 py-2"
     >
       <Text style={{ color: primary && !disabled ? colors.bg : colors.text }} className="font-semibold">

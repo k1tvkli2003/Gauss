@@ -5,6 +5,7 @@ import { useFocusEffect, useRouter } from "expo-router";
 import { colors } from "@/theme/colors";
 import { categoryLabel } from "@/data/categories";
 import { toFa } from "@/lib/format";
+import { pressScale } from "@/lib/press";
 import { fetchAnalytics, fetchExamHistory, fetchRevengeQuestionIds, type TopicStat } from "@/api/history";
 import type { ExamHistoryRow } from "@/types";
 
@@ -202,7 +203,10 @@ function BigButton({
   return (
     <Pressable
       onPress={onPress}
-      style={{ borderColor: color, backgroundColor: `${color}10` }}
+      style={({ pressed }) => [
+        { borderColor: color, backgroundColor: `${color}10` },
+        pressScale(pressed),
+      ]}
       className="flex-row-reverse items-center justify-between rounded-2xl border p-5"
     >
       <View className="items-end">
@@ -237,11 +241,14 @@ function SmallButton({
     <Pressable
       onPress={onPress}
       disabled={disabled}
-      style={{
-        borderColor: disabled ? colors.border : color,
-        backgroundColor: disabled ? colors.card : `${color}10`,
-        opacity: disabled ? 0.5 : 1,
-      }}
+      style={({ pressed }) => [
+        {
+          borderColor: disabled ? colors.border : color,
+          backgroundColor: disabled ? colors.card : `${color}10`,
+          opacity: disabled ? 0.5 : 1,
+        },
+        pressScale(pressed && !disabled),
+      ]}
       className="flex-1 flex-row-reverse items-center justify-between rounded-2xl border p-4"
     >
       <View className="items-end">

@@ -1,9 +1,10 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { colors } from "@/theme/colors";
 import { KONKUR_SECONDS_PER_QUESTION } from "@/types";
+import { toFa } from "@/lib/format";
 import { SolutionCard } from "@/components/SolutionCard";
 import { useExamStore } from "@/store/examStore";
 
@@ -11,6 +12,9 @@ export default function Results() {
   const router = useRouter();
   const results = useExamStore((s) => s.results());
   const reset = useExamStore((s) => s.reset);
+
+  // Animated count-up for the score (easeOutCubic, ~700ms).
+  const [shownScore, setShownScore] = useState(0);
 
   const summary = useMemo(() => {
     const correct = results.filter((r) => r.status === "correct").length;
@@ -28,6 +32,25 @@ export default function Results() {
       avg,
     };
   }, [results]);
+
+  useEffect(() => {
+    const target = summary.score;
+    if (target <= 0) {
+      setShownScore(0);
+      return;
+    }
+    let raf = 0;
+    const start = Date.now();
+    const dur = 700;
+    const tick = () => {
+      const t = Math.min(1, (Date.now() - start) / dur);
+      const eased = 1 - Math.pow(1 - t, 3);
+      setShownScore(Math.round(target * eased));
+      if (t < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [summary.score]);
 
   const home = () => {
     reset();
@@ -69,14 +92,14 @@ export default function Results() {
             className="h-24 w-24 items-center justify-center rounded-full border-4"
           >
             <Text style={{ color: scoreColor }} className="text-3xl font-bold">
-              {summary.score}%
+              {toFa(shownScore)}٪
             </Text>
           </View>
           <View className="flex-1 gap-2">
-            <Row label="درست" value={summary.correct} color={colors.neonGreen} />
-            <Row label="غلط" value={summary.wrong} color={colors.neonRed} />
-            <Row label="نزده" value={summary.skipped} color={colors.neonAmber} />
-            <Row label="میانگین زمان" value={`${summary.avg}s`} color={colors.neonBlue} />
+            <Row label="درست" value={toFa(summary.correct)} color={colors.neonGreen} />
+            <Row label="غلط" value={toFa(summary.wrong)} color={colors.neonRed} />
+            <Row label="نزده" value={toFa(summary.skipped)} color={colors.neonAmber} />
+            <Row label="میانگین زمان" value={`${toFa(summary.avg)}s`} color={colors.neonBlue} />
           </View>
         </View>
 

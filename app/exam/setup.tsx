@@ -4,6 +4,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { colors, difficultyMeta, subjectMeta } from "@/theme/colors";
 import { CATEGORIES } from "@/data/categories";
+import { toFa } from "@/lib/format";
+import { pressScale } from "@/lib/press";
 import { fetchAvailability, fetchExamQuestions } from "@/api/questions";
 import { useExamStore } from "@/store/examStore";
 import type { Difficulty, Subject } from "@/types";
@@ -87,108 +89,116 @@ export default function ExamSetup() {
     }
   };
 
+  const startDisabled = loading || difficulties.length === 0;
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }}>
-      <ScrollView contentContainerStyle={{ padding: 24 }}>
+      <View className="flex-1 px-6 pt-6">
         <Header onBack={() => router.back()} />
 
-        {/* Subject */}
-        <Section title="درس">
-          <View className="flex-row gap-3">
-            {(["math", "physics"] as Subject[]).map((s) => (
-              <Chip
-                key={s}
-                label={subjectMeta[s].faLabel}
-                active={subject === s}
-                color={subjectMeta[s].color}
-                onPress={() => setSubject(s)}
-                wide
-              />
-            ))}
-          </View>
-        </Section>
+        {/* Two-column landscape layout */}
+        <View className="flex-1 flex-row gap-6">
+          {/* Left — quick toggles */}
+          <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
+            <Section title="درس">
+              <View className="flex-row gap-3">
+                {(["math", "physics"] as Subject[]).map((s) => (
+                  <Chip
+                    key={s}
+                    label={subjectMeta[s].faLabel}
+                    active={subject === s}
+                    color={subjectMeta[s].color}
+                    onPress={() => setSubject(s)}
+                    wide
+                  />
+                ))}
+              </View>
+            </Section>
 
-        {/* Categories */}
-        <Section title="مبحث (خالی = همه)">
-          <View className="flex-row flex-wrap justify-end gap-2">
-            {CATEGORIES[subject].map((c) => {
-              const n = availability[c.key] ?? 0;
-              return (
-                <Chip
-                  key={c.key}
-                  label={`${c.faLabel} (${n})`}
-                  active={categories.includes(c.key)}
-                  color={colors.neonBlue}
-                  disabled={n === 0}
-                  onPress={() => toggle(categories, c.key, setCategories)}
-                />
-              );
-            })}
-          </View>
-        </Section>
+            <Section title="سطح دشواری">
+              <View className="flex-row flex-wrap justify-end gap-2">
+                {DIFFICULTIES.map((d) => (
+                  <Chip
+                    key={d}
+                    label={difficultyMeta[d].faLabel}
+                    active={difficulties.includes(d)}
+                    color={difficultyMeta[d].color}
+                    onPress={() => toggle(difficulties, d, setDifficulties)}
+                  />
+                ))}
+              </View>
+            </Section>
 
-        {/* Sub-categories (only when a category is picked) */}
-        {subCatOptions.length > 0 && (
-          <Section title="زیرمبحث (خالی = همهٔ مبحث)">
-            <View className="flex-row flex-wrap justify-end gap-2">
-              {subCatOptions.map((sc) => (
-                <Chip
-                  key={sc.key}
-                  label={sc.faLabel}
-                  active={subCategories.includes(sc.key)}
-                  color={colors.neonGreen}
-                  onPress={() => toggle(subCategories, sc.key, setSubCategories)}
-                />
-              ))}
-            </View>
-          </Section>
-        )}
+            <Section title="تعداد سؤال">
+              <View className="flex-row gap-3">
+                {COUNTS.map((n) => (
+                  <Chip
+                    key={n}
+                    label={toFa(n)}
+                    active={count === n}
+                    color={colors.neonPurple}
+                    onPress={() => setCount(n)}
+                    wide
+                  />
+                ))}
+              </View>
+            </Section>
+          </ScrollView>
 
-        {/* Difficulty */}
-        <Section title="سطح دشواری">
-          <View className="flex-row flex-wrap justify-end gap-2">
-            {DIFFICULTIES.map((d) => (
-              <Chip
-                key={d}
-                label={difficultyMeta[d].faLabel}
-                active={difficulties.includes(d)}
-                color={difficultyMeta[d].color}
-                onPress={() => toggle(difficulties, d, setDifficulties)}
-              />
-            ))}
-          </View>
-        </Section>
+          {/* Right — topic & sub-topic grid */}
+          <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
+            <Section title="مبحث (خالی = همه)">
+              <View className="flex-row flex-wrap justify-end gap-2">
+                {CATEGORIES[subject].map((c) => {
+                  const n = availability[c.key] ?? 0;
+                  return (
+                    <Chip
+                      key={c.key}
+                      label={`${c.faLabel} (${toFa(n)})`}
+                      active={categories.includes(c.key)}
+                      color={colors.neonBlue}
+                      disabled={n === 0}
+                      onPress={() => toggle(categories, c.key, setCategories)}
+                    />
+                  );
+                })}
+              </View>
+            </Section>
 
-        {/* Count */}
-        <Section title="تعداد سؤال">
-          <View className="flex-row gap-3">
-            {COUNTS.map((n) => (
-              <Chip
-                key={n}
-                label={String(n)}
-                active={count === n}
-                color={colors.neonPurple}
-                onPress={() => setCount(n)}
-                wide
-              />
-            ))}
-          </View>
-        </Section>
+            {subCatOptions.length > 0 && (
+              <Section title="زیرمبحث (خالی = همهٔ مبحث)">
+                <View className="flex-row flex-wrap justify-end gap-2">
+                  {subCatOptions.map((sc) => (
+                    <Chip
+                      key={sc.key}
+                      label={sc.faLabel}
+                      active={subCategories.includes(sc.key)}
+                      color={colors.neonGreen}
+                      onPress={() => toggle(subCategories, sc.key, setSubCategories)}
+                    />
+                  ))}
+                </View>
+              </Section>
+            )}
+          </ScrollView>
+        </View>
+      </View>
 
+      {/* Sticky Start CTA — always visible, thumb-reachable */}
+      <View className="border-t border-ink-500 px-6 py-3">
         {error && (
-          <Text style={{ color: colors.neonRed }} className="mt-2 text-right text-sm">
+          <Text style={{ color: colors.neonRed }} className="mb-2 text-right text-sm">
             {error}
           </Text>
         )}
-
         <Pressable
           onPress={start}
-          disabled={loading || difficulties.length === 0}
-          style={{
-            backgroundColor:
-              loading || difficulties.length === 0 ? colors.card : colors.neonBlue,
-          }}
-          className="mt-8 items-center rounded-2xl py-4"
+          disabled={startDisabled}
+          style={({ pressed }) => [
+            { backgroundColor: startDisabled ? colors.card : colors.neonBlue },
+            pressScale(pressed && !startDisabled),
+          ]}
+          className="items-center rounded-2xl py-4"
         >
           {loading ? (
             <ActivityIndicator color={colors.neonBlue} />
@@ -197,14 +207,11 @@ export default function ExamSetup() {
               style={{ color: difficulties.length === 0 ? colors.muted : colors.bg }}
               className="text-lg font-bold"
             >
-              شروع آزمون
+              شروع آزمون · {toFa(available)} سؤال آماده
             </Text>
           )}
         </Pressable>
-        <Text style={{ color: colors.muted }} className="mt-3 text-center text-xs">
-          {available} سؤال در این درس موجود است
-        </Text>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 }

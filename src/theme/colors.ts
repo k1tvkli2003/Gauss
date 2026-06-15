@@ -7,7 +7,8 @@ export const colors = {
   raised: "#1F2832",
   border: "#2A3744",
   text: "#E6EDF3",
-  muted: "#7B8794",
+  // Lifted from #7B8794 to pass WCAG AA (~5.3:1) on card surfaces.
+  muted: "#9AA6B2",
   neonBlue: "#3DD3FF",
   neonPurple: "#A06BFF",
   neonGreen: "#3DFF99",
