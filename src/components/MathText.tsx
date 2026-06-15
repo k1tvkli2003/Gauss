@@ -28,12 +28,24 @@ function buildHtml(content: string, fontSize: number, color: string): string {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 <style>
+  @font-face{
+    font-family:'Vazirmatn';
+    font-weight:400;
+    font-display:swap;
+    src:url('https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+  }
+  @font-face{
+    font-family:'Vazirmatn';
+    font-weight:700;
+    font-display:swap;
+    src:url('https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+  }
   html,body{margin:0;padding:0;background:transparent;}
   #root{
     color:${color};
     font-size:${fontSize}px;
     line-height:1.85;
-    font-family:-apple-system,Roboto,Vazirmatn,'Segoe UI',sans-serif;
+    font-family:'Vazirmatn',-apple-system,Roboto,'Segoe UI',sans-serif;
     direction:rtl;
     text-align:right;
     padding:2px 4px;
