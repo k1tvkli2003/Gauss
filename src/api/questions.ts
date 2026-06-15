@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { requestTimeout } from "@/lib/net";
 import type { Difficulty, ExamConfig, Question, Subject } from "@/types";
 
 /** Fetch a randomized set of questions matching an exam config. */
@@ -19,21 +20,31 @@ export async function fetchExamQuestions(config: ExamConfig): Promise<Question[]
   }
 
   // Over-fetch then shuffle client-side for variety (dataset is small).
-  const { data, error } = await query.limit(200);
-  if (error) throw error;
-
-  const shuffled = shuffle(data as Question[]);
-  return shuffled.slice(0, config.count);
+  const { signal, clear } = requestTimeout();
+  try {
+    const { data, error } = await query.limit(200).abortSignal(signal);
+    if (error) throw error;
+    const shuffled = shuffle(data as Question[]);
+    return shuffled.slice(0, config.count);
+  } finally {
+    clear();
+  }
 }
 
 export async function fetchQuestionsByIds(ids: string[]): Promise<Question[]> {
   if (ids.length === 0) return [];
-  const { data, error } = await supabase
-    .from("gauss_questions")
-    .select("*")
-    .in("id", ids);
-  if (error) throw error;
-  return data as Question[];
+  const { signal, clear } = requestTimeout();
+  try {
+    const { data, error } = await supabase
+      .from("gauss_questions")
+      .select("*")
+      .in("id", ids)
+      .abortSignal(signal);
+    if (error) throw error;
+    return data as Question[];
+  } finally {
+    clear();
+  }
 }
 
 /** How many questions exist per category — used to validate exam setup. */

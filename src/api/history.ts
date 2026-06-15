@@ -8,7 +8,10 @@ import type {
   UserHistoryRow,
 } from "@/types";
 
-/** Persist a finished exam + every attempt. Returns the exam id. */
+/** Persist a finished exam + every attempt. Returns the exam id.
+ *  Prefers the atomic `gauss_save_exam` RPC (exam + history + SRS in one
+ *  transaction); falls back to the legacy two-step insert if the RPC isn't
+ *  deployed yet (migration 0002 not applied). */
 export async function saveExam(
   config: ExamConfig,
   results: AttemptResult[],
@@ -16,6 +19,31 @@ export async function saveExam(
 ): Promise<string> {
   const profileId = await getProfileId();
 
+  const attempts = results.map((r) => ({
+    question_id: r.question.id,
+    status: r.status,
+    selected_option: r.selectedOption,
+    time_taken_seconds: r.timeTakenSeconds,
+  }));
+
+  const { data, error } = await supabase.rpc("gauss_save_exam", {
+    p_profile: profileId,
+    p_config: config,
+    p_duration: durationSeconds,
+    p_attempts: attempts,
+  });
+  if (!error && typeof data === "string") return data;
+
+  // RPC missing (migration not applied) or failed — fall back to legacy path.
+  return saveExamLegacy(profileId, config, results, durationSeconds);
+}
+
+async function saveExamLegacy(
+  profileId: string,
+  config: ExamConfig,
+  results: AttemptResult[],
+  durationSeconds: number,
+): Promise<string> {
   const correct = results.filter((r) => r.status === "correct").length;
   const wrong = results.filter((r) => r.status === "wrong").length;
   const skipped = results.filter((r) => r.status === "skipped").length;
@@ -67,9 +95,29 @@ export async function fetchExamHistory(limit = 30): Promise<ExamHistoryRow[]> {
   return data as ExamHistoryRow[];
 }
 
-/** Distinct question ids the user got wrong or skipped (for Revenge Mode). */
+/** Question ids due for Revenge Mode. Prefers the SRS due-queue (spaced
+ *  repetition: a question resurfaces at expanding intervals instead of being
+ *  redeemed forever on one lucky correct answer). Falls back to the legacy
+ *  "wrong/skipped and not later corrected" logic if SRS isn't deployed yet. */
 export async function fetchRevengeQuestionIds(): Promise<string[]> {
   const profileId = await getProfileId();
+
+  const { data: due, error: srsErr } = await supabase
+    .from("gauss_srs_state")
+    .select("question_id, due_at")
+    .eq("profile_id", profileId)
+    .gt("lapses", 0)
+    .lte("due_at", new Date().toISOString())
+    .order("due_at", { ascending: true })
+    .limit(300);
+  if (!srsErr && due) {
+    return (due as { question_id: string }[]).map((d) => d.question_id);
+  }
+
+  return fetchRevengeLegacy(profileId);
+}
+
+async function fetchRevengeLegacy(profileId: string): Promise<string[]> {
   const { data, error } = await supabase
     .from("gauss_user_history")
     .select("question_id, status, solved_at")
