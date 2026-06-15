@@ -1,6 +1,6 @@
-import React, { useMemo, useState } from "react";
-import { Platform, Text, View } from "react-native";
-import { WebView } from "react-native-webview";
+import React, { useMemo } from "react";
+import { ScrollView, Text, View, type TextStyle } from "react-native";
+import MathJaxSvg from "react-native-mathjax-svg";
 import { colors } from "@/theme/colors";
 
 interface Props {
@@ -10,139 +10,294 @@ interface Props {
 }
 
 /**
- * Renders markdown-lite + LaTeX (KaTeX) with RTL Persian support.
- * Inline math: $...$   Block math: $$...$$
- * Self-sizing via a postMessage height handshake.
+ * Renders markdown-lite + LaTeX **fully natively** — no WebView, no HTML.
+ * Math is drawn as SVG glyphs (MathJax → react-native-svg); text, lists, bold
+ * and code are real React Native primitives, RTL/Persian aware.
+ *
+ * Inline math: $...$   ·   Block math: $$...$$
  */
-function buildHtml(content: string, fontSize: number, color: string): string {
-  // Escape for safe embedding inside a JS template string in the page.
-  const safe = content
-    .replace(/\\/g, "\\\\")
-    .replace(/`/g, "\\`")
-    .replace(/\$\{/g, "\\${");
+export function MathText({ content, fontSize = 17, color = colors.text }: Props) {
+  const blocks = useMemo(() => splitDisplayMath(content), [content]);
 
-  return `<!DOCTYPE html><html><head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
-<style>
-  @font-face{
-    font-family:'Vazirmatn';
-    font-weight:400;
-    font-display:swap;
-    src:url('https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
-  }
-  @font-face{
-    font-family:'Vazirmatn';
-    font-weight:700;
-    font-display:swap;
-    src:url('https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
-  }
-  html,body{margin:0;padding:0;background:transparent;}
-  #root{
-    color:${color};
-    font-size:${fontSize}px;
-    line-height:1.85;
-    font-family:'Vazirmatn',-apple-system,Roboto,'Segoe UI',sans-serif;
-    direction:rtl;
-    text-align:right;
-    padding:2px 4px;
-    word-wrap:break-word;
-  }
-  .katex{font-size:1.05em;}
-  code{background:${colors.raised};padding:2px 6px;border-radius:6px;direction:ltr;display:inline-block;}
-  pre{background:${colors.raised};padding:10px;border-radius:10px;direction:ltr;overflow-x:auto;}
-  strong{color:${colors.neonBlue};}
-  hr{border:none;border-top:1px solid ${colors.border};margin:12px 0;}
-  ul,ol{padding-right:20px;}
-</style>
-</head><body>
-<div id="root"></div>
-<script>
-  function mdToHtml(src){
-    var lines = src.split('\\n');
-    var out = '', inList = false;
-    for (var i=0;i<lines.length;i++){
-      var l = lines[i];
-      var t = l.trim();
-      if (/^[-*]\\s+/.test(t)) {
-        if(!inList){out+='<ul>';inList=true;}
-        out += '<li>'+inline(t.replace(/^[-*]\\s+/,''))+'</li>';
-        continue;
-      }
-      if(inList){out+='</ul>';inList=false;}
-      if(t==='') { out+='<br/>'; continue; }
-      if(/^---+$/.test(t)){ out+='<hr/>'; continue; }
-      out += '<div>'+inline(l)+'</div>';
-    }
-    if(inList) out+='</ul>';
-    return out;
-  }
-  function inline(s){
-    return s
-      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-      .replace(/\\*\\*(.+?)\\*\\*/g,'<strong>$1</strong>')
-      .replace(/\`(.+?)\`/g,'<code>$1</code>');
-  }
-  function postHeight(){
-    var h = document.getElementById('root').scrollHeight;
-    if(window.ReactNativeWebView) window.ReactNativeWebView.postMessage(String(h));
-  }
-  function go(){
-    var raw = \`${safe}\`;
-    document.getElementById('root').innerHTML = mdToHtml(raw);
-    if(window.renderMathInElement){
-      window.renderMathInElement(document.getElementById('root'), {
-        delimiters:[
-          {left:'$$',right:'$$',display:true},
-          {left:'$',right:'$',display:false}
-        ],
-        throwOnError:false
-      });
-    }
-    setTimeout(postHeight, 50);
-    setTimeout(postHeight, 350);
-  }
-  window.addEventListener('load', go);
-  document.addEventListener('DOMContentLoaded', function(){ setTimeout(go, 30); });
-</script>
-</body></html>`;
+  return (
+    <View style={{ paddingVertical: 2, paddingHorizontal: 4 }}>
+      {blocks.map((b, i) =>
+        b.type === "display" ? (
+          <DisplayMath key={i} tex={b.value} fontSize={fontSize} color={color} />
+        ) : (
+          <TextBlock key={i} text={b.value} fontSize={fontSize} color={color} />
+        ),
+      )}
+    </View>
+  );
 }
 
-export function MathText({ content, fontSize = 17, color = colors.text }: Props) {
-  const [height, setHeight] = useState(40);
-  const html = useMemo(
-    () => buildHtml(content, fontSize, color),
-    [content, fontSize, color],
-  );
+/* ------------------------------------------------------------------ */
+/* Display ($$ … $$) math — centred, horizontally scrollable if wide. */
+/* ------------------------------------------------------------------ */
 
-  if (Platform.OS === "web") {
-    // RN-web: WebView is unreliable; render a plain-text fallback (no KaTeX).
+function DisplayMath({
+  tex,
+  fontSize,
+  color,
+}: {
+  tex: string;
+  fontSize: number;
+  color: string;
+}) {
+  return (
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
+      style={{ marginVertical: 8 }}
+    >
+      <MathJaxSvg fontSize={Math.round(fontSize * 1.18)} color={color} fontCache>
+        {tex}
+      </MathJaxSvg>
+    </ScrollView>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Text block — markdown-lite lines with inline $…$ math.             */
+/* ------------------------------------------------------------------ */
+
+function TextBlock({
+  text,
+  fontSize,
+  color,
+}: {
+  text: string;
+  fontSize: number;
+  color: string;
+}) {
+  const lines = text.split("\n");
+  const out: React.ReactNode[] = [];
+  let listBuffer: string[] = [];
+
+  const flushList = (k: string) => {
+    if (listBuffer.length === 0) return;
+    const items = listBuffer;
+    listBuffer = [];
+    out.push(
+      <View key={k} style={{ marginVertical: 2 }}>
+        {items.map((it, i) => (
+          <View
+            key={i}
+            style={{ flexDirection: "row-reverse", alignItems: "flex-start", marginBottom: 4 }}
+          >
+            <Text style={{ color: colors.neonBlue, fontSize, lineHeight: fontSize * 1.7 }}>
+              {"•  "}
+            </Text>
+            <View style={{ flex: 1 }}>
+              <Line content={it} fontSize={fontSize} color={color} />
+            </View>
+          </View>
+        ))}
+      </View>,
+    );
+  };
+
+  lines.forEach((raw, idx) => {
+    const t = raw.trim();
+    const listMatch = /^[-*]\s+(.*)$/.exec(t);
+    if (listMatch) {
+      listBuffer.push(listMatch[1]);
+      return;
+    }
+    flushList(`list-${idx}`);
+
+    if (t === "") {
+      out.push(<View key={`sp-${idx}`} style={{ height: fontSize * 0.5 }} />);
+      return;
+    }
+    if (/^---+$/.test(t)) {
+      out.push(
+        <View
+          key={`hr-${idx}`}
+          style={{ height: 1, backgroundColor: colors.border, marginVertical: 10 }}
+        />,
+      );
+      return;
+    }
+    out.push(<Line key={`l-${idx}`} content={raw} fontSize={fontSize} color={color} />);
+  });
+
+  flushList("list-tail");
+  return <>{out}</>;
+}
+
+/* ------------------------------------------------------------------ */
+/* A single line: inline $…$ math + **bold** + `code`.                */
+/* ------------------------------------------------------------------ */
+
+function Line({
+  content,
+  fontSize,
+  color,
+}: {
+  content: string;
+  fontSize: number;
+  color: string;
+}) {
+  const parts = splitInlineMath(content);
+
+  // Pure text line → one <Text> for proper Persian shaping & wrapping.
+  if (parts.every((p) => p.type === "text")) {
     return (
-      <View>
-        <Text style={{ color, fontSize, writingDirection: "rtl", textAlign: "right" }}>
-          {content}
-        </Text>
+      <Text
+        style={{
+          color,
+          fontSize,
+          lineHeight: fontSize * 1.7,
+          writingDirection: "rtl",
+          textAlign: "right",
+        }}
+      >
+        {parts.map((p, i) => renderInlineMarkdown(p.value, i, fontSize, color))}
+      </Text>
+    );
+  }
+
+  // Pure math line → render the formula on its own row.
+  const mathOnly =
+    parts.length === 1 && parts[0].type === "math"
+      ? parts[0]
+      : parts.filter((p) => p.type === "text").every((p) => p.value.trim() === "") &&
+          parts.filter((p) => p.type === "math").length === 1
+        ? parts.find((p) => p.type === "math")
+        : null;
+  if (mathOnly) {
+    return (
+      <View style={{ alignItems: "flex-end", marginVertical: 4 }}>
+        <MathJaxSvg fontSize={fontSize} color={color} fontCache>
+          {mathOnly.value}
+        </MathJaxSvg>
       </View>
     );
   }
 
+  // Mixed text + inline math → wrap word-by-word so the line can reflow.
+  const items: React.ReactNode[] = [];
+  parts.forEach((p, pi) => {
+    if (p.type === "math") {
+      items.push(
+        <View key={`m-${pi}`} style={{ marginHorizontal: 2, justifyContent: "center" }}>
+          <MathJaxSvg fontSize={fontSize} color={color} fontCache>
+            {p.value}
+          </MathJaxSvg>
+        </View>,
+      );
+    } else {
+      p.value.split(/(\s+)/).forEach((word, wi) => {
+        if (word === "") return;
+        if (/^\s+$/.test(word)) {
+          items.push(<Text key={`s-${pi}-${wi}`}>{" "}</Text>);
+          return;
+        }
+        items.push(
+          <Text
+            key={`w-${pi}-${wi}`}
+            style={{ color, fontSize, lineHeight: fontSize * 1.7, writingDirection: "rtl" }}
+          >
+            {renderInlineMarkdown(word, 0, fontSize, color)}
+          </Text>,
+        );
+      });
+    }
+  });
+
   return (
-    <View style={{ height }}>
-      <WebView
-        originWhitelist={["*"]}
-        source={{ html }}
-        style={{ backgroundColor: "transparent" }}
-        scrollEnabled={false}
-        showsVerticalScrollIndicator={false}
-        onMessage={(e) => {
-          const h = Number(e.nativeEvent.data);
-          if (!Number.isNaN(h) && h > 0) setHeight(Math.ceil(h) + 6);
-        }}
-        androidLayerType="hardware"
-      />
+    <View
+      style={{
+        flexDirection: "row-reverse",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "flex-start",
+      }}
+    >
+      {items}
     </View>
   );
+}
+
+/* ------------------------------------------------------------------ */
+/* Inline markdown: **bold** and `code` inside a <Text> run.          */
+/* ------------------------------------------------------------------ */
+
+function renderInlineMarkdown(
+  src: string,
+  keyBase: number,
+  fontSize: number,
+  color: string,
+): React.ReactNode {
+  const tokens = src.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).filter((s) => s !== "");
+  if (tokens.length <= 1 && !/^\*\*|^`/.test(src)) return src;
+
+  return tokens.map((tok, i) => {
+    const key = `${keyBase}-${i}`;
+    if (/^\*\*[^*]+\*\*$/.test(tok)) {
+      return (
+        <Text key={key} style={{ color: colors.neonBlue, fontWeight: "700" }}>
+          {tok.slice(2, -2)}
+        </Text>
+      );
+    }
+    if (/^`[^`]+`$/.test(tok)) {
+      return (
+        <Text
+          key={key}
+          style={{
+            color: colors.neonAmber,
+            backgroundColor: colors.raised,
+            fontSize: fontSize * 0.92,
+          } as TextStyle}
+        >
+          {` ${tok.slice(1, -1)} `}
+        </Text>
+      );
+    }
+    return (
+      <Text key={key} style={{ color }}>
+        {tok}
+      </Text>
+    );
+  });
+}
+
+/* ------------------------------------------------------------------ */
+/* Parsing helpers.                                                    */
+/* ------------------------------------------------------------------ */
+
+type Block = { type: "text" | "display"; value: string };
+
+function splitDisplayMath(src: string): Block[] {
+  const out: Block[] = [];
+  const re = /\$\$([\s\S]+?)\$\$/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(src)) !== null) {
+    if (m.index > last) out.push({ type: "text", value: src.slice(last, m.index) });
+    out.push({ type: "display", value: m[1].trim() });
+    last = re.lastIndex;
+  }
+  if (last < src.length) out.push({ type: "text", value: src.slice(last) });
+  return out.length > 0 ? out : [{ type: "text", value: src }];
+}
+
+type InlinePart = { type: "text" | "math"; value: string };
+
+function splitInlineMath(line: string): InlinePart[] {
+  const out: InlinePart[] = [];
+  const re = /\$([^$]+?)\$/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(line)) !== null) {
+    if (m.index > last) out.push({ type: "text", value: line.slice(last, m.index) });
+    out.push({ type: "math", value: m[1].trim() });
+    last = re.lastIndex;
+  }
+  if (last < line.length) out.push({ type: "text", value: line.slice(last) });
+  return out.length > 0 ? out : [{ type: "text", value: line }];
 }

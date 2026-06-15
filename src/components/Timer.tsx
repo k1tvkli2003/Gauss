@@ -17,7 +17,7 @@ export function Timer({ resetKey }: { resetKey: string | number }) {
     return () => clearInterval(id);
   }, [resetKey]);
 
-  let color = colors.neonGreen;
+  let color: string = colors.neonGreen;
   if (seconds > KONKUR_SECONDS_PER_QUESTION * 2) color = colors.neonRed;
   else if (seconds > KONKUR_SECONDS_PER_QUESTION) color = colors.neonAmber;
 
