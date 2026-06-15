@@ -4,9 +4,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { colors, subjectMeta } from "@/theme/colors";
 import { categoryLabel } from "@/data/categories";
+import { toFa } from "@/lib/format";
 import { DifficultyBadge } from "@/components/DifficultyBadge";
 import { MathText } from "@/components/MathText";
 import { OptionButton } from "@/components/OptionButton";
+import { GeniusKey } from "@/components/GeniusKey";
 import { DrawingCanvas } from "@/components/DrawingCanvas";
 import { Timer } from "@/components/Timer";
 import { useExamStore } from "@/store/examStore";
@@ -17,19 +19,24 @@ export default function ExamSession() {
     questions,
     index,
     attempts,
+    scratch,
     config,
     answer,
     skip,
     next,
     prev,
     goTo,
+    setScratch,
     finishAndSave,
   } = useExamStore();
 
   const [submitting, setSubmitting] = useState(false);
+  // Which question indices the user has revealed the solution for (study aid).
+  const [revealed, setRevealed] = useState<Record<number, boolean>>({});
   const q = questions[index];
   const current = attempts[index];
   const selected = current?.selectedOption ?? null;
+  const isRevealed = !!revealed[index];
 
   if (!q || !config) {
     return (
@@ -51,13 +58,15 @@ export default function ExamSession() {
     const answered = Object.keys(attempts).length;
     Alert.alert(
       "پایان آزمون",
-      `${answered} از ${questions.length} سؤال ثبت شده. مطمئنی؟`,
+      `${toFa(answered)} از ${toFa(questions.length)} سؤال ثبت شده. مطمئنی؟`,
       [
         { text: "ادامه می‌دم", style: "cancel" },
         { text: "تمام", style: "destructive", onPress: doFinish },
       ],
     );
   };
+
+  const toggleReveal = () => setRevealed((r) => ({ ...r, [index]: !r[index] }));
 
   const doFinish = async () => {
     setSubmitting(true);
@@ -119,10 +128,44 @@ export default function ExamSession() {
                 index={i + 1}
                 text={opt}
                 selected={selected === i + 1}
+                reveal={isRevealed}
+                correct={q.correct_option_index === i + 1}
                 onPress={() => answer(i + 1)}
               />
             ))}
+
+            {/* In-session Genius reveal — deliberate-practice loop */}
+            {isRevealed && (
+              <View className="mt-2">
+                <GeniusKey classic={q.classic_solution} shortcut={q.smart_shortcut} />
+              </View>
+            )}
           </ScrollView>
+
+          {/* Reveal bar — show the Genius key once an answer is committed */}
+          <View className="flex-row-reverse items-center justify-between px-5 pt-2">
+            <Pressable
+              onPress={toggleReveal}
+              disabled={!current}
+              style={{
+                borderColor: isRevealed ? colors.neonPurple : colors.neonGreen,
+                backgroundColor: !current
+                  ? colors.card
+                  : isRevealed
+                    ? `${colors.neonPurple}1A`
+                    : `${colors.neonGreen}1A`,
+                opacity: current ? 1 : 0.45,
+              }}
+              className="flex-1 items-center rounded-xl border py-2"
+            >
+              <Text
+                style={{ color: !current ? colors.muted : isRevealed ? colors.neonPurple : colors.neonGreen }}
+                className="text-sm font-bold"
+              >
+                {isRevealed ? "بستن حل" : current ? "نمایش حل ✨" : "اول جواب بده، بعد حل ✍️"}
+              </Text>
+            </Pressable>
+          </View>
 
           {/* Nav footer */}
           <View className="flex-row-reverse items-center justify-between border-t border-ink-500 px-5 py-3">
@@ -175,7 +218,11 @@ export default function ExamSession() {
               دفتر طراحی · با قلم بنویس ✍️
             </Text>
           </View>
-          <DrawingCanvas key={index} />
+          <DrawingCanvas
+            key={index}
+            strokes={scratch[index] ?? []}
+            onChange={(s) => setScratch(index, s)}
+          />
         </View>
       </View>
     </SafeAreaView>
@@ -208,9 +255,4 @@ function NavBtn({
       </Text>
     </Pressable>
   );
-}
-
-const FA_DIGITS = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
-function toFa(n: number): string {
-  return String(n).replace(/\d/g, (d) => FA_DIGITS[Number(d)]);
 }

@@ -32,6 +32,7 @@ export default function Revenge() {
         {
           subject: questions[0].subject,
           categories: [],
+          subCategories: [],
           difficulties: [],
           count: questions.length,
         },

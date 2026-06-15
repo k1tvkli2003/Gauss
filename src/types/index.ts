@@ -1,3 +1,5 @@
+import type { SkPath } from "@shopify/react-native-skia";
+
 export type Subject = "math" | "physics";
 
 export type Difficulty = "above_average" | "hard" | "very_hard" | "olympiad";
@@ -26,8 +28,16 @@ export interface Question {
 export interface ExamConfig {
   subject: Subject;
   categories: string[];
+  subCategories: string[];
   difficulties: Difficulty[];
   count: number;
+}
+
+/** A single committed stroke on the scratchpad canvas. */
+export interface ScratchStroke {
+  path: SkPath;
+  color: string;
+  width: number;
 }
 
 export interface AttemptResult {

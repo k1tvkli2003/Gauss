@@ -4,9 +4,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useFocusEffect, useRouter } from "expo-router";
 import { colors } from "@/theme/colors";
 import { categoryLabel } from "@/data/categories";
+import { toFa } from "@/lib/format";
 import { Heatmap } from "@/components/Heatmap";
 import { fetchAnalytics, type Analytics } from "@/api/history";
-import { KONKUR_SECONDS_PER_QUESTION, type Subject } from "@/types";
+import { KONKUR_SECONDS_PER_QUESTION } from "@/types";
+
+const OPTION_FA = ["", "۱", "۲", "۳", "۴"];
 
 export default function AnalyticsScreen() {
   const router = useRouter();
@@ -54,38 +57,60 @@ export default function AnalyticsScreen() {
 
             {/* Weak topics */}
             <Card title="نقاط ضعف (به ترتیب اولویت تمرین)">
-              {data.weakTopics.map((t) => {
-                const subject: Subject = t.category.match(
-                  /mechanics|electro|thermo|waves/,
-                )
-                  ? "physics"
-                  : "math";
-                return (
-                  <View key={t.category} className="mb-3">
-                    <View className="mb-1 flex-row-reverse items-center justify-between">
-                      <Text style={{ color: colors.text }} className="text-sm">
-                        {categoryLabel(subject, t.category)}
-                      </Text>
-                      <Text
-                        style={{ color: barColor(t.accuracy) }}
-                        className="text-sm font-bold"
-                      >
-                        {Math.round(t.accuracy)}% · {t.correct}/{t.total}
-                      </Text>
-                    </View>
-                    <View className="h-2 w-full overflow-hidden rounded-full bg-ink-600">
+              {data.weakTopics.map((t) => (
+                <View key={`${t.subject}-${t.category}`} className="mb-3">
+                  <View className="mb-1 flex-row-reverse items-center justify-between">
+                    <Text style={{ color: colors.text }} className="text-sm">
+                      {categoryLabel(t.subject, t.category)}
+                    </Text>
+                    <Text
+                      style={{ color: barColor(t.accuracy) }}
+                      className="text-sm font-bold"
+                    >
+                      {toFa(Math.round(t.accuracy))}٪ · {toFa(t.correct)}/{toFa(t.total)}
+                    </Text>
+                  </View>
+                  <View className="h-2 w-full overflow-hidden rounded-full bg-ink-600">
+                    <View
+                      style={{
+                        width: `${Math.max(4, t.accuracy)}%`,
+                        backgroundColor: barColor(t.accuracy),
+                        height: "100%",
+                      }}
+                    />
+                  </View>
+                </View>
+              ))}
+            </Card>
+
+            {/* Distractor traps — which wrong option you keep picking */}
+            {data.distractors.length > 0 && (
+              <Card title="تله‌های پرتکرار (گزینهٔ غلطی که زیاد می‌زنی)">
+                {data.distractors.map((d) => (
+                  <View
+                    key={`${d.subject}-${d.category}-${d.option}`}
+                    className="mb-2 flex-row-reverse items-center justify-between rounded-xl border border-ink-500 bg-ink-900 px-3 py-2"
+                  >
+                    <Text style={{ color: colors.text }} className="text-sm">
+                      {categoryLabel(d.subject, d.category)}
+                    </Text>
+                    <View className="flex-row items-center gap-3">
                       <View
-                        style={{
-                          width: `${Math.max(4, t.accuracy)}%`,
-                          backgroundColor: barColor(t.accuracy),
-                          height: "100%",
-                        }}
-                      />
+                        style={{ borderColor: colors.neonRed, backgroundColor: `${colors.neonRed}1A` }}
+                        className="h-7 w-7 items-center justify-center rounded-full border"
+                      >
+                        <Text style={{ color: colors.neonRed }} className="text-sm font-bold">
+                          {OPTION_FA[d.option]}
+                        </Text>
+                      </View>
+                      <Text style={{ color: colors.muted }} className="text-xs">
+                        {toFa(d.count)} بار
+                      </Text>
                     </View>
                   </View>
-                );
-              })}
-            </Card>
+                ))}
+              </Card>
+            )}
           </>
         )}
       </ScrollView>

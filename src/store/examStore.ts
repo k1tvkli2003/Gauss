@@ -1,5 +1,11 @@
 import { create } from "zustand";
-import type { AttemptResult, AttemptStatus, ExamConfig, Question } from "@/types";
+import type {
+  AttemptResult,
+  AttemptStatus,
+  ExamConfig,
+  Question,
+  ScratchStroke,
+} from "@/types";
 import { saveExam } from "@/api/history";
 
 interface ExamState {
@@ -8,6 +14,8 @@ interface ExamState {
   index: number;
   // attempts keyed by question index
   attempts: Record<number, AttemptResult>;
+  // scratchpad strokes keyed by question index (survives navigation)
+  scratch: Record<number, ScratchStroke[]>;
   questionStartedAt: number;
   examStartedAt: number;
   finished: boolean;
@@ -20,6 +28,7 @@ interface ExamState {
   next: () => void;
   prev: () => void;
   goTo: (index: number) => void;
+  setScratch: (index: number, strokes: ScratchStroke[]) => void;
   finishAndSave: () => Promise<void>;
   reset: () => void;
 
@@ -51,6 +60,7 @@ export const useExamStore = create<ExamState>((set, get) => ({
   questions: [],
   index: 0,
   attempts: {},
+  scratch: {},
   questionStartedAt: 0,
   examStartedAt: 0,
   finished: false,
@@ -63,6 +73,7 @@ export const useExamStore = create<ExamState>((set, get) => ({
       questions,
       index: 0,
       attempts: {},
+      scratch: {},
       questionStartedAt: Date.now(),
       examStartedAt: Date.now(),
       finished: false,
@@ -107,6 +118,11 @@ export const useExamStore = create<ExamState>((set, get) => ({
     }
   },
 
+  setScratch: (index, strokes) => {
+    const state = get();
+    set({ scratch: { ...state.scratch, [index]: strokes } });
+  },
+
   finishAndSave: async () => {
     const state = get();
     if (state.saving || state.savedExamId) return;
@@ -148,6 +164,7 @@ export const useExamStore = create<ExamState>((set, get) => ({
       questions: [],
       index: 0,
       attempts: {},
+      scratch: {},
       questionStartedAt: 0,
       examStartedAt: 0,
       finished: false,

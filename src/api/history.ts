@@ -4,7 +4,7 @@ import type {
   AttemptResult,
   ExamConfig,
   ExamHistoryRow,
-  Question,
+  Subject,
   UserHistoryRow,
 } from "@/types";
 
@@ -107,10 +107,19 @@ export async function fetchRevengeQuestionIds(): Promise<string[]> {
 
 export interface TopicStat {
   category: string;
+  subject: Subject;
   total: number;
   correct: number;
   accuracy: number;
   avgTime: number;
+}
+
+/** A wrong-answer trap the user repeatedly falls for. */
+export interface DistractorStat {
+  category: string;
+  subject: Subject;
+  option: number; // 1..4
+  count: number;
 }
 
 export interface Analytics {
@@ -119,6 +128,7 @@ export interface Analytics {
   accuracy: number;
   avgTime: number;
   weakTopics: TopicStat[];
+  distractors: DistractorStat[];
   heatmap: Record<string, number>; // 'YYYY-MM-DD' -> attempts
 }
 
@@ -128,24 +138,26 @@ export async function fetchAnalytics(): Promise<Analytics> {
 
   const { data: history, error } = await supabase
     .from("gauss_user_history")
-    .select("status, time_taken_seconds, solved_at, question_id")
+    .select("status, time_taken_seconds, solved_at, question_id, selected_option")
     .eq("profile_id", profileId);
   if (error) throw error;
   const rows = history as Pick<
     UserHistoryRow,
-    "status" | "time_taken_seconds" | "solved_at" | "question_id"
+    "status" | "time_taken_seconds" | "solved_at" | "question_id" | "selected_option"
   >[];
 
-  // Join categories for weak-topic analysis.
+  // Join subject + category for weak-topic and distractor analysis.
   const qIds = [...new Set(rows.map((r) => r.question_id))];
   const catByQ = new Map<string, string>();
+  const subjByQ = new Map<string, Subject>();
   if (qIds.length > 0) {
     const { data: qs } = await supabase
       .from("gauss_questions")
-      .select("id, category")
+      .select("id, category, subject")
       .in("id", qIds);
-    for (const q of (qs ?? []) as { id: string; category: string }[]) {
+    for (const q of (qs ?? []) as { id: string; category: string; subject: Subject }[]) {
       catByQ.set(q.id, q.category);
+      subjByQ.set(q.id, q.subject);
     }
   }
 
@@ -157,10 +169,14 @@ export async function fetchAnalytics(): Promise<Analytics> {
       ? timed.reduce((s, r) => s + (r.time_taken_seconds ?? 0), 0) / timed.length
       : 0;
 
-  const byCat = new Map<string, { total: number; correct: number; time: number }>();
+  const byCat = new Map<
+    string,
+    { subject: Subject; total: number; correct: number; time: number }
+  >();
   for (const r of rows) {
     const cat = catByQ.get(r.question_id) ?? "unknown";
-    const e = byCat.get(cat) ?? { total: 0, correct: 0, time: 0 };
+    const subject = subjByQ.get(r.question_id) ?? "math";
+    const e = byCat.get(cat) ?? { subject, total: 0, correct: 0, time: 0 };
     e.total += 1;
     if (r.status === "correct") e.correct += 1;
     e.time += r.time_taken_seconds ?? 0;
@@ -169,12 +185,29 @@ export async function fetchAnalytics(): Promise<Analytics> {
   const weakTopics: TopicStat[] = [...byCat.entries()]
     .map(([category, e]) => ({
       category,
+      subject: e.subject,
       total: e.total,
       correct: e.correct,
       accuracy: e.total > 0 ? (e.correct / e.total) * 100 : 0,
       avgTime: e.total > 0 ? e.time / e.total : 0,
     }))
     .sort((a, b) => a.accuracy - b.accuracy);
+
+  // Distractor traps: which wrong option you repeatedly pick, by topic.
+  const byTrap = new Map<string, DistractorStat>();
+  for (const r of rows) {
+    if (r.status !== "wrong" || r.selected_option == null) continue;
+    const category = catByQ.get(r.question_id) ?? "unknown";
+    const subject = subjByQ.get(r.question_id) ?? "math";
+    const key = `${category}|${r.selected_option}`;
+    const e = byTrap.get(key) ?? { category, subject, option: r.selected_option, count: 0 };
+    e.count += 1;
+    byTrap.set(key, e);
+  }
+  const distractors: DistractorStat[] = [...byTrap.values()]
+    .filter((d) => d.count >= 2)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 6);
 
   const heatmap: Record<string, number> = {};
   for (const r of rows) {
@@ -188,6 +221,7 @@ export async function fetchAnalytics(): Promise<Analytics> {
     accuracy: totalAnswered > 0 ? (totalCorrect / totalAnswered) * 100 : 0,
     avgTime,
     weakTopics,
+    distractors,
     heatmap,
   };
 }

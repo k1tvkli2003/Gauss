@@ -12,11 +12,14 @@ import {
   GestureHandlerRootView,
 } from "react-native-gesture-handler";
 import { colors } from "@/theme/colors";
+import type { ScratchStroke } from "@/types";
 
-interface Stroke {
-  path: SkPath;
-  color: string;
-  width: number;
+type Stroke = ScratchStroke;
+
+interface Props {
+  /** Committed strokes (owned by the parent / store so they survive navigation). */
+  strokes: Stroke[];
+  onChange: (strokes: Stroke[]) => void;
 }
 
 const PEN_COLORS = [
@@ -32,8 +35,7 @@ const PEN_COLORS = [
  * Stylus-friendly scratchpad. Skia keeps strokes buttery even with a pen.
  * Supports color switch, stroke width, undo/redo and clear.
  */
-export function DrawingCanvas() {
-  const [strokes, setStrokes] = useState<Stroke[]>([]);
+export function DrawingCanvas({ strokes, onChange }: Props) {
   const [redoStack, setRedoStack] = useState<Stroke[]>([]);
   const [penColor, setPenColor] = useState<string>(colors.neonBlue);
   const [penWidth, setPenWidth] = useState<number>(3);
@@ -58,12 +60,12 @@ export function DrawingCanvas() {
   const end = useCallback(() => {
     if (livePath.current) {
       const snapshot = livePath.current.copy();
-      setStrokes((s) => [...s, { path: snapshot, color: penColor, width: penWidth }]);
+      onChange([...strokes, { path: snapshot, color: penColor, width: penWidth }]);
       setRedoStack([]);
       livePath.current = null;
       force((n) => n + 1);
     }
-  }, [penColor, penWidth]);
+  }, [strokes, onChange, penColor, penWidth]);
 
   const pan = Gesture.Pan()
     .minDistance(0)
@@ -73,27 +75,23 @@ export function DrawingCanvas() {
     .runOnJS(true);
 
   const undo = () => {
-    setStrokes((s) => {
-      if (s.length === 0) return s;
-      const last = s[s.length - 1];
-      setRedoStack((r) => [...r, last]);
-      return s.slice(0, -1);
-    });
+    if (strokes.length === 0) return;
+    const last = strokes[strokes.length - 1];
+    setRedoStack((r) => [...r, last]);
+    onChange(strokes.slice(0, -1));
   };
 
   const redo = () => {
-    setRedoStack((r) => {
-      if (r.length === 0) return r;
-      const last = r[r.length - 1];
-      setStrokes((s) => [...s, last]);
-      return r.slice(0, -1);
-    });
+    if (redoStack.length === 0) return;
+    const last = redoStack[redoStack.length - 1];
+    setRedoStack((r) => r.slice(0, -1));
+    onChange([...strokes, last]);
   };
 
   const clear = () => {
-    setStrokes([]);
     setRedoStack([]);
     livePath.current = null;
+    onChange([]);
   };
 
   return (

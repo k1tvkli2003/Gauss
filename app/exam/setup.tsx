@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useRouter } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { colors, difficultyMeta, subjectMeta } from "@/theme/colors";
 import { CATEGORIES } from "@/data/categories";
 import { fetchAvailability, fetchExamQuestions } from "@/api/questions";
@@ -13,10 +13,14 @@ const COUNTS = [5, 10, 15, 20];
 
 export default function ExamSetup() {
   const router = useRouter();
+  const params = useLocalSearchParams<{ subject?: string; category?: string }>();
   const startExam = useExamStore((s) => s.startExam);
 
-  const [subject, setSubject] = useState<Subject>("math");
+  const [subject, setSubject] = useState<Subject>(
+    params.subject === "physics" ? "physics" : "math",
+  );
   const [categories, setCategories] = useState<string[]>([]);
+  const [subCategories, setSubCategories] = useState<string[]>([]);
   const [difficulties, setDifficulties] = useState<Difficulty[]>(["hard", "very_hard"]);
   const [count, setCount] = useState(10);
   const [availability, setAvailability] = useState<Record<string, number>>({});
@@ -25,13 +29,36 @@ export default function ExamSetup() {
 
   useEffect(() => {
     setCategories([]);
+    setSubCategories([]);
     fetchAvailability(subject).then(setAvailability).catch(() => setAvailability({}));
   }, [subject]);
+
+  // One-time pre-selection from a Home deep-link (e.g. weakness strip).
+  useEffect(() => {
+    if (typeof params.category === "string" && params.category.length > 0) {
+      setCategories([params.category]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const available = useMemo(
     () => Object.values(availability).reduce((a, b) => a + b, 0),
     [availability],
   );
+
+  // Sub-categories belonging to the currently-selected top-level categories.
+  const subCatOptions = useMemo(
+    () =>
+      CATEGORIES[subject]
+        .filter((c) => categories.includes(c.key))
+        .flatMap((c) => c.subCategories),
+    [subject, categories],
+  );
+
+  // Drop any selected sub-categories that are no longer valid.
+  useEffect(() => {
+    setSubCategories((prev) => prev.filter((k) => subCatOptions.some((o) => o.key === k)));
+  }, [subCatOptions]);
 
   const toggle = <T,>(list: T[], v: T, set: (x: T[]) => void) =>
     set(list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);
@@ -43,6 +70,7 @@ export default function ExamSetup() {
       const questions = await fetchExamQuestions({
         subject,
         categories,
+        subCategories,
         difficulties,
         count,
       });
@@ -51,7 +79,7 @@ export default function ExamSetup() {
         setLoading(false);
         return;
       }
-      startExam({ subject, categories, difficulties, count }, questions);
+      startExam({ subject, categories, subCategories, difficulties, count }, questions);
       router.replace("/exam/session");
     } catch (e: any) {
       setError(e?.message ?? "خطا در بارگذاری سؤالات.");
@@ -98,6 +126,23 @@ export default function ExamSetup() {
             })}
           </View>
         </Section>
+
+        {/* Sub-categories (only when a category is picked) */}
+        {subCatOptions.length > 0 && (
+          <Section title="زیرمبحث (خالی = همهٔ مبحث)">
+            <View className="flex-row flex-wrap justify-end gap-2">
+              {subCatOptions.map((sc) => (
+                <Chip
+                  key={sc.key}
+                  label={sc.faLabel}
+                  active={subCategories.includes(sc.key)}
+                  color={colors.neonGreen}
+                  onPress={() => toggle(subCategories, sc.key, setSubCategories)}
+                />
+              ))}
+            </View>
+          </Section>
+        )}
 
         {/* Difficulty */}
         <Section title="سطح دشواری">

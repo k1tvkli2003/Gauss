@@ -3,7 +3,9 @@ import { Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useFocusEffect, useRouter } from "expo-router";
 import { colors } from "@/theme/colors";
-import { fetchAnalytics, fetchExamHistory, fetchRevengeQuestionIds } from "@/api/history";
+import { categoryLabel } from "@/data/categories";
+import { toFa } from "@/lib/format";
+import { fetchAnalytics, fetchExamHistory, fetchRevengeQuestionIds, type TopicStat } from "@/api/history";
 import type { ExamHistoryRow } from "@/types";
 
 export default function Home() {
@@ -11,6 +13,7 @@ export default function Home() {
   const [stats, setStats] = useState({ answered: 0, accuracy: 0, streak: 0 });
   const [revengeCount, setRevengeCount] = useState(0);
   const [recent, setRecent] = useState<ExamHistoryRow[]>([]);
+  const [weak, setWeak] = useState<TopicStat[]>([]);
 
   const load = useCallback(() => {
     let active = true;
@@ -29,6 +32,8 @@ export default function Home() {
         });
         setRevengeCount(ids.length);
         setRecent(exams);
+        // Weakest topics with enough signal, worst-first.
+        setWeak(a.weakTopics.filter((t) => t.total >= 3).slice(0, 3));
       } catch {
         /* offline / empty — keep zeros */
       }
@@ -95,6 +100,44 @@ export default function Home() {
             onPress={() => router.push("/analytics")}
           />
         </View>
+
+        {/* Weakness strip — drill your worst topics in one tap */}
+        {weak.length > 0 && (
+          <View className="mt-8">
+            <Text style={{ color: colors.text }} className="mb-3 text-right text-lg font-semibold">
+              ضعف امروز — بزن تو هدف 🎯
+            </Text>
+            {weak.map((t) => (
+              <Pressable
+                key={`${t.subject}-${t.category}`}
+                onPress={() =>
+                  router.push({
+                    pathname: "/exam/setup",
+                    params: { subject: t.subject, category: t.category },
+                  })
+                }
+                className="mb-2 flex-row-reverse items-center justify-between rounded-xl border border-ink-500 bg-ink-700 px-4 py-3"
+              >
+                <View className="flex-row-reverse items-center gap-2">
+                  <Text style={{ color: colors.text }} className="text-sm font-semibold">
+                    {categoryLabel(t.subject, t.category)}
+                  </Text>
+                  <Text style={{ color: colors.muted }} className="text-xs">
+                    ({t.subject === "math" ? "ریاضی" : "فیزیک"})
+                  </Text>
+                </View>
+                <View className="flex-row items-center gap-3">
+                  <Text style={{ color: weakColor(t.accuracy) }} className="text-sm font-bold">
+                    {toFa(Math.round(t.accuracy))}٪
+                  </Text>
+                  <Text style={{ color: colors.neonBlue }} className="text-xs">
+                    تمرین ›
+                  </Text>
+                </View>
+              </Pressable>
+            ))}
+          </View>
+        )}
 
         {/* Recent exams */}
         {recent.length > 0 && (
@@ -217,6 +260,12 @@ function SmallButton({
 function scoreColor(p: number): string {
   if (p >= 70) return colors.neonGreen;
   if (p >= 40) return colors.neonAmber;
+  return colors.neonRed;
+}
+
+function weakColor(acc: number): string {
+  if (acc >= 70) return colors.neonGreen;
+  if (acc >= 40) return colors.neonAmber;
   return colors.neonRed;
 }
 

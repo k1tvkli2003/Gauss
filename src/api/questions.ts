@@ -11,6 +11,9 @@ export async function fetchExamQuestions(config: ExamConfig): Promise<Question[]
   if (config.categories.length > 0) {
     query = query.in("category", config.categories);
   }
+  if (config.subCategories.length > 0) {
+    query = query.in("sub_category", config.subCategories);
+  }
   if (config.difficulties.length > 0) {
     query = query.in("difficulty", config.difficulties);
   }
