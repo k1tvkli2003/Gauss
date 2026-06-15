@@ -24,8 +24,8 @@ export function OptionButton({
   correct,
   onPress,
 }: Props) {
-  let borderColor = colors.border;
-  let bg = colors.card;
+  let borderColor: string = colors.border;
+  let bg: string = colors.card;
 
   if (reveal) {
     if (correct) {

@@ -191,7 +191,7 @@ export default function ExamSession() {
           <View className="flex-row flex-wrap justify-center gap-2 px-5 pt-3">
             {questions.map((_, i) => {
               const a = attempts[i];
-              let bg = colors.raised;
+              let bg: string = colors.raised;
               if (i === index) bg = colors.neonBlue;
               else if (a?.status === "skipped") bg = colors.neonAmber;
               else if (a) bg = colors.neonPurple;

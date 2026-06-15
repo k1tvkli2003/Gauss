@@ -13,7 +13,8 @@ shortcut), Revenge Mode, and a GitHub-style Brain Heatmap.
 - **Zustand** for exam state
 - **NativeWind / Tailwind** for styling
 - **@shopify/react-native-skia** for the stylus drawing canvas
-- **KaTeX** (via WebView) for math rendering, RTL Persian aware
+- **react-native-mathjax-svg** for native LaTeX rendering (MathJax → SVG, no
+  WebView), RTL Persian aware
 - **Supabase** (Postgres) backend — tables namespaced `gauss_*`
 
 ## Project layout
@@ -50,6 +51,29 @@ npx expo start            # press 'a' for Android (use a tablet / landscape)
 npx expo install expo-dev-client
 eas build -p android --profile preview     # needs an Expo account
 ```
+
+## Continuous release (GitHub Actions → signed APK)
+`.github/workflows/release-apk.yml` builds a **real, signed release APK** (never
+debug, no AAB) on every push and publishes it as a GitHub Release.
+
+- **Smart versioning** — `versionName` is `major.minor` from `app.json` plus the
+  CI run number as the patch (e.g. `1.0.42`); `versionCode` is the run number,
+  so it always increases.
+- **Signing** — set these repo secrets for stable, upgradeable signing
+  (Settings → Secrets and variables → Actions):
+  - `ANDROID_KEYSTORE_BASE64` — `base64 -w0 your.keystore`
+  - `ANDROID_KEYSTORE_PASSWORD`
+  - `ANDROID_KEY_ALIAS`
+  - `ANDROID_KEY_PASSWORD`
+
+  Create a keystore once:
+  ```bash
+  keytool -genkeypair -v -keystore gauss.keystore -alias gauss \
+    -keyalg RSA -keysize 2048 -validity 10000
+  base64 -w0 gauss.keystore   # paste into ANDROID_KEYSTORE_BASE64
+  ```
+  Without secrets the workflow still produces a genuine release APK, but signs it
+  with an ephemeral key each run (not upgrade-compatible across builds).
 
 ## Database
 Schema lives in `supabase/migrations/0001_gauss_init.sql` and is already
