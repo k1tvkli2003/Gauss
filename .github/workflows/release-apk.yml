@@ -1,18 +1,16 @@
 name: Build & Release APK
 
-# Builds a real, signed **release** APK (never debug) on every push, with a
-# smart auto-incrementing version, then publishes it as a GitHub Release.
-# No AAB is produced — APK only.
+# Builds a real, signed **release** APK (never debug bundle) on every push from
+# the native Kotlin/Jetpack-Compose project, then publishes it as a GitHub
+# Release. APK only — no AAB.
 on:
   push:
     branches: ["**"]
     paths-ignore:
       - "**/*.md"
       - ".gitignore"
-      - ".env.example"
   workflow_dispatch:
 
-# Cancel an in-flight build for the same ref when a newer push arrives.
 concurrency:
   group: release-apk-${{ github.ref }}
   cancel-in-progress: true
@@ -30,56 +28,34 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
       - name: Setup JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install SDK packages
+        run: sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Typecheck
-        run: npm run lint
-
-      # ---- Smart version: major.minor from app.json, patch = run number ----
+      # ---- Smart version: 1.0.<run> name, <run> code (always increasing) ----
       - name: Compute version
         id: ver
         run: |
-          BASE=$(node -p "require('./app.json').expo.version")
-          MAJOR_MINOR=$(echo "$BASE" | cut -d. -f1,2)
-          VNAME="${MAJOR_MINOR}.${{ github.run_number }}"
+          VNAME="1.0.${{ github.run_number }}"
           VCODE="${{ github.run_number }}"
           echo "name=$VNAME" >> "$GITHUB_OUTPUT"
           echo "code=$VCODE" >> "$GITHUB_OUTPUT"
           echo "Version → name=$VNAME  code=$VCODE"
 
-      - name: Stamp version into app config
-        run: |
-          node -e '
-            const fs = require("fs");
-            const p = "./app.json";
-            const j = JSON.parse(fs.readFileSync(p, "utf8"));
-            j.expo.version = "${{ steps.ver.outputs.name }}";
-            j.expo.android = j.expo.android || {};
-            j.expo.android.versionCode = Number("${{ steps.ver.outputs.code }}");
-            fs.writeFileSync(p, JSON.stringify(j, null, 2) + "\n");
-          '
-
-      - name: Prebuild native Android project
-        run: npx expo prebuild --platform android --no-install --clean
-
-      # ---- Resolve the signing keystore (stable from secrets, else ephemeral) ----
+      # ---- Resolve the signing keystore (stable from secrets, else debug) ----
       - name: Prepare signing key
+        id: signing
         env:
           KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
@@ -87,69 +63,50 @@ jobs:
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           set -euo pipefail
-          KS="$RUNNER_TEMP/gauss-release.keystore"
           if [ -n "${KEYSTORE_BASE64:-}" ]; then
+            KS="$RUNNER_TEMP/gauss-release.keystore"
             echo "$KEYSTORE_BASE64" | base64 -d > "$KS"
-            STORE_PASS="$KEYSTORE_PASSWORD"
-            ALIAS="$KEY_ALIAS"
-            KEY_PASS="$KEY_PASSWORD"
+            {
+              echo "GAUSS_KEYSTORE_PATH=$KS"
+              echo "GAUSS_KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD"
+              echo "GAUSS_KEY_ALIAS=$KEY_ALIAS"
+              echo "GAUSS_KEY_PASSWORD=$KEY_PASSWORD"
+            } >> "$GITHUB_ENV"
+            echo "::add-mask::$KEYSTORE_PASSWORD"
+            echo "::add-mask::$KEY_PASSWORD"
             echo "Using stable keystore from repository secrets."
           else
-            echo "::warning::No ANDROID_KEYSTORE_BASE64 secret set — generating an ephemeral release key. The APK is a genuine release build, but each run is signed with a different key so it cannot be installed as an update over a previous build. Add ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD / ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD secrets for stable, upgradeable signing."
-            STORE_PASS="gauss-ci"
-            ALIAS="gauss"
-            KEY_PASS="gauss-ci"
-            keytool -genkeypair -v \
-              -keystore "$KS" -alias "$ALIAS" \
-              -keyalg RSA -keysize 2048 -validity 10000 \
-              -storepass "$STORE_PASS" -keypass "$KEY_PASS" \
-              -dname "CN=Gauss, OU=Mobile, O=Gauss, L=Tehran, S=Tehran, C=IR"
+            echo "::warning::No ANDROID_KEYSTORE_BASE64 secret set — the release APK will be signed with the Android debug key. It installs fine, but is not upgrade-compatible across machines. Add ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD / ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD for stable signing."
           fi
-          echo "::add-mask::$STORE_PASS"
-          echo "::add-mask::$KEY_PASS"
-          {
-            echo "KS_PATH=$KS"
-            echo "KS_STORE_PASS=$STORE_PASS"
-            echo "KS_ALIAS=$ALIAS"
-            echo "KS_KEY_PASS=$KEY_PASS"
-          } >> "$GITHUB_ENV"
 
       - name: Assemble release APK
-        working-directory: android
+        env:
+          GAUSS_VERSION_NAME: ${{ steps.ver.outputs.name }}
+          GAUSS_VERSION_CODE: ${{ steps.ver.outputs.code }}
         run: |
           chmod +x ./gradlew
-          ./gradlew :app:assembleRelease --no-daemon --stacktrace \
-            -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
+          ./gradlew :app:assembleRelease --no-daemon --stacktrace
 
-      # ---- Align + sign with our release key so the APK is officially signed ----
-      - name: Zipalign & sign APK
-        id: sign
+      - name: Locate & rename APK
+        id: apk
         run: |
           set -euo pipefail
-          IN="android/app/build/outputs/apk/release/app-release.apk"
+          IN="app/build/outputs/apk/release/app-release.apk"
           if [ ! -f "$IN" ]; then
             echo "Release APK not found at $IN" >&2
-            ls -R android/app/build/outputs/apk || true
+            find app/build/outputs -name '*.apk' || true
             exit 1
           fi
-          BT_DIR="$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)"
           OUT="gauss-v${{ steps.ver.outputs.name }}.apk"
-          "$BT_DIR/zipalign" -f -p 4 "$IN" aligned.apk
-          "$BT_DIR/apksigner" sign \
-            --ks "$KS_PATH" \
-            --ks-pass "pass:$KS_STORE_PASS" \
-            --ks-key-alias "$KS_ALIAS" \
-            --key-pass "pass:$KS_KEY_PASS" \
-            --out "$OUT" aligned.apk
-          "$BT_DIR/apksigner" verify --verbose "$OUT"
-          echo "apk=$OUT" >> "$GITHUB_OUTPUT"
+          cp "$IN" "$OUT"
           ls -lh "$OUT"
+          echo "path=$OUT" >> "$GITHUB_OUTPUT"
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: gauss-v${{ steps.ver.outputs.name }}-apk
-          path: ${{ steps.sign.outputs.apk }}
+          path: ${{ steps.apk.outputs.path }}
           if-no-files-found: error
 
       - name: Publish GitHub Release
@@ -157,16 +114,15 @@ jobs:
         with:
           tag_name: v${{ steps.ver.outputs.name }}
           name: Gauss v${{ steps.ver.outputs.name }}
-          files: ${{ steps.sign.outputs.apk }}
+          files: ${{ steps.apk.outputs.path }}
           fail_on_unmatched_files: true
           generate_release_notes: true
           body: |
             ### گائوس — نسخهٔ v${{ steps.ver.outputs.name }}
-            اپ اندروید (release، امضاشده) — ساخته‌شده از کامیت `${{ github.sha }}`.
+            اپ اندروید نیتیو (Kotlin + Jetpack Compose) — APK امضاشدهٔ release.
 
             - `versionName`: `${{ steps.ver.outputs.name }}`
             - `versionCode`: `${{ steps.ver.outputs.code }}`
-            - معماری: `arm64-v8a`, `armeabi-v7a`
 
             فایل `*.apk` پایین رو دانلود و روی گوشی نصب کن.
         env:
