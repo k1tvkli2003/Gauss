@@ -1,29 +1,26 @@
-# dependencies
-node_modules/
+# Android / Gradle
+.gradle/
+build/
+local.properties
+captures/
+.cxx/
+*.iml
+.idea/
 
-# expo
-.expo/
-dist/
-web-build/
-expo-env.d.ts
-
-# native
-*.orig.*
+# signing — NEVER commit keystores
 *.jks
+*.keystore
 *.p8
 *.p12
 *.key
 *.mobileprovision
+keystore.properties
 
-# secrets — NEVER commit these
+# secrets
 .env
 .env.local
-.env.*.local
-*.service-key
 .secrets/
 
 # misc
 .DS_Store
-npm-debug.*
-yarn-error.*
-.metro-health-check*
+*.orig.*
