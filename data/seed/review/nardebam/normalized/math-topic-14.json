@@ -1,0 +1,1501 @@
+[
+  {
+    "question_number": 1638,
+    "question_page": 13,
+    "question_text": "اگر پاره‌خط $AB$ را حول محور $y$ها دوران دهیم، مساحت شکل حاصل کدام است؟",
+    "options": [
+      "$2\\pi$",
+      "$4\\pi$",
+      "$6\\pi$",
+      "$8\\pi$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          82,
+          128,
+          335,
+          252
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "پاره‌خط افقی AB از x=1 تا x=3 در y=4"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1639,
+    "question_page": 13,
+    "question_text": "مستطیلی به اضلاع ۳ و ۴ را یک بار حول طول و یک بار حول عرض آن دوران می‌دهیم. اختلاف دو حجم به دست آمده کدام است؟",
+    "options": [
+      "$8\\pi$",
+      "$9\\pi$",
+      "$12\\pi$",
+      "$15\\pi$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1640,
+    "question_page": 13,
+    "question_text": "مستطیل شکل مقابل را حول محور عرض‌ها دوران می‌دهیم. اختلاف حجم‌های به دست آمده در دو حالت $x = 1$ و $x = 2$ کدام است؟",
+    "options": [
+      "$4\\pi$",
+      "$6\\pi$",
+      "$8\\pi$",
+      "صفر"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          82,
+          300,
+          315,
+          412
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مستطیل بین x و x+1 و y=1 تا y=3"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1641,
+    "question_page": 13,
+    "question_text": "مثلث قائم‌الزاویه‌ای به اضلاع قائم ۳ و ۴ را یک بار حول ضلع کوچک‌تر و یک بار حول ضلع بزرگ‌تر دوران می‌دهیم. اختلاف دو حجم به دست آمده کدام است؟",
+    "options": [
+      "$2\\pi$",
+      "$4\\pi$",
+      "$6\\pi$",
+      "$8\\pi$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1642,
+    "question_page": 13,
+    "question_text": "مثلث قائم‌الزاویه‌ای به اضلاع قائم ۳ و ۴ را حول وتر دوران می‌دهیم. حجم شکل حاصل کدام است؟",
+    "options": [
+      "$3/6\\pi$",
+      "$4/8\\pi$",
+      "$7/2\\pi$",
+      "$9/6\\pi$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1643,
+    "question_page": 13,
+    "question_text": "مثلث متساوی‌الاضلاع به ضلع ۴ را حول یکی از اضلاع دوران می‌دهیم. حجم شکل حاصل کدام است؟",
+    "options": [
+      "$2\\pi$",
+      "$4\\pi$",
+      "$8\\pi$",
+      "$16\\pi$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1644,
+    "question_page": 13,
+    "question_text": "مکعبی به طول یال ۲ را حول یکی از یال‌ها دوران می‌دهیم. حجم شکل حاصل کدام است؟",
+    "options": [
+      "$8\\pi$",
+      "$16\\pi$",
+      "$32\\pi$",
+      "$24\\pi$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1645,
+    "question_page": 13,
+    "question_text": "مساحت مثلث $ABC$ برابر ۱۲ است. اگر این مثلث را حول ضلع $AB$ به طول ۶ دوران دهیم، حجم شکل حاصل کدام است؟",
+    "options": [
+      "$8\\pi$",
+      "$16\\pi$",
+      "$32\\pi$",
+      "$64\\pi$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          82,
+          672,
+          305,
+          755
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث ABC با قاعده AB به طول 6"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1646,
+    "question_page": 13,
+    "question_text": "مثلث قائم‌الزاویه $ABC$ در ضلع روبه‌رو را حول خط $d$ که به موازات ضلع مثلث می‌باشد، دوران می‌دهیم. حجم به دست آمده چه عددی است؟",
+    "options": [
+      "$16\\pi$",
+      "$32\\pi$",
+      "$36\\pi$",
+      "$30\\pi$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          82,
+          786,
+          255,
+          888
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث قائم‌الزاویه ABC با اضلاع زاویه قائمه ۳ و ۵ و خط d"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1647,
+    "question_page": 13,
+    "question_text": "ذوزنقه قائم‌الزاویه $ABCD$ را حول ضلع $AB$ دوران می‌دهیم. حجم شکل حاصل کدام است؟",
+    "options": [
+      "$48\\pi$",
+      "$50\\pi$",
+      "$52\\pi$",
+      "$54\\pi$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          82,
+          889,
+          300,
+          966
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه قائم‌الزاویه ABCD"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1648,
+    "question_page": 13,
+    "question_text": "ذوزنقه قائم‌الزاویه $ABCD$ را حول قاعده کوچک دوران می‌دهیم. حجم شکل حاصل کدام است؟",
+    "options": [
+      "$42\\pi$",
+      "$44\\pi$",
+      "$46\\pi$",
+      "$48\\pi$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          82,
+          970,
+          305,
+          1045
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه قائم‌الزاویه ABCD"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1649,
+    "question_page": 13,
+    "question_text": "ذوزنقه قائم‌الزاویه $ABCD$ را حول قاعده بزرگ دوران می‌دهیم. حجم شکل حاصل کدام است؟",
+    "options": [
+      "$18\\pi$",
+      "$30\\pi$",
+      "$24\\pi$",
+      "$27\\pi$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          82,
+          1045,
+          305,
+          1145
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه قائم‌الزاویه ABCD"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1650,
+    "question_page": 13,
+    "question_text": "مثلث قائم‌الزاویه $ABC$ را حول خط $l$ که موازی $AB$ است دوران می‌دهیم. حجم شکل حاصل کدام است؟",
+    "options": [
+      "$12\\pi$",
+      "$24\\pi$",
+      "$32\\pi$",
+      "$40\\pi$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          82,
+          1150,
+          335,
+          1260
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث قائم‌الزاویه ABC و خط l موازی با AB"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1651,
+    "question_page": 14,
+    "question_text": "در بیضی شکل مقابل مبدأ مختصات مرکز بیضی به زاویۀ $B'$ برابر $120^\\circ$ و طول قطر بزرگ ۸ است. فاصلۀ کانونی چه‌قدر است؟",
+    "options": [
+      "$2$",
+      "$2\\sqrt{3}$",
+      "$4$",
+      "$4\\sqrt{3}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0014.jpg",
+        "box": [
+          80,
+          180,
+          380,
+          480
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با قطر بزرگ روی محور y و کانون F و زاویه B'"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1652,
+    "question_page": 14,
+    "question_text": "در بیضی شکل مقابل چهارضلعی $BFB'F'$ مربع است. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$\\dfrac{1}{2}$",
+      "$\\dfrac{1}{3}$",
+      "$\\dfrac{\\sqrt{2}}{2}$",
+      "$\\dfrac{\\sqrt{3}}{2}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0014.jpg",
+        "box": [
+          80,
+          500,
+          430,
+          680
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با چهارضلعی BFB'F' مربع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1653,
+    "question_page": 14,
+    "question_text": "$F(1,5)$ و $F'(1,-3)$ کانون‌های یک بیضی هستند که از نقطۀ $(4,1)$ عبور می‌کند. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$0/5$",
+      "$0/6$",
+      "$0/7$",
+      "$0/8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1654,
+    "question_page": 14,
+    "question_text": "اگر $B(-2,2)$ و $B'(6,2)$ دو سر قطر کوچک یک بیضی و خروج از مرکز آن $\\dfrac{\\sqrt{5}}{3}$ باشد. مختصات یکی از دو سر قطر بزرگ کدام می‌تواند باشد؟",
+    "options": [
+      "$(-4,2)$",
+      "$(2,4)$",
+      "$(8,2)$",
+      "$(2,-4)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1655,
+    "question_page": 14,
+    "question_text": "در شکل مقابل مساحت مثلث $MNF$ کدام است؟ ($b$ نصف قطر کوچک و $e$ خروج از مرکز بیضی است.)",
+    "options": [
+      "$eb^2$",
+      "$2eb^2$",
+      "$\\dfrac{b^2}{e}$",
+      "$\\dfrac{2b^2}{e}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0014.jpg",
+        "box": [
+          80,
+          920,
+          430,
+          1100
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با مثلث MNF"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1656,
+    "question_page": 14,
+    "question_text": "فاصلۀ یک کانون تا دورترین رأس در بیضی $6\\sqrt{3}$ و قطر کوچک بیضی ۱۲ است. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$\\dfrac{1}{2}$",
+      "$\\dfrac{\\sqrt{3}}{2}$",
+      "$\\dfrac{1}{3}$",
+      "$\\dfrac{\\sqrt{3}}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1657,
+    "question_page": 14,
+    "question_text": "اگر قطر بزرگ و کوچک بیضی به ترتیب $2a$ و $2b$ باشند، خروج از مرکز آن کدام است؟",
+    "options": [
+      "$\\sqrt{1-\\dfrac{b^2}{a^2}}$",
+      "$\\sqrt{\\dfrac{a^2}{a^2+b^2}}$",
+      "$\\sqrt{\\dfrac{a^2-1}{b^2}}$",
+      "$\\sqrt{\\dfrac{b^2}{a^2+1}}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1658,
+    "question_page": 14,
+    "question_text": "در یک بیضی دو سر قطر کوچک از انتهای قطر بزرگ با زاویۀ $60^\\circ$ رؤیت می‌شود. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$\\dfrac{1}{2}$",
+      "$\\dfrac{2}{3}$",
+      "$\\dfrac{\\sqrt{3}}{3}$",
+      "$\\dfrac{\\sqrt{6}}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1659,
+    "question_page": 14,
+    "question_text": "در شکل مقابل $AF = 1$، $MF = 2$ و $MF' = 6$ است. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$\\dfrac{3}{4}$",
+      "$\\dfrac{3}{5}$",
+      "$\\dfrac{2}{3}$",
+      "$\\dfrac{4}{5}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0014.jpg",
+        "box": [
+          80,
+          1500,
+          400,
+          1700
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با نقاط M, F, F', A"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1660,
+    "question_page": 14,
+    "question_text": "در یک بیضی قطر کوچک ۲ برابر فاصلۀ کانونی است. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$\\dfrac{1}{2}$",
+      "$\\dfrac{\\sqrt{3}}{3}$",
+      "$\\dfrac{1}{5}$",
+      "$\\dfrac{\\sqrt{5}}{5}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1661,
+    "question_page": 14,
+    "question_text": "در بیضی شکل مقابل فاصلۀ کانونی برابر $\\sqrt{3}$ است. اگر OP با قطر بزرگ بیضی برابر باشد، QF کدام است؟",
+    "options": [
+      "$\\dfrac{1}{2}$",
+      "$\\dfrac{3}{2}$",
+      "$\\dfrac{\\sqrt{2}}{2}$",
+      "$\\dfrac{\\sqrt{3}}{2}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0014.jpg",
+        "box": [
+          80,
+          1800,
+          350,
+          2150
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با پاره‌خط OP و نقطه Q"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1662,
+    "question_page": 14,
+    "question_text": "خروج از مرکز بیضی مقابل $\\dfrac{\\sqrt{3}}{2}$ و قطر کوچک ۱ است. مساحت مستطیل محیطی بیضی کدام است؟",
+    "options": [
+      "$\\dfrac{1}{2}$",
+      "$1$",
+      "$2$",
+      "$4$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0014.jpg",
+        "box": [
+          80,
+          2180,
+          320,
+          2350
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی محاط در مستطیل"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1663,
+    "question_page": 15,
+    "question_text": "یک بیضی به طول اقطار $2a$ و $2b$ و فاصله کانونی $2c$ مفروض است. دایره‌ای به مرکز بیضی و به شعاع $c$، بیضی را در ۴ نقطه قطع می‌کند. اگر یکی از این نقاط را $M$ بنامیم، مجموع مربعات فواصل $M$ از دو کانون بیضی کدام است؟",
+    "options": [
+      "$4a^2$",
+      "$4b^2$",
+      "$4c^2$",
+      "$4(a^2 + b^2)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1664,
+    "question_page": 15,
+    "question_text": "خروج از مرکز بیضی مقابل برابر $\\frac{1}{3}$ است. $\\cos \\alpha$ کدام است؟",
+    "options": [
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{\\sqrt{3}}{3}$",
+      "$\\frac{\\sqrt{3}}{2}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0015.jpg",
+        "box": [
+          200,
+          330,
+          500,
+          500
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با مرکز O و کانون‌های F و F' و نقطه B روی قطر کوچک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1665,
+    "question_page": 15,
+    "question_text": "در بیضی مقابل مساحت مثلث $A'BF$، $9$ برابر مساحت مثلث $ABF$ است. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$\\frac{1}{5}$",
+      "$\\frac{2}{5}$",
+      "$\\frac{3}{5}$",
+      "$\\frac{4}{5}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0015.jpg",
+        "box": [
+          190,
+          530,
+          500,
+          715
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با مرکز O و کانون‌های F و F' و نقطه B روی قطر کوچک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1666,
+    "question_page": 15,
+    "question_text": "در یک بیضی به کانون‌های $F(-3,3)$ و $F'(3,3)$، اندازه قطر کوچک $8$ واحد است. کم‌ترین طول نقاط بیضی کدام است؟",
+    "options": [
+      "$-3/5$",
+      "$-4$",
+      "$-4/5$",
+      "$-5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1667,
+    "question_page": 15,
+    "question_text": "نقطه $(4,1)$ مرکز یک بیضی قائم است که طول قطرهای بزرگ و کوچک آن $15$ و $12$ است. مختصات یکی از کانون‌های بیضی کدام است؟",
+    "options": [
+      "$(-1/5, 1)$",
+      "$(4, -8)$",
+      "$(4, -3/5)$",
+      "$(-4, 1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1668,
+    "question_page": 15,
+    "question_text": "$F(3,4)$ و $F'(7,4)$ کانون‌های یک بیضی مماس بر محور عرض‌ها می‌باشند. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$0/4$",
+      "$0/5$",
+      "$0/6$",
+      "$0/8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1669,
+    "question_page": 15,
+    "question_text": "$A(-3,1)$ و $A'(5,1)$ دو سر قطر بزرگ یک بیضی و $F(3,1)$ یکی از کانون‌های آن است. اندازه قطر بزرگ بیضی چند برابر اندازه قطر کوچک آن است؟",
+    "options": [
+      "$\\sqrt{3}$",
+      "$2\\sqrt{3}$",
+      "$\\frac{2\\sqrt{3}}{3}$",
+      "$\\frac{4\\sqrt{3}}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1670,
+    "question_page": 15,
+    "question_text": "$F(1,-1)$ و $F'(-7,-1)$ کانون‌های یک بیضی با خروج از مرکز $0/8$ هستند. مختصات یک سر قطر کوچک کدام است؟",
+    "options": [
+      "$(-3,2)$",
+      "$(-3,-2)$",
+      "$(0,-1)$",
+      "$(1,-1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1671,
+    "question_page": 15,
+    "question_text": "معادله دایره‌ای به شعاع $3$ و مرکز $(-2,3)$ کدام است؟",
+    "options": [
+      "$x^2 + y^2 + 4x - 6y + 4 = 0$",
+      "$x^2 + y^2 - 4x + 6y + 9 = 0$",
+      "$x^2 + y^2 + 4x - 6y + 9 = 0$",
+      "$x^2 + y^2 - 4x + 6y + 4 = 0$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1672,
+    "question_page": 15,
+    "question_text": "معادله دایره‌ای که دو سر قطر آن $A(2,5)$ و $B(-4,-3)$ باشد کدام است؟",
+    "options": [
+      "$(x+1)^2 + (y-1)^2 = 25$",
+      "$(x+1)^2 + (y-1)^2 = 100$",
+      "$(x-1)^2 + (y+1)^2 = 100$",
+      "$(x-1)^2 + (y+1)^2 = 25$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1673,
+    "question_page": 15,
+    "question_text": "معادله $x^2 + y^2 + ax + by + c = 0$ معادله دایره‌ای به مرکز $O(1,-3)$ و شعاع $2$ است. مقدار $c$ چه‌قدر است؟",
+    "options": [
+      "$3$",
+      "$4$",
+      "$5$",
+      "$6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1674,
+    "question_page": 15,
+    "question_text": "شعاع دایره‌ای که از سه نقطه $(0,4)$ ، $(-1,5)$ و $(3,-1)$ می‌گذرد، کدام است؟",
+    "options": [
+      "$5$",
+      "$2/5$",
+      "$\\sqrt{5}$",
+      "$2\\sqrt{5}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1675,
+    "question_page": 15,
+    "question_text": "به ازای کدام مقادیر $a$ معادله $3x^2 + 3y^2 - 6x + 3y + a = 0$ بیانگر یک دایره است؟",
+    "options": [
+      "$a < \\frac{15}{4}$",
+      "$a > \\frac{15}{4}$",
+      "$a < \\frac{45}{4}$",
+      "$a > \\frac{45}{4}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1676,
+    "question_page": 15,
+    "question_text": "اگر $ax^2 + 2y^2 - 8x - 2ay = b$ دایره‌ای به شعاع $3$ باشد، $ab$ کدام است؟",
+    "options": [
+      "$2$",
+      "$4$",
+      "$8$",
+      "$16$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1677,
+    "question_page": 15,
+    "question_text": "قطری از دایره $x^2 + y^2 - 4x + 2y = 7$ که بر خط $x + 2y = 3$ عمود باشد، با کدام عرض از مبدأ است؟",
+    "options": [
+      "$3$",
+      "$5$",
+      "$-3$",
+      "$-5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1678,
+    "question_page": 15,
+    "question_text": "معادله یکی از اقطار دایره به صورت $x + y = 2$ است. اگر این دایره از نقاط $(-3,4)$ و $(1,5)$ بگذرد، شعاع دایره کدام است؟",
+    "options": [
+      "$\\frac{\\sqrt{65}}{4}$",
+      "$\\frac{\\sqrt{65}}{2}$",
+      "$\\frac{\\sqrt{85}}{4}$",
+      "$\\frac{\\sqrt{85}}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1679,
+    "question_page": 15,
+    "question_text": "مرکز دایره‌ای بر خط $y - 2x = 1$ قرار داشته و دایره از نقاط $(2,1)$ و $(-4,3)$ عبور می‌کند. کدام نقطه زیر بر دایره واقع است؟",
+    "options": [
+      "$(-4,1)$",
+      "$(-4,-1)$",
+      "$(1,4)$",
+      "$(1,-4)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1680,
+    "question_page": 16,
+    "question_text": "یک بیضی به طول اقطار $2a$ و $2b$ و فاصله کانونی $2c$ مفروض است. دایره‌ای به مرکز بیضی و به شعاع $c$، بیضی را در ۴ نقطه قطع می‌کند. اگر یکی از این نقاط را $M$ بنامیم، مجموع مربعات فواصل $M$ از دو کانون بیضی کدام است؟",
+    "options": [
+      "$4a^2$",
+      "$4b^2$",
+      "$4c^2$",
+      "$4(a^2 + b^2)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1681,
+    "question_page": 16,
+    "question_text": "خروج از مرکز بیضی مقابل برابر $\\frac{1}{3}$ است. $\\cos \\alpha$ کدام است؟",
+    "options": [
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{\\sqrt{3}}{3}$",
+      "$\\frac{\\sqrt{3}}{2}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0016.jpg",
+        "box": [
+          180,
+          320,
+          500,
+          500
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با کانون‌های F و F' و یک نقطه B روی محور فرعی. زاویه آلفا در راس F تشکیل شده است."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1682,
+    "question_page": 16,
+    "question_text": "در بیضی مقابل مساحت مثلث $A'BF$، ۹ برابر مساحت مثلث $ABF$ است. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$\\frac{1}{5}$",
+      "$\\frac{2}{5}$",
+      "$\\frac{3}{5}$",
+      "$\\frac{4}{5}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0016.jpg",
+        "box": [
+          150,
+          550,
+          500,
+          720
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "بیضی با مرکز O و کانون‌های F و F'. نقاط A و A' دو سر قطر بزرگ و B یک نقطه روی بیضی است."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1683,
+    "question_page": 16,
+    "question_text": "در یک بیضی به کانون‌های $F(-3, 3)$ و $F'(3, 3)$، اندازه قطر کوچک ۸ واحد است. کم‌ترین طول نقاط بیضی کدام است؟",
+    "options": [
+      "$-3/5$",
+      "$-4$",
+      "$-4/5$",
+      "$-5$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "The options use slash for decimal separator."
+    ]
+  },
+  {
+    "question_number": 1684,
+    "question_page": 16,
+    "question_text": "نقطه $(4, 1)$ مرکز یک بیضی قائم است که طول قطرهای بزرگ و کوچک آن ۱۵ و ۱۲ است. مختصات یکی از کانون‌های بیضی کدام است؟",
+    "options": [
+      "$(-1/5, 1)$",
+      "$(4, -8)$",
+      "$(4, -3/5)$",
+      "$(-4, 1)$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "The options use slash for decimal separator."
+    ]
+  },
+  {
+    "question_number": 1685,
+    "question_page": 16,
+    "question_text": "$F(3, 4)$ و $F'(7, 4)$ کانون‌های یک بیضی مماس بر محور عرض‌ها می‌باشند. خروج از مرکز بیضی کدام است؟",
+    "options": [
+      "$0/4$",
+      "$0/5$",
+      "$0/6$",
+      "$0/8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1686,
+    "question_page": 16,
+    "question_text": "$A(-3, 1)$ و $A'(5, 1)$ دو سر قطر بزرگ یک بیضی و $F(3, 1)$ یکی از کانون‌های آن است. اندازه قطر بزرگ بیضی چند برابر اندازه قطر کوچک آن است؟",
+    "options": [
+      "$\\sqrt{3}$",
+      "$2\\sqrt{3}$",
+      "$\\frac{2\\sqrt{3}}{3}$",
+      "$\\frac{4\\sqrt{3}}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1687,
+    "question_page": 16,
+    "question_text": "$F(-1, 1)$ و $F'(-7, -1)$ کانون‌های یک بیضی با خروج از مرکز $0/8$ هستند. مختصات یک سر قطر کوچک کدام است؟",
+    "options": [
+      "$(-3, 2)$",
+      "$(-3, -2)$",
+      "$(0, -1)$",
+      "$(1, -1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1688,
+    "question_page": 16,
+    "question_text": "معادله دایره‌ای به شعاع ۳ و مرکز $O(2, -3)$ کدام است؟",
+    "options": [
+      "$x^2 + y^2 + 4x - 6y + 4 = 0$",
+      "$x^2 + y^2 - 4x + 6y + 9 = 0$",
+      "$x^2 + y^2 + 4x - 6y + 9 = 0$",
+      "$x^2 + y^2 - 4x + 6y + 4 = 0$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1689,
+    "question_page": 16,
+    "question_text": "معادله دایره‌ای که دو سر قطر آن $A(2, 5)$ و $B(-4, -3)$ باشد کدام است؟",
+    "options": [
+      "$(x+1)^2 + (y-1)^2 = 25$",
+      "$(x+1)^2 + (y-1)^2 = 100$",
+      "$(x-1)^2 + (y+1)^2 = 100$",
+      "$(x-1)^2 + (y+1)^2 = 25$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1690,
+    "question_page": 16,
+    "question_text": "$x^2 + y^2 + ax + by + c = 0$ معادله دایره‌ای به مرکز $O(3, -1)$ و شعاع ۲ است. مقدار $c$ چه‌قدر است؟",
+    "options": [
+      "$3$",
+      "$4$",
+      "$5$",
+      "$6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1691,
+    "question_page": 16,
+    "question_text": "شعاع دایره‌ای که از سه نقطه $(-3, -1)$، $(-1, 5)$ و $(0, 4)$ می‌گذرد، کدام است؟",
+    "options": [
+      "$5$",
+      "$2/5$",
+      "$\\sqrt{5}$",
+      "$2\\sqrt{5}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1692,
+    "question_page": 16,
+    "question_text": "به ازای کدام مقادیر $a$ معادله $3x^2 + 3y^2 - 6x + 3y + a = 0$ بیانگر یک دایره است؟",
+    "options": [
+      "$a < \\frac{15}{4}$",
+      "$a > \\frac{15}{4}$",
+      "$a < \\frac{45}{4}$",
+      "$a > \\frac{45}{4}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1693,
+    "question_page": 16,
+    "question_text": "اگر $ax^2 + 2y^2 - 8x - 2ay = b$ دایره‌ای به شعاع ۳ باشد، $ab$ کدام است؟",
+    "options": [
+      "$2$",
+      "$4$",
+      "$8$",
+      "$16$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1694,
+    "question_page": 16,
+    "question_text": "قطری از دایره $x^2 + y^2 - 4x + 2y = 7$ که بر خط $2y + x = 3$ عمود باشد، با کدام عرض از مبدأ است؟",
+    "options": [
+      "$3$",
+      "$5$",
+      "$-3$",
+      "$-5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1695,
+    "question_page": 16,
+    "question_text": "معادله یکی از اقطار دایره به صورت $x + y = 2$ است. اگر این دایره از نقاط $(-3, 4)$ و $(1, 5)$ بگذرد، شعاع دایره کدام است؟",
+    "options": [
+      "$\\frac{\\sqrt{65}}{4}$",
+      "$\\frac{\\sqrt{65}}{2}$",
+      "$\\frac{\\sqrt{85}}{4}$",
+      "$\\frac{\\sqrt{85}}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1696,
+    "question_page": 16,
+    "question_text": "مرکز دایره‌ای بر خط $y - 2x = 1$ قرار داشته و دایره از نقاط $(2, 1)$ و $(-4, 3)$ عبور می‌کند. کدام نقطه زیر بر دایره واقع است؟",
+    "options": [
+      "$(-4, 1)$",
+      "$(-4, -1)$",
+      "$(1, 4)$",
+      "$(1, -4)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1697,
+    "question_page": 17,
+    "question_text": "مرکز دایره‌ای بر نیمساز ربع چهارم واقع بوده و محور $y$ها را در دو نقطه به عرض‌های $-۷$ و $۱$ قطع می‌کند. شعاع این دایره کدام است؟",
+    "options": [
+      "$۳$",
+      "$\\sqrt{۳}$",
+      "$۵$",
+      "$\\sqrt{۵}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1698,
+    "question_page": 17,
+    "question_text": "دایره‌ای به مرکز $O(-۱, ۶)$ و شعاع $۱/۲۵$ محور $y$ها را در نقاط A و B قطع می‌کند. مساحت مثلث OAB کدام است؟",
+    "options": [
+      "$\\frac{۱}{۲}$",
+      "$\\frac{۳}{۴}$",
+      "$\\frac{۳}{۲}$",
+      "$۱$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1699,
+    "question_page": 17,
+    "question_text": "نقاط $M(۱, ۲)$ و $N(۲, ۱)$ نسبت به دایرهٔ $x^۲ + y^۲ + ۳x - ۵y - ۴ = ۰$ چگونه‌اند؟",
+    "options": [
+      "M بیرون و N درون دایره",
+      "M درون و N بیرون دایره",
+      "هر دو بیرون دایره",
+      "هر دو درون دایره"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1700,
+    "question_page": 17,
+    "question_text": "اگر نقطهٔ $A(-۱, ۳)$ درون دایرهٔ $x^۲ + y^۲ + ax + ۴y = ۹$ باشد، حدود a کدام است؟",
+    "options": [
+      "$a > ۱۳$",
+      "$۰ < a < ۱۳$",
+      "$۰ < a < ۹$",
+      "$a < ۶$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1701,
+    "question_page": 17,
+    "question_text": "نقطهٔ $P(۳, -۳)$ بیرون دایره به معادلهٔ $x^۲ + y^۲ + ۶x - ۲y + a = ۲۷$ است. حدود a کدام است؟",
+    "options": [
+      "$a < -۶$",
+      "$a > -۶$",
+      "$-۱۰ < a < -۶$",
+      "$-۶ < a < ۱۰$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1702,
+    "question_page": 17,
+    "question_text": "دایره‌ای به مرکز $O(-۱, ۳)$ بر خط $۳y + ۲ = ۰$ مماس است. این دایره محور $y$ها را با کدام عرض قطع می‌کند؟",
+    "options": [
+      "$۰$ یا $-۶$",
+      "$۰$ یا $۶$",
+      "$۲$ یا $۴$",
+      "$-۲$ یا $۴$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1703,
+    "question_page": 17,
+    "question_text": "از تلاقی خط $x + ۳y = ۵$ با دایره به مرکز $O(۱, -۲)$ وتری به طول $۲۴$ به وجود می‌آید. مساحت این دایره کدام است؟",
+    "options": [
+      "$۴\\pi$",
+      "$۸\\pi$",
+      "$۱۶\\pi$",
+      "$۳۲\\pi$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1704,
+    "question_page": 17,
+    "question_text": "دایره‌ای به مرکز $(-۲, -۴)$ و شعاع $۵$ بر محور طول‌ها وتری به طول $l$ ایجاد می‌کند. $l$ کدام است؟",
+    "options": [
+      "$۳$",
+      "$۴$",
+      "$۶$",
+      "$۸$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1705,
+    "question_page": 17,
+    "question_text": "دایره‌ای به مرکز $O(۴, -۱)$ از نقاط $A(-۱, -۱)$ و $B(-۶, k)$ عبور می‌کند. بیشترین مقدار طول وتر AB کدام است؟",
+    "options": [
+      "$\\sqrt{۲۶}$",
+      "$۲\\sqrt{۵}$",
+      "$۲\\sqrt{۲۶}$",
+      "$۵\\sqrt{۲}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1706,
+    "question_page": 17,
+    "question_text": "دایرهٔ $x^۲ + y^۲ - ۱۰x + ۴y + ۲۸ = ۰$ مفروض است. اگر شعاع دایره در هر ثانیه $۰/۵\\text{ cm}$ افزایش یابد، پس از چند ثانیه این دایره بر خط $۳y - ۴x + ۴ = ۰$ مماس می‌شود؟",
+    "options": [
+      "$۵$",
+      "$۶$",
+      "$۱۰$",
+      "$۱۲$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1707,
+    "question_page": 17,
+    "question_text": "دایرهٔ $x^۲ + y^۲ + ۴x + ay + b = ۰$ در ناحیهٔ دوم بر هر دو محور مختصات مماس است. $a + b$ کدام است؟",
+    "options": [
+      "صفر",
+      "$۴$",
+      "$۸$",
+      "$۶$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1708,
+    "question_page": 17,
+    "question_text": "خط $۳x - ۲y = ۰$ بر دایرهٔ $x^۲ + y^۲ - ۱۲x + ۸y + k = ۰$ مماس است. k کدام است؟",
+    "options": [
+      "صفر",
+      "$۱$",
+      "$-۶$",
+      "$۱۱$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1709,
+    "question_page": 17,
+    "question_text": "به ازای کدام مقادیر a خط به معادلهٔ $۳x + ۷ = ay$ بر دایره به معادلهٔ $x^۲ + y^۲ - ۴y = ۵$ مماس است؟",
+    "options": [
+      "$۴$ و $\\frac{۸}{۵}$",
+      "$-۴$ و $\\frac{۸}{۵}$",
+      "$۴$ و $-\\frac{۸}{۵}$",
+      "$-۴$ و $-\\frac{۸}{۵}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1710,
+    "question_page": 17,
+    "question_text": "دایرهٔ C بر محورهای مختصات مماس بوده و از نقطهٔ $P(۲, ۲ - \\sqrt{۲})$ عبور می‌کند. شعاع دایرهٔ بزرگ‌تر کدام است؟",
+    "options": [
+      "$۳$",
+      "$۷ - ۴\\sqrt{۲}$",
+      "$۶$",
+      "$۹ - ۴\\sqrt{۲}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1711,
+    "question_page": 17,
+    "question_text": "دو دایرهٔ گذرا بر نقطهٔ $(-۱, ۸)$ بر محورهای مختصات مماس هستند. فاصلهٔ مراکز این دو دایره کدام است؟",
+    "options": [
+      "$۴$",
+      "$۴\\sqrt{۲}$",
+      "$۸$",
+      "$۸\\sqrt{۲}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1712,
+    "question_page": 17,
+    "question_text": "عرض از مبدأ خط مماس بر دایرهٔ $x^۲ + y^۲ - ۲x + ۲y = ۳$ در نقطهٔ $P(۲, -۳)$ کدام است؟",
+    "options": [
+      "$-۱$",
+      "$-۲$",
+      "$-۳$",
+      "$-۴$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1713,
+    "question_page": 17,
+    "question_text": "دایرهٔ $x^۲ + y^۲ + ۶x - ۴y + k = ۰$ بر محور $y$ها مماس است. کدام خط زیر بر دایره مماس است؟",
+    "options": [
+      "$y = ۱$",
+      "$x = ۶$",
+      "$y = ۵$",
+      "$x = -۱$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1714,
+    "question_page": 17,
+    "question_text": "دایره‌ای به شعاع ۴ که مرکز آن بر نیمساز ناحیهٔ دوم واقع است، بر محور طول‌ها مماس است. کدام نقطه بر این دایره واقع است؟",
+    "options": [
+      "$(۰, ۰)$",
+      "$(۲, ۲)$",
+      "$(-۴, ۸)$",
+      "$(۴, -۸)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1715,
+    "question_page": 17,
+    "question_text": "مرکز دایرهٔ C بر نیمساز ناحیهٔ چهارم واقع بوده و بر خط $y = ۳x$ مماس است. اگر این دایره از نقطهٔ $(۳, ۱)$ عبور کند، شعاع آن کدام است؟",
+    "options": [
+      "$۵$",
+      "$\\sqrt{۱۰}$",
+      "$۱۰$",
+      "$۲\\sqrt{۱۰}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1716,
+    "question_page": 17,
+    "question_text": "کم‌ترین فاصلهٔ نقاط روی دایره $x^۲ + y^۲ + ۶x - ۸y + ۲۱ = ۰$ تا مبدأ مختصات کدام است؟",
+    "options": [
+      "$۱$",
+      "$۲$",
+      "$۳$",
+      "$۴$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1717,
+    "question_page": 18,
+    "question_text": "اگر $A$ و $B$ نزدیک‌ترین و دورترین نقاط دایرهٔ $x^2 + y^2 - 8x + 6y + 16 = 0$ نسبت به خط $3x - 4y = 4$ باشند، حاصل‌ضرب فواصل $A$ و $B$ از این خط کدام است؟",
+    "options": [
+      "۶",
+      "۷",
+      "۸",
+      "۹"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1718,
+    "question_page": 18,
+    "question_text": "دایره‌ای بر محور $y$ها و خط به معادلهٔ $5x - 12y = 0$ مماس است. اگر مرکز این دایره در ناحیهٔ دوم و شعاع آن ۷ باشد، مجموع طول و عرض مرکز دایره کدام است؟",
+    "options": [
+      "$\\dfrac{7}{3}$",
+      "$-\\dfrac{7}{3}$",
+      "$\\dfrac{14}{3}$",
+      "$-\\dfrac{14}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1719,
+    "question_page": 18,
+    "question_text": "نقطهٔ $O(a, 6)$ مرکز دایره‌ای است که بر خطوط $4x = 3y$ و $3x = 4y$ مماس است. شعاع دایرهٔ بزرگ‌تر چند برابر شعاع دایرهٔ کوچک‌تر است؟",
+    "options": [
+      "۵",
+      "۶",
+      "۷",
+      "۸"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1720,
+    "question_page": 18,
+    "question_text": "مرکز دایرهٔ گذرا بر نقطهٔ $(1, 0)$ و مماس بر دو خط $x + y = 1$ و $x + y = 5$ کدام است؟",
+    "options": [
+      "$(2, 1)$",
+      "$(1, 2)$",
+      "$(2, -1)$",
+      "$(-2, 1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1721,
+    "question_page": 18,
+    "question_text": "دو دایرهٔ $x^2 + y^2 - 4x - 4y + 6 = 0$ و $x^2 + y^2 = 18$ نسبت به هم چگونه‌اند؟",
+    "options": [
+      "متقاطع",
+      "مماس بیرونی",
+      "متخارج",
+      "مماس درونی"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1722,
+    "question_page": 18,
+    "question_text": "دو دایرهٔ $x^2 + y^2 - 2x = 1$ و $x^2 + y^2 + 2y = k$ مماس درونی هستند، مقدار $k$ کدام است؟",
+    "options": [
+      "$-1$ یا $7$",
+      "فقط $7$",
+      "$1$ یا $7$",
+      "$0$ یا $7$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1723,
+    "question_page": 18,
+    "question_text": "دو دایرهٔ $x^2 + y^2 - 4x + 6y + 12 = 0$ و $x^2 + y^2 - 6x + 8y + 16 = 0$ نسبت به هم چگونه‌اند؟",
+    "options": [
+      "متخارج",
+      "متقاطع",
+      "مماس درونی",
+      "متداخل"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1724,
+    "question_page": 18,
+    "question_text": "دایره‌های $x^2 + y^2 - 2x - 12y + 33 = 0$ و $x^2 + y^2 + 10x - 6y = a$ متقاطع‌اند. حدود $a$ کدام است؟",
+    "options": [
+      "$-15 < a < 15$",
+      "$-25 < a < 15$",
+      "$-15 < a < 25$",
+      "$-25 < a < 25$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1725,
+    "question_page": 18,
+    "question_text": "دو دایره به معادلات $x^2 + y^2 - 2x - 2y = 7$ و $x^2 + y^2 + 6x - 8y = k$ مماس خارج‌اند. مقدار $k$ کدام است؟",
+    "options": [
+      "۲۱",
+      "۳۹",
+      "$-21$",
+      "$-39$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1726,
+    "question_page": 18,
+    "question_text": "شعاع دایره به مرکز $(-1, 0)$ و مماس خارج بر دایرهٔ $x^2 + y^2 - 4x + 8y + 16 = 0$ کدام است؟",
+    "options": [
+      "۲",
+      "۳",
+      "۵",
+      "۷"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1727,
+    "question_page": 18,
+    "question_text": "دایره‌ای به مرکز $(1, -2)$ با کدام شعاع بر دایرهٔ $x^2 + y^2 + 2x + 4y + 4 = 0$ مماس درونی است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1728,
+    "question_page": 18,
+    "question_text": "دایرهٔ $C$ بر دایره به معادلهٔ $x^2 + y^2 + 6x - 4y + 12 = 0$ مماس خارج است. هر خط قائم بر دایرهٔ $C$ محور عرض‌ها را به عرض ۲ قطع می‌کند. شعاع دایرهٔ $C$ کدام است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1729,
+    "question_page": 18,
+    "question_text": "وتر مشترک دو دایرهٔ $x^2 + y^2 - 5x + 7y = 1$ و $x^2 + y^2 + x - 3y = 2$ محور $x$ها را در نقطه‌ای با کدام طول قطع می‌کند؟",
+    "options": [
+      "$\\dfrac{1}{4}$",
+      "$\\dfrac{1}{6}$",
+      "$\\dfrac{1}{8}$",
+      "دو دایره وتر مشترک ندارند."
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1730,
+    "question_page": 18,
+    "question_text": "شیب خطی که از نقطهٔ تلاقی $x^2 + y^2 - 8x + 4y + 19 = 0$ و $x^2 + y^2 - 2x + 2y - 8.5 = 0$ عبور می‌کند، کدام است؟",
+    "options": [
+      "۱",
+      "$-1$",
+      "$-3$",
+      "۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1731,
+    "question_page": 18,
+    "question_text": "دایره‌ای که از نقطهٔ $(2, 3)$ می‌گذرد، با دایرهٔ $x^2 + y^2 - 10x - 2y + 6 = 0$ وتر مشترکی به معادلهٔ $4 = y - x$ دارد. معادلهٔ آن دایره کدام است؟",
+    "options": [
+      "$x^2 + y^2 - 9x + y = -2$",
+      "$x^2 + y^2 - 9x - y = -8$",
+      "$x^2 + y^2 + 9x - y = 28$",
+      "$x^2 + y^2 + 9x + y = 34$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1732,
+    "question_page": 18,
+    "question_text": "شعاع دایره به مرکز $(-1, 0)$ و مماس خارجی بر دایرهٔ $x^2 + y^2 - 4x + 8y + 16 = 0$ کدام است؟",
+    "options": [
+      "۲",
+      "۳",
+      "۵",
+      "۷"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1733,
+    "question_page": 18,
+    "question_text": "دایره‌ای به مرکز $(1, -2)$ با کدام شعاع بر دایرهٔ $x^2 + y^2 + 2x + 4y + 4 = 0$ مماس درونی است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1734,
+    "question_page": 18,
+    "question_text": "دایرهٔ $C$ بر دایره به معادلهٔ $x^2 + y^2 - 6x + 4y + 13 = 0$ مماس خارج است. هر خط قائم بر دایرهٔ $C$ محور عرض‌ها را به عرض ۲ قطع می‌کند. شعاع دایرهٔ $C$ کدام است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  }
+]

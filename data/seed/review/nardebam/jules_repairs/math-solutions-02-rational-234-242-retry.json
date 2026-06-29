@@ -1,0 +1,78 @@
+{
+  "task_id": "math-solutions-02-rational",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 234,
+      "solution_page": 24,
+      "solution_text": "عبارت $A(x)$ فقط در بازهٔ $(2, +\\infty)$ منفی است، یعنی $x = 2$ ریشهٔ سادهٔ $A(x)$ است، زیرا در آن تغییر علامت رخ داده است. هم‌چنین بقیهٔ ریشه‌ها مضاعف هستند، چون در آن‌ها تغییر علامت به وجود نیامده است. اگر تغییر علامت اتفاق افتاده بود سمت چپ یا راست ریشه، منفی بود.\nریشه‌های صورت کسر $x = \\circ$ و $x = -1$ هستند که ساده می‌باشند. در نتیجه این ریشه‌ها باید ریشهٔ مخرج کسر نیز باشند تا مضاعف شوند. بنابراین ریشه‌های مخرج کسر $x = \\circ$ ، $x = -1$ و $x = 2$ می‌باشند.\n$-x^3 + ax^2 + bx = -x(x+1)(x-2) = -x(x^2 - x - 2) = -x^3 + x^2 + 2x \\Rightarrow a=1 \\text{ , } b=2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 235,
+      "solution_page": 24,
+      "solution_text": "با توجه به وجود $\\sqrt{x}$ در عبارت $P$، درمی‌یابیم که $x \\ge \\circ$ است. حال ریشه‌های صورت و مخرج $P$ را به دست آورده و عبارت را تعیین علامت می‌کنیم:\n$4 - \\sqrt{x} = \\circ \\Rightarrow x = 16$\n$x^2 - x - 6 = \\circ \\Rightarrow (x+2)(x-3) = \\circ \\Rightarrow \\begin{cases} x = -2 & (\\text{می‌دانیم } x \\ge \\circ \\text{ می‌باشد.}) \\text{ غ ق ق} \\\\ x = 3 \\end{cases}$\n$P \\ge \\circ \\xrightarrow{3 < x \\le 16} x \\in \\mathbb{Z} \\Rightarrow x \\in \\{4, 5, 6, \\dots, 16\\}$\nبه ازای ۱۳ مقدار صحیح $x$، عبارت $P$ نامنفی است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 236,
+      "solution_page": 24,
+      "solution_text": "به خاطر وجود $\\sqrt{x}$ در عبارت $P$، می‌دانیم $x \\ge \\circ$ است. مخرج کسر همواره مثبت است و در تعیین علامت تأثیری ندارد؛ بنابراین صورت کسر باید منفی باشد:\n$2x^2 + 5x - 7 < \\circ \\Rightarrow -\\frac{7}{2} < x < 1$\n$\\xrightarrow{x \\ge \\circ \\text{ از طرفی}} \\circ \\le x < 1 \\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{\\circ\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 237,
+      "solution_page": 24,
+      "solution_text": "برای حل نامعادلهٔ $-x+6 < 2x-3 < x+1$، آن را به دو نامعادله تقسیم کرده، سپس از جواب‌ها اشتراک می‌گیریم:\n$-x+6 < 2x-3 \\Rightarrow 3x > 9 \\Rightarrow x > 3$\n$2x-3 < x+1 \\Rightarrow x < 4$\n$\\xrightarrow{\\cap} 3 < x < 4 \\xrightarrow{x \\in \\mathbb{N}} x \\in \\varnothing$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 238,
+      "solution_page": 24,
+      "solution_text": "نامعادلهٔ $x^5 < x < x^4$ را به دو نامعادله تقسیم کرده، از جواب‌ها اشتراک می‌گیریم:\n$x^5 < x \\Rightarrow x^5 - x < \\circ \\Rightarrow x(x^4 - 1) < \\circ \\Rightarrow x(x^2 - 1)(x^2 + 1) < \\circ$\n$P < \\circ \\Rightarrow \\begin{cases} x < -1 \\\\ \\circ < x < 1 \\end{cases} \\quad (1)$\n$x < x^4 \\Rightarrow x^4 - x > \\circ \\Rightarrow x(x^3 - 1) > \\circ$\n$P > \\circ \\Rightarrow \\begin{cases} x < \\circ \\\\ x > 1 \\end{cases} \\quad (2)$\n$(1) \\cap (2) \\Rightarrow x < -1 \\Rightarrow x \\in (-\\infty, -1)$\nتذکر: با استفاده از خواص اعداد توان‌دار به راحتی می‌توانستیم محدودهٔ مورد نظر را به دست آوریم.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 239,
+      "solution_page": 24,
+      "solution_text": "ابتدا نامعادلهٔ $\\frac{4}{x} > \\frac{3}{x-1}$ را با استفاده از جدول تعیین علامت حل می‌کنیم:\n$\\frac{4}{x} - \\frac{3}{x-1} > \\circ \\Rightarrow \\frac{4(x-1) - 3x}{x(x-1)} > \\circ \\Rightarrow \\frac{x-4}{x(x-1)} > \\circ$\n$P > \\circ \\Rightarrow \\begin{cases} \\circ < x < 1 \\\\ x > 4 \\end{cases}$\nمشخص است مجموعهٔ اعداد طبیعی $\\{1, 2, 3, 4\\}$ در نامعادله صدق نمی‌کنند.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 240,
+      "solution_page": 24,
+      "solution_text": "تمامی عبارات را به سمت چپ نامعادله آورده و مخرج‌مشترک می‌گیریم:\n$\\frac{4}{x+3} + \\frac{2}{x} - 3 > \\circ \\Rightarrow \\frac{4x + 2(x+3) - 3x(x+3)}{x(x+3)} > \\circ \\Rightarrow \\frac{-3x^2 - 3x + 6}{x(x+3)} > \\circ \\Rightarrow \\frac{-3(x+2)(x-1)}{x(x+3)} > \\circ$\n$x < \\circ \\Rightarrow x \\in (-3, -2) \\Rightarrow b - a = -2 - (-3) = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 241,
+      "solution_page": 24,
+      "solution_text": "تابع خطی $f$ از دو نقطهٔ $(1, \\circ)$ و $(\\circ, 2)$ عبور می‌کند، بنابراین معادلهٔ آن به صورت زیر می‌باشد:\n$y - \\circ = \\frac{2 - \\circ}{\\circ - 1}(x - 1) \\Rightarrow y = -2x + 2 \\Rightarrow f(x) = -2x + 2$\nمی‌دانیم: $xf(-\\frac{x}{2}) < \\circ \\Rightarrow x(x + 2) < \\circ \\Rightarrow -2 < x < \\circ \\Rightarrow \\text{مجموعه جواب }: (-2, \\circ)$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 242,
+      "solution_page": 24,
+      "solution_text": "با توجه به نمودار، صفرهای تابع $f(x)$ به صورت $x = 2$، $x = -1$ و $x = -4$ می‌باشد که $x = -1$ ریشهٔ مضاعف است. جدول تعیین علامت $(x+4)f(x)$ را رسم می‌کنیم:\n$(x+4)f(x) \\ge \\circ \\Rightarrow [2, +\\infty) \\cup \\{-4, -1\\}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

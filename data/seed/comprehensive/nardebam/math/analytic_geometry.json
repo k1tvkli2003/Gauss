@@ -1,0 +1,4712 @@
+[
+  {
+    "id": "nardebam_math_1405_1569",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر نقاط $(2,3)$ و $(-1,-1)$ دو رأس یک مربع باشند، مساحت آن چه‌قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$12$ یا $24$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12/5$ یا $25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24$ یا $48$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$25$ یا $50$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلة دو نقطه داده‌شده از رابطة $\\sqrt{(x_۱ - x_۲)^۲ + (y_۱ - y_۲)^۲}$ قابل محاسبه است:\n$\\ell = \\sqrt{(۲ + ۱)^۲ + (۳ + ۱)^۲} = \\sqrt{۲۵} = ۵$\nدو حالت وجود دارد:\n۱) رئوس داده‌شده مجاور باشند که فاصلة بین آن‌ها طول ضلع مربع است:\n$a = ۵ \\Rightarrow S = a^۲ = ۵^۲ = ۲۵$\n۲) رئوس داده‌شده مقابل هم باشند که فاصلة بین آن‌ها طول قطر مربع است:\n$d = ۵ \\Rightarrow S = \\frac{۱}{۲} d^۲ = \\frac{۲۵}{۲} = ۱۲/۵$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1569,
+      "question_pdf": "13.pdf",
+      "question_page": 4,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1570",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطۀ $M$ روی محور طول‌ها با کدام طول انتخاب شود تا فاصلۀ آن از دو نقطۀ $A(-1,2)$ و $B(3,0)$ برابر هم باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: مختصات نقطة $M$ را به صورت $M \\big|_{ \\circ }^{ x }$ در نظر می‌گیریم:\n$AM = BM \\Rightarrow \\sqrt{(x + ۱)^۲ + ۲^۲} = \\sqrt{(x - ۳)^۲ + \\circ}$\n$\\Rightarrow (x + ۱)^۲ + ۴ = (x - ۳)^۲ \\Rightarrow ۸x - ۴ = \\circ \\Rightarrow x = \\frac{۱}{۲}$\nروش دوم: معادلة عمودمنصف $AB$ (خط $\\ell$) را نوشته و محل تقاطع آن با محور $x$ها را به دست می‌آوریم.\n$m_{AB} = \\frac{۲ - \\circ}{-۱ - ۳} = -\\frac{۱}{۲} \\Rightarrow m_{\\ell} = ۲$\nمختصات وسط $AB$: $N(۱, ۱)$\n$\\ell: y - ۱ = ۲(x - ۱) \\Rightarrow \\begin{cases} y = ۲x - ۱ \\\\ y = \\circ \\end{cases} \\Rightarrow ۲x - ۱ = \\circ \\Rightarrow x = \\frac{۱}{۲}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1570,
+      "question_pdf": "13.pdf",
+      "question_page": 4,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1571",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A(-2,4)$ باشد به طوری که قرینۀ $A$ نسبت به محور طول‌ها را $A'$ و قرینۀ $A$ نسبت به محور عرض‌ها را $A''$ بنامیم، فاصلۀ دو نقطۀ $A'$ و $A''$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5\\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\sqrt{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{17}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قرینهٔ $A(\\alpha , \\beta)$ نسبت به محور طول‌ها $A'(\\alpha , -\\beta)$ و قرینهٔ آن نسبت به محور عرض‌ها $A''(-\\alpha , \\beta)$ است.\nپس اگر $A(-2, 4)$، آن‌گاه قرینه نسبت به محور طول‌ها $A'(-2, -4)$ و قرینه نسبت به محور عرض‌ها $A''(2, 4)$ است. به این ترتیب:\n$A'A'' = \\sqrt{(2+2)^2 + (4+4)^2} = \\sqrt{16+64} = 4\\sqrt{5}$\nفاصلهٔ دو نقطهٔ $A$ و $B$ تا یکدیگر از رابطهٔ $AB = \\sqrt{(x_A - x_B)^2 + (y_A - y_B)^2}$ به دست می‌آید."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1571,
+      "question_pdf": "13.pdf",
+      "question_page": 4,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1572",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A(1,-2)$ ، $B(0,-1)$ و $C(10,-9)$ سه رأس مثلث $ABC$ باشند، طول میانۀ $AM$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلة دو نقطة $A$ و $B$ تا یکدیگر از رابطة $AB = \\sqrt{(x_A - x_B)^۲ + (y_A - y_B)^۲}$ به دست می‌آید.\nابتدا مختصات $M$ وسط ضلع $BC$ را می‌نویسیم.\n$M(\\frac{x_B + x_C}{۲}, \\frac{y_B + y_C}{۲}) \\Rightarrow M(\\frac{۱۰ + \\circ}{۲}, \\frac{-۹ - ۱}{۲}) \\Rightarrow M(۵, -۵)$\nحال طول پاره‌خط $AM$ را محاسبه می‌کنیم.\n$AM = \\sqrt{(x_A - x_M)^۲ + (y_A - y_M)^۲} = \\sqrt{(۱ - ۵)^۲ + (-۲ + ۵)^۲}$\n$= \\sqrt{۱۶ + ۹} = ۵$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1572,
+      "question_pdf": "13.pdf",
+      "question_page": 4,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1573",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در مثلثی با رئوس $A(a,1)$ ، $B(2,4)$ و $C(1,2)$ طول میانۀ $AM$ برابر $\\sqrt{13}$ است. $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{9}{2}$ یا $\\frac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{2}$ یا $-\\frac{9}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{3}{2}$ یا $-\\frac{9}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{9}{2}$ یا $-\\frac{3}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا مختصات نقطة $M$ وسط ضلع $BC$ را به دست می‌آوریم.\n$M(\\frac{x_B + x_C}{۲}, \\frac{y_B + y_C}{۲}) \\Rightarrow M(\\frac{۳}{۲}, ۳)$\nحال طول پاره‌خط $AM$ را برابر $\\sqrt{۱۳}$ قرار می‌دهیم.\n$AM = \\sqrt{(a - \\frac{۳}{۲})^۲ + (۱ - ۳)^۲} = \\sqrt{۱۳} \\Rightarrow (a - \\frac{۳}{۲})^۲ + ۴ = ۱۳$\n$\\Rightarrow (a - \\frac{۳}{۲})^۲ = ۹ \\Rightarrow \\begin{cases} a - \\frac{۳}{۲} = ۳ \\\\ a - \\frac{۳}{۲} = -۳ \\end{cases} \\Rightarrow \\begin{cases} a = \\frac{۹}{۲} \\\\ a = -\\frac{۳}{۲} \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1573,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1574",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقاط $A(3,2)$ و $B(1,k)$ روی یک دایره به مرکز $O(-3,1)$ قرار دارند. حاصل‌ضرب مقادیر به دست آمده برای $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره از تمام نقاط روی دایره به یک فاصله است. بنابراین:\n$OA = OB \\Rightarrow \\sqrt{(۳ - ۳)^۲ + (-۱ - ۲)^۲} = \\sqrt{(۳ - ۱)^۲ + (-۱ - k)^۲}$\n$\\Rightarrow ۳ = \\sqrt{۴ + (k + ۱)^۲} \\Rightarrow (k + ۱)^۲ + ۴ = ۹$\n$\\Rightarrow (k + ۱)^۲ = ۵ \\Rightarrow k^۲ + ۲k - ۴ = \\circ \\Rightarrow k_۱ k_۲ = -۴$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1574,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1575",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "قرینۀ نقطۀ $A(-1,4)$ نسبت به نقطۀ $M(a,2a+1)$ در ناحیۀ چهارم واقع است. حدود $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{2} < a < \\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{2} < a < 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0 < a < \\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1 < a < \\frac{1}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: قرینة نقطة $A(-۱, ۴)$ را نسبت به نقطة $M(a, ۲a + ۱)$، نقطة $A'(x, y)$ در نظر می‌گیریم. در این صورت $M$ وسط $AA'$ است.\n$x_M = \\frac{x_A + x_{A'}}{۲} \\Rightarrow a = \\frac{-۱ + x}{۲} \\Rightarrow x = ۲a + ۱$\n$y_M = \\frac{y_A + y_{A'}}{۲} \\Rightarrow ۲a + ۱ = \\frac{۴ + y}{۲} \\Rightarrow y = ۴a - ۲$\n$A'$ در ناحیة چهارم است. بنابراین:\n$x > \\circ \\Rightarrow ۲a + ۱ > \\circ \\Rightarrow a > -\\frac{۱}{۲}$\n$y < \\circ \\Rightarrow ۴a - ۲ < \\circ \\Rightarrow a < \\frac{۱}{۲}$\n$\\xrightarrow{\\cap} -\\frac{۱}{۲} < a < \\frac{۱}{۲}$\nروش دوم: اگر $A'(x', y')$ قرینة نقطة $A(x, y)$ نسبت به نقطة $M(\\alpha, \\beta)$ باشد، مختصات $A'$ را می‌توان از روابط زیر محاسبه کرد:\n$\\begin{cases} x' = ۲\\alpha - x \\\\ y' = ۲\\beta - y \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1575,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1576",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطۀ $A(a,b)$ از خط $x=4$ و نقطۀ $F(3,0)$ به یک فاصله است. حاصل $2a+b^2$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلة نقطة $A(a, b)$ از خط $x = ۴$ برابر $|a - ۴|$ می‌باشد. طول $AF$ را محاسبه کرده، برابر با $|a - ۴|$ قرار می‌دهیم:\n$AF = \\sqrt{(a - ۳)^۲ + b^۲} = |a - ۴| \\Rightarrow (a - ۳)^۲ + b^۲ = (a - ۴)^۲$\n$\\Rightarrow a^۲ - ۶a + ۹ + b^۲ = a^۲ - ۸a + ۱۶ \\Rightarrow b^۲ + ۲a = ۷$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1576,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1577",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مختصات سه رأس لوزی $ABCD$ در ناحیۀ اول، $A(2,0)$ ، $B(0,3)$ و $C(k,1)$ است. حاصل‌ضرب مختصات $D$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-10$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "لوزی، متوازی‌الاضلاعی است که قطرهای آن بر هم عمودند.\n$ABCD$ متوازی‌الاضلاع است:\n$\\begin{cases} x_A + x_C = x_B + x_D \\Rightarrow ۲ + k = \\circ + x_D \\Rightarrow x_D = k + ۲ \\\\ y_A + y_C = y_B + y_D \\Rightarrow \\circ + ۱ = ۳ + y_D \\Rightarrow y_D = -۲ \\end{cases}$\n$AC$ و $BD$ بر هم عمودند $\\Rightarrow m_{AC} m_{BD} = -۱$\n$\\frac{y_C - y_A}{x_C - x_A} \\times \\frac{y_D - y_B}{x_D - x_B} = -۱ \\Rightarrow \\frac{۱ - \\circ}{k - ۲} \\times \\frac{-۲ - ۳}{x_D - \\circ} = -۱$\n$\\Rightarrow \\frac{۱}{k - ۲} \\times \\frac{-۵}{k + ۲} = -۱ \\Rightarrow k^۲ - ۴ = ۵ \\Rightarrow k^۲ = ۹$\n$\\xrightarrow{k > \\circ} k = ۳ \\Rightarrow x_D = ۵ \\Rightarrow x_D . y_D = -۱۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1577,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1578",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقاط $B(9,0)$ و $C(0,6)$ رئوس مثلث متساوی‌الساقینی هستند که رأس $A$ روی خط $y=3x$ است. اگر $BC$ قاعدۀ مثلث باشد، طول رأس $A$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2/5$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رأس $A$ بر روی خط $y = ۳x$ واقع است. بنابراین مختصات آن به صورت $A(\\alpha, ۳\\alpha)$ می‌باشد. طول $AC$ و $AB$ برابر است، در نتیجه:\n$AB = AC = \\sqrt{(\\alpha - ۹)^۲ + ۹\\alpha^۲} = \\sqrt{\\alpha^۲ + (۳\\alpha - ۶)^۲}$\n$۱۰\\alpha^۲ - ۱۸\\alpha + ۸۱ = ۱۰\\alpha^۲ - ۳۶\\alpha + ۳۶ \\Rightarrow ۱۸\\alpha = -۴۵$\n$\\Rightarrow \\alpha = -\\frac{۵}{۲} = -۲/۵$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1578,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1579",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطۀ $A(0,1)$ رأس مثلث متساوی‌الساقین $ABC$ و مختصات $B$ به صورت $(-4,0)$ است. مجموع مختصات $C$ واقع بر نیمساز ناحیۀ سوم کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-8$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رأس $C$ بر نیمساز ناحیة سوم ($y = x$) واقع است؛ بنابراین مختصات آن به صورت $C(\\alpha, \\alpha)$ است.\nمثلث $ABC$ در رأس $A$ متساوی‌الساقین است، یعنی $AB = AC$.\n$AB = AC \\Rightarrow \\sqrt{\\circ^۲ + ۵^۲} = \\sqrt{\\alpha^۲ + (\\alpha - ۱)^۲}$\n$۲\\alpha^۲ - ۲\\alpha + ۱ = ۲۵ \\Rightarrow \\alpha^۲ - \\alpha - ۱۲ = \\circ \\Rightarrow \\begin{cases} \\alpha = -۳ \\\\ \\alpha = ۴ \\quad \\text{غ ق ق} \\end{cases}$\nنقطة $C$ در ناحیة سوم است در نتیجه طول آن منفی است:\n$\\Rightarrow C(-۳, -۳) \\Rightarrow -۳ - ۳ = -۶$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1579,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1580",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقاط $B(0,3)$ و $C(4,0)$ دو رأس مجاور به وتر در مثلث قائم‌الزاویۀ $ABC$ هستند. اگر رأس $A$ در ناحیۀ اول روی خط $y=2x$ باشد، مجموع مختصات $A$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رأس $A$ بر روی خط $y = ۲x$ واقع است، بنابراین مختصات آن به صورت $A(\\alpha, ۲\\alpha)$ می‌باشد. $AB$ و $AC$ بر یکدیگر عمودند، در نتیجه حاصل‌ضرب شیب‌های آن‌ها $-۱$ است.\n$m_{AB} . m_{AC} = -۱ \\Rightarrow \\frac{۲\\alpha - ۳}{\\alpha - \\circ} \\times \\frac{۲\\alpha - \\circ}{\\alpha - ۴} = -۱$\n$\\xrightarrow{\\alpha \\neq \\circ} \\frac{۲(۲\\alpha - ۳)}{\\alpha - ۴} = -۱ \\Rightarrow ۵\\alpha = ۱۰ \\Rightarrow \\alpha = ۲$\n$\\Rightarrow A(۲, ۴) \\Rightarrow ۲ + ۴ = ۶$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1580,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1581",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه نقاط $A(1,2)$ ، $B(m,1)$ و $C(7,m+6)$ روی یک خط باشند، حاصل‌ضرب مقادیر مختلف $m$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "سه نقطة $B$ ،$A$ و $C$ به شرطی بر روی یک خط راست هستند که شیب $AB$ با شیب $AC$ برابر باشد.\n$m_{AB} = m_{AC} \\Rightarrow \\frac{۱ - ۲}{m - ۱} = \\frac{m + ۴}{۷ - ۱}$\n$\\Rightarrow (m + ۴)(m - ۱) = -۶ \\Rightarrow m^۲ + ۳m + ۲ = \\circ$\n$\\Rightarrow \\begin{cases} m = -۱ \\\\ m = -۲ \\end{cases} \\Rightarrow m_۱ m_۲ = ۲$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1581,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 146,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1582",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "سه رأس یک متوازی‌الاضلاع به مختصات $(2,3)$ ، $(-1,4)$ و $(3,-2)$ داده شده است. عرض رأس چهارم آن کدام نمی‌تواند باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در متوازی‌الاضلاع $ABCD$ رابطهٔ $y_A + y_C = y_B + y_D$ برقرار است. در این سؤال نمی‌دانیم رأس چهارم $D$ مقابل به کدام‌یک از رئوس $A(2, 3)$، $B(-1, 4)$ و $C(3, -2)$ است. بنابراین سه حالت در نظر می‌گیریم:\n1) متوازی‌الاضلاع $ABCD \\Rightarrow y_A + y_C = y_B + y_D \\Rightarrow 3 - 2 = 4 + y_D \\Rightarrow y_D = -3$\n2) متوازی‌الاضلاع $ABDC \\Rightarrow y_A + y_D = y_B + y_C \\Rightarrow 3 + y_D = 4 - 2 \\Rightarrow y_D = -1$\n3) متوازی‌الاضلاع $ADBC \\Rightarrow y_A + y_B = y_D + y_C \\Rightarrow 3 + 4 = y_D - 2 \\Rightarrow y_D = 9$\nعرض نقطهٔ $D$ هیچ‌گاه برابر ۷ نمی‌شود."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1582,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1583",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A(3,1)$ ، $B(-1,0)$ و $C(4,2)$ سه رأس متوازی‌الاضلاع $ABCD$ باشند، مجموع مختصات رأس $D$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$13$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در متوازی‌الاضلاع $ABCD$ رابطهٔ زیر برقرار است:\n$\\begin{cases} x_A + x_C = x_B + x_D \\Rightarrow 3 + 4 = -1 + x_D \\Rightarrow x_D = 8 \\\\ y_A + y_C = y_B + y_D \\Rightarrow 1 + 2 = 0 + y_D \\Rightarrow y_D = 3 \\end{cases} \\Rightarrow x_D + y_D = 11$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1583,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1584",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "آجری مطابق شکل به محورهای مختصات تکیه کرده است. اگر بالاترین نقطۀ آجر به ارتفاع $8$ باشد، طول نقطۀ $D$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1584/stem_1.webp",
+        "alt": "شکل یک آجر تکیه داده شده به محورهای مختصات",
+        "aspect_ratio": 0.8322
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{29}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{15}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{31}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به آن‌که $m_{AB} = -\\frac{3}{4}$ و چهارضلعی مستطیل است، پس $m_{AD} = \\frac{4}{3}$. از طرفی هر مستطیل را می‌توانیم حالتی از یک متوازی‌الاضلاع در نظر بگیریم به این ترتیب:\n$y_B + y_D = y_A + y_C \\Rightarrow 3 + y_D = 0 + 8 \\Rightarrow y_D = 5$\nاگر فرض کنیم $D(\\alpha, 5)$ آن‌گاه با توجه به آن‌که $m_{AD} = \\frac{4}{3}$ داریم:\n$m_{AD} = \\frac{y_D - y_A}{x_D - x_A} \\Rightarrow \\frac{4}{3} = \\frac{5 - 0}{x_D - 4} \\Rightarrow 4x_D - 16 = 15 \\Rightarrow x_D = \\frac{31}{4}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1584/stem_2.webp",
+        "alt": "نمودار یک مستطیل ABCD در دستگاه مختصات",
+        "aspect_ratio": 1.5088
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1584,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            80,
+            1150,
+            300,
+            1420
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "شکل یک آجر تکیه داده شده به محورهای مختصات"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0147.jpg",
+          "box": [
+            253,
+            452,
+            474,
+            552
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار یک مستطیل ABCD در دستگاه مختصات"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1585",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A(0,3)$ ، $B(-3,1)$ و $C(2,-1)$ سه رأس متوازی‌الاضلاع $ABCD$ باشند، شیب قطر $BD$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{4}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{2}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در متوازی‌الاضلاع $ABCD$ رأس $D$ روبه‌روی رأس $B$ است، پس:\n$\\begin{cases} x_B + x_D = x_A + x_C \\\\ y_B + y_D = y_A + y_C \\end{cases} \\Rightarrow D(0+2+3, 3-1-1) \\Rightarrow D(5, 1)$\nبا داشتن مختصات دو نقطهٔ $B$ و $D$ یافتن شیب پاره‌خط $BD$ از رابطهٔ زیر به دست می‌آید:\n$m_{BD} = \\frac{y_D - y_B}{x_D - x_B} = \\frac{1 - 1}{5 + 3} = 0 \\Rightarrow m_{BD} = 0$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1585,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1586",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مساحت مثلثی با سه رأس $A(1,2)$ ، $B(-3,-1)$ و $C(0,-5)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$17$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$17/5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: با کمی دقت درمی‌یابیم که $AB$ و $BC$ بر یکدیگر عمودند.\n$m_{AB} = \\frac{2 + 1}{1 + 3} = \\frac{3}{4}$\n$m_{BC} = \\frac{-1 + 5}{-3 - 0} = -\\frac{4}{3} \\Rightarrow m_{AB} \\times m_{BC} = -1 \\Rightarrow \\hat{B} = 90^\\circ$\nبنابراین مساحت مثلث برابر است با:\n$S = \\frac{AB \\times BC}{2} \\Rightarrow S = \\frac{\\sqrt{4^2 + 3^2} \\times \\sqrt{3^2 + 4^2}}{2} = \\frac{5 \\times 5}{2} = 12.5$\nروش دوم:\n$S = \\frac{1}{2} |(-1 + 15 + 0) - (-5 + 0 - 6)| \\Rightarrow S = \\frac{1}{2} \\times |14 + 11| = 12.5$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1586/stem_1.webp",
+        "alt": "ماتریس روش بندکفشی برای محاسبه مساحت مثلث",
+        "aspect_ratio": 0.2367
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1586,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0147.jpg",
+          "box": [
+            85,
+            45,
+            126,
+            203
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ماتریس روش بندکفشی برای محاسبه مساحت مثلث"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1587",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $y = ax - 4 + a$ از ناحیۀ سوم عبور نمی‌کند. حدود $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a \\le 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0 \\le a \\le 4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4 \\le a \\le 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4 \\le a \\le -1$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای این‌که خطی از ناحیهٔ سوم عبور نکند باید دارای شیب نامثبت و عرض از مبدأ نامنفی باشد. در نتیجه:\n$\\begin{cases} a \\le 0 \\\\ 4 - a \\ge 0 \\Rightarrow a \\le 4 \\end{cases} \\xrightarrow{\\cap} a \\le 0$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1587,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1588",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل شعاع نیم‌دایره $5$ است. شیب خط گذرا بر نقاط $M$ و $N$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1588/stem_1.webp",
+        "alt": "شکل یک نیم‌دایره در دستگاه مختصات با نقاط M و N",
+        "aspect_ratio": 0.8921
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{2}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ مرکز دایره از نقاط روی دایره برابر شعاع دایره است، بنابراین:\n$OM = 5 \\Rightarrow \\sqrt{x^2 + 16} = 5 \\Rightarrow x^2 = 9 \\xrightarrow{x > 0} x = 3$\nبنابراین مختصات $M$ به صورت $M(3, -4)$ می‌باشد. بدیهی است نقطهٔ $N$ به صورت $N(-5, 0)$ می‌باشد.\n$m_{MN} = \\frac{0 - (-4)}{-5 - 3} = \\frac{4}{-8} = -\\frac{1}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1588,
+      "question_pdf": "13.pdf",
+      "question_page": 5,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            80,
+            1600,
+            300,
+            1850
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "شکل یک نیم‌دایره در دستگاه مختصات با نقاط M و N"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1589",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل، معادلۀ خط $d$ به صورت $x + my = 2m + 3$ است. $\\alpha$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1589/stem_1.webp",
+        "alt": "شکل خط d در دستگاه مختصات و زاویه آلفا",
+        "aspect_ratio": 1.155
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: نقطهٔ $P$ با طول صفر بر روی خط $d$ قرار دارد.\n$x + my = 2m + 3 \\xrightarrow{x=0} my = 2m + 3 \\Rightarrow y = \\frac{2m + 3}{m} \\rightarrow P(0, 2 + \\frac{3}{m})$\nنقاط $A$ و $P$ بر روی خط $d'$ قرار دارند، در نتیجه شیب خط $d'$ برابر با $2 + \\frac{3}{m}$ می‌باشد.\nدو خط $d$ و $d'$ بر هم عمودند، بنابراین حاصل‌ضرب شیب آن‌ها برابر ۱- است.\n$(-\\frac{1}{m})(2 + \\frac{3}{m}) = -1 \\Rightarrow m^2 = 2m + 3 \\Rightarrow m^2 - 2m - 3 = 0 \\Rightarrow \\begin{cases} m = -1 & \\text{غ ق ق} \\\\ m = 3 & \\checkmark \\end{cases}$\nشیب خط $d$ منفی است بنابراین $m$ مثبت می‌باشد. $\\alpha$ طول نقطهٔ تقاطع خط $d$ با محور $x$ها است.\n$y = 0 \\rightarrow \\alpha = 2m + 3 = 9$\nروش دوم: $OP$ ارتفاع وارد بر وتر در مثلث قائم‌الزاویه با رأس قائم $P$ است، بنابراین $OP$ واسطهٔ هندسی قطعات جداشده بر روی وتر است.\n$OP^2 = (1)(\\alpha)$\n$OP$ برابر عرض نقطهٔ $P$ یعنی $2 + \\frac{3}{m}$ و $\\alpha$ برابر با $2m + 3$ است.\n$\\Rightarrow (2 + \\frac{3}{m})^2 = 2m + 3 \\Rightarrow 2m + 3 = m^2 \\Rightarrow m^2 - 2m - 3 = 0 \\Rightarrow \\begin{cases} m = -1 & \\text{غ ق ق} \\\\ m = 3 \\end{cases}$\n$\\Rightarrow \\alpha = 2m + 3 = 9$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1589/stem_2.webp",
+        "alt": "نمودار دو خط عمود بر هم d و 'd در دستگاه مختصات",
+        "aspect_ratio": 0.431
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1589,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            50,
+            70,
+            200,
+            160
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "شکل خط d در دستگاه مختصات و زاویه آلفا"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0147.jpg",
+          "box": [
+            342,
+            53,
+            423,
+            201
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار دو خط عمود بر هم d و 'd در دستگاه مختصات"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1590",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$A(-1,2)$ ، $B(2,3)$ و $C(5,0)$ سه رأس یک مثلث هستند به طوری که ارتفاع نظیر رأس $A$ بر خط $d$ منطبق باشد. عرض از مبدأ خط $d$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا شیب خط گذرا بر $BC$ را به دست می‌آوریم:\n$m_{BC} = \\frac{3 - 0}{2 - 5} = -1$\nارتفاع $AH$ بر $BC$ عمود است بنابراین شیب آن برابر با ۱ است.\nحال معادلهٔ خط گذرا بر ارتفاع $AH$ را می‌نویسیم:\n$y + 2 = x - 1 \\Rightarrow y = x - 3$\nعرض از مبدأ این خط برابر ۳- است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1590,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 147,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1591",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل، $ABCD$ مربع و مختصات $B$ به صورت $(2,3)$ است. مجموع مختصات رأس $D$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1591/stem_1.webp",
+        "alt": "شکل مربع ABCD در دستگاه مختصات",
+        "aspect_ratio": 0.9564
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9/5$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: ابتدا طول ضلع مربع یعنی $AB$ را محاسبه می‌کنیم:\n$AB = \\sqrt{4^2 + 3^2} = 5$\nمعادلۀ خط گذرا بر $AB$ را می‌نویسیم:\n$y - 0 = \\frac{3 - 0}{-2 - 2} (x - 2) \\Rightarrow y = -\\frac{3}{4}(x - 2) \\Rightarrow 3x + 4y - 6 = 0$\n$AD$ بر $AB$ عمود است بنابراین شیب $AD$ برابر $\\frac{4}{3}$ می‌باشد. معادلۀ خط گذرا بر $AD$ را می‌نویسیم:\n$y - 0 = \\frac{4}{3} (x - 2) \\Rightarrow y = \\frac{4}{3}x - \\frac{8}{3}$\nرأس $D$ بر $AD$ قرار دارد، بنابراین مختصات آن به صورت $(\\alpha, \\frac{4}{3}\\alpha - \\frac{8}{3})$ می‌باشد. فاصلۀ $D$ از $AB$ را برابر ۵ قرار می‌دهیم (ضلع $AD$).\n$AD = \\frac{|3\\alpha + 4(\\frac{4}{3}\\alpha - \\frac{8}{3}) - 6|}{\\sqrt{3^2 + 4^2}} = 5 \\Rightarrow |\\frac{25}{3}\\alpha - \\frac{50}{3}| = 25$\n$\\Rightarrow |\\alpha - 2| = 3 \\Rightarrow \\begin{cases} \\alpha - 2 = 3 \\\\ \\alpha - 2 = -3 \\end{cases} \\Rightarrow \\begin{cases} \\alpha = 5 \\\\ \\alpha = -1 \\ \\ \\ \\text{غ ق ق} \\end{cases}$\n$\\alpha = 5 \\Rightarrow \\frac{4}{3}\\alpha - \\frac{8}{3} = 4 \\Rightarrow D(5, 4)$\n$5 + 4 = 9$\nروش دوم: برای رسیدن از نقطۀ $B(-2, 3)$ به نقطۀ $A(2, 0)$، باید ۳ واحد به سمت پایین و ۴ واحد به سمت راست برویم، بنابراین:\n$m_{AB} = -\\frac{3}{4}$\n$AB \\perp AD$ است، در نتیجه:\n$m_{AD} = +\\frac{4}{3}$\nیعنی برای رسیدن از $A(2, 0)$ به $D(\\alpha, \\beta)$ باید ۴ واحد به سمت بالا و ۳ واحد به سمت راست برویم:\n$\\alpha = 2 + 3 = 5$\n$\\beta = 0 + 4 = 4$\n$\\Rightarrow \\alpha + \\beta = 9$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1591,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            45,
+            195,
+            200,
+            310
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "شکل مربع ABCD در دستگاه مختصات"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1592",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل مساحت قسمت رنگی کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1592/stem_1.webp",
+        "alt": "شکل قسمت رنگی شده بین خطوط در دستگاه مختصات",
+        "aspect_ratio": 1.3176
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا معادلۀ دو خط $d$ و $d'$ را به دست آورده و مختصات $A$ محل تلاقی آن‌ها را محاسبه می‌کنیم.\n$d: y = -x - 1$\n$d': y = \\frac{x}{2} + 2$\n$\\Rightarrow \\frac{x}{2} + 2 = -x - 1 \\rightarrow x = -2 \\Rightarrow y = 1 \\Rightarrow A(-2, 1)$\nفاصلۀ نقطۀ $A$ از محور $y$ها برابر ۲ است، بنابراین در مثلث $ABC$ ارتفاع $AH$ برابر ۲ می‌باشد.\n$S_{ABOP} = S_{ABC} - S_{POC} = \\frac{2 \\times 3}{2} - \\frac{1 \\times 1}{2} = 3 - \\frac{1}{2} = \\frac{5}{2}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1592/stem_2.webp",
+        "alt": "نمودار خطوط d و d' و نقاط تلاقی در دستگاه مختصات",
+        "aspect_ratio": 1.6995
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1592,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            45,
+            315,
+            200,
+            395
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "شکل قسمت رنگی شده بین خطوط در دستگاه مختصات"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0148.jpg",
+          "box": [
+            1150,
+            1310,
+            1450,
+            1475
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار خطوط d و d' و نقاط تلاقی در دستگاه مختصات"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1593",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خطی که از نقاط $A(2,5)$ و $B(3,3)$ عبور می‌کند، خط $y = 3x + b$ را در نقطه‌ای به طول $1$ قطع می‌کند. $b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلۀ خط گذرا بر $AB$ را می‌نویسیم:\n$y - 3 = \\frac{5 - 3}{2 - 3} (x - 3) \\Rightarrow y = -2x + 9$\nخط به دست آمده خط $y = 3x + b$ را در نقطه‌ای به طول ۱ قطع می‌کند. نقطۀ تقاطع بر خط $y = -2x + 9$ قرار دارد. بنابراین عرض آن برابر است با:\n$y = -2(1) + 9 = 7$\nخط $y = 3x + b$ از نقطۀ $(1, 7)$ عبور می‌کند. $7 = 3 + b \\Rightarrow b = 4$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1593,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1594",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خطوط $y = ax + b$ و $y = bx + a$ و نیمساز ناحیۀ دوم در نقطه‌ای به عرض $3$ متقاطع‌اند. مقدار $ab$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{9}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{9}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{9}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{9}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلۀ نیمساز ناحیۀ دوم به صورت $y = -x$ است. عرض نقاط تقاطع بر روی نیمساز ۳ می‌باشد، بنابراین محل تقاطع نقطۀ $(-3, 3)$ است. هر دو خط داده‌شده از این نقطه عبور می‌کنند.\n$\\begin{cases} y = ax + b \\xrightarrow{(-3, 3)} 3 = -3a + b \\\\ y = bx + a \\xrightarrow{(-3, 3)} 3 = -3b + a \\end{cases} \\Rightarrow \\begin{cases} 3 = -3a + b \\ \\ |\\times 3 \\\\ 3 = -3b + a \\end{cases} \\Rightarrow -8a = 12 \\Rightarrow a = -\\frac{3}{2} \\Rightarrow b = -\\frac{3}{2} \\Rightarrow ab = \\frac{9}{4}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1594,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1595",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو، فاصلۀ نقطۀ $M$ تا مبدأ مختصات $\\frac{4}{3}$ است. مقدار $a$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1595/stem_1.webp",
+        "alt": "شکل نقطۀ M روی خط در دستگاه مختصات",
+        "aspect_ratio": 0.9668
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{2}}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2\\sqrt{2}}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلۀ خطی که محورهای مختصات را در دو نقطۀ $A(a, 0)$ و $B(0, b)$ قطع کند $\\frac{x}{a} + \\frac{y}{b} = 1$ خواهد بود.\nپس معادلۀ دو خط داده‌شده را می‌نویسیم و با هم تلاقی می‌دهیم:\n$\\begin{cases} \\frac{x}{2a} + \\frac{y}{a} = 1 \\\\ \\frac{x}{a} + \\frac{y}{2a} = 1 \\end{cases}$\n$\\frac{y}{a} - \\frac{y}{2a} = \\frac{1}{2} \\Rightarrow y = \\frac{2a}{3} , \\ x = \\frac{2a}{3}$\nیعنی $M(\\frac{2a}{3}, \\frac{2a}{3})$ نقطۀ تلاقی دو خط است، پس:\n$OM = \\sqrt{(\\frac{2a}{3})^2 + (\\frac{2a}{3})^2} = \\frac{2a}{3}\\sqrt{2} = \\frac{4}{3} \\Rightarrow a = \\frac{2}{\\sqrt{2}} = \\sqrt{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1595,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            45,
+            465,
+            175,
+            560
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "شکل نقطۀ M روی خط در دستگاه مختصات"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1596",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطۀ $A(5,4)$ رأس یک متوازی‌الاضلاع است که دو ضلع آن منطبق بر دو خط به معادلات $2x - y = 4$ و $x + 3y = 9$ می‌باشند. مختصات وسط قطر آن کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(3,2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(2,3)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(3,4)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(4,3)$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نقطۀ $A(5, 4)$ بر هیچ‌یک از خطوط داده‌شده قرار ندارد. بنابراین محل تلاقی این دو خط نقطۀ $C$ می‌باشد که رأس مقابل $A$ در متوازی‌الاضلاع است.\n$\\begin{cases} 2x - y = 4 \\ \\ |\\times 3 \\\\ x + 3y = 9 \\end{cases} \\Rightarrow 7x = 21 \\Rightarrow x = 3 \\Rightarrow y = 2 \\Rightarrow C(3, 2)$\nوسط قطر $AC$ را $M$ می‌نامیم:\n$M(\\frac{x_A + x_C}{2}, \\frac{y_A + y_C}{2}) \\Rightarrow M(4, 3)$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1596,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1597",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر خط $3x + 4y = 2$ را نسبت به محور طول‌ها و محور عرض‌ها قرینه کنیم تا خط جدیدی حاصل شود، خط اولیه و خط جدید یکدیگر را در چه نقطه‌ای قطع می‌کنند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(1, -\\frac{1}{4})$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(0, \\frac{1}{2})$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-2, 2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "این دو خط یکدیگر را قطع نمی‌کنند."
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر خطی را نسبت به محور طول‌ها قرینه کنیم به جای $y$، $-y$ قرار می‌دهیم و اگر نسبت به محور عرض‌ها قرینه کنیم به جای $x$، $-x$ می‌گذاریم. با توجه به این‌که خط $2 = 4y + 3x$ یک بار نسبت به محور طول‌ها و یک بار نسبت به محور عرض‌ها قرینه شده است، در معادلۀ جدید $x$ و $y$ قرینه می‌شوند.\n$3(-x) + 4(-y) = 2 \\Rightarrow -3x - 4y = 2 \\Rightarrow 3x + 4y = -2$\nواضح است که خط اولیه و خط قرینه‌شده با هم موازی بوده و یکدیگر را قطع نمی‌کنند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1597,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1598",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خطوط $y = x + 4$ و $y = mx + 2$ با یکدیگر زاویۀ $15^\\circ$ تشکیل می‌دهند. $m$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2}$ یا $2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{3}}{3}$ یا $\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$ یا $3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{3}}{3}$ یا $\\sqrt{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شیب خط $y = x + 4$ برابر ۱ است. اگر زاویۀ این خط با جهت مثبت محور طول‌ها را $\\alpha$ بنامیم $\\tan \\alpha = 1$ بوده و $\\alpha = 45^\\circ$ می‌باشد. خط $y = mx + 2$ با خط $y = x + 4$ زاویۀ $15^\\circ$ می‌سازد. اگر زاویۀ خط $y = mx + 2$ با جهت مثبت محور طول‌ها را $\\beta$ بنامیم، خواهیم داشت:\n$|\\beta - 45^\\circ| = 15^\\circ \\Rightarrow \\begin{cases} \\beta = 30^\\circ \\Rightarrow \\tan \\beta = \\frac{\\sqrt{3}}{3} \\\\ \\beta = 60^\\circ \\Rightarrow \\tan \\beta = \\sqrt{3} \\end{cases}$\n$\\Rightarrow \\begin{cases} m = \\frac{\\sqrt{3}}{3} \\\\ m = \\sqrt{3} \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1598,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1599",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به ازای کدام مقدار $a$ دستگاه معادلات $\\begin{cases} ax + 2y = a - 3 \\\\ 2x + (2a - 2)y = 5 - 3a \\end{cases}$ جواب ندارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a = -1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a = 2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a \\in \\mathbb{R}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a \\in \\emptyset$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دستگاه معادلات $\\begin{cases} ax+by=c \\\\ a'x+b'y=c' \\end{cases}$ به شرطی جواب ندارد که $\\frac{a}{a'}=\\frac{b}{b'} \\neq \\frac{c}{c'}$، بنابراین:\n$\\frac{a}{r} = \\frac{r}{ra-r} \\neq \\frac{a-r}{\\Delta-ra}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1599/stem_1.webp",
+        "alt": "حل سوال ۱۵۹۹",
+        "aspect_ratio": 3.3269
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1599,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 148,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0148.jpg",
+          "box": [
+            15,
+            804,
+            480,
+            895
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "حل سوال ۱۵۹۹"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1600",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خطوط $2y + ax = 6$ و $3y = x + 2$ بر هم عمودند. $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-6$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو خط هنگامی بر هم عمودند که حاصل‌ضرب شیب‌های آن‌ها برابر ۱- شود.\n$ax + ۲y = ۶ \\Rightarrow y = -\\frac{a}{۲}x + ۳ \\Rightarrow m_۱ = -\\frac{a}{۲}$\n$۳y = x + ۲ \\Rightarrow y = \\frac{x}{۳} + \\frac{۲}{۳} \\Rightarrow m_۲ = \\frac{۱}{۳}$\n$\\Rightarrow m_۱ m_۲ = -۱ \\Rightarrow -\\frac{a}{۶} = -۱ \\Rightarrow a = ۶$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1600/solution_1.webp",
+        "alt": "راه حل سوال ۱۶۰۰",
+        "aspect_ratio": 0.1771
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1600,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0149.jpg",
+          "box": [
+            160,
+            460,
+            240,
+            830
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال ۱۶۰۰"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1601",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل، خط $d$ نیمساز ناحیۀ دوم را در نقطه‌ای با کدام طول قطع می‌کند؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1601/stem_1.webp",
+        "alt": "شکل خط d در دستگاه مختصات و نقاط",
+        "aspect_ratio": 1.3037
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{4}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خط $d$ بر پاره‌خطی که دو سر آن نقاط $(a, \\circ)$ و $(\\circ, ۳a)$ می‌باشند، عمود است. شیب این پاره‌خط برابر $\\frac{۳a - \\circ}{\\circ - a}$ یعنی ۳- است، بنابراین شیب خط $d$ برابر $\\frac{۱}{۳}$ می‌باشد. هم‌چنین خط $d$ از نقطهٔ $(\\circ, ۲)$ عبور می‌کند. معادلهٔ خط $d$ به صورت زیر است:\n$d: y = \\frac{۱}{۳}x + ۲$\n$y = -x : \\text{نیمساز ناحیهٔ دوم}$\n$\\Rightarrow -x = \\frac{۱}{۳}x + ۲ \\Rightarrow x = -\\frac{۳}{۲}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1601/solution_2.webp",
+        "alt": "راه حل سوال ۱۶۰۱",
+        "aspect_ratio": 0.2698
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1601,
+      "question_pdf": "13.pdf",
+      "question_page": 6,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            40,
+            800,
+            220,
+            895
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "شکل خط d در دستگاه مختصات و نقاط"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0149.jpg",
+          "box": [
+            280,
+            460,
+            410,
+            830
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال ۱۶۰۱"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1602",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقاط $A(3,1)$ ، $B(6,5)$ و $C(0,4)$ رئوس مثلث $ABC$ هستند. عرض از مبدأ معادلهٔ ارتفاع وارد بر ضلع $BC$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$17$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$19$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ارتفاع $AH$ بر ضلع $BC$ عمود است.\n$m_{BC} = \\frac{۵ - ۴}{۶ - \\circ} = \\frac{۱}{۶} \\Rightarrow m_{AH} = -۶$\nمعادلهٔ $AH : y - ۱ = -۶(x - ۳) \\Rightarrow y = -۶x + ۱۹$\nعرض از مبدأ معادلهٔ $AH$ برابر ۱۹ است."
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1602/solution_1.webp",
+        "alt": "راه حل سوال ۱۶۰۲",
+        "aspect_ratio": 0.1771
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1602,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0149.jpg",
+          "box": [
+            400,
+            460,
+            480,
+            830
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال ۱۶۰۲"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1603",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A(2,3)$ ، $B(-1,1)$ و $C(\\alpha, \\beta)$ سه رأس مربع $ABCD$ باشند، $\\alpha \\beta$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$ یا $12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$ یا $-12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$ یا $12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$ یا $-12$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اضلاع $AB$ و $BC$ در مربع $ABCD$ با یکدیگر برابر بوده و بر هم عمودند.\n$m_{AB} \\times m_{BC} = -۱ \\Rightarrow \\frac{۳ - ۱}{۲ + ۱} \\cdot \\frac{\\beta - ۱}{\\alpha + ۱} = -۱ \\Rightarrow (\\beta - ۱) = -\\frac{۳}{۲}(\\alpha + ۱) \\quad (۱)$\n$AB = BC \\Rightarrow \\sqrt{۳^۲ + ۲^۲} = \\sqrt{(\\alpha + ۱)^۲ + (\\beta - ۱)^۲}$\n$\\xrightarrow{(۱)} \\sqrt{(\\alpha + ۱)^۲ + \\frac{۹}{۴}(\\alpha + ۱)^۲} = \\sqrt{۱۳} \\Rightarrow \\frac{۱۳}{۴}(\\alpha + ۱)^۲ = ۱۳ \\Rightarrow (\\alpha + ۱)^۲ = ۴ \\Rightarrow \\begin{cases} \\alpha = ۱ \\\\ \\alpha = -۳ \\end{cases}$\n$\\Rightarrow \\begin{cases} \\beta = -۲ \\\\ \\beta = ۴ \\end{cases} \\Rightarrow \\begin{cases} \\alpha\\beta = -۲ \\\\ \\alpha\\beta = -۱۲ \\end{cases}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1603/solution_1.webp",
+        "alt": "راه حل سوال ۱۶۰۳",
+        "aspect_ratio": 0.3996
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1603,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0149.jpg",
+          "box": [
+            480,
+            460,
+            680,
+            830
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال ۱۶۰۳"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1604",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل، اگر مساحت مثلث $ABM$ برابر $\\dfrac{45}{4}$ باشد، مقدار $k$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1604/stem_1.webp",
+        "alt": "نمودار خط $y = \\frac{1}{2}x + k$ و مثلث $ABM$",
+        "aspect_ratio": 1.1815
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: نقطۀ $A$ بر خط $y = \\frac{1}{2}x + k$ واقع است.\n$y = \\circ \\Rightarrow \\frac{1}{2}x + k = \\circ \\Rightarrow x = -2k \\Rightarrow A(-2k, \\circ)$\n$BM$ بر خط $y = \\frac{1}{2}x + k$ عمود است، بنابراین شیب $BM$ برابر $2-$ است و از نقطۀ $M(\\circ, k)$ نیز عبور می‌کند.\nمعادلۀ $BM: y = -2x + k$\nنقطۀ $B$ محل برخورد $BM$ با محور $x$ها است.\n$y = \\circ \\Rightarrow -2x + k = \\circ \\Rightarrow x = \\frac{k}{2} \\Rightarrow B(\\frac{k}{2}, \\circ)$\nطول قاعدۀ $AB$ برابر $\\frac{5k}{2}$ و طول ارتفاع $MO$ برابر $k$ است.\n$S = \\frac{AB \\times MO}{2} = \\frac{\\frac{5k^2}{2}}{2} = \\frac{45}{4} \\Rightarrow k^2 = 9 \\Rightarrow k = 3$\nروش دوم: نقاط $A(-2k, \\circ)$ و $M(\\circ, k)$ رئوس مثلث قائم‌الزاویۀ $ABM$ هستند. ارتفاع وارد بر وتر ($MO$) واسطۀ هندسی قطعات جدا شده بر وتر یعنی $OB$ و $OA$ می‌باشد.\n$OM^2 = OA \\cdot OB \\Rightarrow k^2 = 2k \\times OB \\Rightarrow OB = \\frac{k}{2}$\n$\\Rightarrow AB = 2k + \\frac{k}{2} = \\frac{5}{2}k$\n$S = \\frac{OM \\times AB}{2} = \\frac{5}{4}k^2 = \\frac{45}{4} \\Rightarrow k^2 = 9 \\Rightarrow k = 3$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1604,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            105,
+            144,
+            252,
+            230
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار خط $y = \\frac{1}{2}x + k$ و مثلث $ABM$"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1605",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عمودمنصف دو نقطهٔ $A(m, -2m)$ و $B(2m, m)$ کدام خط است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$y = 3x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = -3x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = \\dfrac{1}{3}x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = -\\dfrac{1}{3}x$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عمودمنصف خط $AB$ را $l$ می‌نامیم. خط $l$ بر $AB$ عمود است، بنابراین شیب آن قرینهٔ معکوس شیب $AB$ است.\nشیب $AB = \\frac{m + ۲m}{۲m - m} = ۳ \\Rightarrow \\text{شیب } l = -\\frac{۱}{۳}$\nخط $l$ از وسط $AB$ یعنی $M$ می‌گذرد.\n$M(\\frac{x_A + x_B}{۲}, \\frac{y_A + y_B}{۲}) \\Rightarrow M(\\frac{۳m}{۲}, -\\frac{m}{۲})$\nمعادلهٔ $l : y + \\frac{m}{۲} = -\\frac{۱}{۳}(x - \\frac{۳m}{۲}) \\Rightarrow y = -\\frac{x}{۳}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1605/solution_1.webp",
+        "alt": "راه حل سوال ۱۶۰۵",
+        "aspect_ratio": 0.2992
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1605,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0149.jpg",
+          "box": [
+            210,
+            40,
+            360,
+            420
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال ۱۶۰۵"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1606",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقاط $A(3, m)$ و $B(2, n)$ نسبت به خط $2x + 1 = y$ متقارن هستند. $\\dfrac{m}{n}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{23}{25}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{24}{25}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{25}{24}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{25}{23}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نقاط $A$ و $B$ نسبت به خط $۲x + y = ۱$ متقارن هستند؛ یعنی این خط عمودمنصف $AB$ است. شیب $AB$ قرینهٔ معکوس شیب این خط یعنی $\\frac{۱}{۲}$ است.\n$m_{AB} = \\frac{m - n}{۳ - ۲} = \\frac{۱}{۲} \\Rightarrow m - n = \\frac{۱}{۲} \\quad (۱)$\nعمودمنصف $AB$ از وسط $AB$ می‌گذرد.\n$M(\\frac{۳ + ۲}{۲}, \\frac{m + n}{۲}) \\xrightarrow{y = ۲x + ۱} \\frac{m + n}{۲} = ۵ + ۱ \\Rightarrow m + n = ۱۲ \\quad (۲)$\n$(۱), (۲) \\Rightarrow m = \\frac{۲۳}{۴} \\Rightarrow n = \\frac{۲۵}{۴} \\Rightarrow \\frac{m}{n} = \\frac{۲۳}{۲۵}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1606/solution_1.webp",
+        "alt": "راه حل سوال ۱۶۰۶",
+        "aspect_ratio": 0.3353
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1606,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0149.jpg",
+          "box": [
+            350,
+            40,
+            520,
+            420
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال ۱۶۰۶"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1607",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $x + y = 3$ عمودمنصف پاره‌خط واصل بین دو نقطهٔ $A(4, 1)$ و $B(\\alpha, \\beta)$ است. مقدار $\\alpha \\beta$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شیب خط $y + x = ۳$ برابر ۱- است، بنابراین شیب پاره‌خط $AB$ برابر ۱ است.\n$m_{AB} = \\frac{\\beta - ۱}{\\alpha - ۴} = ۱ \\Rightarrow \\beta - ۱ = \\alpha - ۴ \\Rightarrow \\alpha - \\beta = ۳ \\quad (۱)$\nخط $y + x = ۳$ از وسط $AB$ یعنی نقطهٔ $M(\\frac{\\alpha + ۴}{۲}, \\frac{\\beta + ۱}{۲})$ می‌گذرد، در نتیجه:\n$\\frac{\\beta + ۱}{۲} + \\frac{\\alpha + ۴}{۲} = ۳ \\Rightarrow \\alpha + \\beta = ۱ \\quad (۲)$\n$(۱), (۲) \\Rightarrow \\alpha = ۲ \\quad , \\quad \\beta = -۱ \\Rightarrow \\alpha\\beta = -۲$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1607/solution_1.webp",
+        "alt": "راه حل سوال ۱۶۰۷",
+        "aspect_ratio": 0.2992
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1607,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0149.jpg",
+          "box": [
+            510,
+            40,
+            660,
+            420
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال ۱۶۰۷"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1608",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عمودمنصف دو نقطهٔ $A(3, 0)$ و $B(0, k)$ محور عرض‌ها را در نقطه‌ای به عرض $-4$ قطع می‌کند. $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$ یا $9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$ یا $9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$ یا $-9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$ یا $-9$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: اگر $l$ عمودمنصف $AB$ باشد، شیب $l$ قرینهٔ معکوس شیب $AB$ است.\n$m_{AB} = \\frac{k}{-۳} \\Rightarrow m_l = \\frac{۳}{k}$\nخط $l$ از وسط $AB$ یعنی $M(\\frac{۳}{۲}, \\frac{k}{۲})$ می‌گذرد.\n$l : y - \\frac{k}{۲} = \\frac{۳}{k}(x - \\frac{۳}{۲})$\nخط $l$ محور عرض‌ها را در نقطهٔ $(\\circ, -۴)$ قطع می‌کند.\n$\\Rightarrow -۴ - \\frac{k}{۲} = \\frac{۳}{k}(\\circ - \\frac{۳}{۲}) \\Rightarrow k^۲ + ۸k - ۹ = \\circ \\Rightarrow \\begin{cases} k = ۱ \\\\ k = -۹ \\end{cases}$\nروش دوم: نقطهٔ $P(\\circ, -۴)$ بر روی عمودمنصف $AB$ قرار دارد، بنابراین:\n$AP = BP \\Rightarrow \\sqrt{۹ + ۱۶} = \\sqrt{\\circ + (k + ۴)^۲} \\Rightarrow (k + ۴)^۲ = ۲۵ \\Rightarrow \\begin{cases} k + ۴ = ۵ \\\\ k + ۴ = -۵ \\end{cases} \\Rightarrow \\begin{cases} k = ۱ \\\\ k = -۹ \\end{cases}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1608/solution_1.webp",
+        "alt": "راه حل سوال ۱۶۰۸",
+        "aspect_ratio": 0.5161
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1608,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 149,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0149.jpg",
+          "box": [
+            650,
+            40,
+            920,
+            420
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال ۱۶۰۸"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1609",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عمودمنصف پاره‌خط واصل بین دو نقطهٔ $A(k, 1)$ و $B(-2, 3)$ از نقطهٔ $P(\\dfrac{k}{2}, 4)$ عبور می‌کند. $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: نقطه $P$ بر روی عمودمنصف $AB$ قرار دارد، بنابراین $PA = PB$.\n$PA = PB \\Rightarrow \\sqrt{\\frac{k^2}{4} + 9} = \\sqrt{(\\frac{k}{2} + 2)^2 + 1}$\n$\\Rightarrow \\frac{k^2}{4} + 9 = \\frac{k^2}{4} + 2k + 5 \\Rightarrow k=2$\nروش دوم: می‌توانیم معادله عمودمنصف $AB$ را به دست آورده و مختصات $P$ را درون آن قرار دهیم که در این سؤال توصیه نمی‌شود."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1609,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 150,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1610",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "قرینهٔ $A(-1, 5)$ نسبت به خط $x + 3y = 6$ کدام نقطه است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(3, 5)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(5, 3)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(5, 7)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(7, 5)$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر قرینه $A(1, -5)$ را نسبت به خط $x + 3y = 6$ نقطه $A'(\\alpha, \\beta)$ بنامیم، خط مذکور عمودمنصف $AA'$ خواهد بود. بنابراین شیب $AA'$ قرینه معکوس شیب این خط یعنی برابر $3$ می‌باشد.\n$m_{AA'} = \\frac{\\beta + 5}{\\alpha - 1} = 3 \\Rightarrow 3\\alpha - \\beta = 8 \\quad (1)$\nخط عمودمنصف از وسط $AA'$ می‌گذرد.\n$M(\\frac{\\alpha+1}{2}, \\frac{\\beta-5}{2}) \\xrightarrow{x + 3y = 6} \\frac{\\alpha+1}{2} + \\frac{3(\\beta-5)}{2} = 6 \\Rightarrow \\alpha + 3\\beta = 26 \\quad (2)$\n$(1), (2) \\Rightarrow \\alpha = 5 \\Rightarrow \\beta = 7 \\Rightarrow A'(5, 7)$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1610,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 150,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1611",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث $ABC$ با رئوس $A(\\alpha, -1)$ ، $B(0, \\beta)$ و $C(-2, 0)$ به مساحت $5$ در رأس $A$ قائم‌الزاویه است. $\\alpha$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{5}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اضلاع $AB$ و $AC$ بر یکدیگر عمودند.\n$m_{AB} \\times m_{AC} = -1 \\Rightarrow \\frac{\\beta+1}{0-\\alpha} \\times \\frac{-2+1}{0-\\alpha} = -1 \\Rightarrow \\beta+1 = \\alpha^2 \\Rightarrow \\beta = \\alpha^2 - 1 \\quad (1)$\nمساحت $ABC$ برابر $5$ است.\n$S_{ABC} = \\frac{1}{2}AH \\times BC = \\frac{1}{2}\\alpha(\\beta+2) = 5 \\Rightarrow \\alpha(\\beta+2) = 10 \\xrightarrow{(1)} \\alpha(\\alpha^2-1+2) = 10 \\Rightarrow \\alpha^3+\\alpha-10 = 0 \\Rightarrow (\\alpha-2)(\\alpha^2+2\\alpha+5) = 0 \\Rightarrow \\alpha=2$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1611/solution_1.webp",
+        "alt": "نمودار مثلث ABC و نقطه A روی محور x",
+        "aspect_ratio": 0.6796
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1611,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 150,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0150.jpg",
+          "box": [
+            450,
+            520,
+            560,
+            640
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار مثلث ABC و نقطه A روی محور x"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1612",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مساحت مثلث $OAB$ برابر $24$ باشد، شیب خط $AB$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1612/stem_1.webp",
+        "alt": "نمودار مثلث $OAB$ با خط عبوری از A و B",
+        "aspect_ratio": 0.9749
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-\\dfrac{1}{2}$ یا $-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\dfrac{1}{3}$ یا $-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\dfrac{1}{4}$ یا $-4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مختصات $A$ را $(\\alpha, 0)$ و مختصات $B$ را $(0, \\beta)$ در نظر می‌گیریم.\n$S_{AOB} = 24 \\Rightarrow \\frac{\\alpha\\beta}{2} = 24 \\Rightarrow \\alpha\\beta = 48$\n$m_{AB} = \\frac{-\\beta}{\\alpha} \\Rightarrow AB : y = -\\frac{\\beta}{\\alpha}x + \\beta$\nنقطه $(3, 3)$ بر روی پاره‌خط $AB$ قرار دارد، بنابراین:\n$3 = -\\frac{3\\beta}{\\alpha} + \\beta \\xrightarrow{\\alpha = \\frac{48}{\\beta}} 3 = \\frac{-3\\beta}{\\frac{48}{\\beta}} + \\beta \\Rightarrow 3 = -\\frac{\\beta^2}{16} + \\beta \\Rightarrow \\beta^2 - 16\\beta + 48 = 0 \\Rightarrow (\\beta-4)(\\beta-12) = 0$\n$\\Rightarrow \\begin{cases} \\beta=4 \\\\ \\beta=12 \\end{cases} \\Rightarrow \\begin{cases} \\alpha=12 \\\\ \\alpha=4 \\end{cases} \\Rightarrow \\begin{cases} m=-\\frac{\\beta}{\\alpha}=-\\frac{1}{3} \\\\ m=-\\frac{\\beta}{\\alpha}=-3 \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1612,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 150,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            100,
+            524,
+            257,
+            638
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار مثلث $OAB$ با خط عبوری از A و B"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1613",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو $A(\\alpha, 6)$ و نقاط $B$ و $C$ به ترتیب با طول $\\beta$ و $6$ رئوس مثلث قائم‌الزاویه هستند. هرگاه مساحت مثلث $39$ باشد، مقدار $\\alpha + \\beta$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1613/stem_1.webp",
+        "alt": "مثلث قائم‌الزاویه ABC در دستگاه مختصات",
+        "aspect_ratio": 1.3265
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-5$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو رأس $B$ و $C$ بر محور طول‌ها واقع‌اند، بنابراین عرض نقطه $A$ برابر ارتفاع $AH$ می‌باشد؛ یعنی $AH = 6$.\n$S = \\frac{AH \\times BC}{2} = 39 \\Rightarrow \\frac{6 \\times BC}{2} = 39 \\Rightarrow BC = 13$\n$\\Rightarrow |\\beta - 6| = 13 \\Rightarrow \\begin{cases} \\beta = 19 & \\text{غ ق ق} \\\\ \\beta = -7 & \\checkmark \\end{cases}$\nاضلاع $AB$ و $AC$ بر هم عمودند.\n$m_{AB} \\times m_{AC} = -1 \\Rightarrow \\frac{6-0}{\\alpha-\\beta} \\times \\frac{6-0}{\\alpha-6} = -1$\n$\\Rightarrow (\\alpha-6)(\\alpha-\\beta) = -36 \\Rightarrow (\\alpha-6)(\\alpha+7) = -36 \\Rightarrow \\alpha^2+\\alpha-6=0 \\Rightarrow \\begin{cases} \\alpha = -3 & \\text{غ ق ق} \\\\ \\alpha = 2 \\end{cases} \\Rightarrow \\alpha+\\beta = -5$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1613/solution_2.webp",
+        "alt": "مثلث ABC با ارتفاع AH و رأس‌های روی محور x",
+        "aspect_ratio": 0.4414
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1613,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 150,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            95,
+            650,
+            260,
+            735
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه ABC در دستگاه مختصات"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0150.jpg",
+          "box": [
+            810,
+            520,
+            920,
+            710
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "مثلث ABC با ارتفاع AH و رأس‌های روی محور x"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1614",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل، مساحت مثلث $ABC$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1614/stem_1.webp",
+        "alt": "نمودار مثلث ABC و خطوط متقاطع در صفحه مختصات",
+        "aspect_ratio": 1.1445
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{52}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{5}{52}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{26}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{5}{26}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا معادله خط گذرا بر $AB$ را که از دو نقطه $(3, 0)$ و $(0, 2)$ عبور می‌کند می‌نویسیم:\n$y = -\\frac{2}{3}x + 2$\nخط گذرا بر $AC$ بر خط فوق عمود است بنابراین شیب آن برابر $\\frac{3}{2}$ است. هم‌چنین از نقطه $(-1, 0)$ عبور می‌کند، در نتیجه معادله آن به صورت زیر است:\n$y - 0 = \\frac{3}{2}(x+1) \\Rightarrow y = \\frac{3}{2}x + \\frac{3}{2} \\Rightarrow C(0, \\frac{3}{2})$\nمحل تقاطع دو خط به دست آمده $A$ می‌باشد.\n$\\begin{cases} y = -\\frac{2}{3}x + 2 \\\\ y = \\frac{3}{2}x + \\frac{3}{2} \\end{cases} \\Rightarrow \\frac{3}{2}x + \\frac{3}{2} = -\\frac{2}{3}x + 2 \\Rightarrow \\frac{13}{6}x = \\frac{1}{2} \\Rightarrow x = \\frac{3}{13}$\nطول ارتفاع $AH$ برابر طول نقطه $A$ یعنی $\\frac{3}{13}$ است.\n$BC = 2 - \\frac{3}{2} = \\frac{1}{2}$\n$S_{ABC} = \\frac{AH \\times BC}{2} = \\frac{\\frac{3}{13} \\times \\frac{1}{2}}{2} = \\frac{3}{52}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1614,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 150,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            129,
+            715,
+            276,
+            804
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار مثلث ABC و خطوط متقاطع در صفحه مختصات"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1615",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل، مساحت قسمت رنگی کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1615/stem_1.webp",
+        "alt": "نمودار دو خط متقاطع و ناحیه رنگی محصور با محورها",
+        "aspect_ratio": 1.1725
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{8}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{16}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خطی که از نقطه $(0, \\frac{4}{3})$ می‌گذرد را $d$ و خط عمود بر آن را $d'$ می‌نامیم.\n$m_d = -\\frac{3}{4} \\Rightarrow m_{d'} = \\frac{4}{3}$\nخط $d'$ از نقطه $(2, 0)$ عبور می‌کند.\nمعادله $d' : y - 0 = \\frac{4}{3}(x - 2) \\Rightarrow y = \\frac{4}{3}x - \\frac{8}{3}$\nعرض از مبدأ خط $d'$ برابر $-\\frac{8}{3}$ است، بنابراین اضلاع قائم مثلث رنگی برابر $2$ و $\\frac{8}{3}$ می‌باشد.\n$S = \\frac{2 \\times \\frac{8}{3}}{2} = \\frac{8}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1615,
+      "question_pdf": "13.pdf",
+      "question_page": 7,
+      "solution_page": 150,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            127,
+            804,
+            277,
+            893
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار دو خط متقاطع و ناحیه رنگی محصور با محورها"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1616",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مساحت مثلثی با سه رأس $A(2, 1)$ ، $B(-1, 5)$ و $C(-2, 0)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$19$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در مثلث با رئوس $B$، $A$ و $C$ مساحت مثلث برابر است با:\n$$ \\begin{matrix} x_A & x_B & x_C & x_A \\\\ y_A & y_B & y_C & y_A \\end{matrix} $$\n$S = \\frac{1}{2} |(x_A y_B + x_B y_C + x_C y_A) - (x_A y_C + x_C y_B + x_B y_A)|$\n$= \\frac{1}{2} |((2 \\times 5) + (-1 \\times 0) + (-2 \\times 1)) - ((2 \\times 0) + (-2 \\times 5) + (-1 \\times 1))|$\n$= \\frac{1}{2} |(10 + 0 - 2) - (0 - 10 - 1)| = \\frac{1}{2} (8 + 11) = 9/5$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1616/solution_1.webp",
+        "alt": "نمودار محاسبه مساحت با مختصات",
+        "aspect_ratio": 0.2423
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1616,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 150,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0150.jpg",
+          "box": [
+            750,
+            90,
+            800,
+            270
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار محاسبه مساحت با مختصات"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1617",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مساحت مثلثی با رئوس $A(2, 3)$ ، $B(1, 1)$ و $C(k, k+2)$ برابر $8$ است. مجموع مقادیر $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مساحت مثلث $ABC$ برابر است با:\n$S = \\frac{1}{2}|(x_Ay_B + x_By_C + x_Cy_A) - (x_Ay_C + x_Cy_B + x_By_A)|$\n$= \\frac{1}{2}|((2 \\times 1) + (1 \\times (k+2)) + (k \\times 3)) - ((2 \\times (k+2)) + (k \\times 1) + (1 \\times 3))|$\n$= \\frac{1}{2}|(4k+4) - (3k+7)| = \\frac{1}{2}|k-3| = 8 \\Rightarrow |k-3| = 16$\n$\\Rightarrow \\begin{cases} k - 3 = 16 \\\\ k - 3 = -16 \\end{cases} \\Rightarrow \\begin{cases} k = 19 \\\\ k = -13 \\end{cases} \\Rightarrow k_1 + k_2 = 6$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1617,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1618",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقاط $A(0, 3)$ و $B(1, -1)$ رئوس مثلثی هستند که رأس سوم آن روی خط $y = 3x$ است. هرگاه مساحت مثلث $ABC$ برابر $6$ باشد، جمع طول‌های به دست آمده برای $C$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{7}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{7}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\dfrac{4}{7}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{6}{7}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض می‌کنیم $C(\\alpha, 3\\alpha)$ همان نقطهٔ مورد نظر باشد. با توجه به آن‌که مختصات سه رأس مثلث را داریم می‌توانیم مساحت آن را به دست آوریم.\n$S = \\frac{1}{2}|(3\\alpha + 3\\alpha) - (3 - \\alpha)| = 6$\n$\\Rightarrow S = |7\\alpha - 3| = 12 \\Rightarrow \\begin{cases} 7\\alpha - 3 = 12 \\Rightarrow \\alpha = \\frac{15}{7} \\\\ 7\\alpha - 3 = -12 \\Rightarrow \\alpha = -\\frac{9}{7} \\end{cases}$\n$\\alpha_1 + \\alpha_2 = \\frac{15}{7} - \\frac{9}{7} = \\frac{6}{7}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1618,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1619",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $y = k$ مساحت مثلث رنگی را به نسبت $1$ به $8$ تقسیم می‌کند. مقدار $k$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1619/stem_1.webp",
+        "alt": "نمودار مثلث در دستگاه مختصات و خط افقی y=k که آن را به دو قسمت تقسیم کرده",
+        "aspect_ratio": 0.9547
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3 - \\dfrac{\\sqrt{2}}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3 - \\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2.25$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلهٔ پاره‌خط $AP$ به صورت $y = -x + 3$ می‌باشد.\nمحل تلاقی این خط با $y = k$ نقطهٔ $C$ می‌باشد.\n$\\begin{cases} y = -x + 3 \\\\ y = k \\end{cases} \\Rightarrow x = 3 - k \\Rightarrow BC = 3 - k$\nواضح است که $AB$ نیز برابر $3 - k$ می‌باشد، بنابراین:\n$S_{ABC} = \\frac{AB \\times BC}{2} = \\frac{(3 - k)^2}{2}$\nمساحت مثلث $AOH$ نصف مساحت $AOP$ یعنی $\\frac{9}{4}$ است.\n$\\frac{S_{ABC}}{S_{AOH}} = \\frac{1}{9} \\Rightarrow S_{ABC} = \\frac{1}{9} \\times \\frac{9}{4} = \\frac{1}{4}$\n$\\Rightarrow (3 - k)^2 = \\frac{1}{2} \\xrightarrow{k < 3} 3 - k = \\frac{\\sqrt{2}}{2} \\Rightarrow k = 3 - \\frac{\\sqrt{2}}{2}$\nتذکر: اندازهٔ $BC$ با استفاده از قضیهٔ تالس نیز قابل محاسبه می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1619,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            38,
+            203,
+            186,
+            313
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار مثلث در دستگاه مختصات و خط افقی y=k که آن را به دو قسمت تقسیم کرده"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1620",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $4x + 3y = 5$ بر دایره‌ای به مرکز $O(-1, 2)$ مماس است. شعاع دایره چه‌قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شعاع دایره برابر است با فاصلهٔ مرکز دایره از خط مماس بر دایره.\n$R = OH = \\frac{|-4 - 6 - 5|}{\\sqrt{16 + 9}} = \\frac{15}{5} = 3$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1620,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1621",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام نقطه واقع بر محور عرض‌ها از خط $4x + 3y + 5 = 0$ به فاصلهٔ $4$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(0, 5)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(0, \\dfrac{22}{3})$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(0, -5)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(0, \\dfrac{25}{3})$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض می‌کنیم نقطهٔ $A(0, k)$ از خط $4x + 3y + 5 = 0$ به فاصلهٔ ۴ است.\n$AH = \\frac{|0 + 3k + 5|}{\\sqrt{16 + 9}} = 4 \\Rightarrow |3k + 5| = 20$\n$\\Rightarrow \\begin{cases} 3k + 5 = 20 \\\\ 3k + 5 = -20 \\end{cases} \\Rightarrow \\begin{cases} k = 5 \\\\ k = -\\frac{25}{3} \\end{cases} \\Rightarrow \\begin{cases} A(0, 5) \\\\ A(0, -\\frac{25}{3}) \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1621,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1622",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "قطر مربعی بر خط $y - 2x = 3$ واقع است. اگر $A(1, -2)$ یک رأس آن باشد، مساحت مربع کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0.2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.8$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نقطهٔ $A(1, -2)$ بر خط $y - 2x - 3 = 0$ واقع نیست، بنابراین فاصلهٔ $A$ از این خط برابر نصف قطر مربع است.\n$y - 2x + 3 = 0$\n$AH = \\frac{|-2 - 2 + 3|}{\\sqrt{1 + 4}} = \\frac{1}{\\sqrt{5}} \\Rightarrow \\text{قطر مربع} : d = \\frac{2}{\\sqrt{5}}$\n$S_{\\text{مربع}} = \\frac{1}{2}d^2 = \\frac{1}{2} \\times \\frac{4}{5} = \\frac{2}{5} = 0/4$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1622,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1623",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "یک ضلع مستطیلی بر خط $3x + 4y - 4 = 0$ و یک رأس آن به مختصات $(2, 2)$ است. اگر محیط مستطیل برابر $24$ باشد، مساحت آن کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ نقطهٔ $A(2, 2)$ از خط $3x + 4y - 4 = 0$ برابر یکی از اضلاع مستطیل است.\n$AB = \\frac{|6 + 8 - 4|}{\\sqrt{9 + 16}} = \\frac{10}{5} = 2$\nمحیط مستطیل برابر ۲۴ است، بنابراین مجموع طول و عرض ۱۲ می‌باشد. عرض مستطیل همان $AB$ و برابر ۲ است. در نتیجه طول مستطیل ۱۰ خواهد بود.\n$S = \\text{طول} \\times \\text{عرض} = 2 \\times 10 = 20$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1623,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1624",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ نقطهٔ $A(3, 1)$ از خط $6x - 8y = k$ برابر $\\dfrac{1}{2}$ است. مجموع مقادیر $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$25$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ نقطهٔ $A(x_0, y_0)$ از خط $ax + by + c = 0$ از رابطهٔ زیر محاسبه می‌شود:\n$AH = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}$\nبنابراین فاصلهٔ نقطهٔ $A(3, 1)$ از خط $6x - 8y - k = 0$ برابر است با:\n$AH = \\frac{|18 - 8 - k|}{\\sqrt{36 + 64}} = \\frac{1}{2} \\Rightarrow |10 - k| = 5 \\Rightarrow \\begin{cases} k = 5 \\\\ k = 15 \\end{cases}$\n$k_1 + k_2 = 20$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1624,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1625",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $4x + 3y + k = 0$ معادلهٔ ضلع مربعی به مساحت $144$ و $A(3, 1)$ رأسی از مربع غیرواقع بر این خط است. مجموع مقادیر به دست آمده برای $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-30$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ $A$ از خط $4x + 3y + k = 0$ برابر ضلع مربع است.\n$a = AH = \\frac{|12 + 3 + k|}{\\sqrt{16 + 9}} = \\frac{|k + 15|}{5}$\n$S = a^2 = 144 \\Rightarrow a = 12 \\Rightarrow \\frac{|k + 15|}{5} = 12$\n$\\Rightarrow |k + 15| = 60 \\Rightarrow \\begin{cases} k = 45 \\\\ k = -75 \\end{cases} \\Rightarrow k_1 + k_2 = -30$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1625,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1626",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث $ABC$ با رئوس $A(3, 1)$ ، $B(-3, 3)$ و $C(1, 0)$ مفروض است. اندازهٔ ارتفاع $AH$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا معادلهٔ ضلع $BC$ را به دست می‌آوریم:\n$BC : y - 0 = \\frac{3 - 0}{-3 - 1}(x - 1) \\Rightarrow y = -\\frac{3}{4}(x - 1)$\n$\\Rightarrow 3x + 4y - 3 = 0$\nاندازهٔ ارتفاع $AH$ برابر فاصلهٔ $A(3, 1)$ از ضلع $BC$ است.\n$AH = \\frac{|9 + 4 - 3|}{\\sqrt{9 + 16}} = \\frac{10}{5} = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1626,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1627",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نیمسازهای ناحیهٔ سوم و چهارم دو ضلع مجاور یک مستطیل به مساحت $30$ هستند، کدام نقطه می‌تواند رأس مستطیل باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-2, 8)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-3, 7)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(7, -3)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(2, -8)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر نقطهٔ $A(\\alpha, \\beta)$ که بر هیچ‌یک از دو نیمساز ناحیهٔ سوم و چهارم قرار ندارد به عنوان رأس مستطیل در نظر بگیریم، فاصلهٔ $A$ از هر یک از دو نیمساز برابر طول و عرض مستطیل است.\n$y = x \\Rightarrow AH = \\frac{|\\alpha - \\beta|}{\\sqrt{2}}$\n$y = -x \\Rightarrow AH' = \\frac{|\\alpha + \\beta|}{\\sqrt{2}}$\nمساحت مستطیل برابر ۳۰ می‌باشد.\n$S = AH \\times AH' = 30 \\Rightarrow \\frac{|\\alpha^2 - \\beta^2|}{2} = 30$\n$\\Rightarrow |\\alpha^2 - \\beta^2| = 60$\nواضح است که نقطهٔ $A$ در یکی از نواحی سوم یا چهارم قرار دارد. در بین گزینه‌ها فقط ۴ در شرایط مسئله صدق می‌کند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1627,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1628",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ مبدأ مختصات تا خط گذرنده از $A(a, 0)$ و $B(0, a)$ برابر $2\\sqrt{2}$ است. مقدار $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 4$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلۀ خط گذرا بر دو نقطۀ $(a, \\circ)$ و $(\\circ, a)$ را می‌نویسیم:\n$y - \\circ = \\frac{a - \\circ}{\\circ - a} (x - a) \\Rightarrow y = -x + a \\Rightarrow y + x - a = \\circ$\nفاصلۀ مبدأ مختصات از این خط را برابر $۲\\sqrt{۲}$ قرار می‌دهیم.\n$OH = \\frac{|\\circ + \\circ - a|}{\\sqrt{۱ + ۱}} = ۲\\sqrt{۲} \\Rightarrow |a| = ۴ \\Rightarrow a = \\pm ۴$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1628,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1629",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A(-1, 1)$ و $B(2, 0)$ دو رأس مثلث $ABC$ با مساحت $4$ و رأس $C$ روی نیمساز ناحیهٔ دوم و چهارم باشد، عرض نقطهٔ $C$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$ یا $5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$ یا $-5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$ یا $5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$ یا $-5$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رأس $C$ روی نیمساز ناحیۀ دوم و چهارم یعنی $y = -x$ واقع است، بنابراین مختصات آن به صورت $C(\\alpha, -\\alpha)$ است.\nمعادلۀ $AB$ : $y - \\circ = \\frac{\\circ - ۱}{۲ + ۱} (x - ۲) \\Rightarrow x + ۳y - ۲ = \\circ$\n$CH = \\frac{|\\alpha - ۳\\alpha - ۲|}{\\sqrt{۱ + ۹}} = \\frac{۲|\\alpha + ۱|}{\\sqrt{۱۰}}$\n$AB = \\sqrt{۳^۲ + ۱^۲} = \\sqrt{۱۰}$\n$S_{ABC} = \\frac{AB \\times CH}{۲} = \\frac{\\sqrt{۱۰} \\times \\frac{۲|\\alpha + ۱|}{\\sqrt{۱۰}}}{۲} = |\\alpha + ۱| = ۴$\n$\\Rightarrow \\begin{cases} \\alpha = ۳ \\\\ \\alpha = -۵ \\end{cases} \\Rightarrow \\begin{cases} -\\alpha = -۳ \\\\ -\\alpha = ۵ \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1629,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1630",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطهٔ $A$ واقع بر محور عرض‌ها از نقطهٔ $P(4, 4)$ و خط $4x - 3y = 22$ به یک فاصله است. عرض نقطهٔ $A$ کدام می‌تواند باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نقطۀ $A$ واقع بر محور عرض‌ها است، بنابراین مختصات آن به صورت $A(\\circ, k)$ می‌باشد. فاصلۀ $A$ از نقطۀ $P(۴, ۴)$ و خط $۴x - ۳y - ۲۲ = \\circ$ برابر است؛ یعنی:\n$AP = AH \\Rightarrow \\sqrt{۱۶ + (k - ۴)^۲} = \\frac{|\\circ - ۳k - ۲۲|}{\\sqrt{۹ + ۱۶}}$\n$\\Rightarrow ۱۶ + (k - ۴)^۲ = \\frac{(۳k + ۲۲)^۲}{۲۵}$\n$\\Rightarrow ۲۵k^۲ - ۲۰۰k + ۸۰۰ = ۹k^۲ + ۱۳۲k + ۴۸۴$\n$\\Rightarrow ۱۶k^۲ - ۳۳۲k + ۳۱۶ = \\circ \\Rightarrow \\begin{cases} k = ۱ \\\\ k = \\frac{۳۱۶}{۱۶} = \\frac{۷۹}{۴} \\end{cases}$\n$\\blacksquare$ می‌توانستیم بدون حل معادله و با امتحان گزینه‌ها به $k = ۱$ برسیم."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1630,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1631",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطهٔ $P$ با کدام طول روی محور $x$ها از دو خط $3x + 4y = 5$ و $4x - 3y = 2$ به یک فاصله است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$ یا $3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$ یا $3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$ یا $-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$ یا $-3$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نقطۀ $P$ بر محور $x$ها واقع است، بنابراین مختصات آن به صورت $P(k, \\circ)$ می‌باشد. اگر فاصلۀ $P$ از خط $PH ، ۳x + ۴y = ۵$ و فاصلۀ $P$ از خط $PH^\\prime ، ۴x - ۳y = ۲$ باشد، خواهیم داشت:\n$PH = PH^\\prime \\Rightarrow \\frac{|۳k + \\circ - ۵|}{\\sqrt{۹ + ۱۶}} = \\frac{|۴k - \\circ - ۲|}{\\sqrt{۱۶ + ۹}}$\n$\\Rightarrow |۳k - ۵| = |۴k - ۲| \\Rightarrow \\begin{cases} ۳k - ۵ = ۴k - ۲ \\\\ ۳k - ۵ = -۴k + ۲ \\end{cases} \\Rightarrow \\begin{cases} k = -۳ \\\\ k = ۱ \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1631,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1632",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ دو خط $3y - 2x = 1$ و $4x - 6y = 3$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{13}}{26}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{13}}{13}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{13}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{13}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلۀ دو خط موازی $ax + by = c$ و $ax + by = c^\\prime$ از رابطۀ $d = \\frac{|c - c^\\prime|}{\\sqrt{a^۲ + b^۲}}$ محاسبه می‌شود.\nابتدا دو طرف معادلۀ خط $۲x - ۳y = ۱$ را در $۲$ ضرب می‌کنیم تا ضرایب $x$ و $y$ در هر دو معادلۀ خط برابر شوند.\n$۲x - ۳y = ۱ \\xrightarrow{\\times ۲} ۴x - ۶y = ۲$\n$۴x - ۶y = ۳$\n$\\Rightarrow d = \\frac{|۳ - ۲|}{\\sqrt{۱۶ + ۳۶}} = \\frac{۱}{\\sqrt{۵۲}} = \\frac{۱}{۲\\sqrt{۱۳}} = \\frac{\\sqrt{۱۳}}{۲۶}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1632,
+      "question_pdf": "13.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1633",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ دو خط موازی $3x + 4y = a$ و $2x - by = 2$ برابر ۲ است. مجموع مقادیر به دست آمده برای $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "-۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "-۱۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو خط $ax + by = c$ و $a^\\prime x + b^\\prime y = c^\\prime$ به شرطی موازی هستند که $\\frac{a}{a^\\prime} = \\frac{b}{b^\\prime}$ باشد.\n$\\Rightarrow \\frac{۳}{۲} = \\frac{-۴}{b} \\Rightarrow b = -\\frac{۸}{۳}$\nحال ضرایب $x$ و $y$ را در دو معادلۀ خط برابر می‌کنیم.\n$۲x + \\frac{۸}{۳}y = ۲ \\xrightarrow{\\times \\frac{۳}{۲}} ۳x + ۴y = ۳$\n$۳x + ۴y = a$\nفاصلۀ دو خط $= d : \\frac{|a - ۳|}{\\sqrt{۹ + ۱۶}} = ۲ \\Rightarrow |a - ۳| = ۱۰$\n$\\Rightarrow \\begin{cases} a = ۱۳ \\\\ a = -۷ \\end{cases} \\Rightarrow a_۱ + a_۲ = ۶$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1633,
+      "question_pdf": "13.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1634",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو ضلع مقابل یک مربع به مساحت ۴ بر خطوط $3x - 4y = 1$ و $ax + 8y = b$ واقع هستند. $a - b$ کدام می‌تواند باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلۀ دو ضلع مقابل در یک مربع برابر با اندازۀ ضلع مربع است. مساحت مربع مجذور ضلع مربع است، بنابراین ضلع مربع برابر $۲$ است.\nدو خط داده‌ شده با هم موازی هستند:\n$\\frac{a}{۳} = \\frac{۸}{-۴} \\Rightarrow a = -۶$\nفاصلۀ بین این دو خط برابر با $۲$ است.\n$۳x - ۴y = ۱ \\xrightarrow{\\times -۲} -۶x + ۸y = -۲$\n$-۶x + ۸y = b$\n$\\Rightarrow d = \\frac{|b + ۲|}{\\sqrt{۳۶ + ۶۴}} = ۲ \\Rightarrow |b + ۲| = ۲۰$\n$\\Rightarrow \\begin{cases} b = ۱۸ \\\\ b = -۲۲ \\end{cases} \\Rightarrow \\begin{cases} a - b = -۲۴ \\\\ a - b = ۱۶ \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1634,
+      "question_pdf": "13.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1635",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث $ABC$ با رئوس $A(2,3)$ ، $B(4,2)$ و $C(5,4)$ چه نوع مثلثی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "فقط متساوی‌الساقین است."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "فقط قائم‌الزاویه است."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "قائم‌الزاویهٔ متساوی‌الساقین است."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "نه قائم‌الزاویه و نه متساوی‌الساقین است."
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "طول سه ضلع مثلث را به دست می‌آوریم.\n$AB = \\sqrt{۴ + ۱} = \\sqrt{۵} \\quad AC = \\sqrt{۹ + ۱} = \\sqrt{۱۰}$\n$BC = \\sqrt{۱ + ۴} = \\sqrt{۵}$\nواضح است که $AB = BC$ و مثلث متساوی‌الساقین است. از طرفی رابطۀ فیثاغورس بین اضلاع مثلث برقرار است یعنی $AC^۲ = AB^۲ + BC^۲$، در نتیجه مثلث قائم‌الزاویه نیز می‌باشد.\nتذکر: برای اثبات قائم‌الزاویه بودن مثلث می‌توان از روش زیر استفاده کرد.\nشیب $AB$ برابر $\\frac{۱}{-۲}$ و شیب $BC$ برابر $۲$ است. حاصل‌ضرب شیب این دو خط برابر $۱-$ بوده و بر هم عمودند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1635,
+      "question_pdf": "13.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1636",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل زیر، ضلع $AB$ از مستطیل $ABCD$ روی نیمساز ناحیهٔ اول و رأس $C$ روی خط $y = 2x$ قرار دارد. مساحت مستطیل چه‌قدر است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1636/stem_1.webp",
+        "alt": "مستطیل ABCD در دستگاه مختصات",
+        "aspect_ratio": 1.053
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{9\\sqrt{2}}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9\\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلۀ رأس $D(\\circ, ۳)$ از نیمساز ناحیۀ اول ($y - x = \\circ$) برابر با ضلع $AD$ یا همان عرض مستطیل است.\n$AD = \\frac{|۳ - \\circ|}{\\sqrt{۱ + ۱}} = \\frac{۳}{\\sqrt{۲}} = \\frac{۳\\sqrt{۲}}{۲}$\nفاصلۀ رأس $C(\\alpha, ۲\\alpha)$ از نیمساز ناحیۀ اول برابر با ضلع $BC$ می‌باشد که همان عرض مستطیل و برابر با $\\frac{۳\\sqrt{۲}}{۲}$ است.\n$BC = \\frac{|۲\\alpha - \\alpha|}{\\sqrt{۱ + ۱}} = \\frac{|\\alpha|}{\\sqrt{۲}} = \\frac{\\alpha}{\\sqrt{۲}} = \\frac{۳\\sqrt{۲}}{۲}$\n$\\Rightarrow \\alpha = ۳ \\Rightarrow C(۳, ۶)$\nاکنون طول مستطیل یا همان $CD$ را محاسبه می‌کنیم:\n$CD = \\sqrt{۳^۲ + ۳^۲} = ۳\\sqrt{۲}$\nمساحت : $S = AD \\times CD = \\frac{۳\\sqrt{۲}}{۲} \\times ۳\\sqrt{۲} = ۹$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1636,
+      "question_pdf": "13.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            100,
+            230,
+            250,
+            330
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مستطیل ABCD در دستگاه مختصات"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1637",
+    "subject": "math",
+    "topic_key": "analytic_geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطه‌ای با کدام طول روی قسمت مثبت محور $x$ها انتخاب کنیم که فاصلهٔ آن از خط $y = x + 1$، سه برابر فاصلهٔ آن از نیمساز ناحیهٔ چهارم باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض کنیم آن نقطه $P(\\alpha, \\alpha)$ باشد. فاصلهٔ $P$ را از هر دو خط به دست می‌آوریم:\n$\\begin{cases} y - x - 1 = 0 \\Rightarrow d_1 = \\frac{|-\\alpha - 1|}{\\sqrt{2}} \\\\ y = -x \\Rightarrow y + x = 0 \\Rightarrow d_2 = \\frac{|\\alpha|}{\\sqrt{2}} \\end{cases} \\Rightarrow d_1 = 3d_2$\n$\\Rightarrow |\\alpha + 1| = 3|\\alpha|$\nبا توجه به آن‌که $\\alpha > 0$ داریم:\n$\\alpha + 1 = 3\\alpha \\Rightarrow \\alpha = \\frac{1}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1637,
+      "question_pdf": "13.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  }
+]

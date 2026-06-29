@@ -1,0 +1,5773 @@
+[
+  {
+    "id": "nardebam_math_1405_1735",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مجموعه $A = \\{1, 2, 3, \\dots, 12\\}$، این مجموعه چند زیرمجموعه ۷ عضوی دارد که شامل ۱ و ۲ باشد اما شامل ۴ یا ۹ نشود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۵۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۱۲"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "پاره‌خطی که نقاط تقاطع دو دایره را به هم متصل می‌کند وتر مشترک نامیده می‌شود. (این تعریف جزء مباحث کتاب درسی نمی‌باشد.)\nابتدا متقاطع‌بودن دو دایره را بررسی می‌کنیم.\n$x^2+y^2-5x+7y-1=0 \\Rightarrow O(\\frac{5}{2}, -\\frac{7}{2}), R = \\frac{1}{2}\\sqrt{25+49+4} = \\frac{1}{2}\\sqrt{78} \\simeq 4/5$\n$x^2+y^2+x-3y-2=0 \\Rightarrow O'(-\\frac{1}{2}, \\frac{3}{2}), R' = \\frac{1}{2}\\sqrt{1+9+8} = \\frac{1}{2}\\sqrt{18} \\simeq 2/1$\n$OO' = \\sqrt{9+25} = \\sqrt{34} \\simeq 6 \\Rightarrow R-R' < OO' < R+R'$\nدو دایره متقاطع‌اند.\nحال، معادلهٔ وتر مشترک را از تقاطع دو دایره به دست می‌آوریم.\n$x^2+y^2-5x+7y-1 = x^2+y^2+x-3y-2$\n$\\Rightarrow 6x-10y-1=0 \\xrightarrow{y=0} x=\\frac{1}{6}$\nدقت داشته باشید از برابری معادلهٔ دو دایره، همواره معادلهٔ یک خط به دست می‌آید که لزوماً معادلهٔ وتر مشترک نمی‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1735,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1736",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با نقاط روی دو خط موازی چند مثلث می‌توان ساخت؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1736/stem_1.webp",
+        "alt": "دو خط موازی با ۵ نقطه روی یک خط و ۴ نقطه روی خط دیگر",
+        "aspect_ratio": 3.7439
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۷۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۹"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۴"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "متقاطع‌بودن دو دایره را بررسی می‌کنیم.\n$x^2+y^2-8x+4y+19=0 \\Rightarrow O(4, -2), R = \\frac{1}{2}\\sqrt{64+16-76} = 1$\n$x^2+y^2-2x+2y-8/5=0 \\Rightarrow O'(1, -1), R' = \\frac{1}{2}\\sqrt{4+4+34} = \\sqrt{42} \\simeq 3/25$\n$OO' = \\sqrt{9+1} = \\sqrt{10}$\n$\\Rightarrow |R-R'| < OO' < R+R'$\nدو دایره متقاطع‌اند.\nحال، معادلهٔ وتر مشترک را به دست می‌آوریم.\n$x^2+y^2-8x+4y+19 = x^2+y^2-2x+2y-8/5$\n$\\Rightarrow 2y = 6x - 27/5 \\Rightarrow y = 3x - 13/75$\nشیب وتر مشترک برابر ۳ است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1736,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0004.jpg",
+          "box": [
+            200,
+            1400,
+            1400,
+            1700
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "دو خط موازی با ۵ نقطه روی یک خط و ۴ نقطه روی خط دیگر"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1737",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از بین ۷ دانش‌آموز منطقه ۴ و ۵ دانش‌آموز منطقه ۷، به چند طریق می‌توان ۴ دانش‌آموز برای یک اردو دعوت کرد به طوری که از هر منطقه حداقل یک نفر انتخاب شده باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۴۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۹۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۹۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "محل تلاقی خط $x-y=4$ (وتر مشترک) و دایرهٔ $x^2+y^2-10x+2y+6=0$ نقاط تقاطع دو دایره می‌باشند:\n$x-y=4 \\Rightarrow y = x-4$\n$\\Rightarrow x^2+(x-4)^2-10x+2(x-4)+6=0$\n$\\Rightarrow 2x^2-16x+14=0 \\Rightarrow x^2-8x+7=0$\n$\\Rightarrow \\begin{cases} x=1 \\Rightarrow y=-3 \\\\ x=7 \\Rightarrow y=3 \\end{cases}$\nبنابراین دایرهٔ مورد نظر از نقاط $(1, -3)$ و $(7, 3)$ عبور می‌کند.\nمی‌دانستیم این دایره از نقطهٔ $(2, 3)$ نیز می‌گذرد.\n$x^2+y^2+ax+by+c=0$\n$\\begin{cases} (1, -3) \\Rightarrow a-3b+c=-10 \\\\ (7, 3) \\Rightarrow 7a+3b+c=-58 \\end{cases} \\Rightarrow 6a+6b=-48$\n$\\begin{cases} (7, 3) \\Rightarrow 7a+3b+c=-58 \\\\ (2, 3) \\Rightarrow 2a+3b+c=-13 \\end{cases} \\Rightarrow 5a=-45 \\Rightarrow a=-9$\n$\\Rightarrow b=1 \\Rightarrow c=2$\nدر نتیجه معادلهٔ دایره به صورت مقابل است: $x^2+y^2-9x+y=-2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1737,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1738",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "یک تیم والیبال شامل ۱۳ بازیکن است. ۳ نفر از آن‌ها بازیکن دریافت‌کننده (دفاع) هستند. به چند طریق می‌توان ۶ بازیکن را به طوری انتخاب کرد که فقط ۲ نفر از آن‌ها دریافت‌کننده باشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶۳۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۷۱۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶۸۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارات صورت و مخرج کسر را ساده می‌کنیم:\n$$ \\frac{(n+1)!}{(n-1)!} = \\frac{(n+1)(n)(n-1)!}{(n-1)!} = n(n+1) = 30 $$\nضرب دو عدد طبیعی متوالی برابر ۳۰ شده است. بدیهی است $n=5$ است. خواهیم داشت:\n$$ \\frac{(n+2)!}{n!} = \\frac{7!}{5!} = \\frac{7 \\times 6 \\times 5!}{5!} = 7 \\times 6 = 42 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1738,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1739",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از بین ۵ دانش‌آموز کلاس دهم، ۴ دانش‌آموز یازدهم و ۳ دانش‌آموز دوازدهم، به چند طریق می‌توان ۳ دانش‌آموز انتخاب کرد که دقیقاً ۲ نفر آن‌ها از یک پایه باشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۴۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۵۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۷۲"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو حالت زیر وجود دارد:\n۱) از طریق اصفهان به شیراز سفر کند: $ 3 \\times 2 = 6 $\n۲) مستقیماً به شیراز سفر کند که به ۲ روش امکان‌پذیر است.\nطبق اصل جمع کل راه‌های ممکن برابر است با: $ 6 + 2 = 8 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1739,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1740",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مجموعه $A = \\{x \\in \\mathbb{Z} \\mid |x| \\le 5\\}$، چند زیرمجموعه ۵ عضوی از A وجود دارد که مجموع اعضای آن‌ها مثبت باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۴۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۹۷"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۳۱"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "سه حالت کلی وجود دارد:\n$$ \\begin{cases} 18 = (1 \\times 3) \\times (2 \\times 3) : \\text{مسیر رفت ACB و مسیر برگشت BDA} \\\\ 12 = (2 \\times 1) \\times (2 \\times 3) : \\text{مسیر رفت ACB و مسیر برگشت BCA} \\\\ 18 = (3 \\times 2) \\times (3 \\times 1) : \\text{مسیر رفت ADB و مسیر برگشت BCA} \\end{cases} \\xrightarrow{(+)} 48 $$\nدقت کنید اگر مسیر رفت ADB باشد، مسیر برگشت نمی‌تواند BDA باشد زیرا نمی‌توان از جادهٔ BD عبور کرد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1740,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1741",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۱۰ نفر می‌خواهند فوتبال بازی کنند. به چند طریق می‌توان آن‌ها را در دو تیم ۵ نفره تقسیم کرد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۵۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۱۲"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "به سه روش کلی می‌توان از A به B رفت:\n$$ \\begin{cases} \\text{1) ACB: } 1 \\times 3 = 3 \\\\ \\text{2) AB: } 1 \\\\ \\text{3) ADB: } 2 \\times 4 = 8 \\end{cases} \\Rightarrow \\text{تعداد مسیرهای رفت: } 3 + 1 + 8 = 12 $$\nمسیر برگشت نباید دقیقاً مانند مسیر رفت باشد؛ بنابراین تعداد مسیرهای برگشت برابر $12 - 1 = 11$ است.\nدر نتیجه تعداد حالات رفت و برگشت برابر است با: $12 \\times 11 = 132$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1741,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1742",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با ارقام r\"{0, 1, 2, 3, 4}\" چند عدد ۴ رقمی بدون تکرار ارقام می‌توان نوشت به طوری که ارقام یکان و دهگان آن از بین r\"{0, 1, 2}\" باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۸"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد حالات لباس‌پوشیدن بهروز در روز اول:\n$$ \\frac{4}{\\text{پیراهن}} \\times \\frac{3}{\\text{شلوار}} \\times \\frac{2}{\\text{کفش}} = 4! $$\nتعداد حالات لباس‌پوشیدن بهروز در روز دوم:\n$$ \\frac{3}{\\text{پیراهن}} \\times \\frac{2}{\\text{شلوار}} \\times \\frac{1}{\\text{کفش}} = 3! $$\nبنابراین طبق اصل ضرب تعداد حالات لباس‌پوشیدن بهروز در دو روز متوالی برابر است با:\n$$ 4! \\times 3! = 6 \\times 4! = \\frac{6 \\times 5 \\times 4!}{5} = \\frac{6!}{5} $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1742,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1743",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با ارقام $1, 2, 3, 4, 5, 6, 7$ چند عدد ۵ رقمی می‌توان نوشت به طوری که دقیقاً ۲ بار رقم ۶ استفاده شده باشد و سایر ارقام تکراری نباشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۸۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۴۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹۶۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "هر یک از توپ‌ها را به ۴ طریق می‌توان داخل یکی از جعبه‌ها قرار داد؛ بنابراین:\n$$ \\text{پاسخ مسئله} = \\frac{4}{\\text{توپ اول}} \\times \\frac{4}{\\text{توپ دوم}} \\times \\frac{4}{\\text{توپ سوم}} \\times \\frac{4}{\\text{توپ چهارم}} \\times \\frac{4}{\\text{توپ پنجم}} = 4^5 $$\nدقت کنید که این مسئله را نمی‌توان از طریق جعبه‌ها حل کرد:\nجعبهٔ اول را به ۳۲ حالت می‌توان پر کرد. (هر توپ ۲ حالت دارد، یا در این جعبه هست و یا نیست $2^5=32$.) اما تعداد حالات جعبهٔ دوم مشخص نیست زیرا نمی‌دانیم در جعبهٔ اول چند توپ قرار گرفته است. در واقع تعداد حالات جعبهٔ دوم وابسته به جعبهٔ اول است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1743,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1744",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شبکه مسیرهای مقابل، چند مسیر از نقطه A به B وجود دارد که از نقطه C عبور کند، به شرطی که فقط مجاز باشیم به سمت راست یا پایین حرکت کنیم؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر دامنهٔ تابع را $\\{a, b, c\\}$ در نظر بگیریم، تابع مورد نظر به صورت $\\{ (a,\\_), (b,\\_), (c,\\_) \\}$ می‌باشد که هر یک از جاهای خالی را می‌توان به ۵ حالت پر کرد؛ بنابراین:\n$$ 5 \\times 5 \\times 5 = 5^3 = 125 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1744,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0004.jpg",
+          "box": [
+            200,
+            2600,
+            1400,
+            3100
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "شبکه خطوط مربعی با نقاط A و B در گوشه‌ها و نقطه C در وسط"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1745",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "شخصی می‌خواهد به ۴ دوست خود از بین ۷ کتاب متفاوت، ۲ کتاب به عنوان هدیه بدهد (به هر نفر ۲ کتاب). این کار به چند طریق ممکن است انجام شود؟ (هر کتاب فقط می‌تواند به یک نفر داده شود)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵۰۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۵۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مربع شمارهٔ ۱ را به ۳ حالت می‌توان رنگ کرد. بدیهی است بقیهٔ مربع‌ها را به ۲ حالت می‌توان رنگ‌آمیزی کرد. (هر یک از مربع‌های ردیف پایین نباید هم‌رنگ مربع سمت چپ خود باشد و هر یک از مربع‌های ردیف بالا نباید هم‌رنگ مربع ردیف پایین خود باشد.)\n$$ \\begin{array}{|c|c|c|} \\hline 8 & 7 & 6 \\\\ \\hline 1 & 2 & 3 & 4 & 5 \\\\ \\hline \\end{array} \\Rightarrow 3 \\times 2^7 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1745,
+      "question_pdf": "15.pdf",
+      "question_page": 4,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1746",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به چند طریق می‌توان از بین ۵ دانش‌آموز کلاس دهم، ۴ دانش‌آموز یازدهم و ۳ دانش‌آموز دوازدهم، ۴ نفر را برای یک گروه سرود انتخاب کرد به طوری که از هر پایه حداقل یک نفر انتخاب شده باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۷۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۹۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رأس A را به ۴ حالت می‌توان رنگ کرد. واضح است هر یک از رئوس B و D را به سه روش می‌توان رنگ‌آمیزی کرد.\nدو حالت وجود دارد:\n۳ حالت :B و D هم‌رنگ باشند. $\\Rightarrow$ رأس C، ۳ حالت دارد. $\\Rightarrow 3 \\times 3 = 9$\n۶ حالت : $3 \\times 2 = 6$ حالت B و D هم‌رنگ نباشند. $\\Rightarrow$ رأس C، ۲ حالت دارد. $\\Rightarrow 6 \\times 2 = 12$\n$9 + 12 = 21 \\Rightarrow$ حالت دارد.\nرأس A به ۴ حالت و بقیهٔ رئوس به ۲۱ حالت رنگ‌آمیزی می‌شود؛ بنابراین:\n$ 4 \\times 21 = 84 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1746,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1747",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چه تعداد عدد ۳ رقمی با ارقام متمایز می‌توان ساخت به طوری که رقم‌های آن از بین $\\{1, 2, 3, 4, 5, 6, 7\\}$ باشند و شامل رقم ۵ باشند اما رقم ۲ در آن‌ها نباشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۵۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مجموعهٔ اعداد سه‌رقمی بخش‌پذیر بر ۳ را با A و مجموعهٔ اعداد سه‌رقمی بخش‌پذیر بر ۵ را با B نمایش می‌دهیم.\nبدیهی است $A \\cap B$ مجموعهٔ اعداد بخش‌پذیر بر ۱۵ خواهد بود:\n$$ n(A \\cup B) = n(A) + n(B) - n(A \\cap B) $$\n$$ = ([\\frac{999}{3}] - [\\frac{99}{3}]) + ([\\frac{999}{5}] - [\\frac{99}{5}]) - ([\\frac{999}{15}] - [\\frac{99}{15}]) $$\n$$ = (333 - 33) + (199 - 19) - (66 - 6) = 300 + 180 - 60 = 420 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1747,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1748",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بین تمام زیرمجموعه‌های ۴ عضوی مجموعه $A = \\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ چند تا از آن‌ها شامل حداقل دو عدد زوج هستند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۰۱"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مجموعهٔ A، اعداد بخش‌پذیر بر ۵ و مجموعهٔ B، اعداد بخش‌پذیر بر ۶ می‌باشند. بدیهی است $A \\cap B$ مجموعهٔ اعداد بخش‌پذیر بر ۳۰ می‌باشد:\n$$ n(A \\cup B) = n(A) + n(B) - n(A \\cap B) $$\n$$ = ([\\frac{400}{5}] - [\\frac{19}{5}]) + ([\\frac{400}{6}] - [\\frac{19}{6}]) - ([\\frac{400}{30}] - [\\frac{19}{30}]) $$\n$$ = (80 - 3) + (66 - 3) - (13 - 0) = 77 + 63 - 13 = 127 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1748,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1749",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند عدد ۶ رقمی با ارقام متمایز و زوج می‌توان با استفاده از مجموعه ارقام $\\{0, 1, 2, 3, 4, 5, 6, 7, 8\\}$ ساخت؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۸۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رقم صفر را نمی‌توان در صدگان قرار داد؛ یعنی ۹ حالت دارد. دهگان را می‌توان به ۹ طریق پر کرد (یک رقم در صدگان قرار گرفته و کم می‌شود اما رقم صفر اضافه می‌شود).\nبا قرارگرفتن ۲ رقم در صدگان و دهگان، رقم یکان ۸ حالت خواهد داشت:\n$$ 9 \\times 9 \\times 8 = 648 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1749,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1750",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند عدد ۳ رقمی می‌توان نوشت که دقیقاً دو رقم آن یکسان باشند؟ (با ارقام $0, 1, \\dots, 9$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۴۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۷۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۵۲"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌خواهیم با ارقام $8, 6, 4, 2, 0$ اعداد چهاررقمی بزرگ‌تر از ۶۰۰۰ با ارقام متمایز بنویسیم:\n$$ \\frac{2}{6,8} \\times 4 \\times 3 \\times 2 = 2 \\times 4! = 48 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1750,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1751",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با حروف کلمه \\\"دانش‌آموز\\\" چند کلمه ۵ حرفی بدون تکرار حروف می‌توان ساخت که شامل حرف \\\"آ\\\" باشند اما شامل حرف \\\"ز\\\" نباشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۴۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۴۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مسئله را حالت‌بندی می‌کنیم:\nصدگان بزرگ‌تر از ۳ باشد:\n$$ \\frac{6}{4,5,6,7,8,9} \\times 9 \\times 8 = 432 $$\nصدگان برابر ۳ باشد $\\Rightarrow$\nدهگان بزرگ‌تر از صفر باشد:\n$$ \\frac{1}{3} \\times \\frac{8}{1,2,4,5,6,7,8,9} \\times 8 = 64 $$\nدهگان برابر صفر باشد:\n$$ \\frac{1}{3} \\times \\frac{1}{0} \\times \\frac{2}{8,9} = 2 $$\n$$ \\xrightarrow{(+)} 498 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1751,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1752",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۵ پسر و ۴ دختر به چند طریق می‌توانند در یک صف بایستند به طوری که هیچ دو دختری کنار هم نباشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۸۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۴۴۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۳۲۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۶۴۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "۵ کتاب داستان را داخل یک جعبهٔ فرضی قرار می‌دهیم. این جعبه با ۴ کتاب شعر، ۵ شیء متمایز هستند که جایگشت آن‌ها برابر $5!$ است. در هر حالت از جایگشت این ۵ شیء، ۵ کتاب داستان داخل جعبه می‌توانند به $5!$ حالت جایگشت داشته باشند؛ بنابراین:\n$$ \\text{پاسخ} = 5! \\times 5! = (5!)^2 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1752,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1753",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به چند طریق می‌توان ۷ نفر را دور یک میز گرد نشاند به طوری که دو نفر خاص (مثلاً A و B) کنار هم ننشینند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۴۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "وحید، جلال و کمال را در یک جعبهٔ فرضی به صورت \\fbox{کمال و وحید و جلال} قرار می‌دهیم.\nاکنون ۹ شیء متمایز در اختیار داریم (یک جعبه و ۸ نفر) که جایگشت آن‌ها برابر $9!$ است. در هر یک از این حالات جلال و کمال می‌توانند جای خود را با یکدیگر عوض کنند؛ بنابراین:\n$$ \\text{پاسخ مسئله} = 9! \\times 2! $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1753,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1754",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از یک گروه ۸ نفره، می‌خواهیم یک کمیته ۳ نفره انتخاب کنیم که یک نفر از آن‌ها به عنوان رئیس، یک نفر معاون و یک نفر منشی باشد. به چند طریق این کار امکان‌پذیر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۱۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۲۴"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر پرسپولیسی‌ها در ۶ جایگاه دایره‌ای‌شکل قرار گیرند، برای استقلالی‌ها ۷ جایگاه شماره‌گذاری‌شده وجود خواهد داشت:\n$$ 1 \\bigcirc 2 \\bigcirc 3 \\bigcirc 4 \\bigcirc 5 \\bigcirc 6 \\bigcirc 7 $$\nپرسپولیسی‌ها به $6!$ و استقلالی‌ها به $P(7, 4)$ حالت جایگشت خواهند داشت؛ بنابراین:\n$$ 6! P(7, 4) = 6! \\times \\frac{7!}{3!} = 6! \\times \\frac{7!}{6} = 5! 7! $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1754,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1755",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مجموعه $A = \\{1, 2, 3, 4, 5\\}$ و $B = \\{1, 2, 3, 4, 5, 6, 7, 8\\}$، چند تابع اکیداً صعودی از A به B می‌توان تعریف کرد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد حالاتی که هیچ دو دانش‌آموز ریاضی کنار هم نباشند را x می‌نامیم.\nاگر دانش‌آموزان تجربی را در ۵ جایگاه دایره‌ای‌شکل قرار دهیم، برای دانش‌آموزان ریاضی ۶ جایگاه شماره‌گذاری‌شده وجود دارد:\n$$ 1 \\bigcirc 2 \\bigcirc 3 \\bigcirc 4 \\bigcirc 5 \\bigcirc 6 $$\nدانش‌آموزان تجربی به $5!$ و دانش‌آموزان ریاضی به $P(6, 4)$ حالت در جایگاه‌های خود قرار می‌گیرند؛ بنابراین:\n$$ x = 5! P(6, 4) = 5! \\times \\frac{6!}{2!} $$\nتعداد حالاتی که دانش‌آموزان ریاضی یک در میان باشند را y می‌نامیم.\nدانش‌آموزان تجربی را در جایگاه‌های دایره‌ای‌شکل قرار می‌دهیم. دانش‌آموزان ریاضی به سه حالت در ۴ جایگاه از ۶ جایگاه شماره‌گذاری‌شده قرار می‌گیرند:\n$$ 1 \\bigcirc 2 \\bigcirc 3 \\bigcirc 4 \\bigcirc 5 \\bigcirc 6 $$\n$(3, 4, 5, 6), (2, 3, 4, 5), (1, 2, 3, 4)$\nبنابراین:\n$$ y = 3 \\times 5! 4! $$\nدر نتیجه:\n$$ \\frac{x}{y} = \\frac{5! \\times \\frac{6!}{2}}{3 \\times 5! 4!} = \\frac{6!}{6 \\times 4!} = 5 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1755,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1756",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند عدد ۵ رقمی فرد بدون تکرار ارقام می‌توان نوشت که شامل رقم صفر نباشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۵۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۳۴۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۱۷۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۰۰۸۰"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر دانش‌آموزان سال دوم بخواهند یک در میان باشند، در جایگاه‌های دایره‌ای و دانش‌آموزان کلاس اول در جاهای خالی قرار می‌گیرند:\n$$ \\bigcirc - \\bigcirc - \\bigcirc - \\bigcirc - \\bigcirc \\Rightarrow 5! \\times 4! $$\nبرای این‌که دانش‌آموزان سال اول یک در میان باشند، دانش‌آموزان دوم را در جایگاه‌های دایره‌ای قرار داده و دانش‌آموزان اول به سه حالت در ۴ جایگاه از ۶ جایگاه شماره‌گذاری‌شده قرار می‌گیرند:\n$$ 1 \\bigcirc 2 \\bigcirc 3 \\bigcirc 4 \\bigcirc 5 \\bigcirc 6 $$\n$(1, 2, 3, 4)$ یا $(2, 3, 4, 5)$ یا $(3, 4, 5, 6)$\nبنابراین جایگشت آن‌ها برابر است با:\n$$ 3 \\times 5! \\times 4! $$\nدر نتیجه خواهیم داشت:\n$$ \\frac{3 \\times 5! \\times 4!}{5! \\times 4!} = 3 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1756,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1757",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد جواب‌های صحیح و نامنفی معادله $x_1 + x_2 + x_3 + x_4 = 10$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶۴"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع مورد نظر به صورت $\\{ (1, 1), (2, \\_), (3, \\_), (4, \\_), (5, \\_) \\}$ می‌باشد که هر یک از ۴ جای خالی را می‌توان به ۳ حالت پر کرد (ارقام ۱، ۲ و ۳) به جز $(2, \\_)$ که جای خالی را به ۲ حالت می‌توان پر نمود (ارقام ۱ و ۳).\nبنابراین:\n$$ 2 \\times 3^3 = 54 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1757,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1758",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد جواب‌های صحیح و مثبت معادله $x + y + z = 12$ به شرطی که $x \\ge 2, y \\ge 1, z \\ge 3$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "این ۵ نفر به $5!$ حالت می‌توانند وارد اتوبوس شوند. بدیهی است در نصف حالات، عرفان زودتر از احسان و در نصف حالات، احسان زودتر از عرفان وارد اتوبوس می‌شود.\nبنابراین:\n$$ \\frac{5!}{2} = 60 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1758,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1759",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بسط دوجمله‌ای $(2x - y)^7$، ضریب جمله شامل $x^3y^4$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۱۲۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اعدادی بر ۹ بخش‌پذیر هستند که مجموع ارقام آن‌ها بر ۹ بخش‌پذیر باشد.\nابتدا ترکیب قابل قبول ارقام را نوشته سپس جایگشت هر یک را محاسبه می‌کنیم:\n$$ \\begin{cases} 9, 9, 9 \\xrightarrow{\\text{جایگشت}} 1 \\\\ 9, 9, 0 \\Rightarrow 2 \\\\ 9, 0, 0 \\Rightarrow 1 \\\\ 6, 6, 6 \\Rightarrow 1 \\end{cases} \\xrightarrow{(+)} 1 + 2 + 1 + 1 = 5 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1759,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1760",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بسط $(\\sqrt{x} + \\frac{1}{x})^{10}$ جمله مستقل از x کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۵۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: برای این‌که عدد زوج باشد، یکان آن یا صفر است و یا (۲ یا ۴).\n$$ \\begin{cases} \\frac{5}{}\\times\\frac{4}{}\\times\\frac{1}{0} = 20 : \\text{یکان صفر باشد.} \\\\ \\frac{4}{}\\times\\frac{4}{}\\times\\frac{2}{2,4} = 32 : \\text{یکان ۲ یا ۴ باشد.} \\end{cases} \\xrightarrow{(+)} 52 $$\nروش دوم: روش متمم:\nتعداد اعداد فرد - کل اعداد = تعداد اعداد زوج\n$$ = (5 \\times 5 \\times 4) - (4 \\times 4 \\times 3) = 100 - 48 = 52 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1760,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1761",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموع ضرایب بسط $(3x - 2y)^5$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌خواهیم با ارقام $0, 2, 3, 5, 6$ اعداد سه‌رقمی بنویسیم که شامل ۶ باشد. از روش متمم استفاده می‌کنیم:\nتعداد حالاتی که شامل رقم ۶ نباشد - تعداد کل حالات = تعداد حالات مطلوب\n$$ = (4 \\times 5 \\times 5) - (3 \\times 4 \\times 4) = 100 - 48 = 52 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1761,
+      "question_pdf": "15.pdf",
+      "question_page": 5,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1762",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با حروف کلمه «مثلثات» چند کلمه ۶ حرفی می‌توان ساخت که حروف تکراری کنار هم نباشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۸۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای این‌که عدد مضرب ۵ باشد، یکان آن باید صفر یا ۵ باشد. دو حالت وجود دارد:\nیکان برابر صفر باشد: $\\underline{ ۵ } \\times \\underline{ ۴ } \\times \\underline{ ۱ } = ۲۰$\nیکان برابر ۵ باشد: $\\underline{ ۴ } \\times \\underline{ ۴ } \\times \\underline{ ۱ } = ۱۶$\nمجموع این دو حالت: $۲۰ + ۱۶ = ۳۶$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1762,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1763",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۵ کتاب ریاضی متفاوت و ۴ کتاب فیزیک متفاوت را به چند طریق می‌توان در یک قفسه کنار هم چید به طوری که هیچ دو کتاب فیزیکی کنار هم نباشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۸۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۳۲۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۶۴۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۷۲۸۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "یک عدد هنگامی مضرب ۳ است که مجموع ارقام آن بر ۳ بخش‌پذیر باشد.\nابتدا ترکیب قابل قبول ارقام را مشخص کرده، سپس جایگشت هر یک را به دست می‌آوریم:\n$۱, ۲, ۳ \\xrightarrow{\\text{جایگشت}} ۳!$\n$۱, ۳, ۵ \\Rightarrow ۳!$\n$۲, ۳, ۴ \\Rightarrow ۳!$\n$۳, ۴, ۵ \\Rightarrow ۳!$\nپاسخ مسئله $\\Rightarrow ۴ \\times ۳! = ۴!$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1763,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1764",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک بازی شطرنج دوره‌ای با ۱۰ شرکت‌کننده، هر نفر با سایرین دقیقاً یک بازی انجام می‌دهد. اگر در مجموع ۳ بازی با نتیجه مساوی به پایان رسیده باشد، تعداد بازی‌هایی که در آن‌ها برنده و بازنده مشخص شده است کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۴۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۱"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو حرف O را داخل یک جعبهٔ فرضی قرار می‌دهیم $\\boxed{OO}.\nاکنون ۵ شیء متمایز (یک جعبه و ۴ حرف) در اختیار داریم که جایگشت آن‌ها برابر است با: $۵!$.\n$\\blacksquare$ دقت داشته باشید که با جابه‌جایی ۲ حرف O داخل جعبه کلمهٔ جدیدی ساخته نمی‌شود."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1764,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1765",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد توابع از مجموعه $A = \\{1, 2, 3, 4\\}$ به مجموعه $B = \\{a, b, c\\}$ چند تا است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۵۶"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد جایگشت‌های $n$ شیء که $r$ شیء آن‌ها یکسان هستند، برابر است با: $\\dfrac{n!}{r!}\nبنابراین جواب مسئله برابر است با: $\\dfrac{۶!}{۲!} = ۳۶۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1765,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1766",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند عدد ۴ رقمی مضرب ۵ می‌توان با استفاده از ارقام $\\{0, 1, 2, 3, 4, 5, 6\\}$ ساخت (بدون تکرار ارقام)؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد جایگشت‌های $n$ شیء از $n$ شیء با تعداد جایگشت‌های $n-۱$ شیء از $n$ شیء برابر است.\nبنابراین تعداد کلمات ۵حرفی با حروف کلمهٔ AKRAMI با تعداد کلمات ۶حرفی آن برابر است:\nپاسخ مسئله: $\\dfrac{۶!}{۲!} = ۳۶۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1766,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1767",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد راه‌های قرار دادن ۶ مهره متمایز در ۳ جعبه متمایز به طوری که هیچ جعبه‌ای خالی نماند کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: از روش متمم استفاده می‌کنیم:\nتعداد حالاتی که Aها کنار هم هستند - تعداد کل حالات = تعداد حالات مطلوب\n$= \\dfrac{۵!}{۲!} - ۴! = ۶۰ - ۲۴ = ۳۶$\nروش دوم: ابتدا ۲ جایگاه از ۵ جایگاه موجود را برای دو حرف A انتخاب می‌کنیم: $\\binom{۵}{۲} = ۱۰$\n۴ حالت از این ۱۰ حالت قابل قبول نیستند: $(۴ , ۵) , (۳ , ۴) , (۲ , ۳) , (۱ , ۲)$\nبنابراین دو حرف A به ۶ حالت قرار می‌گیرند. واضح است سه حرف دیگر به $۳!$ حالت جایگشت خواهند داشت: $۳۶ = ۶ \\times ۳!$ : پاسخ مسئله"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1767,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1768",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل از نقطه A به نقطه C چند مسیر کوتاه‌تر وجود دارد که از B عبور نکند؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1768/stem_1.webp",
+        "alt": "یک شبکه مستطیلی با نقاط A و C در گوشه‌ها و B در وسط",
+        "aspect_ratio": 2.8692
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از روش متمم استفاده می‌کنیم:\nتعداد حالاتی که دو رقم ۶ کنار هم باشند - تعداد کل حالات = تعداد حالات مطلوب\n$= \\dfrac{۶!}{۲!} - ۵! = ۳۶۰ - ۱۲۰ = ۲۴۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1768,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            300,
+            1400,
+            1500,
+            1800
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "یک شبکه مستطیلی با نقاط A و C در گوشه‌ها و B در وسط"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1769",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد انتخاب‌های ۳ نفر از بین ۱۰ نفر به طوری که دو نفر خاص همزمان انتخاب نشوند کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۱۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا ترکیب اعداد سه‌رقمی را مشخص کرده، سپس جایگشت هر یک را محاسبه می‌کنیم:\n$۱, ۱, ۱ \\xrightarrow{\\text{جایگشت}} ۱$\n$۱, ۱, ۰ \\Rightarrow ۲$\n$۱, ۱, ۴ \\Rightarrow ۳$\n$۱, ۰, ۰ \\Rightarrow ۱$\n$۱, ۰, ۴ \\Rightarrow ۴$\n$۰, ۰, ۴ \\Rightarrow ۱$\nجمع حالات: $۱۲$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1769,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1770",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد جایگشت‌های دایره‌ای ۵ مهره متمایز و یک مهره سفید چند تاست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از روش متمم استفاده می‌کنیم:\nاعدادی که دارای رقم ۶ نیستند - کل اعداد سه‌رقمی\n$= (\\underline{ ۵ } \\times \\underline{ ۶ } \\times \\underline{ ۶ }) - (\\underline{ ۴ } \\times \\underline{ ۵ } \\times \\underline{ ۵ }) = ۱۸۰ - ۱۰۰ = ۸۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1770,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1771",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموعه $A$ دارای $n$ عضو و $B$ دارای $m$ عضو است. اگر تعداد زیرمجموعه‌های $A$ برابر ۲۵۶ و تعداد زیرمجموعه‌های $B$ برابر ۶۴ باشد، $n+m$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "یک جعبه فرضی به صورت «صادق و جای خالی و جای خالی و علیرضا» در نظر می‌گیریم. دو جای خالی داخل جعبه به $5\\times4$ حالت پر می‌شود. علیرضا و صادق به $2!$ حالت جابه‌گشت دارند، جایگشت این جعبه و ۳ نفر باقی‌مانده برابر $4!$ است؛ بنابراین: $(5\\times4)\\times2!\\times4!=960$."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1771,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 165,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1772",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از بین ۵ مهره قرمز و ۴ مهره آبی چند انتخاب ۳ تایی وجود دارد که حداقل ۲ مهره قرمز باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "یکان اعداد طبیعی بخش‌پذیر بر ۵ برابر صفر یا ۵ می‌باشد.\n$\\underline{ ۹ } \\times \\underline{ ۱۰ } \\times \\underline{ ۱۰ } \\times \\underline{ ۲ } = ۱۸۰۰$\nتعداد اعداد طبیعی چهاررقمی شامل رقم ۵ را به روش متمم محاسبه می‌کنیم:\n(تعداد اعداد چهاررقمی که شامل رقم ۵ نیستند) - (تعداد کل اعداد چهاررقمی)\n$= (۹ \\times ۱۰ \\times ۱۰ \\times ۱۰) - (۸ \\times ۹ \\times ۹ \\times ۹) = ۹(۱۰۰۰ - ۶۴۸) = ۹ \\times ۳۵۲ = ۳۱۶۸$\nبنابراین: $۳۱۶۸ - ۱۸۰۰ = ۱۳۶۸$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1772,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1773",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بسط $(x + \\frac{2}{x^2})^9$ جمله مستقل از x کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵۳۷۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۶۸۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۳۴۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۷۲"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با هر یک از حروف می‌توان ۸۱ اتومبیل را شماره‌گذاری کرد:\n$\\underline{ ۹ } \\times \\underline{ ۹ } = ۸۱$\nبا استفاده از ۸ حرف $۶۴۸ = ۸ \\times ۸۱$ اتومبیل شماره‌گذاری می‌شود. حال سراغ حرف نهم حروف الفبا یعنی «خ» آمده و ۱۸ اتومبیل دیگر را شماره‌گذاری می‌کنیم:\n۹ اتومبیل: خ - ۱۹ $\\Rightarrow \\cdots \\Rightarrow$ خ - ۱۲ $\\Rightarrow$ خ - ۱۱\n۹ اتومبیل: خ - ۲۹ $\\Rightarrow \\cdots \\Rightarrow$ خ - ۲۲ $\\Rightarrow$ خ - ۲۱\nبنابراین پلاک مورد نظر خ - ۲۹ می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1773,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1774",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در معادله $x_1 + x_2 + x_3 = 8$ تعداد جواب‌های صحیح نامنفی که در آن‌ها $x_1 \\le 3$ باشد کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۵"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $n$ نفر بخواهند دور یک میز گرد بنشینند، چون ابتدا و انتهای صف مشخص نیست، $(n-۱)!$ حالت وجود خواهند داشت. (جایگشت دوری $n$ شیء متمایز = $(n-۱)!$)\n۴ کلاس دومی را در یک جعبه، ۵ کلاس سومی را در یک جعبه و ۳ کلاس چهارمی را نیز در یک جعبهٔ فرضی قرار می‌دهیم. جایگشت دوری سه جعبه برابر با $۲!$ است. در هر حالت، دانش‌آموزان هر کلاس داخل جعبه با یکدیگر جایگشت خواهند داشت. کلاس دوم به $۴!$، کلاس سوم به $۵!$ و کلاس چهارم به $۳!$ حالت. بنابراین: $۲! \\times ۴! \\times ۵! \\times ۳!$ = پاسخ\n$\\blacksquare$ این سؤال در محدودهٔ کتاب درسی نبوده و صرفاً جهت اطلاعات بیشتر آمده است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1774,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1775",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از بین ارقام $1, 2, 3, 4, 5$، چند عدد چهار رقمی زوج (با تکرار مجاز) می‌توان نوشت؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۵۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$C(n,r) = \\dfrac{n!}{(n-r)!r!} \\quad , \\quad P(n,r) = \\dfrac{n!}{(n-r)!}\nخواهیم داشت:\n$P(n,۲) - C(n,۲) = \\dfrac{n!}{(n-۲)!} - \\dfrac{n!}{(n-۲)!۲!} = ۲۱$\n$\\Rightarrow \\dfrac{n!}{(n-۲)!۲!} = ۲۱ \\Rightarrow C(n,۲) = ۲۱ \\Rightarrow P(n,۲) = ۴۲$\nدر نتیجه: $P(n,۲) + C(n,۲) = ۴۲ + ۲۱ = ۶۳$\n$\\blacksquare$ از معادلهٔ داده‌شده می‌توانستیم مقدار $n$ را که برابر ۷ است، محاسبه نماییم."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1775,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1776",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد توابع یک‌به‌یک از $A = \\{1, 2, 3\\}$ به $B = \\{a, b, c, d, e\\}$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۵"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تساوی داده‌شده را ساده می‌کنیم:\n$۲(n+۱)!(n-۲)! = ۳(n-۱)!n!$\n$\\Rightarrow ۲(n+۱)n! (n-۲)! = ۳(n-۱)(n-۲)!n!$\n$\\Rightarrow ۲(n+۱) = ۳(n-۱) \\Rightarrow n = ۵$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1776,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1777",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند عدد سه رقمی می‌توان نوشت که مجموع ارقام آن ۸ باشد؟ (صفر نمی‌تواند در صدگان باشد)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خواهیم داشت:\n$\\binom{n}{r} = \\binom{5}{2} = \\frac{5!}{2!3!} = 10$\nمی‌دانیم:\n$\\binom{n}{r} = \\binom{n}{n-r}$\nبنابراین:\n$\\binom{17}{2n-3} = \\binom{17}{10} \\Rightarrow \\begin{cases} 2n-3 = 10 \\Rightarrow n = \\frac{13}{2} \\text{ غ ق ق} \\\\ 2n-3 = 7 \\Rightarrow n = 5 \\text{ \\checkmark} \\end{cases}$\nدر نتیجه:\n$\\binom{n+1}{n-1} = \\binom{6}{4} = \\frac{6!}{2!4!} = 15$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1777,
+      "question_pdf": "15.pdf",
+      "question_page": 6,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1778",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با حروف کلمه 'PROBABILITY' چند کلمه ۱۱ حرفی متمایز می‌توان ساخت؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۹۹۷۹۲۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۹۸۹۶۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۹۹۱۶۸۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۹۹۵۸۴۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $\\binom{n}{r} = \\binom{n}{k}$ باشد، دو حالت وجود خواهد داشت:\n$\\begin{cases} r=k \\\\ r+k=n \\end{cases}$\nبنابراین:\n$\\binom{29}{3n+5} = \\binom{29}{20-2n} \\Rightarrow \\begin{cases} 3n+5 = 20-2n \\Rightarrow n = 3 \\\\ 3n+5+20-2n = 29 \\Rightarrow n = 4 \\end{cases}$\n$\\Rightarrow n_1 + n_2 = 3+4=7$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1778,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1779",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد توابع پوشا از مجموعه $A$ با ۵ عضو به مجموعه $B$ با ۳ عضو چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۵۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به اتحاد پاسکال داریم:\n$\\binom{n}{k-1} + \\binom{n}{k} = \\binom{n+1}{k}$\nبنابراین:\n$\\binom{n}{3} + \\binom{n}{4} = \\binom{n+1}{4} = 35$\nبا توجه به این‌که $35 = \\binom{7}{4}$ است؛ بنابراین $n+1=7$ و در نتیجه $n=6$ است.\nخواهیم داشت:\n$\\binom{n}{2} = \\binom{6}{2} = 15$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1779,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1780",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۵ نفر می‌خواهند در ۳ اتاق متمایز قرار گیرند به طوری که هیچ اتاقی خالی نماند. به چند طریق ممکن است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۵۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به اتحاد پاسکال داریم:\n$\\binom{n}{k-1} + \\binom{n}{k} = \\binom{n+1}{k}$\nبنابراین:\n$\\binom{15}{10} + \\binom{15}{11} = \\binom{16}{11} = \\binom{16}{5}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1780,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1781",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند عدد ۵ رقمی می‌توان با استفاده از ارقام $0, 1, 1, 2, 2$ ساخت؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به اتحاد پاسکال داریم:\n$\\binom{n-1}{r-1} + \\binom{n-1}{r} = \\binom{n}{r}$\n$\\binom{2}{2} = \\binom{3}{3}$\nاز طرفی می‌دانیم:\nدر نتیجه:\n$\\binom{2}{2} + \\binom{3}{2} + \\binom{4}{2} + \\dots + \\binom{n}{2} = \\underbrace{\\binom{3}{3} + \\binom{3}{2}}_{\\binom{4}{3}} + \\binom{4}{2} + \\dots + \\binom{n}{2}$\n$= \\underbrace{\\binom{4}{3} + \\binom{4}{2}}_{\\binom{5}{3}} + \\dots + \\binom{n}{2} = \\dots = \\binom{n+1}{3} = 120$\n$\\Rightarrow n+1=10 \\Rightarrow n=9$\nخواهیم داشت:\n$\\binom{3}{3} + \\binom{4}{3} + \\dots + \\binom{9}{3} = \\underbrace{\\binom{4}{4} + \\binom{4}{3}}_{\\binom{5}{4}} + \\dots + \\binom{9}{3} = \\dots = \\binom{10}{4} = 210$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1781,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1782",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک چندضلعی محدب ۳۵ قطر وجود دارد. این چندضلعی چند ضلع دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۱"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم $\\binom{n}{r} = \\binom{n}{n-r}$ و هم‌چنین:\n$\\binom{n-1}{r-1} + \\binom{n-1}{r} = \\binom{n}{r}$\nبنابراین:\n$2\\binom{13}{6} + \\binom{14}{8} = \\binom{13}{6} + \\binom{13}{6} + \\binom{14}{8} = \\binom{13}{6} + \\binom{13}{7} + \\binom{14}{8}$\n$= \\binom{14}{7} + \\binom{14}{8} = \\binom{15}{8} = \\binom{15}{7}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1782,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1783",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بسط $(x^2 - \\frac{1}{x})^8$ ضریب $x^4$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۷۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "-۷۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "-۵۶"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$\\binom{n}{0} + \\binom{n}{1} + \\dots + \\binom{n}{n} = 2^n$\nبنابراین:\n$\\binom{11}{1} + \\binom{11}{2} + \\dots + \\binom{11}{10} = 2^{11} - \\binom{11}{0} - \\binom{11}{11}$\n$= 2048 - 1 - 1 = 2046$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1783,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1784",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد جایگشت‌های حروف کلمه 'BOOKKEEPER' چند تاست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۵۱۲۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۰۲۴۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۵۶۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۰۴۸۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$\\binom{n}{0} + \\binom{n}{1} + \\binom{n}{2} + \\dots + \\binom{n}{n} = 2^n$\n$\\binom{n}{0} + \\binom{n}{2} + \\dots = \\binom{n}{1} + \\binom{n}{3} + \\dots = 2^{n-1}$\nبنابراین:\n$A = \\binom{10}{0} + \\binom{10}{2} + \\dots + \\binom{10}{10} = 2^9$\n$B = \\binom{10}{1} + \\binom{10}{3} + \\dots + \\binom{10}{9} = 2^9$\n$A + B = \\binom{10}{0} + \\binom{10}{1} + \\dots + \\binom{10}{10} = 2^{10}$\nدر نتیجه ۴ نادرست است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1784,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1785",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۸ نفر دور یک میز گرد نشسته‌اند. دو نفر خاص به چند طریق می‌توانند روبروی هم باشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۷۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۴۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۰۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عدد ۴ در زیرمجموعه حضور ندارد؛ بنابراین ۱ حالت خواهد داشت. اعداد ۲ و ۳ نیز در زیرمجموعه وجود داشته و ۱ حالت دارند.\n۷ عدد باقی‌مانده هر کدام یا در زیرمجموعه وجود دارند و یا وجود ندارند، در نتیجه هر کدام ۲ حالت خواهند داشت: $1^3 \\times 2^7 = 2^7 = 128$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1785,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1786",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله $x+y+z+w = 15$ چند جواب صحیح و مثبت دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۶۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$\\binom{n}{r} = \\binom{n}{n-r}$\nبنابراین:\n$\\binom{n}{4} = \\binom{n}{7} \\Rightarrow n = 4+7 = 11$\nدر نتیجه:\n$\\binom{11}{9} = \\frac{11!}{2!9!} = 55$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1786,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1787",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با ارقام ۱ تا ۹ چند عدد سه رقمی زوج با ارقام متمایز می‌توان ساخت؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۵۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۲۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱۶"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد زیرمجموعه‌های ۲عضوی یک مجموعهٔ $n$عضوی برابر با $\\binom{n}{2}$ است:\n$\\binom{n}{2} = 15 \\Rightarrow \\frac{n(n-1)}{2} = 15 \\Rightarrow n(n-1) = 30 \\Rightarrow n=6$\nبنابراین:\n$\\binom{n}{3} = \\binom{6}{3} = \\frac{6!}{3!3!} = 20$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1787,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1788",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد زیرمجموعه‌های ۳ عضوی از مجموعه $\\{1, 2, \\dots, 10\\}$ که شامل عدد ۵ باشند کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۴"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به اتحاد پاسکال داریم:\n$\\binom{n}{r-1} + \\binom{n}{r} = \\binom{n+1}{r} \\Rightarrow \\binom{n+1}{r} - \\binom{n}{r} = \\binom{n}{r-1}$\nبنابراین:\n$\\binom{n+1}{2} - \\binom{n}{2} = \\binom{n}{1} = 11 \\Rightarrow n = 11$\nدر نتیجه:\n$\\binom{11}{2} + \\binom{11}{3} + \\dots + \\binom{11}{11} = 2^{11} - \\binom{11}{0} - \\binom{11}{1}$\n$= 2048 - 1 - 11 = 2036$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1788,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 166,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1789",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به چند طریق می‌توان ۴ دانش‌آموز را در ۳ کلاس مختلف ثبت‌نام کرد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۸۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد زیرمجموعه‌های $۵$ عضوی یک مجموعه $n$ عضوی برابر $\\binom{n}{r}$ است:\n$\\binom{n}{۵} = ۲\\binom{n}{۴} \\Rightarrow \\frac{n!}{(n-۵)!۵!} = ۲\\times \\frac{n!}{(n-۴)!۴!}$\n$\\Rightarrow \\frac{(n-۴)!}{(n-۵)!} = \\frac{۲\\times ۵!}{۴!} \\Rightarrow n-۴ = ۱۰ \\Rightarrow n=۱۴$\nبنابراین:\n$\\frac{\\binom{۱۴}{۳}}{\\binom{۱۴}{۲}} = \\frac{\\frac{۱۴!}{۱۱!۳!}}{\\frac{۱۴!}{۱۲!۲!}} = \\frac{۱۲!\\times ۲!}{۱۱!\\times ۳!} = \\frac{۱۲}{۳} = ۴$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1789,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            68,
+            458,
+            230,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1789"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1790",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از بین ۷ نقطه روی یک دایره چند وتر می‌توان رسم کرد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۵"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اعداد اول موجود عبارت‌اند از: $۲,۳,۵,۷$\nبنابراین:\n$\\binom{۴}{۱}\\binom{۵}{۳} + \\binom{۴}{۰}\\binom{۵}{۴} = ۴\\times ۱۰ + ۱\\times ۵ = ۴۵$\n\n(در عبارت بالا، جمله اول نشان‌دهنده «یک عدد غیراول و سه عدد اول» و جمله دوم نشان‌دهنده «صفر عدد غیراول و چهار عدد اول» است.)"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1790,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            230,
+            458,
+            319,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1790"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1791",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به چند طریق می‌توان ۵ مهره یکسان را در ۴ ظرف متمایز قرار داد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۶"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "یک رقم زوج و چهار رقم فرد انتخاب کرده، سپس در جایگشت آن‌ها ضرب می‌کنیم:\n$\\binom{۴}{۱}\\binom{۵}{۴}\\times ۵! = ۴\\times ۵\\times ۱۲۰ = ۲۴۰۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1791,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            319,
+            458,
+            381,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1791"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1792",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل $\\binom{10}{2} + \\binom{10}{3} + \\binom{11}{4}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۴۹۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۳۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۹۲"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: برای این‌که حاصل‌ضرب ارقام زوج باشد، باید حداقل یکی از ارقام زوج باشد. $۳$ حالت به وجود می‌آید:\n$\\binom{۴}{۱}\\binom{۳}{۲} + \\binom{۴}{۲}\\binom{۳}{۱} + \\binom{۴}{۳}\\binom{۳}{۰} = ۱۲ + ۱۸ + ۴ = ۳۴$\n(در عبارت بالا، جملات به‌ترتیب نشان‌دهنده «دو فرد یک زوج»، «یک فرد دو زوج» و «سه زوج» هستند.)\n\nروش دوم: روش متمم:\n$\\binom{۷}{۳} - \\binom{۳}{۳} = ۳۵ - ۱ = ۳۴$ (هر سه عدد فرد باشند - کل حالات)"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1792,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            381,
+            458,
+            501,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1792"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1793",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $P(n, 3) = 6 C(n, 4)$، آنگاه n کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای این‌که مجموع ارقام زوج باشد، $۲$ حالت وجود دارد:\n$\\binom{۳}{۲}\\binom{۴}{۲} + \\binom{۴}{۴} = ۳\\times ۶ + ۱ = ۱۹$\n(در عبارت بالا، جمله اول نشان‌دهنده «دو فرد دو زوج» و جمله دوم نشان‌دهنده «هر چهار زوج» است.)"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1793,
+      "question_pdf": "15.pdf",
+      "question_page": 7,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            501,
+            458,
+            574,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1793"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1794",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با ارقام $0, 1, 2, 3, 4, 5$ چند عدد سه رقمی فرد با ارقام متمایز می‌توان ساخت؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۴۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۲"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در این گروه یا صفر ژاپنی و یا یک ژاپنی حضور دارد:\n$\\binom{۳}{۰}\\binom{۱۲}{۴} + \\binom{۳}{۱}\\binom{۱۲}{۳} = ۴۹۵ + ۶۶۰ = ۱۱۵۵$\n(در عبارت بالا، جمله اول نشان‌دهنده «صفر ژاپنی» و جمله دوم نشان‌دهنده «یک ژاپنی» است.)"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1794,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            574,
+            458,
+            638,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1794"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1795",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر ۶ مهره متمایز را به صورت تصادفی در ۳ جعبه متمایز قرار دهیم، تعداد حالت‌هایی که دقیقاً یک جعبه خالی بماند کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۸۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در این تیم یا $۴$ نفر و یا $۵$ نفر از سال یازدهم می‌باشد:\n$\\binom{۵}{۴}\\binom{۶}{۲} + \\binom{۵}{۵}\\binom{۶}{۱} = ۵\\times ۱۵ + ۱\\times ۶ = ۸۱$\n(در عبارت بالا، جمله اول نشان‌دهنده «$۴$ نفر یازدهم و دو نفر دهم» و جمله دوم نشان‌دهنده «$۵$ نفر یازدهم و یک نفر دهم» است.)"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1795,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            638,
+            458,
+            715,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1795"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1796",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد راه‌های توزیع ۱۰ جایزه یکسان بین ۳ نفر به طوری که هر نفر حداقل ۲ جایزه بگیرد کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو استانی که در مسابقۀ اول روبه‌روی هم قرار می‌گیرند به $\\binom{۱۰}{۲}$ طریق انتخاب می‌شوند. هر یک از این استان‌ها به $\\binom{۵}{۲}$ حالت تیم خود را انتخاب می‌کنند؛ بنابراین:\n$\\binom{۱۰}{۲}\\binom{۵}{۲}\\binom{۵}{۲} = ۴۵\\times ۱۰\\times ۱۰ = ۴۵۰۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1796,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            715,
+            458,
+            786,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1796"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1797",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد جملات در بسط $(x+y+z)^5$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "یک داور ایرانی را به $\\binom{۱۰}{۱}$ طریق می‌توان انتخاب کرد. سه داور دیگر باید از سه کشور مختلف باشند. سه کشور را به $\\binom{۶}{۳}$ طریق می‌توان انتخاب کرد. در هر حالت از هر کشور به $\\binom{۴}{۱}$ روش می‌توان داور را انتخاب کرد؛ بنابراین جواب مسئله برابر است با:\n$\\binom{۱۰}{۱}\\binom{۶}{۳}\\binom{۴}{۱}^۳ = ۱۰\\times ۲۰\\times ۶۴ = ۱۲۸۰۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1797,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            786,
+            458,
+            882,
+            843
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1797"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1798",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از بین ۸ مرد و ۵ زن، به چند طریق می‌توان یک کمیته ۴ نفره تشکیل داد که دقیقاً ۲ زن داشته باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $۲$ جایگاه را از $۴$ جایگاه، عدد چهاررقمی انتخاب می‌کنیم تا ارقام فرد در آن‌جا قرار بگیرند. بدیهی است دو جایگاه باقی‌مانده برای اعداد زوج است. هر یک از جایگاه‌های ارقام فرد به $۵$ حالت و هر یک از جایگاه‌های ارقام زوج به $۴$ حالت پُر می‌شود:\n$\\binom{۴}{۲}۵^۲\\times ۴^۲ = ۶\\times ۲۵\\times ۱۶ = ۲۴۰۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1798,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            68,
+            49,
+            161,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1798"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1799",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۵ جفت کفش (۱۰ لنگه) داریم. به چند طریق می‌توان ۴ لنگه کفش انتخاب کرد که دقیقاً یک جفت در بین آن‌ها باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶۰"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا دو رقم زوج و دو رقم فرد انتخاب کرده، سپس در جایگشت $۴$ رقم ضرب می‌کنیم:\n$\\binom{۴}{۲}\\binom{۵}{۲}۴! = ۶\\times ۱۰\\times ۲۴ = ۱۴۴۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1799,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            161,
+            49,
+            219,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1799"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1800",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموعه $A$ دارای ۷ عضو است. تعداد زیرمجموعه‌هایی از $A$ که حداقل ۳ عضو دارند کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۹۹"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۸"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "به روش متمم عمل می‌کنیم:\nتعداد کل اعداد چهاررقمی با ارقام متمایز $-$ تعداد اعداد چهاررقمی با ارقام متمایز که شامل رقم $۷$ نیستند = تعداد اعداد چهاررقمی با ارقام متمایز که شامل رقم $۷$ هستند.\n$(۹\\times ۹\\times ۸\\times ۷) - (۸\\times ۸\\times ۷\\times ۶) = ۸\\times ۷\\times (۸۱ - ۴۸) = ۵۶\\times ۳۳ = ۱۸۴۸$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1800,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            219,
+            49,
+            321,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1800"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1801",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با ارقام ۱ تا ۶ چند عدد ۳ رقمی می‌توان ساخت که حداقل یک رقم آن زوج باشد (بدون تکرار ارقام)؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۱۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۰۸"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو حالت کلی وجود دارد.\n۱) رقم زوج، صفر باشد:\nدر این حالت سه رقم فرد را به $\\binom{۵}{۳}$ حالت انتخاب کرده و جایگشت آن‌ها را با صفر محاسبه می‌کنیم.\n$\\binom{۵}{۳}\\times ۳\\times ۳! = ۱۸۰$\n۲) رقم زوج صفر نباشد:\nدر این حالت سه رقم فرد را به $\\binom{۵}{۳}$ حالت و رقم زوج را به $\\binom{۴}{۱}$ حالت انتخاب کرده و جایگشت $۴$ رقم را محاسبه می‌کنیم:\n$\\binom{۵}{۳}\\binom{۴}{۱}\\times ۴! = ۹۶۰$\nبنابراین: $۱۸۰ + ۹۶۰ = ۱۱۴۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1801,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            321,
+            49,
+            491,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1801"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1802",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بسط $(x - 2y)^6$ مجموع ضرایب جملات با توان فرد y کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "-۳۶۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "-۳۶۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۶۵"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در $۴$ مهرۀ منتخب یا صفر مهرۀ آبی و قرمز یا $۱$ مهرۀ آبی و قرمز و یا $۲$ مهرۀ آبی و قرمز موجود است:\n$\\binom{۴}{۰}\\binom{۶}{۰}\\binom{۵}{۴} + \\binom{۴}{۱}\\binom{۶}{۱}\\binom{۵}{۲} + \\binom{۴}{۲}\\binom{۶}{۲}\\binom{۵}{۰} = ۵ + ۲۴۰ + ۹۰ = ۳۳۵$\n(در عبارت بالا، جملات به‌ترتیب نشان‌دهنده «صفر مهرۀ آبی و قرمز»، «یک مهرۀ آبی و قرمز» و «دو مهرۀ آبی و قرمز» هستند.)"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1802,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            491,
+            49,
+            597,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1802"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1803",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند جایگشت از ارقام $1, 2, 3, 4, 5, 6$ وجود دارد که در آن‌ها ارقام زوج کنار هم باشند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۴۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸۸"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در آجیل این فروشنده یا $۳$ نوع از تنقلات یا $۴$ نوع یا ... یا $۸$ نوع از تنقلات موجود است که تعداد آن‌ها برابر است با:\n$\\binom{۸}{۳} + \\binom{۸}{۴} + \\dots + \\binom{۸}{۸} = ۲^۸ - \\binom{۸}{۰} - \\binom{۸}{۱} - \\binom{۸}{۲} = ۲۵۶ - ۱ - ۸ - ۲۸ = ۲۱۹$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1803,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            597,
+            49,
+            683,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1803"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1804",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۱۰ نفر دور یک میز گرد می‌نشینند. احتمال اینکه دو نفر خاص کنار هم بنشینند چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱/۹"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲/۹"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱/۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲/۵"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$۱۲$ نفر منتخب باید از $۱۲$ کشور مختلف باشند. از هر کشور منتخب نیز به $۱۱$ حالت می‌توان $۱$ نفر انتخاب کرد. بنابراین:\n$\\binom{۳۲}{۱۲} \\times ۱۱^{۱۲} =$ جواب"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1804,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            683,
+            49,
+            746,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1804"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1805",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به چند طریق می‌توان عدد ۱۰ را به صورت مجموع ۳ عدد طبیعی نوشت؟ (ترتیب مهم است)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$۵$ دانش‌آموز انتخاب‌شده باید از $۵$ استان مختلف باشند. به $\\binom{۳۱}{۵}$ حالت می‌توان پنج استان را انتخاب نمود. از $۱۳$ دانش‌آموز هر استان منتخب باید $۱$ نفر انتخاب شود که تعداد حالات آن برابر $\\binom{۱۳}{۱} = ۱۳$ می‌باشد؛ بنابراین:\n$\\binom{۳۱}{۵} \\times ۱۳^۵ =$ جواب مسئله"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1805,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            746,
+            49,
+            836,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1805"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1806",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند عدد ۶ رقمی با ارقام متمایز وجود دارد که شامل رقم‌های ۱ و ۲ بوده و ۱ قبل از ۲ آمده باشد؟ (از چپ به راست)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۳۴۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۷۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۱۵۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۷۶۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: سه نفر انتخاب‌شده از $۲$ شهر متمایز می‌باشند. این دو شهر را به $\\binom{۷}{۲}$ حالت می‌توان انتخاب کرد.\nیکی از این ۲ شهر را انتخاب کرده که دارای دو نماینده بوده و شهر دیگر یک نماینده داشته باشد. این کار به $\\binom{۷}{۲} \\binom{۵}{۲} \\binom{۵}{۱}$ حالت امکان‌پذیر است.\nبنابراین:\n$\\text{جواب} = \\binom{۷}{۲} \\binom{۵}{۲} \\binom{۵}{۱} = ۲۱ \\times ۱۰ \\times ۵ = ۲۱۰۰$\nروش دوم:\n$\\binom{۷}{۱} \\binom{۶}{۱} \\binom{۵}{۲} \\binom{۵}{۱} = ۲۱۰۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1806,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            836,
+            49,
+            882,
+            442
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1806"
+        },
+        {
+          "page_file": null,
+          "box": [
+            513,
+            70,
+            891,
+            180
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "ادامه راه حل سوال 1806"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1807",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد توابع از مجموعه $A$ با ۳ عضو به مجموعه $B$ با ۵ عضو که یک‌به‌یک نباشند چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا ۴ عضو شورا را انتخاب می‌کنیم. از یک پایه ۲ عضو و از دو پایه دیگر ۱ عضو انتخاب می‌شود:\n$\\binom{۳}{۲} \\binom{۴}{۱} \\binom{۵}{۱} + \\binom{۴}{۲} \\binom{۳}{۱} \\binom{۵}{۱} + \\binom{۵}{۲} \\binom{۳}{۱} \\binom{۴}{۱} = ۶۰ + ۹۰ + ۱۲۰ = ۲۷۰$\nاز ۴ نفر منتخب، رئیس به $\\binom{۴}{۱}$ حالت و معاون به $\\binom{۳}{۱}$ حالت انتخاب می‌شود؛ بنابراین:\n$\\text{جواب مسئله} = ۲۷۰ \\times \\binom{۴}{۱} \\binom{۳}{۱} = ۲۷۰ \\times ۱۲ = ۳۲۴۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1807,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            510,
+            185,
+            891,
+            351
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1807"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1808",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد راه‌های قرار دادن ۸ کتاب متمایز در ۳ قفسه متمایز به طوری که ترتیب کتاب‌ها در هر قفسه مهم باشد کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "P(10, 8)"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "P(8, 3)"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "3^8"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "8^3"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "حالات نامطلوب زمانی است که هر سه رأس منتخب بر روی $OA$ و یا بر روی $OB$ باشند.\n$\\text{حالات مطلوب} = \\binom{۱۲}{۳} - \\binom{۳}{۳} - \\binom{۴}{۳} = ۲۲۰ - ۱ - ۴ = ۲۱۵$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1808,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            514,
+            356,
+            683,
+            492
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "شکل راه حل سوال 1808"
+        },
+        {
+          "page_file": null,
+          "box": [
+            510,
+            356,
+            891,
+            492
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1808"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1809",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ضریب $x^2 y^3$ در بسط $(x - y + 1)^6$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "-۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "-۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "حالات نامطلوب زمانی است که رئوس $A$ و $B$ انتخاب شده، دو رأس دیگر، یکی از سه نقطه سمت راست وتر $AB$ و دیگری از چهار نقطه سمت چپ وتر $AB$ انتخاب شوند.\n$\\text{حالات نامطلوب} = \\binom{۱}{۱} \\binom{۱}{۱} \\binom{۳}{۱} \\binom{۴}{۱} = ۱۲$\n$\\text{حالات مطلوب} = \\text{کل چهارضلعی‌ها} - \\text{حالات نامطلوب} = \\binom{۹}{۴} - ۱۲ = ۱۲۶ - ۱۲ = ۱۱۴$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1809,
+      "question_pdf": "15.pdf",
+      "question_page": 8,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            510,
+            495,
+            891,
+            638
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1809"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1810",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با حروف کلمه \\\"MISSISSIPPI\\\" چند کلمه ۱۱ حرفی می‌توان ساخت؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۴۶۵۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۹۳۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۷۳۲۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۹۹۱۶۸۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$۲$ رأس از $BC$: $\\binom{n}{۲} \\binom{۵}{۱} = \\frac{۵n(n-۱)}{۲}$\n$۱$ رأس از $BC$: $\\binom{n}{۱} \\binom{۵}{۲} = ۱۰n$\nصفر رأس از $BC$: $\\binom{۳}{۲} \\binom{۲}{۱} + \\binom{۳}{۱} \\binom{۲}{۲} = ۹$\n$\\Rightarrow \\frac{۵n(n-۱)}{۲} + ۱۰n + ۹ = ۱۰۹ \\Rightarrow ۵n^۲ + ۱۵n = ۲۰۰ \\Rightarrow n(n+۳) = ۴۰ \\Rightarrow n = ۵$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1810,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            510,
+            642,
+            891,
+            804
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1810"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1811",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد راه‌های توزیع ۶ توپ یکسان بین ۳ جعبه متمایز به طوری که هیچ جعبه‌ای بیش از ۳ توپ نداشته باشد کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا ۳ زوج را انتخاب می‌کنیم. این کار به $\\binom{۶}{۳}$ حالت امکان‌پذیر است.\nاز هر زوج ۱ نفر را انتخاب می‌کنیم که به $\\binom{۲}{۱}$ حالت ممکن است. بنابراین:\n$\\text{پاسخ} = \\binom{۶}{۳} \\binom{۲}{۱}^۳ = ۲۰ \\times ۸ = ۱۶۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1811,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            510,
+            808,
+            891,
+            896
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1811"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1812",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از بین ۵ جفت دستکش متمایز، به چند طریق می‌توان ۳ لنگه دستکش انتخاب کرد به طوری که هیچ جفتی در بین آن‌ها نباشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۸۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶۰"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "کافی است سه رقم از بین ۶ رقم داده‌شده انتخاب کنیم. با انتخاب هر سه رقم تنها یک عدد سه‌رقمی با شرایط داده‌شده می‌توان نوشت (کوچک‌ترین رقم یکان و بزرگ‌ترین رقم صدگان).\n$\\binom{۶}{۳} = ۲۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1812,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            70,
+            485,
+            149
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1812"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1813",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چند عدد ۵ رقمی متقارن (پالیندروم) با ارقام ۰ تا ۹ می‌توان ساخت؟ (رقم اول صفر نیست)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۹০০"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۰۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۱۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹۰۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "کافی است سه رقم از بین ۶ رقم داده‌شده انتخاب کنیم. با انتخاب هر سه رقم تنها یک عدد سه‌رقمی با شرایط داده‌شده می‌توان نوشت. (اگر صفر در بین ارقام منتخب باشد، در جایگاه یکان قرار گرفته و مشکلی به وجود نمی‌آید و نیاز به حالت‌بندی نیست).\n$\\binom{۶}{۳} = ۲۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1813,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            154,
+            485,
+            237
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1813"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1814",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A$ مجموعه‌ای با ۵ عضو و $B$ مجموعه‌ای با ۶ عضو باشد، تعداد توابع از $A$ به $B$ که اکیداً صعودی باشند چقدر است؟ (اعضای A و B اعداد طبیعی هستند)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای حرکت از A به B این فرد باید ۲ بار به راست و ۲ بار به سمت بالا حرکت کند که جایگشت آن‌ها از رابطه زیر به دست می‌آید:\n$RRUU \\xrightarrow{\\text{جایگشت}} \\frac{۴!}{۲!۲!} = \\binom{۴}{۲} = ۶$\nبرای حرکت از B به C باید ۳ بار به راست و ۲ بار به سمت بالا حرکت کند:\n$RRRUU \\xrightarrow{\\text{جایگشت}} \\frac{۵!}{۳!۲!} = \\binom{۵}{۲} = ۱۰$\nبنابراین تعداد کل حالات رسیدن از A به C با عبور از B برابر است با:\n$\\binom{۴}{۲} \\binom{۵}{۲} = ۶ \\times ۱۰ = ۶۰$\n$\\blacksquare$ این سؤال در محدودهٔ کتاب درسی نبوده و صرفاً جهت اطلاعات بیشتر آمده است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1814,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            240,
+            485,
+            450
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1814"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1815",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بسط $(\\sqrt{x} - \\frac{1}{\\sqrt{x}})^n$ اگر مجموع ضرایب برابر صفر باشد، n کدام می‌تواند باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "فقط زوج"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "فقط فرد"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "هر عدد طبیعی"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "چنین n ای وجود ندارد"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "هر سکه ۲ حالت و هر تاس ۶ حالت دارد. ۸۶۴ را به عوامل ۲ و ۶ تجزیه می‌کنیم.\n$۸۶۴ = ۶^۳ \\times ۲^۲$\nبنابراین تعداد سکه‌ها برابر ۲ و تعداد تاس‌ها برابر ۳ است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1815,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            450,
+            485,
+            497
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1815"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1816",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد زیرمجموعه‌های مجموعه $\\{1, 2, 3, 4, 5, 6\\}$ که شامل ۱ بوده ولی شامل ۲ نباشند چند تاست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۴"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فضای نمونه‌ای پرتاب ۲ سکه و ۲ تاس را $S$ و فضای نمونه‌ای یک خانوادهٔ ۷ فرزندی را $S'$ می‌نامیم.\n$\\begin{matrix} n(S) = ۲^۲ \\times ۶^۲ = ۱۴۴ \\\\ n(S') = ۲^۷ = ۱۲۸ \\end{matrix} \\Rightarrow n(S) - n(S') = ۱۶$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1816,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            497,
+            485,
+            574
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1816"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1817",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۶ نفر در یک صف ایستاده‌اند. احتمال اینکه ۲ نفر خاص کنار هم باشند چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱/۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱/۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲/۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱/۵"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد اعضای فضای نمونه‌ای پرتاب ۴ سکه برابر $۱۶ = ۲^۴$ است.\nاگر سکه «رو» بیاید، ۳ سکه پرتاب می‌شود که فضای نمونه‌ای آن $۸ = ۲^۳$ عضو دارد.\nاگر سکه «پشت» بیاید، ۲ تاس پرتاب می‌شود که فضای نمونه‌ای آن $۳۶ = ۶^۲$ عضو دارد. بنابراین تعداد کل اعضای فضای نمونه‌ای برابر است با:\n$۲^۳ + ۶^۲ = ۸ + ۳۶ = ۴۴$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1817,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            576,
+            485,
+            680
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1817"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1818",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل‌جمع $C(n, 0) + C(n, 1) + \\dots + C(n, n)$ همواره برابر است با:"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "2^n"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "n!"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "2^{n-1}"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "n^2"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد اعضای فضای نمونه‌ای خروج دو مهره از $n+۵$ مهره برابر با $\\binom{n+۵}{۲}$ است.\n$\\binom{n+۵}{۲} = ۹۱ \\Rightarrow \\frac{(n+۵)(n+۴)}{۲} = ۹۱ \\Rightarrow (n+۵)(n+۴) = ۱۸۲ = ۱۴ \\times ۱۳ \\Rightarrow n+۵ = ۱۴ \\Rightarrow n=۹$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1818,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            682,
+            485,
+            786
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1818"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1819",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد جواب‌های صحیح و نامنفی معادله $x+y+z = 7$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۵"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "پیشامد آن‌که $A$ یا $B$ رخ ندهند ولی $C$ رخ بدهد به صورت زیر است:\n$(A' \\cup B') \\cap C = (A \\cap B)' \\cap C = C - (A \\cap B)$\nاین پیشامد در نمودار گزینه ۴ نمایش داده شده است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1819,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            788,
+            485,
+            836
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1819"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1820",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۴ نامه متمایز را به چند طریق می‌توان در ۳ صندوق پست انداخت؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۸۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "پیشامد آن‌که عدد تاس قرمز اول باشد را $A$ و پیشامد آن‌که مجموع اعداد دو تاس اول باشد را $B$ می‌نامیم.\n$n(A) = ۳ \\times ۶ = ۱۸ \\Rightarrow \\{۲, ۳, ۵\\} =$ اعداد تاس قرمز\n$B = \\{(۱, ۱), (۱, ۲), (۱, ۴), (۲, ۱), (۲, ۳), (۳, ۲), (۴, ۱)\\}$\n$A \\cap B = \\{(۲, ۱), (۲, ۳), (۳, ۲)\\}$\n$n(A \\cup B) = n(A) + n(B) - n(A \\cap B) = ۱۸ + ۷ - ۳ = ۲۲$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1820,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": null,
+          "box": [
+            90,
+            839,
+            485,
+            891
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "راه حل سوال 1820"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1821",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد قطرهای یک ۸ ضلعی محدب چند تاست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد حالاتی که ۳ فرزند از ۵ فرزند خانواده دختر باشند برابر است با:\n$\\binom{۵}{۳} = ۱۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1821,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1822",
+    "subject": "math",
+    "topic_key": "combinatorics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با حروف کلمه \\\"COMPUTER\\\" چند کلمه ۸ حرفی می‌توان ساخت که با حرف C شروع و به حرف R ختم شوند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۷۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۰۴۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴۰۳۲۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۲۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فضای نمونه‌ای پرتاب ۲ سکه و ۱ تاس $n(S) = ۲^۲ \\times ۶ = ۲۴$ عضو دارد. تعداد پیشامدهای غیرتهی همان تعداد زیرمجموعه‌های غیرتهی آن است که برابر با $۲^{۲۴} - ۱$ می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1822,
+      "question_pdf": "15.pdf",
+      "question_page": 9,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  }
+]

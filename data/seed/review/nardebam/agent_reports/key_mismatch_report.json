@@ -1,0 +1,5325 @@
+{
+  "generated_at": "2026-06-25",
+  "scope": {
+    "conflicts_file": "data/seed/review/nardebam/join_conflicts.json",
+    "normalized_dir": "data/seed/review/nardebam/normalized",
+    "report_owner": "data/seed/review/nardebam/agent_reports/key_mismatch_report.json",
+    "raw_or_normalized_files_edited": false
+  },
+  "summary": {
+    "total_join_conflicts": 1691,
+    "analyzed_conflicts": 1079,
+    "issue_counts": {
+      "missing_key": 766,
+      "solution_key_mismatch": 313
+    },
+    "by_subject_issue_classification": [
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 622
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 188
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 110
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 60
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 32
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 29
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 16
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 14
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 6
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 2
+      }
+    ]
+  },
+  "answer_key_coverage": {
+    "math": {
+      "count": 2040,
+      "min": 1,
+      "max": 2040,
+      "missing_conflict_count": 34
+    },
+    "physics": {
+      "count": 1192,
+      "min": 743,
+      "max": 1934,
+      "missing_conflict_count": 732
+    }
+  },
+  "normalized_source_ranges": {
+    "answer_key_files": [
+      {
+        "subject": "math",
+        "file": "math-answer-key.json",
+        "count": 2040,
+        "min": 1,
+        "max": 2040,
+        "missing_conflict_count": 34
+      },
+      {
+        "subject": "physics",
+        "file": "physics-answer-key.json",
+        "count": 1192,
+        "min": 743,
+        "max": 1934,
+        "missing_conflict_count": 732
+      }
+    ],
+    "solution_files": [
+      {
+        "subject": "math",
+        "file": "math-solutions-01.json",
+        "count": 50,
+        "min": 154,
+        "max": 203,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-02.json",
+        "count": 156,
+        "min": 214,
+        "max": 378,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-03.json",
+        "count": 219,
+        "min": 422,
+        "max": 639,
+        "invalid_stated_correct_option": 103
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-04.json",
+        "count": 214,
+        "min": 640,
+        "max": 853,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-05.json",
+        "count": 185,
+        "min": 853,
+        "max": 1039,
+        "invalid_stated_correct_option": 1
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-06.json",
+        "count": 220,
+        "min": 1070,
+        "max": 1290,
+        "invalid_stated_correct_option": 22
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-07.json",
+        "count": 225,
+        "min": 1291,
+        "max": 1515,
+        "invalid_stated_correct_option": 45
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-08.json",
+        "count": 206,
+        "min": 1516,
+        "max": 1721,
+        "invalid_stated_correct_option": 164
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-09.json",
+        "count": 182,
+        "min": 1738,
+        "max": 1920,
+        "invalid_stated_correct_option": 39
+      },
+      {
+        "subject": "math",
+        "file": "math-solutions-10.json",
+        "count": 95,
+        "min": 0,
+        "max": 2042,
+        "invalid_stated_correct_option": 1
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-01.json",
+        "count": 107,
+        "min": 1,
+        "max": 107,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-02.json",
+        "count": 113,
+        "min": 108,
+        "max": 220,
+        "invalid_stated_correct_option": 110
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-03.json",
+        "count": 131,
+        "min": 321,
+        "max": 451,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-05.json",
+        "count": 83,
+        "min": 452,
+        "max": 534,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-06.json",
+        "count": 92,
+        "min": 535,
+        "max": 626,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-07.json",
+        "count": 67,
+        "min": 627,
+        "max": 693,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-08.json",
+        "count": 84,
+        "min": 694,
+        "max": 777,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-09.json",
+        "count": 101,
+        "min": 778,
+        "max": 878,
+        "invalid_stated_correct_option": 45
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-10.json",
+        "count": 86,
+        "min": 879,
+        "max": 964,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-11.json",
+        "count": 75,
+        "min": 965,
+        "max": 1039,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-12.json",
+        "count": 88,
+        "min": 1040,
+        "max": 1127,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-13.json",
+        "count": 88,
+        "min": 1128,
+        "max": 1215,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-14.json",
+        "count": 94,
+        "min": 1216,
+        "max": 1309,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-15.json",
+        "count": 112,
+        "min": 1310,
+        "max": 1421,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-16.json",
+        "count": 113,
+        "min": 1432,
+        "max": 1544,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-17.json",
+        "count": 102,
+        "min": 1545,
+        "max": 1646,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-gap-1422-1431.json",
+        "count": 10,
+        "min": 1422,
+        "max": 1431,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-reconstructed-221-250.json",
+        "count": 30,
+        "min": 221,
+        "max": 250,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-reconstructed-251-280.json",
+        "count": 30,
+        "min": 251,
+        "max": 280,
+        "invalid_stated_correct_option": 0
+      },
+      {
+        "subject": "physics",
+        "file": "physics-solutions-reconstructed-281-320.json",
+        "count": 40,
+        "min": 281,
+        "max": 320,
+        "invalid_stated_correct_option": 0
+      }
+    ],
+    "topic_files": [
+      {
+        "subject": "math",
+        "file": "math-topic-01.json",
+        "count": 50,
+        "min": 1,
+        "max": 50,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-02.json",
+        "count": 68,
+        "min": 33,
+        "max": 100,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-03.json",
+        "count": 115,
+        "min": 101,
+        "max": 215,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-04.json",
+        "count": 46,
+        "min": 216,
+        "max": 261,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-05.json",
+        "count": 48,
+        "min": 1,
+        "max": 294,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-06.json",
+        "count": 132,
+        "min": 309,
+        "max": 440,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-07.json",
+        "count": 63,
+        "min": 609,
+        "max": 670,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-08.json",
+        "count": 236,
+        "min": 705,
+        "max": 940,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-09.json",
+        "count": 215,
+        "min": 941,
+        "max": 1155,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-10.json",
+        "count": 104,
+        "min": 1156,
+        "max": 1247,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-11.json",
+        "count": 185,
+        "min": 1,
+        "max": 1466,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-12.json",
+        "count": 102,
+        "min": 1467,
+        "max": 1568,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-13.json",
+        "count": 69,
+        "min": 1569,
+        "max": 1637,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-14.json",
+        "count": 45,
+        "min": 1,
+        "max": 1648,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-15.json",
+        "count": 88,
+        "min": 1,
+        "max": 88,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-16.json",
+        "count": 128,
+        "min": 1823,
+        "max": 1935,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-17.json",
+        "count": 63,
+        "min": 1936,
+        "max": 1998,
+        "topic_keys": []
+      },
+      {
+        "subject": "math",
+        "file": "math-topic-18.json",
+        "count": 115,
+        "min": 1999,
+        "max": 2119,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-01.json",
+        "count": 50,
+        "min": 1,
+        "max": 50,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-02.json",
+        "count": 111,
+        "min": 61,
+        "max": 171,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-03.json",
+        "count": 94,
+        "min": 172,
+        "max": 265,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-04.json",
+        "count": 123,
+        "min": 266,
+        "max": 388,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-05.json",
+        "count": 147,
+        "min": 389,
+        "max": 535,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-06.json",
+        "count": 140,
+        "min": 536,
+        "max": 675,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-07.json",
+        "count": 132,
+        "min": 676,
+        "max": 807,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-08.json",
+        "count": 248,
+        "min": 806,
+        "max": 1053,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-09.json",
+        "count": 155,
+        "min": 1054,
+        "max": 1208,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-10.json",
+        "count": 283,
+        "min": 1209,
+        "max": 1491,
+        "topic_keys": []
+      },
+      {
+        "subject": "physics",
+        "file": "physics-topic-11.json",
+        "count": 155,
+        "min": 1492,
+        "max": 1646,
+        "topic_keys": []
+      }
+    ]
+  },
+  "breakdown": {
+    "by_topic": [
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "electrostatics",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 147
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "current_electricity",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 140
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "temperature_heat",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 123
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "magnetism_induction",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 67
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "derivative_applications",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 66
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "physical_properties_matter",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 61
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "physics_measurement",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "physical_properties_matter",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "work_energy_power",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 49
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "topic_key": "work_energy_power",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 45
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "probability",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 36
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "exponential_logarithmic",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 33
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "topic_key": "statistics",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 32
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "geometry",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 30
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "derivative_applications",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 19
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "statistics",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 18
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "probability",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 15
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "statistics",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 11
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "trigonometry",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 7
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "derivative_applications",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 7
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "geometry",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 7
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "one_dimensional_motion",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 7
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "statistics",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 6
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "magnetism_induction",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 6
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "exponential_logarithmic",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 5
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "oscillation_waves",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 5
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "geometry",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 4
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "one_dimensional_motion",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 4
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "atomic_nuclear",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 4
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "absolute_value_floor",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 3
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "limits_continuity",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 3
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "oscillation_waves",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 3
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "absolute_value_floor",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 2
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "topic_key": "statistics",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "one_dimensional_motion",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "atomic_nuclear",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 2
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "limits_continuity",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "limits_continuity",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "derivatives",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "exponential_logarithmic",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "topic_key": "analytic_geometry",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "magnetism_induction",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "dynamics",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "topic_key": "atomic_nuclear",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      }
+    ],
+    "by_50_question_range": [
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "1-50",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "151-200",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "251-300",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "301-350",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "351-400",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "401-450",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "451-500",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "501-550",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "551-600",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "601-650",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "651-700",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 50
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "701-750",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 42
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "51-100",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 40
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "101-150",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 40
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1351-1400",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 36
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "201-250",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 30
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1951-2000",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 29
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1851-1900",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 25
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1401-1450",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 23
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1501-1550",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 22
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "201-250",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 20
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "2001-2050",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 18
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "question_range": "2101-2150",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 16
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1551-1600",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 12
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1401-1450",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 11
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1801-1850",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 11
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "2001-2050",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 11
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "question_range": "101-150",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 10
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1851-1900",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 8
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "question_range": "2001-2050",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 8
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "question_range": "2051-2100",
+        "classification": "incomplete_answer_key_needs_source",
+        "count": 8
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1801-1850",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 7
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1351-1400",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 6
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1951-2000",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 6
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "901-950",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 5
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1951-2000",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 5
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "2001-2050",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 5
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "751-800",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 5
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1301-1350",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 4
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1451-1500",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 4
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "301-350",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 3
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1451-1500",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 3
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1551-1600",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 3
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1601-1650",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 3
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "751-800",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 2
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1401-1450",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 2
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1501-1550",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 2
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "question_range": "2001-2050",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "801-850",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "851-900",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "851-900",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "901-950",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "951-1000",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1201-1250",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1301-1350",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1551-1600",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 2
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "301-350",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "401-450",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "951-1000",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1001-1050",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1051-1100",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1051-1100",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1051-1100",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1201-1250",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1301-1350",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1351-1400",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1451-1500",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1501-1550",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1901-1950",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "question_range": "1901-1950",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "751-800",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "901-950",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "951-1000",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "951-1000",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1001-1050",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1101-1150",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1201-1250",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1251-1300",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1251-1300",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "question_range": "1351-1400",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "count": 1
+      }
+    ],
+    "contiguous_source_ranges": [
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "current_electricity",
+        "source_file": "physics-solutions-06.json",
+        "count": 91,
+        "ranges": [
+          {
+            "start": 536,
+            "end": 626,
+            "count": 91
+          }
+        ],
+        "sample_question_numbers": [
+          536,
+          537,
+          538,
+          539,
+          540,
+          541,
+          542,
+          543
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "electrostatics",
+        "source_file": "physics-solutions-05.json",
+        "count": 83,
+        "ranges": [
+          {
+            "start": 452,
+            "end": 534,
+            "count": 83
+          }
+        ],
+        "sample_question_numbers": [
+          452,
+          453,
+          454,
+          455,
+          456,
+          457,
+          458,
+          459
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "temperature_heat",
+        "source_file": "physics-solutions-03.json",
+        "count": 68,
+        "ranges": [
+          {
+            "start": 321,
+            "end": 388,
+            "count": 68
+          }
+        ],
+        "sample_question_numbers": [
+          321,
+          322,
+          323,
+          324,
+          325,
+          326,
+          327,
+          328
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "derivative_applications",
+        "source_file": "math-solutions-07.json",
+        "count": 66,
+        "ranges": [
+          {
+            "start": 1346,
+            "end": 1348,
+            "count": 3
+          },
+          {
+            "start": 1350,
+            "end": 1354,
+            "count": 5
+          },
+          {
+            "start": 1356,
+            "end": 1361,
+            "count": 6
+          },
+          {
+            "start": 1364,
+            "end": 1364,
+            "count": 1
+          },
+          {
+            "start": 1366,
+            "end": 1368,
+            "count": 3
+          },
+          {
+            "start": 1370,
+            "end": 1370,
+            "count": 1
+          },
+          {
+            "start": 1372,
+            "end": 1372,
+            "count": 1
+          },
+          {
+            "start": 1374,
+            "end": 1378,
+            "count": 5
+          },
+          {
+            "start": 1381,
+            "end": 1382,
+            "count": 2
+          },
+          {
+            "start": 1385,
+            "end": 1385,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1346,
+          1347,
+          1348,
+          1350,
+          1351,
+          1352,
+          1353,
+          1354
+        ],
+        "avg_overlap": 0.541
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "electrostatics",
+        "source_file": "physics-solutions-03.json",
+        "count": 63,
+        "ranges": [
+          {
+            "start": 389,
+            "end": 451,
+            "count": 63
+          }
+        ],
+        "sample_question_numbers": [
+          389,
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_needs_source",
+        "topic_key": "physical_properties_matter",
+        "source_file": "physics-solutions-02.json",
+        "count": 61,
+        "ranges": [
+          {
+            "start": 111,
+            "end": 171,
+            "count": 61
+          }
+        ],
+        "sample_question_numbers": [
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "physics_measurement",
+        "source_file": "physics-solutions-01.json",
+        "count": 50,
+        "ranges": [
+          {
+            "start": 1,
+            "end": 50,
+            "count": 50
+          }
+        ],
+        "sample_question_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_needs_source",
+        "topic_key": "work_energy_power",
+        "source_file": "physics-solutions-02.json",
+        "count": 49,
+        "ranges": [
+          {
+            "start": 172,
+            "end": 220,
+            "count": 49
+          }
+        ],
+        "sample_question_numbers": [
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "current_electricity",
+        "source_file": "physics-solutions-07.json",
+        "count": 49,
+        "ranges": [
+          {
+            "start": 627,
+            "end": 675,
+            "count": 49
+          }
+        ],
+        "sample_question_numbers": [
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "magnetism_induction",
+        "source_file": "physics-solutions-08.json",
+        "count": 49,
+        "ranges": [
+          {
+            "start": 694,
+            "end": 742,
+            "count": 49
+          }
+        ],
+        "sample_question_numbers": [
+          694,
+          695,
+          696,
+          697,
+          698,
+          699,
+          700,
+          701
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "physical_properties_matter",
+        "source_file": "physics-solutions-01.json",
+        "count": 47,
+        "ranges": [
+          {
+            "start": 61,
+            "end": 107,
+            "count": 47
+          }
+        ],
+        "sample_question_numbers": [
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "temperature_heat",
+        "source_file": "physics-solutions-reconstructed-281-320.json",
+        "count": 40,
+        "ranges": [
+          {
+            "start": 281,
+            "end": 320,
+            "count": 40
+          }
+        ],
+        "sample_question_numbers": [
+          281,
+          282,
+          283,
+          284,
+          285,
+          286,
+          287,
+          288
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "probability",
+        "source_file": "math-solutions-09.json",
+        "count": 36,
+        "ranges": [
+          {
+            "start": 1824,
+            "end": 1825,
+            "count": 2
+          },
+          {
+            "start": 1828,
+            "end": 1830,
+            "count": 3
+          },
+          {
+            "start": 1833,
+            "end": 1833,
+            "count": 1
+          },
+          {
+            "start": 1841,
+            "end": 1841,
+            "count": 1
+          },
+          {
+            "start": 1845,
+            "end": 1848,
+            "count": 4
+          },
+          {
+            "start": 1853,
+            "end": 1856,
+            "count": 4
+          },
+          {
+            "start": 1858,
+            "end": 1859,
+            "count": 2
+          },
+          {
+            "start": 1863,
+            "end": 1866,
+            "count": 4
+          },
+          {
+            "start": 1868,
+            "end": 1868,
+            "count": 1
+          },
+          {
+            "start": 1870,
+            "end": 1872,
+            "count": 3
+          }
+        ],
+        "sample_question_numbers": [
+          1824,
+          1825,
+          1828,
+          1829,
+          1830,
+          1833,
+          1841,
+          1845
+        ],
+        "avg_overlap": 0.508
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_needs_source",
+        "topic_key": "statistics",
+        "source_file": "math-topic-18.json",
+        "count": 32,
+        "ranges": [
+          {
+            "start": 2043,
+            "end": 2058,
+            "count": 16
+          },
+          {
+            "start": 2104,
+            "end": 2119,
+            "count": 16
+          }
+        ],
+        "sample_question_numbers": [
+          2043,
+          2044,
+          2045,
+          2046,
+          2047,
+          2048,
+          2049,
+          2050
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "geometry",
+        "source_file": "math-solutions-10.json",
+        "count": 30,
+        "ranges": [
+          {
+            "start": 1949,
+            "end": 1949,
+            "count": 1
+          },
+          {
+            "start": 1951,
+            "end": 1951,
+            "count": 1
+          },
+          {
+            "start": 1953,
+            "end": 1958,
+            "count": 6
+          },
+          {
+            "start": 1961,
+            "end": 1961,
+            "count": 1
+          },
+          {
+            "start": 1964,
+            "end": 1964,
+            "count": 1
+          },
+          {
+            "start": 1966,
+            "end": 1966,
+            "count": 1
+          },
+          {
+            "start": 1969,
+            "end": 1969,
+            "count": 1
+          },
+          {
+            "start": 1972,
+            "end": 1973,
+            "count": 2
+          },
+          {
+            "start": 1975,
+            "end": 1978,
+            "count": 4
+          },
+          {
+            "start": 1980,
+            "end": 1983,
+            "count": 4
+          }
+        ],
+        "sample_question_numbers": [
+          1949,
+          1951,
+          1953,
+          1954,
+          1955,
+          1956,
+          1957,
+          1958
+        ],
+        "avg_overlap": 0.498
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "work_energy_power",
+        "source_file": "physics-solutions-reconstructed-221-250.json",
+        "count": 30,
+        "ranges": [
+          {
+            "start": 221,
+            "end": 250,
+            "count": 30
+          }
+        ],
+        "sample_question_numbers": [
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "exponential_logarithmic",
+        "source_file": "math-solutions-08.json",
+        "count": 25,
+        "ranges": [
+          {
+            "start": 1529,
+            "end": 1529,
+            "count": 1
+          },
+          {
+            "start": 1532,
+            "end": 1532,
+            "count": 1
+          },
+          {
+            "start": 1534,
+            "end": 1538,
+            "count": 5
+          },
+          {
+            "start": 1540,
+            "end": 1540,
+            "count": 1
+          },
+          {
+            "start": 1542,
+            "end": 1544,
+            "count": 3
+          },
+          {
+            "start": 1546,
+            "end": 1546,
+            "count": 1
+          },
+          {
+            "start": 1549,
+            "end": 1550,
+            "count": 2
+          },
+          {
+            "start": 1552,
+            "end": 1556,
+            "count": 5
+          },
+          {
+            "start": 1558,
+            "end": 1559,
+            "count": 2
+          },
+          {
+            "start": 1564,
+            "end": 1565,
+            "count": 2
+          }
+        ],
+        "sample_question_numbers": [
+          1529,
+          1532,
+          1534,
+          1535,
+          1536,
+          1537,
+          1538,
+          1540
+        ],
+        "avg_overlap": 0.528
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "derivative_applications",
+        "source_file": "math-solutions-07.json",
+        "count": 19,
+        "ranges": [
+          {
+            "start": 1349,
+            "end": 1349,
+            "count": 1
+          },
+          {
+            "start": 1363,
+            "end": 1363,
+            "count": 1
+          },
+          {
+            "start": 1379,
+            "end": 1380,
+            "count": 2
+          },
+          {
+            "start": 1386,
+            "end": 1386,
+            "count": 1
+          },
+          {
+            "start": 1390,
+            "end": 1390,
+            "count": 1
+          },
+          {
+            "start": 1395,
+            "end": 1395,
+            "count": 1
+          },
+          {
+            "start": 1408,
+            "end": 1408,
+            "count": 1
+          },
+          {
+            "start": 1418,
+            "end": 1419,
+            "count": 2
+          },
+          {
+            "start": 1422,
+            "end": 1422,
+            "count": 1
+          },
+          {
+            "start": 1427,
+            "end": 1427,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1349,
+          1363,
+          1379,
+          1380,
+          1386,
+          1390,
+          1395,
+          1408
+        ],
+        "avg_overlap": 0.2
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "statistics",
+        "source_file": "math-solutions-10.json",
+        "count": 18,
+        "ranges": [
+          {
+            "start": 2002,
+            "end": 2002,
+            "count": 1
+          },
+          {
+            "start": 2004,
+            "end": 2006,
+            "count": 3
+          },
+          {
+            "start": 2009,
+            "end": 2009,
+            "count": 1
+          },
+          {
+            "start": 2012,
+            "end": 2013,
+            "count": 2
+          },
+          {
+            "start": 2015,
+            "end": 2015,
+            "count": 1
+          },
+          {
+            "start": 2019,
+            "end": 2019,
+            "count": 1
+          },
+          {
+            "start": 2022,
+            "end": 2022,
+            "count": 1
+          },
+          {
+            "start": 2027,
+            "end": 2027,
+            "count": 1
+          },
+          {
+            "start": 2030,
+            "end": 2030,
+            "count": 1
+          },
+          {
+            "start": 2034,
+            "end": 2038,
+            "count": 5
+          }
+        ],
+        "sample_question_numbers": [
+          2002,
+          2004,
+          2005,
+          2006,
+          2009,
+          2012,
+          2013,
+          2015
+        ],
+        "avg_overlap": 0.49
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "magnetism_induction",
+        "source_file": "physics-solutions-07.json",
+        "count": 18,
+        "ranges": [
+          {
+            "start": 676,
+            "end": 693,
+            "count": 18
+          }
+        ],
+        "sample_question_numbers": [
+          676,
+          677,
+          678,
+          679,
+          680,
+          681,
+          682,
+          683
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "probability",
+        "source_file": "math-solutions-09.json",
+        "count": 15,
+        "ranges": [
+          {
+            "start": 1826,
+            "end": 1826,
+            "count": 1
+          },
+          {
+            "start": 1831,
+            "end": 1832,
+            "count": 2
+          },
+          {
+            "start": 1834,
+            "end": 1834,
+            "count": 1
+          },
+          {
+            "start": 1836,
+            "end": 1836,
+            "count": 1
+          },
+          {
+            "start": 1843,
+            "end": 1843,
+            "count": 1
+          },
+          {
+            "start": 1850,
+            "end": 1851,
+            "count": 2
+          },
+          {
+            "start": 1857,
+            "end": 1857,
+            "count": 1
+          },
+          {
+            "start": 1860,
+            "end": 1861,
+            "count": 2
+          },
+          {
+            "start": 1867,
+            "end": 1867,
+            "count": 1
+          },
+          {
+            "start": 1875,
+            "end": 1876,
+            "count": 2
+          }
+        ],
+        "sample_question_numbers": [
+          1826,
+          1831,
+          1832,
+          1834,
+          1836,
+          1843,
+          1850,
+          1851
+        ],
+        "avg_overlap": 0.206
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "work_energy_power",
+        "source_file": "physics-solutions-reconstructed-251-280.json",
+        "count": 15,
+        "ranges": [
+          {
+            "start": 251,
+            "end": 265,
+            "count": 15
+          }
+        ],
+        "sample_question_numbers": [
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "temperature_heat",
+        "source_file": "physics-solutions-reconstructed-251-280.json",
+        "count": 15,
+        "ranges": [
+          {
+            "start": 266,
+            "end": 280,
+            "count": 15
+          }
+        ],
+        "sample_question_numbers": [
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "statistics",
+        "source_file": "math-solutions-10.json",
+        "count": 11,
+        "ranges": [
+          {
+            "start": 2003,
+            "end": 2003,
+            "count": 1
+          },
+          {
+            "start": 2011,
+            "end": 2011,
+            "count": 1
+          },
+          {
+            "start": 2018,
+            "end": 2018,
+            "count": 1
+          },
+          {
+            "start": 2020,
+            "end": 2021,
+            "count": 2
+          },
+          {
+            "start": 2023,
+            "end": 2025,
+            "count": 3
+          },
+          {
+            "start": 2028,
+            "end": 2028,
+            "count": 1
+          },
+          {
+            "start": 2032,
+            "end": 2032,
+            "count": 1
+          },
+          {
+            "start": 2039,
+            "end": 2039,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          2003,
+          2011,
+          2018,
+          2020,
+          2021,
+          2023,
+          2024,
+          2025
+        ],
+        "avg_overlap": 0.195
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "exponential_logarithmic",
+        "source_file": "math-solutions-07.json",
+        "count": 8,
+        "ranges": [
+          {
+            "start": 1504,
+            "end": 1504,
+            "count": 1
+          },
+          {
+            "start": 1506,
+            "end": 1509,
+            "count": 4
+          },
+          {
+            "start": 1511,
+            "end": 1512,
+            "count": 2
+          },
+          {
+            "start": 1514,
+            "end": 1514,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1504,
+          1506,
+          1507,
+          1508,
+          1509,
+          1511,
+          1512,
+          1514
+        ],
+        "avg_overlap": 0.475
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "derivative_applications",
+        "source_file": "math-solutions-07.json",
+        "count": 7,
+        "ranges": [
+          {
+            "start": 1383,
+            "end": 1383,
+            "count": 1
+          },
+          {
+            "start": 1413,
+            "end": 1413,
+            "count": 1
+          },
+          {
+            "start": 1435,
+            "end": 1435,
+            "count": 1
+          },
+          {
+            "start": 1461,
+            "end": 1464,
+            "count": 4
+          }
+        ],
+        "sample_question_numbers": [
+          1383,
+          1413,
+          1435,
+          1461,
+          1462,
+          1463,
+          1464
+        ],
+        "avg_overlap": 0.036
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "geometry",
+        "source_file": "math-solutions-10.json",
+        "count": 7,
+        "ranges": [
+          {
+            "start": 1950,
+            "end": 1950,
+            "count": 1
+          },
+          {
+            "start": 1967,
+            "end": 1967,
+            "count": 1
+          },
+          {
+            "start": 1971,
+            "end": 1971,
+            "count": 1
+          },
+          {
+            "start": 1979,
+            "end": 1979,
+            "count": 1
+          },
+          {
+            "start": 1992,
+            "end": 1992,
+            "count": 1
+          },
+          {
+            "start": 1995,
+            "end": 1995,
+            "count": 1
+          },
+          {
+            "start": 1997,
+            "end": 1997,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1950,
+          1967,
+          1971,
+          1979,
+          1992,
+          1995,
+          1997
+        ],
+        "avg_overlap": 0.224
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "statistics",
+        "source_file": "math-solutions-10.json",
+        "count": 6,
+        "ranges": [
+          {
+            "start": 2000,
+            "end": 2001,
+            "count": 2
+          },
+          {
+            "start": 2014,
+            "end": 2014,
+            "count": 1
+          },
+          {
+            "start": 2029,
+            "end": 2029,
+            "count": 1
+          },
+          {
+            "start": 2031,
+            "end": 2031,
+            "count": 1
+          },
+          {
+            "start": 2033,
+            "end": 2033,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          2000,
+          2001,
+          2014,
+          2029,
+          2031,
+          2033
+        ],
+        "avg_overlap": 0.038
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "trigonometry",
+        "source_file": "math-solutions-05.json",
+        "count": 5,
+        "ranges": [
+          {
+            "start": 918,
+            "end": 919,
+            "count": 2
+          },
+          {
+            "start": 921,
+            "end": 921,
+            "count": 1
+          },
+          {
+            "start": 923,
+            "end": 923,
+            "count": 1
+          },
+          {
+            "start": 935,
+            "end": 935,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          918,
+          919,
+          921,
+          923,
+          935
+        ],
+        "avg_overlap": 0.03
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "exponential_logarithmic",
+        "source_file": "math-solutions-08.json",
+        "count": 5,
+        "ranges": [
+          {
+            "start": 1539,
+            "end": 1539,
+            "count": 1
+          },
+          {
+            "start": 1547,
+            "end": 1547,
+            "count": 1
+          },
+          {
+            "start": 1551,
+            "end": 1551,
+            "count": 1
+          },
+          {
+            "start": 1557,
+            "end": 1557,
+            "count": 1
+          },
+          {
+            "start": 1566,
+            "end": 1566,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1539,
+          1547,
+          1551,
+          1557,
+          1566
+        ],
+        "avg_overlap": 0.2
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "magnetism_induction",
+        "source_file": "physics-solutions-08.json",
+        "count": 5,
+        "ranges": [
+          {
+            "start": 752,
+            "end": 752,
+            "count": 1
+          },
+          {
+            "start": 755,
+            "end": 755,
+            "count": 1
+          },
+          {
+            "start": 761,
+            "end": 761,
+            "count": 1
+          },
+          {
+            "start": 768,
+            "end": 768,
+            "count": 1
+          },
+          {
+            "start": 770,
+            "end": 770,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          752,
+          755,
+          761,
+          768,
+          770
+        ],
+        "avg_overlap": 0.06
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "geometry",
+        "source_file": "math-solutions-10.json",
+        "count": 4,
+        "ranges": [
+          {
+            "start": 1963,
+            "end": 1963,
+            "count": 1
+          },
+          {
+            "start": 1965,
+            "end": 1965,
+            "count": 1
+          },
+          {
+            "start": 1974,
+            "end": 1974,
+            "count": 1
+          },
+          {
+            "start": 1984,
+            "end": 1984,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1963,
+          1965,
+          1974,
+          1984
+        ],
+        "avg_overlap": 0.097
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "one_dimensional_motion",
+        "source_file": "physics-solutions-10.json",
+        "count": 4,
+        "ranges": [
+          {
+            "start": 885,
+            "end": 885,
+            "count": 1
+          },
+          {
+            "start": 896,
+            "end": 896,
+            "count": 1
+          },
+          {
+            "start": 924,
+            "end": 924,
+            "count": 1
+          },
+          {
+            "start": 949,
+            "end": 949,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          885,
+          896,
+          924,
+          949
+        ],
+        "avg_overlap": 0.207
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "atomic_nuclear",
+        "source_file": "physics-solutions-17.json",
+        "count": 4,
+        "ranges": [
+          {
+            "start": 1594,
+            "end": 1594,
+            "count": 1
+          },
+          {
+            "start": 1602,
+            "end": 1602,
+            "count": 1
+          },
+          {
+            "start": 1619,
+            "end": 1619,
+            "count": 1
+          },
+          {
+            "start": 1637,
+            "end": 1637,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1594,
+          1602,
+          1619,
+          1637
+        ],
+        "avg_overlap": 0.421
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "absolute_value_floor",
+        "source_file": "math-solutions-02.json",
+        "count": 3,
+        "ranges": [
+          {
+            "start": 324,
+            "end": 324,
+            "count": 1
+          },
+          {
+            "start": 330,
+            "end": 330,
+            "count": 1
+          },
+          {
+            "start": 333,
+            "end": 333,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          324,
+          330,
+          333
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "physical_properties_matter",
+        "source_file": "physics-solutions-02.json",
+        "count": 3,
+        "ranges": [
+          {
+            "start": 108,
+            "end": 110,
+            "count": 3
+          }
+        ],
+        "sample_question_numbers": [
+          108,
+          109,
+          110
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "one_dimensional_motion",
+        "source_file": "physics-solutions-09.json",
+        "count": 3,
+        "ranges": [
+          {
+            "start": 848,
+            "end": 848,
+            "count": 1
+          },
+          {
+            "start": 868,
+            "end": 869,
+            "count": 2
+          }
+        ],
+        "sample_question_numbers": [
+          848,
+          868,
+          869
+        ],
+        "avg_overlap": 0.081
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "one_dimensional_motion",
+        "source_file": "physics-solutions-11.json",
+        "count": 3,
+        "ranges": [
+          {
+            "start": 979,
+            "end": 979,
+            "count": 1
+          },
+          {
+            "start": 997,
+            "end": 997,
+            "count": 1
+          },
+          {
+            "start": 1021,
+            "end": 1021,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          979,
+          997,
+          1021
+        ],
+        "avg_overlap": 0.211
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "oscillation_waves",
+        "source_file": "physics-solutions-14.json",
+        "count": 3,
+        "ranges": [
+          {
+            "start": 1227,
+            "end": 1227,
+            "count": 1
+          },
+          {
+            "start": 1238,
+            "end": 1238,
+            "count": 1
+          },
+          {
+            "start": 1251,
+            "end": 1251,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1227,
+          1238,
+          1251
+        ],
+        "avg_overlap": 0.173
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "oscillation_waves",
+        "source_file": "physics-solutions-15.json",
+        "count": 3,
+        "ranges": [
+          {
+            "start": 1310,
+            "end": 1310,
+            "count": 1
+          },
+          {
+            "start": 1346,
+            "end": 1346,
+            "count": 1
+          },
+          {
+            "start": 1365,
+            "end": 1365,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1310,
+          1346,
+          1365
+        ],
+        "avg_overlap": 0.074
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "trigonometry",
+        "source_file": "math-solutions-04.json",
+        "count": 2,
+        "ranges": [
+          {
+            "start": 764,
+            "end": 764,
+            "count": 1
+          },
+          {
+            "start": 777,
+            "end": 777,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          764,
+          777
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "limits_continuity",
+        "source_file": "math-solutions-05.json",
+        "count": 2,
+        "ranges": [
+          {
+            "start": 988,
+            "end": 988,
+            "count": 1
+          },
+          {
+            "start": 1016,
+            "end": 1016,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          988,
+          1016
+        ],
+        "avg_overlap": 0.619
+      },
+      {
+        "subject": "math",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "statistics",
+        "source_file": "math-solutions-10.json",
+        "count": 2,
+        "ranges": [
+          {
+            "start": 2041,
+            "end": 2042,
+            "count": 2
+          }
+        ],
+        "sample_question_numbers": [
+          2041,
+          2042
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "one_dimensional_motion",
+        "source_file": "physics-solutions-10.json",
+        "count": 2,
+        "ranges": [
+          {
+            "start": 940,
+            "end": 940,
+            "count": 1
+          },
+          {
+            "start": 956,
+            "end": 956,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          940,
+          956
+        ],
+        "avg_overlap": 0.431
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "oscillation_waves",
+        "source_file": "physics-solutions-14.json",
+        "count": 2,
+        "ranges": [
+          {
+            "start": 1241,
+            "end": 1241,
+            "count": 1
+          },
+          {
+            "start": 1293,
+            "end": 1293,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1241,
+          1293
+        ],
+        "avg_overlap": 0.061
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "atomic_nuclear",
+        "source_file": "physics-solutions-17.json",
+        "count": 2,
+        "ranges": [
+          {
+            "start": 1569,
+            "end": 1569,
+            "count": 1
+          },
+          {
+            "start": 1583,
+            "end": 1583,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1569,
+          1583
+        ],
+        "avg_overlap": 0.184
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "absolute_value_floor",
+        "source_file": "math-solutions-02.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 332,
+            "end": 332,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          332
+        ],
+        "avg_overlap": 0.25
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "absolute_value_floor",
+        "source_file": "math-solutions-03.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 424,
+            "end": 424,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          424
+        ],
+        "avg_overlap": 0.167
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "limits_continuity",
+        "source_file": "math-solutions-06.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 1083,
+            "end": 1083,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1083
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "limits_continuity",
+        "source_file": "math-solutions-06.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 1085,
+            "end": 1085,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1085
+        ],
+        "avg_overlap": 0.429
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "limits_continuity",
+        "source_file": "math-solutions-06.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 1095,
+            "end": 1095,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1095
+        ],
+        "avg_overlap": 0.2
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "derivatives",
+        "source_file": "math-solutions-06.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 1223,
+            "end": 1223,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1223
+        ],
+        "avg_overlap": 0.75
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "exponential_logarithmic",
+        "source_file": "math-solutions-07.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 1513,
+            "end": 1513,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1513
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "math",
+        "issue": "solution_key_mismatch",
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "topic_key": "analytic_geometry",
+        "source_file": "math-solutions-08.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 1570,
+            "end": 1570,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1570
+        ],
+        "avg_overlap": 0.364
+      },
+      {
+        "subject": "physics",
+        "issue": "missing_key",
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "topic_key": "electrostatics",
+        "source_file": "physics-solutions-06.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 535,
+            "end": 535,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          535
+        ],
+        "avg_overlap": 0
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "magnetism_induction",
+        "source_file": "physics-solutions-09.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 797,
+            "end": 797,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          797
+        ],
+        "avg_overlap": 0.13
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "magnetism_induction",
+        "source_file": "physics-solutions-09.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 805,
+            "end": 805,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          805
+        ],
+        "avg_overlap": 0.023
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "one_dimensional_motion",
+        "source_file": "physics-solutions-11.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 974,
+            "end": 974,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          974
+        ],
+        "avg_overlap": 0.061
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "topic_key": "dynamics",
+        "source_file": "physics-solutions-13.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 1149,
+            "end": 1149,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1149
+        ],
+        "avg_overlap": 0.147
+      },
+      {
+        "subject": "physics",
+        "issue": "solution_key_mismatch",
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "topic_key": "atomic_nuclear",
+        "source_file": "physics-solutions-17.json",
+        "count": 1,
+        "ranges": [
+          {
+            "start": 1629,
+            "end": 1629,
+            "count": 1
+          }
+        ],
+        "sample_question_numbers": [
+          1629
+        ],
+        "avg_overlap": 0.111
+      }
+    ]
+  },
+  "likely_causes": {
+    "incomplete_answer_key": "Physics key starts at 743 while normalized physics questions/solutions begin at 1, producing 732 missing_key conflicts before the keyed range. Math key ends at 2040, producing tail missing_key conflicts for statistics questions after 2040.",
+    "conflicting_extraction": "Most math solution_key_mismatch rows in math-solutions-02/03 and some later files have very low question/solution text overlap, indicating solution snippets are attached to the wrong question number or OCR/extraction drifted.",
+    "stale_solution_stated_correct_option": "Higher-overlap mismatch rows, especially physics rows and scattered math rows, are better candidates for stale stated_correct_option fields or true answer-key disagreement; these need source-page verification before changing keys."
+  },
+  "top_ranges_to_delegate_to_jules_next": [
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+      "topic_key": "derivative_applications",
+      "source_file": "math-solutions-07.json",
+      "count": 66,
+      "ranges": [
+        {
+          "start": 1346,
+          "end": 1348,
+          "count": 3
+        },
+        {
+          "start": 1350,
+          "end": 1354,
+          "count": 5
+        },
+        {
+          "start": 1356,
+          "end": 1361,
+          "count": 6
+        },
+        {
+          "start": 1364,
+          "end": 1364,
+          "count": 1
+        },
+        {
+          "start": 1366,
+          "end": 1368,
+          "count": 3
+        },
+        {
+          "start": 1370,
+          "end": 1370,
+          "count": 1
+        },
+        {
+          "start": 1372,
+          "end": 1372,
+          "count": 1
+        },
+        {
+          "start": 1374,
+          "end": 1378,
+          "count": 5
+        },
+        {
+          "start": 1381,
+          "end": 1382,
+          "count": 2
+        },
+        {
+          "start": 1385,
+          "end": 1385,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        1346,
+        1347,
+        1348,
+        1350,
+        1351,
+        1352,
+        1353,
+        1354
+      ],
+      "avg_overlap": 0.541
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_needs_source",
+      "topic_key": "physical_properties_matter",
+      "source_file": "physics-solutions-02.json",
+      "count": 61,
+      "ranges": [
+        {
+          "start": 111,
+          "end": 171,
+          "count": 61
+        }
+      ],
+      "sample_question_numbers": [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "avg_overlap": 0
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_needs_source",
+      "topic_key": "work_energy_power",
+      "source_file": "physics-solutions-02.json",
+      "count": 49,
+      "ranges": [
+        {
+          "start": 172,
+          "end": 220,
+          "count": 49
+        }
+      ],
+      "sample_question_numbers": [
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "avg_overlap": 0
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+      "topic_key": "probability",
+      "source_file": "math-solutions-09.json",
+      "count": 36,
+      "ranges": [
+        {
+          "start": 1824,
+          "end": 1825,
+          "count": 2
+        },
+        {
+          "start": 1828,
+          "end": 1830,
+          "count": 3
+        },
+        {
+          "start": 1833,
+          "end": 1833,
+          "count": 1
+        },
+        {
+          "start": 1841,
+          "end": 1841,
+          "count": 1
+        },
+        {
+          "start": 1845,
+          "end": 1848,
+          "count": 4
+        },
+        {
+          "start": 1853,
+          "end": 1856,
+          "count": 4
+        },
+        {
+          "start": 1858,
+          "end": 1859,
+          "count": 2
+        },
+        {
+          "start": 1863,
+          "end": 1866,
+          "count": 4
+        },
+        {
+          "start": 1868,
+          "end": 1868,
+          "count": 1
+        },
+        {
+          "start": 1870,
+          "end": 1872,
+          "count": 3
+        }
+      ],
+      "sample_question_numbers": [
+        1824,
+        1825,
+        1828,
+        1829,
+        1830,
+        1833,
+        1841,
+        1845
+      ],
+      "avg_overlap": 0.508
+    },
+    {
+      "subject": "math",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_needs_source",
+      "topic_key": "statistics",
+      "source_file": "math-topic-18.json",
+      "count": 32,
+      "ranges": [
+        {
+          "start": 2043,
+          "end": 2058,
+          "count": 16
+        },
+        {
+          "start": 2104,
+          "end": 2119,
+          "count": 16
+        }
+      ],
+      "sample_question_numbers": [
+        2043,
+        2044,
+        2045,
+        2046,
+        2047,
+        2048,
+        2049,
+        2050
+      ],
+      "avg_overlap": 0
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+      "topic_key": "geometry",
+      "source_file": "math-solutions-10.json",
+      "count": 30,
+      "ranges": [
+        {
+          "start": 1949,
+          "end": 1949,
+          "count": 1
+        },
+        {
+          "start": 1951,
+          "end": 1951,
+          "count": 1
+        },
+        {
+          "start": 1953,
+          "end": 1958,
+          "count": 6
+        },
+        {
+          "start": 1961,
+          "end": 1961,
+          "count": 1
+        },
+        {
+          "start": 1964,
+          "end": 1964,
+          "count": 1
+        },
+        {
+          "start": 1966,
+          "end": 1966,
+          "count": 1
+        },
+        {
+          "start": 1969,
+          "end": 1969,
+          "count": 1
+        },
+        {
+          "start": 1972,
+          "end": 1973,
+          "count": 2
+        },
+        {
+          "start": 1975,
+          "end": 1978,
+          "count": 4
+        },
+        {
+          "start": 1980,
+          "end": 1983,
+          "count": 4
+        }
+      ],
+      "sample_question_numbers": [
+        1949,
+        1951,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958
+      ],
+      "avg_overlap": 0.498
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+      "topic_key": "exponential_logarithmic",
+      "source_file": "math-solutions-08.json",
+      "count": 25,
+      "ranges": [
+        {
+          "start": 1529,
+          "end": 1529,
+          "count": 1
+        },
+        {
+          "start": 1532,
+          "end": 1532,
+          "count": 1
+        },
+        {
+          "start": 1534,
+          "end": 1538,
+          "count": 5
+        },
+        {
+          "start": 1540,
+          "end": 1540,
+          "count": 1
+        },
+        {
+          "start": 1542,
+          "end": 1544,
+          "count": 3
+        },
+        {
+          "start": 1546,
+          "end": 1546,
+          "count": 1
+        },
+        {
+          "start": 1549,
+          "end": 1550,
+          "count": 2
+        },
+        {
+          "start": 1552,
+          "end": 1556,
+          "count": 5
+        },
+        {
+          "start": 1558,
+          "end": 1559,
+          "count": 2
+        },
+        {
+          "start": 1564,
+          "end": 1565,
+          "count": 2
+        }
+      ],
+      "sample_question_numbers": [
+        1529,
+        1532,
+        1534,
+        1535,
+        1536,
+        1537,
+        1538,
+        1540
+      ],
+      "avg_overlap": 0.528
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "ambiguous_mismatch_needs_source_check",
+      "topic_key": "derivative_applications",
+      "source_file": "math-solutions-07.json",
+      "count": 19,
+      "ranges": [
+        {
+          "start": 1349,
+          "end": 1349,
+          "count": 1
+        },
+        {
+          "start": 1363,
+          "end": 1363,
+          "count": 1
+        },
+        {
+          "start": 1379,
+          "end": 1380,
+          "count": 2
+        },
+        {
+          "start": 1386,
+          "end": 1386,
+          "count": 1
+        },
+        {
+          "start": 1390,
+          "end": 1390,
+          "count": 1
+        },
+        {
+          "start": 1395,
+          "end": 1395,
+          "count": 1
+        },
+        {
+          "start": 1408,
+          "end": 1408,
+          "count": 1
+        },
+        {
+          "start": 1418,
+          "end": 1419,
+          "count": 2
+        },
+        {
+          "start": 1422,
+          "end": 1422,
+          "count": 1
+        },
+        {
+          "start": 1427,
+          "end": 1427,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        1349,
+        1363,
+        1379,
+        1380,
+        1386,
+        1390,
+        1395,
+        1408
+      ],
+      "avg_overlap": 0.2
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+      "topic_key": "statistics",
+      "source_file": "math-solutions-10.json",
+      "count": 18,
+      "ranges": [
+        {
+          "start": 2002,
+          "end": 2002,
+          "count": 1
+        },
+        {
+          "start": 2004,
+          "end": 2006,
+          "count": 3
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "count": 1
+        },
+        {
+          "start": 2012,
+          "end": 2013,
+          "count": 2
+        },
+        {
+          "start": 2015,
+          "end": 2015,
+          "count": 1
+        },
+        {
+          "start": 2019,
+          "end": 2019,
+          "count": 1
+        },
+        {
+          "start": 2022,
+          "end": 2022,
+          "count": 1
+        },
+        {
+          "start": 2027,
+          "end": 2027,
+          "count": 1
+        },
+        {
+          "start": 2030,
+          "end": 2030,
+          "count": 1
+        },
+        {
+          "start": 2034,
+          "end": 2038,
+          "count": 5
+        }
+      ],
+      "sample_question_numbers": [
+        2002,
+        2004,
+        2005,
+        2006,
+        2009,
+        2012,
+        2013,
+        2015
+      ],
+      "avg_overlap": 0.49
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "ambiguous_mismatch_needs_source_check",
+      "topic_key": "probability",
+      "source_file": "math-solutions-09.json",
+      "count": 15,
+      "ranges": [
+        {
+          "start": 1826,
+          "end": 1826,
+          "count": 1
+        },
+        {
+          "start": 1831,
+          "end": 1832,
+          "count": 2
+        },
+        {
+          "start": 1834,
+          "end": 1834,
+          "count": 1
+        },
+        {
+          "start": 1836,
+          "end": 1836,
+          "count": 1
+        },
+        {
+          "start": 1843,
+          "end": 1843,
+          "count": 1
+        },
+        {
+          "start": 1850,
+          "end": 1851,
+          "count": 2
+        },
+        {
+          "start": 1857,
+          "end": 1857,
+          "count": 1
+        },
+        {
+          "start": 1860,
+          "end": 1861,
+          "count": 2
+        },
+        {
+          "start": 1867,
+          "end": 1867,
+          "count": 1
+        },
+        {
+          "start": 1875,
+          "end": 1876,
+          "count": 2
+        }
+      ],
+      "sample_question_numbers": [
+        1826,
+        1831,
+        1832,
+        1834,
+        1836,
+        1843,
+        1850,
+        1851
+      ],
+      "avg_overlap": 0.206
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "ambiguous_mismatch_needs_source_check",
+      "topic_key": "statistics",
+      "source_file": "math-solutions-10.json",
+      "count": 11,
+      "ranges": [
+        {
+          "start": 2003,
+          "end": 2003,
+          "count": 1
+        },
+        {
+          "start": 2011,
+          "end": 2011,
+          "count": 1
+        },
+        {
+          "start": 2018,
+          "end": 2018,
+          "count": 1
+        },
+        {
+          "start": 2020,
+          "end": 2021,
+          "count": 2
+        },
+        {
+          "start": 2023,
+          "end": 2025,
+          "count": 3
+        },
+        {
+          "start": 2028,
+          "end": 2028,
+          "count": 1
+        },
+        {
+          "start": 2032,
+          "end": 2032,
+          "count": 1
+        },
+        {
+          "start": 2039,
+          "end": 2039,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        2003,
+        2011,
+        2018,
+        2020,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "avg_overlap": 0.195
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+      "topic_key": "exponential_logarithmic",
+      "source_file": "math-solutions-07.json",
+      "count": 8,
+      "ranges": [
+        {
+          "start": 1504,
+          "end": 1504,
+          "count": 1
+        },
+        {
+          "start": 1506,
+          "end": 1509,
+          "count": 4
+        },
+        {
+          "start": 1511,
+          "end": 1512,
+          "count": 2
+        },
+        {
+          "start": 1514,
+          "end": 1514,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        1504,
+        1506,
+        1507,
+        1508,
+        1509,
+        1511,
+        1512,
+        1514
+      ],
+      "avg_overlap": 0.475
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "conflicting_extraction_likely_wrong_solution_attached",
+      "topic_key": "derivative_applications",
+      "source_file": "math-solutions-07.json",
+      "count": 7,
+      "ranges": [
+        {
+          "start": 1383,
+          "end": 1383,
+          "count": 1
+        },
+        {
+          "start": 1413,
+          "end": 1413,
+          "count": 1
+        },
+        {
+          "start": 1435,
+          "end": 1435,
+          "count": 1
+        },
+        {
+          "start": 1461,
+          "end": 1464,
+          "count": 4
+        }
+      ],
+      "sample_question_numbers": [
+        1383,
+        1413,
+        1435,
+        1461,
+        1462,
+        1463,
+        1464
+      ],
+      "avg_overlap": 0.036
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "ambiguous_mismatch_needs_source_check",
+      "topic_key": "geometry",
+      "source_file": "math-solutions-10.json",
+      "count": 7,
+      "ranges": [
+        {
+          "start": 1950,
+          "end": 1950,
+          "count": 1
+        },
+        {
+          "start": 1967,
+          "end": 1967,
+          "count": 1
+        },
+        {
+          "start": 1971,
+          "end": 1971,
+          "count": 1
+        },
+        {
+          "start": 1979,
+          "end": 1979,
+          "count": 1
+        },
+        {
+          "start": 1992,
+          "end": 1992,
+          "count": 1
+        },
+        {
+          "start": 1995,
+          "end": 1995,
+          "count": 1
+        },
+        {
+          "start": 1997,
+          "end": 1997,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        1950,
+        1967,
+        1971,
+        1979,
+        1992,
+        1995,
+        1997
+      ],
+      "avg_overlap": 0.224
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "conflicting_extraction_likely_wrong_solution_attached",
+      "topic_key": "statistics",
+      "source_file": "math-solutions-10.json",
+      "count": 6,
+      "ranges": [
+        {
+          "start": 2000,
+          "end": 2001,
+          "count": 2
+        },
+        {
+          "start": 2014,
+          "end": 2014,
+          "count": 1
+        },
+        {
+          "start": 2029,
+          "end": 2029,
+          "count": 1
+        },
+        {
+          "start": 2031,
+          "end": 2031,
+          "count": 1
+        },
+        {
+          "start": 2033,
+          "end": 2033,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        2000,
+        2001,
+        2014,
+        2029,
+        2031,
+        2033
+      ],
+      "avg_overlap": 0.038
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "conflicting_extraction_likely_wrong_solution_attached",
+      "topic_key": "trigonometry",
+      "source_file": "math-solutions-05.json",
+      "count": 5,
+      "ranges": [
+        {
+          "start": 918,
+          "end": 919,
+          "count": 2
+        },
+        {
+          "start": 921,
+          "end": 921,
+          "count": 1
+        },
+        {
+          "start": 923,
+          "end": 923,
+          "count": 1
+        },
+        {
+          "start": 935,
+          "end": 935,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        918,
+        919,
+        921,
+        923,
+        935
+      ],
+      "avg_overlap": 0.03
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "ambiguous_mismatch_needs_source_check",
+      "topic_key": "exponential_logarithmic",
+      "source_file": "math-solutions-08.json",
+      "count": 5,
+      "ranges": [
+        {
+          "start": 1539,
+          "end": 1539,
+          "count": 1
+        },
+        {
+          "start": 1547,
+          "end": 1547,
+          "count": 1
+        },
+        {
+          "start": 1551,
+          "end": 1551,
+          "count": 1
+        },
+        {
+          "start": 1557,
+          "end": 1557,
+          "count": 1
+        },
+        {
+          "start": 1566,
+          "end": 1566,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        1539,
+        1547,
+        1551,
+        1557,
+        1566
+      ],
+      "avg_overlap": 0.2
+    },
+    {
+      "subject": "physics",
+      "issue": "solution_key_mismatch",
+      "classification": "conflicting_extraction_likely_wrong_solution_attached",
+      "topic_key": "magnetism_induction",
+      "source_file": "physics-solutions-08.json",
+      "count": 5,
+      "ranges": [
+        {
+          "start": 752,
+          "end": 752,
+          "count": 1
+        },
+        {
+          "start": 755,
+          "end": 755,
+          "count": 1
+        },
+        {
+          "start": 761,
+          "end": 761,
+          "count": 1
+        },
+        {
+          "start": 768,
+          "end": 768,
+          "count": 1
+        },
+        {
+          "start": 770,
+          "end": 770,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        752,
+        755,
+        761,
+        768,
+        770
+      ],
+      "avg_overlap": 0.06
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "conflicting_extraction_likely_wrong_solution_attached",
+      "topic_key": "geometry",
+      "source_file": "math-solutions-10.json",
+      "count": 4,
+      "ranges": [
+        {
+          "start": 1963,
+          "end": 1963,
+          "count": 1
+        },
+        {
+          "start": 1965,
+          "end": 1965,
+          "count": 1
+        },
+        {
+          "start": 1974,
+          "end": 1974,
+          "count": 1
+        },
+        {
+          "start": 1984,
+          "end": 1984,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        1963,
+        1965,
+        1974,
+        1984
+      ],
+      "avg_overlap": 0.097
+    },
+    {
+      "subject": "physics",
+      "issue": "solution_key_mismatch",
+      "classification": "ambiguous_mismatch_needs_source_check",
+      "topic_key": "one_dimensional_motion",
+      "source_file": "physics-solutions-10.json",
+      "count": 4,
+      "ranges": [
+        {
+          "start": 885,
+          "end": 885,
+          "count": 1
+        },
+        {
+          "start": 896,
+          "end": 896,
+          "count": 1
+        },
+        {
+          "start": 924,
+          "end": 924,
+          "count": 1
+        },
+        {
+          "start": 949,
+          "end": 949,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        885,
+        896,
+        924,
+        949
+      ],
+      "avg_overlap": 0.207
+    },
+    {
+      "subject": "physics",
+      "issue": "solution_key_mismatch",
+      "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+      "topic_key": "atomic_nuclear",
+      "source_file": "physics-solutions-17.json",
+      "count": 4,
+      "ranges": [
+        {
+          "start": 1594,
+          "end": 1594,
+          "count": 1
+        },
+        {
+          "start": 1602,
+          "end": 1602,
+          "count": 1
+        },
+        {
+          "start": 1619,
+          "end": 1619,
+          "count": 1
+        },
+        {
+          "start": 1637,
+          "end": 1637,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        1594,
+        1602,
+        1619,
+        1637
+      ],
+      "avg_overlap": 0.421
+    },
+    {
+      "subject": "math",
+      "issue": "solution_key_mismatch",
+      "classification": "conflicting_extraction_likely_wrong_solution_attached",
+      "topic_key": "absolute_value_floor",
+      "source_file": "math-solutions-02.json",
+      "count": 3,
+      "ranges": [
+        {
+          "start": 324,
+          "end": 324,
+          "count": 1
+        },
+        {
+          "start": 330,
+          "end": 330,
+          "count": 1
+        },
+        {
+          "start": 333,
+          "end": 333,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        324,
+        330,
+        333
+      ],
+      "avg_overlap": 0
+    },
+    {
+      "subject": "physics",
+      "issue": "solution_key_mismatch",
+      "classification": "conflicting_extraction_likely_wrong_solution_attached",
+      "topic_key": "one_dimensional_motion",
+      "source_file": "physics-solutions-09.json",
+      "count": 3,
+      "ranges": [
+        {
+          "start": 848,
+          "end": 848,
+          "count": 1
+        },
+        {
+          "start": 868,
+          "end": 869,
+          "count": 2
+        }
+      ],
+      "sample_question_numbers": [
+        848,
+        868,
+        869
+      ],
+      "avg_overlap": 0.081
+    },
+    {
+      "subject": "physics",
+      "issue": "solution_key_mismatch",
+      "classification": "ambiguous_mismatch_needs_source_check",
+      "topic_key": "one_dimensional_motion",
+      "source_file": "physics-solutions-11.json",
+      "count": 3,
+      "ranges": [
+        {
+          "start": 979,
+          "end": 979,
+          "count": 1
+        },
+        {
+          "start": 997,
+          "end": 997,
+          "count": 1
+        },
+        {
+          "start": 1021,
+          "end": 1021,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        979,
+        997,
+        1021
+      ],
+      "avg_overlap": 0.211
+    },
+    {
+      "subject": "physics",
+      "issue": "solution_key_mismatch",
+      "classification": "ambiguous_mismatch_needs_source_check",
+      "topic_key": "oscillation_waves",
+      "source_file": "physics-solutions-14.json",
+      "count": 3,
+      "ranges": [
+        {
+          "start": 1227,
+          "end": 1227,
+          "count": 1
+        },
+        {
+          "start": 1238,
+          "end": 1238,
+          "count": 1
+        },
+        {
+          "start": 1251,
+          "end": 1251,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        1227,
+        1238,
+        1251
+      ],
+      "avg_overlap": 0.173
+    }
+  ],
+  "low_risk_local_normalization_fixes": [
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "current_electricity",
+      "source_file": "physics-solutions-06.json",
+      "count": 91,
+      "ranges": [
+        {
+          "start": 536,
+          "end": 626,
+          "count": 91
+        }
+      ],
+      "sample_question_numbers": [
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542,
+        543
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "electrostatics",
+      "source_file": "physics-solutions-05.json",
+      "count": 83,
+      "ranges": [
+        {
+          "start": 452,
+          "end": 534,
+          "count": 83
+        }
+      ],
+      "sample_question_numbers": [
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "temperature_heat",
+      "source_file": "physics-solutions-03.json",
+      "count": 68,
+      "ranges": [
+        {
+          "start": 321,
+          "end": 388,
+          "count": 68
+        }
+      ],
+      "sample_question_numbers": [
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "electrostatics",
+      "source_file": "physics-solutions-03.json",
+      "count": 63,
+      "ranges": [
+        {
+          "start": 389,
+          "end": 451,
+          "count": 63
+        }
+      ],
+      "sample_question_numbers": [
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "physics_measurement",
+      "source_file": "physics-solutions-01.json",
+      "count": 50,
+      "ranges": [
+        {
+          "start": 1,
+          "end": 50,
+          "count": 50
+        }
+      ],
+      "sample_question_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "current_electricity",
+      "source_file": "physics-solutions-07.json",
+      "count": 49,
+      "ranges": [
+        {
+          "start": 627,
+          "end": 675,
+          "count": 49
+        }
+      ],
+      "sample_question_numbers": [
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633,
+        634
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "magnetism_induction",
+      "source_file": "physics-solutions-08.json",
+      "count": 49,
+      "ranges": [
+        {
+          "start": 694,
+          "end": 742,
+          "count": 49
+        }
+      ],
+      "sample_question_numbers": [
+        694,
+        695,
+        696,
+        697,
+        698,
+        699,
+        700,
+        701
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "physical_properties_matter",
+      "source_file": "physics-solutions-01.json",
+      "count": 47,
+      "ranges": [
+        {
+          "start": 61,
+          "end": 107,
+          "count": 47
+        }
+      ],
+      "sample_question_numbers": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "temperature_heat",
+      "source_file": "physics-solutions-reconstructed-281-320.json",
+      "count": 40,
+      "ranges": [
+        {
+          "start": 281,
+          "end": 320,
+          "count": 40
+        }
+      ],
+      "sample_question_numbers": [
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "work_energy_power",
+      "source_file": "physics-solutions-reconstructed-221-250.json",
+      "count": 30,
+      "ranges": [
+        {
+          "start": 221,
+          "end": 250,
+          "count": 30
+        }
+      ],
+      "sample_question_numbers": [
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "magnetism_induction",
+      "source_file": "physics-solutions-07.json",
+      "count": 18,
+      "ranges": [
+        {
+          "start": 676,
+          "end": 693,
+          "count": 18
+        }
+      ],
+      "sample_question_numbers": [
+        676,
+        677,
+        678,
+        679,
+        680,
+        681,
+        682,
+        683
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "work_energy_power",
+      "source_file": "physics-solutions-reconstructed-251-280.json",
+      "count": 15,
+      "ranges": [
+        {
+          "start": 251,
+          "end": 265,
+          "count": 15
+        }
+      ],
+      "sample_question_numbers": [
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "temperature_heat",
+      "source_file": "physics-solutions-reconstructed-251-280.json",
+      "count": 15,
+      "ranges": [
+        {
+          "start": 266,
+          "end": 280,
+          "count": 15
+        }
+      ],
+      "sample_question_numbers": [
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "physical_properties_matter",
+      "source_file": "physics-solutions-02.json",
+      "count": 3,
+      "ranges": [
+        {
+          "start": 108,
+          "end": 110,
+          "count": 3
+        }
+      ],
+      "sample_question_numbers": [
+        108,
+        109,
+        110
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "math",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "statistics",
+      "source_file": "math-solutions-10.json",
+      "count": 2,
+      "ranges": [
+        {
+          "start": 2041,
+          "end": 2042,
+          "count": 2
+        }
+      ],
+      "sample_question_numbers": [
+        2041,
+        2042
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    },
+    {
+      "subject": "physics",
+      "issue": "missing_key",
+      "classification": "incomplete_answer_key_solution_can_seed",
+      "topic_key": "electrostatics",
+      "source_file": "physics-solutions-06.json",
+      "count": 1,
+      "ranges": [
+        {
+          "start": 535,
+          "end": 535,
+          "count": 1
+        }
+      ],
+      "sample_question_numbers": [
+        535
+      ],
+      "avg_overlap": 0,
+      "suggested_fix": "Backfill missing answer-key entry from normalized solution.stated_correct_option only after spot-checking the solution text against the question; do not alter raw extraction."
+    }
+  ],
+  "samples": {
+    "missing_key": [
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2041,
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "solution_file": "math-solutions-10.json",
+        "stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2042,
+        "classification": "incomplete_answer_key_solution_can_seed",
+        "solution_file": "math-solutions-10.json",
+        "stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2043,
+        "classification": "incomplete_answer_key_needs_source",
+        "solution_file": null,
+        "stated_correct_option": null
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2044,
+        "classification": "incomplete_answer_key_needs_source",
+        "solution_file": null,
+        "stated_correct_option": null
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2045,
+        "classification": "incomplete_answer_key_needs_source",
+        "solution_file": null,
+        "stated_correct_option": null
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2046,
+        "classification": "incomplete_answer_key_needs_source",
+        "solution_file": null,
+        "stated_correct_option": null
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2047,
+        "classification": "incomplete_answer_key_needs_source",
+        "solution_file": null,
+        "stated_correct_option": null
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2048,
+        "classification": "incomplete_answer_key_needs_source",
+        "solution_file": null,
+        "stated_correct_option": null
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2049,
+        "classification": "incomplete_answer_key_needs_source",
+        "solution_file": null,
+        "stated_correct_option": null
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "question_number": 2050,
+        "classification": "incomplete_answer_key_needs_source",
+        "solution_file": null,
+        "stated_correct_option": null
+      }
+    ],
+    "solution_key_mismatch": [
+      {
+        "subject": "math",
+        "topic_key": "absolute_value_floor",
+        "question_number": 324,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0,
+        "solution_file": "math-solutions-02.json",
+        "key_correct": 4,
+        "solution_stated_correct_option": 1
+      },
+      {
+        "subject": "math",
+        "topic_key": "absolute_value_floor",
+        "question_number": 330,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0,
+        "solution_file": "math-solutions-02.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "absolute_value_floor",
+        "question_number": 332,
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "overlap": 0.25,
+        "solution_file": "math-solutions-02.json",
+        "key_correct": 4,
+        "solution_stated_correct_option": 3
+      },
+      {
+        "subject": "math",
+        "topic_key": "absolute_value_floor",
+        "question_number": 333,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0,
+        "solution_file": "math-solutions-02.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "absolute_value_floor",
+        "question_number": 424,
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "overlap": 0.167,
+        "solution_file": "math-solutions-03.json",
+        "key_correct": 4,
+        "solution_stated_correct_option": 2
+      },
+      {
+        "subject": "math",
+        "topic_key": "trigonometry",
+        "question_number": 764,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0,
+        "solution_file": "math-solutions-04.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "trigonometry",
+        "question_number": 777,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0,
+        "solution_file": "math-solutions-04.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 2
+      },
+      {
+        "subject": "math",
+        "topic_key": "trigonometry",
+        "question_number": 918,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0,
+        "solution_file": "math-solutions-05.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "trigonometry",
+        "question_number": 919,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0.05,
+        "solution_file": "math-solutions-05.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 3
+      },
+      {
+        "subject": "math",
+        "topic_key": "trigonometry",
+        "question_number": 921,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0,
+        "solution_file": "math-solutions-05.json",
+        "key_correct": 2,
+        "solution_stated_correct_option": 1
+      },
+      {
+        "subject": "math",
+        "topic_key": "trigonometry",
+        "question_number": 923,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0.05,
+        "solution_file": "math-solutions-05.json",
+        "key_correct": 3,
+        "solution_stated_correct_option": 2
+      },
+      {
+        "subject": "math",
+        "topic_key": "trigonometry",
+        "question_number": 935,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0.05,
+        "solution_file": "math-solutions-05.json",
+        "key_correct": 4,
+        "solution_stated_correct_option": 1
+      },
+      {
+        "subject": "math",
+        "topic_key": "limits_continuity",
+        "question_number": 988,
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "overlap": 0.571,
+        "solution_file": "math-solutions-05.json",
+        "key_correct": 4,
+        "solution_stated_correct_option": 3
+      },
+      {
+        "subject": "math",
+        "topic_key": "limits_continuity",
+        "question_number": 1016,
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "overlap": 0.667,
+        "solution_file": "math-solutions-05.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "limits_continuity",
+        "question_number": 1083,
+        "classification": "conflicting_extraction_likely_wrong_solution_attached",
+        "overlap": 0,
+        "solution_file": "math-solutions-06.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 2
+      },
+      {
+        "subject": "math",
+        "topic_key": "limits_continuity",
+        "question_number": 1085,
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "overlap": 0.429,
+        "solution_file": "math-solutions-06.json",
+        "key_correct": 2,
+        "solution_stated_correct_option": 3
+      },
+      {
+        "subject": "math",
+        "topic_key": "limits_continuity",
+        "question_number": 1095,
+        "classification": "ambiguous_mismatch_needs_source_check",
+        "overlap": 0.2,
+        "solution_file": "math-solutions-06.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "derivatives",
+        "question_number": 1223,
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "overlap": 0.75,
+        "solution_file": "math-solutions-06.json",
+        "key_correct": 3,
+        "solution_stated_correct_option": 2
+      },
+      {
+        "subject": "math",
+        "topic_key": "derivative_applications",
+        "question_number": 1346,
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "overlap": 0.714,
+        "solution_file": "math-solutions-07.json",
+        "key_correct": 1,
+        "solution_stated_correct_option": 4
+      },
+      {
+        "subject": "math",
+        "topic_key": "derivative_applications",
+        "question_number": 1347,
+        "classification": "stale_solution_stated_correct_option_or_answer_key_disagreement",
+        "overlap": 0.375,
+        "solution_file": "math-solutions-07.json",
+        "key_correct": 2,
+        "solution_stated_correct_option": 4
+      }
+    ]
+  }
+}

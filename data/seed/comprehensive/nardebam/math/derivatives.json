@@ -1,0 +1,5897 @@
+[
+  {
+    "id": "nardebam_math_1405_1156",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار $f$ در کدام نقطه از نقاط مشخص‌‌شده، مشتق $f$ بیشترین مقدار است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1156/stem_1.webp",
+        "alt": "نمودار تابع f و نقاط A, B, C, D",
+        "aspect_ratio": 1.0
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "A"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "B"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "C"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "D"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در نقاط $A$ و $C$ خط مماس افقی و شیب آن صفر است؛ یعنی مشتق در این نقاط برابر صفر است.\nدر نقطهٔ $B$ شیب خط مماس که همان مشتق می‌باشد، منفی است.\nدر نقطهٔ $D$ شیب خط مماس مثبت بوده؛ بنابراین در نقاط داده‌شده در نقطهٔ $D$ بیشترین مقدار مشتق وجود دارد."
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1156/solution_2.webp",
+        "alt": "نمودار تابع با نقاط مشخص شده A, B, C, D",
+        "aspect_ratio": 0.4836
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1156,
+      "question_pdf": "10.pdf",
+      "question_page": 11,
+      "solution_page": 108,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            90,
+            790,
+            260,
+            910
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f و نقاط A, B, C, D"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0108.jpg",
+          "box": [
+            128,
+            706,
+            235,
+            874
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار تابع با نقاط مشخص شده A, B, C, D"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1157",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار تابع $f$ در کدام نقطه حاصل‌ضرب مقدار تابع در مقدار مشتق تابع کم‌ترین مقدار است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1157/stem_1.webp",
+        "alt": "نمودار تابع f با نقاط A و B و C و D",
+        "aspect_ratio": 0.4308
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1157/stem_2.webp",
+        "alt": "نمودار تابع f",
+        "aspect_ratio": 1.2711
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "A"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "B"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "C"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "D"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در نقطه $A$ مقدار تابع مثبت و مقدار مشتق تابع صفر است؛ بنابراین حاصل‌ضرب آن‌ها صفر است.\nدر نقطه $B$ مقدار تابع و مقدار مشتق تابع منفی و در نتیجه حاصل‌ضرب آن‌ها مثبت است.\nدر نقطه $D$ مقدار تابع و مقدار مشتق تابع مثبت و در نتیجه حاصل‌ضرب آن‌ها مثبت است.\nدر نقطه $C$ مقدار تابع منفی و مقدار مشتق تابع مثبت است، بنابراین حاصل‌ضرب آن‌ها منفی و کم‌ترین مقدار است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1157,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 108,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            65,
+            45,
+            172,
+            235
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f با نقاط A و B و C و D"
+        },
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            45,
+            75,
+            230,
+            175
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1158",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "شیب خط مماس بر نمودار تابع $f(x) = \\sin(x + \\frac{\\pi}{4})$ در نقاط $x = \\frac{\\pi}{2}$، $x = \\pi$ و $x = \\frac{3\\pi}{2}$ را به ترتیب $m_1$، $m_2$ و $m_3$ می‌نامیم. کدام رابطه درست است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$m_1 < m_2 < m_3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$m_2 < m_1 < m_3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$m_3 < m_2 < m_1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$m_2 < m_3 < m_1$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $f(x) = \\sin(x + \\frac{\\pi}{2})$ همان تابع $f(x) = \\cos x$ است. این تابع را رسم می‌کنیم:\nواضح است مشتق در نقطه $\\frac{\\pi}{2}$ منفی، در نقطه $\\pi$ صفر و در نقطه $\\frac{3\\pi}{2}$ مثبت است؛ یعنی:\n$m_1 < m_2 < m_3$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1158/solution_1.webp",
+        "alt": "نمودار تابع کسینوس با نقاط پی دوم، پی و سه پی دوم",
+        "aspect_ratio": 2.2395
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1158,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0109.jpg",
+          "box": [
+            450,
+            200,
+            850,
+            320
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار تابع کسینوس با نقاط پی دوم، پی و سه پی دوم"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1159",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با توجه به شکل مقابل، اگر $-2 = f'(-2)$ باشد، $\\alpha$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1159/stem_1.webp",
+        "alt": "نمودار تابع f و خط مماس در نقطه منفی دو",
+        "aspect_ratio": 0.6168
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1159/stem_2.webp",
+        "alt": "نمودار خط و منحنی",
+        "aspect_ratio": 1.0504
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{5}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{7}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شیب خط مماس بر تابع $f$ در نقطه $x = -2$ برابر $f'(-2) = -2$ است. خط مماس از نقطه $(-2, -1)$ نیز می‌گذرد.\nمعادله خط مماس: $y - (-1) = -2(x + 2) \\Rightarrow y = -2x - 5$\n$y = 0 \\Rightarrow -2x - 5 = 0 \\Rightarrow x = -\\frac{5}{2} \\Rightarrow \\alpha = -\\frac{5}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1159,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            213,
+            44,
+            323,
+            177
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f و خط مماس در نقطه منفی دو"
+        },
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            45,
+            220,
+            180,
+            310
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار خط و منحنی"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1160",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل، نمودار تابع $f(x) = x^3 - x^2 + a$ رسم شده است. با فرض $1 = f'(1)$، مقدار $a$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1160/stem_1.webp",
+        "alt": "نمودار تابع درجه سه f",
+        "aspect_ratio": 0.5383
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1160/stem_2.webp",
+        "alt": "نمودار تابع",
+        "aspect_ratio": 0.9935
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{3}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{4}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{3}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شیب خط مماس بر نمودار $f(x)$ در نقطه $x = 1$ همان $f'(1)$ می‌باشد. عرض از مبدأ این خط برابر $-2$ است. در نتیجه معادله خط مماس به صورت $y = x - 2$ می‌باشد. مقدار تابع $f(x)$ در $x = 1$ با مقدار خط مماس در این نقطه برابر است.\n$f(1) = 1 - 2 = -1$\nدر نتیجه:\n$f(x) = x^3 - x^2 + a \\Rightarrow f(1) = 1 - 1 + a = -1 \\Rightarrow a = -1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1160,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            317,
+            50,
+            426,
+            203
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع درجه سه f"
+        },
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            45,
+            330,
+            200,
+            440
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1161",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار $f$ به صورت مقابل است. اگر $\\frac{5}{2} = f'(5) - f'(2)$ باشد، مقدار $f'(2)$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1161/stem_1.webp",
+        "alt": "نمودار تابع f",
+        "aspect_ratio": 0.4851
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1161/stem_2.webp",
+        "alt": "نمودار تابع",
+        "aspect_ratio": 1.744
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{5}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خطوط مماس بر $f$ در نقاط $2$ و $5$ بر هم عمودند؛ یعنی حاصل‌ضرب شیب آن‌ها برابر $-1$ است:\n$\\Rightarrow f'(2)f'(5) = -1 \\Rightarrow f'(5) = \\frac{-1}{f'(2)}$\nاز طرفی:\n$f'(5) - f'(2) = \\frac{5}{2} \\Rightarrow -\\frac{1}{f'(2)} - f'(2) = \\frac{5}{2}$\n$\\xrightarrow{f'(2) = k} -\\frac{1}{k} - k = \\frac{5}{2} \\Rightarrow 2k^2 + 5k + 2 = 0$\n$\\Rightarrow k = \\frac{-5 \\pm \\sqrt{9}}{4} \\Rightarrow \\begin{cases} k = -\\frac{1}{2} \\ \\checkmark \\\\ k = -2 \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1161,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            424,
+            88,
+            517,
+            235
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f"
+        },
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            45,
+            450,
+            230,
+            520
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1162",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $y = 2x - 5$ در نقطهٔ $x = 3$ بر نمودار تابع $y = f(x)$ مماس است. حاصل $\\lim_{h \\to 0} \\frac{f(3 - 2h) - 1}{h}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خط $y = 2x - 5$ در نقطه $x = 3$ بر نمودار تابع $f(x)$ مماس است؛ بنابراین $f(3) = 1$ و $f'(3) = 2$. در نتیجه حد داده‌شده مبهم بوده و باید آن را رفع ابهام کنیم:\n$-2h = t \\Rightarrow h = -\\frac{t}{2}$\n$\\lim_{h \\to 0} \\frac{f(3-2h)-1}{h} = \\lim_{t \\to 0} \\frac{f(3+t)-f(3)}{-\\frac{t}{2}}$\n$= -2 \\lim_{t \\to 0} \\frac{f(3+t)-f(3)}{t} = -2 f'(3) = -4$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1162,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1163",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $d$ با شیب $m$ از نقاطی به طول $4$ و $4 - \\frac{h}{2}$ واقع بر نمودار $f(x) = x^2$ عبور می‌کند. حاصل $\\lim_{h \\to 0} m$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خط $d$ از نقاط $(4, 16)$ و $(4-\\frac{h}{2}, (4-\\frac{h}{2})^2)$ عبور می‌کند:\n$m = \\frac{(4-\\frac{h}{2})^2 - 16}{(4-\\frac{h}{2}) - 4}$\n$\\lim_{h \\to 0} m = \\lim_{h \\to 0} \\frac{(4-\\frac{h}{2})^2 - 16}{(4-\\frac{h}{2}) - 4} = \\lim_{h \\to 0} \\frac{(4-\\frac{h}{2}-4)(4-\\frac{h}{2}+4)}{-\\frac{h}{2}}$\n$= \\lim_{h \\to 0} \\frac{-\\frac{h}{2}(8-\\frac{h}{2})}{-\\frac{h}{2}} = \\lim_{h \\to 0} 8 - \\frac{h}{2} = 8$\nمقدار به دست آمده همان $f'(4)$ است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1163,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1164",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $y = 4x - 5$ در نقطهٔ $x = 1$ بر نمودار تابع $y = f(x)$ مماس است. حاصل $\\lim_{x \\to 1} \\frac{f(x) + 1}{x^2 + 4x - 5}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خط $y = 4x - 5$ در نقطه $x = 1$ بر نمودار تابع $y = f(x)$ مماس است؛ بنابراین:\n$f(1) = -1$, $f'(1) = 4$\nدر نتیجه حد داده‌شده مبهم بوده و باید آن را رفع ابهام کنیم:\n$\\lim_{x \\to 1} \\frac{f(x)+1}{x^2+4x-5} = \\lim_{x \\to 1} \\frac{f(x)-f(1)}{(x-1)(x+5)} = \\frac{1}{6} \\lim_{x \\to 1} \\frac{f(x)-f(1)}{x-1}$\n$= \\frac{1}{6} f'(1) = \\frac{4}{6} = \\frac{2}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1164,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1165",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط گذرنده از نقاط $A(1, 2)$ و $B(2, 5)$ در نقطهٔ $x = 3$ بر نمودار تابع پیوستهٔ $f$ مماس است. حاصل $\\lim_{x \\to 3} \\frac{f^2(x) - 8f(x)}{x - 3}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{8}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله خط گذرا بر $A(1,2)$ و $B(2,5)$ را به دست می‌آوریم:\n$AB: y - 2 = \\frac{5-2}{2-1}(x-1) \\Rightarrow y = 3x - 1$\nاین خط در نقطه $x = 3$ بر نمودار تابع $f$ مماس است. بنابراین $f(3) = 8$ و $f'(3) = 3$. خواهیم داشت:\n$\\lim_{x \\to 3} \\frac{f^2(x)-8f(x)}{x-3} = \\lim_{x \\to 3} \\frac{f(x)(f(x)-8)}{x-3}$\n$= 8 \\lim_{x \\to 3} \\frac{f(x)-f(3)}{x-3} = 8 f'(3) = 24$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1165,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1166",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار $f$ به صورت مقابل است. مقدار $\\lim_{x \\to 1} \\frac{2f^2(x) - f(x) - 6}{x - 1}$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1166/stem_1.webp",
+        "alt": "نمودار تابع f",
+        "aspect_ratio": 0.5096
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1166/stem_2.webp",
+        "alt": "نمودار تابع",
+        "aspect_ratio": 1.1202
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-7$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خط مماس بر تابع $f$ در نقطه $x = 1$ از نقاط $(1,2)$ و $(3,0)$ می‌گذرد:\nمعادله خط مماس: $y - 0 = \\frac{2-0}{1-3}(x-3) \\Rightarrow y = -x + 3$\nاین خط در نقطه $x = 1$ بر تابع $f$ مماس است؛ بنابراین: $f(1) = 2$ و $f'(1) = -1$. خواهیم داشت:\n$\\lim_{x \\to 1} \\frac{2f^2(x)-f(x)-6}{x-1} = \\lim_{x \\to 1} \\frac{(f(x)-2)(2f(x)+3)}{x-1}$\n$= 7 \\lim_{x \\to 1} \\frac{f(x)-f(1)}{x-1} = 7 f'(1) = -7$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1166,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            697,
+            43,
+            799,
+            196
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f"
+        },
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            45,
+            710,
+            190,
+            800
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1167",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقاط $A(4 + h, a)$ و $B(4, b)$ بر روی منحنی $f(x) = \\sqrt{x}$ مفروض‌اند. حاصل $\\lim_{h \\to 0} \\frac{a - b}{h}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $a$ و $b$ را محاسبه می‌کنیم:\n$a = f(4+h) = \\sqrt{4+h}$ , $b = f(4) = 2$\n$\\lim_{h \\to 0} \\frac{a-b}{h} = \\lim_{h \\to 0} \\frac{\\sqrt{4+h}-2}{h}$\n$= \\lim_{h \\to 0} \\frac{\\sqrt{4+h}-2}{h} \\times \\frac{\\sqrt{4+h}+2}{\\sqrt{4+h}+2} = \\lim_{h \\to 0} \\frac{h}{h \\times 4} = \\frac{1}{4}$\nمقدار به دست آمده همان $f'(4)$ می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1167,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1168",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f$ تابعی خطی بوده و $2 = \\lim_{x \\to 2} \\frac{f(x) + 1}{x - 2}$ باشد، مقدار $(f + f')(-2)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-11$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-7$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع خطی $f$ را به صورت $f(x) = ax+b$ می‌نویسیم:\n$\\lim_{x \\to 2} \\frac{f(x)+1}{x-2} = 2 \\Rightarrow f(2) + 1 = 0 \\Rightarrow f(2) = -1$\n$\\Rightarrow 2a + b = -1 \\Rightarrow b = -2a - 1$\nخواهیم داشت:\n$\\lim_{x \\to 2} \\frac{f(x)+1}{x-2} = 2 \\Rightarrow \\lim_{x \\to 2} \\frac{ax+b+1}{x-2} = 2$\n$\\Rightarrow \\lim_{x \\to 2} \\frac{ax - 2a - 1 + 1}{x-2} = 2 \\Rightarrow \\lim_{x \\to 2} \\frac{a(x-2)}{x-2} = 2$\n$\\Rightarrow a = 2 \\Rightarrow b = -5 \\Rightarrow f(x) = 2x - 5$\n$\\Rightarrow \\begin{cases} f(-2) = -9 \\\\ f'(-2) = 2 \\end{cases} \\Rightarrow (f+f')(-2) = -7$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1168,
+      "question_pdf": "10.pdf",
+      "question_page": 12,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1169",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه $3 = \\lim_{x \\to 2} \\frac{f(x) - 2}{x^2 - 4}$ باشد، حاصل $f' \\circ f(2)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چون مخرج کسر در حد $ \\lim_{x \\to 2} \\frac{f(x) - 2}{x^2 - 4} = 3 $ برابر صفر است، صورت کسر نیز باید صفر شود تا جواب حد، عددی حقیقی باشد؛ یعنی $ f(2) = 2 $. بنابراین:\n$ f \\circ f(2) = f(f(2)) = f'(2) $\nاز طرفی:\n$ \\lim_{x \\to 2} \\frac{f(x) - 2}{x^2 - 4} = 3 \\Rightarrow \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2} \\times \\frac{1}{x + 2} = 3 \\Rightarrow \\frac{1}{4} \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2} = 3 \\Rightarrow \\frac{1}{4} f'(2) = 3 \\Rightarrow f'(2) = 12 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1169,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 109,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1170",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $4a = \\lim_{h \\to 0} \\frac{f(a) - f(a + h)}{h}$ باشد، حاصل $\\lim_{x \\to a} \\frac{f(x) - f(a)}{x^2 - a^2}$ کدام است؟ ($a \\neq 0$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "حد داده‌شده را ساده می‌کنیم:\n$ \\lim_{h \\to 0} \\frac{f(a) - f(a+h)}{h} = - \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h} = -f'(a) = 4a \\Rightarrow f'(a) = -4a $\nخواهیم داشت:\n$ \\lim_{x \\to a} \\frac{f(x) - f(a)}{x^2 - a^2} = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a} \\times \\frac{1}{x + a} = \\frac{1}{2a} f'(a) = \\frac{1}{2a} (-4a) = -2 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1170,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1171",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $9 = \\lim_{x \\to 3} \\frac{f^3(x) - 27}{x^2 - 9}$ باشد، حاصل $f'(3)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به حد داده‌شده واضح است $ \\lim_{x \\to 3} f(x) = f(3) = 3 $ می‌باشد. بنابراین:\n$ \\lim_{x \\to 3} \\frac{f^3(x) - 27}{x^2 - 9} = \\lim_{x \\to 3} \\frac{(f(x) - 3)(f^2(x) + 3f(x) + 9)}{(x - 3)(x + 3)} = \\frac{27}{6} \\lim_{x \\to 3} \\frac{f(x) - f(3)}{x - 3} = \\frac{27}{6} f'(3) = 9 \\Rightarrow f'(3) = 2 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1171,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1172",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $7 = f(2)$ و $5 = f'(2)$ باشد، حاصل $\\lim_{x \\to 2} \\frac{\\sqrt{2 + f(x)} - 3}{x - 2}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{7}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای رفع ابهام، صورت و مخرج کسر را در مزدوج صورت ضرب می‌کنیم:\n$ \\lim_{x \\to 2} \\frac{\\sqrt{2+f(x)} - 3}{x - 2} \\times \\lim_{x \\to 2} \\frac{\\sqrt{2+f(x)} + 3}{\\sqrt{2+f(x)} + 3} = \\lim_{x \\to 2} \\frac{f(x) - 7}{x - 2} \\times \\frac{1}{6} = \\frac{1}{6} \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2} = \\frac{1}{6} f'(2) = \\frac{5}{6} $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1172,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1173",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f$ تابعی مشتق‌پذیر باشد، با فرض $2 = \\lim_{x \\to 6} \\frac{f(x)}{x - 6}$، مقدار $\\lim_{h \\to 0} \\frac{f(6 + 4h)}{h}$ چه عددی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از حد $ \\lim_{x \\to 6} \\frac{f(x)}{x - 6} = 2 $ درمی‌یابیم $ f(6) = 0 $ و $ f'(6) = 2 $ است. با فرض $ 4h = t $ خواهیم داشت:\n$ \\lim_{h \\to 0} \\frac{f(6+4h)}{h} = \\lim_{t \\to 0} \\frac{f(6+t)}{\\frac{t}{4}} = 4 \\lim_{t \\to 0} \\frac{f(6+t)}{t} = 4 \\lim_{t \\to 0} \\frac{f(6+t) - f(6)}{t} = 4f'(6) = 8 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1173,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1174",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = x^2$ مقدار $\\lim_{h \\to 0} \\frac{f(2 + h) - f(h - 2)}{h}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "حد داده‌شده را ساده کرده، رفع ابهام می‌کنیم:\n$ \\lim_{h \\to 0} \\frac{f(2+h) - f(h-2)}{h} = \\lim_{h \\to 0} \\frac{(2+h)^2 - (h-2)^2}{h} = \\lim_{h \\to 0} \\frac{8h}{h} = 8 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1174,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1175",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $2 = f(4)$ و $2 = \\lim_{x \\to 4} \\frac{4f(x) - xf(4)}{x - 4}$ باشد، حاصل $f'(4)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$ f(4) $ را برابر ۲ قرار می‌دهیم:\n$ \\lim_{x \\to 4} \\frac{4f(x) - 2x}{x - 4} = 2 \\Rightarrow \\lim_{x \\to 4} \\frac{4f(x) - 8 + 8 - 2x}{x - 4} = 2 \\Rightarrow \\lim_{x \\to 4} \\frac{4(f(x) - 2)}{x - 4} + \\lim_{x \\to 4} \\frac{8 - 2x}{x - 4} = 2 \\Rightarrow 4 \\lim_{x \\to 4} \\frac{f(x) - f(4)}{x - 4} + \\lim_{x \\to 4} \\frac{-2(x - 4)}{x - 4} = 2 \\Rightarrow 4f'(4) - 2 = 2 \\Rightarrow f'(4) = 1 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1175,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1176",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = (x^2 - 4)(x^3 - 1)$ باشد، حاصل $f'(2)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$28$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$32$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$ f'(a) = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a} $\n$ \\Rightarrow f'(2) = \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\to 2} \\frac{(x^2 - 4)(x^3 - 1) - 0}{x - 2} = \\lim_{x \\to 2} \\frac{(x - 2)(x + 2)(x^3 - 1)}{x - 2} = 4 \\times 7 = 28 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1176,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1177",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = (x^3 - 1) \\cos \\pi x$، حاصل $f'(1)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به تعریف مشتق داریم:\n$ f'(1) = \\lim_{x \\to 1} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\to 1} \\frac{(x^3 - 1)\\cos \\pi x - 0}{x - 1} = \\lim_{x \\to 1} \\frac{(x - 1)(x^2 + x + 1)\\cos \\pi x}{x - 1} = -3 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1177,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1178",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f$ به صورت مقابل است. اگر $g(x) = (x^2 - 4)f(x)$ باشد، $g'(-2)$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1178/stem_1.webp",
+        "alt": "نمودار تابع f",
+        "aspect_ratio": 0.4779
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-12$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار $ f $ واضح است:\n$ \\lim_{x \\to -2} f(x) = 2 $ و $ f(-2) = 3 $\nخواهیم داشت:\n$ g'(-2) = \\lim_{x \\to -2} \\frac{g(x) - g(-2)}{x + 2} = \\lim_{x \\to -2} \\frac{(x^2 - 4)f(x) - 0}{x + 2} = \\lim_{x \\to -2} \\frac{(x - 2)(x + 2)f(x)}{x + 2} = \\lim_{x \\to -2} (x - 2) \\times \\lim_{x \\to -2} f(x) = (-4)(2) = -8 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1178,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            516,
+            115,
+            620,
+            281
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1179",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل، خط $d$ در نقطهٔ $M$ بر منحنی $y = \\frac{1}{x^2}$ مماس است. عرض نقطهٔ $A$ چند برابر عرض نقطهٔ $B$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1179/stem_1.webp",
+        "alt": "نمودار تابع و خط d مماس در نقطه M",
+        "aspect_ratio": 0.5422
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلهٔ خط $ d $ را به دست می‌آوریم:\n$ f(x) = \\frac{1}{x^2} \\Rightarrow f'(x) = \\frac{-2}{x^3} $\n$ d: y - f(\\alpha) = f'(\\alpha)(x - \\alpha) \\Rightarrow y - \\frac{1}{\\alpha^2} = \\frac{-2}{\\alpha^3}(x - \\alpha) $\nعرض نقطهٔ A برابر عرض از مبدأ خط $ d $ است.\n$ x = 0 \\Rightarrow y - \\frac{1}{\\alpha^2} = \\frac{2}{\\alpha^2} \\Rightarrow y = \\frac{3}{\\alpha^2} \\Rightarrow y_A = \\frac{3}{\\alpha^2} $\nواضح است عرض نقطهٔ B برابر $ \\frac{1}{\\alpha^2} = f(\\alpha) $ است. بنابراین عرض نقطهٔ A سه برابر عرض نقطهٔ B است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1179,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            626,
+            103,
+            735,
+            255
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع و خط d مماس در نقطه M"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1180",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $f$ در $x = 4$ مشتق‌پذیر است به طوری که $f'_+(4) = 2a - 3$ و $f'_-(4) = 2a - 1$. مقدار $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر تابع $ f $ در $ x = a $ مشتق‌پذیر باشد، مشتق چپ و راست در $ x = a $ موجود بوده و با هم برابرند:\n$ f'_+(4) = f'_-(4) \\Rightarrow 2 - 3a = 2a - 1 \\Rightarrow 5a = 3 \\Rightarrow a = \\frac{3}{5} $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1180,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1181",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $f(x) = [4x]$ در کدام نقطهٔ زیر مشتق‌ناپذیر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$x = \\frac{3}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x = \\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x = \\frac{1}{8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x = \\frac{5}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $ g(x) = [y] $ به شرطی در $ x = a $ مشتق‌پذیر است که در آن نقطه پیوسته باشد. در این صورت $ y'(a) = 0 $.\nعبارت $ 4x $ به ازای $ x = \\frac{1}{8} $، $ x = \\frac{3}{8} $ و $ x = \\frac{5}{8} $ عددی غیرصحیح بوده و بنابراین تابع $ f(x) = [4x] $ در این نقاط پیوسته و در نتیجه مشتق‌پذیر است. اما در $ x = \\frac{3}{4} $ حد چپ و راست $ f(x) = [4x] $ نابرابر و تابع ناپیوسته و در نتیجه مشتق‌ناپذیر است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1181,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1182",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اختلاف مشتق چپ و راست تابع $f(x) = (x^2 - 9)[x]$ در $x = 3$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مشتق راست و چپ تابع را در $ x = 3 $ محاسبه می‌کنیم:\n$ f'_+(3) = \\lim_{x \\to 3^+} \\frac{(x^2 - 9)[x] - 0}{x - 3} = \\lim_{x \\to 3^+} \\frac{3(x - 3)(x + 3)}{x - 3} = 18 $\n$ f'_-(3) = \\lim_{x \\to 3^-} \\frac{(x^2 - 9)[x] - 0}{x - 3} = \\lim_{x \\to 3^-} \\frac{2(x - 3)(x + 3)}{x - 3} = 12 $\n$ \\Rightarrow f'_+(3) - f'_-(3) = 18 - 12 = 6 $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1182,
+      "question_pdf": "10.pdf",
+      "question_page": 13,
+      "solution_page": 110,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1183",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار $f$ به صورت مقابل است. اختلاف مشتق چپ و راست تابع $g(x) = \\frac{|x^2 - 4|}{3x - [f(x)]}$ در نقطهٔ $x = 2$ چه قدر است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1183/stem_1.webp",
+        "alt": "نمودار تابع f",
+        "aspect_ratio": 0.8543
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1/2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: از تعریف مشتق استفاده می‌کنیم:\n$g'_+(2) = \\lim_{x \\to 2^+} \\frac{\\frac{|x^2-4|}{3x-[f(x)]}}{x-2} = \\lim_{x \\to 2^+} \\frac{\\frac{(x-2)(x+2)}{3x-1}}{x-2} = \\frac{4}{5}$\n$g'_-(2) = \\lim_{x \\to 2^-} \\frac{\\frac{|x^2-4|}{3x-[f(x)]}}{x-2} = \\lim_{x \\to 2^-} \\frac{\\frac{-(x-2)(x+2)}{3x-4}}{x-2} = -2$\nبنابراین:\n$g'_+(2) - g'_-(2) = \\frac{4}{5} + 2 = \\frac{14}{5} = 2/8$\nروش دوم: تابع $g(x)$ در $x=2$ پیوسته است. تابع $g(x)$ را در همسایگی راست و چپ $2$ به دست آورده، مشتق می‌گیریم:\n$x > 2 \\Rightarrow g(x) = \\frac{x^2-4}{3x-1} \\Rightarrow g'_+(2) = \\frac{(x^2-4)'}{3x-1} = \\frac{2x}{3x-1} = \\frac{4}{5}$\n$x < 2 \\Rightarrow g(x) = \\frac{-(x^2-4)}{3x-4} \\Rightarrow g'_-(2) = \\frac{-(x^2-4)'}{3x-4} = \\frac{-2x}{3x-4} = -2$\nدقت کنید که $x^2-4$ عامل صفرشونده می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1183,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0014.jpg",
+          "box": [
+            47,
+            82,
+            174,
+            189
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1184",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام تابع در $x = 1$ پیوسته است، اما در این نقطه مشتق‌پذیر نیست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$y = (x - 1)|x - 1|$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = (x - 1)^2 |x - 1|$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = (x - 1)[x]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = (x - 1)^2[x]$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: در همه گزینه‌ها به علت وجود عامل صفرشونده $(x-1)$، تابع در $x=1$ پیوسته است. مشتق‌پذیری هر یک را بررسی می‌کنیم:\n۱: $f'(1) = \\lim_{x \\to 1} \\frac{(x-1)|x-1|-0}{x-1} = 0 \\ \\checkmark$\n۲: $f'(1) = \\lim_{x \\to 1} \\frac{(x-1)^2|x-1|-0}{x-1} = 0 \\ \\checkmark$\n۳: $f'(1) = \\lim_{x \\to 1} \\frac{(x-1)[x]-0}{x-1} \\begin{cases} \\xrightarrow{1^+} 1 \\\\ \\xrightarrow{1^-} 0 \\end{cases} \\times$\n۴: $f'(1) = \\lim_{x \\to 1} \\frac{(x-1)^2[x]-0}{x-1} = 0 \\ \\checkmark$\nروش دوم:\nنکته ۱: تابع $f(x) = |x-a|^n g(x)$ ($g(a) \\neq 0$) با شرط $n=1$ در $x=a$ پیوسته ولی مشتق‌ناپذیر است (نقطه گوشه). ولی اگر $n>1$ باشد، $f'(a) = 0$ است. ($g$ در $a$ تعریف شده است.)\nنکته ۲: تابع $f(x) = (x-a)^n [x]$ ($a \\in \\mathbb{Z}$) با شرط $n=1$ در $x=a$ پیوسته ولی مشتق‌ناپذیر است (نقطه گوشه). ولی اگر $n>1$ باشد، $f'(a) = 0$ است.\nبا توجه به نکات ۱ و ۲ واضح است در گزینه ۳ تابع در $x=1$ پیوسته و مشتق‌ناپذیر است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1184,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1185",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر تابع $f(x) = (x^2 + ax + b)[4x]$ در $x = -1$ مشتق‌پذیر باشد، مقدار $a - b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $y = [4x]$ در $x=-1$ ناپیوسته و مشتق‌ناپذیر است. برای این که تابع $f(x)$ در این نقطه مشتق‌پذیر باشد باید:\n$x^2+ax+b = (x+1)^2 \\Rightarrow x^2+ax+b = x^2+2x+1 \\Rightarrow a=2, b=1 \\Rightarrow a-b=1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1185,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1186",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $y = x[f(x)]$ در نقطهٔ $x = 0$ پیوسته است ولی مشتق‌پذیر نیست، ضابطهٔ $f(x)$ کدام می‌تواند باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$|x|$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-x^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\cos x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sin x$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $y = x[f(x)]$ به علت وجود عامل صفرشونده در $x=0$ پیوسته است. این تابع در حالتی که $f(x)$ در $x=0$ ریشه ساده داشته؛ یعنی در $x=0$ تغییر علامت دهد، مشتق‌پذیر نخواهد بود. $f(x) = \\sin x$ این شرایط را داراست.\n$y = x[\\sin x] \\Rightarrow y'(0) = \\lim_{x \\to 0} \\frac{x[\\sin x]-0}{x-0} = \\lim_{x \\to 0} [\\sin x] \\Rightarrow \\begin{cases} \\xrightarrow{0^+} 0 \\\\ \\xrightarrow{0^-} -1 \\end{cases}$\nمشتق تابع $y = x[f(x)]$ به ازای سایر گزینه‌ها در $x=0$ موجود است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1186,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1187",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = 2x^2[-x] + 3$ باشد، $\\lim_{h \\to 0^-} \\frac{f(2+h) - f(2)}{h}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-16$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-24$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: حد داده‌شده را ساده می‌کنیم. واضح است $f(2) = 8[-2]+3 = -13$\n$\\lim_{h \\to 0^-} \\frac{f(2+h)-f(2)}{h} = \\lim_{h \\to 0^-} \\frac{2(2+h)^2[-2-h]+3-(-13)}{h} = \\lim_{h \\to 0^-} \\frac{-4(2+h)^2+16}{h} = \\lim_{h \\to 0^-} \\frac{-4h^2-16h}{h} = \\lim_{h \\to 0^-} \\frac{-4h(h+4)}{h} = -16$\nروش دوم: با توجه به تعریف مشتق، حد داده‌شده همان مشتق چپ تابع $f$ در $x=2$ است. اگر $x \\to 2^-$، آن‌گاه $-x \\to -2^+$ و در نتیجه $[-x] = -2$ است. بنابراین:\n$f(x) = -4x^2+3 \\Rightarrow f'_-(2) = \\lim_{x \\to 2^-} \\frac{-4x^2+3-(-13)}{x-2} = \\lim_{x \\to 2^-} \\frac{-4(x-2)(x+2)}{x-2} = -16$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1187,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1188",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر در تابع $f$ رابطهٔ $-2 = f'_+(4) + f'_-(4)$ برقرار بوده و $f(4) = 0$ باشد، مقدار $\\lim_{h \\to 0^-} \\frac{f(4-3h)}{f(4+2h)}$ چه عددی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{9}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{9}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "حدود $\\lim_{h \\to 0^-} \\frac{f(4-3h)}{h}$ و $\\lim_{h \\to 0^-} \\frac{f(4+2h)}{h}$ را محاسبه کرده، جواب‌ها را بر هم تقسیم می‌کنیم:\n$a = \\lim_{h \\to 0^-} \\frac{f(4-3h)}{h} \\xrightarrow{-3h=t} a = \\lim_{t \\to 0^+} \\frac{f(4+t)-f(4)}{-\\frac{t}{3}} = -3 \\lim_{t \\to 0^+} \\frac{f(4+t)-f(4)}{t} = -3f'_+(4) = 6$\n$b = \\lim_{h \\to 0^-} \\frac{f(4+2h)}{h} \\xrightarrow{2h=t} b = \\lim_{t \\to 0^-} \\frac{f(4+t)-f(4)}{\\frac{t}{2}} = 2 \\lim_{t \\to 0^-} \\frac{f(4+t)-f(4)}{t} = 2f'_-(4) = 4 \\Rightarrow \\frac{a}{b} = \\frac{6}{4} = \\frac{3}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1188,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1189",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = |x^2 - x - 6| [x]$، حاصل $f'_+(3) + f'_-( -2 )$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$f'_+(3)$ و $f'_-(-2)$ را محاسبه می‌کنیم:\n$f'_+(3) = \\lim_{x \\to 3^+} \\frac{|x^2-x-6|\\overbrace{[x]}^{3}-0}{x-3} = \\lim_{x \\to 3^+} \\frac{3(x+2)(x-3)}{x-3} = 15$\n$f'_-(-2) = \\lim_{x \\to (-2)^-} \\frac{|x^2-x-6|\\overbrace{[x]}^{-3}-0}{x+2} = \\lim_{x \\to (-2)^-} \\frac{-3(x+2)(x-3)}{x+2} = 15$\n$\\Rightarrow f'_+(3) + f'_-(-2) = 15+15 = 30$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1189,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1190",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = x^2 + |x|$ باشد، حاصل $\\lim_{h \\to 0^+} \\frac{f(h - 1) - f(-1)}{h}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "حد خواسته‌شده همان مشتق راست تابع $f$ در $x=-1$ یعنی $f'_+(-1)$ است.\n$f'_+(-1) = \\lim_{x \\to (-1)^+} \\frac{|x^2+x|-0}{x+1} = \\lim_{x \\to (-1)^+} \\frac{-x(x+1)}{x+1} = 1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1190,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1191",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در تابع $f(x) = (x^2 + a)|x - b|$ رابطهٔ $12 = f'_+(1) - f'_-(1)$ برقرار است. $a - b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به رابطۀ $f'_+(1) - f'_-(1) = 12$ واضح است تابع $f$ در $x=1$ مشتق‌ناپذیر و گوشه است.\nتنها نقطۀ مشتق‌ناپذیر در $f(x) = (x^2+a)|x-b|$ نقطۀ $x=b$ است؛ بنابراین $b=1$. خواهیم داشت:\n$f'_+(1) = \\lim_{x \\to 1^+} \\frac{(x^2+a)|x-1|-0}{x-1} = \\lim_{x \\to 1^+} \\frac{(x^2+a)(x-1)}{x-1} = 1+a$\n$f'_-(1) = \\lim_{x \\to 1^-} \\frac{(x^2+a)|x-1|-0}{x-1} = \\lim_{x \\to 1^-} \\frac{-(x^2+a)(x-1)}{x-1} = -1-a$\n$\\Rightarrow (1+a) - (-1-a) = 12 \\Rightarrow 2a = 10 \\Rightarrow a=5$\n$\\Rightarrow a-b = 4$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1191,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1192",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر تابع $f(x) = |3x^2 - x + m|$ در $x = -1$ و $x = k$ مشتق‌ناپذیر باشد، $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{4}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{4}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چون تابع $f(x)$ در $x=-1$ مشتق‌ناپذیر است، نتیجه می‌شود $x=-1$ ریشۀ سادۀ عبارت داخل قدرمطلق است. از طرفی جمع ریشه‌های عبارت داخل قدرمطلق برابر $\\frac{1}{3}$ است. بنابراین اگر ریشۀ دوم را $k$ بنامیم، خواهیم داشت:\n$k - 1 = \\frac{1}{3} \\Rightarrow k = \\frac{4}{3}$\nتابع در $x = \\frac{4}{3}$ نیز مشتق‌ناپذیر است. (نقطۀ گوشه)"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1192,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 111,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1193",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $y = x^2 |x - 2| + 2a |x - 2|$ در $x = 2$ مشتق‌پذیر است. $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ضابطۀ تابع داده‌شده را تجزیه می‌کنیم:\n$y = x^2 |x-2| + 2a|x-2| = |x-2|(x^2+2a)$\n$x=2$ ریشۀ سادۀ داخل قدرمطلق است (نقطۀ گوشه). برای این‌که تابع فوق مشتق‌پذیر باشد، $x^2+2a$ به ازای $x=2$ باید برابر صفر باشد:\n$4+2a = 0 \\Rightarrow a=-2$\nتذکر: می‌توانستیم با محاسبۀ مشتق چپ و راست در $x=2$ و برابری آن‌ها به جواب برسیم."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1193,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1194",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = \\begin{cases} \\frac{(1 - \\cos 2x)x}{\\sin^3 x} & x \\neq 0 \\\\ 0 & x = 0 \\end{cases}$، مقدار $f'(0)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "وجود ندارد."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: ابتدا پیوستگی تابع $f$ را در $x=0$ بررسی می‌کنیم:\n$\\lim_{x \\to 0} f(x) = \\lim_{x \\to 0} \\frac{(1-\\cos 2x)x}{\\sin^2 x} = \\lim_{x \\to 0} \\frac{(2\\sin^2 x)x}{\\sin^2 x} = \\lim_{x \\to 0} 2x = 0 = f(0)$ .پیوسته است\nبرای محاسبۀ $f'(0)$ کافی است از عامل صفرشوندۀ $x$ مشتق گرفته و در حد عبارت $\\frac{1-\\cos 2x}{\\sin^2 x}$ وقتی $x \\to 0$ ضرب کنیم:\n$f'(0) = (x)' \\lim_{x \\to 0} \\frac{1-\\cos 2x}{\\sin^2 x} = \\lim_{x \\to 0} \\frac{2\\sin^2 x}{\\sin^2 x} = 2$\nروش دوم: در این گونه سؤالات بهتر است از تعریف مشتق استفاده کنیم:\n$f'(0) = \\lim_{x \\to 0} \\frac{\\frac{(1-\\cos 2x)x}{\\sin^2 x} - 0}{x-0} = \\lim_{x \\to 0} \\frac{2\\sin^2 x}{\\sin^2 x} = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1194,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1195",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $y = \\left| |x| - 4 \\right|$ چند نقطهٔ گوشه دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: تابع را رسم می‌کنیم:\nبا توجه به نمودار واضح است نقاط $x=0$، $x=4$ و $x=-4$ گوشه هستند.\nروش دوم: ریشه‌های سادۀ داخل قدرمطلق نقطۀ گوشه هستند:\n1) $|x| \\Rightarrow x=0\\ \\checkmark$\n2) $|4-|x|| \\Rightarrow 4-|x|=0 \\Rightarrow |x|=4 \\Rightarrow x=\\pm 4\\ \\checkmark$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1195/solution_1.webp",
+        "alt": "نمودار تابع قدرمطلقی شامل نقاط گوشه",
+        "aspect_ratio": 2.2952
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1195,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0112.jpg",
+          "box": [
+            530,
+            720,
+            860,
+            815
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار تابع قدرمطلقی شامل نقاط گوشه"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1196",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نیم‌مماس چپ تابع $f(x) = |x^2 + 4x|$ در نقطهٔ $x = -4$ و نیم‌مماس راست آن در نقطهٔ $x = 0$ ، در نقطهٔ $A$ متقاطع‌اند. عرض نقطهٔ $A$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "یکدیگر را قطع نمی‌کنند."
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نیم‌مماس چپ در نقطۀ $x=-4$ را $\\ell_1$ و نیم‌مماس راست در نقطۀ $x=0$ را $\\ell_2$ می‌نامیم. مشتق چپ تابع در نقطۀ $x=-4$ را به دست می‌آوریم:\n$f'_-( -4 ) = \\lim_{x \\to (-4)^-} \\frac{|x^2+4x|-0}{x+4} = \\lim_{x \\to (-4)^-} \\frac{x(x+4)}{x+4} = -4$\nشیب نیم‌مماس چپ در نقطۀ $x=-4$ برابر $-4$ بوده و از نقطۀ $(-4, 0)$ عبور می‌کند:\n$\\ell_1 : y = -4x - 16$\nمشتق راست تابع در نقطۀ $x=0$ را محاسبه می‌کنیم:\n$f'_+(0) = \\lim_{x \\to 0^+} \\frac{|x^2+4x|-0}{x} = \\lim_{x \\to 0^+} \\frac{x(x+4)}{x} = 4 \\Rightarrow \\ell_2 : y = 4x$\nاکنون محل تلاقی $\\ell_1$ و $\\ell_2$ را به دست می‌آوریم:\n$\\ell_1 = \\ell_2 \\Rightarrow -4x-16 = 4x \\Rightarrow 8x = -16 \\Rightarrow x=-2 \\Rightarrow y=-8$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1196,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1197",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نیم‌مماس چپ و راست تابع $f(x) = |x + 2|\\sqrt{x + a}$ در نقطهٔ گوشهٔ آن بر هم عمودند، مقدار $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ریشۀ سادۀ داخل قدرمطلق $x=-2$ و نقطۀ گوشه است.\n$f'_+(-2) = \\lim_{x \\to (-2)^+} \\frac{|x+2|\\sqrt{x+a}-0}{x+2} = \\lim_{x \\to (-2)^+} \\frac{(x+2)\\sqrt{x+a}}{x+2} = \\sqrt{a-2}$\n$f'_-( -2 ) = \\lim_{x \\to (-2)^-} \\frac{|x+2|\\sqrt{x+a}-0}{x+2} = \\lim_{x \\to (-2)^-} \\frac{-(x+2)\\sqrt{x+a}}{x+2} = -\\sqrt{a-2}$\nنیم‌مماس راست و چپ بر هم عمودند:\n$f'_+(-2) f'_-( -2 ) = -1 \\Rightarrow \\sqrt{a-2} (-\\sqrt{a-2}) = -1 \\Rightarrow a-2 = 1 \\Rightarrow a=3$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1197,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1198",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در کدام نقطه مماس بر نمودار تابع $y = \\sqrt[3]{2x^2 + x}$ موازی محور $y$ها است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$x = 2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x = -2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x = \\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x = -\\frac{1}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم تابع در ریشه‌های زیر رادیکال مماس قائم دارد:\n$2x^2+x=0 \\Rightarrow \\begin{cases} x=0 \\\\ x = -\\frac{1}{2}\\ \\checkmark \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1198,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1199",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نیم‌مماس‌ها در نقطهٔ گوشهٔ تابع $f(x) = |x| \\sqrt[3]{x - 8}$ در ادامه، خط مماس قائم آن را در نقاط $A$ و $B$ قطع می‌کنند. طول پاره‌خط $AB$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$32$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "طول نقطۀ گوشۀ تابع $f(x)$ ریشۀ سادۀ داخل قدرمطلق یعنی $x=0$ است. خط مماس قائم نیز $x=8$ می‌باشد. نیم‌مماس‌های راست و چپ در نقطۀ $x=0$ را می‌یابیم:\n$f'_+(0) = (x)' \\sqrt[3]{x-8} = \\sqrt[3]{x-8} = \\sqrt[3]{-8} = -2$\n$\\Rightarrow \\text{نیم‌مماس راست} : y = -2x \\Rightarrow A(8, -16)$\n$f'_-(0) = (-x)' \\sqrt[3]{x-8} = -\\sqrt[3]{x-8} = -\\sqrt[3]{-8} = 2$\n$\\Rightarrow \\text{نیم‌مماس چپ} : y = 2x \\Rightarrow B(8, 16)$\nبنابراین:\n$AB = 32$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1199,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1200",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خطوط $x = 2$ و $x = a$ خطوط مماس قائم تابع $y = \\sqrt[3]{x^2 + 4x + b}$ می‌باشند. $a + b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-18$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال در $x=2$ و $x=a$ برابر صفر است:\n$x^2+4x+b = 0 \\xrightarrow{x=2} 4+8+b = 0 \\Rightarrow b=-12$\nبنابراین:\n$x^2+4x-12 = 0 \\Rightarrow (x+6)(x-2) = 0 \\Rightarrow \\begin{cases} x=2 \\\\ x=-6\\ \\checkmark \\end{cases}$\nدر نتیجه $a$ همان $-6$ است.\n$\\Rightarrow a+b = -6 - 12 = -18$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1200,
+      "question_pdf": "10.pdf",
+      "question_page": 14,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1201",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام تابع زیر در $x = 1$ خط مماس قائم دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$y = \\sqrt{(x - 1)}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = (x - 1)\\sqrt[3]{x - 1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = (x - 1)[x]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = (x - 1)|x - 1|$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در $x=1$ ریشۀ زیر رادیکال بوده و تابع در این نقطه مماس قائم دارد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1201,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1202",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار مشتق تابع $f(x) = \\frac{x + 9}{x}$ در نقطهٔ $x = 3$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در گزینه‌های $2$ و $4$: در نقطۀ $x=1$ مشتق تابع برابر صفر و مماس افقی است.\nدر $3$: نقطۀ $x=1$ نقطۀ گوشه است.\nروش اول: می‌دانیم:\n$y = \\dfrac{f}{g} \\Rightarrow y' = \\dfrac{f'g-g'f}{g^2}$\n$y = \\dfrac{x+9}{x} \\Rightarrow y' = \\dfrac{x-(x+9)}{x^2} = \\dfrac{-9}{x^2} \\xrightarrow{x=3} y' = -1$\nروش دوم: می‌دانیم:\n$y = \\dfrac{ax+b}{cx+d} \\Rightarrow y' = \\dfrac{ad-bc}{(cx+d)^2}$\n$y = \\dfrac{x+9}{x} \\Rightarrow y' = \\dfrac{0-9}{x^2} = -\\dfrac{9}{x^2} \\xrightarrow{x=3} y' = -1$\nروش سوم: می‌دانیم:\n$y = \\dfrac{a}{x} \\Rightarrow y' = -\\dfrac{a}{x^2}$\n$y = \\dfrac{x+9}{x} = 1 + \\dfrac{9}{x} \\Rightarrow y' = -\\dfrac{9}{x^2} \\xrightarrow{x=3} y' = -1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1202,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 112,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1203",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = 2x - \\sqrt{x + 7}$، مقدار $f'(2)$ چه عددی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{11}{6}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$f'(x)$ را محاسبه می‌کنیم:\n$f(x) = 2x - \\sqrt{x+7} \\Rightarrow f'(x) = 2 - \\dfrac{1}{2\\sqrt{x+7}}$\n$\\Rightarrow f'(2) = 2 - \\dfrac{1}{2\\times 3} = 2 - \\dfrac{1}{6} = \\dfrac{11}{6}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1203,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1204",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{x + 2}{x - 2}$، مقدار $a$ چه عددی باشد، تا رابطهٔ $f'(a) = -4$ برقرار باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$ یا $-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$ یا $3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$ یا $3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$ یا $-3$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$y = \\dfrac{ax+b}{cx+d} \\Rightarrow y' = \\dfrac{ad-bc}{(cx+d)^2}$\n$f(x) = \\dfrac{x+2}{x-2} \\Rightarrow f'(x) = \\dfrac{-2-2}{(x-2)^2} = \\dfrac{-4}{(x-2)^2}$\nخواهیم داشت:\n$f'(a) = \\dfrac{-4}{(a-2)^2} = -4 \\Rightarrow (a-2)^2 = 1 \\Rightarrow \\begin{cases} a=3 \\\\ a=1 \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1204,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1205",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\sqrt{x}(2x^2 - 3x)$ باشد، مقدار $f'(4)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$31$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: می‌دانیم:\n$y=f.g \\Rightarrow y' = f'g + g'f$\n$f(x) = \\sqrt{x}(2x^2-3x)$\n$\\Rightarrow f'(x) = \\dfrac{1}{2\\sqrt{x}}(2x^2-3x) + (4x-3)\\sqrt{x}$\n$\\Rightarrow f'(4) = \\dfrac{1}{4}(20) + (13)(2) = 31$\nروش دوم: ابتدا $f(x)$ را ساده می‌کنیم:\n$f(x) = x^{\\frac{1}{2}}(2x^2-3x) = 2x^{\\frac{5}{2}} - 3x^{\\frac{3}{2}}$\n$\\Rightarrow f'(x) = 5x^{\\frac{3}{2}} - \\dfrac{9}{2}x^{\\frac{1}{2}} \\Rightarrow f'(4) = 5(4)^{\\frac{3}{2}} - \\dfrac{9}{2}(4)^{\\frac{1}{2}}$\n$= 40 - 9 = 31$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1205,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1206",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{x^2 - 4x + a}{3x + 1}$ و $f'(0) = -10$ باشد، $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$y = \\dfrac{f}{g} \\Rightarrow y' = \\dfrac{f'g-g'f}{g^2} \\quad f(x) = \\dfrac{x^2-4x+a}{3x+1}$\n$\\Rightarrow f'(x) = \\dfrac{(2x-4)(3x+1)-3(x^2-4x+a)}{(3x+1)^2}$\nخواهیم داشت:\n$f'(0) = -10 \\Rightarrow \\dfrac{(-4)(1)-3a}{1} = -10 \\Rightarrow 3a = 6 \\Rightarrow a=2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1206,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1207",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در تابع $f(x) = \\frac{x^2 + 5x + 8}{x + 1}$، رابطهٔ $f'(1) = f'(\\alpha)$ برقرار است. $\\alpha$ چه عددی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\dfrac{x^2+5x+8}{x+1}$\n$\\Rightarrow f'(x) = \\dfrac{(2x+5)(x+1)-(x^2+5x+8)}{(x+1)^2} = \\dfrac{x^2+2x-3}{(x+1)^2}$\nخواهیم داشت:\n$f'(\\alpha) = f'(1) \\Rightarrow \\dfrac{\\alpha^2+2\\alpha-3}{(\\alpha+1)^2} = 0$\n$\\Rightarrow \\alpha^2+2\\alpha-3 = 0 \\Rightarrow \\begin{cases} \\alpha = 1 \\\\ \\alpha = -3 \\ \\checkmark \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1207,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1208",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{x - 3}{x + 1}$ و $f'(a) = f'(-1)$ باشد، $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$f'(x)$ را تشکیل می‌دهیم:\n$f(x) = \\dfrac{x-3}{x+1} \\Rightarrow f'(x) = \\dfrac{1-(-3)}{(x+1)^2} = \\dfrac{4}{(x+1)^2}$\nبنابراین:\n$f'(a) = f'(a-1) \\Rightarrow \\dfrac{4}{(a+1)^2} = \\dfrac{4}{a^2} \\Rightarrow (a+1)^2 = a^2$\n$\\Rightarrow 2a+1=0 \\Rightarrow a = -\\dfrac{1}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1208,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1209",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار مشتق $f(x) = \\frac{x + \\sqrt[3]{x}}{\\sqrt[3]{x^2} - 3}$ به ازای $x = 1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$y = \\sqrt[3]{x} \\Rightarrow y' = \\dfrac{1}{3\\sqrt[3]{x^2}} \\quad y = \\sqrt[3]{x^2} \\Rightarrow y' = \\dfrac{2}{3\\sqrt[3]{x}}$\n$f'(x)$ را به دست می‌آوریم:\n$f(x) = \\dfrac{x+\\sqrt[3]{x}}{\\sqrt[3]{x^2}-3}$\n$\\Rightarrow f'(x) = \\dfrac{(1+\\dfrac{1}{3\\sqrt[3]{x^2}})(\\sqrt[3]{x^2}-3) - (\\dfrac{2}{3\\sqrt[3]{x}})(x+\\sqrt[3]{x})}{(\\sqrt[3]{x^2}-3)^2}$\n$\\Rightarrow f'(1) = \\dfrac{(1+\\dfrac{1}{3})(1-3) - (\\dfrac{2}{3})(1+1)}{(1-3)^2} = \\dfrac{-\\dfrac{8}{3} - \\dfrac{4}{3}}{4} = \\dfrac{-4}{4} = -1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1209,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1210",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = \\frac{x - \\sqrt{x^3}}{\\sqrt[3]{x} - 1}$، حاصل $f'(8)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{4}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{8}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $f(x)$ را ساده می‌کنیم:\n$f(x) = \\dfrac{x-\\sqrt[3]{x^2}}{\\sqrt[3]{x}-1} = \\dfrac{\\sqrt[3]{x^2}(\\sqrt[3]{x}-1)}{\\sqrt[3]{x}-1} = \\sqrt[3]{x^2}$\nبنابراین:\n$\\Rightarrow f'(x) = \\dfrac{2}{3\\sqrt[3]{x}} \\Rightarrow f'(8) = \\dfrac{2}{3\\times 2} = \\dfrac{1}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1210,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1211",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = (x + 7)\\sqrt[3]{x}$ و $f'(\\alpha) = 0$ باشد، مقدار $f(\\alpha)$ کدام است؟ ($\\alpha \\neq -7$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-36$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$64$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع مشتق را به دست آورده و ریشه‌های آن را محاسبه می‌کنیم:\n$f(x) = (x+7)^2\\sqrt[3]{x} \\Rightarrow f'(x) = 2(x+7)\\sqrt[3]{x} + \\dfrac{(x+7)^2}{3\\sqrt[3]{x^2}} = 0$\n$\\Rightarrow (x+7)(2\\sqrt[3]{x} + \\dfrac{x+7}{3\\sqrt[3]{x^2}}) = 0 \\xrightarrow{x \\neq -7} 2\\sqrt[3]{x} + \\dfrac{x+7}{3\\sqrt[3]{x^2}} = 0$\n$\\Rightarrow \\dfrac{6x + (x+7)}{3\\sqrt[3]{x^2}} = 0 \\Rightarrow 7x+7=0 \\Rightarrow x=-1 \\Rightarrow \\alpha = -1$\nبنابراین:\n$f(-1) = -36$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1211,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1212",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{\\sqrt{x} + 1}{\\sqrt{x}}$ باشد، حاصل $\\lim_{h \\to 0} \\frac{f(1 - h) - 8}{h}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: می‌دانیم $f(1) = 8$ است. اگر $t = -h$ باشد، خواهیم داشت:\n$\\lim_{h \\to 0} \\dfrac{f(1-h)-f(1)}{h} = \\lim_{t \\to 0} \\dfrac{f(1+t)-f(1)}{-t} = -f'(1)$\n$f'(x)$ را محاسبه می‌کنیم:\n$f(x) = \\dfrac{7x+1}{\\sqrt{x}} \\Rightarrow f'(x) = \\dfrac{7\\sqrt{x} - \\dfrac{7x+1}{2\\sqrt{x}}}{x}$\n$\\Rightarrow f'(1) = \\dfrac{7-4}{1} = 3 \\Rightarrow -f'(1) = -3$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1212,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1213",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{3x - 7}{2x - [x]}$ باشد، حاصل $\\lim_{x \\to 3^+} \\frac{f(x) - f(3)}{x - 3}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{16}{9}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{9}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{16}{9}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$\\lim_{x \\to 3^+} \\frac{f(x) - f(3)}{x - 3} = f'_+(3)$\nتابع $f(x)$ در $x=3$ پیوستگی راست دارد؛ بنابراین:\n$f(x) = \\frac{3x-7}{2x - [x]} \\Rightarrow f(x) = \\frac{3x-7}{2x-3} \\Rightarrow f'(x) = \\frac{-9 - (-14)}{(2x-3)^2}$\n$\\Rightarrow f'_+(3) = \\frac{5}{9}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1213,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 113,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1214",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{4}{1 - x}$، به کمک تعریف مشتق حاصل $\\lim_{x \\to \\pm\\infty} x(f(-\\frac{3}{x}) - 4)$ چه عددی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-12$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با فرض $t = \\frac{3}{x}$ خواهیم داشت:\n$\\lim_{x \\to +\\infty} x(f(\\frac{3}{x}) - 4) = \\lim_{t \\to 0} \\frac{3}{t} (f(t) - 4)$\n$= 3\\lim_{t \\to 0} \\frac{f(t) - f(0)}{t - 0} = 3f'(0)$\n$f'(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{4}{1-x} \\Rightarrow f'(x) = \\frac{4}{(1-x)^2} \\Rightarrow f'(0) = 4$\n$\\Rightarrow 3f'(0) = 12$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1214,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1215",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "یک تابع چندجمله‌ای است به طوری که $f(x) + f'(x) = 3x - 8$، مقدار $f(2)$ چه عددی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-9$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر تابع چندجمله‌ای $f$ درجه $n$ باشد، $f'$ درجه $n-1$ و در نتیجه $f + f'$ درجه $n$ است. چون $f + f'$ درجه یک است؛ بنابراین $f$ نیز درجه ۱ است.\n$f(x) = ax+b \\Rightarrow f'(x) = a$\n$\\Rightarrow f(x) + f'(x) = ax+b+a = 3x-8 \\Rightarrow \\begin{cases} a=3 \\\\ a+b=-8 \\end{cases}$\n$\\Rightarrow f(2) = 2a+b = 6-11 = -5 \\Rightarrow b=-11$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1215,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1216",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = (x^2 - 4)\\sqrt{3x + 10}$، مقدار $f'(2) - f'(-2)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت $x^2-4$ در نقاط ۲ و ۲- برابر صفر است. بنابراین، برای محاسبه $f'(2)$ و $f'(-2)$ از این عامل صفرشونده مشتق گرفته، در بقیه عبارت ضرب می‌کنیم:\n$f(x) = (4-x^2) \\sqrt{3x+10} \\Rightarrow \\begin{cases} f'(2) = (-2x) \\sqrt{3x+10} = -4 \\times 4 = -16 \\\\ f'(-2) = (-2x) \\sqrt{3x+10} = 4 \\times 2 = 8 \\end{cases}$\n$f'(-2) - f'(2) = 8 - (-16) = 24$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1216,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1217",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = (1 - 9x^2)\\sqrt{x - 2a}$، اگر $f'(\\frac{1}{3}) = 6$ باشد، مقدار $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{4}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت $9x^2-1$ در $x = \\frac{1}{3}$ برابر صفر بوده و عامل صفرشونده محسوب می‌شود.\n$f'(\\frac{1}{3}) = (9x^2-1)' \\sqrt{x - 2a} = 18x \\sqrt{x - 2a} = 6\\sqrt{\\frac{1}{3} - 2a} = 6$\n$\\Rightarrow \\frac{1}{3} - 2a = 1 \\Rightarrow 2a = -\\frac{2}{3} \\Rightarrow a = -\\frac{1}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1217,
+      "question_pdf": "10.pdf",
+      "question_page": 15,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1218",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f$ تابعی مشتق‌پذیر بوده و $\\lim_{x \\to ۲} \\frac{f(x) - ۳}{x^۲ - ۴} = ۶$ و $g(x) = x - \\frac{۴}{x}$ باشد، حاصل $(f.g)'$ به ازای $x=۲$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: $6 = \\lim_{x \\to 2} \\frac{f(x)-3}{x^2-4}$ است؛ بنابراین $f(2) = 3$ بوده و داریم:\n$\\lim_{x \\to 2} \\frac{f(x)-3}{(x-2)(x+2)} = \\lim_{x \\to 2} \\frac{f(x)-f(2)}{x-2} \\times \\frac{1}{4} = \\frac{1}{4}f'(2) = 6$\n$\\Rightarrow f'(2) = 24$\n$g'(x)$ را محاسبه می‌کنیم:\n$g(x) = x - \\frac{4}{x} \\Rightarrow g'(x) = 1 + \\frac{4}{x^2} \\Rightarrow \\begin{cases} g(2) = 0 \\\\ g'(2) = 2 \\end{cases}$\nبنابراین:\n$(f.g)'(2) = f'(2)g(2) + g'(2)f(2) = 24 \\times 0 + 2 \\times 3 = 6$\nروش دوم: می‌دانیم $g(2)=0$ است؛ بنابراین: $(f.g)'(2) = g'(2)f(2)$.\n$f(2) = 3$ بوده و نیازی به محاسبه $f'(2)$ نمی‌باشد. $g'(2)$ نیز برابر ۲ است.\n$(fg)'(2) = 2 \\times 3 = 6$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1218,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1219",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\frac{g(x)}{f(x)} = x^۲ + ۱$ ، $f(۲) = ۴$ و $g'(۲) = ۱$ باشد، مقدار $f'(۲)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۳}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵}{۳}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $g(2)$ را به دست می‌آوریم:\n$\\frac{g(2)}{f(2)} = 2^2 + 1 = 5 \\Rightarrow g(2) = 5f(2) = 20$\nحال از دو طرف معادله داده‌شده مشتق می‌گیریم:\n$\\frac{g(x)}{f(x)} = x^2 + 1 \\Rightarrow (\\frac{g(x)}{f(x)})' = (x^2 + 1)'$\n$\\Rightarrow \\frac{g'(x)f(x) - f'(x)g(x)}{f^2(x)} = 2x$\n$\\xrightarrow{x=2} \\frac{g'(2)f(2) - f'(2)g(2)}{f^2(2)} = 4 \\Rightarrow \\frac{(1 \\times 4) - 20f'(2)}{4^2} = 4$\n$\\Rightarrow 4 - 20f'(2) = 4^3 \\Rightarrow 1 - 5f'(2) = 16 \\Rightarrow f'(2) = -3$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1219,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1220",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{۲ + \\sqrt[۳]{x}}{\\sqrt{x}}$ باشد، حاصل مشتق تابع $g(x) = f(x) + ۲xf'(x)$ در $x=۱$ چه قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۱}{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۱}{۹}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مشتق تابع $\\sqrt{x}f(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{2+\\sqrt[3]{x}}{\\sqrt{x}} \\Rightarrow \\sqrt{x}f(x) = 2+\\sqrt[3]{x}$\n$\\Rightarrow (\\sqrt{x}f(x))' = \\frac{1}{3\\sqrt[3]{x^2}} \\Rightarrow \\frac{f(x)}{2\\sqrt{x}} + \\sqrt{x}f'(x) = \\frac{1}{3\\sqrt[3]{x^2}}$\n$\\Rightarrow f(x) + 2xf'(x) = \\frac{2\\sqrt{x}}{3\\sqrt[3]{x^2}} \\Rightarrow g(x) = \\frac{2\\sqrt{x}}{3\\sqrt[3]{x^2}} = \\frac{2}{3}x^{-\\frac{1}{6}}$\nبنابراین:\n$g'(x) = -\\frac{1}{9} x^{-\\frac{7}{6}} \\Rightarrow g'(1) = -\\frac{1}{9}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1220,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1221",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = \\frac{x}{۳x^۲ - x + ۴}$، حاصل $(\\frac{f'}{f^۲})(۲)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۴$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌توانیم $f'(x)$ را محاسبه کرده، سپس مقدار $(\\frac{f'}{f^2})(2)$ را به دست آوریم، اما با کمی دقت متوجه می‌شویم که:\n$(\\frac{1}{f})' = \\frac{-f'}{f^2} \\Rightarrow \\frac{f'}{f^2} = -(\\frac{1}{f})'$\n$\\Rightarrow \\frac{f'}{f^2} = -(\\frac{3x^2 - x + 4}{x})' = -(3x - 1 + \\frac{4}{x})' = -3 + \\frac{4}{x^2}$\n$\\Rightarrow (\\frac{f'}{f^2})(2) = -3 + 1 = -2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1221,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1222",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f$ به صورت مقابل است. اختلاف مشتق چپ و راست تابع $y = \\frac{f(x)}{x}$ در نقطهٔ $x = -۲$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1222/stem_1.webp",
+        "alt": "نمودار تابع f که از نقاط (-3, 0) و (-2, 2) و مبدأ مختصات (0, 0) می‌گذرد.",
+        "aspect_ratio": 0.9463
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۱}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵}{۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۷}{۴}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واضح است شیب نیم‌خط راست برابر $-\\frac{1}{2}$ و شیب نیم‌خط چپ برابر ۲ می‌باشد. یعنی:\n$f'_+( -2) = -\\frac{1}{2}$\n$f'_-( -2) = 2$\nخواهیم داشت:\n$y' = \\frac{xf'(x) - f(x)}{x^2}$\n$y'_+( -2) = \\frac{-2f'_+( -2) - f( -2)}{4} = \\frac{1-2}{4} = -\\frac{1}{4}$\n$y'_-( -2) = \\frac{-2f'_-( -2) - f( -2)}{4} = \\frac{-4-2}{4} = -\\frac{3}{2}$\n$\\Rightarrow -\\frac{1}{4} - (-\\frac{3}{2}) = \\frac{5}{4}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1222,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 114,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0016.jpg",
+          "box": [
+            50,
+            400,
+            250,
+            550
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار تابع f که از نقاط (-3, 0) و (-2, 2) و مبدأ مختصات (0, 0) می‌گذرد."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1223",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار توابع $f$ و $g$ به صورت مقابل است. اگر $h(x) = \\frac{g(x)}{f(x)}$ باشد، $h'(۰)$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1223/stem_1.webp",
+        "alt": "نمودار دو خط f و g که روی محور yها همدیگر را قطع کرده‌اند. خط f از نقطه (2,0) و خط g از نقطه (-1,0) می‌گذرد.",
+        "aspect_ratio": 0.944
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نیم‌خط سمت چپ تابع $g(x)$ از دو نقطهٔ $(1, 4)$ و $(-1, 0)$ عبور می‌کند و معادلهٔ آن به صورت مقابل است: $y = 2x + 2$\nاین نیم‌خط محور $y$ها و تابع $f(x)$ را در نقطهٔ $(0, 2)$ قطع می‌کند.\nتابع $f(x)$ از دو نقطهٔ $(2, 0)$ و $(0, 2)$ عبور کرده و معادلهٔ آن به صورت $y = -x + 2$ می‌باشد.\nبدیهی است:\n$f(0) = g(0) = 2 \\qquad f'(0) = -1 \\qquad g'(0) = 2$\nخواهیم داشت:\n$h(x) = \\frac{g(x)}{f(x)} \\Rightarrow h'(x) = \\frac{g'(x)f(x) - f'(x)g(x)}{f^2(x)}$\n$\\Rightarrow h'(0) = \\frac{g'(0)f(0) - f'(0)g(0)}{f^2(0)} = \\frac{2 \\times 2 - (-1)(2)}{4} = \\frac{6}{4} = \\frac{3}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1223,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0016.jpg",
+          "box": [
+            50,
+            550,
+            250,
+            700
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار دو خط f و g که روی محور yها همدیگر را قطع کرده‌اند. خط f از نقطه (2,0) و خط g از نقطه (-1,0) می‌گذرد."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1224",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = |x^۲ - ۳x| + ۴[x - \\frac{۱}{۲}]$ باشد، مقدار $f'_-(۳)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در همسایگی عدد ۳ عبارت $[\\frac{x}{6}]$ پیوسته و مقدار آن صفر است و در همسایگی چپ عدد ۳، $x^2 - 3x$ منفی می‌باشد.\n$f(x) = |x^2 - 3x| + 4[\\frac{x}{6}] \\Rightarrow f(x) = -x^2 + 3x$\n$\\Rightarrow f'(x) = -2x + 3 \\Rightarrow f'_-(3) = -6 + 3 = -3$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1224,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1225",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{x^۳}{|۲-x|} [۲x]$ باشد، $\\lim_{h \\to ۰^+} \\frac{f(۱+h) - f(۱)}{h}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۸$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$\\lim_{h \\to 0^+} \\frac{f(1+h) - f(1)}{h} = f'_+(1)$\nتابع $f(x)$ در $x = 1$ پیوستگی راست داشته و در همسایگی راست عدد ۱ به صورت زیر است:\n$f(x) = \\frac{x^3}{|2 - x|}[2x] = \\frac{x^3}{2 - x} \\times 2 = \\frac{2x^3}{2 - x}$\nبنابراین:\n$f'(x) = \\frac{6x^2(2 - x) + 2x^3}{(2 - x)^2} \\Rightarrow f'_+(1) = \\frac{6 + 2}{1} = 8$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1225,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1226",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مشتق راست تابع $f(x) = (|x| + [x])\\sqrt[۳]{۴x}$ در نقطهٔ $x = -۲$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $f(x)$ در $x = -2$ پیوستگی راست داشته و در همسایگی راست عدد ۲- به صورت زیر است:\n$f(x) = (|x| + [x])\\sqrt[3]{4x} \\Rightarrow f(x) = (-x - 2)\\sqrt[3]{4x}$\nعبارت $(x + 2)$ عامل صفرشونده است؛ بنابراین:\n$f'(-2) = -\\sqrt[3]{4x} = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1226,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1227",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $f(x) = \\sqrt[۳]{\\frac{۳}{x} - ۲}$ مفروض است. حاصل مشتق تابع $y = f(x - ۱) f(x + ۱)$ در $x=۲$ چه قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۸}{۹}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱۰}{۹}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۸}{۹}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۱۰}{۹}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\sqrt[3]{\\frac{3}{x} - 2} \\Rightarrow f'(x) = \\frac{-\\frac{3}{x^2}}{3\\sqrt[3]{(\\frac{3}{x} - 2)^2}}$\nخواهیم داشت:\n$y = f(x - 1)f(x + 1)$\n$\\Rightarrow y' = f'(x - 1)f(x + 1) + f'(x + 1)f(x - 1)$\n$\\xrightarrow{x = 2} y' = f'(1)f(3) + f'(3)f(1)$\n$= (-1)(-1) + (-\\frac{1}{9})(1) = \\frac{8}{9}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1227,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1228",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{x - ۳}{\\sqrt{۳x + ۷}}$ باشد، حاصل $f'(-۱)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۴}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵}{۴}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$f'(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{x - 3}{\\sqrt{3x + 7}} \\Rightarrow f'(x) = \\frac{\\sqrt{3x + 7} - \\frac{3}{2\\sqrt{3x + 7}}(x - 3)}{3x + 7}$\n$\\Rightarrow f'(-1) = \\frac{2 - \\frac{3}{4}(-4)}{4} = \\frac{2 + 3}{4} = \\frac{5}{4}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1228,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1229",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\sqrt{\\frac{۲x+۱}{x-۳}}$، مقدار $f'(۴)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۵}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۷}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۵}{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۷}{۶}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$y = \\sqrt{u} \\Rightarrow y' = \\frac{u'}{2\\sqrt{u}}$\n$f(x) = \\sqrt{\\frac{2x + 1}{x - 3}} \\Rightarrow f'(x) = \\frac{\\frac{-6 - 1}{(x - 3)^2}}{2\\sqrt{\\frac{2x + 1}{x - 3}}}$\n$\\Rightarrow f'(4) = \\frac{\\frac{-7}{1}}{2 \\times 3} = -\\frac{7}{6}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1229,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1230",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\sqrt{x - ۴\\sqrt{x - ۴}}$ باشد، حاصل $f'(۱۳)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۶}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با فرض $\\sqrt{x - 4} = k$، عبارت $f(x)$ را ساده می‌کنیم:\n$\\sqrt{x - 4} = k \\Rightarrow x = k^2 + 4$\n$f(x) = \\sqrt{x - 4\\sqrt{x - 4}} = \\sqrt{k^2 + 4 - 4k} = \\sqrt{(k - 2)^2} = |k - 2| = |\\sqrt{x - 4} - 2|$\nدر همسایگی عدد ۱۳، عبارت داخل قدرمطلق مثبت است:\n$\\Rightarrow f(x) = \\sqrt{x - 4} - 2 \\Rightarrow f'(x) = \\frac{1}{2\\sqrt{x - 4}}$\n$\\Rightarrow f'(13) = \\frac{1}{6}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1230,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1231",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مشتق تابع $f(x) = x \\sqrt[۳]{\\frac{۳x - ۲}{x + ۱}}$ در نقطهٔ $x = -۲$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۷}{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱۷}{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۷}{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۱۷}{۶}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$y = \\sqrt[n]{u} \\Rightarrow y' = \\frac{u'}{n\\sqrt[n]{u^{n-1}}}$\n$f(x) = x\\sqrt[3]{\\frac{3x - 2}{x + 1}} \\Rightarrow f'(x) = \\sqrt[3]{\\frac{3x - 2}{x + 1}} + (\\sqrt[3]{\\frac{3x - 2}{x + 1}})'x$\n$= \\sqrt[3]{\\frac{3x - 2}{x + 1}} + \\frac{\\frac{5}{(x + 1)^2}}{3\\sqrt[3]{(\\frac{3x - 2}{x + 1})^2}} \\times x$\n$\\Rightarrow f'(-2) = 2 + \\frac{5}{3 \\times 4}(-2) = 2 - \\frac{5}{6} = \\frac{7}{6}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1231,
+      "question_pdf": "10.pdf",
+      "question_page": 16,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1232",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = x - \\sqrt[۳]{x^۳ - x^۲}$ و $f'(\\alpha) = ۰$ باشد، مقدار مثبت $\\alpha$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۸}{۹}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۹}{۸}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع مشتق را به دست آورده، ریشه‌های آن را محاسبه می‌کنیم:\n$f(x) = x - \\sqrt[3]{x^3 - x^2} \\Rightarrow f'(x) = 1 - \\frac{3x^2 - 2x}{3\\sqrt[3]{(x^3 - x^2)^2}} = 0$\n$\\Rightarrow 3\\sqrt[3]{(x^3 - x^2)^2} = 3x^2 - 2x$\n$\\xrightarrow{\\text{به توان ۳}} 27(x^3 - x^2)^2 = (3x^2 - 2x)^3$\n$\\Rightarrow 27x^4(x - 1)^2 = x^3(3x - 2)^3$\n$\\xrightarrow{x > 0} 27x(x - 1)^2 = (3x - 2)^3$\n$\\Rightarrow 27x^3 - 54x^2 + 27x = 27x^3 - 54x^2 + 36x - 8$\n$\\Rightarrow 9x = 8 \\Rightarrow x = \\frac{8}{9}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1232,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1233",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در تابع با ضابطهٔ $f(x) = (\\sqrt{\\frac{x}{۲x - ۷}})^۳$، حاصل $\\lim_{x \\to ۴} \\frac{f(x) - f(۴)}{x - ۴}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۷$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۷$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۲۱$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واضح است $\\lim_{x \\to 4} \\frac{f(x) - f(4)}{x - 4}$ همان $f'(4)$ است.\n$f(x) = (\\sqrt{\\frac{x}{2x - 7}})^3 \\Rightarrow f'(x) = 3(\\sqrt{\\frac{x}{2x - 7}})^2(\\sqrt{\\frac{x}{2x - 7}})'$\n$= \\frac{3x}{2x - 7} \\times \\frac{\\frac{-7}{(2x - 7)^2}}{2\\sqrt{\\frac{x}{2x - 7}}} \\Rightarrow f'(4) = 12 \\times \\frac{-7}{4} = -21$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1233,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 115,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1234",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = \\frac{۳x}{x - \\sqrt{x^۲ + ۱}}$، حاصل $f'(\\frac{۴}{۳})$ چه قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱۶/۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۶/۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۱۶/۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۱۶/۲$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $f(x)$ را ساده کرده و سپس مشتق می‌گیریم:\n$$f(x) = \\frac{3x}{x - \\sqrt{x^2 + 1}} \\times \\frac{x + \\sqrt{x^2 + 1}}{x + \\sqrt{x^2 + 1}} = -3x(x + \\sqrt{x^2 + 1})$$\n$$f'(x) = -3(1 \\times (x + \\sqrt{x^2 + 1}) + (1 + \\frac{x}{\\sqrt{x^2 + 1}}) \\times x)$$\n$$\\Rightarrow f'(\\frac{4}{3}) = -3((\\frac{4}{3} + \\frac{5}{3}) + (1 + \\frac{\\frac{4}{3}}{\\frac{5}{3}}) \\times \\frac{4}{3}) = -3(3 + \\frac{12}{5}) = -\\frac{81}{5} = -16/2$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1234,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1235",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x) = \\frac{۲}{x - \\sqrt{x^۲ + ۴}}$ باشد، مقدار $a$ کدام باشد تا $f'(\\sqrt{۵}) = a f(\\sqrt{۵})$ برقرار باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۱}{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۲}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $f(x)$ را ساده کرده، سپس $f'(x)$ را به دست می‌آوریم:\n$$f(x) = \\frac{2}{x - \\sqrt{x^2 + 4}} \\times \\frac{x + \\sqrt{x^2 + 4}}{x + \\sqrt{x^2 + 4}} = \\frac{2(x + \\sqrt{x^2 + 4})}{-4} = -\\frac{1}{2}(x + \\sqrt{x^2 + 4})$$\n$$\\Rightarrow f'(x) = -\\frac{1}{2}(1 + \\frac{x}{\\sqrt{x^2 + 4}})$$خواهیم داشت:\n$$\\frac{f'(x)}{f(x)} = \\frac{1 + \\frac{x}{\\sqrt{x^2 + 4}}}{x + \\sqrt{x^2 + 4}} = \\frac{1}{\\sqrt{x^2 + 4}} \\Rightarrow a = \\frac{f'(\\sqrt{5})}{f(\\sqrt{5})} = \\frac{1}{3}$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1235,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1236",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x) = \\frac{۳x - ۱}{۴ - x}$، مقدار مشتق $y = x \\sqrt{f(x)}$ در $x = ۳$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱۹}{۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱۱}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱۱}{۱۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳۵}{۱۲}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$$f(x) = \\frac{3x - 1}{4 - x} = \\frac{3x - 1}{-x + 4} \\Rightarrow f'(x) = \\frac{11}{(-x + 4)^2}$$\n$$\\Rightarrow \\begin{cases} f(3) = 8 \\\\ f'(3) = 11 \\end{cases}$$\nحال $y'$ را محاسبه می‌کنیم:\n$$y = x \\sqrt[3]{f(x)} \\Rightarrow y' = \\sqrt[3]{f(x)} + \\frac{f'(x)}{3 \\sqrt[3]{f^2(x)}} \\times x$$\n$$\\Rightarrow y'(3) = \\sqrt[3]{f(3)} + \\frac{f'(3)}{3 \\sqrt[3]{f^2(3)}} \\times 3 = \\sqrt[3]{8} + \\frac{11}{3 \\sqrt[3]{64}} \\times 3 = 2 + \\frac{11}{4} = \\frac{19}{4}$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1236,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1237",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(\\sqrt{x^۲ + ۵} - x) = ۲x^۳$ باشد، مقدار $f'(۱)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۷۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۳۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۷۲$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از دو طرف معادلهٔ داده‌شده مشتق می‌گیریم.\nمی‌دانیم: $(f(u))' = u'f'(u)$\n$$(f(\\sqrt{x^2 + 5} - x))' = (2x^3)'$$\n$$\\Rightarrow (\\frac{x}{\\sqrt{x^2 + 5}} - 1)f'(\\sqrt{x^2 + 5} - x) = 6x^2$$\n$$\\xrightarrow{x=2} (\\frac{2}{3} - 1)f'(1) = 24 \\Rightarrow -\\frac{1}{3}f'(1) = 24$$\n$$\\Rightarrow f'(1) = -72$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1237,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1238",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه $f$ و $g$ توابعی مشتق‌پذیر باشند، به طوری که $f(x^۲ - ۳x) = g(\\sqrt{x + ۶})$. با فرض $f'(۴) = ۰$، مقدار $g'(۳)$ کدام است؟ $(x > \\frac{۳}{۲})$"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۷۲$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از دو طرف معادلهٔ داده‌شده مشتق می‌گیریم:\n$$(f(x^2 - 3x))' = (g(\\sqrt{x + 6}))'$$\n$$\\Rightarrow (2x - 3)f'(x^2 - 3x) = \\frac{1}{2\\sqrt{x + 6}} g'(\\sqrt{x + 6})$$\nحال $x$ را مساوی ۳ قرار می‌دهیم:\n$$\\Rightarrow 3f'(0) = \\frac{1}{6} g'(3) \\Rightarrow g'(3) = 18f'(0) = 72$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1238,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1239",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$f$ تابعی مشتق‌پذیر است به طوری که $\\lim_{x \\to -۲} \\frac{f(۲x + ۲)}{x^۲ - ۴} = ۲$. مشتق $f(-\\frac{۴}{x})$ به ازای $x = ۲$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۱۶$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: با فرض $t = 2x + 2$ خواهیم داشت: $x = \\frac{t - 2}{2}$\nبنابراین:\n$$\\lim_{x \\to -2} \\frac{f(2x + 2)}{x^2 - 4} = 2 \\Rightarrow \\lim_{t \\to -2} \\frac{f(t)}{(\\frac{t - 2}{2})^2 - 4} = \\lim_{t \\to -2} \\frac{f(t)}{\\frac{t^2 - 4t - 12}{4}} = 2$$\n$$\\Rightarrow \\lim_{t \\to -2} \\frac{f(t)}{(t + 2)(t - 6)} = \\frac{1}{2}$$\nبا توجه به این‌که جواب حد عددی حقیقی است، واضح است که $f(-2) = 0$ است.\n$$\\Rightarrow \\lim_{t \\to -2} \\frac{f(t) - f(-2)}{(t + 2)\\underbrace{(t - 6)}_{-8}} = \\frac{1}{2} \\Rightarrow \\lim_{t \\to -2} \\frac{f(t) - f(-2)}{t + 2} = -4$$\n$$\\Rightarrow f'(-2) = -4$$\nحال مشتق $f(-\\frac{4}{x})$ را به ازای $x = 2$ به دست می‌آوریم:\n$$y = f(-\\frac{4}{x}) \\Rightarrow y' = \\frac{4}{x^2} f'(-\\frac{4}{x}) \\xrightarrow{x=2} y' = f'(-2) = -4$$\nروش دوم: از قاعدهٔ هوپیتال استفاده می‌کنیم:\n$$\\lim_{x \\to -2} \\frac{f(2x + 2)}{x^2 - 4} \\xrightarrow{\\text{Hop}} \\lim_{x \\to -2} \\frac{2f'(2x + 2)}{2x} = \\frac{2f'(-2)}{-4} = 2 \\Rightarrow f'(-2) = -4$$\nبقیهٔ راه‌حل مانند روش اول است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1239,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1240",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\lim_{x \\to ۱} \\frac{f(x) - ۲}{x - ۱} = ۷$ برای چندجمله‌ای $f$ برقرار باشد، مقدار مشتق تابع $y = \\frac{f(۳x)}{x}$ در $x = \\frac{۱}{۳}$ چه قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵۷$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۷۱$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: با توجه به $\\lim_{x \\to 1} \\frac{f(x) - 2}{x - 1} = 7$ واضح است $f(1) = 2$ می‌باشد؛ بنابراین:\n$$\\lim_{x \\to 1} \\frac{f(x) - f(1)}{x - 1} = 7 \\Rightarrow f'(1) = 7$$\nحال $y'$ را به دست می‌آوریم:\n$$y = \\frac{f(3x)}{x} \\Rightarrow y' = \\frac{3f'(3x)(x) - f(3x)}{x^2} \\xrightarrow{x = \\frac{1}{3}} y' = \\frac{3f'(1)(\\frac{1}{3}) - f(1)}{\\frac{1}{9}} = \\frac{7 - 2}{\\frac{1}{9}} = 45$$\nروش دوم: از هوپیتال استفاده می‌کنیم:\n$$\\lim_{x \\to 1} \\frac{f(x) - 2}{x - 1} \\xrightarrow{\\text{Hop}} \\lim_{x \\to 1} f'(x) = f'(1) = 7$$\nادامهٔ راه‌حل مانند روش اول است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1240,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1241",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر تابع $f$ در $x = ۳$ مشتق‌پذیر و $\\lim_{x \\to ۳} \\frac{f(x) + ۴}{x - ۳} = \\frac{۱}{۲}$ باشد، آنگاه مشتق $\\frac{f^۲(۳x)}{x}$ در $x = ۱$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۲۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۲۸$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: با توجه به $\\lim_{x \\to 3} \\frac{f(x) + 4}{x - 3} = \\frac{1}{2}$ درمی‌یابیم که $f(3) = -4$ است؛ بنابراین:\n$$\\lim_{x \\to 3} \\frac{f(x) - f(3)}{x - 3} = f'(3) = \\frac{1}{2}$$\nحال از تابع $y = \\frac{f^2(3x)}{x}$ مشتق می‌گیریم:\n$$y' = \\frac{6f'(3x)f(3x)(x) - f^2(3x)}{x^2} \\xrightarrow{x=1} y' = 6f'(3)f(3) - f^2(3) = 6(-4)(\\frac{1}{2}) - 16 = -12 - 16 = -28$$\nروش دوم: از هوپیتال استفاده می‌کنیم:\n$$\\lim_{x \\to 3} \\frac{f(x) + 4}{x - 3} \\xrightarrow{\\text{Hop}} \\lim_{x \\to 3} f'(x) = f'(3) = \\frac{1}{2}$$\nادامهٔ راه‌حل مانند روش اول است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1241,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1242",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\lim_{h \\to ۰} \\frac{f(۲ + ۳h) - ۱}{h} = -۱$، $f$ مشتق‌پذیر و $g(x) = x f(\\frac{۱}{x})$ باشد، $g'(\\frac{۱}{۲})$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۷}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۱}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۵}{۳}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: از $\\lim_{h \\to 0} \\frac{f(2+3h)-1}{h} = 2$ در می‌یابیم $f(2)=1$ است. بنابراین:\n$\\lim_{h \\to 0} \\frac{f(2+3h)-f(2)}{h} = 2 \\Rightarrow 3f'(2) = 2 \\Rightarrow f'(2) = \\frac{2}{3}$\nحال $g'(x)$ را به دست می‌آوریم:\n$g'(x) = xf(\\frac{1}{x}) \\Rightarrow g'(x) = f(\\frac{1}{x}) - \\frac{1}{x^2}f'(\\frac{1}{x}) \\times x$\n$\\Rightarrow g'(\\frac{1}{2}) = f(2) - 2f'(2) = 1 - \\frac{4}{3} = -\\frac{1}{3}$\nروش دوم: از هوپیتال استفاده می‌کنیم:\n$\\lim_{h \\to 0} \\frac{f(2+3h)-1}{h} \\xrightarrow{\\text{Hop}} \\lim_{h \\to 0} 3f'(2+3h) = 3f'(2) = 2$\n$\\Rightarrow f'(2) = \\frac{2}{3}$\nادامهٔ راه‌حل مانند روش اول است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1242,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1243",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار سهمی $y = f(x)$ به صورت مقابل است. مشتق $f^۲(x) - f(x^۲)$ به ازای $x = -۲$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1243/stem_1.webp",
+        "alt": "نمودار یک سهمی که رأس آن در نقطه (2,2) قرار دارد و از نقطه (1- ,0) می‌گذرد.",
+        "aspect_ratio": 0.7251
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۱۷$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۲۰$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار، رأس سهمی نقطهٔ $(2,0)$ است و سهمی از نقطهٔ $(0,-1)$ می‌گذرد:\n$f(x) = a(x-2)^2 \\xrightarrow{f(0)=-1} -1 = 4a \\Rightarrow a = -\\frac{1}{4}$\n$\\Rightarrow f(x) = -\\frac{1}{4}(x-2)^2 \\Rightarrow f'(x) = -\\frac{1}{2}(x-2)$\n$\\Rightarrow \\begin{cases} f(-2) = -4 \\\\ f'(-2) = 2 , f'(4) = -1 \\end{cases}$\nحال مشتق تابع $y = f^2(x) - f(x^2)$ را به دست می‌آوریم:\n$y' = 2f(x)f'(x) - 2xf'(x^2)$\n$\\xrightarrow{x = -2} y = 2f(-2)f'(-2) + 4f'(4)$\n$= 2(-4)(2) + 4(-1) = -20$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1243,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 116,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0017.jpg",
+          "box": [
+            600,
+            100,
+            750,
+            250
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار یک سهمی که رأس آن در نقطه (2,2) قرار دارد و از نقطه (1- ,0) می‌گذرد."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1244",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $f$ در دامنه‌اش مشتق‌پذیر است به طوری که $f(x) - x f(\\frac{۴}{x}) = ۳$. مقدار $f'(۲)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\frac{۳}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۲}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در معادلهٔ داده‌شده $x$ را برابر $2$ قرار می‌دهیم:\n$f(x) - xf(\\frac{4}{x}) = 3 \\xrightarrow{x=2} f(2) - 2f(2) = 3 \\Rightarrow f(2) = -3$\nحال از دو طرف معادلهٔ داده‌شده مشتق می‌گیریم:\n$f'(x) - (f(\\frac{4}{x}) - \\frac{4}{x^2}f'(\\frac{4}{x})(x)) = 0$\n$\\xrightarrow{x=2} f'(2) - (f(2) - 2f'(2)) = 0 \\Rightarrow 3f'(2) - f(2) = 0$\n$\\Rightarrow 3f'(2) + 3 = 0 \\Rightarrow f'(2) = -1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1244,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 117,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1245",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(۱) = g(۱) = ۳$ و $f'(۱) = -g'(۱) = ۲$، حاصل مشتق تابع $f(g^۲(x))$ در $x = ۱$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۵۴$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با فرض $y = (f+g^2)f$ حاصل $y'(1)$ را به دست می‌آوریم:\n$y' = (f+g^2)' f + f'(f+g^2) = (f' + 2gg') f + f'(f+g^2)$\n$\\Rightarrow y'(1) = (f'(1) + 2g(1)g'(1))f(1) + f'(1)(f(1) + g^2(1))$\n$= (2 + 2(3)(-2)) \\times 3 + 2(3+3^2) = (-10) \\times 3 + 2(12)$\n$= -30 + 24 = -6$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1245,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 117,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1246",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(۱) = ۱$ و $f'(۱) = ۳$ باشد، حاصل مشتق تابع $f \\circ f (\\frac{۱}{x})$ در نقطهٔ $x = ۱$ چه قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۱۸$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از تابع $f^2(f(\\frac{1}{x}))$ یا همان $(f(f(\\frac{1}{x})))^2$ مشتق می‌گیریم:\n$(f^2(f(\\frac{1}{x})))' = 2f(f(\\frac{1}{x}))(f(f(\\frac{1}{x})))'$\n$= 2f(f(\\frac{1}{x}))(-\\frac{1}{x^2} f'(\\frac{1}{x}) f'(f(\\frac{1}{x})))$\n$\\xrightarrow{x=1} 2f(f(1))(-f'(1) f'(f(1))) = 2f(1)(-3f'(1))$\n$= 2(-3 \\times 3) = -18$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1246,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 117,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1247",
+    "subject": "math",
+    "topic_key": "derivatives",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $y = \\frac{x}{\\sqrt{x^۲ + ۱}}$ باشد، حاصل $yy'x^۲ + yy' + xy^۲$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^۲ + ۱$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تساوی داده‌شده را به توان $2$ رسانده، پس از مرتب کردن عبارت مشتق می‌گیریم:\n$y = \\frac{x}{\\sqrt{x^2+1}} \\Rightarrow y^2 = \\frac{x^2}{x^2+1} \\Rightarrow y^2x^2 + y^2 = x^2$\n$\\Rightarrow (y^2x^2 + y^2)' = (x^2)' \\Rightarrow 2yy'x^2 + 2xy^2 + 2yy' = 2x$\n$\\Rightarrow yy'x^2 + xy^2 + yy' = x$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1247,
+      "question_pdf": "10.pdf",
+      "question_page": 17,
+      "solution_page": 117,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  }
+]

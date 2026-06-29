@@ -1,0 +1,1571 @@
+[
+  {
+    "question_number": 535,
+    "solution_page": 297,
+    "solution_text": "بار اولیه و نهایی هر صفحه خازن از $Q=CV$ محاسبه شده است: $Q_1=40mC$ و $Q_2=60mC$. با توجه به عوض شدن علامت بار یکی از صفحات، تغییر بار مؤثر $\\Delta Q=100mC$ و کار باتری از $W=\\Delta Q\\,V=1.2J$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 536,
+    "solution_page": 297,
+    "solution_text": "برای سیم، سرعت سوق از $v_d=d/\\Delta t$ با $d=45cm$ و $\\Delta t=3600s$ محاسبه شده و تندی متوسط کاتوره‌ای از $s_{av}=L/\\Delta t$ با مسیر $5.4\\times10^9m$ به دست آمده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 537,
+    "solution_page": 297,
+    "solution_text": "چون در هر میلی‌متر سیم $4\\times10^{22}$ الکترون آزاد است و سرعت سوق $1mm/s$ است، در هر ثانیه همین تعداد الکترون از مقطع می‌گذرد. از $I=ne/t$ جریان $6.4\\times10^3A$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0102.jpg",
+        "box": [
+          145,
+          690,
+          610,
+          840
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدل سیم و ناحیه رنگی برای شمارش الکترون‌ها در سرعت سوق"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 538,
+    "solution_page": 297,
+    "solution_text": "مدار فرضی الکترون با رابطه $q=It$ بررسی شده است. اگر در هر ثانیه $6\\times10^{15}$ بار بنیادی عبور کند، $I=6\\times10^{15}\\times1.6\\times10^{-19}=9.6\\times10^{-4}A$ می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 539,
+    "solution_page": 297,
+    "solution_text": "در ولتاژ ثابت، درصد انرژی ذخیره‌شده با درصد بار عبوری متناسب است. نیمه اول شارژ $2250mAh$ در $0.5h$ و نیمه دوم همین بار در $75min$ انجام می‌شود؛ پس جریان‌ها $4.5A$ و $1.8A$ و اختلاف $2.7A$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 540,
+    "solution_page": 297,
+    "solution_text": "جریان لامپ از $V=RI$ برابر $0.2A$ است و با باتری $50Ah$ زمان کار $t=250h$ می‌شود. انرژی ازدست‌رفته باتری نیز از $\\Delta U=q\\Delta V=(50\\times3600C)(12V)=2.16\\times10^6J$ محاسبه شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 541,
+    "solution_page": 297,
+    "solution_text": "چون ولت‌سنج آرمانی نیست، بخشی از جریان از آن عبور می‌کند و جریان آمپرسنج از جریان مقاومت $R$ بیشتر است. بنابراین $R_{measured}=V/I$ از مقدار واقعی $R$ کوچک‌تر می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0102.jpg",
+        "box": [
+          165,
+          2020,
+          620,
+          2380
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار اندازه‌گیری مقاومت با ولت‌سنج موازی و آمپرسنج سری"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 542,
+    "solution_page": 297,
+    "solution_text": "از عبور بار $7200C$ در هر ساعت، جریان $I=q/t=2A$ به دست می‌آید. سپس قانون اهم $R=V/I=12/2$ مقاومت سیم را $6\\Omega$ می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 543,
+    "solution_page": 298,
+    "solution_text": "شیب نمودار $I-V$ برابر وارون مقاومت است. با استفاده از تشابه مثلث‌های روی نمودار، مقیاس خانه‌های افقی و قائم تعیین شده و برای رساناهای A و B مقدارها $R_A=3\\Omega$ و $R_B=4.5\\Omega$ به دست می‌آید؛ اختلاف $1.5\\Omega$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0103.jpg",
+        "box": [
+          145,
+          260,
+          470,
+          610
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار I-V دو خط A و B با خانه‌بندی و مثلث‌های کمکی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 544,
+    "solution_page": 298,
+    "solution_text": "نمودار $I-V$ دیود نورگسیل با نمودار گزینه‌ها مقایسه شده و شکل متناظر با افزایش غیرخطی جریان در نمودار گزینه ۲ تشخیص داده شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 545,
+    "solution_page": 298,
+    "solution_text": "برای دیود، شیب خط مماس در هر نقطه وارون مقاومت دیود در همان شرایط است. با مقایسه شیب‌ها برای خطوط $L_1$، $L_2$ و $L_3$ ترتیب مقاومت‌ها از رابطه $1/R$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0103.jpg",
+        "box": [
+          120,
+          790,
+          485,
+          1070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار مشخصه دیود با خطوط مماس L1، L2 و L3"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 546,
+    "solution_page": 298,
+    "solution_text": "محیط هر حلقه سیم $2\\pi r$ و طول کل سیم از تعداد حلقه‌ها محاسبه شده است. سپس با $A=\\pi d^2/4$ و $R=\\rho L/A$ مقاومت $8\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 547,
+    "solution_page": 298,
+    "solution_text": "طول و قطر سیم در حالت خم‌شده تغییر نمی‌کند. طول بین A و B دو محیط حلقه است و از $R=\\rho L/A$، با $V_{AB}=60mV$ و $I=400mA$، مقاومت ویژه سیم $1/400\\Omega.cm$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0103.jpg",
+        "box": [
+          115,
+          1545,
+          725,
+          1805
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سیم پیچیده دور استوانه با نقاط A و B و قطر D"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 548,
+    "solution_page": 298,
+    "solution_text": "برای مکعب، چگالی از $\\rho'=m/V$ و ضلع از حجم به دست آمده است. سپس مقاومت مسیر مکعبی از $R=\\rho L/A=\\rho/a$ محاسبه و جریان از $I=V/R$ برابر $20A$ نتیجه شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0103.jpg",
+        "box": [
+          130,
+          2020,
+          520,
+          2370
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مکعب رسانا با ضلع a، سطح مقطع a^2 و اتصال دو سر آن به ولتاژ"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 549,
+    "solution_page": 299,
+    "solution_text": "مقاومت مسیرهای مکعب‌مستطیلی با $R=\\rho L/A$ نوشته شده و نسبت‌های $R_{AB}/R_{CD}$ و $R_{AB}/R_{EF}$ مقایسه شده‌اند. از برابری‌های داده‌شده، رابطه ابعاد جسم به صورت $c=2a=\\sqrt2 b$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 550,
+    "solution_page": 299,
+    "solution_text": "با برابر بودن حجم دو سیم طلا و نیکل، $A_gL_g=A_nL_n$ نوشته می‌شود. با $R=\\rho L/A$ و داده‌های مقاومت ویژه، نسبت سطح‌ها $A_g/A_n=1/2$ و در نتیجه نسبت قطرها $d_g/d_n=\\sqrt2/2$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 551,
+    "solution_page": 299,
+    "solution_text": "برای رساناهای هم‌جرم و هم‌جنس، از $R=\\rho L/A$ و $V=AL$ نتیجه می‌شود $R\\propto1/A^2$. با ثابت بودن ولتاژ و زمان، $\\Delta q\\propto1/R\\propto A^2$ است؛ نسبت سطح‌ها $A_B/A_A=3/2$ و افزایش سطح $50\\%$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 552,
+    "solution_page": 299,
+    "solution_text": "سطح مقطع زرپوش و مغز رسانا از شکل استوانه‌ای نوشته شده است: $A_p=\\pi a^2$ و $A_g=\\pi(a+b)^2-\\pi a^2$. با برابری مقاومت‌ها و جایگذاری مقاومت ویژه‌ها، $b/a=\\sqrt5/2-1$ نتیجه می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0104.jpg",
+        "box": [
+          180,
+          1720,
+          460,
+          1910
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مقطع سیم مرکب با مغز p و پوسته g و شعاع‌های a و b"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 553,
+    "solution_page": 299,
+    "solution_text": "با ثابت ماندن حجم سیم، اگر طول $n$ برابر شود، سطح مقطع $1/n$ برابر و مقاومت $n^2$ برابر می‌شود. در این مورد مقاومت ۴ برابر شده و با ثابت بودن ولتاژ، جریان به یک‌چهارم مقدار قبلی می‌رسد؛ کاهش جریان $75\\%$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [
+      "ادامه محاسبه در page_0105 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 554,
+    "solution_page": 300,
+    "solution_text": "پارامترهای سیم‌های برش‌خورده قبل و بعد از عبور از دستگاه با $R=\\rho L/A$ و ثابت ماندن حجم مقایسه شده‌اند. مقاومت دو تکه پس از پردازش به ترتیب $48\\Omega$ و $144\\Omega$ و اختلاف آن‌ها $96\\Omega$ محاسبه شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 555,
+    "solution_page": 300,
+    "solution_text": "مساحت مقطع دو لوله جیوه‌ای نسبت به شعاع‌ها مقایسه شده است: $A_1=A/4$ و $A_2=4A$. با ثابت بودن حجم کل و رابطه $A_1L_1+A_2L_2=AL$، طول‌ها و سپس $R'=R_1+R_2=2.25R$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0105.jpg",
+        "box": [
+          145,
+          1115,
+          575,
+          1350
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو لوله جیوه‌ای با شعاع‌های r/2 و 2r و طول‌های L1 و L2"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 556,
+    "solution_page": 300,
+    "solution_text": "چاپ توضیح می‌دهد وقتی لامپ روشن می‌شود دمای آن بالا می‌رود و مقاومت رساناهای غیراهمی با افزایش دما کاهش نمی‌یابد؛ بنابراین $R_2<R_1$ پذیرفته نیست.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 557,
+    "solution_page": 300,
+    "solution_text": "رفتار رسانا، نیم‌رسانا و مواد با گذار ناگهانی مانند جیوه و قلع مقایسه شده است. کاهش مقاومت ویژه با افزایش دما برای نیم‌رساناها و نمودار ویژه برای ابررسانایی ملاک انتخاب گزینه است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 558,
+    "solution_page": 300,
+    "solution_text": "در رئوستا، از داده‌های دو اتصال جداگانه $R_1=V/6$ و $R_2=V/2$ به دست آمده است. وقتی دو بخش سری می‌شوند، رابطه $V=(R_1+R_2)I$ جریان را $1.5A$ می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0105.jpg",
+        "box": [
+          100,
+          1650,
+          600,
+          1970
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "رئوستا با پایانه‌های A، B و C و آمپرسنج در مدار"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 559,
+    "solution_page": 300,
+    "solution_text": "با تغییر کلید به وضعیت C، تمام طول پتانسیومتر وارد مدار می‌شود. چون $R\\propto L$، مقاومت سه برابر و با ثابت بودن ولتاژ جریان یک‌سوم می‌شود؛ از $I_1=3A$، جریان جدید $1A$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 560,
+    "solution_page": 300,
+    "solution_text": "برای ولت‌سنج واقعی، ابتدا در حالت مدار باز $V_1=\\varepsilon$ است و سپس با بستن کلید $V=\\varepsilon-rI$ کاهش می‌یابد. از افت $20\\%$ و رابطه مدار، مقاومت درونی مولد $r=5\\Omega$ و ولتاژ سر مقاومت خارجی $20V$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [
+      "حل از انتهای page_0105 شروع و در page_0106 کامل می‌شود."
+    ]
+  },
+  {
+    "question_number": 561,
+    "solution_page": 301,
+    "solution_text": "با افزایش مقاومت خارجی از A به B، جریان مدار کم و اختلاف پتانسیل دو سر مولد زیاد می‌شود. از داده تغییر جریان و تغییر ولتاژ، $I_1=3A$، $I_2=2.4A$، $r=2\\Omega$ و $\\varepsilon=24V$ به دست آمده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 562,
+    "solution_page": 301,
+    "solution_text": "برای دو حالت مدار با مقاومت‌های $R_1$ و $R_2$، هم رابطه ولتاژ دو سر مقاومت و هم $V=\\varepsilon-rI$ نوشته شده است. از نسبت ولتاژها $I_2=0.6I_1$، سپس $rI_1=50V$ و در نهایت $\\varepsilon=60V$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 563,
+    "solution_page": 301,
+    "solution_text": "طبق رابطه $V=\\varepsilon-rI$، نمودار $V-I$ خطی با عرض از مبدأ $\\varepsilon$ و شیب $-r$ است. در حالت باز $\\varepsilon=18V$ و با افت ۲۵ درصدی، $r=2\\Omega$ و $I_{max}=\\varepsilon/r=9A$ محاسبه می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0106.jpg",
+        "box": [
+          180,
+          1950,
+          520,
+          2380
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار خطی V-I مولد با عرض از مبدا ε و نقطه Imax"
+      }
+    ],
+    "review_notes": [
+      "بخشی از حل در پایین page_0106 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 564,
+    "solution_page": 302,
+    "solution_text": "با ساده‌سازی نمودار $V-I$ و تشابه مثلث‌ها، ابتدا $\\varepsilon=6V$ به دست می‌آید. سپس کار جابه‌جایی بار مثبت از پایانه منفی به مثبت باتری برابر $\\Delta W=\\Delta q\\varepsilon=12mJ$ محاسبه شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0107.jpg",
+        "box": [
+          120,
+          230,
+          510,
+          555
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار V-I باتری و مثلث کمکی برای یافتن ε"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 565,
+    "solution_page": 302,
+    "solution_text": "از دو نمودار $V-I$، مشخصات دو باتری خوانده می‌شود: $\\varepsilon_1=12V,r_1=1.5\\Omega$ و $\\varepsilon_2=6V,r_2=1\\Omega$. با نوشتن جریان در مدار شامل هر باتری و مقاومت $R$ و شرط داده‌شده، $R=2.5\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0107.jpg",
+        "box": [
+          120,
+          570,
+          525,
+          1030
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو نمودار V-I باتری و مدار معادل شامل مقاومت خارجی R"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 566,
+    "solution_page": 302,
+    "solution_text": "از نمودار تغییرات ولتاژ باتری، $\\varepsilon=12V$ و $r=2\\Omega$ خوانده می‌شود. در نقطه تلاقی مدار با دو مقاومت برابر، جریان $4A$ است و توان از $P=\\varepsilon I-rI^2=16W$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0107.jpg",
+        "box": [
+          120,
+          1220,
+          310,
+          1470
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار V-I مولد با عرض از مبدا 12V و جریان 6A"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 567,
+    "solution_page": 302,
+    "solution_text": "انرژی مصرفی از $U=RI^2t$ و جریان از $I=Ne/t$ نوشته شده است. با جایگذاری نسبت تعداد الکترون‌ها و زمان‌ها، نسبت انرژی‌ها $U_2/U_1=2$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 568,
+    "solution_page": 302,
+    "solution_text": "از توان و ولتاژ لامپ، جریان $I=P/V=5A$ محاسبه شده است. با ضرب جریان در زمان، بار عبوری $40Ah$ می‌شود، پس از باتری $50Ah$ مقدار $10Ah$ باقی می‌ماند.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 569,
+    "solution_page": 302,
+    "solution_text": "ابتدا جریان لامپ از $P=VI$ برابر $2.5\\times10^{-3}A$ است. سپس از $q=It=ne$ تعداد الکترون‌های عبوری در یک دقیقه $9.375\\times10^{17}$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 570,
+    "solution_page": 302,
+    "solution_text": "با تقسیم سیم اولیه به $n$ قسمت، مقاومت هر قسمت $R/n$ و در ولتاژ ثابت توان هر قسمت $nP$ می‌شود؛ توان معادل کل $n^2P$ است. در ادامه با داده‌های سؤال، حالت‌های اولیه و ثانویه مقایسه می‌شوند.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [
+      "حل در page_0108 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 571,
+    "solution_page": 303,
+    "solution_text": "شرایط اولیه و ثانویه با جریان‌های $I_1$ و $I_2=0.75I_1$ نوشته شده است. از $\\Delta P=R(I_2^2-I_1^2)$ جریان‌ها به دست می‌آیند و تغییر ولتاژ از $|\\Delta V|=R|\\Delta I|=60mV$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 572,
+    "solution_page": 303,
+    "solution_text": "توان اولیه لامپ $50W$ و ولتاژ اولیه $100V$ است. با افزایش ولتاژ به $200V$ و افزایش مقاومت لامپ به $5/4$ مقدار قبلی، از $P=V^2/R$ توان جدید $160W$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 573,
+    "solution_page": 303,
+    "solution_text": "ابتدا مقاومت لامپ از توان اسمی $P=V^2/R$ برابر $24\\Omega$ گرفته می‌شود. جریان مدار با مقاومت‌های سری و درونی $1/3A$ است؛ توان مصرفی واقعی لامپ $8/3W$ و انرژی در ۴۵ دقیقه برابر $2Wh$ محاسبه شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 574,
+    "solution_page": 303,
+    "solution_text": "توان خروجی مولد از $P_o=\\varepsilon I-rI^2$ بررسی شده است. دو جریان $2A$ و $4A$ برای توان $32W$ ممکن‌اند و با حرکت لغزنده رئوستا از B به A، مقاومت به مقدار متناظر با جریان کمتر یعنی $R_1=8\\Omega$ زودتر می‌رسد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 575,
+    "solution_page": 303,
+    "solution_text": "برای بیشینه شدن توان خروجی، باید مقاومت خارجی برابر مقاومت درونی باشد. از دو حالت داده‌شده $P_o=\\varepsilon I-rI^2$، $r=4\\Omega$ و $\\varepsilon=12V$ به دست می‌آید و توان بیشینه $9W$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0108.jpg",
+        "box": [
+          130,
+          1950,
+          520,
+          2260
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار باتری و رئوستا و رابطه توان خروجی بیشینه"
+      }
+    ],
+    "review_notes": [
+      "حل با روش دوم در page_0109 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 576,
+    "solution_page": 304,
+    "solution_text": "با $P_{o,max}=\\varepsilon^2/(4r)$، توان بیشینه $9W$ است. در توان ۲۵ درصد کمتر، دو جریان $9/2A$ و $3/2A$ به دست می‌آیند و زمان‌های تخلیه برای شارژ $15Ah$ برابر $200min$ و $600min$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0109.jpg",
+        "box": [
+          135,
+          650,
+          505,
+          905
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار رئوستا و باتری با مقاومت درونی برای توان خروجی"
+      }
+    ],
+    "review_notes": [
+      "بالای صفحه ادامه روش دوم سؤال 575 است."
+    ]
+  },
+  {
+    "question_number": 577,
+    "solution_page": 304,
+    "solution_text": "از برابر بودن توان خروجی در دو جریان، $\\varepsilon I_1-rI_1^2=\\varepsilon I_2-rI_2^2$ نوشته می‌شود و نتیجه $r=\\varepsilon/(I_1+I_2)$ است. روش نموداری نیز همین نتیجه را از رأس سهمی توان-جریان می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0109.jpg",
+        "box": [
+          135,
+          1260,
+          330,
+          1450
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سهمی توان خروجی بر حسب جریان"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 578,
+    "solution_page": 304,
+    "solution_text": "با برابر بودن توان خروجی برای $R_1$ و $R_2$ داریم $r=\\sqrt{R_1R_2}$. از مقادیر روی نمودار، $R=15/4\\Omega$ و برای بیشینه شدن توان باید رئوستا به $R'=r=5/2\\Omega$ برسد؛ بنابراین کاهش نسبی حدود $33\\%$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0109.jpg",
+        "box": [
+          135,
+          1620,
+          390,
+          1880
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار توان خروجی بر حسب مقاومت خارجی با نقطه بیشینه"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 579,
+    "solution_page": 305,
+    "solution_text": "دو مقاومت خارجی $R_1=r-2$ و $R_2=r+3$ برای توان خروجی یکسان‌اند. از $r=\\sqrt{R_1R_2}$، مقاومت درونی $r=6\\Omega$ و سپس از $P_{o,max}=\\varepsilon^2/(4r)=54W$، نیروی محرکه $\\varepsilon=36V$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0110.jpg",
+        "box": [
+          140,
+          230,
+          390,
+          500
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار توان خروجی بر حسب مقاومت و دو نقطه با توان برابر"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 580,
+    "solution_page": 305,
+    "solution_text": "وقتی توان خروجی بیشینه است، $R=r$ و ولتاژ سر مقاومت خارجی $V=\\varepsilon/2$ است. از $V=3V$، $\\varepsilon=6V$ و از $P_{max}=4W$، $r=9/4\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 581,
+    "solution_page": 305,
+    "solution_text": "در اتصال متوالی، توان مصرفی مقاومت‌ها با اندازه مقاومت نسبت مستقیم دارد. با نسبت $R_2/R_1=2$، توان‌ها $20W$ و $10W$ و توان کل مقاومت‌ها $30W$ است؛ این همان توان خروجی منبع است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 582,
+    "solution_page": 305,
+    "solution_text": "در مدار سری، هر مقاومت به نسبت بزرگی مقاومت خود از ولتاژ کل سهم می‌برد. با استفاده از قرائت ولت‌سنج‌ها، $R_3=R_{eq}/3$ و $R_1=R_{eq}/6$ نتیجه شده و نسبت $R_3/R_1=2$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 583,
+    "solution_page": 305,
+    "solution_text": "از نمودار $I-V$، برای یک ولتاژ مشترک جریان رسانای A چهار برابر B است؛ پس $R_B=4R_A$. در اتصال متوالی جریان‌ها برابرند و توان‌ها با مقاومت نسبت مستقیم دارند، بنابراین $P_B=4P_A$ و با توان کل $20W$، $P_A=4W$ می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0110.jpg",
+        "box": [
+          170,
+          1660,
+          565,
+          2120
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار I-V دو مقاومت A و B برای مقایسه مقاومت و توان"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 584,
+    "solution_page": 306,
+    "solution_text": "برای $R_1=0$، مقاومت مانند سیم رابط است و ولتاژ دو سر آن صفر می‌شود. برای $R_1=\\infty$، شاخه مانند کلید باز است و با نوشتن مدار معادل، ولتاژ دو سر آن برابر $\\varepsilon$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0111.jpg",
+        "box": [
+          130,
+          220,
+          520,
+          585
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو مدار حدی برای R1 صفر و R1 بی‌نهایت"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 585,
+    "solution_page": 306,
+    "solution_text": "توان منبع $P=VI$ برابر مجموع توان دو لامپ است. از $7I=2I^2+6$ دو جریان ممکن $2A$ و $1.5A$ به دست می‌آیند؛ شرط پرنورتر بودن B باعث انتخاب $I=1.5A$ و $R_B=8/3\\Omega$ می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0111.jpg",
+        "box": [
+          130,
+          715,
+          560,
+          965
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار دو لامپ با مقاومت‌های RA و RB و منبع 7V"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 586,
+    "solution_page": 306,
+    "solution_text": "اگر دو وسیله با توان‌های اسمی $P_1$ و $P_2$ به طور متوالی وصل شوند، $1/P_{eq}=1/P_1+1/P_2$ است. با $P=Q/t$، زمان لازم برابر جمع زمان‌های جداگانه و $t=9min$ می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 587,
+    "solution_page": 306,
+    "solution_text": "در اتصال متوالی، جریان همه مقاومت‌ها یکسان است. از نسبت ولتاژها، رابطه بین مقاومت‌ها به دست آمده و مقدارها $R_1=10\\Omega$، $R_2=20\\Omega$ و $R_3=25\\Omega$ می‌شوند. بزرگ‌ترین مقاومت زودتر به حد ولتاژ می‌رسد و بیشینه توان کل $3.52kW$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0111.jpg",
+        "box": [
+          130,
+          1780,
+          700,
+          1920
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سه مقاومت سری R، 2R و 2R+5 با نقاط A، B، C و D"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 588,
+    "solution_page": 307,
+    "solution_text": "ابتدا بیشینه جریان قابل تحمل از توان مقاومت $R_1$ محاسبه می‌شود: $I_{max}=3A$. با توجه به مقاومت درونی و مقاومت‌های سری، کمترین مقدار مجاز رئوستا $3\\Omega$ است و بیشترین توان خروجی ممکن برای باتری $45W$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0112.jpg",
+        "box": [
+          155,
+          230,
+          460,
+          470
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار شامل رئوستا، مقاومت 2 اهم، مقاومت درونی و باتری 24V"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 589,
+    "solution_page": 307,
+    "solution_text": "در حالت متوالی، از جریان $2A$ رابطه $R_1+R_2=16\\Omega$ به دست می‌آید. در حالت موازی، از جریان $7.2A$ مقاومت معادل موازی $3\\Omega$ و حاصل‌ضرب $R_1R_2=48$ نتیجه شده؛ پس مقاومت‌ها $4\\Omega$ و $12\\Omega$ هستند.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 590,
+    "solution_page": 307,
+    "solution_text": "در حالت اول چهار مقاومت مشابه سری‌اند و در حالت دوم ۹ مقاومت موازی‌اند. با برابر بودن توان خروجی در دو حالت، $r=2R/3$ به دست می‌آید و برای بیشینه توان خروجی باید مقاومت معادل خارجی برابر $r$ شود؛ آرایش متناظر گزینه ۲ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0112.jpg",
+        "box": [
+          115,
+          1340,
+          700,
+          1655
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو مدار مقایسه‌ای با چهار مقاومت سری و نه مقاومت موازی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 591,
+    "solution_page": 307,
+    "solution_text": "با ثابت بودن حجم سیم، مقاومت سیم جدید با مربع نسبت طول‌ها تغییر می‌کند. سپس حلقه به دو نیم‌حلقه موازی بین A و B تبدیل می‌شود و از $R_{eq}=9R/16=27\\Omega$ مقدار مقاومت اولیه $R=48\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0112.jpg",
+        "box": [
+          170,
+          2070,
+          760,
+          2390
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "حلقه رسانا بین A و B و تبدیل آن به دو نیم‌حلقه موازی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 592,
+    "solution_page": 308,
+    "solution_text": "ولت‌سنج اختلاف پتانسیل دو سر مقاومت $600\\Omega$ را نشان می‌دهد؛ از $V=RI_2$، $I_2=4.5A$ به دست می‌آید. جمع جریان‌ها در آمپرسنج $6A$ است، پس جریان ولت‌سنج $1.5A$ و مقاومت داخلی آن $1.8k\\Omega$ محاسبه می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0113.jpg",
+        "box": [
+          130,
+          170,
+          560,
+          360
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "ولت‌سنج موازی با مقاومت 600 اهم و آمپرسنج در شاخه اصلی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 593,
+    "solution_page": 308,
+    "solution_text": "قاعده انشعاب جریان‌ها (KCL) نوشته شده است: جمع جریان‌های واردشونده به گره با جمع جریان‌های خارج‌شونده برابر است. در مدار مقاومت‌های موازی، با استفاده از نسبت‌های مقاومتی، $R_{eq}=1.6\\Omega$، جریان کل $15A$ و اختلاف قرائت آمپرسنج‌ها $2A$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0113.jpg",
+        "box": [
+          130,
+          480,
+          600,
+          1200
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "گره جریان‌ها و مدار موازی چند مقاومت همراه با آمپرسنج‌ها"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 594,
+    "solution_page": 308,
+    "solution_text": "در حالت کلید باز، کل جریان از مقاومت $4\\Omega$ و آمپرسنج می‌گذرد. با بستن کلید، مقاومت $12\\Omega$ موازی $4\\Omega$ می‌شود و از نسبت جریان قبلی و جدید و تغییر ۱۰ درصدی جریان، مقاومت درونی منبع $r=2\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 595,
+    "solution_page": 308,
+    "solution_text": "سه حالت کلیدها مقایسه شده‌اند. با $k_1$ بسته، ولتاژ روی $R$ و با $k_2$ بسته، ولتاژ روی $2R$ نوشته می‌شود؛ در حالت بسته بودن هر دو کلید، مقاومت معادل $2R\\parallel R$ و از نسبت روابط، ولتاژ جدید $2.4V$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [
+      "حل در page_0114 کامل می‌شود."
+    ]
+  },
+  {
+    "question_number": 596,
+    "solution_page": 309,
+    "solution_text": "وقتی فقط $k_1$ بسته است، مدار با مقاومت $30\\Omega$ کار می‌کند. با بستن $k_2$، مقاومت $60\\Omega$ موازی آن می‌شود و جریان مدار $1.5$ برابر می‌گردد. با برابر گرفتن بار مصرفی، زمان باقی‌مانده $80min$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0114.jpg",
+        "box": [
+          140,
+          470,
+          540,
+          890
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو مدار قبل و بعد از موازی شدن مقاومت‌های 30 و 60 اهم"
+      }
+    ],
+    "review_notes": [
+      "بالای page_0114 ادامه حل سؤال 595 است."
+    ]
+  },
+  {
+    "question_number": 597,
+    "solution_page": 309,
+    "solution_text": "در بیشینه بودن رئوستا، شاخه رئوستا عملاً قطع است و ولت‌سنج $20V$ را نشان می‌دهد. مدار ساده شده و از $V=R\\varepsilon/(R+r)$ مقدار $R=5\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0114.jpg",
+        "box": [
+          140,
+          1005,
+          540,
+          1240
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار معادل با رئوستای بی‌نهایت و ولت‌سنج"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 598,
+    "solution_page": 309,
+    "solution_text": "از نمودار $I-V$، نسبت مقاومت‌ها محاسبه شده است: $R_A/R_B=6$. در اتصال موازی، توان با مقاومت نسبت عکس دارد، پس $P_B=6P_A=180W$ و انرژی در یک دقیقه $10800J$ می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0114.jpg",
+        "box": [
+          125,
+          1340,
+          470,
+          1645
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار I-V دو رسانای A و B برای مقایسه مقاومت‌ها"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 599,
+    "solution_page": 309,
+    "solution_text": "با جریان مجاز فیوز $0.5A$ و مقاومت معادل $R_{eq}=2\\Omega$، تعداد لامپ‌های موازی از $R/n=2$ به دست می‌آید. اگر تعداد بیش از ۴ باشد، جریان از حد مجاز عبور می‌کند؛ پس ۴ لامپ مجاز است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 600,
+    "solution_page": 309,
+    "solution_text": "برای هر لامپ، از $P=VI$ جریان $0.2A$ لازم است. با ولتاژ دو سر لامپ‌ها $60V$ و مقاومت درونی $4\\Omega$، جریان کل مدار $5A$ می‌شود؛ پس تعداد لامپ‌های موازی $n=25$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0114.jpg",
+        "box": [
+          130,
+          2090,
+          560,
+          2385
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار چند لامپ موازی با منبع 80V و مقاومت درونی 4 اهم"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 601,
+    "solution_page": 310,
+    "solution_text": "برای دو وسیله با مشخصات اسمی متصل به طور موازی، توان مصرفی کل برابر مجموع توان‌های اسمی است. با $P=Q/t$، رابطه $1/t=1/t_1+1/t_2$ نوشته شده و زمان جوش آمدن آب $2min$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 602,
+    "solution_page": 310,
+    "solution_text": "شاخه بالای مدار با مقاومت معادل $R_1=3R$ جایگزین می‌شود و مقاومت‌ها موازی‌اند. از $1/R_{eq}=1/(3R)+1/R+1/(2R)$، شرط بیشینه توان خروجی $R_{eq}=r$ به کار می‌رود و اختلاف خواسته‌شده $1\\Omega$ محاسبه می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0115.jpg",
+        "box": [
+          160,
+          560,
+          540,
+          890
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار چند مقاومت R، 2R و 3R با منبع و مقاومت درونی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 603,
+    "solution_page": 310,
+    "solution_text": "دو شکل خارجی با مقاومت‌های معادل $3R$ و $R/3$ مقایسه شده‌اند. برای بیشینه توان باید $R_{eq}=r$ باشد و تنها شکل با $R/3$ پذیرفتنی است؛ سپس توان شکل دیگر با $P_o=\\varepsilon I-rI^2$ مقایسه و اختلاف نسبی $64\\%$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0115.jpg",
+        "box": [
+          150,
+          970,
+          725,
+          1280
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو آرایش مقاومتی برای مقایسه توان خروجی باتری"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 604,
+    "solution_page": 310,
+    "solution_text": "توان مصرفی مدار با مقاومت متغیر از رابطه $P=\\varepsilon^2/R_{eq}=\\varepsilon^2/R_s+\\varepsilon^2/R_1$ نوشته شده است. چون جمله وابسته به $R_s$ با کاهش $R_s$ افزایش می‌یابد، نمودار توان مصرفی شکل ۴ است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 605,
+    "solution_page": 311,
+    "solution_text": "مقاومت نیم‌حلقه‌های سیم برابر $2\\Omega$ است و مقاومت سیم قطری از نسبت طول‌ها با محیط نیم‌دایره محاسبه می‌شود. سه مقاومت بین A و B موازی‌اند و از جمع وارون‌ها، $R_{eq}=200/357\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0116.jpg",
+        "box": [
+          150,
+          190,
+          520,
+          590
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "حلقه رسانا با قطر AB و مقاومت‌های نیم‌حلقه و سیم قطری"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 606,
+    "solution_page": 311,
+    "solution_text": "شاخه میانی با مقاومت $R+R_0$ و مقاومت کناری موازی می‌شود و سپس با مقاومت اول سری است. با فرض $R_{AB}=R_0$، معادله مقاومت معادل حل شده و $R_0/R=\\sqrt3$ نتیجه می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0116.jpg",
+        "box": [
+          160,
+          650,
+          650,
+          970
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار کاهش‌یافته بین A و B با مقاومت R و شاخه R+R0"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 607,
+    "solution_page": 311,
+    "solution_text": "با نام‌گذاری نقاط هم‌پتانسیل، مدار پیچیده بازترسیم و به شاخه‌های سری و موازی ساده می‌شود. پس از کاهش مرحله‌ای مقاومت‌ها، $R_{eq}=1+8/3+5=26/3\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0116.jpg",
+        "box": [
+          140,
+          1260,
+          1260,
+          1710
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سه مرحله بازترسیم مدار با نقاط هم‌پتانسیل برای محاسبه مقاومت معادل"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 608,
+    "solution_page": 311,
+    "solution_text": "دو دسته مقاومت موازی در مدار تشخیص داده و با مقاومت‌های معادل جایگزین می‌شوند. یک سر مقاومت بی‌اثر است و جریان نمی‌گیرد؛ مدار نهایی یک مقاومت $1\\Omega$، یک مقاومت $2\\Omega$ و $5\\Omega$ سری دارد، پس $R_{eq}=8\\Omega$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0116.jpg",
+        "box": [
+          145,
+          1790,
+          1130,
+          2190
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "بازترسیم مدار و حذف شاخه بی‌جریان برای رسیدن به مقاومت معادل 8 اهم"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 609,
+    "solution_page": 311,
+    "solution_text": "در بازترسیم مدار، آمپرسنج آرمانی مانند سیم بدون مقاومت است و دو سر آن هم‌پتانسیل می‌شوند؛ بنابراین برخی مقاومت‌های بین نقاط هم‌پتانسیل حذف می‌شوند. ادامه محاسبه با مقاومت‌های موازی و سری مقدار $R=12\\Omega$ را می‌دهد.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0116.jpg",
+        "box": [
+          165,
+          2195,
+          1030,
+          2430
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار با آمپرسنج آرمانی و نقاط هم‌پتانسیل C"
+      }
+    ],
+    "review_notes": [
+      "حل در page_0117 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 610,
+    "solution_page": 312,
+    "solution_text": "با نام‌گذاری مجدد نقاط، مقاومت‌های هم‌پتانسیل و موازی مشخص می‌شوند. کاهش مرحله‌ای مدار نشان می‌دهد $R_{AB}=5R/11$ و با $R=55\\Omega$، مقاومت معادل $25\\Omega$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0117.jpg",
+        "box": [
+          140,
+          720,
+          1280,
+          1135
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "بازترسیم سه‌مرحله‌ای مدار مشابه برای مقاومت معادل بین A و B"
+      }
+    ],
+    "review_notes": [
+      "بالای page_0117 ادامه حل سؤال 609 است."
+    ]
+  },
+  {
+    "question_number": 611,
+    "solution_page": 312,
+    "solution_text": "در حالت اول $R_{eq}=4R$ و در حالت دوم $R_{eq}=R/9$ است. از برابر بودن توان خروجی باتری، $r=\\sqrt{4R\\cdot R/9}=2R/3$ به دست می‌آید؛ برای بیشینه توان باید آرایشی با $R_{eq}=2R/3$ ساخته شود که گزینه ۲ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0117.jpg",
+        "box": [
+          140,
+          1410,
+          560,
+          1990
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو مدار مقایسه‌ای و آرایش سه مقاومت برای بیشینه توان"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 612,
+    "solution_page": 312,
+    "solution_text": "در اتصال منبع به $a,b$، آمپرسنج مانند سیم عمل می‌کند و مقاومت‌های $R_1$ و $R_2$ موازی‌اند؛ از تقسیم جریان، $I_1=20A$ و $I=30A$ و سپس $\\varepsilon=120V$ به دست می‌آید. با اتصال به $a,c$ آمپرسنج دو سر مقاومت‌ها را کوتاه می‌کند و جریان $60A$ می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0117.jpg",
+        "box": [
+          145,
+          2050,
+          560,
+          2410
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار شکل الف با آمپرسنج بین a و b و مقاومت‌های 3 و 6 اهم"
+      }
+    ],
+    "review_notes": [
+      "حل در page_0118 کامل می‌شود."
+    ]
+  },
+  {
+    "question_number": 613,
+    "solution_page": 313,
+    "solution_text": "آمپرسنج آرمانی مثل سیم است؛ بنابراین دو مقاومت $3\\Omega$ موازی‌اند و معادل آن‌ها $1.5\\Omega$ می‌شود. با مقاومت درونی $1\\Omega$، جریان کل $8A$ و جریان هر شاخه برابر $4A$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0118.jpg",
+        "box": [
+          160,
+          380,
+          540,
+          690
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار معادل با دو مقاومت 3 اهم موازی و منبع 20V"
+      }
+    ],
+    "review_notes": [
+      "بالای page_0118 ادامه سؤال 612 است."
+    ]
+  },
+  {
+    "question_number": 614,
+    "solution_page": 313,
+    "solution_text": "آمپرسنج با سیم بدون مقاومت جایگزین می‌شود و مقاومت‌های $6\\Omega$ و $3\\Omega$ موازی می‌شوند. جریان‌ها از نسبت ولتاژها و جریان داده‌شده به دست آمده و مقاومت معادل $6\\Omega$ و ولتاژ منبع $18V$ است؛ ولت‌سنج همین مقدار را نشان می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0118.jpg",
+        "box": [
+          150,
+          1080,
+          570,
+          1625
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار اصلی و مدار معادل برای ولت‌سنج و آمپرسنج آرمانی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 615,
+    "solution_page": 313,
+    "solution_text": "مقاومت‌های موازی $12\\Omega$ و $6\\Omega$ با معادل $4\\Omega$ جایگزین می‌شوند. نیروی محرکه مولد برابر مجموع افت‌ها در مقاومت‌هاست و با ولتاژ $6V$ روی $R$، جریان $2A$ و در نتیجه $R=3\\Omega$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0118.jpg",
+        "box": [
+          155,
+          1710,
+          520,
+          1995
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار شامل ولت‌سنج روی R، مقاومت 4 اهم، منبع 18V و مقاومت درونی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 616,
+    "solution_page": 313,
+    "solution_text": "برابری قرائت دو ولت‌سنج یعنی $R_1I_1=R_2I_2$ و با $I_2=I_1-1$ نوشته شده است. همچنین مجموع افت پتانسیل باتری برابر ولتاژ دو شاخه است؛ حل دستگاه، $I_1=3A$ و $R_1=4\\Omega$ می‌دهد.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0118.jpg",
+        "box": [
+          150,
+          2120,
+          540,
+          2395
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار با R1، دو مقاومت موازی و دو ولت‌سنج برابرخوان"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 617,
+    "solution_page": 314,
+    "solution_text": "وقتی کلید باز است، لامپ C جریان ندارد و لامپ‌های A و B سری‌اند؛ جریان B برابر $\\varepsilon/9$ است. با بستن کلید، B و C موازی می‌شوند و مقاومت معادل مدار تغییر می‌کند؛ از تقسیم جریان شاخه موازی، جریان B جدید $2/3$ جریان قبلی است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0119.jpg",
+        "box": [
+          150,
+          220,
+          560,
+          690
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو حالت مدار لامپ‌ها پیش و پس از بسته شدن کلید"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 618,
+    "solution_page": 314,
+    "solution_text": "در شکل نخست، جریان میان دو مقاومت موازی $2R$ تقسیم می‌شود و ولت‌سنج $V_1$ ولتاژ $RI/2$ را می‌سنجد. مدار معادل برای $V_2$ به دو مقاومت سری $R$ و $R$ ساده می‌شود و $V_2=2RI$ است؛ پس $V_2/V_1=4$.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0119.jpg",
+        "box": [
+          150,
+          800,
+          560,
+          1190
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو مدار ساده‌شده برای محاسبه نسبت ولتاژهای V1 و V2"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 619,
+    "solution_page": 314,
+    "solution_text": "مقاومت داخلی ولت‌سنج آرمانی بی‌نهایت است، پس شاخه ولت‌سنج حذف می‌شود. مدار معادل نشان می‌دهد جریان‌های مربوط به شاخه‌ها هم‌اندازه‌اند و چون $R_1$ و $R_2$ برابرند، $V_2=2V_1$ نتیجه می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0119.jpg",
+        "box": [
+          150,
+          1330,
+          575,
+          1770
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "حذف شاخه ولت‌سنج و مدار معادل دو مقاومت برای نسبت ولتاژها"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 620,
+    "solution_page": 314,
+    "solution_text": "مدار به‌صورت مرحله‌ای به دو مقاومت موازی $160\\Omega$ و $40\\Omega$ ساده می‌شود. اختلاف پتانسیل دو سر شاخه‌ها $320V$ است؛ جریان شاخه $160\\Omega$ برابر $2A$ و جریان مقاومت $20\\Omega$ و سپس $25\\Omega$ برابر $0.8A$ محاسبه می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0119.jpg",
+        "box": [
+          145,
+          1970,
+          1260,
+          2355
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "ساده‌سازی سری مدار تا رسیدن به دو مقاومت 160 و 40 اهم موازی"
+      }
+    ],
+    "review_notes": [
+      "حل در page_0120 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 621,
+    "solution_page": 315,
+    "solution_text": "مقاومت‌های $2\\Omega$ و $6\\Omega$ و نیز $24\\Omega$ و $8\\Omega$ به معادل‌های موازی $3\\Omega$ و $6\\Omega$ تبدیل می‌شوند. مقاومت کل $4\\Omega$، جریان مدار $2A$ و ولتاژ سر مولد $8V$ است؛ سهم مقاومت $6\\Omega$ از این ولتاژ برابر $6V$ می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0120.jpg",
+        "box": [
+          165,
+          480,
+          555,
+          835
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار با مقاومت‌های موازی 16، 8، 2، 6 و منبع 10V"
+      }
+    ],
+    "review_notes": [
+      "بالای page_0120 ادامه محاسبه سؤال 620 است."
+    ]
+  },
+  {
+    "question_number": 622,
+    "solution_page": 315,
+    "solution_text": "شاخه شامل ولت‌سنج آرمانی جریان ندارد و حذف می‌شود. مدار به مقاومت‌های $12\\Omega$ سری با ترکیب موازی $18\\Omega$ و $9\\Omega$ ساده می‌شود؛ جریان کل $1.2A$ است و با تقسیم جریان در شاخه‌ها، اختلاف پتانسیل بین A و C برابر $16.8V$ محاسبه می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0120.jpg",
+        "box": [
+          155,
+          965,
+          570,
+          1530
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار اصلی و مدارهای ساده‌شده برای ولت‌سنج آرمانی بین A و C"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 623,
+    "solution_page": 315,
+    "solution_text": "مدار در چند گام به دو مقاومت موازی $60\\Omega$ و $120\\Omega$ ساده شده و مقاومت معادل کل $40\\Omega$ می‌شود. با مقاومت درونی، جریان کل $0.12A$ است و از تقسیم جریان در شاخه‌ها، جریان مورد نیاز شاخه $0.08A$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0120.jpg",
+        "box": [
+          145,
+          1690,
+          1230,
+          2220
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "چهار مرحله ساده‌سازی مدار تا دو مقاومت 60 و 120 اهم موازی"
+      }
+    ],
+    "review_notes": [
+      "حل در page_0121 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 624,
+    "solution_page": 316,
+    "solution_text": "برای شکل (الف)، ولت‌سنج آرمانی مانند مدار باز است و با معادل‌سازی، نسبت جریان‌ها و افت ولتاژها محاسبه می‌شود. در شکل (ب)، مقاومت‌های سری و موازی به $60\\Omega$ و $120\\Omega$ و سپس مدار معادل کاهش می‌یابند؛ نسبت $V_2/V_1=2$ نتیجه شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0121.jpg",
+        "box": [
+          150,
+          265,
+          540,
+          875
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدارهای الف و ب با مقاومت‌های 100، 200، 400، 500، 600 و 150 اهم"
+      }
+    ],
+    "review_notes": [
+      "بالای page_0121 ادامه حل سؤال 623 است؛ box تقریبی است."
+    ]
+  },
+  {
+    "question_number": 625,
+    "solution_page": 316,
+    "solution_text": "دو شاخه موازی بین C و D بررسی می‌شوند؛ یک شاخه شامل $R_3=9\\Omega$ و شاخه دیگر سری $R_1$ و $R_2$ است. با نوشتن $I_1+I_2=I$ و شرط $I_2=1A$، سپس مقایسه افت‌ها در مسیرهای A-C-D-B، معادله درجه دوم برای $R$ به دست می‌آید و بیشترین مقدار $2R=24\\Omega$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0121.jpg",
+        "box": [
+          135,
+          930,
+          610,
+          1395
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار شامل مقاومت‌های 6، 9، R و 2R و جریان‌های شاخه‌ای"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 626,
+    "solution_page": 316,
+    "solution_text": "مدار به صورت شکل ساده‌شده بازترسیم می‌شود. ابتدا $R_3$ و $R_4$ موازی و معادل آن‌ها با $R_2$ سری می‌شود، بنابراین $R_{234}=R(R+6)/(R+3)$. با توجه به اینکه یکی از ولت‌سنج‌ها $50\\%$ بیشتر می‌خواند، نسبت $V_1/V_2=1.5$ به دست آمده و اختلاف خوانده‌ها در ادامه حل برابر $8V$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0121.jpg",
+        "box": [
+          145,
+          1900,
+          610,
+          2290
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مدار باتری 25V با مقاومت‌های 4، 3، R و R و دو ولت‌سنج V1 و V2"
+      }
+    ],
+    "review_notes": [
+      "انتهای حل در همین chunk قطع می‌شود و ادامه سؤال 626 خارج از صفحه‌های داده‌شده نیست/در تصویر پایین صفحه محدود است؛ box تقریبی است."
+    ]
+  }
+]

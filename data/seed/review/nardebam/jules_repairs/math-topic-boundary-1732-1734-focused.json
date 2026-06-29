@@ -1,0 +1,200 @@
+{
+  "task_id": "math-topic-boundary-1732-1734",
+  "subject": "math",
+  "topic_key": "visual_thinking_conics",
+  "questions": [
+    {
+      "question_number": 1732,
+      "question_page": 18,
+      "question_text": "شعاع دایره به مرکز $(-1, 0)$ و مماس خارج بر دایرهٔ $x^2 + y^2 - 4x + 8y + 16 = 0$ کدام است؟",
+      "options": [
+        "$2$",
+        "$3$",
+        "$5$",
+        "$7$"
+      ],
+      "media_regions": [
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            350,
+            1280,
+            1680,
+            1325
+          ],
+          "placement": "stem"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            1400,
+            1325,
+            1480,
+            1370
+          ],
+          "placement": "option_1"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            1100,
+            1325,
+            1180,
+            1370
+          ],
+          "placement": "option_2"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            800,
+            1325,
+            880,
+            1370
+          ],
+          "placement": "option_3"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            500,
+            1325,
+            580,
+            1370
+          ],
+          "placement": "option_4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1733,
+      "question_page": 18,
+      "question_text": "دایره‌ای به مرکز $(1, -2)$ با کدام شعاع بر دایرهٔ $x^2 + y^2 + 2x + 4y + 4 = 0$ مماس درونی است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            320,
+            1380,
+            1680,
+            1425
+          ],
+          "placement": "stem"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            1400,
+            1425,
+            1480,
+            1470
+          ],
+          "placement": "option_1"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            1100,
+            1425,
+            1180,
+            1470
+          ],
+          "placement": "option_2"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            800,
+            1425,
+            880,
+            1470
+          ],
+          "placement": "option_3"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            500,
+            1425,
+            580,
+            1470
+          ],
+          "placement": "option_4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1734,
+      "question_page": 18,
+      "question_text": "دایرهٔ $C$ بر دایره به معادلهٔ $x^2 + y^2 - 6x + 4y + 12 = 0$ مماس خارج است. هر خط قائم بر دایرهٔ $C$ محور عرض‌ها را به عرض ۲ قطع می‌کند.\nشعاع دایرهٔ $C$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            100,
+            1475,
+            1680,
+            1550
+          ],
+          "placement": "stem"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            1400,
+            1555,
+            1480,
+            1600
+          ],
+          "placement": "option_1"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            1100,
+            1555,
+            1180,
+            1600
+          ],
+          "placement": "option_2"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            800,
+            1555,
+            880,
+            1600
+          ],
+          "placement": "option_3"
+        },
+        {
+          "filename": "math-topic-14-page_0018.jpg",
+          "box": [
+            500,
+            1555,
+            580,
+            1600
+          ],
+          "placement": "option_4"
+        }
+      ],
+      "review_notes": []
+    }
+  ],
+  "review_notes": []
+}

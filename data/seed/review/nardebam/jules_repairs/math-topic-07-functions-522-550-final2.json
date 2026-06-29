@@ -1,0 +1,650 @@
+{
+  "task_id": "math-topic-07-functions",
+  "subject": "math",
+  "topic_key": "functions",
+  "questions": [
+    {
+      "question_number": 522,
+      "question_page": 29,
+      "question_text": "اگر $f(x) = x^2 - x - 2$ و $g(x) = x - 2$، مساحت ناحیه محدود به نمودار تابع $\\frac{f}{g}$ و محورهای مختصات کدام است؟",
+      "options": [
+        "۱",
+        "$\\frac{1}{2}$",
+        "۲",
+        "$\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 523,
+      "question_page": 29,
+      "question_text": "اگر نمودار تابع $y = f(x)$ به صورت زیر باشد، دامنه تابع $\\frac{1}{f(x) - 2}$ کدام است؟",
+      "options": [
+        "$[-3, 4] - \\{-2, 3\\}$",
+        "$(-\\infty, 4] - \\{-2, 3\\}$",
+        "$(-\\infty, 4]$",
+        "$[-3, 4]$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0029.jpg",
+          "region": [
+            120,
+            260,
+            480,
+            480
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 524,
+      "question_page": 29,
+      "question_text": "نمودار تابع $f(x)$ به صورت مقابل است. دامنه تابع $g(x) = \\frac{1}{f(x - 1) - f(x)}$ کدام است؟",
+      "options": [
+        "$[-2, 1) \\cup (1, 3]$",
+        "$[-2, 3]$",
+        "$[-1, 3] - \\{1\\}$",
+        "$[-1, 1) \\cup (1, 3]$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0029.jpg",
+          "region": [
+            120,
+            490,
+            480,
+            710
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 525,
+      "question_page": 29,
+      "question_text": "در مورد دو تابع $f(x) = \\sqrt{x - 1} + \\sqrt{2 - x}$ و $g(x) = \\sqrt{x - 1} - \\sqrt{2 - x}$ کدام گزاره درست است؟",
+      "options": [
+        "$D_{f+g} = D_{f-g}$",
+        "$D_f = D_{f/g}$",
+        "$D_{g/f} = D_{f/g}$",
+        "$D_{g/f} = D_g$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 526,
+      "question_page": 29,
+      "question_text": "تابع $f(x) = x^2$ در دامنه $\\mathbb{R}$ و تابع $g(x)$ در جدول زیر داده شده اند. دامنه تابع $\\frac{g}{f - g}$ کدام است؟",
+      "options": [
+        "$\\{1, 2, 3\\}$",
+        "$\\{-1, 0, 2\\}$",
+        "$\\{-1, 2\\}$",
+        "$\\{-1, 1, 2\\}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0029.jpg",
+          "region": [
+            150,
+            950,
+            500,
+            1100
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 527,
+      "question_page": 29,
+      "question_text": "اگر $f = \\{(1, 2), (2, 5), (3, 4), (4, 6)\\}$ و $g = \\{(2, 3), (4, 2), (5, 1)\\}$، برد تابع $\\frac{f}{g} - g$ کدام است؟",
+      "options": [
+        "$\\{\\frac{-4}{3}, 1\\}$",
+        "$\\{\\frac{5}{3}, 3\\}$",
+        "$\\{\\frac{-4}{3}, -1\\}$",
+        "$\\{\\frac{-4}{3}, -3\\}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 528,
+      "question_page": 29,
+      "question_text": "توابع $f$ و $g$ به صورت زوج مرتب داده شده اند. تابع $f + g$ کدام است؟",
+      "options": [
+        "$\\{(-2, 1), (-1, 3), (1, -1)\\}$",
+        "$\\{(0, -1), (1, 1), (-1, -1)\\}$",
+        "$\\{(0, 1), (1, -1), (-2, 0)\\}$",
+        "$\\{(-2, -1), (1, 1), (-1, 0)\\}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0029.jpg",
+          "region": [
+            120,
+            1310,
+            420,
+            1530
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 529,
+      "question_page": 29,
+      "question_text": "اگر $f = \\{(-2, 1), (0, 3), (1, 5), (2, 4)\\}$ و $g = \\{(1, 4), (0, 3), (2, 1), (-1, -3)\\}$، تابع $\\frac{2f - g}{f + g}$ کدام است؟",
+      "options": [
+        "$\\{(0, \\frac{1}{2}), (1, \\frac{2}{3}), (2, \\frac{7}{5})\\}$",
+        "$\\{(0, \\frac{1}{2}), (1, \\frac{2}{3})\\}$",
+        "$\\{(0, \\frac{1}{2}), (2, \\frac{7}{5})\\}$",
+        "$\\{(1, \\frac{2}{3}), (2, \\frac{7}{5})\\}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 530,
+      "question_page": 29,
+      "question_text": "اگر $f = \\{(1, 2), (2, 3), (-1, 4), (0, 2)\\}$ و $g = \\{(-1, 3), (2, 1), (1, 2), (3, -1)\\}$، برد تابع $\\frac{f + g}{f}$ کدام است؟",
+      "options": [
+        "$\\{1, 2, \\frac{4}{3}\\}$",
+        "$\\{2, \\frac{4}{3}, \\frac{7}{4}\\}$",
+        "$\\{1, \\frac{7}{4}, \\frac{4}{3}\\}$",
+        "$\\{2, 1, \\frac{7}{4}\\}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 531,
+      "question_page": 29,
+      "question_text": "اگر $f = \\{(1, 4), (-1, 2), (0, -1), (2, 3)\\}$ و $g(x) = x^2 + x$، برد تابع $f - \\frac{g}{f}$ شامل چند عدد صحیح است؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 532,
+      "question_page": 29,
+      "question_text": "اگر $f(x) = \\frac{2x - 1}{x + 1}$ و $g(x) = \\frac{2x + 2}{2x - 1}$، دامنه تابع $f \\times g$ کدام است؟",
+      "options": [
+        "$\\mathbb{R} - \\{-1, \\frac{1}{2}\\}$",
+        "$\\mathbb{R} - \\{-1\\}$",
+        "$\\mathbb{R} - \\{\\frac{1}{2}\\}$",
+        "$\\mathbb{R}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 533,
+      "question_page": 29,
+      "question_text": "اگر $f = \\{(1, 2), (2, 5), (0, 3), (4, -1)\\}$ و $g(x) = \\sqrt{x - 1}$، دامنه تابع $\\frac{g}{f}$ کدام است؟",
+      "options": [
+        "$\\{1, 2, 4\\}$",
+        "$\\{1, 2\\}$",
+        "$\\{0, 1, 2, 4\\}$",
+        "$\\{0, 1, 2\\}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 534,
+      "question_page": 29,
+      "question_text": "نمودار دو تابع $f$ و $g$ به صورت زیر است. دامنه تابع $\\frac{f}{g}$ کدام است؟",
+      "options": [
+        "$(-1, 3)$",
+        "$[-1, 3]$",
+        "$(-1, 2) \\cup (2, 3)$",
+        "$[-1, 2) \\cup (2, 3]$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0029.jpg",
+          "region": [
+            100,
+            2250,
+            480,
+            2520
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 535,
+      "question_page": 30,
+      "question_text": "نمودارهای دو تابع $f$ و $g$ به صورت مقابل است. برد تابع $f + g$ کدام است؟",
+      "options": [
+        "$\\{-1, 0, 1\\}$",
+        "$\\{-1, 1, 2\\}$",
+        "$\\{-1, 0, 2\\}$",
+        "$\\{0, 1, 2\\}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1280,
+            70,
+            1660,
+            320
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 536,
+      "question_page": 30,
+      "question_text": "با توجه به نمودارهای $f$ و $g$ در شکل زیر، دامنه تابع $y = \\sqrt{g(x) - f(x)}$ کدام است؟",
+      "options": [
+        "$[0, 5]$",
+        "$[0, 2] \\cup [4, 5]$",
+        "$[2, 4]$",
+        "$[0, 5] - (2, 4)$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1300,
+            320,
+            1680,
+            540
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 537,
+      "question_page": 30,
+      "question_text": "نمودار دو تابع $f$ و $g$ به صورت مقابل است. دامنه تابع $\\frac{f}{g}$ کدام است؟",
+      "options": [
+        "$[0, 5]$",
+        "$(0, 5)$",
+        "$[0, 2) \\cup (2, 5]$",
+        "$(0, 2) \\cup (2, 5)$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1280,
+            550,
+            1660,
+            750
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 538,
+      "question_page": 30,
+      "question_text": "نمودار دو تابع $f$ و $g$ در شکل مقابل رسم شده است. دامنه تابع $y = \\sqrt{\\frac{f(x)}{g(x)}}$ کدام است؟",
+      "options": [
+        "$(-2, 1] \\cup (3, 5]$",
+        "$[-2, 1] \\cup (3, 5]$",
+        "$[-4, -2) \\cup [1, 3)$",
+        "$[-4, -2) \\cup (1, 3)$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1300,
+            780,
+            1680,
+            980
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 539,
+      "question_page": 30,
+      "question_text": "اگر نمودارهای توابع $f$ و $g$ به صورت زیر باشند، برد تابع $f \\times g$ کدام است؟",
+      "options": [
+        "$\\{0, 3\\}$",
+        "$\\{-3, 0\\}$",
+        "$\\{-3, 0, 3\\}$",
+        "$\\{-3, 3\\}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1320,
+            1000,
+            1680,
+            1220
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 540,
+      "question_page": 30,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. دامنه تابع $\\frac{1}{f(x) - f(x - 1)}$ کدام است؟",
+      "options": [
+        "$[0, 2] - \\{\\frac{1}{2}, \\frac{3}{2}\\}$",
+        "$[1, 3] - \\{\\frac{3}{2}, \\frac{5}{2}\\}$",
+        "$[1, 2] - \\{\\frac{3}{2}\\}$",
+        "$[1, 2]$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1340,
+            1220,
+            1680,
+            1420
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 541,
+      "question_page": 30,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. دامنه تابع $\\frac{f(x)}{f(x - 2)}$ کدام است؟",
+      "options": [
+        "$[2, 4] - \\{3\\}$",
+        "$[2, 4)$",
+        "$(2, 4]$",
+        "$[0, 4] - \\{1, 3\\}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1350,
+            1420,
+            1680,
+            1640
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 542,
+      "question_page": 30,
+      "question_text": "اگر نمودار تابع $f(x)$ به صورت مقابل باشد، برد تابع $y = \\frac{f(x)}{x}$ کدام است؟",
+      "options": [
+        "$(-\\infty, 1)$",
+        "$(0, 1)$",
+        "$(1, +\\infty)$",
+        "$\\mathbb{R} - \\{1\\}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1350,
+            1660,
+            1680,
+            1880
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 543,
+      "question_page": 30,
+      "question_text": "اگر شکل مقابل نمودار تابع $f$ باشد، دامنه تابع $\\frac{1}{f(x) - x}$ کدام است؟",
+      "options": [
+        "$[0, 4] - \\{2\\}$",
+        "$[0, 4] - \\{1, 3\\}$",
+        "$(0, 4) - \\{1\\}$",
+        "$(0, 4) - \\{2\\}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1360,
+            1880,
+            1680,
+            2060
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 544,
+      "question_page": 30,
+      "question_text": "اگر $f(x) = x^2$ و نمودار تابع $g(x)$ به صورت مقابل باشد، برد تابع $\\frac{f}{g}$ کدام است؟",
+      "options": [
+        "$(0, +\\infty)$",
+        "$[0, +\\infty)$",
+        "$(-\\infty, 0)$",
+        "$(-\\infty, 0]$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1360,
+            2080,
+            1680,
+            2260
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 545,
+      "question_page": 30,
+      "question_text": "در تابع خطی $g$ و تابع $f$ که نمودار آن به صورت مقابل است، داریم $(f+g)(2) = 1$ و $(f-g)(1) = 4$. مقدار $(f \\times g)(-1)$ کدام است؟",
+      "options": [
+        "۳",
+        "۴",
+        "۶",
+        "۸"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1360,
+            2280,
+            1680,
+            2480
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 546,
+      "question_page": 30,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. نمودار تابع $f(x) - f(x - 1)$ کدام است؟",
+      "options": [
+        "شکل ۱",
+        "شکل ۲",
+        "شکل ۳",
+        "شکل ۴"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0030.jpg",
+          "region": [
+            1000,
+            2520,
+            1260,
+            2750
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": [
+        "گزینه ها به صورت شکل هستند و باید به صورت دستی برش داده شوند."
+      ]
+    },
+    {
+      "question_number": 547,
+      "question_page": 30,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. نمودار تابع $f(x+1) - f(x-1)$ کدام است؟",
+      "options": [
+        "شکل ۱",
+        "شکل ۲",
+        "شکل ۳",
+        "شکل ۴"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "گزینه ها به صورت شکل هستند."
+      ]
+    },
+    {
+      "question_number": 548,
+      "question_page": 31,
+      "question_text": "نمودار توابع $y_1 = 3x - f(x)$ و $y_2 = x + \\frac{1}{2} g(x)$ به صورت مقابل است. ضابطه $f + g$ کدام است؟",
+      "options": [
+        "$-2x$",
+        "$-x - 2$",
+        "$-x$",
+        "$-2x - 2$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            70,
+            70,
+            270,
+            210
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 549,
+      "question_page": 31,
+      "question_text": "با توجه به نمودار توابع $f$ و $g$، مساحت ناحیه محدود به نمودار $f - g$ و $y = 4$ کدام است؟",
+      "options": [
+        "$\\frac{3}{2}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{2}$",
+        "$\\frac{5}{4}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            90,
+            220,
+            260,
+            360
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 550,
+      "question_page": 31,
+      "question_text": "نمودار تابع $y = 2x - f(x - 1)$ به صورت مقابل است. نمودار تابع $y = x + f(-x)$ کدام است؟",
+      "options": [
+        "شکل ۱",
+        "شکل ۲",
+        "شکل ۳",
+        "شکل ۴"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            90,
+            370,
+            280,
+            560
+          ],
+          "placement": "stem"
+        },
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            1400,
+            560,
+            1660,
+            780
+          ],
+          "placement": "option_1"
+        },
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            1020,
+            560,
+            1280,
+            780
+          ],
+          "placement": "option_2"
+        },
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            680,
+            560,
+            940,
+            780
+          ],
+          "placement": "option_3"
+        },
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            300,
+            560,
+            560,
+            780
+          ],
+          "placement": "option_4"
+        }
+      ],
+      "review_notes": [
+        "گزینه ها به صورت شکل هستند."
+      ]
+    }
+  ]
+}

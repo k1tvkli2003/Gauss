@@ -1,0 +1,256 @@
+{
+  "generated_at": "2026-06-26T02:11:00Z",
+  "scope": {
+    "workspace": "C:/Users/K1/Desktop/Projects/Gauss",
+    "artifact_dir": "data/seed/review/nardebam/jules_repairs",
+    "raw_edit_policy": "No raw files or scripts were modified.",
+    "broad_promote_run": false,
+    "analysis_commands": [
+      "node scripts/nardebam_progress.mjs",
+      "node scripts/promote_jules_repairs.mjs --dry-run",
+      "node scripts/promote_jules_repairs.mjs --dry-run --only=<targeted taskIds>"
+    ]
+  },
+  "current_progress": {
+    "generated_at": "2026-06-26T02:09:45.546Z",
+    "metrics": {
+      "math_questions": "1875/2042",
+      "math_solutions": "1912/2042",
+      "physics_questions": "1636/1630",
+      "physics_solutions": "1646/1630",
+      "math_answer_key": "2040/2042",
+      "physics_answer_key": "1907/1630"
+    },
+    "conflicts": {
+      "total": 755,
+      "by_issue": {
+        "duplicate_solution": 2,
+        "solution_key_mismatch": 434,
+        "missing_solution": 162,
+        "duplicate_question_number": 64,
+        "missing_solution+missing_key": 64,
+        "missing_key": 26,
+        "question_total": 2,
+        "invalid_options": 1
+      }
+    }
+  },
+  "global_dry_run_status": {
+    "safe_to_run_broadly": false,
+    "reason": "The latest broad dry-run now fails on math-solutions-07-derivative-applications-1248-1466-retry2 because the collected nonterminal artifact contains a stray string row and fails solution validation.",
+    "observed_error": [
+      "math-solutions-07-derivative-applications-1248-1466-retry2:1 empty solution_text",
+      "math-solutions-07-derivative-applications-1248-1466-retry2:1 media_regions must be an array",
+      "math-solutions-07-derivative-applications-1248-1466-retry2:1 review_notes must be an array"
+    ]
+  },
+  "safe_promote_only": [
+    {
+      "taskId": "math-answer-key-verified-mismatch-ranges",
+      "mode": "merge_answer_key",
+      "raw_target": "data/seed/review/nardebam/raw/math-answer-key.json",
+      "rows": 101,
+      "dry_run_effect": {
+        "mergedRows": 2042,
+        "added": 0,
+        "replaced": 4,
+        "changed_keys": {
+          "93": { "raw": 3, "incoming": 1 },
+          "127": { "raw": 4, "incoming": 1 },
+          "128": { "raw": 3, "incoming": 1 },
+          "324": { "raw": 4, "incoming": 1 }
+        }
+      },
+      "why_safe": "Targeted verified mismatch artifact; changes only four existing math answer keys already present as solution_key_mismatch conflicts.",
+      "expected_conflict_impact": "Could reduce up to 4 math solution_key_mismatch conflicts if the source verification is accepted. No coverage increase."
+    },
+    {
+      "taskId": "math-topic-02-boundary-33-100",
+      "mode": "replace",
+      "raw_target": "data/seed/review/nardebam/raw/math-topic-02.json",
+      "rows": 50,
+      "why_safe": "Complete same-size topic replacement with global question_number 51-100 and valid four-option rows.",
+      "expected_conflict_impact": "Should help retire math derivative/pattern boundary duplicates 51-64 and one mismatch at 93, but it will not address the remaining duplicate_question_number cluster 1-64 by itself."
+    },
+    {
+      "taskId": "math-topic-04",
+      "mode": "replace",
+      "raw_target": "data/seed/review/nardebam/raw/math-topic-04.json",
+      "rows": 46,
+      "why_safe": "Terminal, same-size validated topic replacement.",
+      "expected_conflict_impact": "No direct key repair; overlaps missing_solution 234-242 only as question rows, so conflict count may remain until solutions arrive."
+    },
+    {
+      "taskId": "math-topic-13",
+      "mode": "replace",
+      "raw_target": "data/seed/review/nardebam/raw/math-topic-13.json",
+      "rows": 69,
+      "why_safe": "Terminal, same-size validated topic replacement.",
+      "expected_conflict_impact": "May improve text alignment for analytic_geometry solution_key_mismatch 1570-1615; does not change answer keys or solutions."
+    },
+    {
+      "taskId": "math-topic-15-combinatorics-1735-1822",
+      "mode": "replace",
+      "raw_target": "data/seed/review/nardebam/raw/math-topic-15.json",
+      "rows": 88,
+      "why_safe": "Fresh completed artifact is globally numbered 1735-1822, has 88 unique question_numbers, and passes question validation. Current raw math-topic-15 is already 1735-1822, so this is a narrow same-size replacement rather than a boundary renumber.",
+      "expected_conflict_impact": "Could affect 76 current combinatorics overlaps: 15 missing_solution and 61 solution_key_mismatch. It will not solve missing solutions/keys directly; it may change whether mismatches are real if question/options are improved."
+    }
+  ],
+  "not_safe_promote_needs_guard_or_repair": [
+    {
+      "taskId": "math-solutions-07-derivative-applications-1248-1466-retry2",
+      "mode": "invalid_needs_repair",
+      "raw_target": "data/seed/review/nardebam/raw/math-solutions-07.json",
+      "rows_observed": 26,
+      "range_observed": "1291-1315 plus one invalid string row",
+      "why_unsafe": "Nonterminal IN_PROGRESS snapshot; requested 1248-1466 but contains only 1291-1315 and a stray string value 'solutions'. It currently blocks broad dry-run validation.",
+      "required_guard_or_repair": "Either ignore non-object rows and require complete solution fields before promotion, or wait for a terminal artifact covering 1248-1466. Do not promote this artifact as-is.",
+      "expected_conflict_impact_if_repaired": "Target range could reduce derivative_applications solution_key_mismatch around 1346-1466 and possibly fill early 1248-1290 gaps; current artifact has no overlap with current conflicts."
+    },
+    {
+      "taskId": "math-topic-14-visual-conics-repair",
+      "mode": "replace",
+      "raw_target": "data/seed/review/nardebam/raw/math-topic-14.json",
+      "rows": 94,
+      "why_unsafe": "Dry-run says replace, but artifact is locally numbered 1-94 while current raw math-topic-14 is globally numbered 1638-1731. Promoting would reintroduce duplicate_question_number conflicts 1-64.",
+      "required_guard_or_repair": "Script guard should reject topic replacements when incoming min/max are incompatible with the existing global range unless explicitly allowlisted. Repair should renumber to 1638-1731 or wait for corrected Jules output.",
+      "expected_conflict_impact_if_promoted": "Would likely worsen duplicate_question_number conflicts and boundary alignment, despite replacing 94 rows."
+    },
+    {
+      "taskId": "physics-topic-07-08-boundary-806-807-retry",
+      "mode": "skip_shorter_topic_artifact",
+      "raw_target": "data/seed/review/nardebam/raw/physics-topic-07.json",
+      "rows": 0,
+      "why_unsafe": "The artifact contains useful recommendation text but no question rows. Generic promotion skips it and cannot remove stale boundary rows.",
+      "required_guard_or_repair": "Needs a targeted repair script/action that uses the recommendation: ensure physics-topic-07 ends at 805 and keep 806-807 only in physics-topic-08.",
+      "expected_conflict_impact_if_repaired": "Should prevent future physics boundary duplicates or topic ownership drift. Current join_conflicts no longer shows duplicate_question_number 806-807, so this is a guard/consistency repair rather than immediate conflict reduction."
+    },
+    {
+      "taskId": "physics-topic-08-boundary-806-807",
+      "mode": "skip_shorter_topic_artifact",
+      "raw_target": "data/seed/review/nardebam/raw/physics-topic-08.json",
+      "rows": 2,
+      "why_unsafe": "Two-row partial topic artifact; generic promotion correctly skips because current raw has 248 rows.",
+      "required_guard_or_repair": "Use only as evidence for boundary ownership. Do not replace the full topic with it.",
+      "expected_conflict_impact_if_promoted": "No safe direct promote impact; replacing would destroy topic coverage."
+    },
+    {
+      "taskId": "math-answer-key-repair",
+      "mode": "merge_answer_key",
+      "raw_target": "data/seed/review/nardebam/raw/math-answer-key.json",
+      "rows": 1932,
+      "dry_run_effect": { "mergedRows": 2042, "added": 0, "replaced": 476 },
+      "why_unsafe": "Current script now allows replacement for repair answer keys; this artifact would overwrite 476 existing math keys, far beyond targeted conflict repair.",
+      "required_guard_or_repair": "Needs a stricter guard or an allowlist of verified mismatch keys before promotion.",
+      "expected_conflict_impact_if_promoted": "Could reduce some mismatches but has high regression risk across hundreds of keys."
+    },
+    {
+      "taskId": "physics-answer-key-repair",
+      "mode": "merge_answer_key",
+      "raw_target": "data/seed/review/nardebam/raw/physics-answer-key.json",
+      "rows": 904,
+      "dry_run_effect": { "mergedRows": 1907, "added": 0, "replaced": 16 },
+      "why_unsafe": "Broad repair key replacement is not targeted to current missing physics keys 119-129 and 215-220.",
+      "required_guard_or_repair": "Needs verification/allowlist for the 16 replacements, and a separate artifact for missing 119-129 and 215-220.",
+      "expected_conflict_impact_if_promoted": "May affect some physics solution_key_mismatch rows but will not fix missing_key 119-129 or 215-220."
+    }
+  ],
+  "guarded_no_effect_or_wait": [
+    {
+      "taskIds": [
+        "math-solutions-01-repair",
+        "math-solutions-02-repair",
+        "math-solutions-03-repair",
+        "math-solutions-04-repair",
+        "math-solutions-05-repair",
+        "math-solutions-06-repair",
+        "math-solutions-07-repair",
+        "math-solutions-08-repair",
+        "math-solutions-09-mismatch-1824-1891",
+        "math-solutions-09-repair",
+        "math-solutions-10-mismatch-1949-2040",
+        "math-solutions-10-repair",
+        "math-solutions-gap-001-153",
+        "math-solutions-gap-1040-1156",
+        "math-solutions-gap-1516-1608"
+      ],
+      "reason": "Dry-run merge reports replaced: 0 for each. Promotion would be a no-op against current raw solution rows.",
+      "expected_conflict_impact": "No immediate conflict reduction unless promotion heuristics are changed to prefer stated_correct_option/text from these artifacts."
+    },
+    {
+      "taskIds": [
+        "math-solutions-gap-1912-2119",
+        "math-solutions-gap-379-421"
+      ],
+      "reason": "Empty solution artifacts; dry-run skips.",
+      "expected_conflict_impact": "No effect on missing_solution clusters 379-421, 1912/1921-1935, 1936-1948, or statistics 2050-2119."
+    },
+    {
+      "taskIds": [
+        "math-topic-01",
+        "math-topic-05-gap-295-308",
+        "math-topic-05",
+        "math-topic-07",
+        "math-topic-10",
+        "math-topic-11",
+        "math-topic-14",
+        "math-topic-16",
+        "math-topic-18"
+      ],
+      "reason": "Dry-run skips as shorter or empty topic artifacts. Some are useful evidence, but generic replacement would reduce coverage.",
+      "expected_conflict_impact": "No immediate safe promote impact."
+    },
+    {
+      "taskIds": [
+        "physics-answer-key-111-220"
+      ],
+      "reason": "Contains 111-118 and 130-214, but not current missing physics keys 119-129 or 215-220; dry-run skips as not better than existing key coverage.",
+      "expected_conflict_impact": "No effect on current physics missing_key conflicts."
+    }
+  ],
+  "fresh_artifact_notes": [
+    {
+      "taskId": "math-answer-key-verified-mismatch-ranges",
+      "mtime": "2026-06-26T02:09:55Z",
+      "status": "collected, remote IN_PROGRESS",
+      "triage": "safe only as targeted --only promotion if accepting the four verified key replacements"
+    },
+    {
+      "taskId": "math-solutions-07-derivative-applications-1248-1466-retry2",
+      "mtime": "2026-06-26T02:09:48Z",
+      "status": "collected, remote IN_PROGRESS",
+      "triage": "unsafe; invalid nonterminal snapshot blocks broad dry-run"
+    },
+    {
+      "taskId": "math-topic-15-combinatorics-1735-1822",
+      "mtime": "2026-06-26T02:00:57Z",
+      "status": "collected, remote COMPLETED",
+      "triage": "safe as same-size targeted replacement; conflict impact indirect"
+    },
+    {
+      "taskId": "physics-topic-07-08-boundary-806-807-retry",
+      "mtime": "2026-06-26T02:04:54Z",
+      "status": "collected, remote IN_PROGRESS",
+      "triage": "not promotable; use recommendation text for a targeted boundary guard/repair"
+    }
+  ],
+  "bottom_line": {
+    "promote_now_only_if_targeted": [
+      "math-answer-key-verified-mismatch-ranges",
+      "math-topic-02-boundary-33-100",
+      "math-topic-04",
+      "math-topic-13",
+      "math-topic-15-combinatorics-1735-1822"
+    ],
+    "do_not_promote_without_repair_or_guard": [
+      "math-solutions-07-derivative-applications-1248-1466-retry2",
+      "math-topic-14-visual-conics-repair",
+      "physics-topic-07-08-boundary-806-807-retry",
+      "physics-topic-08-boundary-806-807",
+      "math-answer-key-repair",
+      "physics-answer-key-repair"
+    ],
+    "do_not_broad_promote": "Broad promotion is currently unsafe because one invalid fresh artifact aborts dry-run, and several broad answer-key/topic artifacts need tighter guards."
+  }
+}

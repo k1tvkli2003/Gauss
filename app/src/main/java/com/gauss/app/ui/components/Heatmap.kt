@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -34,9 +35,10 @@ fun Heatmap(data: Map<String, Int>, modifier: Modifier = Modifier) {
         }
     }
     val max = remember(days) { maxOf(1, days.maxOf { it.second }) }
+    val scheme = MaterialTheme.colorScheme
     fun level(c: Int): Color = when {
-        c == 0 -> GaussColors.Raised
-        c.toFloat() / max > 0.66f -> GaussColors.NeonGreen
+        c == 0 -> scheme.surfaceVariant
+        c.toFloat() / max > 0.66f -> GaussColors.Success
         c.toFloat() / max > 0.33f -> GaussColors.HeatMid
         else -> GaussColors.HeatLow
     }
@@ -63,8 +65,8 @@ fun Heatmap(data: Map<String, Int>, modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.End,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text("کمتر ", color = GaussColors.Muted, fontSize = 11.sp)
-            listOf(GaussColors.Raised, GaussColors.HeatLow, GaussColors.HeatMid, GaussColors.NeonGreen).forEach {
+            Text("کمتر ", color = scheme.onSurfaceVariant, fontSize = 11.sp)
+            listOf(scheme.surfaceVariant, GaussColors.HeatLow, GaussColors.HeatMid, GaussColors.Success).forEach {
                 Box(
                     Modifier
                         .padding(horizontal = 1.dp)
@@ -73,7 +75,7 @@ fun Heatmap(data: Map<String, Int>, modifier: Modifier = Modifier) {
                         .background(it),
                 )
             }
-            Text(" بیشتر", color = GaussColors.Muted, fontSize = 11.sp)
+            Text(" بیشتر", color = scheme.onSurfaceVariant, fontSize = 11.sp)
         }
     }
 }

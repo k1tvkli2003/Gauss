@@ -1,0 +1,1452 @@
+[
+  {
+    "question_number": 879,
+    "solution_page": 377,
+    "solution_text": "سرعت لحظه‌ای در $t=0$ از شیب مماس نمودار مکان-زمان به دست می‌آید و برابر $v_0=-12m/s$ است. در $t=3s$ شیب مماس صفر است، پس $v=0$ و شتاب متوسط بازه $0$ تا $3s$ برابر $a_{av}=\\frac{0-(-12)}{3}=4m/s^2$ می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 880,
+    "solution_page": 377,
+    "solution_text": "در بازه صفر تا $3s$ بردار مکان خلاف جهت محور $x$ است و از $s_{av}=\\ell/\\Delta t=4m/s$ نتیجه می‌شود $|x_0|=12m$ و $x_0=-12m$. با شیب مماس‌ها سرعت‌ها تعیین شده و شتاب متوسط از تغییر سرعت به دست می‌آید: $|a_{av}|=0.6m/s^2$.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 881,
+    "solution_page": 377,
+    "solution_text": "در نمودار مکان-زمان، خط‌های (۱) و (۲) با محور زمان دو مثلث مشابه می‌سازند، پس $t=8s$. شیب خط اول و دوم به ترتیب سرعت‌های $v_1=2m/s$ و $v_2=-3m/s$ را می‌دهد؛ بنابراین $\\Delta v=-5m/s$ و شتاب متوسط در بازه پنج‌ثانیه‌ای برابر $-1m/s^2$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0182.jpg",
+        "box": [
+          185,
+          965,
+          555,
+          1335
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان دوپاره برای تعیین زمان t و شتاب متوسط"
+      }
+    ],
+    "review_notes": [
+      "box تقریبی است."
+    ]
+  },
+  {
+    "question_number": 882,
+    "solution_page": 377,
+    "solution_text": "از شیب بخش $OA$ نمودار سرعت-زمان رابطه $v=5t_1$ به دست می‌آید. در مرحله $AB$ جسم با سرعت ثابت $v$ حرکت می‌کند و از مساحت زیر نمودار $240=15t_1^2$، پس $t_1=4s$ و $v=20m/s$؛ سپس با نسبت داده‌شده، $v_{max}=30m/s$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0182.jpg",
+        "box": [
+          195,
+          1450,
+          575,
+          1865
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سرعت-زمان با بخش‌های OA، AB و BC"
+      }
+    ],
+    "review_notes": [
+      "box تقریبی است."
+    ]
+  },
+  {
+    "question_number": 883,
+    "solution_page": 377,
+    "solution_text": "از نمودار سرعت-زمان، سرعت در $t=1s$ برابر $v_1=8m/s$ و در $t=7s$ برابر $v_2=-4m/s$ خوانده می‌شود. پس شتاب متوسط بازه $1$ تا $7s$ برابر $a_1=-2m/s^2$ است. شتاب لحظه $t=3.25s$ همان شیب بخش اول یعنی $a_2=-4m/s^2$ است و نسبت بزرگی‌ها $|a_1|/|a_2|=1/2$ می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0182.jpg",
+        "box": [
+          180,
+          1895,
+          600,
+          2255
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سرعت-زمان برای تعیین شتاب متوسط و لحظه‌ای"
+      }
+    ],
+    "review_notes": [
+      "box تقریبی است."
+    ]
+  },
+  {
+    "question_number": 884,
+    "solution_page": 378,
+    "solution_text": "شیب نمودار $v-t$ در بازه صفر تا $5s$ منفی و در ادامه مثبت است. با تشابه مثلث‌ها $|v_2|=\\frac{3}{2}v_1$ به دست می‌آید و مسافت‌ها از مساحت زیر نمودار محاسبه می‌شوند. در نهایت $s_{av(1)}=\\frac{13}{20}v_1$ و $s_{av(2)}=\\frac{3}{4}v_1$، پس نسبت آن‌ها $13/15$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0183.jpg",
+        "box": [
+          70,
+          330,
+          500,
+          720
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سرعت-زمان با نواحی S1، S2 و S3"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 885,
+    "solution_page": 378,
+    "solution_text": "از برابری مسافت طی‌شده با مجموع مساحت‌های $S_1$ و $S_2$ و رابطه شیب خط اول، $v=15/2m/s$ و $v_0=-5m/s$ به دست می‌آید. سپس از شیب خط‌ها $v_1=-15/4m/s$ در $t=1s$ و $v_2=3m/s$ در $t=16s$ محاسبه شده و شتاب متوسط بازه $1$ تا $16s$ برابر $9/20m/s^2$ است.",
+    "stated_correct_option": 0,
+    "media_regions": [
+      {
+        "page_file": "page_0183.jpg",
+        "box": [
+          120,
+          1510,
+          545,
+          2350
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو نمودار سرعت-زمان برای محاسبه سرعت‌های لحظه‌ای و شتاب متوسط"
+      }
+    ],
+    "review_notes": [
+      "box تقریبی است.",
+      "stated_correct_option 1 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 886,
+    "solution_page": 379,
+    "solution_text": "برای این‌که متحرک در لحظه $t'$ دوباره از مبدأ مکان بگذرد، مساحت‌های مثبت و منفی نمودار سرعت-زمان برابرند. با تشابه مثلث‌ها روابط سرعت‌ها نوشته و از $S_1=S_2$ نتیجه می‌شود $t'=6s$؛ سپس مسافت کل $8m$ و تندی متوسط $\\frac{4}{3}m/s$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0184.jpg",
+        "box": [
+          155,
+          210,
+          595,
+          485
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سرعت-زمان با دو ناحیه هم‌مساحت S1 و S2"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 887,
+    "solution_page": 379,
+    "solution_text": "شکل سهمی مکان-زمان، حرکت با شتاب ثابت را نشان نمی‌دهد ولی تقارن آن برقرار است. با استفاده از ریشه‌های زمانی $t=-1s$ و $t=5s$، معادله سرعت-زمان به صورت $v=3(t+1)(t-5)$ نوشته می‌شود. در $t=2s$ سرعت کمینه $-27m/s$ و در $t=6s$ سرعت $21m/s$ است؛ شتاب متوسط خواسته $9m/s^2$ می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0184.jpg",
+        "box": [
+          155,
+          885,
+          475,
+          1285
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سهمی سرعت-زمان با تقارن حول t1"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 888,
+    "solution_page": 379,
+    "solution_text": "از شکل روبه‌رو سرعت‌ها به صورت $\\vec v_A=(2cm/s)\\hat j$ و $\\vec v_B=(2cm/s)\\hat i$ خوانده می‌شوند. تغییر سرعت طی $5s$ برابر تفاضل این دو بردار است، پس مؤلفه‌های شتاب متوسط $0.4\\hat i-0.4\\hat j$ بر حسب $cm/s^2$ و بزرگی آن $4\\sqrt2\\times10^{-3}m/s^2$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0184.jpg",
+        "box": [
+          120,
+          2130,
+          610,
+          2475
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر مربعی و سرعت‌های عمود بر هم در نقاط A و B"
+      }
+    ],
+    "review_notes": [
+      "محاسبات در ابتدای صفحه بعد ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 889,
+    "solution_page": 380,
+    "solution_text": "مسافت طی‌شده در $3s$ برابر $36m$ است و این مقدار نصف محیط دایره می‌شود. در دو سر قطر، سرعت‌ها خلاف جهت هم و با اندازه $12m/s$ هستند؛ بنابراین $\\Delta v=-24m/s$ و بزرگی شتاب متوسط $8m/s^2$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0185.jpg",
+        "box": [
+          140,
+          315,
+          525,
+          620
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "حرکت نیم‌دایره‌ای با سرعت‌های مخالف در دو سر قطر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 890,
+    "solution_page": 380,
+    "solution_text": "برای متحرک A تندی در حال کاهش است، پس حرکت کندشونده بوده و سرعت و شتاب خلاف جهت‌اند. برای متحرک B تندی افزایش می‌یابد، پس حرکت تندشونده است و سرعت و شتاب هم‌جهت‌اند. جدول علامت‌ها نشان می‌دهد موارد الف و ت شتاب‌های هم‌جهت دارند.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0185.jpg",
+        "box": [
+          350,
+          740,
+          1200,
+          1255
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جدول علامت سرعت و شتاب برای متحرک‌های A و B"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 891,
+    "solution_page": 380,
+    "solution_text": "در رابطه $v=-x/t$ چون $x_0>0$ و $v_0<0$ است، متحرک از مکان مثبت به سمت مبدأ حرکت می‌کند. اندازه سرعت متناسب با مکان کم می‌شود و در حد نزدیک شدن به $x=0$ سرعت صفر می‌گردد؛ پس حرکت کندشونده و خلاف جهت محور $x$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 892,
+    "solution_page": 380,
+    "solution_text": "وقتی متحرک در حال دور شدن از مبدأ است، بردارهای مکان و سرعت هم‌جهت‌اند و چون $a=-4x$ است، شتاب خلاف جهت مکان و در نتیجه خلاف جهت سرعت است؛ پس $av<0$ و حرکت کندشونده خواهد بود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 893,
+    "solution_page": 380,
+    "solution_text": "برای حرکت خلاف جهت محور $x$، نمودار سرعت-زمان باید زیر محور زمان باشد. چون شیب نمودار سرعت-زمان شتاب است، طبق صورت پرسش تندی و در نتیجه اندازه شتاب باید زیاد شود؛ پس گزینه ۴ درست است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 894,
+    "solution_page": 380,
+    "solution_text": "از معادله $x=-4t^2+10t-4$ نتیجه می‌شود $a=-8m/s^2$، $v_0=10m/s$ و $x_0=-4m$. ریشه‌های مکان $t=0.5s$ و $t=2s$ و زمان توقف $t=1.25s$ هستند. جدول علامت‌های $x$، $v$ و $a$ نشان می‌دهد شرط‌های $x<0$ و $av>0$ فقط برای $t>2s$ برقرار است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0185.jpg",
+        "box": [
+          80,
+          2105,
+          485,
+          2395
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان سهمی برای بررسی علامت مکان و سرعت"
+      },
+      {
+        "page_file": "page_0186.jpg",
+        "box": [
+          260,
+          260,
+          1000,
+          650
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جدول علامت x، v، a و av در بازه‌های زمانی"
+      }
+    ],
+    "review_notes": [
+      "حل از صفحه 380 به صفحه 381 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 895,
+    "solution_page": 381,
+    "solution_text": "معادله سرعت-زمان یک سهمی رو به پایین است. از ریشه‌ها $t_1=-0.5s$ و $t_2=v/2$ و تقارن سهمی، زمان رأس $3/2s$ و $v_{max}=8m/s$ به دست می‌آید. با بررسی بازه‌ها، تندی فقط در محدوده $3/2<t<v/2$ کاهش می‌یابد، پس پاسخ بند ۳ است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0186.jpg",
+        "box": [
+          145,
+          710,
+          530,
+          1110
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سهمی سرعت-زمان و زمان‌های ریشه و رأس"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 896,
+    "solution_page": 381,
+    "solution_text": "از نمودار $v-t$، بازه تندشونده و کندشونده جدا می‌شود. نسبت زمان‌های کندشونده و تندشونده شرط داده‌شده را می‌دهد و از آن $t_n=4s$ به دست می‌آید. سپس با برابری شیب‌ها، $|v_2|=2m/s$ محاسبه می‌شود.",
+    "stated_correct_option": 0,
+    "media_regions": [
+      {
+        "page_file": "page_0186.jpg",
+        "box": [
+          135,
+          1410,
+          535,
+          1760
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سرعت-زمان V شکل برای تعیین tn و سرعت منفی"
+      }
+    ],
+    "review_notes": [
+      "stated_correct_option 2 conflicts with authoritative answer key 4; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 897,
+    "solution_page": 381,
+    "solution_text": "در بازه $t$ تا $t'$ حرکت خلاف جهت محور $x$ و کندشونده است. مسافت این بازه از مساحت مثلث سمت راست نمودار به دست می‌آید و $s_{av}=2m/s$ می‌شود. برای بازه صفر تا $6s$ نیز با جمع مساحت‌های $S_1$ و $S_2$ تندی متوسط $s'_{av}=10/3m/s$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0186.jpg",
+        "box": [
+          80,
+          2140,
+          545,
+          2470
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سرعت-زمان با نواحی S1 و S2"
+      },
+      {
+        "page_file": "page_0187.jpg",
+        "box": [
+          80,
+          90,
+          725,
+          250
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "ادامه محاسبه مساحت‌های S1 و S2"
+      }
+    ],
+    "review_notes": [
+      "حل از صفحه 381 به صفحه 382 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 898,
+    "solution_page": 382,
+    "solution_text": "وقتی تندی متحرک $2m/s$ است، دو حالت سرعت $+2$ و $-2m/s$ مطرح می‌شود. چون متحرک از مکان‌های مثبت وارد مکان‌های منفی شده، سرعت منفی انتخاب می‌شود. از $x=vt+x_0$ و داده $t=4s$ نتیجه می‌شود $x_0=2m$ و معادله مکان $x=-2t+2$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 899,
+    "solution_page": 382,
+    "solution_text": "از $x_1=0$ در $t_1=5s$ و $x_2=40+x_0$ در $t_2=10s$، سرعت $v=4m/s$ به دست می‌آید. سپس $x_0=-5v=-20m$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 900,
+    "solution_page": 382,
+    "solution_text": "برای حرکت یکنواخت روی خط راست، از دو داده زمانی $x_1=-2x_0$ در $t=2s$ و $x_2=-120m$ استفاده می‌شود. معادلات مکان می‌دهند $x_0=15m$ و $v=-45/2m/s$. جابه‌جایی بازه $2$ تا $6s$ برابر $\\Delta x=-135/2m$ و بردار آن $-(135/2m)\\hat i$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 901,
+    "solution_page": 382,
+    "solution_text": "از شکل، نقطه $M$ پنج ثانیه پیش از رسیدن دوچرخه‌سوار به $B$ طی شده است. با $v=18km/h=5m/s$، طول $MB=50m$ می‌شود. رابطه هندسی $MB=AM+0.25AM$ و $AB=AM+MB$ در نهایت $AB=90m$ می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0187.jpg",
+        "box": [
+          80,
+          1070,
+          520,
+          1230
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "خط AB با نقطه M و بازه ده ثانیه تا B"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 902,
+    "solution_page": 382,
+    "solution_text": "فاصله دو شهر را $l$ می‌گیریم. چون سرعت در مسیر دوم $25\\%$ بیشتر است، زمان دوم $\\Delta t_2=\\frac{4}{5}\\Delta t_1$ می‌شود. بنابراین $\\frac{\\Delta t_2-\\Delta t_1}{\\Delta t_1}\\times100=-20\\%$ و زمان ۲۰ درصد کاهش یافته است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 903,
+    "solution_page": 382,
+    "solution_text": "اگر طول قطار $L$ باشد، قطار در مدت $t_1$ طول تونل و در مدت $t_2$ طول پل را پشت سر می‌گذارد. از نسبت زمان‌ها $\\frac{L+100}{L+300}=\\frac{2}{3}$ نتیجه می‌شود $L=300m$.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 904,
+    "solution_page": 382,
+    "solution_text": "در شکل الف، با $v=72km/h=20m/s$ و زمان $16s$، رابطه $400-L_1=320$ طول قطار را $L_1=80m$ می‌دهد. در شکل ب برای عبور کامل از پل باید $L_2+L_1=480m$ طی شود؛ بنابراین زمان برابر $24s$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0187.jpg",
+        "box": [
+          240,
+          1880,
+          1240,
+          2355
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو وضعیت قطار روی پل برای تعیین طول قطار و زمان عبور کامل"
+      }
+    ],
+    "review_notes": [
+      "box تقریبی است."
+    ]
+  },
+  {
+    "question_number": 905,
+    "solution_page": 383,
+    "solution_text": "در شکل الف، جابه‌جایی انتهای قطار برای عبور کامل از پل $d_1=L+L'$ و زمان $t=d_1/v$ است. در شکل ب جابه‌جایی $d_2=L'-L$ و زمان $t'=d_2/v$ می‌شود. با شرط $t=\\frac{3}{2}t'$ نتیجه می‌شود $L/L'=1/5$.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0188.jpg",
+        "box": [
+          255,
+          220,
+          1250,
+          650
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو شکل قطار روی پل با جابه‌جایی‌های d1 و d2"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 906,
+    "solution_page": 383,
+    "solution_text": "با مبدأ گرفتن مکان اولیه A، معادله‌ها $x_A=10t$ و $x_B=-5t+120$ نوشته می‌شود. فاصله دو خودرو $X=|15t-120|$ است و شرط $X\\le30m$ بازه $6s\\le t\\le10s$ را می‌دهد؛ بنابراین مدت خواسته $4s$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0188.jpg",
+        "box": [
+          135,
+          1185,
+          750,
+          1585
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو وضعیت نسبی خودروهای A و B و فاصله 30 متر"
+      }
+    ],
+    "review_notes": [
+      "box تقریبی است."
+    ]
+  },
+  {
+    "question_number": 907,
+    "solution_page": 383,
+    "solution_text": "هر دو متحرک در جهت مثبت حرکت می‌کنند و برای دور شدن از مبدأ باید $t>3s$ باشد. از شرط فاصله $|\\Delta x|\\le3m$ رابطه $|t-6|\\le2$ به دست می‌آید. اجتماع بازه‌های مجاز $4\\le t\\le8$ بوده و طول کل آن $4s$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0188.jpg",
+        "box": [
+          100,
+          1745,
+          580,
+          1965
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "محور x و دو متحرک برای بررسی دور شدن از مبدأ"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 908,
+    "solution_page": 384,
+    "solution_text": "در روش اول، خودرو A پس از $t$ ساعت و خودرو B پس از $t-1$ ساعت به نقطه $M$ می‌رسند. از $20t=30(t-1)$، $t=3h$ و $OM=60km$ به دست می‌آید. روش دوم با انتقال مبدأ زمان به عبور A از O نیز همین نتیجه را می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0189.jpg",
+        "box": [
+          75,
+          260,
+          675,
+          880
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو روش نمایش حرکت دو خودرو تا نقطه M"
+      }
+    ],
+    "review_notes": [
+      "box تقریبی است."
+    ]
+  },
+  {
+    "question_number": 909,
+    "solution_page": 384,
+    "solution_text": "سرعت‌ها به SI تبدیل می‌شوند: $v_A=15m/s$، $v_B=10m/s$ و سرعت‌های نیمه دوم هر دو $20m/s$ است. چون زمان حرکت B یک دقیقه بیشتر است، از رابطه زمان‌ها روی دو نیم‌مسیر $x$ نتیجه می‌شود $x=1800m$. در کیلومتر دوم مسیر B، زمان $t'_B=90s$ یعنی $1min30s$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0189.jpg",
+        "box": [
+          95,
+          930,
+          655,
+          1070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر XY با نقطه M و سرعت‌های دو خودرو در دو نیمه مسیر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 910,
+    "solution_page": 384,
+    "solution_text": "در شکل الف، از هم‌زمانی رسیدن متحرک‌ها به $O$ نسبت $v_1/v_2=AO/OB$ نوشته می‌شود. در شکل ب و رسیدن متحرک‌ها به $B$ و $C$، نسبت دیگری برای همان سرعت‌ها به دست می‌آید. برابری دو نسبت معادله‌ای برای $OB$ می‌دهد و $OB=24m$؛ در نتیجه $OC=16m$ و $AO=36m$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0189.jpg",
+        "box": [
+          90,
+          1520,
+          655,
+          1905
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو شکل خطی A، O، B و C برای نسبت سرعت‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 911,
+    "solution_page": 384,
+    "solution_text": "با فرض فاصله دو خودرو $l$ و نسبت سرعت‌ها $v_1=3v_2$، اگر خودرو (۱) در مدت $t$ به $B$ برسد، خودرو (۲) در مدت $t-\\Delta t$ به $A$ رسیده است و از معادله‌ها $t=3\\Delta t/2$ و $l=3v_2\\Delta t/2$ به دست می‌آید. تا لحظه رسیدن به هم، مجموع مسافت‌ها $l$ است و از آن $t'=3\\Delta t/8$ نتیجه می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 912,
+    "solution_page": 385,
+    "solution_text": "مجموع مسافت‌های دو خودرو از شروع حرکت تا رسیدن به هم برابر فاصله دو شهر است و چون یکی دو ساعت دیرتر می‌رسد، $|v_A|+|v_B|=200km/h$ و $200/t+200/(t+2)=200$ نوشته می‌شود. حل آن $t=\\sqrt2h$ و در نتیجه $60\\sqrt2min$ می‌دهد.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0190.jpg",
+        "box": [
+          205,
+          475,
+          745,
+          690
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو خودرو بین دو شهر و نقطه ملاقات"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 913,
+    "solution_page": 385,
+    "solution_text": "در شکل، دو خودرو پس از رسیدن دوباره کنار هم، مجموعاً دو برابر فاصله دو شهر را طی کرده‌اند. از $v_1t+v_2t=3\\times50$ و داده سرعت‌ها $40$ و $60km/h$، زمان $t=1.5h$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0190.jpg",
+        "box": [
+          110,
+          795,
+          645,
+          990
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر رفت و برگشت دو خودرو بین A و B"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 914,
+    "solution_page": 385,
+    "solution_text": "قطارهای ۱ و ۲ با تندی $v$ به سوی $B$ و قطار ۳ با تندی $v'$ به سوی $A$ حرکت می‌کنند. از برابری فاصله قطارهای ۱ و ۲ پس از ۲۰ دقیقه و نسبت حرکت قطارها، $v'/v=2.5$ نتیجه می‌شود؛ پس قطار ۳ فاصله $3d$ را در $8min$ طی می‌کند.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0190.jpg",
+        "box": [
+          115,
+          1065,
+          760,
+          1250
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سه قطار روی مسیر AB با فاصله d"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 915,
+    "solution_page": 385,
+    "solution_text": "با انتخاب مبدأ زمان و مکان در نقطه اشاره‌شده، معادله‌های $x_A=5t$ و $x_B=15t$ نوشته می‌شود. خودرو C از لحظه $t=9/4s$ با سرعت $20m/s$ حرکت می‌کند، پس $x_C=20t-45$. از $x_C=x_A$، $t_1=3s$ و از $x_C=x_B$، $t_2=9s$؛ جابه‌جایی C بین این دو رسیدن $120m$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 916,
+    "solution_page": 385,
+    "solution_text": "برای دو قطار که رو به هم حرکت می‌کنند، مجموع مسافت‌های طی‌شده تا دیدن یکدیگر $20km$ است. از $15\\Delta t+25\\Delta t=20$ نتیجه می‌شود $\\Delta t=0.5h$. سپس مسافت قطار پرنده در این زمان با سرعت $30km/h$ برابر $15km$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0190.jpg",
+        "box": [
+          120,
+          2010,
+          690,
+          2215
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو قطار A و B و قطار پرنده بین آن‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 917,
+    "solution_page": 385,
+    "solution_text": "برای عبور کامل دو قطار از کنار هم، انتهای قطارها باید هم‌مکان شوند. با روش معادله مکان، $x_1=15t$ و $x_2=-5t+260$ است و از $x_1=x_2$ زمان $13s$ به دست می‌آید. در روش نسبی نیز طول کل $260m$ با سرعت نسبی $20m/s$ همین زمان را می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0190.jpg",
+        "box": [
+          150,
+          2305,
+          770,
+          2470
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو قطار روبه‌رو با طول‌های 140 و 120 متر"
+      },
+      {
+        "page_file": "page_0191.jpg",
+        "box": [
+          95,
+          220,
+          705,
+          545
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "ادامه نمایش عبور کامل دو قطار از کنار هم"
+      }
+    ],
+    "review_notes": [
+      "حل از صفحه 385 به صفحه 386 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 918,
+    "solution_page": 386,
+    "solution_text": "قطار B را ساکن فرض می‌کنیم؛ قطار A نسبت به آن با سرعت $v_{rel}=15-(-25)=40m/s$ حرکت می‌کند. از شکل، قطار A بین اولین و آخرین لحظه دیده شدن توسط مسافر قطار B به اندازه طول خودش یعنی $100m$ جابه‌جا می‌شود، پس $\\Delta t=100/40=2.5s$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0191.jpg",
+        "box": [
+          250,
+          650,
+          1160,
+          1190
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو لحظه مشاهده قطار A توسط مسافر قطار B در دستگاه نسبی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 919,
+    "solution_page": 386,
+    "solution_text": "از شیب نمودار مکان-زمان ابتدا $v_1=(23-8)/(7-2)=3m/s$ به دست می‌آید. با استفاده از $x_{10}=33m$، سرعت بخش دوم $v_2=(46-33)/(12-10)=7m/s$ است. تندی متوسط در ۱۵ ثانیه اول از میانگین وزنی مسافت‌ها برابر $13/2m/s$ می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 920,
+    "solution_page": 386,
+    "solution_text": "چون شناگر به مکان اولیه برمی‌گردد، جابه‌جایی و سرعت متوسط صفر است. اگر طول استخر $L$ باشد، زمان رفت با سرعت $2m/s$ برابر $0.5L$ و زمان برگشت با سرعت $0.5m/s$ برابر $2L$ است. مسافت کل $2L$ و زمان کل $2.5L$ است، پس تندی متوسط $0.8m/s$ می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0191.jpg",
+        "box": [
+          95,
+          1635,
+          520,
+          1960
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر رفت و برگشت شناگر در استخر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 921,
+    "solution_page": 386,
+    "solution_text": "شناگر ابتدا طول استخر را در $15s$ طی می‌کند، پس با $v_1=2m/s$ طول استخر $30m$ است. سپس $5s$ با سرعت $-3m/s$ برمی‌گردد و $15m$ خلاف جهت اولیه جابه‌جا می‌شود. جابه‌جایی کل $15m$ در $20s$ است، بنابراین سرعت متوسط $0.75m/s$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0191.jpg",
+        "box": [
+          85,
+          2150,
+          560,
+          2440
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر شناگر با سرعت‌های 2 و منفی 3 متر بر ثانیه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 922,
+    "solution_page": 387,
+    "solution_text": "فاصله $AB$ را $\\ell$ می‌گیریم. زمان حرکت از $A$ تا $B$ برابر $\\ell/20$ و زمان حرکت از $B$ تا $C$ برابر $(\\ell/2)/30=\\ell/60$ است. مسافت کل $3\\ell/2$ و زمان کل $\\ell/15$ است؛ پس تندی متوسط $45/2=22.5m/s$ می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0192.jpg",
+        "box": [
+          90,
+          180,
+          610,
+          395
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر A تا B و بازگشت تا C"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 923,
+    "solution_page": 387,
+    "solution_text": "اگر طول استخر $L$ باشد، از نسبت سرعت‌های رفت و برگشت و زمان کل $28s$، زمان رفت $8s$ و برگشت $20s$ به دست می‌آید، پس $L=20m$. در بازه ثانیه ۶ تا ۱۲، شناگر ابتدا $5m$ در مسیر رفت و سپس $4m$ در برگشت می‌پیماید؛ مسافت $9m$ در $6s$ و تندی متوسط $1.5m/s$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 924,
+    "solution_page": 387,
+    "solution_text": "در دو ثانیه آخر با سرعت $v_2$، جابه‌جایی $-12m$ است؛ پس $v_2=-6m/s$. از جابه‌جایی کل $24m$، جابه‌جایی سه ثانیه اول $30m$ می‌شود. مسافت کل برابر $30+18=48m$ است و تندی متوسط $48/6=8m/s$ به دست می‌آید.",
+    "stated_correct_option": 0,
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 925,
+    "solution_page": 387,
+    "solution_text": "نیمه اول مسیر با سرعت $30m/s$ و نیمه دوم با سرعت $v_2$ طی می‌شود. از رابطه تندی متوسط $24=\\Delta x/(\\Delta x/60+\\Delta x/(2v_2))$ نتیجه می‌شود $v_2=20m/s$.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0192.jpg",
+        "box": [
+          110,
+          1820,
+          720,
+          2030
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "خودرو در دو نیمه مسیر با سرعت‌های v1 و v2"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 926,
+    "solution_page": 388,
+    "solution_text": "تندی متوسط نیمه زمانی اول $20m/s$ و نیمه زمانی دوم $s'$ است. چون نیمه دوم زمانی خود به دو بخش با تندی‌های $10$ و $30m/s$ تقسیم شده، $s'=15m/s$ به دست می‌آید. سپس برای کل زمان $s_{av}=(20+15)/2=17.5m/s$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0193.jpg",
+        "box": [
+          80,
+          225,
+          760,
+          420
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار تقسیم زمان و مسافت برای تندی‌های 20، 10 و 30"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 927,
+    "solution_page": 388,
+    "solution_text": "با استفاده از دو نقطه $(t_1=2s,x_1=9m)$ و $(t_2=7s,x_2=-6m)$، معادله مکان $x=15-3t$ است. متحرک در $t=5s$ از مبدأ می‌گذرد و در مدت $3s$ جابه‌جایی $-9m$ دارد. روش دوم با شیب نمودار مکان-زمان نیز همین سرعت $-3m/s$ و جابه‌جایی را می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0193.jpg",
+        "box": [
+          120,
+          1050,
+          565,
+          1365
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان و مثلث‌های مشابه برای گذر از مبدأ"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 928,
+    "solution_page": 388,
+    "solution_text": "از تشابه مثلث‌های دو خط نمودار مکان-زمان، $t'=20/3s$ و $x_0=-7.5m$ به دست می‌آید. معادله خط‌ها نوشته شده و مسافت طی‌شده بین $t=1s$ و $t=8s$ برابر $31.25m$ محاسبه می‌شود؛ بنابراین تندی متوسط این بازه $31.25/7=4.46m/s$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0193.jpg",
+        "box": [
+          95,
+          1580,
+          590,
+          2070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو خط مکان-زمان و مثلث‌های مشابه برای تعیین t' و x0"
+      },
+      {
+        "page_file": "page_0194.jpg",
+        "box": [
+          340,
+          425,
+          750,
+          705
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "ادامه روش تشابه برای دو خط مکان-زمان"
+      }
+    ],
+    "review_notes": [
+      "حل از صفحه 388 به صفحه 389 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 929,
+    "solution_page": 389,
+    "solution_text": "معادله حرکت دو متحرک به صورت $x_A=v_At-8$ و $x_B=v_Bt+4$ نوشته می‌شود. چون در $t=12s$ از یک نقطه می‌گذرند، $v_A-v_B=1m/s$ است. فاصله ۶ متری دو متحرک در دو حالت رخ می‌دهد و از آن‌ها $t_1=6s$ و $t_2=18s$؛ پس اختلاف زمان‌ها $12s$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0194.jpg",
+        "box": [
+          90,
+          1135,
+          735,
+          1555
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان دو متحرک و لحظه‌های فاصله 6 متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 930,
+    "solution_page": 389,
+    "solution_text": "شیب نمودار مکان-زمان سرعت را می‌دهد؛ سرعت A مثبت و سرعت B منفی است. از فاصله اولیه $x_{0B}-x_{0A}=36m$ و مجموع تندی‌ها $9m/s$، در لحظه اول فاصله ۱۸ متری $t_1=2s$ و پس از عبور از هم در فاصله ۱۸ متری دوم $t_2=6s$ به دست می‌آید؛ بنابراین $t_2/t_1=3$.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0194.jpg",
+        "box": [
+          100,
+          1750,
+          590,
+          2230
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان متحرک‌های A و B و فاصله‌های 18 متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 931,
+    "solution_page": 390,
+    "solution_text": "در شکل الف فاصله اولیه دو متحرک $|x_{0A}|+x_{0B}$ است. از شیب‌ها، تندی A سه برابر تندی B است و بنابراین $|x_{0A}|=0.6x_{0B}$. با تشابه مثلث‌ها مقدار مکان‌های دو متحرک در $t=9s$ پیدا می‌شود و نسبت فاصله در این لحظه به فاصله اولیه برابر $5/4$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0195.jpg",
+        "box": [
+          90,
+          190,
+          620,
+          1015
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سه نمودار مکان-زمان برای متحرک‌های A و B و نسبت فاصله‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 932,
+    "solution_page": 390,
+    "solution_text": "متحرک کندتر A و سریع‌تر B نام‌گذاری می‌شوند. از اختلاف مکان‌ها در $t_1=6s$، رابطه $v_A-v_B=4m/s$ به دست می‌آید. با استفاده از شیب نمودارها و $x_0=144m$، معادله‌ای برای $t_2$ حل شده و $t_2=9s$ است؛ پس تندی متحرک B برابر $16m/s$ می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0195.jpg",
+        "box": [
+          85,
+          1105,
+          600,
+          1620
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان دو متحرک A و B با فاصله 24 متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 933,
+    "solution_page": 390,
+    "solution_text": "از شیب نمودارها سرعت‌ها $v_A=4m/s$ و $v_B=6m/s$ به دست می‌آید. معادله‌های $x_A=4t+20$ و $x_B=6t-30$ نشان می‌دهند نخستین رسیدن در $t_1=25s$ رخ می‌دهد. با ادامه حرکت B به مدت $5s$ و محاسبه مکان جدید، دومین هم‌مکانی از $4t+20=150$ به دست آمده و $t_2=32.5s$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0195.jpg",
+        "box": [
+          105,
+          2010,
+          600,
+          2390
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان A و B برای تعیین دو لحظه رسیدن"
+      },
+      {
+        "page_file": "page_0196.jpg",
+        "box": [
+          95,
+          130,
+          630,
+          280
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "ادامه محاسبه مکان B پس از پنج ثانیه"
+      }
+    ],
+    "review_notes": [
+      "حل از صفحه 390 به صفحه 391 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 934,
+    "solution_page": 391,
+    "solution_text": "در حرکت با شتاب ثابت سرعت پیوسته تغییر می‌کند و نمی‌تواند در دو لحظه متفاوت برابر باشد؛ با توجه به جهت اولیه حرکت، $v_1=4m/s$ و $v_2=-4m/s$ در نظر گرفته می‌شود. از $a=\\Delta v/\\Delta t$ شتاب $-1m/s^2$ و سپس از $v=at+v_0$، $v_0=6m/s$ و معادله $v=-t+6$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 935,
+    "solution_page": 391,
+    "solution_text": "چهار گزاره بررسی می‌شوند: مسافت نسبت به محل تغییر جهت الزاماً در بازه‌های برابر مساوی نیست؛ هنگام نزدیک شدن به مکان اولیه و پس از تغییر جهت، حرکت تندشونده است؛ در حرکت راست با شتاب ثابت تندی همیشه افزایش نمی‌یابد؛ و اگر سرعت اولیه و شتاب هم‌جهت باشند حرکت تندشونده و بدون تغییر جهت است. بر این اساس بندهای ب و ت درست‌اند.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0196.jpg",
+        "box": [
+          105,
+          640,
+          560,
+          890
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "شکل مسیر رفت و برگشتی برای بررسی محل تغییر جهت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 936,
+    "solution_page": 391,
+    "solution_text": "بخش اول حرکت با زیروند ۱ و بخش دوم با زیروند ۲ نشان داده می‌شود. چون $\\Delta v_2=2\\Delta v_1$، زمان‌ها $t_1=\\Delta v/a_1$ و $t_2=2\\Delta v/a_2$ هستند. از تعریف شتاب متوسط کل، $a_{av}=\\frac{3a_1a_2}{2a_1+a_2}$ و با جایگذاری داده‌ها $a_{av}=5.4m/s^2$ می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 937,
+    "solution_page": 391,
+    "solution_text": "با نوشتن معادله مکان در دو زمان، $x_1=\\frac12a(2)^2+x_0=6$ و $x_2=\\frac12a(4)^2+x_0=18$ به دست می‌آید. تفاضل دو رابطه $6=3x_0$ می‌دهد، پس $x_0=2m$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 938,
+    "solution_page": 391,
+    "solution_text": "از معادله سرعت $v=2t-20$ نتیجه می‌شود $a=2m/s^2$ و $v_0=-20m/s$. با جایگذاری نقطه $(t=1s,x=81m)$ در $x=t^2-20t+x_0$، $x_0=100m$ است. شرط فاصله کمتر از $4m$ از مبدأ یعنی $x\\le4$، بازه $8\\le t\\le12s$ را می‌دهد و مدت کل $4s$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 939,
+    "solution_page": 391,
+    "solution_text": "در لحظه $t=3s$ متحرک تغییر جهت می‌دهد، پس $v=0$ و $v_0=-3a$. همچنین در $t=2s$ از $x=0$ و $x_0=8m$ عبور کرده است. از معادله مکان $a=2m/s^2$ و $v_0=-6m/s$ به دست می‌آید؛ در اولین گذر از مبدأ در $t=2s$ تندی $|v|=2m/s$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 940,
+    "solution_page": 392,
+    "solution_text": "از معادله مکان $x=t^2-4t-12$ و فرم حرکت با شتاب ثابت، $a=2m/s^2$ و $v_0=-4m/s$ به دست می‌آید؛ بنابراین $v=2t-4$. طبق این معادله، تندی تا $t=2s$ کاهش و سپس افزایش می‌یابد و در ده ثانیه اول، حرکت در مجموع $8s$ تندشونده است.",
+    "stated_correct_option": 0,
+    "media_regions": [
+      {
+        "page_file": "page_0197.jpg",
+        "box": [
+          95,
+          210,
+          570,
+          475
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سرعت-زمان خطی برای بررسی کاهش و افزایش تندی"
+      }
+    ],
+    "review_notes": [
+      "stated_correct_option 2 conflicts with authoritative answer key 4; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 941,
+    "solution_page": 392,
+    "solution_text": "در حرکت با شتاب ثابت، اگر تندی در دو لحظه برابر باشد، تغییر جهت فقط وقتی ممکن است که لحظه تغییر جهت وسط آن دو لحظه باشد. از $t_s=(3+5)/2=4s$ نتیجه می‌شود سرعت در $t=4s$ صفر است؛ پیش از آن حرکت کندشونده و پس از آن تندشونده است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0197.jpg",
+        "box": [
+          95,
+          520,
+          880,
+          795
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمای خطی دو لحظه با تندی برابر و زمان تغییر جهت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 942,
+    "solution_page": 392,
+    "solution_text": "مسافت ۶ ثانیه اول $144m$ داده شده و برای آن $144=\\frac12a6^2$ نوشته می‌شود، پس $a=8m/s^2$. مسافت ۴ ثانیه آخر با رابطه حرکت در همان بازه نوشته می‌شود و سرعت ابتدای آن $v_1=20m/s$ به دست می‌آید. از $v_1=at_1$، $t_1=2.5s$ و کل زمان $6.5s$ است؛ مسافت کل $169m$ می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 943,
+    "solution_page": 392,
+    "solution_text": "حرکت به دو بخش تقسیم می‌شود. اگر جسم از سکون شروع کند، برای بخش اول و کل مسیر نسبت $\\Delta x_1/\\Delta x=(t_1/t)^2$ نوشته می‌شود؛ اگر در پایان متوقف شود، برای بخش دوم $\\Delta x_2/\\Delta x=(t_2/t)^2$ به دست می‌آید. با داده $d_1=d/4$ نتیجه می‌شود $t_1=t_2$ و بنابراین $t_2/t_1=1$.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0197.jpg",
+        "box": [
+          90,
+          1315,
+          805,
+          1975
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سه شکل تقسیم حرکت خودرو به بخش‌های شتاب‌دار و کندشونده"
+      }
+    ],
+    "review_notes": [
+      "box تقریبی است."
+    ]
+  },
+  {
+    "question_number": 944,
+    "solution_page": 392,
+    "solution_text": "برای خودرویی که در پایان می‌ایستد، رابطه مستقل از سرعت اولیه برای مسیر دوم و کل مسیر استفاده می‌شود. از $100/225=(t_2/t)^2$، نسبت $t_2/t=10/15$ به دست می‌آید و چون $t=t_1+t_2$، نتیجه $t_1/t_2=1/2$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0197.jpg",
+        "box": [
+          105,
+          2155,
+          790,
+          2395
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "خودرو در مسیر 225 متری با بخش‌های 125 و 100 متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 945,
+    "solution_page": 393,
+    "solution_text": "برای محاسبه $t_1$، رابطه $69=\\frac12(2)(t_1)^2+4t_1$ نوشته و حل می‌شود؛ ریشه مثبت $t_1=6s$ است. جابه‌جایی کل $112m$ می‌شود و با نوشتن همین رابطه برای کل زمان $t=8s$ نتیجه می‌شود $t_2=t-t_1=2s$، یعنی $t_2=t_1/3$.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 946,
+    "solution_page": 393,
+    "solution_text": "اگر طول کل مسیر $d$ باشد، بخش ابتدایی $d/4$ و بخش انتهایی $4d/9$ است؛ پس طول بخش میانی $11d/36$ می‌شود. با $v_0=0$ و $t_1=3s$ رابطه $d/4=\\frac12a3^2$ نوشته می‌شود. از مقایسه مسیر ابتدا و میانه، $t_2=2\\sqrt5-3$ و زمان کل $6s$ است؛ پس زمان بخش آخر $t_3=6-2\\sqrt5s$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0198.jpg",
+        "box": [
+          155,
+          510,
+          735,
+          700
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "خط مسیر با بخش‌های d/4، میانی و 4d/9"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 947,
+    "solution_page": 393,
+    "solution_text": "فرض می‌شود جسم در متر اول مدت $t_1$ و در $d$ متر بعدی مدت $t_2$ را طی کرده و $t_2=t_1-1$ است. از رابطه‌های حرکت با $v_0=0$، معادله $2t_1^2=(2t_1-1)^2$ به دست می‌آید. ریشه قابل قبول $t_1=1+\\sqrt2/2$ است و سرعت در پایان بازه دوم $v_2=1m/s$ محاسبه می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 948,
+    "solution_page": 393,
+    "solution_text": "با رابطه مستقل از زمان $v^2-v_0^2=2a\\Delta x$ و با $v_0=0$، نسبت سرعت‌ها به صورت $k=\\frac{v_2}{v_1}=\\sqrt{\\frac{x_2-x_0}{x_1-x_0}}$ نوشته می‌شود. پس از جایگذاری داده‌ها، $k=\\sqrt{2+\\frac{2}{x_1-2}}$ و چون $x_1>2$ است، نتیجه می‌شود $k>\\sqrt2$.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 949,
+    "solution_page": 394,
+    "solution_text": "از شکل، تندی دوچرخه‌سوار $2s$ پیش از رسیدن به $B$، یعنی در نقطه $M$، برابر $0.6v_2$ است. با رابطه تغییر سرعت $v_2-v_1=a\\Delta t$ و نسبت داده‌شده، $v_2=6m/s$ به دست می‌آید. سپس از $v_2^2=2aAB$ فاصله $AB=15m$ محاسبه می‌شود.",
+    "stated_correct_option": 0,
+    "media_regions": [
+      {
+        "page_file": "page_0199.jpg",
+        "box": [
+          90,
+          210,
+          625,
+          380
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر A تا B با نقطه M و بازه زمانی دو ثانیه"
+      }
+    ],
+    "review_notes": [
+      "stated_correct_option 2 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 950,
+    "solution_page": 394,
+    "solution_text": "با داده $v_C=0.8v_B$ و رابطه $v^2\\propto\\Delta x$ برای حرکت از سکون، نسبت $AC$ به $AB$ به دست می‌آید. حل معادله $16/25=AC/(AC+18)$ می‌دهد $AC=32m$ و $AB=50m$. با $a=4m/s^2$، زمان طی $AB$ برابر $5s$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0199.jpg",
+        "box": [
+          95,
+          510,
+          620,
+          650
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "خط A تا B با نقطه C در فاصله 18 متری از B"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 951,
+    "solution_page": 394,
+    "solution_text": "طول قطار را $L$ می‌گیریم. از افزایش سرعت از $20m/s$ به $30m/s$ در طول $L$، رابطه $aL=250$ به دست می‌آید. پس از پیمودن $L/2$ دیگر، $v_2^2-20^2=aL=250$ و در نتیجه $v_2=5\\sqrt{26}m/s$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 952,
+    "solution_page": 394,
+    "solution_text": "طول قطار $L_1$ و طول پل $L_2$ است. در دو وضعیت، جابه‌جایی قطار $\\Delta x=L_2-L_1=L_2-50$ است و سرعت ابتدا و انتهای قطار با هم برابر است. با تبدیل سرعت‌ها به $10$ و $40m/s$ و استفاده از $v_2^2-v_1^2=2a\\Delta x$ با $a=2.5m/s^2$، $L_2=350m$ و نسبت $L_2/L_1=7$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0199.jpg",
+        "box": [
+          105,
+          1175,
+          585,
+          1545
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "قطار روی پل و فاصله بین دو وضعیت گفته‌شده"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 953,
+    "solution_page": 394,
+    "solution_text": "مسیر به دو بخش تقسیم می‌شود. در بخش اول $v_1=4\\sqrt a$ و $t_1=4/\\sqrt a$ به دست می‌آید. در بخش دوم $v_2=6\\sqrt a$ و $t_2=1/\\sqrt a$ است. بنابراین شتاب متوسط کل $a_{av}=\\frac{6\\sqrt a}{5/\\sqrt a}=\\frac{6}{5}a$ می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 954,
+    "solution_page": 394,
+    "solution_text": "ابتدا از $\\Delta x_{BC}=\\frac12a(5)^2+v_B(5)=175$، سرعت $v_B=30m/s$ به دست می‌آید. سپس با $a=2m/s^2$، $v_C=40m/s$ است. از برابری $AB=CD$ و رابطه $v^2-v_0^2=2a\\Delta x$، سرعت $v_D=50m/s$ و در نهایت از $v_D=2t$ زمان $t=25s$ محاسبه می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 955,
+    "solution_page": 395,
+    "solution_text": "هواپیما از سکون با شتاب ثابت تا زمانی که به $5/6$ سرعت پرواز برسد حرکت می‌کند؛ این سرعت $75m/s$ است. از $v^2=2a\\Delta x$ و $a=2.5m/s^2$، مسافت شتاب‌گیری $1125m$ می‌شود. چون طول باند $1875m$ است، بیشینه مسافت ترمز $750m$ و کمینه شتاب ترمز $|a|=15/4m/s^2$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 956,
+    "solution_page": 395,
+    "solution_text": "مسافت توقف شامل مسافت زمان واکنش و مسافت ترمز است. با $v_0=20m/s$ و $a=-5m/s^2$، مسافت ترمز $40m$ است؛ پس در فاصله ۵۰ متری، مسافت واکنش $10m$ بوده است. اگر زمان واکنش دو برابر شود، خودرو پس از $20m$ حرکت با سرعت ثابت و سپس ترمز، در فاصله ۳۰ متری از مانع سرعت $10m/s$ دارد؛ بنابراین برخورد قطعی است.",
+    "stated_correct_option": 0,
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 3 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 957,
+    "solution_page": 395,
+    "solution_text": "در مدت ترمز با $a=-2.5m/s^2$ و $v_0=20m/s$، مسافت ترمز $80m$ است. برای برخورد نکردن، مجموع مسافت واکنش و ترمز باید حداکثر $90m$ باشد؛ پس مسافت واکنش حداکثر $10m$ و از $20t_R\\le10$ نتیجه می‌شود $t_R\\le0.5s$.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 958,
+    "solution_page": 395,
+    "solution_text": "سرعت‌ها به متر بر ثانیه تبدیل می‌شوند: $v_1=20m/s$ و $v_2=4m/s$. اگر زمان واکنش $t_R$ باشد، زمان حرکت کندشونده $12.5t_R$ است. مساحت زیر نمودار سرعت-زمان برابر جابه‌جایی $51m$ است: $51=20t_R+15t_R$، پس $t_R=51/170=0.3s$.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0200.jpg",
+        "box": [
+          115,
+          1540,
+          610,
+          1860
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سرعت-زمان شامل زمان واکنش و کاهش سرعت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 959,
+    "solution_page": 395,
+    "solution_text": "سرعت اولیه $108km/h=30m/s$ است. فاصله مانع در لحظه دیدن را $d$ می‌گیریم و در دو حالت واکنش $0.5s$ و $1s$ معادله مسافت توقف نوشته می‌شود: در حالت اول $d=20+450/|a|$ و در حالت دوم $d=65+375/|a|$. از برابری دو مقدار، $|a|=5/3m/s^2$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 960,
+    "solution_page": 396,
+    "solution_text": "در بازه صفر تا $3T$ هر دو خودرو با سرعت ثابت حرکت می‌کنند و چون A بیش از B جابه‌جا می‌شود، $v_A>v_B$ است. در بازه $3T$ تا $7T$ جابه‌جایی‌ها برابرند، پس با میانگین سرعت‌ها نتیجه می‌شود $v'_B>v'_A$ و از مقایسه تغییر سرعت‌ها $a_B>a_A$ است. در کل مدت، جابه‌جایی A بیشتر از B بوده، پس سرعت متوسط A نیز بیشتر است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0201.jpg",
+        "box": [
+          95,
+          185,
+          580,
+          660
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو خط حرکت خودروهای A و B در بازه‌های زمانی 0 تا 3T و 3T تا 7T"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 961,
+    "solution_page": 396,
+    "solution_text": "برای متحرک ۱، جابه‌جایی کل $3T$ با سرعت ثابت $v_1$ و $4T$ با شتاب ثابت تا سرعت $2v_1$ برابر $9v_1T$ است. برای متحرک ۲، جابه‌جایی کل $3T$ با $v_2$ و $4T$ تا سرعت $2v_2$ برابر $11v_2T$ می‌شود. چون دو جابه‌جایی برابرند، $v_1/v_2=11/9$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 962,
+    "solution_page": 396,
+    "solution_text": "سرعت متوسط ۸ ثانیه اول در حرکت با شتاب ثابت برابر میانگین سرعت‌های ابتدا و انتهای بازه است و $4a+v_0$ می‌شود. شرط برابری با سرعت متوسط بازه $t_1=2s$ تا $t_2$، معادله‌ای می‌دهد که از آن $t_2=6s$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 963,
+    "solution_page": 396,
+    "solution_text": "سرعت‌های متوسط ثانیه دوم و ثانیه چهارم با میانگین سرعت ابتدا و انتهای همان بازه‌ها نوشته می‌شوند: $v_{av1}=6a+v_0$ و $v_{av2}=2a+v_0$. با شرط نسبت $v_{av1}/v_{av2}=3$، $a=-2v_0/3$ به دست می‌آید. سپس $v_9=9a+v_0=-5v_0$ و نسبت $v_9/v_0=-5$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 964,
+    "solution_page": 396,
+    "solution_text": "برای دو نیمه برابر مسیر با شتاب ثابت و شروع از سکون، از رابطه $v^2-v_0^2=2a\\Delta x$ استفاده می‌شود. اگر سرعت پایان نیمه اول $v_1$ باشد، سرعت پایان مسیر $v_2=\\sqrt2v_1$ است. سرعت متوسط نیمه اول $v_1/2$ و نیمه دوم $\\frac{v_1+\\sqrt2v_1}{2}$ است، پس نسبت آن‌ها $\\sqrt2+1$ می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  }
+]

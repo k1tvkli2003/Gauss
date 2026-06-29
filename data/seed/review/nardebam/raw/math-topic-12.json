@@ -1,0 +1,1706 @@
+{
+  "task_id": "math-topic-12",
+  "subject": "math",
+  "topic_key": "exponential_logarithmic",
+  "questions": [
+    {
+      "question_number": 1467,
+      "question_page": 5,
+      "question_text": "با فرض $2^{x^2}=8\\timesimes4^x$، مجموع مقادیر $x+1$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1468,
+      "question_page": 5,
+      "question_text": "با فرض $3^x=\\sqrt[3]{81}\\timesimes9^{1-x}$، حاصل $3x+\\fracrac1x$ کدام است؟",
+      "options": [
+        "$\\fracrac{30}{127}$",
+        "$\\fracrac{127}{30}$",
+        "$\\fracrac{30}{121}$",
+        "$\\fracrac{121}{30}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1469,
+      "question_page": 5,
+      "question_text": "نمودار تابع $f(x)=a\\timesimes b^{x-2}$ از نقاط $A(1,6)$ و $B(0,18)$ عبور می‌کند. مقدار $f(-1)$ کدام است؟",
+      "options": [
+        "$6$",
+        "$27$",
+        "$54$",
+        "$81$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1470,
+      "question_page": 5,
+      "question_text": "توابع $f(x)=3^{2x+a}$ و $g(x)=bx^2+2$ در نقاطی به طول صفر و $-1$ متقاطع‌اند. $\\fracrac ab$ کدام است؟",
+      "options": [
+        "$\\fracrac47$",
+        "$\\fracrac74$",
+        "$-\\fracrac74$",
+        "$-\\fracrac47$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1471,
+      "question_page": 5,
+      "question_text": "نمودار تابعی با ضابطه $f(x)=k\\timesimes2^{ax}$ و خط $3x+2y=7$ در دو نقطه به طول‌های $1$ و $2$ متقاطع‌اند. $f^{-1}(16)$ کدام است؟",
+      "options": [
+        "$2$",
+        "$-2$",
+        "$\\fracrac12$",
+        "$-\\fracrac12$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1472,
+      "question_page": 5,
+      "question_text": "شیب خطی که از نقاط برخورد دو تابع $f(x)=4^x-2^{x+2}$ و $g(x)=2^{x+3}-32$ عبور می‌کند، کدام است؟",
+      "options": [
+        "$4$",
+        "$8$",
+        "$16$",
+        "$32$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1473,
+      "question_page": 5,
+      "question_text": "حاصل جمع جواب‌های معادله $9^x+9=24\\timesimes3^{x-1}$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$8$",
+        "$9$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1474,
+      "question_page": 5,
+      "question_text": "اختلاف ریشه‌های معادله $\\fracrac{5\\timesimes4^x+2\\timesimes25^x}{10^x}=7$ کدام است؟",
+      "options": [
+        "$1$",
+        "$\\fracrac35$",
+        "$\\fracrac25$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1475,
+      "question_page": 5,
+      "question_text": "اگر $4^{x+2}-\\fracrac3{2^{-2x}}+2^{2x-1}=54$ باشد، حاصل $4^{|x-3|}$ کدام است؟",
+      "options": [
+        "$2$",
+        "$2\\sqrt2$",
+        "$4$",
+        "$4\\sqrt2$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "عبارت توان‌دار در صورت سؤال از روی اسکن کم‌رنگ خوانده شد."
+      ]
+    },
+    {
+      "question_number": 1476,
+      "question_page": 5,
+      "question_text": "جواب نامعادله $(\\fracrac13)^{1-x^2}\\le 9^{x+1}$ به صورت $[a,b]$ است. $a+b$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$-2$",
+        "$-4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1477,
+      "question_page": 5,
+      "question_text": "با توجه به نمودار توابع نمایی شکل مقابل، علامت کدام گزینه با سایر گزینه‌های دیگر متفاوت است؟",
+      "options": [
+        "$a-b$",
+        "$c-d$",
+        "$b-d$",
+        "$1-cd$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            70,
+            1690,
+            430,
+            2020
+          ],
+          "placement": "stem",
+          "alt": "نمودارهای $a^x$، $b^x$، $c^x$ و $d^x$ روی یک دستگاه مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1478,
+      "question_page": 5,
+      "question_text": "در شکل مقابل مساحت دوزنقه رنگی برابر $90$ است، مقدار $f^{-1}(\\fracrac19)$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$-2$",
+        "$-3$",
+        "$-\\fracrac32$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            80,
+            1970,
+            445,
+            2260
+          ],
+          "placement": "stem",
+          "alt": "نمودار $f(x)=a^x$ و دوزنقه رنگی بین $x=2$ و $x=4$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1479,
+      "question_page": 5,
+      "question_text": "اگر $ab=1$ و نمودار تابع $y=a^x$ به صورت مقابل باشد، نمودار $y=-b^x$ کدام است؟",
+      "options": [
+        "شکل گزینهٔ ۱",
+        "شکل گزینهٔ ۲",
+        "شکل گزینهٔ ۳",
+        "شکل گزینهٔ ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            65,
+            2140,
+            420,
+            2350
+          ],
+          "placement": "stem",
+          "alt": "نمودار افزایشی $y=a^x$"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            1190,
+            2035,
+            1545,
+            2240
+          ],
+          "placement": "option_1",
+          "alt": "نمودار نمایی مثبت افزایشی"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            810,
+            2045,
+            1145,
+            2240
+          ],
+          "placement": "option_2",
+          "alt": "نمودار منفی کاهشی"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            490,
+            2045,
+            805,
+            2240
+          ],
+          "placement": "option_3",
+          "alt": "نمودار نمایی مثبت کاهشی"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            120,
+            2045,
+            430,
+            2240
+          ],
+          "placement": "option_4",
+          "alt": "نمودار منفی افزایشی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1480,
+      "question_page": 6,
+      "question_text": "نمودار تابع $f(x)=b\\timesimes a^x$ به صورت زیر است. نمودار تابع $g(x)=a\\timesimes b^{-x}$ به کدام صورت می‌تواند باشد؟",
+      "options": [
+        "شکل گزینهٔ ۱",
+        "شکل گزینهٔ ۲",
+        "شکل گزینهٔ ۳",
+        "شکل گزینهٔ ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            120,
+            220,
+            430,
+            470
+          ],
+          "placement": "stem",
+          "alt": "نمودار کاهشی $f$ با عرض از مبدا ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            260,
+            1510,
+            500
+          ],
+          "placement": "option_1",
+          "alt": "نمودار کاهشی با عرض از مبدا ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            600,
+            260,
+            900,
+            500
+          ],
+          "placement": "option_2",
+          "alt": "نمودار افزایشی با عرض از مبدا ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1260,
+            520,
+            1530,
+            760
+          ],
+          "placement": "option_3",
+          "alt": "نمودار افزایشی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            610,
+            520,
+            900,
+            760
+          ],
+          "placement": "option_4",
+          "alt": "نمودار کاهشی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1481,
+      "question_page": 6,
+      "question_text": "نمودار تابع $y=a+a^x$ به صورت مقابل است. نمودار $y=a-a^{-x}$ کدام صورت است؟",
+      "options": [
+        "شکل گزینهٔ ۱",
+        "شکل گزینهٔ ۲",
+        "شکل گزینهٔ ۳",
+        "شکل گزینهٔ ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            115,
+            690,
+            430,
+            930
+          ],
+          "placement": "stem",
+          "alt": "نمودار $y=a+a^x$ با مجانب افقی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            705,
+            1510,
+            970
+          ],
+          "placement": "option_1",
+          "alt": "نمودار افزایشی با مجانب افقی مثبت"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            610,
+            705,
+            910,
+            970
+          ],
+          "placement": "option_2",
+          "alt": "نمودار افزایشی با مجانب مثبت"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1235,
+            1015,
+            1510,
+            1285
+          ],
+          "placement": "option_3",
+          "alt": "نمودار کاهشی با مجانب منفی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            610,
+            1015,
+            910,
+            1285
+          ],
+          "placement": "option_4",
+          "alt": "نمودار کاهشی با مجانب منفی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1482,
+      "question_page": 6,
+      "question_text": "نمودار تابع $y=ab^{x-1}$ به صورت مقابل است. نمودار تابع $y=ba^{-x}$ کدام صورت است؟",
+      "options": [
+        "شکل گزینهٔ ۱",
+        "شکل گزینهٔ ۲",
+        "شکل گزینهٔ ۳",
+        "شکل گزینهٔ ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            120,
+            1265,
+            430,
+            1515
+          ],
+          "placement": "stem",
+          "alt": "نمودار افزایشی $y=ab^{x-1}$"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1230,
+            1290,
+            1510,
+            1530
+          ],
+          "placement": "option_1",
+          "alt": "نمودار کاهشی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            600,
+            1290,
+            900,
+            1530
+          ],
+          "placement": "option_2",
+          "alt": "نمودار کاهشی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1580,
+            1520,
+            1830
+          ],
+          "placement": "option_3",
+          "alt": "نمودار افزایشی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            600,
+            1580,
+            900,
+            1830
+          ],
+          "placement": "option_4",
+          "alt": "نمودار افزایشی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1483,
+      "question_page": 6,
+      "question_text": "نمودار توابع $f(x)=ab^x$ و $g(x)=ba^x$ به صورت مقابل است. مقدار $f(a)$ کدام است؟",
+      "options": [
+        "$\\fracrac12$",
+        "$1$",
+        "$\\fracrac32$",
+        "$\\fracrac43$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            100,
+            1740,
+            430,
+            2035
+          ],
+          "placement": "stem",
+          "alt": "دو نمودار نمایی متقاطع با برچسب‌های $0/25$ و $\\alpha$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1484,
+      "question_page": 6,
+      "question_text": "معادله $x^2=2^x$ چند جواب دارد؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1485,
+      "question_page": 6,
+      "question_text": "به ازای چند مقدار صحیح $m$، تابع $f(x)=(\\fracrac{8-3m}{2})^x$ یک تابع نمایی نزولی است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "بی‌شمار"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1486,
+      "question_page": 6,
+      "question_text": "به ازای چند عدد طبیعی، نمودار تابع $f(x)=(7-4\\sqrt3)^{1-2x}$ بالاتر از نمودار تابع $g(x)=(7+4\\sqrt3)^{3x-4}$ می‌باشد؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "بی‌شمار"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1487,
+      "question_page": 7,
+      "question_text": "تابع $y=\\sqrt{2^{x+1}-2^{x-1}}$ به ازای چند عدد صحیح منفی تعریف‌نشده است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "بی‌شمار"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1488,
+      "question_page": 7,
+      "question_text": "اگر $f(x)=(\\fracrac13)^x-2$ باشد، دامنه تابع $y=\\sqrt{-xf(x)}$ کدام است؟",
+      "options": [
+        "$(-\\infty,-1]\\cup[1,+\\infty)$",
+        "$[-1,+\\infty)$",
+        "$(-\\infty,0]\\cup[1,+\\infty)$",
+        "$(-\\infty,-1]\\cup[0,+\\infty)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1489,
+      "question_page": 7,
+      "question_text": "هرگاه $f(x)=(\\fracrac13)^{2-x}$ باشد، دامنه تعریف تابع $y=\\sqrt{f(\\fracrac3x)-f(x)}$ کدام است؟",
+      "options": [
+        "$(-\\infty,\\sqrt3]$",
+        "$(-\\infty,-\\sqrt3]\\cup(0,\\sqrt3]$",
+        "$[-\\sqrt3,0)\\cup(0,\\sqrt3]$",
+        "$[-\\sqrt3,0)\\cup[\\sqrt3,+\\infty)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1490,
+      "question_page": 7,
+      "question_text": "اگر $f(x)=3^x$ باشد، دامنه تابع $y=\\sqrt{f(x)-f(\\fracrac1x)}$ به کدام صورت است؟",
+      "options": [
+        "$[-1,1]$",
+        "$[-1,0)\\cup[1,+\\infty)$",
+        "$(-\\infty,-1]\\cup(0,1]$",
+        "$(-\\infty,-1]\\cup[1,+\\infty)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1491,
+      "question_page": 7,
+      "question_text": "نمودار تابع $y=2^{-x+1}+k$ فقط از نواحی دوم و چهارم عبور می‌کند. $k$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$-1$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1492,
+      "question_page": 7,
+      "question_text": "نمودار تابع $f(x)=|(\\fracrac12)^{x+a}+b|$ به شکل زیر است. $a-b$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$3$",
+        "$-3$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            70,
+            830,
+            385,
+            1070
+          ],
+          "placement": "stem",
+          "alt": "نمودار قدرمطلق نمایی با راس در مبدا و مجانب $y=2$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1493,
+      "question_page": 7,
+      "question_text": "نمودار تابع $f(x)=a-3^{-x+b}$ به صورت زیر است. $f(-1)$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$-3$",
+        "$-6$",
+        "$-9$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            70,
+            1090,
+            385,
+            1340
+          ],
+          "placement": "stem",
+          "alt": "نمودار افزایشی با مجانب افقی $y=3$ و عبور از مبدا"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1494,
+      "question_page": 7,
+      "question_text": "با فرض $\\log5=0/7$، حاصل $\\log16$ کدام است؟",
+      "options": [
+        "$1/2$",
+        "$1/4$",
+        "$1/6$",
+        "$1/8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1495,
+      "question_page": 7,
+      "question_text": "اگر $A=\\log_3 0/75$ باشد، حاصل لگاریتم $9^{1-A}$ در پایه $4$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1496,
+      "question_page": 7,
+      "question_text": "اگر لگاریتم عدد $\\sqrt[4]{0/125}$ در مبنای $8$ برابر $k$ باشد، لگاریتم عدد $2-\\fracrac1k$ در پایه $8$ کدام است؟",
+      "options": [
+        "$\\fracrac12$",
+        "$2$",
+        "$\\fracrac23$",
+        "$\\fracrac32$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1497,
+      "question_page": 7,
+      "question_text": "اگر $\\log5=k$ باشد، ساده‌شده $3\\log_5 20-\\log_5 8$ کدام است؟",
+      "options": [
+        "$3k$",
+        "$\\fracrac3k$",
+        "$k+3$",
+        "$3k-1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1498,
+      "question_page": 7,
+      "question_text": "اگر $2^{\\fracrac a3}=k$ باشد، مقدار $\\log_{16}8k^3$ کدام است؟",
+      "options": [
+        "$\\fracrac{3a-6}{8}$",
+        "$\\fracrac{3a+6}{4}$",
+        "$\\fracrac{3a-6}{4}$",
+        "$\\fracrac{3a+6}{8}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1499,
+      "question_page": 7,
+      "question_text": "با فرض $\\log_3 9x=\\fracrac53$، مقدار $\\log_9 27x^2$ کدام است؟",
+      "options": [
+        "$\\fracrac23$",
+        "$\\fracrac32$",
+        "$\\fracrac56$",
+        "$\\fracrac76$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1500,
+      "question_page": 7,
+      "question_text": "اگر $x=9(3\\sqrt3)^{a-1}$ باشد، حاصل $\\log_9 3x^2$ کدام است؟",
+      "options": [
+        "$\\fracrac32a+1$",
+        "$\\fracrac32a-1$",
+        "$\\fracrac{3a+1}{2}$",
+        "$\\fracrac{3a-1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1501,
+      "question_page": 7,
+      "question_text": "اگر $3^m=12$ و $3^n=54$ باشد، حاصل $(a-2)(b-3)$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "در متن سؤال، نمادهای $a$ و $b$ از روی اسکن با $m$ و $n$ هم‌معنا خوانده شده‌اند."
+      ]
+    },
+    {
+      "question_number": 1502,
+      "question_page": 8,
+      "question_text": "اگر $\\log_{ab^2}a=-\\fracrac17$ باشد، حاصل $\\log_{a^2b}b$ کدام است؟",
+      "options": [
+        "$2$",
+        "$3$",
+        "$7$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1503,
+      "question_page": 8,
+      "question_text": "اگر $\\log_b a=3$ و $\\log_c a=4$ باشد، حاصل $\\log_{bc}a^2$ کدام است؟",
+      "options": [
+        "$\\fracrac7{24}$",
+        "$\\fracrac7{12}$",
+        "$\\fracrac{12}7$",
+        "$\\fracrac{24}7$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1504,
+      "question_page": 8,
+      "question_text": "هرگاه $\\log_{yz}xy=3$ و $\\log_yxz=4$ باشد، مقدار $\\log_z y$ کدام است؟",
+      "options": [
+        "$2$",
+        "$3$",
+        "$\\fracrac12$",
+        "$\\fracrac13$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1505,
+      "question_page": 8,
+      "question_text": "اگر $3^{\\log a}=b^{\\log3}$ باشد، حاصل $\\log_a b$ کدام است؟",
+      "options": [
+        "$\\log\\fracrac23$",
+        "$\\log\\fracrac32$",
+        "$\\log_2 3$",
+        "$\\log_3 2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1506,
+      "question_page": 8,
+      "question_text": "اگر $\\fracrac1{\\log_6 3}+\\fracrac1{\\log_k 3}=2$ باشد، مقدار $\\log_{27}2k$ کدام است؟",
+      "options": [
+        "$\\fracrac13$",
+        "$\\fracrac23$",
+        "$\\fracrac32$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1507,
+      "question_page": 8,
+      "question_text": "ساده‌شده $\\fracrac1{1+\\log_2 12}+\\fracrac1{1+\\log_3 8}+\\fracrac1{1+\\log_4 6}$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1508,
+      "question_page": 8,
+      "question_text": "اگر $\\log2=0/3$ باشد، حاصل $10^{0/3}\\timesimes\\log12/8$ چقدر است؟",
+      "options": [
+        "$2/1$",
+        "$2/2$",
+        "$2/3$",
+        "$2/4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1509,
+      "question_page": 8,
+      "question_text": "مقدار عددی $9^{1+\\log_3 4}$ کدام است؟",
+      "options": [
+        "$11$",
+        "$12$",
+        "$121$",
+        "$144$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1510,
+      "question_page": 8,
+      "question_text": "اگر $3^{3-\\log_4(a-1)}=24$، $a$ کدام است؟",
+      "options": [
+        "$\\fracrac89$",
+        "$\\fracrac{10}9$",
+        "$\\fracrac98$",
+        "$\\fracrac9{10}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1511,
+      "question_page": 8,
+      "question_text": "اگر $\\log8=k$، حاصل $\\log(14-6\\sqrt5)+2\\log(3+\\sqrt5)$ کدام است؟",
+      "options": [
+        "$\\fracrac{2k}3$",
+        "$\\fracrac{4k}3$",
+        "$\\fracrac{3k}2$",
+        "$\\fracrac{3k}4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1512,
+      "question_page": 8,
+      "question_text": "اگر $\\log_{15}3=k$ باشد، مقدار $\\log_5 15$ بر حسب $k$ کدام است؟",
+      "options": [
+        "$k-1$",
+        "$\\fracrac1{k-1}$",
+        "$1-k$",
+        "$\\fracrac1{1-k}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1513,
+      "question_page": 8,
+      "question_text": "اگر $\\log3=a$ و $\\log225=b$ باشد، مقدار $\\log2$ بر حسب $a$ و $b$ کدام است؟",
+      "options": [
+        "$a+\\fracrac b2-1$",
+        "$2a-b+1$",
+        "$2a+b-1$",
+        "$a-\\fracrac b2+1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1514,
+      "question_page": 8,
+      "question_text": "هرگاه $\\log_2 3=k$، حاصل $\\log_{36}48$ کدام است؟",
+      "options": [
+        "$\\fracrac{k+4}{2k+4}$",
+        "$\\fracrac{k+2}{2k+4}$",
+        "$\\fracrac{k+4}{2k+2}$",
+        "$\\fracrac{k+2}{2k+2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1515,
+      "question_page": 8,
+      "question_text": "اگر $\\log75=a$ و $\\log45=b$ باشد، حاصل $\\log12$ کدام است؟",
+      "options": [
+        "$\\fracrac{4b-5a-6}{3}$",
+        "$\\fracrac{4b-5a+6}{3}$",
+        "$\\fracrac{4a-5b-6}{3}$",
+        "$\\fracrac{4a-5b+6}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1516,
+      "question_page": 8,
+      "question_text": "اگر $\\log_2 216+\\log_3 216=k(\\log_2 216)(\\log_3 216)$ باشد، $k$ کدام است؟",
+      "options": [
+        "$2$",
+        "$\\fracrac12$",
+        "$3$",
+        "$\\fracrac13$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1517,
+      "question_page": 8,
+      "question_text": "ساده‌شده عبارت $(\\log_6 3)^2+(\\log_6 2)^2+(\\log_6\\sqrt3)(\\log_6 16)$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1518,
+      "question_page": 8,
+      "question_text": "حاصل $A=(\\log_6 2)^2+(\\log_6 3)(\\log_6 12)$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1519,
+      "question_page": 8,
+      "question_text": "به ازای کدام مقدار $\\alpha$، حاصل عددی $P=(\\log_{15}5)^2+(\\log_{15}\\alpha)(\\log_{15}75)$ برابر یک است؟",
+      "options": [
+        "$3$",
+        "$5$",
+        "$15$",
+        "$25$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1520,
+      "question_page": 9,
+      "question_text": "اگر $2^{x-1}=(\\fracrac18)^{y-x}$ و $\\log(x+3)+\\log(y-2)=1$ باشد، حاصل $xy$ کدام است؟",
+      "options": [
+        "$10$",
+        "$15$",
+        "$20$",
+        "$25$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1521,
+      "question_page": 9,
+      "question_text": "از دو معادله $4^x-2^x=56$ و $\\log(x+y)+\\log(2x-2y)=1$، چند مقدار برای $y$ وجود دارد؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1522,
+      "question_page": 9,
+      "question_text": "با فرض $\\log\\fracrac{a+b}{2}=\\fracrac{\\log a+\\log b}{2}$، حاصل $\\fracrac ab+\\fracrac ba$ کدام است؟",
+      "options": [
+        "$2$",
+        "$\\fracrac52$",
+        "$3$",
+        "$\\fracrac72$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1523,
+      "question_page": 9,
+      "question_text": "حاصل $A=[\\log_3 24]+[\\log_2 24]+[\\log_{\\sqrt3}1]$ کدام است؟",
+      "options": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1524,
+      "question_page": 9,
+      "question_text": "اگر $[\\log_2 x]=[\\log_3 y]=3$، مقدار $[\\log_3(x+y)]$ چند عدد مختلف را اختیار می‌کند؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1525,
+      "question_page": 9,
+      "question_text": "فرض کنید $f(x)=\\log_2 4x$ باشد. نمودار تابع $f(\\fracrac1x)$ بر نمودار کدام تابع زیر منطبق است؟",
+      "options": [
+        "$2-f(x)$",
+        "$4-f(x)$",
+        "$f(x)-2$",
+        "$f(x)-4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1526,
+      "question_page": 9,
+      "question_text": "کدام جفت از توابع زیر با هم برابرند؟",
+      "options": [
+        "$f(x)=\\log(x-3)-\\log x$ و $g(x)=\\log\\fracrac{x-3}{x}$",
+        "$f(x)=\\log\\fracrac{x-1}{x}$ و $g(x)=\\fracrac12\\log(\\fracrac{x-1}{x})^2$",
+        "$f(x)=\\log\\fracrac{x-2}{x}$ و $g(x)=\\log\\fracrac{x^2-4}{x^2+2x}$",
+        "$f(x)=\\log(3-x)-\\log x$ و $g(x)=\\log\\fracrac{3-x}{x}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1527,
+      "question_page": 9,
+      "question_text": "تابع $f(x)=\\log_2(ax+b)$ فقط برای مقادیر $x\\in(-\\infty,\\fracrac12)$ بامعنی است. اگر $f(-1)=2$ باشد، مقدار $f(0)$ کدام است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$\\fracrac12$",
+        "$-1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1528,
+      "question_page": 9,
+      "question_text": "دامنه تابع $y=\\log_{x-2}\\fracrac{3x}{5-x}$ شامل چند عدد صحیح است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1529,
+      "question_page": 9,
+      "question_text": "دامنه تعریف $f(x)=\\sqrt{2-\\log_2(2-x^2)}$ بازه $(a,b)$ است. $b-a$ کدام است؟",
+      "options": [
+        "$\\sqrt2$",
+        "$3$",
+        "$6$",
+        "$2\\sqrt2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1530,
+      "question_page": 9,
+      "question_text": "اگر $f(x)=1-4^{-x}$ باشد، دامنه تعریف $y=\\log(xf(x))$ کدام است؟",
+      "options": [
+        "$(0,+\\infty)$",
+        "$(-\\infty,0)$",
+        "$(0,1)$",
+        "$mathbb{R}-{0}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1531,
+      "question_page": 9,
+      "question_text": "اگر $f(x)=9-3^{2x}$ باشد، دامنه تابع $g(x)=\\sqrt{xf^{-1}(x)}$ کدام است؟",
+      "options": [
+        "$[0,9)$",
+        "$[0,8]$",
+        "$[8,9)$",
+        "$[1,9)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1532,
+      "question_page": 9,
+      "question_text": "با فرض $f(x)=\\log_3(9+3x)$، دامنه تعریف تابع $g(x)=\\sqrt{3-f^{-1}(x)}$ کدام است؟",
+      "options": [
+        "$[\\log_3 18,+\\infty)$",
+        "$[3,+\\infty)$",
+        "$(-\\infty,3]$",
+        "$(-\\infty,\\log_3 18]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1533,
+      "question_page": 9,
+      "question_text": "وارون تابع $f(x)=\\log_3\\fracrac{3^x-1}{9}$ به صورت $f^{-1}(x)=\\log_3 g(x)$ است. $g(1)$ کدام است؟",
+      "options": [
+        "$9$",
+        "$10$",
+        "$27$",
+        "$28$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1534,
+      "question_page": 9,
+      "question_text": "وارون تابع $f(x)=3^{1-x}+3$ به صورت $f^{-1}(x)=\\log_3 a(x+b)^{-1}$ است. $a-b$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$5$",
+        "$-5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1535,
+      "question_page": 9,
+      "question_text": "ضابطه وارون تابع $f(x)=9^x+3^{x+1}$ کدام است؟",
+      "options": [
+        "$f^{-1}(x)=\\log_3(\\sqrt{x+\\fracrac94}+\\fracrac32)$",
+        "$f^{-1}(x)=\\log_3(\\sqrt{x+\\fracrac32}+\\fracrac94)$",
+        "$f^{-1}(x)=\\log_3(\\sqrt{x+\\fracrac32}-\\fracrac94)$",
+        "$f^{-1}(x)=\\log_3(\\sqrt{x+\\fracrac94}-\\fracrac32)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1536,
+      "question_page": 9,
+      "question_text": "نمودار تابع $f(x)=a+\\log_3(2x+b)^2$ از نقطه $(-1,3)$ گذشته و نیمساز ناحیه اول را در نقطه‌ای به عرض $5$ قطع می‌کند. $ab$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$2$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "در گزینه‌ها مقدار سؤال از روی اسکن کم‌رنگ خوانده شد."
+      ]
+    },
+    {
+      "question_number": 1537,
+      "question_page": 9,
+      "question_text": "نمودار تابع $y=\\log(3-x)$ از کدام ناحیه مختصات عبور نمی‌کند؟",
+      "options": [
+        "اول",
+        "دوم",
+        "سوم",
+        "چهارم"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1538,
+      "question_page": 10,
+      "question_text": "نمودار تابع $y=\\log\\fracrac1x-\\log\\fracrac1{\\sqrt{x}}$ کدام است؟",
+      "options": [
+        "شکل گزینهٔ ۱",
+        "شکل گزینهٔ ۲",
+        "شکل گزینهٔ ۳",
+        "شکل گزینهٔ ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            1210,
+            230,
+            1510,
+            485
+          ],
+          "placement": "option_1",
+          "alt": "نمودار لگاریتمی افزایشی"
+        },
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            885,
+            230,
+            1165,
+            485
+          ],
+          "placement": "option_2",
+          "alt": "نمودار ریشه‌ای/لگاریتمی افزایشی"
+        },
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            555,
+            230,
+            840,
+            485
+          ],
+          "placement": "option_3",
+          "alt": "نمودار کاهشی از نقطه روی محور x"
+        },
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            250,
+            230,
+            535,
+            485
+          ],
+          "placement": "option_4",
+          "alt": "نمودار کاهشی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1539,
+      "question_page": 10,
+      "question_text": "نمودار توابع $f(x)=\\log_a x$، $g(x)=\\log_b x$، $h(x)=\\log_c x$ و $t(x)=\\log_d x$ به صورت مقابل است؛ کدام گزینه صحیح است؟",
+      "options": [
+        "$a<b<c<d$",
+        "$b<a<d<c$",
+        "$b<a<c<d$",
+        "$a<b<d<c$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            90,
+            520,
+            430,
+            810
+          ],
+          "placement": "stem",
+          "alt": "چهار نمودار لگاریتمی با برچسب‌های $f,g,h,t$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1540,
+      "question_page": 10,
+      "question_text": "نمودار تابع $f(x)=\\log_9(x+a)+b$ به صورت مقابل است. $ab$ کدام است؟",
+      "options": [
+        "$\\fracrac32$",
+        "$\\fracrac32$",
+        "$6$",
+        "$-6$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            95,
+            830,
+            425,
+            1080
+          ],
+          "placement": "stem",
+          "alt": "نمودار لگاریتمی با مجانب عمودی $x=-3$ و عبور از مبدا"
+        }
+      ],
+      "review_notes": [
+        "گزینه‌های ۱ و ۲ در اسکن شبیه هم دیده می‌شوند."
+      ]
+    },
+    {
+      "question_number": 1541,
+      "question_page": 10,
+      "question_text": "نمودار تابع $f(x)=2+\\log_{1/2}(ax+b)$ به صورت زیر است. مقدار $k$ کدام است؟",
+      "options": [
+        "$\\fracrac34$",
+        "$\\fracrac43$",
+        "$\\fracrac35$",
+        "$\\fracrac53$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            95,
+            1130,
+            425,
+            1390
+          ],
+          "placement": "stem",
+          "alt": "نمودار لگاریتمی نزولی با خطوط کمکی و نقطه $k$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1542,
+      "question_page": 10,
+      "question_text": "نمودار تابع $f(x)=\\log_{1/3}(4x+a)$ از نواحی اول و سوم عبور نمی‌کند. $a$ کدام است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$\\fracrac13$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1543,
+      "question_page": 10,
+      "question_text": "نمودار تابع $f(x)=2+\\log_4(ax-2a)$ از همه نواحی بجز ناحیه سوم عبور می‌کند. حدود $a$ کدام است؟",
+      "options": [
+        "$-\\fracrac18<a<0$",
+        "$-\\fracrac14<a<0$",
+        "$a<-\\fracrac14$",
+        "$a<-\\fracrac18$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1544,
+      "question_page": 10,
+      "question_text": "با فرض $\\log_x(3x-8)=2-\\log_x(x-4)$، مقدار $\\log_2 x$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1545,
+      "question_page": 10,
+      "question_text": "از رابطه $\\log(x+2)+\\log(x-4)=\\log(8x+3)$، مقدار لگاریتم $x-3$ در پایه $4$ کدام است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$\\fracrac32$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1546,
+      "question_page": 10,
+      "question_text": "با فرض $\\log_2(x^2+7)=2+\\log_2(x+1)$، حداکثر $\\log_2(x+1)$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1547,
+      "question_page": 10,
+      "question_text": "با فرض آن‌که $x=2$ ریشه معادله $3+\\log_k(x+1)=\\log_k(10x+7)$ باشد، حاصل لگاریتم $k$ در پایه $\\sqrt3$ کدام است؟",
+      "options": [
+        "$\\fracrac13$",
+        "$\\fracrac23$",
+        "$\\fracrac32$",
+        "$\\fracrac43$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1548,
+      "question_page": 10,
+      "question_text": "اگر جواب معادله $\\log_2(30+\\log_3 3^x+1)=5$ برابر $\\alpha$ باشد، $\\log_8 6alpha$ کدام است؟",
+      "options": [
+        "$1$",
+        "$\\fracrac43$",
+        "$\\fracrac12$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1549,
+      "question_page": 10,
+      "question_text": "اگر $\\log_2 x+\\log_9 x=\\log_{27}x+10$ باشد، مقدار $\\log_{81}x$ کدام است؟",
+      "options": [
+        "$2$",
+        "$\\fracrac12$",
+        "$\\fracrac7{15}$",
+        "$\\fracrac{15}7$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1550,
+      "question_page": 10,
+      "question_text": "اگر $x=\\alpha$ جواب معادله $x\\log20=1-(\\log2)^2$ باشد، حاصل $10^\\alpha$ کدام است؟",
+      "options": [
+        "$5$",
+        "$\\sqrt5$",
+        "$10$",
+        "$\\sqrt{10}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1551,
+      "question_page": 11,
+      "question_text": "اگر $\\log_2 x+\\log_x9=\\fracrac92$ و $x<3$ باشد، حاصل $\\log_2x^2+1$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1552,
+      "question_page": 11,
+      "question_text": "حاصل‌ضرب ریشه‌های معادله $(\\log_2x)^2=2(1+4\\log_4x)$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$8$",
+        "$16$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1553,
+      "question_page": 11,
+      "question_text": "حاصل جمع ریشه‌های معادله $\\log_2(6\\timesimes3^x-1)=2x+1$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$2$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1554,
+      "question_page": 11,
+      "question_text": "ریشه مثبت معادله $\\log_3(9^x+2)=x+1$ کدام است؟",
+      "options": [
+        "$\\log_3 2$",
+        "$\\log_2 3$",
+        "$\\log_3 4$",
+        "$\\log_4 3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1555,
+      "question_page": 11,
+      "question_text": "با فرض $\\log_2x+\\log_{18}x=2\\log_2x\\log_{18}x$، مقدار $x$ کدام است؟ $(x\\ne1)$",
+      "options": [
+        "$6$",
+        "$12$",
+        "$24$",
+        "$36$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1556,
+      "question_page": 11,
+      "question_text": "اگر $x^{3\\log k}=2^{\\log x}$ با فرض $x\\ne1$، مقدار $k$ کدام است؟",
+      "options": [
+        "$2$",
+        "$\\sqrt2$",
+        "$\\sqrt[3]2$",
+        "$\\sqrt[4]2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1557,
+      "question_page": 11,
+      "question_text": "اگر $x=\\fracrac1a$ جواب معادله $3^{2x+2}=6^x$ باشد، حاصل $9^a$ کدام است؟",
+      "options": [
+        "$\\fracrac32$",
+        "$\\fracrac23$",
+        "$\\fracrac94$",
+        "$\\fracrac49$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1558,
+      "question_page": 11,
+      "question_text": "در معادله $\\log_4x+\\log_x2=6$، یکی از ریشه‌ها $k$ برابر دیگری است. حاصل $\\log_2k$ کدام است؟",
+      "options": [
+        "$\\sqrt{34}$",
+        "$\\sqrt{38}$",
+        "$2\\sqrt{34}$",
+        "$2\\sqrt{38}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1559,
+      "question_page": 11,
+      "question_text": "مجموع ریشه‌های معادله $\\log_6 4a=\\log_{6a}4$ برابر کدام است؟",
+      "options": [
+        "$\\fracrac1{24}$",
+        "$\\fracrac{25}{24}$",
+        "$\\fracrac{24}{25}$",
+        "$\\fracrac1{25}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1560,
+      "question_page": 11,
+      "question_text": "مجموعه جواب نامعادله $\\log_4(x^2-3x)\\le1$ کدام است؟",
+      "options": [
+        "$[-1,0)\\cup(3,4]$",
+        "$(-4,-3)\\cup(3,4]$",
+        "$(-5,-3)\\cup(0,1)$",
+        "$[-1,0)\\cup(3,5)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1561,
+      "question_page": 11,
+      "question_text": "در بازه $(a,b)$ نمودار تابع $y=\\log_2(x+5)$ پایین‌تر از نمودار تابع $y=\\log_9(7-x)$ است. حداکثر $b-a$ کدام است؟",
+      "options": [
+        "$3$",
+        "$5$",
+        "$7$",
+        "$12$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1562,
+      "question_page": 11,
+      "question_text": "فرض کنید $f(x)=\\log_4(2x)$ و مجموعه جواب نامعادله $4^{f^2(x)-3f(x)+2}<0$ بازه $(a,b)$ باشد، حاصل $b-a$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$6$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1563,
+      "question_page": 11,
+      "question_text": "نیم‌عمر یک ماده $8$ سال است. بعد از گذشت $20$ سال، $30$ میلی‌گرم از آن باقی مانده است. جرم اولیه چه مقداری بوده است؟",
+      "options": [
+        "$80$",
+        "$80\\sqrt2$",
+        "$120$",
+        "$120\\sqrt2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1564,
+      "question_page": 11,
+      "question_text": "اگر پس از $t$ ساعت مقدار دارویی خاص در بدن یک بیمار برابر $20(0/6)^t$ میلی‌گرم باشد، پس از $3$ ساعت چند درصد دارو از بدن دفع شده است؟",
+      "options": [
+        "$21/6$",
+        "$22/5$",
+        "$77/5$",
+        "$78/4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1565,
+      "question_page": 11,
+      "question_text": "اگر $20$ گرم نمک را در آب حل کنیم پس از هر دقیقه $20$ درصد آن حل می‌شود. پس از گذشت چند دقیقه $5$ گرم نمک حل‌نشده داریم؟ $(\\log2=0/3)$",
+      "options": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1566,
+      "question_page": 11,
+      "question_text": "یک دستگاه تصفیه آب فیلترهایی دارد که هر لایه از این فیلترها $40$ درصد از ناخالصی آب را از بین می‌برد. حداقل چند لایه استفاده کنیم تا بیش از $80%$ ناخالصی آب حذف شود؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1567,
+      "question_page": 11,
+      "question_text": "با افزایش $2$ ریشتر به شدت یک زلزله، انرژی آزادشده چند برابر می‌شود؟ $(\\log E=11/8+1/5M)$",
+      "options": [
+        "$3$",
+        "$30$",
+        "$10\\sqrt{10}$",
+        "$1000$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1568,
+      "question_page": 11,
+      "question_text": "به بزرگی زلزله‌ای $\\log4$ واحد در مقیاس ریشتر اضافه می‌شود. اگر انرژی آزادشده $k$ برابر شود، حاصل $\\log_2 k$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

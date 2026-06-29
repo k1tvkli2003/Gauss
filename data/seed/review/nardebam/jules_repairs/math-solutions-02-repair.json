@@ -1,0 +1,2791 @@
+{
+  "task_id": "math-solutions-02",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 214,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "می‌دانیم طول پاره‌خط $AB$ برابر است:\n$AB = \\sqrt{(x_A - x_B)^2 + (y_A - y_B)^2}$\nبنابراین:\n$AB + AC = 10 \\Rightarrow \\sqrt{a^2 + 36} + \\sqrt{a^2} = 10$\n$\\Rightarrow \\sqrt{a^2 + 36} + |a| = 10 \\xrightarrow{a > 0} \\sqrt{a^2 + 36} = 10 - a$\n$\\xrightarrow{a \\le 10} a^2 + 36 = (10 - a)^2$\n$\\Rightarrow a^2 + 36 = a^2 - 20a + 100 \\Rightarrow 20a = 64 \\Rightarrow a = 3/2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 215,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "فاصلهٔ $HC$ را $x$ می‌نامیم. در این صورت طبق قضیهٔ فیثاغورس $AC = \\sqrt{x^2+16}$. از طرفی $BC$ برابر با $10-x$ می‌باشد. مارکو دو مسیر $AC$ و $CB$ را طی می‌کند.\n$t_1 = \\frac{AC}{v_1} = \\frac{\\sqrt{x^2+16}}{5}$ :زمان پیمودن $AC$\n$t_2 = \\frac{CB}{v_2} = \\frac{10-x}{7}$ :زمان پیمودن $CB$\n$\\Rightarrow t_1 + t_2 = \\frac{\\sqrt{x^2+16}}{5} + \\frac{10-x}{7} = 2$\n$\\Rightarrow \\frac{\\sqrt{x^2+16}}{5} = \\frac{x+4}{7} \\Rightarrow \\frac{x^2+16}{25} = \\frac{x^2+8x+16}{49}$\n$\\Rightarrow 24x^2 - 200x + 24 \\times 16 = 0$\n$\\Rightarrow 3x^2 - 25x + 48 = 0 \\Rightarrow x = \\frac{25 \\pm \\sqrt{625 - 576}}{6}$\n$\\Rightarrow x = \\frac{25 \\pm 7}{6} \\Rightarrow \\begin{cases} \\frac{16}{3} \\\\ 3 \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 216,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "ابتدا عبارت $P$ را تجزیه کرده، سپس تعیین علامت می‌کنیم:\n$P = (x+2)(x-4) + 5 = x^2 - 2x - 3 = (x+1)(x-3)$\nریشه‌های $P=0$ را محاسبه می‌کنیم:\n$P=0 \\Rightarrow \\begin{cases} x = -1 \\\\ x = 3 \\end{cases}$\nجدول را رسم می‌کنیم:",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            700,
+            520,
+            890,
+            890
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0021.jpg"
+        }
+      ],
+      "review_notes": [
+        "Table diagram included."
+      ]
+    },
+    {
+      "question_number": 217,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "عبارت $A(x)$ را تجزیه می‌کنیم:\n$A(x) = (2x-1)^2 - (2-3x)^2 = ((2x-1) - (2-3x))((2x-1) + (2-3x)) = (5x-3)(-x+1)$\n$A(x) = 0 \\Rightarrow \\begin{cases} x = \\frac{3}{5} \\\\ x = 1 \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            780,
+            520,
+            890,
+            840
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0021.jpg"
+        }
+      ],
+      "review_notes": [
+        "Table diagram included."
+      ]
+    },
+    {
+      "question_number": 218,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "ابتدا عبارت $P(x)$ را ساده می‌کنیم:\n$P(x) = (2x-1)^3 - 3x^2(4x-6) - 2 = 8x^3 - 12x^2 + 6x - 1 - 8x^3 + 12x^2 - 2 = 6x - 3$\nحال، جدول تعیین علامت را رسم می‌کنیم:",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            50,
+            200,
+            470
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0021.jpg"
+        }
+      ],
+      "review_notes": [
+        "Table diagram starts in the left column."
+      ]
+    },
+    {
+      "question_number": 219,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "با توجه به جدول، $x = \\frac{1}{3}$ ریشهٔ عبارت $y = ax - b$ بوده و علامت $a$ منفی است. (سمت راست ریشه موافق علامت $a$ است.)\n$ax - b = 0 \\Rightarrow x = \\frac{b}{a} = \\frac{1}{3} \\Rightarrow b = \\frac{a}{3} \\Rightarrow b < 0$\nحال عبارت $y = bx + a$ را تعیین علامت می‌کنیم:\n$bx + a = 0 \\Rightarrow x = -\\frac{a}{b} = -3$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            235,
+            110,
+            280,
+            420
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0021.jpg"
+        }
+      ],
+      "review_notes": [
+        "Table diagram included."
+      ]
+    },
+    {
+      "question_number": 220,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "با توجه به جدول، $f(x)$ یک عبارت درجهٔ یک است، بنابراین $f(x) = ax + b$ می‌باشد.\n$a = -3$\n$x = 3$ ریشهٔ $f(x)$ است.\n$\\Rightarrow f(3) = 0 \\Rightarrow 18 + b = 0 \\Rightarrow b = -18 \\Rightarrow f(x) = 6x - 18$\n$f(\\frac{a}{b}) = f(\\frac{1}{6}) = 1 - 18 = -17$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 221,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "با توجه به جدول، عبارت $y = ax^2 + bx - 4$ تنها یک ریشهٔ ساده $x = -2$ را دارد که برای عبارت درجهٔ دو امکان‌پذیر نیست. بنابراین $y$ عبارتی درجهٔ یک است و $a = 0$.\n$\\Rightarrow y = bx - 4 \\Rightarrow bx - 4 = 0 \\Rightarrow x = \\frac{4}{b} = -2 \\Rightarrow b = -2$\nدر نتیجه: $a - b = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 222,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "ریشه‌های عبارت $P$ را به دست آورده، سپس جدول تعیین علامت را رسم می‌کنیم:\n$P = 0 \\Rightarrow -2x^2 + 5x - 2 = 0 \\Rightarrow x = \\frac{-5 \\pm \\sqrt{9}}{-4} = \\begin{cases} x = \\frac{1}{2} \\\\ x = 2 \\end{cases}$\n$\\sqrt{3} - \\sqrt{2}$ بین ۱ و ۲ می‌باشد، بنابراین علامت $P$ در این نقطه مثبت است. $\\sqrt{3} + 1$ بزرگ‌تر از ۲ می‌باشد، بنابراین علامت $P$ در این نقطه منفی است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            550,
+            100,
+            600,
+            460
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0021.jpg"
+        }
+      ],
+      "review_notes": [
+        "Table diagram included."
+      ]
+    },
+    {
+      "question_number": 223,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "عبارت $P(x) = -2x^2 + ax + b$ فقط در بازهٔ $(-1, 3)$ مثبت می‌باشد. بنابراین $x = -1$ و $x = 3$ صفرهای $P(x)$ می‌باشند.\n$P(-1) = 0 \\Rightarrow -2 - a + b = 0$\n$P(3) = 0 \\Rightarrow -18 + 3a + b = 0$\n$\\Rightarrow 4a - 16 = 0 \\Rightarrow a = 4, b = 6 \\Rightarrow A(x) = 4x^2 + 6x + 2$\nحال نامعادلهٔ $A(x) < 0$ را حل می‌کنیم:\n$A(x) < 0 \\Rightarrow 4x^2 + 6x + 2 < 0 \\Rightarrow 2x^2 + 3x + 1 < 0$\n$\\Rightarrow -1 < x < -\\frac{1}{2} \\Rightarrow x \\in (-1, -\\frac{1}{2})$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 224,
+      "solution_page": "page_0021.jpg",
+      "solution_text": "نمودار $y = 4 - x^2$ بالاتر از نمودار $y = x^2 - 5x + 6$ قرار دارد.\n$4 - x^2 > x^2 - 5x + 6 \\Rightarrow 2x^2 - 5x + 2 < 0$\n$\\Rightarrow \\frac{1}{2} < x < 2 \\Rightarrow x \\in (\\frac{1}{2}, 2) \\Rightarrow b - a = 2 - \\frac{1}{2} = \\frac{3}{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 225,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "جدول تعیین علامت $P(x)$ را رسم می‌کنیم:\n$x^2 - 4 = 0 \\Rightarrow x = \\pm 2$\n$5x - x^2 = 0 \\Rightarrow x = 0 \\text{ یا } x = 5$\n$P(x) \\ge 0 \\Rightarrow x \\in [-2, 0] \\cup [2, 5]$\n$\\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{-2, -1, 0, 2, 3, 4, 5\\}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            140,
+            460,
+            200,
+            830
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0022.jpg"
+        }
+      ],
+      "review_notes": [
+        "Table diagram included."
+      ]
+    },
+    {
+      "question_number": 226,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "با توجه به جدول، $x = -1$ ریشهٔ عبارت $P$ است. بنابراین به ازای $x = -1$ عبارت $P$ برابر صفر است.\n$P(x) = ax^2 - 8x - a^2 - 6 \\xrightarrow{x = -1} P(-1) = a + 8 - a^2 - 6 = 0$\n$\\Rightarrow a^2 - a - 2 = 0 \\Rightarrow \\begin{cases} a = -1 \\text{ غ ق ق} \\\\ a = 2 \\end{cases}$\nدر جدول تعیین علامت، بین دو ریشه منفی و خارج دو ریشه، مثبت است، در نتیجه $a > 0$ بوده و $a = -1$ قابل قبول نیست.\n$\\Rightarrow P = 2x^2 - 8x - 10 = 2(x^2 - 4x - 5) = 2(x+1)(x-5)$\nواضح است ریشهٔ دوم عبارت، $x = 5$ است. بنابراین $b = 5$ می‌باشد.\n$\\Rightarrow a + b = 2 + 5 = 7$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 227,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "$y$ به ازای $x = -1$ برابر صفر است.\n$y = a - 8 + 3a = 0 \\Rightarrow a = 2$\n$\\Rightarrow y = 2x^2 + 8x + 6 = 2(x+1)(x+3)$\n$\\Rightarrow \\text{جدول تعیین علامت } y$:",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            510,
+            450,
+            560,
+            830
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0022.jpg"
+        }
+      ],
+      "review_notes": [
+        "Table diagram included."
+      ]
+    },
+    {
+      "question_number": 228,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "عبارت درجه‌دوم $ax^2 + bx + c$ هنگامی به ازای جمیع مقادیر $x$، منفی است که دو شرط $a < 0$ و $\\Delta < 0$ برقرار باشد:\n$\\Delta < 0 \\Rightarrow 16 - 4(m-3)(m+1) < 0$\n$\\Rightarrow 4 - (m-3)(m+1) < 0 \\Rightarrow m^2 - 2m - 7 > 0$\n$\\Rightarrow \\begin{cases} m < 1 - 2\\sqrt{2} \\\\ m > 1 + 2\\sqrt{2} \\end{cases} \\quad (1)$\n$m - 3 < 0 \\Rightarrow m < 3 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow m < 1 - 2\\sqrt{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 229,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "نمودار سهمی همواره بالاتر از خط $y = 3$ است، یعنی نامعادلهٔ $(m+2)x^2 - 2mx + m + 2 > 3$ به ازای جمیع مقادیر $x$ برقرار است:\n$(m+2)x^2 - 2mx + m - 1 > 0$\nبنابراین باید $\\Delta < 0$ و ضریب $x^2$ مثبت باشد:\n$\\Delta < 0 \\Rightarrow 4m^2 - 4(m+2)(m-1) < 0$\n$\\Rightarrow m^2 - (m+2)(m-1) < 0 \\Rightarrow -m + 2 < 0$\n$\\Rightarrow m > 2 \\quad (1)$\n$m + 2 > 0 \\Rightarrow m > -2 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow m > 2$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 230,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "با توجه به جدول، عبارت $P$ دارای یک ریشهٔ ساده و یک ریشهٔ مضاعف است که ریشهٔ ساده کوچک‌تر از ریشهٔ مضاعف می‌باشد. در همهٔ گزینه‌ها $x = 1$ یا $x = -1$ ریشهٔ عبارت است. بنابراین با تقسیم عبارت بر عامل $x - 1$ یا $x + 1$ می‌توان آن‌ها را تجزیه کرد:\n1: $x^3 + x - 2 = (x-1)(x^2+x+2) \\Rightarrow x = 1$ فقط یک ریشهٔ ساده\n2: $x^3 - 3x - 2 = (x+1)(x^2-x-2) = (x+1)^2(x-2)$\n$\\Rightarrow (x = -1 \\text{ ریشهٔ مضاعف})$ و $(x = 2 \\text{ ریشهٔ ساده})$\n3: $x^3 + x + 2 = (x+1)(x^2-x+2) \\Rightarrow x = -1$ فقط یک ریشهٔ ساده\n4: $x^3 - 3x + 2 = (x-1)(x^2+x-2) = (x-1)^2(x+2)$\n$\\Rightarrow (x = 1 \\text{ ریشهٔ مضاعف})$ و $(x = -2 \\text{ ریشهٔ ساده})$\nمشخص است که ۴ درست است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 231,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "با توجه به جدول، $x = 1$ ریشهٔ سادهٔ عبارت و $x = b$ ریشهٔ مضاعف آن است. بنابراین عبارت $y = x^2 + ax + 9$ دارای یک ریشهٔ مضاعف است.\n$\\Delta = 0 \\Rightarrow a^2 - 36 = 0 \\Rightarrow a^2 = 36$\n$\\Rightarrow \\begin{cases} a = 6 \\Rightarrow y = x^2 + 6x + 9 = (x+3)^2 \\Rightarrow b = -3 \\ \\checkmark \\\\ a = -6 \\Rightarrow y = x^2 - 6x + 9 = (x-3)^2 \\Rightarrow b = 3 \\text{ غ ق ق} \\end{cases}$\nدر جدول $b < 1$ می‌باشد، بنابراین: $a = 6$ و $b = -3$\n$\\Rightarrow a + b = 6 - 3 = 3$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 232,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "با توجه به جدول، $x = b$ ریشهٔ ساده و $x = 2$ ریشهٔ مضاعف $A(x)$ است. $A(x)$ یک عامل $x - 2$ را داراست و چون $x = 2$ ریشهٔ مضاعف است، پس $x^2 + a - x$ باید عامل $x - 2$ را داشته باشد، یعنی به ازای $x = 2$ برابر صفر شود:\n$2^2 - 2 + a = 0 \\Rightarrow a = -2 \\Rightarrow A(x) = (2-x)(x^2 - x - 2)$\n$= (2-x)(x-2)(x+1) = -(x-2)^2(x+1)$\nنتیجه می‌شود ریشهٔ سادهٔ $A(x)$ برابر $x = -1$ است. یعنی $b = -1$\n$a - b = -2 + 1 = -1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 233,
+      "solution_page": "page_0022.jpg",
+      "solution_text": "روش اول: ریشه‌های هر یک از عبارات را به دست آورده، پس از تعیین علامت هر کدام از آن‌ها، علامت عبارت $A(x)$ را در جدول تعیین می‌کنیم:\n$A(x) = \\frac{(4-x^2)(x^2-1)}{x^2+4x+3}$\n$A(x) > 0 \\Rightarrow \\begin{cases} -3 < x < -2 \\\\ 1 < x < 2 \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            730,
+            45,
+            870,
+            420
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0022.jpg"
+        }
+      ],
+      "review_notes": [
+        "Table diagram included."
+      ]
+    },
+    {
+      "question_number": 243,
+      "solution_page": "page_0023.jpg",
+      "solution_text": "همۀ عبارات را به سمت چپ نامساوی آورده، جدول تعیین علامت را رسم می‌کنیم:\n$\\frac{۲x+۲}{x^۲-x} \\geq ۳ \\Rightarrow \\frac{۲x+۲}{x^۲-x} - ۳ \\geq ۰ \\Rightarrow \\frac{-۳x^۲+۵x+۲}{x^۲-x} \\geq ۰$\n$-۳x^۲+۵x+۲ = ۰ \\Rightarrow x = \\frac{-۵ \\pm \\sqrt{۴۹}}{-۶} \\Rightarrow \\begin{cases} x = -\\frac{۱}{۳} \\\\ x = ۲ \\end{cases}$\n$x^۲-x = ۰ \\Rightarrow \\begin{cases} x = ۰ \\\\ x = ۱ \\end{cases}$\n$P \\geq ۰ \\longrightarrow \\begin{cases} -\\frac{۱}{۳} \\leq x < ۰ \\\\ ۱ < x \\leq ۲ \\end{cases} \\xrightarrow{x \\in \\mathbb{Z}} x = ۲$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0023.jpg",
+          "region": [
+            440,
+            240,
+            810,
+            310
+          ],
+          "placement": "solution",
+          "alt": "جدول تعیین علامت"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 244,
+      "solution_page": "page_0023.jpg",
+      "solution_text": "تمامی عبارات را به سمت چپ نامساوی منتقل کرده، تعیین علامت می‌کنیم:\n$\\frac{x}{x+۳} < \\frac{x+۳}{x} \\Rightarrow \\frac{x}{x+۳} - \\frac{x+۳}{x} < ۰$\n$\\Rightarrow \\frac{x^۲-(x+۳)^۲}{x(x+۳)} < ۰ \\Rightarrow \\frac{-۶x-۹}{x(x+۳)} < ۰$\n$P < ۰ \\longrightarrow \\begin{cases} -۳ < x < -\\frac{۳}{۲} \\\\ x > ۰ \\end{cases}$\nمشخص می‌شود کم‌ترین مقدار $k$ برابر صفر است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0023.jpg",
+          "region": [
+            440,
+            440,
+            810,
+            520
+          ],
+          "placement": "solution",
+          "alt": "جدول تعیین علامت"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 245,
+      "solution_page": "page_0023.jpg",
+      "solution_text": "نامعادلة ترکیبی را به دو نامعادله تقسیم کرده، سپس از اشتراک، جواب‌ها را به دست می‌آوریم:\n$\\frac{۴x-۳}{۳x-۱} > ۱ \\Rightarrow \\frac{۴x-۳}{۳x-۱} - ۱ > ۰ \\Rightarrow \\frac{x-۲}{۳x-۱} > ۰$\n$\\Rightarrow \\begin{cases} x < \\frac{۱}{۳} \\\\ x > ۲ \\end{cases} \\quad (۱)$\n$\\frac{۴x-۳}{۳x-۱} < ۳ \\Rightarrow \\frac{۴x-۳}{۳x-۱} - ۳ < ۰ \\Rightarrow \\frac{-۵x}{۳x-۱} < ۰$\n$\\Rightarrow \\begin{cases} x < ۰ \\\\ x > \\frac{۱}{۳} \\end{cases} \\quad (۲)$\n$(۱) \\cap (۲) \\Rightarrow \\begin{cases} x < ۰ \\\\ x > ۲ \\end{cases}$\nمجموعه جواب: $(-\\infty, ۰) \\cup (۲, +\\infty) = \\mathbb{R} - [۰, ۲]$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 246,
+      "solution_page": "page_0023.jpg",
+      "solution_text": "مجموعه‌جواب نامعادلۀ $\\frac{x+a}{bx+۶} > ۰$ بازۀ $(-۳, ۲)$ است. نتیجه می‌گیریم $x=-۳$ و $x=۲$ صفرهای صورت و مخرج کسر می‌باشند. ریشۀ صورت $x=-a$ و ریشۀ مخرج $x=-\\frac{۶}{b}$ است.\nدو حالت به وجود می‌آید:\nحالت اول:\n$\\begin{cases} -a = ۲ \\\\ -\\frac{۶}{b} = -۳ \\end{cases} \\Rightarrow \\begin{cases} a = -۲ \\\\ b = ۲ \\end{cases} \\Rightarrow \\frac{x-۲}{۲x+۶} > ۰ \\Rightarrow x \\in (-\\infty, -۳) \\cup (۲, +\\infty) \\text{ غ ق ق }$\nحالت دوم:\n$\\begin{cases} -a = -۳ \\\\ -\\frac{۶}{b} = ۲ \\end{cases} \\Rightarrow \\begin{cases} a = ۳ \\\\ b = -۳ \\end{cases} \\Rightarrow \\frac{x+۳}{-۳x+۶} > ۰ \\Rightarrow x \\in (-۳, ۲) \\checkmark \\Rightarrow a-b = ۶$\nدقت داشته باشید تعیین علامت $\\frac{ax+b}{cx+d}$ مانند $(ax+b)(cx+d)$ که عبارتی درجه‌دوم است، می‌باشد و تنها در ریشۀ مخرج، تعریف نشده است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 247,
+      "solution_page": "page_0023.jpg",
+      "solution_text": "با شرط $x \\neq ۳$، عبارت سمت چپ را ساده کرده، سپس تمامی عبارات را به سمت چپ نامعادله منتقل کرده، آن را تعیین علامت می‌کنیم:\n$\\frac{۴x-۱۲}{x^۲+x-۱۲} > \\frac{x}{x+۴} \\Rightarrow \\frac{۴(x-۳)}{(x+۴)(x-۳)} > \\frac{x}{x+۴}$\n$\\xrightarrow{x \\neq ۳} \\frac{۴}{x+۴} > \\frac{x}{x+۴} \\Rightarrow \\frac{۴-x}{x+۴} > ۰$\n$P > ۰ \\longrightarrow \\begin{cases} -۴ < x < ۴ \\\\ x \\neq ۳ \\text{ (از طرفی)} \\end{cases} \\Rightarrow x \\in (-۴, ۴) - \\{۳\\}$\n$\\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{-۳, -۲, -۱, ۰, ۱, ۲\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0023.jpg",
+          "region": [
+            40,
+            360,
+            420,
+            440
+          ],
+          "placement": "solution",
+          "alt": "جدول تعیین علامت"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 248,
+      "solution_page": "page_0023.jpg",
+      "solution_text": "هر دو عبارت مخرج کسر، همواره مثبت هستند. $(\\Delta < ۰, a > ۰)$. بنابراین می‌توانیم طرفین‌وسطین کنیم:\n$\\frac{۱}{۴x^۲+۳x+۱} < \\frac{۱}{x^۲+۲x+۲}$\n$\\Rightarrow ۴x^۲+۳x+۱ > x^۲+۲x+۲ \\Rightarrow ۳x^۲+x-۱ > ۰$\nاگر $\\alpha$ و $\\beta$ ریشه‌های معادلۀ $۳x^۲+x-۱=۰$ باشند، مجموعه‌جواب نامعادلۀ فوق به صورت $\\mathbb{R}-[\\alpha, \\beta]$ خواهد بود. در نتیجه:\n$S = \\alpha + \\beta = -\\frac{۱}{۳}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 249,
+      "solution_page": "page_0023.jpg",
+      "solution_text": "مجموع ضرایب چندجمله‌ای برابر صفر است. بنابراین یکی از ریشه‌های آن $x=۱$ بوده و عامل $(x-۱)$ را شامل است. چندجمله‌ای $x^۳-۳x+۲$ را بر $x-۱$ تقسیم می‌کنیم:\n$x^۳-۳x+۲ = (x-۱)(x^۲+x-۲) = (x-۱)(x+۲)(x-۱)$\nحال عبارت تجزیه‌شده را تعیین علامت کرده و جواب نامعادله را می‌یابیم:\n$P > ۰ \\longrightarrow \\begin{cases} -۲ < x < ۱ \\\\ x > ۱ \\end{cases} \\Rightarrow x \\in (-۲, +\\infty) - \\{۱\\}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0023.jpg",
+          "region": [
+            40,
+            735,
+            420,
+            810
+          ],
+          "placement": "solution",
+          "alt": "جدول تعیین علامت"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 250,
+      "solution_page": "page_0023.jpg",
+      "solution_text": "با توجه به مجموعه‌جواب نامعادله، مشخص می‌شود $x=a$ ریشۀ سادۀ عبارت درجۀ سه $x^۳ - x^۲ - ۸x - b$ و $x=۲$ ریشۀ مضاعف آن است. بنابراین این عبارت به ازای $x=۲$ برابر صفر است:\n$۲^۳ - ۲^۲ - ۱۶ - b = ۰ \\Rightarrow b = -۱۲$\nحال، عبارت درجه‌سه را بر $x-۲$ تقسیم کرده و تجزیه می‌کنیم:\n$x^۳ - x^۲ - ۸x + ۱۲ = (x-۲)(x^۲+x-۶)$\n$= (x-۲)(x+۳)(x-۲) = (x-۲)^۲(x+۳)$\nواضح است که $x=-۳$ ریشۀ دیگر عبارت است و $a=-۳$ می‌باشد.\n$\\Rightarrow a - b = -۳ - (-۱۲) = ۹$\nحال، عبارت درجه سه را بر $x - ۲$ تقسیم کرده و تجزیه می‌کنیم:\n$x^3 - x^2 - 8x + 12 = (x - 2)(x^2 + x - 6)$\n$= (x - 2)(x + 3)(x - 2) = (x - 2)^2 (x + 3)$\nواضح است که $x = -۳$ ریشهٔ دیگر عبارت است و $a = -۳$ می‌باشد.\n$\\Rightarrow a - b = -۳ - (-۱۲) = 9$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": [
+        "Solution continues on page 0024.jpg"
+      ]
+    },
+    {
+      "question_number": 251,
+      "solution_page": "page_0024.jpg",
+      "solution_text": "مجموعه‌جواب نامعادله به صورت $(\\alpha, \\beta)$ است. نتیجه می‌گیریم $\\alpha$ و $\\beta$ ریشه‌های عبارت درجه دو بوده و ضریب $x^۲$ منفی است، زیرا بین دو ریشۀ عبارت، مثبت شده است:\n$n-۲ < ۰ \\Rightarrow n < ۲ \\xrightarrow{n \\in \\mathbb{N}} n = ۱$\n$\\Rightarrow -x^۲+x+۶ > ۰ \\Rightarrow x^۲-x-۶ < ۰ \\Rightarrow (x+۲)(x-۳) < ۰$\n$\\Rightarrow -۲ < x < ۳ \\Rightarrow x \\in (-۲, ۳) \\Rightarrow \\begin{cases} \\alpha = -۲ \\\\ \\beta = ۳ \\end{cases} \\Rightarrow \\beta - \\alpha = ۵$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 252,
+      "solution_page": "page_0024.jpg",
+      "solution_text": "رابطۀ $\\beta < ۲ < \\alpha < -۱$ بین ریشه‌ها برقرار است. نتیجه می‌گیریم که عدد $۲$ بین دو ریشه و عدد $-۱$ خارج دو ریشه است و چون ضریب $x^۲$ مثبت است، $f(۲)$ منفی و $f(-۱)$ مثبت خواهد بود.\n$\\begin{cases} f(۲) < ۰ \\Rightarrow ۴+۲m+۲m+۱۲ < ۰ \\Rightarrow m < -۴ \\\\ f(-۱) > ۰ \\Rightarrow ۱-m+۲m+۱۲ > ۰ \\Rightarrow m > -۱۳ \\end{cases}$\n$\\Rightarrow -۱۳ < m < -۴$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 253,
+      "solution_page": "page_0024.jpg",
+      "solution_text": "روش اول: ابتدا نامعادلۀ $۲x^۲ - ۳x - ۲ < ۰$ را حل می‌کنیم:\n$۲x^۲ - ۳x - ۲ = ۰ \\Rightarrow x = \\frac{۳ \\pm \\sqrt{۲۵}}{۴} \\Rightarrow \\begin{cases} x = ۲ \\\\ x = -\\frac{۱}{۲} \\end{cases}$\n$۲x^۲ - ۳x + ۲ < ۰ \\Rightarrow -\\frac{۱}{۲} < x < ۲ \\quad (۱)$\nحال، نامعادلۀ قدرمطلقی را حل می‌کنیم:\n$|x - \\alpha| < \\beta \\Rightarrow -\\beta < x - \\alpha < \\beta \\Rightarrow \\alpha - \\beta < x < \\alpha + \\beta \\quad (۲)$\nاز مقایسۀ (۱) و (۲) نتیجه می‌گیریم:\n$\\begin{cases} \\alpha - \\beta = -\\frac{۱}{۲} \\\\ \\alpha + \\beta = ۲ \\end{cases} \\Rightarrow ۲\\alpha = \\frac{۳}{۲} \\Rightarrow \\alpha = \\frac{۳}{۴} \\, , \\, \\beta = \\frac{۵}{۴}$\n$\\Rightarrow \\alpha - \\beta = -\\frac{۱}{۲}$\nروش دوم:\n$۲x^۲ - ۳x - ۲ < ۰ \\Rightarrow -\\frac{۱}{۲} < x < ۲$\nاز سه طرف نامساوی، میانگین $-\\frac{۱}{۲}$ و $۲$، یعنی $\\frac{۳}{۴}$ را کم می‌کنیم:\n$-\\frac{۱}{۲} - \\frac{۳}{۴} < x - \\frac{۳}{۴} < ۲ - \\frac{۳}{۴} \\Rightarrow -\\frac{۵}{۴} < x - \\frac{۳}{۴} < \\frac{۵}{۴}$\n$\\Rightarrow |x - \\frac{۳}{۴}| < \\frac{۵}{۴} \\Rightarrow \\begin{cases} \\alpha = \\frac{۳}{۴} \\\\ \\beta = \\frac{۵}{۴} \\end{cases} \\Rightarrow \\alpha - \\beta = -\\frac{۱}{۲}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 254,
+      "solution_page": "page_0024.jpg",
+      "solution_text": "اگر $\\alpha$ و $\\beta$ $(\\alpha < \\beta)$ ریشه‌های $۲x^۲ + ax + b = ۰$ باشند، مجموعه‌جواب نامعادلۀ $۲x^۲ + ax + b > ۰$ به صورت $x < \\alpha$ یا $x > \\beta$ می‌باشد:\n$|۴-x| > ۱ \\Rightarrow |x-۴| > ۱ \\Rightarrow \\begin{cases} x-۴ > ۱ \\\\ x-۴ < -۱ \\end{cases} \\Rightarrow \\begin{cases} x > ۵ \\\\ x < ۳ \\end{cases}$\n$\\Rightarrow \\alpha = ۳ \\, , \\, \\beta = ۵$\nاز طرفی: $S = \\alpha + \\beta = -\\frac{a}{۲} = ۸ \\Rightarrow a = -۱۶$\n$P = \\alpha\\beta = \\frac{b}{۲} = ۱۵ \\Rightarrow b = ۳۰$\n$\\Rightarrow a - b = -۴۶$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": [
+        "Solution continues on the left column"
+      ]
+    },
+    {
+      "question_number": 255,
+      "solution_page": "page_0024.jpg",
+      "solution_text": "اگر $|x| < a$ باشد $(a > ۰)$ آن‌گاه $-a < x < a$ می‌باشد، بنابراین:\n$|۲x - ۱| + ۳ < ۵ \\Rightarrow -۵ < |۲x - ۱| + ۳ < ۵ \\Rightarrow -۸ < |۲x - ۱| < ۲$\nنامعادلۀ $|۲x - ۱| > -۸$ همواره برقرار است. در نتیجه:\n$|۲x - ۱| < ۲ \\Rightarrow -۲ < ۲x - ۱ < ۲ \\Rightarrow -۱ < ۲x < ۳$\n$\\Rightarrow -\\frac{۱}{۲} < x < \\frac{۳}{۲} \\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{۰, ۱\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 256,
+      "solution_page": "page_0024.jpg",
+      "solution_text": "اگر $|x| < a$ $(a > ۰)$ باشد، آن‌گاه $-a < x < a$ است.\n$|۲x - ۱| \\leq x + ۱ \\Rightarrow -x - ۱ \\leq ۲x - ۱ \\leq x + ۱$\n$\\Rightarrow -x \\leq ۲x \\leq x + ۲ \\Rightarrow ۰ \\leq x \\leq ۲$\n$\\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{۰, ۱, ۲\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 257,
+      "solution_page": "page_0024.jpg",
+      "solution_text": "می‌دانیم اگر $|x| > a$ $(a > ۰)$ باشد، آن‌گاه $x > a$ یا $x < -a$ است.\n$|x^۲ - ۳x| < ۲x \\Rightarrow -۲x < x^۲ - ۳x < ۲x$\n$\\Rightarrow \\begin{cases} -۲x < x^۲ - ۳x \\Rightarrow x^۲ - x > ۰ \\Rightarrow \\begin{cases} x < ۰ \\\\ x > ۱ \\end{cases} \\quad (۱) \\\\ x^۲ - ۳x < ۲x \\Rightarrow x^۲ - ۵x < ۰ \\Rightarrow ۰ < x < ۵ \\quad (۲) \\end{cases}$\n$(۱) \\cap (۲) \\Rightarrow ۱ < x < ۵$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 258,
+      "solution_page": "page_0024.jpg",
+      "solution_text": "روش اول: اگر $|x| > a$ باشد $(a > ۰)$، آن‌گاه $\\begin{cases} x > a \\\\ \\text{یا} \\\\ x < -a \\end{cases}$ است.\n$|\\frac{۳x+۱}{۴x-۲}| > ۱ \\Rightarrow \\begin{cases} \\frac{۳x+۱}{۴x-۲} > ۱ \\\\ \\frac{۳x+۱}{۴x-۲} < -۱ \\end{cases} \\Rightarrow \\begin{cases} \\frac{۳x+۱}{۴x-۲} - ۱ > ۰ \\\\ \\frac{۳x+۱}{۴x-۲} + ۱ < ۰ \\end{cases}$\n$\\Rightarrow \\begin{cases} \\frac{-x+۳}{۴x-۲} > ۰ \\\\ \\frac{۷x-۱}{۴x-۲} < ۰ \\end{cases} \\Rightarrow \\begin{cases} \\frac{۱}{۲} < x < ۳ \\\\ \\frac{۱}{۷} < x < \\frac{۱}{۲} \\end{cases} \\xrightarrow{\\cup} (\\frac{۱}{۷}, ۳) - \\{\\frac{۱}{۲}\\}$\nروش دوم: با فرض $x \\neq \\frac{۱}{۲}$ دو طرف معادله را در $|۴x - ۲|$ ضرب می‌کنیم، سپس به توان ۲ می‌رسانیم:\n$|\\frac{۳x+۱}{۴x-۲}| > ۱ \\Rightarrow |۳x+۱| > |۴x-۲| \\Rightarrow (۳x+۱)^۲ > (۴x-۲)^۲$\n$\\Rightarrow ۷x^۲ - ۲۲x + ۳ < ۰ \\Rightarrow \\frac{۱}{۷} < x < ۳$\nبا در نظر گرفتن فرض اولیۀ $x \\neq \\frac{۱}{۲}$، مجموعه‌جواب به صورت $(\\frac{۱}{۷}, ۳) - \\{\\frac{۱}{۲}\\}$ می‌باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 243,
+      "solution_page": "page_0025.jpg",
+      "solution_text": "همهٔ عبارات را به سمت چپ نامساوی آورده، جدول تعیین علامت را رسم می‌کنیم:\n$\\frac{2x+2}{x^2-x} \\ge 3 \\Rightarrow \\frac{2x+2}{x^2-x} - 3 \\ge 0 \\Rightarrow \\frac{-3x^2+5x+2}{x^2-x} \\ge 0$\n$-3x^2+5x+2=0 \\Rightarrow x=\\frac{-5\\pm\\sqrt{49}}{-6} \\Rightarrow x=-\\frac{1}{3}, x=2$\n$x^2-x=0 \\Rightarrow x=0, x=1$\n\n$\\Rightarrow P \\ge 0 \\Rightarrow -\\frac{1}{3} \\le x < 0 , 1 < x \\le 2$\nبا توجه به $x \\in \\mathbb{Z}$ داریم $x=2$.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            239,
+            452,
+            335,
+            804
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0025.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 244,
+      "solution_page": "page_0025.jpg",
+      "solution_text": "تمامی عبارات را به سمت چپ نامساوی منتقل کرده، تعیین علامت می‌کنیم:\n$\\frac{x}{x+3} < \\frac{x+3}{x} \\Rightarrow \\frac{x}{x+3} - \\frac{x+3}{x} < 0 \\Rightarrow \\frac{x^2 - (x+3)^2}{x(x+3)} < 0 \\Rightarrow \\frac{-6x-9}{x(x+3)} < 0$\n\n$\\Rightarrow P < 0 \\Rightarrow -3 < x < -\\frac{3}{2} , x > 0$\nمشخص می‌شود کم‌ترین مقدار $k$ برابر صفر است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            453,
+            452,
+            532,
+            706
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0025.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 245,
+      "solution_page": "page_0025.jpg",
+      "solution_text": "نامعادلهٔ ترکیبی را به دو نامعادله تقسیم کرده، سپس از اشتراک، جواب‌ها را به دست می‌آوریم:\n$\\frac{4x-3}{3x-1} > 1 \\Rightarrow \\frac{4x-3}{3x-1} - 1 > 0 \\Rightarrow \\frac{x-2}{3x-1} > 0 \\Rightarrow x < \\frac{1}{3} , x > 2$ (۱)\n$\\frac{4x-3}{3x-1} < 3 \\Rightarrow \\frac{4x-3}{3x-1} - 3 < 0 \\Rightarrow \\frac{-5x}{3x-1} < 0 \\Rightarrow x < 0 , x > \\frac{1}{3}$ (۲)\n$(1) \\cap (2) \\Rightarrow x < 0 , x > 2 \\Rightarrow \\text{مجموعه جواب} = (-\\infty, 0) \\cup (2, +\\infty) = \\mathbb{R} - [0, 2]$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 246,
+      "solution_page": "page_0025.jpg",
+      "solution_text": "مجموعه جواب نامعادلهٔ $\\frac{x+a}{bx+6} > 0$ بازهٔ $(-3, 2)$ است. نتیجه می‌گیریم $x=-3$ و $x=2$ صفرهای صورت و مخرج کسر می‌باشند. ریشهٔ صورت $x=-a$ و ریشهٔ مخرج $x=-\\frac{6}{b}$ است.\nدو حالت به وجود می‌آید:\nحالت اول:\n$\\begin{cases} a = -2 \\\\ -\\frac{6}{b} = -3 \\Rightarrow b = 2 \\end{cases} \\Rightarrow \\frac{x-2}{2x+6} > 0 \\Rightarrow x \\in (-\\infty, -3) \\cup (2, +\\infty)$ غ.ق.ق\nحالت دوم:\n$\\begin{cases} a = 3 \\\\ -\\frac{6}{b} = 2 \\Rightarrow b = -3 \\end{cases} \\Rightarrow \\frac{x+3}{-3x+6} > 0 \\Rightarrow x \\in (-3, 2) \\checkmark \\Rightarrow a-b = 6$\nدقت داشته باشید تعیین علامت $\\frac{ax+b}{cx+d}$ مانند $(ax+b)(cx+d)$ که عبارتی درجه‌دوم است، می‌باشد و تنها در ریشهٔ مخرج، تعریف نشده است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 247,
+      "solution_page": "page_0025.jpg",
+      "solution_text": "با شرط $x \\neq 3$، عبارت سمت چپ را ساده کرده، سپس تمامی عبارات را به سمت چپ نامعادله منتقل کرده، آن را تعیین علامت می‌کنیم:\n$\\frac{4x-12}{x^2+x-12} > \\frac{x}{x+4} \\Rightarrow \\frac{4(x-3)}{(x+4)(x-3)} > \\frac{x}{x+4}$\n$x \\neq 3 \\Rightarrow \\frac{4}{x+4} > \\frac{x}{x+4} \\Rightarrow \\frac{4-x}{x+4} > 0$\n\n$\\Rightarrow P > 0 \\Rightarrow -4 < x < 4 \\xrightarrow{x \\neq 3 \\text{ از طرفی }} x \\in (-4, 4) - \\{3\\}$\n$x \\in \\mathbb{Z} \\Rightarrow x \\in \\{-3, -2, -1, 0, 1, 2\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            384,
+            45,
+            417,
+            260
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0025.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 248,
+      "solution_page": "page_0025.jpg",
+      "solution_text": "هر دو عبارت مخرج کسر، همواره مثبت هستند. ($a>0 , \\Delta<0$). بنابراین می‌توانیم طرفین‌وسطین کنیم:\n$\\frac{1}{4x^2+3x+1} < \\frac{1}{x^2+2x+2} \\Rightarrow 4x^2+3x+1 > x^2+2x+2 \\Rightarrow 3x^2+x-1 > 0$\nاگر $\\alpha$ و $\\beta$ ریشه‌های معادلهٔ $3x^2+x-1=0$ باشند، مجموعه جواب نامعادلهٔ فوق به صورت $\\mathbb{R} - [\\alpha, \\beta]$ خواهد بود. در نتیجه:\n$S = \\alpha+\\beta = -\\frac{1}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 249,
+      "solution_page": "page_0025.jpg",
+      "solution_text": "مجموع ضرایب چندجمله‌ای برابر صفر است. بنابراین یکی از ریشه‌های آن $x=1$ بوده و عامل $(x-1)$ را شامل است. چندجمله‌ای $x^3-3x+2$ را بر $x-1$ تقسیم می‌کنیم:\n$x^3-3x+2 = (x-1)(x^2+x-2) = (x-1)(x+2)(x-1)$\nحال عبارت تجزیه‌شده را تعیین علامت کرده و جواب نامعادله را می‌یابیم:\n\n$\\Rightarrow P > 0 \\Rightarrow \\begin{cases} -2 < x < 1 \\\\ x > 1 \\end{cases} \\Rightarrow x \\in (-2, +\\infty) - \\{1\\}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            743,
+            44,
+            786,
+            203
+          ],
+          "placement": "solution_text",
+          "alt": "جدول تعیین علامت",
+          "filename": "page_0025.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 250,
+      "solution_page": "page_0025.jpg",
+      "solution_text": "با توجه به مجموعه جواب نامعادله، مشخص می‌شود $x=a$ ریشهٔ سادهٔ عبارت درجه سه $x^3-ax^2-bx$ و $x=2$ ریشهٔ مضاعف آن است. بنابراین این عبارت به ازای $x=2$ برابر صفر است:\n$2^3 - 16 - b = 0 \\Rightarrow b = -12$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 251,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "مجموعه جواب نامعادله به صورت $(\\alpha, \\beta)$ است. نتیجه می‌گیریم $\\alpha$ و $\\beta$ ریشه‌های عبارت درجه دو بوده و ضریب $x^2$ منفی است، زیرا بین دو ریشهٔ عبارت، مثبت شده است:\n$n - ۲ < \\circ \\Rightarrow n < ۲ \\xrightarrow{n \\in \\mathbb{N}} n = ۱$\n$\\Rightarrow -x^2 + x + ۶ > \\circ \\Rightarrow x^2 - x - ۶ < \\circ \\Rightarrow (x + ۲)(x - ۳) < \\circ$\n$\\Rightarrow -۲ < x < ۳ \\Rightarrow x \\in (-۲, ۳) \\Rightarrow \\begin{cases} \\alpha = -۲ \\\\ \\beta = ۳ \\end{cases} \\Rightarrow \\beta - \\alpha = ۵$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 252,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "رابطهٔ $-۱ < \\alpha < \\beta < ۲$ بین ریشه‌ها برقرار است. نتیجه می‌گیریم که عدد ۲ بین دو ریشه و عدد $-۱$ خارج دو ریشه است و چون ضریب $x^2$ مثبت است، $f(۲)$ منفی و $f(-۱)$ مثبت خواهد بود.\n$\\begin{cases} f(۲) < \\circ \\Rightarrow 4 + 2m + 2m + ۱۲ < \\circ \\Rightarrow m < -4 \\\\ f(-۱) > \\circ \\Rightarrow ۱ - m + 2m + ۱۲ > \\circ \\Rightarrow m > -۱۳ \\end{cases}$\n$\\Rightarrow -۱۳ < m < -4$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 253,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "روش اول: ابتدا نامعادلهٔ $2x^2 - 3x - ۲ < \\circ$ را حل می‌کنیم:\n$2x^2 - 3x - ۲ = \\circ \\Rightarrow x = \\frac{3 \\pm \\sqrt{25}}{4} \\Rightarrow \\begin{cases} x = ۲ \\\\ x = -\\frac{1}{2} \\end{cases}$\n$2x^2 - 3x + ۲ < \\circ \\Rightarrow -\\frac{1}{2} < x < ۲ \\quad (۱)$\nحال، نامعادلهٔ قدرمطلقی را حل می‌کنیم:\n$|x - \\alpha| < \\beta \\Rightarrow -\\beta < x - \\alpha < \\beta$\n$\\Rightarrow \\alpha - \\beta < x < \\alpha + \\beta \\quad (۲)$\nاز مقایسهٔ (۱) و (۲) نتیجه می‌گیریم:\n$\\begin{cases} \\alpha - \\beta = -\\frac{1}{2} \\\\ \\alpha + \\beta = ۲ \\end{cases} \\Rightarrow 2\\alpha = \\frac{3}{2} \\Rightarrow \\alpha = \\frac{3}{4} , \\, \\beta = \\frac{5}{4}$\n$\\Rightarrow \\alpha - \\beta = -\\frac{1}{2}$\nروش دوم:\n$2x^2 - 3x - ۲ < \\circ \\Rightarrow -\\frac{1}{2} < x < ۲$\nاز سه طرف نامساوی، میانگین $-\\frac{1}{2}$ و $۲$، یعنی $\\frac{3}{4}$ را کم می‌کنیم:\n$-\\frac{1}{2} - \\frac{3}{4} < x - \\frac{3}{4} < ۲ - \\frac{3}{4} \\Rightarrow -\\frac{5}{4} < x - \\frac{3}{4} < \\frac{5}{4}$\n$\\Rightarrow |x - \\frac{3}{4}| < \\frac{5}{4} \\Rightarrow \\begin{cases} \\alpha = \\frac{3}{4} \\\\ \\beta = \\frac{5}{4} \\end{cases} \\Rightarrow \\alpha - \\beta = -\\frac{1}{2}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 254,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "اگر $\\alpha$ و $\\beta$ $(\\alpha < \\beta)$ ریشه‌های $2x^2 + ax + b = \\circ$ باشند، مجموعه جواب نامعادلهٔ $2x^2 + ax + b > \\circ$ به صورت $x < \\alpha$ یا $x > \\beta$ می‌باشد:\n$|4 - x| > ۱ \\Rightarrow |x - 4| > ۱ \\Rightarrow \\begin{cases} x - 4 > ۱ \\\\ x - 4 < -۱ \\end{cases} \\Rightarrow \\begin{cases} x > ۵ \\\\ x < ۳ \\end{cases}$\n$\\Rightarrow \\alpha = ۳ , \\, \\beta = ۵$\nاز طرفی: $S = \\alpha + \\beta = -\\frac{a}{2} = 8 \\Rightarrow a = -16$\n$P = \\alpha\\beta = \\frac{b}{2} = 15 \\Rightarrow b = 30$\n$\\Rightarrow a - b = -46$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 255,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "اگر $|x| < a$ $(a > \\circ)$ آن‌گاه $-a < x < a$ می‌باشد، بنابراین:\n$||2x - ۱| + ۳| < ۵ \\Rightarrow -۵ < |2x - ۱| + ۳ < ۵$\n$\\Rightarrow -8 < |2x - ۱| < ۲$\nنامعادلهٔ $|2x - ۱| > -8$ همواره برقرار است. در نتیجه:\n$|2x - ۱| < ۲ \\Rightarrow -۲ < 2x - ۱ < ۲ \\Rightarrow -۱ < 2x < ۳$\n$\\Rightarrow -\\frac{1}{2} < x < \\frac{3}{2} \\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{\\circ, ۱\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 256,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "اگر $|x| \\le a$ $(a > \\circ)$ باشد، آن‌گاه $-a \\le x \\le a$ است.\n$|2x - ۱| \\le x + ۱ \\Rightarrow -x - ۱ \\le 2x - ۱ \\le x + ۱$\n$\\Rightarrow -x \\le 2x \\le x + ۲ \\Rightarrow \\circ \\le x \\le ۲$\n$\\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{\\circ, ۱, ۲\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 257,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "می‌دانیم اگر $|x| < a$ $(a > \\circ)$ باشد، آن‌گاه $-a < x < a$ است.\n$|x^2 - 3x| < 2x \\Rightarrow -2x < x^2 - 3x < 2x$\n$\\Rightarrow \\begin{cases} -2x < x^2 - 3x \\Rightarrow x^2 - x > \\circ \\Rightarrow \\begin{cases} x < \\circ \\\\ x > ۱ \\end{cases} & (۱) \\\\ x^2 - 3x < 2x \\Rightarrow x^2 - 5x < \\circ \\Rightarrow \\circ < x < ۵ & (۲) \\end{cases}$\n$(۱) \\cap (۲) \\Rightarrow ۱ < x < ۵$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 258,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "روش اول: اگر $|x| > a$ $(a > \\circ)$ باشد، آن‌گاه $x > a$ یا $x < -a$ است.\n$|\\frac{3x+1}{4x-2}| > 1 \\Rightarrow \\begin{cases} \\frac{3x+1}{4x-2} > 1 \\Rightarrow \\frac{3x+1}{4x-2} - 1 > \\circ \\\\ \\frac{3x+1}{4x-2} < -1 \\Rightarrow \\frac{3x+1}{4x-2} + 1 < \\circ \\end{cases}$\n$\\Rightarrow \\begin{cases} \\frac{-x+3}{4x-2} > \\circ \\Rightarrow \\frac{1}{2} < x < ۳ \\\\ \\frac{7x-1}{4x-2} < \\circ \\Rightarrow \\frac{1}{7} < x < \\frac{1}{2} \\end{cases} \\xrightarrow{\\cup} (\\frac{1}{7}, ۳) - \\{\\frac{1}{2}\\}$\nروش دوم: با فرض $x \\neq \\frac{1}{2}$ دو طرف معادله را در $|4x-2|$ ضرب می‌کنیم، سپس به توان ۲ می‌رسانیم:\n$|\\frac{3x+1}{4x-2}| > 1 \\Rightarrow |3x+1| > |4x-2| \\Rightarrow (3x+1)^2 > (4x-2)^2$\n$\\Rightarrow 7x^2 - 22x + ۳ < \\circ \\Rightarrow \\frac{1}{7} < x < ۳$\nبا در نظر گرفتن فرض اولیهٔ $x \\neq \\frac{1}{2}$، مجموعه جواب به صورت $(\\frac{1}{7}, ۳) - \\{\\frac{1}{2}\\}$ می‌باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 259,
+      "solution_page": "page_0026.jpg",
+      "solution_text": "دو طرف نامعادله را در $|ax+6|$ ضرب کرده، سپس به توان ۲ می‌رسانیم:\n$|\\frac{x+4}{ax+6}| < 1 \\Rightarrow |x+4| < |ax+6|$\n$\\Rightarrow (x+4)^2 < (ax+6)^2 \\Rightarrow (a^2-1)x^2 + (12a-8)x + 20 > \\circ$\nمجموعه جواب نامعادله درجه‌دوم هیچ‌گاه به صورت $(b, +\\infty)$ نمی‌باشد.\nبنابراین این نامعادله باید درجه‌یک بوده و ضریب $x^2$ صفر باشد.\n$a^2 - 1 = \\circ \\Rightarrow a^2 = 1$\n$\\Rightarrow \\begin{cases} a = 1 \\Rightarrow 4x + 20 > \\circ \\Rightarrow x > -5 \\Rightarrow x \\in (-5, +\\infty) \\quad \\checkmark \\\\ a = -1 \\Rightarrow -20x + 20 > \\circ \\Rightarrow x < 1 \\Rightarrow x \\in (-\\infty, 1) \\quad \\text{غ ق ق} \\end{cases}$\n$\\Rightarrow a = 1 \\, , \\, b = -5 \\Rightarrow ab = -5$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 260,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "اگر $x + 1 < \\circ$ باشد، نامعادله همواره درست است. بنابراین $(-\\infty, -1)$ قسمتی از مجموعه جواب است. حال، با فرض $x + 1 \\ge \\circ$\nیعنی $x \\ge -1$، خواهیم داشت:\n$||x|-3| > x+1 \\Rightarrow \\begin{cases} |x|-3 > x+1 \\\\ |x|-3 < -x-1 \\end{cases}$\n$\\Rightarrow \\begin{cases} |x| > x+4 \\Rightarrow \\begin{cases} x > x+4 \\Rightarrow \\circ > 4 \\quad \\text{غ ق ق} \\\\ x < -x-4 \\Rightarrow x < -2 \\quad \\text{غ ق ق} \\end{cases} \\\\ |x| < -x+2 \\end{cases}$\nبرای حل نامعادلهٔ $|x| < -x+2$ با فرض $x \\ge -1$ یعنی $x < 2$،\nخواهیم داشت:\n$x - 2 < x < -x + 2 \\Rightarrow x < 1$\nاز اشتراک $x \\ge -1$ و $x < 1$ مجموعه جواب $[-1, 1)$ حاصل می‌شود.\nمجموعه جواب کلی: $(-\\infty, -1) \\cup [-1, 1) = (-\\infty, 1)$ است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 261,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "اگر $|x| < a$ ($a > \\circ$) باشد، آن‌گاه $-a < x < a$ است.\n$|x+1| < x^2 + 3x - 2 \\Rightarrow -x^2 - 3x + 2 < x+1 < x^2 + 3x - 2$\n$\\Rightarrow \\begin{cases} -x^2 - 3x + 2 < x+1 \\Rightarrow x^2 + 4x - 1 > \\circ \\Rightarrow \\begin{cases} x < -2 - \\sqrt{5} \\\\ x > -2 + \\sqrt{5} \\end{cases} \\quad (1) \\\\ x+1 < x^2 + 3x - 2 \\Rightarrow x^2 + 2x - 3 > \\circ \\Rightarrow \\begin{cases} x < -3 \\\\ x > 1 \\end{cases} \\quad (2) \\end{cases}$\n$(1) \\cap (2) \\Rightarrow \\begin{cases} x < -2 - \\sqrt{5} \\\\ x > 1 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 262,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "عبارت داده‌شده را ساده می‌کنیم:\n$(2x-1)^2 - 3(x+2)^2 = (4x^2 - 4x + 1) - 3(x^2 + 4x + 4)$\n$= x^2 - 16x - 11$\nاگر $k$ پاسخ مسئله باشد، خواهیم داشت:\n$x^2 - 16x - 11 + k = (x-a)^2 = x^2 - 16x + 64$\n$\\Rightarrow k - 11 = 64 \\Rightarrow k = 75$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 263,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "دو طرف معادلهٔ $x^2 + \\frac{4}{x^2} = 6$ را به توان ۲ می‌رسانیم:\n$(x^2 + \\frac{4}{x^2})^2 = 36 \\Rightarrow x^4 + \\frac{16}{x^4} + 8 = 36 \\Rightarrow x^4 + \\frac{16}{x^4} = 28$\n$\\Rightarrow \\frac{x^4}{4} + \\frac{4}{x^4} = 7$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 264,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "دو طرف معادلهٔ $x^2 - 9x + 3 = \\circ$ را بر $x$ تقسیم می‌کنیم:\n$x - 9 + \\frac{3}{x} = \\circ \\Rightarrow x + \\frac{3}{x} = 9 \\Rightarrow (x + \\frac{3}{x})^2 = 81$\n$\\Rightarrow x^2 + \\frac{9}{x^2} + 6 = 81 \\Rightarrow x^2 + \\frac{9}{x^2} = 75$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 265,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "در معادلهٔ $a+b = 2$ دو طرف تساوی را به توان ۲ می‌رسانیم:\n$(a+b)^2 = 4 \\Rightarrow \\begin{cases} a^2 + b^2 + 2ab = 4 \\\\ \\text{از طرفی}: a^2 + b^2 = 5 \\end{cases} \\Rightarrow 2ab = -1$\n$\\Rightarrow ab = -\\frac{1}{2}$\nاکنون مقدار $\\frac{1}{a^4} + \\frac{1}{b^4}$ را محاسبه می‌کنیم.\n$\\frac{1}{a^4} + \\frac{1}{b^4} = \\frac{a^4 + b^4}{a^4b^4} = \\frac{(a^2 + b^2)^2 - 2a^2b^2}{a^4b^4}$\n$= \\frac{5^2 - 2(-\\frac{1}{2})^2}{(-\\frac{1}{2})^4} = \\frac{25 - \\frac{1}{2}}{\\frac{1}{16}} = 16 \\times \\frac{49}{2} = 392$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 266,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "عبارت $\\frac{3a - 2b}{3a + 2b}$ را $k$ می‌نامیم:\n$k^2 = \\frac{9a^2 + 4b^2 - 12ab}{9a^2 + 4b^2 + 12ab} = \\frac{15ab - 12ab}{15ab + 12ab} = \\frac{3ab}{27ab} = \\frac{1}{9} \\Rightarrow k = \\frac{1}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 267,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "اتحاد زیر برقرار است:\n$(a+b-c)^2 = a^2+b^2+c^2 + 2(ab-ac-bc)$\n$\\Rightarrow (a+b-c)^2 = 17 + 2 \\times 16 = 49 \\Rightarrow a+b-c = \\pm 7$\n$\\xrightarrow{a+b>c} a+b-c = 7 \\Rightarrow a+b = c+7 \\Rightarrow \\frac{c+7}{a+b} = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 268,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "عبارت داده‌شده را $A$ می‌نامیم:\n$A = (x^2-1)(x^2+x+1)(x^2-x+1)+1$\n$= (x-1)(x+1)(x^2+x+1)(x^2-x+1)+1$\n$= \\underbrace{(x-1)(x^2+x+1)}_{x^3-1}\\underbrace{(x+1)(x^2-x+1)}_{x^3+1}+1 = (x^3-1)(x^3+1)+1$\n$= (x^6-1)+1 = x^6 \\xrightarrow{x=\\sqrt[3]{2}} A = (\\sqrt[3]{2})^6 = 4$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 269,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "در معادلهٔ $x - \\frac{2}{x} = 6$ دو طرف تساوی را به توان ۳ می‌رسانیم:\n$(x - \\frac{2}{x})^3 = 6^3 \\Rightarrow x^3 - 6x + \\frac{12}{x} - \\frac{8}{x^3} = 216$\n$\\Rightarrow x^3 - \\frac{8}{x^3} - 6(x - \\frac{2}{x}) = 216 \\Rightarrow x^3 - \\frac{8}{x^3} - 36 = 216$\n$\\Rightarrow x^3 - \\frac{8}{x^3} = 252$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 270,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "می‌دانیم اتحاد زیر برقرار است:\n$(a+b)^3 = a^3+b^3 + 3ab(a+b)$\n$\\Rightarrow 3^3 = 18 + 3ab(3) \\Rightarrow 9ab = 9 \\Rightarrow ab = 1$\nاکنون $a^2+b^2$ را محاسبه می‌کنیم:\n$a^2+b^2 = (a+b)^2 - 2ab = 3^2 - 2 = 7$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 271,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "دو تساوی داده‌شده را در یک بار با هم جمع و یک بار از هم تفریق می‌کنیم:\n$\\begin{cases} x^3+3xy^2=76 \\\\ y^3+3x^2y=49 \\end{cases} \\xrightarrow{\\text{جمع}} x^3+3x^2y+3xy^2+y^3 = 125$\n$\\xrightarrow{\\text{تفریق}} x^3-3x^2y+3xy^2-y^3 = 27$\n$\\Rightarrow (x+y)^3 = 125 \\Rightarrow x+y = 5 \\}$\n$\\Rightarrow (x-y)^3 = 27 \\Rightarrow x-y = 3 \\} \\Rightarrow \\frac{x+y}{x-y} = \\frac{5}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 272,
+      "solution_page": "page_0027.jpg",
+      "solution_text": "دو طرف تساوی‌های داده‌شده را به توان ۳ رسانده، سپس با هم جمع می‌کنیم:\n$a = \\sqrt[3]{13-3a^2b} \\Rightarrow a^3 = 13-3a^2b \\Rightarrow a^3+3a^2b = 13$\n$b = \\sqrt[3]{14-3ab^2} \\Rightarrow b^3 = 14-3ab^2 \\Rightarrow b^3+3ab^2 = 14$\n$\\xrightarrow{\\text{جمع}} (a+b)^3 = 27 \\Rightarrow a+b = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 273,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "از تساوی $۲x^۲ + ۱۰x - ۳ = ۰$ نتیجه می‌شود $x^۲ + ۵x = \\frac{۳}{۲}$\n$P = (x + ۱)(x + ۴)(x - ۱)(x + ۶) = (x^۲ + ۵x + ۴)(x^۲ + ۵x - ۶)$\n$= (\\frac{۳}{۲} + ۴)(\\frac{۳}{۲} - ۶) = \\frac{۱۱}{۲} \\times \\frac{-۹}{۲} = \\frac{-۹۹}{۴} = -۲۴/۷۵$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            820,
+            70,
+            1550,
+            160
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۷۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 274,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "با فرض $x^۲ + ۳x - ۵ = ۰$ نتیجه می‌شود $x^۲ + ۳x = ۵$\n$P = (x - ۵)(x + ۱)(x + ۳) = (x - ۵)(x^۲ + ۴x + ۳)$\n$= (x - ۵)(-۳x + ۵ + ۴x + ۳)$\n$= (x - ۵)(x + ۸) = x^۲ + ۳x - ۴۰$\n$= -۳x + ۵ + ۳x - ۴۰ = -۳۵$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            820,
+            160,
+            1550,
+            250
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۷۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 275,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "عبارت $k = \\sqrt{x + ۶} - \\sqrt{x - ۴}$ را $k$ می‌نامیم:\n$\\begin{cases} \\sqrt{x + ۶} - \\sqrt{x - ۴} = k \\\\ \\text{از طرفی : } \\sqrt{x + ۶} + \\sqrt{x - ۴} = ۵ \\end{cases}$\n$\\xrightarrow{\\text{ضرب}} ۵k = (x + ۶) - (x - ۴) = ۱۰ \\Rightarrow k = ۲$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            820,
+            250,
+            1550,
+            350
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۷۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 276,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "دو طرف معادله را به توان ۲ می‌رسانیم:\n$\\sqrt{x - ۳ + \\sqrt{۵ - x}} = ۲ \\Rightarrow (\\sqrt{x - ۳ + \\sqrt{۵ - x}})^۲ = ۴$\n$\\Rightarrow x - ۳ + ۵ - x + ۲\\sqrt{-x^۲ + ۸x - ۱۵} = ۴$\n$\\Rightarrow \\sqrt{-x^۲ + ۸x - ۱۵} = ۱ \\Rightarrow -x^۲ + ۸x - ۱۵ = ۱$\n$\\Rightarrow x^۲ - ۸x = -۱۶ \\Rightarrow x^۲ - ۸x + ۱۰ = -۶$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            820,
+            350,
+            1550,
+            460
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۷۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 277,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "دو طرف معادلهٔ $a - \\frac{۱}{a} = ۱$ را در $a$ ضرب می‌کنیم:\n$a^۲ - ۱ = a \\Rightarrow a^۲ = a + ۱$\nدوباره دو طرف معادله را در $a$ ضرب می‌کنیم:\n$a^۳ = a^۲ + a = (a + ۱) + a = ۲a + ۱$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            820,
+            460,
+            1550,
+            530
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۷۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 278,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "دو طرف معادله را در $x$ ضرب می‌کنیم:\n$\\frac{۱}{x} = ۱ + x \\Rightarrow ۱ = x + x^۲ \\Rightarrow x^۲ = ۱ - x \\quad (۱)$\nدو طرف معادلهٔ (۱) را در $x$ ضرب می‌کنیم:\n$x^۳ = x - x^۲ \\quad (۲)$\nدو طرف معادلات (۱) و (۲) را در هم ضرب می‌کنیم:\n$x^۵ = (x - x^۲)(۱ - x) = x - x^۲ - x^۲ + x^۳ = x - ۲x^۲ + x^۳$\n$= x - ۲x^۲ + (x - x^۲)$\n$= ۲x - ۳x^۲ = ۲x - ۳(۱ - x) = ۵x - ۳$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            820,
+            530,
+            1550,
+            710
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۷۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 279,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "اگر یک تساوی به ازای هر عدد حقیقی $x$ برقرار باشد، یعنی یک اتحاد است. در اتحادها ضرایب جملات مشابه با هم برابرند. سمت چپ تساوی را ساده می‌کنیم:\n$a(x + ۲)^۲ - ۴(۲x + ۱) = ax^۲ + ۴ax + ۴a - ۸x - ۴$\n$= ax^۲ + (۴a - ۸)x + ۴a - ۴$\n$\\Rightarrow ax^۲ + (۴a - ۸)x + ۴a - ۴ = ۲x^۲ + bx + c$\n$\\Rightarrow \\begin{cases} a = ۲ \\\\ ۴a - ۸ = b \\Rightarrow b = ۰ \\\\ ۴a - ۴ = c \\Rightarrow c = ۴ \\end{cases} \\Rightarrow a + b + c = ۲ + ۰ + ۴ = ۶$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            820,
+            710,
+            1550,
+            890
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۷۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 280,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "سمت چپ تساوی را ساده کرده، برابر با سمت راست تساوی قرار می‌دهیم:\n$a(۲x + ۳)^۳ + b(۲x + ۱)^۲ + c(x + ۲)$\n$= a(۸x^۳ + ۳۶x^۲ + ۵۴x + ۲۷) + b(۴x^۲ + ۴x + ۱) + cx + ۲c$\n$= ۸ax^۳ + (۳۶a + ۴b)x^۲ + (۵۴a + ۴b + c)x + ۲۷a + b + ۲c$\n$= ۸x^۳ + ۲۸x^۲ + ۴۹x + ۳۱$\n$\\Rightarrow \\begin{cases} ۸a = ۸ \\Rightarrow a = ۱ \\\\ ۳۶a + ۴b = ۲۸ \\Rightarrow ۴b = -۸ \\Rightarrow b = -۲ \\\\ ۵۴a + ۴b + c = ۴۹ \\Rightarrow ۵۴ - ۸ + c = ۴۹ \\Rightarrow c = ۳ \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            70,
+            780,
+            220
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۸۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 281,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "تساوی داده‌شده را مرتب می‌کنیم:\n$a^۲ + b^۲ + ۴c^۲ + ۴a - ۲b + ۴c = -۶$\n$\\Rightarrow a^۲ + ۴a + b^۲ - ۲b + ۴c^۲ + ۴c + ۶ = ۰$\n$\\Rightarrow (a^۲ + ۴a + ۴ - ۴) + (b^۲ - ۲b + ۱ - ۱) + (۴c^۲ + ۴c + ۱ - ۱) + ۶ = ۰$\n$\\Rightarrow (a + ۲)^۲ - ۴ + (b - ۱)^۲ - ۱ + (۲c + ۱)^۲ - ۱ + ۶ = ۰$\n$\\Rightarrow (a + ۲)^۲ + (b - ۱)^۲ + (۲c + ۱)^۲ = ۰$\nجمع سه عبارت نامنفی برابر صفر شده است در نتیجه هر سه عبارت برابر صفر است.\n$\\Rightarrow a = -۲, b = ۱, c = -\\frac{۱}{۲} \\Rightarrow \\frac{ab}{c} = ۴$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            220,
+            780,
+            390
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۸۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 282,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "دو طرف معادلهٔ $x - \\frac{۳}{x} = ۳$ را به توان ۲ می‌رسانیم:\n$(x - \\frac{۳}{x})^۲ = ۹ \\Rightarrow x^۲ + \\frac{۹}{x^۲} - ۶ = ۹ \\Rightarrow x^۲ + \\frac{۹}{x^۲} = ۱۵$\nعبارت $x + \\frac{۳}{x}$ را $A$ می‌نامیم، چون $x > ۰$ است، بنابراین $A > ۰$ می‌باشد:\n$A = x + \\frac{۳}{x} \\Rightarrow A^۲ = x^۲ + \\frac{۹}{x^۲} + ۶ = ۱۵ + ۶ = ۲۱$\n$\\Rightarrow A = \\pm\\sqrt{۲۱} \\xrightarrow{A > ۰} A = \\sqrt{۲۱}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            390,
+            780,
+            520
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۸۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 283,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "روش اول: عبارت $x(x + ۱)(x + ۴) - ۱۲x - ۱۲$ را به صورت $x(x + ۱)(x + ۴) - ۱۲(x + ۱)$ نوشته و از عامل $x + ۱$ در دو جملهٔ موجود فاکتور می‌گیریم:\n$x(x + ۱)(x + ۴) - ۱۲(x + ۱) = (x + ۱)(x(x + ۴) - ۱۲)$\n$= (x + ۱)(x^۲ + ۴x - ۱۲) = (x + ۱)(x + ۶)(x - ۲)$\nروش دوم: اگر عبارت $A$ شامل عامل $x - a$ باشد، به ازای $x = a$ برابر صفر می‌شود. عبارت داده‌شده به ازای $x = -۱$، $x = -۶$ و $x = ۲$ برابر صفر می‌شود، اما به ازای $x = -۲$ صفر نمی‌شود. بنابراین عامل $x + ۲$ را ندارد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            520,
+            780,
+            660
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۸۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 284,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "ابتدا از اتحاد مزدوج استفاده می‌کنیم:\n$(x^۲ + x - ۴)^۲ - ۲^۲ = (x^۲ + x - ۴ - ۲)(x^۲ + x - ۴ + ۲)$\n$= (x^۲ + x - ۶)(x^۲ + x - ۲) = (x + ۳)(x - ۲)(x - ۱)(x + ۲)$\nواضح است که عامل $x + ۱$ در تجزیهٔ عبارت وجود ندارد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            660,
+            780,
+            740
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۸۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 285,
+      "solution_page": "page_0028.jpg",
+      "solution_text": "دو جملهٔ $(x + ۱)$ و $(x + ۷)$ با هم و دو جملهٔ $(x + ۳)$ و $(x + ۵)$ را نیز با هم در نظر گرفته و ضرب می‌کنیم:\n$(x + ۱)(x + ۷)(x + ۳)(x + ۵) + k$\n$= (x^۲ + ۸x + ۷)(x^۲ + ۸x + ۱۵) + k$\n$\\xrightarrow{x^۲ + ۸x = a} (a + ۷)(a + ۱۵) + k = a^۲ + ۲۲a + ۱۰۵ + k$\nبا توجه به جملهٔ اول عبارت به دست آمده مربع کامل آن به صورت $(a + ۱۱)^۲$ می‌باشد که برابر با $a^۲ + ۲۲a + ۱۲۱$ است. بنابراین:\n$k = ۱۲۱ - ۱۰۵ = ۱۶$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            740,
+            780,
+            890
+          ],
+          "placement": "solution",
+          "filename": "page_0028.jpg",
+          "alt": "حل سوال ۲۸۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 286,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "چون در عبارت $P = 4x^3 + 3ax^2 - x - 2a$ عامل $x+2$ وجود دارد، به ازای $x=-2$ برابر صفر می‌شود:\n\n$x = -2 \\Rightarrow P = 0 \\Rightarrow -32 + 12a + 2 - 2a = 0$\n\n$\\Rightarrow 10a = 30 \\Rightarrow a = 3$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            75,
+            466,
+            142,
+            835
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۸۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 287,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "$x-1$ یکی از عوامل $P = x^3 + ax^2 - x - 3$ است. بنابراین عبارت $P$ به ازای $x=1$ برابر صفر است.\n\n$x=1 \\Rightarrow P=0 \\Rightarrow 1+a-1-3=0 \\Rightarrow a=3$\n\nاکنون عبارت $P$ را بر $x-1$ تقسیم می‌کنیم:\n\n$P = x^3 + 3x^2 - x - 3 = (x-1)(x^2 + 4x + 3)$\n\n$= (x-1)(x+1)(x+3)$\n\nدو عامل دیگر $x+1$ و $x+3$ هستند که مجموع آن‌ها $2x+4$ می‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            146,
+            461,
+            280,
+            835
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۸۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 288,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "$x^2-1$ یکی از عوامل عبارت داده‌شده می‌باشد. در واقع عبارت دارای دو عامل $(x-1)$ و $(x+1)$ است و بنابراین به ازای $x=1$ و $x=-1$ برابر صفر است.\n\n$x=1 \\Rightarrow 1+a+1-1+2b \\Rightarrow a+2b = -1$\n\n$x=-1 \\Rightarrow 1-a+1+1+2b=0 \\Rightarrow -a+2b = -3$\n\n$\\Rightarrow 4b = -4 \\Rightarrow b=-1 \\Rightarrow a=1 \\Rightarrow a-b = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            280,
+            464,
+            386,
+            835
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۸۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 289,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "برای تجزیهٔ عبارت $64x^4 + 1$ عبارت $16x^2$ را اضافه و کم می‌کنیم:\n\n$64x^4 + 16x^2 + 1 - 16x^2 = (8x^2 + 1)^2 - 16x^2$\n\n$= (8x^2 + 1 - 4x)(8x^2 + 1 + 4x)$\n\nدو حالت وجود دارد:\n\n$ax^2 + bx + 1 = 8x^2 - 4x + 1 \\Rightarrow a=8 , b=-4$\n\n$ax^2 + bx + 1 = 8x^2 + 4x + 1 \\Rightarrow a=8 , b=4$\n\n$\\Rightarrow a-b = 12$\n\n$\\Rightarrow a-b = 4$\n\nمقدار ۱۲ در گزینه‌ها وجود دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            390,
+            459,
+            584,
+            835
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۸۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 290,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "ابتدا عبارت $A$ را محاسبه و ساده می‌کنیم.\n\n$a^3 = 27b^3 + (a - 3b)A \\Rightarrow A = \\frac{a^3 - 27b^3}{a - 3b}$\n\n$= \\frac{(a - 3b)(a^2 + 3ab + 9b^2)}{a - 3b} \\Rightarrow A = a^2 + 3ab + 9b^2$\n\n$\\Rightarrow A + 7ab = a^2 + 10ab + 9b^2 = (a+b)(a+9b)$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            576,
+            461,
+            689,
+            832
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۹۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 291,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "ابتدا عبارت $P$ را ساده می‌کنیم:\n\n$P = \\frac{x-2}{x^2} \\times \\frac{x^6 - 1}{x^3 - 2x^2 - x + 2} - \\frac{x-2}{x^2} \\times \\frac{(x^3 - 1)(x^3 + 1)}{(x-1)(x^2 - x - 2)}$\n\n$= \\frac{(x-2)}{x^2} \\times \\frac{(x-1)(x^2+x+1)(x+1)(x^2-x+1)}{(x-1)(x+1)(x-2)}$\n\n$= \\frac{(x^2+1)^2 - x^2}{x^2} = \\frac{x^4+x^2+1}{x^2}$\n\n$\\xrightarrow{x = \\frac{\\sqrt{3}}{3}} P = \\frac{(\\frac{\\sqrt{3}}{3})^4 + (\\frac{\\sqrt{3}}{3})^2 + 1}{(\\frac{\\sqrt{3}}{3})^2} = \\frac{\\frac{1}{9} + \\frac{1}{3} + 1}{\\frac{1}{3}} = \\frac{13}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            689,
+            457,
+            888,
+            830
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۹۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 292,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "دو طرف تساوی را در $(x-2)(x+1)$ ضرب می‌کنیم.\n\n$\\frac{A}{x+1} + \\frac{B}{x-2} = \\frac{1}{x^2-x-2} \\Rightarrow A(x-2) + B(x+1) = 1$\n\n$\\Rightarrow (A+B)x - 2A + B = 1$\n\nبا توجه به اتحاد بودن تساوی بالا خواهیم داشت:\n\n$\\begin{cases} A+B=0 \\\\ -2A+B=1 \\end{cases} \\Rightarrow 3A = -1 \\Rightarrow A = -\\frac{1}{3} \\Rightarrow B = \\frac{1}{3}$\n\n$\\Rightarrow A-B = -\\frac{1}{3} - \\frac{1}{3} = -\\frac{2}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            75,
+            48,
+            222,
+            421
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۹۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 293,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "صورت و مخرج کسر را مربع کامل می‌کنیم:\n\n$P = \\frac{x^2+6x+k}{x^2+6x+2} = \\frac{(x+3)^2-9+k}{(x+3)^2-9+2}$\n\n$\\xrightarrow{x = \\sqrt{2}-3} P = \\frac{(\\sqrt{2})^2-9+k}{(\\sqrt{2})^2-7} = 2 \\Rightarrow \\frac{k-7}{-5} = 2$\n\n$\\Rightarrow k = -3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            223,
+            44,
+            323,
+            421
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۹۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 294,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "روش اول: عبارت $x-4$ برابر با $(\\sqrt{x}-2)(\\sqrt{x}+2)$ است، بنابراین مخرج‌مشترک کسرها $x-4$ می‌باشد:\n\n$\\frac{\\sqrt{x}}{\\sqrt{x}-2} + \\frac{1-\\sqrt{x}}{\\sqrt{x}+2} - \\frac{2\\sqrt{x}}{x-4}$\n\n$= \\frac{\\sqrt{x}(\\sqrt{x}+2) + (1-\\sqrt{x})(\\sqrt{x}-2) - 2\\sqrt{x}}{x-4}$\n\n$= \\frac{x + 2\\sqrt{x} + 3\\sqrt{x} - x - 2 - 2\\sqrt{x}}{x-4} = \\frac{3\\sqrt{x}-2}{x-4}$\n\nروش دوم: عبارت داده‌شده به ازای $x=1$ برابر $-\\frac{1}{3}$ می‌شود. در بین گزینه‌های وجود تنها ۱ به ازای $x=1$ برابر $-\\frac{1}{3}$ می‌باشد.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            326,
+            42,
+            528,
+            421
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۹۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 295,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "ابتدا هر یک از کسرها را تفکیک می‌کنیم:\n\n$\\frac{1}{2 \\times 7} = \\frac{1}{5}(\\frac{1}{2} - \\frac{1}{7})$\n\n$\\frac{1}{7 \\times 12} = \\frac{1}{5}(\\frac{1}{7} - \\frac{1}{12})$\n\n$\\frac{1}{12 \\times 17} = \\frac{1}{5}(\\frac{1}{12} - \\frac{1}{17})$\n\n$\\vdots$\n\n$\\frac{1}{n(n+5)} = \\frac{1}{5}(\\frac{1}{n} - \\frac{1}{n+5})$\n\n$\\xrightarrow{+} \\frac{1}{5}(\\frac{1}{2} - \\frac{1}{7} + \\frac{1}{7} - \\frac{1}{12} + \\frac{1}{12} - \\frac{1}{17} + \\dots + \\frac{1}{n} - \\frac{1}{n+5})$\n\n$= \\frac{1}{5}(\\frac{1}{2} - \\frac{1}{n+5}) = \\frac{3}{32} \\Rightarrow \\frac{1}{2} - \\frac{1}{n+5} = \\frac{15}{32} \\Rightarrow \\frac{1}{n+5} = \\frac{1}{32}$\n\n$\\Rightarrow n = 27$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            530,
+            42,
+            762,
+            421
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۹۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 296,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "اعداد مثبت دارای دو ریشهٔ مرتبهٔ زوج هستند که قرینهٔ یکدیگرند.\n\nریشه‌های ششم ۶۴ برابر با $\\pm 2$ می‌باشند.\n\n$2 - (-2) = 4$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            763,
+            40,
+            818,
+            417
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۹۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 297,
+      "solution_page": "page_0029.jpg",
+      "solution_text": "ریشهٔ پنجم $2\\sqrt{4}$ را با $\\sqrt[5]{a}$ برابر قرار می‌دهیم.\n\n$\\sqrt[5]{2\\sqrt[3]{4}} = \\sqrt[5]{a} \\Rightarrow \\sqrt[5]{a} = \\sqrt[5]{2 \\times 2^{\\frac{2}{3}}} = \\sqrt[5]{2^{\\frac{5}{3}}} = 2^{\\frac{1}{3}} = \\sqrt[3]{2}$\n\n$\\Rightarrow a=2$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            820,
+            39,
+            888,
+            417
+          ],
+          "placement": "solution",
+          "filename": "page_0029.jpg",
+          "alt": "حل سوال ۲۹۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 298,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "ریشه‌های چهارم $0/0256$ به صورت $\\pm\\sqrt[4]{0/0256}$ و ریشۀ سوم $a$ برابر $\\sqrt[3]{a}$ می‌باشد.\n$-\\sqrt[4]{0/0256} + \\sqrt[3]{a} = 0/1 \\Rightarrow -\\sqrt[4]{\\frac{256}{10^4}} + \\sqrt[3]{a} = 0/1$\n$\\Rightarrow -\\frac{4}{10} + \\sqrt[3]{a} = 0/1 \\Rightarrow \\sqrt[3]{a} = 0/5 \\Rightarrow a = 0/125$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            75,
+            521,
+            237,
+            897
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 298"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 299,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "ریشه‌های ششم $16$ برابر با $\\pm\\sqrt[6]{16}$ می‌باشند. اگر ریشۀ پنجم $x$ با ریشۀ ششم $16$ برابر باشد، خواهیم داشت:\n$\\sqrt[5]{x} = \\pm\\sqrt[6]{16} = \\pm\\sqrt[6]{2^4} = \\pm\\sqrt[3]{2^2}$\nدو طرف معادله را به توان $5$ می‌رسانیم:\n$x = \\pm\\sqrt[3]{2^{10}} = \\pm 2^3\\sqrt[3]{2} = \\pm 8\\sqrt[3]{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            239,
+            520,
+            362,
+            897
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 299"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 300,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "ریشۀ چهارم $729$ را $a$ و ریشۀ ششم $1296$ را $b$ می‌نامیم:\n$a = \\pm\\sqrt[4]{729} = \\pm\\sqrt[4]{3^6} = \\pm\\sqrt{3^3} \\Rightarrow a^2 = 3^3 = 27$\n$b = \\pm\\sqrt[6]{1296} = \\pm\\sqrt[6]{6^4} = \\pm\\sqrt[3]{6^2} \\Rightarrow b^3 = \\pm 6^2 = \\pm 36$\nمی‌بینیم که مکعب ریشۀ ششم $1296$ به دو صورت $\\pm 36$ است که با توجه به گزینه‌ها خواهیم داشت: $a^2 - b^3 = 27 - (-36) = 63$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            363,
+            519,
+            497,
+            897
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 300"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 301,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "ریشۀ هفتم $4\\sqrt[3]{2}$ می‌باشد یعنی:\n$a = \\sqrt[7]{4\\sqrt[3]{2}} = \\sqrt[7]{2^2 \\times 2^{\\frac{1}{3}}} = \\sqrt[7]{2^{\\frac{7}{3}}} = \\sqrt[3]{2} = \\sqrt[6]{4}$\n$ax = \\sqrt{2} \\Rightarrow \\sqrt[6]{4}x = \\sqrt{2} \\Rightarrow x = \\frac{\\sqrt{2}}{\\sqrt[6]{4}} = \\frac{2^{\\frac{1}{2}}}{2^{\\frac{1}{3}}}$\n$= 2^{\\frac{1}{2}-\\frac{1}{3}} = 2^{\\frac{1}{6}} = \\sqrt[6]{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            499,
+            520,
+            679,
+            897
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 301"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 302,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "ریشه‌های ششم عدد $16$ برابر با $\\pm\\sqrt[6]{16}$ می‌باشند که اختلاف آن‌ها $2\\sqrt[6]{16}$ است بنابراین $A = 2\\sqrt[6]{16}$.\n$2^x = \\sqrt[4]{A\\sqrt[4]{4}} = \\sqrt[4]{2\\sqrt[6]{16}\\sqrt[4]{4}} = \\sqrt[4]{\\sqrt[6]{2^{10}}\\sqrt[4]{4}} = \\sqrt[4]{\\sqrt[12]{2^{20}}\\sqrt[4]{4}}$\n$= \\sqrt[4]{2\\sqrt[3]{4}} = \\sqrt[4]{2\\sqrt[4]{4}} = \\sqrt[8]{8} = 2 \\Rightarrow x=1$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            681,
+            520,
+            843,
+            897
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 302"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 303,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "$a^2$ عددی مثبت و $a$ و $a^3$ اعدادی منفی می‌باشند. بنابراین گزینه‌های 3 و 4 نادرست هستند. می‌دانیم:\n$-1 < a < 0 \\Rightarrow \\dots < \\sqrt[5]{a} < \\sqrt[3]{a} < a < a^3 < a^5 < \\dots$\nبنابراین 1 درست است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            845,
+            521,
+            988,
+            897
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 303"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 304,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "می‌دانیم $A = \\sqrt[3]{4} = \\sqrt[6]{16}$ می‌باشد. ابتدا $A$ و $B$ را با یکدیگر مقایسه می‌کنیم. بدین منظور هر دو عدد را به توان $10$ می‌رسانیم:\n1) $\\begin{cases} A = \\sqrt{2} \\Rightarrow A^{10} = 2^5 = 32 \\\\ B = \\sqrt[5]{5} \\Rightarrow B^{10} = 5^2 = 25 \\end{cases} \\Rightarrow A^{10} > B^{10} \\Rightarrow A > B$\nاز طرفی $C = \\sqrt[6]{16} = \\sqrt[3]{4} = \\sqrt{2}$ :\nاکنون، $A$ و $C$ را مقایسه می‌کنیم.\n2) $\\begin{cases} A = \\sqrt{2} \\Rightarrow A^6 = 2^3 = 8 \\\\ C = \\sqrt[3]{4} \\Rightarrow C^6 = 4^2 = 16 \\end{cases} \\Rightarrow C^6 > A^6 \\Rightarrow C > A$\n$(1), (2) \\Rightarrow B < A < C$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            989,
+            522,
+            1318,
+            897
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 304"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 305,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "با توجه به شکل $a < 0$ و $a > -1$ می‌باشد، بنابراین $a$ دارای دو ریشۀ چهارم قرینه است.\nدر نتیجه: $0 < a^2 < \\sqrt[4]{a} < \\sqrt[3]{a} < 1$ و $-1 < -\\sqrt[4]{a} < 0$\n$a_1 = -\\sqrt[4]{a}, a_2 = a^2, a_3 = \\sqrt[3]{a}, a_4 = \\sqrt[4]{a}$\nواضح است که $a_1$ و $a_4$ قرینۀ یکدیگر بوده و $a_1 + a_4 = 0$ می‌باشد. نادرستی سه گزینۀ دیگر بدیهی است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            75,
+            102,
+            185,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 305"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 306,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "با توجه به شکل $a > 1$ می‌باشد. بنابراین $a^2$ و $a^3$ نیز بین صفر و یک می‌باشند و $\\frac{1}{a} > 1$ است. در نتیجه گزینه‌های 1 و 3 نادرست هستند.\nبرای اعداد بین صفر و یک $a > \\sqrt{a}$ و در نتیجه $-a < -\\sqrt{a}$ می‌باشد در حالی که $a^3 < a$ و $-a^3 > -a$ می‌باشد. بنابراین 2 نادرست و 4 صحیح است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            187,
+            102,
+            287,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 306"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 307,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "اگر $0 < a < 1$ باشد، خواهیم داشت:\n$\\dots < a^3 < a^2 < a < \\sqrt{a} < \\sqrt[3]{a} < \\dots$\nبنابراین:\n$|\\sqrt{a} - \\sqrt[3]{a}| + |a^2 - \\sqrt{a}| - |\\sqrt[3]{a} - a^2|$\n$= -\\sqrt{a} + \\sqrt[3]{a} - a^2 + \\sqrt{a} - \\sqrt[3]{a} + a^2 = 0$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            288,
+            103,
+            388,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 307"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 308,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "ابتدا دو طرف نامساوی را به توان $21$ می‌رسانیم:\n$a^{\\frac{3}{7}} < a^{\\frac{7}{3}} \\Rightarrow (a^{\\frac{3}{7}})^{21} < (a^{\\frac{7}{3}})^{21} \\Rightarrow a^9 < a^{49}$\nاگر $m$ و $n$ اعداد طبیعی و فرد بوده و $m < n$ باشد:\n$a^m < a^n \\Rightarrow \\begin{cases} a > 1 \\\\ -1 < a < 0 \\end{cases} \\qquad a^m > a^n \\Rightarrow \\begin{cases} 0 < a < 1 \\\\ a < -1 \\end{cases}$\nچون $a^9 < a^{49}$ می‌باشد، نتیجه می‌گیرییم: $a > 1$ یا $-1 < a < 0$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            389,
+            102,
+            513,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 308"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 309,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "اگر ضلع مکعب را $x$ بنامیم، حجم آن برابر $x^3$ می‌باشد:\n$50 < x^3 < 800 \\Rightarrow 64 \\le x^3 \\le 729 \\Rightarrow 4^3 \\le x^3 \\le 9^3 \\Rightarrow 4 \\le x \\le 9 \\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{4, 5, \\dots, 9\\}$\nبنابراین ضلع مکعب $6$ مقدار صحیح می‌تواند باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            515,
+            103,
+            597,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 309"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 310,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "عبارت داده‌شده را $A$ می‌نامیم:\n$A = \\frac{\\sqrt[3]{a^6}}{a\\sqrt{a^2}} - \\frac{\\sqrt[3]{(-a)^3}}{\\sqrt{a^2}} = \\frac{a^2}{a|a|} - \\frac{-a}{\\sqrt[3]{|a|}}$\n$\\xrightarrow{a < 0} A = \\frac{a^2}{-a^2} - \\frac{-a}{\\sqrt[3]{-a}} = -1 - 1 = -2$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            599,
+            103,
+            693,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 310"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 311,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "می‌دانیم $3^a = 4$ است. دو طرف معادله را به توان $b$ می‌رسانیم:\n$3^a = 4 \\Rightarrow (3^a)^b = 4^b \\Rightarrow 3^{ab} = (2^2)^b \\Rightarrow 3^{ab} = 2^{2b} \\Rightarrow 3^{ab} = (2^b)^2 \\xrightarrow{2^b = 9} 3^{ab} = 9^2 = 3^4 \\Rightarrow ab = 4$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            695,
+            104,
+            786,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 311"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 312,
+      "solution_page": "page_0030.jpg",
+      "solution_text": "می‌دانیم $3^a = \\frac{1}{\\sqrt{5}}$ است. دو طرف معادله را به توان $\\frac{1}{b}$ می‌رسانیم:\n$3^a = \\frac{1}{\\sqrt{5}} \\Rightarrow (3^a)^{\\frac{1}{b}} = (\\frac{1}{\\sqrt{5}})^{\\frac{1}{b}} \\Rightarrow 3^{\\frac{a}{b}} = (5^{-\\frac{1}{2}})^{\\frac{1}{b}} = (5^b)^{-\\frac{1}{2}}$\n$\\xrightarrow{5^b = \\sqrt{3}} 3^{\\frac{a}{b}} = (\\sqrt{3})^{-\\frac{1}{2}} = (3^{\\frac{1}{2}})^{-\\frac{1}{2}} = 3^{-\\frac{1}{4}} \\Rightarrow \\frac{a}{b} = -\\frac{1}{4}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            787,
+            102,
+            908,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0030.jpg",
+          "alt": "حل سوال 312"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 313,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "عبارت داده‌شده را $A$ می‌نامیم:\n$$A = \\frac{(3\\sqrt[r]{x})(r\\sqrt[r]{x})}{\\sqrt[r]{x^r}} = \\frac{(rx^\\frac{1}{r})(rx^\\frac{1}{r})}{x^\\frac{r}{r}} = \\frac{\\varepsilon x^\\frac{\\Delta}{r}}{x^\\frac{r}{r}} = \\varepsilon x^\\frac{r}{r}$$\n$$x = \\sqrt[r]{q} \\Rightarrow A = \\varepsilon (\\sqrt[r]{q})^\\frac{r}{r} = \\varepsilon (r^r)^\\frac{1}{r} = \\varepsilon (r^\\frac{r}{r})^\\frac{r}{r} = \\varepsilon \\sqrt[r]{r}$$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            80,
+            480,
+            210,
+            835
+          ],
+          "placement": "solution",
+          "alt": "solution 313"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 314,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "در صورت و مخرج کسر از $a^n$ فاکتور می‌گیریم:\n$$\\frac{a^m + a^n}{a^m - a^n} = \\frac{a^n(a^{m-n} + 1)}{a^n(a^{m-n} - 1)} = \\frac{a^{m-n} + 1}{a^{m-n} - 1} = \\frac{\\Delta + 1}{\\Delta - 1} = \\frac{q}{r} = \\frac{r}{r}$$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            180,
+            480,
+            255,
+            835
+          ],
+          "placement": "solution",
+          "alt": "solution 314"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 315,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "عبارت داده‌شده را $P$ می‌نامیم. واضح است که در عبارت $P$، $x \\le 0$ است:\n$$P = \\sqrt[r]{-x\\sqrt{x^r \\sqrt[r]{x}}} = \\sqrt[r]{-x\\sqrt{\\sqrt[r]{x^{10}}}} = \\sqrt[r]{-x\\sqrt[q]{x^{10}}}$$\n$$= \\sqrt[r]{-x\\sqrt[r]{|x^\\Delta|}}$$\n$$= \\sqrt[r]{-x\\sqrt[r]{-x^\\Delta}} = \\sqrt[r]{x\\sqrt[r]{x^\\Delta}} = \\sqrt[r]{\\sqrt[r]{x^A}} = \\sqrt[q]{x^A} = \\sqrt[r]{x^r}$$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            250,
+            480,
+            375,
+            835
+          ],
+          "placement": "solution",
+          "alt": "solution 315"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 316,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "ابتدا مقدار $a$ را محاسبه می‌کنیم.\n$$\\sqrt[r]{ra} = \\sqrt{q\\sqrt{r}} \\Rightarrow a = \\frac{\\sqrt{q\\sqrt{r}}}{\\sqrt[r]{r}} = \\frac{\\sqrt{\\sqrt{r^\\Delta}}}{\\sqrt[r]{r}} = \\frac{\\sqrt[r]{r^\\Delta}}{\\sqrt[r]{r}} = \\sqrt[r]{r^r} = r$$\nاکنون ریشه سوم $ab$ را برابر $r\\sqrt[r]{r}$ قرار می‌دهیم:\n$$\\sqrt[r]{ab} = r\\sqrt[r]{r} \\Rightarrow ab = r^r \\times \\varepsilon \\xrightarrow{a = r} rb = r^r \\times \\varepsilon$$\n$$\\Rightarrow b = r^r \\times r = r^v$$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            370,
+            480,
+            495,
+            835
+          ],
+          "placement": "solution",
+          "alt": "solution 316"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 317,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "معادلهٔ داده‌شده را ساده می‌کنیم. واضح است که $a > 0$ و $b < 0$ می‌باشد:\n$$b^r = \\sqrt[r]{-\\frac{1}{a^r}\\sqrt{a}} = \\sqrt[r]{-a^{-r}a^\\frac{1}{r}} = \\sqrt[r]{-a^{-\\frac{r}{r}}} = -a^{-\\frac{1}{r}}$$\n$$\\Rightarrow (b^r)^{-r} = (-a^{-\\frac{1}{r}})^{-r} \\Rightarrow a = b^{-\\varepsilon}$$\nحال، عبارت $\\sqrt{\\frac{1}{\\sqrt[r]{a}}}\\sqrt{a}$ را محاسبه می‌کنیم:\n$$\\sqrt{\\frac{1}{\\sqrt[r]{a}}}\\sqrt{a} = \\sqrt{a^{-\\frac{1}{r}} a} = \\sqrt{a^\\frac{r}{r}} = a^\\frac{r}{r} = (b^{-\\varepsilon})^\\frac{r}{r}$$\n$$= |b|^{-\\frac{r}{r}} = \\frac{1}{\\sqrt{|b|}} = \\frac{1}{\\sqrt{-b}}$$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            490,
+            480,
+            710,
+            835
+          ],
+          "placement": "solution",
+          "alt": "solution 317"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 318,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "می‌دانیم $\\sqrt[r]{x^r}$ برابر $|x|$ و $\\sqrt[d]{x^\\Delta}$ برابر $x$ است.\n$$Ax = r\\sqrt[r]{x^r} - a\\sqrt[d]{x^\\Delta} \\Rightarrow Ax = r|x| - ax$$\n$$\\xrightarrow{x < 0} Ax = -rx - ax \\Rightarrow ax = -11x \\Rightarrow a = -11$$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            705,
+            480,
+            770,
+            835
+          ],
+          "placement": "solution",
+          "alt": "solution 318"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 319,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "با توجه به مثبت‌بودن طرف‌های نامعادله، سه طرف نامساوی را به توان کوچک‌ترین مضرب‌مشترک فرجه‌ها یعنی $12$ می‌رسانیم.\n$$\\sqrt[r]{r} < \\sqrt[1r]{n} < \\sqrt[r]{10} \\Rightarrow (\\sqrt[r]{r})^{1r} < (\\sqrt[1r]{n})^{1r} < (\\sqrt[r]{10})^{1r}$$\n$$\\Rightarrow r^r < n^r < 10^r \\Rightarrow 6r < n^r < 1000 \\Rightarrow 81 \\le n^r \\le \\varepsilon r\\Delta$$\n$$\\Rightarrow r^r \\le n^r \\le \\Delta^r \\xrightarrow{n > 0} r \\le n \\le \\Delta$$\n$$\\xrightarrow{n \\in \\mathbb{N}} n \\in \\{r, r, \\Delta\\} \\Rightarrow r + r + \\Delta = 1r$$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            765,
+            480,
+            895,
+            835
+          ],
+          "placement": "solution",
+          "alt": "solution 319"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 320,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "با توجه به این‌که $|a| > a$ است، نتیجه می‌گیریم $a < 0$ می‌باشد.\nبا در نظر گرفتن $|a| < \\sqrt[r]{|a|}$ مشخص می‌شود $0 < a < -1$ است.\nبنابراین $a < a^r$ و $1$ نادرست است.\n$a$ منفی و $a^r > a$ و $r$ نادرست است.\n$a^r > a^r$ و $r$ نادرست است.\n$\\sqrt[r]{a} < a^r$ می‌باشد و $r$ درست خواهد بود.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            80,
+            60,
+            205,
+            420
+          ],
+          "placement": "solution",
+          "alt": "solution 320"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 321,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "عبارت داده‌شده را $A$ می‌نامیم:\n$$A = \\frac{\\sqrt{\\Lambda} + \\sqrt{1\\Lambda} + \\sqrt{rr}}{\\sqrt{vr} - \\sqrt{\\Delta0}} = \\frac{r\\sqrt{r} + r\\sqrt{r} + r\\sqrt{r}}{\\varepsilon\\sqrt{r} - \\Delta\\sqrt{r}} = \\frac{q\\sqrt{r}}{\\sqrt{r}} = 9$$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            205,
+            60,
+            260,
+            420
+          ],
+          "placement": "solution",
+          "alt": "solution 321"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 322,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "ابتدا $A$ و $B$ را ساده می‌کنیم:\n$$A = \\sqrt[r]{\\Lambda1} - \\sqrt[r]{rr} = r\\sqrt[r]{r} - r\\sqrt[r]{r} = \\sqrt[r]{r}$$\n$$B = \\sqrt{q\\Lambda} - \\sqrt{\\Delta0} = v\\sqrt{r} - \\Delta\\sqrt{r} = r\\sqrt{r}$$\n$$\\Rightarrow A^r - B^r = (\\sqrt[r]{r})^r - (r\\sqrt{r})^r = r - \\Lambda = -\\Delta$$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            260,
+            60,
+            335,
+            420
+          ],
+          "placement": "solution",
+          "alt": "solution 322"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 323,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "در عبارت $A$، هجدهمین پرانتز به صورت $(r\\sqrt{r} - \\sqrt{1\\Lambda})$ می‌باشد که برابر صفر است بنابراین $A = 0$ خواهد بود.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            335,
+            60,
+            375,
+            420
+          ],
+          "placement": "solution",
+          "alt": "solution 323"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 324,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "عبارت $A$ را ساده می‌کنیم:\n$$A = \\sqrt[10]{\\sqrt[r]{rr} (r\\sqrt[r]{r})^{1\\Delta}} = \\sqrt[10]{r^\\frac{\\Delta}{r} \\times r^\\frac{1}{r} \\times (r^r)^{1\\Delta}}$$\n$$= \\sqrt[10]{r^\\frac{11}{r} \\times r^{1\\Delta}} = r^\\frac{11}{r0} \\times r^\\frac{1\\Delta}{10} = r^{\\frac{11}{r0} + \\frac{r}{r}} = r^\\frac{r1}{r0} = \\sqrt{r}$$\nخواهیم داشت:\n$$\\sqrt{r + A^r} = \\sqrt{r + r} = r$$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            375,
+            60,
+            490,
+            420
+          ],
+          "placement": "solution",
+          "alt": "solution 324"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 325,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "ابتدا عبارت $A$ را ساده می‌کنیم:\n$$A = \\sqrt{\\Lambda\\sqrt{r}} (1\\Lambda)^{-\\frac{1}{r}} = \\sqrt[r]{r^r \\times r^\\frac{1}{r}} (r^r \\times r)^{-\\frac{1}{r}} = \\sqrt[r]{r^\\frac{v}{r}} \\times r^{-1} \\times r^{-\\frac{1}{r}}$$\n$$= r^\\frac{v}{q} \\times r^{-1} \\times r^{-\\frac{1}{r}} = r^\\frac{1}{q} \\times \\frac{1}{r} = \\frac{1}{r}$$\n$$\\Rightarrow (A^{-r} - 1)^r = ((\\frac{1}{r})^{-r} - 1)^r = (q - 1)^r = \\Lambda^r = r$$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            490,
+            60,
+            615,
+            420
+          ],
+          "placement": "solution",
+          "alt": "solution 325"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 326,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "عبارت داده‌شده را $A$ می‌نامیم:\n$$A = \\sqrt[r]{1r \\times \\sqrt[r]{\\Delta r \\times \\sqrt{r \\sqrt{r}}} \\times k}$$\n$$= \\sqrt[1r]{1r^r \\times \\sqrt[r]{\\Delta r^r \\times \\sqrt{(r\\sqrt{r})^r}}} \\times k = \\sqrt[1r]{1r^r \\times \\Delta r^r \\times r^r \\times r} \\times k$$\n$$= \\sqrt[1r]{(r^r \\times r^r)(r^q \\times r^r)(r^r \\times r)} \\times k$$\n$$= \\sqrt[1r]{r^{11} \\times r^{1r}} \\times k = r\\sqrt[1r]{r^{11}} \\times k$$\nبرای این‌که $A$ عددی طبیعی باشد، کافی است $k = \\sqrt[1r]{r}$ باشد:\n$$\\Rightarrow A = r\\sqrt[1r]{r^{11}} \\times \\sqrt[1r]{r} = r \\times r = \\varepsilon$$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            615,
+            60,
+            775,
+            420
+          ],
+          "placement": "solution",
+          "alt": "solution 326"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 327,
+      "solution_page": "page_0031.jpg",
+      "solution_text": "روش اول: ابتدا عبارت $a$ و $b$ را ساده می‌کنیم:\n$$a = \\sqrt{v + \\sqrt{rr}} = \\sqrt{v + r\\sqrt{\\varepsilon}} = \\sqrt{(\\sqrt{\\varepsilon} + 1)^r}$$\n$$= |\\sqrt{\\varepsilon} + 1| = \\sqrt{\\varepsilon} + 1$$\n$$b = \\sqrt{v - \\sqrt{rr}} = \\sqrt{v - r\\sqrt{\\varepsilon}} = \\sqrt{(\\sqrt{\\varepsilon} - 1)^r}$$\n$$= |\\sqrt{\\varepsilon} - 1| = \\sqrt{\\varepsilon} - 1 \\Rightarrow \\frac{a + b}{a - b} = \\frac{r\\sqrt{\\varepsilon}}{r} = \\sqrt{\\varepsilon}$$\nروش دوم: عبارت $\\frac{a + b}{a - b}$ را $k$ می‌نامیم، واضح است که $k > \\circ$ می‌باشد:\n$k = \\frac{a + b}{a - b} \\Rightarrow k^r = \\frac{a^r + b^r + rab}{a^r + b^r - rab}$\n$= \\frac{v + \\sqrt{rr} + v - \\sqrt{rr} + r\\sqrt{r\\Delta}}{v + \\sqrt{rr} + v - \\sqrt{rr} - r\\sqrt{r\\Delta}} = \\frac{1f + 10}{1f - 10} = \\varepsilon$\n$\\Rightarrow k = \\pm \\sqrt{\\varepsilon} \\xrightarrow{k > \\circ} k = \\sqrt{\\varepsilon}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0031.jpg",
+          "region": [
+            775,
+            60,
+            895,
+            420
+          ],
+          "placement": "solution",
+          "alt": "solution 327"
+        },
+        {
+          "region": [
+            515,
+            68,
+            911,
+            203
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "ادامه پاسخنامه سوال ۳۲۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 328,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "روش اول: عبارت $\\sqrt{a} - \\sqrt{b}$ را $k$ می‌نامیم، واضح است که $k > \\circ$ است:\n$k = \\sqrt{a} - \\sqrt{b} \\Rightarrow k^r = a + b - r\\sqrt{ab}$\n$= \\varepsilon + r\\sqrt{\\Delta} + \\varepsilon - r\\sqrt{\\Delta} - r\\sqrt{r\\varepsilon - r\\circ}$\n$\\Rightarrow k^r = 1r - \\wedge = f \\Rightarrow k = \\pm r \\xrightarrow{k > \\circ} k = r$\nجذر عدد $\\sqrt{a} - \\sqrt{b}$ برابر $\\sqrt{k}$ است که مقدار آن $\\sqrt{r}$ می‌باشد.\nروش دوم: عبارات $\\sqrt{a}$ و $\\sqrt{b}$ را ساده می‌کنیم:\n$\\sqrt{a} = \\sqrt{\\varepsilon + r\\sqrt{\\Delta}} = \\sqrt{(\\sqrt{\\Delta} + 1)^r} = |\\sqrt{\\Delta} + 1| = \\sqrt{\\Delta} + 1$\n$\\sqrt{b} = \\sqrt{\\varepsilon - r\\sqrt{\\Delta}} = \\sqrt{(\\sqrt{\\Delta} - 1)^r} = |\\sqrt{\\Delta} - 1| = \\sqrt{\\Delta} - 1$\n$\\Rightarrow \\sqrt{a} - \\sqrt{b} = r \\Rightarrow \\sqrt{\\sqrt{a} - \\sqrt{b}} = \\sqrt{r}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            514,
+            185,
+            911,
+            381
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۲۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 329,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "ابتدا $\\sqrt{r}$ را در عبارت داخل پرانتز ضرب کرده، سپس آن را ساده می‌کنیم:\n$a = \\sqrt{r}(\\sqrt{\\varepsilon} - \\sqrt{r} - \\sqrt{r}) = \\sqrt{1r} - \\sqrt{f} - r\\sqrt{r}$\n$= r\\sqrt{r} - \\sqrt{(\\sqrt{r} - 1)^r} = r\\sqrt{r} - (\\sqrt{r} - 1) = \\sqrt{r} + 1$\nحال عبارت $(a - 1)^r$ را محاسبه می‌کنیم:\n$(a - 1)^r = (\\sqrt{r} + 1 - 1)^r = r$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            514,
+            382,
+            911,
+            506
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۲۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 330,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "عبارت $1\\circ\\sqrt{v} - rr$ را مربع کامل می‌کنیم:\n$A = \\sqrt{\\Delta - \\sqrt{v}} \\times \\sqrt[f]{rr - 1\\circ\\sqrt{v}} = \\sqrt{\\Delta - \\sqrt{v}} \\times \\sqrt[f]{(\\Delta - \\sqrt{v})^r}$\n$= \\sqrt{\\Delta - \\sqrt{v}} \\times \\sqrt{\\Delta - \\sqrt{v}} = \\Delta - \\sqrt{v}$\nعبارت $A + \\sqrt{v}$ برابر با $5$ می‌شود که عددی گویاست.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            514,
+            508,
+            911,
+            584
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 331,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "روش اول: عبارت $1 + \\sqrt{r}$ را به صورت $\\sqrt[\\varepsilon]{(\\sqrt{r} + 1)^r}$ می‌نویسیم تا بتوان در عبارت دوم ضرب کرد.\n$\\sqrt{\\sqrt{r} + 1} \\times \\sqrt[\\varepsilon]{\\varepsilon\\sqrt{r} - 1\\circ} = \\sqrt[\\varepsilon]{(\\sqrt{r} + 1)^r} \\times \\sqrt[\\varepsilon]{\\varepsilon\\sqrt{r} - 1\\circ}$\n$= \\sqrt[\\varepsilon]{r\\sqrt{r} + 9 + r\\sqrt{r} + 1} \\times \\sqrt[\\varepsilon]{\\varepsilon\\sqrt{r} - 1\\circ}$\n$= \\sqrt[\\varepsilon]{\\varepsilon\\sqrt{r} + 1\\circ} \\times \\sqrt[\\varepsilon]{\\varepsilon\\sqrt{r} - 1\\circ} = \\sqrt[\\varepsilon]{1\\circ\\wedge - 1\\circ\\circ} = \\sqrt[\\varepsilon]{\\wedge} = \\sqrt{r}$\nروش دوم: حدس می‌زنیم که عبارت $\\varepsilon\\sqrt{r} - 1\\circ$ به صورت مکعب کامل باشد که پس از ساده‌شدن با فرجه $6$ بتوان در عبارت اول ضرب کرد. با کمی دقت متوجه می‌شویم $\\varepsilon\\sqrt{r} - 1\\circ$ برابر با $(\\sqrt{r} - 1)^r$ می‌باشد:\n$\\sqrt{\\sqrt{r} + 1} \\times \\sqrt[\\varepsilon]{\\varepsilon\\sqrt{r} - 1\\circ} = \\sqrt{\\sqrt{r} + 1} \\times \\sqrt[\\varepsilon]{(\\sqrt{r} - 1)^r}$\n$= \\sqrt{\\sqrt{r} + 1} \\times \\sqrt{\\sqrt{r} - 1} = \\sqrt{r}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            514,
+            586,
+            911,
+            796
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 332,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "ابتدا $A^r$ را محاسبه کرده، سپس $A$ را به دست می‌آوریم:\n$A = \\sqrt{r - \\sqrt{\\Delta}} + \\sqrt{r + \\sqrt{\\Delta}}$\n$\\Rightarrow A^r = r - \\sqrt{\\Delta} + r + \\sqrt{\\Delta} + r\\sqrt{9 - \\Delta} = 1\\circ$\n$\\Rightarrow A = \\pm \\sqrt{1\\circ} \\xrightarrow{A > \\circ} A = \\sqrt{1\\circ}$\nواضح است که $\\sqrt{1\\circ}A$ برابر $1\\circ$ و گویاست.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            514,
+            798,
+            911,
+            908
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 333,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "عبارت $\\sqrt{v - r\\sqrt{\\Delta}} + \\sqrt{v + r\\sqrt{\\Delta}}$ را $P$ نامیده، سپس $P^r$ را محاسبه می‌کنیم:\n$P^r = v - r\\sqrt{\\Delta} + v + r\\sqrt{\\Delta} + r\\sqrt{\\varepsilon q - f\\Delta} = 1f + f = 1\\wedge$\n$\\Rightarrow P = \\pm \\sqrt{1\\wedge} \\xrightarrow{P > \\circ} P = \\sqrt{1\\wedge} = r\\sqrt{r}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            99,
+            70,
+            483,
+            171
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 334,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "عبارات $r + r\\sqrt{r}$ و $r - r\\sqrt{r}$ مزدوج یکدیگر می‌باشند، اما توان آن‌ها برابر نیست. بنابراین عبارت $(r - r\\sqrt{r})^r$ را به صورت $(r - r\\sqrt{r})^r(r - r\\sqrt{r})^{\\frac{1}{\\varepsilon}}$ یا همان $\\sqrt[\\varepsilon]{(r - r\\sqrt{r})^r}(r - r\\sqrt{r})^r$ می‌نویسیم:\n$K = (r - r\\sqrt{r})^r(r + r\\sqrt{r})^r\\sqrt[\\varepsilon]{r - r\\sqrt{r}}$\n$= (r - r\\sqrt{r})^r(r - r\\sqrt{r})^r(r + r\\sqrt{r})^r \\times \\sqrt[\\varepsilon]{r - r\\sqrt{r}} \\times \\sqrt[\\varepsilon]{r^\\varepsilon}$\n$= (\\varepsilon - f\\sqrt{r})^r = ((r - \\sqrt{r})^r)^\\varepsilon = (r - \\sqrt{r})^r \\Rightarrow K^r = r - \\sqrt{r}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            99,
+            173,
+            483,
+            353
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 335,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "عبارت سمت چپ متساوی را $P$ می‌نامیم:\n$P = (\\sqrt{r} + \\sqrt{\\varepsilon})^r(r - \\sqrt{r})^r = ((\\sqrt{r} + \\sqrt{\\varepsilon})^r)^r(r - \\sqrt{r})^r$\n$= (\\wedge + f\\sqrt{r})^r(r - \\sqrt{r})^r = f^r((r + \\sqrt{r})^r(r - \\sqrt{r})^r) = f^r(1)^r = f^r = r^\\varepsilon$\nاز طرفی $P = 1\\varepsilon^a$: $1\\varepsilon^a = r^\\varepsilon \\Rightarrow r^{fa} = r^\\varepsilon \\Rightarrow a = \\frac{r}{r}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            99,
+            355,
+            483,
+            474
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 336,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "ابتدا عبارت $P$ را ساده می‌کنیم:\n$P = \\sqrt{f - \\sqrt{v}} - \\sqrt{r/\\Delta} = \\sqrt{f - \\sqrt{v}} - \\sqrt{\\frac{v}{r}} = \\sqrt{f - \\sqrt{v}} - \\frac{\\sqrt{v}}{\\sqrt{r}}$\n$= \\frac{\\sqrt{\\wedge - r\\sqrt{v}} - \\sqrt{v}}{\\sqrt{r}} = \\frac{\\sqrt{(\\sqrt{v} - 1)^r} - \\sqrt{v}}{\\sqrt{r}} = \\frac{\\sqrt{v} - 1 - \\sqrt{v}}{\\sqrt{r}} = -\\frac{1}{\\sqrt{r}}$\n$\\Rightarrow P^r = \\frac{1}{r}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            99,
+            476,
+            483,
+            608
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 337,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "ابتدا عبارت $a^r$ را به دست می‌آوریم (می‌دانیم $((x + y)^r = x^r + y^r + rxy(x + y))$)\n$a = \\sqrt[r]{r + r\\sqrt{r}} + \\sqrt[r]{r - r\\sqrt{r}}$\n$\\Rightarrow a^r = r + r\\sqrt{r} + r - r\\sqrt{r} + r\\sqrt[r]{9 - \\wedge}(\\underbrace{\\sqrt[r]{r + r\\sqrt{r}} + \\sqrt[r]{r - r\\sqrt{r}}}_{a})$\n$\\Rightarrow a^r = \\varepsilon + ra \\Rightarrow a^r - ra = \\varepsilon$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            99,
+            610,
+            483,
+            725
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 338,
+      "solution_page": "page_0032.jpg",
+      "solution_text": "با فرض $\\sqrt[r]{r} - 1 = x$ خواهیم داشت:\n$x = \\sqrt[r]{r} + 1$\n$x^r - \\frac{9}{x} = (\\sqrt[r]{r} + 1)^r - \\frac{9}{\\sqrt[r]{r} + 1}$\n$= r + r\\sqrt[r]{r} + r\\sqrt[r]{r} + 1 - (\\frac{9}{\\sqrt[r]{r} + 1} \\times \\frac{\\sqrt[r]{r} - \\sqrt[r]{r} + 1}{\\sqrt[r]{r} - \\sqrt[r]{r} + 1})$\n$= r + r\\sqrt[r]{f} + r\\sqrt[r]{r} - \\frac{9(\\sqrt[r]{f} - \\sqrt[r]{r} + 1)}{r + 1}$\n$= r + r\\sqrt[r]{f} + r\\sqrt[r]{r} - r\\sqrt[r]{f} + r\\sqrt[r]{r} - r = \\varepsilon\\sqrt[r]{r}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            51,
+            727,
+            483,
+            908
+          ],
+          "placement": "solution_text",
+          "filename": "page_0032.jpg",
+          "alt": "پاسخنامه سوال ۳۳۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 339,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "ابتدا کسرهای موجود در عبارت $P$ را گویا می‌کنیم:\n$P = \\frac{7}{3 - \\sqrt{2}} - \\frac{1}{\\sqrt{2} - 1}$\n$= (\\frac{7}{3 - \\sqrt{2}} \\times \\frac{3 + \\sqrt{2}}{3 + \\sqrt{2}}) - (\\frac{1}{\\sqrt{2} - 1} \\times \\frac{\\sqrt{2} + 1}{\\sqrt{2} + 1})$\n$= \\frac{7(3 + \\sqrt{2})}{7} - \\frac{\\sqrt{2} + 1}{1} = 3 + \\sqrt{2} - \\sqrt{2} - 1 = 2$\nواضح است که $2P$ برابر $4$ و مربع یک عدد طبیعی است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            461,
+            44,
+            831,
+            214
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۳۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 340,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "ابتدا مخرج کسر عبارت زیر رادیکال را گویا می‌کنیم:\n$\\sqrt{\\frac{2 - \\sqrt{3}}{2 + \\sqrt{3}}} + \\sqrt{3} = \\sqrt{\\frac{2 - \\sqrt{3}}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}}} + \\sqrt{3}$\n$= \\sqrt{(2 - \\sqrt{3})^2} + \\sqrt{3} = |2 - \\sqrt{3}| + \\sqrt{3} = 2 - \\sqrt{3} + \\sqrt{3} = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            458,
+            213,
+            831,
+            298
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 341,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "ابتدا عبارت $P$ را ساده می‌کنیم:\n$P = \\frac{1}{\\sqrt{5} - k} + \\frac{1}{\\sqrt{5} + k} = \\frac{\\sqrt{5} + k + \\sqrt{5} - k}{(\\sqrt{5} - k)(\\sqrt{5} + k)} = \\frac{2\\sqrt{5}}{5 - k^2}$\n$\\xrightarrow{k = \\sqrt{5-\\sqrt{5}}} P = \\frac{2\\sqrt{5}}{5 - (5 - \\sqrt{5})} = \\frac{2\\sqrt{5}}{\\sqrt{5}} = 2$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            457,
+            297,
+            830,
+            395
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 342,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "عدد $\\sqrt{6} + \\frac{2\\sqrt{5}}{1 + \\sqrt{5} + \\sqrt{6}}$ را $A$ می‌نامیم:\n$A = \\frac{2\\sqrt{5}}{1 + \\sqrt{5} + \\sqrt{6}} \\times \\frac{1 + \\sqrt{5} - \\sqrt{6}}{1 + \\sqrt{5} - \\sqrt{6}} + \\sqrt{6} = \\frac{2\\sqrt{5}(1 + \\sqrt{5} - \\sqrt{6})}{(1 + \\sqrt{5})^2 - 6} + \\sqrt{6}$\n$= \\frac{2\\sqrt{5}(1 + \\sqrt{5} - \\sqrt{6})}{6 + 2\\sqrt{5} - 6} + \\sqrt{6} = \\frac{2\\sqrt{5}(1 + \\sqrt{5} - \\sqrt{6})}{2\\sqrt{5}} + \\sqrt{6}$\n$= 1 + \\sqrt{5} - \\sqrt{6} + \\sqrt{6} = 1 + \\sqrt{5}$\nاکنون $\\frac{1}{A}$ را محاسبه می‌کنیم:\n$\\frac{1}{A} = \\frac{1}{\\sqrt{5} + 1} = \\frac{1}{\\sqrt{5} + 1} \\times \\frac{\\sqrt{5} - 1}{\\sqrt{5} - 1} = \\frac{\\sqrt{5} - 1}{4}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            456,
+            398,
+            831,
+            606
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 343,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "عبارت $\\sqrt{x - \\frac{2}{x}}$ را $P$ می‌نامیم:\n$P = \\sqrt{x - \\frac{2}{x}} \\xrightarrow{x = 2 - \\sqrt{6}} P = \\sqrt{2 - \\sqrt{6} - \\frac{2}{2 - \\sqrt{6}}}$\n$= \\sqrt{2 - \\sqrt{6} - \\frac{2(2 + \\sqrt{6})}{4 - 6}} = \\sqrt{2 - \\sqrt{6} + 2 + \\sqrt{6}} = \\sqrt{4} = 2$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            452,
+            604,
+            830,
+            706
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 344,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "در عبارت $A$ به جای $x$ مقدار $4 - \\sqrt{7}$ قرار می‌دهیم و سپس مخرج $\\frac{1}{4 - \\sqrt{7}}$ را گویا می‌کنیم:\n$A = \\sqrt{\\frac{8 + x}{9} + \\frac{1}{x}} = \\sqrt{\\frac{12 - \\sqrt{7}}{9} + \\frac{1}{4 - \\sqrt{7}}}$\n$= \\sqrt{\\frac{12 - \\sqrt{7}}{9} + \\frac{4 + \\sqrt{7}}{9}} = \\sqrt{\\frac{16}{9}} = \\frac{4}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            452,
+            710,
+            834,
+            830
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 345,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "ابتدا مخرج تمامی کسرها را گویا می‌کنیم:\n$A = \\frac{1}{1 + \\sqrt{3}} + \\frac{1}{\\sqrt{3} + \\sqrt{5}} + \\dots + \\frac{1}{\\sqrt{2n-1} + \\sqrt{2n+1}}$\n$= (\\frac{1}{1 + \\sqrt{3}} \\times \\frac{\\sqrt{3} - 1}{\\sqrt{3} - 1}) + (\\frac{1}{\\sqrt{3} + \\sqrt{5}} \\times \\frac{\\sqrt{5} - \\sqrt{3}}{\\sqrt{5} - \\sqrt{3}})$\n$+ \\dots + (\\frac{1}{\\sqrt{2n-1} + \\sqrt{2n+1}} \\times \\frac{\\sqrt{2n+1} - \\sqrt{2n-1}}{\\sqrt{2n+1} - \\sqrt{2n-1}})$\n$= \\frac{\\sqrt{3} - 1}{2} + \\frac{\\sqrt{5} - \\sqrt{3}}{2} + \\dots + \\frac{\\sqrt{2n+1} - \\sqrt{2n-1}}{2}$\n$= \\frac{\\sqrt{2n+1} - 1}{2} = 6 \\Rightarrow \\sqrt{2n+1} = 13$\n$\\Rightarrow 2n+1 = 169 \\Rightarrow n = 84$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            452,
+            835,
+            891,
+            830
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۵ قسمت اول"
+        },
+        {
+          "region": [
+            41,
+            49,
+            344,
+            240
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۵ قسمت دوم"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 346,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "ابتدا مخرج کسر عبارت اول را در $P$ گویا می‌کنیم:\n$P = \\frac{4}{\\sqrt[3]{3} + 1} + \\sqrt[3]{3} = \\frac{4}{\\sqrt[3]{3} + 1} \\times \\frac{\\sqrt[3]{9} - \\sqrt[3]{3} + 1}{\\sqrt[3]{9} - \\sqrt[3]{3} + 1} + \\sqrt[3]{3}$\n$= \\frac{4(\\sqrt[3]{9} - \\sqrt[3]{3} + 1)}{3 + 1} + \\sqrt[3]{3} = \\sqrt[3]{9} + 1$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            41,
+            246,
+            420,
+            344
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 347,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "عبارت $1 + \\sqrt[3]{4} + 2\\sqrt[3]{2}$ به صورت $1 + \\sqrt[3]{4} + \\sqrt[3]{16}$ می‌باشد که در اتحاد چاق و لاغر عبارت چاق بوده و با ضرب عبارت لاغر $1 - \\sqrt[3]{4}$ ساده می‌شود. بنابراین صورت و مخرج که اول در $1 - \\sqrt[3]{4}$ ضرب می‌کنیم:\n$P = \\frac{3}{2\\sqrt[3]{2} + \\sqrt[3]{4} + 1} + 1 = \\frac{3}{\\sqrt[3]{16} + \\sqrt[3]{4} + 1} \\times \\frac{\\sqrt[3]{4} - 1}{\\sqrt[3]{4} - 1} + 1$\n$= \\frac{3(\\sqrt[3]{4} - 1)}{4 - 1} + 1 = \\sqrt[3]{4} - 1 + 1 = \\sqrt[3]{4}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            38,
+            345,
+            417,
+            482
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 348,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "ابتدا بین کسرها مخرج‌مشترک می‌گیریم:\n$P = \\frac{1}{\\sqrt[4]{4} - 1} - \\frac{1}{\\sqrt[4]{2} + 1} = \\frac{\\sqrt[4]{2} + 1 - \\sqrt[4]{4} + 1}{(\\sqrt[4]{4} - 1)(\\sqrt[4]{2} + 1)} = \\frac{2 - \\sqrt[4]{4} + \\sqrt[4]{2}}{\\sqrt[4]{4} - \\sqrt[4]{2} + 1}$\nاکنون مخرج کسر را گویا می‌کنیم:\n$P = \\frac{2 - \\sqrt[4]{4} + \\sqrt[4]{2}}{\\sqrt[4]{4} - \\sqrt[4]{2} + 1} \\times \\frac{\\sqrt[4]{2} + 1}{\\sqrt[4]{2} + 1} = \\frac{2\\sqrt[4]{2} + 2 - 2 - \\sqrt[4]{4} + \\sqrt[4]{4} + \\sqrt[4]{2}}{2 + 1}$\n$= \\frac{3\\sqrt[4]{2}}{3} = \\sqrt[4]{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            36,
+            483,
+            415,
+            630
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 349,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "ابتدا در مخرج کسر از $\\sqrt[6]{6}$ فاکتور می‌گیریم، سپس مخرج کسر را گویا می‌کنیم:\n$A = \\frac{\\sqrt[6]{6}}{2\\sqrt[6]{3} + 3\\sqrt[6]{2} + \\sqrt[6]{36}} = \\frac{\\sqrt[6]{6}}{\\sqrt[6]{6}(\\sqrt[6]{4} + \\sqrt[6]{9} + \\sqrt[6]{6})}$\n$= \\frac{1}{\\sqrt[6]{4} + \\sqrt[6]{6} + \\sqrt[6]{9}} \\times \\frac{\\sqrt[6]{3} - \\sqrt[6]{2}}{\\sqrt[6]{3} - \\sqrt[6]{2}} = \\frac{\\sqrt[6]{3} - \\sqrt[6]{2}}{3 - 2} = \\sqrt[6]{3} - \\sqrt[6]{2}$\n$\\Rightarrow A + \\sqrt[6]{2} = \\sqrt[6]{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            36,
+            626,
+            412,
+            765
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۴۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 350,
+      "solution_page": "page_0033.jpg",
+      "solution_text": "ابتدا، مخرج کسرهای عبارات $a$ و $b$ را گویا می‌کنیم:\n$a = \\frac{1}{\\sqrt{2} - 1} = \\frac{1}{\\sqrt{2} - 1} \\times \\frac{\\sqrt{2} + 1}{\\sqrt{2} + 1} = \\sqrt{2} + 1$\n$b = \\frac{1}{1 + \\sqrt[3]{2} + \\sqrt[3]{4}} = \\frac{1}{1 + \\sqrt[3]{2} + \\sqrt[3]{4}} \\times \\frac{\\sqrt[3]{2} - 1}{\\sqrt[3]{2} - 1} = \\sqrt[3]{2} - 1$\n$\\Rightarrow (a - 1)^2 + (b + 1)^3 = (\\sqrt{2})^2 + (\\sqrt[3]{2})^3 = 2 + 2 = 4$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            41,
+            769,
+            411,
+            888
+          ],
+          "placement": "solution",
+          "filename": "page_0033.jpg",
+          "alt": "حل سوال ۳۵۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 351,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "مخرج هر دو کسر را گویا می‌کنیم:\n$P = (\\dfrac{\\sqrt{18} + \\sqrt{12}}{3 + \\sqrt{6}} \\times \\dfrac{3 - \\sqrt{6}}{3 - \\sqrt{6}}) + (\\dfrac{1}{2(\\sqrt{2}+1)^2} \\times \\dfrac{(\\sqrt{2}-1)^2}{(\\sqrt{2}-1)^2})$\n$= \\dfrac{3\\sqrt{18} + 3\\sqrt{12} - \\sqrt{108} - \\sqrt{72}}{9 - 6} + \\dfrac{3 - 2\\sqrt{2}}{2(2-1)^2}$\n$= \\dfrac{9\\sqrt{2} + 6\\sqrt{3} - 6\\sqrt{3} - 6\\sqrt{2}}{3} + \\dfrac{3 - 2\\sqrt{2}}{2}$\n$= \\sqrt{2} + \\dfrac{3}{2} - \\sqrt{2} = \\dfrac{3}{2} = 1/5$\nتذکر: می‌توانستیم در ابتدا کسر اول را ساده نماییم.\n$\\dfrac{\\sqrt{18} + \\sqrt{12}}{3 + \\sqrt{6}} = \\dfrac{\\sqrt{2}(3 + \\sqrt{6})}{3 + \\sqrt{6}} = \\sqrt{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            60,
+            500,
+            260,
+            890
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 352,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "در عبارت A مخرج کسر اول را گویا کرده و عبارت زیر رادیکال کسر دوم را مربع کامل می‌کنیم:\n$A = (\\dfrac{1}{8 + 4\\sqrt{5}} \\times \\dfrac{8 - 4\\sqrt{5}}{8 - 4\\sqrt{5}}) - (\\dfrac{1}{\\sqrt{6 - 2\\sqrt{5}}})$\n$= \\dfrac{8 - 4\\sqrt{5}}{64 - 80} - \\dfrac{1}{\\sqrt{(\\sqrt{5} - 1)^2}}$\n$= \\dfrac{8 - 4\\sqrt{5}}{-16} - \\dfrac{1}{\\sqrt{5} - 1} = \\dfrac{2 - \\sqrt{5}}{-4} - (\\dfrac{1}{\\sqrt{5} - 1} \\times \\dfrac{\\sqrt{5} + 1}{\\sqrt{5} + 1})$\n$= \\dfrac{\\sqrt{5} - 2}{4} - \\dfrac{\\sqrt{5} + 1}{4} = - \\dfrac{3}{4}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            270,
+            500,
+            460,
+            890
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 353,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "صورت کسر را به شکل اتحاد مجموع مکعبات (چاق و لاغر) و عبارت زیر رادیکال را به صورت اتحاد مربع می‌نویسیم:\n$\\dfrac{\\sqrt{125} + 1}{6 - \\sqrt{5}} + \\sqrt{14 - 6\\sqrt{5}} = \\dfrac{(\\sqrt{5})^3 + 1}{6 - \\sqrt{5}} + \\sqrt{(\\sqrt{5} - 3)^2}$\n$= \\dfrac{(\\sqrt{5} + 1)(5 - \\sqrt{5} + 1)}{6 - \\sqrt{5}} + |\\sqrt{5} - 3| = \\sqrt{5} + 1 + (3 - \\sqrt{5}) = 4$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            470,
+            500,
+            570,
+            890
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 354,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "اگر $x \\ge \\circ$ باشد، $|x| = x$ و اگر $x < \\circ$ باشد، $|x| = -x$ است. می‌دانیم:\n$a < \\circ \\Rightarrow 3 - 2a > \\circ \\Rightarrow |3 - 2a| = 3 - 2a$\n$\\Rightarrow A = |3 - 2a + 2a| = |3| = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            580,
+            500,
+            640,
+            890
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 355,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "روش اول: برای $a + b$ دو حالت زیر را در نظر می‌گیریم.\n۱) $a + b \\ge \\circ \\Rightarrow a - b - |a + b| = a - b - (a + b) = -2b \\checkmark$\n۲) $a + b < \\circ \\Rightarrow a - b - |a + b| = a - b + (a + b) = 2a$ غ ق ق\nبنابراین $a + b \\ge \\circ$ است. خواهیم داشت:\n$|a + b| + a - b = a + b + a - b = 2a$\nروش دوم: می‌توانیم عبارت $|a + b| + a - b$ را با استفاده از عبارت اولیه بسازیم:\n$a - b - |a + b| = -2b \\Rightarrow |a + b| - b = a$\nدو طرف را با a جمع می‌کنیم. $\\Rightarrow |a + b| + a - b = 2a$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            650,
+            500,
+            820,
+            890
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 356,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "می‌دانیم $a$ منفی و $b$ مثبت و $|b| > |a|$ است. بنابراین $b - a$ مثبت و $a + b$ منفی است.\n$|b - a| - |a + b| = b - a + a + b = 2b$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            830,
+            500,
+            890,
+            890
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 357,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "از نامساوی $-1 < a < \\circ$ نتایج زیر حاصل می‌شود.\n$-1 < a < \\circ \\Rightarrow \\begin{cases} a > \\sqrt[3]{a} \\Rightarrow \\sqrt[3]{a} - a < \\circ \\\\ \\dfrac{1}{a} < a \\Rightarrow a - \\dfrac{1}{a} > \\circ \\end{cases}$\nخواهیم داشت:\n$A = |\\sqrt[3]{a} - a| - |a - \\dfrac{1}{a}| + \\dfrac{1}{a} = - \\sqrt[3]{a} + a - a + \\dfrac{1}{a} + \\dfrac{1}{a}$\n$= \\dfrac{2}{a} - \\sqrt[3]{a}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            60,
+            80,
+            210,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 358,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "$-b$ بزرگ‌تر از $|a|$ که عبارتی نامنفی است می‌باشد. در نتیجه $-b$ عددی مثبت و $b$ عددی منفی است. هم‌چنین چون قدرمطلق $b$ بزرگ‌تر از $|a|$ است، $a + b$ همواره منفی و $a - b$ همواره مثبت است. خواهیم داشت:\n$|\\underbrace{a + b}_{-}| - |\\underbrace{a - b}_{+}| + |\\underbrace{2b}_{-}| = - (a + b) - (a - b) - 2b$\n$= -2a - 2b$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            200,
+            80,
+            310,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 359,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "با توجه به نامساوی مثلثی می‌دانیم:\n$|x| + |y| \\ge |x + y| \\begin{cases} \\xrightarrow{xy \\ge \\circ} |x| + |y| = |x + y| \\\\ \\xrightarrow{xy < \\circ} |x| + |y| > |x + y| \\end{cases}$\nدر عبارت داده‌شده اگر $a + b$ را $x$ و $a - b$ را $y$ در نظر بگیریم، خواهیم داشت:\n$|a + b| + |a - b| > |2b|$\n$\\xrightarrow{|a - b| = |b - a|} |a + b| + |b - a| > |2b|$\n$\\Rightarrow |x| + |y| > |x + y| \\Rightarrow xy < \\circ \\Rightarrow (a + b)(b - a) < \\circ$\n$\\Rightarrow b^2 - a^2 < \\circ \\Rightarrow b^2 < a^2 \\Rightarrow |b| < |a|$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            320,
+            80,
+            500,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۵۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 360,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "اگر $-2 < x < 3$ باشد، آن‌گاه $x + 2 > \\circ$ و $x - 3 < \\circ$ است.\n$y = \\sqrt{x^2 + 4x + 4} - 2\\sqrt{x^2 - 6x + 9} = \\sqrt{(x + 2)^2} - 2\\sqrt{(x - 3)^2}$\n$= |\\underbrace{x + 2}_{+}| - 2|\\underbrace{x - 3}_{-}| = x + 2 + 2(x - 3) = 3x - 4$\nمی‌دانیم: $-2 < x < 3 \\Rightarrow -6 < 3x < 9 \\Rightarrow -10 < 3x - 4 < 5$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            510,
+            80,
+            590,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۶۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 361,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "ابتدا نامعادلهٔ داده‌شده را حل می‌کنیم.\n$x^2 - 3x + 2 < \\circ \\Rightarrow 1 < x < 2$\nحال، عبارت P را ساده می‌کنیم.\n$P = 2|\\underbrace{x - 1}_{+}| - |\\underbrace{x - 2}_{-}| = 2(x - 1) + (x - 2) = 3x - 4$\nمی‌دانیم: $1 < x < 2 \\Rightarrow 3 < 3x < 6 \\Rightarrow -1 < 3x - 4 < 2$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            600,
+            80,
+            690,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۶۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 362,
+      "solution_page": "page_0034.jpg",
+      "solution_text": "روش اول: با توجه به ریشهٔ عبارت داخل قدرمطلق بازه‌های زیر را بررسی می‌کنیم.\n$\\begin{cases} x \\ge \\circ \\Rightarrow x^2 - 7x + 12 = \\circ \\Rightarrow (x - 3)(x - 4) = \\circ \\\\ \\Rightarrow \\begin{cases} x = 3 \\checkmark \\\\ x = 4 \\checkmark \\end{cases} \\\\ x < \\circ \\Rightarrow x^2 + 7x + 12 = \\circ \\Rightarrow (x + 3)(x + 4) = \\circ \\\\ \\Rightarrow \\begin{cases} x = -3 \\checkmark \\\\ x = -4 \\checkmark \\end{cases} \\end{cases}$\nدقت داشته باشید که جواب‌های به دست آمده در شرط‌های ابتدایی صدق می‌کنند.\n$4 - (-4) = 8$\n\nروش دوم: عبارت $|x|$ را برابر با $k$ قرار می‌دهیم.\n$k^2 - 7k + 12 = 0 \\Rightarrow (k-3)(k-4) = 0 \\Rightarrow \\begin{cases} k=3 \\\\ k=4 \\end{cases}$\n$\\Rightarrow \\begin{cases} |x|=3 \\Rightarrow x=\\pm 3 \\\\ |x|=4 \\Rightarrow x=\\pm 4 \\end{cases} \\xrightarrow{\\text{بیشترین اختلاف}} 4 - (-4) = 8$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            700,
+            80,
+            880,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0034.jpg",
+          "alt": "راه حل سوال ۳۶۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 363,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "عبارت $x^2 - 4x$ را مربع کامل کرده و $|x-2|$ را $k$ می‌نامیم.\n$x^2 - 4x - |x-2| - 2 = 0 \\Rightarrow (x-2)^2 - 4 - |x-2| - 2 = 0$\n$\\xrightarrow{|x-2|=k} k^2 - k - 6 = 0 \\Rightarrow (k+2)(k-3) = 0$\n$\\Rightarrow \\begin{cases} k=-2 \\quad \\text{غ ق ق} \\\\ k=3 \\end{cases} \\Rightarrow |x-2| = 3 \\Rightarrow \\begin{cases} x-2 = 3 \\\\ x-2 = -3 \\end{cases}$\n$\\Rightarrow \\begin{cases} x = 5 \\\\ x = -1 \\end{cases} \\Rightarrow x_1 x_2 = -5$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 364,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "با توجه به ریشه‌های عبارات داخل قدرمطلق، سه محدودۀ مختلف برای $x$ وجود دارد. در هر حالت مثبت یا منفی بودن عبارات داخل قدرمطلق را تعیین کرده و از قدرمطلق بیرون می‌آوریم.\n۱) $x < -\\frac{1}{3} \\Rightarrow -(3x+1)-(x-2) = 3 \\Rightarrow -4x = 2 \\Rightarrow x=-\\frac{1}{2}$\n۲) $-\\frac{1}{3} \\le x < 2 \\Rightarrow 3x+1-(x-2) = 3 \\Rightarrow 2x = 0 \\Rightarrow x=0$\n۳) $x \\ge 2 \\Rightarrow 3x+1+x-2 = 3 \\Rightarrow 4x = 4 \\Rightarrow x=1 \\text{ غ ق ق}$\nدقت داشته باشید که $x=1$ در شرط محدودۀ خود یعنی $x \\ge 2$ صدق نمی‌کند، بنابراین قابل قبول نمی‌باشد.\n$0 - (-\\frac{1}{2}) = \\frac{1}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 365,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "با توجه به ریشه‌های عبارات داخل قدرمطلق $x$ها را در سه محدوده در نظر می‌گیریم:\n۱) $x < -1 \\Rightarrow -(x+1)-(x-2) = x+2 \\Rightarrow 3x = -1 \\Rightarrow x = -\\frac{1}{3} \\text{ غ ق ق}$\n۲) $-1 \\le x < 2 \\Rightarrow x+1-(x-2) = x+2 \\Rightarrow x+2 = 3 \\Rightarrow x = 1$\n۳) $x \\ge 2 \\Rightarrow x+1+x-2 = x+2 \\Rightarrow x=3$\n$S = x_1 + x_2 = 1+3 = 4$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 366,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "با توجه به این‌که $6x$ برابر با یک عبارت قدرمطلقی می‌باشد، بنابراین $x$ نامنفی است.\n$|x^2 - 5x| = 6x \\Rightarrow \\begin{cases} x^2 - 5x = 6x \\Rightarrow x^2 - 11x = 0 \\Rightarrow \\begin{cases} x = 0 \\\\ x = 11 \\end{cases} \\\\ x^2 - 5x = -6x \\Rightarrow x^2 + x = 0 \\Rightarrow \\begin{cases} x = 0 \\\\ x = -1 \\text{ غ ق ق} \\end{cases} \\end{cases}$\nمجموعه جواب $= \\{0, 11\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 367,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "اگر $|a|=|b|$ آن‌گاه $a = \\pm b$ است.\n$||3x-1|-3| = 4 \\Rightarrow \\begin{cases} |3x-1|-3 = 4 \\\\ |3x-1|-3 = -4 \\end{cases} \\Rightarrow \\begin{cases} |3x-1| = 7 \\\\ |3x-1| = -1 \\text{ غ ق ق} \\end{cases}$\n$\\Rightarrow |3x-1| = 7 \\Rightarrow \\begin{cases} 3x-1 = 7 \\Rightarrow x=\\frac{8}{3} \\\\ 3x-1 = -7 \\Rightarrow x=-2 \\end{cases} \\Rightarrow \\text{مجموع ریشه‌ها} = \\frac{8}{3} - 2 = \\frac{2}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 368,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "اگر $|a|=|b|$ باشد، نتیجه می‌شود: $a = \\pm b$.\n$|3x^2 - 2x| = |4x - 2| \\Rightarrow \\begin{cases} 3x^2 - 2x = 4x - 2 \\\\ 3x^2 - 2x = -4x + 2 \\end{cases} \\Rightarrow \\begin{cases} 3x^2 - 6x + 2 = 0 \\\\ 3x^2 + 2x - 2 = 0 \\end{cases}$\nدر هر دو معادله $\\Delta > 0$ بوده و دو ریشهٔ حقیقی وجود دارد. مجموع ریشه‌ها در معادلهٔ درجه‌دو، برابر $S = -\\frac{b}{a}$ است.\n$S_1 = \\frac{6}{3} = 2, \\quad S_2 = -\\frac{2}{3} \\Rightarrow S_1 + S_2 = 2 - \\frac{2}{3} = \\frac{4}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 369,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "$-2x$ با یک عبارت قدرمطلقی برابر شده است بنابراین نامنفی بوده و $x \\le 0$ می‌باشد.\n$|3x+a| = -2x \\Rightarrow \\begin{cases} 3x+a = -2x \\\\ 3x+a = 2x \\end{cases} \\Rightarrow \\begin{cases} x = -\\frac{a}{5} \\\\ x = -a \\end{cases}$\nمی‌دانیم $x \\le 0$ است، بنابراین $-\\frac{a}{5}$ و $-a$ نیز باید کوچک‌تر مساوی صفر باشند یعنی:\n$a \\ge 0$\nاما چون معادله دارای دو جواب است، $-\\frac{a}{5}$ و $-a$ نباید برابر باشند؛ بنابراین $a = 0$ قابل قبول نیست در نتیجه:\n$a > 0$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 370,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "معادله داده‌شده در صورتی دارای سه ریشهٔ متمایز است که $k$ برابر با قدرمطلق عرض رأس سهمی باشد.\nطول رأس سهمی برابر با $x = -\\frac{b}{2a} = 1$ یعنی است.\nبنابراین: $k = |1 - 2 - 4| = 5$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            47,
+            532,
+            237,
+            615
+          ],
+          "placement": "solution_text",
+          "filename": "page_0035.jpg",
+          "alt": "نمودار سهمی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 371,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "اگر $|x| < a$ و $a > 0$ باشد، آن‌گاه $-a < x < a$ است.\n$|2x-7| < 8 \\Rightarrow -8 < 2x-7 < 8 \\Rightarrow -1 < 2x < 15 \\Rightarrow -\\frac{1}{2} < x < \\frac{15}{2} \\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{0,1,2,\\dots,7\\}$\nشامل ۸ عدد صحیح است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 372,
+      "solution_page": "page_0035.jpg",
+      "solution_text": "با شرط $x \\ne 1$ دو طرف نامعادله را در $|x-1|$ ضرب می‌کنیم.\n$|\\frac{2x+3}{x-1}| > 3 \\Rightarrow |2x+3| > 3|x-1| \\xrightarrow{\\text{توان ۲}} (2x+3)^2 > 9(x-1)^2$\n$\\Rightarrow 5x^2 - 30x < 0 \\Rightarrow 5x(x-6) < 0 \\Rightarrow 0 < x < 6$\nبا در نظر گرفتن شرط $x \\ne 1$ مجموعه جواب به صورت $(0, 1) \\cup (1, 6)$ می‌باشد. واضح است که زیربازهٔ بزرگ‌تر $(1, 6)$ می‌باشد. در نتیجه:\n$\\beta - \\alpha = 6 - 1 = 5$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 373,
+      "solution_page": "page_0036.jpg",
+      "solution_text": "روش اول: نامعادلة داده‌شده را به دو نامعادله تقسیم کرده، پس از حل هر کدام اشتراک جواب‌ها را به دست می‌آوریم.\n$$ -1 < \\frac{x+1}{x-2} < 3 \\Rightarrow \\begin{cases} \\frac{x+1}{x-2} > -1 \\Rightarrow \\frac{x+1}{x-2} + 1 > 0 \\\\ \\frac{x+1}{x-2} < 3 \\Rightarrow \\frac{x+1}{x-2} - 3 < 0 \\end{cases} $$\n$$ \\Rightarrow \\begin{cases} \\frac{2x-1}{x-2} > 0 \\Rightarrow \\begin{cases} x < \\frac{1}{2} \\\\ x > 2 \\end{cases} \\quad (1) \\\\ \\frac{-2x+7}{x-2} < 0 \\Rightarrow \\begin{cases} x < 2 \\\\ x > \\frac{7}{2} \\end{cases} \\quad (2) \\end{cases} $$\n$$ (1) \\cap (2) \\Rightarrow \\begin{cases} x < \\frac{1}{2} \\\\ x > \\frac{7}{2} \\end{cases} \\quad (\\text{I}) $$\nحال، نامعادلة قدرمطلقی را حل کرده، پاسخ را با $(\\text{I})$ برابر قرار می‌دهیم.\n$$ |x-\\alpha| > \\beta \\Rightarrow \\begin{cases} x - \\alpha > \\beta \\\\ x - \\alpha < -\\beta \\end{cases} \\Rightarrow \\begin{cases} x > \\alpha + \\beta \\\\ x < \\alpha - \\beta \\end{cases} $$\n$$ \\Rightarrow \\begin{cases} \\alpha + \\beta = \\frac{7}{2} \\\\ \\alpha - \\beta = \\frac{1}{2} \\end{cases} \\Rightarrow \\alpha = 2, \\beta = \\frac{3}{2} \\Rightarrow \\alpha \\beta = 3 $$\nروش دوم: از سه طرف نامعادلة $-1 < \\frac{x+1}{x-2} < 3$ میانگین $-1$ و $3$ یعنی $1$ را کم می‌کنیم.\n$$ -1 - 1 < \\frac{x+1}{x-2} - 1 < 3 - 1 \\Rightarrow -2 < \\frac{3}{x-2} < 2 $$\n$$ \\Rightarrow |\\frac{3}{x-2}| < 2 \\Rightarrow |x-2| > \\frac{3}{2} $$\n$$ \\Rightarrow \\alpha = 2, \\beta = \\frac{3}{2} \\Rightarrow \\alpha \\beta = 3 $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            72,
+            514,
+            502,
+            888
+          ],
+          "placement": "solution",
+          "filename": "page_0036.jpg",
+          "alt": "پاسخ سوال ۳۷۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 374,
+      "solution_page": "page_0036.jpg",
+      "solution_text": "با فرض $x \\neq 2$ دو طرف نامعادله را در $|x+3|$ ضرب می‌کنیم.\n$$ |\\frac{2x+3}{x+3}| < 1 \\Rightarrow |2x+3| < |x+3| $$\n$$ \\xrightarrow{\\text{توان } 2} (2x+3)^2 < (x+3)^2 \\Rightarrow 3x^2 + 6x < 0 $$\n$$ \\Rightarrow -2 < x < 0 $$\nاز دو طرف نامعادله میانگین $-2$ و صفر یعنی $-1$ را کم می‌کنیم.\n$$ -2 + 1 < x + 1 < 0 + 1 \\Rightarrow -1 < x + 1 < 1 $$\n$$ \\Rightarrow |x+1| < 1 \\Rightarrow \\alpha = -1, \\beta = 1 \\Rightarrow \\beta - \\alpha = 2 $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            595,
+            514,
+            762,
+            888
+          ],
+          "placement": "solution",
+          "filename": "page_0036.jpg",
+          "alt": "پاسخ سوال ۳۷۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 375,
+      "solution_page": "page_0036.jpg",
+      "solution_text": "ابتدا نامعادلة درجه‌دو را حل می‌کنیم.\n$$ 2x^2 + 5x - 7 < 0 \\Rightarrow -\\frac{7}{2} < x < 1 $$\nحال به دو روش می‌توان مسئله را حل کرد.\nروش اول: نامعادلة قدرمطلقی را حل می‌کنیم.\n$$ |2x+\\alpha| < \\beta \\Rightarrow -\\beta < 2x+\\alpha < \\beta $$\n$$ \\Rightarrow \\frac{-\\beta-\\alpha}{2} < x < \\frac{\\beta-\\alpha}{2} $$\nاین بازه با $-\\frac{7}{2} < x < 1$ برابر است و در نتیجه:\n$$ \\begin{cases} \\frac{-\\beta-\\alpha}{2} = -\\frac{7}{2} \\\\ \\frac{\\beta-\\alpha}{2} = 1 \\end{cases} \\Rightarrow \\begin{cases} -\\beta-\\alpha = -7 \\\\ \\beta-\\alpha = 2 \\end{cases} \\Rightarrow -2\\alpha = -5 $$\n$$ \\Rightarrow \\alpha = \\frac{5}{2} \\Rightarrow \\beta = \\frac{9}{2} \\Rightarrow \\beta-\\alpha = 2 $$\nالبته در معادلة دوم مقدار $\\beta-\\alpha$ برابر با $2$ بود و نیازی به بقیة راه‌حل نبود.\nروش دوم: از سه طرف نامعادلة $-\\frac{7}{2} < x < 1$ میانگین $1$ و $-\\frac{7}{2}$ یعنی $-\\frac{5}{4}$ را کم می‌کنیم.\n$$ -\\frac{7}{2} + \\frac{5}{4} < x + \\frac{5}{4} < 1 + \\frac{5}{4} \\Rightarrow -\\frac{9}{4} < x + \\frac{5}{4} < \\frac{9}{4} $$\n$$ \\Rightarrow |x+\\frac{5}{4}| < \\frac{9}{4} \\Rightarrow |2x+\\frac{5}{2}| < \\frac{9}{2} $$\n$$ \\Rightarrow \\alpha = \\frac{5}{2}, \\beta = \\frac{9}{2} \\Rightarrow \\beta-\\alpha = 2 $$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            763,
+            514,
+            895,
+            888
+          ],
+          "placement": "solution",
+          "filename": "page_0036.jpg",
+          "alt": "پاسخ سوال ۳۷۵ قسمت اول"
+        },
+        {
+          "region": [
+            72,
+            97,
+            323,
+            477
+          ],
+          "placement": "solution",
+          "filename": "page_0036.jpg",
+          "alt": "پاسخ سوال ۳۷۵ قسمت دوم"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 376,
+      "solution_page": "page_0036.jpg",
+      "solution_text": "روش اول: با توجه به ریشة داخل قدرمطلق نامعادله را در دو محدوده بررسی می‌کنیم.\n$$ \\begin{cases} x < -1 \\Rightarrow 3x - 2 < -(x+1) \\Rightarrow 4x < 1 \\\\ x \\geq -1 \\Rightarrow 3x - 2 < x+1 \\Rightarrow 2x < 3 \\end{cases} $$\n$$ \\Rightarrow \\begin{cases} x < \\frac{1}{4} \\xrightarrow{x < -1} x < -1 \\quad (1) \\\\ x < \\frac{3}{2} \\xrightarrow{-1 \\leq x} -1 \\leq x < \\frac{3}{2} \\quad (2) \\end{cases} $$\n$$ (1) \\cup (2) = (-\\infty, \\frac{3}{2}) \\text{ :مجموعةجواب} $$\nروش دوم: به ازای $x < \\frac{2}{3}$ عبارت سمت چپ منفی و سمت راست نامنفی است و نامعادله همواره صحیح است.\nبه ازای $x \\geq \\frac{2}{3}$ عبارت داخل قدرمطلق مثبت بوده و خواهیم داشت:\n$$ 3x-2 < x+1 \\Rightarrow x < \\frac{3}{2} $$\nبا توجه به دو محدودة به دست آمده پاسخ $(-\\infty, \\frac{3}{2})$ می‌باشد.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            326,
+            97,
+            606,
+            477
+          ],
+          "placement": "solution",
+          "filename": "page_0036.jpg",
+          "alt": "پاسخ سوال ۳۷۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 377,
+      "solution_page": "page_0036.jpg",
+      "solution_text": "ریشه‌های عبارت $P$ را محاسبه کرده، جدول تعیین علامت را رسم می‌کنیم.\n$$ \\begin{cases} 1-|x| = 0 \\Rightarrow x = \\pm 1 \\\\ 2x+4 = 0 \\Rightarrow x = -2 \\end{cases} $$\n$$ \\begin{array}{c|ccccccc} x & & -2 & & -1 & & 1 & \\\\ \\hline P & + & \\circ & - & \\circ & + & \\circ & - \\end{array} $$\nعبارت $P$ در فاصلة $(1, +\\infty)$ منفی است بنابراین $k=1$ می‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            609,
+            97,
+            735,
+            477
+          ],
+          "placement": "solution",
+          "filename": "page_0036.jpg",
+          "alt": "پاسخ سوال ۳۷۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 378,
+      "solution_page": "page_0036.jpg",
+      "solution_text": "روش اول: با توجه به ریشة داخل قدرمطلق دو بازة زیر را در نظر می‌گیریم.\n$$ \\begin{cases} x \\geq 0 \\Rightarrow 3x^2 - 2x - 1 < 0 \\Rightarrow -\\frac{1}{3} < x < 1 \\\\ x < 0 \\Rightarrow 3x^2 + 2x - 1 < 0 \\Rightarrow -1 < x < \\frac{1}{3} \\end{cases} $$\n$$ \\xrightarrow{x \\geq 0} 0 \\leq x < 1 $$\n$$ \\xrightarrow{x < 0} -1 < x < 0 $$\n$$ \\xrightarrow{\\cup} \\text{مجموعةجواب: } (-1, 1) \\Rightarrow a+b = 0 $$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            737,
+            97,
+            893,
+            477
+          ],
+          "placement": "solution",
+          "filename": "page_0036.jpg",
+          "alt": "پاسخ سوال ۳۷۸"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

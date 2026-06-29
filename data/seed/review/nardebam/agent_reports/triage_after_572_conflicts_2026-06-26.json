@@ -1,0 +1,233 @@
+{
+  "report": "triage_after_572_conflicts",
+  "generated_at_local": "2026-06-26T06:00:00+03:30",
+  "workspace": "C:\\Users\\K1\\Desktop\\Projects\\Gauss",
+  "scope": {
+    "mode": "triage_and_report_only",
+    "raw_edits": false,
+    "broad_promote_ran": false,
+    "notes": [
+      "No raw files were edited.",
+      "No non-dry-run promotion was executed.",
+      "Only selected dry-run promotion checks were run for fresh/high-risk artifacts."
+    ]
+  },
+  "inputs_checked": {
+    "join_conflicts": {
+      "path": "data/seed/review/nardebam/join_conflicts.json",
+      "last_write_local": "2026-06-26T05:47:39.5128968+03:30",
+      "conflict_count": 572
+    },
+    "repair_dir": "data/seed/review/nardebam/jules_repairs",
+    "scripts_checked": [
+      "scripts/promote_jules_repairs.mjs",
+      "scripts/filter_jules_answer_key_by_solution.mjs"
+    ]
+  },
+  "conflict_breakdown": {
+    "by_top_level_issue": {
+      "unknown_with_issues_array": 504,
+      "duplicate_question_number": 64,
+      "duplicate_solution": 2,
+      "question_total": 2
+    },
+    "largest_clusters": [
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "issue": "missing_key",
+        "count": 73,
+        "range": "2041-2119"
+      },
+      {
+        "subject": "math",
+        "topic_key": "derivative_applications",
+        "issue": "duplicate_question_number",
+        "count": 64,
+        "range": "1-64"
+      },
+      {
+        "subject": "math",
+        "topic_key": "statistics",
+        "issue": "missing_solution",
+        "count": 64,
+        "range": "2050-2119"
+      },
+      {
+        "subject": "math",
+        "topic_key": "combinatorics",
+        "issue": "solution_key_mismatch",
+        "count": 61,
+        "range": "1738-1822"
+      },
+      {
+        "subject": "math",
+        "topic_key": "probability",
+        "issue": "solution_key_mismatch",
+        "count": 50,
+        "range": "1824-1891"
+      },
+      {
+        "subject": "math",
+        "topic_key": "absolute_value_floor",
+        "issue": "missing_solution",
+        "count": 43,
+        "range": "379-421"
+      },
+      {
+        "subject": "math",
+        "topic_key": "geometry",
+        "issue": "solution_key_mismatch",
+        "count": 41,
+        "range": "1949-1997"
+      },
+      {
+        "subject": "math",
+        "topic_key": "visual_thinking_conics",
+        "issue": "missing_solution",
+        "count": 23,
+        "range": "1666-1731"
+      }
+    ]
+  },
+  "fresh_artifact_triage": {
+    "safe_targeted_promote_candidates": [
+      {
+        "taskId": "math-topic-14-visual-conics-repair",
+        "verdict": "safe_targeted_replace_but_likely_already_integrated",
+        "dry_run_mode": "replace",
+        "rows": 94,
+        "base_raw": "data/seed/review/nardebam/raw/math-topic-14.json",
+        "why": "Valid 94-question artifact for math-topic-14. Current raw already has all question numbers 1638-1731, so this does not address the remaining visual_conics missing_solution cluster."
+      },
+      {
+        "taskId": "math-topic-15-combinatorics-1735-1822",
+        "verdict": "safe_targeted_replace_but_not_a_solution_mismatch_fix",
+        "dry_run_mode": "replace",
+        "rows": 88,
+        "base_raw": "data/seed/review/nardebam/raw/math-topic-15.json",
+        "why": "Valid 88-question artifact. Remaining combinatorics conflicts are solution_key_mismatch, so replacing questions alone is low-risk but not sufficient."
+      }
+    ],
+    "safe_no_effect_or_low_value": [
+      {
+        "taskId": "math-answer-key-verified-mismatch-ranges-solution-agree",
+        "verdict": "safe_no_effect",
+        "dry_run_mode": "skip_not_better_answer_key",
+        "rows": 216,
+        "why": "Filtered artifact agrees with current solution stated options, but current math-answer-key already has these values or no promotable replacement remains."
+      },
+      {
+        "taskId": "math-solutions-07-derivative-applications-1248-1466-retry2",
+        "verdict": "valid_but_no_current_replacements",
+        "dry_run_mode": "merge",
+        "rows": 117,
+        "mergedRows": 225,
+        "replaced": 0,
+        "why": "Valid solution rows 1291-1407, but promote dry-run would not replace current math-solutions-07 rows. It does not fix the derivative_applications duplicate question-number issue in math-topic-11."
+      },
+      {
+        "taskId": "math-solutions-10-repair",
+        "verdict": "valid_but_no_current_replacements",
+        "dry_run_mode": "merge",
+        "rows": 45,
+        "mergedRows": 101,
+        "replaced": 0
+      },
+      {
+        "taskId": "math-solutions-10-statistics-1949-2042-reextract",
+        "verdict": "valid_but_no_current_replacements",
+        "dry_run_mode": "merge",
+        "rows": 28,
+        "mergedRows": 101,
+        "replaced": 0,
+        "why": "Does not cover the main missing statistics solutions 2050-2119."
+      },
+      {
+        "taskId": "physics-answer-key-111-220",
+        "verdict": "safe_no_effect",
+        "dry_run_mode": "skip_not_better_answer_key",
+        "rows": 93
+      }
+    ],
+    "needs_filter_or_repair_before_any_promote": [
+      {
+        "taskId": "math-answer-key-verified-mismatch-ranges",
+        "verdict": "needs_filter",
+        "dry_run_mode": "merge_answer_key",
+        "rows": 580,
+        "would_replace": 26,
+        "why": "Unfiltered mismatch answer key would replace existing answers. Use the solution-agree filter path, not direct promotion."
+      },
+      {
+        "taskId": "math-solutions-gap-1912-2119",
+        "verdict": "empty_artifact",
+        "dry_run_mode": "skip_empty_solution_artifact",
+        "rows": 0
+      },
+      {
+        "taskId": "math-solutions-gap-379-421",
+        "verdict": "empty_artifact",
+        "dry_run_mode": "skip_empty_solution_artifact",
+        "rows": 0
+      },
+      {
+        "taskId": "physics-topic-07-08-boundary-806-807-retry",
+        "verdict": "empty_or_wrong_shape_topic_artifact",
+        "dry_run_mode": "skip_shorter_topic_artifact",
+        "rows": 0,
+        "existingRows": 130
+      }
+    ]
+  },
+  "large_cluster_next_steps": [
+    {
+      "cluster": "statistics missing_key / missing_solution",
+      "current_state": {
+        "math-topic-18_present_in_1936_2042": 44,
+        "math-topic-18_missing_in_1936_2042": 63,
+        "math-solutions-10_present_in_1936_2119": 101,
+        "math-solutions-10_missing_in_1936_2119": 83,
+        "math-answer-key_missing_2041_2119": 79
+      },
+      "safe_next_step": "Do not promote the current statistics reextract broadly. Create a narrow repair artifact for math answer keys 2041-2042 if 2042 is truly in scope, and separately re-extract/repair solutions for 2050-2119. First resolve the numbering contract because join_conflicts expects math total 2042 while conflicts reference 2041-2119."
+    },
+    {
+      "cluster": "derivative_applications duplicate_question_number",
+      "current_state": {
+        "raw_file": "data/seed/review/nardebam/raw/math-topic-11.json",
+        "bad_local_question_numbers_present": "1-64",
+        "expected_range_checked": "1248-1466",
+        "present_in_expected_range": 121,
+        "missing_in_expected_range": 98
+      },
+      "safe_next_step": "Repair math-topic-11 question numbering/content as a topic artifact, not a solution artifact. Offset or re-extract the first 64 derivative_applications rows to their real global question numbers, then targeted dry-run promote only that taskId and rerun the join conflict check."
+    },
+    {
+      "cluster": "visual_conics missing_solution",
+      "current_state": {
+        "raw_questions": "math-topic-14 has all 94 questions in 1638-1731",
+        "remaining_conflict": "23 missing solutions in 1666-1731"
+      },
+      "safe_next_step": "Do not spend more effort on question artifact math-topic-14 for this cluster. Request or build a narrow solutions artifact for 1666-1731, then promote only if it contains non-empty solution_text and stated_correct_option where available."
+    },
+    {
+      "cluster": "absolute_value_floor missing_solution",
+      "current_state": {
+        "raw_file": "data/seed/review/nardebam/raw/math-solutions-03.json",
+        "missing_range": "379-421",
+        "present_in_range": 0,
+        "empty_artifact_seen": "math-solutions-gap-379-421"
+      },
+      "safe_next_step": "Treat the existing gap artifact as failed/empty. Re-request a focused solutions-only repair for 379-421 with required non-empty solution_text, stated_correct_option, media_regions array, and review_notes array; then targeted dry-run promote only that taskId."
+    }
+  ],
+  "recommended_command_pattern": {
+    "dry_run_only": "node scripts/promote_jules_repairs.mjs --dry-run --only=<taskId>",
+    "avoid": [
+      "node scripts/promote_jules_repairs.mjs",
+      "any broad promote over the full jules_repairs directory",
+      "manual raw edits before a targeted artifact validates"
+    ]
+  }
+}

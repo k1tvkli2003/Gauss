@@ -1,0 +1,45 @@
+{
+  "task_id": "physics-topic-08",
+  "subject": "physics",
+  "topic_key": "one_dimensional_motion",
+  "questions": [
+    {
+      "question_number": 806,
+      "question_page": 2,
+      "question_text": "اگر اندازه جابه‌جایی نوک عقربه دقیقه‌شمار یک ساعت عقربه‌ای در مدت ۱۵ دقیقه $10\\sqrt{2}$ سانتی‌متر باشد، مسافت طی‌شده توسط آن در همین مدت چند سانتی‌متر است؟",
+      "options": [
+        "$10$",
+        "$20$",
+        "$5\\pi$",
+        "$10\\pi$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 807,
+      "question_page": 2,
+      "question_text": "مطابق شکل، متحرکی مسیر $ABCDEF$ را که شامل سه ربع یک دایره به شعاع $16\\text{ cm}$ و یک نیم‌دایره به شعاع $7\\text{ cm}$ است، می‌پیماید. مسافت طی‌شده توسط متحرک چند میلی‌متر بیشتر از اندازه جابه‌جایی آن است؟ ($\\pi = \\frac{195}{62}$)",
+      "options": [
+        "$365$",
+        "$536$",
+        "$635$",
+        "$653$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            120,
+            320,
+            650,
+            580
+          ],
+          "placement": "stem",
+          "alt": "نمودار مسیر متحرک شامل سه ربع دایره و یک نیم‌دایره"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

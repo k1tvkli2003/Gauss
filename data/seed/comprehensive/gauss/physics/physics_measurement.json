@@ -1,0 +1,3662 @@
+[
+  {
+    "id": "jules_v2_physics_10_physics_measurement_001",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه‌گیری $3500 \\text{ m}$ معادل با کدام گزینه برحسب نانومتر ($\\text{nm}$) در نمادگذاری علمی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3.5 \\times 10^{11}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3.5 \\times 10^{12}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3.5 \\times 10^{13}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$35 \\times 10^{12}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول باید به یاد داشت که پیشوند نانو ($n$) معادل ضریب $10^{-9}$ است.\nبرای تبدیل از واحد اصلی (متر) به نانومتر، باید مقدار را بر $10^{-9}$ تقسیم کنیم (یا در $10^{9}$ ضرب کنیم):\n\n$$3500 \\text{ m} = 3500 \\times 10^{9} \\text{ nm}$$\n\nحالا باید این عدد را به صورت نمادگذاری علمی ($a \\times 10^n$ که $1 \\le a < 10$) بنویسیم:\n$$3500 = 3.5 \\times 10^{3}$$\nپس در کل داریم:\n$$(3.5 \\times 10^{3}) \\times 10^{9} = 3.5 \\times 10^{12} \\text{ nm}$$\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه فرمول «داده شده تقسیم بر خواسته شده» استفاده می‌شود. داده شده متر ($10^0$)، خواسته شده نانو ($10^{-9}$). پس می‌شود $3500 \\times \\frac{10^0}{10^{-9}} = 3500 \\times 10^{9}$. ممیز جابجا می‌شود سریع نتیجه می‌شود $3.5 \\times 10^{12}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_002",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه‌گیری $0.042 \\text{ m}$ معادل با کدام گزینه برحسب مگامتر ($\\text{Mm}$) در نمادگذاری علمی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4.2 \\times 10^{-9}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$42 \\times 10^{-8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4.2 \\times 10^{-8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4.2 \\times 10^{-7}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول باید به یاد داشت که پیشوند مگا ($M$) معادل ضریب $10^{6}$ است.\nبرای تبدیل از واحد اصلی (متر) به مگامتر، باید مقدار را بر $10^{6}$ تقسیم کنیم (یا در $10^{-6}$ ضرب کنیم):\n\n$$0.042 \\text{ m} = 0.042 \\times 10^{-6} \\text{ Mm}$$\n\nحالا باید این عدد را به صورت نمادگذاری علمی ($a \\times 10^n$ که $1 \\le a < 10$) بنویسیم:\n$$0.042 = 4.2 \\times 10^{-2}$$\nپس در کل داریم:\n$$(4.2 \\times 10^{-2}) \\times 10^{-6} = 4.2 \\times 10^{-8} \\text{ Mm}$$\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه فرمول «داده شده تقسیم بر خواسته شده» استفاده می‌شود. داده شده متر ($10^0$)، خواسته شده مگا ($10^{6}$). پس می‌شود $0.042 \\times \\frac{10^0}{10^{6}} = 0.042 \\times 10^{-6}$. ممیز جابجا می‌شود سریع نتیجه می‌شود $4.2 \\times 10^{-8}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_003",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه‌گیری $58000 \\text{ m}$ معادل با کدام گزینه برحسب پیکومتر ($\\text{pm}$) در نمادگذاری علمی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5.8 \\times 10^{17}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5.8 \\times 10^{16}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5.8 \\times 10^{15}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$58 \\times 10^{16}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول باید به یاد داشت که پیشوند پیکو ($p$) معادل ضریب $10^{-12}$ است.\nبرای تبدیل از واحد اصلی (متر) به پیکومتر، باید مقدار را بر $10^{-12}$ تقسیم کنیم (یا در $10^{12}$ ضرب کنیم):\n\n$$58000 \\text{ m} = 58000 \\times 10^{12} \\text{ pm}$$\n\nحالا باید این عدد را به صورت نمادگذاری علمی ($a \\times 10^n$ که $1 \\le a < 10$) بنویسیم:\n$$58000 = 5.8 \\times 10^{4}$$\nپس در کل داریم:\n$$(5.8 \\times 10^{4}) \\times 10^{12} = 5.8 \\times 10^{16} \\text{ pm}$$\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه فرمول «داده شده تقسیم بر خواسته شده» استفاده می‌شود. داده شده متر ($10^0$)، خواسته شده پیکو ($10^{-12}$). پس می‌شود $58000 \\times \\frac{10^0}{10^{-12}} = 58000 \\times 10^{12}$. ممیز جابجا می‌شود سریع نتیجه می‌شود $5.8 \\times 10^{16}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_004",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه‌گیری $0.0075 \\text{ m}$ معادل با کدام گزینه برحسب ترامتر ($\\text{Tm}$) در نمادگذاری علمی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$7.5 \\times 10^{-14}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$75 \\times 10^{-15}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7.5 \\times 10^{-15}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7.5 \\times 10^{-16}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول باید به یاد داشت که پیشوند ترا ($T$) معادل ضریب $10^{12}$ است.\nبرای تبدیل از واحد اصلی (متر) به ترامتر، باید مقدار را بر $10^{12}$ تقسیم کنیم (یا در $10^{-12}$ ضرب کنیم):\n\n$$0.0075 \\text{ m} = 0.0075 \\times 10^{-12} \\text{ Tm}$$\n\nحالا باید این عدد را به صورت نمادگذاری علمی ($a \\times 10^n$ که $1 \\le a < 10$) بنویسیم:\n$$0.0075 = 7.5 \\times 10^{-3}$$\nپس در کل داریم:\n$$(7.5 \\times 10^{-3}) \\times 10^{-12} = 7.5 \\times 10^{-15} \\text{ Tm}$$\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه فرمول «داده شده تقسیم بر خواسته شده» استفاده می‌شود. داده شده متر ($10^0$)، خواسته شده ت ($10^{12}$). پس می‌شود $0.0075 \\times \\frac{10^0}{10^{12}} = 0.0075 \\times 10^{-12}$. ممیز جابجا می‌شود سریع نتیجه می‌شود $7.5 \\times 10^{-15}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_005",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار $2.5 \\text{ cm}^2$ برابر با چند $\\text{mm}^2$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2.5 \\times 10^{0}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2.5 \\times 10^{1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2.5 \\times 10^{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2.5 \\times 10^{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل واحدهای توان‌دار، اول واحد بدون توان را تبدیل می‌کنیم بعد کل عبارت را به توان می‌رسانیم.\nمی‌دانیم:\n$$1 \\text{ cm} = 10^{1} \\text{ mm}$$\nچون واحد ما به توان 2 است، طرفین را به توان 2 می‌رسانیم:\n$$(1 \\text{ cm})^2 = (10^{1} \\text{ mm})^2 \\implies 1 \\text{ cm}^2 = 10^{2} \\text{ mm}^2$$\nحالا مقدار اولیه را در ضریب تبدیل ضرب می‌کنیم:\n$$2.5 \\times 10^{2} = 2.5 \\times 10^{2}$$\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توانِ تبدیل، همیشه ضربدر بُعدِ واحد می‌شود. از cm ($10^{-2}$) به mm ($10^{-3}$) اختلافشان $10^{1}$ است. چون واحد مربع است، توان  در 2 ضرب می‌شود می‌شود $10^{2}$. به $2.5$ اضافه می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_006",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار $0.04 \\text{ m}^3$ برابر با چند $\\text{cm}^3$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{7}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{1}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل واحدهای توان‌دار، اول واحد بدون توان را تبدیل می‌کنیم بعد کل عبارت را به توان می‌رسانیم.\nمی‌دانیم:\n$$1 \\text{ m} = 10^{2} \\text{ cm}$$\nچون واحد ما به توان 3 است، طرفین را به توان 3 می‌رسانیم:\n$$(1 \\text{ m})^3 = (10^{2} \\text{ cm})^3 \\implies 1 \\text{ m}^3 = 10^{6} \\text{ cm}^3$$\nحالا مقدار اولیه را در ضریب تبدیل ضرب می‌کنیم:\n$$0.04 \\times 10^{6} = 4 \\times 10^{4}$$\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توانِ تبدیل، همیشه ضربدر بُعدِ واحد می‌شود. از m ($10^{0}$) به cm ($10^{-2}$) اختلافشان $10^{2}$ است. چون واحد مکعب است، توان  در 3 ضرب می‌شود می‌شود $10^{6}$. به $0.04$ اضافه می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_007",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار $150 \\text{ mm}^2$ برابر با چند $\\text{dm}^2$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{0}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{-4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل واحدهای توان‌دار، اول واحد بدون توان را تبدیل می‌کنیم بعد کل عبارت را به توان می‌رسانیم.\nمی‌دانیم:\n$$1 \\text{ mm} = 10^{-2} \\text{ dm}$$\nچون واحد ما به توان 2 است، طرفین را به توان 2 می‌رسانیم:\n$$(1 \\text{ mm})^2 = (10^{-2} \\text{ dm})^2 \\implies 1 \\text{ mm}^2 = 10^{-4} \\text{ dm}^2$$\nحالا مقدار اولیه را در ضریب تبدیل ضرب می‌کنیم:\n$$150 \\times 10^{-4} = 1.5 \\times 10^{-2}$$\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توانِ تبدیل، همیشه ضربدر بُعدِ واحد می‌شود. از mm ($10^{-3}$) به dm ($10^{-1}$) اختلافشان $10^{-2}$ است. چون واحد مربع است، توان  در 2 ضرب می‌شود می‌شود $10^{-4}$. به $150$ اضافه می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_008",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار $0.5 \\text{ km}^3$ برابر با چند $\\text{m}^3$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{11}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل واحدهای توان‌دار، اول واحد بدون توان را تبدیل می‌کنیم بعد کل عبارت را به توان می‌رسانیم.\nمی‌دانیم:\n$$1 \\text{ km} = 10^{3} \\text{ m}$$\nچون واحد ما به توان 3 است، طرفین را به توان 3 می‌رسانیم:\n$$(1 \\text{ km})^3 = (10^{3} \\text{ m})^3 \\implies 1 \\text{ km}^3 = 10^{9} \\text{ m}^3$$\nحالا مقدار اولیه را در ضریب تبدیل ضرب می‌کنیم:\n$$0.5 \\times 10^{9} = 5 \\times 10^{8}$$\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توانِ تبدیل، همیشه ضربدر بُعدِ واحد می‌شود. از km ($10^{3}$) به m ($10^{0}$) اختلافشان $10^{3}$ است. چون واحد مکعب است، توان  در 3 ضرب می‌شود می‌شود $10^{9}$. به $0.5$ اضافه می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_009",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چگالی ماده‌ای $13.6 \\text{ g/cm}^3$ است. این چگالی در سیستم SI چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1360$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1.36e+06$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$13600$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$136000$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "سیستم SI برای چگالی $\\text{kg/m}^3$ است. برای تبدیل $\\text{g/cm}^3$ به $\\text{kg/m}^3$:\n$$1 \\text{ g} = 10^{-3} \\text{ kg}$$\n$$1 \\text{ cm}^3 = (10^{-2} \\text{ m})^3 = 10^{-6} \\text{ m}^3$$\nپس:\n$$1 \\text{ g/cm}^3 = \\dfrac{10^{-3}}{10^{-6}} \\text{ kg/m}^3 = 1000 \\text{ kg/m}^3$$\nبنابراین $13.6 \\text{ g/cm}^3$ می‌شود $13600 \\text{ kg/m}^3$.\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "قانون طلایی چگالی: برای تبدیل گرم بر سانتی‌متر مکعب به کیلوگرم بر متر مکعب (SI)، فقط عدد  در هزار ضرب می‌شود. همین. $13.6 \\times 1000 = 13600$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_010",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چگالی ماده‌ای $0.8 \\text{ g/cm}^3$ است. این چگالی در سیستم SI چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$80000$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$800$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$80$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8000$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "سیستم SI برای چگالی $\\text{kg/m}^3$ است. برای تبدیل $\\text{g/cm}^3$ به $\\text{kg/m}^3$:\n$$1 \\text{ g} = 10^{-3} \\text{ kg}$$\n$$1 \\text{ cm}^3 = (10^{-2} \\text{ m})^3 = 10^{-6} \\text{ m}^3$$\nپس:\n$$1 \\text{ g/cm}^3 = \\dfrac{10^{-3}}{10^{-6}} \\text{ kg/m}^3 = 1000 \\text{ kg/m}^3$$\nبنابراین $0.8 \\text{ g/cm}^3$ می‌شود $800 \\text{ kg/m}^3$.\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "قانون طلایی چگالی: برای تبدیل گرم بر سانتی‌متر مکعب به کیلوگرم بر متر مکعب (SI)، فقط عدد  در هزار ضرب می‌شود. همین. $0.8 \\times 1000 = 800$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_011",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چگالی ماده‌ای $800 \\text{ kg/m}^3$ است. این چگالی برحسب $\\text{g/cm}^3$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0.8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$80$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.08$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل از $\\text{kg/m}^3$ به $\\text{g/cm}^3$:\n$$1 \\text{ kg} = 10^3 \\text{ g}$$\n$$1 \\text{ m}^3 = (10^2 \\text{ cm})^3 = 10^6 \\text{ cm}^3$$\nپس:\n$$1 \\text{ kg/m}^3 = \\dfrac{10^3}{10^6} \\text{ g/cm}^3 = 10^{-3} \\text{ g/cm}^3$$\nبنابراین $800 \\text{ kg/m}^3$ می‌شود $0.8 \\text{ g/cm}^3$.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برعکسِ حالت قبل: وقتی می‌خواهیم از SI (واحدهای بزرگتر) به $\\text{g/cm}^3$ (واحدهای کوچکتر آزمایشگاهی) برویم، فقط عدد  بر هزار تقسیم می‌شود. $800 \\div 1000 = 0.8$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_012",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "چگالی ماده‌ای $2700 \\text{ kg/m}^3$ است. این چگالی برحسب $\\text{g/cm}^3$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2.7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$270$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.27$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$27$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل از $\\text{kg/m}^3$ به $\\text{g/cm}^3$:\n$$1 \\text{ kg} = 10^3 \\text{ g}$$\n$$1 \\text{ m}^3 = (10^2 \\text{ cm})^3 = 10^6 \\text{ cm}^3$$\nپس:\n$$1 \\text{ kg/m}^3 = \\dfrac{10^3}{10^6} \\text{ g/cm}^3 = 10^{-3} \\text{ g/cm}^3$$\nبنابراین $2700 \\text{ kg/m}^3$ می‌شود $2.7 \\text{ g/cm}^3$.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برعکسِ حالت قبل: وقتی می‌خواهیم از SI (واحدهای بزرگتر) به $\\text{g/cm}^3$ (واحدهای کوچکتر آزمایشگاهی) برویم، فقط عدد  بر هزار تقسیم می‌شود. $2700 \\div 1000 = 2.7$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_013",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در معادله انرژی جنبشی $K = \\frac{1}{2}mv^2$، بُعد کمیت $K$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$ML^2T^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$M^2L^2T^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$ML^2T^{-3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$MLT^{-2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اعداد ثابت مثل $\\frac{1}{2}$ بُعد ندارند.\nجرم $m$ بُعدش $M$ است.\nسرعت $v$ بُعدش $LT^{-1}$ است، پس $v^2$ می‌شود $L^2T^{-2}$.\nحالا با هم ضربشان می‌کنیم:\n$$[K] = M \\times (L^2T^{-2}) = ML^2T^{-2}$$\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "بُعد انرژی همیشه همان بُعد کار ($W=Fd$) است. نیرو $MLT^{-2}$ ضربدر جابجایی $L$ می‌شود $ML^2T^{-2}$. به سرعت این مورد بررسی می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_014",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با توجه به قانون نیروی گرانش $F = G \\frac{m_1 m_2}{r^2}$ (پیدا کردن بُعد $G$)، بُعد ثابت گرانش ($G$) کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$M^{-1}L^2T^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$M^{-2}L^3T^{-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$ML^3T^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$M^{-1}L^3T^{-2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول فرمول را برحسب $G$ مرتب می‌کنیم:\n$$G = \\dfrac{F \\cdot r^2}{m_1 m_2}$$\nبُعد نیرو $F$ برابر $MLT^{-2}$ است. $r$ فاصله است پس بُعدش $L$ و $r^2$ می‌شود $L^2$. مخرج هم دو تا جرم داریم پس $M \\times M = M^2$.\nجایگذاری می‌کنیم:\n$$[G] = \\dfrac{(MLT^{-2})(L^2)}{M^2} = \\dfrac{ML^3T^{-2}}{M^2} = M^{-1}L^3T^{-2}$$\nپس پاسخ همین است.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "نیرو ضربدر مربع طول می‌کنیم، تقسیم بر مربع جرم. $\\frac{MLT^{-2} \\cdot L^2}{M^2}$. یک $M$ صورت با مخرج ساده می‌شود می‌ماند $M^{-1}$ و بقیه. جواب در دسترس است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_015",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "بُعد کمیت فشار $P = \\frac{F}{A}$ چیست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$ML^{-1}T^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$ML^{-2}T^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$M^2L^{-1}T^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$MLT^{-2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فشار یعنی نیرو بر واحد سطح. بُعد نیرو $F=ma$ می‌شود $M \\cdot LT^{-2} = MLT^{-2}$.\nبُعد سطح $A$ هم $L^2$ است.\n$$[P] = \\dfrac{MLT^{-2}}{L^2} = ML^{-1}T^{-2}$$\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "فشار در مخرجش سطح ($L^2$) دارد. توان $L$ نیروی صورت ($L^1$) وقتی با $L^2$ مخرج ساده بشود می‌شود $L^{-1}$. پس سریع بگرد دنبال گزینه‌ای که $L^{-1}$ دارد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_016",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "بُعد کمیت توان $P = \\frac{W}{t}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$M^2L^2T^{-3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$MLT^{-3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$ML^2T^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$ML^2T^{-3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "توان یعنی آهنگ انجام کار. کار $W$ بُعدش $ML^2T^{-2}$ است (چون نیرو ضربدر جابجاییه).\nزمان $t$ هم بُعدش $T$ است.\n$$[P] = \\dfrac{ML^2T^{-2}}{T} = ML^2T^{-3}$$\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توان یعنی کار تقسیم بر زمان. پس توان $T$ در کار، یک دیگه منفی می‌خوره. $T^{-2}$ می‌شود $T^{-3}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_017",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کمترین درجه‌بندی یک وسیله اندازه‌گیری عقربه‌ای (مدرج) برابر با $1$ mm است. خطای این وسیله چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.05 \\text{ mm}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.5 \\text{ mm}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 2 \\text{ mm}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 1 \\text{ mm}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "طبق کتاب درسی دهم، خطای اندازه‌گیری برای وسیله‌های دیجیتال برابر با یک واحد از کوچک‌ترین مقداری است که روی صفحه نمایش داده می‌شود (همان دقت وسیله).\nاما برای وسیله‌های مدرج (آنالوگ)، خطا برابر با نصف کمترین درجه‌بندی (دقت) است.\nچون اینجا وسیله عقربه‌ای (مدرج) است، خطا برابر می‌شود با نصفِ $1$، یعنی $\\frac{1}{2} = 0.5$. پس جواب \\pm 0.5 \\text{ mm} است.\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وسایل مدرج (مثل خط‌کش یا ساعت عقربه‌ای) خطاشان نصفِ کمترین درجه‌بندی است. نصف عدد داده شده پیدا می‌کنیم و انتخاب می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_018",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کمترین درجه‌بندی یک وسیله اندازه‌گیری دیجیتال برابر با $0.1$ g است. خطای این وسیله چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.2 \\text{ g}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.05 \\text{ g}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.1 \\text{ g}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.01 \\text{ g}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "طبق کتاب درسی دهم، خطای اندازه‌گیری برای وسیله‌های دیجیتال برابر با یک واحد از کوچک‌ترین مقداری است که روی صفحه نمایش داده می‌شود (همان دقت وسیله).\nاما برای وسیله‌های مدرج (آنالوگ)، خطا برابر با نصف کمترین درجه‌بندی (دقت) است.\nچون اینجا وسیله دیجیتال است، خطا برابر می‌شود با همان دقت یعنی $\\pm 0.1$. پس جواب \\pm 0.1 \\text{ g} است.\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "دیجیتال یعنی همونی که می‌بینی. خطاش دقیقاً برابر کمترین درجه‌بندی (همان یک واحدِ رقم آخر) است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_019",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کمترین درجه‌بندی یک وسیله اندازه‌گیری عقربه‌ای (مدرج) برابر با $0.5$ cm است. خطای این وسیله چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.25 \\text{ cm}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.5 \\text{ cm}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.025 \\text{ cm}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 1.0 \\text{ cm}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "طبق کتاب درسی دهم، خطای اندازه‌گیری برای وسیله‌های دیجیتال برابر با یک واحد از کوچک‌ترین مقداری است که روی صفحه نمایش داده می‌شود (همان دقت وسیله).\nاما برای وسیله‌های مدرج (آنالوگ)، خطا برابر با نصف کمترین درجه‌بندی (دقت) است.\nچون اینجا وسیله عقربه‌ای (مدرج) است، خطا برابر می‌شود با نصفِ $0.5$، یعنی $\\frac{0.5}{2} = 0.25$. پس جواب \\pm 0.25 \\text{ cm} است.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وسایل مدرج (مثل خط‌کش یا ساعت عقربه‌ای) خطاشان نصفِ کمترین درجه‌بندی است. نصف عدد داده شده پیدا می‌کنیم و انتخاب می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_020",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کمترین درجه‌بندی یک وسیله اندازه‌گیری دیجیتال برابر با $0.01$ s است. خطای این وسیله چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.02 \\text{ s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.005 \\text{ s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.05 \\text{ s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\pm 0.01 \\text{ s}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "طبق کتاب درسی دهم، خطای اندازه‌گیری برای وسیله‌های دیجیتال برابر با یک واحد از کوچک‌ترین مقداری است که روی صفحه نمایش داده می‌شود (همان دقت وسیله).\nاما برای وسیله‌های مدرج (آنالوگ)، خطا برابر با نصف کمترین درجه‌بندی (دقت) است.\nچون اینجا وسیله دیجیتال است، خطا برابر می‌شود با همان دقت یعنی $\\pm 0.01$. پس جواب \\pm 0.01 \\text{ s} است.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "دیجیتال یعنی همونی که می‌بینی. خطاش دقیقاً برابر کمترین درجه‌بندی (همان یک واحدِ رقم آخر) است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_021",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد ارقام بامعنی در اندازه‌گیری $0.004050$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قوانین ارقام بامعنی را با هم مرور کنیم:\n۱) صفرهای سمت چپ اولین رقم غیرصفر، بامعنی نیستند (فقط جایگاه اعشار را نشان می‌دهند).\n۲) صفرهای بین ارقام غیرصفر بامعنی هستند.\n۳) صفرهای سمت راست بعد از ممیز بامعنی هستند.\n۴) توان‌های ۱۰ در نمادگذاری علمی در تعداد ارقام بامعنی حساب نمی‌شوند.\nدر عدد $0.004050$، سه صفر اول حساب نمی‌شوند. اعداد ۴ و ۵ و صفر بینشان و صفر آخر حساب می‌شوند. پس ۴ رقم بامعنی داریم.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "از چپ اولین عدد غیرصفر پیدا می‌کنیم. آن و هر چی سمت راست آن قرار دارد (چه صفر چه غیرصفر) بامعنی است. توان ۱۰ هم در نظر گرفته نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_022",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد ارقام بامعنی در اندازه‌گیری $120.0$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قوانین ارقام بامعنی را با هم مرور کنیم:\n۱) صفرهای سمت چپ اولین رقم غیرصفر، بامعنی نیستند (فقط جایگاه اعشار را نشان می‌دهند).\n۲) صفرهای بین ارقام غیرصفر بامعنی هستند.\n۳) صفرهای سمت راست بعد از ممیز بامعنی هستند.\n۴) توان‌های ۱۰ در نمادگذاری علمی در تعداد ارقام بامعنی حساب نمی‌شوند.\nدر عدد $120.0$، چون ممیز داریم، صفرهای سمت راستِ عدد حساب می‌شوند. پس هر ۴ رقم بامعنی هستند.\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "از چپ اولین عدد غیرصفر پیدا می‌کنیم. آن و هر چی سمت راست آن قرار دارد (چه صفر چه غیرصفر) بامعنی است. توان ۱۰ هم در نظر گرفته نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_023",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد ارقام بامعنی در اندازه‌گیری $0.050$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قوانین ارقام بامعنی را با هم مرور کنیم:\n۱) صفرهای سمت چپ اولین رقم غیرصفر، بامعنی نیستند (فقط جایگاه اعشار را نشان می‌دهند).\n۲) صفرهای بین ارقام غیرصفر بامعنی هستند.\n۳) صفرهای سمت راست بعد از ممیز بامعنی هستند.\n۴) توان‌های ۱۰ در نمادگذاری علمی در تعداد ارقام بامعنی حساب نمی‌شوند.\nدر عدد $0.050$، دو صفر اول سمت چپ حساب نمی‌شوند. عدد ۵ و صفر بعدش حساب می‌شوند. پس ۲ رقم بامعنی داریم.\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "از چپ اولین عدد غیرصفر پیدا می‌کنیم. آن و هر چی سمت راست آن قرار دارد (چه صفر چه غیرصفر) بامعنی است. توان ۱۰ هم در نظر گرفته نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_024",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد ارقام بامعنی در اندازه‌گیری $3.00 \\times 10^8$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قوانین ارقام بامعنی را با هم مرور کنیم:\n۱) صفرهای سمت چپ اولین رقم غیرصفر، بامعنی نیستند (فقط جایگاه اعشار را نشان می‌دهند).\n۲) صفرهای بین ارقام غیرصفر بامعنی هستند.\n۳) صفرهای سمت راست بعد از ممیز بامعنی هستند.\n۴) توان‌های ۱۰ در نمادگذاری علمی در تعداد ارقام بامعنی حساب نمی‌شوند.\nدر عدد $3.00 \\times 10^8$، بخش توانی اصلاً حساب نمی‌شود. در عدد ۳.۰۰، صفرهای بعد از ممیز سمت راست بامعنی هستند. پس ۳ رقم بامعنی داریم.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "از چپ اولین عدد غیرصفر پیدا می‌کنیم. آن و هر چی سمت راست آن قرار دارد (چه صفر چه غیرصفر) بامعنی است. توان ۱۰ هم در نظر گرفته نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_025",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرتبه بزرگی عدد $4800$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10^{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن مرتبه بزرگی، اول عدد را با نمادگذاری علمی می‌نویسیم:\n$$4800 = 4.8 \\times 10^{3}$$\nحالا به ضریب ($4.8$) نگاه می‌کنیم. قانون کتاب این است: اگر ضریب کمتر از $3.16$ (یعنی $\\sqrt{10}$) باشد، توان ۱۰ تغییر نمی‌کنه. اما اگر بزرگتر یا مساوی $3.16$ باشد، یک واحد به توان ۱۰ اضافه می‌کنیم.\nاینجا ضریب $4.8$ است که از $3.16$ بزرگتر است.\nپس مرتبه بزرگی می‌شود $10^{4}$.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "عدد به صورت علمی نوشته شود می‌شود $4.8 \\times 10^{3}$. بررسی می‌شود که «$4.8$ به ۱۰ نزدیک‌تر است یا به ۱؟» (مرز $3.16$ است). اینجا به $10$ نزدیک‌تر است، پس یکی به توان اضافه می‌شود. می‌شود $10^{4}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_026",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرتبه بزرگی عدد $0.0062$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10^{0}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن مرتبه بزرگی، اول عدد را با نمادگذاری علمی می‌نویسیم:\n$$0.0062 = 6.2 \\times 10^{-3}$$\nحالا به ضریب ($6.2$) نگاه می‌کنیم. قانون کتاب این است: اگر ضریب کمتر از $3.16$ (یعنی $\\sqrt{10}$) باشد، توان ۱۰ تغییر نمی‌کنه. اما اگر بزرگتر یا مساوی $3.16$ باشد، یک واحد به توان ۱۰ اضافه می‌کنیم.\nاینجا ضریب $6.2$ است که از $3.16$ بزرگتر است.\nپس مرتبه بزرگی می‌شود $10^{-2}$.\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "عدد به صورت علمی نوشته شود می‌شود $6.2 \\times 10^{-3}$. بررسی می‌شود که «$6.2$ به ۱۰ نزدیک‌تر است یا به ۱؟» (مرز $3.16$ است). اینجا به $10$ نزدیک‌تر است، پس یکی به توان اضافه می‌شود. می‌شود $10^{-2}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_027",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرتبه بزرگی عدد $12000$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10^{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن مرتبه بزرگی، اول عدد را با نمادگذاری علمی می‌نویسیم:\n$$12000 = 1.2 \\times 10^{4}$$\nحالا به ضریب ($1.2$) نگاه می‌کنیم. قانون کتاب این است: اگر ضریب کمتر از $3.16$ (یعنی $\\sqrt{10}$) باشد، توان ۱۰ تغییر نمی‌کنه. اما اگر بزرگتر یا مساوی $3.16$ باشد، یک واحد به توان ۱۰ اضافه می‌کنیم.\nاینجا ضریب $1.2$ است که از $3.16$ کوچکتر است.\nپس مرتبه بزرگی می‌شود $10^{4}$.\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "عدد به صورت علمی نوشته شود می‌شود $1.2 \\times 10^{4}$. بررسی می‌شود که «$1.2$ به ۱۰ نزدیک‌تر است یا به ۱؟» (مرز $3.16$ است). اینجا به $1$ نزدیک‌تر است، پس دست به توان نزن. می‌شود $10^{4}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_028",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرتبه بزرگی عدد $0.00035$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10^{-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن مرتبه بزرگی، اول عدد را با نمادگذاری علمی می‌نویسیم:\n$$0.00035 = 3.5 \\times 10^{-4}$$\nحالا به ضریب ($3.5$) نگاه می‌کنیم. قانون کتاب این است: اگر ضریب کمتر از $3.16$ (یعنی $\\sqrt{10}$) باشد، توان ۱۰ تغییر نمی‌کنه. اما اگر بزرگتر یا مساوی $3.16$ باشد، یک واحد به توان ۱۰ اضافه می‌کنیم.\nاینجا ضریب $3.5$ است که از $3.16$ بزرگتر است.\nپس مرتبه بزرگی می‌شود $10^{-3}$.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "عدد به صورت علمی نوشته شود می‌شود $3.5 \\times 10^{-4}$. بررسی می‌شود که «$3.5$ به ۱۰ نزدیک‌تر است یا به ۱؟» (مرز $3.16$ است). اینجا به $10$ نزدیک‌تر است، پس یکی به توان اضافه می‌شود. می‌شود $10^{-3}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_029",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حجم یک استوانه با شعاع قاعده $10 \\text{ cm}$ و ارتفاع $20 \\text{ cm}$ چند لیتر است؟ (فرض کنید $\\pi = 3$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$600$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$60$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول حجم را برحسب $\\text{cm}^3$ حساب می‌کنیم.\nفرمول حجم استوانه: $V = \\pi r^2 h$\n$$V = 3 \\times (10)^2 \\times 20 = 6000 \\text{ cm}^3$$\nحالا تبدیل واحد: می‌دانیم هر ۱ لیتر معادل $1000 \\text{ cm}^3$ (یا همان یک دسی‌متر مکعب) است.\nپس حجم به لیتر می‌شود:\n$$\\dfrac{6000}{1000} = 6 \\text{ L}$$\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای رسیدن به لیتر، ابعاد از همان اول به دسی‌متر ($\\text{dm}$) تبدیل می‌شود. هر ۱۰ سانت می‌شود ۱ دسی‌متر. این‌جوری حجم مستقیم برحسب لیتر به دست می‌آید و خطای تقسیم صفرها نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_030",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حجم کره‌ای به شعاع $5 \\text{ cm}$ تقریباً چند لیتر است؟ (فرض کنید $\\pi = 3$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$50$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.05$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول حجم را برحسب $\\text{cm}^3$ حساب می‌کنیم.\nفرمول حجم کره: $V = \\frac{4}{3} \\pi r^3$\n$$V = \\frac{4}{3} \\times 3 \\times (5)^3 = 4 \\times 125 = 500 \\text{ cm}^3$$\nحالا تبدیل واحد: می‌دانیم هر ۱ لیتر معادل $1000 \\text{ cm}^3$ (یا همان یک دسی‌متر مکعب) است.\nپس حجم به لیتر می‌شود:\n$$\\dfrac{500}{1000} = 0.5 \\text{ L}$$\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای رسیدن به لیتر، ابعاد از همان اول به دسی‌متر ($\\text{dm}$) تبدیل می‌شود. هر ۱۰ سانت می‌شود ۱ دسی‌متر. این‌جوری حجم مستقیم برحسب لیتر به دست می‌آید و خطای تقسیم صفرها نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_031",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حجم یک استوانه با شعاع قاعده $20 \\text{ cm}$ و ارتفاع $10 \\text{ cm}$ چند لیتر است؟ (فرض کنید $\\pi = 3$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1200$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1.2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$120$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول حجم را برحسب $\\text{cm}^3$ حساب می‌کنیم.\nفرمول حجم استوانه: $V = \\pi r^2 h$\n$$V = 3 \\times (20)^2 \\times 10 = 12000 \\text{ cm}^3$$\nحالا تبدیل واحد: می‌دانیم هر ۱ لیتر معادل $1000 \\text{ cm}^3$ (یا همان یک دسی‌متر مکعب) است.\nپس حجم به لیتر می‌شود:\n$$\\dfrac{12000}{1000} = 12 \\text{ L}$$\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای رسیدن به لیتر، ابعاد از همان اول به دسی‌متر ($\\text{dm}$) تبدیل می‌شود. هر ۱۰ سانت می‌شود ۱ دسی‌متر. این‌جوری حجم مستقیم برحسب لیتر به دست می‌آید و خطای تقسیم صفرها نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_032",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حجم کره‌ای به شعاع $10 \\text{ cm}$ تقریباً چند لیتر است؟ (فرض کنید $\\pi = 3$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$400$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$40$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اول حجم را برحسب $\\text{cm}^3$ حساب می‌کنیم.\nفرمول حجم کره: $V = \\frac{4}{3} \\pi r^3$\n$$V = \\frac{4}{3} \\times 3 \\times (10)^3 = 4 \\times 1000 = 4000 \\text{ cm}^3$$\nحالا تبدیل واحد: می‌دانیم هر ۱ لیتر معادل $1000 \\text{ cm}^3$ (یا همان یک دسی‌متر مکعب) است.\nپس حجم به لیتر می‌شود:\n$$\\dfrac{4000}{1000} = 4 \\text{ L}$$\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای رسیدن به لیتر، ابعاد از همان اول به دسی‌متر ($\\text{dm}$) تبدیل می‌شود. هر ۱۰ سانت می‌شود ۱ دسی‌متر. این‌جوری حجم مستقیم برحسب لیتر به دست می‌آید و خطای تقسیم صفرها نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_033",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از واحدهای زیر **نمی‌تواند** معادل واحد وات ($\\text{W}$) باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\text{J/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{N \\cdot m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{kg \\cdot m}^2\\text{/s}^3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{kg \\cdot m/s}^2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادل‌های وات ($\\text{W}$) را از روی فرمول‌‌های آن بسازیم:\nوات واحد توان است. $P = \\frac{W}{t}$ پس $\\text{J/s}$ صحیح است.\nهمچنین $P = F \\cdot v$ پس $\\text{N \\cdot m/s}$ هم صحیح است.\nاگر نیوتون به واحدهای اصلی باز کنیم ($\\text{kg \\cdot m/s}^2$)، توان می‌شود $\\text{kg \\cdot m}^2\\text{/s}^3$.\nاما واحد {p4} واحد نیرو (نیوتون) است، نه توان. پس همان گزینه جواب ماست.\nبنابراین گزینه 4 پاسخ صحیح است.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی چند واحد هم‌ارز می‌دهند، سریع هر چهار تا با قانون ابعاد ($M, L, T$) بررسی می‌شود. گزینه‌ای که بُعدش با بقیه فرق دارد واضح است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_034",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از واحدهای زیر **نمی‌تواند** معادل واحد نیوتون ($\\text{N}$) باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\text{W \\cdot s/m}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{kg \\cdot m}^2\\text{/s}^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{kg \\cdot m/s}^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{J/m}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادل‌های نیوتون ($\\text{N}$) را از روی فرمول‌‌های آن بسازیم:\nنیوتون واحد نیرو است. $F = ma$ پس $\\text{kg \\cdot m/s}^2$ صحیح است.\nکار $W = Fd$ پس $F = \\frac{W}{d}$ یعنی $\\text{J/m}$ صحیح است.\nکار همان توان ضربدر زمان است، پس $F = \\frac{Pt}{d}$ یعنی $\\text{W \\cdot s/m}$ هم صحیح است.\nاما واحد {p4} واحد انرژی (ژول) است، نه نیرو.\nبنابراین گزینه 2 پاسخ صحیح است.\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی چند واحد هم‌ارز می‌دهند، سریع هر چهار تا با قانون ابعاد ($M, L, T$) بررسی می‌شود. گزینه‌ای که بُعدش با بقیه فرق دارد واضح است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_035",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از واحدهای زیر **نمی‌تواند** معادل واحد ژول ($\\text{J}$) باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\text{kg \\cdot m}^2\\text{/s}^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{N \\cdot m}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{kg \\cdot m/s}^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{W \\cdot s}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادل‌های ژول ($\\text{J}$) را از روی فرمول‌‌های آن بسازیم:\nژول واحد کار و انرژی است. $W = Fd$ پس $\\text{N \\cdot m}$ صحیح است.\nانرژی جنبشی $\\frac{1}{2}mv^2$ پس $\\text{kg \\cdot m}^2\\text{/s}^2$ صحیح است.\nانرژی الکتریکی یا کار همان $P \\cdot t$ است پس $\\text{W \\cdot s}$ صحیح است.\nاما واحد {p4} واحد نیرو (نیوتون) است.\nبنابراین گزینه 3 پاسخ صحیح است.\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی چند واحد هم‌ارز می‌دهند، سریع هر چهار تا با قانون ابعاد ($M, L, T$) بررسی می‌شود. گزینه‌ای که بُعدش با بقیه فرق دارد واضح است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_036",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از واحدهای زیر **نمی‌تواند** معادل واحد پاسکال ($\\text{Pa}$) باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\text{kg/(m \\cdot s}^2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{N/m}^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{J/m}^3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\text{kg \\cdot m/s}^2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادل‌های پاسکال ($\\text{Pa}$) را از روی فرمول‌‌های آن بسازیم:\nپاسکال واحد فشار است. $P = \\frac{F}{A}$ پس $\\text{N/m}^2$ صحیح است.\nاگر بالا و پایین در متر ضرب کنیم می‌شود $\\text{J/m}^3$ که صحیح است.\nاگر نیوتون باز کنیم می‌شود $\\frac{\\text{kg \\cdot m/s}^2}{\\text{m}^2} = \\text{kg/(m \\cdot s}^2)$. اینم صحیح است.\nاما واحد {p4} واحد نیرو (نیوتون) است.\nبنابراین گزینه 4 پاسخ صحیح است.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی چند واحد هم‌ارز می‌دهند، سریع هر چهار تا با قانون ابعاد ($M, L, T$) بررسی می‌شود. گزینه‌ای که بُعدش با بقیه فرق دارد واضح است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_037",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "آلیاژی از دو فلز ساخته شده است. اگر $100 \\text{ g}$ از فلز اول با چگالی $2 \\text{ g/cm}^3$ و $200 \\text{ g}$ از فلز دوم با چگالی $4 \\text{ g/cm}^3$ با هم مخلوط شوند (بدون تغییر حجم)، چگالی آلیاژ چند $\\text{g/cm}^3$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3.33333$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن چگالی مخلوط، باید کل جرم را به کل حجم تقسیم کنیم.\nجرم کل:\n$$m_{total} = 100 + 200 = 300 \\text{ g}$$\nحجم هر فلز را جداگونه حساب می‌کنیم:\n$$V_1 = \\dfrac{m_1}{\\rho_1} = \\dfrac{100}{2} = 50 \\text{ cm}^3$$\n$$V_2 = \\dfrac{m_2}{\\rho_2} = \\dfrac{200}{4} = 50 \\text{ cm}^3$$\nحجم کل:\n$$V_{total} = 50 + 50 = 100 \\text{ cm}^3$$\nحالا چگالی آلیاژ:\n$$\\rho_{mix} = \\dfrac{m_{total}}{V_{total}} = \\dfrac{300}{100} = 3 \\text{ g/cm}^3$$\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در مسائلی که جرم‌ها مشخص هستند، از رابطه مستقیم $\\rho_{mix} = \\frac{m_1 + m_2}{V_1 + V_2}$ استفاده می‌شود تا به سریع‌ترین پاسخ دست یافت."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_038",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "آلیاژی از دو فلز ساخته شده است. اگر $50 \\text{ g}$ از فلز اول با چگالی $1 \\text{ g/cm}^3$ و $150 \\text{ g}$ از فلز دوم با چگالی $3 \\text{ g/cm}^3$ با هم مخلوط شوند (بدون تغییر حجم)، چگالی آلیاژ چند $\\text{g/cm}^3$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن چگالی مخلوط، باید کل جرم را به کل حجم تقسیم کنیم.\nجرم کل:\n$$m_{total} = 50 + 150 = 200 \\text{ g}$$\nحجم هر فلز را جداگونه حساب می‌کنیم:\n$$V_1 = \\dfrac{m_1}{\\rho_1} = \\dfrac{50}{1} = 50 \\text{ cm}^3$$\n$$V_2 = \\dfrac{m_2}{\\rho_2} = \\dfrac{150}{3} = 50 \\text{ cm}^3$$\nحجم کل:\n$$V_{total} = 50 + 50 = 100 \\text{ cm}^3$$\nحالا چگالی آلیاژ:\n$$\\rho_{mix} = \\dfrac{m_{total}}{V_{total}} = \\dfrac{200}{100} = 2 \\text{ g/cm}^3$$\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در مسائلی که جرم‌ها مشخص هستند، از رابطه مستقیم $\\rho_{mix} = \\frac{m_1 + m_2}{V_1 + V_2}$ استفاده می‌شود تا به سریع‌ترین پاسخ دست یافت."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_039",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "آلیاژی از دو فلز ساخته شده است. اگر $200 \\text{ g}$ از فلز اول با چگالی $8 \\text{ g/cm}^3$ و $200 \\text{ g}$ از فلز دوم با چگالی $2 \\text{ g/cm}^3$ با هم مخلوط شوند (بدون تغییر حجم)، چگالی آلیاژ چند $\\text{g/cm}^3$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3.2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4.2$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن چگالی مخلوط، باید کل جرم را به کل حجم تقسیم کنیم.\nجرم کل:\n$$m_{total} = 200 + 200 = 400 \\text{ g}$$\nحجم هر فلز را جداگونه حساب می‌کنیم:\n$$V_1 = \\dfrac{m_1}{\\rho_1} = \\dfrac{200}{8} = 25 \\text{ cm}^3$$\n$$V_2 = \\dfrac{m_2}{\\rho_2} = \\dfrac{200}{2} = 100 \\text{ cm}^3$$\nحجم کل:\n$$V_{total} = 25 + 100 = 125 \\text{ cm}^3$$\nحالا چگالی آلیاژ:\n$$\\rho_{mix} = \\dfrac{m_{total}}{V_{total}} = \\dfrac{400}{125} = 3.2 \\text{ g/cm}^3$$\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در مسائلی که جرم‌ها مشخص هستند، از رابطه مستقیم $\\rho_{mix} = \\frac{m_1 + m_2}{V_1 + V_2}$ استفاده می‌شود تا به سریع‌ترین پاسخ دست یافت."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_040",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "آلیاژی از دو فلز ساخته شده است. اگر $150 \\text{ g}$ از فلز اول با چگالی $3 \\text{ g/cm}^3$ و $50 \\text{ g}$ از فلز دوم با چگالی $1 \\text{ g/cm}^3$ با هم مخلوط شوند (بدون تغییر حجم)، چگالی آلیاژ چند $\\text{g/cm}^3$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن چگالی مخلوط، باید کل جرم را به کل حجم تقسیم کنیم.\nجرم کل:\n$$m_{total} = 150 + 50 = 200 \\text{ g}$$\nحجم هر فلز را جداگونه حساب می‌کنیم:\n$$V_1 = \\dfrac{m_1}{\\rho_1} = \\dfrac{150}{3} = 50 \\text{ cm}^3$$\n$$V_2 = \\dfrac{m_2}{\\rho_2} = \\dfrac{50}{1} = 50 \\text{ cm}^3$$\nحجم کل:\n$$V_{total} = 50 + 50 = 100 \\text{ cm}^3$$\nحالا چگالی آلیاژ:\n$$\\rho_{mix} = \\dfrac{m_{total}}{V_{total}} = \\dfrac{200}{100} = 2 \\text{ g/cm}^3$$\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در مسائلی که جرم‌ها مشخص هستند، از رابطه مستقیم $\\rho_{mix} = \\frac{m_1 + m_2}{V_1 + V_2}$ استفاده می‌شود تا به سریع‌ترین پاسخ دست یافت."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_041",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه‌گیری $5 \\text{ Ms}$ معادل با چند $\\text{ks}$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{0}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل مستقیم دو پیشوند به هم، توان پیشوند مبدأ را منهای توان پیشوند مقصد می‌کنیم.\nمبدأ: $M$ (معادل $10^{6}$)\nمقصد: $k$ (معادل $10^{3}$)\nتوان تبدیل = $6 - (3) = 3$\nپس باید مقدار را در $10^{3}$ ضرب کنیم:\n$$5 \\times 10^{3} = 5 \\times 10^{3}$$\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای تبدیل مستقیم دو پیشوند، اختلاف توان پیشوند مبدأ و مقصد را به دست آورده و آن  در مقدار اولیه ضرب می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_042",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه‌گیری $20 \\text{ mus}$ معادل با چند $\\text{ps}$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2 \\times 10^{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2 \\times 10^{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2 \\times 10^{7}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2 \\times 10^{10}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل مستقیم دو پیشوند به هم، توان پیشوند مبدأ را منهای توان پیشوند مقصد می‌کنیم.\nمبدأ: $\\mu $ (معادل $10^{-6}$)\nمقصد: $p$ (معادل $10^{-12}$)\nتوان تبدیل = $-6 - (-12) = 6$\nپس باید مقدار را در $10^{6}$ ضرب کنیم:\n$$20 \\times 10^{6} = 2 \\times 10^{7}$$\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای تبدیل مستقیم دو پیشوند، اختلاف توان پیشوند مبدأ و مقصد را به دست آورده و آن  در مقدار اولیه ضرب می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_043",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه‌گیری $150 \\text{ ms}$ معادل با چند $\\text{ns}$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{11}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل مستقیم دو پیشوند به هم، توان پیشوند مبدأ را منهای توان پیشوند مقصد می‌کنیم.\nمبدأ: $m$ (معادل $10^{-3}$)\nمقصد: $n$ (معادل $10^{-9}$)\nتوان تبدیل = $-3 - (-9) = 6$\nپس باید مقدار را در $10^{6}$ ضرب کنیم:\n$$150 \\times 10^{6} = 1.5 \\times 10^{8}$$\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای تبدیل مستقیم دو پیشوند، اختلاف توان پیشوند مبدأ و مقصد را به دست آورده و آن  در مقدار اولیه ضرب می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_044",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه‌گیری $0.4 \\text{ Gs}$ معادل با چند $\\text{Ms}$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تبدیل مستقیم دو پیشوند به هم، توان پیشوند مبدأ را منهای توان پیشوند مقصد می‌کنیم.\nمبدأ: $G$ (معادل $10^{9}$)\nمقصد: $M$ (معادل $10^{6}$)\nتوان تبدیل = $9 - (6) = 3$\nپس باید مقدار را در $10^{3}$ ضرب کنیم:\n$$0.4 \\times 10^{3} = 4 \\times 10^{2}$$\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای تبدیل مستقیم دو پیشوند، اختلاف توان پیشوند مبدأ و مقصد را به دست آورده و آن  در مقدار اولیه ضرب می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_045",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از کمیت‌های زیر در سیستم SI جزء کمیت‌های اصلی **نیست**؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "مقدار ماده"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "جرم"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شدت روشنایی"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بار الکتریکی"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "همان‌طور که می‌دانیم در سیستم SI هفت کمیت اصلی داریم:\n۱) طول (متر)\n۲) جرم (کیلوگرم)\n۳) زمان (ثانیه)\n۴) جریان الکتریکی (آمپر)\n۵) دمای ترمودینامیکی (کلوین)\n۶) مقدار ماده (مول)\n۷) شدت روشنایی (کاندلا)\nبا دانستن این لیست متوجه می‌شویم که پاسخ درست همان «بار الکتریکی» است.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هفت کمیت اصلی به خاطر سپرده می‌شود: متر، کیلوگرم، ثانیه، آمپر، کلوین، مول، کاندلا. هر چی غیر از این موارد بود فرعی است (مثلاً بار الکتریکی که کولن است، فرعی است چون می‌شود آمپر در ثانیه)."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_046",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از واحدهای زیر، جزء واحدهای اصلی SI است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "ژول"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کولن"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "ولت"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "آمپر"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "همان‌طور که می‌دانیم در سیستم SI هفت کمیت اصلی داریم:\n۱) طول (متر)\n۲) جرم (کیلوگرم)\n۳) زمان (ثانیه)\n۴) جریان الکتریکی (آمپر)\n۵) دمای ترمودینامیکی (کلوین)\n۶) مقدار ماده (مول)\n۷) شدت روشنایی (کاندلا)\nبا دانستن این لیست متوجه می‌شویم که پاسخ درست همان «آمپر» است.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هفت کمیت اصلی به خاطر سپرده می‌شود: متر، کیلوگرم، ثانیه، آمپر، کلوین، مول، کاندلا. هر چی غیر از این موارد بود فرعی است (مثلاً بار الکتریکی که کولن است، فرعی است چون می‌شود آمپر در ثانیه)."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_047",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام مجموعه شامل فقط کمیت‌های اصلی SI است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "طول، زمان، دما، شدت جریان"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "دما، بار الکتریکی، شدت روشنایی، جرم"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "نیرو، طول، جرم، زمان"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "جرم، سرعت، زمان، مقدار ماده"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "همان‌طور که می‌دانیم در سیستم SI هفت کمیت اصلی داریم:\n۱) طول (متر)\n۲) جرم (کیلوگرم)\n۳) زمان (ثانیه)\n۴) جریان الکتریکی (آمپر)\n۵) دمای ترمودینامیکی (کلوین)\n۶) مقدار ماده (مول)\n۷) شدت روشنایی (کاندلا)\nبا دانستن این لیست متوجه می‌شویم که پاسخ درست همان «طول، زمان، دما، شدت جریان» است.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هفت کمیت اصلی به خاطر سپرده می‌شود: متر، کیلوگرم، ثانیه، آمپر، کلوین، مول، کاندلا. هر چی غیر از این موارد بود فرعی است (مثلاً بار الکتریکی که کولن است، فرعی است چون می‌شود آمپر در ثانیه)."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_048",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "واحد اصلی کمیت «مقدار ماده» در سیستم SI چیست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "ذره"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کیلوگرم"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مول"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "آمپر"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "همان‌طور که می‌دانیم در سیستم SI هفت کمیت اصلی داریم:\n۱) طول (متر)\n۲) جرم (کیلوگرم)\n۳) زمان (ثانیه)\n۴) جریان الکتریکی (آمپر)\n۵) دمای ترمودینامیکی (کلوین)\n۶) مقدار ماده (مول)\n۷) شدت روشنایی (کاندلا)\nبا دانستن این لیست متوجه می‌شویم که پاسخ درست همان «مول» است.\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هفت کمیت اصلی به خاطر سپرده می‌شود: متر، کیلوگرم، ثانیه، آمپر، کلوین، مول، کاندلا. هر چی غیر از این موارد بود فرعی است (مثلاً بار الکتریکی که کولن است، فرعی است چون می‌شود آمپر در ثانیه)."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_049",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرتبه بزرگی حاصل‌ضرب دو عدد $5000$ و $0.008$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10^{1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای محاسبه مرتبه بزرگی حاصل‌ضرب، راحت‌ترین کار این است که اول اعداد را در هم ضرب کنیم.\n$$X = 5000 \\times 0.008 = 40$$\nحالا این عدد را به صورت نمادگذاری علمی می‌نویسیم:\n$$X = 4 \\times 10^{1}$$\nاز اونجا که ضریب $4$ از عدد مرجع $3.16$ (تقریباً $\\sqrt{10}$) بزرگتر است، یک واحد به توان ۱۰ اضافه می‌کنیم.\nپس مرتبه بزرگی برابر $10^{2}$ است.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای ضرب و تقسیم، اول عملیات را تا آخر انجام بده، بعد مرتبه بزرگی را از روی جواب نهایی بخون. به این ترتیب خطای تقریب‌های میانی را از بین می‌برویم."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_050",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرتبه بزرگی حاصل‌ضرب دو عدد $150$ و $400$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10^{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{7}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای محاسبه مرتبه بزرگی حاصل‌ضرب، راحت‌ترین کار این است که اول اعداد را در هم ضرب کنیم.\n$$X = 150 \\times 400 = 60000$$\nحالا این عدد را به صورت نمادگذاری علمی می‌نویسیم:\n$$X = 6 \\times 10^{4}$$\nاز اونجا که ضریب $6$ از عدد مرجع $3.16$ (تقریباً $\\sqrt{10}$) بزرگتر است، یک واحد به توان ۱۰ اضافه می‌کنیم.\nپس مرتبه بزرگی برابر $10^{5}$ است.\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای ضرب و تقسیم، اول عملیات را تا آخر انجام بده، بعد مرتبه بزرگی را از روی جواب نهایی بخون. به این ترتیب خطای تقریب‌های میانی را از بین می‌برویم."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_051",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرتبه بزرگی حاصل‌ضرب دو عدد $0.02$ و $0.003$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10^{-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{-3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای محاسبه مرتبه بزرگی حاصل‌ضرب، راحت‌ترین کار این است که اول اعداد را در هم ضرب کنیم.\n$$X = 0.02 \\times 0.003 = 6 \\times 10^{-5}$$\nحالا این عدد را به صورت نمادگذاری علمی می‌نویسیم:\n$$X = 6 \\times 10^{-5}$$\nاز اونجا که ضریب $6$ از عدد مرجع $3.16$ (تقریباً $\\sqrt{10}$) بزرگتر است، یک واحد به توان ۱۰ اضافه می‌کنیم.\nپس مرتبه بزرگی برابر $10^{-4}$ است.\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای ضرب و تقسیم، اول عملیات را تا آخر انجام بده، بعد مرتبه بزرگی را از روی جواب نهایی بخون. به این ترتیب خطای تقریب‌های میانی را از بین می‌برویم."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_052",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرتبه بزرگی حاصل‌ضرب دو عدد $8000$ و $25000$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10^{8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{9}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{10}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10^{7}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای محاسبه مرتبه بزرگی حاصل‌ضرب، راحت‌ترین کار این است که اول اعداد را در هم ضرب کنیم.\n$$X = 8000 \\times 25000 = 2 \\times 10^{8}$$\nحالا این عدد را به صورت نمادگذاری علمی می‌نویسیم:\n$$X = 2 \\times 10^{8}$$\nاز اونجا که ضریب $2$ از عدد مرجع $3.16$ (تقریباً $\\sqrt{10}$) کوچکتر است، توان ۱۰ تغییر نمی‌کند.\nپس مرتبه بزرگی برابر $10^{8}$ است.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای ضرب و تقسیم، اول عملیات را تا آخر انجام بده، بعد مرتبه بزرگی را از روی جواب نهایی بخون. به این ترتیب خطای تقریب‌های میانی را از بین می‌برویم."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_053",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تندی خودرویی $36 \\text{ km/h}$ است. این تندی در سیستم SI چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$100 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5 \\text{ m/s}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واحد سرعت در سیستم SI متر بر ثانیه ($\\text{m/s}$) است.\nبرای تبدیل کیلومتر بر ساعت به متر بر ثانیه، باید کسر را ساده کنیم:\n$$1 \\text{ km/h} = \\dfrac{1000 \\text{ m}}{3600 \\text{ s}} = \\dfrac{1}{3.6} \\text{ m/s}$$\nپس فقط کافی است عدد را بر $3.6$ تقسیم کنیم:\n$$36 \\div 3.6 = 10 \\text{ m/s}$$\nپس گزینه 3 جواب صحیح است.\n\nبنابراین، گزینه 3 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای تبدیل واحد از کیلومتر بر ساعت به متر بر ثانیه، کافی است مقدار داده شده  بر عدد $3.6$ تقسیم می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_054",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تندی خودرویی $72 \\text{ km/h}$ است. این تندی در سیستم SI چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$20 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$40 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$200 \\text{ m/s}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واحد سرعت در سیستم SI متر بر ثانیه ($\\text{m/s}$) است.\nبرای تبدیل کیلومتر بر ساعت به متر بر ثانیه، باید کسر را ساده کنیم:\n$$1 \\text{ km/h} = \\dfrac{1000 \\text{ m}}{3600 \\text{ s}} = \\dfrac{1}{3.6} \\text{ m/s}$$\nپس فقط کافی است عدد را بر $3.6$ تقسیم کنیم:\n$$72 \\div 3.6 = 20 \\text{ m/s}$$\nپس گزینه 1 جواب صحیح است.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای تبدیل واحد از کیلومتر بر ساعت به متر بر ثانیه، کافی است مقدار داده شده  بر عدد $3.6$ تقسیم می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_055",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تندی خودرویی $90 \\text{ km/h}$ است. این تندی در سیستم SI چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$25 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$250 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12.5 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$50 \\text{ m/s}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واحد سرعت در سیستم SI متر بر ثانیه ($\\text{m/s}$) است.\nبرای تبدیل کیلومتر بر ساعت به متر بر ثانیه، باید کسر را ساده کنیم:\n$$1 \\text{ km/h} = \\dfrac{1000 \\text{ m}}{3600 \\text{ s}} = \\dfrac{1}{3.6} \\text{ m/s}$$\nپس فقط کافی است عدد را بر $3.6$ تقسیم کنیم:\n$$90 \\div 3.6 = 25 \\text{ m/s}$$\nپس گزینه 1 جواب صحیح است.\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای تبدیل واحد از کیلومتر بر ساعت به متر بر ثانیه، کافی است مقدار داده شده  بر عدد $3.6$ تقسیم می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_056",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تندی خودرویی $108 \\text{ km/h}$ است. این تندی در سیستم SI چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$15 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$300 \\text{ m/s}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$60 \\text{ m/s}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واحد سرعت در سیستم SI متر بر ثانیه ($\\text{m/s}$) است.\nبرای تبدیل کیلومتر بر ساعت به متر بر ثانیه، باید کسر را ساده کنیم:\n$$1 \\text{ km/h} = \\dfrac{1000 \\text{ m}}{3600 \\text{ s}} = \\dfrac{1}{3.6} \\text{ m/s}$$\nپس فقط کافی است عدد را بر $3.6$ تقسیم کنیم:\n$$108 \\div 3.6 = 30 \\text{ m/s}$$\nپس گزینه 2 جواب صحیح است.\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای تبدیل واحد از کیلومتر بر ساعت به متر بر ثانیه، کافی است مقدار داده شده  بر عدد $3.6$ تقسیم می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_057",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "طول میله‌ای با خط‌کشی اندازه‌گیری شده و مقدار $( 50 \\pm 0.5 ) \\text{ cm}$ گزارش شده است. خطای نسبی این اندازه‌گیری چند درصد است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.1\\%$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خطای نسبی (درصد خطا) از تقسیم مقدار خطا بر مقدار اصلی اندازه‌گیری شده به دست می‌آید.\n$$\\text{درصد خطا} = \\dfrac{\\Delta x}{x} \\times 100$$\nدر اینجا مقدار اندازه‌گیری شده $x = 50$ و خطا $\\Delta x = 0.5$ است.\n$$\\text{درصد خطا} = \\dfrac{0.5}{50} \\times 100 = 1\\%$$\n\nبنابراین، گزینه 1 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "خطا تقسیم بر عدد اصلی می‌کنیم، در صد ضرب می‌شود. به همین سادگی: $\\frac{مقدار خطا}{مقدار اصلی} \\times 100 = درصد خطا$. یعنی عدد چه کسری از کل است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_058",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "طول میله‌ای با خط‌کشی اندازه‌گیری شده و مقدار $( 200 \\pm 2 ) \\text{ cm}$ گزارش شده است. خطای نسبی این اندازه‌گیری چند درصد است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.1\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1\\%$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خطای نسبی (درصد خطا) از تقسیم مقدار خطا بر مقدار اصلی اندازه‌گیری شده به دست می‌آید.\n$$\\text{درصد خطا} = \\dfrac{\\Delta x}{x} \\times 100$$\nدر اینجا مقدار اندازه‌گیری شده $x = 200$ و خطا $\\Delta x = 2$ است.\n$$\\text{درصد خطا} = \\dfrac{2}{200} \\times 100 = 1\\%$$\n\nبنابراین، گزینه 4 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "خطا تقسیم بر عدد اصلی می‌کنیم، در صد ضرب می‌شود. به همین سادگی: $\\frac{مقدار خطا}{مقدار اصلی} \\times 100 = درصد خطا$. یعنی عدد چه کسری از کل است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_059",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "طول میله‌ای با خط‌کشی اندازه‌گیری شده و مقدار $( 25 \\pm 0.1 ) \\text{ cm}$ گزارش شده است. خطای نسبی این اندازه‌گیری چند درصد است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.4\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.04\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.8\\%$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خطای نسبی (درصد خطا) از تقسیم مقدار خطا بر مقدار اصلی اندازه‌گیری شده به دست می‌آید.\n$$\\text{درصد خطا} = \\dfrac{\\Delta x}{x} \\times 100$$\nدر اینجا مقدار اندازه‌گیری شده $x = 25$ و خطا $\\Delta x = 0.1$ است.\n$$\\text{درصد خطا} = \\dfrac{0.1}{25} \\times 100 = 0.4\\%$$\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "خطا تقسیم بر عدد اصلی می‌کنیم، در صد ضرب می‌شود. به همین سادگی: $\\frac{مقدار خطا}{مقدار اصلی} \\times 100 = درصد خطا$. یعنی عدد چه کسری از کل است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_physics_10_physics_measurement_060",
+    "subject": "physics",
+    "topic_key": "physics_measurement",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "طول میله‌ای با خط‌کشی اندازه‌گیری شده و مقدار $( 10 \\pm 0.2 ) \\text{ cm}$ گزارش شده است. خطای نسبی این اندازه‌گیری چند درصد است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20\\%$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.2\\%$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خطای نسبی (درصد خطا) از تقسیم مقدار خطا بر مقدار اصلی اندازه‌گیری شده به دست می‌آید.\n$$\\text{درصد خطا} = \\dfrac{\\Delta x}{x} \\times 100$$\nدر اینجا مقدار اندازه‌گیری شده $x = 10$ و خطا $\\Delta x = 0.2$ است.\n$$\\text{درصد خطا} = \\dfrac{0.2}{10} \\times 100 = 2\\%$$\n\nبنابراین، گزینه 2 پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "خطا تقسیم بر عدد اصلی می‌کنیم، در صد ضرب می‌شود. به همین سادگی: $\\frac{مقدار خطا}{مقدار اصلی} \\times 100 = درصد خطا$. یعنی عدد چه کسری از کل است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  }
+]

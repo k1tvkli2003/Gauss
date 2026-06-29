@@ -1,0 +1,1418 @@
+[
+  {
+    "question_number": 1040,
+    "solution_page": 417,
+    "stated_correct_option": 4,
+    "classic_solution": "از نمودارهای مکان-زمان، سرعت اولیه A از شیب خط گذرنده از مبدأ و نقطه ۱ برابر $2m/s$ خوانده می‌شود. با معادله سهمی B، $a_B=-4m/s^2$ و $a_A=4m/s^2$ است؛ حل $x_A=x_B$ زمان همرسی $1.5s$ و سپس $v_A=8m/s$ و $v_B=-6m/s$ را می‌دهد.",
+    "media_regions": [
+      {
+        "page_file": "page_0222.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1041,
+    "solution_page": 417,
+    "stated_correct_option": 2,
+    "classic_solution": "ریشه‌های سهمی A برابر $2s$ و $6s$ است و از داده رأس، معادله $x_A=t^2-8t+12$ به دست می‌آید. با برابری سرعت متوسط A در $6s$ نخست با سرعت B، مکان اولیه B محاسبه می‌شود و از همرسی‌های $1s$ و $5s$ مسافت کل $10m$ نتیجه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1042,
+    "solution_page": 417,
+    "stated_correct_option": 3,
+    "classic_solution": "در شکل، دو متحرک در لحظه $t^\\prime$ از یک مکان عبور می‌کنند. سرعت متوسط A در بازه $(0,t^\\prime)$ و شیب مماس در همان لحظه، یعنی سرعت B، با هم مقایسه شده و از رابطه‌های شیب و تشابه، $t^\\prime=8s$ به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0222.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1043,
+    "solution_page": 418,
+    "stated_correct_option": 4,
+    "classic_solution": "با تقارن دو سهمی، لحظه صفر شدن سرعت‌ها روی محور تقارن قرار می‌گیرد. جابه‌جایی‌های A و B بین محور تقارن و نقاط داده‌شده نوشته می‌شود، نسبت شتاب‌ها $16/9$ به دست می‌آید و با برابر بودن تغییر سرعت‌ها زمان خواسته $1280ms$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0223.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1044,
+    "solution_page": 418,
+    "stated_correct_option": 2,
+    "classic_solution": "مبدأ زمان در محل تغییر جهت گرفته شده است. با نوشتن $x_A=k-\\frac12a_A(t-2)^2$ و $x_B=\\frac12a_B(t-2)^2$ و استفاده از برابری مکان در $t=0$، رابطه $a_A+a_B=k/2$ به دست می‌آید؛ بنابراین فاصله دو متحرک در $t=6s$ برابر $3k$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1045,
+    "solution_page": 418,
+    "stated_correct_option": 1,
+    "classic_solution": "حرکت در سه بازه بررسی می‌شود: شتاب منفی ثابت، سپس شتاب صفر، و در پایان شتاب مثبت ثابت. با ترجمه این سه بخش به نمودارهای $x-t$ و $v-t$، فقط گزاره ۱ با شیب‌ها و تغییر جهت‌ها سازگار است.",
+    "media_regions": [
+      {
+        "page_file": "page_0223.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1046,
+    "solution_page": 419,
+    "stated_correct_option": 1,
+    "classic_solution": "شیب نمودار $x-t$ سرعت را می‌دهد. برای A سرعت‌های ابتدا و انتها از شیب دو پاره‌خط، برای B از شیب‌های داده‌شده و برای C از سطح زیر نمودار $a-t$ استفاده شده است؛ در پایان $|a_{av,C}|>|a_{av,B}|>|a_{av,A}|$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0224.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1047,
+    "solution_page": 419,
+    "stated_correct_option": 2,
+    "classic_solution": "از نمودار $v-t$ سرعت‌ها در $3s$، $6s$ و $8s$ محاسبه می‌شوند و لحظه‌های تغییر جهت نیز از صفر شدن سرعت به دست می‌آیند. شرط برابر بودن سرعت متوسط و تندی متوسط یعنی نبود تغییر جهت، فقط بازه متناظر با گزینه ۲ را باقی می‌گذارد.",
+    "media_regions": [
+      {
+        "page_file": "page_0224.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1048,
+    "solution_page": 419,
+    "stated_correct_option": 3,
+    "classic_solution": "با شتاب $1m/s^2$ در بازه $9s$ تا $10s$، نمودار سرعت-زمان تکمیل می‌شود. مسافت بین $t_1$ و $t_2$ از سطح مثلثی زیر نمودار است و چون بازه بدون تغییر جهت انتخاب می‌شود، تندی متوسط $3m/s$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0224.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1049,
+    "solution_page": 419,
+    "stated_correct_option": 3,
+    "classic_solution": "در بازه $6s$ تا $12s$ شتاب متوسط صفر است، پس سرعت‌های دو سر بازه برابرند. با استفاده از مساحت‌های نمودار شتاب-زمان، سرعت‌های میانی و سپس مسافت‌های چهار بخش محاسبه شده و تندی متوسط $26/3m/s$ نتیجه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0224.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در ابتدای page_0225.jpg دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 1050,
+    "solution_page": 420,
+    "stated_correct_option": 2,
+    "classic_solution": "از مساحت زیر نمودار شتاب-زمان، سرعت‌ها در زمان‌های $5s$، $25s$ و $30s$ محاسبه می‌شود. سپس سطح‌های نمودار سرعت-زمان مکان را می‌دهند؛ عبور نخست از $x=5m$ در $28s$ است و با تساوی مساحت‌ها مسافت خواسته $140m$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0225.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1051,
+    "solution_page": 420,
+    "stated_correct_option": 3,
+    "classic_solution": "برای خودرویی که شتابش در دو مرحله ثابت است، رابطه $v^2-v_0^2=2a\\Delta x$ به کار رفته است. سرعت در نقطه تغییر شتاب $12m/s$ و محل توقف $82m$ محاسبه می‌شود و چون زمان رفت و برگشت بین دو نقطه برابر است، تندی متوسط کل $4m/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0225.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1052,
+    "solution_page": 420,
+    "stated_correct_option": 2,
+    "classic_solution": "اطلاعات روی نمودار شتاب-مکان با رابطه مستقل از زمان ترکیب می‌شود. سرعت در $x=16m$ برابر $8m/s$ و در $x=24m$ صفر است؛ سپس زمان‌های رسیدن به این نقاط از $v=at+v_0$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0225.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1053,
+    "solution_page": 421,
+    "stated_correct_option": 3,
+    "classic_solution": "نمودار $v-t$ مرحله‌ای تحلیل می‌شود. ابتدا $t_1=5s$ و با شرط مسافت $250m$، $t_2=20s$ به دست می‌آید؛ سپس از صفر شدن دوباره سرعت و رسیدن به $x=260m$، زمان‌های بعدی و سطح‌های نمودار محاسبه می‌شوند.",
+    "media_regions": [
+      {
+        "page_file": "page_0226.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1054,
+    "solution_page": 421,
+    "stated_correct_option": 3,
+    "classic_solution": "تعادل نیرویی یعنی نیروی خالص صفر، شتاب صفر و سرعت ثابت برداری. با این معیار، خودرو در پیچ و کامیونِ شروع‌کننده به حرکت متعادل نیستند، جسم ساکن متعادل است و جسم روی سطح شیبدار بی‌اصطکاک نیروی خالص دارد.",
+    "media_regions": [
+      {
+        "page_file": "page_0226.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1055,
+    "solution_page": 421,
+    "stated_correct_option": 4,
+    "classic_solution": "با قانون اول نیوتون، تمایل آب در لیوان هنگام شروع حرکت یا ترمز بررسی می‌شود. در شروع حرکت، آب نسبت به ظرف به عقب متمایل می‌شود و در کند شدن به جلو؛ بنابراین حالت‌های درست از روی جهت شتاب ظرف تعیین می‌شوند.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1056,
+    "solution_page": 421,
+    "stated_correct_option": 1,
+    "classic_solution": "جرم سر فلزی چکش از دسته چوبی بیشتر است. هنگام برخورد دسته با زمین، سر فلزی به علت لختی تمایل دارد حرکت خود را حفظ کند و باعث فرو رفتن بیشتر دسته در سوراخ سر فلزی می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1057,
+    "solution_page": 421,
+    "stated_correct_option": 4,
+    "classic_solution": "چون $F=ma$ است، جهت و بزرگی نیرو از شتاب یعنی شیب نمودار سرعت-زمان خوانده می‌شود. تغییرات شیب در بازه‌ها و اکسترمم‌ها بررسی شده و گزاره‌ای انتخاب می‌شود که با علامت شتاب و سرعت سازگار است.",
+    "media_regions": [
+      {
+        "page_file": "page_0226.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1058,
+    "solution_page": 422,
+    "stated_correct_option": 3,
+    "classic_solution": "حرکت با شتاب ثابت الزاماً مسیر خطی ندارد؛ پرتابه با صرف‌نظر از مقاومت هوا نمونه‌ای با مسیر خمیده و شتاب ثابت گرانش است. سایر گزاره‌ها با نمودار سرعت-زمان داده‌شده ناسازگارند.",
+    "media_regions": [
+      {
+        "page_file": "page_0227.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1059,
+    "solution_page": 422,
+    "stated_correct_option": 3,
+    "classic_solution": "برای دور شدن از مبدأ، بردارهای مکان و سرعت هم‌جهت‌اند. چون نیرو $F=-4x$ است، نیرو و شتاب خلاف مکان‌اند؛ پس شتاب خلاف سرعت بوده و حرکت کندشونده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0227.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1060,
+    "solution_page": 422,
+    "stated_correct_option": 4,
+    "classic_solution": "قانون دوم نیوتون برداری نوشته می‌شود: $\\vec F_1+\\vec F_2+\\vec F_3=m\\vec a$. با جایگذاری بردارها، $\\vec F_3=4\\hat i+8\\hat j$ و اندازه آن $4\\sqrt5N$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1061,
+    "solution_page": 422,
+    "stated_correct_option": 2,
+    "classic_solution": "برای دو حالت نخست از $F=ma$ جرم‌ها بر حسب نیرو به دست می‌آیند. در حالت سوم نیرو بر جرم تفاضلی اثر می‌کند و از همان قانون دوم شتاب $4m/s^2$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1062,
+    "solution_page": 422,
+    "stated_correct_option": 4,
+    "classic_solution": "بزرگ‌ترین شتاب وقتی دو نیرو هم‌جهت‌اند و کوچک‌ترین وقتی خلاف جهت‌اند به دست می‌آید. از دو معادله $F_1+F_2=ma_{max}$ و $F_2-F_1=ma_{min}$ و سپس حالت عمود بودن نیروها، رابطه گزینه ۴ حاصل می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0227.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1063,
+    "solution_page": 422,
+    "stated_correct_option": 3,
+    "classic_solution": "در حالت اول سرعت ثابت است، پس برآیند نیرو صفر است. در حالت دوم با قرینه شدن دو نیرو، برآیند جدید برابر دو برابر نیروی سوم می‌شود؛ از اندازه نیروی جدید و شتاب، جرم $4kg$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0227.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1064,
+    "solution_page": 423,
+    "stated_correct_option": 3,
+    "classic_solution": "با رابطه $v^2-v_0^2=2a\\Delta x$ شتاب متوسط گلوله در لوله تفنگ محاسبه می‌شود. سپس از $F_{av}=ma_{av}$ نیروی متوسط وارد بر گلوله برابر $12.5kN$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1065,
+    "solution_page": 423,
+    "stated_correct_option": 2,
+    "classic_solution": "در سرعت ثابت اولیه، نیروی مقاوم هم‌اندازه و خلاف نیروی خارجی است. پس از حذف نیرو، فقط مقاومت جسم را متوقف می‌کند؛ با رابطه جابه‌جایی و زمان، شتاب و سپس نیروی مقاوم $1N$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1066,
+    "solution_page": 423,
+    "stated_correct_option": 2,
+    "classic_solution": "دو جسم از سکون و در زمان برابر جابه‌جایی‌های $d$ و $4d$ دارند. از $\\Delta x=\\frac12at^2$ نسبت شتاب‌ها ۴ و در نتیجه نسبت نیروها نیز ۴ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1067,
+    "solution_page": 423,
+    "stated_correct_option": 2,
+    "classic_solution": "سرعت $72km/h$ به $20m/s$ تبدیل می‌شود و توقف در $0.5s$ شتاب $40m/s^2$ می‌دهد. نیروی کمربند از $F=ma$ به دست می‌آید و نسبت آن به وزن برابر ۴ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1068,
+    "solution_page": 423,
+    "stated_correct_option": 4,
+    "classic_solution": "قطار در دو ثانیه نخست از سکون با شتاب حرکت می‌کند و تندی متوسط آن $2m/s$ است. شخص داخل قطار چون نیروی افقی از کف نمی‌گیرد، نسبت به زمین ساکن می‌ماند و تندی متوسط او صفر است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1069,
+    "solution_page": 423,
+    "stated_correct_option": 2,
+    "classic_solution": "از سهمی بودن نمودار $x-t$، معادله مکان با شتاب ثابت نوشته می‌شود. عبور از $x=0$ در $3s$ و صفر بودن شیب در $1s$ دو معادله می‌دهد و شتاب $-2m/s^2$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1070,
+    "solution_page": 423,
+    "stated_correct_option": 2,
+    "classic_solution": "در حالت نخست برآیند نیروها با نیروی $5N$ خنثی است. در حالت دوم نیروها سه برابر و عمود می‌شوند؛ از برآیند، شتاب جسم و جابه‌جایی دو ثانیه نخست از سکون محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0228.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1071,
+    "solution_page": 424,
+    "stated_correct_option": 1,
+    "classic_solution": "شتاب مراحل اول و دوم از نیروهای داده‌شده به دست می‌آید. سپس با رابطه مستقل از زمان، سرعت‌های انتهایی محاسبه و کار کل از سطح نمودار $F-x$ یا قضیه کار-انرژی برابر $56J$ نتیجه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0229.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1072,
+    "solution_page": 424,
+    "stated_correct_option": 2,
+    "classic_solution": "حرکت سه بخش دارد و شتاب‌ها از $F=ma$ خوانده می‌شوند. سرعت و جابه‌جایی هر بخش محاسبه شده و جابه‌جایی کل $-52m$ در $17s$ و سرعت متوسط $-52/17m/s$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0229.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1073,
+    "solution_page": 425,
+    "stated_correct_option": 2,
+    "classic_solution": "برای پایین آمدن با سرعت ثابت، شخص نیرویی رو به پایین به میله وارد می‌کند و طبق قانون سوم نیوتون میله نیرویی رو به بالا به او وارد می‌کند؛ همین کنش و واکنش علت تغییر شکل میله است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1074,
+    "solution_page": 425,
+    "stated_correct_option": 3,
+    "classic_solution": "طناب سبک نیروی $100N$ را بین دو شخص منتقل می‌کند. شتاب هر شخص از $F=ma$ محاسبه می‌شود و با شرط مجموع جابه‌جایی‌ها برابر فاصله اولیه $10m$، جابه‌جایی شخص اول $4m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1075,
+    "solution_page": 425,
+    "stated_correct_option": 4,
+    "classic_solution": "پس از قطع نیرو، بر قایق نیروی خالصی وارد نیست و سرعت ثابت می‌ماند. از جابه‌جایی و زمان داده‌شده سرعت قایق $3m/s$ و با مرحله نیروگیری زمان لازم $4.5s$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1076,
+    "solution_page": 425,
+    "stated_correct_option": 2,
+    "classic_solution": "در $0.2s$ اول دو شخص با نیروی متقابل شتاب می‌گیرند و سپس با سرعت ثابت دور می‌شوند. جابه‌جایی کل هر شخص جداگانه محاسبه شده و چون جهت‌ها مخالف‌اند، فاصله نهایی $4.92m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1077,
+    "solution_page": 425,
+    "stated_correct_option": 3,
+    "classic_solution": "حجم مخروط با $V=\\frac13\\pi r^2h$ محاسبه و سپس وزن از $W=\\rho Vg$ به دست می‌آید. با داده‌های مسئله، وزن مخروط $148N$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1078,
+    "solution_page": 425,
+    "stated_correct_option": 4,
+    "classic_solution": "دو نسبت وزن روی زمین و سیاره برای جسم‌های A و B نوشته می‌شود. با برابر قرار دادن نسبت‌های به‌دست‌آمده برای $g_p/g_e$، نسبت جرم‌ها $m_B/m_A=2\\sqrt2$ نتیجه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1079,
+    "solution_page": 426,
+    "stated_correct_option": 3,
+    "classic_solution": "در مرحله اول $F_1-mg=ma_1$ و در مرحله دوم $F_2-mg=ma_2$ نوشته می‌شود. جابه‌جایی مرحله اول $40m$ و ارتفاع اضافی تا توقف $80m$ است؛ بنابراین بیشینه ارتفاع $120m$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0231.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1080,
+    "solution_page": 426,
+    "stated_correct_option": 3,
+    "classic_solution": "برای گلوله در مسیر عمودی با مقاومت هوا، در بالا رفتن وزن و مقاومت هر دو رو به پایین‌اند، در اوج فقط وزن اثر دارد و در پایین آمدن مقاومت رو به بالا است. بنابراین اندازه شتاب در مسیر رفت و برگشت طبق شکل تغییر می‌کند.",
+    "media_regions": [
+      {
+        "page_file": "page_0231.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1081,
+    "solution_page": 426,
+    "stated_correct_option": 4,
+    "classic_solution": "از رابطه مستقل از زمان، شتاب لازم برای رسیدن از سرعت صفر به $20m/s$ در فاصله داده‌شده $20m/s^2$ است. چون وزن و مقاومت هوا به‌تنهایی سقوطی با شتاب بزرگ‌تر از $g$ نمی‌سازند، نیروی اضافی رو به پایین لازم است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1082,
+    "solution_page": 426,
+    "stated_correct_option": 3,
+    "classic_solution": "شتاب سقوط از تغییر سرعت در دو ثانیه اول $4m/s^2$ به دست می‌آید. سپس از $mg-f_D=ma$، مقاومت هوا $12N$ و نسبت وزن به مقاومت $5/3$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1083,
+    "solution_page": 426,
+    "stated_correct_option": 1,
+    "classic_solution": "با نوشتن $m\\vec a=-mg\\hat j+\\vec f_D$ بردار مقاومت هوا به دست می‌آید. بزرگی مقاومت $6.5N$ است و جهت مؤلفه‌های آن نشان می‌دهد گلوله هنوز پیش از اوج مسیر قرار دارد.",
+    "media_regions": [
+      {
+        "page_file": "page_0231.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1084,
+    "solution_page": 426,
+    "stated_correct_option": 3,
+    "classic_solution": "در اوج مسیر، سرعت افقی و رو به راست است، پس مقاومت هوا رو به چپ و وزن رو به پایین است. زاویه برآیند با وزن از شکل خوانده می‌شود و با $\\sin53^\\circ=mg/ma$ شتاب $12.5m/s^2$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0231.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1085,
+    "solution_page": 427,
+    "stated_correct_option": 3,
+    "classic_solution": "هنگام بالا رفتن، مقاومت و وزن هر دو خلاف حرکت‌اند و $f_D=12N$ محاسبه می‌شود. در پایین آمدن به علت اتلاف انرژی، تندی کمتر و مقاومت کمتر است؛ بنابراین شتاب پایین آمدن بین $4$ و $10m/s^2$ قرار می‌گیرد.",
+    "media_regions": [
+      {
+        "page_file": "page_0232.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1086,
+    "solution_page": 427,
+    "stated_correct_option": 2,
+    "classic_solution": "در سقوط با مقاومت هوا $a=g-f_D/m$ است. با دو برابر شدن مقاومت در لحظه دوم و کاهش شتاب به اندازه $2m/s^2$، دستگاه ساده حل شده و $f_D=4N$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0232.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1087,
+    "solution_page": 427,
+    "stated_correct_option": 2,
+    "classic_solution": "برای گلوله‌های A و B معادله‌های $W-f_D=10$ و $W+f_D=70$ نوشته می‌شود؛ از آن‌ها $W=40N$، $f_D=30N$ و $m=4kg$ است. برای گلوله C برآیند نیروها برداری است و شتاب $12.5m/s^2$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0232.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1088,
+    "solution_page": 427,
+    "stated_correct_option": 2,
+    "classic_solution": "چون گلوله‌ها مشابه‌اند ولی B سبک‌تر است، در رابطه $|a|=g+f_D/m$ شتاب B بزرگ‌تر می‌شود. زمان رسیدن به اوج برای A بیشتر است، اما تندی متوسط تا اوج برای هر دو برابر $v_0/2$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0232.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1089,
+    "solution_page": 428,
+    "stated_correct_option": 1,
+    "classic_solution": "در بالا رفتن $|a_1|=g+f_D/m$ و در پایین آمدن $a_2=g-f_D/m$ نوشته می‌شود. با روابط زمان رفت و برگشت از ارتفاع بیشینه و شرط زمانی داده‌شده، نسبت مقاومت هوا به وزن $3/5$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0233.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1090,
+    "solution_page": 428,
+    "stated_correct_option": 2,
+    "classic_solution": "مانند حل قبل، شتاب‌های بالا و پایین با مقاومت هوا نوشته می‌شود. شرط تندی متوسط کل مسیر و روابط ارتفاع بیشینه باعث می‌شود نسبت شتاب‌ها مشخص و در نهایت $f_D/mg=15/17$ شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0233.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1091,
+    "solution_page": 428,
+    "stated_correct_option": 4,
+    "classic_solution": "چترباز ابتدا با مقاومت ناچیز با شتاب نزدیک $g$ حرکت می‌کند؛ با افزایش سرعت، مقاومت زیاد می‌شود تا تندی حدی برقرار شود. پس از باز شدن چتر، مقاومت ناگهان بزرگ شده و حرکت کندشونده است تا دوباره تندی حدی جدید برسد.",
+    "media_regions": [
+      {
+        "page_file": "page_0233.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1092,
+    "solution_page": 429,
+    "stated_correct_option": 3,
+    "classic_solution": "شتاب چترباز قبل و بعد از باز شدن چتر در هر دو حالت به سوی صفر شدن می‌رود؛ یعنی اندازه شتاب کاهش می‌یابد. فقط در لحظه باز شدن چتر تغییر ناگهانی رخ می‌دهد و افزایش پایدار شتاب نداریم.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1093,
+    "solution_page": 429,
+    "stated_correct_option": 2,
+    "classic_solution": "در جدول، در بازه $7s$ تا $9s$ نیروی مقاومت برابر وزن و تندی حدی برقرار است. از برابر بودن مقدار مقاومت در لحظه‌های دیگر، گزاره‌های درست و نادرست جدا می‌شوند و نتیجه گزینه ۲ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1094,
+    "solution_page": 429,
+    "stated_correct_option": 2,
+    "classic_solution": "برای هر دو گلوله در روغن حرکت با سرعت ثابت است، پس برآیند نیرو صفر است. از تعادل نیروها، نیروی شناوری وارد بر A برابر $16N$ و بر B برابر $14N$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0234.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1095,
+    "solution_page": 429,
+    "stated_correct_option": 3,
+    "classic_solution": "نیروهای عمودی دو جسم روی هم جدا رسم می‌شوند. جسم ۱ فقط از جسم ۲ نیروی عمودی می‌گیرد و جسم ۲ هم وزن خود و نیروی جسم ۱ را تحمل می‌کند؛ بنابراین نسبت نیروهای عمودی $3$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0234.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1096,
+    "solution_page": 430,
+    "stated_correct_option": 2,
+    "classic_solution": "در راستای افقی، مؤلفه موثر نیرو برابر نصف $F$ است و از $\\frac12F=ma$ جرم $2.5kg$ به دست می‌آید. در راستای قائم برآیند صفر است و $F_N=F-mg=15N$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0235.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1097,
+    "solution_page": 430,
+    "stated_correct_option": 1,
+    "classic_solution": "برای وزنه، قانون دوم به صورت برداری با وزن و نیروی عمودی سطح نوشته می‌شود. از مؤلفه‌های شتاب داده‌شده، بردار نیروی عمودی و سپس بزرگی آن $\\sqrt2N$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0235.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1098,
+    "solution_page": 430,
+    "stated_correct_option": 4,
+    "classic_solution": "هنگام نشستن روی ترازو، تندی ابتدا زیاد و سپس کم می‌شود. در بخش اول شتاب رو به پایین و عدد ترازو کمتر از وزن است؛ در بخش دوم شتاب رو به بالا و عدد ترازو بیشتر از وزن است، پس عدد ترازو ابتدا کم و سپس زیاد می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0235.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1099,
+    "solution_page": 430,
+    "stated_correct_option": 2,
+    "classic_solution": "در آسانسور با شتاب رو به پایین، عدد ترازو $F_N=m(g-a)$ است. از داده شخص اول شتاب $2m/s^2$ و برای شخص دوم عدد ترازو $320N$ به دست می‌آید؛ روش تناسب نیز همین نتیجه را می‌دهد.",
+    "media_regions": [
+      {
+        "page_file": "page_0235.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1100,
+    "solution_page": 430,
+    "stated_correct_option": 1,
+    "classic_solution": "اختلاف دو عدد ترازو با رابطه $F_N=m(g+a)$ تحلیل می‌شود. از داده‌ها $a=2m/s^2$ و سپس جرم شخص از نیروی عمودی ظاهری $70kg$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0235.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1101,
+    "solution_page": 430,
+    "stated_correct_option": 2,
+    "classic_solution": "عدد ترازو در حالت‌های تندشونده رو به بالا و تندشونده رو به پایین به ترتیب $m(g+a_1)$ و $m(g-a_2)$ است. با میانگین این دو عدد و قانون دوم، شتاب حالت سوم $1m/s^2$ رو به بالا به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0235.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1102,
+    "solution_page": 430,
+    "stated_correct_option": 2,
+    "classic_solution": "در سه ثانیه اول عدد ترازو کمتر از وزن است، پس شتاب آسانسور رو به پایین و سرعت پس از آن $6m/s$ می‌شود. در دو ثانیه بعدی عدد ترازو بیشتر از وزن است، شتاب رو به بالا است و سرعت نهایی $4m/s$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0235.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1103,
+    "solution_page": 431,
+    "stated_correct_option": 4,
+    "classic_solution": "آسانسور رو به بالا حرکت می‌کند ولی کندشونده است، پس شتاب جعبه رو به پایین است. از $mg-F_N=ma$ نیروی عمودی $78N$، از رابطه مستقل از زمان جابه‌جایی $2m$ و کار نیروی عمودی $156J$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0236.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1104,
+    "solution_page": 431,
+    "stated_correct_option": 4,
+    "classic_solution": "عدد ترازو با وزن شخص $700N$ مقایسه می‌شود تا نوع حرکت آسانسور در هر بازه مشخص شود. بیشترین تندی در پایان بازه شتاب‌دار رو به بالا است و با جمع تغییرات سرعت، مقدار $16m/s$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1105,
+    "solution_page": 431,
+    "stated_correct_option": 2,
+    "classic_solution": "از شیب نمودار سرعت-زمان شتاب آسانسور $-2\\hat j$ است. با نوشتن $\\vec F_N+m\\vec g=m\\vec a$، نیروی عمودی سطح $32\\hat jN$ و واکنش وارد بر کف آسانسور $-32\\hat jN$ نتیجه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0236.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1106,
+    "solution_page": 431,
+    "stated_correct_option": 1,
+    "classic_solution": "سرعت‌ها در $t_1$ و $t_2$ با تشابه مثلث‌ها $2m/s$ و $1m/s$ هستند. مساحت زیر نمودار سرعت-زمان جابه‌جایی $33.5m$ را می‌دهد و با قضیه کار-انرژی کار نیروی عمودی سطح $200kJ$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0236.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1107,
+    "solution_page": 432,
+    "stated_correct_option": 1,
+    "classic_solution": "میز به شخص نیرویی $40N$ رو به بالا وارد می‌کند. با وزن $800N$ و شتاب رو به پایین آسانسور، قانون دوم در راستای قائم نوشته می‌شود و نیروی عمودی ترازو $440N$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0237.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1108,
+    "solution_page": 432,
+    "stated_correct_option": 3,
+    "classic_solution": "در آستانه حرکت، نیروی اعمالی برابر بیشینه اصطکاک ایستایی است و $\\mu_s=3/5$ می‌شود. پس از شروع حرکت، از $v^2=2a\\Delta x$ شتاب و سپس از $F-f_k=ma$ مقدار $\\mu_k=2/5$ به دست می‌آید؛ نسبت برابر $3/2$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0237.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1109,
+    "solution_page": 432,
+    "stated_correct_option": 2,
+    "classic_solution": "برای دو حالت نیرو و شتاب، معادله $F-\\mu_kmg=ma$ نوشته می‌شود. حل دستگاه، جرم جسم $2kg$ و ضریب اصطکاک جنبشی $0.25$ را می‌دهد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1110,
+    "solution_page": 432,
+    "stated_correct_option": 3,
+    "classic_solution": "نیروهای وارد بر شخص و جعبه جداگانه رسم می‌شوند. شرط حرکت جعبه و نلغزیدن شخص با بیشینه اصطکاک ایستایی دو سطح مقایسه می‌شود؛ نتیجه این است که شرایط ۱ و ۴ ممکن‌اند و ۲ و ۳ الزاماً برقرار نیستند.",
+    "media_regions": [
+      {
+        "page_file": "page_0237.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1111,
+    "solution_page": 433,
+    "stated_correct_option": 3,
+    "classic_solution": "دو مرحله با نیروهای $40N$ و $20N$ و شتاب‌های $a$ و $a^\\prime$ بررسی می‌شود. با حذف اصطکاک، $a-a^\\prime=2$ و با رابطه جابه‌جایی‌ها، $a=1m/s^2$ به دست می‌آید؛ سپس $\\mu_k=0.3$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1112,
+    "solution_page": 433,
+    "stated_correct_option": 2,
+    "classic_solution": "حرکت پیش و پس از قطع نیرو بررسی می‌شود. از معادله سرعت-زمان و قانون دوم، $a^\\prime=-3a$ و $a-a^\\prime=8$ به دست می‌آید؛ بنابراین $a=2m/s^2$، $v_1=12m/s$ و جابه‌جایی کل $48m$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0238.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1113,
+    "solution_page": 433,
+    "stated_correct_option": 4,
+    "classic_solution": "پس از $4s$ فقط اصطکاک جنبشی جسم را کند می‌کند و $a^\\prime=-8m/s^2$ است. با جمع جابه‌جایی قبل و بعد از قطع نیرو، $a=2m/s^2$ و از $F-f_k=ma$ نیروی $F=40N$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0238.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1114,
+    "solution_page": 433,
+    "stated_correct_option": 1,
+    "classic_solution": "با قانون دوم، اصطکاک جنبشی $20N$ به دست می‌آید. در ثانیه دوم، سرعت‌ها $10$ و $20m/s$ هستند؛ جابه‌جایی $15m$ و کار اصطکاک $-300J$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1115,
+    "solution_page": 434,
+    "stated_correct_option": 1,
+    "classic_solution": "در بخش اول، $F$ و اصطکاک خلاف جهت‌اند و از قانون دوم $F=20N$ و سرعت در $9s$ برابر $18m/s$ می‌شود. در بخش دوم نیرو و اصطکاک هم‌جهتِ مخالف حرکت‌اند، جسم در $1s$ می‌ایستد و جابه‌جایی کل از سطح نمودار سرعت $90m$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0239.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1116,
+    "solution_page": 434,
+    "stated_correct_option": 2,
+    "classic_solution": "برای جسم پرتاب‌شده روی سطح افقی، تنها اصطکاک جنبشی در راستای حرکت است؛ پس $a=-\\mu_kg$ و $\\Delta x=v_0^2/(2\\mu_kg)$. چون جرم در این روابط حذف می‌شود، شتاب توقف و مسافت توقف مستقل از جرم‌اند.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1117,
+    "solution_page": 434,
+    "stated_correct_option": 3,
+    "classic_solution": "سرعت اولیه $108km/h=30m/s$ است. با رابطه مسافت توقف، در جاده تر $180m$ و در جاده خشک $60m$ به دست می‌آید؛ اختلاف $120m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1118,
+    "solution_page": 434,
+    "stated_correct_option": 3,
+    "classic_solution": "شتاب‌های دو مسیر از $a=-\\mu_kg$ برابر $-2$ و $-4m/s^2$ هستند. با نوشتن $v^2-v_0^2=2a\\Delta x$ برای AB و BC و طول کل مسیر، طول BC برابر $16m$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0239.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1119,
+    "solution_page": 434,
+    "stated_correct_option": 2,
+    "classic_solution": "از رابطه $l_s=v_0^2/(2|a|)$ استفاده می‌شود. چون بخش پایانی مسیر یک‌چهارم کل است، سرعت آغاز آن نصف سرعت اولیه است و سپس زمان‌ها و سرعت‌ها با رابطه‌های شتاب ثابت محاسبه می‌شوند.",
+    "media_regions": [
+      {
+        "page_file": "page_0239.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در ابتدای page_0240.jpg دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 1120,
+    "solution_page": 435,
+    "stated_correct_option": 1,
+    "classic_solution": "پایستگی انرژی با کار اصطکاک نوشته می‌شود: $\\Delta K+\\Delta U_e=W_{f_k}$. با داده‌های جرم، سرعت‌ها، انرژی فنر و اصطکاک، فاصله فشردگی/حرکت $d=4m$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0240.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1121,
+    "solution_page": 435,
+    "stated_correct_option": 2,
+    "classic_solution": "حرکت در چند بخش انجام می‌شود: ابتدا جسم خلاف جهت محور حرکت می‌کند و با نیرو و اصطکاک متوقف می‌شود، سپس چون نیروی $F$ از اصطکاک ایستایی بیشینه بزرگ‌تر است دوباره در جهت محور حرکت می‌کند. با جمع مسافت‌های بخش‌ها، تندی متوسط $11.25m/s$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0240.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1122,
+    "solution_page": 435,
+    "stated_correct_option": 4,
+    "classic_solution": "برای سورتمه، شرط آستانه لغزش جسم روی سورتمه $a=\\mu_sg$ است. قانون دوم برای مجموعه با اصطکاک سطح نوشته می‌شود و $F_{max}=(m+M)g(\\mu_s+\\mu_k)=125N$ نتیجه می‌دهد.",
+    "media_regions": [
+      {
+        "page_file": "page_0240.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1123,
+    "solution_page": 435,
+    "stated_correct_option": 2,
+    "classic_solution": "جسم از سکون با شتاب ثابت در $3s$، $18m$ می‌پیماید؛ پس $a=4m/s^2$ است. نیروی خالص وارد بر جسم از $F_{net}=ma$ برابر $10N$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1124,
+    "solution_page": 436,
+    "stated_correct_option": 2,
+    "classic_solution": "برای حداقل شروع حرکت، اصطکاک ایستایی بیشینه با نیروی افقی برابر می‌شود. از $\\mu_sF_N=15N$، $F_N=25N$ و با تعادل عمودی $F_2=15N$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0241.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1125,
+    "solution_page": 436,
+    "stated_correct_option": 3,
+    "classic_solution": "ابتدا نیروی عمودی با در نظر گرفتن مؤلفه قائم نیرو محاسبه می‌شود و $F_N=36N$ است. چون $F_x$ از اصطکاک ایستایی بیشینه بیشتر است، جسم حرکت می‌کند و با اصطکاک جنبشی، شتاب $5.5m/s^2$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0241.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1126,
+    "solution_page": 436,
+    "stated_correct_option": 2,
+    "classic_solution": "در هر دو حالت حرکت کندشونده است. با نوشتن معادلات عمودی برای نیروی عمودی و معادلات افقی شامل اصطکاک جنبشی برای دو حالت، دستگاه حل شده و $F_2=10N$ و $F_1=12N$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0241.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1127,
+    "solution_page": 436,
+    "stated_correct_option": 3,
+    "classic_solution": "نیروی عمودی سطح $F_N=F_2+mg=80N$ و اصطکاک جنبشی $16N$ است. با قضیه کار-انرژی یا روش شتاب، جابه‌جایی $7.5m$ و کار نیروی $F_1$ برابر $150J$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0241.jpg",
+        "box": [
+          70,
+          180,
+          760,
+          2200
+        ],
+        "placement": "solution",
+        "alt": "شکل‌ها و نمودارهای به‌کاررفته در حل چاپی این پرسش"
+      }
+    ],
+    "review_notes": []
+  }
+]

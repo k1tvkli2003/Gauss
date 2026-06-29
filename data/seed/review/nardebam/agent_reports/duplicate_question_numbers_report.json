@@ -1,0 +1,1838 @@
+{
+  "report": "duplicate_question_numbers_report",
+  "generated_at": "2026-06-25",
+  "workspace": "C:/Users/K1/Desktop/Projects/Gauss",
+  "inputs": [
+    "data/seed/review/nardebam/normalized/*-topic-*.json",
+    "data/seed/review/nardebam/join_conflicts.json"
+  ],
+  "scope": "Exact join_conflicts entries with issue == duplicate_question_number, cross-checked against normalized topic files. Raw and normalized source files were not edited.",
+  "summary": {
+    "total_duplicate_question_number_conflicts": 288,
+    "affected_topic_count": 10,
+    "by_subject": {
+      "math": 286,
+      "physics": 2
+    },
+    "by_classification_conflict_count": {
+      "malformed_local_numbering": 207,
+      "malformed_local_numbering_repeated_block": 61,
+      "topic_boundary_overlap": 20
+    },
+    "topic_boundary_overlap_conflicts": 20,
+    "malformed_local_numbering_or_repeated_block_conflicts": 268
+  },
+  "topic_reports": [
+    {
+      "subject": "math",
+      "topic_key": "combinatorics",
+      "normalized_file": "math-topic-15.json",
+      "duplicate_question_number_conflict_count": 88,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 1,
+          "end": 88,
+          "count": 88
+        }
+      ],
+      "classification": "malformed_local_numbering",
+      "confidence": "medium",
+      "evidence_summary": "math-topic-15 is entirely local-numbered 1..88, colliding with earlier math topics. It has no internal duplicates.",
+      "file_stats": {
+        "rows": 88,
+        "min_question_number": 1,
+        "max_question_number": 88,
+        "page_min": 2,
+        "page_max": 9,
+        "internal_duplicate_number_count": 0,
+        "internal_duplicate_occurrence_count": 0,
+        "question_number_sequence_head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "question_number_sequence_tail": [
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 1,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 0,
+              "question_page": 10,
+              "question_text_snippet": "اگر $A = \\{1, 2, \\{1\\}\\}$ و $B = \\{\\{1\\}, \\{1, 2\\}, 1, 2\\}$ و $C = \\{\\{1\\}, \\{1, 2\\}, \\{3\\}, 1, 2\\}$ باشد، کدام گزینه صحیح نیست؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 4,
+              "question_page": 1,
+              "question_text_snippet": "اگر $xy^2 = \\frac{4}{3}$ باشد، حاصل $(x+3y^2)^2 - (x-3y^2)^2$ کدام است؟ (سراسری ۹۷)"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 0,
+              "question_page": 1,
+              "question_text_snippet": "کوتاه ترین فاصله سهمی $4x = y^2$ از نقطه $M(3, 0)$ کدام است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 0,
+              "question_page": 5,
+              "question_text_snippet": "دایره‌ای از دو نقطهٔ $(2, 0)$ و $(-2, 0)$ گذشته و بر خط $y = 1$ مماس است. شعاع این دایره کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 0,
+              "question_page": 2,
+              "question_text_snippet": "اگر $A$ و $B$ دو پیشامد از فضای نمونه‌ای $S$ باشند به‌طوری که $P(A') = \\dfrac{7}{10}$ و $P(B') = \\dfrac{1}{2}$ و $P(A \\cup B) = \\dfrac{2}{5}$ باشد، مقدار $P(A' \\cup B')$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 2,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 1,
+              "question_page": 10,
+              "question_text_snippet": "اگر $A = \\{1, 2, \\{1\\}, \\{2\\}\\}$ و $B = \\{1, 2, \\{1, 2\\}\\}$، تعداد اعضای $A - B$ از تعداد اعضای $B - A$ چند تا کم‌تر است؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 5,
+              "question_page": 1,
+              "question_text_snippet": "با فرض $x^2 - 2x = 2$، حاصل $x^3 - \\frac{8}{x^3}$ کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 1,
+              "question_page": 1,
+              "question_text_snippet": "طول وتر یک مثلث قائم الزاویه برابر 8 است. حداکثر مساحت این مثلث چه قدر است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 1,
+              "question_page": 5,
+              "question_text_snippet": "اگر $2x^2 + ay^2 - ax + by = 6$ معادلهٔ یک دایره به شعاع $3$ باشد، $ab$ کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 1,
+              "question_page": 2,
+              "question_text_snippet": "با ارقام $0, 1, 2, 3, 4, 5, 6$ چند عدد چهار رقمی زوج می‌توان نوشت؟ (بدون تکرار ارقام)"
+            }
+          ]
+        },
+        {
+          "question_number": 3,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 2,
+              "question_page": 10,
+              "question_text_snippet": "اگر بازهٔ $(1 + a, 6 - 2a)$ شامل عدد ۳ باشد، حدود $a$ کدام است؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 6,
+              "question_page": 2,
+              "question_text_snippet": "اگر $x^2 - 4$ یکی از عامل‌های تجزیهٔ عبارت $P(x) = x^4 + ax^3 - 4x + b$ باشد، حاصل $ab$ کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 2,
+              "question_page": 1,
+              "question_text_snippet": "نمودار مشتق تابع درجه سوم $f$ به صورت مقابل است. نمودار $f$ کدام می تواند باشد؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 2,
+              "question_page": 5,
+              "question_text_snippet": "شعاع دایره‌ای که از سه نقطهٔ $(1, 2)$، $(-1, 0)$ و $(3, 0)$ عبور کند چه‌قدر است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 2,
+              "question_page": 2,
+              "question_text_snippet": "اگر $\\dfrac{P(n, 3)}{C(n-1, 2)} = 4$ باشد، مقدار $n$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 4,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 3,
+              "question_page": 10,
+              "question_text_snippet": "به ازای چند مقدار طبیعی $n$، عدد $\\frac{3}{20}$ عضو بازهٔ $(\\frac{1}{n + 6}, \\frac{1}{n + 1})$ خواهد بود؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 7,
+              "question_page": 2,
+              "question_text_snippet": "در تجزیهٔ عبارت $(x-2)(x^2 - 4x + 4) - 1$، کدام عامل ضرب موجود است؟ (سراسری ۹۷)"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 3,
+              "question_page": 2,
+              "question_text_snippet": "کدام عبارت برای تابع $f(x) = 2\\sqrt{x} - \\dfrac{3}{\\sqrt[3]{x^2 - 1}}$ درست است؟ (سراسری ۱۴۰۰)"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 3,
+              "question_page": 5,
+              "question_text_snippet": "کوچک‌ترین دایرهٔ گذرا بر دو نقطهٔ $(2, 5)$ و $(-4, 1)$، محور $x$ها را با کدام طول قطع می‌کند؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 3,
+              "question_page": 2,
+              "question_text_snippet": "به چند طریق می‌توان ۳ مهره از بین ۴ مهره قرمز و ۵ مهره آبی انتخاب کرد به طوری که حداقل یک مهره قرمز باشد؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Renumber the whole topic to its intended global span. Based on math-topic-16 starting at 1823 and 88 rows here, 1735..1822 is the plausible target span, leaving the earlier gap before 1735 for adjacent topic review."
+    },
+    {
+      "subject": "math",
+      "topic_key": "derivative_applications",
+      "normalized_file": "math-topic-11.json",
+      "duplicate_question_number_conflict_count": 64,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 1,
+          "end": 64,
+          "count": 64
+        }
+      ],
+      "classification": "malformed_local_numbering",
+      "confidence": "medium",
+      "evidence_summary": "math-topic-11 begins with local numbers 1..64, then jumps to 1346..1466. The local block collides globally but is not internally duplicated.",
+      "file_stats": {
+        "rows": 185,
+        "min_question_number": 1,
+        "max_question_number": 1466,
+        "page_min": 1,
+        "page_max": 17,
+        "internal_duplicate_number_count": 0,
+        "internal_duplicate_occurrence_count": 0,
+        "question_number_sequence_head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "question_number_sequence_tail": [
+          1447,
+          1448,
+          1449,
+          1450,
+          1451,
+          1452,
+          1453,
+          1454,
+          1455,
+          1456,
+          1457,
+          1458,
+          1459,
+          1460,
+          1461,
+          1462,
+          1463,
+          1464,
+          1465,
+          1466
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 1,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 0,
+              "question_page": 10,
+              "question_text_snippet": "اگر $A = \\{1, 2, \\{1\\}\\}$ و $B = \\{\\{1\\}, \\{1, 2\\}, 1, 2\\}$ و $C = \\{\\{1\\}, \\{1, 2\\}, \\{3\\}, 1, 2\\}$ باشد، کدام گزینه صحیح نیست؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 4,
+              "question_page": 1,
+              "question_text_snippet": "اگر $xy^2 = \\frac{4}{3}$ باشد، حاصل $(x+3y^2)^2 - (x-3y^2)^2$ کدام است؟ (سراسری ۹۷)"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 0,
+              "question_page": 1,
+              "question_text_snippet": "کوتاه ترین فاصله سهمی $4x = y^2$ از نقطه $M(3, 0)$ کدام است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 0,
+              "question_page": 5,
+              "question_text_snippet": "دایره‌ای از دو نقطهٔ $(2, 0)$ و $(-2, 0)$ گذشته و بر خط $y = 1$ مماس است. شعاع این دایره کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 0,
+              "question_page": 2,
+              "question_text_snippet": "اگر $A$ و $B$ دو پیشامد از فضای نمونه‌ای $S$ باشند به‌طوری که $P(A') = \\dfrac{7}{10}$ و $P(B') = \\dfrac{1}{2}$ و $P(A \\cup B) = \\dfrac{2}{5}$ باشد، مقدار $P(A' \\cup B')$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 2,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 1,
+              "question_page": 10,
+              "question_text_snippet": "اگر $A = \\{1, 2, \\{1\\}, \\{2\\}\\}$ و $B = \\{1, 2, \\{1, 2\\}\\}$، تعداد اعضای $A - B$ از تعداد اعضای $B - A$ چند تا کم‌تر است؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 5,
+              "question_page": 1,
+              "question_text_snippet": "با فرض $x^2 - 2x = 2$، حاصل $x^3 - \\frac{8}{x^3}$ کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 1,
+              "question_page": 1,
+              "question_text_snippet": "طول وتر یک مثلث قائم الزاویه برابر 8 است. حداکثر مساحت این مثلث چه قدر است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 1,
+              "question_page": 5,
+              "question_text_snippet": "اگر $2x^2 + ay^2 - ax + by = 6$ معادلهٔ یک دایره به شعاع $3$ باشد، $ab$ کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 1,
+              "question_page": 2,
+              "question_text_snippet": "با ارقام $0, 1, 2, 3, 4, 5, 6$ چند عدد چهار رقمی زوج می‌توان نوشت؟ (بدون تکرار ارقام)"
+            }
+          ]
+        },
+        {
+          "question_number": 3,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 2,
+              "question_page": 10,
+              "question_text_snippet": "اگر بازهٔ $(1 + a, 6 - 2a)$ شامل عدد ۳ باشد، حدود $a$ کدام است؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 6,
+              "question_page": 2,
+              "question_text_snippet": "اگر $x^2 - 4$ یکی از عامل‌های تجزیهٔ عبارت $P(x) = x^4 + ax^3 - 4x + b$ باشد، حاصل $ab$ کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 2,
+              "question_page": 1,
+              "question_text_snippet": "نمودار مشتق تابع درجه سوم $f$ به صورت مقابل است. نمودار $f$ کدام می تواند باشد؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 2,
+              "question_page": 5,
+              "question_text_snippet": "شعاع دایره‌ای که از سه نقطهٔ $(1, 2)$، $(-1, 0)$ و $(3, 0)$ عبور کند چه‌قدر است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 2,
+              "question_page": 2,
+              "question_text_snippet": "اگر $\\dfrac{P(n, 3)}{C(n-1, 2)} = 4$ باشد، مقدار $n$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 4,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 3,
+              "question_page": 10,
+              "question_text_snippet": "به ازای چند مقدار طبیعی $n$، عدد $\\frac{3}{20}$ عضو بازهٔ $(\\frac{1}{n + 6}, \\frac{1}{n + 1})$ خواهد بود؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 7,
+              "question_page": 2,
+              "question_text_snippet": "در تجزیهٔ عبارت $(x-2)(x^2 - 4x + 4) - 1$، کدام عامل ضرب موجود است؟ (سراسری ۹۷)"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 3,
+              "question_page": 2,
+              "question_text_snippet": "کدام عبارت برای تابع $f(x) = 2\\sqrt{x} - \\dfrac{3}{\\sqrt[3]{x^2 - 1}}$ درست است؟ (سراسری ۱۴۰۰)"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 3,
+              "question_page": 5,
+              "question_text_snippet": "کوچک‌ترین دایرهٔ گذرا بر دو نقطهٔ $(2, 5)$ و $(-4, 1)$، محور $x$ها را با کدام طول قطع می‌کند؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 3,
+              "question_page": 2,
+              "question_text_snippet": "به چند طریق می‌توان ۳ مهره از بین ۴ مهره قرمز و ۵ مهره آبی انتخاب کرد به طوری که حداقل یک مهره قرمز باشد؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Renumber the leading 1..64 block to the contiguous slot immediately before 1346, likely 1282..1345, only after checking whether the remaining 1248..1281 gap is expected elsewhere."
+    },
+    {
+      "subject": "math",
+      "topic_key": "derivatives",
+      "normalized_file": "math-topic-10.json",
+      "duplicate_question_number_conflict_count": 12,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 1157,
+          "end": 1168,
+          "count": 12
+        }
+      ],
+      "classification": "malformed_local_numbering_repeated_block",
+      "confidence": "high",
+      "evidence_summary": "math-topic-10 begins with 1157..1168, then restarts 1156..1247. The duplicated 1157..1168 rows are near-identical repeated rows from an overlapping local part.",
+      "file_stats": {
+        "rows": 104,
+        "min_question_number": 1156,
+        "max_question_number": 1247,
+        "page_min": 9,
+        "page_max": 17,
+        "internal_duplicate_number_count": 12,
+        "internal_duplicate_occurrence_count": 24,
+        "question_number_sequence_head": [
+          1157,
+          1158,
+          1159,
+          1160,
+          1161,
+          1162,
+          1163,
+          1164,
+          1165,
+          1166,
+          1167,
+          1168,
+          1156,
+          1157,
+          1158,
+          1159,
+          1160,
+          1161,
+          1162,
+          1163
+        ],
+        "question_number_sequence_tail": [
+          1228,
+          1229,
+          1230,
+          1231,
+          1232,
+          1233,
+          1234,
+          1235,
+          1236,
+          1237,
+          1238,
+          1239,
+          1240,
+          1241,
+          1242,
+          1243,
+          1244,
+          1245,
+          1246,
+          1247
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 1157,
+          "occurrences": [
+            {
+              "file": "math-topic-10.json",
+              "topic_key": "derivatives",
+              "index": 0,
+              "question_page": 9,
+              "question_text_snippet": "با توجه به نمودار تابع $f$ در کدام نقطه حاصل‌ضرب مقدار تابع در مقدار مشتق تابع کم‌ترین مقدار است؟"
+            },
+            {
+              "file": "math-topic-10.json",
+              "topic_key": "derivatives",
+              "index": 13,
+              "question_page": 12,
+              "question_text_snippet": "با توجه به نمودار تابع $f$ در کدام نقطه حاصل‌ضرب مقدار تابع در مقدار مشتق تابع کم‌ترین مقدار است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 1158,
+          "occurrences": [
+            {
+              "file": "math-topic-10.json",
+              "topic_key": "derivatives",
+              "index": 1,
+              "question_page": 9,
+              "question_text_snippet": "شیب خط مماس بر نمودار تابع $f(x) = \\sin(x + \\frac{\\pi}{4})$ در نقاط $x = \\frac{\\pi}{2}$ و $x = \\pi$ و $x = \\frac{3\\pi}{2}$ را به ترتیب $m_1$، $m_2$ و $m_3$ می‌نامیم. کدام رابطه درس"
+            },
+            {
+              "file": "math-topic-10.json",
+              "topic_key": "derivatives",
+              "index": 14,
+              "question_page": 12,
+              "question_text_snippet": "شیب خط مماس بر نمودار تابع $f(x) = \\sin(x + \\frac{\\pi}{4})$ در نقاط $x = \\frac{\\pi}{2}$، $x = \\pi$ و $x = \\frac{3\\pi}{2}$ را به ترتیب $m_1$، $m_2$ و $m_3$ می‌نامیم. کدام رابطه درست"
+            }
+          ]
+        },
+        {
+          "question_number": 1159,
+          "occurrences": [
+            {
+              "file": "math-topic-10.json",
+              "topic_key": "derivatives",
+              "index": 2,
+              "question_page": 9,
+              "question_text_snippet": "با توجه به شکل مقابل، اگر $f'(-2) = -2$ باشد، $\\alpha$ کدام است؟"
+            },
+            {
+              "file": "math-topic-10.json",
+              "topic_key": "derivatives",
+              "index": 15,
+              "question_page": 12,
+              "question_text_snippet": "با توجه به شکل مقابل، اگر $-2 = f'(-2)$ باشد، $\\alpha$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 1160,
+          "occurrences": [
+            {
+              "file": "math-topic-10.json",
+              "topic_key": "derivatives",
+              "index": 3,
+              "question_page": 9,
+              "question_text_snippet": "در شکل مقابل، نمودار تابع $f(x) = x^3 - x^2 + a$ رسم شده است. با فرض $f'(1) = 1$، مقدار $a$ کدام است؟"
+            },
+            {
+              "file": "math-topic-10.json",
+              "topic_key": "derivatives",
+              "index": 16,
+              "question_page": 12,
+              "question_text_snippet": "در شکل مقابل، نمودار تابع $f(x) = x^3 - x^2 + a$ رسم شده است. با فرض $1 = f'(1)$، مقدار $a$ کدام است؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Drop or merge the leading 12-row repeated block and keep the contiguous 1156..1247 run, preserving media/notes only if they contain information absent from the kept rows."
+    },
+    {
+      "subject": "math",
+      "topic_key": "functions",
+      "normalized_file": "math-topic-07.json",
+      "duplicate_question_number_conflict_count": 1,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 611,
+          "end": 611,
+          "count": 1
+        }
+      ],
+      "classification": "malformed_local_numbering",
+      "confidence": "high",
+      "evidence_summary": "math-topic-07 has adjacent entries 609, 610, 611, 611, 612...670. The two 611 rows are different questions, so this is not a removable duplicate row.",
+      "file_stats": {
+        "rows": 63,
+        "min_question_number": 609,
+        "max_question_number": 670,
+        "page_min": 35,
+        "page_max": 98,
+        "internal_duplicate_number_count": 1,
+        "internal_duplicate_occurrence_count": 2,
+        "question_number_sequence_head": [
+          609,
+          610,
+          611,
+          611,
+          612,
+          613,
+          614,
+          615,
+          616,
+          617,
+          618,
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627
+        ],
+        "question_number_sequence_tail": [
+          651,
+          652,
+          653,
+          654,
+          655,
+          656,
+          657,
+          658,
+          659,
+          660,
+          661,
+          662,
+          663,
+          664,
+          665,
+          666,
+          667,
+          668,
+          669,
+          670
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 611,
+          "occurrences": [
+            {
+              "file": "math-topic-07.json",
+              "topic_key": "functions",
+              "index": 2,
+              "question_page": 35,
+              "question_text_snippet": "اگر $3x + 5 = f(x)$ و $f^{-1}(x) = b$ به ازای هر $x$ برقرار باشد، مقدار $f(a - b)$ کدام است؟ (اشتباه تایپی در سوال وجود دارد: احتمالاً $ax - f^{-1}(x) = b$ است، اما متن دقیق تایپ ش"
+            },
+            {
+              "file": "math-topic-07.json",
+              "topic_key": "functions",
+              "index": 3,
+              "question_page": 35,
+              "question_text_snippet": "اگر $f(x) = 3x + 5$ و $ax - f^{-1}(x) = b$ به ازای هر $x$ برقرار باشد، مقدار $f(a - b)$ کدام است؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Renumber the second 611 and subsequent rows by +1, producing 609..671, after confirming answer/solution alignment."
+    },
+    {
+      "subject": "math",
+      "topic_key": "patterns_sequences",
+      "normalized_file": "math-topic-02.json",
+      "duplicate_question_number_conflict_count": 18,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 33,
+          "end": 50,
+          "count": 18
+        }
+      ],
+      "classification": "topic_boundary_overlap",
+      "confidence": "high",
+      "evidence_summary": "math-topic-02 is numbered 33..100 while math-topic-01 already owns 1..50; the reported conflict is exactly the leading overlap 33..50. There are no duplicate numbers inside math-topic-02.",
+      "file_stats": {
+        "rows": 68,
+        "min_question_number": 33,
+        "max_question_number": 100,
+        "page_min": 3,
+        "page_max": 7,
+        "internal_duplicate_number_count": 0,
+        "internal_duplicate_occurrence_count": 0,
+        "question_number_sequence_head": [
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52
+        ],
+        "question_number_sequence_tail": [
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 33,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 32,
+              "question_page": 11,
+              "question_text_snippet": "اگر $A \\subseteq B$ و $A$ غیرتهی باشد، کدام گزینه نادرست است؟"
+            },
+            {
+              "file": "math-topic-02.json",
+              "topic_key": "patterns_sequences",
+              "index": 0,
+              "question_page": 3,
+              "question_text_snippet": "دو دنباله خطی $a_n=5n+1$ و $b_m=4m+2$ مفروض‌اند. جمله یازدهم دنباله $b_m$ با جمله چندم دنباله $a_n$ برابر است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 32,
+              "question_page": 6,
+              "question_text_snippet": "اگر نمودار تابع $f(x) = -\\frac{x^3}{3} + ax^2 - 4x$ در کل دامنه اکیداً نزولی باشد، آنگاه $a$ در کدام بازه است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 32,
+              "question_page": 11,
+              "question_text_snippet": "در یک بیضی اندازهٔ دو قطر آن ۱۰ و ۸ است. دایره به قطر $AA'$ را مطابق شکل رسم کرده‌ایم. مقدار $\\frac{MF}{AM}$ کدام است؟ (شبیه کنکور سراسری)"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 32,
+              "question_page": 6,
+              "question_text_snippet": "چند عدد سه‌رقمی بخش‌پذیر بر $۹$ با ارقام $۰, ۴, ۶, ۹$ می‌توان ساخت؟"
+            }
+          ]
+        },
+        {
+          "question_number": 34,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 33,
+              "question_page": 12,
+              "question_text_snippet": "اگر $A \\subseteq B'$ باشد، حاصل $A \\cup (A - B)'$ کدام است؟"
+            },
+            {
+              "file": "math-topic-02.json",
+              "topic_key": "patterns_sequences",
+              "index": 1,
+              "question_page": 3,
+              "question_text_snippet": "در یک الگوی خطی جمله پنجم برابر $-44$ و جمله یازدهم برابر $-26$ است. چه تعداد از جملات این الگو منفی است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 33,
+              "question_page": 7,
+              "question_text_snippet": "طول بزرگترین بازه‌ای که تابع $y = \\frac{x^2}{x-2}$ در آن نزولی است، کدام است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 33,
+              "question_page": 11,
+              "question_text_snippet": "در یک بیضی اندازهٔ قطر بزرگ برابر ۱۰ و خروج از مرکز آن $0.8$ است. دایره‌ای که کانون‌های بیضی دو سر قطر آن هستند، بیضی را در نقطهٔ $M$ قطع می‌کند. فاصلهٔ $M$ تا کانون نزدیک‌تر چه عد"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 33,
+              "question_page": 6,
+              "question_text_snippet": "با ارقام $۰, ۱, ۲, ۳, ۴, ۵$، چند عدد سه‌رقمی زوج با ارقام متمایز می‌توانیم بنویسیم؟"
+            }
+          ]
+        },
+        {
+          "question_number": 35,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 34,
+              "question_page": 12,
+              "question_text_snippet": "اگر $A - B = \\emptyset$ باشد، متمم $(A \\cup B)' \\cup (B \\cap A)$ کدام است؟"
+            },
+            {
+              "file": "math-topic-02.json",
+              "topic_key": "patterns_sequences",
+              "index": 2,
+              "question_page": 3,
+              "question_text_snippet": "در یک الگوی خطی اختلاف جملات ششم و دهم برابر ۱۶ است. در این الگو اختلاف جملات هشتم و شانزدهم کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 34,
+              "question_page": 7,
+              "question_text_snippet": "طول بزرگترین بازه‌ای که تابع $y = \\sqrt{-x^2 + 2x + 3}$ در آن اکیداً صعودی است، کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 34,
+              "question_page": 6,
+              "question_text_snippet": "با ارقام $۰, ۲, ۳, ۵, ۶, ۷$، چند عدد سه‌رقمی می‌توان نوشت که شامل $۶$ بوده ولی فاقد $۷$ باشد؟"
+            }
+          ]
+        },
+        {
+          "question_number": 36,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 35,
+              "question_page": 12,
+              "question_text_snippet": "اگر $A - B = A$ باشد، آن‌گاه حاصل $(A \\cap B)' - (A \\cup B)'$ کدام است؟"
+            },
+            {
+              "file": "math-topic-02.json",
+              "topic_key": "patterns_sequences",
+              "index": 3,
+              "question_page": 3,
+              "question_text_snippet": "در یک الگوی خطی مجموع جملات چهارم و هشتم، یک واحد از جمله دهم بیشتر و ۹ واحد از جمله پانزدهم کم‌تر است. جمله بیستم دنباله کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 35,
+              "question_page": 7,
+              "question_text_snippet": "به ازای کدام مقادیر $a$ تابع $f(x) = ax^3 + 3x^2 + x - 1$ در $\\mathbb{R}$ صعودی است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 35,
+              "question_page": 6,
+              "question_text_snippet": "با ارقام $۰, ۲, ۳, ۵, ۶, ۷$، چند عدد سه‌رقمی مضرب $۵$ با ارقام متمایز می‌توان نوشت؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Treat the first 18 rows of math-topic-02 as a boundary-overlap numbering error. Renumber this topic only after reconciling with the next topic range, because a blind +18 shift would collide with math-topic-03 at 101..118."
+    },
+    {
+      "subject": "math",
+      "topic_key": "probability",
+      "normalized_file": "math-topic-16.json",
+      "duplicate_question_number_conflict_count": 15,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 1854,
+          "end": 1868,
+          "count": 15
+        }
+      ],
+      "classification": "malformed_local_numbering_repeated_block",
+      "confidence": "high",
+      "evidence_summary": "math-topic-16 begins with 1854..1868 and later contains the contiguous 1823..1935 run, including matching 1854..1868 rows.",
+      "file_stats": {
+        "rows": 128,
+        "min_question_number": 1823,
+        "max_question_number": 1935,
+        "page_min": 9,
+        "page_max": 17,
+        "internal_duplicate_number_count": 15,
+        "internal_duplicate_occurrence_count": 30,
+        "question_number_sequence_head": [
+          1854,
+          1855,
+          1856,
+          1857,
+          1858,
+          1859,
+          1860,
+          1861,
+          1862,
+          1863,
+          1864,
+          1865,
+          1866,
+          1867,
+          1868,
+          1823,
+          1824,
+          1825,
+          1826,
+          1827
+        ],
+        "question_number_sequence_tail": [
+          1916,
+          1917,
+          1918,
+          1919,
+          1920,
+          1921,
+          1922,
+          1923,
+          1924,
+          1925,
+          1926,
+          1927,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1935
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 1854,
+          "occurrences": [
+            {
+              "file": "math-topic-16.json",
+              "topic_key": "probability",
+              "index": 0,
+              "question_page": 9,
+              "question_text_snippet": "در یک کیسه ۶ مهرهٔ قرمز و ۴ مهرهٔ آبی موجود است. در انتخاب تصادفی سه مهره با چه احتمالی هر دو رنگ موجود است؟"
+            },
+            {
+              "file": "math-topic-16.json",
+              "topic_key": "probability",
+              "index": 46,
+              "question_page": 12,
+              "question_text_snippet": "در یک کیسه ۶ مهرهٔ قرمز و ۴ مهرهٔ آبی موجود است. در انتخاب تصادفی سه مهره با چه احتمالی هر دو رنگ موجود است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 1855,
+          "occurrences": [
+            {
+              "file": "math-topic-16.json",
+              "topic_key": "probability",
+              "index": 1,
+              "question_page": 9,
+              "question_text_snippet": "در یک کیسه ۸ مهرهٔ قرمز، ۶ مهرهٔ سبز و ۴ مهرهٔ آبی موجود است. با خروج تصادفی ۴ مهره از کیسه با کدام احتمال یک مهره سبز و حداقل ۲ مهره قرمز است؟"
+            },
+            {
+              "file": "math-topic-16.json",
+              "topic_key": "probability",
+              "index": 47,
+              "question_page": 12,
+              "question_text_snippet": "در یک کیسه ۸ مهرهٔ قرمز، ۶ مهرهٔ سبز و ۴ مهرهٔ آبی موجود است. با خروج تصادفی ۴ مهره از کیسه با کدام احتمال یک مهره سبز و حداقل ۲ مهره قرمز است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 1856,
+          "occurrences": [
+            {
+              "file": "math-topic-16.json",
+              "topic_key": "probability",
+              "index": 2,
+              "question_page": 9,
+              "question_text_snippet": "در جعبه‌ای ۵ مهرهٔ زرد، ۴ مهرهٔ آبی و ۱ مهرهٔ قرمز موجود است. به تصادف سه مهره از جعبه خارج می‌کنیم، با چه احتمالی حداقل یک مهره زرد است؟"
+            },
+            {
+              "file": "math-topic-16.json",
+              "topic_key": "probability",
+              "index": 48,
+              "question_page": 12,
+              "question_text_snippet": "در جعبه‌ای ۵ مهرهٔ زرد، ۴ مهرهٔ آبی و ۱ مهرهٔ قرمز موجود است. به تصادف سه مهره از جعبه خارج می‌کنیم، با چه احتمالی حداقل یک مهره زرد است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 1857,
+          "occurrences": [
+            {
+              "file": "math-topic-16.json",
+              "topic_key": "probability",
+              "index": 3,
+              "question_page": 9,
+              "question_text_snippet": "۶ کارت با شماره‌های ۱ تا ۶ به طوری که شماره‌های آن‌ها مشخص نیست بر روی میز قرار دارند. سه کارت را به ترتیب برمی‌گردانیم، با چه احتمالی کارت اول و سوم شماره‌های زوج هستند؟"
+            },
+            {
+              "file": "math-topic-16.json",
+              "topic_key": "probability",
+              "index": 49,
+              "question_page": 12,
+              "question_text_snippet": "۶ کارت با شماره‌های ۱ تا ۶ به طوری که شماره‌های آن‌ها مشخص نیست بر روی میز قرار دارند. سه کارت را به ترتیب برمی‌گردانیم، با چه احتمالی کارت اول و سوم شماره‌های زوج هستند؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Drop or merge the leading 15-row repeated block and keep the contiguous 1823..1935 run."
+    },
+    {
+      "subject": "math",
+      "topic_key": "radicals_algebraic_expressions",
+      "normalized_file": "math-topic-05.json",
+      "duplicate_question_number_conflict_count": 15,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 1,
+          "end": 15,
+          "count": 15
+        }
+      ],
+      "classification": "malformed_local_numbering",
+      "confidence": "medium",
+      "evidence_summary": "math-topic-05 starts with local numbers 6..9, 1..5, 10..15 before continuing globally at 262..294. Those local numbers collide with earlier topics.",
+      "file_stats": {
+        "rows": 48,
+        "min_question_number": 1,
+        "max_question_number": 294,
+        "page_min": 1,
+        "page_max": 7,
+        "internal_duplicate_number_count": 0,
+        "internal_duplicate_occurrence_count": 0,
+        "question_number_sequence_head": [
+          6,
+          7,
+          8,
+          9,
+          1,
+          2,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          262,
+          263,
+          264,
+          265,
+          266
+        ],
+        "question_number_sequence_tail": [
+          275,
+          276,
+          277,
+          278,
+          279,
+          280,
+          281,
+          282,
+          283,
+          284,
+          285,
+          286,
+          287,
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 1,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 0,
+              "question_page": 10,
+              "question_text_snippet": "اگر $A = \\{1, 2, \\{1\\}\\}$ و $B = \\{\\{1\\}, \\{1, 2\\}, 1, 2\\}$ و $C = \\{\\{1\\}, \\{1, 2\\}, \\{3\\}, 1, 2\\}$ باشد، کدام گزینه صحیح نیست؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 4,
+              "question_page": 1,
+              "question_text_snippet": "اگر $xy^2 = \\frac{4}{3}$ باشد، حاصل $(x+3y^2)^2 - (x-3y^2)^2$ کدام است؟ (سراسری ۹۷)"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 0,
+              "question_page": 1,
+              "question_text_snippet": "کوتاه ترین فاصله سهمی $4x = y^2$ از نقطه $M(3, 0)$ کدام است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 0,
+              "question_page": 5,
+              "question_text_snippet": "دایره‌ای از دو نقطهٔ $(2, 0)$ و $(-2, 0)$ گذشته و بر خط $y = 1$ مماس است. شعاع این دایره کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 0,
+              "question_page": 2,
+              "question_text_snippet": "اگر $A$ و $B$ دو پیشامد از فضای نمونه‌ای $S$ باشند به‌طوری که $P(A') = \\dfrac{7}{10}$ و $P(B') = \\dfrac{1}{2}$ و $P(A \\cup B) = \\dfrac{2}{5}$ باشد، مقدار $P(A' \\cup B')$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 2,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 1,
+              "question_page": 10,
+              "question_text_snippet": "اگر $A = \\{1, 2, \\{1\\}, \\{2\\}\\}$ و $B = \\{1, 2, \\{1, 2\\}\\}$، تعداد اعضای $A - B$ از تعداد اعضای $B - A$ چند تا کم‌تر است؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 5,
+              "question_page": 1,
+              "question_text_snippet": "با فرض $x^2 - 2x = 2$، حاصل $x^3 - \\frac{8}{x^3}$ کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 1,
+              "question_page": 1,
+              "question_text_snippet": "طول وتر یک مثلث قائم الزاویه برابر 8 است. حداکثر مساحت این مثلث چه قدر است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 1,
+              "question_page": 5,
+              "question_text_snippet": "اگر $2x^2 + ay^2 - ax + by = 6$ معادلهٔ یک دایره به شعاع $3$ باشد، $ab$ کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 1,
+              "question_page": 2,
+              "question_text_snippet": "با ارقام $0, 1, 2, 3, 4, 5, 6$ چند عدد چهار رقمی زوج می‌توان نوشت؟ (بدون تکرار ارقام)"
+            }
+          ]
+        },
+        {
+          "question_number": 3,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 2,
+              "question_page": 10,
+              "question_text_snippet": "اگر بازهٔ $(1 + a, 6 - 2a)$ شامل عدد ۳ باشد، حدود $a$ کدام است؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 6,
+              "question_page": 2,
+              "question_text_snippet": "اگر $x^2 - 4$ یکی از عامل‌های تجزیهٔ عبارت $P(x) = x^4 + ax^3 - 4x + b$ باشد، حاصل $ab$ کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 2,
+              "question_page": 1,
+              "question_text_snippet": "نمودار مشتق تابع درجه سوم $f$ به صورت مقابل است. نمودار $f$ کدام می تواند باشد؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 2,
+              "question_page": 5,
+              "question_text_snippet": "شعاع دایره‌ای که از سه نقطهٔ $(1, 2)$، $(-1, 0)$ و $(3, 0)$ عبور کند چه‌قدر است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 2,
+              "question_page": 2,
+              "question_text_snippet": "اگر $\\dfrac{P(n, 3)}{C(n-1, 2)} = 4$ باشد، مقدار $n$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 4,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 3,
+              "question_page": 10,
+              "question_text_snippet": "به ازای چند مقدار طبیعی $n$، عدد $\\frac{3}{20}$ عضو بازهٔ $(\\frac{1}{n + 6}, \\frac{1}{n + 1})$ خواهد بود؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 7,
+              "question_page": 2,
+              "question_text_snippet": "در تجزیهٔ عبارت $(x-2)(x^2 - 4x + 4) - 1$، کدام عامل ضرب موجود است؟ (سراسری ۹۷)"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 3,
+              "question_page": 2,
+              "question_text_snippet": "کدام عبارت برای تابع $f(x) = 2\\sqrt{x} - \\dfrac{3}{\\sqrt[3]{x^2 - 1}}$ درست است؟ (سراسری ۱۴۰۰)"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 3,
+              "question_page": 5,
+              "question_text_snippet": "کوچک‌ترین دایرهٔ گذرا بر دو نقطهٔ $(2, 5)$ و $(-4, 1)$، محور $x$ها را با کدام طول قطع می‌کند؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 3,
+              "question_page": 2,
+              "question_text_snippet": "به چند طریق می‌توان ۳ مهره از بین ۴ مهره قرمز و ۵ مهره آبی انتخاب کرد به طوری که حداقل یک مهره قرمز باشد؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Convert the local 1..15 block to global numbers in the 295..308 gap if source/answer-key alignment confirms it; there are 15 local rows but only 14 numbers before math-topic-06 starts at 309, so one row needs manual source review before any automated renumber."
+    },
+    {
+      "subject": "math",
+      "topic_key": "statistics",
+      "normalized_file": "math-topic-18.json",
+      "duplicate_question_number_conflict_count": 39,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 2001,
+          "end": 2030,
+          "count": 30
+        },
+        {
+          "start": 2034,
+          "end": 2042,
+          "count": 9
+        }
+      ],
+      "classification": "malformed_local_numbering",
+      "confidence": "high",
+      "evidence_summary": "math-topic-18 starts with 39 rows numbered 2001..2030 and 2034..2042, then restarts at 1999..2058. The duplicated numbers are different questions, indicating a local block was assigned already-used global numbers.",
+      "file_stats": {
+        "rows": 115,
+        "min_question_number": 1999,
+        "max_question_number": 2119,
+        "page_min": 1,
+        "page_max": 8,
+        "internal_duplicate_number_count": 39,
+        "internal_duplicate_occurrence_count": 78,
+        "question_number_sequence_head": [
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020
+        ],
+        "question_number_sequence_tail": [
+          2055,
+          2056,
+          2057,
+          2058,
+          2104,
+          2105,
+          2106,
+          2107,
+          2108,
+          2109,
+          2110,
+          2111,
+          2112,
+          2113,
+          2114,
+          2115,
+          2116,
+          2117,
+          2118,
+          2119
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 2001,
+          "occurrences": [
+            {
+              "file": "math-topic-18.json",
+              "topic_key": "statistics",
+              "index": 0,
+              "question_page": 5,
+              "question_text_snippet": "اندازه قد دانش‌آموزان مدرسه و رشته تحصیلی آن‌ها به ترتیب چه نوع متغیری هستند؟"
+            },
+            {
+              "file": "math-topic-18.json",
+              "topic_key": "statistics",
+              "index": 41,
+              "question_page": 1,
+              "question_text_snippet": "رتبه های تیم ملی فوتبال در آخرین رده بندی انجام شده توسط فیفا چه نوع متغیری است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 2002,
+          "occurrences": [
+            {
+              "file": "math-topic-18.json",
+              "topic_key": "statistics",
+              "index": 1,
+              "question_page": 5,
+              "question_text_snippet": "از بین داده‌های $7,6,3,5,4,6,4$ کدام عدد را حذف کنیم تا میانگین داده‌ها بدون تغییر باقی بماند؟"
+            },
+            {
+              "file": "math-topic-18.json",
+              "topic_key": "statistics",
+              "index": 42,
+              "question_page": 1,
+              "question_text_snippet": "شمارنده های طبیعی عدد $12$ کدام نوع متغیر است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 2003,
+          "occurrences": [
+            {
+              "file": "math-topic-18.json",
+              "topic_key": "statistics",
+              "index": 2,
+              "question_page": 5,
+              "question_text_snippet": "میانگین اعداد مثبت $a,6,2,8,1,a$ یک واحد از میانه این اعداد بزرگ‌تر است. جمع مقادیر $a$ کدام است؟"
+            },
+            {
+              "file": "math-topic-18.json",
+              "topic_key": "statistics",
+              "index": 43,
+              "question_page": 1,
+              "question_text_snippet": "اندازه زاویه های داخلی یک چندضلعی، چه نوع متغیری است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 2004,
+          "occurrences": [
+            {
+              "file": "math-topic-18.json",
+              "topic_key": "statistics",
+              "index": 3,
+              "question_page": 5,
+              "question_text_snippet": "میانگین $n$ داده $12$ و میانگین $12$ داده $n$ است. اگر میانگین تمام داده‌ها $9/6$ باشد، عدد طبیعی $n$ کدام است؟"
+            },
+            {
+              "file": "math-topic-18.json",
+              "topic_key": "statistics",
+              "index": 44,
+              "question_page": 1,
+              "question_text_snippet": "متغیر «تعداد کتاب های مطالعه شده توسط دانش آموزان در یک سال» از کدام نوع است؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Renumber the leading 39 rows to the open span immediately after 2058, likely 2059..2097, then review the remaining 2098..2103 gap before the final 2104..2119 block."
+    },
+    {
+      "subject": "math",
+      "topic_key": "visual_thinking_conics",
+      "normalized_file": "math-topic-14.json",
+      "duplicate_question_number_conflict_count": 34,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 1,
+          "end": 14,
+          "count": 14
+        },
+        {
+          "start": 26,
+          "end": 34,
+          "count": 9
+        },
+        {
+          "start": 1638,
+          "end": 1648,
+          "count": 11
+        }
+      ],
+      "classification": "malformed_local_numbering_repeated_block",
+      "confidence": "medium",
+      "evidence_summary": "math-topic-14 mixes local numbers 1..14 and 26..34 with global 1638..1648, and repeats the 1638..1648 block later in the same file.",
+      "file_stats": {
+        "rows": 45,
+        "min_question_number": 1,
+        "max_question_number": 1648,
+        "page_min": 5,
+        "page_max": 12,
+        "internal_duplicate_number_count": 11,
+        "internal_duplicate_occurrence_count": 22,
+        "question_number_sequence_head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          1638,
+          1639,
+          1640,
+          1641,
+          1642,
+          1643
+        ],
+        "question_number_sequence_tail": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          1638,
+          1639,
+          1640,
+          1641,
+          1642,
+          1643,
+          1644,
+          1645,
+          1646,
+          1647,
+          1648
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 1,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 0,
+              "question_page": 10,
+              "question_text_snippet": "اگر $A = \\{1, 2, \\{1\\}\\}$ و $B = \\{\\{1\\}, \\{1, 2\\}, 1, 2\\}$ و $C = \\{\\{1\\}, \\{1, 2\\}, \\{3\\}, 1, 2\\}$ باشد، کدام گزینه صحیح نیست؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 4,
+              "question_page": 1,
+              "question_text_snippet": "اگر $xy^2 = \\frac{4}{3}$ باشد، حاصل $(x+3y^2)^2 - (x-3y^2)^2$ کدام است؟ (سراسری ۹۷)"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 0,
+              "question_page": 1,
+              "question_text_snippet": "کوتاه ترین فاصله سهمی $4x = y^2$ از نقطه $M(3, 0)$ کدام است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 0,
+              "question_page": 5,
+              "question_text_snippet": "دایره‌ای از دو نقطهٔ $(2, 0)$ و $(-2, 0)$ گذشته و بر خط $y = 1$ مماس است. شعاع این دایره کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 0,
+              "question_page": 2,
+              "question_text_snippet": "اگر $A$ و $B$ دو پیشامد از فضای نمونه‌ای $S$ باشند به‌طوری که $P(A') = \\dfrac{7}{10}$ و $P(B') = \\dfrac{1}{2}$ و $P(A \\cup B) = \\dfrac{2}{5}$ باشد، مقدار $P(A' \\cup B')$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 2,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 1,
+              "question_page": 10,
+              "question_text_snippet": "اگر $A = \\{1, 2, \\{1\\}, \\{2\\}\\}$ و $B = \\{1, 2, \\{1, 2\\}\\}$، تعداد اعضای $A - B$ از تعداد اعضای $B - A$ چند تا کم‌تر است؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 5,
+              "question_page": 1,
+              "question_text_snippet": "با فرض $x^2 - 2x = 2$، حاصل $x^3 - \\frac{8}{x^3}$ کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 1,
+              "question_page": 1,
+              "question_text_snippet": "طول وتر یک مثلث قائم الزاویه برابر 8 است. حداکثر مساحت این مثلث چه قدر است؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 1,
+              "question_page": 5,
+              "question_text_snippet": "اگر $2x^2 + ay^2 - ax + by = 6$ معادلهٔ یک دایره به شعاع $3$ باشد، $ab$ کدام است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 1,
+              "question_page": 2,
+              "question_text_snippet": "با ارقام $0, 1, 2, 3, 4, 5, 6$ چند عدد چهار رقمی زوج می‌توان نوشت؟ (بدون تکرار ارقام)"
+            }
+          ]
+        },
+        {
+          "question_number": 3,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 2,
+              "question_page": 10,
+              "question_text_snippet": "اگر بازهٔ $(1 + a, 6 - 2a)$ شامل عدد ۳ باشد، حدود $a$ کدام است؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 6,
+              "question_page": 2,
+              "question_text_snippet": "اگر $x^2 - 4$ یکی از عامل‌های تجزیهٔ عبارت $P(x) = x^4 + ax^3 - 4x + b$ باشد، حاصل $ab$ کدام است؟"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 2,
+              "question_page": 1,
+              "question_text_snippet": "نمودار مشتق تابع درجه سوم $f$ به صورت مقابل است. نمودار $f$ کدام می تواند باشد؟"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 2,
+              "question_page": 5,
+              "question_text_snippet": "شعاع دایره‌ای که از سه نقطهٔ $(1, 2)$، $(-1, 0)$ و $(3, 0)$ عبور کند چه‌قدر است؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 2,
+              "question_page": 2,
+              "question_text_snippet": "اگر $\\dfrac{P(n, 3)}{C(n-1, 2)} = 4$ باشد، مقدار $n$ کدام است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 4,
+          "occurrences": [
+            {
+              "file": "math-topic-01.json",
+              "topic_key": "sets",
+              "index": 3,
+              "question_page": 10,
+              "question_text_snippet": "به ازای چند مقدار طبیعی $n$، عدد $\\frac{3}{20}$ عضو بازهٔ $(\\frac{1}{n + 6}, \\frac{1}{n + 1})$ خواهد بود؟"
+            },
+            {
+              "file": "math-topic-05.json",
+              "topic_key": "radicals_algebraic_expressions",
+              "index": 7,
+              "question_page": 2,
+              "question_text_snippet": "در تجزیهٔ عبارت $(x-2)(x^2 - 4x + 4) - 1$، کدام عامل ضرب موجود است؟ (سراسری ۹۷)"
+            },
+            {
+              "file": "math-topic-11.json",
+              "topic_key": "derivative_applications",
+              "index": 3,
+              "question_page": 2,
+              "question_text_snippet": "کدام عبارت برای تابع $f(x) = 2\\sqrt{x} - \\dfrac{3}{\\sqrt[3]{x^2 - 1}}$ درست است؟ (سراسری ۱۴۰۰)"
+            },
+            {
+              "file": "math-topic-14.json",
+              "topic_key": "visual_thinking_conics",
+              "index": 3,
+              "question_page": 5,
+              "question_text_snippet": "کوچک‌ترین دایرهٔ گذرا بر دو نقطهٔ $(2, 5)$ و $(-4, 1)$، محور $x$ها را با کدام طول قطع می‌کند؟"
+            },
+            {
+              "file": "math-topic-15.json",
+              "topic_key": "combinatorics",
+              "index": 3,
+              "question_page": 2,
+              "question_text_snippet": "به چند طریق می‌توان ۳ مهره از بین ۴ مهره قرمز و ۵ مهره آبی انتخاب کرد به طوری که حداقل یک مهره قرمز باشد؟"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Manually rebuild this topic from source order: keep one copy of the 1638..1648 content, remove/merge the repeated copy, and assign unique global numbers to the local 1..14 and 26..34 rows. Do not auto-renumber without checking page order."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "one_dimensional_motion",
+      "normalized_file": "physics-topic-08.json",
+      "duplicate_question_number_conflict_count": 2,
+      "duplicate_question_number_ranges": [
+        {
+          "start": 806,
+          "end": 807,
+          "count": 2
+        }
+      ],
+      "classification": "topic_boundary_overlap",
+      "confidence": "high",
+      "evidence_summary": "physics-topic-08 starts at 806 while physics-topic-07 ends at 807; the reported conflict is exactly the two-number boundary overlap 806..807. physics-topic-08 is otherwise internally unique.",
+      "file_stats": {
+        "rows": 248,
+        "min_question_number": 806,
+        "max_question_number": 1053,
+        "page_min": 2,
+        "page_max": 27,
+        "internal_duplicate_number_count": 0,
+        "internal_duplicate_occurrence_count": 0,
+        "question_number_sequence_head": [
+          806,
+          807,
+          808,
+          809,
+          810,
+          811,
+          812,
+          813,
+          814,
+          815,
+          816,
+          817,
+          818,
+          819,
+          820,
+          821,
+          822,
+          823,
+          824,
+          825
+        ],
+        "question_number_sequence_tail": [
+          1034,
+          1035,
+          1036,
+          1037,
+          1038,
+          1039,
+          1040,
+          1041,
+          1042,
+          1043,
+          1044,
+          1045,
+          1046,
+          1047,
+          1048,
+          1049,
+          1050,
+          1051,
+          1052,
+          1053
+        ]
+      },
+      "examples": [
+        {
+          "question_number": 806,
+          "occurrences": [
+            {
+              "file": "physics-topic-07.json",
+              "topic_key": "magnetism_induction",
+              "index": 130,
+              "question_page": 18,
+              "question_text_snippet": "دو پیچه هم‌محور با شعاع‌های یکسان در نزدیکی هم قرار دارند. از پیچۀ اول جریان متغیر با زمان $I_1 = 2t + 4$ عبور می‌کند. اگر در پیچۀ دوم، نیروی محرکۀ القایی $0/04\\text{ V}$ ایجاد شود"
+            },
+            {
+              "file": "physics-topic-08.json",
+              "topic_key": "one_dimensional_motion",
+              "index": 0,
+              "question_page": 2,
+              "question_text_snippet": "اگر اندازه‌ی جابه‌جایی نوک عقربه‌ی دقیقه‌شمار یک ساعت عقربه‌ای در مدت $15$ دقیقه $10\\sqrt2$ سانتی‌متر باشد، مسافت طی‌شده توسط آن در همین مدت چند سانتی‌متر است؟"
+            }
+          ]
+        },
+        {
+          "question_number": 807,
+          "occurrences": [
+            {
+              "file": "physics-topic-07.json",
+              "topic_key": "magnetism_induction",
+              "index": 131,
+              "question_page": 18,
+              "question_text_snippet": "کدام‌یک از گزینه‌های زیر نادرست است؟"
+            },
+            {
+              "file": "physics-topic-08.json",
+              "topic_key": "one_dimensional_motion",
+              "index": 1,
+              "question_page": 2,
+              "question_text_snippet": "مطابق شکل، متحرکی مسیر $ABCDEF$ را که شامل سه ربع یک دایره به شعاع $16\\,cm$ و یک نیم‌دایره به شعاع $7\\,cm$ است، می‌پیماید. مسافت طی‌شده توسط متحرک چند میلی‌متر بیشتر از اندازه‌ی جا"
+            }
+          ]
+        }
+      ],
+      "recommended_action": "Renumber the first two physics-topic-08 rows, or shift physics-topic-08 after confirming the intended handoff from magnetism_induction. A blind +2 shift would ripple into later physics ranges, so confirm against answer/solution files first."
+    }
+  ],
+  "safe_fix_policy": [
+    "Do not delete rows for cross-topic collisions unless the question text is also duplicated; most local-number collisions are distinct questions needing new global numbers.",
+    "For repeated-block topics, merge/delete only duplicate content after preserving any media_regions or review_notes found on the duplicate copy.",
+    "Renumbering should be validated against answer-key and solution alignment because several topics also expose gaps, not just collisions."
+  ]
+}

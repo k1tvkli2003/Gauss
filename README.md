@@ -27,7 +27,7 @@ app/src/main/
     GaussApp.kt                      # Application + tiny service locator
     MainActivity.kt                  # Compose host (forces RTL)
     data/
-      Models.kt  Categories.kt       # domain types + curriculum tree
+      Models.kt  Curriculum.kt       # domain types + official course/chapter tree
       QuestionBank.kt                # loads & queries the bundled bank
       HistoryRepository.kt           # save exam, analytics, SM-2 revenge queue
       db/                            # Room entities, DAO, database
@@ -37,12 +37,14 @@ app/src/main/
       exam/ExamViewModel.kt          # the shared exam engine
       screens/                       # Home, Setup, Session, Results, Revenge, Analytics
       nav/NavGraph.kt
-data/seed/                           # the original question JSON (source of truth)
+data/seed/                           # legacy seeds + generated official curriculum bank
 ```
 
-The bundled `assets/questions.json` is generated from `data/seed/**` with a
-stable content-hash `id` per question (so history/SRS keys survive rebuilds).
-The dataset itself is unchanged — same questions, options, solutions, shortcuts.
+The bundled `assets/questions.json` is generated from `data/seed/official/**`.
+Legacy topic-based seed files are reclassified into the official experimental
+sciences curriculum with a stable `id` per question, so history/SRS keys survive
+taxonomy rebuilds. Questions that do not belong to the experimental curriculum
+are kept under `data/seed/quarantine/` and are not bundled into the app.
 
 ## Build & run
 ```bash
@@ -77,10 +79,29 @@ base64 -w0 gauss.keystore   # paste into ANDROID_KEYSTORE_BASE64
 ```
 
 ## Adding questions
-Drop new JSON arrays into `data/seed/` (same shape as the existing files), then
-re-merge them into the bundled asset and rebuild. Each object needs:
-`subject, category, sub_category, difficulty, question_text, image_url,
-option_1..4, correct_option_index (1–4), classic_solution, smart_shortcut`.
+Drop new validated JSON arrays into `data/seed/official/`, then validate and
+re-merge the bundled asset:
+
+```bash
+node scripts/validate_dataset.mjs
+node scripts/merge_dataset.mjs
+./gradlew :app:assembleDebug
+```
+
+Each object needs `subject, category, sub_category, difficulty, question_text,
+image_url, option_1..4, correct_option_index (1–4), classic_solution,
+smart_shortcut`. In the official bank, `category` is one of
+`math_10`, `math_11`, `math_12`, `physics_10`, `physics_11`, `physics_12`;
+`sub_category` is one of the official chapter keys in
+`data/seed/JULES_DATASET_GUIDE.md`.
+
+To regenerate the official bank from the legacy seeds:
+
+```bash
+node scripts/reclassify_dataset.mjs
+node scripts/validate_dataset.mjs
+node scripts/merge_dataset.mjs
+```
 
 ## Data & privacy
 All progress (exam history, per-question attempts, spaced-repetition state)

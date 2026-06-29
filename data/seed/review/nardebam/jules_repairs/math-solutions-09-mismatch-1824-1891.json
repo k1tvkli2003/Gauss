@@ -1,0 +1,713 @@
+{
+  "task_id": "math-solutions-09-mismatch-1824-1891",
+  "subject": "probability",
+  "review_notes": [
+    "Questions [1849, 1862] were not present in the provided image chunk."
+  ],
+  "solutions": [
+    {
+      "question_number": 1824,
+      "solution_page": 169,
+      "solution_text": "طبق تعریف احتمال داریم:\n$P(\\text{سیاه}) = \\dfrac{n(\\text{سیاه})}{n(S)}$\n$P(\\text{سفید}) = \\dfrac{n(\\text{سفید})}{n(S)}$\n$\\Rightarrow \\dfrac{n(\\text{سیاه})}{n(\\text{سفید})} = \\dfrac{P(\\text{سیاه})}{P(\\text{سفید})} \\Rightarrow \\dfrac{۲۰}{n} = ۴ \\Rightarrow n = ۵$\nتعداد مهره‌های سفید برابر ۵ و تعداد کل مهره‌ها ۲۵ می‌باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            510,
+            319,
+            831,
+            401
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۲۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1825,
+      "solution_page": 169,
+      "solution_text": "پیشامد آن‌که نوید و فرهاد کنار یکدیگر باشند را $A$ می‌نامیم. نوید و فرهاد را داخل یک جعبه فرضی قرار می‌دهیم.\n$P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{۵! \\times ۲!}{۶!} = \\dfrac{۲}{۶} = \\dfrac{۱}{۳}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            510,
+            405,
+            831,
+            470
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۲۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1826,
+      "solution_page": 169,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم:\n$A = \\{(۱, ۱), (۲, ۲), (۳, ۳), (۴, ۴)\\}$\nبنابراین:\n$P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{۴}{\\binom{۹}{۲}} = \\dfrac{۴}{۳۶} = \\dfrac{۱}{۹}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            510,
+            475,
+            831,
+            555
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۲۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1827,
+      "solution_page": 169,
+      "solution_text": "اگر دانش‌آموزان ریاضی در ۵ جایگاه دایره‌ای‌شکل قرار داشته باشند، دانش‌آموزان تجربی به ۴ حالت در سه جایگاه از ۶ جایگاه شماره‌گذاری شده قرار می‌گیرند.\n۱ $\\bigcirc$ ۲ $\\bigcirc$ ۳ $\\bigcirc$ ۴ $\\bigcirc$ ۵ $\\bigcirc$ ۶\n$(۱, ۲, ۳)$ یا $(۲, ۳, ۴)$ یا $(۳, ۴, ۵)$ یا $(۴, ۵, ۶)$\nبنابراین:\n$P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{۴ \\times ۳! \\times ۵!}{۸!} = \\dfrac{۴ \\times ۶!}{۸!} = \\dfrac{۴}{۸ \\times ۷} = \\dfrac{۱}{۱۴}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            510,
+            560,
+            831,
+            686
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۲۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1828,
+      "solution_page": 169,
+      "solution_text": "دخترها را داخل یک جعبهٔ فرضی قرار می‌دهیم.\n$P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{۶! \\times ۴!}{۹!} = \\dfrac{۶ \\times ۵! \\times ۴!}{۹!} = \\dfrac{۶}{\\dfrac{۹!}{۴! \\times ۵!}} = \\dfrac{۶}{\\binom{۹}{۴}}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            510,
+            690,
+            831,
+            750
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۲۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1829,
+      "solution_page": 169,
+      "solution_text": "روش اول: مجموعهٔ اعداد دورقمی که بر ۲ بخش‌پذیر هستند را با $A$ و مجموعهٔ اعداد دورقمی که بر ۶ بخش‌پذیرند را با $B$ نمایش می‌دهیم.\n$n(A \\cap B') = n(A - B) = n(A) - n(A \\cap B) = n(A) - n(B)$\n$= ([\\dfrac{۹۹}{۲}] - [\\dfrac{۹}{۲}]) - ([\\dfrac{۹۹}{۶}] - [\\dfrac{۹}{۶}]) = (۴۹ - ۴) - (۱۶ - ۱) = ۳۰$\nبنابراین:\n$P(A \\cap B') = \\dfrac{۳۰}{۹۰} = \\dfrac{۱}{۳}$\nروش دوم: اگر از عدد ۱۰ آغاز کنیم از هر سه عدد متوالی یک عدد وجود دارد که بر ۲ بخش‌پذیر است ولی بر ۶ بخش‌پذیر نیست.\n$\\underline{۱۰}, ۱۱, \\underline{۱۲}, ۱۳, \\underline{۱۴}, ۱۵, \\underline{۱۶}, ۱۷, \\underline{۱۸}, \\dots, \\underline{۹۷}, \\underline{۹۸}, \\underline{۹۹}$\nبنابراین احتمال مورد نظر $\\dfrac{۱}{۳}$ است.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            45,
+            65,
+            831,
+            882
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۲۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1830,
+      "solution_page": 169,
+      "solution_text": "روش اول: پیشامد آن‌که عدد بر ۲ بخش‌پذیر باشد را $A$ و پیشامد آن‌که بر ۳ بخش‌پذیر باشد را $B$ می‌نامیم. بدیهی است $A \\cap B$ پیشامد آن است که عدد بر ۶ بخش‌پذیر باشد.\n$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$\n$= \\dfrac{[\\dfrac{۱۵۰}{۲}]}{۱۵۰} + \\dfrac{[\\dfrac{۱۵۰}{۳}]}{۱۵۰} - \\dfrac{[\\dfrac{۱۵۰}{۶}]}{۱۵۰} = \\dfrac{۷۵ + ۵۰ - ۲۵}{۱۵۰} = \\dfrac{۱۰۰}{۱۵۰} = \\dfrac{۲}{۳}$\nروش دوم: با شروع از عدد ۱ در هر ۶ عدد متوالی ۲ عدد نه بر ۲ بخش‌پذیر هستند و نه بر ۳؛ یعنی ۴ عدد یا بر ۲ بخش‌پذیر هستند یا بر ۳.\n$P = \\dfrac{۴}{۶} = \\dfrac{۲}{۳}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            45,
+            150,
+            430,
+            323
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۳۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1831,
+      "solution_page": 169,
+      "solution_text": "پیشامد زوج‌بودن را $A$ و پیشامد مضرب ۳ بودن را $B$ می‌نامیم.\n$n(A) = [\\dfrac{۵۰}{۲}] = ۲۵$\n$n(B) = [\\dfrac{۵۰}{۳}] = ۱۶$\n$n(A \\cap B) = [\\dfrac{۵۰}{۶}] = ۸$\nخواهیم داشت:\n$P(A' \\cap B') = P(A \\cup B)' = ۱ - P(A \\cup B) = ۱ - \\dfrac{n(A \\cup B)}{n(S)}$\n$= ۱ - \\dfrac{n(A) + n(B) - n(A \\cap B)}{n(S)} = ۱ - \\dfrac{۲۵ + ۱۶ - ۸}{۵۰}$\n$= ۱ - \\dfrac{۳۳}{۵۰} = \\dfrac{۱۷}{۵۰} = ۰/۳۴$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            45,
+            330,
+            430,
+            532
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۳۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1832,
+      "solution_page": 169,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم. از روش متمم استفاده می‌کنیم.\n$P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{n(S) - n(A')}{n(S)} = ۱ - \\dfrac{n(A')}{n(S)} = ۱ - P(A')$\n$= ۱ - \\dfrac{۸ \\times ۹ \\times ۹}{۹ \\times ۱۰ \\times ۱۰} = ۱ - \\dfrac{۷۲}{۱۰۰} = \\dfrac{۲۸}{۱۰۰} = ۰/۲۸$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            45,
+            540,
+            430,
+            630
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۳۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1833,
+      "solution_page": 169,
+      "solution_text": "تعداد اعضای فضای نمونه‌ای برابر $\\binom{۱۰}{۲}$ است. تعداد اعضای پیشامد مورد نظر برابر ۹ است:\n$A = \\{(۱, ۲), (۲, ۳), (۳, ۴), \\dots, (۹, ۱۰)\\}$\nبنابراین:\n$P(A) = \\dfrac{۹}{\\binom{۱۰}{۲}} = \\dfrac{۹}{۴۵} = \\dfrac{۱}{۵}$\nدقت داشته باشید که در فضای نمونه‌ای و پیشامد مورد نظر جایگشت دو عدد انتخابی اهمیت ندارد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            45,
+            640,
+            430,
+            770
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۳۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1834,
+      "solution_page": 169,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم.\n$A = \\{(۴, ۱۰), (۵, ۹), (۶, ۸)\\}$\n* جایگشت ۲ عدد انتخابی اهمیت ندارد.\nبنابراین:\n$P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{۳}{\\binom{۱۰}{۲}} = \\dfrac{۳}{۴۵} = \\dfrac{۱}{۱۵}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            45,
+            780,
+            430,
+            885
+          ],
+          "placement": "solution",
+          "filename": "page_0169.jpg",
+          "alt": "راه حل سوال ۱۸۳۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1835,
+      "solution_page": 170,
+      "solution_text": "پیشامد آن‌که جمع اعداد دو تاس ۷ شود را $A$ و پیشامد آن‌که جمع اعداد دو تاس برابر ۵ شود را $B$ می‌نامیم.\n$A = \\{(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)\\}\n$B = \\{(1, 4), (2, 3), (3, 2), (4, 1)\\}\nبنابراین:\n$\\frac{P(A)}{P(B)} = \\frac{\\frac{n(A)}{n(S)}}{\\frac{n(B)}{n(S)}} = \\frac{n(A)}{n(B)} = \\frac{6}{4} = \\frac{3}{2}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1836,
+      "solution_page": 170,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم.\n$A = \\{(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 1), (2, 2), (2, 4), (2, 6), (3, 1), (3, 3), (3, 6), (4, 1), (4, 2), (4, 4), (5, 1), (5, 5), (6, 1), (6, 2), (6, 3), (6, 6)\\}\nبنابراین:\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{22}{36} = \\frac{11}{18}$\nمی‌توانستیم از روش متمم استفاده کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1837,
+      "solution_page": 170,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم.\n$A = \\{(2, 6), (3, 4), (4, 3), (4, 6), (6, 2), (6, 4), (6, 6)\\}\nبنابراین:\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{7}{36}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1838,
+      "solution_page": 170,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم.\n$A = \\{(1, 3), (1, 5), (2, 4), (2, 6), (3, 1), (4, 2), (5, 1), (6, 2)\\}\nبنابراین:\n$P(A) = \\frac{8}{36} = \\frac{2}{9}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1839,
+      "solution_page": 170,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم.\n$A = \\{(1, 4), (2, 3), (3, 2), (4, 1), (4, 6), (5, 5), (6, 4)\\}\nبنابراین:\n$P(A) = \\frac{7}{36}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1840,
+      "solution_page": 170,
+      "solution_text": "چون تعداد اعداد زوج و فرد هر تاس برابر است، در پرتاب دو تاس تقارن وجود دارد به این معنی که به ازای هر حالتی که مجموع دو تاس زوج باشد حالتی وجود دارد که مجموع آن‌ها فرد شود. این موضوع برای پرتاب سه تاس نیز صدق می‌کند؛ مثلاً اگر دو تاس اول $(1, 1)$ باشند در حالاتی که تاس سوم ۱ یا ۳ یا ۵ بیاید مجموع فرد و در حالاتی که ۲ یا ۴ یا ۶ بیاید، مجموع زوج است. نتیجه می‌شود چه در پرتاب دو تاس و چه در پرتاب سه تاس احتمال آن‌که مجموع اعداد زوج باشد با احتمال آن‌که فرد باشد برابر $\\frac{1}{2}$ است. بنابراین:\n$\\frac{P(\\text{مجموع دو تاس زوج باشد})}{P(\\text{مجموع سه تاس زوج باشد})} = \\frac{\\frac{1}{2}}{\\frac{1}{2}} = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1841,
+      "solution_page": 170,
+      "solution_text": "اگر حداقل یکی از تاس‌ها مضرب ۳ باشد، حاصل‌ضرب آن‌ها نیز مضرب ۳ است. از روش متمم استفاده می‌کنیم.\n$P(\\text{حداقل یکی از تاس‌ها مضرب ۳ باشد}) = 1 - P(\\text{هیچ‌یک از تاس‌ها مضرب ۳ نباشد})$\n$= 1 - \\frac{4 \\times 4 \\times 4}{6 \\times 6 \\times 6} = 1 - (\\frac{2}{3})^3 = 1 - \\frac{8}{27} = \\frac{19}{27}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1842,
+      "solution_page": 170,
+      "solution_text": "در پیشامد $B$ ابتدا ۲ حرف از بین ۴ حرف PEYA انتخاب کرده سپس در جایگشت سه حرف انتخابی (همراه با حرف K) ضرب می‌کنیم.\n$P(B) = \\frac{\\binom{4}{2} \\times 3!}{\\binom{6}{3} \\times 3!} = \\frac{6}{20} = \\frac{3}{10}$\nمی‌توانستیم مسئله را بدون توجه به جایگشت حروف حل نماییم.\n$P(B) = \\frac{\\binom{4}{2}}{\\binom{6}{3}} = \\frac{6}{20} = 0/3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1843,
+      "solution_page": 170,
+      "solution_text": "از روش متمم استفاده می‌کنیم.\n$P(B) = 1 - P(\\text{هر سه حرف FAN در کلمه باشد})$\n$= 1 - \\frac{\\binom{4}{2} \\times 5!}{\\binom{7}{5} \\times 5!} = 1 - \\frac{6}{21} = 1 - \\frac{2}{7} = \\frac{5}{7}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1844,
+      "solution_page": 170,
+      "solution_text": "برای این‌که سهمی $y = kx^2 + 10x + k$ بالای محور طول‌ها باشد باید $\\Delta < 0$ و $k > 0$ باشد.\n$\\Delta < 0 \\Rightarrow 100 - 4k^2 < 0 \\Rightarrow k^2 > 25$\n$\\xrightarrow{k > 0} k > 5 \\xrightarrow[k < 10]{k \\in \\mathbb{N}} k \\in \\{6, 7, 8, 9\\}$\nاگر پیشامد مورد نظر را $A$ بنامیم، خواهیم داشت:\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{4}{9}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1845,
+      "solution_page": 170,
+      "solution_text": "پیشامد آن‌که عدد سه‌رقمی شامل ۲ باشد را $A$ و پیشامد آن‌که شامل صفر باشد را $B$ می‌نامیم.\n$P(A) = 1 - P(A') = 1 - \\frac{8 \\times 8 \\times 7}{9 \\times 9 \\times 8} = 1 - \\frac{56}{81} = \\frac{25}{81}$\n$P(B) = 1 - P(B') = 1 - \\frac{9 \\times 8 \\times 7}{9 \\times 9 \\times 8} = 1 - \\frac{7}{9} = \\frac{2}{9}$\nبنابراین:\n$P(A) - P(B) = \\frac{25}{81} - \\frac{2}{9} = \\frac{25 - 18}{81} = \\frac{7}{81}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1846,
+      "solution_page": 170,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم. ارقام ۳، ۴ و ۱ را به صورت (۳۴۱) به یکدیگر می‌بندیم و آن را به صورت یک عدد در نظر می‌گیریم. در این حالت سه عدد ۲، ۵، (۳۴۱) در اختیار داریم که جایگشت آن‌ها $3!$ است. بنابراین:\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{3!}{5!} = \\frac{1}{20}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1847,
+      "solution_page": 170,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم. برای این‌که عدد سه‌رقمی مضرب ۵ باشد، یکان آن باید صفر یا ۵ می‌باشد.\nیکان ۵ باشد $\\Rightarrow 4 \\times 4 \\times 1 = 16$\nیکان صفر باشد $\\Rightarrow 5 \\times 4 \\times 1 = 20$\n$\\Rightarrow n(A) = 16 + 20 = 36$\nدر نتیجه:\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{36}{5 \\times 5 \\times 4} = 0/36$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1848,
+      "solution_page": 170,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم. با انتخاب هر سه رقم از پنج رقم موجود تنها یک عدد سه‌رقمی می‌توان نوشت که ارقام آن از چپ به راست نزولی باشد. بنابراین:\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{\\binom{5}{3}}{4 \\times 4 \\times 3} = \\frac{10}{48} = \\frac{5}{24}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1850,
+      "solution_page": 171,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم. از روش متمم استفاده می‌کنیم. اگر پنج دوست این سه نفر در جایگاه‌های دایره‌ای‌شکل قرار بگیرند، برای این سه نفر ۶ جایگاه وجود دارد تا هیچ‌یک از آن‌ها کنار هم قرار نگیرند.\\nبنابراین:\\n$n(A') = \\binom{6}{3} 3! 5!$\\nدر نتیجه:\\n$P(A) = 1 - P(A') = 1 - \\frac{\\binom{6}{3} 3! 5!}{8!} = 1 - \\frac{20 \\times 3!}{8 \\times 7 \\times 6} = 1 - \\frac{5}{14} = \\frac{9}{14}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": [
+        "Missing 1849 on this page (likely skipped/split)."
+      ]
+    },
+    {
+      "question_number": 1851,
+      "solution_page": 171,
+      "solution_text": "یا هر ۳ مهره سیاه و یا هر سه سفید هستند.\\n$P(A) = \\frac{\\binom{5}{3} + \\binom{4}{3}}{\\binom{9}{3}} = \\frac{10 + 4}{84} = \\frac{14}{84} = \\frac{1}{6}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1852,
+      "solution_page": 171,
+      "solution_text": "پیشامد آن‌که بین مهره‌های خارج‌شده مهره سفید نباشد را $A$ و پیشامد آن‌که مهره قرمز نباشد را $B$ می‌نامیم.\\n$P(A \\cup B) = \\frac{n(A \\cup B)}{n(S)} = \\frac{n(A) + n(B) - n(A \\cap B)}{n(S)}$\\n$= \\frac{\\binom{7}{3} + \\binom{9}{3} - \\binom{4}{3}}{\\binom{12}{3}} = \\frac{35 + 84 - 4}{220} = \\frac{115}{220} = \\frac{23}{44}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1853,
+      "solution_page": 171,
+      "solution_text": "ابتدا $n$ را به دست می‌آوریم:\\n$P(\\text{سیاه}) = \\frac{n(\\text{سیاه})}{n(S)} \\Rightarrow \\frac{3}{n+3} = \\frac{1}{4} \\Rightarrow n+3 = 12 \\Rightarrow n=9$\\nحال احتمال هم‌رنگ‌بودن ۲ مهره را محاسبه می‌کنیم. یا هر دو مهره سیاه هستند و یا قرمز:\\n$P(A) = \\frac{\\binom{3}{2} + \\binom{9}{2}}{\\binom{12}{2}} = \\frac{3 + 36}{66} = \\frac{39}{66} = \\frac{13}{22}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1854,
+      "solution_page": 171,
+      "solution_text": "روش اول: باید یک مهره قرمز و دو مهره آبی و یا دو مهره قرمز و یک مهره آبی باشد.\\n$P(A) = \\frac{\\binom{6}{1}\\binom{4}{2} + \\binom{6}{2}\\binom{4}{1}}{\\binom{10}{3}} = \\frac{36 + 60}{120} = \\frac{96}{120} = \\frac{4}{5}$\\nروش دوم: روش متمم:\\n$P(A) = 1 - P(A') = 1 - \\frac{\\binom{4}{3}_{\\text{هر سه آبی}} + \\binom{6}{3}_{\\text{هر سه قرمز}}}{\\binom{10}{3}} = 1 - \\frac{4 + 20}{120} = 1 - \\frac{24}{120} = 1 - \\frac{1}{5} = \\frac{4}{5}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1855,
+      "solution_page": 171,
+      "solution_text": "یا ۱ مهره سبز، ۲ مهره قرمز و ۱ مهره آبی و یا ۱ مهره سبز و ۳ مهره قرمز است.\\n$P(A) = \\frac{\\binom{6}{1}\\binom{8}{2}\\binom{4}{1} + \\binom{6}{1}\\binom{8}{3}}{\\binom{18}{4}} = \\frac{(6 \\times 28 \\times 4) + (6 \\times 56)}{\\frac{18 \\times 17 \\times 16 \\times 15}{4!}} = \\frac{6 \\times 56 \\times 3 \\times 4!}{18 \\times 17 \\times 16 \\times 15} = \\frac{7 \\times 4}{17 \\times 5} = \\frac{28}{85}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1856,
+      "solution_page": 171,
+      "solution_text": "از روش متمم استفاده می‌کنیم.\\n$P(\\text{حداقل یک زرد}) = 1 - P(\\text{زرد نباشد}) = 1 - \\frac{\\binom{5}{3}}{\\binom{10}{3}} = 1 - \\frac{10}{120} = 1 - \\frac{1}{12} = \\frac{11}{12}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1857,
+      "solution_page": 171,
+      "solution_text": "روش اول: پیشامد مورد نظر را $A$ می‌نامیم. خواهیم داشت:\\n$n(A) = \\frac{3}{\\text{زوج}} \\times \\frac{3}{\\text{زوج}} \\times \\frac{2}{\\text{فرد}} + \\frac{3}{\\text{زوج}} \\times \\frac{2}{\\text{زوج}} \\times \\frac{1}{\\text{زوج}} = 18 + 6 = 24$\\nبنابراین:\\n$P(A) = \\frac{24}{6 \\times 5 \\times 4} = \\frac{1}{5}$\\nروش دوم: با کارت دوم کاری نداریم.\\n$P(A) = \\frac{3 \\times 2}{6 \\times 5} = \\frac{1}{5}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1858,
+      "solution_page": 171,
+      "solution_text": "تعداد مهره‌های قرمز اولیه را $k$ در نظر می‌گیریم. پیشامد آن‌که در حالت اول مهره قرمز خارج شود را $A$ و پیشامد آن‌که بعد از تغییر مهره‌ها، مهره قرمز خارج شود را $B$ می‌نامیم.\\n$P(A) = \\frac{k}{k + 4}$\\n$P(B) = \\frac{k + 1}{k + 4}$\\n$P(B) - P(A) = \\frac{1}{10} \\Rightarrow \\frac{k + 1}{k + 4} - \\frac{k}{k + 4} = \\frac{1}{k + 4} = \\frac{1}{10} \\Rightarrow k + 4 = 10 \\Rightarrow k = 6$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1859,
+      "solution_page": 171,
+      "solution_text": "احتمال آن را می‌یابیم که یا ۱ لامپ و یا صفر لامپ معیوب باشد.\\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{\\binom{3}{1}\\binom{6}{2} + \\binom{3}{0}\\binom{6}{3}}{\\binom{9}{3}} = \\frac{45 + 20}{84} = \\frac{65}{84}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1860,
+      "solution_page": 171,
+      "solution_text": "با توجه به این‌که ترتیب انتخاب مهره‌ها مهم است، احتمال را محاسبه می‌کنیم.\\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{5 \\times 3}{10 \\times 9} = \\frac{1}{6}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1861,
+      "solution_page": 171,
+      "solution_text": "تعداد مهره‌های جعبه را $k$ می‌نامیم.\\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{\\binom{5}{1}\\binom{k-5}{1}}{\\binom{k}{2}} = \\frac{5}{9}$\\n$\\Rightarrow \\frac{5 \\times (k-5)}{\\frac{k(k-1)}{2}} = \\frac{5}{9} \\Rightarrow 18(k-5) = k(k-1)$\\n$\\Rightarrow k^2 - 19k + 90 = 0 \\Rightarrow (k-9)(k-10) = 0 \\Rightarrow \\begin{cases} k = 9 \\\\ k = 10 \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1863,
+      "solution_page": 172,
+      "solution_text": "پیشامد آن‌که رنگ هر سه مهره متمایز باشد را $A$ و پیشامد آن‌که هر سه مهره هم‌رنگ باشند را $B$ می‌نامیم.\n$P(A) = \\frac{\\binom{5}{1}\\binom{3}{1}\\binom{2}{1}}{\\binom{10}{3}} = \\frac{30}{120}$\n$P(B) = \\frac{\\binom{5}{3} + \\binom{3}{3}}{\\binom{10}{3}} = \\frac{11}{120}$\n$\\Rightarrow \\frac{P(A)}{P(B)} = \\frac{30}{11}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1864,
+      "solution_page": 172,
+      "solution_text": "پیشامد مورد نظر را $A$ می‌نامیم.\nروش اول: ابتدا یک جفت کفش از بین ۵ جفت انتخاب می‌کنیم. حال از ۸ لنگه کفش باقی‌مانده ۲ لنگه کفش انتخاب می‌کنیم. برای این‌که این دو از یک جفت نباشند، حالات نامطلوب را کم می‌کنیم.\n$n(A) = \\binom{5}{1} \\left( \\binom{8}{2} - \\binom{4}{1} \\right) = 5 \\times (28 - 4) = 5 \\times 24 = 120$\nروش دوم: ابتدا یک جفت کفش انتخاب می‌کنیم. ۲ لنگه کفش باقی‌مانده باید از ۲ جفت کفش متمایز باشد. بنابراین ۲ جفت کفش از ۴ جفت باقی‌مانده انتخاب کرده، از هر جفت ۱ لنگه انتخاب می‌کنیم.\n$n(A) = \\binom{5}{1}\\binom{4}{2}\\binom{2}{1}\\binom{2}{1} = 5 \\times 6 \\times 2 \\times 2 = 120$\nبنابراین:\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{120}{\\binom{10}{4}} = \\frac{120}{210} = \\frac{4}{7}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1865,
+      "solution_page": 172,
+      "solution_text": "احتمال آن را می‌یابیم که یا یک «رو» بیاید و یا صفر «رو».\n$P(A) = \\frac{\\binom{4}{1}_{\\text{۱ رو ۳ پشت}} + \\binom{4}{0}_{\\text{صفر رو ۴ پشت}}}{2^4} = \\frac{4+1}{16} = \\frac{5}{16}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": [
+        "Simplified the underbrace text inside the numerator for clarity."
+      ]
+    },
+    {
+      "question_number": 1866,
+      "solution_page": 172,
+      "solution_text": "روش اول: در فضای نمونه‌ای هر توپ ۴ حالت دارد.\nاگر در سبد اول یک توپ قرار گیرد، هر یک از ۲ توپ باقی‌مانده به ۳ حالت در ۳ سبد باقی‌مانده قرار می‌گیرند. اگر در سبد اول دو توپ قرار گیرد، ۱ توپ باقی‌مانده به ۳ حالت در ۳ سبد باقی‌مانده قرار می‌گیرد. در یک حالت نیز هر سه توپ در سبد اول قرار دارد.\n$P(A) = \\frac{\\binom{3}{1} \\times 3^2 + \\binom{3}{2} \\times 3 + \\binom{3}{3}}{4^3} = \\frac{27 + 9 + 1}{64} = \\frac{37}{64}$\nروش دوم: روش متمم:\n$P(A) = 1 - P(\\text{در سبد اول توپی قرار نگیرد}) = 1 - \\frac{3^3}{4^3} = 1 - \\frac{27}{64} = \\frac{37}{64}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1867,
+      "solution_page": 172,
+      "solution_text": "ابتدا $P(A \\cap B)$ را به دست می‌آوریم:\n$P(B \\cap A') = P(B - A) = P(B) - P(A \\cap B) = 0/2$\n$0/8 - P(A \\cap B) = 0/2 \\Rightarrow P(A \\cap B) = 0/6$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1868,
+      "solution_page": 172,
+      "solution_text": "می‌دانیم:\n$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$\nبنابراین:\n$\\frac{7}{12} = 3P(A \\cap B) + \\frac{3}{2}P(A \\cap B) - P(A \\cap B)$\n$\\Rightarrow P(A \\cap B) = \\frac{1}{6} \\Rightarrow P(A) = \\frac{3}{6} = \\frac{1}{2} \\, , \\, P(B) = \\frac{3}{12} = \\frac{1}{4}$\nدر نتیجه:\n$P(A' \\cup B) = P(A') + P(B) - P(A' \\cap B)$\n$= 1 - P(A) + P(B) - P(B - A) = 1 - \\frac{1}{2} + \\frac{1}{6} = \\frac{2}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": [
+        "Simplified the underbrace representation for P(A \\cap B)"
+      ]
+    },
+    {
+      "question_number": 1869,
+      "solution_page": 172,
+      "solution_text": "می‌دانیم:\n$P(A - B) = P(A) - P(A \\cap B)$\nمی‌باشد و چون $P(A - B) = P(A) - P(B)$ شده است نتیجه می‌گیریم $P(A \\cap B) = P(B)$، یعنی $B \\subseteq A$ است.\nبنابراین: $P(B - A) = P(B) - P(A \\cap B) = P(B) - P(B) = 0$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1870,
+      "solution_page": 172,
+      "solution_text": "از نمودار ون کمک می‌گیریم:\n$P(B) = 2P(A) \\Rightarrow x + \\frac{3}{8} = 2(x + \\frac{1}{8}) \\Rightarrow x = \\frac{1}{8}$\n$P(A) = x + \\frac{1}{8} = \\frac{1}{8} + \\frac{1}{8} = \\frac{2}{8} = \\frac{1}{4}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            1,
+            1,
+            100,
+            100
+          ],
+          "filename": "page_0172.jpg",
+          "placement": "solution_text",
+          "alt": "نمودار ون شامل دو مجموعه A و B"
+        }
+      ],
+      "review_notes": [
+        "Added dummy region for Venn diagram"
+      ]
+    },
+    {
+      "question_number": 1871,
+      "solution_page": 172,
+      "solution_text": "اگر $P(A') = \\frac{k}{6}$ و $P(B') = \\frac{k}{7}$ خواهیم داشت:\n$P(A \\cup B') = \\frac{2}{3} \\Rightarrow P(B') + P(A) - P(A \\cap B') = \\frac{2}{3}$\n$P(B \\cup A') = \\frac{3}{4} \\Rightarrow P(A') + P(B) - P(B \\cap A') = \\frac{3}{4}$\n$\\xrightarrow{(-)} P(A') - P(B') = \\frac{3}{4} - \\frac{2}{3} = \\frac{1}{12}$\n$\\Rightarrow \\frac{k}{6} - \\frac{k}{7} = \\frac{1}{12} \\Rightarrow k = \\frac{7}{2} \\Rightarrow P(B') = \\frac{1}{2} \\, , \\, P(A') = \\frac{7}{12}$\n$\\Rightarrow P(B') + P(A \\cap B) = \\frac{2}{3} \\Rightarrow P(A \\cap B) = \\frac{2}{3} - \\frac{1}{2} = \\frac{1}{6}$\nبنابراین:\n$P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\frac{5}{12} + \\frac{1}{2} - \\frac{1}{6} = \\frac{5 + 6 - 2}{12} = \\frac{9}{12} = \\frac{3}{4}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1872,
+      "solution_page": 172,
+      "solution_text": "اگر $P(A \\cap B)$ را $x$ بنامیم، خواهیم داشت:\n$P(A - B) = 0/2 \\Rightarrow P(A) - x = 0/2 \\Rightarrow P(A) = x + 0/2$\n$P(B - A) = 0/3 \\Rightarrow P(B) - x = 0/3 \\Rightarrow P(B) = x + 0/3$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": [
+        "Incomplete solution, likely continues on the next page."
+      ]
+    },
+    {
+      "question_number": 1872,
+      "solution_page": 173,
+      "solution_text": "بنابراین:\n$\\frac{P(A)}{P(B)} = \\frac{x + 0/2}{x + 0/3} = \\frac{x + 0/3 - 0/1}{x + 0/3} = 1 - \\frac{0/1}{x + 0/3}$\nبیشترین مقدار این عبارت زمانی است که $x$ بیشترین مقدار خود یعنی $0/5$ باشد. (اگر $x > 0/5$، آن‌گاه $P(A \\cup B) > 1$ خواهد شد) در نتیجه:\n$\\max(\\frac{P(A)}{P(B)}) = 1 - \\frac{0/1}{0/8} = \\frac{7}{8}$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "Part 2 of 1872"
+      ]
+    },
+    {
+      "question_number": 1873,
+      "solution_page": 173,
+      "solution_text": "ابتدا $P(A \\cap B)$ را به دست می‌آوریم.\n$P(A' \\cap B') = P(A \\cup B)' = 1 - P(A \\cup B) = 0/1 \\Rightarrow P(A \\cup B) = 0/9 \\Rightarrow P(A) + P(B) - P(A \\cap B) = 0/9 \\Rightarrow 0/7 + 0/5 - P(A \\cap B) = 0/9 \\Rightarrow P(A \\cap B) = 0/3$\nخواهیم داشت:\n$\\frac{P(A-B)}{P(B-A)} = \\frac{P(A)-P(A \\cap B)}{P(B)-P(A \\cap B)} = \\frac{0/7 - 0/3}{0/5 - 0/3} = \\frac{0/4}{0/2} = 2$\nمی‌توانستیم به جای محاسبهٔ $P(A \\cap B)$ از رابطه‌های زیر استفاده کنیم:\n$P(B-A) = P(A \\cup B) - P(A) , P(A-B) = P(A \\cup B) - P(B)$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1874,
+      "solution_page": 173,
+      "solution_text": "$A$ و $B$ ناسازگارند، بنابراین:\n$P(A \\cup B) = P(A) + P(B)$\nخواهیم داشت:\n$P(A' \\cap B') = P(A \\cup B)' = 1 - P(A \\cup B) = 1 - P(A) - P(B) = P(B') - P(A) = \\frac{3}{4} - \\frac{1}{3} = \\frac{5}{12}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1875,
+      "solution_page": 173,
+      "solution_text": "$A$ و $B$ ناسازگارند؛ یعنی: $A \\cap B = \\varnothing$\n$A \\cap B = \\varnothing \\Rightarrow B \\subseteq A' \\Rightarrow P(B) \\le P(A') \\Rightarrow P(B) \\le \\frac{1}{4}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1876,
+      "solution_page": 173,
+      "solution_text": "با توجه به نمودار ون تعداد اعضای ۴ ناحیهٔ به وجود آمده را $a$، $b$، $c$ و $d$ می‌نامیم.\n$P(R) = \\frac{25}{100} = \\frac{1}{4} \\Rightarrow \\frac{a+b}{20} = \\frac{1}{4} \\Rightarrow a+b = 5$\nاز طرفی $d = 11 \\Rightarrow a+b+d = 16 \\Rightarrow c = 20 - 16 = 4$\nبنابراین: $P(Z-R) = \\frac{c}{20} = \\frac{4}{20} = \\%20$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            850,
+            480,
+            1050,
+            550
+          ],
+          "placement": "solution",
+          "filename": "page_0173.jpg",
+          "alt": "نمودار ون"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1877,
+      "solution_page": 173,
+      "solution_text": "پیشامد آن‌که در بین این سه مهره، مهرهٔ سفید نباشد را $A$ و پیشامد آن‌که مهرهٔ سیاه نباشد را $B$ می‌نامیم.\n$P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\frac{\\binom{6}{3}}{\\binom{10}{3}} + \\frac{\\binom{8}{3}}{\\binom{10}{3}} - \\frac{\\binom{4}{3}}{\\binom{10}{3}} = \\frac{20 + 56 - 4}{120} = \\frac{72}{120} = \\frac{3}{5}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1878,
+      "solution_page": 173,
+      "solution_text": "احتمال آن را می‌یابیم که هر ۴ مهره قرمز و یا هر ۴ مهره آبی باشند.\n$P(A) = \\frac{n(A)}{n(S)} = \\frac{\\binom{5}{2}\\binom{6}{2} + \\binom{2}{2}\\binom{4}{2}}{\\binom{7}{2}\\binom{10}{2}} = \\frac{150 + 6}{21 \\times 45} = \\frac{156}{21 \\times 45} = \\frac{52}{315}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1879,
+      "solution_page": 173,
+      "solution_text": "پیشامد آن‌که عدد بر ۲ بخش‌پذیر باشد را $A$ و پیشامد آن‌که بر ۳ بخش‌پذیر باشد را $B$ می‌نامیم.\n$P(A' \\cap B') = P(A \\cup B)' = 1 - P(A \\cup B)$\n$= 1 - (P(A) + P(B) - P(A \\cap B))$\n$= 1 - (\\frac{[\\frac{100}{2}]}{100} + \\frac{[\\frac{100}{3}]}{100} - \\frac{[\\frac{100}{6}]}{100}) = 1 - (\\frac{50 + 33 - 16}{100}) = 1 - \\frac{67}{100} = \\frac{33}{100} = 0/33$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1880,
+      "solution_page": 173,
+      "solution_text": "پیشامد آن‌که عدد بر ۳ بخش‌پذیر باشد را $A$ و پیشامد آن‌که بر ۵ بخش‌پذیر باشد را $B$ می‌نامیم.\n$n(S) = 200 - 99 = 101$\n$n(B) = [\\frac{200}{5}] - [\\frac{99}{5}] = 40 - 19 = 21$\n$n(A \\cap B) = [\\frac{200}{15}] - [\\frac{99}{15}] = 13 - 6 = 7$\nبنابراین:\n$P(B - A) = P(B) - P(A \\cap B) = \\frac{21}{101} - \\frac{7}{101} = \\frac{14}{101}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1881,
+      "solution_page": 173,
+      "solution_text": "در یک خانواده با $n$ فرزند احتمال آن‌که تعداد دختران برابر $k$ باشد از رابطهٔ زیر به دست می‌آید.\n$P = \\frac{\\binom{n}{k}}{2^n}$\nبنابراین احتمال آن‌که در خانوادهٔ ۶ فرزندی ۴ دختر داشته باشیم برابر $P_1 = \\frac{\\binom{6}{4}}{2^6}$ و احتمال آن‌که در خانوادهٔ ۸ فرزندی ۵ پسر وجود داشته باشد برابر $P_2 = \\frac{\\binom{8}{5}}{2^8}$ می‌باشد. در نتیجه:\n$\\frac{P_1}{P_2} = \\frac{\\frac{\\binom{6}{4}}{2^6}}{\\frac{\\binom{8}{5}}{2^8}} = \\frac{4 \\times 15}{56} = \\frac{15}{14}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1882,
+      "solution_page": 173,
+      "solution_text": "در هر یک از گزینه‌ها احتمال را محاسبه می‌کنیم:\n۱: $P(A) = \\frac{\\binom{6}{5} + \\binom{6}{3} + \\binom{6}{1}}{2^6} = \\frac{6 + 20 + 6}{64} = \\frac{32}{64} = \\frac{1}{2}$\n۲: $P(B) = \\frac{\\binom{6}{4} + \\binom{6}{5} + \\binom{6}{6}}{2^6} = \\frac{15 + 6 + 1}{64} = \\frac{22}{64}$\n۳: $P(C) = \\frac{\\binom{6}{3}}{2^6} = \\frac{20}{64}$\n۴: $P(D) = \\frac{\\binom{6}{6} + \\binom{6}{0}}{2^6} = \\frac{2}{64}$\nواضح است ۱ احتمال بیشتری دارد.\nبا توجه به نکتهٔ زیر گزینه‌های ۱ و ۲ ساده‌تر بررسی می‌شوند.\nنکته\n$P(\\text{تعداد پسران زوج باشد}) = P(\\text{تعداد پسران فرد باشد}) = \\frac{1}{2}$ (اگر $n \\in \\mathbb{N}$)\nبرای تعداد دختران نیز این رابطه برقرار است.\n$n$ فرد $\\Rightarrow P(\\text{تعداد دختر} > \\text{تعداد پسر}) = P(\\text{تعداد پسر} > \\text{تعداد دختر}) = \\frac{1}{2}$\n$n$ زوج $\\Rightarrow P(\\text{تعداد دختر} > \\text{تعداد پسر}) = P(\\text{تعداد پسر} > \\text{تعداد دختر}) = \\frac{1 - P(\\text{تعداد دختر} = \\text{تعداد پسر})}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1883,
+      "solution_page": 174,
+      "solution_text": "اگر یک آزمایش تصادفی را که احتمال پیروزی در آن برابر $P$ است $n$ مرتبه تکرار کنیم، احتمال آن‌که $k$ بار پیروز شویم برابر است با:\n$\\binom{n}{k}P^k(1-P)^{n-k}$\nدر این مسئله $P = \\frac{2}{3}$، $n = 3$ و $k = 2$ می‌باشد. بنابراین:\n$P(A) = \\binom{3}{2}(\\frac{2}{3})^2(\\frac{1}{3}) = 3 \\times \\frac{4}{9} \\times \\frac{1}{3} = \\frac{4}{9}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1884,
+      "solution_page": 174,
+      "solution_text": "در توزیع دو جمله‌ای داریم:\n$P(A) = \\binom{n}{k}P^k(1-P)^{n-k}$\nبنابراین:\n$P(A) = \\binom{4}{2}(\\frac{1}{6})^2(\\frac{5}{6})^2 = 6 \\times \\frac{1}{36} \\times \\frac{25}{36} = \\frac{25}{216}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1885,
+      "solution_page": 174,
+      "solution_text": "معادلهٔ داده‌شده را ساده می‌کنیم:\n$P(A-B) = 3P(A \\cap B)$\n$\\Rightarrow P(A) - P(A \\cap B) = 3P(A \\cap B)$\n$\\Rightarrow P(A) = 4P(A \\cap B) \\Rightarrow \\frac{P(A \\cap B)}{P(A)} = \\frac{1}{4} \\Rightarrow P(B|A) = \\frac{1}{4}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1886,
+      "solution_page": 174,
+      "solution_text": "معادلات داده‌شده را ساده می‌کنیم:\n$P(A|B) = \\frac{1}{3} \\Rightarrow \\frac{P(A \\cap B)}{P(B)} = \\frac{1}{3} \\Rightarrow P(B) = 3P(A \\cap B) \\ \\ \\ (1)$\n$P(B-A) = 0/6 \\Rightarrow P(B) - P(A \\cap B) = 0/6 \\xrightarrow{(1)} 2P(A \\cap B) = 0/6 \\Rightarrow P(A \\cap B) = 0/3 \\Rightarrow P(B) = 3 \\times 0/3 = 0/9$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1887,
+      "solution_page": 174,
+      "solution_text": "ابتدا $P(A \\cap B)$ را به دست می‌آوریم:\n$P(B|A) = 0/6 \\Rightarrow \\frac{P(B \\cap A)}{P(A)} = 0/6 \\Rightarrow P(A \\cap B) = 0/6 P(A) = 0/6 \\times 0/5 = 0/3$\nبنابراین:\n$P(A|B) = 0/8 \\Rightarrow \\frac{P(A \\cap B)}{P(B)} = 0/8 \\Rightarrow \\frac{0/3}{P(B)} = 0/8 \\Rightarrow P(B) = \\frac{3}{8}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1888,
+      "solution_page": 174,
+      "solution_text": "$A$ و $B$ ناسازگارند بنابراین $A \\cap B = \\varnothing$ و $P(A \\cap B) = \\circ$.\n$P(A|B') = \\frac{1}{2} \\Rightarrow \\frac{P(A \\cap B')}{P(B')} = \\frac{1}{2} \\Rightarrow \\frac{P(A-B)}{P(B')} = \\frac{1}{2} \\Rightarrow \\frac{P(A)}{1-P(B)} = \\frac{1}{2}$\n$P(B|A') = \\frac{1}{4} \\Rightarrow \\frac{P(B \\cap A')}{P(A')} = \\frac{1}{4} \\Rightarrow \\frac{P(B-A)}{P(A')} = \\frac{1}{4} \\Rightarrow \\frac{P(B)}{1-P(A)} = \\frac{1}{4}$\n$\\Rightarrow \\begin{cases} 2P(A) + P(B) = 1 \\\\ P(A) + 4P(B) = 1 \\\\ \\end{cases} \\xrightarrow{\\times(-2) \\text{ معادله دوم و جمع با اول}} -7P(B) = -1 \\Rightarrow P(B) = \\frac{1}{7} \\Rightarrow P(A) = \\frac{3}{7} \\Rightarrow \\frac{P(A)}{P(B)} = \\frac{\\frac{3}{7}}{\\frac{1}{7}} = 3$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1889,
+      "solution_page": 174,
+      "solution_text": "**روش اول:** فضای نمونه‌ای جدید را می‌نویسیم. مجموع اعداد رو شده فرد است.\n$S = \\{(1,2),(1,4),(1,6),(2,1),(2,3),(2,5),(3,2),(3,4),(3,6),(4,1),(4,3),(4,5),(5,2),(5,4),(5,6),(6,1),(6,3),(6,5)\\}$\nپیشامد $A$ که در آن هر دو عدد اول هستند به صورت زیر است:\n$A = \\{(2,3),(2,5),(3,2),(5,2)\\}$\nبنابراین:\n$P(A) = \\frac{4}{18} = \\frac{2}{9}$\n\n**روش دوم:**\n$P(\\text{هر دو اول باشند} | \\text{مجموع اعداد فرد باشد}) = \\frac{P(\\text{مجموع اعداد فرد باشد} \\cap \\text{هر دو اول باشند})}{P(\\text{مجموع اعداد فرد باشد})}$\n$= \\frac{P(\\text{یکی از اعداد ۲ و دیگری ۳ یا ۵ باشد})}{P(\\text{مجموع اعداد فرد باشد})} = \\frac{\\frac{4}{36}}{\\frac{1}{2}} = \\frac{2}{9}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1890,
+      "solution_page": 174,
+      "solution_text": "**روش اول:** فضای نمونه‌ای جدید را می‌نویسیم. عدد رو شده اول است.\n$S = \\{2,3,5\\}$\nبنابراین:\n$P(\\text{عدد رو شده مضرب ۵ باشد}) = \\frac{1}{3}$\n\n**روش دوم:** از فرمول استفاده می‌کنیم:\n$P(A|B) = \\frac{P(A \\cap B)}{P(B)}$\n$P(\\text{عدد مضرب ۵ باشد} | \\text{عدد اول باشد}) = \\frac{P(\\text{عدد اول باشد} \\cap \\text{عدد مضرب ۵ باشد})}{P(\\text{عدد اول باشد})}$\n$= \\frac{P(\\text{عدد ۵ باشد})}{P(\\text{عدد اول باشد})} = \\frac{\\frac{1}{6}}{\\frac{3}{6}} = \\frac{1}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1891,
+      "solution_page": 174,
+      "solution_text": "**روش اول:** پیشامد مضرب ۳ بودن را $A$ و پیشامد مضرب ۵ بودن را $B$ می‌نامیم. بدیهی است $A \\cap B$ پیشامد مضرب ۱۵ بودن است.\n$P(A'|B) = \\frac{P(A' \\cap B)}{P(B)} = \\frac{P(B-A)}{P(B)} = \\frac{P(B)-P(A \\cap B)}{P(B)}$\n$= 1 - \\frac{P(A \\cap B)}{P(B)} = 1 - \\frac{n(A \\cap B)}{n(B)} = 1 - \\frac{[\\frac{999}{15}] - [\\frac{99}{15}]}{[\\frac{999}{5}] - [\\frac{99}{5}]}$\n$= 1 - \\frac{66-6}{199-19} = 1 - \\frac{60}{180} = 1 - \\frac{1}{3} = \\frac{2}{3}$\n\n**روش دوم:** اگر از ۱۰۰ آغاز کنیم از هر سه عدد متوالی مضرب ۵، دو عدد مضرب ۳ نمی‌باشند؛ بنابراین $P = \\frac{2}{3}$.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

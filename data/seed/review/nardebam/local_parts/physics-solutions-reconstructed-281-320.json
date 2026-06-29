@@ -1,0 +1,322 @@
+[
+  {
+    "question_number": 281,
+    "solution_page": null,
+    "solution_text": "میلهٔ مسی ابتدا 4 mm کوتاه‌تر است و پس از گرم‌شدن 2 mm بلندتر می‌شود؛ پس اختلاف انبساط‌ها 6 mm است. اگر طول آهن L باشد: 100[1.8×10^-5(L-0.004)-1.2×10^-5L]=0.006، بنابراین L=10.012 m.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 282,
+    "solution_page": null,
+    "solution_text": "اگر سهم فلز (1) را x بگیریم، افزایش طول میلهٔ مرکب برابر 0.6x+0.4(1-x)=0.45 میلی‌متر است؛ از این رو x=0.25 و سهم فلز (1) برابر 25 درصد است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 283,
+    "solution_page": null,
+    "solution_text": "در حلقهٔ کامل، اختلاف طول دو لایه برابر اختلاف محیط‌هاست: 2πd=2×3×0.1=0.6 mm. از طرفی ΔL=L(α_brass-α_iron)ΔT=500×8×10^-6ΔT؛ پس ΔT=150°C.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 284,
+    "solution_page": null,
+    "solution_text": "خط‌کش با افزایش 1000°C به اندازهٔ 1 درصد بلند می‌شود، پس هر واحد جدید 1.01 متر واقعی است. قرائت تازه 505/1.01=500 m می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 285,
+    "solution_page": null,
+    "solution_text": "طول واقعی میلهٔ آهنی در ضریب 1+α_FeΔθ و طول هر واحد خط‌کش مسی در ضریب 1+α_CuΔθ ضرب می‌شود؛ بنابراین قرائت جدید L(1+α_FeΔθ)/(1+α_CuΔθ) است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 286,
+    "solution_page": null,
+    "solution_text": "از شبکهٔ نمودار، برای هر میله α=(شیب نمودار)/L_0 محاسبه می‌شود. نسبت شیب به طول اولیه برای A برابر 3.6 برابر همین نسبت برای B است؛ پس α_A/α_B=3.6.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: medium"]
+  },
+  {
+    "question_number": 287,
+    "solution_page": null,
+    "solution_text": "برای B داریم dL/dT=αL_0=2×10^-4×2.50=5×10^-4 m/°C و شیب A دو برابر آن است. دو خط در 40°C به هم می‌رسند؛ اختلاف در 10°C برابر 0.015 m است. برای اختلاف 0.030 m باید 5×10^-4(T-40)=0.030 باشد، پس T=100°C.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 288,
+    "solution_page": null,
+    "solution_text": "طول کمان اولیه rα=10×π/3=10 cm=100 mm است. بنابراین Δs=α_LΔT s=2×10^-5×200×100=0.4 mm. انبساط یکنواخت زاویه را تغییر نمی‌دهد.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 289,
+    "solution_page": null,
+    "solution_text": "روزنه مانند قطعه‌ای از همان فلز منبسط می‌شود. چون جنس، دما و مساحت اولیهٔ همهٔ روزنه‌ها یکسان است، ΔA=2αAΔT برای هر چهار مورد برابر است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 290,
+    "solution_page": null,
+    "solution_text": "ابعاد صفحه 80×40 cm است و افزایش طول 80 سانتی‌متری 0.2 cm است؛ پس αΔT=0.2/80. افزایش مساحت تقریباً 2αΔT×(80×40)=16 cm² می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 291,
+    "solution_page": null,
+    "solution_text": "از افزایش طول 0.2 درصد در 50°C، α=4×10^-5 K^-1 به دست می‌آید. برای افزایش مساحت 0.8 درصد، 2αΔT=0.008 و در نتیجه ΔT=100°C است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 292,
+    "solution_page": null,
+    "solution_text": "شعاع‌های داخلی و خارجی 10 و 20 cm هستند؛ مساحت فلز 3(20²-10²)=900 cm² است. برای رسیدن به 864، تغییر نسبی مساحت -0.04 است. از ΔA/A=2αΔT نتیجه می‌شود ΔT=-0.04/(8×10^-4)=-50°C.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 293,
+    "solution_page": null,
+    "solution_text": "تغییر حجم کل متناسب با حجم کرهٔ خارجی و تغییر حجم فلز متناسب با حجم ماده است؛ بنابراین نسبت برابر 10³/(10³-5³)=1000/875=8/7 است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 294,
+    "solution_page": null,
+    "solution_text": "افزایش 0.12 درصدی سطح در بازهٔ 60°C یعنی 2α(60)=0.0012، پس α=10^-5 K^-1. افزایش نسبی حجم حفره در بازهٔ 80°C برابر 3α(80)=0.0024، یعنی 0.24 درصد است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 295,
+    "solution_page": null,
+    "solution_text": "برای کره با π=3، از 4r³=256 شعاع r=4 cm و سطح 192 cm² است. تغییر نسبی سطح دو سوم تغییر نسبی حجم، یعنی 0.4 درصد است؛ پس ΔA کره=0.004×192=0.768 cm² و از تغییر مکعب کمتر است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 296,
+    "solution_page": null,
+    "solution_text": "با گرم‌کردن، روغن منبسط می‌شود. چون دو سر لوله بسته و حجم ظرف تقریباً ثابت است، روغن فضای بیشتری می‌گیرد و حباب هوا فشرده و کوچک‌تر می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 297,
+    "solution_page": null,
+    "solution_text": "افزایش حجم جیوه ΔV=2×1.8×10^-4×100=0.036 cm³ است. قطر 0.5 mm یعنی شعاع 0.025 cm و سطح مقطع با π=3 برابر 0.001875 cm² است؛ پس Δh=0.036/0.001875=19.2 cm.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 298,
+    "solution_page": null,
+    "solution_text": "برای ظرف، سطح مقطع در ضریب 1+2αΔT و حجم مایع در ضریب 1+βΔT تغییر می‌کند. بنابراین 20/16=(1+10^-2ΔT)/(1+10^-3ΔT)، که ΔT=200/7°C می‌دهد. با دمای آغازین 20°C، دمای نهایی 340/7°C است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 299,
+    "solution_page": null,
+    "solution_text": "شعاع لوله 1 mm=0.1 cm است، پس حجم ستون 1.5 سانتی‌متری برابر 3×0.1²×1.5=0.045 cm³ می‌شود. این مقدار برابر VβΔT=V×2×10^-4×50 است؛ بنابراین V=4.5 cm³.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 300,
+    "solution_page": null,
+    "solution_text": "با صرف‌نظر از انبساط ظرف، کسر سرریز βΔT=2×10^-5×50=10^-3 است. جرم سرریز 1001×10^-3≈1 g می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 301,
+    "solution_page": null,
+    "solution_text": "فضای خالی ظرف 2000-(1000+900)=100 cm³ است. افزایش حجم دو مایع در هر درجه 1000(3.5×10^-4)+900(5×10^-4)=0.8 cm³ است؛ پس بیشینهٔ افزایش دما 100/0.8=125°C است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 302,
+    "solution_page": null,
+    "solution_text": "در بازهٔ 50°C، افزایش نسبی بنزین نسبت به مخزن تقریباً (β-3α)ΔT=(10^-3-5.4×10^-5)×50 است. برای ارتفاع 14 m، فضای لازم حدود 0.66 m است که با محاسبهٔ دقیق ابعاد منبسط‌شونده نزدیک 63 cm و منطبق با گزینهٔ سوم است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 303,
+    "solution_page": null,
+    "solution_text": "در 60°C افزایش دما، گنجایش ظرف به 500[1+3(10/9×10^-5)(60)]=501 cm³ و حجم 400 cm³ گلیسیرین به 400(1+5×10^-4×60)=412 cm³ می‌رسد. فضای خالی 89 cm³ است؛ با چگالی 1.125 g/cm³، جرم لازم 100.125 g است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 304,
+    "solution_page": null,
+    "solution_text": "از 0.02 درصد افزایش طول در 50°C، α=4×10^-6 K^-1 است. برای افزایش چگالی 0.03 درصد باید حجم 0.03 درصد کم شود؛ پس 3αΔT=-3×10^-4 و ΔT=-25°C=-45°F. بنابراین دما 45 درجهٔ فارنهایت کاهش می‌یابد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 305,
+    "solution_page": null,
+    "solution_text": "در هوای 7°C، آب سطحی گرم‌تر است و با افزایش عمق دما به 4°C نزدیک می‌شود، زیرا آب 4°C بیشترین چگالی را دارد و در پایین قرار می‌گیرد. نمودار گزینهٔ (1) همین ترتیب 7، 6، 5، 4 درجه را نشان می‌دهد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 306,
+    "solution_page": null,
+    "solution_text": "آب 4°C بیشترین چگالی را دارد. وقتی سطح دریاچه نیز 4°C است، جابه‌جایی همرفتی دما را یکنواخت کرده و دمای همهٔ عمق‌ها 4°C است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 307,
+    "solution_page": null,
+    "solution_text": "جسم در 2°C معلق است، پس چگالی‌اش با آب 2°C برابر است. با رساندن آب به 3°C چگالی آب افزایش می‌یابد و نیروی شناوری از وزن بیشتر می‌شود؛ جسم بالا می‌آید و در سطح شناور می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 308,
+    "solution_page": null,
+    "solution_text": "چون ΔT_C=(5/9)ΔT_F، برای ثابت‌ماندن Q=mcΔT داریم c_F=c_C×5/9=450×5/9=250 J/(kg·°F).",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 309,
+    "solution_page": null,
+    "solution_text": "ظرفیت گرمایی C=ρVc است. چون ضلع B دو برابر A است، V_A/V_B=1/8؛ همچنین ρ_A/ρ_B=1/2 و c_A/c_B=3. پس C_A/C_B=(1/2)(1/8)(3)=3/16.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 310,
+    "solution_page": null,
+    "solution_text": "افزایش دما ΔT=12600/(0.2×4200)=15°C است؛ آب از 2 به 17°C می‌رسد. حجم آب از 2 تا 4°C کاهش و پس از 4°C افزایش می‌یابد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 311,
+    "solution_page": null,
+    "solution_text": "افزایش انرژی درونی آب 5×4200×2=42000 J است. از این مقدار 8000 J را همزن داده است؛ بنابراین گرمای اجاق 42000-8000=34000 J می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 312,
+    "solution_page": null,
+    "solution_text": "اگر دمای اولیه x°C باشد، دمای نهایی 2x°C است. شرط فارنهایت 3.6x+32=1.9(1.8x+32) می‌دهد x=160°C؛ پس ΔT=160 K و ظرفیت گرمایی 400000/160=2500 J/K است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 313,
+    "solution_page": null,
+    "solution_text": "ابتدا Q=mcΔθ است. در حالت دوم 2Q=m'c(5Δθ)، بنابراین m'=2m/5=0.4m؛ پس باید 60 درصد جرم کم شود.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 314,
+    "solution_page": null,
+    "solution_text": "چون افزایش دمای دو گلوله برابر است، اختلاف گرما برابر cΔmΔθ است. بنابراین 2100-1700=400×0.1×Δθ و از آن Δθ=10°C به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 315,
+    "solution_page": null,
+    "solution_text": "ظرفیت‌های گرمایی A و B به‌ترتیب Q/20 و Q/15 هستند؛ پس ظرفیت مجموع 7Q/60 است. با دادن 1.4Q، افزایش دما (1.4Q)/(7Q/60)=12°C می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 316,
+    "solution_page": null,
+    "solution_text": "در نمودار T برحسب Q، شیب برابر 1/C است. خط A شیب بیشتری دارد، پس C_A<C_B؛ تنها نتیجهٔ الزامی این است که ظرفیت گرمایی B بیشتر از A است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 317,
+    "solution_page": null,
+    "solution_text": "برای جسم A با جرم 3 kg، از نمودار 4 kJ گرما دما را 8 K بالا می‌برد؛ پس c=4000/(3×8)=500/3 J/(kg·K). برای B: ΔT=12000/[5×(500/3)]=14.4 K.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 318,
+    "solution_page": null,
+    "solution_text": "آهنگ سوخت‌وساز 3.2×10^5 J/h است؛ در نیم ساعت 1.6×10^5 J به آب می‌رسد. افزایش دما 1.6×10^5/(40×4000)=1°C است، پس دمای نهایی آب 21°C می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 319,
+    "solution_page": null,
+    "solution_text": "گرمای مفید 0.75×420×600=189000 J است. برای 0.5 kg آب، ΔT=189000/(0.5×4200)=90°C؛ چون نقطهٔ جوش در 1 atm برابر 100°C است، دمای اولیه 10°C بوده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 320,
+    "solution_page": null,
+    "solution_text": "انرژی مفید کتری در یک دقیقه 2000×0.8×60=96000 J است. آب 0.2×4200×60=50400 J می‌گیرد؛ سهم کتری 45600 J است. پس ظرفیت گرمایی کتری 45600/60=760 J/K می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  }
+]

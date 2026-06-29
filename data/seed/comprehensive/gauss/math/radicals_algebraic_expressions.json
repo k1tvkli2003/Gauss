@@ -1,0 +1,3662 @@
+[
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_001",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل عبارت $27^{-\\frac{2}{3}} \\times 16^{0.75}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{8}{9}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{8}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{9}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{16}{9}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا هر پایه را به‌صورت توان‌های اول می‌نویسیم. $27 = 3^3$ و $16 = 2^4$. سپس توان‌ها را ضرب می‌کنیم: $27^{-2/3} = (3^3)^{-2/3} = 3^{-2} = \\dfrac{1}{9}$. بخش دوم: $16^{0.75} = 16^{3/4} = (2^4)^{3/4} = 2^3 = 8$. در نهایت این دو مقدار را ضرب می‌کنیم: $\\dfrac{1}{9} \\times 8 = \\dfrac{8}{9}$. بنابراین گزینه ۱ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توان کسری یعنی اول ریشه بگیر، بعد به توان برسان. ریشه سوم ۲۷ می‌شود ۳، به توان منفی ۲ می‌شود ۱/۹. ریشه چهارم ۱۶ می‌شود ۲، به توان ۳ می‌شود ۸. ضربشان ۸/۹."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_002",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x = 0.0016^{-\\frac{1}{4}}$ باشد، مقدار $x^2 - 2x$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$35$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عدد $0.0016$ را به‌صورت کسر $\\dfrac{16}{10000}$ می‌نویسیم. این مقدار برابر با $(\\dfrac{2}{10})^4$ یا $(\\dfrac{1}{5})^4$ است. پس $x = ((\\dfrac{1}{5})^4)^{-\\frac{1}{4}} = (\\dfrac{1}{5})^{-1} = 5$. با جایگذاری در عبارت مورد نظر: $5^2 - 2(5) = 25 - 10 = 15$. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "اعشاری $0.0016$ همان $16 \\times 10^{-4}$ است. ریشه چهارم آن می‌شود $2 \\times 10^{-1} = 0.2$. توان منفی باعث معکوس شدن می‌شود، پس $\\dfrac{1}{0.2} = 5$. در نهایت $25 - 10 = 15$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_003",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل $\\left( \\sqrt[3]{2} \\times \\sqrt{2} \\right)^{1.2}$ به‌صورت توانی از ۲ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2^{\\frac{5}{6}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2^{1.5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2^1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2^{\\frac{6}{5}}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا داخل پرانتز را ساده می‌کنیم. $\\sqrt[3]{2} = 2^{1/3}$ و $\\sqrt{2} = 2^{1/2}$. حاصل‌ضرب آن‌ها برابر است با $2^{1/3 + 1/2} = 2^{5/6}$. حالا کل عبارت را به توان $1.2$ یا همان $\\dfrac{6}{5}$ می‌رسانیم: $(2^{5/6})^{6/5} = 2^{5/6 \\times 6/5} = 2^1 = 2$. پس پاسخ صحیح گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توان‌های کسری پایه مشترک با هم جمع می‌شوند: $\\dfrac{1}{3} + \\dfrac{1}{2} = \\dfrac{5}{6}$. حالا این توان در $1.2$ یعنی $\\dfrac{6}{5}$ ضرب می‌شود که نتیجه دقیقاً ۱ خواهد بود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_004",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $a = \\sqrt[4]{3}$ و $b = \\sqrt[3]{9}$ باشد، حاصل $a^2 b^{-1.5}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{3}}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $a$ و $b$ را به‌صورت توان‌های کسری از پایه ۳ می‌نویسیم. $a = 3^{\\frac{1}{4}}$ و $b = (3^2)^{\\frac{1}{3}} = 3^{\\frac{2}{3}}$. در عبارت قرار می‌دهیم: $a^2 = (3^{\\frac{1}{4}})^2 = 3^{\\frac{1}{2}}$. بخش دوم: $b^{-1.5} = b^{-\\frac{3}{2}} = (3^{\\frac{2}{3}})^{-\\frac{3}{2}} = 3^{-1} = \\dfrac{1}{3}$. با ضرب این دو مقدار: $3^{\\frac{1}{2}} \\times 3^{-1} = 3^{-\\frac{1}{2}} = \\dfrac{1}{\\sqrt{3}}$. با گویا کردن مخرج به $\\dfrac{\\sqrt{3}}{3}$ می‌رسیم. بنابراین گزینه ۴ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای $b^{-1.5}$ توان‌ها سریعاً خنثی می‌شوند: توان $2/3$ ضربدر $-3/2$ می‌شود $-1$. پس فقط $\\sqrt{3} \\times 3^{-1}$ باقی می‌ماند که همان $\\dfrac{\\sqrt{3}}{3}$ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_005",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل عبارت $\\dfrac{x\\sqrt{x}}{\\sqrt[3]{x^2}}$ به‌صورت یک توان کسری از $x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$x^{\\frac{5}{6}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^{\\frac{2}{3}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^{\\frac{1}{6}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^{\\frac{7}{6}}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا تمامی عبارت‌ها را به‌صورت توان کسری از $x$ می‌نویسیم. در صورت: $x^1 \\times x^{1/2} = x^{3/2}$. در مخرج: $x^{2/3}$. با تقسیم این دو عبارت، توان مخرج از توان صورت کم می‌شود: $\\dfrac{3}{2} - \\dfrac{2}{3} = \\dfrac{9 - 4}{6} = \\dfrac{5}{6}$. پس حاصل نهایی $x^{5/6}$ است. بنابراین پاسخ درست گزینه ۱ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "بدون نوشتن کسرها، فقط مخرج مشترک ৬ بگیرید. صورت می‌شود $x^{6/6} \\times x^{3/6} = x^{9/6}$. مخرج می‌شود $x^{4/6}$. با تفریق سریع به $5/6$ می‌رسید."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_006",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x > 0$ باشد، ساده‌شده عبارت $\\sqrt{x \\sqrt[3]{x \\sqrt{x}}}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$x^{\\frac{7}{8}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^{\\frac{3}{4}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^{\\frac{5}{6}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^{\\frac{2}{3}}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عملیات را از داخلی‌ترین رادیکال شروع می‌کنیم. داخلی‌ترین بخش: $x \\sqrt{x} = x^1 \\cdot x^{1/2} = x^{3/2}$. حالا ریشه سوم می‌گیریم: $(x^{3/2})^{1/3} = x^{1/2}$. این مقدار را در $x$ بیرونی ضرب می‌کنیم: $x \\cdot x^{1/2} = x^{3/2}$. در نهایت، ریشه دوم کل عبارت را می‌گیریم: $(x^{3/2})^{1/2} = x^{3/4}$. پس گزینه ۲ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای رادیکال‌های تو در تو، توان متغیر در داخلی‌ترین رادیکال بر ضرب فرجه‌های بیرونیش تقسیم می‌شود. توان‌ها: $1/2$ (بیرونی‌ترین) $+ 1/6$ (وسطی) $+ 1/12$ (داخلی). مجموعشان: $6/12 + 2/12 + 1/12 = 9/12 = 3/4$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_007",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عبارت $\\dfrac{\\sqrt[4]{a^3 b^2} \\times \\sqrt{a b^3}}{\\sqrt[3]{a^2 b}}$ در ساده‌ترین شکل ممکن، دارای چه توانی برای متغیر $a$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{11}{12}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{7}{12}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{5}{12}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "توان‌های متغیر $a$ را در هر بخش مشخص می‌کنیم. در رادیکال اول: $a^{3/4}$. در رادیکال دوم: $a^{1/2}$. این دو در هم ضرب شده‌اند، پس توان‌هایشان جمع می‌شود: $\\dfrac{3}{4} + \\dfrac{1}{2} = \\dfrac{5}{4}$. در مخرج کسر، $a^{2/3}$ قرار دارد. توان مخرج باید از صورت کم شود: $\\dfrac{5}{4} - \\dfrac{2}{3} = \\dfrac{15 - 8}{12} = \\dfrac{7}{12}$. پس گزینه ۳ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "فقط با متغیر $a$ کار داریم. کسرها را بنویسید: $3/4 + 1/2 - 2/3$. مخرج مشترک ۱۲ بگیرید: $9/12 + 6/12 - 8/12 = 7/12$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_008",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x$ و $y$ اعداد مثبتی باشند، حاصل عبارت $\\sqrt[n]{\\dfrac{x^{2n}}{y^n}} \\times \\sqrt[2n]{y^{2n} x^{-4n}}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "مستقل از هر دو متغیر، برابر با $1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مستقل از $x$، برابر با $y$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مستقل از $y$، برابر با $x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مستقل از $x$، برابر با $1$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "هر بخش را جداگانه ساده می‌کنیم. عبارت اول: $\\sqrt[n]{x^{2n} y^{-n}} = x^{2n/n} y^{-n/n} = x^2 y^{-1}$. عبارت دوم: $\\sqrt[2n]{y^{2n} x^{-4n}} = y^{2n/2n} x^{-4n/2n} = y^1 x^{-2}$. با ضرب این دو: $(x^2 y^{-1})(y x^{-2}) = x^{2-2} y^{-1+1} = x^0 y^0 = 1$. بنابراین حاصل مستقل از هر دو متغیر بوده و برابر ۱ است. پس گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توان‌های متغیر $x$ در رادیکال‌ها: اولی $2n/n = 2$ و دومی $-4n/2n = -2$ است که جمعشان صفر می‌شود. برای $y$ نیز به همین شکل. پس حاصل قطعا ۱ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_009",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل گویای عبارت $\\dfrac{6}{\\sqrt[3]{2}}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3\\sqrt[3]{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6\\sqrt[3]{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3\\sqrt[3]{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12\\sqrt[3]{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای گویا کردن مخرجی که ریشه سوم دارد، باید صورت و مخرج را در $\\sqrt[3]{2^2}$ یا همان $\\sqrt[3]{4}$ ضرب کنیم تا توان زیر رادیکال در مخرج به ۳ برسد و از زیر رادیکال خارج شود. بنابراین داریم: $\\dfrac{6}{\\sqrt[3]{2}} \\times \\dfrac{\\sqrt[3]{4}}{\\sqrt[3]{4}} = \\dfrac{6\\sqrt[3]{4}}{\\sqrt[3]{8}}$. مخرج برابر ۲ می‌شود. با ساده‌سازی صورت و مخرج: $\\dfrac{6\\sqrt[3]{4}}{2} = 3\\sqrt[3]{4}$. بنابراین گزینه ۱ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در ذهن داشته باشید که مخرج $\\sqrt[3]{2}$ همیشه یک $\\sqrt[3]{4}$ نیاز دارد تا به ۲ تبدیل شود. ضریب ۶ در صورت هم با این ۲ ساده شده و به ۳ تبدیل می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_010",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فرم گویای عبارت $\\dfrac{10}{\\sqrt{7} - \\sqrt{2}}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5(\\sqrt{7} - \\sqrt{2})$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2(\\sqrt{7} + \\sqrt{2})$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{7} + \\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2(\\sqrt{7} - \\sqrt{2})$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای گویا کردن، صورت و مخرج کسر را در مزدوج مخرج، یعنی $(\\sqrt{7} + \\sqrt{2})$ ضرب می‌کنیم: $\\dfrac{10}{\\sqrt{7} - \\sqrt{2}} \\times \\dfrac{\\sqrt{7} + \\sqrt{2}}{\\sqrt{7} + \\sqrt{2}}$. مخرج از طریق اتحاد مزدوج برابر می‌شود با $(\\sqrt{7})^2 - (\\sqrt{2})^2 = 7 - 2 = 5$. صورت کسر نیز $10(\\sqrt{7} + \\sqrt{2})$ است. با تقسیم صورت بر مخرج: $\\dfrac{10(\\sqrt{7} + \\sqrt{2})}{5} = 2(\\sqrt{7} + \\sqrt{2})$. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "مخرج همیشه تفاوت دو عدد زیر رادیکال را می‌دهد ($7 - 2 = 5$). عدد ۱۰ در صورت با این ۵ ساده شده و به ۲ تبدیل می‌شود که در مزدوج مخرج ضرب خواهد شد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_011",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل ساده‌شده $\\dfrac{4}{\\sqrt{3} + 1} - 2\\sqrt{3}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا کسر را گویا می‌کنیم. صورت و مخرج را در مزدوج مخرج ($\\sqrt{3} - 1$) ضرب می‌کنیم: $\\dfrac{4(\\sqrt{3} - 1)}{(\\sqrt{3} + 1)(\\sqrt{3} - 1)} = \\dfrac{4(\\sqrt{3} - 1)}{3 - 1} = \\dfrac{4(\\sqrt{3} - 1)}{2} = 2(\\sqrt{3} - 1) = 2\\sqrt{3} - 2$. حالا عبارت $- 2\\sqrt{3}$ را از آن کم می‌کنیم: $(2\\sqrt{3} - 2) - 2\\sqrt{3} = -2$. پس پاسخ گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "مخرج پس از گویا شدن برابر ۲ می‌شود ($3-1=2$). ضریب ۴ با ۲ ساده شده و عدد ۲ در مزدوج ضرب می‌شود که حاصل آن $2\\sqrt{3} - 2$ است. بخش رادیکالی حذف شده و تنها $-2$ باقی می‌ماند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_012",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عبارت $\\dfrac{1}{\\sqrt[3]{x} - 1}$ با کدام‌یک از عبارات زیر معادل است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt[3]{x^2} + 1}{x - 1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt[3]{x^2} - \\sqrt[3]{x} + 1}{x - 1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt[3]{x^2} - 1}{x - 1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt[3]{x^2} + \\sqrt[3]{x} + 1}{x - 1}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مخرج به شکل $a - b$ است که در آن $a = \\sqrt[3]{x}$ و $b = 1$. برای گویا کردن ریشه سوم، باید از اتحاد چاق و لاغر (تفاضل مکعبات) استفاده کنیم. صورت و مخرج را در عبارت $(a^2 + ab + b^2)$ ضرب می‌کنیم که برابر است با $(\\sqrt[3]{x^2} + \\sqrt[3]{x} + 1)$. مخرج تبدیل به $a^3 - b^3$ می‌شود که همان $x - 1$ است. صورت نیز خودِ عبارت ضرب‌شونده خواهد بود. بنابراین گزینه ۴ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "ریشه‌های سوم همواره با کمک اتحاد چاق و لاغر گویا می‌شوند. عامل لاغر منفی است، پس عامل چاق (صورت کسر) باید تماماً مثبت باشد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_013",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل بسط اتحاد $(2x - 3y)^3$ دارای کدام ضریب برای جمله $x^2 y$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-36$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$54$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-54$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با استفاده از اتحاد مکعب دوجمله‌ای داریم: $(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$. در اینجا $a = 2x$ و $b = 3y$ است. جمله‌ای که حاوی $x^2 y$ است، متناظر با عبارت $-3a^2b$ می‌باشد. مقادیر را جایگذاری می‌کنیم: $-3(2x)^2(3y) = -3(4x^2)(3y) = -36x^2y$. پس ضریب این جمله $-36$ خواهد بود. گزینه ۱ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "ضریب جمله دوم در بسط مکعب، منفی ۳ برابرِ مربع اولی در دومی است. پس ذهنی حساب کنید: $-3 \\times (2)^2 \\times (3) = -3 \\times 4 \\times 3 = -36$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_014",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عبارت $x^4 - 81$ پس از تجزیه کامل روی مجموعه اعداد حقیقی، شامل چند عامل (پرانتز) مجزا با ضرایب حقیقی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "این عبارت را می‌توان به‌عنوان تفاضل مربعات نوشت: $x^4 - 81 = (x^2 - 9)(x^2 + 9)$. عامل اول خود یک تفاضل مربعات دیگر است: $x^2 - 9 = (x - 3)(x + 3)$. عامل دوم ($x^2 + 9$) در مجموعه اعداد حقیقی قابل تجزیه نیست. پس تجزیه نهایی به شکل $(x - 3)(x + 3)(x^2 + 9)$ خواهد بود که شامل ۳ پرانتز مجزا است. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "تفاضل توان‌های زوج همیشه یک بخش منفی و یک مثبت دارد. بخش منفی باز هم تجزیه می‌شود اما مثبت (روی اعداد حقیقی) متوقف می‌گردد. پس ۲ پرانتز از منفی و ۱ پرانتز از مثبت به‌دست می‌آید؛ مجموعاً ۳ تا."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_015",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $a + b = 5$ و $ab = 3$ باشد، حاصل $a^3 + b^3$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$110$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$90$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$80$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$125$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از اتحاد فرعی مجموع مکعبات استفاده می‌کنیم: $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$. مقادیر معلوم را در این رابطه قرار می‌دهیم: $a^3 + b^3 = 5^3 - 3(3)(5) = 125 - 45 = 80$. بنابراین پاسخ صحیح گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای مجموع مکعبات فقط به جمع و ضرب نیاز دارید. مکعبِ جمع را منهای سه برابرِ (ضرب در جمع) کنید. $125 - (3 \\times 3 \\times 5) = 80$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_016",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عبارت $x^3 + 8y^3 - 27 + 18xy$ با استفاده از اتحاد اولر قابل تجزیه است. یکی از عوامل تجزیه آن کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$x - 2y + 3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x + 2y + 3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x - 2y - 3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x + 2y - 3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اتحاد معروف اولر (مجموع مکعبات سه جمله) بیان می‌کند: $a^3 + b^3 + c^3 - 3abc = (a+b+c)(a^2+b^2+c^2-ab-ac-bc)$. با تطابق عبارت با این اتحاد داریم: $a = x$، $b = 2y$ و $c = -3$. حال بررسی می‌کنیم که آیا $-3abc$ با جمله آخر هم‌خوانی دارد یا خیر: $-3(x)(2y)(-3) = 18xy$. بله دقیقاً برابر است. پس یکی از پرانتزهای تجزیه همان $a+b+c$ است که برابر می‌شود با $x + 2y - 3$. پاسخ درست گزینه ۴ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "فقط از سه جمله اولت مکعب ریشه بگیرید: ریشه $x^3$ برابر $x$، ریشه $8y^3$ برابر $2y$ و ریشه $-27$ برابر $-3$ است. جمع این‌ها می‌شود $x+2y-3$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_017",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دامنه تعریف عبارت رادیکالی $\\sqrt{x^2 - 4x + 3}$ کدام بازه است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty, 1] \\cup [3, +\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty, 1) \\cup (3, +\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[1, 3]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(1, 3)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال با فرجه زوج باید نامنفی باشد: $x^2 - 4x + 3 \\ge 0$. ریشه‌های این عبارت درجه دوم برابر $x=1$ و $x=3$ هستند. با تعیین علامت، عبارت بین دو ریشه منفی و خارج از دو ریشه مثبت است. چون مقدار صفر یا مثبت را می‌خواهیم، بازه $(-\\infty, 1] \\cup [3, +\\infty)$ قابل قبول است. پس گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "رادیکال درجه زوج همیشه بیرونی‌های دو ریشه (برای ضریب $x^2$ مثبت) یا بین دو ریشه (برای ضریب منفی) را می‌پذیرد. اینجا مثبت است پس جواب‌ها خارج از بازه ۱ تا ۳ هستند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_018",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "برای کدام مقادیر $x$ عبارت $\\sqrt[4]{\\dfrac{x-2}{x+5}}$ معنادار (حقیقی) است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty, -5] \\cup [2, +\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty, -5) \\cup [2, +\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[-5, 2]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-5, 2]$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چون فرجه رادیکال زوج (۴) است، عبارت زیر آن باید بزرگتر یا مساوی صفر باشد: $\\dfrac{x-2}{x+5} \\ge 0$. همچنین مخرج کسر نباید صفر شود، پس $x  eq -5$. ریشه‌های صورت و مخرج ۲ و ۵- هستند. با تعیین علامت، کسر برای $x < -5$ مثبت، برای $-5 < x < 2$ منفی و برای $x \\ge 2$ مثبت است. با در نظر گرفتن نامساوی اکید در مخرج، دامنه $(-\\infty, -5) \\cup [2, +\\infty)$ می‌شود. گزینه ۲ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه ریشه مخرج باز (یعنی ۵- در پرانتز) و ریشه صورت بسته (یعنی ۲ در کروشه) است. علامت کلی مثبت خواسته شده که در دو طرف بازه ریشه‌ها رخ می‌دهد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_019",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر عبارت $\\sqrt{2 - |x-1|}$ تنها در بازه $[a, b]$ تعریف شده باشد، مقدار $a+b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "باید عبارت زیر رادیکال غیرمنفی باشد: $2 - |x-1| \\ge 0 \\implies |x-1| \\le 2$. این نامعادله قدرمطلقی را باز می‌کنیم: $-2 \\le x-1 \\le 2$. با اضافه کردن ۱ به تمام طرفین: $-1 \\le x \\le 3$. بنابراین دامنه بازه $[-1, 3]$ است. در اینجا $a = -1$ و $b = 3$ است. مجموع آن‌ها برابر $-1 + 3 = 2$ است. بنابراین گزینه ۳ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "از تقارن قدرمطلق استفاده کنید. وسط بازه دقیقاً ریشه داخل قدرمطلق یعنی $x=1$ است. فاصله تا مرزها هم ۲ واحد است. پس میانگین مرزها همان ۱ است، یعنی جمع مرزها باید دو برابر میانگین، یعنی ۲ باشد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_020",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از عبارات زیر برای تمام مقادیر حقیقی $x$ در دامنه اعداد حقیقی تعریف شده است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{x - |x|}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt[4]{x^2 - 1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{x^3 + 1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt[3]{x - \\sqrt{x^2 + 1}}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای ریشه سوم (فرجه فرد)، هیچ محدودیتی روی علامت عبارت زیر رادیکال وجود ندارد (می‌تواند منفی یا مثبت باشد). در این گزینه، بخش داخلی $\\sqrt{x^2+1}$ نیز همیشه مثبت و معتبر است چون $x^2+1 \\ge 1$. پس این عبارت به ازای تمام اعداد حقیقی معنادار است. بقیه گزینه‌ها فرجه زوج دارند که برای مقادیر خاصی منفی شده و بی‌معنی می‌شوند (مثلا دومی برای $x<0$، سومی برای $x<-1$ و چهارمی برای $-1<x<1$). گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "به دنبال فرجه فرد بگردید. ریشه سوم هر عدد حقیقی (چه مثبت و چه منفی) تعریف شده است، پس نیازی به بررسی محدودیت‌های مثبت بودن زیر رادیکال نیست."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_021",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل ضرب $0.0004 \\times 250000$ به‌صورت نماد علمی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1 \\times 10^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1 \\times 10^0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1 \\times 10^1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1 \\times 10^3$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا اعداد را به‌صورت نماد علمی می‌نویسیم: $0.0004 = 4 \\times 10^{-4}$ و $250000 = 25 \\times 10^4$. با ضرب این دو: $(4 \\times 10^{-4}) \\times (25 \\times 10^4) = (4 \\times 25) \\times 10^{-4+4} = 100 \\times 10^0 = 100$. عدد ۱۰۰ در نماد علمی به‌صورت $1 \\times 10^2$ نوشته می‌شود. پس گزینه ۱ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "کافی است اعداد غیرصفر را ضرب کنید ($4 \\times 25 = 100$) و توان‌ها را با هم جمع کنید ($-4 + 4 = 0$). پس حاصل ۱۰۰ می‌شود که نماد علمی‌اش ده به توان دو است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_022",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نصف عدد $2^{50}$ کدام گزینه است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1^{25}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2^{49}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2^{25}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1^{50}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای یافتن نصف یک عدد، باید آن را بر ۲ تقسیم کنیم. پس $\\dfrac{2^{50}}{2^1} = 2^{50-1} = 2^{49}$. توجه کنید که تقسیم بر دو در پایه مشابه، به معنای کم کردن یک واحد از توان است، نه نصف کردن خودِ توان! گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "قانون پایه‌های برابر: وقتی پایه برابر است، در تقسیم توان‌ها از هم کم می‌شوند. پس ۵۰ منهای ۱ می‌شود ۴۹."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_023",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از اعداد زیر بزرگتر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5^{20}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4^{30}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3^{40}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2^{60}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای مقایسه توان‌های بزرگ، باید یا پایه‌ها را برابر کنیم یا توان‌ها را. در اینجا می‌توانیم تمام اعداد را با یک توان مشترک (بزرگترین مقسوم‌علیه مشترک توان‌ها یعنی ۱۰) بازنویسی کنیم. $3^{40} = (3^4)^{10} = 81^{10}$. $2^{60} = (2^6)^{10} = 64^{10}$. $4^{30} = (4^3)^{10} = 64^{10}$. $5^{20} = (5^2)^{10} = 25^{10}$. با مقایسه پایه‌های جدید مشخص می‌شود که $81 > 64 > 25$. بنابراین $3^{40}$ از بقیه بزرگتر است. پس پاسخ گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "کافی است تمام توان‌ها را بر ۱۰ تقسیم کنید (ریشه دهم بگیرید). می‌ماند ۳ به توان ۴، ۲ به توان ۶، ۴ به توان ۳، ۵ به توان ۲. که بزرگترینشان ۸۱ یعنی همان گزینه صحیح است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_024",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد ارقام عدد $N = 4^{15} \\times 5^{26}$ وقتی محاسبه شود، چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$26$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$27$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$29$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$28$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "باید پایه‌ها را به ۲ و ۵ تبدیل کنیم تا مضارب ۱۰ (که فقط صفر اضافه می‌کنند) را جدا کنیم. $N = (2^2)^{15} \\times 5^{26} = 2^{30} \\times 5^{26}$. این مقدار را به‌صورت $2^4 \\times (2^{26} \\times 5^{26}) = 16 \\times 10^{26}$ می‌نویسیم. این عدد شامل رقم ۱۶ (که ۲ رقم است) و ۲۶ صفر در جلوی آن است. بنابراین تعداد کل ارقام برابر است با $2 + 26 = 28$ رقم. پس گزینه ۴ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه توان‌های ۲ و ۵ را جفت کنید. اینجا ۲۶ جفت ده‌تایی ساخته می‌شود (۲۶ تا صفر) و از توان دو، ۴ تا می‌ماند که می‌شود ۱۶ (۲ رقمی). جمع ارقام می‌شود $26+2=28$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_025",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x = \\sqrt{3} + 1$ باشد، مقدار عبارت $x^2 - 2x + 1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "به جای جایگذاری مستقیم که ممکن است زمان‌بر باشد، به ساختار عبارت توجه می‌کنیم: $x^2 - 2x + 1$ یک اتحاد مربع کامل است و برابر با $(x - 1)^2$ می‌باشد. حال مقدار $x$ را درون آن قرار می‌دهیم: $(\\sqrt{3} + 1 - 1)^2 = (\\sqrt{3})^2 = 3$. بنابراین بدون محاسبه پیچیده، حاصل ۳ به‌دست می‌آید. پس گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه قبل از عددگذاری عبارت جبری را ساده کنید. اینجا مربع کامل $(x-1)^2$ مشخص است و با قرار دادن $\\sqrt{3}+1$ عدد یک ساده شده و مربع رادیکال همان ۳ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_026",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x - \\dfrac{1}{x} = 4$ باشد، مقدار عبارت $x^2 + \\dfrac{1}{x^2}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$14$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت اصلی را به توان ۲ می‌رسانیم: $(x - \\dfrac{1}{x})^2 = 4^2 \\implies x^2 - 2(x)(\\dfrac{1}{x}) + \\dfrac{1}{x^2} = 16$. بخش وسط ساده می‌شود و $-2$ باقی می‌ماند. پس: $x^2 - 2 + \\dfrac{1}{x^2} = 16 \\implies x^2 + \\dfrac{1}{x^2} = 16 + 2 = 18$. پاسخ گزینه ۲ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در اتحادهای معکوس، مربع مجموع یا تفاضل با ۲ واحد جمع یا تفریق تصحیح می‌شود. اینجا چون تفاضل داده شده، توان دو می‌رسانیم ($16$) و به اضافه ۲ می‌کنیم تا مربع جمع‌ها به‌دست آید."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_027",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\dfrac{x}{y} + \\dfrac{y}{x} = 3$ باشد، حاصل $\\dfrac{x^2}{y^2} + \\dfrac{y^2}{x^2}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت داده شده را به توان ۲ می‌رسانیم. فرض کنیم $A = \\dfrac{x}{y}$ و $B = \\dfrac{y}{x}$. توجه کنید که $AB = 1$ است. پس $(A + B)^2 = 3^2 \\implies A^2 + 2AB + B^2 = 9 \\implies \\dfrac{x^2}{y^2} + 2(1) + \\dfrac{y^2}{x^2} = 9 \\implies \\dfrac{x^2}{y^2} + \\dfrac{y^2}{x^2} = 7$. بنابراین پاسخ صحیح گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همان قانون اتحادهای معکوس است. چون دو کسر معکوس هم هستند، توان دوم مجموعشان همیشه ۲ واحد از مربع جمعشان کمتر است: $3^2 - 2 = 7$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_028",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $a + b + c = 0$ باشد، حاصل عبارت $\\dfrac{a^3 + b^3 + c^3}{abc}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در اتحاد اولر: $a^3 + b^3 + c^3 - 3abc = (a+b+c)(a^2+b^2+c^2-ab-ac-bc)$. چون طبق فرض $a+b+c=0$ است، طرف راست معادله کاملاً صفر می‌شود. پس $a^3 + b^3 + c^3 - 3abc = 0 \\implies a^3 + b^3 + c^3 = 3abc$. با تقسیم این رابطه بر $abc$ به عدد ۳ می‌رسیم. بنابراین گزینه ۴ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "این یکی از ویژگی‌های مشهور اتحاد سه جمله‌ای است: هرگاه جمع سه عدد صفر باشد، جمع مکعب‌های آن‌ها برابر با ۳ برابر ضربشان است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_029",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تجزیه کامل عبارت $3x^3 - 12x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3x(x - 2)(x + 2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3x(x - 4)(x + 4)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3(x^3 - 4x)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3x(x^2 - 12)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا از بزرگترین مقسوم‌علیه مشترک جملات، یعنی $3x$ فاکتور می‌گیریم: $3x(x^2 - 4)$. اکنون داخل پرانتز یک اتحاد تفاضل مربعات داریم که به شکل $(x - 2)(x + 2)$ تجزیه می‌شود. در نتیجه فرم نهایی به‌صورت $3x(x - 2)(x + 2)$ است. پس گزینه ۱ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "ابتدا فاکتور مشترک را بگیرید تا توان از ۳ به ۲ کاهش یابد. با دیدن $x^2-4$ سریعاً اتحاد مزدوج در ذهن تداعی می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_030",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تجزیه عبارت چهارجمله‌ای $x^3 - 2x^2 - 9x + 18$ با استفاده از روش دسته‌بندی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(x - 3)^2(x + 2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x - 2)(x - 3)(x + 3)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x - 2)^2(x + 3)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x - 2)(x^2 + 9)$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "این عبارت را به دو دسته تقسیم می‌کنیم: $(x^3 - 2x^2) - (9x - 18)$. در دسته اول از $x^2$ و در دسته دوم از $9$ فاکتور می‌گیریم: $x^2(x - 2) - 9(x - 2)$. حالا عامل مشترک $(x - 2)$ را فاکتور می‌گیریم: $(x - 2)(x^2 - 9)$. بخش دوم خودش تفاضل مربعات است، پس کاملاً تجزیه می‌شود: $(x - 2)(x - 3)(x + 3)$. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "ریشه حدسی را پیدا کنید. با قرار دادن $x=2$ عبارت صفر می‌شود، پس $x-2$ یکی از عوامل است. با تقسیم عبارت بر آن یا با دسته‌بندی، عامل بعدی یعنی $x^2-9$ مشخص می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_031",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عبارت $x^2 - y^2 - 2x + 1$ چگونه تجزیه می‌شود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(x + 1 - y)(x + 1 + y)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x - y - 1)(x + y + 1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x - 1 - y)(x - 1 + y)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x - y)^2 + 1$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با کمی دقت متوجه می‌شویم که سه جمله $x^2 - 2x + 1$ با هم یک اتحاد مربع کامل می‌سازند. پس عبارت را بازنویسی می‌کنیم: $(x^2 - 2x + 1) - y^2 = (x - 1)^2 - y^2$. اکنون یک تفاضل مربعات بین $(x - 1)$ و $y$ داریم که تجزیه آن به صورت $((x - 1) - y)((x - 1) + y)$ یا $(x - 1 - y)(x - 1 + y)$ خواهد بود. گزینه ۳ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در عبارات چهار جمله‌ای که سه تای آن‌ها مربع‌های کامل با یک دو برابر حاصل‌ضرب هستند، مستقیماً مربع کامل را بسازید و سپس از مزدوج استفاده کنید."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_032",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تجزیه عبارت $a^4 + 4$ (با اضافه و کم کردن جمله مناسب) کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(a^2 - 2)(a^2 + 2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(a^2 + 2)^2 - 4a^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(a^2 - 2a - 2)(a^2 + 2a - 2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(a^2 - 2a + 2)(a^2 + 2a + 2)$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "این عبارت اتحاد مربع ناقص است. برای اینکه $a^4 + 4$ به مربع کامل تبدیل شود، نیاز به جمله وسط $4a^2$ داریم. بنابراین $4a^2$ را اضافه و کم می‌کنیم: $a^4 + 4a^2 + 4 - 4a^2$. سه جمله اول تشکیل $(a^2 + 2)^2$ را می‌دهند. پس داریم: $(a^2 + 2)^2 - (2a)^2$. این حالا یک تفاضل مربعات است: $(a^2 + 2 - 2a)(a^2 + 2 + 2a)$ که مرتب‌شده‌ی آن $(a^2 - 2a + 2)(a^2 + 2a + 2)$ است. گزینه ۴ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی با مجموع دو مربع روبرو شدید (به‌ویژه اعداد زوج)، تکنیک تکمیل مربع با اضافه‌کردن و کم‌کردن سریع‌ترین راه برای تولید تفاضل مربعات جدید است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_033",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله توانی $4^{x-1} = 8^{x+2}$ چه جوابی برای $x$ دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا پایه‌ها را به ۲ یکسان می‌کنیم: $4 = 2^2$ و $8 = 2^3$. جایگذاری در معادله: $(2^2)^{x-1} = (2^3)^{x+2}$. با ضرب توان‌ها: $2^{2x-2} = 2^{3x+6}$. چون پایه‌ها برابرند، توان‌ها باید برابر باشند: $2x - 2 = 3x + 6$. با حل این معادله خطی: $2x - 3x = 6 + 2 \\implies -x = 8 \\implies x = -8$. بنابراین گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "فقط پایه‌های برابر بسازید: ۲ برای ۴ و ۳ برای ۸. توان‌ها ضرب در این پایه‌ها می‌شوند: $2x-2 = 3x+6$ که با انتقال سریع، $x$ برابر $-8$ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_034",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $3^x = 2$ باشد، حاصل عبارت $27^x + 9^{x+1}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$52$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$44$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$26$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت را بر حسب $3^x$ بازنویسی می‌کنیم: $27^x = (3^3)^x = (3^x)^3$. مقدار دوم: $9^{x+1} = 9^x \\times 9 = (3^2)^x \\times 9 = (3^x)^2 \\times 9$. حالا مقدار $3^x = 2$ را جایگذاری می‌کنیم: $(2)^3 + 9(2)^2 = 8 + 9(4) = 8 + 36 = 44$. پس پاسخ صحیح گزینه ۲ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هر جا ۲۷ بود توان سوم و هر جا ۹ بود توان دوم پایه ۳ است. توان اضافی در $9^{x+1}$ به ضریب ۹ تبدیل می‌شود. پس سریع: $2^3 + 9(2^2)$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_035",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر در معادله $5^{x+1} - 5^x = 100$， مقدار $x$ برابر با عددی باشد، مقدار $x^2$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$25$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از $5^x$ در سمت چپ فاکتور می‌گیریم: $5^x (5^1 - 1) = 100$. عبارت داخل پرانتز برابر ۴ است. پس: $4 \\times 5^x = 100 \\implies 5^x = 25$. می‌دانیم که $25 = 5^2$ است، پس $x = 2$. سؤال از ما $x^2$ را خواسته است که برابر $2^2 = 4$ می‌شود. گزینه ۳ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "فاکتورگیری سریع از توان کمتر: $5^x(5-1) = 100$. پس $5^x = 25$ و $x=2$. مربع آن ۴ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_036",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد جواب‌های حقیقی معادله $(x^2 - 4x + 3)^{x^2 - 1} = 1$ چند تاست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای اینکه توانی برابر ۱ شود، سه حالت داریم: ۱) توان برابر ۰ باشد و پایه ناصفر باشد. توان $x^2 - 1 = 0 \\implies x = \\pm 1$. بررسی شرط: برای $x=1$ پایه $1-4+3=0$ می‌شود که $0^0$ مبهم است، پس $x=1$ مردود است. اما $x=-1$ پایه ۸ می‌شود ($8^0=1$)، پس مجاز است. ۲) پایه برابر ۱ باشد: $x^2 - 4x + 3 = 1 \\implies x^2 - 4x + 2 = 0$. دلتا ۱۶-۸=۸ است. دو جواب حقیقی $x = 2 \\pm \\sqrt{2}$ دارد. ۳) پایه برابر ۱- باشد و توان زوج باشد: $x^2 - 4x + 3 = -1 \\implies x^2 - 4x + 4 = 0 \\implies (x-2)^2 = 0 \\implies x=2$. توان برای این $x$ برابر $4-1=3$ (فرد) می‌شود، پس $x=2$ مردود است. کل جواب‌های مجاز ۳ تاست: $-1, 2+\\sqrt{2}, 2-\\sqrt{2}$. گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "حالت‌های توان صفر، پایه یک و پایه منفی یک را بررسی کنید. در حالت صفر $x=1$ با پایه صفر تلاقی پیدا کرده و حذف می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_037",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل ساده‌شده کسر $\\dfrac{x^2 - 5x + 6}{x^2 - 4}$ با فرض $x  eq \\pm 2$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{x-3}{x+2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{x-3}{x-2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{x+3}{x+2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{x-2}{x+3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "صورت و مخرج را تجزیه می‌کنیم. صورت یک چندجمله‌ای درجه دوم است که به شکل اتحاد جمله‌مشترک تجزیه می‌شود: $x^2 - 5x + 6 = (x-2)(x-3)$. مخرج اتحاد مزدوج است: $x^2 - 4 = (x-2)(x+2)$. با قرار دادن این دو در کسر: $\\dfrac{(x-2)(x-3)}{(x-2)(x+2)}$. عامل $(x-2)$ از صورت و مخرج حذف می‌شود و تنها $\\dfrac{x-3}{x+2}$ باقی می‌ماند. پس گزینه ۱ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "به سرعت ریشه‌ها را بررسی کنید. صورت در ۲ صفر می‌شود، مخرج هم در ۲. پس $(x-2)$ عامل مشترک است که خط می‌خورد. بخش دیگر صورت $x-3$ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_038",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل عبارت $\\dfrac{a^3 + 1}{a^2 - a + 1} - \\dfrac{a^2 - 1}{a - 1}$ با فرض $a  eq 1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-2a$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2a$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "کسر اول صورتش اتحاد مجموع مکعبات است: $a^3 + 1 = (a+1)(a^2 - a + 1)$. با ساده‌سازی با مخرج، این کسر به $a+1$ تبدیل می‌شود. کسر دوم صورتش اتحاد مزدوج است: $a^2 - 1 = (a-1)(a+1)$. با ساده‌سازی با مخرج، این کسر نیز به $a+1$ تبدیل می‌شود. تفاضل این دو: $(a+1) - (a+1) = 0$. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "اتحادها را سریع شناسایی کنید: چاق‌ولاغر برای اولی و مزدوج برای دومی. در هر دو حالت، بخش پیچیده مخرج خط می‌خورد و فقط پرانتز $(a+1)$ می‌ماند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_039",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "پس از ساده‌سازی عبارت $\\dfrac{1}{x-1} + \\dfrac{1}{x+1} - \\dfrac{2x}{x^2-1}$ کدام مقدار به دست می‌آید؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{x^2-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4x}{x^2-1}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو کسر اول را با مخرج مشترک‌گیری جمع می‌کنیم. مخرج مشترک $(x-1)(x+1) = x^2 - 1$ است. صورت‌ها: $\\dfrac{(x+1) + (x-1)}{x^2 - 1} = \\dfrac{2x}{x^2 - 1}$. اکنون این کسر را از کسر سوم کم می‌کنیم: $\\dfrac{2x}{x^2 - 1} - \\dfrac{2x}{x^2 - 1} = 0$. بنابراین حاصل کل عبارت صفر است. پاسخ صحیح گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه کسرها را قبل از تفریق آخر مخرج مشترک بگیرید. جمع دو کسر اول با مخرج‌های مزدوج دقیقاً همان کسر سوم را می‌سازد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_040",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ساده‌شده عبارت کسر در کسر $\\dfrac{1 - \\dfrac{2}{x} + \\dfrac{1}{x^2}}{1 - \\dfrac{1}{x^2}}$ با فرض غیرصفر بودن مخرج‌ها کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{x+1}{x-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{x-1}{x}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{x}{x-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{x-1}{x+1}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا صورت و مخرج کسر اصلی را در $x^2$ ضرب می‌کنیم تا از حالت کسری خارج شوند. صورت کسر اصلی می‌شود: $x^2(1 - \\dfrac{2}{x} + \\dfrac{1}{x^2}) = x^2 - 2x + 1 = (x-1)^2$. مخرج کسر اصلی می‌شود: $x^2(1 - \\dfrac{1}{x^2}) = x^2 - 1 = (x-1)(x+1)$. کسر جدید به شکل $\\dfrac{(x-1)^2}{(x-1)(x+1)}$ در می‌آید که پس از ساده کردن یک عامل $x-1$، به صورت $\\dfrac{x-1}{x+1}$ در می‌آید. پس گزینه ۴ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "بهترین راه برای این کسرها ضرب در مخرج مشترک همه زیرکسرهاست (اینجا $x^2$). این‌طوری بلافاصله اتحادها روی صورت و مخرج نمایان می‌شوند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_041",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x < 2$ باشد، حاصل عبارت $\\sqrt{x^2 - 4x + 4} + x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2 - 2x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2x - 2$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال اتحاد مربع دو جمله‌ای است: $x^2 - 4x + 4 = (x-2)^2$. پس رادیکال به صورت $\\sqrt{(x-2)^2} = |x-2|$ در می‌آید. چون طبق فرض $x < 2$ است، عبارت داخل قدرمطلق منفی است و هنگام خروج قرینه می‌شود: $|x-2| = -(x-2) = 2 - x$. حال عبارت اصلی را می‌نویسیم: $(2 - x) + x = 2$. بنابراین گزینه ۱ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "رادیکالِ مربع کامل همیشه مساوی با قدرمطلق است. چون $x$ کوچکتر از ۲ است، حاصل آن $2-x$ می‌شود. با جمع‌کردن با $x$ خود متغیر حذف می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_042",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $1 < x < 3$ باشد، حاصل عبارت $\\sqrt{(x-3)^2} + \\sqrt{(x-1)^2}$ چه خواهد بود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4 - 2x$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2x - 4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "هر کدام از رادیکال‌ها به قدرمطلق تبدیل می‌شوند: $|x-3| + |x-1|$. با استفاده از بازه داده شده ($1 < x < 3$) مقادیر را بررسی می‌کنیم. در این بازه، $x-3$ منفی است، پس $|x-3| = 3-x$. عبارت $x-1$ مثبت است، پس $|x-1| = x-1$. حاصل جمع این دو عبارت: $(3-x) + (x-1) = 2$. پاسخ گزینه ۲ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی متغیر بین دو مرز است، قدرمطلق مرز بالایی قرینه و قدرمطلق مرز پایینی خود متغیر می‌شود. مجموعشان همیشه فاصله‌ی بین این دو مرز (یعنی $3-1=2$) است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_043",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ساده‌شده عبارت $\\sqrt{a^2 b^4} - b^2 |a|$ با فرض $a  eq 0$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2|a| b^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2a b^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2a b^2$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رادیکال عبارت را ساده می‌کنیم. توان ۲ و ۴ زوج هستند و ریشه دوم دارند: $\\sqrt{a^2 b^4} = |a b^2|$. اما چون $b^2$ همواره نامنفی است (به‌جز صفر که بی‌اثر است)، می‌توانیم آن را بدون قدرمطلق بنویسیم: $b^2 |a|$. بنابراین عبارت اصلی به‌صورت $b^2 |a| - b^2 |a| = 0$ در می‌آید. پس بدون وابستگی به علامت $a$، حاصل همواره صفر است. گزینه ۳ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هر متغیری با توان زوج که از زیر ریشه دوم خارج شود، فقط متغیر اصلی به توان نصف با قدرمطلق باقی می‌ماند. این‌جا $b^2$ همیشه مثبت است، پس فقط روی $a$ قدرمطلق می‌گذاریم."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_044",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x < -2$ باشد، حاصل عبارت $|x + \\sqrt{x^2 + 4x + 4}|$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-2x - 2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2x + 2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال مربع کامل است: $\\sqrt{x^2 + 4x + 4} = \\sqrt{(x+2)^2} = |x+2|$. چون $x < -2$ است، عبارت داخل این قدرمطلق منفی است، پس خروجی آن $-x-2$ می‌شود. حالا آن را در عبارت اصلی جایگذاری می‌کنیم: $|x - x - 2| = |-2| = 2$. بنابراین گزینه ۴ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در $x < -2$، رادیکال برابر با $-(x+2)$ می‌شود. در جمع با $x$، متغیرها خط خورده و فقط $|-2|$ باقی می‌ماند که برابر ۲ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_045",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x^2 + y^2 = 13$ و $xy = 6$ باشد، مقدار مثبت عبارت $x - y$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از اتحاد مربع تفاضل استفاده می‌کنیم: $(x-y)^2 = x^2 - 2xy + y^2$. با چینش مجدد: $(x-y)^2 = (x^2 + y^2) - 2xy$. مقادیر داده شده را جایگذاری می‌کنیم: $(x-y)^2 = 13 - 2(6) = 13 - 12 = 1$. با گرفتن جذر: $x - y = \\pm 1$. چون مقدار مثبت خواسته شده است، پاسخ ۱ خواهد بود. بنابراین گزینه ۱ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "رابطه کلیدی $(x-y)^2 = (x^2+y^2) - 2xy$ است. جایگذاری سریع به عدد ۱ می‌رسد و ریشه مثبت آن همان ۱ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_046",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $(a+b)^2 = 36$ و $(a-b)^2 = 16$ باشد، حاصل $ab$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$52$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با استفاده از اتحادهای مربع مجموع و مربع تفاضل، فرمول کمکی مهمی داریم: $(a+b)^2 - (a-b)^2 = 4ab$. مقادیر را در این فرمول قرار می‌دهیم: $36 - 16 = 4ab \\implies 20 = 4ab \\implies ab = 5$. پس گزینه ۲ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "تفاضل دو مربع مجموع و تفاضل، همواره برابر ۴ برابر حاصل‌ضرب دو عدد است. پس $36 - 16 = 20$ که باید بر ۴ تقسیم شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_047",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x+y=4$ و $x^3+y^3=28$ باشد، مقدار $x^2+y^2$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$14$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا باید حاصل‌ضرب $xy$ را بیابیم. از اتحاد $x^3+y^3 = (x+y)(x^2 - xy + y^2)$ می‌توان استفاده کرد. می‌دانیم $x^2+y^2 = (x+y)^2 - 2xy = 16 - 2xy$. با جایگذاری در پرانتز دوم: $x^2 - xy + y^2 = 16 - 2xy - xy = 16 - 3xy$. بنابراین: $28 = 4(16 - 3xy) \\implies 7 = 16 - 3xy \\implies 3xy = 9 \\implies xy = 3$. حالا برای $x^2+y^2$: $x^2+y^2 = 16 - 2(3) = 10$. گزینه ۳ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "روش دیگر: مکعب‌ها $x^3+y^3 = (x+y)^3 - 3xy(x+y)$. پس $28 = 64 - 12xy$ که سریعاً می‌دهد $xy=3$. حالا $x^2+y^2 = 16 - 6 = 10$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_048",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $a+b+c = 6$ و $a^2+b^2+c^2 = 14$ باشد، حاصل $ab+ac+bc$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$22$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از اتحاد مربع سه جمله‌ای استفاده می‌کنیم: $(a+b+c)^2 = a^2+b^2+c^2 + 2(ab+ac+bc)$. مقادیر مسئله را در این اتحاد قرار می‌دهیم: $6^2 = 14 + 2(ab+ac+bc) \\implies 36 = 14 + 2(ab+ac+bc) \\implies 22 = 2(ab+ac+bc) \\implies ab+ac+bc = 11$. گزینه ۴ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "مربع مجموع (یعنی ۳۶) را منهای مجموع مربعات (یعنی ۱۴) کنید و بر ۲ تقسیم نمایید. $36 - 14 = 22 \\implies \\dfrac{22}{2} = 11$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_049",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل $\\sqrt{12} + \\sqrt{27} - \\sqrt{75}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا هر عدد زیر رادیکال را به شکل مضربی از مربع کامل تجزیه می‌کنیم: $\\sqrt{12} = \\sqrt{4 \\times 3} = 2\\sqrt{3}$. برای دومی: $\\sqrt{27} = \\sqrt{9 \\times 3} = 3\\sqrt{3}$. برای سومی: $\\sqrt{75} = \\sqrt{25 \\times 3} = 5\\sqrt{3}$. حال این عبارات را جایگزین می‌کنیم: $2\\sqrt{3} + 3\\sqrt{3} - 5\\sqrt{3} = (2+3-5)\\sqrt{3} = 0$. پس گزینه ۱ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همه مضرب ۳ هستند. فقط ضرایب بیرونی آن‌ها را حساب کنید: ۲ به‌علاوه ۳ می‌شود ۵، که با منفی ۵ خنثی می‌شود و صفر باقی می‌ماند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_050",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار دقیق عبارت $\\sqrt{7 + 4\\sqrt{3}}$ به صورت ساده‌تر کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3 + \\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2 + \\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{7} + \\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1 + 2\\sqrt{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "باید عبارت زیر رادیکال بزرگ را به شکل یک مربع کامل $(a+b)^2 = a^2+b^2+2ab$ درآوریم. در اینجا $2ab = 4\\sqrt{3} \\implies ab = 2\\sqrt{3}$. حدس می‌زنیم $a = 2$ و $b = \\sqrt{3}$. مجموع مربعات آن‌ها برابر است با $a^2+b^2 = 4+3 = 7$ که دقیقاً با عدد صحیح زیر رادیکال مطابقت دارد. پس عبارت زیر رادیکال برابر $(2+\\sqrt{3})^2$ است. در نتیجه رادیکال آن برابر $2+\\sqrt{3}$ خواهد بود. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "عدد ۴ پشت رادیکال داخلی را به ۲ تبدیل کنید، پس یک ۲ زیر رادیکال می‌رود و می‌شود $\\sqrt{12}$. حالا دو عدد پیدا کنید که جمعشان ۷ و ضربشان ۱۲ باشد: ۳ و ۴. پس جواب رادیکال ۳ بعلاوه رادیکال ۴ (یعنی ۲) است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_051",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل عبارت $\\dfrac{1}{\\sqrt{5}-\\sqrt{3}} - \\dfrac{1}{\\sqrt{3}-1}$ پس از ساده‌سازی کامل کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}-1}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}+1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}-1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}-\\sqrt{3}}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "هر کسر را به‌طور جداگانه گویا می‌کنیم. کسر اول: $\\dfrac{\\sqrt{5}+\\sqrt{3}}{5-3} = \\dfrac{\\sqrt{5}+\\sqrt{3}}{2}$. کسر دوم: $\\dfrac{\\sqrt{3}+1}{3-1} = \\dfrac{\\sqrt{3}+1}{2}$. حالا تفاضل دو کسر که مخرج مشترک ۲ دارند را حساب می‌کنیم: $\\dfrac{\\sqrt{5}+\\sqrt{3} - (\\sqrt{3}+1)}{2} = \\dfrac{\\sqrt{5} - 1}{2}$. بنابراین گزینه ۳ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "اختلاف اعداد زیر رادیکال مخرج در هر دو کسر برابر ۲ است، پس مخرج مشترک ۲ است. صورت کسر اول مزدوجش یعنی $\\sqrt{5}+\\sqrt{3}$ و دومی $\\sqrt{3}+1$ است. با تفریق آن‌ها $\\sqrt{3}$ها خط می‌خورد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_052",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار ساده‌شده کسر $\\dfrac{\\sqrt{10} - \\sqrt{15}}{\\sqrt{8} - \\sqrt{12}}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{5}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا از عوامل مشترک در صورت و مخرج زیر رادیکال فاکتور می‌گیریم. در صورت اعداد مضرب ۵ هستند: $\\sqrt{5}(\\sqrt{2} - \\sqrt{3})$. در مخرج اعداد مضرب ۴ هستند: $\\sqrt{4}(\\sqrt{2} - \\sqrt{3}) = 2(\\sqrt{2} - \\sqrt{3})$. با قرار دادن این عبارات در کسر داریم: $\\dfrac{\\sqrt{5}(\\sqrt{2} - \\sqrt{3})}{2(\\sqrt{2} - \\sqrt{3})}$. پرانتزها با هم ساده می‌شوند و در نهایت $\\dfrac{\\sqrt{5}}{2}$ باقی می‌ماند. گزینه ۴ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "به جای گویا کردن پیچیده، تناسب‌ها را ببینید. نسبت اعداد بالا به پایین ۵/۴ است که زیر رادیکال قرار دارد. پس جواب $\\sqrt{5/4}$ یعنی $\\dfrac{\\sqrt{5}}{2}$ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_053",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "جواب معادله $\\sqrt{2x+3} = x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$ و $3$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو طرف معادله را به توان دو می‌رسانیم: $2x+3 = x^2$. معادله درجه دوم را استاندارد می‌کنیم: $x^2 - 2x - 3 = 0$. با تجزیه به اتحاد جمله‌مشترک: $(x-3)(x+1) = 0$. پس ریشه‌ها $x=3$ و $x=-1$ به دست می‌آیند. اما باید جواب‌ها را در معادله اصلی چک کنیم. اگر $x=3$ باشد: $\\sqrt{6+3} = 3 \\implies 3=3$ که درست است. اگر $x=-1$ باشد: $\\sqrt{1} = -1 \\implies 1=-1$ که غلط است. پس فقط $x=3$ جواب صحیح است. گزینه ۱ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در معادلات رادیکالی فرجه زوج، طرفِ بدون رادیکال نمی‌تواند منفی باشد. چون سمت راست معادله $x$ است، جواب‌های منفی (مانند $-1$) بلافاصله رد می‌شوند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_054",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموع ریشه‌های معادله $\\sqrt{3x+1} - \\sqrt{x-4} = 3$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$13$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رادیکال کوچکتر را به سمت راست می‌بریم: $\\sqrt{3x+1} = 3 + \\sqrt{x-4}$. دو طرف را به توان دو می‌رسانیم: $3x+1 = 9 + x-4 + 6\\sqrt{x-4}$. با ساده‌سازی: $2x - 4 = 6\\sqrt{x-4}$. هر دو طرف را بر ۲ تقسیم می‌کنیم: $x - 2 = 3\\sqrt{x-4}$. مجدداً توان دو می‌رسانیم: $x^2 - 4x + 4 = 9(x - 4) \\implies x^2 - 4x + 4 = 9x - 36 \\implies x^2 - 13x + 40 = 0$. ریشه‌ها $x=5$ و $x=8$ هستند. با چک کردن هر دو در معادله اصلی، هر دو صدق می‌کنند. پس مجموع ریشه‌ها $5 + 8 = 13$ است. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "ریشه‌های معادله نهایی $x^2 - 13x + 40 = 0$ هستند. طبق رابطه ویت، مجموع ریشه‌ها برابر $-b/a$ یعنی ۱۳ است. چون هر دو جواب در دامنه صدق می‌کنند، مجموعشان همان ۱۳ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_055",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله $\\sqrt{x} + \\sqrt{x-5} = 1$ دارای چند جواب حقیقی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "دو"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بی‌نهایت"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "یک"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای تعیین دامنه معادله، هر دو عبارت زیر رادیکال باید غیرمنفی باشند: $x \\ge 0$ و $x-5 \\ge 0 \\implies x \\ge 5$. پس دامنه تابع $x \\ge 5$ است. در این بازه، کمترین مقدار برای $x$ عدد ۵ است. اگر $x=5$ باشد، حاصل سمت چپ $\\sqrt{5} + 0 \\approx 2.23$ است که از ۱ بیشتر است. چون تابع در این دامنه صعودی اکید است، هیچ‌گاه برابر ۱ نخواهد شد. پس معادله فاقد جواب است. گزینه ۳ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "با بررسی ساده دامنه $x \\ge 5$ متوجه می‌شویم که اولین رادیکال یعنی $\\sqrt{x}$ حداقل $\\sqrt{5}$ (حدود ۲.۲) است که از ۱ بزرگتر است. پس جمع دو رادیکال هرگز ۱ نمی‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_056",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\sqrt{x+2\\sqrt{x-1}} + \\sqrt{x-2\\sqrt{x-1}} = 2$ باشد، مقدار $x$ در کدام بازه قرار دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$[-1, 1]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(2, +\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(0, 1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[1, 2]$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال‌ها را می‌توان به صورت مربع کامل نوشت: $x \\pm 2\\sqrt{x-1} = (\\sqrt{x-1} \\pm 1)^2$. پس معادله به شکل $\\sqrt{(\\sqrt{x-1} + 1)^2} + \\sqrt{(\\sqrt{x-1} - 1)^2} = 2$ در می‌آید که برابر است با $|\\sqrt{x-1} + 1| + |\\sqrt{x-1} - 1| = 2$. چون $\\sqrt{x-1} + 1 > 0$ است، قدرمطلق اول خودش بیرون می‌آید. پس $\\sqrt{x-1} + 1 + |\\sqrt{x-1} - 1| = 2$. با انتقال ۱ به سمت راست: $|\\sqrt{x-1} - 1| = 1 - \\sqrt{x-1}$. می‌دانیم $|A| = -A$ تنها زمانی رخ می‌دهد که $A \\le 0$ باشد. پس $\\sqrt{x-1} - 1 \\le 0 \\implies \\sqrt{x-1} \\le 1 \\implies x-1 \\le 1 \\implies x \\le 2$. همچنین دامنه رادیکال $x \\ge 1$ است. پس بازه جواب‌ها $[1, 2]$ خواهد بود. گزینه ۴ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "این یک اتحاد معروف رادیکالی است که به $|A+1| + |A-1|$ تبدیل می‌شود. پاسخ آن برابر با ۲ خواهد بود اگر متغیر بین دو ریشه یعنی بین $-1$ و $1$ باشد. پس $0 \\le \\sqrt{x-1} \\le 1$ که بازه ۱ تا ۲ را می‌دهد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_057",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل ضرب $\\sqrt{2\\sqrt[3]{2\\sqrt{2}}}$ در $\\sqrt[4]{2}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا رادیکال اول را به یک توان کسری ساده می‌کنیم. داخلی‌ترین ۲ دارای توان $\\dfrac{1}{2}$ است. سپس در ۲ ضرب می‌شود: $2 \\times 2^{1/2} = 2^{3/2}$. از آن ریشه سوم می‌گیریم: $(2^{3/2})^{1/3} = 2^{1/2}$. دوباره در ۲ ضرب می‌شود: $2 \\times 2^{1/2} = 2^{3/2}$. در نهایت از آن ریشه دوم می‌گیریم: $(2^{3/2})^{1/2} = 2^{3/4}$. حالا این مقدار را در $\\sqrt[4]{2} = 2^{1/4}$ ضرب می‌کنیم: $2^{3/4} \\times 2^{1/4} = 2^1 = 2$. بنابراین گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "توان‌های ۲ در رادیکال تو در تو را جمع کنید: اولی $1/2$، دومی $1/(2\\times3) = 1/6$، سومی $1/(2\\times3\\times2) = 1/12$. جمعشان $3/4$ است. با توان $1/4$ دومی جمع شود می‌شود ۱."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_058",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x = \\sqrt[3]{2+\\sqrt{5}} + \\sqrt[3]{2-\\sqrt{5}}$ باشد، مقدار $x^3 + 3x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت را به توان ۳ می‌رسانیم: $x^3 = (A+B)^3 = A^3 + B^3 + 3AB(A+B)$. جایگذاری مقادیر: $A^3 = 2+\\sqrt{5}$ و $B^3 = 2-\\sqrt{5}$. پس $A^3+B^3 = 4$. حاصل‌ضرب $AB = \\sqrt[3]{(2+\\sqrt{5})(2-\\sqrt{5})} = \\sqrt[3]{4-5} = \\sqrt[3]{-1} = -1$. مجموع $A+B$ نیز همان $x$ است. بنابراین معادله به شکل $x^3 = 4 + 3(-1)(x) \\implies x^3 = 4 - 3x$ در می‌آید. با انتقال ۳x به سمت چپ: $x^3 + 3x = 4$. گزینه ۲ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در این فرم کلاسیک از معادلات، همواره $x^3 + 3pq x = 2p$ به‌دست می‌آید که در آن $A^3=p+q\\sqrt{r}$ است. اینجا $p=2$ است، پس جواب $2(2)=4$ خواهد بود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_059",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام رابطه برای اعداد $A = \\sqrt{2}$، $B = \\sqrt[3]{3}$ و $C = \\sqrt[6]{6}$ صحیح است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$C > A > B$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A > B > C$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$B > A > C$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$B > C > A$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای مقایسه، باید فرجه رادیکال‌ها را یکسان کنیم. کوچکترین مضرب مشترک فرجه‌ها (۲، ۳، ۶) برابر ۶ است. پس همه را به فرجه ۶ می‌بریم: $A = \\sqrt{2} = \\sqrt[6]{2^3} = \\sqrt[6]{8}$. دومین عدد $B = \\sqrt[3]{3} = \\sqrt[6]{3^2} = \\sqrt[6]{9}$. سومین عدد $C = \\sqrt[6]{6}$. با مقایسه اعداد زیر رادیکال‌ها مشخص می‌شود که $9 > 8 > 6$. در نتیجه $\\sqrt[6]{9} > \\sqrt[6]{8} > \\sqrt[6]{6}$ که یعنی $B > A > C$. پس پاسخ گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "کافی است همه اعداد را به توان ۶ برسانید تا از شر رادیکال‌ها خلاص شوید. $A^6 = 8$، $B^6 = 9$، $C^6 = 6$. چون $9 > 8 > 6$ است، مقایسه به‌سرعت نتیجه می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_rational_powers_algebraic_expressions_060",
+    "subject": "math",
+    "topic_key": "radicals_algebraic_expressions",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل عبارت رادیکالی نامتناهی $\\sqrt{6 + \\sqrt{6 + \\sqrt{6 +،}}}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض می‌کنیم حاصل این عبارت نامتناهی برابر $x$ باشد. یعنی $x = \\sqrt{6 + \\sqrt{6 +،}}$. از آن‌جا که عبارت زیر رادیکال تا بی‌نهایت تکرار می‌شود، بخش داخلی نیز برابر $x$ است. پس معادله به شکل $x = \\sqrt{6 + x}$ در می‌آید. با به توان دو رساندن طرفین: $x^2 = 6 + x \\implies x^2 - x - 6 = 0$. با تجزیه این معادله درجه دوم: $(x-3)(x+2) = 0$. ریشه‌ها $x=3$ و $x=-2$ هستند. چون حاصل یک رادیکال با فرجه زوج باید غیرمنفی باشد، $x=-2$ غیرقابل قبول است و جواب ۳ خواهد بود. پس گزینه ۴ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در رادیکال‌های نامتناهی با فرم $\\sqrt{a + \\sqrt{a +،}}$، اگر $a$ حاصل ضرب دو عدد متوالی باشد ($6 = 2 \\times 3$)، جواب همواره عدد بزرگتر (یعنی ۳) است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  }
+]

@@ -1,15 +1,20 @@
 package com.gauss.app.ui.components
 
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -19,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gauss.app.ui.theme.GaussColors
 import com.gauss.app.ui.theme.soft
+import com.gauss.app.data.ContentBlock
 
 private val LABELS = listOf("", "۱", "۲", "۳", "۴")
 
@@ -30,29 +36,35 @@ private val LABELS = listOf("", "۱", "۲", "۳", "۴")
 fun OptionButton(
     index: Int, // 1..4
     text: String,
+    blocks: List<ContentBlock>? = null,
     selected: Boolean,
     modifier: Modifier = Modifier,
     reveal: Boolean = false,
     correct: Boolean = false,
     onClick: (() -> Unit)? = null,
 ) {
-    var borderColor: Color = GaussColors.Border
-    var bg: Color = GaussColors.Card
+    val scheme = MaterialTheme.colorScheme
+    var targetBorder: Color = scheme.outline
+    var targetBg: Color = scheme.surface
 
     if (reveal) {
         if (correct) {
-            borderColor = GaussColors.NeonGreen; bg = GaussColors.NeonGreen.soft(0.08f)
+            targetBorder = GaussColors.Success; targetBg = GaussColors.Success.soft(0.10f)
         } else if (selected) {
-            borderColor = GaussColors.NeonRed; bg = GaussColors.NeonRed.soft(0.08f)
+            targetBorder = scheme.error; targetBg = scheme.error.soft(0.10f)
         }
     } else if (selected) {
-        borderColor = GaussColors.NeonBlue; bg = GaussColors.NeonBlue.soft(0.08f)
+        targetBorder = scheme.primary; targetBg = scheme.primaryContainer
     }
+    val borderColor by animateColorAsState(targetBorder, label = "optionBorder")
+    val bg by animateColorAsState(targetBg, label = "optionBackground")
 
     val filled = selected || (reveal && correct)
 
     Row(
         modifier
+            .fillMaxWidth()
+            .defaultMinSize(minHeight = 56.dp)
             .padding(bottom = 12.dp)
             .clip(RoundedCornerShape(12.dp))
             .background(bg)
@@ -72,13 +84,13 @@ fun OptionButton(
         ) {
             Text(
                 LABELS[index],
-                color = if (filled) GaussColors.Bg else GaussColors.Muted,
+                color = if (filled) GaussColors.BackgroundDark else scheme.onSurfaceVariant,
                 fontWeight = FontWeight.Bold,
                 fontSize = 14.sp,
             )
         }
         Box(Modifier.weight(1f)) {
-            MathText(text, fontSize = 16.sp)
+            if (blocks != null) RichContent(blocks, fontSize = 16.sp) else MathText(text, fontSize = 16.sp)
         }
     }
 }

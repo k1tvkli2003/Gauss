@@ -1,0 +1,36 @@
+{
+  "task_id": "math-solutions-05-trigonometry-927-928",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 927,
+      "solution_page": 87,
+      "solution_text": "با فرض $\\sin x - \\cos x \\neq 0$ معادله را ساده می‌کنیم.\n\n$\\sin x = \\frac{1}{\\sin x - \\cos x} \\Rightarrow \\sin^{2} x - \\sin x \\cos x = 1$\n\n$\\Rightarrow 1 - \\sin^{2} x + \\sin x \\cos x = 0$\n\n$\\Rightarrow \\cos^{2} x + \\sin x \\cos x = 0 \\Rightarrow \\cos x(\\cos x + \\sin x) = 0$\n\n$\\Rightarrow \\begin{cases} \\cos x = 0 \\Rightarrow x = \\frac{\\pi}{2} , \\frac{3\\pi}{2} \\\\ \\cos x = -\\sin x \\Rightarrow x = \\frac{3\\pi}{4} , \\frac{7\\pi}{4} \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 928,
+      "solution_page": 87,
+      "solution_text": "با فرض $\\sin 2x \\neq 0$ و $\\cos 2x \\neq 0$ معادله را ساده می‌کنیم.\n\n$\\frac{\\sin x}{\\cos 2x} = \\frac{\\cos x}{\\sin 2x} \\Rightarrow \\frac{\\sin x}{\\cos 2x} = \\frac{\\cos x}{2 \\sin x \\cos x}$\n\n$\\Rightarrow 2 \\sin^{2} x = \\cos 2x \\Rightarrow 1 - \\cos 2x = \\cos 2x$\n\n$\\Rightarrow \\cos 2x = \\frac{1}{2} \\Rightarrow 2x = 2k\\pi \\pm \\frac{\\pi}{3} \\Rightarrow x = k\\pi \\pm \\frac{\\pi}{6}$\n\nرئوس یک مستطیل (غیر مربع) می‌باشند.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0087.jpg",
+          "box": [
+            45,
+            2100,
+            245,
+            2300
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": [
+        "The media region box roughly targets the unit circle diagram."
+      ]
+    }
+  ],
+  "review_notes": []
+}

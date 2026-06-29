@@ -1,0 +1,1638 @@
+{
+  "task_id": "math-solutions-06",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1081,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "پس از ساده‌کردن از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x \\to \\infty} \\dfrac{3(2x^3+x^2+1)+(x-1)(x^2-2)}{(2x-1)(3x^2+1)} \\\\ = \\lim_{x \\to \\infty} \\dfrac{(6x^3+\\dots)+(x^3+\\dots)}{6x^3+\\dots} \\\\ = \\lim_{x \\to \\infty} \\dfrac{7x^3}{6x^3} = \\dfrac{7}{6}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1081,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "روش دوم: ابتدا $fof(x)$ را تشکیل می‌دهیم:\n$fof(x)=f(f(x))=k[f(x)]-f(x)=k[k[x]-x]-(k[x]-x)$\n$=k(k[x]+[-x])-k[x]+x=(k^2-k)[x]+k[-x]+x$\nنکته: تابع $y=m[x]+n[-x]$ به شرطی در نقاط صحیح حد دارد که $m=n$ باشد، نتیجه می‌گیریم:\n$k^2-k=k \\Rightarrow k^2-2k=0 \\Rightarrow \\begin{cases} k=0 \\ \\checkmark \\\\ k=2 \\end{cases}$\nبه ازای $k=2$ تابع حد دارد ولی پیوسته نمی‌باشد.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1082,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "پس از ساده‌کردن از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x \\to -\\infty} \\dfrac{(x-1)^3+(2x-1)^2}{x(x+1)^2-x+1} \\\\ = \\lim_{x \\to -\\infty} \\dfrac{(x^3-3x^2+\\dots)+(4x^2-4x+\\dots)}{x(x^2+2x+1)-x+1} \\\\ = \\lim_{x \\to -\\infty} \\dfrac{x^3+\\dots}{x^3+\\dots} = \\lim_{x \\to -\\infty} \\dfrac{x^3}{x^3} = 1$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1082,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "تابع $y=\\frac{x-1}{\\sqrt{f(x)}}$ در $\\mathbb{R}$ پیوسته و $f(x)$ نیز با توجه به نمودار $f(x)$ در $[1, 2)$ پیوسته است.\nدر $x=1$ علی‌رغم آن‌که $f(x)$ پیوستگی راست ندارد، اما چون $x-1$ برابر صفر می‌شود، حد راست و مقدار تابع $y=\\frac{x-1}{\\sqrt{f(x)}}$ برابر صفر بوده و تابع پیوستگی راست دارد.\nدر گزینه ۱ تابع $f(x)$ در $(2, 3)$ منفی بوده و عبارت $\\sqrt{f(x)}$ تعریف نشده است.\nدر گزینه ۳ تابع $f(x)$ در $x=4$ پیوستگی چپ ندارد، بنابراین $y=\\frac{x-1}{\\sqrt{f(x)}}$ نیز در این نقطه پیوستگی چپ ندارد.\nدر گزینه ۴ تابع $f(x)$ در $x=5$ برابر صفر بوده و $y=\\frac{x-1}{\\sqrt{f(x)}}$ تعریف نشده است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1083,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "ابتدا کسر داده‌شده را ساده می‌کنیم:\n$\\lim_{x \\to \\infty} \\dfrac{3x^{n+1}+x^n(x^2-x+1)+1}{x^{2n-1}+x^3-1} \\\\ = \\lim_{x \\to \\infty} \\dfrac{3x^{n+1}+x^{n+2}-x^{n+1}+x^n+1}{x^{2n-1}+x^3-1} \\\\ = \\lim_{x \\to \\infty} \\dfrac{x^{n+2}+2x^{n+1}+x^n+1}{x^{2n-1}+x^3-1}$\nبرای $n$ سه حالت وجود دارد:\n۱) $n > 2 \\Rightarrow \\lim_{x \\to \\infty} \\dfrac{x^{n+2}}{x^{2n-1}} = \\lim_{x \\to \\infty} \\dfrac{1}{x^{n-3}}$\nاگر $n=3$ باشد، حد برابر ۱ می‌شود و اگر $n>3$ باشد حد برابر صفر می‌شود که در هیچ حالتی جواب $\\infty$ نمی‌شود.\n۲) $n=2 \\Rightarrow \\lim_{x \\to \\infty} \\dfrac{x^4}{x^3} = \\lim_{x \\to \\infty} x = \\infty$\n۳) $n < 2 \\Rightarrow \\begin{cases} n=1 \\Rightarrow \\lim_{x \\to \\infty} \\dfrac{x^3}{x^3} = 1 \\\\ n=0 \\Rightarrow \\lim_{x \\to \\infty} \\dfrac{x^2}{x^3} = 0 \\end{cases}$\nبنابراین فقط به ازای $n=2$ حد داده‌شده برابر $\\infty$ است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1083,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "با توجه به نمودار $y=x^2-6x$، در بازهٔ $(1, 4)$ این تابع در چهار نقطهٔ مشخص‌شده مقداری صحیح خواهد داشت.\nبنابراین $[x^2-6x]=f(x)$ در این نقاط به‌جز $x=3$ که نقطهٔ مینیمم نسبی عبارت داخل براکت است ناپیوسته است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            386,
+            517,
+            638,
+            775
+          ],
+          "placement": "solution",
+          "filename": "page_0102.jpg",
+          "alt": "نمودار سهمی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1084,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "پاسخ حد $\\infty$ شده است و درجه عبارت مخرج برابر ۴ است. پس درجه صورت باید بیشتر از درجه مخرج باشد، یعنی ۵.\n$\\Rightarrow m = 5$\n$\\lim_{x \\to -\\infty} \\dfrac{ax^5+3x^4+x+1}{(1-x^2)^2} = \\lim_{x \\to -\\infty} \\dfrac{ax^5}{x^4} \\\\ = \\lim_{x \\to -\\infty} ax = -\\infty$\nبا توجه به این‌که $x \\to -\\infty$ پس $x$ منفی است و در نتیجه $a$ باید عددی مثبت باشد تا حاصل حد $-\\infty$ شود.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1084,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "روش اول: اگر $0 < \\frac{2}{x-1}$ باشد، $[\\frac{2}{x-1}]=0$ و تابع $f(x)$ پیوسته است.\n$0 < \\frac{2}{x-1} < 1 \\Rightarrow \\begin{cases} \\frac{2}{x-1} > 0 \\Rightarrow x > 1 \\\\ \\frac{2}{x-1} < 1 \\xrightarrow{x > 1} x-1 > 2 \\Rightarrow x > 3 \\end{cases} \\xrightarrow{\\cap} x > 3 \\Rightarrow x \\in (3, +\\infty)$\nاگر $\\frac{2}{x-1} < 0$ باشد، $[\\frac{2}{x-1}]=-1$ و تابع $f(x)$ پیوسته است.\n$-1 \\le \\frac{2}{x-1} < 0 \\Rightarrow \\begin{cases} \\frac{2}{x-1} < 0 \\Rightarrow x < 1 \\\\ \\frac{2}{x-1} \\ge -1 \\xrightarrow{x < 1} -(x-1) \\ge 2 \\Rightarrow x-1 \\le -2 \\Rightarrow x \\le -1 \\end{cases} \\xrightarrow{\\cap} x \\le -1 \\Rightarrow x \\in (-\\infty, -1]$\nبنابراین حداکثر مقدار $a$ برابر ۱- و حداقل مقدار $b$ برابر ۳ است.\n$-1+3=2$\nروش دوم: تابع $y=\\frac{2}{x-1}$ در بازهٔ $(1, +\\infty)$ اکیداً نزولی است.\n$b < x < +\\infty \\Rightarrow 0 < \\frac{2}{x-1} < \\frac{2}{b-1}$\nحداکثر $\\frac{2}{b-1}$ برابر یک است.\n$\\Rightarrow \\frac{2}{b-1} = 1 \\Rightarrow b=3$\nبه‌طور مشابه $a$ نیز محاسبه می‌گردد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1085,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "پاسخ حد عددی غیرصفر شده است، پس باید درجه صورت و مخرج کسر با هم برابر باشد.\n$\\Rightarrow 3m = m+2 \\Rightarrow 2m = 2 \\Rightarrow m=1$\nبا جای‌گذاری مقدار $m$ در عبارت خواهیم داشت:\n$\\lim_{x \\to -\\infty} \\dfrac{(n+1)x^3+x-1}{(n-1)x^3+2} = \\lim_{x \\to -\\infty} \\dfrac{(n+1)x^3}{(n-1)x^3} \\\\ = \\dfrac{n+1}{n-1} = 2 \\Rightarrow 2n-2 = n+1 \\Rightarrow n=3$\nبنابراین مقدار $m+n$ برابر $1+3=4$ است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1085,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "حاصل تقسیم عددی مخالف صفر بر صفر حدی، برابر $\\infty$ است.\n$\\lim_{x \\to 3^+} f(x) = \\lim_{x \\to 3^+} \\frac{x-4}{(x-2)(x-5)} = \\frac{-1}{(0^+)(-2)} = \\frac{-1}{0^-} = +\\infty$\n$\\lim_{x \\to 5^-} f(x) = \\lim_{x \\to 5^-} \\frac{x-4}{(x-2)(x-5)} = \\frac{1}{3 \\times (0^-)} = \\frac{1}{0^-} = -\\infty$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1086,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "پاسخ حد صفر شده است، پس باید درجه مخرج کسر از درجه صورت کسر بیشتر باشد. یعنی:\n$3 > n-1 \\Rightarrow n < 4 \\Rightarrow n \\in \\{1, 2, 3\\}$\nدقت کنید که $n$ باید عددی طبیعی باشد تا عبارت چندجمله‌ای باشد. پس $n$ می‌تواند سه مقدار داشته باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1086,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "ابتدا $f(x)$ را ساده می‌کنیم:\n$f(x)=\\frac{(x+1)(x-2)}{(x+1)^2(x-2)^3}=\\frac{1}{(x+1)(x-2)^2}$\nخواهیم داشت:\n$\\lim_{x \\to 2^-} f(x) = \\frac{1}{3 \\times (0^+)} = \\frac{1}{0^+} = +\\infty$\n$\\lim_{x \\to (-1)^+} f(x) = \\frac{1}{(0^+)(9)} = \\frac{1}{0^+} = +\\infty$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1087,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2+x+1}}{2x-1} = \\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2}}{2x} \\\\ = \\lim_{x \\to -\\infty} \\dfrac{2|x|}{2x} = \\lim_{x \\to -\\infty} \\dfrac{-2x}{2x} = -1$\nدقت کنید که چون $x \\to -\\infty$ پس $x$ منفی است و در نتیجه $|x|=-x$ می‌شود.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1087,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "در $x=a$ حد عبارت برابر $\\infty-$ شده است، بنابراین $a$ یکی از ریشه‌های مخرج کسر است. حد چپ تابع را در $x=0$ ، $x=2$ و $x=-2$ محاسبه می‌کنیم:\n$\\lim_{x \\to 0^-} \\frac{x-3}{x^2(x^2-4)} = \\frac{-3}{(0^+)(-4)} = \\frac{-3}{0^-} = +\\infty$\n$\\lim_{x \\to 2^-} \\frac{x-3}{x^2(x^2-4)} = \\frac{-1}{4(0^-)} = \\frac{-1}{0^-} = +\\infty$\n$\\lim_{x \\to (-2)^-} \\frac{x-3}{x^2(x^2-4)} = \\frac{-5}{4(0^+)} = \\frac{-5}{0^+} = -\\infty$\nدر نتیجه $a=-2$ است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1088,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x \\to -\\infty} x(\\sqrt{x^2+1}-x) = \\lim_{x \\to -\\infty} x(|x|-x) \\\\ = \\lim_{x \\to -\\infty} x(-x-x) = \\lim_{x \\to -\\infty} (-2x^2) = -\\infty$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1088,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "اگر $x > 0$ باشد، آن‌گاه $|x|=x$ و در نتیجه $x-|x|=0$ است. بنابراین $f(x)$ در همسایگی راست صفر تعریف نشده و حد ندارد.\nدر نتیجه گزینه‌های ۱ و ۲ نادرست هستند.\nاگر $x < 0$ باشد، آن‌گاه $|x|=-x$:\n$\\lim_{x \\to 0^-} f(x) = \\lim_{x \\to 0^-} \\frac{x^2-2}{2x} = \\frac{-2}{0^-} = +\\infty$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1089,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x \\to \\infty} \\dfrac{x-\\sqrt{4x^2+x}}{x+\\sqrt{x^2-x}} = \\lim_{x \\to \\infty} \\dfrac{x-|2x|}{x+|x|} \\\\ = \\lim_{x \\to \\infty} \\dfrac{x-2x}{x+x} = \\lim_{x \\to \\infty} \\dfrac{-x}{2x} = -\\dfrac{1}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1089,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "ابتدا مقدار براکت را به دست می‌آوریم:\n$\\lim_{x \\to 2^+} \\frac{[1-x]}{2\\sqrt{x+7}-3x} = \\lim_{x \\to 2^+} \\frac{-2}{2\\sqrt{x+7}-3x} \\times \\frac{2\\sqrt{x+7}+3x}{2\\sqrt{x+7}+3x}$\n$= \\lim_{x \\to 2^+} \\frac{-24}{-9x^2+4x+28} = \\lim_{x \\to 2^+} \\frac{-24}{(x-2)(-9x-14)}$\n$= \\frac{-24}{(0^+)(-32)} = \\frac{-24}{0^-} = +\\infty$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1090,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "می‌دانیم اگر $x \\notin \\mathbb{Z}$ ، آن‌گاه $[x]+[-x]=-1$ است.\n$\\lim_{x \\to (-3)^+} \\frac{[x]+[-x]}{x+3} = \\frac{-1}{0^+} = -\\infty$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1091,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "روش اول: وقتی $x \\to 3^-$ ، آن‌گاه $x-3 \\to 0^-$ و در نتیجه $[x-3]=-1$ است.\n$\\lim_{x \\to 3^-} \\frac{x+1}{x^2-3x} - \\frac{[x-3]}{x-3} = \\lim_{x \\to 3^-} \\frac{(x+1)+x}{x(x-3)} = \\lim_{x \\to 3^-} \\frac{2x+1}{x(x-3)}$\n$= \\frac{7}{3(0^-)} = \\frac{7}{0^-} = -\\infty$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1091,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "روش دوم:\n$\\lim_{x \\to 3^-} \\frac{x+1}{x^2 - 3x} = \\lim_{x \\to 3^-} \\frac{x+1}{x(x-3)} = \\frac{4}{3(0^-)} = \\frac{4}{0^-} = -\\infty$\n$\\lim_{x \\to 3^-} \\frac{-1}{3-x} = \\frac{-1}{0^+} = -\\infty$\nحد هر یک از کسرها برابر $-\\infty$ است. بنابراین حد مجموع آن‌ها نیز $-\\infty$ است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "Continuation of solution 1091 from previous page."
+      ]
+    },
+    {
+      "question_number": 1092,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "وقتی $x \\to \\pi^-$، یعنی انتهای کمان $x$ در ناحیهٔ دوم و مقدار $\\sin x$ مثبت است.\n$\\lim_{x \\to \\pi^-} \\frac{\\cos x - 1}{\\sin x} = \\frac{-1 - 1}{0^+} = \\frac{-2}{0^+} = -\\infty$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1093,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "روش اول: ابتدا کسر را ساده کرده و رفع ابهام می‌کنیم:\n$\\lim_{x \\to 0^-} \\frac{\\sin x}{\\cos x - 1} \\times \\frac{\\cos x + 1}{\\cos x + 1} = \\lim_{x \\to 0^-} \\frac{(\\sin x)(2)}{\\cos^2 x - 1}$\n$= \\lim_{x \\to 0^-} \\frac{2\\sin x}{-\\sin^2 x} = \\lim_{x \\to 0^-} \\frac{2}{-\\sin x} = \\frac{2}{0^-} = +\\infty$\n\nروش دوم:\n$\\lim_{x \\to 0^-} \\frac{\\sin x}{\\cos x - 1} = \\lim_{x \\to 0^-} \\frac{2\\sin\\frac{x}{2}\\cos\\frac{x}{2}}{-2\\sin^2\\frac{x}{2}} = \\lim_{x \\to 0^-} \\frac{\\cos\\frac{x}{2}}{-\\sin\\frac{x}{2}}$\n$= \\frac{1}{0^+} = +\\infty$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1094,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "هر یک از گزینه‌ها را بررسی می‌کنیم:\n1: $\\lim_{x \\to (\\frac{7\\pi}{6})^+} \\frac{\\cos x}{1 + 2\\sin x} = \\frac{-\\frac{\\sqrt{3}}{2}}{1 + 2(-\\frac{1}{2})^-} = \\frac{-\\frac{\\sqrt{3}}{2}}{1 + (-1)^-} = \\frac{-\\frac{\\sqrt{3}}{2}}{0^-} = +\\infty$\n\n2: $\\lim_{x \\to (-\\frac{\\pi}{6})^+} \\frac{\\cos x}{1 + 2\\sin x} = \\frac{\\frac{\\sqrt{3}}{2}}{0^+} = +\\infty$\n\n3: $\\lim_{x \\to (-\\frac{\\pi}{6})^-} \\frac{\\cos x}{1 + 2\\sin x} = \\frac{\\frac{\\sqrt{3}}{2}}{0^-} = -\\infty$\n\n4: $\\lim_{x \\to (\\frac{7\\pi}{6})^-} \\frac{\\cos x}{1 + 2\\sin x} = \\frac{-\\frac{\\sqrt{3}}{2}}{0^+} = -\\infty$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1095,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = 2$ محاسبه می‌کنیم:\n$\\lim_{x \\to 2^+} \\frac{x+1}{x^2 - 5x + 6} = \\lim_{x \\to 2^+} \\frac{x+1}{(x-2)(x-3)} = \\frac{3}{0^+(-1)} = \\frac{3}{0^-} = -\\infty$\n$\\lim_{x \\to 2^-} \\frac{x+1}{(x-2)(x-3)} = \\frac{3}{0^-(-1)} = \\frac{3}{0^+} = +\\infty$\nبنابراین ۴ درست است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1096,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "با توجه به $+\\infty = \\lim_{x \\to a} \\frac{x}{f(x)}$ مشخص می‌شود که $a$ ریشهٔ مضاعف مخرج کسر است. با توجه به نمودار، $a=1$ یا $a=-1$ می‌باشد.\n$\\lim_{x \\to 1} \\frac{x}{f(x)} = \\frac{1}{0^-} = -\\infty$\n$\\lim_{x \\to -1} \\frac{x}{f(x)} = \\frac{-1}{0^-} = +\\infty$\nبنابراین $a = -1$ قابل قبول است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1097,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "با توجه به این‌که $+\\infty = \\lim_{x \\to \\alpha} \\frac{(-1)^{[x]}}{f(x)}$ است، نتیجه می‌شود که $\\alpha$ یکی از صفرهای $f(x)$ است.\n$\\alpha$ نمی‌تواند ۲ یا ۴ باشد، زیرا در این نقاط $f(x)$ تغییر علامت نمی‌دهد اما $(-1)^{[x]}$ تغییر علامت داشته و حاصل حد نمی‌تواند $+\\infty$ باشد.\nبنابراین: $\\alpha = 1$ یا $\\alpha = 3$\n$\\alpha = 1 \\Rightarrow \\lim_{x \\to 1} \\frac{(-1)^{[x]}}{f(x)} \\begin{cases} \\xrightarrow{1^+} \\frac{(-1)^{[1^+]}}{f(1^+)} = \\frac{(-1)^1}{0^-} = \\frac{-1}{0^-} = +\\infty \\\\ \\xrightarrow{1^-} \\frac{(-1)^{[1^-]}}{f(1^-)} = \\frac{(-1)^0}{0^+} = \\frac{1}{0^+} = +\\infty \\end{cases}$\n$\\Rightarrow \\alpha = 1$ جواب است.\n$\\alpha = 3 \\Rightarrow \\lim_{x \\to 3} \\frac{(-1)^{[x]}}{f(x)} \\begin{cases} \\xrightarrow{3^+} \\frac{(-1)^{[3^+]}}{f(3^+)} = \\frac{(-1)^3}{0^+} = \\frac{-1}{0^+} = -\\infty \\\\ \\xrightarrow{3^-} \\frac{(-1)^{[3^-]}}{f(3^-)} = \\frac{(-1)^2}{0^-} = \\frac{1}{0^-} = -\\infty \\end{cases} \\Rightarrow \\text{غ ق ق}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1098,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "دامنهٔ تعریف تابع $y = \\log(\\frac{x+1}{x-2})$ را به دست می‌آوریم:\n$\\frac{x+1}{x-2} > 0 \\Rightarrow \\begin{cases} x < -1 \\\\ x > 2 \\end{cases}$\nبا توجه به دامنه واضح است تابع در همسایگی راست $-1$ تعریف نشده است.\n$\\lim_{x \\to (-1)^-} \\log \\frac{x+1}{x-2} = \\log \\frac{0^-}{-3} = \\log 0^+ = -\\infty$\nبنابراین نمودار تابع در همسایگی $x = -1$ به صورت مقابل است:",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            500,
+            200,
+            600
+          ],
+          "placement": "solution_1",
+          "filename": "page_0103.jpg",
+          "alt": "نمودار مجانب قائم در مجاورت منفی یک"
+        }
+      ],
+      "review_notes": [
+        "Estimated coordinates for the small diagram of the vertical asymptote."
+      ]
+    },
+    {
+      "question_number": 1099,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "با توجه به نمودار، حد راست تابع $f(x)$ در نقطهٔ مورد نظر $-\\infty$ و حد چپ $+\\infty$ است. گزینه‌ها را بررسی می‌کنیم:\n$f(x) = \\frac{\\cos x}{\\sin x - 2\\sin x \\cos x} = \\frac{\\cos x}{\\sin x (1 - 2\\cos x)}$\n1: $\\lim_{x \\to 0} f(x) \\begin{cases} \\xrightarrow{0^+} \\frac{1}{0^+(-1)} = \\frac{1}{0^-} = -\\infty \\\\ \\xrightarrow{0^-} \\frac{1}{0^-(-1)} = \\frac{1}{0^+} = +\\infty \\end{cases}$\n2: $\\lim_{x \\to \\pi} f(x) \\begin{cases} \\xrightarrow{\\pi^+} \\frac{-1}{0^-(3)} = \\frac{-1}{0^-} = +\\infty \\\\ \\xrightarrow{\\pi^-} \\frac{-1}{0^+(3)} = \\frac{-1}{0^+} = -\\infty \\end{cases}$\n3: $\\lim_{x \\to \\frac{\\pi}{3}} f(x) \\begin{cases} \\xrightarrow{\\frac{\\pi}{3}^+} \\frac{\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}(0^+)} = +\\infty \\\\ \\xrightarrow{\\frac{\\pi}{3}^-} \\frac{\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}(0^-)} = -\\infty \\end{cases}$\n4: $\\lim_{x \\to \\frac{5\\pi}{3}} f(x) \\begin{cases} \\xrightarrow{\\frac{5\\pi}{3}^+} \\frac{\\frac{1}{2}}{-\\frac{\\sqrt{3}}{2}(0^-)} = +\\infty \\\\ \\xrightarrow{\\frac{5\\pi}{3}^-} \\frac{\\frac{1}{2}}{-\\frac{\\sqrt{3}}{2}(0^+)} = -\\infty \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1100,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "با توجه به این‌که حد عبارت در هر دو حالت $x \\to (-1)^+$ و $x \\to (-1)^-$ برابر با $-\\infty$ است، نتیجه می‌شود $x = -1$ ریشهٔ مضاعف مخرج کسر است:\n$3x^2 + ax + b = 3(x + 1)^2 = 3x^2 + 6x + 3 \\Rightarrow \\begin{cases} a = 6 \\\\ b = 3 \\end{cases}$\n$\\Rightarrow a - b = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1101,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "با توجه به این‌که حد عبارت در هر دو حالت $x \\to 2^+$ و $x \\to 2^-$ برابر $+\\infty$ است، نتیجه می‌شود $x = 2$ ریشهٔ مضاعف مخرج کسر است.\n$-x^2 + ax + b = -(x - 2)^2 = -x^2 + 4x - 4 \\Rightarrow \\begin{cases} a = 4 \\\\ b = -4 \\end{cases}$\n$\\Rightarrow a - b = 8$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1102,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "$x = 1$ ریشهٔ مضاعف مخرج کسر است. بنابراین مخرج کسر بر $(x - 1)^2$ بخش‌پذیر است.\n$ax^3 - ax^2 - x + 1 = ax^2(x - 1) - (x - 1) = (x - 1)(ax^2 - 1)$\n$ax^2 - 1$ باید بر $x - 1$ بخش‌پذیر باشد، یعنی به ازای $x = 1$ برابر صفر است:\n$a - 1 = 0 \\Rightarrow a = 1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1103,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "با توجه به نمودار واضح است $x = -2$ ریشهٔ مضاعف مخرج کسر است:\n$ax^2 + 6x + b = a(x + 2)^2 = a(x^2 + 4x + 4) = ax^2 + 4ax + 4a$\n$\\Rightarrow \\begin{cases} 4a = 6 \\Rightarrow a = \\frac{3}{2} \\\\ b = 4a \\Rightarrow b = 6 \\end{cases} \\Rightarrow ab = \\frac{3}{2} \\times 6 = 9$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1104,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "$b$ ریشهٔ مضاعف مخرج کسر است:\n$ax^2 + 4x + \\frac{a}{4} = a(x - b)^2 = ax^2 - 2abx + ab^2$\n$\\Rightarrow \\begin{cases} \\frac{a}{4} = ab^2 \\xrightarrow{a \\neq 0} b^2 = \\frac{1}{4} \\Rightarrow b = \\pm \\frac{1}{2} \\\\ -2ab = 4 \\Rightarrow ab = -2 \\end{cases}$\nخواهیم داشت:\n$b = \\frac{1}{2} \\Rightarrow a = -4 \\quad \\checkmark$\n$b = -\\frac{1}{2} \\Rightarrow a = 4 \\quad \\text{غ‌ق‌ق}$\nچون جواب حد $-\\infty$ و صورت کسر مثبت است مخرج کسر باید به صورت $0^-$ باشد، یعنی $a < 0$ است.\n$\\Rightarrow a + b = -\\frac{7}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1105,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد راست و چپ عبارت کسری را در $x = -1$ بررسی می‌کنیم:\n$\\lim_{x \\to (-1)^+} \\frac{x + [-x]}{f(x)} = -\\infty \\Rightarrow \\lim_{x \\to (-1)^+} \\frac{x}{f(x)} = -\\infty$\n$\\Rightarrow \\frac{-1}{f((-1)^+)} = -\\infty \\Rightarrow f((-1)^+) = 0^+$\n$\\lim_{x \\to (-1)^-} \\frac{x + [-x]}{f(x)} = -\\infty \\Rightarrow \\lim_{x \\to (-1)^-} \\frac{x + 1}{f(x)} = -\\infty$\n$\\Rightarrow f(x) = a(x + 1)^2$\nبا توجه به دو حالت بالا $a > 0$ و گزینه ۳ قابل قبول است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1106,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد راست و چپ عبارت را در $x = 4$ می‌نویسیم:\nحالت (۱): (حد راست در نقطهٔ ۴)\n$\\lim_{x \\to 4^+} \\frac{2a(-1)^{[x]} + 3}{x - 4} = \\lim_{x \\to 4^+} \\frac{2a(-1)^4 + 3}{x - 4} = \\frac{2a + 3}{0^+} = +\\infty$\n$\\Rightarrow 2a + 3 > 0 \\Rightarrow a > -\\frac{3}{2}$\nحالت (۲): (حد چپ در نقطهٔ ۴)\n$\\lim_{x \\to 4^-} \\frac{2a(-1)^{[x]} + 3}{x - 4} = \\lim_{x \\to 4^-} \\frac{2a(-1)^3 + 3}{x - 4} = \\frac{-2a + 3}{0^-} = +\\infty$\n$\\Rightarrow -2a + 3 < 0 \\Rightarrow a > \\frac{3}{2}$\n$(1) \\cap (2) \\Rightarrow a > \\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1107,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = 2$ محاسبه می‌کنیم:\nحالت (۱): (حد راست در نقطهٔ ۲)\n$\\lim_{x \\to 2^+} \\frac{x + a(-1)^{[x]}}{x^2 - 4} = \\frac{2 + a(-1)^{[2^+]}}{0^+} = \\frac{a + 2}{0^+} = +\\infty$\n$\\Rightarrow a + 2 > 0 \\Rightarrow a > -2$\nحالت (۲): (حد چپ در نقطهٔ ۲)\n$\\lim_{x \\to 2^-} \\frac{x + a(-1)^{[x]}}{x^2 - 4} = \\frac{2 + a(-1)^{[2^-]}}{0^-} = \\frac{-a + 2}{0^-} = +\\infty$\n$\\Rightarrow -a + 2 < 0 \\Rightarrow a > 2$\n$(1) \\cap (2) \\Rightarrow a > 2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1108,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد راست و چپ $f(x)$ را در $x = 4$ بررسی می‌کنیم:\n$\\lim_{x \\to 4^+} f(x) = \\lim_{x \\to 4^+} \\frac{4x - 5[4^+]}{x^2 - 16} = \\lim_{x \\to 4^+} \\frac{4x - 20}{x^2 - 16} = \\frac{-4}{0^+} = -\\infty$\n$\\lim_{x \\to 4^-} f(x) = \\lim_{x \\to 4^-} \\frac{4x - 5[4^-]}{x^2 - 16} = \\lim_{x \\to 4^-} \\frac{4x - 15}{x^2 - 16} = \\frac{1}{0^-} = -\\infty$\nنمودار ۴ قابل قبول است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1109,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد چپ و راست تابع را در نقطهٔ $x = 0$ ($k < 0$) بررسی می‌کنیم:\n$\\lim_{x \\to k^-} \\frac{x}{f(x)} = \\frac{k}{f(k^-)} = \\frac{k}{0^+} = -\\infty$\n$\\lim_{x \\to k^+} \\frac{x}{f(x)} = \\frac{k}{f(k^+)} = \\frac{k}{0^-} = +\\infty$\nنمودار ۱ درست است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1110,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "با توجه به نمودار، حد تابع در $x = 1$ بی‌نهایت است. بنابراین $x = 1$ ریشهٔ مخرج کسر است.\n$x = 1 : 2x^2 + 2x + b = 0 \\Rightarrow 4 + b = 0 \\Rightarrow b = -4$\n$\\Rightarrow y = \\frac{x + a}{2x^2 + 2x - 4} = \\frac{x + a}{2(x + 2)(x - 1)}$\n$x = -2$ نیز ریشهٔ مخرج کسر بوده و تابع در این نقطه تعریف نشده است، اما با توجه به نمودار در این نقطه حد دارد. نتیجه می‌شود $x = -2$ ریشهٔ صورت کسر نیز می‌باشد.\n$x = -2 : x + a = 0 \\Rightarrow -2 + a = 0 \\Rightarrow a = 2$\n$\\Rightarrow a - b = 6$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1111,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = \\pi$ بررسی می‌کنیم:\n$\\lim_{x \\to \\pi^+} f(x) = \\lim_{x \\to \\pi^+} 3^{\\cot x} = 3^{+\\infty} = +\\infty$\n$\\lim_{x \\to \\pi^-} f(x) = \\lim_{x \\to \\pi^-} 3^{\\cot x} = 3^{-\\infty} = \\frac{1}{3^{+\\infty}} = 0$\nحد راست تابع در نقطهٔ $x = \\pi$، $+\\infty$ و حد چپ آن صفر است.\nگزینه ۴ قابل قبول است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1112,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "ابتدا نمودار توابع $y=x^2$ و $y=2^x$ را رسم می‌کنیم. این دو تابع یکدیگر را در نقاط $x=2$ و $x=4$ قطع می‌کنند.\nحال هر یک از گزینه‌ها را بررسی می‌کنیم:\n1 : $\\lim_{x\\to 2^-} \\dfrac{1}{x^2-2^x} = \\dfrac{1}{0^-} = -\\infty \\quad \\times$\nبنابراین 2 نیز نادرست است.\n3 : $\\lim_{x\\to 4^+} \\dfrac{1}{x^2-2^x} = \\dfrac{1}{0^-} = -\\infty \\quad \\checkmark$\nبنابراین 4 نادرست است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            471,
+            74,
+            582,
+            233
+          ],
+          "placement": "solution_text",
+          "filename": "page_0105.jpg",
+          "alt": "نمودار توابع $y=x^2$ و $y=2^x$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1113,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x=2$ بررسی می‌کنیم:\n$\\lim_{x\\to 2^+} \\dfrac{x[x]-2}{x^2-3x+2} = \\lim_{x\\to 2^+} \\dfrac{2(x-1)}{(x-1)(x-2)} = \\dfrac{2}{0^+} = +\\infty$\n$\\lim_{x\\to 2^-} \\dfrac{x-2}{(x-1)(x-2)} = 1$\nبنابراین 1 درست است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1114,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "برای این‌که $fof(x^2)$ به سمت $\\infty$ میل کند، باید $f(x^2)$ به سمت $3$ میل کند:\n$f(x^2)=3 \\Rightarrow \\dfrac{2x^2-8}{x^2-3} = 3 \\Rightarrow x^2=1 \\Rightarrow x=\\pm 1$\nحال حد راست تابع $fof(x^2)$ را در دو نقطه $x=1$ و $x=-1$ بررسی می‌کنیم:\n$f(x) = \\dfrac{2x-8}{x-3} = \\dfrac{2x-6-2}{x-3} = 2-\\dfrac{2}{x-3}$\nبا توجه به ضابطه $f(x)$ اگر $x\\to 1^+$، آن‌گاه $f(x) \\to 3^+$ و اگر $x\\to -1^+$، آن‌گاه $f(x) \\to 3^-$. خواهیم داشت:\n$\\lim_{x\\to 1^+} fof(x^2) = f(f(1^+)) = f(3^+) = \\dfrac{-2}{0^+} = -\\infty \\quad \\checkmark$\n$\\lim_{x\\to (-1)^+} fof(x^2) = f(f(1^-)) = f(3^-) = \\dfrac{-2}{0^-} = +\\infty \\quad \\times$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1115,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x\\to \\infty} \\dfrac{(2x+1)(3x^2-1)}{(x+1)^2(4x+1)} = \\lim_{x\\to \\infty} \\dfrac{(2x)(3x^2)}{(x^2)(4x)} = \\lim_{x\\to \\infty} \\dfrac{6x^3}{4x^3} = \\dfrac{3}{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1116,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "پس از ساده‌کردن از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x\\to \\infty} \\dfrac{((x+1)-(x-2))((x+1)^2+(x+1)(x-2)+(x-2)^2)}{(x-3)^2} \\\\ = \\lim_{x\\to \\infty} \\dfrac{3(x^2+x^2+x^2)}{x^2} = \\lim_{x\\to \\infty} \\dfrac{9x^2}{x^2} = 9$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1117,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "مخرج کسر عبارتی درجه ۱ است و حاصل حد عبارت کسری برابر ۲ می‌باشد. بنابراین درجه عبارت صورت کسر نیز باید ۱ باشد. در نتیجه $a=0$ است.\n$\\lim_{x\\to \\infty} \\dfrac{bx+3}{3x-4} = \\lim_{x\\to \\infty} \\dfrac{bx}{3x} = \\dfrac{b}{3} = 2 \\Rightarrow b=6 \\Rightarrow a+b = 6$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1118,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "درجه عبارت مخرج کسر ۲ است و چون حد عبارت کسری در $\\infty$ برابر ۲ شده است، باید درجه صورت کسر نیز ۲ باشد. بنابراین:\n$a+1 = 0 \\Rightarrow a=-1$\n$\\lim_{x\\to \\infty} \\dfrac{bx^2-4}{3x^2+2x} = 2 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{bx^2}{3x^2} = 2 \\Rightarrow \\dfrac{b}{3} = 2 \\Rightarrow b=6$\n$\\Rightarrow a-b = -7$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1119,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "ابتدا کسر داده‌شده را ساده می‌کنیم:\n$\\dfrac{3x^n+2x(x^2-2x+1)+1}{x^{2n-1}+3x^3-1} = \\dfrac{3x^n+2x^3-4x^2+2x+1}{x^{2n-1}+3x^3-1}$\nبرای $n$ سه حالت وجود دارد:\n۱) $n>3 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{3x^n}{x^{2n-1}} = \\lim_{x\\to \\infty} \\dfrac{3}{x^{n-1}} = \\dfrac{3}{\\infty} = 0$\n۲) $n=3 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{5x^3}{x^5} = \\lim_{x\\to \\infty} \\dfrac{5}{x^2} = 0$\n۳) $n<3 \\Rightarrow \\begin{cases} n=1 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{2x^3}{3x^3} = \\dfrac{2}{3} \\\\ n=2 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{2x^3}{4x^3} = \\dfrac{1}{2} \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1120,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "حد عبارت به صورت $\\infty-\\infty$ است. برای رفع ابهام مخرج مشترک گرفته و ساده می‌کنیم:\n$\\lim_{x\\to \\infty} \\dfrac{3x^2+2x}{x-1} - \\dfrac{6x^2+x-1}{2x-1} \\\\ = \\lim_{x\\to \\infty} \\dfrac{(3x^2+2x)(2x-1)-(6x^2+x-1)(x-1)}{(x-1)(2x-1)} \\\\ = \\lim_{x\\to \\infty} \\dfrac{(6x^3+x^2+\\dots)-(6x^3-5x^2+\\dots)}{2x^2} = \\lim_{x\\to \\infty} \\dfrac{6x^2}{2x^2} = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1121,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "با مخرج مشترک گرفتن عبارت را به شکل یک کسر می‌نویسیم:\n$\\lim_{x\\to \\infty} \\dfrac{2x^2}{x+1} - ax = \\lim_{x\\to \\infty} \\dfrac{2x^2-ax(x+1)}{x+1} \\\\ = \\lim_{x\\to \\infty} \\dfrac{(2-a)x^2-ax}{x+1} = b$\nچون جواب حد برابر عددی حقیقی است، درجه صورت نمی‌تواند بیشتر از درجه مخرج باشد. بنابراین $a=2$ است.\n$\\Rightarrow b = \\lim_{x\\to \\infty} \\dfrac{-2x}{x+1} = \\lim_{x\\to \\infty} \\dfrac{-2x}{x} = -2 \\Rightarrow ab = -4$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1122,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "ابتدا مخرج مشترک می‌گیریم:\n$\\lim_{x\\to \\infty} \\dfrac{x^3-1}{x^2+2} - ax = \\lim_{x\\to \\infty} \\dfrac{x^3-1-ax(x^2+2)}{x^2+2} \\\\ = \\lim_{x\\to \\infty} \\dfrac{(1-a)x^3-2ax-1}{x^2+2} = b$\nجواب حد عددی حقیقی است، در نتیجه درجه صورت نمی‌تواند بیشتر از درجه مخرج باشد، یعنی $a=1$ است.\n$\\Rightarrow b = \\lim_{x\\to \\infty} \\dfrac{-2x-1}{x^2+2} = \\lim_{x\\to \\infty} \\dfrac{-2x}{x^2} = 0 \\Rightarrow a-b = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1123,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x\\to -\\infty} \\dfrac{2x+\\sqrt{9x^2-x}}{3x-\\sqrt{4x^2+x}} = \\lim_{x\\to -\\infty} \\dfrac{2x+\\sqrt{9x^2}}{3x-\\sqrt{4x^2}} \\\\ = \\lim_{x\\to -\\infty} \\dfrac{2x+3|x|}{3x-2|x|} = \\lim_{x\\to -\\infty} \\dfrac{2x-3x}{3x+2x} = \\lim_{x\\to -\\infty} \\dfrac{-x}{5x} = -\\dfrac{1}{5}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1124,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x\\to -\\infty} \\dfrac{3x-\\sqrt{x^2+x}}{2x+3\\sqrt{-x}} = \\lim_{x\\to -\\infty} \\dfrac{3x-\\sqrt{x^2}}{2x} \\\\ = \\lim_{x\\to -\\infty} \\dfrac{3x-|x|}{2x} = \\lim_{x\\to -\\infty} \\dfrac{3x+x}{2x} = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1125,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "ابتدا نمودار تابع $y = f(x)$ را رسم می‌کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1126,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "طبق فرض، طول نقطۀ اکسترمم نسبی $x_0$ است، پس $f'(x_0) = 0$ است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1127,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "برای اینکه خطی بر نمودار مماس باشد، باید معادلهٔ تلاقی آنها ریشهٔ مضاعف داشته باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1128,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "طول نقاط تماس، ریشه‌های معادله $f(x)=0$ هستند.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1129,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "با توجه به ضابطۀ تابع، می‌توان نوشت:",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1130,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "مشتق تابع را محاسبه کرده و در $x=-1$ مقدار آن را می‌یابیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1131,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "تابع $f$ در $x=1$ مماس افقی دارد، پس $f'(1) = 0$.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1132,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "معادلۀ خطوط مماس را تشکیل می‌دهیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1133,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "ابتدا نقطۀ مماس را با استفاده از تقاطع دو منحنی پیدا می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1134,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "مشتق تابع را مساوی صفر قرار می‌دهیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1135,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "با توجه به معادلۀ خط و تابع داده شده عمل می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1136,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "شیب خط مماس برابر مقدار مشتق در نقطۀ تماس است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1137,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "مقدار تابع و مشتق آن را در نقطۀ $x=2$ حساب می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0106.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1138,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "نقاط تلاقی نمودار با محور طول‌ها را می‌یابیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1139,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "تابع در $x=2$ مشتق‌پذیر است، پس پیوسته نیز می‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1140,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "برای به دست آوردن کمترین فاصله، از مشتق کمک می‌گیریم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1141,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "طول پارۀ خط مماس را حساب می‌کنیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1142,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "خط مماس بر منحنی در نقطه‌ای به طول $a$، دارای شیب $f'(a)$ است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1143,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "نقاط تلاقی منحنی‌ها را پیدا می‌کنیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1144,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "طبق تعریف مشتق، حد داده شده برابر $f'(-1)$ است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1145,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "از قاعدۀ هوپیتال برای محاسبۀ حد استفاده می‌کنیم.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1146,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "تابع را ساده کرده و سپس مشتق می‌گیرییم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1147,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "حاصل حد، برابر با تعریف مشتق تابع در نقطۀ مورد نظر است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1148,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "مشتق تابع مرکب را محاسبه می‌کنیم.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0107.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1149,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "با استفاده از تعریف مشتق تابع مرکب داریم:",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1150,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "تابع در نقطۀ $x=1$ مماس افقی دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1151,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "مشتق راست و چپ تابع را در $x=2$ بررسی می‌کنیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1152,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "نقاطی که مماس افقی دارند، مشتق در آنها صفر است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1153,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "شیب خط مماس بر منحنی را در نقطۀ برخورد پیدا می‌کنیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1154,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "از رابطۀ مشتق تابع معکوس استفاده می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1155,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "برای تابع معکوس، نقطۀ متناظر را یافته و مشتق می‌گیریم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1156,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "باتوجه به فرض، در نقطۀ تماس، مقدار دو تابع و مشتق‌هایشان برابر است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1157,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "تابع $f$ را تشکیل داده و از آن مشتق می‌گیریم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1158,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "از تعریف مشتق استفاده کرده و حد را به صورت مشتق بیان می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1159,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "با تغییر متغیر مناسب، حد را محاسبه می‌کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1160,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "با استفاده از اتحادها کسر را ساده کرده و مشتق می‌گیریم.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1161,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "مقدار حد برابر با $f'(a)$ است.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1162,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "مشتق تابع داده شده را با استفاده از قواعد مشتق‌گیری به دست می‌آوریم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1163,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "رابطۀ داده شده را به فرم تعریف مشتق تبدیل می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1164,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "مشتق صورت و مخرج را محاسبه کرده و حد می‌گیریم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1165,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "نقطۀ تقاطع را پیدا کرده و شیب خطوط مماس را در آن نقطه بررسی می‌کنیم.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1166,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "معادلۀ خط قائم بر منحنی را می‌نویسیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1167,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "از رابطۀ داده شده مشتق گرفته و مقدار $f'(1)$ را می‌یابیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1168,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "مشتق‌پذیری تابع را در نقطۀ $x=0$ بررسی می‌کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0109.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1169,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "چون مخرج کسر در حد $x \\to 2$ برابر صفر است، صورت کسر نیز باید صفر شود تا جواب حد، عددی حقیقی باشد؛ یعنی $f(2)=2$. بنابراین: $\\lim_{x \\to 2} \\frac{f(x)-2}{x^2-4} = 3$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1170,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "حد داده‌شده را ساده می‌کنیم: $\\lim_{h \\to 0} \\frac{f(a) - f(a+h)}{h} = -f'(a)$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1171,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "با توجه به حد داده‌شده واضح است $f(3)=3$ می‌باشد. بنابراین: $\\dots$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1172,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "برای رفع ابهام، صورت و مخرج کسر را در مزدوج صورت ضرب می‌کنیم.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1173,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "از حد $2 = \\lim_{x \\to 6} \\frac{f(x)}{x-6}$ درمی‌یابیم $f(6)=0$. با فرض $t=4h$ خواهیم داشت: $\\dots$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1174,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "حد داده‌شده را ساده کرده، رفع ابهام می‌کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1175,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "مقدار $f(4)$ را برابر ۲ قرار می‌دهیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1176,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "می‌دانیم: $f'(a) = \\lim_{x \\to a} \\frac{f(x)-f(a)}{x-a}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1177,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "با توجه به تعریف مشتق داریم: $f'(1) = \\lim_{x \\to 1} \\frac{f(x)-f(1)}{x-1}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1178,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "با توجه به نمودار $f$ واضح است: $f(-2)=3$ و $\\lim_{x \\to -2} f(x) = 2$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1179,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "معادلۀ خط $d$ را به دست می‌آوریم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1180,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "اگر تابع $f$ در $x=a$ مشتق‌پذیر باشد، مشتق چپ و راست $f$ در $x=a$ موجود بوده و با هم برابرند.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1181,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "تابع $g(x) = [y]$ به شرطی در $x=a$ مشتق‌پذیر است که در آن نقطه پیوسته باشد.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1182,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "مشتق راست و چپ تابع را در $x=3$ محاسبه می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0110.jpg",
+          "region": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "placement": "stem",
+          "alt": "متن راه‌حل"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

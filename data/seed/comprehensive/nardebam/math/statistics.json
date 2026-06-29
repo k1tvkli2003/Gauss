@@ -1,0 +1,7085 @@
+[
+  {
+    "id": "nardebam_math_1405_1999",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نوع آلایندگی موجود در هوا و میزان آلایندگی موجود به ترتیب چه نوع متغیری هستند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "کیفی ترتیبی - کمّی پیوسته"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کیفی ترتیبی - کمّی گسسته"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کیفی اسمی - کمّی پیوسته"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کیفی اسمی - کمّی گسسته"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "پاسخ در کلید سوالات آمده است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1999,
+      "question_pdf": "18.pdf",
+      "question_page": 4,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2000",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "گروه خونی افراد و میزان گلبول قرمز موجود در خون به ترتیب چه نوع متغیری هستند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "کیفی ترتیبی - کمّی پیوسته"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کیفی ترتیبی - کمّی گسسته"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کیفی اسمی - کمّی پیوسته"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کیفی اسمی - کمّی گسسته"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "پاسخ در کلید سوالات آمده است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2000,
+      "question_pdf": "18.pdf",
+      "question_page": 4,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2001",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازۀ قد دانش‌آموزان مدرسه و رشتهٔ تحصیلی آن‌ها به ترتیب چه نوع متغیری هستند؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2001/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۱",
+        "aspect_ratio": 16.2
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "کمّی پیوسته ـ کیفی ترتیبی"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2001/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 3.9268
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کمّی پیوسته ـ کیفی اسمی"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2001/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 3.7073
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کمّی گسسته ـ کیفی ترتیبی"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2001/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 3.8118
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "کمّی گسسته ـ کیفی اسمی"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2001/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 3.7059
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "پاسخ در کلید سوالات آمده است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2001,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            204,
+            329,
+            953,
+            351
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            647,
+            362,
+            810,
+            383
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            463,
+            362,
+            616,
+            383
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            263,
+            362,
+            427,
+            384
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            78,
+            362,
+            237,
+            384
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2002",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از بین داده‌های $۷,۶,۳,۵,۴,۶,۴$ کدام عدد را حذف کنیم تا میانگین داده‌ها بدون تغییر باقی بماند؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2002/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۲",
+        "aspect_ratio": 11.9205
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2002/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 0.9024
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2002/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 0.878
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2002/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 0.878
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2002/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 0.878
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا میانگین داده‌ها را حساب می‌کنیم:\n$\\overline{x} = \\frac{7+6+3+5+4+6+4}{7} = \\frac{35}{7} = 5$\nبا حذف ۱ داده، میانگین ۶ دادهٔ باقی‌مانده باید برابر ۵ باشد، یعنی جمع اعداد باقی‌مانده برابر $30 = 6 \\times 5$ است. جمع ۷ عدد اولیه ۳۵ می‌باشد، بنابراین عدد ۵ حذف شده است. در واقع اگر با حذف ۱ عدد میانگین تغییر نکند، آن عدد برابر میانگین است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2002,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            260,
+            429,
+            827,
+            452
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            779,
+            459,
+            804,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            591,
+            459,
+            615,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            401,
+            459,
+            425,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            212,
+            459,
+            236,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2003",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین اعداد مثبت $a,۶,۲,۸,۱$ یک واحد از میانهٔ این اعداد بزرگ‌تر است. جمع مقادیر $a$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2003/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۳",
+        "aspect_ratio": 13.1098
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱۸$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2003/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.0241
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۰$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2003/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.0361
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۱$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2003/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.012
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۳$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2003/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.0602
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میانگین اعداد برابر است با:\n$\\overline{x} = \\frac{a+17}{5}$\nبا توجه به اعداد $a, 1, 2, 6, 8$ سه حالت دارد:\nالف) $a < 2 \\Rightarrow \\text{میانه} = 2 \\Rightarrow \\overline{x} = 3$\n$\\Rightarrow \\frac{a+17}{5} = 3 \\Rightarrow a = -2 \\text{ ق.ق.غ}$\nب) $2 \\le a \\le 6 \\Rightarrow \\text{میانه} = a \\Rightarrow \\overline{x} = a+1$\n$\\Rightarrow \\frac{a+17}{5} = a+1 \\Rightarrow a=3 \\checkmark$\nپ) $a > 6 \\Rightarrow \\text{میانه} = 6 \\Rightarrow \\overline{x} = 7$\n$\\Rightarrow \\frac{a+17}{5} = 7 \\Rightarrow a=18 \\checkmark$\n$3+18=21 = \\text{مجموع مقادیر } a$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2003,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            247,
+            492,
+            828,
+            513
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            773,
+            521,
+            804,
+            542
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            583,
+            521,
+            615,
+            542
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            394,
+            521,
+            425,
+            542
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            204,
+            521,
+            237,
+            542
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2004",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین $n$ داده ۱۲ و میانگین ۱۲ داده $n$ است. اگر میانگین تمام داده‌ها $۹/۶$ باشد، عدد طبیعی $n$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2004/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۴",
+        "aspect_ratio": 13.3882
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2004/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 0.8706
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2004/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 0.8471
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۹$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2004/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 0.8471
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۰$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2004/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.0118
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر میانگین $n$ داده $\\overline{x}$ و میانگین $m$ داده $\\overline{y}$ باشد، میانگین کل از رابطه زیر محاسبه می‌شود:\n$\\text{میانگین کل} = \\frac{n\\overline{x} + m\\overline{y}}{m+n}$\nبنابراین:\n$\\text{میانگین کل} = \\frac{(n\\times 12)+(12\\times n)}{n+12} = 9/6$\n$\\Rightarrow 24n = 9/6n + 12 \\times 9/6 \\Rightarrow 14/4n = 12 \\times 9/6$\n$\\Rightarrow 144n = 12 \\times 96 \\Rightarrow 12n = 96 \\Rightarrow n=8$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2004,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            212,
+            552,
+            828,
+            574
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۴"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            779,
+            581,
+            804,
+            603
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            591,
+            581,
+            615,
+            603
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            401,
+            581,
+            425,
+            603
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            204,
+            581,
+            236,
+            603
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2005",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کلاس $A$ با میانگین نمرات ۱۰ و کلاس $B$ با میانگین نمرات ۱۲ پس از ادغام با هم، در یک کلاس با میانگین $۱۱/۵$ قرار گرفته‌اند. جمعیت کلاس $B$ چند برابر جمعیت کلاس $A$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2005/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۵",
+        "aspect_ratio": 10.9695
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2005/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 0.8706
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2005/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 0.8471
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2005/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 0.8471
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2005/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 0.8471
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض کنیم جمعیت کلاس $\\text{A}$ برابر $n$ و جمعیت کلاس $\\text{B}$ برابر $kn$ باشد:\n$\\text{میانگین کل داده‌ها} = \\overline{x} = \\frac{n\\times 10+kn\\times 12}{n+kn} = \\frac{23}{2}$\n$\\Rightarrow \\frac{10+12k}{k+1} = \\frac{23}{2} \\Rightarrow 20+24k=23k+23 \\Rightarrow k=3$\nجمعیت کلاس $\\text{B}$ سه برابر جمعیت کلاس $\\text{A}$ است.\nنکته: اگر $n$ داده با میانگین $\\overline{x}$ و $m$ داده با میانگین $\\overline{y}$ با هم ادغام شوند، میانگین کل داده‌ها برابر است با:\n$\\frac{n\\overline{x} + m\\overline{y}}{m+n}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2005,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            46,
+            614,
+            828,
+            654
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۵"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            779,
+            661,
+            804,
+            683
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            591,
+            661,
+            615,
+            683
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            401,
+            661,
+            425,
+            683
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            212,
+            661,
+            236,
+            683
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2006",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین ۱۰ دادهٔ آماری را ۱۲ اعلام کرده‌ایم. بعداً متوجه شده‌ایم در یکی از داده‌ها به جای عدد ۱۶ عدد ۲۶ وارد شده و البته عدد ۱۱ نیز جا مانده بود. میانگین واقعی اعداد کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2006/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۶",
+        "aspect_ratio": 10.812
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱۱/۲۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2006/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.4878
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۱/۲$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2006/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.2927
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۰/۹$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2006/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.2683
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۱$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2006/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.0488
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میانگین $10$ دادۀ اولیه برابر $12$ بوده است. بنابراین جمع داده‌ها برابر $120 = 10 \\times 12$ است. با تغییر عدد $26$ به $16$، از مجموع داده‌ها $10$ واحد کاسته شده و با افزودن دادۀ $11$ به مجموع داده‌ها $1$ واحد افزوده شده و تعداد داده‌ها نیز به $11$ افزایش می‌یابد.\n$\\overline{x}_{\\text{جدید}} = \\frac{120 + 1}{11} = \\frac{121}{11} = 11$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2006/solution_6.webp",
+        "alt": "Solution for 2006",
+        "aspect_ratio": 2.6426
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2006,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            45,
+            694,
+            828,
+            735
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۶"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            753,
+            742,
+            805,
+            763
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            573,
+            742,
+            616,
+            763
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            383,
+            742,
+            425,
+            763
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            204,
+            742,
+            236,
+            763
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0187.jpg",
+          "box": [
+            461,
+            471,
+            831,
+            563
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "Solution for 2006"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2007",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین داده‌های $x_1,x_2,\\dots,x_n$ برابر $\\overline{x}$ است. اگر میانگین $۳x_1+\\overline{x},۳x_2+\\overline{x},\\dots,۳x_n+\\overline{x}$ برابر ۴۰ باشد، $\\overline{x}$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2007/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۷",
+        "aspect_ratio": 15.2299
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱۲$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2007/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.0241
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2007/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 0.8675
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۰$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2007/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.012
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲/۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2007/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.3855
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تمامی داده‌های $x_1, x_2, \\dots, x_n$ در $3$ ضرب و حاصل آن‌ها با عدد ثابت $\\overline{x}$ جمع شده است. بنابراین میانگین این اعداد نیز سه برابر شده و با $\\overline{x}$ جمع می‌شود:\n$\\text{میانگین جدید} = 3\\overline{x}+\\overline{x} = 4\\overline{x} = 40 \\Rightarrow \\overline{x} = 10$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2007,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            108,
+            773,
+            828,
+            796
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۷"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            773,
+            803,
+            804,
+            824
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            591,
+            803,
+            615,
+            824
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            394,
+            803,
+            425,
+            824
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            189,
+            803,
+            237,
+            824
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2008",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه میانگین $۲x_1-۱,۲x_2-۲,۲x_3-۳,\\dots,۲x_{10}-۱۰$ برابر $۱/۵$ باشد، میانگین اعداد $۳x_1+۱,۳x_2+۲,\\dots,۳x_{10}+۱۰$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2008/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۸",
+        "aspect_ratio": 16.9176
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2008/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 0.8706
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶/۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2008/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.0353
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۷$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2008/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 0.8471
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۷/۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2008/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.1882
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میانگین داده‌های اولیه را می‌نویسیم:\n$\\frac{(2x_1 - 1) + (2x_2 + 2) + (2x_3 - 3) + \\cdots (2x_{10} + 10)}{10} = 1/5$\n$\\Rightarrow 2(x_1 + x_2 + \\cdots + x_{10}) + \\frac{(-1 + 2 - 3 + 4 - \\cdots + 10)}{5} = 15$\n$\\Rightarrow x_1 + x_2 + \\cdots + x_{10} = 5$\nحال میانگین جدید را به دست می‌آوریم:\n$\\overline{x} = \\frac{(3x_1 + 1) + (3x_2 + 2) + \\cdots + (3x_{10} + 10)}{10}$\n$= \\frac{3(x_1 + x_2 + \\cdots + x_{10}) + (1 + 2 + \\cdots + 10)}{10} = \\frac{(3 \\times 5) + (55)}{10} = 7$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2008/solution_6.webp",
+        "alt": "Solution for 2008",
+        "aspect_ratio": 1.3762
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2008,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            45,
+            834,
+            828,
+            856
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۸"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            779,
+            863,
+            804,
+            885
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            583,
+            863,
+            616,
+            885
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            401,
+            863,
+            425,
+            885
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            197,
+            863,
+            237,
+            885
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0187.jpg",
+          "box": [
+            461,
+            645,
+            831,
+            832
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "Solution for 2008"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2009",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "گروه ۱۰نفری از مردان با میانگین سن $\\overline{x}$ و گروه ۳۰نفری از زنان با میانگین سن $\\overline{x}-۴$ در یک جمع حاضرند. اگر میانگین کل ۲۱ باشد، میانگین سن زنان چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2009/stem_1.webp",
+        "alt": "صورت سوال ۲۰۰۹",
+        "aspect_ratio": 10.5662
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱۹$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2009/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.0366
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۰$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2009/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.0488
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۳$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2009/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.0244
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۴$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2009/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.0732
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $n$ داده با میانگین $\\overline{x}$ و $m$ داده با میانگین $\\overline{y}$ با هم ادغام شوند، میانگین کل داده‌ها برابر است با:\n$\\frac{n\\overline{x} + m\\overline{y}}{m + n}$\nمیانگین کل $= \\frac{10 \\times \\overline{x} + 30(\\overline{x} - 4)}{40} = 21 \\Rightarrow 40\\overline{x} - 120 = 840$\n$\\Rightarrow \\overline{x} = \\frac{960}{40} = 24 \\xrightarrow{\\text{میانگین سن زنان}} \\overline{x} - 4 = 20$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2009/solution_part_1_6.webp",
+        "alt": "Solution for 2009 part 1",
+        "aspect_ratio": 2.9574
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2009/solution_part_2_7.webp",
+        "alt": "Solution for 2009 part 2",
+        "aspect_ratio": 3.5781
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2009,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            46,
+            894,
+            828,
+            936
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۹"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            773,
+            944,
+            804,
+            965
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            583,
+            944,
+            615,
+            965
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            394,
+            944,
+            425,
+            965
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            204,
+            944,
+            237,
+            965
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0187.jpg",
+          "box": [
+            461,
+            834,
+            831,
+            915
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_part_1",
+          "alt": "Solution for 2009 part 1"
+        },
+        {
+          "page_file": "page_0187.jpg",
+          "box": [
+            45,
+            78,
+            411,
+            142
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_part_2",
+          "alt": "Solution for 2009 part 2"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2010",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در داده‌های $۱,۲,۳,\\dots,۱۰$ اختلاف چارک اول و سوم چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2010/stem_1.webp",
+        "alt": "صورت سوال ۲۰۱۰",
+        "aspect_ratio": 8.6
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2010/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.0816
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳/۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2010/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.2449
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴/۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2010/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.2041
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2010/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.0612
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$\\text{میانگین کل} = \\frac{10\\times\\overline{x} + 30(\\overline{x}-4)}{40} = 21 \\Rightarrow 40\\overline{x}-120=840$\n$\\Rightarrow \\overline{x} = \\frac{960}{40} = 24 \\xrightarrow{\\text{میانگین سن زنان}} \\overline{x}-4=20$\nچارک‌ها را تعیین می‌کنیم:\n$1, 2, \\underset{\\downarrow}{Q_1 \\rightarrow \\mathbf{3}}, 4, 5 \\, , \\, 6, 7, \\underset{\\downarrow}{Q_3 \\rightarrow \\mathbf{8}}, 9, 10$\n$Q_3-Q_1=8-3=5$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2010,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            426,
+            1007,
+            828,
+            1029
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۰"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            779,
+            1037,
+            804,
+            1058
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            583,
+            1037,
+            616,
+            1058
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            394,
+            1037,
+            425,
+            1058
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            212,
+            1037,
+            236,
+            1058
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2011",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "داده‌های آماری را از کم به زیاد مرتب می‌کنیم. با شرط آن‌که دادهٔ تکراری نداشته باشیم و نهمین داده چارک اول باشد، چندمین داده چارک سوم است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2011/stem_1.webp",
+        "alt": "صورت سوال ۲۰۱۱",
+        "aspect_ratio": 11.5714
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۷ یا ۲۸"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2011/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.8163
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۵ یا ۲۶"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2011/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.8367
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۶ یا ۲۷"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2011/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.8367
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۸ یا ۲۹"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2011/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.9184
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نمایش کلی داده‌ها به صورت زیر است:\n$\\underbrace{\\dots}_{\\text{۸ داده}} \\, Q_1 \\, \\underbrace{\\dots}_{\\text{۸ داده}} \\, Q_2 \\, \\underbrace{\\dots}_{\\text{۸ داده}} \\, Q_3 \\, \\underbrace{\\dots}_{\\text{۸ داده}}$\n$Q_1$ و $Q_3$ جزء داده‌ها هستند. دو حالت به وجود می‌آید:\n۱) $Q_2$ جزء داده‌ها باشد. $\\Rightarrow n=8+1+8+1+8+1 = 27$\n۲) $Q_2$ جزء داده‌ها نباشد. $\\Rightarrow n=8+1+8+8+1 = 26$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2011,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            46,
+            1067,
+            828,
+            1109
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            743,
+            1117,
+            804,
+            1138
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            553,
+            1117,
+            615,
+            1138
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            363,
+            1117,
+            425,
+            1138
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            171,
+            1117,
+            237,
+            1138
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2012",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در داده‌های $۷,۴,۲,۶,۳,۸,۴,۱۶,۱۳,۹,۱۹,۱۰$ میانگین داده‌های بیشتر از چارک سوم و میانگین داده‌های کم‌تر از چارک اول چه‌قدر اختلاف دارند؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2012/stem_1.webp",
+        "alt": "صورت سوال ۲۰۱۲",
+        "aspect_ratio": 11.9265
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱۲/۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2012/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.6122
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2012/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.2245
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۳$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2012/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.2041
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۳/۵$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2012/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.551
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "داده‌ها را مرتب می‌کنیم:\n$2, 3, 4 \\, , \\, 4, 6, 7, 8, 9, 10 \\, , \\, 13, 16, 19$\n$\\downarrow \\, \\, \\, \\, \\, \\, \\, \\, \\, \\downarrow \\, \\, \\, \\, \\, \\, \\, \\, \\, \\downarrow$\n$Q_1 \\, \\, \\, \\, \\, Q_2=\\text{میانه} \\, \\, \\, \\, \\, Q_3$\n$\\text{میانگین داده‌های کمتر از چارک اول} = \\overline{x} = \\frac{2+3+4}{3} = 3$\n$\\text{میانگین داده‌های بیشتر از چارک سوم} = \\overline{y} = \\frac{13+16+19}{3} = 16$\n$\\Rightarrow \\overline{y}-\\overline{x} = 16-3=13$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2012,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            45,
+            1148,
+            828,
+            1188
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            753,
+            1198,
+            804,
+            1219
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            583,
+            1198,
+            615,
+            1219
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            394,
+            1198,
+            425,
+            1219
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            189,
+            1198,
+            237,
+            1219
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2013",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد داده‌های متمایز چه عددی باشد تا چارک اول و سوم در بین داده‌ها باشد اما میانهٔ داده‌ها در بین داده‌ها نباشد؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2013/stem_1.webp",
+        "alt": "صورت سوال ۲۰۱۳",
+        "aspect_ratio": 14.1875
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶۴"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2013/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.0816
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۵"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2013/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.0612
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۶"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2013/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.0612
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۷"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2013/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.2245
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $n$ تعداد داده‌ها و $k$ عددی صحیح باشد، خواهیم داشت:\nهیچ‌یک از چارک‌ها جزء داده‌ها نیستند: $n=4k$\nمیانه جزء داده‌ها بوده ولی چارک اول و سوم جزء داده‌ها نیستند: $n=4k+1$\nمیانه جزء داده‌ها نبوده ولی چارک اول و سوم جزء داده‌ها هستند: $n=4k+2$\nهر سه چارک جزء داده‌ها هستند: $n=4k+3$\n$n$ باید به صورت $4k+2$ باشد، بنابراین عدد $66$ قابل قبول است:\n$66 = 4 \\times 16 + 2$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2013/solution_6.webp",
+        "alt": "Solution for 2013",
+        "aspect_ratio": 1.9352
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2013,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            175,
+            1229,
+            828,
+            1249
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            779,
+            1258,
+            804,
+            1279
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            591,
+            1258,
+            615,
+            1279
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            401,
+            1258,
+            425,
+            1279
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            204,
+            1258,
+            236,
+            1279
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0187.jpg",
+          "box": [
+            45,
+            423,
+            411,
+            551
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "Solution for 2013"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2014",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$n$ دادهٔ دوبه‌دو متمایز در اختیار داریم. عدد طبیعی $n$ کدام باشد تا میانه جزء داده‌ها باشد اما چارک اول و سوم جزء داده‌ها نباشد؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2014/stem_1.webp",
+        "alt": "صورت سوال ۲۰۱۴",
+        "aspect_ratio": 14.88
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۵"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2014/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.0816
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2014/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.0612
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۷"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2014/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.0612
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2014/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.2245
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$n$ باید به صورت $4k+1$ باشد، بنابراین عدد $17$ قابل قبول است:\n$17 = 4 \\times 4 + 1$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2014/solution_6.webp",
+        "alt": "Solution for 2014",
+        "aspect_ratio": 6.4811
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2014,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            112,
+            1289,
+            828,
+            1311
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۴"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            779,
+            1319,
+            804,
+            1340
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            591,
+            1319,
+            615,
+            1340
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            401,
+            1319,
+            425,
+            1340
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            204,
+            1319,
+            236,
+            1340
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0187.jpg",
+          "box": [
+            45,
+            554,
+            411,
+            584
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "Solution for 2014"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2015",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۲۴ دادهٔ آماری موجود است. میانگین داده‌های بزرگ‌تر از چارک سوم ۴ برابر میانگین داده‌های کم‌تر از چارک اول است. اگر میانگین کل داده‌ها ۳ برابر میانگین داده‌های کم‌تر از چارک اول باشد، میانگین داده‌های بین چارک اول و سوم کدام است؟ ($\\overline{x}$ میانگین داده‌های کم‌تر از چارک اول است.)"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2015/stem_1.webp",
+        "alt": "صورت سوال ۲۰۱۵",
+        "aspect_ratio": 11.7391
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳/۶\\overline{x}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2015/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.8367
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳/۵\\overline{x}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2015/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.8571
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳/۲\\overline{x}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2015/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.8571
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳/۴\\overline{x}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2015/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.7143
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چارک‌ها $24$ داده موجود را به $4$ دسته $6$ تایی تقسیم می‌کنند. اگر مجموع $6$ داده کمتر از چارک اول را $S_1$ بنامیم، خواهیم داشت:\n$4S_1 = \\text{مجموع داده‌های بیشتر از چارک سوم}$\n$\\text{میانگین کل} = 3\\overline{x} \\Rightarrow \\frac{S}{24} = 3 \\times \\frac{S_1}{6} \\Rightarrow S = 12S_1$\n$\\text{مجموع } 12 \\text{ داده بین چارک اول و سوم} = \\text{مجموع کل داده‌ها} - \\text{مجموع داده‌های کمتر از چارک اول} - \\text{مجموع داده‌های بیشتر از چارک سوم}$\n$= 12S_1 - S_1 - 4S_1 = 7S_1$\n$\\text{میانگین } 12 \\text{ داده بین چارک اول و سوم} = \\frac{7S_1}{12} = \\frac{7}{2}(\\frac{S_1}{6}) = \\frac{7}{2}\\overline{x} = 3/5\\overline{x}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2015,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            46,
+            1350,
+            828,
+            1391
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۵"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            743,
+            1400,
+            805,
+            1421
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            553,
+            1400,
+            616,
+            1421
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            363,
+            1400,
+            426,
+            1421
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            181,
+            1400,
+            237,
+            1421
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2016",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر دو سری داده $A: ۲,۲,۳,۳,۳$ و $B: ۳,۳,۲,۲,۲$ را در نظر بگیریم، واریانس داده‌های سری $A$ چند برابر واریانس داده‌های سری $B$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2016/stem_1.webp",
+        "alt": "صورت سوال ۲۰۱۶",
+        "aspect_ratio": 16.5306
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2016/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.0816
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲}{۳}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2016/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.04
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۲}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2016/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.04
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۹}{۴}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2016/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.22
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واریانس هر یک از گروه‌ها را به دست می‌آوریم:\nسری A: $\\overline{x} = \\frac{2 + 2 + 3 + 3 + 3}{5} = \\frac{13}{5}$\nچون داده‌ها صحیح و میانگین غیرصحیح است از رابطۀ $\\sigma^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x})^2$ استفاده می‌کنیم:\n$\\sigma^2 = \\frac{2^2 + 2^2 + 3^2 + 3^2 + 3^2}{5} - (\\frac{13}{5})^2 = \\frac{35}{5} - \\frac{169}{25}$\n$= \\frac{175 - 169}{25} = \\frac{6}{25}$\n$$ \\text{سری B} : \\overline{x} = \\frac{3+3+2+2+2}{5} = \\frac{12}{5} $$\n$$ \\Rightarrow \\sigma^2 = \\frac{3^2+3^2+2^2+2^2+2^2}{5} - (\\frac{12}{5})^2 = 6 - \\frac{144}{25} = \\frac{6}{25} $$\nواریانس دو گروه برابر است."
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2016/solution_6.webp",
+        "alt": "Solution for 2016",
+        "aspect_ratio": 1.5233
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2016/continuation_7.webp",
+        "alt": "ادامه حل سوال ۲۰۱۶",
+        "aspect_ratio": 0.1556
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2016,
+      "question_pdf": "18.pdf",
+      "question_page": 5,
+      "solution_page": 187,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            46,
+            1455,
+            828,
+            1476
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۶"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            779,
+            1478,
+            804,
+            1499
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            591,
+            1478,
+            615,
+            1500
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            401,
+            1478,
+            425,
+            1500
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            204,
+            1478,
+            237,
+            1500
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0187.jpg",
+          "box": [
+            45,
+            749,
+            411,
+            915
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "Solution for 2016"
+        },
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            70,
+            520,
+            140,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "continuation",
+          "alt": "ادامه حل سوال ۲۰۱۶"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2017",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "واریانس اعداد فرد یک‌رقمی چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2017/stem_1.webp",
+        "alt": "متن سوال ۲۰۱۷",
+        "aspect_ratio": 15.7436
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2017/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2017/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2017/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4872
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2017/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.6026
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای محاسبهٔ واریانس اعدادی که تشکیل دنبالهٔ حسابی با قدرنسبت $d$ می‌دهند از رابطهٔ زیر استفاده می‌کنیم:\n$$ \\sigma^2 = \\frac{n^2-1}{12} \\times d^2 $$\nخواهیم داشت:\n$$ 1, 3, 5, 7, 9 \\Rightarrow \\sigma^2 = \\frac{5^2-1}{12} \\times 2^2 = 8 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2017/solution_6.webp",
+        "alt": "حل سوال ۲۰۱۷",
+        "aspect_ratio": 0.1546
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2017,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            70,
+            1430,
+            120
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۱۷"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            120,
+            1430,
+            170
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            120,
+            1040,
+            170
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            120,
+            640,
+            170
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            120,
+            440,
+            170
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            150,
+            520,
+            220,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۱۷"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2018",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "واریانس داده‌هایی از $8, 4, 2, 2, 5, 4, 3, 5, 7, 7, 8$ که بین چارک اول و سوم قرار گرفته‌اند چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2018/stem_1.webp",
+        "alt": "متن سوال ۲۰۱۸",
+        "aspect_ratio": 15.7436
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2018/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1/2$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2018/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1/8$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2018/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4872
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2018/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.6026
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا داده را به صورت صعودی مرتب کرده، چارک‌ها را محاسبه می‌کنیم:\n$2, 2, \\underset{\\downarrow}{Q_1 \\rightarrow \\mathbf{3}}, 4, 4, \\underset{\\downarrow}{Q_2 \\rightarrow \\mathbf{5}}, 5, 7, \\underset{\\downarrow}{Q_3 \\rightarrow \\mathbf{7}}, 8, 8$\nداده‌های بین چارک اول و سوم: $4, 4, 5, 5, 7$\n$\\Rightarrow \\overline{x} = \\frac{4+4+5+5+7}{5} = \\frac{25}{5} = 5$\n$\\Rightarrow \\sigma^2 = \\frac{(4-5)^2+(4-5)^2+(5-5)^2+(5-5)^2+(7-5)^2}{5}$\n$= \\frac{1+1+0+0+4}{5} = \\frac{6}{5} = 1/2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2018,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            150,
+            1430,
+            200
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۱۸"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            200,
+            1430,
+            250
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            200,
+            1040,
+            250
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            200,
+            640,
+            250
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            200,
+            440,
+            250
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2019",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "واریانس $2, 3 + c, 3 - a, 2, 2b - a$ صفر است. واریانس $a, b, c$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2019/stem_1.webp",
+        "alt": "متن سوال ۲۰۱۹",
+        "aspect_ratio": 15.7436
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2019/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{3}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2019/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{3}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2019/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.6652
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{8}{3}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2019/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.7425
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: هرگاه واریانس داده‌ها برابر صفر شود، یعنی همهٔ داده‌ها برابرند:\n$$ a-2 = 2b-3 = c+2 = 3 \\Rightarrow a=5, b=3, c=1 $$\nخواهیم داشت:\n$$ \\overline{x} = \\frac{5+3+1}{3} = 3 $$\n$$ \\sigma^2 = \\frac{(5-3)^2+(3-3)^2+(1-3)^2}{3} = \\frac{4+0+4}{3} = \\frac{8}{3} $$\nروش دوم: اگر $n$ داده تشکیل دنبالهٔ حسابی با قدرنسبت $d$ بدهند، واریانس آن‌ها از رابطهٔ زیر قابل محاسبه است:\n$$ \\sigma^2 = \\frac{n^2-1}{12} \\times d^2 \\Rightarrow \\sigma^2 = \\frac{3^2-1}{12} \\times 2^2 = \\frac{8}{3} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2019/solution_6.webp",
+        "alt": "حل سوال ۲۰۱۹",
+        "aspect_ratio": 0.3353
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2019,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            230,
+            1430,
+            280
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۱۹"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            280,
+            1430,
+            360
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            280,
+            1040,
+            360
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            280,
+            640,
+            360
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            280,
+            440,
+            360
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            400,
+            520,
+            570,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۱۹"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2020",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه میانگین $2a, 2, a, 3, 3, 4$ برابر ۳ باشد، انحراف معیار آن‌ها کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2020/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۰",
+        "aspect_ratio": 13.9545
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{3}}{2}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2020/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{2}}{2}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2020/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{6}}{2}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2020/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.6724
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{6}}{3}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2020/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.75
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میانگین داده‌ها برابر ۳ است:\n$$ \\overline{x} = \\frac{2a+2+a+3+3+4}{6} = 3 \\Rightarrow 3a+12=18 \\Rightarrow a=2 $$\n$$ \\Rightarrow \\sigma^2 = \\frac{(4-3)^2+(2-3)^2+(2-3)^2+0+0+(4-3)^2}{6} = \\frac{4}{6} = \\frac{2}{3} \\Rightarrow \\sigma = \\sqrt{\\frac{2}{3}} = \\frac{\\sqrt{6}}{3} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2020/solution_6.webp",
+        "alt": "حل سوال ۲۰۲۰",
+        "aspect_ratio": 0.2269
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2020,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            340,
+            1430,
+            400
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۰"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            400,
+            1430,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            400,
+            1040,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            400,
+            640,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            400,
+            440,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            580,
+            520,
+            690,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۲۰"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2021",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به هر یک از اعداد $2, 3, 3, 5, 4, 7, 6$ سه برابر میانگین را اضافه کرده‌ایم. واریانس آن‌ها چه‌قدر بیشتر شده است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2021/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۱",
+        "aspect_ratio": 15.7436
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{90}{7}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2021/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{30}{7}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2021/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{10}{7}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2021/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.6652
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2021/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.7425
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر میانگین را به دست آوریم، عدد ثابتی می‌شود و اگر داده‌ها را با یک عدد ثابت جمع کنیم، واریانس داده‌ها تغییر نمی‌کند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2021,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            460,
+            1430,
+            510
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            510,
+            1430,
+            590
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            510,
+            1040,
+            590
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            510,
+            640,
+            590
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            510,
+            440,
+            590
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2022",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر هر یک از اعداد $2, 2, 3, 4$ سه برابر شوند، واریانس داده‌های جدید چند برابر واریانس داده‌های اولیه است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2022/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۲",
+        "aspect_ratio": 15.7436
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{9}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2022/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2022/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{3}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2022/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.6652
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2022/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.7425
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "هرگاه داده‌ها در عدد ثابت $a$ ضرب شوند، واریانس آن‌ها در $a^2$ ضرب می‌شود:\n$$ a = 3 \\Rightarrow a^2 = 9 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2022/solution_6.webp",
+        "alt": "حل سوال ۲۰۲۲",
+        "aspect_ratio": 0.1004
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2022,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            570,
+            1430,
+            620
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            620,
+            1430,
+            700
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            620,
+            1040,
+            700
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            620,
+            640,
+            700
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            620,
+            440,
+            700
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            740,
+            520,
+            780,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۲۲"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2023",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر واریانس اعداد مثبت $2x_1+3, 2x_2+3, ..., 2x_5+3$ برابر ۶ باشد، واریانس داده‌های $3x_1+2, 3x_2+2, ..., 3x_5+2$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2023/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۳",
+        "aspect_ratio": 13.9545
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2023/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.4773
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2023/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.5909
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$13/5$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2023/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.1436
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15/5$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2023/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.2431
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر داده‌های $3+2x_i$ را در $\\frac{3}{2}$ ضرب نموده و سپس $\\frac{5}{2}$ واحد کم کنیم به داده‌های $3x_i+2$ می‌رسیم. کاسته شدن $\\frac{5}{2}$ واحد از داده‌ها تأثیری بر واریانس ندارد، اما با ضرب $\\frac{3}{2}$ در داده‌ها واریانس $(\\frac{3}{2})^2$ برابر می‌شود:\n$$ \\sigma_{\\text{جدید}}^2 = (\\frac{3}{2})^2 \\times 6 = \\frac{27}{2} = 13/5 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2023/solution_6.webp",
+        "alt": "حل سوال ۲۰۲۳",
+        "aspect_ratio": 0.1908
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2023,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            680,
+            1430,
+            740
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            740,
+            1430,
+            800
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            740,
+            1040,
+            800
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            740,
+            640,
+            800
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            740,
+            440,
+            800
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            790,
+            520,
+            880,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۲۳"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2024",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین و انحراف معیار اعداد $a, b, c, d$ به ترتیب ۳ و ۱ است. واریانس هشت دادهٔ $a, b, c, d, 3, 3, 3, 3$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2024/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۴",
+        "aspect_ratio": 13.9545
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2024/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2024/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{4}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2024/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.6652
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{8}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2024/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.7425
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میانگین داده‌های اولیه ۳ است:\n$$ \\frac{a+b+c+d}{4} = 3 \\Rightarrow a+b+c+d=12 $$\nواریانس داده‌های اولیه ۱ است:\n$$ \\sigma^2 = \\frac{(a-3)^2+(b-3)^2+(c-3)^2+(d-3)^2}{4} = 1 $$\nحال، برای ۸ دادهٔ جدید داریم:\n$$ \\overline{x} = \\frac{\\overbrace{a+b+c+d}^{12}+12}{8} = 3 $$\n$$ \\text{واریانس} = \\frac{(a-3)^2+(b-3)^2+(c-3)^2+(d-3)^2+4 \\times 0}{8} = \\frac{4}{8} = \\frac{1}{2} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2024/solution_6.webp",
+        "alt": "حل سوال ۲۰۲۴",
+        "aspect_ratio": 0.3534
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2024,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            780,
+            1430,
+            840
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۴"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            840,
+            1430,
+            920
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            840,
+            1040,
+            920
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            840,
+            640,
+            920
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            840,
+            440,
+            920
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            70,
+            100,
+            250,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۲۴"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2025",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "انحراف معیار و ضریب تغییرات $x_1, x_2, x_3$ به ترتیب ۱ و $0/2$ است. ضریب تغییرات $1+1.2x_1, 1+1.2x_2, 1+1.2x_3$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2025/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۵",
+        "aspect_ratio": 13.9545
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0/4$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2025/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1/4$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2025/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{11}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2025/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{11}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2025/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.2037
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میانگین داده‌های اولیه را حساب می‌کنیم:\n$\\text{CV} = \\frac{\\sigma}{\\overline{x}} \\Rightarrow 0/2 = \\frac{1}{\\overline{x}} \\Rightarrow \\overline{x} = 5$\nهمه داده‌ها در $2$ ضرب و با $1$ جمع شده‌اند، بنابراین میانگین نیز در $2$ ضرب و با $1$ جمع می‌شود:\n$\\overline{x}_{\\text{جدید}} = (2 \\times 5) + 1 = 11$\nاما انحراف معیار فقط در $2$ ضرب می‌شود:\n$\\sigma_{\\text{جدید}} = 2 \\times 1 = 2 \\Rightarrow \\text{CV}_{\\text{جدید}} = \\frac{2}{11}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2025,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            900,
+            1430,
+            960
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۵"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            960,
+            1430,
+            1040
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            960,
+            1040,
+            1040
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            960,
+            640,
+            1040
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            960,
+            440,
+            1040
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2026",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در تعدادی دادهٔ آماری به هر داده ۴ برابر میانگین داده‌ها را اضافه می‌کنیم. ضریب تغییرات جدید چند برابر ضریب تغییرات اولیه است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2026/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۶",
+        "aspect_ratio": 13.9545
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2026/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{4}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2026/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2026/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2026/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.2037
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر به همه داده‌ها $4\\overline{x}$ اضافه شود، به میانگین داده‌ها $4\\overline{x}$ اضافه شده و انحراف معیار تغییر نمی‌کند.\n$\\text{CV} = \\frac{\\sigma}{\\overline{x}}$\n$\\text{CV}_{\\text{جدید}} = \\frac{\\sigma}{\\overline{x}+4\\overline{x}} = \\frac{\\sigma}{5\\overline{x}} = \\frac{1}{5}\\text{CV}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2026,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1020,
+            1430,
+            1080
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۶"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1080,
+            1430,
+            1160
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            1080,
+            1040,
+            1160
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            1080,
+            640,
+            1160
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1080,
+            440,
+            1160
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2027",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ۸ دادهٔ آماری میانگین و واریانس داده‌های کم‌تر از میانه ۲ و $\\dfrac{1}{2}$ و میانگین و ضریب تغییرات داده‌های بیشتر از میانه ۶ و صفر است. واریانس تمام داده‌ها چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2027/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۷",
+        "aspect_ratio": 11.3704
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2027/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.4773
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4/15$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2027/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.5909
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4/2$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2027/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.5909
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4/25$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2027/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.7045
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میانگین ۴ دادهٔ اول برابر ۲ و میانگین ۴ دادهٔ بعدی برابر ۶ است. بنابراین میانگین کل داده‌ها برابر $\\frac{2+6}{2}=4$ است.\nواریانس ۴ دادهٔ اول برابر $\\frac{1}{2}$ است:\n$$ \\sigma_1^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x}_1)^2 = \\frac{\\sum_{i=1}^4 x_i^2}{4} - 2^2 = \\frac{1}{2} \\Rightarrow \\sum_{i=1}^4 x_i^2 = 18 $$\nواریانس ۴ دادهٔ دوم برابر صفر و میانگین برابر ۶ است، در نتیجه هر ۴ داده برابر ۶ هستند. خواهیم داشت:\n$$ \\sigma^2 = \\frac{\\sum_{i=1}^8 x_i^2}{n} - (\\overline{x})^2 = \\frac{\\sum_{i=1}^4 x_i^2 + \\sum_{i=5}^8 x_i^2}{8} - 4^2 = \\frac{18 + 4(6)^2}{8} - 16 = \\frac{162}{8} - 16 = 4/25 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2027/solution_6.webp",
+        "alt": "حل سوال ۲۰۲۷",
+        "aspect_ratio": 0.4257
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2027,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1140,
+            1430,
+            1220
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۷"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1220,
+            1430,
+            1280
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            1220,
+            1040,
+            1280
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            1220,
+            640,
+            1280
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1220,
+            440,
+            1280
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            480,
+            100,
+            700,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۲۷"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2028",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر هر یک از داده‌های آماری را ۴ برابر کرده و از هر یک ۲ واحد کم کنیم، ضریب تغییرات جدید ۲۵ درصد افزایش می‌یابد. میانگین داده‌های اول چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2028/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۸",
+        "aspect_ratio": 11.3704
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{9}{4}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2028/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{5}{2}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2028/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{11}{4}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2028/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{7}{2}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2028/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.2037
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "وقتی داده‌ها را $4$ برابر کرده و از هر یک $2$ واحد کم می‌کنیم، میانگین نیز $4$ برابر شده و سپس $2$ واحد کاهش می‌یابد، ولی انحراف معیار فقط $4$ برابر می‌شود.\n$\\text{CV}_{\\text{جدید}} = 1/25\\text{CV} \\Rightarrow \\frac{\\cancel{4}\\sigma}{4\\overline{x}-2} = 1/25 \\frac{\\cancel{\\sigma}}{\\overline{x}}$\n$\\Rightarrow 4\\overline{x} = 1/25(4\\overline{x}-2) \\Rightarrow 4\\overline{x} = 5\\overline{x}-2/5$\n$\\Rightarrow \\overline{x} = 2/5 = \\frac{5}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2028,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1260,
+            1430,
+            1340
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۸"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1340,
+            1430,
+            1420
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            1340,
+            1040,
+            1420
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            1340,
+            640,
+            1420
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1340,
+            440,
+            1420
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2029",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین ۷ دادهٔ آماری ۴ و واریانس آن‌ها ۲ است. هرگاه داده‌های $2, a, 3$ را از بین داده‌ها حذف کنیم میانگین داده‌ها تغییر نمی‌کند. واریانس چه‌قدر کاهش می‌یابد؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2029/stem_1.webp",
+        "alt": "متن سوال ۲۰۲۹",
+        "aspect_ratio": 12.5306
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2029/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2029/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{4}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2029/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{3}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2029/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.2037
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با حذف داده‌های ۳، $a$ و ۲ میانگین داده‌ها تغییر نکرده است. بنابراین میانگین اعداد حذف‌شده با میانگین اولیه برابر بوده است:\n$$ \\frac{2+a+3}{3} = 4 \\Rightarrow a=7 $$\nواریانس داده‌های اولیه ۲ بوده است:\n$$ \\sigma^2 = \\frac{(x_1-4)^2 + (x_2-4)^2 + (x_3-4)^2 + (x_4-4)^2}{7} + \\frac{(2-4)^2 + (7-4)^2 + (3-4)^2}{7} = 2 $$\n$$ \\Rightarrow \\frac{(x_1-4)^2 + \\cdots + (x_4-4)^2 + 14}{7} = 2 $$\n$$ \\Rightarrow (x_1-4)^2 + \\cdots + (x_4-4)^2 = 0 $$\n$$ \\Rightarrow x_1 = x_2 = x_3 = x_4 = 4 $$\nداده‌های باقی‌مانده با هم برابر بوده و واریانس آن‌ها صفر است. $2 - 0 = 2$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2029/solution_6.webp",
+        "alt": "حل سوال ۲۰۲۹",
+        "aspect_ratio": 0.1365
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2029/solution_continuation_7.webp",
+        "alt": "ادامه حل سوال ۲۰۲۹",
+        "aspect_ratio": 0.28
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2029,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 188,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1400,
+            1430,
+            1470
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۲۹"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1470,
+            1430,
+            1550
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            1470,
+            1040,
+            1550
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            1470,
+            640,
+            1550
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1470,
+            440,
+            1550
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0188.jpg",
+          "box": [
+            830,
+            100,
+            890,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۲۹"
+        },
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            85,
+            470,
+            260,
+            940
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_continuation",
+          "alt": "ادامه حل سوال ۲۰۲۹"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2030",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "داده‌های $10, 13, 14, 15, 15, 17$ را در نظر بگیرید. اگر داده‌ای که با میانگین برابر است را حذف کنیم، واریانس داده‌های جدید چند برابر واریانس داده‌های اولیه است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2030/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۰",
+        "aspect_ratio": 12.5306
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{7}{6}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2030/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{5}{6}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2030/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{6}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2030/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{6}{7}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2030/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.2037
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واریانس ۶ داده ابتدایی را محاسبه می‌کنیم.\n$$ \\overline{x} = \\frac{10+13+14+15+15+17}{6} = 14 $$\n$$ \\sigma^2 = \\frac{(10-14)^2+(13-14)^2+(14-14)^2}{6} + \\frac{(15-14)^2+(15-14)^2+(17-14)^2}{6} = \\frac{28}{6} $$\nعدد حذف شده برابر میانگین است. بنابراین میانگین ۵ داده باقی‌مانده تغییر نکرده و برابر ۱۴ است. واریانس این داده‌ها برابر است با:\n$$ \\sigma_{\\text{جدید}}^2 = \\frac{28}{5} $$\nدر نتیجه:\n$$ \\frac{\\sigma_{\\text{جدید}}^2}{\\sigma_{\\text{اولیه}}^2} = \\frac{\\frac{28}{5}}{\\frac{28}{6}} = \\frac{6}{5} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2030/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۰",
+        "aspect_ratio": 0.3207
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2030,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1530,
+            1430,
+            1600
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۰"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1600,
+            1430,
+            1680
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            1600,
+            1040,
+            1680
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            1600,
+            640,
+            1680
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1600,
+            440,
+            1680
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            260,
+            465,
+            465,
+            940
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۰"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2031",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین اعداد $a, b, c, d, e$ برابر $d$ است. اگر $d$ را از بین آن‌ها حذف کنیم، ضریب تغییرات ۴ دادهٔ جدید چند برابر ضریب تغییرات اولیه است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2031/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۱",
+        "aspect_ratio": 13.9545
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2031/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.0185
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{5}{4}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2031/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}}{2}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2031/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.1111
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{\\sqrt{5}}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2031/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.2037
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عدد حذف شده برابر میانگین است؛ بنابراین میانگین دو گروه برابر است.\n$$ \\sigma_{\\text{اولیه}}^2 = \\frac{(a-d)^2+(b-d)^2+(c-d)^2+(d-d)^2+(e-d)^2}{5} $$\n$$ = \\frac{k}{5} \\Rightarrow \\sigma_{\\text{اولیه}} = \\sqrt{\\frac{k}{5}} $$\n$$ \\sigma_{\\text{جدید}}^2 = \\frac{(a-d)^2+(b-d)^2+(c-d)^2+(e-d)^2}{4} = \\frac{k}{4} $$\n$$ \\Rightarrow \\sigma_{\\text{جدید}} = \\sqrt{\\frac{k}{4}} $$\nواضح است صورت هر دو کسر برابر است. بنابراین:\n$$ \\frac{CV_{\\text{جدید}}}{CV_{\\text{اولیه}}} = \\frac{\\frac{\\sigma_{\\text{جدید}}}{\\overline{x}}}{\\frac{\\sigma_{\\text{اولیه}}}{\\overline{x}}} = \\frac{\\sigma_{\\text{جدید}}}{\\sigma_{\\text{اولیه}}} = \\frac{\\sqrt{\\frac{k}{4}}}{\\sqrt{\\frac{k}{5}}} = \\frac{\\sqrt{5}}{2} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2031/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۱",
+        "aspect_ratio": 0.3788
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2031,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1660,
+            1430,
+            1720
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1720,
+            1430,
+            1800
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            1720,
+            1040,
+            1800
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            1720,
+            640,
+            1800
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1720,
+            440,
+            1800
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            470,
+            465,
+            715,
+            940
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۱"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2032",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۱۰ دادهٔ آماری با میانگین $\bar{x}$ و واریانس ۸ داریم، چند داده برابر با میانگین به آن‌ها اضافه کنیم تا واریانس کل داده‌ها برابر ۵ شود؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2032/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۲",
+        "aspect_ratio": 12.5306
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2032/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.4773
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2032/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.5909
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2032/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.5909
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2032/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.7045
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واریانس داده‌ها برابر ۸ می‌باشد.\n$$ \\sigma^2 = \\frac{(x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_{10}-\\overline{x})^2}{10} = 8 \\Rightarrow k = 80 $$\n$n$ داده برابر میانگین به داده‌ها اضافه می‌کنیم تا واریانس برابر ۵ شود. با توجه به این‌که داده‌های جدید برابر میانگین می‌باشند صورت کسر تغییر نمی‌کند.\n$$ \\sigma_{\\text{جدید}}^2 = \\frac{(x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_{10}-\\overline{x})^2}{10+n} = 5 $$\n$$ \\Rightarrow \\frac{k}{10+n} = 5 \\Rightarrow \\frac{80}{10+n} = 5 \\Rightarrow 10+n = \\frac{80}{5} = 16 \\Rightarrow n=6 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2032/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۲",
+        "aspect_ratio": 0.2698
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2032,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1780,
+            1430,
+            1850
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1850,
+            1430,
+            1910
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            1850,
+            1040,
+            1910
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            1850,
+            640,
+            1910
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1850,
+            440,
+            1910
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            725,
+            465,
+            895,
+            940
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۲"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2033",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر در ۱۰ داده، $20 = \\sum x_i$ و $100 = \\sum x_i^2$ باشد، واریانس کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2033/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۳",
+        "aspect_ratio": 13.9545
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2033/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.4773
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2033/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.5909
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2033/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.5909
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2033/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.7045
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از رابطه زیر استفاده می‌کنیم:\n$$ \\sigma^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x})^2 \\Rightarrow \\sigma^2 = \\frac{100}{10} - \\left(\\frac{20}{10}\\right)^2 = 10-4=6 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2033/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۳",
+        "aspect_ratio": 0.1053
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2033,
+      "question_pdf": "18.pdf",
+      "question_page": 6,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1890,
+            1430,
+            1950
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1950,
+            1430,
+            2010
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            840,
+            1950,
+            1040,
+            2010
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            440,
+            1950,
+            640,
+            2010
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            230,
+            1950,
+            440,
+            2010
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            70,
+            40,
+            115,
+            435
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۳"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2034",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ۵ داده با واریانس ۴ و ضریب تغییرات $\\dfrac{1}{3}$، جمع مربع داده‌ها کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2034/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۴",
+        "aspect_ratio": 14.2955
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$160$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2034/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$200$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2034/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$240$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2034/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4713
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$180$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2034/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.9299
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واریانس داده‌ها ۴ و در نتیجه انحراف معیار ۲ است:\n$$ CV = \\frac{\\sigma}{\\overline{x}} \\Rightarrow \\frac{1}{3} = \\frac{2}{\\overline{x}} \\Rightarrow \\overline{x}=6 $$\n$$ \\sigma^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x})^2 \\Rightarrow 4 = \\frac{\\sum x_i^2}{5} - 36 $$\n$$ \\Rightarrow \\sum x_i^2 = 5 \\times 40 = 200 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2034/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۴",
+        "aspect_ratio": 0.1923
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2034,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            70,
+            1430,
+            130
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۴"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            130,
+            1430,
+            180
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            130,
+            1040,
+            180
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            130,
+            640,
+            180
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            130,
+            440,
+            180
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            125,
+            40,
+            220,
+            435
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۴"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2035",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر میانگین ۸ دادهٔ آماری ۱۵ و انحراف معیار آن‌ها ۲ باشد، جمع مربع اعداد کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2035/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۵",
+        "aspect_ratio": 16.1282
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$152$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2035/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1768$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2035/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$120$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2035/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4713
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1832$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2035/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.9299
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "انحراف معیار داده‌ها برابر ۲ و در نتیجه واریانس برابر ۴ است:\n$$ \\sigma^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x})^2 \\Rightarrow 4 = \\frac{\\sum x_i^2}{8} - 225 $$\n$$ \\Rightarrow \\sum x_i^2 = 8 \\times 229 = 1832 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2035/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۵",
+        "aspect_ratio": 0.1314
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2035,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            170,
+            1430,
+            220
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۵"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            220,
+            1430,
+            270
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            220,
+            1040,
+            270
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            220,
+            640,
+            270
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            220,
+            440,
+            270
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            230,
+            40,
+            290,
+            435
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۵"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2036",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ۱۰ دادهٔ آماری میانگین داده‌ها برابر ۴ و میانگین مربع داده‌ها برابر ۲۵ است. ضریب تغییرات داده‌ها چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2036/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۶",
+        "aspect_ratio": 14.2955
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0/75$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2036/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2036/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1/5$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2036/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4713
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/25$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2036/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.9299
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رابطه دوم محاسبه واریانس:\n$$ \\sigma^2 = \\frac{x_1^2 + x_2^2 + \\cdots + x_n^2}{n} - \\overline{x}^2 = \\frac{\\sum x_i^2}{n} - \\overline{x}^2 $$\nمربع میانگین - میانگین مربعات = \nابتدا واریانس داده‌ها را محاسبه می‌کنیم:\n$$ \\sigma^2 = \\frac{x_1^2 + x_2^2 + \\cdots + x_{10}^2}{10} - 4^2 = 25-16=9 $$\n$$ \\Rightarrow \\sigma=3 \\Rightarrow CV = \\frac{\\sigma}{\\overline{x}} = \\frac{3}{4} = 0/75 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2036/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۶",
+        "aspect_ratio": 0.2705
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2036,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            250,
+            1430,
+            310
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۶"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            310,
+            1430,
+            360
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            310,
+            1040,
+            360
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            310,
+            640,
+            360
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            310,
+            440,
+            360
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            300,
+            40,
+            440,
+            435
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۶"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2037",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین ۶ دادهٔ آماری ۴ و انحراف معیار آن‌ها ۲ است. اگر میانگین ۴ دادهٔ دیگر ۴ و ضریب تغییرات آن‌ها ۱ باشد، واریانس ۱۰ داده با هم چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2037/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۷",
+        "aspect_ratio": 11.6481
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2/8$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2037/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2037/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7/6$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2037/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4713
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8/8$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2037/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.9299
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "انحراف معیار گروه اول ۲ است، بنابراین واریانس ۴ است:\n$$ \\sigma_1^2 = \\frac{(x_1-4)^2 + (x_2-4)^2 + \\cdots + (x_6-4)^2}{6} = 4 $$\n$$ \\Rightarrow (x_1-4)^2 + (x_2-4)^2 + \\cdots + (x_6-4)^2 = 24 $$\nضریب تغییرات گروه دوم ۱ است:\n$$ CV = \\frac{\\sigma}{\\overline{x}} = 1 \\Rightarrow \\frac{\\sigma}{4} = 1 \\Rightarrow \\sigma=4 \\Rightarrow \\sigma^2=16 $$\n$$ \\sigma_2^2 = \\frac{(y_1-4)^2 + (y_2-4)^2 + \\cdots + (y_4-4)^2}{4} = 16 $$\n$$ \\Rightarrow (y_1-4)^2 + (y_2-4)^2 + \\cdots + (y_4-4)^2 = 64 $$\nحال واریانس ۱۰ داده را به دست می‌آوریم. میانگین هر دو گروه ۴ بوده و در نتیجه میانگین ۱۰ داده ۴ است.\n$$ \\sigma_t^2 = \\frac{\\overbrace{(x_1-4)^2 + (x_2-4)^2 + \\cdots + (x_6-4)^2}^{24}}{10} + \\frac{\\overbrace{(y_1-4)^2 + (y_2-4)^2 + \\cdots + (y_4-4)^2}^{64}}{10} = \\frac{88}{10} = 8/8 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2037/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۷",
+        "aspect_ratio": 0.5575
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2037,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            340,
+            1430,
+            420
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۷"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            420,
+            1430,
+            470
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            420,
+            1040,
+            470
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            420,
+            640,
+            470
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            420,
+            440,
+            470
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            450,
+            40,
+            755,
+            435
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۷"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2038",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۴ داده با واریانس ۴ و ۶ داده با واریانس ۱ را با هم در یک گروه قرار داده‌ایم. اگر میانگین داده‌ها در دو دستهٔ ابتدایی برابر هم باشند، واریانس داده‌های جدید کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2038/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۸",
+        "aspect_ratio": 12.8367
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2038/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/2$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2038/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/8$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2038/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4872
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2038/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.9487
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واریانس دو گروه را می‌نویسیم:\n$$ \\sigma_1^2 = \\frac{(x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_4-\\overline{x})^2}{4} = 4 $$\n$$ \\Rightarrow (x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_4-\\overline{x})^2 = 16 $$\n$$ \\sigma_2^2 = \\frac{(y_1-\\overline{x})^2 + (y_2-\\overline{x})^2 + \\cdots + (y_6-\\overline{x})^2}{6} = 1 $$\n$$ \\Rightarrow (y_1-\\overline{x})^2 + (y_2-\\overline{x})^2 + \\cdots + (y_6-\\overline{x})^2 = 6 $$\nحال واریانس داده‌های جدید را محاسبه می‌کنیم:\n$$ \\sigma^2 = \\frac{\\overbrace{(x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_4-\\overline{x})^2}^{16}}{10} + \\frac{\\overbrace{(y_1-\\overline{x})^2 + (y_2-\\overline{x})^2 + \\cdots + (y_6-\\overline{x})^2}^{6}}{10} = \\frac{22}{10} = 2/2 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2038/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۸",
+        "aspect_ratio": 0.2618
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2038/solution_continuation_7.webp",
+        "alt": "ادامه حل سوال ۲۰۳۸",
+        "aspect_ratio": 0.2359
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2038,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 189,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            450,
+            1430,
+            520
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۸"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            520,
+            1430,
+            570
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            520,
+            1040,
+            570
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            520,
+            640,
+            570
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            520,
+            440,
+            570
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0189.jpg",
+          "box": [
+            760,
+            40,
+            895,
+            435
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۸"
+        },
+        {
+          "page_file": "page_0190.jpg",
+          "box": [
+            75,
+            520,
+            185,
+            885
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_continuation",
+          "alt": "ادامه حل سوال ۲۰۳۸"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2039",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "۶ داده با میانگین ۴ و انحراف معیار ۱ را با ۴ دادهٔ یکسان با مقدار a با هم در یک دسته قرار می‌دهیم. واریانس کل ۶/۶ شده است. مقدار مثبت a چه عدد است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2039/stem_1.webp",
+        "alt": "متن سوال ۲۰۳۹",
+        "aspect_ratio": 11.6481
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2039/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2039/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2039/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4872
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2039/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.9487
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به رابطه $\\sigma^2 = \\frac{\\sum (x_i)^2}{n} - \\overline{x}^2$ مجموع مربعات ۶ داده ابتدایی را به دست می‌آوریم.\n$$ 1 = \\frac{\\sum_{i=1}^6 x_i^2}{6} - 4^2 \\Rightarrow \\sum_{i=1}^6 x_i^2 = 102 $$\nاگر داده‌های برابر را $a$ بنامیم، واریانس ۱۰ داده جدید را محاسبه می‌کنیم.\n$$ \\sigma^2 = \\frac{\\sum_{i=1}^{10} x_i^2}{10} - \\overline{x}^2 \\Rightarrow 6/6 = \\frac{\\sum_{i=1}^6 x_i^2 + 4a^2}{10} - \\left(\\frac{24+4a}{10}\\right)^2 $$\n$$ \\Rightarrow 6/6 = \\frac{102+4a^2}{10} - \\left(\\frac{4a+24}{10}\\right)^2 $$\n$$ \\Rightarrow 660 = 1020 + 40a^2 - 16a^2 - 192a - 576 $$\n$$ \\Rightarrow 24a^2 - 192a - 216 = 0 \\Rightarrow a^2 - 8a - 9 = 0 $$\n$$ \\Rightarrow \\begin{cases} a = -1 \\text{ ق ق غ } \\\\ a = 9 \\text{ \\checkmark } \\end{cases} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2039/solution_6.webp",
+        "alt": "حل سوال ۲۰۳۹",
+        "aspect_ratio": 0.4528
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2039,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 190,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            550,
+            1430,
+            630
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۳۹"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            630,
+            1430,
+            680
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            630,
+            1040,
+            680
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            630,
+            640,
+            680
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            630,
+            440,
+            680
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0190.jpg",
+          "box": [
+            195,
+            515,
+            430,
+            895
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۳۹"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2040",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "میانگین و واریانس $x_1, x_2, ..., x_{10}$ به ترتیب ۶ و ۴ هستند. میانگین $(x_1 - 1)^2, (x_2 - 1)^2, ..., (x_{10} - 1)^2$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2040/stem_1.webp",
+        "alt": "متن سوال ۲۰۴۰",
+        "aspect_ratio": 14.2955
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$29$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2040/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.7949
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2040/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.9231
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$39$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2040/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 2.4872
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$40$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2040/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.9487
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میانگین و واریانس $x_1, x_2, \\dots, x_{10}$ به ترتیب ۶ و ۴ است. بنابراین میانگین و واریانس $(x_1-1), (x_2-1), \\dots, (x_{10}-1)$ برابر ۵ و ۴ می‌باشد.\nدر نتیجه:\n$$ \\sigma^2 = \\frac{\\sum (x_i-1)^2}{10} - 5^2 = 4 \\Rightarrow \\sum (x_i-1)^2 = 290 $$\nمیانگین موردنظر = $\\frac{290}{10} = 29$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2040/solution_6.webp",
+        "alt": "حل سوال ۲۰۴۰",
+        "aspect_ratio": 0.2369
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2040,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 190,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            660,
+            1430,
+            720
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۴۰"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            720,
+            1430,
+            770
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            720,
+            1040,
+            770
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            720,
+            640,
+            770
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            720,
+            440,
+            770
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0190.jpg",
+          "box": [
+            435,
+            515,
+            550,
+            895
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۴۰"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2041",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر واریانس و ضریب تغییرات داده‌های $x_1, x_2, ..., x_5$ به ترتیب ۱ و $\\dfrac{1}{2}$ باشند، حاصل $(2x_1 - 4)^2 + ... + (2x_5 - 4)^2$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2041/stem_1.webp",
+        "alt": "متن سوال ۲۰۴۱",
+        "aspect_ratio": 11.6481
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2041/option_1_2.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 2.2245
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{5}{4}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2041/option_2_3.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 2.3265
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2041/option_3_4.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.8744
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2041/option_4_5.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 2.2222
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واریانس و ضریب تغییرات $x_1, x_2, \\dots, x_5$ به ترتیب ۱ و $\\frac{1}{2}$ است.\n$$ \\sigma^2=1 \\Rightarrow \\sigma=1 $$\n$$ CV = \\frac{1}{2} \\Rightarrow \\frac{\\sigma}{\\overline{x}} = \\frac{1}{2} \\Rightarrow \\frac{1}{\\overline{x}} = \\frac{1}{2} \\Rightarrow \\overline{x}=2 $$\nخواهیم داشت:\n$$ \\sigma^2 = \\frac{(x_1-2)^2 + (x_2-2)^2 + \\cdots + (x_5-2)^2}{5} = 1 $$\n$$ \\Rightarrow (x_1-2)^2 + (x_2-2)^2 + \\cdots + (x_5-2)^2 = 5 $$\n$$ \\xrightarrow{\\times 4} 4(x_1-2)^2 + 4(x_2-2)^2 + \\cdots + 4(x_5-2)^2 = 20 $$\n$$ \\Rightarrow (2x_1-4)^2 + (2x_2-4)^2 + \\cdots + (2x_5-4)^2 = 20 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2041/solution_6.webp",
+        "alt": "حل سوال ۲۰۴۱",
+        "aspect_ratio": 0.3669
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2041,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 190,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            750,
+            1430,
+            830
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۴۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            830,
+            1430,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            830,
+            1040,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            830,
+            640,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            830,
+            440,
+            900
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0190.jpg",
+          "box": [
+            70,
+            95,
+            255,
+            470
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۴۱"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_2042",
+    "subject": "math",
+    "topic_key": "statistics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو داروی A و B را در یک بخش بیمارستان استفاده کرده‌ایم. در ۵ روز کاری تعداد داروی فاسد در جدول مقابل آورده شده است:\nنسبت ضریب تغییرات گروه A به گروه B کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2042/stem_1.webp",
+        "alt": "متن سوال ۲۰۴۲",
+        "aspect_ratio": 11.0926
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2042/stem_2.webp",
+        "alt": "متن سوال ۲۰۴۲ (ادامه)",
+        "aspect_ratio": 11.6481
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2042/stem_3.webp",
+        "alt": "جدول سوال ۲۰۴۲",
+        "aspect_ratio": 1.3191
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{2}}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2042/option_1_4.webp",
+          "alt": "گزینه ۱",
+          "aspect_ratio": 1.5797
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2042/option_2_5.webp",
+          "alt": "گزینه ۲",
+          "aspect_ratio": 1.6522
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2\\sqrt{2}}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2042/option_3_6.webp",
+          "alt": "گزینه ۳",
+          "aspect_ratio": 1.6522
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{10}}{5}$"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_2042/option_4_7.webp",
+          "alt": "گزینه ۴",
+          "aspect_ratio": 1.942
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ضریب تغییرات دو گروه را به دست می‌آوریم:\nگروه A: $\\overline{x} = \\frac{3+2+1+3+1}{5} = 2$\n$$ \\Rightarrow \\sigma^2 = \\frac{1^2+0+1^2+1^2+1^2}{5} = \\frac{4}{5} \\Rightarrow \\sigma = \\frac{2}{\\sqrt{5}} $$\n$$ \\Rightarrow CV_1 = \\frac{\\sigma}{\\overline{x}} = \\frac{\\frac{2}{\\sqrt{5}}}{2} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5} $$\nگروه B: $\\overline{x} = \\frac{2+0+1+3+4}{5} = 2$\n$$ \\Rightarrow \\sigma^2 = \\frac{0+2^2+1^2+1^2+2^2}{5} = 2 \\Rightarrow \\sigma = \\sqrt{2} $$\n$$ \\Rightarrow CV_2 = \\frac{\\sigma}{\\overline{x}} = \\frac{\\sqrt{2}}{2} $$\nخواهیم داشت:\n$$ \\frac{CV_1}{CV_2} = \\frac{\\frac{\\sqrt{5}}{5}}{\\frac{\\sqrt{2}}{2}} = \\frac{2\\sqrt{5}}{5\\sqrt{2}} = \\frac{\\sqrt{2}}{\\sqrt{5}} = \\frac{\\sqrt{10}}{5} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_2042/solution_8.webp",
+        "alt": "حل سوال ۲۰۴۲",
+        "aspect_ratio": 0.5783
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 2042,
+      "question_pdf": "18.pdf",
+      "question_page": 7,
+      "solution_page": 190,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            260,
+            870,
+            1430,
+            950
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۴۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            950,
+            1430,
+            1030
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "متن سوال ۲۰۴۲ (ادامه)"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            40,
+            870,
+            260,
+            1030
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "جدول سوال ۲۰۴۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            1240,
+            1030,
+            1430,
+            1140
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            840,
+            1030,
+            1040,
+            1140
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            440,
+            1030,
+            640,
+            1140
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            200,
+            1030,
+            440,
+            1140
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0190.jpg",
+          "box": [
+            260,
+            95,
+            560,
+            470
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۴۲"
+        }
+      ]
+    }
+  }
+]

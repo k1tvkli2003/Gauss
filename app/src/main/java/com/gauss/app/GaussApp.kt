@@ -2,6 +2,7 @@ package com.gauss.app
 
 import android.app.Application
 import android.content.Context
+import com.gauss.app.data.GamificationRepository
 import com.gauss.app.data.HistoryRepository
 import com.gauss.app.data.QuestionBank
 import com.gauss.app.data.db.GaussDatabase
@@ -10,6 +11,7 @@ import com.gauss.app.data.db.GaussDatabase
 class GaussApp : Application() {
 
     val history: HistoryRepository by lazy { HistoryRepository(GaussDatabase.get(this)) }
+    val gamification: GamificationRepository by lazy { GamificationRepository(GaussDatabase.get(this)) }
 
     /** Loads (and caches) the bundled question bank off the main thread. */
     suspend fun questionBank(): QuestionBank = QuestionBank.get(this)

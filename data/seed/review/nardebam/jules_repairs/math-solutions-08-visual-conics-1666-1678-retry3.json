@@ -1,0 +1,166 @@
+{
+  "task_id": "math-solutions-08-visual-conics",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1666,
+      "solution_page": 156,
+      "solution_text": "شکل حاصل نیم‌کره‌ای به شعاع ۳ می‌باشد که مخروطی به شعاع قاعده و ارتفاع ۳ از درون آن خالی شده است.\n$V_{\\text{نیم‌کره}} = \\frac{1}{2}(\\frac{4}{3}\\pi r^3) = \\frac{2}{3}\\pi(3)^3 = 18\\pi$\n$V_{\\text{مخروط}} = \\frac{\\pi}{3} r^2 h = \\frac{\\pi}{3} \\times 3^2 \\times 3 = 9\\pi$\n$\\Rightarrow V = V_{\\text{نیم‌کره}} - V_{\\text{مخروط}} = 18\\pi - 9\\pi = 9\\pi$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0156.jpg",
+          "box_2d": [
+            950,
+            160,
+            1750,
+            300
+          ],
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1667,
+      "solution_page": 156,
+      "solution_text": "شکل حاصل نیم‌کره‌ای به شعاع ۲ است که نیم‌کره‌ای دیگر به شعاع ۱ از درون آن خالی شده است.\n$V_{\\text{نیم‌کره بزرگ}} = \\frac{2}{3}\\pi R^3 = \\frac{2}{3}\\pi \\times 2^3 = \\frac{16\\pi}{3}$\n$V_{\\text{نیم‌کره کوچک}} = \\frac{2}{3}\\pi r^3 = \\frac{2}{3}\\pi \\times 1^3 = \\frac{2\\pi}{3}$\n$\\Rightarrow V = V_1 - V_2 = \\frac{16\\pi}{3} - \\frac{2\\pi}{3} = \\frac{14\\pi}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0156.jpg",
+          "box_2d": [
+            950,
+            420,
+            1750,
+            560
+          ],
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1668,
+      "solution_page": 156,
+      "solution_text": "مجموع فواصل هر نقطه روی بیضی از دو کانون برابر $2a$ است.\n$2a = 8 \\Rightarrow a = 4$\nفاصله کانونی برابر $2c$ می‌باشد.\n$a^2 = b^2 + c^2 \\Rightarrow 16 = b^2 + 9 \\Rightarrow b^2 = 7 \\Rightarrow b = \\sqrt{7}$\nبنابراین: $2b = 2\\sqrt{7}$ = اندازه قطر کوچک",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1669,
+      "solution_page": 156,
+      "solution_text": "M نقطه‌ای روی بیضی است، بنابراین:\n$MF + MF' = 2a \\Rightarrow 3 + 5 = 2a \\Rightarrow a = 4$\n$AA' = 2a = 8 \\Rightarrow AF + A'F' = AA' - FF' = 8 - 6 = 2$\n$\\Rightarrow 2AF = 2 \\Rightarrow AF = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0156.jpg",
+          "box_2d": [
+            950,
+            780,
+            1750,
+            950
+          ],
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1670,
+      "solution_page": 156,
+      "solution_text": "P و Q نقاط روی بیضی هستند. بنابراین:\n$BF + BF' = PF + PF' \\xrightarrow{BF=BF'} 2BF' = PF + PF'$\n$\\Rightarrow 12 = 8 + PF' \\Rightarrow PF' = 4$\nمحیط چهارضلعی = $6 + 6 + 8 + 4 = 24$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1671,
+      "solution_page": 156,
+      "solution_text": "P و Q دو نقطه روی بیضی هستند. بنابراین:\n$PF + PF' = QF + QF' = 2a = 26$\n$\\Rightarrow \\text{محیط } PQF = 26 + 26 = 52$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1672,
+      "solution_page": 156,
+      "solution_text": "می‌دانیم: $AF = 1, A'F = 25$\n$\\Rightarrow AA' = AF + A'F = 1 + 25 = 26 \\Rightarrow a = 13$\n$FF' = AF' - AF = A'F - AF = 25 - 1 = 24 \\Rightarrow c = 12$\nمی‌دانیم: $a^2 = b^2 + c^2 \\Rightarrow b^2 = a^2 - c^2 = 169 - 144 = 25$\n$\\Rightarrow b = 5 \\Rightarrow 2b = 10$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0156.jpg",
+          "box_2d": [
+            950,
+            1310,
+            1750,
+            1480
+          ],
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1673,
+      "solution_page": 156,
+      "solution_text": "B نقطه‌ای روی بیضی است:\n$BF + BF' = 2a \\Rightarrow 2BF = 2a \\Rightarrow BF = a$\nمثلث $BFF'$ متساوی‌الاضلاع است بنابراین $\\hat{F} = 60^\\circ$ می‌باشد.\n$\\frac{OB}{BF} = \\sin 60^\\circ \\Rightarrow \\frac{b}{a} = \\frac{\\sqrt{3}}{2} \\Rightarrow \\frac{a}{b} = \\frac{2}{\\sqrt{3}} = \\frac{2\\sqrt{3}}{3}$\n$\\Rightarrow \\frac{2a}{2b} = \\frac{2\\sqrt{3}}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0156.jpg",
+          "box_2d": [
+            950,
+            2170,
+            1750,
+            2360
+          ],
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1674,
+      "solution_page": 156,
+      "solution_text": "B' نقطه‌ای روی بیضی است، بنابراین:\n$B'F + B'F' = 2a = 8 \\Rightarrow 2B'F = 8 \\Rightarrow B'F = 4$\n$\\hat{B'} = 120^\\circ \\Rightarrow \\frac{\\hat{B'}}{2} = 60^\\circ$\nدر مثلث $OB'F$ زاویه $B'$ برابر $60^\\circ$ است در نتیجه:\n$\\frac{OF}{B'F} = \\sin 60^\\circ = \\frac{\\sqrt{3}}{2} \\Rightarrow OF = \\frac{\\sqrt{3}}{2} B'F = 2\\sqrt{3}$\n$\\Rightarrow c = 2\\sqrt{3} \\Rightarrow FF' = 2c = 4\\sqrt{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1675,
+      "solution_page": 156,
+      "solution_text": "B نقطه‌ای روی بیضی است. بنابراین:\n$BF + BF' = 2a \\Rightarrow 2BF' = 2a \\Rightarrow BF' = a$\nدر مثلث قائم‌الزاویه $BOF'$ می‌دانیم $OB=b$ و $OF'=c$ و $BF'=a$ است.\nبا توجه به این که چهارضلعی مربع است، قطرها با هم برابر بوده و یکدیگر را نصف می‌کنند؛ در نتیجه:\n$OB = OF' \\Rightarrow b = c$\n$a^2 = b^2 + c^2 = 2c^2 \\Rightarrow \\frac{c^2}{a^2} = \\frac{1}{2} \\Rightarrow \\frac{c}{a} = e = \\frac{\\sqrt{2}}{2}$\nنکته: در بیضی هرگاه $b=c$ باشد، خروج از مرکز برابر $\\frac{\\sqrt{2}}{2}$ است و برعکس.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1676,
+      "solution_page": 156,
+      "solution_text": "مجموع فواصل نقطه $P(4, 1)$ از دو کانون $F(1, 5)$ و $F'(1, -3)$ برابر $2a$ است.\n$2a = PF + PF' = \\sqrt{9+16} + \\sqrt{9+16} = 10 \\Rightarrow a = 5$\n$FF' = 2c \\Rightarrow 2c = 8 \\Rightarrow c = 4 \\Rightarrow e = \\frac{c}{a} = \\frac{4}{5} = 0/8$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1677,
+      "solution_page": 156,
+      "solution_text": "مرکز بیضی وسط $BB'$ می‌باشد.\n$B(-2, 2)$ و $B'(6, 2) \\Rightarrow O(2, 2)$\n$BB' = 2b = 8 \\Rightarrow b = 4$\n$e = \\frac{c}{a} = \\frac{\\sqrt{5}}{3} \\Rightarrow c = \\frac{\\sqrt{5}}{3} a$\n$a^2 = b^2 + c^2 \\Rightarrow a^2 = 16 + \\frac{5}{9} a^2 \\Rightarrow \\frac{4}{9} a^2 = 16$\nبنابراین: $\\Rightarrow a^2 = 36 \\Rightarrow a = 6$\nبا توجه به این که رئوس فرعی بر یک خط افقی قرار دارند، بیضی قائم است.\nدر نتیجه:\n$A(\\alpha, \\beta+a) \\Rightarrow A(2, 2+6) \\Rightarrow A(2, 8)$\n$A'(\\alpha, \\beta-a) \\Rightarrow A'(2, 2-6) \\Rightarrow A'(2, -4)$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1678,
+      "solution_page": 156,
+      "solution_text": "نکته: وتری که بر قطر اصلی عمود و از یکی از کانون‌ها عبور می‌کند، وتر کانونی و طول آن برابر $\\frac{2b^2}{a}$ است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    }
+  ],
+  "review_notes": []
+}

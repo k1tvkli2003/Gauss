@@ -1,0 +1,2152 @@
+{
+  "task_id": "math-solutions-06",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1040,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "حد راست تابع در $x=1$ از ضابطهٔ اول محاسبه می‌شود:\n$\\lim_{x\\to1^+}f(x)=\\lim_{x\\to1^+}x^2+\\frac1{\\sqrt{x}}=1+1=2$\nحد چپ تابع در $x=1$ از ضابطهٔ دوم به دست می‌آید:\n$\\lim_{x\\to1^-}f(x)=\\lim_{x\\to1^-}3+[-x^2]=3+[-1^+]=2$\nمقدار تابع نیز از ضابطهٔ دوم محاسبه می‌شود: $f(1)=3+[-1]=2$. حد چپ و راست و مقدار تابع برابرند، پس تابع در این نقطه پیوسته است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1041,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "حد تابع با مقدار آن در $x=1$ برابر است:\n$a=\\lim_{x\\to1}\\frac{x-\\sqrt{x}}{x^2-1}=\\lim_{x\\to1}\\frac{\\sqrt{x}(\\sqrt{x}-1)}{(x-1)(x+1)}=\\frac16$.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1042,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "مقدار تابع باید با حد آن در $x=1$ برابر باشد. ابتدا باید صورت حد صفر شود: $a+b=0\\Rightarrow b=-a$. سپس\n$\\lim_{x\\to1}\\frac{ax-a}{x^3-x}=\\lim_{x\\to1}\\frac{a(x-1)}{x(x-1)(x+1)}=\\frac a2=1$\nپس $a=2$ و $b=-2$؛ بنابراین $f(-2)=\\frac{-2a+b}{-8+2}=1$.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1043,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "حد راست تابع باید با مقدار تابع در $x=3$ برابر باشد:\n$\\lim_{x\\to3^+}\\frac{x^2-x-6}{2x-6}=3a+b=\\frac52$\nو $f(1)=2\\Rightarrow a+b=2$. از این دو رابطه $2a=\\frac12$، پس $a=\\frac14$ و $b=\\frac74$؛ بنابراین $\\frac ab=\\frac17$.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 2 conflicts with authoritative answer key 4; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 1044,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "حد چپ و راست تابع با مقدار آن در $x=-2$ برابر است:\n$\\lim_{x\\to(-2)^+}f(x)=\\lim_{x\\to(-2)^-}f(x)=f(-2)$\nاز ضابطهٔ سمت راست $-4-b$ و از ضابطهٔ سمت چپ $5-\\frac a2$ به دست می‌آید؛ پس $-4-b=5-\\frac a2$ و در نتیجه $\\frac a2-b=9$.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1045,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "حد چپ و راست تابع را با مقدار تابع در $x=1$ بررسی می‌کنیم. $f(1)=1-4=-3$.\n$\\lim_{x\\to1^+}\\frac{x^2-x}{\\sqrt[3]{x}-1}=3$ و $\\lim_{x\\to1^-}\\frac{x^2-x}{\\sqrt{x}-1}=-3$.\nحد چپ با $f(1)$ برابر است؛ بنابراین تابع در این نقطه پیوستگی چپ دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1046,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x=3$ محاسبه می‌کنیم:\n$f(x)=\\frac{[-x](3-x)}{|x-3|}$\n$\\lim_{x\\to3^+}f(x)=4$ و $\\lim_{x\\to3^-}f(x)=-3$.\nتابع در $x=3$ حد ندارد؛ بنابراین برای هیچ مقدار $k$ پیوسته نخواهد بود.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1047,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "مقدار تابع در نقطهٔ $x=0$ باید با حد چپ آن برابر باشد:\n$\\lim_{x\\to0^-}\\frac{\\frac1{\\sqrt{1-4x}}-1}{2x}=-1$\nپس $k=-1$.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 3 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 1048,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "اگر $f(a)\\in\\mathbb{Z}$ و تابع $f(x)$ در $x=a$ اکیداً نزولی باشد، تابع $y=[f(x)]$ در $x=a$ فقط پیوستگی چپ دارد. نمونهٔ متناظر $y=[\\cos x]$ در $x=\\frac{\\pi}{2}$ است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1049,
+      "solution_page": "page_0098.jpg",
+      "solution_text": "حد چپ و راست و مقدار تابع را در $x=6$ محاسبه می‌کنیم:\n$\\lim_{x\\to6^-}f(x)=\\sin\\frac{3\\pi}{2}(\\cos[\\frac{6^-}{2}]\\pi)=(-1)\\cos\\frac{5\\pi}{2}=0$\n$\\lim_{x\\to6^+}f(x)=f(6)=\\sin\\frac{3\\pi}{2}(\\cos3\\pi)=(-1)(-1)=1$.\nتابع در $x=6$ ناپیوسته است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1050,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "حد چپ و راست تابع در $x=\\frac{3\\pi}{4}$ را با مقدار تابع برابر قرار می‌دهیم:\n$\\lim_{x\\to(3\\pi/4)^-}f(x)=\\frac{\\cos2x}{1-\\tan^2x}=\\frac12$\nو $\\lim_{x\\to(3\\pi/4)^+}f(x)=f(\\frac{3\\pi}{4})=a\\sin\\frac{3\\pi}{2}=-a$.\nپس $-a=\\frac12$ و $a=-\\frac12$.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1051,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "حد چپ و راست تابع و مقدار آن در $x=2$ برابر است:\n$\\lim_{x\\to2^-}f(x)=\\frac{a[2^-]-2}{6-2[2^-]}=\\frac{a-2}{4}$\n$\\lim_{x\\to2^+}f(x)=f(2)=\\frac{2a-2}{6-4}=a-1$.\nپس $\\frac{a-2}{4}=a-1$ و $a=\\frac23$.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 3 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 1052,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "حد چپ و راست تابع و مقدار آن در $x=\\frac16$ برابر است:\n$\\lim_{x\\to(1/6)^-}f(x)=\\frac{2+k}{3-[1^-]}=\\frac{k+2}{3}$\n$\\lim_{x\\to(1/6)^+}f(x)=f(\\frac16)=\\frac{2+k}{3-1}=\\frac{k+2}{2}$.\nپس $k+2=0$ و $k=-2$؛ بنابراین $f(\\frac16)=\\frac{4-2}{3-1}=2$.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1053,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "حد چپ و مقدار تابع در $x=-2$ برابر است:\n$\\lim_{x\\to(-2)^-}f(x)=[(-3)](a[(-2)^-]-2)=-3(2a-2)=-6a+6$\nو $f(-2)=-2(2a-2)=-4a+4$. پس $-6a+6=-4a+4$ و $a=1$.\nهمچنین $\\lim_{x\\to(-2)^+}f(x)=[(-2)^+](2[(-2)^+]-2)=-2(-2)=4$.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1054,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "اگر تابع $f$ در $x=a$ پیوسته باشد، $f^2$ نیز در $x=a$ پیوسته است؛ ولی چون $g$ در آن نقطه ناپیوسته است، $f^2-g$ نیز در $x=a$ ناپیوسته است. مثال نقض‌های چاپ‌شده: برای گزارهٔ 1، $f(x)=x-1$ و $g(x)=(-1)^{[x]}$ در $x=2$؛ برای گزاره‌های 2 و 4، $f(x)=x-2$ و $g(x)=[x]$ در $x=2$.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1055,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "حد راست تابع $f-g$ در $x=3$ با مقدار آن برابر است:\n$\\lim_{x\\to3^+}(f-g)(x)=\\lim f(x)-\\lim g(x)=(6-a)-(3-1)=4-a$.\nاز طرفی $(f-g)(3)=f(3)-g(3)=3-(\\frac a3-2)=5-\\frac a3$.\nپس $4-a=5-\\frac a3$ و $a=-\\frac32$.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1056,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "اگر $g(x)=|f(x)-k|$ باشد، شرط پیوستگی در $x=-1$ چنین است:\n$\\lim_{x\\to(-1)^+}|f(x)-k|=\\lim_{x\\to(-1)^-}|f(x)-k|$\n$|6-k|=|-2-k| \\Rightarrow |6-k|=|k+2|$.\nپس $(k-6)^2=(k+2)^2$ و $k=2$.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1057,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "حد چپ تابع در $x=n$ با حد راست و مقدار آن برابر است:\n$\\lim_{x\\to n^-}f(x)=(n^2-1)-(n-1)=2n-2$\nو $\\lim_{x\\to n^+}f(x)=f(n)=[n^2]-[n]^2=0$. پس $2n-2=0$ و $n=1$.\nدر نتیجه $f(\\frac{2n+2}{3})=f(\\frac43)=[\\frac{16}{9}]-[\\frac43]^2=1-1=0$.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1058,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "اگر $f(a)\\in\\mathbb{Z}$ و تابع $f(x)$ در $x=a$ دارای ماکزیمم نسبی باشد، تابع $y=[f(x)]$ در $x=a$ دارای حد است ولی پیوسته نیست. با توجه به نمودار، $x=6$ پاسخ است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1059,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "حد چپ و راست و مقدار تابع $[-f(x)]$ را در $x=k$ محاسبه می‌کنیم:\n$\\lim_{x\\to k^-}[-f(x)]=[3^-]=2$\n$\\lim_{x\\to k^+}[-f(x)]=[2^-]=1$\nو در $x=k$، $[-f(k)]=[3]=2$. حد چپ با مقدار تابع برابر است؛ پس تابع فقط پیوستگی چپ دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1060,
+      "solution_page": "page_0099.jpg",
+      "solution_text": "تابع $y=x^2+ax+b$ در $\\mathbb{R}$ پیوسته و تابع $\\frac{x^2+ax+b}{f(x)}$ در سه نقطهٔ $x=1,2,3$ ناپیوسته است. برای این‌که کسر فقط در یکی از این سه نقطه ناپیوسته باشد، دو نقطه باید ریشهٔ صورت باشند.\nحالت‌ها: ریشه‌های 1 و 2، $b-a=3-(-3)=6$؛ ریشه‌های 1 و 3، $b-a=3-(-4)=7$؛ ریشه‌های 2 و 3، $b-a=6-(-5)=11$. بنابراین $b-a$ نمی‌تواند 9 باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1061,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "برای این‌که تابع $y=\\sqrt{x^2-2mx+12-m}$ در $\\mathbb{R}$ پیوسته باشد، کافی است در $\\mathbb{R}$ تعریف‌شده باشد. بنابراین عبارت زیر رادیکال باید همواره بزرگ‌تر یا مساوی صفر باشد:\n$\\Delta \\leq 0 \\Rightarrow 4m^2-4(12-m)\\leq0 \\Rightarrow m^2+m-12\\leq0$\n$\\Rightarrow (m+4)(m-3)\\leq0 \\Rightarrow -4\\leq m\\leq3$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1062,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "تابع $f(x)$ باید در $x=2$ پیوسته باشد.\n$\\lim_{x\\to2^+}f(x)=\\lim_{x\\to2^+}\\frac{2a}{x}=a$\n$\\lim_{x\\to2^-}f(x)=f(2)=\\frac{4}{2a-2}=\\frac{2}{a-1}$\nپس $a=\\frac{2}{a-1} \\Rightarrow a^2-a-2=0$ و $a=2$ (ریشهٔ $a=-1$ مردود است).",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1063,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "تابع $f(x)$ باید در $x=-3$ پیوسته باشد.\n$\\lim_{x\\to(-3)^+}f(x)=\\lim_{x\\to(-3)^+}\\frac{|(x+3)(x-1)|}{x+3}=4$\n$\\lim_{x\\to(-3)^-}f(x)=\\lim_{x\\to(-3)^-}\\frac{|(x+3)(x-1)|}{x+3}=-4$\nتابع $f(x)$ در $x=-3$ حد ندارد؛ بنابراین به ازای هیچ مقداری از $a$ در این نقطه پیوسته نیست.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1064,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "تابع $f(x)$ باید در $x=a$ پیوسته باشد.\n$\\lim_{x\\to a^-}f(x)=\\frac{3}{a}$ و $\\lim_{x\\to a^+}f(x)=f(a)=\\frac{a-1}{2}$\n$\\frac{3}{a}=\\frac{a-1}{2} \\Rightarrow a^2-a-6=0 \\Rightarrow (a+2)(a-3)=0$\n$a=-2$ پذیرفته می‌شود و $a=3$ مردود است، زیرا در این حالت تابع در $x=0$ تعریف‌نشده و ناپیوسته است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1065,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "تابع $f(x)$ در $x=1$ پیوسته است:\n$\\lim_{x\\to1^+}f(x)=f(1)=\\lim_{x\\to1^-}f(x) \\Rightarrow g(1)=\\lim_{x\\to1^-}(x^2-2x)=-1$\nتابع $f(x)$ در $x=-1$ پیوسته است:\n$g(-1)=\\lim_{x\\to(-1)^+}(x^2-2x)=1$\nتابع $g(x)$ از دو نقطهٔ $(-1,1)$ و $(1,-1)$ عبور می‌کند؛ بنابراین $g(x)=-x$ قابل قبول است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1066,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "تابع $[2x]$ در بازهٔ $(-1,1)$ در نقاط $x=-\\frac12$، $x=0$ و $x=\\frac12$ ناپیوسته است، اما تابع $x[2x]$ در نقطهٔ $x=0$ پیوسته است (عامل صفرکننده). بنابراین تابع در سه نقطهٔ $x=-\\frac12$، $x=\\frac12$ و $x=1$ ناپیوسته است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1067,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "تابع $[x]$ در بازهٔ $(-1,1)$ در $x=0$ ناپیوسته است. تابع $(x+c)[x]$ در $x=0$ به شرطی پیوسته می‌شود که $x+c$ در $x=0$ برابر صفر باشد؛ یعنی $c=0$.\nتابع $f(x)$ باید در $x=1$ و $x=-1$ پیوسته باشد. از پیوستگی در $x=1$ داریم $a-b=0$، پس $a=b$. از پیوستگی در $x=-1$ داریم $-a-b=1$، پس $b=-\\frac12$ و در نتیجه $b-c=-\\frac12$.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1068,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "تابع $f(x)$ باید در $x=-2$ پیوسته باشد.\n$\\lim_{x\\to(-2)^-}f(x)=\\lim_{x\\to(-2)^-}\\frac{2x+4}{x+\\sqrt{2-x}}=\\lim_{x\\to(-2)^-}\\frac{-8(x+2)}{(x+2)(x-1)}=\\frac83$\n$\\lim_{x\\to(-2)^+}f(x)=f(-2)=-2a+2$\nپس $-2a+2=\\frac83 \\Rightarrow a=-\\frac13$.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1069,
+      "solution_page": "page_0100.jpg",
+      "solution_text": "تابع $f(x)$ باید در $x=1$ پیوسته باشد و حد داده‌شده برابر $\\frac13$ است. برای رفع ابهام باید ریشهٔ صورت کسر $x=1$ باشد، پس $\\sqrt[3]{1+a}=b$.\nبا تجزیهٔ تفاضل مکعب‌ها:\n$\\lim_{x\\to1}\\frac{\\sqrt[3]{x+a}-\\sqrt[3]{1+a}}{x-1}=\\frac{1}{3\\sqrt[3]{(1+a)^2}}=\\frac13$\nپس $\\sqrt[3]{(1+a)^2}=1$ و دو حالت $(a,b)=(0,1)$ یا $(-2,-1)$ به دست می‌آید؛ در هر دو حالت $|a-b|=1$.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1070,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "تابع $f(x)$ در تمام نقاطی که $\\frac{4x - 1}{6} \\in \\mathbb{Z}$ باشد، ناپیوسته است.\n$x > 1 \\Rightarrow 4x > 4 \\Rightarrow 4x - 1 > 3 \\Rightarrow \\frac{4x - 1}{6} > \\frac{1}{2}$\nاولین عدد صحیح بزرگ‌تر از $\\frac{1}{2}$ برابر ۱ است.\n$\\frac{4x - 1}{6} = 1 \\Rightarrow x = \\frac{7}{4}$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1071,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "تابع $y = -x$ اکیداً نزولی است، بنابراین تابع $y = [-x]$ در $\\mathbb{Z}$ فقط در نقاط صحیح فقط پیوستگی چپ دارد. با توجه به پیوستگی تابع $y = x$ در $\\mathbb{R}$ نتیجه می‌گیریم $f(x) = x - [-x]$ در تمام نقاط صحیح فقط پیوستگی چپ دارد. تنها گزینهٔ قابل قبول ۴ می‌باشد.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1072,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "تابع $y = \\left[\\frac{x}{3}\\right]$ هنگامی که $\\frac{x}{3} = k \\in \\mathbb{Z}$ باشد، ناپیوسته است. یعنی اگر $x = 3k$ باشد، تابع $y = \\left[\\frac{x}{3}\\right]$ و به دنبال آن $f(x) = 3x - \\left[\\frac{x}{3}\\right]$ ناپیوسته خواهد بود.\n$0 < x < 7 \\Rightarrow 0 < 3k < 7 \\Rightarrow 0 < k < \\frac{7}{3}$\n$k \\in \\mathbb{Z} \\Rightarrow \\begin{cases} k = 1 \\Rightarrow x = 3 \\\\ k = 2 \\Rightarrow x = 6 \\end{cases}$\n$f(x)$ در دو نقطهٔ $x = 3$ و $x = 6$ ناپیوسته است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1073,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "ابتدا تابع $f(x)$ را ساده می‌کنیم، اگر $t = x - \\frac{1}{5}$ باشد، خواهیم داشت:\n$f(x) = [t] + [t + 1] = 2[t] + 1 = 2\\left[x - \\frac{1}{5}\\right] + 1$\nاگر $x - \\frac{1}{5} \\in \\mathbb{Z}$ باشد، تابع $f(x)$ ناپیوسته است.\n$-\\frac{8}{5} \\leq x \\leq \\frac{8}{5} \\Rightarrow -\\frac{9}{5} \\leq x - \\frac{1}{5} \\leq \\frac{7}{5}$\nاگر $x - \\frac{1}{5} \\in \\{-1, 0, 1\\}$ باشد، تابع $f(x)$ ناپیوسته است. به عبارت دیگر در نقاط $x = -\\frac{4}{5}$، $x = \\frac{1}{5}$ و $x = \\frac{6}{5}$ تابع $f$ ناپیوسته است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1074,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "واضح است که تابع در نقاط صحیح فرد پیوسته است، زیرا $\\cos \\frac{\\pi x}{2}$ در این نقاط برابر صفر بوده و بنابراین حد و مقدار تابع $f(x)$ در این نقاط صفر می‌شود.\nحال پیوستگی تابع را در نقاط صحیح زوج ($x = 2k$) بررسی می‌کنیم:\n$\\lim_{x \\to (2k)^-} f(x) = (-1)^{\\left[(2k)^-\\right]} \\cos k\\pi = (-1)^{2k - 1} \\cos k\\pi = -\\cos k\\pi$\n$\\lim_{x \\to (2k)^+} f(x) = f(2k) = (-1)^{\\left[(2k)^+\\right]} \\cos k\\pi = (-1)^{2k} \\cos k\\pi = \\cos k\\pi$\nبا توجه به این‌که $\\cos k\\pi \\neq 0$ می‌باشد، بدیهی است $f(x)$ در نقاط زوج ناپیوسته است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1075,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "تابع $[2x]$ در نقاط $x = \\frac{1}{2}$ و $x = 1$ از بازهٔ $(0, \\frac{3}{2})$ ناپیوسته است. بنابراین $f(x) = (x^2 + ax + b)[2x]$ به شرطی در این نقاط پیوسته خواهد بود که $x = \\frac{1}{2}$ و $x = 1$ ریشه‌های عبارت $x^2 + ax + b$ باشند.\n$\\Rightarrow x^2 + ax + b = \\left(x - \\frac{1}{2}\\right)(x - 1) = x^2 - \\frac{3}{2}x + \\frac{1}{2}$\n$\\Rightarrow f(x) = \\left(x - \\frac{1}{2}\\right)(x - 1)[2x] \\Rightarrow f(3) = \\frac{5}{2} \\times 2 \\times [6] = 30$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1076,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "$y = x[x] + [x] = [x](x + 1)$\nمی‌دانیم $[x]$ در نقاط صحیح ناپیوسته است و فقط پیوستگی راست دارد.\nتابع $y = [x](x + 1)$ در نقطهٔ $x = -1$ پیوسته است و حد و مقدار تابع در این نقطه برابر صفر است. می‌توان نتیجه گرفت $y = [x](x + 1)$ در بازهٔ $[-2, 0)$ پیوسته است و بیشترین مقدار $k$ برابر صفر خواهد بود.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1077,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "تابع $[\\sqrt{x}]$ در $x$هایی که $\\sqrt{x} \\in \\mathbb{Z}$ باشد، ناپیوسته است.\n$1 < x < 20 \\Rightarrow 1 < \\sqrt{x} < \\sqrt{20} \\xrightarrow{\\sqrt{x} \\in \\mathbb{Z}} \\sqrt{x} \\in \\{2, 3, 4\\} \\Rightarrow x \\in \\{4, 9, 16\\}$\nتابع $y = (x - 9)[\\sqrt{x}]$ در $x = 9$ پیوسته است، زیرا حد و مقدار تابع برابر صفر می‌شود (عامل صفرکننده). بنابراین تابع داده‌شده تنها در نقاط $x = 4$ و $x = 16$ ناپیوسته است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1078,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "تابع $\\left[\\frac{3}{x}\\right]$ در $x$هایی که $\\frac{3}{x} \\in \\mathbb{Z}$ ناپیوسته است.\n$\\frac{1}{3} < x \\leq k \\Rightarrow \\frac{1}{k} \\leq \\frac{1}{x} < 3 \\Rightarrow \\frac{3}{k} \\leq \\frac{3}{x} < 9$\nحداقل مقدار $\\frac{3}{k}$ برای این‌که $\\left[\\frac{3}{x}\\right]$ پیوسته باشد برابر ۸ است:\n$\\frac{3}{k} = 8 \\Rightarrow k = \\frac{3}{8}$\nبنابراین حداکثر مقدار $k$ برابر $\\frac{3}{8}$ است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1079,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "تابع $[ax]$ باید در بازهٔ $(\\frac{2}{a}, 3]$ پیوسته باشد. بدیهی است $a > 0$ است.\n$3 \\leq x < \\frac{2}{a} \\Rightarrow 3a \\leq ax < 2$\nبا توجه به $2 > ax$ بزرگ‌ترین بازه‌ای که $[ax]$ در آن پیوسته است، بازهٔ $[1, 2)$ می‌باشد. بنابراین کم‌ترین مقدار $3a$ برابر ۱ و در نتیجه حداقل $a$ برابر $\\frac{1}{3}$ است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1080,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "با توجه به نمودار $4x + x^2 = y$ مقدار این تابع به ازای $x$های کوچک‌تر یا مساوی $-4$، در بازهٔ $[0, +\\infty)$ قرار دارد و در نتیجه $\\frac{1}{12}[x^2 + 4x] \\geq 0$ می‌باشد:\nبنابراین برای این‌که عبارت $\\left[\\frac{1}{12}[x^2 + 4x]\\right]$ پیوسته شود باید $0 \\leq \\frac{1}{12}[x^2 + 4x] < 1$ باشد:\n$\\Rightarrow 0 \\leq [x^2 + 4x] < 12 \\Rightarrow x^2 + 4x < 12$\n$\\Rightarrow x^2 + 4x - 12 < 0 \\Rightarrow (x + 6)(x - 2) < 0 \\Rightarrow -6 < x < 2$\nدر نتیجه حداقل مقدار $\\alpha$ برابر $-6$ است.",
+      "stated_correct_option": null,
+      "media_regions": [
+        {
+          "filename": "page_0101.jpg",
+          "region": [
+            25,
+            490,
+            185,
+            590
+          ],
+          "placement": "solution",
+          "alt": "نمودار سهمی $y = x^2 + 4x$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1081,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "**روش اول:** با توجه به وجود $[x]$ در تابع، پیوستگی $fof$ را فقط در نقاط صحیح بررسی می‌کنیم و در بقیهٔ نقاط تابع پیوسته است. ابتدا پیوستگی تابع $fof(x)$ را در یک نقطهٔ صحیح مانند $x = 1$ بررسی می‌کنیم:\n$\\lim_{x \\to 1^+} fof(x) = f(f(1^+)) = f(k[1^+] - (1^+)) = f((k - 1)^-)$\n$= k[(k - 1)^-] - (k - 1) = k(k - 2) - (k - 1) = k^2 - 3k + 1$\n$\\lim_{x \\to 1^-} fof(x) = f(f(1^-)) = f(k[1^-] - (1^-)) = f((-1)^+)$\n$= k[(-1)^+] + 1 = -k + 1$\n$fof(1) = f(k - 1) = k[k - 1] - (k - 1) = k(k - 1) - (k - 1)$\n$= k^2 - 2k + 1$\nواضح است حد چپ و راست و مقدار تابع در $x = 1$ فقط به ازای $k = 0$ با هم برابر هستند، که در این صورت $f(x) = -x$ بوده و $fof(x)$ در $\\mathbb{R}$ پیوسته خواهد بود.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1082,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "روش دوم: ابتدا $f(f(x))$ را تشکیل می‌دهیم:\n$fof(x) = f(f(x)) = k[f(x)] - f(x) = k[k[x] - x] - (k[x] - x)$\n$= k(k[x] + [-x]) - k[x] + x = (k^2 - k)[x] + k[-x] + x$\n\nنکته: تابع $y = m[x] + n[-x]$ به شرطی در نقاط صحیح حد دارد که $m = n$ باشد، نتیجه می‌گیریم:\n$k^2 - k = k \\Rightarrow k^2 - 2k = 0 \\Rightarrow \\begin{cases} k = 0 \\quad \\checkmark \\\\ k = 2 \\end{cases}$\nبه ازای $k = 2$ تابع حد دارد ولی پیوسته نمی‌باشد.\n\nتابع $y = \\dfrac{x-1}{\\sqrt{f(x)}}$ در بازهٔ $[1, 2]$ پیوسته است، زیرا $x-1$ در $\\mathbb{R}$ پیوسته و $\\sqrt{f(x)}$ نیز با توجه به نمودار $f(x)$ در $[1, 2)$ پیوسته است. در $x = 1$ علی‌رغم آن‌که $f(x)$ پیوستگی راست ندارد، اما چون $x-1$ برابر صفر می‌شود، حد راست و مقدار تابع $y = \\dfrac{x-1}{\\sqrt{f(x)}}$ برابر صفر بوده و تابع پیوستگی راست دارد.\nدر گزینه ۱، تابع $f(x)$ در $(2, 3)$ منفی بوده و عبارت $\\sqrt{f(x)}$ تعریف نشده است.\nدر گزینه ۳، تابع $f(x)$ در $x = 4$ پیوستگی چپ ندارد، بنابراین $y = \\dfrac{x-1}{\\sqrt{f(x)}}$ نیز در این نقطه پیوستگی چپ ندارد.\nدر گزینه ۴، تابع $f(x)$ در $x = 5$ برابر صفر بوده و $y = \\dfrac{x-1}{\\sqrt{f(x)}}$ تعریف نشده است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1083,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "ابتدا کسر داده‌شده را ساده می‌کنیم:\n$\\lim_{x \\to \\infty} \\dfrac{3x^{n+1}+x^n(x^2-x+1)+1}{x^{2n-1}+x^3-1} \\\\ = \\lim_{x \\to \\infty} \\dfrac{3x^{n+1}+x^{n+2}-x^{n+1}+x^n+1}{x^{2n-1}+x^3-1} \\\\ = \\lim_{x \\to \\infty} \\dfrac{x^{n+2}+2x^{n+1}+x^n+1}{x^{2n-1}+x^3-1}$\nبرای $n$ سه حالت وجود دارد:\n۱) $n > 2 \\Rightarrow \\lim_{x \\to \\infty} \\dfrac{x^{n+2}}{x^{2n-1}} = \\lim_{x \\to \\infty} \\dfrac{1}{x^{n-3}}$\nاگر $n=3$ باشد، حد برابر ۱ می‌شود و اگر $n>3$ باشد حد برابر صفر می‌شود که در هیچ حالتی جواب $\\infty$ نمی‌شود.\n۲) $n=2 \\Rightarrow \\lim_{x \\to \\infty} \\dfrac{x^4}{x^3} = \\lim_{x \\to \\infty} x = \\infty$\n۳) $n < 2 \\Rightarrow \\begin{cases} n=1 \\Rightarrow \\lim_{x \\to \\infty} \\dfrac{x^3}{x^3} = 1 \\\\ n=0 \\Rightarrow \\lim_{x \\to \\infty} \\dfrac{x^2}{x^3} = 0 \\end{cases}$\nبنابراین فقط به ازای $n=2$ حد داده‌شده برابر $\\infty$ است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 2 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 1084,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "روش اول: اگر $1 < \\dfrac{2}{x-1} < 0$ باشد، $0 = [\\dfrac{2}{x-1}]$ و تابع $f(x)$ پیوسته است.\n$0 < \\dfrac{2}{x-1} < 1 \\Rightarrow \\begin{cases} \\dfrac{2}{x-1} > 0 \\Rightarrow x > 1 \\\\ \\dfrac{2}{x-1} < 1 \\xrightarrow{x>1} x - 1 > 2 \\Rightarrow x > 3 \\end{cases} \\xrightarrow{\\cap} x > 3 \\Rightarrow x \\in (3, +\\infty)$\n\nاگر $0 < \\dfrac{2}{x-1} \\leq -1$ باشد، $-1 = [\\dfrac{2}{x-1}]$ و تابع $f(x)$ پیوسته است.\n$-1 \\leq \\dfrac{2}{x-1} < 0 \\Rightarrow \\begin{cases} \\dfrac{2}{x-1} < 0 \\Rightarrow x < 1 \\\\ \\dfrac{2}{x-1} \\geq -1 \\xrightarrow{x<1} -(x-1) \\geq 2 \\Rightarrow x - 1 \\leq -2 \\Rightarrow x \\leq -1 \\end{cases}$\n$\\xrightarrow{\\cap} x \\leq -1 \\Rightarrow x \\in (-\\infty, -1]$\n\nبنابراین حداکثر مقدار $a$ برابر $-1$ و حداقل مقدار $b$ برابر $3$ است.\n$ -1 + 3 = 2$\nروش دوم: تابع $y = \\dfrac{2}{x-1}$ در بازهٔ $(-\\infty, 1)$ اکیداً نزولی است.\n$b < x < +\\infty \\Rightarrow 0 < \\dfrac{2}{x-1} < \\dfrac{2}{b-1}$\nحداکثر $\\dfrac{2}{b-1}$ برابر یک است.\n$\\Rightarrow \\dfrac{2}{b-1} = 1 \\Rightarrow b = 3$\nبه طور مشابه $a$ نیز محاسبه می‌گردد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1085,
+      "solution_page": "page_0101.jpg",
+      "solution_text": "پاسخ حد عددی غیرصفر شده است، پس باید درجه صورت و مخرج کسر با هم برابر باشد.\n$\\Rightarrow 3m = m+2 \\Rightarrow 2m = 2 \\Rightarrow m=1$\nبا جای‌گذاری مقدار $m$ در عبارت خواهیم داشت:\n$\\lim_{x \\to -\\infty} \\dfrac{(n+1)x^3+x-1}{(n-1)x^3+2} = \\lim_{x \\to -\\infty} \\dfrac{(n+1)x^3}{(n-1)x^3} \\\\ = \\dfrac{n+1}{n-1} = 2 \\Rightarrow 2n-2 = n+1 \\Rightarrow n=3$\nبنابراین مقدار $m+n$ برابر $1+3=4$ است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 3 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 1086,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "ابتدا $f(x)$ را ساده می‌کنیم:\n$f(x) = \\dfrac{(x+1)(x-2)}{(x+1)^2 (x-2)^3} = \\dfrac{1}{(x+1)(x-2)^2}$\nخواهیم داشت:\n$\\lim_{x \\to 2^-} f(x) = \\dfrac{1}{3 \\times (0^+)} = \\dfrac{1}{0^+} = +\\infty$\n$\\lim_{x \\to (-1)^+} f(x) = \\dfrac{1}{(0^+)(9)} = \\dfrac{1}{0^+} = +\\infty$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1087,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "در $x=a$ حد عبارت برابر $-\\infty$ شده است، بنابراین $a$ یکی از ریشه‌های مخرج کسر است. حد چپ تابع را در $x=2$ ، $x=0$ و $x=-2$ محاسبه می‌کنیم:\n$\\lim_{x \\to 0^-} \\dfrac{x-3}{x^2 (x^2 - 4)} = \\dfrac{-3}{(0^+)(-4)} = \\dfrac{-3}{0^-} = +\\infty$\n$\\lim_{x \\to 2^-} \\dfrac{x-3}{x^2 (x^2 - 4)} = \\dfrac{-1}{4(0^-)} = \\dfrac{-1}{0^-} = +\\infty$\n$\\lim_{x \\to (-2)^-} \\dfrac{x-3}{x^2 (x^2 - 4)} = \\dfrac{-5}{4(0^+)} = \\dfrac{-5}{0^+} = -\\infty$\nدر نتیجه $a = -2$ است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1088,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "اگر $x > 0$ باشد، آن‌گاه $|x| = x$ و در نتیجه $|x| - x = 0$ است. بنابراین $f(x)$ در همسایگی راست صفر تعریف نشده و حد ندارد.\nدر نتیجه گزینه‌های 1 و 2 نادرست هستند.\nاگر $x < 0$ باشد، آن‌گاه $|x| = -x$:\n$\\lim_{x \\to 0^-} f(x) = \\lim_{x \\to 0^-} \\dfrac{x^2 - 2}{-2x} = \\dfrac{-2}{0^+} = -\\infty$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1089,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "ابتدا مقدار براکت را به دست می‌آوریم:\n$\\lim_{x \\to 2^+} \\dfrac{[1-x]}{2\\sqrt{x} + 7 - 3x} = \\lim_{x \\to 2^+} \\dfrac{-2}{2\\sqrt{x} + 7 - 3x} \\times \\dfrac{2\\sqrt{x} + 7 + 3x}{2\\sqrt{x} + 7 + 3x}$\n$= \\lim_{x \\to 2^+} \\dfrac{-24}{-9x^2 + 4x + 28} = \\lim_{x \\to 2^+} \\dfrac{-24}{(x-2)(-9x-14)} = \\dfrac{-24}{(0^+)(-32)} = \\dfrac{-24}{0^-} = +\\infty$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1090,
+      "solution_page": "page_0102.jpg",
+      "solution_text": "می‌دانیم اگر $x \\notin \\mathbb{Z}$ ، آن‌گاه $[x] + [-x] = -1$ است.\n$\\lim_{x \\to (-3)^+} \\dfrac{[x] + [-x]}{x+3} = \\dfrac{-1}{0^+} = -\\infty$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1091,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "روش دوم:\n$\\lim_{x \\to 3^-} \\frac{x+1}{x^2 - 3x} = \\lim_{x \\to 3^-} \\frac{x+1}{x(x-3)} = \\frac{4}{3(0^-)} = \\frac{4}{0^-} = -\\infty$\n$\\lim_{x \\to 3^-} \\frac{-1}{3-x} = \\frac{-1}{0^+} = -\\infty$\nحد هر یک از کسرها برابر $-\\infty$ است. بنابراین حد مجموع آن‌ها نیز $-\\infty$ است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "Continuation of solution 1091 from previous page."
+      ]
+    },
+    {
+      "question_number": 1092,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "وقتی $x \\to \\pi^-$، یعنی انتهای کمان $x$ در ناحیهٔ دوم و مقدار $\\sin x$ مثبت است.\n$\\lim_{x \\to \\pi^-} \\frac{\\cos x - 1}{\\sin x} = \\frac{-1 - 1}{0^+} = \\frac{-2}{0^+} = -\\infty$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1093,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "روش اول: ابتدا کسر را ساده کرده و رفع ابهام می‌کنیم:\n$\\lim_{x \\to 0^-} \\frac{\\sin x}{\\cos x - 1} \\times \\frac{\\cos x + 1}{\\cos x + 1} = \\lim_{x \\to 0^-} \\frac{(\\sin x)(2)}{\\cos^2 x - 1} = \\lim_{x \\to 0^-} \\frac{2 \\sin x}{-\\sin^2 x} = \\lim_{x \\to 0^-} \\frac{2}{-\\sin x} = \\frac{2}{0^+} = +\\infty$\nروش دوم:\n$\\lim_{x \\to 0^-} \\frac{\\sin x}{\\cos x - 1} = \\lim_{x \\to 0^-} \\frac{2 \\sin \\frac{x}{2} \\cos \\frac{x}{2}}{-2 \\sin^2 \\frac{x}{2}} = \\lim_{x \\to 0^-} \\frac{\\cos \\frac{x}{2}}{-\\sin \\frac{x}{2}} = \\frac{1}{0^+} = +\\infty$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1094,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "هر یک از گزینه‌ها را بررسی می‌کنیم:\n1: $\\lim_{x \\to (\\frac{7\\pi}{6})^+} \\frac{\\cos x}{1 + 2 \\sin x} = \\frac{-\\frac{\\sqrt{3}}{2}}{1 + 2(-\\frac{1}{2})^-} = \\frac{-\\frac{\\sqrt{3}}{2}}{1 + (-1)^-} = \\frac{-\\frac{\\sqrt{3}}{2}}{0^-} = +\\infty$\n2: $\\lim_{x \\to (-\\frac{\\pi}{6})^+} \\frac{\\cos x}{1 + 2 \\sin x} = \\frac{\\frac{\\sqrt{3}}{2}}{0^+} = +\\infty$\n3: $\\lim_{x \\to (-\\frac{\\pi}{6})^-} \\frac{\\cos x}{1 + 2 \\sin x} = \\frac{\\frac{\\sqrt{3}}{2}}{0^-} = -\\infty$\n4: $\\lim_{x \\to (\\frac{7\\pi}{6})^-} \\frac{\\cos x}{1 + 2 \\sin x} = \\frac{-\\frac{\\sqrt{3}}{2}}{0^+} = -\\infty$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1095,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = 2$ محاسبه می‌کنیم:\n$\\lim_{x \\to 2^+} \\frac{x+1}{x^2 - 5x + 6} = \\lim_{x \\to 2^+} \\frac{x+1}{(x-2)(x-3)} = \\frac{3}{0^+ (-1)} = \\frac{3}{0^-} = -\\infty$\n$\\lim_{x \\to 2^-} \\frac{x+1}{(x-2)(x-3)} = \\frac{3}{0^- (-1)} = \\frac{3}{0^+} = +\\infty$\nبنابراین 4 درست است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1096,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "با توجه به $\\lim_{x \\to a} \\frac{x}{f(x)} = +\\infty$ مشخص می‌شود که $a$ ریشهٔ مضاعف مخرج کسر است. با توجه به نمودار، $a=1$ یا $a=-1$ می‌باشد.\n$\\lim_{x \\to 1} \\frac{x}{f(x)} = \\frac{1}{0^-} = -\\infty$\n$\\lim_{x \\to -1} \\frac{x}{f(x)} = \\frac{-1}{0^-} = +\\infty$\nبنابراین $a = -1$ قابل قبول است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1097,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "با توجه به این‌که $+\\infty = \\lim_{x \\to \\alpha} \\frac{(-1)^{[x]}}{f(x)}$ است، نتیجه می‌شود که $\\alpha$ یکی از صفرهای $f(x)$ است.\n$\\alpha$ نمی‌تواند ۲ یا ۴ باشد، زیرا در این نقاط $f(x)$ تغییر علامت نمی‌دهد اما $(-1)^{[x]}$ تغییر علامت داشته و حاصل حد نمی‌تواند $+\\infty$ باشد.\nبنابراین: $\\alpha = 1$ یا $\\alpha = 3$\n$\\alpha = 1 \\Rightarrow \\lim_{x \\to 1} \\frac{(-1)^{[x]}}{f(x)} \\begin{cases} \\xrightarrow{1^+} \\frac{(-1)^{[1^+]}}{f(1^+)} = \\frac{(-1)^1}{0^-} = \\frac{-1}{0^-} = +\\infty \\\\ \\xrightarrow{1^-} \\frac{(-1)^{[1^-]}}{f(1^-)} = \\frac{(-1)^0}{0^+} = \\frac{1}{0^+} = +\\infty \\end{cases}$\n$\\Rightarrow \\alpha = 1$ جواب است.\n$\\alpha = 3 \\Rightarrow \\lim_{x \\to 3} \\frac{(-1)^{[x]}}{f(x)} \\begin{cases} \\xrightarrow{3^+} \\frac{(-1)^{[3^+]}}{f(3^+)} = \\frac{(-1)^3}{0^+} = \\frac{-1}{0^+} = -\\infty \\\\ \\xrightarrow{3^-} \\frac{(-1)^{[3^-]}}{f(3^-)} = \\frac{(-1)^2}{0^-} = \\frac{1}{0^-} = -\\infty \\end{cases} \\Rightarrow \\text{غ ق ق}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1098,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "دامنهٔ تعریف تابع $y = \\log (\\frac{x+1}{x-2})$ را به دست می‌آوریم:\n$\\frac{x+1}{x-2} > 0 \\Rightarrow \\begin{cases} x < -1 \\\\ x > 2 \\end{cases}$\nبا توجه به دامنه واضح است تابع در همسایگی راست $-1$ تعریف نشده است.\n$\\lim_{x \\to (-1)^-} \\log \\frac{x+1}{x-2} = \\log \\frac{0^-}{-3} = \\log 0^+ = -\\infty$\nبنابراین نمودار تابع در همسایگی $x = -1$ به صورت مقابل است:",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            50,
+            900,
+            250,
+            1150
+          ],
+          "placement": "solution",
+          "filename": "page_0103.jpg",
+          "alt": "نمودار تابع با مجانب قائم در x=-1"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1099,
+      "solution_page": "page_0103.jpg",
+      "solution_text": "با توجه به نمودار، حد راست تابع $f(x)$ در نقطهٔ مورد نظر $-\\infty$ و حد چپ $+\\infty$ است. گزینه‌ها را بررسی می‌کنیم:\n$f(x) = \\frac{\\cos x}{\\sin x - 2 \\sin x \\cos x} = \\frac{\\cos x}{\\sin x (1 - 2 \\cos x)}$\n1: $\\lim_{x \\to 0} f(x) \\begin{cases} \\xrightarrow{0^+} \\frac{1}{0^+ (-1)} = \\frac{1}{0^-} = -\\infty \\\\ \\xrightarrow{0^-} \\frac{1}{0^- (-1)} = \\frac{1}{0^+} = +\\infty \\end{cases} \\checkmark$\n2: $\\lim_{x \\to \\pi} f(x) \\begin{cases} \\xrightarrow{\\pi^+} \\frac{-1}{0^- (3)} = \\frac{-1}{0^-} = +\\infty \\\\ \\xrightarrow{\\pi^-} \\frac{-1}{0^+ (3)} = \\frac{-1}{0^+} = -\\infty \\end{cases} \\times$\n3: $\\lim_{x \\to \\frac{\\pi}{3}} f(x) \\begin{cases} \\xrightarrow{\\frac{\\pi}{3}^+} \\frac{\\frac{1}{2}}{\\frac{\\sqrt{3}}{2} (0^+)} = \\frac{\\frac{1}{2}}{0^+} = +\\infty \\\\ \\xrightarrow{\\frac{\\pi}{3}^-} \\frac{\\frac{1}{2}}{\\frac{\\sqrt{3}}{2} (0^-)} = \\frac{\\frac{1}{2}}{0^-} = -\\infty \\end{cases} \\times$\n4: $\\lim_{x \\to \\frac{5\\pi}{3}} f(x) \\begin{cases} \\xrightarrow{\\frac{5\\pi}{3}^+} \\frac{\\frac{1}{2}}{-\\frac{\\sqrt{3}}{2} (0^-)} = \\frac{\\frac{1}{2}}{0^+} = +\\infty \\\\ \\xrightarrow{\\frac{5\\pi}{3}^-} \\frac{\\frac{1}{2}}{-\\frac{\\sqrt{3}}{2} (0^+)} = \\frac{\\frac{1}{2}}{0^-} = -\\infty \\end{cases} \\times$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1100,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "با توجه به این‌که حد عبارت در هر دو حالت $x \\to (-1)^+$ و $x \\to (-1)^-$ برابر با $-\\infty$ است، نتیجه می‌شود $x = -1$ ریشهٔ مضاعف مخرج کسر است:\n$3x^2 + ax + b = 3(x + 1)^2 = 3x^2 + 6x + 3 \\Rightarrow \\begin{cases} a = 6 \\\\ b = 3 \\end{cases}$\n$\\Rightarrow a - b = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1101,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "با توجه به این‌که حد عبارت در هر دو حالت $x \\to 2^+$ و $x \\to 2^-$ برابر $+\\infty$ است، نتیجه می‌شود $x = 2$ ریشهٔ مضاعف مخرج کسر است.\n$-x^2 + ax + b = -(x - 2)^2 = -x^2 + 4x - 4 \\Rightarrow \\begin{cases} a = 4 \\\\ b = -4 \\end{cases}$\n$\\Rightarrow a - b = 8$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1102,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "$x = 1$ ریشهٔ مضاعف مخرج کسر است. بنابراین مخرج کسر بر $(x - 1)^2$ بخش‌پذیر است.\n$ax^3 - ax^2 - x + 1 = ax^2(x - 1) - (x - 1) = (x - 1)(ax^2 - 1)$\n$ax^2 - 1$ باید بر $x - 1$ بخش‌پذیر باشد، یعنی به ازای $x = 1$ برابر صفر است:\n$a - 1 = 0 \\Rightarrow a = 1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1103,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "با توجه به نمودار واضح است $x=-2$ ریشهٔ مضاعف مخرج کسر است:\n$ax^2 + 6x + b = a(x+2)^2 = a(x^2 + 4x + 4) = ax^2 + 4ax + 4a$\n$\\Rightarrow \\begin{cases} 4ax = 6x \\Rightarrow 4a = 6 \\Rightarrow a = \\frac{3}{2} \\\\ b = 4a \\Rightarrow b = 6 \\end{cases} \\Rightarrow ab = \\frac{3}{2} \\times 6 = 9$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1104,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "$b$ ریشهٔ مضاعف مخرج کسر است:\n$ax^2 + 4x + \\frac{a}{4} = a(x-b)^2 = ax^2 - 2abx + ab^2$\n$\\Rightarrow \\begin{cases} \\frac{a}{4} = ab^2 \\xrightarrow{a \\neq 0} b^2 = \\frac{1}{4} \\Rightarrow b = \\pm \\frac{1}{2} \\\\ -2ab = 4 \\Rightarrow ab = -2 \\end{cases}$\nخواهیم داشت:\n$\\begin{cases} b = \\frac{1}{2} \\Rightarrow a = -4 \\text{ \\checkmark} \\\\ b = -\\frac{1}{2} \\Rightarrow a = 4 \\text{ غ ق ق} \\end{cases}$\nچون جواب حد $-\\infty$ و صورت کسر مثبت است مخرج کسر باید به صورت $0^-$ باشد، یعنی $a < 0$ است.\n$\\Rightarrow a+b = -\\frac{7}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1105,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد راست و چپ عبارت کسری را در $x = -1$ بررسی می‌کنیم:\n$\\lim_{x \\to (-1)^+} \\frac{x + [-x]}{f(x)} = -\\infty \\Rightarrow \\lim_{x \\to (-1)^+} \\frac{x}{f(x)} = -\\infty$\n$\\Rightarrow \\frac{-1}{f((-1)^+)} = -\\infty \\Rightarrow f((-1)^+) = 0^+$\n$\\lim_{x \\to (-1)^-} \\frac{x + [-x]}{f(x)} = -\\infty \\Rightarrow \\lim_{x \\to (-1)^-} \\frac{x + 1}{f(x)} = -\\infty$\n$\\Rightarrow f(x) = a(x + 1)^2$\nبا توجه به دو حالت بالا $a > 0$ و گزینه ۳ قابل قبول است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1106,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد راست و چپ عبارت را در $x = 4$ می‌نویسیم:\nحالت (۱): (حد راست در نقطهٔ ۴)\n$\\lim_{x \\to 4^+} \\frac{2a(-1)^{[x]} + 3}{x - 4} = \\lim_{x \\to 4^+} \\frac{2a(-1)^4 + 3}{x - 4} = \\frac{2a + 3}{0^+} = +\\infty$\n$\\Rightarrow 2a + 3 > 0 \\Rightarrow a > -\\frac{3}{2}$\nحالت (۲): (حد چپ در نقطهٔ ۴)\n$\\lim_{x \\to 4^-} \\frac{2a(-1)^{[x]} + 3}{x - 4} = \\lim_{x \\to 4^-} \\frac{2a(-1)^3 + 3}{x - 4} = \\frac{-2a + 3}{0^-} = +\\infty$\n$\\Rightarrow -2a + 3 < 0 \\Rightarrow a > \\frac{3}{2}$\n$(1) \\cap (2) \\Rightarrow a > \\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1107,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = 2$ محاسبه می‌کنیم:\nحالت (۱): (حد راست در نقطهٔ ۲)\n$\\lim_{x \\to 2^+} \\frac{x + a(-1)^{[x]}}{x^2 - 4} = \\frac{2 + a(-1)^{[2^+]}}{0^+} = \\frac{a + 2}{0^+} = +\\infty$\n$\\Rightarrow a + 2 > 0 \\Rightarrow a > -2$\nحالت (۲): (حد چپ در نقطهٔ ۲)\n$\\lim_{x \\to 2^-} \\frac{x + a(-1)^{[x]}}{x^2 - 4} = \\frac{2 + a(-1)^{[2^-]}}{0^-} = \\frac{-a + 2}{0^-} = +\\infty$\n$\\Rightarrow -a + 2 < 0 \\Rightarrow a > 2$\n$(1) \\cap (2) \\Rightarrow a > 2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1108,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد راست و چپ $f(x)$ را در $x = 4$ بررسی می‌کنیم:\n$\\lim_{x \\to 4^+} f(x) = \\lim_{x \\to 4^+} \\frac{4x - 5[4^+]}{x^2 - 16} = \\lim_{x \\to 4^+} \\frac{4x - 20}{x^2 - 16} = \\frac{-4}{0^+} = -\\infty$\n$\\lim_{x \\to 4^-} f(x) = \\lim_{x \\to 4^-} \\frac{4x - 5[4^-]}{x^2 - 16} = \\lim_{x \\to 4^-} \\frac{4x - 15}{x^2 - 16} = \\frac{1}{0^-} = -\\infty$\nنمودار ۴ قابل قبول است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1109,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد چپ و راست تابع را در نقطهٔ $x = 0$ ($k < 0$) بررسی می‌کنیم:\n$\\lim_{x \\to k^-} \\frac{x}{f(x)} = \\frac{k}{f(k^-)} = \\frac{k}{0^+} = -\\infty$\n$\\lim_{x \\to k^+} \\frac{x}{f(x)} = \\frac{k}{f(k^+)} = \\frac{k}{0^-} = +\\infty$\nنمودار ۱ درست است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1110,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "با توجه به نمودار، حد تابع در $x = 1$ بی‌نهایت است. بنابراین $x = 1$ ریشهٔ مخرج کسر است.\n$x = 1 : 2x^2 + 2x + b = 0 \\Rightarrow 4 + b = 0 \\Rightarrow b = -4$\n$\\Rightarrow y = \\frac{x + a}{2x^2 + 2x - 4} = \\frac{x + a}{2(x + 2)(x - 1)}$\n$x = -2$ نیز ریشهٔ مخرج کسر بوده و تابع در این نقطه تعریف نشده است، اما با توجه به نمودار در این نقطه حد دارد. نتیجه می‌شود $x = -2$ ریشهٔ صورت کسر نیز می‌باشد.\n$x = -2 : x + a = 0 \\Rightarrow -2 + a = 0 \\Rightarrow a = 2$\n$\\Rightarrow a - b = 6$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1111,
+      "solution_page": "page_0104.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = \\pi$ بررسی می‌کنیم:\n$\\lim_{x \\to \\pi^+} f(x) = \\lim_{x \\to \\pi^+} 3^{\\cot x} = 3^{+\\infty} = +\\infty$\n$\\lim_{x \\to \\pi^-} f(x) = \\lim_{x \\to \\pi^-} 3^{\\cot x} = 3^{-\\infty} = \\frac{1}{3^{+\\infty}} = 0$\nحد راست تابع در نقطهٔ $x = \\pi$، $+\\infty$ و حد چپ آن صفر است.\nگزینه ۴ قابل قبول است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1112,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "ابتدا نمودار توابع $y=x^2$ و $y=2^x$ را رسم می‌کنیم. این دو تابع یکدیگر را در نقاط $x=2$ و $x=4$ قطع می‌کنند.\nحال هر یک از گزینه‌ها را بررسی می‌کنیم:\n1 : $\\lim_{x\\to 2^-} \\dfrac{1}{x^2-2^x} = \\dfrac{1}{0^-} = -\\infty \\quad \\times$\nبنابراین 2 نیز نادرست است.\n3 : $\\lim_{x\\to 4^+} \\dfrac{1}{x^2-2^x} = \\dfrac{1}{0^-} = -\\infty \\quad \\checkmark$\nبنابراین 4 نادرست است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            471,
+            74,
+            582,
+            233
+          ],
+          "placement": "solution_text",
+          "filename": "page_0105.jpg",
+          "alt": "نمودار توابع $y=x^2$ و $y=2^x$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1113,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x=2$ بررسی می‌کنیم:\n$\\lim_{x\\to 2^+} \\dfrac{x[x]-2}{x^2-3x+2} = \\lim_{x\\to 2^+} \\dfrac{2(x-1)}{(x-1)(x-2)} = \\dfrac{2}{0^+} = +\\infty$\n$\\lim_{x\\to 2^-} \\dfrac{x-2}{(x-1)(x-2)} = 1$\nبنابراین 1 درست است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1114,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "برای این‌که $fof(x^2)$ به سمت $\\infty$ میل کند، باید $f(x^2)$ به سمت $3$ میل کند:\n$f(x^2)=3 \\Rightarrow \\dfrac{2x^2-8}{x^2-3} = 3 \\Rightarrow x^2=1 \\Rightarrow x=\\pm 1$\nحال حد راست تابع $fof(x^2)$ را در دو نقطه $x=1$ و $x=-1$ بررسی می‌کنیم:\n$f(x) = \\dfrac{2x-8}{x-3} = \\dfrac{2x-6-2}{x-3} = 2-\\dfrac{2}{x-3}$\nبا توجه به ضابطه $f(x)$ اگر $x\\to 1^+$، آن‌گاه $f(x) \\to 3^+$ و اگر $x\\to -1^+$، آن‌گاه $f(x) \\to 3^-$. خواهیم داشت:\n$\\lim_{x\\to 1^+} fof(x^2) = f(f(1^+)) = f(3^+) = \\dfrac{-2}{0^+} = -\\infty \\quad \\checkmark$\n$\\lim_{x\\to (-1)^+} fof(x^2) = f(f(1^-)) = f(3^-) = \\dfrac{-2}{0^-} = +\\infty \\quad \\times$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1115,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x\\to \\infty} \\dfrac{(2x+1)(3x^2-1)}{(x+1)^2(4x+1)} = \\lim_{x\\to \\infty} \\dfrac{(2x)(3x^2)}{(x^2)(4x)} = \\lim_{x\\to \\infty} \\dfrac{6x^3}{4x^3} = \\dfrac{3}{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1116,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "پس از ساده‌کردن از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x\\to \\infty} \\dfrac{((x+1)-(x-2))((x+1)^2+(x+1)(x-2)+(x-2)^2)}{(x-3)^2} \\\\ = \\lim_{x\\to \\infty} \\dfrac{3(x^2+x^2+x^2)}{x^2} = \\lim_{x\\to \\infty} \\dfrac{9x^2}{x^2} = 9$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1117,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "مخرج کسر عبارتی درجه ۱ است و حاصل حد عبارت کسری برابر ۲ می‌باشد. بنابراین درجه عبارت صورت کسر نیز باید ۱ باشد. در نتیجه $a=0$ است.\n$\\lim_{x\\to \\infty} \\dfrac{bx+3}{3x-4} = \\lim_{x\\to \\infty} \\dfrac{bx}{3x} = \\dfrac{b}{3} = 2 \\Rightarrow b=6 \\Rightarrow a+b = 6$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1118,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "درجه عبارت مخرج کسر ۲ است و چون حد عبارت کسری در $\\infty$ برابر ۲ شده است، باید درجه صورت کسر نیز ۲ باشد. بنابراین:\n$a+1 = 0 \\Rightarrow a=-1$\n$\\lim_{x\\to \\infty} \\dfrac{bx^2-4}{3x^2+2x} = 2 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{bx^2}{3x^2} = 2 \\Rightarrow \\dfrac{b}{3} = 2 \\Rightarrow b=6$\n$\\Rightarrow a-b = -7$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1119,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "ابتدا کسر داده‌شده را ساده می‌کنیم:\n$\\dfrac{3x^n+2x(x^2-2x+1)+1}{x^{2n-1}+3x^3-1} = \\dfrac{3x^n+2x^3-4x^2+2x+1}{x^{2n-1}+3x^3-1}$\nبرای $n$ سه حالت وجود دارد:\n۱) $n>3 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{3x^n}{x^{2n-1}} = \\lim_{x\\to \\infty} \\dfrac{3}{x^{n-1}} = \\dfrac{3}{\\infty} = 0$\n۲) $n=3 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{5x^3}{x^5} = \\lim_{x\\to \\infty} \\dfrac{5}{x^2} = 0$\n۳) $n<3 \\Rightarrow \\begin{cases} n=1 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{2x^3}{3x^3} = \\dfrac{2}{3} \\\\ n=2 \\Rightarrow \\lim_{x\\to \\infty} \\dfrac{2x^3}{4x^3} = \\dfrac{1}{2} \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1120,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "حد عبارت به صورت $\\infty-\\infty$ است. برای رفع ابهام مخرج مشترک گرفته و ساده می‌کنیم:\n$\\lim_{x\\to \\infty} \\dfrac{3x^2+2x}{x-1} - \\dfrac{6x^2+x-1}{2x-1} \\\\ = \\lim_{x\\to \\infty} \\dfrac{(3x^2+2x)(2x-1)-(6x^2+x-1)(x-1)}{(x-1)(2x-1)} \\\\ = \\lim_{x\\to \\infty} \\dfrac{(6x^3+x^2+\\dots)-(6x^3-5x^2+\\dots)}{2x^2} = \\lim_{x\\to \\infty} \\dfrac{6x^2}{2x^2} = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1121,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "با مخرج مشترک گرفتن عبارت را به شکل یک کسر می‌نویسیم:\n$\\lim_{x\\to \\infty} \\dfrac{2x^2}{x+1} - ax = \\lim_{x\\to \\infty} \\dfrac{2x^2-ax(x+1)}{x+1} \\\\ = \\lim_{x\\to \\infty} \\dfrac{(2-a)x^2-ax}{x+1} = b$\nچون جواب حد برابر عددی حقیقی است، درجه صورت نمی‌تواند بیشتر از درجه مخرج باشد. بنابراین $a=2$ است.\n$\\Rightarrow b = \\lim_{x\\to \\infty} \\dfrac{-2x}{x+1} = \\lim_{x\\to \\infty} \\dfrac{-2x}{x} = -2 \\Rightarrow ab = -4$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1122,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "ابتدا مخرج مشترک می‌گیریم:\n$\\lim_{x\\to \\infty} \\dfrac{x^3-1}{x^2+2} - ax = \\lim_{x\\to \\infty} \\dfrac{x^3-1-ax(x^2+2)}{x^2+2} \\\\ = \\lim_{x\\to \\infty} \\dfrac{(1-a)x^3-2ax-1}{x^2+2} = b$\nجواب حد عددی حقیقی است، در نتیجه درجه صورت نمی‌تواند بیشتر از درجه مخرج باشد، یعنی $a=1$ است.\n$\\Rightarrow b = \\lim_{x\\to \\infty} \\dfrac{-2x-1}{x^2+2} = \\lim_{x\\to \\infty} \\dfrac{-2x}{x^2} = 0 \\Rightarrow a-b = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1123,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x\\to -\\infty} \\dfrac{2x+\\sqrt{9x^2-x}}{3x-\\sqrt{4x^2+x}} = \\lim_{x\\to -\\infty} \\dfrac{2x+\\sqrt{9x^2}}{3x-\\sqrt{4x^2}} \\\\ = \\lim_{x\\to -\\infty} \\dfrac{2x+3|x|}{3x-2|x|} = \\lim_{x\\to -\\infty} \\dfrac{2x-3x}{3x+2x} = \\lim_{x\\to -\\infty} \\dfrac{-x}{5x} = -\\dfrac{1}{5}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1124,
+      "solution_page": "page_0105.jpg",
+      "solution_text": "از قضیه پرتوان استفاده می‌کنیم:\n$\\lim_{x\\to -\\infty} \\dfrac{3x-\\sqrt{x^2+x}}{2x+3\\sqrt{-x}} = \\lim_{x\\to -\\infty} \\dfrac{3x-\\sqrt{x^2}}{2x} \\\\ = \\lim_{x\\to -\\infty} \\dfrac{3x-|x|}{2x} = \\lim_{x\\to -\\infty} \\dfrac{3x+x}{2x} = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1125,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "از قضیهٔ پرتوان استفاده می‌کنیم:\n$\\lim_{x \\to -\\infty} \\frac{f(x)}{x} = \\lim_{x \\to -\\infty} \\frac{2x - \\sqrt{x^2 - x}}{x} = \\lim_{x \\to -\\infty} \\frac{2x - \\sqrt{x^2}}{x} = \\lim_{x \\to -\\infty} \\frac{2x - |x|}{x} = \\lim_{x \\to -\\infty} \\frac{3x}{x} = 3$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1126,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "با توجه به $\\lim_{x \\to 1} f(x) = +\\infty$ مشخص می‌شود که $x = 1$ ریشهٔ مضاعف مخرج کسر است.\n$ax^2 + 4x + b = a(x - 1)^2 = ax^2 - 2ax + a \\Rightarrow \\begin{cases} -2a = 4 \\Rightarrow a = -2 \\\\ b = a \\Rightarrow b = -2 \\end{cases}$\nخواهیم داشت:\n$\\lim_{x \\to -\\infty} xf(x) = \\lim_{x \\to -\\infty} \\frac{x^2 - 2x}{-2x^2 + 4x - 2} = -\\frac{1}{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1127,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "ابهام به صورت $\\infty - \\infty$ است. مزدوج عبارت را ضرب و تقسیم می‌کنیم:\n$\\lim_{x \\to -\\infty} 3x + \\sqrt{9x^2 - 6x + 2} \\times \\frac{3x - \\sqrt{9x^2 - 6x + 2}}{3x - \\sqrt{9x^2 - 6x + 2}} = \\lim_{x \\to -\\infty} \\frac{9x^2 - (9x^2 - 6x + 2)}{3x - |3x|} = \\lim_{x \\to -\\infty} \\frac{6x - 2}{6x} = \\lim_{x \\to -\\infty} \\frac{6x}{6x} = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1128,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "ابهام از نوع $\\infty \\times 0$ است.\nبرای رفع ابهام، مزدوج عبارت داخل پرانتز را ضرب و تقسیم می‌کنیم:\n$\\lim_{x \\to +\\infty} x(2x - \\sqrt{4x^2 + 1}) \\times \\frac{2x + \\sqrt{4x^2 + 1}}{2x + \\sqrt{4x^2 + 1}} = \\lim_{x \\to +\\infty} \\frac{x(4x^2 - 4x^2 - 1)}{2x + |2x|} = \\lim_{x \\to +\\infty} \\frac{-x}{4x} = -\\frac{1}{4}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1129,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "ابهام از نوع $\\infty \\times 0$ است. برای رفع ابهام مزدوج عبارت داخل پرانتز را ضرب و تقسیم می‌کنیم:\n$\\lim_{x \\to -\\infty} x(x + \\sqrt{x^2 - 2}) \\times \\frac{x - \\sqrt{x^2 - 2}}{x - \\sqrt{x^2 - 2}} = \\lim_{x \\to -\\infty} x(\\frac{x^2 - x^2 + 2}{x - |x|}) = \\lim_{x \\to -\\infty} \\frac{2x}{2x} = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1130,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "حد به صورت ابهام $\\infty - \\infty$ است. صورت و مخرج کسر را در مزدوج عبارت داده‌شده ضرب می‌کنیم:\n$\\lim_{x \\to -\\infty} (x + \\sqrt{ax^2 + bx + 1}) \\times \\frac{x - \\sqrt{ax^2 + bx + 1}}{x - \\sqrt{ax^2 + bx + 1}} = \\lim_{x \\to -\\infty} \\frac{(1 - a)x^2 - bx - 1}{x - \\underbrace{\\sqrt{a}|x|}_{-x}} = \\lim_{x \\to -\\infty} \\frac{(1 - a)x^2 - bx - 1}{(\\sqrt{a} + 1)x} = 3$\nحاصل حد عددی حقیقی ۳ است، بنابراین باید درجهٔ صورت و مخرج برابر باشد. یعنی:\n$1 - a = 0 \\Rightarrow a = 1$\nخواهیم داشت:\n$\\lim_{x \\to -\\infty} \\frac{-bx - 1}{2x} = 3 \\Rightarrow -\\frac{b}{2} = 3 \\Rightarrow b = -6 \\Rightarrow a + b = -5$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1131,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "حد $f(x)$ و $f(-\\frac{1}{x})$ را به دست آورده و در هم ضرب می‌کنیم:\n$\\lim_{x \\to \\infty} f(x) f(-\\frac{1}{x}) = \\lim_{x \\to \\infty} \\frac{4x - 1}{x + 2} \\times \\frac{-\\frac{4}{x} - 1}{-\\frac{1}{x} + 2} = 4 \\times (-\\frac{1}{2}) = -2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1132,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "$xf(-\\frac{1}{x})$ را تشکیل داده و از قضیهٔ پرتوان استفاده می‌کنیم:\n$\\lim_{x \\to +\\infty} xf(-\\frac{1}{x}) = \\lim_{x \\to +\\infty} x(\\frac{-\\frac{2}{x}}{-\\frac{3}{x} - 1}) = \\lim_{x \\to +\\infty} x(\\frac{-\\frac{2}{x}}{\\frac{-3 - x}{x}}) = \\lim_{x \\to +\\infty} \\frac{-2x}{-x} = 2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1133,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "$f(2 + \\frac{1}{x})$ را تشکیل داده و حد را محاسبه می‌کنیم:\n$\\lim_{x \\to +\\infty} xf(2 + \\frac{1}{x}) = \\lim_{x \\to +\\infty} x(\\frac{|2 + \\frac{1}{x} - 2|}{2 + (2 + \\frac{1}{x})}) = \\lim_{x \\to +\\infty} x(\\frac{\\frac{1}{x}}{4 + \\frac{1}{x}}) = \\lim_{x \\to +\\infty} \\frac{1}{4 + \\frac{1}{x}} = \\frac{1}{4}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1134,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "اگر $x \\to -\\infty$، آن‌گاه $\\frac{x}{x+1} \\to 1^+$ زیرا:\n$\\frac{x}{x+1} = \\frac{x+1-1}{x+1} = 1 - \\frac{1}{x+1}$\n$x \\to -\\infty \\Rightarrow \\frac{1}{x+1} < 0 \\Rightarrow 1 - \\frac{1}{x+1} > 1$\nچون $\\frac{x}{x+1} > 1$ است، بنابراین:\n$f(\\frac{x}{x+1}) = 2(\\frac{x}{x+1})^2 - 2 \\Rightarrow \\lim_{x \\to -\\infty} x f(\\frac{x}{x+1}) = \\lim_{x \\to -\\infty} x(2(\\frac{x}{x+1})^2 - 2) = \\lim_{x \\to -\\infty} 2x(\\frac{-2x - 1}{(x+1)^2}) = \\lim_{x \\to -\\infty} \\frac{-4x^2 - 2x}{x^2 + 2x + 1} = \\lim_{x \\to -\\infty} \\frac{-4x^2}{x^2} = -4$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1135,
+      "solution_page": "page_0106.jpg",
+      "solution_text": "روش اول: ابتدا $f^{-1}(x)$ را به دست می‌آوریم:\n$y = \\frac{2x + 7}{x + 3} \\Rightarrow xy + 3y = 2x + 7 \\Rightarrow x(y - 2) = -3y + 7 \\Rightarrow y^{-1} = \\frac{-3x + 7}{x - 2}$\nخواهیم داشت:\n$\\lim_{x \\to +\\infty} f(x) f^{-1}(x) = \\lim_{x \\to +\\infty} f(x) \\times \\lim_{x \\to +\\infty} f^{-1}(x) = \\lim_{x \\to +\\infty} \\frac{2x + 7}{x + 3} \\times \\lim_{x \\to +\\infty} \\frac{-3x + 7}{x - 2} = 2 \\times (-3) = -6$\nروش دوم: می‌دانیم:\n$\\begin{cases} f((-3)^+) = +\\infty \\Rightarrow f^{-1}(+\\infty) = -3 \\\\ f(+\\infty) = 2 \\end{cases} \\Rightarrow f(+\\infty) f^{-1}(+\\infty) = -6$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1136,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "اگر $ \\lim_{x \\to +\\infty} (f(x) - 3x) = 2 $ ، می‌توان نتیجه گرفت:\n$ \\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} 3x + 2 $\n$ \\lim_{x \\to +\\infty} \\frac{x + f(x)}{x - f(x)} = \\lim_{x \\to +\\infty} \\frac{x + (3x + 2)}{x - (3x + 2)} = \\lim_{x \\to +\\infty} \\frac{4x + 2}{-2x - 2} = \\lim_{x \\to +\\infty} \\frac{4x}{-2x} = -2 $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1137,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "حد $ y = \\frac{3x + a}{x + 1} $ وقتی $ x \\to +\\infty $ ، برابر ۳ است. با توجه به نمودار، تابع در $ +\\infty $ کوچک‌تر از ۳ می‌باشد.\n$ \\frac{3x + a}{x + 1} < 3 \\xrightarrow{x > 0} 3x + a < 3x + 3 \\Rightarrow a < 3 $",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1138,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "با توجه به نمودار درمی‌یابیم:\n$ \\lim_{x \\to +\\infty} f(x) = -\\infty $ و $ \\lim_{x \\to -\\infty} f(x) = 3 $\n$ \\lim_{x \\to -\\infty} (f(x) - \\lfloor \\frac{1}{f(-x)} \\rfloor) = f(-\\infty) - \\lfloor \\frac{1}{f(+\\infty)} \\rfloor = 3 - \\lfloor \\frac{1}{-\\infty} \\rfloor = 3 - \\lfloor 0^- \\rfloor = 3 - (-1) = 4 $",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1139,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "در گزینه ۳ حاصل $ \\lim_{x \\to -\\infty} f(x) $ برابر $ -\\frac{1}{2} $ است، بنابراین:\n$ \\lim_{x \\to -\\infty} [f(x)] = -1 $\nدر گزینه ۴ حاصل $ \\lim_{x \\to -\\infty} f(x) $ برابر ۲ است، بنابراین $ \\lim_{x \\to -\\infty} [f(x)] $ برابر ۲ یا ۱ می‌باشد.\nدر گزینه‌های ۱ و ۲ حاصل $ \\lim_{x \\to -\\infty} f(x) $ برابر ۱ است. بررسی می‌کنیم کدام‌یک از آن‌ها با مقادیر کم‌تر به ۱ نزدیک می‌شود.\n$ \\frac{x + 2}{x + 3} - 1 = \\frac{-1}{x + 3} \\xrightarrow{x \\to -\\infty} \\frac{-1}{-\\infty} > 0 \\Rightarrow \\frac{x + 2}{x + 3} > 1 $\n$ \\frac{x - 2}{x - 3} - 1 = \\frac{1}{x - 3} \\xrightarrow{x \\to -\\infty} \\frac{1}{-\\infty} < 0 \\Rightarrow \\frac{x - 2}{x - 3} < 1 $\nدر گزینه ۲ ، $ f(x) $ با مقادیر کم‌تر به ۱ نزدیک می‌شود و در نتیجه:\n$ [f(x)] = [1^-] = 0 $",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1140,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "با توجه به نمودار:\n$ \\lim_{x \\to -\\infty} f(x) = f(-\\infty) = -2 $ و $ \\lim_{x \\to 2^+} f(x) = f(2^+) = -\\infty $\nبنابراین:\n$ \\lim_{x \\to 2^+} \\frac{fof(x) + 3}{x - 1} = \\frac{f(f(2^+)) + 3}{2 - 1} = f(-\\infty) + 3 = -2 + 3 = 1 $",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1141,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "حد $ f(x) = 3^{2 - x} $ وقتی $ x \\to +\\infty $ به صورت $ 3^{-\\infty} $ و برابر صفر است.\nحد $ f(x) = 3^{2 - x} $ وقتی $ x \\to -\\infty $ به صورت $ 3^{+\\infty} $ و حاصل آن $ +\\infty $ است.\n$ \\lim_{x \\to +\\infty} gof(x) = \\lim_{x \\to +\\infty} \\frac{f(x) + 2}{2f(x) - 1} = \\frac{0 + 2}{0 - 1} = -2 \\Rightarrow a = -2 $\n$ \\lim_{x \\to -\\infty} gof(x) = \\lim_{x \\to -\\infty} \\frac{f(x) + 2}{2f(x) - 1} = \\lim_{f(x) \\to +\\infty} \\frac{f(x) + 2}{2f(x) - 1} = \\lim_{f(x) \\to +\\infty} \\frac{f(x)}{2f(x)} = \\frac{1}{2} \\Rightarrow b = \\frac{1}{2} \\Rightarrow a - b = -2 - \\frac{1}{2} = -\\frac{5}{2} $",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1142,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "اگر $ t = \\frac{1}{x} $ باشد، خواهیم داشت:\n$ \\lim_{x \\to 0^-} f(\\frac{1}{x} - \\frac{1}{x^3}) = \\lim_{t \\to -\\infty} f(t - t^3) \\xrightarrow{\\text{قضیه پرتوان}} \\lim_{t \\to -\\infty} f(-t^3) = f(+\\infty) = \\lim_{x \\to +\\infty} f(x) $\nخواهیم داشت:\n$ \\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\frac{1 - 2|x|}{x + 4} = \\lim_{x \\to +\\infty} \\frac{-2x + 1}{x + 4} = -2 $",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1143,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "با توجه به نمودار درمی‌یابیم:\n$ \\lim_{x \\to +\\infty} f(x) = 3 $ ، $ \\lim_{x \\to 3^+} f(x) = +\\infty $\nدر نتیجه:\n$ \\lim_{x \\to (\\frac{1}{3})^-} fof(\\frac{1}{x}) = f(f(3^+)) = f(+\\infty) = 3 $",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1144,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "حد مخرج کسر در $ x = 1 $ برابر صفر است، بنابراین صورت کسر نیز باید در $ x = 1 $ برابر صفر شود:\n$ x = 1 \\Rightarrow ax + b = 0 \\Rightarrow a + b = 0 \\Rightarrow b = -a $\n$ \\lim_{x \\to 1} \\frac{ax - a}{3x - \\sqrt{x + 8}} = \\frac{12}{17} $\n$ \\Rightarrow \\lim_{x \\to 1} \\frac{a(x - 1)}{3x - \\sqrt{x + 8}} \\times \\frac{3x + \\sqrt{x + 8}}{3x + \\sqrt{x + 8}} = \\lim_{x \\to 1} \\frac{6a(x - 1)}{9x^2 - x - 8} $\n$ \\lim_{x \\to 1} \\frac{6a(x - 1)}{(x - 1)(9x + 8)} = \\frac{6a}{17} = \\frac{12}{17} \\Rightarrow a = 2 $\nخواهیم داشت:\n$ \\lim_{x \\to +\\infty} \\frac{ax + b}{3x - \\sqrt{x + 8}} = \\frac{a}{3} = \\frac{2}{3} $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1145,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "وقتی $ x \\to -\\infty $ ، عبارت $ x^2 - 1 $ مثبت می‌باشد. بنابراین:\n$ \\lim_{x \\to -\\infty} \\frac{|x^2 - 1|}{ax^2 + 3x - 1} = \\lim_{x \\to -\\infty} \\frac{x^2 - 1}{ax^2 + 3x - 1} = \\frac{1}{a} = -\\frac{1}{2} \\Rightarrow a = -2 $\nخواهیم داشت:\n$ \\lim_{x \\to 1^-} \\frac{|x^2 - 1|}{-2x^2 + 3x - 1} = \\lim_{x \\to 1^-} \\frac{-(x - 1)(x + 1)}{(x - 1)(-2x + 1)} = \\frac{-2}{-1} = 2 $",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1146,
+      "solution_page": "page_0107.jpg",
+      "solution_text": "$ x = 1 $ ریشه مخرج کسر است:\n$ 1 - a + a^2 - 7 = 0 \\Rightarrow a^2 - a - 6 = 0 \\Rightarrow \\begin{cases} a = -2 \\\\ a = 3 \\end{cases} $\nحد داده‌شده را در هر یک از حالات فوق محاسبه می‌کنیم:\n$ a = -2 \\Rightarrow \\lim_{x \\to 1^+} \\frac{-2x^2 + 3}{x^2 + 2x - 3} = \\lim_{x \\to 1^+} \\frac{-2x^2 + 3}{(x + 3)(x - 1)} = \\frac{1}{4(0^+)} = \\frac{1}{0^+} = +\\infty \\text{ ق‌ق‌غ } $\n$ a = 3 \\Rightarrow \\lim_{x \\to 1^+} \\frac{3x^2 + 3}{x^2 - 3x + 2} = \\lim_{x \\to 1^+} \\frac{3x^2 + 3}{(x - 1)(x - 2)} = \\frac{6}{0^+(-1)} = \\frac{6}{0^-} = -\\infty \\checkmark $\nخواهیم داشت:\n$ \\lim_{x \\to -\\infty} f(x) = a = 3 $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1147,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "ابتدا مقادیر a و n را به دست می‌آوریم:\n$ \\lim_{x \\to -\\infty} f(x) = -\\frac{1}{3} \\Rightarrow \\lim_{x \\to -\\infty} \\frac{2 - \\sqrt{x^2 + 3}}{ax^n + 3} = -\\frac{1}{3} \\Rightarrow \\lim_{x \\to -\\infty} \\frac{-\\sqrt{x^2}}{ax^n} = \\lim_{x \\to -\\infty} \\frac{-|x|}{ax^n} = \\lim_{x \\to -\\infty} \\frac{x}{ax^n} = -\\frac{1}{3} $\nبدیهی است $ n = 1 $ و $ a = -3 $ است.\n$ \\lim_{x \\to 1} f(x) = \\lim_{x \\to 1} \\frac{2 - \\sqrt{x^2 + 3}}{-3x + 3} \\times \\frac{2 + \\sqrt{x^2 + 3}}{2 + \\sqrt{x^2 + 3}} = \\lim_{x \\to 1} \\frac{(1 - x)(1 + x)}{3(-x + 1)(4)} = \\frac{1}{6} $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1148,
+      "solution_page": 108,
+      "solution_text": "ابتدا مقادیر $a$ و $n$ را محاسبه می‌کنیم:\n$$ \\lim_{x \\to -\\infty} \\frac{ax^n + 12}{\\sqrt{1-x} + x + 1} = \\lim_{x \\to -\\infty} \\frac{ax^n}{x} = 4 \\Rightarrow \\begin{cases} n = 1 \\\\ a = 4 \\end{cases} $$\nدر نتیجه:\n$$ \\lim_{x \\to -3} \\frac{4x + 12}{\\sqrt{1-x} + x + 1} $$\n$$ = \\lim_{x \\to -3} \\frac{4(x + 3)}{\\sqrt{1-x} + x + 1} \\times \\frac{\\sqrt{1-x} - (x + 1)}{\\sqrt{1-x} - (x + 1)} $$\n$$ = \\lim_{x \\to -3} \\frac{16(x + 3)}{1 - x - (x + 1)^2} = \\lim_{x \\to -3} \\frac{16(x + 3)}{-x^2 - 3x} $$\n$$ = \\lim_{x \\to -3} \\frac{16(x + 3)}{-x(x + 3)} = \\frac{16}{3} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1149,
+      "solution_page": 108,
+      "solution_text": "ابتدا مقادیر $a$ و $n$ را به دست می‌آوریم:\n$$ \\lim_{x \\to -\\infty} \\frac{ax^n + \\sqrt{4x^2 + 20}}{2x + 4} = \\lim_{x \\to -\\infty} \\frac{ax^n + |2x|}{2x} = \\lim_{x \\to -\\infty} \\frac{ax^n - 2x}{2x} = \\frac{1}{2} \\Rightarrow \\begin{cases} n = 1 \\\\ a = 3 \\end{cases} $$\nدقت کنید اگر $n > 1$ باشد، حاصل حد $\\infty$ و اگر $n < 1$ باشد حاصل حد $\\infty$ می‌باشد. خواهیم داشت:\n$$ \\lim_{x \\to -2} f(x) = \\lim_{x \\to -2} \\frac{3x + \\sqrt{4x^2 + 20}}{2x + 4} \\times \\frac{3x - \\sqrt{4x^2 + 20}}{3x - \\sqrt{4x^2 + 20}} $$\n$$ = \\lim_{x \\to -2} \\frac{5x^2 - 20}{-12(2x + 4)} = \\lim_{x \\to -2} \\frac{5(x - 2)(x + 2)}{-24(x + 2)} = \\frac{5}{6} $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1150,
+      "solution_page": 108,
+      "solution_text": "ابتدا مقدار $a$ را محاسبه می‌کنیم:\n$$ \\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\frac{\\sqrt{x^2 + 8} - 3ax}{x - a} = \\lim_{x \\to +\\infty} \\frac{|x| - 3ax}{x} $$\n$$ = \\lim_{x \\to +\\infty} \\frac{x - 3ax}{x} = 1 - 3a = -2 \\Rightarrow a = 1 $$\nدر نتیجه:\n$$ \\lim_{x \\to 1} f(x) = \\lim_{x \\to 1} \\frac{\\sqrt{x^2 + 8} - 3x}{x - 1} $$\n$$ = \\lim_{x \\to 1} \\frac{\\sqrt{x^2 + 8} - 3x}{x - 1} \\times \\frac{\\sqrt{x^2 + 8} + 3x}{\\sqrt{x^2 + 8} + 3x} = \\lim_{x \\to 1} \\frac{8 - 8x^2}{6(x - 1)} $$\n$$ = \\lim_{x \\to 1} \\frac{-8(x - 1)(x + 1)}{6(x - 1)} = -\\frac{8}{3} $$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 4 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 1151,
+      "solution_page": 108,
+      "solution_text": "تابع خطی $f$ را به صورت $f(x) = ax + b$ می‌نویسیم:\n$$ \\lim_{x \\to -\\infty} g(x) = \\lim_{x \\to -\\infty} \\frac{2 - 3x}{ax + b} = \\frac{-3}{a} = 6 \\Rightarrow a = -\\frac{1}{2} $$\n$$ \\lim_{x \\to 2^+} g(x) = \\lim_{x \\to 2^+} \\frac{2 - 3x}{-\\frac{1}{2}x + b} = +\\infty $$\n$x = 2$ ریشه مخرج کسر است. $\\Rightarrow -1 + b = 0 \\Rightarrow b = 1$\nبنابراین:\n$$ f(x) = -\\frac{1}{2}x + 1 \\Rightarrow f(4) = -2 + 1 = -1 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1152,
+      "solution_page": 108,
+      "solution_text": "اگر $a > b > 1$ باشد، در حالتی که $x \\to +\\infty$ می‌توانیم به جای $a^x + b^x$ از $a^x$ و در حالتی که $x \\to -\\infty$ از $b^x$ استفاده کنیم.\n$$ f(x) = \\frac{2^{x+3} - 4^{x-1}}{2^{x+1} + 2^{2x+1}} = \\frac{8 \\times (2^x) - \\frac{1}{4}(4^x)}{2 \\times (2^x) + 2(4^x)} $$\n$$ \\lim_{x \\to -\\infty} f(x) = \\lim_{x \\to -\\infty} \\frac{8 \\times 2^x}{2 \\times 2^x} = 4 $$\n$$ \\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\frac{-\\frac{1}{4} \\times 4^x}{2 \\times 4^x} = -\\frac{1}{8} $$\n$$ \\Rightarrow \\frac{\\lim_{x \\to -\\infty} f(x)}{\\lim_{x \\to +\\infty} f(x)} = -32 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1153,
+      "solution_page": 108,
+      "solution_text": "حد راست: اگر $x \\to \\frac{\\pi}{2}^+$ ، آن‌گاه $\\tan x \\to -\\infty$ . بنابراین ($f(-\\infty)$) مطلوب است:\n$$ \\lim_{x \\to -\\infty} f(x) = \\frac{3^{-\\infty} - 2}{3^{-\\infty} + 1} = \\frac{0 - 2}{0 + 1} = -2 $$\nحد چپ: اگر $x \\to \\frac{\\pi}{2}^-$ ، آن‌گاه $\\tan x \\to +\\infty$ . بنابراین ($f(+\\infty)$) مطلوب است.\n$$ \\lim_{x \\to +\\infty} \\frac{3^x - 2}{3^{x-1} + 1} = \\lim_{x \\to +\\infty} \\frac{3^x}{3^{x-1}} = 3 $$\nدر نتیجه اختلاف حد چپ و راست برابر $3 - (-2) = 5$ است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1154,
+      "solution_page": 108,
+      "solution_text": "هر یک از گزینه‌ها را بررسی می‌کنیم:\n$1$: $\\lim_{x \\to +\\infty} \\log_2 \\frac{2^{x+1} - 4}{2^x - 1} = \\lim_{x \\to +\\infty} \\log_2 \\frac{2^{x+1}}{2^x} = \\log_2 2 = 1$ \\checkmark\n$2$: $\\lim_{x \\to -\\infty} \\log_2 \\frac{2^{x+1} - 4}{2^x - 1} = \\log_2 \\frac{0 - 4}{0 - 1} = \\log_2 4 = 2$ \\checkmark\n$3$: $\\lim_{x \\to 0^-} \\log_2 \\frac{2^{x+1} - 4}{2^x - 1} = \\log_2 \\frac{2 - 4}{0^-} = \\log_2 \\frac{-2}{0^-} = \\log_2 +\\infty = +\\infty$ \\checkmark\n$4$: $\\lim_{x \\to 0^+} \\log_2 \\frac{2^{x+1} - 4}{2^x - 1} = \\log_2 \\frac{-2}{0^+} = \\log_2 0^+ = -\\infty$ \\times",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1155,
+      "solution_page": 108,
+      "solution_text": "$\\infty$ با هر عدد حقیقی جمع یا تفریق شود، حاصل $\\infty$ است.\n$$ \\lim_{x \\to +\\infty} 4 - 3f(2 - x) = -\\infty \\Rightarrow 4 - 3f(2 - \\infty) = -\\infty $$\n$$ \\Rightarrow 4 - 3f(-\\infty) = -\\infty \\Rightarrow 3f(-\\infty) = 4 + \\infty $$\n$$ \\Rightarrow 3f(-\\infty) = +\\infty \\Rightarrow f(-\\infty) = +\\infty $$\n$$ \\Rightarrow \\lim_{x \\to -\\infty} f(x) = +\\infty $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1156,
+      "solution_page": 108,
+      "solution_text": "در نقاط $A$ و $C$ خط مماس افقی و شیب آن صفر است؛ یعنی مشتق در این نقاط برابر صفر است.\nدر نقطهٔ $B$ شیب خط مماس که همان مشتق می‌باشد، منفی است.\nدر نقطهٔ $D$ شیب خط مماس مثبت بوده؛ بنابراین در نقاط داده‌شده در نقطهٔ $D$ بیشترین مقدار مشتق وجود دارد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            128,
+            706,
+            235,
+            874
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع با نقاط مشخص شده A, B, C, D"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1157,
+      "solution_page": "page_0108.jpg",
+      "solution_text": "در نقطه $A$ مقدار تابع مثبت و مقدار مشتق تابع صفر است؛ بنابراین حاصل‌ضرب آن‌ها صفر است.\nدر نقطه $B$ مقدار تابع و مقدار مشتق تابع منفی و در نتیجه حاصل‌ضرب آن‌ها مثبت است.\nدر نقطه $D$ مقدار تابع و مقدار مشتق تابع مثبت و در نتیجه حاصل‌ضرب آن‌ها مثبت است.\nدر نقطه $C$ مقدار تابع منفی و مقدار مشتق تابع مثبت است، بنابراین حاصل‌ضرب آن‌ها منفی و کم‌ترین مقدار است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1158,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "تابع $f(x) = \\sin(x + \\frac{\\pi}{2})$ همان تابع $f(x) = \\cos x$ است. این تابع را رسم می‌کنیم:\nواضح است مشتق در نقطه $\\frac{\\pi}{2}$ منفی، در نقطه $\\pi$ صفر و در نقطه $\\frac{3\\pi}{2}$ مثبت است؛ یعنی:\n$m_1 < m_2 < m_3$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "placement": "solution",
+          "region": [
+            450,
+            200,
+            850,
+            320
+          ],
+          "filename": "page_0109.jpg",
+          "alt": "نمودار تابع کسینوس با نقاط پی دوم، پی و سه پی دوم"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1159,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "شیب خط مماس بر تابع $f$ در نقطه $x = -2$ برابر $f'(-2) = -2$ است. خط مماس از نقطه $(-2, -1)$ نیز می‌گذرد.\nمعادله خط مماس: $y - (-1) = -2(x + 2) \\Rightarrow y = -2x - 5$\n$y = 0 \\Rightarrow -2x - 5 = 0 \\Rightarrow x = -\\frac{5}{2} \\Rightarrow \\alpha = -\\frac{5}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1160,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "شیب خط مماس بر نمودار $f(x)$ در نقطه $x = 1$ همان $f'(1)$ می‌باشد. عرض از مبدأ این خط برابر $-2$ است. در نتیجه معادله خط مماس به صورت $y = x - 2$ می‌باشد. مقدار تابع $f(x)$ در $x = 1$ با مقدار خط مماس در این نقطه برابر است.\n$f(1) = 1 - 2 = -1$\nدر نتیجه:\n$f(x) = x^3 - x^2 + a \\Rightarrow f(1) = 1 - 1 + a = -1 \\Rightarrow a = -1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1161,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "خطوط مماس بر $f$ در نقاط $2$ و $5$ بر هم عمودند؛ یعنی حاصل‌ضرب شیب آن‌ها برابر $-1$ است:\n$\\Rightarrow f'(2)f'(5) = -1 \\Rightarrow f'(5) = \\frac{-1}{f'(2)}$\nاز طرفی:\n$f'(5) - f'(2) = \\frac{5}{2} \\Rightarrow -\\frac{1}{f'(2)} - f'(2) = \\frac{5}{2}$\n$\\xrightarrow{f'(2) = k} -\\frac{1}{k} - k = \\frac{5}{2} \\Rightarrow 2k^2 + 5k + 2 = 0$\n$\\Rightarrow k = \\frac{-5 \\pm \\sqrt{9}}{4} \\Rightarrow \\begin{cases} k = -\\frac{1}{2} \\ \\checkmark \\\\ k = -2 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1162,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "خط $y = 2x - 5$ در نقطه $x = 3$ بر نمودار تابع $f(x)$ مماس است؛ بنابراین $f(3) = 1$ و $f'(3) = 2$. در نتیجه حد داده‌شده مبهم بوده و باید آن را رفع ابهام کنیم:\n$-2h = t \\Rightarrow h = -\\frac{t}{2}$\n$\\lim_{h \\to 0} \\frac{f(3-2h)-1}{h} = \\lim_{t \\to 0} \\frac{f(3+t)-f(3)}{-\\frac{t}{2}}$\n$= -2 \\lim_{t \\to 0} \\frac{f(3+t)-f(3)}{t} = -2 f'(3) = -4$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1163,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "خط $d$ از نقاط $(4, 16)$ و $(4-\\frac{h}{2}, (4-\\frac{h}{2})^2)$ عبور می‌کند:\n$m = \\frac{(4-\\frac{h}{2})^2 - 16}{(4-\\frac{h}{2}) - 4}$\n$\\lim_{h \\to 0} m = \\lim_{h \\to 0} \\frac{(4-\\frac{h}{2})^2 - 16}{(4-\\frac{h}{2}) - 4} = \\lim_{h \\to 0} \\frac{(4-\\frac{h}{2}-4)(4-\\frac{h}{2}+4)}{-\\frac{h}{2}}$\n$= \\lim_{h \\to 0} \\frac{-\\frac{h}{2}(8-\\frac{h}{2})}{-\\frac{h}{2}} = \\lim_{h \\to 0} 8 - \\frac{h}{2} = 8$\nمقدار به دست آمده همان $f'(4)$ است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1164,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "خط $y = 4x - 5$ در نقطه $x = 1$ بر نمودار تابع $y = f(x)$ مماس است؛ بنابراین:\n$f(1) = -1$, $f'(1) = 4$\nدر نتیجه حد داده‌شده مبهم بوده و باید آن را رفع ابهام کنیم:\n$\\lim_{x \\to 1} \\frac{f(x)+1}{x^2+4x-5} = \\lim_{x \\to 1} \\frac{f(x)-f(1)}{(x-1)(x+5)} = \\frac{1}{6} \\lim_{x \\to 1} \\frac{f(x)-f(1)}{x-1}$\n$= \\frac{1}{6} f'(1) = \\frac{4}{6} = \\frac{2}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1165,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "معادله خط گذرا بر $A(1,2)$ و $B(2,5)$ را به دست می‌آوریم:\n$AB: y - 2 = \\frac{5-2}{2-1}(x-1) \\Rightarrow y = 3x - 1$\nاین خط در نقطه $x = 3$ بر نمودار تابع $f$ مماس است. بنابراین $f(3) = 8$ و $f'(3) = 3$. خواهیم داشت:\n$\\lim_{x \\to 3} \\frac{f^2(x)-8f(x)}{x-3} = \\lim_{x \\to 3} \\frac{f(x)(f(x)-8)}{x-3}$\n$= 8 \\lim_{x \\to 3} \\frac{f(x)-f(3)}{x-3} = 8 f'(3) = 24$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1166,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "خط مماس بر تابع $f$ در نقطه $x = 1$ از نقاط $(1,2)$ و $(3,0)$ می‌گذرد:\nمعادله خط مماس: $y - 0 = \\frac{2-0}{1-3}(x-3) \\Rightarrow y = -x + 3$\nاین خط در نقطه $x = 1$ بر تابع $f$ مماس است؛ بنابراین: $f(1) = 2$ و $f'(1) = -1$. خواهیم داشت:\n$\\lim_{x \\to 1} \\frac{2f^2(x)-f(x)-6}{x-1} = \\lim_{x \\to 1} \\frac{(f(x)-2)(2f(x)+3)}{x-1}$\n$= 7 \\lim_{x \\to 1} \\frac{f(x)-f(1)}{x-1} = 7 f'(1) = -7$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1167,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "ابتدا $a$ و $b$ را محاسبه می‌کنیم:\n$a = f(4+h) = \\sqrt{4+h}$ , $b = f(4) = 2$\n$\\lim_{h \\to 0} \\frac{a-b}{h} = \\lim_{h \\to 0} \\frac{\\sqrt{4+h}-2}{h}$\n$= \\lim_{h \\to 0} \\frac{\\sqrt{4+h}-2}{h} \\times \\frac{\\sqrt{4+h}+2}{\\sqrt{4+h}+2} = \\lim_{h \\to 0} \\frac{h}{h \\times 4} = \\frac{1}{4}$\nمقدار به دست آمده همان $f'(4)$ می‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1168,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "تابع خطی $f$ را به صورت $f(x) = ax+b$ می‌نویسیم:\n$\\lim_{x \\to 2} \\frac{f(x)+1}{x-2} = 2 \\Rightarrow f(2) + 1 = 0 \\Rightarrow f(2) = -1$\n$\\Rightarrow 2a + b = -1 \\Rightarrow b = -2a - 1$\nخواهیم داشت:\n$\\lim_{x \\to 2} \\frac{f(x)+1}{x-2} = 2 \\Rightarrow \\lim_{x \\to 2} \\frac{ax+b+1}{x-2} = 2$\n$\\Rightarrow \\lim_{x \\to 2} \\frac{ax - 2a - 1 + 1}{x-2} = 2 \\Rightarrow \\lim_{x \\to 2} \\frac{a(x-2)}{x-2} = 2$\n$\\Rightarrow a = 2 \\Rightarrow b = -5 \\Rightarrow f(x) = 2x - 5$\n$\\Rightarrow \\begin{cases} f(-2) = -9 \\\\ f'(-2) = 2 \\end{cases} \\Rightarrow (f+f')(-2) = -7$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1169,
+      "solution_page": "page_0109.jpg",
+      "solution_text": "چون مخرج کسر در حد $ \\lim_{x \\to 2} \\frac{f(x) - 2}{x^2 - 4} = 3 $ برابر صفر است، صورت کسر نیز باید صفر شود تا جواب حد، عددی حقیقی باشد؛ یعنی $ f(2) = 2 $. بنابراین:\n$ f \\circ f(2) = f(f(2)) = f'(2) $\nاز طرفی:\n$ \\lim_{x \\to 2} \\frac{f(x) - 2}{x^2 - 4} = 3 \\Rightarrow \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2} \\times \\frac{1}{x + 2} = 3 \\Rightarrow \\frac{1}{4} \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2} = 3 \\Rightarrow \\frac{1}{4} f'(2) = 3 \\Rightarrow f'(2) = 12 $",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1170,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "حد داده‌شده را ساده می‌کنیم:\n$ \\lim_{h \\to 0} \\frac{f(a) - f(a+h)}{h} = - \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h} = -f'(a) = 4a \\Rightarrow f'(a) = -4a $\nخواهیم داشت:\n$ \\lim_{x \\to a} \\frac{f(x) - f(a)}{x^2 - a^2} = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a} \\times \\frac{1}{x + a} = \\frac{1}{2a} f'(a) = \\frac{1}{2a} (-4a) = -2 $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1171,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "با توجه به حد داده‌شده واضح است $ \\lim_{x \\to 3} f(x) = f(3) = 3 $ می‌باشد. بنابراین:\n$ \\lim_{x \\to 3} \\frac{f^3(x) - 27}{x^2 - 9} = \\lim_{x \\to 3} \\frac{(f(x) - 3)(f^2(x) + 3f(x) + 9)}{(x - 3)(x + 3)} = \\frac{27}{6} \\lim_{x \\to 3} \\frac{f(x) - f(3)}{x - 3} = \\frac{27}{6} f'(3) = 9 \\Rightarrow f'(3) = 2 $",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1172,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "برای رفع ابهام، صورت و مخرج کسر را در مزدوج صورت ضرب می‌کنیم:\n$ \\lim_{x \\to 2} \\frac{\\sqrt{2+f(x)} - 3}{x - 2} \\times \\lim_{x \\to 2} \\frac{\\sqrt{2+f(x)} + 3}{\\sqrt{2+f(x)} + 3} = \\lim_{x \\to 2} \\frac{f(x) - 7}{x - 2} \\times \\frac{1}{6} = \\frac{1}{6} \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2} = \\frac{1}{6} f'(2) = \\frac{5}{6} $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1173,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "از حد $ \\lim_{x \\to 6} \\frac{f(x)}{x - 6} = 2 $ درمی‌یابیم $ f(6) = 0 $ و $ f'(6) = 2 $ است. با فرض $ 4h = t $ خواهیم داشت:\n$ \\lim_{h \\to 0} \\frac{f(6+4h)}{h} = \\lim_{t \\to 0} \\frac{f(6+t)}{\\frac{t}{4}} = 4 \\lim_{t \\to 0} \\frac{f(6+t)}{t} = 4 \\lim_{t \\to 0} \\frac{f(6+t) - f(6)}{t} = 4f'(6) = 8 $",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1174,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "حد داده‌شده را ساده کرده، رفع ابهام می‌کنیم:\n$ \\lim_{h \\to 0} \\frac{f(2+h) - f(h-2)}{h} = \\lim_{h \\to 0} \\frac{(2+h)^2 - (h-2)^2}{h} = \\lim_{h \\to 0} \\frac{8h}{h} = 8 $",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1175,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "$ f(4) $ را برابر ۲ قرار می‌دهیم:\n$ \\lim_{x \\to 4} \\frac{4f(x) - 2x}{x - 4} = 2 \\Rightarrow \\lim_{x \\to 4} \\frac{4f(x) - 8 + 8 - 2x}{x - 4} = 2 \\Rightarrow \\lim_{x \\to 4} \\frac{4(f(x) - 2)}{x - 4} + \\lim_{x \\to 4} \\frac{8 - 2x}{x - 4} = 2 \\Rightarrow 4 \\lim_{x \\to 4} \\frac{f(x) - f(4)}{x - 4} + \\lim_{x \\to 4} \\frac{-2(x - 4)}{x - 4} = 2 \\Rightarrow 4f'(4) - 2 = 2 \\Rightarrow f'(4) = 1 $",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1176,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "می‌دانیم:\n$ f'(a) = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a} $\n$ \\Rightarrow f'(2) = \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\to 2} \\frac{(x^2 - 4)(x^3 - 1) - 0}{x - 2} = \\lim_{x \\to 2} \\frac{(x - 2)(x + 2)(x^3 - 1)}{x - 2} = 4 \\times 7 = 28 $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1177,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "با توجه به تعریف مشتق داریم:\n$ f'(1) = \\lim_{x \\to 1} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\to 1} \\frac{(x^3 - 1)\\cos \\pi x - 0}{x - 1} = \\lim_{x \\to 1} \\frac{(x - 1)(x^2 + x + 1)\\cos \\pi x}{x - 1} = -3 $",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1178,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "با توجه به نمودار $ f $ واضح است:\n$ \\lim_{x \\to -2} f(x) = 2 $ و $ f(-2) = 3 $\nخواهیم داشت:\n$ g'(-2) = \\lim_{x \\to -2} \\frac{g(x) - g(-2)}{x + 2} = \\lim_{x \\to -2} \\frac{(x^2 - 4)f(x) - 0}{x + 2} = \\lim_{x \\to -2} \\frac{(x - 2)(x + 2)f(x)}{x + 2} = \\lim_{x \\to -2} (x - 2) \\times \\lim_{x \\to -2} f(x) = (-4)(2) = -8 $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1179,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "معادلهٔ خط $ d $ را به دست می‌آوریم:\n$ f(x) = \\frac{1}{x^2} \\Rightarrow f'(x) = \\frac{-2}{x^3} $\n$ d: y - f(\\alpha) = f'(\\alpha)(x - \\alpha) \\Rightarrow y - \\frac{1}{\\alpha^2} = \\frac{-2}{\\alpha^3}(x - \\alpha) $\nعرض نقطهٔ A برابر عرض از مبدأ خط $ d $ است.\n$ x = 0 \\Rightarrow y - \\frac{1}{\\alpha^2} = \\frac{2}{\\alpha^2} \\Rightarrow y = \\frac{3}{\\alpha^2} \\Rightarrow y_A = \\frac{3}{\\alpha^2} $\nواضح است عرض نقطهٔ B برابر $ \\frac{1}{\\alpha^2} = f(\\alpha) $ است. بنابراین عرض نقطهٔ A سه برابر عرض نقطهٔ B است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1180,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "اگر تابع $ f $ در $ x = a $ مشتق‌پذیر باشد، مشتق چپ و راست در $ x = a $ موجود بوده و با هم برابرند:\n$ f'_+(4) = f'_-(4) \\Rightarrow 2 - 3a = 2a - 1 \\Rightarrow 5a = 3 \\Rightarrow a = \\frac{3}{5} $",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1181,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "تابع $ g(x) = [y] $ به شرطی در $ x = a $ مشتق‌پذیر است که در آن نقطه پیوسته باشد. در این صورت $ y'(a) = 0 $.\nعبارت $ 4x $ به ازای $ x = \\frac{1}{8} $، $ x = \\frac{3}{8} $ و $ x = \\frac{5}{8} $ عددی غیرصحیح بوده و بنابراین تابع $ f(x) = [4x] $ در این نقاط پیوسته و در نتیجه مشتق‌پذیر است. اما در $ x = \\frac{3}{4} $ حد چپ و راست $ f(x) = [4x] $ نابرابر و تابع ناپیوسته و در نتیجه مشتق‌ناپذیر است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1182,
+      "solution_page": "page_0110.jpg",
+      "solution_text": "مشتق راست و چپ تابع را در $ x = 3 $ محاسبه می‌کنیم:\n$ f'_+(3) = \\lim_{x \\to 3^+} \\frac{(x^2 - 9)[x] - 0}{x - 3} = \\lim_{x \\to 3^+} \\frac{3(x - 3)(x + 3)}{x - 3} = 18 $\n$ f'_-(3) = \\lim_{x \\to 3^-} \\frac{(x^2 - 9)[x] - 0}{x - 3} = \\lim_{x \\to 3^-} \\frac{2(x - 3)(x + 3)}{x - 3} = 12 $\n$ \\Rightarrow f'_+(3) - f'_-(3) = 18 - 12 = 6 $",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1183,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "روش اول: از تعریف مشتق استفاده می‌کنیم:\n$g'_+(2) = \\lim_{x \\to 2^+} \\frac{\\frac{|x^2-4|}{3x-[f(x)]}}{x-2} = \\lim_{x \\to 2^+} \\frac{\\frac{(x-2)(x+2)}{3x-1}}{x-2} = \\frac{4}{5}$\n$g'_-(2) = \\lim_{x \\to 2^-} \\frac{\\frac{|x^2-4|}{3x-[f(x)]}}{x-2} = \\lim_{x \\to 2^-} \\frac{\\frac{-(x-2)(x+2)}{3x-4}}{x-2} = -2$\nبنابراین:\n$g'_+(2) - g'_-(2) = \\frac{4}{5} + 2 = \\frac{14}{5} = 2/8$\nروش دوم: تابع $g(x)$ در $x=2$ پیوسته است. تابع $g(x)$ را در همسایگی راست و چپ $2$ به دست آورده، مشتق می‌گیریم:\n$x > 2 \\Rightarrow g(x) = \\frac{x^2-4}{3x-1} \\Rightarrow g'_+(2) = \\frac{(x^2-4)'}{3x-1} = \\frac{2x}{3x-1} = \\frac{4}{5}$\n$x < 2 \\Rightarrow g(x) = \\frac{-(x^2-4)}{3x-4} \\Rightarrow g'_-(2) = \\frac{-(x^2-4)'}{3x-4} = \\frac{-2x}{3x-4} = -2$\nدقت کنید که $x^2-4$ عامل صفرشونده می‌باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1184,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "روش اول: در همه گزینه‌ها به علت وجود عامل صفرشونده $(x-1)$، تابع در $x=1$ پیوسته است. مشتق‌پذیری هر یک را بررسی می‌کنیم:\n۱: $f'(1) = \\lim_{x \\to 1} \\frac{(x-1)|x-1|-0}{x-1} = 0 \\ \\checkmark$\n۲: $f'(1) = \\lim_{x \\to 1} \\frac{(x-1)^2|x-1|-0}{x-1} = 0 \\ \\checkmark$\n۳: $f'(1) = \\lim_{x \\to 1} \\frac{(x-1)[x]-0}{x-1} \\begin{cases} \\xrightarrow{1^+} 1 \\\\ \\xrightarrow{1^-} 0 \\end{cases} \\times$\n۴: $f'(1) = \\lim_{x \\to 1} \\frac{(x-1)^2[x]-0}{x-1} = 0 \\ \\checkmark$\nروش دوم:\nنکته ۱: تابع $f(x) = |x-a|^n g(x)$ ($g(a) \\neq 0$) با شرط $n=1$ در $x=a$ پیوسته ولی مشتق‌ناپذیر است (نقطه گوشه). ولی اگر $n>1$ باشد، $f'(a) = 0$ است. ($g$ در $a$ تعریف شده است.)\nنکته ۲: تابع $f(x) = (x-a)^n [x]$ ($a \\in \\mathbb{Z}$) با شرط $n=1$ در $x=a$ پیوسته ولی مشتق‌ناپذیر است (نقطه گوشه). ولی اگر $n>1$ باشد، $f'(a) = 0$ است.\nبا توجه به نکات ۱ و ۲ واضح است در گزینه ۳ تابع در $x=1$ پیوسته و مشتق‌ناپذیر است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1185,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "تابع $y = [4x]$ در $x=-1$ ناپیوسته و مشتق‌ناپذیر است. برای این که تابع $f(x)$ در این نقطه مشتق‌پذیر باشد باید:\n$x^2+ax+b = (x+1)^2 \\Rightarrow x^2+ax+b = x^2+2x+1 \\Rightarrow a=2, b=1 \\Rightarrow a-b=1$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1186,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "تابع $y = x[f(x)]$ به علت وجود عامل صفرشونده در $x=0$ پیوسته است. این تابع در حالتی که $f(x)$ در $x=0$ ریشه ساده داشته؛ یعنی در $x=0$ تغییر علامت دهد، مشتق‌پذیر نخواهد بود. $f(x) = \\sin x$ این شرایط را داراست.\n$y = x[\\sin x] \\Rightarrow y'(0) = \\lim_{x \\to 0} \\frac{x[\\sin x]-0}{x-0} = \\lim_{x \\to 0} [\\sin x] \\Rightarrow \\begin{cases} \\xrightarrow{0^+} 0 \\\\ \\xrightarrow{0^-} -1 \\end{cases}$\nمشتق تابع $y = x[f(x)]$ به ازای سایر گزینه‌ها در $x=0$ موجود است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1187,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "روش اول: حد داده‌شده را ساده می‌کنیم. واضح است $f(2) = 8[-2]+3 = -13$\n$\\lim_{h \\to 0^-} \\frac{f(2+h)-f(2)}{h} = \\lim_{h \\to 0^-} \\frac{2(2+h)^2[-2-h]+3-(-13)}{h} = \\lim_{h \\to 0^-} \\frac{-4(2+h)^2+16}{h} = \\lim_{h \\to 0^-} \\frac{-4h^2-16h}{h} = \\lim_{h \\to 0^-} \\frac{-4h(h+4)}{h} = -16$\nروش دوم: با توجه به تعریف مشتق، حد داده‌شده همان مشتق چپ تابع $f$ در $x=2$ است. اگر $x \\to 2^-$، آن‌گاه $-x \\to -2^+$ و در نتیجه $[-x] = -2$ است. بنابراین:\n$f(x) = -4x^2+3 \\Rightarrow f'_-(2) = \\lim_{x \\to 2^-} \\frac{-4x^2+3-(-13)}{x-2} = \\lim_{x \\to 2^-} \\frac{-4(x-2)(x+2)}{x-2} = -16$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1188,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "حدود $\\lim_{h \\to 0^-} \\frac{f(4-3h)}{h}$ و $\\lim_{h \\to 0^-} \\frac{f(4+2h)}{h}$ را محاسبه کرده، جواب‌ها را بر هم تقسیم می‌کنیم:\n$a = \\lim_{h \\to 0^-} \\frac{f(4-3h)}{h} \\xrightarrow{-3h=t} a = \\lim_{t \\to 0^+} \\frac{f(4+t)-f(4)}{-\\frac{t}{3}} = -3 \\lim_{t \\to 0^+} \\frac{f(4+t)-f(4)}{t} = -3f'_+(4) = 6$\n$b = \\lim_{h \\to 0^-} \\frac{f(4+2h)}{h} \\xrightarrow{2h=t} b = \\lim_{t \\to 0^-} \\frac{f(4+t)-f(4)}{\\frac{t}{2}} = 2 \\lim_{t \\to 0^-} \\frac{f(4+t)-f(4)}{t} = 2f'_-(4) = 4 \\Rightarrow \\frac{a}{b} = \\frac{6}{4} = \\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1189,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "$f'_+(3)$ و $f'_-(-2)$ را محاسبه می‌کنیم:\n$f'_+(3) = \\lim_{x \\to 3^+} \\frac{|x^2-x-6|\\overbrace{[x]}^{3}-0}{x-3} = \\lim_{x \\to 3^+} \\frac{3(x+2)(x-3)}{x-3} = 15$\n$f'_-(-2) = \\lim_{x \\to (-2)^-} \\frac{|x^2-x-6|\\overbrace{[x]}^{-3}-0}{x+2} = \\lim_{x \\to (-2)^-} \\frac{-3(x+2)(x-3)}{x+2} = 15$\n$\\Rightarrow f'_+(3) + f'_-(-2) = 15+15 = 30$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1190,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "حد خواسته‌شده همان مشتق راست تابع $f$ در $x=-1$ یعنی $f'_+(-1)$ است.\n$f'_+(-1) = \\lim_{x \\to (-1)^+} \\frac{|x^2+x|-0}{x+1} = \\lim_{x \\to (-1)^+} \\frac{-x(x+1)}{x+1} = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1191,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "با توجه به رابطۀ $f'_+(1) - f'_-(1) = 12$ واضح است تابع $f$ در $x=1$ مشتق‌ناپذیر و گوشه است.\nتنها نقطۀ مشتق‌ناپذیر در $f(x) = (x^2+a)|x-b|$ نقطۀ $x=b$ است؛ بنابراین $b=1$. خواهیم داشت:\n$f'_+(1) = \\lim_{x \\to 1^+} \\frac{(x^2+a)|x-1|-0}{x-1} = \\lim_{x \\to 1^+} \\frac{(x^2+a)(x-1)}{x-1} = 1+a$\n$f'_-(1) = \\lim_{x \\to 1^-} \\frac{(x^2+a)|x-1|-0}{x-1} = \\lim_{x \\to 1^-} \\frac{-(x^2+a)(x-1)}{x-1} = -1-a$\n$\\Rightarrow (1+a) - (-1-a) = 12 \\Rightarrow 2a = 10 \\Rightarrow a=5$\n$\\Rightarrow a-b = 4$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1192,
+      "solution_page": "page_0111.jpg",
+      "solution_text": "چون تابع $f(x)$ در $x=-1$ مشتق‌ناپذیر است، نتیجه می‌شود $x=-1$ ریشۀ سادۀ عبارت داخل قدرمطلق است. از طرفی جمع ریشه‌های عبارت داخل قدرمطلق برابر $\\frac{1}{3}$ است. بنابراین اگر ریشۀ دوم را $k$ بنامیم، خواهیم داشت:\n$k - 1 = \\frac{1}{3} \\Rightarrow k = \\frac{4}{3}$\nتابع در $x = \\frac{4}{3}$ نیز مشتق‌ناپذیر است. (نقطۀ گوشه)",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1193,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "ضابطۀ تابع داده‌شده را تجزیه می‌کنیم:\n$y = x^2 |x-2| + 2a|x-2| = |x-2|(x^2+2a)$\n$x=2$ ریشۀ سادۀ داخل قدرمطلق است (نقطۀ گوشه). برای این‌که تابع فوق مشتق‌پذیر باشد، $x^2+2a$ به ازای $x=2$ باید برابر صفر باشد:\n$4+2a = 0 \\Rightarrow a=-2$\nتذکر: می‌توانستیم با محاسبۀ مشتق چپ و راست در $x=2$ و برابری آن‌ها به جواب برسیم.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1194,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "روش اول: ابتدا پیوستگی تابع $f$ را در $x=0$ بررسی می‌کنیم:\n$\\lim_{x \\to 0} f(x) = \\lim_{x \\to 0} \\frac{(1-\\cos 2x)x}{\\sin^2 x} = \\lim_{x \\to 0} \\frac{(2\\sin^2 x)x}{\\sin^2 x} = \\lim_{x \\to 0} 2x = 0 = f(0)$ .پیوسته است\nبرای محاسبۀ $f'(0)$ کافی است از عامل صفرشوندۀ $x$ مشتق گرفته و در حد عبارت $\\frac{1-\\cos 2x}{\\sin^2 x}$ وقتی $x \\to 0$ ضرب کنیم:\n$f'(0) = (x)' \\lim_{x \\to 0} \\frac{1-\\cos 2x}{\\sin^2 x} = \\lim_{x \\to 0} \\frac{2\\sin^2 x}{\\sin^2 x} = 2$\nروش دوم: در این گونه سؤالات بهتر است از تعریف مشتق استفاده کنیم:\n$f'(0) = \\lim_{x \\to 0} \\frac{\\frac{(1-\\cos 2x)x}{\\sin^2 x} - 0}{x-0} = \\lim_{x \\to 0} \\frac{2\\sin^2 x}{\\sin^2 x} = 2$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1195,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "روش اول: تابع را رسم می‌کنیم:\nبا توجه به نمودار واضح است نقاط $x=0$، $x=4$ و $x=-4$ گوشه هستند.\nروش دوم: ریشه‌های سادۀ داخل قدرمطلق نقطۀ گوشه هستند:\n1) $|x| \\Rightarrow x=0\\ \\checkmark$\n2) $|4-|x|| \\Rightarrow 4-|x|=0 \\Rightarrow |x|=4 \\Rightarrow x=\\pm 4\\ \\checkmark$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            530,
+            720,
+            860,
+            815
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع قدرمطلقی شامل نقاط گوشه",
+          "filename": "page_0112.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1196,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "نیم‌مماس چپ در نقطۀ $x=-4$ را $\\ell_1$ و نیم‌مماس راست در نقطۀ $x=0$ را $\\ell_2$ می‌نامیم. مشتق چپ تابع در نقطۀ $x=-4$ را به دست می‌آوریم:\n$f'_-( -4 ) = \\lim_{x \\to (-4)^-} \\frac{|x^2+4x|-0}{x+4} = \\lim_{x \\to (-4)^-} \\frac{x(x+4)}{x+4} = -4$\nشیب نیم‌مماس چپ در نقطۀ $x=-4$ برابر $-4$ بوده و از نقطۀ $(-4, 0)$ عبور می‌کند:\n$\\ell_1 : y = -4x - 16$\nمشتق راست تابع در نقطۀ $x=0$ را محاسبه می‌کنیم:\n$f'_+(0) = \\lim_{x \\to 0^+} \\frac{|x^2+4x|-0}{x} = \\lim_{x \\to 0^+} \\frac{x(x+4)}{x} = 4 \\Rightarrow \\ell_2 : y = 4x$\nاکنون محل تلاقی $\\ell_1$ و $\\ell_2$ را به دست می‌آوریم:\n$\\ell_1 = \\ell_2 \\Rightarrow -4x-16 = 4x \\Rightarrow 8x = -16 \\Rightarrow x=-2 \\Rightarrow y=-8$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1197,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "ریشۀ سادۀ داخل قدرمطلق $x=-2$ و نقطۀ گوشه است.\n$f'_+(-2) = \\lim_{x \\to (-2)^+} \\frac{|x+2|\\sqrt{x+a}-0}{x+2} = \\lim_{x \\to (-2)^+} \\frac{(x+2)\\sqrt{x+a}}{x+2} = \\sqrt{a-2}$\n$f'_-( -2 ) = \\lim_{x \\to (-2)^-} \\frac{|x+2|\\sqrt{x+a}-0}{x+2} = \\lim_{x \\to (-2)^-} \\frac{-(x+2)\\sqrt{x+a}}{x+2} = -\\sqrt{a-2}$\nنیم‌مماس راست و چپ بر هم عمودند:\n$f'_+(-2) f'_-( -2 ) = -1 \\Rightarrow \\sqrt{a-2} (-\\sqrt{a-2}) = -1 \\Rightarrow a-2 = 1 \\Rightarrow a=3$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1198,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "می‌دانیم تابع در ریشه‌های زیر رادیکال مماس قائم دارد:\n$2x^2+x=0 \\Rightarrow \\begin{cases} x=0 \\\\ x = -\\frac{1}{2}\\ \\checkmark \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1199,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "طول نقطۀ گوشۀ تابع $f(x)$ ریشۀ سادۀ داخل قدرمطلق یعنی $x=0$ است. خط مماس قائم نیز $x=8$ می‌باشد. نیم‌مماس‌های راست و چپ در نقطۀ $x=0$ را می‌یابیم:\n$f'_+(0) = (x)' \\sqrt[3]{x-8} = \\sqrt[3]{x-8} = \\sqrt[3]{-8} = -2$\n$\\Rightarrow \\text{نیم‌مماس راست} : y = -2x \\Rightarrow A(8, -16)$\n$f'_-(0) = (-x)' \\sqrt[3]{x-8} = -\\sqrt[3]{x-8} = -\\sqrt[3]{-8} = 2$\n$\\Rightarrow \\text{نیم‌مماس چپ} : y = 2x \\Rightarrow B(8, 16)$\nبنابراین:\n$AB = 32$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1200,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "عبارت زیر رادیکال در $x=2$ و $x=a$ برابر صفر است:\n$x^2+4x+b = 0 \\xrightarrow{x=2} 4+8+b = 0 \\Rightarrow b=-12$\nبنابراین:\n$x^2+4x-12 = 0 \\Rightarrow (x+6)(x-2) = 0 \\Rightarrow \\begin{cases} x=2 \\\\ x=-6\\ \\checkmark \\end{cases}$\nدر نتیجه $a$ همان $-6$ است.\n$\\Rightarrow a+b = -6 - 12 = -18$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1201,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "در $x=1$ ریشۀ زیر رادیکال بوده و تابع در این نقطه مماس قائم دارد.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1202,
+      "solution_page": "page_0112.jpg",
+      "solution_text": "در گزینه‌های $2$ و $4$: در نقطۀ $x=1$ مشتق تابع برابر صفر و مماس افقی است.\nدر $3$: نقطۀ $x=1$ نقطۀ گوشه است.\nروش اول: می‌دانیم:\n$y = \\dfrac{f}{g} \\Rightarrow y' = \\dfrac{f'g-g'f}{g^2}$\n$y = \\dfrac{x+9}{x} \\Rightarrow y' = \\dfrac{x-(x+9)}{x^2} = \\dfrac{-9}{x^2} \\xrightarrow{x=3} y' = -1$\nروش دوم: می‌دانیم:\n$y = \\dfrac{ax+b}{cx+d} \\Rightarrow y' = \\dfrac{ad-bc}{(cx+d)^2}$\n$y = \\dfrac{x+9}{x} \\Rightarrow y' = \\dfrac{0-9}{x^2} = -\\dfrac{9}{x^2} \\xrightarrow{x=3} y' = -1$\nروش سوم: می‌دانیم:\n$y = \\dfrac{a}{x} \\Rightarrow y' = -\\dfrac{a}{x^2}$\n$y = \\dfrac{x+9}{x} = 1 + \\dfrac{9}{x} \\Rightarrow y' = -\\dfrac{9}{x^2} \\xrightarrow{x=3} y' = -1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1203,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "$f'(x)$ را محاسبه می‌کنیم:\n$f(x) = 2x - \\sqrt{x+7} \\Rightarrow f'(x) = 2 - \\dfrac{1}{2\\sqrt{x+7}}$\n$\\Rightarrow f'(2) = 2 - \\dfrac{1}{2\\times 3} = 2 - \\dfrac{1}{6} = \\dfrac{11}{6}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1204,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "می‌دانیم:\n$y = \\dfrac{ax+b}{cx+d} \\Rightarrow y' = \\dfrac{ad-bc}{(cx+d)^2}$\n$f(x) = \\dfrac{x+2}{x-2} \\Rightarrow f'(x) = \\dfrac{-2-2}{(x-2)^2} = \\dfrac{-4}{(x-2)^2}$\nخواهیم داشت:\n$f'(a) = \\dfrac{-4}{(a-2)^2} = -4 \\Rightarrow (a-2)^2 = 1 \\Rightarrow \\begin{cases} a=3 \\\\ a=1 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1205,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "روش اول: می‌دانیم:\n$y=f.g \\Rightarrow y' = f'g + g'f$\n$f(x) = \\sqrt{x}(2x^2-3x)$\n$\\Rightarrow f'(x) = \\dfrac{1}{2\\sqrt{x}}(2x^2-3x) + (4x-3)\\sqrt{x}$\n$\\Rightarrow f'(4) = \\dfrac{1}{4}(20) + (13)(2) = 31$\nروش دوم: ابتدا $f(x)$ را ساده می‌کنیم:\n$f(x) = x^{\\frac{1}{2}}(2x^2-3x) = 2x^{\\frac{5}{2}} - 3x^{\\frac{3}{2}}$\n$\\Rightarrow f'(x) = 5x^{\\frac{3}{2}} - \\dfrac{9}{2}x^{\\frac{1}{2}} \\Rightarrow f'(4) = 5(4)^{\\frac{3}{2}} - \\dfrac{9}{2}(4)^{\\frac{1}{2}}$\n$= 40 - 9 = 31$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1206,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "می‌دانیم:\n$y = \\dfrac{f}{g} \\Rightarrow y' = \\dfrac{f'g-g'f}{g^2} \\quad f(x) = \\dfrac{x^2-4x+a}{3x+1}$\n$\\Rightarrow f'(x) = \\dfrac{(2x-4)(3x+1)-3(x^2-4x+a)}{(3x+1)^2}$\nخواهیم داشت:\n$f'(0) = -10 \\Rightarrow \\dfrac{(-4)(1)-3a}{1} = -10 \\Rightarrow 3a = 6 \\Rightarrow a=2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1207,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\dfrac{x^2+5x+8}{x+1}$\n$\\Rightarrow f'(x) = \\dfrac{(2x+5)(x+1)-(x^2+5x+8)}{(x+1)^2} = \\dfrac{x^2+2x-3}{(x+1)^2}$\nخواهیم داشت:\n$f'(\\alpha) = f'(1) \\Rightarrow \\dfrac{\\alpha^2+2\\alpha-3}{(\\alpha+1)^2} = 0$\n$\\Rightarrow \\alpha^2+2\\alpha-3 = 0 \\Rightarrow \\begin{cases} \\alpha = 1 \\\\ \\alpha = -3 \\ \\checkmark \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1208,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "$f'(x)$ را تشکیل می‌دهیم:\n$f(x) = \\dfrac{x-3}{x+1} \\Rightarrow f'(x) = \\dfrac{1-(-3)}{(x+1)^2} = \\dfrac{4}{(x+1)^2}$\nبنابراین:\n$f'(a) = f'(a-1) \\Rightarrow \\dfrac{4}{(a+1)^2} = \\dfrac{4}{a^2} \\Rightarrow (a+1)^2 = a^2$\n$\\Rightarrow 2a+1=0 \\Rightarrow a = -\\dfrac{1}{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1209,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "می‌دانیم:\n$y = \\sqrt[3]{x} \\Rightarrow y' = \\dfrac{1}{3\\sqrt[3]{x^2}} \\quad y = \\sqrt[3]{x^2} \\Rightarrow y' = \\dfrac{2}{3\\sqrt[3]{x}}$\n$f'(x)$ را به دست می‌آوریم:\n$f(x) = \\dfrac{x+\\sqrt[3]{x}}{\\sqrt[3]{x^2}-3}$\n$\\Rightarrow f'(x) = \\dfrac{(1+\\dfrac{1}{3\\sqrt[3]{x^2}})(\\sqrt[3]{x^2}-3) - (\\dfrac{2}{3\\sqrt[3]{x}})(x+\\sqrt[3]{x})}{(\\sqrt[3]{x^2}-3)^2}$\n$\\Rightarrow f'(1) = \\dfrac{(1+\\dfrac{1}{3})(1-3) - (\\dfrac{2}{3})(1+1)}{(1-3)^2} = \\dfrac{-\\dfrac{8}{3} - \\dfrac{4}{3}}{4} = \\dfrac{-4}{4} = -1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1210,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "ابتدا $f(x)$ را ساده می‌کنیم:\n$f(x) = \\dfrac{x-\\sqrt[3]{x^2}}{\\sqrt[3]{x}-1} = \\dfrac{\\sqrt[3]{x^2}(\\sqrt[3]{x}-1)}{\\sqrt[3]{x}-1} = \\sqrt[3]{x^2}$\nبنابراین:\n$\\Rightarrow f'(x) = \\dfrac{2}{3\\sqrt[3]{x}} \\Rightarrow f'(8) = \\dfrac{2}{3\\times 2} = \\dfrac{1}{3}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1211,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "تابع مشتق را به دست آورده و ریشه‌های آن را محاسبه می‌کنیم:\n$f(x) = (x+7)^2\\sqrt[3]{x} \\Rightarrow f'(x) = 2(x+7)\\sqrt[3]{x} + \\dfrac{(x+7)^2}{3\\sqrt[3]{x^2}} = 0$\n$\\Rightarrow (x+7)(2\\sqrt[3]{x} + \\dfrac{x+7}{3\\sqrt[3]{x^2}}) = 0 \\xrightarrow{x \\neq -7} 2\\sqrt[3]{x} + \\dfrac{x+7}{3\\sqrt[3]{x^2}} = 0$\n$\\Rightarrow \\dfrac{6x + (x+7)}{3\\sqrt[3]{x^2}} = 0 \\Rightarrow 7x+7=0 \\Rightarrow x=-1 \\Rightarrow \\alpha = -1$\nبنابراین:\n$f(-1) = -36$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1212,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "روش اول: می‌دانیم $f(1) = 8$ است. اگر $t = -h$ باشد، خواهیم داشت:\n$\\lim_{h \\to 0} \\dfrac{f(1-h)-f(1)}{h} = \\lim_{t \\to 0} \\dfrac{f(1+t)-f(1)}{-t} = -f'(1)$\n$f'(x)$ را محاسبه می‌کنیم:\n$f(x) = \\dfrac{7x+1}{\\sqrt{x}} \\Rightarrow f'(x) = \\dfrac{7\\sqrt{x} - \\dfrac{7x+1}{2\\sqrt{x}}}{x}$\n$\\Rightarrow f'(1) = \\dfrac{7-4}{1} = 3 \\Rightarrow -f'(1) = -3$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1213,
+      "solution_page": "page_0113.jpg",
+      "solution_text": "می‌دانیم:\n$\\lim_{x \\to 3^+} \\frac{f(x) - f(3)}{x - 3} = f'_+(3)$\nتابع $f(x)$ در $x=3$ پیوستگی راست دارد؛ بنابراین:\n$f(x) = \\frac{3x-7}{2x - [x]} \\Rightarrow f(x) = \\frac{3x-7}{2x-3} \\Rightarrow f'(x) = \\frac{-9 - (-14)}{(2x-3)^2}$\n$\\Rightarrow f'_+(3) = \\frac{5}{9}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1214,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "با فرض $t = \\frac{3}{x}$ خواهیم داشت:\n$\\lim_{x \\to +\\infty} x(f(\\frac{3}{x}) - 4) = \\lim_{t \\to 0} \\frac{3}{t} (f(t) - 4)$\n$= 3\\lim_{t \\to 0} \\frac{f(t) - f(0)}{t - 0} = 3f'(0)$\n$f'(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{4}{1-x} \\Rightarrow f'(x) = \\frac{4}{(1-x)^2} \\Rightarrow f'(0) = 4$\n$\\Rightarrow 3f'(0) = 12$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1215,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "اگر تابع چندجمله‌ای $f$ درجه $n$ باشد، $f'$ درجه $n-1$ و در نتیجه $f + f'$ درجه $n$ است. چون $f + f'$ درجه یک است؛ بنابراین $f$ نیز درجه ۱ است.\n$f(x) = ax+b \\Rightarrow f'(x) = a$\n$\\Rightarrow f(x) + f'(x) = ax+b+a = 3x-8 \\Rightarrow \\begin{cases} a=3 \\\\ a+b=-8 \\end{cases}$\n$\\Rightarrow f(2) = 2a+b = 6-11 = -5 \\Rightarrow b=-11$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1216,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "عبارت $x^2-4$ در نقاط ۲ و ۲- برابر صفر است. بنابراین، برای محاسبه $f'(2)$ و $f'(-2)$ از این عامل صفرشونده مشتق گرفته، در بقیه عبارت ضرب می‌کنیم:\n$f(x) = (4-x^2) \\sqrt{3x+10} \\Rightarrow \\begin{cases} f'(2) = (-2x) \\sqrt{3x+10} = -4 \\times 4 = -16 \\\\ f'(-2) = (-2x) \\sqrt{3x+10} = 4 \\times 2 = 8 \\end{cases}$\n$f'(-2) - f'(2) = 8 - (-16) = 24$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1217,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "عبارت $9x^2-1$ در $x = \\frac{1}{3}$ برابر صفر بوده و عامل صفرشونده محسوب می‌شود.\n$f'(\\frac{1}{3}) = (9x^2-1)' \\sqrt{x - 2a} = 18x \\sqrt{x - 2a} = 6\\sqrt{\\frac{1}{3} - 2a} = 6$\n$\\Rightarrow \\frac{1}{3} - 2a = 1 \\Rightarrow 2a = -\\frac{2}{3} \\Rightarrow a = -\\frac{1}{3}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1218,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "روش اول: $6 = \\lim_{x \\to 2} \\frac{f(x)-3}{x^2-4}$ است؛ بنابراین $f(2) = 3$ بوده و داریم:\n$\\lim_{x \\to 2} \\frac{f(x)-3}{(x-2)(x+2)} = \\lim_{x \\to 2} \\frac{f(x)-f(2)}{x-2} \\times \\frac{1}{4} = \\frac{1}{4}f'(2) = 6$\n$\\Rightarrow f'(2) = 24$\n$g'(x)$ را محاسبه می‌کنیم:\n$g(x) = x - \\frac{4}{x} \\Rightarrow g'(x) = 1 + \\frac{4}{x^2} \\Rightarrow \\begin{cases} g(2) = 0 \\\\ g'(2) = 2 \\end{cases}$\nبنابراین:\n$(f.g)'(2) = f'(2)g(2) + g'(2)f(2) = 24 \\times 0 + 2 \\times 3 = 6$\nروش دوم: می‌دانیم $g(2)=0$ است؛ بنابراین: $(f.g)'(2) = g'(2)f(2)$.\n$f(2) = 3$ بوده و نیازی به محاسبه $f'(2)$ نمی‌باشد. $g'(2)$ نیز برابر ۲ است.\n$(fg)'(2) = 2 \\times 3 = 6$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1219,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "ابتدا $g(2)$ را به دست می‌آوریم:\n$\\frac{g(2)}{f(2)} = 2^2 + 1 = 5 \\Rightarrow g(2) = 5f(2) = 20$\nحال از دو طرف معادله داده‌شده مشتق می‌گیریم:\n$\\frac{g(x)}{f(x)} = x^2 + 1 \\Rightarrow (\\frac{g(x)}{f(x)})' = (x^2 + 1)'$\n$\\Rightarrow \\frac{g'(x)f(x) - f'(x)g(x)}{f^2(x)} = 2x$\n$\\xrightarrow{x=2} \\frac{g'(2)f(2) - f'(2)g(2)}{f^2(2)} = 4 \\Rightarrow \\frac{(1 \\times 4) - 20f'(2)}{4^2} = 4$\n$\\Rightarrow 4 - 20f'(2) = 4^3 \\Rightarrow 1 - 5f'(2) = 16 \\Rightarrow f'(2) = -3$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1220,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "مشتق تابع $\\sqrt{x}f(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{2+\\sqrt[3]{x}}{\\sqrt{x}} \\Rightarrow \\sqrt{x}f(x) = 2+\\sqrt[3]{x}$\n$\\Rightarrow (\\sqrt{x}f(x))' = \\frac{1}{3\\sqrt[3]{x^2}} \\Rightarrow \\frac{f(x)}{2\\sqrt{x}} + \\sqrt{x}f'(x) = \\frac{1}{3\\sqrt[3]{x^2}}$\n$\\Rightarrow f(x) + 2xf'(x) = \\frac{2\\sqrt{x}}{3\\sqrt[3]{x^2}} \\Rightarrow g(x) = \\frac{2\\sqrt{x}}{3\\sqrt[3]{x^2}} = \\frac{2}{3}x^{-\\frac{1}{6}}$\nبنابراین:\n$g'(x) = -\\frac{1}{9} x^{-\\frac{7}{6}} \\Rightarrow g'(1) = -\\frac{1}{9}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1221,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "می‌توانیم $f'(x)$ را محاسبه کرده، سپس مقدار $(\\frac{f'}{f^2})(2)$ را به دست آوریم، اما با کمی دقت متوجه می‌شویم که:\n$(\\frac{1}{f})' = \\frac{-f'}{f^2} \\Rightarrow \\frac{f'}{f^2} = -(\\frac{1}{f})'$\n$\\Rightarrow \\frac{f'}{f^2} = -(\\frac{3x^2 - x + 4}{x})' = -(3x - 1 + \\frac{4}{x})' = -3 + \\frac{4}{x^2}$\n$\\Rightarrow (\\frac{f'}{f^2})(2) = -3 + 1 = -2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1222,
+      "solution_page": "page_0114.jpg",
+      "solution_text": "واضح است شیب نیم‌خط راست برابر $-\\frac{1}{2}$ و شیب نیم‌خط چپ برابر ۲ می‌باشد. یعنی:\n$f'_+( -2) = -\\frac{1}{2}$\n$f'_-( -2) = 2$\nخواهیم داشت:\n$y' = \\frac{xf'(x) - f(x)}{x^2}$\n$y'_+( -2) = \\frac{-2f'_+( -2) - f( -2)}{4} = \\frac{1-2}{4} = -\\frac{1}{4}$\n$y'_-( -2) = \\frac{-2f'_-( -2) - f( -2)}{4} = \\frac{-4-2}{4} = -\\frac{3}{2}$\n$\\Rightarrow -\\frac{1}{4} - (-\\frac{3}{2}) = \\frac{5}{4}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1223,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "نیم‌خط سمت چپ تابع $g(x)$ از دو نقطهٔ $(1, 4)$ و $(-1, 0)$ عبور می‌کند و معادلهٔ آن به صورت مقابل است: $y = 2x + 2$\nاین نیم‌خط محور $y$ها و تابع $f(x)$ را در نقطهٔ $(0, 2)$ قطع می‌کند.\nتابع $f(x)$ از دو نقطهٔ $(2, 0)$ و $(0, 2)$ عبور کرده و معادلهٔ آن به صورت $y = -x + 2$ می‌باشد.\nبدیهی است:\n$f(0) = g(0) = 2 \\qquad f'(0) = -1 \\qquad g'(0) = 2$\nخواهیم داشت:\n$h(x) = \\frac{g(x)}{f(x)} \\Rightarrow h'(x) = \\frac{g'(x)f(x) - f'(x)g(x)}{f^2(x)}$\n$\\Rightarrow h'(0) = \\frac{g'(0)f(0) - f'(0)g(0)}{f^2(0)} = \\frac{2 \\times 2 - (-1)(2)}{4} = \\frac{6}{4} = \\frac{3}{2}$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 2 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 1224,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "در همسایگی عدد ۳ عبارت $[\\frac{x}{6}]$ پیوسته و مقدار آن صفر است و در همسایگی چپ عدد ۳، $x^2 - 3x$ منفی می‌باشد.\n$f(x) = |x^2 - 3x| + 4[\\frac{x}{6}] \\Rightarrow f(x) = -x^2 + 3x$\n$\\Rightarrow f'(x) = -2x + 3 \\Rightarrow f'_-(3) = -6 + 3 = -3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1225,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "می‌دانیم:\n$\\lim_{h \\to 0^+} \\frac{f(1+h) - f(1)}{h} = f'_+(1)$\nتابع $f(x)$ در $x = 1$ پیوستگی راست داشته و در همسایگی راست عدد ۱ به صورت زیر است:\n$f(x) = \\frac{x^3}{|2 - x|}[2x] = \\frac{x^3}{2 - x} \\times 2 = \\frac{2x^3}{2 - x}$\nبنابراین:\n$f'(x) = \\frac{6x^2(2 - x) + 2x^3}{(2 - x)^2} \\Rightarrow f'_+(1) = \\frac{6 + 2}{1} = 8$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1226,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "تابع $f(x)$ در $x = -2$ پیوستگی راست داشته و در همسایگی راست عدد ۲- به صورت زیر است:\n$f(x) = (|x| + [x])\\sqrt[3]{4x} \\Rightarrow f(x) = (-x - 2)\\sqrt[3]{4x}$\nعبارت $(x + 2)$ عامل صفرشونده است؛ بنابراین:\n$f'(-2) = -\\sqrt[3]{4x} = 2$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1227,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\sqrt[3]{\\frac{3}{x} - 2} \\Rightarrow f'(x) = \\frac{-\\frac{3}{x^2}}{3\\sqrt[3]{(\\frac{3}{x} - 2)^2}}$\nخواهیم داشت:\n$y = f(x - 1)f(x + 1)$\n$\\Rightarrow y' = f'(x - 1)f(x + 1) + f'(x + 1)f(x - 1)$\n$\\xrightarrow{x = 2} y' = f'(1)f(3) + f'(3)f(1)$\n$= (-1)(-1) + (-\\frac{1}{9})(1) = \\frac{8}{9}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1228,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "$f'(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{x - 3}{\\sqrt{3x + 7}} \\Rightarrow f'(x) = \\frac{\\sqrt{3x + 7} - \\frac{3}{2\\sqrt{3x + 7}}(x - 3)}{3x + 7}$\n$\\Rightarrow f'(-1) = \\frac{2 - \\frac{3}{4}(-4)}{4} = \\frac{2 + 3}{4} = \\frac{5}{4}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1229,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "می‌دانیم:\n$y = \\sqrt{u} \\Rightarrow y' = \\frac{u'}{2\\sqrt{u}}$\n$f(x) = \\sqrt{\\frac{2x + 1}{x - 3}} \\Rightarrow f'(x) = \\frac{\\frac{-6 - 1}{(x - 3)^2}}{2\\sqrt{\\frac{2x + 1}{x - 3}}}$\n$\\Rightarrow f'(4) = \\frac{\\frac{-7}{1}}{2 \\times 3} = -\\frac{7}{6}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1230,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "با فرض $\\sqrt{x - 4} = k$، عبارت $f(x)$ را ساده می‌کنیم:\n$\\sqrt{x - 4} = k \\Rightarrow x = k^2 + 4$\n$f(x) = \\sqrt{x - 4\\sqrt{x - 4}} = \\sqrt{k^2 + 4 - 4k} = \\sqrt{(k - 2)^2} = |k - 2| = |\\sqrt{x - 4} - 2|$\nدر همسایگی عدد ۱۳، عبارت داخل قدرمطلق مثبت است:\n$\\Rightarrow f(x) = \\sqrt{x - 4} - 2 \\Rightarrow f'(x) = \\frac{1}{2\\sqrt{x - 4}}$\n$\\Rightarrow f'(13) = \\frac{1}{6}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1231,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "می‌دانیم:\n$y = \\sqrt[n]{u} \\Rightarrow y' = \\frac{u'}{n\\sqrt[n]{u^{n-1}}}$\n$f(x) = x\\sqrt[3]{\\frac{3x - 2}{x + 1}} \\Rightarrow f'(x) = \\sqrt[3]{\\frac{3x - 2}{x + 1}} + (\\sqrt[3]{\\frac{3x - 2}{x + 1}})'x$\n$= \\sqrt[3]{\\frac{3x - 2}{x + 1}} + \\frac{\\frac{5}{(x + 1)^2}}{3\\sqrt[3]{(\\frac{3x - 2}{x + 1})^2}} \\times x$\n$\\Rightarrow f'(-2) = 2 + \\frac{5}{3 \\times 4}(-2) = 2 - \\frac{5}{6} = \\frac{7}{6}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1232,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "تابع مشتق را به دست آورده، ریشه‌های آن را محاسبه می‌کنیم:\n$f(x) = x - \\sqrt[3]{x^3 - x^2} \\Rightarrow f'(x) = 1 - \\frac{3x^2 - 2x}{3\\sqrt[3]{(x^3 - x^2)^2}} = 0$\n$\\Rightarrow 3\\sqrt[3]{(x^3 - x^2)^2} = 3x^2 - 2x$\n$\\xrightarrow{\\text{به توان ۳}} 27(x^3 - x^2)^2 = (3x^2 - 2x)^3$\n$\\Rightarrow 27x^4(x - 1)^2 = x^3(3x - 2)^3$\n$\\xrightarrow{x > 0} 27x(x - 1)^2 = (3x - 2)^3$\n$\\Rightarrow 27x^3 - 54x^2 + 27x = 27x^3 - 54x^2 + 36x - 8$\n$\\Rightarrow 9x = 8 \\Rightarrow x = \\frac{8}{9}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1233,
+      "solution_page": "page_0115.jpg",
+      "solution_text": "واضح است $\\lim_{x \\to 4} \\frac{f(x) - f(4)}{x - 4}$ همان $f'(4)$ است.\n$f(x) = (\\sqrt{\\frac{x}{2x - 7}})^3 \\Rightarrow f'(x) = 3(\\sqrt{\\frac{x}{2x - 7}})^2(\\sqrt{\\frac{x}{2x - 7}})'$\n$= \\frac{3x}{2x - 7} \\times \\frac{\\frac{-7}{(2x - 7)^2}}{2\\sqrt{\\frac{x}{2x - 7}}} \\Rightarrow f'(4) = 12 \\times \\frac{-7}{4} = -21$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1234,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "ابتدا $f(x)$ را ساده کرده و سپس مشتق می‌گیریم:\n$$f(x) = \\frac{3x}{x - \\sqrt{x^2 + 1}} \\times \\frac{x + \\sqrt{x^2 + 1}}{x + \\sqrt{x^2 + 1}} = -3x(x + \\sqrt{x^2 + 1})$$\n$$f'(x) = -3(1 \\times (x + \\sqrt{x^2 + 1}) + (1 + \\frac{x}{\\sqrt{x^2 + 1}}) \\times x)$$\n$$\\Rightarrow f'(\\frac{4}{3}) = -3((\\frac{4}{3} + \\frac{5}{3}) + (1 + \\frac{\\frac{4}{3}}{\\frac{5}{3}}) \\times \\frac{4}{3}) = -3(3 + \\frac{12}{5}) = -\\frac{81}{5} = -16/2$$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1235,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "ابتدا $f(x)$ را ساده کرده، سپس $f'(x)$ را به دست می‌آوریم:\n$$f(x) = \\frac{2}{x - \\sqrt{x^2 + 4}} \\times \\frac{x + \\sqrt{x^2 + 4}}{x + \\sqrt{x^2 + 4}} = \\frac{2(x + \\sqrt{x^2 + 4})}{-4} = -\\frac{1}{2}(x + \\sqrt{x^2 + 4})$$\n$$\\Rightarrow f'(x) = -\\frac{1}{2}(1 + \\frac{x}{\\sqrt{x^2 + 4}})$$خواهیم داشت:\n$$\\frac{f'(x)}{f(x)} = \\frac{1 + \\frac{x}{\\sqrt{x^2 + 4}}}{x + \\sqrt{x^2 + 4}} = \\frac{1}{\\sqrt{x^2 + 4}} \\Rightarrow a = \\frac{f'(\\sqrt{5})}{f(\\sqrt{5})} = \\frac{1}{3}$$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1236,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$$f(x) = \\frac{3x - 1}{4 - x} = \\frac{3x - 1}{-x + 4} \\Rightarrow f'(x) = \\frac{11}{(-x + 4)^2}$$\n$$\\Rightarrow \\begin{cases} f(3) = 8 \\\\ f'(3) = 11 \\end{cases}$$\nحال $y'$ را محاسبه می‌کنیم:\n$$y = x \\sqrt[3]{f(x)} \\Rightarrow y' = \\sqrt[3]{f(x)} + \\frac{f'(x)}{3 \\sqrt[3]{f^2(x)}} \\times x$$\n$$\\Rightarrow y'(3) = \\sqrt[3]{f(3)} + \\frac{f'(3)}{3 \\sqrt[3]{f^2(3)}} \\times 3 = \\sqrt[3]{8} + \\frac{11}{3 \\sqrt[3]{64}} \\times 3 = 2 + \\frac{11}{4} = \\frac{19}{4}$$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1237,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "از دو طرف معادلهٔ داده‌شده مشتق می‌گیریم.\nمی‌دانیم: $(f(u))' = u'f'(u)$\n$$(f(\\sqrt{x^2 + 5} - x))' = (2x^3)'$$\n$$\\Rightarrow (\\frac{x}{\\sqrt{x^2 + 5}} - 1)f'(\\sqrt{x^2 + 5} - x) = 6x^2$$\n$$\\xrightarrow{x=2} (\\frac{2}{3} - 1)f'(1) = 24 \\Rightarrow -\\frac{1}{3}f'(1) = 24$$\n$$\\Rightarrow f'(1) = -72$$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1238,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "از دو طرف معادلهٔ داده‌شده مشتق می‌گیریم:\n$$(f(x^2 - 3x))' = (g(\\sqrt{x + 6}))'$$\n$$\\Rightarrow (2x - 3)f'(x^2 - 3x) = \\frac{1}{2\\sqrt{x + 6}} g'(\\sqrt{x + 6})$$\nحال $x$ را مساوی ۳ قرار می‌دهیم:\n$$\\Rightarrow 3f'(0) = \\frac{1}{6} g'(3) \\Rightarrow g'(3) = 18f'(0) = 72$$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1239,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "روش اول: با فرض $t = 2x + 2$ خواهیم داشت: $x = \\frac{t - 2}{2}$\nبنابراین:\n$$\\lim_{x \\to -2} \\frac{f(2x + 2)}{x^2 - 4} = 2 \\Rightarrow \\lim_{t \\to -2} \\frac{f(t)}{(\\frac{t - 2}{2})^2 - 4} = \\lim_{t \\to -2} \\frac{f(t)}{\\frac{t^2 - 4t - 12}{4}} = 2$$\n$$\\Rightarrow \\lim_{t \\to -2} \\frac{f(t)}{(t + 2)(t - 6)} = \\frac{1}{2}$$\nبا توجه به این‌که جواب حد عددی حقیقی است، واضح است که $f(-2) = 0$ است.\n$$\\Rightarrow \\lim_{t \\to -2} \\frac{f(t) - f(-2)}{(t + 2)\\underbrace{(t - 6)}_{-8}} = \\frac{1}{2} \\Rightarrow \\lim_{t \\to -2} \\frac{f(t) - f(-2)}{t + 2} = -4$$\n$$\\Rightarrow f'(-2) = -4$$\nحال مشتق $f(-\\frac{4}{x})$ را به ازای $x = 2$ به دست می‌آوریم:\n$$y = f(-\\frac{4}{x}) \\Rightarrow y' = \\frac{4}{x^2} f'(-\\frac{4}{x}) \\xrightarrow{x=2} y' = f'(-2) = -4$$\nروش دوم: از قاعدهٔ هوپیتال استفاده می‌کنیم:\n$$\\lim_{x \\to -2} \\frac{f(2x + 2)}{x^2 - 4} \\xrightarrow{\\text{Hop}} \\lim_{x \\to -2} \\frac{2f'(2x + 2)}{2x} = \\frac{2f'(-2)}{-4} = 2 \\Rightarrow f'(-2) = -4$$\nبقیهٔ راه‌حل مانند روش اول است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1240,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "روش اول: با توجه به $\\lim_{x \\to 1} \\frac{f(x) - 2}{x - 1} = 7$ واضح است $f(1) = 2$ می‌باشد؛ بنابراین:\n$$\\lim_{x \\to 1} \\frac{f(x) - f(1)}{x - 1} = 7 \\Rightarrow f'(1) = 7$$\nحال $y'$ را به دست می‌آوریم:\n$$y = \\frac{f(3x)}{x} \\Rightarrow y' = \\frac{3f'(3x)(x) - f(3x)}{x^2} \\xrightarrow{x = \\frac{1}{3}} y' = \\frac{3f'(1)(\\frac{1}{3}) - f(1)}{\\frac{1}{9}} = \\frac{7 - 2}{\\frac{1}{9}} = 45$$\nروش دوم: از هوپیتال استفاده می‌کنیم:\n$$\\lim_{x \\to 1} \\frac{f(x) - 2}{x - 1} \\xrightarrow{\\text{Hop}} \\lim_{x \\to 1} f'(x) = f'(1) = 7$$\nادامهٔ راه‌حل مانند روش اول است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1241,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "روش اول: با توجه به $\\lim_{x \\to 3} \\frac{f(x) + 4}{x - 3} = \\frac{1}{2}$ درمی‌یابیم که $f(3) = -4$ است؛ بنابراین:\n$$\\lim_{x \\to 3} \\frac{f(x) - f(3)}{x - 3} = f'(3) = \\frac{1}{2}$$\nحال از تابع $y = \\frac{f^2(3x)}{x}$ مشتق می‌گیریم:\n$$y' = \\frac{6f'(3x)f(3x)(x) - f^2(3x)}{x^2} \\xrightarrow{x=1} y' = 6f'(3)f(3) - f^2(3) = 6(-4)(\\frac{1}{2}) - 16 = -12 - 16 = -28$$\nروش دوم: از هوپیتال استفاده می‌کنیم:\n$$\\lim_{x \\to 3} \\frac{f(x) + 4}{x - 3} \\xrightarrow{\\text{Hop}} \\lim_{x \\to 3} f'(x) = f'(3) = \\frac{1}{2}$$\nادامهٔ راه‌حل مانند روش اول است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1242,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "روش اول: از $\\lim_{h \\to 0} \\frac{f(2+3h)-1}{h} = 2$ در می‌یابیم $f(2)=1$ است. بنابراین:\n$\\lim_{h \\to 0} \\frac{f(2+3h)-f(2)}{h} = 2 \\Rightarrow 3f'(2) = 2 \\Rightarrow f'(2) = \\frac{2}{3}$\nحال $g'(x)$ را به دست می‌آوریم:\n$g'(x) = xf(\\frac{1}{x}) \\Rightarrow g'(x) = f(\\frac{1}{x}) - \\frac{1}{x^2}f'(\\frac{1}{x}) \\times x$\n$\\Rightarrow g'(\\frac{1}{2}) = f(2) - 2f'(2) = 1 - \\frac{4}{3} = -\\frac{1}{3}$\nروش دوم: از هوپیتال استفاده می‌کنیم:\n$\\lim_{h \\to 0} \\frac{f(2+3h)-1}{h} \\xrightarrow{\\text{Hop}} \\lim_{h \\to 0} 3f'(2+3h) = 3f'(2) = 2$\n$\\Rightarrow f'(2) = \\frac{2}{3}$\nادامهٔ راه‌حل مانند روش اول است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1243,
+      "solution_page": "page_0116.jpg",
+      "solution_text": "با توجه به نمودار، رأس سهمی نقطهٔ $(2,0)$ است و سهمی از نقطهٔ $(0,-1)$ می‌گذرد:\n$f(x) = a(x-2)^2 \\xrightarrow{f(0)=-1} -1 = 4a \\Rightarrow a = -\\frac{1}{4}$\n$\\Rightarrow f(x) = -\\frac{1}{4}(x-2)^2 \\Rightarrow f'(x) = -\\frac{1}{2}(x-2)$\n$\\Rightarrow \\begin{cases} f(-2) = -4 \\\\ f'(-2) = 2 , f'(4) = -1 \\end{cases}$\nحال مشتق تابع $y = f^2(x) - f(x^2)$ را به دست می‌آوریم:\n$y' = 2f(x)f'(x) - 2xf'(x^2)$\n$\\xrightarrow{x = -2} y = 2f(-2)f'(-2) + 4f'(4)$\n$= 2(-4)(2) + 4(-1) = -20$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1244,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "در معادلهٔ داده‌شده $x$ را برابر $2$ قرار می‌دهیم:\n$f(x) - xf(\\frac{4}{x}) = 3 \\xrightarrow{x=2} f(2) - 2f(2) = 3 \\Rightarrow f(2) = -3$\nحال از دو طرف معادلهٔ داده‌شده مشتق می‌گیریم:\n$f'(x) - (f(\\frac{4}{x}) - \\frac{4}{x^2}f'(\\frac{4}{x})(x)) = 0$\n$\\xrightarrow{x=2} f'(2) - (f(2) - 2f'(2)) = 0 \\Rightarrow 3f'(2) - f(2) = 0$\n$\\Rightarrow 3f'(2) + 3 = 0 \\Rightarrow f'(2) = -1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1245,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "با فرض $y = (f+g^2)f$ حاصل $y'(1)$ را به دست می‌آوریم:\n$y' = (f+g^2)' f + f'(f+g^2) = (f' + 2gg') f + f'(f+g^2)$\n$\\Rightarrow y'(1) = (f'(1) + 2g(1)g'(1))f(1) + f'(1)(f(1) + g^2(1))$\n$= (2 + 2(3)(-2)) \\times 3 + 2(3+3^2) = (-10) \\times 3 + 2(12)$\n$= -30 + 24 = -6$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1246,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "از تابع $f^2(f(\\frac{1}{x}))$ یا همان $(f(f(\\frac{1}{x})))^2$ مشتق می‌گیریم:\n$(f^2(f(\\frac{1}{x})))' = 2f(f(\\frac{1}{x}))(f(f(\\frac{1}{x})))'$\n$= 2f(f(\\frac{1}{x}))(-\\frac{1}{x^2} f'(\\frac{1}{x}) f'(f(\\frac{1}{x})))$\n$\\xrightarrow{x=1} 2f(f(1))(-f'(1) f'(f(1))) = 2f(1)(-3f'(1))$\n$= 2(-3 \\times 3) = -18$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1247,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "تساوی داده‌شده را به توان $2$ رسانده، پس از مرتب کردن عبارت مشتق می‌گیریم:\n$y = \\frac{x}{\\sqrt{x^2+1}} \\Rightarrow y^2 = \\frac{x^2}{x^2+1} \\Rightarrow y^2x^2 + y^2 = x^2$\n$\\Rightarrow (y^2x^2 + y^2)' = (x^2)' \\Rightarrow 2yy'x^2 + 2xy^2 + 2yy' = 2x$\n$\\Rightarrow yy'x^2 + xy^2 + yy' = x$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1248,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "می‌دانیم:\n$(fog)'(x) = g'(x)f'(g(x))$\nابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = 3x - \\frac{2}{x} \\Rightarrow f'(x) = 3 + \\frac{2}{x^2} \\Rightarrow \\begin{cases} f(1) = 1 \\\\ f'(1) = 5 \\end{cases}$\nخواهیم داشت:\n$(gof)'(1) = 4 \\Rightarrow f'(1)g'(f(1)) = 4 \\Rightarrow 5g'(1) = 4$\n$\\Rightarrow g'(1) = \\frac{4}{5} = 0/8$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1249,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\sqrt{x+5} + 1 \\Rightarrow f'(x) = \\frac{1}{2\\sqrt{x+5}} \\Rightarrow \\begin{cases} f(4) = 4 \\\\ f'(4) = \\frac{1}{6} \\end{cases}$\nحال $(fof)'(4)$ را محاسبه می‌کنیم:\n$(fof)'(4) = f'(4)f'(f(4)) = \\frac{1}{6} f'(4) = \\frac{1}{6} \\times \\frac{1}{6} = \\frac{1}{36}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1250,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "با توجه به $\\lim_{x \\to 2} \\frac{f(x) - 2}{x^2 - 4} = 3$ واضح است $f(2) = 2$.\nبنابراین:\n$\\lim_{x \\to 2} \\frac{f(x) - f(2)}{(x-2)(x+2)} = \\frac{1}{4} f'(2) = 3 \\Rightarrow f'(2) = 12$\nحال $(fof)'(2)$ را به دست می‌آوریم:\n$(fof)'(2) = f'(2)f'(f(2)) = f'(2)f'(2) = 12^2 = 144$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1251,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "از دو طرف تساوی $fog(x) = x^3 - 5x$ مشتق می‌گیریم:\n$(fog)'(x) = 3x^2 - 5 \\Rightarrow g'(x)f'(g(x)) = 3x^2 - 5$\nاز طرفی $f'(x) = \\frac{2}{x} \\Rightarrow f'(g(x)) = \\frac{2}{g(x)}$\n$\\Rightarrow 2 \\times \\frac{g'(x)}{g(x)} = 3x^2 - 5 \\xrightarrow{x=2} 2 \\times \\frac{g'(2)}{g(2)} = 7$\n$\\Rightarrow (\\frac{g'}{g})(2) = \\frac{7}{2} = 3/5$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1252,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "ابتدا $(fog)'(x)$ را به دست می‌آوریم:\n$fog(x) = x + \\sqrt[3]{x} \\Rightarrow (fog)'(x) = 1 + \\frac{1}{3\\sqrt[3]{x^2}}$\n$\\Rightarrow g'(x)f'(g(x)) = 1 + \\frac{1}{3\\sqrt[3]{x^2}} \\xrightarrow{f'(x) = \\frac{4}{x}} g'(x) \\times \\frac{4}{g(x)}$\n$= 1 + \\frac{1}{3\\sqrt[3]{x^2}} \\xrightarrow{x=1} \\frac{4g'(1)}{g(1)} = \\frac{4}{3} \\Rightarrow \\frac{g'(1)}{g(1)} = \\frac{1}{3}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1253,
+      "solution_page": "page_0117.jpg",
+      "solution_text": "ابتدا $f'(x)$ و $g'(x)$ را به دست می‌آوریم (مشتق $f$ را در همسایگی $x=2$ حساب می‌کنیم):\n$f(x)=1+2x^2 \\Rightarrow f'(x)=4x$\n$g(x)=\\frac{x}{1+x} \\Rightarrow g'(x)=\\frac{1}{(x+1)^2}$\nخواهیم داشت:\n$(fog)'(2)=f'(2)g'(f(2))=f'(2)g'(9)=8\\times\\frac{1}{100}=0.08$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": [
+        "Printed solution block begins on page_0117.jpg and continues at the top of page_0118.jpg."
+      ]
+    },
+    {
+      "question_number": 1254,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "$f'(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{1}{3}x + \\sqrt{x+1} \\Rightarrow f'(x) = \\frac{1}{3} + \\frac{1}{2\\sqrt{x+1}}$\n$\\Rightarrow \\begin{cases} f(3) = 3 \\\\ f'(3) = \\frac{1}{3} + \\frac{1}{4} = \\frac{7}{12} \\end{cases}$\nخواهیم داشت:\n$y' = (fof(\\frac{1}{x}))' = (f(\\frac{1}{x}))' f'(f(\\frac{1}{x})) = -\\frac{1}{x^2} f'(\\frac{1}{x}) f'(f(\\frac{1}{x}))$\n$\\xrightarrow{x = \\frac{1}{3}} y' = -9 f'(3) f'(f(3)) = -9 f'(3) f'(3) = -9 (\\frac{7}{12})^2$\n$= -\\frac{49}{16}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1255,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "در همسایگی $x = -1$ عبارت $|x|$ برابر $-x$ است. بنابراین:\n$f(x) = 3x^2 - x \\Rightarrow f'(x) = 6x - 1$\nخواهیم داشت:\n$y = f(\\sqrt{f(x)}) \\Rightarrow y' = (\\sqrt{f(x)})' f'(\\sqrt{f(x)})$\n$= \\frac{f'(x)}{2\\sqrt{f(x)}} f'(\\sqrt{f(x)}) \\xrightarrow{x=-1} y' = \\frac{f'(-1)}{2\\sqrt{f(-1)}} f'(\\sqrt{f(-1)})$\n$= \\frac{-7}{4} f'(2) = \\frac{-7}{4} \\times 13 = \\frac{-91}{4} = -22/75$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1256,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "ابتدا $f'(x)$ و $g'(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{x^2 - 3}{x} = x - \\frac{3}{x} \\Rightarrow f'(x) = 1 + \\frac{3}{x^2} \\Rightarrow f'(4) = \\frac{19}{16}$\n$g(x) = \\frac{3x - 4}{\\sqrt{x}} \\Rightarrow g'(x) = \\frac{3\\sqrt{x} - \\frac{3x - 4}{2\\sqrt{x}}}{x} \\Rightarrow \\begin{cases} g(4) = 4 \\\\ g'(4) = 1 \\end{cases}$\nخواهیم داشت:\n$y = (f+g)og(x) \\Rightarrow y' = g'(x)(f+g)'(g(x))$\n$\\Rightarrow y'(4) = g'(4)(f+g)'(g(4)) = 1 \\times (f+g)'(4)$\n$= f'(4) + g'(4) = \\frac{19}{16} + 1 = \\frac{35}{16}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1257,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "می‌توانیم $f'$ و $g'$ را به دست آورده، مقدار خواسته شده را محاسبه می‌کنیم. اما با کمی دقت درمی‌یابیم که:\n$f'(g(2))g'(2) = (fog)'(2)$\nتابع $fog(x)$ را تشکیل می‌دهیم:\n$f(x) = \\frac{x^2 - 6x + 1}{x^2 - 6x - 2} = \\frac{(x-3)^2 - 8}{(x-3)^2 - 11}$\n$\\Rightarrow fog(x) = \\frac{(g(x)-3)^2 - 8}{(g(x)-3)^2 - 11} = \\frac{x - 8}{x - 11}$\nبنابراین:\n$(fog)'(x) = \\frac{-11+8}{(x-11)^2} = \\frac{-3}{(x-11)^2} \\Rightarrow (fog)'(2) = \\frac{-3}{81} = \\frac{-1}{27}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1258,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "ابتدا $fog(x)$ را به دست می‌آوریم:\n$fog(x) = \\frac{xg(x)}{\\sqrt{1+g^2(x)}} = \\frac{x \\frac{x}{\\sqrt{4-x^2}}}{\\sqrt{1+\\frac{x^2}{4-x^2}}} = \\frac{\\frac{x^2}{\\sqrt{4-x^2}}}{\\frac{2}{\\sqrt{4-x^2}}} = \\frac{x^2}{2}$\nبنابراین:\n$(fog)'(x) = \\frac{1}{2} \\times 2x = x \\Rightarrow (fog)'(\\frac{1}{2}) = \\frac{1}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1259,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "ابتدا $fog(x)$ را تشکیل می‌دهیم:\n$1) \\ x \\ge 0 \\Rightarrow g(x) = 2x \\Rightarrow fog(x) = \\frac{3}{4}(2x) + \\frac{1}{4}|2x| = \\frac{6}{4}x + \\frac{2}{4}x = 2x$\n$2) \\ x < 0 \\Rightarrow g(x) = 4x \\Rightarrow fog(x) = \\frac{3}{4}(4x) + \\frac{1}{4}|4x| = 3x - x = 2x$\n$(1), (2) \\Rightarrow fog(x) = 2x \\Rightarrow (fog)'(x) = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1260,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "اگر $f$ درجه $n$ باشد، $f'$ درجه $(n-1)$ است؛ بنابراین $f'(x^3)$ درجه $3(n-1)$ بوده و $(f'(x^3))^2$ درجه $6(n-1)$ است.\n$f$ درجه ۳ است؛ بنابراین $f'of'(x^3)$ درجه $3(2^2)$ یعنی ۱۲ است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1261,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "$f$ تابع درجه ۲ است؛ بنابراین: $f(x) = ax^2 + bx + c$\n$\\Rightarrow f'(x) = 2ax + b$\n$\\Rightarrow fof'(x) = a(2ax+b)^2 + b(2ax+b) + c = 4x^2 - 6x + 5$\n$\\Rightarrow 4a^3x^2 + (4a^2b + 2ab)x + ab^2 + b^2 + c = 4x^2 - 6x + 5$\n$\\Rightarrow \\begin{cases} 4a^3 = 4 \\Rightarrow a = 1 \\\\ 4a^2b + 2ab = -6 \\Rightarrow 6b = -6 \\Rightarrow b = -1 \\\\ ab^2 + b^2 + c = 5 \\Rightarrow 2 + c = 5 \\Rightarrow c = 3 \\end{cases}$\n$\\Rightarrow f(x) = x^2 - x + 3 \\Rightarrow f'(x) = 2x - 1$\n$\\Rightarrow f(2)f'(2) = 5 \\times 3 = 15$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1262,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "تابع $y = [\\frac{x}{2}]$ در نقاط $x = 2, 4, 6, \\dots$ ناپیوسته و در نتیجه مشتق‌ناپذیر است. تابع $y = [\\frac{x+2}{3}]$ در نقاط $x = 4, 7, 10, \\dots$ ناپیوسته و در نتیجه مشتق‌ناپذیر است. بنابراین اولین نقطه‌ای که تابع $f(x)$ در بازهٔ $(1, +\\infty)$ در آن مشتق‌ناپذیر است $x = 2$ می‌باشد. نتیجه می‌گیریم حداکثر مقدار $k$ برابر ۲ است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1263,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "حد تابع $y = \\frac{3}{x-1}$ در $-\\infty$ برابر صفر است، برای این‌که تابع $f(x) = [\\frac{3}{x-1}]$ پیوسته و در نتیجه مشتق‌پذیر باشد، باید عبارت \\frac{3}{x-1} در بازهٔ $(-1, 0]$ باشد. بنابراین حداکثر مقدار $\\alpha$ برابر $-2$ است.\n$\\frac{3}{x-1} \\ge -1 \\Rightarrow \\frac{x+2}{x-1} \\ge 0 \\Rightarrow \\begin{cases} x \\le -2 \\quad \\checkmark \\\\ x \\ge 1 \\quad \\text{غ ق ق} \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1264,
+      "solution_page": "page_0118.jpg",
+      "solution_text": "برای این‌که تابع $f(x)$ در $x=4$ مشتق‌پذیر باشد، باید در این نقطه پیوسته بوده و مشتق چپ و راست آن برابر باشد.\n$\\text{شرط پیوستگی} \\Rightarrow a\\sqrt{x}+1 = x - \\frac{b}{x} \\xrightarrow{x=4} 2a + 1 = 4 - \\frac{b}{4}$\n$\\Rightarrow \\frac{b}{4} = 3 - 2a$\n$\\text{برابری مشتق چپ و راست} \\Rightarrow \\frac{a}{2\\sqrt{x}} = 1 + \\frac{b}{x^2} \\xrightarrow{x=4} \\frac{a}{4} = 1 + \\frac{b}{16}$\n$\\Rightarrow \\frac{a}{4} = 1 + \\frac{3-2a}{4} \\Rightarrow a = 4 + 3 - 2a \\Rightarrow a = \\frac{7}{3} \\Rightarrow b = \\frac{-20}{3}$\n$\\Rightarrow a - b = \\frac{7}{3} + \\frac{20}{3} = 9$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1265,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "تابع $f$ در $x=-1$ مشتق‌پذیر است. بنابراین در این نقطه پیوسته بوده و $f'_+(-1)=f'_(-1)$.\nشرط پیوستگی $\\xrightarrow{x=-1} \\sqrt[3]{(3x-5)^2} = ax+b$\n$\\longrightarrow 4 = -a+b$\n$f'_+(-1) = f'_(-1) \\xrightarrow{x=-1} \\frac{6}{3\\sqrt[3]{3x-5}} = a \\xrightarrow{x=-1} a = \\frac{6}{-6} = -1$\n$\\Rightarrow b = a+4 = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1266,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "تابع $f$ در $x=2$ مشتق‌پذیر است. بنابراین در این نقطه پیوسته بوده و $f'_+(2)=f'_-(2)$.\nشرط پیوستگی $\\xrightarrow{x=2} x^2-ax+b = \\frac{4}{x}+1$\n$\\longrightarrow 4-2a+b=2+1 \\Rightarrow 2a-b=1$\n$f'_+(2)=f'_-(2) \\longrightarrow 2x-a = \\frac{-4}{x^2} \\xrightarrow{x=2} 4-a=-1$\n$\\Rightarrow a=5 \\Rightarrow b=9$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1267,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "دو شرط پیوستگی و برابری مشتق چپ و راست را در نقطه $x=1$ بررسی می‌کنیم. می‌دانیم برای $0<x<1$ خواهیم داشت:\n$|x^2-x| = -x^2+x$\nشرط پیوستگی $\\xrightarrow{x=1} -x^2+x = x^2-ax+b$\n$\\longrightarrow 0 = 1-a+b \\Rightarrow a-b=1$\n$f'_+(1)=f'_-(1) \\xrightarrow{x=1} -2x+1 = 2x-a \\xrightarrow{x=1} -1=2-a$\n$\\Rightarrow a=3 \\Rightarrow b=2$\n$\\Rightarrow ab = 6$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1268,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "کافی است تابع $g(x)$ در $x=1$ مشتق‌پذیر باشد:\n$f(x) = ax^3+x+b \\Rightarrow f'(x) = 3ax^2+1 \\Rightarrow f''(x) = 6ax$\nشرط پیوستگی: $f(1)=f'(1) \\Rightarrow a+1+b=3a+1 \\Rightarrow b=2a$\nشرط مشتق‌پذیری: $f'(1)=f''(1) \\Rightarrow 3a+1=6a$\n$\\Rightarrow a=\\frac{1}{3} \\Rightarrow b=\\frac{2}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1269,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "توابع $y=x^2-a$ و $y=\\frac{b}{x}-1$ در دامنه‌های خود مشتق‌پذیرند. بنابراین کافی است تابع $f(x)$ در $x=2$ مشتق‌پذیر باشد:\nشرط پیوستگی $\\xrightarrow{x=2} x^2-a = \\frac{b}{x}-1 \\Rightarrow 4-a=\\frac{b}{2}-1$\nبرابری مشتق چپ و راست $\\longrightarrow 2x = -\\frac{b}{x^2} \\Rightarrow 4=-\\frac{b}{4} \\Rightarrow b=-16$\n$\\Rightarrow 4-a=-9 \\Rightarrow a=13 \\Rightarrow f(1)=1-a=-12$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1270,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "مشتق اول و دوم تابع $f$ را به دست می‌آوریم:\n$f(x) = 2x^4-3x^3+3x-4 \\Rightarrow f'(x) = 8x^3-9x^2+3$\n$\\Rightarrow f''(x) = 24x^2-18x \\Rightarrow \\begin{cases} f'(1)=2 \\\\ f''(1)=6 \\end{cases} \\Rightarrow f'(1)f''(1)=12$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1271,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "روش اول: $f(x)$ را ساده کرده، مشتق اول و دوم را به دست می‌آوریم:\n$f(x) = (x^2-4)(x^3-8) = x^5 - 4x^3 - 8x^2 + 32$\n$\\Rightarrow f'(x) = 5x^4 - 12x^2 - 16x$\n$\\Rightarrow f''(x) = 20x^3 - 24x - 16$\n$\\Rightarrow f''(2) = 160 - 48 - 16 = 96$\nروش دوم: $f(x)$ را تجزیه کرده و از عامل صفرشونده ۲ بار مشتق می‌گیریم:\n$f(x) = (x-2)(x+2)(x-2)(x^2+2x+4)$\n$= (x-2)^2(x+2)(x^2+2x+4)$\n$\\Rightarrow f''(2) = 2(x+2)(x^2+2x+4) = 2(4)(12) = 96$\nنکته اگر $f(x) = g(x)h(x)$ و $g(a)=g'(a)=0$ و $h(x)$ در $a$ مشتق‌پذیر باشد، خواهیم داشت:\n$f''(a) = g''(a)h(a)$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1272,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "ابتدا $f''(x)$ را به دست می‌آوریم:\n$f(x) = x^3+6x^2+3x+k \\Rightarrow f''(x) = 6x+12$\nاگر $f(x)$ بر $6x+12$ بخش‌پذیر باشد، باید $f(-2)=0$ شود:\n$f(-2) = -8+24-6+k = 0 \\Rightarrow k = -10$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1273,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "مشتق اول و دوم $f(x)$ را به دست آورده و برابر هم قرار می‌دهیم:\n$f(x) = \\frac{2x-5}{x-1} \\Rightarrow f'(x) = \\frac{3}{(x-1)^2} \\Rightarrow f''(x) = \\frac{-6}{(x-1)^3}$\nخواهیم داشت:\n$\\frac{3}{(x-1)^2} = \\frac{-6}{(x-1)^3} \\Rightarrow x-1=-2 \\Rightarrow x=-1$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1274,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "از دو طرف تساوی داده‌ شده مشتق می‌گیریم:\n$f'(x) = 2+\\frac{f(x)}{x} \\Rightarrow f''(x) = \\frac{xf'(x)-f(x)}{x^2}$\n$\\Rightarrow f''(1) = \\frac{f'(1)-f(1)}{1} = f'(1)-f(1)$\nبا توجه به تساوی داده شده خواهیم داشت:\n$f'(x) = 2+\\frac{f(x)}{x} \\xrightarrow{x=1} f'(1)=2+f(1) \\Rightarrow f'(1)-f(1)=2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1275,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "توابع $f'(x)$ و $f''(x)$ را به دست می‌آوریم:\n$f(x) = \\frac{2x+1}{x-1} \\Rightarrow f'(x) = \\frac{-3}{(x-1)^2} \\Rightarrow f''(x) = \\frac{6}{(x-1)^3}$\nبنابراین:\n$f'(\\alpha) = f''(2-\\alpha) \\Rightarrow \\frac{-3}{(\\alpha-1)^2} = \\frac{6}{(1-\\alpha)^3}$\n$\\Rightarrow -3 = \\frac{6}{1-\\alpha} \\Rightarrow \\alpha-1=2 \\Rightarrow \\alpha=3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1276,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "$f(x)$ را ساده کرده و از عامل صفرشونده ۲ بار مشتق می‌گیریم:\n$f(x) = \\frac{x^2-4x+4}{\\sqrt{x+2}-1} = \\frac{(x-2)^2}{\\sqrt{x+2}-1}$\n$\\Rightarrow f''(2) = \\frac{2}{\\sqrt{x+2}-1} = \\frac{2}{2-1} = 2$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1277,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "ابتدا $g(x)$ را ساده می‌کنیم. می‌دانیم:\n$f(x) = 2x^2-8x+9 = 2(x-2)^2+1$\n$\\Rightarrow g(x) = f(2-\\frac{1}{x}) = 2(-\\frac{1}{x})^2+1 = \\frac{2}{x^2}+1$\nبنابراین:\n$g'(x) = \\frac{-4}{x^3} \\Rightarrow g''(x) = \\frac{12}{x^4} \\Rightarrow g''(1)=12$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1278,
+      "solution_page": "page_0119.jpg",
+      "solution_text": "روش اول: با توجه به نمودار، واضح است $f(3)=0$ و $f'(3)=-2$ می‌باشد.\n$g(x) = (x^2-1)f(2+x)$\n$\\Rightarrow g'(x) = 2xf(2+x)+f'(2+x)(x^2-1)$\n$\\Rightarrow g''(x) = 2f(2+x)+2xf'(2+x)+f''(2+x)(x^2-1)+2xf'(2+x)$\n$\\Rightarrow g''(1) = 2f(3)+2f'(3)+0+2f'(3) = 4f'(3)=-8$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1279,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = 3x - 2 + (g(x))^3 \\Rightarrow f'(x) = 3 + 3g^2(x)g'(x)$\n$\\Rightarrow f'(2) = 3 + 3g^2(2)g'(2) \\Rightarrow 3 = 3 + 27g'(2)$\n$\\Rightarrow g'(2) = 0$\nبنابراین $g'(x)$ در $x = 2$ عامل صفرشونده بوده و برای محاسبه $f''(2)$ کافی‌ است از $g'(x)$ مشتق گرفته و در بقیه عبارت ضرب کنیم:\n$f''(2) = g''(2)(3g^2(2)) = 27g''(2) \\Rightarrow \\frac{f''(2)}{g''(2)} = 27$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1280,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "ابتدا $g'(x)$ را به دست آورده و ساده می‌کنیم:\n$g(x) = f(\\sqrt{x}) \\Rightarrow g'(x) = \\frac{1}{2\\sqrt{x}} f'(\\sqrt{x})$\n$f'(x) = \\frac{x}{x^2 + 2} \\Rightarrow g'(x) = \\frac{1}{2\\sqrt{x}} \\times \\frac{\\sqrt{x}}{x + 2} = \\frac{1}{2(x + 2)}$\nحال $g''(x)$ را محاسبه می‌کنیم:\n$g''(x) = \\frac{-1}{2(x + 2)^2} \\Rightarrow g''(4) = \\frac{-1}{72}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1281,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "$g''(x)$ را به دست می‌آوریم:\n$g(x) = f(5 - x^2) \\Rightarrow g'(x) = -2xf'(5 - x^2)$\n$\\Rightarrow g''(x) = -2f'(5 - x^2) + 4x^2 f''(5 - x^2)$\n$\\Rightarrow g''(2) = -4f'(1) + 16f''(1) = -4(-3) + 16(2) = 38$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1282,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "برای راحتی کار ابتدا $f$ را ساده کرده، سپس مشتق می‌گیریم:\n$f(x) = \\frac{3}{5} x \\sqrt[3]{x^2} = \\frac{3}{5} x^{\\frac{5}{3}} \\Rightarrow f'(x) = x^{\\frac{2}{3}}$\n$\\Rightarrow fof'(x) = \\frac{3}{5} (x^{\\frac{2}{3}})^{\\frac{5}{3}} = \\frac{3}{5} x^{\\frac{10}{9}}$\nحال از این تابع مشتق می‌گیریم:\n$y' = (fof'(x))' = \\frac{3}{5} \\times \\frac{10}{9} x^{\\frac{1}{9}} = \\frac{2}{3} x^{\\frac{1}{9}} \\xrightarrow{x = -1} y' = -\\frac{2}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1283,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "$f \\circ f'$ و $f' \\circ f$ را $g$ و $h$ می‌نامیم:\n$f(x) = x^3 - x + 2 \\Rightarrow f'(x) = 3x^2 - 1 \\Rightarrow f''(x) = 6x$\n$g'(x) = (f \\circ f'(x))' = f''(x)f'(f'(x))$\n$\\Rightarrow g'(1) = f''(1)f'(f'(1)) = 6f'(2) = 6(11) = 66$\n$h'(x) = (f' \\circ f(x))' = f'(x)f''(f(x))$\n$\\Rightarrow h'(1) = f'(1)f''(f(1)) = 2f''(2) = 2(12) = 24$\nبنابراین:\n$\\frac{g'(1)}{h'(1)} = \\frac{66}{24} = \\frac{11}{4} = 2/75$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1284,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "تابع مکان - زمان به صورت $x = f(t) = -\\frac{1}{2}gt^2 + 60$ می‌باشد. بنابراین تابع سرعت - زمان به صورت زیر است:\n$v = f'(t) = -gt \\simeq -10t$\nتابع سرعت - زمان یک تابع خطی با شیب منفی است که از مبدأ مختصات می‌گذرد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0120.jpg",
+          "region": [
+            100,
+            70,
+            220,
+            180
+          ],
+          "placement": "solution",
+          "alt": "نمودار سرعت - زمان"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1285,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "می‌دانیم مشتق یک تابع درجه ۲، تابعی خطی و درجه ۱ است. اگر طول رأس سهمی را $a$ بنامیم، تابع سهمی برای $x > a$ شیب مثبت، در $x = a$ شیب صفر و برای $x < a$، شیب منفی دارد. واضح است $a$ عددی مثبت می‌باشد؛ بنابراین نمودار مشتق به صورت زیر است:",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0120.jpg",
+          "region": [
+            100,
+            185,
+            220,
+            275
+          ],
+          "placement": "solution",
+          "alt": "نمودار مشتق"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1286,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "با توجه به نمودار، واضح است شیب $f$ برای $x < a$ منفی، در $x = a$ صفر و برای $x > 0$ مثبت است.\nتابع مشتق بیانگر شیب $f$ است؛ بنابراین گزینه‌های ۱ و ۴ تا به حال قابل قبول هستند.\nبرای $x > 0$، شیب تابع خطی $f$ منفی است؛ یعنی نمودار مشتق تابعی ثابت بوده و مقدار آن منفی است. در نتیجه ۴ درست است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0120.jpg",
+          "region": [
+            100,
+            310,
+            250,
+            440
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1287,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "تابع $f$ را به صورت دوضابطه‌ای نوشته، مشتق آن را به دست می‌آوریم:\n$f(x) = |2x + |x|| = \\begin{cases} 3x & x \\ge 0 \\\\ -x & x < 0 \\end{cases} \\Rightarrow f'(x) = \\begin{cases} 3 & x > 0 \\\\ -1 & x < 0 \\end{cases}$\nبدیهی است تابع $f$ در $x = 0$ مشتق‌ناپذیر است.\nبا توجه به ضابطه $f'(x)$ ۳ صحیح است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1288,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "روش اول: تابع $f$ را به صورت چندضابطه‌ای نوشته، مشتق آن را به دست می‌آوریم:\n$f(x) = \\begin{cases} x^2 + x & x < -1 \\\\ -x^2 - x & -1 \\le x < 0 \\\\ x^2 + x & x \\ge 0 \\end{cases}$\n$\\Rightarrow f'(x) = \\begin{cases} 2x + 1 & x < -1 \\\\ -2x - 1 & -1 < x < 0 \\\\ 2x + 1 & x > 0 \\end{cases}$\nتابع $f$ در نقاط ۱- و صفر مشتق‌ناپذیر است.\nبا توجه به ضابطه $f'(x)$ ۲ درست است.\nروش دوم: نمودار $f(x)$ را رسم می‌کنیم:\nبا توجه به شیب نمودار $f$ در نقاط مختلف ۲ درست است.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0120.jpg",
+          "region": [
+            100,
+            640,
+            240,
+            770
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع $f(x)$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1289,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "بدیهی است تابع $f$ درجه ۳ نیست. تابع $f$ نمی‌تواند درجه ۴ و یا بالاتر باشد، زیرا در این صورت $f''$ درجه ۲ و یا بالاتر خواهد بود که در گزینه‌ها وجود ندارد. بنابراین $f$ یک تابع درجه ۲ است که ضریب $x^2$ مثبت می‌باشد.\n$f(x) = ax^2 + bx + c \\Rightarrow f'(x) = 2ax + b \\Rightarrow f''(x) = 2a$\nتابع $f''$ یک تابع ثابت با مقدار مثبت است. ۴ صحیح است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1290,
+      "solution_page": "page_0120.jpg",
+      "solution_text": "با توجه به نمودار، ضابطه $f$ به صورت $f(x) = ax^2 + bx$ می‌باشد که $a > 0$ و $b < 0$ است. (یک ریشه صفر و ریشه دیگر مثبت است)\n$f'(x) = 2ax + b \\Rightarrow f''(x) = 2a \\Rightarrow (f'f'')(x) = 4a^2x + 2ab$\nتابع فوق یک تابع خطی با شیب مثبت ($4a^2 > 0$) و عرض از مبدأ منفی ($2ab < 0$) است. ۲ صحیح است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

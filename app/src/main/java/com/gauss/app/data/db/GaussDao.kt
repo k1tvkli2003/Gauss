@@ -31,4 +31,40 @@ interface GaussDao {
         "SELECT questionId FROM srs WHERE lapses > 0 AND dueAt <= :now ORDER BY dueAt ASC LIMIT 300",
     )
     suspend fun dueRevengeIds(now: Long): List<String>
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertGamificationEvent(event: GamificationEventEntity): Long
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertXpTransaction(transaction: XpTransactionEntity): Long
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertQuestProgress(progress: QuestProgressEntity)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertAchievementProgress(progress: AchievementProgressEntity)
+
+    @Query("SELECT COALESCE(SUM(amount), 0) FROM xp_transactions")
+    suspend fun totalXp(): Int
+
+    @Query("SELECT COALESCE(SUM(amount), 0) FROM xp_transactions WHERE dayKey = :dayKey")
+    suspend fun xpForDay(dayKey: String): Int
+
+    @Query("SELECT COALESCE(SUM(amount), 0) FROM xp_transactions WHERE dayKey = :dayKey AND category = :category")
+    suspend fun xpForDayCategory(dayKey: String, category: String): Int
+
+    @Query("SELECT * FROM xp_transactions ORDER BY createdAt DESC LIMIT :limit")
+    suspend fun recentXpTransactions(limit: Int): List<XpTransactionEntity>
+
+    @Query("SELECT DISTINCT dayKey FROM xp_transactions ORDER BY dayKey DESC")
+    suspend fun xpDays(): List<String>
+
+    @Query("SELECT * FROM quest_progress WHERE dayKey = :dayKey LIMIT 1")
+    suspend fun questForDay(dayKey: String): QuestProgressEntity?
+
+    @Query("SELECT * FROM achievement_progress")
+    suspend fun achievementProgress(): List<AchievementProgressEntity>
+
+    @Query("SELECT COUNT(*) FROM attempts WHERE questionId = :questionId AND status = 'wrong' AND (examId IS NULL OR examId != :examId)")
+    suspend fun previousWrongAttempts(questionId: String, examId: Long): Int
 }

@@ -1,0 +1,50 @@
+{
+  "solutions": [
+    {
+      "question_number": 2041,
+      "solution_page": 190,
+      "solution_text": "واریانس و ضریب تغییرات $x_1, x_2, \\dots, x_5$ به ترتیب $1$ و $\\frac{1}{2}$ است.\n$\n\\sigma^2 = 1 \\Rightarrow \\sigma = 1 \\\\\nCV = \\frac{1}{2} \\Rightarrow \\frac{\\sigma}{\\bar{x}} = \\frac{1}{2} \\Rightarrow \\frac{1}{\\bar{x}} = \\frac{1}{2} \\Rightarrow \\bar{x} = 2\n$\nخواهیم داشت:\n$\n\\sigma^2 = \\frac{(x_1-2)^2 + (x_2-2)^2 + \\dots + (x_5-2)^2}{5} = 1 \\\\\n\\Rightarrow (x_1-2)^2 + (x_2-2)^2 + \\dots + (x_5-2)^2 = 5 \\\\\n\\xrightarrow{\\times 4} 4(x_1-2)^2 + 4(x_2-2)^2 + \\dots + 4(x_5-2)^2 = 20 \\\\\n\\Rightarrow (2x_1-4)^2 + (2x_2-4)^2 + \\dots + (2x_5-4)^2 = 20\n$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0190.jpg",
+          "region": [
+            454,
+            55,
+            960,
+            269
+          ],
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۴۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2042,
+      "solution_page": 190,
+      "solution_text": "ضریب تغییرات دو گروه را به دست می‌آوریم:\nگروه A: $ \\bar{x} = \\frac{3+2+1+3+1}{5} = 2 \\\\\n\\Rightarrow \\sigma^2 = \\frac{1^2 + 0 + 1^2 + 1^2 + 1^2}{5} = \\frac{4}{5} \\Rightarrow \\sigma = \\frac{2}{\\sqrt{5}} \\\\\n\\Rightarrow CV_1 = \\frac{\\sigma}{\\bar{x}} = \\frac{\\frac{2}{\\sqrt{5}}}{2} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5} $\nگروه B: $ \\bar{x} = \\frac{2+0+1+3+4}{5} = 2 \\\\\n\\Rightarrow \\sigma^2 = \\frac{0 + 2^2 + 1^2 + 1^2 + 2^2}{5} = 2 \\Rightarrow \\sigma = \\sqrt{2} \\\\\n\\Rightarrow CV_2 = \\frac{\\sigma}{\\bar{x}} = \\frac{\\sqrt{2}}{2} $\nخواهیم داشت:\n$ \\frac{CV_1}{CV_2} = \\frac{\\frac{\\sqrt{5}}{5}}{\\frac{\\sqrt{2}}{2}} = \\frac{2\\sqrt{5}}{5\\sqrt{2}} = \\frac{\\sqrt{2}}{\\sqrt{5}} = \\frac{\\sqrt{10}}{5} $",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0190.jpg",
+          "region": [
+            431,
+            269,
+            960,
+            563
+          ],
+          "placement": "solution",
+          "alt": "حل سوال ۲۰۴۲"
+        }
+      ],
+      "review_notes": [
+        "source ends at 2042, skipping 2043-2119"
+      ]
+    }
+  ],
+  "answers": {
+    "2041": 4,
+    "2042": 4
+  }
+}

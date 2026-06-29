@@ -1,0 +1,6880 @@
+[
+  {
+    "id": "nardebam_math_1405_1467",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $2^{x^2}=8\\timesimes4^x$، مجموع مقادیر $x+1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا معادلۀ داده شده را حل می‌کنیم.\n$2^{x^2} = 8 \\times 4^x \\Rightarrow 2^{x^2} = 2^3 \\times 2^{2x} \\Rightarrow 2^{x^2} = 2^{3+2x}$\n$\\Rightarrow x^2 = 3+2x \\Rightarrow x^2 - 2x - 3 = 0 \\Rightarrow \\begin{cases} x = -1 \\\\ x = 3 \\end{cases}$\n$\\Rightarrow \\begin{cases} x+1 = 0 \\\\ x+1 = 4 \\end{cases}$\nمجموع مقادیر $x+1$ برابر $0+4=4$ می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1467,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1468",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $3^x=\\sqrt[3]{81}\\timesimes9^{1-x}$، حاصل $3x+\\fracrac1x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{30}{127}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{127}{30}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{30}{121}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{121}{30}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا معادلة داده‌‌شده را حل می‌کنیم.\n$3^x = \\sqrt[3]{81} \\times 9^{1-x} \\Rightarrow 3^x = 3^{\\frac{4}{3}} \\times 3^{2-2x} \\Rightarrow 3^x = 3^{\\frac{4}{3} + 2 - 2x}$\n$\\Rightarrow 3^x = 3^{\\frac{10}{3} - 2x} \\Rightarrow x = \\frac{10}{3} - 2x \\Rightarrow x = \\frac{10}{9}$\nحال، مقدار $3x + \\frac{1}{x}$ را محاسبه می‌کنیم.\n$3x + \\frac{1}{x} = 3(\\frac{10}{9}) + \\frac{9}{10} = \\frac{10}{3} + \\frac{9}{10} = \\frac{127}{30}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1468,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1469",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=a\\timesimes b^{x-2}$ از نقاط $A(1,6)$ و $B(0,18)$ عبور می‌کند. مقدار $f(-1)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$27$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$54$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$81$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x) = a \\times b^{x-2}$ از نقاط $A(1, 6)$ و $B(0, 18)$ عبور می‌کند. بنابراین:\n$\\begin{cases} f(1) = 6 \\Rightarrow a \\times b^{-1} = 6 \\Rightarrow a = 6b \\\\ f(0) = 18 \\Rightarrow a \\times b^{-2} = 18 \\Rightarrow a = 18b^2 \\end{cases}$\n$\\Rightarrow 18b^2 = 6b \\xrightarrow{b \\neq 0} b = \\frac{1}{3} \\Rightarrow a = 2$\n$f(x) = 2 \\times (\\frac{1}{3})^{x-2} \\Rightarrow f(-1) = 2 \\times (\\frac{1}{3})^{-3} = 54$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1469,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1470",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "توابع $f(x)=3^{2x+a}$ و $g(x)=bx^2+2$ در نقاطی به طول صفر و $-1$ متقاطع‌اند. $\\fracrac ab$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac47$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac74$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\fracrac74$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\fracrac47$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو تابع $f(x)$ و $g(x)$ در $x=0$ و $x=-1$ متقاطع‌اند. بنابراین:\n$\\begin{cases} f(0) = g(0) \\Rightarrow 2^a = 2 \\Rightarrow a = 1 \\\\ f(-1) = g(-1) \\Rightarrow 2^{-3+a} = b + 2 \\Rightarrow 2^{-2} = b + 2 \\Rightarrow b = -\\frac{7}{4} \\end{cases}$\n$\\Rightarrow \\frac{a}{b} = -\\frac{4}{7}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1470,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1471",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابعی با ضابطه $f(x)=k\\timesimes2^{ax}$ و خط $3x+2y=7$ در دو نقطه به طول‌های $1$ و $2$ متقاطع‌اند. $f^{-1}(16)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\fracrac12$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $f(x)$ و خط $2y + 3x = 7$ در دو نقطة $x=1$ و $x=2$ متقاطع‌اند.\n$2y + 3x = 7 \\begin{cases} \\nearrow x=1 \\Rightarrow y=2 \\\\ \\searrow x=2 \\Rightarrow y=\\frac{1}{2} \\end{cases}$\n$\\Rightarrow \\begin{cases} f(1) = 2 \\Rightarrow k \\times 2^a = 2 \\\\ f(2) = \\frac{1}{2} \\Rightarrow k \\times 2^{2a} = \\frac{1}{2} \\end{cases} \\Rightarrow \\frac{k \\times 2^{2a}}{k \\times 2^a} = \\frac{\\frac{1}{2}}{2}$\n$\\Rightarrow 2^a = \\frac{1}{4} \\Rightarrow a = -2 \\Rightarrow k = 8 \\Rightarrow f(x) = 8 \\times 2^{-2x}$\nاگر $f^{-1}(16) = t$ باشد، $f(t) = 16$ است:\n$f(t) = 8 \\times 2^{-2t} = 16 \\Rightarrow 2^{-2t} = 2 \\Rightarrow t = -1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1471,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1472",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "شیب خطی که از نقاط برخورد دو تابع $f(x)=4^x-2^{x+2}$ و $g(x)=2^{x+3}-32$ عبور می‌کند، کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$32$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "توابع $f(x)$ و $g(x)$ را برابر قرار می‌دهیم.\n$f(x) = g(x) \\Rightarrow 4^x - 2^{x+2} = 2^{x+3} - 32$\n$\\Rightarrow 4^x - 4(2^x) = 8(2^x) - 32 \\Rightarrow 4^x - 12(2^x) + 32 = 0$\n$\\xrightarrow{2^x = k} k^2 - 12k + 32 = 0$\n$\\Rightarrow (k-4)(k-8) = 0 \\Rightarrow \\begin{cases} k=4 \\\\ k=8 \\end{cases} \\Rightarrow \\begin{cases} 2^x=4 \\\\ 2^x=8 \\end{cases}$\n$\\Rightarrow \\begin{cases} x=2 \\\\ x=3 \\end{cases} \\Rightarrow \\begin{cases} f(2)=16-16=0 \\\\ f(3)=64-32=32 \\end{cases}$\n$\\Rightarrow \\begin{cases} A(2,0) \\\\ B(3,32) \\end{cases} \\Rightarrow \\text{شیب} = \\frac{32-0}{3-2} = 32$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1472,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1473",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل جمع جواب‌های معادله $9^x+9=24\\timesimes3^{x-1}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلة داده‌‌شده را برحسب $3^x$ مرتب می‌کنیم.\n$9^x + 9 = 24 \\times 3^{x-1} \\Rightarrow (3^x)^2 + 9 = 24 \\times \\frac{3^x}{3}$\n$\\Rightarrow (3^x)^2 - 8(3)^x + 9 = 0 \\xrightarrow{3^x = k} k^2 - 8k + 9 = 0$\nاگر ریشه‌های معادلة درجه‌دو را $k_1$ و $k_2$ بنامیم، خواهیم داشت:\n$k_1k_2 = 9$\n$\\begin{cases} k_1 = 3^\\alpha \\\\ k_2 = 3^\\beta \\end{cases} \\Rightarrow k_1 k_2 = 3^\\alpha \\times 3^\\beta = 3^{\\alpha+\\beta} = 9 \\Rightarrow \\alpha+\\beta = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1473,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1474",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اختلاف ریشه‌های معادله $\\fracrac{5\\timesimes4^x+2\\timesimes25^x}{10^x}=7$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac35$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "کسر سمت چپ تساوی را تفکیک کرده و $(\\frac{2}{5})^x$ را $k$ در نظر می‌گیریم.\n$\\frac{5 \\times 4^x + 2 \\times 25^x}{10^x} = 7 \\Rightarrow \\frac{5 \\times 4^x}{10^x} + \\frac{2 \\times 25^x}{10^x} = 7$\n$\\Rightarrow 5(\\frac{2}{5})^x + 2(\\frac{5}{2})^x = 7$\n$\\xrightarrow{(\\frac{2}{5})^x = k} 5k + \\frac{2}{k} = 7 \\Rightarrow 5k^2 - 7k + 2 = 0 \\Rightarrow \\begin{cases} k=1 \\\\ k=\\frac{2}{5} \\end{cases}$\n$\\Rightarrow \\begin{cases} (\\frac{2}{5})^x=1 \\Rightarrow x=0 \\\\ (\\frac{2}{5})^x=\\frac{2}{5} \\Rightarrow x=1 \\end{cases} \\Rightarrow 1-0 = 1 \\text{ اختلاف ریشه‌ها}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1474,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1475",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $4^{x+2}-\\fracrac3{2^{-2x}}+2^{2x-1}=54$ باشد، حاصل $4^{|x-3|}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\sqrt2$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلة داده‌‌شده را برحسب $4^x$ نوشته، سپس آن را حل می‌کنیم.\n$4^{x+2} - \\frac{3}{2^{-2x}} + 2^{2x-1} = 54 \\Rightarrow 4^{x+2} - 3(2^{2x}) + 2^{2x-1} = 54$\n$\\Rightarrow 16 \\times 4^x - 3 \\times 4^x + \\frac{1}{2}(4^x) = 54$\n$\\Rightarrow \\frac{27}{2}(4^x) = 54 \\Rightarrow 4^x = 4 \\Rightarrow x = 1$\nحال، مقدار $2^{|x-3|}$ را محاسبه می‌کنیم:\n$2^{|1-3|} = 2^2 = 4$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1475,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1476",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "جواب نامعادله $(\\fracrac13)^{1-x^2}\\le 9^{x+1}$ به صورت $[a,b]$ است. $a+b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $a>1$ باشد، خواهیم داشت:\n$a^m < a^n \\Rightarrow m < n$\n$(\\frac{1}{3})^{1-x^2} \\le 9^{x+1} \\Rightarrow 3^{x^2-1} \\le 3^{2x+2} \\Rightarrow x^2-1 \\le 2x+2$\n$\\Rightarrow x^2-2x-3 \\le 0 \\Rightarrow -1 \\le x \\le 3 \\Rightarrow x \\in [-1, 3]$\n$\\Rightarrow a+b = 3-1 = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1476,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1477",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار توابع نمایی شکل مقابل، علامت کدام گزینه با سایر گزینه‌های دیگر متفاوت است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1477/stem_1.webp",
+        "alt": "نمودارهای $a^x$، $b^x$، $c^x$ و $d^x$ روی یک دستگاه مختصات",
+        "aspect_ratio": 1.0838
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a-b$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$c-d$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$b-d$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1-cd$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار $a > 1$ و $0 < c < d < 1$ می‌باشد. بنابراین:\n$a > b > d > c$\nخواهیم داشت:\n$a - b > 0$\n$c - d < 0$\n$b - d > 0$\n$1 - cd > 0$\nدر نتیجه علامت ۲ با سایر گزینه‌ها متفاوت است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1477,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            70,
+            1690,
+            430,
+            2020
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودارهای $a^x$، $b^x$، $c^x$ و $d^x$ روی یک دستگاه مختصات"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1478",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل مساحت دوزنقه رنگی برابر $90$ است، مقدار $f^{-1}(\\fracrac19)$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1478/stem_1.webp",
+        "alt": "نمودار $f(x)=a^x$ و دوزنقه رنگی بین $x=2$ و $x=4$",
+        "aspect_ratio": 1.2358
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\fracrac32$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اندازة قاعده‌های ذوزنقه $f(2)$ و $f(4)$ و ارتفاع آن برابر $2$ است.\n$S = \\frac{f(2) + f(4)}{2} \\times 2 = 90$\n$\\Rightarrow a^2 + a^4 = 90 \\Rightarrow a^4 + a^2 - 90 = 0$\n$\\Rightarrow (a^2+10)(a^2-9) = 0 \\Rightarrow a^2 = 9 \\xrightarrow{a>0} a = 3$\n$\\Rightarrow f(x) = 3^x$\nوارون تابع $f(x)$ به صورت زیر است.\n$f^{-1}(x) = \\log_3 x \\Rightarrow f^{-1}(\\frac{1}{9}) = \\log_3 \\frac{1}{9} = -2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1478,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 137,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            80,
+            1970,
+            445,
+            2260
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار $f(x)=a^x$ و دوزنقه رنگی بین $x=2$ و $x=4$"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1479",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $ab=1$ و نمودار تابع $y=a^x$ به صورت مقابل باشد، نمودار $y=-b^x$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1479/stem_1.webp",
+        "alt": "نمودار افزایشی $y=a^x$",
+        "aspect_ratio": 1.6092
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۱"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1479/option_1_2.webp",
+          "alt": "نمودار نمایی مثبت افزایشی",
+          "aspect_ratio": 1.6438
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۲"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1479/option_2_3.webp",
+          "alt": "نمودار منفی کاهشی",
+          "aspect_ratio": 1.6278
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۳"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1479/option_3_4.webp",
+          "alt": "نمودار نمایی مثبت کاهشی",
+          "aspect_ratio": 1.5381
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۴"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1479/option_4_5.webp",
+          "alt": "نمودار منفی افزایشی",
+          "aspect_ratio": 1.5157
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار $y = a^x$ مشخص است که تابع اکیداً صعودی است؛ یعنی $a > 1$ می‌باشد.\nمی‌دانیم $b = \\dfrac{1}{a}$ بنابراین $0 < b < 1$ است. نمودار $y = b^x$ به صورت مقابل است.\nبرای رسم $y = -b^x$ کافی است نمودار فوق را نسبت به محور $x$ها قرینه کنیم.\nنمودار $y = ba^{-x}$ اکیداً نزولی است و محور $y$ها را در نقطه‌ای به عرض $b$ که کوچک‌تر از $1$ است قطع می‌کند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1479,
+      "question_pdf": "12.pdf",
+      "question_page": 5,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            65,
+            2140,
+            420,
+            2350
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار افزایشی $y=a^x$"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            1190,
+            2035,
+            1545,
+            2240
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "نمودار نمایی مثبت افزایشی"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            810,
+            2045,
+            1145,
+            2240
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "نمودار منفی کاهشی"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            490,
+            2045,
+            805,
+            2240
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "نمودار نمایی مثبت کاهشی"
+        },
+        {
+          "page_file": "page_0005.jpg",
+          "box": [
+            120,
+            2045,
+            430,
+            2240
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "نمودار منفی افزایشی"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1480",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=b\\timesimes a^x$ به صورت زیر است. نمودار تابع $g(x)=a\\timesimes b^{-x}$ به کدام صورت می‌تواند باشد؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1480/stem_1.webp",
+        "alt": "نمودار کاهشی $f$ با عرض از مبدا ۲",
+        "aspect_ratio": 0.8799
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۱"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1480/option_1_2.webp",
+          "alt": "نمودار کاهشی با عرض از مبدا ۱",
+          "aspect_ratio": 1.1119
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۲"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1480/option_2_3.webp",
+          "alt": "نمودار افزایشی با عرض از مبدا ۱",
+          "aspect_ratio": 0.8875
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۳"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1480/option_3_4.webp",
+          "alt": "نمودار افزایشی",
+          "aspect_ratio": 1.1119
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۴"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1480/option_4_5.webp",
+          "alt": "نمودار کاهشی",
+          "aspect_ratio": 0.8594
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نمودار داده‌شده از نقطهٔ $(0, 3)$ عبور می‌کند.\n$f(0) = 3 \\Rightarrow b \\times a^0 = 3 \\Rightarrow b = 3$\nهم‌چنین نمودار یک تابع اکیداً نزولی است. بنابراین $0 < a < 1$ می‌باشد.\nدر نتیجه تابع $g(x)$ به صورت $g(x) = a \\times 3^{-x}$ است. تابع $y = 3^{-x}$ همان $y = (\\frac{1}{3})^x$ می‌باشد که اکیداً نزولی بوده و چون $a > 0$ است تابع $g(x)$ نیز اکیداً نزولی است. می‌دانیم $g(0) = a$ می‌باشد و با توجه به $0 < a < 1$، محل برخورد نمودار $g$ با محور $y$ها نقطه‌ای پایین‌تر از $1$ است. نمودار کل $g(x)$ به صورت مقابل است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1480,
+      "question_pdf": "12.pdf",
+      "question_page": 6,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            120,
+            220,
+            430,
+            470
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار کاهشی $f$ با عرض از مبدا ۲"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            260,
+            1510,
+            500
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "نمودار کاهشی با عرض از مبدا ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            600,
+            260,
+            900,
+            500
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "نمودار افزایشی با عرض از مبدا ۱"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1260,
+            520,
+            1530,
+            760
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "نمودار افزایشی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            610,
+            520,
+            900,
+            760
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "نمودار کاهشی"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1481",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $y=a+a^x$ به صورت مقابل است. نمودار $y=a-a^{-x}$ کدام صورت است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1481/stem_1.webp",
+        "alt": "نمودار $y=a+a^x$ با مجانب افقی",
+        "aspect_ratio": 0.9311
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۱"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1481/option_1_2.webp",
+          "alt": "نمودار افزایشی با مجانب افقی مثبت",
+          "aspect_ratio": 1.0171
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۲"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1481/option_2_3.webp",
+          "alt": "نمودار افزایشی با مجانب مثبت",
+          "aspect_ratio": 0.808
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۳"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1481/option_3_4.webp",
+          "alt": "نمودار کاهشی با مجانب منفی",
+          "aspect_ratio": 1.0168
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۴"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1481/option_4_5.webp",
+          "alt": "نمودار کاهشی با مجانب منفی",
+          "aspect_ratio": 1.1007
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار $y = a + a^x$ واضح است $a > 1$ می‌باشد.\nحال، نمودار $y = a - a^{-x}$ را مرحله‌به‌مرحله رسم می‌کنیم.\n$y = a^{-x} = (\\frac{1}{a})^x$\n$\\Rightarrow y = -a^{-x}$\n$\\Rightarrow y = a - a^{-x}$\nدقت داشته باشید که $a > 1$ است و نمودار نهایی محور $y$ها را در بالای مبدأ قطع می‌کند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1481,
+      "question_pdf": "12.pdf",
+      "question_page": 6,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            115,
+            690,
+            430,
+            930
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار $y=a+a^x$ با مجانب افقی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            705,
+            1510,
+            970
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "نمودار افزایشی با مجانب افقی مثبت"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            610,
+            705,
+            910,
+            970
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "نمودار افزایشی با مجانب مثبت"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1235,
+            1015,
+            1510,
+            1285
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "نمودار کاهشی با مجانب منفی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            610,
+            1015,
+            910,
+            1285
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "نمودار کاهشی با مجانب منفی"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1482",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $y=ab^{x-1}$ به صورت مقابل است. نمودار تابع $y=ba^{-x}$ کدام صورت است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1482/stem_1.webp",
+        "alt": "نمودار افزایشی $y=ab^{x-1}$",
+        "aspect_ratio": 1.2158
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۱"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1482/option_1_2.webp",
+          "alt": "نمودار کاهشی",
+          "aspect_ratio": 1.1493
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۲"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1482/option_2_3.webp",
+          "alt": "نمودار کاهشی",
+          "aspect_ratio": 1.2239
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۳"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1482/option_3_4.webp",
+          "alt": "نمودار افزایشی",
+          "aspect_ratio": 1.1079
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۴"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1482/option_4_5.webp",
+          "alt": "نمودار افزایشی",
+          "aspect_ratio": 1.1799
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $y = a b^{x-1}$ اکیداً صعودی است یعنی $b > 1$ می‌باشد. از طرفی نمودار، محور $y$ها را در نقطه‌ای بزرگ‌تر از $1$ قطع می‌کند. بنابراین:\n$a b^{-1} > 1 \\Rightarrow a > b$\nپس $a$ نیز بزرگ‌تر از $1$ بوده در نتیجه $0 < \\frac{1}{a} < 1$ است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1482,
+      "question_pdf": "12.pdf",
+      "question_page": 6,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            120,
+            1265,
+            430,
+            1515
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار افزایشی $y=ab^{x-1}$"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1230,
+            1290,
+            1510,
+            1530
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "نمودار کاهشی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            600,
+            1290,
+            900,
+            1530
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "نمودار کاهشی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            1240,
+            1580,
+            1520,
+            1830
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "نمودار افزایشی"
+        },
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            600,
+            1580,
+            900,
+            1830
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "نمودار افزایشی"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1483",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار توابع $f(x)=ab^x$ و $g(x)=ba^x$ به صورت مقابل است. مقدار $f(a)$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1483/stem_1.webp",
+        "alt": "دو نمودار نمایی متقاطع با برچسب‌های $0/25$ و $\\alpha$",
+        "aspect_ratio": 1.1084
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac43$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در شکل، توابع $f(x)$ و $g(x)$ مشخص نشده‌اند. با کمی دقت درمی‌یابیم که تفاوتی ندارد که کدام نمودار $f(x)$ و کدام $g(x)$ باشد. فرض می‌کنیم نمودار $f(x)$ از $(0, 0/25)$ و نمودار $g(x)$ از $(0, 2)$ عبور کرده است.\n$f(0) = \\frac{1}{4} \\Rightarrow a b^0 = \\frac{1}{4} \\Rightarrow a = \\frac{1}{4}$\n$g(0) = 2 \\Rightarrow b a^0 = 2 \\Rightarrow b = 2$\n$\\Rightarrow \\begin{cases} f(x) = \\frac{1}{4} (2^x) \\\\ g(x) = 2 (\\frac{1}{4})^x \\end{cases}$\nاکنون محل برخورد دو تابع را به دست می‌آوریم:\n$f(x) = g(x) \\Rightarrow \\frac{1}{4}(2^x) = 2(\\frac{1}{4})^x \\Rightarrow 8^x = 8 \\Rightarrow x = 1$\n$\\Rightarrow \\alpha = 1 \\Rightarrow f(\\alpha) = f(1) = \\frac{1}{4} \\times 2 = \\frac{1}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1483,
+      "question_pdf": "12.pdf",
+      "question_page": 6,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0006.jpg",
+          "box": [
+            100,
+            1740,
+            430,
+            2035
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "دو نمودار نمایی متقاطع با برچسب‌های $0/25$ و $\\alpha$"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1484",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله $x^2=2^x$ چند جواب دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نمودار دو تابع $y = 2^x$ و $y = x^2$ را رسم می‌کنیم.\nبا توجه به نمودار، معادلهٔ $2^x = x^2$ دارای سه ریشهٔ $x = 2$، $x = 4$ و $x = \\alpha$ می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1484,
+      "question_pdf": "12.pdf",
+      "question_page": 6,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1485",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به ازای چند مقدار صحیح $m$، تابع $f(x)=(\\fracrac{8-3m}{2})^x$ یک تابع نمایی نزولی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بی‌شمار"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع نمایی $y = a^x$ هنگامی نزولی است که $0 < a < 1$ باشد. بنابراین:\n$0 < \\frac{8 - 3m}{2} < 1 \\Rightarrow 0 < 8 - 3m < 2 \\Rightarrow -8 < -3m < -6 \\Rightarrow 2 < m < \\frac{8}{3} \\xrightarrow{m \\in \\mathbb{Z}} m \\in \\varnothing$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1485,
+      "question_pdf": "12.pdf",
+      "question_page": 6,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1486",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به ازای چند عدد طبیعی، نمودار تابع $f(x)=(7-4\\sqrt3)^{1-2x}$ بالاتر از نمودار تابع $g(x)=(7+4\\sqrt3)^{3x-4}$ می‌باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بی‌شمار"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نمودار $f(x)$ بالاتر از نمودار $g(x)$ است. در نتیجه:\n$f(x) > g(x) \\Rightarrow (7 - 4\\sqrt{3})^{1-2x} > (7 + 4\\sqrt{3})^{3x-4}$\n$\\Rightarrow (\\frac{1}{7 + 4\\sqrt{3}})^{1-2x} > (7 + 4\\sqrt{3})^{3x-4}$\n$\\Rightarrow (7 + 4\\sqrt{3})^{2x-1} > (7 + 4\\sqrt{3})^{3x-4}$\n$\\Rightarrow 2x - 1 > 3x - 4 \\Rightarrow x < 3 \\xrightarrow{x \\in \\mathbb{N}} x \\in \\{1, 2\\}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1486,
+      "question_pdf": "12.pdf",
+      "question_page": 6,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1487",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $y=\\sqrt{2^{x+1}-2^{x-1}}$ به ازای چند عدد صحیح منفی تعریف‌نشده است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بی‌شمار"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای این‌که تابع $y$ تعریف‌نشده باشد باید عبارت زیر رادیکال منفی باشد.\n$2^{x+1} - 4^{x-1} < 0 \\Rightarrow 2^{x+1} < 4^{x-1} \\Rightarrow 2^{x+1} < 2^{2x-2}$\n$\\Rightarrow x + 1 < 2x - 2 \\Rightarrow x > 3$\nبه ازای هیچ عدد صحیح منفی تعریف‌نشده نمی‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1487,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1488",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x)=(\\fracrac13)^x-2$ باشد، دامنه تابع $y=\\sqrt{-xf(x)}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,-1]\\cup[1,+\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[-1,+\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,0]\\cup[1,+\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,-1]\\cup[0,+\\infty)$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال باید نامنفی باشد: $-xf(x) \\ge 0$\nروش اول: $f(x)$ یک تابع اکیداً نزولی است و ریشهٔ آن $x = -1$ است.\n$\\begin{array}{c|ccccc} x & & -1 & & 0 & \\\\ \\hline -xf(x) & + & 0 & - & 0 & + \\end{array}$\n$\\Rightarrow x \\in (-\\infty, -1] \\cup [0, +\\infty)$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1488,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 138,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1489",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه $f(x)=(\\fracrac13)^{2-x}$ باشد، دامنه تعریف تابع $y=\\sqrt{f(\\fracrac3x)-f(x)}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,\\sqrt3]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,-\\sqrt3]\\cup(0,\\sqrt3]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[-\\sqrt3,0)\\cup(0,\\sqrt3]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[-\\sqrt3,0)\\cup[\\sqrt3,+\\infty)$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال باید نامنفی باشد.\n$f(\\frac{2}{x}) - f(x) \\ge 0 \\Rightarrow f(\\frac{2}{x}) \\ge f(x) \\Rightarrow (\\frac{1}{2})^{\\frac{2}{x}} \\ge (\\frac{1}{2})^x$\n$\\Rightarrow \\frac{2}{x} \\le x \\Rightarrow x - \\frac{2}{x} \\le 0 \\Rightarrow \\frac{x^2 - 2}{x} \\le 0$\n\\begin{array}{c|ccccccc}\nx & & -\\sqrt{2} & & 0 & & \\sqrt{2} & \\\\\n\\hline\ny & - & \\circ & + & \\vert & - & \\circ & +\n\\end{array}\n$\\Rightarrow D = [-\\sqrt{2}, 0) \\cup [\\sqrt{2}, +\\infty)$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1489/solution_1489_1.webp",
+        "alt": "نمودار تعیین علامت",
+        "aspect_ratio": 0.3062
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1489,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0139.jpg",
+          "box": [
+            201,
+            461,
+            350,
+            831
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_1489",
+          "alt": "نمودار تعیین علامت"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1490",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x)=3^x$ باشد، دامنه تابع $y=\\sqrt{f(x)-f(\\fracrac1x)}$ به کدام صورت است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$[-1,1]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[-1,0)\\cup[1,+\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,-1]\\cup(0,1]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,-1]\\cup[1,+\\infty)$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال باید نامنفی باشد.\n$f(x) - f(\\frac{1}{x}) \\ge 0 \\Rightarrow f(x) \\ge f(\\frac{1}{x}) \\Rightarrow 3^x \\ge 3^{\\frac{1}{x}}$\n$\\Rightarrow x \\ge \\frac{1}{x} \\Rightarrow x - \\frac{1}{x} \\ge 0 \\Rightarrow \\frac{x^2 - 1}{x} \\ge 0$\n\\begin{array}{c|ccccccc}\nx & & -1 & & 0 & & 1 & \\\\\n\\hline\ny & - & \\circ & + & \\vert & - & \\circ & +\n\\end{array}\n$\\Rightarrow x \\in [-1, 0) \\cup [1, +\\infty)$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1490,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1491",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $y=2^{-x+1}+k$ فقط از نواحی دوم و چهارم عبور می‌کند. $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چون تابع $y = 3^{-x+1} + k$ فقط از نواحی دوم و چهارم عبور می‌کند، نتیجه می‌گیریم این تابع از مبدأ مختصات می‌گذرد یعنی $f(0) = 0$.\n$f(0) = 0 \\Rightarrow 3^1 + k = 0 \\Rightarrow k = -3$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1491,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1492",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=|(\\fracrac12)^{x+a}+b|$ به شکل زیر است. $a-b$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1492/stem_1.webp",
+        "alt": "نمودار قدرمطلق نمایی با راس در مبدا و مجانب $y=2$",
+        "aspect_ratio": 1.2799
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $y = (\\frac{1}{2})^{x+a} + b$ اکیداً نزولی است که در $+\\infty$ به سمت $b$ میل می‌کند. با توجه به نمودار $f(x)$ مشخص است که $b = -2$ است. هم‌چنین نمودار از مبدأ مختصات می‌گذرد یعنی $f(0) = 0$.\n$f(0) = 0 \\Rightarrow (\\frac{1}{2})^{0+a} - 2 = 0 \\Rightarrow (\\frac{1}{2})^a = 2 \\Rightarrow a = -1$\n$\\Rightarrow a - b = -1 - (-2) = 1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1492,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            70,
+            830,
+            385,
+            1070
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار قدرمطلق نمایی با راس در مبدا و مجانب $y=2$"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1493",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=a-3^{-x+b}$ به صورت زیر است. $f(-1)$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1493/stem_1.webp",
+        "alt": "نمودار افزایشی با مجانب افقی $y=3$ و عبور از مبدا",
+        "aspect_ratio": 1.2338
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-9$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار، تابع $f(x)$ در $+\\infty$ به سمت $3$ میل می‌کند. بنابراین $a = 3$ است. هم‌چنین تابع از مبدأ مختصات می‌گذرد، در نتیجه $f(0) = 0$ می‌باشد.\n$f(x) = 3 - 3^{-x+b} \\xrightarrow{f(0)=0} 3 - 3^b = 0 \\Rightarrow b = 1$\n$\\Rightarrow f(x) = 3 - 3^{-x+1} \\Rightarrow f(-1) = 3 - 3^2 = -6$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1493,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            70,
+            1090,
+            385,
+            1340
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار افزایشی با مجانب افقی $y=3$ و عبور از مبدا"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1494",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $\\log5=0/7$، حاصل $\\log16$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1/2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1/4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1/6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1/8$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$\\log 5 = 1 - \\log 2 = 0/7$\nدر نتیجه: $\\log 2 = 0/3$\n$\\log 16 = \\log 2^4 = 4 \\log 2 = 4 \\times 0/3 = 1/2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1494,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1495",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A=\\log_3 0/75$ باشد، حاصل لگاریتم $9^{1-A}$ در پایه $4$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا مقدار $9^{1-A}$ را به دست می‌آوریم:\n$9^{1-A} = 9^{1 - \\log_3 0/75} = 9^{1 - \\log_3 \\frac{3}{4}} = 9^{\\log_3 3 - \\log_3 \\frac{3}{4}}$\n$= 9^{\\log_3 4} = 3^{2 \\log_3 4} = 3^{\\log_3 16} = 16$\nاکنون، لگاریتم $9^{1-A}$ را در پایه ۴ محاسبه می‌کنیم:\n$\\log_4 9^{1-A} = \\log_4 16 = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1495,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1496",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر لگاریتم عدد $\\sqrt[4]{0/125}$ در مبنای $8$ برابر $k$ باشد، لگاریتم عدد $2-\\fracrac1k$ در پایه $8$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac23$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا مقدار $k$ را به دست می‌آوریم:\n$k = \\log_8 4\\sqrt{0/125} = \\log_8 4\\sqrt{\\frac{1}{8}} = \\log_{2^3} 2^2 \\times 2^{-\\frac{3}{2}}$\n$= \\log_{2^3} 2^{\\frac{1}{2}} = \\frac{\\frac{1}{2}}{3} \\log_2 2 = \\frac{1}{6}$\nحال مقدار $\\log_8 (\\frac{1}{k} - 2)$ را محاسبه می‌کنیم:\n$\\log_8 (\\frac{1}{\\frac{1}{6}} - 2) = \\log_8 (6 - 2) = \\log_{2^3} 2^2 = \\frac{2}{3} \\log_2 2 = \\frac{2}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1496,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1497",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log5=k$ باشد، ساده‌شده $3\\log_5 20-\\log_5 8$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3k$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac3k$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$k+3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3k-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $\\log_5 8$ را به صورت $3 \\log_5 2$ می‌نویسیم.\n$3 \\log_5 20 - \\log_5 8 = 3 \\log_5 20 - 3 \\log_5 2$\n$= 3 (\\log_5 20 - \\log_5 2) = 3 (\\log_5 \\frac{20}{2}) = 3 \\log_5 10$\n$= \\frac{3}{\\log_{10} 5} = \\frac{3}{\\log 5} = \\frac{3}{k}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1497,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1498",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $2^{\\fracrac a3}=k$ باشد، مقدار $\\log_{16}8k^3$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{3a-6}{8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{3a+6}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{3a-6}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{3a+6}{8}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا عبارت $\\log_2 k$ را برحسب $a$ به دست می‌آوریم.\n$2^{\\frac{a}{2}} = k \\Rightarrow \\frac{a}{2} = \\log_2 k$\nحال، عبارت $\\log_{16} 8k^3$ را ساده می‌کنیم.\n$\\log_{16} 8k^3 = \\frac{1}{4} \\log_2 8k^3 = \\frac{1}{4} (\\log_2 2^3 + \\log_2 k^3)$\n$= \\frac{1}{4} (3 + \\frac{3a}{2}) = \\frac{6 + 3a}{8}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1498,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1499",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $\\log_3 9x=\\fracrac53$، مقدار $\\log_9 27x^2$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac23$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac56$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac76$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا مقدار $\\log_3 x$ را به دست می‌آوریم.\n$\\log_3 9x = \\frac{5}{3} \\Rightarrow \\log_3 9 + \\log_3 x = \\frac{5}{3} \\Rightarrow 2 + \\log_3 x = \\frac{5}{3}$\n$\\Rightarrow \\log_3 x = -\\frac{1}{3}$\nحال، $\\log_9 27x^2$ را محاسبه می‌کنیم.\n$\\log_9 27x^2 = \\log_9 27 + \\log_9 x^2 = \\log_{3^2} 3^3 + \\log_{3^2} x^2$\n$= \\frac{3}{2} + \\log_3 x = \\frac{3}{2} - \\frac{1}{3} = \\frac{7}{6}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1499,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1500",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x=9(3\\sqrt3)^{a-1}$ باشد، حاصل $\\log_9 3x^2$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32a+1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32a-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{3a+1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{3a-1}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا $\\log_3 x$ را محاسبه می‌کنیم.\n$x = 9(3\\sqrt{3})^{a-1} = 3^2 (3^{\\frac{3}{2}})^{a-1} = 3^2 \\times 3^{\\frac{3a-3}{2}} = 3^{\\frac{3a+1}{2}}$\n$\\Rightarrow \\log_3 x = \\log_3 3^{\\frac{3a+1}{2}} = \\frac{3a+1}{2}$\nاکنون عبارت $\\log_9 3x^2$ را به دست می‌آوریم.\n$\\log_9 3x^2 = \\frac{1}{2} \\log_3 3x^2 = \\frac{1}{2} (\\log_3 3 + 2\\log_3 x)$\n$= \\frac{1}{2} (1 + (3a+1)) = \\frac{3}{2}a + 1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1500,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1501",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $3^m=12$ و $3^n=54$ باشد، حاصل $(a-2)(b-3)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: ابتدا عبارات داده‌شده را ساده می‌کنیم:\n$2^a = 12 \\Rightarrow \\frac{2^a}{4} = 3 \\Rightarrow 2^{a-2} = 3$\n$3^b = 54 \\Rightarrow \\frac{3^b}{27} = 2 \\Rightarrow 3^{b-3} = 2$\n$\\Rightarrow (2^{a-2})^{b-3} = 3^{b-3} = 2 \\Rightarrow 2^{(a-2)(b-3)} = 2$\n$\\Rightarrow (a-2)(b-3) = 1$\nروش دوم:\n$a = \\log_2 12 \\quad , \\quad b = \\log_3 54$\n$(a-2)(b-3) = (\\log_2 12 - 2)(\\log_3 54 - 3)$\n$= (\\log_2 12 - \\log_2 4)(\\log_3 54 - \\log_3 27) = \\log_2 3 \\times \\log_3 2 = 1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1501,
+      "question_pdf": "12.pdf",
+      "question_page": 7,
+      "solution_page": 139,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1502",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log_{ab^2}a=-\\fracrac17$ باشد، حاصل $\\log_{a^2b}b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا معادلة $\\log_{ab^2} a = -\\frac{1}{7}$ را ساده می‌کنیم.\n$\\log_{ab^2} a = -\\frac{1}{7} \\Rightarrow \\log_{a} ab^2 = -7$\n$\\Rightarrow \\log_{a} a + 2 \\log_{a} b = -7 \\Rightarrow 1 + 2 \\log_{a} b = -7$\n$\\Rightarrow \\log_{a} b = -4 \\Rightarrow \\log_{b} a = -\\frac{1}{4}$\nعبارت $\\log_{a^2 b} b$ را $k$ می‌نامیم.\n$k = \\log_{a^2 b} b \\Rightarrow \\frac{1}{k} = \\log_{b} a^2 b = 2 \\log_{b} a + \\log_{b} b$\n$= -\\frac{1}{2} + 1 = \\frac{1}{2} \\Rightarrow k = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1502,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1503",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log_b a=3$ و $\\log_c a=4$ باشد، حاصل $\\log_{bc}a^2$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac7{24}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac7{12}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{12}7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{24}7$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا لگاریتم $b$ و $c$ را در مبنای $a$ به دست می‌آوریم.\n$\\log_{b} a = 3 \\Rightarrow \\log_{a} b = \\frac{1}{3}$\n$\\log_{c} a = 4 \\Rightarrow \\log_{a} c = \\frac{1}{4}$\nعبارت $\\log_{bc} a^2$ را برابر $k$ قرار می‌دهیم.\n$k = \\log_{bc} a^2 \\Rightarrow \\frac{1}{k} = \\log_{a^2} bc = \\frac{1}{2} \\log_{a} bc$\n$= \\frac{1}{2} (\\log_{a} b + \\log_{a} c) = \\frac{1}{2} (\\frac{1}{3} + \\frac{1}{4}) = \\frac{7}{24} \\Rightarrow k = \\frac{24}{7}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1503,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1504",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه $\\log_{yz}xy=3$ و $\\log_yxz=4$ باشد، مقدار $\\log_z y$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac13$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "هر یک از عبارات داده‌شده را ساده کرده و $x$ را برحسب $y$ و $z$ به دست می‌آوریم.\n$\\left. \\begin{array}{l} \\log_{yz} xy = 3 \\Rightarrow xy = (yz)^3 \\Rightarrow x = y^2 z^3 \\\\ \\log_y xz = 4 \\Rightarrow xz = y^4 \\Rightarrow x = \\frac{y^4}{z} \\end{array} \\right\\}$\n$\\Rightarrow y^2 z^3 = \\frac{y^4}{z} \\Rightarrow y^2 = z^4 \\Rightarrow y = z^2$\nاکنون $\\log_z y$ را محاسبه می‌کنیم.\n$\\log_z y = \\log_z z^2 = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1504,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1505",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $3^{\\log a}=b^{\\log3}$ باشد، حاصل $\\log_a b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\log\\fracrac23$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\log\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\log_2 3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\log_3 2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از دو طرف معادلة $2^{\\log a} = b^{\\log 3}$، لگاریتم می‌گیریم.\n$\\log 2^{\\log a} = \\log b^{\\log 3} \\Rightarrow \\log a \\log 2 = \\log 3 \\log b$\n$\\Rightarrow \\frac{\\log b}{\\log a} = \\frac{\\log 2}{\\log 3} \\Rightarrow \\log_{a} b = \\log_{3} 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1505,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1506",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\fracrac1{\\log_6 3}+\\fracrac1{\\log_k 3}=2$ باشد، مقدار $\\log_{27}2k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac13$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac23$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا مقدار $k$ را به دست می‌آوریم:\n$\\frac{1}{\\log_{6} 3} + \\frac{1}{\\log_{k} 3} = 2 \\Rightarrow \\log_{3} 6 + \\log_{3} k = 2$\n$\\Rightarrow \\log_{3} 6k = 2 \\Rightarrow 6k = 3^2 = 9 \\Rightarrow k = \\frac{3}{2}$\nحال، مقدار $\\log_{27} 2k$ را محاسبه می‌کنیم.\n$\\log_{27} 2k = \\log_{27} 3 = \\frac{1}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1506,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1507",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ساده‌شده $\\fracrac1{1+\\log_2 12}+\\fracrac1{1+\\log_3 8}+\\fracrac1{1+\\log_4 6}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا مخرج تمامی کسرها را ساده می‌کنیم.\n$\\frac{1}{1 + \\log_{2} 12} + \\frac{1}{1 + \\log_{3} 8} + \\frac{1}{1 + \\log_{4} 6}$\n$= \\frac{1}{\\log_{2} 2 + \\log_{2} 12} + \\frac{1}{\\log_{3} 3 + \\log_{3} 8} + \\frac{1}{\\log_{4} 4 + \\log_{4} 6}$\n$= \\frac{1}{\\log_{2} 24} + \\frac{1}{\\log_{3} 24} + \\frac{1}{\\log_{4} 24}$\n$= \\log_{24} 2 + \\log_{24} 3 + \\log_{24} 4 = \\log_{24} 24 = 1$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1507,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1508",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log2=0/3$ باشد، حاصل $10^{0/3}\\timesimes\\log12/8$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2/1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم $a^{\\log_{a} x} = x$.\n$10^{0/3} \\times \\log 12/8 = 10^{\\log 2} \\times \\log (\\frac{2^7}{10})$\n$= 2 \\times (7 \\log 2 - 1) = 2(7 \\times 0/3 - 1) = 2/2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1508,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1509",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مقدار عددی $9^{1+\\log_3 4}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$121$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$144$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم $a^{\\log_{c} b} = b^{\\log_{c} a}$. بنابراین:\n$9^{1 + \\log_{3} 4} = 9^{\\log_{3} 3 + \\log_{3} 4} = 9^{\\log_{3} 12} = 12^{\\log_{3} 9} = 12^2 = 144$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1509,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1510",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $3^{3-\\log_4(a-1)}=24$، $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac89$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{10}9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac98$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac9{10}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم $k^{\\log_{k} x}$ برابر با $x$ می‌باشد.\n$2^{3 - \\log_{4}(a - 1)} = 24 \\Rightarrow 2^{3 - \\frac{1}{2} \\log_{2}(a - 1)} = 24$\n$\\Rightarrow 2^{3 - \\log_{2}\\sqrt{a - 1}} = 24 \\Rightarrow 2^{\\log_{2} 8 - \\log_{2}\\sqrt{a - 1}} = 24$\n$\\Rightarrow 2^{\\log_{2}\\frac{8}{\\sqrt{a - 1}}} = 24 \\Rightarrow \\frac{8}{\\sqrt{a - 1}} = 24$\n$\\Rightarrow \\sqrt{a - 1} = \\frac{1}{3} \\Rightarrow a - 1 = \\frac{1}{9} \\Rightarrow a = \\frac{10}{9}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1510,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1511",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log8=k$، حاصل $\\log(14-6\\sqrt5)+2\\log(3+\\sqrt5)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{2k}3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{4k}3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{3k}2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{3k}4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم $\\log 8 = k$ است. بنابراین:\n$3 \\log 2 = k \\Rightarrow \\log 2 = \\frac{k}{3}$\nاکنون عبارت خواسته‌شده را ساده می‌کنیم:\n$\\log(14 - 6\\sqrt{5}) + 2 \\log(3 + \\sqrt{5})$\n$= \\log(3 - \\sqrt{5})^2 + 2 \\log(3 + \\sqrt{5})$\n$= 2 \\log(3 - \\sqrt{5}) + 2 \\log(3 + \\sqrt{5})$\n$= 2 (\\log(3 - \\sqrt{5}) + \\log(3 + \\sqrt{5}))$\n$= 2 \\log(3 - \\sqrt{5})(3 + \\sqrt{5}) = 2 \\log 4 = 4 \\log 2 = \\frac{4k}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1511,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1512",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log_{15}3=k$ باشد، مقدار $\\log_5 15$ بر حسب $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$k-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac1{k-1}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1-k$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac1{1-k}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$\\log_{5} 15$ را ساده می‌کنیم:\n$\\log_{5} 15 = \\frac{1}{\\log_{15} 5} = \\frac{1}{\\log_{15}\\frac{15}{3}} = \\frac{1}{\\log_{15} 15 - \\log_{15} 3}$\n$= \\frac{1}{1 - \\log_{15} 3} = \\frac{1}{1 - k}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1512,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1513",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log3=a$ و $\\log225=b$ باشد، مقدار $\\log2$ بر حسب $a$ و $b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a+\\fracrac b2-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2a-b+1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2a+b-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a-\\fracrac b2+1$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت $b = \\log 225$ را ساده می‌کنیم.\n$b = \\log 225 = \\log 15^2 = 2 \\log 15 = 2(\\log 3 + \\log 5)$\n$= 2(a + \\log 5) = 2(a + 1 - \\log 2) \\Rightarrow a + 1 - \\log 2 = \\frac{b}{2}$\n$\\Rightarrow \\log 2 = a + 1 - \\frac{b}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1513,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1514",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه $\\log_2 3=k$، حاصل $\\log_{36}48$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{k+4}{2k+4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{k+2}{2k+4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{k+4}{2k+2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{k+2}{2k+2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چون $k$ به شکل لگاریتم در مبنای $2$ می‌باشد، عبارت $\\log_{36} 48$ را به صورت $\\frac{\\log_{2} 48}{\\log_{2} 36}$ می‌نویسیم.\n$\\log_{36} 48 = \\frac{\\log_{2} 48}{\\log_{2} 36} = \\frac{\\log_{2} 16 + \\log_{2} 3}{\\log_{2} 4 + \\log_{2} 9} = \\frac{4 + k}{2 + 2k}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1514,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1515",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log75=a$ و $\\log45=b$ باشد، حاصل $\\log12$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{4b-5a-6}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{4b-5a+6}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{4a-5b-6}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{4a-5b+6}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا عبارات $a$ و $b$ را ساده می‌کنیم:\n$\\left. \\begin{array}{l} a = \\log 75 = \\log 3 + \\log 25 = \\log 3 + 2 \\log 5 \\\\ b = \\log 45 = \\log 9 + \\log 5 = 2 \\log 3 + \\log 5 \\end{array} \\right\\} \\times -2$\n$\\Rightarrow -3 \\log 3 = a - 2b \\Rightarrow \\log 3 = \\frac{2b - a}{3}$\n$\\Rightarrow b = 2(\\frac{2b - a}{3}) + \\log 5 \\Rightarrow \\log 5 = \\frac{2a - b}{3}$\nاکنون $\\log 12$ را محاسبه می‌کنیم.\n$\\log 12 = \\log 4 + \\log 3 = 2 \\log 2 + \\log 3 = 2 - 2 \\log 5 + \\log 3$\n$= 2 - \\frac{4a - 2b}{3} + \\frac{2b - a}{3} = \\frac{4b - 5a + 6}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1515,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 140,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1516",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log_2 216+\\log_3 216=k(\\log_2 216)(\\log_3 216)$ باشد، $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac13$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در دو طرف معادله $\\log_{۱۶}(۳)\\log_{۳}(۱۶)$ را ضرب می‌کنیم.\n$(\\log_{۲۱۶} ۲) (\\log_{۲۱۶} ۳) (\\log_{۲} ۲۱۶ + \\log_{۳} ۲۱۶) \\\\ = \\text{k}(\\log_{۲} ۲۱۶)(\\log_{۳} ۲۱۶)(\\log_{۲۱۶} ۲)(\\log_{۲۱۶} ۳) \\\\ \\Rightarrow \\log_{۲۱۶} ۳ + \\log_{۲۱۶} ۲ = \\text{k} \\Rightarrow \\text{k} = \\log_{۲۱۶} ۶ = \\log_{۶^۳} ۶ \\\\ \\Rightarrow \\text{k} = \\frac{۱}{۳}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1516,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1517",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ساده‌شده عبارت $(\\log_6 3)^2+(\\log_6 2)^2+(\\log_6\\sqrt3)(\\log_6 16)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت $(\\log_{۶} \\sqrt{۳}) (\\log_{۶} ۱۶)$ را ساده می‌کنیم.\n$(\\log_{۶} ۳)^۲ + (\\log_{۶} ۲)^۲ + (\\log_{۶} \\sqrt{۳})(\\log_{۶} ۱۶) \\\\ = (\\log_{۶} ۳)^۲ + (\\log_{۶} ۲)^۲ + (\\frac{۱}{۲} \\log_{۶} ۳)(۴ \\log_{۶} ۲) \\\\ = (\\log_{۶} ۳)^۲ + (\\log_{۶} ۲)^۲ + ۲ (\\log_{۶} ۳)(\\log_{۶} ۲) \\\\ = (\\log_{۶} ۳ + \\log_{۶} ۲)^۲ = (\\log_{۶} ۶)^۲ = ۱$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1517,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1518",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل $A=(\\log_6 2)^2+(\\log_6 3)(\\log_6 12)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا در عبارت $\\text{A}$، مقدار $\\log_{۶} ۱۲$ را ساده می‌کنیم.\n$\\text{A} = (\\log_{۶} ۲)^۲ + (\\log_{۶} ۳)(\\log_{۶} ۱۲) \\\\ = (\\log_{۶} ۲)^۲ + (\\log_{۶} ۳)(۲ \\log_{۶} ۲ + \\log_{۶} ۳) \\\\ = (\\log_{۶} ۲)^۲ + ۲ (\\log_{۶} ۲)(\\log_{۶} ۳) + (\\log_{۶} ۳)^۲ \\\\ = (\\log_{۶} ۲ + \\log_{۶} ۳)^۲ = (\\log_{۶} ۶)^۲ = ۱$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1518,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1519",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به ازای کدام مقدار $\\alpha$، حاصل عددی $P=(\\log_{15}5)^2+(\\log_{15}\\alpha)(\\log_{15}75)$ برابر یک است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$25$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت $\\text{P}$ را برابر ۱ قرار داده و معادله را حل می‌کنیم.\n$(\\log_{۱۵} ۵)^۲ + \\log_{۱۵} \\alpha \\log_{۱۵} ۷۵ = ۱ \\\\ \\Rightarrow \\log_{۱۵} \\alpha \\log_{۱۵} ۷۵ = ۱ - (\\log_{۱۵} ۵)^۲ \\\\ \\Rightarrow \\log_{۱۵} \\alpha \\log_{۱۵} ۷۵ = (۱ - \\log_{۱۵} ۵)(۱ + \\log_{۱۵} ۵) \\\\ \\Rightarrow \\log_{۱۵} \\alpha \\log_{۱۵} ۷۵ = (\\log_{۱۵} ۱۵ - \\log_{۱۵} ۵)(\\log_{۱۵} ۱۵ + \\log_{۱۵} ۵) = \\log_{۱۵} ۳ \\log_{۱۵} ۷۵ \\\\ \\Rightarrow \\log_{۱۵} \\alpha = \\log_{۱۵} ۳ \\Rightarrow \\alpha = ۳$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1519,
+      "question_pdf": "12.pdf",
+      "question_page": 8,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1520",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $2^{x-1}=(\\fracrac18)^{y-x}$ و $\\log(x+3)+\\log(y-2)=1$ باشد، حاصل $xy$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$25$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا معادله نمایی را ساده می‌کنیم.\n$۲^{x - ۱} = (\\frac{۱}{۸})^{y - x} \\Rightarrow ۲^{x - ۱} = ۲^{-۳y + ۳x} \\\\ \\Rightarrow x - ۱ = -۳y + ۳x \\Rightarrow ۳y - ۲x = ۱ \\quad (۱)$\nاکنون به سراغ معادله لگاریتمی می‌رویم:\n$\\log(x + ۳) + \\log(y - ۲) = ۱ \\Rightarrow \\log(x + ۳)(y - ۲) = ۱ \\\\ \\Rightarrow (x + ۳)(y - ۲) = ۱۰ \\Rightarrow xy + ۳y - ۲x - ۶ = ۱۰ \\\\ \\xrightarrow{(۱)} xy + ۱ - ۶ = ۱۰ \\Rightarrow xy = ۱۵$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1520,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1521",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از دو معادله $4^x-2^x=56$ و $\\log(x+y)+\\log(2x-2y)=1$، چند مقدار برای $y$ وجود دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا معادله نمایی را حل می‌کنیم.\n$۴^x - ۲^x = ۵۶ \\xrightarrow{۲^x = \\text{k}} \\text{k}^۲ - \\text{k} - ۵۶ = ۰ \\\\ \\Rightarrow (\\text{k} + ۷)(\\text{k} - ۸) = ۰ \\Rightarrow \\begin{cases} \\text{k} = -۷ \\text{ ق.ق.غ} \\\\ \\text{k} = ۸ \\end{cases} \\\\ \\Rightarrow ۲^x = ۸ \\Rightarrow x = ۳$\nاکنون به سراغ معادله لگاریتمی می‌رویم.\n$\\log(x + y) + \\log(۲x - ۲y) = ۱ \\\\ \\xrightarrow{x = ۳} \\log(۳ + y) + \\log ۲(۳ - y) = ۱ \\Rightarrow \\log ۲(۹ - y^۲) = ۱ \\\\ \\Rightarrow ۲(۹ - y^۲) = ۱۰ \\Rightarrow y^۲ = ۴ \\Rightarrow y = \\pm ۲$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1521,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1522",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $\\log\\fracrac{a+b}{2}=\\fracrac{\\log a+\\log b}{2}$، حاصل $\\fracrac ab+\\fracrac ba$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac52$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac72$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله لگاریتمی را ساده می‌کنیم.\n$\\log \\frac{a + b}{۲} = \\frac{\\log a + \\log b}{۲} \\Rightarrow ۲ \\log \\frac{a + b}{۲} = \\log a + \\log b \\\\ \\log(\\frac{a + b}{۲})^۲ = \\log ab \\Rightarrow (\\frac{a + b}{۲})^۲ = ab \\\\ \\Rightarrow (a + b)^۲ = ۴ab \\Rightarrow a^۲ + b^۲ + ۲ab = ۴ab \\\\ \\Rightarrow a^۲ + b^۲ - ۲ab = ۰ \\Rightarrow (a - b)^۲ = ۰ \\Rightarrow a = b \\\\ \\Rightarrow \\frac{a}{b} + \\frac{b}{a} = ۱ + ۱ = ۲$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1522,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1523",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل $A=[\\log_3 24]+[\\log_2 24]+[\\log_{\\sqrt3}1]$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "محدوده هر یک از عبارات داخل براکت را به دست می‌آوریم.\n$۳^۲ < ۲۴ < ۳^۳ \\Rightarrow ۲ < \\log_{۳} ۲۴ < ۳ \\Rightarrow [\\log_{۳} ۲۴] = ۲ \\\\ ۲^۴ < ۲۴ < ۲^۵ \\Rightarrow ۴ < \\log_{۲} ۲۴ < ۵ \\Rightarrow [\\log_{۲} ۲۴] = ۴ \\\\ \\log_{\\sqrt{۲}} ۱ = ۰ \\Rightarrow [\\log_{\\sqrt{۲}} ۱] = ۰ \\Rightarrow \\text{A} = ۲ + ۴ + ۰ = ۶$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1523,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1524",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $[\\log_2 x]=[\\log_3 y]=3$، مقدار $[\\log_3(x+y)]$ چند عدد مختلف را اختیار می‌کند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا محدوده $x$ و $y$ را به دست می‌آوریم.\n$[\\log_{۲} x] = ۳ \\Rightarrow ۳ \\le \\log_{۲} x < ۴ \\Rightarrow ۲^۳ \\le x < ۲^۴ \\\\ \\Rightarrow ۸ \\le x < ۱۶ \\\\ [\\log_{۳} y] = ۳ \\Rightarrow ۳ \\le \\log_{۳} y < ۴ \\Rightarrow ۳^۳ \\le y < ۳^۴ \\\\ \\Rightarrow ۲۷ \\le y < ۸۱ \\\\ \\Rightarrow ۳۵ \\le x + y < ۹۷ \\\\ \\Rightarrow ۳^۳ < x + y < ۳^۵ \\Rightarrow ۳ < \\log_{۳} (x + y) < ۵ \\\\ \\Rightarrow [\\log_{۳} (x + y)] \\nearrow^{۳}_{\\searrow^{۴}}$\nدو مقدار مختلف را اختیار می‌کند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1524,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1525",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فرض کنید $f(x)=\\log_2 4x$ باشد. نمودار تابع $f(\\fracrac1x)$ بر نمودار کدام تابع زیر منطبق است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2-f(x)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4-f(x)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$f(x)-2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$f(x)-4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: تابع $\\text{f}(\\frac{۱}{x})$ را تشکیل داده و ساده می‌کنیم.\n$\\text{f}(\\frac{۱}{x}) = \\log_{۲} \\frac{۴}{\\frac{۱}{x}} = \\log_{۲} \\frac{۱۶}{۴x} = \\log_{۲} ۱۶ - \\log_{۲} ۴x = ۴ - \\text{f}(x)$\nروش دوم: از نقطه‌یابی استفاده کنید."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1525,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1526",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام جفت از توابع زیر با هم برابرند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$f(x)=\\log(x-3)-\\log x$ و $g(x)=\\log\\fracrac{x-3}{x}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$f(x)=\\log\\fracrac{x-1}{x}$ و $g(x)=\\fracrac12\\log(\\fracrac{x-1}{x})^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$f(x)=\\log\\fracrac{x-2}{x}$ و $g(x)=\\log\\fracrac{x^2-4}{x^2+2x}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$f(x)=\\log(3-x)-\\log x$ و $g(x)=\\log\\fracrac{3-x}{x}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو تابع $\\text{f}$ و $\\text{g}$ هنگامی با هم برابرند که هم دامنه آنها و هم ضابطه آنها برابر باشد.\nدر $\\text{۱}$ دامنه $\\text{f}(x)$ برابر $(۳, +\\infty)$ و دامنه $\\text{g}(x)$ برابر $(-\\infty, ۰) \\cup (۳, +\\infty)$ است. بنابراین با هم برابر نیستند.\nدر $\\text{۲}$ دامنه $\\text{f}(x)$ برابر $[۰, ۱] - \\mathbb{R}$ و دامنه $\\text{g}(x)$ برابر $\\{۰, ۱\\} - \\mathbb{R}$ است. در نتیجه با هم برابر نیستند.\nدر $\\text{۳}$ $x = -۲$ عضو دامنه $\\text{f}(x)$ است اما در دامنه $\\text{g}(x)$ نمی‌باشد. بنابراین با هم برابر نیستند.\nدر $\\text{۴}$ دامنه $\\text{f}(x)$ و $\\text{g}(x)$ برابر $(۰, ۳)$ بوده و ضابطه آنها نیز برابر است، در نتیجه $\\text{f}(x) = \\text{g}(x)$ می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1526,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1527",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تابع $f(x)=\\log_2(ax+b)$ فقط برای مقادیر $x\\in(-\\infty,\\fracrac12)$ بامعنی است. اگر $f(-1)=2$ باشد، مقدار $f(0)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دامنه تعریف تابع $\\text{f}(x)$ بازه $(\\frac{۱}{۳}, \\infty-)$ است. بنابراین $x = \\frac{۱}{۳}$ ریشه $ax + b$ است:\n$\\frac{a}{۳} + b = ۰ \\Rightarrow a = -۳b$\nاز طرفی: $\\text{f}(-۱) = ۲ \\Rightarrow \\log_{۲}(-a + b) = ۲ \\Rightarrow -a + b = ۴ \\\\ \\xrightarrow{a = -۳b} ۴b = ۴ \\Rightarrow b = ۱ \\Rightarrow a = -۳ \\\\ \\Rightarrow \\text{f}(x) = \\log_{۲}(-۳x + ۱) \\Rightarrow \\text{f}(۰) = \\log_{۲} ۱ = ۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1527,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1528",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دامنه تابع $y=\\log_{x-2}\\fracrac{3x}{5-x}$ شامل چند عدد صحیح است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در تابع $y = \\log_{\\text{g}(x)} \\text{f}(x)$ شروط زیر برقرار است:\n$\\begin{cases} \\text{f}(x) > ۰ \\\\ \\text{g}(x) > ۰ , \\text{g}(x) \\ne ۱ \\end{cases}$\nخواهیم داشت:\n$\\begin{cases} \\frac{۳x}{۵ - x} > ۰ \\Rightarrow ۰ < x < ۵ \\\\ x - ۲ > ۰ \\Rightarrow x > ۲ \\\\ x - ۲ \\ne ۱ \\Rightarrow x \\ne ۳ \\end{cases} \\xrightarrow{\\cap} x \\in (۲, ۵) - \\{۳\\}$\n$\\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{۴\\}$\nدامنه تابع فقط شامل یک عضو صحیح است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1528,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1529",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دامنه تعریف $f(x)=\\sqrt{2-\\log_2(2-x^2)}$ بازه $(a,b)$ است. $b-a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت زیر رادیکال باید نامنفی باشد.\n$۲ - \\log_۳(۲ - x^۲) \\ge \\circ \\Rightarrow \\log_۳(۲ - x^۲) \\le ۲$\n$\\Rightarrow \\circ < ۲ - x^۲ \\le ۳^۲ \\Rightarrow \\circ < ۲ - x^۲ \\le ۹$\n$\\Rightarrow -۲ < -x^۲ \\le ۷ \\Rightarrow -۷ \\le x^۲ < ۲$\nنامعادلهٔ سمت چپ بدیهی و همواره برقرار است. در نتیجه:\n$x^۲ < ۲ \\Rightarrow -\\sqrt{۲} < x < \\sqrt{۲} \\Rightarrow x \\in (-\\sqrt{۲}, \\sqrt{۲})$\n$\\Rightarrow b - a = ۲\\sqrt{۲}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1529,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1530",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x)=1-4^{-x}$ باشد، دامنه تعریف $y=\\log(xf(x))$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(0,+\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,0)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(0,1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$mathbb{R}-{0}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: تابع $y = ۴^{-x}$ اکیداً نزولی است بنابراین تابع $f(x) = ۱ - ۴^{-x}$ اکیداً صعودی است.\nجدول تعیین علامت $f(x)$ به صورت مقابل است.\nدر تابع $y = \\log(xf(x))$ باید $xf(x) > \\circ$ باشد. ($x = \\circ$ ریشهٔ مضاعف $xf(x)$ است.)\n$\\Rightarrow D = \\mathbb{R} - \\{\\circ\\}$\nروش دوم: نمودار تابع $f(x) = ۱ - ۴^{-x}$ را رسم می‌کنیم.\nبا توجه به نمودار واضح است که $xf(x)$ در تمامی نقاط به جز $x = \\circ$ مثبت است؛ بنابراین: $D = \\mathbb{R} - \\{\\circ\\}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1530/solution_1530_1.webp",
+        "alt": "جدول تعیین علامت f(x)",
+        "aspect_ratio": 0.1344
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1530/solution_1530_2.webp",
+        "alt": "جدول تعیین علامت xf(x)",
+        "aspect_ratio": 0.1449
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1530/solution_1530_3.webp",
+        "alt": "نمودار تابع",
+        "aspect_ratio": 0.4632
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1530,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0142.jpg",
+          "box": [
+            250,
+            521,
+            281,
+            755
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_1530",
+          "alt": "جدول تعیین علامت f(x)"
+        },
+        {
+          "page_file": "page_0142.jpg",
+          "box": [
+            300,
+            521,
+            335,
+            756
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_1530",
+          "alt": "جدول تعیین علامت xf(x)"
+        },
+        {
+          "page_file": "page_0142.jpg",
+          "box": [
+            363,
+            516,
+            452,
+            665
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_1530",
+          "alt": "نمودار تابع"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1531",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $f(x)=9-3^{2x}$ باشد، دامنه تابع $g(x)=\\sqrt{xf^{-1}(x)}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$[0,9)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[0,8]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[8,9)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[1,9)$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $f^{-۱}(x)$ را به دست می‌آوریم.\n$y = ۹ - ۳^{۳x} \\Rightarrow ۳^{۳x} = ۹ - y \\Rightarrow ۳x = \\log_۳(۹ - y)$\n$\\Rightarrow x = \\frac{۱}{۳} \\log_۳(۹ - y) \\Rightarrow f^{-۱}(x) = \\frac{۱}{۳} \\log_۳(۹ - x)$\nدر تابع $g(x)$ عبارت زیر رادیکال باید نامنفی باشد.\n$xf^{-۱}(x) \\ge \\circ \\Rightarrow \\frac{۱}{۳}x \\log_۳(۹ - x) \\ge \\circ$\n$\\Rightarrow D = [\\circ, ۸]$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1531/solution_1531_1.webp",
+        "alt": "جدول تعیین علامت",
+        "aspect_ratio": 0.1677
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1531,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0142.jpg",
+          "box": [
+            595,
+            525,
+            638,
+            762
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_1531",
+          "alt": "جدول تعیین علامت"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1532",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $f(x)=\\log_3(9+3x)$، دامنه تعریف تابع $g(x)=\\sqrt{3-f^{-1}(x)}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$[\\log_3 18,+\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[3,+\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,3]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty,\\log_3 18]$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "وارون تابع $f(x)$ را به دست می‌آوریم.\n$y = \\log_۳(۹ + ۳x) \\Rightarrow ۹ + ۳x = ۳^y \\Rightarrow x = \\frac{۳^y - ۹}{۳} = ۳^{y - ۱} - ۳ \\Rightarrow f^{-۱}(x) = ۳^{x - ۱} - ۳$\nدر تابع $g(x)$ عبارت زیر رادیکال باید نامنفی باشد.\n$۳ - f^{-۱}(x) \\ge \\circ \\Rightarrow f^{-۱}(x) \\le ۳ \\Rightarrow ۳^{x - ۱} - ۳ \\le ۳$\n$\\Rightarrow ۳^{x - ۱} \\le ۶ \\Rightarrow x - ۱ \\le \\log_۳ ۶ \\Rightarrow x \\le \\log_۳ ۶ + ۱$\n$\\Rightarrow x \\le \\log_۳ ۱۸ \\Rightarrow D_g = (-\\infty, \\log_۳ ۱۸]$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1532,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1533",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "وارون تابع $f(x)=\\log_3\\fracrac{3^x-1}{9}$ به صورت $f^{-1}(x)=\\log_3 g(x)$ است. $g(1)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$27$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$28$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "وارون تابع $f(x)$ را به دست می‌آوریم.\n$y = \\log_3 \\frac{3^x - 1}{9} \\Rightarrow \\frac{3^x - 1}{9} = 3^y \\Rightarrow 3^x - 1 = 9 \\times 3^y = 3^{y + 2}$\n$\\Rightarrow 3^x = 3^{y + 2} + 1 \\Rightarrow x = \\log_3(3^{y + 2} + 1)$\n$\\Rightarrow f^{-1}(x) = \\log_3(3^{x + 2} + 1) \\Rightarrow g(x) = 3^{x + 2} + 1$\n$\\Rightarrow g(1) = 28$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1533,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1534",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "وارون تابع $f(x)=3^{1-x}+3$ به صورت $f^{-1}(x)=\\log_3 a(x+b)^{-1}$ است. $a-b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-5$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: وارون تابع $f(x)$ را به دست می‌آوریم:\n$y = 2^{1 - x} + 3 \\Rightarrow 2^{1 - x} = y - 3 \\Rightarrow 1 - x = \\log_2(y - 3)$\n$\\Rightarrow x = 1 - \\log_2(y - 3) \\Rightarrow f^{-1}(x) = 1 - \\log_2(x - 3)$\n$= \\log_2 2 - \\log_2(x - 3) = \\log_2 \\frac{2}{x - 3} = \\log_2 2(x - 3)^{-1}$\nبا توجه به این‌که $f^{-1}(x) = \\log_2 a(x + b)^{-1}$ است، مشخص می‌شود:\n$a = 2, b = -3 \\Rightarrow a - b = 5$\nروش دوم: در بسیاری از سؤالات برای تشخیص تابع وارون از نقطه‌یابی استفاده می‌کنیم.\nنقاط $(0, 5)$ و $(1, 4)$ در تابع $f(x)$ وجود دارند، بنابراین:\n$\\begin{cases} f^{-1}(5) = 0 \\Rightarrow \\log_2 a(5 + b)^{-1} = 0 \\Rightarrow a(5 + b)^{-1} = 1 \\\\ \\Rightarrow 5 + b = a \\\\ f^{-1}(4) = 1 \\Rightarrow \\log_2 a(4 + b)^{-1} = 1 \\Rightarrow a(4 + b)^{-1} = 2 \\\\ \\Rightarrow 8 + 2b = a \\end{cases}$\n$\\Rightarrow b = -3 \\Rightarrow a = 2 \\Rightarrow a - b = 5$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1534,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1535",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ضابطه وارون تابع $f(x)=9^x+3^{x+1}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$f^{-1}(x)=\\log_3(\\sqrt{x+\\fracrac94}+\\fracrac32)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$f^{-1}(x)=\\log_3(\\sqrt{x+\\fracrac32}+\\fracrac94)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$f^{-1}(x)=\\log_3(\\sqrt{x+\\fracrac32}-\\fracrac94)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$f^{-1}(x)=\\log_3(\\sqrt{x+\\fracrac94}-\\fracrac32)$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: ابتدا $x$ را برحسب $y$ به دست آورده، سپس جای $x$ و $y$ را عوض می‌کنیم.\n$y = ۹^x + ۳^{x + ۱} = (۳^x)^۲ + ۳(۳^x) \\xrightarrow{۳^x = k} y = k^۲ + ۳k$\n$= (k + \\frac{۳}{۲})^۲ - \\frac{۹}{۴} \\Rightarrow (k + \\frac{۳}{۲})^۲ = y + \\frac{۹}{۴}$\n$\\xrightarrow{k + \\frac{۳}{۲} > \\circ} k + \\frac{۳}{۲} = \\sqrt{y + \\frac{۹}{۴}} \\Rightarrow k = \\sqrt{y + \\frac{۹}{۴}} - \\frac{۳}{۲}$\n$\\Rightarrow ۳^x = \\sqrt{y + \\frac{۹}{۴}} - \\frac{۳}{۲} \\Rightarrow x = \\log_۳(\\sqrt{y + \\frac{۹}{۴}} - \\frac{۳}{۲})$\n$\\Rightarrow f^{-۱}(x) = \\log_۳(\\sqrt{x + \\frac{۹}{۴}} - \\frac{۳}{۲})$\nروش دوم: در بسیاری از سؤالات برای تشخیص $f^{-۱}(x)$ از نقطه‌یابی استفاده می‌کنیم.\nتابع $f(x)$ از نقطهٔ $(\\circ, ۴)$ می‌گذرد. بنابراین تابع $f^{-۱}(x)$ از نقطهٔ $(۴, \\circ)$ عبور می‌کند، یعنی باید $f^{-۱}(۴) = \\circ$ باشد. با بررسی گزینه‌ها فقط در گزینهٔ «۴»، $f^{-۱}(۴) = \\circ$ می‌شود."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1535,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1536",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=a+\\log_3(2x+b)^2$ از نقطه $(-1,3)$ گذشته و نیمساز ناحیه اول را در نقطه‌ای به عرض $5$ قطع می‌کند. $ab$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)$ از دو نقطهٔ $(-1, 3)$ و $(5, 5)$ عبور می‌کند؛ بنابراین:\n$\\begin{cases} f(-1) = 3 \\Rightarrow a + \\log_2(-2 + b)^2 = 3 \\\\ f(5) = 5 \\Rightarrow a + \\log_2(10 + b)^2 = 5 \\end{cases}$\n$\\xrightarrow{-} \\log_2(b + 10)^2 - \\log_2(b - 2)^2 = 2$\n$\\Rightarrow \\log_2(\\frac{b + 10}{b - 2})^2 = 2$\n$\\Rightarrow (\\frac{b + 10}{b - 2})^2 = 4 \\Rightarrow \\frac{b + 10}{b - 2} = \\pm 2 \\Rightarrow \\begin{cases} b = 14 \\quad \\text{غ ق ق} \\\\ b = -2 \\end{cases}$\n$\\Rightarrow a + \\log_2(-4)^2 = 3 \\Rightarrow a + 4 = 3 \\Rightarrow a = -1$\n$\\Rightarrow ab = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1536,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1537",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $y=\\log(3-x)$ از کدام ناحیه مختصات عبور نمی‌کند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "اول"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "دوم"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "سوم"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "چهارم"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دامنهٔ تابع را به دست می‌آوریم.\n$۳ - x > \\circ \\Rightarrow x < ۳ \\Rightarrow D = (-\\infty, ۳)$\nمحل برخورد تابع با محورهای مختصات را می‌یابیم.\n$x = \\circ \\Rightarrow y = \\log ۳ \\Rightarrow A(\\circ , \\log ۳)$\n$y = \\circ \\Rightarrow \\circ = \\log (۳ - x) \\Rightarrow ۳ - x = ۱$\n$\\Rightarrow x = ۲ \\Rightarrow B(۲, \\circ)$\nمی‌دانیم تابع اکیداً نزولی است. بنابراین نمودار آن به صورت مقابل است.\nنمودار از ناحیهٔ سوم عبور نمی‌کند."
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1537/solution_1.webp",
+        "alt": "نمودار تابع y = log(3-x) که از نواحی اول، دوم و چهارم می‌گذرد.",
+        "aspect_ratio": 0.7351
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1537,
+      "question_pdf": "12.pdf",
+      "question_page": 9,
+      "solution_page": 142,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0143.jpg",
+          "box": [
+            96,
+            689,
+            237,
+            829
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار تابع y = log(3-x) که از نواحی اول، دوم و چهارم می‌گذرد."
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1538",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $y=\\log\\fracrac1x-\\log\\fracrac1{\\sqrt{x}}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۱"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1538/option_1_1.webp",
+          "alt": "نمودار لگاریتمی افزایشی",
+          "aspect_ratio": 1.159
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۲"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1538/option_2_2.webp",
+          "alt": "نمودار ریشه‌ای/لگاریتمی افزایشی",
+          "aspect_ratio": 1.0883
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۳"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1538/option_3_3.webp",
+          "alt": "نمودار کاهشی از نقطه روی محور x",
+          "aspect_ratio": 0.7979
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "شکل گزینهٔ ۴"
+        },
+        {
+          "type": "image",
+          "asset": "question_media/math/nardebam_math_1405_1538/option_4_4.webp",
+          "alt": "نمودار کاهشی",
+          "aspect_ratio": 0.7979
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ضابطهٔ تابع را ساده می‌کنیم.\n$D = (\\circ, +\\infty)$\n$y = \\log \\frac{۱}{x} - \\log_{\\frac{۱}{\\sqrt{x}}} \\frac{۱}{x} = \\log(x^{-۱}) \\sqrt{x} = \\log \\frac{۱}{\\sqrt{x}} = \\log x^{-\\frac{۱}{۲}}$\n$= -\\frac{۱}{۲} \\log x$\nحال با $-\\frac{۱}{۲}$ برابر کردن عرض نقاط نمودار $y = \\log x$ نمودار $y = -\\frac{۱}{۲} \\log x$ را رسم می‌کنیم."
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1538/solution_5.webp",
+        "alt": "نمودار دو تابع y = log x و y = -1/2 log x",
+        "aspect_ratio": 0.2715
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1538,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            1210,
+            230,
+            1510,
+            485
+          ],
+          "box_format": "xyxy",
+          "placement": "option_1",
+          "alt": "نمودار لگاریتمی افزایشی"
+        },
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            885,
+            230,
+            1165,
+            485
+          ],
+          "box_format": "xyxy",
+          "placement": "option_2",
+          "alt": "نمودار ریشه‌ای/لگاریتمی افزایشی"
+        },
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            555,
+            230,
+            840,
+            485
+          ],
+          "box_format": "xyxy",
+          "placement": "option_3",
+          "alt": "نمودار کاهشی از نقطه روی محور x"
+        },
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            250,
+            230,
+            535,
+            485
+          ],
+          "box_format": "xyxy",
+          "placement": "option_4",
+          "alt": "نمودار کاهشی"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0143.jpg",
+          "box": [
+            348,
+            464,
+            467,
+            804
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار دو تابع y = log x و y = -1/2 log x"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1539",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار توابع $f(x)=\\log_a x$، $g(x)=\\log_b x$، $h(x)=\\log_c x$ و $t(x)=\\log_d x$ به صورت مقابل است؛ کدام گزینه صحیح است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1539/stem_1.webp",
+        "alt": "چهار نمودار لگاریتمی با برچسب‌های $f,g,h,t$",
+        "aspect_ratio": 0.8344
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a<b<c<d$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$b<a<d<c$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$b<a<c<d$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a<b<d<c$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "توابع $t(x)$ و $h(x)$، اکیداً صعودی هستند. بنابراین $d$ و $c$ بزرگ‌تر از ۱ می‌باشند و چون به ازای $x \\ge ۱$ نمودار $h(x)$ پایین‌تر از $t(x)$ است، مبنای آن بزرگ‌تر از مبنای $t(x)$ می‌باشد یعنی $c > d > ۱$.\nتوابع $f(x)$ و $g(x)$ اکیداً نزولی هستند بنابراین $a$ و $b$ بین صفر و یک می‌باشند و چون به ازای $x \\ge ۱$ نمودار $f(x)$ بالاتر از $g(x)$ است مبنای آن کوچک‌تر از مبنای $g(x)$ می‌باشد یعنی $۱ > b > a > \\circ$.\nدر نتیجه: $a < b < d < c$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1539,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            90,
+            520,
+            430,
+            810
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "چهار نمودار لگاریتمی با برچسب‌های $f,g,h,t$"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1540",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=\\log_9(x+a)+b$ به صورت مقابل است. $ab$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1540/stem_1.webp",
+        "alt": "نمودار لگاریتمی با مجانب عمودی $x=-3$ و عبور از مبدا",
+        "aspect_ratio": 1.2878
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-6$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دامنهٔ تابع $f(x) = \\log_۹ (x + a) + b$ بازهٔ $(-a, +\\infty)$ است که با توجه به نمودار $-a = -۳$ یعنی $a = ۳$ است.\nهم‌چنین نمودار از مبدأ مختصات می‌گذرد.\n$f(\\circ) = \\circ \\Rightarrow \\log_۹ ۳ + b = \\circ \\Rightarrow b = -\\frac{۱}{۲} \\Rightarrow ab = -\\frac{۳}{۲}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1540,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            95,
+            830,
+            425,
+            1080
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار لگاریتمی با مجانب عمودی $x=-3$ و عبور از مبدا"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1541",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=2+\\log_{1/2}(ax+b)$ به صورت زیر است. مقدار $k$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1541/stem_1.webp",
+        "alt": "نمودار لگاریتمی نزولی با خطوط کمکی و نقطه $k$",
+        "aspect_ratio": 1.2431
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac34$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac43$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac35$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac53$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به نمودار تابع برای xهای بزرگ‌تر از $\\frac{۱}{۳}$ تعریف شده است. یعنی $\\frac{۱}{۳}$ ریشهٔ $ax + b$ است.\n$\\frac{a}{۳} + b = \\circ \\Rightarrow a = -۳b$\nهم‌چنین تابع از نقطهٔ $(۱, ۱)$ عبور می‌کند.\n$f(۱) = ۱ \\Rightarrow ۲ + \\log_{\\frac{۱}{۲}} (a + b) = ۱ \\Rightarrow \\log_{\\frac{۱}{۲}} (a + b) = -۱$\n$\\Rightarrow a + b = ۲$\n$\\xrightarrow{a = -۳b} -۲b = ۲ \\Rightarrow b = -۱ \\Rightarrow a = ۳$\n$\\Rightarrow f(x) = ۲ + \\log_{\\frac{۱}{۲}} (۳x - ۱)$\n$x = k$ ریشهٔ تابع $f(x)$ است:\n$f(k) = \\circ \\Rightarrow ۲ + \\log_{\\frac{۱}{۲}} (۳k - ۱) = \\circ \\Rightarrow \\log_{\\frac{۱}{۲}} (۳k - ۱) = -۲$\n$\\Rightarrow ۳k - ۱ = ۴ \\Rightarrow k = \\frac{۵}{۳}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1541,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            95,
+            1130,
+            425,
+            1390
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمودار لگاریتمی نزولی با خطوط کمکی و نقطه $k$"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1542",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=\\log_{1/3}(4x+a)$ از نواحی اول و سوم عبور نمی‌کند. $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac13$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چون تابع از نواحی اول و سوم نمی‌گذرد واضح است که از مبدأ مختصات عبور می‌کند.\n$f(\\circ) = \\circ \\Rightarrow \\log_{\\frac{۱}{۳}} a = \\circ \\Rightarrow a = ۱$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1542/solution_1.webp",
+        "alt": "نمودار تابع که فقط در نواحی دوم و چهارم است و از مبدأ می‌گذرد.",
+        "aspect_ratio": 0.4085
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1542,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0143.jpg",
+          "box": [
+            84,
+            39,
+            181,
+            223
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار تابع که فقط در نواحی دوم و چهارم است و از مبدأ می‌گذرد."
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1543",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $f(x)=2+\\log_4(ax-2a)$ از همه نواحی بجز ناحیه سوم عبور می‌کند. حدود $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-\\fracrac18<a<0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\fracrac14<a<0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a<-\\fracrac14$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a<-\\fracrac18$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تابع $f(x) = ۲ + \\log_۲ (ax - ۲a)$ از همهٔ نواحی به جز ناحیهٔ سوم عبور می‌کند، بنابراین نمودار آن به صورت روبه‌رو است:\nواضح است که تابع اکیداً نزولی بوده و a باید منفی باشد.\nاز طرفی نمودار محور yها را در نقطه‌ای بالای مبدأ قطع می‌کند یعنی:\n$f(\\circ) > \\circ \\Rightarrow ۲ + \\log_۲ (-۲a) > \\circ \\Rightarrow \\log_۲ (-۲a) > -۲$\n$\\Rightarrow -۲a > \\frac{۱}{۴} \\Rightarrow a < -\\frac{۱}{۸}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1543/solution_1.webp",
+        "alt": "نمودار تابع که از نواحی اول، دوم و چهارم عبور می‌کند.",
+        "aspect_ratio": 0.4385
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1543,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0143.jpg",
+          "box": [
+            177,
+            36,
+            266,
+            194
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "نمودار تابع که از نواحی اول، دوم و چهارم عبور می‌کند."
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1544",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $\\log_x(3x-8)=2-\\log_x(x-4)$، مقدار $\\log_2 x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلهٔ داده‌شده را حل می‌کنیم.\n$D = (۴, +\\infty)$\n$\\log_x (۳x - ۸) = ۲ - \\log_x (x - ۴)$\n$\\Rightarrow \\log_x (۳x - ۸) + \\log_x (x - ۴) = ۲$\n$\\Rightarrow \\log_x (۳x - ۸)(x - ۴) = ۲ \\Rightarrow (۳x - ۸)(x - ۴) = x^۲$\n$\\Rightarrow ۲x^۲ - ۲۰x + ۳۲ = \\circ \\Rightarrow x^۲ - ۱۰x + ۱۶ = \\circ$\n$\\Rightarrow (x - ۲)(x - ۸) = \\circ \\Rightarrow \\begin{cases} x = ۲ \\text{ (در دامنه وجود ندارد.) غ ق ق } \\\\ x = ۸ \\checkmark \\end{cases}$\n$\\Rightarrow \\log_۲ x = \\log_۲ ۸ = ۳$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1544,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1545",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از رابطه $\\log(x+2)+\\log(x-4)=\\log(8x+3)$، مقدار لگاریتم $x-3$ در پایه $4$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلهٔ داده‌شده را حل می‌کنیم:\n$D = (۴, +\\infty)$\n$\\log (x + ۲) + \\log (x - ۴) = \\log (۸x + ۳)$\n$\\Rightarrow \\log (x + ۲)(x - ۴) = \\log (۸x + ۳)$\n$\\Rightarrow (x + ۲)(x - ۴) = ۸x + ۳$\n$\\Rightarrow x^۲ - ۱۰x - ۱۱ = \\circ \\Rightarrow \\begin{cases} x = -۱ \\text{ غ ق ق } \\\\ x = ۱۱ \\end{cases}$\n$\\Rightarrow \\log_۴ (x - ۳) = \\log_۴ ۸ = \\log_{۲^۲} ۲^۳ = \\frac{۳}{۲}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1545,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1546",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $\\log_2(x^2+7)=2+\\log_2(x+1)$، حداکثر $\\log_2(x+1)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادلهٔ داده‌شده را حل می‌کنیم.\n$D = (-۱, +\\infty)$\n$\\log_۲ (x^۲ + ۷) = ۲ + \\log_۲ (x + ۱)$\n$\\Rightarrow \\log_۲ (x^۲ + ۷) - \\log_۲ (x + ۱) = ۲$\n$\\Rightarrow \\log_۲ \\frac{x^۲ + ۷}{x + ۱} = ۲ \\Rightarrow \\frac{x^۲ + ۷}{x + ۱} = ۴ \\Rightarrow x^۲ - ۴x + ۳ = \\circ$\n$\\Rightarrow \\begin{cases} x = ۱ \\\\ x = ۳ \\end{cases} \\Rightarrow \\begin{cases} \\log_۲ (x + ۱) = \\log_۲ ۲ = ۱ \\\\ \\log_۲ (x + ۱) = \\log_۲ ۴ = ۲ \\end{cases}$\nحداکثر مقدار $\\log_۲ (x + ۱)$ برابر ۲ است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1546,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 143,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1547",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض آن‌که $x=2$ ریشه معادله $3+\\log_k(x+1)=\\log_k(10x+7)$ باشد، حاصل لگاریتم $k$ در پایه $\\sqrt3$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac13$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac23$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac43$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله داده شده به ازای $x=2$ برقرار است.\n$3 + \\log_k (x+1) = \\log_k (10x+7) \\xrightarrow{x=2} 3 + \\log_k 3 = \\log_k 27$\n$\\Rightarrow 3 + \\log_k 3 = 3 \\log_k 3 \\Rightarrow 2\\log_k 3 = 3 \\Rightarrow \\log_k 3 = \\frac{3}{2}$\nخواهیم داشت:\n$\\log_3 k = \\frac{2}{3} \\Rightarrow 2\\log_3 k = \\frac{4}{3} \\Rightarrow \\log_{\\sqrt{3}} k = \\frac{4}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1547,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 1430144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1548",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر جواب معادله $\\log_2(30+\\log_3 3^x+1)=5$ برابر $\\alpha$ باشد، $\\log_8 6alpha$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac43$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله داده‌شده را حل می‌کنیم.\n$ \\log_{۲} (۳۰ + \\log_{۳} (۳x+۱)) = ۵ \\Rightarrow ۳۰ + \\log_{۳} (۳x+۱) = ۳۲ $\n$ \\Rightarrow \\log_{۳} (۳x+۱) = ۲ \\Rightarrow ۳x+۱ = ۹ \\Rightarrow x = \\frac{۸}{۳} \\Rightarrow \\alpha = \\frac{۸}{۳} $\nخواهیم داشت:\n$ \\log_{۸} ۶\\alpha = \\log_{۸} ۱۶ = \\log_{۲^{۳}} ۲^{۴} = \\frac{۴}{۳} $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1548,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1549",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log_2 x+\\log_9 x=\\log_{27}x+10$ باشد، مقدار $\\log_{81}x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac7{15}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{15}7$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله داده‌شده را ساده می‌کنیم.\n$ D = (\\circ , +\\infty) $\n$ \\log_{۲} x + \\log_{۴} x = \\log_{۸} x + ۱۰ $\n$ \\Rightarrow \\log_{۲} x + \\frac{۱}{۲} \\log_{۲} x = \\frac{۱}{۳} \\log_{۲} x + ۱۰ $\n$ \\Rightarrow \\frac{۷}{۶} \\log_{۲} x = ۱۰ \\Rightarrow \\log_{۲} x = \\frac{۶۰}{۷} $\nخواهیم داشت:\n$ \\log_{۱۶} x = \\log_{۲^{۴}} x = \\frac{۱}{۴} \\log_{۲} x = \\frac{۱}{۴} \\times \\frac{۶۰}{۷} = \\frac{۱۵}{۷} $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1549,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1550",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x=\\alpha$ جواب معادله $x\\log20=1-(\\log2)^2$ باشد، حاصل $10^\\alpha$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{10}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله داده‌شده را حل کرده، مقدار $ \\alpha $ را محاسبه می‌کنیم.\n$ (\\log ۲)^{۲} = ۱ - x \\log ۲۰ $\n$ \\Rightarrow x \\log ۲۰ = ۱ - (\\log ۲)^{۲} = (۱ - \\log ۲)(۱ + \\log ۲) $\n$ \\Rightarrow x \\log ۲۰ = (\\log ۱۰ - \\log ۲)(\\log ۱۰ + \\log ۲) $\n$ \\Rightarrow x \\log ۲۰ = \\log ۵ \\log ۲۰ \\Rightarrow x = \\log ۵ \\Rightarrow \\alpha = \\log ۵ $\nخواهیم داشت:\n$ ۱۰^{\\alpha} = ۱۰^{\\log ۵} = ۵ $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1550,
+      "question_pdf": "12.pdf",
+      "question_page": 10,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1551",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\log_2 x+\\log_x9=\\fracrac92$ و $x<3$ باشد، حاصل $\\log_2x^2+1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$ \\log_{۳} x $ را $ k $ می‌نامیم.\n$ \\log_{۳} x + \\log_{x} ۹ = \\frac{۹}{۲} \\Rightarrow k + \\frac{۲}{k} = \\frac{۹}{۲} \\Rightarrow ۲k^{۲} - ۹k + ۴ = \\circ $\n$ \\Rightarrow k = \\frac{۹ \\pm \\sqrt{۸۱ - ۳۲}}{۴} = \\frac{۹ \\pm ۷}{۴} $\n$ \\nearrow k = ۴ \\Rightarrow \\log_{۳} x = ۴ \\Rightarrow x = ۸۱ $\n$ \\searrow k = \\frac{۱}{۲} \\Rightarrow \\log_{۳} x = \\frac{۱}{۲} \\Rightarrow x = \\sqrt{۳} $\nخواهیم داشت:\n$ \\log_{۲} (x^{۲} + ۱) = \\log_{۲} (۳ + ۱) = \\log_{۲} ۴ = ۲ $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1551,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1552",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل‌ضرب ریشه‌های معادله $(\\log_2x)^2=2(1+4\\log_4x)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله را ساده کرده، $ \\log_{۲} x $ را $ k $ در نظر می‌گیرییم.\n$ (\\log_{۲} x)^{۲} = ۲(۱ + ۴ \\log_{۴} x) = ۲(۱ + ۲ \\log_{۲} x) $\n$ \\Rightarrow k^{۲} = ۲(۱ + ۲k) \\Rightarrow k^{۲} - ۴k - ۲ = \\circ $\nاگر $ k_{۱} $ و $ k_{۲} $ ریشه‌های معادله درجه‌دو باشند خواهیم داشت:\n$ k_{۱} + k_{۲} = ۴ $\n$ \\Rightarrow \\log_{۲} x_{۱} + \\log_{۲} x_{۲} = ۴ \\Rightarrow \\log_{۲} x_{۱}x_{۲} = ۴ $\n$ \\Rightarrow x_{۱}x_{۲} = ۱۶ $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1552,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1553",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل جمع ریشه‌های معادله $\\log_2(6\\timesimes3^x-1)=2x+1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله را به صورت نمایی نوشته و $ ۳^{x} $ را برابر $ k $ قرار می‌دهیم.\n$ ۲x + ۱ = \\log_{۳} (۶ \\times ۳^{x} - ۱) \\Rightarrow ۳^{۲x+۱} = ۶ \\times ۳^{x} - ۱ $\n$ \\Rightarrow ۳ \\times ۳^{۲x} - ۶ \\times ۳^{x} + ۱ = \\circ \\Rightarrow ۳k^{۲} - ۶k + ۱ = \\circ $\nاگر $ k_{۱} $ و $ k_{۲} $ ریشه‌های معادله درجه دو باشند، خواهیم داشت:\n$ k_{۱}k_{۲} = \\frac{۱}{۳} $\n$ \\Rightarrow ۳^{x_{۱}} \\times ۳^{x_{۲}} = \\frac{۱}{۳} \\Rightarrow ۳^{x_{۱}+x_{۲}} = ۳^{-۱} \\Rightarrow x_{۱} + x_{۲} = -۱ $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1553,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1554",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ریشه مثبت معادله $\\log_3(9^x+2)=x+1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\log_3 2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\log_2 3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\log_3 4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\log_4 3$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله را به صورت نمایی نوشته و $ ۳^{x} $ را برابر $ k $ قرار می‌دهیم.\n$ x + ۱ = \\log_{۳} (۹^{x} + ۲) \\Rightarrow ۳^{x+۱} = ۹^{x} + ۲ $\n$ \\Rightarrow ۳^{۲x} - ۳ \\times ۳^{x} + ۲ = \\circ \\Rightarrow k^{۲} - ۳k + ۲ = \\circ \\Rightarrow \\begin{cases} k = ۱ \\\\ k = ۲ \\end{cases} $\n$ \\Rightarrow \\begin{cases} ۳^{x} = ۱ \\Rightarrow x = \\circ \\text{ غ ق ق} \\\\ ۳^{x} = ۲ \\Rightarrow x = \\log_{۳} ۲ \\end{cases} $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1554,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1555",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با فرض $\\log_2x+\\log_{18}x=2\\log_2x\\log_{18}x$، مقدار $x$ کدام است؟ $(x\\ne1)$"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو طرف معادله را بر $ x \\log_{۲} x \\log_{۱۸} x $ تقسیم می‌کنیم.\n$ D = (\\circ , +\\infty) $\n$ \\log_{۲} x + \\log_{۱۸} x = ۲\\log_{۲} x \\log_{۱۸} x \\Rightarrow \\frac{\\log_{۲} x + \\log_{۱۸} x}{\\log_{۲} x \\log_{۱۸} x} = ۲ $\n$ \\Rightarrow \\frac{۱}{\\log_{۱۸} x} + \\frac{۱}{\\log_{۲} x} = ۲ \\Rightarrow \\log_{x} ۱۸ + \\log_{x} ۲ = ۲ $\n$ \\Rightarrow \\log_{x} ۳۶ = ۲ \\Rightarrow x^{۲} = ۳۶ \\xrightarrow{x > \\circ} x = ۶ $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1555,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1556",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x^{3\\log k}=2^{\\log x}$ با فرض $x\\ne1$، مقدار $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt[3]2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt[4]2$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم $ x^{\\log y} $ با $ y^{\\log x} $ برابر است.\n$ x^{۳ \\log k} = ۲^{\\log x} \\Rightarrow x^{۳ \\log k} = x^{\\log ۲} \\Rightarrow ۳ \\log k = \\log ۲ $\n$ \\Rightarrow \\log k = \\frac{۱}{۳} \\log ۲ \\Rightarrow \\log k = \\log \\sqrt[۳]{۲} \\Rightarrow k = \\sqrt[۳]{۲} $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1556,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1557",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $x=\\fracrac1a$ جواب معادله $3^{2x+2}=6^x$ باشد، حاصل $9^a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac23$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac94$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac49$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از دو طرف معادله در مبنای ۳ لگاریتم می‌گیریم.\n$ \\log_{۳} ۳^{(۲x+۲)} = \\log_{۳} ۶^{x} \\Rightarrow ۲x + ۲ = x \\log_{۳} ۶ $\n$ \\Rightarrow x(۲ - \\log_{۳} ۶) = -۲ \\Rightarrow x(\\log_{۳} ۹ - \\log_{۳} ۶) = -۲ $\n$ \\Rightarrow x \\log_{۳} \\frac{۳}{۲} = -۲ \\Rightarrow x = -۲ \\log_{\\frac{۳}{۲}} ۳ = \\log_{(\\frac{۳}{۲})^{-۱}} ۳^{۲} $\n$ \\Rightarrow x = \\log_{\\frac{۲}{۳}} ۹ \\Rightarrow \\frac{-۱}{x} = \\log_{۹} \\frac{۳}{۲} \\Rightarrow a = \\log_{۹} \\frac{۳}{۲} $\nخواهیم داشت:\n$ ۹^{a} = ۹^{\\log_{۹} \\frac{۳}{۲}} = \\frac{۳}{۲} $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1557,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1558",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در معادله $\\log_4x+\\log_x2=6$، یکی از ریشه‌ها $k$ برابر دیگری است. حاصل $\\log_2k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{34}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{38}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{34}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{38}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله را ساده کرده و $ \\log_{۲} x $ را $ a $ می‌نامیم.\n$ \\log_{۴} x + \\log_{x} ۲ = ۶ \\Rightarrow \\frac{۱}{۲} \\log_{۲} x + \\log_{x} ۲ = ۶ $\n$ \\Rightarrow \\frac{۱}{۲} a + \\frac{۱}{a} = ۶ \\Rightarrow a^{۲} - ۱۲a + ۲ = \\circ $\nاگر ریشهٔ معادلهٔ لگاریتمی را $ \\alpha $ و $ \\beta $ بنامیم و $ \\alpha = k\\beta $ باشد، خواهیم داشت:\n$ \\log_{۲} \\alpha = \\log_{۲} k\\beta = \\log_{۲} k + \\log_{۲} \\beta $\n$ \\Rightarrow \\log_{۲} k = \\log_{۲} \\alpha - \\log_{۲} \\beta $\nدقت داشته باشیم که ریشه‌های معادلهٔ $ a^{۲} - ۱۲a + ۲ = \\circ $ همان $ a_{۱} = \\log_{۲} \\alpha $ و $ a_{۲} = \\log_{۲} \\beta $ می‌باشند. در نتیجه $ \\log_{۲} \\alpha - \\log_{۲} \\beta $ برابر با $ a_{۱} - a_{۲} $ یعنی تفاضل ریشه‌های معادلهٔ درجه‌دو است.\n$ a^{۲} - ۱۲a + ۲ = \\circ \\Rightarrow a_{۱} - a_{۲} = \\frac{\\sqrt{\\Delta}}{۱} = \\sqrt{۱۴۴ - ۸} = \\sqrt{۱۳۶} = ۲\\sqrt{۳۴} $"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1558,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1559",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموع ریشه‌های معادله $\\log_6 4a=\\log_{6a}4$ برابر کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac1{24}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{25}{24}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac{24}{25}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\fracrac1{25}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم $ \\log_{b} a = \\frac{\\log a}{\\log b} $.\n$ \\log_{۶} ۴a = \\log_{۶a} ۴ \\Rightarrow \\frac{\\log ۴a}{\\log ۶} = \\frac{\\log ۴}{\\log ۶a} $\n$ \\Rightarrow \\frac{\\log ۴ + \\log a}{\\log ۶} = \\frac{\\log ۴}{\\log ۶ + \\log a} $\n$ \\Rightarrow (\\log a)^{۲} + (\\log ۴ + \\log ۶) \\log a + \\log ۴ \\log ۶ = \\log ۴ \\log ۶ $\n$ \\Rightarrow (\\log a)^{۲} + \\log ۲۴ \\log a = \\circ $\n$\\Rightarrow \\log a(\\log a + \\log ۲۴) = \\circ$\n$\\Rightarrow \\begin{cases} \\log a = \\circ \\Rightarrow a = ۱ \\\\ \\log a = -\\log ۲۴ \\Rightarrow a = \\frac{۱}{۲۴} \\end{cases}$\nمجموع ریشه‌ها $= ۱ + \\frac{۱}{۲۴} = \\frac{۲۵}{۲۴}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1559,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 144,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1560",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموعه جواب نامعادله $\\log_4(x^2-3x)\\le1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$[-1,0)\\cup(3,4]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-4,-3)\\cup(3,4]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-5,-3)\\cup(0,1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[-1,0)\\cup(3,5)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $a > ۱$ باشد، جواب نامعادلة $\\log_a f(x) < b$ به صورت $\\circ < f(x) < a^b$ است.\n$\\log_۲(x^۲ - ۳x) \\le ۲ \\Rightarrow \\circ < x^۲ - ۳x \\le ۴$\n$x^۲ - ۳x > \\circ \\Rightarrow \\begin{cases} x < \\circ \\\\ x > ۳ \\end{cases} \\quad (۱)$\n$x^۲ - ۳x \\le ۴ \\Rightarrow x^۲ - ۳x - ۴ \\le \\circ \\Rightarrow -۱ \\le x \\le ۴ \\quad (۲)$\n$\\xrightarrow{(۱) \\cap (۲)} x \\in [-۱, \\circ) \\cup (۳, ۴]$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1560,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1561",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بازه $(a,b)$ نمودار تابع $y=\\log_2(x+5)$ پایین‌تر از نمودار تابع $y=\\log_9(7-x)$ است. حداکثر $b-a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نامعادلة $\\log_۲(x + ۵) < \\log_۴(۷ - x)$ را حل می‌کنیم.\n$D = (-۵, ۷)$\n$\\log_۲(x + ۵) < \\frac{۱}{۲}\\log_۲(۷ - x)$\n$\\Rightarrow \\log_۲(x + ۵) < \\log_۲\\sqrt{۷ - x}$\n$\\Rightarrow x + ۵ < \\sqrt{۷ - x} \\Rightarrow (x + ۵)^۲ < ۷ - x$\n$\\Rightarrow x^۲ + ۱۱x + ۱۸ < \\circ \\Rightarrow (x + ۲)(x + ۹) < \\circ$\n$\\Rightarrow -۹ < x < -۲$\nشرط دامنه : $-۵ < x < ۷$\n$\\} \\Rightarrow -۵ < x < -۲$\n$\\Rightarrow x \\in (-۵, -۲)$\n$b - a = -۲ + ۵ = ۳$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1561,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1562",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فرض کنید $f(x)=\\log_4(2x)$ و مجموعه جواب نامعادله $4^{f^2(x)-3f(x)+2}<0$ بازه $(a,b)$ باشد، حاصل $b-a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا نامعادله را برحسب $f(x)$ حل می‌کنیم.\n$f^۲(x) - ۳f(x) + ۲ < \\circ \\Rightarrow (f(x) - ۱)(f(x) - ۲) < \\circ$\n$\\Rightarrow ۱ < f(x) < ۲$\nمی‌دانیم $f(x) = \\log_۴ ۲x$:\n$۱ < \\log_۴ ۲x < ۲ \\Rightarrow ۴ < ۲x < ۱۶ \\Rightarrow ۲ < x < ۸$\n$\\Rightarrow x \\in (۲, ۸) \\Rightarrow b - a = ۸ - ۲ = ۶$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1562,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1563",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نیم‌عمر یک ماده $8$ سال است. بعد از گذشت $20$ سال، $30$ میلی‌گرم از آن باقی مانده است. جرم اولیه چه مقداری بوده است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$80$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$80\\sqrt2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$120$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$120\\sqrt2$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میزان جرم باقی‌مانده ماده پس از $t$ سال از رابطه زیر به دست می‌آید که در آن $A$ میزان ماده اولیه است.\n$f(t) = A(\\frac{1}{2})^{\\frac{t}{8}}$\n$\\Rightarrow f(20) = A(\\frac{1}{2})^{\\frac{20}{8}} = 30 \\Rightarrow A(\\frac{1}{2})^{\\frac{5}{2}} = 30$\n$\\Rightarrow A = 30(2)^{\\frac{5}{2}} = 30(4\\sqrt{2}) = 120\\sqrt{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1563,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 141,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1564",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر پس از $t$ ساعت مقدار دارویی خاص در بدن یک بیمار برابر $20(0/6)^t$ میلی‌گرم باشد، پس از $3$ ساعت چند درصد دارو از بدن دفع شده است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$21/6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$22/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$77/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$78/4$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میزان درصد داروی موجود در بدن بیمار پس از ۳ ساعت از رابطة $۱۰۰ \\times \\frac{f(۳)}{f(\\circ)}$ محاسبه می‌شود.\n$\\frac{f(۳)}{f(\\circ)} \\times ۱۰۰ = \\frac{۲۰ \\times (۰/۶)^۳}{۲۰} \\times ۱۰۰ = ۰/۲۱۶ \\times ۱۰۰ = ۲۱/۶$\n۲۱/۶ درصد از دارو در بدن بیمار باقی است؛ بنابراین ۷۸/۴ درصد از دارو دفع شده است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1564,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1565",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $20$ گرم نمک را در آب حل کنیم پس از هر دقیقه $20$ درصد آن حل می‌شود. پس از گذشت چند دقیقه $5$ گرم نمک حل‌نشده داریم؟ $(\\log2=0/3)$"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میزان نمک حل‌نشده در آب از رابطة $f(t) = ۲۰(۰/۸۰)^t$ که $t$ برحسب دقیقه است به دست می‌آید.\n$f(t) = ۲۰(۰/۸)^t = ۵ \\Rightarrow (۰/۸)^t = \\frac{۱}{۴} \\Rightarrow \\log(۰/۸)^t = \\log(\\frac{۱}{۴})$\n$\\Rightarrow t \\log ۰/۸ = -۲ \\log ۲ \\Rightarrow t(\\log ۸ - \\log ۱۰) = -۲ \\log ۲$\n$\\Rightarrow t(۳ \\log ۲ - ۱) = -۲ \\log ۲$\n$\\Rightarrow t(۰/۹ - ۱) = -۰/۶ \\Rightarrow t = ۶$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1565,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1566",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "یک دستگاه تصفیه آب فیلترهایی دارد که هر لایه از این فیلترها $40$ درصد از ناخالصی آب را از بین می‌برد. حداقل چند لایه استفاده کنیم تا بیش از $80%$ ناخالصی آب حذف شود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میزان ناخالصی موجود در آب پس از عبور از $n$ فیلتر تصفیه از رابطة مقابل به دست می‌آید.\n$f(n) = (۰/۶۰)^n$\nمی‌خواهیم میزان ناخالصی از ۲۰ درصد کمتر شود. بنابراین:\n$(۰/۶۰)^n < \\frac{۲۰}{۱۰۰} \\Rightarrow n \\ge ۴$\nاگر $n = ۳$ باشد میزان ناخالصی برابر $\\frac{۲۱۶}{۱۰۰۰}$ است که بیشتر از $\\frac{۲۰}{۱۰۰}$ می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1566,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1567",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "با افزایش $2$ ریشتر به شدت یک زلزله، انرژی آزادشده چند برابر می‌شود؟ $(\\log E=11/8+1/5M)$"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10\\sqrt{10}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1000$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "میزان انرژی آزادشدة در $M$ ریشتر را $E_۱$ و در $M + ۲$ ریشتر را $E_۲$ می‌نامیم.\n$\\log \\frac{E_۲}{E_۱} = \\log E_۲ - \\log E_۱$\n$= (۱۱/۸ + ۱/۵(M + ۲)) - (۱۱/۸ + ۱/۵M) = ۳$\n$\\Rightarrow \\frac{E_۲}{E_۱} = ۱۰^۳ = ۱۰۰۰$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1567,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1568",
+    "subject": "math",
+    "topic_key": "exponential_logarithmic",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به بزرگی زلزله‌ای $\\log4$ واحد در مقیاس ریشتر اضافه می‌شود. اگر انرژی آزادشده $k$ برابر شود، حاصل $\\log_2 k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $E$ انرژی آزادشده برحسب ارگ و $M$ بزرگی زلزله برحسب ریشتر باشد، خواهیم داشت:\n$\\log E = ۱۱/۸ + ۱/۵M$\n$\\Rightarrow \\log kE = ۱۱/۸ + ۱/۵(M + \\log ۴)$\n$\\Rightarrow \\log k + \\log E = \\underbrace{۱۱/۸ + ۱/۵M}_{\\log E} + ۱/۵ \\log ۴$\n$\\Rightarrow \\log k = \\frac{۳}{۲} \\log ۴ = ۳ \\log ۲ = \\log ۸ \\Rightarrow k = ۸$\nبنابراین: $\\log_۲ k = \\log_۲ ۸ = ۳$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1568,
+      "question_pdf": "12.pdf",
+      "question_page": 11,
+      "solution_page": 145,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  }
+]

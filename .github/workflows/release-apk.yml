@@ -118,8 +118,8 @@ jobs:
           fail_on_unmatched_files: true
           generate_release_notes: true
           body: |
-            ### گائوس — نسخهٔ v${{ steps.ver.outputs.name }}
-            اپ اندروید نیتیو (Kotlin + Jetpack Compose) — APK امضاشدهٔ release.
+            ### Gauss v${{ steps.ver.outputs.name }}
+            اپ اندروید شخصی Gauss (Kotlin + Jetpack Compose) — APK امضاشدهٔ release.
 
             - `versionName`: `${{ steps.ver.outputs.name }}`
             - `versionCode`: `${{ steps.ver.outputs.code }}`

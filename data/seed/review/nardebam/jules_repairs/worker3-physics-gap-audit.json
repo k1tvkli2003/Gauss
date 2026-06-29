@@ -1,0 +1,11 @@
+{
+  "worker": 3,
+  "topic_questions_covered": [51,52,53,54,55,56,57,58,59,60],
+  "topic_source": "tmp/jules_nardebam/tasks/physics-topic-02/images/page_0002.jpg",
+  "answer_key_requested": [119,120,121,122,123,124,125,126,127,128,129,215,216,217,218,219,220],
+  "answer_key_covered": [],
+  "answer_key_missing": [119,120,121,122,123,124,125,126,127,128,129,215,216,217,218,219,220],
+  "answer_key_note": "No readable key evidence found. Existing focused Jules artifact reports supplied pages were unrelated; local solution rows have null stated_correct_option. Values were not inferred.",
+  "focused_jules_session": "sessions/5686246978475676972",
+  "focused_jules_use": "Existing session artifact inspected once; no callable Jules session tool was available."
+}

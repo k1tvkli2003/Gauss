@@ -1,0 +1,1418 @@
+[
+  {
+    "question_number": 1156,
+    "question_page": 11,
+    "question_text": "با توجه به نمودار $f$ در کدام نقطه از نقاط مشخص‌‌شده، مشتق $f$ بیشترین مقدار است؟",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0011.jpg",
+        "box": [
+          90,
+          790,
+          260,
+          910
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f و نقاط A, B, C, D"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1157,
+    "question_page": 12,
+    "question_text": "با توجه به نمودار تابع $f$ در کدام نقطه حاصل‌ضرب مقدار تابع در مقدار مشتق تابع کم‌ترین مقدار است؟",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          65,
+          45,
+          172,
+          235
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f با نقاط A و B و C و D"
+      },
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          45,
+          75,
+          230,
+          175
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1158,
+    "question_page": 12,
+    "question_text": "شیب خط مماس بر نمودار تابع $f(x) = \\sin(x + \\frac{\\pi}{4})$ در نقاط $x = \\frac{\\pi}{2}$، $x = \\pi$ و $x = \\frac{3\\pi}{2}$ را به ترتیب $m_1$، $m_2$ و $m_3$ می‌نامیم. کدام رابطه درست است؟",
+    "options": [
+      "$m_1 < m_2 < m_3$",
+      "$m_2 < m_1 < m_3$",
+      "$m_3 < m_2 < m_1$",
+      "$m_2 < m_3 < m_1$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Check if it is pi/4 or pi/2"
+    ]
+  },
+  {
+    "question_number": 1159,
+    "question_page": 12,
+    "question_text": "با توجه به شکل مقابل، اگر $-2 = f'(-2)$ باشد، $\\alpha$ کدام است؟",
+    "options": [
+      "$-\\frac{5}{2}$",
+      "$-3$",
+      "$-\\frac{7}{3}$",
+      "$-4$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          213,
+          44,
+          323,
+          177
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f و خط مماس در نقطه منفی دو"
+      },
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          45,
+          220,
+          180,
+          310
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار خط و منحنی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1160,
+    "question_page": 12,
+    "question_text": "در شکل مقابل، نمودار تابع $f(x) = x^3 - x^2 + a$ رسم شده است. با فرض $1 = f'(1)$، مقدار $a$ کدام است؟",
+    "options": [
+      "$-1$",
+      "$-\\frac{3}{4}$",
+      "$-\\frac{4}{3}$",
+      "$-\\frac{3}{2}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          317,
+          50,
+          426,
+          203
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع درجه سه f"
+      },
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          45,
+          330,
+          200,
+          440
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع"
+      }
+    ],
+    "review_notes": [
+      "Check options and math equation text."
+    ]
+  },
+  {
+    "question_number": 1161,
+    "question_page": 12,
+    "question_text": "نمودار $f$ به صورت مقابل است. اگر $\\frac{5}{2} = f'(5) - f'(2)$ باشد، مقدار $f'(2)$ کدام است؟",
+    "options": [
+      "$-1$",
+      "$-\\frac{1}{2}$",
+      "$-\\frac{2}{3}$",
+      "$-\\frac{5}{4}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          424,
+          88,
+          517,
+          235
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      },
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          45,
+          450,
+          230,
+          520
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1162,
+    "question_page": 12,
+    "question_text": "خط $y = 2x - 5$ در نقطهٔ $x = 3$ بر نمودار تابع $y = f(x)$ مماس است. حاصل $\\lim_{h \\to 0} \\frac{f(3 - 2h) - 1}{h}$ کدام است؟",
+    "options": [
+      "$2$",
+      "$-2$",
+      "$4$",
+      "$-4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1163,
+    "question_page": 12,
+    "question_text": "خط $d$ با شیب $m$ از نقاطی به طول $4$ و $4 - \\frac{h}{2}$ واقع بر نمودار $f(x) = x^2$ عبور می‌کند. حاصل $\\lim_{h \\to 0} m$ کدام است؟",
+    "options": [
+      "$8$",
+      "$4$",
+      "$-4$",
+      "$-2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1164,
+    "question_page": 12,
+    "question_text": "خط $y = 4x - 5$ در نقطهٔ $x = 1$ بر نمودار تابع $y = f(x)$ مماس است. حاصل $\\lim_{x \\to 1} \\frac{f(x) + 1}{x^2 + 4x - 5}$ کدام است؟",
+    "options": [
+      "$4$",
+      "$2$",
+      "$\\frac{2}{3}$",
+      "$\\frac{3}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1165,
+    "question_page": 12,
+    "question_text": "خط گذرنده از نقاط $A(1, 2)$ و $B(2, 5)$ در نقطهٔ $x = 3$ بر نمودار تابع پیوستهٔ $f$ مماس است. حاصل $\\lim_{x \\to 3} \\frac{f^2(x) - 8f(x)}{x - 3}$ کدام است؟",
+    "options": [
+      "$8$",
+      "$\\frac{8}{3}$",
+      "$\\frac{3}{8}$",
+      "$24$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1166,
+    "question_page": 12,
+    "question_text": "نمودار $f$ به صورت مقابل است. مقدار $\\lim_{x \\to 1} \\frac{2f^2(x) - f(x) - 6}{x - 1}$ کدام است؟",
+    "options": [
+      "$5$",
+      "$7$",
+      "$-5$",
+      "$-7$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          697,
+          43,
+          799,
+          196
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      },
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          45,
+          710,
+          190,
+          800
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1167,
+    "question_page": 12,
+    "question_text": "نقاط $A(4 + h, a)$ و $B(4, b)$ بر روی منحنی $f(x) = \\sqrt{x}$ مفروض‌اند. حاصل $\\lim_{h \\to 0} \\frac{a - b}{h}$ کدام است؟",
+    "options": [
+      "$1$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{4}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1168,
+    "question_page": 12,
+    "question_text": "اگر $f$ تابعی خطی بوده و $2 = \\lim_{x \\to 2} \\frac{f(x) + 1}{x - 2}$ باشد، مقدار $(f + f')(-2)$ کدام است؟",
+    "options": [
+      "$7$",
+      "$11$",
+      "$-11$",
+      "$-7$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1169,
+    "question_page": 13,
+    "question_text": "هرگاه $3 = \\lim_{x \\to 2} \\frac{f(x) - 2}{x^2 - 4}$ باشد، حاصل $f' \\circ f(2)$ کدام است؟",
+    "options": [
+      "$3$",
+      "$6$",
+      "$9$",
+      "$12$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1170,
+    "question_page": 13,
+    "question_text": "اگر $4a = \\lim_{h \\to 0} \\frac{f(a) - f(a + h)}{h}$ باشد، حاصل $\\lim_{x \\to a} \\frac{f(x) - f(a)}{x^2 - a^2}$ کدام است؟ ($a \\neq 0$)",
+    "options": [
+      "$2$",
+      "$4$",
+      "$-2$",
+      "$-4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1171,
+    "question_page": 13,
+    "question_text": "اگر $9 = \\lim_{x \\to 3} \\frac{f^3(x) - 27}{x^2 - 9}$ باشد، حاصل $f'(3)$ کدام است؟",
+    "options": [
+      "$2$",
+      "$3$",
+      "$\\frac{1}{3}$",
+      "$6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1172,
+    "question_page": 13,
+    "question_text": "اگر $7 = f(2)$ و $5 = f'(2)$ باشد، حاصل $\\lim_{x \\to 2} \\frac{\\sqrt{2 + f(x)} - 3}{x - 2}$ کدام است؟",
+    "options": [
+      "$5$",
+      "$\\frac{5}{2}$",
+      "$\\frac{5}{6}$",
+      "$\\frac{5}{7}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1173,
+    "question_page": 13,
+    "question_text": "اگر $f$ تابعی مشتق‌پذیر باشد، با فرض $2 = \\lim_{x \\to 6} \\frac{f(x)}{x - 6}$، مقدار $\\lim_{h \\to 0} \\frac{f(6 + 4h)}{h}$ چه عددی است؟",
+    "options": [
+      "$2$",
+      "$4$",
+      "$\\frac{1}{2}$",
+      "$8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1174,
+    "question_page": 13,
+    "question_text": "با فرض $f(x) = x^2$ مقدار $\\lim_{h \\to 0} \\frac{f(2 + h) - f(h - 2)}{h}$ کدام است؟",
+    "options": [
+      "$2$",
+      "$4$",
+      "$6$",
+      "$8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1175,
+    "question_page": 13,
+    "question_text": "اگر $2 = f(4)$ و $2 = \\lim_{x \\to 4} \\frac{4f(x) - xf(4)}{x - 4}$ باشد، حاصل $f'(4)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "صفر",
+      "$\\frac{1}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1176,
+    "question_page": 13,
+    "question_text": "اگر $f(x) = (x^2 - 4)(x^3 - 1)$ باشد، حاصل $f'(2)$ کدام است؟",
+    "options": [
+      "$7$",
+      "$8$",
+      "$28$",
+      "$32$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1177,
+    "question_page": 13,
+    "question_text": "با فرض $f(x) = (x^3 - 1) \\cos \\pi x$، حاصل $f'(1)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$3$",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1178,
+    "question_page": 13,
+    "question_text": "نمودار تابع $f$ به صورت مقابل است. اگر $g(x) = (x^2 - 4)f(x)$ باشد، $g'(-2)$ کدام است؟",
+    "options": [
+      "$8$",
+      "$12$",
+      "$-8$",
+      "$-12$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          516,
+          115,
+          620,
+          281
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1179,
+    "question_page": 13,
+    "question_text": "در شکل مقابل، خط $d$ در نقطهٔ $M$ بر منحنی $y = \\frac{1}{x^2}$ مماس است. عرض نقطهٔ $A$ چند برابر عرض نقطهٔ $B$ است؟",
+    "options": [
+      "$2$",
+      "$3$",
+      "$1/5$",
+      "$2/5$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0013.jpg",
+        "box": [
+          626,
+          103,
+          735,
+          255
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع و خط d مماس در نقطه M"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1180,
+    "question_page": 13,
+    "question_text": "تابع $f$ در $x = 4$ مشتق‌پذیر است به طوری که $f'_+(4) = 2a - 3$ و $f'_-(4) = 2a - 1$. مقدار $a$ کدام است؟",
+    "options": [
+      "$\\frac{1}{5}$",
+      "$\\frac{3}{2}$",
+      "$\\frac{5}{8}$",
+      "$5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1181,
+    "question_page": 13,
+    "question_text": "تابع $f(x) = [4x]$ در کدام نقطهٔ زیر مشتق‌ناپذیر است؟",
+    "options": [
+      "$x = \\frac{3}{4}$",
+      "$x = \\frac{1}{3}$",
+      "$x = \\frac{1}{8}$",
+      "$x = \\frac{5}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1182,
+    "question_page": 13,
+    "question_text": "اختلاف مشتق چپ و راست تابع $f(x) = (x^2 - 9)[x]$ در $x = 3$ کدام است؟",
+    "options": [
+      "صفر",
+      "$6$",
+      "$12$",
+      "$18$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1183,
+    "question_page": 14,
+    "question_text": "نمودار $f$ به صورت مقابل است. اختلاف مشتق چپ و راست تابع $g(x) = \\frac{|x^2 - 4|}{3x - [f(x)]}$ در نقطهٔ $x = 2$ چه قدر است؟",
+    "options": [
+      "$1/2$",
+      "$2$",
+      "$2/8$",
+      "$3$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0014.jpg",
+        "box": [
+          47,
+          82,
+          174,
+          189
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1184,
+    "question_page": 14,
+    "question_text": "کدام تابع در $x = 1$ پیوسته است، اما در این نقطه مشتق‌پذیر نیست؟",
+    "options": [
+      "$y = (x - 1)|x - 1|$",
+      "$y = (x - 1)^2 |x - 1|$",
+      "$y = (x - 1)[x]$",
+      "$y = (x - 1)^2[x]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1185,
+    "question_page": 14,
+    "question_text": "اگر تابع $f(x) = (x^2 + ax + b)[4x]$ در $x = -1$ مشتق‌پذیر باشد، مقدار $a - b$ کدام است؟",
+    "options": [
+      "$-1$",
+      "$-3$",
+      "$3$",
+      "$1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1186,
+    "question_page": 14,
+    "question_text": "تابع $y = x[f(x)]$ در نقطهٔ $x = 0$ پیوسته است ولی مشتق‌پذیر نیست، ضابطهٔ $f(x)$ کدام می‌تواند باشد؟",
+    "options": [
+      "$|x|$",
+      "$-x^2$",
+      "$\\cos x$",
+      "$\\sin x$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1187,
+    "question_page": 14,
+    "question_text": "اگر $f(x) = 2x^2[-x] + 3$ باشد، $\\lim_{h \\to 0^-} \\frac{f(2+h) - f(2)}{h}$ کدام است؟",
+    "options": [
+      "صفر",
+      "$-8$",
+      "$-16$",
+      "$-24$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1188,
+    "question_page": 14,
+    "question_text": "اگر در تابع $f$ رابطهٔ $-2 = f'_+(4) + f'_-(4)$ برقرار بوده و $f(4) = 0$ باشد، مقدار $\\lim_{h \\to 0^-} \\frac{f(4-3h)}{f(4+2h)}$ چه عددی است؟",
+    "options": [
+      "$\\frac{3}{2}$",
+      "$-\\frac{3}{2}$",
+      "$\\frac{9}{4}$",
+      "$-\\frac{9}{4}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1189,
+    "question_page": 14,
+    "question_text": "با فرض $f(x) = |x^2 - x - 6| [x]$، حاصل $f'_+(3) + f'_-( -2 )$ کدام است؟",
+    "options": [
+      "صفر",
+      "$15$",
+      "$20$",
+      "$30$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1190,
+    "question_page": 14,
+    "question_text": "اگر $f(x) = x^2 + |x|$ باشد، حاصل $\\lim_{h \\to 0^+} \\frac{f(h - 1) - f(-1)}{h}$ کدام است؟",
+    "options": [
+      "$1$",
+      "$3$",
+      "$-3$",
+      "$-1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1191,
+    "question_page": 14,
+    "question_text": "در تابع $f(x) = (x^2 + a)|x - b|$ رابطهٔ $12 = f'_+(1) - f'_-(1)$ برقرار است. $a - b$ کدام است؟",
+    "options": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$7$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1192,
+    "question_page": 14,
+    "question_text": "اگر تابع $f(x) = |3x^2 - x + m|$ در $x = -1$ و $x = k$ مشتق‌ناپذیر باشد، $k$ کدام است؟",
+    "options": [
+      "$\\frac{1}{3}$",
+      "$\\frac{4}{3}$",
+      "$-\\frac{1}{3}$",
+      "$-\\frac{4}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1193,
+    "question_page": 14,
+    "question_text": "تابع $y = x^2 |x - 2| + 2a |x - 2|$ در $x = 2$ مشتق‌پذیر است. $a$ کدام است؟",
+    "options": [
+      "$2$",
+      "$-2$",
+      "صفر",
+      "$-1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1194,
+    "question_page": 14,
+    "question_text": "با فرض $f(x) = \\begin{cases} \\frac{(1 - \\cos 2x)x}{\\sin^3 x} & x \\neq 0 \\\\ 0 & x = 0 \\end{cases}$، مقدار $f'(0)$ کدام است؟",
+    "options": [
+      "صفر",
+      "وجود ندارد.",
+      "$4$",
+      "$2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1195,
+    "question_page": 14,
+    "question_text": "تابع $y = \\left| |x| - 4 \\right|$ چند نقطهٔ گوشه دارد؟",
+    "options": [
+      "صفر",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1196,
+    "question_page": 14,
+    "question_text": "نیم‌مماس چپ تابع $f(x) = |x^2 + 4x|$ در نقطهٔ $x = -4$ و نیم‌مماس راست آن در نقطهٔ $x = 0$ ، در نقطهٔ $A$ متقاطع‌اند. عرض نقطهٔ $A$ کدام است؟",
+    "options": [
+      "$-2$",
+      "$-4$",
+      "$-8$",
+      "یکدیگر را قطع نمی‌کنند."
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1197,
+    "question_page": 14,
+    "question_text": "نیم‌مماس چپ و راست تابع $f(x) = |x + 2|\\sqrt{x + a}$ در نقطهٔ گوشهٔ آن بر هم عمودند، مقدار $a$ کدام است؟",
+    "options": [
+      "صفر",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1198,
+    "question_page": 14,
+    "question_text": "در کدام نقطه مماس بر نمودار تابع $y = \\sqrt[3]{2x^2 + x}$ موازی محور $y$ها است؟",
+    "options": [
+      "$x = 2$",
+      "$x = -2$",
+      "$x = \\frac{1}{2}$",
+      "$x = -\\frac{1}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1199,
+    "question_page": 14,
+    "question_text": "نیم‌مماس‌ها در نقطهٔ گوشهٔ تابع $f(x) = |x| \\sqrt[3]{x - 8}$ در ادامه، خط مماس قائم آن را در نقاط $A$ و $B$ قطع می‌کنند. طول پاره‌خط $AB$ کدام است؟",
+    "options": [
+      "$4$",
+      "$8$",
+      "$16$",
+      "$32$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1200,
+    "question_page": 14,
+    "question_text": "خطوط $x = 2$ و $x = a$ خطوط مماس قائم تابع $y = \\sqrt[3]{x^2 + 4x + b}$ می‌باشند. $a + b$ کدام است؟",
+    "options": [
+      "$-6$",
+      "$6$",
+      "$18$",
+      "$-18$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1201,
+    "question_page": 15,
+    "question_text": "کدام تابع زیر در $x = 1$ خط مماس قائم دارد؟",
+    "options": [
+      "$y = \\sqrt{(x - 1)}$",
+      "$y = (x - 1)\\sqrt[3]{x - 1}$",
+      "$y = (x - 1)[x]$",
+      "$y = (x - 1)|x - 1|$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1202,
+    "question_page": 15,
+    "question_text": "مقدار مشتق تابع $f(x) = \\frac{x + 9}{x}$ در نقطهٔ $x = 3$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$3$",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1203,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = 2x - \\sqrt{x + 7}$، مقدار $f'(2)$ چه عددی است؟",
+    "options": [
+      "$\\frac{2}{3}$",
+      "$\\frac{5}{3}$",
+      "$\\frac{5}{6}$",
+      "$\\frac{11}{6}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1204,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = \\frac{x + 2}{x - 2}$، مقدار $a$ چه عددی باشد، تا رابطهٔ $f'(a) = -4$ برقرار باشد؟",
+    "options": [
+      "$1$ یا $-1$",
+      "$1$ یا $3$",
+      "$-1$ یا $3$",
+      "$-1$ یا $-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1205,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = \\sqrt{x}(2x^2 - 3x)$ باشد، مقدار $f'(4)$ کدام است؟",
+    "options": [
+      "$15$",
+      "$20$",
+      "$31$",
+      "$36$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1206,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = \\frac{x^2 - 4x + a}{3x + 1}$ و $f'(0) = -10$ باشد، $a$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$-2$",
+      "$-1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1207,
+    "question_page": 15,
+    "question_text": "در تابع $f(x) = \\frac{x^2 + 5x + 8}{x + 1}$، رابطهٔ $f'(1) = f'(\\alpha)$ برقرار است. $\\alpha$ چه عددی است؟",
+    "options": [
+      "صفر",
+      "$3$",
+      "$\\frac{1}{3}$",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1208,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = \\frac{x - 3}{x + 1}$ و $f'(a) = f'(-1)$ باشد، $a$ کدام است؟",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$1$",
+      "$-\\frac{1}{2}$",
+      "$-1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1209,
+    "question_page": 15,
+    "question_text": "مقدار مشتق $f(x) = \\frac{x + \\sqrt[3]{x}}{\\sqrt[3]{x^2} - 3}$ به ازای $x = 1$ کدام است؟",
+    "options": [
+      "$-1$",
+      "$\\frac{1}{3}$",
+      "$-\\frac{2}{3}$",
+      "$2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1210,
+    "question_page": 15,
+    "question_text": "با فرض $f(x) = \\frac{x - \\sqrt{x^3}}{\\sqrt[3]{x} - 1}$، حاصل $f'(8)$ کدام است؟",
+    "options": [
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{4}{3}$",
+      "$\\frac{8}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1211,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = (x + 7)\\sqrt[3]{x}$ و $f'(\\alpha) = 0$ باشد، مقدار $f(\\alpha)$ کدام است؟ ($\\alpha \\neq -7$)",
+    "options": [
+      "$2$",
+      "$-2$",
+      "$-36$",
+      "$64$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1212,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = \\frac{\\sqrt{x} + 1}{\\sqrt{x}}$ باشد، حاصل $\\lim_{h \\to 0} \\frac{f(1 - h) - 8}{h}$ کدام است؟",
+    "options": [
+      "$2$",
+      "$3$",
+      "$-2$",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1213,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = \\frac{3x - 7}{2x - [x]}$ باشد، حاصل $\\lim_{x \\to 3^+} \\frac{f(x) - f(3)}{x - 3}$ کدام است؟",
+    "options": [
+      "$-\\frac{2}{3}$",
+      "$-\\frac{16}{9}$",
+      "$\\frac{5}{9}$",
+      "$\\frac{16}{9}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1214,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = \\frac{4}{1 - x}$، به کمک تعریف مشتق حاصل $\\lim_{x \\to \\pm\\infty} x(f(-\\frac{3}{x}) - 4)$ چه عددی است؟",
+    "options": [
+      "$3$",
+      "$-3$",
+      "$12$",
+      "$-12$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1215,
+    "question_page": 15,
+    "question_text": "یک تابع چندجمله‌ای است به طوری که $f(x) + f'(x) = 3x - 8$، مقدار $f(2)$ چه عددی است؟",
+    "options": [
+      "$3$",
+      "$-5$",
+      "$7$",
+      "$-9$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1216,
+    "question_page": 15,
+    "question_text": "اگر $f(x) = (x^2 - 4)\\sqrt{3x + 10}$، مقدار $f'(2) - f'(-2)$ کدام است؟",
+    "options": [
+      "$6$",
+      "$12$",
+      "$18$",
+      "$24$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1217,
+    "question_page": 15,
+    "question_text": "با فرض $f(x) = (1 - 9x^2)\\sqrt{x - 2a}$، اگر $f'(\\frac{1}{3}) = 6$ باشد، مقدار $a$ کدام است؟",
+    "options": [
+      "$-\\frac{1}{3}$",
+      "$-\\frac{2}{3}$",
+      "$-1$",
+      "$-\\frac{4}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1218,
+    "question_page": 16,
+    "question_text": "اگر $f$ تابعی مشتق‌پذیر بوده و $\\lim_{x \\to ۲} \\frac{f(x) - ۳}{x^۲ - ۴} = ۶$ و $g(x) = x - \\frac{۴}{x}$ باشد، حاصل $(f.g)'$ به ازای $x=۲$ کدام است؟",
+    "options": [
+      "$۶$",
+      "$۲$",
+      "$۳$",
+      "$۱۲$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1219,
+    "question_page": 16,
+    "question_text": "اگر $\\frac{g(x)}{f(x)} = x^۲ + ۱$ ، $f(۲) = ۴$ و $g'(۲) = ۱$ باشد، مقدار $f'(۲)$ کدام است؟",
+    "options": [
+      "$۱$",
+      "$-۳$",
+      "$-\\frac{۳}{۵}$",
+      "$\\frac{۵}{۳}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1220,
+    "question_page": 16,
+    "question_text": "اگر $f(x) = \\frac{۲ + \\sqrt[۳]{x}}{\\sqrt{x}}$ باشد، حاصل مشتق تابع $g(x) = f(x) + ۲xf'(x)$ در $x=۱$ چه قدر است؟",
+    "options": [
+      "$\\frac{۲}{۳}$",
+      "$-\\frac{۱}{۶}$",
+      "$\\frac{۵}{۳}$",
+      "$-\\frac{۱}{۹}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1221,
+    "question_page": 16,
+    "question_text": "با فرض $f(x) = \\frac{x}{۳x^۲ - x + ۴}$، حاصل $(\\frac{f'}{f^۲})(۲)$ کدام است؟",
+    "options": [
+      "$۱$",
+      "$-۲$",
+      "$۳$",
+      "$-۴$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1222,
+    "question_page": 16,
+    "question_text": "نمودار تابع $f$ به صورت مقابل است. اختلاف مشتق چپ و راست تابع $y = \\frac{f(x)}{x}$ در نقطهٔ $x = -۲$ کدام است؟",
+    "options": [
+      "$-\\frac{۱}{۲}$",
+      "$\\frac{۳}{۲}$",
+      "$\\frac{۵}{۴}$",
+      "$\\frac{۷}{۴}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0016.jpg",
+        "box": [
+          50,
+          400,
+          250,
+          550
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f که از نقاط (-3, 0) و (-2, 2) و مبدأ مختصات (0, 0) می‌گذرد."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1223,
+    "question_page": 16,
+    "question_text": "نمودار توابع $f$ و $g$ به صورت مقابل است. اگر $h(x) = \\frac{g(x)}{f(x)}$ باشد، $h'(۰)$ کدام است؟",
+    "options": [
+      "$۱$",
+      "$\\frac{۳}{۲}$",
+      "$\\frac{۲}{۳}$",
+      "$۲$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0016.jpg",
+        "box": [
+          50,
+          550,
+          250,
+          700
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار دو خط f و g که روی محور yها همدیگر را قطع کرده‌اند. خط f از نقطه (2,0) و خط g از نقطه (-1,0) می‌گذرد."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1224,
+    "question_page": 16,
+    "question_text": "اگر $f(x) = |x^۲ - ۳x| + ۴[x - \\frac{۱}{۲}]$ باشد، مقدار $f'_-(۳)$ کدام است؟",
+    "options": [
+      "$۱$",
+      "$-۲$",
+      "$-۳$",
+      "$۳$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1225,
+    "question_page": 16,
+    "question_text": "اگر $f(x) = \\frac{x^۳}{|۲-x|} [۲x]$ باشد، $\\lim_{h \\to ۰^+} \\frac{f(۱+h) - f(۱)}{h}$ کدام است؟",
+    "options": [
+      "$۴$",
+      "$۸$",
+      "$-۴$",
+      "$-۸$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1226,
+    "question_page": 16,
+    "question_text": "مشتق راست تابع $f(x) = (|x| + [x])\\sqrt[۳]{۴x}$ در نقطهٔ $x = -۲$ کدام است؟",
+    "options": [
+      "صفر",
+      "$۱$",
+      "$۲$",
+      "$۳$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1227,
+    "question_page": 16,
+    "question_text": "تابع $f(x) = \\sqrt[۳]{\\frac{۳}{x} - ۲}$ مفروض است. حاصل مشتق تابع $y = f(x - ۱) f(x + ۱)$ در $x=۲$ چه قدر است؟",
+    "options": [
+      "$\\frac{۸}{۹}$",
+      "$\\frac{۱۰}{۹}$",
+      "$-\\frac{۸}{۹}$",
+      "$-\\frac{۱۰}{۹}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1228,
+    "question_page": 16,
+    "question_text": "اگر $f(x) = \\frac{x - ۳}{\\sqrt{۳x + ۷}}$ باشد، حاصل $f'(-۱)$ کدام است؟",
+    "options": [
+      "$\\frac{۳}{۴}$",
+      "$\\frac{۳}{۲}$",
+      "$\\frac{۴}{۳}$",
+      "$\\frac{۵}{۴}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1229,
+    "question_page": 16,
+    "question_text": "اگر $f(x) = \\sqrt{\\frac{۲x+۱}{x-۳}}$، مقدار $f'(۴)$ کدام است؟",
+    "options": [
+      "$-\\frac{۵}{۲}$",
+      "$-\\frac{۷}{۲}$",
+      "$-\\frac{۵}{۶}$",
+      "$-\\frac{۷}{۶}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1230,
+    "question_page": 16,
+    "question_text": "اگر $f(x) = \\sqrt{x - ۴\\sqrt{x - ۴}}$ باشد، حاصل $f'(۱۳)$ کدام است؟",
+    "options": [
+      "$\\frac{۱}{۲}$",
+      "$\\frac{۱}{۳}$",
+      "$\\frac{۱}{۴}$",
+      "$\\frac{۱}{۶}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1231,
+    "question_page": 16,
+    "question_text": "مشتق تابع $f(x) = x \\sqrt[۳]{\\frac{۳x - ۲}{x + ۱}}$ در نقطهٔ $x = -۲$ کدام است؟",
+    "options": [
+      "$\\frac{۷}{۶}$",
+      "$\\frac{۱۷}{۶}$",
+      "$-\\frac{۷}{۶}$",
+      "$-\\frac{۱۷}{۶}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1232,
+    "question_page": 17,
+    "question_text": "اگر $f(x) = x - \\sqrt[۳]{x^۳ - x^۲}$ و $f'(\\alpha) = ۰$ باشد، مقدار مثبت $\\alpha$ کدام است؟",
+    "options": [
+      "$\\frac{۸}{۹}$",
+      "$۱$",
+      "$\\frac{۹}{۸}$",
+      "$۲$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1233,
+    "question_page": 17,
+    "question_text": "در تابع با ضابطهٔ $f(x) = (\\sqrt{\\frac{x}{۲x - ۷}})^۳$، حاصل $\\lim_{x \\to ۴} \\frac{f(x) - f(۴)}{x - ۴}$ کدام است؟",
+    "options": [
+      "$۷$",
+      "$۲۱$",
+      "$-۷$",
+      "$-۲۱$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1234,
+    "question_page": 17,
+    "question_text": "با فرض $f(x) = \\frac{۳x}{x - \\sqrt{x^۲ + ۱}}$، حاصل $f'(\\frac{۴}{۳})$ چه قدر است؟",
+    "options": [
+      "$۱۶/۱$",
+      "$۱۶/۲$",
+      "$-۱۶/۱$",
+      "$-۱۶/۲$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1235,
+    "question_page": 17,
+    "question_text": "اگر $f(x) = \\frac{۲}{x - \\sqrt{x^۲ + ۴}}$ باشد، مقدار $a$ کدام باشد تا $f'(\\sqrt{۵}) = a f(\\sqrt{۵})$ برقرار باشد؟",
+    "options": [
+      "$\\frac{۱}{۳}$",
+      "$-\\frac{۱}{۶}$",
+      "$-\\frac{۲}{۳}$",
+      "$۳$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1236,
+    "question_page": 17,
+    "question_text": "با فرض $f(x) = \\frac{۳x - ۱}{۴ - x}$، مقدار مشتق $y = x \\sqrt{f(x)}$ در $x = ۳$ کدام است؟",
+    "options": [
+      "$\\frac{۱۹}{۴}$",
+      "$\\frac{۱۱}{۲}$",
+      "$\\frac{۱۱}{۱۲}$",
+      "$\\frac{۳۵}{۱۲}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1237,
+    "question_page": 17,
+    "question_text": "اگر $f(\\sqrt{x^۲ + ۵} - x) = ۲x^۳$ باشد، مقدار $f'(۱)$ کدام است؟",
+    "options": [
+      "$۳۶$",
+      "$۷۲$",
+      "$-۳۶$",
+      "$-۷۲$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1238,
+    "question_page": 17,
+    "question_text": "هرگاه $f$ و $g$ توابعی مشتق‌پذیر باشند، به طوری که $f(x^۲ - ۳x) = g(\\sqrt{x + ۶})$. با فرض $f'(۴) = ۰$، مقدار $g'(۳)$ کدام است؟ $(x > \\frac{۳}{۲})$",
+    "options": [
+      "$۲$",
+      "$۱۸$",
+      "$۳۶$",
+      "$۷۲$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1239,
+    "question_page": 17,
+    "question_text": "$f$ تابعی مشتق‌پذیر است به طوری که $\\lim_{x \\to -۲} \\frac{f(۲x + ۲)}{x^۲ - ۴} = ۲$. مشتق $f(-\\frac{۴}{x})$ به ازای $x = ۲$ کدام است؟",
+    "options": [
+      "$۴$",
+      "$-۴$",
+      "$۱۶$",
+      "$-۱۶$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1240,
+    "question_page": 17,
+    "question_text": "اگر $\\lim_{x \\to ۱} \\frac{f(x) - ۲}{x - ۱} = ۷$ برای چندجمله‌ای $f$ برقرار باشد، مقدار مشتق تابع $y = \\frac{f(۳x)}{x}$ در $x = \\frac{۱}{۳}$ چه قدر است؟",
+    "options": [
+      "$۴۵$",
+      "$۱۵$",
+      "$۵۷$",
+      "$۱۷۱$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1241,
+    "question_page": 17,
+    "question_text": "اگر تابع $f$ در $x = ۳$ مشتق‌پذیر و $\\lim_{x \\to ۳} \\frac{f(x) + ۴}{x - ۳} = \\frac{۱}{۲}$ باشد، آنگاه مشتق $\\frac{f^۲(۳x)}{x}$ در $x = ۱$ کدام است؟",
+    "options": [
+      "$۴$",
+      "$-۴$",
+      "$-۲۰$",
+      "$-۲۸$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1242,
+    "question_page": 17,
+    "question_text": "اگر $\\lim_{h \\to ۰} \\frac{f(۲ + ۳h) - ۱}{h} = -۱$، $f$ مشتق‌پذیر و $g(x) = x f(\\frac{۱}{x})$ باشد، $g'(\\frac{۱}{۲})$ کدام است؟",
+    "options": [
+      "$\\frac{۱}{۳}$",
+      "$\\frac{۷}{۳}$",
+      "$-\\frac{۱}{۳}$",
+      "$-\\frac{۵}{۳}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1243,
+    "question_page": 17,
+    "question_text": "نمودار سهمی $y = f(x)$ به صورت مقابل است. مشتق $f^۲(x) - f(x^۲)$ به ازای $x = -۲$ کدام است؟",
+    "options": [
+      "صفر",
+      "$۲$",
+      "$-۱۷$",
+      "$-۲۰$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0017.jpg",
+        "box": [
+          600,
+          100,
+          750,
+          250
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار یک سهمی که رأس آن در نقطه (2,2) قرار دارد و از نقطه (1- ,0) می‌گذرد."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1244,
+    "question_page": 17,
+    "question_text": "تابع $f$ در دامنه‌اش مشتق‌پذیر است به طوری که $f(x) - x f(\\frac{۴}{x}) = ۳$. مقدار $f'(۲)$ کدام است؟",
+    "options": [
+      "$-۱$",
+      "$-\\frac{۳}{۲}$",
+      "$-۳$",
+      "$\\frac{۳}{۲}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1245,
+    "question_page": 17,
+    "question_text": "با فرض $f(۱) = g(۱) = ۳$ و $f'(۱) = -g'(۱) = ۲$، حاصل مشتق تابع $f(g^۲(x))$ در $x = ۱$ کدام است؟",
+    "options": [
+      "$۶$",
+      "$-۶$",
+      "$۵۴$",
+      "$-۵۴$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1246,
+    "question_page": 17,
+    "question_text": "اگر $f(۱) = ۱$ و $f'(۱) = ۳$ باشد، حاصل مشتق تابع $f \\circ f (\\frac{۱}{x})$ در نقطهٔ $x = ۱$ چه قدر است؟",
+    "options": [
+      "$۶$",
+      "$۱۸$",
+      "$-۶$",
+      "$-۱۸$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1247,
+    "question_page": 17,
+    "question_text": "اگر $y = \\frac{x}{\\sqrt{x^۲ + ۱}}$ باشد، حاصل $yy'x^۲ + yy' + xy^۲$ کدام است؟",
+    "options": [
+      "$۲x$",
+      "$x$",
+      "$x^۳$",
+      "$x^۲ + ۱$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  }
+]

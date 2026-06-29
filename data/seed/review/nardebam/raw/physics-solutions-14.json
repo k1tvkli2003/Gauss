@@ -1,0 +1,1276 @@
+[
+  {
+    "question_number": 1216,
+    "solution_page": 457,
+    "stated_correct_option": 3,
+    "classic_solution": "دوره تناوب از $\\omega=20\\pi$ برابر $T=0.1s$ به دست می‌آید. زمان‌های داده‌شده بر حسب $T/4$ نوشته می‌شوند و بازه‌هایی که نوسانگر به مرکز نزدیک یا از مرکز دور می‌شود جدا می‌گردند؛ نسبت زمان‌های خواسته‌شده $4/3$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0262.jpg",
+        "box": [
+          335,
+          1415,
+          880,
+          1615
+        ],
+        "placement": "solution",
+        "alt": "نمودار خطی حرکت نوسانگر و بازه‌های تندشونده و کندشونده"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1217,
+    "solution_page": 457,
+    "stated_correct_option": 4,
+    "classic_solution": "با استفاده از $x=A\\cos\\omega t$ و اختلاف فاز $\\pi/2$، اگر $\\cos\\alpha=0.6$ باشد آنگاه $\\sin\\alpha=0.8$ و مکان دوم $x_2=-0.05\\times0.8=-0.04m=-4cm$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1218,
+    "solution_page": 457,
+    "stated_correct_option": 3,
+    "classic_solution": "از برابر بودن مکان دو لحظه و قرار داشتن یکی در $T/3$ اول و دیگری در $T/3$ دوم، رابطه $\\cos\\omega t_2=\\cos\\omega t_1$ با حالت $\\omega t_2=2\\pi-\\omega t_1$ حل می‌شود و $t_1=T/3$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1219,
+    "solution_page": 457,
+    "stated_correct_option": 3,
+    "classic_solution": "چون در لحظه‌های $t_1$ و $t_2$ ذره در دو مکان قرینه است، $x_2=-x_1$ و بنابراین $\\cos\\omega t_2=-\\cos\\omega t_1$ نوشته می‌شود. با توجه به ناحیه زمانی داده‌شده، $t_1=T/6$ نتیجه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1220,
+    "solution_page": 458,
+    "stated_correct_option": 2,
+    "classic_solution": "صورت تست مکان آغازین را مشخص نکرده است؛ با فرض $x_0=A$، از جابه‌جایی‌های ثانیه اول و دوم داریم $A-2=A\\cos\\omega$ و $A-6=A\\cos2\\omega$. با رابطه $\\cos2\\omega=2\\cos^2\\omega-1$ دامنه $A=4m$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1221,
+    "solution_page": 458,
+    "stated_correct_option": 4,
+    "classic_solution": "برای زمان جابه‌جایی بین دو نقطه خاص از نمودارهای زمانی بین مکان‌های $0,\\pm A/2,\\pm\\sqrt2A/2,\\pm\\sqrt3A/2,\\pm A$ استفاده می‌شود. با $A=2cm$ و $T=6s$ مسیر بیشینه مطابق شکل انتخاب شده و $\\Delta t=19T/24=4.75s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0263.jpg",
+        "box": [
+          120,
+          1120,
+          710,
+          1555
+        ],
+        "placement": "solution",
+        "alt": "نمودارهای زمان جابه‌جایی بین مکان‌های خاص در نوسان ساده"
+      },
+      {
+        "page_file": "page_0263.jpg",
+        "box": [
+          100,
+          1585,
+          700,
+          2195
+        ],
+        "placement": "solution",
+        "alt": "مسیرهای نمونه نوسانگر بین مکان‌های خاص برای محاسبه زمان بیشینه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1222,
+    "solution_page": 458,
+    "stated_correct_option": 4,
+    "classic_solution": "نمودار مکان-زمان نشان می‌دهد مرکز نوسان در میانه دو مکان داده‌شده قرار دارد؛ بنابراین $T/4=2s$ و $T=8s$ و با $x=A\\cos(\\pi t/4)$ دامنه $A=5\\sqrt2cm$ به دست می‌آید. روش دوم نیز از بازه $1s=T/8$ از $x=5cm$ تا مرکز همین نتیجه را می‌دهد.",
+    "media_regions": [
+      {
+        "page_file": "page_0263.jpg",
+        "box": [
+          95,
+          2020,
+          780,
+          2410
+        ],
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان و مسیر نوسانگر بین دو مکان مثبت و منفی"
+      },
+      {
+        "page_file": "page_0264.jpg",
+        "box": [
+          200,
+          220,
+          690,
+          365
+        ],
+        "placement": "solution",
+        "alt": "ادامه مسیر نوسانگر برای روش دوم حل"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1223,
+    "solution_page": 459,
+    "stated_correct_option": 4,
+    "classic_solution": "از معادله نوسان، $\\omega=\\pi/6$ و در نتیجه $T=12s$ محاسبه می‌شود. مختصات داده‌شده فقط در معادله گزینه ۴ صدق می‌کند.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1224,
+    "solution_page": 459,
+    "stated_correct_option": 3,
+    "classic_solution": "برای تعیین دفعات تغییر جهت در $14s$ از $n=[t/(T/2)]$ استفاده شده است. با $T=0.4s$، نوسانگر 70 نیم‌دوره می‌پیماید و مسیر کل $12+12+3=27cm$ است؛ معادله مکان نیز مکان نهایی $3cm$ را تأیید می‌کند.",
+    "media_regions": [
+      {
+        "page_file": "page_0264.jpg",
+        "box": [
+          175,
+          1195,
+          705,
+          1395
+        ],
+        "placement": "solution",
+        "alt": "مسیر رفت‌وبرگشت نوسانگر و طول‌های 12 و 3 سانتی‌متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1225,
+    "solution_page": 459,
+    "stated_correct_option": 4,
+    "classic_solution": "ابتدا دیده می‌شود $\\Delta t=t_2-t_1=1.4s=7T/2$ و بنابراین مسافت پیموده‌شده مضربی طبیعی از $2A$ است. از $\\ell=2.5\\times(45/25-9/25)=3.6m$ و $\\ell=9(2A)$ نتیجه می‌شود $T=3.2\\times10^{-2}s$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1226,
+    "solution_page": 460,
+    "stated_correct_option": 2,
+    "classic_solution": "با $T=1/f=1/4s$ و $A=4cm$، مسیر تندشونده از $x_1=2\\sqrt2cm$ تا $x_2=-2\\sqrt2cm$ طبق نمودار خاص در کمترین زمان پیموده می‌شود. بنابراین $\\Delta t=T/6+T/4+T/12=T/2=1/8s$ و $|v_{av}|=32\\sqrt2cm/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0265.jpg",
+        "box": [
+          130,
+          190,
+          720,
+          390
+        ],
+        "placement": "solution",
+        "alt": "مسیر کوتاه نوسانگر از مثبت رادیکال دو تا منفی رادیکال دو"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1227,
+    "solution_page": 460,
+    "stated_correct_option": null,
+    "classic_solution": "در بازه $T/2$ جابه‌جایی از $x$ به $-x$ است، پس مقدار جابه‌جایی $2x$ و مسافت پیموده‌شده $2A$ است. چون تندی متوسط دو برابر بزرگی سرعت متوسط است، $2A=2(2x)$ و در نتیجه $x=A/2$ و $A=12m$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0265.jpg",
+        "box": [
+          120,
+          1010,
+          715,
+          1200
+        ],
+        "placement": "solution",
+        "alt": "نمودار مسیر نوسانگر در بازه نیم‌دوره و مقایسه مسافت و جابه‌جایی"
+      }
+    ],
+    "review_notes": [
+      "stated_correct_option 3 conflicts with authoritative answer key 4; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 1228,
+    "solution_page": 460,
+    "stated_correct_option": 3,
+    "classic_solution": "با $A=5cm$ و عبور از $C=3cm$ و سپس $D=-4cm$، روابط کسینوسی برای دو لحظه نوشته می‌شود. از نخستین عبور از $D$، $T=0.8s$ و $t_1=T/2=0.4s$ و $t_2=5T=4s$ به دست می‌آید؛ مسافت کل $90cm$ و تندی متوسط $25cm/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0265.jpg",
+        "box": [
+          130,
+          1250,
+          505,
+          1365
+        ],
+        "placement": "solution",
+        "alt": "نقاط A تا D روی محور مکان با دامنه 5 سانتی‌متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1229,
+    "solution_page": 461,
+    "stated_correct_option": 3,
+    "classic_solution": "هرچه فاصله نوسانگر از نقطه تعادل کمتر باشد، تندی آن بیشتر است. از $x=2\\cos(\\pi t/6)$ مکان‌های سه لحظه محاسبه می‌شوند: $x_1=\\sqrt3m$، $x_2=0$ و $x_3=-1m$؛ پس $s_1<s_3<s_2$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1230,
+    "solution_page": 461,
+    "stated_correct_option": 2,
+    "classic_solution": "دامنه از طول پاره‌خط نوسان $A=2cm$ است. با نمودار زمان جابه‌جایی بین $x_1=\\sqrt2cm$ و $x_2=-\\sqrt2cm$، داریم $\\Delta t=T/6+T/8=7T/24=0.7s$ و $T=2.4s$؛ سپس $v_{max}=A\\omega=5\\pi/3cm/s$.",
+    "media_regions": [
+      {
+        "page_file": "page_0266.jpg",
+        "box": [
+          230,
+          580,
+          780,
+          760
+        ],
+        "placement": "solution",
+        "alt": "مسیر نوسانگر بین مکان‌های مثبت و منفی رادیکال دو"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1231,
+    "solution_page": 461,
+    "stated_correct_option": 3,
+    "classic_solution": "برای بیشینه کردن تندی متوسط در بازه دلخواه، نوسانگر باید به طور متقارن حول مرکز نوسان حرکت کند. بازه $\\Delta t=T/6$ به دو قسمت $T/12$ تقسیم می‌شود، پس مکان‌ها $\\pm A/2$ هستند؛ با $A=6cm$، $T=1.8s$ و $v_{max}=20\\pi/3cm/s$.",
+    "media_regions": [
+      {
+        "page_file": "page_0266.jpg",
+        "box": [
+          190,
+          970,
+          720,
+          1175
+        ],
+        "placement": "solution",
+        "alt": "بازه متقارن حول مرکز نوسان برای بیشینه تندی متوسط"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1232,
+    "solution_page": 461,
+    "stated_correct_option": 2,
+    "classic_solution": "برای کمینه کردن تندی متوسط، حرکت باید در مجاورت نقطه بازگشت انجام شود. در مدت $T/4$ نوسانگر $T/8$ پیش و $T/8$ پس از نقطه بازگشت را می‌پیماید، از این رو $x=(\\sqrt2/2)A$ و با مسافت 12cm دامنه $A=20cm$ و $v_{max}=8\\pi m/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0266.jpg",
+        "box": [
+          130,
+          1775,
+          700,
+          2020
+        ],
+        "placement": "solution",
+        "alt": "مسیر کمینه مسافت در نزدیکی نقطه بازگشت"
+      },
+      {
+        "page_file": "page_0267.jpg",
+        "box": [
+          110,
+          220,
+          590,
+          420
+        ],
+        "placement": "solution",
+        "alt": "ادامه مسیر نزدیک نقطه بازگشت برای محاسبه دامنه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1233,
+    "solution_page": 462,
+    "stated_correct_option": 4,
+    "classic_solution": "در نمودار مکان-زمان، بازه‌هایی که نوسانگر به مرکز نزدیک می‌شود تندشونده‌اند. ناحیه‌های رنگ‌شده از $0$ تا $0.6s$ و از $1.2$ تا $1.8s$ در محدوده مورد نظر جمعاً $1.2s$ زمان دارند.",
+    "media_regions": [
+      {
+        "page_file": "page_0267.jpg",
+        "box": [
+          105,
+          560,
+          610,
+          870
+        ],
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان با ناحیه‌های تندشونده مشخص‌شده"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1234,
+    "solution_page": 462,
+    "stated_correct_option": 2,
+    "classic_solution": "تا لحظه $0.56s$، مسیر از شکل و زمان‌های خاص خوانده می‌شود. از $0.56=7T/12$، دوره $T=0.96s$ به دست می‌آید؛ سپس بازه $t_1$ تا $t_2$ معادل $T/2+T/6$ است و مسافت طی‌شده $24cm$، پس تندی متوسط $0.5m/s$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0267.jpg",
+        "box": [
+          110,
+          880,
+          730,
+          1460
+        ],
+        "placement": "solution",
+        "alt": "دو مسیر نوسانگر برای محاسبه مسافت طی‌شده بین t1 و t2"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1235,
+    "solution_page": 462,
+    "stated_correct_option": 2,
+    "classic_solution": "از نمودار مکان-زمان، فاصله زمانی عبور اول و دوم از $x=A/2$ برابر $7T/12=7/30s$ است و $T=0.4s$ به دست می‌آید. بیشینه سرعت متوسط در بازه $T/4$ با جابه‌جایی بیشینه $\\sqrt2A$ محاسبه می‌شود و $|v_{av(max)}|=\\sqrt2/5m/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0267.jpg",
+        "box": [
+          105,
+          1485,
+          720,
+          2295
+        ],
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان و مسیرهای بیشینه جابه‌جایی در بازه T/4"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1236,
+    "solution_page": 463,
+    "stated_correct_option": 1,
+    "classic_solution": "از نمودار، فاصله دو عبور متوالی از $x=-1cm$ برابر $2s=2T/6$ است، پس $T=6s$. بنابراین $\\omega=\\pi/3rad/s$ و با $A=2cm$، $v_{max}=A\\omega=2\\pi/3cm/s$.",
+    "media_regions": [
+      {
+        "page_file": "page_0268.jpg",
+        "box": [
+          330,
+          410,
+          865,
+          700
+        ],
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان و مسیر عبورهای متوالی از x=-1"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1237,
+    "solution_page": 463,
+    "stated_correct_option": 1,
+    "classic_solution": "با توجه به نمودار، نوسانگر از $A=6cm$ تا $-A$ و سپس تا $-\\sqrt2A/2$ را در $0.3s$ می‌پیماید؛ بنابراین $0.3=5T/8$ و $T=0.48s$. سرعت در $t_1=T/4$ برابر $-\\pi/4m/s$ و در $t_2=3T/2$ صفر است؛ پس $|a_{av}|=5\\pi/12m/s^2$.",
+    "media_regions": [
+      {
+        "page_file": "page_0268.jpg",
+        "box": [
+          120,
+          940,
+          735,
+          1140
+        ],
+        "placement": "solution",
+        "alt": "مسیر نوسانگر از دامنه مثبت تا مکان منفی رادیکالی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1238,
+    "solution_page": 463,
+    "stated_correct_option": null,
+    "classic_solution": "در نوسان ساده $a=-\\omega^2x$ است؛ بنابراین هرچه فاصله از مرکز بیشتر باشد، بزرگی شتاب بیشتر است. از مکان‌های سه لحظه، $x_1=2\\sqrt3m$، $x_2=0$ و $x_3=-2m$ و در نتیجه $a_1>a_3>a_2$.",
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 2 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 1239,
+    "solution_page": 463,
+    "stated_correct_option": 3,
+    "classic_solution": "از $|a|=\\omega^2|x|$ در مکان $x=0.04m$، $\\omega=2\\pi rad/s$ به دست می‌آید. چون در مرکز سرعت بیشینه است، با $v_{max}=A\\omega$ دامنه $A=0.12m=12cm$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1240,
+    "solution_page": 463,
+    "stated_correct_option": 3,
+    "classic_solution": "اختلاف شتاب بیشینه و شتاب در فاصله 4 سانتی‌متری از بازگشت برابر $2.5m/s^2$ است. از $\\omega^2(A-|x|)=2.5$ با $A-|x|=0.04m$، $\\omega=5\\sqrt{10}/2rad/s$ و $T=0.8s$ به دست می‌آید؛ زمان مسیر برابر $3T/4=0.6s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0268.jpg",
+        "box": [
+          135,
+          2250,
+          640,
+          2435
+        ],
+        "placement": "solution",
+        "alt": "مسیر رفت و برگشت از دامنه مثبت تا دامنه منفی و مرکز"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1241,
+    "solution_page": 464,
+    "stated_correct_option": null,
+    "classic_solution": "وقتی نوسانگر در نصف دامنه است، نسبت شتاب و نیروی وارد بر آن به مقدار بیشینه برابر $|x|/A=1/2$ می‌شود. از $\\cos\\omega t=1/2$ و ناحیه زمانی مناسب، $t=T/6$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 1242,
+    "solution_page": 464,
+    "stated_correct_option": 3,
+    "classic_solution": "دامنه $A=5cm$ و از $v_{max}=A\\omega=2m/s$، $\\omega=40rad/s$ محاسبه می‌شود. نیروی بیشینه هنگام تغییر جهت برابر $F_{max}=m\\omega^2A=32N$ است؛ روش دوم نیز از $F_{max}=mv_{max}^2/A$ همین مقدار را می‌دهد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1243,
+    "solution_page": 464,
+    "stated_correct_option": 1,
+    "classic_solution": "از نمودار دو نوسان، نسبت دامنه‌ها $A_2/A_1=1/2$ و نسبت دوره‌ها $T_1/T_2=3/4$ خوانده می‌شود؛ بنابراین $\\omega_2/\\omega_1=3/4$. با $a_{max}=A\\omega^2$ نسبت خواسته‌شده $3/16$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0269.jpg",
+        "box": [
+          125,
+          660,
+          610,
+          935
+        ],
+        "placement": "solution",
+        "alt": "دو نمودار مکان-زمان با دامنه‌ها و دوره‌های متفاوت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1244,
+    "solution_page": 464,
+    "stated_correct_option": 4,
+    "classic_solution": "از رابطه $a=-\\omega^2x$ و داده $a=90\\pi^2$ در $x=-0.1m$، $\\omega=30\\pi rad/s$ و $T=1/15s$ به دست می‌آید. در یک دقیقه تعداد نوسان‌ها $900$ و طول کل مسیر $1800$ برابر طول پاره‌خط نوسان است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1245,
+    "solution_page": 464,
+    "stated_correct_option": 2,
+    "classic_solution": "از نمودار شتاب-زمان، لحظه $t_2=4.5s$ و مقدارهای شتاب برای دو ناحیه استفاده می‌شود. با حل روابط کسینوسی، $T=4s$ و $t_1=4/3s$ به دست می‌آید؛ سپس $\\omega^2=5/2$ و مکان‌ها محاسبه شده و سرعت متوسط $24(\\sqrt3+1)cm/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0269.jpg",
+        "box": [
+          115,
+          1415,
+          700,
+          1775
+        ],
+        "placement": "solution",
+        "alt": "نمودار شتاب-زمان با ناحیه‌های مشخص و لحظه‌های t1 و t2"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1246,
+    "solution_page": 465,
+    "stated_correct_option": 3,
+    "classic_solution": "نمودار نشان می‌دهد در $t=\\pi/5s$ برای دومین بار از $x=A/2=2cm$ عبور شده است. مسیر معادل $T-T/6=5T/6$ است؛ پس $T=3\\pi/5s$، $\\omega=10rad/s$ و $|F|=m\\omega^2|x|=1N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0270.jpg",
+        "box": [
+          205,
+          295,
+          780,
+          500
+        ],
+        "placement": "solution",
+        "alt": "مسیر نوسانگر تا دومین عبور از x=A/2"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1247,
+    "solution_page": 465,
+    "stated_correct_option": 1,
+    "classic_solution": "از نمودار صورت تست، در $15/4s$ یک نوسان و یک‌چهارم نوسان انجام شده و $T=3s$ است. بازه $\\Delta t=T/2$ بوده و در این مدت نوسانگر $2A$ می‌پیماید؛ از مقایسه با مسافت کل، $A=8cm$ و $F_{max}=32mN$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1248,
+    "solution_page": 465,
+    "stated_correct_option": 2,
+    "classic_solution": "با قانون هوک، از کشیدگی $5cm$ تحت نیروی $40N$ ثابت فنر $k=800N/m$ است. سپس $\\omega=\\sqrt{k/m}=20\\sqrt{10}rad/s$ و $f=\\omega/(2\\pi)=10Hz$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1249,
+    "solution_page": 465,
+    "stated_correct_option": 3,
+    "classic_solution": "برای فنر ثابت، $\\omega=\\sqrt{k/m}$ است؛ با نصف شدن جرم، $\\omega_2/\\omega_1=\\sqrt2$. چون دامنه‌ها برابرند، نسبت سرعت‌های بیشینه نیز $v_{max2}/v_{max1}=\\sqrt2$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1250,
+    "solution_page": 465,
+    "stated_correct_option": 2,
+    "classic_solution": "از اختلاف تعداد نوسان‌ها در یک دقیقه، $60(1/T_1-1/T_2)=50$ نوشته می‌شود. با $T=2\\pi\\sqrt{m/k}$ و داده‌های جرم و ثابت فنر، رابطه حل شده و $k_1=200N/m$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1251,
+    "solution_page": 465,
+    "stated_correct_option": null,
+    "classic_solution": "در شکل (1) هر فنر نصف وزن و در شکل (2) هر فنر نصف جرم وزنه را تحمل می‌کند. دوره‌ها از $T=2\\pi\\sqrt{m/k}$ برای دو آرایش نوشته می‌شوند و نسبت بسامدها $f_1/f_2=\\sqrt{3/2}$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 1252,
+    "solution_page": 466,
+    "stated_correct_option": 1,
+    "classic_solution": "از نمودار مکان-زمان، پیش از $t_0$ یک دوره در 4 خانه و پس از آن یک دوره در 2 خانه طی می‌شود؛ پس $T_1=2T_2$. بنابراین $\\sqrt{m_1}=2\\sqrt{m_2}$ و $m_2=m_1/4$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1253,
+    "solution_page": 466,
+    "stated_correct_option": 3,
+    "classic_solution": "برای نوسان عمودی جرم-فنر، در تعادل $kd=mg$ و در نتیجه $T=2\\pi\\sqrt{d/g}$. طول فنر هنگام عبور از تعادل، میانگین طول‌های کمینه و بیشینه یعنی $26cm$ است و با $L_0=20cm$، $d=6cm$ و $T\\simeq0.5s$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0271.jpg",
+        "box": [
+          80,
+          395,
+          620,
+          725
+        ],
+        "placement": "solution",
+        "alt": "فنر عمودی با طول طبیعی و کشیدگی تعادل"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1254,
+    "solution_page": 466,
+    "stated_correct_option": 4,
+    "classic_solution": "نقطه تعادل جایی است که $F_e=mg$ و $kd=mg$؛ از داده‌ها $d=5cm$ است. چون وزنه از طول طبیعی رها شده، دامنه نیز $A=d=5cm$ و بیشینه طول فنر $L+2d=40cm$ می‌شود. شتاب بیشینه $A(k/m)=10m/s^2$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0271.jpg",
+        "box": [
+          130,
+          880,
+          385,
+          1190
+        ],
+        "placement": "solution",
+        "alt": "وزنه آویخته از فنر و نقطه رهاشدن نسبت به تعادل"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1255,
+    "solution_page": 466,
+    "stated_correct_option": 3,
+    "classic_solution": "در تعادل، $kd=mg$ و از داده‌ها $d=4cm$، پس طول فنر در تعادل $L_1=24cm$ است. دامنه برابر فاصله نقطه بازگشت تا تعادل است: $A=30-24=6cm$. بنابراین $v_{max}=A\\sqrt{k/m}=0.3\\sqrt{10}m/s$.",
+    "media_regions": [
+      {
+        "page_file": "page_0271.jpg",
+        "box": [
+          135,
+          1260,
+          380,
+          1580
+        ],
+        "placement": "solution",
+        "alt": "فنر عمودی با طول بیشینه و طول تعادل"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1256,
+    "solution_page": 466,
+    "stated_correct_option": 2,
+    "classic_solution": "طبق نمودار مکان-زمان، فاصله دو عبور از $x=-2cm$ برابر $0.5s$ و معادل $T/3$ است؛ پس $T=1.5s$. با $m=0.9kg$، از $T=2\\pi\\sqrt{m/k}$ مقدار $k=16N/m$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0271.jpg",
+        "box": [
+          260,
+          1845,
+          735,
+          2205
+        ],
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان و مسیر عبور از x=-2"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1257,
+    "solution_page": 467,
+    "stated_correct_option": 3,
+    "classic_solution": "با $T=2\\pi\\sqrt{m/k}$، دوره $T=2/7s$ به دست می‌آید. لحظه‌ها بر حسب $T$ نوشته می‌شوند و با نمودار مکان‌های خاص، $x_1=-A=-4cm$ و $x_2=-A/2=-2cm$ است. مسافت در این بازه $7A+A/2=30cm$ و جابه‌جایی $2cm$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0272.jpg",
+        "box": [
+          200,
+          480,
+          805,
+          790
+        ],
+        "placement": "solution",
+        "alt": "مسیر نوسانگر بین x=-A و x=-A/2 با چند رفت و برگشت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1258,
+    "solution_page": 467,
+    "stated_correct_option": 3,
+    "classic_solution": "از $\\omega=\\sqrt{k/m}=\\sqrt{10}rad/s$ و $a_{max}=A\\omega^2=0.4m/s^2$، دامنه $A=4cm$ است. سپس $T=2s$ و با $t_2=6.5s=3T+T/4$، مسافت کل $3(4A)+A=52cm$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1259,
+    "solution_page": 467,
+    "stated_correct_option": 4,
+    "classic_solution": "در حالت اول از شکل، $kx=mg$ و با $x=5cm$، $k=800N/m$ است. در حالت دوم، طول فنر در مرکز نوسان $42cm$ و $\\omega^2=k/m=200$ است؛ با $a=-\\omega^2x$ و $a=-8m/s^2$، مکان 4 سانتی‌متر راست مرکز است و طول فنر $46cm$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0272.jpg",
+        "box": [
+          115,
+          1255,
+          570,
+          1695
+        ],
+        "placement": "solution",
+        "alt": "دو حالت فنر عمودی و افقی برای محاسبه طول فنر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1260,
+    "solution_page": 467,
+    "stated_correct_option": 1,
+    "classic_solution": "با نمایش تغییر طول فنر در تعادل، $kd=mg$ و $d=5cm$ به دست می‌آید؛ بنابراین $L_1=35cm$. فاصله نوسانگر از تعادل در حالت بیشینه $d=L_2-L_1=2cm$ است و با $\\omega^2=k/m=200$، $a_{max}=4m/s^2$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0272.jpg",
+        "box": [
+          115,
+          1740,
+          680,
+          2175
+        ],
+        "placement": "solution",
+        "alt": "سه وضعیت فنر عمودی، تعادل و نقطه بازگشت کنار خط‌کش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1261,
+    "solution_page": 467,
+    "stated_correct_option": 3,
+    "classic_solution": "از نمودارهای $F=-kx$، ثابت‌ها $k_1=200N/m$ و $k_2=312.5N/m$ به دست می‌آیند. چون بسامد دو سامانه برابر است، $m_1/k_1=m_2/k_2$. پس از جابه‌جایی وزنه‌ها، نسبت بسامدها برابر $16/25$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0272.jpg",
+        "box": [
+          115,
+          2175,
+          470,
+          2415
+        ],
+        "placement": "solution",
+        "alt": "دو نمودار نیروی فنر بر حسب مکان برای دو سامانه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1262,
+    "solution_page": 468,
+    "stated_correct_option": 1,
+    "classic_solution": "دوره آونگ (1) از $T=2\\pi\\sqrt{L/g}$ برابر $2s$ است و در $5s$، $2.5$ نوسان انجام می‌دهد، پس گزینه‌های 3 و 4 کنار می‌روند. برای آونگ (2)، $T=1s$ و در $5s$ پنج نوسان کامل انجام می‌شود و به وضعیت اولیه بازمی‌گردد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1263,
+    "solution_page": 468,
+    "stated_correct_option": 1,
+    "classic_solution": "دوره آونگ ساده از $T=2\\pi\\sqrt{L/g}$ با جذر طول متناسب است و به جرم گلوله وابسته نیست. کاهش طول به $36\\%$ طول اولیه باعث می‌شود $T_2/T_1=6/10$ و تغییر نسبی دوره $-40\\%$ باشد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1264,
+    "solution_page": 468,
+    "stated_correct_option": 2,
+    "classic_solution": "از تعداد نوسان‌ها، $T_1=40/25=1.6s$ و $T_2=56/40=1.4s$ به دست می‌آید. با $T=2\\pi\\sqrt{L/g}$، طول‌ها $L_1=64cm$ و $L_2=49cm$ هستند؛ پس طول آونگ باید $15cm$ کاهش یابد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1265,
+    "solution_page": 468,
+    "stated_correct_option": 3,
+    "classic_solution": "اگر طول کوتاه‌تر $L_1$ و بلندتر $L_2$ باشد، از نسبت دوره‌ها $T_2/T_1=3$ نتیجه می‌شود $L_2=9L_1$. با $L_1+L_2=1m$، $L_1=0.1m$ و $T_1=2/\\sqrt{10}s$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1266,
+    "solution_page": 468,
+    "stated_correct_option": 2,
+    "classic_solution": "از $a_{max}=v_{max}\\omega$، بسامد زاویه‌ای $\\omega=5rad/s$ است. سپس برای آونگ $\\omega=\\sqrt{g/L}$ و $L=0.4m$ به دست می‌آید؛ چون $L_B<L_A$، $T_B<T_A$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1267,
+    "solution_page": 468,
+    "stated_correct_option": 3,
+    "classic_solution": "آونگ A زودتر شروع کرده ولی کندتر نوسان می‌کند. از $n_A=2t/T_A$ و $n_B=t/T_B$ و این‌که در لحظه $2t$ آونگ A یک نوسان بیش‌تر انجام داده است، رابطه $t=T_AT_B/(2T_B-T_A)$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1268,
+    "solution_page": 469,
+    "stated_correct_option": 2,
+    "classic_solution": "در حالت دوم، طول مؤثر آونگ کوچک‌تر و برابر $L''=L-L/n=L(n-1)/n$ است. بنابراین $T''/T=\\sqrt{(n-1)/n}$. دوره جدید شامل نیم‌دوره آونگ بزرگ و نیم‌دوره آونگ کوچک است، پس $T'/T=1/2+\\sqrt{(n-1)/(4n)}$.",
+    "media_regions": [
+      {
+        "page_file": "page_0274.jpg",
+        "box": [
+          185,
+          450,
+          420,
+          655
+        ],
+        "placement": "solution",
+        "alt": "آونگ با میخ یا تکیه‌گاه دوم و طول مؤثر کوتاه‌تر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1269,
+    "solution_page": 469,
+    "stated_correct_option": 1,
+    "classic_solution": "از $\\omega=\\pi$، دوره $T=2s$ است؛ نیم‌دوره $1s$ طول می‌کشد و گلوله در این مدت مسافت $2A=0.4m$ را می‌پیماید، پس $A=0.2m$. با $\\omega=\\sqrt{g/L}=\\pi$، طول آونگ $L=1m$ و نسبت خواسته $1/L=0.4/1$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1270,
+    "solution_page": 469,
+    "stated_correct_option": 3,
+    "classic_solution": "بین صفحات خازن، $E=V/d$ و نیروی الکتریکی $F=Eq$ است. در شکل (الف) برای $q>0$ افزایش $V$ یا $q$ یا کاهش $d$ باعث افزایش نیروی رو به پایین و کاهش دوره می‌شود. در شکل (ب) برای $q<0$ نیروی رو به بالاست و افزایش آن باعث کاهش گرانش ظاهری و افزایش دوره می‌شود؛ پس فقط گزاره‌های الف و ب درست‌اند.",
+    "media_regions": [
+      {
+        "page_file": "page_0274.jpg",
+        "box": [
+          120,
+          1110,
+          460,
+          1415
+        ],
+        "placement": "solution",
+        "alt": "آونگ باردار مثبت میان صفحات خازن با نیروی الکتریکی رو به پایین"
+      },
+      {
+        "page_file": "page_0274.jpg",
+        "box": [
+          120,
+          1535,
+          460,
+          1840
+        ],
+        "placement": "solution",
+        "alt": "آونگ باردار منفی میان صفحات خازن با نیروی الکتریکی رو به بالا"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1271,
+    "solution_page": 469,
+    "stated_correct_option": 3,
+    "classic_solution": "برای آونگ در آسانسور با شتاب ثابت، $g'=g\\pm a$ جایگزین $g$ می‌شود. آسانسور با شتاب رو به پایین شروع می‌کند، پس $g'=g-a=8m/s^2$. نسبت سرعت‌های بیشینه با دامنه‌های برابر از $v_{max}=A\\sqrt{g'/L}$ برابر $2\\sqrt5/5$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1272,
+    "solution_page": 470,
+    "stated_correct_option": 1,
+    "classic_solution": "با مقایسه $g_E=GM_E/R_E^2$ و $g_M=GM_M/R_M^2$، نسبت‌ها داده شده و $g_M=4m/s^2$ به دست می‌آید. بنابراین دوره آونگ در سطح مریخ $T_M=2\\pi\\sqrt{L/g_M}=\\pi s$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1273,
+    "solution_page": 470,
+    "stated_correct_option": 2,
+    "classic_solution": "برای آونگ روی زمین و ماه، تعداد نوسان‌ها با $n=t/T$ نوشته می‌شود. با $t_e=65s$ و $t_m=390s$ و نسبت‌های گرانش، از $T\\propto\\sqrt{L/g}$ نتیجه می‌شود $L_m/L_e=36/25$؛ پس طول در ماه $11cm$ بیش‌تر شده و $L_e=25cm$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1274,
+    "solution_page": 470,
+    "stated_correct_option": 4,
+    "classic_solution": "دوره ساعت روی زمین $T_e=12h$ و روی کره ماه از $T_m/T_e=\\sqrt{g_e/g_m}=\\sqrt6$ برابر $29h$ است. ساعت در هر 29 ساعت واقعی 17 ساعت عقب می‌افتد؛ در یک شبانه‌روز این عقب‌افتادگی $14h$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1275,
+    "solution_page": 470,
+    "stated_correct_option": 2,
+    "classic_solution": "در $20^\\circ C$، $T_1=1s$ است. با افزایش دما تا $70^\\circ C$، طول آونگ از $L_2=L_1(1+\\alpha\\Delta\\theta)$ محاسبه می‌شود و $T_2\\simeq1.0005s$؛ بنابراین ساعت در هر شبانه‌روز حدود $43s$ عقب می‌افتد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1276,
+    "solution_page": 470,
+    "stated_correct_option": 4,
+    "classic_solution": "از نمودار، $\\Delta t=2T_A=T_B/2$ و پس $T_B/T_A=4$. با $T=2\\pi\\sqrt{L/g}$، نسبت طول‌ها $L_B/L_A=(T_B/T_A)^2=16$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0275.jpg",
+        "box": [
+          90,
+          2070,
+          590,
+          2385
+        ],
+        "placement": "solution",
+        "alt": "نمودار مکان-زمان دو آونگ A و B و مقایسه دوره‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1277,
+    "solution_page": 471,
+    "stated_correct_option": 1,
+    "classic_solution": "دامنه 50 درصد زیاد و بسامد 50 درصد کم شده است. چون انرژی مکانیکی نوسانگر با $A^2f^2$ متناسب است، $E_2/E_1=(3/2)^2(1/2)^2=9/16$ و تغییر انرژی $-43.75\\%$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1278,
+    "solution_page": 471,
+    "stated_correct_option": 2,
+    "classic_solution": "دامنه از پاره‌خط نوسان $A=10cm$ است. نیروی خالص در بازگشت و انرژی جنبشی در تعادل بیشینه است؛ با $F_{max}=kA=5N$، $k=50N/m$ و $K_{max}=\\frac12kA^2=0.25J$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1279,
+    "solution_page": 471,
+    "stated_correct_option": 3,
+    "classic_solution": "دامنه $A=8cm$ است و انرژی مکانیکی از $E=2\\pi^2mA^2f^2$ برابر $0.32J$ محاسبه می‌شود. چون انرژی پتانسیل $0.2J$ کمتر از انرژی جنبشی است، $E=K+U$ و $U=K-0.2$ داده و $K=0.26J$ نتیجه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1280,
+    "solution_page": 471,
+    "stated_correct_option": 3,
+    "classic_solution": "با رابطه $U=K+0.5K=1.5K$، انرژی مکانیکی $0.9\\pi^2J$ به دست می‌آید. از مسیر، در مدت $0.4s=T/2$ نوسانگر از $x$ تا $-x$ می‌رود، پس $T=0.8s$ و $f=25/20Hz$؛ در نهایت دامنه $A=12cm$ و نسبت مسافت به جابه‌جایی $6$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0276.jpg",
+        "box": [
+          170,
+          1360,
+          780,
+          1505
+        ],
+        "placement": "solution",
+        "alt": "مسیر نوسانگر از x مثبت تا x منفی در نیم‌دوره"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1281,
+    "solution_page": 471,
+    "stated_correct_option": 3,
+    "classic_solution": "برای بیشینه شدن زمان طی مسافت کوتاه، حرکت در نزدیکی نقطه بازگشت است. برای $\\ell=3cm$، هر نیمه مسیر $1.5cm=A/2$ می‌شود و $\\Delta t=T/3=1/15s$، پس $T=1/5s$ و $f=5Hz$. با $A=3cm$، $K_{max}=81mJ$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0276.jpg",
+        "box": [
+          155,
+          1715,
+          780,
+          1985
+        ],
+        "placement": "solution",
+        "alt": "مسیر بیشینه زمان در نزدیکی نقطه بازگشت برای مسافت سه سانتی‌متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1282,
+    "solution_page": 472,
+    "stated_correct_option": 1,
+    "classic_solution": "از مقایسه با فرم کلی $x=A\\cos\\omega t$ داریم $\\omega=200rad/s$ و $A=0.02m$، پس $v_{max}=4m/s$. در لحظه‌ای که $U=15K$، انرژی کل $16K$ است و $v=v_{max}/4=1m/s$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1283,
+    "solution_page": 472,
+    "stated_correct_option": 2,
+    "classic_solution": "با داده‌های تست، $U=1.5K$ و $E=2.5K$ نوشته شده است. از نسبت $E/K=(v_{max}/v)^2$، داریم $v_{max}/v=6/5$ و بنابراین سرعت فعلی $5/6v_{max}$ است؛ درصد کاهش نسبت به بیشینه حدود $16.7\\%$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1284,
+    "solution_page": 472,
+    "stated_correct_option": 2,
+    "classic_solution": "از رابطه انرژی و نیروی بیشینه، $E=\\frac12F_{max}A$، دامنه $A=0.04m$ به دست می‌آید. سپس $F_{max}=m\\omega^2A$ داده و $\\omega=50rad/s$ است؛ تکانه بیشینه $p_{max}=mA\\omega=0.6kg.m/s$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1285,
+    "solution_page": 472,
+    "stated_correct_option": 4,
+    "classic_solution": "چون جسم 4cm از تعادل کشیده و رها می‌شود، دامنه $A=4cm$ است. از $n=tf$، $f=1.5Hz$ و انرژی کل $E=22.4mJ$ به دست می‌آید. انرژی جنبشی داده‌شده $K=16.2mJ$ است، پس $U=6.2mJ$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1286,
+    "solution_page": 472,
+    "stated_correct_option": 4,
+    "classic_solution": "با نزدیک شدن نوسانگر به مرکز، انرژی پتانسیل کم و انرژی جنبشی زیاد می‌شود. از تغییرهای $U_N=0.2U_M$ و $K_N=1.4K_M$ و پایستگی انرژی، $U_M=K_M/2$ و در نتیجه $|v_M|=\\sqrt{2/3}v_{max}$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1287,
+    "solution_page": 472,
+    "stated_correct_option": 1,
+    "classic_solution": "در نقاط $M$ و $N$ که نسبت به مرکز قرینه‌اند، بزرگی سرعت برابر است و از $K=U$، سرعت $2m/s$ محاسبه می‌شود. چون نقطه $P$ به مرکز نزدیک‌تر است، تندی آن بیشتر است و با فرض تست $|v_P|=2.4m/s$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0277.jpg",
+        "box": [
+          90,
+          2350,
+          430,
+          2440
+        ],
+        "placement": "solution",
+        "alt": "نقاط M، P، O و N روی مسیر نوسانگر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1288,
+    "solution_page": 473,
+    "stated_correct_option": 1,
+    "classic_solution": "از بخش پایانی 1287، در نقطه $P$ انرژی جنبشی $144mJ$ و با انرژی کل $200mJ$، انرژی پتانسیل $56mJ$ است. سپس برای آونگ، $\\omega_2/\\omega_1=\\sqrt{L_1/L_2}=1/\\sqrt2$ و با تغییر جرم و دامنه، نسبت انرژی‌ها $4$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1289,
+    "solution_page": 473,
+    "stated_correct_option": 2,
+    "classic_solution": "با اتصال جرم به فنر و کشیده شدن آن تا تعادل، در تعادل $kd=mg$ است. برای دو جرم، $d_1=2cm$ و $d_2=4cm$، پس طول‌های تعادل $42cm$ و $44cm$ می‌شوند. دامنه‌ها $A_1=8cm$ و $A_2=6cm$ و نسبت انرژی‌ها $E_2/E_1=9/16$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0278.jpg",
+        "box": [
+          135,
+          610,
+          585,
+          955
+        ],
+        "placement": "solution",
+        "alt": "سه وضعیت فنر عمودی برای دو جرم و دامنه‌های متفاوت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1290,
+    "solution_page": 473,
+    "stated_correct_option": 1,
+    "classic_solution": "ثابت فنر از $2N/cm=200N/m$ به دست می‌آید. برای آونگ $\\omega=\\sqrt{g/L}=\\sqrt{50}rad/s$ است. با مقایسه انرژی فنر $\\frac12kA^2$ و انرژی آونگ $\\frac12m\\omega^2A^2$، نسبت انرژی‌ها $4$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1291,
+    "solution_page": 473,
+    "stated_correct_option": 4,
+    "classic_solution": "اگر جرم در تعادل کم شود، $f' / f=\\sqrt{m/m'}$ و با $m'=0.64m$، بسامد جدید $25Hz$ است. انرژی باقی‌مانده $0.64E$ و از $E=\\frac12kA^2$، دامنه جدید $A'=0.8A=3.2cm$ محاسبه می‌شود. اگر کاهش جرم در بیشترین فاصله از مرکز رخ دهد، بسامد همچنان $25Hz$ ولی دامنه همان $4cm$ می‌ماند.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1292,
+    "solution_page": 473,
+    "stated_correct_option": 2,
+    "classic_solution": "جرم دوم $m_2=0.5kg$ است و از نسبت $f_2/f_1=\\sqrt{m_1/m_2}$، بسامد دوم $1Hz$ به دست می‌آید. چون کاهش جرم در نقطه بازگشت انجام شده، انرژی کاهش نمی‌یابد ولی نقطه تعادل جابه‌جا می‌شود؛ با $d_1=100cm$ و $d_2=25cm$، دامنه جدید در حالت کاهش جرم $5cm$ و در حالت افزایش جرم $155cm$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0279.jpg",
+        "box": [
+          120,
+          390,
+          720,
+          775
+        ],
+        "placement": "solution",
+        "alt": "تغییر تعادل فنر عمودی پس از کاهش جرم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1293,
+    "solution_page": 474,
+    "stated_correct_option": 3,
+    "classic_solution": "کل بازه زمانی نمودار شامل $3/4$ نوسان از سامانه A و $3/4$ نوسان از سامانه B است، پس $T_A/T_B=2$ و $f_B/f_A=2$. نسبت دامنه‌ها $A_B/A_A=5/2$ و از نسبت انرژی‌ها، $m_B/m_A=1/9$؛ در نهایت با $F=m\\omega^2x$ نسبت نیروها $F_B/F_A=4/3$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1294,
+    "solution_page": 474,
+    "stated_correct_option": 2,
+    "classic_solution": "از نمودار زمانی، نسبت دوره‌ها $T_2/T_1=3/2$ و نسبت بسامدها $f_1/f_2=3/2$ است. با $v_{max}=A\\omega$ و سرعت‌های بیشینه داده‌شده، نسبت دامنه‌ها $A_1/A_2=1/2$ می‌شود. با نسبت انرژی پتانسیل بیشینه و رابطه $E\\propto mf^2A^2$، $m_2/m_1=9/20$ و نسبت تکانه در $t_1$ برابر $2.7$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1295,
+    "solution_page": 474,
+    "stated_correct_option": 3,
+    "classic_solution": "نمودار $U$ بر حسب $K$ برای یک نوسانگر خطی با شیب $-1$ و عرض از مبدأ $E$ است. از نقطه $M$، $E=K+U=(E-30)+(E-50)$ و بنابراین $E=80J$. با $E=\\frac12mv_{max}^2$، سرعت بیشینه $40m/s$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0279.jpg",
+        "box": [
+          100,
+          2190,
+          470,
+          2440
+        ],
+        "placement": "solution",
+        "alt": "نمودار انرژی پتانسیل بر حسب انرژی جنبشی با نقطه M"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1296,
+    "solution_page": 475,
+    "stated_correct_option": 2,
+    "classic_solution": "در نمودارهای انرژی دو نوسانگر، نقطه‌های $M,P$ روی نمودار A و $N,B$ روی نمودار B متناظرند. از $E_A=15+9=24J$ و $E_B=15J$، در نقطه $N$ داریم $K_1=6J$ و سپس $U_1=18J$؛ نسبت نهایی $U_1/K_1=3$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0280.jpg",
+        "box": [
+          120,
+          260,
+          520,
+          620
+        ],
+        "placement": "solution",
+        "alt": "دو نمودار خطی U بر حسب K با نقاط A، B، P، N و M"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1297,
+    "solution_page": 475,
+    "stated_correct_option": 3,
+    "classic_solution": "از شکل، در مکان $x_N$ داریم $U_N=3J$ و $K_N-U_N=5J$؛ پس $K_N=8J$ و انرژی کل $E=11J$ است. در مکان $x_M$ انرژی‌های جنبشی و پتانسیل برابرند، پس $U_M=K_M=5.5J$.",
+    "media_regions": [
+      {
+        "page_file": "page_0280.jpg",
+        "box": [
+          95,
+          680,
+          585,
+          1015
+        ],
+        "placement": "solution",
+        "alt": "نمودارهای انرژی جنبشی و پتانسیل بر حسب مکان با نقاط xN و xM"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1298,
+    "solution_page": 475,
+    "stated_correct_option": 1,
+    "classic_solution": "از داده‌ها $K_{max1}>K_{max2}$ و $A_2>A_1$ نتیجه می‌شود $k_1>k_2$، پس گزاره الف درست است. درباره سرعت بیشینه و شتاب بیشینه به علت نداشتن جرم‌ها یا بسامدها نمی‌توان حکم کرد. با ضرب رابطه انرژی در دامنه و استفاده از $F_{max}=kA$، گزاره ت درست می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1299,
+    "solution_page": 475,
+    "stated_correct_option": 2,
+    "classic_solution": "در نمودار انرژی پتانسیل، دامنه‌های دو نوسانگر $A_1=30cm$ و $A_2=20cm$ و انرژی‌های بیشینه هر دو $36J$ هستند. با فرض $m_1=0.64m_2$ و استفاده از انرژی و سرعت‌ها، نسبت $v_{max2}/|v_1|=24/25$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0280.jpg",
+        "box": [
+          110,
+          1460,
+          535,
+          1795
+        ],
+        "placement": "solution",
+        "alt": "دو نمودار U بر حسب x برای دو نوسانگر با دامنه‌های متفاوت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1300,
+    "solution_page": 475,
+    "stated_correct_option": 2,
+    "classic_solution": "از نمودار مکان-زمان، در مدت یک نوسان نوسانگر (1)، نوسانگر (2) دو نوسان انجام می‌دهد؛ پس $f_2=2f_1$. همچنین $A_1=2A_2$. در رابطه $E=2\\pi^2mA^2f^2$ انرژی‌های جنبشی بیشینه دو نوسانگر برابر می‌شود و با $A_1>A_2$ شکل درست، شکل 2 است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1301,
+    "solution_page": 475,
+    "stated_correct_option": 3,
+    "classic_solution": "از نمودار، انرژی کل $E=U_{max}=16J$ و در سرعت $5m/s$، انرژی پتانسیل $7J$ است؛ پس $K=9J$ و $m=18/25kg$. نوسانگر در $60s$، 300 نوسان انجام می‌دهد، پس $T=0.2s$ و $\\omega=10\\pi rad/s$؛ در نتیجه $k=m\\omega^2=720N/m$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1302,
+    "solution_page": 476,
+    "stated_correct_option": null,
+    "classic_solution": "طبق نمودار، انرژی پتانسیل کشسانی بیشینه $300mJ$ است. وقتی تندی $160cm/s$ است، $U=108mJ$ و با $E=K+U$ جرم $0.15kg$ به دست می‌آید. در مرکز نوسان $K$ و تکانه بیشینه‌اند؛ بنابراین $p_{max}=0.3kg.m/s$ و تغییر تکانه دو عبور از مرکز $0.6\\hat i$ است.",
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 3 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 1303,
+    "solution_page": 476,
+    "stated_correct_option": 2,
+    "classic_solution": "معادله نیرو-زمان به صورت کلی $F=-F_{max}\\cos\\omega t$ است، پس بسامد زاویه‌ای نیروی اعمال‌شده $10rad/s$ است. برای آونگ با $\\omega=\\sqrt{g/L}$، طول آونگ $L=0.1m=10cm$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1304,
+    "solution_page": 476,
+    "stated_correct_option": 1,
+    "classic_solution": "بسامد طبیعی تاب از $T=2\\pi\\sqrt{L/g}$ با $L=1.6m$ برابر $f_t=5/12Hz$ است. بسامد نوسان‌های واداشته از تعداد 30 نوسان در 60 ثانیه، $f_d=1/2Hz$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1305,
+    "solution_page": 476,
+    "stated_correct_option": 3,
+    "classic_solution": "برای تشدید سامانه وزنه-فنر و آونگ، $f_d=f_t$ و بنابراین $\\sqrt{m/k}=\\sqrt{L/g}$. از $m=kL/g$ جرم کل لازم $1200kg$ است. با جرم واگن $1000kg$، باید $200kg$ بار افزوده شود؛ اگر هر بلوک $4kg$ باشد، تعداد بلوک‌ها $50$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1306,
+    "solution_page": 476,
+    "stated_correct_option": 2,
+    "classic_solution": "سرعت انتشار موج به محیط بستگی دارد و با تغییر بسامد ثابت می‌ماند. بنابراین $\\lambda_2/\\lambda_1=v_2f_1/(v_1f_2)=1/1.6=5/8$ و تغییر نسبی طول موج $-37.5\\%$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1307,
+    "solution_page": 476,
+    "stated_correct_option": 1,
+    "classic_solution": "برای نوسان جرم-فنر $T=2\\pi\\sqrt{m/k}$ است؛ با $k_2>k_1$ و $m_2<m_1$، نتیجه می‌شود $T_1>T_2>T_3$. چون سرعت انتشار موج در هر سه شکل یکسان است، از $\\lambda=vT$ داریم $\\lambda_1>\\lambda_2>\\lambda_3$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1308,
+    "solution_page": 476,
+    "stated_correct_option": 4,
+    "classic_solution": "روش اول: موج‌ها برای طی مسافت $100m$ با سرعت $5m/s$ به $20s$ زمان نیاز دارند و چشمه با $f=30Hz$ در این مدت $600$ نوسان انجام می‌دهد. روش دوم نیز با $\\lambda=v/f=1/6m$ نشان می‌دهد در طول $100m$، $600$ موج کامل جا می‌گیرد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1309,
+    "solution_page": 476,
+    "stated_correct_option": 2,
+    "classic_solution": "دوره تناوب موج $T=0.2s$ است؛ در یک دقیقه تعداد نوسان‌ها $n=300$ می‌شود. هر ذره طناب در هر نوسان مسافت $4A$ را می‌پیماید، پس مسافت کل در یک دقیقه $300(4A)=1200A=24cm$ است.",
+    "media_regions": [],
+    "review_notes": []
+  }
+]

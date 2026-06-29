@@ -1,0 +1,1588 @@
+[
+  {
+    "id": "jules_v2_sets_patterns_sequences_001",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر بازه $A = (m-1, 2m+3)$ و بازه $B = [5, 10]$ مفروض باشند، به ازای کدام مقادیر $m$ اشتراک این دو بازه تهی است ($A \\cap B = \\emptyset$)؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty, 1] \\cup [11, +\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty, 1) \\cup [11, +\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty, 1] \\cup (11, +\\infty)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-\\infty, -2] \\cup (11, +\\infty)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "بازه $A$ زمانی با $B$ اشتراک ندارد که کلاً در سمت چپ $B$ یا در سمت راست $B$ قرار گیرد. حالت اول (سمت چپ): کران بالای $A$ کوچکتر یا مساوی کران پایین $B$ باشد. یعنی $2m+3 \\le 5 \\implies 2m \\le 2 \\implies m \\le 1$. حالت دوم (سمت راست): کران پایین $A$ بزرگتر یا مساوی کران بالای $B$ باشد. یعنی $m-1 \\ge 10 \\implies m \\ge 11$. اجتماع این دو حالت بازه $(-\\infty, 1] \\cup [11, +\\infty)$ است. ضمناً برای اینکه $A$ بازه معتبری باشد، باید $m-1 < 2m+3 \\implies m > -4$ باشد؛ اما اگر این شرط نقض شود بازه $A$ تهی می‌شود و مجدداً اشتراکش با $B$ تهی است. بنابراین محدودیت اضافه ایجاد نمی‌شود. گزینه ۱ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "کافی است دو مرز را بررسی کنید: اگر بازه $A$ کاملاً قبل از $5$ باشد ($2m+3 \\le 5$) یا کاملاً بعد از $10$ باشد ($m-1 \\ge 10$)، اشتراک تهی است. این دو شرط به ترتیب $m \\le 1$ و $m \\ge 11$ را می‌دهند که اجتماعشان جواب است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_003",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مجموعه مرجع بازه اعداد حقیقی ($\\mathbb{R}$) باشد و $A = (-2, 5]$ و $B = [1, 8)$، آن‌گاه مجموعه $A' \\cup B'$ با کدام بازه برابر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\mathbb{R} - (1, 5]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\mathbb{R} - [1, 5)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\mathbb{R} - [1, 5]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\mathbb{R} - (1, 5)$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "طبق قوانین دمورگان در نظریه مجموعه‌ها، می‌دانیم که $A' \\cup B' = (A \\cap B)'$. ابتدا اشتراک دو بازه $A$ و $B$ را می‌یابیم: $A \\cap B = (-2, 5] \\cap [1, 8) = [1, 5]$. حال متمم این مجموعه نسبت به مجموعه مرجع (اعداد حقیقی) برابر است با $\\mathbb{R} - [1, 5]$. بنابراین پاسخ صحیح گزینه ۳ می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "با استفاده از دمورگان بلافاصله متوجه می‌شویم متمم اشتراک خواسته شده است. اشتراک از بزرگترین کران پایین (عدد ۱ بسته) تا کوچکترین کران بالا (عدد ۵ بسته) است. پس جواب متمم $[1, 5]$ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_004",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر طول بازه $A = (2x-1, x+4]$ برابر با ۵ باشد و $B = [x-2, 2x+1)$، طول بازه $A \\cap B$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا مقدار $x$ را با استفاده از طول بازه $A$ محاسبه می‌کنیم. طول یک بازه $(a, b]$ برابر $b - a$ است: $(x+4) - (2x-1) = -x + 5$. چون طول برابر ۵ است: $-x+5 = 5 \\implies x = 0$. با جایگذاری $x=0$ بازه‌ها را به‌دست می‌آوریم: $A = (-1, 4]$ و $B = [-2, 1)$. اشتراک این دو بازه: $A \\cap B = (-1, 4] \\cap [-2, 1) = (-1, 1)$. طول این بازه برابر است با $1 - (-1) = 2$. پس گزینه ۴ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "به‌جای حدس زدن، معادله طول بازه را حل کنید: $-x+5=5$ نتیجه می‌دهد $x=0$. با عددگذاری سریع، $A=(-1, 4]$ و $B=[-2, 1)$. ناحیه مشترک از $-1$ تا $1$ است که طولش برابر $2$ واحد می‌باشد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_005",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در جبر مجموعه‌ها، عبارت $(A \\cup B) - (A \\cap B)$ همواره با کدام گزینه معادل است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(A - B) \\cup (B - A)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A \\cap B'$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A' \\cup B'$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(A \\cup B)'$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت $(A \\cup B) - (A \\cap B)$ تفاضل متقارن نامیده می‌شود. این مجموعه شامل اعضایی است که دقیقاً در یکی از مجموعه‌های $A$ یا $B$ حضور دارند و نه در هر دو. از طرفی، مجموعه $A - B$ اعضای مختص $A$ و $B - A$ اعضای مختص $B$ را نشان می‌دهد. اجتماع این دو یعنی $(A - B) \\cup (B - A)$ دقیقاً همان مفهوم تفاضل متقارن را بیان می‌کند. پس گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در یک نمودار ون با نواحی شماره‌گذاری شده ۱، ۲، ۳ (جایی که ۲ اشتراک است)، ناحیه $A \\cup B$ شامل ۱، ۲، ۳ و ناحیه $A \\cap B$ شامل ۲ است. تفاضل آن‌ها برابر نواحی ۱ و ۳ می‌شود که معادل اجتماع $A-B$ و $B-A$ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_006",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل ساده‌شده عبارت مجموعه‌ای $\\left[ A \\cap (B \\cup A') \\right] \\cup (A \\cap B)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$A$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A \\cap B$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$B$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A \\cup B$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا پرانتز اول را با استفاده از قانون توزیع‌پذیری ساده می‌کنیم: $A \\cap (B \\cup A') = (A \\cap B) \\cup (A \\cap A')$. چون $A \\cap A' = \\emptyset$ است، حاصل این پرانتز برابر $A \\cap B$ می‌شود. حالا عبارت اصلی به شکل $(A \\cap B) \\cup (A \\cap B)$ در می‌آید که بنا بر خاصیت خودتوانی، معادل همان $A \\cap B$ است. بنابراین گزینه ۲ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "از قاعده جذب و توزیع استفاده کنید. وقتی $A$ با $A'$ اشتراک می‌گیرد، پوچ می‌شود و فقط $A \\cap B$ از بخش اول باقی می‌ماند. اجتماع یک مجموعه با خودش نیز بی‌اثر است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_007",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A \\subseteq B$ باشد، حاصل عبارت $\\left( A - B' \\right) \\cup \\left( B \\cap A' \\right)$ با کدام مجموعه برابر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$B - A$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A \\cap B$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$B$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا هر بخش را تحلیل می‌کنیم: در بخش اول $A - B' = A \\cap (B')' = A \\cap B$. چون فرض شده $A \\subseteq B$، می‌دانیم اشتراک آن‌ها برابر خود $A$ است، پس $A \\cap B = A$. بخش دوم عبارت $B \\cap A'$ است که همان $B - A$ را نشان می‌دهد. بنابراین کل عبارت برابر $A \\cup (B - A)$ است. در نمودار ون مشخص است که اگر اعضای $A$ را با اعضای مختص $B$ جمع کنیم، کل مجموعه $B$ تولید می‌شود. پس پاسخ گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی گفته می‌شود $A$ زیرمجموعه $B$ است، بهترین روش فرض کردن دو مجموعه ساده است: مثلاً $A=\\{1\\}$ و $B=\\{1, 2\\}$. با جایگذاری در عبارت، مقدار $\\{1\\} \\cup \\{2\\} = \\{1, 2\\}$ به‌دست می‌آید که دقیقاً برابر $B$ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_008",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموعه $X = [A - (A \\cup B)'] \\cap B'$ با کدام عبارت هم‌ارز است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\emptyset$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A'$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A \\cap B$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A - B$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با استفاده از قانون دمورگان در تفاضل: $A - (A \\cup B)' = A \\cap ((A \\cup B)')' = A \\cap (A \\cup B)$. بنا بر قانون جذب، اشتراک مجموعه $A$ با اجتماعی که شامل خودش است، برابر همان $A$ می‌شود. پس عبارت داخل کروشه برابر $A$ است. در نتیجه عبارت نهایی به‌صورت $A \\cap B'$ در می‌آید که تعریف اصلی تفاضل مجموعه‌ها یعنی $A - B$ است. گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "قسمت $A - (A \\cup B)'$ به ظاهر پیچیده است، اما با تبدیل تفاضل به اشتراک، متمم متمم خنثی می‌شود. از آنجا قانون جذب سریعاً جواب را به $A$ می‌رساند و نهایتاً $A \\cap B'$ همان $A-B$ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_009",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک کلاس ۳۵ نفره، ۱۵ نفر عضو تیم فوتبال و ۱۲ نفر عضو تیم والیبال هستند. اگر ۵ نفر در هر دو تیم عضو باشند، چند نفر در هیچ‌یک از این دو تیم عضو نیستند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۲"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد دانش‌آموزانی که حداقل در یک تیم عضو هستند برابر است با: $n(F \\cup V) = n(F) + n(V) - n(F \\cap V) = 15 + 12 - 5 = 22$. برای یافتن افرادی که در هیچ تیمی عضو نیستند، این مقدار را از کل کلاس کم می‌کنیم: $n(U) - n(F \\cup V) = 35 - 22 = 13$. بنابراین ۱۳ نفر در هیچ تیمی عضویت ندارند. گزینه ۱ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "رابطه سریع $n(U) = n(A) + n(B) - n(A \\cap B) + x$ را استفاده کنید که $x$ تعداد افراد خارج از دو مجموعه است. $35 = 15 + 12 - 5 + x \\implies x = 13$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_010",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک نظرسنجی، ۶۰٪ افراد به مطالعه و ۵۰٪ به ورزش علاقه داشتند. اگر ۲۰٪ به هیچ‌کدام علاقه نداشته باشند، چند درصد از افراد فقط به یک فعالیت علاقه‌مندند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۸۰٪"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵۰٪"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۰٪"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۰٪"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "درصد افرادی که حداقل به یکی از دو فعالیت علاقه‌مندند برابر است با $100 - 20 = 80$ درصد. طبق فرمول اجتماع: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B) \\implies 80 = 60 + 50 - x \\implies x = 30$. یعنی ۳۰٪ به هر دو علاقه دارند. افرادی که فقط به یک فعالیت علاقه دارند (تفاضل متقارن) برابر است با $n(A \\cup B) - n(A \\cap B) = 80 - 30 = 50$ درصد. گزینه ۲ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "جمع درصدهای تک‌تک به‌علاوه فضای بیرون برابر $60 + 50 + 20 = 130$ است، پس ۳۰٪ اضافه همان اشتراک است. حالا از کل کسانی که فعالیتی دارند (۸۰٪)، این ۳۰٪ اشتراک را کم کنید تا ۵۰٪ بماند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_011",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در کلاسی با ۴۰ دانش‌آموز، ۲۸ نفر در المپیاد ریاضی و ۲۱ نفر در المپیاد فیزیک شرکت کرده‌اند. حداقل و حداکثر تعداد افرادی که در هر دو المپیاد شرکت کرده‌اند، به ترتیب کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۷ و ۲۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۰ و ۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹ و ۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹ و ۲۸"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای حداکثر اشتراک، فرض می‌کنیم مجموعه کوچکتر کاملاً زیرمجموعه مجموعه بزرگتر باشد؛ پس حداکثر اشتراک برابر تعداد اعضای المپیاد فیزیک یعنی ۲۱ نفر است. برای حداقل اشتراک، فرض می‌کنیم تعداد افرادی که در هیچ‌کدام شرکت نکرده‌اند صفر باشد (همه در حداقل یک المپیاد باشند). در این حالت $n(M \\cup P) = 40$ خواهد بود. با فرمول اجتماع: $40 = 28 + 21 - x \\implies x = 9$. پس حداقل ۹ نفر باید در هر دو شرکت کرده باشند. محدوده پاسخ بین ۹ و ۲۱ است. گزینه ۳ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "حداکثر اشتراک همیشه برابر است با حداقل اعضای دو مجموعه (یعنی ۲۱). حداقل اشتراک هم وقتی رخ می‌دهد که کل مجموعه مرجع پر شود: مجموع اعضا منهای کل افراد ($28+21-40=9$)."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_012",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک مدرسه ۱۰۰ نفری، ۴۰ نفر فرانسه، ۳۰ نفر آلمانی و ۵۰ نفر اسپانیایی می‌خوانند. ۱۵ نفر فرانسه و آلمانی، ۱۲ نفر فرانسه و اسپانیایی، و ۱۰ نفر آلمانی و اسپانیایی می‌خوانند. اگر ۴ نفر هر سه زبان را بخوانند، چند نفر دقیقاً دو زبان را می‌خوانند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۳۷"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۵"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد افرادی که دقیقاً دو زبان می‌خوانند برابر است با جمع اشتراک‌های دوگانه، منهای ۳ برابر اشتراک سه‌گانه. دلیل این امر آن است که در جمع $(F \\cap G) + (F \\cap S) + (G \\cap S)$، ناحیه مشترک هر سه زبان ۳ بار شمرده شده است و ما می‌خواهیم آن ناحیه اصلاً شمرده نشود. پس: $15 + 12 + 10 - 3(4) = 37 - 12 = 25$. بنابراین ۲۵ نفر دقیقاً دو زبان می‌خوانند. گزینه ۴ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای پیدا کردن «دقیقاً دو تا»، کافی است مجموع اشتراک‌های دوبه‌دو را حساب کنید ($15+12+10=37$) و سپس ۳ برابرِ تعداد اشتراک هر سه (۳ در ۴ مساوی ۱۲) را از آن کم کنید. جواب می‌شود ۲۵."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_013",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از مجموعه‌های زیر نامتناهی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "مجموعه اعداد گویای بین $۱$ و $۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مجموعه مقسوم‌علیه‌های طبیعی عدد $۱۰^{۱۰}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مجموعه اتم‌های موجود در کره زمین"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مجموعه اعداد اول دورقمی"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "بازه بین هر دو عدد حقیقی متمایز، شامل بی‌نهایت عدد گویا و گنگ است، پس مجموعه اعداد گویای بین ۱ و ۲ نامتناهی است. مقسوم‌علیه‌های هر عدد طبیعی محدودند. اعداد اول دورقمی نیز تعداد مشخصی (۲۱ عدد) دارند. اتم‌های کره زمین هرچند بسیار زیادند، اما یک عدد ثابت و متناهی (در یک لحظه خاص) هستند. بنابراین گزینه ۱ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه به یاد داشته باشید که فواصل پیوسته (مثل اعداد حقیقی، گویا و گنگ) بین دو مرز متفاوت، همواره نامتناهی‌اند، در حالی که مقادیر گسسته هرچقدر هم بزرگ باشند (مثل اتم‌های زمین) متناهی محسوب می‌شوند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_014",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A$ یک مجموعه متناهی و $B$ یک مجموعه نامتناهی باشد، کدام‌یک از مجموعه‌های زیر همواره متناهی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$B \\cap A'$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A - B$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$B - A$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A \\cup B$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مجموعه $A - B$ زیرمجموعه‌ای از $A$ است. از آن‌جا که $A$ متناهی است، هر زیرمجموعه از آن نیز قطعاً متناهی خواهد بود. اما $B - A$ با حذف تعداد محدودی از اعضای $B$ همچنان نامتناهی می‌ماند. $A \\cup B$ نیز شامل کل $B$ است پس نامتناهی است. بنابراین گزینه ۲ تنها مجموعه همواره متناهی است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "تفاضل $X - Y$ همیشه زیرمجموعه $X$ است. اگر پایه اول یعنی $A$ متناهی باشد، خروجی قطعاً متناهی است. اما اگر اولی نامتناهی باشد، نتیجه معمولاً نامتناهی است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_015",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در چه شرایطی مجموعه $A \\cap B$ نامتناهی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "تفاضل متقارن آن‌ها تهی باشد."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A$ زیرمجموعه سره یک مجموعه متناهی باشد."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "هر دو مجموعه $A$ و $B$ بازه‌های نامتناهی هم‌پوشان باشند."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "حداقل یکی از آن‌ها نامتناهی باشد."
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اشتراک دو مجموعه تنها زمانی می‌تواند نامتناهی باشد که هر دو مجموعه نامتناهی باشند و تعداد اعضای مشترک آن‌ها نیز نامحدود باشد (مثل دو بازه که هم‌پوشانی دارند). اگر فقط یکی نامتناهی باشد، دومی (که متناهی است) باعث می‌شود اشتراک حداکثر متناهی شود. بنابراین تنها گزینه معقول گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "اشتراک، اندازه مجموعه را محدود به کوچکترین مجموعه می‌کند. پس برای نامتناهی بودن اشتراک، هر دو باید نامتناهی باشند و تازه باید در بی‌نهایت نقطه با هم تلاقی داشته باشند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_016",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموعه $M = \\{x \\in \\mathbb{R} \\mid x^2 < 4 \\text{ و } x \\in \\mathbb{Z}\\}$ چند عضو دارد و آیا متناهی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵ عضو، متناهی"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲ عضو، متناهی"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بی‌نهایت عضو، نامتناهی"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳ عضو، متناهی"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا نامعادله را حل می‌کنیم: $x^2 < 4 \\implies -2 < x < 2$. اما شرط دوم می‌گوید $x$ باید عدد صحیح ($\\mathbb{Z}$) باشد. اعداد صحیح در این بازه فقط $\\{-1, 0, 1\\}$ هستند. این مجموعه دارای ۳ عضو و متناهی است. پس گزینه ۴ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "به کلمه $\\mathbb{Z}$ (اعداد صحیح) توجه کنید! در حالی که بازه اعداد حقیقی $(-2, 2)$ نامتناهی است، شرط صحیح بودن آن را به مجموعه‌ای گسسته و ۳ عضوی محدود می‌کند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_033",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مجموعه‌های $A = \\{x+y, 3\\}$ و $B = \\{5, x-y\\}$ برابر باشند و بدانیم $x, y > 0$، مقدار $xy$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای برابری مجموعه‌ها، باید اعضای آن‌ها نظیر به نظیر برابر باشند. چون مجموعه‌ها دو عضوی‌اند و اعضای ثابت ۳ و ۵ با هم برابر نیستند، تنها حالت ممکن این است که $x+y = 5$ و $x-y = 3$. با جمع دو معادله: $2x = 8 \\implies x = 4$. با قرار دادن در معادله اول: $4 + y = 5 \\implies y = 1$. حاصل‌ضرب $xy = 4 \\times 1 = 4$. پس پاسخ گزینه ۱ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "اعضای مجهول باید جایگزین اعضای معلوم طرف مقابل شوند. پس سریعاً دستگاه $x+y=5$ و $x-y=3$ شکل می‌گیرد که با یک جمع و تفریق ذهنی $x=4$ و $y=1$ مشخص می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_034",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو مجموعه $M = \\{2^x, 9\\}$ و $N = \\{3^y, 16\\}$ با یکدیگر برابرند. حاصل $x+y$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "همانند سؤال قبل، اعضای ثابت نمی‌توانند برابر باشند ($9  eq 16$). پس باید $2^x = 16$ و $3^y = 9$ باشد. از معادله اول $2^x = 2^4 \\implies x = 4$ و از معادله دوم $3^y = 3^2 \\implies y = 2$. مجموع $x+y = 4 + 2 = 6$ است. گزینه ۲ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در برابری مجموعه‌های دو عضوی با پایه‌های متفاوت توانی، معلوم است که پایه ۲ به توان ۴ می‌شود ۱۶ و پایه ۳ به توان ۲ می‌شود ۹. مجموع توان‌ها ۶ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_035",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموعه‌های $X = \\{a^2, a\\}$ و $Y = \\{1, b\\}$ برابرند. اگر $a  eq 1$ باشد، مقدار $b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-2$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای برابری مجموعه‌ها، یکی از حالت‌ها این است که $a^2 = 1$ و $a = b$. اگر $a^2 = 1$ باشد، $a = 1$ یا $a = -1$. اما طبق فرض مسئله $a  eq 1$ است. پس حتماً $a = -1$. در این صورت $b = a = -1$. بنابراین اعضای مجموعه $\\{-1, 1\\}$ خواهند بود و $b = -1$. حالت دوم $a^2 = b$ و $a=1$ است که غیرمجاز است. گزینه ۳ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "چون $a$ نمی‌تواند ۱ باشد و مربع آن باید ۱ شود، تنها گزینه $a=-1$ است. عضو دیگر که همان $b$ است نیز بالاجبار برابر با $-1$ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_041",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $U = \\{1, 2, 3, 4, 5, 6, 7\\}$ مجموعه مرجع باشد و $A = \\{1, 3, 5\\}$ و $B = \\{2, 3, 6\\}$، آن‌گاه اعضای مجموعه $(A \\cup B)'$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\{4, 7\\}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\{4, 5, 7\\}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\{2, 4, 6\\}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\{1, 5, 7\\}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا اجتماع دو مجموعه را تشکیل می‌دهیم: $A \\cup B = \\{1, 2, 3, 5, 6\\}$. سپس برای یافتن متمم، این اعضا را از مجموعه مرجع $U$ حذف می‌کنیم. اعدادی که در $U$ باقی می‌مانند $\\{4, 7\\}$ هستند. بنابراین پاسخ صحیح گزینه ۱ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "عددهایی که نه در $A$ و نه در $B$ حضور دارند را به صورت چشمی از مجموعه مرجع خط بزنید. فقط ۴ و ۷ باقی می‌مانند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_042",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر نمودار ون نشان‌دهنده $n(A-B)=12$، $n(A \\cap B)=5$ و $n(B-A)=x$ باشد و بدانیم $n(A \\cup B) = 30$، مقدار $x$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$13$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$17$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد اعضای اجتماع دو مجموعه برابر است با مجموع نواحی سه‌گانه تفکیک‌شده: $n(A \\cup B) = n(A-B) + n(A \\cap B) + n(B-A)$. با جایگذاری مقادیر: $30 = 12 + 5 + x \\implies 30 = 17 + x \\implies x = 13$. پس گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "اجتماع دقیقاً از سه تکه مجزا تشکیل شده: چپ، وسط و راست. جمع این‌ها باید ۳۰ شود. چون ۱۲ و ۵ در مجموع ۱۷ هستند، باید ۱۳ تای دیگر در تکه راست باشد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_043",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در جبر مجموعه‌ها، معادله $(A \\cap B) \\cup (A \\cap B') \\cup (A' \\cap B) = A \\cup B$ همواره برقرار است. این عبارت با استفاده از کدام قانون به‌سادگی اثبات می‌شود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "تفاضل متقارن"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "قانون خودتوانی"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "توزیع‌پذیری (فاکتورگیری مجموعه‌ای)"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "قوانین دمورگان"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر به دو بخش اول عبارت $(A \\cap B) \\cup (A \\cap B')$ دقت کنیم، می‌توانیم از $A \\cap$ به نوعی «فاکتور» بگیریم (قانون توزیع‌پذیری برعکس). پس $A \\cap (B \\cup B') = A \\cap U = A$. حالا عبارت اصلی به $A \\cup (A' \\cap B)$ تبدیل می‌شود. با یک توزیع‌پذیری دیگر، $(A \\cup A') \\cap (A \\cup B) = U \\cap (A \\cup B) = A \\cup B$. بنابراین اساس ساده‌سازی، قانون توزیع‌پذیری است. گزینه ۳ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هروقت دیدید پرانتزهایی مشابه هم با یک علامت تفاوت در حال اجتماع هستند، مستقیماً یاد قانون توزیع‌پذیری بیفتید. مثل فاکتورگیری در جبر است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_044",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر برای دو مجموعه $A$ و $B$ رابطه $A - B = \\emptyset$ برقرار باشد و بدانیم $A \\cup B = B$， کدام‌یک از گزینه‌های زیر لزوماً صحیح است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$A \\cap B = \\emptyset$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$B \\subseteq A$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A = \\emptyset$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$A \\subseteq B$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رابطه $A - B = \\emptyset$ نشان می‌دهد که هیچ عضوی در $A$ وجود ندارد که در $B$ نباشد، یعنی تمام اعضای $A$ داخل $B$ هستند. پس $A \\subseteq B$ است. رابطه دوم نیز دقیقاً همین مفهوم را تأیید می‌کند؛ وقتی اجتماع $A$ با $B$ چیز جدیدی به $B$ اضافه نکند، یعنی $A$ درون $B$ قرار دارد. بنابراین لزوماً $A \\subseteq B$ است. گزینه ۴ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هم تفاضل $A-B=\\emptyset$ و هم $A \\cup B = B$ هر دو تعریف‌های هم‌ارز برای زیرمجموعه بودن $A$ در $B$ هستند. نیازی به محاسبه نیست."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_057",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموعه‌ای $n$ عضوی دارای ۱۲۷ زیرمجموعه غیرتهی است. این مجموعه چند عضو دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$128$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد کل زیرمجموعه‌های یک مجموعه $n$ عضوی برابر $2^n$ است. تعداد زیرمجموعه‌های غیرتهی برابر $2^n - 1$ است. طبق فرض: $2^n - 1 = 127 \\implies 2^n = 128$. از آنجا که $2^7 = 128$، پس $n = 7$. یعنی مجموعه ۷ عضو دارد. بنابراین گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی حرف از زیرمجموعه‌ها می‌شود توان‌های دو را به یاد بیاورید. عدد ۱۲۷ دقیقاً یکی کمتر از ۱۲۸ ($2^7$) است. پس تعداد اعضا ۷ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_058",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر یک مجموعه ۴ عضوی داشته باشیم، تعداد زیرمجموعه‌هایی که دقیقاً شامل ۲ عضو مشخص باشند، چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض کنید مجموعه $\\{a, b, c, d\\}$ را داریم و می‌خواهیم تمام زیرمجموعه‌هایی را بیابیم که اعضای مشخص $a$ و $b$ حتماً در آن‌ها باشند. در این صورت فقط برای اعضای دیگر (یعنی $c$ و $d$) اختیار داریم که آن‌ها را برداریم یا خیر. از آن‌جا که ۲ عضو دیگر باقی مانده، تعداد حالت‌های انتخاب برابر $2^2 = 4$ است. این ۴ زیرمجموعه عبارتند از: $\\{a,b\\}$، $\\{a,b,c\\}$، $\\{a,b,d\\}$، $\\{a,b,c,d\\}$. گزینه ۲ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در شمارش زیرمجموعه‌ها با شرایط «بودن یا نبودن قطعی»، آن اعضای قطعی را کنار اجازه دهید. تعداد اعضای آزاد باقی‌مانده (در اینجا ۲ عضو) را در توان ۲ قرار دهید. $2^2 = 4$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_059",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مجموعه $A$ دارای ۵ عضو باشد، تعداد زیرمجموعه‌هایی از $A$ که حداقل شامل ۳ عضو باشند، چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "زیرمجموعه‌هایی که حداقل ۳ عضو دارند شامل زیرمجموعه‌های ۳ عضوی، ۴ عضوی و ۵ عضوی هستند. تعداد زیرمجموعه‌های ۳ عضوی: $\\binom{5}{3} = 10$. تعداد ۴ عضوی‌ها: $\\binom{5}{4} = 5$. تعداد ۵ عضوی‌ها: $\\binom{5}{5} = 1$. مجموع آن‌ها $10 + 5 + 1 = 16$ می‌شود. از راه متمم نیز کل زیرمجموعه‌ها ۳۲ تاست که زیرمجموعه‌های ۰، ۱ و ۲ عضوی (به ترتیب ۱، ۵ و ۱۰) را کم کنیم: $32 - 16 = 16$. پس گزینه ۳ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در مجموعه‌های ۵ عضوی توزیع ضرایب بسط دو جمله‌ای اینطور است: ۱، ۵، ۱۰، ۱۰، ۵، ۱. بخش پایانی (حداقل ۳ عضو) شامل ۱۰، ۵، و ۱ است که جمعشان ۱۶ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_060",
+    "subject": "math",
+    "topic_key": "sets",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مجموعه‌های $A$ و $B$ زیرمجموعه‌ای از مجموعه مرجع $U$ باشند که $n(U)=50$، $n(A)=20$ و $n(B)=15$. کمترین مقدار ممکن برای $n(A' \\cup B')$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$50$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$35$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با استفاده از قوانین دمورگان می‌دانیم که $n(A' \\cup B') = n((A \\cap B)') = n(U) - n(A \\cap B)$. برای اینکه این عبارت کمترین مقدار خود را داشته باشد، باید مقدار $n(A \\cap B)$ بیشترین حد ممکن را داشته باشد. حداکثر اشتراک دو مجموعه برابر تعداد اعضای مجموعه کوچکتر است، یعنی $n(A \\cap B) \\le 15$. پس ماکسیمم اشتراک ۱۵ است. بنابراین مینیمم متمم اشتراک برابر است با $50 - 15 = 35$. گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "متمم اجتماعِ متمم‌ها دقیقاً یعنی «همه چیز به جز اشتراکشان». برای کم شدن این مقدار، باید اشتراک بیشترین حالت باشد. در بهترین حالت کل ۱۵ عضو $B$ داخل $A$ هستند. پس ۳۵ نفر بیرون اشتراک می‌مانند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  }
+]

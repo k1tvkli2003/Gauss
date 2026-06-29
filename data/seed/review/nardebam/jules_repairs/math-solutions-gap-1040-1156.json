@@ -1,0 +1,93 @@
+{
+  "task_id": "math-solutions-gap-1040-1156",
+  "subject": "math",
+  "review_notes": [
+    "Questions 1040-1069 were requested but are missing because the provided images start from question 1070 on page_0101.jpg."
+  ],
+  "solutions": [
+    {
+      "question_number": 1148,
+      "solution_page": 108,
+      "solution_text": "ابتدا مقادیر $a$ و $n$ را محاسبه می‌کنیم:\n$$ \\lim_{x \\to -\\infty} \\frac{ax^n + 12}{\\sqrt{1-x} + x + 1} = \\lim_{x \\to -\\infty} \\frac{ax^n}{x} = 4 \\Rightarrow \\begin{cases} n = 1 \\\\ a = 4 \\end{cases} $$\nدر نتیجه:\n$$ \\lim_{x \\to -3} \\frac{4x + 12}{\\sqrt{1-x} + x + 1} $$\n$$ = \\lim_{x \\to -3} \\frac{4(x + 3)}{\\sqrt{1-x} + x + 1} \\times \\frac{\\sqrt{1-x} - (x + 1)}{\\sqrt{1-x} - (x + 1)} $$\n$$ = \\lim_{x \\to -3} \\frac{16(x + 3)}{1 - x - (x + 1)^2} = \\lim_{x \\to -3} \\frac{16(x + 3)}{-x^2 - 3x} $$\n$$ = \\lim_{x \\to -3} \\frac{16(x + 3)}{-x(x + 3)} = \\frac{16}{3} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1149,
+      "solution_page": 108,
+      "solution_text": "ابتدا مقادیر $a$ و $n$ را به دست می‌آوریم:\n$$ \\lim_{x \\to -\\infty} \\frac{ax^n + \\sqrt{4x^2 + 20}}{2x + 4} = \\lim_{x \\to -\\infty} \\frac{ax^n + |2x|}{2x} = \\lim_{x \\to -\\infty} \\frac{ax^n - 2x}{2x} = \\frac{1}{2} \\Rightarrow \\begin{cases} n = 1 \\\\ a = 3 \\end{cases} $$\nدقت کنید اگر $n > 1$ باشد، حاصل حد $\\infty$ و اگر $n < 1$ باشد حاصل حد $\\infty$ می‌باشد. خواهیم داشت:\n$$ \\lim_{x \\to -2} f(x) = \\lim_{x \\to -2} \\frac{3x + \\sqrt{4x^2 + 20}}{2x + 4} \\times \\frac{3x - \\sqrt{4x^2 + 20}}{3x - \\sqrt{4x^2 + 20}} $$\n$$ = \\lim_{x \\to -2} \\frac{5x^2 - 20}{-12(2x + 4)} = \\lim_{x \\to -2} \\frac{5(x - 2)(x + 2)}{-24(x + 2)} = \\frac{5}{6} $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1150,
+      "solution_page": 108,
+      "solution_text": "ابتدا مقدار $a$ را محاسبه می‌کنیم:\n$$ \\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\frac{\\sqrt{x^2 + 8} - 3ax}{x - a} = \\lim_{x \\to +\\infty} \\frac{|x| - 3ax}{x} $$\n$$ = \\lim_{x \\to +\\infty} \\frac{x - 3ax}{x} = 1 - 3a = -2 \\Rightarrow a = 1 $$\nدر نتیجه:\n$$ \\lim_{x \\to 1} f(x) = \\lim_{x \\to 1} \\frac{\\sqrt{x^2 + 8} - 3x}{x - 1} $$\n$$ = \\lim_{x \\to 1} \\frac{\\sqrt{x^2 + 8} - 3x}{x - 1} \\times \\frac{\\sqrt{x^2 + 8} + 3x}{\\sqrt{x^2 + 8} + 3x} = \\lim_{x \\to 1} \\frac{8 - 8x^2}{6(x - 1)} $$\n$$ = \\lim_{x \\to 1} \\frac{-8(x - 1)(x + 1)}{6(x - 1)} = -\\frac{8}{3} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1151,
+      "solution_page": 108,
+      "solution_text": "تابع خطی $f$ را به صورت $f(x) = ax + b$ می‌نویسیم:\n$$ \\lim_{x \\to -\\infty} g(x) = \\lim_{x \\to -\\infty} \\frac{2 - 3x}{ax + b} = \\frac{-3}{a} = 6 \\Rightarrow a = -\\frac{1}{2} $$\n$$ \\lim_{x \\to 2^+} g(x) = \\lim_{x \\to 2^+} \\frac{2 - 3x}{-\\frac{1}{2}x + b} = +\\infty $$\n$x = 2$ ریشه مخرج کسر است. $\\Rightarrow -1 + b = 0 \\Rightarrow b = 1$\nبنابراین:\n$$ f(x) = -\\frac{1}{2}x + 1 \\Rightarrow f(4) = -2 + 1 = -1 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1152,
+      "solution_page": 108,
+      "solution_text": "اگر $a > b > 1$ باشد، در حالتی که $x \\to +\\infty$ می‌توانیم به جای $a^x + b^x$ از $a^x$ و در حالتی که $x \\to -\\infty$ از $b^x$ استفاده کنیم.\n$$ f(x) = \\frac{2^{x+3} - 4^{x-1}}{2^{x+1} + 2^{2x+1}} = \\frac{8 \\times (2^x) - \\frac{1}{4}(4^x)}{2 \\times (2^x) + 2(4^x)} $$\n$$ \\lim_{x \\to -\\infty} f(x) = \\lim_{x \\to -\\infty} \\frac{8 \\times 2^x}{2 \\times 2^x} = 4 $$\n$$ \\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\frac{-\\frac{1}{4} \\times 4^x}{2 \\times 4^x} = -\\frac{1}{8} $$\n$$ \\Rightarrow \\frac{\\lim_{x \\to -\\infty} f(x)}{\\lim_{x \\to +\\infty} f(x)} = -32 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1153,
+      "solution_page": 108,
+      "solution_text": "حد راست: اگر $x \\to \\frac{\\pi}{2}^+$ ، آن‌گاه $\\tan x \\to -\\infty$ . بنابراین ($f(-\\infty)$) مطلوب است:\n$$ \\lim_{x \\to -\\infty} f(x) = \\frac{3^{-\\infty} - 2}{3^{-\\infty} + 1} = \\frac{0 - 2}{0 + 1} = -2 $$\nحد چپ: اگر $x \\to \\frac{\\pi}{2}^-$ ، آن‌گاه $\\tan x \\to +\\infty$ . بنابراین ($f(+\\infty)$) مطلوب است.\n$$ \\lim_{x \\to +\\infty} \\frac{3^x - 2}{3^{x-1} + 1} = \\lim_{x \\to +\\infty} \\frac{3^x}{3^{x-1}} = 3 $$\nدر نتیجه اختلاف حد چپ و راست برابر $3 - (-2) = 5$ است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1154,
+      "solution_page": 108,
+      "solution_text": "هر یک از گزینه‌ها را بررسی می‌کنیم:\n$1$: $\\lim_{x \\to +\\infty} \\log_2 \\frac{2^{x+1} - 4}{2^x - 1} = \\lim_{x \\to +\\infty} \\log_2 \\frac{2^{x+1}}{2^x} = \\log_2 2 = 1$ \\checkmark\n$2$: $\\lim_{x \\to -\\infty} \\log_2 \\frac{2^{x+1} - 4}{2^x - 1} = \\log_2 \\frac{0 - 4}{0 - 1} = \\log_2 4 = 2$ \\checkmark\n$3$: $\\lim_{x \\to 0^-} \\log_2 \\frac{2^{x+1} - 4}{2^x - 1} = \\log_2 \\frac{2 - 4}{0^-} = \\log_2 \\frac{-2}{0^-} = \\log_2 +\\infty = +\\infty$ \\checkmark\n$4$: $\\lim_{x \\to 0^+} \\log_2 \\frac{2^{x+1} - 4}{2^x - 1} = \\log_2 \\frac{-2}{0^+} = \\log_2 0^+ = -\\infty$ \\times",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1155,
+      "solution_page": 108,
+      "solution_text": "$\\infty$ با هر عدد حقیقی جمع یا تفریق شود، حاصل $\\infty$ است.\n$$ \\lim_{x \\to +\\infty} 4 - 3f(2 - x) = -\\infty \\Rightarrow 4 - 3f(2 - \\infty) = -\\infty $$\n$$ \\Rightarrow 4 - 3f(-\\infty) = -\\infty \\Rightarrow 3f(-\\infty) = 4 + \\infty $$\n$$ \\Rightarrow 3f(-\\infty) = +\\infty \\Rightarrow f(-\\infty) = +\\infty $$\n$$ \\Rightarrow \\lim_{x \\to -\\infty} f(x) = +\\infty $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1156,
+      "solution_page": 108,
+      "solution_text": "در نقاط $A$ و $C$ خط مماس افقی و شیب آن صفر است؛ یعنی مشتق در این نقاط برابر صفر است.\nدر نقطهٔ $B$ شیب خط مماس که همان مشتق می‌باشد، منفی است.\nدر نقطهٔ $D$ شیب خط مماس مثبت بوده؛ بنابراین در نقاط داده‌شده در نقطهٔ $D$ بیشترین مقدار مشتق وجود دارد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0108.jpg",
+          "region": [
+            128,
+            706,
+            235,
+            874
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع با نقاط مشخص شده A, B, C, D"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

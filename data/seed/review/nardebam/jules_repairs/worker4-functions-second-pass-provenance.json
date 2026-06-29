@@ -1,0 +1,10 @@
+{
+  "worker": 4,
+  "source_pdf": "C:/Users/K1/Desktop/New folder (2)/@kotob_konkoria(riazi_jame_tajrobi_nardebam_1405)/7.pdf",
+  "method": "AI visual inspection of rendered source pages",
+  "covered": {
+    "39": ["672", "673", "674", "675", "676", "677", "678", "679", "680"],
+    "40": ["681", "682", "683"]
+  },
+  "missing": ["525-608", "684-704"]
+}

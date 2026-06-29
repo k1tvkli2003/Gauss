@@ -1,0 +1,100 @@
+{
+  "task_id": "math-solutions-02",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 204,
+      "solution_page": 21,
+      "solution_text": "دامنهٔ معادله $D=[۳, +\\infty)$ می‌باشد. دو طرف معادله را به توان ۲ می‌رسانیم.\n$\\sqrt{۲x-۵} - \\sqrt{x-۳} = ۱$\n$\\Rightarrow ۲x-۵ + x-۳ - ۲\\sqrt{x-۳}\\sqrt{۲x-۵} = ۱$\n$\\Rightarrow ۳x-۹ - ۲\\sqrt{x-۳}\\sqrt{۲x-۵} = ۰$\n$\\Rightarrow ۳(x-۳) - ۲\\sqrt{x-۳}\\sqrt{۲x-۵} = ۰$\n$\\Rightarrow \\sqrt{x-۳}(۳\\sqrt{x-۳} - ۲\\sqrt{۲x-۵}) = ۰$\n$\\Rightarrow \\begin{cases} \\sqrt{x-۳} = ۰ \\Rightarrow x=۳ \\quad \\checkmark \\\\ ۳\\sqrt{x-۳} = ۲\\sqrt{۲x-۵} \\end{cases}$\nدر معادلهٔ دوم، دو طرف را به توان ۲ می‌رسانیم.\n$۹(x-۳) = ۴(۲x-۵) \\Rightarrow x=۷ \\quad \\checkmark$\nبنابراین ریشهٔ بزرگ‌تر معادله $x=۷$ می‌باشد:\n$\\alpha^۲ - ۶\\alpha = ۴۹ - ۴۲ = ۷$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 205,
+      "solution_page": 21,
+      "solution_text": "عبارت $\\sqrt{۲x+۳} + \\sqrt{۲x-۵}$ را برابر با $k$ در نظر می‌گیریم.\n$\\begin{cases} \\sqrt{۲x+۳} + \\sqrt{۲x-۵} = k \\\\ \\sqrt{۲x+۳} - \\sqrt{۲x-۵} = ۲ \\end{cases}$\n$\\xrightarrow{\\text{ضرب}} (\\sqrt{۲x+۳} + \\sqrt{۲x-۵})(\\sqrt{۲x+۳} - \\sqrt{۲x-۵}) = ۲k$\n$\\Rightarrow ۲k = (۲x+۳) - (۲x-۵) \\Rightarrow ۲k = ۸ \\Rightarrow k = ۴$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 206,
+      "solution_page": 21,
+      "solution_text": "روش اول: دو طرف معادله را با فرض $x \\ge ۵$ به توان ۲ می‌رسانیم:\n$\\sqrt{x+۱} + \\sqrt{x-۵} = ۳ \\Rightarrow (\\sqrt{x+۱} + \\sqrt{x-۵})^۲ = ۹$\n$\\Rightarrow ۲x - ۴ + ۲\\sqrt{x^۲-۴x-۵} = ۹$\n$\\Rightarrow ۲\\sqrt{x^۲-۴x-۵} = ۱۳ - ۲x$\n$\\xrightarrow{x \\le \\frac{۱۳}{۲}} ۴(x^۲-۴x-۵) = (۱۳-۲x)^۲$\n$\\Rightarrow ۳۶x = ۱۸۹ \\Rightarrow ۴x=۲۱ \\Rightarrow ۴x-۱=۲۰$\n\nروش دوم: عبارت $\\sqrt{x+۱} - \\sqrt{x-۵}$ را $k$ می‌نامیم.\n$\\begin{cases} \\sqrt{x+۱} - \\sqrt{x-۵} = k \\\\ \\sqrt{x+۱} + \\sqrt{x-۵} = ۳ \\end{cases}$\n$\\xrightarrow{\\text{ضرب}} ۳k = (x+۱) - (x-۵) = ۶ \\Rightarrow k = ۲$\nبا جمع دو معادلهٔ بالا خواهیم داشت:\n$۲\\sqrt{x+۱} = k+۳ = ۵ \\Rightarrow ۴(x+۱) = ۲۵ \\Rightarrow ۴x-۱=۲۰$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 207,
+      "solution_page": 21,
+      "solution_text": "دامنهٔ معادله $D=[\\frac{۳}{۲}, ۳]$ می‌باشد. دو طرف معادله را به توان ۲ می‌رسانیم.\n$\\sqrt{۲x-۱} - \\sqrt{۳-x} = ۳$\n$\\Rightarrow ۲x-۱ + ۳-x - ۲\\sqrt{(۲x-۱)(۳-x)} = ۹$\n$\\Rightarrow ۲\\sqrt{-۲x^۲+۷x-۳} = x-۷$\nشرط وجود جواب برای معادلهٔ به دست آمده $x \\ge ۷$ است که اشتراک آن با دامنه $\\emptyset$ می‌باشد. یعنی معادله ریشهٔ حقیقی ندارد.\nتذکر: عدم وجود جواب برای این معادله به روش یکنوایی تابع به سادگی قابل اثبات است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 208,
+      "solution_page": 21,
+      "solution_text": "اگر جمع چند عبارت منفی برابر صفر باشد، هر یک از آن عبارات برابر صفر خواهند بود.\nدر این معادله جمع در عبارت رادیکالی با فرجهٔ زوج برابر صفر شده است در نتیجه هر دو عبارت برابر صفر می‌باشند. ابتدا عبارت دوم را مساوی صفر قرار داده، ریشه‌های آن را در عبارت اول امتحان می‌کنیم زیرا ریشهٔ قابل قبول باید هر دو عبارت را صفر کند.\n$\\sqrt{x^۲-۵x+۴} = ۰ \\Rightarrow x^۲-۵x+۴ = ۰$\n$\\Rightarrow (x-۱)(x-۴) = ۰ \\Rightarrow \\begin{cases} x=۱ & \\text{غ ق ق} \\\\ x=۴ & \\checkmark \\end{cases}$\n$x=۱$ ریشهٔ عبارت اول نمی‌باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 209,
+      "solution_page": 21,
+      "solution_text": "عبارت $x^۲+x+۳$ را $k$ می‌نامیم.\n$\\sqrt{x^۲+x+۳} = ۲x^۲+۲x \\Rightarrow \\sqrt{k} = ۲k-۶$\nبا شرط $k \\ge ۳$ دو طرف معادله را به توان ۲ می‌رسانیم:\n$k = ۴k^۲-۲۴k+۳۶ \\Rightarrow ۴k^۲-۲۵k+۳۶ = ۰$\n$\\Rightarrow k = \\frac{۲۵ \\pm \\sqrt{۶۲۵-۵۷۶}}{۸} = \\frac{۲۵ \\pm ۷}{۸} \\Rightarrow \\begin{cases} k=۴ \\\\ k=\\frac{۹}{۴} \\quad \\text{غ ق ق} \\end{cases}$\n$\\Rightarrow x^۲+x+۳ = ۴ \\Rightarrow x^۲+x-۱ = ۰ \\Rightarrow \\alpha + \\beta = S = -۱$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 210,
+      "solution_page": 21,
+      "solution_text": "عبارت $x^۲+۷x$ را $k$ می‌نامیم.\n$x^۲+۷x = \\sqrt{x^۲+۷x+۱۲} \\Rightarrow k = \\sqrt{k+۱۲}$\n$\\xrightarrow{k \\ge ۰} k^۲ = k+۱۲ \\Rightarrow k^۲-k-۱۲ = ۰$\n$\\Rightarrow (k+۳)(k-۴) = ۰ \\Rightarrow \\begin{cases} k=-۳ & \\text{غ ق ق} \\\\ k=۴ & \\checkmark \\end{cases}$\n$\\Rightarrow x^۲+۷x = ۴ \\Rightarrow x^۲+۷x-۴ = ۰ \\Rightarrow P = \\alpha\\beta = -۴$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 211,
+      "solution_page": 21,
+      "solution_text": "دو طرف معادلهٔ $x = \\sqrt{y+۲} + \\sqrt{y-۳}$ را با شرط $y \\ge ۳$ به توان ۲ می‌رسانیم.\n$x^۲ = y+۲ + y-۳ + ۲\\sqrt{(y+۲)(y-۳)}$\n$\\Rightarrow x^۲ = ۲y-۱ + ۲\\sqrt{(y+۲)(y-۳)}$\nاز طرفی: $x^۲ = ۲y-۱$\n$\\Rightarrow ۲\\sqrt{(y+۲)(y-۳)} = ۰ \\Rightarrow \\begin{cases} y=-۲ \\quad \\text{غ ق ق} \\quad (y \\ge ۳) \\\\ y=۳ \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 212,
+      "solution_page": 21,
+      "solution_text": "با توجه به این‌که تعداد ریشه‌ها مطلوب است، از روش رسم استفاده می‌کنیم. دو نمودار $y = \\sqrt{x+۳}$ و $y = |x|+۱$ را رسم می‌نماییم.\n$\\alpha$ و $\\beta$ ریشه‌های معادله می‌باشند.\n(واضح است $\\beta = ۱$ می‌باشد.)",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0021.jpg",
+          "box": [
+            110,
+            2400,
+            650,
+            2800
+          ],
+          "placement": "solution",
+          "alt": "نمودار توابع y = \\sqrt{x+۳} و y = |x|+۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 213,
+      "solution_page": 21,
+      "solution_text": "$x=۰$ یکی از ریشه‌های معادلهٔ $\\sqrt{x+۴} = a + |x-۱|$ است، بنابراین در آن صدق می‌کند.\n$\\sqrt{۰+۴} = a + |۰-۱| \\Rightarrow a = ۱ \\Rightarrow \\sqrt{x+۴} = ۱ + |x-۱|$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": [
+        "Solution continues on the next page"
+      ]
+    }
+  ]
+}

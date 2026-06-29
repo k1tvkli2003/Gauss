@@ -1,0 +1,816 @@
+{
+  "task_id": "math-solutions-04",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 640,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "اگر $k = g^{-1}(6)$ باشد، آن‌گاه $g(k) = 6$ است.\n$g(k) = k^3 - 2 = 6 \\Rightarrow k=2$\n$\\Rightarrow f^{-1} \\circ g^{-1}(6) = f^{-1}(g^{-1}(6)) = f^{-1}(2)$\nاگر $a = f^{-1}(2)$ باشد، آن‌گاه $f(a) = 2$ است.\n$f(a) = \\sqrt[3]{a-2} + 1 = 2 \\Rightarrow a-2 = 1 \\Rightarrow a=3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 641,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "دامنه تابع $f^{-1} \\circ g$ به صورت زیر است:\n$D_{f^{-1} \\circ g} = \\{x \\mid x \\in D_g , g(x) \\in D_{f^{-1}}\\}$\n$g(x) = \\sqrt{x-1} \\Rightarrow x-1 \\ge 0 \\Rightarrow x \\ge 1 \\Rightarrow D_g = [1, +\\infty) \\quad (1)$\nمی‌دانیم دامنه $f^{-1}$ همان برد $f$ است.\n$f(x) = \\sqrt{x+1} + 2 \\Rightarrow \\sqrt{x+1} \\ge 0 \\Rightarrow \\sqrt{x+1} + 2 \\ge 2 \\Rightarrow f(x) \\ge 2 \\Rightarrow R_f = D_{f^{-1}} = [2, +\\infty)$\nخواهیم داشت:\n$g(x) \\in D_{f^{-1}} \\Rightarrow g(x) \\ge 2 \\Rightarrow \\sqrt{x-1} \\ge 2 \\Rightarrow x-1 \\ge 4 \\Rightarrow x \\ge 5 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow D_{f^{-1} \\circ g} = [5, +\\infty)$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 642,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "دو خط $a = 3y - 2x$ و $12 = ax + by$ وارون یکدیگر هستند.\nبا عوض‌کردن جای $x$ و $y$ در تابع $12 = ax + by$ وارون آن به دست می‌آید که بر خط $a = 3y - 2x$ منطبق است.\n$\\begin{cases} ax + by = 12 \\Rightarrow ay + bx = 12 \\\\ 3y - 2x = a \\end{cases}$\nشرط انطباق: $\\frac{a}{3} = \\frac{b}{-2} = \\frac{12}{a}$\nدر نتیجه:\n$\\frac{a}{3} = \\frac{12}{a} \\Rightarrow a^2 = 36 \\Rightarrow \\begin{cases} a=6 \\Rightarrow b=-4 \\Rightarrow a+b=2 \\\\ a=-6 \\Rightarrow b=4 \\Rightarrow a+b=-2 \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 643,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "خط $4 = mx + 3y$ در صورتی نسبت به نیمساز ناحیه اول و سوم متقارن است که شیب خط برابر $-1$ باشد.\n$y = -\\frac{m}{3}x + \\frac{4}{3} \\Rightarrow -\\frac{m}{3} = -1 \\Rightarrow m=3$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 644,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "نمودار $f^{-1}(x)$ را رسم می‌کنیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0061.jpg",
+          "box": [
+            1160,
+            1630,
+            1630,
+            2070
+          ],
+          "alt": "نمودار f و f وارون",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 645,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "دامنه تابع $y = \\sqrt{f(x) - f^{-1}(x)}$ مجموعه جواب نامعادله $f(x) \\ge f^{-1}(x)$ است که با توجه به شکل بازه $[-1, 3]$ می‌باشد.\nنمودار $f^{-1}(x)$ را رسم می‌کنیم.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0061.jpg",
+          "box": [
+            1150,
+            2190,
+            1650,
+            2610
+          ],
+          "alt": "نمودار f و f وارون",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 646,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "دامنه تابع $y = \\sqrt{f^{-1}(x) - x}$ مجموعه جواب نامعادله $f^{-1}(x) \\ge x$ است. با توجه به نمودار بازه $[-2, 2]$ دامنه تابع فوق است که اعداد صحیح $-2, -1, 0, 1, 2$ عضو آن می‌باشند.\nتابع $f(x)$ را رسم می‌کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0061.jpg",
+          "box": [
+            120,
+            310,
+            640,
+            770
+          ],
+          "alt": "نمودار f و f وارون",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 647,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "قرینه آن نسبت به نیمساز ربع اول و سوم تابع $f^{-1}(x)$ است.\nاگر نمودار تابع $y = x + 6\\sqrt{x}$ را نسبت به نیمساز ناحیه اول و سوم قرینه کنیم، وارون آن به دست می‌آید. ضابطه وارون تابع را به دست می‌آوریم:\n$y = x + 6\\sqrt{x} = (\\sqrt{x} + 3)^2 - 9 \\Rightarrow (\\sqrt{x} + 3)^2 = y + 9$\n$\\Rightarrow \\sqrt{x} + 3 = \\sqrt{y + 9} \\Rightarrow \\sqrt{x} = \\sqrt{y + 9} - 3$\n$\\Rightarrow x = (\\sqrt{y + 9} - 3)^2 \\Rightarrow y^{-1} = (\\sqrt{x + 9} - 3)^2$\n$= (\\sqrt{x} + a - b)^2 \\Rightarrow \\begin{cases} a=9 \\\\ b=3 \\end{cases} \\Rightarrow a-b = 6$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 648,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "نمودار $f^{-1}$ را رسم می‌کنیم.\nبرای محاسبه مساحت چهارضلعی $OABC$ (که در این مسئله لوزی است) کافی است مساحت مثلث $OAB$ را به دست آورده و دو برابر کنیم.\n$O(0, 0) , A(3, 1) , B(4, 4)$\n$S_{OAB} = \\frac{1}{2} | (0+4+0) - (0+12+0) | = 4$\n$\\Rightarrow S_{OABC} = 4 \\times 2 = 8$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0061.jpg",
+          "box": [
+            140,
+            1160,
+            480,
+            1550
+          ],
+          "alt": "نمودار چهارضلعی",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 649,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "نمودار تابع مورد نظر باید پایین نیمساز ناحیه اول و سوم باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0061.jpg",
+          "box": [
+            150,
+            1690,
+            1070,
+            2730
+          ],
+          "alt": "نمودار توابع در گزینه‌ها",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 650,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "روش اول: وارون تابع $f$ را به دست می‌آوریم.\n$y = \\frac{x+4}{x-2} \\Rightarrow xy - 2y = x + 4 \\Rightarrow x = \\frac{2y+4}{y-1} \\Rightarrow f^{-1}(x) = \\frac{2x+4}{x-1}$\nخواهیم داشت:\n$f^{-1}(x) = f(x) \\Rightarrow \\frac{2x+4}{x-1} = \\frac{x+4}{x-2} \\Rightarrow (2x+4)(x-2) = (x+4)(x-1) \\Rightarrow x^2 - 3x - 4 = 0 \\Rightarrow \\begin{cases} x = -1 \\Rightarrow y = -1 \\\\ x = 4 \\Rightarrow y = 4 \\end{cases}$\n$A(-1, -1) \\quad B(4, 4) \\Rightarrow AB = \\sqrt{25+25} = 5\\sqrt{2}$\nروش دوم: تابع هموگرافیک $y = \\frac{ax+b}{cx+d}$ وارون خود را در صورت تلاقی بر روی خط $y = x$ قطع می‌کند. (اگر با وارون خود برابر نباشد.)\nبنابراین:\n$\\frac{x+4}{x-2} = x \\Rightarrow x^2 - 3x - 4 = 0 \\Rightarrow \\begin{cases} x = -1 \\\\ x = 4 \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 651,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "اگر تابع هموگرافیک $y = \\frac{ax+b}{cx+d}$ نیمساز ربع اول و سوم را در دو نقطه قطع کند، وارون خود را در همان دو نقطه قطع می‌کند و اگر بر آن مماس باشد، بر وارون خود نیز در همان نقطه مماس است و اگر قطع نکند، وارون خود را نیز قطع نمی‌کند مگر آن که بر وارون خود منطبق باشد.\nتابع $f(x) = \\frac{4x+m}{x-2}$ باید بر $y=x$ مماس باشد. شرط مماس‌بودن آن است که معادله به دست آمده ریشه مضاعف داشته باشد.\n$\\frac{4x+m}{x-2} = x \\Rightarrow x^2 - 6x - m = 0$\n$\\Delta = 0 \\Rightarrow 36 + 4m = 0 \\Rightarrow m = -9$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 652,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "تابع هموگرافیک $y = \\frac{ax+b}{cx+d}$ وارون خود را در صورت تلاقی بر روی خط $y = x$ قطع می‌کند.\n$f(x) = \\frac{3x+8}{x+1} = x \\Rightarrow x^2 - 2x - 8 = 0 \\Rightarrow (x+2)(x-4) = 0 \\Rightarrow \\begin{cases} x = -2 \\Rightarrow y = -2 \\\\ x = 4 \\Rightarrow y = 4 \\end{cases} \\Rightarrow y_1 + y_2 = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 653,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "وارون تابع $f(x) = \\frac{2x-5}{x-2}$ با $f(x)$ برابر است ($a = -d$)؛ بنابراین:\n$fof^{-1}(a) - f^{-1}(3a) = a - 1 \\Rightarrow a - f(3a) = a - 1 \\Rightarrow f(3a) = 1 \\Rightarrow \\frac{6a-5}{3a-2} = 1 \\Rightarrow 6a-5 = 3a-2 \\Rightarrow a = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 654,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "با شرط $x \\ge -2$ وارون تابع $f(x) = x^2 + 4x - 1$ را به دست می‌آوریم.\n$y = (x+2)^2 - 5 \\Rightarrow (x+2)^2 = y+5 \\xrightarrow{x \\ge -2} x+2 = \\sqrt{y+5} \\Rightarrow x = \\sqrt{y+5} - 2 \\Rightarrow f^{-1}(x) = \\sqrt{x+5} - 2$\nبنابراین:\n$f^{-1}(x) = g(x) \\Rightarrow \\sqrt{x+5} - 2 = \\frac{x^2}{2} - 7$\nبا امتحان گزینه‌ها $x = 4$ درست است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 655,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "اگر تابع $f$ وارون خود را در $(a,b)$ قطع کند، قطعاً آن را در $(b,a)$ نیز قطع می‌کند.\n$f(x) = -x^2 + ax + b$\n$\\begin{cases} f(1) = 2 \\Rightarrow -1+a+b=2 \\Rightarrow a+b=3 \\\\ f(2) = 1 \\Rightarrow -4+2a+b=1 \\Rightarrow 2a+b=5 \\end{cases} \\Rightarrow a = 2 , b = 1$\n$\\Rightarrow f(x) = -x^2 + 2x + 1 \\Rightarrow f(4) = -16 + 8 + 1 = -7$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 656,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "تابع اکیداً صعودی وارون خود را در صورت تلاقی بر روی نیمساز ربع اول و سوم قطع می‌کند. تابع $f$ را به صورت ضابطه‌ای می‌نویسیم.\n$f(x) = 2x + |x+3| = \\begin{cases} 3x+3 & x \\ge -3 \\\\ x-3 & x < -3 \\end{cases}$\nتابع $f$ اکیداً صعودی است. برای یافتن محل تلاقی $f$ و $f^{-1}$ تابع $f$ را با $y=x$ قطع می‌دهیم.\n$f(x) = x \\Rightarrow \\begin{cases} 3x+3 = x \\Rightarrow x = -\\frac{3}{2} \\checkmark \\Rightarrow y = -\\frac{3}{2} \\\\ x-3 = x \\Rightarrow -3 = 0 \\; \\text{غ.ق.ق} \\end{cases}$\nمحل تلاقی $f$ و $f^{-1}$ نقطه $P(-\\frac{3}{2}, -\\frac{3}{2})$ است.\n$(-\\frac{3}{2}) \\times (-\\frac{3}{2}) = \\frac{9}{4} = 2/25$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 657,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "وارون تابع $f(x) = 2x + \\sqrt{x-1}$ را به دست می‌آوریم. کافی است جای $x$ و $y$ را عوض کنیم و نیازی به استانداردسازی نداریم.\n$y = 2x + \\sqrt{x-1} \\Rightarrow \\text{وارون}: x = 2y + \\sqrt{y-1}$\nحال این تابع را با خط $y = x+1$ یا همان $x = 3y-3$ قطع می‌دهیم.\n$2y + \\sqrt{y-1} = 3y - 3 \\Rightarrow \\sqrt{y-1} = y - 3 \\xrightarrow{y \\ge 3} (y-3)^2 = y - 1 \\Rightarrow y^2 - 7y + 10 = 0 \\Rightarrow \\begin{cases} y = 2 \\; (y \\ge 3 \\; \\text{غ.ق.ق}) \\\\ y = 5 \\Rightarrow x = 12 \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 658,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "ضابطه دو تابع $fof^{-1}(x)$ و $f^{-1}of(x)$ همواره برابر و به صورت $y = x$ است. بنابراین این دو تابع زمانی با هم برابر می‌شوند که دامنه آن‌ها برابر باشد.\n$D_{f^{-1}of} = D_f , \\quad D_{fof^{-1}} = D_{f^{-1}} \\Rightarrow D_f = D_{f^{-1}} \\Rightarrow D_f = R_f$\nخواهیم داشت:\n$D_f = \\{1, a, b\\} \\qquad R_f = \\{2, 4, c\\}$\n$D_f = R_f \\Rightarrow \\begin{cases} a=2 & b=2 \\\\ b=4 \\; \\text{یا} & a=4 \\\\ c=1 & c=1 \\end{cases} \\Rightarrow ab-c = 8-1 = 7$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 659,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "با توجه به دو نمودار $f$ و $g$ واضح است این دو تابع وارون یکدیگر می‌باشند.\n$g(x) = f^{-1}(x)$\nخواهیم داشت:\n$fog(a) = gof(4-a) \\Rightarrow fof^{-1}(a) = f^{-1}of(4-a) \\Rightarrow a = 4-a \\Rightarrow 2a = 4 \\Rightarrow a = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 660,
+      "solution_page": "page_0062.jpg",
+      "solution_text": "ضابطه $y = fof^{-1}(x)$ به صورت $y = x$ و دامنه آن برابر $D_{f^{-1}}$ یا همان $R_f$ است.\n$f(x) = 2 - \\sqrt{x-1} : \\sqrt{x-1} \\ge 0 \\Rightarrow -\\sqrt{x-1} \\le 0 \\Rightarrow 2 - \\sqrt{x-1} \\le 2 \\Rightarrow f(x) \\le 2 \\Rightarrow R_f = (-\\infty, 2]$\nنمودار تابع $y = x$ در بازه $(-\\infty, 2]$ جواب مسئله است. بنابراین پاسخ ۳ است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 661,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "ضابطهٔ دو تابع $f^{-1}\\text{of}(x)$ و $\\text{fof}^{-1}(x)$ همواره با هم برابر و به صورت $y = x$ است.\nاین دو تابع زمانی با هم برابر هستند که $D_f = R_f$ باشد.\n$f(x) = \\sqrt{2-x} - 3 \\Rightarrow 2-x \\ge 0 \\Rightarrow x \\le 2$\n$\\Rightarrow D_f = (-\\infty, 2]$\n$\\sqrt{2-x} \\ge 0 \\Rightarrow \\sqrt{2-x} - 3 \\ge -3 \\Rightarrow f(x) \\ge -3$\n$\\Rightarrow R_f = [-3, +\\infty)$\nمجموعه‌جواب معادلهٔ $f^{-1}\\text{of}(x) = \\text{fof}^{-1}(x)$ برابر است با:\n$D_f \\cap R_f = [-3, 2]$\nاعداد صحیح $-3$، $-2$، $-1$، $0$، $1$ و $2$ عضو مجموعه‌جواب می‌باشند.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 662,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "اگر نمودار $y = \\sqrt{x}$ را $4$ واحد به سمت چپ منتقل کنیم ($x \\to x+4$)، تابع $y = \\sqrt{x+4}$ به وجود می‌آید و اگر این تابع را $2$ واحد به سمت پایین انتقال دهیم، به تابع $y = \\sqrt{x+4} - 2$ خواهیم رسید.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 663,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "تابع $f(x)$ را $\\frac{1}{2}$ واحد به سمت چپ منتقل می‌کنیم تا تابع $f(x+\\frac{1}{2})$ حاصل شود.\nبدیهی است اگر نمودار $f(x+\\frac{1}{2})$، سه واحد به سمت بالا انتقال یابد از مبدأ مختصات عبور می‌کند.\n$y = f(x+\\frac{1}{2}) + 3 = f(x+\\frac{1}{2}) - k \\Rightarrow k = -3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0063.jpg",
+          "region": [
+            478,
+            362,
+            831,
+            461
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار تابع f(x) و انتقال آن به چپ"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 664,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "نمودار تابع $f(x) = -\\sqrt{x+1} - 2$ را به وسیلهٔ انتقال $y = \\sqrt{x}$ رسم می‌کنیم.\nاگر نمودار $f(x) = -\\sqrt{x+1} - 2$ را $3$ واحد به سمت راست انتقال دهیم، محورهای مختصات را قطع نخواهد کرد.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0063.jpg",
+          "region": [
+            465,
+            550,
+            837,
+            725
+          ],
+          "placement": "solution_text",
+          "alt": "مراحل رسم نمودار تابع f(x) با انتقال نمودار رادیکال ایکس"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 665,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "در همهٔ گزینه‌ها $f(-x)$ را تشکیل داده و برابری آن با $-f(x)$ را بررسی می‌کنیم.\n1) $f(x) = 1 + |x| \\Rightarrow f(-x) = 1 + |-x| = 1 + |x| \\Rightarrow f(-x) \\neq -f(x)$\n2) $f(x) = x + |x| \\Rightarrow f(-x) = -x + |-x| = -x + |x| \\Rightarrow f(-x) \\neq -f(x)$\n3) $f(x) = x|x| \\Rightarrow f(-x) = -x|-x| = -x|x| \\Rightarrow f(-x) = -f(x)$\n4) $f(x) = |x| - x \\Rightarrow f(-x) = |-x| + x = |x| + x \\Rightarrow f(-x) \\neq -f(x)$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 666,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "ضابطهٔ تابع $y = af(x-1)$ را ساده می‌کنیم.\n$f(x) = 8^x \\Rightarrow y = af(x-1) = a \\times 8^{x-1} = a \\times \\frac{1}{8} \\times 8^x$\nاگر $a = 8$ باشد، تابع فوق با $f(x)$ برابر می‌شود.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 667,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "صفرهای تابع $f(x) = x^2 - 5x + 6$ برابر $2$ و $3$ می‌باشند. برای این که صفرهای تابع مثبت نباشند باید نمودار تابع حداقل $3$ واحد به سمت چپ انتقال یابد.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0063.jpg",
+          "region": [
+            85,
+            187,
+            436,
+            273
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار سهمی و انتقال آن به سمت چپ"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 668,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "با تبدیل $y = f(x)$ به $y = a + f(x+b)$ طول نقاط $b$ واحد کاهش یافته و عرض نقاط $a$ واحد افزایش می‌یابد. بنابراین:\n$D_f = [-2, 3] \\Rightarrow D_{\\text{جدید}} = [-2-b, 3-b]$\n$R_f = [-4, 1] \\Rightarrow R_{\\text{جدید}} = [-4+a, 1+a]$\nخواهیم داشت:\n$D_{\\text{جدید}} = R_{\\text{جدید}} \\Rightarrow \\begin{cases} -2-b = -4+a \\\\ 3-b = 1+a \\end{cases} \\Rightarrow \\begin{cases} a+b = 2 \\\\ a+b = 2 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 669,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "تبدیلات زیر را بر $y = \\sqrt{x}$ اعمال می‌کنیم.\n$y = \\sqrt{x} \\xrightarrow{x \\to -x} y = \\sqrt{-x} \\xrightarrow{y \\to -y} y = -\\sqrt{-x}$\n$\\xrightarrow{x \\to x+|k|} y = -\\sqrt{-(x+|k|)}$\n$\\xrightarrow{+3} y = -\\sqrt{-x-|k|} + 3$\nصفر تابع به دست آمده $13-$ است. بنابراین:\n$-\\sqrt{13-|k|} + 3 = 0 \\Rightarrow \\sqrt{13-|k|} = 3 \\Rightarrow 13 - |k| = 9 \\Rightarrow |k| = 4 \\xrightarrow{k < 0} k = -4$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0063.jpg",
+          "region": [
+            49,
+            459,
+            417,
+            752
+          ],
+          "placement": "solution_text",
+          "alt": "مراحل اعمال تبدیلات بر روی نمودار رادیکال ایکس"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 670,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "عملیات زیر را بر روی تابع $f(x) = \\sqrt{x} - 2$ انجام می‌دهیم تا نمودار جدید حاصل شود.\n$f(x) = \\sqrt{x} - 2 \\xrightarrow[\\text{قرینه نسبت به محور } y \\text{ ها}]{x \\to -x} y = \\sqrt{-x} - 2 \\xrightarrow[\\text{4 واحد به سمت پایین}]{-4} y = \\sqrt{-x} - 2 - 4$\nحال، نقطه تقاطع این تابع را با $y = x$ به دست می‌آوریم.\n$$ \\sqrt{-x-2} - 4 = x \\Rightarrow \\sqrt{-x-2} = x + 4 $$\n$$ \\xrightarrow{-4 \\le x \\le -2} -x - 2 = (x + 4)^2 \\Rightarrow x^2 + 9x + 18 = 0 $$\n$$ \\Rightarrow (x + 3)(x + 6) = 0 \\Rightarrow \\begin{cases} x = -3 \\ \\checkmark \\\\ x = -6 \\text{ (غ ق ق)} (-4 \\le x \\le -2) \\end{cases} $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 671,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "روش اول: برای به دست آوردن ضابطه $f(x)$ کافی است مسیر طی شده را بازگردیم. یعنی ابتدا نمودار $y=(x+2)^2$ را نسبت به محور عرض‌ها قرینه می‌کنیم، سپس ۲ واحد به سمت بالا انتقال داده و در انتها ۳ واحد به سمت چپ منتقل می‌کنیم.\n$$ y = (x+2)^2 \\xrightarrow{x \\to -x} y = (-x+2)^2 $$\n$$ \\xrightarrow{+2} y = (-x+2)^2 + 2 \\xrightarrow{x \\to x+3} y = (-(x+3)+2)^2 + 2 = (-x-1)^2 + 2 $$\nبنابراین:\n$f(x) = (-x-1)^2 + 2 = (x+1)^2 + 2 = x^2 + 2x + 3$\nروش دوم: این عملیات را بر روی یکی از نقاط $y=(x+2)^2$ انجام می‌دهیم. $A(-1, 1) \\Rightarrow A'(1, 1) \\Rightarrow A''(1, 3) \\Rightarrow A'''(-2, 3)$\nنقطه $(-2, 3)$ فقط در گزینه ۱ صدق می‌کند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 672,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "ضابطه $g(x)$ را به دست می‌آوریم. ($g(x)$ بدون محاسبه ضابطه نیز قابل رسم است.)\n$$ f(x) = |x+3| - 1 \\xrightarrow[y \\to -y]{\\text{قرینه نسبت به محور } x \\text{ ها}} y = -|x+3| + 1 $$\n$$ \\xrightarrow[\\text{۲ واحد به سمت بالا}]{+2} g(x) = -|x+3| + 3 $$\nنمودار $f$ و $g$ را رسم می‌کنیم.\nچهارضلعی $ABCD$ مربع بوده و اندازه قطر $AC$ برابر ۴ است. بنابراین:\n$$ S_{ABCD} = \\frac{1}{2} d^2 = \\frac{1}{2} (4)^2 = 8 $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            1000,
+            1000,
+            1500,
+            1300
+          ],
+          "filename": "page_0064.jpg",
+          "placement": "stem",
+          "alt": "نمودار توابع f و g و چهارضلعی ABCD"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 673,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "ضابطه تابع انتقال یافته را به دست می‌آوریم.\n$$ y = \\big| \\frac{x}{3} \\big| - 1 \\xrightarrow[\\text{۳ واحد به سمت راست}]{x \\to x-3} y = \\big| \\frac{x-3}{3} \\big| - 1 $$\n$$ \\xrightarrow[\\text{۱ واحد به سمت پایین}]{-1} y = \\big| \\frac{x-3}{3} \\big| - 2 $$\nخواهیم داشت:\n$$ \\big| \\frac{x}{3} \\big| - 1 = \\big| \\frac{x-3}{3} \\big| - 2 \\Rightarrow \\big| \\frac{x}{3} \\big| - \\big| \\frac{x}{3} - 1 \\big| = -1 $$\n$$ x < 0 \\Rightarrow -\\frac{x}{3} + \\frac{x}{3} - 1 = -1 \\Rightarrow -1 = -1 \\quad \\text{غ ق ق} $$\n$$ 0 \\le x < 3 \\Rightarrow \\frac{x}{3} + \\frac{x}{3} - 1 = -1 \\Rightarrow x = 0 \\ \\checkmark $$\n$$ x \\ge 3 \\Rightarrow \\frac{x}{3} - \\frac{x}{3} + 1 = -1 \\Rightarrow 1 = -1 \\quad \\text{غ ق ق} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 674,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "عملیات زیر را بر روی تابع $f(x) = -x^2 + x + 5$ انجام می‌دهیم.\n$$ f(x) = -x^2 + x + 5 $$\n$$ \\xrightarrow[\\text{۲ واحد به سمت چپ}]{x \\to x+2} y = -(x+2)^2 + (x+2) + 5 $$\n$$ \\xrightarrow[\\text{۵ واحد به سمت بالا}]{+5} y = -(x+2)^2 + (x+2) + 10 $$\n$$ \\Rightarrow y = -x^2 - 3x + 8 $$\nحال، بررسی می‌کنیم تابع جدید در کدام بازه بالای خط $y = -x$ است.\n$$ -x^2 - 3x + 8 > -x \\Rightarrow x^2 + 2x - 8 < 0 $$\n$$ \\Rightarrow (x+4)(x-2) < 0 \\Rightarrow -4 < x < 2 \\Rightarrow x \\in (-4, 2) $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 675,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "تبدیلات ذکر شده را اعمال می‌کنیم.\n$$ f(x) = \\big| \\frac{x}{3} \\big| + 1 \\xrightarrow[\\text{۳ واحد به سمت راست}]{x \\to x-3} y = \\big| \\frac{x-3}{3} \\big| + 1 $$\n$$ \\xrightarrow[\\text{۲ واحد به سمت پایین}]{-2} y = \\big| \\frac{x-3}{3} \\big| - 1 $$\nحال، تابع به دست آمده را با $f(x)$ قطع می‌دهیم.\n$$ \\big| \\frac{x-3}{3} \\big| - 1 = \\big| \\frac{x}{3} \\big| + 1 \\Rightarrow \\big| \\frac{x}{3} - 1 \\big| - \\big| \\frac{x}{3} \\big| = 2 $$\n$$ \\begin{cases} x < 0 \\Rightarrow 1 = 2 \\text{ غ ق ق} \\\\ 0 \\le x < 3 \\Rightarrow -\\frac{2x}{3} = 1 \\Rightarrow x = -\\frac{3}{2} \\text{ غ ق ق} \\\\ x \\ge 3 \\Rightarrow -1 = 2 \\text{ غ ق ق} \\end{cases} $$\nمعادله فوق جواب ندارد یعنی این دو تابع یکدیگر را قطع نمی‌کنند.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 676,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "روش اول: عملیات زیر را بر روی تابع $f(x) = x^2 + 4x$ با دامنه $[-2, +\\infty)$ انجام می‌دهیم.\n$$ f(x) = x^2 + 4x = (x+2)^2 - 4 $$\n$$ \\xrightarrow[\\text{۱ واحد به سمت چپ}]{x \\to x+1} y = (x+3)^2 - 4 $$\n$$ \\xrightarrow[\\text{قرینه نسبت به محور } y \\text{ ها}]{x \\to -x} y = (-x+3)^2 - 4 $$\nبا انتقال یک واحدی تابع به سمت چپ دامنه تابع به صورت $[-3, +\\infty)$ و با قرینه کردن نسبت به محور $y$ها دامنه به صورت $(-\\infty, 3]$ درمی‌آید.\nحال وارون تابع را به دست می‌آوریم.\n$$ (-x+3)^2 = y+4 \\xrightarrow{x \\le 3} -x+3 = \\sqrt{y+4} $$\n$$ \\Rightarrow x = 3 - \\sqrt{y+4} \\Rightarrow y^{-1} = 3 - \\sqrt{x+4} $$\nروش دوم: نقطه‌یابی: عملیات فوق را بر روی یک نقطه از تابع انجام می‌دهیم.\n$$ A(-1, -3) \\Rightarrow A'(-2, -3) \\Rightarrow A''(2, -3) \\xrightarrow{\\text{وارون}} A'''(-3, 2) $$\nنقطه $(-3, 2)$ تنها در گزینه ۱ صدق می‌کند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 677,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "ابتدا $g(x)$ را به دست می‌آوریم.\n$$ f(x) = (x - \\frac{1}{2})^2 + \\frac{3}{4} \\xrightarrow[\\text{۲ واحد به سمت چپ}]{x \\to x+2} y = (x + \\frac{3}{2})^2 + \\frac{3}{4} $$\n$$ \\xrightarrow[\\text{قرینه نسبت به محور } y \\text{ ها}]{x \\to -x} g(x) = (-x + \\frac{3}{2})^2 + \\frac{3}{4} $$\nحال ضابطه $h(x)$ را محاسبه می‌کنیم:\n$$ f(x) = (x - \\frac{1}{2})^2 + \\frac{3}{4} $$\n$$ \\xrightarrow[\\text{قرینه نسبت به محور } y \\text{ ها}]{x \\to -x} y = (-x - \\frac{1}{2})^2 + \\frac{3}{4} $$\n$$ \\xrightarrow[\\text{۲ واحد به سمت راست}]{x \\to x-2} h(x) = (-x + \\frac{3}{2})^2 + \\frac{3}{4} $$\nمشخص است که توابع $g$ و $h$ با یکدیگر برابر بوده و بر هم منطبق‌اند. بنابراین بی‌شمار نقطه اشتراک دارند.\nاگر $f$ را ابتدا $a$ واحد به سمت راست منتقل کرده، سپس نسبت به محور $y$ها قرینه کنیم، هم‌ارز آن است که $f$ را ابتدا نسبت به محور $y$ها قرینه کرده، سپس $a$ واحد به سمت چپ منتقل کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 678,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "برای رسم $y = f(x - 4)$ نمودار $f$ را $4$ واحد به سمت راست انتقال می‌دهیم.\nبرای رسم $y = f(4 - x)$ کافی است نمودار $f(x - 4)$ را نسبت به خط $x = 2$ قرینه کنیم.\nاگر دو نمودار را در یک دستگاه در کنار هم قرار دهیم دو نمودار تنها در یک نقطه یکدیگر را قطع می‌کنند.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            850,
+            60,
+            1600,
+            480
+          ],
+          "placement": "solution",
+          "alt": "نمودارهای f(x-4) و f(4-x)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 679,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "اگر نمودار $f(x)$ را دو واحد به سمت راست انتقال دهیم ($f(x - 2)$) و اگر دو واحد به سمت چپ منتقل کرده و نسبت به محور yها قرینه کنیم، $f(-x + 2)$ حاصل می‌شود.\nبا توجه به نمودارهای $f(x - 2)$ و $f(2 - x)$ مشخص است که این دو تابع در فاصله $[0, 4]$ بر یکدیگر منطبق می‌باشند.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            850,
+            490,
+            1600,
+            850
+          ],
+          "placement": "solution",
+          "alt": "نمودارهای f(x-2) و f(2-x)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 680,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "عملیات زیر را بر روی $y = f(2 - x)$ انجام داده تا $y = f(x - 2)$ حاصل شود.\n$y = f(2 - x) \\xrightarrow{\\text{قرینه نسبت به محور yها } x \\to -x} y = f(2 + x) \\xrightarrow{\\text{4 واحد انتقال به سمت راست } x \\to x - 4} y = f(x - 2)$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            850,
+            860,
+            1600,
+            1200
+          ],
+          "placement": "solution",
+          "alt": "مراحل انتقال نمودار f(2-x) به f(x-2)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 681,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "تابع $f$ را نسبت به محورهای $x$ و $y$ قرینه کرده، یک واحد به سمت راست و یک واحد به سمت پایین انتقال می‌دهیم تا تابع $g$ حاصل شود.\nنمودار از ناحیهٔ چهارم عبور نمی‌کند.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            850,
+            1250,
+            1600,
+            2100
+          ],
+          "placement": "solution",
+          "alt": "مراحل انتقال نمودار تابع f به g"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 682,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "عملیات زیر را بر روی $f(x)$ انجام داده تا نمودار $y = \\frac{1}{2} f(x - 2)$ حاصل شود.\n$y = f(x) \\xrightarrow{\\text{2 واحد به سمت راست } x \\to x - 2} y = f(x - 2) \\xrightarrow{\\text{انقباض عمودی با ضریب } \\frac{1}{2}} y = \\frac{1}{2} f(x - 2)$\nدر نمودار اخیر تابع از نقاط $(-1, -\\frac{3}{2})$ و $(2, 0)$ عبور می‌کند. بنابراین شیب خط برابر $\\frac{1}{2}$ بوده و محور عرض‌ها را در $(0, -1)$ قطع می‌کند. برای این‌که تابع از ناحیهٔ چهارم عبور نکند کافی است حداقل 1 واحد به سمت بالا انتقال یابد. بنابراین $k \\ge 1$ است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            100,
+            60,
+            800,
+            850
+          ],
+          "placement": "solution",
+          "alt": "مراحل رسم نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 683,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "عملیات زیر را بر تابع $y = 2 - f(x + 1)$ انجام می‌دهیم تا تابع $y = 1 + f(3 - x)$ حاصل شود.\n$y = 2 - f(x + 1) \\xrightarrow{\\text{2 واحد به سمت چپ } x \\to x + 2} y = 2 - f(x + 3)$\n$\\xrightarrow{\\text{قرینه نسبت به محور yها } x \\to -x} y = 2 - f(-x + 3)$\n$\\xrightarrow{\\text{قرینه نسبت به محور xها } y \\to -y} y = f(-x + 3) - 2$\n$\\xrightarrow{\\text{3 واحد به سمت بالا } +3} y = f(3 - x) + 1$\nنمودار از ناحیهٔ چهارم عبور نمی‌کند.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            100,
+            950,
+            800,
+            2000
+          ],
+          "placement": "solution",
+          "alt": "مراحل انتقال نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 684,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "ابتدا تابع $y = f(x+1)$ را یک واحد به سمت راست منتقل می‌کنیم تا $y = f(x)$ حاصل شود. دامنه تابع $y = \\sqrt{xf(x)}$ مجموعه جواب نامعادله $xf(x) \\geq 0$ است.\nبا توجه به نمودار روشن است که $x$ و $f(x)$ فقط در بازه $(3, 5)$ هم‌علامت هستند و در بقیه نقاط $xf(x) \\leq 0$ است. بنابراین:\n$D = \\mathbb{R} - (3, 5)$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            70,
+            520,
+            160,
+            680
+          ],
+          "placement": "stem",
+          "filename": "page_0066.jpg",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 685,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "دامنه تابع $y = \\sqrt{(x+1)f(1-x)}$ برابر $\\mathbb{R}$ است. جدول تعیین علامت عبارت $x+1$ به صورت زیر می‌باشد.\nبنابراین برای این‌که عبارت زیر رادیکال همواره بزرگ‌تر یا مساوی صفر باشد، کافی است جدول تعیین علامت $f(1-x)$ نیز همین‌گونه باشد. $f(1-x)$ در $x = -1$ برابر صفر و در سمت چپ آن منفی و در سمت راست آن مثبت است. در نتیجه $f(x)$ در $x = 2$ برابر صفر و در سمت چپ آن مثبت و در سمت راست آن منفی است. گزینه ۴ قابل قبول است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            210,
+            560,
+            250,
+            710
+          ],
+          "placement": "stem",
+          "filename": "page_0066.jpg",
+          "alt": "جدول تعیین علامت"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 686,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "اگر در تابع $y = 3f(2x)$ طول هر نقطه سه برابر شود، در ضابطه داده‌شده $x$ به $\\dfrac{x}{3}$ تبدیل شده و تابع $y = 3f(\\dfrac{2x}{3})$ به وجود می‌آید و اگر عرض نقاط را دو برابر کنیم، ضابطه تابع در ۲ ضرب می‌شود و به تابع $y = 6f(\\dfrac{2x}{3})$ خواهیم رسید.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 687,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "با فرض $0 < k < 1$ تابع $f(kx)$ انبساط‌یافته تابع $f(x)$ در راستای افقی می‌باشد. بنابراین گزینه ۴ درست است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 688,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "در تابع $y = \\dfrac{4}{3} f(\\dfrac{2}{9} x)$ با تبدیل $x$ به $\\dfrac{9}{2} x$ تابع $y = \\dfrac{4}{3} f(x)$ به وجود می‌آید. (انقباض افقی با ضریب $\\dfrac{2}{9}$)\nاگر تابع به دست آمده را در $\\dfrac{3}{4}$ ضرب کنیم، تابع $y = f(x)$ حاصل خواهد شد. (انقباض عمودی با ضریب $\\dfrac{3}{4}$)\nبنابراین گزینه ۳ درست است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 689,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "روش اول: عملیات زیر را بر روی $f(x)$ و هم‌زمان بر نقطه $A(4, -1)$ انجام می‌دهیم.\n$y = f(x) \\xrightarrow{\\text{انبساط افقی با ضریب } 2} x \\to \\dfrac{x}{2} \\Rightarrow y = f(\\dfrac{x}{2})$\n$\\xrightarrow{\\text{انبساط عمودی با ضریب } 3} \\times 3 \\Rightarrow y = 3f(\\dfrac{x}{2})$\n$\\xrightarrow{\\text{قرینه نسبت به محور } x\\text{ها}} y \\to -y \\Rightarrow y = -3f(\\dfrac{x}{2})$\n$A(4, -1) \\Rightarrow A'(8, -1) \\Rightarrow A''(8, -3) \\Rightarrow A'''(8, 3)$\nروش دوم: نقطه $A(4, -1)$ بر روی $y=f(x)$ است. بنابراین: $f(4)=-1$.\nدر تابع $y=-3f(\\dfrac{x}{2})$ اگر $x=8$ باشد، $f(4)$ به وجود می‌آید:\n$x=8 \\Rightarrow y=-3f(4) \\Rightarrow y=-3 \\times (-1) = 3 \\Rightarrow B(8, 3)$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 690,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "روش اول: عملیات زیر را بر تابع $y = 3 - 2f(1 - 3x)$ و هم‌زمان به نقطه $A(2, 5)$ انجام می‌دهیم.\n$y=3-2f(1-3x) \\xrightarrow{\\text{انبساط افقی با ضریب } \\dfrac{3}{2}} x \\to \\dfrac{2}{3}x \\Rightarrow y=3-2f(1-2x)$\n$\\xrightarrow{\\text{قرینه نسبت به محور } y\\text{ها}} x \\to -x \\Rightarrow y=3-2f(1+2x)$\n$\\xrightarrow{\\text{یک واحد به سمت راست}} x \\to x-1 \\Rightarrow y=3-2f(3-2x) \\equiv 3-2f(2x-1)$ (Note: the text writes $3-2f(2x-1)$ directly after $x \\to x-1$, actually $1+2(x-1) = 2x-1$)\n$A(2, 5) \\Rightarrow B(3, 5) \\Rightarrow C(-3, 5) \\Rightarrow D(-2, 5)$\n$\\xrightarrow{\\text{۳ واحد به سمت پایین}} y \\to y-3 \\Rightarrow y=-2f(2x-1)$\n$\\xrightarrow{\\text{انقباض عمودی با ضریب } \\dfrac{1}{2}} y \\to \\dfrac{1}{2}y \\Rightarrow y=-f(2x-1)$\n$\\xrightarrow{\\text{قرینه نسبت به محور } x\\text{ها}} y \\to -y \\Rightarrow y=f(2x-1)$\n$\\Rightarrow E(-2, 2) \\Rightarrow F(-2, 1) \\Rightarrow G(-2, -1)$\nروش دوم: نقطه $A(2, 5)$ بر روی تابع $y=3-2f(1-3x)$ قرار دارد:\n$5 = 3 - 2f(-5) \\Rightarrow f(-5) = -1$\nبنابراین:\n$y = f(2x-1): x = -2 \\Rightarrow y = f(-5) = -1 \\Rightarrow B(-2, -1)$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": [
+        "تصحیح عبارت در روش اول از روی تصویر انجام شد"
+      ]
+    },
+    {
+      "question_number": 691,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "روش اول: تبدیلات زیر را بر تابع $y=3f(\\dfrac{1-x}{2})$ و هم‌زمان بر نقطه $A(2, 3)$ اعمال می‌کنیم.\n$y = 3f(\\dfrac{1-x}{2}) \\xrightarrow{x \\to x+1} y = 3f(-\\dfrac{x}{2})$\n$\\xrightarrow{x \\to -x} y = 3f(\\dfrac{x}{2}) \\xrightarrow{x \\to 6x} y = 3f(3x)$\n$A(2,3) \\Rightarrow B(1,3) \\Rightarrow C(-1,3) \\Rightarrow D(-\\dfrac{1}{6},3)$\n$y = 3f(3x) \\xrightarrow{\\times \\dfrac{1}{3}} y = f(3x) \\xrightarrow{y \\to -y} y = -f(3x) \\xrightarrow{+2} y = 2 - f(3x)$\n$\\Rightarrow E(-\\dfrac{1}{6}, 1) \\Rightarrow F(-\\dfrac{1}{6}, -1) \\Rightarrow A'(-\\dfrac{1}{6}, 1)$\nروش دوم: نقطه $A(2, 3)$ بر $y=3f(\\dfrac{1-x}{2})$ واقع است. بنابراین:\n$3 = 3f(-\\dfrac{1}{2}) \\Rightarrow f(-\\dfrac{1}{2}) = 1$\nدر تابع $y=2-f(3x)$ با فرض $x=-\\dfrac{1}{6}$ داریم:\n$y = 2 - f(-\\dfrac{1}{2}) = 2 - 1 = 1$\nدر نتیجه نقطه $(-\\dfrac{1}{6}, 1)$ بر تابع واقع است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 692,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "روش اول: ابتدا وارون تابع $y = 2f(\\dfrac{x}{3})$ را به دست می‌آوریم. جای x و y را عوض می‌کنیم.\n$x = 2f(\\dfrac{y}{3}) \\Rightarrow f(\\dfrac{y}{3}) = \\dfrac{x}{2} \\Rightarrow \\dfrac{y}{3} = f^{-1}(\\dfrac{x}{2}) \\Rightarrow y = 3f^{-1}(\\dfrac{x}{2})$\nنقطه $A(2, a)$ بر $y=f(x)$ واقع است بنابراین $B(a, 2)$ بر $y=f^{-1}(x)$ قرار دارد.\nدر تابع $y=f^{-1}(x)$ طول همه نقاط را دو برابر و عرض آن‌ها را سه برابر می‌کنیم تا به $y=3f^{-1}(\\dfrac{x}{2})$ برسیم.\nنقطه $B(a, 2)$ به $A'(2a, 6)$ تبدیل می‌شود بنابراین:\n$(2a, 6) = (4, b) \\Rightarrow a=2, b=6 \\Rightarrow a+b=8$\nروش دوم: با تبدیل $y=f(x)$ به $y=2f(\\dfrac{x}{3})$ نقطه $A(2, a)$ به $B(6, 2a)$ تبدیل می‌شود. اگر تابع $y=2f(\\dfrac{x}{3})$ را وارون کنیم، نقطه $B(6, 2a)$ به $A'(2a, 6)$ تبدیل می‌شود در نتیجه:\n$(2a, 6) = (4, b) \\Rightarrow \\begin{cases} a=2 \\\\ b=6 \\end{cases} \\Rightarrow a+b=8$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 693,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "روش اول: نقطه $P(a, b)$ بر نمودار $y=f(x+1)$ واقع است بنابراین:\n$f(a+1) = b$\nنقطه $P'(-2, 5)$ متناظر با $P$ بر $y=2-3f(\\frac{x}{2})$ قرار دارد. در نتیجه:\n$5 = 2-3f(-1) \\Rightarrow f(-1) = -1 \\Rightarrow \\begin{cases} a+1=-1 \\Rightarrow a=-2 \\\\ b=-1 \\end{cases} \\Rightarrow a-b=-1$\n\nروش دوم: عملیات زیر را بر $y=2-3f(\\frac{x}{2})$ و هم‌زمان بر نقطه $P'(-2, 5)$ انجام می‌دهیم.\n$y = 2 - 3f(\\frac{x}{2}) \\xrightarrow[\\text{انقباض افقی با ضریب } \\frac{1}{2}]{x \\to 2x} y = 2 - 3f(x)$\n$\\xrightarrow[\\text{۲ واحد به سمت پایین}]{-2} y = -3f(x)$\n$\\xrightarrow[\\text{قرینه نسبت به محور } x\\text{ها}]{y \\to -y} y = 3f(x)$\n$P'(-2, 5) \\Rightarrow A(-1, 5) \\Rightarrow B(-1, 3) \\Rightarrow C(-1, -3)$\n$\\xrightarrow[\\text{انقباض عمودی با ضریب } \\frac{1}{3}]{\\times \\frac{1}{3}} y = f(x)$\n$\\xrightarrow[\\text{۱ واحد به سمت چپ}]{x \\to x+1} y = f(x+1)$\n$\\Rightarrow D(-1, -1) \\Rightarrow P(-2, -1) \\Rightarrow \\begin{cases} a=-2 \\\\ b=-1 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 694,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "تابع $y = \\sqrt{ax} - b$ از نقاط $(0, 1)$ و $(-2, 0)$ عبور می‌کند.\n$(0, 1) \\Rightarrow 1 = \\sqrt{-b} \\Rightarrow b = -1$\n$(-2, 0) \\Rightarrow 0 = \\sqrt{-2a - b} \\Rightarrow -2a + 1 = 0 \\Rightarrow a = \\frac{1}{2}$\nبنابراین تابع $y = \\sqrt{bx + a}$ به صورت $y = \\sqrt{-x + \\frac{1}{2}}$ می‌باشد. برای رسم این تابع $y = \\sqrt{x}$ را $\\frac{1}{2}$ واحد به سمت چپ انتقال داده سپس نسبت به محور $y$ها قرینه می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            950,
+            550,
+            1750,
+            700
+          ],
+          "placement": "solution",
+          "filename": "page_0067.jpg",
+          "alt": "نمودارهای y=\\sqrt{x} و y=\\sqrt{x+1/2} و y=\\sqrt{-x+1/2}"
+        }
+      ],
+      "review_notes": [
+        "Coordinates for graphs are estimated."
+      ]
+    },
+    {
+      "question_number": 695,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "$D_f = [-1, 2]$ می‌باشد بنابراین در تابع $y = 7 + 4f(\\frac{2-3x}{4})$ ، عبارت $\\frac{2-3x}{4}$ باید در محدوده دامنه $f$ باشد.\n$-1 \\le \\frac{2-3x}{4} \\le 2 \\Rightarrow -4 \\le 2-3x \\le 8 \\Rightarrow -6 \\le -3x \\le 6 \\Rightarrow -2 \\le x \\le 2$\nمی‌توانستیم به وسیله انتقال و قرینه‌یابی به جواب برسیم.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 696,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "روش اول: ضرایب بیرونی $f$ بر دامنه تأثیری ندارند. عملیات زیر را بر $f(2x-1)$ و هم‌زمان بر دامنه آن انجام می‌دهیم.\n$y = f(1-2x) \\xrightarrow[\\text{قرینه نسبت به محور } y\\text{ها}]{x \\to -x} y = f(2x+1)$\n$\\xrightarrow[\\text{۲ واحد به سمت راست}]{x \\to x-2} y = f(2x-3)$\nبنابراین دامنه تابع $y = \\frac{1}{2}x - f(2x-3)$ بازه $[1, 4]$ می‌باشد.\n\nروش دوم: روش fog. ابتدا دامنه $f$ یعنی محدوده اعداد ورودی تابع $f(x)$ را می‌یابیم.\n$y = -3f(1-2x) : -2 \\le x \\le 1 \\Rightarrow -1 \\le 1-2x \\le 5 \\Rightarrow D_f = [-1, 5]$\nدر تابع $y = \\frac{1}{2}f(2x-3)$ عبارت $2x-3$ (شما بخوانید $g(x)$) باید در محدوده دامنه $f$ باشد.\n$-1 \\le 2x-3 \\le 5 \\Rightarrow 1 \\le x \\le 4 \\Rightarrow D = [1, 4]$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 697,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "روش اول: برای به دست آوردن دامنه تغییرات افقی را بررسی می‌کنیم.\n$y = f(x) \\xrightarrow[\\text{۱ واحد به سمت راست}]{x \\to x-1} y = f(x-1)$\n$\\xrightarrow[\\text{انقباض افقی با ضریب } \\frac{1}{2}]{x \\to 2x} y = f(2x-1)$\n$D = [-2, 4] \\Rightarrow [-1, 5] \\Rightarrow [-\\frac{1}{2}, \\frac{5}{2}] = D_{4-3f(2x-1)}$ : دامنه\n\nبرای به دست آوردن برد تغییرات عمودی را لحاظ می‌کنیم.\n$y = f(x) \\xrightarrow[\\text{انبساط عمودی با ضریب ۳}]{\\times 3} y = 3f(x)$\n$\\xrightarrow[\\text{قرینه نسبت به محور } x\\text{ها}]{y \\to -y} y = -3f(x)$\n$\\xrightarrow[\\text{۴ واحد به سمت بالا}]{+4} y = 4 - 3f(x)$\n$R = [-1, 1] \\Rightarrow [-3, 3] \\Rightarrow [-3, 3] \\Rightarrow [1, 7] = R_{4-3f(2x-1)}$ : برد\nبنابراین: $D \\cap R = [1, \\frac{5}{2}]$\n\nروش دوم: روش fog:\n$y = 4 - 3f(2x-1)$\n$D_f = [-2, 4] \\Rightarrow -2 \\le 2x-1 \\le 4 \\Rightarrow -\\frac{1}{2} \\le x \\le \\frac{5}{2} \\Rightarrow D = [-\\frac{1}{2}, \\frac{5}{2}]$\n$R_f = [-1, 1] \\Rightarrow -1 \\le f(x) \\le 1 \\Rightarrow 1 \\le 4 - 3f(x) \\le 7 \\Rightarrow R = [1, 7]$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 698,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "برد تابع $f(x)$ بازه $[2, a]$ است.\n$\\Rightarrow 2 \\le f(x) \\le a \\Rightarrow -3a \\le -3f(x) \\le -6$\n$\\Rightarrow 4 - 3a \\le 4 - 3f(x) \\le -2$\n$\\Rightarrow R_g = [4-3a, -2] = [-5, b]$\n$\\Rightarrow \\begin{cases} 4-3a=-5 \\Rightarrow a=3 \\\\ b=-2 \\end{cases} \\Rightarrow ab = -6$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 699,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "ضابطه $y = 1 - f(\\frac{x}{2})$ را به دست می‌آوریم.\n$f(x+2) = \\frac{12}{x} - x \\Rightarrow f(x) = \\frac{12}{x-2} - (x-2)$\n$\\Rightarrow f(\\frac{x}{2}) = \\frac{12}{\\frac{x}{2}-2} - (\\frac{x}{2}-2)$\n$\\Rightarrow y = 1 - f(\\frac{x}{2}) = 1 - \\frac{12}{\\frac{x}{2}-2} + \\frac{x}{2} - 2 = \\frac{-24}{x-4} + \\frac{x}{2} - 1$\nدر این تابع صدق می‌کند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 700,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "اگر $\\alpha$ ، $\\beta$ ، $\\gamma$ و $\\theta$ صفرهای تابع $y=f(x)$ باشند، صفرهای تابع $y=f(3x+2)$ به صورت $\\frac{\\alpha-2}{3}$ ، $\\frac{\\beta-2}{3}$ ، $\\frac{\\gamma-2}{3}$ و $\\frac{\\theta-2}{3}$ خواهد بود.\n$\\alpha+\\beta+\\gamma+\\theta = 7$\n$\\Rightarrow \\frac{\\alpha-2}{3} + \\frac{\\beta-2}{3} + \\frac{\\gamma-2}{3} + \\frac{\\theta-2}{3} = \\frac{\\alpha+\\beta+\\gamma+\\theta-8}{3} = -\\frac{1}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 701,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "عمليات زیر را بر روی تابع $y = f(2x)$ انجام می‌دهیم.\n$y = f(2x) \\xrightarrow[\\text{انبساط افقی با ضریب } 2]{x \\to \\frac{x}{2}} y = f(x)$\n$\\xrightarrow[\\text{۲ واحد به سمت چپ}]{x \\to x+2} y = f(x+2)$\n$\\xrightarrow[\\text{قرینه نسبت به محور } x\\text{ها}]{x \\to -x} y = f(2-x)$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            950,
+            800,
+            1750,
+            1100
+          ],
+          "placement": "solution",
+          "filename": "page_0068.jpg",
+          "alt": "نمودارهای y=f(2x) و y=f(x) و y=f(x+2) و y=f(2-x)"
+        }
+      ],
+      "review_notes": [
+        "Coordinates for graphs are estimated."
+      ]
+    },
+    {
+      "question_number": 702,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "با توجه به نمودار معادله خط داده‌شده به صورت $y = -\\frac{x}{2} - 3$ می‌باشد.\nبنابراین: $f(x)-2 = -\\frac{x}{2}-3 \\Rightarrow f(x) = -\\frac{x}{2}-1$\nدر نتیجه:\n$y = k - f(3x+1) = k - (-\\frac{3x+1}{2} - 1) = \\frac{3}{2}(x+1) + k$\nنمودار $y = \\frac{3}{2}(x+1)$ به صورت مقابل است:\nبا توجه به نمودار روشن است که حداکثر مقدار $k$ باید $-\\frac{3}{2}$ باشد تا $y = \\frac{3}{2}(x+1)+k$ از ناحیه دوم عبور نکند.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            950,
+            1500,
+            1300,
+            1700
+          ],
+          "placement": "solution",
+          "filename": "page_0068.jpg",
+          "alt": "نمودار خط y=3/2(x+1)"
+        }
+      ],
+      "review_notes": [
+        "Coordinates for graphs are estimated."
+      ]
+    },
+    {
+      "question_number": 703,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "طول قاعدۀ مثلث در $f(x)$ برابر ۶ می‌باشد؛ بنابراین طول قاعده مثلث در $y = \\frac{1}{a}f(bx)$ ، $\\frac{6}{b}$ خواهد بود.\nطول ارتفاع مثلث در $f(x)$ برابر ۴ است در نتیجه طول ارتفاع مثلث در $y = \\frac{1}{a}f(bx)$ ، $\\frac{4}{a}$ می‌باشد.\n$S_{\\text{جدید}} = \\frac{\\frac{6}{b} \\times \\frac{4}{a}}{2} = 8 \\Rightarrow \\frac{24}{ab} = 16 \\Rightarrow ab = \\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 704,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "تبدیلات زیر را بر تابع $f(x)$ و نمودار آن اعمال می‌کنیم.\n$y = f(x) \\xrightarrow{x \\to x+2} y = f(x+2)$\n$\\xrightarrow{x \\to -x} y = f(2-x) \\xrightarrow{x \\to \\frac{x}{3}} y = f(2-\\frac{x}{3})$\n$\\xrightarrow{x \\to |x|} y = f(2-\\frac{|x|}{3})$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 705,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "هر یک از گزینه‌ها را بررسی می‌کنیم.\n۱: $y = \\log(\\sqrt{10}x) = \\log x + \\frac{1}{2} \\Rightarrow$ $\\frac{1}{2}$ واحد به سمت بالا\n۲: $y = 2\\log(x - 10)$\n$\\Rightarrow$ ۱۰ واحد به سمت راست و انبساط عمودی با ضریب ۲\n۳: $y = \\log \\frac{\\sqrt{x}}{10} = \\frac{1}{2}\\log x - 1$\n$\\Rightarrow$ انقباض عمودی با ضریب $\\frac{1}{2}$ و ۱ واحد انتقال به پایین\n۴: $y = 3\\log x - \\frac{1}{2}$\n$\\Rightarrow$ انبساط عمودی با ضریب ۳ و $\\frac{1}{2}$ واحد انتقال به پایین",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 706,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "ضابطه تابع داده‌شده را ساده می‌کنیم.\n$y = 1 - (x^2 + 3)(x + 3) = -x^3 - 3x^2 - 3x - 8$\n$= -(x+1)^3 - 7$\nبرای رسم تابع فوق نمودار $y = x^3$ را یک واحد به سمت چپ منتقل کرده، نسبت به محور $x$ها قرینه می‌کنیم و در آخر ۷ واحد به سمت پایین انتقال می‌دهیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            200,
+            1400,
+            800,
+            1750
+          ],
+          "placement": "solution",
+          "filename": "page_0068.jpg",
+          "alt": "نمودارهای y=x^3 و y=(x+1)^3"
+        }
+      ],
+      "review_notes": [
+        "Coordinates for graphs are estimated."
+      ]
+    }
+  ]
+}

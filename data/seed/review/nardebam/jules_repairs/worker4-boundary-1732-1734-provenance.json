@@ -1,0 +1,10 @@
+{
+  "worker": 4,
+  "range": "1732-1734",
+  "destination": "data/seed/review/nardebam/raw/math-topic-14.json",
+  "printed_topic": "circle",
+  "source_images": [
+    "tmp/jules_nardebam_targeted/tasks/math-topic-boundary-1732-1734-focused/images/math-topic-14-page_0018.jpg"
+  ],
+  "covered_question_numbers": ["1732", "1733", "1734"]
+}

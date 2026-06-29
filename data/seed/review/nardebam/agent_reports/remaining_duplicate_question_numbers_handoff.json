@@ -1,0 +1,231 @@
+{
+  "generated_at": "2026-06-25",
+  "scope": {
+    "owned_paths": [
+      "scripts/repair_nardebam_duplicate_question_numbers.mjs",
+      "data/seed/review/nardebam/agent_reports"
+    ],
+    "inputs_checked": [
+      "data/seed/review/nardebam/join_conflicts.json",
+      "data/seed/review/nardebam/raw",
+      "data/seed/review/nardebam/normalized",
+      "data/seed/comprehensive/nardebam"
+    ]
+  },
+  "summary": {
+    "safe_deterministic_repairs_applied": 0,
+    "repair_script_changed": true,
+    "repair_script_change": "Made the existing math-topic-05 repair idempotence check accept the already-repaired contiguous 262..308 state so the script can rerun before normalize/join.",
+    "reason": "Every remaining duplicate cluster either depends on unresolved topic-boundary numbering or would require shifting/removing rows that are not duplicate content. No local deterministic repair had strong enough evidence."
+  },
+  "pipeline_verification": {
+    "commands": [
+      "node scripts/repair_nardebam_duplicate_question_numbers.mjs",
+      "node scripts/normalize_nardebam_raw.mjs",
+      "node scripts/join_nardebam_source.mjs"
+    ],
+    "join_result": "Joined 2431 source questions; 1055 conflict(s) -> data/seed/review/nardebam/join_conflicts.json",
+    "join_exit_code": 1,
+    "note": "join_nardebam_source exits nonzero while conflicts remain.",
+    "after_duplicate_question_number_counts": {
+      "math/patterns_sequences": 18,
+      "math/derivative_applications": 64,
+      "math/visual_thinking_conics": 34,
+      "math/combinatorics": 88,
+      "physics/one_dimensional_motion": 2
+    }
+  },
+  "remaining_duplicate_question_number_clusters": [
+    {
+      "subject": "math",
+      "topic_key": "patterns_sequences",
+      "raw_file": "data/seed/review/nardebam/raw/math-topic-02.json",
+      "normalized_file": "data/seed/review/nardebam/normalized/math-topic-02.json",
+      "duplicate_count": 18,
+      "duplicate_ranges": [
+        {
+          "start": 33,
+          "end": 50,
+          "count": 18
+        }
+      ],
+      "raw_number_segments": [
+        {
+          "start": 33,
+          "end": 100,
+          "count": 68,
+          "page_start": 3,
+          "page_end": 7
+        }
+      ],
+      "evidence": [
+        "math-topic-01 already owns question numbers 1..50.",
+        "math-topic-02 is internally unique but starts at 33, so 33..50 collide with the previous topic.",
+        "Rows 33..50 in math-topic-02 are not the same content as rows 33..50 in math-topic-01; they are patterns/sequences questions, not duplicate set questions.",
+        "Renumbering math-topic-02 by +18 would produce 51..118 and collide with math-topic-03, which currently starts at 101."
+      ],
+      "decision": "no_auto_repair",
+      "jules_prompt_suggestion": "Rebuild math-topic-02 patterns_sequences from the source PDF pages covering the full topic boundary. Confirm whether the intended global range is 51..100 or another range, and return a complete globally numbered math-topic-02.json. Do not preserve local 33..100 numbering unless the adjacent math-topic-01/math-topic-03 boundaries are also corrected."
+    },
+    {
+      "subject": "math",
+      "topic_key": "derivative_applications",
+      "raw_file": "data/seed/review/nardebam/raw/math-topic-11.json",
+      "normalized_file": "data/seed/review/nardebam/normalized/math-topic-11.json",
+      "duplicate_count": 64,
+      "duplicate_ranges": [
+        {
+          "start": 1,
+          "end": 64,
+          "count": 64
+        }
+      ],
+      "raw_number_segments": [
+        {
+          "start": 1,
+          "end": 64,
+          "count": 64,
+          "page_start": 1,
+          "page_end": 8
+        },
+        {
+          "start": 1346,
+          "end": 1466,
+          "count": 121,
+          "page_start": 9,
+          "page_end": 17
+        }
+      ],
+      "evidence": [
+        "math-topic-10 ends at 1247 and math-topic-12 starts at 1467.",
+        "The first 64 rows are local-numbered 1..64 and collide with earlier math topics.",
+        "A tempting offset to 1282..1345 would fit directly before the existing 1346..1466 block, but that leaves 1248..1281 unresolved.",
+        "A broad offset to 1248..1311 leaves a gap before 1346. Neither mapping is source-proven from the current artifacts."
+      ],
+      "decision": "no_auto_repair",
+      "jules_prompt_suggestion": "Inspect derivative_applications source pages 1..17 and rebuild the missing/front block with global numbers. Confirm the exact intended range between math-topic-10 ending 1247 and the existing 1346..1466 block. Return a complete math-topic-11.json with globally numbered rows and no local 1..64 block."
+    },
+    {
+      "subject": "math",
+      "topic_key": "visual_thinking_conics",
+      "raw_file": "data/seed/review/nardebam/raw/math-topic-14.json",
+      "normalized_file": "data/seed/review/nardebam/normalized/math-topic-14.json",
+      "duplicate_count": 34,
+      "duplicate_ranges": [
+        {
+          "start": 1,
+          "end": 14,
+          "count": 14
+        },
+        {
+          "start": 26,
+          "end": 34,
+          "count": 9
+        },
+        {
+          "start": 1638,
+          "end": 1648,
+          "count": 11
+        }
+      ],
+      "raw_number_segments": [
+        {
+          "start": 1,
+          "end": 14,
+          "count": 14,
+          "page_start": "page_0005.jpg",
+          "page_end": "page_0008.jpg"
+        },
+        {
+          "start": 1638,
+          "end": 1648,
+          "count": 11,
+          "page_start": "page_0009.jpg",
+          "page_end": "page_0009.jpg"
+        },
+        {
+          "start": 26,
+          "end": 34,
+          "count": 9,
+          "page_start": "page_0010.jpg",
+          "page_end": "page_0011.jpg"
+        },
+        {
+          "start": 1638,
+          "end": 1648,
+          "count": 11,
+          "page_start": "page_0012.jpg",
+          "page_end": "page_0012.jpg"
+        }
+      ],
+      "evidence": [
+        "math-topic-13 ends at 1637, so one 1638..1648 block may be legitimate.",
+        "The 1638..1648 block appears twice in the same raw topic, but the two copies are not byte-identical for most rows and have different page files.",
+        "The local-numbered blocks 1..14 and 26..34 collide with earlier math topics and cannot be assigned safely without confirming the intended full source range.",
+        "Any automatic repair would have to choose which 1638..1648 copy to keep and how to number the local 1..14 and 26..34 blocks."
+      ],
+      "decision": "no_auto_repair",
+      "jules_prompt_suggestion": "Rebuild math-topic-14 visual_thinking_conics from source pages page_0005.jpg..page_0012.jpg. Determine the true global range after math-topic-13 ending 1637, keep/merge only the valid 1638..1648 content, and assign unique global numbers to the local 1..14 and 26..34 rows. Return a complete math-topic-14.json and note which duplicated 1638..1648 page block was authoritative."
+    },
+    {
+      "subject": "math",
+      "topic_key": "combinatorics",
+      "raw_file": "data/seed/review/nardebam/raw/math-topic-15.json",
+      "normalized_file": "data/seed/review/nardebam/normalized/math-topic-15.json",
+      "duplicate_count": 88,
+      "duplicate_ranges": [
+        {
+          "start": 1,
+          "end": 88,
+          "count": 88
+        }
+      ],
+      "raw_number_segments": [
+        {
+          "start": 1,
+          "end": 88,
+          "count": 88,
+          "page_start": 2,
+          "page_end": 9
+        }
+      ],
+      "evidence": [
+        "The full topic is local-numbered 1..88 and therefore collides with earlier math topics.",
+        "Existing triage references a Jules task named math-topic-15-combinatorics-1735-1822, which is plausible for an 88-row topic but not locally proven because math-topic-14 is still unresolved.",
+        "math-topic-16 currently starts at 1823, so 1735..1822 would be contiguous before probability only if visual_thinking_conics is confirmed to end at 1734."
+      ],
+      "decision": "no_auto_repair",
+      "jules_prompt_suggestion": "Complete the math-topic-15-combinatorics-1735-1822 Jules task from source pages. Verify that visual_thinking_conics ends immediately before 1735 and probability starts at 1823, then return a complete math-topic-15.json numbered 1735..1822 only if those boundaries are source-confirmed."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "one_dimensional_motion",
+      "raw_file": "data/seed/review/nardebam/raw/physics-topic-08.json",
+      "normalized_file": "data/seed/review/nardebam/normalized/physics-topic-08.json",
+      "duplicate_count": 2,
+      "duplicate_ranges": [
+        {
+          "start": 806,
+          "end": 807,
+          "count": 2
+        }
+      ],
+      "raw_number_segments": [
+        {
+          "start": 806,
+          "end": 1053,
+          "count": 248,
+          "page_start": 2,
+          "page_end": 27
+        }
+      ],
+      "evidence": [
+        "physics-topic-07 already has question numbers 806 and 807.",
+        "physics-topic-08 rows 806 and 807 are one_dimensional_motion content, not duplicate magnetism content from physics-topic-07.",
+        "Renumbering all of physics-topic-08 by +2 would collide with physics-topic-09 at 1054..1055 unless later topic boundaries are also shifted."
+      ],
+      "decision": "no_auto_repair",
+      "jules_prompt_suggestion": "Repair the physics-topic-08 boundary from source pages around the start of one_dimensional_motion. Confirm whether the first two motion rows should become 808..809 and whether downstream physics-topic-08/09 boundaries need shifting. Return a complete physics-topic-08.json only after checking the 1053/1054 boundary."
+    }
+  ]
+}

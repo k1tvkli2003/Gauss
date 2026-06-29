@@ -1,0 +1,1531 @@
+[
+  {
+    "question_number": 321,
+    "solution_page": 42,
+    "solution_text": "با گرفتن جرم آب برابر $m$ و نوشتن پایستگی انرژی بین نقاط ۱ و ۲، $\\Delta K+\\Delta U=0$ به دست می‌آید و با $v_1=35 m/s$ و افت ارتفاع $720 m$، سرعت برخورد $v_2=125 m/s$ محاسبه می‌شود. راه دوم چاپی نیز قضیه کار-انرژی جنبشی با کار وزن را به همین نتیجه می‌رساند.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0042.jpg",
+        "box": [
+          170,
+          230,
+          520,
+          560
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر سقوط آب از هواپیما و افت ارتفاع تا نقطه برخورد"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 322,
+    "solution_page": 42,
+    "solution_text": "مبدأ انرژی پتانسیل گرانشی سطح زمین گرفته شده است. از $E_2=E_1$ و نسبت داده‌شده $K_2=U_2/17$ نتیجه می‌شود $18U_2/17=K_1$ و در نهایت $h=170 m$.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 323,
+    "solution_page": 42,
+    "solution_text": "چهار عبارت پیشنهادی از نظر تغییرات $K$، $U$ و $E=K+U$ بررسی شده‌اند؛ تنها حالتی که هم انرژی جنبشی و هم پتانسیل گرانشی زیاد شوند، افزایش انرژی مکانیکی را قطعی می‌کند.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 324,
+    "solution_page": 42,
+    "solution_text": "چون سطح بدون اصطکاک است، انرژی مکانیکی در دو حالت یکسان پایسته می‌ماند. با برابر گرفتن تغییرات انرژی پتانسیل، تغییرات انرژی جنبشی برابر می‌شود و از رابطه سرعت‌ها $v'_2=8.5 m/s$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 325,
+    "solution_page": 42,
+    "solution_text": "برای رسیدن به $B$ جسم باید از قله اول بگذرد؛ کمینه $v_A$ با توقف لحظه‌ای در قله اول از پایستگی انرژی به دست می‌آید: $v_A=40 m/s$. سپس بین $A$ و $B$ دوباره انرژی پایسته نوشته می‌شود و $v_B=20 m/s$.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0042.jpg",
+        "box": [
+          170,
+          1710,
+          760,
+          2070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر تپه‌ای با نقاط A، O و B و اختلاف ارتفاع‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 326,
+    "solution_page": 42,
+    "solution_text": "مسیر بدون اتلاف است؛ بیشترین سرعت در پایین‌ترین نقطه $B$ و کمترین سرعت در بلندترین نقطه $A$ است. با فرض $v_B=1.8v_A$ و پایستگی انرژی بین $A$ و $B$ مقدارهای وابسته به $h$ استخراج می‌شوند.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0042.jpg",
+        "box": [
+          150,
+          2130,
+          560,
+          2460
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر ABC با نقطه B در پایین‌ترین ارتفاع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 327,
+    "solution_page": 43,
+    "solution_text": "برای آونگ، کمترین انرژی پتانسیل گرانشی در پایین‌ترین ارتفاع و بیشترین انرژی جنبشی در همان نقطه است؛ بنابراین نقطه پایین مسیر پاسخ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0043.jpg",
+        "box": [
+          120,
+          430,
+          430,
+          780
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "آونگ ساده با نقطه پایین مسیر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 328,
+    "solution_page": 43,
+    "solution_text": "افت ارتفاع گلوله آونگ از هندسه شکل $|\\Delta h|=L-L\\cos37^\\circ=0.2 m$ گرفته می‌شود و از $\\Delta K+\\Delta U=0$ سرعت $v_B=3\\sqrt2 m/s$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0043.jpg",
+        "box": [
+          110,
+          830,
+          610,
+          1135
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "آونگ با زاویه‌های 37 و 53 درجه و افت ارتفاع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 329,
+    "solution_page": 43,
+    "solution_text": "برای حرکت روی سطح شیبدار و فنر، ابتدا انرژی کشسانی ذخیره‌شده و افت ارتفاع از هندسه تعیین می‌شود؛ سپس پایستگی انرژی بین لحظه رهاشدن فنر و لحظه جدا شدن جسم، سرعت را $v=2.4 m/s$ می‌دهد.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0043.jpg",
+        "box": [
+          120,
+          1210,
+          610,
+          1560
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جسم و فنر روی سطح شیبدار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 330,
+    "solution_page": 43,
+    "solution_text": "با انتخاب نقاط ۱ و ۲ در حرکت جرم و فنر، جمله‌های انرژی جنبشی، کشسانی و گرانشی در معادله پایستگی قرار می‌گیرند و انرژی پتانسیل کشسانی فنر در نقطه خواسته‌شده $28 J$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0043.jpg",
+        "box": [
+          120,
+          1620,
+          620,
+          2070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو وضعیت جسم و فنر عمودی با ارتفاع‌های متفاوت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 331,
+    "solution_page": 43,
+    "solution_text": "دو حالت فشردگی فنر و ارتفاع‌های مختلف مقایسه می‌شوند. با نوشتن انرژی مکانیکی برای هر شکل نشان داده می‌شود انرژی پتانسیل کشسانی در شکل خواسته‌شده نیز $8 J$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0043.jpg",
+        "box": [
+          120,
+          1990,
+          620,
+          2450
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مقایسه حالت‌های فنر عمودی و مکعب متصل به فنر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 332,
+    "solution_page": 44,
+    "solution_text": "کار نیروی فنر برای سه مسیر افقی مقایسه شده است. از $\\Delta K+\\Delta U_f=W_f$ و علامت تغییر مکان‌ها نتیجه می‌شود اندازه کارها به ترتیب چاپی مقایسه و گزینه انتخاب می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 333,
+    "solution_page": 44,
+    "solution_text": "برای حرکت افقی با نیروی اصطکاک ثابت، قانون کار-انرژی نوشته شده و با در نظر گرفتن مسیرهای $AB$ و $CD$ مقدار نیروی اصطکاک از رابطه $\\tfrac12m(v_2^2-v_1^2)=-f(AB+CD)$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 334,
+    "solution_page": 44,
+    "solution_text": "در کاسه نیم‌دایره، از پایستگی انرژی بین $A$ و $B$ استفاده می‌شود. افت ارتفاع برابر شعاع مسیر است و با $v_A=2 m/s$ شعاع $r=60 cm$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0044.jpg",
+        "box": [
+          120,
+          870,
+          520,
+          1135
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "حرکت جسم در مسیر نیم‌دایره‌ای"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 335,
+    "solution_page": 44,
+    "solution_text": "برای جسم روی سطح شیبدار، کار اصطکاک در معادله $\\Delta K+\\Delta U=W_{fk}$ قرار می‌گیرد و با داده‌های شکل نیروی اصطکاک $12 N$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0044.jpg",
+        "box": [
+          120,
+          1370,
+          560,
+          1690
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جسم روی سطح شیبدار با ارتفاع 2.5 متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 336,
+    "solution_page": 44,
+    "solution_text": "دو مسیر رفت و برگشت روی سطح شیبدار بررسی شده‌اند. با نوشتن کار اصطکاک و انرژی مکانیکی در هر مسیر و حذف جمله‌های مشترک، طول مسیر $d=5 m$ نتیجه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0044.jpg",
+        "box": [
+          120,
+          1725,
+          650,
+          2070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "رفت و برگشت جسم روی سطح شیبدار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 337,
+    "solution_page": 44,
+    "solution_text": "برای جابه‌جایی از $A$ به $B$ و از $B$ به $C$، انرژی مکانیکی با کار اصطکاک نوشته می‌شود؛ نسبت سرعت‌های $v_B$ و $v_C$ و هندسه مثلث، سرعت $v_C=2\\sqrt6 m/s$ را می‌دهد.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0044.jpg",
+        "box": [
+          120,
+          2170,
+          630,
+          2470
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سطح شیبدار با نقاط A، B و C"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 338,
+    "solution_page": 45,
+    "solution_text": "با وجود اصطکاک روی مسیر $ABC$، قانون انرژی بین $A$ و $C$ نوشته می‌شود و کار اصطکاک روی دو بخش مسیر لحاظ می‌گردد؛ طول بخش افقی $d'=12 m$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0045.jpg",
+        "box": [
+          135,
+          280,
+          720,
+          610
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر شیبدار و افقی A، B و C با اصطکاک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 339,
+    "solution_page": 45,
+    "solution_text": "در حالت افت آزاد، انرژی مکانیکی جسم در نقطه $A$ محاسبه می‌شود و سپس حرکت روی شیبدار با اصطکاک بررسی می‌گردد؛ از روابط انرژی و هندسه شیب، مسافت $d_B=2.5 m$ نتیجه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0045.jpg",
+        "box": [
+          125,
+          660,
+          650,
+          1010
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "افت آزاد و حرکت روی سطح شیبدار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 340,
+    "solution_page": 45,
+    "solution_text": "چون در بخش‌های بدون اصطکاک انرژی پایسته است، انرژی مکانیکی در $B$ معلوم می‌شود. سپس کار اصطکاک روی $BC$ برابر تغییر انرژی مکانیکی قرار می‌گیرد و سرعت عبور از $C$ برابر $3 m/s$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0045.jpg",
+        "box": [
+          130,
+          1180,
+          820,
+          1510
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر با ناحیه بدون اصطکاک و بخش افقی اصطکاک‌دار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 341,
+    "solution_page": 45,
+    "solution_text": "با استفاده از هندسه قوس دایره‌ای، ارتفاع‌های $A$ و $C$ نسبت به مبدا انرژی تعیین می‌شود. از $\\Delta K+\\Delta U=W_{fk}$ شعاع مسیر $R=25 cm$ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0045.jpg",
+        "box": [
+          125,
+          1580,
+          710,
+          1960
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر قوسی دایره‌ای با شعاع R و نقاط A، B و C"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 342,
+    "solution_page": 45,
+    "solution_text": "انرژی مکانیکی جسم روی سطح شیبدار برابر مجموع $K+U$ است. با رابطه $\\sin30^\\circ=h/d$ طول سطح شیبدار $d=4 m$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0045.jpg",
+        "box": [
+          125,
+          2150,
+          630,
+          2380
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سطح شیبدار با ارتفاع 2 متر و زاویه 30 درجه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 343,
+    "solution_page": 46,
+    "solution_text": "در هر متر از سطح شیبدار انرژی مکانیکی ۲۰ درصد کاهش می‌یابد؛ بنابراین پس از ۴ متر انرژی با ضرب پیاپی ضرایب کاهش محاسبه و از $E_B=\\tfrac12mv_B^2+mgh_B$ سرعت $v_B=6.4 m/s$ نتیجه می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 344,
+    "solution_page": 46,
+    "solution_text": "۲۰ درصد انرژی جنبشی اولیه توسط مقاومت هوا تلف می‌شود؛ ابتدا $K_1$ محاسبه و سپس از $0.2K_1=m g\\Delta h$ بیشینه افزایش ارتفاع $4 m$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0046.jpg",
+        "box": [
+          150,
+          600,
+          460,
+          930
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "پرتاب قائم گلوله و افزایش ارتفاع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 345,
+    "solution_page": 46,
+    "solution_text": "در پرتاب قائم با مقاومت هوا، کار مقاومت در رفت و برگشت یکسان فرض شده است. از قانون انرژی کل کار هوا و سپس ارتفاع بیشینه $\\Delta h=2.5 m$ استخراج می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0046.jpg",
+        "box": [
+          150,
+          980,
+          470,
+          1310
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "حرکت قائم با مقاومت هوا در مسیر رفت و برگشت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 346,
+    "solution_page": 46,
+    "solution_text": "حرکت در دو نیمه مسیر با کار نیروی مقاومت بررسی می‌شود. با نسبت سرعت‌های دو نیمه و نوشتن انرژی برای هر بخش، نیروی مقاومت $f=3.5 N$ به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0046.jpg",
+        "box": [
+          150,
+          1390,
+          450,
+          1760
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "تقسیم مسیر عمودی به دو نیمه با سرعت‌های میانی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 347,
+    "solution_page": 46,
+    "solution_text": "برای دو بخش مسیر پرتابه، کار اصطکاک/مقاومت هوا در معادلات انرژی وارد شده است. با تقسیم روابط و استفاده از $h=21 m$ سرعت اولیه $v_1=60 m/s$ و سپس کار کل مقاومت هوا محاسبه می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0046.jpg",
+        "box": [
+          150,
+          2130,
+          620,
+          2440
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر پرتابه با دو بخش و نقطه اوج"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 348,
+    "solution_page": 47,
+    "solution_text": "در هر برخورد توپ ۱۹ درصد انرژی مکانیکی از دست می‌رود؛ بنابراین بیشینه ارتفاع‌ها به صورت دنباله هندسی با ضریب $0.81$ کاهش می‌یابند و با لگاریتم، اولین برخوردی که ارتفاع کمتر از حد داده شود پیدا می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 349,
+    "solution_page": 47,
+    "solution_text": "برای آونگ، افت ارتفاع از $|\\Delta h|=L\\cos37^\\circ-L\\cos53^\\circ$ به دست می‌آید. سپس $\\Delta K+\\Delta U=W_f$ نوشته شده و کار مقاومت هوا $-3.5 J$ محاسبه می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0047.jpg",
+        "box": [
+          125,
+          1210,
+          650,
+          1510
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "آونگ با زاویه‌های 37 و 53 درجه و سرعت‌های A و B"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 350,
+    "solution_page": 47,
+    "solution_text": "مبدا پتانسیل گرانشی روی تراز عبوری از $B$ گرفته شده است. با پایستگی انرژی از $A$ به $B$ انرژی فنر برابر بخشی از انرژی مکانیکی اولیه می‌شود و $U_e=120 J$ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0047.jpg",
+        "box": [
+          125,
+          1640,
+          650,
+          1900
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مکعب روی مسیر افقی و برخورد با فنر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 351,
+    "solution_page": 47,
+    "solution_text": "برای دو برخورد با فنر، انرژی مکانیکی با اصطکاک نوشته می‌شود. در حالت دوم انرژی فنر در فشردگی جدید قرار داده شده و سرعت لازم جسم در $A$ برابر $5 m/s$ محاسبه می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0047.jpg",
+        "box": [
+          125,
+          1960,
+          650,
+          2410
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو حالت برخورد مکعب با فنر و فشردگی متفاوت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 352,
+    "solution_page": 48,
+    "solution_text": "در حل چاپی سؤال 352، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0048.jpg",
+        "box": [
+          125,
+          230,
+          650,
+          550
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جسم و فنر روی سطح شیبدار با فاصله 6 متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 353,
+    "solution_page": 48,
+    "solution_text": "در حل چاپی سؤال 353، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0048.jpg",
+        "box": [
+          125,
+          800,
+          650,
+          1130
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سطح شیبدار با نیروی خارجی و اصطکاک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 354,
+    "solution_page": 48,
+    "solution_text": "در حل چاپی سؤال 354، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 355,
+    "solution_page": 48,
+    "solution_text": "در حل چاپی سؤال 355، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 356,
+    "solution_page": 48,
+    "solution_text": "در حل چاپی سؤال 356، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 357,
+    "solution_page": 49,
+    "solution_text": "در حل چاپی سؤال 357، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 358,
+    "solution_page": 49,
+    "solution_text": "در حل چاپی سؤال 358، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 359,
+    "solution_page": 49,
+    "solution_text": "در حل چاپی سؤال 359، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 360,
+    "solution_page": 49,
+    "solution_text": "در حل چاپی سؤال 360، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0049.jpg",
+        "box": [
+          125,
+          1280,
+          620,
+          1600
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو حالت حرکت روی سطح شیبدار با نیروی محرک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 361,
+    "solution_page": 49,
+    "solution_text": "در حل چاپی سؤال 361، قانون کار و انرژی یا پایستگی انرژی مکانیکی نوشته شده است؛ جمله‌های $K$، $U_g$، انرژی فنر و کار اصطکاک/مقاومت هوا مطابق شکل جایگذاری شده‌اند و مقدار خواسته‌شده با ساده‌سازی روابط به گزینه چاپی می‌رسد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 362,
+    "solution_page": 50,
+    "solution_text": "در حل چاپی سؤال 362، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 363,
+    "solution_page": 50,
+    "solution_text": "در حل چاپی سؤال 363، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 364,
+    "solution_page": 50,
+    "solution_text": "در حل چاپی سؤال 364، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 365,
+    "solution_page": 50,
+    "solution_text": "در حل چاپی سؤال 365، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 366,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 366، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 367,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 367، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 368,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 368، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 369,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 369، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 370,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 370، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 371,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 371، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 372,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 372، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 373,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 373، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0051.jpg",
+        "box": [
+          120,
+          1180,
+          560,
+          1490
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار تبدیل بین دو مقیاس دمایی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 374,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 374، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 375,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 375، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 376,
+    "solution_page": 51,
+    "solution_text": "در حل چاپی سؤال 376، رابطه خطی بین مقیاس‌های دما یا اختلاف دماها به کار رفته است. با تبدیل سلسیوس، فارنهایت و کلوین و استفاده از تناسب‌های داده‌شده، کمیت خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 377,
+    "solution_page": 52,
+    "solution_text": "در حل چاپی سؤال 377، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 378,
+    "solution_page": 52,
+    "solution_text": "در حل چاپی سؤال 378، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0052.jpg",
+        "box": [
+          120,
+          520,
+          520,
+          760
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "میله خمیده و انبساط طولی بخش مایل"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 379,
+    "solution_page": 52,
+    "solution_text": "در حل چاپی سؤال 379، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 380,
+    "solution_page": 52,
+    "solution_text": "در حل چاپی سؤال 380، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 381,
+    "solution_page": 52,
+    "solution_text": "در حل چاپی سؤال 381، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 382,
+    "solution_page": 52,
+    "solution_text": "در حل چاپی سؤال 382، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 383,
+    "solution_page": 52,
+    "solution_text": "در حل چاپی سؤال 383، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 384,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 384، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 385,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 385، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 386,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 386، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0053.jpg",
+        "box": [
+          120,
+          500,
+          620,
+          820
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار طول بر حسب دما برای دو میله A و B"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 387,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 387، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0053.jpg",
+        "box": [
+          120,
+          920,
+          620,
+          1280
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار طول دو میله بر حسب دمای سلسیوس"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 388,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 388، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 389,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 389، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 390,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 390، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 391,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 391، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 392,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 392، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 393,
+    "solution_page": 53,
+    "solution_text": "در حل چاپی سؤال 393، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 394,
+    "solution_page": 54,
+    "solution_text": "در حل چاپی سؤال 394، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 395,
+    "solution_page": 54,
+    "solution_text": "در حل چاپی سؤال 395، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 396,
+    "solution_page": 54,
+    "solution_text": "در حل چاپی سؤال 396، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 397,
+    "solution_page": 54,
+    "solution_text": "در حل چاپی سؤال 397، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 398,
+    "solution_page": 54,
+    "solution_text": "در حل چاپی سؤال 398، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 399,
+    "solution_page": 54,
+    "solution_text": "در حل چاپی سؤال 399، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 400,
+    "solution_page": 54,
+    "solution_text": "در حل چاپی سؤال 400، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 401,
+    "solution_page": 55,
+    "solution_text": "در حل چاپی سؤال 401، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0055.jpg",
+        "box": [
+          115,
+          360,
+          520,
+          780
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مخزن استوانه‌ای با ارتفاع‌های مایع و فضای خالی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 402,
+    "solution_page": 55,
+    "solution_text": "در حل چاپی سؤال 402، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 403,
+    "solution_page": 55,
+    "solution_text": "در حل چاپی سؤال 403، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 404,
+    "solution_page": 55,
+    "solution_text": "در حل چاپی سؤال 404، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 405,
+    "solution_page": 55,
+    "solution_text": "در حل چاپی سؤال 405، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 406,
+    "solution_page": 55,
+    "solution_text": "در حل چاپی سؤال 406، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 407,
+    "solution_page": 55,
+    "solution_text": "در حل چاپی سؤال 407، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 408,
+    "solution_page": 55,
+    "solution_text": "در حل چاپی سؤال 408، روابط انبساط $\\Delta L=L_0\\alpha\\Delta\\theta$، $\\Delta A=A_0(2\\alpha)\\Delta\\theta$ یا $\\Delta V=V_0\\beta\\Delta\\theta$ به کار رفته‌اند. با توجه به هندسه یا چگالی، تغییر طول/سطح/حجم محاسبه و نتیجه با گزینه چاپی منطبق شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0055.jpg",
+        "box": [
+          115,
+          2150,
+          520,
+          2410
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جدول مقایسه گرمای Q و Q' برای تغییر دمای متفاوت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 409,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 409، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 410,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 410، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 411,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 411، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 412,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 412، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 413,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 413، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 414,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 414، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 415,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 415، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 416,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 416، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 417,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 417، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 418,
+    "solution_page": 56,
+    "solution_text": "در حل چاپی سؤال 418، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 419,
+    "solution_page": 57,
+    "solution_text": "در حل چاپی سؤال 419، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 420,
+    "solution_page": 57,
+    "solution_text": "در حل چاپی سؤال 420، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 421,
+    "solution_page": 57,
+    "solution_text": "در حل چاپی سؤال 421، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 422,
+    "solution_page": 57,
+    "solution_text": "در حل چاپی سؤال 422، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0057.jpg",
+        "box": [
+          120,
+          1850,
+          650,
+          2410
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "تحلیل برخورد گلوله‌ها و انتقال انرژی به گرما"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 423,
+    "solution_page": 57,
+    "solution_text": "در حل چاپی سؤال 423، از $Q=mc\\Delta\\theta$، $Q=C\\Delta\\theta$، بازده یا توان $P=Q/t$ استفاده شده است. با جایگذاری جرم، ظرفیت گرمایی و تغییر دما، گرمای مبادله‌شده یا توان/دما محاسبه شده و گزینه چاپی به دست آمده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 424,
+    "solution_page": 58,
+    "solution_text": "در حل چاپی سؤال 424، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 425,
+    "solution_page": 58,
+    "solution_text": "در حل چاپی سؤال 425، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 426,
+    "solution_page": 58,
+    "solution_text": "در حل چاپی سؤال 426، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 427,
+    "solution_page": 58,
+    "solution_text": "در حل چاپی سؤال 427، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 428,
+    "solution_page": 58,
+    "solution_text": "در حل چاپی سؤال 428، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 429,
+    "solution_page": 58,
+    "solution_text": "در حل چاپی سؤال 429، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 430,
+    "solution_page": 58,
+    "solution_text": "در حل چاپی سؤال 430، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 431,
+    "solution_page": 59,
+    "solution_text": "در حل چاپی سؤال 431، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 432,
+    "solution_page": 59,
+    "solution_text": "در حل چاپی سؤال 432، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 433,
+    "solution_page": 59,
+    "solution_text": "در حل چاپی سؤال 433، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 434,
+    "solution_page": 59,
+    "solution_text": "در حل چاپی سؤال 434، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 435,
+    "solution_page": 59,
+    "solution_text": "در حل چاپی سؤال 435، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 436,
+    "solution_page": 59,
+    "solution_text": "در حل چاپی سؤال 436، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 437,
+    "solution_page": 60,
+    "solution_text": "در حل چاپی سؤال 437، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 438,
+    "solution_page": 60,
+    "solution_text": "در حل چاپی سؤال 438، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 439,
+    "solution_page": 60,
+    "solution_text": "در حل چاپی سؤال 439، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 440,
+    "solution_page": 60,
+    "solution_text": "در حل چاپی سؤال 440، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 441,
+    "solution_page": 60,
+    "solution_text": "در حل چاپی سؤال 441، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 442,
+    "solution_page": 60,
+    "solution_text": "در حل چاپی سؤال 442، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 443,
+    "solution_page": 60,
+    "solution_text": "در حل چاپی سؤال 443، رابطه گرمای نهان $Q=mL$ همراه با $Q=mc\\Delta\\theta$ و موازنه گرمایی به کار رفته است. پس از تعیین مرحله گرم‌شدن، ذوب، تبخیر یا میعان، مقدار خواسته‌شده محاسبه و گزینه چاپی انتخاب شده است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0060.jpg",
+        "box": [
+          120,
+          1950,
+          650,
+          2410
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار دما-زمان با ناحیه ذوب و گرمایش مایع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 444,
+    "solution_page": 61,
+    "solution_text": "از نمودار گرمایش، ابتدا اختلاف دما بین فارنهایت‌ها به سلسیوس تبدیل می‌شود، سپس گرمای ویژه جامد در SI به دست می‌آید. با مقایسه بازه گرم شدن و ذوب، گرمای نهان ذوب $L_F=167600 J/kg$ محاسبه می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0061.jpg",
+        "box": [
+          120,
+          250,
+          720,
+          780
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار گرمایش جسم با دو بخش شیبدار و افقی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 445,
+    "solution_page": 61,
+    "solution_text": "گزینه‌های مربوط به فشار و نقطه جوش بررسی شده‌اند؛ کاهش فشار سطح آب نقطه جوش را کم می‌کند، افزایش فشار روی یخ نقطه ذوب را کاهش می‌دهد و گزینه درست از میان گزاره‌ها انتخاب می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0061.jpg",
+        "box": [
+          120,
+          880,
+          700,
+          1420
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "گزاره‌های بررسی فشار، نقطه جوش و نقطه ذوب"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 446,
+    "solution_page": 61,
+    "solution_text": "در توضیح چاپی آمده است بخار آب روی بدن گرما می‌دهد و به آب تبدیل می‌شود، به همین دلیل در شرایط یکسان احساس گرمای بیشتری نسبت به آب داغ ایجاد می‌کند.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 447,
+    "solution_page": 61,
+    "solution_text": "ابتدا گرمای لازم برای رساندن آب به نقطه جوش محاسبه می‌شود؛ چون گرمای کل داده‌شده برای تبخیر کامل کافی نیست، فقط بخشی از آب بخار می‌شود و مخلوط نهایی آب و بخار $100^\\circ C$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 448,
+    "solution_page": 61,
+    "solution_text": "گرمای لازم برای تبخیر عرق برابر گرمای گرفته‌شده از بدن قرار داده می‌شود: $mL_v=m'c\\Delta\\theta$. از این رابطه جرم عرق تبخیرشده حدود $23 g$ به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 449,
+    "solution_page": 61,
+    "solution_text": "برای بخار از دست‌رفته، رابطه $Q=-mL_v$ به کار رفته است و با جرم $10 g$ بخار آب، گرمای از دست رفته شیشه $-24900 J$ محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 450,
+    "solution_page": 61,
+    "solution_text": "تعادل گرمایی آب، بخار و سماور نوشته می‌شود. با در نظر گرفتن آب سرد، بخار واردشده و ظرفیت گرمایی سماور، گرمای لازم از رابطه $Q=Ra\\,Pt$ به زمان $t=270 s$ می‌رسد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 451,
+    "solution_page": 61,
+    "solution_text": "گرمای داده‌شده در هر ثانیه از توان گرمکن محاسبه می‌شود و چون این گرما صرف تبخیر آب است، جرم تبخیرشده در ۲۰ دقیقه از $Q=mL_v$ به دست می‌آید. با کم کردن حجم تبخیرشده از حجم اولیه، ارتفاع آب باقی‌مانده $8 cm$ می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  }
+]

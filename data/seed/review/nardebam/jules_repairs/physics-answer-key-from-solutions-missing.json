@@ -1,0 +1,79 @@
+{
+  "answers": {
+    "51": 1,
+    "52": 2,
+    "53": 3,
+    "54": 4,
+    "55": 1,
+    "56": 3,
+    "57": 1,
+    "58": 4,
+    "59": 1,
+    "60": 2
+  },
+  "review_notes": [
+    "Generated locally from existing solution stated_correct_option only for answer-key gaps."
+  ],
+  "provenance": [
+    {
+      "question_number": 51,
+      "answer": 1,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 52,
+      "answer": 2,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 53,
+      "answer": 3,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 54,
+      "answer": 4,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 55,
+      "answer": 1,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 56,
+      "answer": 3,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 57,
+      "answer": 1,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 58,
+      "answer": 4,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 59,
+      "answer": 1,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 60,
+      "answer": 2,
+      "source_solution_file": "physics-solutions-01.json",
+      "basis": "stated_correct_option"
+    }
+  ]
+}

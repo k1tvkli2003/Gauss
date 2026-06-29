@@ -1,0 +1,390 @@
+{
+  "task_id": "math-solutions-gap-1516-1608",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1516,
+      "solution_page": 141,
+      "solution_text": "در دو طرف معادله $\\log_{۱۶}(۳)\\log_{۳}(۱۶)$ را ضرب می‌کنیم.\n$(\\log_{۲۱۶} ۲) (\\log_{۲۱۶} ۳) (\\log_{۲} ۲۱۶ + \\log_{۳} ۲۱۶) \\\\ = \\text{k}(\\log_{۲} ۲۱۶)(\\log_{۳} ۲۱۶)(\\log_{۲۱۶} ۲)(\\log_{۲۱۶} ۳) \\\\ \\Rightarrow \\log_{۲۱۶} ۳ + \\log_{۲۱۶} ۲ = \\text{k} \\Rightarrow \\text{k} = \\log_{۲۱۶} ۶ = \\log_{۶^۳} ۶ \\\\ \\Rightarrow \\text{k} = \\frac{۱}{۳}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1517,
+      "solution_page": 141,
+      "solution_text": "عبارت $(\\log_{۶} \\sqrt{۳}) (\\log_{۶} ۱۶)$ را ساده می‌کنیم.\n$(\\log_{۶} ۳)^۲ + (\\log_{۶} ۲)^۲ + (\\log_{۶} \\sqrt{۳})(\\log_{۶} ۱۶) \\\\ = (\\log_{۶} ۳)^۲ + (\\log_{۶} ۲)^۲ + (\\frac{۱}{۲} \\log_{۶} ۳)(۴ \\log_{۶} ۲) \\\\ = (\\log_{۶} ۳)^۲ + (\\log_{۶} ۲)^۲ + ۲ (\\log_{۶} ۳)(\\log_{۶} ۲) \\\\ = (\\log_{۶} ۳ + \\log_{۶} ۲)^۲ = (\\log_{۶} ۶)^۲ = ۱$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1518,
+      "solution_page": 141,
+      "solution_text": "ابتدا در عبارت $\\text{A}$، مقدار $\\log_{۶} ۱۲$ را ساده می‌کنیم.\n$\\text{A} = (\\log_{۶} ۲)^۲ + (\\log_{۶} ۳)(\\log_{۶} ۱۲) \\\\ = (\\log_{۶} ۲)^۲ + (\\log_{۶} ۳)(۲ \\log_{۶} ۲ + \\log_{۶} ۳) \\\\ = (\\log_{۶} ۲)^۲ + ۲ (\\log_{۶} ۲)(\\log_{۶} ۳) + (\\log_{۶} ۳)^۲ \\\\ = (\\log_{۶} ۲ + \\log_{۶} ۳)^۲ = (\\log_{۶} ۶)^۲ = ۱$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1519,
+      "solution_page": 141,
+      "solution_text": "عبارت $\\text{P}$ را برابر ۱ قرار داده و معادله را حل می‌کنیم.\n$(\\log_{۱۵} ۵)^۲ + \\log_{۱۵} \\alpha \\log_{۱۵} ۷۵ = ۱ \\\\ \\Rightarrow \\log_{۱۵} \\alpha \\log_{۱۵} ۷۵ = ۱ - (\\log_{۱۵} ۵)^۲ \\\\ \\Rightarrow \\log_{۱۵} \\alpha \\log_{۱۵} ۷۵ = (۱ - \\log_{۱۵} ۵)(۱ + \\log_{۱۵} ۵) \\\\ \\Rightarrow \\log_{۱۵} \\alpha \\log_{۱۵} ۷۵ = (\\log_{۱۵} ۱۵ - \\log_{۱۵} ۵)(\\log_{۱۵} ۱۵ + \\log_{۱۵} ۵) = \\log_{۱۵} ۳ \\log_{۱۵} ۷۵ \\\\ \\Rightarrow \\log_{۱۵} \\alpha = \\log_{۱۵} ۳ \\Rightarrow \\alpha = ۳$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1520,
+      "solution_page": 141,
+      "solution_text": "ابتدا معادله نمایی را ساده می‌کنیم.\n$۲^{x - ۱} = (\\frac{۱}{۸})^{y - x} \\Rightarrow ۲^{x - ۱} = ۲^{-۳y + ۳x} \\\\ \\Rightarrow x - ۱ = -۳y + ۳x \\Rightarrow ۳y - ۲x = ۱ \\quad (۱)$\nاکنون به سراغ معادله لگاریتمی می‌رویم:\n$\\log(x + ۳) + \\log(y - ۲) = ۱ \\Rightarrow \\log(x + ۳)(y - ۲) = ۱ \\\\ \\Rightarrow (x + ۳)(y - ۲) = ۱۰ \\Rightarrow xy + ۳y - ۲x - ۶ = ۱۰ \\\\ \\xrightarrow{(۱)} xy + ۱ - ۶ = ۱۰ \\Rightarrow xy = ۱۵$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1521,
+      "solution_page": 141,
+      "solution_text": "ابتدا معادله نمایی را حل می‌کنیم.\n$۴^x - ۲^x = ۵۶ \\xrightarrow{۲^x = \\text{k}} \\text{k}^۲ - \\text{k} - ۵۶ = ۰ \\\\ \\Rightarrow (\\text{k} + ۷)(\\text{k} - ۸) = ۰ \\Rightarrow \\begin{cases} \\text{k} = -۷ \\text{ ق.ق.غ} \\\\ \\text{k} = ۸ \\end{cases} \\\\ \\Rightarrow ۲^x = ۸ \\Rightarrow x = ۳$\nاکنون به سراغ معادله لگاریتمی می‌رویم.\n$\\log(x + y) + \\log(۲x - ۲y) = ۱ \\\\ \\xrightarrow{x = ۳} \\log(۳ + y) + \\log ۲(۳ - y) = ۱ \\Rightarrow \\log ۲(۹ - y^۲) = ۱ \\\\ \\Rightarrow ۲(۹ - y^۲) = ۱۰ \\Rightarrow y^۲ = ۴ \\Rightarrow y = \\pm ۲$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1522,
+      "solution_page": 141,
+      "solution_text": "معادله لگاریتمی را ساده می‌کنیم.\n$\\log \\frac{a + b}{۲} = \\frac{\\log a + \\log b}{۲} \\Rightarrow ۲ \\log \\frac{a + b}{۲} = \\log a + \\log b \\\\ \\log(\\frac{a + b}{۲})^۲ = \\log ab \\Rightarrow (\\frac{a + b}{۲})^۲ = ab \\\\ \\Rightarrow (a + b)^۲ = ۴ab \\Rightarrow a^۲ + b^۲ + ۲ab = ۴ab \\\\ \\Rightarrow a^۲ + b^۲ - ۲ab = ۰ \\Rightarrow (a - b)^۲ = ۰ \\Rightarrow a = b \\\\ \\Rightarrow \\frac{a}{b} + \\frac{b}{a} = ۱ + ۱ = ۲$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1523,
+      "solution_page": 141,
+      "solution_text": "محدوده هر یک از عبارات داخل براکت را به دست می‌آوریم.\n$۳^۲ < ۲۴ < ۳^۳ \\Rightarrow ۲ < \\log_{۳} ۲۴ < ۳ \\Rightarrow [\\log_{۳} ۲۴] = ۲ \\\\ ۲^۴ < ۲۴ < ۲^۵ \\Rightarrow ۴ < \\log_{۲} ۲۴ < ۵ \\Rightarrow [\\log_{۲} ۲۴] = ۴ \\\\ \\log_{\\sqrt{۲}} ۱ = ۰ \\Rightarrow [\\log_{\\sqrt{۲}} ۱] = ۰ \\Rightarrow \\text{A} = ۲ + ۴ + ۰ = ۶$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1524,
+      "solution_page": 141,
+      "solution_text": "ابتدا محدوده $x$ و $y$ را به دست می‌آوریم.\n$[\\log_{۲} x] = ۳ \\Rightarrow ۳ \\le \\log_{۲} x < ۴ \\Rightarrow ۲^۳ \\le x < ۲^۴ \\\\ \\Rightarrow ۸ \\le x < ۱۶ \\\\ [\\log_{۳} y] = ۳ \\Rightarrow ۳ \\le \\log_{۳} y < ۴ \\Rightarrow ۳^۳ \\le y < ۳^۴ \\\\ \\Rightarrow ۲۷ \\le y < ۸۱ \\\\ \\Rightarrow ۳۵ \\le x + y < ۹۷ \\\\ \\Rightarrow ۳^۳ < x + y < ۳^۵ \\Rightarrow ۳ < \\log_{۳} (x + y) < ۵ \\\\ \\Rightarrow [\\log_{۳} (x + y)] \\nearrow^{۳}_{\\searrow^{۴}}$\nدو مقدار مختلف را اختیار می‌کند.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1525,
+      "solution_page": 141,
+      "solution_text": "روش اول: تابع $\\text{f}(\\frac{۱}{x})$ را تشکیل داده و ساده می‌کنیم.\n$\\text{f}(\\frac{۱}{x}) = \\log_{۲} \\frac{۴}{\\frac{۱}{x}} = \\log_{۲} \\frac{۱۶}{۴x} = \\log_{۲} ۱۶ - \\log_{۲} ۴x = ۴ - \\text{f}(x)$\nروش دوم: از نقطه‌یابی استفاده کنید.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1526,
+      "solution_page": 141,
+      "solution_text": "دو تابع $\\text{f}$ و $\\text{g}$ هنگامی با هم برابرند که هم دامنه آنها و هم ضابطه آنها برابر باشد.\nدر $\\text{۱}$ دامنه $\\text{f}(x)$ برابر $(۳, +\\infty)$ و دامنه $\\text{g}(x)$ برابر $(-\\infty, ۰) \\cup (۳, +\\infty)$ است. بنابراین با هم برابر نیستند.\nدر $\\text{۲}$ دامنه $\\text{f}(x)$ برابر $[۰, ۱] - \\mathbb{R}$ و دامنه $\\text{g}(x)$ برابر $\\{۰, ۱\\} - \\mathbb{R}$ است. در نتیجه با هم برابر نیستند.\nدر $\\text{۳}$ $x = -۲$ عضو دامنه $\\text{f}(x)$ است اما در دامنه $\\text{g}(x)$ نمی‌باشد. بنابراین با هم برابر نیستند.\nدر $\\text{۴}$ دامنه $\\text{f}(x)$ و $\\text{g}(x)$ برابر $(۰, ۳)$ بوده و ضابطه آنها نیز برابر است، در نتیجه $\\text{f}(x) = \\text{g}(x)$ می‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1527,
+      "solution_page": 141,
+      "solution_text": "دامنه تعریف تابع $\\text{f}(x)$ بازه $(\\frac{۱}{۳}, \\infty-)$ است. بنابراین $x = \\frac{۱}{۳}$ ریشه $ax + b$ است:\n$\\frac{a}{۳} + b = ۰ \\Rightarrow a = -۳b$\nاز طرفی: $\\text{f}(-۱) = ۲ \\Rightarrow \\log_{۲}(-a + b) = ۲ \\Rightarrow -a + b = ۴ \\\\ \\xrightarrow{a = -۳b} ۴b = ۴ \\Rightarrow b = ۱ \\Rightarrow a = -۳ \\\\ \\Rightarrow \\text{f}(x) = \\log_{۲}(-۳x + ۱) \\Rightarrow \\text{f}(۰) = \\log_{۲} ۱ = ۰$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1528,
+      "solution_page": 141,
+      "solution_text": "در تابع $y = \\log_{\\text{g}(x)} \\text{f}(x)$ شروط زیر برقرار است:\n$\\begin{cases} \\text{f}(x) > ۰ \\\\ \\text{g}(x) > ۰ , \\text{g}(x) \\ne ۱ \\end{cases}$\nخواهیم داشت:\n$\\begin{cases} \\frac{۳x}{۵ - x} > ۰ \\Rightarrow ۰ < x < ۵ \\\\ x - ۲ > ۰ \\Rightarrow x > ۲ \\\\ x - ۲ \\ne ۱ \\Rightarrow x \\ne ۳ \\end{cases} \\xrightarrow{\\cap} x \\in (۲, ۵) - \\{۳\\}$\n$\\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{۴\\}$\nدامنه تابع فقط شامل یک عضو صحیح است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1571,
+      "solution_page": 146,
+      "solution_text": "قرینهٔ $A(\\alpha , \\beta)$ نسبت به محور طول‌ها $A'(\\alpha , -\\beta)$ و قرینهٔ آن نسبت به محور عرض‌ها $A''(-\\alpha , \\beta)$ است.\nپس اگر $A(-2, 4)$، آن‌گاه قرینه نسبت به محور طول‌ها $A'(-2, -4)$ و قرینه نسبت به محور عرض‌ها $A''(2, 4)$ است. به این ترتیب:\n$A'A'' = \\sqrt{(2+2)^2 + (4+4)^2} = \\sqrt{16+64} = 4\\sqrt{5}$\nفاصلهٔ دو نقطهٔ $A$ و $B$ تا یکدیگر از رابطهٔ $AB = \\sqrt{(x_A - x_B)^2 + (y_A - y_B)^2}$ به دست می‌آید.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1572,
+      "solution_page": 146,
+      "solution_text": "ابتدا مختصات $M$ وسط ضلع $BC$ را می‌نویسیم.\n$M(\\dfrac{x_B + x_C}{2}, \\dfrac{y_B + y_C}{2}) \\Rightarrow M(\\dfrac{10+0}{2}, \\dfrac{-9-1}{2}) \\Rightarrow M(5, -5)$\nحال طول پاره‌خط $AM$ را محاسبه می‌کنیم.\n$AM = \\sqrt{(x_A - x_M)^2 + (y_A - y_M)^2} = \\sqrt{(1-5)^2 + (-2+5)^2} = \\sqrt{16+9} = 5$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1573,
+      "solution_page": 146,
+      "solution_text": "ابتدا مختصات نقطهٔ $M$ وسط ضلع $BC$ را به دست می‌آوریم.\n$M(\\dfrac{x_B + x_C}{2}, \\dfrac{y_B + y_C}{2}) \\Rightarrow M(\\dfrac{3}{2}, 3)$\nحال طول پاره‌خط $AM$ را برابر $\\sqrt{13}$ قرار می‌دهیم.\n$AM = \\sqrt{(a - \\dfrac{3}{2})^2 + (1-3)^2} = \\sqrt{13} \\Rightarrow (a - \\dfrac{3}{2})^2 + 4 = 13 \\Rightarrow (a - \\dfrac{3}{2})^2 = 9 \\Rightarrow \\begin{cases} a - \\dfrac{3}{2} = 3 \\Rightarrow a = \\dfrac{9}{2} \\\\ a - \\dfrac{3}{2} = -3 \\Rightarrow a = -\\dfrac{3}{2} \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1574,
+      "solution_page": 146,
+      "solution_text": "مرکز دایره از تمام نقاط روی دایره به یک فاصله است. بنابراین:\n$OA = OB \\Rightarrow \\sqrt{(3-3)^2 + (-1-2)^2} = \\sqrt{(3-1)^2 + (-1-k)^2}$\n$\\Rightarrow 3 = \\sqrt{4 + (k+1)^2} \\Rightarrow (k+1)^2 + 4 = 9 \\Rightarrow (k+1)^2 = 5 \\Rightarrow k^2 + 2k - 4 = 0 \\Rightarrow k_1 k_2 = -4$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1575,
+      "solution_page": 146,
+      "solution_text": "روش اول: قرینهٔ نقطهٔ $A(-1, 4)$ را نسبت به نقطهٔ $M(a, 2a+1)$، نقطهٔ $A'(x,y)$ در نظر می‌گیریم. در این صورت $M$ وسط $AA'$ است.\n$x_M = \\dfrac{x_A + x_{A'}}{2} \\Rightarrow a = \\dfrac{-1+x}{2} \\Rightarrow x = 2a+1$\n$y_M = \\dfrac{y_A + y_{A'}}{2} \\Rightarrow 2a+1 = \\dfrac{4+y}{2} \\Rightarrow y = 4a-2$\n$A'$ در ناحیهٔ چهارم است. بنابراین:\n$x > 0 \\Rightarrow 2a+1 > 0 \\Rightarrow a > -\\dfrac{1}{2}$\n$y < 0 \\Rightarrow 4a-2 < 0 \\Rightarrow a < \\dfrac{1}{2}$\n$\\xrightarrow{\\cap} -\\dfrac{1}{2} < a < \\dfrac{1}{2}$\n\nروش دوم: اگر $A'(x',y')$ قرینهٔ نقطهٔ $A(x,y)$ نسبت به نقطهٔ $M(\\alpha, \\beta)$ باشد، مختصات $A'$ را می‌توان از روابط زیر محاسبه کرد:\n$\\begin{cases} x' = 2\\alpha - x \\\\ y' = 2\\beta - y \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1576,
+      "solution_page": 146,
+      "solution_text": "فاصلهٔ نقطهٔ $A(a,b)$ از خط $x = 4$ برابر $|a-4|$ می‌باشد. طول $AF$ را محاسبه کرده، برابر با $|a-4|$ قرار می‌دهیم:\n$AF = \\sqrt{(a-3)^2 + b^2} = |a-4| \\Rightarrow (a-3)^2 + b^2 = (a-4)^2 \\Rightarrow a^2 - 6a + 9 + b^2 = a^2 - 8a + 16 \\Rightarrow b^2 + 2a = 7$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1577,
+      "solution_page": 146,
+      "solution_text": "لوزی، متوازی‌الاضلاعی است که قطرهای آن بر هم عمودند.\n$ABCD$ متوازی‌الاضلاع است:\n$\\begin{cases} x_A + x_C = x_B + x_D \\Rightarrow 2 + k = 0 + x_D \\Rightarrow x_D = k+2 \\\\ y_A + y_C = y_B + y_D \\Rightarrow 0 + 1 = 3 + y_D \\Rightarrow y_D = -2 \\end{cases}$\n$AC$ و $BD$ بر هم عمودند $\\Rightarrow m_{AC} m_{BD} = -1$\n$\\dfrac{y_C - y_A}{x_C - x_A} \\times \\dfrac{y_D - y_B}{x_D - x_B} = -1 \\Rightarrow \\dfrac{1-0}{k-2} \\times \\dfrac{-2-3}{x_D - 0} = -1 \\Rightarrow \\dfrac{1}{k-2} \\times \\dfrac{-5}{k+2} = -1 \\Rightarrow k^2 - 4 = 5 \\Rightarrow k^2 = 9 \\xrightarrow{k > 0} k = 3 \\Rightarrow x_D = 5 \\Rightarrow x_D \\cdot y_D = -10$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1578,
+      "solution_page": 146,
+      "solution_text": "رأس $A$ بر روی خط $y = 3x$ واقع است. بنابراین مختصات آن به صورت $A(\\alpha, 3\\alpha)$ می‌باشد. طول $AC$ و $AB$ برابر است، در نتیجه:\n$AB = AC = \\sqrt{(\\alpha - 9)^2 + 9\\alpha^2} = \\sqrt{\\alpha^2 + (3\\alpha - 6)^2}$\n$10\\alpha^2 - 18\\alpha + 81 = 10\\alpha^2 - 36\\alpha + 36 \\Rightarrow 18\\alpha = -45 \\Rightarrow \\alpha = -\\dfrac{5}{2} = -2.5$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1579,
+      "solution_page": 146,
+      "solution_text": "رأس $C$ بر نیمساز ناحیهٔ سوم ($y=x$) واقع است؛ بنابراین مختصات آن به صورت $C(\\alpha, \\alpha)$ است. مثلث $ABC$ در رأس $A$ متساوی‌الساقین است، یعنی $AB=AC$.\n$AB=AC \\Rightarrow \\sqrt{0^2 + 5^2} = \\sqrt{\\alpha^2 + (\\alpha - 1)^2}$\n$2\\alpha^2 - 2\\alpha + 1 = 25 \\Rightarrow \\alpha^2 - \\alpha - 12 = 0 \\Rightarrow \\begin{cases} \\alpha = -3 \\\\ \\alpha = 4 \\text{ غ ق ق} \\end{cases}$\nنقطهٔ $C$ در ناحیهٔ سوم است در نتیجه طول آن منفی است:\n$\\Rightarrow C(-3, -3) \\Rightarrow -3 - 3 = -6$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1580,
+      "solution_page": 146,
+      "solution_text": "رأس $A$ بر روی خط $y = 2x$ واقع است، بنابراین مختصات آن به صورت $A(\\alpha, 2\\alpha)$ می‌باشد. $AB$ و $AC$ بر یکدیگر عمودند، در نتیجه حاصل‌ضرب شیب‌های آن‌ها $-1$ است.\n$m_{AB} . m_{AC} = -1 \\Rightarrow \\dfrac{2\\alpha - 3}{\\alpha - 0} \\times \\dfrac{2\\alpha - 0}{\\alpha - 4} = -1 \\xrightarrow{\\alpha \\neq 0} \\dfrac{2(2\\alpha - 3)}{\\alpha - 4} = -1 \\Rightarrow 5\\alpha = 10 \\Rightarrow \\alpha = 2$\n$\\Rightarrow A(2, 4) \\Rightarrow 2 + 4 = 6$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1581,
+      "solution_page": 146,
+      "solution_text": "سه نقطهٔ $A$ ، $B$ و $C$ به شرطی بر روی یک خط راست هستند که شیب $AB$ با شیب $AC$ برابر باشد.\n$m_{AB} = m_{AC} \\Rightarrow \\dfrac{1-2}{m-1} = \\dfrac{m+4}{7-1} \\Rightarrow (m+4)(m-1) = -6 \\Rightarrow m^2 + 3m + 2 = 0 \\Rightarrow \\begin{cases} m = -1 \\\\ m = -2 \\end{cases} \\Rightarrow m_1 m_2 = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1600,
+      "solution_page": 149,
+      "solution_text": "دو خط هنگامی بر هم عمودند که حاصل‌ضرب شیب‌های آن‌ها برابر ۱- شود.\n$ax + ۲y = ۶ \\Rightarrow y = -\\frac{a}{۲}x + ۳ \\Rightarrow m_۱ = -\\frac{a}{۲}$\n$۳y = x + ۲ \\Rightarrow y = \\frac{x}{۳} + \\frac{۲}{۳} \\Rightarrow m_۲ = \\frac{۱}{۳}$\n$\\Rightarrow m_۱ m_۲ = -۱ \\Rightarrow -\\frac{a}{۶} = -۱ \\Rightarrow a = ۶$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            160,
+            460,
+            240,
+            830
+          ],
+          "alt": "راه حل سوال ۱۶۰۰",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1601,
+      "solution_page": 149,
+      "solution_text": "خط $d$ بر پاره‌خطی که دو سر آن نقاط $(a, \\circ)$ و $(\\circ, ۳a)$ می‌باشند، عمود است. شیب این پاره‌خط برابر $\\frac{۳a - \\circ}{\\circ - a}$ یعنی ۳- است، بنابراین شیب خط $d$ برابر $\\frac{۱}{۳}$ می‌باشد. هم‌چنین خط $d$ از نقطهٔ $(\\circ, ۲)$ عبور می‌کند. معادلهٔ خط $d$ به صورت زیر است:\n$d: y = \\frac{۱}{۳}x + ۲$\n$y = -x : \\text{نیمساز ناحیهٔ دوم}$\n$\\Rightarrow -x = \\frac{۱}{۳}x + ۲ \\Rightarrow x = -\\frac{۳}{۲}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            280,
+            460,
+            410,
+            830
+          ],
+          "alt": "راه حل سوال ۱۶۰۱",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1602,
+      "solution_page": 149,
+      "solution_text": "ارتفاع $AH$ بر ضلع $BC$ عمود است.\n$m_{BC} = \\frac{۵ - ۴}{۶ - \\circ} = \\frac{۱}{۶} \\Rightarrow m_{AH} = -۶$\nمعادلهٔ $AH : y - ۱ = -۶(x - ۳) \\Rightarrow y = -۶x + ۱۹$\nعرض از مبدأ معادلهٔ $AH$ برابر ۱۹ است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            400,
+            460,
+            480,
+            830
+          ],
+          "alt": "راه حل سوال ۱۶۰۲",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1603,
+      "solution_page": 149,
+      "solution_text": "اضلاع $AB$ و $BC$ در مربع $ABCD$ با یکدیگر برابر بوده و بر هم عمودند.\n$m_{AB} \\times m_{BC} = -۱ \\Rightarrow \\frac{۳ - ۱}{۲ + ۱} \\cdot \\frac{\\beta - ۱}{\\alpha + ۱} = -۱ \\Rightarrow (\\beta - ۱) = -\\frac{۳}{۲}(\\alpha + ۱) \\quad (۱)$\n$AB = BC \\Rightarrow \\sqrt{۳^۲ + ۲^۲} = \\sqrt{(\\alpha + ۱)^۲ + (\\beta - ۱)^۲}$\n$\\xrightarrow{(۱)} \\sqrt{(\\alpha + ۱)^۲ + \\frac{۹}{۴}(\\alpha + ۱)^۲} = \\sqrt{۱۳} \\Rightarrow \\frac{۱۳}{۴}(\\alpha + ۱)^۲ = ۱۳ \\Rightarrow (\\alpha + ۱)^۲ = ۴ \\Rightarrow \\begin{cases} \\alpha = ۱ \\\\ \\alpha = -۳ \\end{cases}$\n$\\Rightarrow \\begin{cases} \\beta = -۲ \\\\ \\beta = ۴ \\end{cases} \\Rightarrow \\begin{cases} \\alpha\\beta = -۲ \\\\ \\alpha\\beta = -۱۲ \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            480,
+            460,
+            680,
+            830
+          ],
+          "alt": "راه حل سوال ۱۶۰۳",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1604,
+      "solution_page": 149,
+      "solution_text": "روش اول: نقطهٔ $A$ بر خط $y = \\frac{۱}{۲}x + k$ واقع است.\n$\\xrightarrow{y = \\circ} \\frac{۱}{۲}x + k = \\circ \\Rightarrow x = -۲k \\Rightarrow A(-۲k, \\circ)$\n$BM$ بر خط $y = \\frac{۱}{۲}x + k$ عمود است، بنابراین شیب $BM$ برابر ۲- است و از نقطهٔ $M(\\circ, k)$ نیز عبور می‌کند.\nمعادلهٔ $BM : y = -۲x + k$\nنقطهٔ $B$ محل برخورد $BM$ با محور $x$ها است.\n$\\xrightarrow{y = \\circ} -۲x + k = \\circ \\Rightarrow x = \\frac{k}{۲} \\Rightarrow B(\\frac{k}{۲}, \\circ)$\nطول قاعدهٔ $AB$ برابر $\\frac{۵k}{۲}$ و طول ارتفاع $MO$ برابر $k$ است.\n$S = \\frac{AB \\times MO}{۲} = \\frac{\\frac{۵k^۲}{۲}}{۲} = \\frac{۴۵}{۴} \\Rightarrow k^۲ = ۹ \\Rightarrow k = ۳$\nروش دوم: نقاط $M(\\circ, k)$ و $A(-۲k, \\circ)$ رئوس مثلث قائم‌الزاویهٔ $ABM$ هستند. ارتفاع وارد بر وتر ($MO$) واسطهٔ هندسی قطعات جداشده بر وتر یعنی $OB$ و $OA$ می‌باشد.\n$OM^۲ = OA . OB \\Rightarrow k^۲ = ۲k \\times OB \\Rightarrow OB = \\frac{k}{۲}$\n$\\Rightarrow AB = ۲k + \\frac{k}{۲} = \\frac{۵}{۲}k$\n$S = \\frac{OM \\times AB}{۲} = \\frac{۵}{۴}k^۲ = ۴۵ \\Rightarrow k^۲ = ۹ \\Rightarrow k = ۳$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            680,
+            460,
+            920,
+            830
+          ],
+          "alt": "راه حل سوال ۱۶۰۴ قسمت اول",
+          "placement": "solution"
+        },
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            60,
+            40,
+            220,
+            420
+          ],
+          "alt": "راه حل سوال ۱۶۰۴ قسمت دوم",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1605,
+      "solution_page": 149,
+      "solution_text": "عمودمنصف خط $AB$ را $l$ می‌نامیم. خط $l$ بر $AB$ عمود است، بنابراین شیب آن قرینهٔ معکوس شیب $AB$ است.\nشیب $AB = \\frac{m + ۲m}{۲m - m} = ۳ \\Rightarrow \\text{شیب } l = -\\frac{۱}{۳}$\nخط $l$ از وسط $AB$ یعنی $M$ می‌گذرد.\n$M(\\frac{x_A + x_B}{۲}, \\frac{y_A + y_B}{۲}) \\Rightarrow M(\\frac{۳m}{۲}, -\\frac{m}{۲})$\nمعادلهٔ $l : y + \\frac{m}{۲} = -\\frac{۱}{۳}(x - \\frac{۳m}{۲}) \\Rightarrow y = -\\frac{x}{۳}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            210,
+            40,
+            360,
+            420
+          ],
+          "alt": "راه حل سوال ۱۶۰۵",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1606,
+      "solution_page": 149,
+      "solution_text": "نقاط $A$ و $B$ نسبت به خط $۲x + y = ۱$ متقارن هستند؛ یعنی این خط عمودمنصف $AB$ است. شیب $AB$ قرینهٔ معکوس شیب این خط یعنی $\\frac{۱}{۲}$ است.\n$m_{AB} = \\frac{m - n}{۳ - ۲} = \\frac{۱}{۲} \\Rightarrow m - n = \\frac{۱}{۲} \\quad (۱)$\nعمودمنصف $AB$ از وسط $AB$ می‌گذرد.\n$M(\\frac{۳ + ۲}{۲}, \\frac{m + n}{۲}) \\xrightarrow{y = ۲x + ۱} \\frac{m + n}{۲} = ۵ + ۱ \\Rightarrow m + n = ۱۲ \\quad (۲)$\n$(۱), (۲) \\Rightarrow m = \\frac{۲۳}{۴} \\Rightarrow n = \\frac{۲۵}{۴} \\Rightarrow \\frac{m}{n} = \\frac{۲۳}{۲۵}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            350,
+            40,
+            520,
+            420
+          ],
+          "alt": "راه حل سوال ۱۶۰۶",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1607,
+      "solution_page": 149,
+      "solution_text": "شیب خط $y + x = ۳$ برابر ۱- است، بنابراین شیب پاره‌خط $AB$ برابر ۱ است.\n$m_{AB} = \\frac{\\beta - ۱}{\\alpha - ۴} = ۱ \\Rightarrow \\beta - ۱ = \\alpha - ۴ \\Rightarrow \\alpha - \\beta = ۳ \\quad (۱)$\nخط $y + x = ۳$ از وسط $AB$ یعنی نقطهٔ $M(\\frac{\\alpha + ۴}{۲}, \\frac{\\beta + ۱}{۲})$ می‌گذرد، در نتیجه:\n$\\frac{\\beta + ۱}{۲} + \\frac{\\alpha + ۴}{۲} = ۳ \\Rightarrow \\alpha + \\beta = ۱ \\quad (۲)$\n$(۱), (۲) \\Rightarrow \\alpha = ۲ \\quad , \\quad \\beta = -۱ \\Rightarrow \\alpha\\beta = -۲$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            510,
+            40,
+            660,
+            420
+          ],
+          "alt": "راه حل سوال ۱۶۰۷",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1608,
+      "solution_page": 149,
+      "solution_text": "روش اول: اگر $l$ عمودمنصف $AB$ باشد، شیب $l$ قرینهٔ معکوس شیب $AB$ است.\n$m_{AB} = \\frac{k}{-۳} \\Rightarrow m_l = \\frac{۳}{k}$\nخط $l$ از وسط $AB$ یعنی $M(\\frac{۳}{۲}, \\frac{k}{۲})$ می‌گذرد.\n$l : y - \\frac{k}{۲} = \\frac{۳}{k}(x - \\frac{۳}{۲})$\nخط $l$ محور عرض‌ها را در نقطهٔ $(\\circ, -۴)$ قطع می‌کند.\n$\\Rightarrow -۴ - \\frac{k}{۲} = \\frac{۳}{k}(\\circ - \\frac{۳}{۲}) \\Rightarrow k^۲ + ۸k - ۹ = \\circ \\Rightarrow \\begin{cases} k = ۱ \\\\ k = -۹ \\end{cases}$\nروش دوم: نقطهٔ $P(\\circ, -۴)$ بر روی عمودمنصف $AB$ قرار دارد، بنابراین:\n$AP = BP \\Rightarrow \\sqrt{۹ + ۱۶} = \\sqrt{\\circ + (k + ۴)^۲} \\Rightarrow (k + ۴)^۲ = ۲۵ \\Rightarrow \\begin{cases} k + ۴ = ۵ \\\\ k + ۴ = -۵ \\end{cases} \\Rightarrow \\begin{cases} k = ۱ \\\\ k = -۹ \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0149.jpg",
+          "region": [
+            650,
+            40,
+            920,
+            420
+          ],
+          "alt": "راه حل سوال ۱۶۰۸",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    }
+  ],
+  "review_notes": []
+}

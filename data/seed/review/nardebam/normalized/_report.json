@@ -1,0 +1,368 @@
+[
+  {
+    "task_id": "math-answer-key",
+    "kind": "answer_key",
+    "rows": 2042,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-01",
+    "kind": "solutions",
+    "rows": 203,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-02",
+    "kind": "solutions",
+    "rows": 218,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-03",
+    "kind": "solutions",
+    "rows": 218,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-04",
+    "kind": "solutions",
+    "rows": 214,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-05",
+    "kind": "solutions",
+    "rows": 186,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-06",
+    "kind": "solutions",
+    "rows": 251,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-07",
+    "kind": "solutions",
+    "rows": 225,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-08",
+    "kind": "solutions",
+    "rows": 206,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-09",
+    "kind": "solutions",
+    "rows": 227,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-solutions-10",
+    "kind": "solutions",
+    "rows": 94,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-01",
+    "kind": "questions",
+    "rows": 50,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-02",
+    "kind": "questions",
+    "rows": 50,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-03",
+    "kind": "questions",
+    "rows": 115,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-04",
+    "kind": "questions",
+    "rows": 46,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-05",
+    "kind": "questions",
+    "rows": 47,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-06",
+    "kind": "questions",
+    "rows": 132,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-07",
+    "kind": "questions",
+    "rows": 264,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-08",
+    "kind": "questions",
+    "rows": 236,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-09",
+    "kind": "questions",
+    "rows": 215,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-10",
+    "kind": "questions",
+    "rows": 92,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-11",
+    "kind": "questions",
+    "rows": 219,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-12",
+    "kind": "questions",
+    "rows": 102,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-13",
+    "kind": "questions",
+    "rows": 69,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-14",
+    "kind": "questions",
+    "rows": 97,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-15",
+    "kind": "questions",
+    "rows": 88,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-16",
+    "kind": "questions",
+    "rows": 113,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-17",
+    "kind": "questions",
+    "rows": 63,
+    "invalid": 0
+  },
+  {
+    "task_id": "math-topic-18",
+    "kind": "questions",
+    "rows": 44,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-answer-key",
+    "kind": "answer_key",
+    "rows": 1630,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-01",
+    "kind": "solutions",
+    "rows": 107,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-02",
+    "kind": "solutions",
+    "rows": 113,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-03",
+    "kind": "solutions",
+    "rows": 131,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-05",
+    "kind": "solutions",
+    "rows": 83,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-06",
+    "kind": "solutions",
+    "rows": 92,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-07",
+    "kind": "solutions",
+    "rows": 67,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-08",
+    "kind": "solutions",
+    "rows": 84,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-09",
+    "kind": "solutions",
+    "rows": 101,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-10",
+    "kind": "solutions",
+    "rows": 86,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-11",
+    "kind": "solutions",
+    "rows": 75,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-12",
+    "kind": "solutions",
+    "rows": 88,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-13",
+    "kind": "solutions",
+    "rows": 88,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-14",
+    "kind": "solutions",
+    "rows": 94,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-15",
+    "kind": "solutions",
+    "rows": 112,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-16",
+    "kind": "solutions",
+    "rows": 113,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-17",
+    "kind": "solutions",
+    "rows": 86,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-gap-1422-1431",
+    "kind": "solutions",
+    "rows": 10,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-reconstructed-221-250",
+    "kind": "solutions",
+    "rows": 30,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-reconstructed-251-280",
+    "kind": "solutions",
+    "rows": 30,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-solutions-reconstructed-281-320",
+    "kind": "solutions",
+    "rows": 40,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-01",
+    "kind": "questions",
+    "rows": 50,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-02",
+    "kind": "questions",
+    "rows": 121,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-03",
+    "kind": "questions",
+    "rows": 94,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-04",
+    "kind": "questions",
+    "rows": 123,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-05",
+    "kind": "questions",
+    "rows": 147,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-06",
+    "kind": "questions",
+    "rows": 140,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-07",
+    "kind": "questions",
+    "rows": 130,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-08",
+    "kind": "questions",
+    "rows": 248,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-09",
+    "kind": "questions",
+    "rows": 155,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-10",
+    "kind": "questions",
+    "rows": 283,
+    "invalid": 0
+  },
+  {
+    "task_id": "physics-topic-11",
+    "kind": "questions",
+    "rows": 139,
+    "invalid": 0
+  }
+]

@@ -1,0 +1,1720 @@
+{
+  "task_id": "math-topic-03",
+  "subject": "math",
+  "topic_key": "quadratic_equations_functions",
+  "questions": [
+    {
+      "question_number": 101,
+      "question_page": 7,
+      "question_text": "معادلهٔ $x^2 + (2a+24)x - a = 0$ دارای دو ریشهٔ حقیقی متمایز است. حدود $a$ کدام است؟",
+      "options": [
+        "$-16 < a < 9$",
+        "$\\begin{cases} a < -9 \\\\ a > 16 \\end{cases}$",
+        "$-16 < a < -9$",
+        "$\\begin{cases} a < -16 \\\\ a > -9 \\end{cases}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 102,
+      "question_page": 7,
+      "question_text": "به ازای کدام مجموعه مقادیر $m$ معادلهٔ درجه‌دوم $(m-2)x^2 + 6x + 2m - 1 = 0$ ریشهٔ حقیقی ندارد؟",
+      "options": [
+        "$(1, \\frac{7}{2})$",
+        "$(-1, \\frac{7}{2})$",
+        "$(-\\infty, -1) \\cup (\\frac{7}{2}, +\\infty)$",
+        "$(-\\infty, 1) \\cup (\\frac{7}{2}, +\\infty)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 103,
+      "question_page": 7,
+      "question_text": "به ازای چند مقدار صحیح $m$ معادلهٔ $(m-3)x^2 + 2x + m + 3 = 0$ دارای دو ریشهٔ حقیقی متمایز است؟",
+      "options": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 104,
+      "question_page": 7,
+      "question_text": "به ازای کدام مقادیر $m$ خط به معادلهٔ $y = 3x - 1$ بر منحنی به معادلهٔ $y = (m-5)x^2 + (m+5)x - 10$ مماس است؟",
+      "options": [
+        "$-22, 2$",
+        "$22, -2$",
+        "$-44, 4$",
+        "$44, -4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 105,
+      "question_page": 7,
+      "question_text": "$n$ نفر، یک سالن فوتبال را اجاره کرده‌اند سهم هر یک از آن‌ها $n+8$ هزار تومان شده است. اگر ۲ نفر به آن‌ها اضافه شود سهم هر یک ۱۵ هزار تومان می‌شود. اجارهٔ سالن چند هزار تومان است؟",
+      "options": [
+        "$150$",
+        "$180$",
+        "$210$",
+        "$240$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 106,
+      "question_page": 7,
+      "question_text": "فرشی به ابعاد ۸ متر در ۶ متر را در یک سالن ۸۰ متری پهن کرده‌ایم. مقدار $x$ کدام است؟",
+      "options": [
+        "$1$",
+        "$1.5$",
+        "$2$",
+        "$2.5$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            210,
+            1260,
+            450,
+            1455
+          ],
+          "placement": "stem",
+          "alt": "نمودار فرش مستطیلی با حاشیهٔ یکنواخت در سالن"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 107,
+      "question_page": 7,
+      "question_text": "با سیمی به طول ۶۰ متر یک مستطیل به مساحت ۲۱۶ متر مربع ساخته‌ایم. نسبت طول به عرض مستطیل کدام است؟",
+      "options": [
+        "$\\frac{3}{2}$",
+        "$\\frac{4}{3}$",
+        "$2$",
+        "$\\frac{5}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 108,
+      "question_page": 7,
+      "question_text": "طول یک کاشی از ۴ برابر عرض آن یک واحد کمتر است. برای کاشی‌کردن یک دیوار به مساحت ۹۹ متر مربع ۳۰۰۰۰ کاشی استفاده شده است. اختلاف طول و عرض کاشی چند سانتی‌متر است؟",
+      "options": [
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 109,
+      "question_page": 7,
+      "question_text": "اگر $\\alpha$ و $\\beta$ ریشه‌های معادلهٔ $3x(x+2) = 1$ باشند حاصل $\\frac{1}{\\alpha - 1} + \\frac{1}{\\beta - 1}$ چه عددی است؟",
+      "options": [
+        "$\\frac{3}{2}$",
+        "$\\frac{2}{3}$",
+        "$-\\frac{2}{3}$",
+        "$-\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 110,
+      "question_page": 7,
+      "question_text": "اگر $\\alpha$ و $\\beta$ ریشه‌های معادلهٔ $2x^2 - 3x - 1 = 0$ باشند مقدار $\\frac{\\beta}{\\alpha + 1} + \\frac{\\alpha}{\\beta + 1}$ کدام است؟",
+      "options": [
+        "$\\frac{11}{8}$",
+        "$\\frac{11}{12}$",
+        "$\\frac{19}{8}$",
+        "$\\frac{19}{12}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 111,
+      "question_page": 7,
+      "question_text": "اگر $\\alpha$ و $\\beta$ ریشه‌های معادلهٔ $2x^2 + 4x + m = 0$ بوده و $\\frac{1}{\\beta} - \\frac{\\beta}{\\alpha - 2} = -\\frac{1}{3}$ باشد، $m$ کدام است؟",
+      "options": [
+        "$8$",
+        "$-8$",
+        "$16$",
+        "$-16$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 112,
+      "question_page": 7,
+      "question_text": "در معادلهٔ $x^2 - 9x + m = 0$ یک ریشه از دو برابر ریشهٔ دیگر ۳ واحد کمتر است. $m$ کدام است؟",
+      "options": [
+        "$14$",
+        "$16$",
+        "$18$",
+        "$20$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 113,
+      "question_page": 7,
+      "question_text": "یکی از ریشه‌های معادلهٔ $3x^2 - 8x + k = 0$ سه برابر دیگری است. $k$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 114,
+      "question_page": 8,
+      "question_text": "به ازای کدام مقدار $m$ مجموع مربعات ریشه‌های حقیقی معادله $mx^2+(m-2)x-6=0$ برابر ۱۳ است؟",
+      "options": [
+        "۱",
+        "$-۱$",
+        "$\\frac{1}{3}$",
+        "$-\\frac{1}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 115,
+      "question_page": 8,
+      "question_text": "$\\alpha$ و $\\beta$ ریشه‌های معادله $9x^2+kx+1=0$ هستند. اگر $\\frac{1}{\\sqrt{\\alpha}} + \\frac{1}{\\sqrt{\\beta}} = 9$ باشد، مقدار $k$ کدام است؟",
+      "options": [
+        "۲۵",
+        "۷۵",
+        "$-۲۵$",
+        "$-۷۵$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 116,
+      "question_page": 8,
+      "question_text": "اگر $\\alpha$ و $\\beta$ ریشه‌های معادله $x^2-9x+4=0$ باشند حاصل $A = \\alpha \\sqrt{\\beta} + \\beta \\sqrt{\\alpha}$ کدام است؟",
+      "options": [
+        "۲۶",
+        "۵۲",
+        "$\\sqrt{13}$",
+        "$2\\sqrt{13}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 117,
+      "question_page": 8,
+      "question_text": "اگر رابطه $b = c+a$ بین ضرایب معادله درجه‌دوم $ax^2-2bx-4c=0$ برقرار باشد کدام عدد ریشه معادله است؟",
+      "options": [
+        "$\\frac{c}{a}$",
+        "$\\frac{2c}{a}$",
+        "$-\\frac{c}{a}$",
+        "$-\\frac{2c}{a}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 118,
+      "question_page": 8,
+      "question_text": "رابطه $2a = b+c$ بین ضرایب معادله درجه‌دوم $ax^2+bx-2c=0$ برقرار است. کدام عدد ریشه معادله است؟",
+      "options": [
+        "$-\\frac{c}{a}$",
+        "$\\frac{-2c}{a}$",
+        "$2-\\frac{b}{a}$",
+        "$\\frac{b}{a}-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 119,
+      "question_page": 8,
+      "question_text": "در تابع درجه‌دوم $f(x)=ax^2-bx-2$ یکی از صفرها، سه برابر صفر دیگر است. عرض رأس این سهمی کدام است؟",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$-\\frac{2}{3}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{4}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 120,
+      "question_page": 8,
+      "question_text": "ریشه‌های معادله $x^2-ax+\\frac{3}{2}a+3=0$ دو عدد صحیح زوج متوالی‌اند. مقدار $a$ کدام است؟",
+      "options": [
+        "۲",
+        "$-۲$",
+        "۸",
+        "$-۸$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 121,
+      "question_page": 8,
+      "question_text": "اگر $a$ و $b$ ریشه‌های معادله $x^2+(b-2)x-4a=0$ باشند $\\frac{b}{a}$ کدام است؟",
+      "options": [
+        "۲",
+        "$-۲$",
+        "$-۶$",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 122,
+      "question_page": 8,
+      "question_text": "$\\alpha$ و $\\beta$ ریشه‌های معادله $x(x+4)=3$ باشند. حاصل $(\\alpha-\\frac{3}{\\beta})^2+(\\beta-\\frac{3}{\\alpha})^2$ کدام است؟",
+      "options": [
+        "۲۰۰",
+        "$-۲۰۰$",
+        "۸۰۰",
+        "$-۸۰۰$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 123,
+      "question_page": 8,
+      "question_text": "اگر $\\alpha$ و $\\beta$ ریشه‌های معادله $\\frac{2}{x}-x=3$ باشند حاصل $3\\beta+\\alpha^2$ کدام است؟",
+      "options": [
+        "۷",
+        "۹",
+        "۱۱",
+        "۱۳"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 124,
+      "question_page": 8,
+      "question_text": "$\\alpha$ و $\\beta$ ریشه‌های معادله $2x^2+x-5=0$ باشند. حاصل $11\\beta+4\\alpha^3$ کدام است؟",
+      "options": [
+        "$۰/۵$",
+        "$-۰/۵$",
+        "$۱۰/۵$",
+        "$-۱۰/۵$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 125,
+      "question_page": 8,
+      "question_text": "اگر $\\alpha$ ریشه معادله $x^2+x-3=0$ باشد حاصل $\\frac{12}{\\alpha}-\\alpha^3$ کدام است؟",
+      "options": [
+        "۱",
+        "$-۱$",
+        "۷",
+        "$-۷$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 126,
+      "question_page": 8,
+      "question_text": "بین ریشه‌های حقیقی معادله $x^2-mx+3m=0$ رابطه $\\alpha^2+m\\beta=4$ برقرار است. حاصل ضرب ریشه‌های این معادله کدام است؟",
+      "options": [
+        "۳",
+        "$-۳$",
+        "۱۲",
+        "$-۱۲$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 127,
+      "question_page": 8,
+      "question_text": "به ازای کدام مقدار $m$ ریشه‌های حقیقی معادله $5mx^2+12x+m^2+4=0$ معکوس یکدیگرند؟",
+      "options": [
+        "۱",
+        "۴",
+        "$-۱$",
+        "$-۴$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 128,
+      "question_page": 8,
+      "question_text": "$\\alpha$ و $\\beta$ ریشه‌های معادله $3=(3-4x)x$ هستند. به ازای کدام مقدار $k$ مجموعه جواب معادله $27x^2+kx-64=0$ به صورت $\\{\\frac{1}{\\alpha^3},\\frac{1}{\\beta^3}\\}$ است؟",
+      "options": [
+        "۸۱",
+        "$-۸۱$",
+        "$-۱۳۵$",
+        "۱۳۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 129,
+      "question_page": 8,
+      "question_text": "ریشه‌های کدام معادله از معکوس ریشه‌های معادله $5x^2-2x+1=0$ سه واحد کم‌تر است؟",
+      "options": [
+        "$x^2+x+4=0$",
+        "$x^2+x-4=0$",
+        "$x^2-x-4=0$",
+        "$x^2-x+4=0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 130,
+      "question_page": 8,
+      "question_text": "اگر $\\alpha$ و $\\beta$ ریشه‌های معادله $3=(x+3)x$ باشند و $\\frac{2}{\\alpha}$ و $\\frac{2}{\\beta}$ ریشه‌های معادله $mx(x+n)=4$ باشند، $m-n$ کدام است؟",
+      "options": [
+        "۵",
+        "۳",
+        "$-۵$",
+        "۷"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 131,
+      "question_page": 8,
+      "question_text": "اگر $\\alpha$ و $\\beta$ ریشه‌های معادله $x^2-4x+2=0$ باشند و $k+\\frac{2}{\\alpha}$ و $k+\\frac{2}{\\beta}$ ریشه‌های معادله $6x-x^2+m=0$ باشند مقدار $m$ کدام است؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 132,
+      "question_page": 8,
+      "question_text": "یکی از ریشه‌های معادله $4x-x^2=2$ برابر $\\alpha$ است. ریشه‌های کدام معادله زیر $\\frac{1}{\\alpha+1}$ و $\\frac{1}{5-\\alpha}$ است؟",
+      "options": [
+        "$3x^2+6x+1=0$",
+        "$3x^2-6x+1=0$",
+        "$3x^2+6x-1=0$",
+        "$3x^2-6x-1=0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 133,
+      "question_page": 9,
+      "question_text": "ریشه‌های معادله $x^2 - 41x + b = 0$ مجذور ریشه‌های معادله $x^2 - ax + a - 3 = 0$ هستند. مقدار $b$ کدام می‌تواند باشد؟",
+      "options": [
+        "4",
+        "9",
+        "16",
+        "25"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 134,
+      "question_page": 9,
+      "question_text": "$3\\alpha - 1$ و $3\\beta - 1$ ریشه‌های معادله $x^2 - 6x + 3 = 0$ می‌باشند. ریشه‌های کدام معادله $\\alpha$ و $\\beta$ است؟",
+      "options": [
+        "$3x^2 + 4x - 2 = 0$",
+        "$3x^2 + 4x - 8 = 0$",
+        "$9x^2 - 12x - 8 = 0$",
+        "$9x^2 + 12x - 8 = 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 135,
+      "question_page": 9,
+      "question_text": "اگر $\\alpha + 2$ و $\\beta + 2$ ریشه‌های معادله $x^2 - 5x + 3 = 0$ باشند ریشه‌های کدام معادله $\\frac{1}{\\alpha - 1}$ و $\\frac{1}{\\beta - 1}$ است؟",
+      "options": [
+        "$x^2 - x - 1 = 0$",
+        "$3x^2 - x - 1 = 0$",
+        "$3x^2 + x - 1 = 0$",
+        "$3x^2 + x - 2 = 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 136,
+      "question_page": 9,
+      "question_text": "اگر $\\alpha - 1$ و $\\beta + 1$ ریشه‌های معادله $2x^2 - 3x - 7 = 0$ باشند ریشه‌های کدام معادله $\\alpha + 1$ و $\\beta + 3$ می‌باشند؟",
+      "options": [
+        "$2x^2 - 7x - 11 = 0$",
+        "$2x^2 + 11x - 7 = 0$",
+        "$2x^2 - 7x + 11 = 0$",
+        "$2x^2 - 11x + 7 = 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 137,
+      "question_page": 9,
+      "question_text": "در کدام معادله زیر ضرب ریشه‌ها برابر $\\frac{2}{3}$ و تفاضل ریشه‌ها ۲ است؟",
+      "options": [
+        "$3x^2 + 2\\sqrt{3}x = 2$",
+        "$3x^2 - x = 2$",
+        "$x^2 + 2\\sqrt{3}x = 6$",
+        "$x^2 + 3x = \\frac{2}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 138,
+      "question_page": 9,
+      "question_text": "اگر $\\alpha$ و $\\beta$ دو عدد منفی باشند به طوری که $\\alpha^2 + \\beta^2 = 6/5$ و $\\alpha - \\beta = 2$ ، ریشه‌های کدام معادله $\\alpha$ و $\\beta$ است؟",
+      "options": [
+        "$4x^2 + 12x - 5 = 0$",
+        "$2x^2 + 6x - 5 = 0$",
+        "$4x^2 + 12x + 5 = 0$",
+        "$2x^2 + 12x + 5 = 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 139,
+      "question_page": 9,
+      "question_text": "$\\frac{5 - 2\\sqrt{3}}{2}$ یکی از ریشه‌های معادله $x^2 + ax + b = 0$ با ضرایب گویاست. $ab$ کدام است؟",
+      "options": [
+        "$16 / 75$",
+        "$-16 / 75$",
+        "$16 / 25$",
+        "$-16 / 25$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 140,
+      "question_page": 9,
+      "question_text": "رأس سهمی $y = x^2 + mx - m + 1$ روی خط $y = x - 1$ است. قدرمطلق تفاضل مقادیر قابل قبول برای $m$ کدام است؟",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 141,
+      "question_page": 9,
+      "question_text": "خط $x = \\frac{3}{2}$ محور تقارن سهمی $y = mx^2 - (m + 1)x + 7$ است. عرض رأس سهمی کدام است؟",
+      "options": [
+        "2",
+        "$2 / 5$",
+        "3",
+        "$3 / 5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 142,
+      "question_page": 9,
+      "question_text": "خط $x = -3$ محور تقارن سهمی $y = (x + 1)(x - a) + a$ است. مقدار $a$ کدام است؟",
+      "options": [
+        "5",
+        "-5",
+        "7",
+        "-7"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 143,
+      "question_page": 9,
+      "question_text": "خط $y = 2$ در ناحیهٔ دوم بر سهمی $y = 2x^2 - mx + 4$ مماس است. خط تقارن سهمی کدام است؟",
+      "options": [
+        "$x = 1$",
+        "$x = -1$",
+        "$x = 4$",
+        "$x = -4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 144,
+      "question_page": 9,
+      "question_text": "هر دو سهمی $y = -2x^2 + 4x - 3$ و $y = x^2 + 5x - k$ بر یک خط افقی مماس هستند. $k$ کدام است؟",
+      "options": [
+        "$-5 / 25$",
+        "$-5 / 75$",
+        "$-6 / 25$",
+        "$-6 / 75$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 145,
+      "question_page": 9,
+      "question_text": "نمودار سهمی $f(x) = ax^2 + bx + c$ به صورت مقابل است. $abc$ کدام است؟",
+      "options": [
+        "12",
+        "-12",
+        "24",
+        "-24"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0009.jpg",
+          "region": [
+            190,
+            1540,
+            455,
+            1835
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی رو به پایین با رأس مشخص‌شده"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 146,
+      "question_page": 9,
+      "question_text": "نمودار سهمی $y = f(x)$ به صورت مقابل است. $f(4)$ کدام است؟",
+      "options": [
+        "$\\frac{8}{3}$",
+        "$-\\frac{8}{3}$",
+        "$\\frac{10}{3}$",
+        "$-\\frac{10}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0009.jpg",
+          "region": [
+            185,
+            1815,
+            455,
+            2055
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی رو به پایین با ریشه‌های منفی یک و سه و عرض از مبدأ دو"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 147,
+      "question_page": 9,
+      "question_text": "نمودار سهمی $f(x) = ax^2 + bx + c$ شکل مقابل است. ریشهٔ کوچک‌تر $f(x) = 0$ کدام می‌تواند باشد؟",
+      "options": [
+        "-1",
+        "$-1 / 5$",
+        "-2",
+        "$-2 / 5$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0009.jpg",
+          "region": [
+            185,
+            2030,
+            460,
+            2325
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی رو به بالا با عرض از مبدأ منفی شش، رأس منفی هشت و ریشهٔ سه"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 148,
+      "question_page": 10,
+      "question_text": "نمودار سهمی $y = f(x)$ به صورت مقابل است. مجموع ریشه‌های $f(x) = x$ کدام است؟",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            155,
+            185,
+            395,
+            425
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی رو به بالا با رأس روی محور افقی در x برابر دو و عرض از مبدأ یک"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 149,
+      "question_page": 10,
+      "question_text": "نمودار تابع $y = -\\frac{x^2}{2} + (a + 1)x + a - 1$ شکل مقابل است. اختلاف دو ریشهٔ معادله $y = 0$ چه عددی است؟",
+      "options": [
+        "$\\sqrt{5}$",
+        "$2\\sqrt{5}$",
+        "$3\\sqrt{5}$",
+        "$4\\sqrt{5}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            150,
+            430,
+            400,
+            665
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی رو به پایین با عرض از مبدأ دو"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 150,
+      "question_page": 10,
+      "question_text": "نمودار سهمی $f(x) = -\\frac{1}{3}x^2 + ax + 2a$ به صورت مقابل است. اگر مثلث $ABC$ قائم‌الزاویه باشد مقدار $a$ کدام است؟",
+      "options": [
+        "$\\frac{3}{2}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{4}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            145,
+            655,
+            445,
+            910
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی و مثلث قائم‌الزاویهٔ ABC"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 151,
+      "question_page": 10,
+      "question_text": "نمودار سهمی $y = ax^2 + bx - 2a$ به صورت مقابل است. مجموع مربعات ریشه‌ها کدام است؟",
+      "options": [
+        "4",
+        "7",
+        "8",
+        "10"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            150,
+            885,
+            430,
+            1130
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی رو به پایین با محور تقارن x برابر منفی یک و ریشه‌های آلفا و بتا"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 152,
+      "question_page": 10,
+      "question_text": "نمودار سهمی $f(x) = ax^2 + bx - c$ به صورت مقابل است. اگر $f(\\frac{c}{a}) = 8$ باشد مقدار $a$ کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{2}$",
+        "$\\frac{4}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            145,
+            1110,
+            440,
+            1340
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی رو به بالا با ریشه‌های منفی سه و یک"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 153,
+      "question_page": 10,
+      "question_text": "نمودار سهمی در شکل مقابل رسم شده است. سهمی محور $y$ها را در نقطه‌ای با کدام عرض قطع می‌کند؟",
+      "options": [
+        "$-\\frac{7}{4}$",
+        "$-2$",
+        "$-\\frac{8}{3}$",
+        "$-3$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            145,
+            1325,
+            445,
+            1575
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی با رأس (سه، منفی چهار) و ریشه‌های a و a+8"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 154,
+      "question_page": 10,
+      "question_text": "نمودار سهمی $y = x^2 + x - m$ به صورت مقابل است. $m - n$ کدام است؟",
+      "options": [
+        "2",
+        "-2",
+        "4",
+        "-4"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            150,
+            1560,
+            430,
+            1800
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی با عرض از مبدأ n و ریشهٔ منفی n"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 155,
+      "question_page": 10,
+      "question_text": "نمودار سهمی $y = 6x - x^2$ و خط $y = a$ مطابق شکل مقابل است. مقدار $a$ کدام است؟",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            145,
+            1785,
+            450,
+            2045
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی و خط افقی y=a با پاره‌خط عمود در نقطهٔ تقاطع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 156,
+      "question_page": 10,
+      "question_text": "در شکل زیر نمودار سهمی $y = -3x^2 + mx + n$ رسم شده است. مقدار $m$ کدام باشد تا مساحت مستطیل $OABC$ برابر ۶ باشد؟",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            150,
+            2020,
+            445,
+            2315
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی و مستطیل OABC محاط زیر آن"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 157,
+      "question_page": 11,
+      "question_text": "نمودارهای سهمی $f$ و $g$ به صورت مقابل است. حاصل $f(۵) - g(۵)$ کدام است؟",
+      "options": [
+        "۱/۵",
+        "۲",
+        "۲/۵",
+        "۳"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0011.jpg",
+          "region": [
+            245,
+            165,
+            525,
+            440
+          ],
+          "placement": "stem",
+          "alt": "دو سهمی f و g با نقاط تقاطع در xهای دو و چهار"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 158,
+      "question_page": 11,
+      "question_text": "حدود $a$ کدام باشد تا معادلهٔ $۳x^۲ - (۲a + ۱)x + a - ۳ = ۰$ دارای دو ریشهٔ غیرهم‌علامت باشد؟",
+      "options": [
+        "$a < ۳$",
+        "$۰ < a < ۳$",
+        "$a < ۰$",
+        "$a > ۳$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 159,
+      "question_page": 11,
+      "question_text": "به ازای چه مقادیری از $a$ معادلهٔ $x^۲ + (a + ۳)x - a = ۰$ دارای دو ریشهٔ متمایز مثبت است؟",
+      "options": [
+        "$a > -۱$",
+        "$-۳ < a < -۱$",
+        "$-۹ < a < -۳$",
+        "$a < -۹$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 160,
+      "question_page": 11,
+      "question_text": "حدود $m$ کدام باشد تا معادلهٔ $-x^۲ - mx + ۲m + ۵ = ۰$ دارای دو ریشهٔ متمایز منفی باشد؟",
+      "options": [
+        "$-\\frac{۵}{۲} < m < ۰$",
+        "$m < -\\frac{۵}{۲}$",
+        "$m > ۱۰$",
+        "$-\\frac{۵}{۲} < m < -۲$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 161,
+      "question_page": 11,
+      "question_text": "خط $y = ۴$ نمودار سهمی $y = x^۲ - ۲x + a + ۱$ را در دو نقطه با طول مثبت قطع می‌کند. حدود $a$ کدام است؟",
+      "options": [
+        "$a > ۴$",
+        "$a < ۳$",
+        "$a < ۳$ یا $a > ۴$",
+        "$۳ < a < ۴$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 162,
+      "question_page": 11,
+      "question_text": "به ازای کدام مقادیر $m$ نمودار تابع $f(x) = -x^۲ + ax + a - ۳$ از چهار ناحیهٔ مختصات می‌گذرد؟",
+      "options": [
+        "$۰ < a < ۳$",
+        "$a < ۰$",
+        "$a > ۳$",
+        "$a < ۳$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "در متن چاپی، سؤال از «مقادیر m» می‌پرسد، اما تابع و گزینه‌ها برحسب a هستند؛ عین متن چاپی حفظ شد."
+      ]
+    },
+    {
+      "question_number": 163,
+      "question_page": 11,
+      "question_text": "نمودار سهمی $y = ax^۲ - (a - ۳)x$ از ناحیهٔ سوم عبور نمی‌کند. حدود $a$ کدام است؟",
+      "options": [
+        "$۰ < a \\le ۳$",
+        "$a > ۳$",
+        "$a \\le ۰$",
+        "$۰ < a < ۳$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 164,
+      "question_page": 11,
+      "question_text": "نمودار سهمی $y = (a + ۱)x^۲ + ۲ax - a + ۱$ فقط از ناحیهٔ اول عبور نمی‌کند. حدود $a$ کدام است؟",
+      "options": [
+        "$(-\\infty, -۱)$",
+        "$[۱, +\\infty)$",
+        "$(-۱, -\\frac{\\sqrt{۲}}{۲})$",
+        "$\\varnothing$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 165,
+      "question_page": 11,
+      "question_text": "نمودار تابع $f(x) = (a + ۴)x^۲ + ۲ax + ۲$ از ناحیهٔ چهارم عبور نمی‌کند. بزرگ‌ترین محدودهٔ $a$ کدام است؟",
+      "options": [
+        "$a \\ge -۲$",
+        "$-۲ \\le a \\le ۴$",
+        "$a \\le -۲$",
+        "$-۴ < a \\le -۲$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 166,
+      "question_page": 11,
+      "question_text": "بیشترین مقدار تابع $y = ax^۲ + (a - ۱)x + ۷$ برابر ۸ است. $a$ کدام است؟",
+      "options": [
+        "$-۱$",
+        "$-۲$",
+        "$-۳$",
+        "$-۴$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 167,
+      "question_page": 11,
+      "question_text": "بیشترین مقدار سهمی $f(x) = (x + a)(ax + ۱)$ برابر صفر است. $a$ کدام است؟",
+      "options": [
+        "$۱$",
+        "$-۱$",
+        "$۲$",
+        "$-۲$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 168,
+      "question_page": 11,
+      "question_text": "نمودار سهمی $f(x) = (x - \\alpha)^۲ + ۲x + \\beta$ در نقطهٔ $x = ۲$ بر محور xها مماس است. ماکزیمم مقدار عبارت $P = ۴x - f(x)$ کدام است؟",
+      "options": [
+        "$۸$",
+        "$۱۰$",
+        "$۱۲$",
+        "$۱۶$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 169,
+      "question_page": 11,
+      "question_text": "سهمی $y = f(x)$ و خط $y = x + ۸$ به صورت مقابل می‌باشند. کم‌ترین مقدار سهمی چه‌قدر است؟",
+      "options": [
+        "$-\\frac{۱}{۲}$",
+        "$-\\frac{۱}{۴}$",
+        "$-\\frac{۱}{۸}$",
+        "$-\\frac{۳}{۸}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0011.jpg",
+          "region": [
+            180,
+            1510,
+            465,
+            1795
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی و خط 4y+x=8"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 170,
+      "question_page": 11,
+      "question_text": "بیشترین محیط مستطیل محاط درون سهمی $y = ۸ - ۲x^۲$ مطابق شکل چه‌قدر است؟",
+      "options": [
+        "$۱۵$",
+        "$۱۶$",
+        "$۱۷$",
+        "$۱۸$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0011.jpg",
+          "region": [
+            175,
+            1810,
+            475,
+            2100
+          ],
+          "placement": "stem",
+          "alt": "مستطیل محاط درون سهمی y=8-2x^2"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 171,
+      "question_page": 11,
+      "question_text": "کوتاه‌ترین فاصلهٔ نقطهٔ $A(۴, ۰)$ از نقاط منحنی به معادلهٔ $y = \\sqrt{۲x + ۹}$ کدام است؟",
+      "options": [
+        "$۴$",
+        "$۴/۵$",
+        "$۵$",
+        "$۵/۵$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 172,
+      "question_page": 11,
+      "question_text": "محیط مستطیلی برابر ۲۲ است. بیشترین مقدار مساحت آن کدام است؟",
+      "options": [
+        "$۳۰$",
+        "$۳۰/۲۵$",
+        "$۱۲۰$",
+        "$۱۲۱$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 173,
+      "question_page": 12,
+      "question_text": "بیشترین مساحت مستطیل رنگی کدام است؟",
+      "options": [
+        "$9$",
+        "$\\frac{73}{8}$",
+        "$\\frac{75}{8}$",
+        "$10$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0012.jpg",
+          "region": [
+            95,
+            165,
+            455,
+            465
+          ],
+          "placement": "stem",
+          "alt": "دو خط y=2x+3 و y=6-x و مستطیل رنگی میان آن‌ها و محور x"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 174,
+      "question_page": 12,
+      "question_text": "در مثلث قائم‌الزاویه اگر مقدار وتر برابر ۶ باشد بیشترین مقدار مساحت کدام است؟",
+      "options": [
+        "$6$",
+        "$9$",
+        "$12$",
+        "$18$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 175,
+      "question_page": 12,
+      "question_text": "حاصل‌ضرب ریشه‌های حقیقی معادلهٔ $35 - 6x + 2x^2 - (x^2 - 3x)^2 = 0$ کدام است؟",
+      "options": [
+        "$7$",
+        "$-7$",
+        "$35$",
+        "$-35$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 176,
+      "question_page": 12,
+      "question_text": "اختلاف بزرگ‌ترین و کوچک‌ترین جواب معادلهٔ $x^4 - 15x^2 + k = 0$ برابر $4\\sqrt{3}$ است. $k$ کدام است؟",
+      "options": [
+        "$14$",
+        "$26$",
+        "$36$",
+        "$44$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 177,
+      "question_page": 12,
+      "question_text": "اگر $S$ و $P$ مجموع و حاصل‌ضرب ریشه‌های معادلهٔ $x^4 - 7x^2 + 12 = 0$ باشند حاصل $S + 2P$ کدام است؟",
+      "options": [
+        "$12$",
+        "$24$",
+        "$-12$",
+        "$-24$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 178,
+      "question_page": 12,
+      "question_text": "مجموع ریشه‌های حقیقی معادلهٔ $x^4 + ax^2 + 2a + 3 = 0$ برابر صفر است. حداکثر مقدار منفی $a$ کدام است؟",
+      "options": [
+        "$2\\sqrt{3} - 4$",
+        "$4 - 2\\sqrt{7}$",
+        "$-3$",
+        "$-\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 179,
+      "question_page": 12,
+      "question_text": "معادلهٔ $x^2 - 2|x| + k - 3 = 0$ دارای ۴ ریشهٔ حقیقی متمایز است. حدود $k$ کدام است؟",
+      "options": [
+        "$k < 3$",
+        "$k > 4$",
+        "$k < 3 \\text{ یا } k > 4$",
+        "$3 < k < 4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 180,
+      "question_page": 12,
+      "question_text": "معادلهٔ $x + m\\sqrt{x} + m - 1 = 0$ فقط یک ریشهٔ حقیقی دارد. بزرگ‌ترین محدودهٔ $m$ کدام است؟",
+      "options": [
+        "$m \\le 1$",
+        "$m = 2$",
+        "$m = 2 \\text{ یا } m \\le 1$",
+        "$m < 1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 181,
+      "question_page": 12,
+      "question_text": "اگر $x = 2$ تنها جواب معادلهٔ $x^3 - ax + 2a = 8$ باشد، حدود $a$ کدام است؟",
+      "options": [
+        "$a < 3$",
+        "$a > 2$",
+        "$2 < a < 3$",
+        "$a < 2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 182,
+      "question_page": 12,
+      "question_text": "اگر $-1$ و $\\alpha$ و $\\beta$ ریشه‌های معادلهٔ $x^3 - ax^2 - 2 = 0$ هستند. $\\alpha^2 + \\beta^2$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$8$",
+        "$10$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 183,
+      "question_page": 12,
+      "question_text": "در یک مستطیل به طول $a$ و عرض $b$ رابطهٔ $\\frac{a}{a+3b} = \\frac{b}{2a}$ برقرار است. نسبت محیط مستطیل به عرض آن کدام است؟",
+      "options": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 184,
+      "question_page": 12,
+      "question_text": "اگر در یک مستطیل طلایی محیط $6 + 2\\sqrt{5}$ باشد، مساحت آن چه عددی است؟",
+      "options": [
+        "$2(\\sqrt{5} + 2)$",
+        "$4(\\sqrt{5} + 1)$",
+        "$2(\\sqrt{5} + 1)$",
+        "$4(\\sqrt{5} + 2)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 185,
+      "question_page": 12,
+      "question_text": "معادلهٔ $\\frac{x}{x-1} + \\frac{3}{x^2 - 3x + 2} = \\frac{x}{x-2}$ چند ریشهٔ حقیقی دارد؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 186,
+      "question_page": 12,
+      "question_text": "اگر مجموع ریشه‌های معادلهٔ $1 = \\frac{a}{x-3} + \\frac{2}{x+3}$ برابر ۶ باشد حاصل‌ضرب ریشه‌ها کدام است؟",
+      "options": [
+        "$12$",
+        "$-12$",
+        "$15$",
+        "$-15$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 187,
+      "question_page": 12,
+      "question_text": "معادلهٔ $\\frac{2x}{x-1} + \\frac{x-a}{x^2 - 1} = 2$ ریشهٔ حقیقی ندارد. مجموع مقادیر به دست آمده برای $a$ کدام است؟",
+      "options": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 188,
+      "question_page": 12,
+      "question_text": "$b$ و $3$ ریشه‌های معادلهٔ $\\frac{x+3}{x-2} + \\frac{ax+3}{x-4} = 12$ هستند. نسبت ریشهٔ بزرگ‌تر به کوچک‌تر کدام است؟",
+      "options": [
+        "$\\frac{21}{19}$",
+        "$\\frac{23}{19}$",
+        "$\\frac{23}{21}$",
+        "$\\frac{25}{21}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 189,
+      "question_page": 12,
+      "question_text": "برای تبدیل ۱۲۰ کیلوگرم محلول آب‌نمک ۵ درصدی به محلول آب‌نمک ۸ درصدی، ۲ کیلوگرم نمک به آن اضافه کرده‌ایم. چه تغییری در آب درون محلول انجام دهیم تا به غلظت مورد نظر برسیم؟",
+      "options": [
+        "۲۸ کیلوگرم آب را تبخیر کنیم.",
+        "۲۸ کیلوگرم آب اضافه کنیم.",
+        "۲۲ کیلوگرم آب اضافه کنیم.",
+        "۲۲ کیلوگرم آب را تبخیر کنیم."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 190,
+      "question_page": 13,
+      "question_text": "غلظت یک محلول ۴۰ درصد است. اگر مقدار آن ۶۰ گرم باشد با افزایش چند گرم مادهٔ حل‌شدنی در آن می‌توانیم غلظت را به ۷۰ درصد برسانیم؟",
+      "options": [
+        "۴۰",
+        "۵۰",
+        "۶۰",
+        "۷۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 191,
+      "question_page": 13,
+      "question_text": "۷۰ لیتر اسید با غلظت ۲۵ درصد و $x$ لیتر اسید با غلظت ۶۵ درصد را در یک ظرف ریخته‌ایم. اگر غلظت اسید به وجود آمده از ۴۰ درصد کمتر نباشد حداقل مقدار $x$ کدام است؟",
+      "options": [
+        "۴۰",
+        "۴۲",
+        "۴۴",
+        "۴۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 192,
+      "question_page": 13,
+      "question_text": "سرعت میوه چیدن فرهاد نصف سرعت میوه چیدن شیرین می‌باشد. این دو نفر با هم ۶ ساعته تمام میوه‌های باغ را می‌چینند. اگر هر کدام به تنهایی میوه‌ها را بچینند اختلاف زمان اتمام کار آن‌ها چه عددی است؟",
+      "options": [
+        "۶",
+        "۹",
+        "۱۰",
+        "۱۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 193,
+      "question_page": 13,
+      "question_text": "نقی و ارسطو با یکدیگر ساختمانی را در ۱۲ ساعت خراب می‌کنند. نقی به تنهایی ۱۸ ساعت زودتر از ارسطو ساختمان را خراب می‌کند. نقی به تنهایی در چند ساعت ساختمان را خراب می‌کند؟",
+      "options": [
+        "۶",
+        "۱۲",
+        "۱۸",
+        "۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 194,
+      "question_page": 13,
+      "question_text": "سرعت علی در انجام کاری دو برابر سرعت احمد است. اگر هر دو با هم کار کنند در ۲۰ ساعت کار را تمام می‌کنند. بعد از ۵ ساعت کار مشترک، احمد کار را ترک می‌کند و بهروز که هم‌سرعت با علی است جایگزین احمد می‌شود. ادامه کار را علی و بهروز در چند ساعت تمام می‌کنند؟",
+      "options": [
+        "۱۱/۲۵",
+        "۱۱/۵",
+        "۱۲/۲۵",
+        "۱۲/۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 195,
+      "question_page": 13,
+      "question_text": "یک قایق موتوری فاصلهٔ ۱۶ کیلومتر را در جهت موافق آب رودخانه رفته و در جهت مخالف برگشته است. اگر سرعت آب ۸ کیلومتر در ساعت و مجموع زمان رفت و برگشت ۵۰ دقیقه باشد سرعت قایق در آب راکد چند کیلومتر در ساعت است؟",
+      "options": [
+        "۳۲",
+        "۴۰",
+        "۴۸",
+        "۶۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 196,
+      "question_page": 13,
+      "question_text": "سرعت یک پرنده در هوای آرام ۷۰ متر در دقیقه است. این پرنده فاصلهٔ ۷۲۰ متری را در جهت موافق باد رفته و در جهت مخالف برگشته است. اختلاف زمان رفت و برگشت ۳ دقیقه است. سرعت باد چند متر در دقیقه است؟",
+      "options": [
+        "۱۰",
+        "۱۲",
+        "۱۵",
+        "۲۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 197,
+      "question_page": 13,
+      "question_text": "معادلهٔ $\\sqrt{x^2 + 5} + 1 = 2x$ چند جواب دارد؟",
+      "options": [
+        "صفر",
+        "۱",
+        "۲",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 198,
+      "question_page": 13,
+      "question_text": "اگر $x = 2$ ریشهٔ معادلهٔ $1 - x = \\sqrt{5x + a}$ باشد، ریشهٔ دیگر معادله در کدام معادله صدق می‌کند؟",
+      "options": [
+        "$\\sqrt{x + 1} = x - 1$",
+        "$\\sqrt{x + 4} = x - 2$",
+        "$\\sqrt{x + 5} = x + 3$",
+        "معادله ریشهٔ دیگری ندارد."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 199,
+      "question_page": 13,
+      "question_text": "اگر $x = 1$ ریشهٔ معادلهٔ $x + \\sqrt{2a + x} = a + 2$ باشد حاصل $\\frac{a}{a + 2}$ کدام است؟",
+      "options": [
+        "$3$",
+        "$-3$",
+        "$\\frac{7}{9}$",
+        "$-1/4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 200,
+      "question_page": 13,
+      "question_text": "در مورد ریشه‌های معادلهٔ $x = 2 + 3\\sqrt{2\\sqrt{x}}$ کدام صحیح است؟",
+      "options": [
+        "دو ریشهٔ مثبت دارد.",
+        "دو ریشهٔ منفی دارد.",
+        "دو ریشهٔ مختلف‌العلامت دارد.",
+        "یک ریشهٔ مضاعف دارد."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 201,
+      "question_page": 13,
+      "question_text": "فرض کنید $x = 0$ یکی از ریشه‌های معادلهٔ $\\sqrt{9 - x} = |x + a|$ باشد. مجموع مقادیر ممکن برای ریشهٔ دیگر کدام است؟",
+      "options": [
+        "$-1$",
+        "$-2$",
+        "$-3$",
+        "$-4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 202,
+      "question_page": 13,
+      "question_text": "ریشهٔ معادلهٔ $\\sqrt{x - 4} - \\sqrt{14 - x} = 4$ در کدام بازه قرار دارد؟",
+      "options": [
+        "$[7, 9)$",
+        "$[10, 12)$",
+        "$[12, 14]$",
+        "ریشهٔ حقیقی ندارد."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 203,
+      "question_page": 13,
+      "question_text": "قدرمطلق تفاضل ریشه‌های معادلهٔ $\\sqrt{x} + \\sqrt{9 - 2x} = 3$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 204,
+      "question_page": 13,
+      "question_text": "اگر $\\alpha$ ریشهٔ بزرگ‌تر معادلهٔ $\\sqrt{x} - \\sqrt{5 - 2x} = 1$ باشد، حاصل $6\\alpha - \\alpha^2$ کدام است؟",
+      "options": [
+        "$7$",
+        "$-7$",
+        "$9$",
+        "$-9$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 205,
+      "question_page": 13,
+      "question_text": "با فرض $2 = 5 - \\sqrt{2x} + \\sqrt{3 - 2x}$ حاصل $5 - \\sqrt{2x} + \\sqrt{3 + 2x}$ کدام است؟",
+      "options": [
+        "$\\sqrt{2}$",
+        "$4$",
+        "$2\\sqrt{2}$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 206,
+      "question_page": 13,
+      "question_text": "اگر $3 = \\sqrt{x} - \\sqrt{x + 1}$، حاصل $4x - 1$ کدام است؟",
+      "options": [
+        "$12$",
+        "$15$",
+        "$20$",
+        "$21$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 207,
+      "question_page": 14,
+      "question_text": "معادلهٔ $x - \\sqrt{x - 1} - \\sqrt{2x - 3} = 3$ چند ریشهٔ حقیقی دارد؟",
+      "options": [
+        "صفر",
+        "۱",
+        "۲",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 208,
+      "question_page": 14,
+      "question_text": "معادلهٔ $\\sqrt{x^2 - 5x + 4} + \\sqrt{x^3 - 3x^2 - 16} = 0$ چند جواب دارد؟",
+      "options": [
+        "صفر",
+        "۱",
+        "۲",
+        "۳"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 209,
+      "question_page": 14,
+      "question_text": "مجموع ریشه‌های حقیقی معادلهٔ $\\sqrt{x^2 + x + 3} + 2x^2 + 2x = 3$ کدام است؟",
+      "options": [
+        "صفر",
+        "۱",
+        "$-1$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 210,
+      "question_page": 14,
+      "question_text": "حاصل‌ضرب ریشه‌های حقیقی معادلهٔ $\\sqrt{(x + 3)(x + 4)} = (x + 7)x$ کدام است؟",
+      "options": [
+        "$3$",
+        "$-4$",
+        "$4$",
+        "$-12$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 211,
+      "question_page": 14,
+      "question_text": "منحنی‌های $x^2 = y - 3$ و $x = \\sqrt{y + 2} - 1$ در چند نقطه متقاطع‌اند؟",
+      "options": [
+        "یک",
+        "دو",
+        "سه",
+        "هیچ"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 212,
+      "question_page": 14,
+      "question_text": "معادلهٔ $|x| + 1 = \\sqrt{x + 3}$ چند ریشه دارد؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 213,
+      "question_page": 14,
+      "question_text": "اگر $x = 0$ یکی از ریشه‌های معادلهٔ $\\sqrt{x + 4} + a = |x - 1|$ باشد کدام گزینه در مورد ریشهٔ دیگر صحیح است؟",
+      "options": [
+        "مثبت و کوچک‌تر از یک است.",
+        "منفی و بزرگ‌تر از $-1$ است.",
+        "بزرگ‌تر از یک است.",
+        "کوچک‌تر از $-1$ است."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 214,
+      "question_page": 14,
+      "question_text": "مجموع فاصله‌های نقطهٔ $A(a, 3)$ از دو نقطهٔ $B(0, -3)$ و $C(0, 3)$ برابر ۱۰ است. مقدار مثبت $a$ کدام است؟",
+      "options": [
+        "$3$",
+        "$3\\sqrt{2}$",
+        "$3\\sqrt{3}$",
+        "$3\\sqrt{6}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 215,
+      "question_page": 14,
+      "question_text": "مارکوپولو در یک بیابان در نقطهٔ A که در ۴ کیلومتری یک جاده است قرار دارد ($AH = 4$). او برای رسیدن به یک استراحتگاه در نقطهٔ B در کنار جاده که در ۱۰ کیلومتری نقطهٔ H قرار دارد، ابتدا به نقطهٔ C آمده، سپس به سمت B حرکت می‌کند. اگر مسیر AC سنگلاخ بوده و سرعت او در این مسیر $5 \\text{ km/h}$ و در مسیر CB، $7 \\text{ km/h}$ باشد، پس از ۲ ساعت به نقطهٔ B می‌رسد. فاصلهٔ C تا نقطهٔ H چند کیلومتر می‌تواند باشد؟",
+      "options": [
+        "$\\frac{14}{3}$",
+        "$4$",
+        "$5$",
+        "$\\frac{16}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0014.jpg",
+          "region": [
+            95,
+            1070,
+            500,
+            1335
+          ],
+          "placement": "stem",
+          "alt": "مسیر قائم AH و مسیر شکستهٔ ACB در کنار جادهٔ HB"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

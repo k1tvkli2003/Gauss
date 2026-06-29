@@ -1,0 +1,5885 @@
+{
+  "task_id": "math-topic-16",
+  "subject": "math",
+  "topic_key": "topic-16",
+  "questions": [
+    {
+      "question_number": "1823",
+      "question_page": 10,
+      "question_text": "در یک ظرف ۲ مهرهٔ سیاه و ۶ مهرهٔ سفید قرار گرفته است. مهره‌ای به تصادف خارج می‌کنیم، احتمال آن‌که مهره سفید باشد چند برابر آن است که مهرهٔ خارج‌شده سیاه باشد؟",
+      "options": [
+        "۶",
+        "۴",
+        "۳",
+        "۸"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            85,
+            93,
+            110,
+            835
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1823"
+        },
+        {
+          "region": [
+            123,
+            762,
+            148,
+            804
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            123,
+            563,
+            148,
+            608
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            123,
+            381,
+            148,
+            418
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            123,
+            201,
+            148,
+            237
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1824",
+      "question_page": 10,
+      "question_text": "در ظرفی $n$ مهرهٔ سفید و ۲۰ مهرهٔ سیاه داریم. مهره‌ای با چشم بسته از کیسه خارج می‌کنیم، احتمال سیاه‌بودن مهره ۴ برابر احتمال سفیدبودن مهره است. در کیسه چند مهره قرار داشته است؟",
+      "options": [
+        "۲۴",
+        "۳۵",
+        "۲۵",
+        "۳۰"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            150,
+            43,
+            185,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1824"
+        },
+        {
+          "region": [
+            185,
+            750,
+            210,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            185,
+            549,
+            210,
+            617
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            185,
+            362,
+            210,
+            426
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            185,
+            172,
+            210,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1825",
+      "question_page": 10,
+      "question_text": "نوید و فرهاد به همراه ۴ نفر دیگر می‌خواهند در یک صف پشت سر هم قرار بگیرند، به کدام احتمال نوید و فرهاد کنار هم هستند؟",
+      "options": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            207,
+            98,
+            227,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1825"
+        },
+        {
+          "region": [
+            226,
+            762,
+            266,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            226,
+            563,
+            266,
+            618
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            226,
+            377,
+            266,
+            427
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            226,
+            185,
+            266,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1826",
+      "question_page": 10,
+      "question_text": "در جعبه‌ای ۵ کارت آبی با شماره‌های ۱ تا ۵ و ۴ کارت قرمز با شماره‌های ۱ تا ۴ موجود است. به تصادف دو کارت از جعبه خارج می‌کنیم، با کدام احتمال شماره‌های دو کارت برابر است؟",
+      "options": [
+        "$\\dfrac{1}{9}$",
+        "$\\dfrac{5}{36}$",
+        "$\\dfrac{2}{9}$",
+        "$\\dfrac{1}{18}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            256,
+            43,
+            290,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1826"
+        },
+        {
+          "region": [
+            287,
+            762,
+            331,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            287,
+            560,
+            331,
+            620
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            287,
+            377,
+            331,
+            427
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            287,
+            180,
+            331,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1827",
+      "question_page": 10,
+      "question_text": "۵ دانش‌آموز ریاضی و سه دانش‌آموز تجربی در یک ردیف کنار هم می‌ایستند. با چه احتمالی دانش‌آموزان تجربی یک در میان هستند؟",
+      "options": [
+        "$\\dfrac{1}{14}$",
+        "$\\dfrac{1}{28}$",
+        "$\\dfrac{5}{28}$",
+        "$\\dfrac{1}{56}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            317,
+            77,
+            338,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1827"
+        },
+        {
+          "region": [
+            337,
+            757,
+            379,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            337,
+            557,
+            379,
+            620
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            337,
+            375,
+            379,
+            428
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            337,
+            180,
+            379,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1828",
+      "question_page": 10,
+      "question_text": "۴ دختر و ۵ پسر در یک مهد کودک قرار است در یک صف بایستند، به کدام احتمال دخترها کنار هم هستند؟",
+      "options": [
+        "$\\dfrac{4}{\\binom{9}{4}}$",
+        "$\\dfrac{6}{\\binom{9}{4}}$",
+        "$\\dfrac{5}{\\binom{9}{4}}$",
+        "$\\dfrac{1}{\\binom{9}{4}}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            366,
+            203,
+            386,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1828"
+        },
+        {
+          "region": [
+            386,
+            755,
+            439,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            386,
+            563,
+            439,
+            620
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            386,
+            377,
+            439,
+            428
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            386,
+            185,
+            439,
+            240
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1829",
+      "question_page": 10,
+      "question_text": "یک عدد ۲رقمی به تصادف انتخاب می‌کنیم، به کدام احتمال زوج است ولی بر ۶ بخش‌پذیر نیست؟",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{6}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            435,
+            274,
+            453,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1829"
+        },
+        {
+          "region": [
+            453,
+            762,
+            492,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            453,
+            563,
+            492,
+            618
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            453,
+            377,
+            492,
+            427
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            453,
+            185,
+            492,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1830",
+      "question_page": 10,
+      "question_text": "از بین اعداد مجموعهٔ $\\{1, 2, \\dots, 150\\}$ یک عدد به تصادف انتخاب می‌کنیم. با کدام احتمال این عدد بر ۲ یا ۳ بخش‌پذیر است؟",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{5}{6}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            483,
+            127,
+            506,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1830"
+        },
+        {
+          "region": [
+            504,
+            762,
+            545,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            504,
+            563,
+            545,
+            618
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            504,
+            377,
+            545,
+            427
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            504,
+            185,
+            545,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1831",
+      "question_page": 10,
+      "question_text": "از بین اعداد طبیعی ۱ تا ۵۰ یک عدد به تصادف انتخاب می‌کنیم. با کدام احتمال این عدد نه زوج است و نه مضرب ۳؟",
+      "options": [
+        "$0/32$",
+        "$0/33$",
+        "$0/34$",
+        "$0/35$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            535,
+            186,
+            555,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1831"
+        },
+        {
+          "region": [
+            555,
+            755,
+            584,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            555,
+            558,
+            584,
+            620
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            555,
+            368,
+            584,
+            430
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            555,
+            175,
+            584,
+            240
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1832",
+      "question_page": 10,
+      "question_text": "از بین اعداد سه‌رقمی یک عدد به تصادف انتخاب می‌کنیم. با کدام احتمال این عدد شامل رقم ۴ است؟",
+      "options": [
+        "$0/28$",
+        "$0/36$",
+        "$0/64$",
+        "$0/72$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            573,
+            241,
+            593,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1832"
+        },
+        {
+          "region": [
+            593,
+            755,
+            621,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            593,
+            558,
+            621,
+            620
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            593,
+            368,
+            621,
+            430
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            593,
+            175,
+            621,
+            240
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1833",
+      "question_page": 10,
+      "question_text": "دو عدد از بین اعداد $1, 2, \\dots, 10$ انتخاب می‌کنیم. با چه احتمالی این دو عدد متوالی‌اند؟",
+      "options": [
+        "$\\dfrac{1}{10}$",
+        "$\\dfrac{1}{5}$",
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{4}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            607,
+            321,
+            630,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1833"
+        },
+        {
+          "region": [
+            629,
+            755,
+            668,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            629,
+            563,
+            668,
+            618
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            629,
+            377,
+            668,
+            427
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            629,
+            185,
+            668,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1834",
+      "question_page": 10,
+      "question_text": "اعداد $1, 2, \\dots, 10$ را بر روی ۱۰ کارت متمایز نوشته، دو کارت به تصادف انتخاب می‌کنیم. با کدام احتمال مجموع اعداد دو کارت برابر ۱۴ است؟",
+      "options": [
+        "$\\dfrac{1}{15}$",
+        "$\\dfrac{4}{45}$",
+        "$\\dfrac{8}{45}$",
+        "$\\dfrac{1}{9}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            660,
+            44,
+            683,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1834"
+        },
+        {
+          "region": [
+            680,
+            755,
+            725,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            680,
+            560,
+            725,
+            620
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            680,
+            370,
+            725,
+            430
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            680,
+            180,
+            725,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1835",
+      "question_page": 10,
+      "question_text": "در پرتاب دو تاس احتمال آن‌که جمع آن‌ها ۷ شود، چند برابر احتمال آن است که جمع آن‌ها ۵ شود؟",
+      "options": [
+        "$\\dfrac{7}{5}$",
+        "$\\dfrac{6}{5}$",
+        "$2$",
+        "$\\dfrac{3}{2}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            706,
+            252,
+            725,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1835"
+        },
+        {
+          "region": [
+            725,
+            762,
+            764,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            725,
+            563,
+            764,
+            618
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            725,
+            396,
+            764,
+            431
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            725,
+            185,
+            764,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1836",
+      "question_page": 10,
+      "question_text": "در پرتاب ۲ تاس با کدام احتمال عدد یکی بر دیگری بخش‌پذیر است؟",
+      "options": [
+        "$\\dfrac{7}{18}$",
+        "$\\dfrac{4}{9}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{11}{18}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            753,
+            415,
+            773,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1836"
+        },
+        {
+          "region": [
+            773,
+            755,
+            813,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            773,
+            563,
+            813,
+            618
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            773,
+            377,
+            813,
+            427
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            773,
+            180,
+            813,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1837",
+      "question_page": 10,
+      "question_text": "در پرتاب ۲ تاس با چه احتمالی حاصل‌ضرب اعداد روشده مضرب ۱۲ است؟",
+      "options": [
+        "$\\dfrac{1}{9}$",
+        "$\\dfrac{5}{36}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{7}{36}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            801,
+            388,
+            820,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1837"
+        },
+        {
+          "region": [
+            820,
+            762,
+            861,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            820,
+            560,
+            861,
+            620
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            820,
+            377,
+            861,
+            427
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            820,
+            180,
+            861,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1838",
+      "question_page": 10,
+      "question_text": "در پرتاب دو تاس با چه احتمالی فقط یکی از اعداد اول و مجموع زوج است؟",
+      "options": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{7}{36}$",
+        "$\\dfrac{2}{9}$",
+        "$\\dfrac{1}{4}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            848,
+            381,
+            866,
+            834
+          ],
+          "placement": "stem",
+          "filename": "page_0010.jpg",
+          "alt": "صورت سوال 1838"
+        },
+        {
+          "region": [
+            866,
+            762,
+            912,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            866,
+            560,
+            912,
+            620
+          ],
+          "placement": "option_2",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            866,
+            377,
+            912,
+            427
+          ],
+          "placement": "option_3",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            866,
+            185,
+            912,
+            239
+          ],
+          "placement": "option_4",
+          "filename": "page_0010.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1839",
+      "question_page": 11,
+      "question_text": "در پرتاب دو تاس احتمال آن‌که مجموع اعداد روشده مضرب ۵ باشد، کدام است؟",
+      "options": [
+        "$\\dfrac{1}{9}$",
+        "$\\dfrac{7}{36}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{5}{36}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            75,
+            417,
+            95,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1839"
+        },
+        {
+          "region": [
+            95,
+            810,
+            120,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            95,
+            610,
+            120,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            95,
+            410,
+            120,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            95,
+            210,
+            120,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1840",
+      "question_page": 11,
+      "question_text": "احتمال آن‌که در پرتاب دو تاس مجموع اعداد روشده زوج باشد، چند برابر احتمال آن است که در پرتاب سه تاس مجموع اعداد روشده زوج باشد؟",
+      "options": [
+        "$1$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{2}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            121,
+            102,
+            140,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1840"
+        },
+        {
+          "region": [
+            140,
+            810,
+            165,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            140,
+            610,
+            165,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            140,
+            410,
+            165,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            140,
+            210,
+            165,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1841",
+      "question_page": 11,
+      "question_text": "در پرتاب سه تاس احتمال آن‌که حاصل‌ضرب اعداد روشده مضرب ۳ باشد، کدام است؟",
+      "options": [
+        "$\\dfrac{1}{9}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{8}{27}$",
+        "$\\dfrac{19}{27}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            171,
+            391,
+            190,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1841"
+        },
+        {
+          "region": [
+            190,
+            810,
+            220,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            190,
+            610,
+            220,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            190,
+            410,
+            220,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            190,
+            210,
+            220,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1842",
+      "question_page": 11,
+      "question_text": "با حروف کلمهٔ PEYKAN یک کلمهٔ سه‌حرفی با حروف متمایز ساخته‌ایم. با کدام احتمال این کلمه شامل حرف K بوده ولی فاقد N است؟",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{3}{10}$",
+        "$\\dfrac{1}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            220,
+            117,
+            240,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1842"
+        },
+        {
+          "region": [
+            240,
+            810,
+            270,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            240,
+            610,
+            270,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            240,
+            410,
+            270,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            240,
+            210,
+            270,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1843",
+      "question_page": 11,
+      "question_text": "با حروف کلمهٔ FANTEZI یک کلمهٔ پنج‌حرفی با حروف متمایز ساخته‌ایم. با کدام احتمال حداکثر ۲ حرف از حروف N ،A و F در این کلمه وجود دارد؟",
+      "options": [
+        "$\\dfrac{2}{7}$",
+        "$\\dfrac{3}{7}$",
+        "$\\dfrac{4}{7}$",
+        "$\\dfrac{5}{7}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            267,
+            103,
+            305,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1843"
+        },
+        {
+          "region": [
+            305,
+            810,
+            335,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            305,
+            610,
+            335,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            305,
+            410,
+            335,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            305,
+            210,
+            335,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1844",
+      "question_page": 11,
+      "question_text": "عدد k را به تصادف از بین اعداد طبیعی یک‌رقمی انتخاب می‌کنیم. با کدام احتمال نمودار سهمی $y = kx^2 + 10x + k$ همواره بالای محور طول‌ها است؟",
+      "options": [
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{4}{9}$",
+        "$\\dfrac{5}{9}$",
+        "$\\dfrac{2}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            334,
+            104,
+            370,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1844"
+        },
+        {
+          "region": [
+            370,
+            810,
+            400,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            370,
+            610,
+            400,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            370,
+            410,
+            400,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            370,
+            210,
+            400,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1845",
+      "question_page": 11,
+      "question_text": "از بین اعداد سه‌رقمی یک عدد به تصادف انتخاب می‌کنیم. احتمال آن‌که این عدد شامل رقم ۲ باشد، چه‌قدر بیشتر از آن است که شامل رقم صفر باشد؟",
+      "options": [
+        "صفر",
+        "$\\dfrac{5}{81}$",
+        "$\\dfrac{2}{27}$",
+        "$\\dfrac{7}{81}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            400,
+            104,
+            435,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1845"
+        },
+        {
+          "region": [
+            435,
+            810,
+            465,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            435,
+            610,
+            465,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            435,
+            410,
+            465,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            435,
+            210,
+            465,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1846",
+      "question_page": 11,
+      "question_text": "ارقام ۱، ۲، ۳، ۴ و ۵ را بر روی ۵ کارت متمایز می‌نویسیم. با قراردادن تصادفی کارت‌ها کنار یکدیگر با چه احتمالی عدد ۳۴۱ در این عدد ۵رقمی دیده می‌شود؟",
+      "options": [
+        "$\\dfrac{1}{20}$",
+        "$\\dfrac{3}{20}$",
+        "$\\dfrac{1}{10}$",
+        "$\\dfrac{3}{10}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            463,
+            103,
+            500,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1846"
+        },
+        {
+          "region": [
+            500,
+            810,
+            530,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            500,
+            610,
+            530,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            500,
+            410,
+            530,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            500,
+            210,
+            530,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1847",
+      "question_page": 11,
+      "question_text": "با ارقام ۰، ۱، ۲، ۳، ۴ و ۵ عددی سه‌رقمی بدون تکرار ارقام نوشته‌ایم. با کدام احتمال این عدد مضرب ۵ است؟",
+      "options": [
+        "$0/32$",
+        "$0/33$",
+        "$0/35$",
+        "$0/36$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            528,
+            269,
+            545,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1847"
+        },
+        {
+          "region": [
+            545,
+            810,
+            565,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            545,
+            610,
+            565,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            545,
+            410,
+            565,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            545,
+            210,
+            565,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1848",
+      "question_page": 11,
+      "question_text": "با ارقام ۰، ۱، ۲، ۳ و ۴ یک عدد سه‌رقمی با ارقام متمایز نوشته‌ایم. با چه احتمالی ارقام این عدد از چپ به راست نزولی است؟",
+      "options": [
+        "$\\dfrac{1}{8}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{5}{24}$",
+        "$\\dfrac{1}{4}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            564,
+            191,
+            580,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1848"
+        },
+        {
+          "region": [
+            580,
+            810,
+            610,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            580,
+            610,
+            610,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            580,
+            410,
+            610,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            580,
+            210,
+            610,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1849",
+      "question_page": 11,
+      "question_text": "تعداد اعداد سه‌رقمی که با ارقام ۲، ۳، ۵ می‌توان ساخت را نوشته و یک عدد را به تصادف انتخاب می‌کنیم. با چه احتمالی این عدد فقط از ۲ رقم متمایز ساخته شده است؟",
+      "options": [
+        "$\\dfrac{2}{9}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{4}{9}$",
+        "$\\dfrac{2}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            608,
+            102,
+            642,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1849"
+        },
+        {
+          "region": [
+            642,
+            810,
+            672,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            642,
+            610,
+            672,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            642,
+            410,
+            672,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            642,
+            210,
+            672,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1850",
+      "question_page": 11,
+      "question_text": "آهو، غزال و پروانه به همراه ۵ دوست خود کنار یکدیگر نشسته‌اند. با کدام احتمال حداقل دو نفر از این سه نفر کنار یکدیگر هستند؟",
+      "options": [
+        "$\\dfrac{5}{14}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{9}{14}$",
+        "$\\dfrac{11}{14}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            676,
+            149,
+            695,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1850"
+        },
+        {
+          "region": [
+            695,
+            810,
+            725,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            695,
+            610,
+            725,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            695,
+            410,
+            725,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            695,
+            210,
+            725,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1851",
+      "question_page": 11,
+      "question_text": "در کیسه‌ای ۵ مهرهٔ سیاه و ۴ مهرهٔ سفید موجود است. سه مهره به تصادف از کیسه خارج می‌کنیم، با کدام احتمال مهره‌ها هم‌رنگ هستند؟",
+      "options": [
+        "$\\dfrac{5}{42}$",
+        "$\\dfrac{1}{7}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{4}{21}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            722,
+            112,
+            740,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1851"
+        },
+        {
+          "region": [
+            740,
+            810,
+            770,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            740,
+            610,
+            770,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            740,
+            410,
+            770,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            740,
+            210,
+            770,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1852",
+      "question_page": 11,
+      "question_text": "درون یک جعبه ۵ مهرهٔ سفید، ۴ مهرهٔ سیاه و ۳ مهرهٔ قرمز قرار گرفته است. به تصادف ۳ مهره خارج می‌کنیم، به کدام احتمال بین مهره‌های خارج‌شده مهرهٔ سفید نیست یا مهرهٔ قرمز نیست؟",
+      "options": [
+        "$\\dfrac{119}{220}$",
+        "$\\dfrac{9}{22}$",
+        "$\\dfrac{23}{44}$",
+        "$\\dfrac{13}{22}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            768,
+            102,
+            800,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1852"
+        },
+        {
+          "region": [
+            800,
+            810,
+            830,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            800,
+            610,
+            830,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            800,
+            410,
+            830,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            800,
+            210,
+            830,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1853",
+      "question_page": 11,
+      "question_text": "در ظرفی سه مهرهٔ سیاه و n مهرهٔ قرمز داریم. مهره‌ای به تصادف خارج می‌کنیم، به احتمال $\\dfrac{1}{4}$ مهره سیاه است. اگر دو مهره با هم خارج می‌کردیم، به کدام احتمال هر ۲ مهره هم‌رنگ می‌شد؟",
+      "options": [
+        "$\\dfrac{11}{22}$",
+        "$\\dfrac{13}{22}$",
+        "$\\dfrac{15}{22}$",
+        "$\\dfrac{17}{22}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            834,
+            102,
+            870,
+            890
+          ],
+          "placement": "stem",
+          "filename": "page_0011.jpg",
+          "alt": "صورت سوال 1853"
+        },
+        {
+          "region": [
+            870,
+            810,
+            900,
+            860
+          ],
+          "placement": "option_1",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            870,
+            610,
+            900,
+            660
+          ],
+          "placement": "option_2",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            870,
+            410,
+            900,
+            460
+          ],
+          "placement": "option_3",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            870,
+            210,
+            900,
+            260
+          ],
+          "placement": "option_4",
+          "filename": "page_0011.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1854,
+      "question_page": 12,
+      "question_text": "در یک کیسه ۶ مهرهٔ قرمز و ۴ مهرهٔ آبی موجود است. در انتخاب تصادفی سه مهره با چه احتمالی هر دو رنگ موجود است؟",
+      "options": [
+        "$\\frac{1}{5}$",
+        "$\\frac{2}{5}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{4}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            65,
+            140,
+            85,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۵۴",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            85,
+            790,
+            105,
+            835
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            85,
+            580,
+            105,
+            620
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            85,
+            400,
+            105,
+            430
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            85,
+            195,
+            105,
+            235
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1855,
+      "question_page": 12,
+      "question_text": "در یک کیسه ۸ مهرهٔ قرمز، ۶ مهرهٔ سبز و ۴ مهرهٔ آبی موجود است. با خروج تصادفی ۴ مهره از کیسه با کدام احتمال یک مهره سبز و حداقل ۲ مهره قرمز است؟",
+      "options": [
+        "$\\frac{28}{85}$",
+        "$\\frac{6}{17}$",
+        "$\\frac{32}{85}$",
+        "$\\frac{2}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            110,
+            50,
+            150,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۵۵",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            140,
+            770,
+            175,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            140,
+            570,
+            175,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            140,
+            390,
+            175,
+            420
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            140,
+            190,
+            175,
+            220
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1856,
+      "question_page": 12,
+      "question_text": "در جعبه‌ای ۵ مهرهٔ زرد، ۴ مهرهٔ آبی و ۱ مهرهٔ قرمز موجود است. به تصادف سه مهره از جعبه خارج می‌کنیم، با چه احتمالی حداقل یک مهره زرد است؟",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{6}$",
+        "$\\frac{11}{12}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            170,
+            50,
+            190,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۵۶",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            185,
+            780,
+            215,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            185,
+            580,
+            215,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            185,
+            390,
+            215,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            185,
+            190,
+            215,
+            215
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1857,
+      "question_page": 12,
+      "question_text": "۶ کارت با شماره‌های ۱ تا ۶ به طوری که شماره‌های آن‌ها مشخص نیست بر روی میز قرار دارند. سه کارت را به ترتیب برمی‌گردانیم، با چه احتمالی کارت اول و سوم شماره‌های زوج هستند؟",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{5}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{10}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            215,
+            50,
+            255,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۵۷",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            250,
+            780,
+            280,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            250,
+            580,
+            280,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            250,
+            390,
+            280,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            250,
+            190,
+            280,
+            220
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1858,
+      "question_page": 12,
+      "question_text": "در کیسه‌ای ۴ مهرهٔ آبی و تعدادی مهرهٔ قرمز موجود است. اگر یک مهرهٔ آبی را خارج کرده و به جای آن یک مهرهٔ قرمز اضافه کنیم، احتمال آن که از جعبه یک مهرهٔ قرمز خارج شود $\\frac{1}{10}$ افزایش می‌یابد. تعداد مهره‌های قرمز اولیه کدام است؟",
+      "options": [
+        "۴",
+        "۵",
+        "۶",
+        "۷"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            280,
+            50,
+            320,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۵۸",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            320,
+            780,
+            340,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            320,
+            580,
+            340,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            320,
+            390,
+            340,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            320,
+            190,
+            340,
+            220
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1859,
+      "question_page": 12,
+      "question_text": "در جعبه‌ای ۶ لامپ سالم و ۳ لامپ معیوب وجود دارد. سه لامپ از جعبه خارج می‌کنیم، با کدام احتمال حداکثر ۱ لامپ معیوب است؟",
+      "options": [
+        "$\\frac{15}{28}$",
+        "$\\frac{61}{84}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{65}{84}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            345,
+            50,
+            365,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۵۹",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            360,
+            770,
+            390,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            360,
+            570,
+            390,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            360,
+            390,
+            390,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            360,
+            180,
+            390,
+            215
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1860,
+      "question_page": 12,
+      "question_text": "در جعبه‌ای ۵ مهرهٔ قرمز، ۳ مهرهٔ آبی و ۲ مهرهٔ سفید موجود است. دو مهره متوالیاً و به تصادف از جعبه خارج می‌کنیم، با کدام احتمال مهرهٔ اول قرمز و مهرهٔ دوم آبی است؟",
+      "options": [
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{12}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            390,
+            50,
+            430,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۰",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            430,
+            770,
+            460,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            430,
+            570,
+            460,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            430,
+            380,
+            460,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            430,
+            180,
+            460,
+            210
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1861,
+      "question_page": 12,
+      "question_text": "در جعبه‌ای تعدادی مهره قرار دارد که ۵ تای آن‌ها سیاه است. دو مهره از جعبه خارج می‌کنیم، اگر احتمال این که یک مهرهٔ خارج شده سیاه باشد برابر $\\frac{5}{9}$ باشد، تعداد مهره‌های جعبه چند عدد متمایز می‌تواند باشد؟",
+      "options": [
+        "صفر",
+        "۱",
+        "۲",
+        "۳"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            455,
+            50,
+            495,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            490,
+            770,
+            510,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            490,
+            580,
+            510,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            490,
+            390,
+            510,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            490,
+            190,
+            510,
+            220
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1862,
+      "question_page": 12,
+      "question_text": "در یک کیسه ۶ مهرهٔ قرمز با شماره‌های ۱ تا ۶ و ۴ مهرهٔ آبی با شماره‌های ۱ تا ۴ موجود است. از این کیسه دو مهره به تصادف خارج می‌کنیم، با کدام احتمال جمع شمارهٔ مهره‌ها برابر ۴ است؟",
+      "options": [
+        "$\\frac{1}{9}$",
+        "$\\frac{7}{45}$",
+        "$\\frac{1}{5}$",
+        "$\\frac{4}{15}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            515,
+            50,
+            555,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            550,
+            780,
+            580,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            550,
+            580,
+            580,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            550,
+            390,
+            580,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            550,
+            180,
+            580,
+            215
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1863,
+      "question_page": 12,
+      "question_text": "در یک جعبه ۵ مهرهٔ زرد، ۳ مهرهٔ آبی و ۲ مهرهٔ قرمز وجود دارد. سه مهره از جعبه خارج می‌کنیم، احتمال آن که رنگ هر سه مهره متمایز باشد چند برابر آن است که مهره‌ها از یک رنگ باشند؟",
+      "options": [
+        "۳",
+        "$\\frac{5}{2}$",
+        "$\\frac{30}{11}$",
+        "$\\frac{15}{4}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            585,
+            50,
+            625,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            615,
+            780,
+            645,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            615,
+            580,
+            645,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            615,
+            390,
+            645,
+            415
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            615,
+            180,
+            645,
+            215
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1864,
+      "question_page": 12,
+      "question_text": "از ۵ جفت کفش متمایز، ۴ لنگه کفش انتخاب می‌کنیم. با کدام احتمال دقیقاً یک جفت کفش در بین آن‌هاست؟",
+      "options": [
+        "$\\frac{3}{7}$",
+        "$\\frac{4}{7}$",
+        "$\\frac{4}{9}$",
+        "$\\frac{5}{9}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            645,
+            50,
+            665,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۴",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            665,
+            780,
+            695,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            665,
+            580,
+            695,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            665,
+            390,
+            695,
+            415
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            665,
+            180,
+            695,
+            215
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1865,
+      "question_page": 12,
+      "question_text": "در پرتاب ۴ سکه احتمال ظاهر شدن حداکثر یک «رو» کدام است؟",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{16}$",
+        "$\\frac{5}{16}$",
+        "$\\frac{3}{8}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            695,
+            50,
+            715,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۵",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            715,
+            780,
+            745,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            715,
+            580,
+            745,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            715,
+            390,
+            745,
+            415
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            715,
+            180,
+            745,
+            215
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1866,
+      "question_page": 12,
+      "question_text": "۳ توپ متمایز را به تصادف در ۴ سبد با ظرفیت بیش از ۱ توپ قرار می‌دهیم. با چه احتمالی در سبد اول حداقل یک توپ قرار می‌گیرد؟",
+      "options": [
+        "$\\frac{27}{64}$",
+        "$\\frac{7}{16}$",
+        "$\\frac{9}{16}$",
+        "$\\frac{37}{64}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            745,
+            50,
+            765,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۶",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            765,
+            780,
+            795,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            765,
+            580,
+            795,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            765,
+            390,
+            795,
+            415
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            765,
+            180,
+            795,
+            215
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1867,
+      "question_page": 12,
+      "question_text": "$A$ و $B$ دو پیشامد در یک فضای نمونه‌ای و $P(A) = 0/7$، $P(B) = 0/8$ و $P(B \\cap A') = 0/2$ است. $P(A' \\cap B')$ کدام است؟",
+      "options": [
+        "$0/1$",
+        "$0/2$",
+        "$0/3$",
+        "$0/4$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            810,
+            50,
+            830,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۷",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            830,
+            780,
+            850,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            830,
+            580,
+            850,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            830,
+            390,
+            850,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            830,
+            180,
+            850,
+            210
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1868,
+      "question_page": 12,
+      "question_text": "$A$ و $B$ دو پیشامد در فضای $S$ هستند به طوری که $P(A) = 2P(B) = 3P(A \\cap B)$. اگر $P(A \\cup B) = \\frac{7}{12}$، مقدار $P(A' \\cup B)$ کدام است؟",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{4}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            850,
+            50,
+            875,
+            835
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۱۸۶۸",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            870,
+            780,
+            900,
+            800
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            870,
+            580,
+            900,
+            600
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            870,
+            390,
+            900,
+            410
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳",
+          "filename": "page_0009.jpg"
+        },
+        {
+          "region": [
+            870,
+            180,
+            900,
+            210
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴",
+          "filename": "page_0009.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1869",
+      "question_page": 13,
+      "question_text": "$A$ و $B$ دو پیشامد از یک فضای نمونه‌ای و $P(A - B) = P(A) - P(B)$ است. حاصل $P(B - A)$ کدام است؟",
+      "options": [
+        "$P(B) - P(A)$",
+        "$P(B)$",
+        "$P(A)$",
+        "صفر"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            80,
+            100,
+            150,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1869 stem"
+        },
+        {
+          "region": [
+            150,
+            100,
+            200,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1869 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1870",
+      "question_page": 13,
+      "question_text": "$A$ و $B$ دو پیشامد از فضای نمونه‌ای $S$ می‌باشند. اگر $P(A - B) = \\frac{1}{8}$ ، $P(B - A) = \\frac{3}{8}$ و $۲P(A) = P(B)$ باشد، حاصل $P(A)$ کدام است؟",
+      "options": [
+        "$\\frac{1}{8}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            100,
+            280,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1870 stem"
+        },
+        {
+          "region": [
+            280,
+            100,
+            330,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1870 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1871",
+      "question_page": 13,
+      "question_text": "اگر $P(A \\cup B') = \\frac{3}{4}$ ، $P(B \\cup A') = \\frac{3}{4}$ و $۶P(A') = ۷P(B')$ باشد، $P(A \\cup B)$ کدام است؟",
+      "options": [
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{4}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            330,
+            100,
+            400,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1871 stem"
+        },
+        {
+          "region": [
+            400,
+            100,
+            450,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1871 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1872",
+      "question_page": 13,
+      "question_text": "اگر $P(A - B) = ۰/۲$ و $P(B - A) = ۰/۳$ باشد، بیشترین مقدار $\\frac{P(A)}{P(B)}$ کدام است؟",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{6}{7}$",
+        "$\\frac{7}{8}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            450,
+            100,
+            520,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1872 stem"
+        },
+        {
+          "region": [
+            520,
+            100,
+            570,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1872 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1873",
+      "question_page": 13,
+      "question_text": "اگر $P(A) = ۰/۷$ ، $P(B) = ۰/۵$ و $P(A' \\cap B') = ۰/۱$ باشد، حاصل $\\frac{P(A - B)}{P(B - A)}$ کدام است؟",
+      "options": [
+        "$\\frac{3}{2}$",
+        "$۲$",
+        "$\\frac{5}{3}$",
+        "$۳$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            570,
+            100,
+            650,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1873 stem"
+        },
+        {
+          "region": [
+            650,
+            100,
+            700,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1873 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1874",
+      "question_page": 13,
+      "question_text": "اگر $A$ و $B$ دو پیشامد ناسازگار و $P(A) = \\frac{1}{3}$ و $P(B') = \\frac{3}{4}$ باشد، $P(A' \\cap B')$ کدام است؟",
+      "options": [
+        "$\\frac{1}{12}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{7}{12}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            700,
+            100,
+            780,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1874 stem"
+        },
+        {
+          "region": [
+            780,
+            100,
+            830,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1874 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1875",
+      "question_page": 13,
+      "question_text": "$A$ و $B$ دو پیشامد ناسازگار از یک فضای نمونه‌ای هستند. اگر $P(A') = \\frac{1}{4}$ باشد، $P(B)$ کدام می‌تواند باشد؟",
+      "options": [
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{3}{4}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            830,
+            100,
+            900,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1875 stem"
+        },
+        {
+          "region": [
+            900,
+            100,
+            950,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1875 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1876",
+      "question_page": 13,
+      "question_text": "در یک کلاس ۲۰ نفره احتمال آن‌که دانش‌آموزی عضو المپیاد ریاضی باشد، ۲۵ درصد است. اگر ۱۱ نفر از این کلاس نه عضو المپیاد ریاضی باشند و نه عضو المپیاد زیست، با کدام احتمال فردی که به تصادف انتخاب می‌شود، فقط عضو المپیاد زیست است؟",
+      "options": [
+        "۱۰ درصد",
+        "۲۰ درصد",
+        "۳۰ درصد",
+        "۳۵ درصد"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            950,
+            100,
+            1020,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1876 stem"
+        },
+        {
+          "region": [
+            1020,
+            100,
+            1070,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1876 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1877",
+      "question_page": 13,
+      "question_text": "از بین ۴ مهرهٔ سفید، ۲ مهرهٔ سیاه و ۴ مهرهٔ قرمز، سه مهره به تصادف انتخاب می‌کنیم. با کدام احتمال در بین این سه مهره یا مهرهٔ سفید و یا مهرهٔ سیاه وجود ندارد؟",
+      "options": [
+        "$\\frac{2}{5}$",
+        "$\\frac{11}{20}$",
+        "$\\frac{19}{30}$",
+        "$\\frac{3}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1070,
+            100,
+            1150,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1877 stem"
+        },
+        {
+          "region": [
+            1150,
+            100,
+            1200,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1877 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1878",
+      "question_page": 13,
+      "question_text": "در جعبهٔ A، ۵ مهرهٔ قرمز و ۲ مهرهٔ آبی و در جعبهٔ B، ۶ مهرهٔ قرمز و ۴ مهرهٔ آبی موجود است. از هر دو جعبه به تصادف دو مهره خارج می‌کنیم، با کدام احتمال ۴ مهره خارج‌شده هم‌رنگ هستند؟",
+      "options": [
+        "$\\frac{2}{27}$",
+        "$\\frac{7}{68}$",
+        "$\\frac{21}{272}$",
+        "$\\frac{52}{315}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1200,
+            100,
+            1280,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1878 stem"
+        },
+        {
+          "region": [
+            1280,
+            100,
+            1340,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1878 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1879",
+      "question_page": 13,
+      "question_text": "از بین اعداد $\\{۱, ۲, \\dots, ۱۰۰\\}$ یک عدد به تصادف انتخاب می‌کنیم. با کدام احتمال این عدد نه بر ۲ و نه بر ۳ بخش‌پذیر است؟",
+      "options": [
+        "$۰/۳۳$",
+        "$۰/۳۴$",
+        "$۰/۱۷$",
+        "$۰/۱۶$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1340,
+            100,
+            1400,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1879 stem"
+        },
+        {
+          "region": [
+            1400,
+            100,
+            1450,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1879 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1880",
+      "question_page": 13,
+      "question_text": "عددی به تصادف از مجموعهٔ $\\{۱۰۰, ۱۰۱, \\dots, ۲۰۰\\}$ انتخاب می‌کنیم. به کدام احتمال بر ۵ بخش‌پذیر است ولی بر ۳ بخش‌پذیر نیست؟",
+      "options": [
+        "$\\frac{13}{100}$",
+        "$\\frac{14}{100}$",
+        "$\\frac{13}{101}$",
+        "$\\frac{14}{101}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1450,
+            100,
+            1520,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1880 stem"
+        },
+        {
+          "region": [
+            1520,
+            100,
+            1580,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1880 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1881",
+      "question_page": 13,
+      "question_text": "در یک خانواده با ۶ فرزند احتمال آن‌که ۴ فرزند دختر داشته باشیم چند برابر احتمال آن است که در یک خانواده با ۸ فرزند، ۵ فرزند پسر داشته باشیم؟",
+      "options": [
+        "$\\frac{15}{16}$",
+        "$\\frac{6}{8}$",
+        "$\\frac{4}{5}$",
+        "$\\frac{15}{14}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1580,
+            100,
+            1660,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1881 stem"
+        },
+        {
+          "region": [
+            1660,
+            100,
+            1720,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1881 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1882",
+      "question_page": 13,
+      "question_text": "در یک خانوادهٔ ۶فرزندی احتمال کدام پیشامد بیشتر است؟",
+      "options": [
+        "تعداد دختران خانواده فرد باشد.",
+        "تعداد دختران از پسران بیشتر باشد.",
+        "تعداد پسران و دختران برابر باشد.",
+        "همهٔ فرزندان از یک جنسیت باشند."
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1720,
+            100,
+            1780,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1882 stem"
+        },
+        {
+          "region": [
+            1780,
+            100,
+            1850,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1882 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1883",
+      "question_page": 13,
+      "question_text": "در یک کلاس هر دانش‌آموز به احتمال $\\frac{2}{3}$ به زبان انگلیسی مسلط است. اگر سه نفر از این کلاس به تصادف انتخاب شوند با کدام احتمال ۲ نفر از آنان به زبان انگلیسی مسلط است؟",
+      "options": [
+        "$\\frac{2}{3}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{4}{9}$",
+        "$\\frac{4}{27}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1850,
+            100,
+            1930,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1883 stem"
+        },
+        {
+          "region": [
+            1930,
+            100,
+            2000,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0013.jpg",
+          "alt": "Question 1883 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1884",
+      "question_page": 14,
+      "question_text": "در پرتاب ۴ تاس احتمال آن‌که ۲ تاس ۶ بیاید کدام است؟",
+      "options": [
+        "$\\frac{1}{6}$",
+        "$\\frac{5}{216}$",
+        "$\\frac{25}{216}$",
+        "$\\frac{25}{1296}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            70,
+            100,
+            110,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1884 stem"
+        },
+        {
+          "region": [
+            110,
+            100,
+            150,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1884 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1885",
+      "question_page": 14,
+      "question_text": "اگر $P(A - B) = 3P(A \\cap B)$، مقدار $P(B | A)$ چه عددی است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{6}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            150,
+            100,
+            200,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1885 stem"
+        },
+        {
+          "region": [
+            200,
+            100,
+            260,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1885 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1886",
+      "question_page": 14,
+      "question_text": "اگر $A$ و $B$ دو پیشامد در فضای $S$ باشند که $P(A | B) = \\frac{1}{3}$ و $P(B - A) = ۰/۶$، مقدار $P(B)$ کدام است؟",
+      "options": [
+        "$۰/۹$",
+        "$۰/۸$",
+        "$۰/۷۵$",
+        "$۰/۸۵$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            260,
+            100,
+            310,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1886 stem"
+        },
+        {
+          "region": [
+            310,
+            100,
+            360,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1886 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1887",
+      "question_page": 14,
+      "question_text": "اگر $P(A | B) = ۰/۸$ و $P(B | A) = ۰/۶$ به طوری که $P(A) = ۰/۵$، مقدار $P(B)$ چه عددی است؟",
+      "options": [
+        "$\\frac{3}{8}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            360,
+            100,
+            420,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1887 stem"
+        },
+        {
+          "region": [
+            420,
+            100,
+            480,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1887 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1888",
+      "question_page": 14,
+      "question_text": "اگر $A$ و $B$ دو پیشامد ناسازگار با شرط $P(A | B') = 2P(B | A') = \\frac{1}{2}$ باشند، مقدار $\\frac{P(A)}{P(B)}$ کدام است؟",
+      "options": [
+        "$\\frac{3}{2}$",
+        "$۲$",
+        "$\\frac{5}{2}$",
+        "$۳$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            480,
+            100,
+            560,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1888 stem"
+        },
+        {
+          "region": [
+            560,
+            100,
+            610,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1888 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1889",
+      "question_page": 14,
+      "question_text": "در پرتاب دو تاس اگر مجموع اعداد روشده فرد باشد، با کدام احتمال هر دو عدد «اول» هستند؟",
+      "options": [
+        "$\\frac{1}{9}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{4}{9}$",
+        "$\\frac{5}{9}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            610,
+            100,
+            670,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1889 stem"
+        },
+        {
+          "region": [
+            670,
+            100,
+            720,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1889 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1890",
+      "question_page": 14,
+      "question_text": "در پرتاب یک تاس می‌دانیم عدد روشده «اول» است. با کدام احتمال این عدد مضرب ۵ است؟",
+      "options": [
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            720,
+            100,
+            780,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1890 stem"
+        },
+        {
+          "region": [
+            780,
+            100,
+            830,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1890 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1891",
+      "question_page": 14,
+      "question_text": "یک عدد سه‌رقمی انتخاب می‌کنیم. اگر بدانیم مضرب ۵ است، با کدام احتمال مضرب ۳ نمی‌باشد؟",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{2}{15}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            830,
+            100,
+            890,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1891 stem"
+        },
+        {
+          "region": [
+            890,
+            100,
+            940,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1891 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1892",
+      "question_page": 14,
+      "question_text": "هرگاه $S = \\{a, b, c, d\\}$ فضای نمونهٔ آزمایش باشد که $P(a) = 2P(b) = 3P(c) = 4P(d)$. مقدار $P(\\{a, b\\} | \\{b, c\\})$ چه عددی است؟",
+      "options": [
+        "$\\frac{1}{5}$",
+        "$\\frac{2}{5}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{4}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            940,
+            100,
+            1010,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1892 stem"
+        },
+        {
+          "region": [
+            1010,
+            100,
+            1070,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1892 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1893",
+      "question_page": 14,
+      "question_text": "در کیسه‌ای ۶ مهرهٔ سفید، ۳ مهرهٔ سیاه و ۴ مهرهٔ سبز وجود دارد. یک مهره به تصادف خارج می‌کنیم، اگر بدانیم این مهره سیاه نیست با کدام احتمال سفید است؟",
+      "options": [
+        "$\\frac{6}{13}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{2}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1070,
+            100,
+            1150,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1893 stem"
+        },
+        {
+          "region": [
+            1150,
+            100,
+            1210,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1893 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1894",
+      "question_page": 14,
+      "question_text": "در پرتاب دو تاس اختلاف اعداد روشده برابر ۱ است. با کدام احتمال مجموع اعداد روشده بیشتر از ۷ است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{3}{7}$",
+        "$\\frac{2}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1210,
+            100,
+            1270,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1894 stem"
+        },
+        {
+          "region": [
+            1270,
+            100,
+            1330,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1894 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1895",
+      "question_page": 14,
+      "question_text": "در یک کیسه ۶ مهره قرمز و ۴ مهره آبی هستند. دو مهره به تصادف از کیسه خارج می‌کنیم، اگر بدانیم هر دو مهره آبی نیستند با کدام احتمال هر دو مهره قرمز هستند؟",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{5}{13}$",
+        "$\\frac{7}{13}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1330,
+            100,
+            1420,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1895 stem"
+        },
+        {
+          "region": [
+            1420,
+            100,
+            1480,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1895 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1896",
+      "question_page": 14,
+      "question_text": "۴ مهرهٔ سفید با شماره‌های ۱ تا ۴ و ۳ مهرهٔ سیاه با شماره‌های ۱ تا ۳ در یک جعبه قرار دارند. به تصادف دو مهره خارج می‌کنیم، اگر بدانیم مجموع اعداد روی دو مهره برابر ۴ است، با کدام احتمال هر دو مهره هم‌رنگ هستند؟",
+      "options": [
+        "$\\frac{2}{5}$",
+        "$\\frac{4}{9}$",
+        "$\\frac{8}{21}$",
+        "$\\frac{5}{9}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1480,
+            100,
+            1570,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1896 stem"
+        },
+        {
+          "region": [
+            1570,
+            100,
+            1630,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1896 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1897",
+      "question_page": 14,
+      "question_text": "$A$ و $B$ دو پیشامد از یک فضای نمونه‌ای و $P(A) = ۰/۳$، $P(B) = ۰/۱$ و $P(B | A) = ۰/۴$ است. $P(A' | B')$ کدام است؟",
+      "options": [
+        "$۰/۶$",
+        "$۰/۷$",
+        "$۰/۸$",
+        "$۰/۹$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1630,
+            100,
+            1710,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1897 stem"
+        },
+        {
+          "region": [
+            1710,
+            100,
+            1760,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1897 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1898",
+      "question_page": 14,
+      "question_text": "در پرتاب ۲ تاس اعداد روشده برابر نیستند. با کدام احتمال عدد تاس اول کوچک‌تر است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{7}{12}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1760,
+            100,
+            1830,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1898 stem"
+        },
+        {
+          "region": [
+            1830,
+            100,
+            1880,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1898 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1899",
+      "question_page": 14,
+      "question_text": "اگر $A \\cap B \\neq \\emptyset$ ، $4P(B | A) = P(A | B) = ۰/۱$ ، $P(B - A) = ۰/۹$ و $P(A \\cup B)$ باشد، مقدار $P(B)$ کدام است؟",
+      "options": [
+        "$۰/۱۵$",
+        "$۰/۱۲$",
+        "$۰/۱۳$",
+        "$۰/۲$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            1880,
+            100,
+            1950,
+            1500
+          ],
+          "placement": "stem",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1899 stem"
+        },
+        {
+          "region": [
+            1950,
+            100,
+            2000,
+            1500
+          ],
+          "placement": "options",
+          "filename": "page_0014.jpg",
+          "alt": "Question 1899 options"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1900,
+      "question_page": 15,
+      "question_text": "اگر $P(A) = 0/45$ ، $P(B) = 0/6$ و $P(A \\mid B') = 0/75$ باشد، $P(B \\mid A')$ کدام است؟",
+      "options": [
+        "$\\dfrac{8}{10}$",
+        "$\\dfrac{9}{10}$",
+        "$\\dfrac{8}{11}$",
+        "$\\dfrac{9}{11}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1901,
+      "question_page": 15,
+      "question_text": "در پرتاب ۲ تاس اگر مجموع شماره‌های روشده بیشتر از ۸ باشد، احتمال آن‌که حداقل شمارهٔ یکی از تاس‌ها برابر ۵ باشد، کدام است؟",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{7}{15}$",
+        "$\\dfrac{5}{36}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1902,
+      "question_page": 15,
+      "question_text": "در پرتاب سه تاس مجموع اعداد روشده برابر ۵ است. با کدام احتمال یکی از تاس‌ها عدد ۳ را نشان می‌دهد؟",
+      "options": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1903,
+      "question_page": 15,
+      "question_text": "احتمال آن‌که «بارسلونا» قهرمان لالیگا شود برابر $\\dfrac{1}{2}$ و احتمال آن‌که «رئال مادرید» را ببرد برابر $\\dfrac{1}{3}$ است. اگر «بارسلونا»، «رئال مادرید» را ببرد احتمال قهرمانی در لالیگا به $\\dfrac{2}{3}$ افزایش می‌یابد. با کدام احتمال «بارسلونا»، «رئال مادرید» را می‌برد ولی قهرمان لالیگا نمی‌شود؟",
+      "options": [
+        "$\\dfrac{1}{9}$",
+        "$\\dfrac{2}{9}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{4}{9}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1904,
+      "question_page": 15,
+      "question_text": "تاس سالمی را سه بار پرتاب می‌کنیم. اگر بدانیم مجموع اعداد روشده یک عدد زوج است احتمال آن‌که لااقل یکی از تاس‌ها عدد ۲ باشد، کدام است؟",
+      "options": [
+        "$\\dfrac{43}{108}$",
+        "$\\dfrac{5}{27}$",
+        "$\\dfrac{5}{16}$",
+        "$\\dfrac{23}{54}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1905,
+      "question_page": 15,
+      "question_text": "تاسی را پرتاب می‌کنیم. اگر کوچک‌تر از ۳ بیاید ۲ سکه و در غیر این صورت ۱ سکه پرتاب می‌کنیم، با کدام احتمال هیچ سکه‌ای «پشت» نمی‌آید؟",
+      "options": [
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{5}{12}$",
+        "$\\dfrac{7}{12}$",
+        "$\\dfrac{3}{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1906,
+      "question_page": 15,
+      "question_text": "$A$ و $B$ دو پیشامد مستقل در یک فضای نمونه‌ای بوده و $P(A \\mid B) = 0/6$ و $P(A)P(B \\mid A) = 0/2$ است. $P(A \\cup B)$ کدام است؟",
+      "options": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{11}{15}$",
+        "$\\dfrac{4}{5}$",
+        "$\\dfrac{13}{15}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1907,
+      "question_page": 15,
+      "question_text": "اگر $A$ و $B$ دو پیشامد مستقل در فضای $S$ باشند به طوری که $P(A \\cup B) = 0/72$ و $P(A) = 2P(B)$ ، مقدار $P(A - B)$ چه عددی است؟",
+      "options": [
+        "$0/42$",
+        "$0/12$",
+        "$0/36$",
+        "$0/24$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1908,
+      "question_page": 15,
+      "question_text": "در پرتاب دو تاس، $A$ پیشامد آن است که تاس اول ۶ آمده باشد و $B$ پیشامد آن است که جمع دو عدد $n$ آید. عدد $n$ کدام باشد تا $A$ و $B$ دو پیشامد مستقل از هم باشند؟",
+      "options": [
+        "$7$",
+        "$12$",
+        "$9$",
+        "$6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1909,
+      "question_page": 15,
+      "question_text": "$A$ و $B$ دو پیشامد مستقل از هم و $P(A) = 0/4$ و $P(A \\cup B) = 0/7$ است. $P(A' \\cup B')$ کدام است؟",
+      "options": [
+        "$0/2$",
+        "$0/3$",
+        "$0/5$",
+        "$0/8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1910,
+      "question_page": 15,
+      "question_text": "اگر $A$ و $B$ دو پیشامد مستقل در یک فضای نمونه‌ای باشند، کدام گزینه نادرست است؟",
+      "options": [
+        "$P(A \\mid B') = P(A)$",
+        "$P(A - B) = P(A)P(B')$",
+        "$P(A \\cup B) = P(A)P(B') + P(B)$",
+        "$P(A' \\cap B') = 1 - P(A)P(B)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1911,
+      "question_page": 15,
+      "question_text": "در دو پیشامد مستقل $A$ و $B$ اگر $P(A \\cap B) = 0/1$ ، $P(A \\cup B) = 0/6$ و $P(A) < P(A')$ ، مقدار $P(A' \\mid B')$ چه عددی است؟",
+      "options": [
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{3}{5}$",
+        "$\\dfrac{4}{5}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1912,
+      "question_page": 15,
+      "question_text": "سه سکه و دو تاس را پرتاب می‌کنیم. احتمال آن‌که حداقل یک سکه «رو» یا جمع عدد دو تاس بیشتر از ۴ باشد، کدام است؟",
+      "options": [
+        "$\\dfrac{19}{24}$",
+        "$\\dfrac{23}{24}$",
+        "$\\dfrac{43}{48}$",
+        "$\\dfrac{47}{48}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1913,
+      "question_page": 15,
+      "question_text": "سه سکه و یک تاس را پرتاب می‌کنیم. احتمال آن‌که دو سکه «رو» یا عدد تاس بزرگ‌تر از ۴ باشد، کدام است؟",
+      "options": [
+        "$\\dfrac{5}{12}$",
+        "$\\dfrac{7}{12}$",
+        "$\\dfrac{7}{24}$",
+        "$\\dfrac{17}{24}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1914,
+      "question_page": 15,
+      "question_text": "دانش‌آموزی به ۶ سؤال ۴گزینه‌ای به تصادف پاسخ می‌دهد. با کدام احتمال حداقل به ۲ سؤال درست پاسخ داده است؟",
+      "options": [
+        "$1 - \\dfrac{3^6}{4^6}$",
+        "$1 - \\dfrac{3^7}{4^6}$",
+        "$\\dfrac{3^6}{4^6}$",
+        "$\\dfrac{3^7}{4^6}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1915,
+      "question_page": 15,
+      "question_text": "احتمال رفتن «علیرضا» به استادیوم برای تماشای مسابقهٔ فینال مستقل از «صادق» سه برابر احتمال رفتن «صادق» است. اگر احتمال آن‌که هیچ‌کدام به استادیوم نروند برابر $\\dfrac{5}{12}$ باشد، احتمال آن‌که «علیرضا» به استادیوم برود کدام است؟",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{6}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1916,
+      "question_page": 16,
+      "question_text": "در یک جعبه $3$ مهرهٔ سفید و $6$ مهرهٔ قرمز داریم. به تصادف مهره‌ای از جعبه خارج می‌کنیم پس از مشاهده آن را به جعبه برمی‌گردانیم و مجدد مهرهٔ دیگری با چشم بسته خارج می‌کنیم، به کدام احتمال فقط یک بار مهرهٔ قرمز خارج شده است؟",
+      "options": [
+        "\\frac{5}{9}",
+        "\\frac{4}{9}",
+        "\\frac{2}{9}",
+        "\\frac{4}{9}"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            100,
+            48,
+            157,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۱۶"
+        },
+        {
+          "region": [
+            140,
+            770,
+            157,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            140,
+            560,
+            157,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            140,
+            360,
+            157,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            140,
+            160,
+            157,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1917,
+      "question_page": 16,
+      "question_text": "در جعبهٔ $A$، $6$ مهرهٔ سفید و $4$ مهرهٔ سیاه و در جعبهٔ $B$، $3$ مهرهٔ سفید و $6$ مهرهٔ سیاه است. یک مهره از جعبهٔ $A$ خارج کرده و بدون نگاه‌کردن به آن وارد جعبهٔ $B$ می‌کنیم، سپس از جعبهٔ $B$ یک مهره خارج می‌کنیم. با کدام احتمال این مهره سفید است؟",
+      "options": [
+        "0/32",
+        "0/36",
+        "0/4",
+        "0/44"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            168,
+            48,
+            226,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۱۷"
+        },
+        {
+          "region": [
+            200,
+            760,
+            226,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            200,
+            550,
+            226,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            200,
+            350,
+            226,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            150,
+            226,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1918,
+      "question_page": 16,
+      "question_text": "در ظرف $A$، $3$ مهرهٔ قرمز و $2$ مهرهٔ آبی و در ظرف $B$، $3$ مهرهٔ قرمز و $5$ مهرهٔ آبی است. از ظرف $A$ دو مهره به تصادف خارج کرده و در ظرف $B$ قرار می‌دهیم. حال یک مهره از ظرف $B$ خارج می‌کنیم، با کدام احتمال آبی است؟",
+      "options": [
+        "0/54",
+        "0/56",
+        "0/58",
+        "0/6"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            238,
+            48,
+            283,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۱۸"
+        },
+        {
+          "region": [
+            260,
+            760,
+            283,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            260,
+            550,
+            283,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            260,
+            350,
+            283,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            260,
+            150,
+            283,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1919,
+      "question_page": 16,
+      "question_text": "تعداد مهره‌های سفید و سیاه ظرف $A$ برابر است اما تعداد مهرهٔ سفید ظرف $B$ دو برابر تعداد مهرهٔ سیاه همان ظرف است. مهره‌ای به تصادف از ظرف $A$ به ظرف $B$ انتقال می‌دهیم و یک مهره از ظرف $B$ خارج می‌کنیم. اگر احتمال بیرون‌آمدن مهرهٔ سفید $0/66$ باشد، در ابتدا در ظرف $B$ چند مهره بوده است؟",
+      "options": [
+        "24",
+        "30",
+        "36",
+        "18"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            298,
+            48,
+            355,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۱۹"
+        },
+        {
+          "region": [
+            330,
+            770,
+            355,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            330,
+            560,
+            355,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            330,
+            360,
+            355,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            330,
+            160,
+            355,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1920,
+      "question_page": 16,
+      "question_text": "در کیسهٔ $A$، $7$ مهرهٔ قرمز و $3$ مهرهٔ آبی و در کیسهٔ $B$، $1$ مهرهٔ قرمز و تعدادی مهرهٔ آبی قرار دارد. بدون رؤیت از ظرف $A$ یک مهره به ظرف $B$ منتقل می‌کنیم، سپس از ظرف $B$ یک مهره به تصادف خارج می‌کنیم. اگر احتمال قرمزبودن این مهره برابر $0/34$ باشد، تعداد مهره‌های اولیهٔ ظرف $B$ کدام است؟",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            369,
+            48,
+            426,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۲۰"
+        },
+        {
+          "region": [
+            400,
+            770,
+            426,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            400,
+            560,
+            426,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            400,
+            360,
+            426,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            400,
+            160,
+            426,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1921,
+      "question_page": 16,
+      "question_text": "در ظرف $A$، $6$ مهرهٔ سفید و $4$ مهرهٔ سیاه و در ظرف $B$ $4$ مهرهٔ سفید و $5$ مهرهٔ سیاه قرار دارد. یک مهره به تصادف از ظرف $A$ به ظرف $B$ انتقال می‌دهیم سپس دو مهره با هم و به تصادف از ظرف $B$ خارج می‌کنیم. به کدام احتمال لااقل یکی از دو مهره سفید است؟",
+      "options": [
+        "\\frac{8}{15}",
+        "\\frac{2}{3}",
+        "\\frac{11}{15}",
+        "\\frac{4}{5}"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            439,
+            48,
+            500,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۲۱"
+        },
+        {
+          "region": [
+            470,
+            760,
+            500,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            470,
+            550,
+            500,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            470,
+            350,
+            500,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            470,
+            150,
+            500,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1922,
+      "question_page": 16,
+      "question_text": "جعبهٔ $A$ شامل $2$ مهرهٔ قرمز و $4$ مهرهٔ آبی و ظرف $B$ شامل $3$ مهرهٔ قرمز و $1$ مهرهٔ آبی است. یک مهره به تصادف از $A$ خارج کرده و در $B$ قرار می‌دهیم، سپس یک مهره از $B$ خارج کرده و در $A$ قرار می‌دهیم. اکنون یک مهره از $A$ خارج می‌کنیم، با کدام احتمال این مهره قرمز است؟",
+      "options": [
+        "\\frac{5}{18}",
+        "\\frac{7}{18}",
+        "\\frac{1}{2}",
+        "\\frac{11}{18}"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            513,
+            48,
+            571,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۲۲"
+        },
+        {
+          "region": [
+            540,
+            760,
+            571,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            540,
+            550,
+            571,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            540,
+            350,
+            571,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            540,
+            150,
+            571,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1923,
+      "question_page": 16,
+      "question_text": "در یک کیسه $6$ مهرهٔ قرمز و $4$ مهرهٔ آبی موجود است. $1$ مهره را به تصادف از جعبه بیرون آورده و بدون نگاه‌کردن به آن مهرهٔ دوم را خارج می‌کنیم. با کدام احتمال مهرهٔ دوم قرمز است؟",
+      "options": [
+        "\\frac{3}{5}",
+        "\\frac{2}{3}",
+        "\\frac{5}{9}",
+        "\\frac{11}{18}"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            584,
+            48,
+            643,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۲۳"
+        },
+        {
+          "region": [
+            615,
+            760,
+            643,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            615,
+            550,
+            643,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            615,
+            350,
+            643,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            615,
+            150,
+            643,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1924,
+      "question_page": 16,
+      "question_text": "محمدطاها $10$ کلید در اختیار داشت که $2$ کلید، درب صندوق را باز می‌کرد. او دو کلید خود را گم کرده است، با کدام احتمال با امتحان اولین کلید از $8$ کلید باقی‌مانده درب صندوق باز می‌شود؟",
+      "options": [
+        "\\frac{1}{5}",
+        "\\frac{1}{4}",
+        "\\frac{2}{9}",
+        "\\frac{5}{18}"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            656,
+            48,
+            713,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۲۴"
+        },
+        {
+          "region": [
+            685,
+            760,
+            713,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            685,
+            550,
+            713,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            685,
+            350,
+            713,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            685,
+            150,
+            713,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1925,
+      "question_page": 16,
+      "question_text": "با احتمال $\\frac{1}{4}$ درب منزل «جواد» قفل است. کلید درب منزل در یک دسته کلید $5$تایی قرار دارد، با کدام احتمال قبل از امتحان‌کردن کلید سوم «جواد» می‌تواند وارد منزل شود؟",
+      "options": [
+        "0/8",
+        "0/82",
+        "0/85",
+        "0/88"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            725,
+            48,
+            772,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۲۵"
+        },
+        {
+          "region": [
+            750,
+            760,
+            772,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            750,
+            550,
+            772,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            750,
+            350,
+            772,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            750,
+            150,
+            772,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1926,
+      "question_page": 16,
+      "question_text": "در ظرف $A$ تمام مهره‌ها سفید، در ظرف $B$ تمام مهره‌ها سیاه و در ظرف $C$، $\\frac{2}{3}$ مهره‌ها سفید و مابقی سیاه هستند. از یک ظرف به تصادف یک مهره خارج می‌کنیم، با کدام احتمال سفید است؟",
+      "options": [
+        "\\frac{2}{3}",
+        "\\frac{1}{2}",
+        "\\frac{4}{9}",
+        "\\frac{5}{9}"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            786,
+            48,
+            842,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۲۶"
+        },
+        {
+          "region": [
+            810,
+            760,
+            842,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            810,
+            550,
+            842,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            810,
+            350,
+            842,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            810,
+            150,
+            842,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1927,
+      "question_page": 16,
+      "question_text": "در یک روستا $60$ درصد ساکنین زن می‌باشند. احتمال آن‌که هر مرد واکسن کرونا زده باشد $0/8$ و برای هر زن این احتمال $0/9$ است. یک نفر از روستا خارج شده است، با کدام احتمال واکسن نزده است؟",
+      "options": [
+        "0/13",
+        "0/14",
+        "0/15",
+        "0/16"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            856,
+            48,
+            907,
+            937
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "متن سؤال ۱۹۲۷"
+        },
+        {
+          "region": [
+            880,
+            760,
+            907,
+            810
+          ],
+          "placement": "option_1",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            880,
+            550,
+            907,
+            600
+          ],
+          "placement": "option_2",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            880,
+            350,
+            907,
+            400
+          ],
+          "placement": "option_3",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            880,
+            150,
+            907,
+            200
+          ],
+          "placement": "option_4",
+          "filename": "page_0016.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1928",
+      "question_page": 17,
+      "question_text": "جمعیت کلاس A سه برابر جمعیت کلاس B است. در کلاس A و کلاس B به ترتیب ۱۰ درصد و ۲۵ درصد دانش‌آموزان ورزشکار هستند. اگر از این جمع فردی انتخاب کنیم و ورزشکار باشد، به کدام احتمال عضو دانش‌آموزان کلاس B است؟",
+      "options": [
+        "$\\frac{۵}{۱۱}$",
+        "$\\frac{۱۱}{۸۰}$",
+        "$\\frac{۱۳}{۸۰}$",
+        "$\\frac{۶}{۱۱}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            73,
+            102,
+            110,
+            891
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال 1928"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            116,
+            755,
+            144,
+            888
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            116,
+            520,
+            144,
+            672
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            116,
+            321,
+            144,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            116,
+            118,
+            144,
+            275
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1929",
+      "question_page": 17,
+      "question_text": "در یک شهرک ۲۵ درصد پسران و ۱۵ درصد دختران ورزشکار هستند. اگر ۱۹ درصد کل جوانان شهرک ورزشکار باشند، جمعیت پسران شهرک چند برابر جمعیت دختران شهرک است؟",
+      "options": [
+        "$\\frac{۲}{۳}$",
+        "$\\frac{۳}{۲}$",
+        "$\\frac{۵}{۳}$",
+        "$\\frac{۳}{۵}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            142,
+            101,
+            178,
+            891
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال 1929"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            184,
+            762,
+            212,
+            888
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            184,
+            529,
+            212,
+            672
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            184,
+            328,
+            212,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            184,
+            126,
+            212,
+            275
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1930",
+      "question_page": 17,
+      "question_text": "در پایه دوازدهم یک مدرسه تعداد دانش‌آموزان ریاضی نصف دانش‌آموزان تجربی است. احتمال قبولی هر دانش‌آموز ریاضی در کنکور $\\frac{۳}{۴}$ و هر دانش‌آموز تجربی $\\frac{۲}{۳}$ است. یک نفر را به تصادف انتخاب می‌کنیم، با کدام احتمال در کنکور قبول می‌شود؟",
+      "options": [
+        "$\\frac{۷}{۱۲}$",
+        "$\\frac{۲۳}{۳۶}$",
+        "$\\frac{۲۵}{۳۶}$",
+        "$\\frac{۳}{۴}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            210,
+            101,
+            245,
+            891
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال 1930"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            250,
+            759,
+            278,
+            888
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            250,
+            524,
+            278,
+            672
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            250,
+            324,
+            278,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            250,
+            123,
+            278,
+            275
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1931",
+      "question_page": 17,
+      "question_text": "در یک مسابقه هر فرد ابتدا یک تاس پرتاب می‌کند، اگر ۶ بیاید دو تیر و در غیر این صورت یک تیر شلیک می‌کند. احتمال اصابت هر شلیک «نادر» به هدف برابر $\\frac{۳}{۴}$ است. با کدام احتمال «نادر» به هدف نمی‌زند؟",
+      "options": [
+        "$\\frac{۱۹}{۹۶}$",
+        "$\\frac{۷}{۳۲}$",
+        "$\\frac{۲۳}{۹۶}$",
+        "$\\frac{۱}{۴}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            278,
+            101,
+            313,
+            891
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال 1931"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            318,
+            755,
+            345,
+            888
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            318,
+            520,
+            345,
+            672
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            318,
+            317,
+            345,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            318,
+            116,
+            345,
+            275
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1932",
+      "question_page": 17,
+      "question_text": "جمعیت کشوری متشکل از ۳۰ درصد گروه A (زیر ۳۰ سال)، ۵۰ درصد گروه B (از ۳۰ تا ۵۰ سال) و ۲۰ درصد گروه C (بالای ۵۰ سال) می‌باشد. اگر احتمال ابتلا به کرونا برای گروه A، B و C به ترتیب $۰/۱$، $۰/۲$ و $۰/۳$ باشد، در انتخاب تصادفی یک فرد از این کشور، با چه احتمالی به کرونا مبتلا است؟",
+      "options": [
+        "$۰/۱۹$",
+        "$۰/۲$",
+        "$۰/۲۱$",
+        "$۰/۲۲$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            345,
+            101,
+            396,
+            891
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال 1932"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            404,
+            735,
+            422,
+            888
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            404,
+            506,
+            422,
+            672
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            404,
+            283,
+            422,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            404,
+            98,
+            422,
+            275
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1933",
+      "question_page": 17,
+      "question_text": "در یک کارخانه ۲۰ درصد محصولات به وسیلهٔ دستگاه A، ۷۰ درصد به وسیلهٔ دستگاه B و مابقی به وسیلهٔ دستگاه C تولید می‌شود. اگر احتمال سالم‌بودن محصولات دستگاه A، B و C به ترتیب برابر $٪۹۰$، $٪۸۰$ و $٪۷۰$ باشد، احتمال سالم‌بودن یک محصول تصادفی کدام است؟",
+      "options": [
+        "$۰/۸$",
+        "$۰/۸۱۲$",
+        "$۰/۸۲$",
+        "$۰/۸۳$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            426,
+            101,
+            462,
+            891
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال 1933"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            469,
+            742,
+            489,
+            888
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            469,
+            508,
+            489,
+            672
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            469,
+            287,
+            489,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            469,
+            100,
+            489,
+            275
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1934",
+      "question_page": 17,
+      "question_text": "در کلاس A، ۳ دانش‌آموز تجربی و ۷ دانش‌آموز ریاضی و در کلاس B، ۶ دانش‌آموز تجربی و ۴ دانش‌آموز ریاضی است. ۲ نفر از کلاس A و ۳ نفر از کلاس B خارج شده و وارد کلاس جدید C می‌شوند. اگر یک نفر از کلاس C به تصادف انتخاب کنیم، با کدام احتمال تجربی است؟",
+      "options": [
+        "$۰/۴۸$",
+        "$۰/۵$",
+        "$۰/۵۲$",
+        "$۰/۵۴$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            492,
+            101,
+            529,
+            891
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال 1934"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            536,
+            735,
+            554,
+            888
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            536,
+            513,
+            554,
+            672
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            536,
+            283,
+            554,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            536,
+            96,
+            554,
+            275
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": "1935",
+      "question_page": 17,
+      "question_text": "در جعبهٔ A، ۱۶ باطری سالم و ۴ باطری معیوب و در جعبهٔ B، ۹ باطری سالم و ۱ باطری معیوب موجود است. از یک جعبه به تصادف یک باطری خارج می‌کنیم و با امتحان آن درمی‌یابیم که سالم است، با چه احتمالی باطری از جعبهٔ A است؟",
+      "options": [
+        "$\\frac{۲}{۵}$",
+        "$\\frac{۴}{۹}$",
+        "$\\frac{۶}{۱۳}$",
+        "$\\frac{۸}{۱۷}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            560,
+            101,
+            595,
+            891
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال 1935"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            602,
+            755,
+            629,
+            888
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            602,
+            524,
+            629,
+            672
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            602,
+            321,
+            629,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            602,
+            118,
+            629,
+            275
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

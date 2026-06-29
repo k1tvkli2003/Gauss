@@ -1,0 +1,1406 @@
+[
+  {
+    "question_number": 1936,
+    "question_page": 7,
+    "question_text": "پاره‌خط $AB$ به طول $8$ مفروض است. دو نقطه در صفحه وجود دارد که از $A$ به فاصلهٔ $3$ و از $B$ به فاصلهٔ $x$ باشد. $x$ چند عدد طبیعی می‌تواند باشد؟",
+    "options": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$7$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1937,
+    "question_page": 7,
+    "question_text": "لوزی به ضلع $5$ مفروض است. اگر $A$ ناحیه‌ای درون لوزی باشد که هر نقطهٔ درون آن ناحیه فاصله‌اش از یک رأس لوزی کم‌تر از $2$ باشد، مساحت ناحیهٔ $A$ کدام است؟",
+    "options": [
+      "$\\pi$",
+      "$2\\pi$",
+      "$3\\pi$",
+      "$4\\pi$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1938,
+    "question_page": 7,
+    "question_text": "نقطهٔ $A$ به فاصلهٔ $6$ از خط $d$ قرار دارد. چند نقطه در صفحه وجود دارد که از $A$ به فاصلهٔ $10$ و از $d$ به فاصلهٔ $4$ باشد؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1939,
+    "question_page": 7,
+    "question_text": "دو خط $d_1$ و $d_2$ موازی و خط $d_3$ با آن‌ها متقاطع است. چند نقطه در صفحه وجود دارد که از هر سه خط به یک فاصله باشد؟",
+    "options": [
+      "صفر",
+      "$2$",
+      "$4$",
+      "بی‌شمار"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1940,
+    "question_page": 7,
+    "question_text": "در مثلث $ABC$ زاویهٔ $A$ قائمه و $BD$ نیمساز زاویهٔ $B$ است. اگر $AD = 3$ و مساحت مثلث $BCD$، $6$ واحد بیشتر از مساحت مثلث $ABD$ باشد، $CD$ کدام است؟",
+    "options": [
+      "$3$",
+      "$2\\sqrt{3}$",
+      "$3\\sqrt{2}$",
+      "$5$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          46,
+          324,
+          169,
+          381
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث $ABC$ با زاویه قائمه در $A$ و نقطه $D$ روی $AC$."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1941,
+    "question_page": 7,
+    "question_text": "در چهارضلعی $ABCD$، عمودمنصف‌های اضلاع $AB$، $BC$ و $CD$ در $O$ یکدیگر را قطع می‌کنند. کدام گزینه همواره صحیح است؟",
+    "options": [
+      "$ABCD$ مستطیل است.",
+      "$O$ بر عمودمنصف $AD$ واقع است.",
+      "نیمسازهای زوایای چهارضلعی در $O$ متقاطع‌اند.",
+      "$ABCD$ لوزی است."
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1942,
+    "question_page": 7,
+    "question_text": "کدام‌یک از احکام زیر دارای مثال نقض است؟",
+    "options": [
+      "هر چهارضلعی که اقطارش یکدیگر را نصف کنند متوازی‌الاضلاع است.",
+      "در هر صفحه یک نقطه وجود دارد که از سه نقطهٔ متمایز در صفحه به یک فاصله باشد.",
+      "لوزی‌ای که عمودمنصف اضلاعش همرس باشند، مربع است.",
+      "همواره ۴ نقطه در صفحه وجود دارد که از سه ضلع مثلث به یک فاصله باشند."
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1943,
+    "question_page": 7,
+    "question_text": "کدام‌یک از قضایای زیر دوشرطی نیست؟",
+    "options": [
+      "متوازی‌الاضلاع یک چهارضلعی است که زوایای مقابل آن برابرند.",
+      "لوزی یک چهارضلعی است که قطرهای آن بر هم عمودند.",
+      "قضیهٔ تالس",
+      "قضیهٔ فیثاغورس"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1944,
+    "question_page": 7,
+    "question_text": "اگر $\\dfrac{a}{3} = \\dfrac{b}{5} = \\dfrac{c}{13}$ باشد، کدام گزینه همواره صحیح نیست؟",
+    "options": [
+      "$b+c = 6a$",
+      "$a+c = 3b+1$",
+      "$c-a = 2b$",
+      "$\\dfrac{a}{3} = \\dfrac{a-b+c}{11}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1945,
+    "question_page": 7,
+    "question_text": "در شکل روبه‌رو دو مستطیل $ABCD$ و $ADEF$ متشابه هستند، اگر $BC = 5$ و $CE = 24$ باشد، محیط مستطیل $BCEF$ چند برابر محیط مستطیل $ADEF$ است؟",
+    "options": [
+      "$4/92$",
+      "$5/23$",
+      "$4/83$",
+      "$4/68$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          44,
+          684,
+          214,
+          740
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مستطیل $ABCD$ که درون آن مستطیل $ADEF$ قرار دارد."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1946,
+    "question_page": 7,
+    "question_text": "اگر ضلع $AC$ را به ۴ قسمت برابر تقسیم کنیم و از سه نقطهٔ به وجود آمده به موازات $BC$ رسم کنیم. جمع طول پاره‌خط‌های رسم‌شده به موازات $BC$ چه عددی است؟",
+    "options": [
+      "$9$",
+      "$10$",
+      "$11$",
+      "$12$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          43,
+          747,
+          188,
+          810
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث $ABC$ با خطوط موازی با $BC$ که ضلع $AC$ را به ۴ قسمت مساوی تقسیم کرده‌اند."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1947,
+    "question_page": 7,
+    "question_text": "دو ساق ذوزنقه را امتداد داده‌ایم و در نقطهٔ $M$ یکدیگر را قطع کرده‌اند. محیط مثلث $MAB$ کدام است؟",
+    "options": [
+      "$93$",
+      "$105$",
+      "$81$",
+      "$70$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          46,
+          810,
+          192,
+          891
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه که ساق‌های آن امتداد یافته و در نقطه $M$ متقاطع شده‌اند و مثلث $MAB$ را تشکیل داده‌اند."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1948,
+    "question_page": 8,
+    "question_text": "هرگاه چهارضلعی $DEFB$ متوازی‌الاضلاع باشد، مساحت رنگ‌شده چه کسری از مساحت مثلث $ABC$ است؟",
+    "options": [
+      "$\\dfrac{1}{13}$",
+      "$\\dfrac{2}{25}$",
+      "$\\dfrac{3}{10}$",
+      "$\\dfrac{2}{27}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          95,
+          83,
+          263,
+          149
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث $ABC$ با متوازی‌الاضلاع $DEFB$ درون آن."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1949,
+    "question_page": 8,
+    "question_text": "اگر $M$ و $N$ وسط‌های دو ضلع $AB$ و $AC$ باشند، محیط مثلث $ABC$ کدام است؟",
+    "options": [
+      "$20$",
+      "$25$",
+      "$40$",
+      "$45$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          102,
+          151,
+          276,
+          219
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث $ABC$ که $M$ و $N$ وسط‌های اضلاع آن هستند."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1950,
+    "question_page": 8,
+    "question_text": "در ذوزنقهٔ مقابل $O$ نقطهٔ برخورد دو قطر است. هرگاه $FC = 4$ و $DC = 12$ باشد، مقدار $AB$ کدام است؟ ($OF \\parallel BC$)",
+    "options": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$8$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          95,
+          226,
+          275,
+          290
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه با قطرهای متقاطع در $O$ و خط موازی."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1951,
+    "question_page": 8,
+    "question_text": "در شکل مقابل اگر $AB = 4$، $AC = 7$، $BC = 6$ و چهارضلعی $BNMP$ لوزی باشد، محیط لوزی کدام است؟",
+    "options": [
+      "$9/6$",
+      "$10$",
+      "$10/8$",
+      "$12$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          95,
+          296,
+          251,
+          368
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث $ABC$ با لوزی $BNMP$ درون آن."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1952,
+    "question_page": 8,
+    "question_text": "در شکل مقابل $EF$ موازی قاعده‌های ذوزنقه است. اندازهٔ $EF$ کدام است؟",
+    "options": [
+      "$\\dfrac{8}{3}$",
+      "$\\dfrac{20}{3}$",
+      "$\\dfrac{16}{3}$",
+      "$\\dfrac{14}{3}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          98,
+          387,
+          276,
+          452
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه با خط $EF$ موازی با قاعده‌ها."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1953,
+    "question_page": 8,
+    "question_text": "$M$ و $N$ وسط دو ساق ذوزنقه هستند. نسبت مساحت ذوزنقهٔ $ABNM$ به مساحت ذوزنقهٔ $MNCD$ کدام است؟",
+    "options": [
+      "$\\dfrac{1}{3}$",
+      "$\\dfrac{2}{3}$",
+      "$\\dfrac{3}{5}$",
+      "$\\dfrac{2}{5}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          99,
+          454,
+          280,
+          520
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه که $M$ و $N$ وسط ساق‌های آن هستند."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1954,
+    "question_page": 8,
+    "question_text": "اگر $\\dfrac{a+4b}{2a-b} = \\dfrac{5a+2b}{2b-a}$ باشد، $\\dfrac{a}{b}$ کدام است؟ ($a, b > 0$)",
+    "options": [
+      "$\\dfrac{9}{10}$",
+      "$\\dfrac{10}{9}$",
+      "$\\dfrac{11}{10}$",
+      "$\\dfrac{10}{11}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1955,
+    "question_page": 8,
+    "question_text": "مثلث $ABC$ در رأس $A$ قائمه و $AC = AD$ است. هرگاه $AB = 4\\sqrt{5}$ و $BD = 6$ باشد، مقدار $AC$ کدام است؟",
+    "options": [
+      "$4$",
+      "$6$",
+      "$2\\sqrt{5}$",
+      "$3\\sqrt{5}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          98,
+          574,
+          259,
+          638
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث $ABC$ با زاویه قائمه در $A$ و نقطه $D$ روی $BC$."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1956,
+    "question_page": 8,
+    "question_text": "در شکل روبه‌رو مثلث $ABC$ قائم‌الزاویه است. اندازهٔ پاره‌خط $BD$ چه عددی است؟",
+    "options": [
+      "$\\sqrt{13}$",
+      "$\\sqrt{19}$",
+      "$\\sqrt{21}$",
+      "$\\sqrt{14}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          99,
+          634,
+          285,
+          715
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث قائم‌الزاویه $ABC$ با ارتفاع وارد بر وتر."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1957,
+    "question_page": 8,
+    "question_text": "در ذوزنقهٔ $ABCD$، $AB = 5$ و $CD = 8$ است. از نقطهٔ تلاقی قطرها خطی موازی دو قاعده رسم می‌کنیم. مقدار $\\dfrac{EF}{CD}$ کدام است؟",
+    "options": [
+      "$\\dfrac{8}{13}$",
+      "$\\dfrac{8}{10}$",
+      "$\\dfrac{10}{13}$",
+      "$\\dfrac{13}{20}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          98,
+          737,
+          254,
+          804
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه $ABCD$ با قطرهای متقاطع و خط موازی $EF$."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1958,
+    "question_page": 8,
+    "question_text": "در شکل روبه‌رو $MN$ موازی $BC$ و $BN$ نیمساز زاویهٔ $N$ است. هرگاه $AN = 9$ و $MN = 6$ باشد، طول $BC$ کدام است؟",
+    "options": [
+      "$18$",
+      "$12$",
+      "$15$",
+      "$16$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0008.jpg",
+        "box": [
+          100,
+          803,
+          225,
+          882
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث $ABC$ با خط $MN$ موازی $BC$."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1959,
+    "question_page": 9,
+    "question_text": "در یک ذوزنقه پاره‌خطی که وسط دو ساق را به هم وصل می‌کند، مساحت آن را به نسبت ۲ به ۳ تقسیم می‌کند. قاعدهٔ بزرگ ذوزنقه چند برابر قاعدهٔ کوچک آن است؟",
+    "options": [
+      "$\\frac{۵}{۳}$",
+      "$\\frac{۷}{۳}$",
+      "$\\frac{۶}{۵}$",
+      "$\\frac{۹}{۴}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1960,
+    "question_page": 9,
+    "question_text": "در شکل روبه‌رو اگر $BK = ۳$ ،$AK = ۴PK$ و $KC = ۸$ باشد، نسبت مساحت مثلث $AMP$ به مساحت ذوزنقه $PNCK$ چه عددی است؟",
+    "options": [
+      "$\\frac{۹}{۵۶}$",
+      "$\\frac{۹}{۱۴}$",
+      "$\\frac{۵}{۱۴}$",
+      "$\\frac{۲۷}{۵۶}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          45,
+          143,
+          237,
+          230
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث ABC که در آن خطوطی رسم شده و ذوزنقه PNCK سایه‌زده شده است."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1961,
+    "question_page": 9,
+    "question_text": "فقط یک نقطه در صفحه وجود دارد که فاصلهٔ آن از نقاط $A$ و $B$ به ترتیب ۵ و ۸ است. طول پاره‌خط $AB$ کدام است؟",
+    "options": [
+      "فقط ۳",
+      "۵ یا ۹",
+      "۳ یا ۱۳",
+      "فقط ۵"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1962,
+    "question_page": 9,
+    "question_text": "وسط اضلاع یک ذوزنقه متساوی‌الساقین که اندازهٔ قاعده‌های آن ۷ و ۹ است را به هم وصل کرده‌ایم. یک چهارضلعی با محیط ۲۰ به دست آمده است. مساحت ذوزنقه کدام است؟",
+    "options": [
+      "$۴۰\\sqrt{۳}$",
+      "$۴۰$",
+      "$۶۴$",
+      "$۴۸$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1963,
+    "question_page": 9,
+    "question_text": "در شکل روبه‌رو مساحت ذوزنقه $ABCD$ چند برابر مساحت مثلث $EAB$ است؟",
+    "options": [
+      "$\\frac{۲۵}{۹}$",
+      "$\\frac{۱۶}{۹}$",
+      "$\\frac{۹}{۴}$",
+      "$\\frac{۲۵}{۱۶}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          42,
+          335,
+          230,
+          420
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث EDC با خط موازی AB با قاعده‌ها."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1964,
+    "question_page": 9,
+    "question_text": "اگر $AD$ در شکل روبه‌رو نیمساز باشد، مساحت مثلث $ABC$ چند برابر مساحت مثلث $ABD$ است؟",
+    "options": [
+      "$۲/۲۵$",
+      "$۲/۵$",
+      "$۲$",
+      "$۳$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          40,
+          425,
+          218,
+          508
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث ABC با نیمساز AD."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1965,
+    "question_page": 9,
+    "question_text": "در ذوزنقه اندازهٔ قاعده‌ها ۴ و ۹ و طول ساق‌ها ۵ و ۷ است. ساق‌ها را امتداد می‌دهیم تا یکدیگر را خارج ذوزنقه قطع کنند. محیط مثلث بزرگ‌تر چه عددی است؟",
+    "options": [
+      "$۲۴/۹$",
+      "$۲۶/۶$",
+      "$۳۴/۶$",
+      "$۳۰/۶$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1966,
+    "question_page": 9,
+    "question_text": "در شکل مقابل اگر $MN$ موازی $AB$ باشد، مساحت ذوزنقه $ABNM$ چه کسری از مساحت ذوزنقه $MNCD$ است؟",
+    "options": [
+      "$\\frac{۳}{۷}$",
+      "$\\frac{۲}{۷}$",
+      "$\\frac{۳}{۸}$",
+      "$\\frac{۱}{۳}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          42,
+          575,
+          222,
+          665
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD با خط موازی MN."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1967,
+    "question_page": 9,
+    "question_text": "در شکل روبه‌رو $O$ نقطهٔ تلاقی نیمسازهاست. اندازهٔ قاعده‌های ذوزنقه ۴/۵ و ۷ است. محیط ذوزنقه چه عددی است؟",
+    "options": [
+      "$۱۶$",
+      "$۲۳$",
+      "$۱۸/۵$",
+      "$۱۹/۵$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          42,
+          672,
+          237,
+          740
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه با نقطه O روی قاعده بالایی."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1968,
+    "question_page": 9,
+    "question_text": "در شکل روبه‌رو $AC$ نیمساز زاویهٔ $A$ است. مقدار $x$ کدام است؟",
+    "options": [
+      "$۳\\sqrt{۵}$",
+      "$۳\\sqrt{۶}$",
+      "$۳\\sqrt{۷}$",
+      "$۳\\sqrt{۸}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          38,
+          730,
+          158,
+          818
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "چهارضلعی ABCD با زاویه قائمه در B."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1969,
+    "question_page": 9,
+    "question_text": "در ذوزنقه $ABCD$ اگر $AB \\parallel MN$ باشد، مساحت مثلث $ABN$ چند برابر مساحت مثلث $MCD$ است؟",
+    "options": [
+      "$۲$",
+      "$\\frac{۳}{۲}$",
+      "$۱$",
+      "$\\frac{۱}{۴}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0009.jpg",
+        "box": [
+          40,
+          805,
+          246,
+          895
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD با پاره‌خط موازی MN."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1970,
+    "question_page": 10,
+    "question_text": "در شکل مقابل اگر $BC = 8$ و مساحت ذوزنقه با مساحت مثلث برابر باشد، اندازهٔ $DE$ کدام است؟",
+    "options": [
+      "$3\\sqrt{2}$",
+      "$4\\sqrt{2}$",
+      "$4\\sqrt{3}$",
+      "$4$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          55,
+          60,
+          222,
+          137
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث ABC که با پاره‌خط DE به موازات قاعده برش خورده است."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1971,
+    "question_page": 10,
+    "question_text": "در شکل روبه‌رو $M$ و $N$ وسط ساق‌های ذوزنقه هستند به طوری که $MN = 15$ و $EF = 5$ است. نسبت دو قاعدهٔ ذوزنقه کدام است؟",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{3}{5}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          45,
+          142,
+          218,
+          225
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه با میان‌خط MN و قطرهای متقاطع."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1972,
+    "question_page": 10,
+    "question_text": "در مثلث قائم‌الزاویهٔ $ABC$ هرگاه $AB = 6$ و $AC = 8$، مقدار $AD$ کدام است؟",
+    "options": [
+      "$2/4$",
+      "$3/2$",
+      "$2/72$",
+      "$2/88$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          50,
+          228,
+          172,
+          310
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث قائم‌الزاویه ABC با ارتفاع AD."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1973,
+    "question_page": 10,
+    "question_text": "در شکل مقابل $A\\hat{B}C = B\\hat{D}C$، محیط مثلث $BCD$ کدام است؟",
+    "options": [
+      "$30$",
+      "$36$",
+      "$37$",
+      "$40$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          48,
+          310,
+          230,
+          395
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث BCD و خطوط داخلی."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1974,
+    "question_page": 10,
+    "question_text": "اندازه دو قاعده ذوزنقه ۳ و ۶ است. از نقطه تلاقی قطرها موازی دو قاعده رسم می‌کنیم، نسبت مساحت دو ذوزنقه کوچک به دست آمده کدام است؟",
+    "options": [
+      "$0/25$",
+      "$0/24$",
+      "$0/18$",
+      "$0/35$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          50,
+          390,
+          230,
+          465
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه با قطرهای متقاطع و خط موازی از نقطه تقاطع."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1975,
+    "question_page": 10,
+    "question_text": "در شکل مقابل $\\hat{A}$ و $\\hat{C}$ مکمل هستند. مساحت چهارضلعی $ABCD$ چه کسری از مساحت $EDC$ است؟",
+    "options": [
+      "$\\frac{9}{16}$",
+      "$\\frac{16}{25}$",
+      "$\\frac{21}{25}$",
+      "$\\frac{1}{4}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          52,
+          455,
+          205,
+          540
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث EDC با نقاط A و B روی اضلاع."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1976,
+    "question_page": 10,
+    "question_text": "مثلث $ABC$ به اضلاع $9$، $x$ و $x+3$ با مثلث قائم‌الزاویه‌ای به طول وتر $7/5$ متشابه است، مساحت مثلث کوچک‌تر کدام است؟ ($x>9$)",
+    "options": [
+      "$12$",
+      "$13/5$",
+      "$24$",
+      "$27$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1977,
+    "question_page": 10,
+    "question_text": "اگر $ABCD$ مستطیل باشد، اندازهٔ $PQ$ کدام است؟",
+    "options": [
+      "$4$",
+      "$\\frac{13}{3}$",
+      "$\\frac{14}{3}$",
+      "$5$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          50,
+          580,
+          218,
+          650
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مستطیل ABCD با پاره‌خط‌های داخلی."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1978,
+    "question_page": 10,
+    "question_text": "در شکل مقابل $PN \\parallel AC$ و $\\hat{M_1} = \\hat{A}$ است. عبارت $BM^2 - BN^2$ با کدام گزینه برابر است؟",
+    "options": [
+      "$BM \\times MP$",
+      "$BM \\times BP$",
+      "$BM \\times PC$",
+      "$BM \\times MC$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          45,
+          638,
+          230,
+          715
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث با پاره‌خط‌های موازی داخلی."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1979,
+    "question_page": 10,
+    "question_text": "در ذوزنقه $ABCD$ قطر $AC$ بر ساق $AD$ عمود است. مساحت مثلث $BCD$ کدام است؟",
+    "options": [
+      "$39$",
+      "$40$",
+      "$78$",
+      "$80$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          48,
+          705,
+          232,
+          788
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD با قطرهای متقاطع و عمود بر ساق."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1980,
+    "question_page": 10,
+    "question_text": "هیچ نقطه‌ای در صفحه پیدا نمی‌شود که از نقطهٔ $A$ به فاصلهٔ ۷ و از نقطهٔ $B$ به فاصلهٔ ۳ باشد. طول $AB$ کدام نمی‌تواند باشد؟",
+    "options": [
+      "$3$",
+      "$7$",
+      "$11$",
+      "$13$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1981,
+    "question_page": 10,
+    "question_text": "در شکل مقابل سه مربع به اضلاع واحد در کنار هم قرار دارند. $PH$ کدام است؟",
+    "options": [
+      "$\\frac{\\sqrt{10}}{20}$",
+      "$\\frac{3\\sqrt{10}}{20}$",
+      "$\\frac{\\sqrt{10}}{10}$",
+      "$\\frac{3\\sqrt{10}}{10}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0010.jpg",
+        "box": [
+          45,
+          820,
+          310,
+          895
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سه مربع واحد کنار هم با پاره‌خط‌های مورب و نقاط P و H."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1982,
+    "question_page": 11,
+    "question_text": "خط $d$ و نقطهٔ $A$ به فاصلهٔ $x$ از خط $d$ و خارج آن مفروض است. اگر دقیقاً یک نقطه در صفحه وجود داشته باشد که از $A$ به فاصلهٔ ۱ و از $d$ به فاصلهٔ ۳ باشد، مجموع مقادیر $x$ کدام است؟",
+    "options": [
+      "$۲$",
+      "$۴$",
+      "$۶$",
+      "$۸$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1983,
+    "question_page": 11,
+    "question_text": "در مثلث $ABC$ ارتفاع‌های $BH$ و $CP$ رسم شده است. اگر $CH = ۱۲$، $BP = ۸$ و $OB = ۲OH$ باشد، مساحت $BCH$ کدام است؟",
+    "options": [
+      "$۳۶$",
+      "$۵۴$",
+      "$۳۶\\sqrt{۲}$",
+      "$۵۴\\sqrt{۲}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0011.jpg",
+        "box": [
+          45,
+          128,
+          233,
+          204
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث ABC با ارتفاع‌های رسم شده"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1984,
+    "question_page": 11,
+    "question_text": "بهتاش با قد ۲ متر به فاصلهٔ ۱۱ متری درختی به ارتفاع ۱۱ متر ایستاده است و از نوک درخت انتهای برج میلاد را می‌بیند. اگر ارتفاع برج میلاد ۴۳۴ متر باشد، فاصلهٔ بهتاش تا برج میلاد چند متر است؟",
+    "options": [
+      "$۵۲۰$",
+      "$۵۲۸$",
+      "$۵۳۴$",
+      "$۵۴۰$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0011.jpg",
+        "box": [
+          48,
+          202,
+          244,
+          336
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمای بهتاش، درخت و برج میلاد"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1985,
+    "question_page": 11,
+    "question_text": "مثلثی به اضلاع ۴، ۵ و $a$ با مثلثی به اضلاع $b$، ۱۶ و ۱۲ متشابه است. اگر $a$ کم‌ترین مقدار ممکن باشد، مساحت مثلث بزرگ‌تر کدام است؟",
+    "options": [
+      "$۴۸$",
+      "$۶۴$",
+      "$۹۶$",
+      "$۱۲۸$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1986,
+    "question_page": 11,
+    "question_text": "در مثلث قائم‌الزاویهٔ $ABC$ ارتفاع وارد بر وتر رسم شده است، اگر $AB = \\sqrt{۶}$ و $\\sin \\hat{A} = \\frac{\\sqrt{۶}}{۶}$ باشد، مساحت مثلث $ABC$ کدام است؟",
+    "options": [
+      "$\\frac{۵\\sqrt{۶}}{۶}$",
+      "$\\frac{۳\\sqrt{۵}}{۵}$",
+      "$\\frac{۲\\sqrt{۵}}{۵}$",
+      "$\\frac{۶\\sqrt{۶}}{۵}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0011.jpg",
+        "box": [
+          46,
+          403,
+          232,
+          482
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث قائم‌الزاویه ABC"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1987,
+    "question_page": 11,
+    "question_text": "در شکل مقابل $PN \\parallel BM$ و $MP \\parallel AB$ است. طول $AC$ کدام است؟",
+    "options": [
+      "$۸$",
+      "$۹$",
+      "$۱۰$",
+      "$۱۲$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0011.jpg",
+        "box": [
+          45,
+          488,
+          239,
+          562
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث ABC با خطوط موازی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1988,
+    "question_page": 11,
+    "question_text": "در ذوزنقهٔ $ABCD$ قطرها یکدیگر را در $P$ قطع می‌کنند. اگر مساحت مثلث $APB$ برابر ۴ و مساحت مثلث $APD$ برابر ۶ باشد، مساحت ذوزنقه کدام است؟",
+    "options": [
+      "$۲۴$",
+      "$۲۵$",
+      "$۳۲$",
+      "$۳۶$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0011.jpg",
+        "box": [
+          45,
+          591,
+          219,
+          654
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD با قطرهای متقاطع در P"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1989,
+    "question_page": 11,
+    "question_text": "در ذوزنقهٔ $ABCD$، نقاط $M$ و $N$ بر دو ساق ذوزنقه چنان قرار گرفته‌اند که $AM = ۲MD$ و $BN = ۲NC$. $PQ$ کدام است؟",
+    "options": [
+      "$\\frac{a + b}{۳}$",
+      "$\\frac{b - a}{۳}$",
+      "$\\frac{۲b + a}{۳}$",
+      "$\\frac{۲b - a}{۳}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0011.jpg",
+        "box": [
+          45,
+          666,
+          218,
+          731
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD با خطوط موازی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1990,
+    "question_page": 11,
+    "question_text": "در مثلث قائم‌الزاویهٔ $ABC$ عمودمنصف وتر $BC$ امتداد ضلع $AC$ را در $P$ قطع می‌کند. اگر $PB = ۷$ و $AC = ۴$ باشد، مساحت مثلث $ABC$ کدام است؟",
+    "options": [
+      "$۲\\sqrt{۱۰}$",
+      "$۱۰\\sqrt{۲}$",
+      "$۵\\sqrt{۲}$",
+      "$۴\\sqrt{۱۰}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1991,
+    "question_page": 11,
+    "question_text": "در ذوزنقهٔ مقابل اگر مساحت شکل رنگی برابر ۲۴ باشد، ارتفاع ذوزنقه چه عددی است؟",
+    "options": [
+      "$۱۰$",
+      "$۱۲$",
+      "$۹$",
+      "$۱۲/۵$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0011.jpg",
+        "box": [
+          47,
+          811,
+          209,
+          876
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه با بخش رنگی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1992,
+    "question_page": 12,
+    "question_text": "در ذوزنقهٔ مقابل $S_۱$، $S_۲$ و $S_۳$ مساحت مثلث‌ها هستند، هرگاه $S_۲ = \\frac{۲}{۳}S_۱$، مقدار $\\frac{S_۳}{S_۱}$ چه عددی است؟",
+    "options": [
+      "$۲/۲۵$",
+      "$۲/۵$",
+      "$۲$",
+      "$۱/۷۵$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          101,
+          89,
+          283,
+          149
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه با مثلث‌های S1، S2، S3"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1993,
+    "question_page": 12,
+    "question_text": "اگر مساحت مثلث $OAB$ برابر ۶ باشد، مساحت شکل رنگی چه عددی است؟",
+    "options": [
+      "$۹$",
+      "$۱۲$",
+      "$۸$",
+      "$۱۲/۵$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          101,
+          154,
+          323,
+          230
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث‌ها و بخش رنگی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1994,
+    "question_page": 12,
+    "question_text": "در ذوزنقهٔ مقابل نسبت مساحت‌های دو مثلث $ODC$ و $OAB$ چه عددی است؟",
+    "options": [
+      "$\\frac{۲}{۵}$",
+      "$\\frac{۲}{۷}$",
+      "$\\frac{۴}{۲۵}$",
+      "$\\frac{۴}{۴۹}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          101,
+          237,
+          323,
+          319
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1995,
+    "question_page": 12,
+    "question_text": "در شکل روبه‌رو $EF$ موازی دو قاعدهٔ ذوزنقه است. اندازهٔ $EF$ کدام است؟",
+    "options": [
+      "$\\frac{۶۲}{۷}$",
+      "$\\frac{۳۱}{۸}$",
+      "$\\frac{۵۲}{۷}$",
+      "$\\frac{۵۰}{۷}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          101,
+          325,
+          285,
+          396
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD با خط موازی EF"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1996,
+    "question_page": 12,
+    "question_text": "اگر $E$ و $F$ وسط اضلاع $AD$ و $BC$ باشند، مقدار $\\frac{PQ}{EF}$ چه عددی است؟",
+    "options": [
+      "$\\frac{۲}{۵}$",
+      "$\\frac{۱}{۳}$",
+      "$\\frac{۱}{۴}$",
+      "$\\frac{۱}{۲}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          102,
+          401,
+          280,
+          474
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD و خط EF"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1997,
+    "question_page": 12,
+    "question_text": "دو قاعدهٔ ذوزنقه به ترتیب ۴ و ۹ هستند هرگاه $EF$ موازی دو قاعده باشد به طوری که $۵AE = ED$، مقدار $EF$ چه عددی است؟",
+    "options": [
+      "$\\frac{۴۱}{۵}$",
+      "$\\frac{۲۹}{۶}$",
+      "$\\frac{۲۵}{۸}$",
+      "$\\frac{۴۱}{۶}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          101,
+          500,
+          255,
+          563
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "ذوزنقه ABCD و خط EF"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1998,
+    "question_page": 12,
+    "question_text": "$BD$ نیمساز زاویهٔ $B$ در مثلث قائم‌الزاویهٔ $ABC$ است. مساحت مثلث $BDC$ کدام است؟",
+    "options": [
+      "$۳۰$",
+      "$۴۵$",
+      "$۶۰$",
+      "$۷۵$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0012.jpg",
+        "box": [
+          102,
+          575,
+          259,
+          638
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مثلث قائم‌الزاویه ABC"
+      }
+    ],
+    "review_notes": []
+  }
+]

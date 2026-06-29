@@ -1,0 +1,72 @@
+{
+  "answers": {
+    "2041": 4,
+    "2042": 4,
+    "2043": 2,
+    "2044": 4,
+    "2045": 1,
+    "2046": 4,
+    "2047": 1,
+    "2048": 3,
+    "2049": 1
+  },
+  "review_notes": [
+    "Generated locally from existing solution stated_correct_option only for answer-key gaps."
+  ],
+  "provenance": [
+    {
+      "question_number": 2041,
+      "answer": 4,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 2042,
+      "answer": 4,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 2043,
+      "answer": 2,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 2044,
+      "answer": 4,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 2045,
+      "answer": 1,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 2046,
+      "answer": 4,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 2047,
+      "answer": 1,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 2048,
+      "answer": 3,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    },
+    {
+      "question_number": 2049,
+      "answer": 1,
+      "source_solution_file": "math-solutions-10.json",
+      "basis": "stated_correct_option"
+    }
+  ]
+}

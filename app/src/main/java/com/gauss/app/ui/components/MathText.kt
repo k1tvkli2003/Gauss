@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -48,15 +49,16 @@ fun MathText(
     content: String,
     modifier: Modifier = Modifier,
     fontSize: TextUnit = 17.sp,
-    color: Color = GaussColors.Text,
+    color: Color? = null,
 ) {
+    val textColor = color ?: MaterialTheme.colorScheme.onSurface
     val blocks = remember(content) { splitDisplayMath(content) }
     Column(modifier = modifier.padding(horizontal = 2.dp, vertical = 2.dp)) {
         blocks.forEach { block ->
             if (block.display) {
-                DisplayMath(block.value, fontSize, color)
+                DisplayMath(block.value, fontSize, textColor)
             } else {
-                TextBlock(block.value, fontSize, color)
+                TextBlock(block.value, fontSize, textColor)
             }
         }
     }
@@ -120,14 +122,14 @@ private fun TextBlock(text: String, fontSize: TextUnit, color: Color) {
                 is Para.Bullets -> Column {
                     para.items.forEach { item ->
                         Row(verticalAlignment = Alignment.Top) {
-                            Text("•  ", color = GaussColors.NeonBlue, fontSize = fontSize)
+                            Text("•  ", color = MaterialTheme.colorScheme.primary, fontSize = fontSize)
                             Box(Modifier.weight(1f)) { Line(item, fontSize, color) }
                         }
                     }
                 }
                 Para.Rule -> HorizontalDivider(
                     Modifier.padding(vertical = 10.dp),
-                    color = GaussColors.Border,
+                    color = MaterialTheme.colorScheme.outline,
                 )
                 Para.Gap -> Spacer(Modifier.height((fontSize.value * 0.5f).dp))
             }
@@ -202,10 +204,10 @@ private fun inlineMarkdown(src: String, color: Color): AnnotatedString = buildAn
         val tok = m.value
         when {
             tok.startsWith("**") -> withStyle(
-                SpanStyle(color = GaussColors.NeonBlue, fontWeight = FontWeight.Bold),
+                SpanStyle(color = GaussColors.Primary, fontWeight = FontWeight.Bold),
             ) { append(tok.substring(2, tok.length - 2)) }
             tok.startsWith("`") -> withStyle(
-                SpanStyle(color = GaussColors.NeonAmber),
+                SpanStyle(color = GaussColors.Warning),
             ) { append(" " + tok.substring(1, tok.length - 1) + " ") }
         }
         last = m.range.last + 1

@@ -18,6 +18,7 @@ import com.gauss.app.data.AttemptResult
 import com.gauss.app.data.AttemptStatus
 import com.gauss.app.data.ExamConfig
 import com.gauss.app.data.Question
+import com.gauss.app.data.RewardSummary
 import com.gauss.app.ui.components.Stroke
 import kotlinx.coroutines.launch
 
@@ -42,6 +43,10 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
         private set
     var saving by mutableStateOf(false)
         private set
+    var saveError by mutableStateOf<String?>(null)
+        private set
+    var rewardSummary by mutableStateOf<RewardSummary?>(null)
+        private set
 
     private var questionStartedAt = 0L
     private var examStartedAt = 0L
@@ -49,6 +54,7 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
 
     val current: Question? get() = questions.getOrNull(index)
     val isLast: Boolean get() = index == questions.lastIndex
+    val canRetrySave: Boolean get() = savedExamId == null && !saving
 
     fun startExam(config: ExamConfig, questions: List<Question>) {
         this.config = config
@@ -58,6 +64,8 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
         scratch.clear()
         finished = false
         saving = false
+        saveError = null
+        rewardSummary = null
         savedExamId = null
         val now = System.currentTimeMillis()
         questionStartedAt = now
@@ -129,9 +137,19 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
         val duration = ((System.currentTimeMillis() - examStartedAt) / 1000).toInt()
         viewModelScope.launch {
             try {
-                savedExamId = GaussApp.from(getApplication()).history.saveExam(cfg, res, duration)
-            } catch (_: Throwable) {
-                // Still show results even if persistence failed.
+                val app = GaussApp.from(getApplication())
+                val examId = app.history.saveExam(cfg, res, duration)
+                savedExamId = examId
+                saveError = null
+                rewardSummary = runCatching {
+                    app.gamification.rewardExam(examId, cfg, res, duration)
+                }.getOrElse {
+                    saveError = "آزمون ذخیره شد، اما پاداش XP ثبت نشد."
+                    null
+                }
+            } catch (error: Throwable) {
+                saveError = error.message?.takeIf { it.isNotBlank() }
+                    ?: "ذخیره آزمون کامل نشد. نتیجه را نگه داشتم تا دوباره تلاش کنی."
             } finally {
                 saving = false
                 finished = true
@@ -148,6 +166,8 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
         scratch.clear()
         finished = false
         saving = false
+        saveError = null
+        rewardSummary = null
         savedExamId = null
     }
 }

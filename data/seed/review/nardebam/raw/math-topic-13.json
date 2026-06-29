@@ -1,0 +1,1076 @@
+{
+  "task_id": "math-topic-13",
+  "subject": "math",
+  "topic_key": "topic-13",
+  "questions": [
+    {
+      "question_number": 1569,
+      "question_page": "page_0004.jpg",
+      "question_text": "اگر نقاط $(2,3)$ و $(-1,-1)$ دو رأس یک مربع باشند، مساحت آن چه‌قدر است؟",
+      "options": [
+        "$12$ یا $24$",
+        "$12/5$ یا $25$",
+        "$24$ یا $48$",
+        "$25$ یا $50$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1570,
+      "question_page": "page_0004.jpg",
+      "question_text": "نقطۀ $M$ روی محور طول‌ها با کدام طول انتخاب شود تا فاصلۀ آن از دو نقطۀ $A(-1,2)$ و $B(3,0)$ برابر هم باشد؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$2$",
+        "$-\\frac{1}{2}$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1571,
+      "question_page": "page_0004.jpg",
+      "question_text": "اگر $A(-2,4)$ باشد به طوری که قرینۀ $A$ نسبت به محور طول‌ها را $A'$ و قرینۀ $A$ نسبت به محور عرض‌ها را $A''$ بنامیم، فاصلۀ دو نقطۀ $A'$ و $A''$ کدام است؟",
+      "options": [
+        "$5\\sqrt{2}$",
+        "$4\\sqrt{5}$",
+        "$2\\sqrt{5}$",
+        "$2\\sqrt{17}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1572,
+      "question_page": "page_0004.jpg",
+      "question_text": "اگر $A(1,-2)$ ، $B(0,-1)$ و $C(10,-9)$ سه رأس مثلث $ABC$ باشند، طول میانۀ $AM$ کدام است؟",
+      "options": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1573,
+      "question_page": "page_0005.jpg",
+      "question_text": "در مثلثی با رئوس $A(a,1)$ ، $B(2,4)$ و $C(1,2)$ طول میانۀ $AM$ برابر $\\sqrt{13}$ است. $a$ کدام است؟",
+      "options": [
+        "$\\frac{9}{2}$ یا $\\frac{3}{2}$",
+        "$\\frac{3}{2}$ یا $-\\frac{9}{2}$",
+        "$-\\frac{3}{2}$ یا $-\\frac{9}{2}$",
+        "$\\frac{9}{2}$ یا $-\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "Option 1 first part sign uncertain, option 4 second part sign uncertain. They are visually somewhat ambiguous but transcribed based on most likely appearance."
+      ]
+    },
+    {
+      "question_number": 1574,
+      "question_page": "page_0005.jpg",
+      "question_text": "نقاط $A(3,2)$ و $B(1,k)$ روی یک دایره به مرکز $O(-3,1)$ قرار دارند. حاصل‌ضرب مقادیر به دست آمده برای $k$ کدام است؟",
+      "options": [
+        "$2$",
+        "$-2$",
+        "$4$",
+        "$-4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1575,
+      "question_page": "page_0005.jpg",
+      "question_text": "قرینۀ نقطۀ $A(-1,4)$ نسبت به نقطۀ $M(a,2a+1)$ در ناحیۀ چهارم واقع است. حدود $a$ کدام است؟",
+      "options": [
+        "$-\\frac{1}{2} < a < \\frac{1}{2}$",
+        "$-\\frac{1}{2} < a < 0$",
+        "$0 < a < \\frac{1}{2}$",
+        "$-1 < a < \\frac{1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1576,
+      "question_page": "page_0005.jpg",
+      "question_text": "نقطۀ $A(a,b)$ از خط $x=4$ و نقطۀ $F(3,0)$ به یک فاصله است. حاصل $2a+b^2$ کدام است؟",
+      "options": [
+        "$6$",
+        "$7$",
+        "$8$",
+        "$9$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1577,
+      "question_page": "page_0005.jpg",
+      "question_text": "مختصات سه رأس لوزی $ABCD$ در ناحیۀ اول، $A(2,0)$ ، $B(0,3)$ و $C(k,1)$ است. حاصل‌ضرب مختصات $D$ کدام است؟",
+      "options": [
+        "$8$",
+        "$-8$",
+        "$10$",
+        "$-10$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1578,
+      "question_page": "page_0005.jpg",
+      "question_text": "نقاط $B(9,0)$ و $C(0,6)$ رئوس مثلث متساوی‌الساقینی هستند که رأس $A$ روی خط $y=3x$ است. اگر $BC$ قاعدۀ مثلث باشد، طول رأس $A$ کدام است؟",
+      "options": [
+        "$2$",
+        "$2/5$",
+        "$-2$",
+        "$-2/5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1579,
+      "question_page": "page_0005.jpg",
+      "question_text": "نقطۀ $A(0,1)$ رأس مثلث متساوی‌الساقین $ABC$ و مختصات $B$ به صورت $(-4,0)$ است. مجموع مختصات $C$ واقع بر نیمساز ناحیۀ سوم کدام است؟",
+      "options": [
+        "$-4$",
+        "$-10$",
+        "$-6$",
+        "$-8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1580,
+      "question_page": "page_0005.jpg",
+      "question_text": "نقاط $B(0,3)$ و $C(4,0)$ دو رأس مجاور به وتر در مثلث قائم‌الزاویۀ $ABC$ هستند. اگر رأس $A$ در ناحیۀ اول روی خط $y=2x$ باشد، مجموع مختصات $A$ کدام است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1581,
+      "question_page": "page_0005.jpg",
+      "question_text": "هرگاه نقاط $A(1,2)$ ، $B(m,1)$ و $C(7,m+6)$ روی یک خط باشند، حاصل‌ضرب مقادیر مختلف $m$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$-1$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1582,
+      "question_page": "page_0005.jpg",
+      "question_text": "سه رأس یک متوازی‌الاضلاع به مختصات $(2,3)$ ، $(-1,4)$ و $(3,-2)$ داده شده است. عرض رأس چهارم آن کدام نمی‌تواند باشد؟",
+      "options": [
+        "$9$",
+        "$-3$",
+        "$7$",
+        "$-1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1583,
+      "question_page": "page_0005.jpg",
+      "question_text": "اگر $A(3,1)$ ، $B(-1,0)$ و $C(4,2)$ سه رأس متوازی‌الاضلاع $ABCD$ باشند، مجموع مختصات رأس $D$ کدام است؟",
+      "options": [
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1584,
+      "question_page": "page_0005.jpg",
+      "question_text": "آجری مطابق شکل به محورهای مختصات تکیه کرده است. اگر بالاترین نقطۀ آجر به ارتفاع $8$ باشد، طول نقطۀ $D$ کدام است؟",
+      "options": [
+        "$7$",
+        "$\\frac{29}{4}$",
+        "$\\frac{15}{2}$",
+        "$\\frac{31}{4}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            80,
+            1150,
+            300,
+            1420
+          ],
+          "placement": "stem",
+          "alt": "شکل یک آجر تکیه داده شده به محورهای مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1585,
+      "question_page": "page_0005.jpg",
+      "question_text": "اگر $A(0,3)$ ، $B(-3,1)$ و $C(2,-1)$ سه رأس متوازی‌الاضلاع $ABCD$ باشند، شیب قطر $BD$ کدام است؟",
+      "options": [
+        "$\\frac{4}{3}$",
+        "$-\\frac{2}{5}$",
+        "$\\frac{2}{5}$",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1586,
+      "question_page": "page_0005.jpg",
+      "question_text": "مساحت مثلثی با سه رأس $A(1,2)$ ، $B(-3,-1)$ و $C(0,-5)$ کدام است؟",
+      "options": [
+        "$12$",
+        "$12/5$",
+        "$17$",
+        "$17/5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1587,
+      "question_page": "page_0005.jpg",
+      "question_text": "خط $y = ax - 4 + a$ از ناحیۀ سوم عبور نمی‌کند. حدود $a$ کدام است؟",
+      "options": [
+        "$a \\le 0$",
+        "$0 \\le a \\le 4$",
+        "$-4 \\le a \\le 0$",
+        "$-4 \\le a \\le -1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1588,
+      "question_page": "page_0005.jpg",
+      "question_text": "در شکل مقابل شعاع نیم‌دایره $5$ است. شیب خط گذرا بر نقاط $M$ و $N$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$-\\frac{1}{2}$",
+        "$-\\frac{1}{3}$",
+        "$-\\frac{2}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            80,
+            1600,
+            300,
+            1850
+          ],
+          "placement": "stem",
+          "alt": "شکل یک نیم‌دایره در دستگاه مختصات با نقاط M و N"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1589,
+      "question_page": "page_0006.jpg",
+      "question_text": "در شکل مقابل، معادلۀ خط $d$ به صورت $x + my = 2m + 3$ است. $\\alpha$ کدام است؟",
+      "options": [
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            50,
+            70,
+            200,
+            160
+          ],
+          "placement": "stem",
+          "alt": "شکل خط d در دستگاه مختصات و زاویه آلفا"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1590,
+      "question_page": "page_0006.jpg",
+      "question_text": "$A(-1,2)$ ، $B(2,3)$ و $C(5,0)$ سه رأس یک مثلث هستند به طوری که ارتفاع نظیر رأس $A$ بر خط $d$ منطبق باشد. عرض از مبدأ خط $d$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$-3$",
+        "$4$",
+        "$5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1591,
+      "question_page": "page_0006.jpg",
+      "question_text": "در شکل مقابل، $ABCD$ مربع و مختصات $B$ به صورت $(2,3)$ است. مجموع مختصات رأس $D$ کدام است؟",
+      "options": [
+        "$8$",
+        "$8/5$",
+        "$9$",
+        "$9/5$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            45,
+            195,
+            200,
+            310
+          ],
+          "placement": "stem",
+          "alt": "شکل مربع ABCD در دستگاه مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1592,
+      "question_page": "page_0006.jpg",
+      "question_text": "در شکل مقابل مساحت قسمت رنگی کدام است؟",
+      "options": [
+        "$1$",
+        "$\\frac{3}{2}$",
+        "$2$",
+        "$\\frac{5}{2}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            45,
+            315,
+            200,
+            395
+          ],
+          "placement": "stem",
+          "alt": "شکل قسمت رنگی شده بین خطوط در دستگاه مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1593,
+      "question_page": "page_0006.jpg",
+      "question_text": "خطی که از نقاط $A(2,5)$ و $B(3,3)$ عبور می‌کند، خط $y = 3x + b$ را در نقطه‌ای به طول $1$ قطع می‌کند. $b$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1594,
+      "question_page": "page_0006.jpg",
+      "question_text": "خطوط $y = ax + b$ و $y = bx + a$ و نیمساز ناحیۀ دوم در نقطه‌ای به عرض $3$ متقاطع‌اند. مقدار $ab$ کدام است؟",
+      "options": [
+        "$\\frac{9}{4}$",
+        "$\\frac{9}{2}$",
+        "$-\\frac{9}{2}$",
+        "$-\\frac{9}{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1595,
+      "question_page": "page_0006.jpg",
+      "question_text": "در شکل روبه‌رو، فاصلۀ نقطۀ $M$ تا مبدأ مختصات $\\frac{4}{3}$ است. مقدار $a$ کدام است؟",
+      "options": [
+        "$2$",
+        "$\\sqrt{2}$",
+        "$\\frac{\\sqrt{2}}{2}$",
+        "$\\frac{2\\sqrt{2}}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            45,
+            465,
+            175,
+            560
+          ],
+          "placement": "stem",
+          "alt": "شکل نقطۀ M روی خط در دستگاه مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1596,
+      "question_page": "page_0006.jpg",
+      "question_text": "نقطۀ $A(5,4)$ رأس یک متوازی‌الاضلاع است که دو ضلع آن منطبق بر دو خط به معادلات $2x - y = 4$ و $x + 3y = 9$ می‌باشند. مختصات وسط قطر آن کدام است؟",
+      "options": [
+        "$(3,2)$",
+        "$(2,3)$",
+        "$(3,4)$",
+        "$(4,3)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1597,
+      "question_page": "page_0006.jpg",
+      "question_text": "اگر خط $3x + 4y = 2$ را نسبت به محور طول‌ها و محور عرض‌ها قرینه کنیم تا خط جدیدی حاصل شود، خط اولیه و خط جدید یکدیگر را در چه نقطه‌ای قطع می‌کنند؟",
+      "options": [
+        "$(1, -\\frac{1}{4})$",
+        "$(0, \\frac{1}{2})$",
+        "$(-2, 2)$",
+        "این دو خط یکدیگر را قطع نمی‌کنند."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1598,
+      "question_page": "page_0006.jpg",
+      "question_text": "خطوط $y = x + 4$ و $y = mx + 2$ با یکدیگر زاویۀ $15^\\circ$ تشکیل می‌دهند. $m$ کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$ یا $2$",
+        "$\\frac{\\sqrt{3}}{3}$ یا $\\sqrt{3}$",
+        "$\\frac{1}{3}$ یا $3$",
+        "$\\frac{\\sqrt{3}}{3}$ یا $\\sqrt{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "Option 4 seems visually identical to Option 2 in the book, transcribe exactly."
+      ]
+    },
+    {
+      "question_number": 1599,
+      "question_page": "page_0006.jpg",
+      "question_text": "به ازای کدام مقدار $a$ دستگاه معادلات $\\begin{cases} ax + 2y = a - 3 \\\\ 2x + (2a - 2)y = 5 - 3a \\end{cases}$ جواب ندارد؟",
+      "options": [
+        "$a = -1$",
+        "$a = 2$",
+        "$a \\in \\mathbb{R}$",
+        "$a \\in \\emptyset$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1600,
+      "question_page": "page_0006.jpg",
+      "question_text": "خطوط $2y + ax = 6$ و $3y = x + 2$ بر هم عمودند. $a$ کدام است؟",
+      "options": [
+        "$6$",
+        "$\\frac{1}{6}$",
+        "$-\\frac{1}{6}$",
+        "$-6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1601,
+      "question_page": "page_0006.jpg",
+      "question_text": "در شکل مقابل، خط $d$ نیمساز ناحیۀ دوم را در نقطه‌ای با کدام طول قطع می‌کند؟",
+      "options": [
+        "$-1$",
+        "$-\\frac{2}{3}$",
+        "$-\\frac{3}{2}$",
+        "$-\\frac{4}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            40,
+            800,
+            220,
+            895
+          ],
+          "placement": "stem",
+          "alt": "شکل خط d در دستگاه مختصات و نقاط"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1602,
+      "question_page": "page_0007.jpg",
+      "question_text": "نقاط $A(3,1)$ ، $B(6,5)$ و $C(0,4)$ رئوس مثلث $ABC$ هستند. عرض از مبدأ معادلهٔ ارتفاع وارد بر ضلع $BC$ کدام است؟",
+      "options": [
+        "$17$",
+        "$18$",
+        "$19$",
+        "$20$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1603,
+      "question_page": "page_0007.jpg",
+      "question_text": "اگر $A(2,3)$ ، $B(-1,1)$ و $C(\\alpha, \\beta)$ سه رأس مربع $ABCD$ باشند، $\\alpha \\beta$ کدام است؟",
+      "options": [
+        "$2$ یا $12$",
+        "$-2$ یا $-12$",
+        "$-2$ یا $12$",
+        "$2$ یا $-12$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1604,
+      "question_page": "page_0007.jpg",
+      "question_text": "در شکل مقابل، اگر مساحت مثلث $ABM$ برابر $\\dfrac{45}{4}$ باشد، مقدار $k$ کدام است؟",
+      "options": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$6$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            105,
+            144,
+            252,
+            230
+          ],
+          "placement": "stem",
+          "alt": "نمودار خط $y = \\frac{1}{2}x + k$ و مثلث $ABM$"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1605,
+      "question_page": "page_0007.jpg",
+      "question_text": "عمودمنصف دو نقطهٔ $A(m, -2m)$ و $B(2m, m)$ کدام خط است؟",
+      "options": [
+        "$y = 3x$",
+        "$y = -3x$",
+        "$y = \\dfrac{1}{3}x$",
+        "$y = -\\dfrac{1}{3}x$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1606,
+      "question_page": "page_0007.jpg",
+      "question_text": "نقاط $A(3, m)$ و $B(2, n)$ نسبت به خط $2x + 1 = y$ متقارن هستند. $\\dfrac{m}{n}$ کدام است؟",
+      "options": [
+        "$\\dfrac{23}{25}$",
+        "$\\dfrac{24}{25}$",
+        "$\\dfrac{25}{24}$",
+        "$\\dfrac{25}{23}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1607,
+      "question_page": "page_0007.jpg",
+      "question_text": "خط $x + y = 3$ عمودمنصف پاره‌خط واصل بین دو نقطهٔ $A(4, 1)$ و $B(\\alpha, \\beta)$ است. مقدار $\\alpha \\beta$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$2$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1608,
+      "question_page": "page_0007.jpg",
+      "question_text": "عمودمنصف دو نقطهٔ $A(3, 0)$ و $B(0, k)$ محور عرض‌ها را در نقطه‌ای به عرض $-4$ قطع می‌کند. $k$ کدام است؟",
+      "options": [
+        "$1$ یا $9$",
+        "$-1$ یا $9$",
+        "$1$ یا $-9$",
+        "$-1$ یا $-9$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1609,
+      "question_page": "page_0007.jpg",
+      "question_text": "عمودمنصف پاره‌خط واصل بین دو نقطهٔ $A(k, 1)$ و $B(-2, 3)$ از نقطهٔ $P(\\dfrac{k}{2}, 4)$ عبور می‌کند. $k$ کدام است؟",
+      "options": [
+        "$1$",
+        "$\\dfrac{3}{2}$",
+        "$2$",
+        "$\\dfrac{4}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1610,
+      "question_page": "page_0007.jpg",
+      "question_text": "قرینهٔ $A(-1, 5)$ نسبت به خط $x + 3y = 6$ کدام نقطه است؟",
+      "options": [
+        "$(3, 5)$",
+        "$(5, 3)$",
+        "$(5, 7)$",
+        "$(7, 5)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1611,
+      "question_page": "page_0007.jpg",
+      "question_text": "مثلث $ABC$ با رئوس $A(\\alpha, -1)$ ، $B(0, \\beta)$ و $C(-2, 0)$ به مساحت $5$ در رأس $A$ قائم‌الزاویه است. $\\alpha$ کدام است؟",
+      "options": [
+        "$\\dfrac{3}{2}$",
+        "$2$",
+        "$\\dfrac{5}{2}$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1612,
+      "question_page": "page_0007.jpg",
+      "question_text": "اگر مساحت مثلث $OAB$ برابر $24$ باشد، شیب خط $AB$ کدام است؟",
+      "options": [
+        "$-\\dfrac{1}{2}$ یا $-2$",
+        "$-\\dfrac{1}{3}$ یا $-3$",
+        "$-\\dfrac{1}{4}$ یا $-4$",
+        "$-1$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            100,
+            524,
+            257,
+            638
+          ],
+          "placement": "stem",
+          "alt": "نمودار مثلث $OAB$ با خط عبوری از A و B"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1613,
+      "question_page": "page_0007.jpg",
+      "question_text": "در شکل روبه‌رو $A(\\alpha, 6)$ و نقاط $B$ و $C$ به ترتیب با طول $\\beta$ و $6$ رئوس مثلث قائم‌الزاویه هستند. هرگاه مساحت مثلث $39$ باشد، مقدار $\\alpha + \\beta$ کدام است؟",
+      "options": [
+        "$-4$",
+        "$-3$",
+        "$-6$",
+        "$-5$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            95,
+            650,
+            260,
+            735
+          ],
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه ABC در دستگاه مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1614,
+      "question_page": "page_0007.jpg",
+      "question_text": "در شکل مقابل، مساحت مثلث $ABC$ کدام است؟",
+      "options": [
+        "$\\dfrac{3}{52}$",
+        "$\\dfrac{5}{52}$",
+        "$\\dfrac{3}{26}$",
+        "$\\dfrac{5}{26}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            129,
+            715,
+            276,
+            804
+          ],
+          "placement": "stem",
+          "alt": "نمودار مثلث ABC و خطوط متقاطع در صفحه مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1615,
+      "question_page": "page_0007.jpg",
+      "question_text": "در شکل مقابل، مساحت قسمت رنگی کدام است؟",
+      "options": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{4}{3}$",
+        "$\\dfrac{8}{3}$",
+        "$\\dfrac{16}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            127,
+            804,
+            277,
+            893
+          ],
+          "placement": "stem",
+          "alt": "نمودار دو خط متقاطع و ناحیه رنگی محصور با محورها"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1616,
+      "question_page": "page_0008.jpg",
+      "question_text": "مساحت مثلثی با سه رأس $A(2, 1)$ ، $B(-1, 5)$ و $C(-2, 0)$ کدام است؟",
+      "options": [
+        "$9$",
+        "$18$",
+        "$9.5$",
+        "$19$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1617,
+      "question_page": "page_0008.jpg",
+      "question_text": "مساحت مثلثی با رئوس $A(2, 3)$ ، $B(1, 1)$ و $C(k, k+2)$ برابر $8$ است. مجموع مقادیر $k$ کدام است؟",
+      "options": [
+        "صفر",
+        "$6$",
+        "$12$",
+        "$16$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1618,
+      "question_page": "page_0008.jpg",
+      "question_text": "نقاط $A(0, 3)$ و $B(1, -1)$ رئوس مثلثی هستند که رأس سوم آن روی خط $y = 3x$ است. هرگاه مساحت مثلث $ABC$ برابر $6$ باشد، جمع طول‌های به دست آمده برای $C$ کدام است؟",
+      "options": [
+        "$\\dfrac{2}{7}$",
+        "$\\dfrac{4}{7}$",
+        "$-\\dfrac{4}{7}$",
+        "$\\dfrac{6}{7}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1619,
+      "question_page": "page_0008.jpg",
+      "question_text": "خط $y = k$ مساحت مثلث رنگی را به نسبت $1$ به $8$ تقسیم می‌کند. مقدار $k$ کدام است؟",
+      "options": [
+        "$3 - \\dfrac{\\sqrt{2}}{2}$",
+        "$2.5$",
+        "$3 - \\sqrt{2}$",
+        "$2.25$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0008.jpg",
+          "region": [
+            38,
+            203,
+            186,
+            313
+          ],
+          "placement": "stem",
+          "alt": "نمودار مثلث در دستگاه مختصات و خط افقی y=k که آن را به دو قسمت تقسیم کرده"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1620,
+      "question_page": "page_0008.jpg",
+      "question_text": "خط $4x + 3y = 5$ بر دایره‌ای به مرکز $O(-1, 2)$ مماس است. شعاع دایره چه‌قدر است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$4$",
+        "$5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1621,
+      "question_page": "page_0008.jpg",
+      "question_text": "کدام نقطه واقع بر محور عرض‌ها از خط $4x + 3y + 5 = 0$ به فاصلهٔ $4$ است؟",
+      "options": [
+        "$(0, 5)$",
+        "$(0, \\dfrac{22}{3})$",
+        "$(0, -5)$",
+        "$(0, \\dfrac{25}{3})$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1622,
+      "question_page": "page_0008.jpg",
+      "question_text": "قطر مربعی بر خط $y - 2x = 3$ واقع است. اگر $A(1, -2)$ یک رأس آن باشد، مساحت مربع کدام است؟",
+      "options": [
+        "$0.2$",
+        "$0.4$",
+        "$0.6$",
+        "$0.8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1623,
+      "question_page": "page_0008.jpg",
+      "question_text": "یک ضلع مستطیلی بر خط $3x + 4y - 4 = 0$ و یک رأس آن به مختصات $(2, 2)$ است. اگر محیط مستطیل برابر $24$ باشد، مساحت آن کدام است؟",
+      "options": [
+        "$10$",
+        "$12$",
+        "$18$",
+        "$20$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1624,
+      "question_page": "page_0008.jpg",
+      "question_text": "فاصلهٔ نقطهٔ $A(3, 1)$ از خط $6x - 8y = k$ برابر $\\dfrac{1}{2}$ است. مجموع مقادیر $k$ کدام است؟",
+      "options": [
+        "$10$",
+        "$15$",
+        "$20$",
+        "$25$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1625,
+      "question_page": "page_0008.jpg",
+      "question_text": "خط $4x + 3y + k = 0$ معادلهٔ ضلع مربعی به مساحت $144$ و $A(3, 1)$ رأسی از مربع غیرواقع بر این خط است. مجموع مقادیر به دست آمده برای $k$ کدام است؟",
+      "options": [
+        "$15$",
+        "$30$",
+        "$-15$",
+        "$-30$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1626,
+      "question_page": "page_0008.jpg",
+      "question_text": "مثلث $ABC$ با رئوس $A(3, 1)$ ، $B(-3, 3)$ و $C(1, 0)$ مفروض است. اندازهٔ ارتفاع $AH$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1627,
+      "question_page": "page_0008.jpg",
+      "question_text": "نیمسازهای ناحیهٔ سوم و چهارم دو ضلع مجاور یک مستطیل به مساحت $30$ هستند، کدام نقطه می‌تواند رأس مستطیل باشد؟",
+      "options": [
+        "$(-2, 8)$",
+        "$(-3, 7)$",
+        "$(7, -3)$",
+        "$(2, -8)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1628,
+      "question_page": "page_0008.jpg",
+      "question_text": "فاصلهٔ مبدأ مختصات تا خط گذرنده از $A(a, 0)$ و $B(0, a)$ برابر $2\\sqrt{2}$ است. مقدار $a$ کدام است؟",
+      "options": [
+        "$\\pm 1$",
+        "$\\pm 2$",
+        "$\\pm 3$",
+        "$\\pm 4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1629,
+      "question_page": "page_0008.jpg",
+      "question_text": "اگر $A(-1, 1)$ و $B(2, 0)$ دو رأس مثلث $ABC$ با مساحت $4$ و رأس $C$ روی نیمساز ناحیهٔ دوم و چهارم باشد، عرض نقطهٔ $C$ کدام است؟",
+      "options": [
+        "$3$ یا $5$",
+        "$3$ یا $-5$",
+        "$-3$ یا $5$",
+        "$-3$ یا $-5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1630,
+      "question_page": "page_0008.jpg",
+      "question_text": "نقطهٔ $A$ واقع بر محور عرض‌ها از نقطهٔ $P(4, 4)$ و خط $4x - 3y = 22$ به یک فاصله است. عرض نقطهٔ $A$ کدام می‌تواند باشد؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1631,
+      "question_page": "page_0008.jpg",
+      "question_text": "نقطهٔ $P$ با کدام طول روی محور $x$ها از دو خط $3x + 4y = 5$ و $4x - 3y = 2$ به یک فاصله است؟",
+      "options": [
+        "$1$ یا $3$",
+        "$-1$ یا $3$",
+        "$1$ یا $-3$",
+        "$-1$ یا $-3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1632,
+      "question_page": "page_0008.jpg",
+      "question_text": "فاصلهٔ دو خط $3y - 2x = 1$ و $4x - 6y = 3$ کدام است؟",
+      "options": [
+        "$\\dfrac{\\sqrt{13}}{26}$",
+        "$\\dfrac{\\sqrt{13}}{13}$",
+        "$\\sqrt{13}$",
+        "$2\\sqrt{13}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1633,
+      "question_page": "page_0009.jpg",
+      "question_text": "فاصلهٔ دو خط موازی $3x + 4y = a$ و $2x - by = 2$ برابر ۲ است. مجموع مقادیر به دست آمده برای $a$ کدام است؟",
+      "options": [
+        "۶",
+        "-۶",
+        "۱۰",
+        "-۱۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1634,
+      "question_page": "page_0009.jpg",
+      "question_text": "دو ضلع مقابل یک مربع به مساحت ۴ بر خطوط $3x - 4y = 1$ و $ax + 8y = b$ واقع هستند. $a - b$ کدام می‌تواند باشد؟",
+      "options": [
+        "۱۶",
+        "۱۸",
+        "۲۰",
+        "۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1635,
+      "question_page": "page_0009.jpg",
+      "question_text": "مثلث $ABC$ با رئوس $A(2,3)$ ، $B(4,2)$ و $C(5,4)$ چه نوع مثلثی است؟",
+      "options": [
+        "فقط متساوی‌الساقین است.",
+        "فقط قائم‌الزاویه است.",
+        "قائم‌الزاویهٔ متساوی‌الساقین است.",
+        "نه قائم‌الزاویه و نه متساوی‌الساقین است."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1636,
+      "question_page": "page_0009.jpg",
+      "question_text": "در شکل زیر، ضلع $AB$ از مستطیل $ABCD$ روی نیمساز ناحیهٔ اول و رأس $C$ روی خط $y = 2x$ قرار دارد. مساحت مستطیل چه‌قدر است؟",
+      "options": [
+        "$9$",
+        "$\\dfrac{9\\sqrt{2}}{2}$",
+        "$9\\sqrt{2}$",
+        "$18$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            100,
+            230,
+            250,
+            330
+          ],
+          "placement": "stem",
+          "filename": "page_0009.jpg",
+          "alt": "مستطیل ABCD در دستگاه مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1637,
+      "question_page": "page_0009.jpg",
+      "question_text": "نقطه‌ای با کدام طول روی قسمت مثبت محور $x$ها انتخاب کنیم که فاصلهٔ آن از خط $y = x + 1$، سه برابر فاصلهٔ آن از نیمساز ناحیهٔ چهارم باشد؟",
+      "options": [
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{3}{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

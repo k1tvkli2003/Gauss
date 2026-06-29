@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -36,15 +37,6 @@ import com.gauss.app.ui.theme.GaussColors
 /** A committed scratchpad stroke. Owned by the exam engine so it survives navigation. */
 data class Stroke(val points: List<Offset>, val color: Color, val width: Float)
 
-private val PEN_COLORS = listOf(
-    GaussColors.NeonBlue,
-    GaussColors.NeonPurple,
-    GaussColors.NeonGreen,
-    GaussColors.NeonAmber,
-    GaussColors.NeonRed,
-    Color.White,
-)
-
 /**
  * Stylus-friendly scratchpad: multi-colour pen, width presets, undo/redo, clear.
  * Strokes are hoisted to the caller so they persist when navigating questions.
@@ -55,15 +47,24 @@ fun DrawingCanvas(
     onChange: (List<Stroke>) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    var penColor by remember { mutableStateOf<Color>(GaussColors.NeonBlue) }
+    var penColor by remember { mutableStateOf<Color>(GaussColors.Primary) }
     var penWidth by remember { mutableStateOf(3f) }
     val redo = remember { mutableStateListOf<Stroke>() }
     val live = remember { mutableStateListOf<Offset>() }
+    val scheme = MaterialTheme.colorScheme
+    val penColors = listOf(
+        scheme.primary,
+        scheme.secondary,
+        GaussColors.Success,
+        GaussColors.Warning,
+        scheme.error,
+        scheme.onSurface,
+    )
 
     Column(
         modifier = modifier
-            .border(1.dp, GaussColors.Border, RoundedCornerShape(16.dp))
-            .background(GaussColors.Surface, RoundedCornerShape(16.dp)),
+            .border(1.dp, scheme.outline, RoundedCornerShape(16.dp))
+            .background(scheme.surface, RoundedCornerShape(16.dp)),
     ) {
         // Toolbar
         Row(
@@ -74,14 +75,14 @@ fun DrawingCanvas(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                PEN_COLORS.forEach { c ->
+                penColors.forEach { c ->
                     Box(
                         Modifier
                             .size(22.dp)
                             .background(c, CircleShape)
                             .border(
                                 if (penColor == c) 2.dp else 0.dp,
-                                Color.White,
+                                scheme.onSurface,
                                 CircleShape,
                             )
                             .clickableNoRipple { penColor = c },
@@ -158,10 +159,11 @@ private fun ToolChip(
     enabled: Boolean = true,
     onClick: () -> Unit,
 ) {
+    val scheme = MaterialTheme.colorScheme
     Box(
         Modifier
             .background(
-                if (active) GaussColors.Border else GaussColors.Card,
+                if (active) scheme.primaryContainer else scheme.surfaceVariant,
                 RoundedCornerShape(8.dp),
             )
             .clickableNoRipple(enabled, onClick)
@@ -169,7 +171,7 @@ private fun ToolChip(
     ) {
         Text(
             label,
-            color = if (enabled) GaussColors.Text else GaussColors.Muted,
+            color = if (enabled) scheme.onSurface else scheme.onSurfaceVariant,
         )
     }
 }

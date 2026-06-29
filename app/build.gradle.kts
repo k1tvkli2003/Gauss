@@ -15,6 +15,7 @@ android {
         targetSdk = 35
         versionCode = (System.getenv("GAUSS_VERSION_CODE") ?: "1").toInt()
         versionName = System.getenv("GAUSS_VERSION_NAME") ?: "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables { useSupportLibrary = true }
     }
 
@@ -80,6 +81,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.navigation:navigation-compose:2.8.4")
 
     // Room — local history / analytics / spaced-repetition store.
@@ -88,6 +90,12 @@ dependencies {
     ksp("androidx.room:room-compiler:2.6.1")
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test:core:1.6.1")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.room:room-testing:2.6.1")
 
     // Native LaTeX rendering — JLaTeXMath draws formulas to a Drawable on the
     // Android canvas (no WebView). Pulled in transitively via Markwon ext-latex.

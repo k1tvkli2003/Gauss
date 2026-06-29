@@ -6,6 +6,7 @@ captures/
 .cxx/
 *.iml
 .idea/
+tmp/
 
 # signing — NEVER commit keystores
 *.jks

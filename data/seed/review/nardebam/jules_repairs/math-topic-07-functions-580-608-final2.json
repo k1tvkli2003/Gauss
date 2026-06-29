@@ -1,0 +1,399 @@
+{
+  "task_id": "math-topic-07-functions-580-608",
+  "subject": "math",
+  "topic_key": "functions",
+  "questions": [
+    {
+      "question_number": 580,
+      "question_page": 33,
+      "question_text": "با فرض $f(x) = \\sqrt{x^2 - 2x}$ و $g(x) = \\sqrt{5 - x}$، دامنه تابع $gof$ کدام است؟",
+      "options": [
+        "$[1-\\sqrt{13}, 0] \\cup [2, 1+\\sqrt{13}]$",
+        "$[1-\\sqrt{13}, 1]$",
+        "$(1, 1+\\sqrt{26})$",
+        "$[1-\\sqrt{26}, 0] \\cup [2, 1+\\sqrt{26}]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 581,
+      "question_page": 33,
+      "question_text": "با فرض $f(x) = (\\frac{1}{2})^x$ و $g(x) = \\frac{2x - 1}{\\sqrt{-x^2 - 2x + 3}}$، دامنه تابع $gof$ کدام است؟",
+      "options": [
+        "$(\\circ, +\\infty)$",
+        "$(\\circ, 1)$",
+        "$(-\\infty, \\circ)$",
+        "$(1, +\\infty)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 582,
+      "question_page": 33,
+      "question_text": "اگر $f(x) = \\sqrt{4x - x^2}$ و $g(x) = 3x + |x|$، دامنه تابع $fog$ ($g+f$) کدام است؟",
+      "options": [
+        "$[\\circ, +\\infty)$",
+        "$[\\circ, 2]$",
+        "$[\\circ, 2)$",
+        "$[\\circ, 1]$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "The math '($g+f$)' is written right next to $fog$. It seems odd but I am transcribing it as printed."
+      ]
+    },
+    {
+      "question_number": 583,
+      "question_page": 33,
+      "question_text": "هرگاه $f(x) = \\sqrt{k-x}$ و $g(x) = \\sqrt{3x+1}$ بوده و $D_{fog} = [-\\frac{1}{3}, 1]$ باشد، مقدار $k$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$1$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 584,
+      "question_page": 33,
+      "question_text": "اگر $f(x) = \\sqrt{1-x}$ و $g(x) = x^2 + 2x$ باشد، برد تابع $y = gof(x)$ کدام است؟",
+      "options": [
+        "$(-\\infty, 3]$",
+        "$(-1, +\\infty]$",
+        "$[\\circ, +\\infty]$",
+        "$(-\\infty, 1]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 585,
+      "question_page": 33,
+      "question_text": "با فرض $f(x) = (\\frac{1}{3})^x$ و $g(x) = x - [x]$، برد تابع $fog$ کدام است؟",
+      "options": [
+        "$(\\frac{1}{3}, 1]$",
+        "$(1, 3]$",
+        "$(\\frac{1}{3}, 1)$",
+        "$[1, 3)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 586,
+      "question_page": 33,
+      "question_text": "تابع $f(x) = 2x - [x]$ با دامنهٔ $[-2, 1)$ مفروض است. برد تابع $y = fof(x)$ کدام است؟",
+      "options": [
+        "$[-18, 1)$",
+        "$[-6, 1)$",
+        "$[-18, -6]$",
+        "$[-2, 1)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 587,
+      "question_page": 33,
+      "question_text": "تابع $f(x) = 2^x - 1$ را با دامنهٔ $(1, 2)$ در نظر بگیرید. اگر $g(x) = \\log(ax + b)$ و برد $gof$ برابر بازهٔ $(-\\infty, \\circ)$ باشد، حاصل $b-a$ کدام است؟ $(a > 0)$",
+      "options": [
+        "$-1$",
+        "$1$",
+        "$2$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 588,
+      "question_page": 33,
+      "question_text": "اگر $g(x) = x + \\sqrt{7x+4}$ و $f(x) = \\sqrt{4x-x^2}$، برد تابع $gof$ کدام است؟",
+      "options": [
+        "$[\\sqrt{2}, 2]$",
+        "$[2, 2+\\sqrt{2}]$",
+        "$[2, 2+2\\sqrt{2}]$",
+        "$[2, 2+3\\sqrt{2}]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 589,
+      "question_page": 33,
+      "question_text": "رابطهٔ $f = \\{(1, m), (4, 3), (1, m^2 - 6), (n, -2)\\}$ یک تابع یک‌به‌یک است. $m-n$ کدام است؟",
+      "options": [
+        "صفر",
+        "$-1$",
+        "$-2$",
+        "$-3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 590,
+      "question_page": 33,
+      "question_text": "تابع $f(x) = 2x^2 + kx - 7$ در بازهٔ $[1, -\\infty)$ یک‌به‌یک است. بیشترین مقدار $k$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$-2$",
+        "$-4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 591,
+      "question_page": 33,
+      "question_text": "به ازای کدام مقدار $m$ تابع $y = \\frac{2x - m}{3x + 9}$ یک‌به‌یک نیست؟",
+      "options": [
+        "$3$",
+        "$-3$",
+        "$6$",
+        "$-6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 592,
+      "question_page": 34,
+      "question_text": "تابع $y = \\sin x + |\\sin x|$ در کدام بازه یک‌به‌یک است؟",
+      "options": [
+        "$[-\\frac{3\\pi}{2}, -\\pi]$",
+        "$[-\\pi, -\\frac{\\pi}{2}]$",
+        "$[-\\frac{\\pi}{2}, \\circ]$",
+        "$[\\pi, \\frac{3\\pi}{2}]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 593,
+      "question_page": 34,
+      "question_text": "هرگاه تابع $y = x + f(x)$ تابعی یک‌به‌یک باشد، ضابطهٔ $f$ کدام می‌تواند باشد؟",
+      "options": [
+        "$2\\sqrt{4-x}$",
+        "$(2x-1)^2$",
+        "$\\sqrt{4x+3}$",
+        "$|x-3|$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 594,
+      "question_page": 34,
+      "question_text": "تابع $y = |3x| + k - 2$ در بازهٔ $[-1, 2]$ وارون‌پذیر است. حدود $k$ کدام است؟",
+      "options": [
+        "$-6 \\le k \\le 3$",
+        "$\\begin{cases} k \\le -6 \\\\ k \\ge 3 \\end{cases}$",
+        "$-6 < k < 3$",
+        "$-3 < k < 6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 595,
+      "question_page": 34,
+      "question_text": "کدام‌یک از توابع زیر یک‌به‌یک است؟",
+      "options": [
+        "$f(x) = |x| + \\sqrt{x}$",
+        "$g(x) = x^2 + x + 1$",
+        "$h(x) = 3x - \\frac{1}{x}$",
+        "$p(x) = x - [x]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 596,
+      "question_page": 34,
+      "question_text": "کدام تابع زیر در $\\mathbb{R}$ یک‌به‌یک است؟",
+      "options": [
+        "$y = 2x + |2x-3|$",
+        "$y = 3x - |-3x|$",
+        "$y = 3x - |2x+1|$",
+        "$y = 2x + |3x-1|$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 597,
+      "question_page": 34,
+      "question_text": "تابع $f(x) = 3x + k|x| + 2$ یک‌به‌یک است. حدود $k$ کدام است؟",
+      "options": [
+        "$-3 < k < 3$",
+        "$k < -3$ یا $k > 3$",
+        "$-3 \\le k \\le 3$",
+        "$k \\le -3$ یا $k \\ge 3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 598,
+      "question_page": 34,
+      "question_text": "کدام تابع زیر یک‌به‌یک است؟",
+      "options": [
+        "$y = x + [-\\frac{x}{2}]$",
+        "$y = x + [-x]$",
+        "$y = x - [-2x]$",
+        "$y = x - [x]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 599,
+      "question_page": 34,
+      "question_text": "تابع $f(x) = x(2 + \\frac{a}{|x|})$ در دامنهٔ خود وارون‌پذیر است. حدود $a$ کدام است؟",
+      "options": [
+        "$a < \\circ$",
+        "$a > -1$",
+        "$a \\ge \\circ$",
+        "$a \\le \\circ$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 600,
+      "question_page": 34,
+      "question_text": "تابع $f(x) = \\begin{cases} ax + b & x < \\circ \\\\ \\frac{1}{|x|} & x > \\circ \\end{cases}$ یک‌به‌یک است. زوج مرتب $(a, b)$ کدام می‌تواند باشد؟",
+      "options": [
+        "$(2, 1)$",
+        "$(-2, 3)$",
+        "$(3, -2)$",
+        "$(-2, -1)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 601,
+      "question_page": 34,
+      "question_text": "تابع $f(x) = |3^{-x} - 4|$ در بازهٔ $[a, +\\infty)$ تابعی یک‌به‌یک است، حداقل مقدار $a$ کدام است؟",
+      "options": [
+        "صفر",
+        "$-1$",
+        "$-2$",
+        "$-4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 602,
+      "question_page": 34,
+      "question_text": "نمودار تابع $y = 2x - f(x)$ به صورت مقابل است، در مورد تابع $y = x + f(2x)$ کدام صحیح نیست؟",
+      "options": [
+        "نمودار آن از ناحیهٔ چهارم عبور نمی‌کند.",
+        "در $\\mathbb{R}$ یک‌به‌یک است.",
+        "در $\\mathbb{R}$ یکنوای اکید است.",
+        "در بازهٔ $(\\circ, +\\infty)$ یک‌به‌یک است."
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0034.jpg",
+          "placement": "stem",
+          "box": [
+            42,
+            519,
+            154,
+            599
+          ]
+        }
+      ],
+      "review_notes": [
+        "Graph shows a piecewise linear function."
+      ]
+    },
+    {
+      "question_number": 603,
+      "question_page": 34,
+      "question_text": "اگر $f(x) = x^2\\sqrt{x}$ و $f^{-1}(2-5k) = 4$ باشد، مقدار $k$ کدام است؟",
+      "options": [
+        "$5$",
+        "$6$",
+        "$-6$",
+        "$-5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 604,
+      "question_page": 34,
+      "question_text": "وارون تابع $y = 2x - 3$ به صورت $f(x) + 3x = y$ قابل بیان است. ضابطهٔ $f^{-1}(x)$ کدام است؟",
+      "options": [
+        "$y = -\\frac{5}{2}x + \\frac{3}{2}$",
+        "$y = \\frac{3}{2}x - \\frac{5}{2}$",
+        "$y = -\\frac{2}{5}x - \\frac{3}{5}$",
+        "$y = -\\frac{2}{5}x + \\frac{3}{5}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 605,
+      "question_page": 34,
+      "question_text": "هرگاه $f(x) = 4 - 3x$ به‌طوری‌که $f^{-1}(x) - 5x = 3f^{-1}(x)$، وارون تابع $g(x)$ کدام است؟",
+      "options": [
+        "$\\frac{x-4}{6}$",
+        "$\\frac{x-6}{4}$",
+        "$\\frac{x+6}{4}$",
+        "$\\frac{x+4}{6}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 606,
+      "question_page": 34,
+      "question_text": "وارون تابع خطی $f$ بر تابع $f$ منطبق است. اگر $f(2) = 1$ باشد، $f(4)$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 607,
+      "question_page": 34,
+      "question_text": "اگر $f(x) = (5)f^{-1}(x) - 3x$ باشد، مقدار $(2)f^{-1}$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$5$",
+        "$-5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 608,
+      "question_page": 34,
+      "question_text": "ضابطهٔ وارون تابع $f(x) = |x+1| - |x-3|$ در بزرگ‌ترین بازه‌ای که اکیداً یکنواست کدام است؟",
+      "options": [
+        "$\\frac{x}{2} - 1$",
+        "$\\frac{x}{2} + 1$",
+        "$1 - \\frac{x}{2}$",
+        "$-\\frac{x}{2} - 1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

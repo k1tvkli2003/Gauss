@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-06-26",
+  "scope": {
+    "owned_paths": [
+      "scripts/repair_nardebam_duplicate_question_numbers.mjs",
+      "data/seed/review/nardebam/agent_reports"
+    ],
+    "pipeline_commands": [
+      "node scripts/repair_nardebam_duplicate_question_numbers.mjs",
+      "node scripts/normalize_nardebam_raw.mjs",
+      "node scripts/join_nardebam_source.mjs"
+    ]
+  },
+  "issue": {
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "raw_file": "data/seed/review/nardebam/raw/math-topic-14.json",
+    "normalized_file": "data/seed/review/nardebam/normalized/math-topic-14.json",
+    "before_duplicate_question_number_count": 94,
+    "before_numbering": "local 1..94",
+    "after_duplicate_question_number_count": 0,
+    "after_numbering": "global 1638..1731"
+  },
+  "evidence": [
+    "math-topic-13 currently has 69 normalized rows numbered 1569..1637.",
+    "math-topic-14 Jules replacement currently has 94 rows in source order and was local-numbered 1..94.",
+    "Renumbering those 94 present rows immediately after math-topic-13 gives the contiguous present-row range 1638..1731.",
+    "math-topic-16 is already normalized as 1823..1935.",
+    "Prior reports reference the active/plausible math-topic-15 task as math-topic-15-combinatorics-1735-1822."
+  ],
+  "repair": {
+    "script_change": "Added an idempotent math-topic-14 repair that only renumbers exactly 94 local rows 1..94 to 1638..1731, and accepts the already-repaired 1638..1731 state.",
+    "join_result": "Joined 2741 source questions; 776 conflict(s) -> data/seed/review/nardebam/join_conflicts.json",
+    "after_duplicate_question_number_counts": {
+      "math/visual_thinking_conics": 0,
+      "math/combinatorics": 88,
+      "math/derivative_applications": 64,
+      "physics/one_dimensional_motion": 2
+    }
+  },
+  "remaining_risk": {
+    "boundary_gap": "If math-topic-15 is confirmed as 1735..1822, then question numbers 1732..1734 remain an unresolved topic-boundary/completeness gap after this repair.",
+    "visual_conics_non_duplicate_conflicts": {
+      "missing_solution_count": 23,
+      "missing_solution_ranges": [
+        "1666..1678",
+        "1722..1731"
+      ]
+    },
+    "jules_prompt_suggestion": "Verify the math-topic-14/math-topic-15 boundary from source pages after visual_thinking_conics question 1731 and before combinatorics/probability question 1735. Determine whether source questions 1732..1734 exist, identify their topic ownership, and return a narrow repair artifact for the missing question rows if they belong to math-topic-14. Also repair missing visual_thinking_conics solutions for 1666..1678 and 1722..1731."
+  }
+}

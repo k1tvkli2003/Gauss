@@ -1,0 +1,49 @@
+{
+  "worker": 3,
+  "source_pdf": "C:/Users/K1/Desktop/New folder (2)/@kotob_konkoria(fizik_jame_tajrobi_nardebam_1405)/12.pdf",
+  "method": "AI visual inspection of rendered original PDF pages; only visibly printed magenta option headers recorded.",
+  "answers": {
+    "119": 1,
+    "120": 2,
+    "121": 1,
+    "122": 1,
+    "123": 1,
+    "124": 1,
+    "125": 2,
+    "126": 3,
+    "127": 2,
+    "128": 3,
+    "129": 4,
+    "215": 3,
+    "216": 2,
+    "217": 2,
+    "218": 4,
+    "219": 1,
+    "220": 2
+  },
+  "page_evidence": [
+    {
+      "pdf_page": 26,
+      "printed_page": 221,
+      "questions": [119, 120, 121],
+      "printed_options": [1, 2, 1],
+      "render": "tmp/pdfs/worker3/pdf12-page-026.png"
+    },
+    {
+      "pdf_page": 27,
+      "printed_page": 222,
+      "questions": [122, 123, 124, 125, 126, 127, 128, 129],
+      "printed_options": [1, 1, 1, 2, 3, 2, 3, 4],
+      "render": "tmp/pdfs/worker3/pdf12-page-027.png"
+    },
+    {
+      "pdf_page": 41,
+      "printed_page": 236,
+      "questions": [215, 216, 217, 218, 219, 220],
+      "printed_options": [3, 2, 2, 4, 1, 2],
+      "render": "tmp/pdfs/worker3/pdf12-page-041.png"
+    }
+  ],
+  "covered": [119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 215, 216, 217, 218, 219, 220],
+  "missing": []
+}

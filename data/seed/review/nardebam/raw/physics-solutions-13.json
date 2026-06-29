@@ -1,0 +1,1742 @@
+[
+  {
+    "question_number": 1128,
+    "solution_page": 437,
+    "stated_correct_option": 2,
+    "classic_solution": "در حالت اول سرعت ثابت است؛ از تعادل قائم $F_N+10-40=0$ پس $F_N=30N$ و با $f_k=\\mu_kF_N=12N$ نیروی افقی $F_1=12N$ است. با برعکس شدن نیروی قائم، $F'_N=50N$ و $f'_k=20N$ می‌شود، پس $\\vec a=(12-20)/4=-2\\hat i\\,m/s^2$.",
+    "media_regions": [
+      {
+        "page_file": "page_0242.jpg",
+        "box": [
+          175,
+          190,
+          430,
+          670
+        ],
+        "placement": "solution",
+        "alt": "دو حالت نیروهای وارد بر جسم 4 کیلوگرمی روی سطح افقی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1129,
+    "solution_page": 437,
+    "stated_correct_option": 3,
+    "classic_solution": "در آستانه حرکت، $f_{s,max}=F_1=30N$ و از $\\mu_sF_N=30$ با $\\mu_s=0.4$ نتیجه می‌شود $F_N=75N$. تعادل قائم $75-F_2-50=0$ می‌دهد $F_2=25N$. در حالت دوم با افزایش نیروها، $F'_N=80N$ و $f'_{s,max}=32N$ است؛ چون $F'_1=35N$ جسم حرکت می‌کند و اصطکاک جنبشی $20N$ می‌شود، پس اصطکاک وارد بر جسم $10N$ کاهش یافته است.",
+    "media_regions": [
+      {
+        "page_file": "page_0242.jpg",
+        "box": [
+          165,
+          735,
+          430,
+          1205
+        ],
+        "placement": "solution",
+        "alt": "دو حالت آستانه حرکت و حرکت جسم پنج کیلوگرمی کنار دیوار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1130,
+    "solution_page": 437,
+    "stated_correct_option": 1,
+    "classic_solution": "در حالت اول تعادل قائم $F_{N1}+20-40=0$ و تعادل افقی $F_1=f_{k1}=10N$ است. پس از حذف نیروی قائم، $F_{N2}=40N$ و چون اصطکاک با نیروی عمودی متناسب است $f_{k2}=20N$. نیروی اصطکاک بزرگ‌تر از نیروی محرک شده و شتاب $a=(10-20)/4=-2.5m/s^2$ می‌شود؛ از $v^2-v_0^2=2a\\Delta x$، مسافت توقف $20m$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0242.jpg",
+        "box": [
+          155,
+          1255,
+          475,
+          1775
+        ],
+        "placement": "solution",
+        "alt": "نیروهای وارد بر جسم پیش و پس از حذف نیروی قائم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1131,
+    "solution_page": 437,
+    "stated_correct_option": 3,
+    "classic_solution": "در حالت سکون آسانسور، $F_{N1}=mg$ و $f_{s,max1}=0.75mg$ است. در حالت شتاب‌دار، برای برابر شدن اصطکاک جنبشی با بیشینه اصطکاک حالت اول داریم $0.75mg=0.6m(10+a)$؛ پس $a=2.5m/s^2$ و جهت شتاب آسانسور رو به بالا است.",
+    "media_regions": [
+      {
+        "page_file": "page_0242.jpg",
+        "box": [
+          180,
+          1795,
+          500,
+          2180
+        ],
+        "placement": "solution",
+        "alt": "مکعب روی کف آسانسور در حالت سکون"
+      },
+      {
+        "page_file": "page_0243.jpg",
+        "box": [
+          80,
+          215,
+          360,
+          490
+        ],
+        "placement": "solution",
+        "alt": "مکعب روی کف آسانسور شتاب‌دار"
+      }
+    ],
+    "review_notes": [
+      "حل از انتهای page_0242 شروع و در ابتدای page_0243 کامل شده است."
+    ]
+  },
+  {
+    "question_number": 1132,
+    "solution_page": 438,
+    "stated_correct_option": 3,
+    "classic_solution": "شتاب توقف مکعب را $a_s$ می‌گیرد. در آسانسور ساکن $a_s=-\\mu_kg$ و از رابطه توقف، $\\mu_k=0.5$ به دست می‌آید. اگر آسانسور با $2.5m/s^2$ رو به بالا تندشونده باشد، $l'_s=72cm$ یعنی $18cm$ کمتر از حالت اولیه است؛ اگر با همین شتاب کندشونده باشد، $l''_s=120cm$ یعنی $30cm$ بیشتر از حالت اولیه است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1133,
+    "solution_page": 438,
+    "stated_correct_option": 2,
+    "classic_solution": "برای جسم کنار دیوار، در سه حالت سکون، آستانه حرکت و سرعت ثابت نیروها مقایسه شده‌اند. از مقایسه حالت‌های (۱) و (۲) نتیجه می‌شود برای رسیدن به آستانه حرکت باید نیروی افقی کاهش یابد، یعنی $F_2<F_1$؛ و از مقایسه حالت‌های (۲) و (۳)، چون $\\mu_s>\\mu_k$، داریم $F_3<F_2$.",
+    "media_regions": [
+      {
+        "page_file": "page_0243.jpg",
+        "box": [
+          145,
+          1265,
+          1285,
+          1535
+        ],
+        "placement": "solution",
+        "alt": "سه نمودار جسم کنار دیوار در سکون، آستانه حرکت و سرعت ثابت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1134,
+    "solution_page": 438,
+    "stated_correct_option": 3,
+    "classic_solution": "ابتدا $f_{s,max}=0.2\\times(3F/4)=0.15F$ و $mg=20N$ محاسبه می‌شود. اگر جسم در آستانه حرکت رو به بالا باشد، $F=f_{s,max}+mg$ و $F\\simeq23.5N$؛ اگر در آستانه حرکت رو به پایین باشد، $F+f_{s,max}=mg$ و $F\\simeq17.4N$. پس برای $17.4N<F<23.5N$ جسم ساکن می‌ماند.",
+    "media_regions": [
+      {
+        "page_file": "page_0243.jpg",
+        "box": [
+          130,
+          1850,
+          335,
+          2145
+        ],
+        "placement": "solution",
+        "alt": "حالت نخست جسم کنار دیوار با نیروی قائم و اصطکاک"
+      },
+      {
+        "page_file": "page_0244.jpg",
+        "box": [
+          165,
+          185,
+          350,
+          445
+        ],
+        "placement": "solution",
+        "alt": "حالت دوم جسم کنار دیوار در آستانه لغزش"
+      }
+    ],
+    "review_notes": [
+      "حل از page_0243 به page_0244 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 1135,
+    "solution_page": 439,
+    "stated_correct_option": 3,
+    "classic_solution": "طبق شکل، $F_N=F_1$ و $f_k=0.25F_1$. چون جسم با سرعت ثابت بالا می‌رود، $F_2=mg+f_k$ و با $F_2=3F_1/4$، داریم $F_1=40N$ و $F_2=30N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0244.jpg",
+        "box": [
+          165,
+          480,
+          430,
+          720
+        ],
+        "placement": "solution",
+        "alt": "جسم دو کیلوگرمی کنار دیوار با نیروهای افقی و قائم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1136,
+    "solution_page": 439,
+    "stated_correct_option": 4,
+    "classic_solution": "در حالت آستانه حرکت رو به بالا $F_N=F_1$ و $\\mu_sF_1=mg$، پس $F_1=40N$. در حالت دوم نیروی قائم $50N$ رو به بالا است و چون از $f_{s,max}+mg=40N$ بزرگ‌تر است، جسم حرکت می‌کند؛ آنگاه $f_k=0.3\\times40=12N$ و از $50-20-12=2a$، $a=9m/s^2$ و پس از $2m$ سرعت $6m/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0244.jpg",
+        "box": [
+          170,
+          760,
+          460,
+          1215
+        ],
+        "placement": "solution",
+        "alt": "حالت آستانه و حرکت جسم کنار دیوار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1137,
+    "solution_page": 439,
+    "stated_correct_option": 3,
+    "classic_solution": "در حالت نخست آستانه حرکت به پایین برقرار است: $F_N=F$ و $mg=f_{s,max}=\\mu_sF$. با کاهش $F$ به $0.6F$، $f_{s,max}$ کم‌تر از وزن می‌شود و جسم پایین می‌لغزد. با $\\mu_k=0.8\\mu_s$، داریم $f_k=0.48mg$ و در نتیجه $a=0.52g=5.2m/s^2$.",
+    "media_regions": [
+      {
+        "page_file": "page_0244.jpg",
+        "box": [
+          165,
+          1285,
+          440,
+          1695
+        ],
+        "placement": "solution",
+        "alt": "دو شکل جسم کنار دیوار قبل و بعد از کاهش نیروی افقی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1138,
+    "solution_page": 439,
+    "stated_correct_option": 2,
+    "classic_solution": "ابتدا $F_N=40N$ و $f_{s,max}=0.75\\times40=30N$ است. اگر نیروی قائم رو به بالا باشد، برای شروع حرکت رو به بالا $F_2=50N$ لازم است؛ اگر رو به پایین باشد، حداقل نیرو $10N$ است. چون حداقل مقدار خواسته شده است، حالت دوم انتخاب می‌شود. برای حرکت با سرعت ثابت پس از آن، اصطکاک جنبشی باید $30N$ باشد و از $30=0.6F'_1$ نتیجه می‌شود $F'_1=50N$؛ پس $F_1$ باید از $40N$ به $50N$ برسد، یعنی $10N$ افزایش یابد.",
+    "media_regions": [
+      {
+        "page_file": "page_0244.jpg",
+        "box": [
+          170,
+          1775,
+          420,
+          2235
+        ],
+        "placement": "solution",
+        "alt": "حالت اول آستانه حرکت جسم کنار دیوار"
+      },
+      {
+        "page_file": "page_0245.jpg",
+        "box": [
+          120,
+          170,
+          410,
+          790
+        ],
+        "placement": "solution",
+        "alt": "دو حالت ادامه حرکت جسم کنار دیوار"
+      }
+    ],
+    "review_notes": [
+      "حل در page_0245 کامل شده است."
+    ]
+  },
+  {
+    "question_number": 1139,
+    "solution_page": 440,
+    "stated_correct_option": 2,
+    "classic_solution": "اگر فقط $F_2$ حذف شود، چون $mg$ و $F_2$ هر دو رو به پایین‌اند جسم در آستانه لغزش رو به پایین می‌ماند. در دو شکل، تعادل افقی $F_N=10N$ و $f_{s,max}=10\\mu_s$ است. از روابط قائم دو حالت $F_2+mg=f_s$ و $F_3-f_s-mg=0$ نتیجه می‌شود $m=0.3kg$ و $\\mu_s=0.8$. در دو تست بعدی، $f_s=3N$ و $f'_s=3N$ و نسبت آن‌ها برابر ۱ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0245.jpg",
+        "box": [
+          95,
+          830,
+          630,
+          1515
+        ],
+        "placement": "solution",
+        "alt": "چند حالت جسم کنار دیوار با نیروهای قائم و افقی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1140,
+    "solution_page": 440,
+    "stated_correct_option": 2,
+    "classic_solution": "برای کتاب در آسانسور، شتاب بیشینه زمانی است که اصطکاک ایستایی بیشینه رو به بالا باشد. با $F_N=120N$ و $\\mu_sF_N-mg=ma$، داریم $0.2\\times120-20=2a$ و $a=2m/s^2$.",
+    "media_regions": [
+      {
+        "page_file": "page_0245.jpg",
+        "box": [
+          115,
+          1570,
+          520,
+          1975
+        ],
+        "placement": "solution",
+        "alt": "کتاب روی دیواره آسانسور با نیروی افقی 120 نیوتون"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1141,
+    "solution_page": 440,
+    "stated_correct_option": 1,
+    "classic_solution": "چون جسم در راستای قائم حرکت نمی‌کند، $F_N=W=mg=12N$. نیروی سطح بر جسم برآیند عمودی و اصطکاک است؛ از $R^2=F_N^2+f_k^2$ و $13^2=12^2+f_k^2$، $f_k=5N$ به دست می‌آید. سپس شتاب کاهنده $a=-f_k/m=-25/6m/s^2$ و زمان توقف با $0=v_0+at$ برابر $2.4s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0245.jpg",
+        "box": [
+          110,
+          1990,
+          470,
+          2275
+        ],
+        "placement": "solution",
+        "alt": "جسم روی سطح افقی با نیروی سطح R و اصطکاک"
+      },
+      {
+        "page_file": "page_0246.jpg",
+        "box": [
+          150,
+          780,
+          410,
+          1050
+        ],
+        "placement": "solution",
+        "alt": "ادامه نیروهای جسم روی سطح افقی"
+      }
+    ],
+    "review_notes": [
+      "ادامه محاسبه زمان توقف در ابتدای page_0246 آمده است."
+    ]
+  },
+  {
+    "question_number": 1142,
+    "solution_page": 441,
+    "stated_correct_option": 4,
+    "classic_solution": "در آستانه حرکت، اصطکاک وارد بر جسم $f_{s,max}$ است. چون جسم ساکن است، برآیند دو نیروی $\\vec F$ و $mg$ باید خلاف برآیند $F_N$ و $f_s$ باشد. از هندسه شکل، زاویه بین $R$ و اصطکاک $30^\\circ$ است و $\\tan30^\\circ=F_N/f_s=1/\\mu_s$، پس $\\mu_s=\\sqrt3$.",
+    "media_regions": [
+      {
+        "page_file": "page_0246.jpg",
+        "box": [
+          150,
+          455,
+          720,
+          760
+        ],
+        "placement": "solution",
+        "alt": "جسم روی سطح با نیروهای F، وزن، نیروی عمودی و اصطکاک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1143,
+    "solution_page": 441,
+    "stated_correct_option": 3,
+    "classic_solution": "بردار نیروی سطح مؤلفه‌های $\\hat i$ و $\\hat j$ دارد که به ترتیب نماینده اصطکاک جنبشی و نیروی عمودی‌اند. از $F_N=200N=mg$ جرم $20kg$ و از مؤلفه افقی $f_k=60N$ به دست می‌آید. چون شتاب خلاف جهت حرکت است، از $F_2-f_k-F_1=ma$ با $a=2m/s^2$ داریم $F_2=220N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0246.jpg",
+        "box": [
+          160,
+          820,
+          500,
+          1045
+        ],
+        "placement": "solution",
+        "alt": "جسم روی سطح با نیروی سطح، اصطکاک و نیروهای افقی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1144,
+    "solution_page": 441,
+    "stated_correct_option": 2,
+    "classic_solution": "از جابه‌جایی $24m$ در $4s$ شتاب $3m/s^2$ به دست می‌آید. تعادل قائم $F_N=60N$ و معادله افقی $60-f_k=5\\times3$ می‌دهد $f_k=45N$. نیروی سطح برابر برآیند $F_N$ و $f_k$ است: $R=\\sqrt{60^2+45^2}=75N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0246.jpg",
+        "box": [
+          150,
+          1105,
+          610,
+          1400
+        ],
+        "placement": "solution",
+        "alt": "جسم پنج کیلوگرمی روی سطح افقی با شتاب و نیروهای عمودی و اصطکاک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1145,
+    "solution_page": 441,
+    "stated_correct_option": 4,
+    "classic_solution": "ابتدا $F_N+20-60=0$ پس $F_N=40N$ و $f_{s,max}=0.75\\times40=30N$. چون $F_1>f_{s,max}$، جسم حرکت می‌کند و اصطکاک جنبشی $f_k=0.5\\times40=20N$ است. پس اندازه نیرویی که سطح به جسم وارد می‌کند $R=\\sqrt{40^2+20^2}=20\\sqrt5N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0246.jpg",
+        "box": [
+          150,
+          1450,
+          470,
+          1730
+        ],
+        "placement": "solution",
+        "alt": "جسم شش کیلوگرمی با نیروی قائم و افقی روی سطح"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1146,
+    "solution_page": 441,
+    "stated_correct_option": 3,
+    "classic_solution": "در حالت اول $F_N=40N$ و چون $F_1<f_{s,max}=32N$ جسم ساکن می‌ماند؛ پس $f_s=20N$ و $R=20\\sqrt5N$. در حالت دوم $F'_N=30N$ و $f'_{s,max}=24N$، پس جسم حرکت می‌کند و $f'_k=15N$؛ بنابراین $R'=\\sqrt{30^2+15^2}=15\\sqrt5N$ و $R'/R=3/4$.",
+    "media_regions": [
+      {
+        "page_file": "page_0246.jpg",
+        "box": [
+          150,
+          1800,
+          470,
+          2130
+        ],
+        "placement": "solution",
+        "alt": "حالت اول جسم پنج کیلوگرمی با اصطکاک ایستایی"
+      },
+      {
+        "page_file": "page_0247.jpg",
+        "box": [
+          120,
+          210,
+          360,
+          525
+        ],
+        "placement": "solution",
+        "alt": "حالت دوم جسم پنج کیلوگرمی با اصطکاک جنبشی"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در ابتدای page_0247 آمده است."
+    ]
+  },
+  {
+    "question_number": 1147,
+    "solution_page": 442,
+    "stated_correct_option": 4,
+    "classic_solution": "برای جسم متحرک روی سطح افقی، زاویه نیروی سطح با افق فقط به ضریب اصطکاک جنبشی وابسته است، زیرا $\\tan\\theta=F_N/f_k=1/\\mu_k$. در دو حالت، اصطکاک جنبشی است و $\\theta_1=\\theta_2$. سپس با $F_{N1}=30N$ و $f_{k1}=10N$، $\\mu_k=1/3$، و برای حالت دوم $F_{N2}=20N$، $f_{k2}=20/3N$، پس $R_2=20\\sqrt{10}/3$ و $R_2=(2/3)R_1$.",
+    "media_regions": [
+      {
+        "page_file": "page_0247.jpg",
+        "box": [
+          100,
+          610,
+          1315,
+          1770
+        ],
+        "placement": "solution",
+        "alt": "نکته زاویه نیروی سطح و دو حالت نیروی وارد بر جسم متحرک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1148,
+    "solution_page": 442,
+    "stated_correct_option": 2,
+    "classic_solution": "هر طرف دست‌ها به کتاب اصطکاک ایستایی بیشینه وارد می‌کند. برای حرکت تندشونده رو به بالا، $2f_{s,max}-mg=ma$ و با داده‌ها $f_{s,max}=12N$. از $f_{s,max}=\\mu_sF_N$ و $\\mu_s=0.75$ نتیجه می‌شود $F_N=16N$. نیروی هر دست بر کتاب برآیند $F_N$ و $f_s$ است و $R=\\sqrt{16^2+12^2}=20N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0247.jpg",
+        "box": [
+          105,
+          1845,
+          500,
+          2240
+        ],
+        "placement": "solution",
+        "alt": "کتاب بین دو دست با نیروهای عمودی و اصطکاک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1149,
+    "solution_page": 443,
+    "stated_correct_option": 4,
+    "classic_solution": "در شکل، ابتدا از $F_N=F_1=24N$ و $R=30N$ داریم $f_{s,max}=18N$ و $\\mu_s=0.75$. چون جسم ساکن است و $f_{s,max}>mg=9N$، جهت اصطکاک باید پایین باشد. از تعادل قائم، $F_2=f_{s,max}+mg=27N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0248.jpg",
+        "box": [
+          170,
+          185,
+          420,
+          680
+        ],
+        "placement": "solution",
+        "alt": "جسم کنار دیوار با نیروی سطح و اصطکاک بیشینه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1150,
+    "solution_page": 443,
+    "stated_correct_option": 2,
+    "classic_solution": "در حالت اول جسم ساکن است، پس $F_N=40N$ و $f_s=mg=50N$ و نتیجه می‌شود $f_{s,max}\\ge50N$. در حالت دوم نیروی محرک عمودی $F_2-mg=30N$ است؛ چون این مقدار جسم را حرکت نمی‌دهد، اصطکاک ایستایی $30N$ است و نیروی سطح $R'=\\sqrt{40^2+30^2}=50N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0248.jpg",
+        "box": [
+          170,
+          730,
+          690,
+          1025
+        ],
+        "placement": "solution",
+        "alt": "دو حالت جسم پنج کیلوگرمی کنار دیوار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1151,
+    "solution_page": 443,
+    "stated_correct_option": 4,
+    "classic_solution": "در حالت نخست برای سکون، $f_{s,max}+30=50$ پس $f_{s,max}=20N$ و با $\\mu_sF_1=20$، $F_1=40N$. در این حالت $R_1=\\sqrt{20^2+40^2}=20\\sqrt5N$. در حالت دوم با افزایش $F_2$ به $90N$، جسم رو به بالا حرکت می‌کند و اصطکاک جنبشی $f_k=5N$ رو به پایین است؛ پس $R_2=\\sqrt{5^2+40^2}=5\\sqrt{65}N$ و $R_2/R_1=\\sqrt{13}/4$.",
+    "media_regions": [
+      {
+        "page_file": "page_0248.jpg",
+        "box": [
+          155,
+          1080,
+          470,
+          1640
+        ],
+        "placement": "solution",
+        "alt": "دو حالت جسم پنج کیلوگرمی کنار دیوار با تغییر نیروی قائم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1152,
+    "solution_page": 443,
+    "stated_correct_option": 3,
+    "classic_solution": "چون جسم در آستانه حرکت رو به پایین است، $f_{s,max}$ رو به بالا و $F_N=F$ است. با $\\tan37^\\circ=f_{s,max}/F_N=\\mu_s$، داریم $\\mu_s=3/4$. از تعادل قائم $\\mu_sF+F=mg$ نتیجه می‌شود $F=20N$. در حالت دوم هر نیرو $40N$ است و چون $F>mg$ جسم به بالا میل می‌کند، اما $F-mg=5N<f'_{s,max}=30N$ پس ساکن می‌ماند و نیروی سطح $5\\sqrt{65}N$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0248.jpg",
+        "box": [
+          145,
+          1755,
+          475,
+          2180
+        ],
+        "placement": "solution",
+        "alt": "حالت آستانه حرکت کنار دیوار با زاویه نیروی سطح"
+      },
+      {
+        "page_file": "page_0249.jpg",
+        "box": [
+          85,
+          180,
+          380,
+          520
+        ],
+        "placement": "solution",
+        "alt": "ادامه حالت دوم با دو نیروی 40 نیوتونی"
+      }
+    ],
+    "review_notes": [
+      "بخش پایانی حل در ابتدای page_0249 است."
+    ]
+  },
+  {
+    "question_number": 1153,
+    "solution_page": 444,
+    "stated_correct_option": 2,
+    "classic_solution": "در آسانسور ساکن و جسم در آستانه سرخوردن، $F_N=F$ و $f_{s,max}=mg$، پس $F=40N$. در حالت دوم شتاب آسانسور رو به پایین است و اصطکاک کمتر از بیشینه می‌شود؛ با $mg-f_s=ma$، $f_s=16N$ و نیروی دیواره آسانسور $R=\\sqrt{40^2+16^2}=8\\sqrt{29}N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0249.jpg",
+        "box": [
+          155,
+          610,
+          780,
+          1015
+        ],
+        "placement": "solution",
+        "alt": "دو حالت جسم در آسانسور ساکن و شتاب‌دار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1154,
+    "solution_page": 444,
+    "stated_correct_option": 3,
+    "classic_solution": "جسم نسبت به واگن ساکن است، پس $f_s=mg=40N$. از اندازه نیروی سطح $R=50N$ داریم $50^2=F_N^2+40^2$ و $F_N=30N$ در جهت محور $x$. در راستای افقی، $F_N+F=ma$ و با $m=4kg$، شتاب جسم و واگن $5m/s^2$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0249.jpg",
+        "box": [
+          100,
+          1080,
+          650,
+          1455
+        ],
+        "placement": "solution",
+        "alt": "جسم آویزان در واگن شتاب‌دار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1155,
+    "solution_page": 444,
+    "stated_correct_option": 2,
+    "classic_solution": "برای نردبان در تعادل، از داده‌های تست $F_{N1}=600N$ و $R=650N$ نتیجه می‌شود $f_s=600N$. سپس از $\\sqrt{f_s^2+F_{N2}^2}=650$ داریم $F_{N2}=250N$ و از تعادل قائم $mg=F_{N2}$ جرم نردبان $25kg$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0249.jpg",
+        "box": [
+          100,
+          1505,
+          500,
+          1785
+        ],
+        "placement": "solution",
+        "alt": "نردبان تکیه‌داده به دیوار و زمین با نیروهای تماسی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1156,
+    "solution_page": 444,
+    "stated_correct_option": 3,
+    "classic_solution": "نیروی دیوار به نردبان $F_{N1}$ و نیروی افقی زمین بر نردبان برآیند $F_{N2}$ و $f_{s,max}$ است. چون $F_{N1}=\\frac35\\sqrt{F_{N2}^2+f_{s,max}^2}$ و در تعادل افقی $F_{N1}=f_{s,max}$، با $f_{s,max}=\\mu_sF_{N2}$ نتیجه می‌شود $\\mu_s=3/4=0.75$.",
+    "media_regions": [
+      {
+        "page_file": "page_0249.jpg",
+        "box": [
+          105,
+          1840,
+          505,
+          2165
+        ],
+        "placement": "solution",
+        "alt": "نردبان در آستانه سرخوردن با نیروی دیوار و زمین"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1157,
+    "solution_page": 445,
+    "stated_correct_option": 4,
+    "classic_solution": "از شکل، نیروی دیوار به نردبان $\\vec R_1=-24\\hat i+16\\hat j$ است، پس $F_{N1}=24N$ و $f_{s1}=16N$. تعادل افقی نردبان می‌دهد $f_{s2}=24N$ و از زاویه $45^\\circ$ نیروی سطح افقی، $F_{N2}=f_{s2}=24N$. تعادل قائم $W=f_{s1}+F_{N2}=40N$ و جرم $4kg$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0250.jpg",
+        "box": [
+          150,
+          185,
+          560,
+          575
+        ],
+        "placement": "solution",
+        "alt": "نردبان میان زمین و دیوار با بردارهای نیروی سطح"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1158,
+    "solution_page": 445,
+    "stated_correct_option": 4,
+    "classic_solution": "نردبان همراه واگن در راستای افقی با شتاب $2.5m/s^2$ حرکت می‌کند و در راستای قائم شتابی ندارد. از تعادل قائم $F_{N2}=mg=20N$ و از راستای افقی $F_{N1}-f_s=ma=5N$. با فرض داده‌شده $F_{N1}=0.8R$ و $R^2=F_{N2}^2+f_s^2$، حل معادله می‌دهد $f_s=15N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0250.jpg",
+        "box": [
+          140,
+          630,
+          620,
+          1000
+        ],
+        "placement": "solution",
+        "alt": "نردبان داخل واگن شتاب‌دار با نیروهای تماسی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1159,
+    "solution_page": 445,
+    "stated_correct_option": 4,
+    "classic_solution": "برای نردبان داخل آسانسور، در حالت سکون $W=240N$ و $F_{N2}=W=240N$. از $R=260N$ نتیجه می‌شود $f_s=100N$ و تعادل افقی $F_{N1}=100N$. در آستانه سرخوردن هنگام شتاب قائم، با ثابت ماندن $F_{N1}$ و کاهش $F'_{N2}=m(g-a)=180N$، شرط $\\mu_sF'_{N2}=100N$ می‌دهد $\\mu_s=5/9$؛ نسبت $F'_{N1}/F_{N1}=1$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0250.jpg",
+        "box": [
+          125,
+          1120,
+          525,
+          1495
+        ],
+        "placement": "solution",
+        "alt": "نردبان در آسانسور و نیروهای دیوار و کف"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1160,
+    "solution_page": 445,
+    "stated_correct_option": 2,
+    "classic_solution": "کشش دو سر طناب ناچیزجرم برابر است، پس $F_A=F_B$. نیروهایی که طناب به اشخاص وارد می‌کند واکنش هم نیستند؛ واکنش هرکدام نیروی شخص بر طناب است. چون جرم دو شخص یکسان است، حرکت شخص A و سکون B ناشی از کمتر بودن اصطکاک ایستایی بین شخص A و سطح است.",
+    "media_regions": [
+      {
+        "page_file": "page_0250.jpg",
+        "box": [
+          100,
+          1815,
+          790,
+          2145
+        ],
+        "placement": "solution",
+        "alt": "دو شخص طنابی را می‌کشند و نیروهای کشش و اصطکاک نشان داده شده است"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1161,
+    "solution_page": 446,
+    "stated_correct_option": 2,
+    "classic_solution": "نیروسنج کشش نخ را نشان می‌دهد. چون آسانسور کندشونده رو به بالا حرکت می‌کند، شتاب رو به پایین است؛ بنابراین $mg-T=ma$ و $T=m(g-a)=20(10-2.5)=150N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0251.jpg",
+        "box": [
+          75,
+          190,
+          225,
+          420
+        ],
+        "placement": "solution",
+        "alt": "جسم آویزان از نیروسنج با شتاب رو به پایین"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1162,
+    "solution_page": 446,
+    "stated_correct_option": 4,
+    "classic_solution": "در حالت اول $T-f_k=ma$ و در حالت دوم $2T-f_k=m(a+4)$. با $f_k=\\mu_kmg=12.5N$ و $m=5kg$، از دو معادله $T-12.5=5a$ و $2T-12.5=5a+20$ نتیجه می‌شود $T=20N$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1163,
+    "solution_page": 446,
+    "stated_correct_option": 2,
+    "classic_solution": "کمترین زمان بالا بردن جسم با بیشترین کشش طناب است. از $T-mg=ma$ با $T=65N$ و $m=5kg$، شتاب $3m/s^2$ می‌شود. برای جابه‌جایی $24m$ از سکون، $24=\\frac12at^2$ و $t=4s$.",
+    "media_regions": [
+      {
+        "page_file": "page_0251.jpg",
+        "box": [
+          150,
+          600,
+          310,
+          805
+        ],
+        "placement": "solution",
+        "alt": "جسم پنج کیلوگرمی آویزان از طناب در حرکت رو به بالا"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1164,
+    "solution_page": 446,
+    "stated_correct_option": 3,
+    "classic_solution": "ابتدا از $v^2-v_0^2=2a\\Delta y$، شتاب آسانسور $a=4m/s^2$ رو به بالا به دست می‌آید. عدد ترازو $F_N=m(g+a)$ است، پس $1050=m(10+4)$ و $m=75kg$. برای مجموعه آسانسور و شخص، $T-(m+M)g=(m+M)a$ و با $M=775kg$ نتیجه می‌شود $T=11900N=11.9kN$.",
+    "media_regions": [
+      {
+        "page_file": "page_0251.jpg",
+        "box": [
+          115,
+          900,
+          470,
+          1210
+        ],
+        "placement": "solution",
+        "alt": "شخص روی ترازو در آسانسور با شتاب رو به بالا"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1165,
+    "solution_page": 446,
+    "stated_correct_option": 3,
+    "classic_solution": "برای وزنه آونگی، برداری قانون دوم نوشته شده است: $\\vec W+\\vec T=m\\vec a$. با داده‌های شکل، $\\vec T=-2.8\\hat i+2.1\\hat j$ و اندازه کشش $T=\\sqrt{2.8^2+2.1^2}=3.5N$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0251.jpg",
+        "box": [
+          105,
+          1250,
+          500,
+          1570
+        ],
+        "placement": "solution",
+        "alt": "گوی آونگی در دو موقعیت A و B با بردار کشش"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1166,
+    "solution_page": 446,
+    "stated_correct_option": 3,
+    "classic_solution": "بر کره سه نیرو وارد است: وزن، نیروی عمودی دیوار قائم و نیروی عمودی دیواره مایل. چون کره ساکن است، $\\vec F_{N1}+\\vec F_{N2}+\\vec W=0$ و برآیند $F_{N1}$ و $W$ با $F_{N2}$ هم‌اندازه است. پس $F_{N2}=\\sqrt{30^2+(2\\times10)^2}=10\\sqrt{13}N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0251.jpg",
+        "box": [
+          105,
+          1615,
+          430,
+          1910
+        ],
+        "placement": "solution",
+        "alt": "کره بین دیوار قائم و سطح مایل با نیروهای عمودی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1167,
+    "solution_page": 446,
+    "stated_correct_option": 3,
+    "classic_solution": "برای گره‌ای که سه طناب به آن وصل است، برآیند سه کشش صفر است: $\\vec T_1+\\vec T_2+\\vec T_3=0$. بنابراین یکی از کشش‌ها با برآیند دوتای دیگر هم‌اندازه و خلاف‌جهت است و $T_3=\\sqrt{T_1^2+T_2^2}$؛ پس $T_3$ از هر یک از $T_1$ و $T_2$ بزرگ‌تر است.",
+    "media_regions": [
+      {
+        "page_file": "page_0251.jpg",
+        "box": [
+          100,
+          1970,
+          530,
+          2235
+        ],
+        "placement": "solution",
+        "alt": "سه طناب متصل به گره کنار دیوار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1168,
+    "solution_page": 447,
+    "stated_correct_option": 2,
+    "classic_solution": "برای تعادل صخره‌نورد، برآیند کشش طناب‌ها در راستای قائم باید وزن را خنثی کند. از هندسه شکل، زاویه‌های مشخص‌شده برابرند و $\\tan\\theta=T_1/T_2=6/2.5=2.4$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0252.jpg",
+        "box": [
+          180,
+          210,
+          650,
+          520
+        ],
+        "placement": "solution",
+        "alt": "صخره‌نورد آویزان از دو نخ با طول‌های 2.5 و 6 متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1169,
+    "solution_page": 447,
+    "stated_correct_option": 3,
+    "classic_solution": "مجموعه ساکن است. در نقطه $P$، برآیند $T_2$ و $T_3$ باید هم‌اندازه و خلاف جهت $T_1$ باشد؛ چون زاویه $T_1$ با افق $45^\\circ$ است، $T_2=T_3$. برای جسم $B$، $T_3=m_Bg$ و برای جسم $A$ در آستانه سکون، $T_2=\\mu_sm_Ag$؛ پس $m_B=0.4\\times20=8kg$. با افزایش جرم $A$، اصطکاک ایستایی لازم همچنان برابر $T_2$ است، پس نسبت $f_s/f_{s,max}$ برابر ۱ باقی می‌ماند.",
+    "media_regions": [
+      {
+        "page_file": "page_0252.jpg",
+        "box": [
+          150,
+          615,
+          650,
+          1025
+        ],
+        "placement": "solution",
+        "alt": "جسم A روی میز و جسم B آویزان از گره طناب‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1170,
+    "solution_page": 447,
+    "stated_correct_option": 2,
+    "classic_solution": "برای کره ساکن کنار دیوار، سه نیرو وزن، نیروی عمودی دیوار و کشش نخ وارد است. برآیند $F_N$ و $W$ با کشش هم‌اندازه است. از هندسه $\\sin\\alpha=R/(L+R)=F_N/F$ و با $m=0.6kg$ نتیجه می‌شود $F_N=3\\sqrt2/2N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0252.jpg",
+        "box": [
+          130,
+          1070,
+          500,
+          1425
+        ],
+        "placement": "solution",
+        "alt": "کره تکیه‌داده به دیوار و نگه‌داشته‌شده با نخ"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1171,
+    "solution_page": 447,
+    "stated_correct_option": 3,
+    "classic_solution": "طبق شکل زاویه کشش نخ (۲) با افق $45^\\circ$ است، پس برای تعادل باید کشش نخ (۱) هم‌اندازه وزن باشد: $T_1=mg=20N$. بلافاصله پس از پاره‌شدن نخ (۱)، نیروی خالص به اندازه $T_1$ است و با $m=2kg$، شتاب $a=10m/s^2$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0252.jpg",
+        "box": [
+          150,
+          1510,
+          500,
+          1760
+        ],
+        "placement": "solution",
+        "alt": "گلوله متصل به دو نخ با زوایای 45 درجه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1172,
+    "solution_page": 447,
+    "stated_correct_option": 3,
+    "classic_solution": "در میان سه میله ساکن، نیروی افقی خالص باید صفر باشد. وزن و نیروی عمودی قائم‌اند و فقط کشش نخ ممکن است مؤلفه افقی داشته باشد؛ بنابراین برای صفر بودن مؤلفه افقی، کشش باید قائم باشد. این وضعیت فقط در شکل (پ) دیده می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0252.jpg",
+        "box": [
+          120,
+          1820,
+          735,
+          2035
+        ],
+        "placement": "solution",
+        "alt": "سه میله روی سطح با نخ در سه جهت مختلف"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1173,
+    "solution_page": 447,
+    "stated_correct_option": 2,
+    "classic_solution": "برای میله در تعادل، $F_N=mg=200N$ و در راستای افقی $T=f_s$. چون نیرویی که میله به سطح افقی وارد می‌کند $R=250N$ است، از $R^2=f_s^2+F_N^2$ داریم $f_s=150N$، پس کشش نخ نیز $150N$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0252.jpg",
+        "box": [
+          110,
+          2070,
+          480,
+          2290
+        ],
+        "placement": "solution",
+        "alt": "میله تکیه‌داده به سطح و کشیده‌شده با نخ افقی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1174,
+    "solution_page": 448,
+    "stated_correct_option": 1,
+    "classic_solution": "اگر طول فنر در حالت کشیده با نیروی $F$ برابر $L_1$ و در حالت فشرده با همان نیرو $L_2$ باشد، از $k(L_1-L_0)=k(L_0-L_2)$ نتیجه می‌شود $L_0=(L_1+L_2)/2=(14+8)/2=11cm$. برای نیروی $2F$، افزایش طول دو برابر می‌شود و $L_3=17cm$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1175,
+    "solution_page": 448,
+    "stated_correct_option": 3,
+    "classic_solution": "نیروی فنر فشرده $F_e=kx=500\\times0.01=5N$ است و رو به پایین به جسم وارد می‌شود. تعادل قائم می‌دهد $F_N=F_e+mg=5+20=25N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0253.jpg",
+        "box": [
+          115,
+          695,
+          305,
+          950
+        ],
+        "placement": "solution",
+        "alt": "جسم روی سطح با فنر فشرده و نیروی عمودی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1176,
+    "solution_page": 448,
+    "stated_correct_option": 4,
+    "classic_solution": "وزن گلوله $20N$ و نیروی شناوری $8N$ است، پس در تعادل نیروی فنر رو به بالا باید $F_e=mg-F_b=12N$ باشد. با $F_e=kx=100x$، افزایش طول $x=0.12m=12cm$ است و اگر طول اولیه در آب $40cm$ باشد، طول فنر $52cm$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0253.jpg",
+        "box": [
+          95,
+          1035,
+          310,
+          1390
+        ],
+        "placement": "solution",
+        "alt": "گلوله آویزان از فنر در ظرف آب با شناوری"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1177,
+    "solution_page": 448,
+    "stated_correct_option": 4,
+    "classic_solution": "در شکل (الف)، نیروهای افقی $F_1$ و اصطکاک جنبشی همدیگر را خنثی می‌کنند و $F_1=\\mu_kmg=0.4mg$. در شکل (ب)، نیروهای قائم $F_2$ و $mg$ موازنه می‌شوند؛ پس $F_2=mg$. بنابراین $F_2/F_1=1/0.4=5/2$ و چون نیروهای فنر با تغییر طول متناسب‌اند، $x_2/x_1=5/2$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1178,
+    "solution_page": 448,
+    "stated_correct_option": 3,
+    "classic_solution": "ابتدا $f_k=\\mu_kmg=20N$ است. اگر جسم در جهت $+x$ حرکت کند، اصطکاک خلاف محور $x$ است و از $16-20+F_e=10\\times2$ داریم $F_e=24N$، پس $x=4.8cm$ و فنر فشرده است؛ طول آن $15.2cm$ می‌شود. اگر جسم خلاف $x$ حرکت کند، اصطکاک در جهت $+x$ است و $16+20+F_e=20$ می‌دهد $F_e=-16N$، پس فنر کشیده و طول آن $23.2cm$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0253.jpg",
+        "box": [
+          105,
+          1585,
+          575,
+          2170
+        ],
+        "placement": "solution",
+        "alt": "دو حالت حرکت جسم متصل به فنر روی سطح زبر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1179,
+    "solution_page": 449,
+    "stated_correct_option": 4,
+    "classic_solution": "در لحظه‌ای که طول فنر $26cm$ است، نیروی فنر رو به بالا $F_e=kx=100(26-20)\\times10^{-2}=6N$ و وزن $10N$ است. برآیند رو به پایین برابر $4N$ است، پس شتاب جسم $a=(10-6)/1=4m/s^2$ رو به پایین است.",
+    "media_regions": [
+      {
+        "page_file": "page_0254.jpg",
+        "box": [
+          170,
+          185,
+          500,
+          520
+        ],
+        "placement": "solution",
+        "alt": "فنر قائم با طول عادی 20 سانتی‌متر و طول 26 سانتی‌متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1180,
+    "solution_page": 449,
+    "stated_correct_option": 3,
+    "classic_solution": "پس از برخورد وزنه با فنر، وزن رو به پایین و نیروی کشسانی رو به بالا است. در آغاز، وزن بزرگ‌تر است و حرکت تندشونده رو به پایین است؛ با فشرده‌تر شدن فنر، نیروی کشسانی افزایش می‌یابد تا با وزن برابر شود، سپس از وزن بزرگ‌تر می‌شود و حرکت کندشونده رو به بالا خواهد بود.",
+    "media_regions": [
+      {
+        "page_file": "page_0254.jpg",
+        "box": [
+          160,
+          570,
+          790,
+          910
+        ],
+        "placement": "solution",
+        "alt": "دو مرحله برخورد جسم با فنر فشاری"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1181,
+    "solution_page": 449,
+    "stated_correct_option": 4,
+    "classic_solution": "در هر دو شکل $F_N=mg=10N$ و $f_k=10\\mu_k$. با مقایسه طول‌ها و نیروهای فنر، $F_2=2F_1$ و رابطه طول عادی فنر $L_0=(2L_1+L_2)/3=25cm$ به دست می‌آید. نوشتن قانون دوم برای دو شکل معادلات $k-500\\mu_k=150$ و $k-250\\mu_k=200$ می‌دهد؛ بنابراین $\\mu_k=0.2$ و $k=250N/m$.",
+    "media_regions": [
+      {
+        "page_file": "page_0254.jpg",
+        "box": [
+          150,
+          945,
+          820,
+          1255
+        ],
+        "placement": "solution",
+        "alt": "دو حالت جسم متصل به فنر افقی با طول‌های 27 و 21 سانتی‌متر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1182,
+    "solution_page": 449,
+    "stated_correct_option": 4,
+    "classic_solution": "در حالت اول، $F_e-mg=ma$ و از $k(56-40)-40=4\\times2$ نتیجه می‌شود $k=3N/cm$. در حالت دوم، $k(L'-L_0)-\\mu_km'g=m'a'$ و با داده‌های شکل، $18-20\\mu_k=10$، پس $\\mu_k=0.4$.",
+    "media_regions": [
+      {
+        "page_file": "page_0254.jpg",
+        "box": [
+          145,
+          1740,
+          620,
+          2040
+        ],
+        "placement": "solution",
+        "alt": "حالت قائم و افقی فنر برای یافتن ثابت فنر و اصطکاک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1183,
+    "solution_page": 449,
+    "stated_correct_option": 4,
+    "classic_solution": "فنر (۱) فشرده و فنر (۲) کشیده است و هر دو نیروی کشسانی خلاف جهت محور $x$ وارد می‌کنند؛ اصطکاک جنبشی هم خلاف حرکت و در جهت $-x$ است. از $F_{e1}+F_{e2}+f_k=ma$ با $a=-7m/s^2$ و $\\mu_kmg=4N$، برآیند نیروهای کشسانی $10N$ خلاف محور $x$ می‌شود. چون طول عادی دو فنر برابر است، $100x_1+300x_1=10$ و $x_1=2.5cm$؛ پس محل موردنظر $17.5cm$ است.",
+    "media_regions": [],
+    "review_notes": [
+      "شروع حل در انتهای page_0254 و پایان آن در ابتدای page_0255 آمده است."
+    ]
+  },
+  {
+    "question_number": 1184,
+    "solution_page": 450,
+    "stated_correct_option": 4,
+    "classic_solution": "فنر بین جسم و جعبه فشرده است و به جسم نیروی رو به بالا می‌دهد. برای جعبه، $F_e-F_{box}-mg=ma$ و با $m=4kg$ و $a=2m/s^2$، $F_e=52N$. فنر همین مقدار نیرو را رو به پایین به کف جعبه وارد می‌کند، پس $\\vec F'_e=-52\\hat jN$.",
+    "media_regions": [
+      {
+        "page_file": "page_0255.jpg",
+        "box": [
+          120,
+          480,
+          455,
+          905
+        ],
+        "placement": "solution",
+        "alt": "جسم و فنر داخل جعبه شتاب‌دار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1185,
+    "solution_page": 450,
+    "stated_correct_option": 2,
+    "classic_solution": "برای دو حالت وزنه و فنر، هنگام شروع حرکت رو به پایین داریم $mg-k(50-L_0)=ma_1$ و هنگام شروع حرکت رو به بالا $k(64-L_0)-mg=ma_2$. تقسیم دو رابطه می‌دهد $L_0=40cm$ و سپس از رابطه اول $k=1N/cm=100N/m$.",
+    "media_regions": [
+      {
+        "page_file": "page_0255.jpg",
+        "box": [
+          105,
+          1015,
+          610,
+          1400
+        ],
+        "placement": "solution",
+        "alt": "دو حالت فنر داخل آسانسور با شتاب‌های متفاوت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1186,
+    "solution_page": 450,
+    "stated_correct_option": 2,
+    "classic_solution": "شخص فنر را به پایین می‌کشد و فنر به شخص نیروی کشسانی رو به بالا وارد می‌کند. چون حرکت رو به پایین و کندشونده است، شتاب رو به بالا است. با $F_N+F_e-mg=ma$ و $F_e=kx=400\\times0.05=20N$، داریم $F_N+20-600=120$ و $F_N=700N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0255.jpg",
+        "box": [
+          100,
+          1600,
+          470,
+          1965
+        ],
+        "placement": "solution",
+        "alt": "شخص روی ترازو در آسانسور و فنر کشیده"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1187,
+    "solution_page": 450,
+    "stated_correct_option": 2,
+    "classic_solution": "آسانسور کندشونده رو به پایین است، پس شتاب آن رو به بالا و حرکت آن رو به پایین است. از قانون دوم برای جسم، $mg-F_e=ma$ و با $m=2kg$ و $a=2m/s^2$ نتیجه می‌شود $F_e=16N$ و $x=F_e/k=0.04m=4cm$. چون نیروی فنر رو به بالا است، فنر فشرده است و طول آن $30-4=26cm$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0255.jpg",
+        "box": [
+          105,
+          2025,
+          430,
+          2290
+        ],
+        "placement": "solution",
+        "alt": "جسم روی فنر فشاری در آسانسور"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1188,
+    "solution_page": 451,
+    "stated_correct_option": 1,
+    "classic_solution": "در حالت اول حرکت آسانسور تندشونده رو به بالا است و نیروی فنر هم رو به بالا است. از $k(L_0-L_1)-mg=ma_1$ داریم $L_0-L_1=24cm$. در حالت دوم با شتاب رو به پایین و $a_2<g$، $mg-k(L_0-L_2)=ma_2$ و $L_0-L_2=16cm$. بنابراین $L_2-L_1=8cm$ و فاصله وزنه تا سقف آسانسور در حالت دوم $8cm$ کمتر می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0256.jpg",
+        "box": [
+          150,
+          185,
+          770,
+          650
+        ],
+        "placement": "solution",
+        "alt": "دو حالت جسم روی فنر در آسانسور با شتاب‌های مخالف"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1189,
+    "solution_page": 451,
+    "stated_correct_option": 1,
+    "classic_solution": "آسانسور کندشونده رو به بالا است، پس شتاب رو به پایین دارد. از $mg-F_N=ma$، $F_N=4(10-2)=32N$. در راستای افقی برای آستانه حرکت، $kx=\\mu_sF_N$ و با $k=50N/m$ و $\\mu_s=0.4$ نتیجه می‌شود $x=0.256m=25.6cm$.",
+    "media_regions": [
+      {
+        "page_file": "page_0256.jpg",
+        "box": [
+          115,
+          1065,
+          530,
+          1430
+        ],
+        "placement": "solution",
+        "alt": "جسم متصل به فنر افقی در آسانسور شتاب‌دار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1190,
+    "solution_page": 451,
+    "stated_correct_option": 3,
+    "classic_solution": "با پایستگی انرژی مکانیکی میان نقطه رها شدن و توقف روی فنر، $mg(2+x)+\\frac12mv_1^2=\\frac12kx^2$ و از داده‌ها $x=0.4m=40cm$ به دست می‌آید. بیشترین تندی زمانی است که $kx'=mg$؛ بنابراین $x'=0.1m=10cm$ و فاصله موردنظر $x-x'=30cm$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0256.jpg",
+        "box": [
+          120,
+          1510,
+          520,
+          1830
+        ],
+        "placement": "solution",
+        "alt": "جسم رهاشده و برخورد با فنر قائم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1191,
+    "solution_page": 451,
+    "stated_correct_option": 1,
+    "classic_solution": "نکته چاپ‌شده می‌گوید در نمودار $F_e-x$ شیب خط برابر ثابت فنر است. از نسبت شیب‌ها $k_B/k_A=(F'/5)/(2F'/3)=3/10$. در تعادل آویز، $F_e=mg$، پس $m'/m=(k_Bx_B)/(k_Ax_A)=3/10\\times1/3=1/10$.",
+    "media_regions": [
+      {
+        "page_file": "page_0256.jpg",
+        "box": [
+          160,
+          2045,
+          1260,
+          2265
+        ],
+        "placement": "solution",
+        "alt": "نکته شیب نمودار نیروی فنر بر حسب تغییر طول"
+      },
+      {
+        "page_file": "page_0257.jpg",
+        "box": [
+          85,
+          180,
+          355,
+          570
+        ],
+        "placement": "solution",
+        "alt": "نمودارهای فنر A و B و وزنه آویزان"
+      }
+    ],
+    "review_notes": [
+      "حل با نکته در انتهای page_0256 آغاز و در page_0257 کامل شده است."
+    ]
+  },
+  {
+    "question_number": 1192,
+    "solution_page": 452,
+    "stated_correct_option": 1,
+    "classic_solution": "محور افقی نمودار، طول فنر است نه تغییر طول. در نمودار (۱)، با طول عادی $10cm$ و $F_2=210N$ در $80cm$، $k_1=300N/m$. در نمودار (۲)، با طول عادی $30cm$ و $F'_2=300N$ در $80cm$، $k_2=600N/m$. محل تقاطع دو نمودار $l_1=50cm$ است و $F_1=k_1(50-10)\\times10^{-2}=120N$.",
+    "media_regions": [
+      {
+        "page_file": "page_0257.jpg",
+        "box": [
+          90,
+          655,
+          435,
+          1140
+        ],
+        "placement": "solution",
+        "alt": "دو نمودار نیروی کشسانی بر حسب طول فنر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1193,
+    "solution_page": 452,
+    "stated_correct_option": 4,
+    "classic_solution": "متحرک در هر ثانیه $4m$ می‌پیماید؛ این مقدار برابر نصف محیط دایره است، پس هر ثانیه به نقطه مقابل می‌رسد و جهت سرعت برعکس می‌شود. بنابراین $v_A=4m/s$ و $v_B=-4m/s$ و تغییر تکانه $\\Delta p=2(-4-4)=-16kg\\,m/s$ است، پس اندازه آن $16kg\\,m/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0257.jpg",
+        "box": [
+          90,
+          1190,
+          440,
+          1485
+        ],
+        "placement": "solution",
+        "alt": "حرکت ذره روی نیم‌دایره از A به B و جهت سرعت‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1194,
+    "solution_page": 452,
+    "stated_correct_option": 2,
+    "classic_solution": "شتاب سطل از $F-mg=ma$ برابر $5m/s^2$ است. در ارتفاع $10m$، از $v^2=2a\\Delta y$، سرعت $10m/s$ و تکانه $p=mv=10kg\\,m/s$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1195,
+    "solution_page": 452,
+    "stated_correct_option": 3,
+    "classic_solution": "با رابطه $K=p^2/(2m)$، برای $K_1=20J$، $p_1=4kg\\,m/s$ و از $p=t^2+3t$، $t_1=1s$. برای $K_2=980J$، $p_2=28kg\\,m/s$ و $t_2=4s$. بنابراین $F_{av}=\\Delta p/\\Delta t=(28-4)/(4-1)=8N$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1196,
+    "solution_page": 452,
+    "stated_correct_option": 2,
+    "classic_solution": "سرعت گلوله هنگام برخورد با زمین از $v^2=-2g\\Delta y$ برابر $30m/s$ است. مدت حرکت در خاک از جابه‌جایی $30cm$ با سرعت‌های ابتدا و انتهای $30$ و $0m/s$ برابر $0.02s$ است. پس نیروی خالص متوسط $|\\Delta p|/\\Delta t=0.3\\times30/0.02=450N$ و نیروی متوسط خاک $F_{avg(soil)}=450+3=453N$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0257.jpg",
+        "box": [
+          90,
+          1960,
+          430,
+          2250
+        ],
+        "placement": "solution",
+        "alt": "گلوله در حال ورود به خاک"
+      },
+      {
+        "page_file": "page_0258.jpg",
+        "box": [
+          115,
+          175,
+          485,
+          620
+        ],
+        "placement": "solution",
+        "alt": "ادامه حرکت گلوله در خاک و نیروهای متوسط"
+      }
+    ],
+    "review_notes": [
+      "حل در انتهای page_0257 آغاز و در page_0258 کامل شده است."
+    ]
+  },
+  {
+    "question_number": 1197,
+    "solution_page": 453,
+    "stated_correct_option": 3,
+    "classic_solution": "در نبود مقاومت هوا فقط وزن وارد است. از قانون دوم بر حسب تکانه برای بازه دو ثانیه پس از نقطه اوج، $m\\vec g=m\\Delta\\vec v/\\Delta t$ و با $\\vec v_1=20\\hat i$، نتیجه می‌شود $\\vec v_2=20\\hat i-20\\hat j$ و اندازه سرعت $20\\sqrt2m/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0258.jpg",
+        "box": [
+          90,
+          705,
+          495,
+          960
+        ],
+        "placement": "solution",
+        "alt": "پرتابه در مسیر سهمی با بردار سرعت در نقطه اوج و پس از آن"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1198,
+    "solution_page": 453,
+    "stated_correct_option": 1,
+    "classic_solution": "شیب خط قاطع نمودار $p-t$ برابر نیروی متوسط است. از مقایسه شیب پاره‌خط‌های شکل، $L_1>L_2>|L_4|>L_3(=0)$، پس نیروهای متوسط بازه‌های مربوطه نیز همین ترتیب را دارند.",
+    "media_regions": [
+      {
+        "page_file": "page_0258.jpg",
+        "box": [
+          85,
+          1010,
+          515,
+          1265
+        ],
+        "placement": "solution",
+        "alt": "نمودار تکانه بر حسب زمان با قاطع‌های مختلف"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1199,
+    "solution_page": 453,
+    "stated_correct_option": 2,
+    "classic_solution": "برای بازه‌های زمانی از مبدأ، اگر نیروی متوسط در $(0,t_1)$ کم‌تر از $F_{av}$ باشد، $p_1<F_{av}t_1$؛ و اگر در $(0,t_2)$ بیشتر باشد، $p_2>F_{av}t_2$. این مقایسه با نمودار تکانه، گزینه مربوط را نتیجه می‌دهد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1200,
+    "solution_page": 453,
+    "stated_correct_option": 1,
+    "classic_solution": "ابتدا $f_{s,max}=\\mu_smg=16N$؛ در لحظه‌ای که $F=16N$، جسم در آستانه حرکت قرار می‌گیرد و از نسبت روی نمودار $t_1=4s$. در بازه $4$ تا $12s$، مساحت زیر نمودار نیرو $158kg\\,m/s$ و تکانه ناشی از اصطکاک جنبشی $-80kg\\,m/s$ است؛ پس $\\Delta p=78kg\\,m/s$ و با $m=2kg$، $v_{12s}=39m/s$. روش دوم نیز بازه را به $(4,5)$ و $(5,12)$ تقسیم کرده و همین نتیجه را می‌دهد.",
+    "media_regions": [
+      {
+        "page_file": "page_0258.jpg",
+        "box": [
+          115,
+          1690,
+          530,
+          2190
+        ],
+        "placement": "solution",
+        "alt": "نمودار نیرو بر حسب زمان و سطح زیر نمودار"
+      },
+      {
+        "page_file": "page_0259.jpg",
+        "box": [
+          90,
+          175,
+          900,
+          760
+        ],
+        "placement": "solution",
+        "alt": "ادامه محاسبه تکانه با مساحت نمودار"
+      }
+    ],
+    "review_notes": [
+      "حل از page_0258 به page_0259 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 1201,
+    "solution_page": 454,
+    "stated_correct_option": 3,
+    "classic_solution": "تغییر تکانه در بازه $3s$ تا $6s$ برابر $\\Delta p=F_{av}\\Delta t=4(6-3)=12kN\\,s$ است؛ پس مساحت ناحیه $S$ در نمودار باید ۱۲ باشد. با خطی بودن نمودارها و قرار داشتن بازه‌ها میان $3s$ و $6s$، از مساحت‌ها $F_{max}=16/3kN$ و نیروی متوسط در بازه $2s$ تا $8s$ برابر $F_{max}/2=8/3kN$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0259.jpg",
+        "box": [
+          90,
+          1000,
+          520,
+          1275
+        ],
+        "placement": "solution",
+        "alt": "نمودار نیروی ضربه‌ای بر حسب زمان با ناحیه S"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1202,
+    "solution_page": 454,
+    "stated_correct_option": 1,
+    "classic_solution": "در نمودار $F-t$، در $t=0$ نیرو $-4N$ و در $t=5s$ نیرو $36N$ است؛ نیرو در $t=0.5s$ صفر می‌شود. تغییر تکانه برابر مساحت علامت‌دار زیر نمودار است: $\\Delta p=-S_1+S_2=-1+81=80kg\\,m/s$. با $m=2kg$ و $v_0=-8m/s$، سرعت در $5s$ برابر $32m/s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0259.jpg",
+        "box": [
+          90,
+          1380,
+          430,
+          1775
+        ],
+        "placement": "solution",
+        "alt": "نمودار خطی نیرو بر حسب زمان از منفی تا مثبت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1203,
+    "solution_page": 454,
+    "stated_correct_option": 1,
+    "classic_solution": "از مساحت مثلث زیر نمودار $F-t$، تغییر تکانه توپ $\\Delta p=(6\\times10^{-3}\\times200)/2=0.6kg\\,m/s$ است. با مثبت گرفتن جهت راست و $v_1=-20m/s$، داریم $0.6=0.02(v_2+20)$ و در نتیجه $v_2=10m/s$.",
+    "media_regions": [
+      {
+        "page_file": "page_0259.jpg",
+        "box": [
+          90,
+          1845,
+          430,
+          2075
+        ],
+        "placement": "solution",
+        "alt": "نمودار مثلثی نیروی وارد بر توپ بر حسب زمان"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1204,
+    "solution_page": 454,
+    "stated_correct_option": 1,
+    "classic_solution": "تکانه اولیه دو جسم $p_A=4\\times20=80kg\\,m/s$ و $p_B=2\\times10=20kg\\,m/s$ است. برای برابر شدن تکانه ثانویه، تغییر تکانه $B$ باید $60kg\\,m/s$ بیش از تغییر تکانه $A$ باشد. تا $8s$، $\\Delta p_A=40$ و $\\Delta p_B=46$ است؛ پس بعد از $8s$ با آهنگ اختلاف $2$ واحد بر ثانیه، زمان لازم $27s$ و لحظه برابر شدن $t=35s$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0259.jpg",
+        "box": [
+          90,
+          2150,
+          520,
+          2320
+        ],
+        "placement": "solution",
+        "alt": "نمودارهای نیرو-زمان دو جسم A و B در ابتدای حل"
+      },
+      {
+        "page_file": "page_0260.jpg",
+        "box": [
+          110,
+          180,
+          500,
+          540
+        ],
+        "placement": "solution",
+        "alt": "ادامه نمودارهای نیرو-زمان A و B"
+      }
+    ],
+    "review_notes": [
+      "شروع حل در انتهای page_0259 و ادامه در page_0260 آمده است."
+    ]
+  },
+  {
+    "question_number": 1205,
+    "solution_page": 455,
+    "stated_correct_option": 2,
+    "classic_solution": "برای برابر بودن نیروهای گرانشی زمین و ماه بر سفینه، $Gm_em/r_e^2=Gm_mm/r_m^2$. با $m_e\\simeq81m_m$ نتیجه می‌شود $r_e/r_m=9$. چون $r_e=d+r_m$، داریم $d+r_m\\simeq9r_m$ و $r_m\\simeq d/8$؛ نقطه نزدیک‌تر به ماه است.",
+    "media_regions": [
+      {
+        "page_file": "page_0260.jpg",
+        "box": [
+          140,
+          560,
+          900,
+          815
+        ],
+        "placement": "solution",
+        "alt": "سفینه میان زمین و ماه و فاصله‌های گرانشی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1206,
+    "solution_page": 455,
+    "stated_correct_option": 1,
+    "classic_solution": "وزن در ارتفاع‌ها با $W\\propto1/r^2$ نوشته می‌شود: $W_1=(R_e/(R_e+h))^2W$ و $W_2=(R_e/(R_e+4h))^2W$. با اختلاف $W_1-W_2=0.21W$ و جایگذاری $R_e+h=2R_e$ و $R_e+4h=5R_e$، نتیجه می‌شود $h=R_e$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1207,
+    "solution_page": 455,
+    "stated_correct_option": 4,
+    "classic_solution": "با فرض تست، $g_{0e}=25g_{0m}/4$ و بنابراین $g_{0m}=4g_{0e}/25$. در فاصله $h_m=R_m$ از سطح ماه، $g_m/g_{0m}=(R_m/(R_m+h_m))^2=1/4$، پس $g_m=g_{0e}/25$. برای زمین می‌پرسیم در چه ارتفاعی شتاب $g_{0e}/25$ است؛ از $g_e/g_{0e}=(R_e/(R_e+h_e))^2=1/25$ نتیجه می‌شود $h_e=4R_e$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1208,
+    "solution_page": 455,
+    "stated_correct_option": 2,
+    "classic_solution": "کمیت‌های سیاره و زمین با زیروندهای $s$ و $e$ نوشته شده‌اند. از شرط برابری شتاب گرانشی در ارتفاع داده‌شده و از رابطه چگالی $\\rho=M/(4\\pi R^3/3)$، دو رابطه برای $M_s/M_e$ ساخته می‌شود؛ برابر کردن آن‌ها در نهایت $R_s/R_e=1/2$ را می‌دهد.",
+    "media_regions": [],
+    "review_notes": [
+      "محاسبه در انتهای page_0260 شروع و در ابتدای page_0261 کامل شده است."
+    ]
+  },
+  {
+    "question_number": 1209,
+    "solution_page": 456,
+    "stated_correct_option": 1,
+    "classic_solution": "سه چرخه اول در $3.6s$ انجام شده، پس $T_1=3.6/3=1.2s$ و $f_1=1/T_1=5/6Hz$. چرخه‌های چهارم و پنجم در $1.6s$ انجام شده‌اند، پس $T_2=1.6/2=0.8s$ و $f_2=5/4Hz$. بنابراین $f_1/f_2=(5/6)/(5/4)=2/3$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1210,
+    "solution_page": 456,
+    "stated_correct_option": 2,
+    "classic_solution": "نوسانگر در مدت $T/2$ از یک انتهای مسیر به انتهای دیگر می‌رود و یک بار همه نقاط مسیر را طی می‌کند. در بازه زمانی $t_1$ تا $t_2$، پنج بار طول پاره‌خط $MN$ را طی کرده و این بازه $5T/2$ طول می‌کشد؛ از $18-8=5T/2$ نتیجه می‌شود $T=4s$.",
+    "media_regions": [
+      {
+        "page_file": "page_0261.jpg",
+        "box": [
+          90,
+          615,
+          570,
+          930
+        ],
+        "placement": "solution",
+        "alt": "مسیر رفت‌وبرگشتی نوسانگر بین M و N"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1211,
+    "solution_page": 456,
+    "stated_correct_option": 4,
+    "classic_solution": "نکته چاپ‌شده می‌گوید اگر نوسانگر در مدت $t$، تعداد $n$ نوسان کامل انجام دهد، $T=t/n$ و $f=n/t$. برای نوسانگر (۱)، زمان ۳۰ نوسان برابر $t=90s$ است. در همین مدت، نوسانگر (۲) با دوره $2s$ تعداد $45$ نوسان دارد و چون در هر نوسان دو بار طول مسیر نوسان را طی می‌کند، در کل ۹۰ بار طول مسیر نوسان را می‌پیماید.",
+    "media_regions": [
+      {
+        "page_file": "page_0261.jpg",
+        "box": [
+          115,
+          1015,
+          1245,
+          1155
+        ],
+        "placement": "solution",
+        "alt": "نکته رابطه تعداد نوسان، دوره و بسامد"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1212,
+    "solution_page": 456,
+    "stated_correct_option": 3,
+    "classic_solution": "حرکت توپ رفت‌وبرگشتی و تکراری است، اما در نوسان هماهنگ ساده اندازه نیروی خالص و شتاب هنگام دور شدن از تعادل تغییر می‌کند؛ در حالی که در این حرکت، هنگام بالا و پایین رفتن، نیروی خالص ثابت و برابر وزن است. پس این نوسان، هماهنگ ساده نیست.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1213,
+    "solution_page": 456,
+    "stated_correct_option": 3,
+    "classic_solution": "از $\\omega=\\pi/3$ و $\\omega=2\\pi/T$، دوره $T=6s$ است. مسیر نشان می‌دهد در ۱۰ ثانیه اول، جهت حرکت در لحظه‌های ۳، ۶ و ۹ ثانیه عوض می‌شود و نوسانگر در لحظه‌های $1.5$، $4.5$ و $7.5s$ از تعادل عبور می‌کند.",
+    "media_regions": [
+      {
+        "page_file": "page_0261.jpg",
+        "box": [
+          100,
+          1435,
+          700,
+          1665
+        ],
+        "placement": "solution",
+        "alt": "مسیر نوسانگر با زمان‌های مشخص در دوره 6 ثانیه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1214,
+    "solution_page": 456,
+    "stated_correct_option": 4,
+    "classic_solution": "از $\\omega=\\pi/10$ و $\\omega=2\\pi/T$، دوره نوسانگر اول $T=20s$ است. طبق شکل، بازه‌ای که در آن سرعت در جهت $+x$ و مکان مثبت است و نیروی خالص منفی باشد، از $15s$ تا $20s$ است؛ این بازه $5s$ طول دارد که یک‌چهارم دوره است.",
+    "media_regions": [
+      {
+        "page_file": "page_0261.jpg",
+        "box": [
+          100,
+          1740,
+          700,
+          1970
+        ],
+        "placement": "solution",
+        "alt": "مسیر نوسانگر و تعیین بازه زمانی حرکت در جهت مثبت محور x"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1215,
+    "solution_page": 456,
+    "stated_correct_option": 2,
+    "classic_solution": "حل با محاسبه دوره تناوب شروع می‌شود و نکته چاپ‌شده توضیح می‌دهد حرکت نوسانگر هنگام نزدیک شدن به نقطه تعادل تندشونده و هنگام دور شدن از تعادل کندشونده است؛ این رخدادها در بازه‌های زمانی یک‌چهارم دوره به‌ترتیب تکرار می‌شوند. ادامه محاسبه در صفحه بعد از این قطعه قرار دارد.",
+    "media_regions": [
+      {
+        "page_file": "page_0261.jpg",
+        "box": [
+          110,
+          2050,
+          1250,
+          2265
+        ],
+        "placement": "solution",
+        "alt": "نکته بازه‌های تندشونده و کندشونده در نوسان"
+      }
+    ],
+    "review_notes": [
+      "فقط آغاز حل 1215 در page_0261 visible است و ادامه آن در تصاویر این chunk نیست."
+    ]
+  }
+]

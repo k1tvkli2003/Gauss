@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "source_edition": "nardebam_1405",
+  "expected_question_counts": {
+    "math": 2042,
+    "physics": 1630
+  },
+  "books": {
+    "math": {
+      "source_env": "GAUSS_NARDEBAM_MATH_DIR",
+      "answer_pdf": "19.pdf",
+      "solution_pages": [1, 190],
+      "key_pages": [191, 200],
+      "topics": [
+        { "order": 1, "key": "sets", "label": "مجموعه‌ها", "question_pdf": "1.pdf", "first_content_page": 10 },
+        { "order": 2, "key": "patterns_sequences", "label": "الگو و دنباله", "question_pdf": "2.pdf", "first_content_page": 1 },
+        { "order": 3, "key": "quadratic_equations_functions", "label": "معادله و تابع درجه دوم", "question_pdf": "3.pdf", "first_content_page": 1 },
+        { "order": 4, "key": "rational_inequalities_sign", "label": "نامعادلات گویا و تعیین علامت", "question_pdf": "4.pdf", "first_content_page": 1 },
+        { "order": 5, "key": "radicals_algebraic_expressions", "label": "ریشه‌گیری و عبارت‌های جبری", "question_pdf": "5.pdf", "first_content_page": 1 },
+        { "order": 6, "key": "absolute_value_floor", "label": "قدر مطلق و جزء صحیح", "question_pdf": "6.pdf", "first_content_page": 1 },
+        { "order": 7, "key": "functions", "label": "تابع", "question_pdf": "7.pdf", "first_content_page": 1 },
+        { "order": 8, "key": "trigonometry", "label": "مثلثات", "question_pdf": "8.pdf", "first_content_page": 1 },
+        { "order": 9, "key": "limits_continuity", "label": "حد و پیوستگی", "question_pdf": "9.pdf", "first_content_page": 1 },
+        { "order": 10, "key": "derivatives", "label": "مشتق", "question_pdf": "10.pdf", "first_content_page": 1 },
+        { "order": 11, "key": "derivative_applications", "label": "کاربرد مشتق", "question_pdf": "11.pdf", "first_content_page": 1 },
+        { "order": 12, "key": "exponential_logarithmic", "label": "توابع نمایی و لگاریتم", "question_pdf": "12.pdf", "first_content_page": 1 },
+        { "order": 13, "key": "analytic_geometry", "label": "هندسه تحلیلی", "question_pdf": "13.pdf", "first_content_page": 1 },
+        { "order": 14, "key": "visual_thinking_conics", "label": "تفکر تجسمی و مقاطع مخروطی", "question_pdf": "14.pdf", "first_content_page": 1 },
+        { "order": 15, "key": "combinatorics", "label": "ترکیبیات", "question_pdf": "15.pdf", "first_content_page": 1 },
+        { "order": 16, "key": "probability", "label": "احتمال", "question_pdf": "16.pdf", "first_content_page": 1 },
+        { "order": 17, "key": "geometry", "label": "هندسه", "question_pdf": "17.pdf", "first_content_page": 1 },
+        { "order": 18, "key": "statistics", "label": "آمار", "question_pdf": "18.pdf", "first_content_page": 1 }
+      ]
+    },
+    "physics": {
+      "source_env": "GAUSS_NARDEBAM_PHYSICS_DIR",
+      "answer_pdf": "12.pdf",
+      "solution_pages": [2, 341],
+      "key_pages": [342, 349],
+      "topics": [
+        { "order": 1, "key": "physics_measurement", "label": "فیزیک و اندازه‌گیری", "question_pdf": "1.pdf", "first_content_page": 9 },
+        { "order": 2, "key": "physical_properties_matter", "label": "ویژگی‌های فیزیکی مواد", "question_pdf": "2.pdf", "first_content_page": 2 },
+        { "order": 3, "key": "work_energy_power", "label": "کار، انرژی و توان", "question_pdf": "3.pdf", "first_content_page": 2 },
+        { "order": 4, "key": "temperature_heat", "label": "دما و گرما", "question_pdf": "4.pdf", "first_content_page": 2 },
+        { "order": 5, "key": "electrostatics", "label": "الکتریسیته ساکن", "question_pdf": "5.pdf", "first_content_page": 2 },
+        { "order": 6, "key": "current_electricity", "label": "جریان الکتریکی و مدارهای جریان مستقیم", "question_pdf": "6.pdf", "first_content_page": 2 },
+        { "order": 7, "key": "magnetism_induction", "label": "مغناطیس و القای الکترومغناطیسی", "question_pdf": "7.pdf", "first_content_page": 2 },
+        { "order": 8, "key": "one_dimensional_motion", "label": "حرکت بر خط راست", "question_pdf": "8.pdf", "first_content_page": 2 },
+        { "order": 9, "key": "dynamics", "label": "دینامیک", "question_pdf": "9.pdf", "first_content_page": 2 },
+        { "order": 10, "key": "oscillation_waves", "label": "نوسان و امواج", "question_pdf": "10.pdf", "first_content_page": 2 },
+        { "order": 11, "key": "atomic_nuclear", "label": "آشنایی با فیزیک اتمی و هسته‌ای", "question_pdf": "11.pdf", "first_content_page": 2 }
+      ]
+    }
+  }
+}

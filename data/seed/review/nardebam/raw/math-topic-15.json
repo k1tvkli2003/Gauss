@@ -1,0 +1,1189 @@
+{
+  "task_id": "math-topic-15",
+  "subject": "math",
+  "topic_key": "combinatorics",
+  "questions": [
+    {
+      "question_number": 1735,
+      "question_page": 4,
+      "question_text": "اگر مجموعه $A = \\{1, 2, 3, \\dots, 12\\}$، این مجموعه چند زیرمجموعه ۷ عضوی دارد که شامل ۱ و ۲ باشد اما شامل ۴ یا ۹ نشود؟",
+      "options": [
+        "۲۵۲",
+        "۱۲۶",
+        "۵۶",
+        "۱۱۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1736,
+      "question_page": 4,
+      "question_text": "با نقاط روی دو خط موازی چند مثلث می‌توان ساخت؟",
+      "options": [
+        "۷۴",
+        "۷۹",
+        "۷۰",
+        "۸۴"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0004.jpg",
+          "region": [
+            200,
+            1400,
+            1400,
+            1700
+          ],
+          "placement": "stem",
+          "alt": "دو خط موازی با ۵ نقطه روی یک خط و ۴ نقطه روی خط دیگر"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1737,
+      "question_page": 4,
+      "question_text": "از بین ۷ دانش‌آموز منطقه ۴ و ۵ دانش‌آموز منطقه ۷، به چند طریق می‌توان ۴ دانش‌آموز برای یک اردو دعوت کرد به طوری که از هر منطقه حداقل یک نفر انتخاب شده باشد؟",
+      "options": [
+        "۴۲۰",
+        "۴۵۵",
+        "۴۹۵",
+        "۴۹۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1738,
+      "question_page": 4,
+      "question_text": "یک تیم والیبال شامل ۱۳ بازیکن است. ۳ نفر از آن‌ها بازیکن دریافت‌کننده (دفاع) هستند. به چند طریق می‌توان ۶ بازیکن را به طوری انتخاب کرد که فقط ۲ نفر از آن‌ها دریافت‌کننده باشند؟",
+      "options": [
+        "۶۳۰",
+        "۸۴۰",
+        "۱۷۱۶",
+        "۱۶۸۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1739,
+      "question_page": 4,
+      "question_text": "از بین ۵ دانش‌آموز کلاس دهم، ۴ دانش‌آموز یازدهم و ۳ دانش‌آموز دوازدهم، به چند طریق می‌توان ۳ دانش‌آموز انتخاب کرد که دقیقاً ۲ نفر آن‌ها از یک پایه باشند؟",
+      "options": [
+        "۱۴۸",
+        "۱۵۶",
+        "۱۶۴",
+        "۱۷۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1740,
+      "question_page": 4,
+      "question_text": "اگر مجموعه $A = \\{x \\in \\mathbb{Z} \\mid |x| \\le 5\\}$، چند زیرمجموعه ۵ عضوی از A وجود دارد که مجموع اعضای آن‌ها مثبت باشد؟",
+      "options": [
+        "۱۴۳",
+        "۱۹۷",
+        "۲۱۲",
+        "۲۳۱"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1741,
+      "question_page": 4,
+      "question_text": "۱۰ نفر می‌خواهند فوتبال بازی کنند. به چند طریق می‌توان آن‌ها را در دو تیم ۵ نفره تقسیم کرد؟",
+      "options": [
+        "۱۲۶",
+        "۲۵۲",
+        "۱۲۰",
+        "۵۱۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1742,
+      "question_page": 4,
+      "question_text": "با ارقام r\"{0, 1, 2, 3, 4}\" چند عدد ۴ رقمی بدون تکرار ارقام می‌توان نوشت به طوری که ارقام یکان و دهگان آن از بین r\"{0, 1, 2}\" باشد؟",
+      "options": [
+        "۱۸",
+        "۲۴",
+        "۳۶",
+        "۴۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1743,
+      "question_page": 4,
+      "question_text": "با ارقام $1, 2, 3, 4, 5, 6, 7$ چند عدد ۵ رقمی می‌توان نوشت به طوری که دقیقاً ۲ بار رقم ۶ استفاده شده باشد و سایر ارقام تکراری نباشند؟",
+      "options": [
+        "۱۸۰۰",
+        "۱۴۴۰",
+        "۱۲۰۰",
+        "۹۶۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1744,
+      "question_page": 4,
+      "question_text": "در شبکه مسیرهای مقابل، چند مسیر از نقطه A به B وجود دارد که از نقطه C عبور کند، به شرطی که فقط مجاز باشیم به سمت راست یا پایین حرکت کنیم؟",
+      "options": [
+        "۳۰",
+        "۳۶",
+        "۴۲",
+        "۴۵"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0004.jpg",
+          "region": [
+            200,
+            2600,
+            1400,
+            3100
+          ],
+          "placement": "stem",
+          "alt": "شبکه خطوط مربعی با نقاط A و B در گوشه‌ها و نقطه C در وسط"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1745,
+      "question_page": 4,
+      "question_text": "شخصی می‌خواهد به ۴ دوست خود از بین ۷ کتاب متفاوت، ۲ کتاب به عنوان هدیه بدهد (به هر نفر ۲ کتاب). این کار به چند طریق ممکن است انجام شود؟ (هر کتاب فقط می‌تواند به یک نفر داده شود)",
+      "options": [
+        "۵۰۴۰",
+        "۲۵۲۰",
+        "۸۴۰",
+        "۲۱۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1746,
+      "question_page": 5,
+      "question_text": "به چند طریق می‌توان از بین ۵ دانش‌آموز کلاس دهم، ۴ دانش‌آموز یازدهم و ۳ دانش‌آموز دوازدهم، ۴ نفر را برای یک گروه سرود انتخاب کرد به طوری که از هر پایه حداقل یک نفر انتخاب شده باشد؟",
+      "options": [
+        "۲۷۰",
+        "۲۶۰",
+        "۲۸۰",
+        "۲۹۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1747,
+      "question_page": 5,
+      "question_text": "چه تعداد عدد ۳ رقمی با ارقام متمایز می‌توان ساخت به طوری که رقم‌های آن از بین $\\{1, 2, 3, 4, 5, 6, 7\\}$ باشند و شامل رقم ۵ باشند اما رقم ۲ در آن‌ها نباشد؟",
+      "options": [
+        "۶۰",
+        "۹۰",
+        "۱۲۰",
+        "۱۵۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1748,
+      "question_page": 5,
+      "question_text": "در بین تمام زیرمجموعه‌های ۴ عضوی مجموعه $A = \\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ چند تا از آن‌ها شامل حداقل دو عدد زوج هستند؟",
+      "options": [
+        "۶۶",
+        "۸۱",
+        "۹۶",
+        "۱۰۱"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1749,
+      "question_page": 5,
+      "question_text": "چند عدد ۶ رقمی با ارقام متمایز و زوج می‌توان با استفاده از مجموعه ارقام $\\{0, 1, 2, 3, 4, 5, 6, 7, 8\\}$ ساخت؟",
+      "options": [
+        "۱۲۰",
+        "۲۴۰",
+        "۳۶۰",
+        "۴۸۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1750,
+      "question_page": 5,
+      "question_text": "چند عدد ۳ رقمی می‌توان نوشت که دقیقاً دو رقم آن یکسان باشند؟ (با ارقام $0, 1, \\dots, 9$)",
+      "options": [
+        "۲۴۳",
+        "۲۷۰",
+        "۲۱۶",
+        "۲۵۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1751,
+      "question_page": 5,
+      "question_text": "با حروف کلمه \\\"دانش‌آموز\\\" چند کلمه ۵ حرفی بدون تکرار حروف می‌توان ساخت که شامل حرف \\\"آ\\\" باشند اما شامل حرف \\\"ز\\\" نباشند؟",
+      "options": [
+        "۴۸۰",
+        "۶۰۰",
+        "۷۲۰",
+        "۸۴۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1752,
+      "question_page": 5,
+      "question_text": "۵ پسر و ۴ دختر به چند طریق می‌توانند در یک صف بایستند به طوری که هیچ دو دختری کنار هم نباشند؟",
+      "options": [
+        "۲۸۸۰",
+        "۱۴۴۰۰",
+        "۴۳۲۰۰",
+        "۸۶۴۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1753,
+      "question_page": 5,
+      "question_text": "به چند طریق می‌توان ۷ نفر را دور یک میز گرد نشاند به طوری که دو نفر خاص (مثلاً A و B) کنار هم ننشینند؟",
+      "options": [
+        "۴۸۰",
+        "۲۴۰",
+        "۷۲۰",
+        "۱۲۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1754,
+      "question_page": 5,
+      "question_text": "از یک گروه ۸ نفره، می‌خواهیم یک کمیته ۳ نفره انتخاب کنیم که یک نفر از آن‌ها به عنوان رئیس، یک نفر معاون و یک نفر منشی باشد. به چند طریق این کار امکان‌پذیر است؟",
+      "options": [
+        "۵۶",
+        "۳۳۶",
+        "۱۱۲",
+        "۲۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1755,
+      "question_page": 5,
+      "question_text": "اگر مجموعه $A = \\{1, 2, 3, 4, 5\\}$ و $B = \\{1, 2, 3, 4, 5, 6, 7, 8\\}$، چند تابع اکیداً صعودی از A به B می‌توان تعریف کرد؟",
+      "options": [
+        "۲۱",
+        "۵۶",
+        "۲۸",
+        "۷۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1756,
+      "question_page": 5,
+      "question_text": "چند عدد ۵ رقمی فرد بدون تکرار ارقام می‌توان نوشت که شامل رقم صفر نباشند؟",
+      "options": [
+        "۱۵۱۲۰",
+        "۱۳۴۴۰",
+        "۱۱۷۶۰",
+        "۱۰۰۸۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1757,
+      "question_page": 5,
+      "question_text": "تعداد جواب‌های صحیح و نامنفی معادله $x_1 + x_2 + x_3 + x_4 = 10$ کدام است؟",
+      "options": [
+        "۲۲۰",
+        "۲۸۶",
+        "۱۲۰",
+        "۳۶۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1758,
+      "question_page": 5,
+      "question_text": "تعداد جواب‌های صحیح و مثبت معادله $x + y + z = 12$ به شرطی که $x \\ge 2, y \\ge 1, z \\ge 3$ کدام است؟",
+      "options": [
+        "۲۸",
+        "۲۱",
+        "۳۶",
+        "۱۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1759,
+      "question_page": 5,
+      "question_text": "در بسط دوجمله‌ای $(2x - y)^7$، ضریب جمله شامل $x^3y^4$ کدام است؟",
+      "options": [
+        "۵۶۰",
+        "۲۸۰",
+        "۱۴۰",
+        "۱۱۲۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1760,
+      "question_page": 5,
+      "question_text": "در بسط $(\\sqrt{x} + \\frac{1}{x})^{10}$ جمله مستقل از x کدام است؟",
+      "options": [
+        "۱۲۰",
+        "۲۱۰",
+        "۲۵۲",
+        "۴۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1761,
+      "question_page": 5,
+      "question_text": "مجموع ضرایب بسط $(3x - 2y)^5$ کدام است؟",
+      "options": [
+        "۱",
+        "۳۲",
+        "۲۴۳",
+        "۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1762,
+      "question_page": 6,
+      "question_text": "با حروف کلمه «مثلثات» چند کلمه ۶ حرفی می‌توان ساخت که حروف تکراری کنار هم نباشند؟",
+      "options": [
+        "۱۲۰",
+        "۲۴۰",
+        "۳۶۰",
+        "۴۸۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1763,
+      "question_page": 6,
+      "question_text": "۵ کتاب ریاضی متفاوت و ۴ کتاب فیزیک متفاوت را به چند طریق می‌توان در یک قفسه کنار هم چید به طوری که هیچ دو کتاب فیزیکی کنار هم نباشند؟",
+      "options": [
+        "۲۸۸۰",
+        "۴۳۲۰۰",
+        "۸۶۴۰۰",
+        "۱۷۲۸۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1764,
+      "question_page": 6,
+      "question_text": "در یک بازی شطرنج دوره‌ای با ۱۰ شرکت‌کننده، هر نفر با سایرین دقیقاً یک بازی انجام می‌دهد. اگر در مجموع ۳ بازی با نتیجه مساوی به پایان رسیده باشد، تعداد بازی‌هایی که در آن‌ها برنده و بازنده مشخص شده است کدام است؟",
+      "options": [
+        "۴۲",
+        "۴۵",
+        "۴۸",
+        "۵۱"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1765,
+      "question_page": 6,
+      "question_text": "تعداد توابع از مجموعه $A = \\{1, 2, 3, 4\\}$ به مجموعه $B = \\{a, b, c\\}$ چند تا است؟",
+      "options": [
+        "۱۲",
+        "۶۴",
+        "۸۱",
+        "۲۵۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1766,
+      "question_page": 6,
+      "question_text": "چند عدد ۴ رقمی مضرب ۵ می‌توان با استفاده از ارقام $\\{0, 1, 2, 3, 4, 5, 6\\}$ ساخت (بدون تکرار ارقام)؟",
+      "options": [
+        "۱۸۰",
+        "۲۰۰",
+        "۲۲۰",
+        "۲۴۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1767,
+      "question_page": 6,
+      "question_text": "تعداد راه‌های قرار دادن ۶ مهره متمایز در ۳ جعبه متمایز به طوری که هیچ جعبه‌ای خالی نماند کدام است؟",
+      "options": [
+        "۵۴۰",
+        "۷۲۰",
+        "۹۰",
+        "۱۲۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1768,
+      "question_page": 6,
+      "question_text": "در شکل مقابل از نقطه A به نقطه C چند مسیر کوتاه‌تر وجود دارد که از B عبور نکند؟",
+      "options": [
+        "۱۲۰",
+        "۱۶۰",
+        "۱۸۰",
+        "۲۰۰"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            300,
+            1400,
+            1500,
+            1800
+          ],
+          "placement": "stem",
+          "alt": "یک شبکه مستطیلی با نقاط A و C در گوشه‌ها و B در وسط"
+        }
+      ],
+      "review_notes": [
+        "Image is upside down. Estimating bounding box and verifying later"
+      ]
+    },
+    {
+      "question_number": 1769,
+      "question_page": 6,
+      "question_text": "تعداد انتخاب‌های ۳ نفر از بین ۱۰ نفر به طوری که دو نفر خاص همزمان انتخاب نشوند کدام است؟",
+      "options": [
+        "۱۱۲",
+        "۱۲۰",
+        "۱۲۸",
+        "۱۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1770,
+      "question_page": 6,
+      "question_text": "تعداد جایگشت‌های دایره‌ای ۵ مهره متمایز و یک مهره سفید چند تاست؟",
+      "options": [
+        "۱۲۰",
+        "۲۴",
+        "۷۲۰",
+        "۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1771,
+      "question_page": 6,
+      "question_text": "مجموعه $A$ دارای $n$ عضو و $B$ دارای $m$ عضو است. اگر تعداد زیرمجموعه‌های $A$ برابر ۲۵۶ و تعداد زیرمجموعه‌های $B$ برابر ۶۴ باشد، $n+m$ کدام است؟",
+      "options": [
+        "۱۴",
+        "۱۵",
+        "۱۶",
+        "۱۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1772,
+      "question_page": 6,
+      "question_text": "از بین ۵ مهره قرمز و ۴ مهره آبی چند انتخاب ۳ تایی وجود دارد که حداقل ۲ مهره قرمز باشد؟",
+      "options": [
+        "۵۰",
+        "۴۰",
+        "۶۰",
+        "۷۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1773,
+      "question_page": 6,
+      "question_text": "در بسط $(x + \\frac{2}{x^2})^9$ جمله مستقل از x کدام است؟",
+      "options": [
+        "۵۳۷۶",
+        "۲۶۸۸",
+        "۱۳۴۴",
+        "۶۷۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1774,
+      "question_page": 6,
+      "question_text": "در معادله $x_1 + x_2 + x_3 = 8$ تعداد جواب‌های صحیح نامنفی که در آن‌ها $x_1 \\le 3$ باشد کدام است؟",
+      "options": [
+        "۱۵",
+        "۲۱",
+        "۲۸",
+        "۳۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1775,
+      "question_page": 6,
+      "question_text": "از بین ارقام $1, 2, 3, 4, 5$، چند عدد چهار رقمی زوج (با تکرار مجاز) می‌توان نوشت؟",
+      "options": [
+        "۱۲۰",
+        "۲۵۰",
+        "۲۰۰",
+        "۳۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1776,
+      "question_page": 6,
+      "question_text": "تعداد توابع یک‌به‌یک از $A = \\{1, 2, 3\\}$ به $B = \\{a, b, c, d, e\\}$ چقدر است؟",
+      "options": [
+        "۶۰",
+        "۱۲۰",
+        "۱۵",
+        "۱۲۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1777,
+      "question_page": 6,
+      "question_text": "چند عدد سه رقمی می‌توان نوشت که مجموع ارقام آن ۸ باشد؟ (صفر نمی‌تواند در صدگان باشد)",
+      "options": [
+        "۳۶",
+        "۴۵",
+        "۵۵",
+        "۲۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1778,
+      "question_page": 7,
+      "question_text": "با حروف کلمه 'PROBABILITY' چند کلمه ۱۱ حرفی متمایز می‌توان ساخت؟",
+      "options": [
+        "۹۹۷۹۲۰۰",
+        "۴۹۸۹۶۰۰",
+        "۳۹۹۱۶۸۰۰",
+        "۱۹۹۵۸۴۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1779,
+      "question_page": 7,
+      "question_text": "تعداد توابع پوشا از مجموعه $A$ با ۵ عضو به مجموعه $B$ با ۳ عضو چقدر است؟",
+      "options": [
+        "۱۵۰",
+        "۲۴۳",
+        "۱۲۰",
+        "۹۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1780,
+      "question_page": 7,
+      "question_text": "۵ نفر می‌خواهند در ۳ اتاق متمایز قرار گیرند به طوری که هیچ اتاقی خالی نماند. به چند طریق ممکن است؟",
+      "options": [
+        "۱۵۰",
+        "۱۸۰",
+        "۲۴۰",
+        "۱۲۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1781,
+      "question_page": 7,
+      "question_text": "چند عدد ۵ رقمی می‌توان با استفاده از ارقام $0, 1, 1, 2, 2$ ساخت؟",
+      "options": [
+        "۳۰",
+        "۲۴",
+        "۲۰",
+        "۱۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1782,
+      "question_page": 7,
+      "question_text": "در یک چندضلعی محدب ۳۵ قطر وجود دارد. این چندضلعی چند ضلع دارد؟",
+      "options": [
+        "۸",
+        "۹",
+        "۱۰",
+        "۱۱"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1783,
+      "question_page": 7,
+      "question_text": "در بسط $(x^2 - \\frac{1}{x})^8$ ضریب $x^4$ کدام است؟",
+      "options": [
+        "۷۰",
+        "-۷۰",
+        "۵۶",
+        "-۵۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1784,
+      "question_page": 7,
+      "question_text": "تعداد جایگشت‌های حروف کلمه 'BOOKKEEPER' چند تاست؟",
+      "options": [
+        "۱۵۱۲۰۰",
+        "۳۰۲۴۰۰",
+        "۷۵۶۰۰",
+        "۶۰۴۸۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1785,
+      "question_page": 7,
+      "question_text": "۸ نفر دور یک میز گرد نشسته‌اند. دو نفر خاص به چند طریق می‌توانند روبروی هم باشند؟",
+      "options": [
+        "۷۲۰",
+        "۱۴۴۰",
+        "۵۰۴۰",
+        "۲۴۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1786,
+      "question_page": 7,
+      "question_text": "معادله $x+y+z+w = 15$ چند جواب صحیح و مثبت دارد؟",
+      "options": [
+        "۳۶۴",
+        "۴۵۵",
+        "۲۸۶",
+        "۱۲۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1787,
+      "question_page": 7,
+      "question_text": "با ارقام ۱ تا ۹ چند عدد سه رقمی زوج با ارقام متمایز می‌توان ساخت؟",
+      "options": [
+        "۲۵۲",
+        "۲۲۴",
+        "۲۸۰",
+        "۲۱۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1788,
+      "question_page": 7,
+      "question_text": "تعداد زیرمجموعه‌های ۳ عضوی از مجموعه $\\{1, 2, \\dots, 10\\}$ که شامل عدد ۵ باشند کدام است؟",
+      "options": [
+        "۳۶",
+        "۴۵",
+        "۷۲",
+        "۸۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1789,
+      "question_page": 7,
+      "question_text": "به چند طریق می‌توان ۴ دانش‌آموز را در ۳ کلاس مختلف ثبت‌نام کرد؟",
+      "options": [
+        "۸۱",
+        "۶۴",
+        "۱۲",
+        "۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1790,
+      "question_page": 7,
+      "question_text": "از بین ۷ نقطه روی یک دایره چند وتر می‌توان رسم کرد؟",
+      "options": [
+        "۱۴",
+        "۲۱",
+        "۲۸",
+        "۳۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1791,
+      "question_page": 7,
+      "question_text": "به چند طریق می‌توان ۵ مهره یکسان را در ۴ ظرف متمایز قرار داد؟",
+      "options": [
+        "۵۶",
+        "۷۰",
+        "۳۵",
+        "۱۲۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1792,
+      "question_page": 7,
+      "question_text": "حاصل $\\binom{10}{2} + \\binom{10}{3} + \\binom{11}{4}$ کدام است؟",
+      "options": [
+        "۴۹۵",
+        "۳۳۰",
+        "۱۶۵",
+        "۷۹۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1793,
+      "question_page": 7,
+      "question_text": "اگر $P(n, 3) = 6 C(n, 4)$، آنگاه n کدام است؟",
+      "options": [
+        "۶",
+        "۷",
+        "۸",
+        "۹"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1794,
+      "question_page": 8,
+      "question_text": "با ارقام $0, 1, 2, 3, 4, 5$ چند عدد سه رقمی فرد با ارقام متمایز می‌توان ساخت؟",
+      "options": [
+        "۴۸",
+        "۳۶",
+        "۶۰",
+        "۷۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1795,
+      "question_page": 8,
+      "question_text": "اگر ۶ مهره متمایز را به صورت تصادفی در ۳ جعبه متمایز قرار دهیم، تعداد حالت‌هایی که دقیقاً یک جعبه خالی بماند کدام است؟",
+      "options": [
+        "۱۸۶",
+        "۹۰",
+        "۱۸۰",
+        "۳۶۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1796,
+      "question_page": 8,
+      "question_text": "تعداد راه‌های توزیع ۱۰ جایزه یکسان بین ۳ نفر به طوری که هر نفر حداقل ۲ جایزه بگیرد کدام است؟",
+      "options": [
+        "۱۵",
+        "۲۱",
+        "۲۸",
+        "۳۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1797,
+      "question_page": 8,
+      "question_text": "تعداد جملات در بسط $(x+y+z)^5$ کدام است؟",
+      "options": [
+        "۱۵",
+        "۲۱",
+        "۲۸",
+        "۳۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1798,
+      "question_page": 8,
+      "question_text": "از بین ۸ مرد و ۵ زن، به چند طریق می‌توان یک کمیته ۴ نفره تشکیل داد که دقیقاً ۲ زن داشته باشد؟",
+      "options": [
+        "۱۴۰",
+        "۲۸۰",
+        "۵۶۰",
+        "۷۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1799,
+      "question_page": 8,
+      "question_text": "۵ جفت کفش (۱۰ لنگه) داریم. به چند طریق می‌توان ۴ لنگه کفش انتخاب کرد که دقیقاً یک جفت در بین آن‌ها باشد؟",
+      "options": [
+        "۱۲۰",
+        "۲۴۰",
+        "۱۸۰",
+        "۳۶۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1800,
+      "question_page": 8,
+      "question_text": "مجموعه $A$ دارای ۷ عضو است. تعداد زیرمجموعه‌هایی از $A$ که حداقل ۳ عضو دارند کدام است؟",
+      "options": [
+        "۹۹",
+        "۶۴",
+        "۱۲۰",
+        "۱۲۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1801,
+      "question_page": 8,
+      "question_text": "با ارقام ۱ تا ۶ چند عدد ۳ رقمی می‌توان ساخت که حداقل یک رقم آن زوج باشد (بدون تکرار ارقام)؟",
+      "options": [
+        "۱۱۴",
+        "۹۶",
+        "۱۲۰",
+        "۱۰۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1802,
+      "question_page": 8,
+      "question_text": "در بسط $(x - 2y)^6$ مجموع ضرایب جملات با توان فرد y کدام است؟",
+      "options": [
+        "-۳۶۴",
+        "-۳۶۵",
+        "۳۶۴",
+        "۳۶۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1803,
+      "question_page": 8,
+      "question_text": "چند جایگشت از ارقام $1, 2, 3, 4, 5, 6$ وجود دارد که در آن‌ها ارقام زوج کنار هم باشند؟",
+      "options": [
+        "۱۴۴",
+        "۷۲۰",
+        "۴۸",
+        "۲۸۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1804,
+      "question_page": 8,
+      "question_text": "۱۰ نفر دور یک میز گرد می‌نشینند. احتمال اینکه دو نفر خاص کنار هم بنشینند چقدر است؟",
+      "options": [
+        "۱/۹",
+        "۲/۹",
+        "۱/۵",
+        "۲/۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1805,
+      "question_page": 8,
+      "question_text": "به چند طریق می‌توان عدد ۱۰ را به صورت مجموع ۳ عدد طبیعی نوشت؟ (ترتیب مهم است)",
+      "options": [
+        "۳۶",
+        "۴۵",
+        "۵۵",
+        "۲۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1806,
+      "question_page": 8,
+      "question_text": "چند عدد ۶ رقمی با ارقام متمایز وجود دارد که شامل رقم‌های ۱ و ۲ بوده و ۱ قبل از ۲ آمده باشد؟ (از چپ به راست)",
+      "options": [
+        "۱۳۴۴۰",
+        "۶۷۲۰",
+        "۱۱۵۲۰",
+        "۵۷۶۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1807,
+      "question_page": 8,
+      "question_text": "تعداد توابع از مجموعه $A$ با ۳ عضو به مجموعه $B$ با ۵ عضو که یک‌به‌یک نباشند چقدر است؟",
+      "options": [
+        "۶۵",
+        "۶۰",
+        "۱۲۵",
+        "۱۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1808,
+      "question_page": 8,
+      "question_text": "تعداد راه‌های قرار دادن ۸ کتاب متمایز در ۳ قفسه متمایز به طوری که ترتیب کتاب‌ها در هر قفسه مهم باشد کدام است؟",
+      "options": [
+        "P(10, 8)",
+        "P(8, 3)",
+        "3^8",
+        "8^3"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1809,
+      "question_page": 8,
+      "question_text": "ضریب $x^2 y^3$ در بسط $(x - y + 1)^6$ کدام است؟",
+      "options": [
+        "-۶۰",
+        "۶۰",
+        "-۱۲۰",
+        "۱۲۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1810,
+      "question_page": 9,
+      "question_text": "با حروف کلمه \\\"MISSISSIPPI\\\" چند کلمه ۱۱ حرفی می‌توان ساخت؟",
+      "options": [
+        "۳۴۶۵۰",
+        "۶۹۳۰۰",
+        "۱۷۳۲۵",
+        "۳۹۹۱۶۸۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1811,
+      "question_page": 9,
+      "question_text": "تعداد راه‌های توزیع ۶ توپ یکسان بین ۳ جعبه متمایز به طوری که هیچ جعبه‌ای بیش از ۳ توپ نداشته باشد کدام است؟",
+      "options": [
+        "۶",
+        "۷",
+        "۸",
+        "۹"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1812,
+      "question_page": 9,
+      "question_text": "از بین ۵ جفت دستکش متمایز، به چند طریق می‌توان ۳ لنگه دستکش انتخاب کرد به طوری که هیچ جفتی در بین آن‌ها نباشد؟",
+      "options": [
+        "۸۰",
+        "۱۲۰",
+        "۶۰",
+        "۱۶۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1813,
+      "question_page": 9,
+      "question_text": "چند عدد ۵ رقمی متقارن (پالیندروم) با ارقام ۰ تا ۹ می‌توان ساخت؟ (رقم اول صفر نیست)",
+      "options": [
+        "۹০০",
+        "۱۰۰۰",
+        "۸۱۰",
+        "۹۰۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1814,
+      "question_page": 9,
+      "question_text": "اگر $A$ مجموعه‌ای با ۵ عضو و $B$ مجموعه‌ای با ۶ عضو باشد، تعداد توابع از $A$ به $B$ که اکیداً صعودی باشند چقدر است؟ (اعضای A و B اعداد طبیعی هستند)",
+      "options": [
+        "۶",
+        "۱۵",
+        "۲۱",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1815,
+      "question_page": 9,
+      "question_text": "در بسط $(\\sqrt{x} - \\frac{1}{\\sqrt{x}})^n$ اگر مجموع ضرایب برابر صفر باشد، n کدام می‌تواند باشد؟",
+      "options": [
+        "فقط زوج",
+        "فقط فرد",
+        "هر عدد طبیعی",
+        "چنین n ای وجود ندارد"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1816,
+      "question_page": 9,
+      "question_text": "تعداد زیرمجموعه‌های مجموعه $\\{1, 2, 3, 4, 5, 6\\}$ که شامل ۱ بوده ولی شامل ۲ نباشند چند تاست؟",
+      "options": [
+        "۸",
+        "۱۶",
+        "۳۲",
+        "۶۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1817,
+      "question_page": 9,
+      "question_text": "۶ نفر در یک صف ایستاده‌اند. احتمال اینکه ۲ نفر خاص کنار هم باشند چقدر است؟",
+      "options": [
+        "۱/۳",
+        "۱/۶",
+        "۲/۵",
+        "۱/۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1818,
+      "question_page": 9,
+      "question_text": "حاصل‌جمع $C(n, 0) + C(n, 1) + \\dots + C(n, n)$ همواره برابر است با:",
+      "options": [
+        "2^n",
+        "n!",
+        "2^{n-1}",
+        "n^2"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1819,
+      "question_page": 9,
+      "question_text": "تعداد جواب‌های صحیح و نامنفی معادله $x+y+z = 7$ چقدر است؟",
+      "options": [
+        "۳۶",
+        "۴۵",
+        "۲۸",
+        "۵۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1820,
+      "question_page": 9,
+      "question_text": "۴ نامه متمایز را به چند طریق می‌توان در ۳ صندوق پست انداخت؟",
+      "options": [
+        "۸۱",
+        "۶۴",
+        "۱۲",
+        "۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1821,
+      "question_page": 9,
+      "question_text": "تعداد قطرهای یک ۸ ضلعی محدب چند تاست؟",
+      "options": [
+        "۲۰",
+        "۲۴",
+        "۲۸",
+        "۱۶"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1822,
+      "question_page": 9,
+      "question_text": "با حروف کلمه \\\"COMPUTER\\\" چند کلمه ۸ حرفی می‌توان ساخت که با حرف C شروع و به حرف R ختم شوند؟",
+      "options": [
+        "۷۲۰",
+        "۵۰۴۰",
+        "۴۰۳۲۰",
+        "۱۲۰۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

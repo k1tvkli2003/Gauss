@@ -1,0 +1,2882 @@
+{
+  "task_id": "math-topic-11-global-1248-1466-retry",
+  "subject": "math",
+  "topic_key": "derivative_applications",
+  "questions": [
+    {
+      "question_number": 1248,
+      "question_page": 1,
+      "question_text": "تابع $y = \\frac{x^2 - 4x + 4}{x^2 + 1}$ در بازه $(a, b)$ اکیداً نزولی است. حداکثر $b - a$ کدام است؟",
+      "options": [
+        "$1/5$",
+        "$2/5$",
+        "$2$",
+        "$1$"
+      ],
+      "media_regions": []
+    },
+    {
+      "question_number": 1249,
+      "question_page": 2,
+      "question_text": "کدام عبارت برای تابع $f(x) = 2\\sqrt{x} - \\frac{3}{\\sqrt[3]{x^2 - 1}}$ درست است؟ (سراسری ۱۴۰۰)",
+      "options": [
+        "تابع $f$ در بازه $(1, \\infty) \\cup (0, 1)$ صعودی است.",
+        "تابع $f$ در بازه‌های $(1, \\infty)$ و $(0, 1)$ صعودی است.",
+        "تابع $f$ در بازه $(1, \\infty)$ صعودی و در بازه $(0, 1)$ نزولی است.",
+        "تابع $f$ در بازه $(1, \\infty)$ نزولی و در بازه $(0, 1)$ صعودی است."
+      ],
+      "media_regions": []
+    },
+    {
+      "question_number": 1250,
+      "question_page": 2,
+      "question_text": "به ازای چند مقدار صحیح $m$، تابع $f(x) = \\frac{1}{3}x^3 - mx^2 + 4x$ در $\\mathbb{R}$، اکیداً صعودی است؟",
+      "options": [
+        "$5$",
+        "$3$",
+        "$2$",
+        "$4$"
+      ],
+      "media_regions": []
+    },
+    {
+      "question_number": 1251,
+      "question_page": 2,
+      "question_text": "مجموعه طول نقاط بحرانی تابع با ضابطه $f(x) = |x - 2|\\sqrt[3]{x^2}$ کدام است؟",
+      "options": [
+        "$\\{0, \\frac{4}{5}, 2\\}$",
+        "$\\{0, \\frac{2}{3}, 2\\}$",
+        "$\\{0, 1\\}$",
+        "$\\{\\frac{2}{3}, 2\\}$"
+      ],
+      "media_regions": []
+    },
+    {
+      "question_number": 1252,
+      "question_page": 3,
+      "question_text": "در تابع با ضابطه $f(x) = x|x| - 2x$ فاصله دو نقطه ماکزیمم نسبی و مینیمم نسبی آن، کدام است؟",
+      "options": [
+        "$2\\sqrt{2}$",
+        "$2$",
+        "$3\\sqrt{2}$",
+        "$4$"
+      ],
+      "media_regions": []
+    },
+    {
+      "question_number": 1253,
+      "question_page": 3,
+      "question_text": "مقدار ماکزیمم نسبی تابع با ضابطه $f(x) = \\frac{x^2 + 2x - 3}{x^2 + 1}$ کدام است؟",
+      "options": [
+        "$-1 + \\sqrt{5}$",
+        "$1 + \\sqrt{5}$",
+        "$-1 + \\sqrt{3}$",
+        "$1 + \\sqrt{3}$"
+      ],
+      "media_regions": []
+    },
+    {
+      "question_number": 1254,
+      "question_page": 3,
+      "question_text": "فاصله نقطه ماکزیمم نسبی تابع با ضابطه $f(x) = x + \\sqrt{4x - x^2}$ از نیمساز ناحیه اول کدام است؟",
+      "options": [
+        "$1$",
+        "$\\sqrt{2}$",
+        "$2$",
+        "$2\\sqrt{2}$"
+      ],
+      "media_regions": []
+    },
+    {
+      "question_number": 1255,
+      "question_page": 4,
+      "question_text": "در تابع با ضابطه $f(x) = x|x| - 2x$ فاصله دو نقطه ماکزیمم نسبی و مینیمم نسبی آن، کدام است؟ (سراسری ۹۸)",
+      "options": [
+        "$2\\sqrt{2}$",
+        "$3$",
+        "$3\\sqrt{2}$",
+        "$4$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            215,
+            230,
+            246,
+            808
+          ],
+          "placement": "stem",
+          "filename": "page_0004.jpg",
+          "alt": "صورت سوال ۱۲۵۵"
+        },
+        {
+          "region": [
+            239,
+            749,
+            260,
+            796
+          ],
+          "placement": "option_1",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            239,
+            584,
+            260,
+            615
+          ],
+          "placement": "option_2",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            239,
+            381,
+            260,
+            434
+          ],
+          "placement": "option_3",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            239,
+            222,
+            260,
+            256
+          ],
+          "placement": "option_4",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1256,
+      "question_page": 4,
+      "question_text": "مقدار ماکزیمم نسبی تابع با ضابطه $\\displaystyle f(x) = \\frac{x^2 + 2x - 3}{x^2 + 1}$ کدام است؟ (سراسری ۹۹)",
+      "options": [
+        "$-1 + \\sqrt{5}$",
+        "$1 + \\sqrt{5}$",
+        "$-1 + \\sqrt{3}$",
+        "$1 + \\sqrt{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            386,
+            388,
+            430,
+            809
+          ],
+          "placement": "stem",
+          "filename": "page_0004.jpg",
+          "alt": "صورت سوال ۱۲۵۶"
+        },
+        {
+          "region": [
+            411,
+            720,
+            438,
+            796
+          ],
+          "placement": "option_1",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            411,
+            552,
+            438,
+            613
+          ],
+          "placement": "option_2",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            411,
+            351,
+            438,
+            432
+          ],
+          "placement": "option_3",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            411,
+            185,
+            438,
+            255
+          ],
+          "placement": "option_4",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1257,
+      "question_page": 4,
+      "question_text": "فاصله نقطه ماکزیمم نسبی تابع با ضابطه $f(x) = x + \\sqrt{4x - x^2}$ از نیمساز ناحیه اول کدام است؟ (سراسری ۹۹)",
+      "options": [
+        "$1$",
+        "$\\sqrt{2}$",
+        "$2$",
+        "$2\\sqrt{2}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            595,
+            235,
+            626,
+            807
+          ],
+          "placement": "stem",
+          "filename": "page_0004.jpg",
+          "alt": "صورت سوال ۱۲۵۷"
+        },
+        {
+          "region": [
+            619,
+            768,
+            638,
+            794
+          ],
+          "placement": "option_1",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            619,
+            574,
+            640,
+            612
+          ],
+          "placement": "option_2",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            619,
+            412,
+            638,
+            432
+          ],
+          "placement": "option_3",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            619,
+            203,
+            640,
+            250
+          ],
+          "placement": "option_4",
+          "filename": "page_0004.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1258,
+      "question_page": 5,
+      "question_text": "شکل روبه‌رو، نمودار تابع $f(x) = 3x^4 + ax^3 + bx^2 + cx$ است. $a$ کدام است؟ (سراسری ۹۸)",
+      "options": [
+        "$-8$",
+        "$-7$",
+        "$-5$",
+        "$-4$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            77,
+            124,
+            150,
+            857
+          ],
+          "placement": "stem",
+          "filename": "page_0005.jpg",
+          "alt": "صورت سوال ۱۲۵۸ و نمودار"
+        },
+        {
+          "region": [
+            98,
+            804,
+            116,
+            856
+          ],
+          "placement": "option_1",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            98,
+            452,
+            115,
+            513
+          ],
+          "placement": "option_2",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            122,
+            804,
+            137,
+            856
+          ],
+          "placement": "option_3",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            122,
+            452,
+            137,
+            513
+          ],
+          "placement": "option_4",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1259,
+      "question_page": 5,
+      "question_text": "مقادیر ماکزیمم و مینیمم مطلق تابع با ضابطه $f(x) = \\frac{1}{3}x^3 - x^2 - 15x$ در بازه $[-4, 3]$ کدام است؟ (سراسری ۹۵)",
+      "options": [
+        "$-18$ و $24$",
+        "$-45$ و $27$",
+        "$-36$ و $27$",
+        "$-27$ و $36$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            621,
+            287,
+            650,
+            852
+          ],
+          "placement": "stem",
+          "filename": "page_0005.jpg",
+          "alt": "صورت سوال ۱۲۵۹"
+        },
+        {
+          "region": [
+            647,
+            729,
+            666,
+            854
+          ],
+          "placement": "option_1",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            647,
+            529,
+            666,
+            680
+          ],
+          "placement": "option_2",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            647,
+            362,
+            666,
+            497
+          ],
+          "placement": "option_3",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            647,
+            192,
+            666,
+            323
+          ],
+          "placement": "option_4",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1260,
+      "question_page": 5,
+      "question_text": "مینیمم مطلق تابع $f(x) = |x^2 - 3|$ در بازه $[-1/5, \\sqrt{3}]$ کدام است؟ (سراسری ۱۴۰۰)",
+      "options": [
+        "$-\\frac{9}{4}$",
+        "$-2$",
+        "$-\\sqrt{3}$",
+        "$-\\frac{9}{8}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            746,
+            429,
+            764,
+            854
+          ],
+          "placement": "stem",
+          "filename": "page_0005.jpg",
+          "alt": "صورت سوال ۱۲۶۰"
+        },
+        {
+          "region": [
+            765,
+            804,
+            792,
+            857
+          ],
+          "placement": "option_1",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            767,
+            638,
+            785,
+            715
+          ],
+          "placement": "option_2",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            767,
+            437,
+            785,
+            495
+          ],
+          "placement": "option_3",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            765,
+            276,
+            793,
+            319
+          ],
+          "placement": "option_4",
+          "filename": "page_0005.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1261,
+      "question_page": 6,
+      "question_text": "کم‌ترین مقدار تابع $y = \\frac{1}{4}x^4 - x^3 - 2x^2$ کدام است؟ (سراسری ۹۲)",
+      "options": [
+        "$-36$",
+        "$-32$",
+        "$-24$",
+        "$-18$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1262,
+      "question_page": 6,
+      "question_text": "برد تابع $y = x + \\sqrt{8-x^2}$ کدام است؟",
+      "options": [
+        "$[-4, 2\\sqrt{2}]$",
+        "$[-4, 4]$",
+        "$[-2\\sqrt{2}, 2\\sqrt{2}]$",
+        "$[-2\\sqrt{2}, 4]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1263,
+      "question_page": 6,
+      "question_text": "بیشترین مساحت مستطیلی که یک ضلع آن بر قطر نیم‌دایره به شعاع ۶ واحد و دو رأس دیگر آن روی این نیم‌دایره باشد، کدام است؟ (سراسری ۹۸)",
+      "options": [
+        "$18$",
+        "$24$",
+        "$27$",
+        "$36$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            1288,
+            62,
+            1341,
+            154
+          ],
+          "placement": "stem",
+          "alt": "مستطیل محاط در نیم‌دایره"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1264,
+      "question_page": 6,
+      "question_text": "حداکثر مساحت جانبی استوانه‌ای که درون یک کره به شعاع $4\\sqrt{2}$ محاط می‌شود، کدام است؟ (سراسری ۱۴۰۰)",
+      "options": [
+        "$32\\pi$",
+        "$64\\pi$",
+        "$\\frac{256\\pi}{3}$",
+        "$\\frac{512\\pi}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            1641,
+            56,
+            1740,
+            185
+          ],
+          "placement": "stem",
+          "alt": "استوانه محاط در کره"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1265,
+      "question_page": 7,
+      "question_text": "کوتاه‌ترین فاصلۀ سهمی $y^2 = 4x$ از نقطۀ $M(3, 0)$ کدام است؟ (سراسری ۱۴۰۰)",
+      "options": [
+        "$\\sqrt{2}$",
+        "$\\frac{3}{2}$",
+        "$2\\sqrt{2}$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1266,
+      "question_page": 7,
+      "question_text": "طول وتر یک مثلث قائم‌الزاویه برابر ۸ است. حداکثر مساحت این مثلث چه‌قدر است؟",
+      "options": [
+        "$8\\sqrt{2}$",
+        "$16\\sqrt{2}$",
+        "$32$",
+        "$16$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            110,
+            317,
+            203,
+            400
+          ],
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه با وتر ۸ و اضلاع a و b"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1267,
+      "question_page": 7,
+      "question_text": "نمودار مشتق تابع درجه‌سوم $f$ به صورت مقابل است. نمودار $f$ کدام می‌تواند باشد؟",
+      "options": [
+        "نمودار ۱",
+        "نمودار ۲",
+        "نمودار ۳",
+        "نمودار ۴"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            110,
+            644,
+            252,
+            740
+          ],
+          "placement": "stem",
+          "alt": "نمودار مشتق تابع f که یک سهمی رو به پایین است و محور x را در دو نقطه قطع می‌کند."
+        },
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            709,
+            666,
+            872,
+            743
+          ],
+          "placement": "option_1",
+          "alt": "نمودار ۱"
+        },
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            324,
+            669,
+            499,
+            745
+          ],
+          "placement": "option_2",
+          "alt": "نمودار ۲"
+        },
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            709,
+            735,
+            872,
+            822
+          ],
+          "placement": "option_3",
+          "alt": "نمودار ۳"
+        },
+        {
+          "filename": "page_0007.jpg",
+          "region": [
+            324,
+            735,
+            499,
+            822
+          ],
+          "placement": "option_4",
+          "alt": "نمودار ۴"
+        }
+      ],
+      "review_notes": [
+        "گزینه‌های این سوال به صورت تصویری (نمودار) هستند."
+      ]
+    },
+    {
+      "question_number": 1268,
+      "question_page": 8,
+      "question_text": "تابع $f(x) = 3x^2 - 6x + 7$ در کدام بازه صعودی است؟",
+      "options": [
+        "$(-2, 0)$",
+        "$(-4, -2)$",
+        "$(-3, -1)$",
+        "$(-1, 1)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1269,
+      "question_page": 8,
+      "question_text": "تابع $y = 2x(x - 4)^2$ در کدام بازه زیر نزولی است؟",
+      "options": [
+        "$(0, 2)$",
+        "$(1, 3)$",
+        "$(2, 4)$",
+        "$(3, 5)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1270,
+      "question_page": 8,
+      "question_text": "اگر $f'(x) = (2x - 3)(1 - 2x)$ باشد، تابع $f$ در کدام بازه اکیداً صعودی است؟",
+      "options": [
+        "$(-\\infty, \\frac{1}{2})$",
+        "$(\\frac{1}{2}, \\frac{3}{2})$",
+        "$(-\\infty, 1)$",
+        "$(1, +\\infty)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1271,
+      "question_page": 8,
+      "question_text": "جهت یکنوایی تابع $f(x) = x^3 - 3ax^2 - 2x + 1$ در $x = -1$ تغییر می‌کند. $a$ کدام است؟",
+      "options": [
+        "$\\frac{4}{5}$",
+        "$\\frac{5}{6}$",
+        "$-\\frac{4}{5}$",
+        "$-\\frac{5}{6}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1272,
+      "question_page": 8,
+      "question_text": "نمودار تابع $y = x^2(3x - 2)$ در مجاورت نقطه با کدام طول نزولی است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{3}$",
+        "صفر",
+        "$\\frac{2}{9}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1273,
+      "question_page": 8,
+      "question_text": "تابع $f(x) = -\\frac{1}{3}x^3 - 3x^2 + 5x - 7$ در بازهٔ $(a, b)$ نزولی است. حداکثر $a - b$ کدام است؟",
+      "options": [
+        "۲",
+        "۳",
+        "۴",
+        "۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1274,
+      "question_page": 8,
+      "question_text": "تابع $f(x) = \\frac{x + 1}{x^2 - x + 2}$ در بازهٔ $(a, b)$ اکیداً صعودی است. بیشترین مقدار $b - a$ کدام است؟",
+      "options": [
+        "۴",
+        "۵",
+        "۶",
+        "۷"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1275,
+      "question_page": 8,
+      "question_text": "تابع $f(x) = (x - 1)^3 (x + k)$ در بازهٔ $[4, +\\infty)$ اکیداً صعودی است. کم‌ترین مقدار $k$ کدام است؟",
+      "options": [
+        "-۴",
+        "-۵",
+        "۴",
+        "۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1276,
+      "question_page": 8,
+      "question_text": "تابع $f(x) = -x^3 + ax^2 + bx + 6$ فقط در بازهٔ $(-2, 1)$ صعودی اکید است. $ab$ کدام است؟",
+      "options": [
+        "$-\\frac{9}{2}$",
+        "$-\\frac{39}{2}$",
+        "$-\\frac{39}{4}$",
+        "$-9$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1277,
+      "question_page": 8,
+      "question_text": "تابع $f(x) = x^3 + ax^2 - 4x + 6$ در $\\mathbb{R}$ اکیداً صعودی است. حداکثر مقدار $a$ کدام است؟",
+      "options": [
+        "$\\sqrt{2}$",
+        "$\\sqrt{3}$",
+        "$3\\sqrt{2}$",
+        "$2\\sqrt{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1278,
+      "question_page": 9,
+      "question_text": "اگر $f'(x) = (x + a)(ax + 4)$ باشد، آن‌گاه به ازای کدام مقدار $a$ تابع $f$ در $\\mathbb{R}$ اکیداً نزولی است؟",
+      "options": [
+        "۱",
+        "۲",
+        "$-1$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1279,
+      "question_page": 9,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. در کدام بازهٔ زیر علامت $f'$ ابتدا منفی، سپس مثبت است؟",
+      "options": [
+        "$(4, 7)$",
+        "$(2, 6)$",
+        "$(-2, 0)$",
+        "$(0, 4)$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            90,
+            80,
+            230,
+            330
+          ],
+          "placement": "stem",
+          "filename": "page_0009.jpg",
+          "alt": "نمودار تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1280,
+      "question_page": 9,
+      "question_text": "نمودار مشتق تابع $f$ به صورت زیر است. طول بزرگ‌ترین بازه‌ای که تابع $f$ در آن بازه نزولی است، کدام است؟",
+      "options": [
+        "۲",
+        "۳",
+        "۵",
+        "۷"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            80,
+            310,
+            360
+          ],
+          "placement": "stem",
+          "filename": "page_0009.jpg",
+          "alt": "نمودار مشتق تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1281,
+      "question_page": 9,
+      "question_text": "نمودار مشتق تابع $f$ شکل مقابل است. تابع $f$ در کدام بازه یکنواست؟",
+      "options": [
+        "$(1, 7)$",
+        "$(4, 8)$",
+        "$(0, 2)$",
+        "$(5, 9)$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            300,
+            100,
+            410,
+            330
+          ],
+          "placement": "stem",
+          "filename": "page_0009.jpg",
+          "alt": "نمودار مشتق تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1282,
+      "question_page": 9,
+      "question_text": "$f$ تابعی پیوسته و نمودار $f'$ به صورت مقابل است. تابع $f$ در کدام بازه اکیداً نزولی است؟",
+      "options": [
+        "$(-1, 0)$",
+        "$(1, 3)$",
+        "$(2, 5)$",
+        "$(3, 6)$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            410,
+            100,
+            520,
+            330
+          ],
+          "placement": "stem",
+          "filename": "page_0009.jpg",
+          "alt": "نمودار مشتق تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1283,
+      "question_page": 9,
+      "question_text": "تابع $f(x) = \\frac{mx + 2}{2x + m}$ در بازهٔ $(-\\infty, \\frac{1}{2})$ اکیداً نزولی است. حدود $m$ کدام است؟",
+      "options": [
+        "$-2 \\leq m < 1$",
+        "$-2 < m < 2$",
+        "$-2 \\leq m \\leq 2$",
+        "$-2 < m \\leq 1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1284,
+      "question_page": 9,
+      "question_text": "تابع $f(x) = x - \\frac{4}{x + 1}$ در بازهٔ $(\\alpha, +\\infty)$ یکنوای اکید است. حداقل $\\alpha$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$-1$",
+        "۱",
+        "۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1285,
+      "question_page": 9,
+      "question_text": "تابع $y = \\frac{x|x|}{x + 2}$ در بازهٔ $(-\\infty, a)$ اکیداً نزولی است. حداکثر $a$ کدام است؟",
+      "options": [
+        "صفر",
+        "۲",
+        "$-2$",
+        "$-4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1286,
+      "question_page": 9,
+      "question_text": "کدام عبارت برای تابع $f(x) = \\sqrt{x} - \\frac{1}{\\sqrt[3]{x - 1}}$ درست است؟",
+      "options": [
+        "تابع $f$ در مجموعهٔ $(1, +\\infty) \\cup (0, 1)$ صعودی است.",
+        "تابع $f$ در بازه‌های $(0, 1)$ و $(1, +\\infty)$ صعودی است.",
+        "تابع $f$ در بازهٔ $(0, 1)$ صعودی و در بازهٔ $(1, +\\infty)$ نزولی است.",
+        "تابع $f$ در بازهٔ $(0, 1)$ نزولی و در بازهٔ $(1, +\\infty)$ صعودی است."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1287,
+      "question_page": 9,
+      "question_text": "طول بزرگ‌ترین بازه‌ای که تابع $f(x) = x^3 + 3x^2 - 6x + 4$ اکیداً نزولی و $f'$ اکیداً صعودی است، کدام است؟",
+      "options": [
+        "$\\sqrt{3}$",
+        "$2\\sqrt{3} - 1$",
+        "$2\\sqrt{3}$",
+        "$2\\sqrt{3} - 2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1288,
+      "question_page": 9,
+      "question_text": "تابع $y = \\sqrt{x^2 + 4x + 5}$ در کدام بازه اکیداً نزولی است؟",
+      "options": [
+        "$(-\\infty, -2)$",
+        "$(-2, 1)$",
+        "$(-1, 2)$",
+        "$(-2, +\\infty)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1289,
+      "question_page": 9,
+      "question_text": "تابع $f(x) = 2x(x - \\sqrt{x})$ در بازهٔ $(a, b)$ نزولی است. حداکثر $a - b$ کدام است؟",
+      "options": [
+        "$\\frac{3}{4}$",
+        "$\\frac{9}{16}$",
+        "$\\frac{4}{3}$",
+        "$\\frac{16}{9}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1290,
+      "question_page": 9,
+      "question_text": "اگر $f(x) = \\sqrt[3]{x}(x + \\alpha)$ فقط در بازهٔ $(-1, +\\infty)$ صعودی اکید باشد، مقدار $\\alpha$ کدام است؟",
+      "options": [
+        "$-2$",
+        "۲",
+        "$-4$",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1291,
+      "question_page": 9,
+      "question_text": "در مورد وضعیت یکنوایی تابع $f(x) = x + \\sqrt{x^2 - 2x + 3}$ در $\\mathbb{R}$ کدام صحیح است؟",
+      "options": [
+        "ابتدا صعودی سپس نزولی",
+        "ابتدا نزولی سپس صعودی",
+        "همواره صعودی اکید",
+        "همواره نزولی اکید"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1292,
+      "question_page": 9,
+      "question_text": "تابع $f(x) = \\begin{cases} -x^2 + mx & x < 1 \\\\ x + 1 & x \\geq 1 \\end{cases}$ در $\\mathbb{R}$ صعودی است. حدود $m$ کدام است؟",
+      "options": [
+        "$m \\geq 2$",
+        "$m \\leq 3$",
+        "$m \\leq 2$",
+        "$2 \\leq m \\leq 3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1293,
+      "question_page": 9,
+      "question_text": "اگر $f(x) = -x^3 - 2x^2 + 5x$ باشد، مجموعه جواب نامعادلهٔ $f(x - 2) < f(3x - 2)$ کدام است؟",
+      "options": [
+        "$(1, +\\infty)$",
+        "$(2, +\\infty)$",
+        "$(-\\infty, 1)$",
+        "$(-\\infty, -2)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1294,
+      "question_page": 10,
+      "question_text": "به ازای چند مقدار صحیح $k$، تابع $f(x) = 3x - |kx|$ در $\\mathbb{R}$ اکیداً یکنوا است؟",
+      "options": [
+        "$1$",
+        "$3$",
+        "$5$",
+        "$7$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1295,
+      "question_page": 10,
+      "question_text": "توابع مشتق‌پذیر $f$ و $g$ با دامنه $\\mathbb{R}$ به ترتیب اکیداً نزولی و صعودی می‌باشند. کدام تابع زیر با دامنه $\\mathbb{R}$ اکیداً نزولی است؟",
+      "options": [
+        "$f + g$",
+        "$g - f$",
+        "$fg$",
+        "$f - g$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1296,
+      "question_page": 10,
+      "question_text": "تابع مشتق‌پذیر $f$ با دامنه $\\mathbb{R}$ اکیداً صعودی است. اگر $y = f(ax + b) - 3$ اکیداً نزولی باشد، کدام گزینه صحیح است؟",
+      "options": [
+        "$a < 0$",
+        "$a > 0$",
+        "$ab < 0$",
+        "$ab > 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1297,
+      "question_page": 10,
+      "question_text": "توابع $f$ و $g$ در بازه $[a, b]$ به صورت مقابل هستند. توابع $\\frac{f}{g}$ و $f \\circ g$ به ترتیب چگونه‌اند؟",
+      "options": [
+        "اکیداً صعودی - اکیداً صعودی",
+        "اکیداً صعودی - اکیداً نزولی",
+        "اکیداً نزولی - اکیداً صعودی",
+        "اکیداً نزولی - اکیداً نزولی"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0010.jpg",
+          "region": [
+            50,
+            190,
+            200,
+            310
+          ],
+          "placement": "stem",
+          "alt": "نمودار توابع f و g"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1298,
+      "question_page": 10,
+      "question_text": "حاصل‌ضرب طول نقاط بحرانی تابع $f(x) = x^3 - 2x^2 - 3x + 1$ کدام است؟",
+      "options": [
+        "$1$",
+        "$3$",
+        "$-1$",
+        "$-3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1299,
+      "question_page": 10,
+      "question_text": "اگر $x = 3$ طول نقطه بحرانی تابع $f(x) = ax^3 - 2x^2 - 3x + 1$ باشد، کدام نقطه طول نقطه بحرانی دیگر $f(x)$ خواهد بود؟",
+      "options": [
+        "$1$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{6}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1300,
+      "question_page": 10,
+      "question_text": "تابع $f(x) = -x^3 + 2x^2 + ax + 1$ فقط یک نقطه بحرانی دارد. عرض این نقطه کدام است؟",
+      "options": [
+        "$\\frac{19}{27}$",
+        "$-\\frac{31}{27}$",
+        "$-\\frac{10}{9}$",
+        "$-\\frac{11}{9}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1301,
+      "question_page": 10,
+      "question_text": "تابع $f(x) = \\begin{cases} x^2 - 4x & x \\leq 3 \\\\ x^2 - 2x & x > 3 \\end{cases}$ چند نقطه بحرانی دارد؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1302,
+      "question_page": 10,
+      "question_text": "تابع $y = | |x| - 2|$ چند نقطه بحرانی دارد؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1303,
+      "question_page": 10,
+      "question_text": "تابع $f(x) = x|x| + 3x$ چند نقطه بحرانی دارد؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1304,
+      "question_page": 10,
+      "question_text": "نقاط بحرانی تابع $f(x) = |x^2 - 6x|$ رئوس مثلث $ABC$ هستند. مساحت این مثلث کدام است؟",
+      "options": [
+        "$18$",
+        "$27$",
+        "$36$",
+        "$54$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1305,
+      "question_page": 10,
+      "question_text": "اگر طول نقاط بحرانی تابع $f(x) = x^2 |ax + b|$ برابر $0$، $2$ و $3$ باشد، مقدار $\\frac{a}{b}$ کدام است؟",
+      "options": [
+        "$3$",
+        "$\\frac{1}{3}$",
+        "$-3$",
+        "$-\\frac{1}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1306,
+      "question_page": 10,
+      "question_text": "مجموع طول نقاط بحرانی تابع $f(x) = (x + 3)\\sqrt[3]{x - 1}$ چه‌قدر است؟",
+      "options": [
+        "$-2$",
+        "صفر",
+        "$1$",
+        "$-3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1307,
+      "question_page": 10,
+      "question_text": "نقطه $A(2, b)$ نقطه بحرانی تابع $f(x) = ax + \\sqrt{8 - x^2}$ است. $b$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1308,
+      "question_page": 10,
+      "question_text": "مجموعه نقاط بحرانی تابع $f(x) = \\frac{2}{[x - 1] + |1 - x|}$ کدام است؟",
+      "options": [
+        "$\\mathbb{Z}$",
+        "$\\mathbb{R} - \\mathbb{Z}$",
+        "$\\mathbb{R} - \\mathbb{N}$",
+        "$\\mathbb{R}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1309,
+      "question_page": 10,
+      "question_text": "تابع $f$ در تمام نقاط دامنه خود بحرانی است. ضابطه $f$ کدام می‌تواند باشد؟",
+      "options": [
+        "$[x] + |x|$",
+        "$x[x]$",
+        "$x - [x]$",
+        "$[x]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1310,
+      "question_page": 10,
+      "question_text": "تابع $f(x) = (x - 4)[3x]$ در بازه $(-1, 1)$ دارای چند نقطه بحرانی است؟",
+      "options": [
+        "$1$",
+        "$5$",
+        "$7$",
+        "بی‌شمار"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1311,
+      "question_page": 11,
+      "question_text": "نمودار $f$ به صورت مقابل است. تعداد نقاط بحرانی آن در بازه $(-2, 6)$ کدام است؟",
+      "options": [
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0011.jpg",
+          "region": [
+            90,
+            70,
+            320,
+            130
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f در بازه (-2, 6)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1312,
+      "question_page": 11,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. تابع $y = \\frac{1}{f(x)}$ چند نقطه بحرانی دارد؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0011.jpg",
+          "region": [
+            100,
+            140,
+            230,
+            190
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1313,
+      "question_page": 11,
+      "question_text": "نمودار $f'$ شکل مقابل است. تعداد نقاط بحرانی $f$ کدام است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0011.jpg",
+          "region": [
+            100,
+            190,
+            330,
+            260
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع 'f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1314,
+      "question_page": 11,
+      "question_text": "جمع طول نقاط اکسترمم نسبی تابع $f(x) = -2x^3 + 3x^2 + 7x - 1$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$\\frac{3}{2}$",
+        "$-\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1315,
+      "question_page": 11,
+      "question_text": "مجموع مقادیر ماکزیمم و مینیمم نسبی تابع $f(x) = x(2x^2 - 3x - 12)$ کدام است؟",
+      "options": [
+        "$-1$",
+        "صفر",
+        "$-7$",
+        "$-13$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1316,
+      "question_page": 11,
+      "question_text": "خط گذرنده از نقاط اکسترمم نسبی تابع $y = (x - 1)(2x + 1)^2$ با کدام عرض از مبدأ است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$2$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1317,
+      "question_page": 11,
+      "question_text": "اگر $A(3, -10)$ یک نقطه اکسترمم نسبی تابع $f(x) = x^3 + ax^2 - 9x + b$ باشد، عرض نقطه اکسترمم نسبی دیگر آن کدام است؟",
+      "options": [
+        "$20$",
+        "$22$",
+        "$26$",
+        "$28$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1318,
+      "question_page": 11,
+      "question_text": "تابع $f(x) = x^4 - \\frac{8}{3}x^3 + 2x^2$ از نظر اکسترمم نسبی کدام وضع را دارد؟",
+      "options": [
+        "فقط مینیمم نسبی دارد.",
+        "فقط ماکزیمم نسبی دارد.",
+        "هم مینیمم نسبی و هم ماکزیمم نسبی دارد.",
+        "نه مینیمم نسبی و نه ماکزیمم نسبی دارد."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1319,
+      "question_page": 11,
+      "question_text": "اگر $f$ تابع خطی بوده و $A(2, 3)$ اکسترمم نسبی $y = xf(x)$ باشد، $f(1)$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2/25$",
+        "$2/5$",
+        "$2/75$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1320,
+      "question_page": 11,
+      "question_text": "اگر $f'(x) = x^3 - 5x$ باشد، تعداد نقاط ماکزیمم و مینیمم نسبی تابع $f$ به ترتیب کدام است؟",
+      "options": [
+        "یک min نسبی و یک max نسبی",
+        "یک min نسبی و دو max نسبی",
+        "دو min نسبی و یک max نسبی",
+        "دو min نسبی و دو max نسبی"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1321,
+      "question_page": 11,
+      "question_text": "مجموع طول نقاط اکسترمم نسبی تابع $f(x) = x^3 - ax^2 + 9x - 1$ برابر $-4$ است. مقدار مینیمم نسبی کدام است؟",
+      "options": [
+        "$-1$",
+        "$-3$",
+        "$-4$",
+        "$-5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1322,
+      "question_page": 11,
+      "question_text": "نمودار تابع درجه سوم $f$ به صورت مقابل است. $\\alpha$ کدام است؟",
+      "options": [
+        "$-\\frac{5}{2}$",
+        "$-\\frac{7}{2}$",
+        "$-3$",
+        "$-4$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0011.jpg",
+          "region": [
+            100,
+            650,
+            230,
+            720
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع درجه سوم f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1323,
+      "question_page": 11,
+      "question_text": "تابع $f(x) = x^4 - ax^2 + 7$ فقط یک اکسترمم نسبی دارد. حدود $a$ کدام است؟",
+      "options": [
+        "$a > 0$",
+        "$a < 0$",
+        "$a \\geq 0$",
+        "$a \\leq 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1324,
+      "question_page": 11,
+      "question_text": "نقطه $A(3, -2)$ اکسترمم نسبی تابع $f(x) = x^3 - 2x^2 - ax + b$ است. مقدار $b$ و نوع اکسترمم نسبی $A$ کدام است؟",
+      "options": [
+        "$5$ و مینیمم نسبی",
+        "$5$ و ماکزیمم نسبی",
+        "$8$ و مینیمم نسبی",
+        "$8$ و ماکزیمم نسبی"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1325,
+      "question_page": 11,
+      "question_text": "تابع $f(x) = (-1)^{[x]}$ در نقاط صحیح چگونه است؟",
+      "options": [
+        "در نقاط زوج ماکزیمم نسبی و در نقاط فرد مینیمم نسبی است.",
+        "در نقاط فرد ماکزیمم نسبی و در نقاط زوج مینیمم نسبی است.",
+        "در تمام نقاط صحیح ماکزیمم نسبی است.",
+        "در تمام نقاط صحیح مینیمم نسبی است."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1326,
+      "question_page": 11,
+      "question_text": "در تابع با کدام ضابطه، تمام نقاط بحرانی آن، نقطه اکسترمم نسبی تابع است؟",
+      "options": [
+        "$\\sqrt[3]{x} + 2$",
+        "$x + |x|$",
+        "$x + [x]$",
+        "$x |x|$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1327,
+      "question_page": 12,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. کدام تابع زیر نقطهٔ اکسترمم نسبی دارد؟",
+      "options": [
+        "$x^2f(x)$",
+        "$xf^2(x)$",
+        "$xf(x^2)$",
+        "$x^2f^2(x)$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0012.jpg",
+          "region": [
+            75,
+            50,
+            175,
+            170
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1328,
+      "question_page": 12,
+      "question_text": "کدام گزینه صحیح است؟",
+      "options": [
+        "اگر $c$ طول نقطهٔ اکسترمم نسبی تابع $f$ باشد، $f$ در آن نقطه مشتق‌پذیر است.",
+        "اگر $c$ طول نقطهٔ بحرانی $f$ باشد، طول نقطهٔ اکسترمم نسبی نیز می‌باشد.",
+        "اگر $c$ طول نقطهٔ اکسترمم نسبی تابع مشتق‌پذیر $f$ باشد، $f'(c) = 0$ است.",
+        "اگر $f'(c) = 0$ باشد، $c$ طول نقطهٔ اکسترمم نسبی $f$ است."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1329,
+      "question_page": 12,
+      "question_text": "با توجه به نمودار تابع $f$، تعداد نقاط اکسترمم نسبی $f$ در بازهٔ $[a, b]$ کدام است؟",
+      "options": [
+        "۳",
+        "۲",
+        "۵",
+        "۶"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0012.jpg",
+          "region": [
+            260,
+            45,
+            345,
+            275
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1330,
+      "question_page": 12,
+      "question_text": "با توجه به نمودار $f'$، تابع $f$ چند نقطهٔ مینیمم نسبی دارد؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0012.jpg",
+          "region": [
+            345,
+            45,
+            410,
+            295
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع 'f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1331,
+      "question_page": 12,
+      "question_text": "نقاط اکسترمم نسبی تابع $f(x) = \\frac{1}{3}x^3 - x^2 - 3x + k$ پایین محور $x$ها قرار دارند. حدود $k$ کدام است؟",
+      "options": [
+        "$k < \\frac{5}{3}$",
+        "$k < 9$",
+        "$k < -\\frac{5}{3}$",
+        "$k < -9$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1332,
+      "question_page": 12,
+      "question_text": "فاصلهٔ دو نقطهٔ اکسترمم نسبی تابع $f(x) = x|x| - 4x$ کدام است؟",
+      "options": [
+        "$\\sqrt{5}$",
+        "$2\\sqrt{5}$",
+        "$4\\sqrt{5}$",
+        "$8\\sqrt{5}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1333,
+      "question_page": 12,
+      "question_text": "قسمتی از نمودار تابع $f(x) = x^3 + ax^2 + b$ رسم شده است. $k$ کدام است؟",
+      "options": [
+        "$\\sqrt{2} + 1$",
+        "$3$",
+        "$\\frac{7}{3}$",
+        "$\\sqrt{3} + 1$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0012.jpg",
+          "region": [
+            490,
+            45,
+            575,
+            175
+          ],
+          "placement": "stem",
+          "alt": "قسمتی از نمودار تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1334,
+      "question_page": 12,
+      "question_text": "طول نقطهٔ ماکزیمم نسبی تابع $f(x) = x^2|x + k|$ برابر ۲ است. فاصلهٔ نقاط مینیمم نسبی آن کدام است؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1335,
+      "question_page": 12,
+      "question_text": "نمودار تابع $y = x^3 - 6x^2 + 20$ به صورت مقابل است. اگر خط $y = k$ نمودار تابع را در ۳ نقطه قطع کند، حدود $k$ کدام است؟",
+      "options": [
+        "$-12 < k < 20$",
+        "$-10 < k < 20$",
+        "$-8 < k < 20$",
+        "$-20 < k < 20$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0012.jpg",
+          "region": [
+            605,
+            45,
+            675,
+            160
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1336,
+      "question_page": 12,
+      "question_text": "اگر $x = -1$ طول نقطهٔ مینیمم نسبی تابع $f(x) = (x + 1)(x^2 - x + m)$ باشد، طول نقطهٔ ماکزیمم نسبی آن کدام است؟",
+      "options": [
+        "۱",
+        "$\\frac{1}{2}$",
+        "۲",
+        "$-\\frac{1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1337,
+      "question_page": 12,
+      "question_text": "اگر $x = 1$ طول تنها نقطهٔ اکسترمم نسبی تابع $f(x) = x^4 - ax^3 + bx^2$ باشد، مقدار $f(3)$ کدام است؟",
+      "options": [
+        "$-27$",
+        "$-9$",
+        "$36$",
+        "$45$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1338,
+      "question_page": 12,
+      "question_text": "خط $y = m$ بر نمودار تابع $y = 2x^3 - 3x^2 - 12x + 2$ مماس است. مجموع مقادیر قابل قبول برای $m$ کدام است؟",
+      "options": [
+        "۹",
+        "۱۸",
+        "$-9$",
+        "$-18$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1339,
+      "question_page": 12,
+      "question_text": "اگر نقطهٔ $A(-3, b)$ یک نقطهٔ اکسترمم نسبی تابع $f(x) = x + \\frac{a}{x}$ باشد، مقدار $f(b)$ کدام است؟",
+      "options": [
+        "$-7$",
+        "$-7/5$",
+        "$-8$",
+        "$-8/5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1340,
+      "question_page": 12,
+      "question_text": "نمودار تابع $f(x) = \\frac{2x^2 + ax + b}{x^2 + 4}$ به صورت مقابل است. مقدار $a$ کدام است؟",
+      "options": [
+        "۴",
+        "۸",
+        "$-4$",
+        "$-8$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0012.jpg",
+          "region": [
+            820,
+            45,
+            890,
+            205
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1341,
+      "question_page": 13,
+      "question_text": "اگر $x = 9$ طول نقطهٔ ماکزیمم نسبی تابع $f(x) = \\frac{-x + m}{\\sqrt{x}}$ باشد، مقدار ماکزیمم نسبی کدام است؟",
+      "options": [
+        "$-6$",
+        "$-7$",
+        "$-8$",
+        "$-9$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1342,
+      "question_page": 13,
+      "question_text": "طول نقطهٔ ماکزیمم نسبی تابع با ضابطهٔ $y = (x + 2)\\sqrt[3]{x}$ کدام است؟",
+      "options": [
+        "صفر",
+        "۱",
+        "$-2$",
+        "$-\\frac{2}{7}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1343,
+      "question_page": 13,
+      "question_text": "فاصلهٔ نقطهٔ اکسترمم نسبی تابع $y = (x - 1)\\sqrt{x + 1}$ از محور $y$ها چه قدر است؟",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$",
+        "۱"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1344,
+      "question_page": 13,
+      "question_text": "اگر $x = -2$ طول نقطهٔ بحرانی $f(x) = x^3 + ax^2 - (4a + 12)x$ بوده اما طول اکسترمم نسبی نیست. $a$ کدام است؟",
+      "options": [
+        "۲",
+        "۶",
+        "$-2$",
+        "$-6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1345,
+      "question_page": 13,
+      "question_text": "نمودار تابع $f(x) = (x + 1)^2(1 - x)$ در مجاورت $x = -1$ به کدام صورت است؟",
+      "options": [
+        "نمودار ۱",
+        "نمودار ۲",
+        "نمودار ۳",
+        "نمودار ۴"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0013.jpg",
+          "region": [
+            270,
+            185,
+            335,
+            875
+          ],
+          "placement": "options",
+          "alt": "نمودارهای گزینه‌ها"
+        }
+      ],
+      "review_notes": [
+        "Options are graphs, replaced with placeholders and combined into one media_region"
+      ]
+    },
+    {
+      "question_number": 1346,
+      "question_page": 13,
+      "question_text": "اگر $A(0, 4)$ یک نقطهٔ اکسترمم نسبی تابع $f(x) = (x - \\alpha)^2(x - \\beta)$ باشد، مقدار $\\beta$ کدام است؟",
+      "options": [
+        "۱",
+        "$-1$",
+        "صفر",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1347,
+      "question_page": 13,
+      "question_text": "تابع $f(x) = ax(x - 1)^2$ در نقطهٔ $x = 1$ دارای مینیمم نسبی است. حدود $a$ کدام است؟",
+      "options": [
+        "$a \\le 0$",
+        "$a \\ge 0$",
+        "$a \\le 1$",
+        "$a \\ge 1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1348,
+      "question_page": 13,
+      "question_text": "نقاط اکسترمم نسبی تابع $f(x) = x^4 - kx^2$ سه رأس یک مثلث قائم‌الزاویه‌اند. مقدار مثبت $k$ کدام است؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1349,
+      "question_page": 13,
+      "question_text": "شکل مقابل نمودار تابع $f(x) = x^4 - ax^3 + bx$ است. طول مینیمم تابع کدام است؟",
+      "options": [
+        "۳",
+        "۳/۲۵",
+        "۳/۵",
+        "۳/۷۵"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0013.jpg",
+          "region": [
+            455,
+            100,
+            560,
+            275
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1350,
+      "question_page": 13,
+      "question_text": "شکل مقابل نمودار تابع با ضابطهٔ $f(x) = -x^4 + \\frac{8}{3}x^3 + ax^2 - b$ است. $a$ کدام است؟",
+      "options": [
+        "۱",
+        "۲",
+        "$-1$",
+        "$-2$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0013.jpg",
+          "region": [
+            555,
+            100,
+            650,
+            260
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1351,
+      "question_page": 13,
+      "question_text": "تابع $f(x) = 2x^2 - 4x + 3$ در بازهٔ $[-1, 2]$ تعریف شده است. مجموع کم‌ترین و بیشترین مقدار تابع کدام است؟",
+      "options": [
+        "۴",
+        "۱۰",
+        "۱۲",
+        "۸"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "Title of new section اکسترمم‌های مطلق included as context visually but ignored in structure"
+      ]
+    },
+    {
+      "question_number": 1352,
+      "question_page": 13,
+      "question_text": "اختلاف بیشترین و کم‌ترین مقدار تابع $f(x) = 2x^3 - 3x^2 + 4$ در بازهٔ $[-1, 3]$ چه‌قدر است؟",
+      "options": [
+        "۴",
+        "۵",
+        "۲۸",
+        "۳۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1353,
+      "question_page": 13,
+      "question_text": "اگر کم‌ترین مقدار تابع $y = \\frac{1}{3}x^3 - x^2 - 4x + k$ در بازهٔ $[-2, 1]$ برابر $-\\frac{1}{3}$ باشد، بیشترین مقدار آن کدام است؟",
+      "options": [
+        "$\\frac{4}{3}$",
+        "$\\frac{7}{3}$",
+        "$\\frac{19}{3}$",
+        "$\\frac{22}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1354,
+      "question_page": 13,
+      "question_text": "بیشترین و کم‌ترین مقدار تابع $f(x) = x^4 - 2x^2 + k$ در بازهٔ $[0, 2]$ قرینهٔ هم هستند. $k$ کدام است؟",
+      "options": [
+        "$-3/5$",
+        "$-4$",
+        "۴",
+        "۴/۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1355,
+      "question_page": 13,
+      "question_text": "برد تابع $f(x) = x^3 - 12x + 7$ با دامنهٔ $[-3, 2]$ کدام است؟",
+      "options": [
+        "$[-9, 23]$",
+        "$[16, 23]$",
+        "$[-9, 16]$",
+        "$[7, 16]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1356,
+      "question_page": 14,
+      "question_text": "ماکزیمم مطلق تابع $f(x) = \\begin{cases} x^2 + 4x & -3 \\le x < 0 \\\\ x & 0 \\le x \\le 3 \\end{cases}$ چه قدر از مینیمم مطلق آن بیشتر است؟",
+      "options": [
+        "۳",
+        "۶",
+        "۷",
+        "۱۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1357,
+      "question_page": 14,
+      "question_text": "در تابع $f(x) = (x - 2)|x + 1|$ مقدار مینیمم مطلق کدام است؟",
+      "options": [
+        "صفر",
+        "-1",
+        "۱",
+        "۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1358,
+      "question_page": 14,
+      "question_text": "بیشترین مقدار تابع $f(x) = \\frac{4\\sqrt{x} - 3}{ax + a}$ برابر ۲ است. مقدار مثبت a کدام است؟",
+      "options": [
+        "۱",
+        "۲",
+        "$\\frac{1}{2}$",
+        "-1"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1359,
+      "question_page": 14,
+      "question_text": "کم ترین مقدار تابع $y = x - \\sqrt{9 - x^2}$ کدام است؟",
+      "options": [
+        "صفر",
+        "$-\\frac{3\\sqrt{2}}{2}$",
+        "$-3\\sqrt{2}$",
+        "$-\\frac{2\\sqrt{2}}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1360,
+      "question_page": 14,
+      "question_text": "شکل روبه‌رو نمودار تابع $y = x - \\sqrt{-x^2 + ax + b}$ است. مقدار مینیمم تابع کدام است؟",
+      "options": [
+        "$\\sqrt{2} - 2$",
+        "$1 - \\sqrt{2}$",
+        "$\\sqrt{2} - 3$",
+        "$1 - 2\\sqrt{2}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0014.jpg",
+          "region": [
+            287,
+            45,
+            381,
+            192
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1361,
+      "question_page": 14,
+      "question_text": "غلظت یک داروی شیمیایی در خون، $t$ ساعت پس از تزریق در ماهیچه از رابطهٔ $C(t) = \\frac{3t}{27 + t^3}$ به دست می‌آید. اگر $t$ ساعت پس از تزریق دارو غلظت آن در خون بیشترین مقدار ممکن را داشته باشد، $t^3$ کدام است؟",
+      "options": [
+        "۱۱",
+        "۱۱/۵",
+        "۱۳",
+        "۱۳/۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1362,
+      "question_page": 14,
+      "question_text": "برای تابع $f(x) = |x^2 - 4x|$ در بازهٔ $(0, 3)$ کدام گزینه صحیح است؟",
+      "options": [
+        "مینیمم و ماکزیمم مطلق دارد.",
+        "مینیمم مطلق دارد ولی ماکزیمم مطلق ندارد.",
+        "ماکزیمم مطلق دارد ولی مینیمم مطلق ندارد.",
+        "مینیمم و ماکزیمم مطلق ندارد."
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1363,
+      "question_page": 14,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. نمودار تابع $|f|$ از نظر ماکزیمم و مینیمم مطلق چگونه است؟",
+      "options": [
+        "مینیمم و ماکزیمم مطلق دارد.",
+        "مینیمم مطلق دارد ولی ماکزیمم مطلق ندارد.",
+        "ماکزیمم مطلق دارد ولی مینیمم مطلق ندارد.",
+        "مینیمم و ماکزیمم مطلق ندارد."
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0014.jpg",
+          "region": [
+            510,
+            47,
+            592,
+            143
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1364,
+      "question_page": 14,
+      "question_text": "بیشترین مقدار تابع $y = \\frac{1}{2}x^2 + \\sqrt{1 - x^2}$ چه قدر است؟",
+      "options": [
+        "۱",
+        "$\\frac{3}{2}$",
+        "$\\frac{4}{3}$",
+        "۲"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1365,
+      "question_page": 14,
+      "question_text": "اگر $4b + 3a = 24$ باشد، بیشترین مقدار $ab$ کدام است؟",
+      "options": [
+        "۴",
+        "۸",
+        "۱۲",
+        "۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1366,
+      "question_page": 14,
+      "question_text": "اگر $a, b > 0$ و $ab = 12$ باشد، آن‌گاه حداقل مقدار $3b + a$ کدام است؟",
+      "options": [
+        "۶",
+        "۱۲",
+        "۱۸",
+        "۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1367,
+      "question_page": 14,
+      "question_text": "در مثلثی مجموع یک ضلع و ارتفاع وارد بر آن ضلع برابر ۸ است. بیشترین مقدار مساحت مثلث کدام است؟",
+      "options": [
+        "۴",
+        "۸",
+        "۱۶",
+        "۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1368,
+      "question_page": 14,
+      "question_text": "بیشترین مقدار مساحت مستطیلی با محیط ثابت ۳۶ کدام است؟",
+      "options": [
+        "۸۱",
+        "۱۶۲",
+        "۲۴۳",
+        "۳۲۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1369,
+      "question_page": 14,
+      "question_text": "در یک استوانهٔ قائم، جمع قطر قاعده و ارتفاع آن ۱۲ است. بیشترین حجم استوانه کدام است؟",
+      "options": [
+        "۱۶$\\pi$",
+        "۳۲$\\pi$",
+        "۶۴$\\pi$",
+        "۹۶$\\pi$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1370,
+      "question_page": 15,
+      "question_text": "اگر a و b دو ضلع قائم از مثلثی به طول وتر $3\\sqrt{2}$ باشند، بیشترین مقدار $8b + 6a$ کدام است؟",
+      "options": [
+        "$24\\sqrt{2}$",
+        "$30\\sqrt{2}$",
+        "۲۴",
+        "۳۰"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1371,
+      "question_page": 15,
+      "question_text": "حجم یک قوطی استوانه‌ای‌شکل بدون در، برابر $2\\pi$ واحد است. اگر در ساخت آن کم‌ترین جنس، مصرف شده باشد، شعاع قاعدهٔ این قوطی چه عددی است؟",
+      "options": [
+        "$\\sqrt[3]{2}$",
+        "$\\sqrt[3]{4}$",
+        "۲",
+        "$2\\sqrt[3]{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1372,
+      "question_page": 15,
+      "question_text": "یک ظرف استوانه‌ای‌شکل در‌بسته به حجم $16\\pi$ را در نظر بگیرید. کم‌ترین مساحت کل این ظرف کدام است؟",
+      "options": [
+        "$18\\pi$",
+        "$27\\pi$",
+        "$36\\pi$",
+        "$24\\pi$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1373,
+      "question_page": 15,
+      "question_text": "در ساخت یک قیف به شکل مخروط قائم به حجم $2\\pi$، با کدام ارتفاع کم‌ترین مقدار جنس مصرف می‌شود؟",
+      "options": [
+        "$\\frac{1}{\\sqrt[3]{2}}$",
+        "$\\frac{1}{\\sqrt[3]{3}}$",
+        "$\\frac{1}{\\sqrt[3]{6}}$",
+        "$\\frac{1}{\\sqrt[3]{12}}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1374,
+      "question_page": 15,
+      "question_text": "اگر محیط پنجرهٔ مقابل ۷۲ باشد، به ازای چه مقداری از x، بیشترین نوردهی از پنجره را خواهیم داشت؟",
+      "options": [
+        "۱",
+        "۱/۲",
+        "۱/۸",
+        "۲"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0015.jpg",
+          "region": [
+            100,
+            260,
+            185,
+            340
+          ],
+          "placement": "stem",
+          "alt": "پنجره"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1375,
+      "question_page": 15,
+      "question_text": "می‌خواهیم درون یک بوستان، فضای سبز به شکل مستطیل با مساحت ۶۴ متر مربع مطابق شکل بسازیم. کم‌ترین مساحت مستطیل ABCD کدام است؟",
+      "options": [
+        "$48 + 32\\sqrt{2}$",
+        "$32 + 48\\sqrt{2}$",
+        "$64 + 96\\sqrt{2}$",
+        "$96 + 64\\sqrt{2}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0015.jpg",
+          "region": [
+            100,
+            340,
+            215,
+            450
+          ],
+          "placement": "stem",
+          "alt": "مستطیل فضای سبز"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1376,
+      "question_page": 15,
+      "question_text": "با یک ورق مقوایی‌شکل به طول ضلع ۳۶ سانتی‌متر، می‌خواهیم جعبه‌ای بدون در با حذف چهار مربع گوشه مطابق شکل بسازیم. x چه‌قدر باشد تا حجم جعبه بیشترین مقدار شود؟",
+      "options": [
+        "۶",
+        "۹",
+        "۱۲",
+        "۱۸"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0015.jpg",
+          "region": [
+            100,
+            450,
+            380,
+            540
+          ],
+          "placement": "stem",
+          "alt": "ورق مقوایی و جعبه"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1377,
+      "question_page": 15,
+      "question_text": "بیشترین مساحت مستطیل رنگی در شکل مقابل چه‌قدر است؟",
+      "options": [
+        "۸",
+        "۱۶",
+        "۲۴",
+        "۳۲"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0015.jpg",
+          "region": [
+            95,
+            530,
+            275,
+            625
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی و مستطیل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1378,
+      "question_page": 15,
+      "question_text": "بیشترین مقدار مساحت مستطیل رنگی شکل مقابل چه‌قدر است؟",
+      "options": [
+        "$\\frac{4\\sqrt{2}}{3}$",
+        "$\\frac{4\\sqrt{3}}{3}$",
+        "$\\frac{4\\sqrt{6}}{3}$",
+        "$\\frac{4\\sqrt{6}}{9}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0015.jpg",
+          "region": [
+            105,
+            630,
+            280,
+            715
+          ],
+          "placement": "stem",
+          "alt": "نمودار منحنی و مستطیل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1379,
+      "question_page": 15,
+      "question_text": "منحنی $f(x) = \\sqrt{9 - x^2}$ رسم شده است. دو رأس مثلث OAB روی خط افقی می‌باشند. با فرض آن‌که مساحت مثلث OAB بیشترین باشد، اندازهٔ AB کدام است؟",
+      "options": [
+        "$3\\sqrt{2}$",
+        "$\\frac{3\\sqrt{2}}{2}$",
+        "$6\\sqrt{2}$",
+        "$\\frac{4\\sqrt{2}}{3}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0015.jpg",
+          "region": [
+            95,
+            725,
+            265,
+            810
+          ],
+          "placement": "stem",
+          "alt": "نیم‌دایره و مثلث OAB"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1380,
+      "question_page": 15,
+      "question_text": "خط $x = k$ نمودار توابع $y = \\sqrt{1 - x}$ و $y = 2x$ را در نقاط A و B در ناحیهٔ اول قطع می‌کند. بیشترین مقدار مجموع عرض این دو نقطه چه‌قدر است؟",
+      "options": [
+        "۱",
+        "۲/۳۷۵",
+        "۱/۶۲۵",
+        "۲/۱۲۵"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1381,
+      "question_page": 15,
+      "question_text": "بیشترین مساحت مستطیلی که یک ضلع آن بر قطر نیم‌دایره به شعاع ۱۲ واحد و دو رأس دیگر آن روی این نیم‌دایره واقع باشد، کدام است؟",
+      "options": [
+        "۳۶",
+        "۷۲",
+        "۱۴۴",
+        "۲۸۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1382,
+      "question_page": 16,
+      "question_text": "نقطهٔ $A$ روی منحنی $f(x) = \\sqrt{5 - x}$ در ناحیهٔ اول واقع است. کم‌ترین فاصلهٔ نقطهٔ $A$ از مبدأ کدام است؟",
+      "options": [
+        "$\\frac{\\sqrt{17}}{2}$",
+        "$\\frac{\\sqrt{19}}{2}$",
+        "$\\sqrt{5}$",
+        "$\\frac{\\sqrt{5}}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1383,
+      "question_page": 16,
+      "question_text": "استوانه‌ای درون نیم‌کره مطابق شکل محاط کرده‌ایم. اگر حجم استوانه به ازای $h = \\frac{\\sqrt{3}}{3}$ بیشترین مقدار ممکن باشد، شعاع نیم‌کره کدام بوده است؟",
+      "options": [
+        "$\\sqrt{3}$",
+        "$1$",
+        "$3\\sqrt{3}$",
+        "$2\\sqrt{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            50,
+            140,
+            155,
+            195
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "استوانه‌ای محاط در نیم‌کره"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1384,
+      "question_page": 16,
+      "question_text": "مخروطی با بیشترین حجم درون کره‌ای به شعاع ۶ محاط شده است. ارتفاع مخروط کدام است؟",
+      "options": [
+        "$6\\sqrt{2}$",
+        "$6\\sqrt{3}$",
+        "$9$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1385,
+      "question_page": 16,
+      "question_text": "استوانه‌ای با بیشترین حجم، درون کره‌ای به شعاع $R$ محاط شده است. ارتفاع استوانه چند برابر $R$ است؟",
+      "options": [
+        "$\\sqrt{3}$",
+        "$\\frac{3}{2}$",
+        "$\\frac{2}{\\sqrt{3}}$",
+        "$\\frac{4}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1386,
+      "question_page": 16,
+      "question_text": "استوانه‌ای درون کره‌ای به شعاع ثابت محاط شده است. اگر ارتفاع استوانه‌ای با بیشترین حجم، برابر ۲ باشد، شعاع قاعدهٔ استوانه کدام است؟",
+      "options": [
+        "$\\sqrt{2}$",
+        "$\\sqrt{3}$",
+        "$2\\sqrt{2}$",
+        "$2\\sqrt{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1387,
+      "question_page": 16,
+      "question_text": "می‌خواهیم دور یک زمین به شکل قطاعی از دایره دیوار بکشیم. اگر طول دیوار ۶۰ متر باشد، با چه شعاعی از دایره مساحت زمین بیشترین مقدار است؟",
+      "options": [
+        "$7/5$",
+        "$15$",
+        "$22/5$",
+        "$30$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            50,
+            345,
+            115,
+            395
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "قطاعی از دایره با شعاع r"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1388,
+      "question_page": 16,
+      "question_text": "پاره‌خط $AB$ را حول محور طول‌ها دوران می‌دهیم. ارتفاع مخروط چه‌قدر باشد تا حجم آن ماکزیمم شود؟",
+      "options": [
+        "$2\\sqrt{3}$",
+        "$3\\sqrt{2}$",
+        "$2\\sqrt{6}$",
+        "$\\frac{\\sqrt{6}}{2}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            50,
+            405,
+            190,
+            480
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "پاره‌خط AB در دستگاه مختصات"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1389,
+      "question_page": 16,
+      "question_text": "محیط مستطیلی برابر ۱۸ است. اگر این مستطیل را حول یکی از اضلاع خود دوران دهیم، بیشترین حجم استوانه حاصل کدام است؟",
+      "options": [
+        "$54\\pi$",
+        "$108\\pi$",
+        "$162\\pi$",
+        "$216\\pi$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1390,
+      "question_page": 16,
+      "question_text": "متحرکی با حرکت روی سطح یک مکعب به ضلع ۶ سانتی‌متر می‌خواهد از نقطهٔ $A$ به نقطهٔ $B$ برود. کم‌ترین مسافت طی‌ شده کدام است؟",
+      "options": [
+        "$6 + 6\\sqrt{2}$",
+        "$12$",
+        "$6\\sqrt{5}$",
+        "$12 + \\sqrt{2}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            50,
+            540,
+            125,
+            625
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "مکعبی با نقاط A و B روی سطح آن"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1391,
+      "question_page": 16,
+      "question_text": "ارتفاع استوانه‌ای $3\\pi$ و شعاع قاعدهٔ استوانه ۴ است. اگر قرار باشد با طی کم‌ترین مسافت بر روی سطح استوانه از $A$ به $B$ برسیم، کم‌ترین مسافت کدام است؟",
+      "options": [
+        "$5\\pi$",
+        "$3\\pi + 8$",
+        "$7\\pi$",
+        "$3\\pi + 5$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            45,
+            635,
+            115,
+            715
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "استوانه‌ای با نقاط A و B"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1392,
+      "question_page": 16,
+      "question_text": "شخصی می‌خواهد از نقطهٔ $A$ درون دریا به شهر ساحلی $B$ برسد. سرعت قایق درون آب $10\\text{ km/h}$ و سرعت اتومبیل در خشکی $12/5\\text{ km/h}$ است. اگر او ابتدا با قایق مسیر $AM$ و سپس با اتومبیل مسیر $MB$ را در کم‌ترین زمان طی کند، مقدار $MH$ کدام است؟ ($HB = 90\\text{ km}$)",
+      "options": [
+        "$20$",
+        "$30$",
+        "$40$",
+        "$60$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            45,
+            740,
+            290,
+            835
+          ],
+          "placement": "stem",
+          "filename": "page_0016.jpg",
+          "alt": "نمودار مسیر حرکت شخص از دریا به ساحل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1393,
+      "question_page": 16,
+      "question_text": "دور زمینی مستطیل‌شکل به مساحت ثابت ۲۴۰۰ متر مربع را قرار است نرده‌کشی کنیم. قیمت هر متر نرده‌های شمالی و جنوبی ۳ میلیون تومان و هزینهٔ هر متر نرده‌های شرقی و غربی ۸ میلیون تومان است. طول قسمت جنوبی زمین چه‌قدر باشد تا هزینهٔ نرده‌کشی حداقل باشد؟",
+      "options": [
+        "$30$",
+        "$40$",
+        "$60$",
+        "$80$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1394,
+      "question_page": 17,
+      "question_text": "نمودار تابع درجه‌سوم $f$ به صورت مقابل است. نمودار $f'$ کدام می‌تواند باشد؟",
+      "options": [
+        "نمودار ۱",
+        "نمودار ۲",
+        "نمودار ۳",
+        "نمودار ۴"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            95,
+            95,
+            230,
+            175
+          ],
+          "placement": "stem",
+          "filename": "page_0017.jpg",
+          "alt": "نمودار تابع f"
+        },
+        {
+          "region": [
+            345,
+            110,
+            860,
+            240
+          ],
+          "placement": "options",
+          "filename": "page_0017.jpg",
+          "alt": "نمودارهای گزینه‌های ۱ تا ۴ برای f'"
+        }
+      ],
+      "review_notes": [
+        "گزینه‌ها به صورت نمودار هستند. نمودارها در یک تصویر ذخیره شدند و گزینه‌ها به صورت متنی (نمودار ۱ تا ۴) نوشته شدند."
+      ]
+    },
+    {
+      "question_number": 1395,
+      "question_page": 17,
+      "question_text": "نمودار $f'$ به صورت مقابل است. نمودار $f$ کدام می‌تواند باشد؟",
+      "options": [
+        "نمودار ۱",
+        "نمودار ۲",
+        "نمودار ۳",
+        "نمودار ۴"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            100,
+            250,
+            230,
+            320
+          ],
+          "placement": "stem",
+          "filename": "page_0017.jpg",
+          "alt": "نمودار f'"
+        },
+        {
+          "region": [
+            360,
+            260,
+            860,
+            395
+          ],
+          "placement": "options",
+          "filename": "page_0017.jpg",
+          "alt": "نمودارهای گزینه‌های ۱ تا ۴ برای f"
+        }
+      ],
+      "review_notes": [
+        "گزینه‌ها به صورت نمودار هستند. نمودارها در یک تصویر ذخیره شدند و گزینه‌ها به صورت متنی (نمودار ۱ تا ۴) نوشته شدند."
+      ]
+    },
+    {
+      "question_number": 1396,
+      "question_page": 17,
+      "question_text": "تابع $f$ پیوسته و نمودار مشتق آن به صورت مقابل است. نمودار $f$ کدام می‌تواند باشد؟",
+      "options": [
+        "نمودار ۱",
+        "نمودار ۲",
+        "نمودار ۳",
+        "نمودار ۴"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            100,
+            400,
+            200,
+            465
+          ],
+          "placement": "stem",
+          "filename": "page_0017.jpg",
+          "alt": "نمودار مشتق تابع f"
+        },
+        {
+          "region": [
+            390,
+            415,
+            865,
+            485
+          ],
+          "placement": "options",
+          "filename": "page_0017.jpg",
+          "alt": "نمودارهای گزینه‌های ۱ تا ۴ برای f"
+        }
+      ],
+      "review_notes": [
+        "گزینه‌ها به صورت نمودار هستند. نمودارها در یک تصویر ذخیره شدند و گزینه‌ها به صورت متنی (نمودار ۱ تا ۴) نوشته شدند."
+      ]
+    },
+    {
+      "question_number": 1397,
+      "question_page": 17,
+      "question_text": "در شکل مقابل، نمودار تابع $f(x) = x^2 - 6x + a$ و مشتق آن رسم شده است. حاصل $a + b$ کدام است؟",
+      "options": [
+        "$12$",
+        "$14$",
+        "$10$",
+        "$8$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            100,
+            495,
+            230,
+            580
+          ],
+          "placement": "stem",
+          "filename": "page_0017.jpg",
+          "alt": "نمودار تابع f و مشتق آن"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1398,
+      "question_page": 17,
+      "question_text": "نمودار مشتق تابع $f$ شکل روبه‌رو است. اگر نمودار $f$ و $f'$ بر هم مماس باشند، مقدار $f(2)$ کدام است؟",
+      "options": [
+        "$14$",
+        "$8$",
+        "$4$",
+        "$12$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            100,
+            595,
+            225,
+            665
+          ],
+          "placement": "stem",
+          "filename": "page_0017.jpg",
+          "alt": "نمودار مشتق تابع f"
+        }
+      ],
+      "review_notes": [
+        "The user requested numbering up to 1466, but the source visual document (jules_input/images/) ended exactly at question 1398 on page 17. There are no images or pages beyond page 17 to continue extracting. Thus, the actual global sequence ends at 1398, skipping the non-existent questions 1399-1466."
+      ]
+    }
+  ]
+}

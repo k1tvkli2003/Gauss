@@ -1,0 +1,198 @@
+{
+  "task_id": "math-solutions-09",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1738,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "عبارات صورت و مخرج کسر را ساده می‌کنیم:\n$$ \\frac{(n+1)!}{(n-1)!} = \\frac{(n+1)(n)(n-1)!}{(n-1)!} = n(n+1) = 30 $$\nضرب دو عدد طبیعی متوالی برابر ۳۰ شده است. بدیهی است $n=5$ است. خواهیم داشت:\n$$ \\frac{(n+2)!}{n!} = \\frac{7!}{5!} = \\frac{7 \\times 6 \\times 5!}{5!} = 7 \\times 6 = 42 $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1739,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "دو حالت زیر وجود دارد:\n۱) از طریق اصفهان به شیراز سفر کند: $ 3 \\times 2 = 6 $\n۲) مستقیماً به شیراز سفر کند که به ۲ روش امکان‌پذیر است.\nطبق اصل جمع کل راه‌های ممکن برابر است با: $ 6 + 2 = 8 $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1740,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "سه حالت کلی وجود دارد:\n$$ \\begin{cases} 18 = (1 \\times 3) \\times (2 \\times 3) : \\text{مسیر رفت ACB و مسیر برگشت BDA} \\\\ 12 = (2 \\times 1) \\times (2 \\times 3) : \\text{مسیر رفت ACB و مسیر برگشت BCA} \\\\ 18 = (3 \\times 2) \\times (3 \\times 1) : \\text{مسیر رفت ADB و مسیر برگشت BCA} \\end{cases} \\xrightarrow{(+)} 48 $$\nدقت کنید اگر مسیر رفت ADB باشد، مسیر برگشت نمی‌تواند BDA باشد زیرا نمی‌توان از جادهٔ BD عبور کرد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1741,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "به سه روش کلی می‌توان از A به B رفت:\n$$ \\begin{cases} \\text{1) ACB: } 1 \\times 3 = 3 \\\\ \\text{2) AB: } 1 \\\\ \\text{3) ADB: } 2 \\times 4 = 8 \\end{cases} \\Rightarrow \\text{تعداد مسیرهای رفت: } 3 + 1 + 8 = 12 $$\nمسیر برگشت نباید دقیقاً مانند مسیر رفت باشد؛ بنابراین تعداد مسیرهای برگشت برابر $12 - 1 = 11$ است.\nدر نتیجه تعداد حالات رفت و برگشت برابر است با: $12 \\times 11 = 132$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1742,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "تعداد حالات لباس‌پوشیدن بهروز در روز اول:\n$$ \\frac{4}{\\text{پیراهن}} \\times \\frac{3}{\\text{شلوار}} \\times \\frac{2}{\\text{کفش}} = 4! $$\nتعداد حالات لباس‌پوشیدن بهروز در روز دوم:\n$$ \\frac{3}{\\text{پیراهن}} \\times \\frac{2}{\\text{شلوار}} \\times \\frac{1}{\\text{کفش}} = 3! $$\nبنابراین طبق اصل ضرب تعداد حالات لباس‌پوشیدن بهروز در دو روز متوالی برابر است با:\n$$ 4! \\times 3! = 6 \\times 4! = \\frac{6 \\times 5 \\times 4!}{5} = \\frac{6!}{5} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1743,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "هر یک از توپ‌ها را به ۴ طریق می‌توان داخل یکی از جعبه‌ها قرار داد؛ بنابراین:\n$$ \\text{پاسخ مسئله} = \\frac{4}{\\text{توپ اول}} \\times \\frac{4}{\\text{توپ دوم}} \\times \\frac{4}{\\text{توپ سوم}} \\times \\frac{4}{\\text{توپ چهارم}} \\times \\frac{4}{\\text{توپ پنجم}} = 4^5 $$\nدقت کنید که این مسئله را نمی‌توان از طریق جعبه‌ها حل کرد:\nجعبهٔ اول را به ۳۲ حالت می‌توان پر کرد. (هر توپ ۲ حالت دارد، یا در این جعبه هست و یا نیست $2^5=32$.) اما تعداد حالات جعبهٔ دوم مشخص نیست زیرا نمی‌دانیم در جعبهٔ اول چند توپ قرار گرفته است. در واقع تعداد حالات جعبهٔ دوم وابسته به جعبهٔ اول است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1744,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "اگر دامنهٔ تابع را $\\{a, b, c\\}$ در نظر بگیریم، تابع مورد نظر به صورت $\\{ (a,\\_), (b,\\_), (c,\\_) \\}$ می‌باشد که هر یک از جاهای خالی را می‌توان به ۵ حالت پر کرد؛ بنابراین:\n$$ 5 \\times 5 \\times 5 = 5^3 = 125 $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1745,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "مربع شمارهٔ ۱ را به ۳ حالت می‌توان رنگ کرد. بدیهی است بقیهٔ مربع‌ها را به ۲ حالت می‌توان رنگ‌آمیزی کرد. (هر یک از مربع‌های ردیف پایین نباید هم‌رنگ مربع سمت چپ خود باشد و هر یک از مربع‌های ردیف بالا نباید هم‌رنگ مربع ردیف پایین خود باشد.)\n$$ \\begin{array}{|c|c|c|} \\hline 8 & 7 & 6 \\\\ \\hline 1 & 2 & 3 & 4 & 5 \\\\ \\hline \\end{array} \\Rightarrow 3 \\times 2^7 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1746,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "رأس A را به ۴ حالت می‌توان رنگ کرد. واضح است هر یک از رئوس B و D را به سه روش می‌توان رنگ‌آمیزی کرد.\nدو حالت وجود دارد:\n۳ حالت :B و D هم‌رنگ باشند. $\\Rightarrow$ رأس C، ۳ حالت دارد. $\\Rightarrow 3 \\times 3 = 9$\n۶ حالت : $3 \\times 2 = 6$ حالت B و D هم‌رنگ نباشند. $\\Rightarrow$ رأس C، ۲ حالت دارد. $\\Rightarrow 6 \\times 2 = 12$\n$9 + 12 = 21 \\Rightarrow$ حالت دارد.\nرأس A به ۴ حالت و بقیهٔ رئوس به ۲۱ حالت رنگ‌آمیزی می‌شود؛ بنابراین:\n$ 4 \\times 21 = 84 $",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1747,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "مجموعهٔ اعداد سه‌رقمی بخش‌پذیر بر ۳ را با A و مجموعهٔ اعداد سه‌رقمی بخش‌پذیر بر ۵ را با B نمایش می‌دهیم.\nبدیهی است $A \\cap B$ مجموعهٔ اعداد بخش‌پذیر بر ۱۵ خواهد بود:\n$$ n(A \\cup B) = n(A) + n(B) - n(A \\cap B) $$\n$$ = ([\\frac{999}{3}] - [\\frac{99}{3}]) + ([\\frac{999}{5}] - [\\frac{99}{5}]) - ([\\frac{999}{15}] - [\\frac{99}{15}]) $$\n$$ = (333 - 33) + (199 - 19) - (66 - 6) = 300 + 180 - 60 = 420 $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1748,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "مجموعهٔ A، اعداد بخش‌پذیر بر ۵ و مجموعهٔ B، اعداد بخش‌پذیر بر ۶ می‌باشند. بدیهی است $A \\cap B$ مجموعهٔ اعداد بخش‌پذیر بر ۳۰ می‌باشد:\n$$ n(A \\cup B) = n(A) + n(B) - n(A \\cap B) $$\n$$ = ([\\frac{400}{5}] - [\\frac{19}{5}]) + ([\\frac{400}{6}] - [\\frac{19}{6}]) - ([\\frac{400}{30}] - [\\frac{19}{30}]) $$\n$$ = (80 - 3) + (66 - 3) - (13 - 0) = 77 + 63 - 13 = 127 $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1749,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "رقم صفر را نمی‌توان در صدگان قرار داد؛ یعنی ۹ حالت دارد. دهگان را می‌توان به ۹ طریق پر کرد (یک رقم در صدگان قرار گرفته و کم می‌شود اما رقم صفر اضافه می‌شود).\nبا قرارگرفتن ۲ رقم در صدگان و دهگان، رقم یکان ۸ حالت خواهد داشت:\n$$ 9 \\times 9 \\times 8 = 648 $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1750,
+      "solution_page": "page_0161.jpg",
+      "solution_text": "می‌خواهیم با ارقام $8, 6, 4, 2, 0$ اعداد چهاررقمی بزرگ‌تر از ۶۰۰۰ با ارقام متمایز بنویسیم:\n$$ \\frac{2}{6,8} \\times 4 \\times 3 \\times 2 = 2 \\times 4! = 48 $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1751,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "مسئله را حالت‌بندی می‌کنیم:\nصدگان بزرگ‌تر از ۳ باشد:\n$$ \\frac{6}{4,5,6,7,8,9} \\times 9 \\times 8 = 432 $$\nصدگان برابر ۳ باشد $\\Rightarrow$\nدهگان بزرگ‌تر از صفر باشد:\n$$ \\frac{1}{3} \\times \\frac{8}{1,2,4,5,6,7,8,9} \\times 8 = 64 $$\nدهگان برابر صفر باشد:\n$$ \\frac{1}{3} \\times \\frac{1}{0} \\times \\frac{2}{8,9} = 2 $$\n$$ \\xrightarrow{(+)} 498 $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1752,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "۵ کتاب داستان را داخل یک جعبهٔ فرضی قرار می‌دهیم. این جعبه با ۴ کتاب شعر، ۵ شیء متمایز هستند که جایگشت آن‌ها برابر $5!$ است. در هر حالت از جایگشت این ۵ شیء، ۵ کتاب داستان داخل جعبه می‌توانند به $5!$ حالت جایگشت داشته باشند؛ بنابراین:\n$$ \\text{پاسخ} = 5! \\times 5! = (5!)^2 $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1753,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "وحید، جلال و کمال را در یک جعبهٔ فرضی به صورت \\fbox{کمال و وحید و جلال} قرار می‌دهیم.\nاکنون ۹ شیء متمایز در اختیار داریم (یک جعبه و ۸ نفر) که جایگشت آن‌ها برابر $9!$ است. در هر یک از این حالات جلال و کمال می‌توانند جای خود را با یکدیگر عوض کنند؛ بنابراین:\n$$ \\text{پاسخ مسئله} = 9! \\times 2! $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1754,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "اگر پرسپولیسی‌ها در ۶ جایگاه دایره‌ای‌شکل قرار گیرند، برای استقلالی‌ها ۷ جایگاه شماره‌گذاری‌شده وجود خواهد داشت:\n$$ 1 \\bigcirc 2 \\bigcirc 3 \\bigcirc 4 \\bigcirc 5 \\bigcirc 6 \\bigcirc 7 $$\nپرسپولیسی‌ها به $6!$ و استقلالی‌ها به $P(7, 4)$ حالت جایگشت خواهند داشت؛ بنابراین:\n$$ 6! P(7, 4) = 6! \\times \\frac{7!}{3!} = 6! \\times \\frac{7!}{6} = 5! 7! $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1755,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "تعداد حالاتی که هیچ دو دانش‌آموز ریاضی کنار هم نباشند را x می‌نامیم.\nاگر دانش‌آموزان تجربی را در ۵ جایگاه دایره‌ای‌شکل قرار دهیم، برای دانش‌آموزان ریاضی ۶ جایگاه شماره‌گذاری‌شده وجود دارد:\n$$ 1 \\bigcirc 2 \\bigcirc 3 \\bigcirc 4 \\bigcirc 5 \\bigcirc 6 $$\nدانش‌آموزان تجربی به $5!$ و دانش‌آموزان ریاضی به $P(6, 4)$ حالت در جایگاه‌های خود قرار می‌گیرند؛ بنابراین:\n$$ x = 5! P(6, 4) = 5! \\times \\frac{6!}{2!} $$\nتعداد حالاتی که دانش‌آموزان ریاضی یک در میان باشند را y می‌نامیم.\nدانش‌آموزان تجربی را در جایگاه‌های دایره‌ای‌شکل قرار می‌دهیم. دانش‌آموزان ریاضی به سه حالت در ۴ جایگاه از ۶ جایگاه شماره‌گذاری‌شده قرار می‌گیرند:\n$$ 1 \\bigcirc 2 \\bigcirc 3 \\bigcirc 4 \\bigcirc 5 \\bigcirc 6 $$\n$(3, 4, 5, 6), (2, 3, 4, 5), (1, 2, 3, 4)$\nبنابراین:\n$$ y = 3 \\times 5! 4! $$\nدر نتیجه:\n$$ \\frac{x}{y} = \\frac{5! \\times \\frac{6!}{2}}{3 \\times 5! 4!} = \\frac{6!}{6 \\times 4!} = 5 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1756,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "اگر دانش‌آموزان سال دوم بخواهند یک در میان باشند، در جایگاه‌های دایره‌ای و دانش‌آموزان کلاس اول در جاهای خالی قرار می‌گیرند:\n$$ \\bigcirc - \\bigcirc - \\bigcirc - \\bigcirc - \\bigcirc \\Rightarrow 5! \\times 4! $$\nبرای این‌که دانش‌آموزان سال اول یک در میان باشند، دانش‌آموزان دوم را در جایگاه‌های دایره‌ای قرار داده و دانش‌آموزان اول به سه حالت در ۴ جایگاه از ۶ جایگاه شماره‌گذاری‌شده قرار می‌گیرند:\n$$ 1 \\bigcirc 2 \\bigcirc 3 \\bigcirc 4 \\bigcirc 5 \\bigcirc 6 $$\n$(1, 2, 3, 4)$ یا $(2, 3, 4, 5)$ یا $(3, 4, 5, 6)$\nبنابراین جایگشت آن‌ها برابر است با:\n$$ 3 \\times 5! \\times 4! $$\nدر نتیجه خواهیم داشت:\n$$ \\frac{3 \\times 5! \\times 4!}{5! \\times 4!} = 3 $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1757,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "تابع مورد نظر به صورت $\\{ (1, 1), (2, \\_), (3, \\_), (4, \\_), (5, \\_) \\}$ می‌باشد که هر یک از ۴ جای خالی را می‌توان به ۳ حالت پر کرد (ارقام ۱، ۲ و ۳) به جز $(2, \\_)$ که جای خالی را به ۲ حالت می‌توان پر نمود (ارقام ۱ و ۳).\nبنابراین:\n$$ 2 \\times 3^3 = 54 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1758,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "این ۵ نفر به $5!$ حالت می‌توانند وارد اتوبوس شوند. بدیهی است در نصف حالات، عرفان زودتر از احسان و در نصف حالات، احسان زودتر از عرفان وارد اتوبوس می‌شود.\nبنابراین:\n$$ \\frac{5!}{2} = 60 $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1759,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "اعدادی بر ۹ بخش‌پذیر هستند که مجموع ارقام آن‌ها بر ۹ بخش‌پذیر باشد.\nابتدا ترکیب قابل قبول ارقام را نوشته سپس جایگشت هر یک را محاسبه می‌کنیم:\n$$ \\begin{cases} 9, 9, 9 \\xrightarrow{\\text{جایگشت}} 1 \\\\ 9, 9, 0 \\Rightarrow 2 \\\\ 9, 0, 0 \\Rightarrow 1 \\\\ 6, 6, 6 \\Rightarrow 1 \\end{cases} \\xrightarrow{(+)} 1 + 2 + 1 + 1 = 5 $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1760,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "روش اول: برای این‌که عدد زوج باشد، یکان آن یا صفر است و یا (۲ یا ۴).\n$$ \\begin{cases} \\frac{5}{}\\times\\frac{4}{}\\times\\frac{1}{0} = 20 : \\text{یکان صفر باشد.} \\\\ \\frac{4}{}\\times\\frac{4}{}\\times\\frac{2}{2,4} = 32 : \\text{یکان ۲ یا ۴ باشد.} \\end{cases} \\xrightarrow{(+)} 52 $$\nروش دوم: روش متمم:\nتعداد اعداد فرد - کل اعداد = تعداد اعداد زوج\n$$ = (5 \\times 5 \\times 4) - (4 \\times 4 \\times 3) = 100 - 48 = 52 $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1761,
+      "solution_page": "page_0162.jpg",
+      "solution_text": "می‌خواهیم با ارقام $0, 2, 3, 5, 6$ اعداد سه‌رقمی بنویسیم که شامل ۶ باشد. از روش متمم استفاده می‌کنیم:\nتعداد حالاتی که شامل رقم ۶ نباشد - تعداد کل حالات = تعداد حالات مطلوب\n$$ = (4 \\times 5 \\times 5) - (3 \\times 4 \\times 4) = 100 - 48 = 52 $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

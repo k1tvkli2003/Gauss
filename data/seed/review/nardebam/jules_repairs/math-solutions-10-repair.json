@@ -1,0 +1,634 @@
+{
+  "task_id": "math-solutions-10",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1949,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "$M$ و $N$ وسط‌های اضلاع $AB$ و $AC$ هستند. در نتیجه:\n$\\frac{MN}{BC} = \\frac{AM}{AB} = \\frac{1}{2} \\Rightarrow \\frac{x+4}{4x+1} = \\frac{1}{2} \\Rightarrow 2x + 8 = 4x + 1 \\Rightarrow x = \\frac{7}{2} \\Rightarrow \\begin{cases} AM = 6 \\Rightarrow AB = 12 \\\\ CN = \\frac{13}{2} \\Rightarrow AC = 13 \\\\ BC = 15 \\end{cases} \\Rightarrow \\text{محیط } ABC = 12 + 13 + 15 = 40$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1950,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "در مثلث $BCD$ طبق قضیه تالس داریم:\n$\\frac{OB}{OD} = \\frac{FC}{FD} = \\frac{4}{12-4} = \\frac{1}{2}$\nدو مثلث $AOB$ و $COD$ دارای زوایای برابر هستند، بنابراین با هم متشابه‌اند.\n$\\Rightarrow \\frac{AB}{CD} = \\frac{OB}{OD} = \\frac{1}{2} \\Rightarrow AB = \\frac{CD}{2} = \\frac{12}{2} = 6$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1951,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "ضلع لوزی را $a$ می‌نامیم.\n$MN \\parallel AB \\Rightarrow \\frac{CN}{BC} = \\frac{MN}{AB} \\Rightarrow \\frac{6-a}{6} = \\frac{a}{4} \\Rightarrow 10a = 24 \\Rightarrow a = 2.4 \\Rightarrow \\text{محیط لوزی} = 4a = 9.6$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1952,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "در مثلث $ABD$، $EM$ موازی $AB$ است، در نتیجه:\n$\\frac{DE}{AD} = \\frac{EM}{AB} = \\frac{2}{3}$\nاز طرفی: $\\frac{DE}{AD} = \\frac{FC}{BC} \\Rightarrow \\frac{FC}{BC} = \\frac{2}{3} \\Rightarrow \\frac{BF}{BC} = \\frac{1}{3}$\nدر مثلث $BCD$، $MF$ موازی $CD$ است، بنابراین:\n$\\frac{MF}{CD} = \\frac{BF}{BC} = \\frac{1}{3} \\Rightarrow MF = \\frac{CD}{3} = \\frac{8}{3}$\n$\\Rightarrow EF = EM + MF = 2 + \\frac{8}{3} = \\frac{14}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1953,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "نکته: اگر وسط‌های ساق‌های ذوزنقه را به هم وصل کنیم، طول پاره‌خط به وجود آمده برابر با میانگین قاعده‌هاست.\nقاعده $AB$ برابر $a$ و قاعده $CD$ برابر $3a$ است؛ بنابراین: $MN = \\frac{a+3a}{2} = 2a$\nواضح است، ارتفاع دو ذوزنقه $ABNM$ و $MNCD$ برابر است.\n$\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{a+2a}{2} \\times h}{\\frac{2a+3a}{2} \\times h} = \\frac{3a}{5a} = \\frac{3}{5}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1954,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "از یکی از خواص جالب تناسب استفاده می‌کنیم:\n$\\frac{a}{b} = \\frac{c}{d} \\Rightarrow \\frac{a+c}{b+d} = \\frac{a}{b} = \\frac{c}{d}$\nخواهیم داشت:\n$\\frac{a+4b}{2a-b} = \\frac{5a+2b}{2b-a} = \\frac{(a+4b) + (5a+2b)}{(2a-b) + (2b-a)} = \\frac{6(a+b)}{a+b} = 6$\n$\\Rightarrow \\frac{a+4b}{2a-b} = 6 \\Rightarrow a+4b = 12a-6b \\Rightarrow 11a = 10b \\Rightarrow \\frac{a}{b} = \\frac{10}{11}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1955,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "ارتفاع $AH$ را رسم می‌کنیم. مثلث $ACD$ متساوی‌الساقین است، بنابراین $AH$ میانه نیز می‌باشد. $DH=HC=x$ در مثلث $ABC$، $AH$ ارتفاع وارد بر وتر است. در نتیجه:\n$AB^2 = BC \\times BH \\Rightarrow (4\\sqrt{5})^2 = (6+2x)(6+x) \\Rightarrow 2x^2 + 18x + 36 = 80 \\Rightarrow x^2 + 9x - 22 = 0 \\Rightarrow \\begin{cases} x = -11 \\text{ غ ق ق} \\\\ x = 2 \\checkmark \\end{cases}$\n$AB^2 + AC^2 = BC^2 \\Rightarrow AC^2 = 10^2 - (4\\sqrt{5})^2 = 20 \\Rightarrow AC = 2\\sqrt{5}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0181.jpg",
+          "region": [
+            900,
+            2038,
+            1162,
+            2261
+          ],
+          "placement": "solution",
+          "alt": "مثلث متساوی‌الساقین و ارتفاع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1956,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "زاویه $C$ در دو مثلث $ABC$ و $DHC$ مشترک است، بنابراین دو مثلث قائم‌الزاویه $ABC$ و $DHC$ متشابه‌اند. پس:\n$\\frac{BC}{DC} = \\frac{AC}{HC} \\Rightarrow \\frac{BC}{3} = \\frac{4}{2} \\Rightarrow BC = 6 \\Rightarrow BH = 4$\nاز طرفی در مثلث قائم‌الزاویه $DHC$ طبق قضیه فیثاغورس داریم:\n$DH^2 = 9-4 = 5 \\Rightarrow DH = \\sqrt{5}$\nدر مثلث قائم‌الزاویه $BDH$:\n$BD^2 = DH^2 + BH^2 = 5 + 16 = 21 \\Rightarrow BD = \\sqrt{21}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1957,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "$EF$ موازی $CD$ است، بنابراین:\n$\\Delta ADC: \\frac{OE}{DC} = \\frac{AE}{AD} \\Rightarrow \\frac{OE}{8} = \\frac{AE}{AD}$\n$\\Delta ADB: \\frac{OE}{AB} = \\frac{DE}{AD} \\Rightarrow \\frac{OE}{5} = \\frac{DE}{AD}$\n$(+) \\rightarrow \\frac{OE}{8} + \\frac{OE}{5} = \\frac{AE+DE}{AD} = 1 \\xrightarrow{\\times 40} 13 OE = 40 \\Rightarrow OE = \\frac{40}{13}$\nبه همین روش $OF = \\frac{40}{13}$ می‌باشد.\n$EF = OE + OF = \\frac{80}{13} \\Rightarrow \\frac{EF}{CD} = \\frac{\\frac{80}{13}}{8} = \\frac{10}{13}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1958,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "با توجه به آن‌که $MN$ با $BC$ موازی است و $BN$ مورب است، پس $\\hat{B}_1 = \\hat{N}_1$.\nاز طرفی $BN$ نیمساز زاویه $N$ است، بنابراین $\\hat{N}_1 = \\hat{N}_2$.\nنتیجه می‌گیریم $\\hat{B}_1 = \\hat{N}_2$ می‌باشد. یعنی مثلث $BNC$ متساوی‌الساقین است. در نتیجه $BC = NC$. اگر $BC$ را برابر $x$ در نظر بگیریم، طبق قضیه تالس خواهیم داشت:\n$\\frac{AN}{AC} = \\frac{MN}{BC} \\Rightarrow \\frac{9}{9+x} = \\frac{6}{x} \\Rightarrow 9x = 54 + 6x \\Rightarrow 3x = 54 \\Rightarrow BC = 18$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0181.jpg",
+          "region": [
+            80,
+            1310,
+            310,
+            1550
+          ],
+          "placement": "solution",
+          "alt": "مثلث و خطوط موازی و نیمساز"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1959,
+      "solution_page": "page_0181.jpg",
+      "solution_text": "می‌دانیم $MN = \\frac{a+b}{2}$.\nارتفاع دو ذوزنقه $ABNM$ و $MNCD$ برابر است.\n$\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{(a+\\frac{a+b}{2}) \\times h / 2}{(b+\\frac{a+b}{2}) \\times h / 2} = \\frac{3a+b}{3b+a} = \\frac{2}{3} \\Rightarrow 9a + 3b = 6b + 2a \\Rightarrow 7a = 3b \\Rightarrow \\frac{b}{a} = \\frac{7}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0181.jpg",
+          "region": [
+            80,
+            1780,
+            430,
+            1950
+          ],
+          "placement": "solution",
+          "alt": "دو ذوزنقه روی هم"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1960,
+      "solution_page": "page_0182.jpg",
+      "solution_text": "فرض می‌کنیم $PK=x$ باشد، در نتیجه $AP=3x$ است.\nدر مثلث $ABK$ داریم:\n$$ \\frac{MP}{BK} = \\frac{AP}{AK} \\Rightarrow \\frac{MP}{4} = \\frac{3}{4} \\Rightarrow MP = \\frac{9}{4} $$\nاز طرفی در مثلث $AKC$:\n$$ \\frac{AP}{AK} = \\frac{PN}{KC} \\Rightarrow \\frac{3}{4} = \\frac{PN}{8} \\Rightarrow PN = 6 $$\nبدیهی است $AH = 3HH'$. در نتیجه:\n$$ \\frac{S_{AMP}}{S_{PNCK}} = \\frac{\\frac{1}{2}MP \\times AH}{\\frac{PN+KC}{2} \\times HH'} = \\frac{\\frac{1}{2} \\times \\frac{9}{4} \\times AH}{\\frac{6+8}{2} \\times HH'} = \\frac{\\frac{9}{8} \\times 3HH'}{7 \\times HH'} = \\frac{27}{56} $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            513,
+            86,
+            725,
+            172
+          ],
+          "placement": "solution_text",
+          "filename": "page_0182.jpg",
+          "alt": "مثلث"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1961,
+      "solution_page": "page_0182.jpg",
+      "solution_text": "تمام نقاطی که از A به فاصله ۵ هستند، بر روی دایره‌ای به مرکز A و به شعاع ۵ قرار دارند و تمامی نقاطی که از B به فاصله ۸ می‌باشند، بر دایره‌ای به مرکز B و به شعاع ۸ واقع‌اند. یک نقطه وجود دارد که بر هر دو دایره قرار دارد. دو حالت وجود دارد:\n۱) $ \\Rightarrow AB = R+R' = 5+8=13 $\n۲) $ \\Rightarrow AB = R'-R = 8-5=3 $",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            536,
+            345,
+            689,
+            417
+          ],
+          "placement": "solution_text",
+          "filename": "page_0182.jpg",
+          "alt": "دو دایره مماس بیرون"
+        },
+        {
+          "region": [
+            536,
+            411,
+            638,
+            484
+          ],
+          "placement": "solution_text",
+          "filename": "page_0182.jpg",
+          "alt": "دو دایره مماس درون"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1962,
+      "solution_page": "page_0182.jpg",
+      "solution_text": "از به هم وصل‌کردن وسط اضلاع هر چهارضلعی یک متوازی‌الاضلاع به وجود می‌آید که طول اضلاع آن برابر نصف قطرهای چهارضلعی اولیه است.\nچهارضلعی به دست آمده یک متوازی‌الاضلاع است که چون قطرهای ذوزنقه متساوی‌الساقین با هم برابرند اضلاع متوازی‌الاضلاع نیز با هم برابر بوده و یک لوزی خواهد بود. محیط این لوزی ۲۰ می‌باشد در نتیجه طول هر ضلع لوزی ۵ بوده و طول هر قطر ذوزنقه برابر ۱۰ می‌باشد.\nاگر ارتفاع‌های $AH$ و $BH'$ را رسم کنیم خواهیم داشت:\n$$ HH' = AB = 7 \\Rightarrow DH = H'C = 1 $$\n$$ \\Delta AHC : AH^2 = AC^2 - CH^2 = 100 - 64 \\Rightarrow AH = 6 $$\n$$ S_{\\text{ذوزنقه}} = \\frac{AB+CD}{2} \\times AH = \\frac{7+9}{2} \\times 6 = 48 $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            520,
+            617,
+            715,
+            708
+          ],
+          "placement": "solution_text",
+          "filename": "page_0182.jpg",
+          "alt": "ذوزنقه متساوی‌الساقین"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1963,
+      "solution_page": "page_0182.jpg",
+      "solution_text": "AB موازی CD است. در نتیجه:\n$$ \\frac{AE}{AD} = \\frac{EB}{BC} \\Rightarrow \\frac{5}{x} = \\frac{3x-4}{4} \\Rightarrow 3x^2-4x-20=0 \\Rightarrow \\begin{cases} x=-2 \\text{ (غ ق ق)} \\\\ x=\\frac{10}{3} \\end{cases} $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1964,
+      "solution_page": "page_0182.jpg",
+      "solution_text": "دو مثلث EAB و EDC متشابه هستند به طوری که:\n$$ \\frac{EC}{EB} = \\frac{10}{6} = \\frac{5}{3} $$\nبنابراین نسبت مساحت‌ها $\\frac{25}{9}$ است.\n$$ S_{EAB} = \\frac{9}{25}S_{EDC} \\Rightarrow S_{ABCD} = \\frac{16}{25}S_{EDC} $$\n$$ \\Rightarrow \\frac{S_{ABCD}}{S_{EAB}} = \\frac{\\frac{16}{25}S}{\\frac{9}{25}S} = \\frac{16}{9} $$\n\nنکته: در مثلث ABC اگر AD نیمساز باشد، خواهیم داشت:\n$$ \\frac{BD}{AB} = \\frac{DC}{AC} $$\nفرض می‌کنیم $BD = x$ باشد. آن‌گاه:\n$$ \\frac{x}{4} = \\frac{DC}{6} \\Rightarrow DC = \\frac{3}{2}x $$\n$$ \\frac{S_{ABC}}{S_{ABD}} = \\frac{\\frac{1}{2}AH \\times BC}{\\frac{1}{2}AH \\times BD} = \\frac{BC}{BD} = \\frac{BD+DC}{BD} = \\frac{x+\\frac{3}{2}x}{x} = \\frac{5}{2} = ۲/۵ $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": [
+        "Note block included in 1964"
+      ]
+    },
+    {
+      "question_number": 1965,
+      "solution_page": "page_0182.jpg",
+      "solution_text": "AP را x و BP را y می‌نامیم.\n$$ AB \\parallel CD \\Rightarrow \\frac{x}{x+5} = \\frac{y}{y+7} = \\frac{4}{9} \\Rightarrow \\begin{cases} x=4 \\\\ y=\\frac{28}{5}=۵/۶ \\end{cases} $$\n$$ \\text{محیط } PDC = PD + DC + PC = 9 + 9 + 12/6 = 30/6 $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            104,
+            381,
+            260,
+            484
+          ],
+          "placement": "solution_text",
+          "filename": "page_0182.jpg",
+          "alt": "مثلث متقاطع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1966,
+      "solution_page": "page_0182.jpg",
+      "solution_text": "ارتفاع AH را رسم می‌کنیم. اگر BE موازی با AD رسم گردد، خواهیم داشت:\n$$ \\Delta ADH : \\frac{AM}{AD} = \\frac{AH'}{AH} \\Rightarrow AH = 3AH' $$\n$$ \\Delta BEC : \\frac{OB}{BE} = \\frac{ON}{EC} \\Rightarrow \\frac{2}{6} = \\frac{ON}{12} \\Rightarrow ON = 4 $$\nمتوازی‌الاضلاع است $ABOM \\Rightarrow OM = AB = 6$\n$$ \\Rightarrow MN = OM + ON = 10 $$\n$$ \\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{1}{2}AH'(AB+MN)}{\\frac{1}{2}HH'(MN+DC)} = \\frac{AH'(6+10)}{2AH'(10+18)} = \\frac{2}{7} $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            104,
+            574,
+            309,
+            663
+          ],
+          "placement": "solution_text",
+          "filename": "page_0182.jpg",
+          "alt": "ذوزنقه"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1967,
+      "solution_page": "page_0182.jpg",
+      "solution_text": "AB و CD موازی و AO و BO مورب هستند.\nمی‌دانیم $\\hat{A}_2 = \\hat{A}_1$ و $\\hat{B}_2 = \\hat{B}_1$ است.\n$$ CH^2 = BC^2 + BH^2 \\Rightarrow CH^2 = (2a)^2 + a^2 = 5a^2 \\Rightarrow CH = a\\sqrt{5} $$\nدر مثلث قائم‌الزاویة CBH، HM ارتفاع وارد بر وتر است.\n$$ BH^2 = MH \\times CH \\Rightarrow a^2 = MH \\times a\\sqrt{5} \\Rightarrow MH = \\frac{a}{\\sqrt{5}} $$\n$$ \\text{نسبت تشابه} = \\frac{MH}{AH} = \\frac{a/\\sqrt{5}}{a} = \\frac{1}{\\sqrt{5}} \\Rightarrow \\frac{S_{MNH}}{S_{ADH}} = (\\frac{1}{\\sqrt{5}})^2 = \\frac{1}{5} $$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            93,
+            808,
+            301,
+            888
+          ],
+          "placement": "solution_text",
+          "filename": "page_0182.jpg",
+          "alt": "دو خط موازی و مورب"
+        }
+      ],
+      "review_notes": [
+        "Solution might continue on the next page"
+      ]
+    },
+    {
+      "question_number": 1968,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "از نقطهٔ C عمود CH را بر AD رسم می‌کنیم.\nC بر نیمساز زاویهٔ A واقع است بنابراین: $BC=CH=6$\nهم‌چنین از برابری دو مثلث ABC و ACH نتیجه می‌شود:\n$$ AH = AB = 10 \\Rightarrow DH = AD - AH = 13 - 10 = 3 $$\n$$ \\Delta CDH : CD^2 = CH^2 + DH^2 \\Rightarrow x^2 = 6^2 + 3^2 = 45 \\Rightarrow x = 3\\sqrt{5} $$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            880,
+            180,
+            1150,
+            290
+          ],
+          "placement": "solution_text",
+          "filename": "page_0183.jpg",
+          "alt": "مثلث ABCD و ارتفاع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1969,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "AL را موازی BC رسم نموده و ارتفاع‌های AH و $AH'$ را می‌کشیم.\n$$ KN = LC = AB = 3 \\Rightarrow \\begin{cases} MK = 6 \\\\ DL = 9 \\end{cases} $$\n$$ \\Delta ADH' : \\frac{AH}{AH'} = \\frac{AM}{AD} $$\n$$ \\Delta ADL : \\frac{MK}{DL} = \\frac{AM}{AD} $$\n$$ \\Rightarrow \\frac{AH}{AH'} = \\frac{MK}{DL} = \\frac{2}{3} $$\n$$ \\frac{S_{ABN}}{S_{MDC}} = \\frac{\\frac{1}{2}AB \\times AH}{\\frac{1}{2}HH' \\times DC} = \\frac{3AH}{12HH'} = \\frac{1}{4} \\times \\frac{AH}{AH' - AH} = \\frac{1}{4} \\times \\frac{2}{3-2} = \\frac{1}{2} $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            880,
+            360,
+            1260,
+            460
+          ],
+          "placement": "solution_text",
+          "filename": "page_0183.jpg",
+          "alt": "مثلث‌ها و متوازی‌الاضلاع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1970,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "در واقع مساحت مثلث ADE نصف مساحت مثلث ABC است.\nمثلث ADE و ABC متشابه بوده و نسبت تشابه $\\frac{DE}{BC}$ می‌باشد.\nمی‌دانیم نسبت مساحت‌ها مربع نسبت تشابه است:\n$$ \\frac{S_{ADE}}{S_{ABC}} = (\\frac{DE}{BC})^2 = \\frac{1}{2} $$\n$$ \\Rightarrow (\\frac{DE}{8})^2 = \\frac{1}{2} \\Rightarrow DE^2 = 32 \\Rightarrow DE = 4\\sqrt{2} $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1971,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "اگر AB را a و CD را b بنامیم، خواهیم داشت:\n$$ \\begin{cases} MN = \\frac{a+b}{2} = 15 \\Rightarrow a+b = 30 \\\\ EF = \\frac{b-a}{2} = 5 \\Rightarrow b-a = 10 \\end{cases} \\Rightarrow b=20, a=10 $$\n$$ \\Rightarrow \\frac{a}{b} = \\frac{1}{2} $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1972,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "AD را برابر x در نظر می‌گیریم. در مثلث ACH، DH ارتفاع وارد بر وتر است.\n$$ DH^2 = AD \\times DC \\Rightarrow DH^2 = x(8-x) \\Rightarrow DH = \\sqrt{x(8-x)} $$\n$$ DH \\parallel AB \\Rightarrow \\frac{DH}{AB} = \\frac{DC}{AC} \\Rightarrow \\frac{\\sqrt{x(8-x)}}{6} = \\frac{8-x}{8} $$\n$$ \\Rightarrow \\frac{x(8-x)}{36} = \\frac{(8-x)^2}{64} \\xrightarrow{x \\neq 8} \\frac{x}{36} = \\frac{8-x}{64} $$\n$$ \\Rightarrow 64x = 288 - 36x \\Rightarrow 100x = 288 \\Rightarrow x = 2/88 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1973,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "دو مثلث APB و DPC به حالت تناسب دو ضلع و برابری زاویهٔ بین متشابه‌اند.\n$$ \\begin{cases} \\frac{AP}{PD} = \\frac{BP}{CP} = \\frac{1}{3} \\\\ \\hat{P}_1 = \\hat{P}_2 \\end{cases} \\Rightarrow \\Delta APB \\sim \\Delta DPC \\Rightarrow \\frac{AB}{CD} = \\frac{1}{3} $$\n$$ \\Rightarrow CD = 3AB = 12 $$\nاز طرفی:\n$$ \\begin{cases} \\hat{A} = \\hat{D} \\\\ \\hat{D} = A\\hat{B}C \\end{cases} \\Rightarrow \\hat{A} = A\\hat{B}C \\Rightarrow AC = BC = 17 $$\n$$ \\text{محیط } \\Delta BCD = BD + CD + BC = 11 + 12 + 17 = 40 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1974,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "مثلث‌های AOB و COD متشابه‌اند.\n$$ \\frac{OB}{OD} = \\frac{OA}{OC} = \\frac{AB}{CD} = \\frac{3}{6} = \\frac{1}{2} $$\nاگر ارتفاع OH در $\\Delta AOB$ را $h_1$ و ارتفاع OH' در $\\Delta COD$ را $h_2$ بنامیم، نسبت $\\frac{h_1}{h_2}$ نیز برابر $\\frac{1}{2}$ است.\n$$ \\Delta ACD : \\frac{OM}{CD} = \\frac{OA}{AC} = \\frac{1}{3} \\Rightarrow OM = \\frac{1}{3}CD = \\frac{6}{3} = 2 $$\nبه طریق مشابه $ON = 2$ می‌باشد. بنابراین $MN = 4$ است.\n$$ \\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{1}{2}h_1(AB+MN)}{\\frac{1}{2}h_2(CD+MN)} = \\frac{h_1}{h_2} \\times \\frac{(3+4)}{(6+4)} = \\frac{1}{2} \\times \\frac{7}{10} = \\frac{7}{20} = 0/35 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1975,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "زاویهٔ C و $A_1$ مکمل هستند، بنابراین: $\\hat{C} = \\hat{A}_2$\nبنابراین دو مثلث ABE و CDE متشابه هستند.\n$$ \\frac{BE}{DE} = \\frac{AE}{CE} \\Rightarrow \\frac{4}{x+2} = \\frac{6}{2x-1} \\Rightarrow 8x-4 = 6x+12 \\Rightarrow x=8 $$\n$$ \\Rightarrow \\text{نسبت تشابه} = \\frac{BE}{DE} = \\frac{4}{10} = \\frac{2}{5} \\Rightarrow \\frac{S_{ABE}}{S_{CDE}} = \\frac{4}{25} $$\n$$ \\Rightarrow \\frac{S_{ABCD}}{S_{CDE}} = \\frac{21}{25} $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            40,
+            600,
+            220,
+            690
+          ],
+          "placement": "solution_text",
+          "filename": "page_0183.jpg",
+          "alt": "دو مثلث متقاطع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1976,
+      "solution_page": "page_0183.jpg",
+      "solution_text": "مثلث ABC با یک مثلث قائم‌الزاویه متشابه است. بنابراین ABC نیز قائم‌الزاویه است. چون $x > 9$ است، پس بزرگ‌ترین ضلع یعنی وتر $x+3$ است.\n$$ (x+3)^2 = x^2 + 9^2 \\Rightarrow 6x = 72 \\Rightarrow x = 12 $$\n$$ \\Rightarrow \\text{طول وتر} = 15 $$\nوتر مثلث کوچک‌تر برابر $7/5$ است. در نتیجه نسبت تشابه برابر $\\frac{1}{2}$ و نسبت مساحت‌ها برابر $\\frac{1}{4}$ است.\n$$ S_{ABC} = \\frac{1}{2} \\times 12 \\times 9 = 54 \\Rightarrow S_{\\text{مثلث کوچک}} = \\frac{54}{4} = 13/5 $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1977,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "ابتدا قطر $AC$ را محاسبه می‌کنیم:\n$$ AC^2 = AB^2 + BC^2 = 100 + 44 = 144 \\Rightarrow AC = 12 $$\nدر مثلث $ABC$، $BP$ ارتفاع وارد بر وتر است.\n$$ BC^2 = PC \\times AC \\Rightarrow 44 = PC \\times 12 \\Rightarrow PC = \\frac{11}{3} $$\nدر مثلث $ACD$، $DQ$ ارتفاع وارد بر وتر است.\n$$ CD^2 = QC \\times AC \\Rightarrow 100 = QC \\times 12 \\Rightarrow QC = \\frac{25}{3} $$\n$$ PQ = QC - PC = \\frac{25}{3} - \\frac{11}{3} = \\frac{14}{3} $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1978,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "$PN$ موازی $AC$ می‌باشد، بنابراین $\\hat{A} = B\\hat{N}P$.\n$$ \\begin{cases} \\hat{A} = B\\hat{N}P \\\\ \\hat{A} = \\hat{M}_1 \\end{cases} \\Rightarrow \\hat{M}_1 = B\\hat{N}P \\Rightarrow \\Delta BMN \\sim \\Delta BNP $$\nاز طرفی : $\\hat{B} = \\hat{B} \\Rightarrow \\frac{BN}{BP} = \\frac{BM}{BN} \\Rightarrow BN^2 = BM \\times BP \\Rightarrow BN^2 = BM(BM + MP) \\Rightarrow BN^2 - BM^2 = BM \\times MP $",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1979,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "$AH$ ارتفاع وارد بر وتر در مثلث قائم‌الزاویهٔ $ACD$ است.\n$$ AH^2 = DH \\times CH = 4 \\times 9 \\Rightarrow AH = 6 $$\nدر مثلث $BCD$ ارتفاع وارد بر ضلع $CD$ با $AH$ برابر است. بنابراین:\n$$ S_{BCD} = \\frac{AH \\times CD}{2} = \\frac{6 \\times 13}{2} = 39 $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1980,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "تمامی نقاطی که از $A$ به فاصلهٔ ۷ هستند، بر دایره‌ای به مرکز $A$ و شعاع ۷ و تمامی نقاطی که از $B$ به فاصلهٔ ۳ هستند، بر دایره‌ای به مرکز $B$ و شعاع ۳ قرار دارند. دو دایره هیچ نقطهٔ مشترکی ندارند. دو حالت زیر وجود دارد:\n۱) $ \\Rightarrow AB > R + R' \\Rightarrow AB > 10 $\n۲) $ \\Rightarrow AB < R - R' \\Rightarrow AB < 4 $\nبنابراین اندازهٔ $AB$ نمی‌تواند در فاصلهٔ $[4, 10]$ باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            1350,
+            800,
+            1750,
+            1600
+          ],
+          "filename": "page_0184.jpg",
+          "placement": "solution_1980",
+          "alt": "دو دایره در دو حالت مختلف؛ در حالت اول متباعد و در حالت دوم متداخل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1981,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "دو مثلث $APD$ و $BPC$ متشابه‌اند. $AB$ قطر مستطیل و برابر $\\sqrt{10}$ است.\n$$ \\frac{AP}{PB} = \\frac{AD}{BC} = \\frac{1}{3} \\Rightarrow \\frac{AP}{AB} = \\frac{1}{4} \\Rightarrow AP = \\frac{AB}{4} = \\frac{\\sqrt{10}}{4} $$\nدر مثلث $AH ،ABC$ ارتفاع وارد بر وتر است.\n$$ AC^2 = AH \\times AB \\Rightarrow 1 = AH \\times \\sqrt{10} \\Rightarrow AH = \\frac{\\sqrt{10}}{10} $$\n$$ PH = AP - AH = \\frac{\\sqrt{10}}{4} - \\frac{\\sqrt{10}}{10} = \\frac{3\\sqrt{10}}{20} $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1982,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "تمام نقاطی که از نقطهٔ $A$ به فاصلهٔ ۱ هستند، بر دایره‌ای به مرکز $A$ و شعاع ۱ قرار دارند.\nتمام نقاطی که از خط $d$ به فاصلهٔ ۳ هستند، بر خطوطی موازی $d$ و به فاصلهٔ ۳ از آن قرار دارند.\nدقیقاً یک نقطه وجود دارد که هر دو خاصیت را داشته باشد. بنابراین خط مورد نظر باید بر دایره مماس باشد.\nاگر خط $\\ell_1$ به فاصلهٔ ۳ از خط $d$ باشد، $AH = 1 + 3 = 4$ یعنی $x = 4$ است و اگر خط $\\ell_2$ به فاصلهٔ ۳ از خط $d$ باشد، $AH = 3 - 1 = 2$ یعنی $x = 2$ است.\nمجموع مقادیر $x$ برابر $6 = 2 + 4$ است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            100,
+            100,
+            300,
+            800
+          ],
+          "filename": "page_0184.jpg",
+          "placement": "solution_1982",
+          "alt": "دو شکل شامل خط و دایره و مماس‌های مربوطه"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1983,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "دو مثلث قائم‌الزاویهٔ $BOP$ و $COH$ با برابری دو زاویه با یکدیگر متشابه‌اند.\n$$ \\frac{OC}{OB} = \\frac{CH}{BP} = \\frac{12}{8} = \\frac{3}{2} \\Rightarrow OC = \\frac{3}{2} OB = \\frac{3}{2} (2OH) = 3OH $$\n$$ \\Delta COH : OH^2 + CH^2 = OC^2 \\Rightarrow OH^2 + 144 = (3OH)^2 \\Rightarrow 8OH^2 = 144 \\Rightarrow OH = \\sqrt{18} = 3\\sqrt{2} \\Rightarrow BH = 3OH = 9\\sqrt{2} $$\n$$ S_{BCH} = \\frac{BH \\times CH}{2} = \\frac{9\\sqrt{2} \\times 12}{2} = 54\\sqrt{2} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1984,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "در مثلث $ABC$ طبق قضیهٔ تالس خواهیم داشت:\n$$ \\frac{AF}{AB} = \\frac{EF}{BC} \\Rightarrow \\frac{11}{AB} = \\frac{9}{432} \\Rightarrow AB = \\frac{432 \\times 11}{9} = 48 \\times 11 = 528 $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            1250,
+            100,
+            1600,
+            550
+          ],
+          "filename": "page_0184.jpg",
+          "placement": "solution_1984",
+          "alt": "مثلث قائم‌الزاویه ABC با خط موازی EF"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1985,
+      "solution_page": "page_0184.jpg",
+      "solution_text": "$a$ کم‌ترین مقدار ممکن است، بنابراین کوچک‌ترین ضلع مثلث می‌باشد. سه حالت زیر را بررسی می‌کنیم:\n۱) $ b > 16 \\Rightarrow \\frac{a}{12} = \\frac{4}{16} = \\frac{5}{b} \\Rightarrow \\begin{cases} a = 3 \\\\ b = 20 \\end{cases} $\n۲) $ 12 < b < 16 \\Rightarrow \\frac{a}{12} = \\frac{4}{b} = \\frac{5}{16} \\Rightarrow \\begin{cases} a = \\frac{15}{4} \\\\ b = \\frac{64}{5} \\end{cases} $\n۳) $ b < 12 \\Rightarrow \\frac{a}{b} = \\frac{4}{12} = \\frac{5}{16} \\Rightarrow \\text{غ‌ق‌ق} $\nواضح است که در حالت اول $a$ کم‌ترین مقدار بوده و در نتیجه $b$ برابر ۲۰ است. در این حالت با توجه به برقراری رابطة فیثاغورس هر دو مثلث قائم‌الزاویه می‌باشند.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1986,
+      "solution_page": "page_0185.jpg",
+      "solution_text": "اگر $b = AC$ باشد، با توجه به $\\sin \\hat{A}_1 = \\frac{\\sqrt{6}}{6}$ در مثلث $ACH$ خواهیم داشت: $CH = \\frac{\\sqrt{6}}{6} b$\n$AH$ ارتفاع وارد بر وتر در مثلث قائم‌الزاویة $ABC$ است.\n$AC^2 = CH \\times BC \\Rightarrow b^2 = \\frac{\\sqrt{6}}{6} b \\times BC \\Rightarrow BC = \\sqrt{6} b$\nاز طرفی $BC^2 = AB^2 + AC^2 \\Rightarrow 6b^2 = 6 + b^2 \\Rightarrow b^2 = \\frac{6}{5} \\Rightarrow b = \\frac{\\sqrt{6}}{\\sqrt{5}}$\n$S_{ABC} = \\frac{AB \\times AC}{2} = \\frac{\\sqrt{6} \\times \\frac{\\sqrt{6}}{\\sqrt{5}}}{2} = \\frac{3}{\\sqrt{5}} = \\frac{3\\sqrt{5}}{5}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1987,
+      "solution_page": "page_0185.jpg",
+      "solution_text": "قضیة تالس را در دو مثلث $BMC$ و $ABC$ می‌نویسیم.\n$\\Delta BMC : PN \\parallel BM \\Rightarrow \\frac{CN}{NM} = \\frac{CP}{PB} \\Bigg\\} \\Rightarrow \\frac{CN}{NM} = \\frac{CM}{MA}$\n$\\Delta ABC : MP \\parallel AB \\Rightarrow \\frac{CP}{PB} = \\frac{CM}{MA}$\n$\\Rightarrow \\frac{4}{2} = \\frac{6}{MA} \\Rightarrow MA = 3 \\Rightarrow AC = 4 + 2 + 3 = 9$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1988,
+      "solution_page": "page_0185.jpg",
+      "solution_text": "روش اول: ارتفاع $AH$ را رسم می‌کنیم.\n$\\frac{S_{ABP}}{S_{APD}} = \\frac{\\frac{1}{2} AH \\times BP}{\\frac{1}{2} AH \\times PD} = \\frac{4}{6} \\Rightarrow \\frac{BP}{PD} = \\frac{2}{3}$\nدو مثلث $ABP$ و $PDC$ در حالت برابری زوایا با هم متشابه‌اند و نسبت تشابه برابر $\\frac{2}{3}$ و در نتیجه نسبت مساحت‌ها برابر $\\frac{4}{9}$ است. بنابراین $S_{PDC} = \\frac{9}{4} S_{ABP} = 9$. همانند دو مثلث $ABP$ و $APD$ نسبت مساحت‌های دو مثلث $ABP$ و $BPC$ نیز برابر نسبت قاعده‌ها یعنی $\\frac{AP}{PC} = \\frac{2}{3}$ است.\n$\\frac{S_{ABP}}{S_{BPC}} = \\frac{2}{3} \\Rightarrow S_{BPC} = \\frac{3}{2} S_{ABP} = 6$\n$\\Rightarrow S_{ABCD} = S_{ABP} + S_{APD} + S_{PDC} + S_{BPC} = 4 + 6 + 9 + 6 = 25$\nروش دوم: در ذوزنقه با رسم قطرها مساحت دو مثلث جانبی با هم برابر و واسطة هندسی مساحت مثلث‌های بالا و پایین است.\n$S_1 S_2 = S^2$\nدر این مسئله $S = 6$ و $S_1 = 4$ است.\n$4 S_2 = 6^2 \\Rightarrow S_2 = 9 \\Rightarrow S_{ABCD} = 2S + S_1 + S_2 = 12 + 4 + 9 = 25$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            850,
+            480,
+            1600,
+            600
+          ],
+          "placement": "stem",
+          "filename": "page_0185.jpg",
+          "alt": "مثلث‌های روش اول در مسئله ۱۹۸۸"
+        },
+        {
+          "region": [
+            850,
+            800,
+            1600,
+            950
+          ],
+          "placement": "stem",
+          "filename": "page_0185.jpg",
+          "alt": "ذوزنقه روش دوم در مسئله ۱۹۸۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1989,
+      "solution_page": "page_0185.jpg",
+      "solution_text": "با توجه به $\\frac{AM}{MD} = \\frac{BN}{NC} = 2$ واضح است $MN \\parallel AB \\parallel DC$.\n$\\Delta ACD : MQ \\parallel DC \\Rightarrow \\frac{MQ}{DC} = \\frac{AM}{AD} = \\frac{2}{3} \\Rightarrow MQ = \\frac{2}{3} DC = \\frac{2}{3} b$\n$\\Delta ABD : MP \\parallel AB \\Rightarrow \\frac{MP}{AB} = \\frac{DM}{DA} = \\frac{1}{3} \\Rightarrow MP = \\frac{1}{3} AB = \\frac{1}{3} a$\n$\\Rightarrow PQ = MQ - MP = \\frac{2}{3} b - \\frac{1}{3} a = \\frac{2b - a}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            50,
+            310,
+            450,
+            450
+          ],
+          "placement": "stem",
+          "filename": "page_0185.jpg",
+          "alt": "ذوزنقه ABCD با خطوط موازی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1990,
+      "solution_page": "page_0185.jpg",
+      "solution_text": "$P$ بر روی عمودمنصف $BC$ واقع است. بنابراین:\n$PB = PC = 7 \\Rightarrow AP = 3$\n$\\Delta APB : AP^2 + AB^2 = BP^2 \\Rightarrow 9 + AB^2 = 49 \\Rightarrow AB = \\sqrt{40} = 2\\sqrt{10}$\n$S_{ABC} = \\frac{AB \\times AC}{2} = \\frac{2\\sqrt{10} \\times 4}{2} = 4\\sqrt{10}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            50,
+            450,
+            450,
+            600
+          ],
+          "placement": "stem",
+          "filename": "page_0185.jpg",
+          "alt": "مثلث ABC با نقطه P"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1991,
+      "solution_page": "page_0185.jpg",
+      "solution_text": "می‌دانیم:\n$S_1 S_2 = S^2 \\quad (1)$\nاز طرفی دو مثلث $ABO$ و $CDO$ با نسبت تشابه $\\frac{8}{12}$ با یکدیگر متشابه‌اند.\n$\\Rightarrow \\frac{S_1}{S_2} = (\\frac{2}{3})^2 = \\frac{4}{9} \\Rightarrow S_2 = \\frac{9}{4} S_1 \\xrightarrow{(1)} S_1 (\\frac{9}{4} S_1) = 24^2 \\Rightarrow \\frac{3}{2} S_1 = 24 \\Rightarrow S_1 = 16 \\Rightarrow S_2 = \\frac{9}{4} \\times 16 = 36$\n$\\Rightarrow S_{ABCD} = 16 + 36 + 2 \\times 24 = 100 \\Rightarrow \\frac{8+12}{2} \\times h = 100 \\Rightarrow h = 10$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            50,
+            600,
+            450,
+            750
+          ],
+          "placement": "stem",
+          "filename": "page_0185.jpg",
+          "alt": "ذوزنقه ABCD با قطرهای متقاطع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1992,
+      "solution_page": "page_0185.jpg",
+      "solution_text": "در ذوزنقه $ABCD$ می‌دانیم:\n$S_1 S_2 = S^2 \\quad (1)$\n$S_1 = \\frac{2}{3} S \\Rightarrow S = \\frac{3}{2} S_1 \\xrightarrow{(1)} S_1 S_2 = (\\frac{3}{2} S_1)^2 = \\frac{9}{4} S_1^2 \\Rightarrow S_2 = \\frac{9}{4} S_1 \\Rightarrow \\frac{S_2}{S_1} = \\frac{9}{4} = 2/25$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1993,
+      "solution_page": "page_0185.jpg",
+      "solution_text": "مثلث‌های $OAB$ و $OCD$ با نسبت $\\frac{6}{9}$ با یکدیگر متشابه‌اند. بنابراین:\n$\\frac{OB}{OD} = \\frac{6}{9} = \\frac{2}{3}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            50,
+            800,
+            450,
+            950
+          ],
+          "placement": "stem",
+          "filename": "page_0185.jpg",
+          "alt": "ذوزنقه ABCD با خطوط داخلی"
+        }
+      ],
+      "review_notes": [
+        "Solution is incomplete, likely continues on the next page."
+      ]
+    }
+  ]
+}

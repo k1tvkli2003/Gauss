@@ -1,0 +1,2343 @@
+[
+  {
+    "question_number": 1291,
+    "solution_page": 121,
+    "solution_text": "ابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\sqrt[3]{x+2} \\Rightarrow f'(x) = \\dfrac{1}{3\\sqrt[3]{(x+2)^2}}$\n$\\Rightarrow f'(-2) = \\dfrac{1}{0^+} = +\\infty$\nتابع مشتق در هر دو طرف $x=-2$ برابر $+\\infty$ است. بنابراین ۳ درست است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1292,
+    "solution_page": 121,
+    "solution_text": "تابع $f$ را در دو حالت $x > 0$ و $x < 0$ بررسی می‌کنیم:\n1) $x > 0 \\Rightarrow f(x) = \\dfrac{x^2-8x}{x} = x^2-8 \\Rightarrow f'(x) = 2x$\nبنابراین:\n$f(x) = f'(x) \\Rightarrow x^2-8 = 2x \\Rightarrow x^2-2x-8 = 0$\n$\\Rightarrow (x+2)(x-4) = 0 \\Rightarrow \\begin{cases} x = -2 \\quad \\text{غ ق ق} \\\\ x = 4 \\quad \\checkmark \\end{cases}$\n\n2) $x < 0 \\Rightarrow f(x) = \\dfrac{x^2-8x}{-x} = -x^2+8 \\Rightarrow f'(x) = -2x$\nدر نتیجه:\n$f(x) = f'(x) \\Rightarrow -x^2+8 = -2x \\Rightarrow x^2-2x-8 = 0$\n$\\Rightarrow (x+2)(x-4) = 0 \\Rightarrow \\begin{cases} x = -2 \\quad \\checkmark \\\\ x = 4 \\quad \\text{غ ق ق} \\end{cases}$\nنتیجه می‌گیریم $f$ و $f'$ در دو نقطه $x=-2$ و $x=4$ متقاطع‌اند.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1293,
+    "solution_page": 121,
+    "solution_text": "آهنگ متوسط تابع $f$ در بازه $[1, 4]$ برابر است با:\n$\\frac{f(4) - f(1)}{4 - 1} = \\frac{6 - 1}{3} = \\frac{5}{3}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1294,
+    "solution_page": 121,
+    "solution_text": "آهنگ تغییر لحظه‌ای تابع در یک نقطه، مشتق تابع در آن نقطه است:\n$f'(x) = 2x^2 + 2x - 5 = -1 \\Rightarrow 2x^2 + 2x - 4 = 0 \\Rightarrow x^2 + x - 2 = 0 \\Rightarrow \\begin{cases} x = 1 \\\\ x = -2 \\end{cases}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1295,
+    "solution_page": 121,
+    "solution_text": "آهنگ متوسط و لحظه‌ای را محاسبه می‌کنیم:\nآهنگ متوسط $= \\frac{f(4) - f(2)}{4 - 2} = \\frac{2 - 4}{2} = -1$\nآهنگ لحظه‌ای $= f'(x) = \\frac{-8}{x^2} \\Rightarrow f'(2) = -2$\n$\\Rightarrow -1 - (-2) = 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1296,
+    "solution_page": 121,
+    "solution_text": "نکته: آهنگ تغییر متوسط تابع درجه ۲ در بازهٔ $[a,b]$ با آهنگ تغییر لحظه‌ای آن در نقطهٔ $\\dfrac{a+b}{2}$ برابر است.\\nآهنگ تغییر متوسط $f(x)$ در بازهٔ $[\\dfrac{1}{3},1]$ با آهنگ تغییر لحظه‌ای آن در برابر است:\\n$\\dfrac{\\dfrac{1}{3}+1}{2}=\\dfrac{\\dfrac{4}{3}}{2}=\\dfrac{2}{3}$\\n$f'(x)=2ax-a \\Rightarrow f'(1)=2a-a=a \\Rightarrow a=\\dfrac{2}{3}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1297,
+    "solution_page": 121,
+    "solution_text": "آهنگ تغییر متوسط تابع $f$ را در بازه $[a, 1]$، برابر $-\\frac{1}{4}$ قرار می‌دهیم:\n$\\frac{f(a) - f(1)}{a - 1} = -\\frac{1}{4} \\Rightarrow \\frac{(\\sqrt{a} - \\sqrt{a}) - (7 - 1)}{a - 1} = -\\frac{1}{4}$ (توجه: صورت سوال مشکل نگارشی دارد، با توجه به راه حل به نظر می‌رسد $f(x)=\\sqrt{x}$ باشد، اما عبارت در کتاب $7-\\sqrt{a}$ چاپ شده که غلط است)\n$\\Rightarrow \\frac{1-\\sqrt{a}}{a-1} = -\\frac{1}{4} \\Rightarrow \\frac{-(\\sqrt{a}-1)}{(\\sqrt{a}-1)(\\sqrt{a}+1)} = -\\frac{1}{4} \\Rightarrow \\frac{-1}{\\sqrt{a}+1} = -\\frac{1}{4} \\Rightarrow \\sqrt{a}+1 = 4 \\Rightarrow \\sqrt{a} = 3 \\Rightarrow a = 9$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [
+      "There appears to be a typo in the original print for 1297 function, I transcribed the solution logically but added a note if needed."
+    ]
+  },
+  {
+    "question_number": 1298,
+    "solution_page": 121,
+    "solution_text": "تابع $f(x)$ درجه ۲ است:\n$f(x) = ax^2 + bx + c$\nمی‌دانیم:\n$f(x+2) - f(x-2) = 7 - 3x \\Rightarrow a(x+2)^2 + b(x+2) + c - a(x-2)^2 - b(x-2) - c = 7 - 3x \\Rightarrow 8ax + 4b = 7 - 3x \\Rightarrow \\begin{cases} a = -\\frac{3}{8} \\\\ b = \\frac{7}{4} \\end{cases}$\nبنابراین:\n$f'(x) = 2ax + b \\Rightarrow f'(5) = 10a + b = \\frac{-15}{4} + \\frac{7}{4} = -2$\nحال $f'(9)$ را محاسبه می‌کنیم:\n$f'(x) = -\\frac{1}{2\\sqrt{x}} \\Rightarrow f'(9) = -\\frac{1}{6}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [
+      "The solution for 1298 seems to merge two different functions' derivatives at the end. Transcribed as written."
+    ]
+  },
+  {
+    "question_number": 1299,
+    "solution_page": 121,
+    "solution_text": "شیب خط واصل بین نقاط به طول صفر و ۲ باید کمتر از شیب خط واصل بین نقاط با طول صفر و ۱ باشد. در گزینه‌های ۱ و ۲ این مقدار بیشتر بوده و در ۴ برابرند.\\nبا توجه به نمودار، ۳ درست است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0121.jpg",
+        "box": [
+          48,
+          335,
+          155,
+          421
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار خطوط واصل بین نقاط"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1300,
+    "solution_page": 121,
+    "solution_text": "تابع $V(t)$ تابعی درجه ۲ است؛ بنابراین آهنگ متوسط در بازه $[0, 60]$ با آهنگ لحظه‌ای در نقطه وسط این بازه برابر است:\n$\\frac{0 + 60}{2} = 30$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1301,
+    "solution_page": 121,
+    "solution_text": "آهنگ تغییر لحظه‌ای در نقطه $x = 2$ را به دست می‌آوریم:\n$f(x) = 2x^2 - 6x + 5 \\Rightarrow f'(x) = 4x - 6 \\Rightarrow f'(2) = 2$\nبنابراین آهنگ متوسط در بازه $[3 - a, 3a - 2]$ باید برابر ۴ باشد. چون تابع درجه ۲ است، این مقدار برابر آهنگ لحظه‌ای تابع در نقطه وسط این بازه است:\n$\\frac{(3 - a) + (3a - 2)}{2} = a + \\frac{1}{2} \\Rightarrow f'(a + \\frac{1}{2}) = 4 \\Rightarrow 4(a + \\frac{1}{2}) - 6 = 4 \\Rightarrow a = 2$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1302,
+    "solution_page": 121,
+    "solution_text": "چون تابع درجه ۲ است، آهنگ متوسط آن در بازه $[-2, 2]$ با آهنگ لحظه‌ای در $x = 0$ برابر است؛ بنابراین: $f'(0) = \\frac{1}{2} f'(\\alpha)$\nخواهیم داشت:\n$f(x) = 2x^2 - 3x + 7 \\Rightarrow f'(x) = 4x - 3$\n$f'(0) = \\frac{1}{2} f'(\\alpha) \\Rightarrow f'(\\alpha) = 2f'(0) \\Rightarrow 4\\alpha - 3 = -6 \\Rightarrow \\alpha = -\\frac{3}{4}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1303,
+    "solution_page": 121,
+    "solution_text": "آهنگ متوسط تابع را در بازۀ $[-3, 4]$ محاسبه می‌کنیم:\n$\\dfrac{f(4)-f(-3)}{4-(-3)} = \\dfrac{\\dfrac{23}{8}-(-5)}{7} = \\dfrac{\\dfrac{63}{8}}{7} = \\dfrac{9}{8}$\nآهنگ لحظه‌ای در $k$ باید برابر $\\dfrac{9}{8}$ باشد.\n$f(x) = \\dfrac{4x+7}{x+4} \\Rightarrow f'(k) = \\dfrac{9}{(k+4)^2} = \\dfrac{9}{4} \\Rightarrow (k+4)^2 = 4$\n$\\Rightarrow \\begin{cases} k = -2 \\quad \\checkmark \\\\ k = -6 \\quad \\text{غ ق ق} \\end{cases} \\Rightarrow f(-2) = -\\dfrac{1}{2}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1304,
+    "solution_page": 122,
+    "solution_text": "آهنگ متوسط و لحظه‌ای را محاسبه می‌کنیم:\nآهنگ متوسط: $\\frac{f(۶)-f(۱)}{۶-۱} = \\frac{(۴ - \\frac{۹}{۱۰}) - (۱ - \\frac{۹}{۵})}{۵} = \\frac{۳ + \\frac{۹}{۱۰}}{۵} = \\frac{۳۹}{۵۰}$\nآهنگ لحظه‌ای: $f(x) = \\sqrt{۳x-۲} - \\frac{۹}{x+۴}$\n$\\Rightarrow f'(x) = \\frac{۳}{۲\\sqrt{۳x-۲}} + \\frac{۹}{(x+۴)^۲}$\n$\\Rightarrow f'(۲) = \\frac{۳}{۴} + \\frac{۹}{۳۶} = \\frac{۳}{۴} + \\frac{۱}{۴} = ۱$\nبنابراین:\n$۱ - \\frac{۳۹}{۵۰} = \\frac{۱۱}{۵۰} = ۰/۲۲$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1305,
+    "solution_page": 122,
+    "solution_text": "آهنگ متوسط و لحظه‌ای را محاسبه می‌کنیم:\nآهنگ لحظه‌ای: $f(x) = \\sqrt{۲x+۱} + \\frac{۱}{x+۱}$\n$\\Rightarrow f'(x) = \\frac{۱}{\\sqrt{۲x+۱}} - \\frac{۱}{(x+۱)^۲}$\n$\\Rightarrow f'(\\frac{۳}{۲}) = \\frac{۱}{۲} - \\frac{۴}{۲۵} = \\frac{۱۷}{۵۰} = ۰/۳۴$\nآهنگ متوسط: $\\frac{f(۴)-f(۰)}{۴-۰} = \\frac{(۳ + \\frac{۱}{۵}) - (۱+۱)}{۴} = \\frac{\\frac{۶}{۵}}{۴} = \\frac{۶}{۲۰} = ۰/۳۰$\nخواهیم داشت:\n$\\frac{۰/۳۴}{۰/۳۰} = \\frac{۳۴}{۳۰} = \\frac{۱۷}{۱۵}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1306,
+    "solution_page": 122,
+    "solution_text": "آهنگ متوسط تابع $f$ در بازه $[۴, ۴/۴۱]$ و آهنگ لحظه‌ای $f$ در $x=۴$ را محاسبه می‌کنیم:\nآهنگ متوسط: $\\frac{f(۴/۴۱)-f(۴)}{۰/۴۱} = \\frac{\\frac{۴/۴۱-۴}{۲/۱} - ۰}{۰/۴۱} = \\frac{\\frac{۰/۴۱}{۲/۱}}{۰/۴۱} = \\frac{۱}{۲/۱}$\nآهنگ لحظه‌ای: $f(x) = \\frac{x-۴}{\\sqrt{x}}$\n$\\Rightarrow f'(۴) = \\frac{۱}{\\sqrt{۴}} = \\frac{۱}{۲}$ (عامل صفرشونده)\nبنابراین:\n$\\frac{۱}{۲} - \\frac{۱}{۲/۱} = \\frac{۱}{۲} - \\frac{۱۰}{۲۱} = \\frac{۱}{۴۲}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1307,
+    "solution_page": 122,
+    "solution_text": "بیشترین مقدار آهنگ تغییر لحظه‌ای همان بیشترین مقدار مشتق تابع است:\n$f(x) = -x^۳ - ۲x^۲ + ۷x - ۳ \\Rightarrow f'(x) = -۳x^۲ - ۴x + ۷$\nبیشترین مقدار تابع درجه ۲ در رأس سهمی رخ می‌دهد:\nطول رأس سهمی $= \\frac{-b}{۲a} = \\frac{-۴}{-۶} = -\\frac{۲}{۳} \\Rightarrow f'(-\\frac{۲}{۳}) = -۳(-\\frac{۲}{۳})^۲ - ۴(-\\frac{۲}{۳}) + ۷ = -\\frac{۴}{۳} + \\frac{۸}{۳} + ۷ = \\frac{۲۵}{۳}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1308,
+    "solution_page": 122,
+    "solution_text": "آهنگ لحظه‌ای تغییر حجم کره برابر مشتق حجم کره نسبت به شعاع است:\n$V = \\frac{۴}{۳}\\pi r^۳ \\Rightarrow V' = ۴\\pi r^۲ \\xrightarrow{r = \\frac{۲}{\\sqrt{\\pi}}} V' = ۴\\pi(\\frac{۴}{\\pi}) = ۱۶$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1309,
+    "solution_page": 122,
+    "solution_text": "ابتدا تابع مساحت مثلث را برحسب طول نقطه $A$ به دست می‌آوریم:\n$S_{OAH} = \\frac{۱}{۲} OH \\times AH = \\frac{۱}{۲} (x_A)(y_A) = \\frac{۱}{۲} x\\sqrt{۲x}$\nحال $S'(۸)$ را محاسبه می‌کنیم:\n$S'(x) = \\frac{۱}{۲} (\\sqrt{۲x} + \\frac{x}{\\sqrt{۲x}}) \\Rightarrow S'(۸) = \\frac{۱}{۲} (۴ + \\frac{۸}{۴}) = ۳$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1310,
+    "solution_page": 122,
+    "solution_text": "معادله خط مماس بر تابع $f(x)$ در نقطه‌ای به طول $a$ برابر است با:\n$y - f(a) = f'(a)(x-a)$\nابتدا $f'(x)$ را به دست می‌آوریم:\n$f(x) = x^۲ - \\frac{۱}{x} \\Rightarrow f'(x) = ۲x + \\frac{۱}{x^۲}$\nبنابراین:\nمعادله خط مماس: $y - f(\\frac{۱}{۲}) = f'(\\frac{۱}{۲})(x-\\frac{۱}{۲})$\n$\\Rightarrow y - (-\\frac{۷}{۴}) = ۵(x-\\frac{۱}{۲}) \\xrightarrow{y=۰} \\frac{۷}{۴} = ۵(x-\\frac{۱}{۲})$\n$\\Rightarrow x = \\frac{۷}{۲۰} + \\frac{۱}{۲} = \\frac{۱۷}{۲۰}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1311,
+    "solution_page": 122,
+    "solution_text": "شرط موازی‌بودن دو خط برابری شیب آن‌هاست. بنابراین:\n$f'(\\alpha) = f'(۱)$\n$f(x) = x^۳ + ۳x^۲ - ۵x + ۱ \\Rightarrow f'(x) = ۳x^۲ + ۶x - ۵$\nخواهیم داشت:\n$f'(\\alpha) = f'(۱) \\Rightarrow ۳\\alpha^۲ + ۶\\alpha - ۵ = ۴$\n$\\Rightarrow ۳\\alpha^۲ + ۶\\alpha - ۹ = ۰ \\Rightarrow \\begin{cases} \\alpha = ۱ \\\\ \\alpha = -۳ \\ \\checkmark \\end{cases}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1312,
+    "solution_page": 122,
+    "solution_text": "دو خط هنگامی بر هم عمودند که حاصل‌ضرب شیب آن‌ها برابر ۱- شود؛ بنابراین:\n$f'(\\alpha)f'(-۱) = -۱$\n$f(x) = \\frac{x^۲}{۴} - ۷ \\Rightarrow f'(x) = \\frac{x}{۲}$\nدر نتیجه:\n$f'(\\alpha)f'(-۱) = -۱ \\Rightarrow (\\frac{\\alpha}{۲})(-\\frac{۱}{۲}) = -۱ \\Rightarrow \\alpha = ۴$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1313,
+    "solution_page": 122,
+    "solution_text": "چون دو خط بر هم عمود شده‌اند، حاصل‌ضرب شیب آن‌ها برابر ۱- است:\n$f'(a)f'(۵) = -۱$\n$f'(x) = ۲x-۲ \\Rightarrow (۲a-۲)(۸) = -۱ \\Rightarrow a = \\frac{۱۵}{۱۶}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1314,
+    "solution_page": 122,
+    "solution_text": "معادله خط مماس بر $f(x)$ را در نقطه $(-۱, -۳)$ به دست می‌آوریم:\n$f(x) = x^۲ - ۴ \\Rightarrow f'(x) = ۲x \\Rightarrow f'(-۱) = -۲$\nمعادله خط مماس: $y - f(-۱) = f'(-۱)(x+۱)$\n$\\Rightarrow y+۳ = -۲(x+۱) \\Rightarrow y = -۲x-۵$\nمختصات $A$ و $B$ را پیدا می‌کنیم:\n$\\begin{cases} x = ۰ \\Rightarrow y = -۵ \\Rightarrow OA = ۵ \\\\ y = ۰ \\Rightarrow x = -\\frac{۵}{۲} \\Rightarrow OB = \\frac{۵}{۲} \\end{cases}$\nبنابراین:\n$S_{OAB} = \\frac{۱}{۲} OA \\times OB = \\frac{۱}{۲} \\times ۵ \\times \\frac{۵}{۲} = \\frac{۲۵}{۴} = ۶/۲۵$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1315,
+    "solution_page": 122,
+    "solution_text": "روش اول: خط مماس بر منحنی افقی است؛ یعنی شیب برابر صفر و در نتیجه $f'(x)=\\circ$ است:\n$f(x)=\\frac{-x^2}{(x+2)^2}$\n$\\Rightarrow f'(x)=\\frac{-2x(x+2)^2-2(x+2)(-x^2)}{(x+2)^4}=\\circ$\n$\\Rightarrow -2x(x+2)((x+2)+(-x))=\\circ$\n$\\Rightarrow -4x(x+2)=\\circ \\Rightarrow \\begin{cases} x+2=\\circ \\Rightarrow x=-2 \\text{ غ‌ق‌ق} \\\\ x=\\circ \\Rightarrow y=\\circ \\end{cases}$\nروش دوم:\n$f(x) = -(\\frac{x}{x+2})^2 \\Rightarrow f'(x) = -2(\\frac{x}{x+2})(\\frac{2}{(x+2)^2}) = 0 \\Rightarrow x = 0 \\Rightarrow y = 0$\nروش سوم: $x = 0$ عامل صفرشوندۀ $f(x)$ با توانی بزرگ‌تر از ۱ است؛ بنابراین $f'(x)$ نیز در $x=0$ برابر صفر است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [
+      "Solution for 1315 seems to continue to the next page or has a second method, only 'روش اول' (Method 1) is shown, waiting for next page."
+    ]
+  },
+  {
+    "question_number": 1316,
+    "solution_page": 123,
+    "solution_text": "ابتدا خط مماس بر $f(x)$ را در مبدأ مختصات می‌یابیم:\n$f(x) = x^۲ + ۲x \\Rightarrow f'(x) = ۲x + ۲$\nمعادلهٔ خط مماس در مبدأ: $y - \\circ = f'(\\circ)(x - \\circ) \\Rightarrow y = ۲x$\nبر خط $d$ عمود است؛ بنابراین شیب خط $OA$ برابر $-\\frac{۱}{۲}$ است و از مبدأ مختصات می‌گذرد:\nمعادلهٔ $OA$: $y = -\\frac{x}{۲}$\n$f(x) : y = x^۲ + ۲x$\n$\\Rightarrow x^۲ + ۲x = -\\frac{x}{۲} \\Rightarrow x^۲ + \\frac{۵}{۲}x = \\circ \\Rightarrow x(x + \\frac{۵}{۲}) = \\circ \\Rightarrow \\begin{cases} x = \\circ \\\\ x = -\\frac{۵}{۲} \\checkmark \\end{cases}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1317,
+    "solution_page": 123,
+    "solution_text": "خط مماس بر $f(x)$ از دو نقطهٔ $(۱, ۱)$ و $(-۱, ۲)$ می‌گذرد:\nمعادلهٔ خط مماس: $y - ۱ = -۲(x - ۱) \\Rightarrow y = -۲x + ۳$\nاین خط در $x = -۱$ بر $f(x)$ مماس است؛ بنابراین:\n$f(-۱) = ۵ , f'(-۱) = -۲$\nحال حد عبارت را به دست می‌آوریم:\n$\\lim_{x \\to -۱} \\frac{f^۲(x) - ۳f(x) - ۱۰}{x + ۱} = \\lim_{x \\to -۱} \\frac{(f(x) - ۵)(f(x) + ۲)}{x + ۱} \\\\ = ۷ \\lim_{x \\to -۱} \\frac{f(x) - f(-۱)}{x + ۱} = ۷f'(-۱) = -۱۴$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1318,
+    "solution_page": 123,
+    "solution_text": "نقطهٔ ابتدایی تابع $A(-۱, ۱)$ و نقطهٔ انتهایی آن $B(۳, ۳)$ است:\n$m_{AB} = \\frac{۳ - ۱}{۳ + ۱} = \\frac{۱}{۲}$\nحال بررسی می‌کنیم در چه نقطه‌ای از تابع شیب خط مماس یعنی مشتق تابع برابر $\\frac{۱}{۲}$ است:\n$f(x) = \\sqrt{۲x + ۳} \\Rightarrow f'(x) = \\frac{۱}{\\sqrt{۲x + ۳}} = \\frac{۱}{۲} \\Rightarrow \\sqrt{۲x + ۳} = ۲ \\Rightarrow ۲x + ۳ = ۴ \\Rightarrow x = \\frac{۱}{۲} \\Rightarrow f(\\frac{۱}{۲}) = ۲$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1319,
+    "solution_page": 123,
+    "solution_text": "نقطه ابتدایی تابع $A(-1, -5)$ و نقطه انتهایی آن $B(3, 3)$ است:\n$m_{AB} = \\frac{3 - (-5)}{3 - (-1)} = 2$\nشیب خط مماس یعنی مشتق تابع برابر $2$ است:\n$f(x) = \\frac{8x + 3}{2x + 3} \\Rightarrow f'(x) = \\frac{18}{(2x + 3)^2} = 2 \\Rightarrow (2x + 3)^2 = 9 \\Rightarrow \\begin{cases} x = 0 \\\\ x = -3 \\text{ غ ق ق} \\end{cases}$\nمعادله خط مماس: $y - f(0) = 2(x - 0) \\Rightarrow y - 1 = 2x \\Rightarrow y = 2x + 1 \\xrightarrow{x = 0} y = 1$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1320,
+    "solution_page": 123,
+    "solution_text": "$f(x) = ax^۲ - ۲ax - ۳a \\Rightarrow f'(x) = ۲ax - ۲a$\nمعادلهٔ خط مماس بر $f(x)$ را در نقطهٔ $(\\circ, -۳a)$ به دست می‌آوریم:\n$y - (-۳a) = f'(\\circ)(x - \\circ) \\Rightarrow y + ۳a = -۲ax \\Rightarrow y = -۲ax - ۳a \\xrightarrow{y = \\circ} -۲ax - ۳a = \\circ \\Rightarrow x = -\\frac{۳}{۲}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1321,
+    "solution_page": 123,
+    "solution_text": "ابتدا خط مماس بر $f(x)$ را در $x = ۱$ به دست می‌آوریم:\n$f(x) = x^۳ - ۴x \\Rightarrow f'(x) = ۳x^۲ - ۴$\nمعادلهٔ خط مماس: $y - f(۱) = f'(۱)(x - ۱) \\Rightarrow y + ۳ = -(x - ۱) \\Rightarrow y = -x - ۲$\nحال خط مماس را با $f(x)$ قطع می‌دهیم:\n$x^۳ - ۴x = -x - ۲ \\Rightarrow x^۳ - ۳x + ۲ = \\circ \\Rightarrow (x - ۱)(x^۲ + x - ۲) = \\circ \\Rightarrow (x - ۱)^۲(x + ۲) = \\circ \\Rightarrow \\alpha = -۲ \\Rightarrow f(-۲) = \\circ$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1322,
+    "solution_page": 123,
+    "solution_text": "خط $y = ۲$ در نقطهٔ $x = ۱$ بر نمودار تابع $f(x)$ مماس است. بنابراین $f'(۱) = \\circ$ و $f(۱) = ۲$.\n$f(x) = (a - x^۲)(۳ + x) + b \\Rightarrow f'(x) = -۲x(۳ + x) + (a - x^۲) = -۳x^۲ - ۶x + a$\n$\\begin{cases} f'(۱) = \\circ \\Rightarrow -۹ + a = \\circ \\Rightarrow a = ۹ \\\\ f(۱) = ۲ \\Rightarrow (a - ۱)(۴) + b = ۲ \\Rightarrow ۳۲ + b = ۲ \\Rightarrow b = -۳۰ \\end{cases}$\nخواهیم داشت:\n$y = b + f'(x) = -۳x^۲ - ۶x - ۲۱$\nبیشترین مقدار سهمی در رأس سهمی رخ می‌دهد:\n$x = \\frac{۶}{-۶} = -۱ \\Rightarrow y = -۳ + ۶ - ۲۱ = -۱۸$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1323,
+    "solution_page": 123,
+    "solution_text": "شرط لازم و کافی برای آن‌که دو تابع $f(x)$ و $g(x)$ در $x = a$ بر هم مماس باشند، آن است که:\n$\\begin{cases} f(a) = g(a) \\\\ f'(a) = g'(a) \\end{cases}$\nخط $y = 3x - 1$ در $x = 2$ بر $f(x)$ مماس است. بنابراین $f'(2) = 3$ و $f(2) = 5$.\n$f(x) = ax^2 + b \\Rightarrow f'(x) = 2ax$\n$\\begin{cases} f'(2) = 3 \\Rightarrow 4a = 3 \\Rightarrow a = \\frac{3}{4} \\\\ f(2) = 5 \\Rightarrow 4a + b = 5 \\Rightarrow 3 + b = 5 \\Rightarrow b = 2 \\end{cases}$\n$\\Rightarrow ab = \\frac{3}{2}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1324,
+    "solution_page": 123,
+    "solution_text": "خط $y = 4x + k$ بر $f(x)$ مماس است؛ بنابراین:\n$f'(x) = 4$\n$f(x) = -x^2 + 3x + 2 \\Rightarrow f'(x) = -2x + 3 = 4 \\Rightarrow x = -\\frac{1}{2}$\nدر نقطۀ $x = -\\frac{1}{2}$ باید عرض خط مماس و تابع $f(x)$ برابر باشد:\n$-(-\\frac{1}{2})^2 + 3(-\\frac{1}{2}) + 2 = 4(-\\frac{1}{2}) + k \\Rightarrow \\frac{1}{4} = -2 + k$\n$\\Rightarrow k = \\frac{9}{4} = 2/25$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1325,
+    "solution_page": 123,
+    "solution_text": "مشتق تابع با شیب خط مماس برابر است:\n$f(x) = \\frac{x}{۲} + \\frac{۲}{x} \\Rightarrow f'(x) = \\frac{۱}{۲} - \\frac{۲}{x^۲} = -\\frac{۳}{۲} \\Rightarrow \\frac{۲}{x^۲} = ۲ \\Rightarrow x^۲ = ۱ \\Rightarrow \\begin{cases} x = ۱ \\text{ غ ق ق} \\\\ x = -۱ \\end{cases}$\nعرض خط مماس در $x = -۱$ با $f(-۱)$ برابر است:\n$a + \\frac{۳}{۲} = f(-۱) = -\\frac{۵}{۲} \\Rightarrow a = -۴$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1326,
+    "solution_page": 124,
+    "solution_text": "تابع $f'(x)$ را به دست می‌آوریم:\n$f(x) = 2x^2 + ax + 4 \\Rightarrow f'(x) = 4x + a$\nشرط مماس‌بودن $f$ و $f'$ بر هم آن است که اولاً شیب آن‌ها برابر بوده و ثانیاً مقادیر آن‌ها برابر باشد:\nشیب $f' =$ شیب $f \\Rightarrow f'(x) = 4 \\Rightarrow 4x + a = 4 \\Rightarrow a = 4 - 4x$\nمقدار $f' =$ مقدار $f \\Rightarrow 2x^2 + ax + 4 = 4x + a$\n$\\Rightarrow 2x^2 + (4 - 4x)x + 4 = 4x + 4 - 4x$\n$\\Rightarrow 2x^2 - 4x = 0 \\Rightarrow \\begin{cases} x = 0 & \\text{غ ق ق} \\\\ x = 2 \\Rightarrow a = -4 \\text{ \\checkmark} \\end{cases}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1327,
+    "solution_page": 124,
+    "solution_text": "شیب خط مماس بر $f(x)$ با $f'(1)$ برابر است:\n$f(x) = \\frac{x^3}{3} + bx \\Rightarrow f'(x) = x^2 + b$\n$\\Rightarrow f'(1) = 1 + b = -3 \\Rightarrow b = -4$\nعرض خط مماس در $x = 1$ با $f(1)$ برابر است:\n$-3 + a = f(1) = \\frac{1}{3} - 4 \\Rightarrow a = -\\frac{2}{3}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1328,
+    "solution_page": 124,
+    "solution_text": "معادلهٔ خط مماس بر تابع $f(x)$ را در $x=k$ می‌نویسیم:\n$f(x) = \\frac{\\sqrt{x-16}}{2} \\Rightarrow f'(x) = \\frac{1}{4\\sqrt{x-16}}$\nمعادلهٔ خط مماس: $y - f(k) = f'(k)(x - k)$\n$\\Rightarrow y - \\frac{\\sqrt{k-16}}{2} = \\frac{1}{4\\sqrt{k-16}}(x - k)$\nاین خط از مبدأ مختصات گذشته؛ یعنی $(0,0)$ در آن صدق می‌کند:\n$-\\frac{\\sqrt{k-16}}{2} = \\frac{1}{4\\sqrt{k-16}}(-k) \\Rightarrow -2(k - 16) = -k$\n$\\Rightarrow k = 32 \\Rightarrow f(k) = 2$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1329,
+    "solution_page": 124,
+    "solution_text": "با توجه به نمودار، طول نقطهٔ $B$ برابر $-\\frac{1}{2}$ است و چون $B$ بر روی $f(x)$ واقع است، عرض آن برابر $f(-\\frac{1}{2}) = 4$ است.\nفرض می‌کنیم طول نقطهٔ $A$ برابر $a$ است. معادلهٔ خط مماس بر $f(x)$ در $x = a$ را می‌نویسیم:\n$y - f(a) = f'(a)(x - a) \\Rightarrow y - \\frac{1}{a^2} = \\frac{-2}{a^3}(x - a)$\nاین خط از نقطهٔ $B(-\\frac{1}{2}, 4)$ می‌گذرد:\n$4 - \\frac{1}{a^2} = -\\frac{2}{a^3}(-\\frac{1}{2} - a) \\xrightarrow{\\times a^2} 4a^2 - 1 = \\frac{2a + 1}{a}$\n$\\Rightarrow (2a - 1)(2a + 1) = \\frac{2a + 1}{a} \\xrightarrow{a \\neq -\\frac{1}{2}} 2a - 1 = \\frac{1}{a}$\n$\\Rightarrow 2a^2 - a - 1 = 0 \\Rightarrow \\begin{cases} a = 1 \\quad \\checkmark \\\\ a = -\\frac{1}{2} \\quad \\text{غ ق ق} \\end{cases}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1330,
+    "solution_page": 124,
+    "solution_text": "معادلهٔ خط گذرا بر نقاط به طول‌های $2$ و $-1$ بر منحنی $f(x) = \\frac{4}{x^2}$ را می‌نویسیم:\n$f(-1) = 4 \\Rightarrow A(-1, 4) \\, , \\, f(2) = 1 \\Rightarrow B(2, 1)$\nمعادلهٔ $AB$: $y - 1 = \\frac{4 - 1}{-1 - 2}(x - 2) \\Rightarrow y = -x + 3$\nاین خط بر $f(x)$ مماس است؛ بنابراین شیب این خط با $f'(x)$ برابر است:\n$f'(x) = \\frac{-8}{x^3} = -1 \\Rightarrow x^3 = 8 \\Rightarrow x = 2$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1331,
+    "solution_page": 124,
+    "solution_text": "کم‌ترین شیب ممکن برای خط مماس هنگامی است که $f'(x)$ کم‌ترین مقدار ممکن را داشته باشد:\n$f(x) = x^3 - 3x^2 + 2x - 1 \\Rightarrow f'(x) = 3x^2 - 6x + 2$\nکم‌ترین مقدار سهمی در رأس آن رخ می‌دهد: $x_{\\text{رأس}} = -\\frac{b}{2a} = 1$\nمعادلهٔ خط مماس در $x = 1$: $y - f(1) = f'(1)(x - 1)$\n$\\Rightarrow y - (-1) = (-1)(x - 1) \\Rightarrow y = -x \\Rightarrow 0 = \\text{عرض از مبدأ}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1332,
+    "solution_page": 124,
+    "solution_text": "طول نقطهٔ $A$ را $a$ در نظر می‌گیریم. معادلهٔ خط مماس بر منحنی در نقطهٔ $A$ را می‌نویسیم:\n$y_A = -\\frac{1}{a^2} \\quad y'_A = \\frac{2}{a^3}$\nمعادلهٔ خط مماس: $y + \\frac{1}{a^2} = \\frac{2}{a^3}(x - a) \\xrightarrow{x = 0} y_B = -\\frac{3}{a^2}$\nبنابراین:\n$\\frac{y_B}{y_A} = \\frac{-\\frac{3}{a^2}}{-\\frac{1}{a^2}} = 3$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1333,
+    "solution_page": 124,
+    "solution_text": "معادلهٔ خط مماس بر نمودار منحنی در نقطهٔ $A$ با طول $a$ را می‌نویسیم: $A(a, -a^3)$\n$y - (-a^3) = -3a^2(x - a) \\xrightarrow{x = 0} y_C = 2a^3$\n$OB$ برابر قدرمطلق عرض نقطهٔ $A$ و $OC$ برابر عرض نقطهٔ $C$ است:\n$\\frac{OC}{OB} = \\frac{2a^3}{a^3} = 2$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1334,
+    "solution_page": 124,
+    "solution_text": "خط داده‌شده به صورت $y = \\frac{m - 1}{m + 1}x$ و شیب آن برابر $\\frac{m - 1}{m + 1}$ است. شرط موازی‌بودن یکی از خطوط مماس $y = \\sqrt{1 + x^2}$ با خط فوق آن است که مشتق تابع با شیب خط برابر باشد:\n$y' = \\frac{x}{\\sqrt{1 + x^2}} = \\frac{m - 1}{m + 1}$\nمی‌دانیم $-1 < \\frac{x}{\\sqrt{1 + x^2}} < 1$ است؛ بنابراین: $-1 < \\frac{m - 1}{m + 1} < 1$\n$\\Rightarrow \\begin{cases} \\frac{m - 1}{m + 1} > -1 \\Rightarrow \\frac{2m}{m + 1} > 0 \\Rightarrow \\begin{cases} m < -1 \\\\ m > 0 \\end{cases} \\\\ \\frac{m - 1}{m + 1} < 1 \\Rightarrow \\frac{-2}{m + 1} < 0 \\Rightarrow m > -1 \\end{cases} \\xrightarrow{\\cap} m > 0$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1335,
+    "solution_page": 124,
+    "solution_text": "روش اول: ضابطهٔ تابع $f^{-1}$ را به دست می‌آوریم:\n$y = x + 2\\sqrt{x} = (\\sqrt{x} + 1)^2 - 1 \\Rightarrow (\\sqrt{x} + 1)^2 = y + 1$\n$\\Rightarrow \\sqrt{x} + 1 = \\sqrt{y + 1}$\n$\\Rightarrow \\sqrt{x} = \\sqrt{y + 1} - 1 \\Rightarrow x = (\\sqrt{y + 1} - 1)^2$\n$\\Rightarrow f^{-1}(x) = (\\sqrt{x + 1} - 1)^2 \\Rightarrow f^{-1}(8) = 4$\nحال $(f^{-1})'(x)$ را محاسبه می‌کنیم:\n$(f^{-1})'(x) = 2(\\sqrt{x + 1} - 1)(\\frac{1}{2\\sqrt{x + 1}})$\n$\\Rightarrow (f^{-1})'(8) = 2(2)(\\frac{1}{6}) = \\frac{2}{3}$\nاکنون معادله خط مماس را به دست می‌آوریم:\n$y - f^{-1}(8) = (f^{-1})'(8)(x - 8) \\Rightarrow y - 4 = \\frac{2}{3}(x - 8) \\xrightarrow{x=\\circ} y = -\\frac{4}{3}$\nروش دوم:\nنکته اگر $A(a, b)$ بر روی $f$ و $A'(b, a)$ نقطه متناظر $A$ بر $f^{-1}$ باشد، خواهیم داشت:\n$(f^{-1})'(b) = \\frac{1}{f'(a)}$\n(درک این نکته با رسم شکل بسیار ساده است.)\nبنابراین:\n$(f^{-1})'(8) = \\frac{1}{f'(4)} = \\frac{1}{1 + \\frac{1}{\\sqrt{4}}} = \\frac{1}{\\frac{3}{2}} = \\frac{2}{3}$\nادامه راه‌حل مانند روش اول است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1336,
+    "solution_page": 125,
+    "solution_text": "روش اول: جدول تعیین علامت مشتق اول را رسم می‌کنیم:\n$f(x) = 3x^2 + 6x - 7 \\Rightarrow f'(x) = 6x + 6 \\Rightarrow f'(x) = \\circ$\n$\\Rightarrow x = -1$\nبا توجه به جدول، تابع $f$ در فاصله $[-1, +\\infty)$ صعودی است.\n\\begin{array}{c|ccc}\nx & & -1 & \\\\\n\\hline\nf'(x) & - & \\circ & + \\\\\n\\hline\nf(x) & \\searrow & & \\nearrow\n\\end{array}\nبنابراین 4 درست است.\nروش دوم: تابع $f$ یک سهمی رو به بالاست. در نتیجه از رأس سهمی تا $+\\infty$ تابع اکیداً صعودی است:\n$[-1, +\\infty)$",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0125.jpg",
+        "box": [
+          458,
+          297,
+          831,
+          461
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1336",
+        "alt": "حل سوال ۱۳۳۶"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1337,
+    "solution_page": 125,
+    "solution_text": "جدول تعیین علامت مشتق را رسم می‌کنیم:\n$y = 2x(4-x)^2 \\Rightarrow y' = 2(4-x)^2 - 4x(4-x) = \\circ$\n$\\Rightarrow 2(4-x)(4-3x) = \\circ$\nتابع در بازه $(\\frac{4}{3}, 4)$ نزولی است.\n\\begin{array}{c|ccccc}\nx & & \\frac{4}{3} & & 4 & \\\\\n\\hline\ny' & + & \\circ & - & \\circ & + \\\\\n\\hline\ny & \\nearrow & & \\searrow & & \\nearrow\n\\end{array}\nبنابراین 3 درست است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0125.jpg",
+        "box": [
+          461,
+          464,
+          831,
+          595
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1337",
+        "alt": "حل سوال ۱۳۳۷"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1338,
+    "solution_page": 125,
+    "solution_text": "جدول تعیین علامت مشتق را رسم می‌کنیم:\n$f'(x) = (2x-1)(3-2x)$\n\\begin{array}{c|ccccc}\nx & & \\frac{1}{2} & & \\frac{3}{2} & \\\\\n\\hline\nf'(x) & - & \\circ & + & \\circ & - \\\\\n\\hline\nf(x) & \\searrow & & \\nearrow & & \\searrow\n\\end{array}\nتابع در بازه $(\\frac{1}{2}, \\frac{3}{2})$ اکیداً صعودی است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0125.jpg",
+        "box": [
+          463,
+          593,
+          831,
+          715
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1338",
+        "alt": "حل سوال ۱۳۳۸"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1339,
+    "solution_page": 125,
+    "solution_text": "جهت یکنوایی $f(x)$ در $x = -1$ تغییر می‌کند؛ بنابراین $x = -1$ ریشه ساده $f'(x) = \\circ$ است:\n$f(x) = x^3 - 3ax^2 + 2x - 1 \\Rightarrow f'(x) = 3x^2 - 6ax + 2 = \\circ$\n$\\xrightarrow{x = -1} 6a + 5 = \\circ \\Rightarrow a = -\\frac{5}{6}$",
+    "stated_correct_option": 0,
+    "media_regions": [
+      {
+        "page_file": "page_0125.jpg",
+        "box": [
+          461,
+          722,
+          831,
+          804
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1339",
+        "alt": "حل سوال ۱۳۳۹"
+      }
+    ],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 1340,
+    "solution_page": 125,
+    "solution_text": "تابع $y$ در مجاورت نقطه‌ای نزولی است که مشتق در آن نقطه منفی باشد.\n$y = x^2(2 - 3x) \\Rightarrow y' = 2x(2 - 3x) - 3x^2 = x(4 - 9x)$\nبا توجه به گزینه‌ها $x = \\frac{1}{2}$، درست است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1341,
+    "solution_page": 125,
+    "solution_text": "جدول تعیین علامت $f'(x)$ را رسم می‌کنیم:\n$f(x) = \\frac{1}{3}x^3 - 3x^2 + 5x - 7 \\Rightarrow f'(x) = x^2 - 6x + 5$\n\\begin{array}{c|ccccc}\nx & & 1 & & 5 & \\\\\n\\hline\nf'(x) & + & \\circ & - & \\circ & + \\\\\n\\hline\nf(x) & \\nearrow & & \\searrow & & \\nearrow\n\\end{array}\nتابع در بازه $(1, 5)$ نزولی است؛ بنابراین حداکثر $b-a$ برابر $5-1=4$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0125.jpg",
+        "box": [
+          45,
+          73,
+          417,
+          185
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1341",
+        "alt": "حل سوال ۱۳۴۱"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1342,
+    "solution_page": 125,
+    "solution_text": "کافی است $f'(x) > \\circ$ باشد:\n$f(x) = \\frac{x + 1}{x^2 - x + 2} \\Rightarrow f'(x) = \\frac{x^2 - x + 2 - (2x - 1)(x + 1)}{(x^2 - x + 2)^2}$\n$= \\frac{-x^2 - 2x + 3}{(x^2 - x + 2)^2} > \\circ \\Rightarrow -x^2 - 2x + 3 > \\circ$\n$\\Rightarrow x^2 + 2x - 3 < \\circ \\Rightarrow -3 < x < 1$\nبیشترین مقدار $b - a = 1 - (-3) = 4$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1343,
+    "solution_page": 125,
+    "solution_text": "$f'(x)$ را تعیین علامت می‌کنیم:\n$f(x) = (x-1)^3(x+k) \\Rightarrow f'(x) = 3(x-1)^2(x+k) + (x-1)^3$\n$= (x-1)^2(4x+3k-1) = \\circ \\Rightarrow \\begin{cases} x = 1 \\\\ x = \\frac{-3k+1}{4} \\end{cases}$\n\\begin{array}{c|ccc}\nx & & \\frac{-3k+1}{4} & \\\\\n\\hline\nf'(x) & - & \\circ & + \\\\\n\\hline\nf(x) & \\searrow & & \\nearrow\n\\end{array}\n$x=1$ ریشه مضاعف $f'(x)$ بوده و در این نقطه $f'$ تغییر علامت ندارد.\nتابع $f$ در $[4, +\\infty)$ اکیداً صعودی است؛ بنابراین:\n$4 \\ge \\frac{-3k+1}{4} \\Rightarrow k \\ge -5$",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0125.jpg",
+        "box": [
+          45,
+          321,
+          417,
+          510
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1343",
+        "alt": "حل سوال ۱۳۴۳"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1344,
+    "solution_page": 125,
+    "solution_text": "تابع $f$ فقط در بازه $(-2, 1)$ صعودی اکید است؛ بنابراین $x = 1$ و $x = -2$ ریشه‌های ساده $f'(x)$ هستند.\n$f(x) = -x^3 + ax^2 + bx + 6 \\Rightarrow f'(x) = -3x^2 + 2ax + b$\n$\\begin{cases} f'(1) = \\circ \\Rightarrow 2a + b = 3 \\\\ f'(-2) = \\circ \\Rightarrow -4a + b = 12 \\end{cases} \\Rightarrow 6a = -9 \\Rightarrow a = -\\frac{3}{2} \\Rightarrow b = 6 \\Rightarrow ab = -9$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1345,
+    "solution_page": 125,
+    "solution_text": "مشتق تابع باید همواره بزرگ‌تر یا مساوی صفر باشد تا تابع $f(x)$ در $\\mathbb{R}$ اکیداً صعودی باشد. (اگر $f'(x)$ در چند نقطه صفر شود، تأثیری بر اکیداً صعودی بودن $f$ ندارد.)\n$f(x) = x^3 + ax^2 + 4x - 6 \\Rightarrow f'(x) = 3x^2 + 2ax + 4$\n$f'$ باید همواره بزرگ‌تر یا مساوی صفر باشد؛ بنابراین $\\Delta \\le \\circ$ است:\n$\\Delta \\le \\circ \\Rightarrow 4a^2 - 48 \\le \\circ \\Rightarrow a^2 \\le 12 \\Rightarrow -2\\sqrt{3} \\le a \\le 2\\sqrt{3}$\nحداکثر مقدار $a$ برابر $2\\sqrt{3}$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0125.jpg",
+        "box": [
+          45,
+          626,
+          417,
+          747
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1345",
+        "alt": "حل سوال ۱۳۴۵"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1346,
+    "solution_page": 125,
+    "solution_text": "برای این‌که تابع $f$ در $\\mathbb{R}$ اکیداً نزولی باشد، $f'$ باید همواره نامثبت باشد. بنابراین $f'(x) = \\circ$ نباید ریشه ساده داشته باشد. در نتیجه:\n$f'(x) = (x + a)(ax + 4) = \\circ \\Rightarrow \\begin{cases} x = -a \\\\ x = -\\frac{4}{a} \\end{cases}$\n$\\Rightarrow -a = -\\frac{4}{a} \\Rightarrow a^2 = 4 \\Rightarrow \\begin{cases} a = 2 \\text{ غ.ق.ق } \\\\ a = -2 \\ \\checkmark \\end{cases}$\nبه ازای $a = -2$ تابع $f'$ همواره نامنفی و $f$ اکیداً صعودی خواهد بود.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [
+      "در خط آخر راه حل نوشته شده 'به ازای a=2' اما ظاهراً اشتباه تایپی کتاب است و باید 'a=-2' باشد تا تابع اکیداً صعودی شود. متن کتاب 'a=2' نوشته اما در اینجا در متن تصحیح شده و 'a=-2' را در نظر گرفتیم."
+    ]
+  },
+  {
+    "question_number": 1347,
+    "solution_page": 126,
+    "solution_text": "در بازه مورد نظر، تابع $f$ باید ابتدا نزولی و سپس صعودی باشد. بنابراین گزینه ۴ درست است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1348,
+    "solution_page": 126,
+    "solution_text": "بزرگ‌ترین بازه‌ای که تابع $f^\\prime$ در آن نامنفی است، بازه $(۳, ۸)$ می‌باشد که در این بازه تابع $f$ نزولی است. بنابراین طول بزرگ‌ترین بازه برابر $۸-۳=۵$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1349,
+    "solution_page": 126,
+    "solution_text": "تابع $f$ در بازه‌ای یکنواست که $f^\\prime$ در آن بازه تغییر علامت نداشته باشد. در گزینه‌های داده‌شده تابع $f^\\prime$ در بازه $(۱, ۷)$ همواره نامنفی و $f$ در این بازه صعودی است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1350,
+    "solution_page": 126,
+    "solution_text": "در بازه‌ای که $f^\\prime$ منفی باشد، $f$ اکیداً نزولی است. در گزینه‌های داده‌شده ۳ درست است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1351,
+    "solution_page": 126,
+    "solution_text": "شرط اول آن است که ریشه مخرج کسر در بازه $(-\\infty, -\\frac{۱}{۲})$ نباشد:\n$-\\frac{m}{۲} \\ge -\\frac{۱}{۲} \\Rightarrow m \\le ۱ \\qquad (۱)$\nشرط دوم آن است که $f^\\prime(x) < ۰$ باشد:\n$f(x) = \\frac{mx+۲}{۲x+m} \\Rightarrow f^\\prime(x) = \\frac{m^۲ - ۴}{\\underbrace{(۲x+m)^۲}_{+}} < ۰$\n$\\Rightarrow m^۲ - ۴ < ۰ \\Rightarrow -۲ < m < ۲ \\qquad (۲)$\n$(۱) \\cap (۲) \\Rightarrow -۲ < m \\le ۱$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1352,
+    "solution_page": 126,
+    "solution_text": "مشتق تابع را به دست می‌آوریم:\n$f'(x) = 1 + \\frac{4}{(x+1)^2} > 0$\nمشتق تابع همواره مثبت است اما نمی‌توان گفت تابع در $\\mathbb{R}$ صعودی اکید است زیرا در $x = -1$ دارای حد نامتناهی است؛ پس تابع در بازهٔ $(-\\infty, -1)$ و $(-1, +\\infty)$ صعودی اکید است البته در بازهٔ $(-\\infty, -1)$ هم صعودی اکید است. دقت کنید در اجتماع آن‌ها صعودی اکید نیست بلکه در تک‌تک بازه‌ها صعودی اکید است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1353,
+    "solution_page": 126,
+    "solution_text": "نکته: برای این‌که تابع کسری در یک بازه باز اکیداً یکنوا باشد، ریشه مخرج نباید در آن بازه قرار بگیرد.\n$x = -۲$ نباید در بازه $(-\\infty, a)$ قرار بگیرد، بنابراین $a \\le -۲$ بوده و $x$ منفی است.\nدر نتیجه:\n$y = \\frac{x|x|}{x+۲} = \\frac{-x^۲}{x+۲}$\n$\\Rightarrow y^\\prime = \\frac{-۲x(x+۲) + x^۲}{(x+۲)^۲} = \\frac{-x^۲ - ۴x}{(x+۲)^۲} < ۰$\n$\\Rightarrow x^۲ + ۴x > ۰ \\Rightarrow \\begin{cases} x < -۴ \\\\ x > ۰ \\end{cases} \\xrightarrow{x < ۰} x < -۴$\n$\\Rightarrow \\text{حداکثر } a = -۴$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1354,
+    "solution_page": 126,
+    "solution_text": "دامنهٔ تابع $f$ به صورت $(0, 1) \\cup (1, +\\infty)$ می‌باشد. $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\sqrt{x} - \\frac{1}{\\sqrt[3]{x-1}}$\n$\\Rightarrow f'(x) = \\frac{1}{2\\sqrt{x}} + \\frac{\\frac{1}{3\\sqrt[3]{(x-1)^2}}}{\\sqrt[3]{(x-1)^2}} = \\frac{1}{2\\sqrt{x}} + \\frac{1}{3\\sqrt[3]{(x-1)^4}} > 0$\nمشتق تابع همواره مثبت و تابع در هر دو بازهٔ $(0, 1)$ و $(1, +\\infty)$ اکیداً صعودی است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1355,
+    "solution_page": 126,
+    "solution_text": "برای این‌که $f$ اکیداً نزولی باشد، باید $f^\\prime$ کوچک‌تر یا مساوی صفر و برای این‌که $f^\\prime$ اکیداً صعودی باشد، باید $f^{\\prime\\prime}$ بزرگ‌تر یا مساوی صفر باشد:\n$f(x) = x^۳ + ۳x^۲ - ۶x + ۴ \\Rightarrow f^\\prime(x) = ۳x^۲ + ۶x - ۶$\n$\\Rightarrow f^{\\prime\\prime}(x) = ۶x + ۶$\n$f^\\prime(x) \\le ۰ \\Rightarrow ۳x^۲ + ۶x - ۶ \\le ۰ \\Rightarrow x^۲ + ۲x - ۲ \\le ۰ \\Rightarrow -۱-\\sqrt{۳} \\le x \\le -۱+\\sqrt{۳} \\qquad (۱)$\n$f^{\\prime\\prime}(x) \\ge ۰ \\Rightarrow ۶x + ۶ \\ge ۰ \\Rightarrow x \\ge -۱ \\qquad (۲)$\n$\\xrightarrow{(۱) \\cap (۲)} [-۱, -۱+\\sqrt{۳}] \\Rightarrow \\text{طول بازه } = \\sqrt{۳}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1356,
+    "solution_page": 126,
+    "solution_text": "باید $y^\\prime \\le ۰$ باشد:\n$y = \\sqrt{x^۲ + ۴x + ۵} \\Rightarrow y^\\prime = \\frac{۲x+۴}{۲\\sqrt{x^۲+۴x+۵}}$\n$= \\frac{x+۲}{\\underbrace{\\sqrt{x^۲+۴x+۵}}_{+}} \\le ۰ \\Rightarrow x \\le -۲$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1357,
+    "solution_page": 126,
+    "solution_text": "کافی است $f'(x) < 0$ باشد:\n$f(x) = 2x(x - \\sqrt{x}) = 2x^2 - 2x^{\\frac{3}{2}}$\n$\\Rightarrow f'(x) = 4x - 3x^{\\frac{1}{2}} < 0 \\Rightarrow \\sqrt{x} (4\\sqrt{x} - 3) < 0 \\xrightarrow{x > 0} 4\\sqrt{x} - 3 < 0 \\Rightarrow \\sqrt{x} < \\frac{3}{4} \\Rightarrow x < \\frac{9}{16}$\n$\\xrightarrow{x > 0} x \\in (0, \\frac{9}{16})$\n$\\Rightarrow \\text{حداکثر } b - a = \\frac{9}{16} - 0 = \\frac{9}{16}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1358,
+    "solution_page": 126,
+    "solution_text": "ابتدا مشتق تابع را به دست می‌آوریم:\n$f^\\prime(x) = \\frac{۱}{۳\\sqrt[۳]{x^۲}}(x+\\alpha) + \\sqrt[۳]{x} = \\frac{۴x+\\alpha}{۳\\sqrt[۳]{x^۲}}$\nچون فقط در بازه $(-۱, +\\infty)$ صعودی اکید است، پس $x = -۱$ ریشه $f^\\prime = ۰$ است؛ یعنی $\\alpha = ۴$.\n$\\begin{array}{c|c}\nx & -۱ \\\\\n\\hline\nf^\\prime & - \\quad + \\\\\n\\hline\nf & \\searrow \\quad \\nearrow\n\\end{array}$\n$f^\\prime(x) = \\frac{۴(x+۱)}{۳\\sqrt[۳]{x^۲}}$\nپس $\\alpha = ۴$ جواب است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1359,
+    "solution_page": 126,
+    "solution_text": "مشتق $f$ را به دست می‌آوریم:\n$f^\\prime(x) = ۱ + \\frac{۲x-۲}{۲\\sqrt{x^۲-۲x+۳}} = ۱ + \\frac{x-۱}{\\sqrt{x^۲-۲x+۳}} = ۰$\n$\\Rightarrow \\sqrt{x^۲-۲x+۳} = ۱-x$\n$\\xrightarrow{x \\le ۱} x^۲-۲x+۳ = (۱-x)^۲ \\Rightarrow ۳ = ۱ \\text{ غ ق ق}$\nنتیجه می‌شود معادله $f^\\prime(x) = ۰$ ریشه نداشته و $f^\\prime(x)$ همواره مثبت است. بنابراین $f(x)$ اکیداً صعودی است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1360,
+    "solution_page": 126,
+    "solution_text": "شرط اول آن است که طول رأس سهمی $y = -x^2 + mx$ بزرگ‌تر یا مساوی $1$ باشد:\n$\\frac{-m}{-2} \\ge 1 \\Rightarrow m \\ge 2 \\quad (1)$\nشرط دوم آن است که حد چپ تابع $f(x)$ در $x = 1$ از مقدار تابع و حد راست آن در نقطهٔ $x = 1$ بیشتر نباشد:\n$\\lim_{x \\to 1^-} f(x) \\le f(1) \\Rightarrow -1 + m \\le 2 \\Rightarrow m \\le 3 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow 2 \\le m \\le 3$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1361,
+    "solution_page": 127,
+    "solution_text": "تابع $f'(x) = 3x^2 - 4x + 5$ همواره مثبت است؛ بنابراین $f(x)$ اکیداً صعودی است. در نتیجه:\n$f(2 - x) < f(3x - 2) \\Rightarrow 2 - x < 3x - 2$\n$\\Rightarrow 4x > 4 \\Rightarrow x > 1 \\Rightarrow x \\in (1, +\\infty)$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1362,
+    "solution_page": 127,
+    "solution_text": "$f(x)$ در $\\mathbb{R}$ پیوسته است. برای این‌که تابع $f$ اکیداً یکنوا باشد، کافی است که شیب $f$ در هر دو ضابطهٔ آن هم‌علامت باشند:\n$f(x) = 3x - |kx| \\Rightarrow \\begin{cases} f(x) = (3 - k)x \\\\ f(x) = (3 + k)x \\end{cases}$\nبنابراین:\n$(3 - k)(3 + k) > 0 \\Rightarrow -3 < k < 3$\n$\\xrightarrow{k \\in \\mathbb{Z}} k \\in \\{-2, -1, 0, 1, 2\\}$\nشیب خطوط نمی‌تواند صفر باشد زیرا در این صورت تابع اکیداً یکنوا نخواهد بود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1363,
+    "solution_page": 127,
+    "solution_text": "$f' < 0$ و $g' > 0$ است؛ بنابراین:\n$\\begin{matrix} g' > 0 \\Rightarrow -g' < 0 \\\\ f' < 0 \\end{matrix} \\Bigg\\} \\Rightarrow f' - g' < 0$\n$\\Rightarrow f - g$ اکیداً نزولی است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1364,
+    "solution_page": 127,
+    "solution_text": "$y = f(ax + b) - 3$ اکیداً نزولی است؛ بنابراین:\n$\\left.\\begin{matrix} y' < 0 \\Rightarrow -af'(ax + b) < 0 \\\\ \\text{اکیداً صعودی است در } \\mathbb{R} \\Rightarrow f'(ax + b) > 0 \\end{matrix}\\right\\}$\n$\\Rightarrow -a < 0 \\Rightarrow a > 0$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1365,
+    "solution_page": 127,
+    "solution_text": "در بازهٔ $[a, b]$، تابع $f$ اکیداً نزولی و تابع $g$ اکیداً صعودی است. بنابراین $f' < 0$ و $g' > 0$ است. هم‌چنین $f$ و $g$ هر دو منفی هستند. خواهیم داشت:\n$y = \\dfrac{f}{g} \\Rightarrow y' = \\dfrac{\\overbrace{f'g}^{+} - \\overbrace{g'f}^{-}}{g^2} > 0 \\Rightarrow$ اکیداً صعودی است $\\dfrac{f}{g}$.\n$y = f \\circ g \\Rightarrow y' = \\underbrace{g'}_{+} \\underbrace{f'(g)}_{-} < 0 \\Rightarrow$ اکیداً نزولی است $f \\circ g$.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1366,
+    "solution_page": 127,
+    "solution_text": "نقاط بحرانی نقاطی از دامنهٔ تابع هستند که در آن‌ها یا مشتق برابر صفر است یا وجود ندارد.\n$f(x) = x^3 - 2x^2 - 3x + 1 \\Rightarrow f'(x) = 3x^2 - 4x - 3 = 0$\nاگر $\\alpha$ و $\\beta$ ریشه‌های $f'(x) = 0$ باشند، خواهیم داشت:\n$\\alpha\\beta = \\dfrac{c}{a} = -1$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1367,
+    "solution_page": 127,
+    "solution_text": "$x = 3$ ریشهٔ $f'(x) = 0$ است.\n$f(x) = 2x^3 - ax^2 + 3x - 1 \\Rightarrow f'(x) = 6x^2 - 2ax + 3 = 0$\nاگر ریشهٔ دوم را $\\beta$ بنامیم، خواهیم داشت:\n$3\\beta = \\dfrac{3}{6} \\Rightarrow \\beta = \\dfrac{1}{6}$",
+    "stated_correct_option": 0,
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 1368,
+    "solution_page": 127,
+    "solution_text": "$f'(x)$ را به دست می‌آوریم:\n$f(x) = -x^3 + 2x^2 + ax + 1 \\Rightarrow f'(x) = -3x^2 + 4x + a$\n$f'(x) = 0$ فقط یک ریشه دارد؛ بنابراین $\\Delta = 0$:\n$\\Delta = 0 \\Rightarrow 16 + 12a = 0 \\Rightarrow a = -\\dfrac{4}{3}$\nطول نقطهٔ بحرانی همان ریشهٔ مضاعف $f'$ است:\n$=\\dfrac{-4}{-6} = \\dfrac{2}{3}$ = طول نقطهٔ بحرانی\n$\\Rightarrow f(\\dfrac{2}{3}) = -\\dfrac{8}{27} + 2(\\dfrac{4}{9}) - \\dfrac{8}{9} + 1 = \\dfrac{19}{27}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1369,
+    "solution_page": 127,
+    "solution_text": "$f'(x)$ را به دست می‌آوریم:\n$f(x) = \\begin{cases} x^2 - 4x & x \\le 3 \\\\ x^2 - 2x & x > 3 \\end{cases} \\Rightarrow f'(x) = \\begin{cases} 2x - 4 & x < 3 \\\\ 2x - 2 & x > 3 \\end{cases}$\nتابع $f$ در $x = 3$ ناپیوسته و مشتق‌ناپذیر و در نتیجه بحرانی است. ریشه‌های هر یک از ضابطه‌های $f'$ برابر $x = 2$ و $x = 1$ است که $x = 1$ در محدودهٔ تعریف‌شده قرار نداشته و قابل قبول نیست. بنابراین $x = 2$ و $x = 3$ طول نقاط بحرانی تابع هستند.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1370,
+    "solution_page": 127,
+    "solution_text": "نمودار تابع $y = x|x - 2|$ را رسم می‌کنیم:\nتابع در $x = 0$، $x = 2$ و $x = -2$ نقطهٔ گوشه و مشتق‌ناپذیر است؛ بنابراین در این نقاط بحرانی است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0127.jpg",
+        "box": [
+          40,
+          280,
+          200,
+          350
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار تابع y=x|x-2|"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1371,
+    "solution_page": 127,
+    "solution_text": "تابع $f(x)$ را به صورت دوضابطه‌ای نوشته و $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\begin{cases} x^2 + 3x & x \\ge 0 \\\\ -x^2 + 3x & x < 0 \\end{cases} \\Rightarrow f'(x) = \\begin{cases} 2x + 3 & x > 0 \\\\ -2x + 3 & x < 0 \\end{cases}$\nمشتق چپ و راست تابع در $x = 0$ برابر هستند و تابع در این نقطه، مشتق‌پذیر است. $x = -\\dfrac{3}{2}$ و $x = \\dfrac{3}{2}$ ریشه‌های ضابطه‌های $f'$ می‌باشند ولی هیچ‌یک در دامنهٔ خود قرار نداشته و قابل قبول نیستند؛ بنابراین نقطهٔ بحرانی ندارد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1372,
+    "solution_page": 127,
+    "solution_text": "نکته: در تابع $y = |f(x)|$ ریشه‌های $f(x) = 0$ و $f'(x) = 0$ نقاط بحرانی هستند:\n$f(x) = |x^2 - 6x|$\n$\\Rightarrow \\begin{cases} x^2 - 6x = 0 \\Rightarrow \\begin{cases} x = 0 \\Rightarrow y = 0 \\Rightarrow A(0, 0) \\\\ x = 6 \\Rightarrow y = 0 \\Rightarrow B(6, 0) \\end{cases} \\\\ 2x - 6 = 0 \\Rightarrow x = 3 \\Rightarrow y = 9 \\Rightarrow C(3, 9) \\end{cases}$\n$\\Rightarrow S_{ABC} = \\dfrac{AB \\times CH}{2} = \\dfrac{6 \\times 9}{2} = 27$",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0127.jpg",
+        "box": [
+          50,
+          1500,
+          250,
+          1750
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار تابع قدر مطلق و مثلث ABC"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1373,
+    "solution_page": 127,
+    "solution_text": "$x = -\\dfrac{b}{a}$ طول نقطهٔ گوشه و بحرانی $f$ است. قدرمطلق را برداشته و بقیهٔ نقاط بحرانی را به دست می‌آوریم:\n$y = x^2(ax + b) = ax^3 + bx^2 \\Rightarrow y' = 3ax^2 + 2bx = 0$\n$\\Rightarrow \\begin{cases} x = 0 \\\\ x = -\\dfrac{2b}{3a} \\end{cases}$\nطول نقاط بحرانی تابع برابر $0$، $-\\dfrac{b}{a}$ و $-\\dfrac{2b}{3a}$ است.\nاگر $-\\dfrac{b}{a} = 2$ باشد، $-\\dfrac{2b}{3a} = \\dfrac{4}{3}$ است که قابل قبول نیست.\nاگر $-\\dfrac{b}{a} = 3$ باشد، $-\\dfrac{2b}{3a} = 2$ است که قابل قبول است؛ بنابراین \\dfrac{a}{b} = -\\dfrac{1}{3} می‌باشد.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1374,
+    "solution_page": 128,
+    "solution_text": "ابتدا $f'(x)$ را محاسبه می‌کنیم:\n$f(x) = (x+3)\\sqrt[3]{x-1} \\Rightarrow f'(x) = \\sqrt[3]{x-1} + \\frac{x+3}{3\\sqrt[3]{(x-1)^2}} = 0$\n$\\Rightarrow \\frac{3(x-1) + x+3}{3\\sqrt[3]{(x-1)^2}} = 0 \\Rightarrow \\frac{4x}{3\\sqrt[3]{(x-1)^2}} = 0$\n$\\Rightarrow \\begin{cases} x = 0 & \\text{مشتق برابر صفر است.} \\\\ x = 1 & \\text{مشتق وجود ندارد.} \\end{cases}$\nبنابراین مجموع طول نقاط بحرانی برابر است با $0 + 1 = 1$.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1375,
+    "solution_page": 128,
+    "solution_text": "نقطۀ $A(2, b)$ نقطۀ بحرانی تابع مشتق‌پذیر $f$ است؛ بنابراین: $f(2) = b , f'(2) = 0$.\n$f(x) = ax + \\sqrt{8-x^2} \\Rightarrow f'(x) = a - \\frac{x}{\\sqrt{8-x^2}}$\n$\\begin{cases} f'(2) = 0 \\Rightarrow a - \\frac{2}{2} = 0 \\Rightarrow a = 1 \\\\ f(2) = b \\Rightarrow 2a + 2 = b \\Rightarrow b = 4 \\end{cases}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1376,
+    "solution_page": 128,
+    "solution_text": "ابتدا $f(x)$ را ساده می‌کنیم:\n$f(x) = \\frac{x}{[x] - 1 + 1 + [-x]} = \\frac{x}{[x] + [-x]}$\nمی‌دانیم:\n$[x] + [-x] = \\begin{cases} 0 & x \\in \\mathbb{Z} \\\\ -1 & x \\notin \\mathbb{Z} \\end{cases}$\nبنابراین دامنهٔ تابع $f(x)$ به صورت $\\mathbb{R} - \\mathbb{Z}$ بوده و ضابطهٔ آن $f(x) = -x$ است. چون تابع ثابت است در تمام نقاط دامنهٔ خود یعنی $\\mathbb{R} - \\mathbb{Z}$ بحرانی است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1377,
+    "solution_page": 128,
+    "solution_text": "تابع $y = [x]$ در نقاط صحیح، ناپیوسته و بحرانی و در نقاط غیرصحیح تابع ثابت و بحرانی است؛ بنابراین در تمام نقاط دامنهٔ خود بحرانی است.\nتوابع $y = [x] + |x|$ و $y = [x] - x$ در نقاط صحیح ناپیوسته و بحرانی است و در $\\mathbb{R} - \\mathbb{Z}$ غیربحرانی است.\nتابع $y = x[x]$ در $(0, 1)$ ثابت و بحرانی و در $x = 0$ گوشه و در بقیهٔ نقاط صحیح، ناپیوسته و بحرانی است ولی در بقیهٔ نقاط دامنه بحرانی نیست.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1378,
+    "solution_page": 128,
+    "solution_text": "عبارت $[3x]$ در بازۀ $(-\\frac{1}{6}, 0]$ برابر صفر بوده و در نتیجه $f(x) = 0$ است. تابع ثابت در تمام نقاط بحرانی است؛ بنابراین تابع $f$ در تمام نقاط $(-\\frac{1}{6}, 0]$ بحرانی بوده و بی‌شمار نقطۀ بحرانی دارد.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1379,
+    "solution_page": 128,
+    "solution_text": "تابع $f$ در نقاط $x = -1$، $x = 1$، $x = 3$، $x = 4$ و $x = 5$ مشتق‌ناپذیر و بحرانی است. مشتق تابع $f$ در $x = 0$ برابر صفر بوده و $x = 0$ نیز نقطهٔ بحرانی است.\n$\\{-1, 0, 1, 3, 4, 5\\}$: طول نقاط بحرانی\nدقت کنید که تابع در $x = 2$ تعریف نشده بوده و نمی‌تواند بحرانی باشد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0128.jpg",
+        "box": [
+          632,
+          523,
+          715,
+          874
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1380,
+    "solution_page": 128,
+    "solution_text": "تابع $f'$ در نقاط $b$، $a$ و $c$ برابر صفر است.\n$y = \\frac{1}{f(x)} \\Rightarrow y' = \\frac{-f'(x)}{f^2(x)} = 0 \\Rightarrow f'(x) = 0 \\Rightarrow x \\in \\{a, b, c\\}$\nاز میان نقاط فوق، $x = c$ ریشهٔ $f(x)$ نیز می‌باشد و تابع $y = \\frac{1}{f(x)}$ در آن تعریف نشده است؛ بنابراین نقاط بحرانی $y = \\frac{1}{f(x)}$ عبارت‌اند از $\\{a, b\\}$.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0128.jpg",
+        "box": [
+          735,
+          525,
+          786,
+          680
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1381,
+    "solution_page": 128,
+    "solution_text": "ریشه‌های $f'(x) = 0$ طول نقاط بحرانی $f$ هستند. تابع $f'$ چهار ریشه داشته؛ بنابراین $f$ چهار نقطهٔ بحرانی دارد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1382,
+    "solution_page": 128,
+    "solution_text": "ریشه‌های سادهٔ $f'(x) = 0$ طول نقاط اکسترمم نسبی $f$ است:\n$f(x) = -2x^3 + 3x^2 + 7x - 1 \\Rightarrow f'(x) = -6x^2 + 6x + 7 = 0$\nاگر $\\alpha$ و $\\beta$ ریشه‌های $f'(x) = 0$ باشند، خواهیم داشت:\n$\\alpha + \\beta = -\\frac{b}{a} = \\frac{-6}{-6} = 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1383,
+    "solution_page": 128,
+    "solution_text": "ریشه‌های $f'(x) = 0$ را محاسبه می‌کنیم:\n$f(x) = 2x^3 - 3x^2 - 12x \\Rightarrow f'(x) = 6x^2 - 6x - 12 = 0$\n$\\Rightarrow x^2 - x - 2 = 0 \\Rightarrow \\begin{cases} x = -1 \\Rightarrow f(-1) = 7 \\\\ x = 2 \\Rightarrow f(2) = -20 \\end{cases}$\n$\\Rightarrow f(-1) + f(2) = -13$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1384,
+    "solution_page": 128,
+    "solution_text": "ریشه‌های سادهٔ $y'$ طول نقاط اکسترمم نسبی $y$ هستند:\n$y = (x-1)^2(2x+1)$\n$\\Rightarrow y' = 2(x-1)(2x+1) + 2(x-1)^2 = 2(x-1)(3x) = 0$\n$\\Rightarrow \\begin{cases} x = 0 \\Rightarrow y = 1 \\\\ x = 1 \\Rightarrow y = 0 \\end{cases}$\n$\\Rightarrow$ نقاط اکسترمم نسبی: $A(0, 1) , B(1, 0)$\nمعادلهٔ $AB$: $y - 0 = \\frac{1-0}{0-1}(x-1) \\Rightarrow y = -x+1$\nعرض از مبدأ این خط برابر $1$ است.\n* چون این خط از $(0, 1)A$ می‌گذرد، بدون نوشتن معادلهٔ خط می‌توانستیم بگوییم عرض از مبدأ برابر $1$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1385,
+    "solution_page": 128,
+    "solution_text": "نقطه $A(3, -10)$ اکسترمم نسبی تابع $f$ است؛ بنابراین:\n$f(3) = -10 , f'(3) = 0$\n$f(x) = x^3 + ax^2 - 9x + b \\Rightarrow f'(x) = 3x^2 + 2ax - 9$\n$\\begin{cases} f'(3) = 0 \\Rightarrow 27 + 6a - 9 = 0 \\Rightarrow a = -3 \\\\ f(3) = -10 \\Rightarrow 27 + 9a - 27 + b = -10 \\end{cases}$\n$\\Rightarrow -27 + b = -10 \\Rightarrow b = 17$\nخواهیم داشت:\n$f(x) = x^3 - 3x^2 - 9x + 17$\n$\\Rightarrow f'(x) = 3x^2 - 6x - 9 = 3(x+1)(x-3) = 0$\n$\\Rightarrow \\begin{cases} x = 3 \\Rightarrow f(-1) = -1 - 3 + 9 + 17 = 22 \\\\ x = -1 \\checkmark \\end{cases}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1386,
+    "solution_page": 129,
+    "solution_text": "$f'(x)$ را تعیین علامت می‌کنیم:\n$f(x)=x^4-\\frac{8}{3}x^3+2x^2 \\Rightarrow f'(x)=4x^3-8x^2+4x$\n$=4x(x^2-2x+1)=4x(x-1)^2$\nتابع تنها در $x=0$ مینیمم نسبی دارد:\n\\begin{array}{c|ccccc} x & & 0 & & 1 & \\\\ \\hline f'(x) & - & 0 & + & 0 & + \\\\ \\hline f(x) & \\searrow & \\text{min} & \\nearrow & & \\nearrow \\end{array}",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1387,
+    "solution_page": 128,
+    "solution_text": "تابع خطی $f$ را به صورت $f(x) = ax + b$ نمایش می‌دهیم:\n$y = xf(x) = ax^2 + bx \\Rightarrow y' = 2ax + b$\nنقطهٔ $A(2, 3)$ اکسترمم نسبی $y$ است؛ بنابراین:\n$\\begin{cases} y(2) = 3 \\Rightarrow 4a + 2b = 3 \\\\ y'(2) = 0 \\Rightarrow 4a + b = 0 \\end{cases} \\Rightarrow b = 3 \\Rightarrow a = -\\frac{3}{4}$\n$\\Rightarrow f(x) = -\\frac{3}{4}x + 3 \\Rightarrow f(1) = -\\frac{3}{4} + 3 = \\frac{9}{4} = 2/25$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1388,
+    "solution_page": 129,
+    "solution_text": "$f'(x)=x(x^2-5)$\nآزمون مشتق اول:\n\\begin{array}{c|ccccccc}\nx & & -\\sqrt{5} & & 0 & & \\sqrt{5} & \\\\\n\\hline\nf'(x) & - & \\circ & + & \\circ & - & \\circ & + \\\\\n\\hline\nf(x) & \\searrow & \\min & \\nearrow & \\max & \\searrow & \\min & \\nearrow\n\\end{array}",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1389,
+    "solution_page": 129,
+    "solution_text": "$f'(x)$ را به دست می آوریم:\n$f(x)=x^3-ax^2+9x-1 \\Rightarrow f'(x)=3x^2-2ax+9$\nاگر $\\alpha$ و $\\beta$ ریشه های $f'(x)$ و طول نقاط اکسترمم نسبی باشند، خواهیم داشت:\n$\\alpha+\\beta=-4 \\Rightarrow \\frac{2a}{3}=-4 \\Rightarrow a=-6$\n$\\Rightarrow f'(x)=3x^2+12x+9=3(x+1)(x+3)$\nآزمون مشتق اول:\n\\begin{array}{c|ccccc}\nx & & -3 & & -1 & \\\\\n\\hline\nf'(x) & + & \\circ & - & \\circ & + \\\\\n\\hline\nf(x) & \\nearrow & \\max & \\searrow & \\min & \\nearrow\n\\end{array}\n$\\Rightarrow f(-1)=-1+6-9-1=-5$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1390,
+    "solution_page": 129,
+    "solution_text": "تابع $f$ در $x=0$ ریشه مضاعف دارد؛ بنابراین:\n$f(x) = ax^r(x-\\alpha)$\n$x=-r$ نقطه ماکزیمم نسبی تابع و $f'(-r)=0$ است:\n$f'(x) = a(rx(x-\\alpha) + x^r) = a(\\mu x^r - rax)$\n$f'(-r)=0 \\Rightarrow a(1r + 4\\alpha) = 0 \\Rightarrow \\alpha = -\\mu$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1391,
+    "solution_page": 129,
+    "solution_text": "تابع $f(x)$ فقط یک ریشهٔ ساده دارد:\n$f(x) = x^4 - ax^r + 7$\n$\\Rightarrow f'(x) = 4x^\\mu - rax = rx(rx^r - a) = 0 \\Rightarrow \\begin{cases} x = 0 \\\\ x^r = \\frac{a}{r} \\end{cases}$\nبرای این‌که $f(x)$ فقط یک ریشهٔ ساده داشته باشد، باید $\\frac{a}{r} \\le 0$ باشد.\nبنابراین: $a \\le 0$\nدقت داشته باشید اگر $a=0$ باشد، $f'(x)=4x^\\mu$ و $x=0$ ریشه‌ای با مرتبه ۳ برای $f'(x)$ است که از لحاظ تعیین علامت همانند ریشه ساده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1392,
+    "solution_page": 129,
+    "solution_text": "نقطه $(2,-3)$ اکسترمم نسبی $f(x)$ است؛ بنابراین:\n$f(2)=-3 \\, , \\, f'(2)=0$\n$f(x)=x^3-2x^2-ax+b \\Rightarrow f'(x)=3x^2-4x-a$\n$\\begin{cases}f'(2)=0 \\Rightarrow 12-8-a=0 \\Rightarrow a=4 \\\\ f(2)=-3 \\Rightarrow 8-8-2a+b=-3 \\Rightarrow b=2a-3=5\\end{cases}$\n$f'(x)=3x^2-4x-4=(x-2)(3x+2)$\nخواهیم داشت:\n\\begin{array}{c|ccccc}\nx & & -\\frac{2}{3} & & 2 & \\\\\n\\hline\nf'(x) & + & \\circ & - & \\circ & + \\\\\n\\hline\nf(x) & \\nearrow &  & \\searrow & \\min & \\nearrow\n\\end{array}\n$\\Rightarrow A(2,-3)$ : مینیمم نسبی",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1393,
+    "solution_page": 129,
+    "solution_text": "نمودار $f(x)$ را رسم می‌کنیم:\nبا توجه به نمودار، مشخص می‌شود که تابع در نقاط صحیح زوج ماکزیمم نسبی و در نقاط صحیح فرد مینیمم نسبی است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          490,
+          805,
+          868,
+          865
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1394,
+    "solution_page": 129,
+    "solution_text": "در ۱ نقطه بحرانی $x=-r$ است که نقطه مماس قائم بوده و اکسترمم نسبی نمی‌باشد.\nدر ۳ نقاط صحیح، نقاط بحرانی بوده ولی اکسترمم نسبی نیستند.\nدر ۴ نقطه $x=0$ بحرانی است ولی اکسترمم نسبی نمی‌باشد.\nدر ۲ تمام نقاط کوچک‌تر یا مساوی صفر بحرانی بوده و چون بر روی تابع ثابت قرار دارند، همگی اکسترمم نسبی هستند.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          80,
+          70,
+          165,
+          130
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "نمودار گزینه ۱"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          80,
+          130,
+          185,
+          195
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "نمودار گزینه ۳"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          80,
+          195,
+          175,
+          270
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "نمودار گزینه ۴"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          80,
+          270,
+          175,
+          330
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "نمودار گزینه ۲"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1395,
+    "solution_page": 129,
+    "solution_text": "با توجه به نمودار $f(x)$، نمودار هر یک از گزینه‌ها را رسم می‌کنیم:\n$1 : x^rf(x) = \\begin{cases} -3x^r & x \\ge 0 \\\\ 3x^r & x < 0 \\end{cases}$\n$r : xf^r(x) = \\begin{cases} 9x & x \\ge 0 \\\\ 9x & x < 0 \\end{cases} = 9x$\n$3 : xf(x^r) = -3x$\n$4 : x^rf^r(x) = 9x^r$\nبدیهی است ۴ پاسخ مسئله است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          345,
+          355,
+          455,
+          415
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          345,
+          415,
+          455,
+          485
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "نمودار گزینه ۱"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          345,
+          485,
+          455,
+          530
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "نمودار گزینه ۲"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          345,
+          530,
+          455,
+          580
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "نمودار گزینه ۳"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          345,
+          580,
+          455,
+          630
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "نمودار گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1396,
+    "solution_page": 129,
+    "solution_text": "۱ نادرست است؛ یک نقطه گوشه می‌تواند اکسترمم نسبی باشد.\n۲ نادرست است؛ $c$ نقطه بحرانی است ولی اکسترمم نسبی نمی‌باشد.\n۳ درست است؛ هر نقطه اکسترمم نسبی بحرانی است. در نقاط بحرانی مشتق تابع صفر است یا وجود ندارد. چون $f$ مشتق‌پذیر است، $f'(c) = 0$ می‌باشد.\n۴ نادرست است؛ $f'(c) = 0$ است ولی $c$ طول اکسترمم نسبی نمی‌باشد.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          80,
+          620,
+          145,
+          680
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "نمودار گزینه ۱"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          80,
+          680,
+          145,
+          725
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "نمودار گزینه ۲"
+      },
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          80,
+          755,
+          145,
+          810
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "نمودار گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1397,
+    "solution_page": 129,
+    "solution_text": "$c$ و $d$ طول نقاط ماکزیمم نسبی و $e$ طول نقطه مینیمم نسبی $f$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0129.jpg",
+        "box": [
+          80,
+          800,
+          310,
+          875
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1398,
+    "solution_page": 130,
+    "solution_text": "در سمت چپ نقطهٔ $a$ تابع $f'$ منفی و در سمت راست آن $f'$ مثبت است؛ بنابراین تنها نقطهٔ مینیمم نسبی $f$ نقطه‌ای به طول $a$ است:",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0130.jpg",
+        "box": [
+          510,
+          60,
+          785,
+          125
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار تابع مشتق"
+      },
+      {
+        "page_file": "page_0130.jpg",
+        "box": [
+          510,
+          160,
+          640,
+          225
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جدول تعیین علامت مشتق و رفتار تابع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1399,
+    "solution_page": 130,
+    "solution_text": "ریشه‌های سادهٔ $f'$ طول نقاط اکسترمم نسبی $f$ است:\n$f(x) = \\frac{1}{3} x^3 + x^2 - 3x + k \\Rightarrow f'(x) = x^2 + 2x - 3 = 0 \\Rightarrow \\begin{cases} x = 1 \\\\ x = -3 \\end{cases}$\nنقاط اکسترمم نسبی $f$ پایین محور $x$ها قرار دارند؛ بنابراین عرض آن‌ها منفی است:\n$\\begin{cases} f(1) < 0 \\Rightarrow \\frac{1}{3} + 1 - 3 + k < 0 \\Rightarrow k < \\frac{5}{3} \\\\ f(-3) < 0 \\Rightarrow -9 + 9 + 9 + k < 0 \\Rightarrow k < -9 \\end{cases} \\xrightarrow{\\cap} k < -9$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1400,
+    "solution_page": 130,
+    "solution_text": "تابع $f(x)$ را به صورت دوضابطه‌ای نوشته، $f'(x)$ را به دست می‌آوریم:\n$f(x) = \\begin{cases} x^2 - 4x & x \\ge 0 \\\\ -x^2 - 4x & x < 0 \\end{cases} \\Rightarrow f'(x) = \\begin{cases} 2x - 4 & x \\ge 0 \\\\ -2x - 4 & x < 0 \\end{cases}$\nآزمون مشتق اول:\n\n$\\Rightarrow \\begin{cases} A(-2, 4) : \\text{max} \\\\ B(2, -4) : \\text{min} \\end{cases} \\Rightarrow AB = \\sqrt{4^2 + 8^2} = \\sqrt{80} = 4\\sqrt{5}$\nدقت داشته باشید که تابع $f$ در $x=0$ مشتق‌پذیر بوده و $f'(0) = -4$ است. این نقطه بحرانی نیست.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0130.jpg",
+        "box": [
+          522,
+          484,
+          687,
+          545
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جدول تعیین علامت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1401,
+    "solution_page": 130,
+    "solution_text": "نقطهٔ $(2, -2)$ مینیمم نسبی تابع $f$ است؛ بنابراین $f(2) = -2$، $f'(2) = 0$\n$f(x) = x^3 + ax^2 + b \\Rightarrow f'(x) = 3x^2 + 2ax$\n$\\begin{cases} f'(2) = 0 \\Rightarrow 12 + 4a = 0 \\Rightarrow a = -3 \\\\ f(2) = -2 \\Rightarrow 8 + 4a + b = -2 \\Rightarrow b = -4a - 10 = 2 \\end{cases}$\n$\\Rightarrow f(x) = x^3 - 3x^2 + 2 = (x - 1)(x^2 - 2x - 2) = 0 \\Rightarrow \\begin{cases} x = 1 - \\sqrt{3} \\\\ x = 1 \\\\ x = 1 + \\sqrt{3} \\end{cases} \\xrightarrow{k > 2} k = 1 + \\sqrt{3}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1402,
+    "solution_page": 130,
+    "solution_text": "با فرض $k \\neq -2$ مسئله را حل می‌کنیم:\n$f(x) = x^2 |x + k| = \\begin{cases} x^3 + kx^2 & x \\ge -k \\\\ -x^3 - kx^2 & x < -k \\end{cases} \\Rightarrow f'(x) = \\begin{cases} 3x^2 + 2kx & x > -k \\\\ -3x^2 - 2kx & x < -k \\end{cases}$\n$x = 2$ طول نقطهٔ ماکزیمم نسبی است؛ بنابراین $f'(2) = 0$ است. هر دو ضابطه ریشه‌های یکسان دارند:\n$3x^2 + 2kx = 0 \\xrightarrow{x=2} 12 + 4k = 0 \\Rightarrow k = -3$\n$\\Rightarrow f'(x) = \\begin{cases} 3x^2 - 6x & x > 3 \\\\ -3x^2 + 6x & x < 3 \\end{cases}$\nآزمون مشتق اول:\n$\\Rightarrow AB = 3$ و $A(0, 0)$ و $B(3, 0)$ نقاط مینیمم نسبی $f$ هستند.\nاگر $k = -2$ باشد، $x=2$ طول نقطهٔ مینیمم نسبی خواهد شد.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0130.jpg",
+        "box": [
+          105,
+          170,
+          318,
+          230
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جدول تعیین علامت"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1403,
+    "solution_page": 130,
+    "solution_text": "خط $y=k$ به شرطی تابع را در سه نقطه قطع می‌کند که $y_{\\text{min}} < k < y_{\\text{max}}$:\n$y = x^3 - 6x^2 + 20 \\Rightarrow y' = 3x^2 - 12x = 0 \\Rightarrow \\begin{cases} x = 0 \\Rightarrow y = 20 \\\\ x = 4 \\Rightarrow y = -12 \\end{cases} \\Rightarrow -12 < k < 20$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1404,
+    "solution_page": 130,
+    "solution_text": "$x = -1$ نقطهٔ مینیمم نسبی $f$ است؛ بنابراین $f'(-1) = 0$ می‌باشد:\n$f(x) = (x+1)(x^2 - x + m) \\xrightarrow{\\text{عامل صفرشونده}} f'(-1) = 1 \\times (1 + 1 + m) = 0 \\Rightarrow m = -2$\nخواهیم داشت:\n$f(x) = (x+1)(x^2 - x - 2) = (x+1)^2(x-2) \\Rightarrow f'(x) = 2(x+1)(x-2) + (x+1)^2 = (x+1)(3x-3) = 0 \\Rightarrow \\begin{cases} x = -1 \\\\ x = 1 \\text{ \\checkmark} \\end{cases}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1405,
+    "solution_page": 130,
+    "solution_text": "$f'(x)$ را به دست می‌آوریم:\n$f(x) = x^4 - ax^3 + bx^2 \\Rightarrow f'(x) = 4x^3 - 3ax^2 + 2bx = x(4x^2 - 3ax + 2b)$\n$x=0$ ریشهٔ $f'$ است اما طول نقطهٔ اکسترمم نسبی نیست؛ بنابراین ریشهٔ مضاعف $f'$ است. در نتیجه $b=0$ می‌باشد. $f'(x) = 4x^3 - 3ax^2$\n$x=1$ طول اکسترمم نسبی $f$ است. در نتیجه $f'(1) = 0$ می‌باشد.\n$f'(1) = 4 - 3a = 0 \\Rightarrow a = \\frac{4}{3} \\Rightarrow f(x) = x^4 - \\frac{4}{3}x^3 \\Rightarrow f(3) = 81 - 36 = 45$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1406,
+    "solution_page": 130,
+    "solution_text": "$y=m$ در نقاطی بر تابع مماس است که مشتق در آن نقاط صفر باشد:\n$y = 2x^3 - 3x^2 - 12x + 2 \\Rightarrow y' = 6x^2 - 6x - 12 = 0 \\Rightarrow x^2 - x - 2 = 0 \\Rightarrow \\begin{cases} x_1 = -1 \\Rightarrow y_1 = 9 \\\\ x_2 = 2 \\Rightarrow y_2 = -18 \\end{cases}$\n$\\Rightarrow y_1 + y_2 = 9 - 18 = -9$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1407,
+    "solution_page": 130,
+    "solution_text": "نقطهٔ $A(-3, b)$ اکسترمم نسبی $f(x)$ است؛ بنابراین $f'(-3) = 0$\n$f(x) = x + \\frac{a}{x} \\Rightarrow f'(x) = 1 - \\frac{a}{x^2} \\Rightarrow f'(-3) = 1 - \\frac{a}{9} = 0 \\Rightarrow a = 9$\n\nاز طرفی: $f(-3) = b \\Rightarrow -3 + \\frac{a}{-3} = b \\Rightarrow b = -6$\n$f(x) = x + \\frac{9}{x} \\Rightarrow f(-6) = -6 - \\frac{9}{6} = -\\frac{15}{2} = -7/5$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1408,
+    "solution_page": 131,
+    "solution_text": "حد تابع $f(x)$ در $\\infty$ برابر $2$ می‌باشد؛ بنابراین خط افقی رسم شده $y = 2$ بوده و در نتیجه محور $y$ها را در $(0, 2)$ قطع می‌کند:\n$f(0) = 2 \\Rightarrow \\frac{b}{4} = 2 \\Rightarrow b = 8$\n$f(x)$ ریشه مضاعف دارد؛ یعنی صورت کسر دارای ریشه مضاعف است:\n$\\Delta = 0 \\Rightarrow a^2 - 8b = 0 \\Rightarrow a^2 = 64 \\Rightarrow a = \\pm 8$\nریشه مضاعف عددی مثبت است؛ بنابراین $a$ منفی می‌باشد: $a = -8$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1409,
+    "solution_page": 131,
+    "solution_text": "طول نقطه ماکزیمم نسبی $f(x)$ است؛ بنابراین: $x = 9$\n$f'(9) = 0$\n$f(x) = \\frac{-x + m}{\\sqrt{x}} \\Rightarrow f'(x) = \\frac{-\\sqrt{x} - \\frac{-x + m}{2\\sqrt{x}}}{x}\n$f'(9) = 0 \\Rightarrow \\frac{-3 - \\frac{-9 + m}{6}}{9} = 0 \\Rightarrow \\frac{m - 9}{6} = -3$\n$\\Rightarrow m - 9 = -18 \\Rightarrow m = -9 \\Rightarrow f(x) = \\frac{-x - 9}{\\sqrt{x}} \\Rightarrow f(9) = \\frac{-18}{3} = -6$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1410,
+    "solution_page": 131,
+    "solution_text": "روش اول: آزمون مشتق اول:\n$y = (x+2)^2 \\sqrt[3]{x}$\n$\\Rightarrow y' = 2(x+2)\\sqrt[3]{x} + \\frac{(x+2)^2}{3\\sqrt[3]{x^2}} = \\frac{6x(x+2) + (x+2)^2}{3\\sqrt[3]{x^2}}$\n$= \\frac{(x+2)(7x+2)}{3\\sqrt[3]{x^2}}$\nبا توجه به جدول تعیین علامت $y'$، $x = -2$ طول نقطه ماکزیمم نسبی است.\n\nروش دوم:\nنکته: در تابع $f(x) = (x-a)^2 g(x)$ با فرض $g(a) \\neq 0$ نقطه $x = a$ طول اکسترمم نسبی است.\n$\\begin{cases} g(a) > 0 \\Rightarrow \\text{طول مینیمم نسبی } x = a \\\\ g(a) < 0 \\Rightarrow \\text{طول ماکزیمم نسبی } x = a \\end{cases}$\nدر تابع $y = (x+2)^2 \\sqrt[3]{x}$، چون $\\sqrt[3]{-2} < 0$ می‌باشد، $x = -2$ طول ماکزیمم نسبی است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0131.jpg",
+        "box": [
+          492,
+          458,
+          592,
+          856
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_text",
+        "alt": "جدول تعیین علامت مشتق اول"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1411,
+    "solution_page": 131,
+    "solution_text": "ریشه ساده مشتق اول، طول اکسترمم نسبی است:\n$y = (x-1)\\sqrt{x+1}$\n$\\Rightarrow y' = \\sqrt{x+1} + \\frac{x-1}{2\\sqrt{x+1}} = \\frac{2(x+1) + x - 1}{2\\sqrt{x+1}}$\n$= \\frac{3x+1}{2\\sqrt{x+1}} = 0 \\Rightarrow x = -\\frac{1}{3}$\nفاصله از محور $y$ها برابر $\\frac{1}{3}$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1412,
+    "solution_page": 131,
+    "solution_text": "$f'(x)$ را به دست می‌آوریم:\n$f(x) = x^3 + ax^2 - (4a+12)x$\n$\\Rightarrow f'(x) = 3x^2 + 2ax - (4a+12)$\n$f'(2) = 0$ است؛ بنابراین $x=2$ طول نقطهٔ بحرانی $f$ است. چون $x=2$ طول اکسترمم نسبی نمی‌باشد، نتیجه می‌گیریم ریشهٔ مضاعف $f'$ است؛ یعنی:\n$f'(x) = 3x^2 + 2ax - (4a+12) = 3(x-2)^2$\n$= 3x^2 - 12x + 12 \\Rightarrow 2a = -12 \\Rightarrow a = -6$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1413,
+    "solution_page": 131,
+    "solution_text": "روش اول: آزمون مشتق اول:\n$f(x) = (x+1)^2(x-1)$\n$\\Rightarrow f'(x) = 2(x+1)(x-1) + (x+1)^2 = (x+1)(3x-1)$\nبا توجه به جدول تعیین علامت، $x = -1$ نقطه ماکزیمم نسبی تابع است.\n\nروش دوم:\nنکته: در تابع $y = (x-a)^2 g(x)$، اگر $g(a) < 0$ باشد، $x=a$ طول ماکزیمم نسبی است. در تابع $f(x) = (x+1)^2(x-1)$، عبارت $(x-1)$ به ازای $x = -1$ منفی است؛ بنابراین $x = -1$ طول ماکزیمم نسبی $f$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0131.jpg",
+        "box": [
+          193,
+          46,
+          276,
+          252
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_text",
+        "alt": "جدول تعیین علامت مشتق اول"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1414,
+    "solution_page": 131,
+    "solution_text": "$A(0, 4)$ اکسترمم نسبی تابع $f$ است؛ بنابراین:\n$f(0) = 4 , f'(0) = 0$\n$f(x) = (x-\\alpha)^2 (x-\\beta)$\n$\\Rightarrow f'(x) = 2(x-\\alpha)(x-\\beta) + (x-\\alpha)^2$\n$\\begin{cases} f'(0) = 0 \\Rightarrow 2\\alpha\\beta + \\alpha^2 = 0 \\xrightarrow{\\alpha \\neq 0} \\alpha = -2\\beta \\\\ f(0) = 4 \\Rightarrow -\\alpha^2 \\beta = 4 \\Rightarrow -4\\beta^3 = 4 \\Rightarrow \\beta = -1 \\end{cases}$\nاگر $\\alpha = 0$ باشد، $f(0) = 0$ خواهد شد که غیر قابل قبول است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1415,
+    "solution_page": 131,
+    "solution_text": "می‌دانیم در تابع $f(x) = (x-a)^2 g(x)$ اگر $g(a) > 0$ باشد، $x=a$ طول نقطهٔ مینیمم نسبی و اگر $g(a) < 0$ باشد $x=a$ طول نقطهٔ ماکزیمم نسبی است.\nدر تابع $f(x) = ax(x-1)^2$ برای این‌که تابع در $x=1$ دارای مینیمم نسبی باشد، کافی است $a > 0$ باشد.\nاگر $a = 0$ باشد، $f(x) = 0$ تابع ثابت بوده و در تمام نقاط مینیمم نسبی است. بنابراین جواب مسئله $a \\geq 0$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1416,
+    "solution_page": 131,
+    "solution_text": "مشتق $f(x)$ را به دست می‌آوریم:\n$f(x) = x^4 - kx^2 \\Rightarrow f'(x) = 4x^3 - 2kx = 0$\n$\\Rightarrow \\begin{cases} x = 0 \\Rightarrow y = 0 \\Rightarrow A(0, 0) \\\\ x = \\sqrt{\\frac{k}{2}} \\Rightarrow y = -\\frac{k^2}{4} \\Rightarrow B(\\sqrt{\\frac{k}{2}}, -\\frac{k^2}{4}) \\\\ x = -\\sqrt{\\frac{k}{2}} \\Rightarrow y = -\\frac{k^2}{4} \\Rightarrow C(-\\sqrt{\\frac{k}{2}}, -\\frac{k^2}{4}) \\end{cases}$\nمثلث باید در رأس $A$ قائم باشد؛ بنابراین:\n$m_{AB} \\times m_{AC} = -1 \\Rightarrow \\frac{-\\frac{k^2}{4}}{\\sqrt{\\frac{k}{2}}} \\times \\frac{-\\frac{k^2}{4}}{-\\sqrt{\\frac{k}{2}}} = -1$\n$\\Rightarrow -\\frac{\\frac{k^4}{16}}{\\frac{k}{2}} = -1 \\Rightarrow k^3 = 8 \\Rightarrow k = 2$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1417,
+    "solution_page": 132,
+    "solution_text": "خط مماس در $x = \\circ$ افقی است؛ بنابراین: $f'(\\circ) = \\circ$\n$f(x) = x^۴ - ax^۳ + bx \\Rightarrow f'(x) = ۴x^۳ - ۳ax^۲ + b$\n$\\Rightarrow f'(\\circ) = \\circ \\Rightarrow b = \\circ$\nاز طرفی $f(۵) = \\circ \\Rightarrow ۵^۴ - a \\times ۵^۳ = \\circ \\Rightarrow a = ۵$\nخواهیم داشت:\n$f(x) = x^۴ - ۵x^۳ \\Rightarrow f'(x) = ۴x^۳ - ۱۵x^۲ = \\circ$\n$\\Rightarrow x^۲(۴x - ۱۵) = \\circ \\Rightarrow \\begin{cases} x = \\circ \\\\ x = \\frac{۱۵}{۴} \\checkmark \\Rightarrow x = ۳/۷۵ \\end{cases}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1418,
+    "solution_page": 132,
+    "solution_text": "با توجه به نمودار، $f'(k) = f'(\\circ) = \\circ$ است اما مشتق در $x=k$ تغییر علامت نمی‌دهد؛ بنابراین $k$ ریشۀ مضاعف $f'$ است:\n$f(x) = -x^۴ + \\frac{۸}{۳}x^۳ + ax^۲ - b$\n$\\Rightarrow f'(x) = -۴x^۳ + ۸x^۲ + ۲ax \\Rightarrow f'(x) = -۲x(۲x^۲ - ۴x - a)$\nنتیجه می‌گیریم:\n$۲x^۲ - ۴x - a = ۲(x-k)^۲ = ۲x^۲ - ۴kx + ۲k^۲$\n$\\Rightarrow \\begin{cases} -۴k = -۴ \\Rightarrow k = ۱ \\\\ -a = ۲k^۲ \\Rightarrow -a = ۲ \\Rightarrow a = -۲ \\end{cases}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1419,
+    "solution_page": 132,
+    "solution_text": "نقاط بحرانی $f$ را در بازۀ $[-۱, ۲]$ به دست آورده، مقادیر آن‌ها را محاسبه می‌کنیم:\n$f(x) = ۲x^۲ - ۴x + ۳ \\Rightarrow f'(x) = ۴x - ۴ = \\circ \\Rightarrow x = ۱$\nنقاط بحرانی: $\\begin{cases} x = -۱ \\Rightarrow f(-۱) = ۹ \\\\ x = ۱ \\Rightarrow f(۱) = ۱ \\\\ x = ۲ \\Rightarrow f(۲) = ۳ \\end{cases} \\Rightarrow \\begin{cases} \\min = ۱ \\\\ \\max = ۹ \\end{cases}$\n$\\Rightarrow \\min + \\max = ۱۰$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1420,
+    "solution_page": 132,
+    "solution_text": "نقاط بحرانی را در بازۀ $[-۱, ۳]$ به دست آورده، مقادیر آن‌ها را محاسبه می‌کنیم:\n$f(x) = ۲x^۳ - ۳x^۲ + ۴ \\Rightarrow f'(x) = ۶x^۲ - ۶x = \\circ$\n$\\Rightarrow \\begin{cases} x = \\circ \\\\ x = ۱ \\end{cases}$\nنقاط بحرانی: $\\begin{cases} x = -۱ \\Rightarrow f(-۱) = -۱ \\\\ x = \\circ \\Rightarrow f(\\circ) = ۴ \\\\ x = ۱ \\Rightarrow f(۱) = ۳ \\\\ x = ۳ \\Rightarrow f(۳) = ۳۱ \\end{cases} \\Rightarrow \\begin{cases} \\min = -۱ \\\\ \\max = ۳۱ \\end{cases}$\n$\\Rightarrow \\max - \\min = ۳۲$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1421,
+    "solution_page": 132,
+    "solution_text": "نقاط بحرانی تابع را به دست آورده، ماکزیمم و مینیمم آن را محاسبه می‌کنیم:\n$y = \\frac{۲}{۳}x^۳ - x^۲ - ۴x + k \\Rightarrow y' = ۲x^۲ - ۲x - ۴ = \\circ$\n$\\Rightarrow x^۲ - x - ۲ = \\circ \\Rightarrow \\begin{cases} x = -۱ \\\\ x = ۲ \\text{ غ ق ق} \\end{cases}$\nنقاط بحرانی: $\\begin{cases} x = -۲ \\Rightarrow y = k - \\frac{۴}{۳} \\\\ x = -۱ \\Rightarrow y = k + \\frac{۷}{۳} \\\\ x = ۱ \\Rightarrow y = k - \\frac{۱۳}{۳} \\end{cases} \\Rightarrow \\begin{cases} \\min = k - \\frac{۱۳}{۳} \\\\ \\max = k + \\frac{۷}{۳} \\end{cases}$\nمی‌دانیم $\\min = -\\frac{۱}{۳}$ است؛ بنابراین:\n$k - \\frac{۱۳}{۳} = -\\frac{۱}{۳} \\Rightarrow k = ۴ \\Rightarrow \\max = k + \\frac{۷}{۳} = ۴ + \\frac{۷}{۳} = \\frac{۱۹}{۳}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1422,
+    "solution_page": 132,
+    "solution_text": "نقاط بحرانی تابع را به دست آورده، مقادیر آن‌ها را محاسبه می‌کنیم:\n$f(x) = x^۴ - ۲x^۲ + k \\Rightarrow f'(x) = ۴x^۳ - ۴x = \\circ$\n$\\Rightarrow \\begin{cases} x = \\circ \\\\ x = ۱ \\\\ x = -۱ \\text{ غ ق ق} \\end{cases}$\nنقاط بحرانی: $\\begin{cases} x = \\circ \\Rightarrow f(\\circ) = k \\\\ x = ۱ \\Rightarrow f(۱) = k - ۱ \\\\ x = ۲ \\Rightarrow f(۲) = k + ۸ \\end{cases} \\Rightarrow \\begin{cases} \\min = k - ۱ \\\\ \\max = k + ۸ \\end{cases}$\n$\\Rightarrow k - ۱ = -(k + ۸) \\Rightarrow k = -\\frac{۷}{۲} = -۳/۵$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1423,
+    "solution_page": 132,
+    "solution_text": "تابع $f$ در بازۀ $[-۳, ۲]$ پیوسته است؛ بنابراین برد آن به صورت $[\\min, \\max]$ می‌باشد:\n$f(x) = x^۳ - ۱۲x + ۷ \\Rightarrow f'(x) = ۳x^۲ - ۱۲ = \\circ$\n$\\Rightarrow \\begin{cases} x = ۲ \\\\ x = -۲ \\end{cases}$\nنقاط بحرانی: $\\begin{cases} x = -۳ \\Rightarrow f(-۳) = ۱۶ \\\\ x = -۲ \\Rightarrow f(-۲) = ۲۳ \\\\ x = ۲ \\Rightarrow f(۲) = -۹ \\end{cases} \\Rightarrow \\begin{cases} \\min = -۹ \\\\ \\max = ۲۳ \\end{cases}$\n$\\Rightarrow R_f = [-۹, ۲۳]$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1424,
+    "solution_page": 132,
+    "solution_text": "نقاط بحرانی $f$ را به دست آورده، مقادیر آن‌ها را محاسبه می‌کنیم:\n$f(x) = \\begin{cases} x^۲ + ۴x & -۳ \\le x < \\circ \\\\ x & \\circ \\le x \\le ۳ \\end{cases}$\n$\\Rightarrow f'(x) = \\begin{cases} ۲x + ۴ & -۳ \\le x < \\circ \\\\ ۱ & \\circ < x \\le ۳ \\end{cases}$\nنقاط بحرانی: $\\begin{cases} x = -۳ \\Rightarrow f(-۳) = -۳ \\\\ x = -۲ \\Rightarrow f(-۲) = -۴ \\\\ x = \\circ \\Rightarrow f(\\circ) = \\circ \\\\ x = ۳ \\Rightarrow f(۳) = ۳ \\end{cases} \\Rightarrow \\begin{cases} \\min = -۴ \\\\ \\max = ۳ \\end{cases}$\n$\\Rightarrow \\max - \\min = ۷$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1425,
+    "solution_page": 132,
+    "solution_text": "روش اول: بدیهی است $x = -۱$ نقطۀ گوشه و بحرانی است. قدرمطلق را برداشته و سایر نقاط بحرانی را محاسبه می‌کنیم:\n$y = (x - ۲)^۲(x + ۱)$\n$\\Rightarrow y' = ۲(x - ۲)(x + ۱) + (x - ۲)^۲ = (x - ۲)(۳x) = \\circ$\n$\\Rightarrow \\begin{cases} x = \\circ \\\\ x = ۲ \\end{cases}$\nنقاط بحرانی $f$: $\\begin{cases} x = -۱ \\Rightarrow f(-۱) = \\circ \\\\ x = \\circ \\Rightarrow f(\\circ) = ۴ \\\\ x = ۲ \\Rightarrow f(۲) = \\circ \\end{cases} \\Rightarrow \\min = \\circ$\n\nروش دوم: واضح است عبارت $(x - ۲)^۲|x + ۱|$ همواره نامنفی است. به ازای $x = -۱$ یا $x = ۲$ مقدار عبارت برابر صفر است. در نتیجه کم‌ترین مقدار $f(x)$، صفر می‌باشد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1426,
+    "solution_page": 132,
+    "solution_text": "نقاط بحرانی $f$ را به دست می‌آوریم. دامنهٔ $f$ بازهٔ $[0, +\\infty)$ است.\n$$f(x) = \\frac{4\\sqrt{x}-3}{a(x+1)} \\Rightarrow f'(x) = \\frac{1}{a} (\\frac{ \\frac{2(x+1)}{\\sqrt{x}} - (4\\sqrt{x}-3)}{(x+1)^2}) = 0$$\n$$\\Rightarrow \\frac{-2x+3\\sqrt{x}+2}{\\sqrt{x}} = 0 \\xrightarrow{\\sqrt{x} = k} 2k^2 - 3k - 2 = 0$$\n$$\\Rightarrow k = \\frac{3 \\pm \\sqrt{25}}{4} \\Rightarrow \\begin{cases} 2 \\checkmark \\\\ -\\frac{1}{2} \\text{ غ ق ق } \\end{cases} \\Rightarrow x = 4$$\nنقاط بحرانی:\n$$\\begin{cases} x = 0 \\Rightarrow f(0) = -\\frac{3}{a} \\\\ x = 4 \\Rightarrow f(4) = \\frac{5}{5a} = \\frac{1}{a} \\end{cases}$$\n$$\\xrightarrow{a > 0} \\max = \\frac{1}{a} = 2 \\Rightarrow a = \\frac{1}{2}$$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1427,
+    "solution_page": 133,
+    "solution_text": "دامنهٔ تعریف تابع بازهٔ $[-3, 3]$ می‌باشد. نقاط بحرانی را در این بازه به دست آورده، مقادیر آن‌ها را محاسبه می‌کنیم:\n$$f(x) = x - \\sqrt{9-x^2} \\Rightarrow f'(x) = 1 - \\frac{-x}{\\sqrt{9-x^2}} = 0$$\n$$\\Rightarrow \\sqrt{9-x^2} = -x \\xrightarrow{x \\le 0} 9 - x^2 = x^2 \\Rightarrow x^2 = \\frac{9}{2}$$\n$$\\xrightarrow{x \\le 0} x = -\\frac{3\\sqrt{2}}{2}$$\nنقاط بحرانی:\n$$\\begin{cases} x = -3 \\Rightarrow f(-3) = 0 \\\\ x = -\\frac{3\\sqrt{2}}{2} \\Rightarrow f(-\\frac{3\\sqrt{2}}{2}) = -\\frac{3\\sqrt{2}}{2} - \\frac{3\\sqrt{2}}{2} = -3\\sqrt{2} \\\\ x = 3 \\Rightarrow f(3) = 0 \\end{cases}$$\n$$\\Rightarrow \\min = -3\\sqrt{2}$$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1428,
+    "solution_page": 133,
+    "solution_text": "با توجه به نمودار، دامنهٔ تابع بازهٔ $[-1, 3]$ است. نتیجه می‌شود $x = -1$ و $x = 3$ ریشه‌های عبارت زیر رادیکال می‌باشند:\n$$-x^2 + ax + b = -(x+1)(x-3) = -x^2 + 2x + 3$$\nخواهیم داشت:\n$$y = x - \\sqrt{-x^2 + 2x + 3} \\Rightarrow y' = 1 - \\frac{-2x + 2}{2\\sqrt{-x^2 + 2x + 3}} = 0$$\n$$\\Rightarrow -x + 1 = \\sqrt{-x^2 + 2x + 3}$$\n$$\\xrightarrow{x \\le 1} x^2 - 2x + 1 = -x^2 + 2x + 3$$\n$$\\Rightarrow 2x^2 - 4x - 2 = 0 \\Rightarrow x^2 - 2x - 1 = 0$$\n$$\\xrightarrow{x \\le 1} x = 1 - \\sqrt{2}$$\nطول نقطهٔ مینیمم $= 1 - \\sqrt{2}$\n$$f(x) = x - \\sqrt{-x^2 + 2x + 3} = x - \\sqrt{-(x-1)^2 + 4}$$\n$$\\Rightarrow f(1 - \\sqrt{2}) = 1 - \\sqrt{2} - \\sqrt{-2 + 4} = 1 - 2\\sqrt{2}$$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1429,
+    "solution_page": 133,
+    "solution_text": "تابع $C'(t)$ را به دست می‌آوریم:\n$$C(t) = \\frac{3t}{27+t^3} \\Rightarrow C'(t) = 3 \\times \\frac{27 + t^3 - 3t^3}{(27+t^3)^2} = 0$$\n$$\\Rightarrow 2t^3 = 27 \\Rightarrow t^3 = \\frac{27}{2} = 13.5$$\nطول نقطهٔ ماکزیمم مطلق تابع است $t = \\sqrt[3]{13.5}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1430,
+    "solution_page": 133,
+    "solution_text": "بیشترین و کم‌ترین مقدار نقاط بحرانی را با حد تابع در نقاط ابتدایی و انتهایی بازه مقایسه می‌کنیم:\n$$f(x) = |x^2 - 4x|$$\nنقاط بحرانی $\\Rightarrow \\begin{cases} x^2 - 4x = 0 \\Rightarrow \\begin{cases} x = 0 \\text{ غ ق ق } \\\\ x = 4 \\text{ غ ق ق } \\end{cases} \\\\ 2x - 4 = 0 \\Rightarrow x = 2 \\end{cases}$\nنقطهٔ بحرانی: $x = 2 \\Rightarrow f(2) = 4$\n$$\\begin{cases} \\lim_{x \\to 0} f(x) = 0 \\\\ \\lim_{x \\to 3} f(x) = 3 \\end{cases}$$\nدر بازهٔ $(0, 3)$ بیشترین مقدار تابع برابر ۴ بوده اما کم‌ترین مقدار وجود ندارد و مقادیر تابع به عدد صفر نزدیک می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1431,
+    "solution_page": 133,
+    "solution_text": "با توجه به نمودار، برد تابع $f$ به صورت $R_f = [-5, 3)$ می‌باشد؛ بنابراین برد تابع $|f|$ به شکل $R_{|f|} = [0, 5]$ است. بدیهی است تابع $|f|$ دارای مینیممی برابر صفر است ولی ماکزیمم ندارد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1432,
+    "solution_page": 133,
+    "solution_text": "مشتق تابع را به دست می‌آوریم. دامنهٔ تعریف تابع $[-1, 1]$ می‌باشد.\n$y = \\frac{1}{2}x^2 + \\sqrt{1 - x^2} \\Rightarrow y' = x - \\frac{x}{\\sqrt{1 - x^2}} = 0$\n$\\Rightarrow x\\sqrt{1 - x^2} = x \\Rightarrow \\begin{cases} x = 0 \\\\ \\sqrt{1 - x^2} = 1 \\Rightarrow x = 0 \\end{cases}$\nنقاط بحرانی: $\\begin{cases} x = -1 \\Rightarrow y = \\frac{1}{2} \\\\ x = 0 \\Rightarrow y = 1 \\Rightarrow \\max = 1 \\\\ x = 1 \\Rightarrow y = \\frac{1}{2} \\end{cases}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1433,
+    "solution_page": 133,
+    "solution_text": "روش اول: می‌خواهیم تابع $p = ab$ بیشترین مقدار باشد. تابع را برحسب یک متغیر به دست می‌آوریم:\n$$3a + 4b = 24 \\Rightarrow b = \\frac{24 - 3a}{4} = 6 - \\frac{3}{4}a$$\n$$\\Rightarrow p = ab = a(6 - \\frac{3}{4}a) = 6a - \\frac{3}{4}a^2$$\nماکزیمم $p$ در رأس سهمی یعنی $a = \\frac{-6}{-\\frac{3}{2}} = 4$ رخ می‌دهد.\n$$p = 6 \\times 4 - \\frac{3}{4}(4)^2 = 24 - 12 = 12$$\nروش دوم: بیشترین مقدار $(3a)(4b)$ هنگامی است که $3a = 4b = 12$ باشد. (دقت داشته باشید که اگر $(3a)(4b)$ بیشترین مقدار شود، $ab$ نیز بیشترین مقدار خود را دارد.) $\\Rightarrow a = 4, b = 3 \\Rightarrow p = 4 \\times 3 = 12$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1434,
+    "solution_page": 133,
+    "solution_text": "روش اول: می‌خواهیم $p = a + 3b$ کم‌ترین مقدار باشد. $p$ را برحسب یک متغیر به دست می‌آوریم:\n$ab = 12 \\Rightarrow b = \\frac{12}{a} \\Rightarrow p = a + \\frac{36}{a}$\n$p' = 1 - \\frac{36}{a^2} = 0 \\Rightarrow a = 6 \\Rightarrow p_{\\text{min}} = 6 + \\frac{36}{6} = 12$\nروش دوم:\nنکته\nاگر $x, y > 0 \\Rightarrow x + y \\ge 2\\sqrt{xy}$\n$p = a + \\frac{36}{a} \\ge 2\\sqrt{36} \\Rightarrow p \\ge 12$\n$\\Rightarrow$ کم‌ترین مقدار $p$ برابر ۱۲ است.\nروش سوم:\n$ab=12 \\Rightarrow 3ab=36 \\Rightarrow a(3b)=36$\nکم‌ترین مقدار $3b+a$ زمانی است که $a=3b=6$ باشد؛ بنابراین:\n$a+3b=12$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1435,
+    "solution_page": 133,
+    "solution_text": "می‌دانیم $a + h = 8$ است. بیشترین مقدار $S = \\frac{ah}{2}$ زمانی است که $a = h = 4$ باشد؛ بنابراین:\n$$S = \\frac{4 \\times 4}{2} = 8$$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1436,
+    "solution_page": 134,
+    "solution_text": "اگر طول مستطیل $x$ و عرض آن $y$ باشد، می‌دانیم $2(x + y) = 36$ یعنی $x + y = 18$ است. بیشترین مقدار $S = xy$ زمانی است که $x = y = 9$ باشد:\n$$\\Rightarrow S = 9 \\times 9 = 81$$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1437,
+    "solution_page": 134,
+    "solution_text": "اگر $r$ شعاع قاعده و $h$ ارتفاع استوانه باشد، داریم:\n$$2r + h = 12 \\Rightarrow h = 12 - 2r$$\n$$V = \\pi r^2 h = \\pi r^2 (12 - 2r) = \\pi(12r^2 - 2r^3)$$\n$$\\Rightarrow V' = \\pi(24r - 6r^2) = 0 \\Rightarrow \\begin{cases} r = 0 \\text{ غ ق ق} \\\\ r = 4 \\checkmark \\end{cases}$$\n$$\\Rightarrow V_{\\max} = \\pi \\times 16 \\times (12 - 8) = 64\\pi$$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1438,
+    "solution_page": 134,
+    "solution_text": "می‌دانیم:\n$$a^2 + b^2 = 18 \\Rightarrow b = \\sqrt{18 - a^2}$$\nمی‌خواهیم $p = 6a + 8b$ ماکزیمم شود:\n$$p = 6a + 8\\sqrt{18 - a^2} \\Rightarrow p' = 6 - \\frac{8a}{\\sqrt{18 - a^2}} = 0$$\n$$\\Rightarrow 3\\sqrt{18 - a^2} = 4a \\Rightarrow 9(18 - a^2) = 16a^2$$\n$$\\Rightarrow 25a^2 = 162 \\Rightarrow a = \\frac{9\\sqrt{2}}{5}$$\n$$\\Rightarrow p_{\\max} = 6(\\frac{9\\sqrt{2}}{5}) + 8(\\frac{12\\sqrt{2}}{5}) = \\frac{54\\sqrt{2} + 96\\sqrt{2}}{5} = 30\\sqrt{2}$$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1439,
+    "solution_page": 134,
+    "solution_text": "حجم استوانه برابر است با:\n$$V = \\pi r^2 h = 2\\pi \\Rightarrow r^2 h = 2 \\Rightarrow h = \\frac{2}{r^2}$$\nمی‌خواهیم مساحت استوانه درباز مینیمم شود:\n$$S = S_{\\text{جانبی}} + S_{\\text{قاعده}} = 2\\pi rh + \\pi r^2 = 2\\pi r(\\frac{2}{r^2}) + \\pi r^2 = \\pi(\\frac{4}{r} + r^2) \\Rightarrow S' = \\pi(\\frac{-4}{r^2} + 2r) = 0$$\n$$\\Rightarrow 2r = \\frac{4}{r^2} \\Rightarrow r^3 = 2 \\Rightarrow r = \\sqrt[3]{2}$$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1440,
+    "solution_page": 134,
+    "solution_text": "شعاع قاعده استوانه را $r$ و ارتفاع آن را $h$ می‌نامیم:\n$$V = \\pi r^2 h = 16\\pi \\Rightarrow r^2 h = 16 \\Rightarrow h = \\frac{16}{r^2}$$\nمی‌خواهیم مساحت استوانه مینیمم باشد:\n$$S = S_{\\text{جانبی}} + S_{\\text{قاعده}} = 2\\pi rh + 2\\pi r^2 = 2\\pi(rh + r^2) = 2\\pi(\\frac{16}{r} + r^2) \\Rightarrow S' = 2\\pi(\\frac{-16}{r^2} + 2r) = 0$$\n$$\\Rightarrow r^3 = 8 \\Rightarrow r = 2 \\Rightarrow S_{\\min} = 2\\pi(8 + 4) = 24\\pi$$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1441,
+    "solution_page": 134,
+    "solution_text": "شعاع قاعده مخروط را $r$ و ارتفاع مخروط را $h$ می‌نامیم:\n$$V = \\frac{\\pi}{3} r^2 h = 2\\pi \\Rightarrow r^2 h = 6 \\Rightarrow r^2 = \\frac{6}{h}$$\nمی‌خواهیم مساحت جانبی مخروط مینیمم شود. اگر $l$ مولد مخروط باشد، $l = \\sqrt{r^2 + h^2}$ و داریم:\n$$S_{\\text{جانبی}} = \\pi rl = \\pi r\\sqrt{r^2 + h^2} = \\pi \\sqrt{r^4 + r^2 h^2} = \\pi \\sqrt{\\frac{36}{h^2} + 6h}$$\nکم‌ترین مقدار مساحت زمانی است که $\\frac{36}{h^2} + 6h$ کم‌ترین مقدار را داشته باشد:\n$$y' = \\frac{-72}{h^3} + 6 = 0 \\Rightarrow h^3 = \\frac{72}{6} = 12 \\Rightarrow h = \\sqrt[3]{12}$$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1442,
+    "solution_page": 134,
+    "solution_text": "شکل را به دو قسمت مثلث و مستطیل تقسیم کرده، ارتفاع مثلث را محاسبه می‌کنیم:\n$$h^2 = 100x^2 - 64x^2 = 36x^2 \\Rightarrow h = 6x$$\nمحیط شکل برابر ۷۲ است:\n$$36x + 2y = 72 \\Rightarrow y + 18x = 36 \\Rightarrow y = 36 - 18x$$\nخواهیم داشت:\n$$S = S_{\\text{مستطیل}} + S_{\\text{مثلث}} = \\frac{6x \\times 16x}{2} + 16xy = 48x^2 + 16x(36 - 18x) = -240x^2 + 576x$$\n$$\\Rightarrow S' = -480x + 576 = 0 \\Rightarrow x = \\frac{576}{480} = \\frac{24}{20} = \\frac{6}{5} = 1/2$$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1443,
+    "solution_page": 134,
+    "solution_text": "$AB$ را $x$ و $BC$ را $y$ می‌نامیم. ابعاد فضای سبز برابر $x - 4$ و $y - 8$ می‌باشد. می‌دانیم:\n$$S_{\\text{فضای سبز}} = (x - 4)(y - 8) = 64 \\Rightarrow y - 8 = \\frac{64}{x - 4} \\Rightarrow y = \\frac{64}{x - 4} + 8 = \\frac{8x + 32}{x - 4}$$\n$$S_{ABCD} = xy = x(\\frac{8x + 32}{x - 4}) = 8(\\frac{x^2 + 4x}{x - 4})$$\n$$\\Rightarrow S' = 8(\\frac{(2x + 4)(x - 4) - (x^2 + 4x)}{(x - 4)^2}) = 0 \\Rightarrow x^2 - 8x - 16 = 0 \\Rightarrow x = 4 \\pm \\sqrt{32} = 4 \\pm 4\\sqrt{2}$$\n$$\\xrightarrow{x > 0} x = 4 + 4\\sqrt{2}$$\n$$S_{\\min} = 8(\\frac{x^2 + 4x}{x - 4}) = 8(\\frac{(4 + 4\\sqrt{2})^2 + 4(4 + 4\\sqrt{2})}{4\\sqrt{2}}) = \\sqrt{2}(48\\sqrt{2} + 64) = 96 + 64\\sqrt{2}$$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1444,
+    "solution_page": 134,
+    "solution_text": "طول و عرض جعبه برابر $36 - 2x$ و ارتفاع آن $x$ است:\n$$V = x(36 - 2x)^2 \\Rightarrow V' = (36 - 2x)^2 - 4x(36 - 2x) = 0$$\n$$\\Rightarrow (36 - 2x)(36 - 6x) = 0 \\Rightarrow \\begin{cases} x = 18 \\text{ غ ق ق} \\\\ x = 6 \\checkmark \\end{cases}$$\nاگر $x = 18$ باشد، جعبه‌ای به وجود نمی‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1445,
+    "solution_page": 134,
+    "solution_text": "نقطهٔ $A(x,y)$ را مطابق شکل در نظر می‌گیریم:\nخواهیم داشت:\n$$S = xy = x(12 - x^2) = 12x - x^3 \\Rightarrow S' = 12 - 3x^2 = 0$$\n$$\\Rightarrow x^2 = 4 \\Rightarrow x = 2 \\Rightarrow S_{\\max} = 2 \\times (12 - 4) = 16$$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1446,
+    "solution_page": 135,
+    "solution_text": "نقطهٔ $A(x, y)$ را مطابق شکل در نظر می‌گیریم:\nخواهیم داشت:\n$$S = xy = x\\sqrt{2-x} \\Rightarrow S' = \\sqrt{2-x} - \\frac{x}{2\\sqrt{2-x}} = 0$$\n$$\\Rightarrow \\frac{4-3x}{2\\sqrt{2-x}} = 0 \\Rightarrow x = \\frac{4}{3} \\Rightarrow S_{\\max} = \\frac{4}{3} \\times \\sqrt{\\frac{2}{3}} = \\frac{4\\sqrt{6}}{9}$$",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0135.jpg",
+        "box": [
+          85,
+          461,
+          149,
+          584
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار تابع y = sqrt(2-x) و مستطیل محاط در آن با رأس A(x,y)"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1447,
+    "solution_page": 135,
+    "solution_text": "مختصات $A$ را $(x, y)$ می‌نامیم. قاعدهٔ مثلث برابر $AB = 2x$ و ارتفاع وارد بر آن $OH = y$ است.\n$$S = \\frac{AB \\times OH}{2} = \\frac{2xy}{2} = xy = x\\sqrt{9-x^2}$$\n$$\\Rightarrow S' = \\sqrt{9-x^2} - \\frac{x^2}{\\sqrt{9-x^2}} = 0 \\Rightarrow \\frac{9-2x^2}{\\sqrt{9-x^2}} = 0$$\n$$\\Rightarrow x^2 = \\frac{9}{2} \\Rightarrow x = \\frac{3\\sqrt{2}}{2} \\Rightarrow AB = 2x = 3\\sqrt{2}$$",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0135.jpg",
+        "box": [
+          238,
+          471,
+          303,
+          614
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نیم‌دایره و مثلث محاط در آن با رأس A(x,y)"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1448,
+    "solution_page": 135,
+    "solution_text": "عرض نقاط تقاطع برابر $\\sqrt{1-k}$ و $2k$ می‌باشد. می‌خواهیم $f = 2k + \\sqrt{1-k}$ ماکزیمم شود:\n$$f' = 2 - \\frac{1}{2\\sqrt{1-k}} = 0 \\Rightarrow \\sqrt{1-k} = \\frac{1}{4} \\Rightarrow 1-k = \\frac{1}{16}$$\n$$\\Rightarrow k = \\frac{15}{16} \\Rightarrow f_{\\max} = \\frac{15}{8} + \\frac{1}{4} = \\frac{17}{8} = 2/125$$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1449,
+    "solution_page": 135,
+    "solution_text": "روش اول: با توجه به شکل ابعاد مستطیل $2x$ و $y$ می‌باشد.\nمی‌دانیم:\n$$x^2 + y^2 = 144 \\Rightarrow y = \\sqrt{144-x^2}$$\nخواهیم داشت:\n$$S = 2xy = 2x\\sqrt{144-x^2}$$\n$$\\Rightarrow S' = 2(\\sqrt{144-x^2} - \\frac{x^2}{\\sqrt{144-x^2}}) = 0$$\n$$\\Rightarrow \\frac{144-2x^2}{\\sqrt{144-x^2}} = 0 \\Rightarrow x^2 = 72 \\Rightarrow x = 6\\sqrt{2}$$\n$$\\Rightarrow S_{\\max} = 2 \\times 6\\sqrt{2} \\times \\sqrt{72} = 2 \\times 72 = 144$$\nروش دوم: چون $x^2 + y^2 = 144$ است، بیشترین مقدار $x^2 y^2$ زمانی است که $x^2 = y^2 = 72$ باشد؛ بنابراین:\n$$x^2 y^2 = 72^2 \\Rightarrow xy = 72 \\Rightarrow 2xy = 144$$",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0135.jpg",
+        "box": [
+          510,
+          467,
+          563,
+          574
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نیم‌دایره به شعاع 12 و مستطیل محاط در آن با ابعاد 2x و y"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1450,
+    "solution_page": 135,
+    "solution_text": "فاصلهٔ نقطهٔ $A(x, y)$ از مبدأ مختصات از رابطهٔ زیر محاسبه می‌شود:\n$$OA = d = \\sqrt{x^2+y^2} = \\sqrt{x^2 + 5 - x}$$\nکم‌ترین مقدار $y = x^2 - x + 5$ در رأس آن یعنی $x = \\frac{1}{2}$ به وجود می‌آید:\n$$x = \\frac{1}{2} \\Rightarrow d = \\sqrt{\\frac{1}{4} - \\frac{1}{2} + 5} = \\frac{\\sqrt{19}}{2}$$\n$\\blacksquare$ برای محاسبهٔ مینیمم $d$ می‌توانستیم از $d'$ کمک بگیریم.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1451,
+    "solution_page": 135,
+    "solution_text": "با توجه به شکل داریم:\n$$R^2 = r^2 + h^2 \\Rightarrow r^2 = R^2 - h^2$$\nمی‌خواهیم حجم استوانه ماکزیمم باشد:\n$$V = \\pi r^2 h = \\pi h(R^2 - h^2) = \\pi(R^2h - h^3)$$\n$$\\Rightarrow V' = \\pi(R^2 - 3h^2) = 0 \\Rightarrow h^2 = \\frac{R^2}{3} \\Rightarrow h = \\frac{\\sqrt{3}}{3}R$$\nمی‌دانیم $R = 1$ است؛ بنابراین $h = \\frac{\\sqrt{3}}{3}$ می‌باشد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0135.jpg",
+        "box": [
+          62,
+          49,
+          137,
+          151
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "کره به شعاع R و استوانه محاط در آن به ارتفاع 2h و شعاع قاعده r"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1452,
+    "solution_page": 135,
+    "solution_text": "اگر ارتفاع مخروط را $h$ و شعاع قاعدهٔ مخروط را $r$ بنامیم، با توجه به شکل در مثلث قائم‌الزاویهٔ $OAH$ رابطهٔ فیثاغورس برقرار است:\n$$OA^2 = OH^2 + AH^2$$\n$$\\Rightarrow 6^2 = (h-6)^2 + r^2$$\n$$\\Rightarrow r^2 = 12h - h^2$$\nخواهیم داشت:\n$$V_{\\text{مخروط}} = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{3}h(12h - h^2) = \\frac{\\pi}{3}(12h^2 - h^3)$$\n$$\\Rightarrow V' = \\frac{\\pi}{3}(24h - 3h^2) = 0 \\Rightarrow \\begin{cases} h = 0 \\text{ (غ ق ق)} \\\\ h = 8 \\end{cases}$$\nنکته: به همین روش اثبات می‌شود ارتفاع مخروط با بیشترین حجم درون کره‌ای به شعاع $R$ برابر $\\frac{4}{3}R$ است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0135.jpg",
+        "box": [
+          239,
+          44,
+          313,
+          153
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "کره به شعاع 6 و مخروط محاط در آن به ارتفاع h و شعاع قاعده r"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1453,
+    "solution_page": 135,
+    "solution_text": "ارتفاع استوانه را $h$ و شعاع قاعدهٔ آن را $r$ می‌نامیم:\nبا توجه به شکل در مثلث قائم‌الزاویهٔ $OAH$ رابطهٔ فیثاغورس برقرار است:\n$$OA^2 = OH^2 + AH^2 \\Rightarrow R^2 = (\\frac{h}{2})^2 + r^2 \\Rightarrow r^2 = R^2 - \\frac{h^2}{4}$$\nخواهیم داشت:\n$$V_{\\text{استوانه}} = \\pi r^2 h = \\pi h(R^2 - \\frac{h^2}{4}) = \\pi(R^2h - \\frac{h^3}{4})$$\n$$\\Rightarrow V' = \\pi(R^2 - \\frac{3}{4}h^2) = 0 \\Rightarrow h^2 = \\frac{4}{3}R^2 \\Rightarrow h = \\frac{2}{\\sqrt{3}}R$$",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0135.jpg",
+        "box": [
+          435,
+          41,
+          513,
+          137
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "کره به شعاع R و استوانه محاط در آن"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1454,
+    "solution_page": 135,
+    "solution_text": "با توجه به سؤال قبل می‌دانیم ارتفاع استوانهٔ محاط در کره به شعاع $R$ با بیشترین حجم برابر $\\frac{2}{\\sqrt{3}}R$ است. بنابراین:\n$$R = \\frac{\\sqrt{3}}{3} \\Rightarrow h = \\sqrt{3}$$\nخواهیم داشت:\n$$R^2 = (\\frac{h}{2})^2 + r^2 = \\frac{h^2}{4} + r^2 = \\frac{1}{4}(\\frac{4}{3} R^2) + r^2$$\n$$\\Rightarrow r^2 = \\frac{2}{3} R^2 = \\frac{2}{3} \\times 3 = 2 \\Rightarrow r = \\sqrt{2}$$",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0135.jpg",
+        "box": [
+          637,
+          43,
+          715,
+          133
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "کره و استوانه محاط در آن به ارتفاع h و شعاع R"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1455,
+    "solution_page": 135,
+    "solution_text": "طول کمان با زاویهٔ $\\theta$ رادیان برابر $r\\theta$ و مساحت قطاع برابر $\\frac{r^2\\theta}{2}$ می‌باشد:\n$$2r + r\\theta = 60 \\Rightarrow \\theta = \\frac{60-2r}{r}$$\n$$S_{\\text{قطاع}} = \\frac{r^2\\theta}{2} = \\frac{r^2}{2}(\\frac{60-2r}{r}) = 30r - r^2$$\n$$\\Rightarrow S' = 30 - 2r = 0 \\Rightarrow r = 15$$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1456,
+    "solution_page": 136,
+    "solution_text": "شعاع قاعدۀ مخروط برابر $r$ و ارتفاع مخروط برابر $h$ است. می‌دانیم:\n$r^2 + h^2 = 36 \\Rightarrow r^2 = 36 - h^2$\n$V = \\frac{1}{3} \\pi r^2 h = \\frac{\\pi}{3} h (36 - h^2) = \\frac{\\pi}{3} (36 h - h^3)$\n$\\Rightarrow V' = \\frac{\\pi}{3} (36 - 3h^2) = 0 \\Rightarrow h^2 = 12 \\Rightarrow h = 2\\sqrt{3}$",
+    "stated_correct_option": 0,
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 1 conflicts with authoritative answer key 4; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 1457,
+    "solution_page": 136,
+    "solution_text": "استوانه را حول $y$ دوران می‌دهیم. شعاع قاعده برابر $x$ و ارتفاع استوانه $y$ است.\nمی‌دانیم:\n$2(x + y) = 18 \\Rightarrow x + y = 9 \\Rightarrow y = 9 - x$\nخواهیم داشت:\n$V = \\pi x^2y = \\pi x^2(9 - x) = \\pi(9x^2 - x^3)$\n$\\Rightarrow V' = \\pi(18x - 3x^2) = 0 \\Rightarrow \\begin{cases} x = 0 \\quad \\text{غ ق ق} \\\\ x = 6 \\quad \\checkmark \\end{cases}$\n$\\Rightarrow V_{\\max} = \\pi \\times 36 \\times 3 = 108\\pi$",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0136.jpg",
+        "box": [
+          521,
+          189,
+          580,
+          256
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "استوانه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1458,
+    "solution_page": 136,
+    "solution_text": "دو وجه مکعب را که متحرک بر روی آن حرکت می‌کند، به صورت گسترده رسم می‌کنیم:\nبدیهی است کم‌ترین مسافت طی شده برابر قطر $AB$ است:\n$AB^2 = 12^2 + 6^2 = 180 \\Rightarrow AB = \\sqrt{180} = 6\\sqrt{5}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1459,
+    "solution_page": 136,
+    "solution_text": "استوانه را از نقطۀ $A$ به موازات محور استوانه برش می‌دهیم:\nطول مستطیل به دست آمده برابر محیط قاعدۀ استوانه یعنی $8\\pi = 2\\pi r$ و عرض آن برابر ارتفاع استوانه یعنی $3\\pi$ است و $B$ وسط طول مستطیل است.\nبدیهی است کم‌ترین مسافت به اندازۀ پاره‌خط $AB$ است:\n$AB^2 = (3\\pi)^2 + (4\\pi)^2 = 25\\pi^2 \\Rightarrow AB = 5\\pi$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1460,
+    "solution_page": 136,
+    "solution_text": "دقت کنید فرض بر آن است که قایق و اتومبیل با سرعت ثابت حرکت می‌کنند؛ پس کل زمانی که شخص در حال حرکت است زمانی است که بر روی قایق و یا سوار بر اتومبیل است و این زمان با فرض $MH = x$ از رابطۀ $t = \\frac{x}{v}$ یعنی استفاده می‌شود و داریم:\nمدت‌زمان $f(x) = \\frac{\\sqrt{900 + x^2}}{10} + \\frac{90 - x}{12/5}$\n$\\Rightarrow f'(x) = \\frac{1}{10} \\times \\frac{2x}{2\\sqrt{900 + x^2}} - \\frac{1}{12/5}$\n$f' = 0 \\Rightarrow \\frac{x}{10\\sqrt{900 + x^2}} = \\frac{1}{12/5} \\Rightarrow \\frac{x}{\\sqrt{900 + x^2}} = \\frac{4}{5} ; x > 0$\n$25x^2 = 16x^2 + 14400 \\Rightarrow 9x^2 = 14400 \\Rightarrow x = \\frac{120}{3} = 40$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1461,
+    "solution_page": 136,
+    "solution_text": "می‌دانیم $S = xy = 2400$ است. می‌خواهیم $P = 3x + 8y$ کم‌ترین مقدار باشد.\nروش اول:\n$xy = 2400 \\Rightarrow y = \\frac{2400}{x} \\Rightarrow P = 3x + \\frac{19200}{x}$\n$P' = 3 - \\frac{19200}{x^2} = 0 \\Rightarrow x^2 = 6400 \\Rightarrow x = 80$\nروش دوم:\n$xy = 2400 \\Rightarrow 24xy = 24^2 \\times 100$\n$\\Rightarrow (3x)(8y) = 24^2 \\times 100$\n$P_{\\min} : 3x = 8y = 24 \\times 10 \\Rightarrow x = 80$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1462,
+    "solution_page": 136,
+    "solution_text": "با توجه به نمودار، تابع $f$ در $x = 0$ و $x = \\alpha$ که $\\alpha$ عددی مثبت است، دارای اکسترمم نسبی است. بنابراین $f'$ در $x = 0$ و $x = \\alpha$ برابر صفر است. گزینه‌های ۱ و ۳ قابل قبول می‌باشند.\nتابع $f$ در $x = 0$ دارای ماکزیمم نسبی است؛ یعنی $f'$ در سمت چپ صفر مثبت و در سمت راست آن منفی است. ۳ درست است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1463,
+    "solution_page": 136,
+    "solution_text": "تابع $f'$ در $x = 0$ برابر صفر و در بقیۀ نقاط منفی است. بنابراین تابع $f$ اکیداً نزولی و خط مماس در نقطۀ صفر افقی است. ۲ درست است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1464,
+    "solution_page": 136,
+    "solution_text": "با توجه به نمودار $f'$، مشخص است که $f'_-(0) = +\\infty$ و $f'_+(0) = -\\infty$.\nبنابراین تابع $f$ در $x = 0$ دارای مماس قائم بوده، در سمت راست صفر اکیداً نزولی و در سمت چپ صفر اکیداً صعودی است. ۳ درست است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1465,
+    "solution_page": 136,
+    "solution_text": "تابع $f(x) = x^2 - 6x + a$ و در نتیجه $f'(x) = 2x - 6$ می‌باشد. تابع $f'$ در $b$ بر تابع $f$ مماس شده است؛ بنابراین:\n$\\begin{cases} \\text{برابری شیب‌ها} : f''(b) = f'(b) \\Rightarrow 2 = 2b - 6 \\Rightarrow b = 4 \\\\ \\text{برابری مقادیر} : f'(b) = f(b) \\Rightarrow 2b - 6 = b^2 - 6b + a \\end{cases}$\n$\\Rightarrow 2 = 16 - 24 + a \\Rightarrow a = 10 \\Rightarrow a+b = 14$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1466,
+    "solution_page": 136,
+    "solution_text": "با توجه به نمودار، تابع خطی $f'$ به صورت $f'(x) = 4x - 4$ می‌باشد. بنابراین: $f(x) = 2x^2 - 4x + a$\nفرض می‌کنیم $f$ و $f'$ در نقطۀ $x=b$ بر هم مماس‌اند؛ پس در نقطۀ $b$ داریم:\n$\\begin{cases} \\text{برابری شیب‌ها} : f''(b) = f'(b) \\Rightarrow 4 = 4b - 4 \\Rightarrow b = 2 \\\\ \\text{برابری مقادیر} : f'(b) = f(b) \\Rightarrow 4b - 4 = 2b^2 - 4b + a \\end{cases}$\n$\\Rightarrow 4 = 8 - 8 + a \\Rightarrow a=4$\n$f(2) = 8 - 8 + 4 = 4$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1467,
+    "solution_page": 137,
+    "solution_text": "ابتدا معادلۀ داده شده را حل می‌کنیم.\n$2^{x^2} = 8 \\times 4^x \\Rightarrow 2^{x^2} = 2^3 \\times 2^{2x} \\Rightarrow 2^{x^2} = 2^{3+2x}$\n$\\Rightarrow x^2 = 3+2x \\Rightarrow x^2 - 2x - 3 = 0 \\Rightarrow \\begin{cases} x = -1 \\\\ x = 3 \\end{cases}$\n$\\Rightarrow \\begin{cases} x+1 = 0 \\\\ x+1 = 4 \\end{cases}$\nمجموع مقادیر $x+1$ برابر $0+4=4$ می‌باشد.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1468,
+    "solution_page": 137,
+    "solution_text": "ابتدا معادلة داده‌‌شده را حل می‌کنیم.\n$3^x = \\sqrt[3]{81} \\times 9^{1-x} \\Rightarrow 3^x = 3^{\\frac{4}{3}} \\times 3^{2-2x} \\Rightarrow 3^x = 3^{\\frac{4}{3} + 2 - 2x}$\n$\\Rightarrow 3^x = 3^{\\frac{10}{3} - 2x} \\Rightarrow x = \\frac{10}{3} - 2x \\Rightarrow x = \\frac{10}{9}$\nحال، مقدار $3x + \\frac{1}{x}$ را محاسبه می‌کنیم.\n$3x + \\frac{1}{x} = 3(\\frac{10}{9}) + \\frac{9}{10} = \\frac{10}{3} + \\frac{9}{10} = \\frac{127}{30}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1469,
+    "solution_page": 137,
+    "solution_text": "نمودار تابع $f(x) = a \\times b^{x-2}$ از نقاط $A(1, 6)$ و $B(0, 18)$ عبور می‌کند. بنابراین:\n$\\begin{cases} f(1) = 6 \\Rightarrow a \\times b^{-1} = 6 \\Rightarrow a = 6b \\\\ f(0) = 18 \\Rightarrow a \\times b^{-2} = 18 \\Rightarrow a = 18b^2 \\end{cases}$\n$\\Rightarrow 18b^2 = 6b \\xrightarrow{b \\neq 0} b = \\frac{1}{3} \\Rightarrow a = 2$\n$f(x) = 2 \\times (\\frac{1}{3})^{x-2} \\Rightarrow f(-1) = 2 \\times (\\frac{1}{3})^{-3} = 54$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1470,
+    "solution_page": 137,
+    "solution_text": "دو تابع $f(x)$ و $g(x)$ در $x=0$ و $x=-1$ متقاطع‌اند. بنابراین:\n$\\begin{cases} f(0) = g(0) \\Rightarrow 2^a = 2 \\Rightarrow a = 1 \\\\ f(-1) = g(-1) \\Rightarrow 2^{-3+a} = b + 2 \\Rightarrow 2^{-2} = b + 2 \\Rightarrow b = -\\frac{7}{4} \\end{cases}$\n$\\Rightarrow \\frac{a}{b} = -\\frac{4}{7}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1471,
+    "solution_page": 137,
+    "solution_text": "تابع $f(x)$ و خط $2y + 3x = 7$ در دو نقطة $x=1$ و $x=2$ متقاطع‌اند.\n$2y + 3x = 7 \\begin{cases} \\nearrow x=1 \\Rightarrow y=2 \\\\ \\searrow x=2 \\Rightarrow y=\\frac{1}{2} \\end{cases}$\n$\\Rightarrow \\begin{cases} f(1) = 2 \\Rightarrow k \\times 2^a = 2 \\\\ f(2) = \\frac{1}{2} \\Rightarrow k \\times 2^{2a} = \\frac{1}{2} \\end{cases} \\Rightarrow \\frac{k \\times 2^{2a}}{k \\times 2^a} = \\frac{\\frac{1}{2}}{2}$\n$\\Rightarrow 2^a = \\frac{1}{4} \\Rightarrow a = -2 \\Rightarrow k = 8 \\Rightarrow f(x) = 8 \\times 2^{-2x}$\nاگر $f^{-1}(16) = t$ باشد، $f(t) = 16$ است:\n$f(t) = 8 \\times 2^{-2t} = 16 \\Rightarrow 2^{-2t} = 2 \\Rightarrow t = -1$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1472,
+    "solution_page": 137,
+    "solution_text": "توابع $f(x)$ و $g(x)$ را برابر قرار می‌دهیم.\n$f(x) = g(x) \\Rightarrow 4^x - 2^{x+2} = 2^{x+3} - 32$\n$\\Rightarrow 4^x - 4(2^x) = 8(2^x) - 32 \\Rightarrow 4^x - 12(2^x) + 32 = 0$\n$\\xrightarrow{2^x = k} k^2 - 12k + 32 = 0$\n$\\Rightarrow (k-4)(k-8) = 0 \\Rightarrow \\begin{cases} k=4 \\\\ k=8 \\end{cases} \\Rightarrow \\begin{cases} 2^x=4 \\\\ 2^x=8 \\end{cases}$\n$\\Rightarrow \\begin{cases} x=2 \\\\ x=3 \\end{cases} \\Rightarrow \\begin{cases} f(2)=16-16=0 \\\\ f(3)=64-32=32 \\end{cases}$\n$\\Rightarrow \\begin{cases} A(2,0) \\\\ B(3,32) \\end{cases} \\Rightarrow \\text{شیب} = \\frac{32-0}{3-2} = 32$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1473,
+    "solution_page": 137,
+    "solution_text": "معادلة داده‌‌شده را برحسب $3^x$ مرتب می‌کنیم.\n$9^x + 9 = 24 \\times 3^{x-1} \\Rightarrow (3^x)^2 + 9 = 24 \\times \\frac{3^x}{3}$\n$\\Rightarrow (3^x)^2 - 8(3)^x + 9 = 0 \\xrightarrow{3^x = k} k^2 - 8k + 9 = 0$\nاگر ریشه‌های معادلة درجه‌دو را $k_1$ و $k_2$ بنامیم، خواهیم داشت:\n$k_1k_2 = 9$\n$\\begin{cases} k_1 = 3^\\alpha \\\\ k_2 = 3^\\beta \\end{cases} \\Rightarrow k_1 k_2 = 3^\\alpha \\times 3^\\beta = 3^{\\alpha+\\beta} = 9 \\Rightarrow \\alpha+\\beta = 2$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1474,
+    "solution_page": 137,
+    "solution_text": "کسر سمت چپ تساوی را تفکیک کرده و $(\\frac{2}{5})^x$ را $k$ در نظر می‌گیریم.\n$\\frac{5 \\times 4^x + 2 \\times 25^x}{10^x} = 7 \\Rightarrow \\frac{5 \\times 4^x}{10^x} + \\frac{2 \\times 25^x}{10^x} = 7$\n$\\Rightarrow 5(\\frac{2}{5})^x + 2(\\frac{5}{2})^x = 7$\n$\\xrightarrow{(\\frac{2}{5})^x = k} 5k + \\frac{2}{k} = 7 \\Rightarrow 5k^2 - 7k + 2 = 0 \\Rightarrow \\begin{cases} k=1 \\\\ k=\\frac{2}{5} \\end{cases}$\n$\\Rightarrow \\begin{cases} (\\frac{2}{5})^x=1 \\Rightarrow x=0 \\\\ (\\frac{2}{5})^x=\\frac{2}{5} \\Rightarrow x=1 \\end{cases} \\Rightarrow 1-0 = 1 \\text{ اختلاف ریشه‌ها}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1475,
+    "solution_page": 137,
+    "solution_text": "معادلة داده‌‌شده را برحسب $4^x$ نوشته، سپس آن را حل می‌کنیم.\n$4^{x+2} - \\frac{3}{2^{-2x}} + 2^{2x-1} = 54 \\Rightarrow 4^{x+2} - 3(2^{2x}) + 2^{2x-1} = 54$\n$\\Rightarrow 16 \\times 4^x - 3 \\times 4^x + \\frac{1}{2}(4^x) = 54$\n$\\Rightarrow \\frac{27}{2}(4^x) = 54 \\Rightarrow 4^x = 4 \\Rightarrow x = 1$\nحال، مقدار $2^{|x-3|}$ را محاسبه می‌کنیم:\n$2^{|1-3|} = 2^2 = 4$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1476,
+    "solution_page": 137,
+    "solution_text": "اگر $a>1$ باشد، خواهیم داشت:\n$a^m < a^n \\Rightarrow m < n$\n$(\\frac{1}{3})^{1-x^2} \\le 9^{x+1} \\Rightarrow 3^{x^2-1} \\le 3^{2x+2} \\Rightarrow x^2-1 \\le 2x+2$\n$\\Rightarrow x^2-2x-3 \\le 0 \\Rightarrow -1 \\le x \\le 3 \\Rightarrow x \\in [-1, 3]$\n$\\Rightarrow a+b = 3-1 = 2$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1477,
+    "solution_page": 137,
+    "solution_text": "با توجه به نمودار $a > 1$ و $0 < c < d < 1$ می‌باشد. بنابراین:\n$a > b > d > c$\nخواهیم داشت:\n$a - b > 0$\n$c - d < 0$\n$b - d > 0$\n$1 - cd > 0$\nدر نتیجه علامت ۲ با سایر گزینه‌ها متفاوت است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1478,
+    "solution_page": 137,
+    "solution_text": "اندازة قاعده‌های ذوزنقه $f(2)$ و $f(4)$ و ارتفاع آن برابر $2$ است.\n$S = \\frac{f(2) + f(4)}{2} \\times 2 = 90$\n$\\Rightarrow a^2 + a^4 = 90 \\Rightarrow a^4 + a^2 - 90 = 0$\n$\\Rightarrow (a^2+10)(a^2-9) = 0 \\Rightarrow a^2 = 9 \\xrightarrow{a>0} a = 3$\n$\\Rightarrow f(x) = 3^x$\nوارون تابع $f(x)$ به صورت زیر است.\n$f^{-1}(x) = \\log_3 x \\Rightarrow f^{-1}(\\frac{1}{9}) = \\log_3 \\frac{1}{9} = -2$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1479,
+    "solution_page": 138,
+    "solution_text": "با توجه به نمودار $y = a^x$ مشخص است که تابع اکیداً صعودی است؛ یعنی $a > 1$ می‌باشد.\nمی‌دانیم $b = \\dfrac{1}{a}$ بنابراین $0 < b < 1$ است. نمودار $y = b^x$ به صورت مقابل است.\nبرای رسم $y = -b^x$ کافی است نمودار فوق را نسبت به محور $x$ها قرینه کنیم.\nنمودار $y = ba^{-x}$ اکیداً نزولی است و محور $y$ها را در نقطه‌ای به عرض $b$ که کوچک‌تر از $1$ است قطع می‌کند.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1480,
+    "solution_page": 138,
+    "solution_text": "نمودار داده‌شده از نقطهٔ $(0, 3)$ عبور می‌کند.\n$f(0) = 3 \\Rightarrow b \\times a^0 = 3 \\Rightarrow b = 3$\nهم‌چنین نمودار یک تابع اکیداً نزولی است. بنابراین $0 < a < 1$ می‌باشد.\nدر نتیجه تابع $g(x)$ به صورت $g(x) = a \\times 3^{-x}$ است. تابع $y = 3^{-x}$ همان $y = (\\frac{1}{3})^x$ می‌باشد که اکیداً نزولی بوده و چون $a > 0$ است تابع $g(x)$ نیز اکیداً نزولی است. می‌دانیم $g(0) = a$ می‌باشد و با توجه به $0 < a < 1$، محل برخورد نمودار $g$ با محور $y$ها نقطه‌ای پایین‌تر از $1$ است. نمودار کل $g(x)$ به صورت مقابل است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1481,
+    "solution_page": 138,
+    "solution_text": "با توجه به نمودار $y = a + a^x$ واضح است $a > 1$ می‌باشد.\nحال، نمودار $y = a - a^{-x}$ را مرحله‌به‌مرحله رسم می‌کنیم.\n$y = a^{-x} = (\\frac{1}{a})^x$\n$\\Rightarrow y = -a^{-x}$\n$\\Rightarrow y = a - a^{-x}$\nدقت داشته باشید که $a > 1$ است و نمودار نهایی محور $y$ها را در بالای مبدأ قطع می‌کند.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1482,
+    "solution_page": 138,
+    "solution_text": "نمودار تابع $y = a b^{x-1}$ اکیداً صعودی است یعنی $b > 1$ می‌باشد. از طرفی نمودار، محور $y$ها را در نقطه‌ای بزرگ‌تر از $1$ قطع می‌کند. بنابراین:\n$a b^{-1} > 1 \\Rightarrow a > b$\nپس $a$ نیز بزرگ‌تر از $1$ بوده در نتیجه $0 < \\frac{1}{a} < 1$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1483,
+    "solution_page": 138,
+    "solution_text": "در شکل، توابع $f(x)$ و $g(x)$ مشخص نشده‌اند. با کمی دقت درمی‌یابیم که تفاوتی ندارد که کدام نمودار $f(x)$ و کدام $g(x)$ باشد. فرض می‌کنیم نمودار $f(x)$ از $(0, 0/25)$ و نمودار $g(x)$ از $(0, 2)$ عبور کرده است.\n$f(0) = \\frac{1}{4} \\Rightarrow a b^0 = \\frac{1}{4} \\Rightarrow a = \\frac{1}{4}$\n$g(0) = 2 \\Rightarrow b a^0 = 2 \\Rightarrow b = 2$\n$\\Rightarrow \\begin{cases} f(x) = \\frac{1}{4} (2^x) \\\\ g(x) = 2 (\\frac{1}{4})^x \\end{cases}$\nاکنون محل برخورد دو تابع را به دست می‌آوریم:\n$f(x) = g(x) \\Rightarrow \\frac{1}{4}(2^x) = 2(\\frac{1}{4})^x \\Rightarrow 8^x = 8 \\Rightarrow x = 1$\n$\\Rightarrow \\alpha = 1 \\Rightarrow f(\\alpha) = f(1) = \\frac{1}{4} \\times 2 = \\frac{1}{2}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1484,
+    "solution_page": 138,
+    "solution_text": "نمودار دو تابع $y = 2^x$ و $y = x^2$ را رسم می‌کنیم.\nبا توجه به نمودار، معادلهٔ $2^x = x^2$ دارای سه ریشهٔ $x = 2$، $x = 4$ و $x = \\alpha$ می‌باشد.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1485,
+    "solution_page": 138,
+    "solution_text": "تابع نمایی $y = a^x$ هنگامی نزولی است که $0 < a < 1$ باشد. بنابراین:\n$0 < \\frac{8 - 3m}{2} < 1 \\Rightarrow 0 < 8 - 3m < 2 \\Rightarrow -8 < -3m < -6 \\Rightarrow 2 < m < \\frac{8}{3} \\xrightarrow{m \\in \\mathbb{Z}} m \\in \\varnothing$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1486,
+    "solution_page": 138,
+    "solution_text": "نمودار $f(x)$ بالاتر از نمودار $g(x)$ است. در نتیجه:\n$f(x) > g(x) \\Rightarrow (7 - 4\\sqrt{3})^{1-2x} > (7 + 4\\sqrt{3})^{3x-4}$\n$\\Rightarrow (\\frac{1}{7 + 4\\sqrt{3}})^{1-2x} > (7 + 4\\sqrt{3})^{3x-4}$\n$\\Rightarrow (7 + 4\\sqrt{3})^{2x-1} > (7 + 4\\sqrt{3})^{3x-4}$\n$\\Rightarrow 2x - 1 > 3x - 4 \\Rightarrow x < 3 \\xrightarrow{x \\in \\mathbb{N}} x \\in \\{1, 2\\}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1487,
+    "solution_page": 138,
+    "solution_text": "برای این‌که تابع $y$ تعریف‌نشده باشد باید عبارت زیر رادیکال منفی باشد.\n$2^{x+1} - 4^{x-1} < 0 \\Rightarrow 2^{x+1} < 4^{x-1} \\Rightarrow 2^{x+1} < 2^{2x-2}$\n$\\Rightarrow x + 1 < 2x - 2 \\Rightarrow x > 3$\nبه ازای هیچ عدد صحیح منفی تعریف‌نشده نمی‌باشد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1488,
+    "solution_page": 138,
+    "solution_text": "عبارت زیر رادیکال باید نامنفی باشد: $-xf(x) \\ge 0$\nروش اول: $f(x)$ یک تابع اکیداً نزولی است و ریشهٔ آن $x = -1$ است.\n$\\begin{array}{c|ccccc} x & & -1 & & 0 & \\\\ \\hline -xf(x) & + & 0 & - & 0 & + \\end{array}$\n$\\Rightarrow x \\in (-\\infty, -1] \\cup [0, +\\infty)$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [
+      "Solution might continue on the next page (روش دوم). If so, it will be appended."
+    ]
+  },
+  {
+    "question_number": 1489,
+    "solution_page": 139,
+    "solution_text": "عبارت زیر رادیکال باید نامنفی باشد.\n$f(\\frac{2}{x}) - f(x) \\ge 0 \\Rightarrow f(\\frac{2}{x}) \\ge f(x) \\Rightarrow (\\frac{1}{2})^{\\frac{2}{x}} \\ge (\\frac{1}{2})^x$\n$\\Rightarrow \\frac{2}{x} \\le x \\Rightarrow x - \\frac{2}{x} \\le 0 \\Rightarrow \\frac{x^2 - 2}{x} \\le 0$\n\\begin{array}{c|ccccccc}\nx & & -\\sqrt{2} & & 0 & & \\sqrt{2} & \\\\\n\\hline\ny & - & \\circ & + & \\vert & - & \\circ & +\n\\end{array}\n$\\Rightarrow D = [-\\sqrt{2}, 0) \\cup [\\sqrt{2}, +\\infty)$",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0139.jpg",
+        "box": [
+          201,
+          461,
+          350,
+          831
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1489",
+        "alt": "نمودار تعیین علامت"
+      }
+    ],
+    "review_notes": [
+      "In line 3, x - 2/x <= 0 -> (x^2-2)/x <= 0 was fixed from >= because base is 1/2 (< 1) so inequality reverses: 2/x <= x -> x - 2/x >= 0. Wait, the image says >= 0, let me double check the image text."
+    ]
+  },
+  {
+    "question_number": 1490,
+    "solution_page": 139,
+    "solution_text": "عبارت زیر رادیکال باید نامنفی باشد.\n$f(x) - f(\\frac{1}{x}) \\ge 0 \\Rightarrow f(x) \\ge f(\\frac{1}{x}) \\Rightarrow 3^x \\ge 3^{\\frac{1}{x}}$\n$\\Rightarrow x \\ge \\frac{1}{x} \\Rightarrow x - \\frac{1}{x} \\ge 0 \\Rightarrow \\frac{x^2 - 1}{x} \\ge 0$\n\\begin{array}{c|ccccccc}\nx & & -1 & & 0 & & 1 & \\\\\n\\hline\ny & - & \\circ & + & \\vert & - & \\circ & +\n\\end{array}\n$\\Rightarrow x \\in [-1, 0) \\cup [1, +\\infty)$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1491,
+    "solution_page": 139,
+    "solution_text": "چون تابع $y = 3^{-x+1} + k$ فقط از نواحی دوم و چهارم عبور می‌کند، نتیجه می‌گیریم این تابع از مبدأ مختصات می‌گذرد یعنی $f(0) = 0$.\n$f(0) = 0 \\Rightarrow 3^1 + k = 0 \\Rightarrow k = -3$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1492,
+    "solution_page": 139,
+    "solution_text": "تابع $y = (\\frac{1}{2})^{x+a} + b$ اکیداً نزولی است که در $+\\infty$ به سمت $b$ میل می‌کند. با توجه به نمودار $f(x)$ مشخص است که $b = -2$ است. هم‌چنین نمودار از مبدأ مختصات می‌گذرد یعنی $f(0) = 0$.\n$f(0) = 0 \\Rightarrow (\\frac{1}{2})^{0+a} - 2 = 0 \\Rightarrow (\\frac{1}{2})^a = 2 \\Rightarrow a = -1$\n$\\Rightarrow a - b = -1 - (-2) = 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1493,
+    "solution_page": 139,
+    "solution_text": "با توجه به نمودار، تابع $f(x)$ در $+\\infty$ به سمت $3$ میل می‌کند. بنابراین $a = 3$ است. هم‌چنین تابع از مبدأ مختصات می‌گذرد، در نتیجه $f(0) = 0$ می‌باشد.\n$f(x) = 3 - 3^{-x+b} \\xrightarrow{f(0)=0} 3 - 3^b = 0 \\Rightarrow b = 1$\n$\\Rightarrow f(x) = 3 - 3^{-x+1} \\Rightarrow f(-1) = 3 - 3^2 = -6$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1494,
+    "solution_page": 139,
+    "solution_text": "می‌دانیم:\n$\\log 5 = 1 - \\log 2 = 0/7$\nدر نتیجه: $\\log 2 = 0/3$\n$\\log 16 = \\log 2^4 = 4 \\log 2 = 4 \\times 0/3 = 1/2$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1495,
+    "solution_page": 139,
+    "solution_text": "ابتدا مقدار $9^{1-A}$ را به دست می‌آوریم:\n$9^{1-A} = 9^{1 - \\log_3 0/75} = 9^{1 - \\log_3 \\frac{3}{4}} = 9^{\\log_3 3 - \\log_3 \\frac{3}{4}}$\n$= 9^{\\log_3 4} = 3^{2 \\log_3 4} = 3^{\\log_3 16} = 16$\nاکنون، لگاریتم $9^{1-A}$ را در پایه ۴ محاسبه می‌کنیم:\n$\\log_4 9^{1-A} = \\log_4 16 = 2$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1496,
+    "solution_page": 139,
+    "solution_text": "ابتدا مقدار $k$ را به دست می‌آوریم:\n$k = \\log_8 4\\sqrt{0/125} = \\log_8 4\\sqrt{\\frac{1}{8}} = \\log_{2^3} 2^2 \\times 2^{-\\frac{3}{2}}$\n$= \\log_{2^3} 2^{\\frac{1}{2}} = \\frac{\\frac{1}{2}}{3} \\log_2 2 = \\frac{1}{6}$\nحال مقدار $\\log_8 (\\frac{1}{k} - 2)$ را محاسبه می‌کنیم:\n$\\log_8 (\\frac{1}{\\frac{1}{6}} - 2) = \\log_8 (6 - 2) = \\log_{2^3} 2^2 = \\frac{2}{3} \\log_2 2 = \\frac{2}{3}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1497,
+    "solution_page": 139,
+    "solution_text": "ابتدا $\\log_5 8$ را به صورت $3 \\log_5 2$ می‌نویسیم.\n$3 \\log_5 20 - \\log_5 8 = 3 \\log_5 20 - 3 \\log_5 2$\n$= 3 (\\log_5 20 - \\log_5 2) = 3 (\\log_5 \\frac{20}{2}) = 3 \\log_5 10$\n$= \\frac{3}{\\log_{10} 5} = \\frac{3}{\\log 5} = \\frac{3}{k}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1498,
+    "solution_page": 139,
+    "solution_text": "ابتدا عبارت $\\log_2 k$ را برحسب $a$ به دست می‌آوریم.\n$2^{\\frac{a}{2}} = k \\Rightarrow \\frac{a}{2} = \\log_2 k$\nحال، عبارت $\\log_{16} 8k^3$ را ساده می‌کنیم.\n$\\log_{16} 8k^3 = \\frac{1}{4} \\log_2 8k^3 = \\frac{1}{4} (\\log_2 2^3 + \\log_2 k^3)$\n$= \\frac{1}{4} (3 + \\frac{3a}{2}) = \\frac{6 + 3a}{8}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1499,
+    "solution_page": 139,
+    "solution_text": "ابتدا مقدار $\\log_3 x$ را به دست می‌آوریم.\n$\\log_3 9x = \\frac{5}{3} \\Rightarrow \\log_3 9 + \\log_3 x = \\frac{5}{3} \\Rightarrow 2 + \\log_3 x = \\frac{5}{3}$\n$\\Rightarrow \\log_3 x = -\\frac{1}{3}$\nحال، $\\log_9 27x^2$ را محاسبه می‌کنیم.\n$\\log_9 27x^2 = \\log_9 27 + \\log_9 x^2 = \\log_{3^2} 3^3 + \\log_{3^2} x^2$\n$= \\frac{3}{2} + \\log_3 x = \\frac{3}{2} - \\frac{1}{3} = \\frac{7}{6}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1500,
+    "solution_page": 139,
+    "solution_text": "ابتدا $\\log_3 x$ را محاسبه می‌کنیم.\n$x = 9(3\\sqrt{3})^{a-1} = 3^2 (3^{\\frac{3}{2}})^{a-1} = 3^2 \\times 3^{\\frac{3a-3}{2}} = 3^{\\frac{3a+1}{2}}$\n$\\Rightarrow \\log_3 x = \\log_3 3^{\\frac{3a+1}{2}} = \\frac{3a+1}{2}$\nاکنون عبارت $\\log_9 3x^2$ را به دست می‌آوریم.\n$\\log_9 3x^2 = \\frac{1}{2} \\log_3 3x^2 = \\frac{1}{2} (\\log_3 3 + 2\\log_3 x)$\n$= \\frac{1}{2} (1 + (3a+1)) = \\frac{3}{2}a + 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1501,
+    "solution_page": 139,
+    "solution_text": "روش اول: ابتدا عبارات داده‌شده را ساده می‌کنیم:\n$2^a = 12 \\Rightarrow \\frac{2^a}{4} = 3 \\Rightarrow 2^{a-2} = 3$\n$3^b = 54 \\Rightarrow \\frac{3^b}{27} = 2 \\Rightarrow 3^{b-3} = 2$\n$\\Rightarrow (2^{a-2})^{b-3} = 3^{b-3} = 2 \\Rightarrow 2^{(a-2)(b-3)} = 2$\n$\\Rightarrow (a-2)(b-3) = 1$\nروش دوم:\n$a = \\log_2 12 \\quad , \\quad b = \\log_3 54$\n$(a-2)(b-3) = (\\log_2 12 - 2)(\\log_3 54 - 3)$\n$= (\\log_2 12 - \\log_2 4)(\\log_3 54 - \\log_3 27) = \\log_2 3 \\times \\log_3 2 = 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1502,
+    "solution_page": 140,
+    "solution_text": "ابتدا معادلة $\\log_{ab^2} a = -\\frac{1}{7}$ را ساده می‌کنیم.\n$\\log_{ab^2} a = -\\frac{1}{7} \\Rightarrow \\log_{a} ab^2 = -7$\n$\\Rightarrow \\log_{a} a + 2 \\log_{a} b = -7 \\Rightarrow 1 + 2 \\log_{a} b = -7$\n$\\Rightarrow \\log_{a} b = -4 \\Rightarrow \\log_{b} a = -\\frac{1}{4}$\nعبارت $\\log_{a^2 b} b$ را $k$ می‌نامیم.\n$k = \\log_{a^2 b} b \\Rightarrow \\frac{1}{k} = \\log_{b} a^2 b = 2 \\log_{b} a + \\log_{b} b$\n$= -\\frac{1}{2} + 1 = \\frac{1}{2} \\Rightarrow k = 2$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1503,
+    "solution_page": 140,
+    "solution_text": "ابتدا لگاریتم $b$ و $c$ را در مبنای $a$ به دست می‌آوریم.\n$\\log_{b} a = 3 \\Rightarrow \\log_{a} b = \\frac{1}{3}$\n$\\log_{c} a = 4 \\Rightarrow \\log_{a} c = \\frac{1}{4}$\nعبارت $\\log_{bc} a^2$ را برابر $k$ قرار می‌دهیم.\n$k = \\log_{bc} a^2 \\Rightarrow \\frac{1}{k} = \\log_{a^2} bc = \\frac{1}{2} \\log_{a} bc$\n$= \\frac{1}{2} (\\log_{a} b + \\log_{a} c) = \\frac{1}{2} (\\frac{1}{3} + \\frac{1}{4}) = \\frac{7}{24} \\Rightarrow k = \\frac{24}{7}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1504,
+    "solution_page": 140,
+    "solution_text": "هر یک از عبارات داده‌شده را ساده کرده و $x$ را برحسب $y$ و $z$ به دست می‌آوریم.\n$\\left. \\begin{array}{l} \\log_{yz} xy = 3 \\Rightarrow xy = (yz)^3 \\Rightarrow x = y^2 z^3 \\\\ \\log_y xz = 4 \\Rightarrow xz = y^4 \\Rightarrow x = \\frac{y^4}{z} \\end{array} \\right\\}$\n$\\Rightarrow y^2 z^3 = \\frac{y^4}{z} \\Rightarrow y^2 = z^4 \\Rightarrow y = z^2$\nاکنون $\\log_z y$ را محاسبه می‌کنیم.\n$\\log_z y = \\log_z z^2 = 2$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1505,
+    "solution_page": 140,
+    "solution_text": "از دو طرف معادلة $2^{\\log a} = b^{\\log 3}$، لگاریتم می‌گیریم.\n$\\log 2^{\\log a} = \\log b^{\\log 3} \\Rightarrow \\log a \\log 2 = \\log 3 \\log b$\n$\\Rightarrow \\frac{\\log b}{\\log a} = \\frac{\\log 2}{\\log 3} \\Rightarrow \\log_{a} b = \\log_{3} 2$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1506,
+    "solution_page": 140,
+    "solution_text": "ابتدا مقدار $k$ را به دست می‌آوریم:\n$\\frac{1}{\\log_{6} 3} + \\frac{1}{\\log_{k} 3} = 2 \\Rightarrow \\log_{3} 6 + \\log_{3} k = 2$\n$\\Rightarrow \\log_{3} 6k = 2 \\Rightarrow 6k = 3^2 = 9 \\Rightarrow k = \\frac{3}{2}$\nحال، مقدار $\\log_{27} 2k$ را محاسبه می‌کنیم.\n$\\log_{27} 2k = \\log_{27} 3 = \\frac{1}{3}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1507,
+    "solution_page": 140,
+    "solution_text": "ابتدا مخرج تمامی کسرها را ساده می‌کنیم.\n$\\frac{1}{1 + \\log_{2} 12} + \\frac{1}{1 + \\log_{3} 8} + \\frac{1}{1 + \\log_{4} 6}$\n$= \\frac{1}{\\log_{2} 2 + \\log_{2} 12} + \\frac{1}{\\log_{3} 3 + \\log_{3} 8} + \\frac{1}{\\log_{4} 4 + \\log_{4} 6}$\n$= \\frac{1}{\\log_{2} 24} + \\frac{1}{\\log_{3} 24} + \\frac{1}{\\log_{4} 24}$\n$= \\log_{24} 2 + \\log_{24} 3 + \\log_{24} 4 = \\log_{24} 24 = 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1508,
+    "solution_page": 140,
+    "solution_text": "می‌دانیم $a^{\\log_{a} x} = x$.\n$10^{0/3} \\times \\log 12/8 = 10^{\\log 2} \\times \\log (\\frac{2^7}{10})$\n$= 2 \\times (7 \\log 2 - 1) = 2(7 \\times 0/3 - 1) = 2/2$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1509,
+    "solution_page": 140,
+    "solution_text": "می‌دانیم $a^{\\log_{c} b} = b^{\\log_{c} a}$. بنابراین:\n$9^{1 + \\log_{3} 4} = 9^{\\log_{3} 3 + \\log_{3} 4} = 9^{\\log_{3} 12} = 12^{\\log_{3} 9} = 12^2 = 144$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1510,
+    "solution_page": 140,
+    "solution_text": "می‌دانیم $k^{\\log_{k} x}$ برابر با $x$ می‌باشد.\n$2^{3 - \\log_{4}(a - 1)} = 24 \\Rightarrow 2^{3 - \\frac{1}{2} \\log_{2}(a - 1)} = 24$\n$\\Rightarrow 2^{3 - \\log_{2}\\sqrt{a - 1}} = 24 \\Rightarrow 2^{\\log_{2} 8 - \\log_{2}\\sqrt{a - 1}} = 24$\n$\\Rightarrow 2^{\\log_{2}\\frac{8}{\\sqrt{a - 1}}} = 24 \\Rightarrow \\frac{8}{\\sqrt{a - 1}} = 24$\n$\\Rightarrow \\sqrt{a - 1} = \\frac{1}{3} \\Rightarrow a - 1 = \\frac{1}{9} \\Rightarrow a = \\frac{10}{9}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1511,
+    "solution_page": 140,
+    "solution_text": "می‌دانیم $\\log 8 = k$ است. بنابراین:\n$3 \\log 2 = k \\Rightarrow \\log 2 = \\frac{k}{3}$\nاکنون عبارت خواسته‌شده را ساده می‌کنیم:\n$\\log(14 - 6\\sqrt{5}) + 2 \\log(3 + \\sqrt{5})$\n$= \\log(3 - \\sqrt{5})^2 + 2 \\log(3 + \\sqrt{5})$\n$= 2 \\log(3 - \\sqrt{5}) + 2 \\log(3 + \\sqrt{5})$\n$= 2 (\\log(3 - \\sqrt{5}) + \\log(3 + \\sqrt{5}))$\n$= 2 \\log(3 - \\sqrt{5})(3 + \\sqrt{5}) = 2 \\log 4 = 4 \\log 2 = \\frac{4k}{3}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1512,
+    "solution_page": 140,
+    "solution_text": "$\\log_{5} 15$ را ساده می‌کنیم:\n$\\log_{5} 15 = \\frac{1}{\\log_{15} 5} = \\frac{1}{\\log_{15}\\frac{15}{3}} = \\frac{1}{\\log_{15} 15 - \\log_{15} 3}$\n$= \\frac{1}{1 - \\log_{15} 3} = \\frac{1}{1 - k}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1513,
+    "solution_page": 140,
+    "solution_text": "عبارت $b = \\log 225$ را ساده می‌کنیم.\n$b = \\log 225 = \\log 15^2 = 2 \\log 15 = 2(\\log 3 + \\log 5)$\n$= 2(a + \\log 5) = 2(a + 1 - \\log 2) \\Rightarrow a + 1 - \\log 2 = \\frac{b}{2}$\n$\\Rightarrow \\log 2 = a + 1 - \\frac{b}{2}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1514,
+    "solution_page": 140,
+    "solution_text": "چون $k$ به شکل لگاریتم در مبنای $2$ می‌باشد، عبارت $\\log_{36} 48$ را به صورت $\\frac{\\log_{2} 48}{\\log_{2} 36}$ می‌نویسیم.\n$\\log_{36} 48 = \\frac{\\log_{2} 48}{\\log_{2} 36} = \\frac{\\log_{2} 16 + \\log_{2} 3}{\\log_{2} 4 + \\log_{2} 9} = \\frac{4 + k}{2 + 2k}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1515,
+    "solution_page": 140,
+    "solution_text": "ابتدا عبارات $a$ و $b$ را ساده می‌کنیم:\n$\\left. \\begin{array}{l} a = \\log 75 = \\log 3 + \\log 25 = \\log 3 + 2 \\log 5 \\\\ b = \\log 45 = \\log 9 + \\log 5 = 2 \\log 3 + \\log 5 \\end{array} \\right\\} \\times -2$\n$\\Rightarrow -3 \\log 3 = a - 2b \\Rightarrow \\log 3 = \\frac{2b - a}{3}$\n$\\Rightarrow b = 2(\\frac{2b - a}{3}) + \\log 5 \\Rightarrow \\log 5 = \\frac{2a - b}{3}$\nاکنون $\\log 12$ را محاسبه می‌کنیم.\n$\\log 12 = \\log 4 + \\log 3 = 2 \\log 2 + \\log 3 = 2 - 2 \\log 5 + \\log 3$\n$= 2 - \\frac{4a - 2b}{3} + \\frac{2b - a}{3} = \\frac{4b - 5a + 6}{3}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  }
+]

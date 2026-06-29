@@ -18,7 +18,8 @@ data class RecentExam(
 )
 
 data class TopicStat(
-    val category: String,
+    val course: String,
+    val chapter: String?,
     val subject: Subject,
     val total: Int,
     val correct: Int,
@@ -27,7 +28,8 @@ data class TopicStat(
 )
 
 data class DistractorStat(
-    val category: String,
+    val course: String,
+    val chapter: String?,
     val subject: Subject,
     val option: Int,
     val count: Int,
@@ -84,6 +86,8 @@ class HistoryRepository(private val db: GaussDatabase) {
                     questionId = r.question.id,
                     subject = r.question.subject.raw,
                     category = r.question.category,
+                    chapter = r.question.subCategory,
+                    topic = r.question.topicKey,
                     status = r.status.raw,
                     selectedOption = r.selectedOption,
                     timeTakenSeconds = r.timeTakenSeconds,
@@ -149,18 +153,21 @@ class HistoryRepository(private val db: GaussDatabase) {
         val timed = rows.filter { it.timeTakenSeconds > 0 }
         val avgTime = if (timed.isNotEmpty()) timed.sumOf { it.timeTakenSeconds }.toDouble() / timed.size else 0.0
 
-        // Weak topics by category.
+        // Weak topics by the comprehensive taxonomy.
         data class Agg(var subject: Subject, var total: Int = 0, var correct: Int = 0, var time: Int = 0)
         val byCat = HashMap<String, Agg>()
         rows.forEach { r ->
-            val agg = byCat.getOrPut(r.category) { Agg(Subject.from(r.subject)) }
+            val key = "${r.subject}|${(r.topic ?: r.chapter).orEmpty()}"
+            val agg = byCat.getOrPut(key) { Agg(Subject.from(r.subject)) }
             agg.total += 1
             if (r.status == AttemptStatus.CORRECT.raw) agg.correct += 1
             agg.time += r.timeTakenSeconds
         }
-        val weak = byCat.map { (cat, a) ->
+        val weak = byCat.map { (key, a) ->
+            val parts = key.split("|", limit = 2)
             TopicStat(
-                category = cat,
+                course = parts.getOrElse(0) { "" },
+                chapter = parts.getOrElse(1) { "" }.ifBlank { null },
                 subject = a.subject,
                 total = a.total,
                 correct = a.correct,
@@ -174,10 +181,11 @@ class HistoryRepository(private val db: GaussDatabase) {
         rows.forEach { r ->
             val opt = r.selectedOption
             if (r.status != AttemptStatus.WRONG.raw || opt == null) return@forEach
-            val key = "${r.category}|$opt"
+            val topic = r.topic ?: r.chapter
+            val key = "${r.subject}|${topic.orEmpty()}|$opt"
             val cur = byTrap[key]
             byTrap[key] = cur?.copy(count = cur.count + 1)
-                ?: DistractorStat(r.category, Subject.from(r.subject), opt, 1)
+                ?: DistractorStat(r.subject, topic, Subject.from(r.subject), opt, 1)
         }
         val distractors = byTrap.values
             .filter { it.count >= 2 }

@@ -1,0 +1,139 @@
+{
+  "generated_at": "2026-06-26T01:57:17.728Z",
+  "scope": {
+    "workspace": "C:/Users/K1/Desktop/Projects/Gauss",
+    "allowed_write_scope": [
+      "scripts/repair_nardebam_duplicate_question_numbers.mjs",
+      "data/seed/review/nardebam/agent_reports"
+    ],
+    "raw_edit_policy": "No raw files were edited. The existing idempotent repair script was executed and was a no-op.",
+    "promote_broad": false
+  },
+  "commands_run": [
+    {
+      "command": "node scripts/join_nardebam_source.mjs",
+      "result": "Joined 2748 source questions; 769 conflict(s) -> data/seed/review/nardebam/join_conflicts.json",
+      "exit_code": 1,
+      "note": "Nonzero is expected while join conflicts remain."
+    },
+    {
+      "command": "node scripts/nardebam_progress.mjs",
+      "result": "Recorded metrics and conflict counts below."
+    },
+    {
+      "command": "node scripts/repair_nardebam_duplicate_question_numbers.mjs",
+      "result": "No-op; all built-in repairs were already applied."
+    },
+    {
+      "command": "node scripts/join_nardebam_source.mjs && node scripts/nardebam_progress.mjs",
+      "result": "Post-triage metrics unchanged; 769 conflicts remain."
+    }
+  ],
+  "before": {
+    "metrics": {
+      "math_questions": { "count": 1875, "target": 2042, "pct": 91.8 },
+      "math_solutions": { "count": 1912, "target": 2042, "pct": 93.6 },
+      "physics_questions": { "count": 1638, "target": 1630, "pct": 100.5 },
+      "physics_solutions": { "count": 1646, "target": 1630, "pct": 101.0 },
+      "math_answer_key": { "count": 2040, "target": 2042, "pct": 99.9 },
+      "physics_answer_key": { "count": 1907, "target": 1630, "pct": 117.0 },
+      "total_transcripts": { "count": 3513, "target": 3672, "pct": 95.7 },
+      "total_solutions": { "count": 3558, "target": 3672, "pct": 96.9 },
+      "total_answer_keys": { "count": 3947, "target": 3672, "pct": 107.5 }
+    },
+    "conflicts": {
+      "total": 769,
+      "by_issue": {
+        "duplicate_solution": 2,
+        "solution_key_mismatch": 373,
+        "missing_solution": 147,
+        "duplicate_question_number": 154,
+        "missing_solution+missing_key": 64,
+        "missing_key": 26,
+        "question_total": 2,
+        "invalid_options": 1
+      }
+    }
+  },
+  "after": {
+    "metrics": {
+      "math_questions": { "count": 1875, "target": 2042, "pct": 91.8 },
+      "math_solutions": { "count": 1912, "target": 2042, "pct": 93.6 },
+      "physics_questions": { "count": 1638, "target": 1630, "pct": 100.5 },
+      "physics_solutions": { "count": 1646, "target": 1630, "pct": 101.0 },
+      "math_answer_key": { "count": 2040, "target": 2042, "pct": 99.9 },
+      "physics_answer_key": { "count": 1907, "target": 1630, "pct": 117.0 },
+      "total_transcripts": { "count": 3513, "target": 3672, "pct": 95.7 },
+      "total_solutions": { "count": 3558, "target": 3672, "pct": 96.9 },
+      "total_answer_keys": { "count": 3947, "target": 3672, "pct": 107.5 }
+    },
+    "conflicts": {
+      "total": 769,
+      "by_issue": {
+        "duplicate_solution": 2,
+        "solution_key_mismatch": 373,
+        "missing_solution": 147,
+        "duplicate_question_number": 154,
+        "missing_solution+missing_key": 64,
+        "missing_key": 26,
+        "question_total": 2,
+        "invalid_options": 1
+      }
+    }
+  },
+  "repairs_applied": [],
+  "low_risk_repairs_rejected": [
+    {
+      "cluster": "math/derivative_applications duplicate_question_number 1-64",
+      "reason": "data/seed/review/nardebam/jules_repairs/math-topic-11.json covers only 1336-1466. Replacing raw math-topic-11 would remove local 1-64 duplicates but would not prove or fill the 1248-1335 boundary; overlapping 1346-1466 rows are not consistently text-identical."
+    },
+    {
+      "cluster": "math/combinatorics duplicate_question_number 1-88",
+      "reason": "The plausible global range depends on unresolved math-topic-14 end boundary. Current retry session is math-topic-15-global-1732-1822; no completed artifact exists locally."
+    },
+    {
+      "cluster": "physics/one_dimensional_motion duplicate_question_number 806-807",
+      "reason": "The completed boundary artifact confirms the motion rows match physics-topic-08 806-807, but physics-topic-07 also owns 806-807 with different content. Renumbering topic 08 would require validating downstream topic 08/09 boundaries."
+    },
+    {
+      "cluster": "physics missing_key 119-129 and 215-220",
+      "reason": "Available physics-answer-key-111-220 and physics-answer-key-repair artifacts do not contain keys for 119-129 or 215-220, so there is no additive idempotent key repair."
+    },
+    {
+      "cluster": "math/statistics missing_key 2041-2049 and missing_solution+missing_key 2050-2097, 2104-2119",
+      "reason": "Available math-answer-key-repair does not contain keys above 2040, and math-solutions-gap-1912-2119 contains no solution rows."
+    }
+  ],
+  "remaining_focus_clusters": {
+    "duplicate_question_number": [
+      { "subject": "math", "topic_key": "combinatorics", "range": "1-88", "count": 88 },
+      { "subject": "math", "topic_key": "derivative_applications", "range": "1-64", "count": 64 },
+      { "subject": "physics", "topic_key": "one_dimensional_motion", "range": "806-807", "count": 2 }
+    ],
+    "missing_solution": [
+      { "subject": "math", "topic_key": "absolute_value_floor", "range": "379-421", "count": 43 },
+      { "subject": "math", "topic_key": "geometry", "range": "1936-1948", "count": 13 },
+      { "subject": "math", "topic_key": "limits_continuity", "range": "1040-1069", "count": 30 },
+      { "subject": "math", "topic_key": "probability", "range": "1912, 1921-1935", "count": 16 },
+      { "subject": "math", "topic_key": "quadratic_equations_functions", "range": "204-213", "count": 10 },
+      { "subject": "math", "topic_key": "rational_inequalities_sign", "range": "234-242", "count": 9 },
+      { "subject": "math", "topic_key": "trigonometry", "range": "780, 927-928", "count": 3 },
+      { "subject": "math", "topic_key": "visual_thinking_conics", "range": "1666-1678, 1722-1731", "count": 23 }
+    ],
+    "missing_key": [
+      { "subject": "math", "topic_key": "statistics", "range": "2041-2049", "count": 9 },
+      { "subject": "physics", "topic_key": "physical_properties_matter", "range": "119-129", "count": 11 },
+      { "subject": "physics", "topic_key": "work_energy_power", "range": "215-220", "count": 6 }
+    ],
+    "missing_solution+missing_key": [
+      { "subject": "math", "topic_key": "statistics", "range": "2050-2097, 2104-2119", "count": 64 }
+    ]
+  },
+  "next_safe_inputs_needed": [
+    "Completed math-topic-11 global artifact covering 1248-1466 or source-confirmed replacement.",
+    "Completed math-topic-15 global artifact after math-topic-14 boundary is confirmed.",
+    "Completed physics-topic-07/08 boundary artifact deciding ownership and downstream numbering for 806-807.",
+    "Answer key artifact containing physics 119-129 and 215-220.",
+    "Math statistics answer key and solution artifact for 2041-2119."
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "answers": {
+    "1599": 4
+  },
+  "review_notes": [
+    "Filtered from math-answer-key-verified-mismatch-ranges.json; kept only replacements matching stated_correct_option in current solutions."
+  ],
+  "rejected": [
+    {
+      "question_number": 93,
+      "existing_option": 3,
+      "incoming_option": 2,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 405,
+      "existing_option": 4,
+      "incoming_option": 1,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1306,
+      "existing_option": 1,
+      "incoming_option": 4,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1307,
+      "existing_option": 3,
+      "incoming_option": 1,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1308,
+      "existing_option": 2,
+      "incoming_option": 4,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1309,
+      "existing_option": 2,
+      "incoming_option": 3,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1310,
+      "existing_option": 4,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1311,
+      "existing_option": 1,
+      "incoming_option": 3,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1312,
+      "existing_option": 1,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1313,
+      "existing_option": 4,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1314,
+      "existing_option": 4,
+      "incoming_option": 1,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1367,
+      "existing_option": 3,
+      "incoming_option": 1,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1563,
+      "existing_option": 4,
+      "incoming_option": 1,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1904,
+      "existing_option": 1,
+      "incoming_option": 4,
+      "solution_option": 1,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1908,
+      "existing_option": 3,
+      "incoming_option": 1,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1910,
+      "existing_option": 1,
+      "incoming_option": 4,
+      "solution_option": 2,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1912,
+      "existing_option": 2,
+      "incoming_option": 4,
+      "solution_option": 1,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1913,
+      "existing_option": 4,
+      "incoming_option": 2,
+      "solution_option": 1,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1917,
+      "existing_option": 1,
+      "incoming_option": 2,
+      "solution_option": 3,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1919,
+      "existing_option": 4,
+      "incoming_option": 1,
+      "solution_option": 3,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1920,
+      "existing_option": 4,
+      "incoming_option": 2,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1923,
+      "existing_option": 4,
+      "incoming_option": 1,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1925,
+      "existing_option": 2,
+      "incoming_option": 3,
+      "solution_option": 1,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1926,
+      "existing_option": 3,
+      "incoming_option": 4,
+      "solution_option": 2,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1927,
+      "existing_option": 4,
+      "incoming_option": 2,
+      "solution_option": 3,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1930,
+      "existing_option": 1,
+      "incoming_option": 3,
+      "solution_option": 2,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1932,
+      "existing_option": 3,
+      "incoming_option": 1,
+      "solution_option": 3,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1933,
+      "existing_option": 4,
+      "incoming_option": 2,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1935,
+      "existing_option": 1,
+      "incoming_option": 4,
+      "solution_option": 1,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 1936,
+      "existing_option": 3,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1937,
+      "existing_option": 2,
+      "incoming_option": 4,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1940,
+      "existing_option": 3,
+      "incoming_option": 4,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1941,
+      "existing_option": 1,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1942,
+      "existing_option": 1,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1943,
+      "existing_option": 4,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1944,
+      "existing_option": 3,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1946,
+      "existing_option": 1,
+      "incoming_option": 4,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 1947,
+      "existing_option": 1,
+      "incoming_option": 2,
+      "solution_option": null,
+      "reason": "missing_solution_option"
+    },
+    {
+      "question_number": 2012,
+      "existing_option": 4,
+      "incoming_option": 1,
+      "solution_option": 3,
+      "reason": "incoming_disagrees_with_solution"
+    },
+    {
+      "question_number": 2020,
+      "existing_option": 1,
+      "incoming_option": 2,
+      "solution_option": 4,
+      "reason": "incoming_disagrees_with_solution"
+    }
+  ]
+}

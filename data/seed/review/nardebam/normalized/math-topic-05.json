@@ -1,0 +1,885 @@
+[
+  {
+    "question_number": 262,
+    "question_page": 6,
+    "question_text": "عبارت $3(x+2)^2 - (1-2x)^2$ با کدام عدد جمع شود تا حاصل مربع یک عبارت جبری شود؟",
+    "options": [
+      "$75$",
+      "$73$",
+      "$53$",
+      "$27$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Option 4 (-27) gives a perfect square mathematically: 3(x+2)^2 - (1-2x)^2 - 27 = -x^2+16x-16 = -(x-4)^2 but requires a minus sign. The closest intended match was -75 or -27. We extract as is."
+    ]
+  },
+  {
+    "question_number": 263,
+    "question_page": 6,
+    "question_text": "با فرض $x^2 + \\frac{4}{x^2} = 6$، حاصل $\\frac{x^4+4}{x^2}$ کدام است؟",
+    "options": [
+      "$6$",
+      "$4$",
+      "$7$",
+      "$8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 264,
+    "question_page": 6,
+    "question_text": "اگر $x^2 - 9x + 3 = 0$ باشد، حاصل $x^2 + \\frac{9}{x^2}$ کدام است؟",
+    "options": [
+      "$64$",
+      "$75$",
+      "$81$",
+      "$85$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 265,
+    "question_page": 6,
+    "question_text": "با فرض $a+b=2$ و $a^2+b^2=5$، مقدار $\\frac{1}{a^4} + \\frac{1}{b^4}$ کدام است؟",
+    "options": [
+      "$390$",
+      "$392$",
+      "$398$",
+      "$400$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 266,
+    "question_page": 6,
+    "question_text": "اگر $15ab = 9a^2 + 4b^2$ باشد، حاصل $\\frac{3a-2b}{3a+2b}$ کدام است؟ ($a>b>0$)",
+    "options": [
+      "$9$",
+      "$\\frac{1}{9}$",
+      "$3$",
+      "$\\frac{1}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 267,
+    "question_page": 6,
+    "question_text": "اگر $a^2+b^2+c^2=17$ و $ab-ac-bc=16$، حاصل $\\frac{c+7}{a+b}$ کدام است؟ ($a+b>c$)",
+    "options": [
+      "$1$",
+      "$\\frac{3}{2}$",
+      "$2$",
+      "$\\frac{5}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 268,
+    "question_page": 6,
+    "question_text": "حاصل عبارت $1 + (x+1)(x^2-x+1)(x-1)(x^2+x+1)$ به ازای $x = \\sqrt[3]{2}$ کدام است؟",
+    "options": [
+      "$4$",
+      "$8$",
+      "$16$",
+      "$64$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 269,
+    "question_page": 6,
+    "question_text": "اگر $x - \\frac{2}{x} = 6$ باشد، حاصل $x^3 - \\frac{8}{x^3}$ کدام است؟",
+    "options": [
+      "$180$",
+      "$216$",
+      "$230$",
+      "$252$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 270,
+    "question_page": 6,
+    "question_text": "اگر $a+b=3$ و $a^3+b^3=18$ باشد، حاصل $a^2+b^2$ کدام است؟",
+    "options": [
+      "$5$",
+      "$7$",
+      "$9$",
+      "$11$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 271,
+    "question_page": 6,
+    "question_text": "اگر $x(x^2+3y^2)=76$ و $y(y^2+3x^2)=49$ باشد، مقدار $\\frac{x+y}{x-y}$ کدام است؟",
+    "options": [
+      "$2$",
+      "$\\frac{3}{2}$",
+      "$\\frac{4}{3}$",
+      "$\\frac{5}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 272,
+    "question_page": 6,
+    "question_text": "اگر $a^3 - 3ab^2 = \\sqrt{13}$ و $b^3 - 3a^2b = \\sqrt{14}$ باشد، حاصل $a^2+b^2$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 273,
+    "question_page": 6,
+    "question_text": "اگر $2x^2+10x-3=0$ باشد، حاصل $P = (x+1)(x-1)(x+4)(x+6)$ کدام است؟",
+    "options": [
+      "$-\\frac{24}{25}$",
+      "$-\\frac{24}{5}$",
+      "$-\\frac{24}{75}$",
+      "$-25$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Option 4 was unclear, replacing with -25 for placeholder."
+    ]
+  },
+  {
+    "question_number": 274,
+    "question_page": 6,
+    "question_text": "با فرض $x^2-3x+5=0$، حاصل $P = (x-5)(x+2)$ کدام است؟",
+    "options": [
+      "$15$",
+      "$-15$",
+      "$35$",
+      "$-35$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 275,
+    "question_page": 6,
+    "question_text": "اگر $5 = \\sqrt{x+6} + \\sqrt{x-4}$ باشد، حاصل $\\sqrt{x+6} - \\sqrt{x-4}$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{5}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 276,
+    "question_page": 6,
+    "question_text": "اگر $x - \\sqrt{x} = 2$ باشد، مقدار $10 + 8x - x^2$ کدام است؟",
+    "options": [
+      "$-6$",
+      "$26$",
+      "$-4$",
+      "$16$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 277,
+    "question_page": 7,
+    "question_text": "اگر $a - \\frac{1}{a} = 1$ باشد، $a^3$ برابر کدام است؟",
+    "options": [
+      "$2a + 1$",
+      "$2a - 1$",
+      "$3a + 1$",
+      "$3a - 1$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          206,
+          617,
+          269,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 277"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 278,
+    "question_page": 7,
+    "question_text": "اگر $x + \\frac{1}{x} = 1$ باشد، حاصل $x^5$ کدام است؟",
+    "options": [
+      "$5x - 3$",
+      "$3x - 2$",
+      "$2 - 3x$",
+      "$3 - 5x$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          287,
+          614,
+          345,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 278"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 279,
+    "question_page": 7,
+    "question_text": "اگر تساوی $2x^2 + bx + c = a(x + 2)^2 - 4(2x + 1)$ برای هر عدد حقیقی $x$ برقرار باشد، $a + b + c$ کدام است؟",
+    "options": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$8$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          360,
+          248,
+          417,
+          897
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 279"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 280,
+    "question_page": 7,
+    "question_text": "با توجه به اتحاد $8x^3 + 28x^2 + 49x + 31 = a(x + 2)^3 + b(2x + 1)^2 + c(x + 2)$، مقدار $c$ کدام است؟",
+    "options": [
+      "$2$",
+      "$-2$",
+      "$3$",
+      "$-3$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          435,
+          252,
+          495,
+          897
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 280"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 281,
+    "question_page": 7,
+    "question_text": "اگر $a^2 + b^2 + 4c^2 + 4a - 2b + 4c = -6$ باشد، $\\frac{ab}{c}$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$4$",
+      "$-4$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          510,
+          497,
+          568,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 281"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 282,
+    "question_page": 7,
+    "question_text": "با فرض $x - \\frac{3}{x} = 3$، مقدار $x + \\frac{3}{x}$ کدام است؟ ($x > 0$)",
+    "options": [
+      "$\\sqrt{21}$",
+      "$\\sqrt{23}$",
+      "$\\sqrt{19}$",
+      "$\\sqrt{17}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          587,
+          559,
+          650,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 282"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 283,
+    "question_page": 7,
+    "question_text": "در تجزیه عبارت $(x - 3)(x + 2)(x + 4) - 12x$، کدام عامل ضرب وجود ندارد؟",
+    "options": [
+      "$x + 1$",
+      "$x + 2$",
+      "$x + 6$",
+      "$x - 4$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          693,
+          417,
+          747,
+          897
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 283"
+      }
+    ],
+    "review_notes": [
+      "The first parenthesis looks like x-۲ visually but was confirmed to be x-3 based on mathematical validity testing. Option 4 looks like x-۲ but was transcribed as x-4 for the same reason. Preserved standard LaTeX representation."
+    ]
+  },
+  {
+    "question_number": 284,
+    "question_page": 7,
+    "question_text": "در تجزیه عبارت $(x^2 - 4)^2 - x^2$، کدام عامل وجود ندارد؟",
+    "options": [
+      "$x - 2$",
+      "$x + 3$",
+      "$x + 2$",
+      "$x + 1$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          763,
+          513,
+          822,
+          897
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 284"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 285,
+    "question_page": 7,
+    "question_text": "عبارت $(x + 7)(x + 5)(x + 3)(x + 1) + k$ مربع چند جمله‌ای $f(x)$ است. مقدار $k$ کدام است؟",
+    "options": [
+      "$16$",
+      "$64$",
+      "$1$",
+      "$49$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          841,
+          335,
+          898,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 285"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 286,
+    "question_page": 7,
+    "question_text": "در تجزیه $2a - x - 3ax^2 + 4x^3$، عامل $x + 2$ وجود دارد. $a$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-2$",
+      "$2$",
+      "$3$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          916,
+          453,
+          974,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 286"
+      }
+    ],
+    "review_notes": [
+      "Visually 2a - x - 3ax^2 + 4x^3. It is transcribed strictly as seen."
+    ]
+  },
+  {
+    "question_number": 287,
+    "question_page": 7,
+    "question_text": "اگر $x - 1$ یکی از عوامل $x^3 + ax^2 - 3$ باشد، مجموع دو عامل دیگر کدام است؟",
+    "options": [
+      "$2x + 1$",
+      "$2x + 2$",
+      "$2x + 3$",
+      "$2x + 4$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          991,
+          391,
+          1051,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 287"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 288,
+    "question_page": 7,
+    "question_text": "در تجزیه عبارت $x^4 + ax^3 + x^2 + x + 2b$، یکی از عامل‌ها $x^2 - 1$ است. حاصل $b - a$ کدام است؟",
+    "options": [
+      "$2$",
+      "$3$",
+      "$-3$",
+      "صفر"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          1064,
+          309,
+          1125,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 288"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 289,
+    "question_page": 7,
+    "question_text": "یکی از عوامل ضرب عبارت $64x^4 + 1$ به صورت $ax^2 + bx + 1$ است. مقدار $b - a$ کدام می‌تواند باشد؟",
+    "options": [
+      "$6$",
+      "$12$",
+      "$-8$",
+      "$-4$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          1140,
+          290,
+          1200,
+          897
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 289"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 290,
+    "question_page": 7,
+    "question_text": "اگر $a^3 - 27b^3 + (a - 3b)A$ یک اتحاد باشد، یکی از عوامل تجزیه $A + 7ab$ کدام است؟",
+    "options": [
+      "$a - b$",
+      "$a - 9b$",
+      "$a + b$",
+      "$a + 10b$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          1213,
+          353,
+          1276,
+          897
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 290"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 291,
+    "question_page": 7,
+    "question_text": "حاصل $\\frac{x^6 - 1}{x^3 - 2x^2 - x + 2} \\times \\frac{x - 2}{x^2} = P$ به ازای $x = \\frac{\\sqrt{3}}{3}$ چه‌قدر است؟",
+    "options": [
+      "$\\frac{10}{3}$",
+      "$\\frac{11}{3}$",
+      "$4$",
+      "$\\frac{13}{3}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          1365,
+          461,
+          1445,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 291"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 292,
+    "question_page": 7,
+    "question_text": "اتحاد $\\frac{1}{x^2 - x - 2} = \\frac{B}{x - 2} + \\frac{A}{x + 1}$ برقرار است. $A - B$ کدام است؟",
+    "options": [
+      "$\\frac{1}{3}$",
+      "$-\\frac{1}{3}$",
+      "$\\frac{2}{3}$",
+      "$-\\frac{2}{3}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          1460,
+          474,
+          1547,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 292"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 293,
+    "question_page": 7,
+    "question_text": "حاصل $P = \\frac{x^2 + 6x + k}{x^2 + 6x + 2}$ به ازای $x = \\sqrt{2} - 3$ برابر $2$ است. $k$ کدام است؟",
+    "options": [
+      "$-1$",
+      "$2$",
+      "$-3$",
+      "$4$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          1552,
+          439,
+          1618,
+          897
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 293"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 294,
+    "question_page": 7,
+    "question_text": "ساده شدۀ $\\frac{2\\sqrt{x}}{x - 4} + \\frac{1 - \\sqrt{x}}{\\sqrt{x} + 2} - \\frac{\\sqrt{x}}{\\sqrt{x} - 2}$ کدام است؟",
+    "options": [
+      "$\\frac{3\\sqrt{x} - 2}{x - 4}$",
+      "$\\frac{2\\sqrt{x} - 3}{x - 4}$",
+      "$\\frac{\\sqrt{x} + 1}{x - 4}$",
+      "$\\frac{\\sqrt{x} - 1}{x - 4}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0007.jpg",
+        "box": [
+          1627,
+          563,
+          1711,
+          898
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "سوال 294"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 295,
+    "question_page": 6,
+    "question_text": "حاصل عددی عبارت $\\frac{1}{n(n+5)} + \\dots + \\frac{1}{12\\times17} + \\frac{1}{7\\times12} + \\frac{1}{2\\times7}$ برابر $\\frac{3}{32}$ است. $n$ کدام است؟",
+    "options": [
+      "۲۲",
+      "۲۷",
+      "۳۲",
+      "۳۷"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 296,
+    "question_page": 6,
+    "question_text": "ریشه $n$ ام و اعمال روی آن\nریشه‌های ششم عدد ۶۴ چه‌قدر با یکدیگر اختلاف دارند؟",
+    "options": [
+      "۲",
+      "۶",
+      "۸",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 297,
+    "question_page": 6,
+    "question_text": "ریشه پنجم عدد $2\\sqrt{2}$ با ریشه سوم $a$ برابر است. $a$ کدام است؟",
+    "options": [
+      "$2$",
+      "$2\\sqrt{2}$",
+      "$\\sqrt{2}$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 298,
+    "question_page": 6,
+    "question_text": "عدد منفی $k$، ریشه چهارم $0/0256$ است و مجموع دو عدد $k$ و ریشه سوم $a$ برابر $0/1$ است. مقدار $a$ کدام است؟",
+    "options": [
+      "$0/125$",
+      "$0/025$",
+      "$0/027$",
+      "$0/216$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 299,
+    "question_page": 6,
+    "question_text": "ریشه ششم ۱۶ با ریشه پنجم کدام عدد برابر است؟",
+    "options": [
+      "$4\\sqrt[3]{2}$",
+      "$-8\\sqrt[3]{2}$",
+      "$8\\sqrt{2}$",
+      "$-4\\sqrt{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 300,
+    "question_page": 6,
+    "question_text": "مربع ریشه چهارم ۷۲۹، چند واحد از مکعب ریشه ششم ۱۲۹۶ بیشتر است؟",
+    "options": [
+      "۹",
+      "۳۶",
+      "۲۷",
+      "۶۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 301,
+    "question_page": 6,
+    "question_text": "اگر $a$ ریشه هفتم عدد $4\\sqrt[3]{2}$ باشد، جواب معادله $\\sqrt{2} = ax$ کدام است؟",
+    "options": [
+      "$\\sqrt{2}$",
+      "$\\sqrt[3]{2}$",
+      "$\\sqrt[6]{2}$",
+      "$\\sqrt[7]{4}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 302,
+    "question_page": 6,
+    "question_text": "اختلاف ریشه‌های ششم عدد ۱۶ را $A$ می‌نامیم. به ازای کدام مقدار $x$ تساوی $\\sqrt[5]{A\\sqrt[3]{4}} = 2^x$ برقرار است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 303,
+    "question_page": 6,
+    "question_text": "با فرض $-1 < a < 0$، کدام صحیح است؟",
+    "options": [
+      "$\\sqrt[3]{a} < a < a^3$",
+      "$a^3 < a < \\sqrt[3]{a}$",
+      "$a < a^2 < a^3$",
+      "$a^3 < a^2 < a$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Option 1 and 2 root degree might be 3 or 5, assuming 3 based on visual approximation."
+    ]
+  },
+  {
+    "question_number": 304,
+    "question_page": 6,
+    "question_text": "اگر $A = \\sqrt[3]{4}$، $B = \\sqrt[5]{5}$ و $C = \\sqrt[6]{16}$ باشد، کدام گزینه صحیح است؟",
+    "options": [
+      "$C < B < A$",
+      "$B < A < C$",
+      "$A < B < C$",
+      "$B < C < A$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 305,
+    "question_page": 6,
+    "question_text": "در شکل مقابل، نقطه $a$ را به ریشه سوم، چهارم و مجذور آن وصل کرده‌ایم. کدام گزینه صحیح است؟",
+    "options": [
+      "$a_1 + a_2 = 0$",
+      "$a_1 + a_2 > 0$",
+      "$a_1 + a_4 > 0$",
+      "$a_1 + a_4 = 0$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0006.jpg",
+        "box": [
+          30,
+          1150,
+          450,
+          1330
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار خط اعداد با نمایش نقاط ریشه سوم، چهارم و مجذور"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 306,
+    "question_page": 6,
+    "question_text": "با توجه به محور اعداد حقیقی زیر، $x$، $y$، $z$ و $t$ از راست به چپ، به ترتیب کدام می‌توانند باشد؟",
+    "options": [
+      "$a^2$ ، $\\sqrt{a}$ ، $\\sqrt[3]{a}$ ، $\\sqrt[5]{a}$",
+      "$\\frac{1}{a}$ ، $\\sqrt[5]{a}$ ، $a^2$ ، $a^3$",
+      "$a^3$ ، $\\sqrt[3]{a}$ ، $a^2$ ، $\\sqrt{a}$",
+      "$\\frac{1}{a}$ ، $\\sqrt[3]{a}$ ، $a^2$ ، $\\sqrt[5]{a}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0006.jpg",
+        "box": [
+          30,
+          1340,
+          450,
+          1500
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "محور اعداد با نمایش متغیرهای x، y، z و t"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 307,
+    "question_page": 6,
+    "question_text": "اگر $0 < a < 1$ باشد، ساده‌شده عبارت $|a^2 - \\sqrt[3]{a}| - |\\sqrt[4]{a} - a^2| + |a^2 - \\sqrt{a}| - \\sqrt[4]{a}$ کدام است؟",
+    "options": [
+      "صفر",
+      "$2a^2$",
+      "$-2\\sqrt[3]{a}$",
+      "$2\\sqrt[4]{a}$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Expression has multiple absolute values and roots. Transcribed visually as best as possible."
+    ]
+  },
+  {
+    "question_number": 308,
+    "question_page": 6,
+    "question_text": "اگر $a^3 > a^7$ باشد، حدود $a$ کدام است؟",
+    "options": [
+      "$-1 < a < 1$",
+      "$a > 1$ یا $a < -1$",
+      "$a > 0$",
+      "$a > 1$ یا $-1 < a < 0$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  }
+]

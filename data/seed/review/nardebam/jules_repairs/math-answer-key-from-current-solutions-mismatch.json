@@ -1,0 +1,1540 @@
+{
+  "answers": {
+    "51": 4,
+    "93": 4,
+    "128": 4,
+    "329": 1,
+    "330": 3,
+    "333": 3,
+    "340": 3,
+    "343": 3,
+    "345": 3,
+    "346": 1,
+    "349": 1,
+    "350": 4,
+    "352": 3,
+    "353": 1,
+    "354": 2,
+    "355": 4,
+    "356": 3,
+    "358": 1,
+    "360": 4,
+    "361": 3,
+    "364": 4,
+    "367": 2,
+    "369": 2,
+    "379": 4,
+    "381": 3,
+    "383": 1,
+    "385": 2,
+    "386": 1,
+    "387": 1,
+    "388": 2,
+    "389": 3,
+    "390": 2,
+    "391": 4,
+    "392": 3,
+    "393": 1,
+    "394": 3,
+    "395": 4,
+    "396": 2,
+    "397": 4,
+    "398": 1,
+    "399": 4,
+    "400": 3,
+    "401": 1,
+    "402": 1,
+    "403": 2,
+    "404": 2,
+    "406": 1,
+    "407": 3,
+    "408": 3,
+    "409": 1,
+    "410": 4,
+    "411": 4,
+    "413": 3,
+    "414": 2,
+    "417": 2,
+    "418": 4,
+    "420": 4,
+    "421": 1,
+    "424": 2,
+    "764": 4,
+    "777": 2,
+    "918": 4,
+    "919": 3,
+    "921": 1,
+    "923": 2,
+    "935": 1,
+    "988": 3,
+    "1016": 4,
+    "1083": 2,
+    "1085": 3,
+    "1150": 4,
+    "1223": 2,
+    "1306": 4,
+    "1307": 1,
+    "1308": 4,
+    "1309": 3,
+    "1310": 2,
+    "1311": 3,
+    "1312": 2,
+    "1313": 2,
+    "1314": 1,
+    "1339": 4,
+    "1367": 4,
+    "1456": 1,
+    "1609": 3,
+    "1610": 3,
+    "1611": 2,
+    "1614": 1,
+    "1615": 3,
+    "1738": 1,
+    "1739": 3,
+    "1741": 2,
+    "1742": 4,
+    "1743": 1,
+    "1744": 1,
+    "1745": 4,
+    "1746": 4,
+    "1747": 1,
+    "1748": 2,
+    "1749": 1,
+    "1751": 1,
+    "1752": 2,
+    "1753": 4,
+    "1755": 4,
+    "1757": 4,
+    "1758": 3,
+    "1759": 2,
+    "1761": 2,
+    "1762": 2,
+    "1763": 2,
+    "1766": 2,
+    "1767": 3,
+    "1768": 2,
+    "1769": 4,
+    "1770": 3,
+    "1771": 4,
+    "1772": 1,
+    "1773": 4,
+    "1775": 3,
+    "1776": 2,
+    "1789": 3,
+    "1790": 2,
+    "1791": 2,
+    "1792": 2,
+    "1793": 2,
+    "1794": 3,
+    "1795": 2,
+    "1796": 1,
+    "1797": 2,
+    "1798": 4,
+    "1799": 3,
+    "1800": 3,
+    "1801": 3,
+    "1802": 3,
+    "1804": 1,
+    "1806": 2,
+    "1807": 3,
+    "1808": 4,
+    "1810": 1,
+    "1811": 1,
+    "1812": 1,
+    "1813": 4,
+    "1814": 3,
+    "1815": 1,
+    "1816": 1,
+    "1817": 1,
+    "1818": 3,
+    "1819": 4,
+    "1820": 1,
+    "1822": 4,
+    "1908": 4,
+    "1909": 3,
+    "1910": 2,
+    "1912": 1,
+    "1913": 1,
+    "1915": 2,
+    "1917": 3,
+    "1918": 4,
+    "1919": 3,
+    "1921": 1,
+    "1922": 1,
+    "1925": 1,
+    "1926": 2,
+    "1927": 3,
+    "1928": 4,
+    "1930": 2,
+    "1931": 4,
+    "1934": 2,
+    "2012": 3,
+    "2020": 4
+  },
+  "review_notes": [
+    "Generated locally from join_conflicts solution_key_mismatch rows.",
+    "Less-strict repair: when an existing non-placeholder solution states a valid option, the answer key is aligned to that solution so the app remains internally consistent."
+  ],
+  "provenance": [
+    {
+      "subject": "math",
+      "question_number": 51,
+      "topic_key": "patterns_sequences",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 93,
+      "topic_key": "patterns_sequences",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 128,
+      "topic_key": "quadratic_equations_functions",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 329,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 330,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 333,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 340,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 343,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 345,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 346,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 349,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 350,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 352,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 353,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 354,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 355,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 356,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 358,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 360,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 361,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 364,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 367,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 369,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 379,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 381,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 383,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 385,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 386,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 387,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 388,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 389,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 390,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 391,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 392,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 393,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 394,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 395,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 396,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 397,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 398,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 399,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 400,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 401,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 402,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 403,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 404,
+      "topic_key": "absolute_value_floor",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 406,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 407,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 408,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 409,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 410,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 411,
+      "topic_key": "absolute_value_floor",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 413,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 414,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 417,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 418,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 420,
+      "topic_key": "absolute_value_floor",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 421,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 424,
+      "topic_key": "absolute_value_floor",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 764,
+      "topic_key": "trigonometry",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 777,
+      "topic_key": "trigonometry",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 918,
+      "topic_key": "trigonometry",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 919,
+      "topic_key": "trigonometry",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 921,
+      "topic_key": "trigonometry",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 923,
+      "topic_key": "trigonometry",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 935,
+      "topic_key": "trigonometry",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 988,
+      "topic_key": "limits_continuity",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1016,
+      "topic_key": "limits_continuity",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1083,
+      "topic_key": "limits_continuity",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1085,
+      "topic_key": "limits_continuity",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1150,
+      "topic_key": "limits_continuity",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1223,
+      "topic_key": "derivatives",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1306,
+      "topic_key": "derivative_applications",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1307,
+      "topic_key": "derivative_applications",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1308,
+      "topic_key": "derivative_applications",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1309,
+      "topic_key": "derivative_applications",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1310,
+      "topic_key": "derivative_applications",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1311,
+      "topic_key": "derivative_applications",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1312,
+      "topic_key": "derivative_applications",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1313,
+      "topic_key": "derivative_applications",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1314,
+      "topic_key": "derivative_applications",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1339,
+      "topic_key": "derivative_applications",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1367,
+      "topic_key": "derivative_applications",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1456,
+      "topic_key": "derivative_applications",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1609,
+      "topic_key": "analytic_geometry",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1610,
+      "topic_key": "analytic_geometry",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1611,
+      "topic_key": "analytic_geometry",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1614,
+      "topic_key": "analytic_geometry",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1615,
+      "topic_key": "analytic_geometry",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1738,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1739,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1741,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1742,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1743,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1744,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1745,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1746,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1747,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1748,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1749,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1751,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1752,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1753,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1755,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1757,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1758,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1759,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1761,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1762,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1763,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1766,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1767,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1768,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1769,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1770,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1771,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1772,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1773,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1775,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1776,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1789,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1790,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1791,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1792,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1793,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1794,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1795,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1796,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1797,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1798,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1799,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1800,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1801,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1802,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1804,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1806,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1807,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1808,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1810,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1811,
+      "topic_key": "combinatorics",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1812,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1813,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1814,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1815,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1816,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1817,
+      "topic_key": "combinatorics",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1818,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1819,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1820,
+      "topic_key": "combinatorics",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1822,
+      "topic_key": "combinatorics",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1908,
+      "topic_key": "probability",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1909,
+      "topic_key": "probability",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1910,
+      "topic_key": "probability",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1912,
+      "topic_key": "probability",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1913,
+      "topic_key": "probability",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1915,
+      "topic_key": "probability",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1917,
+      "topic_key": "probability",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1918,
+      "topic_key": "probability",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1919,
+      "topic_key": "probability",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1921,
+      "topic_key": "probability",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1922,
+      "topic_key": "probability",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1925,
+      "topic_key": "probability",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1926,
+      "topic_key": "probability",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1927,
+      "topic_key": "probability",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1928,
+      "topic_key": "probability",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1930,
+      "topic_key": "probability",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1931,
+      "topic_key": "probability",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 1934,
+      "topic_key": "probability",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 2012,
+      "topic_key": "statistics",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "math",
+      "question_number": 2020,
+      "topic_key": "statistics",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    }
+  ]
+}

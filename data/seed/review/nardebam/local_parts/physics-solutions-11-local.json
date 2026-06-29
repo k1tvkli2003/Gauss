@@ -1,0 +1,698 @@
+[
+  {
+    "question_number": 965,
+    "solution_page": 397,
+    "stated_correct_option": 4,
+    "classic_solution": "در حرکت با شتاب ثابت، اگر حرکت تندشونده یا کندشونده باشد، جابه‌جایی ثانیه‌های بعدی تغییر می‌کند. با توجه به برگشت متحرک، در بازه $2s$ تا $4s$ جابه‌جایی کل صفر است و سرعت متوسط این بازه نیز صفر می‌شود. از $\\Delta v=a\\Delta t$ شتاب $a=-4m/s^2$ و سپس $v_0=12m/s$ به دست می‌آید؛ سرعت متوسط هشت ثانیه اول از رابطه $v_{av}=\\frac12at+v_0$ برابر $-4m/s$ است و تندی متوسط $4m/s$ می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0202.jpg", "box": [190, 335, 790, 520], "placement": "solution", "alt": "نمودار خطی مکان‌های متحرک در ثانیه‌های مختلف و برگشت آن"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 966,
+    "solution_page": 397,
+    "stated_correct_option": 1,
+    "classic_solution": "برای دو ثانیه آخر که متحرک متوقف می‌شود، از $\\Delta x=-\\frac12a(\\Delta t)^2$ نتیجه می‌شود $a=-4m/s^2$. سپس از جابه‌جایی دو ثانیه اول، $v_0=12m/s$ و از $v=at+v_0$ زمان توقف $t=3s$ به دست می‌آید. تندی‌های متوسط ثانیه‌های اول و دوم به ترتیب $9$ و $3m/s$ هستند و اختلافشان $6m/s$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 967,
+    "solution_page": 397,
+    "stated_correct_option": 2,
+    "classic_solution": "با استفاده از رابطه مستقل از زمان $v_2^2-v_1^2=2a\\Delta x$، ابتدا $v_0$ محاسبه می‌شود. نسبت جابه‌جایی‌ها بین دو نقطه، مکان نقطه دوم را $x_2=-5m$ می‌دهد؛ پس فاصله آن از مبدأ مکان $5m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 968,
+    "solution_page": 397,
+    "stated_correct_option": 1,
+    "classic_solution": "سرعت در ابتدا و انتهای هر قطعه $k$ متری با رابطه $v^2-v_0^2=2ak$ محاسبه می‌شود. برای قطعه دوم و نهم، زمان‌ها از $\\Delta x=\\frac{v_i+v_f}{2}\\Delta t$ نوشته می‌شوند و نسبتشان پس از ساده‌سازی $t'=(\\sqrt2-1)t$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0202.jpg", "box": [185, 2010, 770, 2125], "placement": "solution", "alt": "تقسیم مسیر به قطعه‌های k متری و سرعت‌های ابتدا و انتهای هر قطعه"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 969,
+    "solution_page": 398,
+    "stated_correct_option": 2,
+    "classic_solution": "چون متحرک تغییر جهت نداده، تندی متوسط با اندازه سرعت متوسط برابر است. با میانگین سرعت‌های دو سر بازه، $v_B=15m/s$ و سپس $v_C=45m/s$ به دست می‌آید. از $a=\\Delta v/\\Delta t$ شتاب $7.5m/s^2$ و از رابطه مستقل از زمان، $\\Delta x_{AB}=15m$ محاسبه می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0203.jpg", "box": [75, 640, 530, 760], "placement": "solution", "alt": "نقاط O، A، B و C روی محور مکان با جابه‌جایی‌های داده‌شده"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 970,
+    "solution_page": 398,
+    "stated_correct_option": 3,
+    "classic_solution": "برای دو بازه $AB$ و $BC$، رابطه سرعت متوسط در حرکت با شتاب ثابت نوشته شده است. از دستگاه معادله‌ها، $a=2m/s^2$ و $v_A=14m/s$ به دست می‌آید و سپس با رابطه مستقل از زمان برای $OA$، مقدار $OA=49m$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 971,
+    "solution_page": 398,
+    "stated_correct_option": 3,
+    "classic_solution": "در حرکت با شتاب ثابت، سرعت متوسط هر بازه برابر میانگین سرعت‌های ابتدا و انتهای آن است. با جمع روابط بازه‌های $AB$، $CD$ و $AC$، سرعت متوسط در بازه $DB$ برابر $17m/s$ و چون تغییر جهت نداریم، تندی متوسط نیز همین مقدار است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 972,
+    "solution_page": 398,
+    "stated_correct_option": 3,
+    "classic_solution": "سه بار معادله $x=\\frac12at^2+v_0t+x_0$ برای سه لحظه نوشته و با تفاضل‌گیری حل می‌شود. حاصل، $a=2m/s^2$ و $v_0=3m/s$ است. سپس جابه‌جایی ثانیه دوم و سوم به‌ترتیب $6m$ و $8m$ به دست می‌آید و اختلاف جابه‌جایی‌های پیاپی برابر شتاب است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 973,
+    "solution_page": 399,
+    "stated_correct_option": 2,
+    "classic_solution": "با استفاده از این که سرعت لحظه میانی هر بازه برابر سرعت متوسط همان بازه است، از داده‌های بازه‌های $1s$ تا $2s$ و $2s$ تا $3s$، دستگاهی برای $a$ و $v_0$ تشکیل می‌شود. حل دستگاه می‌دهد $a=2m/s^2$ و $v_0=3m/s$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 974,
+    "solution_page": 399,
+    "stated_correct_option": 3,
+    "classic_solution": "از داده‌های سرعت متوسط بازه‌ها، $a=4m/s^2$ و $v_0=-4m/s$ به دست می‌آید. لحظه تغییر جهت $t'=1s$ است و مسافت تا این لحظه، با $\\Delta x=\\frac12at^2+v_0t$، برابر $2m$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 975,
+    "solution_page": 399,
+    "stated_correct_option": 2,
+    "classic_solution": "جابه‌جایی ثانیه $n$ام با رابطه $\\Delta x_n=(n-0.5)a+v_0$ نوشته می‌شود. از دو جابه‌جایی داده‌شده، $a=-2m/s^2$ و $v_0=11m/s$ به دست می‌آید و مسافت کل تا توقف $\\ell_s=\\frac{v_0^2}{2|a|}=30.25m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 976,
+    "solution_page": 399,
+    "stated_correct_option": 3,
+    "classic_solution": "از معادله مستقل از سرعت اولیه برای دو ثانیه پایانی، شتاب هواپیما $a=-8m/s^2$ به دست می‌آید. سپس رابطه جابه‌جایی ثانیه $n$ام برای بازه‌های داده‌شده استفاده می‌شود و سرعت‌های دو لحظه $20$ و $32m/s$ هستند؛ سرعت متوسط بین آن‌ها $26m/s$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 977,
+    "solution_page": 399,
+    "stated_correct_option": 3,
+    "classic_solution": "در روش اول از رابطه جابه‌جایی ثانیه $n$ام، $a=1m/s^2$ و سپس $\\Delta x_{0,8}=32m$ به دست می‌آید. در روش دوم از مساحت زیر نمودار $v-t$ استفاده شده و نسبت مساحت‌های ثانیه‌های متوالی برای حرکت از سکون با شتاب ثابت توضیح داده شده است.",
+    "media_regions": [
+      {"page_file": "page_0204.jpg", "box": [170, 2115, 615, 2385], "placement": "solution", "alt": "نمودار سرعت-زمان با ناحیه‌های S، 3S، 5S و 7S"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 978,
+    "solution_page": 400,
+    "stated_correct_option": 1,
+    "classic_solution": "با توجه به توقف پس از $3s$، $v_0=-3a$ است. از رابطه جابه‌جایی ثانیه $n$ام برای ثانیه‌های اول و سوم، نسبت $\\Delta x_1/\\Delta x_3=5$ به دست می‌آید و چون $\\Delta x_1=30m$ است، جابه‌جایی ثانیه سوم $6m$ می‌شود. راهبرد نموداری نیز با نسبت مساحت مثلث‌های مشابه همین نتیجه را می‌دهد.",
+    "media_regions": [
+      {"page_file": "page_0205.jpg", "box": [110, 170, 700, 560], "placement": "solution", "alt": "نمودار سرعت-زمان کاهنده و مثلث‌های مشابه برای ثانیه‌های پایانی"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 979,
+    "solution_page": 400,
+    "stated_correct_option": 2,
+    "classic_solution": "در دو ثانیه اول سرعت منفی است و جابه‌جایی $-10m$ می‌شود. با نوشتن رابطه مستقل از شتاب برای این بازه، $v_0=-10m/s$ و $a=5m/s^2$ به دست می‌آید. حل معادله $80=\\frac12at^2+v_0t$ زمان مثبت $t=8s$ را می‌دهد و با جمع نواحی نمودار نیز $\\Delta x=80m$ تأیید می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0205.jpg", "box": [95, 830, 680, 1470], "placement": "solution", "alt": "دو نمودار سرعت-زمان کاهنده و افزاینده با نواحی S"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 980,
+    "solution_page": 401,
+    "stated_correct_option": 2,
+    "classic_solution": "برای اتومبیل، نمودار $v-t$ رسم و مساحت زیر نمودار تا زمان $t'$ برابر $d/2$ گرفته می‌شود. با تشابه مثلث‌ها $S_{کل}/S_1=(t/t')^2$ و چون $S_1=d/2$ است، $t'=\\frac{\\sqrt2}{2}t$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0206.jpg", "box": [170, 205, 650, 450], "placement": "solution", "alt": "مثلث زیر نمودار سرعت-زمان با مساحت d/2 و کل d"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 981,
+    "solution_page": 401,
+    "stated_correct_option": 2,
+    "classic_solution": "برای دو بازه روی نمودار $v-t$، مساحت‌ها $S_1=d/4$ و $S_2=3d/4$ در نظر گرفته می‌شود. با تشابه مثلث‌ها $d/(d/4)=((t+t')/t)^2$ و در نتیجه $t=t'$ است. سپس از $S_{av}=\\frac{3d/4}{t'}=20m/s$، تندی متوسط کل $40/3m/s$ محاسبه می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0206.jpg", "box": [160, 650, 655, 885], "placement": "solution", "alt": "نمودار سرعت-زمان افزاینده با دو ناحیه S1 و S2"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 982,
+    "solution_page": 401,
+    "stated_correct_option": 1,
+    "classic_solution": "با توجه به راهبرد، در حرکت از سکون با شتاب ثابت، نسبت جابه‌جایی‌ها در ثانیه‌های متوالی فرد است. از نمودار سرعت-زمان، نسبت سرعت متوسط بازه آغازین به بازه داده‌شده محاسبه می‌شود و مقدار خواسته‌شده $40/3m/s$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0206.jpg", "box": [165, 1300, 680, 1605], "placement": "solution", "alt": "نمودار سرعت-زمان حرکت از سکون با سرعت‌های v و 2v"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 983,
+    "solution_page": 401,
+    "stated_correct_option": 2,
+    "classic_solution": "در بازه $4s$ تا $6s$ جابه‌جایی صفر است، پس دو ناحیه مثبت و منفی نمودار برابرند و مسافت $10m$ می‌شود. در بازه $3s$ تا $6s$ سرعت متوسط برابر سرعت لحظه میانی است؛ با تشابه مثلث‌های نمودار، ناحیه دوم $5m$ و تندی متوسط $10/3m/s$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0206.jpg", "box": [160, 1710, 690, 2450], "placement": "solution", "alt": "دو نمودار سرعت-زمان کاهنده با نواحی مثبت و منفی"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 984,
+    "solution_page": 402,
+    "stated_correct_option": 2,
+    "classic_solution": "از برابر نبودن تندی متوسط و سرعت متوسط نتیجه می‌شود متحرک تغییر جهت داده است. با میانگین سرعت‌های ابتدا و انتها و شتاب متوسط، $v_1=8m/s$ و $v_2=-12m/s$ به دست می‌آید. مسافت از جمع قدرمطلق دو جابه‌جایی تا توقف و پس از آن $52m$ است و تندی متوسط $5.2m/s$ می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0207.jpg", "box": [135, 970, 515, 1335], "placement": "solution", "alt": "نمودار سرعت-زمان خطی با دو ناحیه مثبت و منفی"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 985,
+    "solution_page": 402,
+    "stated_correct_option": 2,
+    "classic_solution": "از روابط تندی متوسط و سرعت متوسط، $S_1+S_2=116m$ و $S_2-S_1=80m$ نتیجه می‌شود، پس $S_1=18m$ و $S_2=98m$. با تشابه مثلث‌های ناحیه‌ای نمودار، $v_2=-\\frac73v_1$ و از میانگین سرعت‌ها $v_1=-12m/s$ و $v_2=28m/s$ به دست می‌آید؛ شتاب متوسط $4m/s^2$ است.",
+    "media_regions": [
+      {"page_file": "page_0207.jpg", "box": [120, 1715, 540, 2195], "placement": "solution", "alt": "نمودار سرعت-زمان با نواحی S1 و S2 در دو سوی محور زمان"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 986,
+    "solution_page": 403,
+    "stated_correct_option": 4,
+    "classic_solution": "نمودار $v-t$ شامل شتاب $a_1=5m/s^2$ تا $t_1=4s$ و سپس شتاب $a_2=-10m/s^2$ است. در لحظه اول $v_1=20m/s$ و جابه‌جایی $40m$ می‌شود. برای مرحله دوم از رابطه مستقل از زمان، $\\Delta x_2=20m$ به دست آمده و جابه‌جایی کل $60m$ است.",
+    "media_regions": [
+      {"page_file": "page_0208.jpg", "box": [160, 175, 600, 520], "placement": "solution", "alt": "نمودار سرعت-زمان با دو شتاب مثبت و منفی"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 987,
+    "solution_page": 403,
+    "stated_correct_option": 4,
+    "classic_solution": "از مساحت زیر نمودار سرعت-زمان، $100=9v_1$ و در نتیجه $v_1=100/9m/s$ به دست می‌آید. شتاب اولیه برابر شیب بخش اول نمودار است: $a=\\frac{v_1}{2}=50/9m/s^2$.",
+    "media_regions": [
+      {"page_file": "page_0208.jpg", "box": [160, 650, 650, 1015], "placement": "solution", "alt": "نمودار سرعت-زمان با شتاب‌گیری تا t=2 و سپس حرکت یکنواخت"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 988,
+    "solution_page": 403,
+    "stated_correct_option": 3,
+    "classic_solution": "جابه‌جایی برابر مساحت ناحیه رنگی نمودار است. از $v_{av}=5m/s$ در $15s$، $\\Delta x=75m$ و با رابطه مساحت ذوزنقه، $v_1=6m/s$ محاسبه می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0208.jpg", "box": [155, 1130, 655, 1450], "placement": "solution", "alt": "نمودار سرعت-زمان با بخش یکنواخت و کاهش سرعت تا صفر"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 989,
+    "solution_page": 403,
+    "stated_correct_option": 3,
+    "classic_solution": "از شیب بخش کاهنده نمودار، با $a=-5m/s^2$ رابطه زمانی نوشته می‌شود و $t_1=18s$ به دست می‌آید. سپس برای لحظه $t'=24s$، سرعت $v'=30m/s$ و جابه‌جایی از جمع دو ناحیه نمودار $810m$ است؛ سرعت متوسط بازه $54m/s$ می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0208.jpg", "box": [145, 1575, 655, 1980], "placement": "solution", "alt": "نمودار سرعت-زمان با بخش ثابت، بخش کاهنده و ناحیه‌های S1 و S2"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 990,
+    "solution_page": 403,
+    "stated_correct_option": 3,
+    "classic_solution": "نمودار $v-t$ از دو خط با شیب‌های $3$ و $6m/s^2$ تشکیل شده است. با نوشتن سرعت‌های $v_1=3t$ و $v_2=30-3t$ و برابر گرفتن مساحت کل با مسیر $39m$، معادله $t^2-10t+24=0$ به دست می‌آید. چون $t<5s$، $t=4s$ پذیرفته می‌شود و $v_2=18m/s$ است.",
+    "media_regions": [
+      {"page_file": "page_0208.jpg", "box": [140, 2075, 655, 2440], "placement": "solution", "alt": "نمودار سرعت-زمان دو مرحله‌ای با شیب‌های متفاوت"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 991,
+    "solution_page": 404,
+    "stated_correct_option": 4,
+    "classic_solution": "در نمودار مثلثی سرعت-زمان، شیب خط تندشونده دو برابر شیب کندشونده است. با استفاده از $v_m=2t$ و مساحت مرحله کندشونده، از تندی متوسط $40m/s$ زمان تندشدن $t=40s$ به دست می‌آید. مسافت مرحله تندشونده $1600m$ است.",
+    "media_regions": [
+      {"page_file": "page_0209.jpg", "box": [130, 170, 630, 390], "placement": "solution", "alt": "نمودار سرعت-زمان مثلثی با مرحله تندشونده و کندشونده"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 992,
+    "solution_page": 404,
+    "stated_correct_option": 3,
+    "classic_solution": "برای دو مرحله با شتاب‌های $4$ و $-2m/s^2$، زمان‌های $t_1$ و $t_2$ فرض می‌شود. از شیب‌ها $v=4t_1=2t_2$ و از مساحت کل $2400m$ نتیجه می‌شود $t_1=20s$، $t_2=40s$ و $v=80m/s$. در بازه 16 تا 24 ثانیه، مساحت زیر نمودار $592m$ و سرعت متوسط $74m/s$ است.",
+    "media_regions": [
+      {"page_file": "page_0209.jpg", "box": [125, 650, 660, 1320], "placement": "solution", "alt": "دو نمودار سرعت-زمان مثلثی برای کل حرکت و بازه 16 تا 24 ثانیه"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 993,
+    "solution_page": 404,
+    "stated_correct_option": 1,
+    "classic_solution": "مسیر به دو بخش تقسیم شده است: در بخش اول با سرعت ثابت $4m/s$، زمان $3d/16$ می‌شود و در بخش دوم با کاهش سرعت از $4$ به صفر، زمان $d/8$ است. با جمع زمان‌ها، سرعت متوسط کل $\\frac{16}{5}=3.2m/s$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0209.jpg", "box": [120, 1370, 585, 1540], "placement": "solution", "alt": "تقسیم مسیر d به دو بخش با سرعت ثابت و شتاب ثابت"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 994,
+    "solution_page": 404,
+    "stated_correct_option": 2,
+    "classic_solution": "نمودار سرعت-زمان شامل افزایش تا $v_m$، بخش یکنواخت و کاهش تا صفر است. از نسبت شیب‌ها $t'=2t$ و مساحت زیر نمودار، $\\ell=\\frac52v_mt$ به دست می‌آید. تندی متوسط در زمان $t'+2t$ برابر $\\frac58v_m$ است.",
+    "media_regions": [
+      {"page_file": "page_0209.jpg", "box": [120, 1880, 640, 2185], "placement": "solution", "alt": "نمودار سرعت-زمان ذوزنقه‌ای با سرعت بیشینه vm"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 995,
+    "solution_page": 405,
+    "stated_correct_option": 3,
+    "classic_solution": "طول کل مسیر $12x$ گرفته شده و بخش‌ها به‌ترتیب $3x$، $8x$ و $x$ هستند. با نوشتن زمان هر بخش از مساحت‌های نمودار سرعت-زمان، زمان کل $0.3x+0.4x+0.1x$ می‌شود و سرعت متوسط کل $15m/s$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0210.jpg", "box": [165, 260, 705, 680], "placement": "solution", "alt": "نمودار سرعت-زمان سه‌بخشی با نواحی S1، S2 و S3"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 996,
+    "solution_page": 405,
+    "stated_correct_option": 3,
+    "classic_solution": "زمان تندشونده، حرکت یکنواخت و کندشونده به‌ترتیب $t$، $2t'$ و $t'$ نام‌گذاری شده است. از شیب‌ها $v=4t$ و $t'=2t$ و مساحت کل $352m$، $t=4s$ و $t'=8s$ به دست می‌آید. برای $23s$ نخست، سطح بخش پایانی کم می‌شود و $S'=327m$ محاسبه می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0210.jpg", "box": [145, 730, 690, 1320], "placement": "solution", "alt": "نمودار سرعت-زمان اتومبیل با سه مرحله و ناحیه حذف‌شده پس از 23 ثانیه"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 997,
+    "solution_page": 405,
+    "stated_correct_option": 2,
+    "classic_solution": "حداکثر تندی $180km/h=50m/s$ است. برای کمترین زمان، اتومبیل با بیشترین شتاب به $v_{max}$ می‌رسد، مدتی یکنواخت حرکت می‌کند و سپس با همان بزرگی شتاب ترمز می‌گیرد. از $a=8m/s^2$، زمان‌های تندشدن و کندشدن $6.25s$ و از مساحت زیر نمودار برای $2000m$، زمان کل $46.25s$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0210.jpg", "box": [135, 1410, 700, 1970], "placement": "solution", "alt": "نمودار سرعت-زمان ذوزنقه‌ای با vmax=50 برای کمترین زمان حرکت"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 998,
+    "solution_page": 405,
+    "stated_correct_option": 2,
+    "classic_solution": "از نمودار اتومبیل، در 4 ثانیه اول جابه‌جایی $16m$ است و از آن $v_1=8m/s$ و $a_1=2m/s^2$ نتیجه می‌شود. سپس از رابطه $a_1=v_{max}/10$، $v_{max}=20m/s$ به دست آمده و ادامه محاسبات روی همان نمودار انجام می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0210.jpg", "box": [125, 2050, 735, 2395], "placement": "solution", "alt": "نمودار سرعت-زمان اتومبیل با vmax و نواحی S1 تا S4"}
+    ],
+    "review_notes": ["ادامه حل سؤال ۹۹۸ در ابتدای page_0211 آمده است."]
+  },
+  {
+    "question_number": 999,
+    "solution_page": 406,
+    "stated_correct_option": 2,
+    "classic_solution": "در بازه $0$ تا $7s$ معادله مکان $x=2t^2-20t+40$ است. شرط $|x|<8$ به دو نامعادله درجه دوم تبدیل می‌شود و از ریشه‌های پذیرفتنی، بازه‌های زمانی مجاز به دست می‌آید. برای $t>7s$ حرکت یکنواخت با سرعت لحظه $7s$ ادامه دارد و از اشتراک بازه‌ها، کل زمان نزدیک‌تر بودن از $8m$ برابر $4.25s$ می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0211.jpg", "box": [100, 720, 475, 1010], "placement": "solution", "alt": "نمودار مکان-زمان سهمی و ادامه خطی پس از t=7"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1000,
+    "solution_page": 406,
+    "stated_correct_option": 3,
+    "classic_solution": "برای هر سه متحرک رابطه $\\Delta x=-\\frac12at^2+vt$ تا لحظه تغییر جهت نوشته می‌شود. با مقایسه بیشینه جابه‌جایی‌ها، $|a_A|=2|a_C|=4|a_B|$ نتیجه می‌شود؛ بنابراین ترتیب بزرگی شتاب‌ها $|a_A|>|a_C|>|a_B|$ است.",
+    "media_regions": [
+      {"page_file": "page_0211.jpg", "box": [105, 1610, 500, 1940], "placement": "solution", "alt": "سه نمودار مکان-زمان سهمی A، B و C"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1001,
+    "solution_page": 406,
+    "stated_correct_option": 3,
+    "classic_solution": "چون تندی بین $5s$ تا $10s$ ابتدا کم و سپس زیاد شده، لحظه تغییر جهت در این بازه است. سرعت در $t_1=5s$ برابر $-4m/s$ و در $t_2=10s$ برابر $6m/s$ در نظر گرفته می‌شود. از $a=\\Delta v/\\Delta t$، شتاب $2m/s^2$ و از $v=v_0+at$، سرعت اولیه $-14m/s$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1002,
+    "solution_page": 407,
+    "stated_correct_option": 3,
+    "classic_solution": "از شکل سهمی، متحرک در $t=3s$ تغییر جهت می‌دهد، پس $0=3a+v_0$ و $a=-v_0/3$. همچنین در $t=1s$ از مبدأ مکان عبور می‌کند. با جایگذاری در معادله مکان و $x_0=-10m$، سرعت اولیه $v_0=12m/s$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0212.jpg", "box": [170, 205, 620, 560], "placement": "solution", "alt": "نمودار مکان-زمان سهمی با عبور از مبدأ و رأس در t=3"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1003,
+    "solution_page": 407,
+    "stated_correct_option": 4,
+    "classic_solution": "در نمودار مکان-زمان، تغییر جهت در لحظه‌ای است که شیب مماس صفر می‌شود؛ این لحظه $t=2s$ است. با $v=at+v_0$، $v_0=-4m/s$ و از $x=\\frac12at^2+v_0t+x_0$، جابه‌جایی‌ها در بازه‌های $0$ تا $2s$ و $0$ تا $6s$ به‌ترتیب $-4m$ و $12m$ هستند؛ پس بیشترین فاصله در پایان $6s$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1004,
+    "solution_page": 407,
+    "stated_correct_option": 3,
+    "classic_solution": "در لحظه $t=2s$ شیب نمودار مکان-زمان صفر است، پس $v_0=-2a$. چون در $t=6s$ از مبدأ می‌گذرد و مکان اولیه $-12m$ است، از معادله مکان $a=2m/s^2$ و $v_0=-4m/s$ به دست می‌آید؛ تندی در لحظه‌های صفر و چهار ثانیه برابر $4m/s$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1005,
+    "solution_page": 407,
+    "stated_correct_option": 2,
+    "classic_solution": "از معادله جابه‌جایی در بازه $0$ تا $5s$، شتاب ثابت $a=-1.2m/s^2$ محاسبه می‌شود. سپس از شتاب متوسط بین $5s$ و $6s$، سرعت لحظه $6s$ برابر $-1.2m/s$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1006,
+    "solution_page": 407,
+    "stated_correct_option": 1,
+    "classic_solution": "در معادله $x=x_0+v_0t+\\frac12at^2$ مقدار $x_0=9m$ است. با استفاده از دو نقطه نمودار، دستگاهی برای $v_0$ و $a$ نوشته می‌شود و $v_0=6m/s$، $a=-4m/s^2$ به دست می‌آید. معادله مکان $x=9+6t-2t^2$ است؛ با حل $x=0$، ریشه مثبت $t=(3+3\\sqrt3)/2$ پذیرفته و تندی در آن لحظه $6\\sqrt3m/s$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1007,
+    "solution_page": 407,
+    "stated_correct_option": 3,
+    "classic_solution": "سرعت در $t_1=3s$ برابر $v_1=-1m/s$ و نمودار در این لحظه نزولی است. برای بازه $3s$ تا $8s$، از رابطه جابه‌جایی مستقل از سرعت اولیه، شتاب $a=-2m/s^2$ به دست می‌آید. سپس با نوشتن معادله مکان تا $t=3s$، مکان اولیه $x_0=20m$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1008,
+    "solution_page": 408,
+    "stated_correct_option": 2,
+    "classic_solution": "شیب مماس در رأس نمودار مکان-زمان، یعنی لحظه $t_s$، صفر است. با نوشتن جابه‌جایی از $0$ تا $t_s$ و از $t_s$ تا $5s$ و مقایسه نسبت‌ها، $t_s=3s$ به دست می‌آید. در بازه $0$ تا $3s$ اندازه شیب کاهش می‌یابد، پس حرکت کندشونده است.",
+    "media_regions": [
+      {"page_file": "page_0213.jpg", "box": [95, 170, 490, 520], "placement": "solution", "alt": "نمودار مکان-زمان سهمی با رأس در ts"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1009,
+    "solution_page": 408,
+    "stated_correct_option": 2,
+    "classic_solution": "در $t=2s$ سرعت $-4m/s$ و در $t=8s$ سرعت $+8m/s$ است. از دستگاه معادله $v=v_0+at$، $v_0=-8m/s$ و $a=2m/s^2$ به دست می‌آید. با جایگذاری در معادله مکان و داده $x(2)=10m$، $x_0=22m$ و لحظه تغییر جهت $t'=4s$ است؛ مکان در این لحظه $x'=6m$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1010,
+    "solution_page": 408,
+    "stated_correct_option": 2,
+    "classic_solution": "با تقارن سهمی، لحظه صفر شدن سرعت و تغییر جهت $t_m=(1+9)/2=5s$ است. برای بازه $0$ تا $5s$ و همچنین عبور دوباره از مبدأ در $t=9s$ دو رابطه نوشته می‌شود. حل آن‌ها می‌دهد $a=-2m/s^2$ و $v_0=10m/s$.",
+    "media_regions": [
+      {"page_file": "page_0213.jpg", "box": [120, 1510, 505, 1850], "placement": "solution", "alt": "نمودار مکان-زمان سهمی متقارن با ریشه‌های t1 و t2"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1011,
+    "solution_page": 408,
+    "stated_correct_option": 4,
+    "classic_solution": "اگر متحرک در $t'=3s$ تغییر جهت دهد، جابه‌جایی نسبت به محل تغییر جهت از رابطه $\\Delta x=\\frac12a(t-t')^2$ محاسبه می‌شود. با نسبت $\\Delta x_1/\\Delta x_2=18/24$، ریشه پذیرفتنی $t=3+2\\sqrt3$ است. در ادامه با روش دوم، $a=-4m/s^2$ و $v_0=12m/s$ نیز به دست آمده و همان تندی متوسط حاصل می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0213.jpg", "box": [110, 2050, 500, 2350], "placement": "solution", "alt": "نمودار مکان-زمان سهمی با رأس در t'=3 و فاصله‌های Δx1 و Δx2"}
+    ],
+    "review_notes": ["ادامه حل سؤال ۱۰۱۱ در ابتدای page_0214 آمده است."]
+  },
+  {
+    "question_number": 1012,
+    "solution_page": 409,
+    "stated_correct_option": 3,
+    "classic_solution": "متحرک در $t_s=4s$ تغییر جهت می‌دهد. با نوشتن جابه‌جایی از $0$ تا $t_s$ و یک بار از $t_1=1s$ تا $t_s$، روابطی برای $x_s$ و $a$ به دست می‌آید و $x_s=9m$ نتیجه می‌شود. مسافت بین $t_1$ و $t_2=7s$ برابر $2x_s=18m$ و تندی متوسط $3m/s$ است.",
+    "media_regions": [
+      {"page_file": "page_0214.jpg", "box": [130, 720, 530, 1055], "placement": "solution", "alt": "نمودار مکان-زمان سهمی با رأس در ts=4 و عبور از مبدأ"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1013,
+    "solution_page": 409,
+    "stated_correct_option": 4,
+    "classic_solution": "معادله جابه‌جایی نسبت به رأس سهمی برای بازه‌های $4$ تا $8s$ و $4$ تا $9s$ نوشته شده است. از رابطه $\\Delta x_{4,9}=\\Delta x_{4,8}-9$، شتاب $a=-2m/s^2$ به دست می‌آید. مسافت چهار ثانیه اول $16m$ و مسافت تا $9s$ برابر $41m$ است؛ بنابراین تندی متوسط $41/9m/s$ می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0214.jpg", "box": [120, 1360, 520, 1700], "placement": "solution", "alt": "نمودار مکان-زمان با رأس در t=4 و بازه‌های 4 تا 8 و 4 تا 9"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1014,
+    "solution_page": 409,
+    "stated_correct_option": 3,
+    "classic_solution": "از تقارن سهمی، خط تقارن از وسط لحظه‌های $2s$ و $10s$ عبور می‌کند؛ پس $t_s=6s$ و $v_s=0$. با جابه‌جایی از مکان $x_s=-20m$ تا مبدأ در $t=10s$، شتاب $a=2.5m/s^2$ و سپس سرعت اولیه $v_0=-15m/s$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0214.jpg", "box": [120, 1960, 525, 2340], "placement": "solution", "alt": "نمودار مکان-زمان سهمی با خط تقارن ts=6 و مکان xs=-20"}
+    ],
+    "review_notes": ["ادامه حل سؤال ۱۰۱۴ در ابتدای page_0215 آمده است."]
+  },
+  {
+    "question_number": 1015,
+    "solution_page": 410,
+    "stated_correct_option": 4,
+    "classic_solution": "نمودار نشان می‌دهد متحرک از $x_0=-21m$ شروع کرده، از مبدأ گذشته و در $x_1=4m$ متوقف می‌شود. تا رأس، مسافت $25m$ طی شده و با تندی متوسط $10m/s$، زمان $t_1=2.5s$ است. از رابطه مستقل از سرعت اولیه، شتاب $-8m/s^2$ و سپس تندی متوسط دو ثانیه دوم $5m/s$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0215.jpg", "box": [120, 395, 520, 720], "placement": "solution", "alt": "نمودار مکان-زمان سهمی با x0=-21 و رأس در x1=4"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1016,
+    "solution_page": 410,
+    "stated_correct_option": 3,
+    "classic_solution": "از نمودار سرعت-زمان، نسبت مساحت‌های مثلثی با مربع نسبت ضلع‌ها برابر است: $S_2/S_1=25/9$. با $\\ell=S_1+S_2$ و $s_{av}=17m/s$ در $8s$، $S_1=36m$ به دست می‌آید. سپس $v_0=24m/s$ و سرعت پایانی $v_2=-32m/s$ محاسبه می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0215.jpg", "box": [120, 1520, 555, 1825], "placement": "solution", "alt": "نمودار سرعت-زمان خطی با نواحی S1 و S2"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1017,
+    "solution_page": 410,
+    "stated_correct_option": 2,
+    "classic_solution": "در روش اول، لحظه $t'=3s$ کمینه زمان است و متحرک نیمی از مسافت را پیش از تغییر جهت و نیمی را پس از آن طی می‌کند. با $|\\Delta x|=\\frac12|a|(t-t')^2$ و فاصله $8m$ تا محل تغییر جهت، $|a|=4m/s^2$، سپس $|\\Delta x_1|=18m$ و $|\\Delta x_2|=50m$ به دست می‌آید. مسافت کل $68m$ و تندی متوسط $8.5m/s$ است.",
+    "media_regions": [
+      {"page_file": "page_0215.jpg", "box": [120, 1995, 555, 2350], "placement": "solution", "alt": "نمودار مکان-زمان سهمی با محل تغییر جهت و فاصله‌های 8 متر"}
+    ],
+    "review_notes": ["ادامه حل سؤال ۱۰۱۷ در ابتدای page_0216 آمده است."]
+  },
+  {
+    "question_number": 1018,
+    "solution_page": 411,
+    "stated_correct_option": 3,
+    "classic_solution": "از تقارن نمودار سهمی، متحرک پس از $4s$ دوباره از مکان اولیه می‌گذرد و تندی آن در این لحظه برابر تندی اولیه است. در بازه $2s$ تا $4s$، با $\\Delta x=\\frac{v_2+v_1}{2}\\Delta t$ نتیجه می‌شود $x_0=v_2$. سپس با حرکت یکنواخت پس از $t=4s$، شرط رسیدن به فاصله $4x_0$، زمان $t=7s$ را می‌دهد.",
+    "media_regions": [
+      {"page_file": "page_0216.jpg", "box": [130, 760, 505, 1125], "placement": "solution", "alt": "نمودار مکان-زمان سهمی که پس از 4 ثانیه به مکان اولیه می‌رسد"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1019,
+    "solution_page": 411,
+    "stated_correct_option": 3,
+    "classic_solution": "چون دو متحرک در مبدأ زمان از یک نقطه عبور کرده‌اند و هنگام رسیدن به یک جابه‌جایی مشترک باید $\\Delta x_1=\\Delta x_2$ باشد، سرعت متحرک دوم در لحظه سبقت با رابطه $10=(v_2+4)t/2$ به دست می‌آید و $v_2=16m/s$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1020,
+    "solution_page": 411,
+    "stated_correct_option": 3,
+    "classic_solution": "مشخصات اتومبیل و موتورسوار به‌ترتیب با زیروندهای ۱ و ۲ نوشته شده‌اند. برای اتومبیل از $1000=\\frac12(0.8)t_1^2$، زمان $t_1=50s$ به دست می‌آید. موتورسوار همان مسیر را $30s$ زودتر طی می‌کند، پس $t_2=20s$ و از $1000=\\frac12a_2(20)^2$، شتاب $a_2=5m/s^2$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1021,
+    "solution_page": 411,
+    "stated_correct_option": 2,
+    "classic_solution": "با توجه به شکل، وقتی کامیون به اتومبیل می‌رسد، باید $30m$ بیشتر جابه‌جا شده باشد. از $\\Delta x_2-\\Delta x_1=30$ و داده‌های سرعت کامیون و شتاب اتومبیل، معادله $t^2-8t+12=0$ به دست می‌آید و زمان‌های $2s$ و $6s$ برای دو رسیدن ممکن محاسبه می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0216.jpg", "box": [130, 1650, 800, 1905], "placement": "solution", "alt": "کامیون و اتومبیل با فاصله 30 متر و جابه‌جایی‌های Δx1 و Δx2"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1022,
+    "solution_page": 411,
+    "stated_correct_option": 2,
+    "classic_solution": "برای دو متحرک با شتاب ثابت، معادله سرعت‌ها $v_1=4t-1$ و $v_2=2t+10$ و معادله مکان‌ها $x_1=2t^2-t-2$ و $x_2=t^2+10t-2$ نوشته می‌شود. برابری مکان‌ها زمان‌های $t=0$ و $t=11s$ را می‌دهد. در $t=13s$ فاصله دو متحرک $d=|t(t-11)|=26m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1023,
+    "solution_page": 412,
+    "stated_correct_option": 1,
+    "classic_solution": "زمان حرکت $B$، شانزده ثانیه کمتر از $A$ است و چون از یک نقطه به مقصد مشترک می‌روند، جابه‌جایی‌ها برابرند. با $a_B=4a_A$ و سرعت اولیه صفر، از $\\Delta x_A=\\Delta x_B$ نتیجه می‌شود $t_A=32s$ و زمان حرکت $B$ برابر $16s$ است؛ سپس $\\Delta x_B=8m$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1024,
+    "solution_page": 412,
+    "stated_correct_option": 3,
+    "classic_solution": "جابه‌جایی اتومبیل $B$ پس از $2s$، $8m$ است. اتومبیل $A$، $1.5s$ بیشتر در راه بوده و در $3.5s$ مقدار $24.5m$ جابه‌جا می‌شود. بنابراین فاصله دو اتومبیل $24.5-8=16.5m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1025,
+    "solution_page": 412,
+    "stated_correct_option": 2,
+    "classic_solution": "برای دو متحرک $A$ و $B$، معادلات مکان-زمان با تأخیر $2s$ برای $B$ نوشته می‌شود. برابری مکان‌ها در $t=18s$، شتاب را $a=2m/s^2$ می‌دهد. در $t=20s$، مکان‌ها $x_A=x_0+400$ و $x_B=x_0+426$ هستند؛ پس فاصله $26m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1026,
+    "solution_page": 412,
+    "stated_correct_option": 2,
+    "classic_solution": "خودروی اول از $A$ با شتاب $a$ و خودروی دوم از $B$ پس از $10s$ با شتاب $2a$ حرکت می‌کنند. از نسبت جابه‌جایی‌های $600m$ و $300m$، زمان پذیرفتنی برخورد $t=20s$ به دست می‌آید. سپس $a=3m/s^2$ و سرعت‌های دو خودرو در برخورد برابر می‌شوند، بنابراین نسبت تندی‌ها $1$ است.",
+    "media_regions": [
+      {"page_file": "page_0217.jpg", "box": [110, 1090, 660, 1230], "placement": "solution", "alt": "نقاط A، C و B با فاصله‌های 600 و 300 متر و جهت حرکت دو خودرو"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1027,
+    "solution_page": 412,
+    "stated_correct_option": 4,
+    "classic_solution": "برای توقف هر اتومبیل از $\\ell_s=v_0^2/(2a)$ استفاده می‌شود. با سرعت‌های اولیه $20m/s$ و $10m/s$، شرط مجموع مسافت‌های توقف کمتر یا برابر $100m$ به نامعادله $250/a\\le100$ می‌رسد؛ پس کمترین شتاب ترمز $a_{min}=2.5m/s^2$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1028,
+    "solution_page": 412,
+    "stated_correct_option": 3,
+    "classic_solution": "دو ثانیه پس از ترمز گرفتن اتومبیل $A$، جابه‌جایی $A$ برابر $54m$ و جابه‌جایی $B$ برابر $40m$ است؛ پس فاصله دو اتومبیل به $14m$ می‌رسد. با نوشتن معادلات مکان از لحظه ترمز گرفتن $B$ و برابر کردن آن‌ها، زمان مثبت $t=8s$ به دست می‌آید؛ یعنی $8s$ پس از ترمز $B$ و $10s$ پس از ترمز $A$ برخورد رخ می‌دهد.",
+    "media_regions": [],
+    "review_notes": ["ادامه حل سؤال ۱۰۲۸ در ابتدای page_0218 آمده است."]
+  },
+  {
+    "question_number": 1029,
+    "solution_page": 413,
+    "stated_correct_option": 4,
+    "classic_solution": "دو موتورسوار با سرعت‌های $54km/h=15m/s$ و $45km/h=12.5m/s$ حرکت می‌کنند. پس از $10s$ فاصله آن‌ها $25m$ است. برای رسیدن در مکانی تا $225m$، موتورسوار عقب حداکثر $5s$ فرصت شتاب‌گیری دارد و از معادله مکان، $a_{min}=3m/s^2$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1030,
+    "solution_page": 413,
+    "stated_correct_option": 3,
+    "classic_solution": "دو متحرک $A$ و $B$ همزمان و از سکون در یک جهت راه می‌افتند. چون شتاب $B$ بزرگ‌تر است، $x_B>x_A$ و $A$ هرگز به $B$ نمی‌رسد. اگر متحرک $C$ یک ثانیه دیرتر راه بیفتد، ابتدا به $A$ و سپس به $B$ می‌رسد؛ از حل معادلات برخورد، بازه‌ای که $C$ بین دو متحرک است $\\Delta t=6-1.2=4.8s$ و مسافت طی‌شده $19.2m$ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 1031,
+    "solution_page": 413,
+    "stated_correct_option": 4,
+    "classic_solution": "اتوبوس از سکون شروع می‌کند و سرعتش تا برابر سرعت دوچرخه‌سوار افزایش می‌یابد؛ تا این لحظه فاصله کاهش و پس از آن افزایش می‌کند، پس کمترین فاصله در لحظه برابری سرعت‌هاست. با $v_1=4m/s$ و $v_2=2t$، زمان $t=2s$ به دست می‌آید. در این مدت دوچرخه‌سوار $8m$ و اتوبوس $4m$ جابه‌جا می‌شود و فاصله به $96m$ می‌رسد.",
+    "media_regions": [],
+    "review_notes": ["ادامه حل سؤال ۱۰۳۱ در ابتدای page_0219 آمده است."]
+  },
+  {
+    "question_number": 1032,
+    "solution_page": 414,
+    "stated_correct_option": 2,
+    "classic_solution": "معادله سرعت دو متحرک در $t=6s$ برابر گذاشته می‌شود و $a_A-a_B=2/3m/s^2$ به دست می‌آید. فاصله دو متحرک به صورت $D=|\\frac12(a_A-a_B)t^2+(v_{0A}-v_{0B})t|=|\\frac13t^2-4t|$ نوشته می‌شود. شکل نشان می‌دهد فاصله در $t=6s$ بیشینه و مقدار آن $12m$ است.",
+    "media_regions": [
+      {"page_file": "page_0219.jpg", "box": [105, 720, 750, 1110], "placement": "solution", "alt": "جایگاه دو خودرو در t=0، t=6 و t=12 و فاصله بیشینه D"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1033,
+    "solution_page": 414,
+    "stated_correct_option": 3,
+    "classic_solution": "برای سبقت کامل قطار، مبدأ مکان انتهای قطار گرفته می‌شود. معادله مکان شخص $x=8t+84$ و معادله انتهای قطار $x=2t^2+6t$ نوشته می‌شود. از برابری این دو، ریشه مثبت $t=7s$ پذیرفته می‌شود؛ بنابراین زمان عبور کامل قطار از شخص $7s$ است.",
+    "media_regions": [
+      {"page_file": "page_0219.jpg", "box": [95, 1675, 560, 2015], "placement": "solution", "alt": "قطار با طول 84 متر و شخص روی محور مکان"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1034,
+    "solution_page": 415,
+    "stated_correct_option": 1,
+    "classic_solution": "مبدأ زمان زمانی گرفته شده که قطار $A$ کاملاً از $B$ دور می‌شود. قطار $B$ پس از $4s$ شروع به حرکت می‌کند و پس از $15s$ به سرعت نهایی $30m/s$ می‌رسد. از مساحت‌های نمودار سرعت-زمان دو قطار تا لحظه عبور کامل، اختلاف جابه‌جایی‌ها $L_A+L_B$ است و با $L_A=150m$، طول قطار $B$ برابر $145m$ به دست می‌آید.",
+    "media_regions": [
+      {"page_file": "page_0220.jpg", "box": [165, 205, 820, 845], "placement": "solution", "alt": "نمودار سرعت-زمان قطارها و شکل عبور کامل قطار A از B با طول‌های LA و LB"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1035,
+    "solution_page": 415,
+    "stated_correct_option": 3,
+    "classic_solution": "تا وقتی $v_B>v_A$ فاصله افزایش می‌یابد و در $t=5s$ سرعت‌ها برابر می‌شوند. اختلاف سطح زیر دو نمودار تا این لحظه $S=(18-10)\\times5/2=20m$ است؛ بنابراین فاصله یک بار به $15m$ می‌رسد. در $t=10s$ دو نمودار هم‌سطح شده و خودروها به هم می‌رسند، سپس دوباره فاصله تا $15m$ افزایش می‌یابد.",
+    "media_regions": [
+      {"page_file": "page_0220.jpg", "box": [150, 1070, 820, 1800], "placement": "solution", "alt": "نمودار سرعت-زمان و شکل‌های موقعیت دو خودرو A و B در چند لحظه"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1036,
+    "solution_page": 415,
+    "stated_correct_option": 3,
+    "classic_solution": "از توضیح شکل، تا لحظه $t_2$ فاصله دو متحرک بیشینه می‌شود؛ ابتدا سرعت‌های $A$ و $B$ خلاف جهت‌اند، سپس $B$ جهت عوض می‌کند و تعقیب آغاز می‌شود. در لحظه $t_2$ سرعت $B$ از $A$ بیشتر می‌شود و فاصله پس از آن کاهش می‌یابد، پس بیشینه فاصله در $t_2$ رخ می‌دهد.",
+    "media_regions": [
+      {"page_file": "page_0220.jpg", "box": [135, 1930, 835, 2075], "placement": "solution", "alt": "نمای موقعیت دو متحرک A و B در لحظه‌های t1 تا t4"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1037,
+    "solution_page": 415,
+    "stated_correct_option": 2,
+    "classic_solution": "شتاب متحرک $A$ برابر $1.5$ برابر شتاب $B$ است. با نوشتن رابطه شتاب‌ها تا لحظه مشترک، $v_C=14m/s$ به دست می‌آید. اختلاف جابه‌جایی دو متحرک تا این لحظه $8m$ است، پس از مساحت مثلث $S_1$ در نمودار، $t_C=4s$ و سپس $a_A=3m/s^2$ محاسبه می‌شود. از $v_A=3t+2$، زمان خواسته‌شده $5s$ است.",
+    "media_regions": [
+      {"page_file": "page_0220.jpg", "box": [125, 2165, 650, 2435], "placement": "solution", "alt": "نمودار سرعت-زمان دو متحرک A و B تا لحظه tC"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1038,
+    "solution_page": 416,
+    "stated_correct_option": 2,
+    "classic_solution": "پیش از $t=3s$ و پس از آن، علامت سرعت‌های دو متحرک متفاوت است؛ بنابراین باید بررسی شود فاصله چگونه تغییر می‌کند. برای $A$، شتاب $-2m/s^2$ و برای $B$، شتاب $3m/s^2$ به دست می‌آید. جابه‌جایی $A$ در سه ثانیه اول $39m$ و جابه‌جایی $B$ برابر $-13.5m$ است؛ بنابراین فاصله دو متحرک در سه ثانیه اول $52.5m$ محاسبه می‌شود.",
+    "media_regions": [
+      {"page_file": "page_0221.jpg", "box": [115, 345, 555, 755], "placement": "solution", "alt": "نمودار سرعت-زمان دو متحرک A و B با برخورد نمودارها"}
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 1039,
+    "solution_page": 416,
+    "stated_correct_option": 3,
+    "classic_solution": "از نمودار، تا $t_1$ دو متحرک در خلاف جهت حرکت می‌کنند و فاصله افزایش می‌یابد. سپس با تغییر جهت $A$، فاصله همچنان تا وقتی $v_B>v_A$ افزایش دارد. با برابر کردن سرعت‌ها، $4t-12=-2t+12$ و $t_2=4s$ به دست می‌آید. جابه‌جایی‌ها تا این لحظه $\\Delta x_A=-16m$ و $\\Delta x_B=32m$ هستند، پس فاصله بیشینه $48m$ است. روش هندسی با تشابه مثلث‌ها نیز همین نتیجه را می‌دهد.",
+    "media_regions": [
+      {"page_file": "page_0221.jpg", "box": [110, 930, 560, 1335], "placement": "solution", "alt": "نمودار سرعت-زمان دو متحرک و نمودار مکانی فاصله بیشینه"}
+    ],
+    "review_notes": []
+  }
+]

@@ -1,0 +1,1759 @@
+{
+  "task_id": "math-topic-06",
+  "subject": "math",
+  "topic_key": "absolute_value_floor",
+  "questions": [
+    {
+      "question_number": 309,
+      "question_page": 1,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x^2 - x| - |x| = 0$ کدام است؟",
+      "options": [
+        "$-1$",
+        "صفر",
+        "$1$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 310,
+      "question_page": 1,
+      "question_text": "مجموع ریشه‌های معادلهٔ $x|x| = 2x - 1$ کدام است؟",
+      "options": [
+        "$\\sqrt{2} - 1$",
+        "$\\sqrt{2} + 1$",
+        "$2\\sqrt{2}$",
+        "$1 - \\sqrt{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 311,
+      "question_page": 1,
+      "question_text": "مجموع ریشه‌های معادلهٔ $x^2 - |x| - 2 = 0$ کدام است؟",
+      "options": [
+        "$-1$",
+        "صفر",
+        "$2$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 312,
+      "question_page": 1,
+      "question_text": "معادلهٔ $x^2 + 2x - 2|x + 1| + 2 = 0$ چند جواب دارد؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 313,
+      "question_page": 1,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $(x^2 - x)^2 - 3|x^2 - x| + 2 = 0$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$2$",
+        "$-1$",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 314,
+      "question_page": 1,
+      "question_text": "مجموع ریشه‌های معادلهٔ $x^2 + x - \\sqrt{x^2 + x} = 2$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$1$",
+        "$-2$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 315,
+      "question_page": 1,
+      "question_text": "تعداد ریشه‌های معادلهٔ $x^2 - 2|x| = a$ به ازای $a < -1$ کدام است؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 316,
+      "question_page": 1,
+      "question_text": "مجموع مربعات ریشه‌های معادلهٔ $|x - 2| + |x + 1| = 5$ کدام است؟",
+      "options": [
+        "$5$",
+        "$13$",
+        "$8$",
+        "$10$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 317,
+      "question_page": 1,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x + 2| + |x - 1| = 4$ کدام است؟",
+      "options": [
+        "$\\frac{-5}{4}$",
+        "$\\frac{5}{4}$",
+        "$\\frac{-7}{4}$",
+        "$\\frac{7}{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 318,
+      "question_page": 1,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x| + |x - 2| = 2x - 2$ کدام است؟",
+      "options": [
+        "$3$",
+        "$2$",
+        "$\\frac{3}{2}$",
+        "$\\frac{5}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 319,
+      "question_page": 1,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|2x - 1| + |x + 2| = 4$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$\\frac{-4}{3}$",
+        "$\\frac{1}{3}$",
+        "$1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 320,
+      "question_page": 1,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x| - |x - 2| = 2x + 1$ کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{-3}{4}$",
+        "$\\frac{3}{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 321,
+      "question_page": 1,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x + 1| - |x - 3| = x - 2$ کدام است؟",
+      "options": [
+        "$6$",
+        "$4$",
+        "$8$",
+        "$5$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 322,
+      "question_page": 1,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x - 2| + |x + 1| = x + 3$ کدام است؟",
+      "options": [
+        "$-2$",
+        "صفر",
+        "$1$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 323,
+      "question_page": 1,
+      "question_text": "معادلهٔ $|x - 1| + |x + 2| = a$ فاقد جواب است. حدود $a$ کدام است؟",
+      "options": [
+        "$a < 1$",
+        "$a < 3$",
+        "$a < 2$",
+        "$a < -1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 324,
+      "question_page": 2,
+      "question_text": "در معادلهٔ $|x - 1| + |x + 2| = x + a$ به ازای کدام مقدار $a$، معادله دارای دو ریشهٔ متمایز است؟",
+      "options": [
+        "$a > 3$",
+        "$a < 3$",
+        "$a > 1$",
+        "$a > 2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 325,
+      "question_page": 2,
+      "question_text": "معادلهٔ $|x - 1| + |x + 2| = 3x - a$ در کدام بازه برای $a$، دقیقاً یک جواب دارد؟",
+      "options": [
+        "$[-4, 5]$",
+        "$(-4, 5)$",
+        "$(-\\infty, -4] \\cup [5, +\\infty)$",
+        "$(-\\infty, -4) \\cup (5, +\\infty)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 326,
+      "question_page": 2,
+      "question_text": "معادلهٔ $|2x - 1| + |x + 1| = a$ در کدام بازه برای $a$، جواب ندارد؟",
+      "options": [
+        "$a < \\frac{3}{2}$",
+        "$a < \\frac{1}{2}$",
+        "$a < -\\frac{1}{2}$",
+        "$a < -\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 327,
+      "question_page": 2,
+      "question_text": "اگر معادلهٔ $|x - 1| + |x - 2| + |x - 3| = a$ دارای دو ریشهٔ متمایز باشد، حدود $a$ کدام است؟",
+      "options": [
+        "$a > 2$",
+        "$a > 1$",
+        "$a > 0$",
+        "$a > 3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 328,
+      "question_page": 2,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x - 1| + |x - 2| + |x - 3| = 3$ کدام است؟",
+      "options": [
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 329,
+      "question_page": 2,
+      "question_text": "مجموع ریشه‌های معادلهٔ $x^2 - 4x + 3 = |x - 2|$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$6$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 330,
+      "question_page": 2,
+      "question_text": "ریشهٔ معادلهٔ $\\frac{x}{|x|} = x - 2$ کدام است؟",
+      "options": [
+        "۱",
+        "۳",
+        "۱ و ۳",
+        "جواب ندارد"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 331,
+      "question_page": 2,
+      "question_text": "معادلهٔ $x^2 - x = \\frac{|x|}{x}$ چند ریشه دارد؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 332,
+      "question_page": 2,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $\\frac{x^2 - 1}{|x - 1|} = 2$ کدام است؟",
+      "options": [
+        "$-3$",
+        "$-1$",
+        "$3$",
+        "$1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 333,
+      "question_page": 2,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x - 1| = |x^2 - 1|$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$-1$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 334,
+      "question_page": 2,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x^2 - 4| = |x^2 - 2x|$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$2$",
+        "$-4$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 335,
+      "question_page": 2,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x^2 - x - 2| = |x - 2|$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$2$",
+        "$1$",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 336,
+      "question_page": 2,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x - 1||x + 2| = 4$ کدام است؟",
+      "options": [
+        "$-6$",
+        "$6$",
+        "$-2$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 337,
+      "question_page": 2,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x - 1| \\sqrt{x^2 + 2x + 1} = 2$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "صفر",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 338,
+      "question_page": 3,
+      "question_text": "مجموع ریشه‌های معادلهٔ $\\sqrt{x^2 - 2x + 1} + |x + 2| = 5$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$-2$",
+        "$1$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 339,
+      "question_page": 3,
+      "question_text": "مجموع ریشه‌های معادلهٔ $\\sqrt{x^2 - 4x + 4} - |x + 1| = 3$ کدام است؟",
+      "options": [
+        "جواب ندارد",
+        "صفر",
+        "$1$",
+        "$-1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 340,
+      "question_page": 3,
+      "question_text": "مجموع ریشه‌های معادلهٔ $\\sqrt{x^2 + 2x + 1} + \\sqrt{x^2 - 6x + 9} = 4$ کدام است؟",
+      "options": [
+        "بی‌شمار",
+        "$-1$",
+        "$3$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 341,
+      "question_page": 3,
+      "question_text": "مجموع ریشه‌های معادلهٔ $\\sqrt{x^2 - 4x + 4} + \\sqrt{x^2 + 6x + 9} = 5$ کدام است؟",
+      "options": [
+        "$-1$",
+        "بی‌شمار",
+        "$1$",
+        "جواب ندارد"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 342,
+      "question_page": 3,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $x^2 + |x| - 6 = 0$ کدام است؟",
+      "options": [
+        "$-4$",
+        "$4$",
+        "$-9$",
+        "$9$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 343,
+      "question_page": 3,
+      "question_text": "مجموع مربعات ریشه‌های معادلهٔ $x^2 - 3|x| + 2 = 0$ کدام است؟",
+      "options": [
+        "$10$",
+        "$5$",
+        "$20$",
+        "$13$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 344,
+      "question_page": 3,
+      "question_text": "تعداد ریشه‌های معادلهٔ $x^2 + 5|x| + 4 = 0$ کدام است؟",
+      "options": [
+        "صفر",
+        "۱",
+        "۲",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 345,
+      "question_page": 3,
+      "question_text": "معادلهٔ $x^2 + |x| + a = 0$ به ازای کدام مقدار $a$ دارای دو ریشهٔ متمایز است؟",
+      "options": [
+        "$a > 0$",
+        "$a < 0$",
+        "$a = 0$",
+        "هیچ‌کدام"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 346,
+      "question_page": 3,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x^2 - 1| = 3$ کدام است؟",
+      "options": [
+        "$-4$",
+        "$4$",
+        "$-2$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 347,
+      "question_page": 3,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x^2 - 2x| = 3$ کدام است؟",
+      "options": [
+        "$2$",
+        "$-2$",
+        "صفر",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 348,
+      "question_page": 3,
+      "question_text": "معادلهٔ $|x^2 - 4| = a$ سه ریشهٔ متمایز دارد. $a$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$0$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 349,
+      "question_page": 3,
+      "question_text": "تعداد ریشه‌های معادلهٔ $|x^2 - x| = a$ به ازای $a > \\frac{1}{4}$ کدام است؟",
+      "options": [
+        "۲",
+        "۳",
+        "۴",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 350,
+      "question_page": 4,
+      "question_text": "معادلهٔ $|x^2 - 2x| = x$ چند ریشه دارد؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 351,
+      "question_page": 4,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x^2 - 4| = x + 2$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$1$",
+        "$-2$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 352,
+      "question_page": 4,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x^2 - 1| = 1 - x$ کدام است؟",
+      "options": [
+        "صفر",
+        "$-2$",
+        "$2$",
+        "$-1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 353,
+      "question_page": 4,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x^2 - x - 2| = x - 2$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$2$",
+        "$-1$",
+        "$1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 354,
+      "question_page": 4,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x^2 - 2x - 3| = x + 1$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$1$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 355,
+      "question_page": 4,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x^2 - 3x + 2| = 2 - x$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$2$",
+        "$-4$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 356,
+      "question_page": 4,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x^2 - x| = x - 1$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$1$",
+        "$-2$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 357,
+      "question_page": 4,
+      "question_text": "اگر $|a| < -a$ باشد، ریشهٔ معادلهٔ $|x - a| = -a$ کدام است؟",
+      "options": [
+        "$2a$",
+        "صفر",
+        "$-2a$",
+        "جواب ندارد"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 358,
+      "question_page": 4,
+      "question_text": "اگر $a < 0$ و $b > 0$ باشد، معادلهٔ $|x - a| + |x - b| = b - a$ چند جواب دارد؟",
+      "options": [
+        "۱",
+        "۲",
+        "صفر",
+        "بی‌شمار"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 359,
+      "question_page": 4,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|2x - 1| = |x + 2|$ کدام است؟",
+      "options": [
+        "$\\frac{8}{3}$",
+        "$\\frac{10}{3}$",
+        "$\\frac{5}{3}$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 360,
+      "question_page": 4,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $|x - 2| = |2x + 1|$ کدام است؟",
+      "options": [
+        "$-\\frac{1}{3}$",
+        "$\\frac{1}{3}$",
+        "$-1$",
+        "$1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 361,
+      "question_page": 4,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x - 1| + |2x - 3| = |3x - 4|$ کدام است؟",
+      "options": [
+        "$\\frac{5}{2}$",
+        "$\\frac{3}{2}$",
+        "$\\frac{7}{2}$",
+        "$\\frac{1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 362,
+      "question_page": 4,
+      "question_text": "مجموع ریشه‌های معادلهٔ $|x - 2| + |2x + 1| = |3x - 1|$ کدام است؟",
+      "options": [
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$",
+        "$-2$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 363,
+      "question_page": 5,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $x^2 - 4x - |x - 2| = 0$ کدام است؟",
+      "options": [
+        "$5$",
+        "$6$",
+        "$-5$",
+        "$-6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 364,
+      "question_page": 5,
+      "question_text": "اختلاف ریشه‌های معادلهٔ $|3x + 1| + |x - 2| = 3$ کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\frac{3}{2}$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 365,
+      "question_page": 5,
+      "question_text": "مجموع جواب‌های معادلهٔ $|x + 1| + |x - 2| = x + 2$ کدام است؟",
+      "options": [
+        "$4$",
+        "$\\frac{11}{3}$",
+        "$5$",
+        "$\\frac{13}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 366,
+      "question_page": 5,
+      "question_text": "معادلهٔ $|x^2 - 5x| = 6x$ چند جواب دارد؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 367,
+      "question_page": 5,
+      "question_text": "مجموع ریشه‌های معادلهٔ $||3x - 1| - 3| = 4$ چه عددی است؟",
+      "options": [
+        "صفر",
+        "$\\frac{1}{3}$",
+        "$\\frac{2}{3}$",
+        "$-\\frac{2}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 368,
+      "question_page": 5,
+      "question_text": "مجموع جواب‌های معادلهٔ $|3x^2 - 2x| = |4x - 2|$ کدام است؟",
+      "options": [
+        "صفر",
+        "$\\frac{2}{3}$",
+        "$\\frac{4}{3}$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 369,
+      "question_page": 5,
+      "question_text": "معادلهٔ $|3x + a| = -2x$ دو جواب دارد. بزرگ‌ترین محدودهٔ قابل قبول برای $a$ کدام است؟",
+      "options": [
+        "$a > 0$",
+        "$a < 0$",
+        "$0 < a \\leq 1$",
+        "$-1 \\leq a < 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 370,
+      "question_page": 5,
+      "question_text": "معادلهٔ $|x^2 - 2x - 4| = k$ سه ریشهٔ متمایز دارد. $k$ کدام است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 371,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $|2x - 7| < 8$ شامل چند عدد صحیح است؟",
+      "options": [
+        "۵",
+        "۶",
+        "۷",
+        "۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 372,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $|\\frac{2x + 3}{x - 1}| > 3$ را $I$ می‌نامیم. اگر بازهٔ $(\\alpha, \\beta)$ زیرمجموعهٔ $I$ باشد، حداکثر $\\beta - \\alpha$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$5$",
+        "$6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 373,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $|\\frac{x + 1}{x - 2}| < 3$ را به صورت $|x - \\alpha| > \\beta$ نمایش داده‌ایم. $\\alpha\\beta$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 374,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $|\\frac{2x + 3}{x + 3}| > 1$ به صورت $|x - \\alpha| > \\beta$ است. $\\beta - \\alpha$ کدام است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 375,
+      "question_page": 5,
+      "question_text": "مجموعه جواب دو نامعادلهٔ $2x^2 - 5x + 2 < 0$ و $|2x + \\alpha| < \\beta$ یکسان است. $\\beta - \\alpha$ کدام است؟",
+      "options": [
+        "$2$",
+        "$\\frac{5}{2}$",
+        "$\\frac{7}{2}$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 376,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $|x + 1| > 3x - 2$ کدام است؟",
+      "options": [
+        "$(-\\infty, \\frac{3}{2})$",
+        "$(-\\infty, \\frac{1}{2}] \\cup (1, \\frac{3}{2})$",
+        "$(-\\infty, \\frac{1}{2}]$",
+        "$(-\\frac{1}{2}, \\frac{3}{2})$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 377,
+      "question_page": 5,
+      "question_text": "عبارت $P = (2x + 4)(|x| - 1)$ در بازهٔ $(k, +\\infty)$ منفی است. حداقل $k$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$-1$",
+        "صفر",
+        "$1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 378,
+      "question_page": 5,
+      "question_text": "جواب نامعادلهٔ $|3x^2 - 1| < 2x$ بازهٔ $(a, b)$ می‌باشد. $a + b$ کدام است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$-1$",
+        "$-\\frac{1}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 379,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $||x - 4| - x| < x$ شامل چند عدد طبیعی نمی‌باشد؟",
+      "options": [
+        "۱",
+        "۲",
+        "۴",
+        "بی‌شمار"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 380,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $||3x - 2| - 3| < 5$ شامل چند عدد صحیح است؟",
+      "options": [
+        "۴",
+        "۵",
+        "۶",
+        "۷"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 381,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $|x^2 - 4x| < x$ شامل چند عدد صحیح است؟",
+      "options": [
+        "صفر",
+        "$1$",
+        "$2$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 382,
+      "question_page": 5,
+      "question_text": "مجموعه جواب نامعادلهٔ $|x + 3| + x < 4x + 6$ به صورت $(a, -\\infty) \\cup (b, c)$ است. $a + b + c$ کدام است؟",
+      "options": [
+        "$-6$",
+        "$-5$",
+        "$-4$",
+        "$-3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 383,
+      "question_page": 6,
+      "question_text": "مجموعه جواب نامعادلهٔ $(x - 3)|x + 1| < x + 7$ کدام است؟",
+      "options": [
+        "$[-1, 5)$",
+        "$(-\\infty, 1 + 2\\sqrt{6})$",
+        "$[-1, 1 + 2\\sqrt{6})$",
+        "$(-\\infty, 5)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 384,
+      "question_page": 6,
+      "question_text": "مجموعه جواب نامعادلهٔ $|\\frac{5x + k}{x}| > 5$ بازهٔ $(-\\infty, -1)$ است. $k$ کدام است؟",
+      "options": [
+        "$\\frac{5}{2}$",
+        "$5$",
+        "$10$",
+        "$20$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 385,
+      "question_page": 6,
+      "question_text": "جواب نامعادلهٔ $|\\frac{x + 2}{ax - 1}| > 1$ به صورت $(-\\infty, b)$ است. $ab$ کدام می‌تواند باشد؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$-\\frac{1}{2}$",
+        "$-\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 386,
+      "question_page": 6,
+      "question_text": "مجموعه جواب نامعادلهٔ $|x - 1| + |x + 1| - 2x > |x|$ به صورت $[a, b] - \\mathbb{R}$ است. $a + b$ کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$\\frac{3}{2}$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 387,
+      "question_page": 6,
+      "question_text": "مجموعه جواب نامعادلهٔ $|x - 1| \\geq \\sqrt{x} + 1$ بازهٔ $[a, b]$ است. $a - b$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 388,
+      "question_page": 6,
+      "question_text": "در بازهٔ $(1, a)$ نمودار تابع $y = \\sqrt{x + 3}$ بالاتر از نمودار $y = |x - 3|$ است. $a$ کدام است؟",
+      "options": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 389,
+      "question_page": 6,
+      "question_text": "نمودار تابع $y = -x^2 + 2x + 1$ در بازهٔ $(a, b)$ بالاتر از نمودار تابع $y = |x - 1| - 2$ است. حداکثر $b - a$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 390,
+      "question_page": 6,
+      "question_text": "نمودار تابع $f(x) = |x + 2| + 2x - 4$ از کدام ناحیه عبور نمی‌کند؟",
+      "options": [
+        "اول",
+        "دوم",
+        "سوم",
+        "چهارم"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 391,
+      "question_page": 6,
+      "question_text": "نمودار تابع $y = |x - 1| - |2x + 2|$ از کدام ناحیه عبور نمی‌کند؟",
+      "options": [
+        "اول",
+        "دوم",
+        "سوم",
+        "چهارم"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 392,
+      "question_page": 6,
+      "question_text": "مساحت ناحیهٔ محدود به نمودار تابع $y = |3x - 2|$ و محور xها و دو خط $x = 2$ و $x = -2$ کدام است؟",
+      "options": [
+        "$13$",
+        "$\\frac{40}{3}$",
+        "$\\frac{41}{3}$",
+        "$14$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 393,
+      "question_page": 6,
+      "question_text": "مساحت محدود به نمودار $|y| - 4 = |x|$ و خط $y = 6$ چه‌قدر است؟",
+      "options": [
+        "$58$",
+        "$60$",
+        "$68$",
+        "$70$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 394,
+      "question_page": 6,
+      "question_text": "مساحت محصور بین نمودار تابع $f(x) = |x - 1| + |x + 2|$ و خط $y = 5$ کدام است؟",
+      "options": [
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 395,
+      "question_page": 6,
+      "question_text": "مساحت محدود به نمودار تابع $y = |x - 1| + |x + 2|$ و خط $y = k$ برابر ۲۰ است. $k$ کدام است؟",
+      "options": [
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 396,
+      "question_page": 6,
+      "question_text": "مساحت ناحیهٔ محدود به نمودارهای دو تابع $y = 4 - |x|$ و $y = |x + 1|$ کدام است؟",
+      "options": [
+        "$7/5$",
+        "$8$",
+        "$15$",
+        "$16$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 397,
+      "question_page": 6,
+      "question_text": "نمودار $f(x) = k - |x - 2k|$ به صورت مقابل است. اگر مساحت قسمت رنگی ۳۶ باشد، مقدار $k$ کدام است؟",
+      "options": [
+        "$6$",
+        "$8$",
+        "$9$",
+        "$12$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "box": [
+            51,
+            693,
+            195,
+            786
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع قدرمطلق و ناحیه رنگی هاشورخورده"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 398,
+      "question_page": 6,
+      "question_text": "در شکل روبه‌رو نمودار $f(x) = |x - \\alpha| - \\beta$ با شرط $\\alpha > \\beta > 0$ رسم شده است. اگر $\\Delta S_1 = S_2$ مقدار $\\frac{\\alpha}{\\beta}$ چه عددی است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$7$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "box": [
+            53,
+            785,
+            237,
+            893
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع قدرمطلق با دو ناحیه مشخص شده S1 و S2"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 399,
+      "question_page": 7,
+      "question_text": "اگر نمودار تابع $y = x^2 - 2x - 3$ را $A$ واحد به طرف $x$های مثبت، سپس $B$ واحد به طرف $y$های مثبت انتقال دهیم، نمودار تابع $y = x^2 - 6x + 10$ به‌دست می‌آید. مساحت محدود به نمودار $y = -|x + A| + B$ و محور $x$ها کدام است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$1$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 400,
+      "question_page": 7,
+      "question_text": "مساحت ناحیهٔ محدود به نمودارهای دو تابع $f(x) = |x| - x$ و $g(x) = 2 - |x|$ کدام است؟",
+      "options": [
+        "$4$",
+        "$\\frac{5}{2}$",
+        "$3$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 401,
+      "question_page": 7,
+      "question_text": "مساحت ناحیهٔ محدود به نمودارهای $y = 3 - |x - 1|$ و $y = 2|x - 1|$ کدام است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 402,
+      "question_page": 7,
+      "question_text": "مساحت محصور بین نمودارهای $y = \\sqrt{x^2 - 2x + 1}$ و $y = 2 - |x - 1|$ کدام است؟",
+      "options": [
+        "$4$",
+        "$2$",
+        "$1$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 403,
+      "question_page": 7,
+      "question_text": "مساحت ناحیهٔ محدود به نمودارهای $f(x) = |x + 1| + |x - 1|$ و $g(x) = |x| + 2$ کدام است؟",
+      "options": [
+        "$2$",
+        "$4$",
+        "$3$",
+        "$6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 404,
+      "question_page": 7,
+      "question_text": "در شکل روبه‌رو، مساحت ناحیهٔ رنگی چه کسری از مساحت ناحیهٔ محدود به نمودار $|x| + |y| = 2$ است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{8}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0007.jpg",
+          "box": [
+            48,
+            477,
+            187,
+            560
+          ],
+          "placement": "stem",
+          "alt": "نمودار $|x| + |y| = 2$ با ناحیه رنگی مشخص"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 405,
+      "question_page": 7,
+      "question_text": "مساحت ناحیهٔ محدود به نمودار $y - |x| = 2$ و $|x| + |y| = 4$ کدام است؟",
+      "options": [
+        "$4$",
+        "$8$",
+        "$12$",
+        "$16$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 406,
+      "question_page": 7,
+      "question_text": "مقدار $y = \\sqrt{x^2 - 2x + 1} - \\sqrt{x^2 - 4x + 4}$ به ازای $1 < x < 2$ کدام است؟",
+      "options": [
+        "$1 - 2x$",
+        "$2x - 3$",
+        "$3 - 2x$",
+        "$2x - 1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 407,
+      "question_page": 7,
+      "question_text": "اگر $-1 < x < 1$ باشد، حاصل عبارت $|x - 2| - |x + 1| - \\sqrt{x^2 - 2x + 1}$ کدام است؟",
+      "options": [
+        "$-x$",
+        "$x$",
+        "$-x + 2$",
+        "$x + 2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 408,
+      "question_page": 7,
+      "question_text": "حاصل عبارت $\\sqrt{x^2 - 2x + 1} - \\sqrt{x^2 - 6x + 9}$ به ازای $1 < x < 3$ با کدام برابر است؟",
+      "options": [
+        "$2$",
+        "$-2$",
+        "$2x - 4$",
+        "$4 - 2x$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 409,
+      "question_page": 7,
+      "question_text": "اگر $|a| < -a$ باشد، ساده شدهٔ عبارت $|a| - \\sqrt{a^2 + 4a + 4} - \\sqrt{a^2 - 2a + 1}$ کدام است؟",
+      "options": [
+        "$a + 1$",
+        "$1 - 3a$",
+        "$-a - 3$",
+        "$a - 1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 410,
+      "question_page": 7,
+      "question_text": "اگر $x < 0$ باشد، حاصل عبارت $\\frac{|x|}{|-x|} + \\frac{x}{|x|} - \\frac{-x}{|-x|}$ با کدام برابر است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "$3$",
+        "$-3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 411,
+      "question_page": 8,
+      "question_text": "کدام رابطه تابع نیست؟",
+      "options": [
+        "$|y + 1| - x = 0$",
+        "$y + |x + 1| = 0$",
+        "$|y| + x^2 = 0$",
+        "$|y - 1| + |x| = 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 412,
+      "question_page": 8,
+      "question_text": "نمودار تابع $f(x) = \\frac{1}{2}x - 1$ را در امتداد محور $x$ها، ۲ واحد در جهت مثبت و سپس در امتداد محور $y$ها، ۳ واحد در جهت مثبت انتقال می‌دهیم. نمودار جدید و نمودار $f$ در نقطه‌ای با کدام طول، متقاطع‌اند؟",
+      "options": [
+        "$-2$",
+        "$0$",
+        "$2$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 413,
+      "question_page": 8,
+      "question_text": "نمودار تابع $y = |x| - x$ با خط $y = 2$ در نقطه‌ای با کدام طول متقاطع است؟",
+      "options": [
+        "$-2$",
+        "$-1$",
+        "$1$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 414,
+      "question_page": 8,
+      "question_text": "به ازای چند مقدار $x$، نامساوی $\\frac{|x|}{x} < x$ برقرار است؟",
+      "options": [
+        "فقط مقادیر مثبت",
+        "فقط مقادیر منفی",
+        "همهٔ مقادیر",
+        "برخی از مقادیر منفی"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 415,
+      "question_page": 8,
+      "question_text": "مجموعه جواب نامعادلهٔ $\\frac{x - 1}{|x| + 1} > 1$ کدام است؟",
+      "options": [
+        "$(-\\infty, 0)$",
+        "$(1, +\\infty)$",
+        "$\\mathbb{R} - [0, 1]$",
+        "$\\emptyset$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 416,
+      "question_page": 8,
+      "question_text": "حاصل عبارت $\\sqrt{4x^2 - 12x + 9} + \\sqrt{x^2 - 2x + 1}$ به ازای $1 < x < \\frac{3}{2}$ کدام است؟",
+      "options": [
+        "$3x - 4$",
+        "$4 - 3x$",
+        "$2 - x$",
+        "$x - 2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 417,
+      "question_page": 8,
+      "question_text": "معادلهٔ $x^2 - 2|x| + a = 0$ دارای سه ریشهٔ متمایز است. مقدار $a$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "صفر",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 418,
+      "question_page": 8,
+      "question_text": "اگر $|x - 2| < 3$ باشد، حاصل عبارت $\\sqrt{x^2 + 2x + 1} - \\sqrt{x^2 - 10x + 25}$ کدام است؟",
+      "options": [
+        "$2x - 4$",
+        "$2x + 4$",
+        "$6$",
+        "$-4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 419,
+      "question_page": 8,
+      "question_text": "تعداد جواب‌های صحیح نامعادلهٔ $|2x - 1| < 5$ کدام است؟",
+      "options": [
+        "۴",
+        "۵",
+        "۶",
+        "۷"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 420,
+      "question_page": 8,
+      "question_text": "حاصل‌ضرب ریشه‌های معادلهٔ $\\sqrt{x^2 - 4x + 4} = 3$ کدام است؟",
+      "options": [
+        "$-5$",
+        "$5$",
+        "$-4$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 421,
+      "question_page": 8,
+      "question_text": "اگر $x < 0$ باشد، حاصل عبارت $\\frac{|x| - x}{2x} + \\frac{x + |x|}{2x}$ کدام است؟",
+      "options": [
+        "$1$",
+        "$-1$",
+        "صفر",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 422,
+      "question_page": 8,
+      "question_text": "مجموعه جواب نامعادلهٔ $\\frac{|x - 1|}{|x| + 1} > 1$ کدام است؟",
+      "options": [
+        "$(-\\infty, 0)$",
+        "$(1, +\\infty)$",
+        "$(0, 1)$",
+        "$\\emptyset$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 423,
+      "question_page": 8,
+      "question_text": "تعداد جواب‌های معادلهٔ $\\frac{|x|}{x} = \\frac{x}{|x|}$ چندتاست؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "بی‌شمار"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 424,
+      "question_page": 8,
+      "question_text": "نمودار تابع $f(x) = |x - 1| + |x + 1|$ در بازهٔ $[-1, 1]$ به کدام صورت است؟",
+      "options": [
+        "پاره‌خط",
+        "نیم‌خط",
+        "نقطه",
+        "دو پاره‌خط"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 425,
+      "question_page": 8,
+      "question_text": "مجموعه جواب نامعادلهٔ $|x - 2| \\leq 2x - 1$ کدام است؟",
+      "options": [
+        "$[1, +\\infty)$",
+        "$[1, 2]$",
+        "$[2, +\\infty)$",
+        "$[1, 3]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 426,
+      "question_page": 9,
+      "question_text": "اگر نمودار تابع $y = x^2 - 4x + 3$ را $a$ واحد به سمت چپ و $b$ واحد به سمت پایین انتقال دهیم، نمودار $y = x^2 - 2x - 3$ به دست می‌آید. $a + b$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$2$",
+        "$-1$",
+        "$1$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 427,
+      "question_page": 9,
+      "question_text": "تابع $f(x) = \\sqrt{x - 1}$ مفروض است. نمودار تابع $g(x) = f(x + 2) - 1$ در کدام ربع‌ها قرار دارد؟",
+      "options": [
+        "اول و دوم و سوم",
+        "اول و دوم و چهارم",
+        "اول و سوم و چهارم",
+        "اول و دوم"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 428,
+      "question_page": 9,
+      "question_text": "اگر نمودار تابع $f(x) = |x| - 1$ را در امتداد محور $x$ها، ۲ واحد در جهت منفی و سپس در امتداد محور $y$ها، یک واحد در جهت مثبت انتقال دهیم، نمودار جدید و نمودار $f$ در نقطه‌ای با کدام عرض متقاطع‌اند؟",
+      "options": [
+        "$-1$",
+        "صفر",
+        "$\\frac{1}{2}$",
+        "$\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 429,
+      "question_page": 9,
+      "question_text": "نمودار تابع $f(x) = -|x + 1| + 2$ را در امتداد محور $x$ها، ۲ واحد در جهت مثبت و سپس در امتداد محور $y$ها، ۳ واحد در جهت مثبت انتقال می‌دهیم تا نمودار $g(x)$ به دست آید. مساحت ناحیهٔ محدود به دو نمودار $f$ و $g$ کدام است؟",
+      "options": [
+        "$\\frac{25}{2}$",
+        "$\\frac{25}{4}$",
+        "$\\frac{25}{8}$",
+        "$\\frac{25}{16}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 430,
+      "question_page": 9,
+      "question_text": "نمودار تابع $f(x) = |x - 1| - 2$ را نسبت به محور $x$ها قرینه کرده و سپس در امتداد محور $x$ها، ۲ واحد در جهت منفی و در امتداد محور $y$ها، ۳ واحد در جهت مثبت انتقال می‌دهیم تا تابع $g(x)$ به دست آید. دو تابع $f$ و $g$ در نقطه‌ای با کدام طول متقاطع‌اند؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{3}{2}$",
+        "$-\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 431,
+      "question_page": 9,
+      "question_text": "نمودار تابع $f(x) = x - |x|$ را در امتداد محور $x$ها، یک واحد در جهت مثبت و در امتداد محور $y$ها، ۲ واحد در جهت مثبت انتقال می‌دهیم. نمودار جدید در کدام بازه بر نمودار تابع $g(x) = x - 1$ منطبق است؟",
+      "options": [
+        "$[1, +\\infty)$",
+        "$[-1, +\\infty)$",
+        "$(-\\infty, 1]$",
+        "$(-\\infty, -1]$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 432,
+      "question_page": 9,
+      "question_text": "نمودار تابع $y = |x - 2| + |x + 1|$ خط $y = 5$ را در دو نقطه به طول‌های $\\alpha$ و $\\beta$ قطع می‌کند. $\\alpha + \\beta$ کدام است؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$-1$",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 433,
+      "question_page": 9,
+      "question_text": "معادلهٔ $|x - 1| + |x + 2| = a$ به ازای کدام مقدار $a$ دو ریشهٔ متمایز دارد؟",
+      "options": [
+        "$2$",
+        "$1$",
+        "$3$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 434,
+      "question_page": 9,
+      "question_text": "معادلهٔ $|x + 1| + |x - 3| = a$ فاقد جواب است. حدود $a$ کدام است؟",
+      "options": [
+        "$a < 4$",
+        "$a > 4$",
+        "$a < 2$",
+        "$a > 2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 435,
+      "question_page": 9,
+      "question_text": "مجموعه جواب نامعادلهٔ $|x - 1| + |x - 2| < 3$ کدام است؟",
+      "options": [
+        "$(0, 3)$",
+        "$(-1, 2)$",
+        "$(1, 4)$",
+        "$(-2, 1)$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 436,
+      "question_page": 9,
+      "question_text": "مجموعه جواب نامعادلهٔ $|x + 1| + |x - 2| > 5$ به صورت $(-\\infty, a) \\cup (b, +\\infty)$ است. $b - a$ کدام است؟",
+      "options": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 437,
+      "question_page": 9,
+      "question_text": "مساحت ناحیهٔ محدود به نمودار $y = |x - 1| + |x + 2|$ و خط $y = 5$ کدام است؟",
+      "options": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$8$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 438,
+      "question_page": 9,
+      "question_text": "مساحت ناحیهٔ محدود به نمودار $y = |x - 2| + |x + 1|$ و خط $y = 7$ کدام است؟",
+      "options": [
+        "$12$",
+        "$14$",
+        "$16$",
+        "$18$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 439,
+      "question_page": 9,
+      "question_text": "مساحت ناحیهٔ محدود به نمودارهای $y = |x| + |x - 1|$ و $y = |x| + 2$ کدام است؟",
+      "options": [
+        "$\\frac{5}{2}$",
+        "$3$",
+        "$\\frac{7}{2}$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 440,
+      "question_page": 9,
+      "question_text": "اگر $f(x) = \\frac{|x|}{x}$ باشد، برد تابع $g(x) = f(x - 1) + f(x + 1)$ کدام است؟",
+      "options": [
+        "$\\{-2, 0, 2\\}$",
+        "$\\{-2, 2\\}$",
+        "$\\{-1, 0, 1\\}$",
+        "$\\{-1, 1\\}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

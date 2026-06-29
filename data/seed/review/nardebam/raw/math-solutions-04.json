@@ -1,0 +1,3062 @@
+{
+  "task_id": "math-solutions-04",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 640,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "اگر $k = g^{-1}(6)$ باشد، آن‌گاه $g(k) = 6$ است.\n$g(k) = k^3 - 2 = 6 \\Rightarrow k=2$\n$\\Rightarrow f^{-1} \\circ g^{-1}(6) = f^{-1}(g^{-1}(6)) = f^{-1}(2)$\nاگر $a = f^{-1}(2)$ باشد، آن‌گاه $f(a) = 2$ است.\n$f(a) = \\sqrt[3]{a-2} + 1 = 2 \\Rightarrow a-2 = 1 \\Rightarrow a=3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 641,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "دامنه تابع $f^{-1} \\circ g$ به صورت زیر است:\n$D_{f^{-1} \\circ g} = \\{x \\mid x \\in D_g , g(x) \\in D_{f^{-1}}\\}$\n$g(x) = \\sqrt{x-1} \\Rightarrow x-1 \\ge 0 \\Rightarrow x \\ge 1 \\Rightarrow D_g = [1, +\\infty) \\quad (1)$\nمی‌دانیم دامنه $f^{-1}$ همان برد $f$ است.\n$f(x) = \\sqrt{x+1} + 2 \\Rightarrow \\sqrt{x+1} \\ge 0 \\Rightarrow \\sqrt{x+1} + 2 \\ge 2 \\Rightarrow f(x) \\ge 2 \\Rightarrow R_f = D_{f^{-1}} = [2, +\\infty)$\nخواهیم داشت:\n$g(x) \\in D_{f^{-1}} \\Rightarrow g(x) \\ge 2 \\Rightarrow \\sqrt{x-1} \\ge 2 \\Rightarrow x-1 \\ge 4 \\Rightarrow x \\ge 5 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow D_{f^{-1} \\circ g} = [5, +\\infty)$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 642,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "دو خط $a = 3y - 2x$ و $12 = ax + by$ وارون یکدیگر هستند.\nبا عوض‌کردن جای $x$ و $y$ در تابع $12 = ax + by$ وارون آن به دست می‌آید که بر خط $a = 3y - 2x$ منطبق است.\n$\\begin{cases} ax + by = 12 \\Rightarrow ay + bx = 12 \\\\ 3y - 2x = a \\end{cases}$\nشرط انطباق: $\\frac{a}{3} = \\frac{b}{-2} = \\frac{12}{a}$\nدر نتیجه:\n$\\frac{a}{3} = \\frac{12}{a} \\Rightarrow a^2 = 36 \\Rightarrow \\begin{cases} a=6 \\Rightarrow b=-4 \\Rightarrow a+b=2 \\\\ a=-6 \\Rightarrow b=4 \\Rightarrow a+b=-2 \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 643,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "خط $4 = mx + 3y$ در صورتی نسبت به نیمساز ناحیه اول و سوم متقارن است که شیب خط برابر $-1$ باشد.\n$y = -\\frac{m}{3}x + \\frac{4}{3} \\Rightarrow -\\frac{m}{3} = -1 \\Rightarrow m=3$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 644,
+      "solution_page": 61,
+      "solution_text": "نمودار $f^{-1}(x)$ را رسم می‌کنیم.\\nدامنهٔ تابع $y=\\sqrt{f(x)-f^{-1}(x)}$ مجموعه جواب نامعادلهٔ $f(x) \\ge f^{-1}(x)$ است که با توجه به شکل بازهٔ $[-1, 3]$ می‌باشد.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "file": "page_0061.jpg",
+          "box": [
+            471,
+            649,
+            745,
+            755
+          ],
+          "alt": "نمودار تابع f و وارون آن f^{-1}",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 645,
+      "solution_page": 61,
+      "solution_text": "نمودار $f^{-1}(x)$ را رسم می‌کنیم.\\nدامنهٔ تابع $y=\\sqrt{f^{-1}(x)-x}$ مجموعه جواب نامعادلهٔ $f^{-1}(x) \\ge x$ است. با توجه به نمودار بازهٔ $[-2, 2]$ دامنهٔ تابع فوق است که اعداد صحیح $2, 1, 0, -1, -2$ عضو آن می‌باشند.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "file": "page_0061.jpg",
+          "box": [
+            454,
+            785,
+            765,
+            888
+          ],
+          "alt": "نمودار تابع f و وارون آن f^{-1}",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 646,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "دامنه تابع $y = \\sqrt{f^{-1}(x) - x}$ مجموعه جواب نامعادله $f^{-1}(x) \\ge x$ است. با توجه به نمودار بازه $[-2, 2]$ دامنه تابع فوق است که اعداد صحیح $-2, -1, 0, 1, 2$ عضو آن می‌باشند.\nتابع $f(x)$ را رسم می‌کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0061.jpg",
+          "box": [
+            120,
+            310,
+            640,
+            770
+          ],
+          "alt": "نمودار f و f وارون",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 647,
+      "solution_page": "page_0061.jpg",
+      "solution_text": "قرینه آن نسبت به نیمساز ربع اول و سوم تابع $f^{-1}(x)$ است.\nاگر نمودار تابع $y = x + 6\\sqrt{x}$ را نسبت به نیمساز ناحیه اول و سوم قرینه کنیم، وارون آن به دست می‌آید. ضابطه وارون تابع را به دست می‌آوریم:\n$y = x + 6\\sqrt{x} = (\\sqrt{x} + 3)^2 - 9 \\Rightarrow (\\sqrt{x} + 3)^2 = y + 9$\n$\\Rightarrow \\sqrt{x} + 3 = \\sqrt{y + 9} \\Rightarrow \\sqrt{x} = \\sqrt{y + 9} - 3$\n$\\Rightarrow x = (\\sqrt{y + 9} - 3)^2 \\Rightarrow y^{-1} = (\\sqrt{x + 9} - 3)^2$\n$= (\\sqrt{x} + a - b)^2 \\Rightarrow \\begin{cases} a=9 \\\\ b=3 \\end{cases} \\Rightarrow a-b = 6$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 648,
+      "solution_page": 61,
+      "solution_text": "نمودار $f^{-1}$ را رسم می‌کنیم.\\nبرای محاسبهٔ مساحت چهارضلعی $OABC$ (که در این مسئله لوزی است) کافی است مساحت مثلث $OAB$ را به دست آورده و دو برابر کنیم.\\n$O(0, 0)\\ A(3, 1)\\ B(4, 4)$\\n$S_{OAB} = \\frac{1}{2} \\vert (0+4+0)-(0+12+0) \\vert = 4$\\n$\\Rightarrow S_{OABC} = 4 \\times 2 = 8$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "file": "page_0061.jpg",
+          "box": [
+            55,
+            412,
+            175,
+            497
+          ],
+          "alt": "نمودار تابع f^{-1} و چهارضلعی OABC",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 649,
+      "solution_page": 61,
+      "solution_text": "نمودار تابع مورد نظر باید پایین نیمساز ناحیهٔ اول و سوم باشد.\\nگزینه ۴ درست است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "file": "page_0061.jpg",
+          "box": [
+            71,
+            621,
+            206,
+            731
+          ],
+          "alt": "نمودار تابع y=log_2 x و خط y=x",
+          "placement": "solution"
+        },
+        {
+          "file": "page_0061.jpg",
+          "box": [
+            252,
+            621,
+            396,
+            738
+          ],
+          "alt": "نمودار تابع y=2^x و خط y=x",
+          "placement": "solution"
+        },
+        {
+          "file": "page_0061.jpg",
+          "box": [
+            74,
+            750,
+            206,
+            860
+          ],
+          "alt": "نمودار تابع y=x^3-2 و خط y=x",
+          "placement": "solution"
+        },
+        {
+          "file": "page_0061.jpg",
+          "box": [
+            252,
+            750,
+            396,
+            871
+          ],
+          "alt": "نمودار تابع y=2^{-x} و خط y=x",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 650,
+      "solution_page": 62,
+      "solution_text": "روش اول: وارون تابع $f$ را به دست می‌آوریم.\n$y = \\dfrac{x + 4}{x - 2} \\Rightarrow xy - 2y = x + 4 \\Rightarrow x = \\dfrac{2y + 4}{y - 1}$\n$\\Rightarrow f^{-1}(x) = \\dfrac{2x + 4}{x - 1}$\nخواهیم داشت:\n$f^{-1}(x) = f(x) \\Rightarrow \\dfrac{2x + 4}{x - 1} = \\dfrac{x + 4}{x - 2}$\n$\\Rightarrow (2x + 4)(x - 2) = (x + 4)(x - 1)$\n$\\Rightarrow x^2 - 3x - 4 = 0 \\Rightarrow \\begin{cases} x = -1 \\Rightarrow y = -1 \\\\ x = 4 \\Rightarrow y = 4 \\end{cases}$\n$A(-1, -1) \\quad B(4, 4) \\Rightarrow AB = \\sqrt{25 + 25} = 5\\sqrt{2}$\nروش دوم: تابع هموگرافیک $y = \\dfrac{ax + b}{cx + d}$ وارون خود را در صورت تلاقی بر روی خط $y = x$ قطع می‌کند. (اگر با وارون خود برابر نباشد.)\nبنابراین:\n$\\dfrac{x + 4}{x - 2} = x \\Rightarrow x^2 - 3x - 4 = 0 \\Rightarrow \\begin{cases} x = -1 \\\\ x = 4 \\end{cases}$",
+      "stated_correct_option": "3",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            520,
+            70,
+            890,
+            360
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 651,
+      "solution_page": 62,
+      "solution_text": "اگر تابع هموگرافیک $y = \\dfrac{ax + b}{cx + d}$ نیمساز ربع اول و سوم را در دو نقطه قطع کند، وارون خود را در همان دو نقطه قطع می‌کند و اگر بر آن مماس باشد، بر وارون خود نیز در همان نقطه مماس است و اگر قطع نکند، وارون خود را نیز قطع نمی‌کند مگر آن‌که بر وارون خود منطبق باشد.\nتابع $f(x) = \\dfrac{4x + m}{x - 2}$ باید بر $y = x$ مماس باشد. شرط مماس بودن آن است که معادلة به دست آمده ریشة مضاعف داشته باشد.\n$\\dfrac{4x + m}{x - 2} = x \\Rightarrow x^2 - 6x - m = 0$\n$\\Delta = 0 \\Rightarrow 36 + 4m = 0 \\Rightarrow m = -9$",
+      "stated_correct_option": "2",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            520,
+            375,
+            890,
+            540
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 652,
+      "solution_page": 62,
+      "solution_text": "تابع هموگرافیک $y = \\dfrac{ax + b}{cx + d}$ وارون خود را در صورت تلاقی بر روی خط $y = x$ قطع می‌کند.\n$f(x) = \\dfrac{3x + 8}{x + 1} = x \\Rightarrow x^2 - 2x - 8 = 0$\n$\\Rightarrow (x + 2)(x - 4) = 0 \\Rightarrow \\begin{cases} x = -2 \\Rightarrow y = -2 \\\\ x = 4 \\Rightarrow y = 4 \\end{cases} \\Rightarrow y_1 + y_2 = 2$",
+      "stated_correct_option": "2",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            520,
+            545,
+            890,
+            650
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 653,
+      "solution_page": 62,
+      "solution_text": "وارون تابع $f(x) = \\dfrac{2x - 5}{x - 2}$ با $f(x)$ برابر است ($a = -d$)؛\nبنابراین:\n$fof^{-1}(a) - f^{-1}(3a) = a - 1 \\Rightarrow a - f(3a) = a - 1$\n$\\Rightarrow f(3a) = 1 \\Rightarrow \\dfrac{6a - 5}{3a - 2} = 1 \\Rightarrow 6a - 5 = 3a - 2 \\Rightarrow a = 1$",
+      "stated_correct_option": "1",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            520,
+            655,
+            890,
+            750
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 654,
+      "solution_page": 62,
+      "solution_text": "با شرط $x \\ge -2$ وارون تابع $f(x) = x^2 + 4x - 1$ را به دست می‌آوریم:\n$y = (x + 2)^2 - 5 \\Rightarrow (x + 2)^2 = y + 5$\n$\\xrightarrow{x \\ge -2} x + 2 = \\sqrt{y + 5} \\Rightarrow x = \\sqrt{y + 5} - 2$\n$\\Rightarrow f^{-1}(x) = \\sqrt{x + 5} - 2$\nبنابراین:\n$f^{-1}(x) = g(x) \\Rightarrow \\sqrt{x + 5} - 2 = \\dfrac{x^2}{2} - 7$\nبا امتحان گزینه‌ها $x = 4$ درست است.",
+      "stated_correct_option": "3",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            520,
+            755,
+            890,
+            890
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 655,
+      "solution_page": 62,
+      "solution_text": "اگر تابع $f$ وارون خود را در $(a, b)$ قطع کند، قطعاً آن را در $(b, a)$ نیز قطع می‌کند.\n$f(x) = -x^2 + ax + b$\n$\\begin{cases} f(1) = 2 \\Rightarrow -1 + a + b = 2 \\Rightarrow a + b = 3 \\\\ f(2) = 1 \\Rightarrow -4 + 2a + b = 1 \\Rightarrow 2a + b = 5 \\end{cases}$\n$\\Rightarrow a = 2, b = 1$\n$\\Rightarrow f(x) = -x^2 + 2x + 1 \\Rightarrow f(4) = -16 + 8 + 1 = -7$",
+      "stated_correct_option": "3",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            100,
+            70,
+            470,
+            195
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 656,
+      "solution_page": 62,
+      "solution_text": "تابع اکیداً صعودی وارون خود را در صورت تلاقی بر روی نیمساز ربع اول و سوم قطع می‌کند. تابع $f$ را به صورت دوضابطه‌ای می‌نویسیم.\n$f(x) = 2x + |x + 3| = \\begin{cases} 3x + 3 & x \\ge -3 \\\\ x - 3 & x < -3 \\end{cases}$\nتابع $f$ اکیداً صعودی است. برای یافتن محل تلاقی $f$ و $f^{-1}$ تابع $f$ را با $y = x$ قطع می‌دهیم.\n$f(x) = x \\Rightarrow \\begin{cases} 3x + 3 = x \\Rightarrow x = -\\dfrac{3}{2} \\checkmark \\Rightarrow y = -\\dfrac{3}{2} \\\\ x - 3 = x \\Rightarrow -3 = 0 \\text{ غ‌ق‌ق} \\end{cases}$\nمحل تلاقی $f$ و $f^{-1}$ نقطة $P(-\\dfrac{3}{2}, -\\dfrac{3}{2})$ است.\n$(-\\dfrac{3}{2}) \\times (-\\dfrac{3}{2}) = \\dfrac{9}{4} = 2.25$",
+      "stated_correct_option": "1",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            100,
+            200,
+            470,
+            370
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 657,
+      "solution_page": 62,
+      "solution_text": "وارون تابع $f(x) = 2x + \\sqrt{x - 1}$ را به دست می‌آوریم. کافی است جای $x$ و $y$ را عوض کنیم و نیازی به استانداردسازی نداریم.\n$y = 2x + \\sqrt{x - 1} \\Rightarrow \\text{وارون:} x = 2y + \\sqrt{y - 1}$\nحال این تابع را با خط $y = \\dfrac{1}{3}x + 1$ یا همان $x = 3y - 3$ قطع می‌دهیم.\n$2y + \\sqrt{y - 1} = 3y - 3 \\Rightarrow \\sqrt{y - 1} = y - 3$\n$\\xrightarrow{y \\ge 3} (y - 3)^2 = y - 1 \\Rightarrow y^2 - 7y + 10 = 0$\n$\\Rightarrow \\begin{cases} y = 2 \\text{ غ‌ق‌ق } (y \\ge 3) \\\\ y = 5 \\Rightarrow x = 12 \\end{cases}$",
+      "stated_correct_option": "3",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            100,
+            375,
+            470,
+            530
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 658,
+      "solution_page": 62,
+      "solution_text": "ضابطة دو تابع $f^{-1}(x)$ و $fof^{-1}(x)$ همواره برابر و به صورت $y = x$ است. بنابراین این دو تابع زمانی با هم برابر می‌شوند که دامنة آن‌ها برابر باشد.\n$D_{f^{-1}of} = D_f, D_{fof^{-1}} = D_{f^{-1}} \\Rightarrow D_f = D_{f^{-1}} \\Rightarrow D_f = R_f$\nخواهیم داشت:\n$D_f = \\{1, a, b\\} \\qquad R_f = \\{2, 4, c\\}$\n$D_f = R_f \\Rightarrow \\begin{cases} a = 2 \\\\ b = 4 \\\\ c = 1 \\end{cases} \\text{ یا } \\begin{cases} b = 2 \\\\ a = 4 \\\\ c = 1 \\end{cases} \\Rightarrow ab - c = 8 - 1 = 7$",
+      "stated_correct_option": "2",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            100,
+            540,
+            470,
+            695
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 659,
+      "solution_page": 62,
+      "solution_text": "با توجه به دو نمودار $f$ و $g$ واضح است این دو تابع وارون یکدیگر می‌باشند.\n$g(x) = f^{-1}(x)$\nخواهیم داشت:\n$fog(a) = gof(4 - a) \\Rightarrow fof^{-1}(a) = f^{-1}of(4 - a)$\n$\\Rightarrow a = 4 - a \\Rightarrow 2a = 4 \\Rightarrow a = 2$",
+      "stated_correct_option": "2",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            100,
+            700,
+            470,
+            770
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۵۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 660,
+      "solution_page": 62,
+      "solution_text": "ضابطة $y = fof^{-1}(x)$ به صورت $y = x$ و دامنة آن برابر $D_{f^{-1}}$ یا همان $R_f$ است.\n$f(x) = 2 - \\sqrt{x - 1} : \\sqrt{x - 1} \\ge 0 \\Rightarrow -\\sqrt{x - 1} \\le 0$\n$\\Rightarrow 2 - \\sqrt{x - 1} \\le 2 \\Rightarrow f(x) \\le 2 \\Rightarrow R_f = (-\\infty, 2]$\nنمودار تابع $y = x$ در بازة $(-\\infty, 2]$ جواب مسئله است. بنابراین پاسخ ۳ است.",
+      "stated_correct_option": "3",
+      "media_regions": [
+        {
+          "filename": "page_0062.jpg",
+          "region": [
+            100,
+            780,
+            470,
+            890
+          ],
+          "placement": "solution",
+          "alt": "پاسخ سوال ۶۶۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 661,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "ضابطهٔ دو تابع $f^{-1}\\text{of}(x)$ و $\\text{fof}^{-1}(x)$ همواره با هم برابر و به صورت $y = x$ است.\nاین دو تابع زمانی با هم برابر هستند که $D_f = R_f$ باشد.\n$f(x) = \\sqrt{2-x} - 3 \\Rightarrow 2-x \\ge 0 \\Rightarrow x \\le 2$\n$\\Rightarrow D_f = (-\\infty, 2]$\n$\\sqrt{2-x} \\ge 0 \\Rightarrow \\sqrt{2-x} - 3 \\ge -3 \\Rightarrow f(x) \\ge -3$\n$\\Rightarrow R_f = [-3, +\\infty)$\nمجموعه‌جواب معادلهٔ $f^{-1}\\text{of}(x) = \\text{fof}^{-1}(x)$ برابر است با:\n$D_f \\cap R_f = [-3, 2]$\nاعداد صحیح $-3$، $-2$، $-1$، $0$، $1$ و $2$ عضو مجموعه‌جواب می‌باشند.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 662,
+      "solution_page": null,
+      "solution_text": "اگر نمودار $y = \\sqrt{x - 4} + 3$ را $8$ واحد به سمت چپ منتقل کنیم $(x \\to x + 8)$، تابع $y = \\sqrt{x + 4} + 3$ به وجود می‌آید و اگر این تابع را $5$ واحد به سمت پایین انتقال دهیم، به تابع $y = \\sqrt{x + 4} - 2$ خواهیم رسید.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 663,
+      "solution_page": null,
+      "solution_text": "تابع $f(x)$ را $\\frac{1}{2}$ واحد به سمت چپ انتقال می‌دهیم تا تابع $f(x + \\frac{1}{2})$ حاصل شود.\nبدیهی است اگر نمودار $f(x + \\frac{1}{2})$، سه واحد به سمت بالا انتقال یابد از مبدأ مختصات عبور می‌کند.\n$y = f(x + \\frac{1}{2}) + 3 = f(x + \\frac{1}{2}) - k \\Rightarrow k = -3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0063.jpg",
+          "region": [
+            800,
+            700,
+            1600,
+            1100
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(x) و f(x + 1/2)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 664,
+      "solution_page": null,
+      "solution_text": "نمودار تابع $f(x) = -\\sqrt{x + 1} - 2$ را به وسیلهٔ انتقال $y = \\sqrt{x}$ رسم می‌کنیم.\nاگر نمودار $f(x) = -\\sqrt{x + 1} - 2$ را $3$ واحد به سمت راست انتقال دهیم، محورهای مختصات را قطع نخواهد کرد.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0063.jpg",
+          "region": [
+            800,
+            1100,
+            1600,
+            1900
+          ],
+          "placement": "stem",
+          "alt": "نمودارهای انتقال تابع رادیکالی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 665,
+      "solution_page": null,
+      "solution_text": "در همهٔ گزینه‌ها $f(-x)$ را تشکیل داده و برابری آن با $-f(x)$ را بررسی می‌کنیم.\n$1)\\ f(x) = 1 + |x| \\Rightarrow f(-x) = 1 + |-x| = 1 + |x| \\Rightarrow f(-x) \\neq -f(x)$\n$2)\\ f(x) = x + |x| \\Rightarrow f(-x) = -x + |-x| = -x + |x| \\Rightarrow f(-x) \\neq -f(x)$\n$3)\\ f(x) = x|x| \\Rightarrow f(-x) = -x|-x| = -x|x| \\Rightarrow f(-x) = -f(x)$\n$4)\\ f(x) = |x| - x \\Rightarrow f(-x) = |-x| + x = |x| + x \\Rightarrow f(-x) \\neq -f(x)$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 666,
+      "solution_page": null,
+      "solution_text": "ضابطهٔ تابع $y = af(x - 1)$ را ساده می‌کنیم.\n$f(x) = 8^x \\Rightarrow y = af(x - 1) = a \\times 8^{x - 1} = a \\times \\frac{1}{8} \\times 8^x$\nاگر $a = 8$ باشد، تابع فوق با $f(x)$ برابر می‌شود.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 667,
+      "solution_page": null,
+      "solution_text": "صفرهای تابع $f(x) = x^2 - 5x + 6$ برابر $2$ و $3$ می‌باشند. برای این‌که صفرهای تابع مثبت نباشند باید نمودار تابع حداقل $3$ واحد به سمت چپ انتقال یابد.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0063.jpg",
+          "region": [
+            50,
+            350,
+            800,
+            650
+          ],
+          "placement": "stem",
+          "alt": "نمودار سهمی و انتقال آن به چپ"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 668,
+      "solution_page": null,
+      "solution_text": "با تبدیل $y = f(x)$ به $y = a + f(x + b)$ طول نقاط $b$ واحد کاهش یافته و عرض نقاط $a$ واحد افزایش می‌یابد. بنابراین:\n$D_f = [-2, 3] \\Rightarrow D_{\\text{جدید}} = [-2 - b, 3 - b]$\n$R_f = [-4, 1] \\Rightarrow R_{\\text{جدید}} = [-4 + a, 1 + a]$\nخواهیم داشت:\n$D_{\\text{جدید}} = R_{\\text{جدید}} \\Rightarrow \\begin{cases} -2 - b = -4 + a \\\\ 3 - b = 1 + a \\end{cases} \\Rightarrow \\begin{cases} a + b = 2 \\\\ a + b = 2 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 669,
+      "solution_page": null,
+      "solution_text": "تبدیلات زیر را بر $y = \\sqrt{x}$ اعمال می‌کنیم.\n$y = \\sqrt{x} \\xrightarrow{x \\to -x} y = \\sqrt{-x} \\xrightarrow{y \\to -y} y = -\\sqrt{-x} \\xrightarrow{x \\to x + |k|} y = -\\sqrt{-(x + |k|)} \\xrightarrow{+3} y = -\\sqrt{-x - |k|} + 3$\nصفر تابع به دست آمده $13-$ است. بنابراین:\n$-\\sqrt{13 - |k|} + 3 = 0 \\Rightarrow \\sqrt{13 - |k|} = 3 \\Rightarrow 13 - |k| = 9 \\Rightarrow |k| = 4 \\xrightarrow{k < 0} k = -4$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0063.jpg",
+          "region": [
+            50,
+            1000,
+            800,
+            1800
+          ],
+          "placement": "stem",
+          "alt": "نمودارهای انتقال تابع رادیکالی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 670,
+      "solution_page": "page_0063.jpg",
+      "solution_text": "عملیات زیر را بر روی تابع $f(x) = \\sqrt{x} - 2$ انجام می‌دهیم تا نمودار جدید حاصل شود.\n$f(x) = \\sqrt{x} - 2 \\xrightarrow[\\text{قرینه نسبت به محور } y \\text{ ها}]{x \\to -x} y = \\sqrt{-x} - 2 \\xrightarrow[\\text{4 واحد به سمت پایین}]{-4} y = \\sqrt{-x} - 2 - 4$\nحال، نقطه تقاطع این تابع را با $y = x$ به دست می‌آوریم.\n$$ \\sqrt{-x-2} - 4 = x \\Rightarrow \\sqrt{-x-2} = x + 4 $$\n$$ \\xrightarrow{-4 \\le x \\le -2} -x - 2 = (x + 4)^2 \\Rightarrow x^2 + 9x + 18 = 0 $$\n$$ \\Rightarrow (x + 3)(x + 6) = 0 \\Rightarrow \\begin{cases} x = -3 \\ \\checkmark \\\\ x = -6 \\text{ (غ ق ق)} (-4 \\le x \\le -2) \\end{cases} $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 671,
+      "solution_page": null,
+      "solution_text": "روش اول: برای به دست آوردن ضابطهٔ $f(x)$ کافی است\nمسیر طی شده را بازگردیم. یعنی ابتدا نمودار $y = (x + 2)^2$ را نسبت به\nمحور عرض‌ها قرینه می‌کنیم، سپس ۲ واحد به سمت بالا انتقال داده و در\nانتها ۳ واحد به سمت چپ منتقل می‌کنیم.\n$y = (x + 2)^2 \\xrightarrow{x \\to -x} y = (-x + 2)^2$\n$\\xrightarrow{+2} y = (-x + 2)^2 + 2 \\xrightarrow{x \\to x + 3} y = (-(x + 3) + 2)^2 + 2 = (-x - 1)^2 + 2$\nبنابراین: $f(x) = (-x - 1)^2 + 2 = (x + 1)^2 + 2 = x^2 + 2x + 3$\nروش دوم: این عملیات را بر روی یکی از نقاط $y = (x + 2)^2$ انجام\nمی‌دهیم. $A(-2, 0) \\Rightarrow A'(2, 0) \\Rightarrow A''(2, 2) \\Rightarrow A'''(-1, 2)$\nنقطهٔ $(-1, 2)$ فقط در گزینه ۱ صدق می‌کند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 672,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "ضابطه $g(x)$ را به دست می‌آوریم. ($g(x)$ بدون محاسبه ضابطه نیز قابل رسم است.)\n$$ f(x) = |x+3| - 1 \\xrightarrow[y \\to -y]{\\text{قرینه نسبت به محور } x \\text{ ها}} y = -|x+3| + 1 $$\n$$ \\xrightarrow[\\text{۲ واحد به سمت بالا}]{+2} g(x) = -|x+3| + 3 $$\nنمودار $f$ و $g$ را رسم می‌کنیم.\nچهارضلعی $ABCD$ مربع بوده و اندازه قطر $AC$ برابر ۴ است. بنابراین:\n$$ S_{ABCD} = \\frac{1}{2} d^2 = \\frac{1}{2} (4)^2 = 8 $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            1000,
+            1000,
+            1500,
+            1300
+          ],
+          "filename": "page_0064.jpg",
+          "placement": "stem",
+          "alt": "نمودار توابع f و g و چهارضلعی ABCD"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 673,
+      "solution_page": null,
+      "solution_text": "ضابطهٔ تابع انتقال یافته را به دست می‌آوریم.\n$y = \\left|\\frac{x}{3}\\right| - 1 \\xrightarrow[\\text{۳ واحد به سمت راست}]{x \\to x - 3} y = \\left|\\frac{x - 3}{3}\\right| - 1$\n$\\xrightarrow[\\frac{1}{2}\\text{ واحد به سمت پایین}]{-\\frac{1}{2}} y = \\left|\\frac{x - 3}{3}\\right| - \\frac{3}{2}$\nخواهیم داشت:\n$\\left|\\frac{x}{3}\\right| - 1 = \\left|\\frac{x - 3}{3}\\right| - \\frac{3}{2} \\Rightarrow \\left|\\frac{x}{3}\\right| - \\left|\\frac{x}{3} - 1\\right| = -\\frac{1}{2}$\n$x < 0 \\Rightarrow -\\frac{x}{3} + \\frac{x}{3} - 1 = -\\frac{1}{2} \\Rightarrow -1 = -\\frac{1}{2} \\ \\text{غ‌ق‌ق}$\n$0 \\le x < 3 \\Rightarrow \\frac{x}{3} + \\frac{x}{3} - 1 = -\\frac{1}{2} \\Rightarrow \\frac{2x}{3} = \\frac{1}{2} \\Rightarrow x = \\frac{3}{4} \\ \\checkmark$\n$x \\ge 3 \\Rightarrow \\frac{x}{3} - \\frac{x}{3} + 1 = -\\frac{1}{2} \\Rightarrow 1 = -\\frac{1}{2} \\ \\text{غ‌ق‌ق}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 674,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "عملیات زیر را بر روی تابع $f(x) = -x^2 + x + 5$ انجام می‌دهیم.\n$$ f(x) = -x^2 + x + 5 $$\n$$ \\xrightarrow[\\text{۲ واحد به سمت چپ}]{x \\to x+2} y = -(x+2)^2 + (x+2) + 5 $$\n$$ \\xrightarrow[\\text{۵ واحد به سمت بالا}]{+5} y = -(x+2)^2 + (x+2) + 10 $$\n$$ \\Rightarrow y = -x^2 - 3x + 8 $$\nحال، بررسی می‌کنیم تابع جدید در کدام بازه بالای خط $y = -x$ است.\n$$ -x^2 - 3x + 8 > -x \\Rightarrow x^2 + 2x - 8 < 0 $$\n$$ \\Rightarrow (x+4)(x-2) < 0 \\Rightarrow -4 < x < 2 \\Rightarrow x \\in (-4, 2) $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 675,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "تبدیلات ذکر شده را اعمال می‌کنیم.\n$$ f(x) = \\big| \\frac{x}{3} \\big| + 1 \\xrightarrow[\\text{۳ واحد به سمت راست}]{x \\to x-3} y = \\big| \\frac{x-3}{3} \\big| + 1 $$\n$$ \\xrightarrow[\\text{۲ واحد به سمت پایین}]{-2} y = \\big| \\frac{x-3}{3} \\big| - 1 $$\nحال، تابع به دست آمده را با $f(x)$ قطع می‌دهیم.\n$$ \\big| \\frac{x-3}{3} \\big| - 1 = \\big| \\frac{x}{3} \\big| + 1 \\Rightarrow \\big| \\frac{x}{3} - 1 \\big| - \\big| \\frac{x}{3} \\big| = 2 $$\n$$ \\begin{cases} x < 0 \\Rightarrow 1 = 2 \\text{ غ ق ق} \\\\ 0 \\le x < 3 \\Rightarrow -\\frac{2x}{3} = 1 \\Rightarrow x = -\\frac{3}{2} \\text{ غ ق ق} \\\\ x \\ge 3 \\Rightarrow -1 = 2 \\text{ غ ق ق} \\end{cases} $$\nمعادله فوق جواب ندارد یعنی این دو تابع یکدیگر را قطع نمی‌کنند.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 676,
+      "solution_page": "page_0064.jpg",
+      "solution_text": "روش اول: عملیات زیر را بر روی تابع $f(x) = x^2 + 4x$ با دامنه $[-2, +\\infty)$ انجام می‌دهیم.\n$$ f(x) = x^2 + 4x = (x+2)^2 - 4 $$\n$$ \\xrightarrow[\\text{۱ واحد به سمت چپ}]{x \\to x+1} y = (x+3)^2 - 4 $$\n$$ \\xrightarrow[\\text{قرینه نسبت به محور } y \\text{ ها}]{x \\to -x} y = (-x+3)^2 - 4 $$\nبا انتقال یک واحدی تابع به سمت چپ دامنه تابع به صورت $[-3, +\\infty)$ و با قرینه کردن نسبت به محور $y$ها دامنه به صورت $(-\\infty, 3]$ درمی‌آید.\nحال وارون تابع را به دست می‌آوریم.\n$$ (-x+3)^2 = y+4 \\xrightarrow{x \\le 3} -x+3 = \\sqrt{y+4} $$\n$$ \\Rightarrow x = 3 - \\sqrt{y+4} \\Rightarrow y^{-1} = 3 - \\sqrt{x+4} $$\nروش دوم: نقطه‌یابی: عملیات فوق را بر روی یک نقطه از تابع انجام می‌دهیم.\n$$ A(-1, -3) \\Rightarrow A'(-2, -3) \\Rightarrow A''(2, -3) \\xrightarrow{\\text{وارون}} A'''(-3, 2) $$\nنقطه $(-3, 2)$ تنها در گزینه ۱ صدق می‌کند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 677,
+      "solution_page": null,
+      "solution_text": "ابتدا $g(x)$ را به دست می‌آوریم.\n$f(x) = \\left(x - \\frac{1}{2}\\right)^2 + \\frac{3}{4} \\xrightarrow[\\text{۲ واحد به سمت چپ}]{x \\to x + 2} y = \\left(x + \\frac{3}{2}\\right)^2 + \\frac{3}{4}$\n$\\xrightarrow[\\text{قرینه نسبت به محور } y\\text{ها}]{x \\to -x} g(x) = \\left(-x + \\frac{3}{2}\\right)^2 + \\frac{3}{4}$\nحال ضابطهٔ $h(x)$ را محاسبه می‌کنیم:\n$f(x) = \\left(x - \\frac{1}{2}\\right)^2 + \\frac{3}{4}$\n$\\xrightarrow[\\text{قرینه نسبت به محور } y\\text{ها}]{x \\to -x} y = \\left(-x - \\frac{1}{2}\\right)^2 + \\frac{3}{4}$\n$\\xrightarrow[\\text{۲ واحد به سمت راست}]{x \\to x - 2} h(x) = \\left(-x + \\frac{3}{2}\\right)^2 + \\frac{3}{4}$\nمشخص است که توابع $g$ و $h$ با یکدیگر برابر بوده و بر هم منطبق‌اند.\nبنابراین بی‌شمار نقطهٔ اشتراک دارند.\nاگر $f$ را ابتدا $a$ واحد به سمت راست منتقل کرده، سپس نسبت به محور\n$y$ها قرینه کنیم، هم‌ارز آن است که $f$ را ابتدا نسبت به محور $y$ها قرینه\nکرده، سپس $a$ واحد به سمت چپ منتقل کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 678,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "برای رسم $y = f(x - 4)$ نمودار $f$ را $4$ واحد به سمت راست انتقال می‌دهیم.\nبرای رسم $y = f(4 - x)$ کافی است نمودار $f(x - 4)$ را نسبت به خط $x = 2$ قرینه کنیم.\nاگر دو نمودار را در یک دستگاه در کنار هم قرار دهیم دو نمودار تنها در یک نقطه یکدیگر را قطع می‌کنند.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            850,
+            60,
+            1600,
+            480
+          ],
+          "placement": "solution",
+          "alt": "نمودارهای f(x-4) و f(4-x)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 679,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "اگر نمودار $f(x)$ را دو واحد به سمت راست انتقال دهیم ($f(x - 2)$) و اگر دو واحد به سمت چپ منتقل کرده و نسبت به محور yها قرینه کنیم، $f(-x + 2)$ حاصل می‌شود.\nبا توجه به نمودارهای $f(x - 2)$ و $f(2 - x)$ مشخص است که این دو تابع در فاصله $[0, 4]$ بر یکدیگر منطبق می‌باشند.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            850,
+            490,
+            1600,
+            850
+          ],
+          "placement": "solution",
+          "alt": "نمودارهای f(x-2) و f(2-x)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 680,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "عملیات زیر را بر روی $y = f(2 - x)$ انجام داده تا $y = f(x - 2)$ حاصل شود.\n$y = f(2 - x) \\xrightarrow{\\text{قرینه نسبت به محور yها } x \\to -x} y = f(2 + x) \\xrightarrow{\\text{4 واحد انتقال به سمت راست } x \\to x - 4} y = f(x - 2)$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            850,
+            860,
+            1600,
+            1200
+          ],
+          "placement": "solution",
+          "alt": "مراحل انتقال نمودار f(2-x) به f(x-2)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 681,
+      "solution_page": "page_0065.jpg",
+      "solution_text": "تابع $f$ را نسبت به محورهای $x$ و $y$ قرینه کرده، یک واحد به سمت راست و یک واحد به سمت پایین انتقال می‌دهیم تا تابع $g$ حاصل شود.\nنمودار از ناحیهٔ چهارم عبور نمی‌کند.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0065.jpg",
+          "region": [
+            850,
+            1250,
+            1600,
+            2100
+          ],
+          "placement": "solution",
+          "alt": "مراحل انتقال نمودار تابع f به g"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 682,
+      "solution_page": null,
+      "solution_text": "عملیات زیر را بر روی $f(x)$ انجام داده تا نمودار $y=\\frac{1}{2}f(x-2)$ حاصل شود.\n$y=f(x) \\xrightarrow[2 \\text{ واحد به سمت راست}]{x \\to x-2} y=f(x-2)$\n$y=f(x-2) \\xrightarrow[\\text{انقباض عمودی با ضریب } \\frac{1}{2}]{y \\to \\frac{1}{2}y} y=\\frac{1}{2}f(x-2)$\nدر نمودار اخیر تابع از نقاط $(0, -1)$ و $(2, 0)$ عبور می‌کند. بنابراین شیب خط برابر $\\frac{1}{2}$ بوده و محور عرض‌ها را در $(0, -1)$ قطع می‌کند. برای این‌که تابع از ناحیهٔ چهارم عبور نکند کافی است حداقل $1$ واحد به سمت بالا انتقال یابد. بنابراین $k \\ge 1$ است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 683,
+      "solution_page": null,
+      "solution_text": "عملیات زیر را بر تابع $y=2-f(x+1)$ انجام می‌دهیم تا تابع $y=1+f(3-x)$ حاصل شود.\n$y=2-f(x+1) \\xrightarrow[2 \\text{ واحد به سمت چپ}]{x \\to x+2} y=2-f(x+3)$\n$y=2-f(x+3) \\xrightarrow[\\text{قرینه نسبت به محور } y\\text{ها}]{x \\to -x} y=2-f(-x+3)$\n$y=2-f(-x+3) \\xrightarrow[\\text{قرینه نسبت به محور } x\\text{ها}]{y \\to -y} y=f(-x+3)-2$\n$y=f(-x+3)-2 \\xrightarrow[3 \\text{ واحد به سمت بالا}]{+3} y=f(3-x)+1$\nنمودار از ناحیهٔ چهارم عبور نمی‌کند.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 684,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "ابتدا تابع $y = f(x+1)$ را یک واحد به سمت راست منتقل می‌کنیم تا $y = f(x)$ حاصل شود. دامنه تابع $y = \\sqrt{xf(x)}$ مجموعه جواب نامعادله $xf(x) \\geq 0$ است.\nبا توجه به نمودار روشن است که $x$ و $f(x)$ فقط در بازه $(3, 5)$ هم‌علامت هستند و در بقیه نقاط $xf(x) \\leq 0$ است. بنابراین:\n$D = \\mathbb{R} - (3, 5)$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            70,
+            520,
+            160,
+            680
+          ],
+          "placement": "stem",
+          "filename": "page_0066.jpg",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 685,
+      "solution_page": 66,
+      "solution_text": "دامنهٔ تابع $y=\\sqrt{(x+1)f(1-x)}$ برابر $\\mathbb{R}$ است. جدول تعیین علامت عبارت $x+1$ به صورت\n$\\begin{array}{c|ccc} x & & -1 & \\\\ \\hline x+1 & - & \\circ & + \\end{array}$\nمی‌باشد. بنابراین برای این‌که عبارت زیر رادیکال همواره بزرگ‌تر یا مساوی صفر باشد، کافی است جدول تعیین علامت $f(1-x)$ نیز همین‌گونه باشد. $f(1-x)$ در $x=-1$ برابر صفر و در سمت چپ آن منفی و در سمت راست آن مثبت است. در نتیجه $f(x)$ در $x=2$ برابر صفر و در سمت چپ آن مثبت و در سمت راست آن منفی است. گزینه ۴ قابل قبول است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 686,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "اگر در تابع $y = 3f(2x)$ طول هر نقطه سه برابر شود، در ضابطه داده‌شده $x$ به $\\dfrac{x}{3}$ تبدیل شده و تابع $y = 3f(\\dfrac{2x}{3})$ به وجود می‌آید و اگر عرض نقاط را دو برابر کنیم، ضابطه تابع در ۲ ضرب می‌شود و به تابع $y = 6f(\\dfrac{2x}{3})$ خواهیم رسید.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 687,
+      "solution_page": 66,
+      "solution_text": "با فرض $0 \\lt k \\lt 1$ تابع $f(kx)$ انبساط‌یافتهٔ تابع $f(x)$ در راستای افقی می‌باشد. بنابراین گزینه ۴ درست است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 688,
+      "solution_page": 66,
+      "solution_text": "در تابع $y=\\frac{3}{2}f(\\frac{x}{3})$ با تبدیل $x$ به $\\frac{9}{4}x$ تابع $y=\\frac{3}{2}f(\\frac{\\frac{9}{4}x}{3})=\\frac{3}{2}f(\\frac{3}{4}x)$ به وجود می‌آید. (انقباض افقی با ضریب $\\frac{4}{9}$)\nاگر تابع به دست آمده را در $\\frac{4}{9}$ ضرب کنیم، تابع $y=\\frac{4}{9}(\\frac{3}{2}f(\\frac{3}{4}x))=\\frac{2}{3}f(\\frac{3}{4}x)$ حاصل خواهد شد. (انقباض عمودی با ضریب $\\frac{2}{3}$)\nبنابراین گزینه ۳ درست است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 689,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "روش اول: عملیات زیر را بر روی $f(x)$ و هم‌زمان بر نقطه $A(4, -1)$ انجام می‌دهیم.\n$y = f(x) \\xrightarrow{\\text{انبساط افقی با ضریب } 2} x \\to \\dfrac{x}{2} \\Rightarrow y = f(\\dfrac{x}{2})$\n$\\xrightarrow{\\text{انبساط عمودی با ضریب } 3} \\times 3 \\Rightarrow y = 3f(\\dfrac{x}{2})$\n$\\xrightarrow{\\text{قرینه نسبت به محور } x\\text{ها}} y \\to -y \\Rightarrow y = -3f(\\dfrac{x}{2})$\n$A(4, -1) \\Rightarrow A'(8, -1) \\Rightarrow A''(8, -3) \\Rightarrow A'''(8, 3)$\nروش دوم: نقطه $A(4, -1)$ بر روی $y=f(x)$ است. بنابراین: $f(4)=-1$.\nدر تابع $y=-3f(\\dfrac{x}{2})$ اگر $x=8$ باشد، $f(4)$ به وجود می‌آید:\n$x=8 \\Rightarrow y=-3f(4) \\Rightarrow y=-3 \\times (-1) = 3 \\Rightarrow B(8, 3)$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 690,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "روش اول: عملیات زیر را بر تابع $y = 3 - 2f(1 - 3x)$ و هم‌زمان به نقطه $A(2, 5)$ انجام می‌دهیم.\n$y=3-2f(1-3x) \\xrightarrow{\\text{انبساط افقی با ضریب } \\dfrac{3}{2}} x \\to \\dfrac{2}{3}x \\Rightarrow y=3-2f(1-2x)$\n$\\xrightarrow{\\text{قرینه نسبت به محور } y\\text{ها}} x \\to -x \\Rightarrow y=3-2f(1+2x)$\n$\\xrightarrow{\\text{یک واحد به سمت راست}} x \\to x-1 \\Rightarrow y=3-2f(3-2x) \\equiv 3-2f(2x-1)$ (Note: the text writes $3-2f(2x-1)$ directly after $x \\to x-1$, actually $1+2(x-1) = 2x-1$)\n$A(2, 5) \\Rightarrow B(3, 5) \\Rightarrow C(-3, 5) \\Rightarrow D(-2, 5)$\n$\\xrightarrow{\\text{۳ واحد به سمت پایین}} y \\to y-3 \\Rightarrow y=-2f(2x-1)$\n$\\xrightarrow{\\text{انقباض عمودی با ضریب } \\dfrac{1}{2}} y \\to \\dfrac{1}{2}y \\Rightarrow y=-f(2x-1)$\n$\\xrightarrow{\\text{قرینه نسبت به محور } x\\text{ها}} y \\to -y \\Rightarrow y=f(2x-1)$\n$\\Rightarrow E(-2, 2) \\Rightarrow F(-2, 1) \\Rightarrow G(-2, -1)$\nروش دوم: نقطه $A(2, 5)$ بر روی تابع $y=3-2f(1-3x)$ قرار دارد:\n$5 = 3 - 2f(-5) \\Rightarrow f(-5) = -1$\nبنابراین:\n$y = f(2x-1): x = -2 \\Rightarrow y = f(-5) = -1 \\Rightarrow B(-2, -1)$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": [
+        "تصحیح عبارت در روش اول از روی تصویر انجام شد"
+      ]
+    },
+    {
+      "question_number": 691,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "روش اول: تبدیلات زیر را بر تابع $y=3f(\\dfrac{1-x}{2})$ و هم‌زمان بر نقطه $A(2, 3)$ اعمال می‌کنیم.\n$y = 3f(\\dfrac{1-x}{2}) \\xrightarrow{x \\to x+1} y = 3f(-\\dfrac{x}{2})$\n$\\xrightarrow{x \\to -x} y = 3f(\\dfrac{x}{2}) \\xrightarrow{x \\to 6x} y = 3f(3x)$\n$A(2,3) \\Rightarrow B(1,3) \\Rightarrow C(-1,3) \\Rightarrow D(-\\dfrac{1}{6},3)$\n$y = 3f(3x) \\xrightarrow{\\times \\dfrac{1}{3}} y = f(3x) \\xrightarrow{y \\to -y} y = -f(3x) \\xrightarrow{+2} y = 2 - f(3x)$\n$\\Rightarrow E(-\\dfrac{1}{6}, 1) \\Rightarrow F(-\\dfrac{1}{6}, -1) \\Rightarrow A'(-\\dfrac{1}{6}, 1)$\nروش دوم: نقطه $A(2, 3)$ بر $y=3f(\\dfrac{1-x}{2})$ واقع است. بنابراین:\n$3 = 3f(-\\dfrac{1}{2}) \\Rightarrow f(-\\dfrac{1}{2}) = 1$\nدر تابع $y=2-f(3x)$ با فرض $x=-\\dfrac{1}{6}$ داریم:\n$y = 2 - f(-\\dfrac{1}{2}) = 2 - 1 = 1$\nدر نتیجه نقطه $(-\\dfrac{1}{6}, 1)$ بر تابع واقع است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 692,
+      "solution_page": "page_0066.jpg",
+      "solution_text": "روش اول: ابتدا وارون تابع $y = 2f(\\dfrac{x}{3})$ را به دست می‌آوریم. جای x و y را عوض می‌کنیم.\n$x = 2f(\\dfrac{y}{3}) \\Rightarrow f(\\dfrac{y}{3}) = \\dfrac{x}{2} \\Rightarrow \\dfrac{y}{3} = f^{-1}(\\dfrac{x}{2}) \\Rightarrow y = 3f^{-1}(\\dfrac{x}{2})$\nنقطه $A(2, a)$ بر $y=f(x)$ واقع است بنابراین $B(a, 2)$ بر $y=f^{-1}(x)$ قرار دارد.\nدر تابع $y=f^{-1}(x)$ طول همه نقاط را دو برابر و عرض آن‌ها را سه برابر می‌کنیم تا به $y=3f^{-1}(\\dfrac{x}{2})$ برسیم.\nنقطه $B(a, 2)$ به $A'(2a, 6)$ تبدیل می‌شود بنابراین:\n$(2a, 6) = (4, b) \\Rightarrow a=2, b=6 \\Rightarrow a+b=8$\nروش دوم: با تبدیل $y=f(x)$ به $y=2f(\\dfrac{x}{3})$ نقطه $A(2, a)$ به $B(6, 2a)$ تبدیل می‌شود. اگر تابع $y=2f(\\dfrac{x}{3})$ را وارون کنیم، نقطه $B(6, 2a)$ به $A'(2a, 6)$ تبدیل می‌شود در نتیجه:\n$(2a, 6) = (4, b) \\Rightarrow \\begin{cases} a=2 \\\\ b=6 \\end{cases} \\Rightarrow a+b=8$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 693,
+      "solution_page": 67,
+      "solution_text": "روش اول: نقطهٔ $P(a,b)$ بر نمودار $y=f(x+1)$ واقع است بنابراین:\n$f(a+1)=b$\nنقطهٔ $P'(-2,5)$ متناظر با $P$ بر $y=2-3f(\\frac{x}{2})$ قرار دارد، در نتیجه:\n$5=2-3f(-1) \\Rightarrow f(-1)=-1 \\Rightarrow \\begin{cases} a+1=-1 \\Rightarrow a=-2 \\\\ b=-1 \\end{cases} \\Rightarrow a-b=-1$\nروش دوم: عملیات زیر را بر $y=2-3f(\\frac{x}{2})$ و هم‌زمان بر نقطهٔ $P'(-2,5)$ انجام می‌دهیم.\n$y=2-3f(\\frac{x}{2}) \\xrightarrow[\\text{انقباض افقی با ضریب } \\frac{1}{2}]{x \\to 2x} y=2-3f(x)$\n$P'(-2,5) \\Rightarrow A(-1,5)$\n$\\xrightarrow[\\text{2 واحد به سمت پایین}]{-2} y=-3f(x)$\n$A(-1,5) \\Rightarrow B(-1,3)$\n$\\xrightarrow[\\text{قرینه نسبت به محور xها}]{y \\to -y} y=3f(x)$\n$B(-1,3) \\Rightarrow C(-1,-3)$\n$\\xrightarrow[\\text{انقباض عمودی با ضریب } \\frac{1}{3}]{\\times \\frac{1}{3}} y=f(x)$\n$C(-1,-3) \\Rightarrow D(-1,-1)$\n$\\xrightarrow[\\text{1 واحد به سمت چپ}]{x \\to x+1} y=f(x+1)$\n$D(-1,-1) \\Rightarrow P(-2,-1) \\Rightarrow \\begin{cases} a=-2 \\\\ b=-1 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 694,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "تابع $y = \\sqrt{ax} - b$ از نقاط $(0, 1)$ و $(-2, 0)$ عبور می‌کند.\n$(0, 1) \\Rightarrow 1 = \\sqrt{-b} \\Rightarrow b = -1$\n$(-2, 0) \\Rightarrow 0 = \\sqrt{-2a - b} \\Rightarrow -2a + 1 = 0 \\Rightarrow a = \\frac{1}{2}$\nبنابراین تابع $y = \\sqrt{bx + a}$ به صورت $y = \\sqrt{-x + \\frac{1}{2}}$ می‌باشد. برای رسم این تابع $y = \\sqrt{x}$ را $\\frac{1}{2}$ واحد به سمت چپ انتقال داده سپس نسبت به محور $y$ها قرینه می‌کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            950,
+            550,
+            1750,
+            700
+          ],
+          "placement": "solution",
+          "filename": "page_0067.jpg",
+          "alt": "نمودارهای y=\\sqrt{x} و y=\\sqrt{x+1/2} و y=\\sqrt{-x+1/2}"
+        }
+      ],
+      "review_notes": [
+        "Coordinates for graphs are estimated."
+      ]
+    },
+    {
+      "question_number": 695,
+      "solution_page": 67,
+      "solution_text": "$D_f=[-1,2]$ می‌باشد بنابراین در تابع $y=7+4f(\\frac{2-3x}{4})$، عبارت $\\frac{2-3x}{4}$ باید در محدودهٔ دامنهٔ $f$ باشد.\n$-1 \\le \\frac{2-3x}{4} \\le 2 \\Rightarrow -4 \\le 2-3x \\le 8 \\Rightarrow -6 \\le -3x \\le 6 \\Rightarrow -2 \\le x \\le 2$\n$\\blacksquare$ می‌توانستیم به وسیلهٔ انتقال و قرینه یابی به جواب برسیم.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 696,
+      "solution_page": 67,
+      "solution_text": "روش اول: ضرایب بیرونی $f$ بر دامنه تأثیری ندارند. عملیات زیر را بر $f(1-2x)$ و هم‌زمان بر دامنهٔ آن انجام می‌دهیم.\n$[-2,1] \\Rightarrow [-1,2] \\Rightarrow [1,4]$\n$y=f(1-2x) \\xrightarrow[\\text{قرینه نسبت به محور yها}]{x \\to -x} y=f(2x+1) \\xrightarrow[\\text{2 واحد به سمت راست}]{x \\to x-2} y=f(2x-3)$\nبنابراین دامنهٔ تابع $y=2-f(2x-3)$ بازهٔ $[1,4]$ می‌باشد.\nروش دوم: روش fog ابتدا دامنهٔ $f$ یعنی محدودهٔ اعداد ورودی تابع $f(x)$ را می‌یابیم.\n$y=-3f(1-2x): -2 \\le x \\le 1 \\Rightarrow -1 \\le 1-2x \\le 5 \\Rightarrow D_f=[-1,5]$\nدر تابع $y=\\frac{1}{2}f(2x-3)-3$ عبارت $2x-3$ (شما بخوانید $g(x)$) باید در محدودهٔ دامنهٔ $f$ باشد.\n$-1 \\le 2x-3 \\le 5 \\Rightarrow 1 \\le x \\le 4 \\Rightarrow D=[1,4]$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 697,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "روش اول: برای به دست آوردن دامنه تغییرات افقی را بررسی می‌کنیم.\n$y = f(x) \\xrightarrow[\\text{۱ واحد به سمت راست}]{x \\to x-1} y = f(x-1)$\n$\\xrightarrow[\\text{انقباض افقی با ضریب } \\frac{1}{2}]{x \\to 2x} y = f(2x-1)$\n$D = [-2, 4] \\Rightarrow [-1, 5] \\Rightarrow [-\\frac{1}{2}, \\frac{5}{2}] = D_{4-3f(2x-1)}$ : دامنه\n\nبرای به دست آوردن برد تغییرات عمودی را لحاظ می‌کنیم.\n$y = f(x) \\xrightarrow[\\text{انبساط عمودی با ضریب ۳}]{\\times 3} y = 3f(x)$\n$\\xrightarrow[\\text{قرینه نسبت به محور } x\\text{ها}]{y \\to -y} y = -3f(x)$\n$\\xrightarrow[\\text{۴ واحد به سمت بالا}]{+4} y = 4 - 3f(x)$\n$R = [-1, 1] \\Rightarrow [-3, 3] \\Rightarrow [-3, 3] \\Rightarrow [1, 7] = R_{4-3f(2x-1)}$ : برد\nبنابراین: $D \\cap R = [1, \\frac{5}{2}]$\n\nروش دوم: روش fog:\n$y = 4 - 3f(2x-1)$\n$D_f = [-2, 4] \\Rightarrow -2 \\le 2x-1 \\le 4 \\Rightarrow -\\frac{1}{2} \\le x \\le \\frac{5}{2} \\Rightarrow D = [-\\frac{1}{2}, \\frac{5}{2}]$\n$R_f = [-1, 1] \\Rightarrow -1 \\le f(x) \\le 1 \\Rightarrow 1 \\le 4 - 3f(x) \\le 7 \\Rightarrow R = [1, 7]$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 698,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "برد تابع $f(x)$ بازه $[2, a]$ است.\n$\\Rightarrow 2 \\le f(x) \\le a \\Rightarrow -3a \\le -3f(x) \\le -6$\n$\\Rightarrow 4 - 3a \\le 4 - 3f(x) \\le -2$\n$\\Rightarrow R_g = [4-3a, -2] = [-5, b]$\n$\\Rightarrow \\begin{cases} 4-3a=-5 \\Rightarrow a=3 \\\\ b=-2 \\end{cases} \\Rightarrow ab = -6$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 699,
+      "solution_page": "page_0067.jpg",
+      "solution_text": "ضابطه $y = 1 - f(\\frac{x}{2})$ را به دست می‌آوریم.\n$f(x+2) = \\frac{12}{x} - x \\Rightarrow f(x) = \\frac{12}{x-2} - (x-2)$\n$\\Rightarrow f(\\frac{x}{2}) = \\frac{12}{\\frac{x}{2}-2} - (\\frac{x}{2}-2)$\n$\\Rightarrow y = 1 - f(\\frac{x}{2}) = 1 - \\frac{12}{\\frac{x}{2}-2} + \\frac{x}{2} - 2 = \\frac{-24}{x-4} + \\frac{x}{2} - 1$\nدر این تابع صدق می‌کند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 700,
+      "solution_page": 68,
+      "solution_text": "اگر $\\alpha$، $\\beta$، $\\gamma$ و $\\theta$ صفرهای تابع $y = f(x)$ باشند، صفرهای تابع $y = f(3x + 2)$ به صورت $\\frac{\\alpha - 2}{3}$، $\\frac{\\beta - 2}{3}$، $\\frac{\\gamma - 2}{3}$ و $\\frac{\\theta - 2}{3}$ خواهد بود.\n$\\alpha + \\beta + \\gamma + \\theta = 7$\n$\\Rightarrow \\frac{\\alpha - 2}{3} + \\frac{\\beta - 2}{3} + \\frac{\\gamma - 2}{3} + \\frac{\\theta - 2}{3} = \\frac{\\alpha + \\beta + \\gamma + \\theta - 8}{3} = -\\frac{1}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 701,
+      "solution_page": 68,
+      "solution_text": "عملیات زیر را بر روی تابع $y = f(2x)$ انجام می‌دهیم.\n$y = f(2x) \\xrightarrow{\\text{انبساط افقی با ضریب } 2} y = f(x)$\n$x \\to \\frac{x}{2}$\n$y = f(x) \\xrightarrow{2 \\text{ واحد به سمت چپ}} y = f(x+2)$\n$x \\to x+2$\n$y = f(x+2) \\xrightarrow{\\text{قرینه نسبت به محور } y \\text{ها}} y = f(2-x)$\n$x \\to -x$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            530,
+            270,
+            680,
+            370
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(2x)"
+        },
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            730,
+            270,
+            880,
+            370
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(x)"
+        },
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            530,
+            360,
+            680,
+            450
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(x+2)"
+        },
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            730,
+            360,
+            880,
+            450
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(2-x)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 702,
+      "solution_page": 68,
+      "solution_text": "با توجه به نمودار معادلهٔ خط داده‌شده به صورت $y = -\\frac{x}{2} - 3$ می‌باشد.\nبنابراین:\n$f(x) - 2 = -\\frac{x}{2} - 3 \\Rightarrow f(x) = -\\frac{x}{2} - 1$\nدر نتیجه:\n$y = k - f(3x+1) = k - (-\\frac{3x+1}{2} - 1) = \\frac{3}{2}(x+1) + k$\nنمودار $y = \\frac{3}{2}(x+1)$ به صورت مقابل است:\nبا توجه به نمودار روشن است که حداکثر مقدار $k$ باید $-\\frac{3}{2}$ باشد تا $y = \\frac{3}{2}(x+1) + k$ از ناحیهٔ دوم عبور نکند.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            515,
+            545,
+            630,
+            630
+          ],
+          "placement": "stem",
+          "alt": "نمودار خط y = 3/2(x+1)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 703,
+      "solution_page": 68,
+      "solution_text": "طول قاعدهٔ مثلث در $f(x)$ برابر ۶ می‌باشد؛ بنابراین طول قاعدهٔ مثلث در $y = \\frac{1}{a} f(bx)$، $\\frac{6}{b}$ خواهد بود.\nطول ارتفاع مثلث در $f(x)$ برابر ۴ است در نتیجه طول ارتفاع مثلث در $y = \\frac{1}{a} f(bx)$، $\\frac{4}{a}$ می‌باشد.\n$S_{\\text{جدید}} = \\frac{\\frac{6}{b} \\times \\frac{4}{a}}{2} = 8 \\Rightarrow \\frac{24}{ab} = 16 \\Rightarrow ab = \\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 704,
+      "solution_page": 68,
+      "solution_text": "تبدیلات زیر را بر تابع $f(x)$ و نمودار آن اعمال می‌کنیم.\n$y = f(x) \\xrightarrow{x \\to x+2} y = f(x+2)$\n$\\xrightarrow{x \\to -x} y = f(2-x)$\n$\\xrightarrow{x \\to \\frac{x}{3}} y = f(2-\\frac{x}{3})$\n$\\xrightarrow{x \\to |x|} y = f(2-\\frac{|x|}{3})$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            100,
+            60,
+            290,
+            160
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(x)"
+        },
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            280,
+            160,
+            480,
+            260
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(x+2)"
+        },
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            100,
+            160,
+            280,
+            260
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(2-x)"
+        },
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            100,
+            260,
+            420,
+            360
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(2-x/3)"
+        },
+        {
+          "filename": "page_0068.jpg",
+          "region": [
+            100,
+            360,
+            420,
+            460
+          ],
+          "placement": "stem",
+          "alt": "نمودار تابع f(2-|x|/3)"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 705,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "هر یک از گزینه‌ها را بررسی می‌کنیم.\n۱: $y = \\log(\\sqrt{10}x) = \\log x + \\frac{1}{2} \\Rightarrow$ $\\frac{1}{2}$ واحد به سمت بالا\n۲: $y = 2\\log(x - 10)$\n$\\Rightarrow$ ۱۰ واحد به سمت راست و انبساط عمودی با ضریب ۲\n۳: $y = \\log \\frac{\\sqrt{x}}{10} = \\frac{1}{2}\\log x - 1$\n$\\Rightarrow$ انقباض عمودی با ضریب $\\frac{1}{2}$ و ۱ واحد انتقال به پایین\n۴: $y = 3\\log x - \\frac{1}{2}$\n$\\Rightarrow$ انبساط عمودی با ضریب ۳ و $\\frac{1}{2}$ واحد انتقال به پایین",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 706,
+      "solution_page": "page_0068.jpg",
+      "solution_text": "ضابطه تابع داده‌شده را ساده می‌کنیم.\n$y = 1 - (x^2 + 3)(x + 3) = -x^3 - 3x^2 - 3x - 8$\n$= -(x+1)^3 - 7$\nبرای رسم تابع فوق نمودار $y = x^3$ را یک واحد به سمت چپ منتقل کرده، نسبت به محور $x$ها قرینه می‌کنیم و در آخر ۷ واحد به سمت پایین انتقال می‌دهیم.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            200,
+            1400,
+            800,
+            1750
+          ],
+          "placement": "solution",
+          "filename": "page_0068.jpg",
+          "alt": "نمودارهای y=x^3 و y=(x+1)^3"
+        }
+      ],
+      "review_notes": [
+        "Coordinates for graphs are estimated."
+      ]
+    },
+    {
+      "question_number": 707,
+      "solution_page": 69,
+      "solution_text": "تابع $f(x) = (x+3)^2 + 3$ است. بنابراین:\n$y = x f(x) = x((x+3)^2 + 3) = x^3 + 6x^2 + 12x = (x+2)^3 - 8$\nبرای رسم تابع فوق، نمودار $y = x^3$ را ۲ واحد به سمت چپ و ۸ واحد به سمت پایین انتقال می‌دهیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0069.jpg",
+          "region": [
+            499,
+            283,
+            714,
+            453
+          ],
+          "placement": "solution_707_1",
+          "alt": "نمودار تابع y=(x+2)^3-8 و y=x^3"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 708,
+      "solution_page": 69,
+      "solution_text": "نمودار تابع $y = (a-x)^3 + b$ نمودار $y = x^3$ می‌باشد که ابتدا ۲ واحد به سمت چپ انتقال یافته، سپس نسبت به محور $y$ها قرینه شده و در انتها ۱ واحد به سمت پایین منتقل شده است.\n$y = x^3 \\xrightarrow{x \\to x+2} y = (x+2)^3 \\xrightarrow{x \\to -x} y = (-x+2)^3 \\xrightarrow{-1} y = (-x+2)^3 - 1$\nبنابراین:\n$\\Rightarrow \\begin{cases} a = 2 \\\\ b = -1 \\end{cases} \\Rightarrow a+b=1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 709,
+      "solution_page": 69,
+      "solution_text": "با توجه به نمودار تابع $y = (x-a)^3 - b$ به صورت $y = (x+1)^3 - 8$ می‌باشد.\nبنابراین:\n$\\begin{cases} x=0 \\Rightarrow y=-7 \\Rightarrow A(0, -7) \\\\ y=0 \\Rightarrow x=1 \\Rightarrow B(1, 0) \\end{cases} \\Rightarrow m_{AB} = \\frac{0-(-7)}{1-0} = 7$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 710,
+      "solution_page": 69,
+      "solution_text": "نمودار تابع $f(x)$ نسبت به $y = x^3$ یک واحد به سمت چپ انتقال یافته است. بنابراین $\\alpha = 1$ می‌باشد. $f(x) = k(x+1)^3 + \\beta$\nاین تابع از دو نقطۀ $(0, 0)$ و $(-1, -2)$ عبور می‌کند در نتیجه:\n$f(-1) = -2 \\Rightarrow \\beta = -2$\n$f(0) = 0 \\Rightarrow k+\\beta = 0 \\Rightarrow k = -\\beta = 2$\nخواهیم داشت: $y = (x-k)^3 + \\alpha \\beta = (x-2)^3 - 2$\nبرای رسم تابع فوق $y = x^3$ را ۲ واحد به سمت راست و ۲ واحد به سمت پایین منتقل می‌کنیم.\nدرست است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0069.jpg",
+          "region": [
+            499,
+            786,
+            706,
+            888
+          ],
+          "placement": "solution_710_1",
+          "alt": "نمودار تابع y=(x-2)^3-2"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 711,
+      "solution_page": 69,
+      "solution_text": "اگر $y = x^3$ را ۱ واحد به سمت چپ و ۲ واحد به سمت پایین منتقل کنیم تابع $f(x) = (x+a)^3 + b$ حاصل می‌شود. بنابراین:\n$f(x) = (x+1)^3 - 2$\nحال، $f^{-1}(x)$ را به دست می‌آوریم.\n$(x+1)^3 = y+2 \\Rightarrow x+1 = \\sqrt[3]{y+2} \\Rightarrow x = \\sqrt[3]{y+2}-1$\n$\\Rightarrow f^{-1}(x) = \\sqrt[3]{x+2}-1$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 712,
+      "solution_page": 69,
+      "solution_text": "ابتدا وارون $f(x) = x^3 + 6x^2 + 12x + 72$ را به دست می‌آوریم.\n$f(x) = x^3 + 6x^2 + 12x + 72 = (x+2)^3 + 64$\n$\\Rightarrow (x+2)^3 = y-64 \\Rightarrow x+2 = \\sqrt[3]{y-64}$\n$\\Rightarrow x = \\sqrt[3]{y-64} - 2 \\Rightarrow f^{-1}(x) = \\sqrt[3]{x-64} - 2$\nاگر $y = \\sqrt[3]{x}$ را ۶۴ واحد به سمت راست و ۲ واحد به سمت پایین انتقال دهیم $f^{-1}(x)$ حاصل می‌شود.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 713,
+      "solution_page": 69,
+      "solution_text": "ابتدا ضابطۀ $f^{-1}(x)$ را می‌نویسیم.\n$f(x) = x^3 - 3x^2 + 3x - 3 = (x-1)^3 - 2$\n$\\Rightarrow (x-1)^3 = y+2 \\Rightarrow x-1 = \\sqrt[3]{y+2}$\n$\\Rightarrow x = \\sqrt[3]{y+2}+1 \\Rightarrow f^{-1}(x) = \\sqrt[3]{x+2}+1$\nاگر نمودار $f^{-1}(x)$ را ۲ واحد به سمت راست و ۱ واحد به سمت پایین انتقال دهیم $y = \\sqrt[3]{x}$ به دست می‌آید.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 714,
+      "solution_page": 69,
+      "solution_text": "تابع $y = x^3 + 3x^2 + 3x + 3$ به صورت $y = (x+1)^3 + 2$ بوده و نمودار آن مطابق شکل مقابل است.\nخط $y = k - 2x$ دارای شیب منفی بوده و صرف نظر از مقدار $k$ نمودار فوق را قطعاً در یک نقطه قطع خواهد کرد. بنابراین $k \\in \\mathbb{R}$ می‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0069.jpg",
+          "region": [
+            45,
+            436,
+            172,
+            532
+          ],
+          "placement": "solution_714_1",
+          "alt": "نمودار تابع y = (x+1)^3 + 2"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 715,
+      "solution_page": 69,
+      "solution_text": "۱: $y = 2x - |x-2| = \\begin{cases} x+2 & x \\ge 2 \\\\ 3x-2 & x < 2 \\end{cases} \\Rightarrow$ اکیداً صعودی\n۲: $y = \\sqrt{3-x}$ اکیداً نزولی و $y = -\\sqrt{3-x}$ اکیداً صعودی و در نتیجه $y = -\\sqrt{3-x}-2$ اکیداً صعودی است.\n۳: $y = \\sqrt{4-x}$ اکیداً نزولی و در نتیجه $y = \\sqrt{4-x}-1$ نیز اکیداً نزولی است.\n۴: $y = x+|2x-1| = \\begin{cases} 3x-1 & x \\ge \\frac{1}{2} \\\\ -x+1 & x < \\frac{1}{2} \\end{cases} \\Rightarrow$ غیریکنوا",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 716,
+      "solution_page": 69,
+      "solution_text": "نمودار $f(x) = |x-3|-|x+1|$ به صورت مقابل است.\nواضح است تابع در بازۀ $[-1, 3]$ اکیداً نزولی است.\n- می‌توانستیم برای رسم نمودار از بازه‌بندی استفاده کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0069.jpg",
+          "region": [
+            42,
+            735,
+            175,
+            856
+          ],
+          "placement": "solution_716_1",
+          "alt": "نمودار تابع f(x) = |x-3|-|x+1|"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 717,
+      "solution_page": 70,
+      "solution_text": "نكته: توابع $y = |x - \\alpha| - |x - \\beta|$ در بازه $[\\alpha, \\beta]$ اكيداً يكنوا می‌باشند $(\\alpha < \\beta)$.\nنمودار تابع $f(x) = |x + 1| + |x - 2|$ به صورت مقابل است.\nتابع در بازه $(-\\infty, -1]$ اكيداً نزولی است و ضابطه آن به صورت $y = -2x + 1$ می‌باشد.\nبنابراین:\n$f(x) = g(x) \\Rightarrow -2x + 1 = -x^2 + 3x + 7$\n$\\Rightarrow x^2 - 5x - 6 = 0 \\Rightarrow \\begin{cases} x = -1 \\checkmark \\\\ x = 6 \\text{ غ ق ق } (x \\le -1) \\end{cases}$\nتنها یک نقطه مشترک وجود دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            520,
+            100,
+            620,
+            210
+          ],
+          "placement": "solution",
+          "filename": "page_0070.jpg",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 718,
+      "solution_page": 70,
+      "solution_text": "ضابطه اول نمودار $f(x)$ را رسم می‌کنیم.\nبا توجه به نمودار درمی‌یابیم که مقدار تابع $y = a - 2x$ در $x = 2$ باید کوچک‌تر یا مساوی $-4$ باشد تا تابع $f(x)$ اکیداً نزولی شود. بنابراین:\n$a - 4 \\le -4 \\Rightarrow a \\le 0$\nبنابراین بیشترین مقدار $a$ برابر صفر است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            520,
+            280,
+            640,
+            420
+          ],
+          "placement": "solution",
+          "filename": "page_0070.jpg",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 719,
+      "solution_page": 70,
+      "solution_text": "تابع $f(x) = ax^2 - 6x - 3$ در بازه $(-\\infty, -3]$ به شرطی صعودی است که اولاً $a < 0$ باشد و ثانیاً $x$ رأس سهمی در بازه $(-\\infty, -3)$ نباشد.\n$x_{\\text{رأس}} = \\frac{6}{2a} = \\frac{3}{a} \\ge -3 \\Rightarrow \\frac{1}{a} \\ge -1 \\Rightarrow \\frac{1}{a} + 1 \\ge 0$\n$\\Rightarrow \\frac{a + 1}{a} \\ge 0 \\Rightarrow \\begin{cases} a > 0 \\text{ غ ق ق } \\\\ a \\le -1 \\checkmark \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 720,
+      "solution_page": 70,
+      "solution_text": "دامنه تابع $f(x) = x^2 - 2x + 2\\sqrt{x - 2}$ بازه $[2, +\\infty)$ است. در این بازه، سهمی $y = x^2 - 2x$ اکیداً صعودی و $y = 2\\sqrt{x - 2}$ نیز اکیداً صعودی می‌باشد در نتیجه مجموع این دو تابع یعنی $f(x)$ نیز اکیداً صعودی است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 721,
+      "solution_page": 70,
+      "solution_text": "تابع $f$ اکیداً صعودی است. بنابراین:\n$f(3 - 2a) < f(6 - a^2) \\Rightarrow 3 - 2a < 6 - a^2 \\Rightarrow a^2 - 2a - 3 < 0 \\Rightarrow (a + 1)(a - 3) < 0 \\Rightarrow -1 < a < 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 722,
+      "solution_page": 70,
+      "solution_text": "تابع $f$ در $\\mathbb{R}$ اکیداً نزولی است. بنابراین:\n$f(3 - a) \\ge f(3a - 1) \\Rightarrow 3 - a \\le 3a - 1 \\Rightarrow a \\ge 1$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 723,
+      "solution_page": 70,
+      "solution_text": "تابع $f(x) = 8x^3 + 4x - 10$ اکیداً صعودی است.\nبنابراین:\n$fof(x) < f(2x) \\Rightarrow f(f(x)) < f(2x) \\Rightarrow f(x) < 2x \\Rightarrow 8x^3 + 4x - 10 < 2x$\n$\\Rightarrow 8x^3 + 2x - 10 < 0$\nجمع ضرایب عبارت فوق برابر صفر بوده و دارای ریشه $x = 1$ است. چون تابع اکیداً صعودی است $x = 1$ تنها ریشه آن بوده و در نتیجه جواب نامعادله به صورت $x < 1$ می‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 724,
+      "solution_page": 70,
+      "solution_text": "تابع $f(x)$ را به صورت دوضابطه‌ای می‌نویسیم.\n$f(x) = \\begin{cases} 3x - 1 & x \\ge -1 \\\\ 5x + 1 & x < -1 \\end{cases} \\Rightarrow$ تابع $f(x)$ اکیداً صعودی است.\nبنابراین:\n$fof(x) > f(4x - 3) \\Rightarrow f(f(x)) > f(4x - 3)$\n$\\Rightarrow f(x) > 4x - 3$\n$(1) \\xrightarrow{x \\ge -1} 3x - 1 > 4x - 3 \\Rightarrow x < 2 \\Rightarrow -1 \\le x < 2$\n$(2) \\xrightarrow{x < -1} 5x + 1 > 4x - 3 \\Rightarrow x > -4 \\Rightarrow -4 < x < -1$\nدر نتیجه:\n$(1) \\cup (2) \\Rightarrow -4 < x < 2 \\Rightarrow x \\in (-4, 2)$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 725,
+      "solution_page": 70,
+      "solution_text": "می‌دانیم تابع $y = 4^x$ اکیداً صعودی است.\n$(\\frac{1}{4})^{x^2 - x} > 16^{1 - x} \\Rightarrow 4^{-x^2 + x} > 4^{2 - 2x}$\n$\\Rightarrow -x^2 + x > 2 - 2x \\Rightarrow x^2 - 3x + 2 < 0 \\Rightarrow 1 < x < 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 726,
+      "solution_page": 70,
+      "solution_text": "تابع $g$ نزولی اکید و $fog$ صعودی است. بنابراین تابع $f$ نزولی است. در نتیجه:\n$f(1) \\ge f(2) \\ge f(6) \\Rightarrow 8 \\ge k \\ge 4 \\xrightarrow{k \\in \\mathbb{Z}} k \\in \\{4, 5, 6, 7, 8\\}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 727,
+      "solution_page": 70,
+      "solution_text": "تابع $y = x + \\sqrt{x - 1}$ اکیداً صعودی است، بنابراین $y = \\frac{1}{f(x)}$ اکیداً نزولی و در نتیجه $y = -\\frac{1}{f(x)}$ اکیداً صعودی می‌باشد.\nدقت داشته باشید چون $f(x)$ اکیداً صعودی است، توابع $y = -f(x)$ و $y = f(-x)$ اکیداً نزولی می‌باشند.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 728,
+      "solution_page": 70,
+      "solution_text": "تابع $f$ اکیداً صعودی و $f(4) = 0$ است. بنابراین تابع $f(3 - x)$ اکیداً نزولی و در $x = -1$ برابر صفر است.\n$\\frac{x - 1}{f(3 - x)} \\ge 0$\n$\\begin{array}{c|ccccccc} x & & -1 & & 1 & \\\\ \\hline x-1 & - & | & - & \\circ & + \\\\ \\hline f(3-x) & + & \\circ & - & | & - \\\\ \\hline p & - & \\parallel & + & \\circ & - \\end{array} \\Rightarrow D = (-1, 1]$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 729,
+      "solution_page": 70,
+      "solution_text": "دامنه تابع $y = \\sqrt{f(x + 2) - f(2 - x)}$ جواب نامعادلهٔ $f(x + 2) - f(2 - x) \\ge 0$ است. بنابراین:\n$f(x + 2) \\ge f(2 - x) \\xrightarrow{\\text{ اکیداً نزولی است } f} x + 2 \\le 2 - x \\Rightarrow x \\le 0 \\Rightarrow D = (-\\infty, 0]$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 730,
+      "solution_page": 70,
+      "solution_text": "تابع $y = \\sqrt{5 - x}$ اکیداً نزولی و $y = -\\sqrt{5 - x}$ اکیداً صعودی می‌باشد.\nتابع $y = 2\\sqrt{x - 1}$ نیز اکیداً صعودی است.\nبنابراین تابع $f(x)$ در دامنه خود اکیداً صعودی است.\n$f(x) = 2\\sqrt{x - 1} - \\sqrt{5 - x} \\Rightarrow D_f = [1, 5]$\n$\\Rightarrow R_f = [f(1), f(5)] \\Rightarrow R_f = [-2, 4] \\Rightarrow b = 4$\nخواهیم داشت: $f(b + 1) = f(5) = 4$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 731,
+      "solution_page": 70,
+      "solution_text": "تبدیلات زیر را بر تابع $y = f(x)$ و نمودار آن اعمال می‌کنیم.\n$y = f(x) \\xrightarrow{\\text{ ۱ واحد به سمت چپ } x \\to x + 1} y = f(x + 1) \\xrightarrow{\\text{ انقباض افقی با ضریب } \\frac{1}{2} x \\to 2x} y = f(2x + 1) \\xrightarrow{\\text{ قرینه نسبت به محور } y \\text{ها } x \\to -x} y = f(1 - 2x)$\nبا توجه به نمودار تابع $y = f(1 - 2x)$ در بازه $[\\frac{1}{2}, 1]$ اکیداً نزولی است.\nبنابراین حداکثر $b - a$ برابر است با $\\frac{1}{2} - 1 = -\\frac{1}{2}$.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            500,
+            250,
+            950
+          ],
+          "placement": "solution_text",
+          "filename": "page_0071.jpg",
+          "alt": "نمودارهای تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 732,
+      "solution_page": 71,
+      "solution_text": "تابع $y = x^3 - 6x^2 + 12x - 7$ به صورت $y = (x-2)^3 + 1$ بوده و نمودار آن مطابق شکل مقابل است.\nدر نتیجه نمودار $y = |(x-2)^3 + 1|$ به صورت مقابل خواهد بود که در بازهٔ $(-\\infty, 1]$ اکیداً نزولی است.\nبنابراین حداکثر مقدار $k$ برابر ۱ است.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            250,
+            500,
+            550,
+            950
+          ],
+          "placement": "solution_text",
+          "filename": "page_0071.jpg",
+          "alt": "نمودارهای تابع اصلی و قدر مطلق"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 733,
+      "solution_page": 71,
+      "solution_text": "با توجه به نمودار ضابطهٔ تابع $y = 2x + f(x)$ به صورت مقابل است:\n$y = 2x + f(x) = \\begin{cases} -\\frac{x}{2} - \\frac{3}{2} & x < -1 \\\\ x & x \\ge -1 \\end{cases}$\n$\\Rightarrow f(x) = \\begin{cases} -\\frac{5}{2}x - \\frac{3}{2} & x < -1 \\\\ -x & x \\ge -1 \\end{cases}$\n$\\Rightarrow y = af(x) = \\begin{cases} -\\frac{5}{2}ax - \\frac{3}{2}a & x < -1 \\\\ -ax & x \\ge -1 \\end{cases}$\n$\\Rightarrow y = x - af(x) = \\begin{cases} (1 + \\frac{5}{2}a)x + \\frac{3}{2}a & x < -1 \\\\ (1 + a)x & x \\ge -1 \\end{cases}$\nبرای این‌که تابع فوق اکیداً یکنوا باشد باید ضرایب $x$ در هر دو ضابطه هم‌علامت و مخالف صفر باشند.\nبنابراین:\n$(1 + \\frac{5}{2}a)(1 + a) > 0 \\Rightarrow \\begin{cases} a < -1 \\\\ a > -\\frac{2}{5} \\end{cases}$\n۳ قابل قبول است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            560,
+            500,
+            750,
+            950
+          ],
+          "placement": "solution_text",
+          "filename": "page_0071.jpg",
+          "alt": "نمودار تابع دو ضابطه ای"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 734,
+      "solution_page": 71,
+      "solution_text": "ابتدا براساس رابطهٔ فیثاغورس $x$ را به دست می‌آوریم.\n$(2x - 1)^2 = (x + 5)^2 + 5^2 \\Rightarrow 3x^2 - 14x - 49 = 0$\n$\\Rightarrow x = \\frac{7 \\pm \\sqrt{196}}{3} \\Rightarrow \\begin{cases} x = 7 \\checkmark \\\\ x = -\\frac{7}{3} \\text{ غ ق ق} \\end{cases}$\nخواهیم داشت:\n$\\cos \\alpha = \\frac{x + 5}{2x - 1} = \\frac{12}{13}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 735,
+      "solution_page": 71,
+      "solution_text": "ارتفاع دیوار را $h$ در نظر می‌گیریم.\nبراساس رابطهٔ فیثاغورس خواهیم داشت:\n$x^2 = (\\frac{5}{4}h)^2 - h^2 = (\\frac{5}{4}h - h)(\\frac{5}{4}h + h) = (\\frac{1}{4}h)(\\frac{9}{4}h) = \\frac{9}{16}h^2 \\Rightarrow x = \\frac{3}{4}h$\nبنابراین:\n$\\tan \\alpha = \\frac{h}{x} = \\frac{h}{\\frac{3}{4}h} = \\frac{4}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            50,
+            250,
+            450
+          ],
+          "placement": "solution_text",
+          "filename": "page_0071.jpg",
+          "alt": "مثلث قائم الزاویه با ارتفاع h"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 736,
+      "solution_page": 71,
+      "solution_text": "اگر $CH = x$ باشد، در مثلث قائم‌الزاویهٔ $ACH$ خواهیم داشت:\n$\\frac{CH}{AC} = \\cos \\hat{C} \\Rightarrow \\frac{x}{AC} = 0/8 \\Rightarrow AC = \\frac{5}{4}x$\nبا توجه به رابطهٔ فیثاغورس:\n$AC^2 = AH^2 + CH^2 \\Rightarrow \\frac{25}{16}x^2 = 18^2 + x^2$\n$\\Rightarrow \\frac{9}{16}x^2 = 18^2 \\Rightarrow x^2 = 36 \\times 16 \\Rightarrow x = 6 \\times 4 = 24$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 737,
+      "solution_page": 71,
+      "solution_text": "با توجه به شکل واضح است $\\sin 30^\\circ = \\frac{h}{800}$.\nبنابراین:\n$\\frac{h}{800} = \\frac{1}{2} \\Rightarrow h = 400 \\Rightarrow h + 20 = 420$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            350,
+            50,
+            450,
+            450
+          ],
+          "placement": "solution_text",
+          "filename": "page_0071.jpg",
+          "alt": "مثلث قائم الزاویه با زاویه 30 درجه"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 738,
+      "solution_page": 71,
+      "solution_text": "طبق قضیهٔ خطوط موازی و مورب زاویهٔ $\\alpha$ با زاویهٔ $\\beta$ برابر است. بنابراین در مثلث $ABC$ مقدار $\\sin \\beta$ را محاسبه می‌کنیم.\nاعداد فیثاغورس:\n$\\begin{cases} AB = 3 \\\\ BC = 4 \\end{cases} \\Rightarrow AC = 5$\n$\\sin \\beta = \\frac{BC}{AC} = \\frac{4}{5}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            450,
+            50,
+            650,
+            450
+          ],
+          "placement": "solution_text",
+          "filename": "page_0071.jpg",
+          "alt": "خطوط موازی و مورب و مثلث روی شبکه"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 739,
+      "solution_page": 71,
+      "solution_text": "روش اول: در مثلث $ABC$ بدیهی است $AB = AC$.\nبنابراین مثلث $ABC$ متساوی‌الساقین بوده و ارتفاع $AH$، میانه نیز می‌باشد. می‌دانیم:\n$AC^2 = 1^2 + 2^2 = 5 \\Rightarrow AC = \\sqrt{5}$\n$BC^2 = 1^2 + 3^2 = 10 \\Rightarrow BC = \\sqrt{10}$\nخواهیم داشت:\n$AH^2 = AC^2 - CH^2 = (\\sqrt{5})^2 - (\\frac{\\sqrt{10}}{2})^2 = 5 - \\frac{5}{2} = \\frac{5}{2}$\n$\\Rightarrow AH = \\sqrt{\\frac{5}{2}} = \\frac{\\sqrt{10}}{2}$\nبنابراین:\n$\\sin \\alpha = \\frac{AH}{AC} = \\frac{\\frac{\\sqrt{10}}{2}}{\\sqrt{5}} = \\frac{\\sqrt{2}}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            650,
+            50,
+            850,
+            450
+          ],
+          "placement": "solution_text",
+          "filename": "page_0071.jpg",
+          "alt": "مثلث متساوی الساقین روی شبکه"
+        }
+      ],
+      "review_notes": [
+        "روش دوم در صفحه بعد است"
+      ]
+    },
+    {
+      "question_number": 740,
+      "solution_page": null,
+      "solution_text": "با توجه به شکل بدیهی است فاصله نوک گیره از سطح زمین برابر $x + y + ۴۰$ سانتی‌متر است.\nخواهیم داشت:\n$$ \\left.\\begin{matrix} \\frac{x}{۴۵} = \\sin ۳۰^\\circ = \\frac{۱}{۲} \\Rightarrow x = ۲۲/۵ \\\\ \\frac{y}{۵۰} = \\sin ۶۰^\\circ = \\frac{\\sqrt{۳}}{۲} \\Rightarrow y = ۲۵\\sqrt{۳} \\sim ۴۲/۵ \\end{matrix}\\right\\} \\Rightarrow x + y + ۴۰ = ۱۰۵ $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            159,
+            513,
+            277,
+            706
+          ],
+          "filename": "page_0072.jpg",
+          "placement": "solution",
+          "alt": "نمودار هندسی گیره"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 741,
+      "solution_page": null,
+      "solution_text": "با توجه به شکل مشخص است $\\hat{C} = \\hat{D} + \\hat{A}_۱$.\n$\\Rightarrow \\hat{A}_۱ + ۳۰^\\circ = ۶۰^\\circ$\n$\\Rightarrow \\hat{A}_۱ = ۳۰^\\circ$\nبنابراین مثلث $ACD$ متساوی‌الساقین بوده و $CD = AC$ است.\nدر مثلث قائم‌الزاویه $ABC$ داریم:\n$\\frac{AB}{AC} = \\sin ۶۰^\\circ \\Rightarrow \\frac{۴۳۵}{AC} = \\frac{\\sqrt{۳}}{۲}$\n$\\Rightarrow AC = \\frac{۸۷۰}{\\sqrt{۳}} = \\frac{۸۷۰\\sqrt{۳}}{۳} = ۲۹۰\\sqrt{۳} \\Rightarrow CD = ۲۹۰\\sqrt{۳}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            367,
+            515,
+            439,
+            672
+          ],
+          "filename": "page_0072.jpg",
+          "placement": "solution",
+          "alt": "مثلث‌های متصل ACD و ABC"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 742,
+      "solution_page": null,
+      "solution_text": "چون همه گزینه‌ها از ۱۸ کمتر است؛ بنابراین ۱۸ طول ضلع روبه‌رو به زاویه بزرگ‌تر است. طبق قضیه سینوس‌ها داریم:\n$\\frac{AB}{\\sin \\hat{C}} = \\frac{AC}{\\sin \\hat{B}}$\n$\\Rightarrow \\frac{AB}{\\sin ۳۰^\\circ} = \\frac{۱۸}{\\sin ۷۰^\\circ}$\n$\\Rightarrow \\frac{AB}{\\frac{۱}{۲}} = \\frac{۱۸}{۰/۹} \\Rightarrow AB = ۱۰$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            574,
+            518,
+            631,
+            655
+          ],
+          "filename": "page_0072.jpg",
+          "placement": "solution",
+          "alt": "مثلث ABC با زوایای ۳۰ و ۷۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 743,
+      "solution_page": null,
+      "solution_text": "در مثلث $ABC$ ارتفاع $AH$ را رسم می‌کنیم.\n$\\Delta ABH : AH = a \\sin ۶۰^\\circ = \\frac{\\sqrt{۳}}{۲}a$\n$\\Delta ACH : AH = a' \\sin ۴۵^\\circ = \\frac{\\sqrt{۲}}{۲}a'$\nبنابراین:\n$\\Rightarrow \\frac{\\sqrt{۲}}{۲}a' = \\frac{\\sqrt{۳}}{۲}a$\n$\\Rightarrow a' = \\sqrt{\\frac{۳}{۲}}a = \\frac{\\sqrt{۶}}{۲}a$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            784,
+            521,
+            846,
+            686
+          ],
+          "filename": "page_0072.jpg",
+          "placement": "solution",
+          "alt": "مثلث ABC با ارتفاع AH"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 744,
+      "solution_page": null,
+      "solution_text": "مثلث $ABC$ متساوی‌الساقین بوده و $AB=AC$ می‌باشد.\n$\\Delta ACD : \\frac{AD}{AC} = \\tan ۶۰^\\circ \\Rightarrow AD = \\sqrt{۳}AC$\nاز طرفی: $BD=۱ \\Rightarrow AD - AB = ۱ \\Rightarrow \\sqrt{۳}AC - AC = ۱$\n$\\Rightarrow (\\sqrt{۳}-۱)AC = ۱ \\Rightarrow AC = \\frac{۱}{\\sqrt{۳}-۱} = \\frac{\\sqrt{۳}+۱}{۲}$\n$\\Rightarrow AB = \\frac{\\sqrt{۳}+۱}{۲}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 745,
+      "solution_page": null,
+      "solution_text": "نسبت مساحت دو مثلث را می‌نویسیم.\n$\\frac{S_{ABP}}{S_{APC}} = \\frac{\\frac{۱}{۲} AB \\times BP \\times \\sin ۴۵^\\circ}{\\frac{۱}{۲} AC \\times PC \\times \\sin ۳۰^\\circ} = \\frac{۲AB \\times \\frac{\\sqrt{۲}}{۲}}{AC \\times \\frac{۱}{۲}} = ۲\\sqrt{۲}\\frac{AB}{AC}$\nاز طرفی: $\\frac{S_{ABP}}{S_{APC}} = \\frac{\\frac{۱}{۲} AB \\times AP \\times \\sin \\alpha}{\\frac{۱}{۲} AC \\times AP \\times \\sin \\beta} = ۲\\sqrt{۲}\\frac{AB}{AC}$\n$\\Rightarrow \\frac{\\sin \\alpha}{\\sin \\beta} = ۲\\sqrt{۲}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 746,
+      "solution_page": null,
+      "solution_text": "ارتفاع $AH$ را رسم می‌کنیم. خواهیم داشت:\n$\\cos \\hat{C} = \\frac{CH}{b} \\Rightarrow b \\cos \\hat{C} = CH$\n$\\cos \\hat{B} = \\frac{BH}{c} \\Rightarrow c \\cos \\hat{B} = BH$\nبنابراین:\n$b \\cos \\hat{C} + c \\cos \\hat{B} = ۴ \\Rightarrow CH + BH = ۴ \\Rightarrow BC = ۴$\nدر نتیجه:\n$S_{ABC} = \\frac{۱}{۲} AH \\times BC = ۱۶ \\Rightarrow \\frac{۱}{۲} AH \\times ۴ = ۱۶ \\Rightarrow AH = ۸$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            324,
+            100,
+            395,
+            246
+          ],
+          "filename": "page_0072.jpg",
+          "placement": "solution",
+          "alt": "مثلث ABC با اضلاع b و c"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 747,
+      "solution_page": null,
+      "solution_text": "ارتفاع $AH$ را رسم می‌کنیم.\n$$ \\left.\\begin{matrix} \\Delta AHC : \\begin{cases} \\frac{AH}{AC} = \\sin ۶۰^\\circ \\Rightarrow \\frac{AH}{۶} = \\frac{\\sqrt{۳}}{۲} \\Rightarrow AH = ۳\\sqrt{۳} \\\\ \\frac{CH}{AC} = \\cos ۶۰^\\circ \\Rightarrow \\frac{CH}{۶} = \\frac{۱}{۲} \\Rightarrow CH = ۳ \\end{cases} \\\\ \\Delta AHB : \\frac{AH}{BH} = \\tan ۴۵^\\circ = ۱ \\Rightarrow BH = AH = ۳\\sqrt{۳} \\end{matrix}\\right\\} $$\n$\\Rightarrow BC = ۳ + ۳\\sqrt{۳}$\nبنابراین:\n$S_{ABC} = \\frac{AH \\times BC}{۲} = \\frac{۳\\sqrt{۳}(۳+۳\\sqrt{۳})}{۲} = \\frac{۹\\sqrt{۳}+۲۷}{۲}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            465,
+            101,
+            532,
+            266
+          ],
+          "filename": "page_0072.jpg",
+          "placement": "solution",
+          "alt": "مثلث ABC با ارتفاع AH"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 748,
+      "solution_page": null,
+      "solution_text": "در حالت کلی در مثلث $ABC$ می‌دانیم:\n$S_{ABC} = \\frac{۱}{۲} AB \\times AC \\times \\sin \\hat{A}$\nبنابراین:\n$S_{ABC} = \\frac{۱}{۲} (x)(۲x-۶) \\sin ۷۰^\\circ = ۳۶$\n$\\Rightarrow x(x-۳)(\\frac{۹}{۱۰}) = ۳۶ \\Rightarrow x^۲ - ۳x = ۴۰$\n$\\Rightarrow x^۲ - ۳x - ۴۰ = ۰ \\Rightarrow (x+۵)(x-۸) = ۰ \\Rightarrow \\begin{cases} x = -۵ \\text{ غ ق ق} \\\\ x = ۸ \\text{ \\checkmark} \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 749,
+      "solution_page": null,
+      "solution_text": "مساحت مثلث $ABC$ برابر است با:\n$$ \\frac{AH \\times BC}{۲} = \\frac{۱ \\times ۲}{۲} = ۱ $$$S_{ABC} = \\frac{1}{2}AB \\times AC \\times \\sin \\alpha$\nاز طرفی می‌دانیم:\nطول $AB$ و $AC$ را به دست می‌آوریم.\n$AB^2 = 1^2 + 1^2 = 2 \\Rightarrow AB = \\sqrt{2}$\n$AC^2 = 1^2 + 3^2 = 10 \\Rightarrow AC = \\sqrt{10}$\nدر نتیجه:\n$S_{ABC} = \\frac{1}{2} \\times \\sqrt{2} \\times \\sqrt{10} \\times \\sin \\alpha = 1 \\Rightarrow \\sin \\alpha = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            814,
+            104,
+            898,
+            166
+          ],
+          "filename": "page_0072.jpg",
+          "placement": "solution",
+          "alt": "مثلث درون شبکه شطرنجی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 750,
+      "solution_page": null,
+      "solution_text": "مساحت هر چهارضلعی برابر است با نصف حاصل‌ضرب دو قطر ضرب در سینوس زاویهٔ بین دو قطر.\nدر این مسئله زاویهٔ بین دو قطر $150^{\\circ}$ یا همان $30^{\\circ}$ است.\n$S = \\frac{1}{2} \\times 10 \\times 18 \\times \\sin 30^{\\circ} = \\frac{1}{2} \\times 10 \\times 18 \\times \\frac{1}{2} = 45$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 751,
+      "solution_page": null,
+      "solution_text": "نکته: مساحت شش‌ضلعی منتظم به ضلع $a$ برابر $\\frac{3\\sqrt{3}}{2}a^2$ می‌باشد.\n$S = \\frac{3\\sqrt{3}}{2}a^2 = 6\\sqrt{3} \\Rightarrow a^2 = 4 \\Rightarrow a = 2$\nبا توجه به شکل مثلث $ABC$ متساوی‌الساقین است.\nاندازهٔ هر زاویه داخل شش‌ضلعی منتظم $120^{\\circ}$ است.\nبنابراین در مثلث $ABC$ داریم:\n$\\hat{A} = \\hat{C} = 30^{\\circ}$\nارتفاع $BH$ میانه نیز می‌باشد.\n$AH = AB \\cos 30^{\\circ} = \\frac{\\sqrt{3}}{2}AB = \\frac{\\sqrt{3}}{2} \\times 2 = \\sqrt{3} \\Rightarrow AC = 2\\sqrt{3}$\nنکته: در شش‌ضلعی منتظم به ضلع $a$، اندازهٔ قطر کوچک $\\sqrt{3}a$ و اندازهٔ قطر بزرگ $2a$ است.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            1280,
+            770,
+            1550,
+            960
+          ],
+          "placement": "solution",
+          "filename": "page_0073.jpg",
+          "alt": "شش‌ضلعی منتظم با مثلث ABC داخل آن"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 752,
+      "solution_page": null,
+      "solution_text": "مطابق شکل طول $CD$ برابر ارتفاع درخت است.\n$\\triangle ABC: BC = AB \\times \\tan 70^{\\circ} = 40 \\times 2.75 = 110$\n$\\triangle ABD: BD = AB \\times \\tan 45^{\\circ} = 40$\n$CD = BC - BD = 110 - 40 = 70$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            1280,
+            1260,
+            1550,
+            1550
+          ],
+          "placement": "solution",
+          "filename": "page_0073.jpg",
+          "alt": "دو مثلث قائم‌الزاویه ABC و ABD که در AB مشترک هستند"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 753,
+      "solution_page": null,
+      "solution_text": "مستطیل $AMNB$ را رسم می‌کنیم. بدیهی است:\n$MN = AB = 6$\nدر مثلث $MNC$ داریم:\n$\\frac{MN}{MC} = \\sin 45^{\\circ} \\Rightarrow \\frac{6}{MC} = \\frac{\\sqrt{2}}{2} \\Rightarrow MC = 6\\sqrt{2} \\Rightarrow MD = 2\\sqrt{2}$\nارتفاع $DH$ را رسم می‌کنیم. بدیهی است $\\hat{M} = \\hat{C} = 45^{\\circ}$.\nدر مثلث $DMH$ داریم:\n$\\frac{DH}{MD} = \\sin 45^{\\circ} \\Rightarrow \\frac{DH}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{2} \\Rightarrow DH = 2$\nدر نتیجه در مثلث $ADH$:\n$\\frac{DH}{AD} = \\sin 30^{\\circ} \\Rightarrow \\frac{2}{AD} = \\frac{1}{2} \\Rightarrow AD = 4$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            1160,
+            1600,
+            1550,
+            1850
+          ],
+          "placement": "solution",
+          "filename": "page_0073.jpg",
+          "alt": "ذوزنقه ABCD با خطوط کمکی و ارتفاع‌ها"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 754,
+      "solution_page": null,
+      "solution_text": "ابتدا با استفاده از قضیهٔ کسینوس‌ها در مثلث $ABC$، $BC^2$ را به دست می‌آوریم.\n$BC^2 = AB^2 + AC^2 - 2AB \\times AC \\cos \\hat{A}$\n$= 36 + 64 - 2 \\times 6 \\times 8 \\times \\frac{1}{2} = 52$\nقضیهٔ کسینوس‌ها را در مثلث $BDC$ می‌نویسیم.\n$BC^2 = BD^2 + CD^2 - 2BD \\times CD \\cos \\hat{D}$\n$\\Rightarrow 52 = BD^2 + 36 - 2BD \\times 6 \\times (-\\frac{1}{2})$\n$\\Rightarrow BD^2 + 6BD - 16 = 0 \\Rightarrow (BD+8)(BD-2)=0$\n$\\Rightarrow BD = 2$\nبنابراین:\n$S_{ABC} = \\frac{1}{2}BD \\times CD \\times \\sin \\hat{D} = \\frac{1}{2} \\times 2 \\times 6 \\times \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 755,
+      "solution_page": null,
+      "solution_text": "طول کمان $AB$، $\\frac{1}{3}$ شعاع دایره است بنابراین زاویهٔ $\\theta$ برابر $\\frac{1}{3}$ رادیان است.\nزاویهٔ $\\theta$، $\\frac{60}{\\pi}$ درجه است.\n$\\theta = \\frac{1}{3} \\times \\frac{180}{\\pi} = \\frac{60}{\\pi}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 756,
+      "solution_page": null,
+      "solution_text": "در مثلث $OBC$ اضلاع $OB$ و $OC$ برابر شعاع می‌باشند. بنابراین زاویهٔ $C$ برابر $15^{\\circ}$ و در نتیجه $\\hat{O}_1 = \\hat{B} + \\hat{C} = 30^{\\circ}$.\n$\\Rightarrow \\hat{O}_1 = \\frac{\\pi}{6}$\nطول کمان $AB = R \\cdot \\theta = 12 \\times \\frac{\\pi}{6} = 2\\pi$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            890,
+            400,
+            1150
+          ],
+          "placement": "solution",
+          "filename": "page_0073.jpg",
+          "alt": "دایره به مرکز O و مثلث OBC داخل آن با کمان AB"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 757,
+      "solution_page": null,
+      "solution_text": "مساحت قطاع و مثلث را به دست می‌آوریم.\n$S_{\\text{قطاع}} = \\frac{60}{360} \\times \\pi R^2 = \\frac{1}{6} \\times \\pi \\times 2^2 = \\frac{2}{3}\\pi$\n$S_{\\text{مثلث}} = \\frac{1}{2} \\times 2 \\times 2 \\times \\sin 60^{\\circ} = \\sqrt{3}$\n$\\Rightarrow S_{\\text{رنگی}} = S_{\\text{قطاع}} - S_{\\text{مثلث}} = \\frac{2\\pi}{3} - \\sqrt{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 758,
+      "solution_page": null,
+      "solution_text": "مساحت و محیط قطاع را $S$ و $P$ می‌نامیم.\n$S = \\frac{\\theta}{2\\pi} \\times \\pi R^2 = \\frac{\\theta R^2}{2} = \\frac{9}{2}\\theta \\Bigg\\} \\Rightarrow \\frac{9}{2}\\theta = 6 + 3\\theta \\Rightarrow \\theta = 4$\n$P = 2R + R\\theta = 6 + 3\\theta$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 759,
+      "solution_page": null,
+      "solution_text": "مساحت قطاع بزرگ را $S_1$ و مساحت قطاع کوچک را $S_2$ می‌نامیم.\n$S_1 = \\frac{\\theta R^2}{2} = \\frac{\\frac{\\pi}{6} \\times 8^2}{2} = \\frac{16\\pi}{3} \\Bigg\\} \\Rightarrow S = S_1 - S_2 = \\frac{12\\pi}{3} = 4\\pi$\n$S_2 = \\frac{\\theta r^2}{2} = \\frac{\\frac{\\pi}{6} \\times 4^2}{2} = \\frac{4\\pi}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 760,
+      "solution_page": null,
+      "solution_text": "محیط قسمت رنگی برابر است با $AB + CD + \\overset{\\frown}{AD} + \\overset{\\frown}{BC}$\nکه $AB = CD = 8 - 3 = 5$.\n$150^{\\circ} = \\frac{5\\pi}{6}$ رادیان\n$\\overset{\\frown}{AD} = r.\\theta = 3 \\times \\frac{5\\pi}{6} = \\frac{5\\pi}{2}$\n$\\overset{\\frown}{BC} = R\\theta = 8 \\times \\frac{5\\pi}{6} = \\frac{20\\pi}{3}$\n$\\Rightarrow \\text{محیط} = 5 + 5 + \\frac{5\\pi}{2} + \\frac{20\\pi}{3} = 10 + \\frac{55\\pi}{6}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            1850,
+            400,
+            2150
+          ],
+          "placement": "solution",
+          "filename": "page_0073.jpg",
+          "alt": "دو دایره هم‌مرکز با قطاع رنگی و زاویه 150 درجه"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 761,
+      "solution_page": null,
+      "solution_text": "زاویهٔ $-۲۱۵^\\circ$ به صورت $۳۵^\\circ - ۱۸۰^\\circ$ بوده و انتهای کمان در ناحیهٔ دوم مثلثاتی است.\nانتهای کمان زوایای گزینه‌های ۱ و ۲ و ۳ در ناحیهٔ دوم و زاویهٔ ۴ در ناحیهٔ اول مثلثاتی قرار دارند.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 762,
+      "solution_page": null,
+      "solution_text": "زاویهٔ $-۴۹۰^\\circ$ به صورت $-۱۳۰^\\circ - ۳۶۰^\\circ$ بوده و انتهای کمان در ناحیهٔ سوم مثلثاتی است. انتهای کمان زوایای $\\frac{۵\\pi}{۶}$، $\\frac{۴\\pi}{۳}$، $\\frac{۱۷\\pi}{۸}$ و $\\frac{۸\\pi}{۵}$ به ترتیب در ناحیه‌های دوم، سوم، اول و چهارم مثلثاتی قرار دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 763,
+      "solution_page": null,
+      "solution_text": "انتهای کمان زاویهٔ $-۵۳۰^\\circ$ بر انتهای کمان زاویهٔ $۱۹۰^\\circ = ۲ \\times ۳۶۰^\\circ - ۵۳۰^\\circ$ منطبق است. حال $۱۹۰^\\circ$ را به رادیان تبدیل می‌کنیم.\n$\\theta = ۱۹۰ \\times \\frac{\\pi}{۱۸۰} = ۱۹\\frac{\\pi}{۱۸} = \\pi + \\frac{\\pi}{۱۸}$\nبنابراین اگر $\\alpha = \\frac{\\pi}{۱۸}$ باشد، انتهای کمان $\\alpha$ و $\\theta$ دو سر یک قطر خواهند بود.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 764,
+      "solution_page": null,
+      "solution_text": "هر رادیان تقریباً $۵۷^\\circ$ است. انتهای کمان زوایای ۱، ۲ و ۳ رادیان مطابق شکل است. واضح است $\\sin ۳ < \\sin ۱ < \\sin ۲$.",
+      "stated_correct_option": null,
+      "media_regions": [
+        {
+          "region": [
+            522,
+            311,
+            634,
+            384
+          ],
+          "placement": "solution_1",
+          "filename": "page_0074.jpg",
+          "alt": "دایره مثلثاتی و کمان ۱، ۲ و ۳ رادیان"
+        }
+      ],
+      "review_notes": [
+        "stated_correct_option 4 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 765,
+      "solution_page": null,
+      "solution_text": "با توجه به این‌که هر رادیان تقریباً $۵۷^\\circ$ است، انتهای کمان زوایای ۳، ۴، ۵ و ۶ رادیان مطابق شکل است.\nواضح است انتهای کمان ۶ رادیان در ناحیهٔ چهارم بوده $\\cos ۶$ مثبت است.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            522,
+            390,
+            642,
+            463
+          ],
+          "placement": "solution_1",
+          "filename": "page_0074.jpg",
+          "alt": "دایره مثلثاتی و کمان ۳، ۴، ۵ و ۶ رادیان"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 766,
+      "solution_page": null,
+      "solution_text": "انتهای کمان زوایای $\\frac{k\\pi}{۴}$ مطابق شکل رئوس یک ۸ضلعی منتظم می‌باشند.\nانتهای کمان زوایای $\\frac{k\\pi}{۳} + \\frac{\\pi}{۴}$ همانند $\\frac{k\\pi}{۳}$ بوده و فقط $\\frac{\\pi}{۴}$ بر روی دایرهٔ مثلثاتی چرخش دارند.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            522,
+            484,
+            624,
+            556
+          ],
+          "placement": "solution_1",
+          "filename": "page_0074.jpg",
+          "alt": "دایره مثلثاتی و نقاط هشت‌ضلعی منتظم"
+        },
+        {
+          "region": [
+            522,
+            558,
+            624,
+            629
+          ],
+          "placement": "solution_2",
+          "filename": "page_0074.jpg",
+          "alt": "دایره مثلثاتی و نقاط شش‌ضلعی منتظم"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 767,
+      "solution_page": null,
+      "solution_text": "مطابق جدول عمل می‌کنیم.\n\n\\begin{array}{c|c|c|c|c|c|c}\nk & ۰ & ۱ & ۲ & \\dots & ۱۰ & ۱۱ \\\\\n\\hline\n\\theta & \\frac{\\pi}{۸} & \\frac{\\pi}{۶} + \\frac{\\pi}{۸} & \\frac{\\pi}{۳} + \\frac{\\pi}{۸} & \\dots & \\frac{۵\\pi}{۳} + \\frac{\\pi}{۸} & \\frac{۱۱\\pi}{۶} + \\frac{\\pi}{۸}\n\\end{array}\n\nبا توجه به جدول ۱۲ نقطهٔ متمایز بر روی دایره به وجود می‌آید. بدیهی است اگر $k = ۱۲$ باشد، $\\theta = ۲\\pi + \\frac{\\pi}{۸}$ بوده و بر کمان $\\frac{\\pi}{۸}$ منطبق می‌شود.\nمی‌دانستیم $\\frac{k\\pi}{۶}$ها ۱۲ نقطهٔ متمایز بر دایره به وجود می‌آورند بنابراین $\\frac{k\\pi}{۶} + \\frac{\\pi}{۸}$ ها نیز ۱۲ نقطه ایجاد می‌کنند.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 768,
+      "solution_page": null,
+      "solution_text": "با توجه به $\\sin \\alpha \\cos \\alpha < ۰$ مشخص می‌شود که $\\sin \\alpha$ و $\\cos \\alpha$ غیرهم‌علامت بوده و $\\alpha$ در یکی از نواحی ۲، ۴، ۷ و یا ۸ است. در نواحی ۴ و ۸ مقدار تانژانت $\\alpha$ بیشتر از کتانژانت $\\alpha$ است اما در نواحی ۳ و ۷ داریم: $\\tan \\alpha < \\cot \\alpha$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            522,
+            786,
+            642,
+            888
+          ],
+          "placement": "solution_1",
+          "filename": "page_0074.jpg",
+          "alt": "دایره مثلثاتی و محورهای تانژانت و کتانژانت در نواحی مختلف"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 769,
+      "solution_page": null,
+      "solution_text": "در نواحی ۱، ۶، ۷ و ۸ رابطهٔ $\\sin x < \\cos x$ و در نواحی ۲، ۴، ۶ و ۸ رابطهٔ $\\tan x > \\cot x$ برقرار است.\nبنابراین در دو ناحیهٔ ۶ و ۸، هر دو رابطه برقرار است.\nزوایای $\\frac{۹\\pi}{۸}$، $\\frac{۱۳\\pi}{۹}$، $\\frac{۱۷\\pi}{۱۰}$ و $\\frac{۲۳\\pi}{۱۱}$ به ترتیب در نواحی ۵، ۶، ۷ و ۱ قرار دارند.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            104,
+            77,
+            190,
+            140
+          ],
+          "placement": "solution_1",
+          "filename": "page_0074.jpg",
+          "alt": "دایره مثلثاتی تقسیم شده به هشت ناحیه مساوی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 770,
+      "solution_page": null,
+      "solution_text": "اگر نقطهٔ $P(x,y)$ بر دایرهٔ مثلثاتی انتهای کمان مربوط به زاویهٔ $\\theta$ باشد، آن‌گاه:\n$\\sin \\theta = y \\quad \\cos \\theta = x \\quad \\tan \\theta = \\frac{y}{x} \\quad \\cot \\theta = \\frac{x}{y}$\nبنابراین:\n$P(\\frac{۲}{۳}, -\\frac{\\sqrt{۵}}{۳}) \\Rightarrow \\begin{cases} \\sin \\alpha = -\\frac{\\sqrt{۵}}{۳} \\\\ \\cot \\alpha = -\\frac{\\frac{۲}{۳}}{\\frac{\\sqrt{۵}}{۳}} \\end{cases} \\Rightarrow \\frac{\\sin \\alpha}{\\cot \\alpha} = \\frac{-\\frac{\\sqrt{۵}}{۳}}{-\\frac{۲}{\\sqrt{۵}}} = \\frac{۵}{۶}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 771,
+      "solution_page": null,
+      "solution_text": "با توجه به شکل و $P(-\\frac{۴}{۵}, y)$ خواهیم داشت:\n$OP^r = PH^r + OH^r \\Rightarrow ۱ = (\\frac{۴}{۵})^r + OH^r \\Rightarrow OH^r = \\frac{۹}{۲۵} \\Rightarrow OH = \\frac{۳}{۵}$\nدر نتیجه:\n$\\tan \\alpha = \\frac{PH}{OH} = \\frac{\\frac{۴}{۵}}{\\frac{۳}{۵}} = \\frac{۴}{۳}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            105,
+            360,
+            208,
+            463
+          ],
+          "placement": "solution_1",
+          "filename": "page_0074.jpg",
+          "alt": "مثلث قائم‌الزاویه در ناحیه دوم دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 772,
+      "solution_page": null,
+      "solution_text": "با توجه به مثلث $OPH$ در دایرهٔ مثلثاتی و $P(۳a, a - ۱)$ خواهیم داشت:\n$OP^r = PH^r + OH^r \\Rightarrow ۱ = (a - ۱)^r + (۳a)^r$\n$\\Rightarrow ۱۰a^r - ۲a = ۰ \\Rightarrow \\begin{cases} a = ۰ \\text{ ق.ق.غ} \\\\ a = \\frac{۱}{۵} \\checkmark \\end{cases} \\Rightarrow P(\\frac{۳}{۵}, -\\frac{۴}{۵}) \\Rightarrow \\begin{cases} PH = \\frac{۴}{۵} \\\\ OH = \\frac{۳}{۵} \\end{cases}$\n$\\Rightarrow \\sin \\alpha = \\frac{PH}{OP} = \\frac{\\frac{۴}{۵}}{۱} = \\frac{۴}{۵}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            105,
+            598,
+            208,
+            701
+          ],
+          "placement": "solution_1",
+          "filename": "page_0074.jpg",
+          "alt": "مثلث قائم‌الزاویه در ناحیه چهارم دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 773,
+      "solution_page": null,
+      "solution_text": "با توجه به شکل خواهیم داشت:\n$\\begin{cases} PH = OA = ۱ \\\\ OH = AP = ۳ \\end{cases}$\nبنابراین:\n$OP^r = OH^r + PH^r \\Rightarrow OP^r = ۳^r + ۱^r = ۱۰ \\Rightarrow OP = \\sqrt{۱۰}$\nدر نتیجه:\n$\\cos \\alpha = \\frac{OH}{OP} = \\frac{۳}{\\sqrt{۱۰}} = \\frac{۳\\sqrt{۱۰}}{۱۰}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            104,
+            830,
+            234,
+            957
+          ],
+          "placement": "solution_1",
+          "filename": "page_0074.jpg",
+          "alt": "دایره مثلثاتی و مثلث قائم‌الزاویه در ربع اول"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 774,
+      "solution_page": null,
+      "solution_text": "با توجه به مثلث OAH در دایرهٔ مثلثاتی خواهیم داشت:\n$\\tan \\alpha = \\frac{1}{2} \\Rightarrow \\frac{AH}{OH} = \\frac{1}{2} \\Rightarrow OH = 2AH$\nاز طرفی: $OA^2 = OH^2 + AH^2 \\Rightarrow 1 = 4AH^2 + AH^2$\n$\\Rightarrow 5AH^2 = 1 \\Rightarrow AH = \\frac{\\sqrt{5}}{5}$\nاگر مختصات $A$ را $(x, y)$ در نظر بگیریم، مختصات $P$ به صورت $(-x, -y)$ است.\n$x = OH = 2\\frac{\\sqrt{5}}{5}$\n$y = -AH = -\\frac{\\sqrt{5}}{5}$\n$\\Rightarrow P(-2\\frac{\\sqrt{5}}{5}, \\frac{\\sqrt{5}}{5})$\n$( -\\frac{2\\sqrt{5}}{5} ) ( \\frac{\\sqrt{5}}{5} ) = -\\frac{2}{5}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            78,
+            469,
+            168,
+            590
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "دایره مثلثاتی و زاویه آلفا"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 775,
+      "solution_page": null,
+      "solution_text": "اگر مختصات $B$ را $(x, y)$ در نظر بگیریم مختصات $A$ به صورت $(-y, -x)$ خواهد بود.\nمی‌دانیم:\n$x = \\cos 30^\\circ = \\frac{\\sqrt{3}}{2} , y = \\sin 30^\\circ = \\frac{1}{2}$\nبنابراین:\n$A(-\\frac{1}{2}, -\\frac{\\sqrt{3}}{2})$\n$B(\\frac{\\sqrt{3}}{2}, \\frac{1}{2})$\n$\\Rightarrow AB = \\sqrt{(\\frac{\\sqrt{3}}{2} + \\frac{1}{2})^2 + (\\frac{1}{2} + \\frac{\\sqrt{3}}{2})^2} = \\sqrt{2 + \\sqrt{3}}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            352,
+            467,
+            442,
+            582
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 776,
+      "solution_page": null,
+      "solution_text": "اگر مختصات $B$ به صورت $(x, y)$ باشد، خواهیم داشت:\n$AB = 2x$\n$OH = y$\n$S_{OAB} = \\frac{OH \\times AB}{2} = \\frac{2xy}{2} = xy = \\frac{\\sqrt{3}}{4} \\Rightarrow y = \\frac{\\sqrt{3}}{4x}$\nاز طرفی: $x^2 + y^2 = 1 \\Rightarrow x^2 + \\frac{3}{16x^2} = 1 \\Rightarrow x^4 - x^2 + \\frac{3}{16} = 0$\n$\\Rightarrow x^2 = \\frac{1 \\pm \\sqrt{1 - \\frac{3}{4}}}{2} = \\frac{1 \\pm \\frac{1}{2}}{2} \\Rightarrow \\begin{cases} x^2 = \\frac{3}{4} \\\\ x^2 = \\frac{1}{4} \\end{cases}$\n$x > 0 \\Rightarrow \\begin{cases} x = \\frac{\\sqrt{3}}{2} \\Rightarrow AB = \\sqrt{3} \\\\ x = \\frac{1}{2} \\Rightarrow AB = 1 \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            691,
+            468,
+            775,
+            581
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 777,
+      "solution_page": null,
+      "solution_text": "در مثلث قائم‌الزاویهٔ OAB، ارتفاع OP وارد بر وتر است.\n$OP^2 = AP \\times BP$\n$= AP \\times 3AP = 3AP^2$\n$\\Rightarrow OP = \\sqrt{3}AP \\Rightarrow OP = \\frac{\\sqrt{3}}{3}BP$\n$\\Rightarrow \\frac{BP}{OP} = \\sqrt{3}$\n$\\stackrel{\\triangle}{OBP} : \\tan \\alpha = \\frac{BP}{OP} = \\sqrt{3} \\Rightarrow \\alpha = 60^\\circ$",
+      "stated_correct_option": null,
+      "media_regions": [
+        {
+          "region": [
+            777,
+            452,
+            891,
+            581
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "مثلث قائم الزاویه"
+        }
+      ],
+      "review_notes": [
+        "stated_correct_option 2 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 778,
+      "solution_page": null,
+      "solution_text": "واضح است در مثلث قائم‌الزاویهٔ OAB، زاویهٔ $\\hat{O_1}$ برابر $30^\\circ$ است.\n$\\tan \\hat{O_1} = \\frac{AB}{OB} \\Rightarrow \\tan 30^\\circ = \\frac{AB}{1} \\Rightarrow AB = \\frac{\\sqrt{3}}{3}$\n$OA^2 = OB^2 + AB^2 \\Rightarrow OA^2 = 1 + \\frac{1}{3} = \\frac{4}{3} \\Rightarrow OA = \\frac{2}{\\sqrt{3}} = \\frac{2\\sqrt{3}}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            103,
+            39,
+            198,
+            178
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 779,
+      "solution_page": null,
+      "solution_text": "در دایرهٔ مثلثاتی $OB = OP = OA = 1$ است.\n$\\stackrel{\\triangle}{OPN} : \\frac{OP}{ON} = \\cos 60^\\circ = \\frac{1}{2} \\Rightarrow \\frac{1}{ON} = \\frac{1}{2} \\Rightarrow ON = 2$\n$\\stackrel{\\triangle}{OPM} : \\frac{OP}{OM} = \\cos 30^\\circ = \\frac{\\sqrt{3}}{2} \\Rightarrow \\frac{1}{OM} = \\frac{\\sqrt{3}}{2} \\Rightarrow OM = \\frac{2}{\\sqrt{3}}$\n$BN = ON - OB = 2 - 1 = 1$\nخواهیم داشت:\n$AM = OM - OA = \\frac{2}{\\sqrt{3}} - 1 \\Rightarrow AM + BN = \\frac{2}{\\sqrt{3}} = \\frac{2\\sqrt{3}}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            284,
+            45,
+            401,
+            163
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 780,
+      "solution_page": 75,
+      "solution_text": "۲",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": [
+        "Solution consists only of an answer key without explanation. Transcribed the visible key."
+      ]
+    },
+    {
+      "question_number": 781,
+      "solution_page": null,
+      "solution_text": "با توجه به دایرهٔ مثلثاتی اگر $120^\\circ < \\alpha < 180^\\circ$ باشد، آن‌گاه $0 < \\sin \\alpha \\le 1$ است.\nبنابراین:\n$0 < \\frac{2 - m}{3} \\le 1 \\Rightarrow 0 < 2 - m \\le 3 \\Rightarrow -2 < -m \\le 1 \\Rightarrow -1 \\le m < 2$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            476,
+            36,
+            523,
+            110
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 782,
+      "solution_page": null,
+      "solution_text": "اگر $\\frac{2\\pi}{6} < \\theta < \\frac{2\\pi}{3}$ باشد، آن‌گاه $\\frac{\\pi}{3} < 2\\theta < \\frac{4\\pi}{3}$ بوده و با توجه به دایرهٔ مثلثاتی $-1 \\le \\cos 2\\theta < \\frac{1}{2}$ است.\nبنابراین:\n$-1 \\le \\frac{3m + 1}{2} < \\frac{1}{2} \\Rightarrow -2 \\le 3m + 1 < 1 \\Rightarrow -3 \\le 3m < 0 \\Rightarrow -1 \\le m < 0$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            584,
+            38,
+            642,
+            110
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 783,
+      "solution_page": null,
+      "solution_text": "مساحت قسمت رنگی را $S$ می‌نامیم.\n$S = S_{AOP} - S_{OBP}$\nخواهیم داشت:\n$\\stackrel{\\triangle}{AOP} : \\tan \\theta = \\frac{AP}{OP} \\Rightarrow \\frac{AP}{1} = AP$\n$\\left. \\begin{array}{l} S_{OAP} = \\frac{AP \\times OP}{2} = \\frac{1}{2}\\tan \\theta \\\\ S_{OBP} = \\frac{\\theta}{2}R^2 = \\frac{\\theta}{2} \\end{array} \\right\\} \\Rightarrow S = \\frac{1}{2}\\tan \\theta - \\frac{1}{2}\\theta = \\frac{1}{2}(\\tan \\theta - \\theta)$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            691,
+            65,
+            808,
+            142
+          ],
+          "placement": "solution",
+          "filename": "page_0075.jpg",
+          "alt": "قطاع دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 784,
+      "solution_page": null,
+      "solution_text": "ساده می‌کنیم:\n$\\cos(\\frac{\\pi}{۲} + x) + \\sin(\\frac{\\pi}{۲} + x) = -\\sin x + \\cos x$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 785,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم:\n$۳\\cos(\\frac{۳\\pi}{۲} + x) = ۴\\sin(x - \\frac{\\pi}{۲})$\n$\\Rightarrow ۳\\sin x = -۴\\cos x \\Rightarrow \\cot x = -\\frac{۳}{۴}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 786,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم:\n$\\cot(\\theta + x) \\tan(x - \\frac{\\pi}{۲}) = ۱ \\Rightarrow \\cot(\\theta + x) (-\\cot x) = ۱$\n$\\Rightarrow \\cot(\\theta + x) = -\\frac{۱}{\\cot x} \\Rightarrow \\cot(\\theta + x) = -\\tan x$\nاگر $\\theta = \\frac{\\pi}{۲}$ باشد، برابری بالا برقرار است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 787,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\alpha + \\beta = \\pi$ است، بنابراین $\\alpha = \\pi - \\beta$.\n$\\cos(\\alpha - \\frac{۳\\pi}{۲}) = \\cos(\\frac{۳\\pi}{۲} - \\alpha) = -\\sin \\alpha = -\\sin(\\pi - \\beta) = -\\sin \\beta$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 788,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\hat{A} + \\hat{B} = \\frac{\\pi}{۲}$ است، بنابراین:\n$\\tan A = \\cot B \\ , \\ \\cot A = \\tan B$\n$\\frac{\\cot A - \\cot B}{\\tan A - \\tan B} = \\frac{\\tan B - \\cot B}{\\cot B - \\tan B} = -۱$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 789,
+      "solution_page": null,
+      "solution_text": "و در نتیجه:",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 790,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\hat{B} + \\hat{C} = \\frac{\\pi}{۲}$ است. بنابراین $\\cos C = \\sin B$ و $\\sin C = \\cos B$.\nدر نتیجه:\n$\\frac{\\sin B \\cos C}{\\sin^۲ C} = \\frac{\\sin B \\sin B}{\\cos^۲ B} = \\frac{\\sin^۲ B}{\\cos^۲ B} = \\tan^۲ B$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 791,
+      "solution_page": null,
+      "solution_text": "اگر $\\alpha = \\frac{\\pi}{۴} - x$ باشد، آن‌گاه $\\alpha + x = \\frac{\\pi}{۴}$ است.\n$\\frac{\\cos(x - \\frac{\\pi}{۴})}{\\cos(x + \\frac{\\pi}{۴})} = \\frac{\\cos \\alpha}{\\cos(\\alpha + \\frac{\\pi}{۲})} = \\frac{\\cos \\alpha}{-\\sin \\alpha} = -\\cot \\alpha = ۴$\n$\\Rightarrow \\tan \\alpha = -\\frac{۱}{۴} \\Rightarrow \\tan(x - \\frac{\\pi}{۴}) = -\\frac{۱}{۴}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 792,
+      "solution_page": null,
+      "solution_text": "اگر $\\alpha = \\frac{\\pi}{۱۲} - x$ باشد، آن‌گاه $\\frac{\\pi}{۲} + \\alpha = \\frac{۷\\pi}{۱۲} - x$ است.\n$\\sin(x + \\frac{۵\\pi}{۱۲}) + \\cos(x - \\frac{\\pi}{۱۲}) = \\frac{۱}{۳}$\n$\\Rightarrow \\sin(\\alpha + \\frac{\\pi}{۲}) + \\cos \\alpha = \\frac{۱}{۳}$\n$\\Rightarrow \\cos \\alpha + \\cos \\alpha = \\frac{۱}{۳} \\Rightarrow \\cos \\alpha = \\frac{۱}{۶}$\nبنابراین:\n$\\cos(x + \\frac{۱۱\\pi}{۱۲}) = \\cos(\\pi + \\alpha) = -\\cos \\alpha = -\\frac{۱}{۶}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 793,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\frac{\\pi}{۶} = \\alpha + \\beta$ است، بنابراین $\\frac{\\pi}{۲} = ۳\\alpha + ۳\\beta$ می‌باشد.\n$۳\\alpha + ۳\\beta = \\frac{\\pi}{۲} \\Rightarrow (۲\\alpha + \\beta) + (\\alpha + ۲\\beta) = \\frac{\\pi}{۲}$\n$\\Rightarrow \\cos(\\alpha + ۲\\beta) = \\sin(۲\\alpha + \\beta)$\nدر نتیجه:\n$\\frac{\\sin(۲\\alpha + \\beta)}{\\cos(\\alpha + ۲\\beta)} = ۱$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 794,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\alpha = \\frac{\\pi}{۱۶}$ است، بنابراین $۸\\alpha = \\frac{\\pi}{۲}$ می‌باشد.\n$۳\\alpha + ۵\\alpha = \\frac{\\pi}{۲} \\Rightarrow \\sin ۳\\alpha = \\cos ۵\\alpha$\n$۲\\alpha + ۶\\alpha = \\frac{\\pi}{۲} \\Rightarrow \\tan ۲\\alpha = \\cot ۶\\alpha$\nدر نتیجه:\n$\\frac{\\sin ۳\\alpha \\cot ۶\\alpha}{\\tan ۲\\alpha \\cos ۵\\alpha} = ۱$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 795,
+      "solution_page": null,
+      "solution_text": "با توجه به شکل واضح است:\n$\\hat{\\theta} = ۲۴۰^\\circ + ۹۰^\\circ = ۳۳۰^\\circ$\nبنابراین:\n$\\tan \\theta = \\tan ۳۳۰^\\circ = \\tan(۳۶۰^\\circ - ۳۰^\\circ) = -\\tan ۳۰^\\circ = -\\frac{\\sqrt{۳}}{۳}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 796,
+      "solution_page": null,
+      "solution_text": "عبارت $\\cos ۵۷۰^\\circ$ را ساده می‌کنیم.\n$\\cos ۵۷۰^\\circ = \\cos(۳۶۰^\\circ + ۲۱۰^\\circ) = \\cos ۲۱۰^\\circ = \\cos(۱۸۰^\\circ + ۳۰^\\circ)$\n$= -\\cos ۳۰^\\circ = -\\frac{\\sqrt{۳}}{۲}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 797,
+      "solution_page": null,
+      "solution_text": "عبارت داده‌شده را ساده می‌کنیم.\n$\\cos \\frac{۱۶\\pi}{۳} \\sin(-\\frac{۱۹\\pi}{۶}) + \\tan \\frac{۱۷\\pi}{۴} \\sin \\frac{۱۱\\pi}{۶}$\n$= \\cos(۵\\pi + \\frac{\\pi}{۳})(-\\sin(۳\\pi + \\frac{\\pi}{۶})) + \\tan(۴\\pi + \\frac{\\pi}{۴})\\sin(۲\\pi - \\frac{\\pi}{۶})$\n$= (-\\cos \\frac{\\pi}{۳})(\\sin \\frac{\\pi}{۶}) + \\tan \\frac{\\pi}{۴}(-\\sin \\frac{\\pi}{۶})$\n$= (-\\frac{۱}{۲})(\\frac{۱}{۲}) + (۱)(-\\frac{۱}{۲}) = -\\frac{۱}{۴} - \\frac{۱}{۲} = -\\frac{۳}{۴}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 798,
+      "solution_page": null,
+      "solution_text": "اگر $k$ زوج باشد، $\\cos(k\\pi - \\alpha) = \\cos \\alpha$ و اگر $k$ فرد باشد، $\\cos(k\\pi - \\alpha) = -\\cos \\alpha$ است؛ بنابراین $\\cos(k\\pi - \\alpha) = (-۱)^k \\cos \\alpha$.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 799,
+      "solution_page": null,
+      "solution_text": "می‌دانیم کسینوس دو زاویهٔ مکمل قرینهٔ یکدیگرند، بنابراین مجموع کسینوس آن‌ها برابر صفر است.\n$\\cos \\frac{\\pi}{۷} + \\cos \\frac{۲\\pi}{۷} + \\cos \\frac{۳\\pi}{۷} + \\cos \\frac{۴\\pi}{۷} + \\cos \\frac{۵\\pi}{۷} + \\cos \\frac{۶\\pi}{۷} = \\circ$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 800,
+      "solution_page": null,
+      "solution_text": "عبارت $A$ را ساده می‌کنیم.\n$A = \\sin \\frac{۱۰\\pi}{۳} \\cos \\frac{۱۱\\pi}{۶} + \\tan \\frac{۷\\pi}{۴}$\n$= \\sin(۳\\pi + \\frac{\\pi}{۳}) \\cos(۲\\pi - \\frac{\\pi}{۶}) + \\tan(۲\\pi - \\frac{\\pi}{۴})$\n$= (-\\sin \\frac{\\pi}{۳})(\\cos \\frac{\\pi}{۶}) - \\tan \\frac{\\pi}{۴} = (-\\frac{\\sqrt{۳}}{۲})(\\frac{\\sqrt{۳}}{۲}) - ۱ = -\\frac{۳}{۴} - ۱ = -\\frac{۷}{۴}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 801,
+      "solution_page": null,
+      "solution_text": "کسر را ساده کرده و صورت و مخرج کسر را بر $\\cos ۲۰^\\circ$ تقسیم می‌کنیم.\n$\\frac{\\cos ۲۰^\\circ}{\\sin ۷۰^\\circ + \\cos ۷۰^\\circ} = \\frac{\\cos ۲۰^\\circ}{\\cos ۲۰^\\circ + \\sin ۲۰^\\circ} = \\frac{\\frac{\\cos ۲۰^\\circ}{\\cos ۲۰^\\circ}}{\\frac{\\cos ۲۰^\\circ + \\sin ۲۰^\\circ}{\\cos ۲۰^\\circ}}$\n$= \\frac{۱}{۱ + \\tan ۲۰^\\circ} = \\frac{۱}{۱ + \\circ/۳۶} = \\frac{۱}{۱/۳۶} = \\frac{۱۰۰}{۱۳۶} = \\frac{۲۵}{۳۴}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 802,
+      "solution_page": null,
+      "solution_text": "کسر را ساده کرده و صورت و مخرج کسر را بر $\\cos ۲۵^\\circ$ تقسیم می‌کنیم.\n$\\frac{۲\\sin ۲۰۵^\\circ - \\cos ۱۵۵^\\circ}{\\cos ۲۹۵^\\circ + \\sin ۱۱۵^\\circ} = \\frac{-۲\\sin ۲۵^\\circ + \\cos ۲۵^\\circ}{\\sin ۲۵^\\circ + \\cos ۲۵^\\circ}$\n$= \\frac{-۲\\tan ۲۵^\\circ + ۱}{\\tan ۲۵^\\circ + ۱} = \\frac{-۰/۹۲ + ۱}{۰/۴۶ + ۱} = \\frac{۰/۰۸}{۱/۴۶} = \\frac{۸}{۱۴۶} = \\frac{۴}{۷۳}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 803,
+      "solution_page": null,
+      "solution_text": "کسر را ساده کرده و صورت و مخرج کسر را بر $\\cos \\alpha$ تقسیم می‌کنیم.\n$\\frac{\\sin(۲۷۰^\\circ - \\alpha) + k\\cos(\\alpha + ۱۸۰^\\circ)}{۲\\cos(\\alpha + ۹۰^\\circ) - \\cos(\\alpha - ۱۸۰^\\circ)} = \\frac{-\\cos \\alpha - k\\cos \\alpha}{-۲\\sin \\alpha + \\cos \\alpha} = ۳$\n$\\xrightarrow{\\div \\cos \\alpha} \\frac{-۱ - k}{-۲\\tan \\alpha + ۱} = \\frac{-k - ۱}{-۴ + ۱} = \\frac{-k - ۱}{-۳} = ۳$\n$\\Rightarrow k + ۱ = ۹ \\Rightarrow k = ۸$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 804,
+      "solution_page": null,
+      "solution_text": "می‌دانیم:\n$1+\\tan^2\\theta=\\frac{1}{\\cos^2\\theta}$\nبنابراین:\n$1+\\tan^2\\theta=\\frac{1}{\\frac{1}{10}}=10\\Rightarrow \\tan^2\\theta=9$\n$\\xrightarrow{\\tan\\theta<0}\\tan\\theta=-3\\Rightarrow \\cot\\theta=-\\frac{1}{3}$\nدر نتیجه:\n$\\cot\\theta-\\tan\\theta=-\\frac{1}{3}+3=\\frac{8}{3}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 805,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$\\frac{3}{\\sin\\alpha}+\\frac{2}{\\cos\\alpha}=0\\Rightarrow \\frac{3}{\\sin\\alpha}=-\\frac{2}{\\cos\\alpha}$\n$\\Rightarrow \\frac{\\sin\\alpha}{\\cos\\alpha}=-\\frac{3}{2}\\Rightarrow \\tan\\alpha=-\\frac{3}{2}\\Rightarrow \\cot\\alpha=-\\frac{2}{3}$\nبنابراین:\n$6\\tan\\alpha-12\\cot\\alpha=-9+8=-1$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 806,
+      "solution_page": null,
+      "solution_text": "کسر داده‌شده را ساده می‌کنیم.\n$\\frac{1+\\sin\\theta}{1-\\sin\\theta}=2\\Rightarrow 1+\\sin\\theta=2-2\\sin\\theta\\Rightarrow \\sin\\theta=\\frac{1}{3}$\nخواهیم داشت:\n$1+\\cot^2\\theta=\\frac{1}{\\sin^2\\theta}=9\\Rightarrow \\cot^2\\theta=8$\n$\\xrightarrow{\\cot\\theta<0}\\cot\\theta=-2\\sqrt{2}$\nبنابراین:\n$\\cot(\\theta+\\frac{\\pi}{2})=-\\tan\\theta=-\\frac{1}{-2\\sqrt{2}}=\\frac{\\sqrt{2}}{4}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 807,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$3\\sin x+\\cos(x+\\frac{\\pi}{2})=\\frac{1}{2}\\Rightarrow 3\\sin x-\\sin x=\\frac{1}{2}$\n$\\Rightarrow \\sin x=\\frac{1}{4}$\nخواهیم داشت:\n$\\cos^2x=1-\\sin^2x=1-\\frac{1}{16}=\\frac{15}{16}\\xrightarrow{\\cos x<0}\\cos x=-\\frac{\\sqrt{15}}{4}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 808,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$\\cot(\\frac{\\pi}{2}-x)=3\\Rightarrow \\tan x=3\\Rightarrow \\cot x=\\frac{1}{3}$\nمی‌دانیم:\n$\\cos(x-\\frac{\\pi}{2})=\\sin x$\nخواهیم داشت:\n$\\frac{1}{\\sin^2x}=1+\\cot^2x=1+\\frac{1}{9}=\\frac{10}{9}\\Rightarrow \\sin^2x=\\frac{9}{10}$\n$\\xrightarrow{\\sin x>0}\\sin x=\\frac{3}{\\sqrt{10}}=\\frac{3\\sqrt{10}}{10}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 809,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$3\\cos(\\pi-x)-2\\sin(x+\\frac{\\pi}{2})=1$\n$\\Rightarrow -3\\cos x-2\\cos x=1\\Rightarrow \\cos x=-\\frac{1}{5}$\nمی‌دانیم:\n$\\sin^2x=1-\\cos^2x=1-\\frac{1}{25}=\\frac{24}{25}\\Rightarrow \\sin x=\\pm\\frac{2\\sqrt{6}}{5}$\nبنابراین:\n$2\\sin(\\pi+x)+\\cos(\\frac{\\pi}{2}-x)=-2\\sin x+\\sin x$\n$=-\\sin x=\\mp\\frac{2\\sqrt{6}}{5}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 810,
+      "solution_page": null,
+      "solution_text": "می‌دانیم:\n$1+\\tan^2\\alpha=\\frac{1}{\\cos^2\\alpha}$\n$\\Rightarrow \\frac{1}{\\cos^2\\alpha}=1+\\frac{25}{144}=\\frac{169}{144}\\Rightarrow \\cos^2\\alpha=\\frac{144}{169}$\n$\\xrightarrow{\\cos\\alpha<0}\\cos\\alpha=-\\frac{12}{13}$\nخواهیم داشت:\n$\\sin\\alpha=\\tan\\alpha\\cdot\\cos\\alpha=\\frac{5}{12}\\times(-\\frac{12}{13})=-\\frac{5}{13}$\n$\\sin(\\frac{7\\pi}{2}-\\alpha)\\cos(\\frac{11\\pi}{2}+\\alpha)=(-\\cos\\alpha)(\\sin\\alpha)$\n$=(\\frac{12}{13})(-\\frac{5}{13})=-\\frac{60}{169}$\n* برای محاسبۀ $\\sin\\alpha$ و $\\cos\\alpha$ می‌توانستیم از فیثاغورسی‌بودن اعداد ۵، ۱۲ و ۱۳ استفاده کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 811,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$\\frac{2\\tan\\alpha+\\tan(\\dfrac{3\\pi}{2}-\\alpha)}{\\cot(\\dfrac{\\pi}{2}-\\alpha)-2\\cot(\\pi-\\alpha)}=\\frac{3}{2}\\Rightarrow \\frac{2\\tan\\alpha+\\cot\\alpha}{\\tan\\alpha+2\\cot\\alpha}=\\frac{3}{2}$\n$\\Rightarrow 4\\tan\\alpha+2\\cot\\alpha=3\\tan\\alpha+6\\cot\\alpha\\Rightarrow \\tan\\alpha=4\\cot\\alpha$\n$\\Rightarrow \\frac{1}{\\cot\\alpha}=4\\cot\\alpha\\Rightarrow \\cot^2\\alpha=\\frac{1}{4}$\nخواهیم داشت:\n$\\frac{1}{\\sin^2\\alpha}=1+\\cot^2\\alpha=1+\\frac{1}{4}=\\frac{5}{4}\\Rightarrow \\sin^2\\alpha=\\frac{4}{5}$\n$\\Rightarrow \\sin\\alpha=\\pm\\frac{2}{\\sqrt{5}}=\\pm\\frac{2\\sqrt{5}}{5}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 812,
+      "solution_page": null,
+      "solution_text": "روش اول: می‌دانیم $\\tan 60^\\circ=\\sqrt{3}$ و $\\cot 60^\\circ=\\frac{\\sqrt{3}}{3}$ است.\n$\\frac{1}{1+\\tan 60^\\circ}+\\frac{1}{1+\\cot 60^\\circ}=\\frac{1}{1+\\sqrt{3}}+\\frac{1}{1+\\frac{\\sqrt{3}}{3}}$\n$=\\frac{1+\\frac{\\sqrt{3}}{3}+1+\\sqrt{3}}{(1+\\sqrt{3})(1+\\frac{\\sqrt{3}}{3})}=\\frac{2+\\frac{4}{3}\\sqrt{3}}{2+\\frac{4}{3}\\sqrt{3}}=1$\nروش دوم:\n$\\frac{1}{1+\\tan\\alpha}+\\frac{1}{1+\\cot\\alpha}=\\frac{1}{1+\\tan\\alpha}+\\frac{1}{1+\\frac{1}{\\tan\\alpha}}$\n$=\\frac{1}{1+\\tan\\alpha}+\\frac{\\tan\\alpha}{\\tan\\alpha+1}=\\frac{1+\\tan\\alpha}{1+\\tan\\alpha}=1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 813,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\tan\\alpha\\cdot\\cot\\alpha=1$ است، بنابراین:\n$(\\frac{1}{3k-1})(4k+2)=1\\Rightarrow 4k+2=3k-1\\Rightarrow k=-3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 814,
+      "solution_page": null,
+      "solution_text": "عبارت داده‌شده را ساده می‌کنیم.\n$\\cot^2x(\\cos x-\\frac{1}{\\cos x})\\sqrt{1+\\tan^2x}$\n$=\\frac{\\cos^2x}{\\sin^2x}(\\frac{\\cos^2x-1}{\\cos x})\\times\\sqrt{\\frac{1}{\\cos^2x}}$\n$=\\frac{\\cos x}{\\sin^2x}(-\\sin^2x)\\times\\frac{1}{|\\cos x|}=\\frac{-\\cos x}{|\\cos x|}=\\frac{-\\cos x}{-\\cos x}=1$\n$(\\pi<x<\\frac{3\\pi}{2} \\text{ است، بنابراین } \\cos x<0 \\text{ .})$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 815,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\sin \\frac{\\pi}{۴} = \\frac{\\sqrt{۲}}{۲}$ و چون $\\frac{۳\\pi}{۲} < x < ۲\\pi$ بنابراین $-۱ < \\sin x < ۰$ است.\n$\\frac{۲ \\sin^۲ \\frac{\\pi}{۴} - \\cos^۲ x}{\\sqrt{۱ + \\cot^۲ x}} = \\frac{۲(\\frac{\\sqrt{۲}}{۲})^۲ - \\cos^۲ x}{\\sqrt{\\frac{۱}{\\sin^۲ x}}} = \\frac{۱ - \\cos^۲ x}{\\frac{۱}{|\\sin x|}}$\n$= \\frac{\\sin^۲ x}{\\frac{۱}{-\\sin x}} = -\\sin^۳ x$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            515,
+            66,
+            219,
+            442
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 815"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 816,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$\\frac{\\sin \\theta + ۲\\cos \\theta}{\\sin \\theta - \\cos \\theta} = ۲ \\Rightarrow \\sin \\theta + ۲\\cos \\theta = ۲\\sin \\theta - ۲\\cos \\theta$\n$\\Rightarrow \\sin \\theta = ۴\\cos \\theta \\Rightarrow \\tan \\theta = ۴$\nدر نتیجه:\n$\\cot(\\frac{۳\\pi}{۲} + \\theta) = -\\tan \\theta = -۴$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            515,
+            216,
+            888,
+            303
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 816"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 817,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$۷\\sin^۲ x + ۳\\cos^۲ x = ۵ \\Rightarrow ۷(۱ - \\cos^۲ x) + ۳\\cos^۲ x = ۵$\n$\\Rightarrow ۴\\cos^۲ x = ۲ \\Rightarrow \\cos^۲ x = \\frac{۱}{۲}$\nخواهیم داشت:\n$۱ + \\tan^۲ x = \\frac{۱}{\\cos^۲ x} = \\frac{۱}{\\frac{۱}{۲}} = ۲ \\Rightarrow \\tan^۲ x = ۱$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            515,
+            298,
+            888,
+            411
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 817"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 818,
+      "solution_page": null,
+      "solution_text": "$\\alpha - \\frac{\\pi}{۳}$ را $A$ و $\\beta + \\frac{\\pi}{۴}$ را $B$ می‌نامیم.\n$\\sin^۲ A + \\sin^۲ B = ۱ \\Rightarrow \\sin^۲ A = ۱ - \\sin^۲ B$\n$\\Rightarrow \\sin^۲ A = \\cos^۲ B$\nبدیهی است که اگر $A + B = k\\pi + \\frac{\\pi}{۲}$ باشد، رابطهٔ فوق صحیح است. بنابراین:\n$A + B = k\\pi + \\frac{\\pi}{۲} \\Rightarrow \\alpha - \\frac{\\pi}{۳} + \\beta + \\frac{\\pi}{۴} = k\\pi + \\frac{\\pi}{۲}$\n$\\Rightarrow \\alpha + \\beta = k\\pi + \\frac{۷\\pi}{۱۲} \\ (k \\in \\mathbb{Z})$\nاگر $k = ۰$ باشد، $\\alpha + \\beta = \\frac{۷\\pi}{۱۲}$ خواهد شد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            515,
+            408,
+            888,
+            582
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 818"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 819,
+      "solution_page": null,
+      "solution_text": "کسر داده‌شده را ساده می‌کنیم.\n$\\frac{\\sin \\alpha + \\cos \\alpha}{\\cos^۳ \\alpha} = \\frac{\\frac{\\sin \\alpha + \\cos \\alpha}{\\cos \\alpha}}{\\cos^۲ \\alpha} = \\frac{\\tan \\alpha + ۱}{\\frac{۱}{۱ + \\tan^۲ \\alpha}} = \\frac{۳ + ۱}{\\frac{۱}{۱ + ۹}} = ۴۰$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            515,
+            577,
+            888,
+            654
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 819"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 820,
+      "solution_page": null,
+      "solution_text": "دو طرف تساوی را به توان ۲ می‌رسانیم.\n$\\frac{۱}{\\cos x} = \\frac{۲}{۱ - \\sin x} \\Rightarrow \\frac{۱}{\\cos^۲ x} = \\frac{۴}{(۱ - \\sin x)^۲}$\n$\\Rightarrow \\frac{۱}{۱ - \\sin^۲ x} = \\frac{۴}{(۱ - \\sin x)^۲} \\Rightarrow \\frac{۱}{۱ + \\sin x} = \\frac{۴}{۱ - \\sin x}$\n$\\Rightarrow ۱ - \\sin x = ۴(۱ + \\sin x) \\Rightarrow \\sin x = -\\frac{۳}{۵}$\nبا توجه به این‌که $۱ - \\sin x$ نامنفی و $\\frac{۱}{\\cos x} = \\frac{۲}{۱ - \\sin x}$ است، نتیجه می‌گیریم $\\cos x > ۰$ می‌باشد.\n$\\cos^۲ x = ۱ - \\sin^۲ x = ۱ - \\frac{۹}{۲۵} = \\frac{۱۶}{۲۵} \\Rightarrow \\cos x = \\frac{۴}{۵}$\nبنابراین:\n$\\tan x = \\frac{\\sin x}{\\cos x} = \\frac{-\\frac{۳}{۵}}{\\frac{۴}{۵}} = -\\frac{۳}{۴}$\nبرای محاسبهٔ $\\tan x$ می‌توانستیم از اعداد فیثاغورسی $۳$، $۴$ و $۵$ استفاده کنیم.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            515,
+            649,
+            888,
+            891
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 820"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 821,
+      "solution_page": null,
+      "solution_text": "می‌دانیم:\n$۱ + \\tan^۲ \\theta = \\frac{۱}{\\cos^۲ \\theta}$\nبنابراین:\n$\\frac{۱}{\\cos^۲ \\theta} = ۱ + ۲^۲ = ۵ \\Rightarrow \\cos^۲ \\theta = \\frac{۱}{۵} \\Rightarrow \\sin^۲ \\theta = ۱ - \\frac{۱}{۵} = \\frac{۴}{۵}$\nخواهیم داشت:\n$\\sin^۴ \\theta + \\cos^۴ \\theta = (\\frac{۴}{۵})^۲ + (\\frac{۱}{۵})^۲ = \\frac{۱۷}{۲۵}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            101,
+            74,
+            471,
+            180
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 821"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 822,
+      "solution_page": null,
+      "solution_text": "ابتدا تساوی داده‌شده را ساده می‌کنیم.\n$\\frac{\\sin \\theta - \\cos \\theta}{\\cos \\theta} = ۲ \\Rightarrow \\sin \\theta - \\cos \\theta = ۲\\cos \\theta$\n$\\Rightarrow \\sin \\theta = ۳\\cos \\theta \\Rightarrow \\tan \\theta = ۳$\nبنابراین:\n$\\frac{۱}{\\cos^۲ \\theta} = ۱ + \\tan^۲ \\theta = ۱ + ۹ = ۱۰ \\Rightarrow \\cos^۲ \\theta = \\frac{۱}{۱۰}$\nدر نتیجه:\n$\\sin^۴ \\theta - \\cos^۴ \\theta = (\\sin^۲ \\theta - \\cos^۲ \\theta)(\\underbrace{\\sin^۲ \\theta + \\cos^۲ \\theta}_{۱})$\n$= \\sin^۲ \\theta - \\cos^۲ \\theta = ۱ - ۲\\cos^۲ \\theta = ۱ - \\frac{۱}{۵} = \\frac{۴}{۵}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            101,
+            175,
+            471,
+            335
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 822"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 823,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\sin x \\cos x = \\frac{۱}{۲}$ است. خواهیم داشت:\n$\\sin^۶ x + \\cos^۶ x = ۱ - ۳\\sin^۲ x \\cos^۲ x = ۱ - ۳(\\frac{۱}{۲})^۲ = ۱ - \\frac{۳}{۴} = \\frac{۱}{۴}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            101,
+            331,
+            471,
+            388
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 823"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 824,
+      "solution_page": null,
+      "solution_text": "دو طرف تساوی را به توان ۲ می‌رسانیم.\n$\\sin \\theta - \\cos \\theta = \\frac{۱}{۳} \\Rightarrow (\\sin \\theta - \\cos \\theta)^۲ = \\frac{۱}{۹}$\n$\\Rightarrow ۱ - ۲\\sin \\theta \\cos \\theta = \\frac{۱}{۹} \\Rightarrow \\sin \\theta \\cos \\theta = \\frac{۴}{۹}$\nخواهیم داشت:\n$\\sqrt{\\sin^۴ \\theta + \\cos^۴ \\theta} = \\sqrt{۱ - ۲\\sin^۲ \\theta \\cos^۲ \\theta} = \\sqrt{۱ - ۲(\\frac{۴}{۹})^۲}$\n$= \\sqrt{۱ - \\frac{۳۲}{۸۱}} = \\sqrt{\\frac{۴۹}{۸۱}} = \\frac{۷}{۹}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            101,
+            383,
+            471,
+            529
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 824"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 825,
+      "solution_page": null,
+      "solution_text": "ابتدا $\\sin \\theta \\cos \\theta$ را محاسبه می‌کنیم.\n$\\sin \\theta + \\cos \\theta = \\frac{۱}{۴} \\Rightarrow (\\sin \\theta + \\cos \\theta)^۲ = \\frac{۱}{۱۶}$\n$\\Rightarrow ۱ + ۲\\sin \\theta \\cos \\theta = \\frac{۱}{۱۶} \\Rightarrow \\sin \\theta \\cos \\theta = -\\frac{۱۵}{۳۲}$\nخواهیم داشت:\n$\\sin^۳ \\theta + \\cos^۳ \\theta = (\\sin \\theta + \\cos \\theta)^۳ - ۳\\sin \\theta \\cos \\theta(\\sin \\theta + \\cos \\theta)$\n$= (\\frac{۱}{۴})^۳ - ۳(-\\frac{۱۵}{۳۲})(\\frac{۱}{۴}) = \\frac{۱}{۶۴} + \\frac{۴۵}{۱۲۸} = \\frac{۴۷}{۱۲۸}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            101,
+            525,
+            471,
+            688
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 825"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 826,
+      "solution_page": null,
+      "solution_text": "می‌دانیم:\n$\\tan x + \\cot x = \\frac{۱}{\\sin x \\cos x}$\nبنابراین:\n$\\tan^۲ x + \\cot^۲ x = (\\tan x + \\cot x)^۲ - ۲$\n$= (\\frac{۱}{\\sin x \\cos x})^۲ - ۲ = ۴^۲ - ۲ = ۱۴$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            101,
+            685,
+            471,
+            770
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 826"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 827,
+      "solution_page": null,
+      "solution_text": "ابتدا $\\sin \\alpha \\cos \\alpha$ را محاسبه می‌کنیم.\n$\\tan \\alpha + \\cot \\alpha = \\frac{۲۵}{۸} \\Rightarrow \\frac{۱}{\\sin \\alpha \\cos \\alpha} = \\frac{۲۵}{۸} \\Rightarrow \\sin \\alpha \\cos \\alpha = \\frac{۸}{۲۵}$\nاگر $|\\sin \\alpha - \\cos \\alpha| = A$ باشد، خواهیم داشت:\n$A^۲ = ۱ - ۲\\sin \\alpha \\cos \\alpha = ۱ - \\frac{۱۶}{۲۵} = \\frac{۹}{۲۵} \\Rightarrow A = \\frac{۳}{۵}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0078.jpg",
+          "region": [
+            101,
+            765,
+            471,
+            888
+          ],
+          "placement": "solution",
+          "alt": "حل سوال 827"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 828,
+      "solution_page": null,
+      "solution_text": "عبارت سمت راست تساوی را ساده می‌کنیم:\n$\\frac{1}{\\cos^2 x} - \\frac{1}{\\cos^4 x} = \\frac{\\cos^2 x - 1}{\\cos^4 x} = \\frac{-\\sin^2 x}{\\cos^2 x} \\times \\frac{1}{\\cos^2 x} \\\\ = -\\tan^2 x (1 + \\tan^2 x) = -\\tan^2 x - \\tan^4 x \\\\ = a\\tan^2 x + b\\tan^4 x \\Rightarrow a = b = -1 \\Rightarrow a+b = -2$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            81,
+            461,
+            168,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q828"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 829,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$\\cos(\\pi + \\theta) + \\cos(\\frac{\\pi}{2} + \\theta) = -\\cos\\theta - \\sin\\theta = \\frac{1}{3} \\\\ \\Rightarrow (\\sin\\theta + \\cos\\theta)^2 = \\frac{1}{9} \\Rightarrow 1 + \\sin 2\\theta = \\frac{1}{9} \\\\ \\Rightarrow \\sin 2\\theta = -\\frac{8}{9}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            173,
+            461,
+            266,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q829"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 830,
+      "solution_page": null,
+      "solution_text": "رابطهٔ $\\cos 2\\alpha = 1 - 2\\sin^2 \\alpha$ برقرار است. بنابراین:\n$\\cos 2\\alpha = 1 - 2(-\\frac{\\sqrt{7}}{3})^2 = 1 - \\frac{14}{9} = -\\frac{5}{9}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            271,
+            461,
+            318,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q830"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 831,
+      "solution_page": null,
+      "solution_text": "ابتدا $\\sin\\alpha$ را محاسبه می‌کنیم.\n$\\sin^2 \\alpha = 1 - \\cos^2 \\alpha = 1 - \\frac{8}{9} = \\frac{1}{9} \\xrightarrow{\\sin\\alpha < 0} \\sin\\alpha = -\\frac{1}{3}$\nبنابراین:\n$\\sin 2\\alpha = 2\\sin\\alpha\\cos\\alpha = 2(-\\frac{1}{3})(-\\frac{2\\sqrt{2}}{3}) = \\frac{4\\sqrt{2}}{9}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            323,
+            461,
+            405,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q831"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 832,
+      "solution_page": null,
+      "solution_text": "روش اول: مقدار $\\cos^2 \\alpha$ را محاسبه می‌کنیم.\n$\\frac{1}{\\cos^2 \\alpha} = 1 + \\tan^2 \\alpha = 1 + \\frac{1}{4} = \\frac{5}{4} \\Rightarrow \\cos^2 \\alpha = \\frac{4}{5}$\nبنابراین:\n$\\cos 2\\alpha = 2\\cos^2 \\alpha - 1 = \\frac{8}{5} - 1 = \\frac{3}{5}$\nروش دوم: اتحادهای زیر برقرارند:\n$\\sin 2\\alpha = \\frac{2\\tan\\alpha}{1+\\tan^2\\alpha} \\text{ , } \\cos 2\\alpha = \\frac{1-\\tan^2\\alpha}{1+\\tan^2\\alpha}$\nدر نتیجه:\n$\\cos 2\\alpha = \\frac{1-\\frac{1}{4}}{1+\\frac{1}{4}} = \\frac{\\frac{3}{4}}{\\frac{5}{4}} = \\frac{3}{5}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            410,
+            461,
+            584,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q832"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 833,
+      "solution_page": null,
+      "solution_text": "دو طرف تساوی را به توان $2$ می‌رسانیم.\n$\\sin\\theta + \\cos\\theta = \\frac{3}{\\sqrt{10}} \\Rightarrow (\\sin\\theta + \\cos\\theta)^2 = \\frac{9}{10} \\\\ \\Rightarrow 1 + \\sin 2\\theta = \\frac{9}{10} \\Rightarrow \\sin 2\\theta = -\\frac{1}{10}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            589,
+            461,
+            687,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q833"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 834,
+      "solution_page": null,
+      "solution_text": "اگر $A = \\sin\\theta + \\cos\\theta$ باشد، خواهیم داشت:\n$A^2 = 1 + \\sin 2\\theta = 1 + 0/69 = 1/69 \\xrightarrow{A > 0} A = 1/3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            692,
+            461,
+            746,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q834"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 835,
+      "solution_page": null,
+      "solution_text": "ابتدا عبارت $P$ را ساده می‌کنیم.\n$P = \\frac{\\cos^2 \\alpha}{1+\\sin\\alpha} - \\frac{\\sin^2 \\alpha}{1-\\cos\\alpha} = \\frac{1-\\sin^2\\alpha}{1+\\sin\\alpha} - \\frac{1-\\cos^2\\alpha}{1-\\cos\\alpha} \\\\ = (1-\\sin\\alpha) - (1+\\cos\\alpha) = -\\sin\\alpha - \\cos\\alpha$\nبنابراین:\n$P^2 - 1 = (-\\sin\\alpha - \\cos\\alpha)^2 - 1 = 1 + \\sin 2\\alpha - 1 = \\sin 2\\alpha$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            751,
+            461,
+            835,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q835"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 836,
+      "solution_page": null,
+      "solution_text": "ابتدا مقدار $\\tan\\alpha$ را محاسبه می‌کنیم.\n$\\frac{3-\\tan\\alpha}{4+2\\tan\\alpha} = \\frac{1}{3} \\Rightarrow 9 - 3\\tan\\alpha = 4 + 2\\tan\\alpha \\\\ \\Rightarrow \\tan\\alpha = 1$\nروش اول: مقدار $\\cos^2 \\alpha$ را به دست می‌آوریم.\n$\\frac{1}{\\cos^2 \\alpha} = 1 + \\tan^2 \\alpha = 2 \\Rightarrow \\cos^2 \\alpha = \\frac{1}{2}$\nبنابراین:\n$\\sin^2 \\alpha - \\cos 2\\alpha = (1 - \\cos^2 \\alpha) - (2\\cos^2 \\alpha - 1) \\\\ = 2 - 3\\cos^2 \\alpha = 2 - \\frac{3}{2} = \\frac{1}{2}$\nروش دوم:\n$\\tan\\alpha = 1 \\Rightarrow \\alpha = \\frac{\\pi}{4}$\n$\\Rightarrow \\sin^2 \\alpha - \\cos 2\\alpha = \\sin^2 \\frac{\\pi}{4} - \\cos\\frac{\\pi}{2} = \\frac{1}{2} - 0 = \\frac{1}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            72,
+            45,
+            891,
+            831
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q836"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 837,
+      "solution_page": null,
+      "solution_text": "ابتدا $\\cos 2\\theta$ را به دست می‌آوریم.\n$\\cos 2\\theta = 1 - 2\\sin^2 \\theta = 1 - 2(\\frac{1}{16}) = \\frac{7}{8}$\nبنابراین:\n$\\cos 4\\theta = 2\\cos^2 2\\theta - 1 = 2(\\frac{7}{8})^2 - 1 = -\\frac{31}{32}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            204,
+            45,
+            298,
+            415
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q837"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 838,
+      "solution_page": null,
+      "solution_text": "از نامساوی $\\sin^2\\theta < \\sin\\theta$ نتیجه می‌شود $0 < \\sin\\theta < 1$ است. از طرفی $\\sin 2\\theta < 0 \\Rightarrow 2\\sin\\theta\\cos\\theta < 0 \\xrightarrow{\\sin\\theta > 0} \\cos\\theta < 0$\n$\\sin\\theta > 0$ و $\\cos\\theta < 0$ است بنابراین انتهای کمان $\\theta$ در ناحیهٔ دوم است.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            303,
+            45,
+            362,
+            415
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q838"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 839,
+      "solution_page": null,
+      "solution_text": "ابتدا مختصات $P$ را به دست می‌آوریم.\n$x^2 + (x + \\frac{1}{5})^2 = 1 \\Rightarrow 2x^2 + \\frac{2}{5}x - \\frac{24}{25} = 0 \\\\ \\Rightarrow x^2 + \\frac{x}{5} - \\frac{12}{25} = 0 \\Rightarrow x = \\frac{-\\frac{1}{5} \\pm \\sqrt{\\frac{1}{25} + \\frac{48}{25}}}{2} \\\\ \\Rightarrow x = \\frac{-\\frac{1}{5} \\pm \\frac{7}{5}}{2} \\Rightarrow \\begin{cases} x = \\frac{3}{5} \\quad \\text{غ ق ق} \\\\ x = -\\frac{4}{5} \\checkmark \\end{cases} \\quad \\text{($P$ در ناحیهٔ سوم است.)} \\\\ \\Rightarrow P(-\\frac{4}{5}, -\\frac{3}{5}) \\xrightarrow{\\theta \\text{ زاویهٔ حاده است}} \\sin\\theta = \\frac{3}{5} \\text{ , } \\cos\\theta = \\frac{4}{5}$\nبنابراین:\n$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta = 2(\\frac{3}{5})(\\frac{4}{5}) = \\frac{24}{25}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            367,
+            45,
+            574,
+            415
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q839"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 840,
+      "solution_page": null,
+      "solution_text": "$\\sin\\alpha = 0/8$ و انتهای کمان $\\alpha$ در ناحیهٔ دوم است. بنابراین $\\cos\\alpha = -0/6$ می‌باشد.\n$\\frac{1 - \\cos(\\pi + 2\\alpha)}{1 + \\cos(\\frac{\\pi}{2} - 2\\alpha)} = \\frac{1 + \\cos 2\\alpha}{1 + \\sin 2\\alpha} = \\frac{2\\cos^2 \\alpha}{1 + 2\\sin\\alpha\\cos\\alpha} \\\\ = \\frac{2 \\times 0/36}{1 + 2(-0/6)(0/8)} = \\frac{0/72}{0/04} = 18$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            579,
+            45,
+            684,
+            415
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q840"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 841,
+      "solution_page": null,
+      "solution_text": "اگر $\\alpha - \\beta = \\frac{\\pi}{6}$ باشد، $\\alpha - \\frac{\\pi}{3} = \\beta - \\frac{\\pi}{6}$ است.\n$\\sin(2\\alpha + \\frac{\\pi}{6}) = \\sin(2\\alpha - \\frac{\\pi}{3} + \\frac{\\pi}{2}) = \\sin(2\\beta + \\frac{\\pi}{2}) \\\\ = \\cos 2\\beta = 1 - 2\\sin^2 \\beta = 1 - 2(\\frac{1}{\\sqrt{5}})^2 = \\frac{3}{5}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            689,
+            45,
+            773,
+            415
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q841"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 842,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$4\\cos^4 x - \\sin^2 x = \\frac{1}{4} \\Rightarrow 4\\cos^4 x - (1 - \\cos^2 x) = \\frac{1}{4} \\\\ \\Rightarrow \\cos^2 x = \\frac{1}{4}$\nبنابراین:\n$\\cos 2x = 2\\cos^2 x - 1 = \\frac{1}{2} - 1 = -\\frac{1}{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            778,
+            45,
+            880,
+            415
+          ],
+          "placement": "solution",
+          "alt": "Solution for Q842"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 843,
+      "solution_page": null,
+      "solution_text": "اگر $x - \\frac{\\pi}{5} = \\alpha$ باشد، آن‌گاه $x + \\frac{3\\pi}{10} = \\alpha + \\frac{\\pi}{2}$ است.\n$2\\cos(x - \\frac{\\pi}{5}) + \\sin(x + \\frac{3\\pi}{10}) = 1$\n$\\Rightarrow 2\\cos\\alpha + \\sin(\\alpha + \\frac{\\pi}{2}) = 1 \\Rightarrow 2\\cos\\alpha + \\cos\\alpha = 1$\n$\\Rightarrow 3\\cos\\alpha = 1 \\Rightarrow \\cos\\alpha = \\frac{1}{3}$\nدر نتیجه:\n$\\cos(\\frac{2\\pi}{5} - 2x) = \\cos(2x - \\frac{2\\pi}{5}) = \\cos 2\\alpha = 2\\cos^2\\alpha - 1 = \\frac{2}{9} - 1 = -\\frac{7}{9}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 844,
+      "solution_page": null,
+      "solution_text": "دو طرف تساوی را به توان ۲ می‌رسانیم.\n$(\\sqrt{2}\\sin x - 2\\cos x)^2 = 3$\n$\\Rightarrow 2\\sin^2 x + 4\\cos^2 x - 4\\sqrt{2}\\sin x \\cos x = 3$\n$\\Rightarrow 2\\cos^2 x - 4\\sqrt{2}\\sin x \\cos x = 1$\n$\\Rightarrow 2\\cos^2 x - 1 = 4\\sqrt{2}\\sin x \\cos x$\n$\\Rightarrow \\cos 2x = 2\\sqrt{2}\\sin 2x \\Rightarrow \\tan 2x = \\frac{1}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{4}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 845,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\sin 15^\\circ = \\cos 75^\\circ$ است.\n$\\sin^2 \\alpha = \\frac{1 - \\cos 2\\alpha}{2}$\n$\\Rightarrow \\sin^2 15^\\circ = \\frac{1 - \\cos 30^\\circ}{2} = \\frac{1 - \\frac{\\sqrt{3}}{2}}{2} = \\frac{2 - \\sqrt{3}}{4}$\n$\\Rightarrow \\sin 15^\\circ = \\sqrt{\\frac{2 - \\sqrt{3}}{4}} = \\frac{\\sqrt{2 - \\sqrt{3}}}{2} = \\frac{\\sqrt{4 - 2\\sqrt{3}}}{2\\sqrt{2}}$\n$= \\frac{\\sqrt{(\\sqrt{3} - 1)^2}}{2\\sqrt{2}} = \\frac{\\sqrt{3} - 1}{2\\sqrt{2}} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$\nبنابراین:\n$\\cos 75^\\circ = \\frac{\\sqrt{a} - \\sqrt{b}}{4} = \\frac{\\sqrt{6} - \\sqrt{2}}{4} \\Rightarrow a=6, b=2$\n$\\Rightarrow a - b = 4$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 846,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\sin^2 \\alpha = \\frac{1 - \\cos 2\\alpha}{2}$، بنابراین:\n$\\sin^2 \\frac{3\\pi}{8} = \\frac{1 - \\cos \\frac{3\\pi}{4}}{2} = \\frac{1 + \\frac{\\sqrt{2}}{2}}{2} = \\frac{2 + \\sqrt{2}}{4}$\n$\\Rightarrow \\sin \\frac{3\\pi}{8} = \\frac{\\sqrt{2 + \\sqrt{2}}}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 847,
+      "solution_page": null,
+      "solution_text": "عبارت A را ساده می‌کنیم.\n$A = \\sin^3 \\theta \\cos \\theta - \\cos^3 \\theta \\sin \\theta$\n$= \\sin \\theta \\cos \\theta (\\sin^2 \\theta - \\cos^2 \\theta) = \\frac{1}{2}\\sin 2\\theta (-\\cos 2\\theta)$\n$= -\\frac{1}{4} \\sin 4\\theta = -\\frac{1}{4} \\sin 45^\\circ = -\\frac{\\sqrt{2}}{8}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 848,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$1 + \\cos 2\\alpha = 2\\cos^2 \\alpha \\quad\\quad \\sin 2\\alpha = 2\\sin \\alpha \\cos \\alpha$\n$\\frac{1 + \\cos \\theta}{\\sin \\theta} = 3 \\Rightarrow \\frac{2\\cos^2 \\frac{\\theta}{2}}{2\\sin \\frac{\\theta}{2} \\cos \\frac{\\theta}{2}} = 3 \\Rightarrow \\cot \\frac{\\theta}{2} = 3$\nبنابراین:\n$\\tan(\\frac{\\theta}{2} - \\frac{\\pi}{2}) = -\\cot \\frac{\\theta}{2} = -3$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 849,
+      "solution_page": null,
+      "solution_text": "تساوی داده‌شده را ساده می‌کنیم.\n$1 + \\cos \\theta = \\cos \\frac{\\theta}{2} \\Rightarrow 2\\cos^2 \\frac{\\theta}{2} = \\cos \\frac{\\theta}{2}$\n$\\xrightarrow{\\text{زاویه حاده است.} \\frac{\\theta}{2}} \\cos \\frac{\\theta}{2} = \\frac{1}{2}$\nروش اول:\n$\\cos \\theta = 2\\cos^2 \\frac{\\theta}{2} - 1 = 2(\\frac{1}{2})^2 - 1 = -\\frac{1}{2}$\nبنابراین:\n$\\cos 2\\theta = 2\\cos^2 \\theta - 1 = 2(-\\frac{1}{2})^2 - 1 = -\\frac{1}{2}$\n$\\Rightarrow$ انتهای کمان $2\\theta$ در ناحیهٔ سوم است.\n$1 + \\tan^2 2\\theta = \\frac{1}{\\cos^2 2\\theta} = 4 \\Rightarrow \\tan^2 2\\theta = 3$\n$\\Rightarrow \\tan 2\\theta = \\sqrt{3}$ (ناحیهٔ سوم)\nروش دوم: $\\frac{\\theta}{2}$ زاویهٔ حاده و $\\cos \\frac{\\theta}{2} = \\frac{1}{2}$ است. در نتیجه $\\frac{\\theta}{2} = \\frac{\\pi}{3}$ است.\n$\\Rightarrow 2\\theta = \\frac{4\\pi}{3} \\Rightarrow \\tan 2\\theta = \\sqrt{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 850,
+      "solution_page": null,
+      "solution_text": "می‌دانیم:\n$\\tan x - \\cot x = -2\\cot 2x$\nبنابراین:\n$\\tan x - \\cot x = -\\frac{2}{\\tan 2x} = -\\frac{2}{\\frac{1}{3}} = -6$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 851,
+      "solution_page": null,
+      "solution_text": "می‌دانیم $\\frac{\\pi}{12} + \\frac{5\\pi}{12} = \\frac{\\pi}{2}$ است. بنابراین:\n$\\sin \\frac{5\\pi}{12} = \\cos \\frac{\\pi}{12}$\nخواهیم داشت:\n$\\sin^4 \\frac{\\pi}{12} + \\sin^4 \\frac{5\\pi}{12} = \\sin^4 \\frac{\\pi}{12} + \\cos^4 \\frac{\\pi}{12}$\n$1 - 2\\sin^2 \\frac{\\pi}{12} \\cos^2 \\frac{\\pi}{12} = 1 - \\frac{1}{2}\\sin^2 \\frac{\\pi}{6} = 1 - \\frac{1}{2}(\\frac{1}{4}) = 1 - \\frac{1}{8} = \\frac{7}{8}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 852,
+      "solution_page": null,
+      "solution_text": "می‌دانیم:\n$\\sin^6 x + \\cos^6 x = 1 - 3\\sin^2 x \\cos^2 x = 1 - \\frac{3}{4}\\sin^2 2x$\nبنابراین:\n$f(\\frac{\\pi}{8}) = 1 - \\frac{3}{4}\\sin^2 \\frac{\\pi}{4} = 1 - \\frac{3}{4}(\\frac{\\sqrt{2}}{2})^2 = 1 - \\frac{3}{8} = \\frac{5}{8}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 853,
+      "solution_page": null,
+      "solution_text": "با توجه به شکل واضح است $\\alpha + 2\\beta = \\frac{\\pi}{2}$ بنابراین $2\\alpha = \\pi - 4\\beta$\nاگر ضلع مربع را x بنامیم، خواهیم داشت:\n$AN^2 = x^2 + (\\frac{x}{2})^2 = \\frac{5}{4}x^2 \\Rightarrow AN = \\frac{\\sqrt{5}}{2}x$\n$\\Rightarrow \\begin{cases} \\sin \\beta = \\frac{\\frac{x}{2}}{\\frac{\\sqrt{5}}{2}x} = \\frac{\\sqrt{5}}{5} \\\\ \\cos \\beta = \\frac{x}{\\frac{\\sqrt{5}}{2}x} = \\frac{2\\sqrt{5}}{5} \\end{cases}$\nدر نتیجه:\n$\\sin 2\\beta = 2\\sin \\beta \\cos \\beta = \\frac{4}{5}$\n$\\xrightarrow{2\\beta < \\frac{\\pi}{2}} \\cos 2\\beta = \\sqrt{1 - \\sin^2 2\\beta} = \\sqrt{1 - \\frac{16}{25}} = \\frac{3}{5}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0080.jpg",
+          "region": [
+            126,
+            617,
+            219,
+            706
+          ],
+          "placement": "solution",
+          "alt": "مربع M N A B"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "generated_at": "2026-06-26T13:51:42.409Z",
+  "progress": {
+    "math_questions": {
+      "count": 1875,
+      "target": 2042,
+      "pct": 91.8
+    },
+    "math_solutions": {
+      "count": 1927,
+      "target": 2042,
+      "pct": 94.4
+    },
+    "physics_questions": {
+      "count": 1636,
+      "target": 1630,
+      "pct": 100.4
+    },
+    "physics_solutions": {
+      "count": 1646,
+      "target": 1630,
+      "pct": 101
+    },
+    "math_answer_key": {
+      "count": 2049,
+      "target": 2042,
+      "pct": 100.3
+    },
+    "physics_answer_key": {
+      "count": 1917,
+      "target": 1630,
+      "pct": 117.6
+    },
+    "total_transcripts": {
+      "count": 3511,
+      "target": 3672,
+      "pct": 95.6
+    },
+    "total_solutions": {
+      "count": 3573,
+      "target": 3672,
+      "pct": 97.3
+    },
+    "total_answer_keys": {
+      "count": 3966,
+      "target": 3672,
+      "pct": 108
+    }
+  },
+  "conflicts": {
+    "total": 440,
+    "by_issue": {
+      "duplicate_solution": 2,
+      "solution_key_mismatch": 144,
+      "missing_solution": 146,
+      "duplicate_question_number": 64,
+      "missing_solution+missing_key": 64,
+      "question_total": 2,
+      "missing_key": 17,
+      "invalid_options": 1
+    }
+  },
+  "largest_clusters": {
+    "duplicate_question_number|math/derivative_applications": 64,
+    "missing_solution|math/statistics": 64,
+    "missing_key|math/statistics": 64,
+    "solution_key_mismatch|math/combinatorics": 61,
+    "missing_solution|math/absolute_value_floor": 43,
+    "missing_solution|math/limits_continuity": 30,
+    "missing_solution|math/visual_thinking_conics": 23,
+    "solution_key_mismatch|math/probability": 18,
+    "missing_solution|math/combinatorics": 15,
+    "missing_solution|math/geometry": 13,
+    "solution_key_mismatch|physics/one_dimensional_motion": 13,
+    "missing_key|physics/physical_properties_matter": 11,
+    "missing_solution|math/quadratic_equations_functions": 10,
+    "missing_solution|math/rational_inequalities_sign": 9,
+    "solution_key_mismatch|physics/oscillation_waves": 8,
+    "solution_key_mismatch|math/trigonometry": 7,
+    "solution_key_mismatch|physics/magnetism_induction": 7,
+    "solution_key_mismatch|physics/atomic_nuclear": 7,
+    "missing_key|physics/work_energy_power": 6,
+    "solution_key_mismatch|math/limits_continuity": 5
+  },
+  "jules_latest": [
+    {
+      "taskId": "math-solutions-08-exponential-log-1516-1608-reextract",
+      "status": "collected",
+      "remoteState": "IN_PROGRESS",
+      "url": "https://jules.google.com/session/3302611194171248638"
+    },
+    {
+      "taskId": "math-solutions-09-probability-1824-1935-reextract",
+      "status": "collected",
+      "remoteState": "IN_PROGRESS",
+      "url": "https://jules.google.com/session/4947092373687982009"
+    },
+    {
+      "taskId": "math-solutions-10-statistics-1949-2042-reextract",
+      "status": "collected",
+      "remoteState": "IN_PROGRESS",
+      "url": "https://jules.google.com/session/11403855371493691425"
+    },
+    {
+      "taskId": "math-answer-key-verified-mismatch-ranges",
+      "status": "collected",
+      "remoteState": "IN_PROGRESS",
+      "url": "https://jules.google.com/session/11601563511945322851"
+    },
+    {
+      "taskId": "physics-answer-key-missing-119-129-215-220",
+      "status": "created",
+      "remoteState": "IN_PROGRESS",
+      "url": "https://jules.google.com/session/1710503685293975460"
+    },
+    {
+      "taskId": "math-solutions-03-gap-379-421-retry",
+      "status": "terminal_without_artifact",
+      "remoteState": "AWAITING_USER_FEEDBACK",
+      "url": "https://jules.google.com/session/9738165896823425154"
+    },
+    {
+      "taskId": "math-solutions-09-visual-conics-1666-1731-missing-reextract",
+      "status": "created",
+      "remoteState": "IN_PROGRESS",
+      "url": "https://jules.google.com/session/8431886080535924905"
+    },
+    {
+      "taskId": "math-statistics-2041-2119-key-and-solutions",
+      "status": "created",
+      "url": "https://jules.google.com/session/14027010516213359963"
+    }
+  ],
+  "notes": [
+    "Subagent unavailable due usage limit; local triage only.",
+    "Created math-statistics-2041-2119-key-and-solutions Jules task.",
+    "No broad promote performed."
+  ]
+}

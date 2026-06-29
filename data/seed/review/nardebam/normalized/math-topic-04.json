@@ -1,0 +1,728 @@
+[
+  {
+    "question_number": 216,
+    "question_page": 4,
+    "question_text": "جدول تعیین علامت عبارت $P = (x+۲)(x-۴) + ۵$ به کدام صورت زیر است؟",
+    "options": [
+      "$\\begin{array}{c|ccccccc} x & -\\infty & & -۲ & & ۴ & & +\\infty \\\\ \\hline P & & + & \\circ & - & \\circ & + \\end{array}$",
+      "$\\begin{array}{c|ccccccc} x & -\\infty & & -۱ & & ۳ & & +\\infty \\\\ \\hline P & & + & \\circ & - & \\circ & + \\end{array}$",
+      "$\\begin{array}{c|ccccccc} x & -\\infty & & -۱ & & ۳ & & +\\infty \\\\ \\hline P & & - & \\circ & + & \\circ & - \\end{array}$",
+      "$\\begin{array}{c|ccccccc} x & -\\infty & & -۲ & & ۴ & & +\\infty \\\\ \\hline P & & - & \\circ & + & \\circ & - \\end{array}$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "The equation is inferred as P = (x+2)(x-4) + 5 based on mathematical correctness of the options, though visually it might look slightly like a multiplication."
+    ]
+  },
+  {
+    "question_number": 217,
+    "question_page": 4,
+    "question_text": "جدول تعیین علامت چندجمله‌ای $A(x) = (۲x-۱)^۲ - (۳x-۲)^۲$ به کدام صورت است؟",
+    "options": [
+      "$\\begin{array}{c|ccccccc} x & -\\infty & & \\frac{۱}{۲} & & \\frac{۲}{۳} & & +\\infty \\\\ \\hline A(x) & & + & \\circ & - & \\circ & + \\end{array}$",
+      "$\\begin{array}{c|ccccccc} x & -\\infty & & \\frac{۳}{۵} & & ۱ & & +\\infty \\\\ \\hline A(x) & & + & \\circ & - & \\circ & + \\end{array}$",
+      "$\\begin{array}{c|ccccccc} x & -\\infty & & \\frac{۳}{۵} & & ۱ & & +\\infty \\\\ \\hline A(x) & & - & \\circ & + & \\circ & - \\end{array}$",
+      "$\\begin{array}{c|ccccccc} x & -\\infty & & \\frac{۱}{۲} & & \\frac{۲}{۳} & & +\\infty \\\\ \\hline A(x) & & - & \\circ & + & \\circ & - \\end{array}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 218,
+    "question_page": 4,
+    "question_text": "جدول تعیین علامت عبارت $P(x) = (۱-۲x)^۳ - ۲x^۲(۴x-۶)$ به کدام صورت است؟",
+    "options": [
+      "$\\begin{array}{c|ccccc} x & -\\infty & & ۲ & & +\\infty \\\\ \\hline P(x) & & + & \\circ & - \\end{array}$",
+      "$\\begin{array}{c|ccccc} x & -\\infty & & ۲ & & +\\infty \\\\ \\hline P(x) & & - & \\circ & + \\end{array}$",
+      "$\\begin{array}{c|ccccc} x & -\\infty & & \\frac{۱}{۲} & & +\\infty \\\\ \\hline P(x) & & - & \\circ & + \\end{array}$",
+      "$\\begin{array}{c|ccccc} x & -\\infty & & \\frac{۱}{۲} & & +\\infty \\\\ \\hline P(x) & & + & \\circ & - \\end{array}$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "The equation is inferred to be P(x) = (1-2x)^3 - 2x^2(4x-6) but could also be read differently. The fraction in options 3 and 4 appears to be 1/2."
+    ]
+  },
+  {
+    "question_number": 219,
+    "question_page": 4,
+    "question_text": "اگر جدول تعیین علامت $y = ax - b$ به شکل مقابل باشد، جدول تعیین علامت $y = bx + a$ به کدام صورت است؟",
+    "options": [
+      "$\\begin{array}{c|ccccc} x & -\\infty & & ۳ & & +\\infty \\\\ \\hline y & & - & \\circ & + \\end{array}$",
+      "$\\begin{array}{c|ccccc} x & -\\infty & & ۳ & & +\\infty \\\\ \\hline y & & + & \\circ & - \\end{array}$",
+      "$\\begin{array}{c|ccccc} x & -\\infty & & -۳ & & +\\infty \\\\ \\hline y & & - & \\circ & + \\end{array}$",
+      "$\\begin{array}{c|ccccc} x & -\\infty & & -۳ & & +\\infty \\\\ \\hline y & & + & \\circ & - \\end{array}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0004.jpg",
+        "box": [
+          66,
+          461,
+          185,
+          523
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "جدول y = ax - b"
+      }
+    ],
+    "review_notes": [
+      "The image region bounding box is estimated based on the position of the table in the stem."
+    ]
+  },
+  {
+    "question_number": 220,
+    "question_page": 4,
+    "question_text": "جدول تعیین علامت $f(x) = (۳+a)x^۲ - ۲ax + b$ به صورت مقابل است. $f(\\frac{a}{b})$ کدام است؟",
+    "options": [
+      "۱۷",
+      "-۱۷",
+      "۱۸",
+      "-۱۸"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0004.jpg",
+        "box": [
+          60,
+          563,
+          169,
+          614
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "جدول f(x) = (3+a)x^2 - 2ax + b"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 221,
+    "question_page": 4,
+    "question_text": "جدول تعیین علامت $y = ax^۲ + bx - ۴$ به صورت مقابل است. $a - b$ کدام است؟",
+    "options": [
+      "۱",
+      "۲",
+      "-۱",
+      "-۲"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0004.jpg",
+        "box": [
+          65,
+          608,
+          184,
+          661
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "جدول y = ax^2 + bx - 4"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 222,
+    "question_page": 4,
+    "question_text": "علامت عبارت $P = -۲x^۲ - ۵x + ۲$ به ازای $x = \\sqrt{۳} + ۱$ و $x = \\sqrt{۲} - ۳$ به ترتیب از راست به چپ کدام است؟",
+    "options": [
+      "منفی - مثبت",
+      "مثبت - مثبت",
+      "مثبت - منفی",
+      "منفی - منفی"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 223,
+    "question_page": 4,
+    "question_text": "عبارت $P(x) = -۲x^۲ + ax + b$ فقط در بازه $(-۱, ۳)$ مثبت است. عبارت $A(x) = ax^۲ + bx + ۲$ در کدام بازه زیر منفی است؟",
+    "options": [
+      "$(-\\frac{۳}{۲}, -۱)$",
+      "$(-۱, -\\frac{۱}{۲})$",
+      "$(\\frac{۱}{۲}, ۱)$",
+      "$(۱, \\frac{۳}{۲})$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 224,
+    "question_page": 4,
+    "question_text": "نمودار سهمی $y = ۴ - x^۲$ در بازه $(a, b)$ بالاتر از نمودار $y = x^۲ - ۵x + ۶$ است. حداکثر $b - a$ کدام است؟",
+    "options": [
+      "$\\frac{۱}{۲}$",
+      "۱",
+      "$\\frac{۳}{۲}$",
+      "۲"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 225,
+    "question_page": 4,
+    "question_text": "به ازای چند عدد صحیح، عبارت $P(x) = (x^۲ - ۴)(۵x - x^۲)$ نامنفی است؟",
+    "options": [
+      "۵",
+      "۷",
+      "۳",
+      "بی‌شمار"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 226,
+    "question_page": 4,
+    "question_text": "جدول تعیین علامت عبارت $P(x) = ax^۲ - ۸x - a^۲ - ۶$ به صورت زیر است. حاصل $a+b$ کدام است؟",
+    "options": [
+      "۷",
+      "۴",
+      "-۳",
+      "-۶"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0004.jpg",
+        "box": [
+          65,
+          831,
+          260,
+          893
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "جدول P(x)"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 227,
+    "question_page": 5,
+    "question_text": "عبارت $A(x) = (-a^۲+۱)x^۲ + ۴x + a$ در کل $\\mathbb{R}$ منفی است. محدوده $a$ کدام است؟",
+    "options": [
+      "$\\emptyset$",
+      "$(-\\infty, -۱) \\cup (۲, +\\infty)$",
+      "$(-\\infty, -۱) \\cup [۲, +\\infty)$",
+      "$(-\\infty, -۲) \\cup (۱, +\\infty)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 228,
+    "question_page": 5,
+    "question_text": "اگر مجموعه جواب نامعادله $\\frac{x+a}{x^۲+x-۲} \\leq \\circ$ به صورت $[-\\frac{۱}{۲}, ۱) \\cup [۲, +\\infty)$ باشد، $a$ کدام است؟",
+    "options": [
+      "$-۲$",
+      "$\\frac{۱}{۲}$",
+      "۲",
+      "$\\frac{-۱}{۲}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 229,
+    "question_page": 5,
+    "question_text": "مجموعه جواب نامعادله $\\frac{x^۲-۴x+۴}{x^۲+ax+b} > \\circ$ به صورت $\\mathbb{R} - [-۱, ۲]$ است. $b - a$ کدام است؟",
+    "options": [
+      "۱",
+      "-۱",
+      "۳",
+      "-۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 230,
+    "question_page": 5,
+    "question_text": "مجموعه جواب نامعادله $(ax^۲+bx+c)(x+۳) \\geq \\circ$ به صورت $(-\\infty, -۳] \\cup [۲, ۴]$ است. نمودار سهمی $y = ax^۲+bx+c$ به کدام صورت می‌تواند باشد؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0005.jpg",
+        "box": [
+          45,
+          178,
+          866,
+          269
+        ],
+        "box_format": "xyxy",
+        "placement": "options",
+        "alt": "نمودارهای گزینه‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 231,
+    "question_page": 5,
+    "question_text": "مجموعه جواب نامعادله $\\frac{-۲x^۲+۵x+۳}{x-۱} \\geq \\circ$ کدام است؟",
+    "options": [
+      "$(-\\infty, -\\frac{۱}{۲}] \\cup (۱, ۳]$",
+      "$(-\\infty, -\\frac{۱}{۲}] \\cup [۱, ۳]$",
+      "$[-\\frac{۱}{۲}, ۱) \\cup [۳, +\\infty)$",
+      "$[-\\frac{۱}{۲}, ۱) \\cup (۳, +\\infty)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 232,
+    "question_page": 5,
+    "question_text": "بیش‌ترین مقدار صحیح $x$ که در نامعادله $\\frac{(x-۱)(x+۱)}{x-۲} \\leq \\frac{x-۱}{x+۲}$ صدق می‌کند، کدام است؟",
+    "options": [
+      "۱",
+      "صفر",
+      "-۱",
+      "-۲"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 233,
+    "question_page": 5,
+    "question_text": "مجموعه جواب نامعادله $\\frac{x^۲}{x+۱} > \\frac{۱}{x-۱}$ شامل چند عدد صحیح نیست؟",
+    "options": [
+      "۲",
+      "۳",
+      "۴",
+      "۵"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 234,
+    "question_page": 5,
+    "question_text": "طول یک مستطیل ۳ سانتی‌متر از عرض آن بیشتر است. اگر مساحت این مستطیل حداکثر ۲۸ سانتی‌متر مربع باشد، بیش‌ترین مقدار محیط این مستطیل کدام است؟",
+    "options": [
+      "۲۶",
+      "۲۴",
+      "۲۲",
+      "۲۰"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 235,
+    "question_page": 5,
+    "question_text": "اگر $|x-۲| \\leq ۳$ و $|y+۱| < ۲$ باشد، آنگاه کم‌ترین مقدار $xy$ کدام است؟",
+    "options": [
+      "-۵",
+      "-۱۵",
+      "۱۵",
+      "۵"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 236,
+    "question_page": 5,
+    "question_text": "اگر $-۲ \\leq x \\leq ۴$، آنگاه عبارت $A = |x^۲-۲x-۸| + |x^۲-x-۱۲|$ برابر کدام است؟",
+    "options": [
+      "$x+۴$",
+      "$x-۴$",
+      "$-x-۴$",
+      "$-x+۴$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 237,
+    "question_page": 5,
+    "question_text": "جواب نامعادله $|\\frac{x}{۳} - ۱| \\leq \\frac{۱}{۲}$ به صورت بازه $[a, b]$ است. مقدار $b-a$ کدام است؟",
+    "options": [
+      "$\\frac{۳}{۲}$",
+      "۲",
+      "$\\frac{۵}{۲}$",
+      "۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 238,
+    "question_page": 5,
+    "question_text": "تعداد اعداد صحیح در مجموعه جواب نامعادله $|\\frac{۳-x}{۲} + ۱| < ۲$ کدام است؟",
+    "options": [
+      "۴",
+      "۵",
+      "۶",
+      "۷"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 239,
+    "question_page": 5,
+    "question_text": "اگر مجموعه جواب نامعادله $x^۲ - x - ۲ < \\circ$ به صورت بازه $(a, b)$ و مجموعه جواب نامعادله $|x-a| < b$ به صورت بازه $(c, d)$ باشد، مقدار $c+d$ کدام است؟",
+    "options": [
+      "-۲",
+      "-۱",
+      "۱",
+      "۲"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 240,
+    "question_page": 5,
+    "question_text": "مجموعه جواب نامعادلة $\\frac{۲}{x} - ۳ > \\frac{۴}{x + ۳}$ در اعداد منفی به صورت $(a, b)$ است. مقدار $a - b$ کدام است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0005.jpg",
+        "box": [
+          128,
+          1493,
+          893,
+          1550
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "مجموعه جواب نامعادله در اعداد منفی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 241,
+    "question_page": 5,
+    "question_text": "نمودار تابع خطی $f$ به صورت مقابل است. مجموعه جواب نامعادلة $x f(-\\frac{x}{۲}) < ۰$ کدام است؟",
+    "options": [
+      "$(-۲, ۰)$",
+      "$(۰, ۲)$",
+      "$\\mathbb{R} - [۰, ۲]$",
+      "$\\mathbb{R} - [-۲, ۰]$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0005.jpg",
+        "box": [
+          376,
+          1572,
+          903,
+          1618
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع خطی"
+      },
+      {
+        "page_file": "page_0005.jpg",
+        "box": [
+          90,
+          1637,
+          240,
+          1780
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "گراف خطی که از (۰,۲) و (-۲,۰) می‌گذرد"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 242,
+    "question_page": 6,
+    "question_text": "نمودار تابع $f(x)$ به صورت مقابل است. مجموعه جواب نامعادلۀ $(x+4)f(x) \\ge 0$ کدام است؟",
+    "options": [
+      "$(-\\infty, -4] \\cup [2, +\\infty)$",
+      "$[-4, -1] \\cup [2, +\\infty)$",
+      "$[-1, +\\infty) \\cup \\{-4\\}$",
+      "$[2, +\\infty) \\cup \\{-4, -1\\}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0006.jpg",
+        "box": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f(x)"
+      }
+    ],
+    "review_notes": [
+      "Visual region for graph needs exact bounding box. Math formula placement verified."
+    ]
+  },
+  {
+    "question_number": 243,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $\\frac{2x+2}{x^2-x} \\ge 3$ شامل چند عدد صحیح است؟",
+    "options": [
+      "صفر",
+      "۱",
+      "۲",
+      "بی‌شمار"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 244,
+    "question_page": 6,
+    "question_text": "برای هر $x > k$ رابطۀ $\\frac{x}{x+3} < \\frac{x+3}{x}$ برقرار است. حداقل $k$ کدام است؟",
+    "options": [
+      "صفر",
+      "$-3$",
+      "$-\\frac{3}{2}$",
+      "$\\frac{3}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 245,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $1 < \\frac{4x-3}{3x-1} < 3$ به کدام صورت است؟",
+    "options": [
+      "$(0, 2)$",
+      "$\\mathbb{R} - [0, 2]$",
+      "$(\\frac{1}{3}, 2) \\cup (0, \\frac{1}{2})$",
+      "$\\mathbb{R} - [\\frac{1}{3}, 2]$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Option 3 transcribed as printed, looks reversed or flipped in the image layout."
+    ]
+  },
+  {
+    "question_number": 246,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $\\frac{x+a}{bx+6} > 0$ بازۀ $(-3, 2)$ است. $a-b$ کدام است؟",
+    "options": [
+      "۴",
+      "$-4$",
+      "۶",
+      "$-6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 247,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $\\frac{x}{x+4} > \\frac{4x-12}{x^2+x-12}$ شامل چند عدد صحیح است؟",
+    "options": [
+      "۵",
+      "۶",
+      "۷",
+      "بی‌شمار"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 248,
+    "question_page": 6,
+    "question_text": "جواب نامعادلۀ $\\frac{1}{x^2+2x+2} < \\frac{1}{4x^2+3x+1}$ به صورت $\\mathbb{R} - [\\alpha, \\beta]$ است. $\\beta + \\alpha$ کدام است؟",
+    "options": [
+      "۱",
+      "$-1$",
+      "$\\frac{1}{3}$",
+      "$-\\frac{1}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 249,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $x^3 - 3x^2 + 2 > 0$ کدام است؟",
+    "options": [
+      "$(-2, 1)$",
+      "$(1, +\\infty)$",
+      "$(-\\infty, -2) \\cup (1, +\\infty)$",
+      "$(-2, +\\infty) - \\{1\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 250,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $x^3 - x^2 - 8x > b$ به صورت $(a, +\\infty) - \\{2\\}$ است. حاصل $a-b$ کدام است؟",
+    "options": [
+      "۹",
+      "$-9$",
+      "۱۵",
+      "$-15$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 251,
+    "question_page": 6,
+    "question_text": "$n$ عددی طبیعی و مجموعه جواب نامعادلۀ $(n-2)x^2 + (3-2n)x + 6 > 0$ به صورت $(\\alpha, \\beta)$ می‌باشد. حداکثر $\\beta - \\alpha$ کدام است؟",
+    "options": [
+      "۶",
+      "۵",
+      "۴",
+      "۳"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "The first term coefficient could be visually interpreted slightly differently, interpreted as (n-2)."
+    ]
+  },
+  {
+    "question_number": 252,
+    "question_page": 6,
+    "question_text": "اگر $\\alpha$ و $\\beta$ صفرهای تابع $f(x) = x^2 + mx + 2m + 12$ و $-1 < \\alpha < 2 < \\beta$ باشد، حدود $m$ کدام است؟",
+    "options": [
+      "$-12 < m < -2$",
+      "$-13 < m < -4$",
+      "$-13 < m < 4$",
+      "$-12 < m < 2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 253,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $2x^2 - 3x - 2 < 0$ به صورت $|x - \\alpha| < \\beta$ بیان شده است. $\\beta - \\alpha$ کدام است؟",
+    "options": [
+      "۲",
+      "$-2$",
+      "$\\frac{1}{2}$",
+      "$-\\frac{1}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 254,
+    "question_page": 6,
+    "question_text": "جواب نامعادلۀ $2x^2 + ax + b > 0$ با جواب نامعادلۀ $|x-4| > 1$ برابر است. $a-b$ کدام است؟",
+    "options": [
+      "$-46$",
+      "$-36$",
+      "۲۶",
+      "۳۶"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 255,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $||2x - 1| + 3| < 5$ شامل چند عدد صحیح است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 256,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $|2x - 1| \\le x + 1$ شامل چند عدد صحیح است؟",
+    "options": [
+      "۲",
+      "۳",
+      "۴",
+      "بی‌شمار"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 257,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $|x^2 - 3x| < 2x$ کدام بازه است؟",
+    "options": [
+      "$(0, 5)$",
+      "$(1, 5) \\cup (0, 1)$",
+      "$(-1, 1)$",
+      "$(1, 5)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 258,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $|\\frac{3x+1}{4x-2}| > 1$ به کدام صورت است؟",
+    "options": [
+      "$(a, b)$",
+      "$(-\\infty, a) \\cup (b, +\\infty)$",
+      "$(a, b) - \\{c\\}$",
+      "$\\mathbb{R} - (a, b)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 259,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $|\\frac{x+4}{ax+6}| < 1$ به صورت $(b, +\\infty)$ است. مقدار $ab$ کدام است؟",
+    "options": [
+      "۴",
+      "$-5$",
+      "۱",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 260,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $||x| - 3| < x + 1$ به کدام صورت است؟",
+    "options": [
+      "$(-\\infty, 1)$",
+      "$[-1, 1)$",
+      "$[-1, +\\infty)$",
+      "$(-\\infty, -1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 261,
+    "question_page": 6,
+    "question_text": "مجموعه جواب نامعادلۀ $x^2 + 3x - 2 < |x+1|$ به کدام صورت است؟",
+    "options": [
+      "$(-\\infty, -3) \\cup (1, +\\infty)$",
+      "$(-\\infty, -2 - \\sqrt{5}) \\cup (1, +\\infty)$",
+      "$(-\\infty, -3) \\cup (-2 + \\sqrt{5}, +\\infty)$",
+      "$(-\\infty, -2 - \\sqrt{5}) \\cup (-2 + \\sqrt{5}, +\\infty)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  }
+]

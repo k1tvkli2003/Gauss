@@ -1,0 +1,489 @@
+{
+  "task_id": "math-solutions-01",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 154,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "سهمی از نقطۀ $(0, n)$ عبور می‌کند.\n$y = x^2 + x - m \\Rightarrow n = -m$\nسهمی از نقطۀ $(n, 0)$ نیز عبور می‌کند:\n$0 = n^2 + n - m \\Rightarrow n^2 + 2n = 0 \\Rightarrow \\begin{cases} n=0 \\quad \\text{غ.ق.ق} \\\\ n=-2 \\end{cases}$\nبا توجه به نمودار $n$ نمی‌تواند صفر باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 155,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "صفرهای سهمی $y = 6x - x^2$ برابر $x=0$ و $x=6$ است.\nطول نقطۀ B را نیز $k$ می‌نامیم.\nنقاط $O(0, 0)$ و $A(6, 0)$ و $B(k, 6k - k^2)$ مفروض‌اند و پاره‌خط‌های $OB$ و $AB$ بر هم عمودند.\n$m_{OB} \\times m_{AB} = -1 \\Rightarrow \\frac{6k - k^2}{k} \\times \\frac{6k - k^2}{k - 6} = -1 \\Rightarrow 6k - k^2 = 1 \\Rightarrow a = 1$\n$6k - k^2$ عرض نقطۀ B می‌باشد که با $a$ برابر است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            850,
+            420,
+            1600,
+            680
+          ],
+          "placement": "solution",
+          "filename": "page_0016.jpg",
+          "alt": "نمودار سهمی $y=6x-x^2$ با رئوس O، A و B"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 156,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "سهمی از مبدأ مختصات عبور می‌کند بنابراین $n=0$ است.\n$y = -3x^2 + mx$\nطول مستطیل برابر $OC$ یا همان تفاضل ریشه‌ها و عرض مستطیل برابر عرض رأس سهمی است.\n$OC = |\\alpha - \\beta| = \\frac{\\sqrt{\\Delta}}{|a|} = \\frac{\\sqrt{m^2}}{3} = \\frac{|m|}{3} = \\frac{m}{3}$\n(طول رأس سهمی مثبت است بنابراین $m$ مثبت می‌باشد.)\nعرض رأس سهمی $= \\frac{-\\Delta}{4a} = \\frac{-m^2}{-12} = \\frac{m^2}{12}$\nمساحت مستطیل $= \\frac{m}{3} \\times \\frac{m^2}{12} = 6 \\Rightarrow m^3 = 216 \\Rightarrow m = 6$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 157,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "$f - g$ یک سهمی است که ریشه‌های آن $x=2$ و $x=4$ است؛ بنابراین:\n$(f - g)(x) = a(x - 2)(x - 4)$\nمی‌دانیم $f(0) - g(0) = 4 - 0 = 4$ است. $(f - g)(0) = 4$\n$(f - g)(0) = a(-2)(-4) = 4 \\Rightarrow a = \\frac{1}{2}$\n$\\Rightarrow (f - g)(x) = \\frac{1}{2}(x - 2)(x - 4)$\n$\\Rightarrow (f - g)(5) = \\frac{1}{2} \\times 3 \\times 1 = \\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 158,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "برای این‌که معادلۀ درجه‌دو دارای دو ریشۀ غیرهم‌علامت باشد کافی است حاصل‌ضرب ریشه‌ها منفی باشد (اگر $P < 0$ باشد $\\Delta > 0$ خواهد شد و نیازی به بررسی شرط $\\Delta > 0$ نیست).\n$P < 0 \\Rightarrow \\frac{a - 3}{3} < 0 \\Rightarrow a < 3$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 159,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "باید سه شرط $\\Delta > 0$، $P > 0$ و $S > 0$ را بررسی کنیم.\n$\\Delta > 0 \\Rightarrow (a+3)^2 + 4a > 0 \\Rightarrow a^2 + 10a + 9 > 0 \\Rightarrow a < -9 \\text{ یا } a > -1 \\quad (1)$\n$S > 0 \\Rightarrow -(a+3) > 0 \\Rightarrow a < -3 \\quad (2)$\n$P > 0 \\Rightarrow -a > 0 \\Rightarrow a < 0 \\quad (3)$\n$(1) \\cap (2) \\cap (3) \\Rightarrow a < -9$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 160,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "باید سه شرط $\\Delta > 0$، $P > 0$ و $S < 0$ را بررسی کنیم.\n$\\Delta > 0 \\Rightarrow m^2 - 4(2m + 5) > 0 \\Rightarrow m^2 - 8m - 20 > 0 \\Rightarrow m < -2 \\text{ یا } m > 10 \\quad (1)$\n$S < 0 \\Rightarrow m < 0 \\quad (2)$\n$P > 0 \\Rightarrow 2m + 5 > 0 \\Rightarrow m > -\\frac{5}{2} \\quad (3)$\n$(1) \\cap (2) \\cap (3) \\Rightarrow -\\frac{5}{2} < m < -2$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 161,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "معادلۀ $x^2 - 2x + a - 3 = 0$ باید دو ریشۀ مثبت داشته باشد.\nسه شرط $\\Delta > 0$، $S > 0$ و $P > 0$ را بررسی می‌کنیم.\n$\\Rightarrow x^2 - 2x + a - 3 = 0$\n$\\Delta > 0 \\Rightarrow 4 - 4(a - 3) > 0 \\Rightarrow 1 - (a - 3) > 0 \\Rightarrow a < 4 \\quad (1)$\n$S > 0 \\Rightarrow 2 > 0 \\quad \\checkmark$\n$P > 0 \\Rightarrow a - 3 > 0 \\Rightarrow a > 3 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow 3 < a < 4$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 162,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "سهمی هنگامی از هر چهار ناحیۀ مختصات می‌گذرد که $P < 0$ باشد.\n$P < 0 \\Rightarrow \\frac{a - 3}{-1} < 0 \\Rightarrow a - 3 > 0 \\Rightarrow a > 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 163,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "نقطۀ $(0, 0)$ در سهمی صدق می‌کند یعنی سهمی از مبدأ مختصات می‌گذرد. برای این‌که سهمی از ناحیۀ سوم عبور نکند ریشۀ دیگر آن باید نامنفی باشد.\n$ax^2 + (a - 3)x = 0 \\Rightarrow x(ax + a - 3) = 0$\n$\\Rightarrow \\begin{cases} x = 0 \\\\ x = \\frac{3 - a}{a} \\end{cases} \\Rightarrow \\frac{3 - a}{a} \\ge 0 \\Rightarrow 0 < a \\le 3$\nدقت کنید در حالت $a=0$ خط $y = -3x$ به وجود می‌آید که از ناحیۀ سوم نمی‌گذرد اما سهمی نمی‌باشد.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            100,
+            1100,
+            800,
+            1400
+          ],
+          "placement": "solution",
+          "filename": "page_0016.jpg",
+          "alt": "نمودار سهمی عبوری از مبدأ و قرار گرفته در نواحی اول، دوم و چهارم"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 164,
+      "solution_page": "page_0016.jpg",
+      "solution_text": "سهمی فقط از ناحیۀ اول عبور نمی‌کند. بنابراین سهمی رو به پایین بوده (ضریب $x^2$ منفی است) و دارای دو ریشۀ متمایز منفی یا یک ریشۀ منفی و یک ریشۀ صفر است.\nچهار شرط $a+1 < 0$ و $\\Delta > 0$ و $S < 0$ و $P \\ge 0$ را بررسی می‌کنیم:\n$a + 1 < 0 \\Rightarrow a < -1 \\quad (1)$\n$\\Delta > 0 \\Rightarrow 4a^2 - 4(a+1)(-a+1) > 0 \\Rightarrow a^2 - (a+1)(-a+1) > 0 \\Rightarrow a^2 > \\frac{1}{2} \\Rightarrow \\begin{cases} a < -\\frac{\\sqrt{2}}{2} \\\\ a > \\frac{\\sqrt{2}}{2} \\end{cases} \\quad (2)$\n$S < 0 \\Rightarrow \\frac{-2a}{a+1} < 0 \\xrightarrow{a+1 < 0} -2a > 0 \\Rightarrow a < 0 \\quad (3)$\n$P \\ge 0 \\Rightarrow \\frac{-a+1}{a+1} \\ge 0 \\xrightarrow{a+1 < 0} -a+1 \\le 0 \\Rightarrow a \\ge 1 \\quad (4)$\n$(1) \\cap (2) \\cap (3) \\cap (4) \\Rightarrow a \\in \\varnothing$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 165,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "ضریب $x^2$ باید مثبت باشد؛ یعنی:\n$a + 4 > 0 \\Rightarrow a > -4$\nحال دو حالت کلی را بررسی می‌کنیم:\n۱) $\\Delta \\le 0$\n$\\Delta \\le 0 \\Rightarrow 4a^2 - 8(a+4) \\le 0 \\Rightarrow a^2 - 2a - 8 \\le 0 \\Rightarrow -2 \\le a \\le 4 \\quad (1)$\n۲) $\\Delta > 0 , S < 0 , P \\ge 0$\n$\\Delta > 0 \\Rightarrow a < -2 \\text{ یا } a > 4$\n$S < 0 \\Rightarrow \\frac{-2a}{a+4} < 0 \\xrightarrow{a+4 > 0} -2a < 0 \\Rightarrow a > 0$\n$P \\ge 0 \\Rightarrow \\frac{2}{a+4} \\ge 0 \\xrightarrow{a+4 > 0} \\text{بدیهی}$\n$\\xrightarrow{\\cap} a > 4 \\quad (2)$\n$(1) \\cup (2) \\Rightarrow a \\ge -2$\nجواب به دست آمده با شرط $a > -4$ سازگاری دارد.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            470,
+            130,
+            820,
+            280
+          ],
+          "placement": "solution",
+          "alt": "دو نمودار سهمی رو به بالا"
+        },
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            470,
+            270,
+            820,
+            420
+          ],
+          "placement": "solution",
+          "alt": "دو نمودار سهمی رو به بالا"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 166,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "بیشترین مقدار سهمی برابر عرض رأس سهمی است.\n$y_S = -\\frac{\\Delta}{4a} = 8 \\Rightarrow -\\frac{(a-1)^2 - 28a}{4a} = 8$\n$\\Rightarrow a^2 - 30a + 1 = -32a \\Rightarrow a^2 + 2a + 1 = 0 \\Rightarrow (a+1)^2 = 0 \\Rightarrow a = -1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 167,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "بیشترین مقدار سهمی صفر است؛ بنابراین سهمی ریشه مضاعف دارد.\n$(x+a)(ax+1)=0 \\Rightarrow \\begin{cases} x = -a \\\\ x = -\\frac{1}{a} \\end{cases}$\n$\\xrightarrow{\\text{ریشه مضاعف است}} -a = -\\frac{1}{a} \\Rightarrow a^2 = 1 \\Rightarrow \\begin{cases} a = 1 \\quad \\text{غ ق ق} \\\\ a = -1 \\end{cases}$\nسهمی دارای بیشترین مقدار است یعنی ضریب $x^2$ باید منفی باشد و $a=1$ قابل قبول نیست.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 168,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "سهمی در نقطهٔ $x = 2$ بر محور xها مماس است. در نتیجه رأس سهمی نقطهٔ $S(2, 0)$ خواهد بود. بنابراین معادلهٔ سهمی به صورت $y = a(x-2)^2$ می‌باشد.\nبا توجه به ضابطهٔ داده‌ شده، ضریب $x^2$ در سهمی برابر ۱ است. پس $a = 1$\n$f(x) = (x-2)^2$\n$P = 4x - f(x) = 4x - (x-2)^2 = -x^2 + 8x - 4$\nطول رأس سهمی $P$ برابر $x = 4$ است. بیشترین مقدار سهمی برابر عرض رأس سهمی است.\n$y = -(4)^2 + 8(4) - 4 = 12 : \\text{عرض رأس سهمی}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 169,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "خط $4y + x = 8$ در نقاط $A(0, 2)$ و $B(8, 0)$ محورهای مختصات و سهمی را قطع می‌کند. بنابراین ریشه‌های سهمی $x = 4$ و $x = 8$ می‌باشند.\n$f(x) = a(x-4)(x-8)$\nسهمی از نقطهٔ $A(0, 2)$ عبور می‌کند بنابراین:\n$f(0) = 2 \\Rightarrow 32a = 2 \\Rightarrow a = \\frac{1}{16} \\Rightarrow f(x) = \\frac{1}{16}(x-4)(x-8)$\nطول رأس سهمی میانگین ریشه‌ها یعنی $x = 6$ است و کم‌ترین مقدار سهمی برابر عرض رأس سهمی می‌باشد.\n$f(6) = \\frac{1}{16}(2)(-2) = -\\frac{1}{4}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            40,
+            70,
+            200,
+            180
+          ],
+          "placement": "solution",
+          "alt": "نمودار خط و سهمی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 170,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "نقطهٔ $A(x, y)$ را بر روی سهمی مطابق شکل در نظر می‌گیریم.\nمحیط مستطیل برابر است با:\n$P = 4x + 2y = 4x + 2(8 - 2x^2) = -4x^2 + 4x + 16$\nبیشترین مقدار عبارت $P$ در $x = \\frac{1}{2}$ رخ می‌دهد.\n$P(\\frac{1}{2}) = -4(\\frac{1}{2})^2 + 4(\\frac{1}{2}) + 16 = -1 + 2 + 16 = 17$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            40,
+            250,
+            190,
+            340
+          ],
+          "placement": "solution",
+          "alt": "مستطیل محاط در سهمی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 171,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "فرض می‌کنیم نقطهٔ $B(x, y)$ بر روی منحنی $y = \\sqrt{2x+9}$ کم‌ترین فاصله را از نقطهٔ $A(4, 0)$ دارد.\n$AB = \\sqrt{(x-4)^2 + y^2} = \\sqrt{(x-4)^2 + 2x + 9} = \\sqrt{x^2 - 6x + 25}$\nکم‌ترین مقدار $x^2 - 6x + 25$ در $x = 3$ رخ می‌دهد.\n$AB = \\sqrt{3^2 - 6(3) + 25} = \\sqrt{16} = 4$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 172,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "طول مستطیل را $x$ و عرض آن را $y$ می‌نامیم.\nمحیط $= P = 2(x+y) = 22 \\Rightarrow y = 11 - x$\nمساحت $= S = xy = x(11-x)$\nطول رأس سهمی $S = x(11-x)$ میانگین ریشه‌ها و برابر $\\frac{0+11}{2} = \\frac{11}{2}$ می‌باشد.\n$x = \\frac{11}{2} \\Rightarrow S = \\frac{11}{2} \\times \\frac{11}{2} = \\frac{121}{4} = 30/25$\nبیشترین مساحت مستطیل‌هایی با محیط $P$ هنگامی به وجود می‌آید که مربع باشد. در این مسئله مربعی با محیط ۲۲ پاسخ خواهد بود که اندازهٔ ضلع آن $5/5$ و مساحت آن $30/25$ می‌باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 173,
+      "solution_page": "page_0017.jpg",
+      "solution_text": "نقطهٔ $A(a, 6-a)$ را بر روی نمودار در نظر می‌گیریم. نقاط $A$ و $B$ هم‌عرض هستند.\nبنابراین عرض نقطهٔ $B$ نیز $6-a$ است.\n$2x + 3 = 6-a \\Rightarrow x = \\frac{3-a}{2} \\Rightarrow B(\\frac{3-a}{2}, 6-a)$\n$AB = a - \\frac{3-a}{2} = \\frac{3a - 3}{2}$\n$S_{\\text{مستطیل}} = \\frac{3a-3}{2} \\times (6-a) = \\frac{-3a^2 + 21a - 18}{2}$\nبیشترین مقدار $S$ در $a = \\frac{-21}{-6} = \\frac{7}{2}$ است.\n$S = \\frac{-3(\\frac{7}{2})^2 + 21(\\frac{7}{2}) - 18}{2} = \\frac{75}{8}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0017.jpg",
+          "region": [
+            40,
+            660,
+            190,
+            750
+          ],
+          "placement": "solution",
+          "alt": "نمودار دو خط و مستطیل"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 174,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "اضلاع قائم را $\\sqrt{a}$ و $\\sqrt{b}$ می‌نامیم.\n$(\\sqrt{a})^2+(\\sqrt{b})^2=36 \\Rightarrow a+b=36 \\Rightarrow b=36-a$\n$S_{\\text{مثلث}}=\\frac{1}{2}\\sqrt{ab}=\\frac{1}{2}\\sqrt{a(36-a)}$\nبیشترین مقدار $a(36-a)$ در میانگین ریشه‌ها یعنی $a=18$ رخ می‌دهد.\n$\\Rightarrow S=\\frac{1}{2}\\sqrt{18 \\times 18}=\\frac{18}{2}=9$\nبیشترین مساحت مثلث‌های قائم‌الزاویه با اندازه وتر ثابت هنگامی است که متساوی‌الساقین باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 175,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "معادله را مرتب کرده، $x^2-3x$ را برابر $k$ قرار می‌دهیم.\n$(x^2-3x)^2-2(x^2-3x)-35=0$\n$\\Rightarrow k^2-2k-35=0 \\Rightarrow (k+5)(k-7)=0$\n$\\Rightarrow \\begin{cases} k=-5 \\Rightarrow x^2-3x=-5 \\Rightarrow x^2-3x+5=0 \\\\ \\xrightarrow{\\Delta<0} \\text{ریشه حقیقی ندارد} \\\\ k=7 \\Rightarrow x^2-3x=7 \\Rightarrow x^2-3x-7=0 \\\\ \\Rightarrow \\alpha\\beta=-7 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 176,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "$x^2$ را برابر $t$ قرار می‌دهیم. ریشه‌های معادلهٔ $t^2-15t+k=0$ را $\\alpha$ و $\\beta$ می‌نامیم ($\\alpha \\ge \\beta$). بدیهی است بزرگ‌ترین و کوچک‌ترین ریشهٔ معادله $x^4-15x^2+k=0$، $\\sqrt{\\alpha}$ و $-\\sqrt{\\alpha}$ می‌باشد که اختلاف آن‌ها $2\\sqrt{\\alpha}$ است.\n$2\\sqrt{\\alpha}=4\\sqrt{3} \\Rightarrow \\alpha=12$\n$\\alpha=12$ ریشهٔ معادلهٔ $t^2-15t+k=0$ می‌باشد:\n$(12)^2-15(12)+k=0 \\Rightarrow k=36$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 177,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "معادله را به روش تجزیه حل می‌کنیم.\n$x^4-7x^2+12=0 \\Rightarrow (x^2-3)(x^2-4)=0$\n$\\Rightarrow \\begin{cases} x^2=3 \\Rightarrow x=\\pm\\sqrt{3} \\\\ x^2=4 \\Rightarrow x=\\pm 2 \\end{cases}$\n$\\Rightarrow S=0 , P=12 \\Rightarrow 2P+S=24$\nنکته: معادلهٔ شبه درجه‌دو $ax^4+bx^2+c=0$ یا ریشهٔ حقیقی ندارد و یا مجموع ریشه‌های آن صفر است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 178,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "با فرض $t=x^2$ معادلهٔ $t^2+at+2a+3=0$ باید حداقل یک ریشهٔ نامنفی داشته باشد.\nکافی است $\\Delta \\ge 0$ باشد. (چون $a$ منفی است، مجموع ریشه‌ها مثبت است و در صورت وجود ریشهٔ حقیقی حداقل یکی از آن‌ها مثبت است.)\n$\\Delta \\ge 0 \\Rightarrow a^2-4(2a+3) \\ge 0 \\Rightarrow a^2-8a-12 \\ge 0$\n$\\Rightarrow a \\le 4-2\\sqrt{7} \\text{ یا } a \\ge 4+2\\sqrt{7} \\xrightarrow{a < 0} a \\le 4-2\\sqrt{7}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 179,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "با فرض $t=|x|$ معادلهٔ $t^2-kt+k-3=0$ باید دارای دو ریشهٔ متمایز مثبت باشد.\nسه شرط $\\Delta > 0$ و $S > 0$ و $P > 0$ را بررسی می‌کنیم:\n$\\Delta > 0 \\Rightarrow 4-4(k-3) > 0 \\Rightarrow k-3 < 1 \\Rightarrow k < 4 \\quad (1)$\n$S > 0 \\Rightarrow 2 > 0 \\text{ بدیهی }$\n$P > 0 \\Rightarrow k-3 > 0 \\Rightarrow k > 3 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow 3 < k < 4$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 180,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "با فرض $\\sqrt{x}=t$ معادلهٔ $t^2+mt+m-1=0$ باید یک ریشهٔ نامنفی داشته باشد. دو حالت وجود دارد.\n۱) حالت اول: معادله دارای یک ریشهٔ مضاعف نامنفی باشد.\n$\\Delta = 0 \\Rightarrow m^2-4m+4=0 \\Rightarrow (m-2)^2=0 \\Rightarrow m=2 \\quad (1)$\n$S \\ge 0 \\Rightarrow -m \\ge 0 \\Rightarrow m \\le 0 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow m \\in \\varnothing$\n۲) حالت دوم: معادله یک ریشهٔ نامنفی و یک ریشهٔ منفی داشته باشد.\n$P \\le 0 \\Rightarrow m-1 \\le 0 \\Rightarrow m \\le 1 \\quad \\checkmark$\nدقت داشته باشید در حالت $m=1$ معادله دارای یک ریشهٔ صفر و یک ریشهٔ منفی است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 181,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "عبارت $x^3-ax+2a-8$ دارای عامل $x-2$ است. این عبارت را بر $x-2$ تقسیم کرده و آن را تجزیه می‌کنیم.\n$x^3-ax+2a-8=(x-2)(\\underbrace{x^2+2x-a+4}_{P})$\nبرای این‌که عبارت درجه ۳ فقط یک ریشهٔ $x=2$ داشته باشد عبارت $P$ یا باید ریشهٔ مضاعف $x=2$ داشته باشد که امکان ندارد و یا ریشهٔ حقیقی نداشته باشد.\n$\\Delta < 0 \\Rightarrow 4-4(-a+4) < 0 \\Rightarrow 4a < 12 \\Rightarrow a < 3$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 182,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "$x=-1$ ریشهٔ معادله است بنابراین در آن صدق می‌کند.\n$x=-1 \\Rightarrow (-1)^3-a(-1)^2-2=0 \\Rightarrow a=-3$\nحال عبارت درجه‌سه را بر $x+1$ تقسیم کرده آن را تجزیه می‌کنیم.\n$x^3+3x^2-2=(x+1)(x^2+2x-2)$\n$\\alpha$ و $\\beta$ ریشه‌های $x^2+2x-2=0$ می‌باشند.\n$\\alpha^2+\\beta^2=S^2-2P=(-2)^2-2(-2)=8$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 183,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "معادله را به صورت خطی می‌نویسیم.\n$\\frac{a}{a+3b}=\\frac{b}{2a} \\Rightarrow 2a^2=ab+3b^2 \\Rightarrow 2a^2-ab-3b^2=0$\nدو طرف معادله را بر $b^2$ تقسیم کرده و $\\frac{a}{b}$ را برابر $x$ قرار می‌دهیم.\n$2(\\frac{a}{b})^2-\\frac{a}{b}-3=0 \\Rightarrow 2x^2-x-3=0 \\Rightarrow \\begin{cases} x=-1 & \\text{غ ق ق} \\\\ x=\\frac{3}{2} \\end{cases}$\n$x=\\frac{3}{2} \\Rightarrow \\frac{a}{b}=\\frac{3}{2} \\Rightarrow a=\\frac{3}{2}b$\n$\\frac{\\text{محیط}}{\\text{عرض}}=\\frac{2a+2b}{b}=\\frac{3b+2b}{b}=5$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 184,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "در مستطیل طلایی نسبت طول به عرض برابر عدد طلایی $\\frac{\\sqrt{5}+1}{2}$ است.\nاگر عرض مستطیل برابر $a$ باشد طول مستطیل $b=\\frac{\\sqrt{5}+1}{2}a$ است.\nمحیط مستطیل $=2(a+b)=6+2\\sqrt{5} \\Rightarrow a+b=3+\\sqrt{5}$\n$\\Rightarrow a+\\frac{\\sqrt{5}+1}{2}a=3+\\sqrt{5} \\Rightarrow (\\frac{3+\\sqrt{5}}{2})a=3+\\sqrt{5}$\n$\\Rightarrow a=2 \\Rightarrow b=\\sqrt{5}+1 \\Rightarrow S=ab=2(\\sqrt{5}+1)$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 185,
+      "solution_page": "page_0018.jpg",
+      "solution_text": "دامنهٔ معادله $\\mathbb{R} - \\{1, 2\\}$ می‌باشد. دو طرف معادله را در $(x-1)(x-2)$ ضرب می‌کنیم:\n$\\frac{x}{x-1}+\\frac{3}{x^2-3x+2}=\\frac{3}{x-2} \\Rightarrow x(x-2)+3=3(x-1)$\n$\\Rightarrow x^2-5x+6=0 \\Rightarrow (x-2)(x-3)=0$\n$\\Rightarrow \\begin{cases} x=2 & \\text{ (عضو دامنه نیست) غ ق ق } \\\\ x=3 & \\checkmark \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 186,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "با فرض $x \\neq \\pm 3$ دو طرف معادله را در $x^2-9$ ضرب می‌کنیم.\n$$ \\frac{a}{x-3} + \\frac{2}{x+3} = 1 \\Rightarrow a(x+3) + 2(x-3) = x^2 - 9 $$\n$$ \\Rightarrow x^2 - (a+2)x - 3a - 3 = 0 $$\nمجموع ریشه‌ها برابر ۶ است: $S = \\alpha + \\beta = a + 2 = 6 \\Rightarrow a = 4$\nحاصل‌ضرب ریشه‌ها: $P = \\alpha\\beta = -3a - 3 = -15$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 187,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "با فرض $x \\neq \\pm 1$ دو طرف معادله را در $x^2-1$ ضرب می‌کنیم.\n$$ \\frac{2x}{x-1} + \\frac{x-a}{x^2-1} = 2 \\Rightarrow 2x(x+1) + (x-a) = 2(x^2 - 1) $$\n$$ \\Rightarrow 3x = a - 2 \\Rightarrow x = \\frac{a-2}{3} $$\nاین معادله به شرطی جواب ندارد که $x = \\pm 1$ باشد.\n$$ \\begin{cases} \\frac{a-2}{3} = 1 \\\\ \\frac{a-2}{3} = -1 \\end{cases} \\Rightarrow a=5 \\text{ یا } a=-1 \\Rightarrow 5-1=4 $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 188,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "$x=3$ ریشهٔ معادله است. بنابراین در آن صدق می‌کند.\n$$ \\frac{3+3}{3-2} + \\frac{3a+3}{3-4} = 12 \\Rightarrow 3a+3 = -6 \\Rightarrow a = -3 $$\nحال مقدار $a$ را مساوی ۳- قرار داده و دو طرف معادله را در $(x-2)(x-4)$ ضرب می‌کنیم.\n$$ \\frac{x+3}{x-2} + \\frac{-3x+3}{x-4} = 12 $$\n$$ \\Rightarrow (x+3)(x-4) + (-3x+3)(x-2) = 12(x-2)(x-4) $$\n$$ \\Rightarrow 14x^2 - 80x + 114 = 0 $$\nریشه‌های معادله $b$ و $3$ هستند و حاصل‌ضرب آن‌ها $\\frac{114}{14}$ است.\n$$ 3b = \\frac{114}{14} \\Rightarrow b = \\frac{19}{7} \\Rightarrow \\frac{3}{b} = \\frac{21}{19} $$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 189,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "$5$ درصد از $120$ کیلوگرم محلول آب‌نمک اولیه، نمک می‌باشد.\nمقدار نمک اولیه $ \\frac{5}{100} \\times 120 = 6 \\text{ kg} $\nمقدار آب اولیه $ 120 - 6 = 114 \\text{ kg} \\Rightarrow $ مقدار نمک جدید $ a = 6 + 2 = 8 \\text{ kg} $\nبرای تولید آب‌نمک $8$ درصدی با $8$ کیلوگرم نمک نیاز به $100$ کیلوگرم محلول یا به عبارتی $100 - 8 = 92$ کیلوگرم آب است.\nبنابراین باید $114 - 92 = 22$ کیلوگرم آب را تبخیر کنیم.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 190,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "$40$ درصد از $60$ گرم محلول موجود مادهٔ حل‌شدنی است.\nمادهٔ حل‌شدنی اولیه $ \\frac{40}{100} \\times 60 = 24 \\text{ g} \\Rightarrow $ مقدار آب $ 60 - 24 = 36 \\text{ g} $\nاگر میزان مادهٔ حل‌شدنی در محلول $70$ درصد را $x$ در نظر بگیریم خواهیم داشت:\n$$ \\frac{x}{x+36} = \\frac{70}{100} \\Rightarrow 10x = 7x + 252 \\Rightarrow x = 84 $$\nمیزان مادهٔ حل‌شدنی اضافه شده $ \\Rightarrow 84 - 24 = 60 \\text{ g} $",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 191,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "میزان اسید خالص در هر محلول را به دست می‌آوریم.\nاسید خالص در محلول اول $ \\frac{25}{100} \\times 70 = 17/5 $\nاسید خالص در محلول دوم $ \\frac{65}{100} \\times x = 0/65x $\nغلظت محلول جدید: $ \\frac{17/5 + 0/65x}{70 + x} \\ge \\frac{40}{100} $\n$$ \\Rightarrow 175 + 6/5x \\ge 280 + 4x \\Rightarrow 2/5x \\ge 105 $$\n$$ \\Rightarrow x \\ge \\frac{105}{2/5} \\Rightarrow x \\ge 42 $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 192,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "اگر شیرین در $x$ ساعت کار را انجام دهد فرهاد در $2x$ ساعت کار را تمام می‌کند. بنابراین شیرین در ۱ ساعت $\\frac{1}{x}$ کار و فرهاد $\\frac{1}{2x}$ کار را انجام می‌دهند. این دو با هم در ۶ ساعت کار را تمام می‌کنند یعنی با هم در ۱ ساعت $\\frac{1}{6}$ کار را انجام می‌دهند. بنابراین:\n$$ \\frac{1}{x} + \\frac{1}{2x} = \\frac{1}{6} \\Rightarrow \\frac{3}{2x} = \\frac{1}{6} \\Rightarrow x = 9 \\text{ \\checkmark } $$\nاختلاف زمان اتمام کار این دو نفر همان $x$ می‌باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 193,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "اگر نقی در $x$ ساعت ساختمان را خراب کند ارسطو در $x+18$ ساعت این کار را انجام می‌دهد. نقی در ۱ ساعت $\\frac{1}{x}$ کار و ارسطو $\\frac{1}{x+18}$ کار را انجام می‌دهند. این دو با هم ۱۲ ساعته ساختمان را خراب می‌کنند یعنی در ۱ ساعت $\\frac{1}{12}$ کار را انجام می‌دهند. بنابراین:\n$$ \\frac{1}{x} + \\frac{1}{x+18} = \\frac{1}{12} \\Rightarrow \\frac{2x+18}{x(x+18)} = \\frac{1}{12} $$\n$$ \\Rightarrow x(x+18) = 12(2x+18) \\Rightarrow x^2 - 6x - 216 = 0 $$\n$$ \\Rightarrow (x+12)(x-18) = 0 \\Rightarrow \\begin{cases} x = -12 & \\text{غ ق ق} \\\\ x = 18 & \\text{\\checkmark} \\end{cases} $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 194,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "اگر علی در $x$ ساعت کار را تمام کند احمد در $2x$ ساعت کار را انجام می‌دهد. علی در ۱ ساعت $\\frac{1}{x}$ و احمد $\\frac{1}{2x}$ کار را انجام می‌دهند. این دو نفر با هم در ۲۰ ساعت کار را به اتمام می‌رسانند یعنی در ۱ ساعت $\\frac{1}{20}$ کار را انجام می‌دهند. بنابراین:\n$$ \\frac{1}{x} + \\frac{1}{2x} = \\frac{1}{20} \\Rightarrow \\frac{3}{2x} = \\frac{1}{20} \\Rightarrow x = 30 $$\nبعد از ۵ ساعت کار مشترک علی و احمد، $\\frac{1}{4}$ کار انجام شده است. بنابراین علی و بهروز باید $\\frac{3}{4}$ مابقی را انجام دهند. علی و بهروز هر یک در ۳۰ ساعت کل کار را انجام می‌دهد. در نتیجه با کار مشترک در ۱۵ ساعت کل کار را انجام می‌دهند. بنابراین برای انجام $\\frac{3}{4}$ کار به $15 \\times \\frac{3}{4} = 11/25$ ساعت نیاز دارند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 195,
+      "solution_page": "page_0019.jpg",
+      "solution_text": "سرعت قایق در آب راکد را $v$ می‌نامیم. سرعت قایق در مسیر رفت $v+8$ و در مسیر برگشت $v-8$ می‌باشد. می‌دانیم $t = \\frac{x}{v}$.\nزمان رفت: $t_1 = \\frac{16}{v+8}$\nزمان برگشت: $t_2 = \\frac{16}{v-8}$\n$$ \\Rightarrow t_1 + t_2 = \\frac{5}{6} $$\n$$ \\Rightarrow \\frac{16}{v+8} + \\frac{16}{v-8} = \\frac{5}{6} \\Rightarrow \\frac{16(2v)}{(v+8)(v-8)} = \\frac{5}{6} $$\n$$ \\Rightarrow 5(v^2-64) = 192v \\Rightarrow 5v^2 - 192v - 320 = 0 $$\nروش $ac \\Rightarrow v'^2 - 192v' - 1600 = 0 $\n$$ \\Rightarrow (v'+8)(v'-200) = 0 \\Rightarrow \\begin{cases} v' = -8 \\\\ v' = 200 \\end{cases} \\Rightarrow \\begin{cases} v = \\frac{-8}{5} & \\text{غ ق ق} \\\\ v = \\frac{200}{5} = 40 & \\text{\\checkmark} \\end{cases} $$\n**نکته:** حل معادله درجه‌دو به روش $ac$\nوقتی در معادلهٔ $ax^2+bx+c=0$ ، $a \\neq 1$ باشد، حل معادله به روش تجزیه مشکل است. ضریب $x^2$ را تبدیل به یک کرده و $c$ را در $a$ ضرب می‌کنیم تا معادله به شکل $x^2+bx+ac=0$ تبدیل شود. پس از به دست آوردن ریشه‌های معادلهٔ جدید به روش تجزیه جواب‌های به دست آمده را بر $a$ تقسیم می‌کنیم تا ریشهٔ معادلهٔ اصلی به دست آید.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 196,
+      "solution_page": "page_0020.jpg",
+      "solution_text": "سرعت باد را $v$ می‌نامیم. سرعت پرنده در مسیر رفت $70 + v$ و در مسیر برگشت $70 - v$ خواهد بود. می‌دانیم: $t = \\frac{x}{v}$\n$t_1 = \\frac{720}{70 + v}$ زمان مسیر رفت\n$t_2 = \\frac{720}{70 - v}$ زمان مسیر برگشت\n$\\Rightarrow t_2 - t_1 = 3$\n$\\Rightarrow \\frac{720}{70 - v} - \\frac{720}{70 + v} = 3 \\Rightarrow \\frac{720(2v)}{(70 - v)(70 + v)} = 3$\n$\\Rightarrow 70^2 - v^2 = 480v \\Rightarrow v^2 + 480v - 4900 = 0$\n$\\Rightarrow (v + 490)(v - 10) = 0 \\Rightarrow \\begin{cases} v = -490 \\quad \\text{غ ق ق} \\\\ v = 10 \\quad \\checkmark \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 197,
+      "solution_page": "page_0020.jpg",
+      "solution_text": "دامنهٔ معادله $5 + \\sqrt{x^2 - 1} = 2x$، $\\mathbb{R}$ می‌باشد ($x^2 + 5 \\ge 0$).\nاما شرط وجود جواب $2x - 1 \\ge 0$ است که $x \\ge \\frac{1}{2}$ نتیجه می‌شود. بنابراین با این شرط دو طرف معادله را به توان $2$ می‌رسانیم تا رادیکال از بین برود.\n$\\xrightarrow{x \\ge \\frac{1}{2}} (2x-1)^2 = x^2 + 5 \\Rightarrow 3x^2 - 4x - 4 = 0$\n$\\Rightarrow x = \\frac{4 \\pm \\sqrt{16 + 48}}{6} \\Rightarrow \\begin{cases} 2 \\quad \\checkmark \\\\ -\\frac{2}{3} \\quad \\text{غ ق ق} \\end{cases}$\n$x = -\\frac{2}{3}$ در شرط $x \\ge \\frac{1}{2}$ صدق نمی‌کند. بنابراین معادله تنها یک جواب دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 198,
+      "solution_page": "page_0020.jpg",
+      "solution_text": "ابتدا $x$ را در معادله برابر $2$ قرار داده، مقدار $a$ را به دست می‌آوریم.\n$\\sqrt{5x + a} = x - 1 \\xrightarrow{x=2} \\sqrt{10 + a} = 1$\n$\\Rightarrow a + 10 = 1 \\Rightarrow a = -9$\nشرط دامنه $x \\ge \\frac{9}{5}$ و شرط وجود جواب $x \\ge 1$ است که اشتراک آن‌ها $x \\ge \\frac{9}{5}$ می‌باشد. دو طرف معادله را به توان $2$ می‌رسانیم.\n$\\sqrt{5x - 9} = x - 1 \\Rightarrow 5x - 9 = x^2 - 2x + 1$\n$\\Rightarrow x^2 - 7x + 10 = 0 \\Rightarrow (x - 2)(x - 5) = 0 \\Rightarrow \\begin{cases} x = 2 \\quad \\checkmark \\\\ x = 5 \\quad \\checkmark \\end{cases}$\nریشهٔ دیگر معادله $x = 5$ است که در $2$ صدق می‌کند.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 199,
+      "solution_page": "page_0020.jpg",
+      "solution_text": "عبارت رادیکالی را سمت چپ نگه داشته بقیهٔ عبارت را به سمت راست منتقل می‌کنیم.\n$\\sqrt{2a + 22} = 1 - a$\nشرط دامنه $a \\ge -11$ و شرط وجود جواب $a \\le 1$ است که اشتراک آن‌ها $-11 \\le a \\le 1$ می‌باشد.\nدو طرف معادله را به توان $2$ می‌رسانیم.\n$\\Rightarrow 2a + 22 = a^2 - 2a + 1 \\Rightarrow a^2 - 4a - 21 = 0$\n$\\Rightarrow (a + 3)(a - 7) = 0 \\Rightarrow \\begin{cases} a = -3 \\quad \\checkmark \\\\ a = 7 \\quad \\text{غ ق ق} \\end{cases}$\n$\\Rightarrow \\frac{a}{a+2} = \\frac{-3}{-1} = 3$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 200,
+      "solution_page": "page_0020.jpg",
+      "solution_text": "ابتدا عدد $2$ را به سمت چپ معادله انتقال داده و با شرط $x \\ge 3$ دو طرف معادله را به توان $2$ می‌رسانیم.\n$x = 2 + 2\\sqrt{x - 3} \\Rightarrow x - 2 = 2\\sqrt{x - 3}$\n$\\xrightarrow{x \\ge 3} (x - 2)^2 = 4(x - 3) \\Rightarrow x^2 - 8x + 16 = 0$\n$\\Rightarrow (x - 4)^2 = 0 \\Rightarrow x = 4$\nمعادله یک ریشهٔ مضاعف دارد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 201,
+      "solution_page": "page_0020.jpg",
+      "solution_text": "$x = 0$ یکی از ریشه‌های معادله $\\sqrt{9 - x} = |x + a|$ است.\nبنابراین در آن صدق می‌کند.\n$\\sqrt{9 - 0} = |0 + a| \\Rightarrow |a| = 3 \\Rightarrow a = \\pm 3$\nبا توجه به مقادیر به دست آمده برای $a$، در هر حالت با شرط $x \\le 9$ دو طرف معادله را به توان $2$ رسانده و ریشهٔ دیگر را به دست می‌آوریم.\n$a = 3 \\Rightarrow \\sqrt{9 - x} = |x + 3| \\xrightarrow{x \\le 9} 9 - x = (x + 3)^2$\n$\\Rightarrow x^2 + 7x = 0 \\Rightarrow \\begin{cases} x = 0 \\\\ x = -7 \\quad \\checkmark \\end{cases}$\n$a = -3 \\Rightarrow \\sqrt{9 - x} = |x - 3| \\xrightarrow{x \\le 9} 9 - x = (x - 3)^2$\n$\\Rightarrow x^2 - 5x = 0 \\Rightarrow \\begin{cases} x = 0 \\\\ x = 5 \\quad \\checkmark \\end{cases}$\nمجموع مقادیر ممکن برای ریشهٔ دیگر $-7 + 5 = -2$ می‌باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 202,
+      "solution_page": "page_0020.jpg",
+      "solution_text": "شروط دامنه عبارت‌اند از:\n$(1) \\quad x - 4 \\ge 0 \\Rightarrow x \\ge 4$\n$(2) \\quad 4 - \\sqrt{x - 4} \\ge 0 \\Rightarrow \\sqrt{x - 4} \\le 4 \\Rightarrow x - 4 \\le 16 \\Rightarrow x \\le 20$\n$(3) \\quad 14 - x \\ge 0 \\Rightarrow x \\le 14$\n$\\xrightarrow{\\cap} D = [4, 14]$\nدو طرف معادله را به توان $2$ می‌رسانیم.\n$\\sqrt{4 - \\sqrt{x - 4}} = \\sqrt{14 - x} \\Rightarrow 4 - \\sqrt{x - 4} = 14 - x$\n$\\Rightarrow \\sqrt{x - 4} = x - 10$\nشرط وجود جواب $x \\ge 10$ می‌باشد که اشتراک آن با دامنه، بازهٔ $[10, 14]$ می‌باشد.\nدو طرف معادله را به توان $2$ می‌رسانیم.\n$x - 4 = x^2 - 20x + 100 \\Rightarrow x^2 - 21x + 104 = 0$\n$\\Rightarrow (x - 8)(x - 13) = 0 \\Rightarrow \\begin{cases} x = 8 \\quad \\text{غ ق ق} \\\\ x = 13 \\quad \\checkmark \\end{cases}$\nتذکر: در بسیاری از سؤالات می‌توان بدون محاسبهٔ دامنه ابتدا معادله را حل کرده، سپس جواب‌های به دست آمده را در معادلهٔ اصلی امتحان نماییم.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 203,
+      "solution_page": "page_0020.jpg",
+      "solution_text": "دامنهٔ معادله $D = [0, \\frac{9}{2}]$ می‌باشد. دو طرف معادله را به توان $2$ می‌رسانیم.\n$\\sqrt{x} + \\sqrt{9 - 2x} = 3 \\Rightarrow x + 9 - 2x + 2\\sqrt{9x - 2x^2} = 9$\n$\\Rightarrow 2\\sqrt{9x - 2x^2} = x \\xrightarrow{\\text{به توان 2}} 4(9x - 2x^2) = x^2$\n$\\Rightarrow 9x^2 - 36x = 0 \\Rightarrow 9x(x - 4) = 0 \\Rightarrow \\begin{cases} x = 0 \\\\ x = 4 \\end{cases}$\nبنابراین: $|x_1 - x_2| = |4 - 0| = 4$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

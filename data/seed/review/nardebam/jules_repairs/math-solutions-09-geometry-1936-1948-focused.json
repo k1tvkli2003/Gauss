@@ -1,0 +1,111 @@
+{
+  "task_id": "math-solutions-09-geometry-1936-1948-focused",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1936,
+      "solution_page": 179,
+      "solution_text": "تمام نقاطی که از $A$ به فاصلهٔ ۳ می‌باشند بر دایرهٔ $C$ به مرکز $A$ و شعاع ۳ قرار دارند. تمام نقاطی که از $B$ به فاصلهٔ $x$ می‌باشند بر دایرهٔ $C'$ به مرکز $B$ و شعاع $x$ قرار دارند. دایرهٔ $C'$ باید دایرهٔ $C$ را در ۲ نقطه قطع کند. با توجه به شکل واضح است شعاع دایرهٔ $C'$ باید از ۵ بیشتر و از ۱۱ کمتر باشد، در نتیجه:\n$$5 < x < 11 \\xrightarrow{x \\in \\mathbb{N}} x \\in \\{6, 7, 8, 9, 10\\}$$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1937,
+      "solution_page": 179,
+      "solution_text": "به مرکز هر رأس لوزی یک دایره به شعاع ۲ رسم می‌کنیم.\nناحیهٔ مورد نظر $A$ قسمت رنگی می‌باشد. زوایای $A$ و $B$ و هم‌چنین $C$ و $D$ مکمل یکدیگرند. بنابراین مساحت قسمت رنگی برابر مساحت یک دایره به شعاع ۲ می‌باشد.\n$S_{A} = \\pi r^{2} = 4\\pi$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1938,
+      "solution_page": 179,
+      "solution_text": "تمام نقاطی که از خط $d$ به فاصلهٔ ۴ می‌باشند بر دو خط $l_1$ و $l_2$ که موازی با $d$ و به فاصلهٔ ۴ از آن می‌باشند قرار دارند.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1939,
+      "solution_page": 180,
+      "solution_text": "تمام نقاطی که از دو خط $d_1$ و $d_3$ به یک فاصله‌اند بر نیمسازهای $\\ell_1$ و $\\ell_2$ و تمام نقاطی که از دو خط $d_2$ و $d_3$ به یک فاصله‌اند بر نیمسازهای $\\ell_3$ و $\\ell_4$ قرار دارند.\nدو نقطهٔ $A$ و $B$ از سه خط به یک فاصله‌اند.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1940,
+      "solution_page": 180,
+      "solution_text": "از $D$ عمود $DH$ را رسم می‌کنیم. $D$ بر روی نیمساز بوده و بنابراین $DH = AD = 3$ می‌باشد.\nنتیجه می‌شود دو مثلث $ABD$ و $BDH$ برابر بوده و در نتیجه مساحت‌های یکسان دارند.\n$S_{BCD} = S_{ABD} + 6 \\Rightarrow S_{BDH} + S_{CDH} = S_{ABD} + 6 \\Rightarrow S_{CDH} = 6 \\Rightarrow \\frac{DH \\times CH}{2} = 6 \\Rightarrow \\frac{3CH}{2} = 6 \\Rightarrow CH = 4$\n$CD^2 = DH^2 + CH^2 = 3^2 + 4^2 = 25 \\Rightarrow CD = 5$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1941,
+      "solution_page": 180,
+      "solution_text": "$O$ بر عمودمنصف $AB$ واقع است؛ بنابراین $OA = OB$.\nنتیجه:\n$O$ بر عمودمنصف $BC$ واقع است در نتیجه: $OB = OC$\n$O$ بر عمودمنصف $CD$ قرار دارد بنابراین: $OC = OD$\nاز تساوی‌های بالا نتیجه می‌گیریم $OA = OD$ بوده و بنابراین $O$ بر عمودمنصف $AD$ قرار دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1942,
+      "solution_page": 180,
+      "solution_text": "همواره در صفحه یک نقطه وجود دارد که از سه نقطهٔ غیرواقع بر یک خط راست به یک فاصله باشد. اگر این نقاط را $A$، $B$ و $C$ بنامیم، نقطهٔ مورد نظر محل برخورد عمودمنصف‌های اضلاع مثلث $ABC$ است.\nاما اگر سه نقطهٔ $A$، $B$ و $C$ بر یک خط راست واقع باشند، هیچ نقطه‌ای وجود ندارد که از این سه نقطه به یک فاصله باشد. زیرا عمودمنصف‌های آن‌ها موازی‌اند.\nسایر گزینه‌ها احکام کلی بوده و مثال نقض ندارند.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1943,
+      "solution_page": 180,
+      "solution_text": "قضیهٔ دوشرطی قضیه‌ای است که هم خود قضیه و هم عکس آن درست باشد. مانند قضیهٔ تالس و فیثاغورس.\nدر متوازی‌الاضلاع زوایای مقابل برابرند و اگر در یک چهارضلعی زوایای مقابل برابر باشند، قطعاً متوازی‌الاضلاع است.\nدر یک لوزی قطرها بر هم عمودند اما اگر در یک چهارضلعی قطرها بر هم عمود باشند لزوماً لوزی نمی‌باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1944,
+      "solution_page": 180,
+      "solution_text": "اگر $a = 10$، $b = 26$ و $c = 2$ باشد نادرست خواهد بود.\n[۱]: $\\frac{a}{3} = \\frac{b}{5} = \\frac{c}{13} = \\frac{b+c}{5+13} \\Rightarrow \\frac{a}{3} = \\frac{b+c}{18} \\Rightarrow b+c = 6a$\n[۳]: $\\frac{a}{3} = \\frac{b}{5} = \\frac{c}{13} = \\frac{c-a}{13-3} \\Rightarrow \\frac{b}{5} = \\frac{c-a}{10} \\Rightarrow c-a = 2b$\n[۴]: $\\frac{a}{3} = \\frac{b}{5} = \\frac{c}{13} = \\frac{a-b+c}{3-5+13} \\Rightarrow \\frac{a}{3} = \\frac{a-b+c}{11}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1945,
+      "solution_page": 180,
+      "solution_text": "دو مستطیل متشابه هستند.\n$\\frac{CD}{AD} = \\frac{BC}{DE} \\Rightarrow \\frac{24 + DE}{5} = \\frac{5}{DE}$\n$\\xrightarrow{DE = x} x^2 + 24x - 25 = 0 \\Rightarrow \\begin{cases} x = 1 \\checkmark \\\\ x = -25 \\text{ ق‌ق‌غ} \\end{cases}$\nمحیط $BCEF = 2(BC + EC) = 2(5 + 24) = 58$\nمحیط $ADEF = 2(AD + DE) = 2(1 + 5) = 12$\nنسبت محیط‌ها $= \\frac{58}{12} = \\frac{29}{6} = 4/83$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1946,
+      "solution_page": 180,
+      "solution_text": "با توجه به شکل، طبق قضیهٔ تالس داریم:\n$\\frac{x}{4x} = \\frac{\\alpha}{8} \\Rightarrow \\alpha = 2$\n$\\frac{2x}{4x} = \\frac{\\beta}{8} \\Rightarrow \\beta = 4$\n$\\frac{3x}{4x} = \\frac{\\gamma}{8} \\Rightarrow \\gamma = 6$\n$\\alpha + \\beta + \\gamma = 12$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1947,
+      "solution_page": 180,
+      "solution_text": "فرض می‌کنیم $MD = x$ و $MC = y$ باشد. مطابق قضیهٔ تالس داریم:\n$\\frac{MD}{MA} = \\frac{CD}{AB} \\Rightarrow \\frac{x}{x+15} = \\frac{16}{24} = \\frac{2}{3} \\Rightarrow 3x = 2x + 30 \\Rightarrow x = 30$\n$\\frac{MC}{MB} = \\frac{CD}{AB} \\Rightarrow \\frac{y}{y+12} = \\frac{16}{24} = \\frac{2}{3} \\Rightarrow 3y = 2y + 24 \\Rightarrow y = 24$\nمحیط $MAB = 30 + 15 + 24 + 12 + 24 = 105$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1948,
+      "solution_page": 180,
+      "solution_text": "$DEFB$ متوازی‌الاضلاع است، بنابراین $DE = BF = y$ و $EF = DB = x$. با توجه به قضیهٔ تالس داریم:\n$\\frac{AE}{AC} = \\frac{DE}{BC} \\Rightarrow \\frac{2}{3} = \\frac{y}{BC} \\Rightarrow BC = \\frac{3}{2}y \\Rightarrow FC = \\frac{y}{2}$\nاز طرفی: $\\frac{ME}{FC} = \\frac{2}{3} \\Rightarrow ME = \\frac{2}{3} \\times \\frac{y}{2} = \\frac{y}{3}$\nدر متوازی‌الاضلاع $\\hat{E} = \\hat{B}$ است. پس:\n$S_{ABC} = \\frac{1}{2} AB \\times BC \\times \\sin \\hat{B} = \\frac{1}{2} \\times 3x \\times \\frac{3y}{2} \\sin \\hat{B}$\n$S_{EMF} = \\frac{1}{2} EM \\times FE \\times \\sin \\hat{E} = \\frac{1}{2} \\times \\frac{y}{3} \\times x \\times \\sin \\hat{E}$\n$\\Rightarrow \\frac{S_{EMF}}{S_{ABC}} = \\frac{\\frac{1}{6}xy}{\\frac{9}{4}xy} = \\frac{2}{27}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    }
+  ],
+  "review_notes": []
+}

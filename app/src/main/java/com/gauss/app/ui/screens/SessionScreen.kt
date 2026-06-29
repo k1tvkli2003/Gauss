@@ -21,8 +21,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.CheckCircle
+import androidx.compose.material.icons.rounded.Cancel
+import androidx.compose.material.icons.rounded.HourglassEmpty
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -33,18 +39,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.gauss.app.data.AttemptStatus
-import com.gauss.app.data.Categories
+import com.gauss.app.data.ComprehensiveTaxonomy
 import com.gauss.app.ui.components.DifficultyBadge
 import com.gauss.app.ui.components.DrawingCanvas
 import com.gauss.app.ui.components.GeniusKey
 import com.gauss.app.ui.components.MathText
 import com.gauss.app.ui.components.OptionButton
+import com.gauss.app.ui.components.RichContent
 import com.gauss.app.ui.components.Timer
 import com.gauss.app.ui.components.clickableNoRipple
 import com.gauss.app.ui.exam.ExamViewModel
@@ -71,6 +79,7 @@ fun SessionScreen(nav: NavController, vm: ExamViewModel) {
     var showScratch by remember { mutableStateOf(false) }
 
     val isRevealed = revealed[vm.index] == true
+    val scheme = MaterialTheme.colorScheme
 
     fun goResults() {
         vm.finishAndSave {
@@ -81,7 +90,7 @@ fun SessionScreen(nav: NavController, vm: ExamViewModel) {
     Column(
         Modifier
             .fillMaxSize()
-            .background(GaussColors.Bg)
+            .background(scheme.background)
             .systemBarsPadding(),
     ) {
         // Top bar
@@ -101,7 +110,7 @@ fun SessionScreen(nav: NavController, vm: ExamViewModel) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     "سؤال ${toFa(vm.index + 1)} / ${toFa(vm.questions.size)}",
-                    color = GaussColors.Muted,
+                    color = scheme.onSurfaceVariant,
                     fontSize = 14.sp,
                 )
                 Text(
@@ -128,8 +137,8 @@ fun SessionScreen(nav: NavController, vm: ExamViewModel) {
             val scratchPane: @Composable (Modifier) -> Unit = { mod ->
                 Column(mod.padding(12.dp)) {
                     Text(
-                        "دفتر طراحی · با قلم بنویس ✍️",
-                        color = GaussColors.Muted,
+                        "دفتر حل · با قلم بنویس",
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         fontSize = 12.sp,
                         textAlign = TextAlign.End,
                         modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
@@ -155,7 +164,7 @@ fun SessionScreen(nav: NavController, vm: ExamViewModel) {
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
                         TabToggle("سؤال", !showScratch, Modifier.weight(1f)) { showScratch = false }
-                        TabToggle("دفتر طراحی ✍️", showScratch, Modifier.weight(1f)) { showScratch = true }
+                        TabToggle("دفتر حل", showScratch, Modifier.weight(1f)) { showScratch = true }
                     }
                     if (showScratch) scratchPane(Modifier.fillMaxSize())
                     else questionPane(Modifier.fillMaxSize())
@@ -202,6 +211,7 @@ private fun QuestionPane(
     val attempt = vm.attempts[vm.index]
     val selected = attempt?.selectedOption
     val isLast = vm.isLast
+    val scheme = MaterialTheme.colorScheme
 
     Column(modifier) {
         Column(
@@ -216,9 +226,8 @@ private fun QuestionPane(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    Categories.label(config.subject, q.category) +
-                        (q.subCategory?.let { " · $it" } ?: ""),
-                    color = GaussColors.Muted,
+                    ComprehensiveTaxonomy.label(q.topicKey),
+                    color = scheme.onSurfaceVariant,
                     fontSize = 12.sp,
                 )
                 DifficultyBadge(q.difficulty)
@@ -229,37 +238,40 @@ private fun QuestionPane(
                     .padding(top = 12.dp, bottom = 16.dp)
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(16.dp))
-                    .background(GaussColors.Surface)
-                    .border(1.dp, GaussColors.Border, RoundedCornerShape(16.dp))
+                    .background(scheme.surface)
+                    .border(1.dp, scheme.outline, RoundedCornerShape(16.dp))
                     .padding(16.dp),
             ) {
-                MathText(q.questionText, fontSize = 18.sp)
+                    RichContent(q.stem, fontSize = 18.sp)
             }
 
             q.options.forEachIndexed { i, opt ->
                 OptionButton(
                     index = i + 1,
-                    text = opt,
+                        text = opt,
+                        blocks = q.optionBlocks[i],
                     selected = selected == i + 1,
                     onClick = { vm.answer(i + 1) },
                 )
             }
 
+            attempt?.let { AnswerFeedback(it.status) }
+
             if (isRevealed) {
-                GeniusKey(q.classicSolution, q.smartShortcut, Modifier.padding(top = 8.dp))
+                GeniusKey(q.solution, q.shortcut, Modifier.padding(top = 8.dp))
             }
         }
 
         // Reveal bar
         Box(Modifier.padding(horizontal = 20.dp, vertical = 6.dp)) {
             val canReveal = attempt != null
-            val accent = if (isRevealed) GaussColors.NeonPurple else GaussColors.NeonGreen
+            val accent = if (isRevealed) scheme.secondary else scheme.primary
             Box(
                 Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(if (canReveal) accent.soft(0.10f) else GaussColors.Card)
-                    .border(1.dp, if (canReveal) accent else GaussColors.Border, RoundedCornerShape(12.dp))
+                    .background(if (canReveal) accent.soft(0.12f) else scheme.surfaceVariant)
+                    .border(1.dp, if (canReveal) accent else scheme.outline, RoundedCornerShape(12.dp))
                     .clickableNoRipple(canReveal) { onToggleReveal() }
                     .padding(vertical = 10.dp),
                 contentAlignment = Alignment.Center,
@@ -267,10 +279,10 @@ private fun QuestionPane(
                 Text(
                     when {
                         isRevealed -> "بستن حل"
-                        canReveal -> "نمایش حل ✨"
-                        else -> "اول جواب بده، بعد حل ✍️"
+                        canReveal -> "نمایش حل"
+                        else -> "اول پاسخ بده، بعد حل را ببین"
                     },
-                    color = if (canReveal) accent else GaussColors.Muted,
+                    color = if (canReveal) accent else scheme.onSurfaceVariant,
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
                 )
@@ -285,10 +297,10 @@ private fun QuestionPane(
             vm.questions.forEachIndexed { i, _ ->
                 val a = vm.attempts[i]
                 val bg = when {
-                    i == vm.index -> GaussColors.NeonBlue
-                    a?.status == AttemptStatus.SKIPPED -> GaussColors.NeonAmber
-                    a != null -> GaussColors.NeonPurple
-                    else -> GaussColors.Raised
+                    i == vm.index -> scheme.primary
+                    a?.status == AttemptStatus.SKIPPED -> GaussColors.Warning
+                    a != null -> scheme.secondary
+                    else -> scheme.surfaceVariant
                 }
                 Box(
                     Modifier
@@ -301,7 +313,7 @@ private fun QuestionPane(
                 ) {
                     Text(
                         toFa(i + 1),
-                        color = if (i == vm.index) GaussColors.Bg else GaussColors.Text,
+                        color = if (i == vm.index) scheme.onPrimary else scheme.onSurface,
                         fontWeight = FontWeight.Bold,
                         fontSize = 13.sp,
                     )
@@ -326,22 +338,69 @@ private fun QuestionPane(
                 .fillMaxWidth()
                 .padding(horizontal = 20.dp, vertical = 10.dp)
                 .clip(RoundedCornerShape(16.dp))
-                .background(GaussColors.NeonGreen)
+                .background(scheme.primary)
                 .clickableNoRipple { onFinish() }
                 .padding(vertical = 14.dp),
             contentAlignment = Alignment.Center,
         ) {
-            Text("پایان و دیدن کارنامه", color = GaussColors.Bg, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+            Text("پایان و دیدن کارنامه", color = scheme.onPrimary, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+        }
+    }
+}
+
+@Composable
+private fun AnswerFeedback(status: AttemptStatus) {
+    val scheme = MaterialTheme.colorScheme
+    val label: String
+    val detail: String
+    val color: Color
+    val icon: ImageVector
+    when (status) {
+        AttemptStatus.CORRECT -> {
+            label = "درست بود"
+            detail = "+۵ XP احتمالی بعد از پایان آزمون"
+            color = GaussColors.Success
+            icon = Icons.Rounded.CheckCircle
+        }
+        AttemptStatus.WRONG -> {
+            label = "غلط ثبت شد"
+            detail = "بعداً از Revenge برش می‌گردونیم"
+            color = scheme.error
+            icon = Icons.Rounded.Cancel
+        }
+        AttemptStatus.SKIPPED -> {
+            label = "نزده ماند"
+            detail = "می‌تونی برگردی و جواب بدی"
+            color = GaussColors.Warning
+            icon = Icons.Rounded.HourglassEmpty
+        }
+    }
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .padding(bottom = 12.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(color.soft(0.12f))
+            .border(1.dp, color.soft(0.55f), RoundedCornerShape(16.dp))
+            .padding(14.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(detail, color = scheme.onSurfaceVariant, fontSize = 12.sp)
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(label, color = color, fontWeight = FontWeight.Black)
+            Icon(icon, contentDescription = null, tint = color)
         }
     }
 }
 
 @Composable
 private fun NavBtn(label: String, enabled: Boolean, primary: Boolean = false, onClick: () -> Unit) {
+    val scheme = MaterialTheme.colorScheme
     val bg = when {
-        !enabled -> GaussColors.Card
-        primary -> GaussColors.NeonBlue
-        else -> GaussColors.Raised
+        !enabled -> scheme.surfaceVariant.copy(alpha = 0.55f)
+        primary -> scheme.primary
+        else -> scheme.surfaceVariant
     }
     Box(
         Modifier
@@ -352,7 +411,7 @@ private fun NavBtn(label: String, enabled: Boolean, primary: Boolean = false, on
     ) {
         Text(
             label,
-            color = if (primary && enabled) GaussColors.Bg else GaussColors.Text,
+            color = if (primary && enabled) scheme.onPrimary else scheme.onSurface,
             fontWeight = FontWeight.SemiBold,
             fontSize = 14.sp,
         )
@@ -361,32 +420,34 @@ private fun NavBtn(label: String, enabled: Boolean, primary: Boolean = false, on
 
 @Composable
 private fun SmallTag(label: String, onClick: () -> Unit) {
+    val scheme = MaterialTheme.colorScheme
     Box(
         Modifier
             .clip(RoundedCornerShape(10.dp))
-            .background(GaussColors.Card)
-            .border(1.dp, GaussColors.Border, RoundedCornerShape(10.dp))
+            .background(scheme.surfaceVariant)
+            .border(1.dp, scheme.outline, RoundedCornerShape(10.dp))
             .clickableNoRipple { onClick() }
             .padding(horizontal = 14.dp, vertical = 8.dp),
     ) {
-        Text(label, color = GaussColors.Muted, fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+        Text(label, color = scheme.onSurfaceVariant, fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
     }
 }
 
 @Composable
 private fun TabToggle(label: String, active: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    val scheme = MaterialTheme.colorScheme
     Box(
         modifier
             .clip(RoundedCornerShape(10.dp))
-            .background(if (active) GaussColors.NeonBlue.soft(0.12f) else GaussColors.Card)
-            .border(1.dp, if (active) GaussColors.NeonBlue else GaussColors.Border, RoundedCornerShape(10.dp))
+            .background(if (active) scheme.primaryContainer else scheme.surface)
+            .border(1.dp, if (active) scheme.primary else scheme.outline, RoundedCornerShape(10.dp))
             .clickableNoRipple { onClick() }
             .padding(vertical = 9.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
             label,
-            color = if (active) GaussColors.NeonBlue else GaussColors.Muted,
+            color = if (active) scheme.primary else scheme.onSurfaceVariant,
             fontWeight = FontWeight.SemiBold,
             fontSize = 14.sp,
         )
@@ -401,41 +462,43 @@ private fun ConfirmDialog(
     onConfirm: () -> Unit,
     onDismiss: () -> Unit,
 ) {
+    val scheme = MaterialTheme.colorScheme
     AlertDialog(
         onDismissRequest = onDismiss,
-        containerColor = GaussColors.Surface,
-        titleContentColor = GaussColors.Text,
-        textContentColor = GaussColors.Muted,
+        containerColor = scheme.surface,
+        titleContentColor = scheme.onSurface,
+        textContentColor = scheme.onSurfaceVariant,
         title = { Text(title, fontWeight = FontWeight.Bold) },
         text = { Text(body) },
         confirmButton = {
             TextButton(onClick = onConfirm) {
-                Text(confirm, color = GaussColors.NeonRed, fontWeight = FontWeight.Bold)
+                Text(confirm, color = scheme.error, fontWeight = FontWeight.Bold)
             }
         },
         dismissButton = {
-            TextButton(onClick = onDismiss) { Text("ادامه می‌دم", color = GaussColors.Muted) }
+            TextButton(onClick = onDismiss) { Text("ادامه می‌دم", color = scheme.onSurfaceVariant) }
         },
     )
 }
 
 @Composable
 private fun EmptyState(message: String, onHome: () -> Unit) {
+    val scheme = MaterialTheme.colorScheme
     Column(
-        Modifier.fillMaxSize().background(GaussColors.Bg).systemBarsPadding(),
+        Modifier.fillMaxSize().background(scheme.background).systemBarsPadding(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        Text(message, color = GaussColors.Muted)
+        Text(message, color = scheme.onSurfaceVariant)
         Spacer(Modifier.height(16.dp))
         Box(
             Modifier
                 .clip(RoundedCornerShape(10.dp))
-                .background(GaussColors.Card)
+                .background(scheme.surfaceVariant)
                 .clickableNoRipple { onHome() }
                 .padding(horizontal = 20.dp, vertical = 12.dp),
         ) {
-            Text("خانه", color = GaussColors.Text)
+            Text("خانه", color = scheme.onSurface)
         }
     }
 }

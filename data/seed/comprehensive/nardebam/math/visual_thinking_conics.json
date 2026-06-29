@@ -1,0 +1,6329 @@
+[
+  {
+    "id": "nardebam_math_1405_1638",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر پاره‌خط $AB$ را حول محور $y$ها دوران دهیم، مساحت شکل حاصل کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1638/stem_1.webp",
+        "alt": "پاره‌خط افقی AB از x=1 تا x=3 در y=4",
+        "aspect_ratio": 1.4029
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مساحت مستطیل $ABCD$ برابر $8\\sqrt{2}$ است.\nاگر یال مکعب را $x$ بنامیم $AB = CD = x$ و $AD = BC = \\sqrt{2}x$ می‌باشد، بنابراین:\n$S_{ABCD} = AB \\times BC = x(\\sqrt{2}x) = \\sqrt{2}x^2 = 8\\sqrt{2}$\n$\\Rightarrow x = 2\\sqrt{2} \\Rightarrow \\text{حجم مکعب} = (2\\sqrt{2})^3 = 16\\sqrt{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1638,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            82,
+            128,
+            335,
+            252
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "پاره‌خط افقی AB از x=1 تا x=3 در y=4"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1639",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مستطیلی به اضلاع ۳ و ۴ را یک بار حول طول و یک بار حول عرض آن دوران می‌دهیم. اختلاف دو حجم به دست آمده کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در مستطیل $AMNB$، $AM = BN$ و $AB = MN = 4$ است. ابتدا طول $AM$ را محاسبه می‌کنیم.\n$\\overset{\\Delta}{AMC} : AM^2 = AC^2 + MC^2 = 4^2 + 2^2 = 20 \\Rightarrow AM = 2\\sqrt{5}$\n$S_{AMNB} = AM \\times AB = 2\\sqrt{5} \\times 4 = 8\\sqrt{5}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1639,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1640",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مستطیل شکل مقابل را حول محور عرض‌ها دوران می‌دهیم. اختلاف حجم‌های به دست آمده در دو حالت $x = 1$ و $x = 2$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1640/stem_1.webp",
+        "alt": "مستطیل بین x و x+1 و y=1 تا y=3",
+        "aspect_ratio": 1.4268
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا طول $AB$ را حساب می‌کنیم.\n$\\overset{\\Delta}{ABE} : AB^2 = AE^2 + BE^2$\n$= 3^2 + 4^2 = 25 \\Rightarrow AB = 5$\n$ABCD$ مربع است بنابراین $BC = AB = 5$.\nدر نتیجه:\n$V = AE \\times BE \\times BC = 3 \\times 4 \\times 5 = 60$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1640,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            82,
+            300,
+            315,
+            412
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مستطیل بین x و x+1 و y=1 تا y=3"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1641",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث قائم‌الزاویه‌ای به اضلاع قائم ۳ و ۴ را یک بار حول ضلع کوچک‌تر و یک بار حول ضلع بزرگ‌تر دوران می‌دهیم. اختلاف دو حجم به دست آمده کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "هر یک از اضلاع مثلث $BCD$ قطر یک وجه مکعب بوده و اندازهٔ آن $\\sqrt{2}$ برابر یال مکعب یعنی $2\\sqrt{2}$ است.\nمساحت مثلث متساوی‌الاضلاع به ضلع $a$ برابر $\\frac{\\sqrt{3}}{4}a^2$ است.\nبنابراین:\n$S_{BCD} = \\frac{\\sqrt{3}}{4}a^2 = \\frac{\\sqrt{3}}{4}(2\\sqrt{2})^2 = 2\\sqrt{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1641,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1642",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث قائم‌الزاویه‌ای به اضلاع قائم ۳ و ۴ را حول وتر دوران می‌دهیم. حجم شکل حاصل کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3/6\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4/8\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7/2\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9/6\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "بدیهی است این صفحه عمود بر قاعدهٔ استوانه است. می‌دانیم $AB = BC = 24$.\nاز $O$ مرکز قاعده بر $AB$ عمود $OH$ را رسم می‌کنیم. واضح است $H$ وسط $AB$ می‌باشد.\n$OH^2 = OB^2 - BH^2 = 13^2 - 12^2 = 25 \\Rightarrow OH = 5$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1642,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1643",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث متساوی‌الاضلاع به ضلع ۴ را حول یکی از اضلاع دوران می‌دهیم. حجم شکل حاصل کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مساحت کل شکل از سه قسمت تشکیل شده است.\n۱) نصف مساحت جانبی استوانه:\n$S_1 = \\pi rh = \\pi \\times 4 \\times 8 = 32\\pi$\n۲) دو قاعدهٔ نیم‌دایره‌ای‌شکل:\n$S_2 = 2(\\frac{\\pi r^2}{2}) = \\pi r^2 = 16\\pi$\n۳) مستطیل سطح مقطع:\n$S_3 = (2r) \\times h = 8 \\times 8 = 64$\nبنابراین:\n$S = S_1 + S_2 + S_3 = 64 + 48\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1643,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1644",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مکعبی به طول یال ۲ را حول یکی از یال‌ها دوران می‌دهیم. حجم شکل حاصل کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$32\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل $AH = BH = \\frac{AB}{2}$ و $OH = 9$، $OA = 15$ و $BC = 10$ است.\n$AH^2 = OA^2 - OH^2 = 15^2 - 9^2 = (15 - 9)(15 + 9) = 144$\n$\\Rightarrow AH = 12 \\Rightarrow AB = 24$\nبنابراین:\n$S_{ABCD} = AB \\times BC = 24 \\times 10 = 240$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1644,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1645",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مساحت مثلث $ABC$ برابر ۱۲ است. اگر این مثلث را حول ضلع $AB$ به طول ۶ دوران دهیم، حجم شکل حاصل کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1645/stem_1.webp",
+        "alt": "مثلث ABC با قاعده AB به طول 6",
+        "aspect_ratio": 1.7917
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$8\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$32\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$64\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$O$ مرکز کره و $O'$ مرکز دایرهٔ سطح مقطع است.\nخواهیم داشت:\n$OO' = 8, OA = 10$\n$O'A^2 = OA^2 - OO'^2 = 10^2 - 8^2 = 36 \\Rightarrow O'A = 6$\nبنابراین:\n$S_{\\text{سطح مقطع}} = \\pi r^2 = \\pi \\times 6^2 = 36\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1645,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            82,
+            672,
+            305,
+            755
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث ABC با قاعده AB به طول 6"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1646",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث قائم‌الزاویه $ABC$ در ضلع روبه‌رو را حول خط $d$ که به موازات ضلع مثلث می‌باشد، دوران می‌دهیم. حجم به دست آمده چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1646/stem_1.webp",
+        "alt": "مثلث قائم‌الزاویه ABC با اضلاع زاویه قائمه ۳ و ۵ و خط d",
+        "aspect_ratio": 1.1806
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$16\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$32\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "حداکثر مساحت سطح مقطع یک صفحه با کره زمانی است که صفحه از مرکز کره عبور کند. در این حالت شعاع دایرهٔ سطح مقطع برابر شعاع کره است.\n$S_{\\text{سطح مقطع}} = \\pi R^2 = 9\\pi \\Rightarrow R^2 = 9 \\Rightarrow R = 3$\nبنابراین شعاع کره برابر $3$ است. در نتیجه:\n$V = \\frac{4}{3}\\pi R^3 = \\frac{4}{3} \\times \\pi \\times 3^3 = 36\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1646,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            82,
+            786,
+            255,
+            888
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه ABC با اضلاع زاویه قائمه ۳ و ۵ و خط d"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1647",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ذوزنقه قائم‌الزاویه $ABCD$ را حول ضلع $AB$ دوران می‌دهیم. حجم شکل حاصل کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1647/stem_1.webp",
+        "alt": "ذوزنقه قائم‌الزاویه ABCD",
+        "aspect_ratio": 1.8711
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$48\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$50\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$52\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$54\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مطابق شکل و طبق قضیهٔ تالس داریم:\n$\\frac{r}{R} = \\frac{\\frac{2}{3}h}{h} = \\frac{2}{3}$\nبنابراین:\n$\\frac{S_1}{S_2} = \\frac{\\pi r^2}{\\pi R^2} = (\\frac{r}{R})^2 = (\\frac{2}{3})^2 = \\frac{4}{9}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1647,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            82,
+            889,
+            300,
+            966
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه قائم‌الزاویه ABCD"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1648",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ذوزنقه قائم‌الزاویه $ABCD$ را حول قاعده کوچک دوران می‌دهیم. حجم شکل حاصل کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1648/stem_1.webp",
+        "alt": "ذوزنقه قائم‌الزاویه ABCD",
+        "aspect_ratio": 2.4369
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$42\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$44\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$46\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$48\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چهارضلعی $MNCD$ ذوزنقهٔ متساوی‌الساقین است.\nکه قاعدهٔ بزرگ آن $CD = 4$ و قاعدهٔ کوچک $MN = \\frac{AB}{2} = 2$ می‌باشد. در مثلث متساوی‌الاضلاع $PBC$، $CN$ میانه و در نتیجه ارتفاع نیز می‌باشد.\n$CN = \\frac{\\sqrt{3}}{2}a = \\frac{\\sqrt{3}}{2} \\times 4 = 2\\sqrt{3}$\nبنابراین:\n$\\text{محیط} = MN + CD + 2CN = 2 + 4 + 4\\sqrt{3} = 6 + 4\\sqrt{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1648,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            82,
+            970,
+            305,
+            1045
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه قائم‌الزاویه ABCD"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1649",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "ذوزنقه قائم‌الزاویه $ABCD$ را حول قاعده بزرگ دوران می‌دهیم. حجم شکل حاصل کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1649/stem_1.webp",
+        "alt": "ذوزنقه قائم‌الزاویه ABCD",
+        "aspect_ratio": 1.9609
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$18\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$27\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با دوران پاره‌خط $AB$ حول محور $y$ها یک سطح دایره‌ای به وجود می‌آید که دایره‌ای از درون آن خالی شده است.\nشعاع دایرهٔ بزرگ ۳ و شعاع دایرهٔ کوچک ۱ است.\nبنابراین:\n$S = S_1 - S_2 = \\pi R^2 - \\pi r^2 = 9\\pi - \\pi = 8\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1649,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            82,
+            1045,
+            305,
+            1145
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه قائم‌الزاویه ABCD"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1650",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث قائم‌الزاویه $ABC$ را حول خط $l$ که موازی $AB$ است دوران می‌دهیم. حجم شکل حاصل کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1650/stem_1.webp",
+        "alt": "مثلث قائم‌الزاویه ABC و خط l موازی با AB",
+        "aspect_ratio": 2.0362
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$12\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$32\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$40\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$V_1$ حجم استوانه‌ای است که از دوران مستطیل حول عرض آن به وجود آمده است.\n$h = 3 \\quad r = 4 \\Rightarrow V_1 = \\pi r^2h = 48\\pi$\n$V_2$ حجم استوانه‌ای است که از دوران مستطیل حول طول آن به وجود آمده است.\n$h = 4 \\quad r = 3 \\Rightarrow V_2 = \\pi r^2h = 36\\pi$\nدر نتیجه: $V_1 - V_2 = 48\\pi - 36\\pi = 12\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1650,
+      "question_pdf": "14.pdf",
+      "question_page": 13,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            82,
+            1150,
+            335,
+            1260
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه ABC و خط l موازی با AB"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1651",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بیضی شکل مقابل مبدأ مختصات مرکز بیضی به زاویۀ $B'$ برابر $120^\\circ$ و طول قطر بزرگ ۸ است. فاصلۀ کانونی چه‌قدر است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1651/stem_1.webp",
+        "alt": "بیضی با قطر بزرگ روی محور y و کانون F و زاویه B'",
+        "aspect_ratio": 0.7172
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\sqrt{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شکل حاصل استوانه‌ای به شعاع قاعدهٔ $x+1$ و ارتفاع ۲ است که استوانهٔ دیگری به شعاع $x$ و ارتفاع ۲ از درون آن خالی شده است.\nاستوانه بزرگ $V = \\pi r^2h = \\pi (x+1)^2 \\times 2$\nاستوانه کوچک $V = \\pi r^2h = \\pi x^2 \\times 2$\n$\\Rightarrow V = V_{\\text{استوانه بزرگ}} - V_{\\text{استوانه کوچک}} = 2\\pi ((x+1)^2 - x^2) = 2\\pi (2x+1)$\nبنابراین:\n$x = 1 \\Rightarrow V_1 = 2\\pi \\times 3 = 6\\pi$\n$x = 2 \\Rightarrow V_2 = 2\\pi \\times 5 = 10\\pi$\n$\\Rightarrow V_2 - V_1 = 4\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1651,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0014.jpg",
+          "box": [
+            80,
+            180,
+            380,
+            480
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با قطر بزرگ روی محور y و کانون F و زاویه B'"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1652",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بیضی شکل مقابل چهارضلعی $BFB'F'$ مربع است. خروج از مرکز بیضی کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1652/stem_1.webp",
+        "alt": "بیضی با چهارضلعی BFB'F' مربع",
+        "aspect_ratio": 1.3511
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{2}}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{3}}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$V_1$ حجم مخروطی است که از دوران مثلث حول ضلع کوچک‌تر به وجود می‌آید.\n$h = 3 \\quad r = 4$\n$V_1 = \\frac{\\pi}{3} r^2 h = 16\\pi$\n$V_2$ حجم مخروطی است که از دوران مثلث حول ضلع بزرگ‌تر به وجود می‌آید.\n$h = 4 \\quad r = 3$\n$V_2 = \\frac{\\pi}{3} r^2 h = 12\\pi$\nبنابراین:\n$V_1 - V_2 = 16\\pi - 12\\pi = 4\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1652,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0014.jpg",
+          "box": [
+            80,
+            500,
+            430,
+            680
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با چهارضلعی BFB'F' مربع"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1653",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$F(1,5)$ و $F'(1,-3)$ کانون‌های یک بیضی هستند که از نقطۀ $(4,1)$ عبور می‌کند. خروج از مرکز بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/8$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از دوران این مثلث قائم‌الزاویه حول وتر دو مخروط با قاعدهٔ مشترک به وجود می‌آید. بدیهی است طول وتر مثلث برابر ۵ می‌باشد.\nشعاع قاعدهٔ دو مخروط همان ارتفاع وارد بر وتر بوده و اندازهٔ آن از رابطهٔ $3 \\times 4 = 5r$ محاسبه می‌شود: $r = \\frac{12}{5}$ (در مثلث قائم‌الزاویه حاصل‌ضرب وتر در ارتفاع وارد بر وتر با حاصل‌ضرب دو ضلع قائم برابر است.)\n$V_1 + V_2 = \\frac{1}{3}\\pi r^2h_1 + \\frac{1}{3}\\pi r^2h_2 = \\frac{\\pi}{3}r^2(h_1+h_2)$\n$= \\frac{\\pi}{3} \\times (\\frac{12}{5})^2 \\times 5 = 9/6\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1653,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1654",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $B(-2,2)$ و $B'(6,2)$ دو سر قطر کوچک یک بیضی و خروج از مرکز آن $\\dfrac{\\sqrt{5}}{3}$ باشد. مختصات یکی از دو سر قطر بزرگ کدام می‌تواند باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-4,2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(2,4)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(8,2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(2,-4)$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از دوران مثلث متساوی‌الاضلاع حول یکی از اضلاع دو مخروط به وجود می‌آید که قاعدهٔ مشترک دارند. شعاع قاعدهٔ هر یک از این دو مخروط برابر ارتفاع مثلث متساوی‌الاضلاع می‌باشد:\n$r = \\frac{\\sqrt{3}}{2} a = \\frac{\\sqrt{3}}{2} \\times 4 = 2\\sqrt{3}$\nارتفاع هر مخروط نیز برابر نصف طول ضلع مثلث است.\n$h = 2$\nبنابراین:\nحجم دو مخروط $= 2 \\times (\\frac{1}{3}\\pi r^2 h) = \\frac{2}{3}\\pi \\times 12 \\times 2 = 16\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1654,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1655",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل مساحت مثلث $MNF$ کدام است؟ ($b$ نصف قطر کوچک و $e$ خروج از مرکز بیضی است.)"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1655/stem_1.webp",
+        "alt": "بیضی با مثلث MNF",
+        "aspect_ratio": 1.8173
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$eb^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2eb^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{b^2}{e}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2b^2}{e}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از دوران مکعب حول یکی از یال‌ها استوانه‌ای به ارتفاع طول یال مکعب و به شعاع قاعدهٔ قطر یک وجه مکعب به وجود می‌آید.\n$h = 2, r = 2\\sqrt{2} \\Rightarrow V = \\pi r^2 h = \\pi(8) \\times 2 = 16\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1655,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0014.jpg",
+          "box": [
+            80,
+            920,
+            430,
+            1100
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با مثلث MNF"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1656",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فاصلۀ یک کانون تا دورترین رأس در بیضی $6\\sqrt{3}$ و قطر کوچک بیضی ۱۲ است. خروج از مرکز بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{3}}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{3}}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ارتفاع $CH$ را رسم می‌کنیم.\n$S = \\frac{CH \\times AB}{2} = 12 \\Rightarrow 6CH = 24 \\Rightarrow CH = 4$\nاز دوران $ABC$ حول ضلع $AB$ دو مخروط با قاعدهٔ مشترک به وجود می‌آید که شعاع قاعدهٔ آن‌ها $CH$ و ارتفاع آن‌ها $BH$ و $AH$ می‌باشند.\n$V = V_1 + V_2 = \\frac{\\pi}{3} \\times CH^2 \\times BH + \\frac{\\pi}{3} \\times CH^2 \\times AH$\n$= \\frac{\\pi}{3} CH^2 \\times (BH + AH) = \\frac{\\pi}{3} CH^2 \\times AB = \\frac{\\pi}{3} \\times 16 \\times 6 = 32\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1656,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1657",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر قطر بزرگ و کوچک بیضی به ترتیب $2a$ و $2b$ باشند، خروج از مرکز آن کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{1-\\dfrac{b^2}{a^2}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{\\dfrac{a^2}{a^2+b^2}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{\\dfrac{a^2-1}{b^2}}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{\\dfrac{b^2}{a^2+1}}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر مثلث $ABC$ را حول خط $d$ دوران دهیم در واقع از یک استوانه یک مخروط خارج کرده‌اییم.\n$V = V_{\\text{استوانه}} - V_{\\text{مخروط}} = \\pi \\times 4^2 \\times 3 - \\frac{1}{3}\\pi \\times 4^2 \\times 3$\n$V = \\pi \\times 48(1 - \\frac{1}{3}) = \\frac{2}{3} \\times 48\\pi = 32\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1657,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1658",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک بیضی دو سر قطر کوچک از انتهای قطر بزرگ با زاویۀ $60^\\circ$ رؤیت می‌شود. خروج از مرکز بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{3}}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{6}}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از دوران ذوزنقه حول $AB$ یک مخروط ناقص به وجود می‌آید که $AD$ شعاع قاعدهٔ کوچک و $BC$ شعاع قاعدهٔ بزرگ و $AB$ ارتفاع آن است.\nبرای به دست آوردن حجم مخروط ناقص فرض می‌کنیم امتداد ساق‌ها در $E$ متقاطع باشند. طبق قضیهٔ تالس:\n$\\frac{EA}{EB} = \\frac{2}{6} \\Rightarrow \\frac{EA}{EA+3} = \\frac{1}{3} \\Rightarrow EA = \\frac{3}{2}$\n$V_{\\text{مخروط کوچک}} = \\frac{1}{3}\\pi \\times AD^2 \\times EA = \\frac{\\pi}{3} \\times 4 \\times \\frac{3}{2} = 2\\pi$\n$V_{\\text{مخروط بزرگ}} = \\frac{1}{3}\\pi \\times BC^2 \\times EB = \\frac{\\pi}{3} \\times 36 \\times \\frac{9}{2} = 54\\pi$\n$\\Rightarrow V_{\\text{مخروط ناقص}} = 54\\pi - 2\\pi = 52\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1658,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1659",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل $AF = 1$، $MF = 2$ و $MF' = 6$ است. خروج از مرکز بیضی کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1659/stem_1.webp",
+        "alt": "بیضی با نقاط M, F, F', A",
+        "aspect_ratio": 1.5263
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{4}{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شکل حاصل استوانه‌ای به شعاع قاعدهٔ $AD$ و ارتفاع $CD$ است که مخروطی از درون آن خالی شده است.\n$V_{\\text{استوانه}} = \\pi r^2 h = \\pi \\times AD^2 \\times CD = \\pi \\times 9 \\times 6 = 54\\pi$\nشعاع قاعدهٔ مخروط برابر شعاع قاعدهٔ استوانه و همان $AD$ است.\nارتفاع مخروط برابر $CD - AB = 4$ است.\n$V_{\\text{مخروط}} = \\frac{1}{3} \\pi r^2 h = \\frac{\\pi}{3} \\times 9 \\times 4 = 12\\pi$\nبنابراین:\n$V = V_{\\text{استوانه}} - V_{\\text{مخروط}} = 54\\pi - 12\\pi = 42\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1659,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0014.jpg",
+          "box": [
+            80,
+            1500,
+            400,
+            1700
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با نقاط M, F, F', A"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1660",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک بیضی قطر کوچک ۲ برابر فاصلۀ کانونی است. خروج از مرکز بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{3}}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{5}}{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر ذوزنقه حول ضلع $DC$ دوران کند، حجم به دست آمده از مجموع حجم یک استوانه و حجم یک مخروط به دست می‌آید.\nاستوانه: $\\begin{cases} r=3 \\\\ h=2 \\end{cases} \\Rightarrow V_{\\text{استوانه}} = \\pi r^2 h \\Rightarrow V_1 = 9 \\times 2\\pi = 18\\pi$\nمخروط: $\\begin{cases} r=3 \\\\ h=4 \\end{cases} \\Rightarrow V_{\\text{مخروط}} = \\frac{1}{3} \\pi r^2 h \\Rightarrow V_2 = \\frac{\\pi}{3} \\times 9 \\times 4 = 12\\pi$\nکل $V = V_1 + V_2 = 30\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1660,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1661",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بیضی شکل مقابل فاصلۀ کانونی برابر $\\sqrt{3}$ است. اگر OP با قطر بزرگ بیضی برابر باشد، QF کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1661/stem_1.webp",
+        "alt": "بیضی با پاره‌خط OP و نقطه Q",
+        "aspect_ratio": 0.7884
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{2}}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{\\sqrt{3}}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شکل حاصل یک مخروط ناقص است که استوانه‌ای از درون آن خالی شده است.\nشعاع قاعدهٔ کوچک ۲ و شعاع قاعدهٔ بزرگ ۶ و ارتفاع مخروط و استوانه برابر ۳ است.\nاگر $S$ و $S'$ مساحت قاعده‌های مخروط ناقص و $h$ ارتفاع آن باشد، حجم آن برابر است با:\n$V_1 = \\frac{h}{3}(S+S'+\\sqrt{SS'}) = \\frac{3}{3}(4\\pi+36\\pi+\\sqrt{144\\pi^2}) = 52\\pi$\nحجم استوانه برابر است با:\n$V_2 = \\pi r^2 h = \\pi \\times 4 \\times 3 = 12\\pi$\nبنابراین:\n$V = V_1 - V_2 = 52\\pi - 12\\pi = 40\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1661,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0014.jpg",
+          "box": [
+            80,
+            1800,
+            350,
+            2150
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با پاره‌خط OP و نقطه Q"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1662",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خروج از مرکز بیضی مقابل $\\dfrac{\\sqrt{3}}{2}$ و قطر کوچک ۱ است. مساحت مستطیل محیطی بیضی کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1662/stem_1.webp",
+        "alt": "بیضی محاط در مستطیل",
+        "aspect_ratio": 1.3535
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر مثلث $ABC$ را حول خط $\\ell$ دوران دهیم یک مخروط ناقص درست می‌شود. به طوری که قاعدهٔ کوچک برابر ۳، قاعدهٔ بزرگ برابر ۶ و ارتفاع آن همان ارتفاع مثلث یعنی $\\frac{3\\sqrt{3}}{2}$ خواهد شد که البته از درون آن یک مخروط حذف شده است.\n$V_{\\text{مخروط ناقص}} = \\frac{\\pi}{3} h (R_1^2 + R_2^2 + R_1 R_2)$\n$= \\frac{\\pi}{3} \\times \\frac{3\\sqrt{3}}{2} ((\\frac{3}{2})^2 + 3^2 + \\frac{9}{2}) = \\frac{\\sqrt{3}}{2} \\pi (\\frac{63}{4}) = \\frac{63\\sqrt{3}}{8} \\pi$\nاز درون آن مخروط حذف می‌کنیم.\n$V_{\\text{مخروط}} = \\frac{\\pi}{3} r^2 h = \\frac{\\pi}{3} \\times (\\frac{3}{2})^2 \\times \\frac{3\\sqrt{3}}{2} = \\frac{9\\sqrt{3}}{8} \\pi$\n$V_{\\text{نهایی}} = \\frac{63\\sqrt{3}}{8} \\pi - \\frac{9\\sqrt{3}}{8} \\pi = \\frac{27\\sqrt{3}}{4} \\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1662,
+      "question_pdf": "14.pdf",
+      "question_page": 14,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0014.jpg",
+          "box": [
+            80,
+            2180,
+            320,
+            2350
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی محاط در مستطیل"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1663",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "یک بیضی به طول اقطار $2a$ و $2b$ و فاصله کانونی $2c$ مفروض است. دایره‌ای به مرکز بیضی و به شعاع $c$، بیضی را در ۴ نقطه قطع می‌کند. اگر یکی از این نقاط را $M$ بنامیم، مجموع مربعات فواصل $M$ از دو کانون بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4a^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4b^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4c^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4(a^2 + b^2)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شکل حاصل استوانه‌ای است که از درون آن دو مخروط خالی شده است. شعاع قاعدهٔ استوانه برابر ارتفاع $CH$ در مثلث $ABC$ می‌باشد. ارتفاع استوانه برابر $AB$ است.\nاگر طول اضلاع قائم مثلث را $a$ بنامیم طول وتر $AB$ برابر $\\sqrt{2}a$ است.\n$S_{ABC} = \\frac{a^2}{2} = 4 \\Rightarrow a = 2\\sqrt{2} \\Rightarrow AB = \\sqrt{2}a = 4$\n$CH \\times AB = AC \\times BC \\Rightarrow \\sqrt{2}a \\times CH = a^2$\n$\\Rightarrow CH = \\frac{\\sqrt{2}}{2}a = 2$\n$V_{\\text{استوانه}} = \\pi r^2 h = \\pi \\times CH^2 \\times AB = \\pi \\times 4 \\times 4 = 16\\pi$\nشعاع قاعدهٔ مخروط برابر $CH$ و ارتفاع آن $\\frac{AB}{2}$ است.\n$V_{\\text{مخروط}} = \\frac{\\pi}{3} r^2 h = \\frac{\\pi}{3} \\times CH^2 \\times \\frac{AB}{2} = \\frac{\\pi}{3} \\times 4 \\times \\frac{4}{2} = \\frac{8\\pi}{3}$\nبنابراین:\n$V = V_{\\text{استوانه}} - 2V_{\\text{مخروط}} = 16\\pi - \\frac{16\\pi}{3} = \\frac{32\\pi}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1663,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1664",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خروج از مرکز بیضی مقابل برابر $\\frac{1}{3}$ است. $\\cos \\alpha$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1664/stem_1.webp",
+        "alt": "بیضی با مرکز O و کانون‌های F و F' و نقطه B روی قطر کوچک",
+        "aspect_ratio": 1.2294
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{3}}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{3}}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شکل حاصل دو مخروط با قاعدهٔ مشترک به شعاع قاعدهٔ نصف قطر بزرگ و ارتفاع نصف قطر کوچک می‌باشد.\nیکی از زوایای لوزی $120^\\circ$ است، بنابراین در مثلث $ABH$ زاویهٔ $A$ برابر $30^\\circ$ می‌باشد.\n$BH = AB \\times \\sin 30^\\circ = \\frac{AB}{2} = 2$\n$AH = AB \\times \\cos 30^\\circ = \\frac{\\sqrt{3}}{2} AB = 2\\sqrt{3}$\n$V_{\\text{مخروط}} = \\frac{\\pi}{3} r^2 h = \\frac{\\pi}{3} \\times (2\\sqrt{3})^2 \\times 2 = 8\\pi \\Rightarrow V = 2V_{\\text{مخروط}} = 16\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1664,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            200,
+            330,
+            500,
+            500
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با مرکز O و کانون‌های F و F' و نقطه B روی قطر کوچک"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1665",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بیضی مقابل مساحت مثلث $A'BF$، $9$ برابر مساحت مثلث $ABF$ است. خروج از مرکز بیضی کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1665/stem_1.webp",
+        "alt": "بیضی با مرکز O و کانون‌های F و F' و نقطه B روی قطر کوچک",
+        "aspect_ratio": 1.172
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{4}{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نمودار تابع $y = x + 1 - |x - 1|$ را رسم می‌کنیم.\n$y = \\begin{cases} 2 & x \\ge 1 \\\\ 2x & x < 1 \\end{cases}$\nشکل حاصل از دوران این نمودار حول محور $x$ها یک استوانه به شعاع قاعدهٔ ۲ و ارتفاع ۲ و یک مخروط با قاعدهٔ مشترک با استوانه به ارتفاع ۱ است.\n$V_{\\text{استوانه}} = \\pi r^2 h = \\pi \\times 4 \\times 2 = 8\\pi$\n$V_{\\text{مخروط}} = \\frac{1}{3} \\pi r^2 h = \\frac{\\pi}{3} \\times 4 \\times 1 = \\frac{4\\pi}{3}$\n$\\Rightarrow V = V_{\\text{استوانه}} + V_{\\text{مخروط}} = 8\\pi + \\frac{4\\pi}{3} = \\frac{28\\pi}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1665,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            190,
+            530,
+            500,
+            715
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با مرکز O و کانون‌های F و F' و نقطه B روی قطر کوچک"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1666",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک بیضی به کانون‌های $F(-3,3)$ و $F'(3,3)$، اندازه قطر کوچک $8$ واحد است. کم‌ترین طول نقاط بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-3/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شکل حاصل نیم‌کره‌ای به شعاع ۳ می‌باشد که مخروطی به شعاع قاعده و ارتفاع ۳ از درون آن خالی شده است.\n$V_{\\text{نیم‌کره}} = \\frac{1}{2}(\\frac{4}{3}\\pi r^3) = \\frac{2}{3}\\pi(3)^3 = 18\\pi$\n$V_{\\text{مخروط}} = \\frac{\\pi}{3} r^2 h = \\frac{\\pi}{3} \\times 3^2 \\times 3 = 9\\pi$\n$\\Rightarrow V = V_{\\text{نیم‌کره}} - V_{\\text{مخروط}} = 18\\pi - 9\\pi = 9\\pi$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1666/solution_1.webp",
+        "alt": "شکل سؤال",
+        "aspect_ratio": 0.4207
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1666,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0156.jpg",
+          "box": [
+            950,
+            180,
+            1250,
+            290
+          ],
+          "box_format": "yxyx",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1667",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطه $(4,1)$ مرکز یک بیضی قائم است که طول قطرهای بزرگ و کوچک آن $15$ و $12$ است. مختصات یکی از کانون‌های بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-1/5, 1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(4, -8)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(4, -3/5)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-4, 1)$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شکل حاصل نیم‌کره‌ای به شعاع ۲ است که نیم‌کره‌ای دیگر به شعاع ۱ از درون آن خالی شده است.\n$V_{\\text{نیم‌کره بزرگ}} = \\frac{2}{3}\\pi R^3 = \\frac{2}{3}\\pi \\times 2^3 = \\frac{16\\pi}{3}$\n$V_{\\text{نیم‌کره کوچک}} = \\frac{2}{3}\\pi r^3 = \\frac{2}{3}\\pi \\times 1^3 = \\frac{2\\pi}{3}$\n$\\Rightarrow V = V_1 - V_2 = \\frac{16\\pi}{3} - \\frac{2\\pi}{3} = \\frac{14\\pi}{3}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1667/solution_1.webp",
+        "alt": "شکل سؤال",
+        "aspect_ratio": 0.3902
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1667,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0156.jpg",
+          "box": [
+            950,
+            420,
+            1250,
+            520
+          ],
+          "box_format": "yxyx",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1668",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$F(3,4)$ و $F'(7,4)$ کانون‌های یک بیضی مماس بر محور عرض‌ها می‌باشند. خروج از مرکز بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0/4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/8$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مجموع فواصل هر نقطه روی بیضی از دو کانون برابر $2a$ است.\n$2a = 8 \\Rightarrow a = 4$\nفاصله کانونی برابر $2c$ می‌باشد.\n$a^2 = b^2 + c^2 \\Rightarrow 16 = b^2 + 9 \\Rightarrow b^2 = 7 \\Rightarrow b = \\sqrt{7}$\nبنابراین: $2b = 2\\sqrt{7}$ = اندازه قطر کوچک"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1668,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1669",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$A(-3,1)$ و $A'(5,1)$ دو سر قطر بزرگ یک بیضی و $F(3,1)$ یکی از کانون‌های آن است. اندازه قطر بزرگ بیضی چند برابر اندازه قطر کوچک آن است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2\\sqrt{3}}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{4\\sqrt{3}}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "M نقطه‌ای روی بیضی است، بنابراین:\n$MF + MF' = 2a \\Rightarrow 3 + 5 = 2a \\Rightarrow a = 4$\n$AA' = 2a = 8 \\Rightarrow AF + A'F' = AA' - FF' = 8 - 6 = 2$\n$\\Rightarrow 2AF = 2 \\Rightarrow AF = 1$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1669/solution_1.webp",
+        "alt": "شکل سؤال",
+        "aspect_ratio": 0.3182
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1669,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0156.jpg",
+          "box": [
+            1100,
+            790,
+            1600,
+            930
+          ],
+          "box_format": "yxyx",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1670",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$F(1,-1)$ و $F'(-7,-1)$ کانون‌های یک بیضی با خروج از مرکز $0/8$ هستند. مختصات یک سر قطر کوچک کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-3,2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-3,-2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(0,-1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(1,-1)$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "P و Q نقاط روی بیضی هستند. بنابراین:\n$BF + BF' = PF + PF' \\xrightarrow{BF=BF'} 2BF' = PF + PF'$\n$\\Rightarrow 12 = 8 + PF' \\Rightarrow PF' = 4$\nمحیط چهارضلعی = $6 + 6 + 8 + 4 = 24$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1670,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1671",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله دایره‌ای به شعاع $3$ و مرکز $(-2,3)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 + 4x - 6y + 4 = 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 - 4x + 6y + 9 = 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 + 4x - 6y + 9 = 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 - 4x + 6y + 4 = 0$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "P و Q دو نقطه روی بیضی هستند. بنابراین:\n$PF + PF' = QF + QF' = 2a = 26$\n$\\Rightarrow \\text{محیط } PQF = 26 + 26 = 52$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1671,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1672",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله دایره‌ای که دو سر قطر آن $A(2,5)$ و $B(-4,-3)$ باشد کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(x+1)^2 + (y-1)^2 = 25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x+1)^2 + (y-1)^2 = 100$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x-1)^2 + (y+1)^2 = 100$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x-1)^2 + (y+1)^2 = 25$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم: $AF = 1, A'F = 25$\n$\\Rightarrow AA' = AF + A'F = 1 + 25 = 26 \\Rightarrow a = 13$\n$FF' = AF' - AF = A'F - AF = 25 - 1 = 24 \\Rightarrow c = 12$\nمی‌دانیم: $a^2 = b^2 + c^2 \\Rightarrow b^2 = a^2 - c^2 = 169 - 144 = 25$\n$\\Rightarrow b = 5 \\Rightarrow 2b = 10$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1672/solution_1.webp",
+        "alt": "شکل سؤال",
+        "aspect_ratio": 0.3925
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1672,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0156.jpg",
+          "box": [
+            1150,
+            1310,
+            1550,
+            1450
+          ],
+          "box_format": "yxyx",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1673",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله $x^2 + y^2 + ax + by + c = 0$ معادله دایره‌ای به مرکز $O(1,-3)$ و شعاع $2$ است. مقدار $c$ چه‌قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "B نقطه‌ای روی بیضی است:\n$BF + BF' = 2a \\Rightarrow 2BF = 2a \\Rightarrow BF = a$\nمثلث $BFF'$ متساوی‌الاضلاع است بنابراین $\\hat{F} = 60^\\circ$ می‌باشد.\n$\\frac{OB}{BF} = \\sin 60^\\circ \\Rightarrow \\frac{b}{a} = \\frac{\\sqrt{3}}{2} \\Rightarrow \\frac{a}{b} = \\frac{2}{\\sqrt{3}} = \\frac{2\\sqrt{3}}{3}$\n$\\Rightarrow \\frac{2a}{2b} = \\frac{2\\sqrt{3}}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1673,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0156.jpg",
+          "box": [
+            1150,
+            2180,
+            1550,
+            2350
+          ],
+          "box_format": "yxyx",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1674",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "شعاع دایره‌ای که از سه نقطه $(0,4)$ ، $(-1,5)$ و $(3,-1)$ می‌گذرد، کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "B' نقطه‌ای روی بیضی است، بنابراین:\n$B'F + B'F' = 2a = 8 \\Rightarrow 2B'F = 8 \\Rightarrow B'F = 4$\n$\\hat{B'} = 120^\\circ \\Rightarrow \\frac{\\hat{B'}}{2} = 60^\\circ$\nدر مثلث $OB'F$ زاویه $B'$ برابر $60^\\circ$ است در نتیجه:\n$\\frac{OF}{B'F} = \\sin 60^\\circ = \\frac{\\sqrt{3}}{2} \\Rightarrow OF = \\frac{\\sqrt{3}}{2} B'F = 2\\sqrt{3}$\n$\\Rightarrow c = 2\\sqrt{3} \\Rightarrow FF' = 2c = 4\\sqrt{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1674,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1675",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به ازای کدام مقادیر $a$ معادله $3x^2 + 3y^2 - 6x + 3y + a = 0$ بیانگر یک دایره است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a < \\frac{15}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a > \\frac{15}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a < \\frac{45}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a > \\frac{45}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "B نقطه‌ای روی بیضی است. بنابراین:\n$BF + BF' = 2a \\Rightarrow 2BF' = 2a \\Rightarrow BF' = a$\nدر مثلث قائم‌الزاویه $BOF'$ می‌دانیم $OB=b$ و $OF'=c$ و $BF'=a$ است.\nبا توجه به این که چهارضلعی مربع است، قطرها با هم برابر بوده و یکدیگر را نصف می‌کنند؛ در نتیجه:\n$OB = OF' \\Rightarrow b = c$\n$a^2 = b^2 + c^2 = 2c^2 \\Rightarrow \\frac{c^2}{a^2} = \\frac{1}{2} \\Rightarrow \\frac{c}{a} = e = \\frac{\\sqrt{2}}{2}$\nنکته: در بیضی هرگاه $b=c$ باشد، خروج از مرکز برابر $\\frac{\\sqrt{2}}{2}$ است و برعکس."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1675,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1676",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $ax^2 + 2y^2 - 8x - 2ay = b$ دایره‌ای به شعاع $3$ باشد، $ab$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مجموع فواصل نقطه $P(4, 1)$ از دو کانون $F(1, 5)$ و $F'(1, -3)$ برابر $2a$ است.\n$2a = PF + PF' = \\sqrt{9+16} + \\sqrt{9+16} = 10 \\Rightarrow a = 5$\n$FF' = 2c \\Rightarrow 2c = 8 \\Rightarrow c = 4 \\Rightarrow e = \\frac{c}{a} = \\frac{4}{5} = 0/8$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1676,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1677",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "قطری از دایره $x^2 + y^2 - 4x + 2y = 7$ که بر خط $x + 2y = 3$ عمود باشد، با کدام عرض از مبدأ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-5$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز بیضی وسط $BB'$ می‌باشد.\n$B(-2, 2)$ و $B'(6, 2) \\Rightarrow O(2, 2)$\n$BB' = 2b = 8 \\Rightarrow b = 4$\n$e = \\frac{c}{a} = \\frac{\\sqrt{5}}{3} \\Rightarrow c = \\frac{\\sqrt{5}}{3} a$\n$a^2 = b^2 + c^2 \\Rightarrow a^2 = 16 + \\frac{5}{9} a^2 \\Rightarrow \\frac{4}{9} a^2 = 16$\nبنابراین: $\\Rightarrow a^2 = 36 \\Rightarrow a = 6$\nبا توجه به این که رئوس فرعی بر یک خط افقی قرار دارند، بیضی قائم است.\nدر نتیجه:\n$A(\\alpha, \\beta+a) \\Rightarrow A(2, 2+6) \\Rightarrow A(2, 8)$\n$A'(\\alpha, \\beta-a) \\Rightarrow A'(2, 2-6) \\Rightarrow A'(2, -4)$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1677,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1678",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله یکی از اقطار دایره به صورت $x + y = 2$ است. اگر این دایره از نقاط $(-3,4)$ و $(1,5)$ بگذرد، شعاع دایره کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{65}}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{65}}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{85}}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{85}}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نکته: وتری که بر قطر اصلی عمود و از یکی از کانون‌ها عبور می‌کند، وتر کانونی و طول آن برابر $\\frac{2b^2}{a}$ است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1678,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 156,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1679",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرکز دایره‌ای بر خط $y - 2x = 1$ قرار داشته و دایره از نقاط $(2,1)$ و $(-4,3)$ عبور می‌کند. کدام نقطه زیر بر دایره واقع است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-4,1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-4,-1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(1,4)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(1,-4)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم:\n$AF' = 6\\sqrt{3}$\n$\\Rightarrow AO + OF' = 6\\sqrt{3}$\n$\\Rightarrow a + c = 6\\sqrt{3}$\nقطر کوچک بیضی $= 2b = 12 \\Rightarrow b = 6$\nخواهیم داشت:\n$b^2 = a^2 - c^2 = (a-c)(a+c) \\Rightarrow 36 = (a-c) \\times 6\\sqrt{3}$\n$\\Rightarrow a - c = 2\\sqrt{3}$\nاز طرفی: $a + c = 6\\sqrt{3}$\n$\\left. \\begin{array}{l} a - c = 2\\sqrt{3} \\\\ a + c = 6\\sqrt{3} \\end{array} \\right\\} \\Rightarrow a = 4\\sqrt{3} , c = 2\\sqrt{3} \\Rightarrow e = \\frac{c}{a} = \\frac{1}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1679,
+      "question_pdf": "14.pdf",
+      "question_page": 15,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1680",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "یک بیضی به طول اقطار $2a$ و $2b$ و فاصله کانونی $2c$ مفروض است. دایره‌ای به مرکز بیضی و به شعاع $c$، بیضی را در ۴ نقطه قطع می‌کند. اگر یکی از این نقاط را $M$ بنامیم، مجموع مربعات فواصل $M$ از دو کانون بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4a^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4b^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4c^2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4(a^2 + b^2)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خروج از مرکز بیضی $e = \\frac{c}{a}$ می‌باشد.\n$\\Rightarrow e^2 = \\frac{c^2}{a^2} = \\frac{a^2 - b^2}{a^2} = 1 - \\frac{b^2}{a^2} \\Rightarrow e = \\sqrt{1 - \\frac{b^2}{a^2}}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1680,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1681",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خروج از مرکز بیضی مقابل برابر $\\frac{1}{3}$ است. $\\cos \\alpha$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1681/stem_1.webp",
+        "alt": "بیضی با کانون‌های F و F' و یک نقطه B روی محور فرعی. زاویه آلفا در راس F تشکیل شده است.",
+        "aspect_ratio": 1.2402
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{3}}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{3}}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$B\\widehat{A}B' = 60^{\\circ}$ است. بنابراین $B\\widehat{A}O = 30^{\\circ}$ می‌باشد.\n$\\overset{\\Delta}{AOB} : \\frac{OB}{OA} = \\tan 30^{\\circ} = \\frac{\\sqrt{3}}{3}$\n$\\Rightarrow \\frac{b}{a} = \\frac{\\sqrt{3}}{3} \\Rightarrow b = \\frac{\\sqrt{3}}{3} a$\nمی‌دانیم : $a^2 = b^2 + c^2 \\Rightarrow a^2 = \\frac{1}{3}a^2 + c^2 \\Rightarrow c^2 = \\frac{2}{3}a^2$\n$\\Rightarrow \\frac{c^2}{a^2} = \\frac{2}{3} \\Rightarrow \\frac{c}{a} = \\sqrt{\\frac{2}{3}} \\Rightarrow e = \\frac{\\sqrt{6}}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1681,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0016.jpg",
+          "box": [
+            180,
+            320,
+            500,
+            500
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با کانون‌های F و F' و یک نقطه B روی محور فرعی. زاویه آلفا در راس F تشکیل شده است."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1682",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در بیضی مقابل مساحت مثلث $A'BF$، ۹ برابر مساحت مثلث $ABF$ است. خروج از مرکز بیضی کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1682/stem_1.webp",
+        "alt": "بیضی با مرکز O و کانون‌های F و F'. نقاط A و A' دو سر قطر بزرگ و B یک نقطه روی بیضی است.",
+        "aspect_ratio": 1.4242
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{4}{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$M$ نقطه‌ای روی بیضی است، بنابراین:\n$MF + MF' = 2a \\Rightarrow 2 + 6 = 2a \\Rightarrow a = 4$\n$FF' = AA' - AF - A'F' \\Rightarrow FF' = AA' - 2AF$\n$\\Rightarrow FF' = 2a - 2 = 8 - 2 = 6 \\Rightarrow 2c = 6 \\Rightarrow c = 3$\nخواهیم داشت:\n$e = \\frac{c}{a} = \\frac{3}{4}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1682,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0016.jpg",
+          "box": [
+            150,
+            550,
+            500,
+            720
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "بیضی با مرکز O و کانون‌های F و F'. نقاط A و A' دو سر قطر بزرگ و B یک نقطه روی بیضی است."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1683",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک بیضی به کانون‌های $F(-3, 3)$ و $F'(3, 3)$، اندازه قطر کوچک ۸ واحد است. کم‌ترین طول نقاط بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-3/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-4/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-5$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قطر کوچک $2$ برابر فاصلهٔ کانونی است:\n$2b = 4c \\Rightarrow b = 2c$\nمی‌دانیم : $a^2 = b^2 + c^2 \\Rightarrow a^2 = 4c^2 + c^2 = 5c^2 \\Rightarrow \\frac{c^2}{a^2} = \\frac{1}{5}$\n$\\Rightarrow e = \\frac{c}{a} = \\frac{\\sqrt{5}}{5}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1683,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1684",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطه $(4, 1)$ مرکز یک بیضی قائم است که طول قطرهای بزرگ و کوچک آن ۱۵ و ۱۲ است. مختصات یکی از کانون‌های بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-1/5, 1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(4, -8)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(4, -3/5)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-4, 1)$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در مثلث قائم‌الزاویهٔ $OAP$، $OP = 2a$ و $OA = a$ است. بنابراین:\n$\\sin \\widehat{P} = \\frac{OA}{OP} = \\frac{a}{2a} = \\frac{1}{2} \\Rightarrow \\widehat{P} = 30^{\\circ} \\Rightarrow \\widehat{O} = 60^{\\circ}$\nدر مثلث قائم‌الزاویهٔ $OFQ$، $OF$ برابر نصف فاصلهٔ کانونی و $\\widehat{O} = 60^{\\circ}$ است.\n$\\frac{QF}{OF} = \\tan 60^{\\circ} = \\sqrt{3} \\Rightarrow QF = \\sqrt{3} \\times OF = \\sqrt{3} (\\frac{\\sqrt{3}}{2}) = \\frac{3}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1684,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1685",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$F(3, 4)$ و $F'(7, 4)$ کانون‌های یک بیضی مماس بر محور عرض‌ها می‌باشند. خروج از مرکز بیضی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0/4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/8$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اضلاع مستطیل محیطی بیضی به اندازهٔ قطر بزرگ و قطر کوچک بیضی می‌باشند.\nمی‌دانیم:\n$2b = 1 \\Rightarrow b = \\frac{1}{2}$ و $e = \\frac{c}{a} = \\frac{\\sqrt{3}}{2}$\nخواهیم داشت:\n$a^2 = b^2 + c^2 \\Rightarrow a^2 = \\frac{1}{4} + (\\frac{\\sqrt{3}}{2}a)^2 \\Rightarrow a^2 = \\frac{1}{4} + \\frac{3}{4}a^2$\n$\\Rightarrow a = 1$\nمساحت مستطیل $S = (2a)(2b) = 2 \\times 1 = 2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1685,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1686",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$A(-3, 1)$ و $A'(5, 1)$ دو سر قطر بزرگ یک بیضی و $F(3, 1)$ یکی از کانون‌های آن است. اندازه قطر بزرگ بیضی چند برابر اندازه قطر کوچک آن است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2\\sqrt{3}}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{4\\sqrt{3}}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$FF'$ قطر دایره و $\\widehat{M}$ زاویهٔ روبه‌رو به قطر است.\nبنابراین $\\widehat{M} = 90^{\\circ}$ می‌باشد.\n$\\Rightarrow MF^2 + MF'^2 = FF'^2 = (2c)^2 = 4c^2$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1686,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1687",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$F(-1, 1)$ و $F'(-7, -1)$ کانون‌های یک بیضی با خروج از مرکز $0/8$ هستند. مختصات یک سر قطر کوچک کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-3, 2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-3, -2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(0, -1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(1, -1)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در مثلث $OBF$ داریم:\n$BF = a , OF = c$\n$\\frac{OF}{BF} = \\cos \\alpha = \\frac{1}{3} \\Rightarrow \\frac{c}{a} = e = \\frac{1}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1687,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1688",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله دایره‌ای به شعاع ۳ و مرکز $O(2, -3)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 + 4x - 6y + 4 = 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 - 4x + 6y + 9 = 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 + 4x - 6y + 9 = 0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 - 4x + 6y + 4 = 0$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$OB$ ارتفاع مثلث‌های $A'BF$ و $ABF$ است. بنابراین نسبت مساحت‌ها برابر با نسبت قاعده‌ها می‌باشد.\n$\\frac{S_{A'BF}}{S_{ABF}} = \\frac{A'F}{AF} = 9 \\Rightarrow \\frac{a+c}{a-c} = 9 \\Rightarrow a+c = 9a - 9c$\n$\\Rightarrow 8a = 10c \\Rightarrow \\frac{c}{a} = \\frac{4}{5} \\Rightarrow e = \\frac{4}{5}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1688,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1689",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله دایره‌ای که دو سر قطر آن $A(2, 5)$ و $B(-4, -3)$ باشد کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(x+1)^2 + (y-1)^2 = 25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x+1)^2 + (y-1)^2 = 100$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x-1)^2 + (y+1)^2 = 100$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(x-1)^2 + (y+1)^2 = 25$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "کانون‌های $F(-3 , 3)$ و $F'(3 , 3)$ بر یک خط افقی قرار دارند، بنابراین بیضی افقی است.\n$\\Rightarrow O(0 , 3)$\n$FF' = 2c = 6 \\Rightarrow c = 3$\n$2b = 8 \\Rightarrow b = 4$\nکم‌ترین طول نقاط بیضی مربوط به یکی از رئوس اصلی است.\n$a^2 = b^2 + c^2 = 25 \\Rightarrow a = 5$\n$\\left\\{ \\begin{array}{l} A(\\alpha + a , \\beta) \\\\ A'(\\alpha - a , \\beta) \\end{array} \\right. \\Rightarrow \\left\\{ \\begin{array}{l} A(5 , 3) \\\\ A'(-5 , 3) \\end{array} \\right.$\nکم‌ترین طول نقاط $5-$ است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1689,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1690",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$x^2 + y^2 + ax + by + c = 0$ معادله دایره‌ای به مرکز $O(3, -1)$ و شعاع ۲ است. مقدار $c$ چه‌قدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "بیضی قائم است. بنابراین مختصات کانون‌ها $F(4 , 1+c)$ و $F'(4 , 1-c)$ می‌باشد.\n$2a = 15 \\Rightarrow a = \\frac{15}{2}$\n$2b = 12 \\Rightarrow b = 6$\nمی‌دانیم : $c^2 = a^2 - b^2 = (\\frac{15}{2})^2 - (6)^2 = (\\frac{15}{2} - 6)(\\frac{15}{2} + 6) = \\frac{3}{2} \\times \\frac{27}{2} = \\frac{81}{4} \\Rightarrow c = \\frac{9}{2} = 4/5$\nبنابراین:\n$\\Rightarrow F'(4 , -3/5) , F(4 , 5/5)$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1690,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1691",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "شعاع دایره‌ای که از سه نقطه $(-3, -1)$، $(-1, 5)$ و $(0, 4)$ می‌گذرد، کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به شکل و مختصات $F(3 , 4)$ و $F'(7 , 4)$ درمی‌یابیم:\n$O(5 , 4)$\n$OA = a = 5$\n$OF = c = 2$\n$\\Rightarrow e = \\frac{c}{a} = \\frac{2}{5} = 0/4$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1691,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1692",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به ازای کدام مقادیر $a$ معادله $3x^2 + 3y^2 - 6x + 3y + a = 0$ بیانگر یک دایره است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a < \\frac{15}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a > \\frac{15}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a < \\frac{45}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a > \\frac{45}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز بیضی وسط $A(-3 , 1)$ و $A'(5 , 1)$ یعنی $O(1 , 1)$ است.\nفاصلهٔ بین مرکز و کانون $F(3 , 1)$ برابر $c$ است.\n$OF = c = 2$\n$AA' = 2a = 8 \\Rightarrow a = 4$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1692,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1693",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $ax^2 + 2y^2 - 8x - 2ay = b$ دایره‌ای به شعاع ۳ باشد، $ab$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز بیضی وسط کانون‌های $F(1, -1)$ و $F'(-7, -1)$ است. یعنی $O(-3, -1)$ است.\n$FF' = 2c \\Rightarrow 2c = 8 \\Rightarrow c = 4$\n$e = \\frac{c}{a} = 0/8 \\Rightarrow \\frac{4}{a} = 0/8 \\Rightarrow a = 5$\n$b^2 = a^2 - c^2 = 9 \\Rightarrow b = 3$\nکانون‌های بیضی هم‌عرض بوده و در نتیجه بیضی افقی است.\n$\\Rightarrow \\begin{cases} B(\\alpha, \\beta + b) \\\\ B'(\\alpha, \\beta - b) \\end{cases} \\Rightarrow \\begin{cases} B(-3, 2) \\\\ B'(-3, -4) \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1693,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1694",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "قطری از دایره $x^2 + y^2 - 4x + 2y = 7$ که بر خط $2y + x = 3$ عمود باشد، با کدام عرض از مبدأ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-5$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله دایره به مرکز $O(\\alpha, \\beta)$ و شعاع $R$ به صورت زیر است:\n$(x - \\alpha)^2 + (y - \\beta)^2 = R^2$\nبنابراین دایره به مرکز $O(2, -3)$ و شعاع ۳ به صورت زیر است:\n$(x - 2)^2 + (y + 3)^2 = 9 \\Rightarrow x^2 + y^2 - 4x + 6y + 4 = 0$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1694,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1695",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "معادله یکی از اقطار دایره به صورت $x + y = 2$ است. اگر این دایره از نقاط $(-3, 4)$ و $(1, 5)$ بگذرد، شعاع دایره کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{65}}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{65}}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{85}}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{85}}{2}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره وسط قطر آن است.\n$A(2, 5)$\n$B(-4, -3)$\n$\\Rightarrow O(-1, 1) \\quad R = OA = \\sqrt{9 + 16} = 5$\nبنابراین:\n$(x + 1)^2 + (y - 1)^2 = 25$ : معادله دایره"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1695,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1696",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرکز دایره‌ای بر خط $y - 2x = 1$ قرار داشته و دایره از نقاط $(2, 1)$ و $(-4, 3)$ عبور می‌کند. کدام نقطه زیر بر دایره واقع است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-4, 1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-4, -1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(1, 4)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(1, -4)$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: فرم گسترده دایره را به کانونیک تبدیل می‌کنیم.\n$x^2 + ax + y^2 + by + c = 0$\n$\\Rightarrow (x + \\frac{a}{2})^2 - \\frac{a^2}{4} + (y + \\frac{b}{2})^2 - \\frac{b^2}{4} + c = 0$\n$\\Rightarrow (x + \\frac{a}{2})^2 + (y + \\frac{b}{2})^2 = \\frac{a^2 + b^2 - 4c}{4}$\n$\\Rightarrow O(-\\frac{a}{2}, -\\frac{b}{2}) \\Rightarrow \\begin{cases} -\\frac{a}{2} = 1 \\Rightarrow a = -2 \\\\ -\\frac{b}{2} = -3 \\Rightarrow b = 6 \\end{cases}$\n$\\frac{a^2 + b^2 - 4c}{4} = R^2 = 4 \\Rightarrow \\frac{4 + 36 - 4c}{4} = 4 \\Rightarrow c = 6$\nروش دوم: در معادله دایره به فرم $x^2 + y^2 + ax + by + c = 0$ مختصات مرکز و شعاع دایره به صورت زیر است:\n$O(-\\frac{a}{2}, -\\frac{b}{2}) \\qquad R = \\frac{1}{2}\\sqrt{a^2 + b^2 - 4c}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1696,
+      "question_pdf": "14.pdf",
+      "question_page": 16,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1697",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرکز دایره‌ای بر نیمساز ربع چهارم واقع بوده و محور $y$ها را در دو نقطه به عرض‌های $-۷$ و $۱$ قطع می‌کند. شعاع این دایره کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{۵}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: فرم گسترده دایره به صورت $x^2 + y^2 + ax + by + c = 0$ است. مختصات نقاط داده‌شده در معادله دایره صدق می‌کنند.\n$\\begin{cases} (-1, 5) \\Rightarrow -a + 5b + 26 + c = 0 \\\\ (-3, 1) \\Rightarrow -3a + b + 10 + c = 0 \\end{cases} \\Rightarrow 2a + 4b = -16$\n$\\begin{cases} (-3, 1) \\Rightarrow -3a + b + 10 + c = 0 \\\\ (0, 4) \\Rightarrow 4b + 16 + c = 0 \\end{cases} \\Rightarrow 3a + 3b = -6$\n$\\begin{cases} a + 2b = -8 \\\\ a + b = -2 \\end{cases} \\Rightarrow b = -6 , a = 4 \\Rightarrow c = 8$\nبنابراین:\n$R = \\frac{1}{2}\\sqrt{a^2 + b^2 - 4c} = \\frac{1}{2}\\sqrt{16 + 36 - 32} = \\sqrt{5}$\nروش دوم: با فرض $A(-3, 1)$ ، $B(-1, 5)$ و $C(0, 4)$ ، مرکز دایره بر عمودمنصف $AB$ و $AC$ قرار دارد. اگر $M$ وسط $AB$ و $N$ وسط $AC$ باشد، خواهیم داشت:\n$m_{AB} = \\frac{5 - 1}{-1 + 3} = 2 \\Rightarrow AB \\text{ شیب عمود منصف } = -\\frac{1}{2}$\n$M(-2, 3)$\n$AB \\text{ معادله عمودمنصف }: y - 3 = -\\frac{1}{2}(x + 2) \\Rightarrow y = -\\frac{x}{2} + 2$\n$m_{AC} = \\frac{4 - 1}{0 + 3} = 1 \\Rightarrow AC \\text{ شیب عمودمنصف } = -1$\n$N(-\\frac{3}{2}, \\frac{5}{2})$\n$AC \\text{ معادله عمودمنصف }: y - \\frac{5}{2} = -(x + \\frac{3}{2}) \\Rightarrow y = -x + 1$\nمحل تقاطع این دو خط مرکز دایره است.\n$O(-2, 3) \\qquad OA = R = \\sqrt{1 + 4} = \\sqrt{5}$\nاین روش برای درک بیشتر مفهوم دایره آورده شده است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1697,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1698",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای به مرکز $O(-۱, ۶)$ و شعاع $۱/۲۵$ محور $y$ها را در نقاط A و B قطع می‌کند. مساحت مثلث OAB کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در فرم $x^2 + y^2 + ax + by + c = 0$ معادله به شرطی دایره است که $a^2 + b^2 - 4c > 0$ باشد.\n$3x^2 + 3y^2 - 6x + 3y + a = 0 \\Rightarrow x^2 + y^2 - 2x + y + \\frac{a}{3} = 0$\nشرط دایره بودن: $(-2)^2 + (1)^2 - \\frac{4a}{3} > 0 \\Rightarrow \\frac{4}{3}a < 5 \\Rightarrow a < \\frac{15}{4}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1698,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1699",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقاط $M(۱, ۲)$ و $N(۲, ۱)$ نسبت به دایرهٔ $x^۲ + y^۲ + ۳x - ۵y - ۴ = ۰$ چگونه‌اند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "M بیرون و N درون دایره"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "M درون و N بیرون دایره"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "هر دو بیرون دایره"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "هر دو درون دایره"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "معادله $ax^2 + 2y^2 + 8x - 2ay = b$ به شرطی دایره است که ضریب $x^2$ و $y^2$ برابر باشد. بنابراین: $a = 2$.\n$2x^2 + 2y^2 + 8x - 4y = b \\Rightarrow x^2 + y^2 + 4x - 2y - \\frac{b}{2} = 0$\n$R = \\frac{1}{2}\\sqrt{16 + 4 + 2b} = 3 \\Rightarrow \\sqrt{20 + 2b} = 6 \\Rightarrow 2b = 16 \\Rightarrow b = 8 \\Rightarrow ab = 16$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1699,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1700",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر نقطهٔ $A(-۱, ۳)$ درون دایرهٔ $x^۲ + y^۲ + ax + ۴y = ۹$ باشد، حدود a کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a > ۱۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۰ < a < ۱۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۰ < a < ۹$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a < ۶$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تمامی اقطار دایره از مرکز دایره عبور می‌کنند.\n$x^2 + y^2 - 4x + 2y = 7 \\Rightarrow O(2, -1)$\nقطر مورد نظر بر خط $3 = 2y + x$ عمود است. شیب این خط برابر $-\\frac{1}{2}$ و در نتیجه شیب قطر ۲ می‌باشد. در نتیجه:\nمعادله قطر: $y + 1 = 2(x - 2) \\Rightarrow y = 2x - 5$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1700,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1701",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطهٔ $P(۳, -۳)$ بیرون دایره به معادلهٔ $x^۲ + y^۲ + ۶x - ۲y + a = ۲۷$ است. حدود a کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$a < -۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a > -۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۱۰ < a < -۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۶ < a < ۱۰$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره بر قطر دایره واقع است. معادله قطر داده‌شده $2x + y = 2$ است. بنابراین:\n$O(\\alpha, \\beta) \\Rightarrow 2\\alpha + \\beta = 2 \\Rightarrow \\beta = 2 - 2\\alpha \\Rightarrow O(\\alpha, 2 - 2\\alpha)$\nفاصله مرکز از دو نقطه $A(-3, 4)$ و $B(1, 5)$ برابر شعاع دایره است.\n$R = OA = OB \\Rightarrow \\sqrt{(\\alpha + 3)^2 + (-2\\alpha - 2)^2} = \\sqrt{(\\alpha - 1)^2 + (-3 - 2\\alpha)^2}$\n$\\Rightarrow (\\alpha + 3)^2 + (2\\alpha + 2)^2 = (\\alpha - 1)^2 + (2\\alpha + 3)^2$\n$\\Rightarrow 4\\alpha = -3 \\Rightarrow \\alpha = -\\frac{3}{4}$\n$\\Rightarrow R = \\sqrt{(-\\frac{3}{4} + 3)^2 + (\\frac{3}{2} - 2)^2} = \\sqrt{\\frac{81}{16} + \\frac{1}{4}} = \\frac{\\sqrt{85}}{4}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1701,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1702",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای به مرکز $O(-۱, ۳)$ بر خط $۳y + ۲ = ۰$ مماس است. این دایره محور $y$ها را با کدام عرض قطع می‌کند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۰$ یا $-۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۰$ یا $۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$ یا $۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۲$ یا $۴$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره بر خط $y = 2x - 1$ واقع است. بنابراین $O(\\alpha, 2\\alpha - 1)$.\nفاصله مرکز دایره از نقاط $A(2, 1)$ و $B(4, -3)$ برابر شعاع دایره است.\n$R = OA = OB \\Rightarrow \\sqrt{(\\alpha-2)^r+(2\\alpha-2)^r} = \\sqrt{(\\alpha-4)^r+(2\\alpha+2)^r} \\Rightarrow 12\\alpha = -12 \\Rightarrow \\alpha = -1 \\Rightarrow O(-1,-3)$\n$R = \\sqrt{9+16} = 5$\nمعادله دایره : $(x+1)^r+(y+3)^r = 25$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1702,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1703",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "از تلاقی خط $x + ۳y = ۵$ با دایره به مرکز $O(۱, -۲)$ وتری به طول $۲۴$ به وجود می‌آید. مساحت این دایره کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۶\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳۲\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره بر $y=-x$ واقع است. بنابراین $O(\\alpha,-\\alpha)$ می‌باشد. دایره از نقاط $A(0,-7)$ و $B(0,1)$ عبور می‌کند. بنابراین فاصله مرکز از $A$ و $B$ برابر شعاع است.\n$R = OA = OB = \\sqrt{\\alpha^r+(7-\\alpha)^r} = \\sqrt{\\alpha^r+(-1-\\alpha)^r} \\Rightarrow 16\\alpha = 48 \\Rightarrow \\alpha = 3$\n$\\Rightarrow R = \\sqrt{3^r+4^r} = 5$\nدر نتیجه:"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1703,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1704",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای به مرکز $(-۲, -۴)$ و شعاع $۵$ بر محور طول‌ها وتری به طول $l$ ایجاد می‌کند. $l$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصله $O(-1,6)$ از محور $y$ها برابر ۱ است.\n$OH = 1$\n$AH^r = OA^r - OH^r = (\\frac{5}{4})^r - 1 = \\frac{25}{16} - \\frac{16}{16} = \\frac{9}{16} \\Rightarrow AH = \\frac{3}{4} \\Rightarrow AB = \\frac{3}{2}$\nخواهیم داشت:\n$S_{OAB} = \\frac{OH \\times AB}{2} = \\frac{1 \\times \\frac{3}{2}}{2} = \\frac{3}{4}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1704,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1705",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای به مرکز $O(۴, -۱)$ از نقاط $A(-۱, -۱)$ و $B(-۶, k)$ عبور می‌کند. بیشترین مقدار طول وتر AB کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{۲۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲\\sqrt{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲\\sqrt{۲۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵\\sqrt{۲}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مختصات نقاط $M(1,2)$ و $N(2,1)$ را در عبارت $x^r+y^r+3x-5y-4$ جاگذاری می‌کنیم. اگر حاصل مثبت باشد، نقطه بیرون دایره، اگر منفی باشد، درون دایره و اگر صفر باشد، بر روی دایره واقع است.\n$M(1,2) \\Rightarrow 1^r+2^r+3-10-4 = -6 < 0 \\Rightarrow$ درون دایره است $M$\n$N(2,1) \\Rightarrow 2^r+1^r+6-5-4 = 2 > 0 \\Rightarrow$ بیرون دایره است $N$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1705,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1706",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایرهٔ $x^۲ + y^۲ - ۱۰x + ۴y + ۲۸ = ۰$ مفروض است. اگر شعاع دایره در هر ثانیه $۰/۵\\text{ cm}$ افزایش یابد، پس از چند ثانیه این دایره بر خط $۳y - ۴x + ۴ = ۰$ مماس می‌شود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نکته: اگر $f(x,y) = x^r+y^r+ax+by+c$ و قرار باشد نقطه $P(x_0,y_0)$ درون دایره باشد، آن‌گاه $f(x_0,y_0) < 0$ و نقطه $P$ واقع بر دایره باشد آن‌گاه $f(x_0,y_0) = 0$ و نقطه $P$ خارج دایره باشد آن‌گاه $f(x_0,y_0) > 0$. حال قرار است نقطه درون دایره باشد، پس:\n$f(x,y) = x^r+ax+y^r+4y-9 \\Rightarrow f(-1,3) < 0$\n$\\Rightarrow 1-a+9+12-9 < 0 \\Rightarrow 13-a < 0 \\Rightarrow a > 13$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1706,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1707",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایرهٔ $x^۲ + y^۲ + ۴x + ay + b = ۰$ در ناحیهٔ دوم بر هر دو محور مختصات مماس است. $a + b$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "عبارت $x^r+y^r-6x+2y-a$ به ازای $P(3,-3)$ باید مثبت باشد.\n$9+9-18-6-a > 0 \\Rightarrow a < -6$\nاز طرفی معادله داده‌شده به شرطی معادله دایره است که $(-6)^r+2^r-4(-a) > 0$ باشد. یعنی $a > -10$ می‌باشد؛ بنابراین محدوده قابل قبول $a$ به صورت $-10 < a < -6$ خواهد بود."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1707,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1708",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $۳x - ۲y = ۰$ بر دایرهٔ $x^۲ + y^۲ - ۱۲x + ۸y + k = ۰$ مماس است. k کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۱$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دایره به مرکز $O(-1,3)$ بر خط $x+3y+2=0$ مماس است. بنابراین فاصله مرکز تا این خط برابر شعاع دایره است.\n$R = OH = \\frac{|-1+9+2|}{\\sqrt{1+9}} = \\frac{10}{\\sqrt{10}} = \\sqrt{10}$\nمعادله دایره : $(x+1)^r+(y-3)^r = 10$\n$\\xrightarrow{x=0} 1+(y-3)^r = 10 \\Rightarrow (y-3)^r = 9 \\Rightarrow \\begin{cases} y-3 = 3 \\Rightarrow y=6 \\\\ y-3 = -3 \\Rightarrow y=0 \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1708,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1709",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "به ازای کدام مقادیر a خط به معادلهٔ $۳x + ۷ = ay$ بر دایره به معادلهٔ $x^۲ + y^۲ - ۴y = ۵$ مماس است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴$ و $\\frac{۸}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۴$ و $\\frac{۸}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴$ و $-\\frac{۸}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۴$ و $-\\frac{۸}{۵}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به شکل $AB = \\sqrt{24} \\Rightarrow AB = 2\\sqrt{6}$\nو در نتیجه $AH = \\frac{\\sqrt{24}}{2} = \\sqrt{6}$ است.\nکافی است اندازه $OH$ را به دست آوریم.\n$x+3y-5=0 , O(1,-2) \\Rightarrow OH = \\frac{|1-6-5|}{\\sqrt{1+9}} = \\frac{10}{\\sqrt{10}} = \\sqrt{10}$\nبنابراین:\n$R^r = OH^r+AH^r = 10+6 = 16 \\Rightarrow S = \\pi R^r = 16\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1709,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1710",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایرهٔ C بر محورهای مختصات مماس بوده و از نقطهٔ $P(۲, ۲ - \\sqrt{۲})$ عبور می‌کند. شعاع دایرهٔ بزرگ‌تر کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۷ - ۴\\sqrt{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۹ - ۴\\sqrt{۲}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: معادله دایره به مرکز $O(-2,-4)$ و شعاع $R=5$ را نوشته و با محور $x$ها قطع می‌دهیم.\n$(x+2)^r+(y+4)^r = 25 \\xrightarrow{y=0} (x+2)^r+16 = 25 \\Rightarrow (x+2)^r = 9$\n$\\Rightarrow x+2 = \\pm 3 \\Rightarrow \\begin{cases} x=1 \\Rightarrow A(1,0) \\\\ x=-5 \\Rightarrow B(-5,0) \\end{cases} \\Rightarrow AB = l = 6$\nروش دوم:\n$y=0 \\Rightarrow O(-2,-4) \\Rightarrow OH = 4$\n$AH^r = OA^r-OH^r = 25-16 = 9 \\Rightarrow AH = 3 \\Rightarrow AB = 6$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1710,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1711",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو دایرهٔ گذرا بر نقطهٔ $(-۱, ۸)$ بر محورهای مختصات مماس هستند. فاصلهٔ مراکز این دو دایره کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴\\sqrt{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸\\sqrt{۲}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصله مرکز دایره $O(-4,1)$ از نقاط $A(-1,-1)$ و $B(-6,k)$ برابر شعاع دایره است.\n$R = OA = OB \\Rightarrow \\sqrt{9+4} = \\sqrt{4+(k-1)^r}$\n$\\Rightarrow (k-1)^r = 9 \\Rightarrow k-1 = \\pm 3 \\Rightarrow \\begin{cases} k=4 \\\\ k=-2 \\end{cases}$\nبنابراین:\n$\\Rightarrow \\begin{cases} B(-6,4) \\Rightarrow AB = \\sqrt{25+25} = 5\\sqrt{2} \\\\ B(-6,-2) \\Rightarrow AB = \\sqrt{25+1} = \\sqrt{26} \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1711,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1712",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "عرض از مبدأ خط مماس بر دایرهٔ $x^۲ + y^۲ - ۲x + ۲y = ۳$ در نقطهٔ $P(۲, -۳)$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-۴$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دایره زمانی بر خط مماس می‌شود که فاصله مرکز آن تا خط برابر شعاع گردد.\n$x^r+y^r-10x+4y+28=0 \\Rightarrow O(5,-2) , R = \\frac{1}{2}\\sqrt{100+16-112} = 1$\n$OH$ فاصله مرکز دایره تا خط $4x-3y+4=0$ است.\n$OH = \\frac{|20+6+4|}{\\sqrt{16+9}} = \\frac{30}{5} = 6$\nشعاع دایره در حال حاضر برابر ۱ سانتی‌متر است و باید به ۶ سانتی‌متر برسد. لازم است ۵ سانتی‌متر به شعاع اضافه شود که ۱۰ ثانیه زمان می‌برد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1712,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1713",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایرهٔ $x^۲ + y^۲ + ۶x - ۴y + k = ۰$ بر محور $y$ها مماس است. کدام خط زیر بر دایره مماس است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$y = ۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x = ۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$y = ۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x = -۱$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دایره مطابق شکل در ناحیه دوم بر هر دو محور مماس است.\nبنابراین مختصات مرکز دایره به صورت $O(-R,R)$ می‌باشد.\n$x^r+y^r+4x+ay+b=0 \\Rightarrow O(-2,-\\frac{a}{2})$\nبنابراین:\n$-R = -2 \\Rightarrow R = 2$\n$-\\frac{a}{2} = R = 2 \\Rightarrow a = -4$\nهم‌چنین می‌دانیم:\n$R = \\frac{1}{2}\\sqrt{16+a^r-4b} \\Rightarrow 2 = \\frac{1}{2}\\sqrt{16+16-4b}$\n$\\Rightarrow 32-4b = 16 \\Rightarrow b = 4 \\Rightarrow a+b = 0$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1713,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1714",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای به شعاع ۴ که مرکز آن بر نیمساز ناحیهٔ دوم واقع است، بر محور طول‌ها مماس است. کدام نقطه بر این دایره واقع است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(۰, ۰)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(۲, ۲)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-۴, ۸)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(۴, -۸)$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: خط $3x-2y=0$ بر دایره $x^2+y^2-12x+8y+k=0$ مماس است. بنابراین فاصله مرکز دایره تا خط برابر شعاع دایره می‌باشد.\nمرکز دایره: $O(6,-4)$\nشعاع دایره: $R = \\frac{1}{2}\\sqrt{144+64-4k} = \\frac{1}{2}\\sqrt{208-4k} = \\sqrt{52-k}$\n$OH$: فاصله مرکز تا خط\n$OH = \\frac{|18+8|}{\\sqrt{9+4}} = \\frac{26}{\\sqrt{13}} = 2\\sqrt{13}$\n$\\Rightarrow R = OH \\Rightarrow \\sqrt{52-k} = 2\\sqrt{13} \\Rightarrow 52-k=52 \\Rightarrow k=0$\nروش دوم: معادلات خط و دایره را مساوی هم قرار می‌دهیم.\n$x^2+y^2-12x+8y+k=0$\n$3x-2y=0 \\Rightarrow y = \\frac{3}{2}x$\n$\\Rightarrow x^2+\\frac{9}{4}x^2-12x+12x+k=0 \\Rightarrow \\frac{13}{4}x^2+k=0$\nخط بر دایره مماس است. بنابراین معادله فوق باید فقط یک ریشه مضاعف داشته باشد. در نتیجه $k=0$ می‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1714,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1715",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرکز دایرهٔ C بر نیمساز ناحیهٔ چهارم واقع بوده و بر خط $y = ۳x$ مماس است. اگر این دایره از نقطهٔ $(۳, ۱)$ عبور کند، شعاع آن کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{۱۰}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲\\sqrt{۱۰}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خط $ay-3x-7=0$ بر دایره $x^2+y^2-4y-5=0$ مماس است. بنابراین فاصله مرکز دایره تا خط برابر شعاع دایره می‌باشد.\nمرکز دایره: $O(0,2)$\nشعاع دایره: $R = \\frac{1}{2}\\sqrt{0+16+20} = 3$\nبنابراین:\n$OH = R \\Rightarrow \\frac{|2a-7|}{\\sqrt{9+a^2}} = 3 \\Rightarrow |2a-7|=3\\sqrt{9+a^2}$\n$\\Rightarrow 4a^2-28a+49 = 9a^2+81 \\Rightarrow 5a^2+28a+32=0$\n$a = \\frac{-14 \\pm \\sqrt{196-160}}{5} \\Rightarrow \\begin{cases} a=-\\frac{8}{5} \\\\ a=-4 \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1715,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1716",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کم‌ترین فاصلهٔ نقاط روی دایره $x^۲ + y^۲ + ۶x - ۸y + ۲۱ = ۰$ تا مبدأ مختصات کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نقطه $P(2,2\\sqrt{2}-3)$ در ناحیه چهارم است. بنابراین دایره در ناحیه چهارم بر محورها مماس بوده و مرکز آن به صورت $O(R,-R)$ می‌باشد.\n$(x-R)^2+(y+R)^2=R^2$\n$\\xrightarrow{(2,2\\sqrt{2}-3)} (2-R)^2+(2\\sqrt{2}-3+R)^2=R^2$\n$\\Rightarrow R^2-4R+4+R^2+(2\\sqrt{2}-3)^2+2(2\\sqrt{2}-3)R=R^2$\n$\\Rightarrow R^2+(4\\sqrt{2}-10)R+21-12\\sqrt{2}=0$\n$\\Rightarrow R = 5-2\\sqrt{2} \\pm \\sqrt{(5-2\\sqrt{2})^2 - 21+12\\sqrt{2}}$\n$= 5-2\\sqrt{2} \\pm \\sqrt{12-8\\sqrt{2}}$\n$= 5-2\\sqrt{2} \\pm 2\\sqrt{3-2\\sqrt{2}} = 5-2\\sqrt{2} \\pm 2\\sqrt{(\\sqrt{2}-1)^2}$\n$= 5-2\\sqrt{2} \\pm 2(\\sqrt{2}-1) \\Rightarrow \\begin{cases} R = 3 \\Rightarrow \\text{شعاع دایره بزرگ‌تر} \\\\ R = 7-4\\sqrt{2} \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1716,
+      "question_pdf": "14.pdf",
+      "question_page": 17,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1717",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $A$ و $B$ نزدیک‌ترین و دورترین نقاط دایرهٔ $x^2 + y^2 - 8x + 6y + 16 = 0$ نسبت به خط $3x - 4y = 4$ باشند، حاصل‌ضرب فواصل $A$ و $B$ از این خط کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۹"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نقطه $(-1,-8)$ در ناحیه سوم واقع است. بنابراین دو دایره در ناحیه سوم بر محورها مماس بوده و مرکز آن‌ها به صورت $O(-R,-R)$ می‌باشد.\n$(x+R)^2+(y+R)^2=R^2$\n$\\xrightarrow{(-1,-8)} (-1+R)^2+(-8+R)^2=R^2$\n$\\Rightarrow R^2-18R+65=0 \\Rightarrow (R-5)(R-13)=0 \\Rightarrow \\begin{cases} R=5 \\Rightarrow O(-5,-5) \\\\ R=13 \\Rightarrow O'(-13,-13) \\end{cases}$\nدر نتیجه:\n$OO' = \\sqrt{8^2+8^2} = 8\\sqrt{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1717,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1718",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای بر محور $y$ها و خط به معادلهٔ $5x - 12y = 0$ مماس است. اگر مرکز این دایره در ناحیهٔ دوم و شعاع آن ۷ باشد، مجموع طول و عرض مرکز دایره کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{7}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\dfrac{7}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{14}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-\\dfrac{14}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره $x^2+y^2-2x+2y-3=0$ نقطه $O(1,-1)$ است.\n$m_{OP} = \\frac{-3+1}{2-1} = -2$\nخط مماس $\\ell$ بر $OP$ عمود بوده و شیب آن برابر $\\frac{1}{2}$ است. بنابراین:\n$\\ell: y+3 = \\frac{1}{2}(x-2) \\Rightarrow y = \\frac{1}{2}x-4$\nعرض از مبدأ خط مماس $-4$ است.\n$\\blacksquare$ دقت داشته باشید در رسم اشکال این‌گونه سؤالات محل واقعی نقاط از لحاظ مختصاتی اهمیت ندارد. مثلاً در شکل فوق نقطه $P(2,-3)$ بالاتر از $O(1,-1)$ قرار دارد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1718,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1719",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطهٔ $O(a, 6)$ مرکز دایره‌ای است که بر خطوط $4x = 3y$ و $3x = 4y$ مماس است. شعاع دایرهٔ بزرگ‌تر چند برابر شعاع دایرهٔ کوچک‌تر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره $x^2+y^2+6x-4y+k=0$ نقطه $O(-3,2)$ است. فاصله $O$ تا محور $y$ها برابر $3$ می‌باشد. این دایره بر محور $y$ها مماس است. بنابراین شعاع آن برابر $3$ می‌باشد.\nبا توجه به شکل واضح است خطوط $x=0$ و $x=-6$ و هم‌چنین $y=5$ و $y=-1$ بر دایره مماس می‌باشند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1719,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1720",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مرکز دایرهٔ گذرا بر نقطهٔ $(1, 0)$ و مماس بر دو خط $x + y = 1$ و $x + y = 5$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(2, 1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(1, 2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(2, -1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-2, 1)$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره بر نیمساز ناحیه دوم یعنی $y=-x$ واقع است. بنابراین مختصات مرکز به صورت $O(-\\alpha,\\alpha)$ می‌باشد. دایره بر محور طول‌ها مماس است. در نتیجه فاصله مرکز تا محور طول‌ها برابر $R$ است.\n$\\alpha=R$\nشعاع دایره $4$ می‌باشد: $O(-4,4)$\n$\\Rightarrow (x+4)^2+(y-4)^2=16$\nدر بین گزینه‌ها نقطه $(-4,8)$ در معادله دایره صدق می‌کند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1720,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1721",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو دایرهٔ $x^2 + y^2 - 4x - 4y + 6 = 0$ و $x^2 + y^2 = 18$ نسبت به هم چگونه‌اند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "متقاطع"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مماس بیرونی"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "متخارج"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مماس درونی"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز دایره بر خط $y=-x$ واقع بوده و به صورت $O(\\alpha,-\\alpha)$ می‌باشد. دایره بر خط $y=3x$ مماس است. بنابراین فاصله مرکز دایره تا خط $3x-y=0$ برابر شعاع می‌باشد.\n$OH = \\frac{|-\\alpha-3\\alpha|}{\\sqrt{9+1}} = \\frac{4\\alpha}{\\sqrt{10}}$\n$(x-\\alpha)^2+(y+\\alpha)^2 = \\frac{8}{5}\\alpha^2$\nخواهیم داشت:\nنقطه $(3,1)$ روی دایره است:\n$(3-\\alpha)^2+(1+\\alpha)^2 = \\frac{8}{5}\\alpha^2 \\Rightarrow \\frac{2}{5}\\alpha^2-4\\alpha+10=0$\n$\\Rightarrow 2\\alpha^2-20\\alpha+50=0 \\Rightarrow (\\alpha-5)^2=0 \\Rightarrow \\alpha=5$\nدر نتیجه:\n$R = OH = \\frac{4\\alpha}{\\sqrt{10}} = \\frac{20}{\\sqrt{10}} = 2\\sqrt{10}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1721,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 0,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1722",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو دایرهٔ $x^2 + y^2 - 2x = 1$ و $x^2 + y^2 + 2y = k$ مماس درونی هستند، مقدار $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-1$ یا $7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "فقط $7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$ یا $7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0$ یا $7$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نکته اگر از نقطهٔ $M$ به مرکز دایره وصل کرده و امتداد دهیم تا دایره را در نقاط $A$ و $B$ قطع کند، این دو نقطه نزدیک‌ترین و دورترین نقاط دایره به $M$ می‌باشند.\nاگر $M$ بیرون دایره باشد، این کم‌ترین و بیشترین فاصله به ترتیب $OM-R$ و $OM+R$ و اگر درون دایره باشد $R-OM$ و $OM+R$ است.\nمرکز دایرهٔ $x^2+y^2+6x-8y+21=0$ نقطهٔ $O(-3, 4)$ و شعاع آن برابر است با:\n$R = \\frac{1}{2} \\sqrt{36+64-84} = 2$\n$M(\\circ, \\circ), O(-3, 4) \\Rightarrow OM = \\sqrt{9+16} = 5$\nخواهیم داشت:\n$OM-R = 5-2 = 3$\nدر نتیجه: کم‌ترین فاصله = $3$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1722,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1723",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو دایرهٔ $x^2 + y^2 - 4x + 6y + 12 = 0$ و $x^2 + y^2 - 6x + 8y + 16 = 0$ نسبت به هم چگونه‌اند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "متخارج"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "متقاطع"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "مماس درونی"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "متداخل"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر از مرکز دایره بر خطی که با دایره نقطهٔ تماس ندارد و عمود $OH$ را رسم کرده و امتداد دهیم تا دایره را در نقاط $A$ و $B$ قطع کند، این دو نقطه نزدیک‌ترین و دورترین نقاط دایره نسبت به این خط می‌باشند. کم‌ترین فاصله برابر $OH-R$ و بیشترین فاصله $OH+R$ است.\nمرکز دایرهٔ $x^2+y^2-8x+6y+16=0$ نقطهٔ $O(4, -3)$ و شعاع آن برابر است با:\n$R = \\frac{1}{2}\\sqrt{64+36-64} = 3$\nفاصلهٔ مرکز دایره تا خط $3x-4y-4=0$ برابر است با:\n$OH = \\frac{|12+12-4|}{\\sqrt{9+16}} = \\frac{20}{5} = 4$\nبنابراین:\n$\\begin{cases} AH = OH - R = 4 - 3 = 1 \\\\ BH = OH + R = 4 + 3 = 7 \\end{cases} \\Rightarrow AH \\times BH = 7$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1723,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1724",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌های $x^2 + y^2 - 2x - 12y + 33 = 0$ و $x^2 + y^2 + 10x - 6y = a$ متقاطع‌اند. حدود $a$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$-15 < a < 15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-25 < a < 15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-15 < a < 25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-25 < a < 25$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دایره بر محور $y$ها مماس بوده و مرکز آن در ناحیهٔ دوم است. مختصات مرکز به صورت $O(-R, \\beta)$ می‌باشد و با توجه به این‌که شعاع دایره $7$ است، مرکز دایره $O(-7, \\beta)$ خواهد بود.\nدایره بر خط $5x-12y=127$ مماس است. در نتیجه فاصلهٔ مرکز تا این خط برابر شعاع است.\n$OH = \\frac{|-35-12\\beta|}{\\sqrt{25+144}} = 7 \\Rightarrow |12\\beta+35| = 91$\n$\\xrightarrow{\\beta > 0} 12\\beta+35=91 \\Rightarrow \\beta=\\frac{14}{3}$\nبنابراین:\n$O(-7, \\frac{14}{3}) \\Rightarrow -7+\\frac{14}{3} = -\\frac{7}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1724,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1725",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو دایره به معادلات $x^2 + y^2 - 2x - 2y = 7$ و $x^2 + y^2 + 6x - 8y = k$ مماس خارج‌اند. مقدار $k$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۹"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-21$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-39$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فاصلهٔ مرکز دایره $O(a,6)$ از خطوط $3x-4y=0$ و $4y-3x=0$ برابر شعاع دایره است.\n$OH = \\frac{|18-4a|}{\\sqrt{9+16}} \\quad , \\quad OH' = \\frac{|24-3a|}{\\sqrt{16+9}}$\n$OH = OH' \\Rightarrow \\frac{|18-4a|}{5} = \\frac{|24-3a|}{5} \\Rightarrow |18-4a| = |24-3a|$\n$\\Rightarrow \\begin{cases} 18-4a = 24-3a \\Rightarrow a = -6 \\Rightarrow R = OH = \\frac{42}{5} \\\\ 18-4a = 3a-24 \\Rightarrow a = 6 \\Rightarrow R' = OH = \\frac{6}{5} \\end{cases}$\nبنابراین: $\\frac{R}{R'} = \\frac{\\frac{42}{5}}{\\frac{6}{5}} = 7$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1725/solution_1.webp",
+        "alt": "شکل سؤال",
+        "aspect_ratio": 0.9578
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1725,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0161.jpg",
+          "box": [
+            900,
+            1480,
+            1780,
+            2400
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1726",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "شعاع دایره به مرکز $(-1, 0)$ و مماس خارج بر دایرهٔ $x^2 + y^2 - 4x + 8y + 16 = 0$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دایره بر دو خط موازی $x+y=1$ و $x+y=5$ مماس است. مرکز دایره بر خطی که با این دو خط موازی بوده و از آن دو به یک فاصله باشد واقع است. معادلهٔ این خط $x+y=3$ می‌باشد.\n$(ax+by=\\frac{c+c'}{2})$\nبنابراین: $O(\\alpha, 3-\\alpha)$\nفاصلهٔ دو خط $x+y=1$ و $x+y=5$ برابر قطر دایره است.\n$2R = \\frac{|5-1|}{\\sqrt{1+1}} = 2\\sqrt{2} \\Rightarrow R=\\sqrt{2}$\nمعادلهٔ دایره: $(x-\\alpha)^2 + (y-3+\\alpha)^2 = 2$\nدایره از نقطهٔ $(1, \\circ)$ عبور می‌کند.\n$(1-\\alpha)^2 + (3-\\alpha)^2 = 2$\n$\\Rightarrow 2\\alpha^2 - 8\\alpha + 8 = 0 \\Rightarrow \\alpha^2 - 4\\alpha + 4 = 0$\n$\\Rightarrow (\\alpha - 2)^2 = 0 \\Rightarrow \\alpha = 2 \\Rightarrow O(2, 1)$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1726,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1727",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای به مرکز $(1, -2)$ با کدام شعاع بر دایرهٔ $x^2 + y^2 + 2x + 4y + 4 = 0$ مماس درونی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اندازهٔ شعاع دو دایره و طول خط‌المرکزین را محاسبه می‌کنیم.\n$x^2+y^2+4x-4y+6=0 \\Rightarrow O(-2, 2)$\n$R = \\frac{1}{2}\\sqrt{16+16-24} = \\sqrt{2}$\n$x^2+y^2=18 \\Rightarrow O'(\\circ, \\circ) \\quad R' = \\sqrt{18} = 3\\sqrt{2}$\n$OO' = \\sqrt{4+4} = \\sqrt{8} = 2\\sqrt{2}$\nخواهیم داشت:\n$OO' = R' - R \\Rightarrow \\text{دو دایره مماس درونی هستند.}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1727,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1728",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایرهٔ $C$ بر دایره به معادلهٔ $x^2 + y^2 + 6x - 4y + 12 = 0$ مماس خارج است. هر خط قائم بر دایرهٔ $C$ محور عرض‌ها را به عرض ۲ قطع می‌کند. شعاع دایرهٔ $C$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شرط آن‌که دو دایره مماس درونی باشند، آن است که فاصلهٔ دو مرکز برابر اختلاف مقدار دو شعاع دایره باشد.\nپس دایره‌ها را استاندارد می‌کنیم.\n$x^2+y^2-2x=1 \\Rightarrow (x-1)^2+y^2=2 \\Rightarrow \\begin{cases} O_1(1, \\circ) \\\\ R_1=\\sqrt{2} \\end{cases}$\n$x^2+y^2+2y=k \\Rightarrow x^2+(y+1)^2=k+1$\n$\\Rightarrow \\begin{cases} O_2(\\circ, -1) \\\\ R_2=\\sqrt{k+1} \\end{cases}$\nمماس درونی هستند $\\Rightarrow O_1O_2 = |R_1-R_2|$\n$\\Rightarrow \\sqrt{2} = |\\sqrt{k+1}-\\sqrt{2}|$\n$\\sqrt{k+1}-\\sqrt{2} = \\sqrt{2} \\Rightarrow \\sqrt{k+1} = 2\\sqrt{2} \\Rightarrow k+1=8 \\Rightarrow k=7$\n$\\sqrt{2}-\\sqrt{k+1} = \\sqrt{2} \\Rightarrow \\sqrt{k+1}=0 \\Rightarrow k=-1 \\quad \\text{غ ق ق}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1728,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1729",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "وتر مشترک دو دایرهٔ $x^2 + y^2 - 5x + 7y = 1$ و $x^2 + y^2 + x - 3y = 2$ محور $x$ها را در نقطه‌ای با کدام طول قطع می‌کند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{4}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{6}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{8}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "دو دایره وتر مشترک ندارند."
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "شعاع دو دایره و طول خط‌المرکزین را محاسبه می‌کنیم.\n$x^2+y^2-6x+8y+16=0 \\Rightarrow O(3,-4), R = \\frac{1}{2}\\sqrt{36+64-64} = 3$\n$x^2+y^2-4x+6y+12=0 \\Rightarrow O'(2,-3), R' = \\frac{1}{2}\\sqrt{16+36-48} = 1$\n$OO' = \\sqrt{1+1} = \\sqrt{2}$\nخواهیم داشت:\n$R-R' = 2 \\quad , \\quad OO' < R-R' \\Rightarrow$ دو دایره متداخل هستند.\nبنابراین:"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1729/solution_1.webp",
+        "alt": "شکل سؤال",
+        "aspect_ratio": 1.1872
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1729,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 161,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0161.jpg",
+          "box": [
+            30,
+            1680,
+            890,
+            2400
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1730",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "شیب خطی که از نقطهٔ تلاقی $x^2 + y^2 - 8x + 4y + 19 = 0$ و $x^2 + y^2 - 2x + 2y - 8.5 = 0$ عبور می‌کند، کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز و شعاع دو دایره را می‌نویسیم.\n$x^2 + y^2 + 2x - 12y + 33 = 0$\n$\\Rightarrow O(-1, 6), R = \\frac{1}{2}\\sqrt{4 + 144 - 132} = 2$\n$x^2 + y^2 + 10x - 6y - a = 0$\n$\\Rightarrow O'(-5, 3), R' = \\frac{1}{2}\\sqrt{100 + 36 + 4a} = \\sqrt{a + 34}$\n$OO' = \\sqrt{16 + 9} = 5$\nخواهیم داشت:\nدو دایره متقاطع‌اند. بنابراین:\n$|R - R'| < OO' < R + R'$\n$|\\sqrt{a + 34} - 2| < 5 < \\sqrt{a + 34} + 2$\n$\\Rightarrow \\begin{cases} -5 < \\sqrt{a + 34} - 2 < 5 \\Rightarrow -3 < \\sqrt{a + 34} < 7 \\\\ \\Rightarrow 0 \\le a + 34 < 49 \\Rightarrow -34 \\le a < 15 \\ (1) \\\\ \\sqrt{a + 34} + 2 > 5 \\Rightarrow \\sqrt{a + 34} > 3 \\\\ \\Rightarrow a > -25 \\ (2) \\end{cases}$\n$(1) \\cap (2) \\Rightarrow -25 < a < 15$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1730/solution_1.webp",
+        "alt": "شکل سؤال",
+        "aspect_ratio": 2.7327
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1730,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0162.jpg",
+          "box": [
+            900,
+            72,
+            1741,
+            362
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1731",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای که از نقطهٔ $(2, 3)$ می‌گذرد، با دایرهٔ $x^2 + y^2 - 10x - 2y + 6 = 0$ وتر مشترکی به معادلهٔ $4 = y - x$ دارد. معادلهٔ آن دایره کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 - 9x + y = -2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 - 9x - y = -8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 + 9x - y = 28$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$x^2 + y^2 + 9x + y = 34$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز و شعاع دو دایره را می‌نویسیم.\n$x^2 + y^2 - 2x - 2y - 7 = 0 \\Rightarrow O(1, 1), R = \\frac{1}{2}\\sqrt{4 + 4 + 28} = 3$\n$x^2 + y^2 + 6x - 8y - k = 0$\n$\\Rightarrow O'(-3, 4), R' = \\frac{1}{2}\\sqrt{36 + 64 + 4k} = \\sqrt{k + 25}$\n$OO' = \\sqrt{16 + 9} = 5$\nبنابراین:\nدو دایره مماس خارج‌اند. در نتیجه:\n$OO' = R + R'$\n$\\Rightarrow 5 = 3 + \\sqrt{k + 25} \\Rightarrow \\sqrt{k + 25} = 2 \\Rightarrow k = -21$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1731/solution_1.webp",
+        "alt": "شکل سؤال",
+        "aspect_ratio": 4.1381
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1731,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0162.jpg",
+          "box": [
+            900,
+            362,
+            1741,
+            544
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "شکل سؤال"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1732",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "شعاع دایره به مرکز $(-1, 0)$ و مماس خارجی بر دایرهٔ $x^2 + y^2 - 4x + 8y + 16 = 0$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز و شعاع دایره $x^2+y^2-4x+8y+16=0$ برابر $O(2,-4)$ و $R=2$ است. مرکز دایره مورد نظر $O'(-1,0)$ است، پس $OO'=\\sqrt{3^2+(-4)^2}=5$. چون دو دایره مماس خارجی‌اند، $R+R'=OO'$ و در نتیجه $2+R'=5\\Rightarrow R'=3$."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1732,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1733",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایره‌ای به مرکز $(1, -2)$ با کدام شعاع بر دایرهٔ $x^2 + y^2 + 2x + 4y + 4 = 0$ مماس درونی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مرکز و شعاع دایره $x^2+y^2+2x+4y+4=0$ برابر $O(-1,-2)$ و $R=1$ است. مرکز دایره مورد نظر $O'(1,-2)$ است، بنابراین $OO'=2$. برای تماس درونی داریم $|R-R'|=OO'$؛ پس $|1-R'|=2$ و از میان جواب‌ها فقط $R'=3$ پذیرفتنی است."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1733,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1734",
+    "subject": "math",
+    "topic_key": "visual_thinking_conics",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دایرهٔ $C$ بر دایره به معادلهٔ $x^2 + y^2 - 6x + 4y + 13 = 0$ مماس خارج است. هر خط قائم بر دایرهٔ $C$ محور عرض‌ها را به عرض ۲ قطع می‌کند. شعاع دایرهٔ $C$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۱"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۴"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "خطوط قائم بر دایره همان قطرهای آن‌اند و همه از مرکز می‌گذرند؛ پس مرکز دایره $C$ برابر $O(0,2)$ است. دایره $C':x^2+y^2-6x+4y+13=0$ مرکز $O'(3,-2)$ و شعاع $R'=1$ دارد. فاصله مراکز $OO'=\\sqrt{3^2+(-4)^2}=5$ است. چون تماس خارجی است، $R+R'=5$ و بنابراین $R=4$."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1734,
+      "question_pdf": "14.pdf",
+      "question_page": 18,
+      "solution_page": 162,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  }
+]

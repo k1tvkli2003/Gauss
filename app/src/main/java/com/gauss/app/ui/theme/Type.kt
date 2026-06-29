@@ -6,6 +6,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.em
 import com.gauss.app.R
 
 /** Vazirmatn — the Persian face shipped with the app, mapped across weights. */
@@ -23,16 +24,16 @@ val GaussTypography = Typography(
     displayLarge = base.displayLarge.copy(fontFamily = Vazirmatn),
     displayMedium = base.displayMedium.copy(fontFamily = Vazirmatn),
     displaySmall = base.displaySmall.copy(fontFamily = Vazirmatn),
-    headlineLarge = base.headlineLarge.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.Bold),
-    headlineMedium = base.headlineMedium.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.Bold),
-    headlineSmall = base.headlineSmall.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.Bold),
-    titleLarge = TextStyle(fontFamily = Vazirmatn, fontWeight = FontWeight.Bold, fontSize = 22.sp),
-    titleMedium = TextStyle(fontFamily = Vazirmatn, fontWeight = FontWeight.SemiBold, fontSize = 17.sp),
+    headlineLarge = base.headlineLarge.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.Black, letterSpacing = 0.sp),
+    headlineMedium = base.headlineMedium.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.ExtraBold, letterSpacing = 0.sp),
+    headlineSmall = base.headlineSmall.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.Bold, letterSpacing = 0.sp),
+    titleLarge = TextStyle(fontFamily = Vazirmatn, fontWeight = FontWeight.Black, fontSize = 23.sp, lineHeight = 1.35.em),
+    titleMedium = TextStyle(fontFamily = Vazirmatn, fontWeight = FontWeight.Bold, fontSize = 17.sp, lineHeight = 1.45.em),
     titleSmall = base.titleSmall.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.SemiBold),
-    bodyLarge = base.bodyLarge.copy(fontFamily = Vazirmatn),
-    bodyMedium = base.bodyMedium.copy(fontFamily = Vazirmatn),
-    bodySmall = base.bodySmall.copy(fontFamily = Vazirmatn),
-    labelLarge = base.labelLarge.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.SemiBold),
-    labelMedium = base.labelMedium.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.SemiBold),
-    labelSmall = base.labelSmall.copy(fontFamily = Vazirmatn),
+    bodyLarge = base.bodyLarge.copy(fontFamily = Vazirmatn, lineHeight = 1.65.em, letterSpacing = 0.sp),
+    bodyMedium = base.bodyMedium.copy(fontFamily = Vazirmatn, lineHeight = 1.65.em, letterSpacing = 0.sp),
+    bodySmall = base.bodySmall.copy(fontFamily = Vazirmatn, lineHeight = 1.55.em, letterSpacing = 0.sp),
+    labelLarge = base.labelLarge.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.Bold, letterSpacing = 0.sp),
+    labelMedium = base.labelMedium.copy(fontFamily = Vazirmatn, fontWeight = FontWeight.SemiBold, letterSpacing = 0.sp),
+    labelSmall = base.labelSmall.copy(fontFamily = Vazirmatn, letterSpacing = 0.sp),
 )

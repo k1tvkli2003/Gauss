@@ -1,0 +1,328 @@
+{
+  "task_id": "math-solutions-09-visual-conics-1666-1731-retry2",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1666,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1667,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1668,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1669,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1670,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1671,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1672,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1673,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1674,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1675,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1676,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1677,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1678,
+      "solution_page": null,
+      "solution_text": "صورت سوال و پاسخ در دسترس نیست.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "فایل این صفحه موجود نیست. به عنوان جایگزین تولید شده است."
+      ]
+    },
+    {
+      "question_number": 1722,
+      "solution_page": 161,
+      "solution_text": "نکته: اگر از نقطهٔ $M$ به مرکز دایره وصل کرده و امتداد دهیم تا دایره را در نقاط $A$ و $B$ قطع کند، این دو نقطه نزدیک‌ترین و دورترین نقاط دایره به $M$ می‌باشند. اگر $M$ بیرون دایره باشد، این کم‌ترین و بیشترین فاصله به ترتیب $OM-R$ و $OM+R$ و اگر درون دایره باشد $R-OM$ و $OM+R$ است.\nمرکز دایرهٔ $x^2+y^2+6x-8y=21$ نقطهٔ $O(-3,4)$ و شعاع آن برابر است با:\n$R = \\frac{1}{2} \\sqrt{36+64-84} = 2$\nخواهیم داشت:\n$M(0,0), O(-3,4) \\Rightarrow OM = \\sqrt{9+16} = 5$\nدر نتیجه: کم‌ترین فاصله $= OM - R = 5 - 2 = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0161.jpg",
+          "box": [
+            900,
+            70,
+            1780,
+            480
+          ],
+          "region_type": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1723,
+      "solution_page": 161,
+      "solution_text": "اگر از مرکز دایره بر خطی که با دایره نقطهٔ تماس ندارد و عمود $OH$ را رسم کرده و امتداد دهیم تا دایره را در نقاط $A$ و $B$ قطع کند، این دو نقطه نزدیک‌ترین و دورترین نقاط دایره نسبت به این خط می‌باشند. کم‌ترین فاصله برابر $OH-R$ و بیشترین فاصله $OH+R$ است.\nمرکز دایرهٔ $x^2+y^2-8x+6y+16=0$ نقطهٔ $O(4,-3)$ و شعاع آن برابر است با:\n$R = \\frac{1}{2} \\sqrt{64+36-64} = 3$\nفاصلهٔ مرکز دایره تا خط $3x-4y-4=0$ برابر است با:\n$OH = \\frac{|12+12-4|}{\\sqrt{9+16}} = \\frac{20}{5} = 4$\nبنابراین:\n$\\begin{cases} AH = OH-R = 4-3 = 1 \\\\ BH = OH+R = 4+3 = 7 \\end{cases} \\Rightarrow AH \\times BH = 7$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0161.jpg",
+          "box": [
+            900,
+            480,
+            1780,
+            1010
+          ],
+          "region_type": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1724,
+      "solution_page": 161,
+      "solution_text": "دایره بر محورها مماس بوده و مرکز آن در ناحیهٔ دوم است. مختصات مرکز به صورت $O(-R, R)$ می‌باشد و با توجه به اینکه شعاع دایره $7$ است، مرکز دایره $O(-7, 7)$ خواهد بود.\nدایره بر خط $5x-12y=0$ مماس است. در نتیجه فاصلهٔ مرکز تا این خط برابر شعاع است.\n$OH = \\frac{|-35-12 \\beta|}{\\sqrt{25+144}} = 7 \\Rightarrow |12 \\beta+35|=91$\n$\\xrightarrow{\\beta>0} 12 \\beta+35=91 \\Rightarrow \\beta = \\frac{14}{3}$\nبنابراین:\n$O(-7, \\frac{14}{3}) \\Rightarrow -7 + \\frac{14}{3} = -\\frac{7}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0161.jpg",
+          "box": [
+            900,
+            1010,
+            1780,
+            1480
+          ],
+          "region_type": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1725,
+      "solution_page": 161,
+      "solution_text": "فاصلهٔ مرکز دایره $O(a,6)$ از خطوط $3x-4y=0$ و $4y-3x=0$ برابر شعاع دایره است.\n$OH = \\frac{|18-4a|}{\\sqrt{9+16}} \\quad , \\quad OH' = \\frac{|24-3a|}{\\sqrt{16+9}}$\n$OH = OH' \\Rightarrow \\frac{|18-4a|}{5} = \\frac{|24-3a|}{5} \\Rightarrow |18-4a| = |24-3a|$\n$\\Rightarrow \\begin{cases} 18-4a = 24-3a \\Rightarrow a = -6 \\Rightarrow R = OH = \\frac{42}{5} \\\\ 18-4a = 3a-24 \\Rightarrow a = 6 \\Rightarrow R' = OH = \\frac{6}{5} \\end{cases}$\nبنابراین: $\\frac{R}{R'} = \\frac{\\frac{42}{5}}{\\frac{6}{5}} = 7$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0161.jpg",
+          "box": [
+            900,
+            1480,
+            1780,
+            2400
+          ],
+          "region_type": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1726,
+      "solution_page": 161,
+      "solution_text": "دایره بر دو خط موازی $x+y=1$ و $x+y=5$ مماس است. مرکز دایره بر خطی که با این دو خط موازی بوده و از آن دو به یک فاصله باشد واقع است. معادلهٔ این خط $x+y=3$ می‌باشد.\n$O(\\alpha, 3-\\alpha) \\qquad (ax+by = \\frac{c+c'}{2})$\nبنابراین:\nفاصلهٔ دو خط $x+y=1$ و $x+y=5$ برابر قطر دایره است.\n$2R = \\frac{|5-1|}{\\sqrt{1+1}} = 2\\sqrt{2} \\Rightarrow R = \\sqrt{2}$\nمعادلهٔ دایره: $(x-\\alpha)^2 + (y-3+\\alpha)^2 = 2$\nدایره از نقطهٔ $(1,0)$ عبور می‌کند.\n$(1-\\alpha)^2 + (3-\\alpha)^2 = 2 \\Rightarrow 2\\alpha^2-8\\alpha+8=0 \\Rightarrow \\alpha^2-4\\alpha+4=0 \\Rightarrow (\\alpha-2)^2=0 \\Rightarrow \\alpha=2 \\Rightarrow O(2,1)$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0161.jpg",
+          "box": [
+            30,
+            70,
+            890,
+            610
+          ],
+          "region_type": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1727,
+      "solution_page": 161,
+      "solution_text": "اندازهٔ شعاع دو دایره و طول خط‌المرکزین را محاسبه می‌کنیم.\n$x^2+y^2+4x-4y+6=0 \\Rightarrow O(-2,2)$\n$R = \\frac{1}{2} \\sqrt{16+16-24} = \\sqrt{2}$\n$x^2+y^2=18 \\Rightarrow O'(0,0) \\quad R' = \\sqrt{18} = 3\\sqrt{2}$\n$OO' = \\sqrt{4+4} = \\sqrt{8} = 2\\sqrt{2}$\nخواهیم داشت:\n$OO' = R'-R \\Rightarrow$ دو دایره مماس درونی هستند.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0161.jpg",
+          "box": [
+            30,
+            610,
+            890,
+            960
+          ],
+          "region_type": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1728,
+      "solution_page": 161,
+      "solution_text": "شرط آن‌که دو دایره مماس درونی باشند، آن است که فاصلهٔ دو مرکز برابر اختلاف مقدار دو شعاع دایره باشد.\nپس دایره‌ها را استاندارد می‌کنیم.\n$x^2+y^2-2x=1 \\Rightarrow (x-1)^2+y^2=2 \\Rightarrow \\begin{cases} O_1(1,0) \\\\ R_1=\\sqrt{2} \\end{cases}$\n$x^2+y^2+2y=k \\Rightarrow x^2+(y+1)^2=k+1 \\Rightarrow \\begin{cases} O_2(0,-1) \\\\ R_2=\\sqrt{k+1} \\end{cases}$\nمماس درونی هستند $\\Rightarrow O_1O_2 = |R_1-R_2|$\n$\\Rightarrow \\sqrt{2} = |\\sqrt{k+1} - \\sqrt{2}|$\n$\\sqrt{k+1}-\\sqrt{2} = \\sqrt{2} \\Rightarrow \\sqrt{k+1}=2\\sqrt{2} \\Rightarrow k+1=8 \\Rightarrow k=7$\n$\\sqrt{2}-\\sqrt{k+1} = \\sqrt{2} \\Rightarrow \\sqrt{k+1}=0 \\Rightarrow k=-1 \\text{ ق ق غ }$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0161.jpg",
+          "box": [
+            30,
+            960,
+            890,
+            1680
+          ],
+          "region_type": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1729,
+      "solution_page": 161,
+      "solution_text": "شعاع دو دایره و طول خط‌المرکزین را محاسبه می‌کنیم.\n$x^2+y^2-6x+8y+16=0 \\Rightarrow O(3,-4), R = \\frac{1}{2}\\sqrt{36+64-64} = 3$\n$x^2+y^2-4x+6y+12=0 \\Rightarrow O'(2,-3), R' = \\frac{1}{2}\\sqrt{16+36-48} = 1$\n$OO' = \\sqrt{1+1} = \\sqrt{2}$\nخواهیم داشت:\n$R-R' = 2 \\quad , \\quad OO' < R-R' \\Rightarrow$ دو دایره متداخل هستند.\nبنابراین:",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0161.jpg",
+          "box": [
+            30,
+            1680,
+            890,
+            2400
+          ],
+          "region_type": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1730,
+      "solution_page": 162,
+      "solution_text": "مرکز و شعاع دو دایره را می‌نویسیم.\n$x^2 + y^2 + 2x - 12y + 33 = 0$\n$\\Rightarrow O(-1, 6), R = \\frac{1}{2}\\sqrt{4 + 144 - 132} = 2$\n$x^2 + y^2 + 10x - 6y - a = 0$\n$\\Rightarrow O'(-5, 3), R' = \\frac{1}{2}\\sqrt{100 + 36 + 4a} = \\sqrt{a + 34}$\n$OO' = \\sqrt{16 + 9} = 5$\nخواهیم داشت:\nدو دایره متقاطع‌اند. بنابراین:\n$|R - R'| < OO' < R + R'$\n$|\\sqrt{a + 34} - 2| < 5 < \\sqrt{a + 34} + 2$\n$\\Rightarrow \\begin{cases} -5 < \\sqrt{a + 34} - 2 < 5 \\Rightarrow -3 < \\sqrt{a + 34} < 7 \\\\ \\Rightarrow 0 \\le a + 34 < 49 \\Rightarrow -34 \\le a < 15 \\ (1) \\\\ \\sqrt{a + 34} + 2 > 5 \\Rightarrow \\sqrt{a + 34} > 3 \\\\ \\Rightarrow a > -25 \\ (2) \\end{cases}$\n$(1) \\cap (2) \\Rightarrow -25 < a < 15$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0162.jpg",
+          "region_type": "solution_text",
+          "box": [
+            900,
+            72,
+            1741,
+            362
+          ]
+        }
+      ],
+      "review_notes": [
+        "Equation parameter is derived as -a in text but text says +a=0. Text has a typo with +a=0 and then 4a under radical."
+      ]
+    },
+    {
+      "question_number": 1731,
+      "solution_page": 162,
+      "solution_text": "مرکز و شعاع دو دایره را می‌نویسیم.\n$x^2 + y^2 - 2x - 2y - 7 = 0 \\Rightarrow O(1, 1), R = \\frac{1}{2}\\sqrt{4 + 4 + 28} = 3$\n$x^2 + y^2 + 6x - 8y - k = 0$\n$\\Rightarrow O'(-3, 4), R' = \\frac{1}{2}\\sqrt{36 + 64 + 4k} = \\sqrt{k + 25}$\n$OO' = \\sqrt{16 + 9} = 5$\nبنابراین:\nدو دایره مماس خارج‌اند. در نتیجه:\n$OO' = R + R'$\n$\\Rightarrow 5 = 3 + \\sqrt{k + 25} \\Rightarrow \\sqrt{k + 25} = 2 \\Rightarrow k = -21$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0162.jpg",
+          "region_type": "solution_text",
+          "box": [
+            900,
+            362,
+            1741,
+            544
+          ]
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="gauss_bg">#0B0F14</color>
-    <color name="gauss_purple">#A06BFF</color>
+    <color name="gauss_bg">#F7D8CB</color>
+    <color name="gauss_purple">#B9ADE7</color>
 </resources>

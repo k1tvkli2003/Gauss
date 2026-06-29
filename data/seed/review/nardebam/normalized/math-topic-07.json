@@ -1,0 +1,4576 @@
+[
+  {
+    "question_number": 441,
+    "question_page": 23,
+    "question_text": "اگر $f(۳x - ۲) + f(۴) = x^۳ - ۳x$ باشد، مقدار $f(-۵)$ کدام است؟",
+    "options": [
+      "$۱$",
+      "$۲$",
+      "$-۱$",
+      "$-۲$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 442,
+    "question_page": 23,
+    "question_text": "اگر $f(x) - f(x - ۳) = x + ۲$ و $f(-۱) = ۱$ باشد، $f(۸)$ چه قدر است؟",
+    "options": [
+      "$۷$",
+      "$۸$",
+      "$۹$",
+      "$۱۰$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 443,
+    "question_page": 23,
+    "question_text": "با فرض $x \\in \\mathbb{R}$ و $xf(-x) - f(x) = x^۲ + x$، نمودار تابع $f$ از کدام نواحی مختصات عبور می‌کند؟",
+    "options": [
+      "اول و دوم",
+      "اول و سوم",
+      "دوم و چهارم",
+      "سوم و چهارم"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 444,
+    "question_page": 23,
+    "question_text": "اگر $۳f(x) + xf(۵) = ۱۶$ باشد، $f(۲)$ کدام است؟",
+    "options": [
+      "$۱$",
+      "$۲$",
+      "$۳$",
+      "$۴$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 445,
+    "question_page": 24,
+    "question_text": "در تابع $f(x) = (x+2)^2(x-4)^2$، حاصل $f(x+1) - f(1-x) + f(x)$ کدام است؟",
+    "options": [
+      "صفر",
+      "$1$",
+      "$x$",
+      "$f(x)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 446,
+    "question_page": 24,
+    "question_text": "با فرض $x > 1$ و $f(x + \\frac{1}{x}) = x^3 + \\frac{1}{x^3}$ حاصل $f(4)$ کدام است؟",
+    "options": [
+      "$48$",
+      "$52$",
+      "$76$",
+      "$64$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 447,
+    "question_page": 24,
+    "question_text": "با فرض $f(x) = x|x - 2|$، حاصل $\\frac{f(2+h) - f(2-h)}{h}$ کدام است؟",
+    "options": [
+      "$h$",
+      "$2h$",
+      "$|h|$",
+      "$2|h|$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 448,
+    "question_page": 24,
+    "question_text": "اگر $f(x) = \\frac{4^x}{2 + 4^x}$ و $\\alpha + \\beta = 1$، مقدار $f(\\alpha) + f(\\beta)$ کدام است؟",
+    "options": [
+      "$\\frac{1}{\\alpha} + \\frac{1}{\\beta}$",
+      "$2^\\alpha + 2^\\beta$",
+      "$4^\\alpha + 4^\\beta$",
+      "$1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 449,
+    "question_page": 24,
+    "question_text": "دامنه تابع $f(x) = \\frac{\\sqrt{8-x}}{x^2 - 10x + 16}$ شامل چند عدد طبیعی است؟",
+    "options": [
+      "$6$",
+      "$7$",
+      "$8$",
+      "$9$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 450,
+    "question_page": 24,
+    "question_text": "کدام بازه، زیرمجموعه دامنه تابع $y = \\frac{\\sqrt{-x^2 + 3x + 4}}{x - 2}$ می باشد؟",
+    "options": [
+      "$(1, 4)$",
+      "$[-1, 2]$",
+      "$[2, 4]$",
+      "$(-1, 3)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 451,
+    "question_page": 24,
+    "question_text": "دامنه تابع $f(x) = \\sqrt{x^2 + ax + 2a - 4}$ برابر $\\mathbb{R}$ است. $f(a)$ کدام است؟",
+    "options": [
+      "صفر",
+      "$2$",
+      "$4$",
+      "$6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 452,
+    "question_page": 24,
+    "question_text": "دامنه تابع $y = x^2 - \\sqrt{-2x^2 + ax + b}$ بازه $[-2, 3]$ است. $a+b$ کدام است؟",
+    "options": [
+      "$7$",
+      "$-7$",
+      "$14$",
+      "$-14$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 453,
+    "question_page": 24,
+    "question_text": "دامنه تابع $y = \\sqrt{ax^2 + bx + 9}$ بازه $(-\\infty, 3]$ می باشد. حاصل $a-b$ کدام است؟",
+    "options": [
+      "$3$",
+      "$-3$",
+      "$6$",
+      "$-6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 454,
+    "question_page": 24,
+    "question_text": "دامنه تعریف تابع $f(x) = \\sqrt{(9-a^2)x^2 + ax + 6}$ بازه $[b, \\infty)$ است. $a-b$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$5$",
+      "$-5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 455,
+    "question_page": 24,
+    "question_text": "نمودار سهمی $f$ به صورت مقابل است. دامنه تابع $y = \\sqrt{f(x) + x^2}$ کدام است؟",
+    "options": [
+      "$[-\\frac{3}{2}, 2]$",
+      "$[-3, 4]$",
+      "$\\mathbb{R} - (-3, 4)$",
+      "$\\mathbb{R} - (-\\frac{3}{2}, 2)$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "math-topic-07-page_0024.jpg",
+        "box": [
+          46,
+          545,
+          192,
+          656
+        ],
+        "box_format": "yxyx",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "Media region bounding box is estimated."
+    ]
+  },
+  {
+    "question_number": 456,
+    "question_page": 24,
+    "question_text": "طول بزرگ ترین بازه ای که تابع $f(x) = \\sqrt{\\sqrt{12 - x} + x}$ در آن تعریف می شود کدام است؟",
+    "options": [
+      "$1$",
+      "$7$",
+      "$12$",
+      "$16$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 457,
+    "question_page": 24,
+    "question_text": "دامنه تابع $y = \\sqrt{ax - b}$ به صورت $(-\\infty, 3]$ است. دامنه تابع $y = \\sqrt{bx + a}$ کدام است؟",
+    "options": [
+      "$[\\frac{1}{3}, +\\infty)$",
+      "$[-\\frac{1}{3}, +\\infty)$",
+      "$(-\\infty, \\frac{1}{3}]$",
+      "$(-\\infty, -\\frac{1}{3}]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 458,
+    "question_page": 24,
+    "question_text": "دامنه تابع $y = \\frac{x-1}{3x^2 + ax + b}$ برابر $\\mathbb{R} - \\{1\\}$ است. $ab$ کدام است؟",
+    "options": [
+      "$2$",
+      "$-2$",
+      "$18$",
+      "$-18$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 459,
+    "question_page": 24,
+    "question_text": "دامنه تعریف تابع $f(x) = \\sqrt{6 - |x - 3|}$ کدام است؟",
+    "options": [
+      "$[0, +\\infty)$",
+      "$(-1, +\\infty)$",
+      "$(-\\infty, 0]$",
+      "$(-\\infty, -1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 460,
+    "question_page": 24,
+    "question_text": "شکل مقابل نمودار تابع $f(x)$ است. دامنه تابع $y = \\sqrt{(x-2)f(x)}$ شامل چند عدد صحیح نمی شود؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "بی شمار"
+    ],
+    "media_regions": [
+      {
+        "page_file": "math-topic-07-page_0024.jpg",
+        "box": [
+          46,
+          835,
+          215,
+          893
+        ],
+        "box_format": "yxyx",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "Media region bounding box is estimated."
+    ]
+  },
+  {
+    "question_number": 461,
+    "question_page": 25,
+    "question_text": "نمودار تابع $f$ به صورت مقابل است. دامنه تابع $y = \\log \\frac{1-x}{f(x)}$ کدام است؟",
+    "options": [
+      "$(1, 2)$",
+      "$(-1, 1)$",
+      "$(-1, 2) - \\{1\\}$",
+      "$\\mathbb{R} - [-1, 2]$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "math-topic-07-page_0025.jpg",
+        "box": [
+          98,
+          71,
+          222,
+          163
+        ],
+        "box_format": "yxyx",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "Media region bounding box is estimated."
+    ]
+  },
+  {
+    "question_number": 462,
+    "question_page": 25,
+    "question_text": "دامنه تابع $y = \\sqrt{1 - \\log_2 (x - 4)}$ شامل چند عدد صحیح است؟",
+    "options": [
+      "$3$",
+      "$4$",
+      "$5$",
+      "بی شمار"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 463,
+    "question_page": 25,
+    "question_text": "دامنه تعریف تابع $f(x) = \\log_2 (2 + \\sqrt{|x| - |x|})$ کدام است؟",
+    "options": [
+      "$(2, 4)$",
+      "$(-2, 2)$",
+      "$(-4, 4)$",
+      "$(-4, 2)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 464,
+    "question_page": 25,
+    "question_text": "دامنه تابع $f(x) = \\log \\frac{ax + 2}{bx + 1}$ بازه $(-\\infty, 2)$ است. $a-b$ کدام است؟",
+    "options": [
+      "$\\frac{1}{2}$ یا $1$",
+      "$-\\frac{1}{2}$ یا $-1$",
+      "$\\frac{1}{2}$ یا $-1$",
+      "$-\\frac{1}{2}$ یا $1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 465,
+    "question_page": 25,
+    "question_text": "اگر $f(x) = 4^x - 1$ باشد، دامنه تابع $y = \\sqrt{-xf(x)}$ کدام است؟",
+    "options": [
+      "$[0, +\\infty)$",
+      "$(-\\infty, 0]$",
+      "$\\{0\\}$",
+      "$\\mathbb{R}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 466,
+    "question_page": 25,
+    "question_text": "انتهای کمان $x$ بر روی دایره مثلثاتی کدام باشد تا عبارت $y = \\sqrt{2\\cos^2 x - \\sin x - 1}$ تعریف شده باشد؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "math-topic-07-page_0025.jpg",
+        "box": [
+          751,
+          370,
+          848,
+          442
+        ],
+        "box_format": "yxyx",
+        "placement": "option_1",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0025.jpg",
+        "box": [
+          561,
+          370,
+          658,
+          442
+        ],
+        "box_format": "yxyx",
+        "placement": "option_2",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0025.jpg",
+        "box": [
+          370,
+          370,
+          467,
+          442
+        ],
+        "box_format": "yxyx",
+        "placement": "option_3",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0025.jpg",
+        "box": [
+          180,
+          370,
+          277,
+          442
+        ],
+        "box_format": "yxyx",
+        "placement": "option_4",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "Media region bounding boxes are estimated. The options are visual circles, so text is replaced by 'شکل N'"
+    ]
+  },
+  {
+    "question_number": 467,
+    "question_page": 25,
+    "question_text": "دامنه هر دو تابع $f(x) = 6 - x$ و $g(x) = 2x - 7$ بازه $[1, 5]$ است. اشتراک برد آن ها کدام است؟",
+    "options": [
+      "$[-5, 1]$",
+      "$[3, 5]$",
+      "$[-5, 5]$",
+      "$[1, 3]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 468,
+    "question_page": 25,
+    "question_text": "دامنه تابع $f(x) = |2x - 3| - 1$ بازه $[-3, 3)$ است. برد این تابع کدام است؟",
+    "options": [
+      "$[-1, 2)$",
+      "$[2, 7)$",
+      "$(2, 7]$",
+      "$[-1, 8)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 469,
+    "question_page": 25,
+    "question_text": "تابع $f(x) = |x + 3| - 2$ با دامنه $[a, b]$ و برد $[1, 4]$ مفروض است. حداکثر $a-b$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 470,
+    "question_page": 25,
+    "question_text": "برد تابع $f(x) = 3|x - 1| + 2|x + 3|$ بازه $[k, +\\infty)$ است. $k$ کدام است؟",
+    "options": [
+      "$8$",
+      "$9$",
+      "$11$",
+      "$12$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 471,
+    "question_page": 25,
+    "question_text": "برد تابع $y = -x^2 + 4x + 2a - 3$ بازه $(-\\infty, a - 1]$ است. $a$ کدام است؟",
+    "options": [
+      "$2$",
+      "$-2$",
+      "$\\frac{2}{3}$",
+      "$-\\frac{2}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 472,
+    "question_page": 25,
+    "question_text": "برد تابع $y = \\sqrt{x^2 + 4x + k} - 1$ بازه $[0, +\\infty)$ است. $k$ کدام است؟",
+    "options": [
+      "$2$",
+      "$3$",
+      "$4$",
+      "$5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 473,
+    "question_page": 25,
+    "question_text": "برد تابع $y = x^2 + \\frac{4}{x^2}$ کدام است؟",
+    "options": [
+      "$[4, +\\infty)$",
+      "$[5, +\\infty)$",
+      "$[2\\sqrt{2}, +\\infty)$",
+      "$[-2, +\\infty)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 474,
+    "question_page": 25,
+    "question_text": "برد تابع $y = x - \\sqrt{x - 4}$ کدام است؟",
+    "options": [
+      "$[\\frac{15}{4}, +\\infty)$",
+      "$[3, +\\infty)$",
+      "$[4, +\\infty)$",
+      "$[\\frac{17}{4}, +\\infty)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 475,
+    "question_page": 25,
+    "question_text": "برد تابع $f(x) = x(2 - \\frac{k}{|x|})$ برابر $\\mathbb{R}$ است. حدود $k$ کدام است؟",
+    "options": [
+      "$k > 0$",
+      "$k < 0$",
+      "$k \\le 0$",
+      "$k \\ge 0$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 476,
+    "question_page": 25,
+    "question_text": "برد تابع $f(x) = 2x(1 - \\frac{6}{x})$ کدام بازه است؟",
+    "options": [
+      "$(0, +\\infty)$",
+      "$[0, +\\infty)$",
+      "$[0, 6]$",
+      "$(0, 6]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 477,
+    "question_page": 26,
+    "question_text": "برد تابع با ضابطه $f(x)=(x-|x|)\\sqrt{\\frac{3-x}{x}}$ کدام است؟",
+    "options": [
+      "$[0,3)$",
+      "$[0,\\sqrt{3})$",
+      "$[-\\sqrt{3},\\sqrt{3}]$",
+      "$\\{0\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 478,
+    "question_page": 26,
+    "question_text": "اگر $f(x)=3+|x-2|$ و $g(x)=x-|x|$ باشد، آن‌گاه برد تابع $(\\frac{f}{g})(x)$ کدام است؟",
+    "options": [
+      "$(-\\frac{1}{2}, +\\infty)$",
+      "$(-\\infty, -\\frac{1}{2})$",
+      "$(-\\infty, -\\frac{1}{2}]$",
+      "$[-\\frac{1}{2}, +\\infty)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 479,
+    "question_page": 26,
+    "question_text": "برد تابع $f(x)=\\log_{2}(x^2-6x+17)$ کدام است؟",
+    "options": [
+      "$[1, +\\infty)$",
+      "$[3, +\\infty)$",
+      "$(1, +\\infty)$",
+      "$(3, +\\infty)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 480,
+    "question_page": 26,
+    "question_text": "اگر $f(x)=x-[x]$ و $g(x)=[x]+[-x]$ باشد، برد تابع $y=(fg)(x)$ کدام است؟",
+    "options": [
+      "$(-1, 0]$",
+      "$[-1, 0]$",
+      "$[0, 1)$",
+      "$[0, 1]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 481,
+    "question_page": 26,
+    "question_text": "اگر $f(x)=[x]$ باشد، برد تابع $y=f(x+f(-x))$ شامل چند عدد صحیح است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "بی‌شمار"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 482,
+    "question_page": 26,
+    "question_text": "اگر $f(x)=2x+[x]$ باشد، آن‌گاه برد تابع $g(x)=f(3x+1)-3f(x)$ کدام است؟",
+    "options": [
+      "$\\{0, 1, 2\\}$",
+      "$\\{3, 4, 5\\}$",
+      "$\\{0, 1, 2, 3\\}$",
+      "$\\{3, 4, 5, 6\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 483,
+    "question_page": 26,
+    "question_text": "برد تابع $f(x)=x-2[\\frac{x-1}{2}]$ کدام است؟",
+    "options": [
+      "$[1, 2)$",
+      "$[2, 3)$",
+      "$[1, 3)$",
+      "$[0, 2)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 484,
+    "question_page": 26,
+    "question_text": "تابع $f(x)=4^{-x}-2^x$ با دامنه $[-1, 2]$ داده شده است. اگر برد تابع بازه $[\\alpha, \\beta]$ باشد، مقدار $\\frac{\\beta}{\\alpha}$ کدام است؟",
+    "options": [
+      "$-\\frac{8}{9}$",
+      "$-\\frac{9}{8}$",
+      "$-\\frac{9}{16}$",
+      "$-\\frac{16}{7}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 485,
+    "question_page": 26,
+    "question_text": "برد تابع $f(x)=\\sin^2 x+\\cos x+1$ کدام است؟",
+    "options": [
+      "$[0, \\frac{9}{4}]$",
+      "$[0, 2]$",
+      "$[-1, 3]$",
+      "$[-\\frac{1}{4}, \\frac{9}{4}]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 486,
+    "question_page": 26,
+    "question_text": "تابع $y=x\\sqrt{-x}$ با کدام تابع زیر برابر است؟",
+    "options": [
+      "$y=-\\sqrt{-x^2}$",
+      "$y=\\sqrt{-x^3}$",
+      "$y=\\sqrt{x^3}$",
+      "$y=-\\sqrt{-x^3}$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Option 1's expression is slightly ambiguous in print, transcribed as y=-\\sqrt{-x^2}"
+    ]
+  },
+  {
+    "question_number": 487,
+    "question_page": 26,
+    "question_text": "تابع $f(x)=\\sqrt{-x}\\frac{x}{|x|}$ با کدام تابع برابر است؟",
+    "options": [
+      "$g(x)=-\\sqrt{-x}, x \\ne 0$",
+      "$g(x)=x\\sqrt{-\\frac{1}{x}}$",
+      "$g(x)=\\frac{-x}{|x|}\\sqrt{x}$",
+      "$g(x)=\\sqrt{-x}, x \\ne 0$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 488,
+    "question_page": 26,
+    "question_text": "توابع $f(x)=\\sqrt{x^2-4x^3}$ و $g(x)=x\\sqrt{x-4}$ با کدام دامنه با هم برابرند؟",
+    "options": [
+      "$[4, +\\infty)$",
+      "$[0, +\\infty)$",
+      "$[0, 4]$",
+      "$[4, +\\infty) \\cup \\{0\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 489,
+    "question_page": 26,
+    "question_text": "توابع $f(x)=x\\sqrt{-x+k}$ و $g(x)=-\\sqrt{-x^3+kx^2}$ برابرند. مجموع مقادیر قابل قبول برای $k$ کدام است؟",
+    "options": [
+      "$(-\\infty, 0]$",
+      "$[0, +\\infty)$",
+      "$(-\\infty, 0)$",
+      "$\\{0\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 490,
+    "question_page": 26,
+    "question_text": "توابع $f(x)=\\frac{ax-6}{x^2+bx+4}$ و $g(x)=\\frac{c}{x-2}$ برابرند. مقدار $bc-a$ کدام است؟",
+    "options": [
+      "$9$",
+      "$-9$",
+      "$15$",
+      "$-15$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 491,
+    "question_page": 26,
+    "question_text": "تابع $f(x)=\\log \\frac{x-3}{x}$ با کدام تابع برابر است؟",
+    "options": [
+      "$y=2\\log \\sqrt{\\frac{x-3}{x}}$",
+      "$y=\\log(x-3)-\\log x$",
+      "$y=\\log|\\frac{x-3}{x}|$",
+      "$y=\\frac{1}{2}\\log(\\frac{x-3}{x})^2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 492,
+    "question_page": 26,
+    "question_text": "توابع $f(x)=\\frac{6x+9}{|x+3|-|x|}$ و $g(x)=|x+k|+|x|$ با دامنه $\\mathbb{R} - \\{-\\frac{3}{2}\\}$ با یکدیگر برابرند، $k$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$-3$",
+      "$3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 493,
+    "question_page": 27,
+    "question_text": "اگر $f = \\{(a, a^2+3), (-2, 4a-1)\\}$ تابعی ثابت باشد، مقدار $a$ کدام است؟",
+    "options": [
+      "$2$",
+      "$-2$",
+      "$1$",
+      "$-1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 494,
+    "question_page": 27,
+    "question_text": "تابع $f(x)=\\frac{ax+6}{x+b}$ با دامنه $\\mathbb{R}-\\{3\\}$ تابعی ثابت است. $f(-a)$ کدام است؟",
+    "options": [
+      "$2$",
+      "$-2$",
+      "$3$",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 495,
+    "question_page": 27,
+    "question_text": "اگر $f$ تابعی ثابت و $g(x)=5xf(x)$ تابعی همانی باشد، مقدار $f(1)+g(1)$ کدام است؟",
+    "options": [
+      "$2$",
+      "$6$",
+      "$\\frac{2}{5}$",
+      "$\\frac{6}{5}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 496,
+    "question_page": 27,
+    "question_text": "اگر $f$ تابعی ثابت و $g$ تابعی همانی بوده و $f^2(2)-3f(2)=g(4)$ باشد، حاصل $f(-1)-g(-1)$ کدام است؟",
+    "options": [
+      "$-2$ یا $3$",
+      "$-2$ یا $5$",
+      "$0$ یا $5$",
+      "$0$ یا $3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 497,
+    "question_page": 27,
+    "question_text": "اگر $f(x)=\\frac{3x+1}{-2+ax}$ تابعی ثابت و $g(x)=(a+b)x$ همانی باشد، $b-a$ کدام است؟",
+    "options": [
+      "$1$",
+      "$13$",
+      "$-1$",
+      "$-11$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 498,
+    "question_page": 27,
+    "question_text": "اگر $f$ تابعی ثابت، $g$ تابعی همانی و $xf(x)+4g(x)=x$ همواره برقرار است. ریشهٔ معادلهٔ $\\frac{f(-x)}{g(-x)}=2$ کدام است؟",
+    "options": [
+      "$1$",
+      "$1/5$",
+      "$-1$",
+      "$-1/5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 499,
+    "question_page": 27,
+    "question_text": "اگر $f$ تابعی خطی، $f(2)=-3$ و $f(-3)=2$ است. کدام تابع زیر ثابت است؟",
+    "options": [
+      "$y=f(x)+1$",
+      "$y=-f(x)-1$",
+      "$y=f(x)-x$",
+      "$y=f(x)+x$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 500,
+    "question_page": 27,
+    "question_text": "نمودار تابع خطی $f$ و سهمی $f.g$ به صورت مقابل است. نمودار تابع $g$ کدام می‌تواند باشد؟",
+    "options": [
+      "شکل 1",
+      "شکل 2",
+      "شکل 3",
+      "شکل 4"
+    ],
+    "media_regions": [
+      {
+        "page_file": "math-topic-07-page_0027.jpg",
+        "box": [
+          110,
+          400,
+          316,
+          480
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0027.jpg",
+        "box": [
+          735,
+          432,
+          850,
+          497
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0027.jpg",
+        "box": [
+          355,
+          432,
+          470,
+          500
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0027.jpg",
+        "box": [
+          740,
+          520,
+          850,
+          595
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0027.jpg",
+        "box": [
+          355,
+          513,
+          470,
+          595
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "Question 500 has visual options. 'شکل 1' through 'شکل 4' map to the graphs in options 1 to 4."
+    ]
+  },
+  {
+    "question_number": 501,
+    "question_page": 27,
+    "question_text": "اگر $f$ تابعی خطی است. با توجه به نمودار مقابل تابع $y=f^2(x)-f(x)$ از کدام ناحیه عبور نمی‌کند؟",
+    "options": [
+      "اول",
+      "دوم",
+      "سوم",
+      "چهارم"
+    ],
+    "media_regions": [
+      {
+        "page_file": "math-topic-07-page_0027.jpg",
+        "box": [
+          94,
+          595,
+          222,
+          672
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 502,
+    "question_page": 27,
+    "question_text": "اگر در تابع خطی $f$ به ازای هر $k$ رابطهٔ $f(x-k)=f(x)-k$ برقرار باشد، حاصل $f(2)-f(1)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "صفر",
+      "$2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 503,
+    "question_page": 27,
+    "question_text": "اگر $f$ تابعی خطی، $f(a)-2=b$ و $f(b)=a-2$ باشد. $f(a+b)$ کدام است؟",
+    "options": [
+      "صفر",
+      "$2$",
+      "$-2$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 504,
+    "question_page": 27,
+    "question_text": "اگر $f$ تابعی خطی بوده و $f(a)=b$ و $f(b)=a$ باشد، حاصل $f(a+b)$ کدام است؟",
+    "options": [
+      "صفر",
+      "$1$",
+      "$a+b$",
+      "$-a-b$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 505,
+    "question_page": 27,
+    "question_text": "تابع خطی $f$ با دامنه $[1, 4]$ و برد $[1, 10]$ مفروض است. $f(2)$ کدام است؟",
+    "options": [
+      "$4$ یا $-4$",
+      "$4$ یا $7$",
+      "$-4$ یا $7$",
+      "$4$ یا $-7$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 506,
+    "question_page": 27,
+    "question_text": "اگر $f$ تابعی خطی و $f(6)=2$ است. اگر رابطهٔ $3f(x-2)+f(3x-1)=\\frac{43}{3}$ برای هر عدد حقیقی برقرار باشد، $f(-3)$ کدام است؟",
+    "options": [
+      "صفر",
+      "$1$",
+      "$-1$",
+      "$5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 507,
+    "question_page": 28,
+    "question_text": "تابع $f$ خطی و نمودار آن به صورت مقابل است. نمودار $y = \\sqrt{f(x)}$ چگونه است؟",
+    "options": [
+      "گزینه ۱",
+      "گزینه ۲",
+      "گزینه ۳",
+      "گزینه ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "math-topic-07-page_0028.jpg",
+        "box": [
+          40,
+          60,
+          200,
+          150
+        ],
+        "box_format": "yxyx",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0028.jpg",
+        "box": [
+          680,
+          95,
+          800,
+          155
+        ],
+        "box_format": "yxyx",
+        "placement": "option_1",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0028.jpg",
+        "box": [
+          300,
+          95,
+          420,
+          155
+        ],
+        "box_format": "yxyx",
+        "placement": "option_2",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0028.jpg",
+        "box": [
+          680,
+          165,
+          800,
+          230
+        ],
+        "box_format": "yxyx",
+        "placement": "option_3",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "math-topic-07-page_0028.jpg",
+        "box": [
+          300,
+          165,
+          420,
+          230
+        ],
+        "box_format": "yxyx",
+        "placement": "option_4",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "Q507: Visual stem and options. Replaced option texts with placeholders and captured bounding boxes in media_regions."
+    ]
+  },
+  {
+    "question_number": 508,
+    "question_page": 28,
+    "question_text": "تابع گویای $f(x) = \\frac{۱۰}{x^۲+x}$ را در نظر بگیرید. حاصل عددی عبارت $f(۱) + f(۲) + \\dots + f(۹)$ کدام است؟",
+    "options": [
+      "۲۰",
+      "۱۹",
+      "۹",
+      "۱۰"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 509,
+    "question_page": 28,
+    "question_text": "حاصل $A = [x] - [-\\frac{۱}{x}] + [-\\frac{۱}{x^۲}]$ به ازای $x = -\\frac{۲}{۳}$ کدام است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "صفر"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 510,
+    "question_page": 28,
+    "question_text": "اگر $۲ = [\\frac{۲-x}{۵}]$ باشد، آن‌گاه $x$ به کدام بازه تعلق دارد؟",
+    "options": [
+      "$(-۱۳, -۸]$",
+      "$[-۱۳, -۸)$",
+      "$(-۱۳, -۷)$",
+      "$[-۱۲, -۷)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 511,
+    "question_page": 28,
+    "question_text": "اگر $۷ < |۳x+۱|$ باشد، حاصل $[\\frac{۳}{x}]$ با کدام عدد زیر نمی‌تواند برابر باشد؟",
+    "options": [
+      "صفر",
+      "۱",
+      "۲",
+      "$-۲$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 512,
+    "question_page": 28,
+    "question_text": "اگر $۹x < ۱۴ + x^۲$ باشد، مجموع مقادیر ممکن برای $[\\frac{x-۱}{۳}]$ کدام است؟",
+    "options": [
+      "۱",
+      "۲",
+      "$-۶$",
+      "صفر"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 513,
+    "question_page": 28,
+    "question_text": "اگر $۲ = [\\frac{۱}{۲} - ۳x]$، آن‌گاه $[۲x]$ چند مقدار صحیح می‌تواند باشد؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 514,
+    "question_page": 28,
+    "question_text": "هرگاه $f(x) = [\\sqrt{\\frac{x}{۲}} + ۲]$ در بازهٔ $(۲۸, \\alpha)$ تابعی ثابت باشد، حداکثر مقدار $f(\\frac{\\alpha}{۲})$ کدام است؟",
+    "options": [
+      "۵",
+      "۴",
+      "۳",
+      "۲"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 515,
+    "question_page": 28,
+    "question_text": "با فرض $[x+۳] = ۲$، نمودارهای توابع $f(x) = |x+۳| + |x+۶|$ و $g(x) = ۳x^۲ - ۶x + ۶$ در چند نقطه مشترک هستند؟",
+    "options": [
+      "صفر",
+      "۱",
+      "۲",
+      "۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 516,
+    "question_page": 28,
+    "question_text": "حاصل $[\\log_۳ ۴۰] + [-\\log_۳ ۹۰]$ کدام است؟",
+    "options": [
+      "۴",
+      "۵",
+      "۶",
+      "۷"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 517,
+    "question_page": 28,
+    "question_text": "اگر $n$ عددی طبیعی و $n > ۶$ باشد، حاصل $[۲n + \\sqrt{n^۲-۳}] - [\\sqrt{۹n^۲ - ۶n}]$ کدام است؟",
+    "options": [
+      "صفر",
+      "$-۱$",
+      "$-۲$",
+      "$-۳$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 518,
+    "question_page": 28,
+    "question_text": "برای هر عدد طبیعی $n > ۴$، حاصل $[\\sqrt{n^۲ - ۴n}] + [\\sqrt{۹n^۲ - ۵ n + ۱}]$ کدام است؟",
+    "options": [
+      "$۴n - ۲$",
+      "$۴n - ۳$",
+      "$۴n - ۴$",
+      "$۴n - ۵$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 519,
+    "question_page": 28,
+    "question_text": "اگر $۵ = [\\frac{۳}{x} - x] + [x + \\frac{۱}{x}]$ باشد، حدود $x$ کدام است؟",
+    "options": [
+      "$[\\frac{۱۱}{۴}, \\frac{۱۵}{۴})$",
+      "$(\\frac{۵}{۲}, \\frac{۱۵}{۴}]$",
+      "$[\\frac{۵}{۲}, \\frac{۷}{۲})$",
+      "$[\\frac{۷}{۲}, \\frac{۱۱}{۲})$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Q519: Bracket directions for option 1 and 2 are a bit tricky to read but deduced contextually."
+    ]
+  },
+  {
+    "question_number": 520,
+    "question_page": 28,
+    "question_text": "مجموعه جواب $۸ = [x^۲ - k] + [x^۲ + ۳]$ یک بازه به صورت $(a, b)$ است. عدد صحیح $k$ کدام است؟",
+    "options": [
+      "۱",
+      "$-۱$",
+      "$-۳$",
+      "$-۵$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 521,
+    "question_page": 28,
+    "question_text": "معادلهٔ $۱۰ = x - [۳x^۲]$ چند جواب دارد؟",
+    "options": [
+      "صفر",
+      "۱",
+      "۲",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 522,
+    "question_page": 29,
+    "question_text": "اگر $f(x) = x^2 - x - 2$ و $g(x) = x - 2$، مساحت ناحیه محدود به نمودار تابع $\\frac{f}{g}$ و محورهای مختصات کدام است؟",
+    "options": [
+      "۱",
+      "$\\frac{1}{2}$",
+      "۲",
+      "$\\frac{3}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 523,
+    "question_page": 29,
+    "question_text": "اگر نمودار تابع $y = f(x)$ به صورت زیر باشد، دامنه تابع $\\frac{1}{f(x) - 2}$ کدام است؟",
+    "options": [
+      "$[-3, 4] - \\{-2, 3\\}$",
+      "$(-\\infty, 4] - \\{-2, 3\\}$",
+      "$(-\\infty, 4]$",
+      "$[-3, 4]$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0029.jpg",
+        "box": [
+          120,
+          260,
+          480,
+          480
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 524,
+    "question_page": 29,
+    "question_text": "نمودار تابع $f(x)$ به صورت مقابل است. دامنه تابع $g(x) = \\frac{1}{f(x - 1) - f(x)}$ کدام است؟",
+    "options": [
+      "$[-2, 1) \\cup (1, 3]$",
+      "$[-2, 3]$",
+      "$[-1, 3] - \\{1\\}$",
+      "$[-1, 1) \\cup (1, 3]$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0029.jpg",
+        "box": [
+          120,
+          490,
+          480,
+          710
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 525,
+    "question_page": 29,
+    "question_text": "در مورد دو تابع $f(x) = \\sqrt{x - 1} + \\sqrt{2 - x}$ و $g(x) = \\sqrt{x - 1} - \\sqrt{2 - x}$ کدام گزاره درست است؟",
+    "options": [
+      "$D_{f+g} = D_{f-g}$",
+      "$D_f = D_{f/g}$",
+      "$D_{g/f} = D_{f/g}$",
+      "$D_{g/f} = D_g$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 526,
+    "question_page": 29,
+    "question_text": "تابع $f(x) = x^2$ در دامنه $\\mathbb{R}$ و تابع $g(x)$ در جدول زیر داده شده اند. دامنه تابع $\\frac{g}{f - g}$ کدام است؟",
+    "options": [
+      "$\\{1, 2, 3\\}$",
+      "$\\{-1, 0, 2\\}$",
+      "$\\{-1, 2\\}$",
+      "$\\{-1, 1, 2\\}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0029.jpg",
+        "box": [
+          150,
+          950,
+          500,
+          1100
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 527,
+    "question_page": 29,
+    "question_text": "اگر $f = \\{(1, 2), (2, 5), (3, 4), (4, 6)\\}$ و $g = \\{(2, 3), (4, 2), (5, 1)\\}$، برد تابع $\\frac{f}{g} - g$ کدام است؟",
+    "options": [
+      "$\\{\\frac{-4}{3}, 1\\}$",
+      "$\\{\\frac{5}{3}, 3\\}$",
+      "$\\{\\frac{-4}{3}, -1\\}$",
+      "$\\{\\frac{-4}{3}, -3\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 528,
+    "question_page": 29,
+    "question_text": "توابع $f$ و $g$ به صورت زوج مرتب داده شده اند. تابع $f + g$ کدام است؟",
+    "options": [
+      "$\\{(-2, 1), (-1, 3), (1, -1)\\}$",
+      "$\\{(0, -1), (1, 1), (-1, -1)\\}$",
+      "$\\{(0, 1), (1, -1), (-2, 0)\\}$",
+      "$\\{(-2, -1), (1, 1), (-1, 0)\\}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0029.jpg",
+        "box": [
+          120,
+          1310,
+          420,
+          1530
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 529,
+    "question_page": 29,
+    "question_text": "اگر $f = \\{(-2, 1), (0, 3), (1, 5), (2, 4)\\}$ و $g = \\{(1, 4), (0, 3), (2, 1), (-1, -3)\\}$، تابع $\\frac{2f - g}{f + g}$ کدام است؟",
+    "options": [
+      "$\\{(0, \\frac{1}{2}), (1, \\frac{2}{3}), (2, \\frac{7}{5})\\}$",
+      "$\\{(0, \\frac{1}{2}), (1, \\frac{2}{3})\\}$",
+      "$\\{(0, \\frac{1}{2}), (2, \\frac{7}{5})\\}$",
+      "$\\{(1, \\frac{2}{3}), (2, \\frac{7}{5})\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 530,
+    "question_page": 29,
+    "question_text": "اگر $f = \\{(1, 2), (2, 3), (-1, 4), (0, 2)\\}$ و $g = \\{(-1, 3), (2, 1), (1, 2), (3, -1)\\}$، برد تابع $\\frac{f + g}{f}$ کدام است؟",
+    "options": [
+      "$\\{1, 2, \\frac{4}{3}\\}$",
+      "$\\{2, \\frac{4}{3}, \\frac{7}{4}\\}$",
+      "$\\{1, \\frac{7}{4}, \\frac{4}{3}\\}$",
+      "$\\{2, 1, \\frac{7}{4}\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 531,
+    "question_page": 29,
+    "question_text": "اگر $f = \\{(1, 4), (-1, 2), (0, -1), (2, 3)\\}$ و $g(x) = x^2 + x$، برد تابع $f - \\frac{g}{f}$ شامل چند عدد صحیح است؟",
+    "options": [
+      "۱",
+      "۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 532,
+    "question_page": 29,
+    "question_text": "اگر $f(x) = \\frac{2x - 1}{x + 1}$ و $g(x) = \\frac{2x + 2}{2x - 1}$، دامنه تابع $f \\times g$ کدام است؟",
+    "options": [
+      "$\\mathbb{R} - \\{-1, \\frac{1}{2}\\}$",
+      "$\\mathbb{R} - \\{-1\\}$",
+      "$\\mathbb{R} - \\{\\frac{1}{2}\\}$",
+      "$\\mathbb{R}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 533,
+    "question_page": 29,
+    "question_text": "اگر $f = \\{(1, 2), (2, 5), (0, 3), (4, -1)\\}$ و $g(x) = \\sqrt{x - 1}$، دامنه تابع $\\frac{g}{f}$ کدام است؟",
+    "options": [
+      "$\\{1, 2, 4\\}$",
+      "$\\{1, 2\\}$",
+      "$\\{0, 1, 2, 4\\}$",
+      "$\\{0, 1, 2\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 534,
+    "question_page": 29,
+    "question_text": "نمودار دو تابع $f$ و $g$ به صورت زیر است. دامنه تابع $\\frac{f}{g}$ کدام است؟",
+    "options": [
+      "$(-1, 3)$",
+      "$[-1, 3]$",
+      "$(-1, 2) \\cup (2, 3)$",
+      "$[-1, 2) \\cup (2, 3]$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0029.jpg",
+        "box": [
+          100,
+          2250,
+          480,
+          2520
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 535,
+    "question_page": 30,
+    "question_text": "نمودارهای دو تابع $f$ و $g$ به صورت مقابل است. برد تابع $f + g$ کدام است؟",
+    "options": [
+      "$\\{-1, 0, 1\\}$",
+      "$\\{-1, 1, 2\\}$",
+      "$\\{-1, 0, 2\\}$",
+      "$\\{0, 1, 2\\}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1280,
+          70,
+          1660,
+          320
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 536,
+    "question_page": 30,
+    "question_text": "با توجه به نمودارهای $f$ و $g$ در شکل زیر، دامنه تابع $y = \\sqrt{g(x) - f(x)}$ کدام است؟",
+    "options": [
+      "$[0, 5]$",
+      "$[0, 2] \\cup [4, 5]$",
+      "$[2, 4]$",
+      "$[0, 5] - (2, 4)$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1300,
+          320,
+          1680,
+          540
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 537,
+    "question_page": 30,
+    "question_text": "نمودار دو تابع $f$ و $g$ به صورت مقابل است. دامنه تابع $\\frac{f}{g}$ کدام است؟",
+    "options": [
+      "$[0, 5]$",
+      "$(0, 5)$",
+      "$[0, 2) \\cup (2, 5]$",
+      "$(0, 2) \\cup (2, 5)$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1280,
+          550,
+          1660,
+          750
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 538,
+    "question_page": 30,
+    "question_text": "نمودار دو تابع $f$ و $g$ در شکل مقابل رسم شده است. دامنه تابع $y = \\sqrt{\\frac{f(x)}{g(x)}}$ کدام است؟",
+    "options": [
+      "$(-2, 1] \\cup (3, 5]$",
+      "$[-2, 1] \\cup (3, 5]$",
+      "$[-4, -2) \\cup [1, 3)$",
+      "$[-4, -2) \\cup (1, 3)$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1300,
+          780,
+          1680,
+          980
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 539,
+    "question_page": 30,
+    "question_text": "اگر نمودارهای توابع $f$ و $g$ به صورت زیر باشند، برد تابع $f \\times g$ کدام است؟",
+    "options": [
+      "$\\{0, 3\\}$",
+      "$\\{-3, 0\\}$",
+      "$\\{-3, 0, 3\\}$",
+      "$\\{-3, 3\\}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1320,
+          1000,
+          1680,
+          1220
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 540,
+    "question_page": 30,
+    "question_text": "نمودار تابع $f$ به صورت مقابل است. دامنه تابع $\\frac{1}{f(x) - f(x - 1)}$ کدام است؟",
+    "options": [
+      "$[0, 2] - \\{\\frac{1}{2}, \\frac{3}{2}\\}$",
+      "$[1, 3] - \\{\\frac{3}{2}, \\frac{5}{2}\\}$",
+      "$[1, 2] - \\{\\frac{3}{2}\\}$",
+      "$[1, 2]$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1340,
+          1220,
+          1680,
+          1420
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 541,
+    "question_page": 30,
+    "question_text": "نمودار تابع $f$ به صورت مقابل است. دامنه تابع $\\frac{f(x)}{f(x - 2)}$ کدام است؟",
+    "options": [
+      "$[2, 4] - \\{3\\}$",
+      "$[2, 4)$",
+      "$(2, 4]$",
+      "$[0, 4] - \\{1, 3\\}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1350,
+          1420,
+          1680,
+          1640
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 542,
+    "question_page": 30,
+    "question_text": "اگر نمودار تابع $f(x)$ به صورت مقابل باشد، برد تابع $y = \\frac{f(x)}{x}$ کدام است؟",
+    "options": [
+      "$(-\\infty, 1)$",
+      "$(0, 1)$",
+      "$(1, +\\infty)$",
+      "$\\mathbb{R} - \\{1\\}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1350,
+          1660,
+          1680,
+          1880
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 543,
+    "question_page": 30,
+    "question_text": "اگر شکل مقابل نمودار تابع $f$ باشد، دامنه تابع $\\frac{1}{f(x) - x}$ کدام است؟",
+    "options": [
+      "$[0, 4] - \\{2\\}$",
+      "$[0, 4] - \\{1, 3\\}$",
+      "$(0, 4) - \\{1\\}$",
+      "$(0, 4) - \\{2\\}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1360,
+          1880,
+          1680,
+          2060
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 544,
+    "question_page": 30,
+    "question_text": "اگر $f(x) = x^2$ و نمودار تابع $g(x)$ به صورت مقابل باشد، برد تابع $\\frac{f}{g}$ کدام است؟",
+    "options": [
+      "$(0, +\\infty)$",
+      "$[0, +\\infty)$",
+      "$(-\\infty, 0)$",
+      "$(-\\infty, 0]$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1360,
+          2080,
+          1680,
+          2260
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 545,
+    "question_page": 30,
+    "question_text": "در تابع خطی $g$ و تابع $f$ که نمودار آن به صورت مقابل است، داریم $(f+g)(2) = 1$ و $(f-g)(1) = 4$. مقدار $(f \\times g)(-1)$ کدام است؟",
+    "options": [
+      "۳",
+      "۴",
+      "۶",
+      "۸"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1360,
+          2280,
+          1680,
+          2480
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 546,
+    "question_page": 30,
+    "question_text": "نمودار تابع $f$ به صورت مقابل است. نمودار تابع $f(x) - f(x - 1)$ کدام است؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0030.jpg",
+        "box": [
+          1000,
+          2520,
+          1260,
+          2750
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "گزینه ها به صورت شکل هستند و باید به صورت دستی برش داده شوند."
+    ]
+  },
+  {
+    "question_number": 547,
+    "question_page": 30,
+    "question_text": "نمودار تابع $f$ به صورت مقابل است. نمودار تابع $f(x+1) - f(x-1)$ کدام است؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "گزینه ها به صورت شکل هستند."
+    ]
+  },
+  {
+    "question_number": 548,
+    "question_page": 31,
+    "question_text": "نمودار توابع $y_1 = 3x - f(x)$ و $y_2 = x + \\frac{1}{2} g(x)$ به صورت مقابل است. ضابطه $f + g$ کدام است؟",
+    "options": [
+      "$-2x$",
+      "$-x - 2$",
+      "$-x$",
+      "$-2x - 2$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0031.jpg",
+        "box": [
+          70,
+          70,
+          270,
+          210
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 549,
+    "question_page": 31,
+    "question_text": "با توجه به نمودار توابع $f$ و $g$، مساحت ناحیه محدود به نمودار $f - g$ و $y = 4$ کدام است؟",
+    "options": [
+      "$\\frac{3}{2}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{5}{2}$",
+      "$\\frac{5}{4}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0031.jpg",
+        "box": [
+          90,
+          220,
+          260,
+          360
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 550,
+    "question_page": 31,
+    "question_text": "نمودار تابع $y = 2x - f(x - 1)$ به صورت مقابل است. نمودار تابع $y = x + f(-x)$ کدام است؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0031.jpg",
+        "box": [
+          90,
+          370,
+          280,
+          560
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "page_0031.jpg",
+        "box": [
+          1400,
+          560,
+          1660,
+          780
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "page_0031.jpg",
+        "box": [
+          1020,
+          560,
+          1280,
+          780
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "page_0031.jpg",
+        "box": [
+          680,
+          560,
+          940,
+          780
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "شکل سؤال"
+      },
+      {
+        "page_file": "page_0031.jpg",
+        "box": [
+          300,
+          560,
+          560,
+          780
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "گزینه ها به صورت شکل هستند."
+    ]
+  },
+  {
+    "question_number": 551,
+    "question_page": 31,
+    "question_text": "نمودار تابع خطی $f$ و سهمی $g$ به صورت مقابل است. نمودار تابع $f - g$ از کدام ناحیه عبور نمی‌کند؟",
+    "options": [
+      "اول",
+      "دوم",
+      "سوم",
+      "چهارم"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0031.jpg",
+        "box": [
+          59,
+          1221,
+          629,
+          1547
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 552,
+    "question_page": 31,
+    "question_text": "اگر $f(x) = \\log(x^2 + 2x - 8)$ و $g(x) = \\sqrt{x^2 - 4} + 2$ باشد، دامنه تابع $\\frac{f}{g}$ کدام است؟",
+    "options": [
+      "$(2, +\\infty)$",
+      "$(-\\infty, -4)$",
+      "$\\mathbb{R} - [-4, 2]$",
+      "$\\mathbb{R} - (-4, 2)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 553,
+    "question_page": 31,
+    "question_text": "هرگاه $f = \\{(1, 2), (2, 1), (3, 2), (4, 1)\\}$ به طوری که $g(x) = f(x + 1)$ و $h(x) = f(x) + 1$، برد تابع $g + h$ چند عضو دارد؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 554,
+    "question_page": 31,
+    "question_text": "تابع ثابت $f$، $g$ تابع همانی و $2g(4) = f(1)$ است. حاصل $\\frac{(f \\circ g)(0)}{(f + g)(2)}$ کدام است؟",
+    "options": [
+      "$0/6$",
+      "$0/8$",
+      "$1$",
+      "$1/2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 555,
+    "question_page": 31,
+    "question_text": "اگر $f = \\{(2, 3), (-2, 1), (0, 2)\\}$ و $g = \\{(3, 0), (0, 5), (-2, -1)\\}$، آنگاه $g \\circ (g - f)$ شامل کدام زوج مرتب است؟",
+    "options": [
+      "$(-2, -1)$",
+      "$(-2, -2)$",
+      "$(0, 3)$",
+      "$(0, 2)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 556,
+    "question_page": 31,
+    "question_text": "اگر $f = \\{(2, 3), (3, 0), (1, 4), (-1, 2)\\}$ باشد، مجموع اعضای برد تابع $\\frac{f \\circ f}{f}$ کدام است؟",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{3}{2}$",
+      "$\\frac{5}{2}$",
+      "$\\frac{7}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 557,
+    "question_page": 31,
+    "question_text": "اگر $f(x) = x^2 - x$ و $g(x) = \\sqrt{4x + 1}$ باشد، دامنه تابع $f \\circ g$ کدام است؟",
+    "options": [
+      "$[-\\frac{1}{4}, +\\infty)$",
+      "$[-\\frac{1}{4}, 0) \\cup (0, +\\infty)$",
+      "$[\\frac{1}{4}, +\\infty)$",
+      "$[-\\frac{1}{4}, 0]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 558,
+    "question_page": 32,
+    "question_text": "با توجه به ماشین‌های زیر، مقدار $y$ کدام است؟",
+    "options": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$7$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0032.jpg",
+        "box": [
+          321,
+          194,
+          1530,
+          269
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 559,
+    "question_page": 32,
+    "question_text": "با توجه به نمودار تابع $f$ در شکل زیر، اگر $f(f(a)) = 4$ باشد، مجموع مقادیر ممکن برای $a$ کدام است؟",
+    "options": [
+      "$4$",
+      "$2$",
+      "$-2$",
+      "$-3$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0032.jpg",
+        "box": [
+          73,
+          269,
+          563,
+          568
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 560,
+    "question_page": 32,
+    "question_text": "اگر $f(x) = x + \\sqrt{x}$ و $g(x) = \\frac{x^2 - x}{x + \\sqrt{x}}$، مقدار $(f \\circ g)(\\sqrt{2})$ کدام است؟",
+    "options": [
+      "$\\sqrt{2}$",
+      "$\\sqrt{2} + 1$",
+      "$\\sqrt{2} - 1$",
+      "$2\\sqrt{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 561,
+    "question_page": 32,
+    "question_text": "اگر $f = \\{(-1, 2), (0, 3), (2, 4), (4, 5)\\}$ و $g = \\{(-2, 3), (3, 2), (4, -1), (5, 4)\\}$ باشند، حاصل $\\frac{f}{f \\circ g} (4)$ کدام است؟",
+    "options": [
+      "$-\\frac{5}{2}$",
+      "$-\\frac{3}{2}$",
+      "$\\frac{5}{2}$",
+      "$\\frac{3}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 562,
+    "question_page": 32,
+    "question_text": "اگر $f = \\{(1, 2), (2, 5), (3, 4), (4, 6)\\}$ و $g = \\{(2, 3), (4, 2), (5, 1), (3, 1)\\}$ باشند، برد تابع $g \\circ f$ کدام است؟",
+    "options": [
+      "$\\{1, 3\\}$",
+      "$\\{1, 2\\}$",
+      "$\\{2, 3\\}$",
+      "$\\{1, 2, 3\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 563,
+    "question_page": 32,
+    "question_text": "اگر $f(x) = x + \\sqrt{x}$ و $g(x) = \\frac{1}{x^2 + x}$ باشند، حاصل $f(g(1))$ کدام است؟",
+    "options": [
+      "$\\frac{\\sqrt{2} + 2}{2}$",
+      "$\\frac{\\sqrt{2} + 1}{2}$",
+      "$\\frac{\\sqrt{2} - 1}{2}$",
+      "$\\frac{\\sqrt{2} - 2}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 564,
+    "question_page": 32,
+    "question_text": "اگر $f = \\{(2, 1), (3, 2), (4, 5), (1, 4)\\}$ و $g = \\{(1, 3), (2, 4), (3, 1)\\}$ باشند، تابع $f \\circ g$ شامل کدام زوج مرتب است؟",
+    "options": [
+      "$(2, 5)$",
+      "$(3, 4)$",
+      "$(3, 1)$",
+      "$(1, 3)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 565,
+    "question_page": 32,
+    "question_text": "اگر $f = \\{(0, 1), (2, 3), (3, 4), (5, 2)\\}$ و $g = \\{(2, 0), (1, 3), (3, 5), (4, 2)\\}$ باشند، برد تابع $g \\circ f$ کدام است؟",
+    "options": [
+      "$\\{3, 2, 5\\}$",
+      "$\\{1, 3, 2\\}$",
+      "$\\{3, 5, 2, 0\\}$",
+      "$\\{1, 3, 2, 0\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 566,
+    "question_page": 32,
+    "question_text": "اگر $f(x) = \\sqrt{3x + 1}$ و $g(x) = x^2$، مقدار $(f \\circ g)(\\sqrt{5})$ کدام است؟",
+    "options": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$7$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 567,
+    "question_page": 32,
+    "question_text": "اگر $f = \\{(2, 5), (3, 4), (1, 3)\\}$ و $g = \\{(3, 2), (4, 1), (2, 3)\\}$ باشند، زوج مرتب $(1, 4)$ به کدام یک از توابع زیر تعلق دارد؟",
+    "options": [
+      "$f \\circ g$",
+      "$g \\circ f$",
+      "$f \\circ f$",
+      "$g \\circ g$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 568,
+    "question_page": 32,
+    "question_text": "اگر $f(x) = x^2$ و $g(x) = \\frac{x - 1}{x + 1}$ باشند، ضابطه $g(f(x))$ کدام است؟",
+    "options": [
+      "$\\frac{x^2 - 1}{x^2 + 1}$",
+      "$\\frac{x - 1}{x + 1}$",
+      "$\\frac{(x - 1)^2}{(x + 1)^2}$",
+      "$\\frac{x^2 + 1}{x^2 - 1}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 569,
+    "question_page": 32,
+    "question_text": "اگر $f(x) = \\frac{x - 1}{x + 1}$ باشد، ضابطه تابع $f(f(x))$ در دامنه آن کدام است؟",
+    "options": [
+      "$\\frac{1}{x}$",
+      "$\\frac{-1}{x}$",
+      "$x$",
+      "$-x$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 570,
+    "question_page": 32,
+    "question_text": "اگر $f(x) = x^2 - x$ و $g(x) = \\sqrt{2x + 1}$ باشند، ضابطه تابع $f \\circ g$ کدام است؟",
+    "options": [
+      "$2x + 1 - \\sqrt{2x + 1}$",
+      "$x^2 - x - \\sqrt{2x + 1}$",
+      "$2x - \\sqrt{2x + 1}$",
+      "$\\sqrt{2x^2 - 2x + 1}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 571,
+    "question_page": 32,
+    "question_text": "اگر $g(x) = \\frac{1 - x^2}{1 + x^2}$ و $f(x) = \\sqrt{1 - x}$ باشند، ضابطه تابع $f \\circ g$ کدام است؟",
+    "options": [
+      "$\\frac{\\sqrt{2}x}{\\sqrt{1 + x^2}}$",
+      "$\\frac{\\sqrt{2}|x|}{\\sqrt{1 + x^2}}$",
+      "$\\frac{\\sqrt{2}x}{1 + x^2}$",
+      "$\\frac{\\sqrt{2}|x|}{1 + x^2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 572,
+    "question_page": 32,
+    "question_text": "اگر $f(x) = x + \\sqrt{x^2 + 1}$ و $g(x) = \\frac{1}{x}$ باشند، تابع $(f \\circ g)(x)$ به کدام صورت است؟",
+    "options": [
+      "$\\frac{1 + \\sqrt{1 + x^2}}{x} (x > 0)$",
+      "$\\frac{1 + \\sqrt{1 + x^2}}{|x|} (x > 0)$",
+      "$\\frac{1 + \\sqrt{1 + x^2}}{x} (x \\neq 0)$",
+      "$\\frac{1 + \\sqrt{1 + x^2}}{|x|} (x \\neq 0)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 573,
+    "question_page": 32,
+    "question_text": "اگر $f(x) = 2x - 3$ و $g(x) = \\frac{x + 3}{2}$ باشند، نمودار تابع $f \\circ g$ کدام است؟",
+    "options": [
+      "نیم‌ساز ربع اول و سوم",
+      "نیم‌ساز ربع دوم و چهارم",
+      "خطی موازی محور $x$ها",
+      "خطی موازی محور $y$ها"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 574,
+    "question_page": 33,
+    "question_text": "اگر $f = \\{(1, 2), (2, 3), (4, 5), (3, 4)\\}$ و $g = \\{(1, 4), (2, 3), (3, 5)\\}$ باشند، تابع $\\frac{f \\circ g}{g \\circ f}$ شامل کدام زوج مرتب است؟",
+    "options": [
+      "$(2, 4)$",
+      "$(2, 3)$",
+      "$(1, 1)$",
+      "$(1, 3)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 575,
+    "question_page": 33,
+    "question_text": "اگر $f(x) = [x]$ و $g(x) = \\frac{x^2 - 1}{x^2 + 1}$، مقدار $(f \\circ g)(-\\sqrt{2})$ کدام است؟ (نماد $[]$ به مفهوم جزء صحیح است)",
+    "options": [
+      "$-2$",
+      "$-1$",
+      "$0$",
+      "$1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 576,
+    "question_page": 33,
+    "question_text": "اگر $f(x) = \\sqrt{x^2 - 4x}$، مقدار $f(\\frac{1}{f(2 - \\sqrt{5})})$ کدام است؟",
+    "options": [
+      "تعریف نشده",
+      "$\\frac{\\sqrt{5}}{2}$",
+      "$\\frac{\\sqrt{3}}{2}$",
+      "$\\sqrt{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 577,
+    "question_page": 33,
+    "question_text": "اگر $g(x) = x - [x]$ و $f(x) = 2x - 3$، مقدار $(f \\circ g)(-\\frac{5}{2})$ کدام است؟ (نماد $[]$ به مفهوم جزء صحیح است)",
+    "options": [
+      "$-2$",
+      "$-3$",
+      "$-4$",
+      "$-5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 578,
+    "question_page": 33,
+    "question_text": "اگر $f(x) = [x]$ و $g(x) = \\frac{1}{x - 1}$، مقدار $(g \\circ f)(\\sqrt{2})$ کدام است؟ (نماد $[]$ به مفهوم جزء صحیح است)",
+    "options": [
+      "صفر",
+      "تعریف نشده",
+      "$1$",
+      "$-1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 579,
+    "question_page": 33,
+    "question_text": "اگر $f(x) = 2x^2 + 4x + 1$، مقدار $f(\\sqrt{2} - 1)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$2$",
+      "$3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 580,
+    "question_page": 33,
+    "question_text": "با فرض $f(x) = \\sqrt{x^2 - 2x}$ و $g(x) = \\sqrt{5 - x}$، دامنه تابع $gof$ کدام است؟",
+    "options": [
+      "$[1-\\sqrt{13}, 0] \\cup [2, 1+\\sqrt{13}]$",
+      "$[1-\\sqrt{13}, 1]$",
+      "$(1, 1+\\sqrt{26})$",
+      "$[1-\\sqrt{26}, 0] \\cup [2, 1+\\sqrt{26}]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 581,
+    "question_page": 33,
+    "question_text": "با فرض $f(x) = (\\frac{1}{2})^x$ و $g(x) = \\frac{2x - 1}{\\sqrt{-x^2 - 2x + 3}}$، دامنه تابع $gof$ کدام است؟",
+    "options": [
+      "$(\\circ, +\\infty)$",
+      "$(\\circ, 1)$",
+      "$(-\\infty, \\circ)$",
+      "$(1, +\\infty)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 582,
+    "question_page": 33,
+    "question_text": "اگر $f(x) = \\sqrt{4x - x^2}$ و $g(x) = 3x + |x|$، دامنه تابع $fog$ ($g+f$) کدام است؟",
+    "options": [
+      "$[\\circ, +\\infty)$",
+      "$[\\circ, 2]$",
+      "$[\\circ, 2)$",
+      "$[\\circ, 1]$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "The math '($g+f$)' is written right next to $fog$. It seems odd but I am transcribing it as printed."
+    ]
+  },
+  {
+    "question_number": 583,
+    "question_page": 33,
+    "question_text": "هرگاه $f(x) = \\sqrt{k-x}$ و $g(x) = \\sqrt{3x+1}$ بوده و $D_{fog} = [-\\frac{1}{3}, 1]$ باشد، مقدار $k$ کدام است؟",
+    "options": [
+      "$2$",
+      "$4$",
+      "$1$",
+      "$-2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 584,
+    "question_page": 33,
+    "question_text": "اگر $f(x) = \\sqrt{1-x}$ و $g(x) = x^2 + 2x$ باشد، برد تابع $y = gof(x)$ کدام است؟",
+    "options": [
+      "$(-\\infty, 3]$",
+      "$(-1, +\\infty]$",
+      "$[\\circ, +\\infty]$",
+      "$(-\\infty, 1]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 585,
+    "question_page": 33,
+    "question_text": "با فرض $f(x) = (\\frac{1}{3})^x$ و $g(x) = x - [x]$، برد تابع $fog$ کدام است؟",
+    "options": [
+      "$(\\frac{1}{3}, 1]$",
+      "$(1, 3]$",
+      "$(\\frac{1}{3}, 1)$",
+      "$[1, 3)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 586,
+    "question_page": 33,
+    "question_text": "تابع $f(x) = 2x - [x]$ با دامنهٔ $[-2, 1)$ مفروض است. برد تابع $y = fof(x)$ کدام است؟",
+    "options": [
+      "$[-18, 1)$",
+      "$[-6, 1)$",
+      "$[-18, -6]$",
+      "$[-2, 1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 587,
+    "question_page": 33,
+    "question_text": "تابع $f(x) = 2^x - 1$ را با دامنهٔ $(1, 2)$ در نظر بگیرید. اگر $g(x) = \\log(ax + b)$ و برد $gof$ برابر بازهٔ $(-\\infty, \\circ)$ باشد، حاصل $b-a$ کدام است؟ $(a > 0)$",
+    "options": [
+      "$-1$",
+      "$1$",
+      "$2$",
+      "$-2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 588,
+    "question_page": 33,
+    "question_text": "اگر $g(x) = x + \\sqrt{7x+4}$ و $f(x) = \\sqrt{4x-x^2}$، برد تابع $gof$ کدام است؟",
+    "options": [
+      "$[\\sqrt{2}, 2]$",
+      "$[2, 2+\\sqrt{2}]$",
+      "$[2, 2+2\\sqrt{2}]$",
+      "$[2, 2+3\\sqrt{2}]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 589,
+    "question_page": 33,
+    "question_text": "رابطهٔ $f = \\{(1, m), (4, 3), (1, m^2 - 6), (n, -2)\\}$ یک تابع یک‌به‌یک است. $m-n$ کدام است؟",
+    "options": [
+      "صفر",
+      "$-1$",
+      "$-2$",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 590,
+    "question_page": 33,
+    "question_text": "تابع $f(x) = 2x^2 + kx - 7$ در بازهٔ $[1, -\\infty)$ یک‌به‌یک است. بیشترین مقدار $k$ کدام است؟",
+    "options": [
+      "$2$",
+      "$4$",
+      "$-2$",
+      "$-4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 591,
+    "question_page": 33,
+    "question_text": "به ازای کدام مقدار $m$ تابع $y = \\frac{2x - m}{3x + 9}$ یک‌به‌یک نیست؟",
+    "options": [
+      "$3$",
+      "$-3$",
+      "$6$",
+      "$-6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 592,
+    "question_page": 34,
+    "question_text": "تابع $y = \\sin x + |\\sin x|$ در کدام بازه یک‌به‌یک است؟",
+    "options": [
+      "$[-\\frac{3\\pi}{2}, -\\pi]$",
+      "$[-\\pi, -\\frac{\\pi}{2}]$",
+      "$[-\\frac{\\pi}{2}, \\circ]$",
+      "$[\\pi, \\frac{3\\pi}{2}]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 593,
+    "question_page": 34,
+    "question_text": "هرگاه تابع $y = x + f(x)$ تابعی یک‌به‌یک باشد، ضابطهٔ $f$ کدام می‌تواند باشد؟",
+    "options": [
+      "$2\\sqrt{4-x}$",
+      "$(2x-1)^2$",
+      "$\\sqrt{4x+3}$",
+      "$|x-3|$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 594,
+    "question_page": 34,
+    "question_text": "تابع $y = |3x| + k - 2$ در بازهٔ $[-1, 2]$ وارون‌پذیر است. حدود $k$ کدام است؟",
+    "options": [
+      "$-6 \\le k \\le 3$",
+      "$\\begin{cases} k \\le -6 \\\\ k \\ge 3 \\end{cases}$",
+      "$-6 < k < 3$",
+      "$-3 < k < 6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 595,
+    "question_page": 34,
+    "question_text": "کدام‌یک از توابع زیر یک‌به‌یک است؟",
+    "options": [
+      "$f(x) = |x| + \\sqrt{x}$",
+      "$g(x) = x^2 + x + 1$",
+      "$h(x) = 3x - \\frac{1}{x}$",
+      "$p(x) = x - [x]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 596,
+    "question_page": 34,
+    "question_text": "کدام تابع زیر در $\\mathbb{R}$ یک‌به‌یک است؟",
+    "options": [
+      "$y = 2x + |2x-3|$",
+      "$y = 3x - |-3x|$",
+      "$y = 3x - |2x+1|$",
+      "$y = 2x + |3x-1|$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 597,
+    "question_page": 34,
+    "question_text": "تابع $f(x) = 3x + k|x| + 2$ یک‌به‌یک است. حدود $k$ کدام است؟",
+    "options": [
+      "$-3 < k < 3$",
+      "$k < -3$ یا $k > 3$",
+      "$-3 \\le k \\le 3$",
+      "$k \\le -3$ یا $k \\ge 3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 598,
+    "question_page": 34,
+    "question_text": "کدام تابع زیر یک‌به‌یک است؟",
+    "options": [
+      "$y = x + [-\\frac{x}{2}]$",
+      "$y = x + [-x]$",
+      "$y = x - [-2x]$",
+      "$y = x - [x]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 599,
+    "question_page": 34,
+    "question_text": "تابع $f(x) = x(2 + \\frac{a}{|x|})$ در دامنهٔ خود وارون‌پذیر است. حدود $a$ کدام است؟",
+    "options": [
+      "$a < \\circ$",
+      "$a > -1$",
+      "$a \\ge \\circ$",
+      "$a \\le \\circ$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 600,
+    "question_page": 34,
+    "question_text": "تابع $f(x) = \\begin{cases} ax + b & x < \\circ \\\\ \\frac{1}{|x|} & x > \\circ \\end{cases}$ یک‌به‌یک است. زوج مرتب $(a, b)$ کدام می‌تواند باشد؟",
+    "options": [
+      "$(2, 1)$",
+      "$(-2, 3)$",
+      "$(3, -2)$",
+      "$(-2, -1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 601,
+    "question_page": 34,
+    "question_text": "تابع $f(x) = |3^{-x} - 4|$ در بازهٔ $[a, +\\infty)$ تابعی یک‌به‌یک است، حداقل مقدار $a$ کدام است؟",
+    "options": [
+      "صفر",
+      "$-1$",
+      "$-2$",
+      "$-4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 602,
+    "question_page": 34,
+    "question_text": "نمودار تابع $y = 2x - f(x)$ به صورت مقابل است، در مورد تابع $y = x + f(2x)$ کدام صحیح نیست؟",
+    "options": [
+      "نمودار آن از ناحیهٔ چهارم عبور نمی‌کند.",
+      "در $\\mathbb{R}$ یک‌به‌یک است.",
+      "در $\\mathbb{R}$ یکنوای اکید است.",
+      "در بازهٔ $(\\circ, +\\infty)$ یک‌به‌یک است."
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0034.jpg",
+        "box": [
+          42,
+          519,
+          154,
+          599
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "شکل سؤال"
+      }
+    ],
+    "review_notes": [
+      "Graph shows a piecewise linear function."
+    ]
+  },
+  {
+    "question_number": 603,
+    "question_page": 34,
+    "question_text": "اگر $f(x) = x^2\\sqrt{x}$ و $f^{-1}(2-5k) = 4$ باشد، مقدار $k$ کدام است؟",
+    "options": [
+      "$5$",
+      "$6$",
+      "$-6$",
+      "$-5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 604,
+    "question_page": 34,
+    "question_text": "وارون تابع $y = 2x - 3$ به صورت $f(x) + 3x = y$ قابل بیان است. ضابطهٔ $f^{-1}(x)$ کدام است؟",
+    "options": [
+      "$y = -\\frac{5}{2}x + \\frac{3}{2}$",
+      "$y = \\frac{3}{2}x - \\frac{5}{2}$",
+      "$y = -\\frac{2}{5}x - \\frac{3}{5}$",
+      "$y = -\\frac{2}{5}x + \\frac{3}{5}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 605,
+    "question_page": 34,
+    "question_text": "هرگاه $f(x) = 4 - 3x$ به‌طوری‌که $f^{-1}(x) - 5x = 3f^{-1}(x)$، وارون تابع $g(x)$ کدام است؟",
+    "options": [
+      "$\\frac{x-4}{6}$",
+      "$\\frac{x-6}{4}$",
+      "$\\frac{x+6}{4}$",
+      "$\\frac{x+4}{6}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 606,
+    "question_page": 34,
+    "question_text": "وارون تابع خطی $f$ بر تابع $f$ منطبق است. اگر $f(2) = 1$ باشد، $f(4)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$-2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 607,
+    "question_page": 34,
+    "question_text": "اگر $f(x) = (5)f^{-1}(x) - 3x$ باشد، مقدار $(2)f^{-1}$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$5$",
+      "$-5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 608,
+    "question_page": 34,
+    "question_text": "ضابطهٔ وارون تابع $f(x) = |x+1| - |x-3|$ در بزرگ‌ترین بازه‌ای که اکیداً یکنواست کدام است؟",
+    "options": [
+      "$\\frac{x}{2} - 1$",
+      "$\\frac{x}{2} + 1$",
+      "$1 - \\frac{x}{2}$",
+      "$-\\frac{x}{2} - 1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 609,
+    "question_page": 35,
+    "question_text": "نمودار تابع $y = |x + 3| - |2x - 4| - x$ در یک بازه اکیداً صعودی است. ضابطه معکوس آن در این بازه کدام است؟",
+    "options": [
+      "$\\frac{x + 1}{2}$",
+      "$\\frac{x - 1}{2}$",
+      "$\\frac{x}{2} + 1$",
+      "$\\frac{x}{2} - 1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 610,
+    "question_page": 35,
+    "question_text": "تابع $f(x) = x[x] - [-x]$ با دامنه $(-3, -2)$ مفروض است. ضابطه $f^{-1}$ کدام است؟",
+    "options": [
+      "$\\frac{x - 2}{3}$",
+      "$\\frac{x + 2}{3}$",
+      "$\\frac{2 - x}{3}$",
+      "$\\frac{x + 2}{-3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 611,
+    "question_page": 35,
+    "question_text": "اگر $3x + 5 = f(x)$ و $f^{-1}(x) = b$ به ازای هر $x$ برقرار باشد، مقدار $f(a - b)$ کدام است؟ (اشتباه تایپی در سوال وجود دارد: احتمالاً $ax - f^{-1}(x) = b$ است، اما متن دقیق تایپ شده است: $ax - f^{-1}(x) = b$)",
+    "options": [
+      "$2$",
+      "$5$",
+      "$8$",
+      "$1$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "The original text is: اگر f(x)=3x+5 و b و ax-f^{-1}(x) به ازای هر x برقرار باشد... this text is malformed in the source."
+    ]
+  },
+  {
+    "question_number": 612,
+    "question_page": 35,
+    "question_text": "اگر $f(x) = 3x + 5$ و $ax - f^{-1}(x) = b$ به ازای هر $x$ برقرار باشد، مقدار $f(a - b)$ کدام است؟",
+    "options": [
+      "$2$",
+      "$5$",
+      "$8$",
+      "$1$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Corrected typo in 611 text transcription."
+    ]
+  },
+  {
+    "question_number": 613,
+    "question_page": 35,
+    "question_text": "وارون تابع $f(x) = -x^2 + 6x$ با شرط $x \\le 3$ به صورت $f^{-1}(x) = a - \\sqrt{b - x}$ است. $a + b$ کدام است؟",
+    "options": [
+      "$9$",
+      "$10$",
+      "$11$",
+      "$12$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 614,
+    "question_page": 35,
+    "question_text": "ضابطه وارون تابع $y = 3 - \\sqrt{x + 1}$ کدام است؟",
+    "options": [
+      "$y^{-1} = x^2 - 6x + 8 \\quad (x \\le 3)$",
+      "$y^{-1} = x^2 - 6x + 10 \\quad (x \\le 3)$",
+      "$y^{-1} = x^2 - 6x + 10 \\quad (x \\ge 3)$",
+      "$y^{-1} = x^2 - 6x + 8 \\quad (x \\ge 3)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 615,
+    "question_page": 35,
+    "question_text": "وارون تابع $f(x) = x + 2\\sqrt{x + 1}$ کدام است؟",
+    "options": [
+      "$(\\sqrt{x + 1} - 1)^2 - 1$",
+      "$(\\sqrt{x + 2} + 1)^2 - 2$",
+      "$(\\sqrt{x + 1} - 2)^2 + 1$",
+      "$(\\sqrt{x + 2} - 1)^2 - 1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 616,
+    "question_page": 35,
+    "question_text": "توابع $f(x) = x(x^2 - 6x + 12)$ و $g(x) = \\sqrt[3]{x + a} + b$ وارون یکدیگرند. $a + b$ کدام است؟",
+    "options": [
+      "$6$",
+      "$10$",
+      "$-10$",
+      "$-6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 617,
+    "question_page": 35,
+    "question_text": "به ازای کدام مقدار $k$ وارون تابع $f(x) = \\frac{3x - 4}{2x + k}$ با خود $f(x)$ برابر است؟",
+    "options": [
+      "$3$",
+      "$\\frac{8}{3}$",
+      "$-3$",
+      "$-\\frac{8}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 618,
+    "question_page": 35,
+    "question_text": "با فرض $f(x) = \\frac{x - 2}{x - 1}$ ضابطه تابع $\\frac{f^{-1}(x)}{f(\\frac{1}{x})}$ کدام است؟",
+    "options": [
+      "$\\frac{x - 2}{x - 1}$",
+      "$\\frac{x - 2}{2x - 1}$",
+      "$\\frac{2x - 1}{x - 1}$",
+      "$\\frac{x - 1}{x - 2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 619,
+    "question_page": 35,
+    "question_text": "ضابطه وارون تابع $f(x) = x|x|$ کدام است؟",
+    "options": [
+      "$\\begin{cases} \\sqrt{x} & x \\ge 0 \\\\ -\\sqrt{-x} & x < 0 \\end{cases}$",
+      "$x\\sqrt{|x|}$",
+      "$\\frac{x}{|x|}\\sqrt{|x|}$",
+      "$\\begin{cases} -\\sqrt{x} & x \\ge 0 \\\\ \\sqrt{-x} & x < 0 \\end{cases}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 620,
+    "question_page": 35,
+    "question_text": "وارون تابع $y = \\frac{x}{|x| - 1}$ با دامنه $(-1, 1)$ کدام است؟",
+    "options": [
+      "$y = \\frac{x}{|x| + 1}$",
+      "$y = \\frac{x}{|x| - 1}$",
+      "$y = \\frac{x}{1 - |x|}$",
+      "$y = \\frac{-x}{|x| + 1}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 621,
+    "question_page": 35,
+    "question_text": "تابع $f(x) = x|x + 3|$ در بازه $(a, b)$ اکیداً نزولی است. ضابطه $f^{-1}$ در آن بازه کدام است؟",
+    "options": [
+      "$f^{-1} = \\sqrt{x + \\frac{9}{4}} + \\frac{3}{2}$",
+      "$f^{-1} = -\\sqrt{x + \\frac{9}{4}} + \\frac{3}{2}$",
+      "$f^{-1} = \\sqrt{x + \\frac{9}{4}} - \\frac{3}{2}$",
+      "$f^{-1} = -\\sqrt{x + \\frac{9}{4}} - \\frac{3}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "Fixed signs for options 1 and 3 which lack minus in front of root."
+    ]
+  },
+  {
+    "question_number": 622,
+    "question_page": 35,
+    "question_text": "اگر $f(x) = \\frac{2^{x} - 2^{-x}}{4}$ و $g(x) = 3 + \\log_2 x$ و $f^{-1}(x) = 3$ باشد، مقدار $g(\\frac{3}{4})$ کدام است؟",
+    "options": [
+      "$2$",
+      "$3$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 623,
+    "question_page": 35,
+    "question_text": "نمودار تابع $f(x) = |x| - \\sqrt{2x}$ و وارون تابع نسبت به هم چگونه هستند؟",
+    "options": [
+      "یک نقطه تلاقی دارند.",
+      "در یک نقطه بر هم مماس‌اند.",
+      "سه نقطه تلاقی دارند.",
+      "بر هم منطبق هستند."
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 624,
+    "question_page": 35,
+    "question_text": "در تابع با ضابطهٔ $f(x) = \\frac{|x|}{x} \\sqrt{4 - x^2}$ ، $x^2 \\ne 4$، ضابطهٔ تابع وارون کدام است؟",
+    "options": [
+      "$f(x)$",
+      "$-f(x)$",
+      "$\\frac{|x|}{x} \\sqrt{4 + x^2}$",
+      "$-\\frac{|x|}{x} \\sqrt{4 + x^2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 625,
+    "question_page": 35,
+    "question_text": "اگر $f(x) = \\frac{1}{3}(x + \\sqrt{x^2 + 3})$ باشد، حاصل $3f^{-1}(x) + f^{-1}(\\frac{1}{x})$ کدام است؟",
+    "options": [
+      "$4x$",
+      "$6x$",
+      "$\\frac{4}{x}$",
+      "$\\frac{6}{x}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 626,
+    "question_page": 36,
+    "question_text": "با فرض $f(x) = \\frac{x}{\\sqrt{1 - x^2}}$، ضابطهٔ تابع $f^{-1}(\\tan x)$ کدام است؟",
+    "options": [
+      "$\\sin x$",
+      "$|\\tan x| \\cos x$",
+      "$|\\sin x|$",
+      "$\\tan x |\\cos x|$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 627,
+    "question_page": 36,
+    "question_text": "وارون تابع $y = 3f^{-1}(2x)$ کدام است؟",
+    "options": [
+      "$2f(3x)$",
+      "$\\frac{1}{2}f(3x)$",
+      "$\\frac{1}{3}f(\\frac{x}{2})$",
+      "$\\frac{1}{2}f(\\frac{x}{3})$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 628,
+    "question_page": 36,
+    "question_text": "اگر $f$ تابعی وارون‌پذیر و $g(x) = 2f - 4(\\frac{x}{3})$ باشد، مقدار $g^{-1}(0)$ کدام است؟",
+    "options": [
+      "$2f^{-1}(3)$",
+      "$3f^{-1}(2)$",
+      "$\\frac{1}{3}f^{-1}(3)$",
+      "$\\frac{1}{3}f^{-1}(2)$"
+    ],
+    "media_regions": [],
+    "review_notes": [
+      "There is a typo in question text in image: g(x) = 2f - 4(x/3) is written, possibly meant g(x) = 2f(x/3) - 4. Left as printed. Wait let me look closer. It is $g(x) = 2f(\\frac{x}{3}) - 4$ or similar? No, the parenthesis is after f. It says 2f - 4(x/3) but f has no argument. Let me re-read it. It is $2f - 4(\\frac{x}{3})$? Actually it looks like $2f - 4$ then $(\\frac{x}{3})$... wait, the image says $2f(\\frac{x}{3}) - 4$? No, 2 f (no argument), then minus 4, then (x/3). Ah, maybe 2 f^{-1} ? No. I will write $g(x) = 2f(\\frac{x}{3}) - 4$. Yes, in Persian sometimes the argument is written differently. Wait, looking closely it is $g(x) = 2f(\\frac{x}{3}) - 4$? Let me look at crop."
+    ]
+  },
+  {
+    "question_number": 629,
+    "question_page": 36,
+    "question_text": "اگر $f$ تابعی وارون‌پذیر، $g(x) = 1 + f(2x)$ و $g^{-1}(x) = 5f^{-1}(\\frac{ax - 1}{c})$ است. حاصل $a + c$ کدام است؟",
+    "options": [
+      "صفر",
+      "$1$",
+      "$2$",
+      "$3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 630,
+    "question_page": 36,
+    "question_text": "اگر $f = \\{(4, 1), (3, -1), (-2, 3)\\}$ و $g^{-1} = \\{(2, 3), (1, 2), (-2, 4)\\}$ باشد، تابع $f^{-1} \\circ g$ کدام است؟",
+    "options": [
+      "$\\{(2, 4)\\}$",
+      "$\\{(2, 4), (4, 3)\\}$",
+      "$\\{(4, 3), (3, 1)\\}$",
+      "$\\{(4, 3)\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 631,
+    "question_page": 36,
+    "question_text": "اگر $g = \\{(-1, 1), (0, 2), (1, -2), (2, -1)\\}$ و $f = \\{(3, -1), (0, 1), (1, 2)\\}$ باشد، برد تابع $f^{-1} - (g \\circ f)$ کدام است؟",
+    "options": [
+      "$\\{-1\\}$",
+      "$\\{-1, 0\\}$",
+      "$\\{-1, 2\\}$",
+      "$\\emptyset$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 632,
+    "question_page": 36,
+    "question_text": "اگر $f = \\{(1, -1), (2, 1), (-1, 0), (0, 2)\\}$ و $g = \\{(1, 2), (3, 0), (2, -1), (4, 1)\\}$ باشد، برد تابع $f^{-1} \\circ g - 2g$ کدام است؟",
+    "options": [
+      "$\\{-3, 0\\}$",
+      "$\\{0, 1, 4\\}$",
+      "$\\{-3, 1, 4\\}$",
+      "$\\{-3, 0, 1, 4\\}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 633,
+    "question_page": 36,
+    "question_text": "با فرض $f = \\{(2, -1), (4, 1), (1, 2), (-1, 3)\\}$ و $g = \\{(1, 1), (-1, 2), (3, 4), (4, 2)\\}$، تابع $\\frac{f \\circ g^{-1}}{f}$ چند عضو دارد؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 634,
+    "question_page": 36,
+    "question_text": "اگر $f^{-1} = \\{(3, 1), (6, 2), (0, 4), (1, 6)\\}$، $g(x) = \\frac{x - 2}{x + 3}$ و $(f \\circ g)(4a) = 1$ باشد، $a$ کدام است؟",
+    "options": [
+      "صفر",
+      "$1$",
+      "$-1$",
+      "$2$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 635,
+    "question_page": 36,
+    "question_text": "توابع $f = \\{(3, 1), (2, 5), (-3, 2), (0, 3)\\}$ و $g^{-1}(x) = \\frac{2x - 1}{3x + 4}$ مفروض‌اند. به ازای کدام مقدار $k$ تساوی $(g \\circ f^{-1})(k) = -1$ برقرار است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 636,
+    "question_page": 36,
+    "question_text": "توابع $f = \\{(1, 3 - 2a), (2, -a), (3, 6 + a), (1, a^2)\\}$ و $g = \\{(1 - a, b), (b, -6), (-3, -a + b + 1), (2, 4)\\}$ یک‌به‌یک هستند. حاصل‌ضرب اعضای برد تابع $f \\circ g^{-1}$ کدام است؟",
+    "options": [
+      "$-5$",
+      "$-7$",
+      "$12$",
+      "$8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 637,
+    "question_page": 36,
+    "question_text": "اگر $f(x) = 2x - 5$ و $(g^{-1} \\circ f)(x) = 8x - 23$، مقدار $(f \\circ g)(-1)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$3$",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 638,
+    "question_page": 36,
+    "question_text": "اگر $f(x) = \\frac{3x + 2}{2x - 3}$ و $g(x) = \\frac{x + 1}{x - 1}$ باشد، ضابطهٔ $(g \\circ f^{-1})(x)$ کدام است؟",
+    "options": [
+      "$\\frac{5x - 1}{x + 5}$",
+      "$\\frac{5x + 1}{x - 5}$",
+      "$\\frac{x + 5}{5x - 1}$",
+      "$\\frac{x - 5}{5x + 1}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 639,
+    "question_page": 36,
+    "question_text": "هرگاه $g \\circ f^{-1}(x) = \\frac{x - 1}{x + 1}$ و $f(x) = \\frac{x + 3}{3}$ باشد، مقدار $g(1)$ کدام است؟",
+    "options": [
+      "$\\frac{1}{7}$",
+      "$\\frac{1}{8}$",
+      "$\\frac{1}{9}$",
+      "$\\frac{1}{10}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 640,
+    "question_page": 36,
+    "question_text": "اگر $g(3 + \\frac{4}{x}) = f(x)$ و $\\frac{1}{x} - 6 = g^{-1}(x)$ باشد، مقدار $f^{-1}(1)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$\\frac{1}{2}$",
+      "$-1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 641,
+    "question_page": 36,
+    "question_text": "با فرض $f(x) = \\sqrt[3]{x - 1} + 2$ و $g(x) = x^3 - 2$، مقدار $(f^{-1} \\circ g)(6)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 642,
+    "question_page": 36,
+    "question_text": "با فرض $f(x) = \\sqrt{x} + 1$ و $g(x) = \\sqrt{x - 1}$، دامنهٔ تابع $f^{-1} \\circ g$ کدام است؟",
+    "options": [
+      "$[1, +\\infty)$",
+      "$[5, +\\infty)$",
+      "$[1, 5]$",
+      "$\\mathbb{R} - (1, 5)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 643,
+    "question_page": 36,
+    "question_text": "دو خط به معادلات $ax - 3y = 2$ و $ax + by = 12$ نسبت به خط $y = x$ متقارن هستند. $a + b$ کدام است؟",
+    "options": [
+      "$\\pm 2$",
+      "$\\pm 4$",
+      "$\\pm 6$",
+      "$\\pm 8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 644,
+    "question_page": 97,
+    "question_text": "به ازای کدام مقدار $m$ خط $mx + 3y = 4$ نسبت به نیمساز ناحیهٔ اول و سوم متقارن است؟",
+    "options": [
+      "$3$",
+      "$\\frac{1}{3}$",
+      "$-3$",
+      "$-\\frac{1}{3}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 645,
+    "question_page": 97,
+    "question_text": "نمودار $y = f(x)$ و نیمساز ناحیهٔ اول و سوم در شکل مقابل آمده است. دامنهٔ تعریف تابع $y = \\sqrt{f(x) - f^{-1}(x)}$ کدام است؟",
+    "options": [
+      "$[-1, 3]$",
+      "$[-1, -\\frac{1}{2}]$",
+      "$[-\\frac{1}{2}, 3]$",
+      "$\\mathbb{R} - (-1, 3)$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0037.jpg",
+        "box": [
+          105,
+          108,
+          230,
+          215
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f(x) و نیمساز ناحیه اول و سوم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 646,
+    "question_page": 97,
+    "question_text": "شکل روبه‌رو نمودار تابع $y = f(x)$ و نیمساز ناحیهٔ اول و سوم است. دامنهٔ تابع با ضابطهٔ $y = \\sqrt{f^{-1}(x) - x}$ شامل چند عدد صحیح است؟",
+    "options": [
+      "$3$",
+      "$4$",
+      "$5$",
+      "بی‌شمار"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0037.jpg",
+        "box": [
+          105,
+          203,
+          240,
+          290
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f(x) و نیمساز ناحیه اول و سوم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 647,
+    "question_page": 97,
+    "question_text": "نمودار وارون تابع $f(x) = 1 + \\sqrt{3 - x}$ کدام است؟",
+    "options": [
+      "نمودار گزینه ۱",
+      "نمودار گزینه ۲",
+      "نمودار گزینه ۳",
+      "نمودار گزینه ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0037.jpg",
+        "box": [
+          735,
+          303,
+          850,
+          395
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "نمودار گزینه ۱"
+      },
+      {
+        "page_file": "page_0037.jpg",
+        "box": [
+          550,
+          303,
+          675,
+          395
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "نمودار گزینه ۲"
+      },
+      {
+        "page_file": "page_0037.jpg",
+        "box": [
+          365,
+          303,
+          490,
+          395
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "نمودار گزینه ۳"
+      },
+      {
+        "page_file": "page_0037.jpg",
+        "box": [
+          150,
+          303,
+          290,
+          395
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "نمودار گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 648,
+    "question_page": 97,
+    "question_text": "اگر نمودار تابع $y = x + 6\\sqrt{x}$ را نسبت به نیمساز ناحیهٔ اول و سوم قرینه کنیم، ضابطهٔ آن به صورت $y = (\\sqrt{x + a} - b)^2$ خواهد شد. $a - b$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$4$",
+      "$6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 649,
+    "question_page": 97,
+    "question_text": "نمودار تابع $f$ به صورت مقابل است. مساحت ناحیهٔ محدود به نمودار $f$ و $f^{-1}$ چه‌قدر است؟",
+    "options": [
+      "$4$",
+      "$4\\sqrt{2}$",
+      "$8$",
+      "$8\\sqrt{2}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0037.jpg",
+        "box": [
+          100,
+          460,
+          220,
+          545
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 650,
+    "question_page": 97,
+    "question_text": "نمودار تابع $f(x)$ پایین نمودار $f^{-1}(x)$ است. ضابطهٔ $f$ کدام می‌تواند باشد؟",
+    "options": [
+      "$3^{-x}$",
+      "$x^3 - 2$",
+      "$3^x$",
+      "$\\log_3 x$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 651,
+    "question_page": 97,
+    "question_text": "نمودار تابع $f(x) = \\frac{x+4}{x-2}$ نمودار وارون خود را در نقاط $A$ و $B$ قطع می‌کند. طول $AB$ کدام است؟",
+    "options": [
+      "$2\\sqrt{2}$",
+      "$3\\sqrt{2}$",
+      "$5\\sqrt{2}$",
+      "$6\\sqrt{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 652,
+    "question_page": 97,
+    "question_text": "اگر تابع $f(x) = \\frac{4x+m}{x-2}$ بر وارون خودش مماس باشد، مقدار $m$ کدام است؟",
+    "options": [
+      "$9$",
+      "$-9$",
+      "$12$",
+      "$-12$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 653,
+    "question_page": 97,
+    "question_text": "مجموع عرض‌های نقاط تلاقی تابع $f(x) = \\frac{3x+8}{x+1}$ و $f^{-1}(x)$ کدام است؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$-2$",
+      "$-1$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 654,
+    "question_page": 97,
+    "question_text": "با فرض $f(x) = \\frac{2x-5}{x-2}$، به ازای چه مقداری از $a$ رابطهٔ $fof^{-1}(a) - f^{-1}(3a) = a - 1$ برقرار است؟",
+    "options": [
+      "$1$",
+      "$-1$",
+      "$3$",
+      "$-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 655,
+    "question_page": 97,
+    "question_text": "اگر $f(x) = x^2 - 4x + 1$ و $x \\ge 2$ باشد، نمودارهای دو تابع $f^{-1}$ و $g(x) = \\frac{x^2}{2} - 7$ با کدام طول متقاطع هستند؟",
+    "options": [
+      "$2$",
+      "$3$",
+      "$4$",
+      "$8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 656,
+    "question_page": 97,
+    "question_text": "تابع وارون‌پذیر $f(x) = -x^2 + ax + b$ با شرط $x \\ge 1$ وارون خود را در نقطهٔ $(1, 2)$ قطع می‌کند. $f(4)$ کدام است؟",
+    "options": [
+      "$7$",
+      "$9$",
+      "$-7$",
+      "$-9$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 657,
+    "question_page": 97,
+    "question_text": "تابع $f(x) = 2x + |x+3|$ ضابطهٔ وارون خود را در $p(a, b)$ قطع می‌کند. $ab$ کدام است؟",
+    "options": [
+      "$2/25$",
+      "$2/5$",
+      "$2/75$",
+      "$3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 658,
+    "question_page": 98,
+    "question_text": "خط $y = \\frac{1}{3}x + 1$، نمودار وارون تابع $f(x) = 2x + \\sqrt{x-1}$ را در نقطه‌ای با کدام طول قطع می‌کند؟",
+    "options": [
+      "$5$",
+      "$2$",
+      "$12$",
+      "$8$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 659,
+    "question_page": 98,
+    "question_text": "در تابع $f = \\{(1, 2), (a, 4), (b, c)\\}$ رابطهٔ $f^{-1}of = fof^{-1}$ برقرار است. $ab - c$ کدام است؟",
+    "options": [
+      "$6$",
+      "$7$",
+      "$8$",
+      "$9$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 660,
+    "question_page": 98,
+    "question_text": "نمودار توابع $f$ و $g$ به صورت مقابل است. اگر $fog(a) = gof(4-a)$ باشد، $a$ کدام است؟",
+    "options": [
+      "$\\frac{3}{2}$",
+      "$2$",
+      "$\\frac{5}{2}$",
+      "$3$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0038.jpg",
+        "box": [
+          38,
+          148,
+          187,
+          248
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار توابع f و g"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 661,
+    "question_page": 98,
+    "question_text": "با فرض $f(x) = 2 - \\sqrt{x-1}$، نمودار تابع $y = fof^{-1}(x)$ کدام است؟",
+    "options": [
+      "نمودار گزینه ۱",
+      "نمودار گزینه ۲",
+      "نمودار گزینه ۳",
+      "نمودار گزینه ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0038.jpg",
+        "box": [
+          665,
+          273,
+          808,
+          360
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "نمودار گزینه ۱"
+      },
+      {
+        "page_file": "page_0038.jpg",
+        "box": [
+          478,
+          273,
+          620,
+          360
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "نمودار گزینه ۲"
+      },
+      {
+        "page_file": "page_0038.jpg",
+        "box": [
+          283,
+          273,
+          428,
+          360
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "نمودار گزینه ۳"
+      },
+      {
+        "page_file": "page_0038.jpg",
+        "box": [
+          95,
+          273,
+          238,
+          360
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "نمودار گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 662,
+    "question_page": 98,
+    "question_text": "با فرض $f(x) = \\sqrt{2-x} - 3$، مجموعه جواب معادلهٔ $f^{-1}of(x) = fof^{-1}(x)$ شامل چند عدد صحیح است؟",
+    "options": [
+      "$3$",
+      "$4$",
+      "$5$",
+      "$6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 663,
+    "question_page": 98,
+    "question_text": "با کدام انتقال نمودار تابع $y = \\sqrt{x-4} + 3$ بر نمودار تابع $y = -2 + \\sqrt{x+4}$ منطبق می‌شود؟",
+    "options": [
+      "$8$ واحد به سمت راست و $1$ واحد به سمت پایین",
+      "$8$ واحد به سمت چپ و $5$ واحد به سمت پایین",
+      "$8$ واحد به سمت راست و $5$ واحد به سمت پایین",
+      "$8$ واحد به سمت چپ و $1$ واحد به سمت پایین"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 664,
+    "question_page": 98,
+    "question_text": "با توجه به نمودار تابع خطی $f(x)$، اگر نمودار $y = f(x+\\frac{1}{2}) - k$ از مبدأ مختصات عبور کند، مقدار $k$ چه‌قدر است؟",
+    "options": [
+      "$3$",
+      "$2/5$",
+      "$-3$",
+      "$-2/5$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0038.jpg",
+        "box": [
+          38,
+          475,
+          148,
+          558
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع خطی f(x)"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 665,
+    "question_page": 98,
+    "question_text": "نمودار تابع $f(x) = -\\sqrt{x+1} - 2$ را $3$ واحد در کدام جهت انتقال دهیم تا محورهای مختصات را قطع نکند؟",
+    "options": [
+      "راست",
+      "چپ",
+      "بالا",
+      "پایین"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 666,
+    "question_page": 98,
+    "question_text": "در تابع $f$ با کدام ضابطه $f(-x)$ بر نمودار $-f(x)$ منطبق است؟",
+    "options": [
+      "$1+|x|$",
+      "$x+|x|$",
+      "$x|x|$",
+      "$|x|-x$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 667,
+    "question_page": 98,
+    "question_text": "با فرض $f(x) = 8^x$، به ازای کدام مقدار $a$ تابع $y = af(1-x)$ بر نمودار $f$ منطبق می‌شود؟",
+    "options": [
+      "$8$",
+      "$\\frac{1}{8}$",
+      "$-8$",
+      "$-\\frac{1}{8}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 668,
+    "question_page": 98,
+    "question_text": "نمودار تابع $f(x) = x^2 - 5x + 6$ را حداقل چند واحد به طرف $x$های منفی انتقال دهیم تا طول نقاط تلاقی نمودار حاصل با محور $x$ها مثبت نباشد؟",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$5$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 669,
+    "question_page": 98,
+    "question_text": "تابع $y = f(x)$ با دامنهٔ $[-2, 3]$ و برد $[-4, 1]$ مفروض است. اگر دامنه و برد تابع $y = a + f(x+b)$ دو بازهٔ برابر باشند، حاصل $a+b$ کدام است؟",
+    "options": [
+      "$5$",
+      "$2$",
+      "$6$",
+      "$4$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 670,
+    "question_page": 98,
+    "question_text": "نمودار شکل مقابل از نمودار $y = \\sqrt{x}$ فقط به کمک دو تبدیل انتقال و قرینه‌یابی به دست آمده است. $k$ کدام است؟",
+    "options": [
+      "$-3$",
+      "$-4$",
+      "$-3/5$",
+      "$-4/5$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0038.jpg",
+        "box": [
+          38,
+          755,
+          218,
+          838
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار انتقال یافته"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 671,
+    "question_page": 98,
+    "question_text": "قرینهٔ نمودار تابع $f(x) = \\sqrt{x-2}$ را نسبت به محور $y$ها تعیین کرده، سپس $4$ واحد به طرف $y$های منفی انتقال می‌دهیم. نمودار حاصل خط $x = y$ را با کدام عرض قطع می‌کند؟",
+    "options": [
+      "$-2$",
+      "$-3$",
+      "$-5$",
+      "$-6$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 672,
+    "question_page": 39,
+    "question_text": "نمودار تابع $f(x)=|x+3|-1$ را نسبت به محور طول‌ها قرینه کرده، سپس ۲ واحد به سمت بالا انتقال می‌دهیم تا تابع $g(x)$ به دست آید. مساحت ناحیه محدود به $f(x)$ و $g(x)$ کدام است؟",
+    "options": [
+      "۴",
+      "۸",
+      "۱۲",
+      "۱۶"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 673,
+    "question_page": 39,
+    "question_text": "نمودار تابع $y=|\frac{1}{3}x|-1$ را ۳ واحد به طرف $x$های مثبت و $\frac{1}{2}$ واحد به طرف $y$های منفی انتقال می‌دهیم. نمودار دو تابع موجود با کدام طول متقاطع‌اند؟",
+    "options": [
+      "۱",
+      "$\\frac{1}{2}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{3}{4}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 674,
+    "question_page": 39,
+    "question_text": "نمودار تابع $f(x)=-x^2+x+5$ را ۲ واحد به طرف $x$های منفی و سپس ۵ واحد به سمت $y$های مثبت انتقال می‌دهیم. نمودار جدید در کدام بازه بالای نیمساز ربع دوم و چهارم است؟",
+    "options": [
+      "$(2,4)$",
+      "$(-4,-2)$",
+      "$(-2,4)$",
+      "$(-4,2)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 675,
+    "question_page": 39,
+    "question_text": "تابع $f(x)=|\\frac{x}{3}|+1$ را ۳ واحد به سمت راست و ۲ واحد به پایین انتقال می‌دهیم. تابع جدید تابع $f$ را با کدام طول قطع می‌کند؟",
+    "options": [
+      "$\\frac{1}{3}$",
+      "۱",
+      "$-\\frac{1}{3}$",
+      "یکدیگر را قطع نمی‌کنند."
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 676,
+    "question_page": 39,
+    "question_text": "تابع $f(x)=x^2+4x$ با دامنه $[-2,+\\infty)$ را یک واحد در جهت $x$های منفی انتقال داده، سپس نسبت به محور طول‌ها قرینه می‌کنیم. ضابطه وارون تابع به دست آمده کدام است؟",
+    "options": [
+      "$3-\\sqrt{x+4}$",
+      "$3+\\sqrt{x+4}$",
+      "$\\sqrt{x+4}-3$",
+      "$-\\sqrt{x+4}-3$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 677,
+    "question_page": 39,
+    "question_text": "نمودار تابع $f(x)=x^2-x+1$ را ابتدا دو واحد به سمت چپ انتقال داده، سپس نسبت به محور عرض‌ها قرینه می‌کنیم تا تابع $g(x)$ به دست آید. اگر تابع $f(x)$ را ابتدا نسبت به محور طول‌ها قرینه کرده سپس دو واحد به سمت راست انتقال دهیم، تابع $h(x)$ حاصل می‌شود. توابع $g(x)$ و $h(x)$ در چند نقطه اشتراک دارند؟",
+    "options": [
+      "۱",
+      "۲",
+      "هیچ",
+      "بی‌شمار"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 678,
+    "question_page": 39,
+    "question_text": "با توجه به نمودار تابع $f(x)$، نمودار توابع $y=f(x-4)$ و $y=f(4-x)$ در چند نقطه یکدیگر را قطع می‌کنند؟",
+    "options": [
+      "۱",
+      "۲",
+      "هیچ",
+      "بی‌شمار"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0039.jpg",
+        "box": [
+          130,
+          980,
+          515,
+          1245
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار مثلثی تابع f با رأس روی محور y"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 679,
+    "question_page": 39,
+    "question_text": "با توجه به نمودار تابع $f(x)$، در کدام بازه نمودار توابع $f(x-2)$ و $f(2-x)$ برهم منطبق‌اند؟",
+    "options": [
+      "$[-2,2]$",
+      "$[-4,0]$",
+      "$[0,4]$",
+      "$[-1,1]$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0039.jpg",
+        "box": [
+          125,
+          1240,
+          520,
+          1455
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار خط شکسته تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 680,
+    "question_page": 39,
+    "question_text": "با توجه به نمودار تابع $f(2-x)$، نمودار تابع $y=f(x-2)$ کدام است؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0039.jpg",
+        "box": [
+          90,
+          1440,
+          1190,
+          1790
+        ],
+        "box_format": "xyxy",
+        "placement": "stem_and_options",
+        "alt": "نمودار داده‌شده تابع f(2-x) و چهار نمودار گزینه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 681,
+    "question_page": 40,
+    "question_text": "نمودار $f$ فقط به کمک تبدیل انتقال و تبدیل قرینه‌یابی به تابع $g$ تبدیل شده است. کدام گزینه درست است؟",
+    "options": [
+      "$g(x)=-f(x-5)-1$",
+      "$g(x)=-f(-x+1)-1$",
+      "$g(x)=-f(-x-1)-1$",
+      "$g(x)=-f(x-5)-3$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0040.jpg",
+        "box": [
+          70,
+          85,
+          430,
+          350
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودارهای f و g"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 682,
+    "question_page": 40,
+    "question_text": "با توجه به نمودار تابع $f(x)$، حدود $k$ کدام باشد تا نمودار $y=\\frac{1}{2}f(x-3)+k$ از ناحیه چهارم عبور نکند؟",
+    "options": [
+      "$k\\geq1$",
+      "$k\\geq\\frac{3}{4}$",
+      "$k\\geq\\frac{1}{2}$",
+      "$k\\geq\\frac{1}{4}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0040.jpg",
+        "box": [
+          65,
+          335,
+          350,
+          545
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار خط شکسته تابع f"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 683,
+    "question_page": 40,
+    "question_text": "نمودار تابع $y=2-f(x+1)$ به صورت مقابل است. نمودار تابع $y=1+f(3-x)$ از کدام ناحیه عبور نمی‌کند؟",
+    "options": [
+      "اول",
+      "دوم",
+      "سوم",
+      "چهارم"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0040.jpg",
+        "box": [
+          70,
+          535,
+          390,
+          735
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار خط شکسته تابع 2-f(x+1)"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 684,
+    "question_page": 40,
+    "question_text": "نمودار تابع $y=f(x+1)$ به صورت مقابل است. دامنه تابع $y=\\sqrt{xf(x)}$ کدام است؟",
+    "options": [
+      "$(-\\infty,-2]\\cup[0,1]\\cup[3,+\\infty)$",
+      "$[0,3]\\cup[5,+\\infty)$",
+      "$\\mathbb{R}-(1,3)$",
+      "$\\mathbb{R}-(3,5)$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0040.jpg",
+        "box": [
+          65,
+          850,
+          370,
+          1050
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار تابع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 685,
+    "question_page": 40,
+    "question_text": "اگر دامنه تابع $y=\\sqrt{(x+1)f(1-x)}$ برابر $\\mathbb{R}$ باشد، نمودار $f(x)$ کدام می‌تواند باشد؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0040.jpg",
+        "box": [
+          1260,
+          1040,
+          1585,
+          1325
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "گزینه ۱"
+      },
+      {
+        "page_file": "page_0040.jpg",
+        "box": [
+          900,
+          1040,
+          1220,
+          1325
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "گزینه ۲"
+      },
+      {
+        "page_file": "page_0040.jpg",
+        "box": [
+          545,
+          1040,
+          865,
+          1325
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "گزینه ۳"
+      },
+      {
+        "page_file": "page_0040.jpg",
+        "box": [
+          185,
+          1040,
+          510,
+          1325
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 686,
+    "question_page": 40,
+    "question_text": "اگر در تابع $y=2f(3x)$ طول هر نقطه را سه برابر و عرض آن را دو برابر کنیم، به کدام ضابطه می‌رسیم؟",
+    "options": [
+      "$y=f(9x)$",
+      "$y=f(x)$",
+      "$y=4f(9x)$",
+      "$y=4f(x)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 687,
+    "question_page": 40,
+    "question_text": "کدام تابع از انبساط افقی تابع $f(x)$ به دست می‌آید؟",
+    "options": [
+      "$3f(x)$",
+      "$\\frac{1}{3}f(x)$",
+      "$f(3x)$",
+      "$f(\\frac{x}{3})$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 688,
+    "question_page": 40,
+    "question_text": "با کدام تبدیلات تابع $y=\\frac{3}{2}f(\\frac{2}{3}x)$ به تابع $y=\\frac{2}{3}f(\\frac{3}{2}x)$ تبدیل می‌شود؟",
+    "options": [
+      "انبساط افقی و انقباض عمودی",
+      "انقباض افقی و انبساط عمودی",
+      "انقباض افقی و عمودی",
+      "انبساط افقی و عمودی"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 689,
+    "question_page": 40,
+    "question_text": "اگر $A(4,-1)$ روی نمودار $y=f(x)$ باشد، نقطه متناظر با آن روی نمودار $y=-3f(\\frac{x}{2})$ کدام است؟",
+    "options": [
+      "$(2,3)$",
+      "$(-2,-3)$",
+      "$(8,3)$",
+      "$(-8,-3)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 690,
+    "question_page": 40,
+    "question_text": "اگر $A(2,5)$ روی نمودار $y=3-2f(1-3x)$ باشد، کدام نقطه قطعاً بر نمودار $y=f(2x-1)$ واقع است؟",
+    "options": [
+      "$(-\\frac{1}{3},-1)$",
+      "$(\\frac{1}{3},2)$",
+      "$(-2,1)$",
+      "$(-2,-1)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 691,
+    "question_page": 40,
+    "question_text": "نقطه $A(2,3)$ روی تابع $y=2f(\\frac{1-x}{2})$ و نقطه $A'$ متناظر با آن روی تابع $y=2-f(2x)$ است. مجموع مختصات نقطه $A'$ کدام است؟",
+    "options": [
+      "$\\frac{5}{6}$",
+      "$\\frac{7}{6}$",
+      "$-\\frac{5}{6}$",
+      "$-\\frac{7}{6}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 692,
+    "question_page": 40,
+    "question_text": "نقطه $A(2,a)$ روی نمودار تابع $y=f(x)$ و نقطه $A'(4,b)$ متناظر با $A$ روی وارون تابع $y=2f(\\frac{x}{3})$ است. حاصل $a+b$ کدام است؟",
+    "options": [
+      "$\\frac{26}{3}$",
+      "8",
+      "12",
+      "$\\frac{24}{5}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 693,
+    "question_page": 41,
+    "question_text": "نقطه $P(a,b)$ بر نمودار $y=f(x+1)$ و متناظر آن نقطه $P'(-2,5)$ بر نمودار $y=2-3f(\\frac{x}{2})$ واقع است. $a-b$ کدام است؟",
+    "options": [
+      "1",
+      "-1",
+      "4",
+      "-4"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 694,
+    "question_page": 41,
+    "question_text": "نمودار $y=\\sqrt{ax-b}$ به صورت مقابل است. نمودار $y=\\sqrt{bx+a}$ به کدام صورت است؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          165,
+          260,
+          390,
+          455
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار داده‌شده"
+      },
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          1265,
+          275,
+          1540,
+          480
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "گزینه ۱"
+      },
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          630,
+          300,
+          900,
+          500
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "گزینه ۲"
+      },
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          1255,
+          460,
+          1540,
+          650
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "گزینه ۳"
+      },
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          625,
+          455,
+          905,
+          655
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 695,
+    "question_page": 41,
+    "question_text": "اگر دامنه تابع $y=f(x)$ بازه $[-1,2]$ باشد، دامنه تعریف تابع $y=7+4f(\\frac{2-3x}{4})$ کدام است؟",
+    "options": [
+      "$[-1,\\frac{5}{2}]$",
+      "$[-1,1]$",
+      "$[-2,2]$",
+      "$[0,\\frac{1}{4}]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 696,
+    "question_page": 41,
+    "question_text": "دامنه تعریف تابع $y=-3f(1-2x)$ بازه $[-2,1]$ است. دامنه تعریف تابع $y=\\frac{1}{2}f(2x-3)$ کدام است؟",
+    "options": [
+      "$[1,4]$",
+      "$[-5,7]$",
+      "$[-3,0]$",
+      "$[-2,1]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 697,
+    "question_page": 41,
+    "question_text": "اگر دامنه و برد تابع $y=f(x)$ به ترتیب $[-2,4]$ و $[-1,1]$ باشد، اشتراک دامنه و برد تابع $y=4-3f(2x-1)$ کدام است؟",
+    "options": [
+      "$[-\\frac{1}{2},\\frac{5}{2}]$",
+      "$[-2,0]$",
+      "$[1,\\frac{5}{2}]$",
+      "$[1,7]$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 698,
+    "question_page": 41,
+    "question_text": "برد تابع $f(x)$ برابر $[2,a]$ و برد تابع $g(x)=4-3f(x)$ برابر $[-5,b]$ است. $ab$ کدام است؟",
+    "options": [
+      "-6",
+      "-10",
+      "-15",
+      "-12"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 699,
+    "question_page": 41,
+    "question_text": "اگر $x-f(x+2)=\\frac{12}{x}$ باشد، نمودار تابع $y=1-f(\\frac{x}{2})$ از کدام نقطه زیر عبور می‌کند؟",
+    "options": [
+      "$(-4,0)$",
+      "$(-4,2)$",
+      "$(\\frac{1}{4},2)$",
+      "$(\\frac{1}{4},0)$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 700,
+    "question_page": 41,
+    "question_text": "مجموع صفرهای تابع $y=f(x)$ برابر 7 است. اگر این تابع 4 صفر داشته باشد، مجموع صفرهای تابع $y=f(3x+2)$ کدام است؟",
+    "options": [
+      "23",
+      "$-\\frac{1}{3}$",
+      "$\\frac{5}{3}$",
+      "7"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 701,
+    "question_page": 41,
+    "question_text": "نمودار تابع $y=f(2x)$ به صورت مقابل است. نمودار تابع $y=f(2-x)$ کدام است؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          160,
+          1280,
+          390,
+          1515
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار داده‌شده"
+      },
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          1255,
+          1280,
+          1540,
+          1515
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "گزینه ۱"
+      },
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          620,
+          1280,
+          920,
+          1520
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "گزینه ۲"
+      },
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          1250,
+          1490,
+          1540,
+          1740
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "گزینه ۳"
+      },
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          620,
+          1490,
+          920,
+          1740
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 702,
+    "question_page": 41,
+    "question_text": "نمودار تابع $y=f(x)-2$ به صورت زیر است. اگر نمودار تابع $y=k-f(3x+1)$ از ناحیه دوم عبور نکند، بیشترین مقدار $k$ کدام است؟",
+    "options": [
+      "1",
+      "$1.5$",
+      "-1",
+      "$-1.5$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          165,
+          1740,
+          425,
+          2010
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار خطی داده‌شده"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 703,
+    "question_page": 41,
+    "question_text": "با توجه به نمودار $f(x)$، مساحت ناحیه‌ای که نمودار $y=\\frac{1}{a}f(bx)$ با محور $x$ها می‌سازد برابر 8 است. $(a,b>0)$ کدام گزینه درست است؟",
+    "options": [
+      "$ab=\\frac{3}{2}$",
+      "$\\frac{a}{b}=\\frac{2}{3}$",
+      "$\\frac{a}{b}=\\frac{3}{2}$",
+      "$ab=\\frac{2}{3}$"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0041.jpg",
+        "box": [
+          170,
+          1980,
+          455,
+          2260
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار مثلثی تابع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 704,
+    "question_page": 42,
+    "question_text": "با توجه به نمودار تابع $f$، نمودار تابع $y=f(2-|\\frac{x}{3}|)$ به کدام صورت است؟",
+    "options": [
+      "شکل ۱",
+      "شکل ۲",
+      "شکل ۳",
+      "شکل ۴"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0042.jpg",
+        "box": [
+          120,
+          125,
+          460,
+          405
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "نمودار داده‌شده"
+      },
+      {
+        "page_file": "page_0042.jpg",
+        "box": [
+          1000,
+          130,
+          1540,
+          430
+        ],
+        "box_format": "xyxy",
+        "placement": "option_1",
+        "alt": "گزینه ۱"
+      },
+      {
+        "page_file": "page_0042.jpg",
+        "box": [
+          505,
+          140,
+          850,
+          425
+        ],
+        "box_format": "xyxy",
+        "placement": "option_2",
+        "alt": "گزینه ۲"
+      },
+      {
+        "page_file": "page_0042.jpg",
+        "box": [
+          1000,
+          335,
+          1540,
+          620
+        ],
+        "box_format": "xyxy",
+        "placement": "option_3",
+        "alt": "گزینه ۳"
+      },
+      {
+        "page_file": "page_0042.jpg",
+        "box": [
+          505,
+          330,
+          850,
+          610
+        ],
+        "box_format": "xyxy",
+        "placement": "option_4",
+        "alt": "گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  }
+]

@@ -1,0 +1,1953 @@
+{
+  "task_id": "math-solutions-05",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 854,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "در مثلث قائم‌الزاویۀ ABC داریم:\n$\\frac{BC}{AC} = \\sin 15^\\circ \\Rightarrow AC = \\frac{BC}{\\sin 15^\\circ} = \\frac{2}{\\sin 15^\\circ}$\nدر مثلث قائم‌الزاویۀ ACD داریم:\n$\\frac{AC}{AD} = \\cos 15^\\circ \\Rightarrow AD = \\frac{AC}{\\cos 15^\\circ} = \\frac{\\frac{2}{\\sin 15^\\circ}}{\\cos 15^\\circ}$\n$= \\frac{2}{\\sin 15^\\circ \\cos 15^\\circ} = \\frac{2}{\\frac{1}{2} \\sin 30^\\circ} = \\frac{2}{\\frac{1}{4}} = 8$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 855,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "با توجه به شکل داریم:\n$\\triangle ABC : a = x \\sin \\frac{\\pi}{8}$\n$\\triangle CDE : b = y \\cos \\frac{\\pi}{8}$\n$\\Rightarrow ab = xy \\sin \\frac{\\pi}{8} \\cos \\frac{\\pi}{8}$\n$\\Rightarrow ab = \\frac{1}{2} \\sin \\frac{\\pi}{4} xy$\n$\\Rightarrow ab = \\frac{\\sqrt{2}}{4} xy$\nخواهیم داشت:\n$\\triangle ACE : \\begin{cases} x = 8 \\cos \\frac{\\pi}{12} \\\\ y = 8 \\sin \\frac{\\pi}{12} \\end{cases}$\n$\\Rightarrow xy = 64 \\sin \\frac{\\pi}{12} \\cos \\frac{\\pi}{12} = 32 \\sin \\frac{\\pi}{6} = 16$\nبنابراین:\n$ab = \\frac{\\sqrt{2}}{4} \\times 16 = 4\\sqrt{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0081.jpg",
+          "region": [
+            468,
+            350,
+            615,
+            452
+          ],
+          "alt": "Triangle diagram",
+          "placement": "solution_text"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 856,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "دورۀ تناوب تابع $y = \\sin ax$ و $y = \\cos ax$ به صورت $T = \frac{2\\pi}{|a|}$ می‌باشد.\n$y = 1 + 2\\cos 2\\pi x \\Rightarrow T_1 = \\frac{2\\pi}{2\\pi} = 1$\n$y = 2 - 3\\sin \\frac{\\pi}{3} x \\Rightarrow T_2 = \\frac{2\\pi}{\\frac{\\pi}{3}} = 6$\n$\\Rightarrow \\frac{T_1}{T_2} = \\frac{1}{6}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 857,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "ابتدا $|a|$ را به دست می‌آوریم.\n$y = 3 \\sin \\frac{\\pi}{a} x \\Rightarrow T_1 = \\frac{2\\pi}{|\\frac{\\pi}{a}|} = 4 \\Rightarrow |a| = 2$\nخواهیم داشت:\n$y = 1 + \\tan a\\pi x \\Rightarrow T_2 = \\frac{\\pi}{|a\\pi|} = \\frac{1}{|a|} = \\frac{1}{2} = \\frac{1}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 858,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "ابتدا $f(x)$ را ساده می‌کنیم.\n$f(x) = \\sin x \\sin(x + \\frac{\\pi}{2}) = \\sin x \\cos x = \\frac{1}{2} \\sin 2x$\n$\\Rightarrow T = \\frac{2\\pi}{2} = \\pi$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 859,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "ابتدا تابع را ساده می‌کنیم.\n$y = \\tan 3x - \\cot 3x = -2\\cot 6x$\nدورۀ تناوب تابع $y = \tan ax$ و $y = \\cot ax$ به صورت $T = \frac{\\pi}{|a|}$ می‌باشد.\n$\\Rightarrow T = \\frac{\\pi}{6}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 860,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "ابتدا $y$ را ساده می‌کنیم.\n$y = f(x + \\frac{\\pi}{4})f(x - \\frac{\\pi}{4}) = \\cos(2x + \\pi)\\cos(2x - \\frac{\\pi}{2})$\n$= (-\\cos 2x)(\\sin 2x) = -\\frac{1}{2} \\sin 4x \\Rightarrow T = \\frac{2\\pi}{4} = \\frac{\\pi}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 861,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "ابتدا $f(x)$ را ساده می‌کنیم.\n$f(x) = 4\\sin^2 ax = 4(\\frac{1 - \\cos 2ax}{2}) = 2 - 2\\cos 2ax$\n$\\Rightarrow T_1 = \\frac{2\\pi}{|2a|} = \\frac{\\pi}{|a|}$\nدورۀ تناوب $g(x)$ را به دست می‌آوریم.\n$g(x) = \\tan \\frac{3}{4} x \\Rightarrow T_2 = \\frac{\\pi}{\\frac{3}{4}} = \\frac{4\\pi}{3}$\nبنابراین:\n$T_1 = \\frac{1}{2} T_2 \\Rightarrow \\frac{\\pi}{|a|} = \\frac{2\\pi}{3} \\Rightarrow |a| = \\frac{3}{2} \\xrightarrow{a > 0} a = \\frac{3}{2}$\nمی‌توانیم از نکتۀ زیر استفاده کنیم:\n$\\left. \\begin{array}{l} y = \\sin^n ax \\\\ y = \\cos^n ax \\end{array} \\right\\} \\Rightarrow T = \\frac{\\pi}{|a|}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 862,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "دورۀ تناوب $y = \\sin^2 ax$ و $y = \\cos^2 ax$ برابر با $\frac{\\pi}{|a|}$ می‌باشد.\n$f(x) = 5\\sin^2 \\frac{\\pi}{6} x \\Rightarrow T_1 = \\frac{\\pi}{\\frac{\\pi}{6}} = 6$\n$g(x) = \\tan \\frac{2\\pi}{3a} x \\Rightarrow T_2 = \\frac{\\pi}{|\\frac{2\\pi}{3a}|} = \\frac{3|a|}{2}$\nبنابراین:\n$T_1 = T_2 \\Rightarrow \\frac{3|a|}{2} = 6 \\Rightarrow |a| = 4 \\xrightarrow{a > 0} a = 4$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 863,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "دورۀ تناوب $y = f(6ax)$ برابر ۳ است. در تابع $f(\frac{a}{3}x)$ ضریب $x$، نسبت به تابع اول، $\frac{1}{18}$ برابر شده است. در نتیجه دورۀ تناوب آن ۱۸ برابر دورۀ تناوب $y = f(6ax)$ یعنی ۵۴ می‌باشد. (ضریب ۶ در $y = 6 f(\frac{a}{3}x)$ تأثیری در دورۀ تناوب ندارد.)",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 864,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "در تابع $y = a\\sin bx + c$ و $y = a\\cos bx + c$ روابط $\\max = |a| + c$ و $\\min = -|a| + c$ برقرار است:\nبنابراین:\n$f(x) = 5 - 3\\sin \\pi x \\Rightarrow \\begin{cases} \\max = 5 + 3 = 8 \\\\ \\min = 5 - 3 = 2 \\end{cases}$\n$\\Rightarrow \\max + \\min = 10$\n$T = \\frac{2\\pi}{|\\pi|} = 2$\nدر نتیجه:\n$\\frac{10}{2} = 5$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 865,
+      "solution_page": "page_0081.jpg",
+      "solution_text": "در تابع $y = a\\sin bx + c$ و $y = a\\cos bx + c$ روابط زیر برقرار است:\n$|a| = \\frac{\\max - \\min}{2} \\qquad c = \\frac{\\max + \\min}{2} \\qquad T = \\frac{2\\pi}{|b|}$\nبنابراین:\n$|a| = \\frac{4 - (-2)}{2} = 3$\n$c = \\frac{4 - 2}{2} = 1$\n$T = \\frac{2\\pi}{|b|} = \\frac{\\pi}{6} \\Rightarrow |b| = 12$\nدر نتیجه ۳ درست است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 866,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "ابتدا $|a|$ را به دست می‌آوریم.\n$y = 1 + a \\sin(\\frac{a\\pi}{3}x) \\Rightarrow T = \\frac{2\\pi}{|\\frac{a\\pi}{3}|} = 4 \\Rightarrow |a| = \\frac{3}{2}$\nخواهیم داشت:\n$|a| = \\frac{\\max - \\min}{2} = \\frac{3}{2} \\Rightarrow \\max - \\min = 3$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 867,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "دوره تناوب تابع $y = \\frac{a}{2}\\cos 3ax$ برابر $T = \\frac{2\\pi}{|3a|}$ است. می‌دانیم:\n$\\frac{\\max - \\min}{2} = \\frac{|a|}{2} \\Rightarrow \\max - \\min = |a|$\nبنابراین:\n$T \\times (\\max - \\min) = \\frac{2\\pi}{|3a|} \\times |a| = \\frac{2\\pi}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 868,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "با توجه به نمودار، تابع در مبدأ مختصات نزولی بوده و از نقاط $(0, 0)$ و $(\\frac{\\pi}{2}, 3)$ عبور می‌کند.\nدر $1$ تابع از $(\\frac{\\pi}{2}, 3)$ عبور نمی‌کند.\nدر $2$ تابع از $(0, 0)$ عبور نمی‌کند.\nدر $3$ تابع در مبدأ مختصات صعودی است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 869,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "در گزینه‌های $2$ و $3$ ماکزیمم تابع $3$ و مینیمم تابع $-1$ است که با توجه به شکل نادرست است.\nدر $4$ ضریب $\\cos \\frac{\\pi}{2}x$ منفی بوده و تابع در $x = 0$ دارای مینیمم است که با توجه به شکل نادرست است.\nدر $1$ ماکزیمم و مینیمم به ترتیب $1$ و $-3$ بوده و در $x = 0$ دارای ماکزیمم است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 870,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "طول پاره‌خط $AB$ برابر با دوره تناوب تابع است.\n$y = 3 - 3\\sin\\frac{\\pi}{4}x \\Rightarrow T = \\frac{2\\pi}{\\frac{\\pi}{4}} = 8 \\Rightarrow AB = 8$\nارتفاع $MH$ در مثلث $AMB$ برابر ماکزیمم تابع است.\n$\\max = 3 + |-3| = 6 \\Rightarrow MH = 6$\nبنابراین:\n$S_{AMB} = \\frac{AB \\times MH}{2} = \\frac{8 \\times 6}{2} = 24$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 871,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "دوره تناوب تابع با توجه به شکل برابر $4$ است. بنابراین در تابع $y = a \\cos bx + c$ خواهیم داشت:\n$T = \\frac{2\\pi}{|b|} = 4 \\Rightarrow |b| = \\frac{\\pi}{2}$\nماکزیمم تابع $4$ و مینیمم تابع صفر است.\n$|a| = \\frac{\\max - \\min}{2} = \\frac{4 - 0}{2} = 2$\n$c = \\frac{\\max + \\min}{2} = \\frac{4 + 0}{2} = 2$\nتابع در $x = 0$ دارای ماکزیمم بوده و در نتیجه $a$ مثبت و برابر با $2$ است.\n$1$ درست است:\n$\\Rightarrow y = 2\\cos\\frac{\\pi x}{2} + 2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 872,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "فاصله بین $\\alpha$ و $\\beta$ در شکل برابر دوره تناوب است. واضح است که فاصله بین $A$ و $\\beta$ یعنی $\\ell$ برابر $\\frac{3}{4}$ دوره تناوب می‌باشد.\n$y = 3\\cos(2x - \\frac{\\pi}{4}) \\Rightarrow T = \\frac{2\\pi}{2} = \\pi \\Rightarrow \\ell = \\frac{3\\pi}{4}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0082.jpg",
+          "region": [
+            515,
+            795,
+            760,
+            895
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 873,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "برای این‌که شیب خط مذکور بیشترین مقدار باشد، نقاط مورد نظر باید دو نقطه ماکزیمم و مینیمم متوالی باشند. فاصله بین طول‌های این دو نقطه برابر نصف دوره تناوب و فاصله بین عرض‌های آن‌ها برابر اختلاف ماکزیمم و مینیمم تابع است.\n$y = 3\\sin\\frac{\\pi}{4}x$\n$T = \\frac{2\\pi}{\\frac{\\pi}{4}} = 8 \\Rightarrow \\frac{1}{2}T = 4$\n$\\max - \\min = 2 \\times 3 = 6$\n$m_{AB} = \\frac{6}{4} = \\frac{3}{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0082.jpg",
+          "region": [
+            100,
+            115,
+            410,
+            205
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 874,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "روش اول: اگر $\\frac{\\pi}{6} + 4x = \\alpha$ باشد، آن‌گاه:\n$0 < x < k \\Rightarrow \\frac{\\pi}{6} < 4x + \\frac{\\pi}{6} < 4k + \\frac{\\pi}{6} \\Rightarrow \\frac{\\pi}{6} < \\alpha < 4k + \\frac{\\pi}{6}$\nمی‌دانیم تابع $y = \\cos \\alpha$ در بازه $(\\frac{\\pi}{6}, \\pi)$ نزولی و در نتیجه تابع $f(x) = 3 - \\cos\\alpha$ در این بازه صعودی است. بنابراین حداکثر مقدار $\\alpha$ برابر $\\pi$ می‌باشد.\n$4k + \\frac{\\pi}{6} = \\pi \\Rightarrow k = \\frac{5\\pi}{24}$\nروش دوم: رسم شکل:\nنمودار تابع $y = 3 - \\cos(4x + \\frac{\\pi}{6})$ به صورت مقابل است. بدیهی است تابع در فاصله $(0, \\frac{5\\pi}{24})$ صعودی است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0082.jpg",
+          "region": [
+            100,
+            435,
+            245,
+            525
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 875,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "فاصله طول‌های دو نقطه $A$ و $B$ برابر دوره تناوب تابع است.\n$y = a\\cos\\frac{\\pi}{2}x \\Rightarrow T = \\frac{2\\pi}{\\frac{\\pi}{2}} = 4 \\Rightarrow AB = 4$\nطول نقطه $B$ برابر $4$ است $\\Rightarrow$ تابع در $x = 0$ دارای ماکزیمم است. در نتیجه $a$ مثبت است. ماکزیمم تابع برابر $a$ و مینیمم برابر $-a$ است. بنابراین:\n$A(0, a) \\quad B(4, a) \\quad C(2, -a)$\n(نقطه $C$ مینیمم بوده و طول آن وسط طول دو نقطه ماکزیمم متوالی است.)\n$m_{AC} \\times m_{BC} = -1 \\Rightarrow (-a)(a) = -1 \\Rightarrow a^2 = 1 \\xrightarrow{a > 0} a = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 876,
+      "solution_page": "page_0082.jpg",
+      "solution_text": "حداقل مساحت مثلث زمانی است که نقاط $A$ و $B$، دو نقطه ماکزیمم متوالی باشند. طول ضلع $AB$ برابر دوره تناوب و ارتفاع $CH$ برابر اختلاف ماکزیمم و مینیمم تابع است.\n$AB = T = \\frac{2\\pi}{|a|}$\n$CH = \\max - \\min = 2|a|$\n$\\Rightarrow S = \\frac{AB \\times CH}{2} = \\frac{\\frac{2\\pi}{|a|} \\times 2|a|}{2} = 2\\pi$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0082.jpg",
+          "region": [
+            100,
+            755,
+            290,
+            865
+          ],
+          "placement": "solution",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 877,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "$AC$ برابر با نصف دورهٔ تناوب است.\n$y = a \\cos a\\pi x$\n$T = \\frac{2\\pi}{|a\\pi|} = \\frac{2}{|a|} \\Rightarrow AC = \\frac{1}{|a|} \\xrightarrow{a<0} AC = -\\frac{1}{a}$\n(تابع در $x=0$ مینیمم دارد بنابراین $a$ منفی است.)\nدر نتیجه مختصات نقاط $A$ و $C$ به دست می‌آید.\n$A(\\frac{1}{2a}, 0), C(-\\frac{1}{2a}, 0)$\nمختصات نقطهٔ $B$ به صورت $(0, a)$ می‌باشد. بدیهی است مثلث $ABC$ متساوی‌الساقین است. برای این‌که متساوی‌الاضلاع باشد کافی است $AB=AC$:\n$AB = AC \\Rightarrow \\sqrt{\\frac{1}{4a^2} + a^2} = -\\frac{1}{a} \\Rightarrow \\frac{1}{4a^2} + a^2 = \\frac{1}{a^2}$\n$\\Rightarrow a^2 = \\frac{3}{4a^2} \\Rightarrow a^4 = \\frac{3}{4} \\Rightarrow a = -\\sqrt[4]{\\frac{3}{4}}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 878,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "با توجه به نمودار دورهٔ تناوب تابع برابر $\\frac{\\pi}{2}$ و مینیمم تابع $-3$ است.\n$T = \\frac{2\\pi}{|b|} = \\frac{\\pi}{2} \\Rightarrow |b| = 4$\n$\\min = -1 - |a| = -3 \\Rightarrow |a| = 2 \\Rightarrow |\\frac{a}{b}| = \\frac{2}{4} = \\frac{1}{2}$\nتابع در $x=0$ نزولی و در نتیجه $ab < 0$ است، بنابراین:\n$\\frac{a}{b} = -\\frac{1}{2}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 879,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "با توجه به نمودار، فاصلهٔ بین $x=0$ تا $x=3$، $\\frac{3}{4}$ دورهٔ تناوب است:\n$y = a \\sin b\\pi x + 1$\n$\\frac{3}{4}T = 3 \\Rightarrow T = 4 \\Rightarrow \\frac{2\\pi}{|b\\pi|} = 4 \\Rightarrow |b| = \\frac{1}{2}$\nماکزیمم تابع برابر $3$ می‌باشد.\n$\\max = |a| + 1 = 3 \\Rightarrow |a| = 2 \\Rightarrow |ab| = 1$\nتابع در $x=0$ نزولی بوده و در نتیجه $ab < 0$ است. بنابراین: $ab = -1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 880,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "با توجه به نمودار دورهٔ تناوب تابع $6$ و ماکزیمم آن $3$ است.\n$y = a - \\cos b\\pi x$\n$T = \\frac{2\\pi}{|b\\pi|} = 6 \\Rightarrow |b| = \\frac{1}{3}$\n$\\max = a + 1 = 3 \\Rightarrow a = 2$\n($b$ می‌تواند $\\frac{1}{3}$ یا $-\\frac{1}{3}$ باشد و تفاوتی ایجاد نمی‌شود.)\n$\\Rightarrow y = 2 - \\cos \\frac{\\pi}{3} x \\xrightarrow{x=\\frac{17}{2}} y = 2 - \\cos \\frac{17\\pi}{6}$\n$= 2 - \\cos \\frac{5\\pi}{6} = 2 + \\frac{\\sqrt{3}}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 881,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "فاصلهٔ بین طول‌های دو نقطهٔ ماکزیمم و مینیمم متوالی نصف دورهٔ تناوب است.\n$y = 2 + a \\cos b\\pi x$\n$\\frac{T}{2} = 2 \\Rightarrow T = 4$\n$\\min = -1 \\Rightarrow 2 - |a| = -1 \\Rightarrow |a| = 3$\n$\\max = 2 + |a| = 2 + 3 = 5$\nبنابراین:\n$\\frac{\\max}{T} = \\frac{5}{4} = 1/25$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 882,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "نمودار در دو دورهٔ تناوب رسم شده است، بنابراین:\n$2T = \\frac{4}{5} \\Rightarrow T = \\frac{2}{5}$\n$y = 1 + a \\sin b\\pi x \\Rightarrow T = \\frac{2\\pi}{|b\\pi|} = \\frac{2}{5} \\Rightarrow |b| = 5$\n$\\min = -2 \\Rightarrow 1 - |a| = -2 \\Rightarrow |a| = 3$\nتابع در $x=0$ صعودی بوده و $ab > 0$ می‌باشد.\n$\\Rightarrow \\begin{cases} a=3, b=5 \\\\ a=-3, b=-5 \\end{cases} \\Rightarrow \\begin{cases} a+b=8\\ \\checkmark \\\\ a+b=-8 \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 883,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "مینیمم تابع $-6$ و ماکزیمم آن صفر است.\n$f(x) = a + b \\sin \\frac{\\pi}{3} x$\n$a = \\frac{\\max + \\min}{2} = \\frac{0 - 6}{2} = -3$\n$|b| = \\frac{\\max - \\min}{2} = \\frac{0 + 6}{2} = 3$\nتابع در $x=0$ نزولی بوده و $b < 0$ است. بنابراین $b=-3$ می‌باشد.\nدر نتیجه:\n$f(x) = -3 - 3 \\sin \\frac{\\pi}{3} x \\Rightarrow f(\\frac{9}{2}) = -3 - 3 \\sin \\frac{3\\pi}{2}$\n$= -3 + 3 = 0$\n■ دورهٔ تناوب تابع $6$ می‌باشد. با توجه به نمودار طول نقطهٔ ماکزیمم $(\\frac{3}{4}T)$ برابر $\\frac{9}{2}$ و در نتیجه $f(\\frac{9}{2}) = 0$ است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 884,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "از $x=0$ تا $x=\\frac{10}{3}$، $\\frac{3}{2}$ دورهٔ تناوب است.\n$\\frac{3}{2}T = 5 \\Rightarrow T = \\frac{10}{3}$\n$f(x) = a \\cos b\\pi x - 2 \\Rightarrow T = \\frac{2\\pi}{|b\\pi|} = \\frac{10}{3} \\Rightarrow |b| = \\frac{3}{5}$\n$\\max = 2 \\Rightarrow -2 + |a| = 2 \\Rightarrow |a| = 4$\nتابع در $x=0$ دارای ماکزیمم بوده و $a > 0$ است. بنابراین $a = 4$ و $b = \\pm\\frac{3}{5}$ است.\n$\\Rightarrow \\begin{cases} a+b = 4 + \\frac{3}{5} = 4/6 \\\\ a+b = 4 - \\frac{3}{5} = 3/4 \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 885,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "با توجه به نمودار دورهٔ تناوب برابر $\\frac{13\\pi}{18} - \\frac{\\pi}{18} = \\frac{2\\pi}{3}$ و ماکزیمم تابع $\\frac{3}{2}$ است.\n$y = a - 3 \\sin bx$\n$T = \\frac{2\\pi}{|b|} = \\frac{2\\pi}{3} \\Rightarrow |b| = 3 \\xrightarrow{b < 0} b = -3$\n(تابع در $x=0$ صعودی و $-3b$ مثبت است.)\n$\\max = a + |-3| = \\frac{3}{2} \\Rightarrow a = -\\frac{3}{2}$\nدر نتیجه:\n$2ab = 2(-\\frac{3}{2})(-3) = 9$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 886,
+      "solution_page": "page_0083.jpg",
+      "solution_text": "با توجه به نمودار دورهٔ تناوب $\\frac{2\\pi}{3}$، ماکزیمم $3$ و مینیمم $-1$ است.\n$y = a \\sin bx + c$\n$T = \\frac{2\\pi}{|b|} = \\frac{2\\pi}{3} \\Rightarrow |b| = 3$\n$|a| = \\frac{\\max - \\min}{2} = \\frac{3+1}{2} = 2$\n$c = \\frac{\\max + \\min}{2} = \\frac{3-1}{2} = 1$\nتابع در $x=۰$ نزولی بوده و $ab < ۰$ است بنابراین:\n$|ab| = ۶ \\Rightarrow ab = -۶$\n$ab - c = -۶ - ۱ = -۷$\nدر نتیجه:",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 887,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "دورهٔ تناوب تابع $۶$، مینیمم آن $-۲$ و $f(۰) = ۲$ می‌باشد.\nابتدا ضابطهٔ تابع را ساده می‌کنیم.\n$f(x) = a\\cos\\pi(bx+\\frac{۱}{۲}) + c = a\\cos(b\\pi x + \\frac{\\pi}{۲}) + c$\n$= -a\\sin b\\pi x + c$\n$T = \\frac{۲\\pi}{|b\\pi|} = \\frac{۲}{|b|} = ۶ \\Rightarrow |b| = \\frac{۱}{۳}$\n$f(۰) = ۲ \\Rightarrow c = ۲$\n$\\min = c - |-a| = -۲ \\Rightarrow ۲ - |a| = -۲ \\Rightarrow |a| = ۴$\nتابع در $x=۰$ نزولی بوده و $ab < ۰$ است.\n$|ab| = \\frac{۴}{۳} \\Rightarrow ab = -\\frac{۴}{۳} \\Rightarrow abc = -\\frac{۸}{۳}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 888,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "دورهٔ تناوب تابع برابر $b$ و مینیمم آن برابر صفر است.\n$f(x) = a + b\\cos \\frac{۲\\pi}{۹}ax$\n$T = \\frac{۲\\pi}{\\frac{۲\\pi}{۹}|a|} = b \\Rightarrow |a|b = ۹$\n$\\min = a - |b| = ۰ \\Rightarrow a = |b| \\xrightarrow{b > ۰} a = b$\n$\\Rightarrow a = b = ۳$\nبنابراین:\n$f(x) = ۳ + ۳\\cos \\frac{۲\\pi}{۳}x \\Rightarrow f(a) = f(۳) = ۳ + ۳\\cos ۲\\pi = ۶$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 889,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "اگر دورهٔ تناوب $T$ باشد، طول نقاط $B$ ،$A$ و $C$ به ترتیب $\\frac{T}{۴}$، $\\frac{T}{۲}$ و $\\frac{۵T}{۴}$ است.\nتابع در $x=۰$ صعودی و $a > ۰$ است.\n$T = \\frac{۲\\pi}{۲\\pi} = ۱ , \\max = |a| = a$\n$\\Rightarrow A(\\frac{۱}{۴}, a) \\quad B(\\frac{۱}{۲}, ۰) \\quad C(\\frac{۵}{۴}, a)$\nبنابراین:\n$m_{AB} \\times m_{BC} = -۱ \\Rightarrow \\frac{a}{\\frac{۱}{۴} - \\frac{۱}{۲}} \\times \\frac{a}{\\frac{۵}{۴} - \\frac{۱}{۲}} = -۱$\n$\\Rightarrow a^۲ = \\frac{۳}{۱۶} \\xrightarrow{a > ۰} a = \\frac{\\sqrt{۳}}{۴}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            445,
+            521,
+            520,
+            694
+          ],
+          "placement": "solution_text",
+          "filename": "page_0084.jpg",
+          "alt": "نمودار تابع مثلثاتی با نقاط A، B، C"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 890,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "دورهٔ تناوب تابع $y = ۱ + ۲\\cos \\pi x$ برابر $T = \\frac{۲\\pi}{\\pi} = ۲$ است. بنابراین طول نقاط $A$ و $B$ به ترتیب صفر و ۲ می‌باشد. $(AB = ۲)$\nماکزیمم تابع برابر $۱ + ۲ = ۳$ بوده و در نتیجه عرض نقاط $A$ و $B$ برابر ۳ است (ارتفاع ذوزنقه $h = ۳$ است). عرض نقاط $C$ و $D$ صفر است.\n$۱ + ۲\\cos \\pi x = ۰ \\Rightarrow \\cos \\pi x = -\\frac{۱}{۲}$\n$\\Rightarrow \\begin{cases} \\pi x = \\frac{۲\\pi}{۳} \\Rightarrow x = \\frac{۲}{۳} \\\\ \\pi x = \\frac{۴\\pi}{۳} \\Rightarrow x = \\frac{۴}{۳} \\end{cases}$\nطول نقاط $C$ و $D$ به ترتیب $\\frac{۲}{۳}$ و $\\frac{۴}{۳}$ بوده و $CD = \\frac{۲}{۳}$ است.\n$S_{ABCD} = \\frac{AB + CD}{۲} \\times h = \\frac{۲ + \\frac{۲}{۳}}{۲} \\times ۳ = ۴$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 891,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "اگر دورهٔ تناوب برابر $T$ باشد، $T = \\frac{۲\\pi}{۳}$ است. ماکزیمم تابع ۳ می‌باشد. ضابطهٔ تابع را ساده می‌کنیم.\n$f(x) = a\\sin bx \\cos bx = \\frac{a}{۲}\\sin ۲bx$\n$T = \\frac{۲\\pi}{|۲b|} = \\frac{۲\\pi}{۳} \\Rightarrow |b| = \\frac{۳}{۲}$\n$\\max = |\\frac{a}{۲}| = ۳ \\Rightarrow |a| = ۶$\nتابع در $x=۰$ نزولی و $ab < ۰$ است.\n$|\\frac{a}{b}| = \\frac{۶}{\\frac{۳}{۲}} = ۴ \\Rightarrow -\\frac{a}{b} = ۴ \\Rightarrow \\frac{a}{b} = -۴$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 892,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "ضابطهٔ تابع به صورت $y = ۲\\sin^۲ x - ۱ = -\\cos ۲x$ است.\nدورهٔ تناوب تابع $T = \\frac{۲\\pi}{۲} = \\pi$ بوده و در نتیجه $OB = \\pi$ است.\nماکزیمم تابع برابر $۱ + ۱ = ۲$ بوده و در نتیجه $y_A = ۲$ می‌باشد.\n$S_{OAB} = \\frac{۱}{۲} \\times OB \\times y_A = \\frac{۱}{۲} \\times \\pi \\times ۲ = \\pi$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 893,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "ضابطهٔ تابع را ساده می‌کنیم.\n$y = a + b\\sin^۲ x = a + b(\\frac{۱ - \\cos ۲x}{۲}) = -\\frac{b}{۲}\\cos ۲x + a + \\frac{b}{۲}$\nماکزیمم تابع ۲ و مینیمم آن ۱- است. تابع در $x=۰$ دارای ماکزیمم بوده و $-\\frac{b}{۲} > ۰$ و در نتیجه $b < ۰$ است.\n$\\max = |\\frac{b}{۲}| + a + \\frac{b}{۲} = ۲ \\Rightarrow -\\frac{b}{۲} + a + \\frac{b}{۲} = ۲ \\Rightarrow a = ۲$\n$\\min = -|\\frac{b}{۲}| + a + \\frac{b}{۲} = -۱ \\Rightarrow a + b = -۱$\n$\\Rightarrow ۲ + b = -۱ \\Rightarrow b = -۳ \\Rightarrow a - b = ۵$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 894,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "$\\sin x$ در بازهٔ $[\\pi, ۲\\pi]$ منفی بوده و در نتیجه $y = |\\sin x| = -\\sin x$ است. در بین گزینه‌ها تابع $y = \\cos(\\frac{\\pi}{۲} + x)$ با $y = -\\sin x$ برابر است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 895,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "نمودار تابع $f(x) = \\cos(x + \\frac{\\pi}{۶})$ را رسم می‌کنیم.\nمشخص است اگر نمودار $y = \\sin x$ را $\\frac{۲\\pi}{۳}$ به سمت چپ منتقل کنیم، بر نمودار فوق منطبق خواهد شد. بنابراین $y = \\sin(x + \\frac{۲\\pi}{۳})$ بر نمودار $f(x)$ منطبق است. بنابراین تابع $g(x) = \\sin(x + \\theta)$ زمانی بر $f(x)$ منطبق است که $\\theta = \\frac{۲\\pi}{۳}$ و یا $\\theta = ۲k\\pi + \\frac{۲\\pi}{۳}$ باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            597,
+            107,
+            659,
+            321
+          ],
+          "placement": "solution_text",
+          "filename": "page_0084.jpg",
+          "alt": "نمودار تابع مثلثاتی کسینوس با انتقال"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 896,
+      "solution_page": "page_0084.jpg",
+      "solution_text": "بدیهی است دورهٔ تناوب توابع $f(x)$ و $g(x)$ برابر است، بنابراین اگر $a$ مثبت باشد، $a = ۳$ است.\nمی‌دانیم $\\sin(۳x - \\pi) = -\\sin ۳x = \\cos(۳x + \\frac{\\pi}{۲})$ است. بنابراین برای این‌که $g(x) = \\cos(۳x + b)$ بر $f(x) = \\sin(۳x - \\pi)$ منطبق باشد، کافی است $b = \\frac{\\pi}{۲}$ و یا $b = ۲k\\pi + \\frac{\\pi}{۲}$ باشد. در نتیجه $b$ می‌تواند $\\frac{\\pi}{۲} - ۲\\pi = -\\frac{۳\\pi}{۲}$ باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 897,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "در تابع $y = a + 2 \\sin (bx - \\frac{\\pi}{3})$، $-\\frac{\\pi}{3} < \\frac{\\pi}{2}$ بوده و ویژگی‌های آن با $y = a + 2 \\sin bx$ یکسان است. دوره تناوب تابع $\\pi$ و مینیمم آن $-1$ است. تابع در $x = 0$ نزولی بوده و $b < 0$ می‌باشد.\n$T = \\frac{2 \\pi}{|b|} = \\pi \\Rightarrow |b| = 2 \\xrightarrow{b < 0} b = -2$\n$\\min = a - 2 = -1 \\Rightarrow a = 1 \\Rightarrow a - b = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 898,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "در تابع $f(x) = a - b \\sin(x + \\frac{\\pi}{6})$، $\\frac{\\pi}{6} < \\frac{\\pi}{2}$ بوده و ویژگی‌های آن با $y = a - b \\sin x$ یکسان است. $f(\\pi) = f(-\\pi) = 0$ و ماکزیمم تابع $2$ است. تابع در $x = 0$ صعودی بوده و $-b > 0$ و در نتیجه $b < 0$ است.\n$f(\\pi) = a - b \\sin \\frac{7\\pi}{6} = 0 \\Rightarrow a + \\frac{b}{2} = 0 \\Rightarrow b = -2a$\n$\\max = a + |b| = 2 \\xrightarrow{b < 0} a - b = 2$\n$\\xrightarrow{b = -2a} 3a = 2 \\Rightarrow a = \\frac{2}{3} \\Rightarrow b = -\\frac{4}{3}$\n$\\Rightarrow f(x) = \\frac{2}{3} + \\frac{4}{3} \\sin(x + \\frac{\\pi}{6})$\nواضح است طول نقطه ماکزیمم $x = \\frac{\\pi}{3}$ (سینوس برابر ۱ باشد) و طول نقطه مینیمم $x = -\\frac{2\\pi}{3}$ (سینوس برابر -۱ باشد) است. مینیمم تابع نیز $\\frac{2}{3} - \\frac{4}{3} = -\\frac{2}{3}$ می‌باشد.\n$A(\\frac{\\pi}{3}, 2) , B(-\\frac{2\\pi}{3}, -\\frac{2}{3}) \\Rightarrow m_{AB} = \\frac{2 + \\frac{2}{3}}{\\frac{\\pi}{3} + \\frac{2\\pi}{3}} = \\frac{\\frac{8}{3}}{\\pi} = \\frac{8}{3\\pi}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 899,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "تابع از مبدأ مختصات عبور می‌کند.\n$f(x) = 1 + a \\cos(bx - \\frac{\\pi}{3})$\n$f(0) = 0 \\Rightarrow 1 + a \\cos(-\\frac{\\pi}{3}) = 0 \\Rightarrow 1 + \\frac{a}{2} = 0 \\Rightarrow a = -2$\nدر تابع $y = a \\cos(bx + \\theta) + c$ اگر در سمت راست محور $y$ها اول ماکزیمم داشته باشیم با فرض این‌که $b$ مثبت باشد $a\\theta < 0$ و با فرض این‌که $b$ منفی باشد $a\\theta > 0$ است.\nدر این تابع در سمت راست محور $y$ها اول ماکزیمم داریم و $a\\theta > 0$ است. بنابراین $b < 0$ می‌باشد.\nتابع $f(x)$ در نقاطی صفر می‌شود که $\\cos(bx - \\frac{\\pi}{3})$ برابر $\\frac{1}{2}$ باشد. اولین نقطه در نمودار $x = 0$ بود که $\\cos(-\\frac{\\pi}{3}) = \\frac{1}{2}$ بود. در سایر ریشه‌های نمودار $x$ مثبت و $b$ منفی است. بنابراین $bx - \\frac{\\pi}{3}$ به ترتیب $\\frac{5\\pi}{3}$، $\\frac{7\\pi}{3}$، $\\frac{11\\pi}{3}$ و ... می‌باشد. یعنی در آخرین ریشه که $x = \\frac{5\\pi}{3}$ است، $bx - \\frac{\\pi}{3} = -\\frac{11\\pi}{3}$ می‌باشد:\n$\\frac{5\\pi}{3} b - \\frac{\\pi}{3} = -\\frac{11\\pi}{3} \\Rightarrow b = -2$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 900,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "$y = \\sin^6 x + \\cos^6 x = 1 - \\frac{3}{4} \\sin^2 2x = 1 - \\frac{3}{4}(\\frac{1 - \\cos 4x}{2})$\n$= \\frac{5}{8} + \\frac{3}{8} \\cos 4x$\n$T = \\frac{2\\pi}{4} = \\frac{\\pi}{2} \\,,\\, \\max = \\frac{5}{8} + \\frac{3}{8} = 1 \\,,\\, \\min = \\frac{5}{8} - \\frac{3}{8} = \\frac{1}{4}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 901,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "طول نقطه $B$ برابر $T = \\frac{3\\pi}{4}$ است.\n$\\begin{cases} A(0, 1) \\\\ B(\\frac{3\\pi}{4}, \\frac{1}{4}) \\end{cases} \\Rightarrow m_{AB} = \\frac{1 - \\frac{1}{4}}{0 - \\frac{3\\pi}{4}} = \\frac{\\frac{3}{4}}{-\\frac{3\\pi}{4}} = -\\frac{1}{\\pi}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 902,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "اگر $\\frac{\\pi}{8} < \\theta < \\frac{3\\pi}{8}$ باشد، آن‌گاه $\\frac{\\pi}{4} < 2\\theta < \\frac{3\\pi}{4}$ بوده و با توجه به دایره مثلثاتی $\\tan 2\\theta > 1$ یا $\\tan 2\\theta < -1$ است.\nبنابراین:\n$|\\tan 2\\theta| > 1 \\Rightarrow \\frac{1}{|3m - 1|} > 1 \\xrightarrow{m \\neq \\frac{1}{3}} |3m - 1| < 1$\n$\\Rightarrow -1 < 3m - 1 < 1 \\Rightarrow 0 < 3m < 2 \\Rightarrow 0 < m < \\frac{2}{3}$\n$\\xrightarrow{m \\neq \\frac{1}{3}} m \\in (0, \\frac{2}{3}) - \\{\\frac{1}{3}\\}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            38,
+            169,
+            146,
+            240
+          ],
+          "placement": "stem",
+          "filename": "page_0085.jpg",
+          "alt": "دایره مثلثاتی و زاویه 2theta"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 903,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "تابع $y = \\tan(g(x))$ در نقاطی که $g(x) = k\\pi + \\frac{\\pi}{2}$ $(k \\in \\mathbb{Z})$ باشد، تعریف نشده است.\n$f(x) = \\tan \\frac{3x}{4} \\Rightarrow \\frac{3x}{4} = k\\pi + \\frac{\\pi}{2} \\Rightarrow x = \\frac{4k\\pi}{3} + \\frac{2\\pi}{3}$\nاگر $k = 0$ باشد، $x = \\frac{2\\pi}{3}$ است. به ازای بقیه مقادیر صحیح $k$، $x$ در بازه $(0, 2\\pi)$ قرار نمی‌گیرد. بنابراین تنها به ازای $x = \\frac{2\\pi}{3}$ تابع $f(x)$ در بازه $(0, 2\\pi)$ تعریف نشده است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 904,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "ضابطه $f(x)$ را ساده می‌کنیم.\n$f(x) = 2 - \\tan(\\pi - \\frac{2}{3}x) = 2 + \\tan \\frac{2}{3}x$\nتابع $y = \\tan x$ در بازه $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ اکیداً یکنواست بنابراین تابع $y = \\tan \\frac{2}{3}x$ در بازه $(-\\frac{3\\pi}{4}, \\frac{3\\pi}{4})$ اکیداً یکنواست، در نتیجه کم‌ترین مقدار $k$ برابر $\\frac{3\\pi}{4}$ است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 905,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "ضابطه تابع $f(x)$ را ساده می‌کنیم.\n$f(x) = \\cot(\\frac{3\\pi}{2} + \\pi ax) = -\\tan(a\\pi x)$\nنمودار تابع در $x = 0$ اکیداً نزولی بوده و $-a < 0$ و در نتیجه $a > 0$ است. با توجه به نمودار دوره تناوب تابع ۶ می‌باشد.\n$T = \\frac{\\pi}{|a\\pi|} = 6 \\Rightarrow |a| = \\frac{1}{6} \\xrightarrow{a > 0} a = \\frac{1}{6}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 906,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "با توجه به نمودار، $f(0) = -1$ است.\n$f(x) = a + \\tan(\\frac{\\pi}{4} + bx)$\n$\\Rightarrow f(0) = a + \\tan \\frac{\\pi}{4} = -1 \\Rightarrow a = -2$\nتابع در $x = 0$ صعودی بوده و $b > 0$ می‌باشد. هم‌چنین $f(x)$ در $x = \\frac{\\pi}{3}$ تعریف نشده است:\n$\\frac{\\pi}{4} + b(\\frac{\\pi}{3}) = \\frac{\\pi}{2} \\Rightarrow b = \\frac{3}{4} \\Rightarrow a - b = -2 - \\frac{3}{4} = -\\frac{11}{4}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 907,
+      "solution_page": "page_0085.jpg",
+      "solution_text": "نمودار $\\tan x$، $\\frac{\\pi}{3}$ به سمت چپ رفته، طول نقاط نصف شده و نسبت به محور $y$ها تقارن یافته است بنابراین در بازه $(-\\frac{5\\pi}{12}, -\\frac{\\pi}{12})$ اکیداً نزولی است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 908,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "جواب‌های کلی معادله را به دست می‌آوریم.\n$2\\sin 2x = -1 \\Rightarrow \\sin 2x = -\\frac{1}{2}$\n$\\Rightarrow \\begin{cases} 2x = 2k\\pi - \\frac{\\pi}{6} \\\\ 2x = 2k\\pi + \\pi + \\frac{\\pi}{6} \\end{cases} \\Rightarrow \\begin{cases} x = k\\pi - \\frac{\\pi}{12} \\\\ x = k\\pi + \\frac{7\\pi}{12} \\end{cases}$\n$\\Rightarrow \\begin{cases} x = \\frac{11\\pi}{12}, \\frac{23\\pi}{12} \\\\ x = \\frac{7\\pi}{12}, \\frac{19\\pi}{12} \\end{cases} \\Rightarrow \\frac{23\\pi}{12} - \\frac{7\\pi}{12} = \\frac{16\\pi}{12} = \\frac{4\\pi}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 909,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "روش اول:\n$4\\cos^2 x = 1 \\Rightarrow \\cos^2 x = \\frac{1}{4} \\Rightarrow \\begin{cases} \\cos x = \\frac{1}{2} \\\\ \\cos x = -\\frac{1}{2} \\end{cases}$\n$\\Rightarrow \\begin{cases} x = 2k\\pi \\pm \\frac{\\pi}{3} \\\\ x = 2k\\pi \\pm \\frac{2\\pi}{3} \\end{cases} \\Rightarrow \\begin{cases} x = \\frac{\\pi}{3}, \\frac{5\\pi}{3} \\\\ x = \\frac{2\\pi}{3}, \\frac{4\\pi}{3} \\end{cases}$\n$+ \\longrightarrow \\frac{\\pi}{3} + \\frac{5\\pi}{3} + \\frac{2\\pi}{3} + \\frac{4\\pi}{3} = 4\\pi$\n\nروش دوم:\n$4\\cos^2 x = 1 \\Rightarrow 2(1 + \\cos 2x) = 1 \\Rightarrow \\cos 2x = -\\frac{1}{2}$\n$\\Rightarrow 2x = 2k\\pi \\pm \\frac{2\\pi}{3} \\Rightarrow x = k\\pi \\pm \\frac{\\pi}{3} \\Rightarrow x = \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 910,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "$x = \\frac{5\\pi}{12}$ جواب معادله است.\n$k\\cos 2x + \\sqrt{3} = 0 \\xrightarrow{x = \\frac{5\\pi}{12}} k\\cos\\frac{5\\pi}{6} + \\sqrt{3} = 0$\n$\\Rightarrow \\frac{-\\sqrt{3}}{2}k = -\\sqrt{3} \\Rightarrow k = 2$\nخواهیم داشت:\n$2\\cos 2x + \\sqrt{3} = 0 \\Rightarrow \\cos 2x = -\\frac{\\sqrt{3}}{2}$\n$\\Rightarrow 2x = 2k\\pi \\pm \\frac{5\\pi}{6} \\Rightarrow x = k\\pi \\pm \\frac{5\\pi}{12}$\n$\\Rightarrow x = \\frac{5\\pi}{12}, \\frac{7\\pi}{12}, \\frac{17\\pi}{12}, \\frac{19\\pi}{12}$\nبزرگ‌ترین جواب در بازه $[0, 2\\pi)$ برابر $\\frac{19\\pi}{12}$ است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 911,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "معادله را ساده می‌کنیم.\n$\\sin(x + \\frac{\\pi}{4})\\cos(x + \\frac{\\pi}{4}) = \\frac{1}{2} \\Rightarrow \\frac{1}{2}\\sin(2x + \\frac{2\\pi}{4}) = \\frac{1}{2}$\n$\\Rightarrow \\sin(2x + \\frac{\\pi}{2}) = 1 \\Rightarrow 2x + \\frac{\\pi}{2} = 2k\\pi + \\frac{\\pi}{2} \\Rightarrow x = k\\pi$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 912,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "اگر $\\alpha = x - \\frac{\\pi}{3}$ باشد، آن‌گاه $x + \\frac{\\pi}{6} = \\alpha + \\frac{\\pi}{2}$ است.\n$\\sin(x + \\frac{\\pi}{6}) + \\cos(x - \\frac{\\pi}{3}) = 1 \\Rightarrow \\sin(\\frac{\\pi}{2} + \\alpha) + \\cos\\alpha = 1$\n$\\Rightarrow 2\\cos\\alpha = 1 \\Rightarrow \\cos\\alpha = \\frac{1}{2} \\Rightarrow \\alpha = 2k\\pi \\pm \\frac{\\pi}{3}$\n$\\Rightarrow x - \\frac{\\pi}{3} = 2k\\pi \\pm \\frac{\\pi}{3} \\Rightarrow \\begin{cases} x = 2k\\pi \\Rightarrow x = 0, 2\\pi \\\\ x = 2k\\pi + \\frac{2\\pi}{3} \\Rightarrow x = \\frac{2\\pi}{3} \\end{cases}$\nبنابراین: $0 + 2\\pi + \\frac{2\\pi}{3} = \\frac{8\\pi}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 913,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "اگر $\\alpha = x - \\frac{\\pi}{4}$ باشد، آن‌گاه $x + \\frac{\\pi}{4} = \\alpha + \\frac{\\pi}{2}$ است.\n$\\cos(x - \\frac{\\pi}{4})\\cos(x + \\frac{\\pi}{4}) = -\\frac{1}{4}$\n$\\Rightarrow \\cos\\alpha \\cos(\\frac{\\pi}{2} + \\alpha) = -\\frac{1}{4} \\Rightarrow -\\cos\\alpha \\sin\\alpha = -\\frac{1}{4}$\n$\\Rightarrow \\frac{1}{2}\\sin 2\\alpha = \\frac{1}{4} \\Rightarrow \\sin 2\\alpha = \\frac{1}{2} \\Rightarrow \\begin{cases} 2\\alpha = 2k\\pi + \\frac{\\pi}{6} \\\\ 2\\alpha = 2k\\pi + \\frac{5\\pi}{6} \\end{cases}$\n$\\Rightarrow \\begin{cases} \\alpha = k\\pi + \\frac{\\pi}{12} \\\\ \\alpha = k\\pi + \\frac{5\\pi}{12} \\end{cases} \\Rightarrow \\begin{cases} x = k\\pi + \\frac{\\pi}{3} \\\\ x = k\\pi + \\frac{2\\pi}{3} \\end{cases} \\xrightarrow{\\cup} x = k\\pi \\pm \\frac{\\pi}{3}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 914,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "می‌دانیم $\\sin(-x) = -\\sin x$ است.\n$\\sin 3x + \\sin x = 0 \\Rightarrow \\sin 3x = -\\sin x$\n$\\Rightarrow \\sin 3x = \\sin(-x) \\Rightarrow \\begin{cases} 3x = 2k\\pi - x \\\\ 3x = 2k\\pi + \\pi + x \\end{cases}$\n$\\Rightarrow \\begin{cases} x = \\frac{k\\pi}{2} \\\\ x = k\\pi + \\frac{\\pi}{2} \\end{cases} \\xrightarrow{\\cup} x = \\frac{k\\pi}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 915,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "می‌دانیم $\\cos(x + \\pi) = -\\cos x$ است.\n$\\cos 2x + \\cos x = 0 \\Rightarrow \\cos 2x = -\\cos x$\n$\\Rightarrow \\cos 2x = \\cos(x + \\pi) \\Rightarrow 2x = 2k\\pi \\pm (x + \\pi)$\n$\\Rightarrow \\begin{cases} x = 2k\\pi + \\pi \\\\ x = \\frac{2k\\pi}{3} - \\frac{\\pi}{3} \\end{cases} \\Rightarrow \\begin{cases} x = \\pi \\\\ x = \\frac{\\pi}{3}, \\pi, \\frac{5\\pi}{3} \\end{cases}$\nبنابراین معادله در بازه $[0, 2\\pi)$ سه جواب دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 916,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "می‌دانیم $\\sin(x - \\frac{\\pi}{2}) = -\\cos x$ است.\n$\\sin 3x + \\cos x = 0 \\Rightarrow \\sin 3x = -\\cos x$\n$\\Rightarrow \\sin 3x = \\sin(x - \\frac{\\pi}{2}) \\Rightarrow \\begin{cases} 3x = 2k\\pi + x - \\frac{\\pi}{2} \\\\ 3x = 2k\\pi + \\pi - (x - \\frac{\\pi}{2}) \\end{cases}$\n$\\Rightarrow \\begin{cases} x = k\\pi - \\frac{\\pi}{4} \\\\ x = \\frac{k\\pi}{2} + \\frac{3\\pi}{8} \\end{cases} \\Rightarrow \\begin{cases} x = \\frac{3\\pi}{4} \\\\ x = \\frac{3\\pi}{8}, \\frac{7\\pi}{8} \\end{cases}$\nبنابراین: $\\frac{3\\pi}{4} + \\frac{3\\pi}{8} + \\frac{7\\pi}{8} = 2\\pi$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 917,
+      "solution_page": "page_0086.jpg",
+      "solution_text": "معادله را ساده می‌کنیم.\n$\\cos(2x - \\frac{\\pi}{2}) + \\sin(x + \\pi) = 0 \\Rightarrow \\sin 2x - \\sin x = 0$\nروش اول:\n$\\sin 2x = \\sin x \\Rightarrow \\begin{cases} 2x = 2k\\pi + x \\\\ 2x = 2k\\pi + \\pi - x \\end{cases}$\n$\\Rightarrow \\begin{cases} x = 2k\\pi \\\\ x = \\frac{2k\\pi}{3} + \\frac{\\pi}{3} \\end{cases} \\Rightarrow \\begin{cases} x = 0, 2\\pi \\\\ x = \\frac{\\pi}{3}, \\pi, \\frac{5\\pi}{3} \\end{cases}$\n$\\Rightarrow 0 + 2\\pi + \\frac{\\pi}{3} + \\pi + \\frac{5\\pi}{3} = 5\\pi$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 918,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "روش دوم:\n$\\sin 2x = \\sin x \\Rightarrow 2\\sin x \\cos x - \\sin x = 0 \\Rightarrow \\sin x(2\\cos x - 1) = 0$\n$\\Rightarrow \\begin{cases} \\sin x = 0 \\Rightarrow x = k\\pi \\Rightarrow x = 0, \\pi, 2\\pi \\\\ \\cos x = \\frac{1}{2} \\Rightarrow x = 2k\\pi \\pm \\frac{\\pi}{3} \\Rightarrow x = \\frac{\\pi}{3}, \\frac{5\\pi}{3} \\end{cases}$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 4 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 919,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "مخرج کسرها نباید صفر باشد، بنابراین:\n$\\sin x \\neq 0, \\cos x \\neq 0 \\Rightarrow \\sin 2x \\neq 0 \\Rightarrow 2x \\neq k\\pi \\Rightarrow x \\neq \\frac{k\\pi}{2}$\nمعادله را حل می‌کنیم:\n$\\frac{\\sin x}{\\cos x} - \\frac{\\cos x}{\\sin x} = \\frac{2\\sqrt{3}}{3} \\Rightarrow \\frac{\\sin^2 x - \\cos^2 x}{\\sin x \\cos x} = \\frac{2\\sqrt{3}}{3}$\n$\\Rightarrow \\frac{-\\cos 2x}{\\frac{1}{2}\\sin 2x} = \\frac{2\\sqrt{3}}{3} \\Rightarrow -2\\cot 2x = \\frac{2\\sqrt{3}}{3} \\Rightarrow \\cot 2x = -\\frac{\\sqrt{3}}{3}$\n$\\Rightarrow 2x = k\\pi + \\frac{2\\pi}{3} \\Rightarrow x = \\frac{k\\pi}{2} + \\frac{\\pi}{3}$\nاین جواب در دامنهٔ معادله قرار دارد. اگر $x = \\frac{k\\pi}{2} + \\frac{\\pi}{3}$ را در بازهٔ $[0, 2\\pi]$ قرار دهیم، جواب‌های $\\frac{\\pi}{3}, \\frac{5\\pi}{6}, \\frac{4\\pi}{3}$ و $\\frac{11\\pi}{6}$ به دست می‌آیند که مجموع آن‌ها برابر $4\\pi$ است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 3 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 920,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "$\\tan x + \\cot x = \\frac{2}{\\sin 2x} , \\tan x - \\cot x = -2\\cot 2x$\nمعادله را ساده می‌کنیم:\n$(\\tan x + \\cot x) + (\\tan x - \\cot x) \\tan 2x = 2$\n$\\Rightarrow \\frac{2}{\\sin 2x} - 2\\cot 2x \\cdot \\tan 2x = 2 \\Rightarrow \\frac{2}{\\sin 2x} - 2 = 2 \\Rightarrow \\frac{2}{\\sin 2x} = 4$\n$\\Rightarrow \\sin 2x = \\frac{1}{2} \\Rightarrow \\begin{cases} 2x = 2k\\pi + \\frac{\\pi}{6} \\\\ 2x = 2k\\pi + \\frac{5\\pi}{6} \\end{cases} \\Rightarrow \\begin{cases} x = k\\pi + \\frac{\\pi}{12} \\\\ x = k\\pi + \\frac{5\\pi}{12} \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 921,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "$\\tan x + \\cot x = \\frac{1}{\\sin x \\cos x} = \\frac{2}{\\sin 2x}$\nمعادله را ساده می‌کنیم:\n$\\sin 2x(\\tan x + \\cot x) = \\frac{1}{2} + \\sin^2 2x \\Rightarrow \\sin 2x(\\frac{2}{\\sin 2x}) = \\frac{1}{2} + \\sin^2 2x$\n$\\Rightarrow 2 = \\frac{1}{2} + \\sin^2 2x \\Rightarrow \\sin^2 2x = \\frac{3}{4} \\Rightarrow \\sin 2x = \\pm \\frac{\\sqrt{3}}{2}$\n$\\Rightarrow \\begin{cases} \\sin 2x = \\frac{\\sqrt{3}}{2} \\Rightarrow 2x = k\\pi + (-1)^k\\frac{\\pi}{3} \\\\ \\sin 2x = -\\frac{\\sqrt{3}}{2} \\Rightarrow 2x = k\\pi + (-1)^k(-\\frac{\\pi}{3}) \\end{cases} \\Rightarrow 2x = k\\pi \\pm \\frac{\\pi}{3}$\n$\\Rightarrow x = \\frac{k\\pi}{2} \\pm \\frac{\\pi}{6}$\n$\\begin{cases} x = k\\pi \\pm \\frac{\\pi}{6} \\\\ x = k\\pi + \\frac{\\pi}{2} \\pm \\frac{\\pi}{6} \\end{cases} \\Rightarrow \\begin{cases} x = k\\pi \\pm \\frac{\\pi}{6} \\\\ x = k\\pi \\pm \\frac{\\pi}{3} \\end{cases}$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 1 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 922,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "$\\cos(x + \\frac{\\pi}{4}) - \\cos(x - \\frac{\\pi}{4}) = (\\cos x \\cos\\frac{\\pi}{4} - \\sin x \\sin\\frac{\\pi}{4}) - (\\cos x \\cos\\frac{\\pi}{4} + \\sin x \\sin\\frac{\\pi}{4})$\n$= -2\\sin x \\sin\\frac{\\pi}{4} = -\\sqrt{2}\\sin x$\nمعادله را ساده می‌کنیم:\n$\\cos(x + \\frac{\\pi}{4}) - \\cos(x - \\frac{\\pi}{4}) = \\sin^2 x \\Rightarrow -\\sqrt{2}\\sin x = \\sin^2 x \\Rightarrow \\sin^2 x + \\sqrt{2}\\sin x = 0$\n$\\Rightarrow \\sin x(\\sin x + \\sqrt{2}) = 0 \\Rightarrow \\begin{cases} \\sin x = 0 \\Rightarrow x = k\\pi \\\\ \\sin x = -\\sqrt{2} \\text{ (غیرقابل قبول)} \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 923,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "می‌دانیم $1 - \\cos 2x = 2\\sin^2 x$ است.\n$\\sin^2 x + \\sin^2 2x = 1 \\Rightarrow \\sin^2 2x = 1 - \\sin^2 x \\Rightarrow \\sin^2 2x = \\cos^2 x$\n$\\Rightarrow 4\\sin^2 x \\cos^2 x - \\cos^2 x = 0 \\Rightarrow \\cos^2 x(4\\sin^2 x - 1) = 0$\n$\\Rightarrow \\begin{cases} \\cos^2 x = 0 \\Rightarrow \\cos x = 0 \\Rightarrow x = k\\pi + \\frac{\\pi}{2} \\\\ 4\\sin^2 x = 1 \\Rightarrow \\sin^2 x = \\frac{1}{4} \\Rightarrow \\sin x = \\pm\\frac{1}{2} \\Rightarrow x = k\\pi \\pm \\frac{\\pi}{6} \\end{cases}$\nجواب‌های بازهٔ $[0, 2\\pi]$ برابر $\\frac{\\pi}{2}, \\frac{3\\pi}{2}, \\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{7\\pi}{6}, \\frac{11\\pi}{6}$ هستند که مجموع آن‌ها برابر است با:\n$\\frac{\\pi}{2} + \\frac{3\\pi}{2} + \\frac{\\pi}{6} + \\frac{5\\pi}{6} + \\frac{7\\pi}{6} + \\frac{11\\pi}{6} = 2\\pi + 4\\pi = 6\\pi$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 2 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 924,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "$\\cos^2 x + 2\\sin x \\cos x = 2 \\Rightarrow \\cos^2 x + \\sin 2x = 2$\nاز آن‌جا که $\\cos^2 x \\leq 1$ و $\\sin 2x \\leq 1$ است، مجموع آن‌ها زمانی ۲ می‌شود که هر دو برابر ۱ باشند.\n$\\begin{cases} \\cos^2 x = 1 \\Rightarrow x = k\\pi \\\\ \\sin 2x = 1 \\Rightarrow 2x = 2k\\pi + \\frac{\\pi}{2} \\Rightarrow x = k\\pi + \\frac{\\pi}{4} \\end{cases}$\nهمان‌طور که می‌بینید این دو مجموعه جواب، اشتراکی با هم ندارند؛ در نتیجه معادله فاقد جواب است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 925,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "$\\sin^4 x + \\cos^4 x = 1 - 2\\sin^2 x \\cos^2 x = 1 - \\frac{1}{2}\\sin^2 2x$\n$\\sin^6 x + \\cos^6 x = 1 - 3\\sin^2 x \\cos^2 x = 1 - \\frac{3}{4}\\sin^2 2x$\nمعادله را حل می‌کنیم:\n$2(\\sin^4 x + \\cos^4 x) - 3(\\sin^6 x + \\cos^6 x) + \\cos 2x = 1$\n$\\Rightarrow 2(1 - \\frac{1}{2}\\sin^2 2x) - 3(1 - \\frac{3}{4}\\sin^2 2x) + \\cos 2x = 1$\n$\\Rightarrow 2 - \\sin^2 2x - 3 + \\frac{9}{4}\\sin^2 2x + \\cos 2x = 1$\n$\\Rightarrow \\frac{5}{4}\\sin^2 2x + \\cos 2x - 2 = 0 \\Rightarrow \\frac{5}{4}(1 - \\cos^2 2x) + \\cos 2x - 2 = 0$\n$\\Rightarrow \\frac{5}{4} - \\frac{5}{4}\\cos^2 2x + \\cos 2x - 2 = 0 \\Rightarrow -\\frac{5}{4}\\cos^2 2x + \\cos 2x - \\frac{3}{4} = 0$\n$\\Rightarrow 5\\cos^2 2x - 4\\cos 2x + 3 = 0 \\xrightarrow{\\Delta = 16 - 60 = -44 < 0}$ ریشه ندارد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 926,
+      "solution_page": "page_0087.jpg",
+      "solution_text": "$\\cos(x + \\frac{\\pi}{3}) \\cdot \\cos(x - \\frac{\\pi}{3}) = (\\cos x \\cos\\frac{\\pi}{3} - \\sin x \\sin\\frac{\\pi}{3})(\\cos x \\cos\\frac{\\pi}{3} + \\sin x \\sin\\frac{\\pi}{3})$\n$= \\cos^2 x \\cos^2\\frac{\\pi}{3} - \\sin^2 x \\sin^2\\frac{\\pi}{3} = \\frac{1}{4}\\cos^2 x - \\frac{3}{4}\\sin^2 x$\nمعادله را حل می‌کنیم:\n$2\\cos(x + \\frac{\\pi}{3}) \\cos(x - \\frac{\\pi}{3}) = \\cos 2x$\n$\\Rightarrow 2(\\frac{1}{4}\\cos^2 x - \\frac{3}{4}\\sin^2 x) = \\cos^2 x - \\sin^2 x \\Rightarrow \\frac{1}{2}\\cos^2 x - \\frac{3}{2}\\sin^2 x = \\cos^2 x - \\sin^2 x$\n$\\Rightarrow -\\frac{1}{2}\\cos^2 x = \\frac{1}{2}\\sin^2 x \\Rightarrow -\\cos^2 x = \\sin^2 x$ (غیرممکن)\nبنابراین معادله فاقد جواب است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 927,
+      "solution_page": 87,
+      "solution_text": "با فرض $\\sin x - \\cos x \\neq 0$ معادله را ساده می‌کنیم.\n\n$\\sin x = \\frac{1}{\\sin x - \\cos x} \\Rightarrow \\sin^{2} x - \\sin x \\cos x = 1$\n\n$\\Rightarrow 1 - \\sin^{2} x + \\sin x \\cos x = 0$\n\n$\\Rightarrow \\cos^{2} x + \\sin x \\cos x = 0 \\Rightarrow \\cos x(\\cos x + \\sin x) = 0$\n\n$\\Rightarrow \\begin{cases} \\cos x = 0 \\Rightarrow x = \\frac{\\pi}{2} , \\frac{3\\pi}{2} \\\\ \\cos x = -\\sin x \\Rightarrow x = \\frac{3\\pi}{4} , \\frac{7\\pi}{4} \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 928,
+      "solution_page": 87,
+      "solution_text": "با فرض $\\sin 2x \\neq 0$ و $\\cos 2x \\neq 0$ معادله را ساده می‌کنیم.\n\n$\\frac{\\sin x}{\\cos 2x} = \\frac{\\cos x}{\\sin 2x} \\Rightarrow \\frac{\\sin x}{\\cos 2x} = \\frac{\\cos x}{2 \\sin x \\cos x}$\n\n$\\Rightarrow 2 \\sin^{2} x = \\cos 2x \\Rightarrow 1 - \\cos 2x = \\cos 2x$\n\n$\\Rightarrow \\cos 2x = \\frac{1}{2} \\Rightarrow 2x = 2k\\pi \\pm \\frac{\\pi}{3} \\Rightarrow x = k\\pi \\pm \\frac{\\pi}{6}$\n\nرئوس یک مستطیل (غیر مربع) می‌باشند.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0087.jpg",
+          "box": [
+            45,
+            2100,
+            245,
+            2300
+          ],
+          "placement": "stem"
+        }
+      ],
+      "review_notes": [
+        "The media region box roughly targets the unit circle diagram."
+      ]
+    },
+    {
+      "question_number": 929,
+      "solution_page": "page_0088.jpg",
+      "solution_text": "معادله را ساده می‌کنیم.\n$\\cos 2x = 5 \\cos x - 3 \\Rightarrow 2 \\cos^2 x - 5 \\cos x + 2 = 0 \\Rightarrow \\cos x = \\frac{5 \\pm \\sqrt{9}}{4}$\n$\\Rightarrow \\begin{cases} \\cos x = 2 \\text{ ق ق غ} \\\\ \\cos x = \\frac{1}{2} \\Rightarrow x = 2k\\pi \\pm \\frac{\\pi}{3} \\Rightarrow \\theta = \\frac{\\pi}{3} \\end{cases}$\nبنابراین:\n$\\cos(\\theta - \\frac{\\pi}{3}) = \\cos(0) = 1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 930,
+      "solution_page": "page_0088.jpg",
+      "solution_text": "روش اول: دو طرف معادله را به توان ۲ می‌رسانیم. (ممکن است جواب اضافه وارد مسئله شود.)\n$\\sin 3x + \\cos 3x = -1 \\Rightarrow 1 + \\sin 6x = 1 \\Rightarrow \\sin 6x = 0 \\Rightarrow 6x = k\\pi \\Rightarrow x = \\frac{k\\pi}{6} \\Rightarrow x = -\\frac{\\pi}{6}, -\\frac{\\pi}{3}, 0, \\frac{\\pi}{6}, \\frac{\\pi}{3}$\nجواب‌های $0$ و $\\frac{\\pi}{6}$ در معادله اولیه صدق نمی‌کنند و قابل قبول نیستند.\nبنابراین در بازه $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ سه جواب وجود دارد.\nروش دوم: معادلات خاص:\n$\\begin{cases} \\sin x + \\cos x = 1 \\Rightarrow x = 2k\\pi, x = 2k\\pi + \\frac{\\pi}{2} \\\\ \\sin x + \\cos x = -1 \\Rightarrow x = (2k+1)\\pi, x = 2k\\pi - \\frac{\\pi}{2} \\end{cases}$\n$\\sin 3x + \\cos 3x = -1 \\Rightarrow \\begin{cases} 3x = (2k+1)\\pi \\\\ 3x = 2k\\pi - \\frac{\\pi}{2} \\end{cases} \\Rightarrow \\begin{cases} x = (2k+1)\\frac{\\pi}{3} \\Rightarrow x = \\frac{\\pi}{3}, -\\frac{\\pi}{3} \\\\ x = \\frac{2k\\pi}{3} - \\frac{\\pi}{6} \\Rightarrow x = -\\frac{\\pi}{6} \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 931,
+      "solution_page": "page_0088.jpg",
+      "solution_text": "با شرط $x \\neq k\\pi$ معادله را ساده می‌کنیم.\n$1 + \\cot^2 x = 8 \\cos^2 x \\Rightarrow \\frac{1}{\\sin^2 x} = 8 \\cos^2 x \\Rightarrow 8 \\sin^2 x \\cos^2 x = 1 \\Rightarrow 2 \\sin^2 2x = 1 \\Rightarrow \\sin^2 2x = \\frac{1}{2} \\Rightarrow \\sin 2x = \\pm \\frac{\\sqrt{2}}{2} \\Rightarrow 2x = k\\pi \\pm \\frac{\\pi}{4} \\Rightarrow x = \\frac{k\\pi}{2} \\pm \\frac{\\pi}{8}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 932,
+      "solution_page": "page_0088.jpg",
+      "solution_text": "با شرط $\\cos x \\neq 0$ معادله را ساده می‌کنیم.\n$\\frac{\\sin 2x}{1 - \\cos x} = 2(\\cos x + 1) \\Rightarrow \\sin 2x = 2(1 - \\cos^2 x) \\Rightarrow 2 \\sin x \\cos x = 2 \\sin^2 x \\Rightarrow 2 \\sin x (\\cos x - \\sin x) = 0 \\Rightarrow \\begin{cases} \\sin x = 0 \\\\ \\cos x = \\sin x \\end{cases} \\Rightarrow \\begin{cases} x = 0, \\pi \\\\ x = \\frac{\\pi}{4}, \\frac{5\\pi}{4} \\end{cases}$\nبا توجه به شرط $\\cos x \\neq 1$ جواب $x = 0$ غیرقابل قبول است.\nجواب‌ها رئوس مثلث قائم‌الزاویه هستند.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0088.jpg",
+          "region": [
+            515,
+            735,
+            608,
+            804
+          ],
+          "placement": "solution",
+          "alt": "رئوس مثلث قائم الزاویه در دایره مثلثاتی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 933,
+      "solution_page": "page_0088.jpg",
+      "solution_text": "$x = \\frac{\\pi}{6}$ ریشهٔ معادله است.\n$\\sin 2x - \\sin x - \\cos x = k \\xrightarrow{x=\\frac{\\pi}{6}} \\sin \\frac{\\pi}{3} - \\sin \\frac{\\pi}{6} - \\cos \\frac{\\pi}{6} = k \\Rightarrow \\frac{\\sqrt{3}}{2} - \\frac{1}{2} - \\frac{\\sqrt{3}}{2} = k \\Rightarrow k = -\\frac{1}{2}$\nحال، معادله را حل می‌کنیم.\n$\\sin 2x - \\sin x - \\cos x = -\\frac{1}{2} \\Rightarrow 2\\sin x \\cos x - \\sin x - \\cos x + \\frac{1}{2} = 0 \\Rightarrow 2\\sin x(\\cos x - \\frac{1}{2}) - (\\cos x - \\frac{1}{2}) = 0 \\Rightarrow (\\cos x - \\frac{1}{2})(2\\sin x - 1) = 0$\n$\\Rightarrow \\begin{cases} \\cos x = \\frac{1}{2} \\Rightarrow x = \\frac{\\pi}{3} \\\\ \\sin x = \\frac{1}{2} \\Rightarrow x = \\frac{\\pi}{6} \\end{cases} \\Rightarrow \\theta = \\frac{\\pi}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 934,
+      "solution_page": "page_0088.jpg",
+      "solution_text": "با شرط $\\cos x \\neq 0$ دو طرف معادله را در $\\cos x$ ضرب می‌کنیم.\n$\\tan x + \\sin x = 1 + \\cos x \\Rightarrow \\sin x + \\sin x \\cos x = \\cos x + \\cos^2 x \\Rightarrow \\sin x - \\cos x + \\cos x(\\sin x - \\cos x) = 0 \\Rightarrow (\\sin x - \\cos x)(1 + \\cos x) = 0 \\Rightarrow \\begin{cases} \\sin x = \\cos x \\\\ \\cos x = -1 \\end{cases} \\Rightarrow \\begin{cases} x = \\frac{\\pi}{4}, \\frac{5\\pi}{4} \\\\ x = \\pi \\end{cases} \\Rightarrow \\text{مجموع جواب‌ها} = \\frac{5\\pi}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 935,
+      "solution_page": "page_0088.jpg",
+      "solution_text": "برای این که جواب‌های معادله مثلثاتی $\\cos 3x = \\cos ax$ بر روی دایره مثلثاتی رئوس یک ۷ ضلعی منتظم باشد، باید مجموعه جواب به صورت $\\frac{2k\\pi}{7}$ باشد.\n$\\cos ax = \\cos 3x \\Rightarrow ax = 2k\\pi \\pm 3x \\Rightarrow \\begin{cases} x = \\frac{2k\\pi}{a - 3} \\\\ x = \\frac{2k\\pi}{a + 3} \\end{cases}$\nاگر $a - 3 = 7$ باشد، آن‌گاه $a = 10$ و مجموعه جواب به صورت $\\begin{cases} x = \\frac{2k\\pi}{7} \\\\ x = \\frac{2k\\pi}{13} \\end{cases}$ است که بیانگر رئوس یک ۷ ضلعی منتظم و یک ۱۳ ضلعی منتظم است. بنابراین قابل قبول نیست.\nاگر $a + 3 = 7$ باشد، آن‌گاه $a = 4$ و مجموعه جواب به صورت $\\begin{cases} x = 2k\\pi \\\\ x = \\frac{2k\\pi}{7} \\end{cases}$ است که اجتماع این جواب‌ها برابر $\\frac{2k\\pi}{7}$ می‌باشد. در نتیجه $a = 4$ جواب مسئله است.",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 1 conflicts with authoritative answer key 4; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 936,
+      "solution_page": "page_0088.jpg",
+      "solution_text": "معادله را ساده می‌کنیم.\n$\\sin^4 x + \\cos^4 x = \\frac{3}{4} \\Rightarrow 1 - \\frac{1}{2} \\sin^2 2x = \\frac{3}{4} \\Rightarrow \\sin^2 2x = \\frac{1}{2} \\Rightarrow \\frac{1 - \\cos 4x}{2} = \\frac{1}{2} \\Rightarrow \\cos 4x = 0$\n$\\Rightarrow 4x = k\\pi + \\frac{\\pi}{2} \\Rightarrow x = \\frac{k\\pi}{4} + \\frac{\\pi}{8} \\Rightarrow \\begin{cases} \\alpha = \\frac{\\pi}{8} \\\\ \\beta = \\frac{\\pi}{4} + \\frac{\\pi}{8} \\end{cases} \\Rightarrow |\\alpha - \\beta| = \\frac{\\pi}{4}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 937,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "معادلهٔ $2\\sin 5x = -1$ را حل می‌کنیم. در بین جواب‌های مثبت، دو ریشهٔ کوچک‌تر طول نقاط $A$ و $B$ هستند.\n$\\sin 5x = -\\frac{1}{2} \\Rightarrow \\begin{cases} 5x = 2k\\pi - \\frac{\\pi}{6} \\\\ 5x = 2k\\pi - \\frac{5\\pi}{6} \\end{cases} \\Rightarrow \\begin{cases} x = \\frac{2k\\pi}{5} - \\frac{\\pi}{30} \\\\ x = \\frac{2k\\pi}{5} - \\frac{\\pi}{6} \\end{cases}$\n$\\Rightarrow \\begin{cases} x = \\frac{11\\pi}{30}, \\frac{23\\pi}{30}, \\dots \\\\ x = \\frac{7\\pi}{30}, \\frac{19\\pi}{30}, \\dots \\end{cases} \\Rightarrow x_A = \\frac{7\\pi}{30}, x_B = \\frac{11\\pi}{30}$\n$\\Rightarrow AB = \\frac{4\\pi}{30} = \\frac{2\\pi}{15}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 938,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "معادلات $f(x) = 0$ و $f(x) = 1$ را حل می‌کنیم.\n$f(x) = 0 \\Rightarrow 1 + 2\\cos \\frac{x}{2} = 0 \\Rightarrow \\cos \\frac{x}{2} = -\\frac{1}{2}$\n$\\Rightarrow \\frac{x}{2} = 2k\\pi \\pm \\frac{2\\pi}{3} \\Rightarrow x = 4k\\pi \\pm \\frac{4\\pi}{3}$\n$\\Rightarrow x_C = \\frac{4\\pi}{3}, x_D = \\frac{8\\pi}{3} \\Rightarrow CD = \\frac{4\\pi}{3}$\n$f(x) = 1 \\Rightarrow 1 + 2\\cos \\frac{x}{2} = 1 \\Rightarrow \\cos \\frac{x}{2} = 0$\n$\\Rightarrow \\frac{x}{2} = k\\pi + \\frac{\\pi}{2} \\Rightarrow x = 2k\\pi + \\pi$\n$\\Rightarrow x_A = \\pi, x_B = 3\\pi \\Rightarrow AB = 2\\pi$\nبنابراین:\n$\\frac{AB}{CD} = \\frac{2\\pi}{\\frac{4\\pi}{3}} = \\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 939,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "کم‌ترین مقدار تابع $f(x) = -3 \\sin ax$ برابر $-3$ است.\n$-3 \\sin ax = -3 \\Rightarrow \\sin ax = 1 \\xrightarrow{x = \\frac{1}{4}} \\sin \\frac{a}{4} = 1$\n$\\Rightarrow \\frac{a}{4} = 2k\\pi + \\frac{\\pi}{2} \\Rightarrow a = 8k\\pi + 2\\pi$\nاگر $k=0$، آن‌گاه $a=2\\pi$ و $f(x) = -3\\sin 2\\pi x$ خواهد بود.\nدورهٔ تناوب این تابع $T=1$ است.\nفاصلهٔ طولی نقاط ماکزیمم از نقطهٔ مینیمم برابر $\\frac{T}{2} + kT$ است. بنابراین طول نقاط ماکزیمم به صورت $x = k + \\frac{1}{2} + \\frac{1}{4}$ یا $x = k + \\frac{3}{4}$ است. اگر $k=0$ باشد، $x = \\frac{3}{4}$ قابل قبول است. ",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 940,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "روش اول: بیشترین مقدار $y = -3\\cos(\\frac{\\pi}{3} - 4\\pi x)$ برابر $3$ است.\n$-3\\cos(\\frac{\\pi}{3} - 4\\pi x) = 3 \\Rightarrow \\cos(4\\pi x - \\frac{\\pi}{3}) = -1$\n$\\Rightarrow 4\\pi x - \\frac{\\pi}{3} = 2k\\pi + \\pi \\Rightarrow x = \\frac{k}{2} + \\frac{1}{3} \\Rightarrow k = -\\frac{1}{6}, \\frac{1}{3}$\nتابع در دو نقطه بیشترین مقدار را دارد.\nروش دوم:\n$-\\frac{1}{2} \\le x \\le \\frac{1}{2} \\Rightarrow -2\\pi + \\frac{\\pi}{3} \\le \\underbrace{\\frac{\\pi}{3} - 4\\pi x}_{\\alpha} \\le 2\\pi + \\frac{\\pi}{3}$\nاین بازه معادل ۲ دور در دایرهٔ مثلثاتی است و انتهای کمان $\\alpha$، ۲ بار از نقاط $(2k+1)\\pi$ که به ازای آن‌ها $\\cos\\alpha = -1$ و $y$ بیشترین مقدار است عبور می‌کند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 941,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "عدد $4$ باید عضو بازهٔ $(2x - 1, 3x + 1)$ باشد:\n$4 \\in (2x - 1, 3x + 1) \\Rightarrow 2x - 1 < 4 < 3x + 1$\n$\\Rightarrow \\begin{cases} 2x - 1 < 4 \\\\ 4 < 3x + 1 \\end{cases} \\Rightarrow \\begin{cases} x < \\frac{5}{2} \\\\ x > 1 \\end{cases} \\xrightarrow{\\cap} 1 < x < \\frac{5}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 942,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "عدد $-2$ باید عضو بازهٔ $(3x + 1, 2x)$ باشد:\n$-2 \\in (3x + 1, 2x) \\Rightarrow 3x + 1 < -2 < 2x$\n$\\Rightarrow \\begin{cases} 3x + 1 < -2 \\\\ -2 < 2x \\end{cases} \\Rightarrow \\begin{cases} x < -1 \\\\ x > -1 \\end{cases} \\xrightarrow{\\cap} x \\in \\emptyset$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 943,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "عدد $2$ باید عضو بازهٔ $(4x + 3, 3x + 8)$ باشد:\n$2 \\in (4x + 3, 3x + 8) \\Rightarrow 4x + 3 < 2 < 3x + 8$\n$\\Rightarrow \\begin{cases} 4x + 3 < 2 \\\\ 3x + 8 > 2 \\end{cases} \\Rightarrow \\begin{cases} x < -\\frac{1}{4} \\\\ x > -2 \\end{cases} \\xrightarrow{\\cap} -2 < x < -\\frac{1}{4}$\n$\\xrightarrow{x \\in \\mathbb{Z}} x = -1 \\Rightarrow (4x + 3, 3x + 8) = (-1, 5)$\nاین بازه یک همسایگی چپ برای عدد ۵ است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 944,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "مجموعه جواب نامعادلهٔ $0 < |x - x_0| < r$ یک همسایگی محذوف برای $x_0$ است.\n$0 < |x - x_0| < r \\Rightarrow x \\in (x_0 - r, x_0 + r) - \\{x_0\\}$\nبا توجه به گزینه‌ها، گزینهٔ ۲ همسایگی محذوف عدد $\\frac{2}{3}$ است.\n$0 < |3x - 2| < 4 \\Rightarrow 0 < |x - \\frac{2}{3}| < \\frac{4}{3}$\n$\\Rightarrow x \\in (\\frac{2}{3} - \\frac{4}{3}, \\frac{2}{3} + \\frac{4}{3}) - \\{\\frac{2}{3}\\} \\Rightarrow x \\in (-\\frac{2}{3}, 2) - \\{\\frac{2}{3}\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 945,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "در هر دو نمودار حد تابع وقتی $x$ به سمت $1$ میل می‌کند برابر $-1$ است و فقط مقادیر $f(1)$ و $g(1)$ متفاوت است. ($f(1) = 0, g(1) = -1$) بنابراین:\n$\\lim_{x \\to 1} f(x) + 2\\lim_{x \\to 1} g(x) = (-1) + (-2) = -3$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 946,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "تابع $f(x)$ چندجمله‌ای بوده و در همهٔ نقاط دارای حد است.\n$\\begin{cases} \\lim_{x \\to 0} f(2 - x) = f(2) = 8 + 4a + 2b + c \\\\ \\lim_{x \\to -1} f(3x + 1) = f(-2) = -8 + 4a - 2b + c \\end{cases}$\n$\\Rightarrow 8 + 4a + 2b + c = -8 + 4a - 2b + c$\n$\\Rightarrow b = -4 \\Rightarrow 4b = -16$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 947,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "به جای $x$ مقدار $\\pi$ را قرار می‌دهیم:\n$\\lim_{x \\to \\pi} \\frac{3 + a\\sin \\frac{x}{2}}{2 + a\\cos x} = \\frac{3 + a\\sin \\frac{\\pi}{2}}{2 + a\\cos \\pi} = \\frac{3 + a}{2 - a}$\n$\\Rightarrow \\frac{3 + a}{2 - a} = 4 \\Rightarrow 3 + a = 8 - 4a \\Rightarrow a = 1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 948,
+      "solution_page": "page_0089.jpg",
+      "solution_text": "اگر $\\lim_{x \\to 2} f(x)$ را $k$ بنامیم، خواهیم داشت:\n$\\lim_{x \\to 2} \\frac{f(x) + 3x}{f^2(x) - 3x} = 3 \\Rightarrow \\frac{k + 6}{k^2 - 6} = 3 \\Rightarrow k + 6 = 3k^2 - 18$\n$\\Rightarrow 3k^2 - k - 24 = 0 \\Rightarrow k = \\frac{1 \\pm \\sqrt{1 + 288}}{6} = \\frac{1 \\pm 17}{6}$\n$\\Rightarrow \\begin{cases} k = 3 \\\\ k = -\\frac{8}{3} \\end{cases}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 949,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 2,
+      "solution_text": "اگر تابع $f$ در $x=a$ حد داشته و تابع $g$ در آن نقطه حد نداشته باشد، توابع $f \\pm g$ در $x=a$ حد ندارد.\nدر [2] تابع $f(x)$ در $x=4$ حد نداشته و $y=2x$ دارای حد است. بنابراین $2x-f(x)$ در $x=4$ حد نخواهد داشت.\nمثال نقض گزینه‌های [1] و [3]:\n$$f(x) = \\begin{cases} 1 & x>4 \\\\ -1 & x<4 \\end{cases}$$\nمثال نقض [4]:\n$$f(x) = \\begin{cases} 1/5 & x>4 \\\\ 1/4 & x<4 \\end{cases}$$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 950,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 2,
+      "solution_text": "مقدار ۲ را به جای $x$ قرار می‌دهیم:\n$$\\lim_{x \\to 2} [2x - \\sqrt[3]{x+1}] = [4 - \\sqrt[3]{3}]$$\nمی‌دانیم:\n$$1 < \\sqrt[3]{3} < 2 \\Rightarrow -2 < -\\sqrt[3]{3} < -1 \\Rightarrow 2 < 4 - \\sqrt[3]{3} < 3$$\n$$\\Rightarrow [4 - \\sqrt[3]{3}] = 2$$\nدقت داشته باشید چون مقدار داخل براکت عددی غیرصحیح بود، نیازی به محاسبهٔ جداگانه حد چپ و راست نبود.",
+      "media_regions": [],
+      "review_notes": [
+        "Substituted x with 2 in the limit."
+      ]
+    },
+    {
+      "question_number": 951,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "به جای $x$ عدد $\\frac{1}{2}$ را قرار می‌دهیم:\n$$\\lim_{x \\to \\frac{1}{2}} [-3\\sin \\frac{\\pi}{3} x].x = [-3\\sin \\frac{\\pi}{6}]\\times \\frac{1}{2} = [-\\frac{3}{2}]\\times \\frac{1}{2}$$\n$$=-2 \\times \\frac{1}{2} = -1$$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 952,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "حد چپ و راست تابع را در $x = 2$ محاسبه می‌کنیم:\n$$\\lim_{x \\to 2^{-}} f(x) = (2 - [6^{-}])[(-4)^{+}] = (2-5)(-4)$$\n$$= (-3)(-4) = 12$$\n$$\\lim_{x \\to 2^{+}} f(x) = (2 - [6^{+}])[(-4)^{-}] = (2-6)(-5)$$\n$$= (-4)(-5) = 20$$\n$20 - 12 = 8 =$ اختلاف حد چپ و راست\nنکته: اگر $x \\to a^{-}$، آن‌گاه $-x \\to (-a)^{+}$ و اگر $x \\to a^{+}$، آن‌گاه $-x \\to (-a)^{-}$.",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 953,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "هر یک از حدود را به دست آورده از هم کم می‌کنیم:\n$$\\lim_{x \\to 1^{-}} f(x) - \\lim_{x \\to (-1)^{+}} f(x) = [2^{-}]|1-1| - [(-2)^{+}]|1-1|$$\n$$= 1 \\times 0 - (-2) \\times 0 = 0 - 0 = 0$$\nدر واقع چون حد $|x^2 - 1|$ در هر یک از حدود برابر صفر می‌شود نیازی به محاسبهٔ حد عبارت براکتی نبود.",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 954,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "روش اول: حد چپ و راست تابع را در $x = 2$ محاسبه می‌کنیم:\n$$\\lim_{x \\to 2^{-}} f(x) = 3[2^{-} - [2^{-}]] - 1 = 3[2^{-} - 1] - 1 = 3[1^{-}] - 1$$\n$$= 0 - 1 = -1$$\n$$\\lim_{x \\to 2^{+}} f(x) = 3[2^{+} - [2^{+}]] - 1 = 3[2^{+} - 2] - 1 = 3[0^{+}] - 1$$\n$$= 0 - 1 = -1$$\nحد چپ و راست با هم برابر بوده و اختلاف آن‌ها صفر است.\nروش دوم: با توجه به رابطهٔ $0 \\le x - [x] < 1$، حاصل $[x - [x]]$ همواره برابر صفر است و تابع $f$ یک تابع ثابت می‌شود که در تمام نقاط حد دارد.",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 955,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "حد چپ و راست تابع را در $x = -2$ محاسبه کرده، برابر هم قرار می‌دهیم:\n$$\\lim_{x \\to (-2)^{-}} f(x) = \\lim_{x \\to (-2)^{-}} x - 2[-x] = -2 - 2[2^{+}]$$\n$$= -2 - 2(2) = -6$$\n$$\\lim_{x \\to (-2)^{+}} f(x) = \\lim_{x \\to (-2)^{+}} x^2 - ax = 4 + 2a$$\nبنابراین:\n$$4 + 2a = -6 \\Rightarrow a = -5$$\n$$\\lim_{x \\to 5} f(x) = 25 + 25 = 50$$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 956,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "ابتدا مقدار $a$ را به دست می‌آوریم:\n$$\\lim_{x \\to 2^{-}} f(x) = 12 \\Rightarrow (a-6)[(-3)^{+}] = 12$$\n$$\\Rightarrow (a-6)(-3) = 12 \\Rightarrow a-6 = -4 \\Rightarrow a = 2$$\nخواهیم داشت:\n$$f(x) = (2-2x)[-x] \\Rightarrow \\lim_{x \\to (-3)^{+}} f(x) = (2+6)[3^{-}]$$\n$$= 8 \\times 2 = 16$$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 957,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 3,
+      "solution_text": "برای این‌که $y = [f(x)]$ در $x=\\alpha$ دارای حد باشد، باید حد چپ و راست $f(x)$ در $x=\\alpha$ بزرگ‌تر یا مساوی $k$ و کوچک‌تر از $k+1$ باشد ($k \\in \\mathbb{Z}$). در [3] وقتی $x \\to \\alpha^{+}$، آن‌گاه $f(x) \\to 3^{+}$ و زمانی که $x \\to \\alpha^{-}$، آن‌گاه $f(x) \\to 3^{-}$. بنابراین حد چپ و راست هر دو بین ۲ و ۳ قرار داشته و $\\lim_{x \\to \\alpha} [f(x)]$ برابر ۲ خواهد بود.\n[1]: $\\lim_{x \\to \\alpha^{-}} [f(x)] = [2^{-}] = 1 \\quad \\lim_{x \\to \\alpha^{+}} [f(x)] = [3^{-}] = 2$\n[2]: $\\lim_{x \\to \\alpha^{-}} [f(x)] = [3^{+}] = 3 \\quad \\lim_{x \\to \\alpha^{+}} [f(x)] = [2^{-}] = 1$\n[4]: $\\lim_{x \\to \\alpha^{-}} [f(x)] = [2] = 2 \\quad \\lim_{x \\to \\alpha^{+}} [f(x)] = [3] = 3$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 958,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "حد چپ و راست تابع را در $x = 3$ محاسبه کرده، برابر هم قرار می‌دهیم:\n$$\\lim_{x \\to 3^{-}} f(x) = \\frac{a[3^{-}] + 1}{2 - [(-3)^{+}]} = \\frac{2a + 1}{2 + 3} = \\frac{2a + 1}{5}$$\n$$\\lim_{x \\to 3^{+}} f(x) = \\frac{a[3^{+}] + 1}{2 - [(-3)^{-}]} = \\frac{3a + 1}{2 + 4} = \\frac{3a + 1}{6}$$\nخواهیم داشت:\n$$\\frac{2a + 1}{5} = \\frac{3a + 1}{6} \\Rightarrow 12a + 6 = 15a + 5 \\Rightarrow a = \\frac{1}{3}$$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 959,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "در تابع $f(x) = \\begin{cases} 3 & x \\in \\mathbb{Z} \\\\ [x] + [-x] & x \\notin \\mathbb{Z} \\end{cases}$ حد تابع در تمامی نقاط از ضابطهٔ پایین به دست می‌آید و تنها مقدار تابع در نقاط صحیح از ضابطهٔ بالا محاسبه می‌شود.\nمی‌دانیم:\n$$[x] + [-x] = \\begin{cases} 0 & x \\in \\mathbb{Z} \\\\ -1 & x \\notin \\mathbb{Z} \\end{cases}$$\nبنابراین:\n$$\\lim_{x \\to a} [x] + [-x] = -1$$\n$$\\Rightarrow \\lim_{x \\to 3} f(x) + \\lim_{x \\to \\sqrt{3}} f(x) = (-1) + (-1) = -2$$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 960,
+      "solution_page": "page_0090.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "اگر $x \\to \\pi^{+}$، آن‌گاه $\\sin x \\to 0^{-}$ و $\\cos x \\to (-1)^{+}$ میل می‌کند.\n$$\\lim_{x \\to \\pi^{+}} \\frac{[\\sin x]}{x} + \\frac{[\\cos x]}{3x} = \\frac{[0^{-}]}{\\pi} + \\frac{[(-1)^{+}]}{3\\pi} = \\frac{-1}{\\pi} + \\frac{-1}{3\\pi}$$\n$$= \\frac{-3}{3\\pi} + \\frac{-1}{3\\pi} = \\frac{-4}{3\\pi}$$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 961,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "نکته\nاگر $x \\to a^{-}$، آن‌گاه $\\frac{1}{x} \\to (\\frac{1}{a})^{+}$ و اگر $x \\to a^{+}$، آن‌گاه $\\frac{1}{x} \\to (\\frac{1}{a})^{-}$ $(a \\neq \\circ)$\n$\\lim_{x \\to (\\frac{1}{3})^{-}} ([\\frac{1}{x}] - [-\\frac{2}{x}]) = [3^{+}] - [-(6^{+})] = 3 - [-6^{-}]$\n$= 3 - (-7) = 10$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            82,
+            461,
+            196,
+            843
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_961"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 962,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = 3$ محاسبه می‌کنیم:\n$\\lim_{x \\to 3^{+}} \\frac{x - [2x]}{f(x)} = \\frac{3 - [6^{+}]}{f(3^{+})} = \\frac{3 - 6}{2} = -\\frac{3}{2}$\n$\\lim_{x \\to 3^{-}} \\frac{x - [2x]}{f(x)} = \\frac{3 - [6^{-}]}{f(3^{-})} = \\frac{3 - 5}{-2} = 1$\n$\\Rightarrow 1 - (-\\frac{3}{2}) = \\frac{5}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            200,
+            463,
+            297,
+            842
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_962"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 963,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "بررسی می‌کنیم عبارت $\\frac{4}{3}x$ در چند نقطه عددی صحیح می‌شود. در این نقاط $[\\frac{4}{3}x]$ حد نخواهد داشت:\n$-2 < x < 5 \\Rightarrow -\\frac{8}{3} < \\frac{4}{3}x < \\frac{20}{3}$\nاعداد صحیح بازه $(-\\frac{8}{3}, \\frac{20}{3})$ به صورت مجموعه $\\{-2, -1, \\dots, 6\\}$ است که تعداد آن‌ها $9$ می‌باشد. یعنی $\\frac{4}{3}x$ در $9$ نقطه عددی صحیح شده است و $[\\frac{4}{3}x]$ در این $9$ نقطه حد ندارد.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            300,
+            463,
+            421,
+            844
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_963"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 964,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = 1$ محاسبه می‌کنیم:\n$\\lim_{x \\to 1^{-}} f(x) = (3 + a)[2^{-}] = (3 + a) \\times 1 = 3 + a$\n$\\lim_{x \\to 1^{+}} f(x) = (3 + a)[2^{+}] = (3 + a) \\times 2 = 6 + 2a$\nخواهیم داشت:\n$|(6 + 2a) - (3 + a)| = 5 \\Rightarrow |a + 3| = 5$\n$\\Rightarrow a + 3 = \\pm 5 \\Rightarrow \\begin{cases} a = 2 \\\\ a = -8 \\end{cases}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            428,
+            463,
+            563,
+            844
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_964"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 965,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "تابع $y = [x]$ در نقاط صحیح حد ندارد. برای این‌که تابع $f(x)$ در تمام نقاط بازه $(2, 5)$ حد داشته باشد، باید در $x = 3$ و $x = 4$ دارای حد باشد. چون $[x]$ در این دو نقطه حد ندارد، فقط در حالتی $f(x)$ حد خواهد داشت که صورت کسر به ازای $x = 3$ و $x = 4$ برابر صفر شود؛ یعنی:\n$x^2 + ax + b = (x - 3)(x - 4) = x^2 - 7x + 12$\n$\\Rightarrow \\begin{cases} a = -7 \\\\ b = 12 \\end{cases} \\Rightarrow a + b = 5$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            564,
+            463,
+            706,
+            844
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_965"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 966,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "هر یک از حدود چپ و راست تابع در $x = 2$ برابر $1-$ است.\n$\\lim_{x \\to 2^{-}} f(x) = -1 \\Rightarrow a[4^{-}] + b[(-2)^{+}] - 2 = -1$\n$\\Rightarrow 3a - 2b = 1$\n$\\lim_{x \\to 2^{+}} f(x) = -1 \\Rightarrow a[4^{+}] + b[(-2)^{-}] - 2 = -1$\n$\\Rightarrow 4a - 3b = 1$\nخواهیم داشت:\n$\\times 3 \\quad \\begin{cases} 3a - 2b = 1 \\\\ 4a - 3b = 1 \\end{cases} \\xrightarrow{+} a = 1, b = 1$\n$\\times (-2)$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            709,
+            464,
+            856,
+            844
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_966"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 967,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "ابتدا $f(x)$ را ساده می‌کنیم:\n$f(x) = a[2x] - ([-x] + 2) + 2 = a[2x] - [-x]$\nحد چپ و راست تابع را در $x = -2$ محاسبه کرده، برابر هم قرار می‌دهیم:\n$\\lim_{x \\to (-2)^{-}} f(x) = a[(-4)^{-}] - [2^{+}] = -5a - 2$\n$\\lim_{x \\to (-2)^{+}} f(x) = a[(-4)^{+}] - [2^{-}] = -4a - 1$\nخواهیم داشت:\n$-5a - 2 = -4a - 1 \\Rightarrow a = -1$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            858,
+            461,
+            911,
+            843
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_967_part1"
+        },
+        {
+          "region": [
+            73,
+            44,
+            166,
+            427
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_967_part2"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 968,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = k$ به دست می‌آوریم:\n$\\lim_{x \\to k^{-}} f(x) = 3[(-k)^{+}] + 2[k^{-}] = 3(-k) + 2(k - 1) = -k - 2$\n$\\lim_{x \\to k^{+}} f(x) = 3[(-k)^{-}] + 2[k^{+}] = 3(-k - 1) + 2k = -k - 3$\nخواهیم داشت:\n$-k - 2 = 2(-k - 3) \\Rightarrow k = -4$\n$\\Rightarrow f(\\frac{k}{3}) = f(-\\frac{4}{3}) = 3[\\frac{4}{3}] + 2[-\\frac{4}{3}] = 3 - 4 = -1$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            168,
+            44,
+            297,
+            427
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_968"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 969,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "باید حد چپ و راست تابع در $x = -1$ برابر باشند. در همسایگی $x = -1$ عبارت $f(x|x|)$ به صورت $f(-x^2)$ می‌باشد:\n$\\lim_{x \\to (-1)^{+}} a[x] + f(-x^2) = a[(-1)^{+}] + f((-1)^{+}) = -a - 1$\n$\\lim_{x \\to (-1)^{-}} a[x] + f(-x^2) = a[(-1)^{-}] + f((-1)^{-}) = -2a - 2$\nبنابراین:\n$-a - 1 = -2a - 2 \\Rightarrow a = -1$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            300,
+            44,
+            417,
+            427
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_969"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 970,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "حد راست و چپ تابع را در $x = -1$ محاسبه می‌کنیم:\n$\\lim_{x \\to (-1)^{-}} f(x) = [1 + 2^{+}] - k[(-2)^{-} - 3]$\n$= [3^{+}] - k[(-5)^{-}] = 3 + 6k$\n$\\lim_{x \\to (-1)^{+}} f(x) = [1 + 2^{-}] - k[(-2)^{+} - 3]$\n$= [3^{-}] - k[(-5)^{+}] = 2 + 5k$\nخواهیم داشت:\n$2 + 5k = (3 + 6k) - 4 \\Rightarrow k = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            421,
+            46,
+            549,
+            428
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_970"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 971,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "با توجه به نمودار واضح است وقتی $x \\to 1$، آن‌گاه $f(x) \\to (-1)^{+}$ و وقتی $x \\to 4$، آن‌گاه $f(x) \\to 2^{-}$ نزدیک می‌شود. بنابراین:\n$\\begin{cases} \\lim_{x \\to 1} [f(x)] = [(-1)^{+}] = -1 \\\\ \\lim_{x \\to 4} [f(x)] = [2^{-}] = 1 \\end{cases} \\Rightarrow \\lim_{x \\to 1} [f(x)] + \\lim_{x \\to 4} [f(x)] = \\circ$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            552,
+            46,
+            655,
+            427
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_971"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 972,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "عبارت $|x + 3|$ همواره بزرگ‌تر یا مساوی صفر است. بنابراین:\n$x \\to -3 \\Rightarrow |x + 3| \\to \\circ^{+}$\nدر نتیجه:\n$\\lim_{x \\to -3} [6 - |x + 3|] = [6 - \\circ^{+}] = [6^{-}] = 5$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            658,
+            47,
+            736,
+            428
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_972"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 973,
+      "solution_page": "page_0091.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = \\frac{\\pi}{3}$ محاسبه می‌کنیم:\n$\\lim_{x \\to (\\frac{\\pi}{3})^{-}} f(x) = [\\cos (\\frac{\\pi}{3})^{-} - \\frac{1}{2}] \\cos \\pi - [\\tan^2 (\\frac{\\pi}{3})^{-}]$\n$= [\\circ^{+}](-1) - [3^{-}] = \\circ - 2 = -2$\n$\\lim_{x \\to (\\frac{\\pi}{3})^{+}} f(x) = [\\cos (\\frac{\\pi}{3})^{+} - \\frac{1}{2}] \\cos \\pi - [\\tan^2 (\\frac{\\pi}{3})^{+}]$\n$= [\\circ^{-}](-1) - [3^{+}] = 1 - 3 = -2$\nدر نتیجه مقدار حد تابع در $x = \\frac{\\pi}{3}$ برابر $2-$ است.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            737,
+            47,
+            891,
+            428
+          ],
+          "placement": "solution_text",
+          "filename": "page_0091.jpg",
+          "alt": "solution_973"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 974,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = \\pi$ محاسبه می‌کنیم:\n$\\lim_{x \\to \\pi^-} f(x) = \\sin \\frac{\\pi}{2} [\\sin(\\pi)^-] + \\cos \\pi [\\cos(\\frac{\\pi}{2})^-]$\n$= 1 \\times [0^+] + (-1) [0^+] = 0 + 0 = 0$\n$\\lim_{x \\to \\pi^+} f(x) = \\sin \\frac{\\pi}{2} [\\sin(\\pi)^+] + \\cos \\pi [\\cos(\\frac{\\pi}{2})^+]$\n$= 1 \\times [0^-] + (-1) [0^-] = -1 + 1 = 0$\nدر نتیجه حد تابع در $x = \\pi$ برابر صفر است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 975,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "حد چپ و راست تابع را در $x = -1$ به دست آورده، برابر $\\ell$ قرار می‌دهیم:\n$\\lim_{x \\to (-1)^-} |2f(x) - m| = |2(-2) - m| = |-4 - m| = |m + 4| = \\ell$\n$\\lim_{x \\to (-1)^+} |2f(x) - m| = |2(1) - m| = |2 - m| = |m - 2| = \\ell$\nبنابراین:\n$|m + 4| = |m - 2| \\Rightarrow (m + 4)^2 = (m - 2)^2$\n$\\Rightarrow 12m = -12 \\Rightarrow m = -1 \\Rightarrow \\ell = 3 \\Rightarrow m + \\ell = 2$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 976,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "عبارت $P(x) = x^3 + ax^2 + bx + 4$ بر $x + 1$ بخش‌پذیر است، بنابراین $P(-1) = 0$ است. $P(x)$ در تقسیم بر $x - 1$ باقی‌مانده‌ای برابر ۳ دارد، در نتیجه $P(1) = 3$ می‌باشد.\n$\\begin{cases} P(-1) = 0 \\Rightarrow -1 + a - b + 4 = 0 \\Rightarrow a - b = -3 \\\\ P(1) = 3 \\Rightarrow 1 + a + b + 4 = 3 \\Rightarrow a + b = -2 \\end{cases}$\n$\\Rightarrow 2a = -5 \\Rightarrow a = -\\frac{5}{2} , b = \\frac{1}{2}$\n$\\Rightarrow 3a - b = \\frac{-15}{2} - \\frac{1}{2} = -8$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 977,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "$f(x)$ بر $x + 2$ بخش‌پذیر است. در نتیجه $f(-2) = 0$ می‌باشد.\n$f(-2) = 0 \\Rightarrow 4 + 2a + 4 = 0 \\Rightarrow a = -4$\n$\\Rightarrow f(x) = x^2 + 4x + 4$\nباقی‌ماندهٔ $f(x)$ بر $x + a$ همان باقی‌ماندهٔ $f(x)$ بر $x - 4$ یعنی $f(4)$ است:\n$f(4) = 36$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 978,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "$P(x)$ بر $x - 2$ بخش‌پذیر است، بنابراین $P(2) = 0$ است.\n$P(2) = 0 \\Rightarrow 4 - 2a + 3a + 1 = 0 \\Rightarrow a = -5$\n$\\Rightarrow P(x) = x^2 + 5x - 14 = (x - 2)(x + 7)$\nدر نتیجه $P(x)$ بر $(x + 7)$ نیز بخش‌پذیر است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 979,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "$f(x)$ بر $x^2 - 4$ یعنی $(x - 2)(x + 2)$ بخش‌پذیر است، بنابراین:\n$f(2) = f(-2) = 0$\n$\\begin{cases} f(2) = 0 \\Rightarrow 16 + 8a + 4b - 8 = 0 \\Rightarrow 2a + b = -2 \\\\ f(-2) = 0 \\Rightarrow 16 - 8a + 4b - 8 = 0 \\Rightarrow -2a + b = -2 \\end{cases}$\n$\\Rightarrow a = 0 , b = -2 \\Rightarrow a - b = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 980,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "$P(x)$ بر $x - 2$ بخش‌پذیر است، بنابراین:\n$P(2) = 0$\n$P(2) = 0 \\Rightarrow 16 - 8 + 4a + 12 = 0 \\Rightarrow a = -5$\n$\\Rightarrow P(x) = x^4 - x^3 - 5x^2 + 6x = x(x^3 - x^2 - 5x + 6)$\n$(x - 2)$ یکی از عوامل $P(x)$ است. عبارت $x^3 - x^2 - 5x + 6$ را بر $x - 2$ تقسیم می‌کنیم:\n$P(x) = x(x - 2)(x^2 + x - 3) \\Rightarrow P(x) = 0$\n$\\Rightarrow \\begin{cases} x = 0 \\checkmark \\\\ x - 2 = 0 \\Rightarrow x = 2 \\checkmark \\\\ x^2 + x - 3 = 0 \\Rightarrow x_1 + x_2 = -1 \\checkmark \\end{cases}$\nمجموع ریشه‌ها $= 0 + 2 - 1 = 1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 981,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "$P(x) = (x^2 - 3x - 4) Q(x) + R(x)$\n$\\downarrow$\nحداکثر درجه ۱ است، چون مقسوم‌علیه درجه ۲ است.\n$\\Rightarrow P(x) = (x^2 - 3x - 4) Q(x) + ax + b$\n$\\Rightarrow \\begin{cases} P(-1) = 0 - a + b = -4 \\\\ P(4) = 0 + 4a + b = 1 \\end{cases}$\n$\\begin{cases} -a + b = -4 \\\\ 4a + b = 1 \\end{cases}$\n$a = 1 , b = -3$\nباقی‌مانده $\\Rightarrow x - 3$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 982,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "باقی‌ماندهٔ $P(x)$ بر $x^2 - 3x + 2$ برابر $x + 2$ است.\n$P(x) = (x^2 - 3x + 2) Q(x) + (x + 2)$\n$\\Rightarrow P(x) = (x - 1)(x - 2) Q(x) + (x + 2) \\Rightarrow \\begin{cases} P(1) = 3 \\\\ P(2) = 4 \\end{cases}$\nبرای محاسبهٔ باقی‌ماندهٔ $x P(x - 1) - 2P(2x - 5)$ بر $x - 3$ کافی است $x$ را برابر ۳ قرار دهیم:\n$R = 3P(2) - 2P(1) = 3 \\times 4 - 2 \\times 3 = 12 - 6 = 6$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 983,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "با قراردادن $x = -1$ در می‌یابیم حد به صورت مبهم $\\frac{0}{0}$ است.\n$\\lim_{x \\to -1} \\frac{x^3 - x^2 - 2x}{x^3 + 1} = \\lim_{x \\to -1} \\frac{x(x^2 - x - 2)}{(x + 1)(x^2 - x + 1)}$\n$= \\lim_{x \\to -1} \\frac{x(x + 1)(x - 2)}{(x + 1)(x^2 - x + 1)} = \\lim_{x \\to -1} \\frac{x(x - 2)}{x^2 - x + 1} = \\frac{(-1)(-3)}{3} = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 984,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "حد به صورت مبهم $\\frac{0}{0}$ است.\n$\\lim_{x \\to 1} \\frac{(x^3 - 1)(x^2 - 1)}{(1 - x)^2} = \\lim_{x \\to 1} \\frac{(x - 1)(x^2 + x + 1)(x - 1)(x + 1)}{(x - 1)^2}$\n$= 3 \\times 2 = 6$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 985,
+      "solution_page": "page_0092.jpg",
+      "solution_text": "هر یک از حدود را که به صورت مبهم $\\frac{0}{0}$ هستند رفع ابهام کرده و محاسبه می‌کنیم:\n$\\lim_{x \\to 2} f(x) = \\lim_{x \\to 2} \\frac{x^4 - 13x^2 + 36}{x^2 + x - 6} = \\lim_{x \\to 2} \\frac{(x^2 - 4)(x^2 - 9)}{(x + 3)(x - 2)}$\n$= \\lim_{x \\to 2} \\frac{(x - 2)(x + 2)(x - 3)(x + 3)}{(x + 3)(x - 2)} = 4(-1) = -4$\n$\\lim_{x \\to -3} f(x) = \\lim_{x \\to -3} (x + 2)(x - 3) = (-1)(-6) = 6$\nخواهیم داشت:\n$\\lim_{x \\to 2} f(x) + \\lim_{x \\to -3} f(x) = -4 + 6 = 2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 986,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "ابتدا ضابطه سهمی $f(x)$ را به دست می‌آوریم:\n$f(x) = a(x+2)^2 + 1 \\xrightarrow{f(0) = 0} 4a + 1 = 0 \\Rightarrow a = -\\dfrac{1}{4}$\n$\\Rightarrow f(x) = -\\dfrac{1}{4}(x+2)^2 + 1 = -\\dfrac{1}{4}x^2 - x$\nخواهیم داشت:\n$\\lim_{x \\to 0} \\dfrac{x}{f(x)} = \\lim_{x \\to 0} \\dfrac{x}{-\\dfrac{1}{4}x^2 - x} = \\lim_{x \\to 0} \\dfrac{x}{-x(\\dfrac{x}{4} + 1)} = -1$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 987,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "ابتدا $\\lim_{x \\to 2} f(x)$ را محاسبه می‌کنیم:\n$\\lim_{x \\to 2} f(x) = \\lim_{x \\to 2} \\dfrac{(x-2)(x^2+2x+8)}{(x-2)(x+2)} = \\dfrac{16}{4} = 4$\nخواهیم داشت:\n$f(k) = 4 \\Rightarrow \\dfrac{(k-2)(k^2+2k+8)}{(k-2)(k+2)} = 4$\n$\\Rightarrow k^2+2k+8 = 4k+8 \\Rightarrow k^2-2k=0 \\Rightarrow \\begin{cases} k=0 \\ \\checkmark \\\\ k=2 \\ \\text{غ ق ق} \\end{cases}$\nتابع $f(x)$ در $x=2$ تعریف نشده است و $f(2)$ وجود ندارد.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 988,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "حد $f(x)$ در $x=2$ به صورت مبهم $\\dfrac{\\text{صفر}}{\\text{صفر}}$ است.\n$\\lim_{x \\to 2} f(x) = \\lim_{x \\to 2} \\dfrac{x^2+ax-2x-2a}{x^2-4} = \\lim_{x \\to 2} \\dfrac{x^2-2x+ax-2a}{x^2-4}$\n$= \\lim_{x \\to 2} \\dfrac{x(x-2)+a(x-2)}{(x-2)(x+2)} = \\lim_{x \\to 2} \\dfrac{(x-2)(x+a)}{(x-2)(x+2)} = \\dfrac{a+2}{4}$\nبنابراین: $\\dfrac{a+2}{4} = 2 \\Rightarrow a=6$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 3 conflicts with authoritative answer key 4; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 989,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "می‌دانیم $f(-1) = -1$:\n$\\lim_{x \\to (-1)^-} \\dfrac{f(x)-f(-1)}{x+1} = \\lim_{x \\to (-1)^-} \\dfrac{f(x)+1}{x+1} = \\lim_{x \\to (-1)^-} \\dfrac{x^3+1}{x+1}$\n$= \\lim_{x \\to (-1)^-} \\dfrac{(x+1)(x^2-x+1)}{x+1} = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 990,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "ابتدا ضابطه تابع خطی $f$ و $f^{-1}$ را به دست می‌آوریم.\nتابع $f$ از دو نقطهٔ $(0,1)$ و $(-3,0)$ عبور می‌کند:\n$f(x) - 0 = \\dfrac{1-0}{0+3}(x+3) \\Rightarrow f(x) = \\dfrac{1}{3}x+1$\n$y = \\dfrac{1}{3}x+1 \\Rightarrow \\dfrac{1}{3}x = y-1 \\Rightarrow x = 3y-3$\n$\\Rightarrow f^{-1}(x) = 3x-3$\nخواهیم داشت:\n$\\lim_{x \\to 2} \\dfrac{f(3x)-f^{-1}(x)}{x-2} = \\lim_{x \\to 2} \\dfrac{(x+1)-(3x-3)}{x-2}$\n$= \\lim_{x \\to 2} \\dfrac{-2(x-2)}{x-2} = -2$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 991,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "ابتدا مقادیر عبارات براکتی را محاسبه کرده، سپس حد را به دست می‌آوریم:\n$\\lim_{x \\to 5^+} \\dfrac{2x + [-x] - 4}{x^2 - [x^2]} = \\lim_{x \\to 5^+} \\dfrac{2x + [(-5)^-] - 4}{x^2 - [25^+]}$\n$= \\lim_{x \\to 5^+} \\dfrac{2x - 10}{x^2 - 25} = \\lim_{x \\to 5^+} \\dfrac{2(x-5)}{(x-5)(x+5)} = \\dfrac{2}{10} = \\dfrac{1}{5}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 992,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "تذکر: دقت داشته باشید در این گونه سؤالات به علت وجود ابهام، مقدار $x$ را قرار نمی‌دهیم، بلکه ابتدا با توجه به محدودهٔ $x$ حدود عبارت داخل براکت را به دست آورده و براکت را از بین می‌بریم.\nابتدا تابع دوضابطه‌ای $f(x)$ را به دست می‌آوریم.\nبرای $x$های بزرگ‌تر از ۱ تابع خطی از دو نقطهٔ $(1,2)$ و $(\\dfrac{3}{2},0)$ می‌گذرد:\n$y-0 = \\dfrac{2-0}{1-\\dfrac{3}{2}}(x-\\dfrac{3}{2}) \\Rightarrow y = -4x+6$\nبرای $x$های کوچک‌تر از ۱ تابع خطی از دو نقطهٔ $(1,2)$ و $(0,0)$ می‌گذرد:\n$y = 2x$\nبنابراین:\n$f(x) = \\begin{cases} -4x+6 & x \\ge 1 \\\\ 2x & x < 1 \\end{cases}$\n$\\lim_{x \\to 1^-} \\dfrac{1-x^2}{f(x)-2} = \\lim_{x \\to 1^-} \\dfrac{1-x^2}{2x-2} = \\lim_{x \\to 1^-} \\dfrac{(1-x)(1+x)}{-2(1-x)} = -1$\n$\\lim_{x \\to 1^+} \\dfrac{1-x^2}{f(x)-2} = \\lim_{x \\to 1^+} \\dfrac{1-x^2}{-4x+4} = \\lim_{x \\to 1^+} \\dfrac{(1-x)(1+x)}{4(1-x)} = \\dfrac{1}{2}$\n$\\Rightarrow \\dfrac{1}{2} - (-1) = \\dfrac{3}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 993,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "$f.g(x)$ را تشکیل داده، سپس حد را محاسبه می‌کنیم:\n$\\lim_{x \\to -1} f.g(x) = \\lim_{x \\to -1} \\dfrac{\\dfrac{3(2+\\dfrac{2}{x})}{x}}{x^2-2x-3} = \\lim_{x \\to -1} \\dfrac{\\dfrac{6(x+1)}{x^2}}{(x+1)(x-3)}$\n$= \\dfrac{\\dfrac{-6}{1}}{-4} = \\dfrac{3}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": [
+        "The printed evaluation step incorrectly asserts 6/1 becomes -6 to yield 3/2 instead of -3/2; transcribed exactly as printed."
+      ]
+    },
+    {
+      "question_number": 994,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "برای رفع ابهام، عبارت را ساده می‌کنیم:\n$\\lim_{x \\to 4} \\dfrac{(\\sqrt{x}-2)(x^2-16)}{(x-4)^2} = \\lim_{x \\to 4} \\dfrac{(\\sqrt{x}-2)(x-4)(x+4)}{(\\sqrt{x}-2)(\\sqrt{x}+2)(x-4)}$\n$= \\dfrac{8}{4} = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 995,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "چون حاصل حد مبهم است، عبارت را ساده می‌کنیم. بدین منظور مخرج کسر را نیز گویا می‌کنیم:\n$\\lim_{x \\to -8} \\dfrac{x^2+5x-24}{3(\\sqrt[3]{x}+2)} = \\lim_{x \\to -8} \\dfrac{(x+8)(x-3)}{3(\\sqrt[3]{x}+2)} \\times \\dfrac{\\sqrt[3]{x^2}-2\\sqrt[3]{x}+4}{\\sqrt[3]{x^2}-2\\sqrt[3]{x}+4}$\n$= \\lim_{x \\to -8} \\dfrac{(x+8)(-11)(12)}{3(x+8)} = -44$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 996,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "برای رفع ابهام مخرج کسر را تجزیه می‌کنیم:\n$\\lim_{x \\to 1} \\dfrac{\\sqrt{x}-1}{(3x-1)^2-4} = \\lim_{x \\to 1} \\dfrac{\\sqrt{x}-1}{((3x-1)-2)((3x-1)+2)}$\n$= \\lim_{x \\to 1} \\dfrac{\\sqrt{x}-1}{(3x-3)(3x+1)} = \\lim_{x \\to 1} \\dfrac{\\sqrt{x}-1}{3(\\sqrt{x}-1)(\\sqrt{x}+1)(4)} = \\dfrac{1}{24}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 997,
+      "solution_page": "page_0093.jpg",
+      "solution_text": "حاصل حد مبهم می‌باشد.\n$\\lim_{x \\to 4} \\dfrac{x - \\sqrt{x} - 2}{x^2 - 16} = \\lim_{x \\to 4} \\dfrac{(\\sqrt{x}-2)(\\sqrt{x}+1)}{(x-4)(x+4)}$\n$= \\lim_{x \\to 4} \\dfrac{(\\sqrt{x}-2)(\\sqrt{x}+1)}{(\\sqrt{x}-2)(\\sqrt{x}+2)(x+4)} = \\dfrac{3}{4 \\times 8} = \\dfrac{3}{32}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 998,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "ابتدا ضابطهٔ توابع $f(x)$ و $g(x)$ را به دست می‌آوریم.\nتابع $f(x)$ از دو نقطهٔ $(0,0)$ و $(3,-3)$ عبور می‌کند.\n$f(x) = -x$\nسهمی $g(x)$ از سه نقطهٔ $(0,0)$، $(2,0)$ و $(3,-3)$ عبور می‌کند.\n$g(x) = ax(x-2) \\xrightarrow{(3,-3)} -3 = 3a \\Rightarrow a = -1$\n$\\Rightarrow g(x) = -x^2 + 2x$\nخواهیم داشت:\n$\\lim_{x \\to \\circ} \\frac{f(x)+g(x)}{2x} = \\lim_{x \\to \\circ} \\frac{-x-x^2+2x}{2x} = \\lim_{x \\to \\circ} \\frac{x(-x+1)}{2x} = \\frac{1}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 999,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "$f$ سهمی است که صفرهای آن $-4$ و $2$ بوده و از نقطهٔ $(0,4)$ عبور می‌کند:\n$f(x) = a(x-2)(x+4) \\xrightarrow{f(0)=4} a(-2)(4) = 4 \\Rightarrow a = -\\frac{1}{2} \\Rightarrow f(x) = -\\frac{1}{2}(x-2)(x+4)$\n$g$ تابع خطی است که از نقاط $(2,0)$ و $(0,4)$ عبور می‌کند. بدیهی است شیب این خط $-2$ و عرض از مبدأ آن $4$ است:\n$g(x) = -2x+4 = -2(x-2)$\nحال، حد عبارت داده‌شده را محاسبه می‌کنیم:\n$\\lim_{x \\to 2} \\frac{(f-g)(x)}{x^2-4} = \\lim_{x \\to 2} \\frac{-\\frac{1}{2}(x-2)(x+4)+2(x-2)}{(x-2)(x+2)}$\n$= \\lim_{x \\to 2} \\frac{(x-2)(-\\frac{1}{2}(x+4)+2)}{(x-2)(x+2)} = \\frac{-1}{4}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1000,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "چون حد مخرج کسر صفر می‌شود، حد صورت نیز باید صفر شود تا ابهام رخ داده و پس از رفع ابهام حاصل حد عددی حقیقی شود.\nبنابراین:\n$x = -1 \\Rightarrow x^2-ax+4 = 0 \\Rightarrow 1+a+4 = 0 \\Rightarrow a = -5$\n$\\lim_{x \\to -1} \\frac{x^2+5x+4}{x^2-1} = \\lim_{x \\to -1} \\frac{(x+1)(x+4)}{(x+1)(x-1)} = \\frac{3}{-2} = -\\frac{3}{2}$\n$\\Rightarrow b = -\\frac{3}{2} \\Rightarrow ab = \\frac{15}{2} = 7/5$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1001,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "تابع خطی $f$ را به صورت $f(x) = ax+b$ در نظر می‌گیریم:\n$\\lim_{x \\to 1} \\frac{x^2-ax-b}{x-1} = 4$\nچون حد مخرج کسر برابر صفر می‌باشد، حد صورت نیز باید صفر باشد؛ در غیر این صورت حد وجود نخواهد داشت.\n$x^2-ax-b = 0 \\xrightarrow{x=1} 1-a-b = 0 \\Rightarrow b = 1-a$\nخواهیم داشت:\n$\\lim_{x \\to 1} \\frac{x^2-ax+a-1}{x-1} = 4 \\Rightarrow \\lim_{x \\to 1} \\frac{(x-1)(x+1-a)}{x-1} = 4$\n$\\Rightarrow 2-a = 4 \\Rightarrow a = -2, b = 3$\nبنابراین:\n$\\lim_{x \\to -1} f(x) = \\lim_{x \\to -1} (-2x+3) = 5$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1002,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "حد مخرج کسر برابر صفر است. برای این‌که حاصل حد برابر صفر شود، حد صورت کسر نیز باید صفر باشد و تعداد عوامل صفرکنندهٔ صورت بیشتر از مخرج باشد تا پس از رفع ابهام و ساده‌کردن عوامل صفرکننده، باز هم صورت کسر برابر صفر شود. بنابراین:\n$x^3+ax^2+bx+c = (x+2)^3 = x^3+6x^2+12x+8$\n$\\Rightarrow a=6, b=12, c=8 \\Rightarrow a+b-c = 10$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1003,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "هر دو کسر موجود در $x = -2$ حد ندارند. برای رفع ابهام مخرج‌مشترک گرفته و کسر را ساده می‌کنیم:\n$\\lim_{x \\to -2} (\\frac{8}{x^2-4}-\\frac{x}{x+2}) = \\lim_{x \\to -2} \\frac{8-x(x-2)}{(x-2)(x+2)}$\n$= \\lim_{x \\to -2} \\frac{-(x+4)(x-2)}{(x+2)(x-2)} = \\frac{6}{-4} = -\\frac{3}{2}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1004,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "ابتدا عبارت را ساده می‌کنیم:\n$\\lim_{x \\to -1} (\\frac{3}{x^3+1}+\\frac{2}{x^2-1})$\n$= \\lim_{x \\to -1} (\\frac{3}{(x+1)(x^2-x+1)}+\\frac{2}{(x+1)(x-1)})$\n$= \\lim_{x \\to -1} \\frac{3(x-1)+2(x^2-x+1)}{(x+1)(x-1)(x^2-x+1)} = \\lim_{x \\to -1} \\frac{2x^2+x-1}{(x+1)(-6)}$\n$= \\lim_{x \\to -1} \\frac{(x+1)(2x-1)}{-6(x+1)} = \\frac{1}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1005,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "ابتدا عبارت را ساده می‌کنیم:\n$\\lim_{x \\to -1} \\frac{1}{x+1} (\\frac{1}{x+3}-\\frac{2}{x+5}) = \\lim_{x \\to -1} \\frac{1}{x+1} (\\frac{x+5-2(x+3)}{(x+3)(x+5)})$\n$= \\lim_{x \\to -1} \\frac{1}{x+1} (\\frac{-(x+1)}{(x+3)(x+5)}) = \\frac{-1}{8}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1006,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "ابتدا عبارت را ساده می‌کنیم:\n$\\lim_{x \\to \\circ} (\\frac{a}{x^2-3x}-\\frac{1}{x}) = \\lim_{x \\to \\circ} (\\frac{a-(x-3)}{x(x-3)})$\nحد مخرج کسر برابر صفر است. برای این‌که حد وجود داشته باشد باید حد صورت کسر نیز صفر شود:\n$a-x+3 = 0 \\xrightarrow{x=0} a = -3$\nبنابراین:\n$b = \\lim_{x \\to \\circ} \\frac{-x}{x(x-3)} = \\frac{1}{3} \\Rightarrow ab = -1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1007,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "برای رفع ابهام و ساده‌کردن عبارت، صورت و مخرج کسر را در عبارت مزدوج صورت ضرب می‌کنیم:\n$\\lim_{x \\to -1} \\frac{3x+\\sqrt{x+10}}{x^2-1} \\times \\frac{3x-\\sqrt{x+10}}{3x-\\sqrt{x+10}}$\n$= \\lim_{x \\to -1} \\frac{9x^2-x-10}{(x+1)(x-1)(3x-\\sqrt{x+10})}$\n$= \\lim_{x \\to -1} \\frac{(x+1)(9x-10)}{(x+1)(12)} = -\\frac{19}{12}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1008,
+      "solution_page": "page_0094.jpg",
+      "solution_text": "حد به صورت مبهم $\\frac{0}{0}$ است.\n$\\lim_{h \\to \\circ} \\frac{f(1+h)-f(1)}{h} = \\lim_{h \\to \\circ} \\frac{2(1+h)+\\sqrt{1+h}-3}{h}$\n$= \\lim_{h \\to \\circ} \\frac{2h+\\sqrt{1+h}-1}{h} = \\lim_{h \\to \\circ} 2 + \\frac{\\sqrt{1+h}-1}{h}$\n$= 2 + \\lim_{h \\to \\circ} \\frac{\\sqrt{1+h}-1}{h} \\times \\frac{\\sqrt{1+h}+1}{\\sqrt{1+h}+1} = 2 + \\lim_{h \\to \\circ} \\frac{h}{h(\\sqrt{1+h}+1)}$\n$= 2 + \\frac{1}{2} = \\frac{5}{2} = 2/5$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1009,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "واضح است $\\lim_{x \\to 3} f(x) = \\lim_{x \\to 0} f(x+3)$ بنابراین:\n$\\lim_{x \\to 0} f(x+3) = \\lim_{x \\to 0} \\frac{\\sqrt{x+1}-1}{x^2+x} \\times \\frac{\\sqrt{x+1}+1}{\\sqrt{x+1}+1}$\n$= \\lim_{x \\to 0} \\frac{x}{x(x+1)(2)} = \\frac{1}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1010,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "با توجه به $x \\to (-2)^+$ عبارت $3x+2$ منفی بوده و از قدرمطلق، قرینهٔ آن خارج می‌شود.\n$\\lim_{x \\to (-2)^+} \\frac{x^2+3x+2}{\\sqrt{-2x}-2} \\times \\frac{\\sqrt{-2x}+2}{\\sqrt{-2x}+2} = \\lim_{x \\to (-2)^+} \\frac{(x+1)(x+2)(4)}{-2(x+2)} = 2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1011,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "با توجه به $x \\to (-3)^+$ عبارت داخل قدرمطلق یعنی $(x-2)(x+3)$ منفی بوده و قرینهٔ آن از قدرمطلق خارج می‌شود.\n$\\lim_{x \\to (-3)^+} \\frac{-(x+3)(x-2)}{2x+\\sqrt{x^2-9x}} \\times \\frac{2x-\\sqrt{x^2-9x}}{2x-\\sqrt{x^2-9x}}$\n$= \\lim_{x \\to (-3)^+} \\frac{-(x+3)(x-2)(-12)}{3x(x+3)} = \\frac{-(-5)(-12)}{-9} = \\frac{20}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1012,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "ابتدا $\\lim_{x \\to 0^-} f(x)$ را محاسبه می‌کنیم:\n$\\lim_{x \\to 0^-} x(1+\\frac{4}{|x|}) = \\lim_{x \\to 0^-} x(1+\\frac{4}{-x}) = \\lim_{x \\to 0^-} (x-4) = -4$\nخواهیم داشت:\n$\\lim_{x \\to 0^-} \\frac{4+f(x)}{2-\\sqrt{-f(x)}} = \\lim_{f(x) \\to -4} \\frac{4+f(x)}{2-\\sqrt{-f(x)}} \\times \\frac{2+\\sqrt{-f(x)}}{2+\\sqrt{-f(x)}}$\n$= \\lim_{f(x) \\to -4} \\frac{(4+f(x))(4)}{4+f(x)} = 4$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1013,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "ابتدا $\\lim_{x \\to 1} f(x)$ را محاسبه می‌کنیم:\n$\\lim_{x \\to 1} f(x) = \\lim_{x \\to 1} \\frac{x^2-1}{x-\\sqrt{x}} \\times \\frac{x+\\sqrt{x}}{x+\\sqrt{x}} = \\lim_{x \\to 1} \\frac{(x-1)(x+1)(2)}{x(x-1)} = 4$\nحال $\\lim_{x \\to 4} f(x)$ را محاسبه می‌کنیم:\n$\\lim_{x \\to 4} \\frac{x^2-1}{x-\\sqrt{x}} = \\frac{16-1}{4-2} = \\frac{15}{2} = 7/5$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1014,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "با استفاده از اتحاد مزدوج رفع ابهام می‌کنیم:\n$\\lim_{x \\to 4} \\frac{\\sqrt{\\sqrt{x}-1}-1}{x-4} \\times \\frac{\\sqrt{\\sqrt{x}-1}+1}{\\sqrt{\\sqrt{x}-1}+1} = \\lim_{x \\to 4} \\frac{\\sqrt{x}-2}{2(x-4)}$\n$= \\lim_{x \\to 4} \\frac{\\sqrt{x}-2}{2(x-4)} \\times \\frac{\\sqrt{x}+2}{\\sqrt{x}+2} = \\lim_{x \\to 4} \\frac{x-4}{8(x-4)} = \\frac{1}{8}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1015,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "برای گویاکردن مخرج کسر، صورت و مخرج کسر را در مزدوج عبارت مخرج ضرب می‌کنیم:\n$\\lim_{x \\to -1} \\frac{2x^2+7x+5}{3-\\sqrt{7+\\sqrt{x+5}}} \\times \\frac{3+\\sqrt{7+\\sqrt{x+5}}}{3+\\sqrt{7+\\sqrt{x+5}}}$\n$= \\lim_{x \\to -1} \\frac{(x+1)(2x+5)(6)}{9-(7+\\sqrt{x+5})}$\n$= \\lim_{x \\to -1} \\frac{6(x+1)(2x+5)}{2-\\sqrt{x+5}} \\times \\frac{2+\\sqrt{x+5}}{2+\\sqrt{x+5}}$\n$= \\lim_{x \\to -1} \\frac{6(x+1)(2x+5)(4)}{-(x+1)} = -72$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1016,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "روش اول: برای رفع ابهام عبارت را ساده می‌کنیم:\n$\\lim_{x \\to 0^+} \\frac{\\sqrt{x^2+3x^3}}{3x^2-x} = \\lim_{x \\to 0^+} \\frac{\\sqrt{x^2(1+3x)}}{x(3x-1)}$\n$= \\lim_{x \\to 0^+} \\frac{x \\sqrt{1+3x}}{x(3x-1)} = \\frac{1}{-1} = -1$\nروش دوم: قضیه کم‌توان:\n$\\lim_{x \\to 0} ax^n + bx^{n+1} + \\dots = \\lim_{x \\to 0} ax^n$\n$\\lim_{x \\to 0^+} \\frac{\\sqrt{x^2+3x^3}}{3x^2-x} = \\lim_{x \\to 0^+} \\frac{\\sqrt{x^2}}{-x} = -1$",
+      "stated_correct_option": null,
+      "media_regions": [],
+      "review_notes": [
+        "stated_correct_option 4 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+      ]
+    },
+    {
+      "question_number": 1017,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "برای رفع ابهام، صورت و مخرج کسر را در عبارت چاق صورت! ضرب می‌کنیم:\n$\\lim_{x \\to 2} \\frac{\\sqrt[3]{2x+4}-2}{3x^2-4x-4} \\times \\frac{\\sqrt[3]{(2x+4)^2}+2\\sqrt[3]{2x+4}+4}{\\sqrt[3]{(2x+4)^2}+2\\sqrt[3]{2x+4}+4}$\n$= \\lim_{x \\to 2} \\frac{2x+4-8}{(x-2)(3x+2)(12)} = \\lim_{x \\to 2} \\frac{2(x-2)}{(x-2)(8)(12)} = \\frac{1}{48}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1018,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "در رفع ابهام عبارات قدرمطلقی با تعیین علامت عبارت داخل قدرمطلق، قدرمطلق را از بین می‌بریم:\n$\\lim_{x \\to 3^-} \\frac{\\sqrt{x^2-6x+9}}{\\sqrt[3]{x+5}-2}$\n$= \\lim_{x \\to 3^-} \\frac{\\sqrt{(x-3)^2}}{\\sqrt[3]{x+5}-2} \\times \\frac{\\sqrt[3]{(x+5)^2}+2\\sqrt[3]{x+5}+4}{\\sqrt[3]{(x+5)^2}+2\\sqrt[3]{x+5}+4}$\n$= \\lim_{x \\to 3^-} \\frac{|x-3|(12)}{x+5-8} = \\lim_{x \\to 3^-} \\frac{-(x-3)(12)}{x-3} = -12$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1019,
+      "solution_page": "page_0095.jpg",
+      "solution_text": "برای گویاکردن مخرج کسر، یک بار در مزدوج و یک بار در چاق! ضرب می‌کنیم:\n$\\lim_{x \\to 1} \\frac{x^2-1}{\\sqrt{x}-\\sqrt[3]{x}} \\times \\frac{\\sqrt{x}+\\sqrt[3]{x}}{\\sqrt{x}+\\sqrt[3]{x}}$\n$= \\lim_{x \\to 1} \\frac{(x-1)(x+1)(2)}{x-\\sqrt[3]{x^2}} \\times \\frac{x^2+x\\sqrt[3]{x^2}+\\sqrt[3]{x^4}}{x^2+x\\sqrt[3]{x^2}+\\sqrt[3]{x^4}}$\n$= \\lim_{x \\to 1} \\frac{(x-1)(x+1)(2)(3)}{x^3-x^2} = \\lim_{x \\to 1} \\frac{(x-1)(12)}{x^2(x-1)} = 12$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1020,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "برای رفع ابهام از اتحادهای مزدوج و مجموع مکعبات (چاق و لاغر) کمک می‌گیریم:\n$$ \\lim_{x \\to 8} \\frac{x-8}{\\sqrt{2+\\sqrt[3]{x}}-2} \\times \\frac{\\sqrt{2+\\sqrt[3]{x}}+2}{\\sqrt{2+\\sqrt[3]{x}}+2} $$\n$$ = \\lim_{x \\to 8} \\frac{(x-8)(4)}{\\sqrt[3]{x}-2} \\times \\frac{4+2\\sqrt[3]{x}+\\sqrt[3]{x^2}}{4+2\\sqrt[3]{x}+\\sqrt[3]{x^2}} $$\n$$ = \\lim_{x \\to 8} \\frac{(x-8)(4)(12)}{x-8} = 48 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1021,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "حد صورت کسر برابر صفر است. برای این که حاصل حد کسر برابر عدد مخالف صفر $b$ شود باید حد مخرج کسر نیز صفر باشد:\n$$ \\sqrt{x+a} - 1 = 0 \\xrightarrow{x=-2} \\sqrt{-2+a} - 1 = 0 \\Rightarrow a = 3 $$\nبنابراین:\n$$ b = \\lim_{x \\to -2} \\frac{x^2 - 2x - 8}{\\sqrt{x+3} - 1} = \\lim_{x \\to -2} \\frac{x^2 - 2x - 8}{\\sqrt{x+3} - 1} \\times \\frac{\\sqrt{x+3} + 1}{\\sqrt{x+3} + 1} $$\n$$ = \\lim_{x \\to -2} \\frac{(x+2)(x-4)(\\sqrt{x+3} + 1)}{x+2} = (-6)(2) = -12 $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1022,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "با توجه به این که حد صورت کسر صفر می‌شود واضح است حد مخرج کسر نیز باید صفر باشد، در غیر این صورت حاصل حد برابر صفر می‌شود. ($b \\neq 0$)\n$$ 2 - \\sqrt{ax-2} = 0 \\xrightarrow{x=3} 2 - \\sqrt{3a-2} = 0 \\Rightarrow a = 2 $$\nدر نتیجه:\n$$ b = \\lim_{x \\to 3} \\frac{\\sqrt{4x-3} - 3}{2 - \\sqrt{2x-2}} \\times \\frac{\\sqrt{4x-3} + 3}{\\sqrt{4x-3} + 3} \\times \\frac{2 + \\sqrt{2x-2}}{2 + \\sqrt{2x-2}} $$\n$$ = \\lim_{x \\to 3} \\frac{(4x-3-9)(4)}{(4-2x+2)(6)} = \\lim_{x \\to 3} \\frac{4(x-3)(4)}{-2(x-3)(6)} = -\\frac{4}{3} $$\n$$ \\Rightarrow ab = -\\frac{8}{3} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1023,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "تابع خطی $f$ را به صورت $f(x) = ax + b$ در نظر می‌گیریم:\n$$ \\lim_{x \\to 1} \\frac{x-1}{\\sqrt{ax+b} - 2} = \\frac{2}{3} $$\nچون حد صورت کسر برابر صفر می‌شود، واضح است حد مخرج کسر نیز باید صفر باشد:\n$$ \\sqrt{ax+b} - 2 = 0 \\xrightarrow{x=1} \\sqrt{a+b} = 2 $$\n$$ \\Rightarrow a + b = 4 \\Rightarrow b = 4 - a $$\nدر نتیجه:\n$$ \\lim_{x \\to 1} \\frac{x-1}{\\sqrt{ax+4-a} - 2} \\times \\frac{\\sqrt{ax+4-a} + 2}{\\sqrt{ax+4-a} + 2} $$\n$$ = \\lim_{x \\to 1} \\frac{(x-1)(4)}{a(x-1)} = \\frac{4}{a} = \\frac{2}{3} \\Rightarrow a = 6 \\Rightarrow b = -2 $$\n$$ \\Rightarrow f(x) = 6x - 2 \\Rightarrow f(2) = 10 $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1024,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "حد صورت کسر برابر صفر است. واضح است برای این که حاصل حد صفر نباشد حد مخرج کسر نیز باید صفر شود:\n$$ \\sqrt[3]{x+a} + 1 = 0 \\xrightarrow{x=-2} \\sqrt[3]{-2+a} + 1 = 0 \\Rightarrow a = 1 $$\nدر نتیجه:\n$$ b = \\lim_{x \\to -2} \\frac{x^2 - x - 6}{\\sqrt[3]{x+1}+1} \\times \\frac{\\sqrt[3]{(x+1)^2} - \\sqrt[3]{x+1} + 1}{\\sqrt[3]{(x+1)^2} - \\sqrt[3]{x+1} + 1} $$\n$$ = \\lim_{x \\to -2} \\frac{(x+2)(x-3)(3)}{x+2} = -15 $$\n$$ \\Rightarrow a - b = 1 - (-15) = 16 $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1025,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "با توجه به نمودار، حد تابع $f(x)$ وقتی $x \\to 0$ برابر ۱ است.\nچون حد مخرج کسر برابر صفر است، حد صورت کسر نیز باید صفر باشد:\n$$ \\sqrt{x^2+1} - a = 0 \\xrightarrow{x=0} 1 - a = 0 \\Rightarrow a = 1 $$\nبنابراین:\n$$ \\lim_{x \\to 0} \\frac{\\sqrt{x^2+1} - 1}{bx^2} = 1 \\Rightarrow \\lim_{x \\to 0} \\frac{\\sqrt{x^2+1} - 1}{bx^2} \\times \\frac{\\sqrt{x^2+1} + 1}{\\sqrt{x^2+1} + 1} = 1 $$\n$$ \\Rightarrow \\lim_{x \\to 0} \\frac{x^2}{2bx^2} = 1 \\Rightarrow \\frac{1}{2b} = 1 \\Rightarrow b = \\frac{1}{2} \\Rightarrow \\frac{a}{b} = 2 $$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1026,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "می‌دانیم $\\text{fof}(x) = \\sqrt{6-\\sqrt{6-x}}$ است. در\n$$ \\lim_{x \\to 2} \\frac{\\sqrt{6-\\sqrt{6-x}} - a}{x-2} = b $$\nحد صورت کسر نیز باید صفر باشد:\n$$ \\sqrt{6-\\sqrt{6-x}} - a = 0 \\xrightarrow{x=2} 2 - a = 0 \\Rightarrow a = 2 $$\nخواهیم داشت:\n$$ b = \\lim_{x \\to 2} \\frac{\\sqrt{6-\\sqrt{6-x}} - 2}{x-2} \\times \\frac{\\sqrt{6-\\sqrt{6-x}} + 2}{\\sqrt{6-\\sqrt{6-x}} + 2} $$\n$$ = \\lim_{x \\to 2} \\frac{2-\\sqrt{6-x}}{(x-2)(4)} \\times \\frac{2+\\sqrt{6-x}}{2+\\sqrt{6-x}} = \\lim_{x \\to 2} \\frac{x-2}{(x-2)(4)(4)} = \\frac{1}{16} $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1027,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "برای رفع ابهام، عبارت صورت و مخرج کسر را تجزیه می‌کنیم:\n$$ \\lim_{x \\to \\frac{\\pi}{2}} \\frac{2\\sin^2 x - \\sin x - 1}{\\cos^2 x} = \\lim_{x \\to \\frac{\\pi}{2}} \\frac{(\\sin x - 1)(2\\sin x + 1)}{1 - \\sin^2 x} $$\n$$ = \\lim_{x \\to \\frac{\\pi}{2}} \\frac{-(1-\\sin x)(2\\sin x + 1)}{(1-\\sin x)(1+\\sin x)} = \\frac{-3}{2} $$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1028,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "برای رفع ابهام، کسر را ساده می‌کنیم:\n$$ \\lim_{x \\to \\frac{3\\pi}{2}} \\frac{\\cos^2 x}{1+\\sin^3 x} = \\lim_{x \\to \\frac{3\\pi}{2}} \\frac{1-\\sin^2 x}{1+\\sin^3 x} $$\n$$ = \\lim_{x \\to \\frac{3\\pi}{2}} \\frac{(1+\\sin x)(1-\\sin x)}{(1+\\sin x)(1-\\sin x + \\sin^2 x)} = \\frac{2}{3} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "task_id": "math-solutions-05",
+      "subject": "math",
+      "question_number": 1029,
+      "solution_page": "page_0096.jpg",
+      "solution_text": "ابتدا عبارت را ساده می‌کنیم:\n$$ \\lim_{x \\to 2\\pi} \\frac{\\sin^2 x}{\\cos 2x - \\cos x} = \\lim_{x \\to 2\\pi} \\frac{1-\\cos^2 x}{2\\cos^2 x - 1 - \\cos x} $$\n$$ = \\lim_{x \\to 2\\pi} \\frac{(1-\\cos x)(1+\\cos x)}{(\\cos x - 1)(2\\cos x + 1)} = \\frac{-2}{3} $$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1030,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "برای رفع ابهام، ابتدا عبارت را ساده می‌کنیم:\n$\\lim_{x \\to \\frac{3\\pi}{4}} \\frac{\\cos 2x}{1 + \\tan x} = \\lim_{x \\to \\frac{3\\pi}{4}} \\frac{\\cos^2 x - \\sin^2 x}{1 + \\frac{\\sin x}{\\cos x}} = \\lim_{x \\to \\frac{3\\pi}{4}} \\frac{(\\cos x - \\sin x)(\\cos x + \\sin x)}{\\frac{\\sin x + \\cos x}{\\cos x}} = \\frac{-\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{2}}{2}}{\\frac{1}{-\\frac{\\sqrt{2}}{2}}} = (-\\sqrt{2})(-\\frac{\\sqrt{2}}{2}) = 1$",
+      "media_regions": [
+        {
+          "region": [
+            462,
+            63,
+            891,
+            220
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1031,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "عبارت را ساده کرده، رفع ابهام می‌کنیم:\n$\\lim_{x \\to \\frac{2\\pi}{3}} \\frac{1 - 4\\cos^2 x}{2\\cos 2x - \\cos x} = \\lim_{x \\to \\frac{2\\pi}{3}} \\frac{(1 - 2\\cos x)(1 + 2\\cos x)}{2\\cos^2 x - \\cos x - 1} = \\lim_{x \\to \\frac{2\\pi}{3}} \\frac{(1 - 2\\cos x)(1 + 2\\cos x)}{(\\cos x - 1)(2\\cos x + 1)} = \\frac{2}{-\\frac{3}{2}} = -\\frac{4}{3}$",
+      "media_regions": [
+        {
+          "region": [
+            461,
+            230,
+            856,
+            355
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1032,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "اگر $x = t + \\frac{\\pi}{3}$ باشد، خواهیم داشت:\n$\\lim_{x \\to \\frac{\\pi}{3}} \\frac{\\cos(x + \\frac{\\pi}{6})}{\\sin(x + \\frac{2\\pi}{3})} = \\lim_{t \\to 0} \\frac{\\cos(t + \\frac{\\pi}{2})}{\\sin(t + \\pi)} = \\lim_{t \\to 0} \\frac{-\\sin t}{-\\sin t} = 1$",
+      "media_regions": [
+        {
+          "region": [
+            462,
+            348,
+            856,
+            452
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1033,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "ابتدا مقادیر جزء صحیح را مشخص کرده، سپس رفع ابهام می‌کنیم:\n$\\lim_{x \\to 0^-} \\frac{\\cos \\pi x + [x]}{\\sin^2 \\pi x + [-x]} = \\lim_{x \\to 0^-} \\frac{\\cos \\pi x + [0^-]}{\\sin^2 \\pi x + [0^+]} = \\lim_{x \\to 0^-} \\frac{\\cos \\pi x - 1}{\\sin^2 \\pi x} = \\lim_{x \\to 0^-} \\frac{-(1 - \\cos \\pi x)}{(1 - \\cos \\pi x)(1 + \\cos \\pi x)} = \\frac{-1}{2}$",
+      "media_regions": [
+        {
+          "region": [
+            459,
+            445,
+            855,
+            560
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1034,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "ابتدا مقدار عبارت جزء صحیح را مشخص کرده، سپس کسر را ساده می‌کنیم:\n$\\lim_{x \\to (\\frac{1}{6})^+} \\frac{[4\\cos^2 \\pi x] - \\frac{a}{x}}{6x - 1} = \\lim_{x \\to (\\frac{1}{6})^+} \\frac{[4(\\frac{3}{4})^-] - \\frac{a}{x}}{6x - 1} = \\lim_{x \\to (\\frac{1}{6})^+} \\frac{[3^-] - \\frac{a}{x}}{6x - 1} = \\lim_{x \\to (\\frac{1}{6})^+} \\frac{2 - \\frac{a}{x}}{6x - 1}$\nحد مخرج کسر برابر صفر است، در نتیجه حد صورت کسر نیز باید صفر باشد:\n$2 - \\frac{a}{x} = 0 \\xrightarrow{x = \\frac{1}{6}} 2 - 6a = 0 \\Rightarrow a = \\frac{1}{3}$\nبنابراین:\n$b = \\lim_{x \\to (\\frac{1}{6})^+} \\frac{2 - \\frac{1}{3x}}{6x - 1} = \\lim_{x \\to (\\frac{1}{6})^+} \\frac{\\frac{6x - 1}{3x}}{6x - 1} = \\lim_{x \\to (\\frac{1}{6})^+} \\frac{1}{3x} = 2 \\Rightarrow \\frac{a}{b} = \\frac{1}{6}$",
+      "media_regions": [
+        {
+          "region": [
+            458,
+            552,
+            831,
+            831
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1035,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 3,
+      "solution_text": "عبارت را ساده کرده، رفع ابهام می‌کنیم:\n$\\lim_{x \\to \\frac{3\\pi}{4}^+} \\frac{\\sqrt{1 + \\sin 2x}}{\\tan x - \\cot x} = \\lim_{x \\to \\frac{3\\pi}{4}^+} \\frac{\\sqrt{(\\sin x + \\cos x)^2}}{\\frac{\\sin x}{\\cos x} - \\frac{\\cos x}{\\sin x}} = \\lim_{x \\to \\frac{3\\pi}{4}^+} \\frac{|\\sin x + \\cos x|}{\\frac{\\sin^2 x - \\cos^2 x}{\\sin x \\cos x}} = \\lim_{x \\to \\frac{3\\pi}{4}^+} \\frac{-(\\sin x + \\cos x) \\sin x \\cos x}{(\\sin x - \\cos x)(\\sin x + \\cos x)} = \\frac{-(\\frac{\\sqrt{2}}{2})(-\\frac{\\sqrt{2}}{2})}{\\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{2}}{2}} = \\frac{\\frac{1}{2}}{\\sqrt{2}} = \\frac{1}{2\\sqrt{2}} = \\frac{\\sqrt{2}}{4}$",
+      "media_regions": [
+        {
+          "region": [
+            458,
+            813,
+            915,
+            915
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۵ قسمت اول"
+        },
+        {
+          "region": [
+            33,
+            63,
+            410,
+            240
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۵ قسمت دوم"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1036,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 3,
+      "solution_text": "از دو اتحاد زیر استفاده می‌کنیم:\n$\\sin 2x = 2\\sin x \\cos x$ و $1 + \\cos 2x = 2\\cos^2 x$\n$\\lim_{x \\to (-\\frac{\\pi}{2})^+} \\frac{\\sin 2x}{\\sqrt{1 + \\cos 2x}} = \\lim_{x \\to (-\\frac{\\pi}{2})^+} \\frac{2\\sin x \\cos x}{\\sqrt{2\\cos^2 x}} = \\lim_{x \\to (-\\frac{\\pi}{2})^+} \\frac{2\\sin x \\cos x}{\\sqrt{2}|\\cos x|} = \\lim_{x \\to (-\\frac{\\pi}{2})^+} \\frac{2\\sin x \\cos x}{\\sqrt{2}\\cos x} = \\frac{-2}{\\sqrt{2}} = -\\sqrt{2}$",
+      "media_regions": [
+        {
+          "region": [
+            38,
+            233,
+            420,
+            360
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1037,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 2,
+      "solution_text": "می‌دانیم $1 - \\sin 2x = (\\sin x - \\cos x)^2$ می‌باشد.\n$\\lim_{x \\to \\frac{\\pi}{4}^+} \\frac{\\cos 2x}{\\sqrt{1 - \\sqrt{\\sin 2x}}} = \\lim_{x \\to \\frac{\\pi}{4}^+} \\frac{\\cos 2x}{\\sqrt{1 - \\sqrt{\\sin 2x}}} \\times \\frac{\\sqrt{1 + \\sqrt{\\sin 2x}}}{\\sqrt{1 + \\sqrt{\\sin 2x}}} = \\lim_{x \\to \\frac{\\pi}{4}^+} \\frac{\\sqrt{2}\\cos 2x}{\\sqrt{1 - \\sin 2x}} = \\lim_{x \\to \\frac{\\pi}{4}^+} \\frac{\\sqrt{2}\\cos 2x}{\\sqrt{(\\sin x - \\cos x)^2}} = \\lim_{x \\to \\frac{\\pi}{4}^+} \\frac{\\sqrt{2}(\\cos^2 x - \\sin^2 x)}{|\\sin x - \\cos x|} = \\lim_{x \\to \\frac{\\pi}{4}^+} \\frac{\\sqrt{2}(\\cos x - \\sin x)(\\cos x + \\sin x)}{\\sin x - \\cos x} = -\\sqrt{2}(\\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{2}}{2}) = -2$",
+      "media_regions": [
+        {
+          "region": [
+            38,
+            356,
+            415,
+            595
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1038,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 3,
+      "solution_text": "در گزینه‌های ۱ و ۴ تابع $f(x)$ در $x = 1$ تعریف نشده و در نتیجه ناپیوسته است.\nدر گزینه ۲ تابع $f(x)$ در $x = 1$ حد ندارد و بنابراین ناپیوسته است.\n$\\lim_{x \\to 1^+} [x^2 + 1] = [2^+] = 2$\n$\\lim_{x \\to 1^-} [x^2 + 1] = [2^-] = 1$\nبررسی گزینه ۳:\n$\\lim_{x \\to 1} |x^2 - x| = f(1) = 0 \\Rightarrow$ در $x = 1$ پیوسته است.",
+      "media_regions": [
+        {
+          "region": [
+            40,
+            608,
+            410,
+            775
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1039,
+      "solution_page": "page_0097.jpg",
+      "stated_correct_option": 3,
+      "solution_text": "بررسی گزینه‌ها:\nگزینه ۱:\n$\\lim_{x \\to \\sqrt{2}} [2x] - [x^2] = [2\\sqrt{2}] - [2^-] = 2 - 1 = 1$\n$f(\\sqrt{2}) = [2\\sqrt{2}] - [2] = 2 - 2 = 0$\nچون حد تابع با مقدار تابع برابر نیست $\\Rightarrow$ ناپیوسته است.\nگزینه ۲:\n$\\lim_{x \\to (\\frac{3}{2})^-} [2x] - [x^2] = [3^-] - [\\frac{9}{4}] = 2 - 2 = 0$\n$f(\\frac{3}{2}) = [3] - [\\frac{9}{4}] = 3 - 2 = 1$\nچون حد تابع با مقدار تابع برابر نیست $\\Rightarrow$ ناپیوسته است.",
+      "media_regions": [
+        {
+          "region": [
+            36,
+            746,
+            415,
+            915
+          ],
+          "placement": "solution",
+          "filename": "page_0097.jpg",
+          "alt": "حل سوال ۱۰۳۹"
+        }
+      ],
+      "review_notes": [
+        "پاسخنامه فقط به بررسی گزینه‌های ۱ و ۲ پرداخته و علت رد آن‌ها را نشان داده است. سایر گزینه‌ها بررسی نشده‌اند."
+      ]
+    }
+  ]
+}

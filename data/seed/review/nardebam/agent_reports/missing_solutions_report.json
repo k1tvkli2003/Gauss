@@ -1,0 +1,333 @@
+{
+  "report": "missing_solutions_report",
+  "workspace": "C:\\Users\\K1\\Desktop\\Projects\\Gauss",
+  "analyzed_at": "2026-06-25",
+  "inputs": {
+    "conflicts": "data/seed/review/nardebam/join_conflicts.json",
+    "normalized_questions_dir": "data/seed/review/nardebam/normalized",
+    "normalized_solutions_dir": "data/seed/review/nardebam/normalized",
+    "jules_repairs_dir": "data/seed/review/nardebam/jules_repairs"
+  },
+  "method": {
+    "conflict_filter": "Entries whose issue or issues include missing_solution.",
+    "topic_grouping": "Used conflict.topic_key as authoritative topic label.",
+    "solution_task_file": "Inferred from existing normalized math-solutions-NN question-number spans; gap labels indicate missing ranges before, between, or after existing solution task spans.",
+    "jules_repairs_check": "Scanned every math-solutions-*-repair.json row in jules_repairs for matching question_number values."
+  },
+  "summary": {
+    "missing_solution_conflicts_total": 354,
+    "by_subject": {
+      "math": 354,
+      "physics": 0
+    },
+    "normalized_solution_state": {
+      "absent_from_normalized_solutions": {
+        "count": 308,
+        "ranges": [
+          {"start": 1, "end": 153, "count": 153},
+          {"start": 204, "end": 213, "count": 10},
+          {"start": 234, "end": 242, "count": 9},
+          {"start": 379, "end": 421, "count": 43},
+          {"start": 927, "end": 928, "count": 2},
+          {"start": 1040, "end": 1069, "count": 30},
+          {"start": 1912, "end": 1912, "count": 1},
+          {"start": 1921, "end": 1948, "count": 28},
+          {"start": 2043, "end": 2058, "count": 16},
+          {"start": 2104, "end": 2119, "count": 16}
+        ]
+      },
+      "present_but_empty_or_invalid_solution_text": {
+        "count": 46,
+        "ranges": [
+          {"start": 780, "end": 780, "count": 1},
+          {"start": 1148, "end": 1156, "count": 9},
+          {"start": 1516, "end": 1528, "count": 13},
+          {"start": 1571, "end": 1581, "count": 11},
+          {"start": 1600, "end": 1608, "count": 9},
+          {"start": 1999, "end": 2001, "count": 3}
+        ]
+      }
+    },
+    "jules_repairs_overlap": {
+      "matching_solution_rows_found": 0,
+      "matching_solution_rows_skipped": 0,
+      "needs_new_jules_tasks": 354,
+      "conclusion": "No missing_solution conflict rows already exist in jules_repairs math solution repair files. All ranges need new Jules solution-generation or repair sessions."
+    }
+  },
+  "missing_solution_groups": [
+    {
+      "subject": "math",
+      "topic_key": "sets",
+      "normalized_question_files": ["math-topic-01.json", "math-topic-02.json", "math-topic-05.json", "math-topic-11.json", "math-topic-14.json", "math-topic-15.json"],
+      "solution_task_file": "math-solutions-01-gap-before-154.json",
+      "base_solution_file": "math-solutions-01.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 50,
+      "ranges": [{"start": 1, "end": 50, "count": 50}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "patterns_sequences",
+      "normalized_question_files": ["math-topic-02.json", "math-topic-11.json", "math-topic-15.json"],
+      "solution_task_file": "math-solutions-01-gap-before-154.json",
+      "base_solution_file": "math-solutions-01.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 50,
+      "ranges": [{"start": 51, "end": 100, "count": 50}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "quadratic_equations_functions",
+      "normalized_question_files": ["math-topic-03.json"],
+      "solution_task_file": "math-solutions-01-gap-before-154.json",
+      "base_solution_file": "math-solutions-01.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 53,
+      "ranges": [{"start": 101, "end": 153, "count": 53}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "quadratic_equations_functions",
+      "normalized_question_files": ["math-topic-03.json"],
+      "solution_task_file": "math-solutions-02-gap-before-214.json",
+      "base_solution_file": "math-solutions-02.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 10,
+      "ranges": [{"start": 204, "end": 213, "count": 10}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "rational_inequalities_sign",
+      "normalized_question_files": ["math-topic-04.json"],
+      "solution_task_file": "math-solutions-02.json",
+      "base_solution_file": "math-solutions-02.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 9,
+      "ranges": [{"start": 234, "end": 242, "count": 9}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "absolute_value_floor",
+      "normalized_question_files": ["math-topic-06.json"],
+      "solution_task_file": "math-solutions-03-gap-before-422.json",
+      "base_solution_file": "math-solutions-03.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 43,
+      "ranges": [{"start": 379, "end": 421, "count": 43}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "trigonometry",
+      "normalized_question_files": ["math-topic-08.json"],
+      "solution_task_file": "math-solutions-04.json",
+      "base_solution_file": "math-solutions-04.json",
+      "normalized_solution_state": "present_but_empty_or_invalid_solution_text",
+      "jules_repairs_rows_found": false,
+      "count": 1,
+      "ranges": [{"start": 780, "end": 780, "count": 1}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "trigonometry",
+      "normalized_question_files": ["math-topic-08.json"],
+      "solution_task_file": "math-solutions-05.json",
+      "base_solution_file": "math-solutions-05.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 2,
+      "ranges": [{"start": 927, "end": 928, "count": 2}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "limits_continuity",
+      "normalized_question_files": ["math-topic-09.json"],
+      "solution_task_file": "math-solutions-06-gap-before-1070.json",
+      "base_solution_file": "math-solutions-06.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 30,
+      "ranges": [{"start": 1040, "end": 1069, "count": 30}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "limits_continuity",
+      "normalized_question_files": ["math-topic-09.json"],
+      "solution_task_file": "math-solutions-06.json",
+      "base_solution_file": "math-solutions-06.json",
+      "normalized_solution_state": "present_but_empty_or_invalid_solution_text",
+      "jules_repairs_rows_found": false,
+      "count": 8,
+      "ranges": [{"start": 1148, "end": 1155, "count": 8}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "derivatives",
+      "normalized_question_files": ["math-topic-10.json"],
+      "solution_task_file": "math-solutions-06.json",
+      "base_solution_file": "math-solutions-06.json",
+      "normalized_solution_state": "present_but_empty_or_invalid_solution_text",
+      "jules_repairs_rows_found": false,
+      "count": 1,
+      "ranges": [{"start": 1156, "end": 1156, "count": 1}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "exponential_logarithmic",
+      "normalized_question_files": ["math-topic-12.json"],
+      "solution_task_file": "math-solutions-08.json",
+      "base_solution_file": "math-solutions-08.json",
+      "normalized_solution_state": "present_but_empty_or_invalid_solution_text",
+      "jules_repairs_rows_found": false,
+      "count": 13,
+      "ranges": [{"start": 1516, "end": 1528, "count": 13}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "analytic_geometry",
+      "normalized_question_files": ["math-topic-13.json"],
+      "solution_task_file": "math-solutions-08.json",
+      "base_solution_file": "math-solutions-08.json",
+      "normalized_solution_state": "present_but_empty_or_invalid_solution_text",
+      "jules_repairs_rows_found": false,
+      "count": 20,
+      "ranges": [
+        {"start": 1571, "end": 1581, "count": 11},
+        {"start": 1600, "end": 1608, "count": 9}
+      ]
+    },
+    {
+      "subject": "math",
+      "topic_key": "probability",
+      "normalized_question_files": ["math-topic-16.json"],
+      "solution_task_file": "math-solutions-09.json",
+      "base_solution_file": "math-solutions-09.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 1,
+      "ranges": [{"start": 1912, "end": 1912, "count": 1}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "probability",
+      "normalized_question_files": ["math-topic-16.json"],
+      "solution_task_file": "math-solutions-10-gap-before-1949.json",
+      "base_solution_file": "math-solutions-10.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 15,
+      "ranges": [{"start": 1921, "end": 1935, "count": 15}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "geometry",
+      "normalized_question_files": ["math-topic-17.json"],
+      "solution_task_file": "math-solutions-10-gap-before-1949.json",
+      "base_solution_file": "math-solutions-10.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 13,
+      "ranges": [{"start": 1936, "end": 1948, "count": 13}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "statistics",
+      "normalized_question_files": ["math-topic-18.json"],
+      "solution_task_file": "math-solutions-10.json",
+      "base_solution_file": "math-solutions-10.json",
+      "normalized_solution_state": "present_but_empty_or_invalid_solution_text",
+      "jules_repairs_rows_found": false,
+      "count": 3,
+      "ranges": [{"start": 1999, "end": 2001, "count": 3}]
+    },
+    {
+      "subject": "math",
+      "topic_key": "statistics",
+      "normalized_question_files": ["math-topic-18.json"],
+      "solution_task_file": "math-solutions-10-gap-after-2042.json",
+      "base_solution_file": "math-solutions-10.json",
+      "normalized_solution_state": "absent_from_normalized_solutions",
+      "jules_repairs_rows_found": false,
+      "count": 32,
+      "ranges": [
+        {"start": 2043, "end": 2058, "count": 16},
+        {"start": 2104, "end": 2119, "count": 16}
+      ]
+    }
+  ],
+  "jules_repairs_scan": {
+    "solution_repair_files_checked": [
+      "math-solutions-01-repair.json",
+      "math-solutions-02-repair.json",
+      "math-solutions-03-repair.json",
+      "math-solutions-04-repair.json",
+      "math-solutions-05-repair.json",
+      "math-solutions-06-repair.json",
+      "math-solutions-07-repair.json",
+      "math-solutions-08-repair.json",
+      "math-solutions-09-repair.json",
+      "math-solutions-10-repair.json"
+    ],
+    "matching_missing_solution_question_numbers": [],
+    "notable_internal_gaps_matching_conflicts": [
+      {
+        "file": "math-solutions-02-repair.json",
+        "missing_conflict_ranges": [{"start": 234, "end": 242, "count": 9}],
+        "note": "The repair file spans 214-378 but skips 234-242."
+      },
+      {
+        "file": "math-solutions-05-repair.json",
+        "missing_conflict_ranges": [{"start": 927, "end": 928, "count": 2}],
+        "note": "The repair file spans 853-1039 but skips 927-928."
+      }
+    ]
+  },
+  "recommended_next_jules_session_prompts": [
+    {
+      "target_output": "jules_repairs/math-solutions-gap-001-153.json",
+      "prompt": "Create a Jules repair JSON solution task for Nardebam math missing solutions 1-153. Cover topic ranges sets 1-50, patterns_sequences 51-100, and quadratic_equations_functions 101-153. Use normalized math questions and answer key, preserve question_number, solution_page, solution_text, stated_correct_option, media_regions, and review_notes. Do not edit raw or normalized files."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-gap-204-213.json",
+      "prompt": "Create solutions for Nardebam math quadratic_equations_functions questions 204-213, which are missing before math-solutions-02 begins at 214. Use normalized questions and math answer key; output only a repair JSON file under jules_repairs."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-02-missing-234-242.json",
+      "prompt": "Repair math-solutions-02 by adding missing rational_inequalities_sign solution rows 234-242. Existing math-solutions-02-repair.json skips these rows, so produce a focused repair file with exactly questions 234-242."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-gap-379-421.json",
+      "prompt": "Create solutions for Nardebam math absolute_value_floor questions 379-421, the gap before math-solutions-03 starts at 422. Use normalized questions and math answer key; keep output schema compatible with math-solutions repair files."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-trigonometry-missing.json",
+      "prompt": "Repair Nardebam math trigonometry missing solutions: question 780 in math-solutions-04 has an empty/invalid normalized solution, and questions 927-928 are absent from math-solutions-05 and skipped by math-solutions-05-repair.json. Produce complete solution rows for 780 and 927-928."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-limits-1040-1156.json",
+      "prompt": "Repair Nardebam math limits_continuity and derivatives missing solutions. Add absent limits_continuity rows 1040-1069, replace empty/invalid limits_continuity rows 1148-1155, and replace empty/invalid derivatives row 1156. Output complete solution rows only."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-08-missing-1516-1608.json",
+      "prompt": "Repair Nardebam math-solutions-08 missing/empty solution rows: exponential_logarithmic 1516-1528 and analytic_geometry 1571-1581 plus 1600-1608. These rows are present in normalized solutions with empty or invalid solution_text and do not exist in jules_repairs. Produce complete replacement solution rows."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-probability-1912-1948.json",
+      "prompt": "Repair Nardebam math probability missing solutions: add absent row 1912 in math-solutions-09 and gap rows 1921-1935 before math-solutions-10. Preserve the standard repair schema and use normalized questions plus answer key."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-geometry-1936-1948.json",
+      "prompt": "Create Nardebam math geometry solution rows 1936-1948, the gap before math-solutions-10 starts at 1949. Use normalized questions and answer key; output a repair JSON file only."
+    },
+    {
+      "target_output": "jules_repairs/math-solutions-statistics-1999-2119.json",
+      "prompt": "Repair Nardebam math statistics solutions. Replace empty/invalid normalized solution rows 1999-2001 and create absent rows 2043-2058 and 2104-2119. Some rows may have missing answer-key values; retain null stated_correct_option only when the source key is unavailable and document it in review_notes."
+    }
+  ]
+}

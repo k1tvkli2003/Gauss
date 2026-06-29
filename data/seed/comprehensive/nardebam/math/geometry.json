@@ -1,0 +1,5129 @@
+[
+  {
+    "id": "nardebam_math_1405_1936",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "پاره‌خط $AB$ به طول $8$ مفروض است. دو نقطه در صفحه وجود دارد که از $A$ به فاصلهٔ $3$ و از $B$ به فاصلهٔ $x$ باشد. $x$ چند عدد طبیعی می‌تواند باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تمام نقاطی که از $A$ به فاصلهٔ ۳ می‌باشند بر دایرهٔ $C$ به مرکز $A$ و شعاع ۳ قرار دارند. تمام نقاطی که از $B$ به فاصلهٔ $x$ می‌باشند بر دایرهٔ $C'$ به مرکز $B$ و شعاع $x$ قرار دارند. دایرهٔ $C'$ باید دایرهٔ $C$ را در ۲ نقطه قطع کند. با توجه به شکل واضح است شعاع دایرهٔ $C'$ باید از ۵ بیشتر و از ۱۱ کمتر باشد، در نتیجه:\n$$5 < x < 11 \\xrightarrow{x \\in \\mathbb{N}} x \\in \\{6, 7, 8, 9, 10\\}$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1936,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 179,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1937",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "لوزی به ضلع $5$ مفروض است. اگر $A$ ناحیه‌ای درون لوزی باشد که هر نقطهٔ درون آن ناحیه فاصله‌اش از یک رأس لوزی کم‌تر از $2$ باشد، مساحت ناحیهٔ $A$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3\\pi$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\pi$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "به مرکز هر رأس لوزی یک دایره به شعاع ۲ رسم می‌کنیم.\nناحیهٔ مورد نظر $A$ قسمت رنگی می‌باشد. زوایای $A$ و $B$ و هم‌چنین $C$ و $D$ مکمل یکدیگرند. بنابراین مساحت قسمت رنگی برابر مساحت یک دایره به شعاع ۲ می‌باشد.\n$S_{A} = \\pi r^{2} = 4\\pi$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1937,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 179,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1938",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "نقطهٔ $A$ به فاصلهٔ $6$ از خط $d$ قرار دارد. چند نقطه در صفحه وجود دارد که از $A$ به فاصلهٔ $10$ و از $d$ به فاصلهٔ $4$ باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نقاط با فاصلهٔ ۴ از خط $d$ روی دو خط موازی با آن قرار دارند. دایرهٔ به مرکز $A$ و شعاع ۱۰ بر یکی از این دو خط مماس است و دیگری را در دو نقطه قطع می‌کند؛ بنابراین ۳ نقطه وجود دارد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1938,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 179,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1939",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو خط $d_1$ و $d_2$ موازی و خط $d_3$ با آن‌ها متقاطع است. چند نقطه در صفحه وجود دارد که از هر سه خط به یک فاصله باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "صفر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بی‌شمار"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تمام نقاطی که از دو خط $d_1$ و $d_3$ به یک فاصله‌اند بر نیمسازهای $\\ell_1$ و $\\ell_2$ و تمام نقاطی که از دو خط $d_2$ و $d_3$ به یک فاصله‌اند بر نیمسازهای $\\ell_3$ و $\\ell_4$ قرار دارند.\nدو نقطهٔ $A$ و $B$ از سه خط به یک فاصله‌اند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1939,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1940",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در مثلث $ABC$ زاویهٔ $A$ قائمه و $BD$ نیمساز زاویهٔ $B$ است. اگر $AD = 3$ و مساحت مثلث $BCD$، $6$ واحد بیشتر از مساحت مثلث $ABD$ باشد، $CD$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1940/stem_1.webp",
+        "alt": "مثلث $ABC$ با زاویه قائمه در $A$ و نقطه $D$ روی $AC$.",
+        "aspect_ratio": 1.4425
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3\\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از $D$ عمود $DH$ را رسم می‌کنیم. $D$ بر روی نیمساز بوده و بنابراین $DH = AD = 3$ می‌باشد.\nنتیجه می‌شود دو مثلث $ABD$ و $BDH$ برابر بوده و در نتیجه مساحت‌های یکسان دارند.\n$S_{BCD} = S_{ABD} + 6 \\Rightarrow S_{BDH} + S_{CDH} = S_{ABD} + 6 \\Rightarrow S_{CDH} = 6 \\Rightarrow \\frac{DH \\times CH}{2} = 6 \\Rightarrow \\frac{3CH}{2} = 6 \\Rightarrow CH = 4$\n$CD^2 = DH^2 + CH^2 = 3^2 + 4^2 = 25 \\Rightarrow CD = 5$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1940,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            46,
+            324,
+            169,
+            381
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث $ABC$ با زاویه قائمه در $A$ و نقطه $D$ روی $AC$."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1941",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در چهارضلعی $ABCD$، عمودمنصف‌های اضلاع $AB$، $BC$ و $CD$ در $O$ یکدیگر را قطع می‌کنند. کدام گزینه همواره صحیح است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$ABCD$ مستطیل است."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$O$ بر عمودمنصف $AD$ واقع است."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "نیمسازهای زوایای چهارضلعی در $O$ متقاطع‌اند."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$ABCD$ لوزی است."
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$O$ بر عمودمنصف $AB$ واقع است؛ بنابراین $OA = OB$.\nنتیجه:\n$O$ بر عمودمنصف $BC$ واقع است در نتیجه: $OB = OC$\n$O$ بر عمودمنصف $CD$ قرار دارد بنابراین: $OC = OD$\nاز تساوی‌های بالا نتیجه می‌گیریم $OA = OD$ بوده و بنابراین $O$ بر عمودمنصف $AD$ قرار دارد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1941,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1942",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از احکام زیر دارای مثال نقض است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "هر چهارضلعی که اقطارش یکدیگر را نصف کنند متوازی‌الاضلاع است."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "در هر صفحه یک نقطه وجود دارد که از سه نقطهٔ متمایز در صفحه به یک فاصله باشد."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "لوزی‌ای که عمودمنصف اضلاعش همرس باشند، مربع است."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "همواره ۴ نقطه در صفحه وجود دارد که از سه ضلع مثلث به یک فاصله باشند."
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "همواره در صفحه یک نقطه وجود دارد که از سه نقطهٔ غیرواقع بر یک خط راست به یک فاصله باشد. اگر این نقاط را $A$، $B$ و $C$ بنامیم، نقطهٔ مورد نظر محل برخورد عمودمنصف‌های اضلاع مثلث $ABC$ است.\nاما اگر سه نقطهٔ $A$، $B$ و $C$ بر یک خط راست واقع باشند، هیچ نقطه‌ای وجود ندارد که از این سه نقطه به یک فاصله باشد. زیرا عمودمنصف‌های آن‌ها موازی‌اند.\nسایر گزینه‌ها احکام کلی بوده و مثال نقض ندارند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1942,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1943",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "کدام‌یک از قضایای زیر دوشرطی نیست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "متوازی‌الاضلاع یک چهارضلعی است که زوایای مقابل آن برابرند."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "لوزی یک چهارضلعی است که قطرهای آن بر هم عمودند."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "قضیهٔ تالس"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "قضیهٔ فیثاغورس"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قضیهٔ دوشرطی قضیه‌ای است که هم خود قضیه و هم عکس آن درست باشد. مانند قضیهٔ تالس و فیثاغورس.\nدر متوازی‌الاضلاع زوایای مقابل برابرند و اگر در یک چهارضلعی زوایای مقابل برابر باشند، قطعاً متوازی‌الاضلاع است.\nدر یک لوزی قطرها بر هم عمودند اما اگر در یک چهارضلعی قطرها بر هم عمود باشند لزوماً لوزی نمی‌باشد."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1943,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1944",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\dfrac{a}{3} = \\dfrac{b}{5} = \\dfrac{c}{13}$ باشد، کدام گزینه همواره صحیح نیست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$b+c = 6a$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$a+c = 3b+1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$c-a = 2b$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{a}{3} = \\dfrac{a-b+c}{11}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $a = 10$، $b = 26$ و $c = 2$ باشد نادرست خواهد بود.\n[۱]: $\\frac{a}{3} = \\frac{b}{5} = \\frac{c}{13} = \\frac{b+c}{5+13} \\Rightarrow \\frac{a}{3} = \\frac{b+c}{18} \\Rightarrow b+c = 6a$\n[۳]: $\\frac{a}{3} = \\frac{b}{5} = \\frac{c}{13} = \\frac{c-a}{13-3} \\Rightarrow \\frac{b}{5} = \\frac{c-a}{10} \\Rightarrow c-a = 2b$\n[۴]: $\\frac{a}{3} = \\frac{b}{5} = \\frac{c}{13} = \\frac{a-b+c}{3-5+13} \\Rightarrow \\frac{a}{3} = \\frac{a-b+c}{11}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1944,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1945",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو دو مستطیل $ABCD$ و $ADEF$ متشابه هستند، اگر $BC = 5$ و $CE = 24$ باشد، محیط مستطیل $BCEF$ چند برابر محیط مستطیل $ADEF$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1945/stem_1.webp",
+        "alt": "مستطیل $ABCD$ که درون آن مستطیل $ADEF$ قرار دارد.",
+        "aspect_ratio": 1.9477
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4/92$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5/23$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4/83$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4/68$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو مستطیل متشابه هستند.\n$\\frac{CD}{AD} = \\frac{BC}{DE} \\Rightarrow \\frac{24 + DE}{5} = \\frac{5}{DE}$\n$\\xrightarrow{DE = x} x^2 + 24x - 25 = 0 \\Rightarrow \\begin{cases} x = 1 \\checkmark \\\\ x = -25 \\text{ ق‌ق‌غ} \\end{cases}$\nمحیط $BCEF = 2(BC + EC) = 2(5 + 24) = 58$\nمحیط $ADEF = 2(AD + DE) = 2(1 + 5) = 12$\nنسبت محیط‌ها $= \\frac{58}{12} = \\frac{29}{6} = 4/83$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1945,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            44,
+            684,
+            214,
+            740
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مستطیل $ABCD$ که درون آن مستطیل $ADEF$ قرار دارد."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1946",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر ضلع $AC$ را به ۴ قسمت برابر تقسیم کنیم و از سه نقطهٔ به وجود آمده به موازات $BC$ رسم کنیم. جمع طول پاره‌خط‌های رسم‌شده به موازات $BC$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1946/stem_1.webp",
+        "alt": "مثلث $ABC$ با خطوط موازی با $BC$ که ضلع $AC$ را به ۴ قسمت مساوی تقسیم کرده‌اند.",
+        "aspect_ratio": 1.5344
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به شکل، طبق قضیهٔ تالس داریم:\n$\\frac{x}{4x} = \\frac{\\alpha}{8} \\Rightarrow \\alpha = 2$\n$\\frac{2x}{4x} = \\frac{\\beta}{8} \\Rightarrow \\beta = 4$\n$\\frac{3x}{4x} = \\frac{\\gamma}{8} \\Rightarrow \\gamma = 6$\n$\\alpha + \\beta + \\gamma = 12$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1946,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            43,
+            747,
+            188,
+            810
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث $ABC$ با خطوط موازی با $BC$ که ضلع $AC$ را به ۴ قسمت مساوی تقسیم کرده‌اند."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1947",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو ساق ذوزنقه را امتداد داده‌ایم و در نقطهٔ $M$ یکدیگر را قطع کرده‌اند. محیط مثلث $MAB$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1947/stem_1.webp",
+        "alt": "ذوزنقه که ساق‌های آن امتداد یافته و در نقطه $M$ متقاطع شده‌اند و مثلث $MAB$ را تشکیل داده‌اند.",
+        "aspect_ratio": 1.2426
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$93$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$105$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$81$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$70$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض می‌کنیم $MD = x$ و $MC = y$ باشد. مطابق قضیهٔ تالس داریم:\n$\\frac{MD}{MA} = \\frac{CD}{AB} \\Rightarrow \\frac{x}{x+15} = \\frac{16}{24} = \\frac{2}{3} \\Rightarrow 3x = 2x + 30 \\Rightarrow x = 30$\n$\\frac{MC}{MB} = \\frac{CD}{AB} \\Rightarrow \\frac{y}{y+12} = \\frac{16}{24} = \\frac{2}{3} \\Rightarrow 3y = 2y + 24 \\Rightarrow y = 24$\nمحیط $MAB = 30 + 15 + 24 + 12 + 24 = 105$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1947,
+      "question_pdf": "17.pdf",
+      "question_page": 7,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0007.jpg",
+          "box": [
+            46,
+            810,
+            192,
+            891
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه که ساق‌های آن امتداد یافته و در نقطه $M$ متقاطع شده‌اند و مثلث $MAB$ را تشکیل داده‌اند."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1948",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هرگاه چهارضلعی $DEFB$ متوازی‌الاضلاع باشد، مساحت رنگ‌شده چه کسری از مساحت مثلث $ABC$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1948/stem_1.webp",
+        "alt": "مثلث $ABC$ با متوازی‌الاضلاع $DEFB$ درون آن.",
+        "aspect_ratio": 1.6802
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{13}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{25}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{10}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{27}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$DEFB$ متوازی‌الاضلاع است، بنابراین $DE = BF = y$ و $EF = DB = x$. با توجه به قضیهٔ تالس داریم:\n$\\frac{AE}{AC} = \\frac{DE}{BC} \\Rightarrow \\frac{2}{3} = \\frac{y}{BC} \\Rightarrow BC = \\frac{3}{2}y \\Rightarrow FC = \\frac{y}{2}$\nاز طرفی: $\\frac{ME}{FC} = \\frac{2}{3} \\Rightarrow ME = \\frac{2}{3} \\times \\frac{y}{2} = \\frac{y}{3}$\nدر متوازی‌الاضلاع $\\hat{E} = \\hat{B}$ است. پس:\n$S_{ABC} = \\frac{1}{2} AB \\times BC \\times \\sin \\hat{B} = \\frac{1}{2} \\times 3x \\times \\frac{3y}{2} \\sin \\hat{B}$\n$S_{EMF} = \\frac{1}{2} EM \\times FE \\times \\sin \\hat{E} = \\frac{1}{2} \\times \\frac{y}{3} \\times x \\times \\sin \\hat{E}$\n$\\Rightarrow \\frac{S_{EMF}}{S_{ABC}} = \\frac{\\frac{1}{6}xy}{\\frac{9}{4}xy} = \\frac{2}{27}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1948,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 180,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            95,
+            83,
+            263,
+            149
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث $ABC$ با متوازی‌الاضلاع $DEFB$ درون آن."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1949",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $M$ و $N$ وسط‌های دو ضلع $AB$ و $AC$ باشند، محیط مثلث $ABC$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1949/stem_1.webp",
+        "alt": "مثلث $ABC$ که $M$ و $N$ وسط‌های اضلاع آن هستند.",
+        "aspect_ratio": 1.6931
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$40$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$45$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$M$ و $N$ وسط‌های اضلاع $AB$ و $AC$ هستند. در نتیجه:\n$$\n\\frac{MN}{BC} = \\frac{AM}{AB} = \\frac{1}{2} \\Rightarrow \\frac{x+4}{4x+1} = \\frac{1}{2} \\Rightarrow 2x+8 = 4x+1\n$$\n$$\n\\Rightarrow x = \\frac{7}{2} \\Rightarrow \\begin{cases} AM = 6 \\Rightarrow AB = 12 \\\\ CN = \\frac{13}{2} \\Rightarrow AC = 13 \\\\ BC = 15 \\end{cases}\n$$\n$\\Rightarrow$ محیط $ABC = 12 + 13 + 15 = 40$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1949,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            102,
+            151,
+            276,
+            219
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث $ABC$ که $M$ و $N$ وسط‌های اضلاع آن هستند."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1950",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقهٔ مقابل $O$ نقطهٔ برخورد دو قطر است. هرگاه $FC = 4$ و $DC = 12$ باشد، مقدار $AB$ کدام است؟ ($OF \\parallel BC$)"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1950/stem_1.webp",
+        "alt": "ذوزنقه با قطرهای متقاطع در $O$ و خط موازی.",
+        "aspect_ratio": 1.8385
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$8$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در مثلث $BCD$ طبق قضیه تالس داریم:\n$$\n\\frac{OB}{OD} = \\frac{FC}{FD} = \\frac{4}{12-4} = \\frac{1}{2}\n$$\nدو مثلث $AOB$ و $COD$ دارای زوایای برابر هستند، بنابراین با هم متشابه‌اند.\n$$\n\\Rightarrow \\frac{AB}{CD} = \\frac{OB}{OD} = \\frac{1}{2} \\Rightarrow AB = \\frac{CD}{2} = \\frac{12}{2} = 6\n$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1950,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            95,
+            226,
+            275,
+            290
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه با قطرهای متقاطع در $O$ و خط موازی."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1951",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل اگر $AB = 4$، $AC = 7$، $BC = 6$ و چهارضلعی $BNMP$ لوزی باشد، محیط لوزی کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1951/stem_1.webp",
+        "alt": "مثلث $ABC$ با لوزی $BNMP$ درون آن.",
+        "aspect_ratio": 1.4575
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$9/6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10/8$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ضلع لوزی را $a$ می‌نامیم.\n$MN \\parallel AB \\Rightarrow \\frac{CN}{BC} = \\frac{MN}{AB} \\Rightarrow \\frac{6-a}{6} = \\frac{a}{4} \\Rightarrow 10a = 24 \\Rightarrow a = 2/4 \\Rightarrow \\text{محیط لوزی } = 4a = 9/6$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1951,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            95,
+            296,
+            251,
+            368
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث $ABC$ با لوزی $BNMP$ درون آن."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1952",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل $EF$ موازی قاعده‌های ذوزنقه است. اندازهٔ $EF$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1952/stem_1.webp",
+        "alt": "ذوزنقه با خط $EF$ موازی با قاعده‌ها.",
+        "aspect_ratio": 1.7897
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{8}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{20}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{16}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{14}{3}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در مثلث $ABD$، $EM$ موازی $AB$ است، در نتیجه:\n$$\n\\frac{DE}{AD} = \\frac{EM}{AB} = \\frac{2}{3}\n$$\nاز طرفی:\n$$\n\\frac{DE}{AD} = \\frac{FC}{BC} \\Rightarrow \\frac{FC}{BC} = \\frac{2}{3} \\Rightarrow \\frac{BF}{BC} = \\frac{1}{3}\n$$\nدر مثلث $BCD$، $MF$ موازی $CD$ است، بنابراین:\n$$\n\\frac{MF}{CD} = \\frac{BF}{BC} = \\frac{1}{3} \\Rightarrow MF = \\frac{CD}{3} = \\frac{8}{3}\n$$\n$\\Rightarrow EF = EM + MF = 2 + \\frac{8}{3} = \\frac{14}{3}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1952,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            98,
+            387,
+            276,
+            452
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه با خط $EF$ موازی با قاعده‌ها."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1953",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$M$ و $N$ وسط دو ساق ذوزنقه هستند. نسبت مساحت ذوزنقهٔ $ABNM$ به مساحت ذوزنقهٔ $MNCD$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1953/stem_1.webp",
+        "alt": "ذوزنقه که $M$ و $N$ وسط ساق‌های آن هستند.",
+        "aspect_ratio": 1.802
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{3}{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "نکته: اگر وسط‌های ساق‌های ذوزنقه را به هم وصل کنیم، طول پاره‌خط به وجود آمده برابر با میانگین قاعده‌هاست.\nقاعدهٔ $AB$ برابر $a$ و قاعدهٔ $CD$ برابر $3a$ است؛ بنابراین: $MN = \\frac{a+3a}{2} = 2a$.\nواضح است. ارتفاع دو ذوزنقهٔ $ABNM$ و $MNCD$ برابر است.\n$$\n\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{a+2a}{2} \\times h}{\\frac{2a+3a}{2} \\times h} = \\frac{3a}{5a} = \\frac{3}{5}\n$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1953,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            99,
+            454,
+            280,
+            520
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه که $M$ و $N$ وسط ساق‌های آن هستند."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1954",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\dfrac{a+4b}{2a-b} = \\dfrac{5a+2b}{2b-a}$ باشد، $\\dfrac{a}{b}$ کدام است؟ ($a, b > 0$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{9}{10}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{10}{9}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{11}{10}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{10}{11}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از یکی از خواص جالب تناسب استفاده می‌کنیم:\n$$\n\\frac{a}{b} = \\frac{c}{d} \\Rightarrow \\frac{a+c}{b+d} = \\frac{a}{b} = \\frac{c}{d}\n$$\nخواهیم داشت:\n$$\n\\frac{a+4b}{2a-b} = \\frac{5a+2b}{2b-a} = \\frac{(a+4b)+(5a+2b)}{(2a-b)+(2b-a)} = \\frac{6(a+b)}{a+b} = 6\n$$\n$$\n\\Rightarrow \\frac{a+4b}{2a-b} = 6 \\Rightarrow a+4b = 12a-6b \\Rightarrow 11a = 10b \\Rightarrow \\frac{a}{b} = \\frac{10}{11}\n$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1954,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1955",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث $ABC$ در رأس $A$ قائمه و $AC = AD$ است. هرگاه $AB = 4\\sqrt{5}$ و $BD = 6$ باشد، مقدار $AC$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1955/stem_1.webp",
+        "alt": "مثلث $ABC$ با زاویه قائمه در $A$ و نقطه $D$ روی $BC$.",
+        "aspect_ratio": 1.6615
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2\\sqrt{5}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3\\sqrt{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ارتفاع $AH$ را رسم می‌کنیم. مثلث $ACD$ متساوی‌الساقین است، بنابراین $AH$ میانه نیز می‌باشد. $DH = HC = x$. در مثلث قائم‌الزاویهٔ $ABC$، $AH$ ارتفاع وارد بر وتر است. در نتیجه:\n$$\nAB^2 = BC \\times BH \\Rightarrow (4\\sqrt{5})^2 = (6+2x)(6+x)\n$$\n$$\n\\Rightarrow 2x^2 + 18x + 36 = 80 \\Rightarrow x^2 + 9x - 22 = 0\n$$\n$$\n\\Rightarrow (x+11)(x-2) = 0 \\Rightarrow \\begin{cases} x = -11 \\text{ غ.ق.ق} \\\\ x = 2 \\checkmark \\end{cases}\n$$\n$$\nAB^2 + AC^2 = BC^2 \\Rightarrow AC^2 = 10^2 - (4\\sqrt{5})^2 = 20\n$$\n$\\Rightarrow AC = 2\\sqrt{5}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1955/solution_2.webp",
+        "alt": "مثلث ABC با ارتفاع AH",
+        "aspect_ratio": 1.0
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1955,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            98,
+            574,
+            259,
+            638
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث $ABC$ با زاویه قائمه در $A$ و نقطه $D$ روی $BC$."
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0181.jpg",
+          "box": [
+            1100,
+            1800,
+            1400,
+            2100
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "مثلث ABC با ارتفاع AH"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1956",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو مثلث $ABC$ قائم‌الزاویه است. اندازهٔ پاره‌خط $BD$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1956/stem_1.webp",
+        "alt": "مثلث قائم‌الزاویه $ABC$ با ارتفاع وارد بر وتر.",
+        "aspect_ratio": 1.5447
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{13}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{19}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{21}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\sqrt{14}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "زاویهٔ $C$ در دو مثلث $ABC$ و $DHC$ مشترک است، بنابراین دو مثلث قائم‌الزاویهٔ $ABC$ و $DHC$ متشابه‌اند. پس:\n$$\n\\frac{BC}{DC} = \\frac{AC}{HC} \\Rightarrow \\frac{BC}{3} = \\frac{4}{2} \\Rightarrow BC = 6 \\Rightarrow BH = 4\n$$\nاز طرفی در مثلث قائم‌الزاویهٔ $DHC$ طبق قضیه فیثاغورس داریم:\n$$\nDH^2 = 9 - 4 = 5 \\Rightarrow DH = \\sqrt{5}\n$$\nدر مثلث قائم‌الزاویهٔ $BDH$:\n$$\nBD^2 = DH^2 + BH^2 = 5 + 16 = 21 \\Rightarrow BD = \\sqrt{21}\n$$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1956,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            99,
+            634,
+            285,
+            715
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه $ABC$ با ارتفاع وارد بر وتر."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1957",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقهٔ $ABCD$، $AB = 5$ و $CD = 8$ است. از نقطهٔ تلاقی قطرها خطی موازی دو قاعده رسم می‌کنیم. مقدار $\\dfrac{EF}{CD}$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1957/stem_1.webp",
+        "alt": "ذوزنقه $ABCD$ با قطرهای متقاطع و خط موازی $EF$.",
+        "aspect_ratio": 1.55
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{8}{13}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{8}{10}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{10}{13}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{13}{20}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$EF$ موازی $CD$ است، بنابراین:\n$\\overset{\\Delta}{ADC}: \\frac{OE}{DC} = \\frac{AE}{AD} \\Rightarrow \\frac{OE}{8} = \\frac{AE}{AD}$\n$\\overset{\\Delta}{ADB}: \\frac{OE}{AB} = \\frac{DE}{AD} \\Rightarrow \\frac{OE}{5} = \\frac{DE}{AD}$\n$(+) \\Rightarrow \\frac{OE}{8} + \\frac{OE}{5} = \\frac{AE+DE}{AD} = 1 \\xrightarrow{\\times 40} 13OE = 40 \\Rightarrow OE = \\frac{40}{13}$\nبه همین روش $OF = \\frac{40}{13}$ می‌باشد.\n$EF = OE + OF = \\frac{80}{13} \\Rightarrow \\frac{EF}{CD} = \\frac{\\frac{80}{13}}{8} = \\frac{10}{13}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1957,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            98,
+            737,
+            254,
+            804
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه $ABCD$ با قطرهای متقاطع و خط موازی $EF$."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1958",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو $MN$ موازی $BC$ و $BN$ نیمساز زاویهٔ $N$ است. هرگاه $AN = 9$ و $MN = 6$ باشد، طول $BC$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1958/stem_1.webp",
+        "alt": "مثلث $ABC$ با خط $MN$ موازی $BC$.",
+        "aspect_ratio": 1.1
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$16$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به آن‌که $MN$ با $BC$ موازی است و $BN$ مورب است، پس $\\hat{B}_1 = \\hat{N}_1$.\nاز طرفی $BN$ نیمساز زاویهٔ $N$ است، بنابراین $\\hat{N}_1 = \\hat{N}_2$.\nنتیجه می‌گیریم $\\hat{B}_1 = \\hat{N}_2$ می‌باشد. یعنی مثلث $BNC$ متساوی‌الساقین است. در نتیجه $BC = NC$. اگر $BC$ را برابر $x$ در نظر بگیریم، طبق قضیه تالس خواهیم داشت:\n$$\n\\frac{AN}{AC} = \\frac{MN}{BC} \\Rightarrow \\frac{9}{9+x} = \\frac{6}{x} \\Rightarrow 9x = 54 + 6x\n$$\n$\\Rightarrow 3x = 54 \\Rightarrow BC = 18$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1958/solution_2.webp",
+        "alt": "مثلث ABC با خطوط موازی MN و مورب BN",
+        "aspect_ratio": 1.0
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1958,
+      "question_pdf": "17.pdf",
+      "question_page": 8,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0008.jpg",
+          "box": [
+            100,
+            803,
+            225,
+            882
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث $ABC$ با خط $MN$ موازی $BC$."
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0181.jpg",
+          "box": [
+            100,
+            1300,
+            400,
+            1600
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "مثلث ABC با خطوط موازی MN و مورب BN"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1959",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک ذوزنقه پاره‌خطی که وسط دو ساق را به هم وصل می‌کند، مساحت آن را به نسبت ۲ به ۳ تقسیم می‌کند. قاعدهٔ بزرگ ذوزنقه چند برابر قاعدهٔ کوچک آن است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۷}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۶}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۹}{۴}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم $MN = \\frac{a+b}{2}$.\nارتفاع دو ذوزنقه $ABNM$ و $MNCD$ برابر است.\n$\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{2}{3} \\Rightarrow \\frac{\\frac{(a+\\frac{a+b}{2}) \\times h}{2}}{\\frac{(b+\\frac{a+b}{2}) \\times h}{2}} = \\frac{2}{3} \\Rightarrow \\frac{3a+b}{3b+a} = \\frac{2}{3} \\Rightarrow 9a+3b = 6b+2a \\Rightarrow 7a = 3b \\Rightarrow \\frac{b}{a} = \\frac{7}{3}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1959/solution_1.webp",
+        "alt": "دو ذوزنقه ABNM و MNCD",
+        "aspect_ratio": 0.3155
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1959,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 181,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0181.jpg",
+          "box": [
+            712,
+            51,
+            781,
+            230
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "دو ذوزنقه ABNM و MNCD"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1960",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو اگر $BK = ۳$ ،$AK = ۴PK$ و $KC = ۸$ باشد، نسبت مساحت مثلث $AMP$ به مساحت ذوزنقه $PNCK$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1960/stem_1.webp",
+        "alt": "مثلث ABC که در آن خطوطی رسم شده و ذوزنقه PNCK سایه‌زده شده است.",
+        "aspect_ratio": 1.49
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۹}{۵۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۹}{۱۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵}{۱۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲۷}{۵۶}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض می‌کنیم $PK = x$ باشد، در نتیجه $AP = 3x$ است.\nدر مثلث $ABK$ داریم:\n$\\frac{MP}{BK} = \\frac{AP}{AK} \\Rightarrow \\frac{MP}{3} = \\frac{3}{4} \\Rightarrow MP = \\frac{9}{4}$\nاز طرفی در مثلث $AKC$:\n$\\frac{AP}{AK} = \\frac{PN}{KC} \\Rightarrow \\frac{3}{4} = \\frac{PN}{8} \\Rightarrow PN = 6$\nبدیهی است $AH = 3HH'$. در نتیجه:\n$$\\frac{S_{AMP}}{S_{PNCK}} = \\frac{\\frac{1}{2} MP \\times AH}{\\frac{PN + KC}{2} \\times HH'} = \\frac{\\frac{1}{2} \\times \\frac{9}{4} \\times AH}{\\frac{6+8}{2} \\times HH'} = \\frac{\\frac{9}{8} \\times 3HH'}{7 \\times HH'} = \\frac{\\frac{27}{8}}{7} = \\frac{27}{56}$$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1960/stem_2.webp",
+        "alt": "مثلث ABC با خطوط موازی و ارتفاع",
+        "aspect_ratio": 0.2964
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1960,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 182,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            45,
+            143,
+            237,
+            230
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث ABC که در آن خطوطی رسم شده و ذوزنقه PNCK سایه‌زده شده است."
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0182.jpg",
+          "box": [
+            88,
+            517,
+            160,
+            715
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث ABC با خطوط موازی و ارتفاع"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1961",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فقط یک نقطه در صفحه وجود دارد که فاصلهٔ آن از نقاط $A$ و $B$ به ترتیب ۵ و ۸ است. طول پاره‌خط $AB$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "فقط ۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۵ یا ۹"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳ یا ۱۳"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "فقط ۵"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تمام نقاطی که از $A$ به فاصلهٔ ۵ هستند، بر روی دایره‌ای به مرکز $A$ و به شعاع ۵ قرار دارند و تمامی نقاطی که از $B$ به فاصلهٔ ۸ می‌باشند، بر دایره‌ای به مرکز $B$ و به شعاع ۸ واقع‌اند. یک نقطه وجود دارد که بر هر دو دایره قرار دارد. دو حالت وجود دارد:\n۱) $\\Rightarrow AB = R + R' = 5 + 8 = 13$\n۲) $\\Rightarrow AB = R' - R = 8 - 5 = 3$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1961/solution_1.webp",
+        "alt": "دو دایره مماس بر هم",
+        "aspect_ratio": 0.8166
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1961,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 182,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0182.jpg",
+          "box": [
+            520,
+            343,
+            685,
+            488
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "دو دایره مماس بر هم"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1962",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "وسط اضلاع یک ذوزنقه متساوی‌الساقین که اندازهٔ قاعده‌های آن ۷ و ۹ است را به هم وصل کرده‌ایم. یک چهارضلعی با محیط ۲۰ به دست آمده است. مساحت ذوزنقه کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴۰\\sqrt{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴۸$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "از به هم وصل‌کردن وسط اضلاع هر چهارضلعی یک متوازی‌الاضلاع به وجود می‌آید که طول اضلاع آن برابر نصف قطرهای چهارضلعی اولیه است.\nچهارضلعی به دست آمده یک متوازی‌الاضلاع است که چون قطرهای ذوزنقه متساوی‌الساقین با هم برابرند اضلاع متوازی‌الاضلاع نیز با هم برابر بوده و یک لوزی خواهد بود. محیط این لوزی ۲۰ می‌باشد در نتیجه طول هر ضلع لوزی ۵ بوده و طول هر قطر ذوزنقه برابر ۱۰ می‌باشد.\nاگر ارتفاع‌های $AH$ و $BH'$ را رسم کنیم خواهیم داشت:\n$$ HH' = AB = 7 \\Rightarrow DH = H'C = 1 $$\n$$ \\Delta AHC : AH^2 = AC^2 - CH^2 = 100 - 64 \\Rightarrow AH = 6 $$\n$$ S_{\\text{ذوزنقه}} = \\frac{AB+CD}{2} \\times AH = \\frac{7+9}{2} \\times 6 = 48 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1962/solution_text_1.webp",
+        "alt": "ذوزنقه متساوی‌الساقین",
+        "aspect_ratio": 1.4577
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1962,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 182,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0182.jpg",
+          "box": [
+            520,
+            617,
+            715,
+            708
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_text",
+          "alt": "ذوزنقه متساوی‌الساقین"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1963",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو مساحت ذوزنقه $ABCD$ چند برابر مساحت مثلث $EAB$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1963/stem_1.webp",
+        "alt": "مثلث EDC با خط موازی AB با قاعده‌ها.",
+        "aspect_ratio": 1.498
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲۵}{۹}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱۶}{۹}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۹}{۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲۵}{۱۶}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$AB$ موازی $CD$ است. در نتیجه:\n$\\frac{AE}{AD} = \\frac{EB}{BC} \\Rightarrow \\frac{5}{x} = \\frac{3x - 4}{4}$\n$\\Rightarrow 3x^2 - 4x - 20 = 0 \\Rightarrow \\begin{cases} x = -2 \\text{ غ ق ق } \\\\ x = \\frac{10}{3} \\end{cases}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1963,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 182,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            42,
+            335,
+            230,
+            420
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث EDC با خط موازی AB با قاعده‌ها."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1964",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $AD$ در شکل روبه‌رو نیمساز باشد، مساحت مثلث $ABC$ چند برابر مساحت مثلث $ABD$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1964/stem_1.webp",
+        "alt": "مثلث ABC با نیمساز AD.",
+        "aspect_ratio": 1.4542
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲/۲۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲/۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو مثلث $EAB$ و $EDC$ متشابه هستند به طوری که:\nنسبت تشابه $= \\frac{EC}{EB} = \\frac{10}{6} = \\frac{5}{3}$\nبنابراین نسبت مساحت‌ها $\\frac{25}{9}$ است.\n$S_{EAB} = \\frac{9}{25} S_{EDC} \\Rightarrow S_{ABCD} = \\frac{16}{25} S_{EDC}$\n$\\Rightarrow \\frac{S_{ABCD}}{S_{EAB}} = \\frac{\\frac{16}{25} S}{\\frac{9}{25} S} = \\frac{16}{9}$\nنکته: در مثلث $ABC$ اگر $AD$ نیمساز باشد، خواهیم داشت:\n$\\frac{BD}{AB} = \\frac{DC}{AC}$\nفرض می‌کنیم $x = BD$ باشد. آن‌گاه:\n$\\frac{x}{4} = \\frac{DC}{6} \\Rightarrow DC = \\frac{3}{2} x$\n$\\frac{S_{ABC}}{S_{ABD}} = \\frac{\\frac{1}{2} AH \\times BC}{\\frac{1}{2} AH \\times BD} = \\frac{BC}{BD} = \\frac{BD + DC}{BD} = \\frac{x + \\frac{3}{2}x}{x} = \\frac{5}{2} = 2/5$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1964,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 182,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            40,
+            425,
+            218,
+            508
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث ABC با نیمساز AD."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1965",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقه اندازهٔ قاعده‌ها ۴ و ۹ و طول ساق‌ها ۵ و ۷ است. ساق‌ها را امتداد می‌دهیم تا یکدیگر را خارج ذوزنقه قطع کنند. محیط مثلث بزرگ‌تر چه عددی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲۴/۹$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۶/۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳۴/۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳۰/۶$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$AP$ را $x$ و $BP$ را $y$ می‌نامیم.\n$AB \\parallel CD \\Rightarrow \\frac{x}{x + 5} = \\frac{y}{y + 7} = \\frac{4}{9} \\Rightarrow \\begin{cases} x = 4 \\\\ y = \\frac{28}{5} = 5/6 \\end{cases}$\nمحیط $PDC = PD + DC + PC = 9 + 9 + 12/6 = 30/6$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1965/solution_1.webp",
+        "alt": "مثلث PDC",
+        "aspect_ratio": 1.1355
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1965,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 182,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0182.jpg",
+          "box": [
+            102,
+            397,
+            258,
+            493
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "مثلث PDC"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1966",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل اگر $MN$ موازی $AB$ باشد، مساحت ذوزنقه $ABNM$ چه کسری از مساحت ذوزنقه $MNCD$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1966/stem_1.webp",
+        "alt": "ذوزنقه ABCD با خط موازی MN.",
+        "aspect_ratio": 1.3682
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۷}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲}{۷}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۸}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۳}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ارتفاع $AH$ را رسم می‌کنیم. اگر $BE$ موازی با $AD$ رسم گردد، خواهیم داشت:\n$\\Delta ADH : \\frac{AM}{AD} = \\frac{AH'}{AH} \\Rightarrow AH = 3AH'$\n$\\Delta BEC : \\frac{OB}{BE} = \\frac{ON}{EC} \\Rightarrow \\frac{2}{6} = \\frac{ON}{12} \\Rightarrow ON = 4$\nمتوازی‌الاضلاع است $ABOM \\Rightarrow OM = AB = 6$\n$\\Rightarrow MN = OM + ON = 10$\n$\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{1}{2} AH' (AB + MN)}{\\frac{1}{2} HH' (MN + DC)} = \\frac{AH' (6 + 10)}{2AH' (10 + 18)} = \\frac{2}{7}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1966/solution_2.webp",
+        "alt": "ذوزنقه و متوازی الاضلاع",
+        "aspect_ratio": 1.8592
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1966,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 182,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            42,
+            575,
+            222,
+            665
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با خط موازی MN."
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0182.jpg",
+          "box": [
+            99,
+            574,
+            303,
+            646
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "ذوزنقه و متوازی الاضلاع"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1967",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو $O$ نقطهٔ تلاقی نیمسازهاست. اندازهٔ قاعده‌های ذوزنقه ۴/۵ و ۷ است. محیط ذوزنقه چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1967/stem_1.webp",
+        "alt": "ذوزنقه با نقطه O روی قاعده بالایی.",
+        "aspect_ratio": 1.8812
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۳$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۸/۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۹/۵$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "AB و CD موازی و AO و BO مورب هستند.\nمی‌دانیم $\\hat{A}_2 = \\hat{A}_1$ و $\\hat{B}_2 = \\hat{B}_1$ است.\n$$ CH^2 = BC^2 + BH^2 \\Rightarrow CH^2 = (2a)^2 + a^2 = 5a^2 \\Rightarrow CH = a\\sqrt{5} $$\nدر مثلث قائم‌الزاویة CBH، HM ارتفاع وارد بر وتر است.\n$$ BH^2 = MH \\times CH \\Rightarrow a^2 = MH \\times a\\sqrt{5} \\Rightarrow MH = \\frac{a}{\\sqrt{5}} $$\n$$ \\text{نسبت تشابه} = \\frac{MH}{AH} = \\frac{a/\\sqrt{5}}{a} = \\frac{1}{\\sqrt{5}} \\Rightarrow \\frac{S_{MNH}}{S_{ADH}} = (\\frac{1}{\\sqrt{5}})^2 = \\frac{1}{5} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1967/solution_text_2.webp",
+        "alt": "دو خط موازی و مورب",
+        "aspect_ratio": 1.7371
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1967,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 182,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            42,
+            672,
+            237,
+            740
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه با نقطه O روی قاعده بالایی."
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0182.jpg",
+          "box": [
+            93,
+            808,
+            301,
+            888
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_text",
+          "alt": "دو خط موازی و مورب"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1968",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو $AC$ نیمساز زاویهٔ $A$ است. مقدار $x$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1968/stem_1.webp",
+        "alt": "چهارضلعی ABCD با زاویه قائمه در B.",
+        "aspect_ratio": 0.9684
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳\\sqrt{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳\\sqrt{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳\\sqrt{۷}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳\\sqrt{۸}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "\\begin{cases} \\hat{A}_1 = \\hat{O}_1 \\\\ \\hat{A}_1 = \\hat{A}_2 \\end{cases} \\Rightarrow \\hat{A}_2 = \\hat{O}_1 \\Rightarrow AD = DO\n\\begin{cases} \\hat{B}_1 = \\hat{O}_2 \\\\ \\hat{B}_1 = \\hat{B}_2 \\end{cases} \\Rightarrow \\hat{B}_2 = \\hat{O}_2 \\Rightarrow BC = CO\n\\Rightarrow AD + BC = DC \\Rightarrow \\text{محیط} = 7 + 4/5 + 4/5 = 16\nاز نقطهٔ $C$ عمود $CH$ را بر $AD$ رسم می‌کنیم.\n$BC = CH = 6$\n$C$ بر نیم‌ساز زاویهٔ $A$ واقع است بنابراین:\nهم‌چنین از برابری دو مثلث $ABC$ و $ACH$ نتیجه می‌شود:\n$AH = AB = 10 \\Rightarrow DH = AD - AH = 13 - 10 = 3$\n$\\overset{\\Delta}{CDH} : CD^2 = CH^2 + DH^2 \\Rightarrow x^2 = 6^2 + 3^2 = 45$\n$\\Rightarrow x = 3\\sqrt{5}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1968/stem_2.webp",
+        "alt": "ذوزنقه و ارتفاع",
+        "aspect_ratio": 1.2917
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1968,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            38,
+            730,
+            158,
+            818
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "چهارضلعی ABCD با زاویه قائمه در B."
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0183.jpg",
+          "box": [
+            471,
+            186,
+            627,
+            269
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه و ارتفاع"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1969",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقه $ABCD$ اگر $AB \\parallel MN$ باشد، مساحت مثلث $ABN$ چند برابر مساحت مثلث $MCD$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1969/stem_1.webp",
+        "alt": "ذوزنقه ABCD با پاره‌خط موازی MN.",
+        "aspect_ratio": 1.5465
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳}{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۴}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$AL$ را موازی $BC$ رسم نموده و ارتفاع‌های $AH$ و $AH'$ را می‌کشیم.\n$KN = LC = AB = 3 \\Rightarrow \\begin{cases} MK = 6 \\\\ DL = 9 \\end{cases}$\n$\\overset{\\Delta}{ADH'} : \\frac{AH}{AH'} = \\frac{AM}{AD} \\Rightarrow \\frac{AH}{AH'} = \\frac{MK}{DL} = \\frac{2}{3}$\n$\\overset{\\Delta}{ADL} : \\frac{MK}{DL} = \\frac{AM}{AD}$\n$\\frac{S_{ABN}}{S_{MDC}} = \\frac{\\frac{1}{2}AB \\times AH}{\\frac{1}{2}HH' \\times DC} = \\frac{3AH}{12HH'} = \\frac{1}{4} \\times \\frac{AH}{AH' - AH}$\n$= \\frac{1}{4} \\times \\frac{AH}{\\frac{3}{2}AH - AH} = \\frac{1}{4} \\times \\frac{1}{\\frac{1}{2}} = \\frac{1}{2}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1969/stem_2.webp",
+        "alt": "مثلث و خطوط موازی",
+        "aspect_ratio": 1.8381
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1969,
+      "question_pdf": "17.pdf",
+      "question_page": 9,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0009.jpg",
+          "box": [
+            40,
+            805,
+            246,
+            895
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با پاره‌خط موازی MN."
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0183.jpg",
+          "box": [
+            461,
+            381,
+            659,
+            452
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث و خطوط موازی"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1970",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل اگر $BC = 8$ و مساحت ذوزنقه با مساحت مثلث برابر باشد، اندازهٔ $DE$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1970/stem_1.webp",
+        "alt": "مثلث ABC که با پاره‌خط DE به موازات قاعده برش خورده است.",
+        "aspect_ratio": 1.4622
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3\\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\sqrt{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4\\sqrt{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در واقع مساحت مثلث ADE نصف مساحت مثلث ABC است.\nمثلث ADE و ABC متشابه بوده و نسبت تشابه $\\frac{DE}{BC}$ می‌باشد.\nمی‌دانیم نسبت مساحت‌ها مربع نسبت تشابه است:\n$$ \\frac{S_{ADE}}{S_{ABC}} = (\\frac{DE}{BC})^2 = \\frac{1}{2} $$\n$$ \\Rightarrow (\\frac{DE}{8})^2 = \\frac{1}{2} \\Rightarrow DE^2 = 32 \\Rightarrow DE = 4\\sqrt{2} $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1970,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            55,
+            60,
+            222,
+            137
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث ABC که با پاره‌خط DE به موازات قاعده برش خورده است."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1971",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو $M$ و $N$ وسط ساق‌های ذوزنقه هستند به طوری که $MN = 15$ و $EF = 5$ است. نسبت دو قاعدهٔ ذوزنقه کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1971/stem_1.webp",
+        "alt": "ذوزنقه با میان‌خط MN و قطرهای متقاطع.",
+        "aspect_ratio": 1.4167
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{2}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3}{5}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر $AB$ را $a$ و $CD$ را $b$ بنامیم، خواهیم داشت:\n$\\begin{cases} MN = \\frac{a+b}{2} = 15 \\Rightarrow a+b = 30 \\\\ EF = \\frac{b-a}{2} = 5 \\Rightarrow b-a = 10 \\end{cases} \\Rightarrow b = 20 , a = 10 \\Rightarrow \\frac{a}{b} = \\frac{1}{2}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1971,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            45,
+            142,
+            218,
+            225
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه با میان‌خط MN و قطرهای متقاطع."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1972",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در مثلث قائم‌الزاویهٔ $ABC$ هرگاه $AB = 6$ و $AC = 8$، مقدار $AD$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1972/stem_1.webp",
+        "alt": "مثلث قائم‌الزاویه ABC با ارتفاع AD.",
+        "aspect_ratio": 1.0464
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2/4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3/2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/72$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2/88$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "AD را برابر x در نظر می‌گیریم. در مثلث ACH، DH ارتفاع وارد بر وتر است.\n$$ DH^2 = AD \\times DC \\Rightarrow DH^2 = x(8-x) \\Rightarrow DH = \\sqrt{x(8-x)} $$\n$$ DH \\parallel AB \\Rightarrow \\frac{DH}{AB} = \\frac{DC}{AC} \\Rightarrow \\frac{\\sqrt{x(8-x)}}{6} = \\frac{8-x}{8} $$\n$$ \\Rightarrow \\frac{x(8-x)}{36} = \\frac{(8-x)^2}{64} \\xrightarrow{x \\neq 8} \\frac{x}{36} = \\frac{8-x}{64} $$\n$$ \\Rightarrow 64x = 288 - 36x \\Rightarrow 100x = 288 \\Rightarrow x = 2/88 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1972,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            50,
+            228,
+            172,
+            310
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه ABC با ارتفاع AD."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1973",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل $A\\hat{B}C = B\\hat{D}C$، محیط مثلث $BCD$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1973/stem_1.webp",
+        "alt": "مثلث BCD و خطوط داخلی.",
+        "aspect_ratio": 1.4472
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$37$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$40$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو مثلث $APB$ و $DPC$ به حالت تناسب دو ضلع و برابری زاویهٔ بین متشابه‌اند.\n$\\left. \\begin{array}{l} \\frac{AP}{PD} = \\frac{BP}{CP} = \\frac{1}{3} \\\\ \\hat{P}_1 = \\hat{P}_2 \\end{array} \\right\\} \\Rightarrow \\overset{\\Delta}{APB} \\sim \\overset{\\Delta}{DPC} \\Rightarrow \\frac{AB}{CD} = \\frac{1}{3}$\n$\\Rightarrow CD = 3AB = 12$\n$\\left. \\begin{array}{l} \\text{از طرفی } \\hat{A} = \\hat{D} \\\\ \\hat{D} = A\\hat{B}C \\end{array} \\right\\} \\Rightarrow \\hat{A} = A\\hat{B}C \\Rightarrow AC = BC = 17$\n$\\text{محیط } \\Delta BCD = BD + CD + BC = 11 + 12 + 17 = 40$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1973,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            48,
+            310,
+            230,
+            395
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث BCD و خطوط داخلی."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1974",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اندازه دو قاعده ذوزنقه ۳ و ۶ است. از نقطه تلاقی قطرها موازی دو قاعده رسم می‌کنیم، نسبت مساحت دو ذوزنقه کوچک به دست آمده کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1974/stem_1.webp",
+        "alt": "ذوزنقه با قطرهای متقاطع و خط موازی از نقطه تقاطع.",
+        "aspect_ratio": 1.6
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$0/25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/24$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0/35$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مثلث‌های $AOB$ و $COD$ متشابه‌اند.\n$\\frac{OB}{OD} = \\frac{OA}{OC} = \\frac{AB}{CD} = \\frac{3}{6} = \\frac{1}{2}$\nاگر ارتفاع $OH$ در مثلث $\\overset{\\Delta}{AOB}$ را $h_1$ و ارتفاع $OH'$ در مثلث $\\overset{\\Delta}{COD}$ را $h_2$ بنامیم، نسبت $\\frac{h_1}{h_2}$ نیز برابر $\\frac{1}{2}$ است.\n$\\overset{\\Delta}{ACD} : \\frac{OM}{CD} = \\frac{OA}{AC} = \\frac{1}{3} \\Rightarrow OM = \\frac{1}{3} CD = \\frac{6}{3} = 2$\nبه طریق مشابه $ON = 2$ می‌باشد. بنابراین $MN = 4$ است.\n$\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{1}{2} h_1 (AB+MN)}{\\frac{1}{2} h_2 (CD+MN)} = \\frac{h_1}{h_2} \\times \\frac{(3+4)}{(6+4)} = \\frac{1}{2} \\times \\frac{7}{10} = \\frac{7}{20} = 0/35$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1974,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            50,
+            390,
+            230,
+            465
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه با قطرهای متقاطع و خط موازی از نقطه تقاطع."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1975",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل $\\hat{A}$ و $\\hat{C}$ مکمل هستند. مساحت چهارضلعی $ABCD$ چه کسری از مساحت $EDC$ است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1975/stem_1.webp",
+        "alt": "مثلث EDC با نقاط A و B روی اضلاع.",
+        "aspect_ratio": 1.2358
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{9}{16}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{16}{25}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{21}{25}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{4}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "زاویهٔ C و $A_1$ مکمل هستند، بنابراین: $\\hat{C} = \\hat{A}_2$\nبنابراین دو مثلث ABE و CDE متشابه هستند.\n$$ \\frac{BE}{DE} = \\frac{AE}{CE} \\Rightarrow \\frac{4}{x+2} = \\frac{6}{2x-1} \\Rightarrow 8x-4 = 6x+12 \\Rightarrow x=8 $$\n$$ \\Rightarrow \\text{نسبت تشابه} = \\frac{BE}{DE} = \\frac{4}{10} = \\frac{2}{5} \\Rightarrow \\frac{S_{ABE}}{S_{CDE}} = \\frac{4}{25} $$\n$$ \\Rightarrow \\frac{S_{ABCD}}{S_{CDE}} = \\frac{21}{25} $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1975/solution_text_2.webp",
+        "alt": "دو مثلث متقاطع",
+        "aspect_ratio": 1.3643
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1975,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            52,
+            455,
+            205,
+            540
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث EDC با نقاط A و B روی اضلاع."
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0183.jpg",
+          "box": [
+            40,
+            600,
+            220,
+            690
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_text",
+          "alt": "دو مثلث متقاطع"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1976",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلث $ABC$ به اضلاع $9$، $x$ و $x+3$ با مثلث قائم‌الزاویه‌ای به طول وتر $7/5$ متشابه است، مساحت مثلث کوچک‌تر کدام است؟ ($x>9$)"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$13/5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$27$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مثلث ABC با یک مثلث قائم‌الزاویه متشابه است. بنابراین ABC نیز قائم‌الزاویه است. چون $x > 9$ است، پس بزرگ‌ترین ضلع یعنی وتر $x+3$ است.\n$$ (x+3)^2 = x^2 + 9^2 \\Rightarrow 6x = 72 \\Rightarrow x = 12 $$\n$$ \\Rightarrow \\text{طول وتر} = 15 $$\nوتر مثلث کوچک‌تر برابر $7/5$ است. در نتیجه نسبت تشابه برابر $\\frac{1}{2}$ و نسبت مساحت‌ها برابر $\\frac{1}{4}$ است.\n$$ S_{ABC} = \\frac{1}{2} \\times 12 \\times 9 = 54 \\Rightarrow S_{\\text{مثلث کوچک}} = \\frac{54}{4} = 13/5 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1976,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 183,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1977",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $ABCD$ مستطیل باشد، اندازهٔ $PQ$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1977/stem_1.webp",
+        "alt": "مستطیل ABCD با پاره‌خط‌های داخلی.",
+        "aspect_ratio": 1.599
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{13}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{14}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا قطر $AC$ را محاسبه می‌کنیم:\n$$ AC^2 = AB^2 + BC^2 = 100 + 44 = 144 \\Rightarrow AC = 12 $$\nدر مثلث $ABC$، $BP$ ارتفاع وارد بر وتر است.\n$$ BC^2 = PC \\times AC \\Rightarrow 44 = PC \\times 12 \\Rightarrow PC = \\frac{11}{3} $$\nدر مثلث $ACD$، $DQ$ ارتفاع وارد بر وتر است.\n$$ CD^2 = QC \\times AC \\Rightarrow 100 = QC \\times 12 \\Rightarrow QC = \\frac{25}{3} $$\n$$ PQ = QC - PC = \\frac{25}{3} - \\frac{11}{3} = \\frac{14}{3} $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1977,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            50,
+            580,
+            218,
+            650
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مستطیل ABCD با پاره‌خط‌های داخلی."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1978",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل $PN \\parallel AC$ و $\\hat{M_1} = \\hat{A}$ است. عبارت $BM^2 - BN^2$ با کدام گزینه برابر است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1978/stem_1.webp",
+        "alt": "مثلث با پاره‌خط‌های موازی داخلی.",
+        "aspect_ratio": 1.6044
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$BM \\times MP$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$BM \\times BP$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$BM \\times PC$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$BM \\times MC$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$PN$ موازی $AC$ می‌باشد، بنابراین $\\hat{A} = B\\hat{N}P$.\n$\\left. \\begin{array}{l} \\hat{A} = B\\hat{N}P \\\\ \\hat{A} = \\hat{M}_1 \\end{array} \\right\\} \\Rightarrow \\hat{M}_1 = B\\hat{N}P \\Rightarrow \\overset{\\Delta}{BMN} \\sim \\overset{\\Delta}{BNP}$\nاز طرفی $\\hat{B} = \\hat{B} \\Rightarrow \\frac{BN}{BP} = \\frac{BM}{BN}$\n$\\Rightarrow BN^2 = BM \\times BP \\Rightarrow BN^2 = BM(BM+MP)$\n$\\Rightarrow BN^2 - BM^2 = BM \\times MP$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1978,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            45,
+            638,
+            230,
+            715
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث با پاره‌خط‌های موازی داخلی."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1979",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقه $ABCD$ قطر $AC$ بر ساق $AD$ عمود است. مساحت مثلث $BCD$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1979/stem_1.webp",
+        "alt": "ذوزنقه ABCD با قطرهای متقاطع و عمود بر ساق.",
+        "aspect_ratio": 1.5
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$39$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$40$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$78$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$80$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$AH$ ارتفاع وارد بر وتر در مثلث قائم‌الزاویهٔ $ACD$ است.\n$$ AH^2 = DH \\times CH = 4 \\times 9 \\Rightarrow AH = 6 $$\nدر مثلث $BCD$ ارتفاع وارد بر ضلع $CD$ با $AH$ برابر است. بنابراین:\n$$ S_{BCD} = \\frac{AH \\times CD}{2} = \\frac{6 \\times 13}{2} = 39 $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1979,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            48,
+            705,
+            232,
+            788
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با قطرهای متقاطع و عمود بر ساق."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1980",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "هیچ نقطه‌ای در صفحه پیدا نمی‌شود که از نقطهٔ $A$ به فاصلهٔ ۷ و از نقطهٔ $B$ به فاصلهٔ ۳ باشد. طول $AB$ کدام نمی‌تواند باشد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$13$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تمامی نقاطی که از $A$ به فاصلهٔ ۷ هستند، بر دایره‌ای به مرکز $A$ و شعاع ۷ و تمامی نقاطی که از $B$ به فاصلهٔ ۳ هستند، بر دایره‌ای به مرکز $B$ و شعاع ۳ قرار دارند. دو دایره هیچ نقطهٔ مشترکی ندارند. دو حالت زیر وجود دارد:\n۱) $ \\Rightarrow AB > R + R' \\Rightarrow AB > 10 $\n۲) $ \\Rightarrow AB < R - R' \\Rightarrow AB < 4 $\nبنابراین اندازهٔ $AB$ نمی‌تواند در فاصلهٔ $[4, 10]$ باشد."
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1980/solution_1980_1.webp",
+        "alt": "دو دایره در دو حالت مختلف؛ در حالت اول متباعد و در حالت دوم متداخل",
+        "aspect_ratio": 0.5169
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1980,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0184.jpg",
+          "box": [
+            1350,
+            800,
+            1750,
+            1600
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_1980",
+          "alt": "دو دایره در دو حالت مختلف؛ در حالت اول متباعد و در حالت دوم متداخل"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1981",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل سه مربع به اضلاع واحد در کنار هم قرار دارند. $PH$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1981/stem_1.webp",
+        "alt": "سه مربع واحد کنار هم با پاره‌خط‌های مورب و نقاط P و H.",
+        "aspect_ratio": 2.2955
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{10}}{20}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3\\sqrt{10}}{20}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{\\sqrt{10}}{10}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{3\\sqrt{10}}{10}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو مثلث $APD$ و $BPC$ متشابه‌اند. $AB$ قطر مستطیل و برابر $\\sqrt{10}$ است.\n$$ \\frac{AP}{PB} = \\frac{AD}{BC} = \\frac{1}{3} \\Rightarrow \\frac{AP}{AB} = \\frac{1}{4} \\Rightarrow AP = \\frac{AB}{4} = \\frac{\\sqrt{10}}{4} $$\nدر مثلث $AH ،ABC$ ارتفاع وارد بر وتر است.\n$$ AC^2 = AH \\times AB \\Rightarrow 1 = AH \\times \\sqrt{10} \\Rightarrow AH = \\frac{\\sqrt{10}}{10} $$\n$$ PH = AP - AH = \\frac{\\sqrt{10}}{4} - \\frac{\\sqrt{10}}{10} = \\frac{3\\sqrt{10}}{20} $$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1981,
+      "question_pdf": "17.pdf",
+      "question_page": 10,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            45,
+            820,
+            310,
+            895
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "سه مربع واحد کنار هم با پاره‌خط‌های مورب و نقاط P و H."
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1982",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "خط $d$ و نقطهٔ $A$ به فاصلهٔ $x$ از خط $d$ و خارج آن مفروض است. اگر دقیقاً یک نقطه در صفحه وجود داشته باشد که از $A$ به فاصلهٔ ۱ و از $d$ به فاصلهٔ ۳ باشد، مجموع مقادیر $x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "وتر مثلث کوچک‌تر برابر $7/5$ است. در نتیجه نسبت تشابه برابر $\\frac{1}{2}$ و نسبت مساحت‌ها برابر $\\frac{1}{4}$ است.\n$S_{ABC} = \\frac{1}{2} \\times 12 \\times 9 = 54 \\Rightarrow S_{\\text{مثلث کوچک}} = \\frac{54}{4} = 13/5$\n\nتمام نقاطی که از نقطه $A$ به فاصلهٔ $1$ هستند، بر دایره‌ای به مرکز $A$ و شعاع $1$ قرار دارند.\nتمام نقاطی که از خط $d$ به فاصلهٔ $3$ هستند، بر خطوطی موازی $d$ و به فاصلهٔ $3$ از آن قرار دارند.\nدقیقاً یک نقطه وجود دارد که هر دو خاصیت را داشته باشد. بنابراین خط مورد نظر باید بر دایره مماس باشد.\nاگر خط $l_1$ به فاصلهٔ $3$ از خط $d$ باشد، $AH = 1+3=4$ یعنی $x=4$ است و اگر خط $l_2$ به فاصلهٔ $3$ از خط $d$ باشد، $AH = 3-1=2$ یعنی $x=2$ است.\nمجموع مقادیر $x$ برابر $6 = 2+4$ است."
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1982/solution_1.webp",
+        "alt": "مکان هندسی، خط و دایره",
+        "aspect_ratio": 2.794
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1982,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0184.jpg",
+          "box": [
+            114,
+            100,
+            460,
+            180
+          ],
+          "box_format": "xyxy",
+          "placement": "solution",
+          "alt": "مکان هندسی، خط و دایره"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1983",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در مثلث $ABC$ ارتفاع‌های $BH$ و $CP$ رسم شده است. اگر $CH = ۱۲$، $BP = ۸$ و $OB = ۲OH$ باشد، مساحت $BCH$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1983/stem_1.webp",
+        "alt": "مثلث ABC با ارتفاع‌های رسم شده",
+        "aspect_ratio": 1.6457
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳۶\\sqrt{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵۴\\sqrt{۲}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو مثلث قائم‌الزاویهٔ $B\\overset{\\Delta}{O}P$ و $C\\overset{\\Delta}{O}H$ با برابری دو زاویه با یکدیگر متشابه‌اند.\n$\\frac{OC}{OB} = \\frac{CH}{BP} = \\frac{۱۲}{۸} = \\frac{۳}{۲} \\Rightarrow OC = \\frac{۳}{۲} OB = \\frac{۳}{۲} (۲ OH) = ۳ OH$\n$C\\overset{\\Delta}{O}H: OH^۲ + CH^۲ = OC^۲ \\Rightarrow OH^۲ + ۱۲^۲ = (۳ OH)^۲$\n$\\Rightarrow OH^۲ = \\frac{۱۴۴}{۸} = ۱۸ \\Rightarrow OH = ۳\\sqrt{۲} \\Rightarrow BH = ۳ OH = ۹\\sqrt{۲}$\n$S_{BCH} = \\frac{BH \\times CH}{۲} = \\frac{۹\\sqrt{۲} \\times ۱۲}{۲} = ۵۴\\sqrt{۲}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1983,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            45,
+            128,
+            233,
+            204
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث ABC با ارتفاع‌های رسم شده"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1984",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "بهتاش با قد ۲ متر به فاصلهٔ ۱۱ متری درختی به ارتفاع ۱۱ متر ایستاده است و از نوک درخت انتهای برج میلاد را می‌بیند. اگر ارتفاع برج میلاد ۴۳۴ متر باشد، فاصلهٔ بهتاش تا برج میلاد چند متر است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1984/stem_1.webp",
+        "alt": "نمای بهتاش، درخت و برج میلاد",
+        "aspect_ratio": 1.0324
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۵۲۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵۲۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵۳۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵۴۰$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در مثلث $ABC$ طبق قضیهٔ تالس خواهیم داشت:\n$$ \\frac{AF}{AB} = \\frac{EF}{BC} \\Rightarrow \\frac{11}{AB} = \\frac{9}{432} \\Rightarrow AB = \\frac{432 \\times 11}{9} = 48 \\times 11 = 528 $$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1984/solution_1984_2.webp",
+        "alt": "مثلث قائم‌الزاویه ABC با خط موازی EF",
+        "aspect_ratio": 0.7908
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1984,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            48,
+            202,
+            244,
+            336
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "نمای بهتاش، درخت و برج میلاد"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0184.jpg",
+          "box": [
+            1250,
+            100,
+            1600,
+            550
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_1984",
+          "alt": "مثلث قائم‌الزاویه ABC با خط موازی EF"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1985",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مثلثی به اضلاع ۴، ۵ و $a$ با مثلثی به اضلاع $b$، ۱۶ و ۱۲ متشابه است. اگر $a$ کم‌ترین مقدار ممکن باشد، مساحت مثلث بزرگ‌تر کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۴۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۹۶$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲۸$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$a$ کم‌ترین مقدار ممکن است، بنابراین کوچک‌ترین ضلع مثلث می‌باشد. سه حالت زیر را بررسی می‌کنیم:\n۱) $ b > 16 \\Rightarrow \\frac{a}{12} = \\frac{4}{16} = \\frac{5}{b} \\Rightarrow \\begin{cases} a = 3 \\\\ b = 20 \\end{cases} $\n۲) $ 12 < b < 16 \\Rightarrow \\frac{a}{12} = \\frac{4}{b} = \\frac{5}{16} \\Rightarrow \\begin{cases} a = \\frac{15}{4} \\\\ b = \\frac{64}{5} \\end{cases} $\n۳) $ b < 12 \\Rightarrow \\frac{a}{b} = \\frac{4}{12} = \\frac{5}{16} \\Rightarrow \\text{غ‌ق‌ق} $\nواضح است که در حالت اول $a$ کم‌ترین مقدار بوده و در نتیجه $b$ برابر ۲۰ است. در این حالت با توجه به برقراری رابطة فیثاغورس هر دو مثلث قائم‌الزاویه می‌باشند."
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1985,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 184,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1986",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در مثلث قائم‌الزاویهٔ $ABC$ ارتفاع وارد بر وتر رسم شده است، اگر $AB = \\sqrt{۶}$ و $\\sin \\hat{A} = \\frac{\\sqrt{۶}}{۶}$ باشد، مساحت مثلث $ABC$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1986/stem_1.webp",
+        "alt": "مثلث قائم‌الزاویه ABC",
+        "aspect_ratio": 1.5826
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵\\sqrt{۶}}{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳\\sqrt{۵}}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲\\sqrt{۵}}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۶\\sqrt{۶}}{۵}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "واضح است که در حالت اول $a$ کم‌ترین مقدار بوده و در نتیجه $b$ برابر ۲۰ است. در این حالت با توجه به برقراری رابطۀ فیثاغورس هر دو مثلث قائم‌الزاویه می‌باشند.\n$S_{\\text{بزرگ‌تر مثلث}} = \\frac{12 \\times 16}{2} = 96$\nاگر $AC=b$ باشد، با توجه به $\\sin \\hat{A}_1 = \\frac{\\sqrt{6}}{6}$ در مثلث $\\overset{\\Delta}{ACH}$ خواهیم داشت:\n$CH = \\frac{\\sqrt{6}}{6}b$\n$AH$ ارتفاع وارد بر وتر در مثلث قائم‌الزاویۀ $\\overset{\\Delta}{ABC}$ است.\n$AC^2 = CH \\times BC \\Rightarrow b^2 = \\frac{\\sqrt{6}}{6}b \\times BC \\Rightarrow BC = \\sqrt{6}b$\nاز طرفی: $BC^2 = AB^2 + AC^2 \\Rightarrow 6b^2 = 6 + b^2$\n$\\Rightarrow 5b^2 = 6 \\Rightarrow b = \\frac{\\sqrt{6}}{\\sqrt{5}}$\n$S_{\\overset{\\Delta}{ABC}} = \\frac{AB \\times AC}{2} = \\frac{\\sqrt{6} \\times \\frac{\\sqrt{6}}{\\sqrt{5}}}{2} = \\frac{3}{\\sqrt{5}} = \\frac{3\\sqrt{5}}{5}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1986,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 185,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            46,
+            403,
+            232,
+            482
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه ABC"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1987",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل مقابل $PN \\parallel BM$ و $MP \\parallel AB$ است. طول $AC$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1987/stem_1.webp",
+        "alt": "مثلث ABC با خطوط موازی",
+        "aspect_ratio": 1.7339
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۹$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قضیۀ تالس را در دو مثلث $\\overset{\\Delta}{BMC}$ و $\\overset{\\Delta}{ABC}$ می‌نویسیم.\n$\\overset{\\Delta}{BMC} : PN \\parallel BM \\Rightarrow \\frac{CN}{NM} = \\frac{CP}{PB} \\Bigg\\} \\Rightarrow \\frac{CN}{NM} = \\frac{CM}{MA}$\n$\\overset{\\Delta}{ABC} : MP \\parallel AB \\Rightarrow \\frac{CP}{PB} = \\frac{CM}{MA}$\n$\\Rightarrow \\frac{۴}{۲} = \\frac{۶}{MA} \\Rightarrow MA = ۳ \\Rightarrow AC = ۴ + ۲ + ۳ = ۹$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1987,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 185,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            45,
+            488,
+            239,
+            562
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث ABC با خطوط موازی"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1988",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقهٔ $ABCD$ قطرها یکدیگر را در $P$ قطع می‌کنند. اگر مساحت مثلث $APB$ برابر ۴ و مساحت مثلث $APD$ برابر ۶ باشد، مساحت ذوزنقه کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1988/stem_1.webp",
+        "alt": "ذوزنقه ABCD با قطرهای متقاطع در P",
+        "aspect_ratio": 1.8095
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲۴$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۳۶$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: ارتفاع $AH$ را رسم می‌کنیم.\n$\\frac{S_{\\overset{\\Delta}{ABP}}}{S_{\\overset{\\Delta}{APD}}} = \\frac{\\frac{1}{2} AH \\times BP}{\\frac{1}{2} AH \\times PD} = \\frac{4}{6} \\Rightarrow \\frac{BP}{PD} = \\frac{2}{3}$\nدو مثلث $\\overset{\\Delta}{ABP}$ و $\\overset{\\Delta}{PDC}$ در حالت برابری زوایا با هم متشابه‌اند و نسبت تشابه برابر $\\frac{BP}{PD} = \\frac{2}{3}$ و در نتیجه نسبت مساحت‌ها برابر $\\frac{4}{9}$ است. بنابراین $S_{\\overset{\\Delta}{PDC}} = \\frac{9}{4} S_{\\overset{\\Delta}{ABP}} = 9$. همانند دو مثلث $\\overset{\\Delta}{ABP}$ و $\\overset{\\Delta}{APD}$ نسبت مساحت‌های دو مثلث $\\overset{\\Delta}{ABP}$ و $\\overset{\\Delta}{BPC}$ نیز برابر نسبت قاعده‌ها یعنی $\\frac{AP}{PC} = \\frac{2}{3}$ است.\n$\\frac{S_{\\overset{\\Delta}{ABP}}}{S_{\\overset{\\Delta}{BPC}}} = \\frac{2}{3} \\Rightarrow S_{\\overset{\\Delta}{BPC}} = \\frac{3}{2} S_{\\overset{\\Delta}{ABP}} = 6$\n$\\Rightarrow S_{ABCD} = S_{\\overset{\\Delta}{ABP}} + S_{\\overset{\\Delta}{APD}} + S_{\\overset{\\Delta}{PDC}} + S_{\\overset{\\Delta}{BPC}} = 4 + 6 + 9 + 6 = 25$\nروش دوم: در ذوزنقه با رسم قطرها مساحت دو مثلث جانبی با هم برابر و واسطۀ هندسی مساحت مثلث‌های بالا و پایین است.\n$S_1 S_2 = S^2$\nدر این مسئله $S = 6$ و $S_1 = 4$ است.\n$4 S_2 = 6^2 \\Rightarrow S_2 = 9 \\Rightarrow S_{ABCD} = 2S + S_1 + S_2 = 12 + 4 + 9 = 25$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1988/stem_2.webp",
+        "alt": "مثلث ABC با ارتفاع AH و نقطه P",
+        "aspect_ratio": 0.3387
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1988/stem_3.webp",
+        "alt": "ذوزنقه ABCD با اقطار متقاطع",
+        "aspect_ratio": 0.305
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1988,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 185,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            45,
+            591,
+            219,
+            654
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با قطرهای متقاطع در P"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0185.jpg",
+          "box": [
+            470,
+            480,
+            560,
+            690
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث ABC با ارتفاع AH و نقطه P"
+        },
+        {
+          "page_file": "page_0185.jpg",
+          "box": [
+            810,
+            480,
+            890,
+            690
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با اقطار متقاطع"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1989",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقهٔ $ABCD$، نقاط $M$ و $N$ بر دو ساق ذوزنقه چنان قرار گرفته‌اند که $AM = ۲MD$ و $BN = ۲NC$. $PQ$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1989/stem_1.webp",
+        "alt": "ذوزنقه ABCD با خطوط موازی",
+        "aspect_ratio": 1.7436
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{a + b}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{b - a}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲b + a}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲b - a}{۳}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با توجه به $\\frac{AM}{MD} = \\frac{BN}{NC} = \\frac{2}{3}$ واضح است $MN \\parallel AB \\parallel DC$.\n$\\overset{\\Delta}{ACD} : MQ \\parallel DC \\Rightarrow \\frac{MQ}{DC} = \\frac{AM}{AD} = \\frac{2}{5}$\n$\\Rightarrow MQ = \\frac{2}{5} DC = \\frac{2}{5}b$\n$\\overset{\\Delta}{ABD} : MP \\parallel AB \\Rightarrow \\frac{MP}{AB} = \\frac{DM}{DA} = \\frac{3}{5}$\n$\\Rightarrow MP = \\frac{3}{5} AB = \\frac{3}{5}a$\n$\\Rightarrow PQ = MQ - MP = \\frac{2}{5}b - \\frac{3}{5}a = \\frac{2b - 3a}{5}$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1989,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 185,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            45,
+            666,
+            218,
+            731
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با خطوط موازی"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1990",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در مثلث قائم‌الزاویهٔ $ABC$ عمودمنصف وتر $BC$ امتداد ضلع $AC$ را در $P$ قطع می‌کند. اگر $PB = ۷$ و $AC = ۴$ باشد، مساحت مثلث $ABC$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲\\sqrt{۱۰}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۰\\sqrt{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۵\\sqrt{۲}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴\\sqrt{۱۰}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "$P$ بر روی عمودمنصف $BC$ واقع است. بنابراین:\n$PB = PC = 7 \\Rightarrow AP = 3$\n$\\overset{\\Delta}{APB} : AP^2 + AB^2 = BP^2$\n$\\Rightarrow 9 + AB^2 = 49 \\Rightarrow AB = \\sqrt{40} = 2\\sqrt{10}$\n$S_{\\overset{\\Delta}{ABC}} = \\frac{AB \\times AC}{2} = \\frac{2\\sqrt{10} \\times 4}{2} = 4\\sqrt{10}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1990/stem_1.webp",
+        "alt": "مثلث PCB و نقطه A روی PC و ارتفاع AB",
+        "aspect_ratio": 0.3866
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1990,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 185,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [],
+      "solution": [
+        {
+          "page_file": "page_0185.jpg",
+          "box": [
+            300,
+            40,
+            400,
+            240
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث PCB و نقطه A روی PC و ارتفاع AB"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1991",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقهٔ مقابل اگر مساحت شکل رنگی برابر ۲۴ باشد، ارتفاع ذوزنقه چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1991/stem_1.webp",
+        "alt": "ذوزنقه با بخش رنگی",
+        "aspect_ratio": 1.6462
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۱۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۹$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲/۵$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "می‌دانیم: $S_1 S_2 = S^2$\n$\\Rightarrow S_1 S_2 = 24^2 \\quad (1)$\nاز طرفی دو مثلث $\\overset{\\Delta}{ABO}$ و $\\overset{\\Delta}{CDO}$ با نسبت تشابه $\\frac{2}{3}$ با یکدیگر متشابه‌اند.\n$\\Rightarrow \\frac{S_1}{S_2} = (\\frac{2}{3})^2 = \\frac{4}{9} \\Rightarrow S_2 = \\frac{9}{4} S_1 \\xrightarrow{(1)} S_1 (\\frac{9}{4} S_1) = 24^2$\n$\\Rightarrow \\frac{9}{4} S_1^2 = 24^2 \\Rightarrow \\frac{3}{2} S_1 = 24 \\Rightarrow S_1 = 16 \\Rightarrow S_2 = \\frac{9}{4} \\times 16 = 36$\n$\\Rightarrow S_{ABCD} = 16 + 36 + 2 \\times 24 = 100 \\Rightarrow \\frac{8+12}{2} \\times h = 100$\n$\\Rightarrow h = 10$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1991/stem_2.webp",
+        "alt": "ذوزنقه ABCD با مساحت های S1 و S2 و S",
+        "aspect_ratio": 0.3216
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1991,
+      "question_pdf": "17.pdf",
+      "question_page": 11,
+      "solution_page": 185,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            47,
+            811,
+            209,
+            876
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه با بخش رنگی"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0185.jpg",
+          "box": [
+            480,
+            40,
+            560,
+            240
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با مساحت های S1 و S2 و S"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1992",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقهٔ مقابل $S_۱$، $S_۲$ و $S_۳$ مساحت مثلث‌ها هستند، هرگاه $S_۲ = \\frac{۲}{۳}S_۱$، مقدار $\\frac{S_۳}{S_۱}$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1992/stem_1.webp",
+        "alt": "ذوزنقه با مثلث‌های S1، S2، S3",
+        "aspect_ratio": 1.9615
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۲/۲۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲/۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱/۷۵$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در ذوزنقۀ $ABCD$ می‌دانیم:\n$S_۱ S_۳ = S_۲^۲ \\quad (۱)$\n$S_۱ = \\frac{۲}{۳} S_۲ \\Rightarrow S_۲ = \\frac{۳}{۲} S_۱ \\xrightarrow{(۱)} S_۱ S_۳ = (\\frac{۳}{۲} S_۱)^۲ = \\frac{۹}{۴} S_۱^۲$\n$\\Rightarrow S_۳ = \\frac{۹}{۴} S_۱ \\Rightarrow \\frac{S_۳}{S_۱} = \\frac{۹}{۴} = ۲/۲۵$"
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1992,
+      "question_pdf": "17.pdf",
+      "question_page": 12,
+      "solution_page": 185,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            101,
+            89,
+            283,
+            149
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه با مثلث‌های S1، S2، S3"
+        }
+      ],
+      "solution": []
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1993",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر مساحت مثلث $OAB$ برابر ۶ باشد، مساحت شکل رنگی چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1993/stem_1.webp",
+        "alt": "مثلث‌ها و بخش رنگی",
+        "aspect_ratio": 1.9238
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۹$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۸$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۱۲/۵$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "مثلث‌های $OAB$ و $OCD$ با نسبت $\\frac{۶}{۹}$ با یکدیگر متشابه‌اند. بنابراین:\n$\\frac{OB}{OD} = \\frac{۶}{۹} = \\frac{۲}{۳}$\n$\\frac{S_{AOD}}{S_{AOB}} = \\frac{\\frac{1}{2} AH \\times OD}{\\frac{1}{2} AH \\times OB} = \\frac{OD}{OB} = \\frac{3}{2}$\n$\\Rightarrow S_{AOD} = \\frac{3}{2} S_{AOB} = \\frac{3}{2} \\times 6 = 9$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1993/stem_2.webp",
+        "alt": "ذوزنقه و مثلث‌ها",
+        "aspect_ratio": 0.2736
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1993,
+      "question_pdf": "17.pdf",
+      "question_page": 12,
+      "solution_page": 185,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            101,
+            154,
+            323,
+            230
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث‌ها و بخش رنگی"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0185.jpg",
+          "box": [
+            816,
+            46,
+            893,
+            276
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه و مثلث‌ها"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1994",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در ذوزنقهٔ مقابل نسبت مساحت‌های دو مثلث $ODC$ و $OAB$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1994/stem_1.webp",
+        "alt": "ذوزنقه ABCD",
+        "aspect_ratio": 1.8101
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲}{۷}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۴}{۲۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۴}{۴۹}$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دو مثلث $OAB$ و $OCD$ به حالت برابری زوایا با یکدیگر متشابه‌اند و نسبت تشابه برابر $\\frac{2}{5}$ است.\n$\\hat{B}_1 = \\hat{D}_1$ و $\\hat{A}_1 = \\hat{C}_1$ $\\Rightarrow \\Delta OAB \\sim \\Delta OCD$\nنسبت مساحت‌ها، مربع نسبت تشابه و برابر $\\frac{4}{25}$ است."
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1994/stem_2.webp",
+        "alt": "ذوزنقه ABCD با قطرهای متقاطع در O",
+        "aspect_ratio": 0.2872
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1994,
+      "question_pdf": "17.pdf",
+      "question_page": 12,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            101,
+            237,
+            323,
+            319
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0186.jpg",
+          "box": [
+            180,
+            500,
+            270,
+            750
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با قطرهای متقاطع در O"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1995",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در شکل روبه‌رو $EF$ موازی دو قاعدهٔ ذوزنقه است. اندازهٔ $EF$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1995/stem_1.webp",
+        "alt": "ذوزنقه ABCD با خط موازی EF",
+        "aspect_ratio": 1.7225
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۶۲}{۷}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۳۱}{۸}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵۲}{۷}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۵۰}{۷}$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "قطر $AC$ را رسم می‌کنیم تا $EF$ را در $P$ قطع کند.\n$\\Delta ACD : EP \\parallel DC \\Rightarrow \\frac{EP}{DC} = \\frac{AE}{AD} = \\frac{۲}{۷}$\n$\\Rightarrow EP = \\frac{۲}{۷} DC = \\frac{۲}{۷} \\times 10 = \\frac{۲۰}{۷}$\n$\\Delta ABC : PF \\parallel AB \\Rightarrow \\frac{PF}{AB} = \\frac{CF}{BC} = \\frac{DE}{AD} = \\frac{۵}{۷}$\n$\\Rightarrow PF = \\frac{۵}{۷} AB = \\frac{۵}{۷} \\times 6 = \\frac{۳۰}{۷}$\n$\\Rightarrow EF = EP + PF = \\frac{۲۰}{۷} + \\frac{۳۰}{۷} = \\frac{۵۰}{۷}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1995/solution_text_2.webp",
+        "alt": "ذوزنقه ABCD و خطوط موازی",
+        "aspect_ratio": 0.3379
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1995,
+      "question_pdf": "17.pdf",
+      "question_page": 12,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            101,
+            325,
+            285,
+            396
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با خط موازی EF"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0186.jpg",
+          "box": [
+            343,
+            516,
+            423,
+            706
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_text",
+          "alt": "ذوزنقه ABCD و خطوط موازی"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1996",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $E$ و $F$ وسط اضلاع $AD$ و $BC$ باشند، مقدار $\\frac{PQ}{EF}$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1996/stem_1.webp",
+        "alt": "ذوزنقه ABCD و خط EF",
+        "aspect_ratio": 1.6279
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۳}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۴}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۱}{۲}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: اندازه $QF$، $EQ$ و $EP$ را به دست می‌آوریم.\n$\\Delta ADC: \\frac{EQ}{DC} = \\frac{AE}{AD} = \\frac{1}{2} \\Rightarrow EQ = \\frac{DC}{2} = 4$\n$\\Delta ABC: \\frac{QF}{AB} = \\frac{FC}{BC} = \\frac{1}{2} \\Rightarrow QF = \\frac{AB}{2} = 2$\n$\\Delta ABD: \\frac{EP}{AB} = \\frac{DE}{DA} = \\frac{1}{2} \\Rightarrow EP = \\frac{AB}{2} = 2$\n$\\Rightarrow \\begin{cases} EF = EQ + QF = 6 \\\\ PQ = EQ - EP = 2 \\end{cases} \\Rightarrow \\frac{PQ}{EF} = \\frac{2}{6} = \\frac{1}{3}$\nروش دوم:\nنکته: در ذوزنقه $ABCD$ قطرها و پاره‌خط واصل بین وسط‌های دو ساق را رسم می‌کنیم. خواهیم داشت:\n$EF = \\frac{a+b}{2}$ و $PQ = \\frac{b-a}{2}$\nدر این مسئله $a=4$ و $b=8$ است:\n$\\frac{PQ}{EF} = \\frac{b-a}{a+b} = \\frac{8-4}{4+8} = \\frac{4}{12} = \\frac{1}{3}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1996/stem_2.webp",
+        "alt": "ذوزنقه ABCD با خط واصل وسط‌های ساق‌ها EF و نقاط P و Q",
+        "aspect_ratio": 0.4113
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1996,
+      "question_pdf": "17.pdf",
+      "question_page": 12,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            102,
+            401,
+            280,
+            474
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD و خط EF"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0186.jpg",
+          "box": [
+            760,
+            510,
+            850,
+            680
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با خط واصل وسط‌های ساق‌ها EF و نقاط P و Q"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1997",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دو قاعدهٔ ذوزنقه به ترتیب ۴ و ۹ هستند هرگاه $EF$ موازی دو قاعده باشد به طوری که $۵AE = ED$، مقدار $EF$ چه عددی است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1997/stem_1.webp",
+        "alt": "ذوزنقه ABCD و خط EF",
+        "aspect_ratio": 1.619
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۴۱}{۵}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲۹}{۶}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۲۵}{۸}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\frac{۴۱}{۶}$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "روش اول: قطر $AC$ را رسم می‌کنیم تا $EF$ را در $P$ قطع کند.\n$\\Delta ADC : EP \\parallel DC \\Rightarrow \\frac{EP}{DC} = \\frac{AE}{AD} = \\frac{1}{6}$\n$\\Rightarrow EP = \\frac{1}{6} DC = \\frac{9}{6}$\n$\\Delta ABC : PF \\parallel AB \\Rightarrow \\frac{PF}{AB} = \\frac{CF}{BC} = \\frac{DE}{AD} = \\frac{5}{6}$\n$\\Rightarrow PF = \\frac{5}{6} AB = \\frac{20}{6}$\n$\\Rightarrow EF = EP + PF = \\frac{29}{6}$\nروش دوم:\nنکته در ذوزنقهٔ $ABCD$ اگر $EF$ ساق‌های ذوزنقه را به نسبت $\\frac{m}{n}$ قطع کند خواهیم داشت:\n$EF = \\frac{mb+na}{m+n}$\nدر این مسئله $m=1$، $n=5$، $a=4$ و $b=9$ است.\n$EF = \\frac{(1 \\times 9) + (5 \\times 4)}{1+5} = \\frac{29}{6}$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1997/solution_text_2.webp",
+        "alt": "ذوزنقه و خطوط موازی روش اول",
+        "aspect_ratio": 0.2571
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1997/solution_text_3.webp",
+        "alt": "ذوزنقه و خطوط موازی روش دوم",
+        "aspect_ratio": 0.2785
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1997,
+      "question_pdf": "17.pdf",
+      "question_page": 12,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            101,
+            500,
+            255,
+            563
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD و خط EF"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0186.jpg",
+          "box": [
+            95,
+            99,
+            169,
+            335
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_text",
+          "alt": "ذوزنقه و خطوط موازی روش اول"
+        },
+        {
+          "page_file": "page_0186.jpg",
+          "box": [
+            372,
+            102,
+            451,
+            332
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_text",
+          "alt": "ذوزنقه و خطوط موازی روش دوم"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nardebam_math_1405_1998",
+    "subject": "math",
+    "topic_key": "geometry",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "$BD$ نیمساز زاویهٔ $B$ در مثلث قائم‌الزاویهٔ $ABC$ است. مساحت مثلث $BDC$ کدام است؟"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1998/stem_1.webp",
+        "alt": "مثلث قائم‌الزاویه ABC",
+        "aspect_ratio": 1.6508
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$۳۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۴۵$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۶۰$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$۷۵$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در مثلث $BDC$ ارتفاع $DH$ را رسم می‌کنیم.\n$D$ روی نیمساز زاویهٔ $B$ است، بنابراین:\n$DA = DH = 6$\n$S_{BDC} = \\frac{1}{2} DH \\times BC = \\frac{1}{2} \\times 6 \\times 20 = 60$"
+      },
+      {
+        "type": "image",
+        "asset": "question_media/math/nardebam_math_1405_1998/solution_text_2.webp",
+        "alt": "مثلث BDC و ارتفاع DH",
+        "aspect_ratio": 0.3326
+      }
+    ],
+    "smart_shortcut": null,
+    "source_bank": "nardebam",
+    "provenance": {
+      "kind": "source",
+      "edition": "nardebam_1405",
+      "question_number": 1998,
+      "question_pdf": "17.pdf",
+      "question_page": 12,
+      "solution_page": 186,
+      "solution_origin": "source"
+    },
+    "_media_regions": {
+      "question": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            102,
+            575,
+            259,
+            638
+          ],
+          "box_format": "xyxy",
+          "placement": "stem",
+          "alt": "مثلث قائم‌الزاویه ABC"
+        }
+      ],
+      "solution": [
+        {
+          "page_file": "page_0186.jpg",
+          "box": [
+            516,
+            101,
+            580,
+            260
+          ],
+          "box_format": "xyxy",
+          "placement": "solution_text",
+          "alt": "مثلث BDC و ارتفاع DH"
+        }
+      ]
+    }
+  }
+]

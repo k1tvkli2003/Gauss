@@ -1,0 +1,2817 @@
+{
+  "generated_at": "2026-06-25T20:07:57.594Z",
+  "scope": {
+    "conflicts_file": "data/seed/review/nardebam/join_conflicts.json",
+    "normalized_dir": "data/seed/review/nardebam/normalized",
+    "output_file": "data/seed/review/nardebam/agent_reports/current_solution_key_mismatch_report.json",
+    "raw_or_normalized_files_edited": false
+  },
+  "summary": {
+    "total_join_conflicts": 1074,
+    "issue_counts": {
+      "duplicate_solution": 2,
+      "missing_solution": 384,
+      "duplicate_question_number": 221,
+      "solution_key_mismatch": 354,
+      "missing_key": 183,
+      "question_total": 2,
+      "invalid_options": 1
+    },
+    "solution_key_mismatch_count": 354,
+    "grouped_solution_key_mismatch_count": 23,
+    "top_group_share": 303
+  },
+  "grouped_mismatches": [
+    {
+      "subject": "math",
+      "topic_key": "derivative_applications",
+      "source_file": "math-solutions-07.json",
+      "count": 98,
+      "ranges": [
+        {
+          "start": 1346,
+          "end": 1354,
+          "count": 9
+        },
+        {
+          "start": 1356,
+          "end": 1361,
+          "count": 6
+        },
+        {
+          "start": 1363,
+          "end": 1364,
+          "count": 2
+        },
+        {
+          "start": 1366,
+          "end": 1368,
+          "count": 3
+        },
+        {
+          "start": 1370,
+          "end": 1370,
+          "count": 1
+        },
+        {
+          "start": 1372,
+          "end": 1372,
+          "count": 1
+        },
+        {
+          "start": 1374,
+          "end": 1383,
+          "count": 10
+        },
+        {
+          "start": 1385,
+          "end": 1404,
+          "count": 20
+        },
+        {
+          "start": 1408,
+          "end": 1409,
+          "count": 2
+        },
+        {
+          "start": 1411,
+          "end": 1416,
+          "count": 6
+        },
+        {
+          "start": 1418,
+          "end": 1422,
+          "count": 5
+        },
+        {
+          "start": 1424,
+          "end": 1425,
+          "count": 2
+        },
+        {
+          "start": 1427,
+          "end": 1432,
+          "count": 6
+        },
+        {
+          "start": 1434,
+          "end": 1439,
+          "count": 6
+        },
+        {
+          "start": 1441,
+          "end": 1445,
+          "count": 5
+        },
+        {
+          "start": 1449,
+          "end": 1453,
+          "count": 5
+        },
+        {
+          "start": 1455,
+          "end": 1456,
+          "count": 2
+        },
+        {
+          "start": 1459,
+          "end": 1459,
+          "count": 1
+        },
+        {
+          "start": 1461,
+          "end": 1466,
+          "count": 6
+        }
+      ],
+      "avg_overlap": 0.411,
+      "overlap_bands": {
+        "high_text_overlap": 37,
+        "medium_text_overlap": 45,
+        "low_text_overlap": 14,
+        "zero_text_overlap": 2
+      },
+      "sample_question_numbers": [
+        1346,
+        1347,
+        1348,
+        1349,
+        1350,
+        1351,
+        1352,
+        1353,
+        1354,
+        1356
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "derivative_applications",
+          "question_number": 1346,
+          "source_file": "math-solutions-07.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.75,
+          "overlap_band": "high_text_overlap",
+          "question_page": 9,
+          "solution_page": 125,
+          "question_text_preview": "اگر $f'(x) = (x + a)(ax + 4)$ باشد، آن‌گاه به ازای کدام مقدار $a$ تابع $f$ در $\\mathbb{R}$ اکیداً نزولی است؟",
+          "solution_text_preview": "برای این‌که تابع $f$ در $\\mathbb{R}$ اکیداً نزولی باشد، $f'$ باید همواره نامثبت باشد. بنابراین $f'(x) = \\circ$ نباید ریشه ساده داشته باشد. در نتیجه: $f'(x) = (x+a)(ax+4) = \\circ \\..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "derivative_applications",
+          "question_number": 1347,
+          "source_file": "math-solutions-07.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.364,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 9,
+          "solution_page": 126,
+          "question_text_preview": "نمودار تابع $f$ به صورت مقابل است. در کدام بازهٔ زیر علامت $f'$ ابتدا منفی، سپس مثبت است؟",
+          "solution_text_preview": "در بازهٔ مورد نظر، تابع $f$ باید ابتدا نزولی و سپس صعودی باشد. بنابراین [۴] درست است."
+        },
+        {
+          "subject": "math",
+          "topic_key": "derivative_applications",
+          "question_number": 1348,
+          "source_file": "math-solutions-07.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.727,
+          "overlap_band": "high_text_overlap",
+          "question_page": 9,
+          "solution_page": 126,
+          "question_text_preview": "نمودار مشتق تابع $f$ به صورت زیر است. طول بزرگ‌ترین بازه‌ای که تابع $f$ در آن بازه نزولی است، کدام است؟",
+          "solution_text_preview": "بزرگ‌ترین بازه‌ای که تابع $f'$ در آن نامثبت است، بازهٔ $(3, 8)$ می‌باشد که در این بازه تابع $f$ نزولی است. بنابراین طول بزرگ‌ترین بازه برابر $8-3=5$ است."
+        },
+        {
+          "subject": "math",
+          "topic_key": "derivative_applications",
+          "question_number": 1349,
+          "source_file": "math-solutions-07.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 1,
+          "overlap": 0.286,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 9,
+          "solution_page": 126,
+          "question_text_preview": "نمودار مشتق تابع $f$ شکل مقابل است. تابع $f$ در کدام بازه یکنواست؟",
+          "solution_text_preview": "تابع $f$ در بازه‌ای یکنوا است که $f'$ در آن بازه تغییر علامت نداشته باشد. در گزینه‌های داده‌شده تابع $f'$ در بازهٔ $(1, 7)$ همواره نامنفی و $f$ در این بازه صعودی است."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math derivative_applications solution_key_mismatch rows 1346-1354, 1356-1361, 1363-1364, 1366-1368, 1370, 1372, 1374-1383, 1385-1404, 1408-1409, 1411-1416, 1418-1422, 1424-1425, 1427-1432, 1434-1439, 1441-1445, 1449-1453, 1455-1456, 1459, 1461-1466 in math-solutions-07.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "probability",
+      "source_file": "math-solutions-09.json",
+      "count": 51,
+      "ranges": [
+        {
+          "start": 1824,
+          "end": 1826,
+          "count": 3
+        },
+        {
+          "start": 1828,
+          "end": 1834,
+          "count": 7
+        },
+        {
+          "start": 1836,
+          "end": 1836,
+          "count": 1
+        },
+        {
+          "start": 1841,
+          "end": 1841,
+          "count": 1
+        },
+        {
+          "start": 1843,
+          "end": 1843,
+          "count": 1
+        },
+        {
+          "start": 1845,
+          "end": 1848,
+          "count": 4
+        },
+        {
+          "start": 1850,
+          "end": 1851,
+          "count": 2
+        },
+        {
+          "start": 1853,
+          "end": 1861,
+          "count": 9
+        },
+        {
+          "start": 1863,
+          "end": 1868,
+          "count": 6
+        },
+        {
+          "start": 1870,
+          "end": 1872,
+          "count": 3
+        },
+        {
+          "start": 1874,
+          "end": 1879,
+          "count": 6
+        },
+        {
+          "start": 1881,
+          "end": 1881,
+          "count": 1
+        },
+        {
+          "start": 1883,
+          "end": 1883,
+          "count": 1
+        },
+        {
+          "start": 1885,
+          "end": 1885,
+          "count": 1
+        },
+        {
+          "start": 1887,
+          "end": 1891,
+          "count": 5
+        }
+      ],
+      "avg_overlap": 0.303,
+      "overlap_bands": {
+        "medium_text_overlap": 27,
+        "zero_text_overlap": 3,
+        "high_text_overlap": 9,
+        "low_text_overlap": 12
+      },
+      "sample_question_numbers": [
+        1824,
+        1825,
+        1826,
+        1828,
+        1829,
+        1830,
+        1831,
+        1832,
+        1833,
+        1834
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "probability",
+          "question_number": 1824,
+          "source_file": "math-solutions-09.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.278,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 10,
+          "solution_page": 0,
+          "question_text_preview": "در ظرفی $n$ مهرهٔ سفید و ۲۰ مهرهٔ سیاه داریم. مهره‌ای با چشم بسته از کیسه خارج می‌کنیم، احتمال سیاه‌بودن مهره ۴ برابر احتمال سفیدبودن مهره است. در کیسه چند مهره قرار داشته است؟",
+          "solution_text_preview": "طبق تعریف احتمال داریم: $P(\\text{سیاه}) = \\dfrac{n(\\text{سیاه})}{n(S)}$ $P(\\text{سفید}) = \\dfrac{n(\\text{سفید})}{n(S)}$ $\\Rightarrow \\dfrac{P(\\text{سیاه})}{P(\\text{سفید})} = \\dfra..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "probability",
+          "question_number": 1825,
+          "source_file": "math-solutions-09.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.313,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 10,
+          "solution_page": 0,
+          "question_text_preview": "نوید و فرهاد به همراه ۴ نفر دیگر می‌خواهند در یک صف پشت سر هم قرار بگیرند، به کدام احتمال نوید و فرهاد کنار هم هستند؟",
+          "solution_text_preview": "پیشامد آن‌که نوید و فرهاد کنار یکدیگر باشند را $A$ می‌نامیم. نوید و فرهاد را داخل یک جعبهٔ فرضی قرار می‌دهیم. $P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{۵! \\times ۲!}{۶!} = \\dfrac{۲}{۶} ..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "probability",
+          "question_number": 1826,
+          "source_file": "math-solutions-09.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 1,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 10,
+          "solution_page": 0,
+          "question_text_preview": "در جعبه‌ای ۵ کارت آبی با شماره‌های ۱ تا ۵ و ۴ کارت قرمز با شماره‌های ۱ تا ۴ موجود است. به تصادف دو کارت از جعبه خارج می‌کنیم، با کدام احتمال شماره‌های دو کارت برابر است؟",
+          "solution_text_preview": "پیشامد مورد نظر را $A$ می‌نامیم: $A = \\{(۱, ۱), (۲, ۲), (۳, ۳), (۴, ۴)\\}$ بنابراین: $P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{۴}{\\binom{۹}{۲}} = \\dfrac{۴}{۳۶} = \\dfrac{۱}{۹}$"
+        },
+        {
+          "subject": "math",
+          "topic_key": "probability",
+          "question_number": 1828,
+          "source_file": "math-solutions-09.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.231,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 10,
+          "solution_page": 0,
+          "question_text_preview": "۴ دختر و ۵ پسر در یک مهد کودک قرار است در یک صف بایستند، به کدام احتمال دخترها کنار هم هستند؟",
+          "solution_text_preview": "دخترها را داخل یک جعبهٔ فرضی قرار می‌دهیم. $P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{۶! \\times ۴!}{۹!} = \\dfrac{۶ \\times ۵! \\times ۴!}{۹!} = \\dfrac{۶}{\\dfrac{۹!}{۴! ۵!}} = \\dfrac{۶}{\\bi..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math probability solution_key_mismatch rows 1824-1826, 1828-1834, 1836, 1841, 1843, 1845-1848, 1850-1851, 1853-1861, 1863-1868, 1870-1872, 1874-1879, 1881, 1883, 1885, 1887-1891 in math-solutions-09.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "geometry",
+      "source_file": "math-solutions-10.json",
+      "count": 41,
+      "ranges": [
+        {
+          "start": 1949,
+          "end": 1951,
+          "count": 3
+        },
+        {
+          "start": 1953,
+          "end": 1958,
+          "count": 6
+        },
+        {
+          "start": 1961,
+          "end": 1961,
+          "count": 1
+        },
+        {
+          "start": 1963,
+          "end": 1967,
+          "count": 5
+        },
+        {
+          "start": 1969,
+          "end": 1969,
+          "count": 1
+        },
+        {
+          "start": 1971,
+          "end": 1984,
+          "count": 14
+        },
+        {
+          "start": 1986,
+          "end": 1987,
+          "count": 2
+        },
+        {
+          "start": 1989,
+          "end": 1997,
+          "count": 9
+        }
+      ],
+      "avg_overlap": 0.352,
+      "overlap_bands": {
+        "high_text_overlap": 14,
+        "medium_text_overlap": 15,
+        "zero_text_overlap": 2,
+        "low_text_overlap": 10
+      },
+      "sample_question_numbers": [
+        1949,
+        1950,
+        1951,
+        1953,
+        1954,
+        1955,
+        1956,
+        1957,
+        1958,
+        1961
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "geometry",
+          "question_number": 1949,
+          "source_file": "math-solutions-10.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.556,
+          "overlap_band": "high_text_overlap",
+          "question_page": 8,
+          "solution_page": 181,
+          "question_text_preview": "اگر $M$ و $N$ وسط‌های دو ضلع $AB$ و $AC$ باشند، محیط مثلث $ABC$ کدام است؟",
+          "solution_text_preview": "$M$ و $N$ وسط‌های اضلاع $AB$ و $AC$ هستند. در نتیجه: $\\frac{MN}{BC} = \\frac{AM}{AB} = \\frac{1}{2} \\Rightarrow \\frac{x+4}{4x+1} = \\frac{1}{2} \\Rightarrow 2x + 8 = 4x + 1 \\Rightarro..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "geometry",
+          "question_number": 1950,
+          "source_file": "math-solutions-10.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.286,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 8,
+          "solution_page": 181,
+          "question_text_preview": "در ذوزنقهٔ مقابل $O$ نقطهٔ برخورد دو قطر است. هرگاه $FC = 4$ و $DC = 12$ باشد، مقدار $AB$ کدام است؟ ($OF \\parallel BC$)",
+          "solution_text_preview": "در مثلث $BCD$ طبق قضیهٔ تالس داریم: $\\frac{OB}{OD} = \\frac{FC}{FD} = \\frac{4}{12-4} = \\frac{1}{2}$ دو مثلث $AOB$ و $COD$ دارای زوایای برابر هستند، بنابراین با هم متشابه‌اند. $\\Rig..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "geometry",
+          "question_number": 1951,
+          "source_file": "math-solutions-10.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 1,
+          "overlap": 0.444,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 8,
+          "solution_page": 181,
+          "question_text_preview": "در شکل مقابل اگر $AB = 4$، $AC = 7$، $BC = 6$ و چهارضلعی $BNMP$ لوزی باشد، محیط لوزی کدام است؟",
+          "solution_text_preview": "ضلع لوزی را $a$ می‌نامیم. $MN \\parallel AB \\Rightarrow \\frac{CN}{BC} = \\frac{MN}{AB} \\Rightarrow \\frac{6-a}{6} = \\frac{a}{4} \\Rightarrow 10a = 24 \\Rightarrow a = 2/4 \\Rightarrow \\..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "geometry",
+          "question_number": 1953,
+          "source_file": "math-solutions-10.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.5,
+          "overlap_band": "high_text_overlap",
+          "question_page": 8,
+          "solution_page": 181,
+          "question_text_preview": "$M$ و $N$ وسط دو ساق ذوزنقه هستند. نسبت مساحت ذوزنقهٔ $ABNM$ به مساحت ذوزنقهٔ $MNCD$ کدام است؟",
+          "solution_text_preview": "نکته: اگر وسط‌های ساق‌های ذوزنقه را به هم وصل کنیم، طول پاره‌خط به وجود آمده برابر با میانگین قاعده‌هاست. قاعدهٔ $AB$ برابر $a$ و قاعدهٔ $CD$ برابر $3a$ است؛ بنابراین: $MN = \\frac..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math geometry solution_key_mismatch rows 1949-1951, 1953-1958, 1961, 1963-1967, 1969, 1971-1984, 1986-1987, 1989-1997 in math-solutions-10.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "statistics",
+      "source_file": "math-solutions-10.json",
+      "count": 35,
+      "ranges": [
+        {
+          "start": 2000,
+          "end": 2006,
+          "count": 7
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "count": 1
+        },
+        {
+          "start": 2011,
+          "end": 2015,
+          "count": 5
+        },
+        {
+          "start": 2018,
+          "end": 2025,
+          "count": 8
+        },
+        {
+          "start": 2027,
+          "end": 2040,
+          "count": 14
+        }
+      ],
+      "avg_overlap": 0.011,
+      "overlap_bands": {
+        "zero_text_overlap": 30,
+        "low_text_overlap": 5
+      },
+      "sample_question_numbers": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2009,
+        2011,
+        2012
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "statistics",
+          "question_number": 2000,
+          "source_file": "math-solutions-10.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 4,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 1,
+          "solution_page": 0,
+          "question_text_preview": "گروه خونی افراد و میزان گلبول قرمز موجود در خون به ترتیب چه نوع متغیری هستند؟",
+          "solution_text_preview": ""
+        },
+        {
+          "subject": "math",
+          "topic_key": "statistics",
+          "question_number": 2001,
+          "source_file": "math-solutions-10.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 2,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 1,
+          "solution_page": 0,
+          "question_text_preview": "رتبه های تیم ملی فوتبال در آخرین رده بندی انجام شده توسط فیفا چه نوع متغیری است؟",
+          "solution_text_preview": ""
+        },
+        {
+          "subject": "math",
+          "topic_key": "statistics",
+          "question_number": 2002,
+          "source_file": "math-solutions-10.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 1,
+          "solution_page": 0,
+          "question_text_preview": "شمارنده های طبیعی عدد $12$ کدام نوع متغیر است؟",
+          "solution_text_preview": "ابتدا میانگین داده‌ها را حساب می‌کنیم: $\\overline{x} = \\frac{7 + 6 + 3 + 5 + 4 + 6 + 4}{7} = \\frac{35}{7} = 5$ با حذف ۱ داده، میانگین ۶ دادهٔ باقی‌مانده باید برابر ۵ باشد، یعنی جم..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "statistics",
+          "question_number": 2003,
+          "source_file": "math-solutions-10.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 1,
+          "solution_page": 0,
+          "question_text_preview": "اندازه زاویه های داخلی یک چندضلعی، چه نوع متغیری است؟",
+          "solution_text_preview": "میانگین اعداد برابر است با: $\\overline{x} = \\frac{a + 17}{5}$ با توجه به اعداد $1, 2, 6, 8$ عدد $a$ سه حالت دارد: الف) $a < 2 \\Rightarrow$ میانه $= 2 \\Rightarrow \\overline{x} = 3$..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math statistics solution_key_mismatch rows 2000-2006, 2009, 2011-2015, 2018-2025, 2027-2040 in math-solutions-10.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "exponential_logarithmic",
+      "source_file": "math-solutions-07.json",
+      "count": 31,
+      "ranges": [
+        {
+          "start": 1468,
+          "end": 1469,
+          "count": 2
+        },
+        {
+          "start": 1471,
+          "end": 1471,
+          "count": 1
+        },
+        {
+          "start": 1473,
+          "end": 1475,
+          "count": 3
+        },
+        {
+          "start": 1477,
+          "end": 1478,
+          "count": 2
+        },
+        {
+          "start": 1480,
+          "end": 1482,
+          "count": 3
+        },
+        {
+          "start": 1485,
+          "end": 1486,
+          "count": 2
+        },
+        {
+          "start": 1488,
+          "end": 1489,
+          "count": 2
+        },
+        {
+          "start": 1491,
+          "end": 1491,
+          "count": 1
+        },
+        {
+          "start": 1494,
+          "end": 1494,
+          "count": 1
+        },
+        {
+          "start": 1496,
+          "end": 1499,
+          "count": 4
+        },
+        {
+          "start": 1501,
+          "end": 1501,
+          "count": 1
+        },
+        {
+          "start": 1504,
+          "end": 1504,
+          "count": 1
+        },
+        {
+          "start": 1506,
+          "end": 1509,
+          "count": 4
+        },
+        {
+          "start": 1511,
+          "end": 1514,
+          "count": 4
+        }
+      ],
+      "avg_overlap": 0.457,
+      "overlap_bands": {
+        "medium_text_overlap": 9,
+        "high_text_overlap": 19,
+        "zero_text_overlap": 2,
+        "low_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        1468,
+        1469,
+        1471,
+        1473,
+        1474,
+        1475,
+        1477,
+        1478,
+        1480,
+        1481
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "exponential_logarithmic",
+          "question_number": 1468,
+          "source_file": "math-solutions-07.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.4,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 5,
+          "solution_page": 137,
+          "question_text_preview": "با فرض $3^x=\\sqrt[3]{81}\\timesimes9^{1-x}$، حاصل $3x+\\fracrac1x$ کدام است؟",
+          "solution_text_preview": "ابتدا معادلة داده‌‌شده را حل می‌کنیم. $3^x = \\sqrt[3]{81} \\times 9^{1-x} \\Rightarrow 3^x = 3^{\\frac{4}{3}} \\times 3^{2-2x} \\Rightarrow 3^x = 3^{\\frac{4}{3} + 2 - 2x}$ $\\Rightarrow..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "exponential_logarithmic",
+          "question_number": 1469,
+          "source_file": "math-solutions-07.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.857,
+          "overlap_band": "high_text_overlap",
+          "question_page": 5,
+          "solution_page": 137,
+          "question_text_preview": "نمودار تابع $f(x)=a\\timesimes b^{x-2}$ از نقاط $A(1,6)$ و $B(0,18)$ عبور می‌کند. مقدار $f(-1)$ کدام است؟",
+          "solution_text_preview": "نمودار تابع $f(x) = a \\times b^{x-2}$ از نقاط $A(1, 6)$ و $B(0, 18)$ عبور می‌کند. بنابراین: $\\begin{cases} f(1) = 6 \\Rightarrow a \\times b^{-1} = 6 \\Rightarrow a = 6b \\\\ f(0) = 18..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "exponential_logarithmic",
+          "question_number": 1471,
+          "source_file": "math-solutions-07.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.5,
+          "overlap_band": "high_text_overlap",
+          "question_page": 5,
+          "solution_page": 137,
+          "question_text_preview": "نمودار تابعی با ضابطه $f(x)=k\\timesimes2^{ax}$ و خط $3x+2y=7$ در دو نقطه به طول‌های $1$ و $2$ متقاطع‌اند. $f^{-1}(16)$ کدام است؟",
+          "solution_text_preview": "تابع $f(x)$ و خط $2y + 3x = 7$ در دو نقطة $x=1$ و $x=2$ متقاطع‌اند. $2y + 3x = 7 \\begin{cases} \\nearrow x=1 \\Rightarrow y=2 \\\\ \\searrow x=2 \\Rightarrow y=\\frac{1}{2} \\end{cases}$ ..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "exponential_logarithmic",
+          "question_number": 1473,
+          "source_file": "math-solutions-07.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 1,
+          "overlap": 0.2,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 5,
+          "solution_page": 137,
+          "question_text_preview": "حاصل جمع جواب‌های معادله $9^x+9=24\\timesimes3^{x-1}$ کدام است؟",
+          "solution_text_preview": "معادلة داده‌‌شده را برحسب $3^x$ مرتب می‌کنیم. $9^x + 9 = 24 \\times 3^{x-1} \\Rightarrow (3^x)^2 + 9 = 24 \\times \\frac{3^x}{3}$ $\\Rightarrow (3^x)^2 - 8(3)^x + 9 = 0 \\xrightarrow{3^..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math exponential_logarithmic solution_key_mismatch rows 1468-1469, 1471, 1473-1475, 1477-1478, 1480-1482, 1485-1486, 1488-1489, 1491, 1494, 1496-1499, 1501, 1504, 1506-1509, 1511-1514 in math-solutions-07.json. These look like answer-label/key disagreements; verify against the printed answer badge and do not rewrite matching solution text unless the badge was OCRed incorrectly. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "exponential_logarithmic",
+      "source_file": "math-solutions-08.json",
+      "count": 30,
+      "ranges": [
+        {
+          "start": 1529,
+          "end": 1529,
+          "count": 1
+        },
+        {
+          "start": 1532,
+          "end": 1532,
+          "count": 1
+        },
+        {
+          "start": 1534,
+          "end": 1540,
+          "count": 7
+        },
+        {
+          "start": 1542,
+          "end": 1544,
+          "count": 3
+        },
+        {
+          "start": 1546,
+          "end": 1547,
+          "count": 2
+        },
+        {
+          "start": 1549,
+          "end": 1559,
+          "count": 11
+        },
+        {
+          "start": 1564,
+          "end": 1568,
+          "count": 5
+        }
+      ],
+      "avg_overlap": 0.435,
+      "overlap_bands": {
+        "zero_text_overlap": 3,
+        "medium_text_overlap": 14,
+        "high_text_overlap": 13
+      },
+      "sample_question_numbers": [
+        1529,
+        1532,
+        1534,
+        1535,
+        1536,
+        1537,
+        1538,
+        1539,
+        1540,
+        1542
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "exponential_logarithmic",
+          "question_number": 1529,
+          "source_file": "math-solutions-08.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 4,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 9,
+          "solution_page": 142,
+          "question_text_preview": "دامنه تعریف $f(x)=\\sqrt{2-\\log_2(2-x^2)}$ بازه $(a,b)$ است. $b-a$ کدام است؟",
+          "solution_text_preview": "عبارت زیر رادیکال باید نامنفی باشد. $2 - \\log_2(2 - x^2) \\ge 0 \\Rightarrow \\log_2(2 - x^2) \\le 2$ $\\Rightarrow 0 < 2 - x^2 \\le 2^2 \\Rightarrow 0 < 2 - x^2 \\le 4$ $\\Rightarrow -2 <..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "exponential_logarithmic",
+          "question_number": 1532,
+          "source_file": "math-solutions-08.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.4,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 9,
+          "solution_page": 142,
+          "question_text_preview": "با فرض $f(x)=\\log_3(9+3x)$، دامنه تعریف تابع $g(x)=\\sqrt{3-f^{-1}(x)}$ کدام است؟",
+          "solution_text_preview": "وارون تابع $f(x)$ را به دست می‌آوریم: $y = \\log_2(9 + 3x) \\Rightarrow 9 + 3x = 2^y \\Rightarrow x = \\frac{2^y - 9}{3}$ $= 3^{y - 1} - 3 \\Rightarrow f^{-1}(x) = 3^{x - 1} - 3$ در تا..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "exponential_logarithmic",
+          "question_number": 1534,
+          "source_file": "math-solutions-08.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 1,
+          "overlap_band": "high_text_overlap",
+          "question_page": 9,
+          "solution_page": 142,
+          "question_text_preview": "وارون تابع $f(x)=3^{1-x}+3$ به صورت $f^{-1}(x)=\\log_3 a(x+b)^{-1}$ است. $a-b$ کدام است؟",
+          "solution_text_preview": "روش اول: وارون تابع $f(x)$ را به دست می‌آوریم: $y = 2^{1 - x} + 3 \\Rightarrow 2^{1 - x} = y - 3 \\Rightarrow 1 - x = \\log_2(y - 3)$ $\\Rightarrow x = 1 - \\log_2(y - 3) \\Rightarrow f..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "exponential_logarithmic",
+          "question_number": 1535,
+          "source_file": "math-solutions-08.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.333,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 9,
+          "solution_page": 142,
+          "question_text_preview": "ضابطه وارون تابع $f(x)=9^x+3^{x+1}$ کدام است؟",
+          "solution_text_preview": "روش اول: ابتدا $x$ را برحسب $y$ به دست آورده، سپس جای $x$ و $y$ را عوض می‌کنیم. $y = 9^x + 3^{x + 1} = (3^x)^2 + 3(3^x) \\xrightarrow{3^x = k} y = k^2 + 3k$ $= (k + \\frac{3}{2})^2 ..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math exponential_logarithmic solution_key_mismatch rows 1529, 1532, 1534-1540, 1542-1544, 1546-1547, 1549-1559, 1564-1568 in math-solutions-08.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "limits_continuity",
+      "source_file": "math-solutions-06.json",
+      "count": 10,
+      "ranges": [
+        {
+          "start": 1083,
+          "end": 1083,
+          "count": 1
+        },
+        {
+          "start": 1085,
+          "end": 1085,
+          "count": 1
+        },
+        {
+          "start": 1095,
+          "end": 1095,
+          "count": 1
+        },
+        {
+          "start": 1148,
+          "end": 1148,
+          "count": 1
+        },
+        {
+          "start": 1150,
+          "end": 1155,
+          "count": 6
+        }
+      ],
+      "avg_overlap": 0.065,
+      "overlap_bands": {
+        "zero_text_overlap": 8,
+        "medium_text_overlap": 2
+      },
+      "sample_question_numbers": [
+        1083,
+        1085,
+        1095,
+        1148,
+        1150,
+        1151,
+        1152,
+        1153,
+        1154,
+        1155
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "limits_continuity",
+          "question_number": 1083,
+          "source_file": "math-solutions-06.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 2,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 23,
+          "solution_page": 101,
+          "question_text_preview": "تابع $f(x)=[x^2-6x]$ در بازه $(1,4)$ در چند نقطه ناپیوسته است؟",
+          "solution_text_preview": "ابتدا کسر داده‌شده را ساده می‌کنیم: $\\lim_{x \\to \\infty} \\dfrac{3x^{n+1}+x^n(x^2-x+1)+1}{x^{2n-1}+x^3-1} \\\\ = \\lim_{x \\to \\infty} \\dfrac{3x^{n+1}+x^{n+2}-x^{n+1}+x^n+1}{x^{2n-1}+x..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "limits_continuity",
+          "question_number": 1085,
+          "source_file": "math-solutions-06.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 23,
+          "solution_page": 101,
+          "question_text_preview": "با فرض $f(x)=\\dfrac{x-4}{x^2-7x+10}$، حاصل $\\lim_{x\\to2^+} f(x)$ و $\\lim_{x\\to5^-} f(x)$ به ترتیب کدام است؟",
+          "solution_text_preview": "پاسخ حد عددی غیرصفر شده است، پس باید درجه صورت و مخرج کسر با هم برابر باشد. $\\Rightarrow 3m = m+2 \\Rightarrow 2m = 2 \\Rightarrow m=1$ با جای‌گذاری مقدار $m$ در عبارت خواهیم داشت: ..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "limits_continuity",
+          "question_number": 1095,
+          "source_file": "math-solutions-06.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.4,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 24,
+          "solution_page": 103,
+          "question_text_preview": "نمودار تابع $y=\\dfrac{x+1}{x^2-5x+6}$ در مجاورت $x=2$ چگونه است؟",
+          "solution_text_preview": "حد چپ و راست تابع را در $x = 2$ محاسبه می‌کنیم: $\\lim_{x \\to 2^+} \\frac{x+1}{x^2 - 5x + 6} = \\lim_{x \\to 2^+} \\frac{x+1}{(x-2)(x-3)} = \\frac{3}{0^+ (-1)} = \\frac{3}{0^-} = -\\infty..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "limits_continuity",
+          "question_number": 1148,
+          "source_file": "math-solutions-06.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 3,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 28,
+          "solution_page": 107,
+          "question_text_preview": "اگر $\\lim_{x\\to-\\infty}\\dfrac{ax^n+12}{\\sqrt{1-x}+x+1}=4$ باشد، آن‌گاه حد این کسر وقتی $x\\to-3$ کدام است؟",
+          "solution_text_preview": "مشتق تابع مرکب را محاسبه می‌کنیم."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math limits_continuity solution_key_mismatch rows 1083, 1085, 1095, 1148, 1150-1155 in math-solutions-06.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "atomic_nuclear",
+      "source_file": "physics-solutions-17.json",
+      "count": 7,
+      "ranges": [
+        {
+          "start": 1569,
+          "end": 1569,
+          "count": 1
+        },
+        {
+          "start": 1583,
+          "end": 1583,
+          "count": 1
+        },
+        {
+          "start": 1594,
+          "end": 1594,
+          "count": 1
+        },
+        {
+          "start": 1602,
+          "end": 1602,
+          "count": 1
+        },
+        {
+          "start": 1619,
+          "end": 1619,
+          "count": 1
+        },
+        {
+          "start": 1629,
+          "end": 1629,
+          "count": 1
+        },
+        {
+          "start": 1637,
+          "end": 1637,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.293,
+      "overlap_bands": {
+        "low_text_overlap": 4,
+        "high_text_overlap": 2,
+        "medium_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        1569,
+        1583,
+        1594,
+        1602,
+        1619,
+        1629,
+        1637
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "atomic_nuclear",
+          "question_number": 1569,
+          "source_file": "physics-solutions-17.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.16,
+          "overlap_band": "low_text_overlap",
+          "question_page": 8,
+          "solution_page": 521,
+          "question_text_preview": "در اتم هیدروژن، الکترون با جذب انرژی $0.21$ ریدبرگ از یک حالت برانگیخته به حالت برانگیختهٔ دیگر می‌رود و سپس به‌ترتیب با گسیل پرانرژی‌ترین فوتون ممکن در بازهٔ فروسرخ و گسیل یک فوت...",
+          "solution_text_preview": "با $E_n=-E_R/n^2$ اختلاف انرژی ترازهای $n=2$ و $n=5$ برابر $0.21E_R$ است. برای گسیل پرتواترترین فوتون فروسرخ در بازه مجاز، گذار متناظر از رشته پاشن انتخاب می‌شود."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "atomic_nuclear",
+          "question_number": 1583,
+          "source_file": "physics-solutions-17.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.16,
+          "overlap_band": "low_text_overlap",
+          "question_page": 9,
+          "solution_page": 523,
+          "question_text_preview": "نمودار ترازهای انرژی در یک اتم مطابق شکل مقابل است. برای ایجاد گسیل القایی توسط الکترون مشخص‌شده در شکل، باید نوری با طول موج چند نانومتر به این اتم تابانده شود؟ $(hc=1242\\,eV.nm)$",
+          "solution_text_preview": "انرژی فوتون برابر اختلاف انرژی حالت شبه‌پایدار و پایه است: $\\Delta E=2-0.2=1.8eV$. با $hf=hc/\\lambda$، طول موج $\\lambda\\approx690nm$ به دست می‌آید."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "atomic_nuclear",
+          "question_number": 1594,
+          "source_file": "physics-solutions-17.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.545,
+          "overlap_band": "high_text_overlap",
+          "question_page": 10,
+          "solution_page": 525,
+          "question_text_preview": "دو هستهٔ $_m^nX$ و $_{47}^{m+49}Y$ را نمی‌توان به روش شیمیایی از یکدیگر جدا کرد. $n$ کدام است؟",
+          "solution_text_preview": "چون دو هسته را نمی‌توان شیمیایی از هم جدا کرد، ایزوتوپ‌اند و عدد اتمی یکسان دارند. با داده‌های نوکلئون‌های هسته Y، $Z_Y=47,N_Y=62$ و با $A_X=A_Y$، مقدارهای هسته X تعیین می‌شوند."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "atomic_nuclear",
+          "question_number": 1602,
+          "source_file": "physics-solutions-17.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.333,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 10,
+          "solution_page": 526,
+          "question_text_preview": "در نمودار مقابل، عدد نوترونی هسته‌های $P$ و $Q$ به‌ترتیب ۱۸ و ۲۰ است. عدد جرمی هستهٔ $R$ کدام است؟",
+          "solution_text_preview": "در نمودار $Z$ بر حسب $N$، هسته‌های P و R روی خط $Z=N$ هستند، پس $Z_P=N_P$ و $Z_R=N_R$. خط عمود بر $Z=N$ عدد جرمی ثابت دارد؛ از مختصات P و Q، $A_Q=A_P=36$ و $Z_Q=16$، و چون R و Q ع..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics atomic_nuclear solution_key_mismatch rows 1569, 1583, 1594, 1602, 1619, 1629, 1637 in physics-solutions-17.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "analytic_geometry",
+      "source_file": "math-solutions-08.json",
+      "count": 6,
+      "ranges": [
+        {
+          "start": 1570,
+          "end": 1570,
+          "count": 1
+        },
+        {
+          "start": 1609,
+          "end": 1611,
+          "count": 3
+        },
+        {
+          "start": 1614,
+          "end": 1615,
+          "count": 2
+        }
+      ],
+      "avg_overlap": 0.304,
+      "overlap_bands": {
+        "low_text_overlap": 2,
+        "high_text_overlap": 1,
+        "medium_text_overlap": 3
+      },
+      "sample_question_numbers": [
+        1570,
+        1609,
+        1610,
+        1611,
+        1614,
+        1615
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "analytic_geometry",
+          "question_number": 1570,
+          "source_file": "math-solutions-08.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 1,
+          "overlap": 0.167,
+          "overlap_band": "low_text_overlap",
+          "question_page": 4,
+          "solution_page": 141,
+          "question_text_preview": "نقطۀ $M$ روی محور طول‌ها با کدام طول انتخاب شود تا فاصلۀ آن از دو نقطۀ $A(-1,2)$ و $B(3,0)$ برابر هم باشد؟",
+          "solution_text_preview": "روش اول: مختصات نقطه $M$ را به صورت $\\begin{bmatrix} x \\\\ 0 \\end{bmatrix}$ در نظر می‌گیریم: $AM = BM \\Rightarrow \\sqrt{(x+1)^2 + 2^2} = \\sqrt{(x-3)^2 + 0}$ $\\Rightarrow (x+1)^2 + ..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "analytic_geometry",
+          "question_number": 1609,
+          "source_file": "math-solutions-08.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.125,
+          "overlap_band": "low_text_overlap",
+          "question_page": 7,
+          "solution_page": 150,
+          "question_text_preview": "عمودمنصف پاره‌خط واصل بین دو نقطهٔ $A(k, 1)$ و $B(-2, 3)$ از نقطهٔ $P(\\dfrac{k}{2}, 4)$ عبور می‌کند. $k$ کدام است؟",
+          "solution_text_preview": "روش اول: نقطه $P$ بر روی عمودمنصف $AB$ قرار دارد، بنابراین $PA = PB$. $PA = PB \\Rightarrow \\sqrt{\\frac{k^2}{4} + 9} = \\sqrt{(\\frac{k}{2} + 2)^2 + 1}$ $\\Rightarrow \\frac{k^2}{4} + ..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "analytic_geometry",
+          "question_number": 1610,
+          "source_file": "math-solutions-08.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.8,
+          "overlap_band": "high_text_overlap",
+          "question_page": 7,
+          "solution_page": 150,
+          "question_text_preview": "قرینهٔ $A(-1, 5)$ نسبت به خط $x + 3y = 6$ کدام نقطه است؟",
+          "solution_text_preview": "اگر قرینه $A(1, -5)$ را نسبت به خط $x + 3y = 6$ نقطه $A'(\\alpha, \\beta)$ بنامیم، خط مذکور عمودمنصف $AA'$ خواهد بود. بنابراین شیب $AA'$ قرینه معکوس شیب این خط یعنی برابر $3$ می‌باش..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "analytic_geometry",
+          "question_number": 1611,
+          "source_file": "math-solutions-08.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.333,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 7,
+          "solution_page": 150,
+          "question_text_preview": "مثلث $ABC$ با رئوس $A(\\alpha, -1)$ ، $B(0, \\beta)$ و $C(-2, 0)$ به مساحت $5$ در رأس $A$ قائم‌الزاویه است. $\\alpha$ کدام است؟",
+          "solution_text_preview": "اضلاع $AB$ و $AC$ بر یکدیگر عمودند. $m_{AB} \\times m_{AC} = -1 \\Rightarrow \\frac{\\beta+1}{0-\\alpha} \\times \\frac{-2+1}{0-\\alpha} = -1 \\Rightarrow \\beta+1 = \\alpha^2 \\Rightarrow \\b..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math analytic_geometry solution_key_mismatch rows 1570, 1609-1611, 1614-1615 in math-solutions-08.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "one_dimensional_motion",
+      "source_file": "physics-solutions-10.json",
+      "count": 6,
+      "ranges": [
+        {
+          "start": 885,
+          "end": 885,
+          "count": 1
+        },
+        {
+          "start": 896,
+          "end": 896,
+          "count": 1
+        },
+        {
+          "start": 924,
+          "end": 924,
+          "count": 1
+        },
+        {
+          "start": 940,
+          "end": 940,
+          "count": 1
+        },
+        {
+          "start": 949,
+          "end": 949,
+          "count": 1
+        },
+        {
+          "start": 956,
+          "end": 956,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.239,
+      "overlap_bands": {
+        "low_text_overlap": 4,
+        "high_text_overlap": 1,
+        "medium_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        885,
+        896,
+        924,
+        940,
+        949,
+        956
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 885,
+          "source_file": "physics-solutions-10.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 1,
+          "overlap": 0.185,
+          "overlap_band": "low_text_overlap",
+          "question_page": 11,
+          "solution_page": 378,
+          "question_text_preview": "نمودار سرعت-زمان متحرکی که روی خط راست حرکت می‌کند، به صورت شکل زیر است. اگر تندی متوسط در $20$ ثانیه‌ی نخست حرکت $3/5\\,m/s$ باشد، بزرگی شتاب متوسط از لحظه‌ی $(1s,16s)$ چند متر بر...",
+          "solution_text_preview": "از برابری مسافت طی‌شده با مجموع مساحت‌های $S_1$ و $S_2$ و رابطه شیب خط اول، $v=15/2m/s$ و $v_0=-5m/s$ به دست می‌آید. سپس از شیب خط‌ها $v_1=-15/4m/s$ در $t=1s$ و $v_2=3m/s$ در $t=1..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 896,
+          "source_file": "physics-solutions-10.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.103,
+          "overlap_band": "low_text_overlap",
+          "question_page": 12,
+          "solution_page": 381,
+          "question_text_preview": "نمودار سرعت-زمان متحرکی که روی خط راست حرکت می‌کند، مطابق شکل مقابل است. اگر در بازه‌ی زمانی $t=0$ تا $t=8s$، مدت‌زمانی که متحرک به صورت تندشونده حرکت کرده $7$ برابر مدت‌زمانی باش...",
+          "solution_text_preview": "از نمودار $v-t$، بازه تندشونده و کندشونده جدا می‌شود. نسبت زمان‌های کندشونده و تندشونده شرط داده‌شده را می‌دهد و از آن $t_n=4s$ به دست می‌آید. سپس با برابری شیب‌ها، $|v_2|=2m/s$ م..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 924,
+          "source_file": "physics-solutions-10.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.189,
+          "overlap_band": "low_text_overlap",
+          "question_page": 14,
+          "solution_page": 387,
+          "question_text_preview": "متحرکی ابتدا به مدت $3s$ با سرعت ثابت $v_1$ و سپس به مدت $3s$ با سرعت ثابت $v_2$ روی خط راست حرکت می‌کند. اگر بردار جابه‌جایی متحرک در $4$ ثانیه‌ی اول به صورت $\\vec d_1=(24\\,m)\\ve...",
+          "solution_text_preview": "در دو ثانیه آخر با سرعت $v_2$، جابه‌جایی $-12m$ است؛ پس $v_2=-6m/s$. از جابه‌جایی کل $24m$، جابه‌جایی سه ثانیه اول $30m$ می‌شود. مسافت کل برابر $30+18=48m$ است و تندی متوسط $48/6=..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 940,
+          "source_file": "physics-solutions-10.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.5,
+          "overlap_band": "high_text_overlap",
+          "question_page": 16,
+          "solution_page": 392,
+          "question_text_preview": "معادله‌ی حرکت متحرکی در SI به صورت $x=t^2-4t-12$ است. این متحرک در $10$ ثانیه‌ی اول حرکت چند ثانیه به صورت تندشونده حرکت می‌کند؟",
+          "solution_text_preview": "از معادله مکان $x=t^2-4t-12$ و فرم حرکت با شتاب ثابت، $a=2m/s^2$ و $v_0=-4m/s$ به دست می‌آید؛ بنابراین $v=2t-4$. طبق این معادله، تندی تا $t=2s$ کاهش و سپس افزایش می‌یابد و در ده ث..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics one_dimensional_motion solution_key_mismatch rows 885, 896, 924, 940, 949, 956 in physics-solutions-10.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "trigonometry",
+      "source_file": "math-solutions-05.json",
+      "count": 5,
+      "ranges": [
+        {
+          "start": 918,
+          "end": 919,
+          "count": 2
+        },
+        {
+          "start": 921,
+          "end": 921,
+          "count": 1
+        },
+        {
+          "start": 923,
+          "end": 923,
+          "count": 1
+        },
+        {
+          "start": 935,
+          "end": 935,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0,
+      "overlap_bands": {
+        "zero_text_overlap": 5
+      },
+      "sample_question_numbers": [
+        918,
+        919,
+        921,
+        923,
+        935
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "trigonometry",
+          "question_number": 918,
+          "source_file": "math-solutions-05.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 27,
+          "solution_page": 87,
+          "question_text_preview": "سؤال چاپی شماره 918 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+          "solution_text_preview": "روش دوم: $\\sin 2x = \\sin x \\Rightarrow 2\\sin x \\cos x - \\sin x = 0 \\Rightarrow \\sin x(2\\cos x - 1) = 0$ $\\Rightarrow \\begin{cases} \\sin x = 0 \\Rightarrow x = k\\pi \\Rightarrow x = ..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "trigonometry",
+          "question_number": 919,
+          "source_file": "math-solutions-05.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 3,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 27,
+          "solution_page": 87,
+          "question_text_preview": "سؤال چاپی شماره 919 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+          "solution_text_preview": "مخرج کسرها نباید صفر باشد، بنابراین: $\\sin x \\neq 0, \\cos x \\neq 0 \\Rightarrow \\sin 2x \\neq 0 \\Rightarrow 2x \\neq k\\pi \\Rightarrow x \\neq \\frac{k\\pi}{2}$ معادله را حل می‌کنیم: $\\f..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "trigonometry",
+          "question_number": 921,
+          "source_file": "math-solutions-05.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 1,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 27,
+          "solution_page": 87,
+          "question_text_preview": "سؤال چاپی شماره 921 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+          "solution_text_preview": "$\\tan x + \\cot x = \\frac{1}{\\sin x \\cos x} = \\frac{2}{\\sin 2x}$ معادله را ساده می‌کنیم: $\\sin 2x(\\tan x + \\cot x) = \\frac{1}{2} + \\sin^2 2x \\Rightarrow \\sin 2x(\\frac{2}{\\sin 2x}) ..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "trigonometry",
+          "question_number": 923,
+          "source_file": "math-solutions-05.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 27,
+          "solution_page": 87,
+          "question_text_preview": "سؤال چاپی شماره 923 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+          "solution_text_preview": "می‌دانیم $1 - \\cos 2x = 2\\sin^2 x$ است. $\\sin^2 x + \\sin^2 2x = 1 \\Rightarrow \\sin^2 2x = 1 - \\sin^2 x \\Rightarrow \\sin^2 2x = \\cos^2 x$ $\\Rightarrow 4\\sin^2 x \\cos^2 x - \\cos^2 x..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math trigonometry solution_key_mismatch rows 918-919, 921, 923, 935 in math-solutions-05.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "magnetism_induction",
+      "source_file": "physics-solutions-08.json",
+      "count": 5,
+      "ranges": [
+        {
+          "start": 752,
+          "end": 752,
+          "count": 1
+        },
+        {
+          "start": 755,
+          "end": 755,
+          "count": 1
+        },
+        {
+          "start": 761,
+          "end": 761,
+          "count": 1
+        },
+        {
+          "start": 768,
+          "end": 768,
+          "count": 1
+        },
+        {
+          "start": 770,
+          "end": 770,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.06,
+      "overlap_bands": {
+        "low_text_overlap": 4,
+        "zero_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        752,
+        755,
+        761,
+        768,
+        770
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "magnetism_induction",
+          "question_number": 752,
+          "source_file": "physics-solutions-08.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.026,
+          "overlap_band": "low_text_overlap",
+          "question_page": 11,
+          "solution_page": 350,
+          "question_text_preview": "میله‌ای رسانا به طول $l = 20\\text{ cm}$ با تندی ثابت $v = 4\\text{ m/s}$ مطابق شکل در امتداد یک ریل رسانا به شکل $U$ که مقاومت الکتریکی آن ناچیز است، به سمت راست حرکت می‌کند. اگر م...",
+          "solution_text_preview": "حلقه در مدت $6s$ به طور کامل وارد میدان می‌شود، پس تغییر مکان $30cm$ است. با $A=400cm^2$ و $B=0.5T$، شار بیشینه $2\\times10^{-2}Wb$ و نیروی محرکه متوسط $1/300V$ به دست می‌آید."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "magnetism_induction",
+          "question_number": 755,
+          "source_file": "physics-solutions-08.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.091,
+          "overlap_band": "low_text_overlap",
+          "question_page": 12,
+          "solution_page": 351,
+          "question_text_preview": "جریانی که از یک سیملوله می‌گذرد، در مدت $0/02\\text{ s}$ به طور یکنواخت از $1\\text{ A}$ به $5\\text{ A}$ افزایش می‌یابد. اگر ضریب القاوری سیملوله $10\\text{ mH}$ باشد، بزرگی نیروی مح...",
+          "solution_text_preview": "محیط حلقه دوم دو برابر حلقه اول است، پس مقاومت آن دو برابر است و مساحت آن چهار برابر می‌شود. چون $|\\varepsilon|\\propto A$، نسبت نیروهای محرکه ۴ و نسبت جریان‌های القایی $4\\times(1/..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "magnetism_induction",
+          "question_number": 761,
+          "source_file": "physics-solutions-08.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 12,
+          "solution_page": 352,
+          "question_text_preview": "در مبحث مغناطیس، کدام‌یک از گزینه‌های زیر نادرست است؟",
+          "solution_text_preview": "از نکته نمودار $\\Phi-t$ استفاده شده است: در نمودار خط راست، نیروی محرکه متوسط و لحظه‌ای در هر بازه یکسان است و علامت آن از علامت شیب شار تعیین می‌شود. با مقایسه دو بازه، گزاره‌های..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "magnetism_induction",
+          "question_number": 768,
+          "source_file": "physics-solutions-08.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.121,
+          "overlap_band": "low_text_overlap",
+          "question_page": 13,
+          "solution_page": 354,
+          "question_text_preview": "میدان مغناطیسی یکنواختی به بزرگی $0/2\\text{ T}$، در جهت محور $x$ برقرار است. یک حلقۀ مربعی‌شکل به ضلع $10\\text{ cm}$ با تندی زاویه‌ای $10\\pi\\text{ rad/s}$ حول محوری که از وسط دو ض...",
+          "solution_text_preview": "در نیم‌دور اول، بخش نیم‌دایره وارد میدان درون‌سو می‌شود و مساحت مدار داخل میدان افزایش می‌یابد؛ میدان القایی برای مخالفت برون‌سو و جریان پادساعتگرد است. در نیم‌دور دوم عکس این رون..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics magnetism_induction solution_key_mismatch rows 752, 755, 761, 768, 770 in physics-solutions-08.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "oscillation_waves",
+      "source_file": "physics-solutions-14.json",
+      "count": 5,
+      "ranges": [
+        {
+          "start": 1227,
+          "end": 1227,
+          "count": 1
+        },
+        {
+          "start": 1238,
+          "end": 1238,
+          "count": 1
+        },
+        {
+          "start": 1241,
+          "end": 1241,
+          "count": 1
+        },
+        {
+          "start": 1251,
+          "end": 1251,
+          "count": 1
+        },
+        {
+          "start": 1293,
+          "end": 1293,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.107,
+      "overlap_bands": {
+        "medium_text_overlap": 1,
+        "low_text_overlap": 4
+      },
+      "sample_question_numbers": [
+        1227,
+        1238,
+        1241,
+        1251,
+        1293
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "oscillation_waves",
+          "question_number": 1227,
+          "source_file": "physics-solutions-14.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.214,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 3,
+          "solution_page": 460,
+          "question_text_preview": "معادله‌ی مکان-زمان نوسانگری در SI به صورت $x=12\\cos\\pi t$ است. اگر تندی متوسط نوسانگر در بازه‌ی زمانی صفر تا $t_1$ دو برابر بزرگی سرعت متوسط نوسانگر در همین مدت باشد، متحرک در لحظ...",
+          "solution_text_preview": "در بازه $T/2$ جابه‌جایی از $x$ به $-x$ است، پس مقدار جابه‌جایی $2x$ و مسافت پیموده‌شده $2A$ است. چون تندی متوسط دو برابر بزرگی سرعت متوسط است، $2A=2(2x)$ و در نتیجه $x=A/2$ و $A=1..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "oscillation_waves",
+          "question_number": 1238,
+          "source_file": "physics-solutions-14.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.12,
+          "overlap_band": "low_text_overlap",
+          "question_page": 4,
+          "solution_page": 463,
+          "question_text_preview": "پرسش 1238 از مبحث حرکت هماهنگ ساده مطابق متن و/یا شکل صفحه، درباره‌ی کمیت‌های نوسان، دوره، بسامد، نیرو، شتاب یا انرژی است. متن و گزینه‌های عددی از تصویر صفحه نیازمند بازبینی نهایی...",
+          "solution_text_preview": "در نوسان ساده $a=-\\omega^2x$ است؛ بنابراین هرچه فاصله از مرکز بیشتر باشد، بزرگی شتاب بیشتر است. از مکان‌های سه لحظه، $x_1=2\\sqrt3m$، $x_2=0$ و $x_3=-2m$ و در نتیجه $a_1>a_3>a_2$."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "oscillation_waves",
+          "question_number": 1241,
+          "source_file": "physics-solutions-14.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.04,
+          "overlap_band": "low_text_overlap",
+          "question_page": 4,
+          "solution_page": 464,
+          "question_text_preview": "پرسش 1241 از مبحث حرکت هماهنگ ساده مطابق متن و/یا شکل صفحه، درباره‌ی کمیت‌های نوسان، دوره، بسامد، نیرو، شتاب یا انرژی است. متن و گزینه‌های عددی از تصویر صفحه نیازمند بازبینی نهایی...",
+          "solution_text_preview": "وقتی نوسانگر در نصف دامنه است، نسبت شتاب و نیروی وارد بر آن به مقدار بیشینه برابر $|x|/A=1/2$ می‌شود. از $\\cos\\omega t=1/2$ و ناحیه زمانی مناسب، $t=T/6$ به دست می‌آید."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "oscillation_waves",
+          "question_number": 1251,
+          "source_file": "physics-solutions-14.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.12,
+          "overlap_band": "low_text_overlap",
+          "question_page": 6,
+          "solution_page": 465,
+          "question_text_preview": "پرسش 1251 از مبحث سامانه‌ی جرم-فنر مطابق متن و/یا شکل صفحه، درباره‌ی کمیت‌های نوسان، دوره، بسامد، نیرو، شتاب یا انرژی است. متن و گزینه‌های عددی از تصویر صفحه نیازمند بازبینی نهایی...",
+          "solution_text_preview": "در شکل (1) هر فنر نصف وزن و در شکل (2) هر فنر نصف جرم وزنه را تحمل می‌کند. دوره‌ها از $T=2\\pi\\sqrt{m/k}$ برای دو آرایش نوشته می‌شوند و نسبت بسامدها $f_1/f_2=\\sqrt{3/2}$ به دست می‌..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics oscillation_waves solution_key_mismatch rows 1227, 1238, 1241, 1251, 1293 in physics-solutions-14.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "absolute_value_floor",
+      "source_file": "math-solutions-02.json",
+      "count": 4,
+      "ranges": [
+        {
+          "start": 324,
+          "end": 324,
+          "count": 1
+        },
+        {
+          "start": 330,
+          "end": 330,
+          "count": 1
+        },
+        {
+          "start": 332,
+          "end": 333,
+          "count": 2
+        }
+      ],
+      "avg_overlap": 0,
+      "overlap_bands": {
+        "zero_text_overlap": 4
+      },
+      "sample_question_numbers": [
+        324,
+        330,
+        332,
+        333
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "absolute_value_floor",
+          "question_number": 324,
+          "source_file": "math-solutions-02.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 1,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 2,
+          "solution_page": 31,
+          "question_text_preview": "در معادلهٔ $|x - 1| + |x + 2| = x + a$ به ازای کدام مقدار $a$، معادله دارای دو ریشهٔ متمایز است؟",
+          "solution_text_preview": "عبارت $A$ را ساده می‌کنیم: $A = \\sqrt[4]{4\\sqrt[5]{32}(\\frac{4}{3})^{15}} = \\sqrt[4]{2^{2} \\times 2^{5} \\times (2^{2})^{15} \\times 3^{-15}}$ $= \\sqrt[4]{2^{\\frac{10}{3}} \\times 2^..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "absolute_value_floor",
+          "question_number": 330,
+          "source_file": "math-solutions-02.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 2,
+          "solution_page": 32,
+          "question_text_preview": "ریشهٔ معادلهٔ $\\frac{x}{|x|} = x - 2$ کدام است؟",
+          "solution_text_preview": "عبارت داده‌شده را $A$ می‌نامیم: $A = \\sqrt[3]{2 + \\sqrt{5}} \\times \\sqrt[3]{2 - \\sqrt{5}} \\times \\sqrt[3]{2 - \\sqrt{5}}$ $= \\sqrt[3]{(2 + \\sqrt{5})(2 - \\sqrt{5})} \\times \\sqrt[3]{..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "absolute_value_floor",
+          "question_number": 332,
+          "source_file": "math-solutions-02.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 3,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 2,
+          "solution_page": 32,
+          "question_text_preview": "حاصل‌ضرب ریشه‌های معادلهٔ $\\frac{x^2 - 1}{|x - 1|} = 2$ کدام است؟",
+          "solution_text_preview": "دو طرف معادله را به توان ۳ می‌رسانیم: $(\\sqrt[3]{x^{2} - \\frac{1}{x}})^3 = (2)^3 \\Rightarrow x^{2} - \\frac{1}{x} = 8 \\Rightarrow \\frac{x^{3}-1}{x} = 8$ حال، عبارت مورد نظر را ساده..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "absolute_value_floor",
+          "question_number": 333,
+          "source_file": "math-solutions-02.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 2,
+          "solution_page": 32,
+          "question_text_preview": "مجموع ریشه‌های معادلهٔ $|x - 1| = |x^2 - 1|$ کدام است؟",
+          "solution_text_preview": "عبارت $\\sqrt{v - r\\sqrt{\\Delta}} + \\sqrt{v + r\\sqrt{\\Delta}}$ را $P$ نامیده، سپس $P^r$ را محاسبه می‌کنیم: $P^r = v - r\\sqrt{\\Delta} + v + r\\sqrt{\\Delta} + r\\sqrt{\\varepsilon q - f..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math absolute_value_floor solution_key_mismatch rows 324, 330, 332-333 in math-solutions-02.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "one_dimensional_motion",
+      "source_file": "physics-solutions-11.json",
+      "count": 4,
+      "ranges": [
+        {
+          "start": 974,
+          "end": 974,
+          "count": 1
+        },
+        {
+          "start": 979,
+          "end": 979,
+          "count": 1
+        },
+        {
+          "start": 997,
+          "end": 997,
+          "count": 1
+        },
+        {
+          "start": 1021,
+          "end": 1021,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.183,
+      "overlap_bands": {
+        "low_text_overlap": 1,
+        "medium_text_overlap": 3
+      },
+      "sample_question_numbers": [
+        974,
+        979,
+        997,
+        1021
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 974,
+          "source_file": "physics-solutions-11.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.069,
+          "overlap_band": "low_text_overlap",
+          "question_page": 19,
+          "solution_page": 399,
+          "question_text_preview": "خودرویی با سرعت ثابت بر مسیر مستقیم حرکت می‌کند. راننده‌ی خودرو با دیدن یک مانع اقدام به ترمز می‌کند و حرکت خودرو با شتاب ثابت کند می‌شود. اگر خودرو در ثانیه‌های اول و سوم پس از ت...",
+          "solution_text_preview": "از داده‌های سرعت متوسط بازه‌ها، $a=4m/s^2$ و $v_0=-4m/s$ به دست می‌آید. لحظه تغییر جهت $t'=1s$ است و مسافت تا این لحظه، با $\\Delta x=\\frac12at^2+v_0t$، برابر $2m$ محاسبه می‌شود."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 979,
+          "source_file": "physics-solutions-11.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.219,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 19,
+          "solution_page": 400,
+          "question_text_preview": "نمودار سرعت-زمان متحرکی که روی خط راست حرکت می‌کند، مطابق شکل روبه‌رو است. اگر متحرک در $3$ ثانیه‌ی اول مسافت $10m$ را طی کرده باشد، در چه لحظه‌ای بر حسب ثانیه در فاصله‌ی $80$ متر...",
+          "solution_text_preview": "در دو ثانیه اول سرعت منفی است و جابه‌جایی $-10m$ می‌شود. با نوشتن رابطه مستقل از شتاب برای این بازه، $v_0=-10m/s$ و $a=5m/s^2$ به دست می‌آید. حل معادله $80=\\frac12at^2+v_0t$ زمان ..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 997,
+          "source_file": "physics-solutions-11.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.222,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 21,
+          "solution_page": 405,
+          "question_text_preview": "حداکثر شتاب یک اتومبیل $8\\,m/s^2$ و حداکثر تندی آن $180\\,km/h$ است. این اتومبیل از نقطه‌ی $A$ روی خط مستقیم شروع به حرکت می‌کند و در نقطه‌ی $B$ متوقف می‌شود. اگر $AB=2\\,km$ باشد، ...",
+          "solution_text_preview": "حداکثر تندی $180km/h=50m/s$ است. برای کمترین زمان، اتومبیل با بیشترین شتاب به $v_{max}$ می‌رسد، مدتی یکنواخت حرکت می‌کند و سپس با همان بزرگی شتاب ترمز می‌گیرد. از $a=8m/s^2$، زمان..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 1021,
+          "source_file": "physics-solutions-11.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.222,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 24,
+          "solution_page": 411,
+          "question_text_preview": "کامیونی با سرعت ثابت $72\\,km/h$ در مسیری مستقیم در حرکت است. اتومبیلی $30$ متر جلوتر از کامیون با شتاب ثابت $5\\,m/s^2$ در جهت حرکت کامیون شروع به حرکت می‌کند. چند ثانیه پس از آغاز...",
+          "solution_text_preview": "با توجه به شکل، وقتی کامیون به اتومبیل می‌رسد، باید $30m$ بیشتر جابه‌جا شده باشد. از $\\Delta x_2-\\Delta x_1=30$ و داده‌های سرعت کامیون و شتاب اتومبیل، معادله $t^2-8t+12=0$ به دست ..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics one_dimensional_motion solution_key_mismatch rows 974, 979, 997, 1021 in physics-solutions-11.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "one_dimensional_motion",
+      "source_file": "physics-solutions-09.json",
+      "count": 3,
+      "ranges": [
+        {
+          "start": 848,
+          "end": 848,
+          "count": 1
+        },
+        {
+          "start": 868,
+          "end": 869,
+          "count": 2
+        }
+      ],
+      "avg_overlap": 0.135,
+      "overlap_bands": {
+        "low_text_overlap": 3
+      },
+      "sample_question_numbers": [
+        848,
+        868,
+        869
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 848,
+          "source_file": "physics-solutions-09.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.114,
+          "overlap_band": "low_text_overlap",
+          "question_page": 6,
+          "solution_page": 370,
+          "question_text_preview": "نمودار مکان - زمان متحرکی که روی محور $x$ حرکت می‌کند، مطابق شکل زیر است. چه تعداد از موارد زیر درباره‌ی حرکت این متحرک درست است؟ الف) در بازه‌ی زمانی $(4\\,s,2\\,s)$ بردار مکان متح...",
+          "solution_text_preview": "در حل چاپی نمودار سرعت-زمان تحلیل شده است: شیب نمودار شتاب و مساحت زیر نمودار جابه‌جایی یا مسافت را می‌دهد. با محاسبه مساحت‌های مثبت و منفی یا مثلث‌های مشابه، کمیت خواسته به دست م..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 868,
+          "source_file": "physics-solutions-09.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.136,
+          "overlap_band": "low_text_overlap",
+          "question_page": 8,
+          "solution_page": 374,
+          "question_text_preview": "نمودار سرعت - زمان دو متحرک $A$ و $B$ که روی محور $x$ حرکت می‌کنند، مطابق شکل روبه‌رو است. در بازه‌ی زمانی $t_1=15\\,s$ تا $t_2=25\\,s$، مسافتی که متحرک $B$ می‌پیماید، چند متر بیشتر...",
+          "solution_text_preview": "در حل چاپی نمودار سرعت-زمان تحلیل شده است: شیب نمودار شتاب و مساحت زیر نمودار جابه‌جایی یا مسافت را می‌دهد. با محاسبه مساحت‌های مثبت و منفی یا مثلث‌های مشابه، کمیت خواسته به دست م..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "one_dimensional_motion",
+          "question_number": 869,
+          "source_file": "physics-solutions-09.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 1,
+          "overlap": 0.154,
+          "overlap_band": "low_text_overlap",
+          "question_page": 9,
+          "solution_page": 374,
+          "question_text_preview": "نمودار سرعت-زمان دو متحرک $A$ و $B$ که روی خط راست در لحظه‌ی $t=0$ از مبدأ مکان عبور کردند، به صورت شکل زیر است. دو متحرک در چه لحظه‌ای بر حسب ثانیه برای دومین بار پس از لحظه‌ی $t...",
+          "solution_text_preview": "در حل چاپی نمودار سرعت-زمان تحلیل شده است: شیب نمودار شتاب و مساحت زیر نمودار جابه‌جایی یا مسافت را می‌دهد. با محاسبه مساحت‌های مثبت و منفی یا مثلث‌های مشابه، کمیت خواسته به دست م..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics one_dimensional_motion solution_key_mismatch rows 848, 868-869 in physics-solutions-09.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "oscillation_waves",
+      "source_file": "physics-solutions-15.json",
+      "count": 3,
+      "ranges": [
+        {
+          "start": 1310,
+          "end": 1310,
+          "count": 1
+        },
+        {
+          "start": 1346,
+          "end": 1346,
+          "count": 1
+        },
+        {
+          "start": 1365,
+          "end": 1365,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.074,
+      "overlap_bands": {
+        "low_text_overlap": 3
+      },
+      "sample_question_numbers": [
+        1310,
+        1346,
+        1365
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "oscillation_waves",
+          "question_number": 1310,
+          "source_file": "physics-solutions-15.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.053,
+          "overlap_band": "low_text_overlap",
+          "question_page": 12,
+          "solution_page": 477,
+          "question_text_preview": "متن سؤال 1310 از صفحه 12 درباره موج مکانیکی و موج روی طناب و سطح آب از تصویر محلی بازخوانی شد؛ برای بازبینی نهایی به تصویر صفحه مراجعه شود.",
+          "solution_text_preview": "دوره نوسان دستگاه از $T=2\\pi\\sqrt{m/k}$ برابر $0.06s$ به دست می‌آید. موج در مدت $0.3s$ پنج نوسان انجام می‌دهد و نتیجه تست با گزینه ۲ سازگار است."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "oscillation_waves",
+          "question_number": 1346,
+          "source_file": "physics-solutions-15.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.059,
+          "overlap_band": "low_text_overlap",
+          "question_page": 16,
+          "solution_page": 483,
+          "question_text_preview": "متن سؤال 1346 از صفحه 16 درباره موج الکترومغناطیسی و طیف امواج از تصویر محلی بازخوانی شد؛ برای بازبینی نهایی به تصویر صفحه مراجعه شود.",
+          "solution_text_preview": "هرچه از بسامد پایین ELF به بسامدهای بالاتر برویم، طول موج کوتاه‌تر می‌شود؛ بنابراین باید از بلندی طول موج‌ها صحبت کرد و گزینه ۳ درست است."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "oscillation_waves",
+          "question_number": 1365,
+          "source_file": "physics-solutions-15.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.111,
+          "overlap_band": "low_text_overlap",
+          "question_page": 18,
+          "solution_page": 485,
+          "question_text_preview": "متن سؤال 1365 از صفحه 18 درباره شدت صوت، توان صوتی و تراز شدت صوت از تصویر محلی بازخوانی شد؛ برای بازبینی نهایی به تصویر صفحه مراجعه شود.",
+          "solution_text_preview": "برای مته، از تراز $120dB$ در فاصله $2m$ شدت $I_1=1W/m^2$ به دست می‌آید. در فاصله $50m$ شدت با نسبت مربع فاصله‌ها $16\\times10^{-4}W/m^2$ می‌شود. انرژی دریافتی هر گوش از $E=IAt$ و م..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics oscillation_waves solution_key_mismatch rows 1310, 1346, 1365 in physics-solutions-15.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "derivatives",
+      "source_file": "math-solutions-06.json",
+      "count": 2,
+      "ranges": [
+        {
+          "start": 1156,
+          "end": 1156,
+          "count": 1
+        },
+        {
+          "start": 1223,
+          "end": 1223,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.313,
+      "overlap_bands": {
+        "low_text_overlap": 1,
+        "high_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        1156,
+        1223
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "derivatives",
+          "question_number": 1156,
+          "source_file": "math-solutions-06.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.125,
+          "overlap_band": "low_text_overlap",
+          "question_page": 11,
+          "solution_page": 108,
+          "question_text_preview": "با توجه به نمودار $f$ در کدام نقطه از نقاط مشخص‌‌شده، مشتق $f$ بیشترین مقدار است؟",
+          "solution_text_preview": "باتوجه به فرض، در نقطۀ تماس، مقدار دو تابع و مشتق‌هایشان برابر است."
+        },
+        {
+          "subject": "math",
+          "topic_key": "derivatives",
+          "question_number": 1223,
+          "source_file": "math-solutions-06.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.5,
+          "overlap_band": "high_text_overlap",
+          "question_page": 16,
+          "solution_page": 115,
+          "question_text_preview": "نمودار توابع $f$ و $g$ به صورت مقابل است. اگر $h(x) = \\frac{g(x)}{f(x)}$ باشد، $h'(۰)$ کدام است؟",
+          "solution_text_preview": "نیم‌خط سمت چپ تابع $g(x)$ از دو نقطهٔ $(1, 4)$ و $(-1, 0)$ عبور می‌کند و معادلهٔ آن به صورت مقابل است: $y = 2x + 2$ این نیم‌خط محور $y$ها و تابع $f(x)$ را در نقطهٔ $(0, 2)$ قطع می..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math derivatives solution_key_mismatch rows 1156, 1223 in math-solutions-06.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "limits_continuity",
+      "source_file": "math-solutions-05.json",
+      "count": 2,
+      "ranges": [
+        {
+          "start": 988,
+          "end": 988,
+          "count": 1
+        },
+        {
+          "start": 1016,
+          "end": 1016,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.416,
+      "overlap_bands": {
+        "high_text_overlap": 1,
+        "medium_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        988,
+        1016
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "limits_continuity",
+          "question_number": 988,
+          "source_file": "math-solutions-05.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.5,
+          "overlap_band": "high_text_overlap",
+          "question_page": 16,
+          "solution_page": 93,
+          "question_text_preview": "تابع $f(x)=\\frac{x^2+ax-2x-2a}{x^2-4}$ مفروض است. اگر $\\lim_{x\\to2}f(x)=2$، مقدار $a$ کدام است؟",
+          "solution_text_preview": "حد $f(x)$ در $x=2$ به صورت مبهم $\\dfrac{\\text{صفر}}{\\text{صفر}}$ است. $\\lim_{x \\to 2} f(x) = \\lim_{x \\to 2} \\dfrac{x^2+ax-2x-2a}{x^2-4} = \\lim_{x \\to 2} \\dfrac{x^2-2x+ax-2a}{x^2-4..."
+        },
+        {
+          "subject": "math",
+          "topic_key": "limits_continuity",
+          "question_number": 1016,
+          "source_file": "math-solutions-05.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.333,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 18,
+          "solution_page": 95,
+          "question_text_preview": "حاصل $\\lim_{x\\to0^+}\\frac{\\sqrt{\\sqrt{x}+3x}}{2x-\\sqrt[4]{x}}$ کدام است؟",
+          "solution_text_preview": "روش اول: برای رفع ابهام عبارت را ساده می‌کنیم: $\\lim_{x \\to 0^+} \\frac{\\sqrt{x^2+3x^3}}{3x^2-x} = \\lim_{x \\to 0^+} \\frac{\\sqrt{x^2(1+3x)}}{x(3x-1)}$ $= \\lim_{x \\to 0^+} \\frac{x \\s..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math limits_continuity solution_key_mismatch rows 988, 1016 in math-solutions-05.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "trigonometry",
+      "source_file": "math-solutions-04.json",
+      "count": 2,
+      "ranges": [
+        {
+          "start": 764,
+          "end": 764,
+          "count": 1
+        },
+        {
+          "start": 777,
+          "end": 777,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0,
+      "overlap_bands": {
+        "zero_text_overlap": 2
+      },
+      "sample_question_numbers": [
+        764,
+        777
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "trigonometry",
+          "question_number": 764,
+          "source_file": "math-solutions-04.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 4,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 15,
+          "solution_page": 0,
+          "question_text_preview": "سؤال چهارگزینه‌ای چاپی شماره 764 از صفحه 15 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+          "solution_text_preview": "هر رادیان تقریباً $۵۷^\\circ$ است. انتهای کمان زوایای ۱، ۲ و ۳ رادیان مطابق شکل است. واضح است $\\sin ۳ < \\sin ۱ < \\sin ۲$."
+        },
+        {
+          "subject": "math",
+          "topic_key": "trigonometry",
+          "question_number": 777,
+          "source_file": "math-solutions-04.json",
+          "key_correct": 1,
+          "solution_stated_correct_option": 2,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 16,
+          "solution_page": 0,
+          "question_text_preview": "سؤال چهارگزینه‌ای چاپی شماره 777 از صفحه 16 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+          "solution_text_preview": "در مثلث قائم‌الزاویهٔ OAB، ارتفاع OP وارد بر وتر است. $OP^2 = AP \\times BP$ $= AP \\times 3AP = 3AP^2$ $\\Rightarrow OP = \\sqrt{3}AP \\Rightarrow OP = \\frac{\\sqrt{3}}{3}BP$ $\\Rightar..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math trigonometry solution_key_mismatch rows 764, 777 in math-solutions-04.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "magnetism_induction",
+      "source_file": "physics-solutions-09.json",
+      "count": 2,
+      "ranges": [
+        {
+          "start": 797,
+          "end": 797,
+          "count": 1
+        },
+        {
+          "start": 805,
+          "end": 805,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.021,
+      "overlap_bands": {
+        "low_text_overlap": 1,
+        "zero_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        797,
+        805
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "magnetism_induction",
+          "question_number": 797,
+          "source_file": "physics-solutions-09.json",
+          "key_correct": 2,
+          "solution_stated_correct_option": 3,
+          "overlap": 0.042,
+          "overlap_band": "low_text_overlap",
+          "question_page": 17,
+          "solution_page": 360,
+          "question_text_preview": "دو سیم راست، موازی و بلند به فاصلۀ $d$ از یکدیگر قرار دارند و جریان‌های مساوی $I$ در یک جهت از آن‌ها می‌گذرد. میدان مغناطیسی خالص در نقطه‌ای به فاصلۀ $\\frac{d}{4}$ از سیم اول و بی...",
+          "solution_text_preview": "در حل چاپی از قانون فاراده و لنز و رابطه‌های شار $\\Phi=BA\\cos\\theta$ و $\\varepsilon=-N\\Delta\\Phi/\\Delta t$ استفاده شده است؛ علامت یا جهت تغییر شار تعیین و سپس مقدار نیروی محرکه/جر..."
+        },
+        {
+          "subject": "physics",
+          "topic_key": "magnetism_induction",
+          "question_number": 805,
+          "source_file": "physics-solutions-09.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 1,
+          "overlap": 0,
+          "overlap_band": "zero_text_overlap",
+          "question_page": 18,
+          "solution_page": 362,
+          "question_text_preview": "میله‌ای رسانا به طول $10\\text{ cm}$ با تندی ثابت $20\\text{ m/s}$ مطابق شکل روی ریل‌های رسانا به سمت راست در حرکت است. اگر میدان مغناطیسی یکنواخت درون‌سو به بزرگی $0/5\\text{ T}$ بر...",
+          "solution_text_preview": "در حل چاپی از قانون فاراده و لنز و رابطه‌های شار $\\Phi=BA\\cos\\theta$ و $\\varepsilon=-N\\Delta\\Phi/\\Delta t$ استفاده شده است؛ علامت یا جهت تغییر شار تعیین و سپس مقدار نیروی محرکه/جر..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics magnetism_induction solution_key_mismatch rows 797, 805 in physics-solutions-09.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "math",
+      "topic_key": "absolute_value_floor",
+      "source_file": "math-solutions-03.json",
+      "count": 1,
+      "ranges": [
+        {
+          "start": 424,
+          "end": 424,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.333,
+      "overlap_bands": {
+        "medium_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        424
+      ],
+      "samples": [
+        {
+          "subject": "math",
+          "topic_key": "absolute_value_floor",
+          "question_number": 424,
+          "source_file": "math-solutions-03.json",
+          "key_correct": 4,
+          "solution_stated_correct_option": 2,
+          "overlap": 0.333,
+          "overlap_band": "medium_text_overlap",
+          "question_page": 8,
+          "solution_page": 41,
+          "question_text_preview": "نمودار تابع $f(x) = |x - 1| + |x + 1|$ در بازهٔ $[-1, 1]$ به کدام صورت است؟",
+          "solution_text_preview": "تابع $y = [3 - \\frac{x}{2}]$ را به صورت تابع چندضابطه‌ای می‌نویسیم: $y = 3 + [-\\frac{x}{2}]$ $y = \\begin{cases} 4 & x = -2 \\\\ 3 & -2 < x \\leq 0 \\\\ 2 & 0 < x \\leq 2 \\\\ 1 & 2 < x \\l..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam math absolute_value_floor solution_key_mismatch rows 424 in math-solutions-03.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "subject": "physics",
+      "topic_key": "dynamics",
+      "source_file": "physics-solutions-13.json",
+      "count": 1,
+      "ranges": [
+        {
+          "start": 1149,
+          "end": 1149,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.125,
+      "overlap_bands": {
+        "low_text_overlap": 1
+      },
+      "sample_question_numbers": [
+        1149
+      ],
+      "samples": [
+        {
+          "subject": "physics",
+          "topic_key": "dynamics",
+          "question_number": 1149,
+          "source_file": "physics-solutions-13.json",
+          "key_correct": 3,
+          "solution_stated_correct_option": 4,
+          "overlap": 0.125,
+          "overlap_band": "low_text_overlap",
+          "question_page": 12,
+          "solution_page": 443,
+          "question_text_preview": "مطابق شکل به جسمی به جرم $900\\,g$ نیروی افقی $F_1=24\\,N$ و نیروی قائم $F_2$ وارد شده‌اند و جسم در آستانه‌ی حرکت قرار دارد. اگر بزرگی نیرویی که جسم به سطح وارد می‌کند $30\\,N$ باشد،...",
+          "solution_text_preview": "در شکل، ابتدا از $F_N=F_1=24N$ و $R=30N$ داریم $f_{s,max}=18N$ و $\\mu_s=0.75$. چون جسم ساکن است و $f_{s,max}>mg=9N$، جهت اصطکاک باید پایین باشد. از تعادل قائم، $F_2=f_{s,max}+mg=2..."
+        }
+      ],
+      "jules_prompt": "Repair Nardebam physics dynamics solution_key_mismatch rows 1149 in physics-solutions-13.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    }
+  ],
+  "low_risk_local_fix_candidates": {
+    "duplicate_solutions": [
+      {
+        "subject": "math",
+        "question_number": 567,
+        "files": [
+          "math-solutions-03.json",
+          "math-solutions-03.json"
+        ],
+        "row_count": 2,
+        "preferred_row": {
+          "file": "math-solutions-03.json",
+          "stated_correct_option": 0,
+          "solution_text_preview": "ابتدا $fog(x)$ را به دست می‌آوریم. $\\begin{cases} fog(x)-g(x) = 4x^2 \\\\ g(x) = 2x^2+1 \\end{cases} \\Rightarrow fog(x)=6x^2+1$ روش اول: $g(x)=2x^2+1$ است؛ بنابراین $x^2 = \\frac{g(x)...",
+          "score": 270
+        },
+        "weaker_rows": [
+          {
+            "file": "math-solutions-03.json",
+            "stated_correct_option": 0,
+            "has_solution_text": false,
+            "media_region_count": 1,
+            "review_notes": [
+              "This is a continuation of question 567 from the previous page. I replaced [۴] with گزینه ۴ for clarity."
+            ],
+            "score": 40
+          }
+        ],
+        "recommendation": "Low-risk cleanup candidate: remove or merge the empty continuation duplicate in its local/raw source only after confirming the source part that created it. This does not repair a solution_key_mismatch by itself."
+      },
+      {
+        "subject": "math",
+        "question_number": 853,
+        "files": [
+          "math-solutions-04.json",
+          "math-solutions-05.json"
+        ],
+        "row_count": 2,
+        "preferred_row": {
+          "file": "math-solutions-04.json",
+          "stated_correct_option": 3,
+          "solution_text_preview": "با توجه به شکل واضح است $\\alpha + 2\\beta = \\frac{\\pi}{2}$ بنابراین $2\\alpha = \\pi - 4\\beta$ اگر ضلع مربع را x بنامیم، خواهیم داشت: $AN^2 = x^2 + (\\frac{x}{2})^2 = \\frac{5}{4}x^2 \\...",
+          "score": 639
+        },
+        "weaker_rows": [
+          {
+            "file": "math-solutions-05.json",
+            "stated_correct_option": 0,
+            "has_solution_text": true,
+            "media_region_count": 0,
+            "review_notes": [
+              "Inferred question number 853 for the unnumbered continuation text at the top of the right column."
+            ],
+            "score": 163
+          }
+        ],
+        "recommendation": "Needs source review before deletion because duplicate rows both carry solution content."
+      }
+    ]
+  },
+  "top_jules_repair_tasks": [
+    {
+      "priority": 1,
+      "subject": "math",
+      "topic_key": "derivative_applications",
+      "source_file": "math-solutions-07.json",
+      "count": 98,
+      "ranges": [
+        {
+          "start": 1346,
+          "end": 1354,
+          "count": 9
+        },
+        {
+          "start": 1356,
+          "end": 1361,
+          "count": 6
+        },
+        {
+          "start": 1363,
+          "end": 1364,
+          "count": 2
+        },
+        {
+          "start": 1366,
+          "end": 1368,
+          "count": 3
+        },
+        {
+          "start": 1370,
+          "end": 1370,
+          "count": 1
+        },
+        {
+          "start": 1372,
+          "end": 1372,
+          "count": 1
+        },
+        {
+          "start": 1374,
+          "end": 1383,
+          "count": 10
+        },
+        {
+          "start": 1385,
+          "end": 1404,
+          "count": 20
+        },
+        {
+          "start": 1408,
+          "end": 1409,
+          "count": 2
+        },
+        {
+          "start": 1411,
+          "end": 1416,
+          "count": 6
+        },
+        {
+          "start": 1418,
+          "end": 1422,
+          "count": 5
+        },
+        {
+          "start": 1424,
+          "end": 1425,
+          "count": 2
+        },
+        {
+          "start": 1427,
+          "end": 1432,
+          "count": 6
+        },
+        {
+          "start": 1434,
+          "end": 1439,
+          "count": 6
+        },
+        {
+          "start": 1441,
+          "end": 1445,
+          "count": 5
+        },
+        {
+          "start": 1449,
+          "end": 1453,
+          "count": 5
+        },
+        {
+          "start": 1455,
+          "end": 1456,
+          "count": 2
+        },
+        {
+          "start": 1459,
+          "end": 1459,
+          "count": 1
+        },
+        {
+          "start": 1461,
+          "end": 1466,
+          "count": 6
+        }
+      ],
+      "avg_overlap": 0.411,
+      "prompt": "Repair Nardebam math derivative_applications solution_key_mismatch rows 1346-1354, 1356-1361, 1363-1364, 1366-1368, 1370, 1372, 1374-1383, 1385-1404, 1408-1409, 1411-1416, 1418-1422, 1424-1425, 1427-1432, 1434-1439, 1441-1445, 1449-1453, 1455-1456, 1459, 1461-1466 in math-solutions-07.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "priority": 2,
+      "subject": "math",
+      "topic_key": "probability",
+      "source_file": "math-solutions-09.json",
+      "count": 51,
+      "ranges": [
+        {
+          "start": 1824,
+          "end": 1826,
+          "count": 3
+        },
+        {
+          "start": 1828,
+          "end": 1834,
+          "count": 7
+        },
+        {
+          "start": 1836,
+          "end": 1836,
+          "count": 1
+        },
+        {
+          "start": 1841,
+          "end": 1841,
+          "count": 1
+        },
+        {
+          "start": 1843,
+          "end": 1843,
+          "count": 1
+        },
+        {
+          "start": 1845,
+          "end": 1848,
+          "count": 4
+        },
+        {
+          "start": 1850,
+          "end": 1851,
+          "count": 2
+        },
+        {
+          "start": 1853,
+          "end": 1861,
+          "count": 9
+        },
+        {
+          "start": 1863,
+          "end": 1868,
+          "count": 6
+        },
+        {
+          "start": 1870,
+          "end": 1872,
+          "count": 3
+        },
+        {
+          "start": 1874,
+          "end": 1879,
+          "count": 6
+        },
+        {
+          "start": 1881,
+          "end": 1881,
+          "count": 1
+        },
+        {
+          "start": 1883,
+          "end": 1883,
+          "count": 1
+        },
+        {
+          "start": 1885,
+          "end": 1885,
+          "count": 1
+        },
+        {
+          "start": 1887,
+          "end": 1891,
+          "count": 5
+        }
+      ],
+      "avg_overlap": 0.303,
+      "prompt": "Repair Nardebam math probability solution_key_mismatch rows 1824-1826, 1828-1834, 1836, 1841, 1843, 1845-1848, 1850-1851, 1853-1861, 1863-1868, 1870-1872, 1874-1879, 1881, 1883, 1885, 1887-1891 in math-solutions-09.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "priority": 3,
+      "subject": "math",
+      "topic_key": "geometry",
+      "source_file": "math-solutions-10.json",
+      "count": 41,
+      "ranges": [
+        {
+          "start": 1949,
+          "end": 1951,
+          "count": 3
+        },
+        {
+          "start": 1953,
+          "end": 1958,
+          "count": 6
+        },
+        {
+          "start": 1961,
+          "end": 1961,
+          "count": 1
+        },
+        {
+          "start": 1963,
+          "end": 1967,
+          "count": 5
+        },
+        {
+          "start": 1969,
+          "end": 1969,
+          "count": 1
+        },
+        {
+          "start": 1971,
+          "end": 1984,
+          "count": 14
+        },
+        {
+          "start": 1986,
+          "end": 1987,
+          "count": 2
+        },
+        {
+          "start": 1989,
+          "end": 1997,
+          "count": 9
+        }
+      ],
+      "avg_overlap": 0.352,
+      "prompt": "Repair Nardebam math geometry solution_key_mismatch rows 1949-1951, 1953-1958, 1961, 1963-1967, 1969, 1971-1984, 1986-1987, 1989-1997 in math-solutions-10.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "priority": 4,
+      "subject": "math",
+      "topic_key": "statistics",
+      "source_file": "math-solutions-10.json",
+      "count": 35,
+      "ranges": [
+        {
+          "start": 2000,
+          "end": 2006,
+          "count": 7
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "count": 1
+        },
+        {
+          "start": 2011,
+          "end": 2015,
+          "count": 5
+        },
+        {
+          "start": 2018,
+          "end": 2025,
+          "count": 8
+        },
+        {
+          "start": 2027,
+          "end": 2040,
+          "count": 14
+        }
+      ],
+      "avg_overlap": 0.011,
+      "prompt": "Repair Nardebam math statistics solution_key_mismatch rows 2000-2006, 2009, 2011-2015, 2018-2025, 2027-2040 in math-solutions-10.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "priority": 5,
+      "subject": "math",
+      "topic_key": "exponential_logarithmic",
+      "source_file": "math-solutions-07.json",
+      "count": 31,
+      "ranges": [
+        {
+          "start": 1468,
+          "end": 1469,
+          "count": 2
+        },
+        {
+          "start": 1471,
+          "end": 1471,
+          "count": 1
+        },
+        {
+          "start": 1473,
+          "end": 1475,
+          "count": 3
+        },
+        {
+          "start": 1477,
+          "end": 1478,
+          "count": 2
+        },
+        {
+          "start": 1480,
+          "end": 1482,
+          "count": 3
+        },
+        {
+          "start": 1485,
+          "end": 1486,
+          "count": 2
+        },
+        {
+          "start": 1488,
+          "end": 1489,
+          "count": 2
+        },
+        {
+          "start": 1491,
+          "end": 1491,
+          "count": 1
+        },
+        {
+          "start": 1494,
+          "end": 1494,
+          "count": 1
+        },
+        {
+          "start": 1496,
+          "end": 1499,
+          "count": 4
+        },
+        {
+          "start": 1501,
+          "end": 1501,
+          "count": 1
+        },
+        {
+          "start": 1504,
+          "end": 1504,
+          "count": 1
+        },
+        {
+          "start": 1506,
+          "end": 1509,
+          "count": 4
+        },
+        {
+          "start": 1511,
+          "end": 1514,
+          "count": 4
+        }
+      ],
+      "avg_overlap": 0.457,
+      "prompt": "Repair Nardebam math exponential_logarithmic solution_key_mismatch rows 1468-1469, 1471, 1473-1475, 1477-1478, 1480-1482, 1485-1486, 1488-1489, 1491, 1494, 1496-1499, 1501, 1504, 1506-1509, 1511-1514 in math-solutions-07.json. These look like answer-label/key disagreements; verify against the printed answer badge and do not rewrite matching solution text unless the badge was OCRed incorrectly. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "priority": 6,
+      "subject": "math",
+      "topic_key": "exponential_logarithmic",
+      "source_file": "math-solutions-08.json",
+      "count": 30,
+      "ranges": [
+        {
+          "start": 1529,
+          "end": 1529,
+          "count": 1
+        },
+        {
+          "start": 1532,
+          "end": 1532,
+          "count": 1
+        },
+        {
+          "start": 1534,
+          "end": 1540,
+          "count": 7
+        },
+        {
+          "start": 1542,
+          "end": 1544,
+          "count": 3
+        },
+        {
+          "start": 1546,
+          "end": 1547,
+          "count": 2
+        },
+        {
+          "start": 1549,
+          "end": 1559,
+          "count": 11
+        },
+        {
+          "start": 1564,
+          "end": 1568,
+          "count": 5
+        }
+      ],
+      "avg_overlap": 0.435,
+      "prompt": "Repair Nardebam math exponential_logarithmic solution_key_mismatch rows 1529, 1532, 1534-1540, 1542-1544, 1546-1547, 1549-1559, 1564-1568 in math-solutions-08.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "priority": 7,
+      "subject": "math",
+      "topic_key": "limits_continuity",
+      "source_file": "math-solutions-06.json",
+      "count": 10,
+      "ranges": [
+        {
+          "start": 1083,
+          "end": 1083,
+          "count": 1
+        },
+        {
+          "start": 1085,
+          "end": 1085,
+          "count": 1
+        },
+        {
+          "start": 1095,
+          "end": 1095,
+          "count": 1
+        },
+        {
+          "start": 1148,
+          "end": 1148,
+          "count": 1
+        },
+        {
+          "start": 1150,
+          "end": 1155,
+          "count": 6
+        }
+      ],
+      "avg_overlap": 0.065,
+      "prompt": "Repair Nardebam math limits_continuity solution_key_mismatch rows 1083, 1085, 1095, 1148, 1150-1155 in math-solutions-06.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    },
+    {
+      "priority": 8,
+      "subject": "physics",
+      "topic_key": "atomic_nuclear",
+      "source_file": "physics-solutions-17.json",
+      "count": 7,
+      "ranges": [
+        {
+          "start": 1569,
+          "end": 1569,
+          "count": 1
+        },
+        {
+          "start": 1583,
+          "end": 1583,
+          "count": 1
+        },
+        {
+          "start": 1594,
+          "end": 1594,
+          "count": 1
+        },
+        {
+          "start": 1602,
+          "end": 1602,
+          "count": 1
+        },
+        {
+          "start": 1619,
+          "end": 1619,
+          "count": 1
+        },
+        {
+          "start": 1629,
+          "end": 1629,
+          "count": 1
+        },
+        {
+          "start": 1637,
+          "end": 1637,
+          "count": 1
+        }
+      ],
+      "avg_overlap": 0.293,
+      "prompt": "Repair Nardebam physics atomic_nuclear solution_key_mismatch rows 1569, 1583, 1594, 1602, 1619, 1629, 1637 in physics-solutions-17.json. These likely include wrong or shifted solution attachments; inspect the question pages and solution pages together before changing any stated_correct_option. For each row, confirm the printed correct option, ensure solution_text actually solves the same question, then return a narrow Jules repair JSON for only these question_numbers. Preserve media_regions when still valid and add review_notes for any source ambiguity."
+    }
+  ],
+  "intentionally_not_changed": [
+    "Did not overwrite answer keys from solution.stated_correct_option globally; low-overlap ranges show wrong or shifted solution attachments.",
+    "Did not edit raw or normalized source rows from this analysis script.",
+    "Did not touch app UI or generated app assets."
+  ]
+}

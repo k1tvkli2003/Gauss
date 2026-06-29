@@ -1,0 +1,2076 @@
+[
+  {
+    "id": "jules_v2_sets_patterns_sequences_002",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "حاصل تفاضل بازه‌های $A = [-3, 7)$ و $B = (2, 9]$ به‌صورت بازه $A - B$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$(-3, 2)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[-3, 2]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$(-3, 2]$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$[-3, 2)$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تفاضل دو بازه، یعنی اعضایی که در بازه $A$ هستند اما در $B$ نیستند. بازه $A$ از $-3$ (بسته) تا $7$ (باز) امتداد دارد. بازه $B$ شامل مقادیر بیشتر از $2$ (بدون خود ۲) است. بنابراین مقادیری از $A$ که در $B$ نیستند، در سمت چپ $2$ قرار دارند. چون $2  otin B$ است، پس $2$ در تفاضل $A-B$ باقی می‌ماند. بنابراین محدوده تفاضل $[-3, 2]$ خواهد بود. گزینه ۲ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "در یافتن $A-B$ روی محور، کران مربوط به $B$ وضعیتش برعکس می‌شود. چون $B$ از $2$ باز است، در تفاضل، عدد $2$ بسته در نظر گرفته می‌شود. سمت چپ هم که دست‌نخورده باقی می‌ماند: $[-3, 2]$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_017",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک الگوی خطی، جمله پنجم برابر ۱۷ و جمله دهم برابر ۳۲ است. جمله عمومی این الگو ($a_n$) کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3n + 2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4n - 3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3n + 1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2n + 7$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "الگوی خطی معادل یک دنباله حسابی است که $a_n = an + b$. با حل یک دستگاه دو معادله‌ای: $5a + b = 17$ و $10a + b = 32$. با کم کردن دو معادله: $5a = 15 \\implies a = 3$. با جایگذاری در معادله اول: $15 + b = 17 \\implies b = 2$. پس جمله عمومی $3n + 2$ است. بنابراین گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "شیب خط (ضریب $n$) را با تقسیم تفاضل مقادیر بر تفاضل اندیس‌ها پیدا کنید: $\\dfrac{32-17}{10-5} = 3$. پس الگو به فرم $3n + b$ است. برای $n=5$ مقدار باید ۱۷ شود، پس $15+2=17$. الگو $3n+2$ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_018",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در الگوی غیرخطی $2, 6, 12, 20,،$ جمله بیستم این دنباله چه عددی است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$380$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$420$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$400$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$440$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اختلاف جملات اول را بررسی می‌کنیم: اختلاف‌ها ۴، ۶، ۸ هستند. چون اختلافِ اختلاف‌ها ثابت (و برابر ۲) است، الگو درجه دوم است. با حدس زدن می‌بینیم که جملات به صورت $1\\times 2, 2\\times 3, 3\\times 4,،$ هستند. یعنی جمله عمومی $a_n = n(n+1) = n^2 + n$ است. برای جمله بیستم: $a_{20} = 20(21) = 420$. پس پاسخ گزینه ۲ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هرگاه اختلاف‌ها با گام‌های ثابت زیاد می‌شوند، دنباله درجه دوم است. فرمول معروف $n(n+1)$ دقیقاً اعداد ۲، ۶، ۱۲ را تولید می‌کند. فقط کافی است $n=20$ قرار دهید تا ۴۲۰ به‌دست آید."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_019",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک الگو، جمله عمومی به فرم $t_n = an^2 + bn + c$ است. اگر $t_1 = 4$، $t_2 = 9$ و $t_3 = 16$ باشد، مقدار $t_5$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$49$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با نگاه به اعداد ۴، ۹ و ۱۶ متوجه می‌شویم که این‌ها مربع‌های کامل هستند. در واقع $t_1 = 2^2$، $t_2 = 3^2$، $t_3 = 4^2$. پس الگو به‌صورت $(n+1)^2$ است. در این صورت، مقدار جمله پنجم برابر است با $t_5 = (5+1)^2 = 6^2 = 36$. پس گزینه ۳ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "گاهی نیازی به حل دستگاه سه معادله و سه مجهول نیست. اعداد را بشناسید: ۴، ۹، ۱۶ همان $(n+1)^2$ است. پس جمله پنجم می‌شود ۳۶."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_020",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموع $n$ جمله اول یک الگو با رابطه $S_n = 2n^2 + 3n$ داده شده است. جمله دهم ($a_{10}$) این الگو چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$39$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$43$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$45$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$41$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای یافتن جمله دهم، می‌توانیم از رابطه $a_n = S_n - S_{n-1}$ استفاده کنیم. پس $a_{10} = S_{10} - S_9$. مقدار مجموع تا جمله دهم: $S_{10} = 2(100) + 3(10) = 230$. مجموع تا جمله نهم: $S_9 = 2(81) + 3(9) = 162 + 27 = 189$. بنابراین $a_{10} = 230 - 189 = 41$. پس پاسخ صحیح گزینه ۴ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی مجموع جملات به‌صورت $An^2 + Bn$ است، دنباله حتماً حسابی است و جمله عمومی آن $2An + (B-A)$ است. اینجا $A=2$ و $B=3$، پس جمله عمومی $4n + 1$ است. برای $n=10$ مستقیماً ۴۱ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_021",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک دنباله حسابی، جمله چهارم ۱۱ و جمله نهم ۲۶ است. جمله اول این دنباله چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "رابطه بین دو جمله دنباله حسابی $a_m - a_n = (m - n)d$ است. بنابراین $a_9 - a_4 = (9 - 4)d \\implies 26 - 11 = 5d \\implies 15 = 5d \\implies d = 3$. حالا با استفاده از جمله چهارم: $a_4 = a_1 + 3d \\implies 11 = a_1 + 3(3) \\implies a_1 = 11 - 9 = 2$. بنابراین گزینه ۱ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "سریع شیب خط (قدر نسبت) را حساب کنید: $\\dfrac{26-11}{9-4} = 3$. برای برگشتن از جمله چهارم به جمله اول، باید ۳ گام به عقب بروید: $11 - 3 \\times 3 = 2$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_022",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد جملات مثبت در دنباله حسابی $83, 76, 69,،$ چند تاست؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$13$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$11$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "این یک دنباله حسابی نزولی با جمله اول $a_1 = 83$ و قدر نسبت $d = 76 - 83 = -7$ است. جمله عمومی این دنباله: $a_n = 83 + (n-1)(-7) = 90 - 7n$. می‌خواهیم تعداد جملات مثبت را پیدا کنیم، پس $a_n > 0 \\implies 90 - 7n > 0 \\implies 7n < 90 \\implies n < \\dfrac{90}{7} \\approx 12.85$. چون $n$ باید عدد طبیعی باشد، حداکثر مقدار $n$ برابر ۱۲ است. یعنی ۱۲ جمله مثبت داریم. پس گزینه ۲ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "جمله عمومی را سریع بنویسید: $a_n = -7n + 90$. چه زمانی صفر می‌شود؟ در $n \\approx 12.8$. پس دقیقاً تا جمله ۱۲ام مثبت است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_023",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر در یک دنباله حسابی $a_3 + a_7 = 40$ باشد، مقدار $a_5$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$10$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در دنباله حسابی، اگر مجموع اندیس‌ها برابر باشد، مجموع جملات نیز برابر است. چون $3 + 7 = 5 + 5$، پس $a_3 + a_7 = a_5 + a_5 = 2a_5$. با جایگذاری در فرض مسئله: $2a_5 = 40 \\implies a_5 = 20$. پس پاسخ گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "جمله وسطی میان دو جمله با اندیس‌های متقارن، میانگین حسابی آن‌هاست. میانگین اندیس‌های ۳ و ۷ برابر ۵ است، پس مقدار $a_5$ دقیقاً نصف مجموع آن‌ها یعنی $\\dfrac{40}{2} = 20$ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_024",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در دنباله حسابی، اگر جمله $p$-ام برابر $q$ و جمله $q$-ام برابر $p$ باشد ($p  eq q$)، جمله $p+q$-ام چقدر خواهد بود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$p+q$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$p-q$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرمول عمومی را می‌نویسیم: $a_p = a_1 + (p-1)d = q$ و $a_q = a_1 + (q-1)d = p$. با کم کردن این دو: $(p-q)d = q-p = -(p-q)$. چون $p  eq q$ است، $d = -1$. با جایگذاری در معادله اول: $a_1 + (p-1)(-1) = q \\implies a_1 = p + q - 1$. برای یافتن جمله $(p+q)$ داریم: $a_{p+q} = a_1 + (p+q-1)d = (p+q-1) + (p+q-1)(-1) = 0$. بنابراین گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "این یک ویژگی معروف در دنباله‌های حسابی است: اگر در اندیس $x$ مقدار $y$ و در اندیس $y$ مقدار $x$ تولید شود، قدر نسبت $-1$ است و در اندیس $x+y$ مقدار دنباله صفر خواهد شد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_025",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک دنباله هندسی، جمله دوم برابر ۶ و جمله پنجم برابر ۱۶۲ است. قدر نسبت ($r$) این دنباله چند است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "با استفاده از فرمول دنباله هندسی $a_n = a_1 r^{n-1}$، نسبت دو جمله را می‌نویسیم: $\\dfrac{a_5}{a_2} = \\dfrac{a_1 r^4}{a_1 r} = r^3$. از طرفی $\\dfrac{a_5}{a_2} = \\dfrac{162}{6} = 27$. پس $r^3 = 27 \\implies r = 3$. بنابراین گزینه ۱ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای یافتن سریع قدر نسبت در دنباله هندسی، ریشه به فرجه اختلاف اندیس‌ها را از نسبت مقادیر بگیرید: $\\sqrt[5-2]{\\dfrac{162}{6}} = \\sqrt[3]{27} = 3$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_026",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در دنباله هندسی $2, -4, 8, -16,،$، کدام جمله برابر $512$ است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "دهم"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "نهم"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "هشتم"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "هفتم"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "جمله اول $a_1 = 2$ و قدر نسبت $r = \\dfrac{-4}{2} = -2$ است. جمله عمومی این دنباله به‌صورت $a_n = 2(-2)^{n-1}$ نوشته می‌شود. می‌خواهیم $2(-2)^{n-1} = 512$ باشد. با ساده‌سازی: $(-2)^{n-1} = 256$. می‌دانیم $256 = 2^8 = (-2)^8$. بنابراین $n-1 = 8 \\implies n = 9$. پس ۵۱۲ جمله نهم این دنباله است و گزینه ۲ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "از آنجا که ۵۱۲ مثبت است و جملات به‌صورت یکی‌درمیان مثبت و منفی‌اند (جملات فرد مثبت، زوج منفی)، می‌دانیم اندیس باید فرد باشد. $2^9 = 512$، پس عدد ما جمله نهم است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_027",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر اعداد $x-2$، $x$ و $x+3$ به ترتیب سه جمله متوالی یک دنباله هندسی صعودی باشند، مقدار $x$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-6$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "در یک دنباله هندسی، مربع جمله وسط برابر حاصل‌ضرب دو جمله کناری است (واسطه هندسی). بنابراین $x^2 = (x-2)(x+3)$. با بسط این معادله: $x^2 = x^2 + x - 6 \\implies 0 = x - 6 \\implies x = 6$. برای بررسی صعودی بودن: جملات $4, 6, 9$ می‌شوند که یک دنباله هندسی صعودی با قدر نسبت $1.5$ است. پس پاسخ صحیح گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "وقتی سه جمله متوالی دنباله هندسی دارید، مستقیماً از رابطه $b^2 = ac$ استفاده کنید: $x^2 = (x-2)(x+3)$ که فوراً می‌دهد $x=6$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_028",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموع سه جمله متوالی یک دنباله هندسی افزایشی ۱۹ و حاصل‌ضرب آن‌ها ۲۱۶ است. جمله بزرگتر کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "سه جمله را به صورت $\\dfrac{a}{r}, a, ar$ در نظر می‌گیریم. حاصل‌ضرب آن‌ها $\\dfrac{a}{r} \\times a \\times ar = a^3 = 216 \\implies a = 6$. بنابراین جملات $\\dfrac{6}{r}, 6, 6r$ هستند. مجموع آن‌ها: $\\dfrac{6}{r} + 6 + 6r = 19 \\implies 6r^2 - 13r + 6 = 0$. با استفاده از دلتا: $\\Delta = 169 - 144 = 25$. ریشه‌ها $r = \\dfrac{13 \\pm 5}{12}$ که $r = \\dfrac{3}{2}$ یا $r = \\dfrac{2}{3}$ می‌شوند. چون دنباله افزایشی است $r = 1.5$. جملات به ترتیب $4, 6, 9$ خواهند بود. جمله بزرگتر ۹ است. پس گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه وقتی ضرب سه جمله متوالی هندسی داده می‌شود، ریشه سوم آن مقدار، جمله وسط را می‌دهد ($\\sqrt[3]{216} = 6$). پس یکی از جملات ۶ است. دو جمله دیگر ضربشان ۳۶ و جمعشان ۱۳ است (۴ و ۹). بزرگترین آن‌ها ۹ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_029",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "بین دو عدد ۷ و ۳۷، تعداد ۵ واسطه حسابی درج کرده‌ایم. سومین واسطه حسابی کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$22$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$27$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$17$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد کل جملات برابر $n = 5 + 2 = 7$ است. جمله اول $a_1 = 7$ و جمله هفتم $a_7 = 37$ است. با رابطه دنباله حسابی: $a_7 = a_1 + 6d \\implies 37 = 7 + 6d \\implies 30 = 6d \\implies d = 5$. واسطه سوم معادل جمله چهارم دنباله است ($a_4$). پس $a_4 = a_1 + 3d = 7 + 3(5) = 22$. پاسخ صحیح گزینه ۱ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "قدر نسبت درج $m$ واسطه بین $a$ و $b$ برابر است با $d = \\dfrac{b-a}{m+1} = \\dfrac{30}{6} = 5$. واسطه سوم یعنی سه قدم از $a$ فاصله بگیریم: $7 + 3(5) = 22$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_030",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموع سه واسطه حسابی که بین ۴ و ۲۰ درج شده‌اند، چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$40$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر ۳ واسطه بین ۴ و ۲۰ درج کنیم، کل جملات ۵ تا می‌شود. $a_1 = 4$ و $a_5 = 20$. پس $4d = 16 \\implies d = 4$. واسطه‌ها عبارتند از ۸، ۱۲ و ۱۶. مجموع این سه عدد برابر است با $8 + 12 + 16 = 36$. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "میانگین واسطه‌های متقارن برابر با میانگین دو عدد انتهایی است. میانگین ۴ و ۲۰ برابر ۱۲ است. چون ۳ واسطه داریم، مجموعشان $3 \\times 12 = 36$ می‌شود، بدون اینکه حتی نیازی به یافتن $d$ باشد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_031",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "بین دو عدد ۲ و ۱۶۲، سه واسطه هندسی درج کرده‌ایم. اگر جملات دنباله مثبت باشند، واسطه دوم کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$54$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$24$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$36$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد جملات $n = 3 + 2 = 5$ است. $a_1 = 2$ و $a_5 = 162$. در دنباله هندسی $a_5 = a_1 r^4 \\implies 162 = 2 r^4 \\implies r^4 = 81$. چون جملات مثبت‌اند، $r = 3$. واسطه دوم معادل جمله سوم دنباله است: $a_3 = a_1 r^2 = 2(9) = 18$. بنابراین گزینه ۳ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "واسطه هندسی وسط در تعداد فرد واسطه‌ها، دقیقاً میانگین هندسی دو جمله ابتدایی و انتهایی است. پس وسطی $\\sqrt{2 \\times 162} = \\sqrt{324} = 18$ خواهد بود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_032",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دنباله‌ای از اعداد، هم خاصیت دنباله حسابی را دارد و هم خاصیت دنباله هندسی را. اگر جمله اول آن ۵ باشد، جمله دهم چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$50$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تنها دنباله‌ای که هم حسابی است و هم هندسی، دنباله ثابت است. زیرا باید تفاضل جملات متوالی ثابت و نسبت آن‌ها نیز ثابت باشد. اگر جملات یکسان باشند، قدر نسبت حسابی صفر و قدر نسبت هندسی یک است. پس تمام جملات آن ۵ است و جمله دهم نیز ۵ خواهد بود. گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "دنباله‌ای که هم حسابی باشد و هم هندسی، لاجرم دنباله ثابت (Constant Sequence) است. بنابراین مقدار هیچ جمله‌ای تغییر نمی‌کند و همان ۵ باقی می‌ماند."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_036",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر $\\{x^2 - x, 4\\} = \\{2, y\\}$ و $x < 0$ باشد، مقدار $x + y$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "باید $x^2 - x = 2$ و $y = 4$ باشد (چون ۴ نمی‌تواند برابر ۲ باشد). معادله درجه دوم $x^2 - x - 2 = 0$ را حل می‌کنیم: $(x-2)(x+1) = 0 \\implies x = 2$ یا $x = -1$. چون شرط مسئله $x < 0$ است، تنها $x = -1$ قابل قبول است. حالا $x+y = -1 + 4 = 3$. بنابراین گزینه ۴ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "با اتحاد یک‌جمله مشترک ذهنی ریشه‌های $x^2-x-2=0$ را پیدا کنید که ۲ و ۱- هستند. جواب منفی مد نظر است، پس $x=-1$. با $y=4$ جمعش ۳ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_037",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "فردی در روز اول کارش ۲۰ هزار تومان حقوق می‌گیرد و هر روز ۵ هزار تومان به حقوق روزانه او اضافه می‌شود. در روز دهم او چقدر دستمزد می‌گیرد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶۵ هزار تومان"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۰ هزار تومان"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۷۵ هزار تومان"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۶۰ هزار تومان"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دستمزدهای روزانه تشکیل یک دنباله حسابی با $a_1 = 20$ و $d = 5$ می‌دهند. دستمزد روز دهم برابر است با: $a_{10} = a_1 + 9d = 20 + 9(5) = 20 + 45 = 65$. بنابراین ۶۵ هزار تومان دریافت خواهد کرد. پاسخ صحیح گزینه ۱ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای رسیدن به روز دهم، باید ۹ بار افزایش دستمزد رخ دهد. پس $9 \\times 5 = 45$ هزار تومان اضافه می‌شود. با ۲۰ هزار تومان اولیه، جواب ۶۵ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_038",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک آزمایش، باکتری‌ها هر ساعت دو برابر می‌شوند. اگر در ساعت اول تعداد باکتری‌ها ۱۰۰ عدد باشد، پس از گذشت ۵ ساعت (در شروع ساعت ششم) تعداد آن‌ها چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۶۴۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۳۲۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۸۰۰"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶۰۰"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "این رشد نشان‌دهنده یک دنباله هندسی با $a_1 = 100$ و $r = 2$ است. پس از گذشت ۵ ساعت کامل، وارد مقطع ششم از اندازه‌گیری می‌شویم، بنابراین جمله ششم دنباله مورد نظر است: $a_6 = a_1 r^5 = 100 \\times 2^5 = 100 \\times 32 = 3200$. پس پاسخ گزینه ۲ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "پس از ۵ ساعت به این معناست که ۵ بار عمل دو برابر شدن اتفاق می‌افتد. بنابراین تعداد اولیه را در $2^5$ (یعنی ۳۲) ضرب کنید که جواب ۳۲۰۰ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_039",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک چیدمان آجری، ردیف پایین ۴۰ آجر، ردیف بالای آن ۳۸ آجر، و به همین ترتیب تا بالا ادامه دارد. در ردیف دوازدهم چند آجر قرار دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "۲۲"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۶"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۱۸"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "۲۰"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "تعداد آجرها یک دنباله حسابی نزولی می‌سازند: $a_1 = 40$ و $d = -2$. برای ردیف دوازدهم باید جمله دوازدهم را بیابیم: $a_{12} = a_1 + 11d = 40 + 11(-2) = 40 - 22 = 18$. بنابراین در این ردیف ۱۸ آجر وجود دارد و گزینه ۳ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "۱۱ مرحله کاهش ۲ واحدی انجام می‌شود، یعنی ۲۲ واحد از ۴۰ کم می‌شود. $40 - 22 = 18$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_040",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "توپ پلاستیکی از ارتفاع ۸۱ متری رها می‌شود و پس از هر بار برخورد با زمین، $\\dfrac{1}{3}$ ارتفاع قبلی بالا می‌آید. پس از برخورد چهارم با زمین، توپ چند متر بالا می‌رود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{3}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$9$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$1$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ارتفاع‌ها تشکیل دنباله هندسی می‌دهند. ارتفاع پس از برخورد اول $a_1 = 81 \\times \\dfrac{1}{3} = 27$ متر است. قدر نسبت $r = \\dfrac{1}{3}$ است. پس از برخورد چهارم، باید جمله چهارم دنباله را محاسبه کنیم: $a_4 = a_1 r^3 = 27 \\times (\\dfrac{1}{3})^3 = 27 \\times \\dfrac{1}{27} = 1$. بنابراین توپ ۱ متر بالا می‌آید و گزینه ۴ پاسخ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "با هر برخورد ارتفاع تقسیم بر ۳ می‌شود. پس از ۴ برخورد، ارتفاع اولیه بر $3^4 = 81$ تقسیم می‌شود. پس $\\dfrac{81}{81} = 1$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_045",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "جمله عمومی یک دنباله به‌صورت $a_n = \\dfrac{2n-1}{n+2}$ داده شده است. آیا این دنباله عدد ۳ را به عنوان یکی از جملات خود تولید می‌کند؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "خیر"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بله، جمله سوم است"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بله، جمله هفتم است"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "بله، جمله پنجم است"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "برای بررسی این موضوع، باید معادله $\\dfrac{2n-1}{n+2} = 3$ را حل کنیم. با طرفین‌وسطین: $2n - 1 = 3(n + 2) \\implies 2n - 1 = 3n + 6 \\implies n = -7$. چون اندیس $n$ در دنباله‌ها باید یک عدد طبیعی (مثبت و صحیح) باشد، $n=-7$ غیرقابل قبول است. پس این دنباله هرگز مقدار ۳ را تولید نمی‌کند. گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "فقط مخرج را در ۳ ضرب کنید و با صورت برابر قرار دهید. چون شیب مخرج ($3n$) بزرگتر از صورت ($2n$) است، محل برخورد در بخش منفی محور رخ می‌دهد. پس جواب برای اعداد طبیعی وجود ندارد."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_046",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در دنباله $a_n = (-1)^n \\left(\\dfrac{n}{2}\\right)$، حاصل $a_{10} + a_{11}$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$10.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-0.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-10.5$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا جملات را جداگانه حساب می‌کنیم. برای $n=10$: $a_{10} = (-1)^{10} (\\dfrac{10}{2}) = 1 \\times 5 = 5$. برای $n=11$: $a_{11} = (-1)^{11} (\\dfrac{11}{2}) = -1 \\times 5.5 = -5.5$. حاصل جمع برابر است با $5 + (-5.5) = -0.5$. بنابراین گزینه ۲ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "همیشه در این دنباله‌ها که علامت نوسانی است و مقدار خطی رشد می‌کند، جمع دو جمله متوالی برابر با نصف اختلاف آن‌ها با علامت جمله فرد (که منفی است) می‌شود: $5 - 5.5 = -0.5$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_047",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "جمله عمومی دنباله اعداد مثلثی به‌صورت $T_n = \\dfrac{n(n+1)}{2}$ است. اختلاف جمله دوازدهم و دهم این دنباله چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$25$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$12$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$23$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$21$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا جمله دوازدهم را حساب می‌کنیم: $T_{12} = \\dfrac{12 \\times 13}{2} = 6 \\times 13 = 78$. سپس جمله دهم را می‌یابیم: $T_{10} = \\dfrac{10 \\times 11}{2} = 5 \\times 11 = 55$. اختلاف این دو مقدار برابر است با $78 - 55 = 23$. پس گزینه ۳ صحیح می‌باشد."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "می‌توانید از روی شکل هندسی استفاده کنید: از مثلث دهم تا دوازدهم، باید یک ردیف ۱۱تایی و یک ردیف ۱۲تایی اضافه شود. مجموعاً $11 + 12 = 23$ واحد اضافه می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_048",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "اگر در دنباله مربعی $a_n = n^2$، تفاضل دو جمله متوالی برابر ۳۱ باشد، مجموع اندیس‌های آن دو جمله کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$32$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$29$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$30$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$31$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرض می‌کنیم دو جمله متوالی $a_n = n^2$ و $a_{n+1} = (n+1)^2$ باشند. تفاضل آن‌ها برابر است با $(n+1)^2 - n^2 = n^2 + 2n + 1 - n^2 = 2n + 1$. طبق فرض مسئله: $2n + 1 = 31 \\implies 2n = 30 \\implies n = 15$. پس اندیس‌ها ۱۵ و ۱۶ هستند. مجموع اندیس‌ها $15 + 16 = 31$ می‌شود. دقت کنید که همواره در این الگو مجموع اندیس‌ها برابر با خود تفاضل است! گزینه ۴ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "تفاضل دو مربع متوالی دقیقاً با مجموع پایه‌های آن‌ها برابر است: $(n+1)^2 - n^2 = (n+1) + n$. پس چون تفاضل ۳۱ شده، مجموع اندیس‌ها مستقیماً همان ۳۱ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_049",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دنباله‌ای با رابطه بازگشتی $a_n = a_{n-1} + 2n$ و جمله اول $a_1 = 3$ تعریف شده است. مقدار $a_4$ چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$21$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$15$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$31$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$27$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "جملات را گام به گام محاسبه می‌کنیم. برای $n=2$: $a_2 = a_1 + 2(2) = 3 + 4 = 7$. برای $n=3$: $a_3 = a_2 + 2(3) = 7 + 6 = 13$. در نهایت برای $n=4$: $a_4 = a_3 + 2(4) = 13 + 8 = 21$. بنابراین پاسخ صحیح گزینه ۱ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "هر بار به مقدار قبلی یک عدد زوج افزوده می‌شود: ۴، سپس ۶، سپس ۸. مجموع این مقادیر $4+6+8 = 18$ است. $18$ را به ۳ (مقدار اولیه) اضافه کنید تا سریعاً به ۲۱ برسید."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_050",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دنباله بازگشتی $x_{n+1} = \\dfrac{1}{1 - x_n}$ با $x_1 = 2$ داده شده است. مقدار $x_{100}$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$0$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$-1$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا چند جمله اول را محاسبه می‌کنیم تا ببینیم آیا الگوی تکرارشونده‌ای وجود دارد یا خیر. $x_1 = 2$. جمله دوم: $x_2 = \\dfrac{1}{1 - 2} = \\dfrac{1}{-1} = -1$. جمله سوم: $x_3 = \\dfrac{1}{1 - (-1)} = \\dfrac{1}{2}$. جمله چهارم: $x_4 = \\dfrac{1}{1 - \\dfrac{1}{2}} = \\dfrac{1}{\\dfrac{1}{2}} = 2$. مشاهده می‌شود که دنباله دوره‌ای (پریودیک) با دوره تناوب ۳ است (یعنی اعداد $2, -1, \\dfrac{1}{2}$ تکرار می‌شوند). برای یافتن جمله صدم، ۱۰۰ را بر ۳ تقسیم می‌کنیم. باقی‌مانده برابر ۱ است. پس $x_{100} = x_1 = 2$. گزینه ۲ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "دنباله‌های کسری به این شکل معمولاً دوره تناوب دارند. وقتی ۳ جمله حساب کردید و به مقدار اول برگشتید، فقط کافی است اندیس هدف را بر طول دوره (۳) تقسیم کنید و باقی‌مانده را ببینید."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_051",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در یک دنباله بازگشتی داریم $t_n = 2t_{n-1} - 3$ و $t_3 = 5$. مقدار $t_1$ کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$3$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$3.5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2.5$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "چون دنباله از آخر به اول داده شده، می‌توانیم رابطه بازگشتی را به صورت معکوس بنویسیم: $t_{n-1} = \\dfrac{t_n + 3}{2}$. حالا با استفاده از این رابطه به عقب برمی‌گردیم. برای یافتن جمله دوم: $t_2 = \\dfrac{t_3 + 3}{2} = \\dfrac{5 + 3}{2} = 4$. سپس برای یافتن جمله اول: $t_1 = \\dfrac{t_2 + 3}{2} = \\dfrac{4 + 3}{2} = 3.5$. بنابراین گزینه ۳ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "نیازی به تشکیل معادله از اول نیست. برعکس عمل کنید: مقدار فعلی را با ۳ جمع کنید و سپس نصف کنید. ۵ به‌علاوه ۳ می‌شود ۸، نصفش ۴. ۴ به‌علاوه ۳ می‌شود ۷، نصفش ۳.۵."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_052",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "دنباله فیبوناچی با رابطه $F_n = F_{n-1} + F_{n-2}$ و شرایط $F_1 = 1$ و $F_2 = 1$ تعریف می‌شود. مجموع ۵ جمله اول که اندیس زوج دارند (یعنی $F_2 + F_4 + F_6 + F_8 + F_{10}$) چقدر است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$89$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$143$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$54$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$88$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "ابتدا جملات فیبوناچی تا جمله ۱۰ را می‌نویسیم: ۱، ۱، ۲، ۳، ۵، ۸، ۱۳، ۲۱، ۳۴، ۵۵. جملات با اندیس زوج عبارتند از: $F_2 = 1$، $F_4 = 3$، $F_6 = 8$، $F_8 = 21$، $F_{10} = 55$. مجموع آن‌ها: $1 + 3 + 8 + 21 + 55 = 88$. از نظر تئوری، مجموع جملات با اندیس زوج تا $2k$ همواره برابر با $F_{2k+1} - 1$ است. در اینجا $F_{11} = 89$ است، پس $89 - 1 = 88$. بنابراین پاسخ گزینه ۴ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "یک قضیه جالب در فیبوناچی وجود دارد: جمع جملات زوج برابر است با جمله فردِ بعدی منهای یک. پس کافی است فقط جمله یازدهم ($55+34=89$) را پیدا کنید و یکی از آن کم کنید."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_053",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "above_average",
+    "stem": [
+      {
+        "type": "text",
+        "text": "در دنباله $a_n = \\dfrac{(-1)^n}{n}$، مجموع ۴ جمله اول دنباله کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{-7}{12}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{-11}{12}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{7}{12}$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{11}{12}$"
+        }
+      ]
+    ],
+    "correct_option_index": 1,
+    "solution": [
+      {
+        "type": "text",
+        "text": "۴ جمله اول را به‌صورت مجزا حساب می‌کنیم: $a_1 = \\dfrac{-1}{1} = -1$، $a_2 = \\dfrac{1}{2}$، $a_3 = \\dfrac{-1}{3}$، $a_4 = \\dfrac{1}{4}$. مجموع این چهار جمله: $-1 + \\dfrac{1}{2} - \\dfrac{1}{3} + \\dfrac{1}{4}$. مخرج مشترک این اعداد ۱۲ است. پس $\\dfrac{-12 + 6 - 4 + 3}{12} = \\dfrac{-7}{12}$. پس گزینه ۱ درست است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "مقادیر را به ترتیب با مخرج ۱۲ ذهنی جمع کنید: $-12$ و $+6$ می‌شود $-6$. سپس با $-4$ می‌شود $-10$. با $+3$ می‌شود $-7$. جواب نهایی $\\dfrac{-7}{12}$."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_054",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "جملات یک دنباله به این صورت است: ۲، ۲۲، ۲۲۲، ۲۲۲۲، ، . جمله عمومی این دنباله ($a_n$) کدام است؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$2(10^n - 1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{9}(10^n - 1)$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$2 \\times 10^{n-1} + 2$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$\\dfrac{2}{9} \\times 10^n$"
+        }
+      ]
+    ],
+    "correct_option_index": 2,
+    "solution": [
+      {
+        "type": "text",
+        "text": "اگر از عدد ۲ فاکتور بگیریم، دنباله به صورت ۱، ۱۱، ۱۱۱، ، در می‌آید. عدد ۱ را می‌توان نوشت $\\dfrac{10 - 1}{9}$. عدد ۱۱ برابر است با $\\dfrac{100 - 1}{9}$ و عدد ۱۱۱ برابر $\\dfrac{1000 - 1}{9}$. به طور کلی، جمله عمومی شامل ۱ها برابر $\\dfrac{10^n - 1}{9}$ است. چون در ابتدا از ۲ فاکتور گرفتیم، جمله عمومی نهایی برابر $\\dfrac{2}{9}(10^n - 1)$ خواهد بود. گزینه ۲ پاسخ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "برای این نوع سوالات فقط کافی است $n=1$ را در گزینه‌ها قرار دهید. در گزینه جواب، $\\dfrac{2}{9}(10-1) = 2$ که درست است. با $n=2$ هم $\\dfrac{2}{9}(99) = 22$ می‌شود."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_055",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "olympiad",
+    "stem": [
+      {
+        "type": "text",
+        "text": "تعداد دایره‌ها در الگوهای شبکه‌ای مثلثی به صورت دنباله $1, 3, 6, 10,،$ است. در این الگو چندمین جمله برابر با ۲۱۰ خواهد بود؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$18$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$19$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$20$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$21$"
+        }
+      ]
+    ],
+    "correct_option_index": 3,
+    "solution": [
+      {
+        "type": "text",
+        "text": "دنباله داده شده دنباله اعداد مثلثی است که فرمول عمومی آن $a_n = \\dfrac{n(n+1)}{2}$ است. ما به دنبال مقدار $n$ هستیم که در آن $\\dfrac{n(n+1)}{2} = 210$ شود. با ضرب در ۲: $n(n+1) = 420$. باید دو عدد طبیعی متوالی پیدا کنیم که ضربشان ۴۲۰ شود. می‌دانیم که $20 \\times 20 = 400$. پس اگر $20$ و $21$ را بررسی کنیم: $20 \\times 21 = 420$. بنابراین $n=20$ است. پس پاسخ درست گزینه ۳ است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "مستقیماً در عدد هدف ضربدر ۲ کنید ($420$) و جذر تقریبی بگیرید. $\\sqrt{420}$ حدود ۲۰.۴ است. پس اعداد متوالی ۲۰ و ۲۱ هستند. عدد کوچکتر همان اندیس $n$ است."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  },
+  {
+    "id": "jules_v2_sets_patterns_sequences_056",
+    "subject": "math",
+    "topic_key": "patterns_sequences",
+    "difficulty": "very_hard",
+    "stem": [
+      {
+        "type": "text",
+        "text": "مجموع تمام جملات یک دنباله هندسی متناهی برابر با ۳۱.۵ و جمله اول آن ۱۶ است. اگر قدر نسبت آن $\\dfrac{1}{2}$ باشد، این دنباله چند جمله دارد؟"
+      }
+    ],
+    "options": [
+      [
+        {
+          "type": "text",
+          "text": "$4$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$7$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$5$"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "$6$"
+        }
+      ]
+    ],
+    "correct_option_index": 4,
+    "solution": [
+      {
+        "type": "text",
+        "text": "فرمول مجموع $n$ جمله اول در دنباله هندسی برابر است با $S_n = a_1 \\dfrac{1 - r^n}{1 - r}$. مقادیر را جایگذاری می‌کنیم: $31.5 = 16 \\dfrac{1 - (\\dfrac{1}{2})^n}{1 - \\dfrac{1}{2}}$. مخرج برابر $\\dfrac{1}{2}$ است، پس: $31.5 = 16 \\times 2 \\times (1 - (\\dfrac{1}{2})^n) \\implies 31.5 = 32 (1 - 0.5^n)$. دو طرف را بر ۳۲ تقسیم می‌کنیم: $\\dfrac{31.5}{32} = 1 - 0.5^n \\implies 0.5^n = 1 - \\dfrac{63}{64} = \\dfrac{1}{64}$. می‌دانیم که $\\dfrac{1}{64} = (\\dfrac{1}{2})^6$. پس $n = 6$. گزینه ۴ صحیح است."
+      }
+    ],
+    "smart_shortcut": [
+      {
+        "type": "text",
+        "text": "جملات را به سادگی جمع کنید: ۱۶، نصفش ۸ (جمع ۲۴)، نصفش ۴ (جمع ۲۸)، نصفش ۲ (جمع ۳۰)، نصفش ۱ (جمع ۳۱)، نصفش ۰.۵ (جمع ۳۱.۵). به همین سادگی با ۶ مرحله به جواب می‌رسید."
+      }
+    ],
+    "source_bank": "gauss",
+    "provenance": {
+      "kind": "generated",
+      "edition": "gauss_pre_nardebam_v2",
+      "question_number": null,
+      "question_pdf": null,
+      "question_page": null,
+      "solution_page": null,
+      "solution_origin": "existing"
+    }
+  }
+]

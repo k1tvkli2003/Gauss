@@ -1,0 +1,1470 @@
+{
+  "task_id": "math-solutions-03",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 422,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "واضح است عبارت سمت چپ معادله صحیح است. دو طرف معادله را برابر با $k$ که عددی صحیح است قرار می‌دهیم.\n$[\\frac{4}{3}x] = \\frac{5}{4}x = k \\Rightarrow x = \\frac{4k}{5}$\nمی‌دانیم: $[x] \\leq x < [x] + 1 \\Rightarrow \\frac{5}{4}x \\leq \\frac{4}{3}x < \\frac{5}{4}x + 1$\n$0 \\leq x < 12 \\Rightarrow 0 \\leq \\frac{4k}{5} < 12 \\Rightarrow 0 \\leq k < 15 \\Rightarrow k \\in \\{0, 1, 2, \\dots, 14\\}$\n۱۵ مقدار برای $k$ به دست آمده است و به ازای هر $k$ یک $x$ وجود دارد؛ بنابراین معادله ۱۵ جواب دارد.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 423,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "تابع $y = [\\frac{x}{3}]$ را به صورت تابع چندضابطه‌ای می‌نویسیم.\n(دقت داشته باشید که طول بازه‌ها در تابع $y = [ax]$ برابر $\\frac{1}{|a|}$ است.)\n$y = \\begin{cases} -2 & -3 \\leq x < 0 \\\\ 0 & 0 \\leq x < 3 \\\\ 2 & 3 \\leq x < 6 \\\\ 4 & 6 \\leq x < 9 \\end{cases}$\nبا توجه به بازه‌بندی فوق واضح است که مختصات $A$ و $B$ به صورت $A(-3, -2)$ و $B(9, 4)$ می‌باشد.\n$\\Rightarrow m_{AB} = \\frac{4 - (-2)}{9 - (-3)} = \\frac{6}{12} = \\frac{1}{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 424,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "تابع $y = [3 - \\frac{x}{2}]$ را به صورت تابع چندضابطه‌ای می‌نویسیم:\n$y = 3 + [-\\frac{x}{2}]$\n$y = \\begin{cases} 4 & x = -2 \\\\ 3 & -2 < x \\leq 0 \\\\ 2 & 0 < x \\leq 2 \\\\ 1 & 2 < x \\leq 4 \\end{cases}$\nواضح است که مختصات $A$ و $B$ به صورت $A(-2, 4)$ و $B(4, 1)$ می‌باشد.\n$m_{AB} = \\frac{4 - 1}{-2 - 4} = -\\frac{1}{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 425,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "در تابع $y = [ax]$ طول بازه‌ها و در واقع طول پاره‌خط‌های به وجود آمده برابر $\\frac{1}{|a|}$ است.\nبنابراین طول پاره‌خط‌ها در تابع $y = x - [\\frac{x}{3}]$ برابر ۳ بوده و در نتیجه در بازهٔ $(0, 12)$، ۴ پاره‌خط رسم می‌شود.\n$y = \\begin{cases} x & 0 < x < 3 \\\\ x - 3 & 3 \\leq x < 6 \\\\ x - 6 & 6 \\leq x < 9 \\\\ x - 9 & 9 \\leq x < 12 \\end{cases} \\Rightarrow n = 4, l = 3 \\Rightarrow n - l = 1$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            463,
+            672,
+            608,
+            747
+          ],
+          "placement": "solution",
+          "filename": "page_0041.jpg",
+          "alt": "نمودار تابع پله‌ای"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 426,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "در نمودار نقطهٔ $(0, 0)$ وجود دارد، بنابراین گزینه ۲ نادرست است. به ازای $-1 < x < 0$ مقدار تابع در نمودار منفی است. در نتیجه گزینه‌های ۳ و ۴ نادرست هستند. در گزینه ۳ مقدار تابع در این فاصله مثبت و در گزینه ۴ مقدار تابع برابر صفر است.\n$y = x|[x]| = \\begin{cases} x & -1 \\leq x < 0 \\\\ 0 & 0 \\leq x < 1 \\\\ 1 & x = 1 \\end{cases}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            272,
+            75,
+            420,
+            182
+          ],
+          "placement": "solution",
+          "filename": "page_0041.jpg",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 427,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "نمودار تابع در بازهٔ $(-1, 0)$ شیب منفی دارد، بنابراین گزینه‌های ۱ و ۳ نادرست هستند. در این بازه تابع ۱ برابر $y = x - 1$ و تابع ۳ برابر $y = x + 1$ است که هر دو شیب مثبت دارند.\nتابع $y = -|x| - [x]$ در بازهٔ $(-1, 0)$ به صورت $y = -x + 1$ می‌باشد. عرض از مبدأ این خط برابر ۱ است و در نمودار، عرض از مبدأ ۱- است؛ در نتیجه گزینه ۴ نادرست است.\n$y = |x| + [x] = \\begin{cases} -x - 1 & -1 < x < 0 \\\\ x & 0 \\leq x < 1 \\end{cases} \\Rightarrow$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            267,
+            287,
+            411,
+            381
+          ],
+          "placement": "solution",
+          "filename": "page_0041.jpg",
+          "alt": "نمودار تابع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 428,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "$(-1)^{[x]} f(x) = |f(x)|$\nمعادلهٔ داده‌شده را در بازه‌های زیر بررسی می‌کنیم.\n$-2 \\leq x < -1 \\Rightarrow [x] = -2 \\Rightarrow f(x) = |f(x)| \\Rightarrow f(x) \\geq 0$\n$-1 \\leq x < 0 \\Rightarrow [x] = -1 \\Rightarrow -f(x) = |f(x)| \\Rightarrow f(x) \\leq 0$\n$0 \\leq x < 1 \\Rightarrow [x] = 0 \\Rightarrow f(x) = |f(x)| \\Rightarrow f(x) \\geq 0$\n$1 \\leq x < 2 \\Rightarrow [x] = 1 \\Rightarrow -f(x) = |f(x)| \\Rightarrow f(x) \\leq 0$\nنمودار ۱ در بازه‌های فوق به عنوان $f(x)$ صدق می‌کند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 429,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "ابتدا نمودار $y = \\cos x$ را در بازهٔ $[0, 2\\pi]$ رسم نموده سپس $y = [\\cos x]$ را مشخص می‌کنیم.\n$\\Rightarrow S = (\\frac{3\\pi}{2} - \\frac{\\pi}{2}) \\times 1 = \\pi$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            47,
+            542,
+            408,
+            646
+          ],
+          "placement": "solution",
+          "filename": "page_0041.jpg",
+          "alt": "نمودار تابع کسینوس و جزء صحیح آن"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 430,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "برای این‌که رابطه، تابع باشد باید از هر عضو $A$ دقیقاً یک پیکان خارج شود. از هر یک از اعداد ۲ و ۳ دو پیکان خارج شده است. بنابراین دو پیکان باید حذف شود.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 431,
+      "solution_page": "page_0041.jpg",
+      "solution_text": "برای این‌که رابطه تابع باشد، نباید در زوج مرتب‌های متمایز مؤلفهٔ اول تکراری داشته باشیم. به عبارتی اگر دو زوج مرتب دارای $x$های برابر باشند، $y$های آن‌ها نیز باید برابر باشند.\n$\\begin{cases} (2, m^2) \\in f \\\\ (2, 3 - 2m) \\in f \\end{cases} \\Rightarrow m^2 = 3 - 2m \\Rightarrow m^2 + 2m - 3 = 0 \\Rightarrow \\begin{cases} m = 1 \\text{ غ.ق.ق} \\\\ m = -3 \\checkmark \\end{cases}$\nاگر $m = 1$ باشد، دو زوج مرتب $(1, 0)$ و $(1, 3)$ عضو $f$ خواهد بود که غیر قابل قبول است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 432,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "مؤلفه‌های دوم زوج مرتب‌هایی که دارای مؤلفه اول یکسان هستند باید برابر باشند.\n$ \\begin{cases} (3, a^2+5a) \\in f \\\\ (3, -6) \\in f \\end{cases} \\Rightarrow a^2+5a = -6 \\Rightarrow a^2+5a+6=0 \\Rightarrow \\begin{cases} a = -2 \\\\ a = -3 \\text{ غ.ق.ق} \\end{cases} $\nاگر $a=-3$ باشد، دو زوج مرتب $(3, -6)$ و $(3, 6)$ عضو $f$ خواهد بود که غیر قابل قبول است.\n$a = -2 \\Rightarrow a - \\frac{1}{a} = -2 + \\frac{1}{2} = -\\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 433,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "تمامی توابع ممکن به صورت $f = \\{(1, \\dots), (2, \\dots), (3, \\dots), (4, \\dots)\\}$ می‌باشد که هر یک از جاهای خالی با یکی از اعداد ۲ یا ۵ پر می‌شود. بنابراین تعداد کل حالات برابر است با:\n$2 \\times 2 \\times 2 \\times 2 = 2^4 = 16$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 434,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "در گزینه ۱ با ساده کردن رابطه به $y = \\frac{x+2}{x^2}$ می‌رسیم که واضح است به ازای هر $x$ فقط یک $y$ به دست می‌آید، بنابراین تابع است. تابع بودن سایر گزینه‌ها را با مثال نقض رد می‌کنیم.\nگزینه ۲: $2xy+y^2=4 \\xrightarrow{x=0} y^2=4 \\Rightarrow y = \\pm 2 \\Rightarrow (0,2), (0,-2)$\nگزینه ۳: $xy-y^2=2 \\xrightarrow{x=3} y^2-3y+2=0 \\Rightarrow \\begin{cases} y=1 \\\\ y=2 \\end{cases} \\Rightarrow (3,1), (3,2)$\nگزینه ۴: $xy^2+y=4 \\xrightarrow{x=3} 3y^2+y-4=0 \\Rightarrow \\begin{cases} y=1 \\\\ y=-\\frac{4}{3} \\end{cases} \\Rightarrow (3,1), (3,-\\frac{4}{3})$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 435,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "طول مستطیل را $y$ و عرض آن را $x$ می‌نامیم (!).\n$y = 3x - 2$\nخواهیم داشت:\n$S = xy = x(3x - 2) = 3x^2 - 2x$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 436,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "طول مستطیل را $x$ و عرض آن را $y$ می‌نامیم:\n$2P = 2(x+y) \\Rightarrow P = x+y$\n$x^2 + y^2 = 4^2 = 16$\nخواهیم داشت:\n$(x+y)^2 - 2xy = 16 \\Rightarrow P^2 - 2S = 16 \\Rightarrow S = \\frac{P^2 - 16}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            725,
+            532,
+            796,
+            608
+          ],
+          "placement": "solution_text",
+          "alt": "مستطیلی با طول x و عرض y و قطر ۴",
+          "filename": "page_0042.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 437,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "دو ارتفاع ذوزنقه را رسم می‌کنیم.\n$\\Delta ADH : \\begin{cases} AH = 3 \\sin \\theta \\\\ DH = 3 \\cos \\theta \\end{cases}$\nبنابراین:\n$S_{BH'C} = S_{ADH} = \\frac{AH \\times DH}{2} = \\frac{9}{2} \\sin \\theta \\cos \\theta$\n$S_{ABH'H} = AB \\times AH = 3 (3 \\sin \\theta) = 9 \\sin \\theta$\nدر نتیجه:\n$S_{ABCD} = 2 (\\frac{9}{2} \\sin \\theta \\cos \\theta) + 9 \\sin \\theta = 9 \\sin \\theta (\\cos \\theta + 1)$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            712,
+            638,
+            771,
+            747
+          ],
+          "placement": "solution_text",
+          "alt": "ذوزنقه متساوی‌الساقین ABCD با ارتفاع‌های AH و BH'",
+          "filename": "page_0042.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 438,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "با توجه به شکل، رابطه زیر برقرار است:\n$R^2 = (\\frac{h}{2})^2 + r^2 \\Rightarrow r^2 + \\frac{h^2}{4} = 4^2 = 16 \\Rightarrow r^2 = 16 - \\frac{h^2}{4}$\nحجم استوانه را به دست می‌آوریم:\n$V = \\pi r^2 h = \\pi h (16 - \\frac{h^2}{4}) = \\frac{\\pi}{4}(64h - h^3)$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            719,
+            786,
+            888,
+            893
+          ],
+          "placement": "solution_text",
+          "alt": "استوانه‌ای به شعاع r و ارتفاع h محاط در کره‌ای به شعاع R=4",
+          "filename": "page_0042.jpg"
+        }
+      ],
+      "review_notes": [
+        "بخشی از حل این سوال در ستون سمت چپ صفحه قرار دارد که ادغام شد."
+      ]
+    },
+    {
+      "question_number": 439,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "$x$ طول مستطیل، $y$ عرض، $2P$ محیط و $S$ مساحت آن است.\n$2P = 2(x+y) \\Rightarrow P = x+y$\nمی‌دانیم: $x^2 + y^2 = (3\\sqrt{2})^2 = 18 \\Rightarrow (x+y)^2 - 2xy = 18 \\Rightarrow P^2 - 2S = 18 \\Rightarrow P^2 = 2S + 18 \\Rightarrow P = \\sqrt{2S+18} \\Rightarrow 2P = 2\\sqrt{2S+18}$\nبا توجه به $18 = x^2 + y^2$ درمی‌یابیم که $x$ و $y$ مقادیر محدود و در نتیجه $S$ نیز محدود می‌باشد. بنابراین $0 < S \\le k$ است. نمودار ۳ درست است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            100,
+            119,
+            187,
+            219
+          ],
+          "placement": "solution_text",
+          "alt": "مستطیلی با طول x و عرض y و قطر ۳ رادیکال ۲",
+          "filename": "page_0042.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 440,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "با توجه به $f = \\{(0,1), (2,5), (-1,4), (3,1), \\dots k\\}$ یکی از مقادیر دامنه تابع $f$ یعنی $\\{1,-1,2,0\\}$ می‌باشد که در تساوی $f(k) = f(5-2f(k))$ صدق می‌کند.\n$k = 0 \\Rightarrow f(0) = f(5-2f(0)) \\Rightarrow 1 = f(5-2) \\Rightarrow f(3) = 1 \\checkmark$\n$k = 2 \\Rightarrow f(2) = f(5-2f(2)) \\Rightarrow 5 = f(5-10) \\Rightarrow f(-5) = 5 \\times$\n$k = -1 \\Rightarrow f(-1) = f(5-2f(-1)) \\Rightarrow 4 = f(5-8) \\Rightarrow f(-3) = 4 \\times$\n$k = 3 \\Rightarrow f(3) = f(5-2f(3)) \\Rightarrow 1 = f(5-2) \\Rightarrow f(3) = 1 \\checkmark$\nبنابراین تساوی فوق به ازای $k=0$ و $k=3$ برقرار است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 441,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "ابتدا $f(4)$ را محاسبه می‌کنیم. برای این منظور $x$ را برابر ۲ قرار می‌دهیم.\n$f(3x-2) + f(4) = x^3 - 3x \\xrightarrow{x=2} f(4) + f(4) = 2 \\Rightarrow f(4) = 1$\nبنابراین:\n$f(3x-2) + 1 = x^3 - 3x \\Rightarrow f(3x-2) = x^3 - 3x - 1 \\xrightarrow{x=-1} f(-5) = 1$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 442,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "می‌دانیم $f(x+2) = f(x) + 2$ و $f(-1) = 1$ است:\n$x = -1 \\Rightarrow f(1) = f(-1) + 2 = 1+2 = 3$\n$x = 1 \\Rightarrow f(3) = f(1) + 2 = 3+2 = 5$\n$x = 3 \\Rightarrow f(5) = f(3) + 2 = 5+2 = 7 \\checkmark$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 443,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "ضابطه $f(x)$ را محاسبه می‌کنیم:\n$ \\begin{cases} xf(-x) - f(x) = x^2 + x \\\\ \\xrightarrow{x \\to -x} -xf(x) - f(-x) = x^2 - x \\end{cases} \\times x $\n$ \\xrightarrow{+} (-x^2 - 1) f(x) = x^3 - x^2 + x^2 + x \\Rightarrow -(x^2 + 1) f(x) = x(x^2 + 1) \\Rightarrow f(x) = -x $\nبدیهی است $f(x)$ از نواحی دوم و چهارم عبور می‌کند.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 444,
+      "solution_page": "page_0042.jpg",
+      "solution_text": "ابتدا $f(5)$ را محاسبه می‌کنیم.\n$3f(x) + xf(5) = 16 \\xrightarrow{x=5} 3f(5) + 5f(5) = 16 \\Rightarrow 8f(5) = 16 \\Rightarrow f(5) = 2$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 445,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "خواهیم داشت:\n$3f(x)+2x=16 \\Rightarrow f(x)=\\frac{16-2x}{3} \\xrightarrow{x=2} f(2)=\\frac{12}{3}=4$\n$f(x+1)$ و $f(1-x)$ را به دست می‌آوریم.\n$f(x) = (x+2)^2(x-4)^2 \\searrow f(x+1) = (x+3)^2(x-3)^2$\n$\\searrow f(1-x) = (3-x)^2(-x-3)^2 = (x-3)^2(x+3)^2$\n$\\Rightarrow f(x+1) - f(1-x) = 0$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 446,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 2,
+      "solution_text": "ضابطه داده‌ شده را ساده می‌کنیم.\n$f(x+\\frac{1}{x}) = x^3 + \\frac{1}{x^3} = (x+\\frac{1}{x})^3 - 3(x+\\frac{1}{x})$\n$\\xrightarrow{x+\\frac{1}{x}=k} f(k) = k^3 - 3k \\Rightarrow f(4) = 64 - 12 = 52$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 447,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "کسر داده شده را ساده می‌کنیم.\n$f(x) = x|x-2| \\Rightarrow \\frac{f(2+h)-f(2-h)}{h}$\n$= \\frac{(2+h)|h| - (2-h)|-h|}{h} = \\frac{2h|h|}{h} = 2|h|$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 448,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "می‌دانیم $1=\\beta+\\alpha$ است، بنابراین $\\beta=1-\\alpha$ می‌باشد. خواهیم داشت:\n$f(x) = \\frac{4^x}{2+4^x}$\n$\\Rightarrow f(\\alpha) + f(\\beta) = f(\\alpha) + f(1-\\alpha) = \\frac{4^\\alpha}{2+4^\\alpha} + \\frac{4^{1-\\alpha}}{2+4^{1-\\alpha}}$\n$= \\frac{4^\\alpha}{2+4^\\alpha} + \\frac{\\frac{4}{4^\\alpha}}{2+\\frac{4}{4^\\alpha}} = \\frac{4^\\alpha}{2+4^\\alpha} + \\frac{4}{2(4^\\alpha+2)} = \\frac{4^\\alpha}{2+4^\\alpha} + \\frac{2}{2+4^\\alpha}$\n$= \\frac{4^\\alpha+2}{2+4^\\alpha} = 1$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 449,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "دو شرط دامنه تعریف را بررسی کرده، اشتراک می‌گیریم:\n$f(x) = \\frac{\\sqrt{8-x}}{x^2-10x+16}$\n$\\begin{cases} 8-x \\ge 0 \\Rightarrow x \\le 8 \\quad (1) \\\\ x^2-10x+16 \\neq 0 \\Rightarrow (x-2)(x-8) \\neq 0 \\\\ \\Rightarrow x \\neq 2, x \\neq 8 \\quad (2) \\end{cases}$\n$(1) \\cap (2) \\Rightarrow x < 8, x \\neq 2$\nاعداد طبیعی $\\{1, 3, 4, 5, 6, 7\\}$ در دامنه وجود دارد.",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 450,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 3,
+      "solution_text": "دامنه تابع را به دست می‌آوریم:\n$y = \\frac{\\sqrt{-x^2+3x+4}}{x-2}$\n$\\Rightarrow \\begin{cases} -x^2+3x+4 \\ge 0 \\Rightarrow x^2-3x-4 \\le 0 \\Rightarrow -1 \\le x \\le 4 \\quad (1) \\\\ x-2 \\neq 0 \\Rightarrow x \\neq 2 \\quad (2) \\end{cases}$\n$(1) \\cap (2) \\Rightarrow D_f = [-1, 4] - \\{2\\}$\nبدیهی است $D_f \\subseteq [2, 4)$ بوده و ۳ درست است. البته دقت کنید که $x = 2$ فقط در ۳ وجود ندارد.",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 451,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "برای این که دامنه $f(x) = \\sqrt{x^2+ax+2a-4}$ برابر $\\mathbb{R}$ باشد، باید عبارت زیر رادیکال همواره نامنفی باشد. در نتیجه:\n$\\Delta \\le 0 \\Rightarrow a^2 - 4(2a-4) \\le 0 \\Rightarrow a^2-8a+16 \\le 0$\n$\\Rightarrow (a-4)^2 \\le 0 \\Rightarrow a=4$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 452,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 3,
+      "solution_text": "بنابراین:\n$f(x) = \\sqrt{x^2+4x+4} = \\sqrt{(x+2)^2} = |x+2|$\n$\\Rightarrow f(a) = f(4) = 6$\nدامنه تابع $y = x^2 - \\sqrt{-2x^2+ax+b}$ بازه $[-2, 3]$ است. بنابراین $2-$ و $3$ صفرهای عبارت زیر رادیکال می‌باشند. در نتیجه:\n$-2x^2+ax+b = -2(x+2)(x-3) = -2x^2+2x+12$\n$\\Rightarrow \\begin{cases} a=2 \\\\ b=12 \\end{cases} \\Rightarrow a+b=14$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 453,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 1,
+      "solution_text": "دامنه تابع $y = \\sqrt{ax^2+bx+9}$ مجموعه جواب نامعادله $ax^2+bx+9 \\ge 0$ می‌باشد. می‌دانیم مجموعه‌جواب نامعادله درجه دو یا بین دو ریشه و یا خارج دو ریشه است. در این مسئله مجموعه‌جواب تنها بازه سمت چپ یک ریشه می‌باشد. در نتیجه مشخص می‌شود عبارت زیر رادیکال درجه ۱ بوده و $a=0$ است. هم‌چنین عدد $3$، ریشه زیر رادیکال می‌باشد.\n$y = \\sqrt{bx+9} \\xrightarrow{x=3} \\sqrt{3b+9}=0 \\Rightarrow b=-3$\n$\\Rightarrow a-b = 0 - (-3) = 3$\n* دقت داشته باشید که $x=3$ نمی‌تواند ریشه مضاعف عبارت زیر رادیکال باشد زیرا در این صورت هر دو طرف ریشه هم‌علامت هستند.",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 454,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "دامنه تعریف بازه سمت چپ یک ریشه است. در نتیجه عبارت زیر رادیکال درجه‌یک بوده و $a^2-9=0$ است.\n$\\Rightarrow \\begin{cases} a=3 \\Rightarrow f(x) = \\sqrt{3x+6} \\Rightarrow D=[-2, +\\infty) \\text{غ ق ق} \\\\ a=-3 \\Rightarrow f(x) = \\sqrt{-3x+6} \\Rightarrow D=(-\\infty, 2] \\checkmark \\end{cases}$\n$\\Rightarrow b=2$\n$a-b = -3-2 = -5$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 455,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "بنابراین اعداد $2-$ و $3$ صفرهای سهمی $f$ هستند.\n$f(x) = a(x-3)(x+2)$\n$f$ از نقطه $(0,-6)$ عبور می‌کند.\n$f(0)=-6 \\Rightarrow a(-3)(2)=-6 \\Rightarrow a=1$\n$\\Rightarrow f(x) = (x-3)(x+2) = x^2-x-6$\nبنابراین:\n$y = \\sqrt{f(x)+x^2} = \\sqrt{2x^2-x-6} \\Rightarrow 2x^2-x-6 \\ge 0$\n$2x^2-x-6=0 \\Rightarrow x = \\frac{1\\pm \\sqrt{49}}{4} \\Rightarrow \\begin{cases} x \\le -\\frac{3}{2} \\\\ x \\ge 2 \\end{cases}$\n$\\Rightarrow D_f = (-\\infty, -\\frac{3}{2}] \\cup [2, +\\infty) = \\mathbb{R} - (-\\frac{3}{2}, 2)$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 456,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 2,
+      "solution_text": "دامنه تابع را به دست می‌آوریم:\n$f(x) = \\sqrt{\\sqrt{12-x}+x} \\Rightarrow \\sqrt{12-x}+x \\ge 0 \\Rightarrow \\sqrt{12-x} \\ge -x$\n$\\xrightarrow{x \\le 12} 12-x \\ge x^2 \\Rightarrow x^2+x-12 \\le 0$\n$\\Rightarrow (x+4)(x-3) \\le 0 \\Rightarrow -4 \\le x \\le 3 \\Rightarrow D_f = [-4, 3]$\nطول بزرگ‌ترین بازه برابر $3 - (-4) = 7$ است.",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 457,
+      "solution_page": "page_0043.jpg",
+      "stated_correct_option": 4,
+      "solution_text": "دامنه تابع $y = \\sqrt{ax-b}$ به صورت $[3, +\\infty)$ است. بنابراین $x=3$ ریشه عبارت زیر رادیکال بوده و $a>0$ است.\n$3a-b=0 \\Rightarrow b=3a$\n$y = \\sqrt{bx+a} = \\sqrt{3ax+a} = \\sqrt{a(3x+1)}$\nخواهیم داشت با توجه به این که $a>0$ می‌باشد بدیهی است:\n$D = (-\\infty, -\\frac{1}{3}]$",
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 458,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "دامنهٔ تابع $y = \\frac{x-1}{3x^2+ax+b}$ برابر $\\mathbb{R} - \\{1\\}$ است.\nنتیجه می‌شود که تنها ریشهٔ عبارت مخرج کسر $x=1$ است. یعنی مخرج کسر دارای ریشهٔ مضاعف ۱ است.\n$3x^2+ax+b = 3(x-1)^2 = 3x^2-6x+3 \\Rightarrow \\begin{cases} a = -6 \\\\ b = 3 \\end{cases}$\n$\\Rightarrow ab = -18$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 459,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "عبارت زیر رادیکال را بزرگ‌تر یا مساوی صفر قرار می‌دهیم.\n$6 - 3[2-x] \\ge 0 \\Rightarrow [2-x] \\le 2 \\Rightarrow 2+[-x] \\le 2$\n$\\Rightarrow [-x] \\le 0 \\Rightarrow -x < 1 \\Rightarrow x > -1 \\Rightarrow D_f = (-1, +\\infty)$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 460,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "دامنهٔ $y = \\sqrt{(x-2)f(x)}$ مجموعه جواب نامعادلهٔ $(x-2)f(x) \\ge 0$ است.\nجدول تعیین علامت را رسم می‌کنیم.\n\n| $x$ | $-1$ | $2$ | $4$ |\n|---|---|---|---|\n| $x-2$ | $-$ | $-$ | $+$ | $+$ |\n| $f(x)$ | $-$ | $+$ | $-$ | $+$ |\n| $(x-2)f(x)$ | $+$ | $-$ | $-$ | $+$ |\n\n$\\Rightarrow D = (-\\infty, -1] \\cup [4, +\\infty) \\cup \\{2\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 461,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "دامنهٔ تابع $y = \\log \\frac{1-x}{f(x)}$ جواب نامعادلهٔ $\\frac{1-x}{f(x)} > 0$ است.\n\n| $x$ | $-1$ | $1$ | $2$ |\n|---|---|---|---|\n| $1-x$ | $+$ | $+$ | $-$ | $-$ |\n| $f(x)$ | $-$ | $+$ | $-$ | $+$ |\n| $P$ | $-$ | $+$ | $-$ | $-$ |\n\n$\\Rightarrow D = (1, 2)$\nاعداد $\\{0, 1, 3\\}$ در دامنه وجود ندارند.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 462,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "عبارت زیر رادیکال باید نامنفی باشد.\n$1 - \\log_3(x-4) \\ge 0 \\Rightarrow \\log_3(x-4) \\le 1 \\Rightarrow 0 < x-4 \\le 3$\n$\\Rightarrow 4 < x \\le 7 \\Rightarrow D = (4, 7] \\xrightarrow{x \\in \\mathbb{Z}} \\{5, 6, 7\\}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 463,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "نامعادلهٔ $2 + \\sqrt{|x|} - |x| > 0$ را حل می‌کنیم.\n$2 + \\sqrt{|x|} - |x| > 0 \\Rightarrow |x| - \\sqrt{|x|} - 2 < 0$\n$\\Rightarrow (\\underbrace{\\sqrt{|x|} + 1}_{+})(\\sqrt{|x|} - 2) < 0 \\Rightarrow \\sqrt{|x|} - 2 < 0$\n$\\Rightarrow \\sqrt{|x|} < 2 \\Rightarrow |x| < 4 \\Rightarrow -4 < x < 4$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 464,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "می‌دانیم در $\\log_{bx+1} (ax+2)$ باید $\\frac{ax+2}{bx+1} > 0$ باشد.\nمجموعه جواب نامعادله به صورت $(-\\infty, 2)$ است. بنابراین عبارت کسری تنها یک ریشهٔ سادهٔ $x=2$ دارد. در نتیجه یا $a=0$ و یا $b=0$ است.\n$a=0 \\Rightarrow \\frac{2}{bx+1} > 0 \\xrightarrow{x=2} (2b+1=0 \\Rightarrow b=-\\frac{1}{2})$\n$\\Rightarrow \\frac{2}{-\\frac{x}{2}+1} > 0 \\Rightarrow x < 2 \\checkmark$\n$b=0 \\Rightarrow \\frac{ax+2}{1} > 0 \\Rightarrow ax+2 > 0$\n$\\xrightarrow{x=2} (2a+2=0 \\Rightarrow a=-1) \\Rightarrow -x+2 > 0 \\Rightarrow x < 2 \\checkmark$\nدر نتیجه:\n$\\begin{cases} a=0 \\Rightarrow b=-\\frac{1}{2} \\Rightarrow a-b = \\frac{1}{2} \\\\ b=0 \\Rightarrow a=-1 \\Rightarrow a-b = -1 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": [
+        "Simplified denominator in log condition and checkmarks interpreted based on context"
+      ]
+    },
+    {
+      "question_number": 465,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "دامنهٔ تابع جواب نامعادلهٔ $-xf(x) \\ge 0$ است.\nروش اول: تابع $f(x)$ اکیداً نزولی و $x=0$ ریشهٔ آن است.\n\n| $x$ | $0$ |\n|---|---|---|\n| $-x$ | $+$ | $-$ |\n| $f(x)$ | $+$ | $-$ |\n| $-xf(x)$ | $+$ | $+$ |\n\n$\\Rightarrow D = \\mathbb{R}$\nروش دوم: توابع $y=f(x)$ و $y=x$ را رسم می‌کنیم.\nجواب نامعادلهٔ $xf(x) \\le 0$ دامنهٔ تابع است. با توجه به دو نمودار واضح است، در تمامی نقاط $x$ و $f(x)$ غیرهم‌علامت بوده و در $x=0$ برابر صفر می‌باشند. بنابراین:\n$D = \\mathbb{R}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            180,
+            240,
+            280
+          ],
+          "placement": "solution_465_diagram",
+          "filename": "page_0044.jpg",
+          "alt": "نمودار توابع y=f(x) و y=x"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 466,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "نامعادلهٔ $2\\cos^2x - \\sin x - 1 \\ge 0$ را حل می‌کنیم.\n$2(1-\\sin^2x) - \\sin x - 1 \\ge 0 \\Rightarrow 2\\sin^2x + \\sin x - 1 \\le 0$\n$\\Rightarrow (\\sin x + 1)(2\\sin x - 1) \\le 0 \\Rightarrow -1 \\le \\sin x \\le \\frac{1}{2}$\n۳ درست است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 467,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "برد توابع $f$ و $g$ را به دست می‌آوریم.\n$1 \\le x \\le 5 \\Rightarrow -5 \\le -x \\le -1 \\Rightarrow 1 \\le 6-x \\le 5$\n$\\Rightarrow 1 \\le f(x) \\le 5 \\Rightarrow R_f = [1, 5]$\n$1 \\le x \\le 5 \\Rightarrow 2 \\le 2x \\le 10 \\Rightarrow -5 \\le 2x-7 \\le 3$\n$\\Rightarrow -5 \\le g(x) \\le 3 \\Rightarrow R_g = [-5, 3]$\n$R_f \\cap R_g = [1, 3]$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 468,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "از تغییرات $x$ به تغییرات $y$ می‌رسیم.\n$f(x) = |2x - 3| - 1$\n$-3 < x \\le 3 \\Rightarrow -6 < 2x \\le 6 \\Rightarrow -9 < 2x - 3 \\le 3$\n$\\Rightarrow 0 \\le |2x - 3| < 9 \\Rightarrow -1 \\le |2x - 3| - 1 < 8$\n$\\Rightarrow -1 \\le f(x) < 8 \\Rightarrow R_f = [-1, 8)$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 469,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "از تغییرات $x$ به تغییرات $y$ می‌رسیم.\n$f(x) = 1 + 3|x - 2|$\n$1 \\le f(x) \\le 4 \\Rightarrow 1 \\le 1 + 3|x - 2| \\le 4 \\Rightarrow 0 \\le 3|x - 2| \\le 3$\n$\\Rightarrow 0 \\le |x - 2| \\le 1 \\Rightarrow -1 \\le x - 2 \\le 1 \\Rightarrow 1 \\le x \\le 3$\n$\\Rightarrow [a, b] = [1, 3] \\Rightarrow b - a = 3 - 1 = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 470,
+      "solution_page": "page_0044.jpg",
+      "solution_text": "روش اول: تابع $f$ را به صورت چندضابطه‌ای می‌نویسیم.\n$f(x) = \\begin{cases} -5x - 3 & x < -3 \\\\ -x + 9 & -3 \\le x < 1 \\\\ 5x + 3 & 1 \\le x \\end{cases}$\n$\\Rightarrow \\begin{cases} -5x > 15 \\Rightarrow -5x - 3 > 12 \\Rightarrow R_1 = (12, +\\infty) \\\\ -1 < -x \\le 3 \\Rightarrow 8 < -x + 9 \\le 12 \\Rightarrow R_2 = (8, 12] \\\\ 5x \\ge 5 \\Rightarrow 5x + 3 \\ge 8 \\Rightarrow R_3 = [8, +\\infty) \\end{cases}$\nبنابراین:\n$R_f = R_1 \\cup R_2 \\cup R_3 = [8, +\\infty) \\Rightarrow k = 8$\nروش دوم: تابع $f$ را رسم می‌کنیم:\n$A(1, 8) \\quad B(-3, 12)$\n$\\Rightarrow R_f = [8, +\\infty)$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            80,
+            800,
+            240,
+            950
+          ],
+          "placement": "solution_470_diagram",
+          "filename": "page_0044.jpg",
+          "alt": "نمودار تابع f"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 471,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "بیشترین مقدار سهمی $y = -x^2 + 4x + 2a - 3$ در رأس آن یعنی $x = 2$ رخ می‌دهد.\n\n$x = 2 \\Rightarrow y = -(2)^2 + 4(2) + 2a - 3 = 2a + 1$\n\nبا توجه به برد تابع که بازهٔ $(-\\infty, a - 1]$ است، بیشترین مقدار تابع $a - 1$ می‌باشد. بنابراین:\n\n$2a + 1 = a - 1 \\Rightarrow a = -2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 472,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "روش اول: از تغییرات $x$ به تغییرات $y$ می‌رسیم.\n\n$x^2 + 4x + k = (x + 2)^2 + k - 4$\n\n$(x + 2)^2 \\ge 0 \\Rightarrow (x + 2)^2 + k - 4 \\ge k - 4$\n\n$\\Rightarrow \\sqrt{(x + 2)^2 + k - 4} \\ge \\sqrt{k - 4}$\n\n$\\Rightarrow -\\sqrt{(x + 2)^2 + k - 4} \\le -\\sqrt{k - 4}$\n\n$\\Rightarrow 1 - \\sqrt{(x + 2)^2 + k - 4} \\le 1 - \\sqrt{k - 4}$\n\n$\\Rightarrow f(x) \\le 1 - \\sqrt{k - 4} \\Rightarrow R_f = (-\\infty, 1 - \\sqrt{k - 4}] = (-\\infty, 0]$\n\n$\\Rightarrow \\sqrt{k - 4} = 1 \\Rightarrow k = 5$\n\nروش دوم: می‌دانیم کم‌ترین مقدار $x^2 + 4x + k$ در رأس سهمی یعنی $x = -2$ رخ می‌دهد. بنابراین بیشترین مقدار $y = 1 - \\sqrt{x^2 + 4x + k}$ در $x = -2$ است که برابر صفر می‌باشد.\n\n$\\Rightarrow 1 - \\sqrt{(-2)^2 + 4(-2) + k} = 0 \\Rightarrow \\sqrt{k - 4} = 1 \\Rightarrow k = 5$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 473,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "نکته: میانگین حسابی دو عدد مثبت همواره بزرگ‌تر یا مساوی میانگین هندسی آن‌هاست.\n\n$\\frac{a + b}{2} \\ge \\sqrt{ab}$\n\nاثبات:\n\n$(\\sqrt{a} - \\sqrt{b})^2 \\ge 0 \\Rightarrow a + b - 2\\sqrt{ab} \\ge 0$\n\n$\\Rightarrow a + b \\ge 2\\sqrt{ab} \\Rightarrow \\frac{a + b}{2} \\ge \\sqrt{ab}$\n\nبنابراین:\n\n$a + b \\ge 2\\sqrt{ab} \\Rightarrow x^2 + \\frac{4}{x^2} \\ge 2\\sqrt{4} \\Rightarrow x^2 + \\frac{4}{x^2} \\ge 4$\n\n$\\Rightarrow R = [4, +\\infty)$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 474,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "با فرض $x - 4 = k$ خواهیم داشت:\n\n$x = k + 4$\n\n$y = x - \\sqrt{x - 4} = k + 4 - \\sqrt{k} \\Rightarrow y = (\\sqrt{k} - \\frac{1}{2})^2 + \\frac{15}{4}$\n\nبا توجه به این که $(\\sqrt{k} - \\frac{1}{2})^2$ می‌تواند برابر صفر باشد ( $k = \\frac{1}{4}$ )، کم‌ترین مقدار $y$ برابر $\\frac{15}{4}$ بوده و $y \\ge \\frac{15}{4}$ خواهد بود. $R = [\\frac{15}{4}, +\\infty)$\n\nدقت داشته باشید اگر $y = (\\sqrt{k} + \\frac{1}{2})^2 + \\frac{15}{4}$ بود، کم‌ترین مقدار $\\sqrt{k} + \\frac{1}{2}$ برابر $\\frac{1}{2}$ و در نتیجه $y \\ge 4$ می‌شد.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 475,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "تابع $f$ را به صورت دوضابطه‌ای می‌نویسیم.\n\n$f(x) = x(2 - \\frac{k}{|x|}) = \\begin{cases} x(2 - \\frac{k}{x}) & x > 0 \\\\ x(2 + \\frac{k}{x}) & x < 0 \\end{cases} = \\begin{cases} 2x - k & x > 0 \\\\ 2x + k & x < 0 \\end{cases}$\n\n$\\begin{cases} x > 0 \\Rightarrow 2x - k > -k \\Rightarrow R_1 = (-k, +\\infty) \\\\ x < 0 \\Rightarrow 2x + k < k \\Rightarrow R_2 = (-\\infty, k) \\end{cases}$\n\n$R_1 \\cup R_2 = \\mathbb{R} \\Rightarrow -k < k \\Rightarrow 2k > 0 \\Rightarrow k > 0$\n\nدقت داشته باشید اگر $k = 0$ باشد، $f(x) = 2x$ است. با توجه به دامنهٔ $f$ که برابر $\\mathbb{R} - \\{0\\}$ است، برد تابع نیز $\\mathbb{R} - \\{0\\}$ می‌باشد.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 476,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "ابتدا دامنهٔ تابع را محاسبه می‌کنیم.\n\n$f(x) = 2x\\sqrt{\\frac{6}{x} - 1}$\n\n$\\frac{6}{x} - 1 \\ge 0 \\Rightarrow \\frac{6}{x} \\ge 1 \\xrightarrow{x > 0} x \\le 6 \\Rightarrow 0 < x \\le 6$\n\nبا توجه به این که $x$ مثبت است، $x$ را زیر رادیکال ضرب می‌بریم. پس عبارت زیر رادیکال را در $x^2$ ضرب می‌کنیم.\n\n$f(x) = 2\\sqrt{x^2(\\frac{6}{x} - 1)} = 2\\sqrt{6x - x^2} = 2\\sqrt{-(x - 3)^2 + 9}$\n\nحال از دامنهٔ تابع به برد تابع می‌رسیم.\n\n$0 < x \\le 6 \\Rightarrow -3 < x - 3 \\le 3 \\Rightarrow 0 \\le (x - 3)^2 \\le 9$\n\n$\\Rightarrow -9 \\le -(x - 3)^2 \\le 0 \\Rightarrow 0 \\le -(x - 3)^2 + 9 \\le 9$\n\n$\\Rightarrow 0 \\le 2\\sqrt{-(x - 3)^2 + 9} \\le 6 \\Rightarrow R_f = [0, 6]$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 477,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "ابتدا دامنهٔ تابع را به دست می‌آوریم.\n\n$f(x) = (x - |x|)\\sqrt{\\frac{3 - x}{x}}$\n\n$\\frac{3 - x}{x} \\ge 0 \\Rightarrow 0 < x \\le 3$\n\nبا توجه به این که $x$ مثبت است، خواهیم داشت $|x| = x$. بنابراین:\n\n$f(x) = 0 \\times \\sqrt{\\frac{3 - x}{x}} = 0 \\Rightarrow R_f = \\{0\\}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 478,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "ابتدا دامنهٔ تابع $\\frac{f}{g}$ را محاسبه می‌کنیم.\n\n$\\frac{f}{g} = \\frac{3 + |x - 2|}{x - |x|} \\Rightarrow x - |x| \\ne 0 \\Rightarrow |x| \\ne x \\Rightarrow x < 0$\n\nبا توجه به این که $x < 0$ می‌باشد، $|x| = -x$ و $|x - 2| = 2 - x$ است. بنابراین:\n\n$\\frac{f}{g} = \\frac{3 + 2 - x}{x + x} = \\frac{5 - x}{2x} = \\frac{5}{2x} - \\frac{1}{2}$\n\nحال برد تابع را به دست می‌آوریم.\n\n$x < 0 \\Rightarrow \\frac{5}{2x} < 0 \\Rightarrow \\frac{5}{2x} - \\frac{1}{2} < -\\frac{1}{2} \\Rightarrow R_{\\frac{f}{g}} = (-\\infty, -\\frac{1}{2})$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 479,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "از تغییرات $x$ به تغییرات $y$ می‌رسیم.\n\n$f(x) = \\log_2 (x^2 - 6x + 17) = \\log_2 ((x - 3)^2 + 8)$\n\n$(x - 3)^2 \\ge 0 \\Rightarrow (x - 3)^2 + 8 \\ge 8$\n\n$\\Rightarrow \\log_2 ((x - 3)^2 + 8) \\ge \\log_2 8 \\Rightarrow f(x) \\ge 3 \\Rightarrow R_f = [3, +\\infty)$\n\nمی‌توانستیم از رأس سهمی برای محاسبهٔ کم‌ترین مقدار $x^2 - 6x + 17$ استفاده کنیم.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 480,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "می‌دانیم $0 \\le x - [x] < 1$ و $[x] + [-x] = \\begin{cases} 0 & x \\in \\mathbb{Z} \\\\ -1 & x \\notin \\mathbb{Z} \\end{cases}$ است.\n\nبنابراین:\n\n$fg(x) = \\begin{cases} 0 & x \\in \\mathbb{Z} \\\\ -(x - [x]) & x \\notin \\mathbb{Z} \\end{cases} = -x + [x]$\n\nخواهیم داشت:\n\n$0 \\le x - [x] < 1 \\Rightarrow -1 < -x + [x] \\le 0 \\Rightarrow -1 < fg(x) \\le 0$\n\n$\\Rightarrow R_{fg} = (-1, 0]$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 481,
+      "solution_page": "page_0045.jpg",
+      "solution_text": "تابع داده شده را ساده می‌کنیم. می‌دانیم اگر $k \\in \\mathbb{Z}$ باشد، $[x + k] = [x] + k$ است.\n\n$f(x) = [x] \\Rightarrow f(x + f(-x)) = f(x + [-x]) = [x + [-x]]$\n\n$= [x] + [-x] = \\begin{cases} 0 & x \\in \\mathbb{Z} \\\\ -1 & x \\notin \\mathbb{Z} \\end{cases} \\Rightarrow R = \\{-1, 0\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 482,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "تابع $g(x)$ را ساده می‌کنیم.\n$f(x) = 2x + [x]$\n$g(x) = f(3x+1) - 3f(x)$\n$= (2(3x+1) + [3x+1]) - 3(2x + [x])$\n$= 6x+2+[3x+1]-6x-3[x]=[3x]-3[x]+3$\nمی‌دانیم: $x = [x] + p \\ (0 \\le p < 1)$ است. بنابراین:\n$g(x) = [3([x]+p)] - 3[x] + 3 = [3[x]+3p] - 3[x] + 3$\n$= 3[x] + [3p] - 3[x] + 3 = 3 + [3p]$\nخواهیم داشت:\n$0 \\le p < 1 \\Rightarrow 0 \\le 3p < 3 \\Rightarrow [3p] = \\text{۰ یا ۱ یا ۲}$\n$\\Rightarrow g(x) = \\text{۳ یا ۴ یا ۵} \\Rightarrow R_g = \\{3, 4, 5\\}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 483,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "ضابطهٔ تابع را ساده می‌کنیم. اگر $k = \\dfrac{x-1}{2}$، آن‌گاه $x = 2k + 1$.\n$f(x) = x - 2[\\dfrac{x-1}{2}] \\Rightarrow f(x) = 2k + 1 - 2[k] = 2(k - [k]) + 1$\nخواهیم داشت:\n$0 \\le k - [k] < 1 \\Rightarrow 1 \\le 2(k - [k]) + 1 < 3 \\Rightarrow R_f = [1, 3)$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 484,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "تابع $y = 4^{-x}$ اکیداً نزولی و بنابراین $y = -4^{-x}$ اکیداً صعودی است. با توجه به اکیداً صعودی‌بودن $y = 2^x$ نتیجه می‌گیریم تابع $f(x) = 2^x - 4^{-x}$ اکیداً صعودی است.\nدامنهٔ تابع $[-1, 2]$ است، بنابراین بُرد آن $[f(-1), f(2)]$ می‌باشد.\n$f(-1) = 2^{-1} - 4^1 = \\dfrac{1}{2} - 4 = -\\dfrac{7}{2}$\n$f(2) = 2^2 - 4^{-2} = 4 - \\dfrac{1}{16} = \\dfrac{63}{16}$\n$\\Rightarrow R_f = [-\\dfrac{7}{2}, \\dfrac{63}{16}] \\Rightarrow \\begin{cases} \\alpha = -\\dfrac{7}{2} \\\\ \\beta = \\dfrac{63}{16} \\end{cases} \\Rightarrow \\dfrac{\\beta}{\\alpha} = \\dfrac{\\dfrac{63}{16}}{-\\dfrac{7}{2}} = -\\dfrac{9}{8}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 485,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "روش اول: تابع $f$ را ساده می‌کنیم.\n$f(x) = \\sin^2 x + \\cos x + 1 = 1 - \\cos^2 x + \\cos x + 1$\n$= -(\\cos x - \\dfrac{1}{2})^2 + \\dfrac{9}{4}$\nخواهیم داشت:\n$-1 \\le \\cos x \\le 1 \\Rightarrow -\\dfrac{3}{2} \\le \\cos x - \\dfrac{1}{2} \\le \\dfrac{1}{2}$\n$\\Rightarrow 0 \\le (\\cos x - \\dfrac{1}{2})^2 \\le \\dfrac{9}{4}$\n$\\Rightarrow -\\dfrac{9}{4} \\le -(\\cos x - \\dfrac{1}{2})^2 \\le 0 \\Rightarrow 0 \\le -(\\cos x - \\dfrac{1}{2})^2 + \\dfrac{9}{4} \\le \\dfrac{9}{4}$\n$\\Rightarrow R_f = [0, \\dfrac{9}{4}]$\n\nروش دوم:\nنکته: برای به‌دست آوردن برد تابع $f(x) = a \\sin^2 x + b \\sin x + c$ به شرط آن‌که حداقل در یک دورهٔ تناوب تعریف شده باشد، کافی است مقدار تابع را به ازای $\\sin x = 1$، $\\sin x = -1$ و $\\sin x = -\\dfrac{b}{2a}$ به دست آوریم. برد تابع فاصلهٔ بستهٔ کم‌ترین مقدار تا بیشترین مقدار این سه عدد خواهد بود.\nاین نکته برای تابع $f(x) = a \\cos^2 x + b \\cos x + c$ نیز درست بوده و به وسیلهٔ مفهوم مشتق و یکنوایی قابل اثبات است.\n$f(x) = -\\cos^2 x + \\cos x + 2 \\Rightarrow \\begin{cases} \\cos x = -1 \\Rightarrow f = 0 \\\\ \\cos x = 1 \\Rightarrow f = 2 \\\\ \\cos x = \\dfrac{1}{2} \\Rightarrow f = \\dfrac{9}{4} \\end{cases} \\Rightarrow R_f = [0, \\dfrac{9}{4}]$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 486,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "واضح است دامنهٔ تابع $y = -x\\sqrt{-x}$ برابر $(-\\infty, 0]$ می‌باشد. بنابراین:\n$y = -x\\sqrt{-x} \\xrightarrow{x \\le 0} y = |x|\\sqrt{-x}$\n$\\Rightarrow y = \\sqrt{x^2(-x)} = \\sqrt{-x^3}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 487,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "دامنهٔ تابع $f(x) = \\dfrac{x}{|x|} \\sqrt{-x}$ برابر $(-\\infty, 0)$ است. بنابراین:\n$|x| = -x$\n$f(x) = \\dfrac{x}{-x}\\sqrt{-x} = -\\sqrt{-x} , x \\neq 0$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 488,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "دامنهٔ دو تابع را به دست می‌آوریم.\n$f(x) = \\sqrt{x^3 - 4x^2} \\Rightarrow x^3 - 4x^2 \\ge 0 \\Rightarrow x^2(x - 4) \\ge 0$\n$\\Rightarrow D_f = [4, +\\infty) \\cup \\{0\\}$\n$g(x) = x\\sqrt{x - 4} \\Rightarrow x - 4 \\ge 0 \\Rightarrow x \\ge 4 \\Rightarrow D_g = [4, +\\infty)$\nضوابط توابع $f$ و $g$ با هم برابرند؛ بنابراین در دامنهٔ مشترک دو تابع برابر خواهند بود.\n$D_f \\cap D_g = [4, +\\infty)$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 489,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "ضابطهٔ $g(x)$ را ساده می‌کنیم:\n$g(x) = -\\sqrt{-x^3 + kx^2} = -\\sqrt{x^2(-x + k)} = -|x|\\sqrt{-x + k}$\nخواهیم داشت:\n$g(x) = f(x) \\Rightarrow -|x|\\sqrt{-x + k} = x\\sqrt{-x + k}$\n$\\Rightarrow -|x| = x \\Rightarrow x \\le 0$\n$-x + k \\ge 0 \\Rightarrow x \\le k$\nبا توجه به دامنهٔ توابع $f$ و $g$ داریم:\nدر نتیجه برای این‌که ضابطهٔ $f$ و $g$ برابر باشند باید $x \\le 0$ باشد.\nدقت داشته باشید اگر $k > 0$ باشد، دامنهٔ $f$ به صورت $(-\\infty, 0]$ و دامنهٔ $g$ به صورت $(-\\infty, k]$ خواهد بود. در نتیجه $f$ با $g$ برابر نمی‌شود بنابراین $k$ فقط می‌تواند صفر باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 490,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "دامنهٔ تابع $g(x) = \\dfrac{c}{x - 2}$ به صورت $\\mathbb{R} - \\{2\\}$ است.\nبنابراین دامنهٔ $f$ نیز باید $\\mathbb{R} - \\{2\\}$ باشد. در نتیجه $x = 2$ تنها ریشهٔ مخرج کسر $f(x) = \\dfrac{ax - 6}{x^2 + bx + 4}$ است. یعنی:\n$x^2 + bx + 4 = (x - 2)^2 \\Rightarrow b = -4$\nبرای این‌که ضابطهٔ $f$ و $g$ برابر باشند، خواهیم داشت:\n$f(x) = g(x) \\Rightarrow \\dfrac{ax - 6}{(x - 2)^2} = \\dfrac{c}{x - 2} \\Rightarrow ax - 6 = c(x - 2)$\n$\\Rightarrow ax - 6 = cx - 2c \\Rightarrow c = 3 \\Rightarrow a = 3$\n$\\Rightarrow a - bc = 3 + 12 = 15$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 491,
+      "solution_page": "page_0046.jpg",
+      "solution_text": "دامنهٔ تابع $f$ را به دست می‌آوریم.\n$f(x) = \\log \\dfrac{x-3}{x} \\Rightarrow \\dfrac{x-3}{x} > 0 \\Rightarrow \\begin{cases} x < 0 \\\\ x > 3 \\end{cases}$\n$\\Rightarrow D_f = (-\\infty, 0) \\cup (3, +\\infty)$\nدر ۱ دامنه و ضابطه تابع با دامنه و ضابطه f برابر است، بنابراین جواب مسئله است. در ۲ دامنه تابع $(-\\infty, 3)$ است.\nدر ۳ و ۴ دامنه تابع $\\mathbb{R}-\\{0,3\\}$ است.",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 492,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "برای ساده‌شدن ضابطه $f(x)$، عبارت مزدوج مخرج کسر را در صورت و مخرج ضرب می‌کنیم.\n$f(x) = \\frac{6x+9}{|x+3|-|x|} \\times \\frac{|x+3|+|x|}{|x+3|+|x|}$\n$= \\frac{(6x+9)(|x+3|+|x|)}{(x+3)^2 - x^2} = \\frac{(6x+9)(|x+3|+|x|)}{6x+9}$\n$= |x+3| + |x|$\nتابع $f(x)$ با $g(x) = |x+k| + |x|$ برابر است. بنابراین $k=3$ می‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 493,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع $f$ تابعی ثابت است، بنابراین yهای دو زوج مرتب برابرند.\n$a^2+3 = 4a-1 \\Rightarrow a^2-4a+4 = 0 \\Rightarrow (a-2)^2 = 0 \\Rightarrow a=2$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 494,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "دامنه تابع $f(x) = \\frac{ax+6}{x+b}$ برابر $\\mathbb{R}-\\{3\\}$ است. بنابراین $x=3$ ریشه مخرج کسر است.\n$3+b = 0 \\Rightarrow b = -3$\nبرای این که تابع $f(x) = \\frac{ax+6}{x-3}$ ثابت باشد، باید صورت کسر به شکل $a(x-3)$ باشد.\n$a(x-3) = ax+6 \\Rightarrow a=-2$\nدر نتیجه: $f(x) = \\frac{-2(x-3)}{x-3} = -2 \\Rightarrow f(-a) = f(2) = -2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 495,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع ثابت $f$ به صورت $f(x)=k$ و تابع همانی $g$ به صورت $g(x)=x$ است.\n$g(x) = 5xf(x) \\Rightarrow x = 5kx \\Rightarrow 5k=1 \\Rightarrow k=\\frac{1}{5}$\nدر نتیجه: $f(1) + g(1) = \\frac{1}{5} + 1 = \\frac{6}{5}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 496,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع ثابت $f$ به صورت $f(x)=k$ و تابع همانی $g$ به شکل $g(x)=x$ است.\n$f^2(2) - 3f(2) = g(4) \\Rightarrow k^2 - 3k = 4$\n$\\Rightarrow k^2 - 3k - 4 = 0 \\Rightarrow \\begin{cases} k = -1 \\\\ k = 4 \\end{cases}$\nبنابراین:\n$f(-1) - g(-1) = k - (-1) = k + 1$\nبا جای‌گذاری مقادیر $k$، مقادیر ۰ و ۵ به دست می‌آید.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": [
+        "Translated the branching arrows at the end of the solution into a descriptive sentence."
+      ]
+    },
+    {
+      "question_number": 497,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع $f(x) = \\frac{3x+1}{ax-2}$ ثابت است؛ بنابراین:\n$\\frac{3}{a} = \\frac{1}{-2} \\Rightarrow a = -6$\nتابع $g(x) = (a+b)x$ همانی است. در نتیجه:\n$a+b = 1 \\Rightarrow -6+b=1 \\Rightarrow b=7$\n$\\Rightarrow b-a = 7 - (-6) = 13$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 498,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "$f(x) = k$ و $g(x) = x$ است.\n$xf(x) + 4g(x) = x \\Rightarrow kx + 4x = x \\Rightarrow k = -3$\nخواهیم داشت:\n$\\frac{f(-x)}{g(-x)} = 2 \\Rightarrow \\frac{-3}{-x} = 2 \\Rightarrow x = \\frac{3}{2} = 1/5$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 499,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع خطی $f$ به صورت $f(x) = ax+b$ است.\n$\\begin{cases} f(2) = -3 \\Rightarrow 2a+b=-3 \\\\ f(-3) = 2 \\Rightarrow -3a+b=2 \\end{cases} \\Rightarrow 5a = -5 \\Rightarrow a=-1$\n$\\Rightarrow b = -1 \\Rightarrow f(x) = -x-1$\nدر نتیجه: ثابت است $y = f(x) + x \\Rightarrow f(x)+x = -1$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 500,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "سهمی $fg$ رو به بالا و ضریب $x^2$ مثبت است و محور yها را با عرض منفی قطع می‌کند یعنی $fg(0)<0$.\nتابع خطی $f$ شیب منفی دارد و در نتیجه تابع خطی $g$ نیز باید شیب منفی داشته باشد تا ضریب $x^2$ در $fg$ مثبت شود.\nاز طرفی: $fg(0) < 0 \\Rightarrow f(0)g(0) < 0 \\xrightarrow{f(0)>0} 2g(0) < 0$\nبنابراین عرض از مبدأ تابع $g$ منفی است. ۲ درست است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 501,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع خطی $f$ از مبدأ مختصات گذشته و به صورت $f(x)=ax$ است. خط عمود بر تابع $f$ از نقاط $(0,-1)$ و $(2,0)$ عبور کرده و شیب آن $\\frac{1}{2}$ است.\nشرط عمودبودن دو خط آن است که ضرب شیب‌های آن‌ها برابر $-1$ شود.\n$a \\times \\frac{1}{2} = -1 \\Rightarrow a = -2 \\Rightarrow f(x) = -2x$\n$\\Rightarrow f^2(x) - f(x) = 4x^2 + 2x = 2x(2x+1)$\nتابع فوق از ناحیهٔ چهارم عبور نمی‌کند.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            30,
+            240,
+            160,
+            310
+          ],
+          "placement": "solution_diagram",
+          "filename": "page_0047.jpg",
+          "alt": "نمودار خطی و سهمی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 502,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع خطی $f$ به صورت $f(x) = ax+b$ است.\n$f(x-k) = f(x) - k \\Rightarrow a(x-k)+b = ax+b-k$\n$\\Rightarrow -ak = -k \\Rightarrow a=1$\nبنابراین:\n$f(x) = x+b \\Rightarrow f(1) - f(2) = (1+b) - (2+b) = -1$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 503,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع خطی $f$ از نقاط $(a,2-b)$ و $(b,2-a)$ می‌گذرد.\nشیب خط $= \\frac{(2-a)-(2-b)}{b-a} = \\frac{b-a}{b-a} = 1$\nمعادله خط: $y - (2-b) = 1(x-a) \\Rightarrow y = x - a - b + 2$\n$\\Rightarrow f(x) = x - a - b + 2$\n$\\Rightarrow f(a+b) = a+b - a - b + 2 = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 504,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع خطی $f$ از نقاط $(a,b)$ و $(b,a)$ عبور می‌کند.\nشیب خط $= \\frac{b-a}{a-b} = -1$\nمعادله خط: $y-b = -(x-a) \\Rightarrow y = -x+a+b$\n$\\Rightarrow f(x) = -x+a+b \\Rightarrow f(a+b) = -(a+b)+a+b=0$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 505,
+      "solution_page": "page_0047.jpg",
+      "solution_text": "تابع خطی $f$ به یکی از دو شکل زیر است:\n(۱): $f(x) = ax+b \\Rightarrow \\begin{cases} f(1) = 1 \\\\ f(4) = 10 \\end{cases} \\Rightarrow \\begin{cases} a+b = 1 \\\\ 4a+b = 10 \\end{cases}$\n$\\Rightarrow a = 3, b = -2 \\Rightarrow f(2) = 2a+b = 4$\n(۲): $f(x) = ax+b \\Rightarrow \\begin{cases} f(1) = 10 \\\\ f(4) = 1 \\end{cases} \\Rightarrow \\begin{cases} a+b = 10 \\\\ 4a+b = 1 \\end{cases}$\n$\\Rightarrow a = -3, b = 13 \\Rightarrow f(2) = 2a+b = 7$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            30,
+            600,
+            380,
+            800
+          ],
+          "placement": "solution_diagram",
+          "filename": "page_0047.jpg",
+          "alt": "دو نمودار خطی که از نقاط مختلف عبور می‌کنند"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 506,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "تابع خطی $f$ به صورت $f(x)=ax+b$ است.\n$f(6)=2 \\Rightarrow 6a+b=2 \\Rightarrow b=2-6a$\n$f(3x-1)+3f(2-x)=\\frac{43}{3}$\n$\\Rightarrow a(3x-1)+b+3[a(2-x)+b]=\\frac{43}{3}$\n$\\Rightarrow 5a+4b=\\frac{43}{3} \\Rightarrow 5a+4(2-6a)=\\frac{43}{3}$\n$\\Rightarrow -19a=\\frac{43}{3}-8=\\frac{19}{3} \\Rightarrow a=-\\frac{1}{3} \\Rightarrow b=4$\n$\\Rightarrow f(x)=-\\frac{1}{3}x+4 \\Rightarrow f(-3)=5$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            499,
+            74,
+            911,
+            255
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 506"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 507,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "تابع خطی $f$ به صورت $f(x)=ax+b$ است که با توجه به نمودار $a,b < 0$ می‌باشد.\nتابع $y=\\sqrt{ax+b}$ با فرض $a,b < 0$ دارای ریشهٔ منفی $x=k$ و دامنهٔ $(-\\infty , k]$ است.\n۴ درست است.\nبرای درک بهتر جواب می‌توانید $a$ و $b$ را $-1$ در نظر بگیرید.\n$y=\\sqrt{-x-1}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            499,
+            255,
+            911,
+            396
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 507"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 508,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "ابتدا ضابطه تابع $f(x)$ را ساده می‌کنیم.\n$f(x)=\\frac{10}{x^2+x}=\\frac{10}{x(x+1)}=10(\\frac{1}{x}-\\frac{1}{x+1})$\nخواهیم داشت:\n$f(1)+f(2)+\\cdots+f(9)=10(1-\\frac{1}{2})+10(\\frac{1}{2}-\\frac{1}{3})+\\cdots$\n$+10(\\frac{1}{9}-\\frac{1}{10})=10(1-\\cancel{\\frac{1}{2}}+\\cancel{\\frac{1}{2}}-\\cancel{\\frac{1}{3}}+\\cancel{\\frac{1}{3}}-\\cdots-\\cancel{\\frac{1}{9}}+\\cancel{\\frac{1}{9}}-\\frac{1}{10})$\n$=10(1-\\frac{1}{10})=10 \\times \\frac{9}{10}=9$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            499,
+            396,
+            911,
+            532
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 508"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 509,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "$x$ را برابر $-\\frac{2}{3}$ قرار می‌دهیم:\n$A=[-\\frac{2}{3}]-[\\frac{4}{-\\frac{2}{3}}]+[\\frac{3}{-\\frac{4}{3}}]=-1-[-6]+[-\\frac{9}{4}]$\n$=-1-(-6)-3=-1+6-3=2$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            499,
+            532,
+            911,
+            620
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 509"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 510,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "اگر $[x]=k$ و $k$ عددی صحیح باشد، آن‌گاه $k \\le x < k+1$ است.\n$[\\frac{2-x}{5}]=2 \\Rightarrow 2 \\le \\frac{2-x}{5} < 3 \\Rightarrow 10 \\le 2-x < 15$\n$\\Rightarrow 8 \\le -x < 13 \\Rightarrow -13 < x \\le -8 \\Rightarrow x \\in (-13, -8]$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            499,
+            620,
+            911,
+            705
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 510"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 511,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "ابتدا نامعادله را حل می‌کنیم.\n$|3x+1| < 7 \\Rightarrow -7 < 3x+1 < 7 \\Rightarrow -8 < 3x < 6$\n$\\Rightarrow -\\frac{8}{3} < x < 2$\nبنابراین:\n$-2 < \\frac{3}{4}x < \\frac{3}{2} \\Rightarrow [\\frac{3}{4}x] \\in \\{-2, -1, 0, 1\\}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            499,
+            705,
+            911,
+            785
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 511"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 512,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "ابتدا نامعادله را حل می‌کنیم.\n$x^2+14 < 9x \\Rightarrow x^2-9x+14 < 0$\n$\\Rightarrow (x-2)(x-7) < 0 \\Rightarrow 2 < x < 7$\nدر نتیجه:\n$1 < x-1 < 6 \\Rightarrow \\frac{1}{3} < \\frac{x-1}{3} < 2$\n$\\Rightarrow [\\frac{x-1}{3}]=0 \\text{ یا } 1 \\Rightarrow 0+1=1$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            499,
+            785,
+            911,
+            882
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 512"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 513,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "ابتدا معادله را حل می‌کنیم.\n$[3x-\\frac{1}{2}]=2 \\Rightarrow 2 \\le 3x-\\frac{1}{2} < 3$\n$\\Rightarrow \\frac{5}{2} \\le 3x < \\frac{7}{2} \\Rightarrow \\frac{5}{6} \\le x < \\frac{7}{6}$\nبنابراین:\n$\\frac{5}{3} \\le 2x < \\frac{7}{3} \\Rightarrow [2x] = 1 \\text{ یا } 2$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            82,
+            74,
+            490,
+            192
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 513"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 514,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "تابع $f(x)$ به ازای $x=28$ برابر با $4$ است $[\\sqrt{\\frac{28}{2}+2}]=[\\sqrt{16}]=4$\nواضح است تابع $f(x)$ به شرطی در بازهٔ $(28, \\alpha)$ ثابت است که $[\\sqrt{\\frac{x}{2}+2}] < 5$ باشد.\n$\\sqrt{\\frac{x}{2}+2} < 5 \\Rightarrow \\frac{x}{2}+2 < 25 \\Rightarrow \\frac{x}{2} < 23 \\Rightarrow x < 46$\nبنابراین حداکثر مقدار $\\alpha$ برابر $46$ می‌باشد.\n$f(\\frac{\\alpha}{2})=f(23)=[\\sqrt{\\frac{23}{2}+2}]=[\\sqrt{13/5}]=3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            82,
+            192,
+            490,
+            313
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 514"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 515,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "ابتدا معادله را حل می‌کنیم.\n$[x+3]=2 \\Rightarrow 2 \\le x+3 < 3 \\Rightarrow -1 \\le x < 0$\nبنابراین:\n$f(x)=\\underbrace{|x+3|}_{+}+\\underbrace{|x+6|}_{+}=2x+9$\nدر نتیجه:\n$g(x)=f(x) \\Rightarrow 3x^2-6x+6=2x+9$\n$\\Rightarrow 3x^2-8x-3=0 \\Rightarrow x=\\frac{4 \\pm \\sqrt{25}}{3} \\Rightarrow \\begin{cases} x=3 \\quad \\text{غ.ق.ق} \\\\ x=-\\frac{1}{3} \\quad \\checkmark \\end{cases}$\n$x=-\\frac{1}{3}$ در بازهٔ $[-1, 0)$ قرار دارد.\n(توجه: $x=3$ در بازه قرار ندارد.)",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            82,
+            313,
+            490,
+            472
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 515"
+        }
+      ],
+      "review_notes": [
+        "متن انتهای پاسخ در تصویر 'x=3 در بازه [-1,0) قرار ندارد' است، در تایپ اصلاح شده است."
+      ]
+    },
+    {
+      "question_number": 516,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "می‌دانیم: $3^4 < 90 < 3^5 \\Rightarrow 4 < \\log_3 90 < 5$\n$\\Rightarrow -5 < -\\log_3 90 < -4 \\Rightarrow [-\\log_3 90] = -5$\nاز طرفی: $(\\sqrt{2})^{10} < 40 < (\\sqrt{2})^{11} \\Rightarrow 10 < \\log_{\\sqrt{2}} 40 < 11$\n$\\Rightarrow [\\log_{\\sqrt{2}} 40] = 10$\nدر نتیجه:\n$[-\\log_3 90]+[\\log_{\\sqrt{2}} 40] = -5+10 = 5$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            82,
+            472,
+            490,
+            595
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 516"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 517,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "روش اول:\nمی‌دانیم: $(3n-2)^2 < 9n^2-6n < (3n-1)^2$\n$\\Rightarrow 3n-2 < \\sqrt{9n^2-6n} < 3n-1 \\Rightarrow [\\sqrt{9n^2-6n}]=3n-2$\nهم‌چنین: $n^2 < n^2+2n < (n+1)^2 \\Rightarrow n < \\sqrt{n^2+2n} < n+1$\n$\\Rightarrow [\\sqrt{n^2+2n}]=n$\nخواهیم داشت:\n$[\\sqrt{9n^2-6n}]-3[\\sqrt{n^2+2n}] = 3n-2-3n=-2$\nروش دوم: کافی است $n=7$ را بررسی کنیم.\n$[\\sqrt{9n^2-6n}]-3[\\sqrt{n^2+2n}]=[\\sqrt{399}]-3[\\sqrt{63}]$\n$=19-21=-2$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            82,
+            595,
+            490,
+            792
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 517"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 518,
+      "solution_page": "page_0048.jpg",
+      "solution_text": "روش اول:\nمی‌دانیم: $(3n-1)^2 < 9n^2-5n+1 < (3n)^2$\n$\\Rightarrow 3n-1 < \\sqrt{9n^2-5n+1} < 3n$\n$\\Rightarrow [\\sqrt{9n^2-5n+1}]=3n-1$\nهم‌چنین با شرط $n > 4$: $(n-3)^2 < n^2-4n < (n-2)^2$\n$\\Rightarrow n-3 < \\sqrt{n^2-4n} < n-2 \\Rightarrow [\\sqrt{n^2-4n}]=n-3$\nخواهیم داشت:\n$[\\sqrt{9n^2-5n+1}] + [\\sqrt{n^2-4n}] = 3n-1+n-3 = 4n-4$\nروش دوم: مقدار عبارت داده‌شده را به ازای $n=5$ محاسبه می‌کنیم:\n$[\\sqrt{225-25+1}] + [\\sqrt{25-20}] = [\\sqrt{201}] + [\\sqrt{5}] = 14 + 2 = 16$\nبا توجه به گزینه‌ها، $4n-4$ قابل قبول است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0048.jpg",
+          "region": [
+            82,
+            792,
+            490,
+            882
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 518"
+        },
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            82,
+            85,
+            490,
+            237
+          ],
+          "placement": "solution_text",
+          "alt": "ادامه حل سوال 518"
+        }
+      ],
+      "review_notes": [
+        "ادامه حل در صفحه بعد"
+      ]
+    },
+    {
+      "question_number": 519,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "با فرض $\\frac{x}{4} = k$ داریم: $x+\\frac{1}{4} = k+1$\n$[x+\\frac{1}{4}] + [x-\\frac{3}{4}] = 5 \\Rightarrow [k+1] + [k] = 5$\n$\\Rightarrow [k]+1+[k] = 5 \\Rightarrow [k]=2 \\Rightarrow 2 \\leq k < 3$\n$\\Rightarrow 2 \\leq x-\\frac{3}{4} < 3 \\Rightarrow \\frac{11}{4} \\leq x < \\frac{15}{4}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            465,
+            209,
+            831,
+            311
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 519"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 520,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "با توجه به صحیح‌بودن $k$ معادله را حل می‌کنیم.\n$[x^2+3] + [x^2-k] = 8 \\Rightarrow [x^2]+3+[x^2]-k = 8$\n$\\Rightarrow [x^2] = \\frac{k+5}{2}$\nبدیهی است $\\frac{k+5}{2} \\geq 0$ می‌باشد.\nمجموعه‌جواب به صورت بازهٔ $(a, b)$ است؛ بنابراین $\\frac{k+5}{2} = 0$ و $k = -5$ است.\n$[x^2] = 0 \\Rightarrow 0 \\leq x^2 < 1 \\Rightarrow -1 < x < 1 \\Rightarrow (a, b) = (-1, 1)$\nدقت داشته باشید اگر $\\frac{k+5}{2}$ عدد صحیحی غیر از صفر باشد، مجموعه‌جواب به صورت اجتماع دو بازه خواهد بود. به عنوان مثال:\n$[x^2]=1 \\Rightarrow 1 \\leq x^2 < 2 \\Rightarrow \\begin{cases} 1 \\leq x < \\sqrt{2} \\\\ -\\sqrt{2} < x \\leq -1 \\end{cases}$\n$\\Rightarrow$ مجموعه‌جواب $= [1, \\sqrt{2}) \\cup (-\\sqrt{2}, -1]$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            463,
+            313,
+            831,
+            545
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 520"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 521,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "می‌دانیم $[3x^2] - 10 = x$ و عبارات $[3x^2]$ و $10$ صحیح می‌باشند. بنابراین $x$ عددی صحیح است. در نتیجه $3x^2$ نیز عددی صحیح بوده و $[3x^2] = 3x^2$ می‌باشد.\n$[3x^2] - x = 10 \\Rightarrow 3x^2 - x - 10 = 0$\n$\\Rightarrow x = \\frac{1 \\pm \\sqrt{121}}{6} \\Rightarrow \\begin{cases} x = 2 \\checkmark \\\\ x = -\\frac{5}{3} \\text{ ق.ق.غ} \\end{cases}$\n$x$ عددی صحیح بوده و $x = -\\frac{5}{3}$ قابل قبول نمی‌باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            465,
+            547,
+            831,
+            696
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 521"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 522,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "$[\\frac{4}{5}x]$ را برابر عدد صحیح $k$ قرار می‌دهیم.\n$[\\frac{4}{5}x] = \\frac{4}{5}x = k \\Rightarrow x = \\frac{5}{4}k$\nمی‌دانیم $[x] \\leq x < [x]+1$ است. بنابراین:\n$[\\frac{4}{5}x] \\leq \\frac{4}{5}x < [\\frac{4}{5}x]+1 \\Rightarrow \\frac{5}{4} \\times \\frac{4}{5} \\leq \\frac{4}{5}x < \\frac{5}{4} \\times \\frac{4}{5}+1$\n$\\xrightarrow{\\times 12} 15x \\leq 16x < 15x + 12 \\Rightarrow 0 \\leq x < 12$\nدر نتیجه:\n$0 \\leq \\frac{5}{4}k < 12 \\Rightarrow 0 \\leq k < 15 \\Rightarrow k \\in \\{0, 1, 2, \\dots, 14\\}$\n$x = \\frac{5}{4}k$ بوده و به ازای هر مقدار $k$ یک مقدار برای $x$ وجود دارد. بنابراین معادله ۱۵ جواب دارد.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            465,
+            698,
+            831,
+            893
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 522"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 523,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "$[x]$ را برابر عدد صحیح $k$ قرار می‌دهیم.\n$[x] = \\frac{6}{7}x = k \\Rightarrow x = \\frac{7k}{6}$\nمی‌دانیم $[x] \\leq x < [x]+1$ است. بنابراین:\n$\\frac{6}{7}x \\leq x < \\frac{6}{7}x+1 \\xrightarrow{\\times 7} 6x \\leq 7x < 6x+7 \\Rightarrow 0 \\leq x < 7$\nخواهیم داشت:\n$0 \\leq \\frac{7k}{6} < 7 \\Rightarrow 0 \\leq k < 6 \\xrightarrow{k \\in \\mathbb{Z}} k \\in \\{0, 1, 2, 3, 4, 5\\}$\n$x = \\frac{7k}{6} \\Rightarrow x \\in \\{0, \\frac{7}{6}, \\frac{14}{6}, \\frac{21}{6}, \\frac{28}{6}, \\frac{35}{6}\\}\\Rightarrow S = \\frac{105}{6} = \\frac{35}{2} = 17/5$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            45,
+            80,
+            420,
+            258
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 523"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 524,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "بدیهی است که $x$ نامنفی می‌باشد. جمع دو عدد صحیح نامنفی برابر ۲ شده است. بنابراین سه حالت وجود دارد:\n(۱)\n$\\begin{cases} [\\frac{x}{3}]=0 \\Rightarrow 0 \\leq \\frac{x}{3} < 1 \\Rightarrow 0 \\leq x < 3 \\\\ [\\frac{x}{4}]=2 \\Rightarrow 2 \\leq \\frac{x}{4} < 3 \\Rightarrow 8 \\leq x < 12 \\end{cases} \\xrightarrow{\\cap} x \\in \\varnothing$\n(۲)\n$\\begin{cases} [\\frac{x}{3}]=2 \\Rightarrow 2 \\leq \\frac{x}{3} < 3 \\Rightarrow 6 \\leq x < 9 \\\\ [\\frac{x}{4}]=0 \\Rightarrow 0 \\leq \\frac{x}{4} < 1 \\Rightarrow 0 \\leq x < 4 \\end{cases} \\xrightarrow{\\cap} x \\in \\varnothing$\n(۳)\n$\\begin{cases} [\\frac{x}{3}]=1 \\Rightarrow 1 \\leq \\frac{x}{3} < 2 \\Rightarrow 3 \\leq x < 6 \\\\ [\\frac{x}{4}]=1 \\Rightarrow 1 \\leq \\frac{x}{4} < 2 \\Rightarrow 4 \\leq x < 8 \\end{cases} \\xrightarrow{\\cap} x \\in [4, 6)$\n$\\Rightarrow b-a = 6-4 = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            45,
+            260,
+            420,
+            521
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 524"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 525,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "اگر $a$ و $b$ اعداد صحیح و $a \\leq [x] \\leq b$ باشد، خواهیم داشت:\n$a \\leq x < b+1$\n$-4 \\leq \\frac{2|x|-3}{4} \\leq 3 \\Rightarrow -16 < 2|x|-3 < 16$\n$\\Rightarrow -\\frac{13}{2} < |x| < \\frac{19}{2} \\Rightarrow -\\frac{19}{2} < x < \\frac{19}{2} \\Rightarrow -9/5 < x < 9/5$\n$\\xrightarrow{x \\in \\mathbb{Z}} x \\in \\{-9, -8, \\dots, 9\\}$\nمجموعه‌جواب شامل ۱۹ عدد صحیح است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            45,
+            523,
+            420,
+            649
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 525"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 526,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "نامعادله را ساده می‌کنیم.\n$[x+3] > 2-[-x] \\Rightarrow [x]+3 > 2-[-x] \\Rightarrow [x]+[-x] > -1$\nمی‌دانیم $[x]+[-x] = \\begin{cases} 0 & x \\in \\mathbb{Z} \\\\ -1 & x \\notin \\mathbb{Z} \\end{cases}$\nبنابراین:\n$[x]+[-x] = 0 \\Rightarrow x \\in \\mathbb{Z}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            45,
+            650,
+            420,
+            743
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 526"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 527,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "رابطهٔ $[x+y] \\geq [x]+[y]$ همواره برقرار است. بنابراین $[x^2+y^2] \\geq [x^2]+[y^2]$ بوده و نامعادلهٔ داده‌شده هیچ‌گاه درست نمی‌باشد.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            45,
+            745,
+            420,
+            804
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 527"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 528,
+      "solution_page": "page_0049.jpg",
+      "solution_text": "عبارات $[x] - 2a$ و $4$ صحیح می‌باشند؛ بنابراین $a$ نیز عددی صحیح بوده و در نتیجه $2a$ نیز صحیح است.\n$[x-2a] = [x]-a+4 \\Rightarrow [x]-2a = [x]-a+4 \\Rightarrow a = -4$\nخواهیم داشت:\n$y = \\sqrt{a-[x]} \\Rightarrow [x] \\leq a \\Rightarrow [x] \\leq -4 \\Rightarrow x < -3 \\Rightarrow D = (-\\infty, -3)$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0049.jpg",
+          "region": [
+            45,
+            806,
+            420,
+            893
+          ],
+          "placement": "solution_text",
+          "alt": "حل سوال 528"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 529,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "عبارات $[x+2]$ و $[x-a]$ صحیح بوده و در نتیجه $a$ نیز عددی صحیح است.\n$[x-a] = a-[x+2] \\Rightarrow [x]-a = a-[x]-2$\n$\\Rightarrow 2a = 2[x]+2 \\Rightarrow a = [x]+1$\nخواهیم داشت:\n$y = \\sqrt{a+[-x]} = \\sqrt{[x]+[-x]+1} \\Rightarrow y = 1 \\text{ یا } 0 \\Rightarrow R = \\{0, 1\\}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 530,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "تابع $f(x) = [\\frac{x}{2}] - 3$ را رسم می‌کنیم.\n$f(x) = \\begin{cases} 5 & -4 \\leq x < -2 \\\\ 4 & -2 \\leq x < 0 \\\\ 3 & 0 \\leq x < 2 \\\\ 2 & 2 \\leq x < 4 \\end{cases}$\nواضح است $A(-4, 5)$ و $B(4, 2)$ می‌باشد. بنابراین:\n$m_{AB} = \\frac{5 - 2}{-4 - 4} = -\\frac{3}{8}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0050.jpg",
+          "region": [
+            188,
+            513,
+            290,
+            725
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار تابع f(x) برای سوال 530"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 531,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "نمودار تابع $f(x) = x - 3[\\frac{x}{3}]$ را رسم می‌کنیم.\n$f(x) = \\begin{cases} x & 0 \\leq x < 3 \\\\ x-3 & 3 \\leq x < 6 \\end{cases}$\nبا توجه به شکل در بازهٔ $[0, 6)$ دو پاره‌خط به طول $3\\sqrt{2}$ رسم می‌شود.\nبنابراین: $n = 2, \\ell = 3\\sqrt{2} \\Rightarrow n\\ell = 6\\sqrt{2}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0050.jpg",
+          "region": [
+            326,
+            513,
+            401,
+            663
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار تابع f(x) برای سوال 531"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 532,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "با توجه به شکل مشخص می‌شود $a$ و $b$ مثبت هستند. طول هر یک از پاره‌خط‌ها برابر $b$ و عرض هر پاره‌خط نسبت به پاره‌خط قبلی $a$ واحد افزایش می‌یابد؛ بنابراین مختصات نقاط $A$ و $B$ به صورت $A(-b, -2a)$ و $B(2b, 2a)$ می‌باشد.\n$m_{AB} = \\frac{2a + 2a}{2b + b} = \\frac{4a}{3b} = 4 \\Rightarrow \\frac{b}{a} = \\frac{1}{3}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 533,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "مقدار تابع در بازهٔ $(0, 1)$ برابر صفر است؛ بنابراین گزینه‌های ۱ و ۳ نادرست هستند. $f(-1)$ عددی مثبت است. در گزینهٔ ۲، $f(-1) = -1$ و در گزینهٔ ۴، $f(-1) = 1$ است. در نتیجه گزینهٔ ۴ جواب است.\nنمودار سایر گزینه‌ها:",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0050.jpg",
+          "region": [
+            604,
+            521,
+            689,
+            878
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار سایر گزینه‌های سوال 533"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 534,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "با رسم $y = [x^2]$ درستی گزینهٔ ۱ مشخص می‌شود.\n$y = \\begin{cases} 3 & -2 < x \\leq -\\sqrt{3} \\\\ 2 & -\\sqrt{3} < x \\leq -\\sqrt{2} \\\\ 1 & -\\sqrt{2} < x \\leq -1 \\\\ 0 & -1 < x < 1 \\\\ 1 & 1 \\leq x < \\sqrt{2} \\\\ 2 & \\sqrt{2} \\leq x < \\sqrt{3} \\\\ 3 & \\sqrt{3} \\leq x < 2 \\end{cases}$\nنمودار را می‌توانستیم از روش تصویر کردن نیز رسم کنیم. نمودار گزینه‌های ۲، ۳ و ۴ به ترتیب از ۸، ۴ و ۲۸ پاره‌خط تشکیل شده‌اند.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0050.jpg",
+          "region": [
+            722,
+            517,
+            856,
+            715
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار تابع y=[x^2] برای سوال 534"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 535,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "نمودار تابع را در بازهٔ $[-1, 1)$ رسم می‌کنیم.\n$y = [x] - |2x| = \\begin{cases} -1+2x & -1 \\leq x < 0 \\\\ -2x & 0 \\leq x < 1 \\end{cases}$\nبا توجه به نمودار نقاط $A(-1, -3)$، $B(0, -1)$ و $C(1, -2)$ رئوس مثلث می‌باشند.\nمساحت مثلث ABC به روش ساروس (بندکفشی؟!) قابل محاسبه است.\n$S = \\frac{1}{2} | ((-1)\\times(-1) + (0)\\times(-2) + 1\\times(-3)) - (0\\times(-3) + 1\\times(-1) + (-1)\\times(-2)) | = \\frac{1}{2} | (1+0-3) - (0-1+2) | = \\frac{3}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0050.jpg",
+          "region": [
+            64,
+            107,
+            218,
+            203
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار تابع برای سوال 535"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 536,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "روش اول: از بازه‌بندی استفاده می‌کنیم. واضح است $x = 0$ در مجموعه جواب وجود ندارد.\nبدیهی است نامعادله برای بازه‌های اعداد کوچک‌تر از $-1$ صدق می‌کند و برای بازه‌های اعداد بزرگ‌تر از $\\frac{3}{2}$ نادرست است.\n$-1 \\leq x < -\\frac{1}{2} \\Rightarrow -2 < x$ (صحیح)\n$-\\frac{1}{2} \\leq x < 0 \\Rightarrow -1 < x$ (صحیح)\n$0 < x < \\frac{1}{2} \\Rightarrow 0 < x$ (صحیح)\n$\\frac{1}{2} \\leq x < 1 \\Rightarrow 1 < x$ (نادرست)\n$1 \\leq x < \\frac{3}{2} \\Rightarrow 2 < x$ (نادرست)\nبنابراین مجموعه جواب به صورت $(-\\infty, \\frac{1}{2}) - \\{0\\}$ می‌باشد.\nروش دوم: نمودار دو تابع $y = [2x]$ و $y = x$ را رسم می‌کنیم.\nبا توجه به نمودار مجموعه جواب $(-\\infty, \\frac{1}{2}) - \\{0\\}$ می‌باشد.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0050.jpg",
+          "region": [
+            515,
+            101,
+            630,
+            260
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار توابع برای روش دوم سوال 536"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 537,
+      "solution_page": "page_0050.jpg",
+      "solution_text": "برای رسم نمودار تابع $y = |[x] - x + \\frac{1}{2}|$ نمودار $y = x - [x]$ را نسبت به محور xها قرینه کرده، سپس $\\frac{1}{2}$ واحد به بالا انتقال می‌دهیم و در انتها نقاط با عرض منفی را نسبت به محور xها قرینه می‌کنیم.\nمساحت مورد نظر دو برابر مساحت مثلث به قاعدهٔ $1$ و ارتفاع $\\frac{1}{2}$ است.\n$S = 2(\\frac{1 \\times \\frac{1}{2}}{2}) = \\frac{1}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0050.jpg",
+          "region": [
+            712,
+            114,
+            768,
+            464
+          ],
+          "placement": "solution_text",
+          "alt": "مراحل رسم نمودار تابع سوال 537"
+        },
+        {
+          "filename": "page_0050.jpg",
+          "region": [
+            816,
+            110,
+            893,
+            246
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار نهایی برای مساحت سوال 537"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

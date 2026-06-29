@@ -1,0 +1,242 @@
+[
+  {
+    "question_number": 251,
+    "solution_page": null,
+    "solution_text": "در حالت اول انرژی فنر برابر است با $U_1=\\frac12(2)(4^2)-(1)(7)=9\\,J$. برای دو برابر شدن آن، $\\frac12(2)v^2-7=18$؛ پس $v^2=25$ و $v=5\\,m/s$.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 252,
+    "solution_page": null,
+    "solution_text": "افزایش ارتفاع $h=6\\sin30^\\circ=3\\,m$ است. از موازنه انرژی: $U_s=\\frac12mv^2+mgh+fs=48+45+42=135\\,J$.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 253,
+    "solution_page": null,
+    "solution_text": "طول مسیر $s=2.5/\\sin30^\\circ=5\\,m$ است. کار کل $W=mgh+Fs-fs=50+10-40=20\\,J$؛ بنابراین $\\frac12(2)v^2=20$ و $v=2\\sqrt5\\,m/s$.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 254,
+    "solution_page": null,
+    "solution_text": "با توان ثابت، زمان با تغییر $v^2$ متناسب است. سرعت‌ها $10،25،40\\,m/s$ هستند؛ پس $t_2=7\\frac{40^2-25^2}{25^2-10^2}=13\\,s$.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 255,
+    "solution_page": null,
+    "solution_text": "توان نخست $P=mgh/t$ است. در حالت دوم $P'=mg(2h)/(t/2)=4P$، پس توان موتور باید به اندازه $3P$ افزایش یابد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 256,
+    "solution_page": null,
+    "solution_text": "انرژی مفید هر کیلوگرم $gh+v^2/2=150+162=312\\,J/kg$ است. با آهنگ جرمی $800/60\\,kg/s$، توان $P=4160\\,W=4.16\\,kW$ می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 257,
+    "solution_page": null,
+    "solution_text": "جابجایی $\\Delta\\vec r=(-8\\hat i+6\\hat j)m$ است. کار نیرو $W=\\vec F\\cdot\\Delta\\vec r=5(-8)+12(6)=32\\,J$ و توان متوسط $32/4=8\\,W$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 258,
+    "solution_page": null,
+    "solution_text": "فقط مؤلفه افقی نیرو توان ایجاد می‌کند؛ $P=Fv\\cos37^\\circ=150(5)(0.8)=600\\,W$.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 259,
+    "solution_page": null,
+    "solution_text": "ارتفاع هر بخش $3\\,m$ و در نتیجه کار دو بخش برابر $W$ است. زمان کل $W/60+W/30$ و توان متوسط $2W/(W/60+W/30)=40\\,W$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 260,
+    "solution_page": null,
+    "solution_text": "در پایین‌آمدن یکنواخت، $f=mg\\sin37^\\circ=30\\,N$. برای بالارفتن یکنواخت باید $F=mg\\sin37^\\circ+f=60\\,N$ باشد؛ پس $P=Fv=240\\,W$.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 261,
+    "solution_page": null,
+    "solution_text": "دبی جرمی آب $20000\\,kg/s$ است؛ بنابراین توان گرانشی $\\dot mgh=20000(10)(60)=12\\,MW$ است. از $12\\,MW$ فقط $9\\,MW$ مفید است، پس اتلاف $25\\%$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 262,
+    "solution_page": null,
+    "solution_text": "دبی حجمی مخزن $A\\,dh/dt=1(0.01)=0.01\\,m^3/s$ و دبی جرمی $10\\,kg/s$ است. ارتفاع کل $10\\,m$، پس توان مفید $1000\\,W$ و بازده $1000/2500=40\\%$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 263,
+    "solution_page": null,
+    "solution_text": "توان‌های مفید دو حالت به‌ترتیب $8$ و $10\\,kW$ هستند. اختلاف بازده‌ها از $\\Delta\\eta=(10-8)/P$ به دست می‌آید؛ با افزایش 15 واحد درصدیِ سازگار با گزینه‌های چاپی، $P=2/0.15=40/3\\,kW$.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "low", "note": "متن نرمال‌شده افزایش 5 واحدی دارد که P=40 kW می‌دهد و در گزینه‌ها نیست؛ پاسخ بر مبنای افتادن رقم 1 در OCR بازسازی شده است."}]
+  },
+  {
+    "question_number": 264,
+    "solution_page": null,
+    "solution_text": "با حرکت معکوس در زنجیره بازده‌های شکل، خروجی $60\\,J$ سامانه (3) به ورودی $240\\,J$ آن و سپس به ورودی $480\\,J$ سامانه (2) می‌رسد. در سامانه (1) انرژی مفید و تلف‌شده برابرند؛ پس اتلاف سامانه (1) برابر $480\\,J$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "low", "note": "درصدهای شکل در فایل نرمال‌شده حفظ نشده‌اند و تصویر صفحه در workspace موجود نیست."}]
+  },
+  {
+    "question_number": 265,
+    "solution_page": null,
+    "solution_text": "توان مفید لامپ‌ها $1800(25)=45\\,kW$ و با بازده $20\\%$، توان ورودی آن‌ها $225\\,kW$ است. ورودی خط $225/0.8=281.25\\,kW$ و خروجی نیروگاه $281.25/0.375=750\\,kW$؛ اتلاف نیروگاه $468.75\\,kW=625\\,hp$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 266,
+    "solution_page": null,
+    "solution_text": "در ترموکوپل دو سیمی که در اتصال گرم به هم می‌رسند باید ناهم‌جنس باشند؛ در شکل این دو سیم A و C هستند. کمیت دماسنجی نیز ولتاژ ترموالکتریکی خوانده‌شده با مولتی‌متر است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "medium"}]
+  },
+  {
+    "question_number": 267,
+    "solution_page": null,
+    "solution_text": "وجود دو شاخص فولادی و ستون‌های مایع، دماسنج بیشینه ـ کمینه را نشان می‌دهد. جابه‌جایی و ارتفاع ستون مایع کمیت دماسنجی آن است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 268,
+    "solution_page": null,
+    "solution_text": "دماسنج الکلی، بیشینه ـ کمینه و نواری دوفلزه بر انبساط گرمایی تکیه دارند؛ ترموکوپل از ولتاژ ترموالکتریکی ناشی از اختلاف دما استفاده می‌کند.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 269,
+    "solution_page": null,
+    "solution_text": "در میان این دماسنج‌ها ترموکوپل دقت کمتری دارد و تف‌سنج با دریافت تابش گرمایی، دما را بدون تماس اندازه می‌گیرد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 270,
+    "solution_page": null,
+    "solution_text": "اگر دماهای سلسیوسی را $x,y$ بگیریم، $x=2(1.8y+32)$ و $1.8x+32=12y$. حل دستگاه $y=80/3$ و $x=160$ می‌دهد؛ پس $F_1=320$ و $F_2=80$ و اختلاف $240^\\circ F$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 271,
+    "solution_page": null,
+    "solution_text": "برابری عدد سلسیوس و فارنهایت فقط در $-40^\\circ$ رخ می‌دهد. کاهش $63^\\circ F$ معادل کاهش $35^\\circ C$ است؛ پس دمای آغازین $-5^\\circ C=268\\,K$ بوده است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 272,
+    "solution_page": null,
+    "solution_text": "افزایش $26^\\circ C$ برابر $46.8^\\circ F$ است. چون این مقدار $45\\%$ دمای اولیه فارنهایت است، $F_0=104$؛ در نتیجه $C_0=40$ و $T_0=313\\,K$.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 273,
+    "solution_page": null,
+    "solution_text": "رابطه خطی است و شیب آن $(180-30)/(80-(-20))=1.5$ می‌شود. برای $70^\\circ C$، عدد دماسنج $30+1.5(70+20)=165$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 274,
+    "solution_page": null,
+    "solution_text": "به ازای هر یک کلوین، فارنهایت $1.8$ و عدد دماسنج $2(1.8)=3.6$ درجه زیاد می‌شود؛ پس $x=3.6T+b$. از $T=300\\,K$ و $x=45$، مقدار $b=-1035$ و $x=3.6T-1035$ است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 275,
+    "solution_page": null,
+    "solution_text": "دمای اولیه $300\\,K$ و $\\Delta T=2700\\,K$ است. افزایش نسبی حجم $\\beta\\Delta T=3\\times10^{-5}(2700)=0.081$؛ بنابراین افزایش نسبی شعاع تقریباً یک‌سوم آن، یعنی $2.7\\%$ است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 276,
+    "solution_page": null,
+    "solution_text": "افزایش دما $60^\\circ C=108^\\circ F$ است. بنابراین $\\alpha_F=(\\Delta L/L)/\\Delta T_F=0.0054/108=5\\times10^{-5}\\,^\\circ F^{-1}$.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 277,
+    "solution_page": null,
+    "solution_text": "$\\Delta T=900(5/9)=500^\\circ C$ و $\\alpha=\\beta/2=12\\times10^{-6}\\,^\\circ C^{-1}$. محیط اولیه $300\\,mm$ است؛ پس $\\Delta P=P\\alpha\\Delta T=300(12\\times10^{-6})(500)=1.8\\,mm$.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 278,
+    "solution_page": null,
+    "solution_text": "طول افقی هر نیمه ثابت است و $\\cos\\beta=L_0/L'=0.98$؛ پس $L'/L_0=1/0.98$. بنابراین $\\alpha=(1/0.98-1)/100\\simeq2.04\\times10^{-4}\\,K^{-1}$.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 279,
+    "solution_page": null,
+    "solution_text": "فاصله $5\\,mm$ با انبساط دو میله پر می‌شود. میله B به اندازه $1(2\\times10^{-5})(50)=1\\,mm$ منبسط می‌شود، پس سهم A برابر $4\\,mm$ است و $\\alpha_A=0.004/(2\\times50)=4\\times10^{-5}\\,K^{-1}$.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  },
+  {
+    "question_number": 280,
+    "solution_page": null,
+    "solution_text": "اگر طول اولیه آلومینیوم $L$ باشد، طول آهن $1.002L$ است. شرط هم‌طولی $1.002(1+15\\times10^{-6}\\Delta T)=1+23.02\\times10^{-6}\\Delta T$ است که $\\Delta T\\simeq250^\\circ C$ می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [{"solutionOrigin": "reconstructed", "confidence": "high"}]
+  }
+]

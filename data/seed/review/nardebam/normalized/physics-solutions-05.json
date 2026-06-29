@@ -1,0 +1,1302 @@
+[
+  {
+    "question_number": 452,
+    "solution_page": 280,
+    "solution_text": "چون فاصله بارها از مبدأ یکسان است، اندازه میدان‌ها در O متناسب با اندازه بارهاست. برای چهار آرایش شکل، مؤلفه‌های میدان روی محورهای x و y جمع شده و اندازه‌های EI=√18E، EII=√2E، EIII=√20E و EIV=3E به دست می‌آید؛ بنابراین ترتیب EIII>EI>EIV>EII است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0085.jpg",
+        "box": [
+          70,
+          590,
+          425,
+          1570
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "چهار آرایش بارها روی محورهای x و y و بردارهای میدان در O"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 453,
+    "solution_page": 280,
+    "solution_text": "در شکل، بارها نسبت به نقطه A متقارن‌اند. مؤلفه‌های میدان دو بار در A تجزیه می‌شود؛ از هم‌اندازه بودن مؤلفه‌های افقی و عمودی و زاویه 45 درجه، مقدار میدان هر بار و سپس میدان خالص در O به صورت E_O=(4√2×10^3 N/C)j محاسبه شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0085.jpg",
+        "box": [
+          95,
+          1680,
+          455,
+          2290
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو بار روی محور y و نقطه A با تجزیه میدان‌ها"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در page_0086 دیده می‌شود؛ box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 454,
+    "solution_page": 281,
+    "solution_text": "ابتدا میدان دو بار در نقطه A با قانون کولن و فیثاغورس محاسبه می‌شود و از داده FA=2×10^6 N/C مقدار |q|=16 μC به دست می‌آید. سپس برای نقطه C، فاصله‌های جدید از تشابه مثلث‌ها تعیین شده و میدان‌های E'1 و E'2 محاسبه می‌شوند؛ چون بارها هم‌نام‌اند، تفاضل آن‌ها میدان EC=6.5×10^6 N/C را می‌دهد.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0086.jpg",
+        "box": [
+          110,
+          1350,
+          760,
+          1740
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مثلث q1، A، q2 و نقطه C روی وتر با فاصله‌های r'1 و r'2"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 455,
+    "solution_page": 281,
+    "solution_text": "در دو آرایش مثلثی، میدان ناشی از q1 و q2 در رأس قائم با استفاده از قانون کولن و نسبت فاصله‌ها نوشته شده است. در حالت اول ET=√5/2 E1 و پس از جابه‌جایی بارها، E'T=√65/4 E1 به دست می‌آید؛ بنابراین نسبت میدان جدید به قبلی برابر √13/2 است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0086.jpg",
+        "box": [
+          100,
+          1800,
+          790,
+          2380
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو مثلث قائم با بارهای q1 و q2 و بردارهای میدان"
+      }
+    ],
+    "review_notes": [
+      "boxها local و تقریبی‌اند."
+    ]
+  },
+  {
+    "question_number": 456,
+    "solution_page": 282,
+    "solution_text": "با توجه به نسبت q2=-4/3 q1 و هندسه مثلث، میدان‌های دو بار در M و C جداگانه محاسبه شده‌اند. در M میدان‌ها هم‌جهت‌اند و EM=336 N/C به دست می‌آید. سپس با زوایای 53 و 37 درجه، فاصله‌ها و میدان‌های رأس C تعیین شده و برآیند قائم آن‌ها EC=125 N/C محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0087.jpg",
+        "box": [
+          90,
+          150,
+          520,
+          420
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مثلث ABC، نقطه M، بارهای q1 و q2 و بردارهای میدان"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 457,
+    "solution_page": 282,
+    "solution_text": "مثلث‌های ساخته‌شده با مؤلفه‌های میدان با مثلث اصلی مشابه‌اند؛ بنابراین E1/r2=E2/r1=E/r نوشته می‌شود. با r1=5 cm و r2=12 cm، r=13 cm و سپس E1=144×10^5 N/C محاسبه شده و از نسبت E1/E مقدار میدان خالص به دست آمده است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0087.jpg",
+        "box": [
+          100,
+          1410,
+          510,
+          1685
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مثلث مؤلفه‌های میدان با فاصله‌های 5 و 12 سانتی‌متر"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 458,
+    "solution_page": 282,
+    "solution_text": "با تشابه مثلث میدان و مثلث هندسی، نسبت E1/E=r1/r نوشته شده است. با داده r=20 cm و r2=10√3 cm، فاصله r1=10 cm به دست می‌آید. سپس از قانون کولن و جهت بردار میدان، مقدار q1=0.2 nC تعیین می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0087.jpg",
+        "box": [
+          95,
+          1950,
+          520,
+          2320
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مثلث بارها و بردارهای E1، E2 و E"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 459,
+    "solution_page": 283,
+    "solution_text": "در مربع، میدان ناشی از بارهای q و Q در مرکز رسم شده است. مؤلفه‌های متناظر عمود و هم‌اندازه‌اند، پس میدان‌های قطری با √2 ضرب می‌شوند. از رابطه ET(Q)>ET(q) و جمع برداری، نسبت |q|/|Q|=√2/(√3+√2) ساده شده و با هم‌نام بودن q و Q، q/Q=√6-2 به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0088.jpg",
+        "box": [
+          100,
+          145,
+          520,
+          430
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مربع با بارهای q و Q در گوشه‌ها و میدان‌ها در مرکز"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 460,
+    "solution_page": 283,
+    "solution_text": "فاصله هر گوشه مربع تا مرکز از قطر مربع محاسبه می‌شود. میدان چهار بار در مرکز، در حالت اول با جمع مؤلفه‌های افقی و عمودی برابر 7400 N/C است. با حذف یکی از بارها، میدان جدید 2600 N/C می‌شود و اختلاف E2-E1=-4800 N/C نشان‌دهنده کاهش اندازه میدان است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0088.jpg",
+        "box": [
+          115,
+          575,
+          520,
+          1370
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو حالت مربع با بارهای گوشه‌ای و بردارهای میدان در مرکز"
+      }
+    ],
+    "review_notes": [
+      "boxها local و تقریبی‌اند."
+    ]
+  },
+  {
+    "question_number": 461,
+    "solution_page": 283,
+    "solution_text": "برای بیشینه شدن میدان در مرکز مربع، دو سر هر قطر باید بارهای ناهمنام قرار گیرد. نیروهای وارد بر یکی از بارها از طرف سه بار دیگر محاسبه شده‌اند؛ دو نیروی کناری هم‌اندازه و عمودند و همراه نیروی قطری با فیثاغورس جمع می‌شوند تا نیروی کل 5.4 N به دست آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0088.jpg",
+        "box": [
+          100,
+          1665,
+          545,
+          2320
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مربع با چهار بار و نیروهای وارد بر یک بار در گوشه"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 462,
+    "solution_page": 284,
+    "solution_text": "در شش‌ضلعی منتظم، به دلیل تقارن میدان‌های روی قطرهای BE و CF همدیگر را خنثی می‌کنند. میدان خالص در مرکز فقط در راستای قطر AD باقی می‌ماند. با توجه به |q4|>|q1|، جهت میدان به سوی بار q4 است و از E0=2 MN/C مقدار q=-20 μC و بار کل Q=5q=-100 μC محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0089.jpg",
+        "box": [
+          95,
+          150,
+          600,
+          610
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "شش‌ضلعی منتظم با بارهای روی رأس‌ها و میدان در مرکز O"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 463,
+    "solution_page": 284,
+    "solution_text": "میدان‌های چهار بار روی محورهای x و y در O تجزیه شده‌اند. ابتدا Ex از جمع میدان‌های q1 و q4 محاسبه و سپس با اندازه میدان کل، Ey از فیثاغورس به دست می‌آید. میدان‌های q2 و q3 روی محور y جمع شده و با مقایسه آن‌ها با Ey، میدان ناشی از q5 محاسبه می‌شود؛ در پایان q5=+12 μC یا در حالت جهت مخالف q5=-4 μC به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0089.jpg",
+        "box": [
+          100,
+          790,
+          470,
+          1180
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "پنج بار روی محورهای مختصات و میدان‌های آن‌ها در O"
+      }
+    ],
+    "review_notes": [
+      "ادامه محاسبه در page_0090 دیده می‌شود؛ box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 464,
+    "solution_page": 285,
+    "solution_text": "به گلوله در میدان یکنواخت سه نیرو وارد است: وزن، نیروی الکتریکی و کشش نخ. چون برآیند وزن و نیروی الکتریکی هم‌اندازه و خلاف جهت کشش است، tanα=FE/mg نوشته می‌شود. با کاهش زاویه از 45 به 37 درجه، E'=3/4 E و در نتیجه تغییر نسبی میدان ΔE/E=-25% به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0090.jpg",
+        "box": [
+          110,
+          370,
+          470,
+          680
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "گلوله باردار آویزان در میدان یکنواخت و نیروهای T، mg و FE"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 465,
+    "solution_page": 285,
+    "solution_text": "برای قطره روغن، تعادل عمودی با FE=mg برقرار است. بار قطره از ρVg و V=4/3πr^3 به دست آمده و در E|q|=ρVg جایگذاری می‌شود. چون بار قطره منفی است، جهت میدان خلاف جهت نیروی وارد بر ذره است و مقدار میدان به صورت E=3.2×10^5 N/C رو به پایین نوشته می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0090.jpg",
+        "box": [
+          105,
+          845,
+          500,
+          1135
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "قطره روغن بین دو صفحه و جهت نیروهای FE و mg"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 466,
+    "solution_page": 285,
+    "solution_text": "چون ذره در راستای y حرکت نمی‌کند، مؤلفه عمودی نیروی الکتریکی وزن را خنثی می‌کند و چون حرکت افقی شتاب‌دار است، Fx=mg گرفته می‌شود. بنابراین FE=√2 mg و با FE=qE مقدار نیرو و شتاب محاسبه می‌گردد.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0090.jpg",
+        "box": [
+          110,
+          1190,
+          430,
+          1390
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "بردار نیروی الکتریکی و مؤلفه‌های Fx و Fy همراه وزن"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 467,
+    "solution_page": 285,
+    "solution_text": "ابتدا نیروی الکتریکی از FE=|q|E محاسبه شده و با قانون دوم نیوتن، شتاب ذره به دست می‌آید. سپس از a=Δv/Δt زمان تغییر سرعت محاسبه شده و Δt=4 ms حاصل می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 468,
+    "solution_page": 285,
+    "solution_text": "ذره آلفا همان هسته هلیم است، بنابراین mα=4mp و qα=2qp. از a=Eq/m نسبت شتاب آلفا به پروتون برابر 1/2 می‌شود و با رابطه v^2=2aΔx برای جابه‌جایی برابر، نسبت vα/vp=√2/2 به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 469,
+    "solution_page": 285,
+    "solution_text": "شتاب حرکت گلوله با در نظر گرفتن جهت مثبت رو به بالا نوشته می‌شود: a=-(E|q|/m)-g=-15 m/s^2. زمان بالا رفتن از v=at+v0 و شرط صفر شدن سرعت در بالاترین نقطه t1=2 s به دست می‌آید. سپس با نکته حرکت با شتاب ثابت، زمان رفت و برگشت برابر 4 s محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0090.jpg",
+        "box": [
+          120,
+          2110,
+          370,
+          2320
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "گلوله باردار با سرعت اولیه رو به بالا و نیروهای وزن و الکتریکی"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در page_0091 دیده می‌شود؛ box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 470,
+    "solution_page": 286,
+    "solution_text": "شتاب ذره در حالت اول با vB^2-vA^2=2aΔx محاسبه می‌شود و چون a<g است، نیروی الکتریکی رو به بالا است. با تغییر جهت اتصال صفحات، جهت نیروی الکتریکی عوض شده و شتاب جدید a'=15 m/s^2 می‌شود؛ سپس سرعت نهایی از v'^2=2a'Δx برابر √3 m/s به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 471,
+    "solution_page": 286,
+    "solution_text": "با قضیه کار-انرژی، کار نیروی الکتریکی در جابه‌جایی در راستای میدان برابر |q|Ed است و برابر تغییر انرژی جنبشی قرار داده می‌شود. از مقایسه دو مسیر AB و AM، نسبت AB/AM=(vB/vM)^2 و در نتیجه vB/vM=√2 به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 472,
+    "solution_page": 286,
+    "solution_text": "برای بار منفی بین دو صفحه، جهت نیروی الکتریکی خلاف میدان و هم‌جهت وزن است؛ بنابراین سرعت جسم تا توقف کاهش می‌یابد و در نقطه B برابر v0/2 می‌شود. کار نیروهای الکتریکی و وزن با Wt=ΔK نوشته شده و با داده‌ها سرعت اولیه v0=8 m/s به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0091.jpg",
+        "box": [
+          80,
+          1230,
+          520,
+          1535
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "بار منفی بین دو صفحه و مسیر A تا B با نیروهای mg و FE"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 473,
+    "solution_page": 286,
+    "solution_text": "کار نیروی الکتریکی برابر تغییر انرژی جنبشی است؛ پس E|qA|dA=E|qB|dB نوشته می‌شود. با qA=2qB، فاصله‌های طی‌شده و رابطه d=1/2at^2 مقایسه می‌شوند و از نسبت شتاب‌ها در قانون دوم نیوتن نتیجه می‌شود mA/mB=1/4.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 474,
+    "solution_page": 287,
+    "solution_text": "ابتدا فاصله‌های لازم از مثلث و زاویه 53 درجه محاسبه می‌شود: h=0.4 m و d=0.8 m. سپس کار وزن و نیروی الکتریکی با قضیه کار-انرژی نوشته شده و از mgh+E|q|d=1/2m(vB^2-vA^2)، سرعت vB=2√3 m/s به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0092.jpg",
+        "box": [
+          95,
+          360,
+          515,
+          650
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "گلوله آویزان در میدان یکنواخت و جابه‌جایی از A به B"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 475,
+    "solution_page": 287,
+    "solution_text": "از شکل خطوط میدان نتیجه گرفته می‌شود |q2|<|q1|، بار q1 مثبت و q2 منفی است. برای دو بار ناهمنام، نقطه صفر میدان خارج از فاصله دو بار و نزدیک‌تر به بار کوچک‌تر قرار می‌گیرد؛ بنابراین فقط نقطه D می‌تواند محل خنثی شدن میدان باشد.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0092.jpg",
+        "box": [
+          90,
+          740,
+          835,
+          1085
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو الگوی خطوط میدان اطراف دو بار"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 476,
+    "solution_page": 287,
+    "solution_text": "برای بارهای هم‌نام، نقطه صفر میدان بین دو بار و نزدیک‌تر به بار کوچک‌تر است و برای بارهای ناهمنام، روی امتداد خط واصل و خارج از فاصله دو بار قرار می‌گیرد. با توجه به الگوی خطوط میدان، پاسخ مربوط به حالت‌های 1، 3 و 4 است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 477,
+    "solution_page": 287,
+    "solution_text": "از تعداد خطوط میدان، q1=2|q2| نتیجه می‌شود و چون خطوط از q1 خارج و به q2 وارد می‌شوند، q1 مثبت و q2 منفی است. برای نقطه A خارج از فاصله دو بار، E1=E2 نوشته شده و با r1/r2=√2 و r1-r2=4 cm، مکان A برابر 4√2+8 cm به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0092.jpg",
+        "box": [
+          95,
+          1130,
+          760,
+          1510
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو بار روی محور x و نقطه A برای صفر شدن میدان"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 478,
+    "solution_page": 287,
+    "solution_text": "با توجه به اینکه انرژی پتانسیل الکتریکی هنگام جابه‌جایی در جهت نیروی الکتریکی کاهش و در خلاف آن افزایش می‌یابد، جهت خط میدان هر بار مشخص می‌شود. سپس علامت بارها و مسیر q0 بین نقاط A و B تحلیل شده و نتیجه گرفته می‌شود q2 مثبت است و انرژی پتانسیل در بخش اول کاهش و در بخش دوم افزایش می‌یابد.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0092.jpg",
+        "box": [
+          90,
+          1630,
+          770,
+          1870
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو بار q1 و q2، بار q0 و جهت نیروهای الکتریکی در مسیر A تا B"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 479,
+    "solution_page": 287,
+    "solution_text": "کار نیروی الکتریکی در جابه‌جایی بین دو نقطه از WE=FE d_parallel به دست می‌آید. با تجزیه مسیر شکسته به مؤلفه موازی میدان، AC'=5.9 cm محاسبه شده و سپس WE=E|q|AC' و ΔUE=-WE=-2.95×10^-3 J به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0092.jpg",
+        "box": [
+          95,
+          1995,
+          760,
+          2350
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر A به B به C در میدان یکنواخت و مؤلفه موازی جابه‌جایی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 480,
+    "solution_page": 288,
+    "solution_text": "چون میدان الکتریکی افقی و میدان گرانشی قائم است، کار هر میدان فقط به مؤلفه جابه‌جایی در راستای خودش وابسته است. تغییر انرژی پتانسیل الکتریکی از ΔUE=-WE و تغییر انرژی پتانسیل گرانشی از ΔUg=-Wg محاسبه شده و نسبت ΔUE/ΔUg=+25 به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0093.jpg",
+        "box": [
+          90,
+          160,
+          500,
+          445
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر مستطیلی در میدان الکتریکی افقی و گرانش قائم"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 481,
+    "solution_page": 288,
+    "solution_text": "برای بار منفی، جهت نیروی الکتریکی خلاف میدان است و تغییر انرژی پتانسیل فقط در جابه‌جایی‌های افقی رخ می‌دهد. کمینه انرژی پتانسیل در انتهای سمت چپ مسیر و بیشینه آن در انتهای سمت راست مسیر محاسبه شده و نسبت Umax/Umin=-9 به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0093.jpg",
+        "box": [
+          80,
+          780,
+          500,
+          1080
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مسیر نقاط A تا F در میدان یکنواخت افقی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 482,
+    "solution_page": 288,
+    "solution_text": "نیروی الکتریکی رو به بالا و وزن رو به پایین است. با FE=|q|E و W=mg، شتاب خالص رو به بالا از (FE-W)/m محاسبه می‌شود. سپس جابه‌جایی با d=1/2at^2 برابر 40 m به دست آمده و کار میدان WE=FEd=1.2 J و ΔUE=-1.2 J محاسبه می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 483,
+    "solution_page": 288,
+    "solution_text": "برای تبدیل انرژی پتانسیل الکتریکی به eV از 1 eV=1.6×10^-19 J استفاده می‌شود. در میدان ثابت، نسبت تغییر انرژی‌ها به نسبت |q|d و نسبت شتاب‌ها به |q|/m وابسته است. برای ذره دوم، کاهش انرژی 125 eV و زمان حرکت 400 ns به دست آمده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": [
+      "ادامه محاسبه در page_0094 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 484,
+    "solution_page": 289,
+    "solution_text": "جهت میدان و نیروی وارد بر الکترون نشان می‌دهد الکترون به سمت چپ و در خلاف میل طبیعی خود جابه‌جا می‌شود، پس انرژی پتانسیل الکتریکی افزایش می‌یابد. با ΔV=ΔU/q، بار کل q=-5 C و تعداد الکترون‌ها n=3.125×10^19 محاسبه شده است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0094.jpg",
+        "box": [
+          90,
+          500,
+          480,
+          760
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "الکترون در میدان یکنواخت و نقاط A و B"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 485,
+    "solution_page": 289,
+    "solution_text": "چون پتانسیل الکتریکی در جهت خطوط میدان کاهش می‌یابد، اگر VA>VB باشد، بار جابه‌جاشده از رابطه ΔV=ΔU/q تعیین می‌شود. با داده‌های حل چاپی، q=-5 C و سپس n=3.125×10^19 الکترون به دست آمده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 486,
+    "solution_page": 289,
+    "solution_text": "پتانسیل در جهت خطوط میدان کاهش می‌یابد؛ بنابراین از VA>VB نتیجه می‌شود VB=-250 V. با ΔV=ΔU/q و بار q=-2، تغییر انرژی پتانسیل ΔU=900 μJ محاسبه شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 487,
+    "solution_page": 289,
+    "solution_text": "در میدان الکتریکی غیریکنواخت، اختلاف پتانسیل برای فاصله‌های مساوی در جاهایی که میدان قوی‌تر است بیشتر می‌شود. از مقایسه VB-VC و VA-VB نتیجه گرفته می‌شود VC<0.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 488,
+    "solution_page": 289,
+    "solution_text": "ابتدا اختلاف پتانسیل A و C از جمع اختلاف پتانسیل‌های A تا B و B تا C محاسبه می‌شود: VA-VC=400 V. سپس تغییر انرژی پتانسیل بار هنگام انتقال از A به C با ΔU=q(VC-VA) برابر 200 μJ به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 489,
+    "solution_page": 289,
+    "solution_text": "از شکل خطوط میدان، q1 مثبت و q2 نیز مثبت تشخیص داده می‌شود. کار روی q0 در جابه‌جایی A تا B در جهت نیروی الکتریکی و در B تا C خلاف جهت آن است؛ بنابراین ΔUAB و ΔUBC با علامت‌های مخالف جمع شده و VC-VA=10 V حاصل می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0094.jpg",
+        "box": [
+          90,
+          1210,
+          520,
+          1500
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو بار مثبت، نقاط A، B و C و خطوط میدان"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 490,
+    "solution_page": 289,
+    "solution_text": "در حرکت ذره، مقاومت هوا خلاف حرکت و نیروی الکتریکی برای بار منفی خلاف جهت میدان است. با قضیه کار-انرژی، کار وزن، مقاومت و نیروی الکتریکی جمع می‌شود و از WE مقدار اختلاف پتانسیل بین نقطه A و زمین به دست می‌آید؛ نتیجه VA=400 V است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0094.jpg",
+        "box": [
+          85,
+          1650,
+          530,
+          2180
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "ذره بالای زمین در میدان الکتریکی و نیروهای وزن، مقاومت و الکتریکی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 491,
+    "solution_page": 289,
+    "solution_text": "برای ذره باردار در میدان الکتریکی و بدون نیروهای غیرپایستار، اصل پایستگی انرژی مکانیکی برقرار است و ΔE=0 نوشته می‌شود. بنابراین ΔUE=-ΔK و با ΔU=qΔV، اختلاف پتانسیل یا انرژی جنبشی مجهول از رابطه انرژی به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": [
+      "حل در page_0095 ادامه دارد."
+    ]
+  },
+  {
+    "question_number": 492,
+    "solution_page": 290,
+    "solution_text": "هسته اتم لیتیوم سه پروتون دارد، پس بار آن +3e است. از پایستگی انرژی مکانیکی qΔV=-1/2m(v^2-v0^2) استفاده شده و مقدار اختلاف پتانسیل |ΔV|=6 V محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 493,
+    "solution_page": 290,
+    "solution_text": "برای نقاط A و C و B و C، رابطه پایستگی انرژی مکانیکی نوشته می‌شود: qΔV=-1/2m(v^2-v0^2). با تقسیم دو رابطه و جایگذاری VA=120 V و VB=180 V، پتانسیل C برابر 100 V و سرعت ذره v=10 m/s به دست می‌آید.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 494,
+    "solution_page": 290,
+    "solution_text": "از پایستگی انرژی مکانیکی و رابطه ΔV=Ed برای میدان یکنواخت استفاده شده است. برای پروتون و ذره آلفا نسبت v^2 با q/m مقایسه می‌شود؛ چون qα=2qp و mα=4mp، نسبت vα/vp=√2/2 به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 495,
+    "solution_page": 290,
+    "solution_text": "با برخورد الکترون به صفحه مثبت، انرژی پتانسیل الکتریکی به انرژی جنبشی تبدیل می‌شود: 1/2mv^2=eΔV. از این رابطه v=8×10^6 m/s و سپس با حرکت با شتاب ثابت در میدان یکنواخت، زمان t=100 ns محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 496,
+    "solution_page": 290,
+    "solution_text": "بار q بین دو صفحه در تعادل است؛ با انتقال بار در میدان یکنواخت و اتصال صفحه‌ها به باتری، اختلاف پتانسیل ثابت می‌ماند. از E=ΔV/d نتیجه می‌شود با کاهش فاصله صفحه‌ها، میدان و نیروی الکتریکی افزایش می‌یابند و بار به سمت بالا می‌رود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0095.jpg",
+        "box": [
+          85,
+          1760,
+          450,
+          2070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "بار q بین صفحه‌های خازن متصل به باتری و نیروهای FE و W"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 497,
+    "solution_page": 290,
+    "solution_text": "ذره آلفا همان هسته هلیم است و بار آن +2e است. با |ΔUE|=q|ΔV|، اختلاف پتانسیل بین صفحه‌ها 2 V به دست می‌آید. سپس در میدان یکنواخت ΔV=Ed نوشته شده و فاصله صفحه‌ها d=5 mm محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 498,
+    "solution_page": 290,
+    "solution_text": "در میدان یکنواخت بین دو صفحه موازی، E=|ΔV|/d ثابت است و برای هر دو نقطه دلخواه رابطه (V+-V-)/d=(VA-VB)/d' برقرار است. با زمین بودن صفحه A و اختلاف پتانسیل باتری، پتانسیل M در دو حالت محاسبه می‌شود و پس از جابه‌جایی صفحه B، VM از -6 V به -5 V می‌رسد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0095.jpg",
+        "box": [
+          80,
+          2190,
+          520,
+          2390
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "صفحه‌های موازی خازن و نقاط A و B در میدان یکنواخت"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در page_0096 دیده می‌شود؛ box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 499,
+    "solution_page": 291,
+    "solution_text": "در میدان یکنواخت، اختلاف پتانسیل دو نقطه برابر E d_parallel است. از VO-VA=E(OA) مؤلفه Ex=50 V/m به دست می‌آید و چون میدان ممکن است مؤلفه عمودی هم داشته باشد، اندازه کل E از این مقدار بزرگ‌تر است.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0096.jpg",
+        "box": [
+          95,
+          500,
+          440,
+          850
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "بردار میدان با مؤلفه‌های Ex و Ey و نقطه A در دستگاه مختصات"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 500,
+    "solution_page": 291,
+    "solution_text": "با حرکت از B به A خلاف محور x، پتانسیل 4 V کاهش یافته و Ex=400 V/m به دست می‌آید. سپس از A به C نیز 1 cm خلاف محور y حرکت می‌کنیم و پتانسیل دوباره 4 V کاهش می‌یابد، پس Ey=200 V/m. چون پتانسیل در جهت میدان کاهش می‌یابد، میدان برابر E=-(400 i+200 j) V/m است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0096.jpg",
+        "box": [
+          80,
+          880,
+          500,
+          1310
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نقاط O، A، B و C با پتانسیل‌های معلوم روی محورهای مختصات"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 501,
+    "solution_page": 291,
+    "solution_text": "خطوط میدان با محورهای x و y زاویه 45 درجه می‌سازند و نقاط هم‌پتانسیل بر خطوط عمود بر میدان قرار دارند. با تصویر گرفتن فاصله A تا B روی راستای میدان، A'B'=√2 cm به دست آمده و اختلاف پتانسیل VA-VB=E(A'B')=50√2 V محاسبه می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0096.jpg",
+        "box": [
+          80,
+          1320,
+          590,
+          1710
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "خطوط میدان 45 درجه و نقاط A، B، A' و B'"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 502,
+    "solution_page": 291,
+    "solution_text": "در شکل، خطوط هم‌پتانسیل موازی خط y=x هستند؛ پس جهت میدان بر آن‌ها عمود و از پتانسیل بیشتر به کمتر است. فاصله AB با هندسه مختصات برابر 5√2 cm محاسبه می‌شود و از |ΔV|=E AB مقدار E=100√2 N/C و سپس بردار میدان E=-100(i+j) به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0096.jpg",
+        "box": [
+          80,
+          1740,
+          620,
+          2310
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "خطوط هم‌پتانسیل y=x و نقاط A و B در صفحه مختصات"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 503,
+    "solution_page": 292,
+    "solution_text": "برای گلوله آویزان در میدان یکنواخت، ابتدا جابه‌جایی افقی AB از L sin37 محاسبه می‌شود. با VA-VB=E(AB)، مقدار میدان E=300 N/C به دست می‌آید. سپس از tan37=FE/W وزن W=2 N و با R=√(FE^2+W^2)، کشش نخ T=2.5 N محاسبه می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0097.jpg",
+        "box": [
+          95,
+          150,
+          515,
+          520
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "گلوله آویزان با نخ در میدان افقی و نیروهای وزن و الکتریکی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 504,
+    "solution_page": 292,
+    "solution_text": "آزمایش فارادی برای گوی رسانا در ظرف رسانا یادآوری شده است: بار در سطح خارجی ظرف توزیع می‌شود و نقاط درون رسانا مانند A و B تحت تأثیر بار داخلی باقی نمی‌مانند؛ بنابراین qA=qB=0 است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 505,
+    "solution_page": 292,
+    "solution_text": "بار واردشده به پوسته کاملاً روی سطح خارجی منتقل می‌شود. برای بار داده‌شده، بار سطح داخلی و خارجی با qin و qout نوشته شده و در نهایت بار برداشته‌شده از پوسته برابر مقدار محاسبه‌شده در حل چاپی است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0097.jpg",
+        "box": [
+          95,
+          700,
+          455,
+          1070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "سه پوسته رسانای هم‌مرکز A، B و C و بارهای القایی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 506,
+    "solution_page": 292,
+    "solution_text": "بار Q روی پوسته A، بارهای القایی روی پوسته‌های B و C ایجاد می‌کند. با دنبال کردن بارهای القایی روی سطوح داخلی و خارجی پوسته‌ها، نسبت qin/qout=-3/2 به دست آمده است.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0097.jpg",
+        "box": [
+          95,
+          700,
+          455,
+          1070
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "پوسته‌های هم‌مرکز و توزیع بارهای Q و بارهای القایی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 507,
+    "solution_page": 292,
+    "solution_text": "بار +16 μC درون کره نارسانا باعث القای -16 μC روی سطح داخلی پوسته و +16 μC روی سطح خارجی می‌شود. با وجود بار اولیه -12 μC پوسته، بار خالص سطح خارجی +4 μC است. هنگام اتصال به زمین، بار +4 μC خنثی می‌شود و تعداد الکترون‌های منتقل‌شده n=2.5×10^13 محاسبه می‌گردد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0097.jpg",
+        "box": [
+          95,
+          1080,
+          455,
+          1435
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "کره نارسانا درون پوسته رسانا و اتصال پوسته به زمین"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 508,
+    "solution_page": 292,
+    "solution_text": "شکل توزیع بار القایی در پوسته و میدان ناشی از آن را نشان می‌دهد. با اتصال پوسته به زمین، بارهای مثبت از سطح خارجی به زمین می‌روند؛ وقتی میدان خارجی از بین برود، نیرویی هم برای انجام کار وجود ندارد.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0097.jpg",
+        "box": [
+          80,
+          1500,
+          555,
+          1845
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "پوسته رسانا، بار داخلی و خطوط میدان پیش از اتصال به زمین"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 509,
+    "solution_page": 292,
+    "solution_text": "در رسانای در تعادل الکترواستاتیکی، همه نقاط سطح رسانا هم‌پتانسیل‌اند؛ پس A' و C' هم‌پتانسیل با B هستند. با حرکت در جهت خطوط میدان پتانسیل کاهش می‌یابد، بنابراین VA و VC از VB کمترند. با مقایسه میدان میانگین در فاصله‌های مساوی AA' و CC'، نتیجه می‌شود VA<VC و در مجموع VB>VC>VA.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0097.jpg",
+        "box": [
+          80,
+          1940,
+          790,
+          2350
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "رسانای نامنظم با نقاط A، B، C و خطوط میدان اطراف آن"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 510,
+    "solution_page": 293,
+    "solution_text": "یکای ظرفیت خازن از چند رابطه بررسی شده است: C=Q/V، V=RI، q=It و U=Q^2/(2C). با تبدیل یکاها نتیجه می‌شود فاراد را می‌توان به صورت s/Ω یا A^2 s^4/(kg m^2) نیز نوشت و گزینه سازگار انتخاب شده است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 511,
+    "solution_page": 293,
+    "solution_text": "بار ذخیره‌شده روی صفحه‌های خازن همان بار مبادله‌شده با باتری است. از C=Q/V مقدار Q=12×9 C محاسبه و پس از تبدیل به A.h، کاهش بار باتری برابر 30 mA.h به دست می‌آید.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 512,
+    "solution_page": 293,
+    "solution_text": "برای خازن صفحه‌ای با دی‌الکتریک، C=κε0A/d و k=1/(4πε0) نوشته شده است. با جایگذاری شعاع صفحه و فاصله، ظرفیت C=0.75×10^-9 F=0.75 nF محاسبه می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 513,
+    "solution_page": 293,
+    "solution_text": "ظرفیت خازن در دو حالت فاصله اولیه d1 و فاصله جدید d2 نوشته می‌شود. با رابطه ΔC=κε0A(1/d2-1/d1) و جایگذاری داده‌های حل چاپی، فاصله اولیه صفحه‌ها d1=3 mm به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 514,
+    "solution_page": 293,
+    "solution_text": "با ثابت بودن حجم دی‌الکتریک و ثابت k و ε0، ظرفیت خازن با A/d و در نتیجه با 1/d^2 متناسب می‌شود. وقتی صفحات خازن دوم دورتر و فاصله آن دو برابر حالت اول باشد، نسبت ظرفیت‌ها C2/C1=1/4 به دست می‌آید.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 515,
+    "solution_page": 293,
+    "solution_text": "بار هر صفحه از Q=CV محاسبه می‌شود. سپس تعداد الکترون‌های متناظر با این بار از n=Q/e به دست می‌آید و برابر 7.5×10^13 می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 516,
+    "solution_page": 293,
+    "solution_text": "هنگام پرشدن خازن، صفحه متصل به پایانه منفی باتری الکترون اضافه و صفحه متصل به پایانه مثبت الکترون از دست می‌دهد. بنابراین اختلاف تعداد الکترون‌های آزاد پیش و پس از پرشدن خازن، دو برابر تعداد الکترون‌های مربوط به بار یک صفحه است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 517,
+    "solution_page": 293,
+    "solution_text": "در میدان یکنواخت خازن صفحه‌ای، Q=κε0AE استفاده می‌شود. با داده‌های حل چاپی برای هوا، بار ذخیره‌شده Q=1.8 nC به دست آمده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 518,
+    "solution_page": 293,
+    "solution_text": "اگر یکی از صفحه‌های خازن از محل دور شود، در محل بار صفر می‌شود و فقط میدان صفحه دیگر بر بار اثر می‌کند. چون میدان کل بین دو صفحه از جمع دو میدان صفحه‌هاست، با نصف شدن E، نیروی F=Eq نیز نصف می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 519,
+    "solution_page": 294,
+    "solution_text": "وقتی خازن از باتری جدا می‌شود، بار خازن ثابت می‌ماند. با افزایش فاصله صفحه‌ها، C کاهش و V=Q/C افزایش می‌یابد؛ ولی میدان بین صفحه‌ها E=q/(κε0A) با ثابت بودن Q، κ و A تغییر نمی‌کند.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 520,
+    "solution_page": 294,
+    "solution_text": "ابتدا ظرفیت اولیه از C1=ε0A/d1 و بار اولیه از Q1=C1V محاسبه می‌شود. هنگام افزایش فاصله در حالی که خازن به باتری متصل است، ولتاژ ثابت می‌ماند و Q∝C∝1/d است؛ بنابراین تغییر بار ΔQ=2.36 nC به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 521,
+    "solution_page": 294,
+    "solution_text": "برای ذره معلق بین صفحه‌ها، FE=mg و در نتیجه E=5×10^3 N/C محاسبه می‌شود. با V=Ed اختلاف پتانسیل 500 V و سپس از C=Q/V ظرفیت 2 μF به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0099.jpg",
+        "box": [
+          95,
+          640,
+          500,
+          930
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "ذره باردار بین صفحه‌های خازن و نیروهای mg و FE"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 522,
+    "solution_page": 294,
+    "solution_text": "اختلاف پتانسیل صفحه‌های خازن از ΔV=Q/C برابر 25 V محاسبه می‌شود. تغییر انرژی پتانسیل الکترون از ΔU=qΔV=-eΔV به دست می‌آید و علامت منفی نشان‌دهنده کاهش انرژی پتانسیل الکترون است.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 523,
+    "solution_page": 294,
+    "solution_text": "اگر جرقه بزرگ‌تر شود، انرژی ذخیره‌شده در خازن افزایش یافته است. با U=Q^2/(2C)، اگر بدون تغییر Q انرژی زیاد شود باید ظرفیت کاهش یابد؛ بنابراین بر اساس C=κε0A/d باید A یا κ کاهش یا d افزایش پیدا کند.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 524,
+    "solution_page": 294,
+    "solution_text": "با افزایش 20 درصدی ولتاژ و کاهش 20 درصدی بار ذخیره‌شده، V2=6/5 V1 و Q2=4/5 Q1 است. از رابطه U=1/2QV نسبت U2/U1=24/25=96/100 به دست می‌آید؛ پس ΔU/U1=-4/100 و علامت منفی نشان‌دهنده کاهش انرژی ذخیره‌شده خازن است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 525,
+    "solution_page": 294,
+    "solution_text": "با رابطه U=Q^2/(2C)، افزایش انرژی خازن بر حسب Q2 و Q1 نوشته می‌شود. از مقدار تغییر انرژی، Q1=50 μC و Q2=60 μC به دست می‌آید؛ سپس با ΔQ=CΔV، افزایش ولتاژ برابر 0.5 V محاسبه می‌شود.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 526,
+    "solution_page": 294,
+    "solution_text": "ابتدا C=Q1/V1 برای حالت اولیه نوشته می‌شود. سپس با افزایش ولتاژ و انرژی، از ΔU=1/2 C(V2^2-V1^2) مقدار V1=7.5 V و V2=22.5 V به دست می‌آید؛ در پایان بار ثانویه Q2=CV2=75 μC است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 527,
+    "solution_page": 295,
+    "solution_text": "تعداد الکترون‌های اضافی روی صفحه منفی با بار صفحه متناسب است، پس Q2/Q1=2. با افزایش فاصله خالی به 1.5d، ظرفیت جدید C2=2/3 C1 می‌شود. از U=Q^2/(2C)، نسبت U2/U1=6 و با ΔU=30 μJ، انرژی اولیه U1=6 μJ محاسبه و به GeV تبدیل می‌شود.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 528,
+    "solution_page": 295,
+    "solution_text": "با بیرون کشیدن میکا و جایگزینی هوا، ثابت دی‌الکتریک از 5 به 1 می‌رسد و ظرفیت به یک‌پنجم مقدار اول کاهش می‌یابد. چون خازن از باتری جدا شده است، بار ثابت می‌ماند؛ پس کار لازم برابر افزایش انرژی ذخیره‌شده W=Q^2/(2C2)-Q^2/(2C1) است و 40 mJ به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 529,
+    "solution_page": 295,
+    "solution_text": "با افزایش 25 درصدی فاصله صفحه‌ها، نسبت ظرفیت‌ها از C∝1/d برابر C2/C1=4/5 می‌شود. چون خازن به باتری متصل است، ولتاژ ثابت می‌ماند و ΔU=1/2V^2(C2-C1) محاسبه می‌شود. مقدار انرژی کاهش‌یافته در 250 ms تخلیه شده و توان متوسط P=|ΔU|/t=1.6 mW به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 530,
+    "solution_page": 295,
+    "solution_text": "با جابه‌جایی بار مثبت 4 mC از صفحه منفی به صفحه مثبت، بار ذخیره‌شده خازن افزایش می‌یابد. تغییر انرژی در دو مرحله با U=Q^2/(2C) نوشته شده و دو معادله برای Q و C تشکیل می‌شود؛ با تقسیم روابط، Q=12.5 mC و سپس C=2 μF به دست می‌آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": [
+      "ادامه حل در page_0101 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 531,
+    "solution_page": 296,
+    "solution_text": "در خازن منزوی، بار ثابت است. با وارد کردن دی‌الکتریک، ظرفیت افزایش و ولتاژ V=Q/C کاهش می‌یابد. از U=1/2QV نتیجه می‌شود انرژی ذخیره‌شده نیز متناسب با ولتاژ کاهش می‌یابد؛ بنابراین نموداری که کاهش U با کاهش V را نشان می‌دهد درست است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 532,
+    "solution_page": 296,
+    "solution_text": "از نمودار انرژی برحسب بار و رابطه U=Q^2/(2C)، با برابر بودن انرژی‌های خوانده‌شده نسبت ظرفیت‌ها به صورت CB/CA=(QB/QA)^2=9 به دست می‌آید. سپس با C=κε0A/d و A∝D^2 و dA=4dB، نسبت قطرها DB/DA=3/2 محاسبه می‌شود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0101.jpg",
+        "box": [
+          90,
+          860,
+          420,
+          1240
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار انرژی ذخیره‌شده U برحسب بار Q برای دو خازن"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 533,
+    "solution_page": 296,
+    "solution_text": "از نمودار V-Q و رابطه U=1/2QV، اختلاف انرژی دو خازن برابر اختلاف مساحت دو مثلث زیر نمودارهاست. با Q=4.5 mC و اختلاف پتانسیل 8 V، ΔU=-18 mJ به دست می‌آید؛ روش دوم نیز همین نتیجه را با مساحت ناحیه رنگی نشان می‌دهد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0101.jpg",
+        "box": [
+          90,
+          1180,
+          450,
+          1620
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار V برحسب Q برای دو خازن و ناحیه اختلاف انرژی"
+      }
+    ],
+    "review_notes": [
+      "box شکل local و تقریبی است."
+    ]
+  },
+  {
+    "question_number": 534,
+    "solution_page": 296,
+    "solution_text": "انرژی اولیه از U1=Q1^2/(2C)=20 μJ محاسبه می‌شود. با بستن کلید و افزایش ولتاژ خازن به 5 V، بار جدید Q2=CV2=50 μC و انرژی جدید U2=125 μJ است. پس انرژی ذخیره‌شده 105 μJ و بار خازن 30 μC افزایش یافته و کار باتری 150 μJ است؛ بنابراین 45 μJ به گرما تبدیل می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  }
+]

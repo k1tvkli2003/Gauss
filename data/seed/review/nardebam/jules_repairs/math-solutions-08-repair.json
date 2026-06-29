@@ -1,0 +1,108 @@
+{
+  "task_id": "math-solutions-08",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1609,
+      "solution_page": "page_0150.jpg",
+      "solution_text": "روش اول: نقطه $P$ بر روی عمودمنصف $AB$ قرار دارد، بنابراین $PA = PB$.\n$PA = PB \\Rightarrow \\sqrt{\\frac{k^2}{4} + 9} = \\sqrt{(\\frac{k}{2} + 2)^2 + 1}$\n$\\Rightarrow \\frac{k^2}{4} + 9 = \\frac{k^2}{4} + 2k + 5 \\Rightarrow k=2$\nروش دوم: می‌توانیم معادله عمودمنصف $AB$ را به دست آورده و مختصات $P$ را درون آن قرار دهیم که در این سؤال توصیه نمی‌شود.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1610,
+      "solution_page": "page_0150.jpg",
+      "solution_text": "اگر قرینه $A(1, -5)$ را نسبت به خط $x + 3y = 6$ نقطه $A'(\\alpha, \\beta)$ بنامیم، خط مذکور عمودمنصف $AA'$ خواهد بود. بنابراین شیب $AA'$ قرینه معکوس شیب این خط یعنی برابر $3$ می‌باشد.\n$m_{AA'} = \\frac{\\beta + 5}{\\alpha - 1} = 3 \\Rightarrow 3\\alpha - \\beta = 8 \\quad (1)$\nخط عمودمنصف از وسط $AA'$ می‌گذرد.\n$M(\\frac{\\alpha+1}{2}, \\frac{\\beta-5}{2}) \\xrightarrow{x + 3y = 6} \\frac{\\alpha+1}{2} + \\frac{3(\\beta-5)}{2} = 6 \\Rightarrow \\alpha + 3\\beta = 26 \\quad (2)$\n$(1), (2) \\Rightarrow \\alpha = 5 \\Rightarrow \\beta = 7 \\Rightarrow A'(5, 7)$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1611,
+      "solution_page": "page_0150.jpg",
+      "solution_text": "اضلاع $AB$ و $AC$ بر یکدیگر عمودند.\n$m_{AB} \\times m_{AC} = -1 \\Rightarrow \\frac{\\beta+1}{0-\\alpha} \\times \\frac{-2+1}{0-\\alpha} = -1 \\Rightarrow \\beta+1 = \\alpha^2 \\Rightarrow \\beta = \\alpha^2 - 1 \\quad (1)$\nمساحت $ABC$ برابر $5$ است.\n$S_{ABC} = \\frac{1}{2}AH \\times BC = \\frac{1}{2}\\alpha(\\beta+2) = 5 \\Rightarrow \\alpha(\\beta+2) = 10 \\xrightarrow{(1)} \\alpha(\\alpha^2-1+2) = 10 \\Rightarrow \\alpha^3+\\alpha-10 = 0 \\Rightarrow (\\alpha-2)(\\alpha^2+2\\alpha+5) = 0 \\Rightarrow \\alpha=2$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            450,
+            520,
+            560,
+            640
+          ],
+          "placement": "solution",
+          "alt": "نمودار مثلث ABC و نقطه A روی محور x",
+          "filename": "page_0150.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1612,
+      "solution_page": "page_0150.jpg",
+      "solution_text": "مختصات $A$ را $(\\alpha, 0)$ و مختصات $B$ را $(0, \\beta)$ در نظر می‌گیریم.\n$S_{AOB} = 24 \\Rightarrow \\frac{\\alpha\\beta}{2} = 24 \\Rightarrow \\alpha\\beta = 48$\n$m_{AB} = \\frac{-\\beta}{\\alpha} \\Rightarrow AB : y = -\\frac{\\beta}{\\alpha}x + \\beta$\nنقطه $(3, 3)$ بر روی پاره‌خط $AB$ قرار دارد، بنابراین:\n$3 = -\\frac{3\\beta}{\\alpha} + \\beta \\xrightarrow{\\alpha = \\frac{48}{\\beta}} 3 = \\frac{-3\\beta}{\\frac{48}{\\beta}} + \\beta \\Rightarrow 3 = -\\frac{\\beta^2}{16} + \\beta \\Rightarrow \\beta^2 - 16\\beta + 48 = 0 \\Rightarrow (\\beta-4)(\\beta-12) = 0$\n$\\Rightarrow \\begin{cases} \\beta=4 \\\\ \\beta=12 \\end{cases} \\Rightarrow \\begin{cases} \\alpha=12 \\\\ \\alpha=4 \\end{cases} \\Rightarrow \\begin{cases} m=-\\frac{\\beta}{\\alpha}=-\\frac{1}{3} \\\\ m=-\\frac{\\beta}{\\alpha}=-3 \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1613,
+      "solution_page": "page_0150.jpg",
+      "solution_text": "دو رأس $B$ و $C$ بر محور طول‌ها واقع‌اند، بنابراین عرض نقطه $A$ برابر ارتفاع $AH$ می‌باشد؛ یعنی $AH = 6$.\n$S = \\frac{AH \\times BC}{2} = 39 \\Rightarrow \\frac{6 \\times BC}{2} = 39 \\Rightarrow BC = 13$\n$\\Rightarrow |\\beta - 6| = 13 \\Rightarrow \\begin{cases} \\beta = 19 & \\text{غ ق ق} \\\\ \\beta = -7 & \\checkmark \\end{cases}$\nاضلاع $AB$ و $AC$ بر هم عمودند.\n$m_{AB} \\times m_{AC} = -1 \\Rightarrow \\frac{6-0}{\\alpha-\\beta} \\times \\frac{6-0}{\\alpha-6} = -1$\n$\\Rightarrow (\\alpha-6)(\\alpha-\\beta) = -36 \\Rightarrow (\\alpha-6)(\\alpha+7) = -36 \\Rightarrow \\alpha^2+\\alpha-6=0 \\Rightarrow \\begin{cases} \\alpha = -3 & \\text{غ ق ق} \\\\ \\alpha = 2 \\end{cases} \\Rightarrow \\alpha+\\beta = -5$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            810,
+            520,
+            920,
+            710
+          ],
+          "placement": "solution",
+          "alt": "مثلث ABC با ارتفاع AH و رأس‌های روی محور x",
+          "filename": "page_0150.jpg"
+        }
+      ],
+      "review_notes": [
+        "Solution spans from bottom right to top left column."
+      ]
+    },
+    {
+      "question_number": 1614,
+      "solution_page": "page_0150.jpg",
+      "solution_text": "ابتدا معادله خط گذرا بر $AB$ را که از دو نقطه $(3, 0)$ و $(0, 2)$ عبور می‌کند می‌نویسیم:\n$y = -\\frac{2}{3}x + 2$\nخط گذرا بر $AC$ بر خط فوق عمود است بنابراین شیب آن برابر $\\frac{3}{2}$ است. هم‌چنین از نقطه $(-1, 0)$ عبور می‌کند، در نتیجه معادله آن به صورت زیر است:\n$y - 0 = \\frac{3}{2}(x+1) \\Rightarrow y = \\frac{3}{2}x + \\frac{3}{2} \\Rightarrow C(0, \\frac{3}{2})$\nمحل تقاطع دو خط به دست آمده $A$ می‌باشد.\n$\\begin{cases} y = -\\frac{2}{3}x + 2 \\\\ y = \\frac{3}{2}x + \\frac{3}{2} \\end{cases} \\Rightarrow \\frac{3}{2}x + \\frac{3}{2} = -\\frac{2}{3}x + 2 \\Rightarrow \\frac{13}{6}x = \\frac{1}{2} \\Rightarrow x = \\frac{3}{13}$\nطول ارتفاع $AH$ برابر طول نقطه $A$ یعنی $\\frac{3}{13}$ است.\n$BC = 2 - \\frac{3}{2} = \\frac{1}{2}$\n$S_{ABC} = \\frac{AH \\times BC}{2} = \\frac{\\frac{3}{13} \\times \\frac{1}{2}}{2} = \\frac{3}{52}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1615,
+      "solution_page": "page_0150.jpg",
+      "solution_text": "خطی که از نقطه $(0, \\frac{4}{3})$ می‌گذرد را $d$ و خط عمود بر آن را $d'$ می‌نامیم.\n$m_d = -\\frac{3}{4} \\Rightarrow m_{d'} = \\frac{4}{3}$\nخط $d'$ از نقطه $(2, 0)$ عبور می‌کند.\nمعادله $d' : y - 0 = \\frac{4}{3}(x - 2) \\Rightarrow y = \\frac{4}{3}x - \\frac{8}{3}$\nعرض از مبدأ خط $d'$ برابر $-\\frac{8}{3}$ است، بنابراین اضلاع قائم مثلث رنگی برابر $2$ و $\\frac{8}{3}$ می‌باشد.\n$S = \\frac{2 \\times \\frac{8}{3}}{2} = \\frac{8}{3}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1616,
+      "solution_page": "page_0150.jpg",
+      "solution_text": "در مثلث با رئوس $B$، $A$ و $C$ مساحت مثلث برابر است با:\n$$ \\begin{matrix} x_A & x_B & x_C & x_A \\\\ y_A & y_B & y_C & y_A \\end{matrix} $$\n$S = \\frac{1}{2} |(x_A y_B + x_B y_C + x_C y_A) - (x_A y_C + x_C y_B + x_B y_A)|$\n$= \\frac{1}{2} |((2 \\times 5) + (-1 \\times 0) + (-2 \\times 1)) - ((2 \\times 0) + (-2 \\times 5) + (-1 \\times 1))|$\n$= \\frac{1}{2} |(10 + 0 - 2) - (0 - 10 - 1)| = \\frac{1}{2} (8 + 11) = 9/5$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            750,
+            90,
+            800,
+            270
+          ],
+          "placement": "solution",
+          "alt": "نمودار محاسبه مساحت با مختصات",
+          "filename": "page_0150.jpg"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

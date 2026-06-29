@@ -1,0 +1,7 @@
+{
+  "task_id": "physics-topic-07",
+  "subject": "physics",
+  "topic_key": "magnetism_induction",
+  "recommendations": "Based on the visual evidence from the source images (`page_0017.jpg` and `page_0018.jpg`), Topic 07 (`magnetism_induction`) ends exactly at question 805 on `page_0018.jpg`. There are no questions 806 or 807 in this topic's image set. Questions 806 and 807 should be removed from Topic 07 and belong strictly to Topic 08 (`one_dimensional_motion`).",
+  "questions": []
+}

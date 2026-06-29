@@ -1,0 +1,962 @@
+[
+  {
+    "question_number": 352,
+    "solution_page": 257,
+    "stated_correct_option": 3,
+    "classic_solution": "برای یخ ابتدا گرمای گرم شدن تا صفر، ذوب، گرم شدن آب تا 100 و تبخیر نصف جرم نوشته شده است. با Q=PΔt جرم یخ m=1.5 kg به دست می‌آید؛ سپس برای آلومینیوم Q'=m'c'Δθ=54 kJ و با توان P'=9/8 kW زمان Δt'=48 s محاسبه شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 353,
+    "solution_page": 257,
+    "stated_correct_option": 1,
+    "classic_solution": "از نمودارها نتیجه گرفته می‌شود تغییر دمای آب در تماس با A از B بیشتر است، پس Q آب در حالت A بیشتر است. چون گرمای گرفته‌شده آب برابر گرمای ازدست‌رفته فلز است و جرم دو فلز برابر است، از |m c Δθ| نتیجه می‌شود c_A>c_B.",
+    "media_regions": [
+      {
+        "page_file": "page_0062.jpg",
+        "box": [170, 1210, 805, 1585],
+        "placement": "solution",
+        "alt": "دو نمودار دما-زمان برای تعادل آب با جسم A و جسم B"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 354,
+    "solution_page": 257,
+    "stated_correct_option": 3,
+    "classic_solution": "در تعادل گرمایی، آلومینیوم و آهن گرما از دست می‌دهند و آب همان مجموع گرماها را می‌گیرد؛ بنابراین Q آب از هر یک از دو گرمای ازدست‌رفته بزرگ‌تر است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 355,
+    "solution_page": 257,
+    "stated_correct_option": 1,
+    "classic_solution": "برای دو جسم با گرمای ویژه یکسان رابطه m1(θe-θ1)+m2(θe-θ2)=0 نوشته شده است. از 3m1-2m2=0 و m1+m2=35 نتیجه می‌شود m2=21 kg و m1=14 kg.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 356,
+    "solution_page": 257,
+    "stated_correct_option": 2,
+    "classic_solution": "طبق صورت سؤال فقط 0.8Q_B به جسم A می‌رسد؛ از Q_A+0.8Q_B=0 و جایگذاری جرم‌ها و دماها، 5θe=380 و در نتیجه θe=76°C به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 357,
+    "solution_page": 257,
+    "stated_correct_option": 3,
+    "classic_solution": "دمای تعادل بر حسب فارنهایت به سلسیوس تبدیل شده و رابطه تعادل گرمایی دو جرم آب نوشته می‌شود. با تبدیل اختلاف دماهای فارنهایت به سلسیوس و m1=36 g، مقدار x=60°F به دست آمده است.",
+    "media_regions": [],
+    "review_notes": ["ادامه حل در page_0063 دیده می‌شود."]
+  },
+  {
+    "question_number": 358,
+    "solution_page": 258,
+    "stated_correct_option": 2,
+    "classic_solution": "با شرط صفر بودن مجموع گرماهای مبادله‌شده بین آب‌های 100°C و 40°C، ابتدا m'=2m به دست می‌آید. سپس با افزودن آب 100°C به مخلوط، دمای نهایی از 4θ'e=280 محاسبه و θ'e=70°C می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 359,
+    "solution_page": 258,
+    "stated_correct_option": 1,
+    "classic_solution": "دمای تعادل دو زیروند به صورت θe=(C1θ1+C2θ2)/(C1+C2) نوشته شده است. مقدار گرمای مبادله‌شده برای هر طرف برابر C1C2/(C1+C2)|θ2-θ1| است و با |ΔF|=45°F اختلاف دما 25°C و |Q1|=|Q2|=2.5 kJ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 360,
+    "solution_page": 258,
+    "stated_correct_option": 3,
+    "classic_solution": "از نمودار θ بر حسب Q شیب‌ها برابر 1/C گرفته شده‌اند، پس C1=Q'/24 و C2=Q'/16. با تعادل دو جسم، (θe-16)/24+(θe-41)/16=0 و θe=31°C حاصل می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 361,
+    "solution_page": 258,
+    "stated_correct_option": 2,
+    "classic_solution": "چگالی آب در بازه دمایی ثابت فرض شده، پس جرم آب ورودی هر شیر با حجم آن متناسب است. با V=V_i t_i نسبت دبی‌ها و سپس نسبت جرم‌ها به صورت m2=3m1/4 به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": ["ادامه حل در page_0064 دیده می‌شود."]
+  },
+  {
+    "question_number": 362,
+    "solution_page": 259,
+    "stated_correct_option": 3,
+    "classic_solution": "برای تعادل A و B و سپس B و C دو رابطه گرمایی نوشته می‌شود: cB=3cA/2 و cB=7cC/2. از مقایسه آن‌ها cA=7cC/3 و با تعادل A و C دمای نهایی حدود 50°C به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 363,
+    "solution_page": 259,
+    "stated_correct_option": 2,
+    "classic_solution": "ابتدا از رابطه انبساط حجمی ΔV=V0(3α)Δθ تغییر دما محاسبه می‌شود و Δθ=25°C به دست می‌آید. پس θe=45°C و گرمای مبادله‌شده آب Q=mcΔθ برابر 588 kJ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 364,
+    "solution_page": 259,
+    "stated_correct_option": 3,
+    "classic_solution": "در دمای تعادل، قطر کره و حلقه برابر می‌شوند. با d_Al(1+α_AlΔθ_Al)=d_Cu(1+α_CuΔθ_Cu)، θe≈67°C و سپس از پایستگی انرژی جرم آلومینیوم حدود 17.2 g به دست آمده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 365,
+    "solution_page": 259,
+    "stated_correct_option": 4,
+    "classic_solution": "گرمای لازم برای ذوب قالب یخ در دو حالت برابر است، اما در حالت دوم چون جرم آب گرم بیشتر است تغییر دمای آب کمتر خواهد بود؛ پس گزینه‌ای انتخاب می‌شود که کاهش دما در حالت دوم را کمتر نشان دهد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 366,
+    "solution_page": 259,
+    "stated_correct_option": 2,
+    "classic_solution": "برای حالت اول تعادل گرمایی آب و یخ نوشته می‌شود و m آب اولیه 1400 g به دست می‌آید. پس از ذوب یخ، جرم آب 1600 g می‌شود و برای افزودن قالب دوم معادله جدید تعادل تا دمای حدود 44.5°C نوشته شده است.",
+    "media_regions": [],
+    "review_notes": ["ادامه حل در page_0065 دیده می‌شود."]
+  },
+  {
+    "question_number": 367,
+    "solution_page": 259,
+    "stated_correct_option": 2,
+    "classic_solution": "جرم یخ مخلوط m1 و جرم آب مخلوط m' گرفته شده است. با تعادل گرمایی، m(2-90)+[m·80+(m+m')·2]=0 و m'=3m به دست می‌آید؛ بنابراین سهم آب اولیه m/(m+m')=25٪ است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 368,
+    "solution_page": 260,
+    "stated_correct_option": 3,
+    "classic_solution": "برای ذوب چاهارم یخ دوم، اختلاف جرم آب و یخ از رابطه پایستگی جرم و انرژی نوشته می‌شود. با ترکیب معادلات، جرم یخ اولیه و آب اولیه به ترتیب 6 g و 2 g به دست آمده و اختلاف جرم‌ها 4 g است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 369,
+    "solution_page": 260,
+    "stated_correct_option": 1,
+    "classic_solution": "برای جرم‌های m1 و m2 آب و مخلوط، پایستگی انرژی شامل گرم شدن آب، ذوب یخ و گرم شدن آب حاصل نوشته می‌شود. با داده‌های گرمای ویژه و نهان، نسبت جرم‌ها به صورت m1=3m2/12 نتیجه شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 370,
+    "solution_page": 260,
+    "stated_correct_option": 2,
+    "classic_solution": "برای گرم کردن و ذوب برف، ابتدا جرم برف ذوب‌شده تا رسیدن به تعادل محاسبه می‌شود. سپس بیشینه جرم برفی که می‌تواند با آب تبادل گرما کند از جمع جرم آب، یخ و برف تعیین شده و مقدار نهایی بررسی می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 371,
+    "solution_page": 260,
+    "stated_correct_option": 4,
+    "classic_solution": "برای تغییر محیط چاه از دمای زیر صفر تا صفر، گرمای آزادشده آب برابر Q1=m'c'Δθ و سپس گرمای انجماد Qf=m'Lf نوشته شده است. با مقایسه گرماها نتیجه می‌شود محیط تا صفر گرم می‌شود و جرم آب منجمد تعیین می‌گردد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 372,
+    "solution_page": 260,
+    "stated_correct_option": 3,
+    "classic_solution": "برای مخلوط آب و یخ با دمای تعادل صفر، معادله m1c(10-0)+(m2Lf+m2c(0-(-20)))=0 نوشته شده و با حل آن مقدار θe حدود 11.7°C برای مرحله بعدی به دست آمده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 373,
+    "solution_page": 260,
+    "stated_correct_option": 1,
+    "classic_solution": "دماهای اولیه آب و آلومینیوم در دو مقیاس مقایسه می‌شوند. با تبدیل فارنهایت به سلسیوس و استفاده از رابطه تعادل گرمایی، دمای نهایی در مقیاس سلسیوس و فارنهایت بررسی شده و گزینه اول تأیید می‌شود.",
+    "media_regions": [],
+    "review_notes": ["ادامه حل در page_0066 دیده می‌شود."]
+  },
+  {
+    "question_number": 374,
+    "solution_page": 261,
+    "stated_correct_option": null,
+    "classic_solution": "در نمودار، با رسیدن دمای مس به 10°C مجموع گرمایی که آب و مس می‌دهند برابر در نظر گرفته می‌شود. برای مرحله بعد و دمای 0°C نیز معادله گرمایی نوشته شده و با ترکیب دو رابطه، جرم یخ ذوب‌شده محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 375,
+    "solution_page": 261,
+    "stated_correct_option": null,
+    "classic_solution": "حداقل مقدار جیوه در حالتی است که تمام یخ ذوب شده و محصول نهایی آب 0°C باشد. معادله گرمایی برای جیوه و یخ نوشته و جرم لازم جیوه به دست آمده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 376,
+    "solution_page": 261,
+    "stated_correct_option": null,
+    "classic_solution": "برای کمینه آب لازم، فرض شده تمام یخ منجمد شده و آب در 0°C به تعادل برسد. با m1cΔθ و m2Lf جرم کمینه آب از معادله پایستگی انرژی به دست آمده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 377,
+    "solution_page": 261,
+    "stated_correct_option": null,
+    "classic_solution": "کمترین جرم فلز زمانی است که پس از تبادل گرما همه یخ ذوب و آب نهایی در صفر درجه باشد. رابطه m1c(20-0)+m2Lf=0 نوشته و نسبت جرم‌ها محاسبه شده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 378,
+    "solution_page": 261,
+    "stated_correct_option": null,
+    "classic_solution": "با فروبردن جسم داغ در مخلوط آب و یخ، گرمای لازم برای ذوب بخشی از یخ برابر |Q|=mLf گرفته شده و از داده‌ها جرم یخ ذوب‌شده برابر 64 g نتیجه شده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 379,
+    "solution_page": 261,
+    "stated_correct_option": null,
+    "classic_solution": "پس از ورود فلز به مخلوط آب و یخ صفر درجه، نخست بررسی می‌شود آیا همه یخ ذوب می‌شود یا نه. با پایستگی انرژی و جمع جرم‌ها، جرم جسم یا جرم یخ باقی‌مانده محاسبه شده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 380,
+    "solution_page": 261,
+    "stated_correct_option": null,
+    "classic_solution": "دماهای اولیه دو آب در مقیاس فارنهایت به سلسیوس تبدیل می‌شوند. با تعادل گرمایی و در نظر گرفتن تبادل گرما با یخ و آب، جرم مجهول از رابطه Q1+Q2+Q3=0 به دست آمده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 381,
+    "solution_page": 262,
+    "stated_correct_option": null,
+    "classic_solution": "جرم بخار و آب اولیه به کمک اختلاف جرم در پایان و رابطه پایستگی جرم نوشته می‌شود. سپس با معادله گرمایی شامل میعان و سرد شدن بخار، جرم‌های اولیه تعیین شده‌اند.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 382,
+    "solution_page": 262,
+    "stated_correct_option": null,
+    "classic_solution": "برای دستگاه گرمایی، قانون پایستگی انرژی با جمله‌های ذوب یخ، گرم شدن آب حاصل، میعان بخار و تبادل گرما با ظرف نوشته شده است. جرم یخ از حل معادله به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 383,
+    "solution_page": 262,
+    "stated_correct_option": null,
+    "classic_solution": "از چگالی و حجم برای تعیین جرم یخ و آب استفاده شده است. سپس چون حالت نهایی مخلوط آب و یخ است، دمای تعادل 0°C فرض شده و انرژی لازم برای ذوب/گرم شدن محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 384,
+    "solution_page": 262,
+    "stated_correct_option": null,
+    "classic_solution": "در بررسی داده‌های دمایی، گزینه‌ای انتخاب می‌شود که با قانون پایستگی انرژی و جهت تبادل گرما سازگار باشد؛ دمای نهایی باید بین دماهای مؤثر و با ظرفیت‌های گرمایی متناسب باشد.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 385,
+    "solution_page": 262,
+    "stated_correct_option": 1,
+    "classic_solution": "با مقایسه تعریف ظرفیت گرمایی و ضریب هدایتی/رسانش، نتیجه گرفته می‌شود هرچه رسانندگی یا ظرفیت گرمایی جسم نسبت به محیط بیشتر باشد آهنگ انتقال گرما متفاوت است؛ گزینه اول با روند فیزیکی سازگار معرفی شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 386,
+    "solution_page": 262,
+    "stated_correct_option": 3,
+    "classic_solution": "برای ظرف‌های رسانا و عایق، انتقال گرما از مسیرهای متفاوت بررسی شده است. پاسخ با توجه به نقش دمای محیط و نوع ظرف در افزایش یا کاهش آهنگ تبادل گرما تعیین می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 387,
+    "solution_page": 262,
+    "stated_correct_option": 1,
+    "classic_solution": "پدیده همرفت با چگالی مایع گرم و سرد تحلیل شده است: گرم شدن باعث انبساط و کاهش چگالی و جابه‌جایی لایه‌های مایع می‌شود. گزینه مربوط به حرکت طبیعی سیال انتخاب شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 388,
+    "solution_page": 263,
+    "stated_correct_option": 1,
+    "classic_solution": "پس از داده‌های اتمی، بار کل یون از q=-ne نوشته می‌شود. برای یون X با بار منفی، تعداد الکترون‌های اضافه محاسبه و جرم یا بار نهایی با تعداد نوترون‌ها/پروتون‌ها مقایسه شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 389,
+    "solution_page": 263,
+    "stated_correct_option": 3,
+    "classic_solution": "برای 1 cm^3 آب، جرم 1 g و n=1/18 mol گرفته شده است. تعداد مولکول‌ها N=nN_A و سپس تعداد الکترون‌های مولکول آب محاسبه می‌شود تا بار کل الکترون‌های موجود در نمونه به دست آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 390,
+    "solution_page": 263,
+    "stated_correct_option": 1,
+    "classic_solution": "بار کل نقره از تعداد اتم‌ها و تعداد الکترون‌ها نوشته شده است. با در نظر گرفتن 50 برابر شدن بار الکتریکی و q=Ne، بار مورد نظر بر حسب کولن محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 391,
+    "solution_page": 263,
+    "stated_correct_option": null,
+    "classic_solution": "اندازه بار جسم پس از تبادل الکترون‌ها با Δq=-ne محاسبه می‌شود. سپس بارهای نهایی q1 و q2 و نسبت یا مقدار مطلق آن‌ها از رابطه‌های جمع بار و تغییر بار به دست آمده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 392,
+    "solution_page": 263,
+    "stated_correct_option": 2,
+    "classic_solution": "با دریافت یا از دست دادن الکترون، تغییر بار دو جسم نوشته می‌شود. از Δq=-ne و داده‌های بار اولیه، بار نهایی اجسام و نسبت قدرمطلق بارها محاسبه شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 393,
+    "solution_page": 263,
+    "stated_correct_option": 3,
+    "classic_solution": "سه کره رسانا به ترتیب با هم تماس داده می‌شوند. با برابر شدن بار کره‌های هم‌اندازه پس از هر تماس، بارهای نهایی به صورت q'_A=q'_B=q'_C و سپس q''_B=(q'_B+q_C)/2 محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0068.jpg",
+        "box": [115, 1850, 790, 2190],
+        "placement": "solution",
+        "alt": "سه کره رسانای A و B و C روی پایه با بارهای اولیه"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 394,
+    "solution_page": 264,
+    "stated_correct_option": 3,
+    "classic_solution": "تأثیر میله پلاستیکی باردار بر الکتروسکوپ نزدیک می‌شود: القای بار باعث توزیع بار ناهمنام در کلاهک و تغییر بازشدگی ورقه‌ها می‌شود، اما چون تماس رخ نمی‌دهد نوع بار الکتروسکوپ عوض نمی‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0069.jpg",
+        "box": [245, 225, 475, 555],
+        "placement": "solution",
+        "alt": "الکتروسکوپ و میله باردار نزدیک کلاهک"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 395,
+    "solution_page": 264,
+    "stated_correct_option": 1,
+    "classic_solution": "با تماس کره‌ها، بارها برابر تقسیم می‌شوند. ابتدا بار B پس از تماس با C و سپس پس از تماس با A نوشته می‌شود و از روابط q'_B و q''_B مقدار q=16 μC و در نهایت q'_C=-8 μC به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 396,
+    "solution_page": 264,
+    "stated_correct_option": 3,
+    "classic_solution": "با نزدیک کردن میله به الکتروسکوپ خنثی، بارهای منفی از کلاهک دور و در ورقه‌ها بیشتر می‌شوند، پس ورقه‌ها باز می‌شوند. با اتصال زمین و سپس جدا کردن، بار باقی‌مانده الکتروسکوپ از نوع مخالف میله است.",
+    "media_regions": [
+      {
+        "page_file": "page_0069.jpg",
+        "box": [245, 900, 505, 1235],
+        "placement": "solution",
+        "alt": "الکتروسکوپ کنار میله باردار و جابه‌جایی بارها بر اثر القا"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 397,
+    "solution_page": 264,
+    "stated_correct_option": 4,
+    "classic_solution": "در الکتروسکوپ مثبت، نزدیک کردن یک جسم باردار می‌تواند بازشدگی ورقه‌ها را بسته به علامت جسم افزایش یا کاهش دهد. چون داده‌های مسئله فقط کاهش فاصله ورقه‌ها را نشان می‌دهد، علامت جسم از روی القا تعیین می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 398,
+    "solution_page": 264,
+    "stated_correct_option": 1,
+    "classic_solution": "فاصله دو بار از مختصات داده‌شده با r=sqrt((x2-x1)^2+(y2-y1)^2) محاسبه می‌شود. سپس در قانون کولن F=k|q1q2|/r^2 جایگذاری شده و نیروی الکتریکی بر حسب نیوتن به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0069.jpg",
+        "box": [220, 1310, 820, 1565],
+        "placement": "solution",
+        "alt": "کادر نکته قانون کولن و تبدیل واحدهای μC و cm"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 399,
+    "solution_page": 264,
+    "stated_correct_option": null,
+    "classic_solution": "نیروی بین دو بار طبق قانون کولن با فاصله و بارهای داده‌شده محاسبه می‌شود. از برابر بودن اندازه نیروها برای دو جسم و F=ma، شتاب یکی از ذرات به دست آمده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 400,
+    "solution_page": 264,
+    "stated_correct_option": null,
+    "classic_solution": "پس از انتقال بخشی از بار بین دو کره، بارهای جدید q و q' نوشته می‌شوند. با مقایسه F و F' در قانون کولن، نیروی جدید نسبت به نیروی اولیه محاسبه و علامت کاهش/افزایش مشخص شده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 401,
+    "solution_page": 265,
+    "stated_correct_option": 1,
+    "classic_solution": "طبق راهبرد حل، چون فاصله کره‌ها عوض نمی‌شود، برای بیشینه شدن نیرو باید حاصل‌ضرب بارها بیشینه شود. بار کل ثابت است و بارها به طور مساوی تقسیم می‌شوند؛ تغییر بارهای A و B به nC محاسبه شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 402,
+    "solution_page": 265,
+    "stated_correct_option": 2,
+    "classic_solution": "دو حالت نسبت نیروها با قانون کولن نوشته شده است. با ثابت بودن k و تبدیل نسبت فاصله‌ها، نیروهای نامعلوم F و F' از نسبت |q1q2|/r^2 به دست آمده‌اند.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 403,
+    "solution_page": 265,
+    "stated_correct_option": 3,
+    "classic_solution": "فرض می‌شود x درصد بار از یک کره به دیگری منتقل شود. بارهای جدید q'_1 و q'_2 نوشته و نسبت F'/F تشکیل می‌شود؛ با حل معادله درجه‌دوم مقدار x تعیین شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 404,
+    "solution_page": 265,
+    "stated_correct_option": 3,
+    "classic_solution": "چون دو کره همدیگر را جذب می‌کنند، بارهای آن‌ها ناهمنام است. پس از تماس بارها برابر می‌شوند و با مقایسه F' و F از قانون کولن، نسبت نیروی پس از تماس به قبل از تماس محاسبه شده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 405,
+    "solution_page": 265,
+    "stated_correct_option": 4,
+    "classic_solution": "برای کره‌های رسانای هم‌اندازه، پس از تماس بارها برابر می‌شود. از F=k|q1q2|/r^2 و F'=k|(q1+q2)/2|^2/r^2، مجموع و حاصل‌ضرب بارها محاسبه شده و دو مقدار ممکن برای بارها به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 406,
+    "solution_page": 266,
+    "stated_correct_option": null,
+    "classic_solution": "پس از تماس کره‌ها، نیروی جدید با جایگذاری بار متوسط و فاصله جدید در قانون کولن نوشته می‌شود. با حل معادله نسبت نیروها، فاصله لازم x محاسبه و گزینه متناظر انتخاب شده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 407,
+    "solution_page": 266,
+    "stated_correct_option": 1,
+    "classic_solution": "تعادل گلوله باردار آویزان با شرط FE=mg نوشته شده است. پس از تماس کره‌ها بارها نصف مجموع می‌شوند و با نسبت FE/FE'، فاصله d' محاسبه و حدود 30 cm به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0071.jpg",
+        "box": [175, 760, 420, 1105],
+        "placement": "solution",
+        "alt": "گلوله باردار آویزان در کنار بار نقطه‌ای و شرط تعادل FE=mg"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 408,
+    "solution_page": 266,
+    "stated_correct_option": 3,
+    "classic_solution": "برای آونگ باردار در میدان ناشی از q1، نیروی کشش نخ باید بیشینه شود. از T_max=F+mg و سپس F=k|q1q2|/r^2 بار q1 به دست آمده و علامت آن از جهت نیرو تعیین شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0071.jpg",
+        "box": [180, 1145, 425, 1505],
+        "placement": "solution",
+        "alt": "گلوله آویزان، نیروی وزن، کشش نخ و نیروی الکتریکی ناشی از بار q1"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 409,
+    "solution_page": 266,
+    "stated_correct_option": null,
+    "classic_solution": "در شکل متقارن، نیروهای الکتریکی دو بار پایینی بر بار بالایی تجزیه می‌شوند. مؤلفه‌های افقی خنثی و مؤلفه‌های قائم با وزن و کشش مقایسه شده‌اند تا اندازه نیروی الکتریکی و سپس بار محاسبه شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0071.jpg",
+        "box": [135, 1570, 600, 2145],
+        "placement": "solution",
+        "alt": "آرایش مثلثی دو بار پایینی و یک بار آویزان با نیروهای T، W و FE"
+      }
+    ],
+    "review_notes": ["ادامه حل در page_0072 دیده می‌شود؛ شماره گزینه با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 410,
+    "solution_page": 267,
+    "stated_correct_option": 2,
+    "classic_solution": "قانون هوک FE=kx و شرط تعادل FE=mg برای فنر استفاده شده است. در حالت بعد، نیروی کشسان با نیروی کولنی برابر می‌شود و از آن بار q≈1.5 μC به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0072.jpg",
+        "box": [160, 290, 545, 515],
+        "placement": "solution",
+        "alt": "کادر نکته قانون هوک برای فنر و نیروی الکتریکی"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 411,
+    "solution_page": 267,
+    "stated_correct_option": 1,
+    "classic_solution": "با تماس کره C با A و سپس B، بارهای جدید q'_C و q'_B از میانگین بارها به دست می‌آید. در نقطه وسط، نیروهای وارد بر C از سوی A و B کم می‌شوند و نیروی خالص 12 N محاسبه شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0072.jpg",
+        "box": [120, 645, 760, 1015],
+        "placement": "solution",
+        "alt": "سه بار A و C و B روی یک خط و نقطه میانی برای محاسبه نیروی خالص"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 412,
+    "solution_page": 267,
+    "stated_correct_option": null,
+    "classic_solution": "برای برآیند دو نیروی هم‌خط، ابتدا نسبت نیروها با قانون کولن تشکیل می‌شود. با توجه به داده q2 و فاصله‌ها، نسبت بارها به دست می‌آید و q1=4.5 q2 نتیجه شده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 413,
+    "solution_page": 267,
+    "stated_correct_option": null,
+    "classic_solution": "در حالت دوم، بارها مستقل‌اند و با جابه‌جایی نسبت نیروهای F1 و F2 تغییر می‌کند. از جمع برداری دو نیرو و روابط (I) و (II)، نسبت نیروها و در نتیجه نسبت بارها محاسبه شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0072.jpg",
+        "box": [110, 1530, 860, 2285],
+        "placement": "solution",
+        "alt": "دو چیدمان خطی برای بارهای q1 و q2 و نیروهای F1 و F2"
+      }
+    ],
+    "review_notes": ["ادامه حل در page_0073 دیده می‌شود؛ شماره گزینه با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 414,
+    "solution_page": 268,
+    "stated_correct_option": 2,
+    "classic_solution": "برای دو شکل خطی، نیروی وارد بر بارها از سوی دو بار دیگر با قانون کولن نوشته می‌شود. با جمع برداری نیروهای هم‌جهت و خلاف‌جهت، نسبت F'_T/F_T به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0073.jpg",
+        "box": [150, 140, 910, 935],
+        "placement": "solution",
+        "alt": "دو آرایش خطی بارها با فاصله‌های d و 2d و بردارهای نیرو"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 415,
+    "solution_page": 268,
+    "stated_correct_option": 3,
+    "classic_solution": "با تغییر علامت یکی از بارها، جهت نیروهای وارد بر q3 در دو شکل تعیین می‌شود. سپس با قانون کولن و مقایسه فاصله‌ها، اندازه برآیند نیرو در شکل‌های (الف) و (ب) مقایسه شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0073.jpg",
+        "box": [125, 970, 835, 1585],
+        "placement": "solution",
+        "alt": "دو آرایش خطی بارها برای مقایسه برآیند نیرو بر q3"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 416,
+    "solution_page": 268,
+    "stated_correct_option": 4,
+    "classic_solution": "در دو شکل، از تشابه فاصله‌ها و قانون کولن استفاده شده است. ابتدا بار q1 با تغییر 25 درصدی به q'_1 تبدیل می‌شود، سپس برآیند نیروهای دو طرف محاسبه و نیروی خالص 50 N به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0073.jpg",
+        "box": [120, 1665, 780, 2305],
+        "placement": "solution",
+        "alt": "دو شکل خطی با بارهای q1 و q2 و نیروهای خالص روی محور x"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 417,
+    "solution_page": 269,
+    "stated_correct_option": null,
+    "classic_solution": "چون بارها ناهمنام‌اند، نیروهای دو بار بزرگ و کوچک بر بار میانی در جهت‌های مخالف نوشته می‌شود. با جمع برداری، نیروی خالص وارد بر q1 برابر منفی نیروی خالص حالت متناظر به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0074.jpg",
+        "box": [105, 95, 815, 380],
+        "placement": "solution",
+        "alt": "سه بار روی یک خط و بردارهای نیروی وارد بر بار میانی"
+      }
+    ],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد؛ box تقریبی است."]
+  },
+  {
+    "question_number": 418,
+    "solution_page": 269,
+    "stated_correct_option": null,
+    "classic_solution": "نقطه خنثی بیرون دو بار قرار می‌گیرد، زیرا دو بار ناهمنام‌اند. با برابری F1=F2 و نسبت فاصله‌ها، بار مجهول و سپس نیروی خالص در حالت دوم محاسبه شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0074.jpg",
+        "box": [120, 480, 845, 880],
+        "placement": "solution",
+        "alt": "دو شکل خطی برای تعیین نقطه خنثی و نیروی خالص"
+      }
+    ],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد؛ box تقریبی است."]
+  },
+  {
+    "question_number": 419,
+    "solution_page": 269,
+    "stated_correct_option": 4,
+    "classic_solution": "اگر بار میانی راست‌تر شود، نیروی خالص بر آن برابر صفر است. سپس با حرکت بارها و مقایسه نیروهای چپ و راست، نسبت نیروی خالص جدید به اولیه 12/5 محاسبه شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0074.jpg",
+        "box": [125, 1010, 860, 1495],
+        "placement": "solution",
+        "alt": "دو آرایش خطی بارها و نیروهای چپ و راست روی بار میانی"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 420,
+    "solution_page": 269,
+    "stated_correct_option": null,
+    "classic_solution": "برای بارهای q1 و q2 و q3 روی یک خط، شرط تعادل بار میانی با برابری نیروها نوشته می‌شود. از نسبت فاصله‌ها و بارها، r12 و r23 و سپس بار q1=36 μC به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0074.jpg",
+        "box": [120, 1600, 830, 2265],
+        "placement": "solution",
+        "alt": "سه بار خطی با فاصله‌های r12 و r23 برای تعادل بار میانی"
+      }
+    ],
+    "review_notes": ["ادامه حل در page_0075 دیده می‌شود؛ شماره گزینه با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 421,
+    "solution_page": 270,
+    "stated_correct_option": null,
+    "classic_solution": "چون نیروی خالص روی q2 صفر است، نیروهای ناشی از q1 و q3 برابر و خلاف‌جهت‌اند. با مقایسه نسبت نیروهای F12 و F23 و استفاده از فاصله‌ها، q1=-27 μC و سپس نیروی وارد بر q3 محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0075.jpg",
+        "box": [125, 260, 875, 1000],
+        "placement": "solution",
+        "alt": "بارهای q1، q2 و q3 روی محور x و بردارهای نیرو"
+      }
+    ],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد؛ box تقریبی است."]
+  },
+  {
+    "question_number": 422,
+    "solution_page": 270,
+    "stated_correct_option": null,
+    "classic_solution": "برای شکل‌های (الف) و (ب)، برابری یا نسبت نیروهای F12 و F13 بر اساس فاصله‌ها نوشته می‌شود. از بیشینه بودن نیروی خالص روی یکی از بارها، نسبت بارها و سپس نسبت F_T(1)/F_T(2) محاسبه شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0075.jpg",
+        "box": [115, 1020, 845, 2220],
+        "placement": "solution",
+        "alt": "دو شکل خطی بارهای q1، q2 و q3 با بردارهای F12 و F13"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 423,
+    "solution_page": 271,
+    "stated_correct_option": null,
+    "classic_solution": "چون بردارهای نیرو روی محور x و خلاف‌جهت‌اند، مؤلفه‌های نیروی وارد بر بار میانی جداگانه نوشته می‌شود. با حل دستگاه حاصل از جمع و تفاضل نیروها، q1=12 μC و q3=-3 μC به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0076.jpg",
+        "box": [110, 120, 845, 890],
+        "placement": "solution",
+        "alt": "بارها روی محور x و دو نیروی مخالف روی بار q2"
+      }
+    ],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد؛ box تقریبی است."]
+  },
+  {
+    "question_number": 424,
+    "solution_page": 271,
+    "stated_correct_option": null,
+    "classic_solution": "نقطه‌ای روی محور x برای صفر شدن نیروی خالص انتخاب شده است. برابری اندازه دو نیروی کولنی از سوی q1 و q2 نوشته و مقدار x=10 cm به دست می‌آید؛ سپس در شکل دوم نیروی خالص محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0076.jpg",
+        "box": [115, 930, 840, 1705],
+        "placement": "solution",
+        "alt": "دو آرایش خطی بارها و نقطه x برای نیروی خالص صفر"
+      }
+    ],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد؛ box تقریبی است."]
+  },
+  {
+    "question_number": 425,
+    "solution_page": 271,
+    "stated_correct_option": null,
+    "classic_solution": "برای دو شکل، برآیند نیروهای وارد بر q3 برداری محاسبه شده است. در شکل اول نیروهای عمود با مؤلفه‌های 40 N و 30 N جمع می‌شوند؛ در شکل دوم با تقارن، برآیند روی محور x برابر -30 N به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0076.jpg",
+        "box": [115, 1780, 805, 2350],
+        "placement": "solution",
+        "alt": "دو شکل: آرایش قائم-افقی و آرایش خطی برای جمع برداری نیروها"
+      }
+    ],
+    "review_notes": ["ادامه حل در page_0077 دیده می‌شود؛ شماره گزینه با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 426,
+    "solution_page": 272,
+    "stated_correct_option": null,
+    "classic_solution": "در دو مثلث قائم‌الزاویه، نیروهای وارد بر بار رأس به مؤلفه‌های افقی و قائم تجزیه می‌شوند. از tan و نسبت فاصله‌ها، اندازه بار و سپس برآیند نیرو تعیین می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0077.jpg",
+        "box": [115, 95, 785, 900],
+        "placement": "solution",
+        "alt": "دو شکل مثلثی با بارها و مؤلفه‌های نیرو برای تجزیه برداری"
+      }
+    ],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد؛ box تقریبی است."]
+  },
+  {
+    "question_number": 427,
+    "solution_page": 272,
+    "stated_correct_option": 2,
+    "classic_solution": "در شکل مثلثی، نسبت مؤلفه‌های نیرو از tanθ=Fy/Fx و قانون کولن نوشته می‌شود. با محاسبه r=sqrt(r_x^2+r_y^2) و تجزیه نیرو، q2=1.5 μC به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0077.jpg",
+        "box": [110, 1010, 780, 1745],
+        "placement": "solution",
+        "alt": "مثلث بارها با نیروهای F1 و F2 و زاویه θ"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 428,
+    "solution_page": 272,
+    "stated_correct_option": null,
+    "classic_solution": "نیروهای وارد بر بار واقع بر محور y از طرف بارهای A و B نوشته می‌شود. با نسبت F_A/F_B و فاصله‌ها، معادله‌ای برای y به دست آمده و مختصات محل بار تعیین می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0077.jpg",
+        "box": [115, 1835, 820, 2290],
+        "placement": "solution",
+        "alt": "بار q3 روی محور y و دو بار روی محور x با فاصله‌های rA و rB"
+      }
+    ],
+    "review_notes": ["ادامه حل در page_0078 دیده می‌شود؛ شماره گزینه با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 429,
+    "solution_page": 273,
+    "stated_correct_option": null,
+    "classic_solution": "با شرط اینکه نیروی خالص بر q2 راستای محور x نداشته باشد، مؤلفه‌های افقی نیروها حذف می‌شوند. سپس از قانون کولن برای دو فاصله برابر/نامساوی، q1=8 μC و q3=-8 μC نتیجه شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0078.jpg",
+        "box": [115, 355, 830, 1160],
+        "placement": "solution",
+        "alt": "آرایش چهار بار و تجزیه نیروها روی محورهای x و y"
+      }
+    ],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد؛ box تقریبی است."]
+  },
+  {
+    "question_number": 430,
+    "solution_page": 273,
+    "stated_correct_option": 4,
+    "classic_solution": "سه شرط مسئله برای هم‌خطی، نسبت اندازه نیروها و هم‌جهتی بردارها بررسی شده است. از tanθ و رابطه F2/F1 با فاصله‌ها، q1=-256 nC و q2=-108 nC محاسبه شده‌اند.",
+    "media_regions": [
+      {
+        "page_file": "page_0078.jpg",
+        "box": [110, 1195, 815, 1900],
+        "placement": "solution",
+        "alt": "شکل مستطیلی چهار بار و شرط‌های برداری F1 و F2"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 431,
+    "solution_page": 273,
+    "stated_correct_option": null,
+    "classic_solution": "در مستطیل، نیروی وارد بر بار پایین راست به مؤلفه‌های افقی و قائم تجزیه شده است. از F(x) و F(y) ابتدا q1=144 μC و q3=-128 μC به دست می‌آید و سپس نیروی کل روی بار میانی محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0078.jpg",
+        "box": [115, 1960, 820, 2360],
+        "placement": "solution",
+        "alt": "مستطیل چهار بار با نیروهای F1، F2 و مؤلفه‌های Fx و Fy"
+      },
+      {
+        "page_file": "page_0079.jpg",
+        "box": [115, 95, 820, 900],
+        "placement": "solution",
+        "alt": "ادامه محاسبه مؤلفه‌های نیرو در همان مستطیل چهار بار"
+      }
+    ],
+    "review_notes": ["boxها local و تقریبی‌اند."]
+  },
+  {
+    "question_number": 432,
+    "solution_page": 274,
+    "stated_correct_option": 4,
+    "classic_solution": "برای بیشینه بودن نیروی خالص بر q2 شروط لازم روی علامت و اندازه بارها بررسی شده است. در شکل‌های (الف) و (ب)، مؤلفه‌های نیروها با فیثاغورس جمع می‌شوند و بزرگی نیروی خالص برابر 40 N به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0079.jpg",
+        "box": [115, 910, 840, 1645],
+        "placement": "solution",
+        "alt": "دو مربع بارها و مثلث برداری نیروها برای تعیین بیشینه نیروی خالص"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 433,
+    "solution_page": 274,
+    "stated_correct_option": 1,
+    "classic_solution": "در آرایش مربعی، نیروهای وارد بر بار گوشه از سوی بارهای مجاور و قطری محاسبه می‌شود. با فرض Q مجهول و مقایسه F_T و F'_T، مقدار Q=(√2/2)q و در حالت دیگر نسبت نیروها به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0079.jpg",
+        "box": [110, 1710, 840, 2360],
+        "placement": "solution",
+        "alt": "مربع بارها و بردارهای نیرو روی یکی از گوشه‌ها"
+      },
+      {
+        "page_file": "page_0080.jpg",
+        "box": [115, 95, 840, 1170],
+        "placement": "solution",
+        "alt": "ادامه محاسبه نیرو در مربع و حالت دوم بارهای گوشه"
+      }
+    ],
+    "review_notes": ["boxها local و تقریبی‌اند."]
+  },
+  {
+    "question_number": 434,
+    "solution_page": 275,
+    "stated_correct_option": 1,
+    "classic_solution": "مطابق شکل، دو نیروی وارد بر q0 از طرف q1 و q2 به مؤلفه‌ها تجزیه می‌شوند. با برابری مؤلفه‌ها و رابطه فیثاغورس، |Q|=2|q| و سپس |q|=5 μC به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0080.jpg",
+        "box": [110, 1220, 830, 2050],
+        "placement": "solution",
+        "alt": "آرایش چند بار پیرامون q0 و تجزیه نیروها به مؤلفه‌های x و y"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  },
+  {
+    "question_number": 435,
+    "solution_page": 275,
+    "stated_correct_option": 2,
+    "classic_solution": "فاصله‌ها با مثلث قائم‌الزاویه و sin و cos نشان داده می‌شوند: c=2a/3 و b=√2 a/3. سپس نیروهای F13 و F23 با قانون کولن محاسبه و برآیند آن‌ها روی محورهای x و y جمع می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0080.jpg",
+        "box": [115, 2050, 840, 2375],
+        "placement": "solution",
+        "alt": "بخش نخست شکل هندسی فاصله‌ها برای نیروهای کولنی"
+      },
+      {
+        "page_file": "page_0081.jpg",
+        "box": [115, 120, 825, 670],
+        "placement": "solution",
+        "alt": "ادامه شکل هندسی و بردارهای نیروی F13 و F23"
+      }
+    ],
+    "review_notes": ["boxها local و تقریبی‌اند."]
+  },
+  {
+    "question_number": 436,
+    "solution_page": 276,
+    "stated_correct_option": 2,
+    "classic_solution": "مفهوم میدان الکتریکی توضیح داده شده است: میدان ناشی از بارهای مثبت و منفی با نیروی وارد بر بار آزمون مثبت سنجیده می‌شود و جهت میدان همان جهت نیروی وارد بر بار مثبت است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 437,
+    "solution_page": 276,
+    "stated_correct_option": null,
+    "classic_solution": "از تعریف میدان الکتریکی E=F/q استفاده می‌شود و با برابر گرفتن میدان در دو فاصله، نسبت فاصله‌ها به دست می‌آید. سپس با E=k|q|/r^2 مقدار بار q=3 μC محاسبه شده است.",
+    "media_regions": [],
+    "review_notes": ["شماره گزینه در تصویر با قطعیت خوانده نشد."]
+  },
+  {
+    "question_number": 438,
+    "solution_page": 276,
+    "stated_correct_option": 3,
+    "classic_solution": "با توجه به نمودار و نسبت فاصله‌ها، از E∝|q|/r^2 رابطه بین q1 و q2 نوشته می‌شود. دو حالت علامت بار بررسی شده و با حل معادلات، مقدار q1 و q2 و علامت آن‌ها تعیین می‌گردد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 439,
+    "solution_page": 276,
+    "stated_correct_option": null,
+    "classic_solution": "برای دو نقطه A و B در دستگاه مختصات، فاصله‌ها از بار منبع محاسبه می‌شوند. میدان در A از E_A=k|q|/r_A^2 و میدان در B با تجزیه به مؤلفه‌های x و y به دست می‌آید؛ در پایان E_B=(160 i+120 j) N/C نوشته شده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0081.jpg",
+        "box": [115, 1830, 855, 2365],
+        "placement": "solution",
+        "alt": "دستگاه مختصات، نقاط A و B و بردارهای میدان الکتریکی"
+      }
+    ],
+    "review_notes": ["box شکل local و تقریبی است."]
+  }
+]

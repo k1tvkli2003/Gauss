@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -37,9 +38,9 @@ fun Timer(resetKey: Any, modifier: Modifier = Modifier) {
     }
 
     val color = when {
-        seconds > KONKUR_SECONDS_PER_QUESTION * 2 -> GaussColors.NeonRed
-        seconds > KONKUR_SECONDS_PER_QUESTION -> GaussColors.NeonAmber
-        else -> GaussColors.NeonGreen
+        seconds > KONKUR_SECONDS_PER_QUESTION * 2 -> MaterialTheme.colorScheme.error
+        seconds > KONKUR_SECONDS_PER_QUESTION -> GaussColors.Warning
+        else -> GaussColors.Success
     }
     val mm = (seconds / 60).toString().padStart(2, '0')
     val ss = (seconds % 60).toString().padStart(2, '0')
@@ -47,7 +48,7 @@ fun Timer(resetKey: Any, modifier: Modifier = Modifier) {
     Row(
         modifier
             .clip(RoundedCornerShape(10.dp))
-            .background(GaussColors.Card)
+            .background(MaterialTheme.colorScheme.surfaceVariant)
             .padding(horizontal = 12.dp, vertical = 6.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -58,6 +59,6 @@ fun Timer(resetKey: Any, modifier: Modifier = Modifier) {
             fontWeight = FontWeight.SemiBold,
             fontSize = 14.sp,
         )
-        Text("  / ${KONKUR_SECONDS_PER_QUESTION}s", color = GaussColors.Muted, fontSize = 12.sp)
+        Text("  / ${KONKUR_SECONDS_PER_QUESTION}s", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
     }
 }

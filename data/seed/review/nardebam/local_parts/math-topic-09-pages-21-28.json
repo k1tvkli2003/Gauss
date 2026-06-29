@@ -1,0 +1,951 @@
+{
+  "task_id": "math-topic-09-pages-21-28",
+  "subject": "math",
+  "topic_key": "limits_continuity",
+  "questions": [
+    {
+      "question_number": 1047,
+      "question_page": 21,
+      "question_text": "تابع $f(x)=\\begin{cases}\\dfrac{\\left|\\dfrac{1}{\\sqrt{1-4x}}-1\\right|}{2x} & x\\ne0\\\\ k & x=0\\end{cases}$ در نقطه $x=0$ فقط از چپ پیوسته است. $k$ چه عددی است؟",
+      "options": ["$1$", "$-1$", "$\\frac{1}{4}$", "$-\\frac{1}{4}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1048,
+      "question_page": 21,
+      "question_text": "تابع $y=[\\cos x]$ در کدام نقطه زیر فقط پیوستگی چپ دارد؟",
+      "options": ["$x=0$", "$x=\\frac{\\pi}{2}$", "$x=\\pi$", "$x=\\frac{3\\pi}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1049,
+      "question_page": 21,
+      "question_text": "تابع $f(x)=\\sin\\frac{\\pi x}{4}\\left(\\cos \\pi\\frac{[x]}{2}\\right)$ از لحاظ پیوستگی در $x=4$ و $x=6$ چگونه است؟",
+      "options": ["پیوسته - پیوسته", "پیوسته - ناپیوسته", "ناپیوسته - پیوسته", "ناپیوسته - ناپیوسته"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1050,
+      "question_page": 21,
+      "question_text": "تابع $f(x)=\\begin{cases}\\dfrac{\\cos 2x}{1-\\tan^2 x} & \\frac{\\pi}{2}<x<\\frac{3\\pi}{4}\\\\ a\\sin2x & \\frac{3\\pi}{4}\\le x<\\pi\\end{cases}$ به ازای کدام مقدار $a$ در $x=\\frac{3\\pi}{4}$ پیوسته است؟",
+      "options": ["$2$", "$\\frac{1}{2}$", "$-\\frac{1}{2}$", "$-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1051,
+      "question_page": 21,
+      "question_text": "تابع $f(x)=\\dfrac{a[x]-x}{3x-2[x]}$ در $x=2$ پیوسته است. $a$ کدام است؟",
+      "options": ["$\\frac{1}{3}$", "$\\frac{2}{3}$", "$-2$", "$-1$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1052,
+      "question_page": 21,
+      "question_text": "تابع $f(x)=\\dfrac{12x+k}{3-[6x]}$ در $x=\\frac{1}{6}$ پیوسته است. $f(\\frac{1}{3})$ کدام است؟",
+      "options": ["$2$", "$-2$", "$3$", "$-3$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1053,
+      "question_page": 21,
+      "question_text": "تابع $f(x)=[x](a[-x]-2)$ در $x=-2$ پیوستگی چپ دارد. حد راست تابع در $x=-2$ کدام است؟",
+      "options": ["$1$", "$-1$", "$-2$", "$2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1054,
+      "question_page": 21,
+      "question_text": "تابع $f$ در $x=a$ پیوسته و تابع $g$ در این نقطه ناپیوسته است. کدام تابع زیر در $x=a$ حتما ناپیوسته است؟",
+      "options": ["$g^2-f$", "$\\frac{f}{g}$", "$f^2-g$", "$gf^2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1055,
+      "question_page": 21,
+      "question_text": "اگر $f(x)=\\begin{cases}2x-a & x>3\\\\ x & x\\le3\\end{cases}$ و $g(x)=\\begin{cases}x-1 & x>3\\\\ \\frac{a}{x}-2 & x\\le3\\end{cases}$ باشد، به ازای کدام مقدار $a$ تابع $f-g$ در $x=3$ پیوسته است؟",
+      "options": ["$3$", "$-\\frac{3}{5}$", "$4$", "$-\\frac{1}{5}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1056,
+      "question_page": 21,
+      "question_text": "اگر $f(x)=\\begin{cases}x^2-5x & x\\ge-1\\\\ 3x+1 & x<-1\\end{cases}$ باشد، مقدار $k$ کدام باشد تا $|f(x)-k|$ در $x=-1$ پیوسته باشد؟",
+      "options": ["$2$", "$-2$", "$\\frac{1}{2}$", "$-\\frac{1}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1057,
+      "question_page": 21,
+      "question_text": "تابع $f(x)=[x^2]-[x]^2$ در نقطه $x=n$، $(n\\in\\mathbb{N})$ پیوسته است. $f(\\frac{3n+2}{2})$ کدام است؟",
+      "options": ["$1$", "$2$", "$3$", "صفر"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1058,
+      "question_page": 21,
+      "question_text": "با توجه به نمودار تابع $f$، در کدام نقطه تابع $[f]$ حد دارد ولی پیوسته نیست؟",
+      "options": ["$x=1$", "$x=2$", "$x=4$", "$x=6$"],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [195, 1795, 765, 2145],
+          "placement": "stem",
+          "alt": "نمودار تابع موجی با نقاط مشخص‌شده در $x=1,2,4,6$ و خطوط راهنمای افقی $y=1$ و $y=2$"
+        }
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1059,
+      "question_page": 21,
+      "question_text": "با توجه به نمودار تابع $f$، پیوستگی تابع $[-f(x)]$ در نقطه $x=k$ چگونه است؟",
+      "options": ["فقط پیوستگی راست دارد.", "فقط پیوستگی چپ دارد.", "پیوسته است.", "نه پیوستگی راست دارد و نه پیوستگی چپ"],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [205, 2075, 610, 2295],
+          "placement": "stem",
+          "alt": "نمودار سهمی‌مانند با خط راهنمای $x=k$ و نقاط باز و بسته نزدیک $y=-2$ و $y=-3$"
+        }
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1060,
+      "question_page": 21,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. اگر تابع $y=\\dfrac{x^2+ax+b}{f(x)}$ فقط در یک نقطه از $\\mathbb{R}$ ناپیوسته باشد، $b-a$ کدام نمی‌تواند باشد؟",
+      "options": ["$5$", "$7$", "$9$", "$11$"],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [190, 2255, 600, 2475],
+          "placement": "stem",
+          "alt": "نمودار چندبخشی شامل دو نیم‌خط در بالا و قطعه افقی باز در $y=1$، با نقاط بسته در $y=2$"
+        }
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1061,
+      "question_page": 22,
+      "question_text": "تابع $y=\\sqrt{x^2-2mx+12-m}$ در $\\mathbb{R}$ پیوسته است. حدود $m$ کدام است؟",
+      "options": ["$-3<m<4$", "$-4<m<3$", "$-3\\le m\\le4$", "$-4\\le m\\le3$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1062,
+      "question_page": 22,
+      "question_text": "تابع $f(x)=\\begin{cases}\\dfrac{2x}{2a-x} & x\\le2\\\\ \\dfrac{2a}{x} & x>2\\end{cases}$ در $\\mathbb{R}$ پیوسته است. $a$ کدام است؟",
+      "options": ["$1$", "$2$", "$-1$", "$-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1063,
+      "question_page": 22,
+      "question_text": "به ازای کدام مقدار $k$ تابع $f(x)=\\begin{cases}\\dfrac{|x^2+2x-3|}{x+3} & x\\ne-3\\\\ k & x=-3\\end{cases}$ در $\\mathbb{R}$ پیوسته است؟",
+      "options": ["$4$", "$-4$", "صفر", "هیچ مقدار $k$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1064,
+      "question_page": 22,
+      "question_text": "به ازای کدام مقدار $a$ تابع $f(x)=\\begin{cases}\\frac{3}{x} & x<a\\\\ \\frac{x-1}{2} & x\\ge a\\end{cases}$ در $\\mathbb{R}$ پیوسته است؟",
+      "options": ["$3$", "$2$", "$-3$", "$-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1065,
+      "question_page": 22,
+      "question_text": "تابع $f(x)=\\begin{cases}x^3-2x & |x|<1\\\\ g(x) & |x|\\ge1\\end{cases}$ در $\\mathbb{R}$ پیوسته است. ضابطه $g(x)$ کدام می‌تواند باشد؟",
+      "options": ["$x$", "$x-2$", "$x+2$", "$-x$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1066,
+      "question_page": 22,
+      "question_text": "تابع $f(x)=\\begin{cases}x+3 & |x|\\ge1\\\\ x[2x] & |x|<1\\end{cases}$ در چند نقطه از $\\mathbb{R}$ ناپیوسته است؟",
+      "options": ["$1$", "$3$", "$4$", "$5$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1067,
+      "question_page": 22,
+      "question_text": "تابع $f(x)=\\begin{cases}ax-b & |x|\\ge1\\\\ (x+c)[x] & |x|<1\\end{cases}$ در $\\mathbb{R}$ پیوسته است. $b-c$ کدام است؟",
+      "options": ["$1$", "$-1$", "$\\frac{1}{2}$", "$-\\frac{1}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1068,
+      "question_page": 22,
+      "question_text": "به ازای کدام مقدار $a$ تابع $f(x)=\\begin{cases}\\dfrac{2x+4}{x+\\sqrt{2-x}} & x<-2\\\\ ax+2 & x\\ge-2\\end{cases}$ بر روی مجموعه اعداد حقیقی پیوسته است؟",
+      "options": ["$\\frac{1}{3}$", "$-\\frac{1}{3}$", "$\\frac{4}{3}$", "$-\\frac{4}{3}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1069,
+      "question_page": 22,
+      "question_text": "تابع $f(x)=\\begin{cases}\\dfrac{\\sqrt[3]{x+a}-b}{x-1} & x\\ne1\\\\ \\frac{1}{3} & x=1\\end{cases}$ بر روی مجموعه اعداد حقیقی پیوسته است. $|a-b|$ کدام است؟",
+      "options": ["صفر", "$1$", "$2$", "$3$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1070,
+      "question_page": 22,
+      "question_text": "اگر $f(x)=\\left[\\frac{4x-1}{6}\\right]$ باشد، اولین نقطه ناپیوستگی آن در بازه $(1,+\\infty)$ کدام است؟",
+      "options": ["$\\frac{5}{4}$", "$\\frac{6}{5}$", "$\\frac{7}{6}$", "$\\frac{7}{4}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1071,
+      "question_page": 22,
+      "question_text": "تابع $f(x)=x-[-x]$ در کدام بازه زیر پیوسته است؟",
+      "options": ["$[1,2)$", "$(-\\frac{1}{3},\\frac{1}{3})$", "$(\\frac{1}{3},\\frac{4}{3})$", "$(2,3]$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1072,
+      "question_page": 22,
+      "question_text": "تابع $f(x)=3x-\\left[\\frac{2x}{3}\\right]$ در بازه $(0,7)$ چند نقطه ناپیوستگی دارد؟",
+      "options": ["$2$", "$3$", "$20$", "$21$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1073,
+      "question_page": 22,
+      "question_text": "تعداد نقاط ناپیوسته تابع $f(x)=[x-\\frac{1}{5}]+[x+\\frac{4}{5}]$ در بازه $[-\\frac{8}{5},\\frac{8}{5}]$ کدام است؟",
+      "options": ["$1$", "$2$", "$3$", "$4$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1074,
+      "question_page": 22,
+      "question_text": "تابع $f(x)=(-1)^{[x]}\\cos\\frac{\\pi x}{2}$ در نقاط $x\\in\\mathbb{Z}$ از نظر پیوستگی چگونه است؟",
+      "options": ["فقط در نقاط صحیح فرد پیوسته است.", "فقط در نقاط صحیح زوج پیوسته است.", "در تمام نقاط صحیح پیوسته است.", "در تمام نقاط صحیح ناپیوسته است."],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1075,
+      "question_page": 23,
+      "question_text": "تابع $f(x)=(x^2+ax+b)[2x]$ در بازه $(0,\\frac{3}{2})$ پیوسته است. $f(3)$ کدام است؟",
+      "options": ["$20$", "$25$", "$30$", "$35$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1076,
+      "question_page": 23,
+      "question_text": "تابع $y=x[x]+[x]$ در بازه $[-2,k)$ پیوسته است. حداکثر $k$ کدام است؟",
+      "options": ["صفر", "$-1$", "$1$", "$\\frac{1}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1077,
+      "question_page": 23,
+      "question_text": "تابع $y=(x-9)[\\sqrt{x}]$ در بازه $(1,20)$ در چند نقطه ناپیوسته است؟",
+      "options": ["$1$", "$2$", "$3$", "$4$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1078,
+      "question_page": 23,
+      "question_text": "تابع $f(x)=x-\\left[\\frac{3}{x}\\right]$ در بازه $(\\frac{1}{3},k]$ پیوسته است. حداکثر $k$ کدام است؟",
+      "options": ["$\\frac{3}{8}$", "$\\frac{3}{10}$", "$\\frac{8}{3}$", "$\\frac{10}{3}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1079,
+      "question_page": 23,
+      "question_text": "تابع $y=3x-[ax]$ در بازه $[3,\\frac{2}{a})$ پیوسته است. حداقل مقدار $a$ کدام است؟",
+      "options": ["$\\frac{1}{3}$", "$\\frac{1}{4}$", "$\\frac{1}{2}$", "$\\frac{1}{6}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1080,
+      "question_page": 23,
+      "question_text": "تابع $f(x)=\\left[\\frac{1}{12}[x^2+4x]\\right]$ در بازه $[\\alpha,-4)$ پیوسته است. حداقل $\\alpha$ کدام است؟",
+      "options": ["$-\\sqrt5-4$", "$-5$", "$-6$", "$-\\sqrt5-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1081,
+      "question_page": 23,
+      "question_text": "اگر $f(x)=k[x]-x$ باشد، به ازای چه مقادیر صحیحی از $k$ تابع $y=f\\circ f(x)$ در $\\mathbb{R}$ پیوسته است؟",
+      "options": ["فقط $k=0$", "$k=0$ یا $k=1$", "$k=0$ یا $k=2$", "$k=0$ یا $k=-1$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1082,
+      "question_page": 23,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. تابع $y=\\dfrac{x-1}{\\sqrt{f(x)}}$ در کدام بازه زیر پیوسته است؟",
+      "options": ["$[2,3]$", "$[1,2]$", "$(3,4]$", "$[4,5]$"],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [195, 1035, 610, 1285],
+          "placement": "stem",
+          "alt": "نمودار چندبخشی با نقاط باز و بسته در $x=1,2,3,4,5$ و مقادیر $y=0,1,2,3$"
+        }
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1083,
+      "question_page": 23,
+      "question_text": "تابع $f(x)=[x^2-6x]$ در بازه $(1,4)$ در چند نقطه ناپیوسته است؟",
+      "options": ["$3$", "$4$", "$5$", "$6$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1084,
+      "question_page": 23,
+      "question_text": "تابع $f(x)=\\left[\\frac{2}{x-1}\\right]$ در بازه‌های $(-\\infty,a]$ و $(b,+\\infty)$ پیوسته است. مجموع حداکثر مقدار $a$ و حداقل مقدار $b$ کدام است؟",
+      "options": ["صفر", "$1$", "$-1$", "$2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1085,
+      "question_page": 23,
+      "question_text": "با فرض $f(x)=\\dfrac{x-4}{x^2-7x+10}$، حاصل $\\lim_{x\\to2^+} f(x)$ و $\\lim_{x\\to5^-} f(x)$ به ترتیب کدام است؟",
+      "options": ["$+\\infty$ و $+\\infty$", "$-\\infty$ و $+\\infty$", "$+\\infty$ و $-\\infty$", "$-\\infty$ و $-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1086,
+      "question_page": 23,
+      "question_text": "اگر $f(x)=\\dfrac{x^2-x-2}{(x+1)^2(x-2)^3}$ باشد، مقدار $\\lim_{x\\to3^-}f(x)$ و $\\lim_{x\\to(-1)^+}f(x)$ به ترتیب کدام است؟",
+      "options": ["$+\\infty$ و $+\\infty$", "$+\\infty$ و $-\\infty$", "$-\\infty$ و $+\\infty$", "$-\\infty$ و $-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1087,
+      "question_page": 23,
+      "question_text": "اگر $\\lim_{x\\to a^-}\\dfrac{x-3}{x^2(x^2-4)}=-\\infty$ باشد، $a$ کدام است؟",
+      "options": ["صفر", "$1$", "$2$", "$-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1088,
+      "question_page": 23,
+      "question_text": "در مورد تابع $f(x)=\\dfrac{x^2-2}{x-|x|}$ کدام بیان درست است؟",
+      "options": ["$\\lim_{x\\to0^+}f(x)=+\\infty$", "$\\lim_{x\\to0^+}f(x)=-\\infty$", "$\\lim_{x\\to0^-}f(x)=+\\infty$", "$\\lim_{x\\to0^-}f(x)=-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1089,
+      "question_page": 23,
+      "question_text": "حاصل $\\lim_{x\\to2^+}\\dfrac{[1-x]}{\\sqrt[3]{x+7}-3x}$ کدام است؟",
+      "options": ["صفر", "$-1$", "$+\\infty$", "$-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1090,
+      "question_page": 23,
+      "question_text": "مقدار $\\lim_{x\\to(-3)^+}\\dfrac{[x]+[-x]}{x+3}$ چه عددی است؟",
+      "options": ["صفر", "$-3$", "$+\\infty$", "$-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1091,
+      "question_page": 24,
+      "question_text": "حد عبارت $\\dfrac{x+1}{x^2-3x}+\\dfrac{[x-3]}{3-x}$ وقتی $x\\to3^-$ کدام است؟",
+      "options": ["$\\frac{2}{3}$", "$\\frac{3}{2}$", "$+\\infty$", "$-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1092,
+      "question_page": 24,
+      "question_text": "حاصل $\\lim_{x\\to\\pi^-}\\dfrac{\\cos x-1}{\\sin x}$ کدام است؟",
+      "options": ["$\\frac{1}{2}$", "$-\\frac{1}{2}$", "$+\\infty$", "$-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1093,
+      "question_page": 24,
+      "question_text": "حاصل $\\lim_{x\\to0^-}\\dfrac{\\sin x}{\\cos x-1}$ کدام است؟",
+      "options": ["صفر", "$\\frac{1}{2}$", "$+\\infty$", "$-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1094,
+      "question_page": 24,
+      "question_text": "در مورد تابع $f(x)=\\dfrac{\\cos x}{1+2\\sin x}$ کدام بیان درست است؟",
+      "options": ["$\\lim_{x\\to(\\frac{7\\pi}{6})^+}f(x)=+\\infty$", "$\\lim_{x\\to(-\\frac{\\pi}{6})^+}f(x)=-\\infty$", "$\\lim_{x\\to(-\\frac{\\pi}{6})^-}f(x)=+\\infty$", "$\\lim_{x\\to(\\frac{7\\pi}{6})^-}f(x)=+\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1095,
+      "question_page": 24,
+      "question_text": "نمودار تابع $y=\\dfrac{x+1}{x^2-5x+6}$ در مجاورت $x=2$ چگونه است؟",
+      "options": ["شکل گزینه ۱", "شکل گزینه ۲", "شکل گزینه ۳", "شکل گزینه ۴"],
+      "media_regions": [
+        {"page_file": "page_0024.jpg", "box": [1290, 830, 1500, 1060], "placement": "option_1", "alt": "دو شاخه کنار مجانب عمودی؛ هر دو رو به بالا"},
+        {"page_file": "page_0024.jpg", "box": [940, 830, 1155, 1060], "placement": "option_2", "alt": "دو شاخه کنار مجانب عمودی؛ هر دو رو به پایین"},
+        {"page_file": "page_0024.jpg", "box": [575, 830, 790, 1060], "placement": "option_3", "alt": "شاخه چپ پایین و شاخه راست بالا کنار مجانب"},
+        {"page_file": "page_0024.jpg", "box": [230, 830, 445, 1060], "placement": "option_4", "alt": "شاخه چپ بالا و شاخه راست پایین کنار مجانب"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1096,
+      "question_page": 24,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. اگر $\\lim_{x\\to a}\\dfrac{x}{f(x)}=+\\infty$، $a$ کدام است؟",
+      "options": ["$-2$", "$-1$", "$1$", "$2$"],
+      "media_regions": [
+        {"page_file": "page_0024.jpg", "box": [145, 1065, 500, 1395], "placement": "stem", "alt": "نمودار چندقله‌ای با صفرهای نزدیک $x=-2,-1,1,2$"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1097,
+      "question_page": 24,
+      "question_text": "نمودار $y=f(x)$ به صورت شکل مقابل باشد. $\\lim_{x\\to\\alpha}\\dfrac{(-1)^{[x]}}{f(x)}=+\\infty$. مقدار $\\alpha$ کدام است؟",
+      "options": ["$1$", "$2$", "$3$", "$4$"],
+      "media_regions": [
+        {"page_file": "page_0024.jpg", "box": [150, 1415, 500, 1615], "placement": "stem", "alt": "نمودار موجی با عبور از محور در نقاط ۱ تا ۴"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1098,
+      "question_page": 24,
+      "question_text": "نمودار تابع $y=\\log\\dfrac{x+1}{x-2}$ در مجاورت $x=-1$ چگونه است؟",
+      "options": ["شکل گزینه ۱", "شکل گزینه ۲", "شکل گزینه ۳", "شکل گزینه ۴"],
+      "media_regions": [
+        {"page_file": "page_0024.jpg", "box": [1270, 1645, 1510, 1865], "placement": "option_1", "alt": "یک شاخه در سمت راست مجانب عمودی"},
+        {"page_file": "page_0024.jpg", "box": [920, 1645, 1145, 1865], "placement": "option_2", "alt": "یک شاخه در سمت چپ مجانب عمودی"},
+        {"page_file": "page_0024.jpg", "box": [570, 1645, 800, 1865], "placement": "option_3", "alt": "شاخه صعودی نزدیک مجانب"},
+        {"page_file": "page_0024.jpg", "box": [225, 1645, 460, 1865], "placement": "option_4", "alt": "شاخه نزولی نزدیک مجانب"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1099,
+      "question_page": 24,
+      "question_text": "نمودار تابع $f(x)=\\dfrac{\\cos x}{\\sin x-\\sin 2x}$ در مجاورت کدام نقطه زیر به صورت شکل داده‌شده است؟",
+      "options": ["$x=0$", "$x=\\pi$", "$x=\\frac{\\pi}{2}$", "$x=\\frac{5\\pi}{3}$"],
+      "media_regions": [
+        {"page_file": "page_0024.jpg", "box": [560, 1875, 795, 2095], "placement": "stem", "alt": "دو شاخه در دو طرف مجانب عمودی؛ چپ بالا و راست پایین"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1100,
+      "question_page": 24,
+      "question_text": "اگر $\\lim_{x\\to-1}\\dfrac{x-4}{2x^2+ax+b}=-\\infty$ باشد، حاصل $a-b$ کدام است؟",
+      "options": ["$1$", "$-3$", "$3$", "$9$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1101,
+      "question_page": 24,
+      "question_text": "اگر $\\lim_{x\\to2^-}\\dfrac{x-3}{x^2+ax+b}=+\\infty$ باشد، $a-b$ کدام است؟",
+      "options": ["صفر", "$-4$", "$-8$", "$8$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1102,
+      "question_page": 24,
+      "question_text": "اگر $\\lim_{x\\to1}\\dfrac{x}{ax^3-ax^2-x+1}=+\\infty$ باشد، $a$ کدام است؟",
+      "options": ["صفر", "$1$", "$-1$", "$\\frac{1}{3}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1103,
+      "question_page": 25,
+      "question_text": "نمودار تابع $y=\\dfrac{x}{ax^2+6x+b}$ در اطراف نقطه $x=-2$ به صورت مقابل است. $ab$ کدام است؟",
+      "options": ["$9$", "$-9$", "$18$", "$-18$"],
+      "media_regions": [
+        {"page_file": "page_0025.jpg", "box": [185, 195, 330, 345], "placement": "stem", "alt": "دو شاخه در دو سوی مجانب عمودی؛ هر دو به سمت پایین نزدیک مجانب"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1104,
+      "question_page": 25,
+      "question_text": "با فرض $\\lim_{x\\to b}\\dfrac{1}{ax^2+4x+\\frac{a}{4}}=-\\infty$ حاصل $a+b$ کدام است؟",
+      "options": ["صفر", "$-\\frac{7}{2}$", "$-1$", "$-\\frac{3}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1105,
+      "question_page": 25,
+      "question_text": "اگر $\\lim_{x\\to(-1)}\\dfrac{x+[-x]}{f(x)}=-\\infty$ باشد، ضابطه $f$ کدام می‌تواند باشد؟",
+      "options": ["$x^2-1$", "$1-x^2$", "$(x+1)^2$", "$-(x+1)^2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1106,
+      "question_page": 25,
+      "question_text": "اگر $\\lim_{x\\to4}\\dfrac{2a(-1)^{[x]}+3}{x-4}=+\\infty$ باشد، حدود $a$ کدام است؟",
+      "options": ["$a>\\frac{3}{2}$", "$a<-\\frac{3}{2}$", "$a>-\\frac{3}{2}$", "$a<\\frac{3}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1107,
+      "question_page": 25,
+      "question_text": "اگر $\\lim_{x\\to2}\\dfrac{x+a(-1)^{[x]}}{x^2-4}=+\\infty$ باشد، حدود $a$ کدام است؟",
+      "options": ["$a>2$", "$a>-2$", "$-2<a<2$", "$a<-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1108,
+      "question_page": 25,
+      "question_text": "نمودار تابع $f(x)=\\dfrac{4x-5[x]}{x^2-16}$ در مجاورت $x=4$ چگونه است؟",
+      "options": ["شکل گزینه ۱", "شکل گزینه ۲", "شکل گزینه ۳", "شکل گزینه ۴"],
+      "media_regions": [
+        {"page_file": "page_0025.jpg", "box": [1300, 860, 1515, 1095], "placement": "option_1", "alt": "شاخه راست بالا و شاخه چپ پایین کنار مجانب"},
+        {"page_file": "page_0025.jpg", "box": [940, 860, 1155, 1095], "placement": "option_2", "alt": "شاخه چپ بالا و شاخه راست پایین کنار مجانب"},
+        {"page_file": "page_0025.jpg", "box": [570, 860, 805, 1095], "placement": "option_3", "alt": "دو شاخه بالا کنار مجانب"},
+        {"page_file": "page_0025.jpg", "box": [205, 860, 450, 1095], "placement": "option_4", "alt": "دو شاخه پایین کنار مجانب"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1109,
+      "question_page": 25,
+      "question_text": "نمودار تابع $y=f(x)$ به صورت مقابل است. نمودار تابع $y=\\dfrac{x}{f(x)}$ در مجاورت $x=k$ چگونه است؟",
+      "options": ["شکل گزینه ۱", "شکل گزینه ۲", "شکل گزینه ۳", "شکل گزینه ۴"],
+      "media_regions": [
+        {"page_file": "page_0025.jpg", "box": [165, 1110, 500, 1365], "placement": "stem", "alt": "نمودار $f$ با عبور از محور در $x=k$"},
+        {"page_file": "page_0025.jpg", "box": [1295, 1135, 1515, 1375], "placement": "option_1", "alt": "شاخه راست بالا و شاخه چپ پایین کنار مجانب"},
+        {"page_file": "page_0025.jpg", "box": [935, 1135, 1155, 1375], "placement": "option_2", "alt": "شاخه چپ بالا و شاخه راست پایین کنار مجانب"},
+        {"page_file": "page_0025.jpg", "box": [570, 1135, 800, 1375], "placement": "option_3", "alt": "دو شاخه بالا کنار مجانب"},
+        {"page_file": "page_0025.jpg", "box": [200, 1135, 450, 1375], "placement": "option_4", "alt": "دو شاخه پایین کنار مجانب"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1110,
+      "question_page": 25,
+      "question_text": "نمودار تابع $y=\\dfrac{x+a}{2x^2+2x+b}$ به صورت مقابل است. $a-b$ کدام است؟",
+      "options": ["$2$", "$-2$", "$-4$", "$6$"],
+      "media_regions": [
+        {"page_file": "page_0025.jpg", "box": [165, 1375, 520, 1705], "placement": "stem", "alt": "نمودار گویا با مجانب عمودی نزدیک $x=1$ و نقطه باز روی شاخه چپ"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1111,
+      "question_page": 25,
+      "question_text": "نمودار تابع $f(x)=3^{\\cot x}$ در مجاورت $x=\\pi$ کدام است؟",
+      "options": ["شکل گزینه ۱", "شکل گزینه ۲", "شکل گزینه ۳", "شکل گزینه ۴"],
+      "media_regions": [
+        {"page_file": "page_0025.jpg", "box": [1295, 1730, 1515, 1990], "placement": "option_1", "alt": "دو شاخه با مجانب عمودی و شاخه راست بالا"},
+        {"page_file": "page_0025.jpg", "box": [935, 1730, 1150, 1990], "placement": "option_2", "alt": "دو شاخه با شاخه راست پایین"},
+        {"page_file": "page_0025.jpg", "box": [565, 1730, 805, 1990], "placement": "option_3", "alt": "نمودار با نقطه باز روی مجانب و شاخه راست بالا"},
+        {"page_file": "page_0025.jpg", "box": [205, 1730, 450, 1990], "placement": "option_4", "alt": "نمودار با نقطه باز روی مجانب و شاخه راست پایین"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1112,
+      "question_page": 25,
+      "question_text": "با فرض آن‌که $f(x)=\\dfrac{1}{x^2-2^x}$، کدام صحیح است؟",
+      "options": ["$\\lim_{x\\to2^-}f(x)=+\\infty$", "$\\lim_{x\\to2}f(x)=+\\infty$", "$\\lim_{x\\to4^+}f(x)=-\\infty$", "$\\lim_{x\\to4}f(x)=+\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1113,
+      "question_page": 25,
+      "question_text": "تابع $f(x)=\\dfrac{x[x]-2}{x^2-3x+2}$ مفروض است. کدام صحیح است؟",
+      "options": ["$\\lim_{x\\to2^+}f(x)=+\\infty$", "$\\lim_{x\\to2^-}f(x)=-\\infty$", "$\\lim_{x\\to1^+}f(x)=-\\infty$", "$\\lim_{x\\to2^-}f(x)=+\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1114,
+      "question_page": 25,
+      "question_text": "فرض کنید $f(x)=\\dfrac{2x-8}{x-3}$ باشد، در این صورت حد راست تابع $f\\circ f(x^2)$ در کدام نقطه زیر برابر $-\\infty$ است؟",
+      "options": ["$x=1$", "$x=-1$", "$x=\\sqrt3$", "$x=-\\sqrt3$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1115,
+      "question_page": 26,
+      "question_text": "حاصل $\\lim_{x\\to\\infty}\\dfrac{(2x+1)(3x^2-1)}{(x+1)^2(4x+1)}$ کدام است؟",
+      "options": ["$3$", "$\\frac{1}{2}$", "$\\frac{3}{2}$", "$2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1116,
+      "question_page": 26,
+      "question_text": "حاصل $\\lim_{x\\to\\infty}\\dfrac{(x+1)^3-(x-2)^3}{(x-3)^2}$ کدام است؟",
+      "options": ["$-1$", "$3$", "صفر", "$9$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1117,
+      "question_page": 26,
+      "question_text": "اگر $\\lim_{x\\to\\infty}\\dfrac{ax^2+bx+3}{2x-4}=2$ باشد، حاصل $a+b$ کدام است؟",
+      "options": ["$2$", "$3$", "$5$", "$6$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1118,
+      "question_page": 26,
+      "question_text": "اگر $\\lim_{x\\to\\infty}\\dfrac{(a+1)x^3+bx^2-4}{3x^2+2x}=2$، مقدار $a-b$ کدام است؟",
+      "options": ["$5$", "$-5$", "$7$", "$-7$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1119,
+      "question_page": 26,
+      "question_text": "فرض کنید $n$ عددی طبیعی باشد. حاصل $\\lim_{x\\to\\infty}\\dfrac{3x^n+2x(x-1)^2+1}{x^{2n-1}+3x^3-1}$ در صورت وجود، کدام نمی‌تواند باشد؟",
+      "options": ["$\\frac{2}{3}$", "$\\frac{1}{2}$", "$1$", "صفر"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1120,
+      "question_page": 26,
+      "question_text": "مقدار $\\lim_{x\\to\\infty}\\left(\\dfrac{3x^2+2x}{x-1}-\\dfrac{6x^2+x-1}{2x-1}\\right)$ کدام است؟",
+      "options": ["صفر", "$-2$", "$3$", "$-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1121,
+      "question_page": 26,
+      "question_text": "اگر $\\lim_{x\\to\\infty}\\left(\\dfrac{2x^2}{x+1}-ax\\right)=b$ باشد، $ab$ کدام است؟",
+      "options": ["$2$", "$-2$", "$4$", "$-4$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1122,
+      "question_page": 26,
+      "question_text": "با فرض $\\lim_{x\\to\\infty}\\left(\\dfrac{x^3-1}{x^2+2}-ax\\right)=b$، مقدار $a-b$ کدام است؟",
+      "options": ["$1$", "$4$", "$2$", "$-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1123,
+      "question_page": 26,
+      "question_text": "حاصل $\\lim_{x\\to\\infty}\\dfrac{2x+\\sqrt{9x^2-x}}{2x-\\sqrt{4x^2+x}}$ برابر کدام است؟",
+      "options": ["$\\frac{1}{5}$", "$-\\frac{1}{5}$", "$5$", "$-5$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1124,
+      "question_page": 26,
+      "question_text": "حاصل $\\lim_{x\\to-\\infty}\\dfrac{3x-\\sqrt{x^2+x}}{2x+2\\sqrt{-x}}$ کدام است؟",
+      "options": ["$1$", "$2$", "$\\frac{2}{3}$", "$-\\frac{2}{3}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1125,
+      "question_page": 26,
+      "question_text": "اگر $f(x)=2x-\\sqrt{x^2-x}$ باشد، حاصل $\\lim_{x\\to-\\infty}\\dfrac{f(x)}{x}$ کدام است؟",
+      "options": ["$1$", "$3$", "$-1$", "$-3$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1126,
+      "question_page": 26,
+      "question_text": "با فرض $f(x)=\\dfrac{x-2}{ax^2+4x+b}$، اگر $\\lim_{x\\to1}f(x)=+\\infty$ باشد، حاصل $\\lim_{x\\to-\\infty}xf(x)$ کدام است؟",
+      "options": ["$1$", "$\\frac{1}{2}$", "$-\\frac{1}{2}$", "$-1$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1127,
+      "question_page": 26,
+      "question_text": "حاصل $\\lim_{x\\to-\\infty}(3x+\\sqrt{9x^2-6x+2})$ کدام است؟",
+      "options": ["$1$", "$3$", "$\\frac{1}{3}$", "$\\frac{2}{3}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1128,
+      "question_page": 26,
+      "question_text": "حاصل $\\lim_{x\\to+\\infty}x(2x-\\sqrt{4x^2+1})$ کدام است؟",
+      "options": ["$\\frac{1}{2}$", "$-\\frac{1}{2}$", "$\\frac{1}{4}$", "$-\\frac{1}{4}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1129,
+      "question_page": 26,
+      "question_text": "حاصل $\\lim_{x\\to-\\infty}x(x+\\sqrt{x^2-2})$ کدام است؟",
+      "options": ["$1$", "$2$", "$-1$", "$-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1130,
+      "question_page": 27,
+      "question_text": "با فرض $\\lim_{x\\to-\\infty}(x+\\sqrt{ax^2+bx+1})=3$، مقدار $a+b$ کدام است؟",
+      "options": ["صفر", "$-5$", "$-6$", "$7$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1131,
+      "question_page": 27,
+      "question_text": "اگر $f(x)=\\dfrac{4x-1}{x+2}$ باشد، حاصل $\\lim_{x\\to\\infty} f(x)f(-\\frac{1}{x})$ کدام است؟",
+      "options": ["$2$", "$-2$", "$16$", "$-16$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1132,
+      "question_page": 27,
+      "question_text": "اگر $f(x)=\\dfrac{2x}{3x-1}$ باشد، حاصل $\\lim_{x\\to+\\infty}xf(-\\frac{1}{x})$ کدام است؟",
+      "options": ["$2$", "$3$", "$\\frac{2}{3}$", "$\\frac{3}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1133,
+      "question_page": 27,
+      "question_text": "اگر $f(x)=\\dfrac{|x-2|}{2+x}$ باشد، حاصل $\\lim_{x\\to+\\infty}xf(2+\\frac{1}{x})$ کدام است؟",
+      "options": ["$\\frac{1}{2}$", "$\\frac{1}{4}$", "$-\\frac{1}{2}$", "$-\\frac{1}{4}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1134,
+      "question_page": 27,
+      "question_text": "اگر $f(x)=\\begin{cases}2x^2-2 & x\\ge1\\\\ 3x-3 & x<1\\end{cases}$ باشد، حاصل $\\lim_{x\\to-\\infty}xf(\\frac{x}{x+1})$ کدام است؟",
+      "options": ["صفر", "$-3$", "$-4$", "$-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1135,
+      "question_page": 27,
+      "question_text": "اگر $f(x)=\\dfrac{2x+7}{x+3}$ باشد، حاصل $\\lim_{x\\to+\\infty}f(x)f^{-1}(x)$ کدام است؟",
+      "options": ["$4$", "$6$", "$-6$", "$-4$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1136,
+      "question_page": 27,
+      "question_text": "اگر $\\lim_{x\\to+\\infty}(f(x)-3x)=2$، حاصل $\\lim_{x\\to+\\infty}\\dfrac{x+f(x)}{x-f(x)}$ کدام است؟",
+      "options": ["$2$", "$\\frac{1}{2}$", "$-2$", "$-\\frac{1}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1137,
+      "question_page": 27,
+      "question_text": "نمودار تابع $y=\\dfrac{3x+a}{x+1}$ وقتی $x\\to+\\infty$ به صورت مقابل است. حدود $a$ کدام است؟",
+      "options": ["$a<1$", "$a>1$", "$a>3$", "$a<3$"],
+      "media_regions": [
+        {"page_file": "page_0027.jpg", "box": [180, 995, 520, 1120], "placement": "stem", "alt": "شاخه‌ای که از پایین به یک مجانب افقی نزدیک می‌شود"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1138,
+      "question_page": 27,
+      "question_text": "با توجه به نمودار تابع $f$، حاصل $\\lim_{x\\to-\\infty}\\left(f(x)-\\left[\\frac{1}{f(-x)}\\right]\\right)$ کدام است؟",
+      "options": ["$4$", "$2$", "$+\\infty$", "$-\\infty$"],
+      "media_regions": [
+        {"page_file": "page_0027.jpg", "box": [180, 1130, 520, 1445], "placement": "stem", "alt": "نمودار نزولی با مجانب افقی $y=3$ در سمت چپ"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1139,
+      "question_page": 27,
+      "question_text": "اگر $\\lim_{x\\to-\\infty}[f(x)]=0$ باشد، ضابطه $f$ کدام می‌تواند باشد؟",
+      "options": ["$\\frac{x+2}{x+3}$", "$\\frac{x-2}{x-3}$", "$\\frac{-x}{2x+1}$", "$\\frac{2x-1}{x}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1140,
+      "question_page": 27,
+      "question_text": "نمودار تابع $f$ به صورت مقابل است. مقدار $\\lim_{x\\to2^+}\\dfrac{f\\circ f(x)+3}{x-1}$ چه عددی است؟",
+      "options": ["$1$", "$-2$", "$+\\infty$", "$-\\infty$"],
+      "media_regions": [
+        {"page_file": "page_0027.jpg", "box": [175, 1530, 520, 1825], "placement": "stem", "alt": "نمودار گویا با مجانب عمودی $x=2$ و مجانب افقی $y=-2$"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1141,
+      "question_page": 27,
+      "question_text": "اگر $f(x)=3^{2-x}$، $g(x)=\\dfrac{x+2}{2x-1}$ و $\\lim_{x\\to+\\infty}g\\circ f(x)=a$ و $\\lim_{x\\to-\\infty}g\\circ f(x)=b$ باشد، حاصل $a-b$ کدام است؟",
+      "options": ["$\\frac{3}{2}$", "$\\frac{5}{2}$", "$-\\frac{3}{2}$", "$-\\frac{5}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1142,
+      "question_page": 27,
+      "question_text": "اگر $f(x)=\\dfrac{1-2|x|}{x+4}$ باشد، حاصل $\\lim_{x\\to0^-}f(\\frac{1}{x}-\\frac{1}{x^2})$ کدام است؟",
+      "options": ["صفر", "$2$", "$\\frac{1}{4}$", "$-2$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1143,
+      "question_page": 27,
+      "question_text": "نمودار $f$ به صورت مقابل است. حاصل $\\lim_{x\\to(\\frac{1}{3})^-} f\\circ f(\\frac{1}{x})$ کدام است؟",
+      "options": ["$3$", "$-2$", "$+\\infty$", "$-\\infty$"],
+      "media_regions": [
+        {"page_file": "page_0027.jpg", "box": [180, 2190, 530, 2475], "placement": "stem", "alt": "نمودار گویا با مجانب عمودی $x=3$ و مجانب‌های افقی $y=3$ و $y=-2$"}
+      ],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1144,
+      "question_page": 28,
+      "question_text": "اگر $\\lim_{x\\to1}\\dfrac{ax+b}{2x-\\sqrt{x+8}}=\\frac{12}{17}$ باشد، حاصل حد این کسر وقتی $x\\to+\\infty$ چقدر است؟",
+      "options": ["$1$", "$\\frac{1}{3}$", "$\\frac{2}{3}$", "$\\frac{4}{3}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1145,
+      "question_page": 28,
+      "question_text": "اگر $\\lim_{x\\to-\\infty}\\dfrac{|x^2-1|}{ax^2+2x-1}=-\\frac{1}{2}$ باشد، مقدار حد چپ این عبارت در $x=1$ کدام است؟",
+      "options": ["صفر", "$2$", "$-2$", "$-\\frac{1}{2}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1146,
+      "question_page": 28,
+      "question_text": "اگر $f(x)=\\dfrac{ax^2+3}{x^2-ax+a^2-7}$ و $\\lim_{x\\to1^+}f(x)=-\\infty$ باشد، حاصل $\\lim_{x\\to-\\infty}f(x)$ کدام است؟",
+      "options": ["$2$", "$-2$", "$3$", "$-3$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1147,
+      "question_page": 28,
+      "question_text": "در تابع $f(x)=\\dfrac{2-\\sqrt{x^2+3}}{ax^n+3}$ اگر $\\lim_{x\\to-\\infty}f(x)=-\\frac{1}{3}$ باشد، آن‌گاه $\\lim_{x\\to1}f(x)$ کدام است؟",
+      "options": ["$\\frac{2}{3}$", "$\\frac{3}{2}$", "$\\frac{1}{6}$", "$+\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1148,
+      "question_page": 28,
+      "question_text": "اگر $\\lim_{x\\to-\\infty}\\dfrac{ax^n+12}{\\sqrt{1-x}+x+1}=4$ باشد، آن‌گاه حد این کسر وقتی $x\\to-3$ کدام است؟",
+      "options": ["$\\frac{2}{3}$", "$\\frac{4}{3}$", "$\\frac{8}{3}$", "$\\frac{16}{3}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1149,
+      "question_page": 28,
+      "question_text": "در تابع $f(x)=\\dfrac{ax^n+\\sqrt{4x^2+20}}{2x+4}$ اگر $\\lim_{x\\to-\\infty}f(x)=\\frac{1}{2}$ باشد، حاصل $\\lim_{x\\to-2}f(x)$ کدام است؟",
+      "options": ["$\\frac{5}{6}$", "$\\frac{6}{5}$", "$10$", "$-10$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1150,
+      "question_page": 28,
+      "question_text": "با فرض $f(x)=\\dfrac{\\sqrt{x^2+8}-3ax}{x-a}$، اگر $\\lim_{x\\to+\\infty}f(x)=-2$ باشد، حاصل $\\lim_{x\\to a}f(x)$ کدام است؟",
+      "options": ["$\\frac{4}{3}$", "$-\\frac{4}{3}$", "$\\frac{8}{3}$", "$-\\frac{8}{3}$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1151,
+      "question_page": 28,
+      "question_text": "$f$ تابعی خطی و $g(x)=\\dfrac{2-3x}{f(x)}$ است. اگر $\\lim_{x\\to2^+}g(x)=+\\infty$ و $\\lim_{x\\to-\\infty}g(x)=6$ باشد، $f(4)$ کدام است؟",
+      "options": ["$1$", "$\\frac{1}{2}$", "$-\\frac{1}{2}$", "$-1$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1152,
+      "question_page": 28,
+      "question_text": "اگر $f(x)=\\dfrac{2^{x+3}-4^{x-1}}{2^{x+1}+2^{2x+1}}$ باشد، مقدار $\\lim_{x\\to-\\infty}f(x)$ چند برابر $\\lim_{x\\to+\\infty}f(x)$ است؟",
+      "options": ["$16$", "$-16$", "$32$", "$-32$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1153,
+      "question_page": 28,
+      "question_text": "با فرض $f(x)=\\dfrac{3^x-2}{3^{x-1}+1}$، اختلاف حد چپ و راست تابع $y=f(\\tan x)$ در $x=\\frac{\\pi}{2}$ چقدر است؟",
+      "options": ["صفر", "$1$", "$3$", "$5$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1154,
+      "question_page": 28,
+      "question_text": "در مورد حد تابع $f(x)=\\log_2\\dfrac{2^{x+1}-4}{2^x-1}$ کدام نادرست است؟",
+      "options": ["$\\lim_{x\\to+\\infty}f(x)=1$", "$\\lim_{x\\to-\\infty}f(x)=2$", "$\\lim_{x\\to0^-}f(x)=+\\infty$", "$\\lim_{x\\to1^+}f(x)=+\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    },
+    {
+      "question_number": 1155,
+      "question_page": 28,
+      "question_text": "اگر $\\lim_{x\\to+\\infty}(4-3f(2-x))=-\\infty$ باشد، آن‌گاه کدام گزینه صحیح است؟",
+      "options": ["$\\lim_{x\\to+\\infty}f(x)=+\\infty$", "$\\lim_{x\\to+\\infty}f(x)=-\\infty$", "$\\lim_{x\\to-\\infty}f(x)=+\\infty$", "$\\lim_{x\\to-\\infty}f(x)=-\\infty$"],
+      "media_regions": [],
+      "review_notes": ["استخراج از تصویر محلی؛ پاسخ/حل وارد نشده است."]
+    }
+  ]
+}

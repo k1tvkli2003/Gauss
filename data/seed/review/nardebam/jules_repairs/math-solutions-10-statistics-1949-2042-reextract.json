@@ -1,0 +1,1603 @@
+{
+  "solutions": [
+    {
+      "question_number": 1949,
+      "solution_page": 181,
+      "solution_text": "$M$ و $N$ وسط‌های اضلاع $AB$ و $AC$ هستند. در نتیجه:\n$$\n\\frac{MN}{BC} = \\frac{AM}{AB} = \\frac{1}{2} \\Rightarrow \\frac{x+4}{4x+1} = \\frac{1}{2} \\Rightarrow 2x+8 = 4x+1\n$$\n$$\n\\Rightarrow x = \\frac{7}{2} \\Rightarrow \\begin{cases} AM = 6 \\Rightarrow AB = 12 \\\\ CN = \\frac{13}{2} \\Rightarrow AC = 13 \\\\ BC = 15 \\end{cases}\n$$\n$\\Rightarrow$ محیط $ABC = 12 + 13 + 15 = 40$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1950,
+      "solution_page": 181,
+      "solution_text": "در مثلث $BCD$ طبق قضیه تالس داریم:\n$$\n\\frac{OB}{OD} = \\frac{FC}{FD} = \\frac{4}{12-4} = \\frac{1}{2}\n$$\nدو مثلث $AOB$ و $COD$ دارای زوایای برابر هستند، بنابراین با هم متشابه‌اند.\n$$\n\\Rightarrow \\frac{AB}{CD} = \\frac{OB}{OD} = \\frac{1}{2} \\Rightarrow AB = \\frac{CD}{2} = \\frac{12}{2} = 6\n$$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1951,
+      "solution_page": 181,
+      "solution_text": "ضلع لوزی را $a$ می‌نامیم.\n$$\nMN \\parallel AB \\Rightarrow \\frac{CN}{BC} = \\frac{MN}{AB} \\Rightarrow \\frac{6-a}{6} = \\frac{a}{4} \\Rightarrow 10a = 24\n$$\n$\\Rightarrow a = 2/4 \\Rightarrow$ محیط لوزی $= 4a = 9/6$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1952,
+      "solution_page": 181,
+      "solution_text": "در مثلث $ABD$، $EM$ موازی $AB$ است، در نتیجه:\n$$\n\\frac{DE}{AD} = \\frac{EM}{AB} = \\frac{2}{3}\n$$\nاز طرفی:\n$$\n\\frac{DE}{AD} = \\frac{FC}{BC} \\Rightarrow \\frac{FC}{BC} = \\frac{2}{3} \\Rightarrow \\frac{BF}{BC} = \\frac{1}{3}\n$$\nدر مثلث $BCD$، $MF$ موازی $CD$ است، بنابراین:\n$$\n\\frac{MF}{CD} = \\frac{BF}{BC} = \\frac{1}{3} \\Rightarrow MF = \\frac{CD}{3} = \\frac{8}{3}\n$$\n$\\Rightarrow EF = EM + MF = 2 + \\frac{8}{3} = \\frac{14}{3}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1953,
+      "solution_page": 181,
+      "solution_text": "نکته: اگر وسط‌های ساق‌های ذوزنقه را به هم وصل کنیم، طول پاره‌خط به وجود آمده برابر با میانگین قاعده‌هاست.\nقاعدهٔ $AB$ برابر $a$ و قاعدهٔ $CD$ برابر $3a$ است؛ بنابراین: $MN = \\frac{a+3a}{2} = 2a$.\nواضح است. ارتفاع دو ذوزنقهٔ $ABNM$ و $MNCD$ برابر است.\n$$\n\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{a+2a}{2} \\times h}{\\frac{2a+3a}{2} \\times h} = \\frac{3a}{5a} = \\frac{3}{5}\n$$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1954,
+      "solution_page": 181,
+      "solution_text": "از یکی از خواص جالب تناسب استفاده می‌کنیم:\n$$\n\\frac{a}{b} = \\frac{c}{d} \\Rightarrow \\frac{a+c}{b+d} = \\frac{a}{b} = \\frac{c}{d}\n$$\nخواهیم داشت:\n$$\n\\frac{a+4b}{2a-b} = \\frac{5a+2b}{2b-a} = \\frac{(a+4b)+(5a+2b)}{(2a-b)+(2b-a)} = \\frac{6(a+b)}{a+b} = 6\n$$\n$$\n\\Rightarrow \\frac{a+4b}{2a-b} = 6 \\Rightarrow a+4b = 12a-6b \\Rightarrow 11a = 10b \\Rightarrow \\frac{a}{b} = \\frac{10}{11}\n$$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1955,
+      "solution_page": 181,
+      "solution_text": "ارتفاع $AH$ را رسم می‌کنیم. مثلث $ACD$ متساوی‌الساقین است، بنابراین $AH$ میانه نیز می‌باشد. $DH = HC = x$. در مثلث قائم‌الزاویهٔ $ABC$، $AH$ ارتفاع وارد بر وتر است. در نتیجه:\n$$\nAB^2 = BC \\times BH \\Rightarrow (4\\sqrt{5})^2 = (6+2x)(6+x)\n$$\n$$\n\\Rightarrow 2x^2 + 18x + 36 = 80 \\Rightarrow x^2 + 9x - 22 = 0\n$$\n$$\n\\Rightarrow (x+11)(x-2) = 0 \\Rightarrow \\begin{cases} x = -11 \\text{ غ.ق.ق} \\\\ x = 2 \\checkmark \\end{cases}\n$$\n$$\nAB^2 + AC^2 = BC^2 \\Rightarrow AC^2 = 10^2 - (4\\sqrt{5})^2 = 20\n$$\n$\\Rightarrow AC = 2\\sqrt{5}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0181.jpg",
+          "region": [
+            1100,
+            1800,
+            1400,
+            2100
+          ],
+          "alt": "مثلث ABC با ارتفاع AH",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1956,
+      "solution_page": 181,
+      "solution_text": "زاویهٔ $C$ در دو مثلث $ABC$ و $DHC$ مشترک است، بنابراین دو مثلث قائم‌الزاویهٔ $ABC$ و $DHC$ متشابه‌اند. پس:\n$$\n\\frac{BC}{DC} = \\frac{AC}{HC} \\Rightarrow \\frac{BC}{3} = \\frac{4}{2} \\Rightarrow BC = 6 \\Rightarrow BH = 4\n$$\nاز طرفی در مثلث قائم‌الزاویهٔ $DHC$ طبق قضیه فیثاغورس داریم:\n$$\nDH^2 = 9 - 4 = 5 \\Rightarrow DH = \\sqrt{5}\n$$\nدر مثلث قائم‌الزاویهٔ $BDH$:\n$$\nBD^2 = DH^2 + BH^2 = 5 + 16 = 21 \\Rightarrow BD = \\sqrt{21}\n$$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1957,
+      "solution_page": 181,
+      "solution_text": "$EF$ موازی $CD$ است، بنابراین:\n$$\n\\Delta ADC: \\frac{OE}{DC} = \\frac{AE}{AD} \\Rightarrow \\frac{OE}{8} = \\frac{AE}{AD}\n$$\n$$\n\\Delta ADB: \\frac{OE}{AB} = \\frac{DE}{AD} \\Rightarrow \\frac{OE}{5} = \\frac{DE}{AD}\n$$\n$$\n(+) \\rightarrow \\frac{OE}{8} + \\frac{OE}{5} = \\frac{AE+DE}{AD} = 1 \\xrightarrow{\\times 40} 13OE = 40 \\Rightarrow OE = \\frac{40}{13}\n$$\nبه همین روش $OF = \\frac{40}{13}$ می‌باشد.\n$$\nEF = OE + OF = \\frac{80}{13} \\Rightarrow \\frac{EF}{CD} = \\frac{\\frac{80}{13}}{8} = \\frac{10}{13}\n$$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1958,
+      "solution_page": 181,
+      "solution_text": "با توجه به آن‌که $MN$ با $BC$ موازی است و $BN$ مورب است، پس $\\hat{B}_1 = \\hat{N}_1$.\nاز طرفی $BN$ نیمساز زاویهٔ $N$ است، بنابراین $\\hat{N}_1 = \\hat{N}_2$.\nنتیجه می‌گیریم $\\hat{B}_1 = \\hat{N}_2$ می‌باشد. یعنی مثلث $BNC$ متساوی‌الساقین است. در نتیجه $BC = NC$. اگر $BC$ را برابر $x$ در نظر بگیریم، طبق قضیه تالس خواهیم داشت:\n$$\n\\frac{AN}{AC} = \\frac{MN}{BC} \\Rightarrow \\frac{9}{9+x} = \\frac{6}{x} \\Rightarrow 9x = 54 + 6x\n$$\n$\\Rightarrow 3x = 54 \\Rightarrow BC = 18$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0181.jpg",
+          "region": [
+            100,
+            1300,
+            400,
+            1600
+          ],
+          "alt": "مثلث ABC با خطوط موازی MN و مورب BN",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1959,
+      "solution_page": 181,
+      "solution_text": "می‌دانیم $MN = \\frac{a+b}{2}$.\nارتفاع دو ذوزنقهٔ $ABNM$ و $MNCD$ برابر است.\n$$\n\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{(a + \\frac{a+b}{2}) \\times h}{2}}{\\frac{(b + \\frac{a+b}{2}) \\times h}{2}} = \\frac{\\frac{3a+b}{2}}{\\frac{3b+a}{2}} = \\frac{3a+b}{3b+a} = \\frac{2}{3}\n$$\n$\\Rightarrow 7a = 3b \\Rightarrow \\frac{b}{a} = \\frac{7}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0181.jpg",
+          "region": [
+            100,
+            1700,
+            400,
+            1900
+          ],
+          "alt": "ذوزنقه ABCD با پاره‌خط میانگین MN",
+          "placement": "solution"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1960,
+      "solution_page": 182,
+      "solution_text": "فرض می‌کنیم $PK = x$ باشد، در نتیجه $AP = 3x$ است.\nدر مثلث $ABK$ داریم:\n$\\frac{MP}{BK} = \\frac{AP}{AK} \\Rightarrow \\frac{MP}{3} = \\frac{3}{4} \\Rightarrow MP = \\frac{9}{4}$\nاز طرفی در مثلث $AKC$:\n$\\frac{AP}{AK} = \\frac{PN}{KC} \\Rightarrow \\frac{3}{4} = \\frac{PN}{8} \\Rightarrow PN = 6$\nبدیهی است $AH = 3HH'$. در نتیجه:\n$$\\frac{S_{AMP}}{S_{PNCK}} = \\frac{\\frac{1}{2} MP \\times AH}{\\frac{PN + KC}{2} \\times HH'} = \\frac{\\frac{1}{2} \\times \\frac{9}{4} \\times AH}{\\frac{6+8}{2} \\times HH'} = \\frac{\\frac{9}{8} \\times 3HH'}{7 \\times HH'} = \\frac{\\frac{27}{8}}{7} = \\frac{27}{56}$$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            88,
+            517,
+            160,
+            715
+          ],
+          "placement": "stem",
+          "filename": "page_0182.jpg",
+          "alt": "مثلث ABC با خطوط موازی و ارتفاع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1961,
+      "solution_page": 182,
+      "solution_text": "تمام نقاطی که از A به فاصلهٔ ۵ هستند، بر روی دایره‌ای به مرکز A و به شعاع ۵ قرار دارند و تمامی نقاطی که از B به فاصلهٔ ۸ می‌باشند، بر دایره‌ای به مرکز B و به شعاع ۸ واقع‌اند. یک نقطه وجود دارد که بر هر دو دایره قرار دارد. دو حالت وجود دارد:\n۱) $\\Rightarrow AB = R + R' = 5 + 8 = 13$\n۲) $\\Rightarrow AB = R' - R = 8 - 5 = 3$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            347,
+            517,
+            410,
+            680
+          ],
+          "placement": "stem",
+          "filename": "page_0182.jpg",
+          "alt": "دو دایره مماس مماس بیرون"
+        },
+        {
+          "region": [
+            415,
+            521,
+            477,
+            626
+          ],
+          "placement": "stem",
+          "filename": "page_0182.jpg",
+          "alt": "دو دایره مماس درون"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1962,
+      "solution_page": 182,
+      "solution_text": "از به هم وصل‌کردن وسط اضلاع هر چهارضلعی یک متوازی‌الاضلاع به وجود می‌آید که طول اضلاع آن برابر نصف قطرهای چهارضلعی اولیه است.\nچهارضلعی به دست آمده یک متوازی‌الاضلاع است که چون قطرهای ذوزنقهٔ متساوی‌الساقین با هم برابرند اضلاع متوازی‌الاضلاع نیز با هم برابر بوده و یک لوزی خواهد بود. محیط این لوزی ۲۰ می‌باشد در نتیجه طول هر ضلع لوزی ۵ بوده و طول هر قطر ذوزنقه برابر ۱۰ می‌باشد.\nاگر ارتفاع‌های $AH$ و $BH'$ را رسم کنیم خواهیم داشت:\n$HH' = AB = 7 \\Rightarrow DH = H'C = 1$\n$\\Delta AHC: AH^2 = AC^2 - CH^2 = 100 - 64 \\Rightarrow AH = 6$\n$S_{\\text{ذوزنقه}} = \\frac{AB + CD}{2} \\times AH = \\frac{7+9}{2} \\times 6 = 48$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            621,
+            517,
+            712,
+            700
+          ],
+          "placement": "stem",
+          "filename": "page_0182.jpg",
+          "alt": "ذوزنقه متساوی الساقین ABCD با ارتفاع های رسم شده"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1963,
+      "solution_page": 182,
+      "solution_text": "$AB$ موازی $CD$ است. در نتیجه:\n$\\frac{AE}{AD} = \\frac{EB}{BC} \\Rightarrow \\frac{5}{x} = \\frac{3x - 4}{4} \\Rightarrow 3x^2 - 4x - 20 = 0 \\Rightarrow \\begin{cases} x = -2 \\text{ ق.ق.غ} \\\\ x = \\frac{10}{3} \\end{cases}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1964,
+      "solution_page": 182,
+      "solution_text": "دو مثلث $EAB$ و $EDC$ متشابه هستند به طوری که:\nنسبت تشابه $= \\frac{EC}{EB} = \\frac{10}{6} = \\frac{5}{3}$\nبنابراین نسبت مساحت‌ها $\\frac{25}{9}$ است.\n$S_{EAB} = \\frac{9}{25} S_{EDC} \\Rightarrow S_{ABCD} = \\frac{16}{25} S_{EDC}$\n$\\Rightarrow \\frac{S_{ABCD}}{S_{EAB}} = \\frac{\\frac{16}{25} S}{\\frac{9}{25} S} = \\frac{16}{9}$\nنکته: در مثلث $ABC$ اگر $AD$ نیمساز باشد، خواهیم داشت:\n$\\frac{BD}{AB} = \\frac{DC}{AC}$\nفرض می‌کنیم $x = BD$ باشد. آن‌گاه:\n$\\frac{x}{4} = \\frac{DC}{6} \\Rightarrow DC = \\frac{3}{2} x$\n$\\frac{S_{ABC}}{S_{ABD}} = \\frac{\\frac{1}{2} AH \\times BC}{\\frac{1}{2} AH \\times BD} = \\frac{BC}{BD} = \\frac{BD + DC}{BD} = \\frac{x + \\frac{3}{2}x}{x} = \\frac{5}{2} = 2/5$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": [
+        "A completely unrelated solution about an angle bisector and area ratio of 2.5 is physically printed under question 1964's main solution. It lacks a question number, so it was transcribed as part of 1964's solution text."
+      ]
+    },
+    {
+      "question_number": 1965,
+      "solution_page": 182,
+      "solution_text": "$AP$ را $x$ و $BP$ را $y$ می‌نامیم.\n$AB \\parallel CD \\Rightarrow \\frac{x}{x+5} = \\frac{y}{y+7} = \\frac{4}{9} \\Rightarrow \\begin{cases} x = 4 \\\\ y = \\frac{28}{5} = 5/6 \\end{cases}$\nمحیط $PDC = PD + DC + PC = 9 + 9 + 12/6 = 30/6$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            393,
+            107,
+            489,
+            252
+          ],
+          "placement": "stem",
+          "filename": "page_0182.jpg",
+          "alt": "مثلث PDC و خط AB موازی CD"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1966,
+      "solution_page": 182,
+      "solution_text": "ارتفاع $AH$ را رسم می‌کنیم. اگر $BE$ موازی با $AD$ رسم گردد، خواهیم داشت:\n$\\Delta ADH: \\frac{AM}{AD} = \\frac{AH'}{AH} \\Rightarrow AH = 3AH'$\n$\\Delta BEC: \\frac{OB}{BE} = \\frac{ON}{EC} \\Rightarrow \\frac{2}{6} = \\frac{ON}{12} \\Rightarrow ON = 4$\nمتوازی‌الاضلاع است $ABOM \\Rightarrow OM = AB = 6$\n$\\Rightarrow MN = OM + ON = 10$\n$\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{1}{2} AH'(AB + MN)}{\\frac{1}{2} HH'(MN + DC)} = \\frac{AH'(6+10)}{2AH'(10+18)} = \\frac{2}{7}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            573,
+            102,
+            638,
+            303
+          ],
+          "placement": "stem",
+          "filename": "page_0182.jpg",
+          "alt": "ذوزنقه با خطوط موازی و ارتفاع رسم شده"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1967,
+      "solution_page": 182,
+      "solution_text": "$AB$ و $CD$ موازی و $AO$ و $BO$ مورب هستند. می‌دانیم $\\hat{A}_1 = \\hat{A}_2$ و $\\hat{B}_1 = \\hat{B}_2$ است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            816,
+            97,
+            882,
+            301
+          ],
+          "placement": "stem",
+          "filename": "page_0182.jpg",
+          "alt": "دو خط موازی با دو خط مورب که زاویه‌های برابر را نشان می‌دهد"
+        }
+      ],
+      "review_notes": [
+        "Solution text seems incomplete or very short, but matches exactly what is written on the page."
+      ]
+    },
+    {
+      "question_number": 1968,
+      "solution_page": 183,
+      "solution_text": "\\begin{cases} \\hat{A}_1 = \\hat{O}_1 \\\\ \\hat{A}_1 = \\hat{A}_2 \\end{cases} \\Rightarrow \\hat{A}_2 = \\hat{O}_1 \\Rightarrow AD = DO\n\\begin{cases} \\hat{B}_1 = \\hat{O}_2 \\\\ \\hat{B}_1 = \\hat{B}_2 \\end{cases} \\Rightarrow \\hat{B}_2 = \\hat{O}_2 \\Rightarrow BC = CO\n\\Rightarrow AD + BC = DC \\Rightarrow \\text{محیط} = 7 + 4/5 + 4/5 = 16\nاز نقطهٔ $C$ عمود $CH$ را بر $AD$ رسم می‌کنیم.\n$BC = CH = 6$\n$C$ بر نیم‌ساز زاویهٔ $A$ واقع است بنابراین:\nهم‌چنین از برابری دو مثلث $ABC$ و $ACH$ نتیجه می‌شود:\n$AH = AB = 10 \\Rightarrow DH = AD - AH = 13 - 10 = 3$\n$\\overset{\\Delta}{CDH} : CD^2 = CH^2 + DH^2 \\Rightarrow x^2 = 6^2 + 3^2 = 45$\n$\\Rightarrow x = 3\\sqrt{5}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            471,
+            186,
+            627,
+            269
+          ],
+          "placement": "stem",
+          "filename": "page_0183.jpg",
+          "alt": "ذوزنقه و ارتفاع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1969,
+      "solution_page": 183,
+      "solution_text": "$AL$ را موازی $BC$ رسم نموده و ارتفاع‌های $AH$ و $AH'$ را می‌کشیم.\n$KN = LC = AB = 3 \\Rightarrow \\begin{cases} MK = 6 \\\\ DL = 9 \\end{cases}$\n$\\overset{\\Delta}{ADH'} : \\frac{AH}{AH'} = \\frac{AM}{AD} \\Rightarrow \\frac{AH}{AH'} = \\frac{MK}{DL} = \\frac{2}{3}$\n$\\overset{\\Delta}{ADL} : \\frac{MK}{DL} = \\frac{AM}{AD}$\n$\\frac{S_{ABN}}{S_{MDC}} = \\frac{\\frac{1}{2}AB \\times AH}{\\frac{1}{2}HH' \\times DC} = \\frac{3AH}{12HH'} = \\frac{1}{4} \\times \\frac{AH}{AH' - AH}$\n$= \\frac{1}{4} \\times \\frac{AH}{\\frac{3}{2}AH - AH} = \\frac{1}{4} \\times \\frac{1}{\\frac{1}{2}} = \\frac{1}{2}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            461,
+            381,
+            659,
+            452
+          ],
+          "placement": "stem",
+          "filename": "page_0183.jpg",
+          "alt": "مثلث و خطوط موازی"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1970,
+      "solution_page": 183,
+      "solution_text": "در واقع مساحت مثلث $ADE$ نصف مساحت مثلث $ABC$ است.\nمثلث $ADE$ و $ABC$ متشابه بوده و نسبت تشابه $\\frac{DE}{BC}$ می‌باشد.\nمی‌دانیم نسبت مساحت‌ها مربع نسبت تشابه است:\n$\\frac{S_{ADE}}{S_{ABC}} = (\\frac{DE}{BC})^2 = \\frac{1}{2} \\Rightarrow (\\frac{DE}{8})^2 = \\frac{1}{2} \\Rightarrow DE^2 = 32 \\Rightarrow DE = 4\\sqrt{2}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1971,
+      "solution_page": 183,
+      "solution_text": "اگر $AB$ را $a$ و $CD$ را $b$ بنامیم، خواهیم داشت:\n$\\begin{cases} MN = \\frac{a+b}{2} = 15 \\Rightarrow a+b = 30 \\\\ EF = \\frac{b-a}{2} = 5 \\Rightarrow b-a = 10 \\end{cases} \\Rightarrow b = 20 , a = 10 \\Rightarrow \\frac{a}{b} = \\frac{1}{2}$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1972,
+      "solution_page": 183,
+      "solution_text": "$AD$ را برابر $x$ در نظر می‌گیریم. در مثلث $ACH$، $DH$ ارتفاع وارد بر وتر است.\n$DH^2 = AD \\times DC \\Rightarrow DH^2 = x(8-x) \\Rightarrow DH = \\sqrt{x(8-x)}$\n$DH \\parallel AB \\Rightarrow \\frac{DH}{AB} = \\frac{DC}{AC} \\Rightarrow \\frac{\\sqrt{x(8-x)}}{6} = \\frac{8-x}{8}$\n$\\Rightarrow \\frac{x(8-x)}{36} = \\frac{(8-x)^2}{64} \\xrightarrow{x \\neq 8} \\frac{x}{36} = \\frac{8-x}{64}$\n$\\Rightarrow 64x = 288 - 36x \\Rightarrow 100x = 288 \\Rightarrow x = 2/88$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1973,
+      "solution_page": 183,
+      "solution_text": "دو مثلث $APB$ و $DPC$ به حالت تناسب دو ضلع و برابری زاویهٔ بین متشابه‌اند.\n$\\begin{cases} \\frac{AP}{PD} = \\frac{BP}{CP} = \\frac{1}{3} \\\\ \\hat{P}_1 = \\hat{P}_2 \\end{cases} \\Rightarrow \\overset{\\Delta}{APB} \\sim \\overset{\\Delta}{DPC} \\Rightarrow \\frac{AB}{CD} = \\frac{1}{3} \\Rightarrow CD = 3AB = 12$\nاز طرفی\n$\\begin{cases} \\hat{A} = \\hat{D} \\\\ \\hat{D} = A\\hat{B}C \\end{cases} \\Rightarrow \\hat{A} = A\\hat{B}C \\Rightarrow AC = BC = 17$\n$\\overset{\\Delta}{BCD} \\text{ محیط } = BD + CD + BC = 11 + 12 + 17 = 40$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1974,
+      "solution_page": 183,
+      "solution_text": "مثلث‌های $AOB$ و $COD$ متشابه‌اند.\n$\\frac{OB}{OD} = \\frac{OA}{OC} = \\frac{AB}{CD} = \\frac{3}{6} = \\frac{1}{2}$\nاگر ارتفاع $OH$ در مثلث $\\overset{\\Delta}{AOB}$ را $h_1$ و ارتفاع $OH'$ در مثلث $\\overset{\\Delta}{COD}$ را $h_2$ بنامیم، نسبت $\\frac{h_1}{h_2}$ نیز برابر $\\frac{1}{2}$ است.\n$\\overset{\\Delta}{ACD}: \\frac{OM}{CD} = \\frac{OA}{AC} = \\frac{1}{3} \\Rightarrow OM = \\frac{1}{3}CD = \\frac{6}{3} = 2$\nبه طریق مشابه $ON = 2$ می‌باشد. بنابراین $MN = 4$ است.\n$\\frac{S_{ABNM}}{S_{MNCD}} = \\frac{\\frac{1}{2}h_1(AB+MN)}{\\frac{1}{2}h_2(CD+MN)} = \\frac{h_1}{h_2} \\times \\frac{(3+4)}{(6+4)} = \\frac{1}{2} \\times \\frac{7}{10} = \\frac{7}{20} = 0/35$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1975,
+      "solution_page": 183,
+      "solution_text": "زاویهٔ $C$ و $A_1$ مکمل هستند، بنابراین:\n$\\hat{C} = \\hat{A}_2$\nبنابراین دو مثلث $ABE$ و $CDE$ متشابه هستند.\n$\\frac{BE}{DE} = \\frac{AE}{CE} \\Rightarrow \\frac{4}{x+2} = \\frac{6}{2x-1} \\Rightarrow 8x-4 = 6x+12 \\Rightarrow x = 8$\n$\\text{نسبت تشابه} \\Rightarrow \\frac{BE}{DE} = \\frac{4}{10} = \\frac{2}{5} \\Rightarrow \\frac{S_{ABE}}{S_{CDE}} = \\frac{4}{25} \\Rightarrow \\frac{S_{ABCD}}{S_{CDE}} = \\frac{21}{25}$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            52,
+            610,
+            202,
+            694
+          ],
+          "placement": "stem",
+          "filename": "page_0183.jpg",
+          "alt": "دو مثلث متقاطع"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1976,
+      "solution_page": 183,
+      "solution_text": "مثلث $ABC$ با یک مثلث قائم‌الزاویه متشابه است. بنابراین $ABC$ نیز قائم‌الزاویه است. چون $x > 9$ است، پس بزرگ‌ترین ضلع یعنی وتر $x+3$ است.\n$(x+3)^2 = x^2 + 9^2 \\Rightarrow 6x = 72 \\Rightarrow x = 12$\n$\\Rightarrow 15 = \\text{طول وتر}$\nوتر مثلث کوچک‌تر برابر $۷/۵$ است. در نتیجه نسبت تشابه برابر $\\frac{۱}{۲}$ و نسبت مساحت‌ها برابر $\\frac{۱}{۴}$ است.\n$S_{ABC} = \\frac{۱}{۲} \\times ۱۲ \\times ۹ = ۵۴ \\Rightarrow \\text{مثلث کوچک } S = \\frac{۵۴}{۴} = ۱۳/۵$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1977,
+      "solution_page": 184,
+      "solution_text": "ابتدا قطر $AC$ را محاسبه می‌کنیم:\n$AC^۲ = AB^۲ + BC^۲ = ۱۰۰ + ۴۴ = ۱۴۴ \\Rightarrow AC = ۱۲$\nدر مثلث $ABC$، $BP$ ارتفاع وارد بر وتر است.\n$BC^۲ = PC \\times AC \\Rightarrow ۴۴ = PC \\times ۱۲ \\Rightarrow PC = \\frac{۱۱}{۳}$\nدر مثلث $ACD$، $DQ$ ارتفاع وارد بر وتر است.\n$CD^۲ = QC \\times AC \\Rightarrow ۱۰۰ = QC \\times ۱۲ \\Rightarrow QC = \\frac{۲۵}{۳}$\n$PQ = QC - PC = \\frac{۲۵}{۳} - \\frac{۱۱}{۳} = \\frac{۱۴}{۳}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1978,
+      "solution_page": 184,
+      "solution_text": "$PN$ موازی $AC$ می‌باشد، بنابراین $\\hat{A} = B\\hat{N}P$.\n$\\begin{cases} \\hat{A} = B\\hat{N}P \\\\ \\hat{A} = \\hat{M}_۱ \\end{cases} \\Rightarrow \\hat{M}_۱ = B\\hat{N}P \\Rightarrow B\\overset{\\Delta}{M}N \\sim B\\overset{\\Delta}{N}P$\nاز طرفی: $\\hat{B} = \\hat{B} \\Rightarrow \\frac{BN}{BP} = \\frac{BM}{BN} \\Rightarrow BN^۲ = BM \\times BP \\Rightarrow BN^۲ = BM(BM + MP)$\n$\\Rightarrow BN^۲ - BM^۲ = BM \\times MP$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1979,
+      "solution_page": 184,
+      "solution_text": "$AH$ ارتفاع وارد بر وتر در مثلث قائم‌الزاویهٔ $ACD$ است.\n$AH^۲ = DH \\times CH = ۴ \\times ۹ \\Rightarrow AH = ۶$\nدر مثلث $BCD$ ارتفاع وارد بر ضلع $CD$ با $AH$ برابر است. بنابراین:\n$S_{BCD} = \\frac{AH \\times CD}{۲} = \\frac{۶ \\times ۱۳}{۲} = ۳۹$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1980,
+      "solution_page": 184,
+      "solution_text": "تمامی نقاطی که از $A$ به فاصلهٔ ۷ هستند، بر دایره‌ای به مرکز $A$ و شعاع ۷ و تمامی نقاطی که از $B$ به فاصلهٔ ۳ هستند، بر دایره‌ای به مرکز $B$ و شعاع ۳ قرار دارند. دو دایره هیچ نقطهٔ مشترکی ندارند. دو حالت زیر وجود دارد:\n$۱) \\quad AB > R + R' \\Rightarrow AB > ۱۰$\n$۲) \\quad AB < R - R' \\Rightarrow AB < ۴$\nبنابراین اندازهٔ $AB$ نمی‌تواند در فاصلهٔ $[۴, ۱۰]$ باشد.",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            591,
+            513,
+            897,
+            722
+          ],
+          "placement": "solution_text",
+          "alt": "دو حالت برای دایره ها",
+          "filename": "page_0184.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1981,
+      "solution_page": 184,
+      "solution_text": "دو مثلث $APD$ و $BPC$ متشابه‌اند. $AB$ قطر مستطیل و برابر $\\sqrt{۱۰}$ است.\n$\\frac{AP}{PB} = \\frac{AD}{BC} = \\frac{۱}{۳} \\Rightarrow \\frac{AP}{AB} = \\frac{۱}{۴} \\Rightarrow AP = \\frac{AB}{۴} = \\frac{\\sqrt{۱۰}}{۴}$\nدر مثلث $ABC$، $AH$ ارتفاع وارد بر وتر است.\n$AC^۲ = AH \\times AB \\Rightarrow ۱ = AH \\times \\sqrt{۱۰} \\Rightarrow AH = \\frac{\\sqrt{۱۰}}{۱۰}$\n$PH = AP - AH = \\frac{\\sqrt{۱۰}}{۴} - \\frac{\\sqrt{۱۰}}{۱۰} = \\frac{۳\\sqrt{۱۰}}{۲۰}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1982,
+      "solution_page": 184,
+      "solution_text": "تمام نقاطی که از نقطهٔ $A$ به فاصلهٔ ۱ هستند، بر دایره‌ای به مرکز $A$ و شعاع ۱ قرار دارند.\nتمام نقاطی که از خط $d$ به فاصلهٔ ۳ هستند، بر خطوطی موازی $d$ و به فاصلهٔ ۳ از آن قرار دارند.\nدقیقاً یک نقطه وجود دارد که هر دو خاصیت را داشته باشد. بنابراین خط مورد نظر باید بر دایره مماس باشد.\nاگر خط $\\ell_۱$ به فاصلهٔ ۳ از خط $d$ باشد، $AH = ۱ + ۳ = ۴$ یعنی $x = ۴$ است و اگر خط $\\ell_۲$ به فاصلهٔ ۳ از خط $d$ باشد، $AH = ۳ - ۱ = ۲$ یعنی $x = ۲$ است.\nمجموع مقادیر $x$ برابر $۶ = ۲ + ۴$ است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            90,
+            107,
+            240,
+            477
+          ],
+          "placement": "solution_text",
+          "alt": "نمودار دایره و خطوط موازی",
+          "filename": "page_0184.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1983,
+      "solution_page": 184,
+      "solution_text": "دو مثلث قائم‌الزاویهٔ $B\\overset{\\Delta}{O}P$ و $C\\overset{\\Delta}{O}H$ با برابری دو زاویه با یکدیگر متشابه‌اند.\n$\\frac{OC}{OB} = \\frac{CH}{BP} = \\frac{۱۲}{۸} = \\frac{۳}{۲} \\Rightarrow OC = \\frac{۳}{۲} OB = \\frac{۳}{۲} (۲ OH) = ۳ OH$\n$C\\overset{\\Delta}{O}H: OH^۲ + CH^۲ = OC^۲ \\Rightarrow OH^۲ + ۱۲^۲ = (۳ OH)^۲$\n$\\Rightarrow OH^۲ = \\frac{۱۴۴}{۸} = ۱۸ \\Rightarrow OH = ۳\\sqrt{۲} \\Rightarrow BH = ۳ OH = ۹\\sqrt{۲}$\n$S_{BCH} = \\frac{BH \\times CH}{۲} = \\frac{۹\\sqrt{۲} \\times ۱۲}{۲} = ۵۴\\sqrt{۲}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1984,
+      "solution_page": 184,
+      "solution_text": "در مثلث $ABC$ طبق قضیهٔ تالس خواهیم داشت:\n$\\frac{AF}{AB} = \\frac{EF}{BC} \\Rightarrow \\frac{۱۱}{AB} = \\frac{۹}{۴۳۲} \\Rightarrow AB = \\frac{۴۳۲ \\times ۱۱}{۹} = ۴۸ \\times ۱۱ = ۵۲۸$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            542,
+            106,
+            689,
+            290
+          ],
+          "placement": "solution_text",
+          "alt": "مثلث با پاره خط های موازی",
+          "filename": "page_0184.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1985,
+      "solution_page": 184,
+      "solution_text": "$a$ کم‌ترین مقدار ممکن است، بنابراین کوچک‌ترین ضلع مثلث می‌باشد. سه حالت زیر را بررسی می‌کنیم:\n$۱) b > ۱۶ \\Rightarrow \\frac{a}{۱۲} = \\frac{۴}{۱۶} = \\frac{۵}{b} \\Rightarrow \\begin{cases} a = ۳ \\\\ b = ۲۰ \\end{cases}$\n$۲) ۱۲ < b < ۱۶ \\Rightarrow \\frac{a}{۱۲} = \\frac{۴}{b} = \\frac{۵}{۱۶} \\Rightarrow \\begin{cases} a = \\frac{۱۵}{۴} \\\\ b = \\frac{۶۴}{۵} \\end{cases}$\n$۳) b < ۱۲ \\Rightarrow \\frac{a}{b} = \\frac{۴}{۱۲} = \\frac{۵}{۱۶} \\quad \\text{غ‌ق‌ق}$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1986,
+      "solution_page": 185,
+      "solution_text": "واضح است که در حالت اول $a$ کم‌ترین مقدار بوده و در نتیجه $b$ برابر ۲۰ است. در این حالت با توجه به برقراری رابطۀ فیثاغورس هر دو مثلث قائم‌الزاویه می‌باشند.\n$S_{\\text{بزرگ‌تر مثلث}} = \\frac{12 \\times 16}{2} = 96$\nاگر $AC=b$ باشد، با توجه به $\\sin \\hat{A}_1 = \\frac{\\sqrt{6}}{6}$ در مثلث $\\overset{\\Delta}{ACH}$ خواهیم داشت:\n$CH = \\frac{\\sqrt{6}}{6}b$\n$AH$ ارتفاع وارد بر وتر در مثلث قائم‌الزاویۀ $\\overset{\\Delta}{ABC}$ است.\n$AC^2 = CH \\times BC \\Rightarrow b^2 = \\frac{\\sqrt{6}}{6}b \\times BC \\Rightarrow BC = \\sqrt{6}b$\nاز طرفی: $BC^2 = AB^2 + AC^2 \\Rightarrow 6b^2 = 6 + b^2$\n$\\Rightarrow 5b^2 = 6 \\Rightarrow b = \\frac{\\sqrt{6}}{\\sqrt{5}}$\n$S_{\\overset{\\Delta}{ABC}} = \\frac{AB \\times AC}{2} = \\frac{\\sqrt{6} \\times \\frac{\\sqrt{6}}{\\sqrt{5}}}{2} = \\frac{3}{\\sqrt{5}} = \\frac{3\\sqrt{5}}{5}$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1987,
+      "solution_page": 185,
+      "solution_text": "قضیۀ تالس را در دو مثلث $\\overset{\\Delta}{BMC}$ و $\\overset{\\Delta}{ABC}$ می‌نویسیم.\n$\\overset{\\Delta}{BMC} : PN \\parallel BM \\Rightarrow \\frac{CN}{NM} = \\frac{CP}{PB} \\Rightarrow \\frac{CN}{NM} = \\frac{CM}{MA}$\n$\\overset{\\Delta}{ABC} : MP \\parallel AB \\Rightarrow \\frac{CP}{PB} = \\frac{CM}{MA}$\n$\\Rightarrow \\frac{4}{2} = \\frac{6}{MA} \\Rightarrow MA = 3 \\Rightarrow AC = 4 + 2 + 3 = 9$",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1988,
+      "solution_page": 185,
+      "solution_text": "روش اول: ارتفاع $AH$ را رسم می‌کنیم.\n$\\frac{S_{\\overset{\\Delta}{ABP}}}{S_{\\overset{\\Delta}{APD}}} = \\frac{\\frac{1}{2} AH \\times BP}{\\frac{1}{2} AH \\times PD} = \\frac{4}{6} \\Rightarrow \\frac{BP}{PD} = \\frac{2}{3}$\nدو مثلث $\\overset{\\Delta}{ABP}$ و $\\overset{\\Delta}{PDC}$ در حالت برابری زوایا با هم متشابه‌اند و نسبت تشابه برابر $\\frac{BP}{PD} = \\frac{2}{3}$ و در نتیجه نسبت مساحت‌ها برابر $\\frac{4}{9}$ است. بنابراین $S_{\\overset{\\Delta}{PDC}} = \\frac{9}{4} S_{\\overset{\\Delta}{ABP}} = 9$. همانند دو مثلث $\\overset{\\Delta}{ABP}$ و $\\overset{\\Delta}{APD}$ نسبت مساحت‌های دو مثلث $\\overset{\\Delta}{ABP}$ و $\\overset{\\Delta}{BPC}$ نیز برابر نسبت قاعده‌ها یعنی $\\frac{AP}{PC} = \\frac{2}{3}$ است.\n$\\frac{S_{\\overset{\\Delta}{ABP}}}{S_{\\overset{\\Delta}{BPC}}} = \\frac{2}{3} \\Rightarrow S_{\\overset{\\Delta}{BPC}} = \\frac{3}{2} S_{\\overset{\\Delta}{ABP}} = 6$\n$\\Rightarrow S_{ABCD} = S_{\\overset{\\Delta}{ABP}} + S_{\\overset{\\Delta}{APD}} + S_{\\overset{\\Delta}{PDC}} + S_{\\overset{\\Delta}{BPC}} = 4 + 6 + 9 + 6 = 25$\nروش دوم: در ذوزنقه با رسم قطرها مساحت دو مثلث جانبی با هم برابر و واسطۀ هندسی مساحت مثلث‌های بالا و پایین است.\n$S_1 S_2 = S^2$\nدر این مسئله $S = 6$ و $S_1 = 4$ است.\n$4 S_2 = 6^2 \\Rightarrow S_2 = 9 \\Rightarrow S_{ABCD} = 2S + S_1 + S_2 = 12 + 4 + 9 = 25$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            470,
+            480,
+            560,
+            690
+          ],
+          "placement": "stem",
+          "alt": "مثلث ABC با ارتفاع AH و نقطه P",
+          "filename": "page_0185.jpg"
+        },
+        {
+          "region": [
+            810,
+            480,
+            890,
+            690
+          ],
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با اقطار متقاطع",
+          "filename": "page_0185.jpg"
+        }
+      ],
+      "review_notes": [
+        "Note: S_2 is denoted as S_r in the Persian text, transcribed as S_2 for consistency with mathematical meaning."
+      ]
+    },
+    {
+      "question_number": 1989,
+      "solution_page": 185,
+      "solution_text": "با توجه به $\\frac{AM}{MD} = \\frac{BN}{NC} = \\frac{2}{3}$ واضح است $MN \\parallel AB \\parallel DC$.\n$\\overset{\\Delta}{ACD} : MQ \\parallel DC \\Rightarrow \\frac{MQ}{DC} = \\frac{AM}{AD} = \\frac{2}{5}$\n$\\Rightarrow MQ = \\frac{2}{5} DC = \\frac{2}{5}b$\n$\\overset{\\Delta}{ABD} : MP \\parallel AB \\Rightarrow \\frac{MP}{AB} = \\frac{DM}{DA} = \\frac{3}{5}$\n$\\Rightarrow MP = \\frac{3}{5} AB = \\frac{3}{5}a$\n$\\Rightarrow PQ = MQ - MP = \\frac{2}{5}b - \\frac{3}{5}a = \\frac{2b - 3a}{5}$",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1990,
+      "solution_page": 185,
+      "solution_text": "$P$ بر روی عمودمنصف $BC$ واقع است. بنابراین:\n$PB = PC = 7 \\Rightarrow AP = 3$\n$\\overset{\\Delta}{APB} : AP^2 + AB^2 = BP^2$\n$\\Rightarrow 9 + AB^2 = 49 \\Rightarrow AB = \\sqrt{40} = 2\\sqrt{10}$\n$S_{\\overset{\\Delta}{ABC}} = \\frac{AB \\times AC}{2} = \\frac{2\\sqrt{10} \\times 4}{2} = 4\\sqrt{10}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            300,
+            40,
+            400,
+            240
+          ],
+          "placement": "stem",
+          "alt": "مثلث PCB و نقطه A روی PC و ارتفاع AB",
+          "filename": "page_0185.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1991,
+      "solution_page": 185,
+      "solution_text": "می‌دانیم: $S_1 S_2 = S^2$\n$\\Rightarrow S_1 S_2 = 24^2 \\quad (1)$\nاز طرفی دو مثلث $\\overset{\\Delta}{ABO}$ و $\\overset{\\Delta}{CDO}$ با نسبت تشابه $\\frac{2}{3}$ با یکدیگر متشابه‌اند.\n$\\Rightarrow \\frac{S_1}{S_2} = (\\frac{2}{3})^2 = \\frac{4}{9} \\Rightarrow S_2 = \\frac{9}{4} S_1 \\xrightarrow{(1)} S_1 (\\frac{9}{4} S_1) = 24^2$\n$\\Rightarrow \\frac{9}{4} S_1^2 = 24^2 \\Rightarrow \\frac{3}{2} S_1 = 24 \\Rightarrow S_1 = 16 \\Rightarrow S_2 = \\frac{9}{4} \\times 16 = 36$\n$\\Rightarrow S_{ABCD} = 16 + 36 + 2 \\times 24 = 100 \\Rightarrow \\frac{8+12}{2} \\times h = 100$\n$\\Rightarrow h = 10$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            480,
+            40,
+            560,
+            240
+          ],
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با مساحت های S1 و S2 و S",
+          "filename": "page_0185.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1992,
+      "solution_page": 185,
+      "solution_text": "در ذوزنقه $ABCD$ می‌دانیم:\n$S_1 S_2 = S^2 \\quad (1)$\n$S_1 = \\frac{2}{3} S \\Rightarrow S = \\frac{3}{2} S_1 \\xrightarrow{(1)} S_1 S_2 = (\\frac{3}{2} S_1)^2 = \\frac{9}{4} S_1^2$\n$\\Rightarrow S_2 = \\frac{9}{4} S_1 \\Rightarrow \\frac{S_2}{S_1} = \\frac{9}{4} = 2/25$",
+      "stated_correct_option": 1,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 1993,
+      "solution_page": 185,
+      "solution_text": "مثلث‌های $OAB$ و $OCD$ با نسبت $\\frac{6}{9}$ با یکدیگر متشابه‌اند. بنابراین:\n$\\frac{OB}{OD} = \\frac{6}{9} = \\frac{2}{3}$\n$\\frac{S_{AOD}}{S_{AOB}} = \\frac{\\frac{1}{2} AH \\times OD}{\\frac{1}{2} AH \\times OB} = \\frac{OD}{OB} = \\frac{3}{2}$\n$\\Rightarrow S_{AOD} = \\frac{3}{2} S_{AOB} = \\frac{3}{2} \\times 6 = 9$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            810,
+            40,
+            890,
+            240
+          ],
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با اقطار متقاطع و عمود AH روی قطر",
+          "filename": "page_0185.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1994,
+      "solution_page": 186,
+      "solution_text": "دو مثلث $OAB$ و $OCD$ به حالت برابری زوایا با یکدیگر متشابه‌اند و نسبت تشابه برابر $\\frac{2}{5}$ است.\n$\\hat{B}_1 = \\hat{D}_1$ و $\\hat{A}_1 = \\hat{C}_1$ $\\Rightarrow \\Delta OAB \\sim \\Delta OCD$\nنسبت مساحت‌ها، مربع نسبت تشابه و برابر $\\frac{4}{25}$ است.",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            180,
+            500,
+            270,
+            750
+          ],
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با قطرهای متقاطع در O",
+          "filename": "page_0186.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1995,
+      "solution_page": 186,
+      "solution_text": "قطر $AC$ را رسم می‌کنیم تا $EF$ را در $P$ قطع کند.\n$\\Delta ACD: EP \\parallel DC \\Rightarrow \\frac{EP}{DC} = \\frac{AE}{AD} = \\frac{2}{7}$\n$\\Rightarrow EP = \\frac{2}{7} DC = \\frac{2}{7} \\times 10 = \\frac{20}{7}$\n$\\Delta ABC: PF \\parallel AB \\Rightarrow \\frac{PF}{AB} = \\frac{CF}{BC} = \\frac{DE}{AD} = \\frac{5}{7}$\n$\\Rightarrow PF = \\frac{5}{7} AB = \\frac{5}{7} \\times 6 = \\frac{30}{7}$\n$\\Rightarrow EF = EP + PF = \\frac{20}{7} + \\frac{30}{7} = \\frac{50}{7}$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            340,
+            500,
+            415,
+            715
+          ],
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با پاره‌خط EF موازی قاعده‌ها",
+          "filename": "page_0186.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1996,
+      "solution_page": 186,
+      "solution_text": "روش اول: اندازه $QF$، $EQ$ و $EP$ را به دست می‌آوریم.\n$\\Delta ADC: \\frac{EQ}{DC} = \\frac{AE}{AD} = \\frac{1}{2} \\Rightarrow EQ = \\frac{DC}{2} = 4$\n$\\Delta ABC: \\frac{QF}{AB} = \\frac{FC}{BC} = \\frac{1}{2} \\Rightarrow QF = \\frac{AB}{2} = 2$\n$\\Delta ABD: \\frac{EP}{AB} = \\frac{DE}{DA} = \\frac{1}{2} \\Rightarrow EP = \\frac{AB}{2} = 2$\n$\\Rightarrow \\begin{cases} EF = EQ + QF = 6 \\\\ PQ = EQ - EP = 2 \\end{cases} \\Rightarrow \\frac{PQ}{EF} = \\frac{2}{6} = \\frac{1}{3}$\nروش دوم:\nنکته: در ذوزنقه $ABCD$ قطرها و پاره‌خط واصل بین وسط‌های دو ساق را رسم می‌کنیم. خواهیم داشت:\n$EF = \\frac{a+b}{2}$ و $PQ = \\frac{b-a}{2}$\nدر این مسئله $a=4$ و $b=8$ است:\n$\\frac{PQ}{EF} = \\frac{b-a}{a+b} = \\frac{8-4}{4+8} = \\frac{4}{12} = \\frac{1}{3}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            760,
+            510,
+            850,
+            680
+          ],
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با خط واصل وسط‌های ساق‌ها EF و نقاط P و Q",
+          "filename": "page_0186.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1997,
+      "solution_page": 186,
+      "solution_text": "روش اول: قطر $AC$ را رسم می‌کنیم تا $EF$ را در $P$ قطع کند.\n$\\Delta ADC: EP \\parallel DC \\Rightarrow \\frac{EP}{DC} = \\frac{AE}{AD} = \\frac{1}{6}$\n$\\Rightarrow EP = \\frac{1}{6} DC = \\frac{9}{6}$\n$\\Delta ABC: PF \\parallel AB \\Rightarrow \\frac{PF}{AB} = \\frac{CF}{BC} = \\frac{DE}{AD} = \\frac{5}{6}$\n$\\Rightarrow PF = \\frac{5}{6} AB = \\frac{20}{6}$\n$\\Rightarrow EF = EP + PF = \\frac{29}{6}$\nروش دوم:\nنکته: در ذوزنقه $ABCD$ اگر $EF$ ساق‌های ذوزنقه را به نسبت $\\frac{m}{n}$ قطع کند خواهیم داشت:\n$EF = \\frac{mb+na}{m+n}$\nدر این مسئله $m=1$، $n=5$، $a=4$ و $b=9$ است.\n$EF = \\frac{(1 \\times 9) + (5 \\times 4)}{1+5} = \\frac{29}{6}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            95,
+            95,
+            175,
+            335
+          ],
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با پاره‌خط EF موازی قاعده‌ها و قطر AC",
+          "filename": "page_0186.jpg"
+        },
+        {
+          "region": [
+            370,
+            95,
+            455,
+            335
+          ],
+          "placement": "stem",
+          "alt": "ذوزنقه ABCD با پاره‌خط EF که ساق‌ها را به نسبت m به n قطع می‌کند",
+          "filename": "page_0186.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1998,
+      "solution_page": 186,
+      "solution_text": "در مثلث $BDC$ ارتفاع $DH$ را رسم می‌کنیم.\n$D$ روی نیمساز زاویهٔ $B$ است، بنابراین: $DA = DH = 6$\n$S_{BDC} = \\frac{1}{2} DH \\times BC = \\frac{1}{2} \\times 6 \\times 20 = 60$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            505,
+            95,
+            580,
+            260
+          ],
+          "placement": "stem",
+          "alt": "چهارضلعی ABCD با قطر BD و ارتفاع DH در مثلث BDC",
+          "filename": "page_0186.jpg"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 1999,
+      "solution_page": 186,
+      "solution_text": "پاسخ در کلید سوالات آمده است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": [
+        "No explanation, just key"
+      ]
+    },
+    {
+      "question_number": 2000,
+      "solution_page": 186,
+      "solution_text": "پاسخ در کلید سوالات آمده است.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": [
+        "No explanation, just key"
+      ]
+    },
+    {
+      "question_number": 2001,
+      "solution_page": 186,
+      "solution_text": "پاسخ در کلید سوالات آمده است.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": [
+        "No explanation, just key"
+      ]
+    },
+    {
+      "question_number": 2002,
+      "solution_page": 186,
+      "solution_text": "ابتدا میانگین داده‌ها را حساب می‌کنیم:\n$\\bar{x} = \\frac{7+6+3+5+4+6+4}{7} = \\frac{35}{7} = 5$\nبا حذف ۱ داده، میانگین ۶ دادهٔ باقی‌مانده باید برابر ۵ باشد، یعنی جمع اعداد باقی‌مانده برابر $6 \\times 5 = 30$ است. جمع ۷ عدد اولیه ۳۵ می‌باشد، بنابراین عدد ۵ حذف شده است. در واقع اگر با حذف ۱ عدد میانگین تغییر نکند، آن عدد برابر میانگین است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 2003,
+      "solution_page": 186,
+      "solution_text": "میانگین اعداد برابر است با:\n$\\bar{x} = \\frac{a+17}{5}$\nبا توجه به اعداد $1, 2, 6, 8$ عدد $a$ سه حالت دارد:\nالف) $a < 2 \\Rightarrow$ میانه $= 2 \\Rightarrow \\bar{x} = 3 \\Rightarrow \\frac{a+17}{5} = 3 \\Rightarrow a = -2$ غ ق ق\nب $2 \\le a \\le 6 \\Rightarrow \\text{میانه} = a \\Rightarrow \\overline{x} = a + 1$\n$\\Rightarrow \\frac{a + 17}{5} = a + 1 \\Rightarrow a = 3 \\ \\checkmark$\nپ $a > 6 \\Rightarrow \\text{میانه} = 6 \\Rightarrow \\overline{x} = 7$\n$\\Rightarrow \\frac{a + 17}{5} = 7 \\Rightarrow a = 18 \\ \\checkmark$\nمجموع مقادیر $a = 3 + 18 = 21$",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 2004,
+      "solution_page": 187,
+      "solution_text": "اگر میانگین $n$ داده $\\overline{x}$ و میانگین $m$ داده $\\overline{y}$ باشد، میانگین کل از رابطۀ زیر محاسبه می‌شود:\nمیانگین کل $= \\frac{n\\overline{x} + m\\overline{y}}{m + n}$\nبنابراین:\nمیانگین کل $= \\frac{(n \\times 12) + (12 \\times n)}{n + 12} = 9/6$\n$\\Rightarrow 24n = 9/6n + 12 \\times 9/6 \\Rightarrow 14/4n = 12 \\times 9/6$\n$\\Rightarrow 144n = 12 \\times 96 \\Rightarrow 12n = 96 \\Rightarrow n = 8$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            461,
+            187,
+            831,
+            318
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2004"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2005,
+      "solution_page": 187,
+      "solution_text": "فرض کنیم جمعیت کلاس A برابر $n$ و جمعیت کلاس B برابر $kn$ باشد:\nمیانگین کل داده‌ها $= \\overline{x} = \\frac{n \\times 10 + kn \\times 12}{n + kn} = \\frac{23}{2}$\n$\\Rightarrow \\frac{10 + 12k}{k + 1} = \\frac{23}{2} \\Rightarrow 20 + 24k = 23k + 23 \\Rightarrow k = 3$\nجمعیت کلاس B سه برابر جمعیت کلاس A است.\nنکته: اگر $n$ داده با میانگین $\\overline{x}$ و $m$ داده با میانگین $\\overline{y}$ با هم ادغام شوند، میانگین کل داده‌ها برابر است با:\n$\\frac{n\\overline{x} + m\\overline{y}}{m + n}$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            461,
+            321,
+            831,
+            467
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2005"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2006,
+      "solution_page": 187,
+      "solution_text": "میانگین $10$ دادۀ اولیه برابر $12$ بوده است. بنابراین جمع داده‌ها برابر $120 = 10 \\times 12$ است. با تغییر عدد $26$ به $16$، از مجموع داده‌ها $10$ واحد کاسته شده و با افزودن دادۀ $11$ به مجموع داده‌ها $1$ واحد افزوده شده و تعداد داده‌ها نیز به $11$ افزایش می‌یابد.\n$\\overline{x}_{\\text{جدید}} = \\frac{120 + 1}{11} = \\frac{121}{11} = 11$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            461,
+            471,
+            831,
+            563
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2006"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2007,
+      "solution_page": 187,
+      "solution_text": "تمامی داده‌های $x_1, x_2, \\dots, x_n$ در $3$ ضرب و حاصل آن‌ها با عدد ثابت $\\overline{x}$ جمع شده است. بنابراین میانگین این اعداد نیز سه برابر شده و با $\\overline{x}$ جمع می‌شود:\nمیانگین جدید $= 3\\overline{x} + \\overline{x} = 4\\overline{x} = 40 \\Rightarrow \\overline{x} = 10$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            461,
+            566,
+            831,
+            642
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2007"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2008,
+      "solution_page": 187,
+      "solution_text": "میانگین داده‌های اولیه را می‌نویسیم:\n$\\frac{(2x_1 - 1) + (2x_2 + 2) + (2x_3 - 3) + \\cdots (2x_{10} + 10)}{10} = 1/5$\n$\\Rightarrow 2(x_1 + x_2 + \\cdots + x_{10}) + \\frac{(-1 + 2 - 3 + 4 - \\cdots + 10)}{5} = 15$\n$\\Rightarrow x_1 + x_2 + \\cdots + x_{10} = 5$\nحال میانگین جدید را به دست می‌آوریم:\n$\\overline{x} = \\frac{(3x_1 + 1) + (3x_2 + 2) + \\cdots + (3x_{10} + 10)}{10}$\n$= \\frac{3(x_1 + x_2 + \\cdots + x_{10}) + (1 + 2 + \\cdots + 10)}{10} = \\frac{(3 \\times 5) + (55)}{10} = 7$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            461,
+            645,
+            831,
+            832
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2008"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2009,
+      "solution_page": 187,
+      "solution_text": "اگر $n$ داده با میانگین $\\overline{x}$ و $m$ داده با میانگین $\\overline{y}$ با هم ادغام شوند، میانگین کل داده‌ها برابر است با:\n$\\frac{n\\overline{x} + m\\overline{y}}{m + n}$\nمیانگین کل $= \\frac{10 \\times \\overline{x} + 30(\\overline{x} - 4)}{40} = 21 \\Rightarrow 40\\overline{x} - 120 = 840$\n$\\Rightarrow \\overline{x} = \\frac{960}{40} = 24 \\xrightarrow{\\text{میانگین سن زنان}} \\overline{x} - 4 = 20$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            461,
+            834,
+            831,
+            915
+          ],
+          "placement": "solution_part_1",
+          "alt": "Solution for 2009 part 1"
+        },
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            45,
+            78,
+            411,
+            142
+          ],
+          "placement": "solution_part_2",
+          "alt": "Solution for 2009 part 2"
+        }
+      ],
+      "review_notes": [
+        "Solution continues onto the left column"
+      ]
+    },
+    {
+      "question_number": 2010,
+      "solution_page": 187,
+      "solution_text": "چارک‌ها را تعیین می‌کنیم:\n$1, 2, \\underbrace{3}_{Q_1}, 4, 5, \\underset{Q_2}{\\downarrow}, 6, 7, \\underbrace{8}_{Q_3}, 9, 10$\n$Q_3 - Q_1 = 8 - 3 = 5$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            45,
+            144,
+            411,
+            203
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2010"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2011,
+      "solution_page": 187,
+      "solution_text": "نمایش کلی داده‌ها به صورت زیر است:\n(۸ داده) $Q_1$ (۸ داده) $Q_2$ (۸ داده) $Q_3$ (۸ داده)\n$Q_1$ و $Q_3$ جزء داده‌ها هستند. دو حالت به وجود می‌آید:\n۱) $Q_2$ جزء داده‌ها باشد. $\\Rightarrow n = 8 + 1 + 8 + 1 + 8 + 1 = 27$\n۲) $Q_2$ جزء داده‌ها نباشد. $\\Rightarrow n = 8 + 1 + 8 + 8 + 1 = 26$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            45,
+            205,
+            411,
+            294
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2011"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2012,
+      "solution_page": 187,
+      "solution_text": "داده‌ها را مرتب می‌کنیم:\n$2, 3, 4, \\underset{Q_1}{\\downarrow}, 4, 6, 7, \\underset{\\text{میانه} = Q_2}{\\downarrow}, 8, 9, 10, \\underset{Q_3}{\\downarrow}, 13, 16, 19$\nمیانگین داده‌های کم‌تر از چارک اول $= \\overline{x} = \\frac{2 + 3 + 4}{3} = 3$\nمیانگین داده‌های بیش‌تر از چارک سوم $= \\overline{y} = \\frac{13 + 16 + 19}{3} = 16$\n$\\Rightarrow \\overline{y} - \\overline{x} = 16 - 3 = 13$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            45,
+            296,
+            411,
+            420
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2012"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2013,
+      "solution_page": 187,
+      "solution_text": "اگر $n$ تعداد داده‌ها و $k$ عددی صحیح باشد، خواهیم داشت:\nهیچ‌یک از چارک‌ها جزء داده‌ها نیستند: $n=4k$\nمیانه جزء داده‌ها بوده ولی چارک اول و سوم جزء داده‌ها نیستند: $n=4k+1$\nمیانه جزء داده‌ها نبوده ولی چارک اول و سوم جزء داده‌ها هستند: $n=4k+2$\nهر سه چارک جزء داده‌ها هستند: $n=4k+3$\n$n$ باید به صورت $4k+2$ باشد، بنابراین عدد $66$ قابل قبول است:\n$66 = 4 \\times 16 + 2$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            45,
+            423,
+            411,
+            551
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2013"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2014,
+      "solution_page": 187,
+      "solution_text": "$n$ باید به صورت $4k+1$ باشد، بنابراین عدد $17$ قابل قبول است:\n$17 = 4 \\times 4 + 1$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            45,
+            554,
+            411,
+            584
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2014"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2015,
+      "solution_page": 187,
+      "solution_text": "چارک‌ها $24$ دادۀ موجود را به $4$ دستۀ $6$تایی تقسیم می‌کنند. اگر مجموع $6$ دادۀ کم‌تر از چارک اول را $S_1$ بنامیم، خواهیم داشت:\n$4S_1 =$ مجموع داده‌های بیش‌تر از چارک سوم\nمیانگین کل $= 3\\overline{x} \\Rightarrow \\frac{S}{24} = 3 \\times \\frac{S_1}{6} \\Rightarrow S = 12S_1$\nمجموع کل داده‌ها $=$ مجموع $12$ دادۀ بین چارک اول و سوم $+$ مجموع داده‌های بیش‌تر از چارک سوم $+$ مجموع داده‌های کم‌تر از چارک اول\n$= 12S_1 - S_1 - 4S_1 = 7S_1$\nمیانگین $12$ دادۀ بین چارک اول و سوم $= \\frac{7S_1}{12} = \\frac{7}{12}(\\frac{S_1}{6}) = \\frac{7}{2}\\overline{x} = 3/5\\overline{x}$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            45,
+            586,
+            411,
+            747
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2015"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2016,
+      "solution_page": 187,
+      "solution_text": "واریانس هر یک از گروه‌ها را به دست می‌آوریم:\nسری A: $\\overline{x} = \\frac{2 + 2 + 3 + 3 + 3}{5} = \\frac{13}{5}$\nچون داده‌ها صحیح و میانگین غیرصحیح است از رابطۀ $\\sigma^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x})^2$ استفاده می‌کنیم:\n$\\sigma^2 = \\frac{2^2 + 2^2 + 3^2 + 3^2 + 3^2}{5} - (\\frac{13}{5})^2 = \\frac{35}{5} - \\frac{169}{25}$\n$= \\frac{175 - 169}{25} = \\frac{6}{25}$\n$$ \\text{سری B} : \\overline{x} = \\frac{3+3+2+2+2}{5} = \\frac{12}{5} $$\n$$ \\Rightarrow \\sigma^2 = \\frac{3^2+3^2+2^2+2^2+2^2}{5} - (\\frac{12}{5})^2 = 6 - \\frac{144}{25} = \\frac{6}{25} $$\nواریانس دو گروه برابر است.",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "filename": "page_0187.jpg",
+          "region": [
+            45,
+            749,
+            411,
+            915
+          ],
+          "placement": "solution",
+          "alt": "Solution for 2016"
+        },
+        {
+          "region": [
+            70,
+            520,
+            140,
+            900
+          ],
+          "placement": "continuation",
+          "filename": "page_0188.jpg",
+          "alt": "ادامه حل سوال ۲۰۱۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2017,
+      "solution_page": 188,
+      "solution_text": "برای محاسبهٔ واریانس اعدادی که تشکیل دنبالهٔ حسابی با قدرنسبت $d$ می‌دهند از رابطهٔ زیر استفاده می‌کنیم:\n$$ \\sigma^2 = \\frac{n^2-1}{12} \\times d^2 $$\nخواهیم داشت:\n$$ 1, 3, 5, 7, 9 \\Rightarrow \\sigma^2 = \\frac{5^2-1}{12} \\times 2^2 = 8 $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            150,
+            520,
+            220,
+            900
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۱۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2018,
+      "solution_page": 188,
+      "solution_text": "ابتدا داده‌ها را به صورت صعودی مرتب کرده، چارک‌ها را محاسبه می‌کنیم:\n$$ 2, 2, \\underbrace{3}_{Q_1}, 4, 4, \\underbrace{5}_{Q_2}, 5, 7, \\underbrace{7}_{Q_3}, 8, 8 $$\nداده‌های بین چارک اول و سوم: $4, 4, 5, 5, 7$\n$$ \\Rightarrow \\overline{x} = \\frac{4+4+5+5+7}{5} = \\frac{25}{5} = 5 $$\n$$ \\Rightarrow \\sigma^2 = \\frac{(4-5)^2+(4-5)^2+(5-5)^2+(5-5)^2+(7-5)^2}{5} = \\frac{1+1+0+0+4}{5} = \\frac{6}{5} = 1/2 $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            230,
+            520,
+            390,
+            900
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۱۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2019,
+      "solution_page": 188,
+      "solution_text": "روش اول: هرگاه واریانس داده‌ها برابر صفر شود، یعنی همهٔ داده‌ها برابرند:\n$$ a-2 = 2b-3 = c+2 = 3 \\Rightarrow a=5, b=3, c=1 $$\nخواهیم داشت:\n$$ \\overline{x} = \\frac{5+3+1}{3} = 3 $$\n$$ \\sigma^2 = \\frac{(5-3)^2+(3-3)^2+(1-3)^2}{3} = \\frac{4+0+4}{3} = \\frac{8}{3} $$\nروش دوم: اگر $n$ داده تشکیل دنبالهٔ حسابی با قدرنسبت $d$ بدهند، واریانس آن‌ها از رابطهٔ زیر قابل محاسبه است:\n$$ \\sigma^2 = \\frac{n^2-1}{12} \\times d^2 \\Rightarrow \\sigma^2 = \\frac{3^2-1}{12} \\times 2^2 = \\frac{8}{3} $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            400,
+            520,
+            570,
+            900
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۱۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2020,
+      "solution_page": 188,
+      "solution_text": "میانگین داده‌ها برابر ۳ است:\n$$ \\overline{x} = \\frac{2a+2+a+3+3+4}{6} = 3 \\Rightarrow 3a+12=18 \\Rightarrow a=2 $$\n$$ \\Rightarrow \\sigma^2 = \\frac{(4-3)^2+(2-3)^2+(2-3)^2+0+0+(4-3)^2}{6} = \\frac{4}{6} = \\frac{2}{3} \\Rightarrow \\sigma = \\sqrt{\\frac{2}{3}} = \\frac{\\sqrt{6}}{3} $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            580,
+            520,
+            690,
+            900
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2021,
+      "solution_page": 188,
+      "solution_text": "اگر میانگین را به دست آوریم، عدد ثابتی می‌شود و اگر داده‌ها را با یک عدد ثابت جمع کنیم، واریانس داده‌ها تغییر نمی‌کند.",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            700,
+            520,
+            730,
+            900
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2022,
+      "solution_page": 188,
+      "solution_text": "هرگاه داده‌ها در عدد ثابت $a$ ضرب شوند، واریانس آن‌ها در $a^2$ ضرب می‌شود:\n$$ a = 3 \\Rightarrow a^2 = 9 $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            740,
+            520,
+            780,
+            900
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2023,
+      "solution_page": 188,
+      "solution_text": "اگر داده‌های $3+2x_i$ را در $\\frac{3}{2}$ ضرب نموده و سپس $\\frac{5}{2}$ واحد کم کنیم به داده‌های $3x_i+2$ می‌رسیم. کاسته شدن $\\frac{5}{2}$ واحد از داده‌ها تأثیری بر واریانس ندارد، اما با ضرب $\\frac{3}{2}$ در داده‌ها واریانس $(\\frac{3}{2})^2$ برابر می‌شود:\n$$ \\sigma_{\\text{جدید}}^2 = (\\frac{3}{2})^2 \\times 6 = \\frac{27}{2} = 13/5 $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            790,
+            520,
+            880,
+            900
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2024,
+      "solution_page": 188,
+      "solution_text": "میانگین داده‌های اولیه ۳ است:\n$$ \\frac{a+b+c+d}{4} = 3 \\Rightarrow a+b+c+d=12 $$\nواریانس داده‌های اولیه ۱ است:\n$$ \\sigma^2 = \\frac{(a-3)^2+(b-3)^2+(c-3)^2+(d-3)^2}{4} = 1 $$\nحال، برای ۸ دادهٔ جدید داریم:\n$$ \\overline{x} = \\frac{\\overbrace{a+b+c+d}^{12}+12}{8} = 3 $$\n$$ \\text{واریانس} = \\frac{(a-3)^2+(b-3)^2+(c-3)^2+(d-3)^2+4 \\times 0}{8} = \\frac{4}{8} = \\frac{1}{2} $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            70,
+            100,
+            250,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2025,
+      "solution_page": 188,
+      "solution_text": "میانگین داده‌های اولیه را حساب می‌کنیم:\n$$ CV = \\frac{\\sigma}{\\overline{x}} \\Rightarrow 0/2 = \\frac{1}{\\overline{x}} \\Rightarrow \\overline{x} = 5 $$\nهمهٔ داده‌ها در ۲ ضرب و با ۱ جمع شده‌اند، بنابراین میانگین نیز در ۲ ضرب و با ۱ جمع می‌شود:\n$$ \\overline{x}_{\\text{جدید}} = (2 \\times 5) + 1 = 11 $$\nاما انحراف معیار فقط در ۲ ضرب می‌شود:\n$$ \\sigma_{\\text{جدید}} = 2 \\times 1 = 2 \\Rightarrow CV_{\\text{جدید}} = \\frac{2}{11} $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            260,
+            100,
+            390,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2026,
+      "solution_page": 188,
+      "solution_text": "اگر به همهٔ داده‌ها $4\\overline{x}$ اضافه شود، به میانگین داده‌ها $4\\overline{x}$ اضافه شده و انحراف معیار تغییر نمی‌کند.\n$$ CV = \\frac{\\sigma}{\\overline{x}} $$\n$$ CV_{\\text{جدید}} = \\frac{\\sigma}{\\overline{x}+4\\overline{x}} = \\frac{\\sigma}{5\\overline{x}} = \\frac{1}{5} CV $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            400,
+            100,
+            470,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2027,
+      "solution_page": 188,
+      "solution_text": "میانگین ۴ دادهٔ اول برابر ۲ و میانگین ۴ دادهٔ بعدی برابر ۶ است. بنابراین میانگین کل داده‌ها برابر $\\frac{2+6}{2}=4$ است.\nواریانس ۴ دادهٔ اول برابر $\\frac{1}{2}$ است:\n$$ \\sigma_1^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x}_1)^2 = \\frac{\\sum_{i=1}^4 x_i^2}{4} - 2^2 = \\frac{1}{2} \\Rightarrow \\sum_{i=1}^4 x_i^2 = 18 $$\nواریانس ۴ دادهٔ دوم برابر صفر و میانگین برابر ۶ است، در نتیجه هر ۴ داده برابر ۶ هستند. خواهیم داشت:\n$$ \\sigma^2 = \\frac{\\sum_{i=1}^8 x_i^2}{n} - (\\overline{x})^2 = \\frac{\\sum_{i=1}^4 x_i^2 + \\sum_{i=5}^8 x_i^2}{8} - 4^2 = \\frac{18 + 4(6)^2}{8} - 16 = \\frac{162}{8} - 16 = 4/25 $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            480,
+            100,
+            700,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2028,
+      "solution_page": 188,
+      "solution_text": "وقتی داده‌ها را ۴ برابر کرده و از هر یک ۲ واحد کم می‌کنیم، میانگین نیز ۴ برابر شده و سپس ۲ واحد کاهش می‌یابد، ولی انحراف معیار فقط ۴ برابر می‌شود.\n$$ CV_{\\text{جدید}} = 1/25 CV \\Rightarrow \\frac{4\\sigma}{4\\overline{x}-2} = 1/25 \\frac{\\sigma}{\\overline{x}} \\Rightarrow 4\\overline{x} = 1/25 (4\\overline{x}-2) \\Rightarrow 4\\overline{x} = 5\\overline{x} - 2/5 \\Rightarrow \\overline{x} = 2/5 = \\frac{5}{2} $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            710,
+            100,
+            820,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2029,
+      "solution_page": 188,
+      "solution_text": "با حذف داده‌های ۳، $a$ و ۲ میانگین داده‌ها تغییر نکرده است. بنابراین میانگین اعداد حذف‌شده با میانگین اولیه برابر بوده است:\n$$ \\frac{2+a+3}{3} = 4 \\Rightarrow a=7 $$\nواریانس داده‌های اولیه ۲ بوده است:\n$$ \\sigma^2 = \\frac{(x_1-4)^2 + (x_2-4)^2 + (x_3-4)^2 + (x_4-4)^2}{7} + \\frac{(2-4)^2 + (7-4)^2 + (3-4)^2}{7} = 2 $$\n$$ \\Rightarrow \\frac{(x_1-4)^2 + \\cdots + (x_4-4)^2 + 14}{7} = 2 $$\n$$ \\Rightarrow (x_1-4)^2 + \\cdots + (x_4-4)^2 = 0 $$\n$$ \\Rightarrow x_1 = x_2 = x_3 = x_4 = 4 $$\nداده‌های باقی‌مانده با هم برابر بوده و واریانس آن‌ها صفر است. $2 - 0 = 2$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            830,
+            100,
+            890,
+            480
+          ],
+          "placement": "solution",
+          "filename": "page_0188.jpg",
+          "alt": "حل سوال ۲۰۲۹"
+        },
+        {
+          "region": [
+            85,
+            470,
+            260,
+            940
+          ],
+          "placement": "solution_continuation",
+          "filename": "page_0189.jpg",
+          "alt": "ادامه حل سوال ۲۰۲۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2030,
+      "solution_page": 189,
+      "solution_text": "واریانس ۶ داده ابتدایی را محاسبه می‌کنیم.\n$$ \\overline{x} = \\frac{10+13+14+15+15+17}{6} = 14 $$\n$$ \\sigma^2 = \\frac{(10-14)^2+(13-14)^2+(14-14)^2}{6} + \\frac{(15-14)^2+(15-14)^2+(17-14)^2}{6} = \\frac{28}{6} $$\nعدد حذف شده برابر میانگین است. بنابراین میانگین ۵ داده باقی‌مانده تغییر نکرده و برابر ۱۴ است. واریانس این داده‌ها برابر است با:\n$$ \\sigma_{\\text{جدید}}^2 = \\frac{28}{5} $$\nدر نتیجه:\n$$ \\frac{\\sigma_{\\text{جدید}}^2}{\\sigma_{\\text{اولیه}}^2} = \\frac{\\frac{28}{5}}{\\frac{28}{6}} = \\frac{6}{5} $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            260,
+            465,
+            465,
+            940
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2031,
+      "solution_page": 189,
+      "solution_text": "عدد حذف شده برابر میانگین است؛ بنابراین میانگین دو گروه برابر است.\n$$ \\sigma_{\\text{اولیه}}^2 = \\frac{(a-d)^2+(b-d)^2+(c-d)^2+(d-d)^2+(e-d)^2}{5} $$\n$$ = \\frac{k}{5} \\Rightarrow \\sigma_{\\text{اولیه}} = \\sqrt{\\frac{k}{5}} $$\n$$ \\sigma_{\\text{جدید}}^2 = \\frac{(a-d)^2+(b-d)^2+(c-d)^2+(e-d)^2}{4} = \\frac{k}{4} $$\n$$ \\Rightarrow \\sigma_{\\text{جدید}} = \\sqrt{\\frac{k}{4}} $$\nواضح است صورت هر دو کسر برابر است. بنابراین:\n$$ \\frac{CV_{\\text{جدید}}}{CV_{\\text{اولیه}}} = \\frac{\\frac{\\sigma_{\\text{جدید}}}{\\overline{x}}}{\\frac{\\sigma_{\\text{اولیه}}}{\\overline{x}}} = \\frac{\\sigma_{\\text{جدید}}}{\\sigma_{\\text{اولیه}}} = \\frac{\\sqrt{\\frac{k}{4}}}{\\sqrt{\\frac{k}{5}}} = \\frac{\\sqrt{5}}{2} $$",
+      "stated_correct_option": 3,
+      "media_regions": [
+        {
+          "region": [
+            470,
+            465,
+            715,
+            940
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2032,
+      "solution_page": 189,
+      "solution_text": "واریانس داده‌ها برابر ۸ می‌باشد.\n$$ \\sigma^2 = \\frac{(x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_{10}-\\overline{x})^2}{10} = 8 \\Rightarrow k = 80 $$\n$n$ داده برابر میانگین به داده‌ها اضافه می‌کنیم تا واریانس برابر ۵ شود. با توجه به این‌که داده‌های جدید برابر میانگین می‌باشند صورت کسر تغییر نمی‌کند.\n$$ \\sigma_{\\text{جدید}}^2 = \\frac{(x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_{10}-\\overline{x})^2}{10+n} = 5 $$\n$$ \\Rightarrow \\frac{k}{10+n} = 5 \\Rightarrow \\frac{80}{10+n} = 5 \\Rightarrow 10+n = \\frac{80}{5} = 16 \\Rightarrow n=6 $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            725,
+            465,
+            895,
+            940
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۲"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2033,
+      "solution_page": 189,
+      "solution_text": "از رابطه زیر استفاده می‌کنیم:\n$$ \\sigma^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x})^2 \\Rightarrow \\sigma^2 = \\frac{100}{10} - \\left(\\frac{20}{10}\\right)^2 = 10-4=6 $$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            70,
+            40,
+            115,
+            435
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۳"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2034,
+      "solution_page": 189,
+      "solution_text": "واریانس داده‌ها ۴ و در نتیجه انحراف معیار ۲ است:\n$$ CV = \\frac{\\sigma}{\\overline{x}} \\Rightarrow \\frac{1}{3} = \\frac{2}{\\overline{x}} \\Rightarrow \\overline{x}=6 $$\n$$ \\sigma^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x})^2 \\Rightarrow 4 = \\frac{\\sum x_i^2}{5} - 36 $$\n$$ \\Rightarrow \\sum x_i^2 = 5 \\times 40 = 200 $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            125,
+            40,
+            220,
+            435
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2035,
+      "solution_page": 189,
+      "solution_text": "انحراف معیار داده‌ها برابر ۲ و در نتیجه واریانس برابر ۴ است:\n$$ \\sigma^2 = \\frac{\\sum x_i^2}{n} - (\\overline{x})^2 \\Rightarrow 4 = \\frac{\\sum x_i^2}{8} - 225 $$\n$$ \\Rightarrow \\sum x_i^2 = 8 \\times 229 = 1832 $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            230,
+            40,
+            290,
+            435
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2036,
+      "solution_page": 189,
+      "solution_text": "رابطه دوم محاسبه واریانس:\n$$ \\sigma^2 = \\frac{x_1^2 + x_2^2 + \\cdots + x_n^2}{n} - \\overline{x}^2 = \\frac{\\sum x_i^2}{n} - \\overline{x}^2 $$\nمربع میانگین - میانگین مربعات = \nابتدا واریانس داده‌ها را محاسبه می‌کنیم:\n$$ \\sigma^2 = \\frac{x_1^2 + x_2^2 + \\cdots + x_{10}^2}{10} - 4^2 = 25-16=9 $$\n$$ \\Rightarrow \\sigma=3 \\Rightarrow CV = \\frac{\\sigma}{\\overline{x}} = \\frac{3}{4} = 0/75 $$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            300,
+            40,
+            440,
+            435
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۶"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2037,
+      "solution_page": 189,
+      "solution_text": "انحراف معیار گروه اول ۲ است، بنابراین واریانس ۴ است:\n$$ \\sigma_1^2 = \\frac{(x_1-4)^2 + (x_2-4)^2 + \\cdots + (x_6-4)^2}{6} = 4 $$\n$$ \\Rightarrow (x_1-4)^2 + (x_2-4)^2 + \\cdots + (x_6-4)^2 = 24 $$\nضریب تغییرات گروه دوم ۱ است:\n$$ CV = \\frac{\\sigma}{\\overline{x}} = 1 \\Rightarrow \\frac{\\sigma}{4} = 1 \\Rightarrow \\sigma=4 \\Rightarrow \\sigma^2=16 $$\n$$ \\sigma_2^2 = \\frac{(y_1-4)^2 + (y_2-4)^2 + \\cdots + (y_4-4)^2}{4} = 16 $$\n$$ \\Rightarrow (y_1-4)^2 + (y_2-4)^2 + \\cdots + (y_4-4)^2 = 64 $$\nحال واریانس ۱۰ داده را به دست می‌آوریم. میانگین هر دو گروه ۴ بوده و در نتیجه میانگین ۱۰ داده ۴ است.\n$$ \\sigma_t^2 = \\frac{\\overbrace{(x_1-4)^2 + (x_2-4)^2 + \\cdots + (x_6-4)^2}^{24}}{10} + \\frac{\\overbrace{(y_1-4)^2 + (y_2-4)^2 + \\cdots + (y_4-4)^2}^{64}}{10} = \\frac{88}{10} = 8/8 $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            450,
+            40,
+            755,
+            435
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2038,
+      "solution_page": 189,
+      "solution_text": "واریانس دو گروه را می‌نویسیم:\n$$ \\sigma_1^2 = \\frac{(x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_4-\\overline{x})^2}{4} = 4 $$\n$$ \\Rightarrow (x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_4-\\overline{x})^2 = 16 $$\n$$ \\sigma_2^2 = \\frac{(y_1-\\overline{x})^2 + (y_2-\\overline{x})^2 + \\cdots + (y_6-\\overline{x})^2}{6} = 1 $$\n$$ \\Rightarrow (y_1-\\overline{x})^2 + (y_2-\\overline{x})^2 + \\cdots + (y_6-\\overline{x})^2 = 6 $$\nحال واریانس داده‌های جدید را محاسبه می‌کنیم:\n$$ \\sigma^2 = \\frac{\\overbrace{(x_1-\\overline{x})^2 + (x_2-\\overline{x})^2 + \\cdots + (x_4-\\overline{x})^2}^{16}}{10} + \\frac{\\overbrace{(y_1-\\overline{x})^2 + (y_2-\\overline{x})^2 + \\cdots + (y_6-\\overline{x})^2}^{6}}{10} = \\frac{22}{10} = 2/2 $$",
+      "stated_correct_option": 2,
+      "media_regions": [
+        {
+          "region": [
+            760,
+            40,
+            895,
+            435
+          ],
+          "placement": "solution",
+          "filename": "page_0189.jpg",
+          "alt": "حل سوال ۲۰۳۸"
+        },
+        {
+          "region": [
+            75,
+            520,
+            185,
+            885
+          ],
+          "placement": "solution_continuation",
+          "filename": "page_0190.jpg",
+          "alt": "ادامه حل سوال ۲۰۳۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2039,
+      "solution_page": 190,
+      "solution_text": "با توجه به رابطه $\\sigma^2 = \\frac{\\sum (x_i)^2}{n} - \\overline{x}^2$ مجموع مربعات ۶ داده ابتدایی را به دست می‌آوریم.\n$$ 1 = \\frac{\\sum_{i=1}^6 x_i^2}{6} - 4^2 \\Rightarrow \\sum_{i=1}^6 x_i^2 = 102 $$\nاگر داده‌های برابر را $a$ بنامیم، واریانس ۱۰ داده جدید را محاسبه می‌کنیم.\n$$ \\sigma^2 = \\frac{\\sum_{i=1}^{10} x_i^2}{10} - \\overline{x}^2 \\Rightarrow 6/6 = \\frac{\\sum_{i=1}^6 x_i^2 + 4a^2}{10} - \\left(\\frac{24+4a}{10}\\right)^2 $$\n$$ \\Rightarrow 6/6 = \\frac{102+4a^2}{10} - \\left(\\frac{4a+24}{10}\\right)^2 $$\n$$ \\Rightarrow 660 = 1020 + 40a^2 - 16a^2 - 192a - 576 $$\n$$ \\Rightarrow 24a^2 - 192a - 216 = 0 \\Rightarrow a^2 - 8a - 9 = 0 $$\n$$ \\Rightarrow \\begin{cases} a = -1 \\text{ ق ق غ } \\\\ a = 9 \\text{ \\checkmark } \\end{cases} $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            195,
+            515,
+            430,
+            895
+          ],
+          "placement": "solution",
+          "filename": "page_0190.jpg",
+          "alt": "حل سوال ۲۰۳۹"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2040,
+      "solution_page": 190,
+      "solution_text": "میانگین و واریانس $x_1, x_2, \\dots, x_{10}$ به ترتیب ۶ و ۴ است. بنابراین میانگین و واریانس $(x_1-1), (x_2-1), \\dots, (x_{10}-1)$ برابر ۵ و ۴ می‌باشد.\nدر نتیجه:\n$$ \\sigma^2 = \\frac{\\sum (x_i-1)^2}{10} - 5^2 = 4 \\Rightarrow \\sum (x_i-1)^2 = 290 $$\nمیانگین موردنظر = $\\frac{290}{10} = 29$",
+      "stated_correct_option": 1,
+      "media_regions": [
+        {
+          "region": [
+            435,
+            515,
+            550,
+            895
+          ],
+          "placement": "solution",
+          "filename": "page_0190.jpg",
+          "alt": "حل سوال ۲۰۴۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2041,
+      "solution_page": 190,
+      "solution_text": "واریانس و ضریب تغییرات $x_1, x_2, \\dots, x_5$ به ترتیب ۱ و $\\frac{1}{2}$ است.\n$$ \\sigma^2=1 \\Rightarrow \\sigma=1 $$\n$$ CV = \\frac{1}{2} \\Rightarrow \\frac{\\sigma}{\\overline{x}} = \\frac{1}{2} \\Rightarrow \\frac{1}{\\overline{x}} = \\frac{1}{2} \\Rightarrow \\overline{x}=2 $$\nخواهیم داشت:\n$$ \\sigma^2 = \\frac{(x_1-2)^2 + (x_2-2)^2 + \\cdots + (x_5-2)^2}{5} = 1 $$\n$$ \\Rightarrow (x_1-2)^2 + (x_2-2)^2 + \\cdots + (x_5-2)^2 = 5 $$\n$$ \\xrightarrow{\\times 4} 4(x_1-2)^2 + 4(x_2-2)^2 + \\cdots + 4(x_5-2)^2 = 20 $$\n$$ \\Rightarrow (2x_1-4)^2 + (2x_2-4)^2 + \\cdots + (2x_5-4)^2 = 20 $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            70,
+            95,
+            255,
+            470
+          ],
+          "placement": "solution",
+          "filename": "page_0190.jpg",
+          "alt": "حل سوال ۲۰۴۱"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2042,
+      "solution_page": 190,
+      "solution_text": "ضریب تغییرات دو گروه را به دست می‌آوریم:\nگروه A: $\\overline{x} = \\frac{3+2+1+3+1}{5} = 2$\n$$ \\Rightarrow \\sigma^2 = \\frac{1^2+0+1^2+1^2+1^2}{5} = \\frac{4}{5} \\Rightarrow \\sigma = \\frac{2}{\\sqrt{5}} $$\n$$ \\Rightarrow CV_1 = \\frac{\\sigma}{\\overline{x}} = \\frac{\\frac{2}{\\sqrt{5}}}{2} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5} $$\nگروه B: $\\overline{x} = \\frac{2+0+1+3+4}{5} = 2$\n$$ \\Rightarrow \\sigma^2 = \\frac{0+2^2+1^2+1^2+2^2}{5} = 2 \\Rightarrow \\sigma = \\sqrt{2} $$\n$$ \\Rightarrow CV_2 = \\frac{\\sigma}{\\overline{x}} = \\frac{\\sqrt{2}}{2} $$\nخواهیم داشت:\n$$ \\frac{CV_1}{CV_2} = \\frac{\\frac{\\sqrt{5}}{5}}{\\frac{\\sqrt{2}}{2}} = \\frac{2\\sqrt{5}}{5\\sqrt{2}} = \\frac{\\sqrt{2}}{\\sqrt{5}} = \\frac{\\sqrt{10}}{5} $$",
+      "stated_correct_option": 4,
+      "media_regions": [
+        {
+          "region": [
+            260,
+            95,
+            560,
+            470
+          ],
+          "placement": "solution",
+          "filename": "page_0190.jpg",
+          "alt": "حل سوال ۲۰۴۲"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

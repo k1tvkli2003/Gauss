@@ -1,0 +1,2264 @@
+{
+  "questions": [
+    {
+      "question_number": 330,
+      "question_page": "page_0001.jpg",
+      "question_text": "اگر $A = \\sqrt{\\Delta - \\sqrt{v}} \\times \\sqrt[r]{rr - 1\\circ \\sqrt{v}}$ ، کدام عدد گویاست؟",
+      "options": [
+        "$A + \\sqrt{v}$",
+        "$A + r\\sqrt{v}$",
+        "$A + \\sqrt{r}$",
+        "$A + r\\sqrt{r}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            357,
+            107,
+            497,
+            843
+          ],
+          "placement": "stem",
+          "alt": "Question 330"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 331,
+      "question_page": "page_0001.jpg",
+      "question_text": "حاصل عبارت $\\sqrt[r]{r\\sqrt{r} + 1} \\times \\sqrt[r]{1\\circ - \\varepsilon\\sqrt{r}}$ کدام است؟",
+      "options": [
+        "$r$",
+        "$r$",
+        "$\\sqrt{r}$",
+        "$\\sqrt{r}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            357,
+            107,
+            497,
+            843
+          ],
+          "placement": "stem",
+          "alt": "Question 331"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 332,
+      "question_page": "page_0001.jpg",
+      "question_text": "اگر $A=x^{2}-3x$ باشد، حاصل $(A-1)(A-2)$ کدام است؟",
+      "options": [
+        "$(x-1)(x-2)(x^{2}-3x-2)$",
+        "$(x-1)(x-2)(x^{2}-3x+1)$",
+        "$(x^{2}-3x-1)(x^{2}-3x+2)$",
+        "$(x-1)(x+2)(x^{2}-3x-1)$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            121,
+            626,
+            179,
+            903
+          ],
+          "placement": "stem",
+          "alt": "متن سوال 332"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            161,
+            715,
+            179,
+            903
+          ],
+          "placement": "option_1",
+          "alt": "گزینه 1"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            161,
+            516,
+            179,
+            706
+          ],
+          "placement": "option_2",
+          "alt": "گزینه 2"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            161,
+            318,
+            179,
+            508
+          ],
+          "placement": "option_3",
+          "alt": "گزینه 3"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            161,
+            120,
+            179,
+            310
+          ],
+          "placement": "option_4",
+          "alt": "گزینه 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 333,
+      "question_page": "page_0001.jpg",
+      "question_text": "با شرط $x \\neq 0,2$ ، حاصل عبارت $(x^{2}-2x+\\frac{2}{x})(x^{2}-2x-\\frac{2}{x})$ کدام است؟",
+      "options": [
+        "$x(x-2)(x^{2}-2x+2)$",
+        "$x(x-2)(x^{2}-2x-2)$",
+        "$x^{2}(x-2)^{2}(x^{2}-2x+2)$",
+        "$x(x-2)^{2}(x^{2}-2x-2)$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            200,
+            483,
+            258,
+            903
+          ],
+          "placement": "stem",
+          "alt": "متن سوال 333"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            243,
+            735,
+            258,
+            903
+          ],
+          "placement": "option_1",
+          "alt": "گزینه 1"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            243,
+            537,
+            258,
+            727
+          ],
+          "placement": "option_2",
+          "alt": "گزینه 2"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            243,
+            339,
+            258,
+            529
+          ],
+          "placement": "option_3",
+          "alt": "گزینه 3"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            243,
+            140,
+            258,
+            331
+          ],
+          "placement": "option_4",
+          "alt": "گزینه 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 334,
+      "question_page": "page_0001.jpg",
+      "question_text": "عبارت $(x^{2}+x)^{2}-14(x^{2}+x)+24$ به ازای کدام مقدار $x$ برابر صفر می‌شود؟",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            280,
+            474,
+            338,
+            903
+          ],
+          "placement": "stem",
+          "alt": "متن سوال 334"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            323,
+            856,
+            338,
+            903
+          ],
+          "placement": "option_1",
+          "alt": "گزینه 1"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            323,
+            658,
+            338,
+            706
+          ],
+          "placement": "option_2",
+          "alt": "گزینه 2"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            323,
+            460,
+            338,
+            508
+          ],
+          "placement": "option_3",
+          "alt": "گزینه 3"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            323,
+            262,
+            338,
+            310
+          ],
+          "placement": "option_4",
+          "alt": "گزینه 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 335,
+      "question_page": "page_0001.jpg",
+      "question_text": "عبارت $x^{4}-4x^{3}+4x^{2}-1$ چند عامل ضرب از درجهٔ اول دارد؟",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            360,
+            563,
+            418,
+            903
+          ],
+          "placement": "stem",
+          "alt": "متن سوال 335"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            403,
+            856,
+            418,
+            903
+          ],
+          "placement": "option_1",
+          "alt": "گزینه 1"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            403,
+            658,
+            418,
+            706
+          ],
+          "placement": "option_2",
+          "alt": "گزینه 2"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            403,
+            460,
+            418,
+            508
+          ],
+          "placement": "option_3",
+          "alt": "گزینه 3"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            403,
+            262,
+            418,
+            310
+          ],
+          "placement": "option_4",
+          "alt": "گزینه 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 336,
+      "question_page": "page_0001.jpg",
+      "question_text": "یکی از عوامل تجزیهٔ عبارت $x^{4}-8x^{2}+4$ کدام است؟",
+      "options": [
+        "$x^{2}-2x+2$",
+        "$x^{2}-2x-2$",
+        "$x^{2}+2x-2$",
+        "$x^{2}+x-2$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            441,
+            574,
+            499,
+            903
+          ],
+          "placement": "stem",
+          "alt": "متن سوال 336"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            483,
+            755,
+            499,
+            903
+          ],
+          "placement": "option_1",
+          "alt": "گزینه 1"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            483,
+            557,
+            499,
+            706
+          ],
+          "placement": "option_2",
+          "alt": "گزینه 2"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            483,
+            359,
+            499,
+            508
+          ],
+          "placement": "option_3",
+          "alt": "گزینه 3"
+        },
+        {
+          "filename": "page_0001.jpg",
+          "region": [
+            483,
+            161,
+            499,
+            310
+          ],
+          "placement": "option_4",
+          "alt": "گزینه 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 337,
+      "question_page": "page_0002.jpg",
+      "question_text": "یکی از عوامل تجزیهٔ عبارت $x^{\\wedge} - y^{\\wedge}$ کدام است؟",
+      "options": [
+        "$x^r - xy + y^r$",
+        "$x^r + xy + y^r$",
+        "$x^{\\varepsilon} - x^r y^r + y^{\\varepsilon}$",
+        "$x^{\\varepsilon} + x^r y^r + y^{\\varepsilon}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            151,
+            621,
+            206,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 337"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            189,
+            747,
+            206,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            189,
+            521,
+            206,
+            701
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            189,
+            296,
+            206,
+            476
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            189,
+            71,
+            206,
+            251
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 338,
+      "question_page": "page_0002.jpg",
+      "question_text": "حاصل $\\frac{x^r + x^r + 1}{x^r - x + 1}$ برابر کدام عبارت است؟",
+      "options": [
+        "$x^r - x - 1$",
+        "$x^r + x - 1$",
+        "$x^r - x + 1$",
+        "$x^r + x + 1$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            217,
+            592,
+            281,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 338"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            247,
+            765,
+            281,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            247,
+            563,
+            281,
+            706
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            247,
+            362,
+            281,
+            505
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            247,
+            161,
+            281,
+            304
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 339,
+      "question_page": "page_0002.jpg",
+      "question_text": "حاصل $\\frac{x^{\\wedge} + x^{\\varepsilon} + 1}{x^r + x + 1}$ برابر کدام عبارت است؟",
+      "options": [
+        "$x^r - x^r + x - 1$",
+        "$x^{\\varepsilon} + x^r - x - 1$",
+        "$x^{\\Delta} - x^{\\varepsilon} + x^r - x + 1$",
+        "$x^4 - x^\\Delta + x^r - x^r + x - 1$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            291,
+            622,
+            355,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 339"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            321,
+            698,
+            355,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            321,
+            483,
+            355,
+            696
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            321,
+            269,
+            355,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            321,
+            54,
+            355,
+            267
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 340,
+      "question_page": "page_0002.jpg",
+      "question_text": "حاصل عبارت $\\frac{(x^r + y^r - z^r)^r - \\varepsilon x^r y^r}{x+y+z}$ با شرط آن که مخرج مخالف صفر باشد، کدام است؟",
+      "options": [
+        "$(x-y-z)(x-y+z)(x+y-z)$",
+        "$(x+y+z)(x-y+z)(x+y-z)$",
+        "$(x-y-z)(x-y+z)(x-y-z)$",
+        "$(x+y-z)(x-y+z)(x+y+z)$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            365,
+            344,
+            429,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 340"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            414,
+            698,
+            429,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            414,
+            483,
+            429,
+            696
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            414,
+            269,
+            429,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            414,
+            54,
+            429,
+            267
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": [
+        "Option 2 and 4 are visually identical in the image. Preserved exact transcription."
+      ]
+    },
+    {
+      "question_number": 341,
+      "question_page": "page_0002.jpg",
+      "question_text": "اگر $x+\\frac{1}{x}=3$ باشد، حاصل $x^{3}+\\frac{1}{x^{3}}$ کدام است؟",
+      "options": [
+        "18",
+        "20",
+        "25",
+        "27"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            440,
+            584,
+            489,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 341"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            471,
+            792,
+            489,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            471,
+            578,
+            489,
+            697
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            471,
+            363,
+            489,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            471,
+            149,
+            489,
+            268
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 342,
+      "question_page": "page_0002.jpg",
+      "question_text": "اگر $a^{r} - b^{r} = \\Delta$ و $ab = r$ باشند، حاصل $a^{r} + b^{r}$ کدام است؟",
+      "options": [
+        "$|r\\sqrt{\\Delta}$",
+        "$\\Delta\\sqrt{Iv}$",
+        "$|1\\sqrt{v}$",
+        "$\\Delta\\sqrt{|v}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            499,
+            508,
+            547,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 342"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            530,
+            786,
+            547,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            530,
+            563,
+            547,
+            688
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            530,
+            340,
+            547,
+            465
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            530,
+            117,
+            547,
+            242
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 343,
+      "question_page": "page_0002.jpg",
+      "question_text": "اگر $x^r - xy + y^r = v$ و $x + y = a$ باشند، حاصل $x^r + y^r$ کدام می‌تواند باشد؟",
+      "options": [
+        "15",
+        "20",
+        "25",
+        "35"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            558,
+            477,
+            606,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 343"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            589,
+            792,
+            606,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            589,
+            578,
+            606,
+            697
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            589,
+            363,
+            606,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            589,
+            149,
+            606,
+            268
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 344,
+      "question_page": "page_0002.jpg",
+      "question_text": "اگر $A = 1 - \\frac{1}{x} + \\frac{1}{x^r} - \\frac{1}{x^r} + \\dots$ باشد، مقدار $A$ به ازای $x=r$ کدام است؟",
+      "options": [
+        "$\\frac{1}{r}$",
+        "$\\frac{r}{r}$",
+        "$\\frac{r}{r}$",
+        "$\\frac{\\varepsilon}{r}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            617,
+            364,
+            665,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 344"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            648,
+            792,
+            665,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            648,
+            578,
+            665,
+            697
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            648,
+            363,
+            665,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            648,
+            149,
+            665,
+            268
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 345,
+      "question_page": "page_0002.jpg",
+      "question_text": "اگر $x^{1\\circ} - 1 = (x-1)(x^a+x^b+\\dots+x+1)$ باشد، حاصل $a+b$ کدام است؟",
+      "options": [
+        "10",
+        "17",
+        "18",
+        "19"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            676,
+            424,
+            725,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 345"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            707,
+            792,
+            725,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            707,
+            578,
+            725,
+            697
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            707,
+            363,
+            725,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            707,
+            149,
+            725,
+            268
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 346,
+      "question_page": "page_0002.jpg",
+      "question_text": "عبارت $x^\\Delta - x^\\varepsilon + x^r - x^r + x - 1$ با کدام عبارت زیر برابر است؟",
+      "options": [
+        "$(x^r - x + 1)(x^r - 1)$",
+        "$(x^r + x + 1)(x^r - 1)$",
+        "$(x^r + x + 1)(x^r + 1)$",
+        "$(x^r - x + 1)(x^r + 1)$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            735,
+            498,
+            784,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 346"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            766,
+            706,
+            784,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            766,
+            493,
+            784,
+            697
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            766,
+            280,
+            784,
+            484
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            766,
+            67,
+            784,
+            271
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 347,
+      "question_page": "page_0002.jpg",
+      "question_text": "یکی از عوامل تجزیهٔ عبارت $x^v + y^v$ کدام است؟",
+      "options": [
+        "$x^4 - x^\\Delta y + x^{\\varepsilon} y^r - x^r y^r + x^r y^{\\varepsilon} - xy^\\Delta + y^4$",
+        "$x^4 + x^\\Delta y - x^{\\varepsilon} y^r + x^r y^r - x^r y^{\\varepsilon} + xy^\\Delta - y^4$",
+        "$x^4 + x^\\Delta y + x^{\\varepsilon} y^r + x^r y^r + x^r y^{\\varepsilon} + xy^\\Delta + y^4$",
+        "$x^4 - x^\\Delta y - x^{\\varepsilon} y^r - x^r y^r - x^r y^{\\varepsilon} - xy^\\Delta - y^4$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            794,
+            622,
+            843,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 347"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            825,
+            516,
+            843,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            825,
+            107,
+            843,
+            502
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            856,
+            516,
+            874,
+            911
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            856,
+            107,
+            874,
+            502
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 348,
+      "question_page": "page_0002.jpg",
+      "question_text": "باقی ماندهٔ تقسیم چندجمله‌ای $P(x)$ بر $x-1$ برابر با ۳ است. باقی ماندهٔ تقسیم $P^r(x) - \\varepsilon P(x) + 1$ بر $x-1$ کدام است؟",
+      "options": [
+        "-1",
+        "-2",
+        "2",
+        "1"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            884,
+            252,
+            933,
+            911
+          ],
+          "placement": "stem",
+          "alt": "Question 348"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            915,
+            792,
+            933,
+            911
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            915,
+            578,
+            933,
+            697
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            915,
+            363,
+            933,
+            482
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0002.jpg",
+          "region": [
+            915,
+            149,
+            933,
+            268
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 349,
+      "question_page": "page_0003.jpg",
+      "question_text": "خارج قسمت تقسیم $x^\\Delta - \\mu r$ بر $x-r$ کدام است؟",
+      "options": [
+        "$x^{\\varepsilon} - r x^r + \\varepsilon x^r - \\wedge x + 1\\varepsilon$",
+        "$x^{\\varepsilon} + r x^r + \\varepsilon x^r + \\wedge x + 1\\varepsilon$",
+        "$x^{\\varepsilon} + r x^r + \\varepsilon x^r + 1\\varepsilon x + r r$",
+        "$x^{\\varepsilon} - r x^r + \\varepsilon x^r - 1\\varepsilon x + r r$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            128,
+            597,
+            187,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 349"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            170,
+            483,
+            187,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            170,
+            75,
+            187,
+            474
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            201,
+            483,
+            218,
+            881
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            201,
+            75,
+            218,
+            474
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 350,
+      "question_page": "page_0003.jpg",
+      "question_text": "عبارت $\\frac{x^r + \\varepsilon x - r1}{x^r + 1\\circ x + r1}$ پس از ساده شدن، کدام است؟",
+      "options": [
+        "$\\frac{x - r}{x + v}$",
+        "$\\frac{x + r}{x - v}$",
+        "$\\frac{x + r}{x + v}$",
+        "$\\frac{x - r}{x - v}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            232,
+            532,
+            290,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 350"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            263,
+            706,
+            290,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            263,
+            498,
+            290,
+            696
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            263,
+            290,
+            290,
+            488
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            263,
+            82,
+            290,
+            280
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 351,
+      "question_page": "page_0003.jpg",
+      "question_text": "عبارت $\\frac{x^r - 1\\varepsilon x^r + \\varepsilon\\wedge x - \\varepsilon r}{x^r - 1\\varepsilon x + \\varepsilon r}$ پس از ساده شدن، با کدام برابر است؟",
+      "options": [
+        "$x-v$",
+        "$x+v$",
+        "$x-1$",
+        "$x+1$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            304,
+            461,
+            353,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 351"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            336,
+            735,
+            353,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            336,
+            526,
+            353,
+            725
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            336,
+            318,
+            353,
+            516
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            336,
+            110,
+            353,
+            308
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 352,
+      "question_page": "page_0003.jpg",
+      "question_text": "ساده شدهٔ عبارت $\\frac{x^r - x^r - rx + r}{x^r + x^r - rx - r}$ کدام است؟",
+      "options": [
+        "$\\frac{x - 1}{x + 1}$",
+        "$\\frac{x + 1}{x - 1}$",
+        "$\\frac{x - r}{x + r}$",
+        "$\\frac{x + r}{x - r}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            367,
+            563,
+            424,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 352"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            398,
+            706,
+            424,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            398,
+            498,
+            424,
+            696
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            398,
+            290,
+            424,
+            488
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            398,
+            82,
+            424,
+            280
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 353,
+      "question_page": "page_0003.jpg",
+      "question_text": "حاصل $\\frac{x-r}{x^r-r x+r} - \\frac{x-1}{x^r-x-r}$ به ساده‌ترین صورت کدام است؟",
+      "options": [
+        "$\\frac{x - v}{x^r - x - r}$",
+        "$\\frac{x - v}{x^r + x - r}$",
+        "$\\frac{-\\Delta}{x^r - x - r}$",
+        "$\\frac{-\\Delta}{x^r + x - r}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            438,
+            485,
+            495,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 353"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            469,
+            706,
+            495,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            469,
+            498,
+            495,
+            696
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            469,
+            290,
+            495,
+            488
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            469,
+            82,
+            495,
+            280
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 354,
+      "question_page": "page_0003.jpg",
+      "question_text": "حاصل $\\frac{1}{x} + \\frac{1}{x-1} + \\frac{1}{x+1}$ کدام است؟",
+      "options": [
+        "$\\frac{x^r - 1}{x^r - x}$",
+        "$\\frac{x^r - x}{x^r - 1}$",
+        "$\\frac{rx^r - 1}{x(x^r - 1)}$",
+        "$\\frac{r}{x(x^r - 1)}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            509,
+            563,
+            566,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 354"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            540,
+            706,
+            566,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            540,
+            498,
+            566,
+            696
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            540,
+            290,
+            566,
+            488
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            540,
+            82,
+            566,
+            280
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 355,
+      "question_page": "page_0003.jpg",
+      "question_text": "ساده شدهٔ عبارت $\\frac{x}{x-r} + \\frac{r}{x-r} - \\frac{x-1}{x^r - \\Delta x + \\varepsilon}$ کدام است؟",
+      "options": [
+        "$\\frac{x^r - 1}{x^r - \\Delta x + \\varepsilon}$",
+        "$\\frac{x + r}{x^r - \\Delta x + \\varepsilon}$",
+        "$\\frac{x^r + r}{x^r - \\Delta x + \\varepsilon}$",
+        "$\\frac{x - r}{x^r - \\Delta x + \\varepsilon}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            580,
+            412,
+            637,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 355"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            611,
+            706,
+            637,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            611,
+            498,
+            637,
+            696
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            611,
+            290,
+            637,
+            488
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            611,
+            82,
+            637,
+            280
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 356,
+      "question_page": "page_0003.jpg",
+      "question_text": "حاصل $\\frac{x^r - x^r + x - 1}{x^r - x - r} \\div \\frac{x^r - 1}{x^r + x - r}$ پس از ساده شدن، کدام است؟",
+      "options": [
+        "$\\frac{x+r}{x-r}$",
+        "$\\frac{x^r+1}{x-r}$",
+        "$\\frac{x^r+1}{x+r}$",
+        "$\\frac{x-1}{x-r}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            651,
+            412,
+            708,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 356"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            682,
+            706,
+            708,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            682,
+            498,
+            708,
+            696
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            682,
+            290,
+            708,
+            488
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            682,
+            82,
+            708,
+            280
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 357,
+      "question_page": "page_0003.jpg",
+      "question_text": "حاصل $\\frac{a+1}{a-1} \\times \\frac{a^r - r a^r + r a - 1}{a^r - 1}$ کدام است؟",
+      "options": [
+        "1",
+        "$a-1$",
+        "$\\frac{a-1}{a+1}$",
+        "$\\frac{a+1}{a-1}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            722,
+            532,
+            779,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 357"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            753,
+            735,
+            779,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            753,
+            526,
+            779,
+            725
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            753,
+            318,
+            779,
+            516
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            753,
+            110,
+            779,
+            308
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 358,
+      "question_page": "page_0003.jpg",
+      "question_text": "ساده شدهٔ عبارت $(\\frac{x^r - 1}{x}) (\\frac{x}{x-1} - \\frac{x}{x+1})$ کدام است؟",
+      "options": [
+        "2",
+        "1",
+        "$2x$",
+        "$x$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            793,
+            447,
+            850,
+            881
+          ],
+          "placement": "stem",
+          "alt": "Question 358"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            824,
+            765,
+            850,
+            881
+          ],
+          "placement": "option_1",
+          "alt": "Option 1"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            824,
+            563,
+            850,
+            706
+          ],
+          "placement": "option_2",
+          "alt": "Option 2"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            824,
+            362,
+            850,
+            505
+          ],
+          "placement": "option_3",
+          "alt": "Option 3"
+        },
+        {
+          "filename": "page_0003.jpg",
+          "region": [
+            824,
+            161,
+            850,
+            304
+          ],
+          "placement": "option_4",
+          "alt": "Option 4"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 262,
+      "question_page": "page_0006.jpg",
+      "question_text": "عبارت $(2x-1)^2 - 3(x+2)^2$ با کدام عدد جمع شود تا حاصل مربع یک عبارت جبری شود؟",
+      "options": [
+        "۷۵",
+        "۷۳",
+        "۵۳",
+        "۲۷"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            308,
+            545,
+            848,
+            606
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "stem",
+          "alt": "عبارت $(2x-1)^2 - 3(x+2)^2$ با کدام عدد جمع شود تا حاصل مربع یک عبارت جبری شود؟"
+        },
+        {
+          "region": [
+            785,
+            584,
+            825,
+            609
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_1",
+          "alt": "۷۵"
+        },
+        {
+          "region": [
+            595,
+            582,
+            634,
+            609
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_2",
+          "alt": "۷۳"
+        },
+        {
+          "region": [
+            404,
+            581,
+            444,
+            609
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_3",
+          "alt": "۵۳"
+        },
+        {
+          "region": [
+            214,
+            582,
+            252,
+            609
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_4",
+          "alt": "۲۷"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 263,
+      "question_page": "page_0006.jpg",
+      "question_text": "با فرض $x^2 + \\frac{4}{x^2} = 6$، حاصل $\\frac{x^4}{4} + \\frac{4}{x^4}$ کدام است؟",
+      "options": [
+        "۶",
+        "۴",
+        "۷",
+        "۸"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            520,
+            602,
+            847,
+            663
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "stem",
+          "alt": "با فرض $x^2 + \frac{4}{x^2} = 6$، حاصل $\frac{x^4}{4} + \frac{4}{x^4}$ کدام است؟"
+        },
+        {
+          "region": [
+            804,
+            660,
+            825,
+            684
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_1",
+          "alt": "۶"
+        },
+        {
+          "region": [
+            604,
+            660,
+            630,
+            686
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_2",
+          "alt": "۴"
+        },
+        {
+          "region": [
+            414,
+            660,
+            441,
+            686
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_3",
+          "alt": "۷"
+        },
+        {
+          "region": [
+            226,
+            660,
+            254,
+            685
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_4",
+          "alt": "۸"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 264,
+      "question_page": "page_0006.jpg",
+      "question_text": "اگر $x^2 - 9x + 3 = 0$ باشد، حاصل $x^2 + \\frac{9}{x^2}$ کدام است؟",
+      "options": [
+        "۶۴",
+        "۷۵",
+        "۸۱",
+        "۸۵"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            501,
+            688,
+            847,
+            747
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "stem",
+          "alt": "اگر $x^2 - 9x + 3 = 0$ باشد، حاصل $x^2 + \frac{9}{x^2}$ کدام است؟"
+        },
+        {
+          "region": [
+            784,
+            741,
+            825,
+            769
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_1",
+          "alt": "۶۴"
+        },
+        {
+          "region": [
+            595,
+            743,
+            635,
+            769
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_2",
+          "alt": "۷۵"
+        },
+        {
+          "region": [
+            404,
+            744,
+            442,
+            769
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_3",
+          "alt": "۸۱"
+        },
+        {
+          "region": [
+            215,
+            743,
+            253,
+            769
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_4",
+          "alt": "۸۵"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 265,
+      "question_page": "page_0006.jpg",
+      "question_text": "با فرض $a+b = 2$ و $a^2+b^2 = 5$، مقدار $\\frac{1}{a^4} + \\frac{1}{b^4}$ کدام است؟",
+      "options": [
+        "۳۹۰",
+        "۳۹۲",
+        "۳۹۸",
+        "۴۰۰"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            460,
+            770,
+            849,
+            828
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "stem",
+          "alt": "با فرض $a+b = 2$ و $a^2+b^2 = 5$، مقدار $\frac{1}{a^4} + \frac{1}{b^4}$ کدام است؟"
+        },
+        {
+          "region": [
+            777,
+            824,
+            825,
+            850
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_1",
+          "alt": "۳۹۰"
+        },
+        {
+          "region": [
+            587,
+            824,
+            635,
+            848
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_2",
+          "alt": "۳۹۲"
+        },
+        {
+          "region": [
+            398,
+            823,
+            445,
+            849
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_3",
+          "alt": "۳۹۸"
+        },
+        {
+          "region": [
+            207,
+            823,
+            256,
+            848
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_4",
+          "alt": "۴۰۰"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 266,
+      "question_page": "page_0006.jpg",
+      "question_text": "اگر $9a^2+4b^2=15ab$ باشد، حاصل $\\frac{3a-2b}{3a+2b}$ کدام است؟ ($a>b>0$)",
+      "options": [
+        "۹",
+        "$\\frac{1}{9}$",
+        "۳",
+        "$\\frac{1}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            418,
+            853,
+            849,
+            905
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "stem",
+          "alt": "اگر $9a^2+4b^2=15ab$ باشد، حاصل $\frac{3a-2b}{3a+2b}$ کدام است؟ ($a>b>0$)"
+        },
+        {
+          "region": [
+            806,
+            903,
+            825,
+            928
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_1",
+          "alt": "۹"
+        },
+        {
+          "region": [
+            604,
+            894,
+            635,
+            942
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_2",
+          "alt": "$\frac{1}{9}$"
+        },
+        {
+          "region": [
+            414,
+            903,
+            442,
+            929
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_3",
+          "alt": "۳"
+        },
+        {
+          "region": [
+            223,
+            895,
+            255,
+            943
+          ],
+          "filename": "page_0006.jpg",
+          "placement": "option_4",
+          "alt": "$\frac{1}{3}$"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gauss.app.data.AttemptResult
 import com.gauss.app.data.AttemptStatus
+import com.gauss.app.data.ComprehensiveTaxonomy
 import com.gauss.app.data.KONKUR_SECONDS_PER_QUESTION
 import com.gauss.app.ui.theme.GaussColors
 import com.gauss.app.ui.theme.soft
@@ -29,9 +31,9 @@ import com.gauss.app.ui.toFa
 private data class StatusMeta(val label: String, val color: Color, val glyph: String)
 
 private fun metaFor(status: AttemptStatus) = when (status) {
-    AttemptStatus.CORRECT -> StatusMeta("درست", GaussColors.NeonGreen, "✓")
-    AttemptStatus.WRONG -> StatusMeta("غلط", GaussColors.NeonRed, "✕")
-    AttemptStatus.SKIPPED -> StatusMeta("نزده", GaussColors.NeonAmber, "–")
+    AttemptStatus.CORRECT -> StatusMeta("درست", GaussColors.Success, "✓")
+    AttemptStatus.WRONG -> StatusMeta("غلط", GaussColors.Error, "✕")
+    AttemptStatus.SKIPPED -> StatusMeta("نزده", GaussColors.Warning, "–")
 }
 
 /** One reviewed question: verdict, options revealed, classic solution + shortcut. */
@@ -40,14 +42,15 @@ fun SolutionCard(result: AttemptResult, number: Int, modifier: Modifier = Modifi
     val q = result.question
     val meta = metaFor(result.status)
     val overTime = result.timeTakenSeconds > KONKUR_SECONDS_PER_QUESTION
+    val scheme = MaterialTheme.colorScheme
 
     Column(
         modifier
             .padding(bottom = 16.dp)
             .fillMaxWidth()
             .clip(RoundedCornerShape(16.dp))
-            .background(GaussColors.Surface)
-            .border(1.dp, GaussColors.Border, RoundedCornerShape(16.dp))
+            .background(scheme.surface)
+            .border(1.dp, scheme.outline, RoundedCornerShape(16.dp))
             .padding(16.dp),
     ) {
         Row(
@@ -59,7 +62,7 @@ fun SolutionCard(result: AttemptResult, number: Int, modifier: Modifier = Modifi
                 DifficultyBadge(q.difficulty)
                 Text(
                     "  سؤال ${toFa(number)}",
-                    color = GaussColors.Muted,
+                    color = scheme.onSurfaceVariant,
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
                 )
@@ -75,16 +78,23 @@ fun SolutionCard(result: AttemptResult, number: Int, modifier: Modifier = Modifi
             }
         }
 
+        Text(
+            ComprehensiveTaxonomy.label(q.topicKey),
+            color = scheme.onSurfaceVariant,
+            fontSize = 12.sp,
+            modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+        )
+
         Row(Modifier.padding(top = 10.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(
-                "⏱ ${toFa(result.timeTakenSeconds)}s",
-                color = if (overTime) GaussColors.NeonAmber else GaussColors.NeonGreen,
+                "زمان: ${toFa(result.timeTakenSeconds)}s",
+                color = if (overTime) GaussColors.Warning else GaussColors.Success,
                 fontSize = 12.sp,
             )
             Text(
                 "  (استاندارد: ${toFa(KONKUR_SECONDS_PER_QUESTION)}s)" +
                     if (overTime) " — کندتر از حد مجاز" else " — در زمان مجاز",
-                color = GaussColors.Muted,
+                color = scheme.onSurfaceVariant,
                 fontSize = 12.sp,
             )
         }
@@ -94,11 +104,11 @@ fun SolutionCard(result: AttemptResult, number: Int, modifier: Modifier = Modifi
                 .padding(top = 12.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(12.dp))
-                .background(GaussColors.Bg)
-                .border(1.dp, GaussColors.Border, RoundedCornerShape(12.dp))
+                .background(scheme.surfaceVariant)
+                .border(1.dp, scheme.outline, RoundedCornerShape(12.dp))
                 .padding(12.dp),
         ) {
-            MathText(q.questionText, fontSize = 16.sp)
+            RichContent(q.stem, fontSize = 16.sp)
         }
 
         Column(Modifier.padding(top = 12.dp)) {
@@ -106,6 +116,7 @@ fun SolutionCard(result: AttemptResult, number: Int, modifier: Modifier = Modifi
                 OptionButton(
                     index = i + 1,
                     text = opt,
+                    blocks = q.optionBlocks[i],
                     selected = result.selectedOption == i + 1,
                     reveal = true,
                     correct = q.correctOptionIndex == i + 1,
@@ -113,6 +124,6 @@ fun SolutionCard(result: AttemptResult, number: Int, modifier: Modifier = Modifi
             }
         }
 
-        GeniusKey(q.classicSolution, q.smartShortcut, Modifier.padding(top = 4.dp))
+        GeniusKey(q.solution, q.shortcut, Modifier.padding(top = 4.dp))
     }
 }

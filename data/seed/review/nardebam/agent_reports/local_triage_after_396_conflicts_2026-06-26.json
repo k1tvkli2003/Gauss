@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-06-26T13:57:44.007Z",
+  "progress": {
+    "math_questions": {
+      "count": 1909,
+      "target": 2042,
+      "pct": 93.5
+    },
+    "math_solutions": {
+      "count": 1970,
+      "target": 2042,
+      "pct": 96.5
+    },
+    "physics_questions": {
+      "count": 1636,
+      "target": 1630,
+      "pct": 100.4
+    },
+    "physics_solutions": {
+      "count": 1646,
+      "target": 1630,
+      "pct": 101
+    },
+    "math_answer_key": {
+      "count": 2049,
+      "target": 2042,
+      "pct": 100.3
+    },
+    "physics_answer_key": {
+      "count": 1917,
+      "target": 1630,
+      "pct": 117.6
+    },
+    "total_transcripts": {
+      "count": 3545,
+      "target": 3672,
+      "pct": 96.5
+    },
+    "total_solutions": {
+      "count": 3616,
+      "target": 3672,
+      "pct": 98.5
+    },
+    "total_answer_keys": {
+      "count": 3966,
+      "target": 3672,
+      "pct": 108
+    }
+  },
+  "conflicts": {
+    "total": 396,
+    "by_issue": {
+      "duplicate_solution": 2,
+      "solution_key_mismatch": 206,
+      "missing_solution": 104,
+      "missing_solution+missing_key": 64,
+      "question_total": 2,
+      "missing_key": 17,
+      "invalid_options": 1
+    }
+  },
+  "largest_clusters": {
+    "missing_solution|math/statistics": 64,
+    "missing_key|math/statistics": 64,
+    "solution_key_mismatch|math/combinatorics": 61,
+    "solution_key_mismatch|math/absolute_value_floor": 56,
+    "missing_solution|math/limits_continuity": 30,
+    "missing_solution|math/visual_thinking_conics": 23,
+    "solution_key_mismatch|math/probability": 18,
+    "missing_solution|math/combinatorics": 15,
+    "missing_solution|math/geometry": 13,
+    "solution_key_mismatch|physics/one_dimensional_motion": 13,
+    "solution_key_mismatch|math/derivative_applications": 12,
+    "missing_key|physics/physical_properties_matter": 11,
+    "missing_solution|math/quadratic_equations_functions": 10,
+    "missing_solution|math/rational_inequalities_sign": 9,
+    "solution_key_mismatch|physics/oscillation_waves": 8,
+    "solution_key_mismatch|math/trigonometry": 7,
+    "solution_key_mismatch|physics/magnetism_induction": 7,
+    "solution_key_mismatch|physics/atomic_nuclear": 7,
+    "missing_key|physics/work_energy_power": 6,
+    "solution_key_mismatch|math/limits_continuity": 5,
+    "solution_key_mismatch|math/analytic_geometry": 5,
+    "missing_solution|math/trigonometry": 3,
+    "duplicate_solution|math/": 2,
+    "solution_key_mismatch|math/patterns_sequences": 2,
+    "solution_key_mismatch|math/statistics": 2
+  },
+  "notes": [
+    "Subagent not used due usage limit; user requested low reasoning for future subagents.",
+    "Promoted safe solution merges and merged derivative_applications global topic repair.",
+    "Follow-up to Jules failed transiently with fetch failed."
+  ]
+}

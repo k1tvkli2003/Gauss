@@ -1,0 +1,255 @@
+{
+  "task_id": "math-topic-05-gap",
+  "subject": "math",
+  "questions": [
+    {
+      "question_number": 295,
+      "question_page": 6,
+      "question_text": "حاصل عددی عبارت $\\frac{1}{n(n+5)} + \\dots + \\frac{1}{12\\times17} + \\frac{1}{7\\times12} + \\frac{1}{2\\times7}$ برابر $\\frac{3}{32}$ است. $n$ کدام است؟",
+      "options": [
+        "۲۲",
+        "۲۷",
+        "۳۲",
+        "۳۷"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 296,
+      "question_page": 6,
+      "question_text": "ریشه $n$ ام و اعمال روی آن\nریشه‌های ششم عدد ۶۴ چه‌قدر با یکدیگر اختلاف دارند؟",
+      "options": [
+        "۲",
+        "۶",
+        "۸",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 297,
+      "question_page": 6,
+      "question_text": "ریشه پنجم عدد $2\\sqrt{2}$ با ریشه سوم $a$ برابر است. $a$ کدام است؟",
+      "options": [
+        "$2$",
+        "$2\\sqrt{2}$",
+        "$\\sqrt{2}$",
+        "$4$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 298,
+      "question_page": 6,
+      "question_text": "عدد منفی $k$، ریشه چهارم $0/0256$ است و مجموع دو عدد $k$ و ریشه سوم $a$ برابر $0/1$ است. مقدار $a$ کدام است؟",
+      "options": [
+        "$0/125$",
+        "$0/025$",
+        "$0/027$",
+        "$0/216$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 299,
+      "question_page": 6,
+      "question_text": "ریشه ششم ۱۶ با ریشه پنجم کدام عدد برابر است؟",
+      "options": [
+        "$4\\sqrt[3]{2}$",
+        "$-8\\sqrt[3]{2}$",
+        "$8\\sqrt{2}$",
+        "$-4\\sqrt{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 300,
+      "question_page": 6,
+      "question_text": "مربع ریشه چهارم ۷۲۹، چند واحد از مکعب ریشه ششم ۱۲۹۶ بیشتر است؟",
+      "options": [
+        "۹",
+        "۳۶",
+        "۲۷",
+        "۶۳"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 301,
+      "question_page": 6,
+      "question_text": "اگر $a$ ریشه هفتم عدد $4\\sqrt[3]{2}$ باشد، جواب معادله $\\sqrt{2} = ax$ کدام است؟",
+      "options": [
+        "$\\sqrt{2}$",
+        "$\\sqrt[3]{2}$",
+        "$\\sqrt[6]{2}$",
+        "$\\sqrt[7]{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 302,
+      "question_page": 6,
+      "question_text": "اختلاف ریشه‌های ششم عدد ۱۶ را $A$ می‌نامیم. به ازای کدام مقدار $x$ تساوی $\\sqrt[5]{A\\sqrt[3]{4}} = 2^x$ برقرار است؟",
+      "options": [
+        "۱",
+        "۲",
+        "۳",
+        "۴"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 303,
+      "question_page": 6,
+      "question_text": "با فرض $-1 < a < 0$، کدام صحیح است؟",
+      "options": [
+        "$\\sqrt[3]{a} < a < a^3$",
+        "$a^3 < a < \\sqrt[3]{a}$",
+        "$a < a^2 < a^3$",
+        "$a^3 < a^2 < a$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "Option 1 and 2 root degree might be 3 or 5, assuming 3 based on visual approximation."
+      ]
+    },
+    {
+      "question_number": 304,
+      "question_page": 6,
+      "question_text": "اگر $A = \\sqrt[3]{4}$، $B = \\sqrt[5]{5}$ و $C = \\sqrt[6]{16}$ باشد، کدام گزینه صحیح است؟",
+      "options": [
+        "$C < B < A$",
+        "$B < A < C$",
+        "$A < B < C$",
+        "$B < C < A$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 305,
+      "question_page": 6,
+      "question_text": "در شکل مقابل، نقطه $a$ را به ریشه سوم، چهارم و مجذور آن وصل کرده‌ایم. کدام گزینه صحیح است؟",
+      "options": [
+        "$a_1 + a_2 = 0$",
+        "$a_1 + a_2 > 0$",
+        "$a_1 + a_4 > 0$",
+        "$a_1 + a_4 = 0$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            30,
+            1150,
+            450,
+            1330
+          ],
+          "placement": "stem",
+          "alt": "نمودار خط اعداد با نمایش نقاط ریشه سوم، چهارم و مجذور"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 306,
+      "question_page": 6,
+      "question_text": "با توجه به محور اعداد حقیقی زیر، $x$، $y$، $z$ و $t$ از راست به چپ، به ترتیب کدام می‌توانند باشد؟",
+      "options": [
+        "$a^2$ ، $\\sqrt{a}$ ، $\\sqrt[3]{a}$ ، $\\sqrt[5]{a}$",
+        "$\\frac{1}{a}$ ، $\\sqrt[5]{a}$ ، $a^2$ ، $a^3$",
+        "$a^3$ ، $\\sqrt[3]{a}$ ، $a^2$ ، $\\sqrt{a}$",
+        "$\\frac{1}{a}$ ، $\\sqrt[3]{a}$ ، $a^2$ ، $\\sqrt[5]{a}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0006.jpg",
+          "region": [
+            30,
+            1340,
+            450,
+            1500
+          ],
+          "placement": "stem",
+          "alt": "محور اعداد با نمایش متغیرهای x، y، z و t"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 307,
+      "question_page": 6,
+      "question_text": "اگر $0 < a < 1$ باشد، ساده‌شده عبارت $|a^2 - \\sqrt[3]{a}| - |\\sqrt[4]{a} - a^2| + |a^2 - \\sqrt{a}| - \\sqrt[4]{a}$ کدام است؟",
+      "options": [
+        "صفر",
+        "$2a^2$",
+        "$-2\\sqrt[3]{a}$",
+        "$2\\sqrt[4]{a}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "Expression has multiple absolute values and roots. Transcribed visually as best as possible."
+      ]
+    },
+    {
+      "question_number": 308,
+      "question_page": 6,
+      "question_text": "اگر $a^3 > a^7$ باشد، حدود $a$ کدام است؟",
+      "options": [
+        "$-1 < a < 1$",
+        "$a > 1$ یا $a < -1$",
+        "$a > 0$",
+        "$a > 1$ یا $-1 < a < 0$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 309,
+      "question_page": 6,
+      "question_text": "می‌خواهیم مکعبی بسازیم که حجم آن بیشتر از ۵۰ و کمتر از ۸۰۰ باشد. اندازه ضلع آن چند عدد صحیح می‌تواند باشد؟",
+      "options": [
+        "۵",
+        "۶",
+        "۷",
+        "۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 310,
+      "question_page": 6,
+      "question_text": "اگر $a < 0$ باشد، ساده‌شده عبارت $\\frac{\\sqrt{(-a)^3}}{\\sqrt[6]{a^2}} \\times \\frac{\\sqrt[3]{a^6}}{a\\sqrt{a^2}}$ کدام است؟",
+      "options": [
+        "صفر",
+        "۱",
+        "۲",
+        "$-2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 311,
+      "question_page": 6,
+      "question_text": "اگر $3^a = 4$ و $2^b = 9$ باشد، حاصل $ab$ کدام است؟",
+      "options": [
+        "۲",
+        "۴",
+        "۶",
+        "۸"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    }
+  ]
+}

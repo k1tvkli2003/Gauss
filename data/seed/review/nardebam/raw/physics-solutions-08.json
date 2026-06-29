@@ -1,0 +1,1480 @@
+[
+  {
+    "question_number": 694,
+    "solution_page": 337,
+    "stated_correct_option": 2,
+    "classic_solution": "نیروی الکتریکی در خلاف جهت میدان و نیروی مغناطیسی عمود بر آن در نظر گرفته شده است. با $F_E=qE=0.6N$ و $F_t=1N$، مقدار $F_B=0.8N$ به دست می‌آید و از $F_B=qvB$ سرعت $v=4\\times10^5 m/s=400 km/s$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0142.jpg",
+        "box": [
+          175,
+          305,
+          470,
+          525
+        ],
+        "placement": "solution",
+        "alt": "جهت‌های میدان الکتریکی، میدان مغناطیسی، سرعت و دو نیروی وارد بر بار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 695,
+    "solution_page": 337,
+    "stated_correct_option": 4,
+    "classic_solution": "از مؤلفه‌های داده‌شده، $|\\vec E|=1000N/C$ و زاویه آن $60^\\circ$ و همچنین $|\\vec B|=2T$ و زاویه آن $30^\\circ$ به دست آمده است. چون ذره منفی است، $\\vec F_E$ خلاف میدان الکتریکی و $\\vec F_B$ با قاعده دست راست هم‌جهت با آن می‌شود و جمع نیروها $25mN$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0142.jpg",
+        "box": [
+          190,
+          820,
+          415,
+          1065
+        ],
+        "placement": "solution",
+        "alt": "بردارهای E، B، سرعت و نیروهای وارد بر ذره منفی در دستگاه مختصات"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 696,
+    "solution_page": 337,
+    "stated_correct_option": 1,
+    "classic_solution": "برای عبور مستقیم ذره، نیروی مغناطیسی باید نیروی الکتریکی را خنثی کند. با $\\Delta V=Ed$، میدان الکتریکی $4000N/C$ است و از شرط $qvB=qE$ با $v=5000m/s$ نتیجه می‌شود $B=0.8T$.",
+    "media_regions": [
+      {
+        "page_file": "page_0142.jpg",
+        "box": [
+          205,
+          1335,
+          710,
+          1515
+        ],
+        "placement": "solution",
+        "alt": "صفحات باردار و مسیر بار در میدان‌های متقاطع الکتریکی و مغناطیسی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 697,
+    "solution_page": 337,
+    "stated_correct_option": 3,
+    "classic_solution": "از منفی بودن $q/m$ نتیجه می‌شود $q<0$ و $m=4|q|$. در راستای قائم تعادل نیروها برقرار است: $F_B-F_E-mg=0$، پس $|q|(vB-E)=mg$ و در نهایت $E=vB-4g=360N/C$.",
+    "media_regions": [
+      {
+        "page_file": "page_0142.jpg",
+        "box": [
+          75,
+          1755,
+          735,
+          2135
+        ],
+        "placement": "solution",
+        "alt": "دو شکل قاعده دست چپ و بار منفی میان صفحه‌های باردار با نیروهای مغناطیسی، الکتریکی و وزن"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 698,
+    "solution_page": 338,
+    "stated_correct_option": 4,
+    "classic_solution": "از اختلاف پتانسیل نقاط $M$ و $N$، میدان یکنواخت $E=50N/C$ و جهت آن خلاف محور $x$ به دست می‌آید. برای بار منفی، $\\vec F_E$ به راست است و برای حرکت مستقیم باید $F_B=F_E$ باشد؛ بنابراین $E=vB$ و $v=2km/s$.",
+    "media_regions": [
+      {
+        "page_file": "page_0143.jpg",
+        "box": [
+          120,
+          195,
+          455,
+          770
+        ],
+        "placement": "solution",
+        "alt": "مختصات نقاط M و N و شکل‌های تعیین جهت نیروهای وارد بر بار منفی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 699,
+    "solution_page": 338,
+    "stated_correct_option": 1,
+    "classic_solution": "در موتور الکتریکی، نیروهای مغناطیسی وارد بر دو سر حلقه در خلاف جهت هم‌اند و گشتاور ایجاد می‌کنند. طبق شکل، حلقه در جهت (۱) می‌چرخد.",
+    "media_regions": [
+      {
+        "page_file": "page_0143.jpg",
+        "box": [
+          95,
+          890,
+          855,
+          1195
+        ],
+        "placement": "solution",
+        "alt": "موتور الکتریکی میان قطب‌های N و S و جهت نیرو روی دو سوی حلقه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 700,
+    "solution_page": 338,
+    "stated_correct_option": 2,
+    "classic_solution": "برای عمود بودن نیروی وارد بر سیم بر جریان و میدان، جهت میدان آهنربای (۲) باید در محل سیم مانند شکل باشد. در نتیجه قطب $Y$ باید $N$ باشد و جریان سیم نیز از صفحه بیرون است.",
+    "media_regions": [
+      {
+        "page_file": "page_0143.jpg",
+        "box": [
+          75,
+          1330,
+          600,
+          1900
+        ],
+        "placement": "solution",
+        "alt": "دو آهنربای نعل‌اسبی و بردارهای میدان و نیرو در محل سیم حامل جریان"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 701,
+    "solution_page": 338,
+    "stated_correct_option": 3,
+    "classic_solution": "اندازه نیروی مغناطیسی تا وقتی $\\sin\\theta$ ثابت بماند تغییر نمی‌کند. در دو حالت نشان‌داده‌شده زاویه‌های $40^\\circ$ و $140^\\circ$ مکمل‌اند و هر دو نیروی هم‌اندازه و هم‌جهت می‌دهند.",
+    "media_regions": [
+      {
+        "page_file": "page_0143.jpg",
+        "box": [
+          75,
+          2030,
+          545,
+          2345
+        ],
+        "placement": "solution",
+        "alt": "دو وضعیت سیم در میدان یکنواخت با زاویه‌های 40 و 140 درجه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 702,
+    "solution_page": 339,
+    "stated_correct_option": 3,
+    "classic_solution": "شدت جریان مدار از $I=\\varepsilon/(R+r)=2A$ محاسبه شده است. سپس نیروی وارد بر میله $CD$ از رابطه $F=I\\ell B\\sin90^\\circ$ برابر $0.4N$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 703,
+    "solution_page": 339,
+    "stated_correct_option": 3,
+    "classic_solution": "در آستانه لغزش، نیروی مغناطیسی با بیشینه اصطکاک ایستایی برابر گرفته شده است. چون در راستای قائم حرکت نداریم $F_N=mg$ و از $I\\ell B\\sin90^\\circ=\\mu_smg$، حداقل میدان $B_{min}=2T$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 704,
+    "solution_page": 339,
+    "stated_correct_option": 4,
+    "classic_solution": "بردار نیروی مغناطیسی داده‌شده به مبدأ منتقل شده و اندازه آن $15mN$ محاسبه می‌شود. فقط طول بخش درون میدان، $CE=0.8m$، اثر دارد و از $F=I\\ell B$ با $B=0.75T$ نتیجه می‌شود $I=250mA$؛ جهت جریان از $N$ به $M$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0144.jpg",
+        "box": [
+          155,
+          650,
+          875,
+          1010
+        ],
+        "placement": "solution",
+        "alt": "سیم MN در ناحیه میدان درون‌سو و بردار نیروی وارد بر سیم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 705,
+    "solution_page": 339,
+    "stated_correct_option": 4,
+    "classic_solution": "برای قاب حامل جریان در میدان یکنواخت، برآیند نیروهای مغناطیسی روی کل قاب صفر است و نیروی خالص رشته شکسته معادل نیروی وارد بر پاره‌سیم مکمل آن است. با یافتن $MQ=4cm$، مقدار $F_{net}=I\\ell B=40mN$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0144.jpg",
+        "box": [
+          125,
+          1525,
+          620,
+          2405
+        ],
+        "placement": "solution",
+        "alt": "قاب MNPQR و پاره‌سیم مکمل MQ در میدان یکنواخت برون‌سو"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 706,
+    "solution_page": 340,
+    "stated_correct_option": 3,
+    "classic_solution": "مثلث $ABC$ قائم است؛ از هندسه شکل $BC=20cm$ و $AB=20\\sqrt3cm$ به دست می‌آید. نیروهای دو بخش سیم با قاعده دست راست هم‌جهت‌اند و $F_{AB}=9mN$ و $F_{BC}=3mN$، پس برآیند $12mN$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0145.jpg",
+        "box": [
+          85,
+          185,
+          540,
+          975
+        ],
+        "placement": "solution",
+        "alt": "سیم خمیده ABC و تعیین نیروهای وارد بر بخش‌های AB و BC در میدان قائم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 707,
+    "solution_page": 340,
+    "stated_correct_option": 3,
+    "classic_solution": "چون سیم‌های $AB$ و $BC$ عمود بر میدان‌اند، نیروها متناسب با طول آن‌ها هستند. با نسبت داده‌شده، $F_{BC}=24N$ و برآیند عمود دو نیرو برابر $26N$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0145.jpg",
+        "box": [
+          120,
+          1100,
+          630,
+          1505
+        ],
+        "placement": "solution",
+        "alt": "سیم مثلثی ABC در میدان‌های درون‌سو و میدان افقی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 708,
+    "solution_page": 340,
+    "stated_correct_option": 4,
+    "classic_solution": "برای باقی ماندن میله روی پایه باید وزن حداقل برابر نیروی مغناطیسی باشد. از $mg\\ge B I\\ell$ و $I=\\varepsilon/(R_s+r)$، شرط $R_s\\ge14\\Omega$ به دست آمده است.",
+    "media_regions": [
+      {
+        "page_file": "page_0145.jpg",
+        "box": [
+          115,
+          1580,
+          610,
+          1835
+        ],
+        "placement": "solution",
+        "alt": "میله MN با جریان، نیروی مغناطیسی رو به بالا و وزن رو به پایین"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 709,
+    "solution_page": 340,
+    "stated_correct_option": 3,
+    "classic_solution": "برای هر گزینه جهت میدان آهنربا از $N$ به $S$ و سپس جهت نیروی مغناطیسی سیم با قاعده دست راست بررسی شده است. گزینه ۳ نیرویی در جهت وزن ایجاد می‌کند و عدد ترازو را نسبت به بقیه بیشتر نشان می‌دهد.",
+    "media_regions": [
+      {
+        "page_file": "page_0145.jpg",
+        "box": [
+          215,
+          2220,
+          1255,
+          2440
+        ],
+        "placement": "solution",
+        "alt": "چند حالت جهت میدان، جریان و نیروی وارد بر سیم برای مقایسه عدد ترازو"
+      }
+    ],
+    "review_notes": [
+      "ادامه توضیح در ابتدای page_0146 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 710,
+    "solution_page": 341,
+    "stated_correct_option": 2,
+    "classic_solution": "در دهانه آهنربا میدان از $N$ به $S$ و درون‌سو است. با قاعده دست راست نیرو رو به بالا به میله وارد می‌شود و مقدار آن برای بخش داخل میدان $F=BI\\ell=0.1N$ است؛ بنابراین عدد ترازو معادل $10g$ کاهش می‌یابد.",
+    "media_regions": [
+      {
+        "page_file": "page_0146.jpg",
+        "box": [
+          80,
+          180,
+          260,
+          315
+        ],
+        "placement": "solution",
+        "alt": "جهت‌های B، I و F برای میله داخل میدان آهنربا"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 711,
+    "solution_page": 341,
+    "stated_correct_option": 4,
+    "classic_solution": "دو حالت جریان بررسی شده است: در حالت اول ترازو $mg-F_B$ و در حالت دوم $mg+F'_B$ را نشان می‌دهد. اختلاف دو عدد $2N$ است، پس $I_2+I_1=4A$ و با $I_1=3A$ نتیجه می‌شود $I_2=1A$.",
+    "media_regions": [
+      {
+        "page_file": "page_0146.jpg",
+        "box": [
+          105,
+          540,
+          395,
+          860
+        ],
+        "placement": "solution",
+        "alt": "دو جهت جریان در سیم و نیروهای متناظر روی آمپرسنج/ترازو"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 712,
+    "solution_page": 341,
+    "stated_correct_option": 1,
+    "classic_solution": "اگر نیروی مغناطیسی دقیقاً با وزن دستگاه برابر شود عدد ترازو صفر است. از $BI\\ell=mg$، جریان $I=50A$ محاسبه شده و با $I=\\varepsilon/(R+r)$ مقدار $R=0.24\\Omega$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 713,
+    "solution_page": 341,
+    "stated_correct_option": 1,
+    "classic_solution": "برای میدان برون‌سو، $F_B$ رو به پایین است و $2T=mg+I\\ell B$. برای میدان درون‌سو، $F_B$ رو به بالا است و $2T'=mg-I\\ell B$. با کاهش ۲۵ درصدی کشش، نسبت $F_B/mg=1/7$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0146.jpg",
+        "box": [
+          180,
+          1300,
+          580,
+          1835
+        ],
+        "placement": "solution",
+        "alt": "میله رسانا آویخته از دو نخ در میدان برون‌سو و درون‌سو"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 714,
+    "solution_page": 341,
+    "stated_correct_option": 4,
+    "classic_solution": "در دو حالت خوانده‌شده از نیروسنج، جهت نیروی مغناطیسی یکی پایین و دیگری بالا است. با نوشتن تعادل نیروها و نسبت $F'_m/F_m=I'/I=3/2$، مقدار $F_m=5.6N$ و سپس $B=5.6T$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0146.jpg",
+        "box": [
+          170,
+          2070,
+          560,
+          2385
+        ],
+        "placement": "solution",
+        "alt": "حالت اول میله رسانا با جریان 2A، کشش نخ‌ها، وزن و نیروی مغناطیسی"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در page_0147 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 715,
+    "solution_page": 342,
+    "stated_correct_option": 3,
+    "classic_solution": "جریان مدار پس از بستن کلید $I=20A$ است و نیروی مغناطیسی وارد بر میله $F=2N$ به دست می‌آید. چون پیش از بستن کلید فنرها ۴ سانتی‌متر کش آمده بودند و پس از آن نیروی مغناطیسی هم‌اندازه وزن میله است، هر فنر ۴ سانتی‌متر بیشتر کشیده می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0147.jpg",
+        "box": [
+          110,
+          610,
+          520,
+          1035
+        ],
+        "placement": "solution",
+        "alt": "میله CD میان دو فنر در مدار و میدان مغناطیسی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 716,
+    "solution_page": 342,
+    "stated_correct_option": 1,
+    "classic_solution": "پیش از عبور جریان از تعادل وزن و نیروی فنرها، $k=10N/m$ به دست می‌آید. پس از عبور جریان، تغییر طول هر فنر ۶ میلی‌متر است و از $F_B=mg-2k\\Delta\\ell'$، مقدار $F_B=0.04N$ و جریان $I=5A$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0147.jpg",
+        "box": [
+          115,
+          1055,
+          550,
+          1815
+        ],
+        "placement": "solution",
+        "alt": "میله MN روی دو فنر پیش و پس از عبور جریان و جهت نیروی مغناطیسی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 717,
+    "solution_page": 342,
+    "stated_correct_option": 3,
+    "classic_solution": "میدان ناشی از سیم راست بر شعاع هر نقطه عمود است. با استفاده از هندسه نقاط، مؤلفه‌های میدان‌های دو نقطه برابر جابه‌جا می‌شوند و نتیجه برداری برابر $\\vec B=-0.8\\hat i-0.6\\hat j$ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0147.jpg",
+        "box": [
+          95,
+          2110,
+          555,
+          2435
+        ],
+        "placement": "solution",
+        "alt": "دستگاه مختصات و دو نقطه روی دایره برای میدان سیم راست در مرکز"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 718,
+    "solution_page": 343,
+    "stated_correct_option": 3,
+    "classic_solution": "در نقطه $c$ میدان سیم $a$ عمود بر خط $ac$ و میدان سیم $b$ عمود بر خط $bc$ است. از جهت برآیند معلوم می‌شود جریان $a$ درون‌سو و جریان $b$ برون‌سو است و چون $bc=ac$ ولی $B_b>B_a$، $I_b>I_a$.",
+    "media_regions": [
+      {
+        "page_file": "page_0148.jpg",
+        "box": [
+          175,
+          205,
+          520,
+          500
+        ],
+        "placement": "solution",
+        "alt": "دو سیم a و b و مؤلفه‌های میدان در نقاط c و d"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 719,
+    "solution_page": 343,
+    "stated_correct_option": 2,
+    "classic_solution": "با حرکت از $M$ به پایین، اندازه میدان‌های دو سیم بزرگ‌تر می‌شود اما زاویه بین آن‌ها کوچک‌تر می‌گردد. برآیند ابتدا تا نقطه‌ای مانند $P$ افزایش می‌یابد و سپس در $N$ به علت خنثی‌شدن میدان‌ها صفر می‌شود؛ پس $B_N<B_M<B_P$.",
+    "media_regions": [
+      {
+        "page_file": "page_0148.jpg",
+        "box": [
+          115,
+          570,
+          565,
+          1055
+        ],
+        "placement": "solution",
+        "alt": "دو سیم هم‌جریان و میدان‌های ناشی از آن‌ها در نقاط M، P و N"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 720,
+    "solution_page": 343,
+    "stated_correct_option": 4,
+    "classic_solution": "چون دو جریان و فاصله‌ها از نقطه $C$ برابرند، $B_A=B_B$ است. برای آن‌که نیروی وارد بر بار منفی با سرعت برون‌سو به راست باشد، میدان برآیند در $C$ باید رو به بالا شود؛ بنابراین جهت میدان سیم $B$ وارون و جریان آن درون‌سو است.",
+    "media_regions": [
+      {
+        "page_file": "page_0148.jpg",
+        "box": [
+          110,
+          1280,
+          600,
+          2175
+        ],
+        "placement": "solution",
+        "alt": "دو سیم در A و B، نقطه C و تعیین جهت میدان برآیند برای نیروی وارد بر بار"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 721,
+    "solution_page": 344,
+    "stated_correct_option": 1,
+    "classic_solution": "میدان‌های دو سیم در نقطه $A$ برابرند و مؤلفه‌های افقی همدیگر را خنثی می‌کنند. با جمع مؤلفه‌های عمودی، $\\vec B_A=6\\hat j$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0149.jpg",
+        "box": [
+          110,
+          170,
+          600,
+          520
+        ],
+        "placement": "solution",
+        "alt": "دو سیم و تجزیه میدان‌های برابر در نقطه A"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 722,
+    "solution_page": 344,
+    "stated_correct_option": 3,
+    "classic_solution": "چهار سیم در رأس‌های مربع از مرکز فاصله یکسان دارند، پس اندازه میدان‌های آن‌ها برابر است. با توجه به جهت‌ها، سه مؤلفه هم‌جهت جمع می‌شوند و برآیند مرکز مربع $B_O=\\sqrt5 B$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0149.jpg",
+        "box": [
+          90,
+          530,
+          660,
+          935
+        ],
+        "placement": "solution",
+        "alt": "چهار سیم در رأس‌های مربع و میدان‌های آن‌ها در مرکز O"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 723,
+    "solution_page": 344,
+    "stated_correct_option": 2,
+    "classic_solution": "صفر بودن میدان در $A$ یعنی میدان‌های دو سیم در خلاف جهت و برابرند. با توجه به فاصله بزرگ‌تر نقطه از سیم ۲، باید $I_2>I_1$ باشد و در نقطه $B$ نیز میدان سیم ۲ غالب است؛ برای الکترون، جهت نیرو با قاعده دست چپ تعیین می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0149.jpg",
+        "box": [
+          80,
+          965,
+          585,
+          1450
+        ],
+        "placement": "solution",
+        "alt": "دو سیم موازی، نقاط A و B و جهت‌های میدان در آن‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 724,
+    "solution_page": 344,
+    "stated_correct_option": 3,
+    "classic_solution": "دو حالت ممکن برای جهت $I_2$ بررسی شده است. در یک حالت میدان $M$ صفر و $N$ برابر $24G$ می‌شود و در حالت دیگر میدان $M$ برابر $72G$ و $N$ صفر است؛ تنها مجموعه مقادیر گزینه ۳ با این نتایج سازگار است.",
+    "media_regions": [
+      {
+        "page_file": "page_0149.jpg",
+        "box": [
+          85,
+          1630,
+          600,
+          2260
+        ],
+        "placement": "solution",
+        "alt": "دو سیم موازی و میدان‌های نقاط M و N در دو حالت جهت جریان"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 725,
+    "solution_page": 345,
+    "stated_correct_option": 3,
+    "classic_solution": "با توجه به فاصله‌های ۲۰ و ۴۰ سانتی‌متری، میدان چهار سیم نزدیک‌تر $120G$ و میدان دو سیم دورتر $60G$ است. مؤلفه افقی برآیند $24mT$ و مؤلفه عمودی $-18mT$ می‌شود، پس $\\vec B_O=(24mT)\\hat i-(18mT)\\hat j$.",
+    "media_regions": [
+      {
+        "page_file": "page_0150.jpg",
+        "box": [
+          135,
+          195,
+          510,
+          530
+        ],
+        "placement": "solution",
+        "alt": "شش سیم روی محورهای مختصات و مؤلفه‌های میدان در مبدأ"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 726,
+    "solution_page": 345,
+    "stated_correct_option": 3,
+    "classic_solution": "نیروی بین دو سیم موازی برای جریان‌های هم‌سو جاذبه و برای ناهم‌سو دافعه است. با مقایسه فاصله‌ها، مؤلفه قطری بزرگ‌تر از نیروی سیم دورتر است و جهت برآیند نیروی وارد بر سیم (۱) در جهت $C$ قرار می‌گیرد.",
+    "media_regions": [
+      {
+        "page_file": "page_0150.jpg",
+        "box": [
+          150,
+          770,
+          590,
+          1120
+        ],
+        "placement": "solution",
+        "alt": "چهار سیم در گوشه‌های مربع و نیروهای وارد بر سیم ۱"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 727,
+    "solution_page": 345,
+    "stated_correct_option": 1,
+    "classic_solution": "چون نقطه $A$ به سیم ۳ نزدیک‌تر است، میدان سیم ۳ در آن از میدان دو سیم دیگر بزرگ‌تر است. برای صفر شدن برآیند، میدان سیم ۳ باید با مجموع دو میدان دیگر هم‌جهت نباشد؛ پس جریان سیم‌های ۱ و ۲ همدیگر را جذب و سیم‌های ۲ و ۳ همدیگر را دفع می‌کنند.",
+    "media_regions": [
+      {
+        "page_file": "page_0150.jpg",
+        "box": [
+          120,
+          1260,
+          555,
+          1535
+        ],
+        "placement": "solution",
+        "alt": "سه سیم موازی و نقطه A برای مقایسه میدان‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 728,
+    "solution_page": 345,
+    "stated_correct_option": 2,
+    "classic_solution": "در محل سیم ۳، میدان حاصل از سیم ۲ بزرگ‌تر از میدان سیم ۱ است و برآیند دو میدان برون‌سو و برابر $200G$ می‌شود. با قاعده دست راست جهت نیروی وارد بر سیم ۳ رو به پایین و اندازه آن $1.2mN$ محاسبه می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0150.jpg",
+        "box": [
+          95,
+          1595,
+          640,
+          2185
+        ],
+        "placement": "solution",
+        "alt": "سه سیم موازی با فاصله‌های d و 2d و تعیین میدان و نیرو روی سیم سوم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 729,
+    "solution_page": 345,
+    "stated_correct_option": 1,
+    "classic_solution": "با استفاده از میدان سیم ۱ در محل سیم ۲، نیروی $F_{12}=24mN$ به دست می‌آید. از دو رابطه جمع نیروهای وارد بر سیم‌ها، $F_{31}=10mN$ و $F_{32}=24mN$ و در نتیجه نیروی خالص سیم ۲ برابر $14mN$ به سمت چپ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0150.jpg",
+        "box": [
+          90,
+          2240,
+          560,
+          2435
+        ],
+        "placement": "solution",
+        "alt": "سه سیم و نیروهای متقابل میان هر دو سیم"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در ابتدای page_0151 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 730,
+    "solution_page": 346,
+    "stated_correct_option": 1,
+    "classic_solution": "میدان سیم در محل قاب برون‌سو است و نیروهای وارد بر اضلاع بالا و پایین برابر و خلاف جهت‌اند. چون ضلع نزدیک‌تر نیروی بزرگ‌تری می‌گیرد، قاب در جهت نیروی ضلع نزدیک‌تر به سمت سیم کشیده می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0151.jpg",
+        "box": [
+          120,
+          505,
+          520,
+          760
+        ],
+        "placement": "solution",
+        "alt": "قاب مستطیلی کنار سیم بلند و نیروهای وارد بر چهار ضلع قاب"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 731,
+    "solution_page": 346,
+    "stated_correct_option": 2,
+    "classic_solution": "جهت میدان حلقه در مرکز و خارج از آن با قاعده دست راست تعیین می‌شود. سپس با قاعده دست چپ برای بار منفی، نیروی مغناطیسی وارد بر بارها رو به پایین است.",
+    "media_regions": [
+      {
+        "page_file": "page_0151.jpg",
+        "box": [
+          115,
+          815,
+          560,
+          1015
+        ],
+        "placement": "solution",
+        "alt": "حلقه حامل جریان و جهت میدان و نیروی وارد بر بار منفی کنار آن"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 732,
+    "solution_page": 346,
+    "stated_correct_option": 3,
+    "classic_solution": "جهت میدان در مرکز حلقه با قاعده دست راست به بالا است؛ بنابراین $N$ بالای حلقه و $S$ پایین آن قرار می‌گیرد. خطوط میدان در نقاط مختلف مسیر بسته دارند و نوک عقربه در سه ربع دایره جمعاً $540^\\circ$ می‌چرخد.",
+    "media_regions": [
+      {
+        "page_file": "page_0151.jpg",
+        "box": [
+          95,
+          1080,
+          605,
+          1580
+        ],
+        "placement": "solution",
+        "alt": "حلقه حامل جریان و خطوط میدان مغناطیسی در اطراف آن"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 733,
+    "solution_page": 346,
+    "stated_correct_option": 2,
+    "classic_solution": "برای دو حلقه هم‌مرکز با جریان برابر، میدان حلقه کوچک‌تر بزرگ‌تر است. با فرض $B_1=2B_2$ و میدان کل $18G$ در حالت اول، $B_2=6G$ و $B_1=12G$ به دست می‌آید؛ پس با تغییر جهت‌ها، حالت‌های $6G$، $18G$، $36G$ و $54G$ ساخته می‌شوند و پاسخ خواسته‌شده گزینه ۲ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0151.jpg",
+        "box": [
+          110,
+          1615,
+          620,
+          2320
+        ],
+        "placement": "solution",
+        "alt": "دو حلقه هم‌مرکز و حالت‌های مختلف جهت جریان برای میدان مرکز"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در ابتدای page_0152 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 734,
+    "solution_page": 347,
+    "stated_correct_option": 2,
+    "classic_solution": "با قاعده دست راست، جهت میدان در مرکز و قطب‌های $N$ و $S$ هر حلقه تعیین می‌شود. در نقطه $A$، میدان حلقه (۱) وارون میدان مرکز و میدان حلقه (۲) هم‌جهت با محور آن است؛ برآیند تقریبی رو به چپ و پایین است و اندازه آن از فیثاغورس $39G$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0152.jpg",
+        "box": [
+          155,
+          420,
+          620,
+          950
+        ],
+        "placement": "solution",
+        "alt": "دو حلقه عمود بر هم و میدان‌های آن‌ها در نقطه A"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 735,
+    "solution_page": 347,
+    "stated_correct_option": 4,
+    "classic_solution": "جهت میدان حلقه و میدان سیم راست در مبدأ تعیین می‌شود. با استفاده از نسبت مؤلفه‌ها و رابطه فیثاغورس، $B_{rO}=280G$ و $B_{lO}=210G$ است؛ بنابراین $B_x=28mT$ و $B_y=-21mT$ و بردار میدان $\\vec B_O=(28mT)\\hat i-(21mT)\\hat j$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0152.jpg",
+        "box": [
+          120,
+          1055,
+          590,
+          1390
+        ],
+        "placement": "solution",
+        "alt": "حلقه و سیم راست در کنار هم و مؤلفه‌های میدان در مبدأ"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 736,
+    "solution_page": 347,
+    "stated_correct_option": 3,
+    "classic_solution": "مقاومت معادل دو مقاومت موازی $2\\Omega$ و جریان کل $4A$ است. جریان شاخه دوم $4/3A$ به دست می‌آید و از رابطه میدان سیملوله $B=\\mu_0NI/\\ell$ مقدار میدان $50G$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 737,
+    "solution_page": 347,
+    "stated_correct_option": 2,
+    "classic_solution": "تعداد دورهای هر سیملوله از $N=L/(2\\pi R)$ به دست آمده است. برای سیملوله اول $N_1=250$ و از شرط میدان، $I_1=90/\\pi mA$؛ برای سیملوله دوم $I_2=60/\\pi mA$ می‌شود، پس $|\\Delta I|=30/\\pi mA$.",
+    "media_regions": [],
+    "review_notes": [
+      "ادامه حل در ابتدای page_0153 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 738,
+    "solution_page": 348,
+    "stated_correct_option": 2,
+    "classic_solution": "جهت پیچش دو سیملوله یکسان است اما اتصال مدارها جهت جریان‌ها را خلاف هم می‌کند. برای صفر شدن میدان در $M$ باید $B_1=B_2$ باشد؛ از شکل $N_1=1.6N_2$ و در نتیجه $I_1/I_2=5/8$، پس $R_2/R_1=5/8$ و $R_2=1000m\\Omega$.",
+    "media_regions": [
+      {
+        "page_file": "page_0153.jpg",
+        "box": [
+          115,
+          390,
+          565,
+          815
+        ],
+        "placement": "solution",
+        "alt": "دو سیملوله هم‌محور در دو مدار و نقطه M میان آن‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 739,
+    "solution_page": 348,
+    "stated_correct_option": 3,
+    "classic_solution": "از $B=\\mu NI/\\ell$ برای دو سیملوله جدا، $N_1=B_1\\ell/(\\mu I)$ و $N_2=B_2\\ell/(\\mu I)$ نوشته می‌شود. پس میدان سیملوله حاصل از اتصال دو بخش برابر میانگین دو میدان است: $(3+6)/2=4.5G$.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 740,
+    "solution_page": 348,
+    "stated_correct_option": 4,
+    "classic_solution": "اگر حلقه‌های سیملوله به هم چسبیده باشند، طول سیملوله $\\ell=ND$ و $B=\\mu I/D$ است. با طول سیم داده‌شده قطر $D=\\pi/300m$ به دست می‌آید و برای جریان $5A$، میدان $6G$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 741,
+    "solution_page": 348,
+    "stated_correct_option": 2,
+    "classic_solution": "با برابر بودن طول سیم سازنده و نصف شدن قطر، نسبت تعداد دورها و طول سیملوله بررسی می‌شود. چون حلقه‌ها چسبیده‌اند، می‌توان از $B=\\mu I/d$ استفاده کرد و با تغییر نکردن جریان و میدان، رابطه داده‌شده به گزینه ۲ می‌رسد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 742,
+    "solution_page": 349,
+    "stated_correct_option": 4,
+    "classic_solution": "با رابطه $B=\\mu I/d$ و نمودار $B-I$، نسبت میدان‌ها برابر نسبت قطرهای سیم سازنده است. از $B_2/B_1=4/3$ و اختلاف $B_2-B_1=0.8\\pi G$، مقدار $B_1=2.4\\pi G$ و سپس جریان $I_1=480mA$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0154.jpg",
+        "box": [
+          180,
+          190,
+          470,
+          455
+        ],
+        "placement": "solution",
+        "alt": "نمودار میدان سیملوله بر حسب جریان برای دو سیملوله"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 743,
+    "solution_page": 349,
+    "stated_correct_option": 3,
+    "classic_solution": "با استفاده از $R\\propto \\ell/d^2$ و برابر بودن انرژی و زمان، توان‌ها برابر گرفته شده‌اند. از $R_1I_1^2=R_2I_2^2$ نسبت جریان‌ها به دست می‌آید و در نهایت $B_2/B_1=2/3$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 744,
+    "solution_page": 349,
+    "stated_correct_option": 1,
+    "classic_solution": "دو سیملوله موازی هم‌پتانسیل‌اند، پس $R_1I_1=R_2I_2$. با رابطه مقاومت سیم و رابطه $B=\\mu I/d$، نسبت میدان‌ها $B_1/B_2=4$ به دست آمده است.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 745,
+    "solution_page": 349,
+    "stated_correct_option": 3,
+    "classic_solution": "مواد فرومغناطیس سخت برای ساخت آهنربای دائمی مناسب‌اند؛ از میان نمونه‌ها فولاد به دلیل فرومغناطیس سخت بودن انتخاب می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 746,
+    "solution_page": 349,
+    "stated_correct_option": 3,
+    "classic_solution": "پلاتین پارامغناطیس و آهن فرومغناطیس است و هر دو در جهت میدان خارجی القا می‌شوند و همدیگر را جذب می‌کنند. مس دیامغناطیس است و میدان القایی آن خلاف میدان خارجی است، بنابراین مطابق شکل میله پلاتینی را دفع می‌کند.",
+    "media_regions": [
+      {
+        "page_file": "page_0154.jpg",
+        "box": [
+          150,
+          1840,
+          620,
+          1975
+        ],
+        "placement": "solution",
+        "alt": "سه میله در میدان خارجی و جهت میدان القایی آن‌ها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 747,
+    "solution_page": 349,
+    "stated_correct_option": 2,
+    "classic_solution": "میدان آهنربا باعث القای خاصیت مغناطیسی در گلوله می‌شود و گلوله به سمت میدان قوی‌تر کشیده می‌شود. چون نیکل فرومغناطیس نرم و فولاد فرومغناطیس سخت است، نیکل خاصیت بیشتری می‌گیرد و بیشتر منحرف می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0154.jpg",
+        "box": [
+          150,
+          2025,
+          530,
+          2210
+        ],
+        "placement": "solution",
+        "alt": "گلوله کنار قطب آهنربا و خطوط میدان در ناحیه ناهمگن"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 748,
+    "solution_page": 349,
+    "stated_correct_option": 4,
+    "classic_solution": "با بستن کلید، سیملوله به آهنربای الکتریکی تبدیل می‌شود و هسته فولادی را جذب می‌کند؛ فنر کشیده‌تر می‌شود. با باز کردن کلید، خاصیت هسته تا حدی باقی می‌ماند اما خاصیت سیملوله از بین می‌رود، پس نیروی جذب و طول فنر کاهش می‌یابد.",
+    "media_regions": [
+      {
+        "page_file": "page_0154.jpg",
+        "box": [
+          150,
+          2255,
+          660,
+          2425
+        ],
+        "placement": "solution",
+        "alt": "سیملوله با کلید و فنر متصل به قطعه فولادی"
+      }
+    ],
+    "review_notes": [
+      "پرسش کوتاه مرتبط در ابتدای page_0155 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 749,
+    "solution_page": 350,
+    "stated_correct_option": 1,
+    "classic_solution": "مؤلفه قائم میدان با سطح قاب موازی است و در شار نقشی ندارد؛ بنابراین فقط $B_x=2T$ مؤثر است. زاویه بین خط عمود بر قاب و میدان مؤثر $60^\\circ$ بوده و شار از $\\Phi=AB_x\\cos60^\\circ=0.24Wb$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0155.jpg",
+        "box": [
+          90,
+          250,
+          515,
+          670
+        ],
+        "placement": "solution",
+        "alt": "قاب مایل در میدان با مؤلفه‌های Bx و By"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 750,
+    "solution_page": 350,
+    "stated_correct_option": 3,
+    "classic_solution": "شار از سطح $BGE$ به صورت مجموع شار مؤلفه‌های $x$ و $y$ محاسبه شده و برابر $2a^2$ است. برای سطح $ACEG$ فقط مؤلفه $x$ شار دارد و شار آن $a^2$ است؛ نسبت دو شار برابر ۲ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0155.jpg",
+        "box": [
+          100,
+          900,
+          580,
+          1425
+        ],
+        "placement": "solution",
+        "alt": "دو سطح در مکعب برای محاسبه شار مغناطیسی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 751,
+    "solution_page": 350,
+    "stated_correct_option": 3,
+    "classic_solution": "وزش باد کاسه‌ها را می‌چرخاند و شار عبوری از سیم‌پیچ را تغییر می‌دهد، پس عقربه ولت‌سنج منحرف می‌شود. افزایش سطح کاسه‌ها نیرو و سرعت چرخش را زیاد می‌کند و افزایش میدان آهنربا نیز نیروی محرکه بزرگ‌تری القا می‌کند؛ جنس کاسه‌ها اثری ندارد.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 752,
+    "solution_page": 350,
+    "stated_correct_option": null,
+    "classic_solution": "حلقه در مدت $6s$ به طور کامل وارد میدان می‌شود، پس تغییر مکان $30cm$ است. با $A=400cm^2$ و $B=0.5T$، شار بیشینه $2\\times10^{-2}Wb$ و نیروی محرکه متوسط $1/300V$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0155.jpg",
+        "box": [
+          80,
+          2190,
+          445,
+          2395
+        ],
+        "placement": "solution",
+        "alt": "حلقه مربعی در حال ورود به میدان درون‌سو و جابه‌جایی 30 سانتی‌متر"
+      }
+    ],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 753,
+    "solution_page": 351,
+    "stated_correct_option": 1,
+    "classic_solution": "برای پیچش نشان‌داده‌شده، نرمال سطح در جهت محور $x$ است؛ پس شار اولیه $\\Phi_1=AB_x=6\\times10^{-4}Wb$ است. با صفر شدن میدان، شار نهایی صفر و از قانون فاراده با $N=200$ و $R=5\\Omega$ جریان متوسط $0.24A$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0156.jpg",
+        "box": [
+          125,
+          200,
+          475,
+          565
+        ],
+        "placement": "solution",
+        "alt": "پیچه در میدان مایل با مؤلفه‌های Bx و By"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 754,
+    "solution_page": 351,
+    "stated_correct_option": 4,
+    "classic_solution": "با توجه به جهت نرمال حلقه، علامت شار از روی زاویه با میدان تعیین می‌شود. از نمودار شار-زمان در $t=15s$، شار $-9.6\\pi mWb$ است و با رابطه $\\Phi=BA\\cos\\theta$، میدان $\\vec B=(-600G)\\hat i-(800G)\\hat j$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0156.jpg",
+        "box": [
+          105,
+          635,
+          620,
+          1505
+        ],
+        "placement": "solution",
+        "alt": "حلقه در صفحه مختصات و نمودار شار مغناطیسی بر حسب زمان"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 755,
+    "solution_page": 351,
+    "stated_correct_option": null,
+    "classic_solution": "محیط حلقه دوم دو برابر حلقه اول است، پس مقاومت آن دو برابر است و مساحت آن چهار برابر می‌شود. چون $|\\varepsilon|\\propto A$، نسبت نیروهای محرکه ۴ و نسبت جریان‌های القایی $4\\times(1/2)=2$ است.",
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 2 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 756,
+    "solution_page": 352,
+    "stated_correct_option": 1,
+    "classic_solution": "فقط بخشی از شار سیملوله $A$ که از سطح مقطع سیملوله $B$ می‌گذرد مؤثر است. از $\\Phi_B=B_AA_B$ و قانون فاراده برای $N_B$ دور، با تغییر جریان داده‌شده، نیروی محرکه متوسط $1mV$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0157.jpg",
+        "box": [
+          85,
+          185,
+          520,
+          405
+        ],
+        "placement": "solution",
+        "alt": "سیملوله B درون سیملوله A برای شار مشترک"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 757,
+    "solution_page": 352,
+    "stated_correct_option": 1,
+    "classic_solution": "هنگام خروج پیچک از میدان، شار کاهش می‌یابد و برای غلبه بر نیروی مخالف باید کار مکانیکی انجام شود. با $\\Delta\\Phi=-AB$، جریان متوسط $0.5A$ و انرژی گرمایی مقاومت $W=RI^2t=0.1J$ محاسبه می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 758,
+    "solution_page": 352,
+    "stated_correct_option": 2,
+    "classic_solution": "تغییر میدان در حلقه شار متغیر و جریان القایی ایجاد می‌کند. چون سطح قاب عمود بر میدان است، $\\Phi=AB$ و شیب نمودار $B-t$ برابر $\\Delta B/\\Delta t$ است؛ سپس توان مصرفی مقاومت از $P=\\varepsilon^2/R$ و انرژی از $U=Pt$ برابر $2.16\\times10^{-5}J$ به دست می‌آید.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 759,
+    "solution_page": 352,
+    "stated_correct_option": 1,
+    "classic_solution": "بار القاشده از رابطه $\\Delta q=N\\Delta\\Phi/R$ به دست می‌آید و بنابراین به زمان تغییر شار وابسته نیست.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 760,
+    "solution_page": 352,
+    "stated_correct_option": 2,
+    "classic_solution": "در دو بازه تغییر میدان، جهت شار ثابت ولی اندازه میدان یکی افزایش و دیگری کاهش می‌یابد، پس طبق لنز میدان القایی‌ها خلاف جهت یکدیگرند. با نوشتن $|\\varepsilon|=RI$ و $\\Delta\\Phi=A\\Delta B$، بار خالص عبوری در بازه اول $5mC$ و در بازه دوم $3mC$ است و خالص کل $3mC$ می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 761,
+    "solution_page": 352,
+    "stated_correct_option": null,
+    "classic_solution": "از نکته نمودار $\\Phi-t$ استفاده شده است: در نمودار خط راست، نیروی محرکه متوسط و لحظه‌ای در هر بازه یکسان است و علامت آن از علامت شیب شار تعیین می‌شود. با مقایسه دو بازه، گزاره‌های درست به گزینه ۲ می‌رسند.",
+    "media_regions": [],
+    "review_notes": [
+      "ادامه توضیح در ابتدای page_0158 دیده می‌شود.",
+      "stated_correct_option 2 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 762,
+    "solution_page": 353,
+    "stated_correct_option": 1,
+    "classic_solution": "در نمودار خطی شار-زمان، شیب در بازه‌های خواسته‌شده ثابت است. با مقایسه شیب بازه $0$ تا $5s$ با بازه $10$ تا $15s$، نسبت نیروهای محرکه $5/3$ به دست می‌آید و مقدار خواسته‌شده $9V$ می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0158.jpg",
+        "box": [
+          105,
+          400,
+          445,
+          745
+        ],
+        "placement": "solution",
+        "alt": "نمودار شار مغناطیسی بر حسب زمان با بازه‌های 0 تا 15 ثانیه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 763,
+    "solution_page": 353,
+    "stated_correct_option": 3,
+    "classic_solution": "با برابر بودن شیب نمودار در ۳ ثانیه اول و بازه ۳ تا ۸ ثانیه، ابتدا $\\Phi_2=8Wb$ محاسبه می‌شود. سپس با شیب مرحله دوم، مقدار شار در لحظه ۴ ثانیه برابر $4Wb$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0158.jpg",
+        "box": [
+          105,
+          870,
+          455,
+          1165
+        ],
+        "placement": "solution",
+        "alt": "نمودار شار-زمان چندبخشی با مقادیر مجهول و مقدار -12 وبر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 764,
+    "solution_page": 353,
+    "stated_correct_option": 3,
+    "classic_solution": "شار حلقه مثلثی در میدان $x$ از شار سطح $OCB$ محاسبه شده و $\\Phi=0.04B_x$ است. با قرار دادن شیب نمودار $B_x-t$ در رابطه $I_{av}=-(1/300)\\Delta B_x/\\Delta t$، جریان‌ها در سه بازه به ترتیب $-5mA$، صفر و $5mA$ به دست می‌آیند.",
+    "media_regions": [
+      {
+        "page_file": "page_0158.jpg",
+        "box": [
+          120,
+          1225,
+          515,
+          1585
+        ],
+        "placement": "solution",
+        "alt": "حلقه مثلثی در دستگاه x، y، z برای محاسبه شار از سطح OCB"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 765,
+    "solution_page": 353,
+    "stated_correct_option": 2,
+    "classic_solution": "طبق قانون لنز، اگر شار عبوری مدار القاکننده افزایش یابد، میدان القایی القاشونده خلاف میدان القاکننده است و اگر شار کاهش یابد، میدان القایی هم‌جهت آن است. با بررسی شکل‌های سیملوله، جهت جریان القایی در مقاومت خواسته‌شده تعیین می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0158.jpg",
+        "box": [
+          425,
+          2135,
+          1280,
+          2385
+        ],
+        "placement": "solution",
+        "alt": "دو سیملوله القاکننده و القاشونده و جهت جریان القایی طبق قانون لنز"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در ابتدای page_0159 دیده می‌شود."
+    ]
+  },
+  {
+    "question_number": 766,
+    "solution_page": 354,
+    "stated_correct_option": 2,
+    "classic_solution": "جهت جریان در سیملوله $A$ میدان آن را به چپ می‌دهد و چون دو سیملوله هم‌محورند، قطب‌های همنام کنار هم قرار دارند. میدان القایی سیملوله $B$ خلاف $B_A$ است؛ از افزایش شار عبوری نتیجه می‌شود با کاهش مقاومت، جریان و میدان $A$ افزایش و شار $B$ نیز افزایش می‌یابد، اما هنگام عبور هسته آهنی از $A$ شار $B$ کاهش می‌یابد.",
+    "media_regions": [
+      {
+        "page_file": "page_0159.jpg",
+        "box": [
+          95,
+          160,
+          630,
+          680
+        ],
+        "placement": "solution",
+        "alt": "دو سیملوله A و B هم‌محور و جریان القایی در مقاومت R'"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 767,
+    "solution_page": 354,
+    "stated_correct_option": 2,
+    "classic_solution": "در نزدیک شدن قطب $N$ به سیملوله، میدان آهنربا درون سیملوله به راست است و میدان القایی برای مخالفت رو به چپ می‌شود؛ جریان القایی پادساعتگرد است. برای حالت‌های دیگر نیز با قانون لنز و تعداد حلقه/سرعت آهنربا، جهت و بزرگی انحراف عقربه مقایسه می‌شود و گزینه ۲ نتیجه می‌گردد.",
+    "media_regions": [
+      {
+        "page_file": "page_0159.jpg",
+        "box": [
+          90,
+          835,
+          670,
+          1685
+        ],
+        "placement": "solution",
+        "alt": "سه حالت حرکت آهنربا نسبت به سیملوله و جهت جریان القایی در گالوانومتر"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 768,
+    "solution_page": 354,
+    "stated_correct_option": null,
+    "classic_solution": "در نیم‌دور اول، بخش نیم‌دایره وارد میدان درون‌سو می‌شود و مساحت مدار داخل میدان افزایش می‌یابد؛ میدان القایی برای مخالفت برون‌سو و جریان پادساعتگرد است. در نیم‌دور دوم عکس این روند رخ می‌دهد و جهت جریان در مدار نیم‌دایره وارون می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0159.jpg",
+        "box": [
+          90,
+          1910,
+          570,
+          2395
+        ],
+        "placement": "solution",
+        "alt": "نیم‌دایره رسانا در مرز ناحیه میدان درون‌سو و مسیر ورود و خروج آن"
+      }
+    ],
+    "review_notes": [
+      "ادامه حل در ابتدای page_0160 دیده می‌شود.",
+      "stated_correct_option 2 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 769,
+    "solution_page": 355,
+    "stated_correct_option": 4,
+    "classic_solution": "چون جهت میدان در سمت چپ و راست ضلع $AD$ متفاوت است، دوران حلقه حول $AD$ به دو بازه تقسیم می‌شود. از $0$ تا $90^\\circ$ شار رو به بیرون کاهش می‌یابد و جریان القایی پادساعتگرد است؛ از $90^\\circ$ تا $180^\\circ$ شار رو به بیرون افزایش می‌یابد و جریان ساعتگرد می‌شود.",
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 770,
+    "solution_page": 355,
+    "stated_correct_option": null,
+    "classic_solution": "حلقه به دو نیم‌حلقه تقسیم شده است. افزایش میدان خارجی باعث ایجاد میدان القایی خلاف آن می‌شود و جریان‌های دو نیم‌حلقه در قطر مشترک هم‌اندازه و خلاف جهت‌اند؛ بنابراین پس از چسباندن قطرها، جریانی در قطر برقرار نمی‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0160.jpg",
+        "box": [
+          120,
+          910,
+          485,
+          1165
+        ],
+        "placement": "solution",
+        "alt": "حلقه دایره‌ای دو نیم‌شده در میدان و جریان‌های القایی دو نیم‌حلقه"
+      }
+    ],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 1; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 771,
+    "solution_page": 355,
+    "stated_correct_option": 1,
+    "classic_solution": "هنگام ورود حلقه به میدان، شار افزایش می‌یابد و جریان القایی با ایجاد میدانی خلاف میدان اصلی با آن مخالفت می‌کند. هنگام خروج، شار کاهش می‌یابد و جریان القایی خلاف جهت اولیه می‌شود؛ وقتی کل حلقه داخل میدان ثابت است، نیروی محرکه‌ای القا نمی‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0160.jpg",
+        "box": [
+          95,
+          1230,
+          540,
+          1570
+        ],
+        "placement": "solution",
+        "alt": "حلقه در حال ورود و خروج از ناحیه میدان میان قطب‌های N و S"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 772,
+    "solution_page": 355,
+    "stated_correct_option": 4,
+    "classic_solution": "در حالت افزایش جریان سیم راست، میدان در حلقه و جریان القایی پادساعتگرد می‌شود؛ با جابه‌جایی حلقه به سیم، تغییر شار بیشتر است. در حالت کاهش جریان، جریان القایی نیز پادساعتگرد می‌ماند و گزینه‌ای که هم جهت و هم بزرگی را هم‌زمان درست نشان می‌دهد گزینه ۴ است.",
+    "media_regions": [
+      {
+        "page_file": "page_0160.jpg",
+        "box": [
+          105,
+          1590,
+          570,
+          2100
+        ],
+        "placement": "solution",
+        "alt": "حلقه کنار سیم راست در دو حالت افزایش و کاهش جریان سیم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 773,
+    "solution_page": 355,
+    "stated_correct_option": 4,
+    "classic_solution": "در سیملوله اول چون $I_1$ و میدان $B_1$ افزایش می‌یابد، شار رو به راست زیاد می‌شود و مدار دوم جریانی ایجاد می‌کند که میدان القایی خلاف آن باشد؛ بنابراین حالت‌های ۱ و ۲ حذف می‌شوند. چون $I_1\\propto t$، شار خطی تغییر می‌کند و نیروی محرکه القایی ثابت است.",
+    "media_regions": [
+      {
+        "page_file": "page_0160.jpg",
+        "box": [
+          90,
+          2230,
+          660,
+          2445
+        ],
+        "placement": "solution",
+        "alt": "دو مدار کوپل‌شده با سیملوله و مقاومت برای بررسی القای متقابل"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 774,
+    "solution_page": 356,
+    "stated_correct_option": 2,
+    "classic_solution": "خطوط میدان مطابق شکل بسته‌اند و میدان در حلقه به چپ است. با حرکت آهنربا به راست، تراکم خطوط میدان در حلقه کاهش می‌یابد و جریان القایی میدانی در همان جهت ایجاد می‌کند؛ در نتیجه بار جزئی مثبت در $b$ و منفی در $a$ القا می‌شود.",
+    "media_regions": [
+      {
+        "page_file": "page_0161.jpg",
+        "box": [
+          70,
+          170,
+          535,
+          650
+        ],
+        "placement": "solution",
+        "alt": "آهنربای میله‌ای و شکاف ab در حلقه برای تعیین بارهای القایی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 775,
+    "solution_page": 356,
+    "stated_correct_option": 4,
+    "classic_solution": "از طول سیم $L=2m$، شعاع قاب نیم‌دایره‌ای $r=2/5m$ و مساحت $A=12/25m^2$ به دست می‌آید. میدان از $2T$ به $7T$ می‌رسد، پس با $\\Delta B=5T$ و $\\Delta t=2s$ جریان متوسط $24mA$ محاسبه می‌شود. چون میدان درون‌سو در حال افزایش است، جریان القایی پادساعتگرد است.",
+    "media_regions": [
+      {
+        "page_file": "page_0161.jpg",
+        "box": [
+          85,
+          800,
+          485,
+          1080
+        ],
+        "placement": "solution",
+        "alt": "قاب نیم‌دایره‌ای در میدان درون‌سو و میدان القایی برون‌سو"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 776,
+    "solution_page": 356,
+    "stated_correct_option": 4,
+    "classic_solution": "میله $MN$ با سرعت ثابت در میدان حرکت می‌کند، پس نیروی محرکه متوسط و لحظه‌ای برابر و $\\varepsilon=Blv=200mV$ است. از ولتاژ دو سر مقاومت $R$، جریان $I=2.5mA$ و سپس با مدار معادل $R'=50\\Omega$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0161.jpg",
+        "box": [
+          85,
+          1190,
+          620,
+          1825
+        ],
+        "placement": "solution",
+        "alt": "میله لغزان MN در میدان برون‌سو و مدار معادل با مقاومت‌های R و R'"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 777,
+    "solution_page": 356,
+    "stated_correct_option": 4,
+    "classic_solution": "کار نیروی خارجی برای جابه‌جایی میله برابر تغییر شار ضربدر جریان است: $W=F_{ext}d=BI\\ell d=I\\Delta\\Phi$. با داده‌های مسئله $10=I\\times0.2$ و بنابراین $I=50A$ به دست می‌آید.",
+    "media_regions": [
+      {
+        "page_file": "page_0161.jpg",
+        "box": [
+          85,
+          2040,
+          520,
+          2350
+        ],
+        "placement": "solution",
+        "alt": "میله رسانا در حال حرکت میان دو ریل در میدان درون‌سو و نیروی خارجی"
+      }
+    ],
+    "review_notes": []
+  }
+]

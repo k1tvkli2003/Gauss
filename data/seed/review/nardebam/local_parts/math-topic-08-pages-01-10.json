@@ -1,0 +1,447 @@
+{
+  "task_id": "math-topic-08-pages-01-10",
+  "subject": "math",
+  "topic_key": "trigonometry",
+  "questions": [
+    {
+      "question_number": 1,
+      "question_page": 1,
+      "question_text": "در شکل زیر، فرض کنید $\\sin C=\\frac{5}{13}$ و $CH=9$، اندازه‌ی ارتفاع $AH$ کدام است؟",
+      "options": [
+        "$3/25$",
+        "$3/5$",
+        "$3/6$",
+        "$3/75$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0001.jpg",
+          "box": [
+            230,
+            1630,
+            860,
+            1945
+          ],
+          "placement": "stem",
+          "alt": "مثلث با رأس A و پای ارتفاع H روی امتداد BC"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 2,
+      "question_page": 1,
+      "question_text": "ناظری به فاصله‌ی $35$ متر از پای ستونی که بر روی آن مجسمه‌ای قرار دارد، ایستاده است. زاویه‌ی رؤیت انتها و ابتدای مجسمه با سطح افقی $45^\\circ$ و $40^\\circ$ است. ارتفاع مجسمه کدام است؟ $(\\tan40^\\circ=0/8)$",
+      "options": [
+        "$6$",
+        "$6/4$",
+        "$7$",
+        "$7/2$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0001.jpg",
+          "box": [
+            215,
+            2250,
+            720,
+            2725
+          ],
+          "placement": "stem",
+          "alt": "ستون و مجسمه با فاصله افقی 35 متر و زاویه‌های دید 40 و 45 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 3,
+      "question_page": 2,
+      "question_text": "اندازه‌ی دو قطر از متوازی‌الاضلاع $12$ و $8\\sqrt3$ واحد است. این دو قطر با زاویه‌ی $60^\\circ$ متقاطع هستند. مساحت این متوازی‌الاضلاع کدام است؟",
+      "options": [
+        "$48$",
+        "$54$",
+        "$64$",
+        "$72$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0002.jpg",
+          "box": [
+            210,
+            735,
+            805,
+            1030
+          ],
+          "placement": "stem",
+          "alt": "متوازی‌الاضلاع با دو قطر متقاطع و زاویه 60 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 4,
+      "question_page": 3,
+      "question_text": "انتهای کمان‌های مقابل به زاویه‌های $\\frac{5\\pi}{12}+2k\\pi$ و $\\frac{3\\pi}{4}+2k\\pi$ و $\\alpha+2k\\pi$ بر روی دایره‌ی مثلثاتی، سه رأس یک مثلث قائم‌الزاویه‌اند. $\\alpha$ کدام می‌تواند باشد؟ $(k\\in\\mathbb{Z})$",
+      "options": [
+        "$\\frac{5\\pi}{4}$",
+        "$\\frac{17\\pi}{12}$",
+        "$\\frac{4\\pi}{3}$",
+        "$\\frac{11\\pi}{6}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0003.jpg",
+          "box": [
+            285,
+            535,
+            820,
+            895
+          ],
+          "placement": "stem",
+          "alt": "دو حالت مثلث قائم‌الزاویه روی دایره مثلثاتی"
+        }
+      ],
+      "review_notes": [
+        "box شکل در بخش پاسخ آمده و برای فهم مسئله مفید است."
+      ]
+    },
+    {
+      "question_number": 5,
+      "question_page": 3,
+      "question_text": "فرض کنید $\\theta$ برحسب رادیان و $3\\theta=4\\sin\\theta$ باشد. اگر در شکل زیر شعاع دایره برابر $6$ باشد، محیط ناحیه‌ی رنگی چقدر است؟",
+      "options": [
+        "$155$",
+        "$185$",
+        "$215$",
+        "$245$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0003.jpg",
+          "box": [
+            190,
+            1015,
+            575,
+            1325
+          ],
+          "placement": "stem",
+          "alt": "دایره با وتر AB و ناحیه رنگی بالای وتر"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 6,
+      "question_page": 4,
+      "question_text": "نقطه‌ی $P(1-2a,a)$ مطابق شکل روی دایره‌ی مثلثاتی قرار دارد. مقدار $\\tan\\theta$ کدام است؟",
+      "options": [
+        "$-\\frac{3}{4}$",
+        "$-\\frac{4}{3}$",
+        "$-\\frac{3}{5}$",
+        "$-\\frac{4}{5}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0004.jpg",
+          "box": [
+            195,
+            1025,
+            595,
+            1415
+          ],
+          "placement": "stem",
+          "alt": "نقطه P در ناحیه دوم روی دایره مثلثاتی"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 7,
+      "question_page": 4,
+      "question_text": "اگر $\\frac{\\pi}{12}\\le \\alpha \\le \\frac{5\\pi}{12}$ و $\\sin2\\alpha=\\frac{2}{1-2m}$ باشد، حدود $m$ کدام است؟",
+      "options": [
+        "$-\\frac{1}{2}\\le m<\\frac{1}{2}$",
+        "$m\\le -\\frac{3}{2}$",
+        "فقط $m=-\\frac{3}{2}$",
+        "$-\\frac{3}{2}\\le m\\le -\\frac{1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 8,
+      "question_page": 5,
+      "question_text": "حاصل عبارت $\\sin(\\frac{17\\pi}{3})\\cos(-\\frac{17\\pi}{6})+\\tan(\\frac{19\\pi}{4})\\sin(-\\frac{11\\pi}{6})$ کدام است؟",
+      "options": [
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 9,
+      "question_page": 5,
+      "question_text": "اگر $\\tan\\theta=0/2$ باشد، مقدار $\\frac{\\cos(\\frac{3\\pi}{2}+\\theta)-\\cos(\\pi+\\theta)}{\\sin(\\pi-\\theta)-\\sin(3\\pi+\\theta)}$ کدام است؟",
+      "options": [
+        "$-3$",
+        "$1/2$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 10,
+      "question_page": 5,
+      "question_text": "اگر $\\tan(\\alpha+\\frac{\\pi}{4})\\tan(\\beta-\\frac{\\pi}{3})=1$ باشد، حاصل $\\alpha+\\beta$ کدام می‌تواند باشد؟",
+      "options": [
+        "$\\frac{7\\pi}{12}$",
+        "$\\frac{\\pi}{2}$",
+        "$\\frac{2\\pi}{3}$",
+        "$\\frac{11\\pi}{12}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 11,
+      "question_page": 6,
+      "question_text": "حاصل عبارت $P=\\cos\\frac{\\pi}{9}+\\cos\\frac{2\\pi}{9}+\\cos\\frac{3\\pi}{9}+\\cdots+\\cos\\frac{9\\pi}{9}$ برابر کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$-1$",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 12,
+      "question_page": 6,
+      "question_text": "اگر $\\tan\\alpha=\\frac{4}{3}$ و انتهای کمان $\\alpha$ در ربع سوم باشد، حاصل عبارت زیر کدام است؟ $\\sin(\\frac{9\\pi}{2}+\\alpha)\\cos(\\frac{7\\pi}{2}-\\alpha)-\\tan(\\alpha-\\frac{3\\pi}{2})$",
+      "options": [
+        "$-1/23$",
+        "$-0/52$",
+        "$0/27$",
+        "$0/48$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 13,
+      "question_page": 6,
+      "question_text": "اگر $\\frac{\\pi}{2}<x<\\pi$ باشد، حاصل عبارت $(\\frac{\\tan x}{\\sqrt{1+\\tan^2 x}})(\\frac{1}{\\sin x}-\\sin x)$ کدام است؟",
+      "options": [
+        "$-\\cos^2 x$",
+        "$-\\cos x$",
+        "$\\cos^2 x$",
+        "$\\cos x$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 14,
+      "question_page": 6,
+      "question_text": "اگر $\\tan x+\\cot x=\\frac{5}{2}$ باشد، حاصل عبارت $\\frac{\\sin^4 x+\\cos^4 x}{\\sin^6 x+\\cos^6 x}$ کدام است؟",
+      "options": [
+        "$\\frac{5}{12}$",
+        "$\\frac{7}{12}$",
+        "$\\frac{14}{13}$",
+        "$\\frac{17}{13}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 15,
+      "question_page": 7,
+      "question_text": "اگر $\\sin\\alpha-\\cos\\alpha=\\frac{1}{2}$ باشد، مقدار $\\cos(\\frac{3\\pi}{2}-2\\alpha)$ کدام است؟",
+      "options": [
+        "$-\\frac{3}{4}$",
+        "$-\\frac{3}{8}$",
+        "$\\frac{3}{8}$",
+        "$\\frac{3}{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 16,
+      "question_page": 7,
+      "question_text": "اگر $\\frac{\\sin\\alpha}{1+\\cos\\alpha}=\\frac{1}{2}$ باشد، مقدار $\\tan(\\frac{\\pi}{2}+\\frac{\\alpha}{2})$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 17,
+      "question_page": 7,
+      "question_text": "اگر زاویه‌ی $\\alpha$ در ناحیه‌ی سوم دایره‌ی مثلثاتی و $\\tan\\alpha=\\frac{3}{4}$ باشد، مقدار $\\frac{\\cos(2\\alpha-\\frac{\\pi}{2})+\\cos(\\alpha+\\pi)}{\\cot2\\alpha}$ کدام است؟",
+      "options": [
+        "$-\\frac{96}{175}$",
+        "$\\frac{1056}{175}$",
+        "$\\frac{96}{175}$",
+        "$-\\frac{1056}{175}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 18,
+      "question_page": 7,
+      "question_text": "حاصل $\\frac{1}{\\sin15^\\circ}-\\frac{1}{\\cos15^\\circ}$ کدام است؟",
+      "options": [
+        "$2$",
+        "$\\sqrt6$",
+        "$2\\sqrt3$",
+        "$2\\sqrt2$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "حل سؤال در صفحه بعد ادامه دارد، اما متن و گزینه‌ها کامل هستند."
+      ]
+    },
+    {
+      "question_number": 19,
+      "question_page": 8,
+      "question_text": "اگر $\\tan x=\\frac{4}{3}$ باشد، مقدار $\\tan\\frac{x}{2}-\\cot\\frac{x}{2}$ کدام است؟",
+      "options": [
+        "$-\\frac{3}{4}$",
+        "$-\\frac{3}{2}$",
+        "$\\frac{4}{3}$",
+        "$\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 20,
+      "question_page": 9,
+      "question_text": "دوره‌ی تناوب تابع با ضابطه‌ی $f(x)=\\tan(\\pi x)-\\cot(\\pi x)$ کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$2$",
+        "$\\pi$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 21,
+      "question_page": 9,
+      "question_text": "در تابع مثلثاتی $y=a-(2a+2)\\sin(\\frac{\\pi}{a}x)$، مقدار ماکزیمم از سه برابر دوره‌ی تناوب آن چهار واحد کمتر است. مقدار مینیمم این تابع چقدر است؟ $(a>0)$",
+      "options": [
+        "$-2$",
+        "$-3$",
+        "$-4$",
+        "$-6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 22,
+      "question_page": 10,
+      "question_text": "شکل زیر، نمودار تابع $y=1+a\\sin(b\\pi x)$ در بازه‌ی $(0,\\frac{4}{3})$ است. $a+b$ کدام است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            160,
+            345,
+            675,
+            640
+          ],
+          "placement": "stem",
+          "alt": "نمودار سینوسی با خط میانی y=1 و کمینه y=-1 در بازه داده‌شده"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 23,
+      "question_page": 10,
+      "question_text": "شکل زیر نمودار تابع $y=1+a\\sin bx\\cos bx$ است. $a+b$ کدام است؟",
+      "options": [
+        "$1$",
+        "$\\frac{3}{2}$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            170,
+            880,
+            760,
+            1095
+          ],
+          "placement": "stem",
+          "alt": "نمودار موجی با بیشینه سه دوم و نشان‌های پی چهارم و سه‌پی چهارم روی محور x"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 24,
+      "question_page": 10,
+      "question_text": "شکل روبه‌رو قسمتی از نمودار تابع $y=a+b\\sin(x+\\frac{\\pi}{3})$ است. $b$ کدام است؟",
+      "options": [
+        "$\\frac{\\sqrt3}{2}$",
+        "$\\frac{3}{2}$",
+        "$\\sqrt3$",
+        "$2$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            170,
+            1630,
+            575,
+            1955
+          ],
+          "placement": "stem",
+          "alt": "بخشی از نمودار سینوسی با مقدار ریشه سه در محور y و نقطه x=pi با مقدار منفی سه دوم"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    }
+  ]
+}

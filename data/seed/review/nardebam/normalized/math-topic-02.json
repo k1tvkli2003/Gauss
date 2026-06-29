@@ -1,0 +1,678 @@
+[
+  {
+    "question_number": 51,
+    "question_page": 5,
+    "question_text": "با توجه به الگوی مقابل:\nاختلاف نقاط توپر در شکل بیست و پنجم و شکل بیستم چه عددی است؟",
+    "options": [
+      "۹",
+      "۱۳",
+      "۱۱",
+      "۷"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0005.jpg",
+        "box": [
+          80,
+          50,
+          1500,
+          160
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "الگوی نقاط دایره‌ای توخالی و توپر در پنج مرحله اول"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 52,
+    "question_page": 5,
+    "question_text": "در الگوی شکل زیر، اختلاف شیب پاره‌خط مرحله پنجم با پاره‌خط مرحله دهم چند برابر $3^{-18}$ است؟",
+    "options": [
+      "۵۱۲",
+      "۵۱۱",
+      "۱۰۲۴",
+      "۱۰۲۳"
+    ],
+    "media_regions": [
+      {
+        "page_file": "page_0005.jpg",
+        "box": [
+          80,
+          180,
+          1500,
+          270
+        ],
+        "box_format": "xyxy",
+        "placement": "stem",
+        "alt": "الگوی پاره‌خط‌ها در دستگاه مختصات"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 53,
+    "question_page": 5,
+    "question_text": "در یک دنباله با جمله عمومی $a_n = \\dfrac{1}{\\sqrt{n} + \\sqrt{n+1}}$ مجموع ۹۹ جمله اول کدام است؟",
+    "options": [
+      "۹",
+      "۱۰",
+      "۱۱",
+      "۱۲"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 54,
+    "question_page": 5,
+    "question_text": "مجموع بیست جمله اول یک دنباله، با جمله عمومی $a_n = \\dfrac{1}{4n^2-1}$ کدام است؟",
+    "options": [
+      "\\dfrac{38}{39}",
+      "\\dfrac{19}{39}",
+      "\\dfrac{40}{41}",
+      "\\dfrac{20}{41}"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 55,
+    "question_page": 5,
+    "question_text": "در دنباله‌ای با جمله عمومی $a_n$ که $a_{n+1} = \\dfrac{4}{a_n}$ و $a_1 = 1$، حاصل جمع یازده جمله اول کدام است؟",
+    "options": [
+      "۲۵",
+      "۲۶",
+      "۳۰",
+      "۳۱"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 56,
+    "question_page": 5,
+    "question_text": "در یک دنباله با جمله عمومی $a_{n+1} = 2a_n - 1$، اگر $a_1 = 1$ باشد، اختلاف جملات نوزدهم و بیستم کدام است؟",
+    "options": [
+      "2^{18}",
+      "2^{19}",
+      "2^{20}",
+      "2^{21}"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 57,
+    "question_page": 5,
+    "question_text": "در یک دنباله $a_1 = 2$، $a_4 = 65$ و $a_{n+1} = 4a_n + k$ است. جمله سوم این دنباله کدام است؟",
+    "options": [
+      "۱۶",
+      "۱۷",
+      "۱۸",
+      "۱۹"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 58,
+    "question_page": 5,
+    "question_text": "در دنباله بازگشتی $a_{n+1} = 1 + \\dfrac{1}{a_n}$، اگر $a_1 = 1$ و $a_{20} = k$ باشد، جمله هجدهم کدام است؟",
+    "options": [
+      "-1 - \\dfrac{1}{k}",
+      "1 - \\dfrac{1}{k}",
+      "1 + \\dfrac{1}{k}",
+      "\\dfrac{1}{k} - 1"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 59,
+    "question_page": 5,
+    "question_text": "در یک دنباله با جمله عمومی $a_n = 3[\\dfrac{n}{2}] - n$ مجموع بیست جمله اول چه‌قدر است؟",
+    "options": [
+      "۱۹",
+      "۲۱",
+      "۳۹",
+      "۱۹۰"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 60,
+    "question_page": 5,
+    "question_text": "در یک دنباله، $a_1 = 2$ و $a_{n+1} - a_n = -1$ است. حاصل‌ضرب بیست جمله اول دنباله چه‌قدر است؟",
+    "options": [
+      "۱",
+      "-۱",
+      "۲",
+      "-۲"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 61,
+    "question_page": 5,
+    "question_text": "در یک دنباله حسابی اگر جملات ششم و دهم به ترتیب ۴ و ۱۰ باشند، جمله شانزدهم کدام است؟",
+    "options": [
+      "۱۴",
+      "۱۶",
+      "۱۹",
+      "۲۱"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 62,
+    "question_page": 5,
+    "question_text": "در یک دنباله حسابی اگر $a_7 + a_8 + \\dots + a_{15} = 90$ حاصل $a_9 + a_{12}$ کدام است؟",
+    "options": [
+      "۲۰",
+      "۲۲",
+      "۱۸",
+      "۲۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 63,
+    "question_page": 5,
+    "question_text": "در یک دنباله حسابی $a_{18} = 7$ و $a_7 = 18$ چندمین جمله دنباله صفر است؟",
+    "options": [
+      "۳۶",
+      "۲۵",
+      "۱۴",
+      "۲۶"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 64,
+    "question_page": 5,
+    "question_text": "به ازای کدام عدد طبیعی $n$، بین جملات دنباله حسابی غیرثابت، رابطه $2a_{n-1} = a_n + a_7$ برقرار است؟",
+    "options": [
+      "۷",
+      "۸",
+      "۹",
+      "۱۰"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 65,
+    "question_page": 5,
+    "question_text": "در یک دنباله حسابی غیرثابت جمله بیست و هفتم، دو برابر جمله هجدهم است. جمله چندم این دنباله صفر است؟",
+    "options": [
+      "۶",
+      "۷",
+      "۸",
+      "۹"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 66,
+    "question_page": 5,
+    "question_text": "در یک دنباله حسابی با قدرنسبت ۵، جمله نهم سه برابر جمله پنجم است. اولین جمله بزرگ‌تر از ۱۰۰ در این دنباله چه عددی است؟",
+    "options": [
+      "۱۰۵",
+      "۱۱۵",
+      "۱۱۲",
+      "۱۲۵"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 67,
+    "question_page": 6,
+    "question_text": "در یک دنبالهٔ حسابی اگر $a_7 + a_{11} = 28$ باشد، حاصل $a_1 + a_4 + a_{14}$ کدام است؟",
+    "options": [
+      "۳۷",
+      "۴۰",
+      "۴۲",
+      "۴۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 68,
+    "question_page": 6,
+    "question_text": "در یک دنبالهٔ حسابی اگر $a_1 = 4$ و $a_{n+3} - a_n = 6$ باشد، مقدار $\\dfrac{a_{12}}{a_6}$ کدام است؟",
+    "options": [
+      "۲",
+      "۲/۵",
+      "۳",
+      "۳/۵"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 69,
+    "question_page": 6,
+    "question_text": "در مثلث قائم‌الزاویه اضلاع، تشکیل دنبالهٔ حسابی می‌دهند. اگر مساحت این مثلث $96$ باشد، وتر مثلث کدام است؟",
+    "options": [
+      "۱۶",
+      "۲۰",
+      "۳۶",
+      "۸۰"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 70,
+    "question_page": 6,
+    "question_text": "بین دو عدد $-18$ و $a$، هشت واسطهٔ حسابی درج می‌کنیم. به ازای کدام مقدار $a$ واسطهٔ ششم درج‌شده برابر صفر است؟",
+    "options": [
+      "۹",
+      "۱۲",
+      "۱۵",
+      "۱۸"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 71,
+    "question_page": 6,
+    "question_text": "سه عدد تشکیل دنبالهٔ حسابی می‌دهند، به طوری که جمع آن‌ها برابر $24$ و حاصل‌ضرب آن‌ها $-640$ است. اختلاف بزرگ‌ترین و کوچک‌ترین عدد کدام است؟",
+    "options": [
+      "۲۰",
+      "۲۴",
+      "۲۸",
+      "۳۲"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 72,
+    "question_page": 6,
+    "question_text": "در یک دنبالهٔ حسابی بیست‌جمله‌ای، مجموع سه جملهٔ اول برابر $15$ و مجموع سه جملهٔ آخر برابر $219$ است. جملهٔ سیزدهم کدام است؟",
+    "options": [
+      "۴۷",
+      "۴۹",
+      "۵۱",
+      "۵۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 73,
+    "question_page": 6,
+    "question_text": "دو دنبالهٔ حسابی $a_n : 5, 11, 17, 23, \\dots$ و $b_n : 3, 10, 17, 24, \\dots$ مفروض‌اند، هشتمین جملهٔ مشترک آن‌ها چندمین جملهٔ $b_n$ است؟",
+    "options": [
+      "۴۴",
+      "۴۵",
+      "۴۶",
+      "۴۷"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 74,
+    "question_page": 6,
+    "question_text": "زوایای یک شش‌ضلعی برحسب درجه، تشکیل یک دنبالهٔ حسابی می‌دهند، به طوری که بزرگ‌ترین زاویه پنج برابر کوچک‌ترین زاویه است. بزرگ‌ترین زاویهٔ این شش‌ضلعی چند درجه است؟",
+    "options": [
+      "۱۸۵",
+      "۱۹۰",
+      "۱۹۵",
+      "۲۰۰"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 75,
+    "question_page": 6,
+    "question_text": "اعداد طبیعی و مضرب ۳ را به صورت $\\{3\\}, \\{6, 9\\}, \\{12, 15, 18\\}, \\dots$ دسته‌بندی می‌کنیم. اولین عضو دستهٔ شانزدهم چه عددی است؟",
+    "options": [
+      "۱۲۰",
+      "۱۲۳",
+      "۳۶۰",
+      "۳۶۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 76,
+    "question_page": 6,
+    "question_text": "در یک دنبالهٔ حسابی با جملهٔ عمومی $a_n$، روابط $a_2 + a_{10} = -3$ و $a_3^2 - a_{51}^2 = a_5$ برقرار است. این دنباله چند جملهٔ منفی دارد؟",
+    "options": [
+      "۲۰",
+      "۲۱",
+      "۲۲",
+      "۲۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 77,
+    "question_page": 6,
+    "question_text": "جملات دنبالهٔ حسابی $a_n = 2 - 3n$ را سه‌تا سه‌تا جمع می‌کنیم تا یک دنبالهٔ حسابی جدید تشکیل شود، جملهٔ دهم دنبالهٔ جدید چه عددی است؟",
+    "options": [
+      "۷۴۱",
+      "۲۸۲",
+      "۷۱۴",
+      "۲۵۵"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 78,
+    "question_page": 6,
+    "question_text": "برای دنبالهٔ حسابی $a_n = 4n - 1$ حاصل $A = \\dfrac{1}{a_1 a_2} + \\dfrac{1}{a_2 a_3} + \\dots + \\dfrac{1}{a_{19} a_{20}}$ چه عددی است؟",
+    "options": [
+      "\\dfrac{19}{79}",
+      "\\dfrac{76}{79}",
+      "\\dfrac{76}{237}",
+      "\\dfrac{19}{237}"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 79,
+    "question_page": 6,
+    "question_text": "در یک دنبالهٔ حسابی جمع $4$ جملهٔ ابتدایی $x$ و جمع $4$ جملهٔ بعدی $86$ است. جمع $12$ جملهٔ ابتدایی آن چه عددی است؟",
+    "options": [
+      "۲۴۸",
+      "۲۵۸",
+      "۲۶۰",
+      "۲۸۰"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 80,
+    "question_page": 6,
+    "question_text": "اعداد $-\\dfrac{3}{2}, \\dots , a, 6$ جملات ابتدایی یک دنبالهٔ هندسی با جملات مثبت است. جملهٔ هفتم چند برابر جملهٔ سوم است؟",
+    "options": [
+      "\\dfrac{1}{16}",
+      "\\dfrac{1}{8}",
+      "\\dfrac{1}{27}",
+      "\\dfrac{1}{81}"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 81,
+    "question_page": 6,
+    "question_text": "اگر اعداد $-x - 6, x, x - 4, \\dots$ جملات متوالی یک دنبالهٔ هندسی نزولی باشند، قدرنسبت کدام می‌تواند باشد؟",
+    "options": [
+      "\\dfrac{1}{2}",
+      "2",
+      "-\\dfrac{1}{3}",
+      "-3"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 82,
+    "question_page": 6,
+    "question_text": "دنبالهٔ هندسی $\\dfrac{2}{3}, 2, 6, \\dots , a_n$ را در نظر بگیرید. جملهٔ نهم دنبالهٔ $a_1a_2, a_2a_3, a_3a_4, \\dots$ کدام است؟",
+    "options": [
+      "4 \\times 3^{14}",
+      "4 \\times 3^{15}",
+      "4 \\times 3^{16}",
+      "4 \\times 3^{17}"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 83,
+    "question_page": 6,
+    "question_text": "در یک دنبالهٔ هندسی هرگاه $t_n = 4 \\times (\\dfrac{2}{3})^n$ مربع جملهٔ دهم چند برابر جملهٔ بیستم آن است؟",
+    "options": [
+      "۴",
+      "۱۶",
+      "۳۲",
+      "۱۰۲۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 84,
+    "question_page": 6,
+    "question_text": "به جملهٔ اول و قدرنسبت دنبالهٔ هندسی $t_n = 6(2)^{1-2n}$ به تقریب $1$ و $\\dfrac{1}{2}$ اضافه کرده و دنبالهٔ هندسی جدیدی می‌سازیم. جملهٔ دهم دنبالهٔ جدید چند برابر $(\\circ/75)$ است؟",
+    "options": [
+      "۶",
+      "۱۲",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 85,
+    "question_page": 7,
+    "question_text": "در دنباله هندسی $a_n$ اگر $3a_n + 4a_{n+1} = 0$ برقرار باشد، مقدار $\\frac{a_{11}}{a_8}$ چه عددی است؟",
+    "options": [
+      "$-\\frac{9}{16}$",
+      "$\\frac{9}{16}$",
+      "$-\\frac{27}{64}$",
+      "$\\frac{27}{64}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 86,
+    "question_page": 7,
+    "question_text": "در یک دنباله هندسی با جملات مثبت، جمله سوم از جمله دوم ۶ واحد بیشتر و از دو برابر جمله اول ۲ واحد بیشتر است. جمله چهارم این دنباله کدام است؟",
+    "options": [
+      "۲۴",
+      "۲۷",
+      "۳۳",
+      "۳۶"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 87,
+    "question_page": 7,
+    "question_text": "چهار عدد مثبت تشکیل یک دنباله هندسی با قدرنسبت بزرگ‌تر از یک به طوری که اختلاف ۲ جمله کوچک‌تر ۴ و اختلاف ۲ جمله بزرگ‌تر ۹ است. اختلاف دو جمله وسطی چه عددی است؟",
+    "options": [
+      "۸",
+      "۷",
+      "۶",
+      "۵"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 88,
+    "question_page": 7,
+    "question_text": "واسطه هندسی دو عدد برابر ۱۲ و مجموع آن‌ها برابر ۳۰ است. اختلاف این دو عدد کدام است؟",
+    "options": [
+      "۱۸",
+      "۲۰",
+      "۲۲",
+      "۲۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 89,
+    "question_page": 7,
+    "question_text": "بین دو عدد ۴ و ۹۷۲ به تعداد ۴ واسطه هندسی درج کرده‌ایم. مجموع اولین و چهارمین واسطه درج شده چه‌قدر است؟",
+    "options": [
+      "۳۳۰",
+      "۳۳۲",
+      "۳۳۴",
+      "۳۳۶"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 90,
+    "question_page": 7,
+    "question_text": "در یک دنباله هندسی مجموع سه جمله اول برابر $\\frac{13}{3}$ و مجموع سه جمله بعدی برابر ۱۱۷ است. جمله اول این دنباله کدام است؟",
+    "options": [
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{2}$",
+      "۱",
+      "۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 91,
+    "question_page": 7,
+    "question_text": "در یک دنباله هندسی $3 = \\frac{a_6}{a_4}$ مقدار $\\frac{a_1 + a_2 + a_3 + a_4}{a_1 + a_2}$ چه عددی است؟",
+    "options": [
+      "۲",
+      "۶",
+      "۳",
+      "۴"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 92,
+    "question_page": 7,
+    "question_text": "اگر $1, a, b, \\ldots$ یک دنباله حسابی و $1, a, -b, \\ldots$ یک دنباله هندسی با جملات مثبت باشد، آن‌گاه مقدار $a$ کدام است؟",
+    "options": [
+      "$\\sqrt{2}-1$",
+      "$\\sqrt{2}+1$",
+      "$\\frac{\\sqrt{2}-1}{2}$",
+      "$\\frac{\\sqrt{2}+1}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 93,
+    "question_page": 7,
+    "question_text": "هر گاه واسطه هندسی $a$ و $b$ عدد ۳ باشد، واسطه حسابی $\\frac{1}{3-b}$ و $\\frac{1}{3-a}$ کدام است؟",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{6}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 94,
+    "question_page": 7,
+    "question_text": "جملات دوم، ششم و هشتم یک دنباله حسابی با قدرنسبت ۴ سه جمله متوالی یک دنباله هندسی هستند. جمله اول دنباله حسابی کدام است؟",
+    "options": [
+      "$-32$",
+      "$-34$",
+      "$-36$",
+      "$-40$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 95,
+    "question_page": 7,
+    "question_text": "جملات چهارم، هفتم، بیست و هشتم و $n$ام یک دنباله حسابی غیرثابت جملات متوالی دنباله هندسی هستند، عدد طبیعی $n$ کدام است؟",
+    "options": [
+      "۱۷۵",
+      "۱۴۷",
+      "۱۱۹",
+      "۲۰۳"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 96,
+    "question_page": 7,
+    "question_text": "$2^a$ و ۱۶ و $2^b$ سه جمله متوالی یک دنباله هندسی می‌باشند. اگر $11, b, 3a$ تشکیل دنباله حسابی دهند، $ab$ کدام است؟",
+    "options": [
+      "۶",
+      "۷",
+      "۸",
+      "۹"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 97,
+    "question_page": 7,
+    "question_text": "بین دو عدد ۵۴ و ۱۶ دو واسطه هندسی قرار داده‌ایم. اختلاف دو واسطه، چندمین جمله دنباله هندسی $t_n = 3 \\times 2^{8-n}$ است؟",
+    "options": [
+      "۵",
+      "۶",
+      "۷",
+      "۸"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 98,
+    "question_page": 7,
+    "question_text": "جملات اول و سوم دو دنباله حسابی و هندسی هر دو ۲ و ۸ است. جمله هفتم دنباله هندسی با جمله چندم دنباله حسابی برابر است؟",
+    "options": [
+      "۳۸",
+      "۴۰",
+      "۴۳",
+      "۴۶"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 99,
+    "question_page": 7,
+    "question_text": "جمله هفتم یک دنباله حسابی غیرثابت برابر صفر است. واسطه هندسی جملات هشتم و شانزدهم آن برابر چندمین جمله دنباله می‌تواند باشد؟",
+    "options": [
+      "نهم",
+      "دهم",
+      "یازدهم",
+      "دوازدهم"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 100,
+    "question_page": 7,
+    "question_text": "در یک دنباله هندسی غیرثابت با قدرنسبت $q$ جمله دوم، چهارم و پنجم تشکیل دنباله حسابی می‌دهند. مقدار $q^2$ کدام می‌تواند باشد؟",
+    "options": [
+      "$\\frac{3-\\sqrt{5}}{2}$",
+      "$\\frac{\\sqrt{5}+3}{4}$",
+      "$\\frac{3-\\sqrt{5}}{4}$",
+      "$\\frac{\\sqrt{5}-3}{2}$"
+    ],
+    "media_regions": [],
+    "review_notes": []
+  }
+]

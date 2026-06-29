@@ -1,0 +1,334 @@
+{
+  "answers": {
+    "752": 4,
+    "755": 2,
+    "761": 2,
+    "768": 2,
+    "770": 4,
+    "797": 3,
+    "805": 1,
+    "848": 4,
+    "868": 4,
+    "869": 1,
+    "885": 1,
+    "896": 2,
+    "924": 4,
+    "940": 2,
+    "949": 2,
+    "956": 3,
+    "974": 3,
+    "979": 2,
+    "997": 2,
+    "1021": 2,
+    "1149": 4,
+    "1227": 3,
+    "1238": 2,
+    "1241": 4,
+    "1251": 4,
+    "1293": 3,
+    "1310": 2,
+    "1346": 3,
+    "1365": 4,
+    "1569": 2,
+    "1583": 2,
+    "1594": 2,
+    "1602": 4,
+    "1619": 2,
+    "1629": 3,
+    "1637": 3
+  },
+  "review_notes": [
+    "Generated locally from join_conflicts solution_key_mismatch rows.",
+    "Less-strict repair: when an existing non-placeholder solution states a valid option, the answer key is aligned to that solution so the app remains internally consistent."
+  ],
+  "provenance": [
+    {
+      "subject": "physics",
+      "question_number": 752,
+      "topic_key": "magnetism_induction",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 755,
+      "topic_key": "magnetism_induction",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 761,
+      "topic_key": "magnetism_induction",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 768,
+      "topic_key": "magnetism_induction",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 770,
+      "topic_key": "magnetism_induction",
+      "old_option": 1,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 797,
+      "topic_key": "magnetism_induction",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 805,
+      "topic_key": "magnetism_induction",
+      "old_option": 4,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 848,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 868,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 869,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 3,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 885,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 2,
+      "replacement_option": 1,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 896,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 924,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 940,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 949,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 956,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 974,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 979,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 997,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1021,
+      "topic_key": "one_dimensional_motion",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1149,
+      "topic_key": "dynamics",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1227,
+      "topic_key": "oscillation_waves",
+      "old_option": 4,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1238,
+      "topic_key": "oscillation_waves",
+      "old_option": 1,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1241,
+      "topic_key": "oscillation_waves",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1251,
+      "topic_key": "oscillation_waves",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1293,
+      "topic_key": "oscillation_waves",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1310,
+      "topic_key": "oscillation_waves",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1346,
+      "topic_key": "oscillation_waves",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1365,
+      "topic_key": "oscillation_waves",
+      "old_option": 2,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1569,
+      "topic_key": "atomic_nuclear",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1583,
+      "topic_key": "atomic_nuclear",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1594,
+      "topic_key": "atomic_nuclear",
+      "old_option": 3,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1602,
+      "topic_key": "atomic_nuclear",
+      "old_option": 3,
+      "replacement_option": 4,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1619,
+      "topic_key": "atomic_nuclear",
+      "old_option": 4,
+      "replacement_option": 2,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1629,
+      "topic_key": "atomic_nuclear",
+      "old_option": 1,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    },
+    {
+      "subject": "physics",
+      "question_number": 1637,
+      "topic_key": "atomic_nuclear",
+      "old_option": 2,
+      "replacement_option": 3,
+      "source": "current_solution_stated_correct_option"
+    }
+  ]
+}

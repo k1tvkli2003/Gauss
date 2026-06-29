@@ -1,0 +1,30 @@
+{
+  "task_id": "local-math-solutions-1732-1734",
+  "subject": "math",
+  "solutions": [
+    {
+      "question_number": 1732,
+      "solution_page": 162,
+      "solution_text": "مرکز و شعاع دایره $x^2+y^2-4x+8y+16=0$ برابر $O(2,-4)$ و $R=2$ است. مرکز دایره مورد نظر $O'(-1,0)$ است، پس $OO'=\\sqrt{3^2+(-4)^2}=5$. چون دو دایره مماس خارجی‌اند، $R+R'=OO'$ و در نتیجه $2+R'=5\\Rightarrow R'=3$.",
+      "stated_correct_option": 2,
+      "media_regions": [],
+      "review_notes": ["از بلوک چاپی سؤال 1732 در page_0162.jpg رونویسی شد."]
+    },
+    {
+      "question_number": 1733,
+      "solution_page": 162,
+      "solution_text": "مرکز و شعاع دایره $x^2+y^2+2x+4y+4=0$ برابر $O(-1,-2)$ و $R=1$ است. مرکز دایره مورد نظر $O'(1,-2)$ است، بنابراین $OO'=2$. برای تماس درونی داریم $|R-R'|=OO'$؛ پس $|1-R'|=2$ و از میان جواب‌ها فقط $R'=3$ پذیرفتنی است.",
+      "stated_correct_option": 3,
+      "media_regions": [],
+      "review_notes": ["از بلوک چاپی سؤال 1733 در page_0162.jpg رونویسی شد."]
+    },
+    {
+      "question_number": 1734,
+      "solution_page": 162,
+      "solution_text": "خطوط قائم بر دایره همان قطرهای آن‌اند و همه از مرکز می‌گذرند؛ پس مرکز دایره $C$ برابر $O(0,2)$ است. دایره $C':x^2+y^2-6x+4y+13=0$ مرکز $O'(3,-2)$ و شعاع $R'=1$ دارد. فاصله مراکز $OO'=\\sqrt{3^2+(-4)^2}=5$ است. چون تماس خارجی است، $R+R'=5$ و بنابراین $R=4$.",
+      "stated_correct_option": 4,
+      "media_regions": [],
+      "review_notes": ["از بلوک چاپی سؤال 1734 در page_0162.jpg رونویسی شد."]
+    }
+  ]
+}

@@ -1,0 +1,2955 @@
+{
+  "task_id": "math-topic-18",
+  "subject": "math",
+  "topic_key": "statistics",
+  "questions": [
+    {
+      "question_number": 1999,
+      "question_page": "page_0004.jpg",
+      "question_text": "نوع آلایندگی موجود در هوا و میزان آلایندگی موجود به ترتیب چه نوع متغیری هستند؟",
+      "options": [
+        "کیفی ترتیبی - کمّی پیوسته",
+        "کیفی ترتیبی - کمّی گسسته",
+        "کیفی اسمی - کمّی پیوسته",
+        "کیفی اسمی - کمّی گسسته"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 2000,
+      "question_page": "page_0004.jpg",
+      "question_text": "گروه خونی افراد و میزان گلبول قرمز موجود در خون به ترتیب چه نوع متغیری هستند؟",
+      "options": [
+        "کیفی ترتیبی - کمّی پیوسته",
+        "کیفی ترتیبی - کمّی گسسته",
+        "کیفی اسمی - کمّی پیوسته",
+        "کیفی اسمی - کمّی گسسته"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 2001,
+      "question_page": "page_0005.jpg",
+      "question_text": "اندازۀ قد دانش‌آموزان مدرسه و رشتهٔ تحصیلی آن‌ها به ترتیب چه نوع متغیری هستند؟",
+      "options": [
+        "کمّی پیوسته ـ کیفی ترتیبی",
+        "کمّی پیوسته ـ کیفی اسمی",
+        "کمّی گسسته ـ کیفی ترتیبی",
+        "کمّی گسسته ـ کیفی اسمی"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            204,
+            329,
+            953,
+            351
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            647,
+            362,
+            810,
+            383
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            463,
+            362,
+            616,
+            383
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            263,
+            362,
+            427,
+            384
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            78,
+            362,
+            237,
+            384
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2002,
+      "question_page": "page_0005.jpg",
+      "question_text": "از بین داده‌های $۷,۶,۳,۵,۴,۶,۴$ کدام عدد را حذف کنیم تا میانگین داده‌ها بدون تغییر باقی بماند؟",
+      "options": [
+        "$۳$",
+        "$۴$",
+        "$۵$",
+        "$۶$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            260,
+            429,
+            827,
+            452
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            779,
+            459,
+            804,
+            480
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            591,
+            459,
+            615,
+            480
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            401,
+            459,
+            425,
+            480
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            212,
+            459,
+            236,
+            480
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2003,
+      "question_page": "page_0005.jpg",
+      "question_text": "میانگین اعداد مثبت $a,۶,۲,۸,۱$ یک واحد از میانهٔ این اعداد بزرگ‌تر است. جمع مقادیر $a$ کدام است؟",
+      "options": [
+        "$۱۸$",
+        "$۲۰$",
+        "$۲۱$",
+        "$۲۳$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            247,
+            492,
+            828,
+            513
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            773,
+            521,
+            804,
+            542
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            583,
+            521,
+            615,
+            542
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            394,
+            521,
+            425,
+            542
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            204,
+            521,
+            237,
+            542
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2004,
+      "question_page": "page_0005.jpg",
+      "question_text": "میانگین $n$ داده ۱۲ و میانگین ۱۲ داده $n$ است. اگر میانگین تمام داده‌ها $۹/۶$ باشد، عدد طبیعی $n$ کدام است؟",
+      "options": [
+        "$۶$",
+        "$۸$",
+        "$۹$",
+        "$۱۰$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            212,
+            552,
+            828,
+            574
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۴"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            779,
+            581,
+            804,
+            603
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            591,
+            581,
+            615,
+            603
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            401,
+            581,
+            425,
+            603
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            204,
+            581,
+            236,
+            603
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2005,
+      "question_page": "page_0005.jpg",
+      "question_text": "کلاس $A$ با میانگین نمرات ۱۰ و کلاس $B$ با میانگین نمرات ۱۲ پس از ادغام با هم، در یک کلاس با میانگین $۱۱/۵$ قرار گرفته‌اند. جمعیت کلاس $B$ چند برابر جمعیت کلاس $A$ است؟",
+      "options": [
+        "$۳$",
+        "$۴$",
+        "$۵$",
+        "$۶$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            46,
+            614,
+            828,
+            654
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۵"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            779,
+            661,
+            804,
+            683
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            591,
+            661,
+            615,
+            683
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            401,
+            661,
+            425,
+            683
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            212,
+            661,
+            236,
+            683
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2006,
+      "question_page": "page_0005.jpg",
+      "question_text": "میانگین ۱۰ دادهٔ آماری را ۱۲ اعلام کرده‌ایم. بعداً متوجه شده‌ایم در یکی از داده‌ها به جای عدد ۱۶ عدد ۲۶ وارد شده و البته عدد ۱۱ نیز جا مانده بود. میانگین واقعی اعداد کدام است؟",
+      "options": [
+        "$۱۱/۲۵$",
+        "$۱۱/۲$",
+        "$۱۰/۹$",
+        "$۱۱$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            45,
+            694,
+            828,
+            735
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۶"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            753,
+            742,
+            805,
+            763
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            573,
+            742,
+            616,
+            763
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            383,
+            742,
+            425,
+            763
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            204,
+            742,
+            236,
+            763
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2007,
+      "question_page": "page_0005.jpg",
+      "question_text": "میانگین داده‌های $x_1,x_2,\\dots,x_n$ برابر $\\overline{x}$ است. اگر میانگین $۳x_1+\\overline{x},۳x_2+\\overline{x},\\dots,۳x_n+\\overline{x}$ برابر ۴۰ باشد، $\\overline{x}$ چه عددی است؟",
+      "options": [
+        "$۱۲$",
+        "$۸$",
+        "$۱۰$",
+        "$۱۲/۵$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            108,
+            773,
+            828,
+            796
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۷"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            773,
+            803,
+            804,
+            824
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            591,
+            803,
+            615,
+            824
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            394,
+            803,
+            425,
+            824
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            189,
+            803,
+            237,
+            824
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2008,
+      "question_page": "page_0005.jpg",
+      "question_text": "هرگاه میانگین $۲x_1-۱,۲x_2-۲,۲x_3-۳,\\dots,۲x_{10}-۱۰$ برابر $۱/۵$ باشد، میانگین اعداد $۳x_1+۱,۳x_2+۲,\\dots,۳x_{10}+۱۰$ چه عددی است؟",
+      "options": [
+        "$۶$",
+        "$۶/۵$",
+        "$۷$",
+        "$۷/۵$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            45,
+            834,
+            828,
+            856
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۸"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            779,
+            863,
+            804,
+            885
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            583,
+            863,
+            616,
+            885
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            401,
+            863,
+            425,
+            885
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            197,
+            863,
+            237,
+            885
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2009,
+      "question_page": "page_0005.jpg",
+      "question_text": "گروه ۱۰نفری از مردان با میانگین سن $\\overline{x}$ و گروه ۳۰نفری از زنان با میانگین سن $\\overline{x}-۴$ در یک جمع حاضرند. اگر میانگین کل ۲۱ باشد، میانگین سن زنان چه عددی است؟",
+      "options": [
+        "$۱۹$",
+        "$۲۰$",
+        "$۲۳$",
+        "$۲۴$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            46,
+            894,
+            828,
+            936
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۰۹"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            773,
+            944,
+            804,
+            965
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            583,
+            944,
+            615,
+            965
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            394,
+            944,
+            425,
+            965
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            204,
+            944,
+            237,
+            965
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2010,
+      "question_page": "page_0005.jpg",
+      "question_text": "در داده‌های $۱,۲,۳,\\dots,۱۰$ اختلاف چارک اول و سوم چه عددی است؟",
+      "options": [
+        "$۳$",
+        "$۳/۵$",
+        "$۴/۵$",
+        "$۵$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            426,
+            1007,
+            828,
+            1029
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۰"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            779,
+            1037,
+            804,
+            1058
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            583,
+            1037,
+            616,
+            1058
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            394,
+            1037,
+            425,
+            1058
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            212,
+            1037,
+            236,
+            1058
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2011,
+      "question_page": "page_0005.jpg",
+      "question_text": "داده‌های آماری را از کم به زیاد مرتب می‌کنیم. با شرط آن‌که دادهٔ تکراری نداشته باشیم و نهمین داده چارک اول باشد، چندمین داده چارک سوم است؟",
+      "options": [
+        "۲۷ یا ۲۸",
+        "۲۵ یا ۲۶",
+        "۲۶ یا ۲۷",
+        "۲۸ یا ۲۹"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            46,
+            1067,
+            828,
+            1109
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            743,
+            1117,
+            804,
+            1138
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            553,
+            1117,
+            615,
+            1138
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            363,
+            1117,
+            425,
+            1138
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            171,
+            1117,
+            237,
+            1138
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2012,
+      "question_page": "page_0005.jpg",
+      "question_text": "در داده‌های $۷,۴,۲,۶,۳,۸,۴,۱۶,۱۳,۹,۱۹,۱۰$ میانگین داده‌های بیشتر از چارک سوم و میانگین داده‌های کم‌تر از چارک اول چه‌قدر اختلاف دارند؟",
+      "options": [
+        "$۱۲/۵$",
+        "$۱۲$",
+        "$۱۳$",
+        "$۱۳/۵$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            45,
+            1148,
+            828,
+            1188
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            753,
+            1198,
+            804,
+            1219
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            583,
+            1198,
+            615,
+            1219
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            394,
+            1198,
+            425,
+            1219
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            189,
+            1198,
+            237,
+            1219
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2013,
+      "question_page": "page_0005.jpg",
+      "question_text": "تعداد داده‌های متمایز چه عددی باشد تا چارک اول و سوم در بین داده‌ها باشد اما میانهٔ داده‌ها در بین داده‌ها نباشد؟",
+      "options": [
+        "۶۴",
+        "۶۵",
+        "۶۶",
+        "۶۷"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            175,
+            1229,
+            828,
+            1249
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            779,
+            1258,
+            804,
+            1279
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            591,
+            1258,
+            615,
+            1279
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            401,
+            1258,
+            425,
+            1279
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            204,
+            1258,
+            236,
+            1279
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2014,
+      "question_page": "page_0005.jpg",
+      "question_text": "$n$ دادهٔ دوبه‌دو متمایز در اختیار داریم. عدد طبیعی $n$ کدام باشد تا میانه جزء داده‌ها باشد اما چارک اول و سوم جزء داده‌ها نباشد؟",
+      "options": [
+        "۱۵",
+        "۱۶",
+        "۱۷",
+        "۱۸"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            112,
+            1289,
+            828,
+            1311
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۴"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            779,
+            1319,
+            804,
+            1340
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            591,
+            1319,
+            615,
+            1340
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            401,
+            1319,
+            425,
+            1340
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            204,
+            1319,
+            236,
+            1340
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2015,
+      "question_page": "page_0005.jpg",
+      "question_text": "۲۴ دادهٔ آماری موجود است. میانگین داده‌های بزرگ‌تر از چارک سوم ۴ برابر میانگین داده‌های کم‌تر از چارک اول است. اگر میانگین کل داده‌ها ۳ برابر میانگین داده‌های کم‌تر از چارک اول باشد، میانگین داده‌های بین چارک اول و سوم کدام است؟ ($\\overline{x}$ میانگین داده‌های کم‌تر از چارک اول است.)",
+      "options": [
+        "$۳/۶\\overline{x}$",
+        "$۳/۵\\overline{x}$",
+        "$۳/۲\\overline{x}$",
+        "$۳/۴\\overline{x}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            46,
+            1350,
+            828,
+            1391
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۵"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            743,
+            1400,
+            805,
+            1421
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            553,
+            1400,
+            616,
+            1421
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            363,
+            1400,
+            426,
+            1421
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            181,
+            1400,
+            237,
+            1421
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2016,
+      "question_page": "page_0005.jpg",
+      "question_text": "اگر دو سری داده $A: ۲,۲,۳,۳,۳$ و $B: ۳,۳,۲,۲,۲$ را در نظر بگیریم، واریانس داده‌های سری $A$ چند برابر واریانس داده‌های سری $B$ است؟",
+      "options": [
+        "$۱$",
+        "$\\frac{۲}{۳}$",
+        "$\\frac{۳}{۲}$",
+        "$\\frac{۹}{۴}$"
+      ],
+      "media_regions": [
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            46,
+            1455,
+            828,
+            1476
+          ],
+          "placement": "stem",
+          "alt": "صورت سوال ۲۰۱۶"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            779,
+            1478,
+            804,
+            1499
+          ],
+          "placement": "option_1",
+          "alt": "گزینه ۱"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            591,
+            1478,
+            615,
+            1500
+          ],
+          "placement": "option_2",
+          "alt": "گزینه ۲"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            401,
+            1478,
+            425,
+            1500
+          ],
+          "placement": "option_3",
+          "alt": "گزینه ۳"
+        },
+        {
+          "filename": "page_0005.jpg",
+          "region": [
+            204,
+            1478,
+            237,
+            1500
+          ],
+          "placement": "option_4",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2017,
+      "question_page": "page_0006.jpg",
+      "question_text": "واریانس اعداد فرد یک‌رقمی چه عددی است؟",
+      "options": [
+        "$4$",
+        "$8$",
+        "$12$",
+        "$16$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            70,
+            1430,
+            120
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۱۷"
+        },
+        {
+          "region": [
+            1240,
+            120,
+            1430,
+            170
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            120,
+            1040,
+            170
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            120,
+            640,
+            170
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            120,
+            440,
+            170
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2018,
+      "question_page": "page_0006.jpg",
+      "question_text": "واریانس داده‌هایی از $8, 4, 2, 2, 5, 4, 3, 5, 7, 7, 8$ که بین چارک اول و سوم قرار گرفته‌اند چه عددی است؟",
+      "options": [
+        "$1$",
+        "$1/2$",
+        "$1/8$",
+        "$2$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            150,
+            1430,
+            200
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۱۸"
+        },
+        {
+          "region": [
+            1240,
+            200,
+            1430,
+            250
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            200,
+            1040,
+            250
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            200,
+            640,
+            250
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            200,
+            440,
+            250
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2019,
+      "question_page": "page_0006.jpg",
+      "question_text": "واریانس $2, 3 + c, 3 - a, 2, 2b - a$ صفر است. واریانس $a, b, c$ کدام است؟",
+      "options": [
+        "صفر",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{4}{3}$",
+        "$\\dfrac{8}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            230,
+            1430,
+            280
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۱۹"
+        },
+        {
+          "region": [
+            1240,
+            280,
+            1430,
+            360
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            280,
+            1040,
+            360
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            280,
+            640,
+            360
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            280,
+            440,
+            360
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2020,
+      "question_page": "page_0006.jpg",
+      "question_text": "هرگاه میانگین $2a, 2, a, 3, 3, 4$ برابر ۳ باشد، انحراف معیار آن‌ها کدام است؟",
+      "options": [
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{\\sqrt{2}}{2}$",
+        "$\\dfrac{\\sqrt{6}}{2}$",
+        "$\\dfrac{\\sqrt{6}}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            340,
+            1430,
+            400
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۰"
+        },
+        {
+          "region": [
+            1240,
+            400,
+            1430,
+            480
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            400,
+            1040,
+            480
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            400,
+            640,
+            480
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            400,
+            440,
+            480
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2021,
+      "question_page": "page_0006.jpg",
+      "question_text": "به هر یک از اعداد $2, 3, 3, 5, 4, 7, 6$ سه برابر میانگین را اضافه کرده‌ایم. واریانس آن‌ها چه‌قدر بیشتر شده است؟",
+      "options": [
+        "$\\dfrac{90}{7}$",
+        "$\\dfrac{30}{7}$",
+        "$\\dfrac{10}{7}$",
+        "صفر"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            460,
+            1430,
+            510
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۱"
+        },
+        {
+          "region": [
+            1240,
+            510,
+            1430,
+            590
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            510,
+            1040,
+            590
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            510,
+            640,
+            590
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            510,
+            440,
+            590
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2022,
+      "question_page": "page_0006.jpg",
+      "question_text": "اگر هر یک از اعداد $2, 2, 3, 4$ سه برابر شوند، واریانس داده‌های جدید چند برابر واریانس داده‌های اولیه است؟",
+      "options": [
+        "$\\dfrac{1}{9}$",
+        "$3$",
+        "$\\dfrac{1}{3}$",
+        "$9$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            570,
+            1430,
+            620
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۲"
+        },
+        {
+          "region": [
+            1240,
+            620,
+            1430,
+            700
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            620,
+            1040,
+            700
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            620,
+            640,
+            700
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            620,
+            440,
+            700
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2023,
+      "question_page": "page_0006.jpg",
+      "question_text": "اگر واریانس اعداد مثبت $2x_1+3, 2x_2+3, ..., 2x_5+3$ برابر ۶ باشد، واریانس داده‌های $3x_1+2, 3x_2+2, ..., 3x_5+2$ چه عددی است؟",
+      "options": [
+        "$9$",
+        "$11$",
+        "$13/5$",
+        "$15/5$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            680,
+            1430,
+            740
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۳"
+        },
+        {
+          "region": [
+            1240,
+            740,
+            1430,
+            800
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            740,
+            1040,
+            800
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            740,
+            640,
+            800
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            740,
+            440,
+            800
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2024,
+      "question_page": "page_0006.jpg",
+      "question_text": "میانگین و انحراف معیار اعداد $a, b, c, d$ به ترتیب ۳ و ۱ است. واریانس هشت دادهٔ $a, b, c, d, 3, 3, 3, 3$ چه عددی است؟",
+      "options": [
+        "$1$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{8}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            780,
+            1430,
+            840
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۴"
+        },
+        {
+          "region": [
+            1240,
+            840,
+            1430,
+            920
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            840,
+            1040,
+            920
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            840,
+            640,
+            920
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            840,
+            440,
+            920
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2025,
+      "question_page": "page_0006.jpg",
+      "question_text": "انحراف معیار و ضریب تغییرات $x_1, x_2, x_3$ به ترتیب ۱ و $0/2$ است. ضریب تغییرات $1+1.2x_1, 1+1.2x_2, 1+1.2x_3$ چه عددی است؟",
+      "options": [
+        "$0/4$",
+        "$1/4$",
+        "$\\dfrac{3}{11}$",
+        "$\\dfrac{3}{11}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            900,
+            1430,
+            960
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۵"
+        },
+        {
+          "region": [
+            1240,
+            960,
+            1430,
+            1040
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            960,
+            1040,
+            1040
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            960,
+            640,
+            1040
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            960,
+            440,
+            1040
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": [
+        "Option 3 and 4 appear identical in the original print."
+      ]
+    },
+    {
+      "question_number": 2026,
+      "question_page": "page_0006.jpg",
+      "question_text": "در تعدادی دادهٔ آماری به هر داده ۴ برابر میانگین داده‌ها را اضافه می‌کنیم. ضریب تغییرات جدید چند برابر ضریب تغییرات اولیه است؟",
+      "options": [
+        "$1$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{5}$",
+        "$\\dfrac{4}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            1020,
+            1430,
+            1080
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۶"
+        },
+        {
+          "region": [
+            1240,
+            1080,
+            1430,
+            1160
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1080,
+            1040,
+            1160
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1080,
+            640,
+            1160
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            1080,
+            440,
+            1160
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2027,
+      "question_page": "page_0006.jpg",
+      "question_text": "در ۸ دادهٔ آماری میانگین و واریانس داده‌های کم‌تر از میانه ۲ و $\\dfrac{1}{2}$ و میانگین و ضریب تغییرات داده‌های بیشتر از میانه ۶ و صفر است. واریانس تمام داده‌ها چه عددی است؟",
+      "options": [
+        "$4$",
+        "$4/15$",
+        "$4/2$",
+        "$4/25$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            1140,
+            1430,
+            1220
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۷"
+        },
+        {
+          "region": [
+            1240,
+            1220,
+            1430,
+            1280
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1220,
+            1040,
+            1280
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1220,
+            640,
+            1280
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            1220,
+            440,
+            1280
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2028,
+      "question_page": "page_0006.jpg",
+      "question_text": "اگر هر یک از داده‌های آماری را ۴ برابر کرده و از هر یک ۲ واحد کم کنیم، ضریب تغییرات جدید ۲۵ درصد افزایش می‌یابد. میانگین داده‌های اول چه عددی است؟",
+      "options": [
+        "$\\dfrac{9}{4}$",
+        "$\\dfrac{5}{2}$",
+        "$\\dfrac{11}{4}$",
+        "$\\dfrac{7}{2}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            1260,
+            1430,
+            1340
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۸"
+        },
+        {
+          "region": [
+            1240,
+            1340,
+            1430,
+            1420
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1340,
+            1040,
+            1420
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1340,
+            640,
+            1420
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            1340,
+            440,
+            1420
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2029,
+      "question_page": "page_0006.jpg",
+      "question_text": "میانگین ۷ دادهٔ آماری ۴ و واریانس آن‌ها ۲ است. هرگاه داده‌های $2, a, 3$ را از بین داده‌ها حذف کنیم میانگین داده‌ها تغییر نمی‌کند. واریانس چه‌قدر کاهش می‌یابد؟",
+      "options": [
+        "$1$",
+        "$2$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{4}{3}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            1400,
+            1430,
+            1470
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۲۹"
+        },
+        {
+          "region": [
+            1240,
+            1470,
+            1430,
+            1550
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1470,
+            1040,
+            1550
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1470,
+            640,
+            1550
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            1470,
+            440,
+            1550
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2030,
+      "question_page": "page_0006.jpg",
+      "question_text": "داده‌های $10, 13, 14, 15, 15, 17$ را در نظر بگیرید. اگر داده‌ای که با میانگین برابر است را حذف کنیم، واریانس داده‌های جدید چند برابر واریانس داده‌های اولیه است؟",
+      "options": [
+        "$\\dfrac{7}{6}$",
+        "$\\dfrac{5}{6}$",
+        "$\\dfrac{6}{5}$",
+        "$\\dfrac{6}{7}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            1530,
+            1430,
+            1600
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۳۰"
+        },
+        {
+          "region": [
+            1240,
+            1600,
+            1430,
+            1680
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1600,
+            1040,
+            1680
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1600,
+            640,
+            1680
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            1600,
+            440,
+            1680
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2031,
+      "question_page": "page_0006.jpg",
+      "question_text": "میانگین اعداد $a, b, c, d, e$ برابر $d$ است. اگر $d$ را از بین آن‌ها حذف کنیم، ضریب تغییرات ۴ دادهٔ جدید چند برابر ضریب تغییرات اولیه است؟",
+      "options": [
+        "$\\dfrac{4}{5}$",
+        "$\\dfrac{5}{4}$",
+        "$\\dfrac{\\sqrt{5}}{2}$",
+        "$\\dfrac{2}{\\sqrt{5}}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            1660,
+            1430,
+            1720
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۳۱"
+        },
+        {
+          "region": [
+            1240,
+            1720,
+            1430,
+            1800
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1720,
+            1040,
+            1800
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1720,
+            640,
+            1800
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            1720,
+            440,
+            1800
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2032,
+      "question_page": "page_0006.jpg",
+      "question_text": "۱۰ دادهٔ آماری با میانگین $\bar{x}$ و واریانس ۸ داریم، چند داده برابر با میانگین به آن‌ها اضافه کنیم تا واریانس کل داده‌ها برابر ۵ شود؟",
+      "options": [
+        "$12$",
+        "$4$",
+        "$8$",
+        "$6$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            1780,
+            1430,
+            1850
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۳۲"
+        },
+        {
+          "region": [
+            1240,
+            1850,
+            1430,
+            1910
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1850,
+            1040,
+            1910
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1850,
+            640,
+            1910
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            1850,
+            440,
+            1910
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2033,
+      "question_page": "page_0006.jpg",
+      "question_text": "اگر در ۱۰ داده، $20 = \\sum x_i$ و $100 = \\sum x_i^2$ باشد، واریانس کدام است؟",
+      "options": [
+        "$6$",
+        "$4$",
+        "$3$",
+        "$8$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            230,
+            1890,
+            1430,
+            1950
+          ],
+          "placement": "stem",
+          "filename": "page_0006.jpg",
+          "alt": "متن سوال ۲۰۳۳"
+        },
+        {
+          "region": [
+            1240,
+            1950,
+            1430,
+            2010
+          ],
+          "placement": "option_1",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1950,
+            1040,
+            2010
+          ],
+          "placement": "option_2",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1950,
+            640,
+            2010
+          ],
+          "placement": "option_3",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            230,
+            1950,
+            440,
+            2010
+          ],
+          "placement": "option_4",
+          "filename": "page_0006.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2034,
+      "question_page": "page_0007.jpg",
+      "question_text": "در ۵ داده با واریانس ۴ و ضریب تغییرات $\\dfrac{1}{3}$، جمع مربع داده‌ها کدام است؟",
+      "options": [
+        "$160$",
+        "$200$",
+        "$240$",
+        "$180$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            70,
+            1430,
+            130
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۳۴"
+        },
+        {
+          "region": [
+            1240,
+            130,
+            1430,
+            180
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            130,
+            1040,
+            180
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            130,
+            640,
+            180
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            130,
+            440,
+            180
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2035,
+      "question_page": "page_0007.jpg",
+      "question_text": "اگر میانگین ۸ دادهٔ آماری ۱۵ و انحراف معیار آن‌ها ۲ باشد، جمع مربع اعداد کدام است؟",
+      "options": [
+        "$152$",
+        "$1768$",
+        "$120$",
+        "$1832$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            170,
+            1430,
+            220
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۳۵"
+        },
+        {
+          "region": [
+            1240,
+            220,
+            1430,
+            270
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            220,
+            1040,
+            270
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            220,
+            640,
+            270
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            220,
+            440,
+            270
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2036,
+      "question_page": "page_0007.jpg",
+      "question_text": "در ۱۰ دادهٔ آماری میانگین داده‌ها برابر ۴ و میانگین مربع داده‌ها برابر ۲۵ است. ضریب تغییرات داده‌ها چه عددی است؟",
+      "options": [
+        "$0/75$",
+        "$1$",
+        "$1/5$",
+        "$2/25$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            250,
+            1430,
+            310
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۳۶"
+        },
+        {
+          "region": [
+            1240,
+            310,
+            1430,
+            360
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            310,
+            1040,
+            360
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            310,
+            640,
+            360
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            310,
+            440,
+            360
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2037,
+      "question_page": "page_0007.jpg",
+      "question_text": "میانگین ۶ دادهٔ آماری ۴ و انحراف معیار آن‌ها ۲ است. اگر میانگین ۴ دادهٔ دیگر ۴ و ضریب تغییرات آن‌ها ۱ باشد، واریانس ۱۰ داده با هم چه عددی است؟",
+      "options": [
+        "$2/8$",
+        "$4$",
+        "$7/6$",
+        "$8/8$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            340,
+            1430,
+            420
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۳۷"
+        },
+        {
+          "region": [
+            1240,
+            420,
+            1430,
+            470
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            420,
+            1040,
+            470
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            420,
+            640,
+            470
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            420,
+            440,
+            470
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2038,
+      "question_page": "page_0007.jpg",
+      "question_text": "۴ داده با واریانس ۴ و ۶ داده با واریانس ۱ را با هم در یک گروه قرار داده‌ایم. اگر میانگین داده‌ها در دو دستهٔ ابتدایی برابر هم باشند، واریانس داده‌های جدید کدام است؟",
+      "options": [
+        "$2$",
+        "$2/2$",
+        "$2/8$",
+        "$3$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            450,
+            1430,
+            520
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۳۸"
+        },
+        {
+          "region": [
+            1240,
+            520,
+            1430,
+            570
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            520,
+            1040,
+            570
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            520,
+            640,
+            570
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            520,
+            440,
+            570
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2039,
+      "question_page": "page_0007.jpg",
+      "question_text": "۶ داده با میانگین ۴ و انحراف معیار ۱ را با ۴ دادهٔ یکسان با مقدار a با هم در یک دسته قرار می‌دهیم. واریانس کل ۶/۶ شده است. مقدار مثبت a چه عدد است؟",
+      "options": [
+        "$4$",
+        "$6$",
+        "$8$",
+        "$9$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            550,
+            1430,
+            630
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۳۹"
+        },
+        {
+          "region": [
+            1240,
+            630,
+            1430,
+            680
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            630,
+            1040,
+            680
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            630,
+            640,
+            680
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            630,
+            440,
+            680
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2040,
+      "question_page": "page_0007.jpg",
+      "question_text": "میانگین و واریانس $x_1, x_2, ..., x_{10}$ به ترتیب ۶ و ۴ هستند. میانگین $(x_1 - 1)^2, (x_2 - 1)^2, ..., (x_{10} - 1)^2$ چه عددی است؟",
+      "options": [
+        "$29$",
+        "$30$",
+        "$39$",
+        "$40$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            660,
+            1430,
+            720
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۴۰"
+        },
+        {
+          "region": [
+            1240,
+            720,
+            1430,
+            770
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            720,
+            1040,
+            770
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            720,
+            640,
+            770
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            720,
+            440,
+            770
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2041,
+      "question_page": "page_0007.jpg",
+      "question_text": "اگر واریانس و ضریب تغییرات داده‌های $x_1, x_2, ..., x_5$ به ترتیب ۱ و $\\dfrac{1}{2}$ باشند، حاصل $(2x_1 - 4)^2 + ... + (2x_5 - 4)^2$ چه عددی است؟",
+      "options": [
+        "$\\dfrac{4}{5}$",
+        "$\\dfrac{5}{4}$",
+        "$10$",
+        "$20$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            200,
+            750,
+            1430,
+            830
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۴۱"
+        },
+        {
+          "region": [
+            1240,
+            830,
+            1430,
+            900
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            830,
+            1040,
+            900
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            830,
+            640,
+            900
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            830,
+            440,
+            900
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    },
+    {
+      "question_number": 2042,
+      "question_page": "page_0007.jpg",
+      "question_text": "دو داروی A و B را در یک بخش بیمارستان استفاده کرده‌ایم. در ۵ روز کاری تعداد داروی فاسد در جدول مقابل آورده شده است:\nنسبت ضریب تغییرات گروه A به گروه B کدام است؟",
+      "options": [
+        "$\\dfrac{\\sqrt{2}}{5}$",
+        "$\\dfrac{\\sqrt{5}}{5}$",
+        "$\\dfrac{2\\sqrt{2}}{5}$",
+        "$\\dfrac{\\sqrt{10}}{5}$"
+      ],
+      "media_regions": [
+        {
+          "region": [
+            260,
+            870,
+            1430,
+            950
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۴۲"
+        },
+        {
+          "region": [
+            200,
+            950,
+            1430,
+            1030
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "متن سوال ۲۰۴۲ (ادامه)"
+        },
+        {
+          "region": [
+            40,
+            870,
+            260,
+            1030
+          ],
+          "placement": "stem",
+          "filename": "page_0007.jpg",
+          "alt": "جدول سوال ۲۰۴۲"
+        },
+        {
+          "region": [
+            1240,
+            1030,
+            1430,
+            1140
+          ],
+          "placement": "option_1",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۱"
+        },
+        {
+          "region": [
+            840,
+            1030,
+            1040,
+            1140
+          ],
+          "placement": "option_2",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۲"
+        },
+        {
+          "region": [
+            440,
+            1030,
+            640,
+            1140
+          ],
+          "placement": "option_3",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۳"
+        },
+        {
+          "region": [
+            200,
+            1030,
+            440,
+            1140
+          ],
+          "placement": "option_4",
+          "filename": "page_0007.jpg",
+          "alt": "گزینه ۴"
+        }
+      ],
+      "review_notes": []
+    }
+  ]
+}

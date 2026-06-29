@@ -1,0 +1,2030 @@
+[
+  {
+    "question_number": 1,
+    "solution_page": 1,
+    "solution_text": "نادرست است؛ زیرا $\\{1\\}$ عضو A بوده ولی عضو C نمی‌باشد.\nدرستی سایر گزینه‌ها بدیهی است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 2,
+    "solution_page": 1,
+    "solution_text": "دو مجموعه $A - B$ و $B - A$ را به دست می‌آوریم.\nبرای محاسبه $A - B$ اعضای $A \\cap B$ را از A حذف می‌کنیم.\n$A - B = \\{\\{1, 2\\}\\} \\Rightarrow n(A - B) = 1$\n$B - A = \\{\\{1\\}, \\{2\\}\\} \\Rightarrow n(B - A) = 2$\n$\\Rightarrow n(B - A) - n(A - B) = 2 - 1 = 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 3,
+    "solution_page": 1,
+    "solution_text": "برای این که عدد ۳ عضو بازه $(3a-6, 2a+1)$ باشد باید:\n$\\begin{cases} 3a-6 < 3 \\Rightarrow a < 3 \\\\ 2a+1 > 3 \\Rightarrow a > 1 \\end{cases}$",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0001.jpg",
+        "box": [
+          471,
+          287,
+          574,
+          305
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار محور اعداد که بازه 1 تا 3 را نشان می‌دهد."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 4,
+    "solution_page": 1,
+    "solution_text": "برای این که عدد $\\frac{3}{20}$ عضو بازه $(\\frac{1}{n+6}, \\frac{1}{n+1})$ باشد باید:\n$\\frac{1}{n+6} < \\frac{3}{20} < \\frac{1}{n+1} \\xrightarrow{(*)} n+1 < \\frac{20}{3} < n+6$\n$\\Rightarrow \\frac{2}{3} < n < \\frac{17}{3} \\xrightarrow{n \\in \\mathbb{N}} n \\in \\{1, 2, 3, 4, 5\\}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 5,
+    "solution_page": 1,
+    "solution_text": "اگر $a < b$ و $a$ و $b$ هم‌علامت باشند، $\\frac{1}{a} > \\frac{1}{b}$ خواهد شد. $(*)$\nبا توجه به این که $n$ عددی طبیعی است $-\\frac{14}{n} < -\\frac{5}{n}$ و $\\frac{5}{n} < \\frac{7}{n}$ می‌باشد. بنابراین:\n$[-\\frac{14}{n}, \\frac{5}{n}) \\cap [-\\frac{5}{n}, \\frac{7}{n}] = [-\\frac{5}{n}, \\frac{5}{n})$",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0001.jpg",
+        "box": [
+          465,
+          497,
+          725,
+          532
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار محور اعداد که نقاط منفی 14 بر n، منفی 5 بر n، 5 بر n و 7 بر n را نشان می‌دهد."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 6,
+    "solution_page": 1,
+    "solution_text": "برای این که $[a+2, 6) \\cup (-1, 3)$ یک بازه باز باشد باید:\n$-1 < a+2 \\le 3 \\Rightarrow -3 < a \\le 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 7,
+    "solution_page": 1,
+    "solution_text": "روش اول: ابتدا مجموعه‌های $A_1$، $A_4$ و $A_8$ را به صورت اعضا می‌نویسیم:\n$A_1 = \\{m \\in \\mathbb{Z} : 3^m \\le 2, m+1 > 0\\} = \\{0, 1\\}$\n$A_4 = \\{m \\in \\mathbb{Z} : 3^m \\le 2^4, m+4 > 0\\} = \\{-3, -2, \\dots, 4\\}$\n$A_8 = \\{m \\in \\mathbb{Z} : 3^m \\le 2^8, m+8 > 0\\} = \\{-7, -6, \\dots, 8\\}$\n$(A_8 - A_4) \\cup A_1 = \\{-7, -6, -5, -4, 5, 6, 7, 8\\} \\cup \\{0, 1\\} = \\{-7, -6, -5, -4, 0, 1, 5, 6, 7, 8\\}$\nاین مجموعه دارای ۱۰ عضو است.\nروش دوم: ابتدا مجموعه $A_n$ را به صورت اعضا می‌نویسیم:\n$A_n = \\{-n+1, -n+2, \\dots, n-1, n\\}$\nاین مجموعه دارای $2n$ عضو است که در آن: $\\dots \\subseteq A_1 \\subseteq A_2 \\subseteq A_3$\nبنابراین $(A_8 - A_4) \\cup A_1$ دارای $16 - 8 + 2 = 10$ عضو می‌باشد.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 8,
+    "solution_page": 1,
+    "solution_text": "درستی ۱ بدیهی بوده و با توجه به نامتناهی‌بودن مجموعه مرجع یک حکم کلی می‌باشد.\nمثال نقض ۲ : $A = \\{1, 2\\}, B = \\mathbb{N}$\nمثال نقض ۳ : $A = \\{\\dots, -3, -2, -1\\}, B = \\{-1, 0, 1, \\dots\\}$\nمثال نقض ۴ : $A = \\{1, 2, 3, \\dots\\}, B = \\{3, 4, 5, \\dots\\}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 9,
+    "solution_page": 1,
+    "solution_text": "در یک مجموعه مرجع نامتناهی اگر A متناهی باشد، $A'$ نامتناهی است و اجتماع یک مجموعه نامتناهی با هر مجموعه‌ای قطعاً نامتناهی است بنابراین $A' \\cup B$ نامتناهی می‌باشد.\nمثال نقض ۱ : $U = \\mathbb{Z}, A = \\{1, 2\\}, B = \\mathbb{N} \\Rightarrow A' \\cap B = \\{3, 4, 5, \\dots\\}$\nمثال نقض ۳ : $U = \\mathbb{N}, A = \\{3, 4, 5, \\dots\\}, B = \\{3, 4\\} \\Rightarrow A' \\cup B = \\{1, 2, 3, 4\\}$\nمثال نقض ۴ : $U = \\mathbb{Z}, A = \\mathbb{N}, B = \\{\\dots, -2, -1\\} \\Rightarrow A' \\cap B = B$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 10,
+    "solution_page": 1,
+    "solution_text": "$A \\cup B'$ متناهی است. بنابراین A و $B'$ هر دو متناهی هستند. در نتیجه $A \\cap B'$ یا همان $A - B$ نیز متناهی است. ۲ درست است.\n$A \\cup B$ نامتناهی است. چون A، متناهی است بنابراین B نامتناهی خواهد شد. می‌توان نتیجه گرفت مجموعه مرجع نیز قطعاً نامتناهی است. با متناهی‌بودن A، نامتناهی‌بودن $A'$ نتیجه می‌شود و اجتماع یک مجموعه نامتناهی با هر مجموعه‌ای نامتناهی می‌باشد.\nگزینه‌های ۱ و ۳ نادرست هستند. B نامتناهی و A متناهی است بنابراین $B - A$ همواره نامتناهی است. ۴ نیز نادرست است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 11,
+    "solution_page": 1,
+    "solution_text": "اگر $A \\subseteq B$ باشد، آن‌گاه $A - B = \\varnothing$ خواهد بود؛ بنابراین $(A - B)' = U$. با توجه به این که B نامتناهی است قطعاً مجموعه مرجع نیز نامتناهی است. ۳ درست است.\nمثال نقض ۱ : $U = \\mathbb{Z}, A = \\mathbb{N}, B = W \\Rightarrow B - A = \\{0\\}$\nمثال نقض ۴ : $U = \\mathbb{Z}, A = \\{1, 2\\}, B = \\mathbb{Z} \\Rightarrow (B - A)' = A = \\{1, 2\\}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 12,
+    "solution_page": 1,
+    "solution_text": "ابتدا $B - C$ و $A$ را مشخص کرده، سپس $A - (B - C)$ را سایه می‌زنیم.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0001.jpg",
+        "box": [
+          40,
+          555,
+          187,
+          720
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون که تفاضل B و C را نشان می‌دهد"
+      },
+      {
+        "page_file": "page_0001.jpg",
+        "box": [
+          267,
+          640,
+          407,
+          725
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون که تفاضل A و تفاضل B و C را نشان می‌دهد"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 13,
+    "solution_page": 1,
+    "solution_text": "درستی ۱ بدیهی بوده و یک حکم کلی است. $A \\subseteq B \\Rightarrow B' \\subseteq A'$\n۲ نادرست است.\nمثال نقض ۳ : $A = \\{1, 2, 3, 4\\}, B = \\{1\\}, C = \\{2, 3\\}$\n۴ : $A - B = B - A \\Rightarrow A = B$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 14,
+    "solution_page": 1,
+    "solution_text": "اگر $A \\subseteq B$ باشد، آن‌گاه $B' \\subseteq A'$ خواهد بود.\n$B' \\subseteq A' \\Rightarrow B' \\cup A' = A'$ (۱ نادرست است)\n$B' \\subseteq A' \\Rightarrow A' \\cap B' = B'$ (۲ نادرست است)\n$A \\subseteq B \\Rightarrow A' \\cup B = U$ (۴ نادرست است)\n$A \\cap (A \\cup B) = A$ (قانون جذب) (۴ نادرست است)",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 15,
+    "solution_page": 2,
+    "solution_text": "نمودار ون $(A \\cup B) - (A \\cap B)$\nبه صورت زیر است:\nبنابراین پاسخ $۴$ است.\nاگر $A \\subseteq B$ باشد، سه گزینه دیگر همواره درست هستند.\n$۱$: $A \\cap (A \\cup B)' = A \\cap B' = A - B = \\varnothing$\n$۲$: $(A \\cap B)' \\cup A = A' \\cup A = U$\n$۳$: $(A - B) \\cup (B - A') = (A - B) \\cup (A \\cap B) = A$",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          80,
+          520,
+          145,
+          655
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون تفاضل اجتماع و اشتراک دو مجموعه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 16,
+    "solution_page": 2,
+    "solution_text": "اگر $A \\subseteq B'$ باشد آن‌گاه $A \\cap B = \\varnothing$ خواهد بود.\n$A \\cup (A - B)' = A \\cup (A \\cap B)' = A \\cup A' = U$\nبا استفاده از نمودار ون نیز می‌توان درستی اثبات فوق را تأیید نمود.",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          250,
+          520,
+          325,
+          655
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون دو مجموعه جدا از هم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 17,
+    "solution_page": 2,
+    "solution_text": "اگر $A - B = \\varnothing$ باشد، نتیجه می‌شود $A \\subseteq B$ . بنابراین $A \\cup B = B$ و $A \\cap B = A$ می‌باشد.\n$[(A \\cup B)' \\cup (B \\cap A)']' = (B' \\cup A')' = B \\cap A = A$\nقانون دمورگان: $(*)$\n$\\begin{cases} (A \\cup B)' = A' \\cap B' \\\\ (A \\cap B)' = A' \\cup B' \\end{cases}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 18,
+    "solution_page": 2,
+    "solution_text": "اگر $A - B = A$ باشد، بدین معناست که دو مجموعه $A$ و $B$ جدا از هم بوده و $A \\cap B = \\varnothing$ است.\n$(A \\cup B)' - (A \\cap B)' = (A \\cup B)' - \\varnothing' = (A \\cup B)' - U = \\varnothing$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 19,
+    "solution_page": 2,
+    "solution_text": "با استفاده از نمودار ون بررسی می‌کنیم در کدام‌یک از گزینه‌ها اشتراک دو مجموعه داده‌شده تهی است:\n$۱$:\n$[A - (A \\cap B)] \\cap A \\neq \\varnothing$\n$۲$:\n$(A - B) \\cap B = \\varnothing$\n$۳$:\n$[(A - B) \\cup (B - A)] \\cap A \\cup B \\neq \\varnothing$\n$۴$:\n$(A \\cup B) - (A \\cap B) \\cap B \\neq \\varnothing$",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          530,
+          520,
+          595,
+          660
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون گزینه ۱"
+      },
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          610,
+          520,
+          675,
+          660
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون گزینه ۲"
+      },
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          685,
+          520,
+          745,
+          660
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون گزینه ۳"
+      },
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          760,
+          520,
+          825,
+          660
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون گزینه ۴"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 20,
+    "solution_page": 2,
+    "solution_text": "هرگاه $A$ و $B$ دو مجموعه جدا از هم باشند می‌توان نتیجه گرفت: $A \\cap B = \\varnothing$\nو در نتیجه $A \\subseteq B'$ و $B \\subseteq A'$ می‌باشد.\n$۱$ درست است:\n$A - B' = A \\cap B = \\varnothing$\n$۲$ نادرست است:\n$A - B = A \\cap B' \\xrightarrow{A \\subseteq B'} A \\cap B' = A$\n$۳$ درست است:\n$B \\subseteq A' \\Rightarrow A' \\cup B = A'$\n$۴$ درست است:\n$A \\subseteq B' \\Rightarrow A \\cap B' = A$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 21,
+    "solution_page": 2,
+    "solution_text": "در نمودار ون با رسم سه مجموعه $B ،A$ و $C$، $۸$ ناحیه به وجود آمده را شماره‌گذاری می‌کنیم.\n$A = (۱) + (۲) + (۳) + (۵)$\n$B = (۱) + (۲) + (۴) + (۶)$\n$C = (۱) + (۳) + (۴) + (۷)$\n$\\Rightarrow \\begin{cases} A - B = (۳) + (۵) \\\\ B - C = (۲) + (۶) \\end{cases} \\Rightarrow \\begin{cases} A - (B - C) = (۱) + (۳) + (۵) \\\\ (A - B) - C = (۵) \\end{cases}$\nچون $A - (B - C) = (A - B) - C$ است، بنابراین: $(۵) = (۵) + (۳) + (۱)$ می‌باشد؛ یعنی $(۳) + (۱)$ تهی است. نتیجه می‌گیریم $A \\cap C$ تهی می‌باشد.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          170,
+          100,
+          245,
+          240
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون سه مجموعه با ۸ ناحیه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 22,
+    "solution_page": 2,
+    "solution_text": "در نمودار ون با رسم سه مجموعه $B ،A$ و $C$، $۶$ ناحیه به وجود آمده را شماره‌گذاری می‌کنیم. $(B \\cap C = \\varnothing)$\n$C - B = (۳) + (۵)$\n$A = (۱) + (۲) + (۳)$\n$B = (۲) + (۴)$\n$\\Rightarrow \\begin{cases} A \\cap (C - B) = (۳) \\\\ A \\cap B = (۲) \\end{cases}$\nاگر $A \\cap (C - B) \\subseteq A \\cap B$ باشد یعنی $(۳) \\subseteq (۲)$ می‌باشد که با توجه به نمودار دو ناحیه $(۲)$ و $(۳)$ جدا از هم هستند و $(۳)$ نمی‌تواند زیرمجموعه $(۲)$ باشد مگر آن‌که $(۳) = \\varnothing$.\nبنابراین $(۵) = C - A$ و نیز $(۵) = C - B$ می‌باشد. یعنی $۱$ درست است.\nنادرستی $۲$: با تهی‌بودن ناحیه $(۳)$ درستی گزینه‌های $۳$ و $۴$ نیز اثبات می‌شود. با توجه به نواحی موجود در نمودار بدیهی است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          390,
+          100,
+          465,
+          240
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون سه مجموعه با ۶ ناحیه"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 23,
+    "solution_page": 2,
+    "solution_text": "روش اول:\nعلاقه‌مندان اشعار مولانا $= M$\nعلاقه‌مندان اشعار حافظ $= H$\n$n(H) = ۲۷ \\quad n(M) = ۲۳ \\quad n(H \\cup M) = ۴۰ - ۴ = ۳۶$\n$n(H \\cup M) = n(H) + n(M) - n(H \\cap M)$\n$\\Rightarrow ۳۶ = ۲۷ + ۲۳ - n(H \\cap M) \\Rightarrow n(H \\cap M) = ۱۴$\n$n(M - H) = n(M) - n(M \\cap H) = ۲۳ - ۱۴ = ۹$\nروش دوم: در نمودار ون تعداد اعضای چهار ناحیه به وجود آمده را $t, z, y, x$ می‌نامیم. می‌دانیم $t = ۴$ است.\n$n(H) = x + y = ۲۷$\n$n(M) = y + z = ۲۳$\n$x + y + z + t = ۴۰ \\xrightarrow{t = ۴} \\begin{cases} x + ۲y + z = ۵۰ \\\\ x + y + z = ۳۶ \\end{cases}$\n$\\begin{cases} y = ۱۴ \\\\ y + z = ۲۳ \\end{cases} \\Rightarrow z = ۹$",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0002.jpg",
+        "box": [
+          740,
+          100,
+          810,
+          240
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون دو مجموعه و متمم آنها"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 24,
+    "solution_page": 3,
+    "solution_text": "در نمودار ون تعداد اعضای چهار ناحیه به وجود آمده را $t, z, y, x$ می‌نامیم.\nخواهیم داشت:\n$n(A) = x+y \\qquad n(B) = y+z$\n$n(A \\cup B) = x+y+z \\qquad n(A \\cap B) = y$\n$n(A - B) = x \\qquad n(B - A) = z$\nحال، درستی هر یک از گزینه‌ها را بررسی می‌کنیم:\n۱: $x = (x+y+z) - (y+z)$ \\checkmark\n۲: $y = (x+y) - x$ \\checkmark\n۳: $x+z = (x+y+z) - y$ \\checkmark\n۴: $(x+y) + (y+z) = (x+y+z) - y \\quad \\times$",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0003.jpg",
+        "box": [
+          73,
+          850,
+          142,
+          1150
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون مجموعه‌های A و B با نواحی x, y, z, t"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 25,
+    "solution_page": 3,
+    "solution_text": "از نمودار ون استفاده می‌کنیم.\n$\\left.\\begin{matrix}\nn(A - B) + n(B - A) = ۲۷ \\Rightarrow x+z = ۲۷ \\\\\nn(A \\cup B) = ۴۱ \\Rightarrow x+y+z = ۴۱\n\\end{matrix}\\right\\} \\xrightarrow{\\text{تفریق}} y = ۱۴$\n$n(A) + n(B) = (x+y) + (y+z) = (x+z) + ۲y = ۲۷ + ۲ \\times ۱۴ = ۲۷ + ۲۸ = ۵۵$",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0003.jpg",
+        "box": [
+          287,
+          850,
+          350,
+          1150
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون مجموعه‌های A و B با نواحی x, y, z, t"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 26,
+    "solution_page": 3,
+    "solution_text": "از نمودار ون استفاده می‌کنیم. می‌دانیم $t = ۰$ است.\n$x+y+z = ۶۰ \\quad \\Rightarrow y = ۳۰$\n$x+z = ۳۰$\n$n(H) = ۰/۸ n(F) \\Rightarrow y+z = \\frac{۸}{۱۰} (x+y)$\n$\\Rightarrow ۳۰+z = \\frac{۴}{۵} (x+۳۰) \\Rightarrow ۳۰ + (۳۰-x) = \\frac{۴}{۵} (x+۳۰) \\Rightarrow \\frac{۹}{۵}x = ۳۶ \\Rightarrow x = ۲۰$",
+    "stated_correct_option": 4,
+    "media_regions": [
+      {
+        "page_file": "page_0003.jpg",
+        "box": [
+          451,
+          850,
+          520,
+          1150
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون مجموعه‌های H و F با نواحی x, y, z, t"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 27,
+    "solution_page": 3,
+    "solution_text": "از نمودار ون استفاده می‌کنیم. می‌دانیم $t = ۰$ است.\n$x = \\frac{۱}{۲}z \\Rightarrow z = ۲x$\n$n(B) = ۳x \\Rightarrow y+z = ۳x \\Rightarrow y+۲x = ۳x \\Rightarrow y = x$\n$x+y+z = ۴۰ \\Rightarrow x+x+۲x = ۴۰ \\Rightarrow x = ۱۰ \\Rightarrow y = ۱۰$\n$n(A) = x+y = ۲۰$",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0003.jpg",
+        "box": [
+          611,
+          850,
+          680,
+          1150
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون مجموعه‌های A و B با نواحی x, y, z, t"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 28,
+    "solution_page": 3,
+    "solution_text": "از نمودار ون استفاده می‌کنیم. می‌دانیم $d = ۱۶$ است.\n$x+z+c = ۴(y+t+b) = ۲a$\n$\\underbrace{x+z+c}_{۲a} + \\underbrace{y+t+b}_{\\frac{a}{۲}} + a = ۸۴ \\Rightarrow \\frac{۷}{۲} a = ۸۴ \\Rightarrow a = ۲۴$\n$y+t+b+a = \\frac{a}{۲} + a = \\frac{۳}{۲}a = \\frac{۳}{۲} \\times ۲۴ = ۳۶$",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0003.jpg",
+        "box": [
+          727,
+          850,
+          800,
+          1150
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون مجموعه‌های P, S, K با نواحی x, y, z, a, b, c, t, d"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 29,
+    "solution_page": 3,
+    "solution_text": "از نمودار ون استفاده می‌کنیم.\n$n(A) = ۶ \\Rightarrow x+y = ۶$\n$n[(A \\cup B) - (A \\cap B)] = ۹ \\Rightarrow x+z = ۹$\nبا جمع دو رابطه: $\\longrightarrow ۲x+y+z = ۱۵$\n$\\Rightarrow y+z = ۱۵ - ۲x \\Rightarrow n(B) = ۱۵ - ۲x$\nچون $A$ مجموعه‌ای ۶ عضوی است، حداقل مقدار $x$ برابر صفر و حداکثر آن ۶ است.\n$۰ \\le x \\le ۶ \\Rightarrow -۱۲ \\le -۲x \\le ۰ \\Rightarrow ۳ \\le ۱۵ - ۲x \\le ۱۵$\n$\\Rightarrow ۳ \\le n(B) \\le ۱۵$",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0003.jpg",
+        "box": [
+          73,
+          50,
+          142,
+          350
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون مجموعه‌های A و B با نواحی x, y, z, t"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 30,
+    "solution_page": 3,
+    "solution_text": "از هر یک از مجموعه‌های $A$ و $B$، ۶ عضو کاسته شده در حالی که از اشتراک، ۴ عضو کم شده است. مشخص می‌شود ۴ عضو از ۶ عضو کم شده از دو مجموعه مشترک می‌باشند. بنابراین از هر یک از دو مجموعه $A-B$ و $B-A$، ۲ عضو کاسته شده است.\nتعداد اعضا قبل از کاسته شدن:\n$n(A \\cup B) = n(A-B) + n(B-A) + n(A \\cap B)$\n$\\Rightarrow ۳۶ = ۹ + ۱۲ + n(A \\cap B) \\Rightarrow n(A \\cap B) = ۱۵$\n$n(A \\cup B) = n(A-B) + n(B-A) + n(A \\cap B)$\n$= (۹-۲) + (۱۲-۲) + (۱۵-۴) = ۲۸$",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0003.jpg",
+        "box": [
+          386,
+          50,
+          460,
+          420
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو نمودار ون قبل و بعد از کاهش اعضا"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 31,
+    "solution_page": 3,
+    "solution_text": "مجموعه $A$ در حال حاضر $۴۵ - ۸ = ۳۷$ عضو دارد.\nتعداد اعضای $A \\cup B$ در حال حاضر:\n$n(A \\cup B) = n(A) + n(B-A) = ۳۷ + ۱۲ = ۴۹$\nمی‌دانیم از هر دو مجموعه $A$ و $B$، ۸ عضو خارج شده است. اگر ۸ عضو از $A \\cap B$ خارج شده باشد یعنی از هر دو مجموعه $A$ و $B$، ۸ عضو کاسته شده و تعداد اعضای $A \\cup B$ در ابتدا $۴۹ + ۸$ یعنی ۵۷ بوده است. اما اگر اعضای خارج شده از قسمت‌های غیرمشترک یعنی $A-B$ و $B-A$ باشند بدین معناست که از هر یک از مجموعه‌های $A$ و $B$ جداگانه ۸ عضو خارج شده است و $A \\cup B$ در ابتدا $۴۹ + ۱۶ = ۶۵$ عضو داشته است. بنابراین حداقل تعداد اعضای $A \\cup B$، ۵۷ بوده است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 32,
+    "solution_page": 3,
+    "solution_text": "از نمودار ون استفاده می‌کنیم:\n$\\left.\\begin{matrix}\nn(\\text{کل}) = ۷۰ \\Rightarrow x+y+z+t = ۷۰ \\\\\nn(R \\cup F) = ۵۸ \\Rightarrow x+y+z = ۵۸\n\\end{matrix}\\right\\} \\Rightarrow t = ۱۲$\n$n(R \\cap F) = ۲۷ \\Rightarrow y = ۲۷ \\Rightarrow x+z = ۵۸ - ۲۷ = ۳۱$\nمشخص می‌شود کمترین مقدار $x$ برابر صفر و بیشترین مقدار آن ۲۱ است؛ یعنی:\n$۰ \\le x \\le ۲۱ \\Rightarrow ۱۲ \\le x+t \\le ۳۳ \\Rightarrow ۱۲ \\le n(F') \\le ۳۳$\nمجموع حداقل و حداکثر تعداد دانش‌آموزانی که به فیزیک علاقه‌مند نیستند برابر $۴۵ = ۳۳ + ۱۲$ است.",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0003.jpg",
+        "box": [
+          695,
+          50,
+          770,
+          350
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار ون مجموعه‌های R و F با نواحی x, y, z, t"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 33,
+    "solution_page": 4,
+    "solution_text": "ابتدا جمله یازدهم $b_m$ را محاسبه کرده، $a_n$ را برابر آن قرار می‌دهیم.\n$b_{11} = 44 + 2 = 46 \\Rightarrow a_n = 5n + 1 = 46 \\Rightarrow n = 9$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 34,
+    "solution_page": 4,
+    "solution_text": "جمله عمومی الگوی خطی به صورت $a_n = an + b$ می‌باشد.\n$a_5 = 5a + b = -44$\n$a_{11} = 11a + b = -26$\n$\\Rightarrow 6a = 18 \\Rightarrow a = 3 \\Rightarrow b = -59$\n$\\Rightarrow a_n = 3n - 59 < 0 \\Rightarrow n < \\frac{59}{3} \\Rightarrow n < 19/6 \\Rightarrow n \\leq 19$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 35,
+    "solution_page": 4,
+    "solution_text": "با توجه به جمله عمومی الگوی خطی خواهیم داشت:\n$a_n = an + b$\n$a_6 = 6a + b$\n$a_{10} = 10a + b$\n$\\Rightarrow a_{10} - a_6 = 4a = 16 \\Rightarrow a = 4$\nحال اختلاف جملات هشتم و شانزدهم را محاسبه می‌کنیم:\n$a_8 = 8a + b$\n$a_{16} = 16a + b$\n$\\Rightarrow a_{16} - a_8 = 8a = 32$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 36,
+    "solution_page": 4,
+    "solution_text": "جمله عمومی الگوی خطی:\n$a_n = an + b$\n$a_4 + a_8 = a_{10} + 1$\n$a_4 + a_8 = a_{15} - 9$\n$\\Rightarrow a_{10} + 1 = a_{15} - 9$\n$\\Rightarrow a_{15} - a_{10} = 10 \\Rightarrow 15a + b - (10a + b) = 10 \\Rightarrow a = 2$\nاکنون با استفاده از معادله اول مقدار $b$ را به دست می‌آوریم:\n$a_4 + a_8 = a_{10} + 1 \\Rightarrow 4a + b + 8a + b = 10a + b + 1$\n$\\xrightarrow{a = 2} 24 + 2b = b + 21 \\Rightarrow b = -3$\n$\\Rightarrow a_n = 2n - 3 \\Rightarrow a_{20} = 37$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 37,
+    "solution_page": 4,
+    "solution_text": "مجموع جملات اول تا چهارم و پنجم تا هشتم را برحسب $a$ و $b$ به دست آورده، مقادیر $a$ و $b$ را به وسیله دستگاه محاسبه می‌کنیم:\n$a_n = an + b$\n$\\begin{cases} a_1 + a_2 + a_3 + a_4 = 10 \\\\ a_5 + a_6 + a_7 + a_8 = 58 \\end{cases}$\n$\\Rightarrow \\begin{cases} (a+b) + (2a+b) + (3a+b) + (4a+b) = 10 \\\\ (5a+b) + (6a+b) + (7a+b) + (8a+b) = 58 \\end{cases}$\n$\\Rightarrow \\begin{cases} 10a + 4b = 10 \\\\ 26a + 4b = 58 \\end{cases} \\Rightarrow 16a = 48 \\Rightarrow a = 3 \\Rightarrow b = -5$\nجمله چهلم به سادگی مشخص می‌شود:\n$\\Rightarrow a_n = 3n - 5 \\Rightarrow a_{40} = 115$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 38,
+    "solution_page": 4,
+    "solution_text": "جمله عمومی دنباله درجه دوم:\n$a_n = an^2 + bn + c$\nدنباله حاصل از اختلاف هر دو جمله متوالی دنباله درجه دوم $1, 4, 11, 22, \\dots$ را به صورت $3, 7, 11, \\dots$ می‌باشد که یک الگوی خطی به شکل $b_n = 4n + k$ است؛ بنابراین $a = 2$ خواهد بود.\n$a_1 = 2 + b + c = 1$\n$a_2 = 8 + 2b + c = 4$\n$\\Rightarrow b = -3 \\Rightarrow c = 2$\n$\\Rightarrow a_n = 2n^2 - 3n + 2 \\Rightarrow a_{10} = 200 - 30 + 2 = 172$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 39,
+    "solution_page": 4,
+    "solution_text": "روش اول: اگر جمله عمومی دنباله را به صورت $a_n = an^2 + bn + c$ در نظر بگیریم خواهیم داشت:\n$a_1 = a + b + c = 7$\n$a_2 = 4a + 2b + c = 13$\n$a_3 = 9a + 3b + c = 21$\n$\\Rightarrow \\begin{cases} 3a + b = 6 \\\\ 5a + b = 8 \\end{cases}$\n$\\Rightarrow 2a = 2 \\Rightarrow a = 1 \\Rightarrow b = 3 \\Rightarrow c = 3$\n$\\Rightarrow a_n = n^2 + 3n + 3$\n$a_{20} - a_{19} = 20^2 + 60 + 3 - (19^2 + 57 + 3)$\n$= 20^2 - 19^2 + (60 - 57) = (20 - 19)(20 + 19) + 3 = 39 + 3 = 42$\nمی‌توانیم به جای حل دستگاه سه معادله سه مجهول از نکته زیر استفاده کنیم:\nروش دوم: دنباله حاصل از اختلاف هر دو جمله متوالی دنباله درجه دوم $a_n = an^2 + bn + c$ یک الگوی خطی به صورت $b_n = 2an + k$ می‌باشد.\nدر دنباله $7, 13, 21, 31, \\dots$ دنباله حاصل از اختلاف هر دو جمله متوالی به صورت $6, 8, 10, \\dots$ می‌باشد که یک الگوی خطی به صورت $b_n = 2n + k$ می‌باشد؛ بنابراین $a = 1$ است.\nحال با استفاده از دو جمله اول دنباله درجه دوم، مقادیر $b$ و $c$ را به دست می‌آوریم:\n$a_1 = 1 + b + c = 7$\n$a_2 = 4 + 2b + c = 13$\n$\\Rightarrow b = 3 \\Rightarrow c = 3$\nادامه راه‌حل مانند روش اول است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 40,
+    "solution_page": 4,
+    "solution_text": "دنباله درجه دوم را $a_n = an^2 + bn + c$ در نظر می‌گیریم.\nدنباله حاصل از اختلاف هر دو جمله متوالی دنباله درجه دوم به صورت $7, 11, 15, \\dots$ است که یک دنباله خطی با الگوی $b_n = 4n + k$ می‌باشد؛ بنابراین $a = 2$ است.\n$a_1 = 2 + b + c = 3$\n$a_2 = 8 + 2b + c = 10$\n$\\Rightarrow b = 1 \\Rightarrow c = 0$\n$\\Rightarrow a_n = 2n^2 + n = n(2n + 1)$\nبرای به دست آوردن اولین جمله بزرگ‌تر از ۲۰۰ بهتر است از حدس زدن استفاده کنیم. اگر $n$ را ۱۰ فرض کنیم $a_{10} = 210$ می‌شود. با فرض $n = 9$ حاصل $a_n$ از ۲۰۰ کم‌تر است؛ بنابراین $a_{10}$ اولین جمله بزرگ‌تر از ۲۰۰ می‌باشد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 41,
+    "solution_page": 4,
+    "solution_text": "جمله عمومی دنباله درجه دوم: $t_n = an^2 + bn + c$\nاختلاف هر دو جمله متوالی دنباله از ضابطه $4n + 1$ به دست می‌آید. در نتیجه $a = 2$ می‌باشد. هم‌چنین اختلاف جمله اول و دوم برابر ۵ خواهد شد که با توجه به $t_2 = 7$، مقدار $t_1$ برابر ۲ می‌باشد.\n$t_1 = 2 + b + c = 2$\n$t_2 = 8 + 2b + c = 7$\n$\\Rightarrow b = -1 \\Rightarrow c = 1$\n$\\Rightarrow t_n = 2n^2 - n + 1 \\Rightarrow t_{11} = 242 - 11 + 1 = 232$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 42,
+    "solution_page": 4,
+    "solution_text": "روش اول: تعداد مثلث‌ها در شکل $n$ام از الگوی $a_n = 2n - 1$ به دست می‌آید.\n$a_n = 2n - 1 = 47 \\Rightarrow n = 24$\nتعداد نقاط در شکل $n$ام از الگوی $b_n = 2n + 1$ به دست می‌آید؛ بنابراین تعداد نقاط شکل ۲۴ام برابر $b_{24} = 2 \\times 24 + 1 = 49$ خواهد شد.\nروش دوم: در هر شکل تعداد نقاط ۲ واحد بیشتر از تعداد مثلث‌هاست. در نتیجه تعداد نقاط در شکلی که تعداد مثلث‌های آن ۴۷ است، ۴۹ خواهد بود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 43,
+    "solution_page": 4,
+    "solution_text": "تعداد چوب‌کبریت‌ها از الگوی $a_n = 6n - 2$ به دست می‌آید.\n$a_{20} = 6 \\times 20 - 2 = 118$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 44,
+    "solution_page": 4,
+    "solution_text": "با توجه به شکل الگوی تعداد مربع‌ها به صورت $a_n = n^2$ می‌باشد.\n$a_{10} = 100 \\Rightarrow a_n = n + 100 \\Rightarrow n^2 = n + 100 \\Rightarrow n = 10$ می‌باشد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 45,
+    "solution_page": 4,
+    "solution_text": "در الگوی داده‌شده در شکل $n$ام تعداد کل دایره‌ها برابر $n^2$ و تعداد دایره‌های رنگی برابر $n$ است؛ بنابراین تعداد دایره‌های سفید برابر $n^2 - n$ می‌باشد.\n$a_n = \\frac{\\text{تعداد دایره‌های سفید}}{\\text{تعداد دایره‌های رنگی}} = \\frac{n^2 - n}{n} = n - 1 \\Rightarrow a_{90} = 89$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 46,
+    "solution_page": 5,
+    "solution_text": "تعداد کل مربع‌های کوچک در شکل $n$ام برابر $(n+r)^r$ می‌باشد. در هر شکل فقط مربع‌های روی دو قطر مربع بزرگ‌تر سفید هستند.\nاگر $n$ زوج باشد تعداد مربع‌های سفید در شکل $n$ام برابر $r(n+r)$ و اگر $n$ فرد باشد تعداد مربع‌های سفید در شکل $n$ام برابر $rn+r$ می‌باشد.\nتعداد مربع‌های رنگی در شکل هشتم / تعداد مربع‌های شکل هشتم $=\\dfrac{(n+r)^r-r(n+r)}{(n+r)^r}=\\dfrac{100-r0}{100}=\\dfrac{80}{100}=\\dfrac{4}{5}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 47,
+    "solution_page": 5,
+    "solution_text": "اگر تعداد نقاط توپر در شکل $n$ام را با $a_n$ و تعداد نقاط توخالی را با $b_n$ نمایش دهیم، خواهیم داشت:\n$a_n=n+r \\, , \\, b_n=r\\times(1+r+3+\\cdots+n)=n(n+1)$\nمی‌دانیم $a_n=15$ می‌باشد:\n$a_n=n+r=15 \\Rightarrow n=13 \\Rightarrow b_{13}=13\\times 14=18r$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 48,
+    "solution_page": 5,
+    "solution_text": "تعداد گوی‌ها در شکل $n$ام از رابطهٔ زیر محاسبه می‌شود:\n$a_n=n^r+(0+1+r+\\cdots+(n-1))=n^r+\\dfrac{n(n-1)}{r}=\\dfrac{3}{r}n^r-\\dfrac{n}{r}$\nخواهیم داشت:\n$\\dfrac{a_{1r}}{a_7}=\\dfrac{\\dfrac{3}{r}(1r)^r-6}{\\dfrac{3}{r}(7)^r-\\dfrac{7}{r}}=\\dfrac{r10}{70}=3$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 49,
+    "solution_page": 5,
+    "solution_text": "تعداد مثلث‌های سفید در شکل $n$ام $= a_n = 1+r+3+\\cdots+n = \\dfrac{n(n+1)}{r}$\nتعداد مثلث‌های رنگی در شکل $n$ام $= b_n = 0+1+r+\\cdots+(n-1) = \\dfrac{n(n-1)}{r}$\n$\\Rightarrow \\dfrac{b_n}{a_n}=\\dfrac{\\dfrac{n(n-1)}{r}}{\\dfrac{n(n+1)}{r}}=\\dfrac{n-1}{n+1}=\\dfrac{95}{100}=\\dfrac{19}{r0} \\Rightarrow n=39$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 50,
+    "solution_page": 5,
+    "solution_text": "تعداد دایره‌های روی اضلاع مربع در شکل $n$ام $= (n+r)^r-n^r=4n+4$\nتعداد دایره‌های روی مثلث در شکل $n$ام $= 1+r+3+\\cdots+(n+1) = \\dfrac{(n+1)(n+r)}{r}=\\dfrac{n^r}{r}+\\dfrac{3}{r}n+1$\nتعداد کل دایره‌ها در شکل $n$ام $= a_n = \\dfrac{n^r}{r}+\\dfrac{11}{r}n+5$\n$\\Rightarrow a_{10}=\\dfrac{100}{r}+55+5=110$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 51,
+    "solution_page": 5,
+    "solution_text": "در تمامی شکل‌ها نقاط روی قطرهای مربع (مربع نصفه!) توپر می‌باشد. که الگوی آن به صورت $n+\\left[\\dfrac{n}{r}\\right]$ در شکل $n$ام است.\n$a_n=n+\\left[\\dfrac{n}{r}\\right]$\n$a_{r5}-a_{r0}=(r5+\\left[\\dfrac{r5}{r}\\right])-(r0+\\left[\\dfrac{r0}{r}\\right])=r5+1r-(r0+10)=7$",
+    "stated_correct_option": 0,
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 52,
+    "solution_page": 5,
+    "solution_text": "پاره‌خط مرحلهٔ $n$ام از نقاط $(0,\\dfrac{1}{3^{n-1}})$ و $(3^{n-1},0)$ می‌گذرد؛ بنابراین شیب پاره‌خط $n$ام برابر $m_n=\\dfrac{-\\dfrac{1}{3^{n-1}}}{3^{n-1}}=-\\dfrac{1}{3^{rn-r}}$ است.\n$m_{10}-m_5=-\\dfrac{1}{3^{18}}+\\dfrac{1}{3^8}=\\dfrac{-1+3^{10}}{3^{18}}=\\dfrac{10r3}{3^{18}}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 53,
+    "solution_page": 5,
+    "solution_text": "ابتدا جملهٔ عمومی دنباله را گویا می‌کنیم:\n$a_n = \\dfrac{1}{\\sqrt{n+1}+\\sqrt{n}} \\times \\dfrac{\\sqrt{n+1}-\\sqrt{n}}{\\sqrt{n+1}-\\sqrt{n}} = \\sqrt{n+1}-\\sqrt{n}$\nاکنون مجموع ۹۹ جملهٔ اول را به دست می‌آوریم:\n$a_1+a_r+a_3+\\cdots+a_{99}=(\\sqrt{r}-1)+(\\sqrt{3}-\\sqrt{r})+(r-\\sqrt{3})+\\cdots+(\\sqrt{100}-\\sqrt{99})=10-1=9$\nاین روش را اصطلاحاً روش تلسکوپی می‌نامند.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 54,
+    "solution_page": 5,
+    "solution_text": "ابتدا جملهٔ عمومی دنباله را ساده می‌کنیم تا بتوان مجموع جملات را به روش تلسکوپی به دست آورد:\n$a_n=\\dfrac{1}{4n^r-1}=\\dfrac{1}{(rn-1)(rn+1)}=\\dfrac{1}{r}(\\dfrac{1}{rn-1}-\\dfrac{1}{rn+1})$\nحال می‌توان مجموع بیست جملهٔ اول را محاسبه کرد:\n$a_1+a_r+a_3+\\cdots+a_{19}+a_{r0} = \\dfrac{1}{r}(1-\\dfrac{1}{3}+\\dfrac{1}{3}-\\dfrac{1}{5}+\\dfrac{1}{5}-\\dfrac{1}{7}+\\cdots+\\dfrac{1}{37}-\\dfrac{1}{39}+\\dfrac{1}{39}-\\dfrac{1}{41}) = \\dfrac{1}{r}(1-\\dfrac{1}{41})=\\dfrac{r0}{41}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 55,
+    "solution_page": 5,
+    "solution_text": "جملهٔ عمومی دنباله به صورت یک دنبالهٔ بازگشتی تعریف شده است.\nدنبالهٔ بازگشتی، دنباله‌ای است که هر جمله به وسیلهٔ جمله یا جملات قبلی بیان می‌شود.\nدر ابتدا با توجه به الگوی داده‌شده جملات دنباله را می‌نویسیم:\n$a_1=1 \\, , \\, a_1a_r=4 \\Rightarrow a_r=4$\n$a_r=4 \\, , \\, a_ra_3=4 \\Rightarrow a_3=1$\n$a_3=1 \\, , \\, a_3a_4=4 \\Rightarrow a_4=4 \\, , \\dots$\nجملات دنباله به صورت $1, 4, 1, 4, 1, \\dots , a_n$ می‌باشد که مجموع هر دو جملهٔ متوالی برابر ۵ است. $5\\times 5+1=r6$ = مجموع یازده جملهٔ اول\nاین‌گونه دنباله‌ها را دنبالهٔ متناوب می‌نامند.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 56,
+    "solution_page": 5,
+    "solution_text": "با نوشتن جملات ابتدایی، جملهٔ عمومی این دنبالهٔ بازگشتی را برحسب $n$ به دست می‌آوریم.\n$a_1=1=r^1-1$\n$a_r=r+1=3=r^r-1$\n$a_3=6+1=7=r^3-1$\n$\\vdots$\n$a_n=ra_{n-1}+1=r^n-1$\n$\\Rightarrow a_{r0}-a_{19}=(r^{r0}-1)-(r^{19}-1)=r^{r0}-r^{19}=r^{19}(r-1)=r^{19}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 57,
+    "solution_page": 5,
+    "solution_text": "جملات ابتدایی دنباله را با استفاده از جملهٔ عمومی دنبالهٔ بازگشتی و جملهٔ اول به دست می‌آوریم:\n$a_1=r$\n$a_r=4a_1+k \\Rightarrow a_r=8+k$\n$a_3=4a_r+k \\Rightarrow a_3=3r+5k$\n$a_4=4a_3+k \\Rightarrow a_4=1r8+r1k$\nمی‌دانیم $a_4=65$ است:\n$a_4=1r8+r1k=65 \\Rightarrow k=-3$\n$\\Rightarrow a_3=3r+5(-3)=3r-15=17$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 58,
+    "solution_page": 5,
+    "solution_text": "ابتدا مقدار $n$ را برابر ۱۹ قرار می‌دهیم.\n$a_{n+1}=1+\\dfrac{1}{a_n} \\xrightarrow{n=19} a_{r0}=1+\\dfrac{1}{a_{19}} \\Rightarrow r-k=1+\\dfrac{1}{a_{19}} \\Rightarrow \\dfrac{1}{a_{19}}=1-k \\Rightarrow a_{19}=\\dfrac{1}{1-k}$\nحال مقدار $n$ را برابر ۱۸ قرار می‌دهیم:\n$n=18 \\Rightarrow a_{19} = 1 + \\frac{1}{a_{18}} \\Rightarrow \\frac{1}{1-k} = 1 + \\frac{1}{a_{18}}$\n$\\Rightarrow \\frac{1}{a_{18}} = \\frac{1}{1-k} - 1 = \\frac{k}{1-k} \\Rightarrow a_{18} = \\frac{1-k}{k} = \\frac{1}{k} - 1$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 59,
+    "solution_page": 6,
+    "solution_text": "با نوشتن جملات ابتدایی دنباله درمی‌یابیم این دنباله متناوب است:\n$a_1 = 1 - 0 = 1 \\quad a_2 = 2 - 0 = 2 \\quad a_3 = 3 - 3 = 0$\n$a_4 = 4 - 3 = 1 \\quad a_5 = 5 - 3 = 2 \\quad a_6 = 6 - 6 = 0$\n$\\vdots$\n$a_n : 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, \\dots$\nمجموع هر سه جملهٔ متوالی برابر ۳ است. $S_{20} = (6 \\times 3) + 1 + 2 = 21$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 60,
+    "solution_page": 6,
+    "solution_text": "ابتدا جملهٔ عمومی دنبالهٔ بازگشتی را ساده می‌کنیم:\n$a_n a_{n+1} = a_n - 1 \\Rightarrow a_{n+1} = \\frac{a_n - 1}{a_n} = 1 - \\frac{1}{a_n}$\nبا نوشتن جملات ابتدایی دنباله متوجه می‌شویم که این دنباله متناوب است:\n$\\left.\\begin{matrix} a_1 = 2 \\\\ a_2 = 1 - \\frac{1}{a_1} \\end{matrix}\\right\\} \\Rightarrow \\left.\\begin{matrix} a_2 = \\frac{1}{2} \\\\ a_3 = 1 - \\frac{1}{a_2} \\end{matrix}\\right\\} \\Rightarrow \\left.\\begin{matrix} a_3 = -1 \\\\ a_4 = 1 - \\frac{1}{a_3} \\end{matrix}\\right\\} \\Rightarrow a_4 = 2 \\Rightarrow a_5 = 1 - \\frac{1}{a_4} \\Rightarrow a_5 = \\frac{1}{2}, \\dots$\n$a_n = 2, \\frac{1}{2}, -1, 2, \\frac{1}{2}, -1, 2, \\dots$\nحاصل‌ضرب هر سه جملهٔ متوالی برابر $(-1)$ است:\nحاصل‌ضرب بیست جملهٔ اول $= (-1)^6 \\times 2 \\times \\frac{1}{2} = 1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 61,
+    "solution_page": 6,
+    "solution_text": "روش اول: جملهٔ عمومی دنبالهٔ حسابی به صورت $a_n = a + (n-1)d$ می‌باشد که $a$ جملهٔ اول و $d$ قدرنسبت است.\n$a_6 = a + 5d = 4$\n$a_{10} = a + 9d = 10 \\Rightarrow 4d = 6 \\Rightarrow d = \\frac{3}{2} \\Rightarrow a = -\\frac{7}{2}$\n$a_{16} = a + 15d = -\\frac{7}{2} + \\frac{45}{2} = 19$\nروش دوم: اگر $a_m$ و $a_n$ دو جمله از دنبالهٔ حسابی باشند، قدرنسبت دنباله از رابطهٔ $d = \\frac{a_m - a_n}{m - n}$ قابل محاسبه است.\n$d = \\frac{a_{10} - a_6}{10 - 6} = \\frac{10 - 4}{4} = \\frac{3}{2}$\nادامهٔ حل همانند روش اول است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 62,
+    "solution_page": 6,
+    "solution_text": "روش اول: می‌دانیم:\n$S_n = \\frac{n}{2}(2a + (n-1)d)$\n$a_7 + a_8 + \\dots + a_{15} = S_{15} - S_6 = 90$\n$\\Rightarrow \\frac{15}{2}(2a + 14d) - \\frac{6}{2}(2a + 5d) = 90$\n$\\Rightarrow 9a + 90d = 90 \\Rightarrow a + 10d = 10$\nخواهیم داشت:\n$a_9 + a_{13} = a + 8d + a + 12d = 2a + 20d = 2(a + 10d) = 20$\nروش دوم: می‌دانیم $a_{11}$ واسطهٔ حسابی $a_{15}$ و $a_7$ و هم‌چنین $a_{14}$ و $a_8$ و نیز $a_{13}$ و $a_9$ و در آخر $a_{12}$ و $a_{10}$ است. یعنی:\n$a_7 + a_{15} = a_8 + a_{14} = a_9 + a_{13} = a_{10} + a_{12} = 2a_{11}$\nدر نتیجه:\n$a_7 + a_8 + a_9 + a_{10} + a_{11} + a_{12} + a_{13} + a_{14} + a_{15} = 9a_{11} = 90$\n$a_{11} = 10 \\Rightarrow a_9 + a_{13} = 2a_{11} = 20$",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0006.jpg",
+        "box": [
+          121,
+          102,
+          172,
+          477
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "جمع جملات متقارن حول واسطه حسابی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 63,
+    "solution_page": 6,
+    "solution_text": "در دنبالهٔ حسابی $a_n = a + (n-1)d$ می‌باشد.\n$\\left.\\begin{matrix} a_7 = 18 \\Rightarrow a + 6d = 18 \\\\ a_{18} = 7 \\Rightarrow a + 17d = 7 \\end{matrix}\\right\\} \\Rightarrow 11d = -11 \\Rightarrow d = -1$\n$\\Rightarrow a = 24$\nخواهیم داشت:\n$a_n = 0 \\Rightarrow a + (n-1)d = 0 \\Rightarrow 24 + (n-1)(-1) = 0$\n$\\Rightarrow n = 25$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 64,
+    "solution_page": 6,
+    "solution_text": "در رابطهٔ داده‌شده همهٔ جملات را برحسب $a$ و $d$ می‌نویسیم:\n$a_7 + a_n = 2a_{n-1} \\Rightarrow (a + 6d) + (a + (n-1)d) = 2(a + (n-2)d)$\n$\\Rightarrow 2a + (n+5)d = 2a + (2n-4)d$\n$\\Rightarrow (n+5)d = (2n-4)d \\xrightarrow{d \\neq 0} n+5 = 2n-4 \\Rightarrow n = 9$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 65,
+    "solution_page": 6,
+    "solution_text": "$a_{27}$ دو برابر $a_{18}$ می‌باشد:\n$a_{27} = 2a_{18} \\Rightarrow a + 26d = 2(a + 17d) \\Rightarrow a = -8d$\nجملهٔ $n$اُم را برابر صفر قرار می‌دهیم:\n$a_n = a + (n-1)d = 0 \\Rightarrow -8d + (n-1)d = 0$\n$\\Rightarrow (n-9)d = 0 \\xrightarrow{d \\neq 0} n = 9$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 66,
+    "solution_page": 6,
+    "solution_text": "جملهٔ نهم سه برابر جملهٔ پنجم و $d=5$ است.\n$a_9 = 3a_5 \\Rightarrow a + 8d = 3(a + 4d) \\Rightarrow a + 40 = 3(a + 20)$\n$\\Rightarrow a = -10$\nاولین جملهٔ بزرگ‌تر از ۱۰۰ را $a_n$ می‌نامیم.\n$a_n > 100 \\Rightarrow a + (n-1)d > 100 \\Rightarrow -10 + (n-1) \\times 5 > 100$\n$\\Rightarrow n - 1 > 22 \\Rightarrow n > 23 \\Rightarrow n_{\\text{min}} = 24$\nدر نتیجه:\n$a_{24} = a + 23d = -10 + 23 \\times 5 = 105$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 67,
+    "solution_page": 6,
+    "solution_text": "رابطهٔ داده‌شده را برحسب $a$ و $d$ بیان می‌کنیم:\n$a_7 + a_{11} = 28 \\Rightarrow (a + 6d) + (a + 10d) = 28$\n$\\Rightarrow 2a + 16d = 28 \\Rightarrow a + 8d = 14$\nاکنون عبارت خواسته‌شده را برحسب $a$ و $d$ می‌نویسیم:\n$a_3 + a_{10} + a_{14} = (a + 2d) + (a + 9d) + (a + 13d)$\n$= 3a + 24d = 3(a + 8d) = 3 \\times 14 = 42$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 68,
+    "solution_page": 6,
+    "solution_text": "رابطهٔ داده‌شده را برحسب $a$ و $d$ بیان می‌کنیم:\n$a_n - a_{n+3} = 6 \\Rightarrow (a + (n-1)d) - (a + (n+2)d) = 6$\n$\\Rightarrow -3d = 6 \\Rightarrow d = -2$\nحال مقدار خواسته‌شده را محاسبه می‌کنیم:\n$\\frac{a_{12}}{a_6} = \\frac{a + 11d}{a + 5d} = \\frac{4 - 22}{4 - 10} = \\frac{-18}{-6} = 3$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 69,
+    "solution_page": 6,
+    "solution_text": "روش اول: اضلاع مثلث قائم‌الزاویه را $a$، $b$ و $c$ می‌نامیم که در آن $c$ وتر است. می‌دانیم $b = a+d$ و $c = a+2d$ می‌باشد. رابطهٔ فیثاغورس را می‌نویسیم:\n$c^2 = a^2 + b^2 \\Rightarrow (a+2d)^2 = a^2 + (a+d)^2$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 70,
+    "solution_page": 7,
+    "solution_text": "اگر بین $-18$ و $a$، هشت واسطه حسابی درج کنیم، جمله اول دنباله $-18$ و جمله دهم، $a$ می‌باشد. در این صورت واسطه ششم جمله هفتم دنباله خواهد بود.\n$t_1 = -18$\n$\\begin{cases} t_7 = t_1 + 6d = 0 \\\\ t_7 = t_1 + 6d = 0 \\end{cases} \\Rightarrow -18 + 6d = 0 \\Rightarrow d = 3$\n$a = t_{10} = t_1 + 9d = -18 + 27 = 9$\nتذکر: اگر بین $a$ و $b$، $m$ واسطه حسابی درج شود، قدرنسبت از رابطه $d = \\frac{b - a}{m + 1}$ قابل محاسبه است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 71,
+    "solution_page": 7,
+    "solution_text": "سه عدد دنباله را $a-d$، $a$ و $a+d$ در نظر می‌گیریم:\n$(a - d) + a + (a + d) = 24 \\Rightarrow a = 8$\n$(a - d)a(a + d) = -640 \\Rightarrow a(a^2 - d^2) = -640$\n$\\Rightarrow d^2 = 144 \\Rightarrow d = \\pm 12 \\Rightarrow 8(64 - d^2) = -640$\nاگر $a = 8$ و $d = 12$ باشد، جملات دنباله $-4$، $8$ و $20$ می‌باشند که اختلاف بزرگ‌ترین و کوچک‌ترین آن‌ها $24$ می‌باشد. دقت کنید در صورتی که $d = -12$ باشد جملات تغییر نمی‌کنند و فقط ترتیب آن‌ها عوض می‌شود.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 72,
+    "solution_page": 7,
+    "solution_text": "مجموع سه جمله اول و آخر را برحسب $a$ و $d$ بیان می‌کنیم:\n$\\begin{cases} a_1 + a_2 + a_3 = 15 \\Rightarrow a + (a + d) + (a + 2d) = 15 \\\\ \\Rightarrow a + d = 5 \\end{cases}$\n$\\begin{cases} a_{18} + a_{19} + a_{20} = 219 \\\\ \\Rightarrow (a + 17d) + (a + 18d) + (a + 19d) = 219 \\\\ \\Rightarrow a + 18d = 73 \\end{cases}$\n$\\Rightarrow 17d = 68 \\Rightarrow d = 4 \\Rightarrow a = 1$\n$a_{13} = a + 12d = 1 + 48 = 49$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 73,
+    "solution_page": 7,
+    "solution_text": "در دنباله $a_n$ قدرنسبت برابر $6$ و در دنباله $b_n$ قدرنسبت $7$ است. بنابراین قدرنسبت جملات مشترک برابر $42$ می‌باشد. (کوچک‌ترین مضرب مشترک دو قدرنسبت)\nاولین جمله دنباله جملات مشترک $17$ است:\n$c_1 = 17$\n$c_n = c_1 + (n - 1)d = 17 + (n - 1) \\times 42 \\Rightarrow c_8 = 17 + 7 \\times 42$\n$b_n = b_1 + (n - 1)d = 3 + (n - 1) \\times 7 = 7n - 4$\n$b_n = c_8 \\Rightarrow 7n - 4 = 17 + 7 \\times 42 \\Rightarrow 7n = 7 \\times 42 + 21$\n$\\Rightarrow n = 42 + 3 = 45$\n\nروش دوم: جمله اول دنباله $c_n$ سومین جمله دنباله $b_n$ است.\nقدرنسبت $c_n$ شش برابر قدرنسبت $b_n$ است. برای رسیدن به جمله هشتم $c_n$ باید به اندازه $7$ جمله جلو برویم. در واقع به اندازه $42 = 6 \\times 7$ جمله $b_n$ جلو می‌رویم.\nهشتمین جمله دنباله $c_n$، چهل و پنجمین جمله دنباله $b_n$ است.\n$42 + 3 = 45$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 74,
+    "solution_page": 7,
+    "solution_text": "کوچک‌ترین زاویه شش‌ضلعی را $a$ و قدرنسبت دنباله را $d$ می‌نامیم.\n$a_6 = 5a \\Rightarrow a + 5d = 5a \\Rightarrow a = \\frac{5}{4}d$\nمی‌دانیم مجموع زوایای داخلی یک شش‌ضلعی برابر $720^\\circ = 4 \\times 180^\\circ$ است؛ بنابراین:\n$a_1 + a_2 + \\cdots + a_6 = 720^\\circ$\n$\\Rightarrow a + (a + d) + \\cdots + (a + 5d) = 720^\\circ$\n$\\Rightarrow \\frac{5}{4}d + \\frac{9}{4}d + \\cdots + \\frac{25}{4}d = 720^\\circ$\n$\\Rightarrow \\frac{90}{4}d = 720^\\circ \\Rightarrow d = 32^\\circ \\Rightarrow a_6 = \\frac{25}{4}d = 200^\\circ$\nمی‌دانیم:\n$a_1 + a_6 = a_2 + a_5 = a_3 + a_4$\nبنابراین:\n$a_1 + a_2 + \\cdots + a_6 = 3(a_1 + a_6) = 3(a + 5a) = 18a = 720^\\circ$\n$\\Rightarrow a = 40^\\circ \\Rightarrow a_6 = 5a = 200^\\circ$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 75,
+    "solution_page": 7,
+    "solution_text": "می‌دانیم در دسته اول $1$ عدد، در دسته دوم $2$ عدد، ... و در دسته پانزدهم $15$ عدد نوشته شده است؛ بنابراین تعداد کل اعداد مضرب سه تا آخرین عضو دسته پانزدهم برابر است با:\n$1 + 2 + \\cdots + 15 = \\frac{15 \\times 16}{2} = 120$\nجمله عمومی اعداد مضرب $3$ به صورت $a_n = 3n$ می‌باشد؛ بنابراین آخرین عضو دسته پانزدهم صد و بیستمین جمله دنباله $a_n$ است. ($a_{120} = 360$)\nواضح است که اولین جمله دسته شانزدهم $363$ می‌باشد.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 76,
+    "solution_page": 7,
+    "solution_text": "می‌دانیم $a_{52}$ واسطه حسابی $a_{51}$ و $a_{53}$ است؛ بنابراین $2a_{52} = a_{51} + a_{53}$ خواهیم داشت:\n$a_{53}^2 - a_{51}^2 = a_{52} \\Rightarrow (a_{53} - a_{51})(a_{53} + a_{51}) = a_{52}$\n$\\Rightarrow (2d)(2a_{52}) = a_{52} \\xrightarrow{a_{52} \\neq 0} 4d = 1 \\Rightarrow d = \\frac{1}{4}$\n$a_{10} = -3 \\Rightarrow a + 9d = -3 \\Rightarrow a + \\frac{9}{4} = -3 \\Rightarrow a = -\\frac{21}{4}$\n$a < 0 \\Rightarrow a + (n - 1)d < 0 \\Rightarrow -\\frac{21}{4} + \\frac{1}{4}(n - 1) < 0$\n$\\Rightarrow n < 22 \\Rightarrow n \\leq 21$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 77,
+    "solution_page": 7,
+    "solution_text": "مجموع سه جمله اول $2$ برابر جمله دوم، مجموع سه جمله دوم سه برابر جمله پنجم، مجموع سه جمله سوم سه برابر جمله هشتم و ... می‌باشد. دنباله جدید به صورت زیر است.\n$3a_2, 3a_5, 3a_8, \\dots \\Rightarrow 3 \\times 4, 3 \\times 13, 3 \\times 22, \\dots$\n$\\Rightarrow 12, 39, 66, \\dots$\nجمله اول دنباله حسابی جدید $12$ و قدرنسبت آن $27$ است؛ بنابراین:\n$a_{10} = a + 9d = 12 + 9 \\times 27 = 255$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 78,
+    "solution_page": 8,
+    "solution_text": "در دنبالهٔ حسابی $a_n = 4n - 1$ قدرنسبت برابر ۴ است. خواهیم داشت:\n$\\frac{1}{a_1} - \\frac{1}{a_2} = \\frac{a_2 - a_1}{a_1a_2} = \\frac{d}{a_1a_2} = \\frac{4}{a_1a_2} \\Rightarrow \\frac{1}{a_1a_2} = \\frac{1}{4}(\\frac{1}{a_1} - \\frac{1}{a_2})$\n$\\frac{1}{a_2} - \\frac{1}{a_3} = \\frac{a_3 - a_2}{a_2a_3} = \\frac{d}{a_2a_3} = \\frac{4}{a_2a_3} \\Rightarrow \\frac{1}{a_2a_3} = \\frac{1}{4}(\\frac{1}{a_2} - \\frac{1}{a_3})$\n$\\vdots$\n$\\frac{1}{a_{19}} - \\frac{1}{a_{20}} = \\frac{a_{20} - a_{19}}{a_{19}a_{20}} = \\frac{d}{a_{19}a_{20}} = \\frac{4}{a_{19}a_{20}}$\n$\\Rightarrow \\frac{1}{a_{19}a_{20}} = \\frac{1}{4}(\\frac{1}{a_{19}} - \\frac{1}{a_{20}})$\nبنابراین:\n$A = \\frac{1}{a_1a_2} + \\frac{1}{a_2a_3} + \\cdots + \\frac{1}{a_{19}a_{20}}$\n$= \\frac{1}{4}(\\frac{1}{a_1} - \\frac{1}{a_2} + \\frac{1}{a_2} - \\frac{1}{a_3} + \\cdots + \\frac{1}{a_{19}} - \\frac{1}{a_{20}})$\n$= \\frac{1}{4}(\\frac{1}{a_1} - \\frac{1}{a_{20}}) = \\frac{1}{4}(\\frac{1}{3} - \\frac{1}{79}) = \\frac{19}{237}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 79,
+    "solution_page": 8,
+    "solution_text": "در دنبالهٔ حسابی اگر $m+n=p+q$ باشد، آن‌گاه $a_m + a_n = a_p + a_q$ بنابراین:\n$a_1+a_{12}=a_2+a_{11}=a_3+a_{10}=a_4+a_9=a_5+a_8=a_6+a_7=k$\nدر نتیجه جمع چهار جملهٔ دوم یعنی $a_5+a_6+a_7+a_8$ برابر $2k$ و مجموع چهار جملهٔ اول و چهار جملهٔ سوم یعنی $a_1+a_2+a_3+a_4+a_9+a_{10}+a_{11}+a_{12}$ برابر $4k$ است. نتیجه می‌شود مجموع دوازده جملهٔ اول $6k$ می‌باشد:\n$2k = 86 \\Rightarrow 6k = 258$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 80,
+    "solution_page": 8,
+    "solution_text": "$a$ واسطهٔ هندسی ۶ و $a-\\frac{3}{2}$ است؛ بنابراین:\n$a^2 = 6(a-\\frac{3}{2}) \\Rightarrow a^2-6a+9=0 \\Rightarrow (a-3)^2=0 \\Rightarrow a=3$\nنسبت هر جمله به جملهٔ قبلی در دنبالهٔ هندسی برابر قدرنسبت است.\n$q = \\frac{a}{6} = \\frac{3}{6} = \\frac{1}{2}$\nجملهٔ عمومی دنبالهٔ هندسی به صورت $t_n = t_1 q^{n-1}$ می‌باشد.\n$\\frac{t_7}{t_3} = \\frac{t_1 q^6}{t_1 q^2} = q^4 = \\frac{1}{16}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 81,
+    "solution_page": 8,
+    "solution_text": "$x$ واسطهٔ هندسی $-x-6$ و $x-4$ است.\n$x^2 = (-x-6)(x-4) \\Rightarrow 2x^2+2x-24=0$\n$\\Rightarrow x^2+x-12=0 \\Rightarrow (x+4)(x-3)=0$\n$\\Rightarrow \\begin{cases} x = -4 \\Rightarrow \\begin{cases} a_n : -2 , -4 , -8 , \\dots \\Rightarrow q=2 & \\checkmark \\\\ a_n : -9 , 3 , -1 , \\dots \\Rightarrow q=-\\frac{1}{3} & \\text{غ.ق.ق} \\end{cases} \\end{cases}$\nدر دنبالهٔ هندسی هرگاه $q<0$ باشد، دنباله غیریکنوا است (نه صعودی و نه نزولی است).\n$a<0 \\Rightarrow \\begin{cases} q>1 & \\text{نزولی} \\\\ 0<q<1 & \\text{صعودی} \\end{cases}$\n$a>0 \\Rightarrow \\begin{cases} q>1 & \\text{صعودی} \\\\ 0<q<1 & \\text{نزولی} \\end{cases}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 82,
+    "solution_page": 8,
+    "solution_text": "در دنبالهٔ $a_n$، جملهٔ اول $\\frac{2}{3}$ و قدرنسبت ۳ می‌باشد. جملات دنبالهٔ دوم را می‌نویسیم:\n$b_n : \\frac{2}{3} \\times 2 , 2 \\times 6 , 6 \\times 18 , \\dots \\Rightarrow b_n : \\frac{4}{3} , 12 , 108 , \\dots$\nدر دنبالهٔ $b_n$، جملهٔ اول $\\frac{4}{3}$ و قدرنسبت $q = \\frac{108}{12} = 9$ است.\n$b_9 = b_1 q^8 = \\frac{4}{3} \\times (9)^8 = \\frac{4}{3} \\times 3^{16} = 4 \\times 3^{15}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 83,
+    "solution_page": 8,
+    "solution_text": "جملهٔ عمومی دنبالهٔ هندسی داده‌شده $t_n = 4 \\times (\\frac{1}{2})^n$ است.\n$\\Rightarrow \\begin{cases} t_{10} = 4 \\times (\\frac{1}{2})^{10} \\\\ t_{20} = 4 \\times (\\frac{1}{2})^{20} \\end{cases} \\Rightarrow \\frac{(t_{10})^2}{t_{20}} = \\frac{16 \\times (\\frac{1}{2})^{20}}{4 \\times (\\frac{1}{2})^{20}} = 4$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 84,
+    "solution_page": 8,
+    "solution_text": "در دنبالهٔ $t_n = 6(2)^{1-2n}$ جملهٔ اول $t_1 = 6 \\times 2^{-1} = 3$ و جملهٔ دوم $t_2 = 6(2)^{-3} = \\frac{6}{8} = \\frac{3}{4}$ است. در نتیجه قدرنسبت به صورت $q = \\frac{t_2}{t_1} = \\frac{\\frac{3}{4}}{3} = \\frac{1}{4}$ می‌باشد.\nبنابراین در دنبالهٔ جدید $a_1 = 3+1 = 4$ و $q = \\frac{1}{4} + \\frac{1}{2} = \\frac{3}{4}$ است.\n$\\Rightarrow a_n = a_1 q^{n-1} = 4(\\frac{3}{4})^{n-1}$\n$\\Rightarrow a_{10} = 4(\\frac{3}{4})^9 = \\frac{3^9}{4^8} = 3 \\times (\\frac{3}{4})^8 = 3 \\times (0/75)^8$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 85,
+    "solution_page": 8,
+    "solution_text": "در دنبالهٔ بازگشتی داده‌شده، جملات را برحسب $a$ و $q$ بیان می‌کنیم:\n$3a_n + 4a_{n+1} \\Rightarrow 3aq^{n-1} + 4aq^n = 0$\n$\\Rightarrow aq^{n-1}(3+4q) = 0 \\xrightarrow{a,q \\neq 0} 3+4q = 0 \\Rightarrow q = -\\frac{3}{4}$\nدر دنبالهٔ هندسی، جملهٔ اول و قدرنسبت همواره مخالف صفر هستند. (*)\n$\\frac{a_{11}}{a_8} = \\frac{a q^{10}}{a q^7} = q^3 = (-\\frac{3}{4})^3 = \\frac{-27}{64}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 86,
+    "solution_page": 8,
+    "solution_text": "جملهٔ اول $a$ و جملهٔ سوم $2a+2$ است. جملهٔ دوم ۶ واحد از جملهٔ سوم کم‌تر است؛ بنابراین $2a+2-6 = 2a-4$.\n$a_n : a , 2a-4 , 2a+2 , \\dots$\n$2a-4$ واسطهٔ هندسی $a$ و $2a+2$ است:\n$(2a-4)^2 = a(2a+2) \\Rightarrow 2a^2 - 18a + 16 = 0$\n$\\Rightarrow \\begin{cases} a=1 \\Rightarrow q=-2 & \\text{غ.ق.ق} \\\\ a=8 \\Rightarrow q=\\frac{3}{2} & \\checkmark \\end{cases}$\n$a_4 = aq^3 = 8(\\frac{3}{2})^3 = 27$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 87,
+    "solution_page": 8,
+    "solution_text": "چهار جملهٔ دنباله به صورت $a , aq , aq^2 , aq^3$ می‌باشند.\nجملات دنباله مثبت و قدرنسبت بزرگ‌تر از ۱ است؛ بنابراین جملات به صورت افزایشی هستند.\n$\\begin{cases} a_4 - a_3 = 9 \\Rightarrow aq^3 - aq^2 = 9 \\Rightarrow aq^2(q-1) = 9 \\\\ a_2 - a_1 = 4 \\Rightarrow aq - a = 4 \\Rightarrow a(q-1) = 4 \\end{cases}$\n$\\xrightarrow{\\div} q^2 = \\frac{9}{4} \\Rightarrow q = \\frac{3}{2} \\Rightarrow a=8$\nخواهیم داشت:\n$a_3 - a_2 = aq^2 - aq = aq(q-1) = 8 \\times \\frac{3}{2} (\\frac{3}{2} - 1) = 6$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 88,
+    "solution_page": 9,
+    "solution_text": "دو عدد را $a$ و $b$ می‌نامیم.\n$\\begin{cases} a+b=30 \\Rightarrow b=30-a \\\\ ab=12^2=144 \\end{cases} \\Rightarrow a(30-a)=144$\n$\\Rightarrow a^2-30a+144=0 \\Rightarrow (a-6)(a-24)=0 \\Rightarrow \\begin{cases} a=6 \\\\ a=24 \\end{cases} \\Rightarrow \\begin{cases} b=24 \\\\ b=6 \\end{cases}$\n$|a-b|=|24-6|=18$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 89,
+    "solution_page": 9,
+    "solution_text": "روش اول: با درج ۴ واسطۀ هندسی بین ۴ و ۹۷۲، جملۀ اول دنباله ۴ و جملۀ ششم آن ۹۷۲ است.\n$a_6 = aq^5 \\Rightarrow 972 = 4q^5 \\Rightarrow q^5 = 243 \\Rightarrow q=3$\nاولین واسطۀ درج‌شده جملۀ دوم و چهارمین واسطۀ درج‌شده جملۀ پنجم دنباله است.\n$a_2 = aq = 4 \\times 3 = 12$\n$a_5 = \\frac{a_6}{q} = \\frac{972}{3} = 324 \\Rightarrow a_2 + a_5 = 12 + 324 = 336$\nروش دوم: اگر بین $a$ و $b$، $m$ واسطۀ هندسی درج شود قدرنسبت از رابطۀ $q = \\sqrt[m+1]{\\frac{b}{a}}$ قابل محاسبه است. ادامۀ حل مانند روش اول است.\n$(q = \\sqrt[5]{\\frac{972}{4}} = \\sqrt[5]{243} = 3)$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 90,
+    "solution_page": 9,
+    "solution_text": "مجموع سه جملۀ اول و سه جملۀ دوم را برحسب $a$ و $q$ نوشته، پس آن‌ها را بر هم تقسیم می‌کنیم:\n$\\begin{cases} a_1+a_2+a_3=a+aq+aq^2=a(1+q+q^2)=\\frac{13}{3} \\\\ a_4+a_5+a_6=aq^3+aq^4+aq^5=aq^3(1+q+q^2)=117 \\end{cases}$\n$\\Rightarrow q^3 = 27 \\Rightarrow q=3$\n$a(1+q+q^2)=\\frac{13}{3} \\Rightarrow a(1+3+9)=\\frac{13}{3} \\Rightarrow a=\\frac{1}{3}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 91,
+    "solution_page": 9,
+    "solution_text": "ابتدا قدرنسبت دنباله را به دست می‌آوریم:\n$\\frac{a_6}{a_4} = 3 \\Rightarrow \\frac{aq^5}{aq^3} = 3 \\Rightarrow q^2 = 3$\nخواهیم داشت:\n$\\frac{a_1+a_2+a_3+a_4}{a_1+a_2} = \\frac{S_4}{S_2} = \\frac{\\frac{a_1(1-q^4)}{1-q}}{\\frac{a_1(1-q^2)}{1-q}} = \\frac{1-q^4}{1-q^2} = 1+q^2 = 1+3 = 4$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 92,
+    "solution_page": 9,
+    "solution_text": "$a$ واسطۀ حسابی ۱ و $b$ و واسطۀ هندسی ۱ و $-b$ است؛ بنابراین:\n$\\begin{cases} 2a = b + 1 \\\\ a^2 = -b \\end{cases} \\Rightarrow 2a = -a^2 + 1 \\Rightarrow a^2 + 2a - 1 = 0$\n$\\Rightarrow a = \\frac{-2 \\pm \\sqrt{8}}{2} \\Rightarrow \\begin{cases} a = -1 - \\sqrt{2} \\quad \\text{غ‌ق‌ق} \\\\ a = -1 + \\sqrt{2} \\quad \\checkmark \\end{cases}$\nبا توجه به این که جملات دنباله مثبت هستند $-1-\\sqrt{2}=a$، قابل قبول نیست.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 93,
+    "solution_page": 9,
+    "solution_text": "عدد ۳ واسطۀ هندسی $a$ و $b$ می‌باشد؛ بنابراین: $ab=9$\nاگر واسطۀ حسابی $\\frac{1}{3-a}$ و $\\frac{1}{3-b}$ را $k$ بنامیم، خواهیم داشت:\n$k = \\frac{\\frac{1}{3-a}+\\frac{1}{3-b}}{2} = \\frac{\\frac{6-a-b}{(3-a)(3-b)}}{2} = \\frac{6-a-b}{2(9-3a-3b+ab)}$\n$= \\frac{6-a-b}{2(18-3a-3b)} = \\frac{6-a-b}{6(6-a-b)} = \\frac{1}{6}$",
+    "stated_correct_option": 0,
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 2; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 94,
+    "solution_page": 9,
+    "solution_text": "جملات $a_5$ ، $a_{21}$ و $a_{29}$ از دنبالۀ حسابی، تشکیل دنبالۀ هندسی می‌دهند؛ بنابراین $a_{21}$ واسطۀ هندسی $a_5$ و $a_{29}$ است.\n$a_{21}^2=a_5 a_{29} \\Rightarrow (a+20)^2=(a+4)(a+28)$\n$\\Rightarrow a^2+40a+400=a^2+32a+112 \\Rightarrow a=\\frac{-288}{8}=-36$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 95,
+    "solution_page": 9,
+    "solution_text": "روش اول: جملات چهارم، هفتم و بیست و هشتم دنبالۀ حسابی تشکیل دنبالۀ هندسی می‌دهند.\n$a_4, a_7, a_{28} \\Rightarrow (a_7)^2=a_4a_{28} \\Rightarrow (a+6d)^2=(a+3d)(a+27d)$\n$\\Rightarrow 18ad=-45d^2 \\Rightarrow a=-\\frac{5}{2}d$\n$q = \\frac{a_7}{a_4} = \\frac{a+6d}{a+3d} = \\frac{-\\frac{5}{2}d+6d}{-\\frac{5}{2}d+3d} = \\frac{\\frac{7}{2}d}{\\frac{d}{2}} = 7$\nجملۀ $n$ام دنبالۀ حسابی، جملۀ چهارم دنبالۀ هندسی است؛ بنابراین:\n$\\frac{a_n}{a_{28}} = q \\Rightarrow \\frac{a+(n-1)d}{a+27d} = 7 \\Rightarrow \\frac{-\\frac{5}{2}d+(n-1)d}{-\\frac{5}{2}d+27d} = 7 \\Rightarrow \\frac{n-\\frac{7}{2}}{\\frac{49}{2}} = 7 \\Rightarrow n=175$\nروش دوم:\n$a_4, a_7, a_{28} \\Rightarrow q = \\frac{28-7}{7-4} = \\frac{21}{3} = 7$\nادامۀ راه حل همانند روش اول است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 96,
+    "solution_page": 9,
+    "solution_text": "عدد ۱۶ واسطۀ هندسی $2^a$ و $2^b$ است؛ بنابراین:\n$16^2=2^a \\times 2^b \\Rightarrow 2^{a+b}=2^8 \\Rightarrow a+b=8 \\Rightarrow b=8-a$\n$b$ واسطۀ حسابی $3a$ و ۱۱ است، در نتیجه:\n$2b=3a+11 \\Rightarrow 2(8-a)=3a+11 \\Rightarrow a=1 \\Rightarrow b=7 \\Rightarrow ab=7$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 97,
+    "solution_page": 9,
+    "solution_text": "با درج دو واسطۀ هندسی، جملۀ چهارم دنباله برابر ۵۴ و جملۀ اول برابر ۱۶ است.\n$a_4=aq^3 \\Rightarrow 54=16q^3 \\Rightarrow q^3=\\frac{27}{8} \\Rightarrow q=\\frac{3}{2}$\nواسطه‌های درج‌شده عبارت‌اند از:\n$\\Rightarrow a_2=aq=16 \\times \\frac{3}{2}=24 \\quad , \\quad a_3=a_2 \\times q=24 \\times \\frac{3}{2}=36$\n$\\Rightarrow a_3-a_2=36-24=12$\nحال بررسی می‌کنیم چندمین جملۀ دنبالۀ هندسی $t_n$ برابر ۱۲ است:\n$t_n = 3 \\times 2^{8-n} = 12 \\Rightarrow 2^{8-n} = 4 = 2^2 \\Rightarrow 8-n=2 \\Rightarrow n=6$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 98,
+    "solution_page": 9,
+    "solution_text": "دنبالۀ $a_n : 2 , a_2 , 8 , \\dots$ یک دنبالۀ حسابی است:\n$a_3 = a+2d \\Rightarrow 8=2+2d \\Rightarrow d=3 \\Rightarrow a_n = 2+(n-1) \\times 3 = 3n-1$\nدنبالۀ $b_n : 2 , b_2 , 8 , \\dots$ یک دنبالۀ هندسی است:\n$b_3 = bq^2 \\Rightarrow 8=2q^2 \\Rightarrow q^2=4 \\Rightarrow b_7 = 2q^6 = 2 \\times 4^3 = 128$\nحال بررسی می‌کنیم چندمین جملۀ $a_n$ برابر ۱۲۸ است:\n$a_n = 3n-1 = 128 \\Rightarrow n=43$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 99,
+    "solution_page": 10,
+    "solution_text": "دنباله حسابی را $a_n$ می‌نامیم:\n$a_7 = a + 6d = 0 \\Rightarrow a = -6d$\nواسطه هندسی $a_8$ و $a_{16}$ را $k$ می‌نامیم:\n$k^2 = a_8 a_{16} = (a + 7d)(a + 15d) = d \\times 9d = 9d^2$\n$\\Rightarrow \\begin{cases} k = 3d \\\\ k = -3d \\end{cases} \\Rightarrow \\begin{cases} k = a + 9d \\\\ k = a + 3d \\end{cases} \\Rightarrow \\begin{cases} k = a_{10} \\\\ k = a_4 \\end{cases}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 100,
+    "solution_page": 10,
+    "solution_text": "دنباله هندسی را $a_n$ می‌نامیم. $a_2$، $a_4$ و $a_5$ تشکیل دنباله حسابی می‌دهند؛ بنابراین $a_4$ واسطه حسابی $a_2$ و $a_5$ است:\n$2a_4 = a_2 + a_5 \\Rightarrow 2aq^3 = aq + aq^4 \\Rightarrow aq^4 - 2aq^3 + aq = 0$\n$\\Rightarrow aq(q^3 - 2q^2 + 1) = 0 \\xrightarrow{aq \\neq 0} q^3 - 2q^2 + 1 = 0$\n$\\Rightarrow (q - 1)(q^2 - q - 1) = 0$\n$\\xrightarrow{q \\neq 1} q^2 - q - 1 = 0 \\Rightarrow q = \\frac{1 \\pm \\sqrt{5}}{2}$\n$\\Rightarrow q^2 = \\frac{(1 \\pm \\sqrt{5})^2}{4} = \\frac{6 \\pm 2\\sqrt{5}}{4} = \\frac{3 \\pm \\sqrt{5}}{2}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 101,
+    "solution_page": 10,
+    "solution_text": "برای این‌که معادله درجه‌دو دارای دو ریشه حقیقی متمایز باشد باید $\\Delta > 0$ باشد.\n$\\Delta > 0 \\Rightarrow (2a+24)^2 + 4a > 0 \\Rightarrow 4a^2 + 100a + 24^2 > 0$\n$\\Rightarrow a^2 + 25a + 144 > 0 \\Rightarrow (a+9)(a+16) > 0$\n$\\Rightarrow \\begin{array}{c|ccccc} a & & -16 & & -9 & \\\\ \\hline P & + & \\circ & - & \\circ & + \\end{array} \\Rightarrow \\begin{cases} a < -16 \\\\ a > -9 \\end{cases}$\nدر معادله درجه‌دو $ax^2 + bx + c = 0$ هرگاه $b$ عددی زوج باشد ($b=2k$) می‌توان از رابطه $\\Delta'$ به جای $\\Delta$ استفاده نمود.\n$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-2k \\pm \\sqrt{4k^2 - 4ac}}{2a} = \\frac{-k \\pm \\sqrt{k^2 - ac}}{a}$\n$k^2 - ac = \\Delta'$\nدر واقع در فرمول $\\Delta$ به جای $b$، نصف $b$ را قرار داده، و ضرایب را حذف می‌کنیم.\nدر این سؤال می‌توانستیم بنویسیم:\n$\\Delta' > 0 \\Rightarrow (a+12)^2 + a > 0 \\Rightarrow a^2 + 25a + 144 > 0$\nو ادامه راه‌حل ...",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 102,
+    "solution_page": 10,
+    "solution_text": "معادله درجه‌دو هنگامی ریشه حقیقی ندارد که $\\Delta < 0$ باشد. ($b$ زوج است و از رابطه $\\Delta'$ استفاده می‌کنیم.)\n$\\Delta' < 0 \\Rightarrow 9 - (m-2)(2m-1) < 0 \\Rightarrow 2m^2 - 5m - 7 > 0$\n$a+c=b$ می‌باشد بنابراین یکی از ریشه‌ها $m = -1$ و دیگری $m = -\\frac{c}{a} = \\frac{7}{2}$ است.\n$\\begin{array}{c|ccccc} m & & -1 & & \\frac{7}{2} & \\\\ \\hline P & + & \\circ & - & \\circ & + \\end{array} \\Rightarrow \\begin{cases} m < -1 \\\\ m > \\frac{7}{2} \\end{cases}$\n$\\Rightarrow m \\in (-\\infty, -1) \\cup (\\frac{7}{2}, +\\infty)$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 103,
+    "solution_page": 10,
+    "solution_text": "$\\Delta'$ را بزرگ‌تر از صفر قرار می‌دهیم.\n$\\Delta' > 0 \\Rightarrow 1 - (m-3)(m+3) > 0$\n$\\Rightarrow m^2 - 10 < 0 \\Rightarrow -\\sqrt{10} < m < \\sqrt{10}$\nدقت کنیم که به ازای $m=3$ معادله، درجه‌یک می‌شود و تنها یک ریشه دارد. بنابراین مقادیر صحیح قابل قبول برای $m$ عبارت‌اند از:\n$\\{-3, -2, -1, 0, 1, 2\\}$\nدقت داشته باشید اگر به جای $\\Delta'$ از $\\Delta$ استفاده شود تفاوتی در راه‌حل ایجاد نخواهد شد.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 104,
+    "solution_page": 10,
+    "solution_text": "یک خط بر یک سهمی مماس است هرگاه معادله حاصل از برابری آن‌ها با هم دارای ریشه مضاعف باشد. به عبارت دیگر $\\Delta = 0$ باشد.\n$\\begin{cases} y = (m-5)x^2 + (m+5)x - 10 \\\\ y = 3x - 1 \\end{cases}$\n$\\Rightarrow (m-5)x^2 + (m+5)x - 10 = 3x - 1$\n$\\Rightarrow (m-5)x^2 + (m+2)x - 9 = 0$\n$\\Delta = 0 \\Rightarrow (m+2)^2 + 36(m-5) = 0 \\Rightarrow m^2 + 40m - 176 = 0$\n$\\xrightarrow{\\text{روش } \\Delta'} m = -20 \\pm \\sqrt{400+176}$\n$= -20 \\pm \\sqrt{576} = -20 \\pm 24 \\Rightarrow \\begin{cases} m = 4 \\\\ m = -44 \\end{cases}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 105,
+    "solution_page": 10,
+    "solution_text": "اجاره سالن $n(n+8)$ هزار تومان است. بعد از اضافه شدن $2$ نفر اجاره سالن از رابطه $(n+2)15$ هزار تومان محاسبه می‌شود. بنابراین:\n$n(n+8) = 15(n+2) \\Rightarrow n^2 - 7n - 30 = 0$\n$\\Rightarrow (n+3)(n-10) = 0 \\Rightarrow \\begin{cases} n = -3 & \\text{غ ق ق} \\\\ n = 10 & \\checkmark \\end{cases}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 106,
+    "solution_page": 10,
+    "solution_text": "اجاره سالن $= n(n+8) = 10 \\times 18 = 180$ هزار تومان\nطول و عرض سالن به ترتیب برابر $2x+8$ و $2x+6$ می‌باشد. می‌دانیم مساحت سالن برابر $80$ است.\n$S = (8+2x)(6+2x) = 80 \\Rightarrow (x+4)(x+3) = 20$\n$\\Rightarrow x^2 + 7x - 8 = 0 \\xrightarrow{a+b+c=0} \\begin{cases} x = 1 \\\\ x = -8 & \\text{غ ق ق} \\end{cases}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 107,
+    "solution_page": 10,
+    "solution_text": "طول مستطیل را $x$ و عرض آن را $y$ می‌نامیم.\nمحیط $= 2(x+y) = 60 \\Rightarrow x+y=30$\nمساحت $= xy = 216 \\Rightarrow x(30-x) = 216$\n$\\Rightarrow x^2 - 30x + 216 = 0 \\Rightarrow (x-12)(x-18) = 0$\n$\\Rightarrow \\begin{cases} x=12 \\Rightarrow y=18 & \\text{غ ق ق} \\\\ x=18 \\Rightarrow y=12 & \\checkmark \\end{cases}$\nبنابراین:\n$\\frac{x}{y} = \\frac{18}{12} = \\frac{3}{2}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 108,
+    "solution_page": 10,
+    "solution_text": "طول کاشی را $x$ و عرض آن را $y$ می‌نامیم. $x = 4y-1$\nاگر مساحت کاشی را $S$ بنامیم خواهیم داشت:\n$30000S = 990000 \\Rightarrow S = 33 \\Rightarrow xy = 33$\n$\\Rightarrow (4y-1)y = 33 \\Rightarrow 4y^2 - y - 33 = 0$\n$\\Rightarrow y = \\frac{1 \\pm \\sqrt{1+528}}{8} = \\frac{1 \\pm 23}{8} \\Rightarrow \\begin{cases} y = -\\frac{11}{4} & \\text{غ ق ق} \\\\ y = 3 \\Rightarrow x = 11 \\end{cases}$\n$\\Rightarrow x-y = 8$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 109,
+    "solution_page": 10,
+    "solution_text": "در معادله $ax^2 + bx + c = 0$ با ریشه‌های $\\alpha$ و $\\beta$ می‌دانیم:\n$S = \\alpha + \\beta = -\\frac{b}{a} \\quad \\quad P = \\alpha\\beta = \\frac{c}{a}$\n$3x(x+2) = 1 \\Rightarrow 3x^2 + 6x - 1 = 0 \\Rightarrow S = -2, P = -\\frac{1}{3}$\n$\\frac{1}{\\alpha-1} + \\frac{1}{\\beta-1} = \\frac{\\alpha+\\beta-2}{(\\alpha-1)(\\beta-1)} = \\frac{\\alpha+\\beta-2}{\\alpha\\beta - (\\alpha+\\beta) + 1} = \\frac{S-2}{P-S+1} = \\frac{-2-2}{-\\frac{1}{3} + 2 + 1} = \\frac{-4}{\\frac{8}{3}} = -\\frac{3}{2}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 110,
+    "solution_page": 11,
+    "solution_text": "در معادله $2x^2 - 3x - 1 = 0$ می‌دانیم:\n$S = \\alpha+\\beta = \\frac{3}{2}$\n$P = \\alpha\\beta = -\\frac{1}{2}$\n$\\Rightarrow \\frac{\\alpha}{\\beta+1} + \\frac{\\beta}{\\alpha+1} = \\frac{\\alpha(\\alpha+1) + \\beta(\\beta+1)}{(\\alpha+1)(\\beta+1)}$\n$= \\frac{\\alpha^2+\\beta^2+\\alpha+\\beta}{\\alpha\\beta+\\alpha+\\beta+1} = \\frac{S^2-2P+S}{P+S+1} = \\frac{\\frac{9}{4} + 1 + \\frac{3}{2}}{-\\frac{1}{2} + \\frac{3}{2} + 1} = \\frac{\\frac{19}{4}}{2} = \\frac{19}{8}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 111,
+    "solution_page": 11,
+    "solution_text": "ابتدا مقادیر $S$ و $P$ را محاسبه می‌کنیم.\n$S = \\alpha+\\beta = -2$\n$P = \\alpha\\beta = \\frac{m}{2}$\nخواهیم داشت:\n$\\frac{\\beta}{\\alpha-2} = -\\frac{1}{3} \\Rightarrow 3\\beta+\\alpha=2 \\Rightarrow 2\\beta + (\\beta+\\alpha) = 2$\n$\\Rightarrow 2\\beta + (-2) = 2 \\Rightarrow \\beta = 2 \\xrightarrow{S = -2} \\alpha = -4$\n$P = \\frac{m}{2} = \\alpha\\beta = -8 \\Rightarrow m = -16$\nبا به دست آمدن مقدار $\\beta = 2$ می‌توانستیم مقدار $\\beta$ را در معادله قرار دهیم:\n$2\\beta^2 + 4\\beta + m = 0 \\Rightarrow 2(2)^2 + 4(2) + m = 0 \\Rightarrow m = -16$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 112,
+    "solution_page": 11,
+    "solution_text": "ریشه‌های معادله را $\\alpha$ و $2\\alpha-3$ می‌نامیم.\n$S = \\alpha + (2\\alpha-3) = 9 \\Rightarrow \\alpha = 4$\n$\\alpha = 4$ یکی از ریشه‌های معادله است. بنابراین در معادله صدق می‌کند.\n$\\alpha^2 - 9\\alpha + m = 0 \\Rightarrow (4)^2 - 9(4) + m = 0 \\Rightarrow m = 20$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 113,
+    "solution_page": 11,
+    "solution_text": "ریشه‌های معادله را $\\alpha$ و $3\\alpha$ می‌نامیم.\n$S = \\alpha + 3\\alpha = \\frac{8}{3} \\Rightarrow \\alpha = \\frac{2}{3}$\nمقدار $\\alpha = \\frac{2}{3}$ را در معادله قرار می‌دهیم.\n$3\\alpha^2 - 8\\alpha + k = 0 \\Rightarrow 3(\\frac{2}{3})^2 - 8(\\frac{2}{3}) + k = 0 \\Rightarrow \\frac{4}{3} - \\frac{16}{3} + k = 0 \\Rightarrow k = 4$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 114,
+    "solution_page": 11,
+    "solution_text": "ابتدا مقادیر $S$ و $P$ را محاسبه می‌کنیم.\n$S = \\alpha+\\beta = \\frac{2-m}{m}$\n$P = \\alpha\\beta = \\frac{-6}{m}$\nخواهیم داشت:\n$\\alpha^2+\\beta^2 = S^2 - 2P = 13 \\Rightarrow (\\frac{2-m}{m})^2 - 2(\\frac{-6}{m}) - 13 = 0$\nدو طرف معادله را در $m^2$ ضرب می‌کنیم.\n$(m-2)^2 + 12m - 13m^2 = 0 \\Rightarrow -12m^2 + 8m + 4 = 0$\n$\\Rightarrow 3m^2 - 2m - 1 = 0 \\Rightarrow \\begin{cases} m = 1 \\ \\ \\checkmark \\\\ m = -\\frac{1}{3} \\end{cases}$\nاگر $m = -\\frac{1}{3}$ باشد $\\Delta < 0$ شده و معادله ریشه حقیقی ندارد.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 115,
+    "solution_page": 11,
+    "solution_text": "مقادیر $S$ و $P$ را محاسبه می‌کنیم.\n$S = \\alpha+\\beta = -\\frac{k}{9}$\n$P = \\alpha\\beta = \\frac{1}{9}$\nمی‌دانیم:\n$\\sqrt{\\alpha} + \\sqrt{\\beta} = \\sqrt{S+2\\sqrt{P}}$\nخواهیم داشت:\n$\\frac{1}{\\sqrt{\\alpha}} + \\frac{1}{\\sqrt{\\beta}} = 9 \\Rightarrow \\frac{\\sqrt{\\alpha} + \\sqrt{\\beta}}{\\sqrt{\\alpha\\beta}} = 9 \\Rightarrow \\frac{\\sqrt{S+2\\sqrt{P}}}{\\sqrt{P}} = 9$\n$\\Rightarrow \\frac{\\sqrt{-\\frac{k}{9} + 2\\sqrt{\\frac{1}{9}}}}{\\sqrt{\\frac{1}{9}}} = 9 \\Rightarrow \\frac{\\sqrt{-\\frac{k}{9} + \\frac{2}{3}}}{\\frac{1}{3}} = 9 \\Rightarrow \\sqrt{-\\frac{k}{9} + \\frac{2}{3}} = 3$\n$\\Rightarrow -\\frac{k}{9} + \\frac{2}{3} = 9 \\Rightarrow -\\frac{k}{9} = \\frac{25}{3} \\Rightarrow k = -75$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 116,
+    "solution_page": 11,
+    "solution_text": "روش اول: مقادیر $S$ و $P$ عبارت‌اند از:\n$S = \\alpha+\\beta = 9$\n$P = \\alpha\\beta = 4$\nحال مقدار $A$ را محاسبه می‌کنیم.\n$A = \\alpha\\sqrt{\\beta} + \\beta\\sqrt{\\alpha} = \\sqrt{\\alpha\\beta}(\\sqrt{\\alpha} + \\sqrt{\\beta}) = \\sqrt{P}(\\sqrt{S+2\\sqrt{P}})$\n$= \\sqrt{4}(\\sqrt{9+2\\sqrt{4}}) = 2\\sqrt{13}$\nروش دوم: ابتدا $A^2$ را محاسبه می‌کنیم.\n$A^2 = \\alpha^2\\beta + \\beta^2\\alpha + 2\\alpha\\beta\\sqrt{\\alpha\\beta} = \\alpha\\beta(\\alpha+\\beta) + 2\\alpha\\beta\\sqrt{\\alpha\\beta}$\n$= PS + 2P\\sqrt{P} = 36 + 16 = 52 \\xrightarrow{A > 0} A = \\sqrt{52} = 2\\sqrt{13}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 117,
+    "solution_page": 11,
+    "solution_text": "با کمی دقت درمی‌یابیم که $x = 2$ یکی از ریشه‌های معادله است زیرا در معادله صدق می‌کند.\n$ax^2 - 2bx + 4c = 0 \\xrightarrow{x=2} 4a - 4b + 4c = 0 \\Rightarrow a + c = b \\ \\ \\checkmark$\nاگر ریشه دیگر را $\\alpha$ بنامیم خواهیم داشت:\n$P = 2\\alpha = \\frac{4c}{a} \\Rightarrow \\alpha = \\frac{2c}{a}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 118,
+    "solution_page": 11,
+    "solution_text": "$x = -2$ یکی از ریشه‌های معادله است زیرا در معادله صدق می‌کند.\n$4a - 2b - 2c = 0 \\Rightarrow 4a = 2b + 2c \\Rightarrow b + c = 2a \\ \\ \\checkmark$\nاگر ریشه دیگر را $\\alpha$ بنامیم خواهیم داشت:\n$P = -2\\alpha = -\\frac{2c}{a} \\Rightarrow \\alpha = \\frac{c}{a}$\n$S = \\alpha - 2 = -\\frac{b}{a} \\Rightarrow \\alpha = 2 - \\frac{b}{a}$\nیعنی ریشه دیگر یا به صورت $\\frac{c}{a}$ بیان می‌شود و یا $2 - \\frac{b}{a}$ که در گزینه ۳ آمده است.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 119,
+    "solution_page": 11,
+    "solution_text": "ریشه‌های تابع را $\\alpha$ و $3\\alpha$ می‌نامیم.\n$S = \\alpha+3\\alpha = -\\frac{b}{a} \\Rightarrow \\alpha = -\\frac{b}{4a}$\n$P = \\alpha(3\\alpha) = -\\frac{2}{a} \\Rightarrow \\alpha^2 = -\\frac{2}{3a}$\n$\\Rightarrow (-\\frac{b}{4a})^2 = -\\frac{2}{3a} \\Rightarrow \\frac{b^2}{16a^2} = -\\frac{2}{3a} \\Rightarrow b^2 = -\\frac{32}{3}a$\nعرض رأس سهمی برابر با $-\\frac{\\Delta}{4a}$ می‌باشد:\n$-\\frac{\\Delta}{4a} = -\\frac{b^2+8a}{4a} = -\\frac{-\\frac{32}{3}a + 8a}{4a} = \\frac{\\frac{8}{3}a}{4a} = \\frac{2}{3}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 120,
+    "solution_page": 11,
+    "solution_text": "ریشه‌های معادله را $2k$ و $2k+2$ می‌نامیم. ($k \\in \\mathbb{Z}$)\n$S = 2k + (2k+2) = a \\Rightarrow a = 4k+2$\n$P = 2k(2k+2) = \\dfrac{3}{2}a + 3 \\xrightarrow{a=4k+2} 4k^2 + 4k = \\dfrac{3}{2}(4k+2)+3$\n$\\Rightarrow 4k^2 - 2k - 6 = 0 \\Rightarrow \\begin{cases} k = -1 \\quad \\checkmark \\\\ k = \\dfrac{3}{2} \\quad \\text{غ ق ق} \\; (k \\; \\text{عددی صحیح است}) \\end{cases}$\n$a = 4k + 2 = -2$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 121,
+    "solution_page": 12,
+    "solution_text": "مقادیر S و P را محاسبه می‌کنیم:\n$S = a + b = b - 2 \\Rightarrow a = -2$\n$P = ab = -4a \\Rightarrow -2b = 8 \\Rightarrow b = -4 \\Rightarrow \\dfrac{b}{a} = \\dfrac{-4}{-2} = 2$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 122,
+    "solution_page": 12,
+    "solution_text": "در معادلهٔ $x^2 + 4x - 3 = 0$ اگر $\\alpha$ و $\\beta$ ریشه‌های معادله باشند خواهیم داشت:\n$S = \\alpha + \\beta = -4 \\qquad P = \\alpha\\beta = -3 \\Rightarrow \\begin{cases} \\alpha = -\\dfrac{3}{\\beta} \\\\ \\beta = -\\dfrac{3}{\\alpha} \\end{cases}$\nحال عبارت خواسته‌شده را محاسبه می‌کنیم:\n$(\\alpha - \\dfrac{3}{\\beta})^3 + (\\beta - \\dfrac{3}{\\alpha})^3 = (\\alpha + \\alpha)^3 + (\\beta + \\beta)^3 = 8(\\alpha^3 + \\beta^3)$\n$= 8(S^3 - 3PS) = 8[(-4)^3 - 3(-3)(-4)] = -800$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 123,
+    "solution_page": 12,
+    "solution_text": "روش اول: معادله را به صورت معادلهٔ درجه‌دو نوشته، مقادیر S و P را محاسبه می‌کنیم:\n$x - 3 = \\dfrac{2}{x} \\Rightarrow x^2 - 3x - 2 = 0 \\Rightarrow S = 3, P = -2$\nعبارت $\\alpha^2 + 3\\beta$ برحسب $\\alpha$ و $\\beta$ نامتقارن است. ابتدا آن را متقارن می‌کنیم. می‌دانیم $\\alpha$ ریشهٔ معادله است. بنابراین در معادله صدق می‌کند.\n$\\alpha^2 - 3\\alpha - 2 = 0 \\Rightarrow \\alpha^2 = 3\\alpha + 2$\n$\\Rightarrow \\alpha^2 + 3\\beta = (3\\alpha + 2) + 3\\beta = 3(\\alpha + \\beta) + 2 = 3S + 2 = 9 + 2 = 11$\nروش دوم: تفاوتی بین ریشه‌های $\\alpha$ و $\\beta$ برای ما وجود ندارد بنابراین باید $\\alpha^2 + 3\\beta = \\beta^2 + 3\\alpha$ باشد.\n$\\left. \\begin{matrix} \\alpha^2 + 3\\beta = k \\\\ \\beta^2 + 3\\alpha = k \\end{matrix} \\right\\} \\Rightarrow \\alpha^2 + \\beta^2 + 3(\\alpha + \\beta) = 2k$\n$\\Rightarrow 2k = S^2 - 2P + 3S = (3)^2 - 2(-2) + 3(3) = 22 \\Rightarrow k = 11$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 124,
+    "solution_page": 12,
+    "solution_text": "روش اول: عبارت $4\\alpha^3 + 11\\beta$ متقارن نیست. می‌دانیم $\\alpha$ ریشهٔ معادله است بنابراین در آن صدق می‌کند.\n$2\\alpha^2 + \\alpha - 5 = 0 \\Rightarrow 2\\alpha^2 = -\\alpha + 5$\n$\\Rightarrow 4\\alpha^3 = -2\\alpha^2 + 10\\alpha = (\\alpha - 5) + 10\\alpha = 11\\alpha - 5$\nخواهیم داشت:\n$4\\alpha^3 + 11\\beta = 11\\alpha - 5 + 11\\beta = 11(\\alpha + \\beta) - 5$\n$= 11(-\\dfrac{1}{2}) - 5 = -10/5$\nروش دوم: چون از ماهیت $\\alpha$ و $\\beta$ بی‌اطلاع هستیم باید $4\\alpha^3 + 11\\beta = 4\\beta^3 + 11\\alpha$ باشد.\n$\\left. \\begin{matrix} 4\\alpha^3 + 11\\beta = k \\\\ 4\\beta^3 + 11\\alpha = k \\end{matrix} \\right\\} \\Rightarrow 4(\\alpha^3 + \\beta^3) + 11(\\alpha + \\beta) = 2k$\n$\\Rightarrow 2k = 4(S^3 - 3PS) + 11S$\n$= 4((-\\dfrac{1}{2})^3 - 3(-\\dfrac{5}{2})(-\\dfrac{1}{2})) + 11(-\\dfrac{1}{2})$\n$= 4(-\\dfrac{1}{8} - \\dfrac{15}{4}) - \\dfrac{11}{2} = -21 \\Rightarrow k = -10/5$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 125,
+    "solution_page": 12,
+    "solution_text": "روش اول: می‌دانیم $\\alpha$ ریشهٔ معادله است. بنابراین در آن صدق می‌کند.\n$\\alpha^2 + \\alpha - 3 = 0 \\Rightarrow \\alpha^2 = -\\alpha + 3$\n$\\Rightarrow \\alpha^3 = -\\alpha^2 + 3\\alpha = (\\alpha - 3) + 3\\alpha = 4\\alpha - 3$\nاز طرفی اگر ریشهٔ دیگر معادله را $\\beta$ بنامیم خواهیم داشت:\n$S = \\alpha + \\beta = -1$\n$P = \\alpha\\beta = -3 \\Rightarrow \\beta = -\\dfrac{3}{\\alpha} \\Rightarrow -\\dfrac{12}{\\alpha} = 4\\beta$\nبنابراین:\n$\\alpha^3 - \\dfrac{12}{\\alpha} = 4\\alpha - 3 + 4\\beta = 4(\\alpha + \\beta) - 3 = -7$\nروش دوم: $\\alpha^3 - \\dfrac{12}{\\alpha} = k$ در نظر می‌گیریم. اگر ریشهٔ دیگر معادله $\\beta$ باشد قطعاً $\\beta^3 - \\dfrac{12}{\\beta} = k$ می‌باشد. زیرا نمی‌دانیم $\\alpha$ کدام ریشه است بنابراین حاصل $\\alpha^3 - \\dfrac{12}{\\alpha}$ باید با $\\beta^3 - \\dfrac{12}{\\beta}$ برابر باشد.\n$\\left. \\begin{matrix} \\alpha^3 - \\dfrac{12}{\\alpha} = k \\\\ \\beta^3 - \\dfrac{12}{\\beta} = k \\end{matrix} \\right\\} \\Rightarrow \\alpha^3 + \\beta^3 - 12(\\dfrac{1}{\\alpha} + \\dfrac{1}{\\beta}) = 2k$\n$\\Rightarrow 2k = S^3 - 3SP - 12(\\dfrac{S}{P}) = (-1)^3 - 3(-1)(-3) - 12(\\dfrac{-1}{-3})$\n$= -10 - 4 = -14 \\Rightarrow k = -7$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 126,
+    "solution_page": 12,
+    "solution_text": "$\\alpha$ یکی از ریشه‌های معادله است. بنابراین در معادله صدق می‌کند.\n$\\alpha^2 - m\\alpha + 3m = 0 \\Rightarrow \\alpha^2 = m\\alpha - 3m$\nمی‌دانیم: $\\alpha^2 + m\\beta = 4 \\Rightarrow m\\alpha - 3m + m\\beta = 4$\n$\\Rightarrow m(\\alpha + \\beta) - 3m = 4 \\xrightarrow{\\alpha+\\beta=m} m^2 - 3m - 4 = 0$\n$\\Rightarrow \\begin{cases} m = -1 \\quad \\checkmark \\\\ m = 4 \\quad \\text{غ ق ق} \\; (\\text{در این حالت} \\; \\Delta < 0 \\; \\text{است}) \\end{cases}$\nبنابراین معادله به صورت $x^2 + x - 3 = 0$ می‌باشد که: $P = \\alpha\\beta = -3$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 127,
+    "solution_page": 12,
+    "solution_text": "$\\alpha$ و $\\beta$ معکوس یکدیگرند. بنابراین:\n$P = \\alpha\\beta = 1 \\Rightarrow \\dfrac{m^2 + 4}{5m} = 1$\n$\\Rightarrow m^2 - 5m + 4 = 0 \\Rightarrow \\begin{cases} m = 1 \\\\ m = 4 \\quad \\text{غ ق ق} \\end{cases}$\nاگر $m = 4$ باشد $\\Delta < 0$ می‌شود و معادله دارای ریشهٔ حقیقی نیست.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 128,
+    "solution_page": 12,
+    "solution_text": "$\\alpha$ و $\\beta$ ریشه‌های معادلهٔ $4x^2 - 3x - 3 = 0$ هستند.\nبنابراین:\n$S = \\alpha + \\beta = \\dfrac{3}{4} \\qquad P = \\alpha\\beta = -\\dfrac{3}{4}$\nاگر $\\dfrac{1}{\\alpha^3}$ و $\\dfrac{1}{\\beta^3}$ ریشه‌های معادلهٔ $27x^2 - kx + 64 = 0$ باشند خواهیم داشت:\n$S' = \\dfrac{1}{\\alpha^3} + \\dfrac{1}{\\beta^3} = \\dfrac{k}{27} \\Rightarrow \\dfrac{k}{27} = \\dfrac{\\alpha^3 + \\beta^3}{\\alpha^3\\beta^3} = \\dfrac{S^3 - 3PS}{P^3}$\n$= \\dfrac{(\\frac{3}{4})^3 - 3(-\\frac{3}{4})(\\frac{3}{4})}{(-\\frac{3}{4})^3} = \\dfrac{\\frac{27}{64} + \\frac{27}{16}}{-\\frac{27}{64}} = -5 \\Rightarrow k = 135$",
+    "stated_correct_option": 0,
+    "media_regions": [],
+    "review_notes": [
+      "stated_correct_option 4 conflicts with authoritative answer key 3; cleared by repair_nardebam_solution_key_mismatches."
+    ]
+  },
+  {
+    "question_number": 129,
+    "solution_page": 13,
+    "solution_text": "روش اول: $\\alpha$ و $\\beta$ ریشه‌های معادلة $۲x^۲ - ۵x + ۱ = ۰$ هستند.\n$S = \\alpha + \\beta = \\frac{۵}{۲}$\n$P = \\alpha \\beta = \\frac{۱}{۲}$\nریشه‌های معادلة جدید $\\frac{۱}{\\alpha} - ۳$ و $\\frac{۱}{\\beta} - ۳$ می‌باشند:\n$S' = (\\frac{۱}{\\alpha} - ۳) + (\\frac{۱}{\\beta} - ۳) = \\frac{۱}{\\alpha} + \\frac{۱}{\\beta} - ۶ = \\frac{\\alpha + \\beta}{\\alpha \\beta} - ۶ = \\frac{S}{P} - ۶ = ۵ - ۶ = -۱$\n$P' = (\\frac{۱}{\\alpha} - ۳)(\\frac{۱}{\\beta} - ۳) = \\frac{۱}{\\alpha\\beta} - ۳(\\frac{۱}{\\alpha} + \\frac{۱}{\\beta}) + ۹ = \\frac{۱}{P} - \\frac{۳S}{P} + ۹ = ۲ - ۱۵ + ۹ = -۴$\nمعادله جدید: $x^۲ - S'x + P' = ۰ \\Rightarrow x^۲ + x - ۴ = ۰$\nروش دوم: اگر $x$ ریشۀ معادلة $۲x^۲ - ۵x + ۱ = ۰$ باشد $x' = \\frac{۱}{x} - ۳$ ریشۀ معادلة جدید است.\n$x' = \\frac{۱}{x} - ۳ \\Rightarrow \\frac{۱}{x} = x' + ۳ \\Rightarrow x = \\frac{۱}{x' + ۳}$\nدر معادلة اول به جای $x$ مقدار $\\frac{۱}{x' + ۳}$ را قرار می‌دهیم.\n$۲(\\frac{۱}{x' + ۳})^۲ - ۵(\\frac{۱}{x' + ۳}) + ۱ = ۰ \\xrightarrow{\\times (x'+۳)^۲} ۲ - ۵(x' + ۳) + (x' + ۳)^۲ = ۰ \\Rightarrow x'^۲ + x' - ۴ = ۰$\nمعادلة جدید: $x^۲ + x - ۴ = ۰$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 130,
+    "solution_page": 13,
+    "solution_text": "$\\alpha$ و $\\beta$ ریشه‌های معادلة $x^۲ + ۳x - ۳ = ۰$ هستند.\n$S = \\alpha + \\beta = -۳$\n$P = \\alpha\\beta = -۳$\nاگر $\\frac{۲}{\\alpha}$ و $\\frac{۲}{\\beta}$ ریشه‌های معادلة $mx^۲ + mnx - ۴ = ۰$ باشند خواهیم داشت:\n$S' = \\frac{۲}{\\alpha} + \\frac{۲}{\\beta} = -n \\Rightarrow -n = \\frac{۲(\\alpha + \\beta)}{\\alpha\\beta} = \\frac{۲(-۳)}{-۳} = ۲ \\Rightarrow n = -۲$\n$P' = \\frac{۲}{\\alpha} \\times \\frac{۲}{\\beta} = - \\frac{۴}{m} \\Rightarrow -\\frac{۴}{m} = \\frac{۴}{\\alpha\\beta} = -\\frac{۴}{۳} \\Rightarrow m = ۳$\n$\\Rightarrow m - n = ۵$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 131,
+    "solution_page": 13,
+    "solution_text": "$\\alpha$ و $\\beta$ ریشه‌های معادلة $x^۲ + ۴x - ۲ = ۰$ هستند.\n$S = \\alpha + \\beta = -۴$\n$P = \\alpha \\beta = -۲$\nاگر $\\frac{۲}{\\alpha} + k$ و $\\frac{۲}{\\beta} + k$ ریشه‌های معادلة $x^۲ - ۶x + m = ۰$ باشند خواهیم داشت:\n$S' = (\\frac{۲}{\\alpha} + k) + (\\frac{۲}{\\beta} + k) = ۶ \\Rightarrow ۲(\\frac{۱}{\\alpha} + \\frac{۱}{\\beta}) + ۲k = ۶ \\Rightarrow ۲\\frac{S}{P} + ۲k = ۶ \\Rightarrow ۴ + ۲k = ۶ \\Rightarrow k = ۱$\n$P' = (\\frac{۲}{\\alpha} + k)(\\frac{۲}{\\beta} + k) = m \\Rightarrow m = (\\frac{۲}{\\alpha} + ۱)(\\frac{۲}{\\beta} + ۱) = \\frac{۴}{\\alpha\\beta} + ۲(\\frac{۱}{\\alpha} + \\frac{۱}{\\beta}) + ۱ = \\frac{۴}{P} + \\frac{۲S}{P} + ۱ = -۲ + ۴ + ۱ = ۳$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 132,
+    "solution_page": 13,
+    "solution_text": "اگر $\\alpha$ و $\\beta$ ریشه‌های معادلة $x^۲ - ۴x - ۲ = ۰$ باشند خواهیم داشت:\n$P = \\alpha \\beta = -۲$\n$S = \\alpha + \\beta = ۴ \\Rightarrow \\alpha = ۴ - \\beta$\nریشه‌های معادلة جدید $\\frac{۱}{\\alpha + ۱}$ و $\\frac{۱}{۵ - \\alpha}$ می‌باشد.\n$\\frac{۱}{۵ - \\alpha} = \\frac{۱}{۵ - (۴ - \\beta)} = \\frac{۱}{\\beta + ۱}$\nبنابراین به دنبال معادله‌ای می‌گردیم که ریشه‌های آن $\\frac{۱}{\\alpha + ۱}$ و $\\frac{۱}{\\beta + ۱}$ باشد.\n$S' = \\frac{۱}{\\alpha + ۱} + \\frac{۱}{\\beta + ۱} = \\frac{\\alpha + \\beta + ۲}{(\\alpha + ۱)(\\beta + ۱)} = \\frac{\\alpha + \\beta + ۲}{\\alpha\\beta + \\alpha + \\beta + ۱} = \\frac{S + ۲}{P + S + ۱} = \\frac{۴ + ۲}{-۲ + ۴ + ۱} = ۲$\n$P' = (\\frac{۱}{\\alpha + ۱})(\\frac{۱}{\\beta + ۱}) = \\frac{۱}{P + S + ۱} = \\frac{۱}{۳}$\nمعادلة جدید : $x^۲ - S'x + P' = ۰ \\Rightarrow x^۲ - ۲x + \\frac{۱}{۳} = ۰ \\Rightarrow ۳x^۲ - ۶x + ۱ = ۰$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 133,
+    "solution_page": 13,
+    "solution_text": "$\\alpha$ و $\\beta$ ریشه‌های معادلة $x^۲ - ax + a - ۳ = ۰$ هستند.\n$S = \\alpha + \\beta = a$\n$P = \\alpha\\beta = a - ۳$\n$\\alpha^۲$ و $\\beta^۲$ ریشه‌های معادلة $x^۲ - ۴۱x + b = ۰$ هستند.\n$S' = \\alpha^۲ + \\beta^۲ = ۴۱ \\Rightarrow S^۲ - ۲P = ۴۱ \\Rightarrow a^۲ - ۲(a - ۳) - ۴۱ = ۰ \\Rightarrow a^۲ - ۲a - ۳۵ = ۰ \\Rightarrow (a - ۷)(a + ۵) = ۰ \\Rightarrow \\begin{cases} a = ۷ \\\\ a = -۵ \\end{cases}$\n$P' = \\alpha^۲\\beta^۲ = P^۲ = (a - ۳)^۲ \\Rightarrow \\begin{cases} P' = ۱۶ \\\\ P' = ۶۴ \\end{cases} \\Rightarrow \\begin{cases} b = ۱۶ \\\\ b = ۶۴ \\end{cases}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 134,
+    "solution_page": 13,
+    "solution_text": "مجموع و حاصل‌ضرب ریشه‌های معادلة $x^۲ + ۶x - ۳ = ۰$ را $S'$ و $P'$ می‌نامیم:\n$S' = (۳\\alpha - ۱) + (۳\\beta - ۱) = -۶ \\Rightarrow ۳(\\alpha + \\beta) - ۲ = -۶ \\Rightarrow S = \\alpha + \\beta = -\\frac{۴}{۳}$\n$P' = (۳\\alpha - ۱)(۳\\beta - ۱) = -۳ \\Rightarrow ۹\\alpha\\beta - ۳(\\alpha + \\beta) + ۱ = -۳ \\Rightarrow P = \\alpha\\beta = \\frac{-۸}{۹}$\nمعادله‌ای که ریشه‌های آن $\\alpha$ و $\\beta$ هستند : $x^۲ - Sx + P = ۰ \\Rightarrow x^۲ + \\frac{۴}{۳}x - \\frac{۸}{۹} = ۰ \\Rightarrow ۹x^۲ + ۱۲x - ۸ = ۰$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 135,
+    "solution_page": 13,
+    "solution_text": "$\\alpha + ۲$ و $\\beta + ۲$ ریشه‌های معادلة $x^۲ - ۵x + ۳ = ۰$ هستند.\n$S' = (\\alpha + ۲) + (\\beta + ۲) = ۵ \\Rightarrow \\alpha + \\beta + ۴ = ۵ \\Rightarrow S = \\alpha + \\beta = ۱$\n$P' = (\\alpha + ۲)(\\beta + ۲) = ۳ \\Rightarrow \\alpha\\beta + ۲(\\alpha + \\beta) + ۴ = ۳ \\Rightarrow P = \\alpha\\beta = -۳$\nحال، معادله‌ای را می‌یابیم که ریشه‌های آن $\\frac{۱}{\\alpha - ۱}$ و $\\frac{۱}{\\beta - ۱}$ باشد.\n$S'' = \\frac{۱}{\\alpha - ۱} + \\frac{۱}{\\beta - ۱} = \\frac{\\alpha + \\beta - ۲}{(\\alpha - ۱)(\\beta - ۱)} = \\frac{\\alpha + \\beta - ۲}{\\alpha\\beta - (\\alpha + \\beta) + ۱} = \\frac{S - ۲}{P - S + ۱} = \\frac{-۱}{-۳} = \\frac{۱}{۳}$\n$P'' = (\\frac{۱}{\\alpha - ۱})(\\frac{۱}{\\beta - ۱}) = \\frac{۱}{P - S + ۱} = -\\frac{۱}{۳}$\nمعادلۀ جدید : $x^۲ - S''x + P'' = ۰ \\Rightarrow x^۲ - \\frac{۱}{۳}x - \\frac{۱}{۳} = ۰ \\Rightarrow ۳x^۲ - x - ۱ = ۰$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 136,
+    "solution_page": 14,
+    "solution_text": "با کمی دقت در می‌یابیم که هر یک از ریشه‌های معادلهٔ خواسته‌شده ۲ واحد بیشتر از ریشه‌های معادلهٔ اولیه است. بنابراین اگر ریشه‌های معادلهٔ $۲x^{۲} - ۳x - ۷ = ۰$ را $\\alpha'$ و $\\beta'$ بنامیم ریشه‌های معادلهٔ مورد نظر $\\alpha' + ۲$ و $\\beta' + ۲$ می‌باشد.\n$S = \\alpha' + \\beta' = \\frac{۳}{۲}$\n$P = \\alpha'\\beta' = - \\frac{۷}{۲}$\nمجموع و ضرب ریشه‌های معادلهٔ خواسته‌شده را $S'$ و $P'$ می‌نامیم.\n$S' = (\\alpha' + ۲) + (\\beta' + ۲) = S + ۴ = \\frac{۱۱}{۲}$\n$P' = (\\alpha' + ۲)(\\beta' + ۲) = \\alpha'\\beta' + ۲(\\alpha' + \\beta') + ۴$\n$= P + ۲S + ۴ = - \\frac{۷}{۲} + ۳ + ۴ = \\frac{۷}{۲}$\nمعادلهٔ جدید : $x^{۲} - S'x + P' = ۰ \\Rightarrow x^{۲} - \\frac{۱۱}{۲}x + \\frac{۷}{۲} = ۰$\n$\\Rightarrow ۲x^{۲} - ۱۱x + ۷ = ۰$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 137,
+    "solution_page": 14,
+    "solution_text": "در معادلهٔ $ax^{۲} + bx + c = ۰$ حاصل‌ضرب ریشه‌ها برابر $\\frac{c}{a}$ و قدرمطلق تفاضل ریشه‌ها برابر $\\frac{\\sqrt{\\Delta}}{|a|}$ است. تنها گزینه‌ای که $\\frac{c}{a} = - \\frac{۲}{۳}$ و $\\frac{\\sqrt{\\Delta}}{|a|} = ۲$ می‌باشد ۱ است.\n$۳x^{۲} + ۲\\sqrt{۳}x - ۲ = ۰$\n$P = \\alpha\\beta = \\frac{c}{a} = - \\frac{۲}{۳}$\n$|\\alpha - \\beta| = \\frac{\\sqrt{\\Delta}}{|a|} = \\frac{\\sqrt{۱۲ + ۲۴}}{|۳|} = \\frac{۶}{۳} = ۲$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 138,
+    "solution_page": 14,
+    "solution_text": "ابتدا $S$ و $P$ را محاسبه می‌کنیم.\n$\\alpha^{۲} + \\beta^{۲} = S^{۲} - ۲P = ۶/۵$\n$\\alpha - \\beta = ۲ \\Rightarrow (\\alpha - \\beta)^{۲} = ۴ \\Rightarrow \\underbrace{\\alpha^{۲} + \\beta^{۲}}_{۶/۵} - ۲\\alpha\\beta = ۴$\n$\\Rightarrow \\alpha\\beta = \\frac{۵}{۴} \\Rightarrow P = \\frac{۵}{۴}$\n$S^{۲} - ۲P = \\frac{۱۳}{۲}$\n$\\Rightarrow S^{۲} - \\frac{۵}{۲} = \\frac{۱۳}{۲} \\Rightarrow S^{۲} = ۹ \\Rightarrow S = \\pm ۳$\nمعادلهٔ مورد نظر : $x^{۲} - Sx + P = ۰ \\Rightarrow x^{۲} \\pm ۳x + \\frac{۵}{۴} = ۰$\n$\\Rightarrow ۴x^{۲} \\pm ۱۲x + ۵ = ۰ \\xrightarrow{\\text{ریشه‌ها منفی}} ۴x^{۲} + ۱۲x + ۵ = ۰$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 139,
+    "solution_page": 14,
+    "solution_text": "ضرایب معادلهٔ $x^{۲} + ax + b = ۰$ گویا هستند بنابراین مجموع و ضرب ریشه‌ها نیز گویا هستند. می‌دانیم یکی از ریشه‌ها $\\frac{۵ - ۲\\sqrt{۳}}{۲}$ است در نتیجه ریشهٔ دیگر باید $\\frac{۵ + ۲\\sqrt{۳}}{۲}$ باشد تا هم ضرب آن‌ها و هم مجموع آن‌ها گویا شود.\n$S = \\frac{۵ - ۲\\sqrt{۳}}{۲} + \\frac{۵ + ۲\\sqrt{۳}}{۲} = ۵$\n$P = (\\frac{۵ - ۲\\sqrt{۳}}{۲})(\\frac{۵ + ۲\\sqrt{۳}}{۲}) = \\frac{۱۳}{۴}$\nمعادله : $x^{۲} - Sx + P = ۰ \\Rightarrow x^{۲} - ۵x + \\frac{۱۳}{۴} = ۰$\n$\\Rightarrow a = -۵, b = \\frac{۱۳}{۴} \\Rightarrow ab = - \\frac{۶۵}{۴} = -۱۶/۲۵$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 140,
+    "solution_page": 14,
+    "solution_text": "رأس سهمی $y = ax^{۲} + bx + c = ۰$ نقطهٔ $S(-\\frac{b}{۲a} , -\\frac{\\Delta}{۴a})$ است.\n$x_{S} = - \\frac{b}{۲a} = - \\frac{m}{۲}$\n$y_{S} = \\frac{-\\Delta}{۴a} = - \\frac{m^{۲} - ۴(-m + ۱)}{۴} = - \\frac{m^{۲} + ۴m - ۴}{۴}$\nرأس سهمی بر روی خط $y = x - ۱$ قرار دارد. بنابراین مختصات آن در معادلهٔ خط صدق می‌کند.\n$- \\frac{m^{۲} + ۴m - ۴}{۴} = - \\frac{m}{۲} - ۱$\n$\\xrightarrow{\\times (-۴)} m^{۲} + ۴m - ۴ = ۲m + ۴ \\Rightarrow m^{۲} + ۲m - ۸ = ۰$\n$\\Rightarrow (m + ۴)(m - ۲) = ۰ \\Rightarrow \\begin{cases} m = -۴ \\\\ m = ۲ \\end{cases}$\n$|m_{۱} - m_{۲}| = ۶$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 141,
+    "solution_page": 14,
+    "solution_text": "خط تقارن سهمی $y = ax^{۲} + bx + c$ به صورت $x = - \\frac{b}{۲a}$ می‌باشد.\n$x = - \\frac{-۲(m + ۱)}{۲m} = \\frac{۳}{۲} \\Rightarrow ۳m = ۲m + ۲ \\Rightarrow m = ۲$\n$\\Rightarrow y = ۲x^{۲} - ۶x + ۷$\nطول رأس سهمی همان طول خط تقارن یعنی $x = \\frac{۳}{۲}$ است. بنابراین عرض رأس برابر است با:\n$y = ۲(\\frac{۳}{۲})^{۲} - ۶(\\frac{۳}{۲}) + ۷ = \\frac{۵}{۲} = ۲/۵$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 142,
+    "solution_page": 14,
+    "solution_text": "دو نقطه به طول‌های $x = -۱$ و $x = a$ هم‌عرض هستند.\n$A(-۱, a) \\quad B(a, a)$\nبنابراین این دو نقطه نسبت به خط تقارن سهمی متقارن هستند. یعنی طول خط تقارن میانگین طول این دو نقطه است.\n$\\frac{a - ۱}{۲} = -۳ \\Rightarrow a = -۵$\nمی‌توانستیم از رابطهٔ $x = - \\frac{b}{۲a}$ به عنوان خط تقارن استفاده کنیم.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 143,
+    "solution_page": 14,
+    "solution_text": "خط $y = ۲$ در رأس سهمی می‌تواند بر سهمی مماس شود. بنابراین عرض رأس سهمی برابر ۲ است.\n$y_{S} = -\\frac{\\Delta}{۴a} = ۲ \\Rightarrow - \\frac{m^{۲} - ۳۲}{۸} = ۲ \\Rightarrow m^{۲} = ۱۶ \\Rightarrow \\begin{cases} m = ۴ \\\\ m = -۴ \\end{cases}$\nنقطهٔ تماس در ناحیهٔ دوم قرار دارد. یعنی طول رأس سهمی منفی است.\n$x_{S} = - \\frac{b}{۲a} = \\frac{m}{۴} < ۰ \\Rightarrow m < ۰ \\Rightarrow m = -۴$\n$\\Rightarrow$ خط تقارن : $x = - \\frac{b}{۲a} = \\frac{m}{۴} \\Rightarrow x = -۱$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 144,
+    "solution_page": 14,
+    "solution_text": "وقتی دو سهمی بر یک خط افقی مماس هستند یعنی عرض نقطهٔ رأس آن‌ها با هم برابر است.\n$y = -۲x^{۲} + ۴x - ۳ \\Rightarrow$ طول رأس : $x = - \\frac{b}{۲a} = - \\frac{۴}{-۴} = ۱$\n$\\Rightarrow$ عرض رأس : $y = -۲(۱)^{۲} + ۴(۱) - ۳ = -۱$\nبنابراین عرض رأس سهمی دوم نیز باید ۱- باشد.\n$y = x^{۲} + ۵x - k \\Rightarrow$ عرض رأس = $\\frac{-\\Delta}{۴a} = - \\frac{۲۵ + ۴k}{۴} = -۱$\n$\\Rightarrow ۴k + ۲۵ = ۴ \\Rightarrow k = - \\frac{۲۱}{۴} = -۵/۲۵$",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0014.jpg",
+        "box": [
+          100,
+          730,
+          250,
+          830
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار دو سهمی مماس بر یک خط افقی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 145,
+    "solution_page": 15,
+    "solution_text": "سهمی که رأس آن نقطهٔ $S(\\alpha, \\beta)$ باشد به صورت $y = a(x - \\alpha)^2 + \\beta$ می‌باشد.\nدر نمودار داده‌شده رأس سهمی $(1, -1)$ است بنابراین:\n$y = a(x - 1)^2 - 1$\nسهمی از نقطهٔ $(0, -3)$ می‌گذرد بنابراین این نقطه در آن صدق می‌کند.\n$-3 = a(0 - 1)^2 - 1 \\Rightarrow a = -2$\n$\\Rightarrow y = -2(x - 1)^2 - 1 = -2x^2 + 4x - 3$\n$\\Rightarrow a = -2 , b = 4 , c = -3 \\Rightarrow abc = 24$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 146,
+    "solution_page": 15,
+    "solution_text": "سهمی که صفرهای آن $\\alpha$ و $\\beta$ باشد به صورت $y = a(x - \\alpha)(x - \\beta)$ است. با توجه به نمودار، صفرهای سهمی $\\alpha = -1$ و $\\beta = 3$ می‌باشند.\n$y = a(x + 1)(x - 3)$\nسهمی از نقطهٔ $(0, 2)$ عبور می‌کند.\n$2 = a(0 + 1)(0 - 3) \\Rightarrow a = -\\frac{2}{3} \\Rightarrow f(x) = -\\frac{2}{3}(x + 1)(x - 3)$\n$\\Rightarrow f(4) = -\\frac{2}{3}(4 + 1)(4 - 3) = -\\frac{10}{3}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 147,
+    "solution_page": 15,
+    "solution_text": "ریشهٔ کوچک‌تر $f(x) = 0$ را $\\alpha$ می‌نامیم. سهمی $f(x) = ax^2 + bx + c$ به صورت $f(x) = a(x - \\alpha)(x - 3)$ خواهد بود. سهمی از نقطهٔ $(0, -6)$ عبور می‌کند.\n$f(0) = -6 \\Rightarrow 3a\\alpha = -6 \\Rightarrow a = \\frac{-2}{\\alpha}$\n$\\Rightarrow f(x) = \\frac{-2}{\\alpha}(x - \\alpha)(x - 3)$\nطول رأس سهمی میانگین دو ریشه آن یعنی $\\frac{\\alpha + 3}{2}$ است.\n$f(\\frac{\\alpha + 3}{2}) = -8 \\Rightarrow -\\frac{2}{\\alpha}(\\frac{\\alpha + 3}{2} - \\alpha)(\\frac{\\alpha + 3}{2} - 3) = -8$\n$\\Rightarrow (\\frac{3 - \\alpha}{2})(\\frac{\\alpha - 3}{2}) = 4\\alpha \\Rightarrow (\\alpha - 3)^2 = -16\\alpha$\n$\\Rightarrow \\alpha^2 + 10\\alpha + 9 = 0 \\Rightarrow \\begin{cases} \\alpha = -1 \\\\ \\alpha = -9 \\end{cases}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 148,
+    "solution_page": 15,
+    "solution_text": "رأس سهمی نقطهٔ $S(2, 0)$ می‌باشد بنابراین $y = f(x)$ به صورت مقابل است.\n$f(x) = a(x - 2)^2$\nسهمی از نقطهٔ $(0, 1)$ عبور می‌کند:\n$f(0) = 1 \\Rightarrow a(0 - 2)^2 = 1 \\Rightarrow a = \\frac{1}{4} \\Rightarrow f(x) = \\frac{1}{4}(x - 2)^2$\nحال، معادلهٔ $f(x) = k$ را تشکیل می‌دهیم:\n$\\frac{1}{4}(x - 2)^2 = x \\Rightarrow (x - 2)^2 = 4x$\n$\\Rightarrow x^2 - 8x + 4 = 0 \\Rightarrow x_1 + x_2 = 8$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 149,
+    "solution_page": 15,
+    "solution_text": "نمودار تابع از نقطهٔ $(0, 2)$ می‌گذرد.\n$y = -\\frac{x^2}{2} + (a + 1)x + a - 1 \\xrightarrow{(0, 2)} 2 = a - 1 \\Rightarrow a = 3$\n$\\Rightarrow y = -\\frac{x^2}{2} + 4x + 2$\nاگر ریشه‌های معادلهٔ $y = 0$ را $\\alpha$ و $\\beta$ بنامیم، اختلاف ریشه‌ها $\\frac{\\sqrt{\\Delta}}{|a|}$ می‌باشد.\n$|\\alpha - \\beta| = \\frac{\\sqrt{\\Delta}}{|a|} = \\frac{\\sqrt{16 + 4}}{\\frac{1}{2}} = 4\\sqrt{5}$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 150,
+    "solution_page": 15,
+    "solution_text": "روش اول: طول نقاط $B$ و $C$ یعنی صفرهای تابع را $\\alpha$ و $\\beta$ می‌نامیم.\n$-\\frac{1}{3}x^2 + ax + 2a = -\\frac{1}{3}(x - \\alpha)(x - \\beta)$\n$\\Rightarrow 2a = -\\frac{\\alpha\\beta}{3} \\Rightarrow \\alpha\\beta = -6a$\nنقاط $A(0, 2a)$ و $B(\\alpha, 0)$ و $C(\\beta, 0)$ مفروض‌اند و پاره‌خط‌های $AB$ و $AC$ بر هم عمودند.\n$\\Rightarrow m_{AB}.m_{AC} = -1 \\Rightarrow \\frac{-2a}{\\alpha} \\times \\frac{-2a}{\\beta} = -1 \\Rightarrow \\frac{4a^2}{\\alpha\\beta} = -1$\n$\\Rightarrow 4a^2 = -\\alpha\\beta \\Rightarrow 4a^2 = 6a \\Rightarrow \\begin{cases} a = 0 & \\text{غ ق ق} \\\\ a = \\frac{3}{2} & \\checkmark \\end{cases}$\nعرض نقطهٔ $A$ برابر $2a$ است که با توجه به نمودار نمی‌تواند صفر باشد یعنی $a \\neq 0$.\nروش دوم: در مثلث قائم‌الزاویهٔ $ABC$ ارتفاع $OA$ واسطهٔ هندسی $OB$ و $OC$ می‌باشد.\n$OA^2 = OB \\times OC$\nنمودار محور $y$ها را در نقطه‌ای به عرض $2a$ قطع می‌کند $(OA = 2a)$. هم‌چنین $OB = -\\alpha$ و $OC = \\beta$ است.\n$(2a)^2 = -\\alpha\\beta \\Rightarrow 4a^2 = -\\frac{2a}{-\\frac{1}{3}} \\Rightarrow 4a^2 = 6a$\n$\\xrightarrow{a \\neq 0} a = \\frac{3}{2}$",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0015.jpg",
+        "box": [
+          45,
+          305,
+          230,
+          400
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سهمی و مثلث قائم‌الزاویه ABC در زیر آن"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 151,
+    "solution_page": 15,
+    "solution_text": "طول رأس سهمی میانگین ریشه‌ها می‌باشد.\n$\\frac{\\alpha + \\beta}{2} = -1 \\Rightarrow S = \\alpha + \\beta = -2$\nحاصل‌ضرب ریشه‌ها را نیز به دست می‌آوریم.\n$P = \\alpha\\beta = \\frac{-2a}{a} = -2$\nخواهیم داشت:\n$\\alpha^2 + \\beta^2 = S^2 - 2P = 4 + 4 = 8$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 152,
+    "solution_page": 15,
+    "solution_text": "صفرهای تابع $y = f(x)$، $x = -3$ و $x = 1$ می‌باشند بنابراین:\n$f(x) = ax^2 + bx - c = a(x + 3)(x - 1)$\n$= ax^2 + 2ax - 3a \\Rightarrow b = 2a \\Rightarrow c = 3a$\nاز طرفی: $f(\\frac{c}{a}) = 8 \\Rightarrow f(3) = 8 \\Rightarrow 9a + 6a - 3a = 8$\n$\\Rightarrow a = \\frac{2}{3}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 153,
+    "solution_page": 15,
+    "solution_text": "طول رأس سهمی میانگین ریشه‌های تابع است:\n$\\frac{a + (a + 8)}{2} = 3 \\Rightarrow a = -1$\nبنابراین ریشه‌های سهمی $x = -1$ و $x = 7$ می‌باشند و معادلهٔ سهمی به صورت مقابل است:\n$y = k(x + 1)(x - 7)$\nسهمی از نقطهٔ $(3, -4)$ عبور می‌کند:\n$-4 = k(3 + 1)(3 - 7) \\Rightarrow k = \\frac{1}{4}$\n$y = \\frac{1}{4}(x + 1)(x - 7) \\xrightarrow{x = 0} y = -\\frac{7}{4}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 154,
+    "solution_page": 16,
+    "solution_text": "سهمی از نقطهٔ $(0, n)$ عبور می‌کند.\n$y=x^{2}+x-m \\Rightarrow n=-m$\nسهمی از نقطهٔ $(n, 0)$ نیز عبور می‌کند:\n$\\Rightarrow 0=n^{2}+n-m \\Rightarrow n^{2}+2n=0 \\Rightarrow \\begin{cases} n=0 \\text{ غ ق ق} \\\\ n=-2 \\end{cases}$\nبا توجه به نمودار $n$ نمی‌تواند صفر باشد.\n$m-n = -2n = 4$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 155,
+    "solution_page": 16,
+    "solution_text": "صفرهای سهمی $y = 6x - x^{2}$ برابر $x = 0$ و $x = 6$ است.\nطول نقطهٔ $B$ را نیز $k$ می‌نامیم.\nنقاط $O(0,0)$ و $A(6,0)$ و $B(k, 6k-k^{2})$ مفروض‌اند و پاره‌خط‌های $OB$ و $AB$ بر هم عمودند.\n$m_{OB} \\times m_{AB} = -1 \\Rightarrow \\frac{6k-k^{2}}{k} \\times \\frac{6k-k^{2}}{k-6} = -1$\n$\\Rightarrow 6k-k^{2} = 1 \\Rightarrow a = 1$\n$6k-k^{2}$ عرض نقطهٔ $B$ می‌باشد که با $a$ برابر است.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0016.jpg",
+        "box": [
+          510,
+          185,
+          878,
+          260
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سهمی با نقاط O، A، B و خطوط."
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 156,
+    "solution_page": 16,
+    "solution_text": "سهمی از مبدأ مختصات عبور می‌کند بنابراین $n=0$ است.\n$y = -3x^{2} + mx$\nطول مستطیل برابر $OC$ یا همان تفاضل ریشه‌ها و عرض مستطیل برابر عرض رأس سهمی است.\n$OC = |\\alpha - \\beta| = \\frac{\\sqrt{\\Delta}}{|a|} = \\frac{\\sqrt{m^{2}}}{3} = \\frac{|m|}{3} = \\frac{m}{3}$\n(طول رأس سهمی مثبت است بنابراین $m$ مثبت می‌باشد.)\nعرض رأس سهمی $= \\frac{-\\Delta}{4a} = \\frac{-m^{2}}{-12} = \\frac{m^{2}}{12}$\nمساحت مستطیل $= \\frac{m}{3} \\times \\frac{m^{2}}{12} = 6 \\Rightarrow m^{3} = 216 \\Rightarrow m=6$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 157,
+    "solution_page": 16,
+    "solution_text": "$f - g$ یک سهمی است که ریشه‌های آن $x=2$ و $x=4$ است؛ بنابراین:\n$(f - g)(x) = a(x - 2)(x - 4)$\nمی‌دانیم $f(0) - g(0) = 4 - 0 = 4$ است. $(f - g)(0) = 4$\n$(f - g)(0) = a(-2)(-4) = 4 \\Rightarrow a = \\frac{1}{2}$\n$\\Rightarrow (f - g)(x) = \\frac{1}{2}(x - 2)(x - 4)$\n$\\Rightarrow (f - g)(5) = \\frac{1}{2} \\times 3 \\times 1 = \\frac{3}{2}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 158,
+    "solution_page": 16,
+    "solution_text": "برای این‌که معادلۀ درجه‌دو دارای دو ریشۀ غیرهم‌علامت باشد کافی است حاصل‌ضرب ریشه‌ها منفی باشد (اگر $P < 0$ باشد $\\Delta > 0$ خواهد شد و نیازی به بررسی شرط $\\Delta > 0$ نیست).\n$P < 0 \\Rightarrow \\frac{a - 3}{3} < 0 \\Rightarrow a < 3$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 159,
+    "solution_page": 16,
+    "solution_text": "باید سه شرط $\\Delta>0$، $P>0$ و $S>0$ را بررسی کنیم.\n$\\Delta > 0 \\Rightarrow (a+3)^{2} + 4a > 0 \\Rightarrow a^{2} + 10a + 9 > 0$\n$\\Rightarrow a < -9 \\text{ یا } a > -1 \\quad (1)$\n$S > 0 \\Rightarrow -(a+3) > 0 \\Rightarrow a < -3 \\quad (2)$\n$P > 0 \\Rightarrow -a > 0 \\Rightarrow a < 0 \\quad (3)$\n$(1) \\cap (2) \\cap (3) \\Rightarrow a < -9$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 160,
+    "solution_page": 16,
+    "solution_text": "باید سه شرط $\\Delta > 0$، $P > 0$ و $S < 0$ را بررسی کنیم.\n$\\Delta > 0 \\Rightarrow m^2 - 4(2m + 5) > 0 \\Rightarrow m^2 - 8m - 20 > 0 \\Rightarrow m < -2 \\text{ یا } m > 10 \\quad (1)$\n$S < 0 \\Rightarrow m < 0 \\quad (2)$\n$P > 0 \\Rightarrow 2m + 5 > 0 \\Rightarrow m > -\\frac{5}{2} \\quad (3)$\n$(1) \\cap (2) \\cap (3) \\Rightarrow -\\frac{5}{2} < m < -2$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 161,
+    "solution_page": 16,
+    "solution_text": "معادلۀ $x^2 - 2x + a - 3 = 0$ باید دو ریشۀ مثبت داشته باشد.\nسه شرط $\\Delta > 0$، $S > 0$ و $P > 0$ را بررسی می‌کنیم.\n$\\Rightarrow x^2 - 2x + a - 3 = 0$\n$\\Delta > 0 \\Rightarrow 4 - 4(a - 3) > 0 \\Rightarrow 1 - (a - 3) > 0 \\Rightarrow a < 4 \\quad (1)$\n$S > 0 \\Rightarrow 2 > 0 \\quad \\checkmark$\n$P > 0 \\Rightarrow a - 3 > 0 \\Rightarrow a > 3 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow 3 < a < 4$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 162,
+    "solution_page": 16,
+    "solution_text": "سهمی هنگامی از هر چهار ناحیۀ مختصات می‌گذرد که $P < 0$ باشد.\n$P < 0 \\Rightarrow \\frac{a - 3}{-1} < 0 \\Rightarrow a - 3 > 0 \\Rightarrow a > 3$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 163,
+    "solution_page": 16,
+    "solution_text": "نقطۀ $(0, 0)$ در سهمی صدق می‌کند یعنی سهمی از مبدأ مختصات می‌گذرد. برای این‌که سهمی از ناحیۀ سوم عبور نکند ریشۀ دیگر آن باید نامنفی باشد.\n$ax^2 + (a - 3)x = 0 \\Rightarrow x(ax + a - 3) = 0$\n$\\Rightarrow \\begin{cases} x = 0 \\\\ x = \\frac{3 - a}{a} \\end{cases} \\Rightarrow \\frac{3 - a}{a} \\ge 0 \\Rightarrow 0 < a \\le 3$\nدقت کنید در حالت $a=0$ خط $y = -3x$ به وجود می‌آید که از ناحیۀ سوم نمی‌گذرد اما سهمی نمی‌باشد.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0016.jpg",
+        "box": [
+          100,
+          1100,
+          800,
+          1400
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار سهمی عبوری از مبدأ و قرار گرفته در نواحی اول، دوم و چهارم"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 164,
+    "solution_page": 16,
+    "solution_text": "سهمی فقط از ناحیهٔ اول عبور نمی‌کند. بنابراین سهمی رو به پایین بوده (ضریب $x^{2}$ منفی است) و دارای دو ریشهٔ متمایز منفی یا یک ریشهٔ منفی و یک ریشهٔ صفر است.\nچهار شرط $a+1<0$ و $\\Delta>0$ و $S<0$ و $P \\ge 0$ را بررسی می‌کنیم:\n$a+1 < 0 \\Rightarrow a < -1 \\quad (1)$\n$\\Delta > 0 \\Rightarrow 4a^{2} - 4(a+1)(-a+1) > 0$\n$\\Rightarrow a^{2} - (a+1)(-a+1) > 0 \\Rightarrow a^{2} > \\frac{1}{2} \\Rightarrow \\begin{cases} a < -\\frac{\\sqrt{2}}{2} \\\\ a > \\frac{\\sqrt{2}}{2} \\end{cases} \\quad (2)$\n$S < 0 \\Rightarrow \\frac{-2a}{a+1} < 0 \\xrightarrow{a+1<0} -2a > 0 \\Rightarrow a < 0 \\quad (3)$\n$P \\ge 0 \\Rightarrow \\frac{-a+1}{a+1} \\ge 0 \\xrightarrow{a+1<0} -a+1 \\le 0$\n$\\Rightarrow a \\ge 1 \\quad (4)$\n$(1) \\cap (2) \\cap (3) \\cap (4) \\Rightarrow a \\in \\emptyset$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 165,
+    "solution_page": 17,
+    "solution_text": "ضریب $x^2$ باید مثبت باشد؛ یعنی:\n$a + 4 > 0 \\Rightarrow a > -4$\nحال دو حالت کلی را بررسی می‌کنیم:\n۱) $\\Delta \\le 0$\n$\\Delta \\le 0 \\Rightarrow 4a^2 - 8(a+4) \\le 0 \\Rightarrow a^2 - 2a - 8 \\le 0 \\Rightarrow -2 \\le a \\le 4 \\quad (1)$\n۲) $\\Delta > 0 , S < 0 , P \\ge 0$\n$\\Delta > 0 \\Rightarrow a < -2 \\text{ یا } a > 4$\n$S < 0 \\Rightarrow \\frac{-2a}{a+4} < 0 \\xrightarrow{a+4 > 0} -2a < 0 \\Rightarrow a > 0$\n$P \\ge 0 \\Rightarrow \\frac{2}{a+4} \\ge 0 \\xrightarrow{a+4 > 0} \\text{بدیهی}$\n$\\xrightarrow{\\cap} a > 4 \\quad (2)$\n$(1) \\cup (2) \\Rightarrow a \\ge -2$\nجواب به دست آمده با شرط $a > -4$ سازگاری دارد.",
+    "stated_correct_option": 1,
+    "media_regions": [
+      {
+        "page_file": "page_0017.jpg",
+        "box": [
+          470,
+          130,
+          820,
+          280
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو نمودار سهمی رو به بالا"
+      },
+      {
+        "page_file": "page_0017.jpg",
+        "box": [
+          470,
+          270,
+          820,
+          420
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "دو نمودار سهمی رو به بالا"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 166,
+    "solution_page": 17,
+    "solution_text": "بیشترین مقدار سهمی برابر عرض رأس سهمی است.\n$y_S = -\\frac{\\Delta}{4a} = 8 \\Rightarrow -\\frac{(a-1)^2 - 28a}{4a} = 8$\n$\\Rightarrow a^2 - 30a + 1 = -32a \\Rightarrow a^2 + 2a + 1 = 0 \\Rightarrow (a+1)^2 = 0 \\Rightarrow a = -1$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 167,
+    "solution_page": 17,
+    "solution_text": "بیشترین مقدار سهمی صفر است؛ بنابراین سهمی ریشه مضاعف دارد.\n$(x+a)(ax+1)=0 \\Rightarrow \\begin{cases} x = -a \\\\ x = -\\frac{1}{a} \\end{cases}$\n$\\xrightarrow{\\text{ریشه مضاعف است}} -a = -\\frac{1}{a} \\Rightarrow a^2 = 1 \\Rightarrow \\begin{cases} a = 1 \\quad \\text{غ ق ق} \\\\ a = -1 \\end{cases}$\nسهمی دارای بیشترین مقدار است یعنی ضریب $x^2$ باید منفی باشد و $a=1$ قابل قبول نیست.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 168,
+    "solution_page": 17,
+    "solution_text": "سهمی در نقطهٔ $x = 2$ بر محور xها مماس است. در نتیجه رأس سهمی نقطهٔ $S(2, 0)$ خواهد بود. بنابراین معادلهٔ سهمی به صورت $y = a(x-2)^2$ می‌باشد.\nبا توجه به ضابطهٔ داده‌ شده، ضریب $x^2$ در سهمی برابر ۱ است. پس $a = 1$\n$f(x) = (x-2)^2$\n$P = 4x - f(x) = 4x - (x-2)^2 = -x^2 + 8x - 4$\nطول رأس سهمی $P$ برابر $x = 4$ است. بیشترین مقدار سهمی برابر عرض رأس سهمی است.\n$y = -(4)^2 + 8(4) - 4 = 12 : \\text{عرض رأس سهمی}$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 169,
+    "solution_page": 17,
+    "solution_text": "خط $4y + x = 8$ در نقاط $A(0, 2)$ و $B(8, 0)$ محورهای مختصات و سهمی را قطع می‌کند. بنابراین ریشه‌های سهمی $x = 4$ و $x = 8$ می‌باشند.\n$f(x) = a(x-4)(x-8)$\nسهمی از نقطهٔ $A(0, 2)$ عبور می‌کند بنابراین:\n$f(0) = 2 \\Rightarrow 32a = 2 \\Rightarrow a = \\frac{1}{16} \\Rightarrow f(x) = \\frac{1}{16}(x-4)(x-8)$\nطول رأس سهمی میانگین ریشه‌ها یعنی $x = 6$ است و کم‌ترین مقدار سهمی برابر عرض رأس سهمی می‌باشد.\n$f(6) = \\frac{1}{16}(2)(-2) = -\\frac{1}{4}$",
+    "stated_correct_option": 2,
+    "media_regions": [
+      {
+        "page_file": "page_0017.jpg",
+        "box": [
+          50,
+          70,
+          400,
+          150
+        ],
+        "box_format": "xyxy",
+        "placement": "solution_1",
+        "alt": "نمودار سهمی و خط متقاطع"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 170,
+    "solution_page": 17,
+    "solution_text": "نقطهٔ $A(x, y)$ را بر روی سهمی مطابق شکل در نظر می‌گیریم.\nمحیط مستطیل برابر است با:\n$P = 4x + 2y = 4x + 2(8 - 2x^2) = -4x^2 + 4x + 16$\nبیشترین مقدار عبارت $P$ در $x = \\frac{1}{2}$ رخ می‌دهد.\n$P(\\frac{1}{2}) = -4(\\frac{1}{2})^2 + 4(\\frac{1}{2}) + 16 = -1 + 2 + 16 = 17$",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0017.jpg",
+        "box": [
+          40,
+          250,
+          190,
+          340
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "مستطیل محاط در سهمی"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 171,
+    "solution_page": 17,
+    "solution_text": "فرض می‌کنیم نقطهٔ $B(x, y)$ بر روی منحنی $y = \\sqrt{2x + 9}$ کم‌ترین فاصله را از نقطهٔ $A(4, 0)$ دارد.\n$AB = \\sqrt{(x-4)^2 + y^2} = \\sqrt{(x-4)^2 + 2x + 9} = \\sqrt{x^2 - 6x + 25}$\nکم‌ترین مقدار $x^2 - 6x + 25$ در $x = 3$ رخ می‌دهد.\n$AB = \\sqrt{3^2 - 6(3) + 25} = \\sqrt{16} = 4$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 172,
+    "solution_page": 17,
+    "solution_text": "طول مستطیل را $x$ و عرض آن را $y$ می‌نامیم.\nمحیط $= P = 2(x+y) = 22 \\Rightarrow y = 11 - x$\nمساحت $= S = xy = x(11-x)$\nطول رأس سهمی $x = \\frac{0+11}{2} = \\frac{11}{2}$ (میانگین ریشه‌ها) و برابر $x = \\frac{11}{2} \\xrightarrow{\\text{در سهمی}} S = \\frac{11}{2} \\times \\frac{11}{2} = \\frac{121}{4} = 30/25$ می‌باشد.\nبیشترین مساحت مستطیل‌هایی با محیط 22 هنگامی به وجود می‌آید که مربع باشد. در این مسئله مربعی با محیط 22 پاسخ خواهد بود که اندازهٔ ضلع آن 5.5 و مساحت آن 30.25 می‌باشد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 173,
+    "solution_page": 17,
+    "solution_text": "نقطهٔ $A(a, 6-a)$ را بر روی نمودار در نظر می‌گیریم. نقاط $A$ و $B$ هم‌عرض هستند.\nبنابراین عرض نقطهٔ $B$ نیز $6-a$ است.\n$2x + 3 = 6-a \\Rightarrow x = \\frac{3-a}{2} \\Rightarrow B(\\frac{3-a}{2}, 6-a)$\n$AB = a - \\frac{3-a}{2} = \\frac{3a - 3}{2}$\n$S_{\\text{مستطیل}} = \\frac{3a-3}{2} \\times (6-a) = \\frac{-3a^2 + 21a - 18}{2}$\nبیشترین مقدار $S$ در $a = \\frac{-21}{-6} = \\frac{7}{2}$ است.\n$S = \\frac{-3(\\frac{7}{2})^2 + 21(\\frac{7}{2}) - 18}{2} = \\frac{75}{8}$",
+    "stated_correct_option": 3,
+    "media_regions": [
+      {
+        "page_file": "page_0017.jpg",
+        "box": [
+          40,
+          660,
+          190,
+          750
+        ],
+        "box_format": "xyxy",
+        "placement": "solution",
+        "alt": "نمودار دو خط و مستطیل"
+      }
+    ],
+    "review_notes": []
+  },
+  {
+    "question_number": 174,
+    "solution_page": 0,
+    "solution_text": "اضلاع قائم را $\\sqrt{a}$ و $\\sqrt{b}$ می‌نامیم.\n$(\\sqrt{a})^2 + (\\sqrt{b})^2 = 36 \\Rightarrow a + b = 36 \\Rightarrow b = 36 - a$\n$S_{\\text{مثلث}} = \\frac{1}{2} \\sqrt{ab} = \\frac{1}{2}\\sqrt{a(36-a)}$\nبیشترین مقدار $a(36-a)$ در میانگین ریشه‌ها یعنی $a=18$ رخ می‌دهد.\n$\\Rightarrow S = \\frac{1}{2}\\sqrt{18 \\times 18} = \\frac{18}{2} = 9$\nبیشترین مساحت مثلث‌های قائم‌الزاویه با اندازه وتر ثابت هنگامی است که متساوی‌الساقین باشد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 175,
+    "solution_page": 0,
+    "solution_text": "معادله را مرتب کرده، $x^2-3x$ را برابر $k$ قرار می‌دهیم.\n$(x^2-3x)^2 - 2(x^2-3x) - 35 = 0$\n$\\Rightarrow k^2 - 2k - 35 = 0 \\Rightarrow (k+5)(k-7) = 0$\n$\\Rightarrow \\begin{cases} k = -5 \\Rightarrow x^2-3x = -5 \\Rightarrow x^2-3x+5 = 0 \\xrightarrow{\\Delta < 0} \\text{ریشه حقیقی ندارد} \\\\ k = 7 \\Rightarrow x^2-3x = 7 \\Rightarrow x^2-3x-7 = 0 \\Rightarrow \\alpha\\beta = -7 \\end{cases}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 176,
+    "solution_page": 0,
+    "solution_text": "$x^2$ را برابر $t$ قرار می‌دهیم. ریشه‌های معادله $t^2 - 15t + k = 0$ را $\\alpha$ و $\\beta$ می‌نامیم ($\\alpha \\ge \\beta$) بدیهی است بزرگ‌ترین و کوچک‌ترین ریشه $x^4 - 15x^2 + k = 0$، $\\sqrt{\\alpha}$ و $-\\sqrt{\\alpha}$ می‌باشد که اختلاف آن‌ها $2\\sqrt{\\alpha}$ است.\n$2\\sqrt{\\alpha} = 4\\sqrt{3} \\Rightarrow \\alpha = 12$\n$\\alpha=12$ ریشه معادله $t^2-15t+k=0$ می‌باشد:\n$(12)^2 - 15(12) + k = 0 \\Rightarrow k = 36$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 177,
+    "solution_page": 0,
+    "solution_text": "معادله را به روش تجزیه حل می‌کنیم.\n$x^4-7x^2+12=0 \\Rightarrow (x^2-3)(x^2-4)=0$\n$\\Rightarrow \\begin{cases} x^2=3 \\Rightarrow x=\\pm\\sqrt{3} \\\\ x^2=4 \\Rightarrow x=\\pm 2 \\end{cases}$\n$\\Rightarrow S = 0 , P = 12 \\Rightarrow 2P + S = 24$\nنکته: معادله شبه درجه‌دوم $ax^4+bx^2+c=0$ یا ریشه حقیقی ندارد و یا مجموع ریشه‌های آن صفر است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 178,
+    "solution_page": 0,
+    "solution_text": "معادله شبه درجه‌دوم $ax^4+bx^2+c=0$ یا ریشه حقیقی ندارد و یا مجموع ریشه‌های آن صفر است.\nبا فرض $x^2=t$ معادله $t^2+at+2a+3=0$ باید حداقل یک ریشه نامنفی داشته باشد.\nکافی است $\\Delta \\ge 0$ باشد. (چون $a$ منفی است، مجموع ریشه‌ها مثبت است و در صورت وجود ریشه حقیقی حداقل یکی از آن‌ها مثبت است.)\n$\\Delta \\ge 0 \\Rightarrow a^2-4(2a+3) \\ge 0 \\Rightarrow a^2-8a-12 \\ge 0$\n$\\Rightarrow a \\le 4 - 2\\sqrt{7} \\text{ یا } a \\ge 4 + 2\\sqrt{7} \\xrightarrow{a<0} a \\le 4 - 2\\sqrt{7}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 179,
+    "solution_page": 18,
+    "solution_text": "با فرض $t=|x|$ معادلهٔ $t^2-kt+k-3=0$ باید دارای دو ریشهٔ متمایز مثبت باشد.\nسه شرط $\\Delta > 0$ و $S > 0$ و $P > 0$ را بررسی می‌کنیم:\n$\\Delta > 0 \\Rightarrow 4-4(k-3) > 0 \\Rightarrow k-3 < 1 \\Rightarrow k < 4 \\quad (1)$\n$S > 0 \\Rightarrow 2 > 0 \\text{ بدیهی }$\n$P > 0 \\Rightarrow k-3 > 0 \\Rightarrow k > 3 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow 3 < k < 4$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 180,
+    "solution_page": 18,
+    "solution_text": "با فرض $\\sqrt{x}=t$ معادلهٔ $t^2+mt+m-1=0$ باید یک ریشهٔ نامنفی داشته باشد. دو حالت وجود دارد.\n۱) حالت اول: معادله دارای یک ریشهٔ مضاعف نامنفی باشد.\n$\\Delta = 0 \\Rightarrow m^2-4m+4=0 \\Rightarrow (m-2)^2=0 \\Rightarrow m=2 \\quad (1)$\n$S \\ge 0 \\Rightarrow -m \\ge 0 \\Rightarrow m \\le 0 \\quad (2)$\n$(1) \\cap (2) \\Rightarrow m \\in \\varnothing$\n۲) حالت دوم: معادله یک ریشهٔ نامنفی و یک ریشهٔ منفی داشته باشد.\n$P \\le 0 \\Rightarrow m-1 \\le 0 \\Rightarrow m \\le 1 \\quad \\checkmark$\nدقت داشته باشید در حالت $m=1$ معادله دارای یک ریشهٔ صفر و یک ریشهٔ منفی است.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 181,
+    "solution_page": 0,
+    "solution_text": "عبارت $x^3 - ax + 2a - 8$ دارای عامل $x-2$ است. این عبارت را بر $x-2$ تقسیم کرده و آن را تجزیه می‌کنیم.\n$x^3 - ax + 2a - 8 = (x-2)(\\underbrace{x^2 + 2x - a + 4}_{P})$\nبرای این‌که عبارت درجه ۳ فقط یک ریشه $x=2$ داشته باشد عبارت $P$ یا باید ریشه مضاعف $x=2$ داشته باشد که امکان ندارد و یا ریشه حقیقی نداشته باشد.\n$\\Delta < 0 \\Rightarrow 4 - 4(-a+4) < 0 \\Rightarrow 4a < 12 \\Rightarrow a < 3$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 182,
+    "solution_page": 0,
+    "solution_text": "$x=-1$ ریشه معادله است بنابراین در آن صدق می‌کند.\n$x = -1 \\Rightarrow (-1)^3 - a(-1)^2 - 2 = 0 \\Rightarrow a = -3$\nحال عبارت درجه‌سه را بر $x+1$ تقسیم کرده آن را تجزیه می‌کنیم.\n$x^3 + 3x^2 - 2 = (x+1)(x^2 + 2x - 2)$\n$\\alpha$ و $\\beta$ ریشه‌های $x^2 + 2x - 2 = 0$ می‌باشند.\n$\\alpha^2 + \\beta^2 = S^2 - 2P = (-2)^2 - 2(-2) = 8$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 183,
+    "solution_page": 0,
+    "solution_text": "معادله را به صورت خطی می‌نویسیم.\n$\\frac{a}{a+3b} = \\frac{b}{2a} \\Rightarrow 2a^2 = ab + 3b^2 \\Rightarrow 2a^2 - ab - 3b^2 = 0$\nدو طرف معادله را بر $b^2$ تقسیم کرده و $\\frac{a}{b}$ را برابر $x$ قرار می‌دهیم.\n$2(\\frac{a}{b})^2 - \\frac{a}{b} - 3 = 0 \\Rightarrow 2x^2 - x - 3 = 0 \\Rightarrow \\begin{cases} x = -1 \\text{ غ ق ق} \\\\ x = \\frac{3}{2} \\end{cases}$\n$x = \\frac{3}{2} \\Rightarrow \\frac{a}{b} = \\frac{3}{2} \\Rightarrow a = \\frac{3}{2}b$\n$\\frac{\\text{محیط}}{\\text{عرض}} = \\frac{2a + 2b}{b} = \\frac{3b + 2b}{b} = 5$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 184,
+    "solution_page": 0,
+    "solution_text": "در مستطیل طلایی نسبت طول به عرض برابر عدد طلایی $\\frac{\\sqrt{5}+1}{2}$ است.\nاگر عرض مستطیل برابر $a$ باشد طول مستطیل $b = \\frac{\\sqrt{5}+1}{2}a$ است.\nمحیط مستطیل $= 2(a+b) = 6+2\\sqrt{5} \\Rightarrow a+b = 3+\\sqrt{5}$\n$\\Rightarrow a + \\frac{\\sqrt{5}+1}{2}a = 3+\\sqrt{5} \\Rightarrow (\\frac{3+\\sqrt{5}}{2})a = 3+\\sqrt{5}$\n$\\Rightarrow a=2 \\Rightarrow b = \\sqrt{5}+1 \\Rightarrow S = ab = 2(\\sqrt{5}+1)$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 185,
+    "solution_page": 0,
+    "solution_text": "دامنه معادله $\\mathbb{R} - \\{1, 2\\}$ می‌باشد. دو طرف معادله را در $(x-1)(x-2)$ ضرب می‌کنیم:\n$\\frac{x}{x-1} + \\frac{3}{x^2-3x+2} = \\frac{3}{x-2} \\Rightarrow x(x-2)+3 = 3(x-1)$\n$\\Rightarrow x^2-5x+6=0 \\Rightarrow (x-2)(x-3)=0$\n$\\Rightarrow \\begin{cases} x=2 & \\text{ غ ق ق (عضو دامنه نیست)} \\\\ x=3 & \\checkmark \\end{cases}$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 186,
+    "solution_page": 19,
+    "solution_text": "با فرض $x \\neq \\pm 3$ دو طرف معادله را در $x^2-9$ ضرب می‌کنیم.\n$$ \\frac{a}{x-3} + \\frac{2}{x+3} = 1 \\Rightarrow a(x+3) + 2(x-3) = x^2 - 9 $$\n$$ \\Rightarrow x^2 - (a+2)x - 3a - 3 = 0 $$\nمجموع ریشه‌ها برابر ۶ است: $S = \\alpha + \\beta = a + 2 = 6 \\Rightarrow a = 4$\nحاصل‌ضرب ریشه‌ها: $P = \\alpha\\beta = -3a - 3 = -15$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 187,
+    "solution_page": 0,
+    "solution_text": "با فرض $x \\neq \\pm 1$ دو طرف معادله را در $x^2 - 1$ ضرب می‌کنیم.\n$\\frac{2x}{x-1} + \\frac{x-a}{x^2-1} = 2 \\Rightarrow 2x(x+1) + (x-a) = 2(x^2 - 1)$\n$\\Rightarrow 3x = a - 2 \\Rightarrow x = \\frac{a - 2}{3}$\nاین معادله به شرطی جواب ندارد که $x = \\pm 1$ یعنی $\\frac{a - 2}{3} = \\pm 1$ باشد.\n$\\begin{cases} \\frac{a - 2}{3} = 1 \\\\ \\frac{a - 2}{3} = -1 \\end{cases} \\Rightarrow \\begin{cases} a = 5 \\\\ a = -1 \\end{cases} \\Rightarrow 5 - 1 = 4$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 188,
+    "solution_page": 19,
+    "solution_text": "$x=3$ ریشهٔ معادله است. بنابراین در آن صدق می‌کند.\n$$ \\frac{3+3}{3-2} + \\frac{3a+3}{3-4} = 12 \\Rightarrow 3a+3 = -6 \\Rightarrow a = -3 $$\nحال مقدار $a$ را مساوی ۳- قرار داده و دو طرف معادله را در $(x-2)(x-4)$ ضرب می‌کنیم.\n$$ \\frac{x+3}{x-2} + \\frac{-3x+3}{x-4} = 12 $$\n$$ \\Rightarrow (x+3)(x-4) + (-3x+3)(x-2) = 12(x-2)(x-4) $$\n$$ \\Rightarrow 14x^2 - 80x + 114 = 0 $$\nریشه‌های معادله $b$ و $3$ هستند و حاصل‌ضرب آن‌ها $\\frac{114}{14}$ است.\n$$ 3b = \\frac{114}{14} \\Rightarrow b = \\frac{19}{7} \\Rightarrow \\frac{3}{b} = \\frac{21}{19} $$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 189,
+    "solution_page": 19,
+    "solution_text": "$5$ درصد از $120$ کیلوگرم محلول آب‌نمک اولیه، نمک می‌باشد.\nمقدار نمک اولیه $ \\frac{5}{100} \\times 120 = 6 \\text{ kg} $\nمقدار آب اولیه $ 120 - 6 = 114 \\text{ kg} \\Rightarrow $ مقدار نمک جدید $ a = 6 + 2 = 8 \\text{ kg} $\nبرای تولید آب‌نمک $8$ درصدی با $8$ کیلوگرم نمک نیاز به $100$ کیلوگرم محلول یا به عبارتی $100 - 8 = 92$ کیلوگرم آب است.\nبنابراین باید $114 - 92 = 22$ کیلوگرم آب را تبخیر کنیم.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 190,
+    "solution_page": 19,
+    "solution_text": "$40$ درصد از $60$ گرم محلول موجود مادهٔ حل‌شدنی است.\nمادهٔ حل‌شدنی اولیه $ \\frac{40}{100} \\times 60 = 24 \\text{ g} \\Rightarrow $ مقدار آب $ 60 - 24 = 36 \\text{ g} $\nاگر میزان مادهٔ حل‌شدنی در محلول $70$ درصد را $x$ در نظر بگیریم خواهیم داشت:\n$$ \\frac{x}{x+36} = \\frac{70}{100} \\Rightarrow 10x = 7x + 252 \\Rightarrow x = 84 $$\nمیزان مادهٔ حل‌شدنی اضافه شده $ \\Rightarrow 84 - 24 = 60 \\text{ g} $",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 191,
+    "solution_page": 19,
+    "solution_text": "میزان اسید خالص در هر محلول را به دست می‌آوریم.\nاسید خالص در محلول اول $ \\frac{25}{100} \\times 70 = 17/5 $\nاسید خالص در محلول دوم $ \\frac{65}{100} \\times x = 0/65x $\nغلظت محلول جدید: $ \\frac{17/5 + 0/65x}{70 + x} \\ge \\frac{40}{100} $\n$$ \\Rightarrow 175 + 6/5x \\ge 280 + 4x \\Rightarrow 2/5x \\ge 105 $$\n$$ \\Rightarrow x \\ge \\frac{105}{2/5} \\Rightarrow x \\ge 42 $$",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 192,
+    "solution_page": 19,
+    "solution_text": "اگر شیرین در $x$ ساعت کار را انجام دهد فرهاد در $2x$ ساعت کار را تمام می‌کند. بنابراین شیرین در ۱ ساعت $\\frac{1}{x}$ کار و فرهاد $\\frac{1}{2x}$ کار را انجام می‌دهند. این دو با هم در ۶ ساعت کار را تمام می‌کنند یعنی با هم در ۱ ساعت $\\frac{1}{6}$ کار را انجام می‌دهند. بنابراین:\n$$ \\frac{1}{x} + \\frac{1}{2x} = \\frac{1}{6} \\Rightarrow \\frac{3}{2x} = \\frac{1}{6} \\Rightarrow x = 9 \\text{ \\checkmark } $$\nاختلاف زمان اتمام کار این دو نفر همان $x$ می‌باشد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 193,
+    "solution_page": 19,
+    "solution_text": "اگر نقی در $x$ ساعت ساختمان را خراب کند ارسطو در $x+18$ ساعت این کار را انجام می‌دهد. نقی در ۱ ساعت $\\frac{1}{x}$ کار و ارسطو $\\frac{1}{x+18}$ کار را انجام می‌دهند. این دو با هم ۱۲ ساعته ساختمان را خراب می‌کنند یعنی در ۱ ساعت $\\frac{1}{12}$ کار را انجام می‌دهند. بنابراین:\n$$ \\frac{1}{x} + \\frac{1}{x+18} = \\frac{1}{12} \\Rightarrow \\frac{2x+18}{x(x+18)} = \\frac{1}{12} $$\n$$ \\Rightarrow x(x+18) = 12(2x+18) \\Rightarrow x^2 - 6x - 216 = 0 $$\n$$ \\Rightarrow (x+12)(x-18) = 0 \\Rightarrow \\begin{cases} x = -12 & \\text{غ ق ق} \\\\ x = 18 & \\text{\\checkmark} \\end{cases} $$",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 194,
+    "solution_page": 19,
+    "solution_text": "اگر علی در $x$ ساعت کار را تمام کند احمد در $2x$ ساعت کار را انجام می‌دهد. علی در ۱ ساعت $\\frac{1}{x}$ و احمد $\\frac{1}{2x}$ کار را انجام می‌دهند. این دو نفر با هم در ۲۰ ساعت کار را به اتمام می‌رسانند یعنی در ۱ ساعت $\\frac{1}{20}$ کار را انجام می‌دهند. بنابراین:\n$$ \\frac{1}{x} + \\frac{1}{2x} = \\frac{1}{20} \\Rightarrow \\frac{3}{2x} = \\frac{1}{20} \\Rightarrow x = 30 $$\nبعد از ۵ ساعت کار مشترک علی و احمد، $\\frac{1}{4}$ کار انجام شده است. بنابراین علی و بهروز باید $\\frac{3}{4}$ مابقی را انجام دهند. علی و بهروز هر یک در ۳۰ ساعت کل کار را انجام می‌دهد. در نتیجه با کار مشترک در ۱۵ ساعت کل کار را انجام می‌دهند. بنابراین برای انجام $\\frac{3}{4}$ کار به $15 \\times \\frac{3}{4} = 11/25$ ساعت نیاز دارند.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 195,
+    "solution_page": 19,
+    "solution_text": "سرعت قایق در آب راکد را $v$ می‌نامیم. سرعت قایق در مسیر رفت $v+8$ و در مسیر برگشت $v-8$ می‌باشد. می‌دانیم $t = \\frac{x}{v}$.\nزمان رفت: $t_1 = \\frac{16}{v+8}$\nزمان برگشت: $t_2 = \\frac{16}{v-8}$\n$$ \\Rightarrow t_1 + t_2 = \\frac{5}{6} $$\n$$ \\Rightarrow \\frac{16}{v+8} + \\frac{16}{v-8} = \\frac{5}{6} \\Rightarrow \\frac{16(2v)}{(v+8)(v-8)} = \\frac{5}{6} $$\n$$ \\Rightarrow 5(v^2-64) = 192v \\Rightarrow 5v^2 - 192v - 320 = 0 $$\nروش $ac \\Rightarrow v'^2 - 192v' - 1600 = 0 $\n$$ \\Rightarrow (v'+8)(v'-200) = 0 \\Rightarrow \\begin{cases} v' = -8 \\\\ v' = 200 \\end{cases} \\Rightarrow \\begin{cases} v = \\frac{-8}{5} & \\text{غ ق ق} \\\\ v = \\frac{200}{5} = 40 & \\text{\\checkmark} \\end{cases} $$\n**نکته:** حل معادله درجه‌دو به روش $ac$\nوقتی در معادلهٔ $ax^2+bx+c=0$ ، $a \\neq 1$ باشد، حل معادله به روش تجزیه مشکل است. ضریب $x^2$ را تبدیل به یک کرده و $c$ را در $a$ ضرب می‌کنیم تا معادله به شکل $x^2+bx+ac=0$ تبدیل شود. پس از به دست آوردن ریشه‌های معادلهٔ جدید به روش تجزیه جواب‌های به دست آمده را بر $a$ تقسیم می‌کنیم تا ریشهٔ معادلهٔ اصلی به دست آید.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 196,
+    "solution_page": 20,
+    "solution_text": "سرعت باد را $v$ می‌نامیم. سرعت پرنده در مسیر رفت $70 + v$ و در مسیر برگشت $70 - v$ خواهد بود. می‌دانیم: $t = \\frac{x}{v}$\n$t_1 = \\frac{720}{70 + v}$ زمان مسیر رفت\n$t_2 = \\frac{720}{70 - v}$ زمان مسیر برگشت\n$\\Rightarrow t_2 - t_1 = 3$\n$\\Rightarrow \\frac{720}{70 - v} - \\frac{720}{70 + v} = 3 \\Rightarrow \\frac{720(2v)}{(70 - v)(70 + v)} = 3$\n$\\Rightarrow 70^2 - v^2 = 480v \\Rightarrow v^2 + 480v - 4900 = 0$\n$\\Rightarrow (v + 490)(v - 10) = 0 \\Rightarrow \\begin{cases} v = -490 \\quad \\text{غ ق ق} \\\\ v = 10 \\quad \\checkmark \\end{cases}$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 197,
+    "solution_page": 20,
+    "solution_text": "دامنهٔ معادله $5 + \\sqrt{x^2 - 1} = 2x$، $\\mathbb{R}$ می‌باشد ($x^2 + 5 \\ge 0$).\nاما شرط وجود جواب $2x - 1 \\ge 0$ است که $x \\ge \\frac{1}{2}$ نتیجه می‌شود. بنابراین با این شرط دو طرف معادله را به توان $2$ می‌رسانیم تا رادیکال از بین برود.\n$\\xrightarrow{x \\ge \\frac{1}{2}} (2x-1)^2 = x^2 + 5 \\Rightarrow 3x^2 - 4x - 4 = 0$\n$\\Rightarrow x = \\frac{4 \\pm \\sqrt{16 + 48}}{6} \\Rightarrow \\begin{cases} 2 \\quad \\checkmark \\\\ -\\frac{2}{3} \\quad \\text{غ ق ق} \\end{cases}$\n$x = -\\frac{2}{3}$ در شرط $x \\ge \\frac{1}{2}$ صدق نمی‌کند. بنابراین معادله تنها یک جواب دارد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 198,
+    "solution_page": 20,
+    "solution_text": "ابتدا $x$ را در معادله برابر $2$ قرار داده، مقدار $a$ را به دست می‌آوریم.\n$\\sqrt{5x + a} = x - 1 \\xrightarrow{x=2} \\sqrt{10 + a} = 1$\n$\\Rightarrow a + 10 = 1 \\Rightarrow a = -9$\nشرط دامنه $x \\ge \\frac{9}{5}$ و شرط وجود جواب $x \\ge 1$ است که اشتراک آن‌ها $x \\ge \\frac{9}{5}$ می‌باشد. دو طرف معادله را به توان $2$ می‌رسانیم.\n$\\sqrt{5x - 9} = x - 1 \\Rightarrow 5x - 9 = x^2 - 2x + 1$\n$\\Rightarrow x^2 - 7x + 10 = 0 \\Rightarrow (x - 2)(x - 5) = 0 \\Rightarrow \\begin{cases} x = 2 \\quad \\checkmark \\\\ x = 5 \\quad \\checkmark \\end{cases}$\nریشهٔ دیگر معادله $x = 5$ است که در $2$ صدق می‌کند.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 199,
+    "solution_page": 20,
+    "solution_text": "عبارت رادیکالی را سمت چپ نگه داشته بقیهٔ عبارت را به سمت راست منتقل می‌کنیم.\n$\\sqrt{2a + 22} = 1 - a$\nشرط دامنه $a \\ge -11$ و شرط وجود جواب $a \\le 1$ است که اشتراک آن‌ها $-11 \\le a \\le 1$ می‌باشد.\nدو طرف معادله را به توان $2$ می‌رسانیم.\n$\\Rightarrow 2a + 22 = a^2 - 2a + 1 \\Rightarrow a^2 - 4a - 21 = 0$\n$\\Rightarrow (a + 3)(a - 7) = 0 \\Rightarrow \\begin{cases} a = -3 \\quad \\checkmark \\\\ a = 7 \\quad \\text{غ ق ق} \\end{cases}$\n$\\Rightarrow \\frac{a}{a+2} = \\frac{-3}{-1} = 3$",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 200,
+    "solution_page": 20,
+    "solution_text": "ابتدا عدد $2$ را به سمت چپ معادله انتقال داده و با شرط $x \\ge 3$ دو طرف معادله را به توان $2$ می‌رسانیم.\n$x = 2 + 2\\sqrt{x - 3} \\Rightarrow x - 2 = 2\\sqrt{x - 3}$\n$\\xrightarrow{x \\ge 3} (x - 2)^2 = 4(x - 3) \\Rightarrow x^2 - 8x + 16 = 0$\n$\\Rightarrow (x - 4)^2 = 0 \\Rightarrow x = 4$\nمعادله یک ریشهٔ مضاعف دارد.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 201,
+    "solution_page": 20,
+    "solution_text": "$x = 0$ یکی از ریشه‌های معادله $\\sqrt{9 - x} = |x + a|$ است.\nبنابراین در آن صدق می‌کند.\n$\\sqrt{9 - 0} = |0 + a| \\Rightarrow |a| = 3 \\Rightarrow a = \\pm 3$\nبا توجه به مقادیر به دست آمده برای $a$، در هر حالت با شرط $x \\le 9$ دو طرف معادله را به توان $2$ رسانده و ریشهٔ دیگر را به دست می‌آوریم.\n$a = 3 \\Rightarrow \\sqrt{9 - x} = |x + 3| \\xrightarrow{x \\le 9} 9 - x = (x + 3)^2$\n$\\Rightarrow x^2 + 7x = 0 \\Rightarrow \\begin{cases} x = 0 \\\\ x = -7 \\quad \\checkmark \\end{cases}$\n$a = -3 \\Rightarrow \\sqrt{9 - x} = |x - 3| \\xrightarrow{x \\le 9} 9 - x = (x - 3)^2$\n$\\Rightarrow x^2 - 5x = 0 \\Rightarrow \\begin{cases} x = 0 \\\\ x = 5 \\quad \\checkmark \\end{cases}$\nمجموع مقادیر ممکن برای ریشهٔ دیگر $-7 + 5 = -2$ می‌باشد.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 202,
+    "solution_page": 20,
+    "solution_text": "شروط دامنه عبارت‌اند از:\n$(1) \\quad x - 4 \\ge 0 \\Rightarrow x \\ge 4$\n$(2) \\quad 4 - \\sqrt{x - 4} \\ge 0 \\Rightarrow \\sqrt{x - 4} \\le 4 \\Rightarrow x - 4 \\le 16 \\Rightarrow x \\le 20$\n$(3) \\quad 14 - x \\ge 0 \\Rightarrow x \\le 14$\n$\\xrightarrow{\\cap} D = [4, 14]$\nدو طرف معادله را به توان $2$ می‌رسانیم.\n$\\sqrt{4 - \\sqrt{x - 4}} = \\sqrt{14 - x} \\Rightarrow 4 - \\sqrt{x - 4} = 14 - x$\n$\\Rightarrow \\sqrt{x - 4} = x - 10$\nشرط وجود جواب $x \\ge 10$ می‌باشد که اشتراک آن با دامنه، بازهٔ $[10, 14]$ می‌باشد.\nدو طرف معادله را به توان $2$ می‌رسانیم.\n$x - 4 = x^2 - 20x + 100 \\Rightarrow x^2 - 21x + 104 = 0$\n$\\Rightarrow (x - 8)(x - 13) = 0 \\Rightarrow \\begin{cases} x = 8 \\quad \\text{غ ق ق} \\\\ x = 13 \\quad \\checkmark \\end{cases}$\nتذکر: در بسیاری از سؤالات می‌توان بدون محاسبهٔ دامنه ابتدا معادله را حل کرده، سپس جواب‌های به دست آمده را در معادلهٔ اصلی امتحان نماییم.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": []
+  },
+  {
+    "question_number": 203,
+    "solution_page": 0,
+    "solution_text": "تذکر: در بسیاری از سؤالات می‌توان بدون محاسبهٔ دامنه ابتدا معادله را حل کرده، سپس جواب‌های به دست آمده را در معادلهٔ اصلی امتحان نماییم.\nدامنهٔ معادله $D=[0, \\frac{9}{2}]$ می‌باشد. دو طرف معادله را به توان $2$ می‌رسانیم.\n$\\sqrt{x}+\\sqrt{9-2x}=3 \\Rightarrow x+9-2x+2\\sqrt{9x-2x^2}=9$\n$\\Rightarrow 2\\sqrt{9x-2x^2}=x \\xrightarrow{\\text{به توان } 2} 4(9x-2x^2)=x^2$\n$\\Rightarrow 9x^2-36x=0 \\Rightarrow 9x(x-4)=0 \\Rightarrow \\begin{cases} x=0 \\\\ x=4 \\end{cases}$\nبنابراین:\n$|x_1-x_2|=|4-0|=4$",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": []
+  }
+]

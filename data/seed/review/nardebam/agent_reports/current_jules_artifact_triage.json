@@ -1,0 +1,233 @@
+{
+  "generatedAt": "2026-06-25T20:20:00Z",
+  "sourceArtifactDir": "data/seed/review/nardebam/jules_repairs",
+  "stateFile": "tmp/jules_nardebam/repair_sessions.json",
+  "dryRunCommand": "node scripts/promote_jules_repairs.mjs --dry-run",
+  "promote_now": [
+    {
+      "taskId": "math-topic-04",
+      "rowCount": 46,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-04.json",
+      "reason": "Dry-run mode is replace; artifact is terminal and passes promotion validation."
+    },
+    {
+      "taskId": "math-topic-13",
+      "rowCount": 69,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-13.json",
+      "reason": "Dry-run mode is replace; artifact is terminal and passes promotion validation."
+    }
+  ],
+  "skip_partial": [
+    {
+      "taskId": "math-answer-key-repair",
+      "rowCount": 1932,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-answer-key.json",
+      "reason": "Dry-run mode is skip_not_better_answer_key; current raw has 2042 answer entries, so this would not improve coverage."
+    },
+    {
+      "taskId": "math-solutions-01-repair",
+      "rowCount": 50,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-01.json",
+      "reason": "Dry-run merge reports replaced: 0, so promotion would not improve existing raw rows."
+    },
+    {
+      "taskId": "math-solutions-02-repair",
+      "rowCount": 156,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-02.json",
+      "reason": "Dry-run merge reports replaced: 0 after dedupe; promotion would not improve existing raw rows."
+    },
+    {
+      "taskId": "math-solutions-03-repair",
+      "rowCount": 116,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-03.json",
+      "reason": "Dry-run merge reports replaced: 0, so promotion would not improve existing raw rows."
+    },
+    {
+      "taskId": "math-solutions-04-repair",
+      "rowCount": 67,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-04.json",
+      "reason": "Dry-run merge reports replaced: 0, so promotion would not improve existing raw rows."
+    },
+    {
+      "taskId": "math-solutions-05-repair",
+      "rowCount": 185,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-05.json",
+      "reason": "Dry-run merge reports replaced: 0, so promotion would not improve existing raw rows."
+    },
+    {
+      "taskId": "math-solutions-06-repair",
+      "rowCount": 102,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-06.json",
+      "reason": "Dry-run merge reports replaced: 0 after dedupe; promotion would not improve existing raw rows."
+    },
+    {
+      "taskId": "math-solutions-07-repair",
+      "rowCount": 225,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-07.json",
+      "reason": "Dry-run merge reports replaced: 0 after dedupe; promotion would not improve existing raw rows."
+    },
+    {
+      "taskId": "math-solutions-08-repair",
+      "rowCount": 8,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-08.json",
+      "reason": "Dry-run merge reports replaced: 0 and only 8 incoming rows; skip in favor of the active gap repair."
+    },
+    {
+      "taskId": "math-solutions-09-repair",
+      "rowCount": 24,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-09.json",
+      "reason": "Dry-run merge reports replaced: 0 and only 24 incoming rows; promotion would not improve existing raw rows."
+    },
+    {
+      "taskId": "math-solutions-gap-379-421",
+      "rowCount": 0,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-03.json",
+      "reason": "Collected terminal artifact is empty; dry-run mode is skip_empty_solution_artifact."
+    },
+    {
+      "taskId": "math-topic-01",
+      "rowCount": 32,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-01.json",
+      "reason": "Dry-run mode is skip_shorter_topic_artifact; current raw has 50 rows."
+    },
+    {
+      "taskId": "math-topic-05",
+      "rowCount": 34,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-05.json",
+      "reason": "Dry-run mode is skip_shorter_topic_artifact; current raw has 48 rows."
+    },
+    {
+      "taskId": "math-topic-07",
+      "rowCount": 0,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-07.json",
+      "reason": "Collected terminal artifact is empty; current raw has 63 rows."
+    },
+    {
+      "taskId": "math-topic-10",
+      "rowCount": 76,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-10.json",
+      "reason": "Dry-run mode is skip_shorter_topic_artifact; current raw has 92 rows."
+    },
+    {
+      "taskId": "math-topic-11",
+      "rowCount": 131,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-11.json",
+      "reason": "Dry-run mode is skip_shorter_topic_artifact; current raw has 185 rows."
+    },
+    {
+      "taskId": "math-topic-14",
+      "rowCount": 0,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-14.json",
+      "reason": "Collected terminal artifact is empty; current raw has 45 rows and a targeted visual-conics repair is already in progress."
+    },
+    {
+      "taskId": "math-topic-16",
+      "rowCount": 0,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-16.json",
+      "reason": "Collected terminal artifact is empty; current raw has 113 rows."
+    },
+    {
+      "taskId": "math-topic-18",
+      "rowCount": 44,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-18.json",
+      "reason": "Dry-run mode is skip_shorter_topic_artifact; current raw has 115 rows."
+    },
+    {
+      "taskId": "physics-answer-key-repair",
+      "rowCount": 904,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/physics-answer-key.json",
+      "reason": "Dry-run mode is skip_not_better_answer_key; current raw has 1814 answer entries, so this would not improve coverage."
+    }
+  ],
+  "needs_nudge": [
+    {
+      "taskId": "math-solutions-10-repair",
+      "rowCount": 36,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-10.json",
+      "reason": "Artifact is a nonterminal snapshot while the Jules session is still IN_PROGRESS; dry-run merge also reports replaced: 0.",
+      "suggestedFollowUp": "Please finish math-solutions-10 and write a final complete artifact to jules_output/math-solutions-10.json, especially rows 1936-2119 with complete solution_text and stated_correct_option where visible."
+    },
+    {
+      "taskId": "math-solutions-gap-1912-2119",
+      "rowCount": 3,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-10.json",
+      "reason": "Only 3 rows were collected from a nonterminal IN_PROGRESS gap session covering a much larger requested range.",
+      "suggestedFollowUp": "Please continue math-solutions-gap-1912-2119 and produce the requested ranges 1912, 1921-1948, 1999-2001, 2043-2058, and 2104-2119 in jules_output/math-solutions-gap-1912-2119.json."
+    },
+    {
+      "taskId": "physics-topic-08-boundary-806-807",
+      "rowCount": 2,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/physics-topic-08.json",
+      "reason": "Collected artifact is a nonterminal IN_PROGRESS snapshot and is much shorter than the 248-row current raw topic file.",
+      "suggestedFollowUp": "Please complete the physics-topic-08 boundary repair around 806-807 and include the following one_dimensional_motion handoff rows in jules_output/physics-topic-08-boundary-806-807.json."
+    }
+  ],
+  "high_value_waiting": [
+    {
+      "taskId": "math-solutions-gap-001-153",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-01.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; requested range covers all math-solutions-01 rows 1-153."
+    },
+    {
+      "taskId": "math-solutions-gap-1040-1156",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-06.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; requested ranges target known gaps 1040-1069 and 1148-1156."
+    },
+    {
+      "taskId": "math-solutions-gap-1516-1608",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-08.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; requested ranges cover the sparse math-solutions-08 repair area."
+    },
+    {
+      "taskId": "physics-answer-key-111-220",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/physics-answer-key.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; expected to fill a targeted physics answer-key block."
+    },
+    {
+      "taskId": "math-answer-key-2043-2119",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-answer-key.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; targets answer-key gaps in the late math range."
+    },
+    {
+      "taskId": "math-topic-02-boundary-33-100",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-02.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; targets duplicated boundary rows and printed questions 51-100."
+    },
+    {
+      "taskId": "math-topic-05-gap-295-308",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-05.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; targets a narrow known topic gap around 295-308."
+    },
+    {
+      "taskId": "math-topic-11-gap-1248-1345",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-11.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; targets the large missing block before 1346."
+    },
+    {
+      "taskId": "math-topic-14-visual-conics-repair",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-14.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; replaces the earlier empty math-topic-14 artifact with a targeted visual-conics task."
+    },
+    {
+      "taskId": "math-topic-15-combinatorics-1735-1822",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-topic-15.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; targets a full combinatorics block."
+    },
+    {
+      "taskId": "math-solutions-07-mismatch-1346-1466",
+      "rowCount": null,
+      "expectedRawTarget": "data/seed/review/nardebam/raw/math-solutions-07.json",
+      "reason": "IN_PROGRESS with no collected artifact yet; targets a current solution-key mismatch range."
+    }
+  ]
+}

@@ -1,0 +1,5149 @@
+{
+  "task_id": "math-topic-08-repair-global-to-940",
+  "subject": "math",
+  "topic_key": "trigonometry",
+  "questions": [
+    {
+      "question_number": 705,
+      "question_page": 1,
+      "question_text": "در شکل زیر، فرض کنید $\\sin C=\\frac{5}{13}$ و $CH=9$، اندازه‌ی ارتفاع $AH$ کدام است؟",
+      "options": [
+        "$3/25$",
+        "$3/5$",
+        "$3/6$",
+        "$3/75$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0001.jpg",
+          "box": [
+            230,
+            1630,
+            860,
+            1945
+          ],
+          "placement": "stem",
+          "alt": "مثلث با رأس A و پای ارتفاع H روی امتداد BC"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 706,
+      "question_page": 1,
+      "question_text": "ناظری به فاصله‌ی $35$ متر از پای ستونی که بر روی آن مجسمه‌ای قرار دارد، ایستاده است. زاویه‌ی رؤیت انتها و ابتدای مجسمه با سطح افقی $45^\\circ$ و $40^\\circ$ است. ارتفاع مجسمه کدام است؟ $(\\tan40^\\circ=0/8)$",
+      "options": [
+        "$6$",
+        "$6/4$",
+        "$7$",
+        "$7/2$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0001.jpg",
+          "box": [
+            215,
+            2250,
+            720,
+            2725
+          ],
+          "placement": "stem",
+          "alt": "ستون و مجسمه با فاصله افقی 35 متر و زاویه‌های دید 40 و 45 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 707,
+      "question_page": 2,
+      "question_text": "اندازه‌ی دو قطر از متوازی‌الاضلاع $12$ و $8\\sqrt3$ واحد است. این دو قطر با زاویه‌ی $60^\\circ$ متقاطع هستند. مساحت این متوازی‌الاضلاع کدام است؟",
+      "options": [
+        "$48$",
+        "$54$",
+        "$64$",
+        "$72$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0002.jpg",
+          "box": [
+            210,
+            735,
+            805,
+            1030
+          ],
+          "placement": "stem",
+          "alt": "متوازی‌الاضلاع با دو قطر متقاطع و زاویه 60 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 708,
+      "question_page": 3,
+      "question_text": "انتهای کمان‌های مقابل به زاویه‌های $\\frac{5\\pi}{12}+2k\\pi$ و $\\frac{3\\pi}{4}+2k\\pi$ و $\\alpha+2k\\pi$ بر روی دایره‌ی مثلثاتی، سه رأس یک مثلث قائم‌الزاویه‌اند. $\\alpha$ کدام می‌تواند باشد؟ $(k\\in\\mathbb{Z})$",
+      "options": [
+        "$\\frac{5\\pi}{4}$",
+        "$\\frac{17\\pi}{12}$",
+        "$\\frac{4\\pi}{3}$",
+        "$\\frac{11\\pi}{6}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0003.jpg",
+          "box": [
+            285,
+            535,
+            820,
+            895
+          ],
+          "placement": "stem",
+          "alt": "دو حالت مثلث قائم‌الزاویه روی دایره مثلثاتی"
+        }
+      ],
+      "review_notes": [
+        "box شکل در بخش پاسخ آمده و برای فهم مسئله مفید است."
+      ]
+    },
+    {
+      "question_number": 709,
+      "question_page": 3,
+      "question_text": "فرض کنید $\\theta$ برحسب رادیان و $3\\theta=4\\sin\\theta$ باشد. اگر در شکل زیر شعاع دایره برابر $6$ باشد، محیط ناحیه‌ی رنگی چقدر است؟",
+      "options": [
+        "$155$",
+        "$185$",
+        "$215$",
+        "$245$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0003.jpg",
+          "box": [
+            190,
+            1015,
+            575,
+            1325
+          ],
+          "placement": "stem",
+          "alt": "دایره با وتر AB و ناحیه رنگی بالای وتر"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 710,
+      "question_page": 4,
+      "question_text": "نقطه‌ی $P(1-2a,a)$ مطابق شکل روی دایره‌ی مثلثاتی قرار دارد. مقدار $\\tan\\theta$ کدام است؟",
+      "options": [
+        "$-\\frac{3}{4}$",
+        "$-\\frac{4}{3}$",
+        "$-\\frac{3}{5}$",
+        "$-\\frac{4}{5}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0004.jpg",
+          "box": [
+            195,
+            1025,
+            595,
+            1415
+          ],
+          "placement": "stem",
+          "alt": "نقطه P در ناحیه دوم روی دایره مثلثاتی"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 711,
+      "question_page": 4,
+      "question_text": "اگر $\\frac{\\pi}{12}\\le \\alpha \\le \\frac{5\\pi}{12}$ و $\\sin2\\alpha=\\frac{2}{1-2m}$ باشد، حدود $m$ کدام است؟",
+      "options": [
+        "$-\\frac{1}{2}\\le m<\\frac{1}{2}$",
+        "$m\\le -\\frac{3}{2}$",
+        "فقط $m=-\\frac{3}{2}$",
+        "$-\\frac{3}{2}\\le m\\le -\\frac{1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 712,
+      "question_page": 5,
+      "question_text": "حاصل عبارت $\\sin(\\frac{17\\pi}{3})\\cos(-\\frac{17\\pi}{6})+\\tan(\\frac{19\\pi}{4})\\sin(-\\frac{11\\pi}{6})$ کدام است؟",
+      "options": [
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 713,
+      "question_page": 5,
+      "question_text": "اگر $\\tan\\theta=0/2$ باشد، مقدار $\\frac{\\cos(\\frac{3\\pi}{2}+\\theta)-\\cos(\\pi+\\theta)}{\\sin(\\pi-\\theta)-\\sin(3\\pi+\\theta)}$ کدام است؟",
+      "options": [
+        "$-3$",
+        "$1/2$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 714,
+      "question_page": 5,
+      "question_text": "اگر $\\tan(\\alpha+\\frac{\\pi}{4})\\tan(\\beta-\\frac{\\pi}{3})=1$ باشد، حاصل $\\alpha+\\beta$ کدام می‌تواند باشد؟",
+      "options": [
+        "$\\frac{7\\pi}{12}$",
+        "$\\frac{\\pi}{2}$",
+        "$\\frac{2\\pi}{3}$",
+        "$\\frac{11\\pi}{12}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 715,
+      "question_page": 6,
+      "question_text": "حاصل عبارت $P=\\cos\\frac{\\pi}{9}+\\cos\\frac{2\\pi}{9}+\\cos\\frac{3\\pi}{9}+\\cdots+\\cos\\frac{9\\pi}{9}$ برابر کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$-1$",
+        "صفر"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 716,
+      "question_page": 6,
+      "question_text": "اگر $\\tan\\alpha=\\frac{4}{3}$ و انتهای کمان $\\alpha$ در ربع سوم باشد، حاصل عبارت زیر کدام است؟ $\\sin(\\frac{9\\pi}{2}+\\alpha)\\cos(\\frac{7\\pi}{2}-\\alpha)-\\tan(\\alpha-\\frac{3\\pi}{2})$",
+      "options": [
+        "$-1/23$",
+        "$-0/52$",
+        "$0/27$",
+        "$0/48$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 717,
+      "question_page": 6,
+      "question_text": "اگر $\\frac{\\pi}{2}<x<\\pi$ باشد، حاصل عبارت $(\\frac{\\tan x}{\\sqrt{1+\\tan^2 x}})(\\frac{1}{\\sin x}-\\sin x)$ کدام است؟",
+      "options": [
+        "$-\\cos^2 x$",
+        "$-\\cos x$",
+        "$\\cos^2 x$",
+        "$\\cos x$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 718,
+      "question_page": 6,
+      "question_text": "اگر $\\tan x+\\cot x=\\frac{5}{2}$ باشد، حاصل عبارت $\\frac{\\sin^4 x+\\cos^4 x}{\\sin^6 x+\\cos^6 x}$ کدام است؟",
+      "options": [
+        "$\\frac{5}{12}$",
+        "$\\frac{7}{12}$",
+        "$\\frac{14}{13}$",
+        "$\\frac{17}{13}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 719,
+      "question_page": 7,
+      "question_text": "اگر $\\sin\\alpha-\\cos\\alpha=\\frac{1}{2}$ باشد، مقدار $\\cos(\\frac{3\\pi}{2}-2\\alpha)$ کدام است؟",
+      "options": [
+        "$-\\frac{3}{4}$",
+        "$-\\frac{3}{8}$",
+        "$\\frac{3}{8}$",
+        "$\\frac{3}{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 720,
+      "question_page": 7,
+      "question_text": "اگر $\\frac{\\sin\\alpha}{1+\\cos\\alpha}=\\frac{1}{2}$ باشد، مقدار $\\tan(\\frac{\\pi}{2}+\\frac{\\alpha}{2})$ کدام است؟",
+      "options": [
+        "$-2$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{2}$",
+        "$2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 721,
+      "question_page": 7,
+      "question_text": "اگر زاویه‌ی $\\alpha$ در ناحیه‌ی سوم دایره‌ی مثلثاتی و $\\tan\\alpha=\\frac{3}{4}$ باشد، مقدار $\\frac{\\cos(2\\alpha-\\frac{\\pi}{2})+\\cos(\\alpha+\\pi)}{\\cot2\\alpha}$ کدام است؟",
+      "options": [
+        "$-\\frac{96}{175}$",
+        "$\\frac{1056}{175}$",
+        "$\\frac{96}{175}$",
+        "$-\\frac{1056}{175}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 722,
+      "question_page": 7,
+      "question_text": "حاصل $\\frac{1}{\\sin15^\\circ}-\\frac{1}{\\cos15^\\circ}$ کدام است؟",
+      "options": [
+        "$2$",
+        "$\\sqrt6$",
+        "$2\\sqrt3$",
+        "$2\\sqrt2$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "حل سؤال در صفحه بعد ادامه دارد، اما متن و گزینه‌ها کامل هستند."
+      ]
+    },
+    {
+      "question_number": 723,
+      "question_page": 8,
+      "question_text": "اگر $\\tan x=\\frac{4}{3}$ باشد، مقدار $\\tan\\frac{x}{2}-\\cot\\frac{x}{2}$ کدام است؟",
+      "options": [
+        "$-\\frac{3}{4}$",
+        "$-\\frac{3}{2}$",
+        "$\\frac{4}{3}$",
+        "$\\frac{3}{2}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 724,
+      "question_page": 9,
+      "question_text": "دوره‌ی تناوب تابع با ضابطه‌ی $f(x)=\\tan(\\pi x)-\\cot(\\pi x)$ کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$2$",
+        "$\\pi$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 725,
+      "question_page": 9,
+      "question_text": "در تابع مثلثاتی $y=a-(2a+2)\\sin(\\frac{\\pi}{a}x)$، مقدار ماکزیمم از سه برابر دوره‌ی تناوب آن چهار واحد کمتر است. مقدار مینیمم این تابع چقدر است؟ $(a>0)$",
+      "options": [
+        "$-2$",
+        "$-3$",
+        "$-4$",
+        "$-6$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 726,
+      "question_page": 10,
+      "question_text": "شکل زیر، نمودار تابع $y=1+a\\sin(b\\pi x)$ در بازه‌ی $(0,\\frac{4}{3})$ است. $a+b$ کدام است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            160,
+            345,
+            675,
+            640
+          ],
+          "placement": "stem",
+          "alt": "نمودار سینوسی با خط میانی y=1 و کمینه y=-1 در بازه داده‌شده"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 727,
+      "question_page": 10,
+      "question_text": "شکل زیر نمودار تابع $y=1+a\\sin bx\\cos bx$ است. $a+b$ کدام است؟",
+      "options": [
+        "$1$",
+        "$\\frac{3}{2}$",
+        "$2$",
+        "$3$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            170,
+            880,
+            760,
+            1095
+          ],
+          "placement": "stem",
+          "alt": "نمودار موجی با بیشینه سه دوم و نشان‌های پی چهارم و سه‌پی چهارم روی محور x"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 728,
+      "question_page": 10,
+      "question_text": "شکل روبه‌رو قسمتی از نمودار تابع $y=a+b\\sin(x+\\frac{\\pi}{3})$ است. $b$ کدام است؟",
+      "options": [
+        "$\\frac{\\sqrt3}{2}$",
+        "$\\frac{3}{2}$",
+        "$\\sqrt3$",
+        "$2$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0010.jpg",
+          "box": [
+            170,
+            1630,
+            575,
+            1955
+          ],
+          "placement": "stem",
+          "alt": "بخشی از نمودار سینوسی با مقدار ریشه سه در محور y و نقطه x=pi با مقدار منفی سه دوم"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 729,
+      "question_page": 11,
+      "question_text": "شکل مقابل قسمتی از نمودار تابع $y=1+a\\cos(bx-\\frac{\\pi}{3})$ است. حاصل $a-b$ کدام است؟",
+      "options": [
+        "$-1$",
+        "$4$",
+        "$-4$",
+        "صفر"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0011.jpg",
+          "box": [
+            300,
+            2220,
+            610,
+            2440
+          ],
+          "placement": "stem",
+          "alt": "نمودار کسینوسی روی بازه تا pi"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 730,
+      "question_page": 12,
+      "question_text": "اگر $\\frac{\\pi}{4}<x<\\frac{3\\pi}{4}$ و $\\tan x=\\frac{3}{2m-3}$ باشد، حدود $m$ کدام است؟",
+      "options": [
+        "$m>3$",
+        "$0<m<\\frac{3}{2}$",
+        "$\\frac{3}{2}<m<3$",
+        "$0<m<3, m\\ne\\frac{3}{2}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            120,
+            930,
+            460,
+            1340
+          ],
+          "placement": "stem",
+          "alt": "دایره مثلثاتی و محور تانژانت"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 731,
+      "question_page": 12,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 731 از صفحه 12 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 731 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 732,
+      "question_page": 12,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 732 از صفحه 12 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 732 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 733,
+      "question_page": 12,
+      "question_text": "قسمتی از نمودار تابع $y=-a\\tan(b\\pi x)$ به صورت مقابل است. مقدار $a$ کدام است؟",
+      "options": [
+        "$\\frac{4}{3}$",
+        "$\\frac{2}{3}$",
+        "$1$",
+        "$\\frac{3}{4}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0012.jpg",
+          "box": [
+            130,
+            1865,
+            470,
+            2215
+          ],
+          "placement": "stem",
+          "alt": "نمودار تانژانت با مجانب‌های عمودی و نقطه مشخص"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 734,
+      "question_page": 13,
+      "question_text": "در شکل مقابل، مقدار $\\cos\\alpha$ کدام است؟",
+      "options": [
+        "$\\frac{5}{13}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{13}{15}$",
+        "$\\frac{12}{13}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            215,
+            410,
+            650,
+            560
+          ],
+          "placement": "stem",
+          "alt": "مثلث قائم با اضلاع x+5، 5 و 2x-1"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 735,
+      "question_page": 13,
+      "question_text": "مطابق شکل نردبانی کنار یک دیوار قرار گرفته است. اگر طول نردبان $1/25$ برابر ارتفاع دیوار باشد، مقدار تانژانت زاویه‌ای که نردبان با زمین می‌سازد چقدر است؟",
+      "options": [
+        "$\\frac{2}{2}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{4}{3}$",
+        "$\\frac{3}{2}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            220,
+            590,
+            530,
+            900
+          ],
+          "placement": "stem",
+          "alt": "نردبان تکیه داده به دیوار با زاویه alpha"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 736,
+      "question_page": 13,
+      "question_text": "در مثلث $ABC$ شکل مقابل، $\\cos C=0/8$ است. اگر $AH=18$ باشد، طول پاره‌خط $CH$ چقدر است؟",
+      "options": [
+        "$24$",
+        "$28$",
+        "$32$",
+        "$36$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            210,
+            910,
+            650,
+            1050
+          ],
+          "placement": "stem",
+          "alt": "مثلث با ارتفاع AH روی امتداد BC"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 737,
+      "question_page": 13,
+      "question_text": "یک موشک در ارتفاع $20$ متری از سطح زمین با زاویه‌ی $30^\\circ$ پرتاب می‌شود. پس از طی $800$ متر در همین راستا در چه ارتفاعی از سطح زمین قرار می‌گیرد؟",
+      "options": [
+        "$400$",
+        "$400\\sqrt3$",
+        "$420$",
+        "$400\\sqrt3+20$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 738,
+      "question_page": 13,
+      "question_text": "اگر اندازه‌ی هر ضلع مربع کوچک یک واحد باشد، مقدار $\\sin\\alpha$ کدام است؟",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{4}{5}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            210,
+            1120,
+            640,
+            1375
+          ],
+          "placement": "stem",
+          "alt": "شبکه مربعی با قطر و زاویه alpha"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 739,
+      "question_page": 13,
+      "question_text": "اگر اندازه‌ی هر ضلع مربع کوچک $1$ واحد است، مقدار $\\sin\\alpha$ کدام است؟",
+      "options": [
+        "$\\frac{\\sqrt2}{2}$",
+        "$\\frac{\\sqrt3}{3}$",
+        "$\\frac{\\sqrt3}{2}$",
+        "$\\frac{1}{2}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            205,
+            1380,
+            640,
+            1570
+          ],
+          "placement": "stem",
+          "alt": "شبکه مربعی با دو پاره‌خط و زاویه alpha"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 740,
+      "question_page": 13,
+      "question_text": "در روبات شکل مقابل فاصله نوک گیره از سطح زمین چند سانتی‌متر است؟ $(\\sqrt3=1/7)$",
+      "options": [
+        "$103$",
+        "$103/25$",
+        "$105$",
+        "$105/25$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            215,
+            1600,
+            625,
+            2035
+          ],
+          "placement": "stem",
+          "alt": "بازوی روبات با طول‌های 40، 50 و 45 سانتی‌متر و زاویه‌ها"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 741,
+      "question_page": 13,
+      "question_text": "طاها به نوک برج میلاد با زاویه‌ی $60^\\circ$ نگاه می‌کند. اگر ارتفاع برج میلاد را $435$ متر فرض کنیم، طاها چند متر از برج دور شود تا نوک برج را با زاویه‌ی $30^\\circ$ نگاه کند؟",
+      "options": [
+        "$290\\sqrt3$",
+        "$270\\sqrt3$",
+        "$435$",
+        "$360$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            210,
+            2025,
+            645,
+            2310
+          ],
+          "placement": "stem",
+          "alt": "برج و خط دید با زاویه 60 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 742,
+      "question_page": 13,
+      "question_text": "یک بالن مطابق شکل به وسیله‌ی دو طناب به زمین بسته شده است. اگر طول یکی از طناب‌ها $18$ باشد، $(\\sin70^\\circ=0/9)$ طول طناب دوم کدام است؟",
+      "options": [
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0013.jpg",
+          "box": [
+            205,
+            2300,
+            650,
+            2505
+          ],
+          "placement": "stem",
+          "alt": "بالن با دو طناب و زاویه‌های 70 و 30 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 743,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 743 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 743 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 744,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 744 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 744 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 745,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 745 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 745 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 746,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 746 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 746 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 747,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 747 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 747 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 748,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 748 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 748 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 749,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 749 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 749 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 750,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 750 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 750 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 751,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 751 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 751 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 752,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 752 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 752 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 753,
+      "question_page": 14,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 753 از صفحه 14 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 753 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 754,
+      "question_page": 15,
+      "question_text": "در شکل مقابل، مساحت مثلث $BDC$ چقدر است؟",
+      "options": [
+        "$6\\sqrt3$",
+        "$3\\sqrt3$",
+        "$4\\sqrt3$",
+        "$2\\sqrt3$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            210,
+            230,
+            580,
+            405
+          ],
+          "placement": "stem",
+          "alt": "مثلث ABC با نقطه D و زاویه‌های 60 و 120 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 755,
+      "question_page": 15,
+      "question_text": "در دایره شکل مقابل طول کمان $AB$، $\\frac{1}{2}$ شعاع دایره است. زاویه‌ی $\\theta$ چند درجه است؟",
+      "options": [
+        "$\\frac{60}{\\pi}$",
+        "$\\frac{30}{\\pi}$",
+        "$30$",
+        "$60$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            210,
+            480,
+            560,
+            720
+          ],
+          "placement": "stem",
+          "alt": "دایره با دو شعاع OA و OB و زاویه theta"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 756,
+      "question_page": 15,
+      "question_text": "شعاع دایره مقابل برابر $12$ است. اندازه کمان $AB$ کدام است؟",
+      "options": [
+        "$\\frac{\\pi}{6}$",
+        "$\\frac{\\pi}{3}$",
+        "$\\pi$",
+        "$2\\pi$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            210,
+            720,
+            565,
+            965
+          ],
+          "placement": "stem",
+          "alt": "دایره با زاویه محاطی 15 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 757,
+      "question_page": 15,
+      "question_text": "در شکل مقابل مساحت قسمت رنگی کدام است؟",
+      "options": [
+        "$\\frac{4\\pi}{3}-2\\sqrt3$",
+        "$\\frac{2\\pi}{3}-\\sqrt3$",
+        "$\\frac{2\\pi}{3}-\\frac{\\sqrt3}{2}$",
+        "$\\frac{\\pi}{3}-\\frac{\\sqrt3}{2}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            210,
+            965,
+            555,
+            1215
+          ],
+          "placement": "stem",
+          "alt": "بخش دایره‌ای رنگی روی مثلث با زاویه 60 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 758,
+      "question_page": 15,
+      "question_text": "در شکل مقابل، محیط و مساحت قسمت رنگی از لحاظ عددی با هم برابر است. $\\theta$ بر حسب رادیان کدام است؟",
+      "options": [
+        "$3$",
+        "$4$",
+        "$\\frac{\\pi}{3}$",
+        "$\\frac{\\pi}{4}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            210,
+            1230,
+            555,
+            1485
+          ],
+          "placement": "stem",
+          "alt": "قطاع دایره با شعاع 3 و زاویه theta"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 759,
+      "question_page": 15,
+      "question_text": "در شکل مقابل، دو دایره هم‌مرکز و شعاع آن‌ها $4$ و $8$ است. مساحت ناحیه‌ی رنگی کدام است؟",
+      "options": [
+        "$2\\pi$",
+        "$3\\pi$",
+        "$4\\pi$",
+        "$6\\pi$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            205,
+            1480,
+            560,
+            1780
+          ],
+          "placement": "stem",
+          "alt": "حلقه دایره‌ای با قطاع رنگی و زاویه pi/6"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 760,
+      "question_page": 15,
+      "question_text": "در شکل مقابل دو دایره هم‌مرکز و شعاع آن‌ها $3$ و $8$ است. محیط ناحیه‌ی رنگی کدام است؟",
+      "options": [
+        "$10+25\\frac{\\pi}{2}$",
+        "$5+25\\frac{\\pi}{2}$",
+        "$5+\\frac{55\\pi}{6}$",
+        "$10+\\frac{55\\pi}{6}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0015.jpg",
+          "box": [
+            210,
+            1795,
+            560,
+            2090
+          ],
+          "placement": "stem",
+          "alt": "ناحیه حلقوی رنگی با زاویه 150 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 761,
+      "question_page": 15,
+      "question_text": "انتهای کمان مربوط به زاویه‌ی $-315^\\circ$ با انتهای کمان‌های مربوط به کدام زاویه زیر در یک ناحیه دایره مثلثاتی قرار ندارد؟",
+      "options": [
+        "$\\frac{2\\pi}{3}$",
+        "$-\\frac{7\\pi}{6}$",
+        "$\\frac{13\\pi}{5}$",
+        "$\\frac{11\\pi}{7}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 762,
+      "question_page": 15,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 762 از صفحه 15 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 762 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 763,
+      "question_page": 15,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 763 از صفحه 15 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 763 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 764,
+      "question_page": 15,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 764 از صفحه 15 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 764 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 765,
+      "question_page": 15,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 765 از صفحه 15 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 765 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 766,
+      "question_page": 15,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 766 از صفحه 15 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 766 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 767,
+      "question_page": 16,
+      "question_text": "انتهای کمان‌های زاویه $\\theta=\\frac{k\\pi}{6}+\\frac{\\pi}{8}$ چند نقطه را روی دایره مثلثاتی نشان می‌دهد؟ $(k\\in\\mathbb{Z})$",
+      "options": [
+        "$6$",
+        "$8$",
+        "$12$",
+        "$24$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 768,
+      "question_page": 16,
+      "question_text": "در دایره مثلثاتی نیمسازهای نواحی اول و سوم و همچنین دوم و چهارم را رسم کرده‌ایم. اگر $\\sin\\alpha\\cos\\alpha<0$ و $\\tan\\alpha<\\cot\\alpha$ باشد، $\\alpha$ در کدام‌یک از نواحی هشت‌گانه شکل زیر قرار می‌گیرد؟",
+      "options": [
+        "$3$ یا $7$",
+        "$2$ یا $6$",
+        "$1$ یا $5$",
+        "$4$ یا $8$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0016.jpg",
+          "box": [
+            95,
+            350,
+            380,
+            610
+          ],
+          "placement": "stem",
+          "alt": "دایره تقسیم شده به هشت ناحیه شماره‌دار"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 769,
+      "question_page": 16,
+      "question_text": "اگر $\\sin x<\\cos x$ و $\\tan x>\\cot x$، زاویه‌ی $x$ بر حسب رادیان کدام می‌تواند باشد؟",
+      "options": [
+        "$\\frac{9\\pi}{8}$",
+        "$\\frac{13\\pi}{9}$",
+        "$\\frac{17\\pi}{10}$",
+        "$\\frac{23\\pi}{11}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 770,
+      "question_page": 16,
+      "question_text": "نقطه $P(\\frac{2}{3},-\\frac{\\sqrt5}{3})$ روی دایره مثلثاتی انتهای کمان مربوط به زاویه $\\alpha$ می‌باشد. مقدار $\\frac{\\sin\\alpha}{\\cot\\alpha}$ کدام است؟",
+      "options": [
+        "$\\frac{5}{6}$",
+        "$\\frac{6}{5}$",
+        "$-\\frac{5}{6}$",
+        "$-\\frac{6}{5}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 771,
+      "question_page": 16,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 771 از صفحه 16 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 771 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 772,
+      "question_page": 16,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 772 از صفحه 16 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 772 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 773,
+      "question_page": 16,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 773 از صفحه 16 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 773 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 774,
+      "question_page": 16,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 774 از صفحه 16 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 774 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 775,
+      "question_page": 16,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 775 از صفحه 16 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 775 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 776,
+      "question_page": 16,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 776 از صفحه 16 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 776 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 777,
+      "question_page": 16,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 777 از صفحه 16 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 777 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 778,
+      "question_page": 17,
+      "question_text": "در دایره مثلثاتی شکل مقابل، طول $OA$ چقدر است؟",
+      "options": [
+        "$\\sqrt3$",
+        "$\\frac{\\sqrt3}{3}$",
+        "$1$",
+        "$\\frac{2\\sqrt3}{3}$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0017.jpg",
+          "box": [
+            230,
+            250,
+            560,
+            535
+          ],
+          "placement": "stem",
+          "alt": "دایره مثلثاتی با خط مماس و زاویه 60 درجه"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 779,
+      "question_page": 17,
+      "question_text": "در دایره مثلثاتی شکل مقابل $MN$ بر دایره مماس است. حاصل $AM+BN$ کدام است؟",
+      "options": [
+        "$\\frac{\\sqrt3}{2}$",
+        "$\\frac{2\\sqrt3}{3}$",
+        "$\\frac{\\sqrt3}{2}+1$",
+        "$\\frac{2\\sqrt3}{3}+1$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0017.jpg",
+          "box": [
+            215,
+            580,
+            595,
+            900
+          ],
+          "placement": "stem",
+          "alt": "دایره مثلثاتی با مماس MN و نقاط A و B"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 780,
+      "question_page": 17,
+      "question_text": "در کدام ناحیه دایره مثلثاتی با افزایش زاویه، مقدار سینوس و کسینوس آن کاهش می‌یابد؟",
+      "options": [
+        "اول",
+        "دوم",
+        "سوم",
+        "چهارم"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 781,
+      "question_page": 17,
+      "question_text": "اگر $0<\\alpha<120^\\circ$ و $\\sin\\alpha=\\frac{2-m}{2}$ باشد، حدود $m$ کدام است؟",
+      "options": [
+        "$2-\\frac{3\\sqrt3}{2}<m<2$",
+        "$\\frac{1}{2}<m<2$",
+        "$-1\\le m<2$",
+        "$-\\frac{1}{2}\\le m<2$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 782,
+      "question_page": 17,
+      "question_text": "اگر $\\frac{\\pi}{6}<\\theta<\\frac{2\\pi}{3}$ و $\\cos 3\\theta=\\frac{3m+1}{2}$ باشد، حدود $m$ کدام است؟",
+      "options": [
+        "$-\\frac{2}{3}<m<0$",
+        "$-1\\le m<0$",
+        "$-\\frac{2}{3}<m<\\frac{\\sqrt3-1}{3}$",
+        "$-1\\le m<-\\frac{1}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 783,
+      "question_page": 17,
+      "question_text": "در دایره مثلثاتی شکل مقابل مساحت قسمت رنگی کدام است؟",
+      "options": [
+        "$\\frac{1}{2}(\\tan\\theta-\\theta)$",
+        "$\\frac{1}{2}\\tan\\theta-\\theta$",
+        "$\\frac{1}{2}(\\tan\\theta-\\sin\\theta)$",
+        "$\\frac{1}{2}\\tan\\theta-\\sin\\theta$"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0017.jpg",
+          "box": [
+            205,
+            1205,
+            560,
+            1505
+          ],
+          "placement": "stem",
+          "alt": "دایره مثلثاتی با ناحیه رنگی بین مماس و قطاع"
+        }
+      ],
+      "review_notes": [
+        "box شکل local و تقریبی است."
+      ]
+    },
+    {
+      "question_number": 784,
+      "question_page": 17,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 784 از صفحه 17 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 784 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 785,
+      "question_page": 17,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 785 از صفحه 17 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 785 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 786,
+      "question_page": 17,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 786 از صفحه 17 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 786 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 787,
+      "question_page": 17,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 787 از صفحه 17 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 787 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 788,
+      "question_page": 17,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 788 از صفحه 17 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 788 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 789,
+      "question_page": 17,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 789 از صفحه 17 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 789 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 790,
+      "question_page": 18,
+      "question_text": "مثلث $ABC$ در رأس $A$ قائمه است. حاصل $\\frac{\\sin B\\cos C}{\\sin^2 C}$ کدام است؟",
+      "options": [
+        "$\\tan^2 B$",
+        "$\\tan^2 C$",
+        "$\\cot^2 B$",
+        "$\\tan C\\cot B$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 791,
+      "question_page": 18,
+      "question_text": "اگر $\\frac{\\cos(x-\\frac{\\pi}{4})}{\\cos(x+\\frac{\\pi}{4})}=4$ باشد، حاصل $\\tan(x-\\frac{\\pi}{4})$ کدام است؟",
+      "options": [
+        "$4$",
+        "$\\frac{1}{4}$",
+        "$-4$",
+        "$-\\frac{1}{4}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 792,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 792 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 792 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 793,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 793 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 793 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 794,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 794 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 794 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 795,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 795 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 795 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 796,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 796 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 796 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 797,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 797 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 797 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 798,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 798 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 798 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 799,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 799 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 799 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 800,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 800 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 800 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 801,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 801 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 801 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 802,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 802 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 802 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 803,
+      "question_page": 18,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 803 از صفحه 18 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 803 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 804,
+      "question_page": 19,
+      "question_text": "اگر $\\cos\\theta=\\frac{1}{\\sqrt{10}}$ و انتهای کمان $\\theta$ در ناحیه چهارم باشد، حاصل $\\cot\\theta-\\tan\\theta$ کدام است؟",
+      "options": [
+        "$\\frac{8}{3}$",
+        "$\\frac{10}{3}$",
+        "$-\\frac{8}{3}$",
+        "$-\\frac{10}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 805,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 805 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 805 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 806,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 806 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 806 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 807,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 807 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 807 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 808,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 808 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 808 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 809,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 809 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 809 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 810,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 810 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 810 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 811,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 811 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 811 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 812,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 812 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 812 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 813,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 813 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 813 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 814,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 814 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 814 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 815,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 815 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 815 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 816,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 816 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 816 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 817,
+      "question_page": 19,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 817 از صفحه 19 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 817 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 818,
+      "question_page": 20,
+      "question_text": "اگر $\\sin^2(\\alpha-\\frac{\\pi}{3})+\\sin^2(\\beta+\\frac{\\pi}{4})=1$ باشد، حاصل $\\alpha+\\beta$ کدام می‌تواند باشد؟",
+      "options": [
+        "$\\frac{5\\pi}{12}$",
+        "$\\frac{7\\pi}{12}$",
+        "$\\frac{3\\pi}{4}$",
+        "$\\frac{2\\pi}{3}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 819,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 819 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 819 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 820,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 820 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 820 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 821,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 821 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 821 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 822,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 822 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 822 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 823,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 823 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 823 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 824,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 824 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 824 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 825,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 825 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 825 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 826,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 826 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 826 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 827,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 827 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 827 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 828,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 828 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 828 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 829,
+      "question_page": 20,
+      "question_text": "اگر $\\cos(\\pi+\\theta)+\\cos(\\frac{\\pi}{2}+\\theta)=\\frac{1}{3}$ باشد، حاصل $\\sin2\\theta$ کدام است؟",
+      "options": [
+        "$\\frac{4}{9}$",
+        "$\\frac{8}{9}$",
+        "$-\\frac{4}{9}$",
+        "$-\\frac{8}{9}$"
+      ],
+      "media_regions": [],
+      "review_notes": []
+    },
+    {
+      "question_number": 830,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 830 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 830 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 831,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 831 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 831 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 832,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 832 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 832 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 833,
+      "question_page": 20,
+      "question_text": "سؤال چهارگزینه‌ای چاپی شماره 833 از صفحه 20 درباره‌ی مثلثات؛ متن فرمولی از تصویر متراکم است و باید در بازبینی نهایی با scan تطبیق داده شود.",
+      "options": [
+        "$\\text{گزینه ۱}$",
+        "$\\text{گزینه ۲}$",
+        "$\\text{گزینه ۳}$",
+        "$\\text{گزینه ۴}$"
+      ],
+      "media_regions": [],
+      "review_notes": [
+        "متن/گزینه‌های سؤال چاپی 833 از تصویر بسیار متراکم است و نیازمند بازخوانی دستی است."
+      ]
+    },
+    {
+      "question_number": 834,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 834 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            185,
+            1690,
+            335
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 834"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 835,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 835 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            290,
+            1690,
+            455
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 835"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 836,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 836 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            410,
+            1690,
+            570
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 836"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 837,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 837 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            525,
+            1690,
+            685
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 837"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 838,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 838 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            640,
+            1690,
+            810
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 838"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 839,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 839 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            110,
+            755,
+            760,
+            935
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 839"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 840,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 840 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            885,
+            1690,
+            1055
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 840"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 841,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 841 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            1010,
+            1690,
+            1185
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 841"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 842,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 842 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            1140,
+            1690,
+            1305
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 842"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 843,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 843 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            1260,
+            1690,
+            1430
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 843"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 844,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 844 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            1385,
+            1690,
+            1555
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 844"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 845,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 845 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            1510,
+            1690,
+            1680
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 845"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 846,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 846 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            1635,
+            1690,
+            1810
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 846"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 847,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 847 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            1765,
+            1690,
+            1935
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 847"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 848,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 848 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            1890,
+            1690,
+            2060
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 848"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 849,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 849 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            2015,
+            1690,
+            2185
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 849"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 850,
+      "question_page": 21,
+      "question_text": "سؤال چاپی شماره 850 از مبحث مثلثات در صفحه 21. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0021.jpg",
+          "box": [
+            650,
+            2140,
+            1690,
+            2310
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 850"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 851,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 851 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            185,
+            1690,
+            365
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 851"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 852,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 852 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            320,
+            1690,
+            495
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 852"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 853,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 853 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            110,
+            440,
+            760,
+            760
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 853"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 854,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 854 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            110,
+            700,
+            760,
+            985
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 854"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 855,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 855 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            110,
+            925,
+            760,
+            1170
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 855"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 856,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 856 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            1120,
+            1690,
+            1335
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 856"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 857,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 857 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            1290,
+            1690,
+            1485
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 857"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 858,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 858 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            1440,
+            1690,
+            1635
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 858"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 859,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 859 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            1590,
+            1690,
+            1785
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 859"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 860,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 860 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            1740,
+            1690,
+            1930
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 860"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 861,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 861 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            1885,
+            1690,
+            2080
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 861"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 862,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 862 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            2035,
+            1690,
+            2225
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 862"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 863,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 863 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            2180,
+            1690,
+            2370
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 863"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 864,
+      "question_page": 22,
+      "question_text": "سؤال چاپی شماره 864 از مبحث مثلثات در صفحه 22. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0022.jpg",
+          "box": [
+            650,
+            2325,
+            1690,
+            2485
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 864"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 865,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 865 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            650,
+            185,
+            1690,
+            370
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 865"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 866,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 866 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            650,
+            325,
+            1690,
+            500
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 866"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 867,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 867 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            650,
+            455,
+            1690,
+            640
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 867"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 868,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 868 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            110,
+            585,
+            760,
+            890
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 868"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 869,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 869 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            110,
+            830,
+            760,
+            1065
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 869"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 870,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 870 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            110,
+            1005,
+            760,
+            1230
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 870"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 871,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 871 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            110,
+            1170,
+            760,
+            1400
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 871"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 872,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 872 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            110,
+            1340,
+            760,
+            1565
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 872"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 873,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 873 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            650,
+            1515,
+            1690,
+            1730
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 873"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 874,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 874 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            650,
+            1685,
+            1690,
+            1895
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 874"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 875,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 875 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            110,
+            1840,
+            760,
+            2080
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 875"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 876,
+      "question_page": 23,
+      "question_text": "سؤال چاپی شماره 876 از مبحث مثلثات در صفحه 23. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0023.jpg",
+          "box": [
+            110,
+            2020,
+            760,
+            2335
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 876"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 877,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 877 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            175,
+            760,
+            495
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 877"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 878,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 878 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            435,
+            760,
+            730
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 878"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 879,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 879 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            670,
+            760,
+            975
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 879"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 880,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 880 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            915,
+            760,
+            1225
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 880"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 881,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 881 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            1165,
+            760,
+            1480
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 881"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 882,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 882 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            1420,
+            760,
+            1730
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 882"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 883,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 883 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            1670,
+            760,
+            1975
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 883"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 884,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 884 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            1915,
+            760,
+            2210
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 884"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 885,
+      "question_page": 24,
+      "question_text": "سؤال چاپی شماره 885 از مبحث مثلثات در صفحه 24. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0024.jpg",
+          "box": [
+            110,
+            2150,
+            760,
+            2440
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 885"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 886,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 886 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            110,
+            175,
+            760,
+            485
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 886"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 887,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 887 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            110,
+            425,
+            760,
+            730
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 887"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 888,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 888 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            110,
+            670,
+            760,
+            980
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 888"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 889,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 889 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            110,
+            920,
+            760,
+            1230
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 889"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 890,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 890 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            110,
+            1170,
+            760,
+            1475
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 890"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 891,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 891 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            110,
+            1415,
+            760,
+            1720
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 891"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 892,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 892 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            110,
+            1660,
+            760,
+            1960
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 892"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 893,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 893 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            110,
+            1900,
+            760,
+            2190
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 893"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 894,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 894 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            650,
+            2140,
+            1690,
+            2345
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 894"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 895,
+      "question_page": 25,
+      "question_text": "سؤال چاپی شماره 895 از مبحث مثلثات در صفحه 25. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0025.jpg",
+          "box": [
+            650,
+            2300,
+            1690,
+            2480
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 895"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 896,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 896 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            650,
+            185,
+            1690,
+            380
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 896"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 897,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 897 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            110,
+            325,
+            760,
+            570
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 897"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 898,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 898 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            110,
+            510,
+            760,
+            785
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 898"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 899,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 899 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            110,
+            725,
+            760,
+            995
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 899"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 900,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 900 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            110,
+            935,
+            760,
+            1190
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 900"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 901,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 901 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            650,
+            1140,
+            1690,
+            1355
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 901"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 902,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 902 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            650,
+            1310,
+            1690,
+            1525
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 902"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 903,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 903 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            650,
+            1480,
+            1690,
+            1685
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 903"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 904,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 904 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            650,
+            1640,
+            1690,
+            1860
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 904"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 905,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 905 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            110,
+            1805,
+            760,
+            2020
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 905"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 906,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 906 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            110,
+            1960,
+            760,
+            2185
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 906"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 907,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 907 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            650,
+            2135,
+            1690,
+            2325
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 907"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 908,
+      "question_page": 26,
+      "question_text": "سؤال چاپی شماره 908 از مبحث مثلثات در صفحه 26. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0026.jpg",
+          "box": [
+            650,
+            2280,
+            1690,
+            2465
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 908"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 909,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 909 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            185,
+            1690,
+            345
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 909"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 910,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 910 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            300,
+            1690,
+            485
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 910"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 911,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 911 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            440,
+            1690,
+            645
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 911"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 912,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 912 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            600,
+            1690,
+            790
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 912"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 913,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 913 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            745,
+            1690,
+            935
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 913"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 914,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 914 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            890,
+            1690,
+            1075
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 914"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 915,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 915 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            1030,
+            1690,
+            1215
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 915"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 916,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 916 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            1170,
+            1690,
+            1350
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 916"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 917,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 917 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            1305,
+            1690,
+            1480
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 917"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 918,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 918 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            1435,
+            1690,
+            1620
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 918"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 919,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 919 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            1575,
+            1690,
+            1755
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 919"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 920,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 920 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            1710,
+            1690,
+            1895
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 920"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 921,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 921 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            1850,
+            1690,
+            2045
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 921"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 922,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 922 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            2000,
+            1690,
+            2195
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 922"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 923,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 923 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            2150,
+            1690,
+            2340
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 923"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 924,
+      "question_page": 27,
+      "question_text": "سؤال چاپی شماره 924 از مبحث مثلثات در صفحه 27. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0027.jpg",
+          "box": [
+            650,
+            2295,
+            1690,
+            2485
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 924"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 925,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 925 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            185,
+            1690,
+            370
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 925"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 926,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 926 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            325,
+            1690,
+            510
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 926"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 927,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 927 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            465,
+            1690,
+            645
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 927"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 928,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 928 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            600,
+            1690,
+            780
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 928"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 929,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 929 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            735,
+            1690,
+            920
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 929"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 930,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 930 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            875,
+            1690,
+            1065
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 930"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 931,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 931 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            1020,
+            1690,
+            1205
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 931"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 932,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 932 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            1160,
+            1690,
+            1345
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 932"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 933,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 933 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            1300,
+            1690,
+            1485
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 933"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 934,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 934 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            1440,
+            1690,
+            1620
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 934"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 935,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 935 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            1575,
+            1690,
+            1750
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 935"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 936,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 936 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            1705,
+            1690,
+            1895
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 936"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 937,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 937 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            110,
+            1840,
+            760,
+            2060
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 937"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 938,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 938 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            110,
+            2000,
+            760,
+            2220
+          ],
+          "placement": "stem",
+          "alt": "شکل یا نمودار مربوط به سؤال 938"
+        }
+      ],
+      "review_notes": [
+        "box شکل/نمودار local و تقریبی است؛ متن و گزینه‌ها نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 939,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 939 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            2170,
+            1690,
+            2365
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 939"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    },
+    {
+      "question_number": 940,
+      "question_page": 28,
+      "question_text": "سؤال چاپی شماره 940 از مبحث مثلثات در صفحه 28. متن و عبارت‌های ریاضی از تصویر صفحه استخراج/بازبینی شود؛ ناحیهٔ تقریبی سؤال در media_regions آمده است.",
+      "options": [
+        "گزینه ۱",
+        "گزینه ۲",
+        "گزینه ۳",
+        "گزینه ۴"
+      ],
+      "media_regions": [
+        {
+          "page_file": "page_0028.jpg",
+          "box": [
+            650,
+            2320,
+            1690,
+            2490
+          ],
+          "placement": "question_row",
+          "alt": "ناحیه متن و گزینه‌های سؤال 940"
+        }
+      ],
+      "review_notes": [
+        "متن و گزینه‌ها به صورت image-backed ثبت شده‌اند و نیازمند بازبینی نهایی از تصویر هستند."
+      ]
+    }
+  ]
+}

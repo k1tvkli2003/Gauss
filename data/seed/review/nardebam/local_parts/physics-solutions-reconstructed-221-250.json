@@ -1,0 +1,242 @@
+[
+  {
+    "question_number": 221,
+    "solution_page": null,
+    "solution_text": "1) از تصویر اصلی، ارتفاع پرواز 720 m است و تندی افقی آب برابر 126/3.6=35 m/s می‌ماند. 2) مؤلفهٔ قائم هنگام برخورد: vy=sqrt(2gh)=sqrt(2×10×720)=120 m/s. 3) تندی نهایی: v=sqrt(35^2+120^2)=125 m/s؛ پس گزینهٔ 2 درست است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 222,
+    "solution_page": null,
+    "solution_text": "1) انرژی مکانیکی اولیه برابر E=(1/2)m(60)^2=1800m است. 2) در نقطهٔ موردنظر U=17K، پس E=18K و K=100m، بنابراین U=1700m. 3) از mgh=1700m و g=10، ارتفاع h=170 m به دست می‌آید؛ گزینهٔ 4.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 223,
+    "solution_page": null,
+    "solution_text": "1) با نبود اصطکاک، حرکت تندشونده به پایین و کندشونده به بالا می‌تواند فقط بر اثر وزن باشد و انرژی مکانیکی پایسته بماند. 2) حرکت تندشونده به بالا یا حرکت با تندی ثابت به پایین الزاماً به نیروی دیگری با کار غیرصفر نیاز دارد. 3) پس حالت‌های پ و ت پاسخ‌اند؛ گزینهٔ 2.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 224,
+    "solution_page": null,
+    "solution_text": "1) در رهاسازی از سکون، کاهش انرژی پتانسیل به ازای واحد جرم برابر (1/2)(7.5)^2 است. 2) با تندی اولیهٔ 4، داریم v^2=(7.5)^2+4^2=72.25. 3) بنابراین v=8.5 m/s و گزینهٔ 2 درست است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 225,
+    "solution_page": null,
+    "solution_text": "1) برای رسیدن حداقلی به B باید جسم از بلندترین نقطهٔ مسیر با ارتفاع 80 m بگذرد؛ پس (1/2)v_A^2=g(80) و v_A=40 m/s. 2) در B با ارتفاع 60 m، از پایستگی انرژی v_B^2=40^2-2×10×60=400. 3) بنابراین v_B=20 m/s؛ زوج (40،20) یعنی گزینهٔ 2.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 226,
+    "solution_page": null,
+    "solution_text": "1) کمترین تندی در A با ارتفاع 3h و بیشترین تندی در B با ارتفاع h است؛ پس K_B=(1.8)^2K_A=3.24K_A. 2) پایستگی انرژی بین A و B می‌دهد 2mgh=K_B-K_A=2.24K_A، پس mgh=1.12K_A. 3) بین A و C: 117=K_C=K_A+0.5mgh=1.56K_A، لذا K_A=75 J و mgh=84 J. 4) کار وزن از A تا C برابر mg(3h-2.5h)=42 J است؛ گزینهٔ 2.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 227,
+    "solution_page": null,
+    "solution_text": "1) بیشترین تندی آونگ در پایین‌ترین نقطه است. 2) افت ارتفاع از A تا پایین برابر L(1-cos37)=1.5(1-0.8)=0.3 m است. 3) v_max^2=(2sqrt3)^2+2×10×0.3=18، پس v_max=3sqrt2 m/s؛ گزینهٔ 1.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 228,
+    "solution_page": null,
+    "solution_text": "1) افت ارتفاع تا پایین‌ترین نقطه برابر 1.2(1-cos53)=1.2(1-0.6)=0.48 m است؛ پس v_0^2=2g×0.48=9.6. 2) میخ 0.8 m زیر تکیه‌گاه است، بنابراین شعاع جدید 1.2-0.8=0.4 m می‌شود. 3) رسیدن به B افقی، 0.4 m افزایش ارتفاع دارد؛ پس v_B^2=9.6-2×10×0.4=1.6. 4) v_B=2sqrt10/5 m/s؛ گزینهٔ 2.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 229,
+    "solution_page": null,
+    "solution_text": "1) هنگام بازشدن فنر به اندازهٔ x=0.12 m، انرژی فنر به انرژی جنبشی و افزایش انرژی گرانشی تبدیل می‌شود: U_s=K+mgx sin37. 2) طبق صورت سؤال U_s=1.25K، پس 0.25K=mg(0.12)(0.6)=0.072mg و K=0.288mg. 3) از (1/2)mv^2=0.288mg، داریم v^2=5.76 و v=2.4 m/s؛ گزینهٔ 3.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 230,
+    "solution_page": null,
+    "solution_text": "1) جسم تا بیشینهٔ فشردگی، 20+10=30 cm روی سطح 30 درجه پایین می‌رود؛ افت ارتفاع 0.30sin30=0.15 m است. 2) انرژی جنبشی اولیه (1/2)(2)(5^2)=25 J و کاهش انرژی گرانشی mgh=2×10×0.15=3 J است. 3) در بیشینهٔ فشردگی تندی صفر است، پس انرژی فنر 25+3=28 J؛ گزینهٔ 1.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 231,
+    "solution_page": null,
+    "solution_text": "1) در آزمایش اول جسم در مجموع 0.25+0.15=0.40 m پایین می‌آید، پس انرژی فنر در فشردگی 15 cm برابر 2×10×0.40=8 J است. 2) در آزمایش دوم تا همان فشردگی، افت ارتفاع 0.50+0.15=0.65 m و انرژی آزادشده 13 J است. 3) بنابراین K=13-8=5 J و از K=(1/2)(2)v^2، تندی v=sqrt5 m/s؛ گزینهٔ 3.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 232,
+    "solution_page": null,
+    "solution_text": "1) روی سطح افقی، اصطکاک فقط انرژی جنبشی اولیه را می‌گیرد، پس |W1|=K0. 2) در حالت 2 جسم رو به پایین سطح می‌رود و وزن نیز انرژی می‌دهد، بنابراین اصطکاک باید بیش از K0 کار کند. 3) در حالت 3 جسم رو به بالا می‌رود و بخشی از K0 به انرژی پتانسیل تبدیل می‌شود، پس کار اصطکاک کمتر از K0 است. 4) نتیجه |W2|>|W1|>|W3|؛ گزینهٔ 3.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 233,
+    "solution_page": null,
+    "solution_text": "1) انرژی جنبشی اولیه (1/2)(0.2)(15^2)=22.5 J است. 2) از AD=6 m و BC=1 m، طول کل ناحیه‌های اصطکاکی AB و CD برابر 5 m است. 3) چون جسم در D می‌ایستد، f×5=22.5 و f=4.5=9/2 N؛ گزینهٔ 1.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 234,
+    "solution_page": null,
+    "solution_text": "1) افت ارتفاع از A تا B برابر شعاع R است. 2) قضیهٔ کار و انرژی می‌دهد mgR+W_f=K_B؛ یعنی (0.1)(10)R-0.4=(1/2)(0.1)(2^2). 3) از R-0.4=0.2، شعاع R=0.6 m=60 cm؛ گزینهٔ 3.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 235,
+    "solution_page": null,
+    "solution_text": "1) با ارتفاع 2.5 m و زاویهٔ 30 درجه، طول AB برابر 2.5/sin30=5 m است. 2) تغییر انرژی جنبشی (1/2)(4)(6^2-4^2)=40 J و کار وزن mgh=4×10×2.5=100 J است. 3) پس 40=100-5f و f=12 N؛ گزینهٔ 1.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 236,
+    "solution_page": null,
+    "solution_text": "1) اگر فاصلهٔ رفت s باشد، در مسیر بالا: 32m=(5m+f)s، زیرا K_i=(1/2)m(8^2). 2) تندی بازگشت 25 درصد کمتر و برابر 6 m/s است؛ در مسیر پایین: 18m=(5m-f)s. 3) با جمع دو رابطه، 50m=10ms و s=5 m. 4) مسافت کل رفت‌وبرگشت 2s=10 m؛ گزینهٔ 3.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 237,
+    "solution_page": null,
+    "solution_text": "1) شیب و اصطکاک ثابت‌اند، پس شتاب خالص ثابت و از رابطهٔ v^2=2as استفاده می‌شود. 2) چون AB=2BC، داریم AC=3BC و بنابراین v_C^2/v_B^2=AC/AB=3/2. 3) v_C=4sqrt(3/2)=2sqrt6 m/s؛ گزینهٔ 4.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 238,
+    "solution_page": null,
+    "solution_text": "1) طول سطح شیبدار 3/sin37=5 m است. 2) انرژی در A برابر K+U=(1/2)(5)(2^2)+5×10×3=160 J و اتلاف روی شیب 8×5=40 J است؛ پس انرژی جنبشی در B برابر 120 J می‌شود. 3) روی سطح افقی 10d=120، بنابراین d=12 m؛ گزینهٔ 3.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 239,
+    "solution_page": null,
+    "solution_text": "1) از تصویر اصلی، جسم A تا ارتفاع 4 m بالا می‌رود؛ پس انرژی جنبشی اولیهٔ مشترک K0=mgh=2×10×4=80 J است. 2) برای جسم B روی شیب 30 درجه، نیروی مقاوم کل mg sin30+f=2×10×0.5+6=16 N است. 3) از 16s=80، مسافت s=5 m؛ گزینهٔ 4.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 240,
+    "solution_page": null,
+    "solution_text": "1) نقطهٔ A در ارتفاع 6 m و ناحیهٔ BC در ارتفاع 2 m است؛ پس انرژی جنبشی در B برابر (1/2)(2)(7^2)+2×10×(6-2)=129 J است. 2) کار اصطکاک در BC با طول 12 m برابر -10×12=-120 J است. 3) در C انرژی جنبشی 9 J می‌ماند، بنابراین (1/2)(2)v_C^2=9 و v_C=3 m/s؛ گزینهٔ 1.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 241,
+    "solution_page": null,
+    "solution_text": "1) از هندسهٔ شکل، افت ارتفاع A تا B برابر Rcos37=0.8R و افزایش ارتفاع B تا C برابر Rsin37=0.6R است؛ پس افت خالص A تا C برابر 0.2R است. 2) جسم از سکون شروع و در C متوقف می‌شود، بنابراین کاهش انرژی گرانشی دقیقاً برابر اتلاف 0.084 J است. 3) (0.12)(10)(0.2R)=0.084، پس R=0.35 m=35 cm؛ گزینهٔ 4.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 242,
+    "solution_page": null,
+    "solution_text": "1) انرژی مکانیکی در A برابر E_A=120+mgh=120+4×10×2=200 J است. 2) طول سطح با زاویهٔ 30 درجه برابر 2/sin30=4 m است و در هر متر 20 درصد انرژی باقی‌مانده کم می‌شود؛ پس E_B=200(0.8)^4=81.92 J. 3) در B انرژی پتانسیل صفر است، بنابراین (1/2)(4)v_B^2=81.92 و v_B=6.4 m/s؛ گزینهٔ 2.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 243,
+    "solution_page": null,
+    "solution_text": "1) انرژی جنبشی اولیه (1/2)(0.3)(30^2)=135 J است. 2) با مقاومت هوا 20 درصد آن تلف می‌شود، پس mgh=0.8×135=108 J و h=36 m. 3) در خلأ ارتفاع h0=v0^2/(2g)=45 m است؛ اختلاف 45-36=9 m و گزینهٔ 1.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 244,
+    "solution_page": null,
+    "solution_text": "1) انرژی جنبشی اولیه (1/2)(0.25)(20^2)=50 J است. 2) افزایش انرژی پتانسیل تا ارتفاع 8 m برابر 0.25×10×8=20 J است؛ پس 30 J توسط هوا تلف شده است. 3) از f_avg×8=30، نیروی متوسط f_avg=3.75 N؛ گزینهٔ 1.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 245,
+    "solution_page": null,
+    "solution_text": "1) در صعود: (1/2)m(8^2)=(mg+f)h، یعنی 6.4=(2+f)h. 2) در سقوط: mgh-fh=(1/2)m(6^2)، یعنی (2-f)h=3.6. 3) با جمع دو رابطه 4h=10 و h=2.5 m؛ گزینهٔ 2.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 246,
+    "solution_page": null,
+    "solution_text": "1) در تصویر اصلی نیروی متوسط نیمهٔ دوم 2f است. اگر طول هر نیمه L باشد، K_mid=(mg-f)L. 2) چون v_f=1.25v_mid، داریم K_f-K_mid=(1.25^2-1)K_mid=0.5625K_mid. 3) از سوی دیگر K_f-K_mid=(mg-2f)L؛ پس mg-2f=0.5625(mg-f). 4) با mg=0.69×10=6.9 N، مقدار f=2.1 N؛ گزینهٔ 3.",
+    "stated_correct_option": 3,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 247,
+    "solution_page": null,
+    "solution_text": "1) بگذارید تندی رأس v1، تندی آغاز 4v1 و تندی پایان 2v1 باشد و اندازهٔ کار مقاومت در پایین‌آمدن a باشد؛ در بالا اندازهٔ کار 2a است. 2) برای صعود: 63-2.25v1^2=-2a و برای نزول: 0.45v1^2-63=-a. 3) حل دو رابطه می‌دهد v1^2=60 و a=36 J. 4) کار کل مقاومت برابر -(2a+a)=-108 J؛ گزینهٔ 4.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 248,
+    "solution_page": null,
+    "solution_text": "1) پس از هر برخورد 81 درصد انرژی و در نتیجه 81 درصد ارتفاع قبلی باقی می‌ماند؛ پس h_n/h_0=(0.81)^n. 2) باید (0.81)^n<0.3 باشد. 3) از لگاریتم‌گیری n>log(0.3)/log(0.81)≈5.71؛ بنابراین حداقل n=6 برخورد لازم است و گزینهٔ 2 درست است.",
+    "stated_correct_option": 2,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 249,
+    "solution_page": null,
+    "solution_text": "1) ارتفاع گلوله نسبت به پایین‌ترین نقطه L(1-cosθ) است؛ بنابراین افزایش ارتفاع از A با زاویهٔ 37 درجه تا B با زاویهٔ 53 درجه برابر 0.5[(1-0.6)-(1-0.8)]=0.1 m است. 2) تغییر انرژی جنبشی (1/2)(1)(4^2-5^2)=-4.5 J و تغییر انرژی پتانسیل 1×10×0.1=1 J است. 3) کار مقاومت هوا ΔK+ΔU=-3.5 J؛ گزینهٔ 4.",
+    "stated_correct_option": 4,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  },
+  {
+    "question_number": 250,
+    "solution_page": null,
+    "solution_text": "1) نقطهٔ A در ارتفاع 15 m و B در ارتفاع 5 m است، پس A نسبت به تراز B ده متر بالاتر است. 2) انرژی مکانیکی اولیه نسبت به B برابر (1/2)(1)(10^2)+1×10×10=150 J است. 3) چون 20 درصد تلف می‌شود، 80 درصد در فنر ذخیره می‌شود: U_s=0.8×150=120 J؛ گزینهٔ 1.",
+    "stated_correct_option": 1,
+    "media_regions": [],
+    "review_notes": ["solutionOrigin: reconstructed", "confidence: high"]
+  }
+]
