@@ -22,6 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gauss.app.data.KONKUR_SECONDS_PER_QUESTION
+import com.gauss.app.ui.toFa
 import com.gauss.app.ui.theme.GaussColors
 import kotlinx.coroutines.delay
 
@@ -54,11 +55,11 @@ fun Timer(resetKey: Any, modifier: Modifier = Modifier) {
     ) {
         Box(Modifier.size(7.dp).clip(CircleShape).background(color))
         Text(
-            "  $mm:$ss",
+            "  ${toFa("$mm:$ss")}",
             color = color,
             fontWeight = FontWeight.SemiBold,
             fontSize = 14.sp,
         )
-        Text("  / ${KONKUR_SECONDS_PER_QUESTION}s", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
+        Text("  / ${toFa(KONKUR_SECONDS_PER_QUESTION)}s", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
     }
 }

@@ -241,6 +241,7 @@ private fun RewardCard(summary: RewardSummary?) {
 @Composable
 private fun SaveErrorCard(message: String, canRetry: Boolean, saving: Boolean, onRetry: () -> Unit) {
     val scheme = MaterialTheme.colorScheme
+    val isRewardError = message.contains("XP") || message.contains("پاداش")
     GaussCard(
         color = scheme.error.soft(0.10f),
         border = androidx.compose.foundation.BorderStroke(1.dp, scheme.error.soft(0.55f)),
@@ -250,7 +251,11 @@ private fun SaveErrorCard(message: String, canRetry: Boolean, saving: Boolean, o
             if (canRetry) {
                 Spacer(Modifier.height(10.dp))
                 GaussButton(
-                    text = if (saving) "در حال ذخیره…" else "تلاش دوباره برای ذخیره",
+                    text = when {
+                        saving -> "در حال ثبت…"
+                        isRewardError -> "تلاش دوباره برای ثبت XP"
+                        else -> "تلاش دوباره برای ذخیره"
+                    },
                     onClick = onRetry,
                     loading = saving,
                     containerColor = scheme.error,

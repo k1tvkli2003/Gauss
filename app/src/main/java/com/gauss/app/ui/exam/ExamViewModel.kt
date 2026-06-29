@@ -51,7 +51,8 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
 
     val current: Question? get() = questions.getOrNull(index)
     val isLast: Boolean get() = index == questions.lastIndex
-    val canRetrySave: Boolean get() = savedExamId == null && !saving
+    val canRetrySave: Boolean get() =
+        !saving && (savedExamId == null || (saveError != null && rewardSummary == null))
 
     fun startExam(config: ExamConfig, questions: List<Question>) {
         this.config = config
@@ -75,6 +76,7 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun answer(selectedOption: Int) {
+        if (attempts[index] != null) return
         val q = questions.getOrNull(index) ?: return
         val status = if (selectedOption == q.correctOptionIndex) AttemptStatus.CORRECT else AttemptStatus.WRONG
         record(status, selectedOption)
@@ -120,7 +122,10 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun finishAndSave(onDone: () -> Unit) {
-        if (saving || savedExamId != null) {
+        if (saving) {
+            onDone(); return
+        }
+        if (savedExamId != null && rewardSummary != null) {
             onDone(); return
         }
         saving = true
@@ -130,18 +135,16 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             try {
                 val app = GaussApp.from(getApplication())
-                val examId = app.history.saveExam(cfg, res, duration)
-                savedExamId = examId
+                val examId = savedExamId ?: app.history.saveExam(cfg, res, duration).also { savedExamId = it }
                 saveError = null
                 rewardSummary = runCatching {
                     app.gamification.rewardExam(examId, cfg, res, duration)
                 }.getOrElse {
-                    saveError = "آزمون ذخیره شد، اما پاداش XP ثبت نشد."
+                    saveError = "آزمون ذخیره شد، اما XP ثبت نشد. دوباره تلاش کن تا پاداش از دست نره."
                     null
                 }
             } catch (error: Throwable) {
-                saveError = error.message?.takeIf { it.isNotBlank() }
-                    ?: "ذخیره آزمون کامل نشد. نتیجه را نگه داشتم تا دوباره تلاش کنی."
+                saveError = "ذخیره آزمون کامل نشد. نتیجه همین‌جاست؛ دوباره برای ذخیره تلاش کن."
             } finally {
                 saving = false
                 finished = true

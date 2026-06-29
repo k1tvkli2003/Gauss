@@ -21,7 +21,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Analytics
 import androidx.compose.material.icons.rounded.Bolt
-import androidx.compose.material.icons.rounded.EmojiEvents
 import androidx.compose.material.icons.rounded.PlayArrow
 import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material.icons.rounded.School
@@ -53,6 +52,7 @@ import com.gauss.app.data.RecentExam
 import com.gauss.app.data.TopicStat
 import com.gauss.app.ui.components.GaussButton
 import com.gauss.app.ui.components.GaussCard
+import com.gauss.app.ui.components.GaussMentorAvatar
 import com.gauss.app.ui.components.PressableSurface
 import com.gauss.app.ui.components.StatPill
 import com.gauss.app.ui.nav.Routes
@@ -200,9 +200,7 @@ private fun HeroCard(nav: NavController, state: HomeState) {
                         modifier = Modifier.padding(top = 4.dp),
                     )
                 }
-                Box(Modifier.size(58.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary), contentAlignment = Alignment.Center) {
-                    Icon(Icons.Rounded.EmojiEvents, contentDescription = null, tint = MaterialTheme.colorScheme.onPrimary, modifier = Modifier.size(30.dp))
-                }
+                GaussMentorAvatar(size = 72.dp)
             }
             Spacer(Modifier.height(16.dp))
             XpProgress(game?.levelProgress ?: 0f, game?.totalXp ?: 0)

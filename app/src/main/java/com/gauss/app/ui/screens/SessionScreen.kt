@@ -72,6 +72,7 @@ import com.gauss.app.data.Question
 import com.gauss.app.ui.components.DifficultyBadge
 import com.gauss.app.ui.components.DrawingCanvas
 import com.gauss.app.ui.components.GeniusKey
+import com.gauss.app.ui.components.GaussMentorAvatar
 import com.gauss.app.ui.components.OptionButton
 import com.gauss.app.ui.components.RichContent
 import com.gauss.app.ui.components.Stroke
@@ -313,8 +314,8 @@ private fun QuestionPane(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 NavBtn("قبلی", enabled = vm.index > 0) { vm.prev() }
-                SmallTag("رد کردن") { vm.skip(); if (!isLast) vm.next() }
-                NavBtn(if (isLast) "آخرین سؤال" else "ادامه", enabled = !isLast, primary = true) { vm.next() }
+                SmallTag("رد کردن", enabled = attempt == null) { vm.skip(); if (!isLast) vm.next() }
+                NavBtn("ادامه", enabled = attempt != null && !isLast, primary = true) { vm.next() }
             }
 
             // Finish
@@ -382,6 +383,7 @@ private fun QuestionContent(
     onAnswer: (Int) -> Unit,
 ) {
     val scheme = MaterialTheme.colorScheme
+    val locked = selected != null
     Column(
         Modifier
             .fillMaxSize()
@@ -402,6 +404,8 @@ private fun QuestionContent(
             DifficultyBadge(q.difficulty)
         }
 
+        LessonCoachBubble(locked = locked)
+
         Box(
             Modifier
                 .padding(top = 12.dp, bottom = 16.dp)
@@ -415,18 +419,59 @@ private fun QuestionContent(
         }
 
         q.options.forEachIndexed { i, opt ->
+            val optionIndex = i + 1
             OptionButton(
-                index = i + 1,
+                index = optionIndex,
                 text = opt,
                 blocks = q.optionBlocks[i],
-                selected = selected == i + 1,
-                onClick = { onAnswer(i + 1) },
+                selected = selected == optionIndex,
+                reveal = isRevealed && locked,
+                correct = q.correctOptionIndex == optionIndex,
+                onClick = if (locked) null else ({ onAnswer(optionIndex) }),
             )
         }
 
         if (isRevealed) {
             GeniusKey(q.solution, q.shortcut, Modifier.padding(top = 8.dp))
         }
+    }
+}
+
+@Composable
+private fun LessonCoachBubble(locked: Boolean) {
+    val scheme = MaterialTheme.colorScheme
+    Row(
+        Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Box(
+            Modifier
+                .weight(1f)
+                .clip(RoundedCornerShape(18.dp))
+                .background(scheme.primaryContainer)
+                .border(1.dp, scheme.primary.soft(0.38f), RoundedCornerShape(18.dp))
+                .padding(horizontal = 14.dp, vertical = 12.dp),
+        ) {
+            Column(horizontalAlignment = Alignment.End) {
+                Text(
+                    if (locked) "حرکت ثبت شد" else "نوبت توئه",
+                    color = scheme.onSurface,
+                    fontWeight = FontWeight.Black,
+                    textAlign = TextAlign.End,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                Text(
+                    if (locked) "دام گزینه‌ها روشن شد؛ اگر لازم داری، حل را باز کن."
+                    else "با یک انتخاب دقیق جلو برو؛ زمان استاندارد کنکور بالا سرته.",
+                    color = scheme.onSurfaceVariant,
+                    fontSize = 12.sp,
+                    textAlign = TextAlign.End,
+                    modifier = Modifier.fillMaxWidth().padding(top = 3.dp),
+                )
+            }
+        }
+        GaussMentorAvatar(size = 56.dp)
     }
 }
 
@@ -628,14 +673,14 @@ private fun NavBtn(label: String, enabled: Boolean, primary: Boolean = false, on
 }
 
 @Composable
-private fun SmallTag(label: String, icon: ImageVector? = null, onClick: () -> Unit) {
+private fun SmallTag(label: String, icon: ImageVector? = null, enabled: Boolean = true, onClick: () -> Unit) {
     val scheme = MaterialTheme.colorScheme
     Row(
         Modifier
             .clip(RoundedCornerShape(12.dp))
-            .background(scheme.surfaceVariant)
+            .background(if (enabled) scheme.surfaceVariant else scheme.surfaceVariant.copy(alpha = 0.55f))
             .border(1.dp, scheme.outline, RoundedCornerShape(12.dp))
-            .clickableNoRipple { onClick() }
+            .clickableNoRipple(enabled) { onClick() }
             .padding(horizontal = 12.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(6.dp),

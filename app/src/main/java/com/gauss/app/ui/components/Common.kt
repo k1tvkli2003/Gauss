@@ -31,6 +31,7 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -44,9 +45,14 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.gauss.app.R
 import com.gauss.app.data.Difficulty
 import com.gauss.app.ui.theme.GaussColors
 import com.gauss.app.ui.theme.soft
@@ -62,6 +68,7 @@ fun Modifier.clickableNoRipple(enabled: Boolean = true, onClick: () -> Unit): Mo
             interactionSource = source,
             indication = LocalIndication.current,
             enabled = enabled,
+            role = Role.Button,
         ) {
             haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
             onClick()
@@ -162,6 +169,22 @@ fun GaussCard(
     ) {
         Box(Modifier.padding(18.dp)) { content() }
     }
+}
+
+@Composable
+fun GaussMentorAvatar(
+    modifier: Modifier = Modifier,
+    size: Dp = 64.dp,
+) {
+    Image(
+        painter = painterResource(R.drawable.gauss_mentor),
+        contentDescription = "مربی Gauss",
+        contentScale = ContentScale.Crop,
+        modifier = modifier
+            .size(size)
+            .clip(RoundedCornerShape(22.dp))
+            .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(22.dp)),
+    )
 }
 
 @Composable
