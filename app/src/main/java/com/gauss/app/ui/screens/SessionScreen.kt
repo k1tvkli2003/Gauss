@@ -1,14 +1,27 @@
 package com.gauss.app.ui.screens
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -28,17 +41,25 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.Cancel
+import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.Edit
 import androidx.compose.material.icons.rounded.HourglassEmpty
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameMillis
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -47,12 +68,13 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.gauss.app.data.AttemptStatus
 import com.gauss.app.data.ComprehensiveTaxonomy
+import com.gauss.app.data.Question
 import com.gauss.app.ui.components.DifficultyBadge
 import com.gauss.app.ui.components.DrawingCanvas
 import com.gauss.app.ui.components.GeniusKey
-import com.gauss.app.ui.components.MathText
 import com.gauss.app.ui.components.OptionButton
 import com.gauss.app.ui.components.RichContent
+import com.gauss.app.ui.components.Stroke
 import com.gauss.app.ui.components.Timer
 import com.gauss.app.ui.components.clickableNoRipple
 import com.gauss.app.ui.exam.ExamViewModel
@@ -60,6 +82,7 @@ import com.gauss.app.ui.nav.Routes
 import com.gauss.app.ui.theme.GaussColors
 import com.gauss.app.ui.theme.soft
 import com.gauss.app.ui.toFa
+import kotlin.random.Random
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -76,7 +99,6 @@ fun SessionScreen(nav: NavController, vm: ExamViewModel) {
     val revealed = remember { mutableStateMapOf<Int, Boolean>() }
     var showFinish by remember { mutableStateOf(false) }
     var showAbandon by remember { mutableStateOf(false) }
-    var showScratch by remember { mutableStateOf(false) }
 
     val isRevealed = revealed[vm.index] == true
     val scheme = MaterialTheme.colorScheme
@@ -93,84 +115,21 @@ fun SessionScreen(nav: NavController, vm: ExamViewModel) {
             .background(scheme.background)
             .systemBarsPadding(),
     ) {
-        // Top bar
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .border(width = 0.dp, color = Color.Transparent)
-                .padding(horizontal = 16.dp, vertical = 10.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Timer(resetKey = vm.index)
-                Spacer(Modifier.size(10.dp))
-                SmallTag("✕ خروج") { showAbandon = true }
-            }
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    "سؤال ${toFa(vm.index + 1)} / ${toFa(vm.questions.size)}",
-                    color = scheme.onSurfaceVariant,
-                    fontSize = 14.sp,
-                )
-                Text(
-                    "  ${config.subject.faLabel}",
-                    color = config.subject.color,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp,
-                )
-            }
-        }
+        SessionTopBar(
+            subjectLabel = config.subject.faLabel,
+            subjectColor = config.subject.color,
+            current = vm.index + 1,
+            total = vm.questions.size,
+            onExit = { showAbandon = true },
+        )
 
-        BoxWithConstraints(Modifier.weight(1f)) {
-            val wide = maxWidth > 720.dp
-
-            val questionPane: @Composable (Modifier) -> Unit = { mod ->
-                QuestionPane(
-                    vm = vm,
-                    isRevealed = isRevealed,
-                    onToggleReveal = { revealed[vm.index] = !(revealed[vm.index] ?: false) },
-                    onFinish = { showFinish = true },
-                    modifier = mod,
-                )
-            }
-            val scratchPane: @Composable (Modifier) -> Unit = { mod ->
-                Column(mod.padding(12.dp)) {
-                    Text(
-                        "دفتر حل · با قلم بنویس",
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        fontSize = 12.sp,
-                        textAlign = TextAlign.End,
-                        modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
-                    )
-                    DrawingCanvas(
-                        strokes = vm.scratch[vm.index] ?: emptyList(),
-                        onChange = { vm.setScratch(vm.index, it) },
-                        modifier = Modifier.fillMaxSize(),
-                    )
-                }
-            }
-
-            if (wide) {
-                Row(Modifier.fillMaxSize()) {
-                    questionPane(Modifier.weight(1f).fillMaxHeight())
-                    Box(Modifier.weight(1f).fillMaxHeight()) { scratchPane(Modifier.fillMaxSize()) }
-                }
-            } else {
-                Column(Modifier.fillMaxSize()) {
-                    // Tab switch (portrait): question vs scratchpad
-                    Row(
-                        Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    ) {
-                        TabToggle("سؤال", !showScratch, Modifier.weight(1f)) { showScratch = false }
-                        TabToggle("دفتر حل", showScratch, Modifier.weight(1f)) { showScratch = true }
-                    }
-                    if (showScratch) scratchPane(Modifier.fillMaxSize())
-                    else questionPane(Modifier.fillMaxSize())
-                }
-            }
-        }
+        QuestionPane(
+            vm = vm,
+            isRevealed = isRevealed,
+            onToggleReveal = { revealed[vm.index] = !(revealed[vm.index] ?: false) },
+            onFinish = { showFinish = true },
+            modifier = Modifier.weight(1f),
+        )
     }
 
     if (showFinish) {
@@ -197,6 +156,59 @@ fun SessionScreen(nav: NavController, vm: ExamViewModel) {
     }
 }
 
+@Composable
+private fun SessionTopBar(
+    subjectLabel: String,
+    subjectColor: Color,
+    current: Int,
+    total: Int,
+    onExit: () -> Unit,
+) {
+    val scheme = MaterialTheme.colorScheme
+    val progress = (current.toFloat() / total.coerceAtLeast(1).toFloat()).coerceIn(0f, 1f)
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 10.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        SmallTag("خروج", Icons.Rounded.Close) { onExit() }
+        Column(Modifier.weight(1f), horizontalAlignment = Alignment.End) {
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(subjectLabel, color = subjectColor, fontWeight = FontWeight.Black, fontSize = 14.sp)
+                Text(
+                    "سؤال ${toFa(current)} از ${toFa(total)}",
+                    color = scheme.onSurfaceVariant,
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.SemiBold,
+                )
+            }
+            Box(
+                Modifier
+                    .padding(top = 7.dp)
+                    .fillMaxWidth()
+                    .height(12.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(scheme.surfaceVariant),
+            ) {
+                Box(
+                    Modifier
+                        .fillMaxWidth(progress)
+                        .height(12.dp)
+                        .clip(RoundedCornerShape(50))
+                        .background(subjectColor),
+                )
+            }
+        }
+        Timer(resetKey = current)
+    }
+}
+
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun QuestionPane(
@@ -207,149 +219,347 @@ private fun QuestionPane(
     modifier: Modifier = Modifier,
 ) {
     val q = vm.current ?: return
-    val config = vm.config ?: return
     val attempt = vm.attempts[vm.index]
     val selected = attempt?.selectedOption
     val isLast = vm.isLast
     val scheme = MaterialTheme.colorScheme
+    var scratchMode by remember(q.id) { mutableStateOf(false) }
+    var scratchStrokes by remember(q.id) { mutableStateOf<List<Stroke>>(emptyList()) }
+    var celebrationKey by remember { mutableIntStateOf(0) }
 
-    Column(modifier) {
+    LaunchedEffect(q.id, attempt?.status) {
+        if (attempt?.status == AttemptStatus.CORRECT) celebrationKey += 1
+    }
+
+    Box(modifier) {
         Column(
-            Modifier
-                .weight(1f)
-                .verticalScroll(rememberScrollState())
-                .padding(20.dp),
+            Modifier.fillMaxSize(),
         ) {
-            Row(
-                Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Text(
-                    ComprehensiveTaxonomy.label(q.topicKey),
-                    color = scheme.onSurfaceVariant,
-                    fontSize = 12.sp,
-                )
-                DifficultyBadge(q.difficulty)
-            }
-
-            Box(
-                Modifier
-                    .padding(top = 12.dp, bottom = 16.dp)
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(16.dp))
-                    .background(scheme.surface)
-                    .border(1.dp, scheme.outline, RoundedCornerShape(16.dp))
-                    .padding(16.dp),
-            ) {
-                    RichContent(q.stem, fontSize = 18.sp)
-            }
-
-            q.options.forEachIndexed { i, opt ->
-                OptionButton(
-                    index = i + 1,
-                        text = opt,
-                        blocks = q.optionBlocks[i],
-                    selected = selected == i + 1,
-                    onClick = { vm.answer(i + 1) },
+            AnimatedContent(
+                targetState = vm.index,
+                transitionSpec = {
+                    val forward = targetState > initialState
+                    val direction = if (forward) -1 else 1
+                    (slideInHorizontally(
+                        animationSpec = spring(
+                            dampingRatio = Spring.DampingRatioNoBouncy,
+                            stiffness = Spring.StiffnessMediumLow,
+                        ),
+                        initialOffsetX = { direction * it / 3 },
+                    ) + fadeIn(tween(180)))
+                        .togetherWith(
+                            slideOutHorizontally(
+                                animationSpec = tween(180),
+                                targetOffsetX = { -direction * it / 5 },
+                            ) + fadeOut(tween(140)),
+                        )
+                },
+                label = "questionPage",
+                modifier = Modifier.weight(1f),
+            ) { page ->
+                val pageQuestion = vm.questions.getOrNull(page) ?: q
+                QuestionContent(
+                    q = pageQuestion,
+                    selected = if (page == vm.index) selected else vm.attempts[page]?.selectedOption,
+                    isRevealed = page == vm.index && isRevealed,
+                    onAnswer = { option -> if (page == vm.index) vm.answer(option) },
                 )
             }
 
-            attempt?.let { AnswerFeedback(it.status) }
-
-            if (isRevealed) {
-                GeniusKey(q.solution, q.shortcut, Modifier.padding(top = 8.dp))
-            }
-        }
-
-        // Reveal bar
-        Box(Modifier.padding(horizontal = 20.dp, vertical = 6.dp)) {
-            val canReveal = attempt != null
-            val accent = if (isRevealed) scheme.secondary else scheme.primary
-            Box(
-                Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(if (canReveal) accent.soft(0.12f) else scheme.surfaceVariant)
-                    .border(1.dp, if (canReveal) accent else scheme.outline, RoundedCornerShape(12.dp))
-                    .clickableNoRipple(canReveal) { onToggleReveal() }
-                    .padding(vertical = 10.dp),
-                contentAlignment = Alignment.Center,
+            AnimatedVisibility(
+                visible = attempt != null,
+                enter = slideInVertically(
+                    initialOffsetY = { it / 2 },
+                    animationSpec = spring(Spring.DampingRatioMediumBouncy, Spring.StiffnessMediumLow),
+                ) + fadeIn(tween(180)),
+                exit = slideOutVertically(targetOffsetY = { it / 3 }) + fadeOut(tween(140)),
             ) {
-                Text(
-                    when {
-                        isRevealed -> "بستن حل"
-                        canReveal -> "نمایش حل"
-                        else -> "اول پاسخ بده، بعد حل را ببین"
-                    },
-                    color = if (canReveal) accent else scheme.onSurfaceVariant,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp,
-                )
+                attempt?.let { AnswerFeedback(it.status, Modifier.padding(horizontal = 20.dp, vertical = 6.dp)) }
             }
-        }
 
-        // Question dots
-        FlowRow(
-            Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 6.dp),
-            horizontalArrangement = Arrangement.Center,
-        ) {
-            vm.questions.forEachIndexed { i, _ ->
-                val a = vm.attempts[i]
-                val bg = when {
-                    i == vm.index -> scheme.primary
-                    a?.status == AttemptStatus.SKIPPED -> GaussColors.Warning
-                    a != null -> scheme.secondary
-                    else -> scheme.surfaceVariant
-                }
+            // Reveal bar
+            Box(Modifier.padding(horizontal = 20.dp, vertical = 6.dp)) {
+                val canReveal = attempt != null
+                val accent = if (isRevealed) scheme.secondary else scheme.primary
                 Box(
                     Modifier
-                        .padding(3.dp)
-                        .size(40.dp)
+                        .fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp))
-                        .background(bg)
-                        .clickableNoRipple { vm.goTo(i) },
+                        .background(if (canReveal) accent.soft(0.12f) else scheme.surfaceVariant)
+                        .border(1.dp, if (canReveal) accent else scheme.outline, RoundedCornerShape(12.dp))
+                        .clickableNoRipple(canReveal) { onToggleReveal() }
+                        .padding(vertical = 10.dp),
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(
-                        toFa(i + 1),
-                        color = if (i == vm.index) scheme.onPrimary else scheme.onSurface,
+                        when {
+                            isRevealed -> "بستن حل"
+                            canReveal -> "نمایش حل"
+                            else -> "اول پاسخ بده، بعد حل را ببین"
+                        },
+                        color = if (canReveal) accent else scheme.onSurfaceVariant,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 13.sp,
+                        fontSize = 14.sp,
                     )
                 }
             }
+
+            QuestionTrail(vm)
+
+            // Nav row
+            Row(
+                Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 6.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                NavBtn("قبلی", enabled = vm.index > 0) { vm.prev() }
+                SmallTag("رد کردن") { vm.skip(); if (!isLast) vm.next() }
+                NavBtn(if (isLast) "آخرین سؤال" else "ادامه", enabled = !isLast, primary = true) { vm.next() }
+            }
+
+            // Finish
+            Box(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 20.dp, vertical = 10.dp)
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(if (isLast) scheme.primary else scheme.primaryContainer)
+                    .clickableNoRipple { onFinish() }
+                    .padding(vertical = 14.dp),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text(
+                    "پایان و دیدن کارنامه",
+                    color = if (isLast) scheme.onPrimary else scheme.primary,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                )
+            }
         }
 
-        // Nav row
+        AnimatedVisibility(
+            visible = !scratchMode,
+            enter = scaleIn(
+                initialScale = 0.8f,
+                animationSpec = spring(Spring.DampingRatioLowBouncy, Spring.StiffnessMediumLow),
+            ) + fadeIn(),
+            exit = scaleOut(targetScale = 0.82f) + fadeOut(),
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .padding(end = 20.dp, bottom = 176.dp),
+        ) {
+            ScratchFab(
+                count = scratchStrokes.size,
+                onClick = { scratchMode = true },
+            )
+        }
+
+        AnimatedVisibility(
+            visible = scratchMode,
+            enter = fadeIn(tween(160)) + scaleIn(
+                initialScale = 0.98f,
+                animationSpec = spring(Spring.DampingRatioNoBouncy, Spring.StiffnessMediumLow),
+            ),
+            exit = fadeOut(tween(140)) + scaleOut(targetScale = 0.98f),
+        ) {
+            DrawingCanvas(
+                strokes = scratchStrokes,
+                onChange = { scratchStrokes = it },
+                onClose = { scratchMode = false },
+                clearKey = q.id,
+                modifier = Modifier.fillMaxSize(),
+            )
+        }
+        CorrectCelebrationOverlay(triggerKey = celebrationKey)
+    }
+}
+
+@Composable
+private fun QuestionContent(
+    q: Question,
+    selected: Int?,
+    isRevealed: Boolean,
+    onAnswer: (Int) -> Unit,
+) {
+    val scheme = MaterialTheme.colorScheme
+    Column(
+        Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(20.dp),
+    ) {
         Row(
-            Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 6.dp),
+            Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            NavBtn("‹ قبلی", enabled = vm.index > 0) { vm.prev() }
-            SmallTag("رد کردن") { vm.skip(); if (!isLast) vm.next() }
-            NavBtn("بعدی ›", enabled = !isLast, primary = true) { vm.next() }
+            Text(
+                ComprehensiveTaxonomy.label(q.topicKey),
+                color = scheme.onSurfaceVariant,
+                fontSize = 12.sp,
+                fontWeight = FontWeight.SemiBold,
+            )
+            DifficultyBadge(q.difficulty)
         }
 
-        // Finish
         Box(
             Modifier
+                .padding(top = 12.dp, bottom = 16.dp)
                 .fillMaxWidth()
-                .padding(horizontal = 20.dp, vertical = 10.dp)
-                .clip(RoundedCornerShape(16.dp))
-                .background(scheme.primary)
-                .clickableNoRipple { onFinish() }
-                .padding(vertical = 14.dp),
-            contentAlignment = Alignment.Center,
+                .clip(RoundedCornerShape(20.dp))
+                .background(scheme.surface)
+                .border(1.dp, scheme.outline, RoundedCornerShape(20.dp))
+                .padding(18.dp),
         ) {
-            Text("پایان و دیدن کارنامه", color = scheme.onPrimary, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+            RichContent(q.stem, fontSize = 18.sp)
+        }
+
+        q.options.forEachIndexed { i, opt ->
+            OptionButton(
+                index = i + 1,
+                text = opt,
+                blocks = q.optionBlocks[i],
+                selected = selected == i + 1,
+                onClick = { onAnswer(i + 1) },
+            )
+        }
+
+        if (isRevealed) {
+            GeniusKey(q.solution, q.shortcut, Modifier.padding(top = 8.dp))
+        }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun QuestionTrail(vm: ExamViewModel) {
+    val scheme = MaterialTheme.colorScheme
+    FlowRow(
+        Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 6.dp),
+        horizontalArrangement = Arrangement.Center,
+    ) {
+        vm.questions.forEachIndexed { i, _ ->
+            val a = vm.attempts[i]
+            val bg = when {
+                i == vm.index -> scheme.primary
+                a?.status == AttemptStatus.SKIPPED -> GaussColors.Warning.soft(0.22f)
+                a?.status == AttemptStatus.WRONG -> scheme.error.soft(0.18f)
+                a?.status == AttemptStatus.CORRECT -> GaussColors.Success.soft(0.20f)
+                else -> scheme.surfaceVariant
+            }
+            val fg = when {
+                i == vm.index -> scheme.onPrimary
+                a?.status == AttemptStatus.SKIPPED -> GaussColors.Warning
+                a?.status == AttemptStatus.WRONG -> scheme.error
+                a?.status == AttemptStatus.CORRECT -> GaussColors.Success
+                else -> scheme.onSurfaceVariant
+            }
+            Box(
+                Modifier
+                    .padding(3.dp)
+                    .size(30.dp)
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(bg)
+                    .border(1.dp, if (i == vm.index) scheme.primary else scheme.outline, RoundedCornerShape(10.dp))
+                    .clickableNoRipple { vm.goTo(i) },
+                contentAlignment = Alignment.Center,
+            ) {
+                Text(
+                    toFa(i + 1),
+                    color = fg,
+                    fontWeight = FontWeight.Black,
+                    fontSize = 11.sp,
+                )
+            }
         }
     }
 }
 
 @Composable
-private fun AnswerFeedback(status: AttemptStatus) {
+private fun ScratchFab(count: Int, onClick: () -> Unit) {
+    val scheme = MaterialTheme.colorScheme
+    Row(
+        Modifier
+            .clip(RoundedCornerShape(18.dp))
+            .background(scheme.primary)
+            .border(1.dp, scheme.primary, RoundedCornerShape(18.dp))
+            .clickableNoRipple { onClick() }
+            .padding(horizontal = 14.dp, vertical = 11.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(
+            if (count > 0) "قلم ${toFa(count)}" else "قلم",
+            color = scheme.onPrimary,
+            fontWeight = FontWeight.Black,
+            fontSize = 13.sp,
+        )
+        Icon(Icons.Rounded.Edit, contentDescription = null, tint = scheme.onPrimary, modifier = Modifier.size(19.dp))
+    }
+}
+
+private data class CelebrationDot(
+    val x: Float,
+    val y: Float,
+    val vx: Float,
+    val vy: Float,
+    val radius: Float,
+    val color: Color,
+)
+
+@Composable
+private fun CorrectCelebrationOverlay(triggerKey: Int) {
+    var progress by remember { mutableFloatStateOf(1f) }
+    val dots = remember { mutableStateListOf<CelebrationDot>() }
+    val colors = listOf(
+        MaterialTheme.colorScheme.primary,
+        MaterialTheme.colorScheme.secondary,
+        GaussColors.Success,
+        GaussColors.Warning,
+        GaussColors.Math,
+    )
+
+    LaunchedEffect(triggerKey) {
+        if (triggerKey == 0) return@LaunchedEffect
+        progress = 0f
+        dots.clear()
+        repeat(48) {
+            dots += CelebrationDot(
+                x = 0.5f + Random.nextFloat() * 0.22f - 0.11f,
+                y = 0.74f + Random.nextFloat() * 0.08f,
+                vx = Random.nextFloat() * 0.76f - 0.38f,
+                vy = -(Random.nextFloat() * 0.42f + 0.18f),
+                radius = Random.nextFloat() * 5f + 3f,
+                color = colors.random(),
+            )
+        }
+        val start = withFrameMillis { it }
+        while (progress < 1f) {
+            val elapsed = withFrameMillis { it } - start
+            progress = (elapsed / 1100f).coerceIn(0f, 1f)
+        }
+        dots.clear()
+    }
+
+    if (dots.isNotEmpty()) {
+        Canvas(Modifier.fillMaxSize()) {
+            dots.forEach { dot ->
+                val p = progress
+                drawCircle(
+                    color = dot.color.copy(alpha = 1f - p),
+                    radius = dot.radius,
+                    center = Offset(
+                        x = size.width * (dot.x + dot.vx * p),
+                        y = size.height * (dot.y + dot.vy * p + 0.26f * p * p),
+                    ),
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun AnswerFeedback(status: AttemptStatus, modifier: Modifier = Modifier) {
     val scheme = MaterialTheme.colorScheme
     val label: String
     val detail: String
@@ -376,9 +586,8 @@ private fun AnswerFeedback(status: AttemptStatus) {
         }
     }
     Row(
-        Modifier
+        modifier
             .fillMaxWidth()
-            .padding(bottom = 12.dp)
             .clip(RoundedCornerShape(16.dp))
             .background(color.soft(0.12f))
             .border(1.dp, color.soft(0.55f), RoundedCornerShape(16.dp))
@@ -419,38 +628,22 @@ private fun NavBtn(label: String, enabled: Boolean, primary: Boolean = false, on
 }
 
 @Composable
-private fun SmallTag(label: String, onClick: () -> Unit) {
+private fun SmallTag(label: String, icon: ImageVector? = null, onClick: () -> Unit) {
     val scheme = MaterialTheme.colorScheme
-    Box(
+    Row(
         Modifier
-            .clip(RoundedCornerShape(10.dp))
+            .clip(RoundedCornerShape(12.dp))
             .background(scheme.surfaceVariant)
-            .border(1.dp, scheme.outline, RoundedCornerShape(10.dp))
+            .border(1.dp, scheme.outline, RoundedCornerShape(12.dp))
             .clickableNoRipple { onClick() }
-            .padding(horizontal = 14.dp, vertical = 8.dp),
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
     ) {
+        icon?.let {
+            Icon(it, contentDescription = null, tint = scheme.onSurfaceVariant, modifier = Modifier.size(16.dp))
+        }
         Text(label, color = scheme.onSurfaceVariant, fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
-    }
-}
-
-@Composable
-private fun TabToggle(label: String, active: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
-    val scheme = MaterialTheme.colorScheme
-    Box(
-        modifier
-            .clip(RoundedCornerShape(10.dp))
-            .background(if (active) scheme.primaryContainer else scheme.surface)
-            .border(1.dp, if (active) scheme.primary else scheme.outline, RoundedCornerShape(10.dp))
-            .clickableNoRipple { onClick() }
-            .padding(vertical = 9.dp),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            label,
-            color = if (active) scheme.primary else scheme.onSurfaceVariant,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 14.sp,
-        )
     }
 }
 

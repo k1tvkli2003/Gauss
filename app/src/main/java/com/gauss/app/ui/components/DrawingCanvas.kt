@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -33,19 +34,22 @@ import androidx.compose.ui.graphics.drawscope.Stroke as DrawStroke
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
 import com.gauss.app.ui.theme.GaussColors
+import com.gauss.app.ui.theme.soft
 
-/** A committed scratchpad stroke. Owned by the exam engine so it survives navigation. */
+/** A committed scratch stroke. The session screen owns its lifetime per visible question. */
 data class Stroke(val points: List<Offset>, val color: Color, val width: Float)
 
 /**
- * Stylus-friendly scratchpad: multi-colour pen, width presets, undo/redo, clear.
- * Strokes are hoisted to the caller so they persist when navigating questions.
+ * Stylus-friendly transparent scratch layer: multi-colour pen, width presets, undo/redo, clear.
+ * Strokes are hoisted to the caller so the parent can clear them when the question changes.
  */
 @Composable
 fun DrawingCanvas(
     strokes: List<Stroke>,
     onChange: (List<Stroke>) -> Unit,
     modifier: Modifier = Modifier,
+    onClose: (() -> Unit)? = null,
+    clearKey: Any? = Unit,
 ) {
     var penColor by remember { mutableStateOf<Color>(GaussColors.Primary) }
     var penWidth by remember { mutableStateOf(3f) }
@@ -61,59 +65,15 @@ fun DrawingCanvas(
         scheme.onSurface,
     )
 
-    Column(
-        modifier = modifier
-            .border(1.dp, scheme.outline, RoundedCornerShape(16.dp))
-            .background(scheme.surface, RoundedCornerShape(16.dp)),
-    ) {
-        // Toolbar
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 10.dp, vertical = 8.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                penColors.forEach { c ->
-                    Box(
-                        Modifier
-                            .size(22.dp)
-                            .background(c, CircleShape)
-                            .border(
-                                if (penColor == c) 2.dp else 0.dp,
-                                scheme.onSurface,
-                                CircleShape,
-                            )
-                            .clickableNoRipple { penColor = c },
-                    )
-                }
-            }
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                listOf(2f, 3f, 5f, 8f).forEach { w ->
-                    ToolChip("${w.toInt()}", active = penWidth == w) { penWidth = w }
-                }
-            }
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                ToolChip("↶", enabled = strokes.isNotEmpty()) {
-                    if (strokes.isNotEmpty()) {
-                        redo.add(strokes.last())
-                        onChange(strokes.dropLast(1))
-                    }
-                }
-                ToolChip("↷", enabled = redo.isNotEmpty()) {
-                    if (redo.isNotEmpty()) {
-                        val last = redo.removeAt(redo.lastIndex)
-                        onChange(strokes + last)
-                    }
-                }
-                ToolChip("پاک", enabled = strokes.isNotEmpty()) {
-                    redo.clear(); onChange(emptyList())
-                }
-            }
-        }
+    androidx.compose.runtime.LaunchedEffect(clearKey) {
+        redo.clear()
+        live.clear()
+    }
 
-        // Drawing surface
+    Box(
+        modifier = modifier
+            .background(scheme.background.copy(alpha = 0.08f)),
+    ) {
         Box(
             Modifier
                 .fillMaxSize()
@@ -149,6 +109,74 @@ fun DrawingCanvas(
                 }
             }
         }
+
+        Column(
+            Modifier
+                .align(Alignment.TopCenter)
+                .padding(12.dp)
+                .fillMaxWidth()
+                .background(scheme.surface.copy(alpha = 0.96f), RoundedCornerShape(18.dp))
+                .border(1.dp, scheme.primary.soft(0.34f), RoundedCornerShape(18.dp))
+                .padding(10.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    ToolChip("↶", enabled = strokes.isNotEmpty()) {
+                        if (strokes.isNotEmpty()) {
+                            redo.add(strokes.last())
+                            onChange(strokes.dropLast(1))
+                        }
+                    }
+                    ToolChip("↷", enabled = redo.isNotEmpty()) {
+                        if (redo.isNotEmpty()) {
+                            val last = redo.removeAt(redo.lastIndex)
+                            onChange(strokes + last)
+                        }
+                    }
+                    ToolChip("پاک", enabled = strokes.isNotEmpty()) {
+                        redo.clear()
+                        onChange(emptyList())
+                    }
+                }
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text("چرک‌نویس روی سؤال", color = scheme.onSurface, style = MaterialTheme.typography.labelLarge)
+                    onClose?.let { close ->
+                        ToolChip("بستن") { close() }
+                    }
+                }
+            }
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Row(horizontalArrangement = Arrangement.spacedBy(7.dp)) {
+                    penColors.forEach { c ->
+                        Box(
+                            Modifier
+                                .size(26.dp)
+                                .background(c, CircleShape)
+                                .border(
+                                    if (penColor == c) 3.dp else 1.dp,
+                                    if (penColor == c) scheme.onSurface else scheme.outline,
+                                    CircleShape,
+                                )
+                                .clickableNoRipple { penColor = c },
+                        )
+                    }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    listOf(2f, 4f, 6f, 9f).forEach { w ->
+                        ToolChip("${w.toInt()}", active = penWidth == w) { penWidth = w }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -162,16 +190,20 @@ private fun ToolChip(
     val scheme = MaterialTheme.colorScheme
     Box(
         Modifier
+            .defaultMinSize(minWidth = 40.dp, minHeight = 36.dp)
             .background(
                 if (active) scheme.primaryContainer else scheme.surfaceVariant,
-                RoundedCornerShape(8.dp),
+                RoundedCornerShape(12.dp),
             )
+            .border(1.dp, if (active) scheme.primary else scheme.outline, RoundedCornerShape(12.dp))
             .clickableNoRipple(enabled, onClick)
-            .padding(horizontal = 10.dp, vertical = 6.dp),
+            .padding(horizontal = 10.dp, vertical = 7.dp),
+        contentAlignment = Alignment.Center,
     ) {
         Text(
             label,
             color = if (enabled) scheme.onSurface else scheme.onSurfaceVariant,
+            style = MaterialTheme.typography.labelMedium,
         )
     }
 }

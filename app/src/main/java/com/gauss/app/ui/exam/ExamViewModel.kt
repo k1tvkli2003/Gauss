@@ -19,13 +19,11 @@ import com.gauss.app.data.AttemptStatus
 import com.gauss.app.data.ExamConfig
 import com.gauss.app.data.Question
 import com.gauss.app.data.RewardSummary
-import com.gauss.app.ui.components.Stroke
 import kotlinx.coroutines.launch
 
 /**
  * The exam engine — shared across the session and results screens. Mirrors the
- * original Zustand store: per-question attempts, a persistent scratchpad, and
- * an atomic finish-and-save.
+ * original Zustand store: per-question attempts and an atomic finish-and-save.
  */
 class ExamViewModel(app: Application) : AndroidViewModel(app) {
 
@@ -37,7 +35,6 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
         private set
 
     val attempts: SnapshotStateMap<Int, AttemptResult> = mutableStateMapOf()
-    val scratch: SnapshotStateMap<Int, List<Stroke>> = mutableStateMapOf()
 
     var finished by mutableStateOf(false)
         private set
@@ -61,7 +58,6 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
         this.questions = questions
         index = 0
         attempts.clear()
-        scratch.clear()
         finished = false
         saving = false
         saveError = null
@@ -108,10 +104,6 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
             index = target
             questionStartedAt = System.currentTimeMillis()
         }
-    }
-
-    fun setScratch(i: Int, strokes: List<Stroke>) {
-        scratch[i] = strokes
     }
 
     fun answeredCount(): Int = attempts.values.count { it.status != AttemptStatus.SKIPPED }
@@ -163,7 +155,6 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
         questions = emptyList()
         index = 0
         attempts.clear()
-        scratch.clear()
         finished = false
         saving = false
         saveError = null

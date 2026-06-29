@@ -1,8 +1,12 @@
 package com.gauss.app.ui.nav
 
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -18,6 +22,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -63,15 +69,43 @@ private val topLevelDestinations = listOf(
 @Composable
 fun GaussNavHost() {
     val nav = rememberNavController()
-    val fade = tween<Float>(220)
+    val fade = tween<Float>(180)
+    val isRtl = LocalLayoutDirection.current == LayoutDirection.Rtl
+    val direction = if (isRtl) -1 else 1
 
     NavHost(
         navController = nav,
         startDestination = Routes.HOME,
-        enterTransition = { fadeIn(fade) },
-        exitTransition = { fadeOut(fade) },
-        popEnterTransition = { fadeIn(fade) },
-        popExitTransition = { fadeOut(fade) },
+        enterTransition = {
+            slideInHorizontally(
+                animationSpec = spring(
+                    dampingRatio = Spring.DampingRatioNoBouncy,
+                    stiffness = Spring.StiffnessMediumLow,
+                ),
+                initialOffsetX = { direction * it / 5 },
+            ) + fadeIn(fade)
+        },
+        exitTransition = {
+            slideOutHorizontally(
+                animationSpec = tween(180),
+                targetOffsetX = { -direction * it / 8 },
+            ) + fadeOut(tween(120))
+        },
+        popEnterTransition = {
+            slideInHorizontally(
+                animationSpec = spring(
+                    dampingRatio = Spring.DampingRatioNoBouncy,
+                    stiffness = Spring.StiffnessMediumLow,
+                ),
+                initialOffsetX = { -direction * it / 5 },
+            ) + fadeIn(fade)
+        },
+        popExitTransition = {
+            slideOutHorizontally(
+                animationSpec = tween(180),
+                targetOffsetX = { direction * it / 8 },
+            ) + fadeOut(tween(120))
+        },
     ) {
         composable(Routes.HOME) {
             TopLevelScaffold(nav, Routes.HOME) { HomeScreen(nav) }
