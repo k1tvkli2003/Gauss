@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "rulesVersion": "adventure_rewards_v1",
+  "ethics": {
+    "paidChanceMechanics": false,
+    "payToWinProgression": false,
+    "wrongAnswerShame": false,
+    "repeatPracticeHasCaps": true,
+    "chestOutputPolicy": "deterministic_by_chest_id"
+  },
+  "previewTarget": {
+    "xpTotal": 520,
+    "combo": 4,
+    "accuracyPercent": 93,
+    "focusDelta": 2,
+    "coins": 120,
+    "gems": 2,
+    "gearDropId": "gear.common.explorer_wand"
+  },
+  "events": [
+    {
+      "type": "TrapSolved",
+      "idPattern": "trap_solved:{missionId}:{questionId}",
+      "idempotency": "one per mission question",
+      "reward": { "type": "XP", "amount": 20, "reason": "Trap solved" }
+    },
+    {
+      "type": "MissionCompleted",
+      "idPattern": "mission_completed:{missionId}",
+      "idempotency": "one per mission",
+      "reward": { "type": "XP", "amount": 120, "reason": "Mission complete" }
+    },
+    {
+      "type": "QuestCompleted",
+      "idPattern": "quest_completed:{questId}:{dayKey}",
+      "idempotency": "one per quest window",
+      "reward": { "type": "XP", "amount": 200, "reason": "Daily quest" }
+    },
+    {
+      "type": "ChestOpened",
+      "idPattern": "chest_opened:{chestId}",
+      "idempotency": "one per chest",
+      "reward": {
+        "coins": 120,
+        "gems": 2,
+        "gearDropId": "gear.common.explorer_wand"
+      }
+    }
+  ],
+  "bonusRules": [
+    { "id": "combo_x4_v1", "when": "mission.combo >= 4", "xp": 80, "reason": "Combo bonus" },
+    { "id": "accuracy_90_v1", "when": "mission.accuracyPercent >= 90", "xp": 100, "reason": "Accuracy bonus" },
+    { "id": "focus_left_v1", "when": "mission.focusLeft >= 2", "focus": 2, "reason": "Focus left" }
+  ],
+  "caps": [
+    { "category": "practice_xp", "window": "day", "amount": 200 },
+    { "category": "correction_xp", "window": "day", "amount": 120 },
+    { "category": "daily_trap_quest", "window": "day", "amount": 1 }
+  ]
+}

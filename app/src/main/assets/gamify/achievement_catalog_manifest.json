@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": 1,
+  "source": "AdventureAchievementCatalog.kt",
+  "targetCounts": {
+    "totalAchievements": 71,
+    "mathMastery": 18,
+    "physicsMastery": 11,
+    "streak": 6,
+    "correction": 4,
+    "exploration": 4,
+    "boss": 8,
+    "quest": 8,
+    "collection": 8,
+    "secret": 4,
+    "featuredBadgeWall": 24,
+    "previewUnlockedFeatured": 12
+  },
+  "rarities": ["Common", "Rare", "Epic", "Legendary"],
+  "families": [
+    "Mastery",
+    "Consistency",
+    "Correction",
+    "Exploration",
+    "Challenge",
+    "Quest",
+    "Collection",
+    "Comeback",
+    "Secret"
+  ],
+  "questIds": [
+    "daily_trap_spotter",
+    "daily_focus_keeper",
+    "weekly_review_rescue",
+    "weekend_boss_run",
+    "comeback_warmup",
+    "mastery_push",
+    "physics_spark",
+    "algebra_sprint"
+  ],
+  "stateRequirements": ["locked", "in_progress", "unlocked", "claimed", "secret", "expired"],
+  "localizationPolicy": {
+    "appChrome": "English",
+    "educationalData": "source language allowed",
+    "keyPrefix": "achievement."
+  }
+}

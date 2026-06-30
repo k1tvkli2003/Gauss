@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "recommendedFamilyId": "explorer_gauss",
+  "families": [
+    {
+      "id": "explorer_gauss",
+      "name": "Explorer Gauss",
+      "roleFit": ["Companion", "Coach", "CelebrationLead", "Shopkeeper", "ComebackGuide"],
+      "noCopy": "Avoid Duolingo/Lingo silhouettes, owl cues, green-first palette, copied expressions, or protected character poses."
+    },
+    {
+      "id": "astro_scholar",
+      "name": "Astro Scholar",
+      "roleFit": ["Companion", "Coach", "CelebrationLead"],
+      "noCopy": "No NASA marks, no logos, no generic space-IP costume copying."
+    },
+    {
+      "id": "clockwork_mentor",
+      "name": "Clockwork Mentor",
+      "roleFit": ["Coach", "CelebrationLead", "Shopkeeper"],
+      "noCopy": "No copied robot silhouettes, no branded sci-fi props, no borrowed iconography."
+    }
+  ],
+  "states": [
+    { "stateId": "neutral_hud", "triggerEvent": "AppLoaded", "asset": "mascot_neutral_hud.webp", "alt": "Explorer Gauss avatar" },
+    { "stateId": "map_current", "triggerEvent": "RoadNodeSelected", "asset": "mascot_map_current.webp", "alt": "Explorer Gauss points to the current mission" },
+    { "stateId": "coach_hint", "triggerEvent": "TrapHintAvailable", "asset": "mascot_coach_hint.webp", "alt": "Explorer Gauss gives a hint" },
+    { "stateId": "answer_correct", "triggerEvent": "CorrectAnswer", "asset": "mascot_answer_correct.webp", "alt": "Explorer Gauss celebrates a correct answer" },
+    { "stateId": "answer_wrong", "triggerEvent": "WrongAnswer", "asset": "mascot_answer_wrong.webp", "alt": "Explorer Gauss suggests trying again" },
+    { "stateId": "combo", "triggerEvent": "ComboReached", "asset": "mascot_combo.webp", "alt": "Explorer Gauss celebrates the combo" },
+    { "stateId": "low_focus", "triggerEvent": "LowFocus", "asset": "mascot_low_focus.webp", "alt": "Explorer Gauss warns that focus is low" },
+    { "stateId": "mission_complete", "triggerEvent": "MissionCompleted", "asset": "mascot_mission_complete.webp", "alt": "Explorer Gauss celebrates mission completion" },
+    { "stateId": "quest_complete", "triggerEvent": "QuestCompleted", "asset": "mascot_quest_complete.webp", "alt": "Explorer Gauss marks the quest complete" },
+    { "stateId": "gear_shop", "triggerEvent": "CosmeticsShopOpened", "asset": "mascot_gear_shop.webp", "alt": "Explorer Gauss shows new gear" },
+    { "stateId": "comeback", "triggerEvent": "ComebackMissionStarted", "asset": "mascot_comeback.webp", "alt": "Explorer Gauss welcomes the user back" },
+    { "stateId": "offline_safe", "triggerEvent": "OfflineProgressSaved", "asset": "mascot_offline_safe.webp", "alt": "Explorer Gauss says progress is saved locally" }
+  ],
+  "assetRules": {
+    "format": "webp",
+    "background": "transparent_or_key_removed",
+    "safePaddingPercent": 8,
+    "textInImage": false,
+    "themeVariants": ["dark"],
+    "reducedMotionRequired": true
+  }
+}

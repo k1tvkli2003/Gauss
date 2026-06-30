@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "createdOn": "2026-07-01",
+  "reference": {
+    "role": "primary_goal_reference",
+    "path": "C:\\Users\\K1\\.codex\\attachments\\882a022d-1566-40e7-9b51-cd79fed7d542\\image-1.png",
+    "sha256": "AB6A8E8DF435554FEE27F4A606D29583279666136A00425B44CF89424A872D2C",
+    "widthPx": 1626,
+    "heightPx": 908,
+    "pixelFormat": "Format24bppRgb"
+  },
+  "knownNonCanonicalReference": {
+    "path": "C:\\Users\\K1\\AppData\\Local\\Temp\\codex-clipboard-d033c29e-7b3d-4f44-b849-6c4ffd591bcf.png",
+    "sha256": "AF47B6A1E1808C885A8FBFBEBB4FE35C6026269F0B9682E388BDE83B2412E2AE",
+    "widthPx": 1693,
+    "heightPx": 929,
+    "note": "Similar contact-sheet preview, but not the authoritative goal attachment."
+  },
+  "phoneFrames": [
+    {
+      "id": "map",
+      "title": "Map",
+      "pixelFrame": { "x": 24, "y": 64, "width": 376, "height": 821 },
+      "canonicalScreen": "AdventureMapScreen",
+      "route": "map",
+      "bottomNavSelected": "Map"
+    },
+    {
+      "id": "arena",
+      "title": "Arena",
+      "pixelFrame": { "x": 424, "y": 64, "width": 376, "height": 821 },
+      "canonicalScreen": "AdventureArenaScreen",
+      "route": "arena",
+      "bottomNavSelected": null
+    },
+    {
+      "id": "reward",
+      "title": "Reward",
+      "pixelFrame": { "x": 825, "y": 64, "width": 376, "height": 821 },
+      "canonicalScreen": "AdventureRewardScreen",
+      "route": "reward",
+      "bottomNavSelected": null
+    },
+    {
+      "id": "profile",
+      "title": "Profile",
+      "pixelFrame": { "x": 1225, "y": 64, "width": 376, "height": 821 },
+      "canonicalScreen": "AdventureProfileScreen",
+      "route": "profile",
+      "bottomNavSelected": "Profile"
+    }
+  ],
+  "targetViewports": [
+    { "name": "reference_phone", "widthDp": 393, "heightDp": 858, "densityClass": "preview-derived" },
+    { "name": "compact_small", "widthDp": 360, "heightDp": 800, "densityClass": "common-android" },
+    { "name": "compact_tall", "widthDp": 411, "heightDp": 914, "densityClass": "common-android" }
+  ],
+  "verificationGates": [
+    "crop-reference-from-primary-attachment",
+    "render-native-screen-screenshots",
+    "compare-against-phone-frame",
+    "record-mismatches",
+    "fix-native-component-not-reference-image"
+  ]
+}

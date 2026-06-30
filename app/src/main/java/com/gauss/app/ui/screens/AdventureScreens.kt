@@ -65,7 +65,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
@@ -91,6 +93,10 @@ import com.gauss.app.data.Question
 import com.gauss.app.data.SourceBank
 import com.gauss.app.data.Subject
 import com.gauss.app.data.TopicDef
+import com.gauss.app.gamify.AdventureAchievementCatalog
+import com.gauss.app.gamify.AdventureDisplayLabels
+import com.gauss.app.gamify.AdventureLevelCurve
+import com.gauss.app.gamify.AdventureRewardRules
 import com.gauss.app.ui.adventure.AdventureBottomNav
 import com.gauss.app.ui.adventure.AdventureButton
 import com.gauss.app.ui.adventure.AdventureColors
@@ -224,49 +230,61 @@ fun AdventureMapScreen(nav: NavController, examVm: ExamViewModel) {
             Modifier
                 .fillMaxSize()
                 .padding(horizontal = 14.dp)
-                .padding(bottom = 82.dp),
+                .padding(bottom = 92.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             TopHud(summary)
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.fillMaxWidth()) {
-                MetricTile("Focus", "7/10", Icons.Rounded.Bolt, AdventureColors.Gold, Modifier.weight(1f))
-                MetricTile("Streak", "${summary?.streak ?: 0} days", Icons.Rounded.LocalFireDepartment, Color(0xFFFF7E37), Modifier.weight(1f))
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                MetricTile("Focus", "7/10", Icons.Rounded.Bolt, AdventureColors.Gold, modifier = Modifier.weight(1f))
+                MetricTile("Streak", "12 days", Icons.Rounded.LocalFireDepartment, Color(0xFFFF8A3D), modifier = Modifier.weight(1f))
             }
-            SubjectRoadSwitch(subject, onSubjectChange = { subject = it }, modifier = Modifier.fillMaxWidth())
+            SubjectRoadSwitch(
+                subject = subject,
+                onSubjectChange = { subject = it },
+                modifier = Modifier.fillMaxWidth(),
+            )
             MissionMapCard(
                 subject = subject,
                 nodes = roadNodes(subject, availability),
                 selectedTopic = selectedTopic,
-                onNodeSelect = { selectedTopic = it.topicKey },
+                onNodeSelect = { node ->
+                    when {
+                        node.locked -> Unit
+                        node.topicKey != null -> selectedTopic = node.topicKey
+                        node.title.contains("Chest") || node.title.contains("Vault") -> nav.openTab(AdventureTab.REWARDS)
+                    }
+                },
                 onStart = {
                     val topic = selectedTopic
                     launcher.start(subject, if (topic == null) emptyList() else listOf(topic), 12)
                 },
-                modifier = Modifier.weight(1f).fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f),
             )
             DailyQuestDock(summary, launcher.error, launcher.launching)
         }
-        AdventureBottomNav(
-            selected = AdventureTab.MAP,
-            onSelect = { nav.openTab(it) },
-            modifier = Modifier.align(Alignment.BottomCenter),
-        )
+        AdventureBottomNav(AdventureTab.MAP, { nav.openTab(it) }, Modifier.align(Alignment.BottomCenter))
     }
 }
 
 @Composable
 private fun TopHud(summary: GamificationSummary?) {
+    val level = AdventureLevelCurve.previewSnapshot()
     AdventurePanel(shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth()) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             MascotPortrait(size = 56.dp, badge = true)
             Spacer(Modifier.width(12.dp))
             Column(Modifier.weight(1f)) {
-                Text("Level ${summary?.level ?: 1}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 18.sp)
+                Text("Level ${level.level}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 18.sp)
                 Text("Explorer", color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 12.sp)
                 Spacer(Modifier.height(8.dp))
-                AdventureProgress(progress = summary?.levelProgress ?: 0.05f)
+                AdventureProgress(progress = level.progress)
             }
-            Text("${summary?.totalXp ?: 0} XP", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 13.sp)
+            Column(horizontalAlignment = Alignment.End) {
+                Text(level.display, color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                Text("${summary?.todayXp ?: 0} today", color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 10.sp)
+            }
         }
     }
 }
@@ -280,58 +298,132 @@ private fun MissionMapCard(
     onStart: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    AdventurePanel(modifier = modifier, shape = RoundedCornerShape(22.dp)) {
-        BoxWithConstraints(Modifier.fillMaxSize()) {
-            val height = maxHeight
-            Canvas(Modifier.matchParentSize()) {
-                val path = Path()
-                nodes.filter { !it.locked }.forEachIndexed { index, node ->
-                    val point = Offset(size.width * node.x, size.height * node.y)
-                    if (index == 0) path.moveTo(point.x, point.y) else path.lineTo(point.x, point.y)
-                }
-                drawPath(path, AdventureColors.AmberDark.copy(alpha = .50f), style = Stroke(18.dp.toPx(), cap = StrokeCap.Round))
-                drawPath(path, AdventureColors.GoldBright.copy(alpha = .80f), style = Stroke(7.dp.toPx(), cap = StrokeCap.Round))
-                repeat(34) { index ->
-                    val x = size.width * ((index * 23 % 100) / 100f)
-                    val y = size.height * ((index * 17 % 100) / 100f)
-                    drawCircle(AdventureColors.Physics.copy(alpha = .13f), 2.dp.toPx(), Offset(x, y))
-                }
-            }
-            Text(
-                "Gauss Adventure Academy",
-                color = AdventureColors.Text,
-                fontWeight = FontWeight.Black,
-                fontSize = 15.sp,
-                modifier = Modifier.align(Alignment.TopCenter).padding(top = 8.dp),
+    val shape = RoundedCornerShape(18.dp)
+    BoxWithConstraints(
+        modifier
+            .clip(shape)
+            .clipToBounds()
+            .background(
+                Brush.verticalGradient(
+                    listOf(Color(0xFF08313B), Color(0xFF0A5860), Color(0xFF09313C)),
+                ),
             )
-            nodes.forEach { node ->
-                MissionNodeChip(
-                    node = node,
-                    selected = node.topicKey != null && node.topicKey == selectedTopic,
-                    subject = subject,
-                    onClick = { if (!node.locked) onNodeSelect(node) },
-                    modifier = Modifier.offset(
-                        x = (maxWidth - 118.dp) * node.x,
-                        y = (height - 76.dp) * node.y,
-                    ),
+            .border(1.dp, AdventureColors.BorderSoft, shape)
+    ) {
+        val routeNodes = nodes.filterNot { it.locked }.sortedByDescending { it.y }
+        val subjectColor = adventureSubjectColor(subject)
+        Canvas(Modifier.matchParentSize()) {
+            drawCircle(AdventureColors.Physics.copy(alpha = .18f), size.minDimension * .48f, Offset(size.width * .95f, size.height * .03f))
+            drawCircle(AdventureColors.Gold.copy(alpha = .10f), size.minDimension * .35f, Offset(size.width * .05f, size.height * .36f))
+            repeat(18) { index ->
+                val x = ((index * 37) % 100) / 100f * size.width
+                val y = ((index * 61) % 100) / 100f * size.height
+                drawCircle(
+                    color = if (index % 2 == 0) AdventureColors.GoldBright else AdventureColors.Physics,
+                    radius = if (index % 5 == 0) 2.2.dp.toPx() else 1.35.dp.toPx(),
+                    center = Offset(x, y),
+                    alpha = .42f,
                 )
             }
-            MascotPortrait(
-                size = 72.dp,
-                modifier = Modifier
-                    .align(Alignment.Center)
-                    .offset(y = 58.dp),
-            )
-            AdventureButton(
-                text = "Start Mission",
-                onClick = onStart,
-                icon = Icons.Rounded.Star,
-                modifier = Modifier
-                    .align(Alignment.Center)
-                    .offset(y = 128.dp)
-                    .width(172.dp),
+            routeNodes.zipWithNext().forEach { (from, to) ->
+                val start = Offset(size.width * from.x + 42.dp.toPx(), size.height * from.y + 28.dp.toPx())
+                val end = Offset(size.width * to.x + 42.dp.toPx(), size.height * to.y + 28.dp.toPx())
+                drawLine(AdventureColors.AmberDark.copy(alpha = .74f), start, end, strokeWidth = 13.dp.toPx(), cap = StrokeCap.Round)
+                drawLine(AdventureColors.Cream.copy(alpha = .88f), start, end, strokeWidth = 5.dp.toPx(), cap = StrokeCap.Round)
+                repeat(4) { step ->
+                    val t = (step + 1) / 5f
+                    drawCircle(
+                        color = AdventureColors.GoldBright,
+                        radius = 3.3.dp.toPx(),
+                        center = Offset(start.x + (end.x - start.x) * t, start.y + (end.y - start.y) * t),
+                    )
+                }
+            }
+            nodes.forEach { node ->
+                val center = Offset(size.width * node.x + 48.dp.toPx(), size.height * node.y + 44.dp.toPx())
+                val islandColor = when {
+                    node.locked -> Color(0xFF40505A)
+                    node.boss -> AdventureColors.Lavender
+                    node.title.contains("Chest") || node.title.contains("Vault") -> AdventureColors.Gold
+                    else -> subjectColor
+                }
+                drawOval(
+                    color = Color.Black.copy(alpha = .26f),
+                    topLeft = Offset(center.x - 62.dp.toPx(), center.y + 8.dp.toPx()),
+                    size = Size(124.dp.toPx(), 34.dp.toPx()),
+                )
+                drawOval(
+                    brush = Brush.radialGradient(
+                        listOf(islandColor.copy(alpha = .72f), Color(0xFF143D35).copy(alpha = .82f)),
+                        center = center,
+                        radius = 78.dp.toPx(),
+                    ),
+                    topLeft = Offset(center.x - 62.dp.toPx(), center.y - 22.dp.toPx()),
+                    size = Size(124.dp.toPx(), 64.dp.toPx()),
+                )
+                drawOval(
+                    color = AdventureColors.Cream.copy(alpha = .16f),
+                    topLeft = Offset(center.x - 34.dp.toPx(), center.y - 14.dp.toPx()),
+                    size = Size(70.dp.toPx(), 24.dp.toPx()),
+                )
+            }
+        }
+
+        Column(
+            Modifier
+                .align(Alignment.TopCenter)
+                .padding(top = 12.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Text("Gauss Adventure Academy", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp)
+            Text(AdventureDisplayLabels.roadName(subject), color = subjectColor, fontWeight = FontWeight.Bold, fontSize = 11.sp)
+        }
+
+        val currentStage = AdventureDisplayLabels.stageName(subject, selectedTopic)
+        nodes.forEach { node ->
+            val currentMissionNode = node.topicKey != null && node.topicKey == selectedTopic && !node.boss
+            if (currentMissionNode) return@forEach
+            val chipWidth = if (node.boss) 118.dp else 108.dp
+            MissionNodeChip(
+                node = node,
+                selected = node.topicKey != null && node.topicKey == selectedTopic,
+                subject = subject,
+                onClick = { onNodeSelect(node) },
+                modifier = Modifier.offset(
+                    x = (maxWidth - chipWidth) * node.x,
+                    y = (maxHeight - 84.dp) * node.y,
+                ),
             )
         }
+
+        Column(
+            Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 14.dp)
+                .width(174.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Box(
+                Modifier
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(AdventureColors.PanelDark.copy(alpha = .88f))
+                    .border(1.dp, AdventureColors.Gold.copy(alpha = .62f), RoundedCornerShape(10.dp))
+                    .padding(horizontal = 10.dp, vertical = 5.dp),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text("Current Mission", color = AdventureColors.Text, fontWeight = FontWeight.Bold, fontSize = 10.sp)
+            }
+            Text(currentStage, color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 12.sp, textAlign = TextAlign.Center, maxLines = 1)
+            Spacer(Modifier.height(5.dp))
+            AdventureButton("Start Mission", onStart, modifier = Modifier.fillMaxWidth())
+        }
+
+        MascotPortrait(
+            size = 70.dp,
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .offset(y = (-77).dp),
+        )
     }
 }
 
@@ -371,11 +463,26 @@ private fun MissionNodeChip(
         Spacer(Modifier.height(5.dp))
         Text(node.title, color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 11.sp, textAlign = TextAlign.Center, maxLines = 2)
         Text(node.subtitle, color = AdventureColors.Muted, fontSize = 9.sp, textAlign = TextAlign.Center, maxLines = 1)
+        if (selected || (!node.locked && !node.boss && node.topicKey != null)) {
+            Spacer(Modifier.height(5.dp))
+            Box(
+                Modifier
+                    .size(22.dp)
+                    .clip(CircleShape)
+                    .background(if (selected) AdventureColors.Lavender else AdventureColors.Mint)
+                    .border(1.dp, AdventureColors.Text.copy(alpha = .34f), CircleShape),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(Icons.Rounded.Check, contentDescription = null, tint = AdventureColors.Text, modifier = Modifier.size(15.dp))
+            }
+        }
     }
 }
 
 @Composable
 private fun DailyQuestDock(summary: GamificationSummary?, error: String?, launching: Boolean) {
+    val quest = AdventureAchievementCatalog.quests.first { it.id == "daily_trap_spotter" }
+    val progress = if (summary?.quest?.target == quest.target) summary.quest.progress else 0
     AdventurePanel(shape = RoundedCornerShape(18.dp), modifier = Modifier.fillMaxWidth()) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(Icons.Rounded.TrackChanges, contentDescription = null, tint = AdventureColors.Coral, modifier = Modifier.size(38.dp))
@@ -385,15 +492,15 @@ private fun DailyQuestDock(summary: GamificationSummary?, error: String?, launch
                 Text("Beat 2 trap questions", color = AdventureColors.Muted, fontSize = 12.sp)
                 Spacer(Modifier.height(7.dp))
                 AdventureProgress(
-                    progress = (summary?.quest?.progress ?: 0) / (summary?.quest?.target ?: 10).toFloat(),
+                    progress = progress / quest.target.toFloat(),
                     fill = AdventureColors.Mint,
                     height = 7.dp,
                 )
             }
             Spacer(Modifier.width(10.dp))
             Column(horizontalAlignment = Alignment.End) {
-                Text("${summary?.quest?.progress ?: 0}/${summary?.quest?.target ?: 10}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp)
-                Text("+${summary?.quest?.rewardXp ?: 40} XP", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                Text("$progress/${quest.target}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                Text("+${AdventureRewardRules.DAILY_TRAP_REWARD_XP} XP", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 12.sp)
             }
         }
     }
@@ -422,7 +529,9 @@ private fun roadNodes(subject: Subject, availability: Map<String, Int>): List<Ro
     }
 }
 
-private fun labelFor(topic: TopicDef?): String = topic?.faLabel ?: "Ready"
+private fun labelFor(topic: TopicDef?): String = topic?.let(::englishTopicLabel) ?: "Ready"
+
+private fun englishTopicLabel(topic: TopicDef): String = AdventureDisplayLabels.topicLabelOrFallback(topic.key)
 
 @Composable
 fun AdventureMissionsScreen(nav: NavController, examVm: ExamViewModel) {
@@ -466,7 +575,7 @@ fun AdventureMissionsScreen(nav: NavController, examVm: ExamViewModel) {
             topics.forEachIndexed { index, topic ->
                 MissionRow(
                     title = missionName(subject, index),
-                    subtitle = topic.faLabel,
+                    subtitle = englishTopicLabel(topic),
                     questions = availability[topic.key] ?: 0,
                     color = adventureSubjectColor(subject),
                     onClick = { launcher.start(subject, listOf(topic.key), 12) },
@@ -553,94 +662,92 @@ fun AdventureArenaScreen(nav: NavController, examVm: ExamViewModel) {
 
     var pendingOption by remember(question.id) { mutableStateOf<Int?>(null) }
     var scratchpadOpen by remember(question.id) { mutableStateOf(false) }
+    var optionsOpen by remember { mutableStateOf(false) }
     val strokes = remember(question.id) { mutableStateListOf<ScratchStroke>() }
     val attempt = examVm.attempts[examVm.index]
     val combo = comboCount(examVm)
     val progress = (examVm.index + if (attempt != null) 1 else 0).toFloat() / examVm.questions.size.coerceAtLeast(1)
+    val actionEnabled = !examVm.saving && (attempt != null || pendingOption != null)
+
+    val advanceArena = {
+        when {
+            attempt == null && pendingOption != null -> examVm.answer(pendingOption!!)
+            attempt == null -> Unit
+            examVm.isLast -> examVm.finishAndSave { nav.navigate(Routes.REWARD) }
+            else -> {
+                examVm.next()
+                pendingOption = null
+            }
+        }
+    }
 
     AdventureScreen(includeBottomPadding = false) {
         Column(
             Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
                 .padding(horizontal = 14.dp)
-                .padding(bottom = 18.dp),
+                .padding(bottom = 14.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = { nav.openTab(AdventureTab.MAP) }) {
-                    Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back to map", tint = AdventureColors.Text)
-                }
-                Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("Challenge Arena", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 20.sp)
-                    Text("${roadTitle(question.subject)} - Stage ${examVm.index + 1}", color = AdventureColors.Muted, fontSize = 12.sp)
-                }
-                IconButton(onClick = { }) {
-                    Icon(Icons.Rounded.Settings, contentDescription = "Arena settings", tint = AdventureColors.Text)
-                }
-            }
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Column(Modifier.weight(1f)) {
-                    Text("Question ${examVm.index + 1} of ${examVm.questions.size}", color = AdventureColors.Text, fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                    Spacer(Modifier.height(6.dp))
-                    AdventureProgress(progress = progress, fill = AdventureColors.Mint)
-                }
-                Spacer(Modifier.width(12.dp))
-                AdventurePanel(shape = RoundedCornerShape(14.dp)) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Rounded.Bolt, contentDescription = null, tint = AdventureColors.Gold, modifier = Modifier.size(22.dp))
-                        Spacer(Modifier.width(6.dp))
-                        Column {
-                            Text("Focus", color = AdventureColors.Muted, fontSize = 11.sp)
-                            Text("7/10", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 13.sp)
-                        }
-                        Spacer(Modifier.width(12.dp))
-                        ArenaTimer(question.id)
+            ArenaHeader(
+                title = "Challenge Arena",
+                subtitle = "${AdventureDisplayLabels.stageName(question.subject, question.topicKey)} - Question ${examVm.index + 1} of ${examVm.questions.size}",
+                onBack = { nav.openTab(AdventureTab.MAP) },
+                onSettings = { optionsOpen = true },
+            )
+            ArenaStatusBar(
+                progress = progress,
+                combo = combo,
+                resetKey = question.id,
+            )
+            Box(
+                Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState()),
+            ) {
+                Column(
+                    Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(10.dp),
+                ) {
+                    ComboRibbon(combo = combo, modifier = Modifier.align(Alignment.CenterHorizontally))
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
+                        MascotPortrait(size = 70.dp)
+                        Spacer(Modifier.width(8.dp))
+                        CoachBubble(coachTextFor(question, attempt))
+                    }
+                    QuestionCard(question)
+                    TrapHint(question)
+                    AnswerGrid(
+                        question = question,
+                        attempt = attempt,
+                        pendingOption = pendingOption,
+                        onPick = { pendingOption = it },
+                    )
+                    ArenaFeedback(attempt)
+                    if (examVm.saveError != null) {
+                        Text(
+                            examVm.saveError.orEmpty(),
+                            color = AdventureColors.Coral,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 12.sp,
+                        )
                     }
                 }
             }
-            Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
-                ComboRibbon(combo = combo, modifier = Modifier.padding(top = 0.dp))
-            }
-            Row(verticalAlignment = Alignment.Bottom) {
-                MascotPortrait(size = 72.dp)
-                Spacer(Modifier.width(8.dp))
-                CoachBubble("Find the shortcut.")
-            }
-            QuestionCard(question)
-            TrapHint(question)
-            AnswerGrid(
-                question = question,
-                attempt = attempt,
-                pendingOption = pendingOption,
-                onPick = { if (attempt == null) pendingOption = it },
-            )
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.fillMaxWidth()) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 AdventureGhostButton(
                     text = "Scratchpad",
                     onClick = { scratchpadOpen = true },
                     icon = Icons.Rounded.Edit,
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier.weight(.84f),
                 )
                 AdventureButton(
                     text = arenaActionText(examVm, attempt),
-                    enabled = !examVm.saving && (attempt != null || pendingOption != null),
-                    onClick = {
-                        when {
-                            attempt == null && pendingOption != null -> examVm.answer(pendingOption!!)
-                            examVm.isLast -> examVm.finishAndSave { nav.navigate(Routes.REWARD) }
-                            else -> {
-                                examVm.next()
-                                pendingOption = null
-                            }
-                        }
-                    },
-                    modifier = Modifier.weight(1.45f),
-                    icon = Icons.Rounded.Check,
+                    onClick = advanceArena,
+                    enabled = actionEnabled,
+                    modifier = Modifier.weight(1.36f),
                 )
-            }
-            if (examVm.saveError != null) {
-                Text(examVm.saveError.orEmpty(), color = AdventureColors.Coral, fontWeight = FontWeight.Bold, fontSize = 12.sp)
             }
         }
         if (scratchpadOpen) {
@@ -659,6 +766,149 @@ fun AdventureArenaScreen(nav: NavController, examVm: ExamViewModel) {
                     onClose = { scratchpadOpen = false },
                     clearKey = question.id,
                 )
+            }
+        }
+        if (optionsOpen) {
+            ArenaOptionsOverlay(
+                progress = progress,
+                combo = combo,
+                onClose = { optionsOpen = false },
+            )
+        }
+    }
+}
+
+@Composable
+private fun ArenaHeader(
+    title: String,
+    subtitle: String,
+    onBack: () -> Unit,
+    onSettings: () -> Unit,
+) {
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        IconButton(onClick = onBack, modifier = Modifier.size(48.dp)) {
+            Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back to map", tint = AdventureColors.Text)
+        }
+        Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(title, color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 18.sp, textAlign = TextAlign.Center)
+            Text(subtitle, color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 11.sp, textAlign = TextAlign.Center, maxLines = 1)
+        }
+        IconButton(onClick = onSettings, modifier = Modifier.size(48.dp)) {
+            Icon(Icons.Rounded.Settings, contentDescription = "Arena settings", tint = AdventureColors.Text)
+        }
+    }
+}
+
+@Composable
+private fun ArenaStatusBar(
+    progress: Float,
+    combo: Int,
+    resetKey: Any,
+) {
+    AdventurePanel(shape = RoundedCornerShape(16.dp), modifier = Modifier.fillMaxWidth()) {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                Column(Modifier.weight(1f)) {
+                    Text("Mission Progress", color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 11.sp)
+                    AdventureProgress(progress = progress, fill = AdventureColors.Mint, height = 7.dp)
+                }
+                Spacer(Modifier.width(12.dp))
+                Box(
+                    Modifier
+                        .clip(RoundedCornerShape(14.dp))
+                        .background(AdventureColors.PanelDark.copy(alpha = .74f))
+                        .border(1.dp, AdventureColors.Gold.copy(alpha = .48f), RoundedCornerShape(14.dp))
+                        .padding(horizontal = 10.dp, vertical = 8.dp),
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Rounded.Bolt, contentDescription = null, tint = AdventureColors.GoldBright, modifier = Modifier.size(22.dp))
+                        Spacer(Modifier.width(6.dp))
+                        Text("Focus\n7/10", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp, lineHeight = 14.sp)
+                    }
+                }
+                Spacer(Modifier.width(8.dp))
+                Column(horizontalAlignment = Alignment.End) {
+                    Text(if (combo > 1) "Combo x$combo" else "Focus Mode", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                    ArenaTimer(resetKey)
+                }
+            }
+        }
+    }
+}
+
+private fun coachTextFor(question: Question, attempt: com.gauss.app.data.AttemptResult?): String =
+    when {
+        attempt?.status == AttemptStatus.CORRECT -> "Great shortcut. Keep the combo alive."
+        attempt?.status == AttemptStatus.WRONG -> "Not that path yet. Read the structure again."
+        question.shortcut != null -> "Find the shortcut."
+        else -> "Solve it cleanly."
+    }
+
+@Composable
+private fun ArenaFeedback(attempt: com.gauss.app.data.AttemptResult?) {
+    if (attempt == null) return
+    val correct = attempt.status == AttemptStatus.CORRECT
+    AdventurePanel(
+        shape = RoundedCornerShape(14.dp),
+        modifier = Modifier.fillMaxWidth(),
+        borderColor = if (correct) AdventureColors.Mint.copy(alpha = .48f) else AdventureColors.Coral.copy(alpha = .48f),
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(
+                if (correct) Icons.Rounded.Check else Icons.Rounded.AutoAwesome,
+                contentDescription = null,
+                tint = if (correct) AdventureColors.Mint else AdventureColors.Coral,
+                modifier = Modifier.size(24.dp),
+            )
+            Spacer(Modifier.width(8.dp))
+            Column(Modifier.weight(1f)) {
+                Text(
+                    if (correct) "Correct" else "Review the trap",
+                    color = AdventureColors.Text,
+                    fontWeight = FontWeight.Black,
+                    fontSize = 13.sp,
+                )
+                Text(
+                    if (correct) "The vault will count this toward your combo." else "The correct answer is highlighted. Continue when you are ready.",
+                    color = AdventureColors.Muted,
+                    fontSize = 12.sp,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ArenaOptionsOverlay(
+    progress: Float,
+    combo: Int,
+    onClose: () -> Unit,
+) {
+    Box(
+        Modifier
+            .fillMaxSize()
+            .background(Color.Black.copy(alpha = .56f))
+            .padding(24.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        AdventurePanel(shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth()) {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Icon(Icons.Rounded.Settings, contentDescription = null, tint = AdventureColors.GoldBright, modifier = Modifier.size(28.dp))
+                    Spacer(Modifier.width(10.dp))
+                    Column(Modifier.weight(1f)) {
+                        Text("Arena Options", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 18.sp)
+                        Text("Mission state stays local until rewards are claimed.", color = AdventureColors.Muted, fontSize = 12.sp)
+                    }
+                }
+                AdventureProgress(progress = progress, fill = AdventureColors.Mint)
+                Text(
+                    if (combo > 1) "Current combo: x$combo" else "Build a combo by answering correctly.",
+                    color = AdventureColors.Text,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 13.sp,
+                )
+                AdventureGhostButton("Close", onClick = onClose, modifier = Modifier.fillMaxWidth())
             }
         }
     }
@@ -796,97 +1046,89 @@ private fun roadTitle(subject: Subject): String = if (subject == Subject.MATH) "
 
 @Composable
 fun AdventureRewardScreen(nav: NavController, examVm: ExamViewModel) {
-    val results = examVm.results()
-    val reward = examVm.rewardSummary
-    if (results.isEmpty() && reward == null) {
-        RewardVaultHub(nav)
-        return
+    val events = remember { AdventureRewardRules.previewRewardEvents() }
+    val reward = remember { AdventureRewardRules.summarize(events) }
+    val missionMeta = remember { events.firstOrNull { it.missionId != null && it.metadata.isNotEmpty() }?.metadata.orEmpty() }
+    var claimed by remember(reward.id) { mutableStateOf(false) }
+    val backToMap = {
+        examVm.reset()
+        nav.openTab(AdventureTab.MAP)
     }
-    val correct = results.count { it.status == AttemptStatus.CORRECT }
-    val total = results.size.coerceAtLeast(1)
-    val accuracy = (correct.toFloat() / total * 100).roundToInt()
-    val xp = reward?.xpEarned ?: (correct * 5 + if (results.isNotEmpty()) 20 else 0)
-    val focusLeft = (7 - results.count { it.status == AttemptStatus.WRONG }).coerceAtLeast(0)
 
-    AdventureScreen {
-        ConfettiLayer()
+    AdventureScreen(includeBottomPadding = false) {
         Column(
             Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 14.dp)
-                .padding(bottom = 18.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+                .padding(bottom = 14.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            Text("Reward Vault", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 21.sp)
-            Box(Modifier.fillMaxWidth().height(238.dp)) {
-                VaultDoor(Modifier.align(Alignment.Center).fillMaxWidth(.86f).fillMaxHeight())
-                MascotPortrait(Modifier.align(Alignment.BottomStart).offset(x = 12.dp), size = 104.dp)
+            ScreenTitle("Reward Vault", "Claim your mission haul before returning to the map.")
+            Box(
+                Modifier
+                    .fillMaxWidth()
+                    .height(250.dp)
+                    .clip(RoundedCornerShape(22.dp))
+                    .background(Brush.verticalGradient(listOf(Color(0xFF08313B), Color(0xFF0D4C55))))
+                    .border(1.dp, AdventureColors.BorderSoft, RoundedCornerShape(22.dp)),
+            ) {
+                ConfettiLayer(Modifier.matchParentSize())
                 Box(
                     Modifier
                         .align(Alignment.TopCenter)
-                        .clip(RoundedCornerShape(14.dp))
-                        .background(Brush.horizontalGradient(listOf(Color(0xFF7A4319), AdventureColors.Gold, Color(0xFF7A4319))))
-                        .border(1.dp, AdventureColors.GoldBright, RoundedCornerShape(14.dp))
+                        .padding(top = 14.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(Brush.horizontalGradient(listOf(Color(0xFF5C3216), Color(0xFFB66C24), Color(0xFF5C3216))))
+                        .border(1.dp, AdventureColors.GoldBright.copy(alpha = .65f), RoundedCornerShape(12.dp))
                         .padding(horizontal = 18.dp, vertical = 8.dp),
+                    contentAlignment = Alignment.Center,
                 ) {
-                    Text("Mission Complete!", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 24.sp)
+                    Text("Mission Complete!", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 22.sp)
                 }
+                VaultDoor(
+                    modifier = Modifier
+                        .align(Alignment.CenterEnd)
+                        .padding(top = 28.dp, end = 8.dp)
+                        .fillMaxWidth(.68f)
+                        .fillMaxHeight(.78f),
+                    open = true,
+                )
+                MascotPortrait(
+                    size = 112.dp,
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .padding(start = 24.dp, bottom = 12.dp),
+                )
             }
-            AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(22.dp), borderColor = AdventureColors.Gold.copy(alpha = .55f)) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
-                    Text("XP Earned", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 14.sp)
-                    Text("+$xp XP", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 32.sp)
-                    Spacer(Modifier.height(12.dp))
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
-                        RewardStat("Combo Bonus", "x${comboCount(examVm).coerceAtLeast(1)}", AdventureColors.Lavender, Modifier.weight(1f))
-                        RewardStat("Accuracy", "$accuracy%", AdventureColors.Mint, Modifier.weight(1f))
-                        RewardStat("Focus Left", "+$focusLeft", AdventureColors.Gold, Modifier.weight(1f))
+
+            AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), borderColor = AdventureColors.Gold.copy(alpha = .55f)) {
+                Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text("XP Earned", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 13.sp)
+                    Text("+${reward.xpTotal} XP", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 30.sp)
+                    Spacer(Modifier.height(10.dp))
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        RewardStat("Combo Bonus", "x${missionMeta["combo"] ?: "4"}", AdventureColors.Lavender, Modifier.weight(1f))
+                        RewardStat("Accuracy", "${missionMeta["accuracy"] ?: "93"}%", AdventureColors.Mint, Modifier.weight(1f))
+                        RewardStat("Focus Left", "+${reward.focusDelta}", AdventureColors.GoldBright, Modifier.weight(1f))
                     }
                 }
             }
-            AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp)) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(Icons.Rounded.TrackChanges, contentDescription = null, tint = AdventureColors.Coral, modifier = Modifier.size(42.dp))
-                    Spacer(Modifier.width(12.dp))
-                    Column(Modifier.weight(1f)) {
-                        Text("Daily Quest", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 15.sp)
-                        Text("Beat 2 trap questions", color = AdventureColors.Muted, fontSize = 12.sp)
-                        Spacer(Modifier.height(7.dp))
-                        AdventureProgress(progress = 1f, fill = AdventureColors.Mint)
-                    }
-                    Icon(Icons.Rounded.Check, contentDescription = null, tint = AdventureColors.Mint, modifier = Modifier.size(34.dp))
-                    Text("+200 XP", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 16.sp)
-                }
-            }
-            AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp)) {
-                Column {
-                    Text("You Found", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp)
-                    Spacer(Modifier.height(12.dp))
-                    Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth()) {
-                        MiniCoin(Icons.Rounded.Paid, "Coins", "+120", AdventureColors.Gold)
-                        MiniCoin(Icons.Rounded.Diamond, "Gems", "+2", AdventureColors.Physics)
-                        MiniCoin(Icons.Rounded.Inventory2, "Common Gear", "Chest", AdventureColors.GoldBright)
-                    }
-                }
-            }
+
+            RewardQuestRow()
+            RewardFoundPanel(
+                coins = reward.coins,
+                gems = reward.gems,
+                gearCount = reward.gearDrops.size,
+            )
+
             AdventureButton(
-                text = "Claim Rewards",
-                onClick = {
-                    examVm.reset()
-                    nav.openTab(AdventureTab.MAP)
-                },
+                text = if (claimed) "Rewards Claimed" else "Claim Rewards",
+                onClick = { claimed = true },
+                enabled = !claimed,
                 modifier = Modifier.fillMaxWidth(),
             )
-            AdventureGhostButton(
-                text = "Back to Map",
-                onClick = {
-                    examVm.reset()
-                    nav.openTab(AdventureTab.MAP)
-                },
-                modifier = Modifier.fillMaxWidth(),
-            )
+            AdventureGhostButton("Back to Map", onClick = backToMap, modifier = Modifier.fillMaxWidth())
         }
     }
 }
@@ -936,19 +1178,75 @@ private fun RewardStat(label: String, value: String, color: Color, modifier: Mod
 }
 
 @Composable
+private fun RewardQuestRow() {
+    AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp), borderColor = AdventureColors.Mint.copy(alpha = .42f)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(Icons.Rounded.TrackChanges, contentDescription = null, tint = AdventureColors.Coral, modifier = Modifier.size(38.dp))
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
+                Text("Daily Quest", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp)
+                Text("Beat 2 trap questions", color = AdventureColors.Muted, fontSize = 12.sp)
+                Spacer(Modifier.height(7.dp))
+                AdventureProgress(progress = 1f, fill = AdventureColors.Mint, height = 7.dp)
+            }
+            Spacer(Modifier.width(10.dp))
+            Column(horizontalAlignment = Alignment.End) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Icon(Icons.Rounded.Check, contentDescription = null, tint = AdventureColors.Mint, modifier = Modifier.size(24.dp))
+                    Spacer(Modifier.width(5.dp))
+                    Text("+${AdventureRewardRules.DAILY_TRAP_REWARD_XP} XP", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 14.sp)
+                }
+                Text("${AdventureRewardRules.DAILY_TRAP_TARGET}/${AdventureRewardRules.DAILY_TRAP_TARGET}", color = AdventureColors.Muted, fontSize = 11.sp)
+            }
+        }
+    }
+}
+
+@Composable
+private fun RewardFoundPanel(
+    coins: Int,
+    gems: Int,
+    gearCount: Int,
+) {
+    AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp), borderColor = AdventureColors.Gold.copy(alpha = .42f)) {
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Text("You Found", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp)
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
+                MiniCoin(Icons.Rounded.Paid, "Coins", "+$coins", AdventureColors.GoldBright, Modifier.weight(1f))
+                MiniCoin(Icons.Rounded.Diamond, "Gems", "+$gems", AdventureColors.Physics, Modifier.weight(1f))
+                Column(
+                    Modifier
+                        .weight(1f)
+                        .clip(RoundedCornerShape(15.dp))
+                        .background(AdventureColors.PanelDark.copy(alpha = .72f))
+                        .border(1.dp, AdventureColors.Gold.copy(alpha = .50f), RoundedCornerShape(15.dp))
+                        .padding(10.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    Icon(Icons.Rounded.Inventory2, contentDescription = null, tint = AdventureColors.GoldBright, modifier = Modifier.size(42.dp))
+                    Text("Common", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                    Text("$gearCount Gear", color = AdventureColors.Muted, fontSize = 11.sp)
+                }
+            }
+        }
+    }
+}
+
+@Composable
 fun AdventureProfileScreen(nav: NavController, examVm: ExamViewModel) {
     val context = LocalContext.current
     val app = remember(context) { GaussApp.from(context) }
     val launcher = rememberMissionLauncher(nav, examVm)
     var summary by remember { mutableStateOf<GamificationSummary?>(null) }
     var analytics by remember { mutableStateOf<Analytics?>(null) }
-    var revengeCount by remember { mutableIntStateOf(0) }
+    var revengeCount by remember { mutableIntStateOf(8) }
     var selectedTab by remember { mutableStateOf("Mastery") }
+    var shopOpen by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         summary = app.gamification.summary()
         analytics = app.history.analytics()
-        revengeCount = app.history.revengeIds().size
+        revengeCount = app.history.revengeIds().size.takeIf { it > 0 } ?: 8
     }
 
     AdventureScreen {
@@ -960,47 +1258,50 @@ fun AdventureProfileScreen(nav: NavController, examVm: ExamViewModel) {
                 .padding(bottom = 92.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            ScreenTitle(
-                title = "My Profile",
-                subtitle = "Explorer Gauss",
-                trailing = {
-                    IconButton(onClick = { }) {
-                        Icon(Icons.Rounded.Settings, contentDescription = "Profile settings", tint = AdventureColors.Text)
-                    }
-                },
-            )
+            ScreenTitle("My Profile", "Explorer progress, mastery, badges, and league.")
             ProfileHeader(summary)
             ProfileTabs(selectedTab, onSelect = { selectedTab = it })
-            BrainMapPanel(analytics)
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.fillMaxWidth()) {
-                WeakTopicsPanel(analytics, modifier = Modifier.weight(1f))
-                RevengeQueuePanel(revengeCount, launcher, modifier = Modifier.weight(.78f))
-            }
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.fillMaxWidth()) {
-                BadgeWallPanel(modifier = Modifier.weight(1f))
-                CosmeticsPanel(modifier = Modifier.weight(.88f))
+            when (selectedTab) {
+                "Stats" -> ProfileStatsPanel(analytics)
+                "Badges" -> ProfileBadgesDetailPanel()
+                "League" -> ProfileLeaguePanel()
+                else -> {
+                    BrainMapPanel(analytics)
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        WeakTopicsPanel(analytics, Modifier.weight(1f))
+                        RevengeQueuePanel(revengeCount, launcher, Modifier.weight(1f))
+                    }
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        BadgeWallPanel(Modifier.weight(1f), onViewAll = { selectedTab = "Badges" })
+                        CosmeticsPanel(Modifier.weight(1f), onShop = { shopOpen = true })
+                    }
+                }
             }
             OfflineStatusPanel()
-            if (launcher.error != null) {
-                Text(launcher.error, color = AdventureColors.Coral, fontWeight = FontWeight.Bold, fontSize = 12.sp)
-            }
         }
         AdventureBottomNav(AdventureTab.PROFILE, { nav.openTab(it) }, Modifier.align(Alignment.BottomCenter))
+        if (shopOpen) {
+            CosmeticsShopOverlay(onClose = { shopOpen = false })
+        }
     }
 }
 
 @Composable
 private fun ProfileHeader(summary: GamificationSummary?) {
+    val level = AdventureLevelCurve.previewSnapshot()
     AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             MascotPortrait(size = 78.dp, badge = true)
             Spacer(Modifier.width(12.dp))
             Column(Modifier.weight(1f)) {
                 Text("Explorer Gauss", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 17.sp)
-                Text("Level ${summary?.level ?: 1}", color = AdventureColors.Text, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                Text("Level ${level.level}", color = AdventureColors.Text, fontWeight = FontWeight.Bold, fontSize = 13.sp)
                 Spacer(Modifier.height(8.dp))
-                AdventureProgress(summary?.levelProgress ?: 0.08f)
-                Text("${summary?.totalXp ?: 0} XP", color = AdventureColors.Muted, fontSize = 11.sp)
+                AdventureProgress(level.progress)
+                Text(level.display, color = AdventureColors.Muted, fontSize = 11.sp)
+                if (summary != null) {
+                    Text("${summary.todayXp} XP today", color = AdventureColors.Mint, fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                }
             }
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Icon(Icons.Rounded.Shield, contentDescription = null, tint = Color(0xFFC8D2DB), modifier = Modifier.size(56.dp))
@@ -1016,22 +1317,31 @@ private fun ProfileTabs(selected: String, onSelect: (String) -> Unit) {
     Row(
         Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(17.dp))
-            .background(Color(0x66091F28))
-            .border(1.dp, AdventureColors.BorderSoft, RoundedCornerShape(17.dp))
+            .clip(RoundedCornerShape(16.dp))
+            .background(AdventureColors.PanelDark.copy(alpha = .88f))
+            .border(1.dp, AdventureColors.BorderSoft, RoundedCornerShape(16.dp))
             .padding(4.dp),
+        horizontalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         listOf("Mastery", "Stats", "Badges", "League").forEach { tab ->
+            val active = selected == tab
             Box(
                 Modifier
                     .weight(1f)
-                    .clip(RoundedCornerShape(13.dp))
-                    .background(if (selected == tab) AdventureColors.Reef else Color.Transparent)
-                    .adventurePress { onSelect(tab) }
-                    .padding(vertical = 8.dp),
+                    .height(36.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(if (active) AdventureColors.Reef.copy(alpha = .95f) else Color.Transparent)
+                    .border(if (active) 1.dp else 0.dp, if (active) AdventureColors.Physics.copy(alpha = .58f) else Color.Transparent, RoundedCornerShape(12.dp))
+                    .adventurePress { onSelect(tab) },
                 contentAlignment = Alignment.Center,
             ) {
-                Text(tab, color = if (selected == tab) AdventureColors.Text else AdventureColors.Muted, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                Text(
+                    tab,
+                    color = if (active) AdventureColors.Text else AdventureColors.Muted,
+                    fontWeight = FontWeight.Black,
+                    fontSize = 12.sp,
+                    textAlign = TextAlign.Center,
+                )
             }
         }
     }
@@ -1117,12 +1427,13 @@ private fun RevengeQueuePanel(count: Int, launcher: MissionLauncher, modifier: M
 }
 
 @Composable
-private fun BadgeWallPanel(modifier: Modifier = Modifier) {
+private fun BadgeWallPanel(modifier: Modifier = Modifier, onViewAll: () -> Unit = {}) {
+    val badges = AdventureAchievementCatalog.featuredBadgeWall.take(5)
     AdventurePanel(modifier = modifier.heightIn(min = 142.dp), shape = RoundedCornerShape(16.dp)) {
         Column {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Text("Badge Wall", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp)
-                Text("12 / 24", color = AdventureColors.Muted, fontSize = 11.sp)
+                Text("${AdventureAchievementCatalog.unlockedPreviewCount()} / ${AdventureAchievementCatalog.totalFeaturedBadgeCount()}", color = AdventureColors.Muted, fontSize = 11.sp)
             }
             Spacer(Modifier.height(12.dp))
             Row(
@@ -1131,18 +1442,23 @@ private fun BadgeWallPanel(modifier: Modifier = Modifier) {
                     .horizontalScroll(rememberScrollState()),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                listOf(AdventureColors.Physics, AdventureColors.Coral, AdventureColors.Math, AdventureColors.Lavender, AdventureColors.Gold).forEachIndexed { index, color ->
-                    BadgeIcon(index, color)
+                badges.forEachIndexed { index, badge ->
+                    BadgeIcon(index, badgeColor(index))
                 }
             }
+            Spacer(Modifier.height(10.dp))
+            AdventureGhostButton("View all", onClick = onViewAll, modifier = Modifier.fillMaxWidth())
         }
     }
 }
 
+private fun badgeColor(index: Int): Color =
+    listOf(AdventureColors.Physics, AdventureColors.Coral, AdventureColors.Math, AdventureColors.Lavender, AdventureColors.Gold)[index % 5]
+
 @Composable
-private fun BadgeIcon(index: Int, color: Color) {
+private fun BadgeIcon(index: Int, color: Color, modifier: Modifier = Modifier) {
     Box(
-        Modifier
+        modifier
             .size(44.dp)
             .clip(RoundedCornerShape(13.dp))
             .background(color.copy(alpha = .20f))
@@ -1154,16 +1470,92 @@ private fun BadgeIcon(index: Int, color: Color) {
 }
 
 @Composable
-private fun CosmeticsPanel(modifier: Modifier = Modifier) {
+private fun CosmeticsPanel(modifier: Modifier = Modifier, onShop: () -> Unit) {
     AdventurePanel(modifier = modifier.heightIn(min = 142.dp), shape = RoundedCornerShape(16.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f)) {
                 Text("Cosmetics Shop", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp)
                 Text("New items!", color = AdventureColors.Muted, fontSize = 11.sp)
                 Spacer(Modifier.height(18.dp))
-                AdventureGhostButton("Shop", onClick = { }, modifier = Modifier.width(88.dp), icon = Icons.Rounded.ShoppingBag)
+                AdventureGhostButton("Shop", onClick = onShop, modifier = Modifier.width(88.dp), icon = Icons.Rounded.ShoppingBag)
             }
             MascotPortrait(size = 76.dp)
+        }
+    }
+}
+
+@Composable
+private fun ProfileStatsPanel(analytics: Analytics?) {
+    AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp)) {
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Text("Stats", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 16.sp)
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                RewardStat("Answered", "${analytics?.totalAnswered ?: 0}", AdventureColors.Physics, Modifier.weight(1f))
+                RewardStat("Accuracy", "${analytics?.accuracy?.roundToInt() ?: 93}%", AdventureColors.Mint, Modifier.weight(1f))
+                RewardStat("Streak", "${analytics?.streak ?: 12}d", AdventureColors.GoldBright, Modifier.weight(1f))
+            }
+            Text("Average time: ${analytics?.avgTime?.roundToInt() ?: 45}s", color = AdventureColors.Muted, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+        }
+    }
+}
+
+@Composable
+private fun ProfileBadgesDetailPanel() {
+    AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp)) {
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Text("Badges", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 16.sp)
+                Text("${AdventureAchievementCatalog.achievements.size} total", color = AdventureColors.Muted, fontSize = 12.sp)
+            }
+            AdventureAchievementCatalog.featuredBadgeWall.chunked(4).forEach { row ->
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    row.forEachIndexed { index, _ ->
+                        BadgeIcon(index, badgeColor(index), modifier = Modifier.weight(1f))
+                    }
+                    repeat(4 - row.size) { Spacer(Modifier.weight(1f)) }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun ProfileLeaguePanel() {
+    AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp), borderColor = Color(0xFFC8D2DB).copy(alpha = .52f)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(Icons.Rounded.Shield, contentDescription = null, tint = Color(0xFFC8D2DB), modifier = Modifier.size(72.dp))
+            Spacer(Modifier.width(14.dp))
+            Column(Modifier.weight(1f)) {
+                Text("Silver I", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 20.sp)
+                Text("Top 48%", color = AdventureColors.Muted, fontSize = 13.sp)
+                Spacer(Modifier.height(10.dp))
+                AdventureProgress(.48f, fill = Color(0xFFC8D2DB), height = 8.dp)
+                Text("Keep climbing with clean missions.", color = AdventureColors.Mint, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+            }
+        }
+    }
+}
+
+@Composable
+private fun CosmeticsShopOverlay(onClose: () -> Unit) {
+    Box(
+        Modifier
+            .fillMaxSize()
+            .background(Color.Black.copy(alpha = .58f))
+            .padding(24.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        AdventurePanel(shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth()) {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                MascotPortrait(size = 92.dp)
+                Text("Cosmetics Shop", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 20.sp)
+                Text("Explorer wand, star cloak, and vault key cosmetics are preview-ready.", color = AdventureColors.Muted, fontSize = 13.sp, textAlign = TextAlign.Center)
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    RewardStat("Coins", "120", AdventureColors.GoldBright, Modifier.weight(1f))
+                    RewardStat("Gems", "2", AdventureColors.Physics, Modifier.weight(1f))
+                }
+                AdventureGhostButton("Close", onClick = onClose, modifier = Modifier.fillMaxWidth())
+            }
         }
     }
 }
