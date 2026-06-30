@@ -52,7 +52,7 @@ class GamificationRepository(private val db: GaussDatabase) {
         val total = dao.totalXp()
         val level = levelFor(total)
         val quest = dao.questForDay(today)?.toQuest() ?: DailyQuest(
-            title = "۱۰ سؤال مفید حل کن",
+            title = "Beat 10 useful questions",
             progress = 0,
             target = DAILY_QUEST_TARGET,
             rewardXp = DAILY_QUEST_XP,
@@ -125,7 +125,7 @@ class GamificationRepository(private val db: GaussDatabase) {
                     type = "question_answered",
                     amount = 5,
                     category = CATEGORY_PRACTICE,
-                    reason = "پاسخ درست",
+                    reason = "Correct answer",
                     question = result.question,
                 )
                 if (dao.previousWrongAttempts(result.question.id, examId) > 0) {
@@ -134,7 +134,7 @@ class GamificationRepository(private val db: GaussDatabase) {
                         type = "mistake_corrected",
                         amount = 15,
                         category = CATEGORY_CORRECTION,
-                        reason = "اصلاح خطای قبلی",
+                        reason = "Mistake corrected",
                         question = result.question,
                     )
                 }
@@ -147,7 +147,7 @@ class GamificationRepository(private val db: GaussDatabase) {
                 type = "exam_completed",
                 amount = 20,
                 category = CATEGORY_PRACTICE,
-                reason = "پایان آزمون",
+                reason = "Mission complete",
             )
         }
 
@@ -155,7 +155,7 @@ class GamificationRepository(private val db: GaussDatabase) {
         val quest = QuestProgressEntity(
             questId = "daily_practice:$today",
             dayKey = today,
-            title = "۱۰ سؤال مفید حل کن",
+            title = "Beat 10 useful questions",
             progress = minOf(DAILY_QUEST_TARGET, answered),
             target = DAILY_QUEST_TARGET,
             completed = answered >= DAILY_QUEST_TARGET,
@@ -169,7 +169,7 @@ class GamificationRepository(private val db: GaussDatabase) {
                 type = "daily_practice_completed",
                 amount = DAILY_QUEST_XP,
                 category = CATEGORY_BONUS,
-                reason = "ماموریت امروز",
+                reason = "Daily quest",
             )
         }
 
@@ -180,7 +180,7 @@ class GamificationRepository(private val db: GaussDatabase) {
                 type = "boss_pass",
                 amount = 120,
                 category = CATEGORY_MASTERY,
-                reason = "چالش طلایی",
+                reason = "Gold challenge",
             )
         }
 
@@ -194,13 +194,13 @@ class GamificationRepository(private val db: GaussDatabase) {
                     type = "topic_mastered",
                     amount = 80,
                     category = CATEGORY_MASTERY,
-                    reason = "تسلط بر $label",
+                    reason = "Mastered $label",
                     topic = topic,
                 )
                 dao.upsertAchievementProgress(
                     AchievementProgressEntity(
                         achievementId = "topic_mastered:$topic",
-                        title = "تسلط بر $label",
+                        title = "Mastery: $label",
                         current = 1,
                         target = 1,
                         completedAt = now,

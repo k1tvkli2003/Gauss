@@ -104,10 +104,10 @@ private fun AssetMedia(block: ContentBlock.Image) {
                 .then(if (block.aspectRatio != null) Modifier.aspectRatio(block.aspectRatio) else Modifier.height(156.dp))
                 .clip(RoundedCornerShape(12.dp))
                 .background(MaterialTheme.colorScheme.surfaceVariant)
-                .padding(12.dp),
+            .padding(12.dp),
             contentAlignment = Alignment.Center,
         ) {
-            Text(block.alt.ifBlank { "در حال آماده‌سازی شکل…" }, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
+            Text(block.alt.ifBlank { "Preparing image..." }, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
         }
         return
     }
@@ -145,7 +145,7 @@ private fun MediaViewer(bitmap: ImageBitmap, alt: String, onDismiss: () -> Unit)
                     .graphicsLayer(scaleX = scale, scaleY = scale, translationX = offset.x, translationY = offset.y),
             )
             IconButton(onClick = onDismiss, modifier = Modifier.align(Alignment.TopEnd).padding(16.dp).size(48.dp)) {
-                Icon(Icons.Rounded.Close, contentDescription = "بستن", tint = MaterialTheme.colorScheme.onPrimary)
+                Icon(Icons.Rounded.Close, contentDescription = "Close", tint = MaterialTheme.colorScheme.onPrimary)
             }
         }
     }

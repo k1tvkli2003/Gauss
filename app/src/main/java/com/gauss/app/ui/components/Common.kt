@@ -178,7 +178,7 @@ fun GaussMentorAvatar(
 ) {
     Image(
         painter = painterResource(R.drawable.gauss_mentor),
-        contentDescription = "مربی Gauss",
+        contentDescription = "Gauss mentor",
         contentScale = ContentScale.Crop,
         modifier = modifier
             .size(size)

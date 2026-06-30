@@ -140,11 +140,11 @@ class ExamViewModel(app: Application) : AndroidViewModel(app) {
                 rewardSummary = runCatching {
                     app.gamification.rewardExam(examId, cfg, res, duration)
                 }.getOrElse {
-                    saveError = "آزمون ذخیره شد، اما XP ثبت نشد. دوباره تلاش کن تا پاداش از دست نره."
+                    saveError = "The mission was saved, but XP was not recorded. Try saving again so the reward is not lost."
                     null
                 }
             } catch (error: Throwable) {
-                saveError = "ذخیره آزمون کامل نشد. نتیجه همین‌جاست؛ دوباره برای ذخیره تلاش کن."
+                saveError = "The mission was not saved. Your results are still here; try saving again."
             } finally {
                 saving = false
                 finished = true

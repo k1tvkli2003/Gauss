@@ -138,15 +138,15 @@ fun DrawingCanvas(
                             onChange(strokes + last)
                         }
                     }
-                    ToolChip("پاک", enabled = strokes.isNotEmpty()) {
+                    ToolChip("Clear", enabled = strokes.isNotEmpty()) {
                         redo.clear()
                         onChange(emptyList())
                     }
                 }
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Text("چرک‌نویس روی سؤال", color = scheme.onSurface, style = MaterialTheme.typography.labelLarge)
+                    Text("Scratchpad", color = scheme.onSurface, style = MaterialTheme.typography.labelLarge)
                     onClose?.let { close ->
-                        ToolChip("بستن") { close() }
+                        ToolChip("Close") { close() }
                     }
                 }
             }
