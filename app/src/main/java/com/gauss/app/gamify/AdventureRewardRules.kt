@@ -101,7 +101,7 @@ object AdventureRewardRules {
                 val focusLeft = event.metadata["focusLeft"]?.toIntOrNull() ?: 0
                 if (combo >= 4) grant(AdventureRewardType.XP, 80, "Combo bonus", event.id)
                 if (accuracy >= 90) grant(AdventureRewardType.XP, 100, "Accuracy bonus", event.id)
-                if (focusLeft >= 2) grant(AdventureRewardType.Focus, 2, "Focus left", event.id)
+                if (focusLeft > 0) grant(AdventureRewardType.Focus, focusLeft.coerceAtMost(2), "Focus left", event.id)
             }
 
         eligible.filter { it.type == AdventureEventType.QuestCompleted }

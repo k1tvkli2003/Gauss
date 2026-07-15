@@ -1,0 +1,16 @@
+{
+  "screen": "map",
+  "reference": "docs/adventure-reference-crops/adventure-reference-map.png",
+  "rendered": "docs\\adventure-rendered-screenshots\\gauss-map-api35-2026-07-04.png",
+  "referenceSize": {
+    "width": 376,
+    "height": 821
+  },
+  "renderedInputSize": {
+    "width": 1080,
+    "height": 2400
+  },
+  "meanAbsoluteChannelError": 48.25,
+  "rootMeanSquareChannelError": 72.689,
+  "p95ChannelError": 211
+}

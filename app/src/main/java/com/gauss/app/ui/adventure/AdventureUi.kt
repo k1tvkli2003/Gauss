@@ -36,9 +36,9 @@ import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.Bolt
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.Inventory2
 import androidx.compose.material.icons.rounded.Map
 import androidx.compose.material.icons.rounded.Person
-import androidx.compose.material.icons.rounded.Redeem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -101,7 +101,7 @@ object AdventureColors {
 enum class AdventureTab(val label: String, val icon: ImageVector) {
     MAP("Map", Icons.Rounded.Map),
     MISSIONS("Missions", Icons.AutoMirrored.Rounded.Assignment),
-    REWARDS("Rewards", Icons.Rounded.Redeem),
+    REWARDS("Rewards", Icons.Rounded.Inventory2),
     PROFILE("Profile", Icons.Rounded.Person),
 }
 
@@ -386,28 +386,41 @@ fun AdventureBottomNav(
     selected: AdventureTab,
     onSelect: (AdventureTab) -> Unit,
     modifier: Modifier = Modifier,
+    immersive: Boolean = false,
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(topStart = 22.dp, topEnd = 22.dp),
-        color = AdventureColors.PanelDark.copy(alpha = .96f),
-        border = BorderStroke(1.dp, AdventureColors.BorderSoft),
-        shadowElevation = 14.dp,
+        color = AdventureColors.PanelDark.copy(alpha = if (immersive) .84f else .96f),
+        border = BorderStroke(1.dp, AdventureColors.BorderSoft.copy(alpha = if (immersive) .72f else 1f)),
+        shadowElevation = if (immersive) 6.dp else 14.dp,
     ) {
         Row(
             Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 8.dp, vertical = 8.dp),
+                .padding(horizontal = 8.dp, vertical = 7.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
             AdventureTab.entries.forEach { tab ->
                 val active = tab == selected
+                val accent = tabAccent(tab)
                 Column(
                     modifier = Modifier
                         .weight(1f)
                         .clip(RoundedCornerShape(15.dp))
-                        .background(if (active) AdventureColors.Reef.copy(alpha = .85f) else Color.Transparent)
+                        .background(
+                            if (active) {
+                                Brush.verticalGradient(
+                                    listOf(
+                                        AdventureColors.Reef.copy(alpha = if (immersive) .74f else .92f),
+                                        Color(0xFF07505B).copy(alpha = if (immersive) .70f else .86f),
+                                    ),
+                                )
+                            } else {
+                                Brush.verticalGradient(listOf(Color.Transparent, Color.Transparent))
+                            },
+                        )
                         .border(
                             if (active) 1.dp else 0.dp,
                             if (active) AdventureColors.Physics.copy(alpha = .58f) else Color.Transparent,
@@ -418,12 +431,31 @@ fun AdventureBottomNav(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.spacedBy(3.dp),
                 ) {
-                    Icon(tab.icon, contentDescription = tab.label, tint = if (active) AdventureColors.Text else AdventureColors.Muted, modifier = Modifier.size(23.dp))
+                    if (tab == AdventureTab.PROFILE) {
+                        Image(
+                            painter = painterResource(R.drawable.gauss_mentor),
+                            contentDescription = tab.label,
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier
+                                .size(25.dp)
+                                .clip(CircleShape)
+                                .border(if (active) 1.dp else 0.dp, AdventureColors.GoldBright.copy(alpha = .72f), CircleShape),
+                        )
+                    } else {
+                        Icon(tab.icon, contentDescription = tab.label, tint = if (active) accent else accent.copy(alpha = .74f), modifier = Modifier.size(23.dp))
+                    }
                     Text(tab.label, color = if (active) AdventureColors.Text else AdventureColors.Muted, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                 }
             }
         }
     }
+}
+
+private fun tabAccent(tab: AdventureTab): Color = when (tab) {
+    AdventureTab.MAP -> AdventureColors.Cream
+    AdventureTab.MISSIONS -> Color(0xFFE6D7B9)
+    AdventureTab.REWARDS -> AdventureColors.Gold
+    AdventureTab.PROFILE -> AdventureColors.Mint
 }
 
 @Composable

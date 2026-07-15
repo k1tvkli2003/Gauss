@@ -1,7 +1,13 @@
 package com.gauss.app.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.horizontalScroll
@@ -66,22 +72,28 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.gauss.app.R
 import com.gauss.app.GaussApp
 import com.gauss.app.data.Analytics
 import com.gauss.app.data.AttemptStatus
@@ -96,6 +108,7 @@ import com.gauss.app.data.TopicDef
 import com.gauss.app.gamify.AdventureAchievementCatalog
 import com.gauss.app.gamify.AdventureDisplayLabels
 import com.gauss.app.gamify.AdventureLevelCurve
+import com.gauss.app.gamify.AdventureRewardEventMapper
 import com.gauss.app.gamify.AdventureRewardRules
 import com.gauss.app.ui.adventure.AdventureBottomNav
 import com.gauss.app.ui.adventure.AdventureButton
@@ -110,7 +123,6 @@ import com.gauss.app.ui.adventure.BrainNebula
 import com.gauss.app.ui.adventure.ComboRibbon
 import com.gauss.app.ui.adventure.ConfettiLayer
 import com.gauss.app.ui.adventure.MascotPortrait
-import com.gauss.app.ui.adventure.MetricTile
 import com.gauss.app.ui.adventure.MiniCoin
 import com.gauss.app.ui.adventure.SubjectRoadSwitch
 import com.gauss.app.ui.adventure.TileState
@@ -217,73 +229,306 @@ fun AdventureMapScreen(nav: NavController, examVm: ExamViewModel) {
     var summary by remember { mutableStateOf<GamificationSummary?>(null) }
     var availability by remember { mutableStateOf<Map<String, Int>>(emptyMap()) }
     var selectedTopic by remember { mutableStateOf<String?>(null) }
+    var selectedNode by remember { mutableStateOf<RoadNode?>(null) }
     val launcher = rememberMissionLauncher(nav, examVm)
 
     LaunchedEffect(subject) {
         summary = app.gamification.summary()
         availability = app.questionBank().topicAvailability(subject)
-        selectedTopic = roadNodes(subject, availability).firstOrNull { !it.boss && !it.locked && it.topicKey != null }?.topicKey
+        val defaultNode = roadNodes(subject, availability).firstOrNull { !it.boss && !it.locked && it.topicKey != null }
+        selectedTopic = defaultNode?.topicKey
+        selectedNode = defaultNode
     }
 
-    AdventureScreen {
-        Column(
-            Modifier
-                .fillMaxSize()
-                .padding(horizontal = 14.dp)
-                .padding(bottom = 92.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
+    AdventureScreen(includeBottomPadding = false) {
+        FullScreenIslandMap(
+            subject = subject,
+            nodes = roadNodes(subject, availability),
+            selectedTopic = selectedTopic,
+            onSubjectChange = { subject = it },
+            onNodeSelect = { node ->
+                selectedNode = node
+                when {
+                    node.locked -> Unit
+                    node.topicKey != null -> selectedTopic = node.topicKey
+                    node.title.contains("Chest") || node.title.contains("Vault") -> nav.openTab(AdventureTab.REWARDS)
+                }
+            },
+            modifier = Modifier.fillMaxSize(),
+        )
+
+        MapGameHud(
+            summary = summary,
+            subject = subject,
+            onSubjectChange = { subject = it },
+            onQuest = { nav.openTab(AdventureTab.MISSIONS) },
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .padding(horizontal = 12.dp, vertical = 8.dp),
+        )
+
+        AnimatedVisibility(
+            visible = selectedNode?.topicKey != null && selectedNode?.locked != true,
+            enter = slideInVertically(initialOffsetY = { it / 2 }) + fadeIn(),
+            exit = slideOutVertically(targetOffsetY = { it / 2 }) + fadeOut(),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(horizontal = 12.dp)
+                .padding(bottom = 102.dp),
         ) {
-            TopHud(summary)
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                MetricTile("Focus", "7/10", Icons.Rounded.Bolt, AdventureColors.Gold, modifier = Modifier.weight(1f))
-                MetricTile("Streak", "12 days", Icons.Rounded.LocalFireDepartment, Color(0xFFFF8A3D), modifier = Modifier.weight(1f))
-            }
-            SubjectRoadSwitch(
-                subject = subject,
-                onSubjectChange = { subject = it },
-                modifier = Modifier.fillMaxWidth(),
-            )
-            MissionMapCard(
-                subject = subject,
-                nodes = roadNodes(subject, availability),
-                selectedTopic = selectedTopic,
-                onNodeSelect = { node ->
-                    when {
-                        node.locked -> Unit
-                        node.topicKey != null -> selectedTopic = node.topicKey
-                        node.title.contains("Chest") || node.title.contains("Vault") -> nav.openTab(AdventureTab.REWARDS)
-                    }
-                },
+            MapLessonSheet(
+                node = selectedNode,
+                launching = launcher.launching,
+                error = launcher.error,
                 onStart = {
                     val topic = selectedTopic
                     launcher.start(subject, if (topic == null) emptyList() else listOf(topic), 12)
                 },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f),
             )
-            DailyQuestDock(summary, launcher.error, launcher.launching)
         }
-        AdventureBottomNav(AdventureTab.MAP, { nav.openTab(it) }, Modifier.align(Alignment.BottomCenter))
+
+        AdventureBottomNav(AdventureTab.MAP, { nav.openTab(it) }, Modifier.align(Alignment.BottomCenter), immersive = true)
+    }
+}
+
+@Composable
+private fun FullScreenIslandMap(
+    subject: Subject,
+    nodes: List<RoadNode>,
+    selectedTopic: String?,
+    onSubjectChange: (Subject) -> Unit,
+    onNodeSelect: (RoadNode) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    BoxWithConstraints(
+        modifier
+            .clipToBounds()
+            .background(Color(0xFF031827)),
+    ) {
+        Image(
+            painter = painterResource(R.drawable.adventure_map_background),
+            contentDescription = null,
+            modifier = Modifier.matchParentSize(),
+            contentScale = ContentScale.Crop,
+        )
+        Canvas(Modifier.matchParentSize()) {
+            drawRect(
+                Brush.verticalGradient(
+                    listOf(
+                        Color(0xFF021827).copy(alpha = .42f),
+                        Color.Transparent,
+                        Color.Transparent,
+                        Color(0xFF021827).copy(alpha = .50f),
+                    ),
+                ),
+            )
+        }
+
+        MascotPortrait(
+            size = 60.dp,
+            modifier = Modifier.offset(
+                x = maxWidth * .52f - 30.dp,
+                y = maxHeight * .43f - 30.dp,
+            ),
+        )
+
+        nodes.forEach { node ->
+            val chipWidth = if (node.locked) 92.dp else if (node.boss) 86.dp else 92.dp
+            val chipHeight = if (node.locked) 56.dp else 42.dp
+            MissionNodeChip(
+                node = node,
+                selected = node.topicKey != null && node.topicKey == selectedTopic,
+                subject = subject,
+                onClick = { onNodeSelect(node) },
+                modifier = Modifier.offset(
+                    x = maxWidth * node.x - chipWidth / 2,
+                    y = maxHeight * node.y - chipHeight / 2,
+                ),
+            )
+        }
+    }
+}
+
+@Composable
+private fun MapGameHud(
+    summary: GamificationSummary?,
+    subject: Subject,
+    onSubjectChange: (Subject) -> Unit,
+    onQuest: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val level = AdventureLevelCurve.previewSnapshot()
+    Row(
+        modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.Top,
+    ) {
+        Box(
+            Modifier
+                .clip(RoundedCornerShape(18.dp))
+                .background(AdventureColors.PanelDark.copy(alpha = .74f))
+                .border(1.dp, AdventureColors.Gold.copy(alpha = .45f), RoundedCornerShape(18.dp))
+                .padding(horizontal = 9.dp, vertical = 7.dp),
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                MascotPortrait(size = 40.dp, badge = true)
+                Spacer(Modifier.width(8.dp))
+                Column(Modifier.width(132.dp)) {
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                        Text("Level ${level.level}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                        Text(level.display, color = AdventureColors.Text, fontWeight = FontWeight.Bold, fontSize = 9.sp)
+                    }
+                    Spacer(Modifier.height(4.dp))
+                    AdventureProgress(progress = level.progress, height = 4.dp)
+                }
+            }
+        }
+
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            MapRoundAction(Icons.Rounded.TrackChanges, "Daily quest", AdventureColors.Coral, onQuest)
+            MapRoundAction(
+                if (subject == Subject.MATH) Icons.Rounded.Calculate else Icons.Rounded.Science,
+                AdventureDisplayLabels.roadName(subject),
+                adventureSubjectColor(subject),
+                { onSubjectChange(if (subject == Subject.MATH) Subject.PHYSICS else Subject.MATH) },
+            )
+        }
+    }
+}
+
+@Composable
+private fun MapRoundAction(icon: ImageVector, label: String, color: Color, onClick: () -> Unit) {
+    Box(
+        Modifier
+            .size(44.dp)
+            .clip(CircleShape)
+            .background(AdventureColors.PanelDark.copy(alpha = .76f))
+            .border(1.dp, color.copy(alpha = .68f), CircleShape)
+            .adventurePress(onClick = onClick),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(icon, contentDescription = label, tint = color, modifier = Modifier.size(24.dp))
+    }
+}
+
+@Composable
+private fun MapLessonSheet(
+    node: RoadNode?,
+    launching: Boolean,
+    error: String?,
+    onStart: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val activeNode = node ?: return
+    if (activeNode.topicKey == null || activeNode.locked) return
+    Box(
+        modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(18.dp))
+            .background(AdventureColors.PanelDark.copy(alpha = .86f))
+            .border(1.dp, AdventureColors.Gold.copy(alpha = .42f), RoundedCornerShape(18.dp))
+            .padding(12.dp),
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Box(
+                Modifier
+                    .size(44.dp)
+                    .clip(CircleShape)
+                    .background(AdventureColors.Gold.copy(alpha = .22f))
+                    .border(1.dp, AdventureColors.GoldBright.copy(alpha = .55f), CircleShape),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(activeNode.icon, contentDescription = null, tint = AdventureColors.GoldBright, modifier = Modifier.size(24.dp))
+            }
+            Spacer(Modifier.width(10.dp))
+            Column(Modifier.weight(1f)) {
+                Text(activeNode.title, color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp, maxLines = 1)
+                Text(error ?: if (launching) "Opening mission..." else "Tap the island or start this mission.", color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 10.sp, maxLines = 1)
+            }
+            Spacer(Modifier.width(10.dp))
+            MapStartButton(if (launching) "Opening" else "Start", onStart, modifier = Modifier.width(96.dp))
+        }
     }
 }
 
 @Composable
 private fun TopHud(summary: GamificationSummary?) {
     val level = AdventureLevelCurve.previewSnapshot()
-    AdventurePanel(shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth()) {
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .height(76.dp)
+            .clip(RoundedCornerShape(17.dp))
+            .background(Brush.verticalGradient(listOf(Color(0xFF0A3044).copy(alpha = .88f), Color(0xFF061B2D).copy(alpha = .94f))))
+            .border(1.dp, AdventureColors.BorderSoft, RoundedCornerShape(17.dp))
+            .padding(horizontal = 10.dp, vertical = 8.dp),
+    ) {
+        MascotPortrait(
+            size = 52.dp,
+            badge = true,
+            modifier = Modifier.align(Alignment.CenterStart),
+        )
+        Column(
+            Modifier
+                .align(Alignment.TopStart)
+                .offset(x = 64.dp, y = 7.dp),
+            verticalArrangement = Arrangement.Center,
+        ) {
+            Text("Level ${level.level}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp, maxLines = 1)
+            Text("Explorer", color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 10.sp, maxLines = 1)
+        }
+        Text(
+            level.display,
+            color = AdventureColors.Text,
+            fontWeight = FontWeight.Black,
+            fontSize = 10.sp,
+            maxLines = 1,
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .padding(top = 14.dp, end = 6.dp),
+        )
+        AdventureProgress(
+            progress = level.progress,
+            height = 5.dp,
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .padding(start = 64.dp, end = 38.dp, bottom = 7.dp),
+        )
+    }
+}
+
+@Composable
+private fun MapMetricTile(
+    label: String,
+    value: String,
+    icon: ImageVector,
+    color: Color,
+    modifier: Modifier = Modifier,
+) {
+    val shape = RoundedCornerShape(14.dp)
+    Box(
+        modifier
+            .height(58.dp)
+            .clip(shape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF0A3347).copy(alpha = .88f), Color(0xFF071F33).copy(alpha = .94f))))
+            .border(1.dp, color.copy(alpha = .38f), shape)
+            .padding(horizontal = 10.dp, vertical = 8.dp),
+        contentAlignment = Alignment.CenterStart,
+    ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            MascotPortrait(size = 56.dp, badge = true)
-            Spacer(Modifier.width(12.dp))
-            Column(Modifier.weight(1f)) {
-                Text("Level ${level.level}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 18.sp)
-                Text("Explorer", color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 12.sp)
-                Spacer(Modifier.height(8.dp))
-                AdventureProgress(progress = level.progress)
+            Box(
+                Modifier
+                    .size(34.dp)
+                    .clip(RoundedCornerShape(11.dp))
+                    .background(color.copy(alpha = .18f)),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(icon, contentDescription = null, tint = color, modifier = Modifier.size(23.dp))
             }
-            Column(horizontalAlignment = Alignment.End) {
-                Text(level.display, color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp)
-                Text("${summary?.todayXp ?: 0} today", color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 10.sp)
+            Spacer(Modifier.width(9.dp))
+            Column(verticalArrangement = Arrangement.Center) {
+                Text(label, color = AdventureColors.Muted, fontSize = 11.sp, fontWeight = FontWeight.SemiBold, maxLines = 1)
+                Text(value, color = AdventureColors.Text, fontSize = 15.sp, fontWeight = FontWeight.Black, maxLines = 1)
             }
         }
     }
@@ -294,6 +539,7 @@ private fun MissionMapCard(
     subject: Subject,
     nodes: List<RoadNode>,
     selectedTopic: String?,
+    onSubjectChange: (Subject) -> Unit,
     onNodeSelect: (RoadNode) -> Unit,
     onStart: () -> Unit,
     modifier: Modifier = Modifier,
@@ -310,63 +556,17 @@ private fun MissionMapCard(
             )
             .border(1.dp, AdventureColors.BorderSoft, shape)
     ) {
-        val routeNodes = nodes.filterNot { it.locked }.sortedByDescending { it.y }
         val subjectColor = adventureSubjectColor(subject)
+        Image(
+            painter = painterResource(R.drawable.adventure_map_background),
+            contentDescription = null,
+            modifier = Modifier.matchParentSize(),
+            contentScale = ContentScale.Crop,
+        )
         Canvas(Modifier.matchParentSize()) {
-            drawCircle(AdventureColors.Physics.copy(alpha = .18f), size.minDimension * .48f, Offset(size.width * .95f, size.height * .03f))
-            drawCircle(AdventureColors.Gold.copy(alpha = .10f), size.minDimension * .35f, Offset(size.width * .05f, size.height * .36f))
-            repeat(18) { index ->
-                val x = ((index * 37) % 100) / 100f * size.width
-                val y = ((index * 61) % 100) / 100f * size.height
-                drawCircle(
-                    color = if (index % 2 == 0) AdventureColors.GoldBright else AdventureColors.Physics,
-                    radius = if (index % 5 == 0) 2.2.dp.toPx() else 1.35.dp.toPx(),
-                    center = Offset(x, y),
-                    alpha = .42f,
-                )
-            }
-            routeNodes.zipWithNext().forEach { (from, to) ->
-                val start = Offset(size.width * from.x + 42.dp.toPx(), size.height * from.y + 28.dp.toPx())
-                val end = Offset(size.width * to.x + 42.dp.toPx(), size.height * to.y + 28.dp.toPx())
-                drawLine(AdventureColors.AmberDark.copy(alpha = .74f), start, end, strokeWidth = 13.dp.toPx(), cap = StrokeCap.Round)
-                drawLine(AdventureColors.Cream.copy(alpha = .88f), start, end, strokeWidth = 5.dp.toPx(), cap = StrokeCap.Round)
-                repeat(4) { step ->
-                    val t = (step + 1) / 5f
-                    drawCircle(
-                        color = AdventureColors.GoldBright,
-                        radius = 3.3.dp.toPx(),
-                        center = Offset(start.x + (end.x - start.x) * t, start.y + (end.y - start.y) * t),
-                    )
-                }
-            }
-            nodes.forEach { node ->
-                val center = Offset(size.width * node.x + 48.dp.toPx(), size.height * node.y + 44.dp.toPx())
-                val islandColor = when {
-                    node.locked -> Color(0xFF40505A)
-                    node.boss -> AdventureColors.Lavender
-                    node.title.contains("Chest") || node.title.contains("Vault") -> AdventureColors.Gold
-                    else -> subjectColor
-                }
-                drawOval(
-                    color = Color.Black.copy(alpha = .26f),
-                    topLeft = Offset(center.x - 62.dp.toPx(), center.y + 8.dp.toPx()),
-                    size = Size(124.dp.toPx(), 34.dp.toPx()),
-                )
-                drawOval(
-                    brush = Brush.radialGradient(
-                        listOf(islandColor.copy(alpha = .72f), Color(0xFF143D35).copy(alpha = .82f)),
-                        center = center,
-                        radius = 78.dp.toPx(),
-                    ),
-                    topLeft = Offset(center.x - 62.dp.toPx(), center.y - 22.dp.toPx()),
-                    size = Size(124.dp.toPx(), 64.dp.toPx()),
-                )
-                drawOval(
-                    color = AdventureColors.Cream.copy(alpha = .16f),
-                    topLeft = Offset(center.x - 34.dp.toPx(), center.y - 14.dp.toPx()),
-                    size = Size(70.dp.toPx(), 24.dp.toPx()),
-                )
-            }
+            drawCircle(Color(0xFF04212A).copy(alpha = .18f), size.minDimension * .72f, Offset(size.width * .50f, size.height * 1.04f))
+            drawTinyStar(Offset(size.width * .12f, size.height * .18f), AdventureColors.GoldBright.copy(alpha = .62f), 4.dp.toPx())
+            drawTinyStar(Offset(size.width * .86f, size.height * .56f), AdventureColors.GoldBright.copy(alpha = .55f), 4.dp.toPx())
         }
 
         Column(
@@ -376,31 +576,36 @@ private fun MissionMapCard(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text("Gauss Adventure Academy", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 14.sp)
-            Text(AdventureDisplayLabels.roadName(subject), color = subjectColor, fontWeight = FontWeight.Bold, fontSize = 11.sp)
         }
 
-        val currentStage = AdventureDisplayLabels.stageName(subject, selectedTopic)
+        RoadCyclePill(
+            subject = subject,
+            onClick = { onSubjectChange(if (subject == Subject.MATH) Subject.PHYSICS else Subject.MATH) },
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .padding(top = 12.dp, end = 12.dp),
+        )
+
         nodes.forEach { node ->
-            val currentMissionNode = node.topicKey != null && node.topicKey == selectedTopic && !node.boss
-            if (currentMissionNode) return@forEach
-            val chipWidth = if (node.boss) 118.dp else 108.dp
+            val chipWidth = if (node.locked) 92.dp else if (node.boss) 86.dp else 92.dp
+            val chipHeight = if (node.locked) 56.dp else 42.dp
             MissionNodeChip(
                 node = node,
                 selected = node.topicKey != null && node.topicKey == selectedTopic,
                 subject = subject,
                 onClick = { onNodeSelect(node) },
                 modifier = Modifier.offset(
-                    x = (maxWidth - chipWidth) * node.x,
-                    y = (maxHeight - 84.dp) * node.y,
+                    x = maxWidth * node.x - chipWidth / 2,
+                    y = maxHeight * node.y - chipHeight / 2,
                 ),
             )
         }
 
         Column(
             Modifier
-                .align(Alignment.BottomCenter)
-                .padding(bottom = 14.dp)
-                .width(174.dp),
+                .align(Alignment.Center)
+                .offset(y = 48.dp)
+                .width(116.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Box(
@@ -413,16 +618,276 @@ private fun MissionMapCard(
             ) {
                 Text("Current Mission", color = AdventureColors.Text, fontWeight = FontWeight.Bold, fontSize = 10.sp)
             }
-            Text(currentStage, color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 12.sp, textAlign = TextAlign.Center, maxLines = 1)
-            Spacer(Modifier.height(5.dp))
-            AdventureButton("Start Mission", onStart, modifier = Modifier.fillMaxWidth())
+            Spacer(Modifier.height(3.dp))
+            MapStartButton("Start Mission", onStart, modifier = Modifier.fillMaxWidth())
         }
 
         MascotPortrait(
-            size = 70.dp,
+            size = 60.dp,
             modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .offset(y = (-77).dp),
+                .align(Alignment.Center)
+                .offset(y = (-25).dp),
+        )
+    }
+}
+
+private fun DrawScope.drawMapAtmosphere(subjectColor: Color) {
+    drawCircle(Color(0xFF0D4960).copy(alpha = .28f), size.minDimension * .55f, Offset(size.width * .98f, size.height * .02f))
+    drawCircle(Color(0xFF2E6D56).copy(alpha = .22f), size.minDimension * .38f, Offset(size.width * .00f, size.height * .45f))
+    drawCircle(AdventureColors.Gold.copy(alpha = .12f), size.minDimension * .24f, Offset(size.width * .12f, size.height * .92f))
+    drawCircle(Color(0xFFB8DCE5).copy(alpha = .13f), size.minDimension * .18f, Offset(size.width * .92f, size.height * .92f))
+    drawPath(
+        Path().apply {
+            moveTo(size.width * .15f, size.height * .17f)
+            cubicTo(size.width * .32f, size.height * .12f, size.width * .35f, size.height * .23f, size.width * .49f, size.height * .20f)
+            cubicTo(size.width * .64f, size.height * .16f, size.width * .72f, size.height * .23f, size.width * .83f, size.height * .20f)
+        },
+        color = Color.White.copy(alpha = .15f),
+        style = Stroke(width = 2.dp.toPx(), cap = StrokeCap.Round),
+    )
+    repeat(24) { index ->
+        val x = ((index * 41 + 13) % 100) / 100f * size.width
+        val y = ((index * 59 + 19) % 100) / 100f * size.height
+        val accent = if (index % 3 == 0) AdventureColors.GoldBright else subjectColor
+        if (index % 7 == 0) {
+            drawTinyStar(Offset(x, y), accent.copy(alpha = .58f), 3.8.dp.toPx())
+        } else {
+            drawCircle(accent.copy(alpha = .38f), if (index % 5 == 0) 2.2.dp.toPx() else 1.3.dp.toPx(), Offset(x, y))
+        }
+    }
+}
+
+private fun DrawScope.drawFloatingIsland(node: RoadNode, center: Offset, subjectColor: Color) {
+    val wide = when {
+        node.boss -> 118.dp.toPx()
+        node.locked -> 104.dp.toPx()
+        node.title.contains("Chest") || node.title.contains("Vault") -> 116.dp.toPx()
+        else -> 108.dp.toPx()
+    }
+    val high = when {
+        node.boss -> 70.dp.toPx()
+        node.locked -> 56.dp.toPx()
+        else -> 62.dp.toPx()
+    }
+    val islandColor = when {
+        node.locked -> Color(0xFF4A5960)
+        node.boss -> AdventureColors.Lavender
+        node.title.contains("Chest") || node.title.contains("Vault") -> AdventureColors.Gold
+        else -> subjectColor
+    }
+
+    drawOval(
+        color = Color.Black.copy(alpha = .30f),
+        topLeft = Offset(center.x - wide * .56f, center.y + high * .30f),
+        size = Size(wide * 1.12f, high * .44f),
+    )
+    val base = Path().apply {
+        moveTo(center.x - wide * .48f, center.y + high * .05f)
+        quadraticTo(center.x - wide * .14f, center.y + high * .42f, center.x, center.y + high * .68f)
+        quadraticTo(center.x + wide * .14f, center.y + high * .42f, center.x + wide * .48f, center.y + high * .05f)
+        close()
+    }
+    drawPath(base, color = Color(0xFF24423F).copy(alpha = if (node.locked) .78f else .92f))
+    drawPath(
+        base,
+        brush = Brush.verticalGradient(
+            listOf(islandColor.copy(alpha = .42f), Color(0xFF17282B).copy(alpha = .78f)),
+            startY = center.y,
+            endY = center.y + high * .75f,
+        ),
+    )
+    drawOval(
+        brush = Brush.radialGradient(
+            listOf(islandColor.copy(alpha = .78f), Color(0xFF173E35).copy(alpha = .88f), Color(0xFF0B2529).copy(alpha = .95f)),
+            center = Offset(center.x - wide * .14f, center.y - high * .08f),
+            radius = wide * .65f,
+        ),
+        topLeft = Offset(center.x - wide * .50f, center.y - high * .34f),
+        size = Size(wide, high * .78f),
+    )
+    drawOval(
+        color = Color.White.copy(alpha = if (node.locked) .07f else .16f),
+        topLeft = Offset(center.x - wide * .22f, center.y - high * .23f),
+        size = Size(wide * .45f, high * .22f),
+    )
+}
+
+private fun DrawScope.drawAdventureRoute(points: List<Offset>) {
+    points.zipWithNext().forEach { (start, end) ->
+        drawLine(Color(0xFF6B4D15).copy(alpha = .52f), start, end, strokeWidth = 12.dp.toPx(), cap = StrokeCap.Round)
+        drawLine(AdventureColors.Cream.copy(alpha = .82f), start, end, strokeWidth = 4.8.dp.toPx(), cap = StrokeCap.Round)
+        repeat(8) { step ->
+            val t = (step + 1) / 9f
+            val dot = Offset(start.x + (end.x - start.x) * t, start.y + (end.y - start.y) * t)
+            drawCircle(Color(0xFF8A5D10).copy(alpha = .46f), 5.4.dp.toPx(), dot)
+            drawCircle(AdventureColors.GoldBright, 3.7.dp.toPx(), dot)
+            drawCircle(AdventureColors.Cream.copy(alpha = .92f), 1.5.dp.toPx(), Offset(dot.x - 1.dp.toPx(), dot.y - 1.dp.toPx()))
+        }
+    }
+}
+
+private fun DrawScope.drawMapLandmark(node: RoadNode, center: Offset, subjectColor: Color) {
+    when {
+        node.boss -> drawCastleLandmark(center)
+        node.title.contains("Chest") || node.title.contains("Vault") -> drawChestLandmark(center)
+        node.locked -> drawLockLandmark(center)
+        node.title.contains("Workshop") || node.title.contains("Lab") || node.title.contains("Vault") -> drawWorkshopLandmark(center, subjectColor)
+        else -> drawSubjectGemLandmark(center, subjectColor)
+    }
+}
+
+private fun DrawScope.drawCastleLandmark(center: Offset) {
+    val x = center.x
+    val y = center.y - 34.dp.toPx()
+    val body = Size(50.dp.toPx(), 34.dp.toPx())
+    drawRoundRect(
+        color = Color(0xFF5B36A4),
+        topLeft = Offset(x - body.width / 2, y),
+        size = body,
+        cornerRadius = CornerRadius(8.dp.toPx(), 8.dp.toPx()),
+    )
+    listOf(-22.dp.toPx(), 0f, 22.dp.toPx()).forEachIndexed { index, dx ->
+        val towerHeight = if (index == 1) 42.dp.toPx() else 35.dp.toPx()
+        drawRoundRect(
+            color = Color(0xFF7447C7),
+            topLeft = Offset(x + dx - 8.dp.toPx(), y - towerHeight * .35f),
+            size = Size(16.dp.toPx(), towerHeight),
+            cornerRadius = CornerRadius(5.dp.toPx(), 5.dp.toPx()),
+        )
+        drawPath(
+            Path().apply {
+                moveTo(x + dx - 10.dp.toPx(), y - towerHeight * .35f)
+                lineTo(x + dx, y - towerHeight * .62f)
+                lineTo(x + dx + 10.dp.toPx(), y - towerHeight * .35f)
+                close()
+            },
+            color = AdventureColors.Lavender,
+        )
+    }
+    drawRoundRect(
+        color = Color(0xFF2E1F54),
+        topLeft = Offset(x - 7.dp.toPx(), y + 16.dp.toPx()),
+        size = Size(14.dp.toPx(), 18.dp.toPx()),
+        cornerRadius = CornerRadius(6.dp.toPx(), 6.dp.toPx()),
+    )
+}
+
+private fun DrawScope.drawChestLandmark(center: Offset) {
+    val x = center.x
+    val y = center.y - 28.dp.toPx()
+    drawRoundRect(
+        color = Color(0xFF6C3C19),
+        topLeft = Offset(x - 24.dp.toPx(), y),
+        size = Size(48.dp.toPx(), 34.dp.toPx()),
+        cornerRadius = CornerRadius(7.dp.toPx(), 7.dp.toPx()),
+    )
+    drawRoundRect(
+        brush = Brush.verticalGradient(listOf(AdventureColors.GoldBright, AdventureColors.Gold)),
+        topLeft = Offset(x - 24.dp.toPx(), y),
+        size = Size(48.dp.toPx(), 16.dp.toPx()),
+        cornerRadius = CornerRadius(7.dp.toPx(), 7.dp.toPx()),
+    )
+    drawLine(Color(0xFF3D230E), Offset(x - 24.dp.toPx(), y + 16.dp.toPx()), Offset(x + 24.dp.toPx(), y + 16.dp.toPx()), 2.dp.toPx())
+    drawRoundRect(
+        color = AdventureColors.Cream,
+        topLeft = Offset(x - 5.dp.toPx(), y + 12.dp.toPx()),
+        size = Size(10.dp.toPx(), 12.dp.toPx()),
+        cornerRadius = CornerRadius(3.dp.toPx(), 3.dp.toPx()),
+    )
+}
+
+private fun DrawScope.drawWorkshopLandmark(center: Offset, subjectColor: Color) {
+    val x = center.x
+    val y = center.y - 31.dp.toPx()
+    drawRoundRect(
+        color = Color(0xFF244C5A),
+        topLeft = Offset(x - 25.dp.toPx(), y + 10.dp.toPx()),
+        size = Size(50.dp.toPx(), 30.dp.toPx()),
+        cornerRadius = CornerRadius(7.dp.toPx(), 7.dp.toPx()),
+    )
+    drawRoundRect(
+        color = subjectColor.copy(alpha = .78f),
+        topLeft = Offset(x - 19.dp.toPx(), y),
+        size = Size(38.dp.toPx(), 22.dp.toPx()),
+        cornerRadius = CornerRadius(6.dp.toPx(), 6.dp.toPx()),
+    )
+    drawLine(AdventureColors.Cream, Offset(x - 11.dp.toPx(), y + 10.dp.toPx()), Offset(x + 11.dp.toPx(), y + 10.dp.toPx()), 3.dp.toPx(), StrokeCap.Round)
+    drawLine(AdventureColors.Cream, Offset(x, y - 1.dp.toPx()), Offset(x, y + 21.dp.toPx()), 3.dp.toPx(), StrokeCap.Round)
+}
+
+private fun DrawScope.drawSubjectGemLandmark(center: Offset, subjectColor: Color) {
+    val x = center.x
+    val y = center.y - 26.dp.toPx()
+    val gem = Path().apply {
+        moveTo(x, y - 18.dp.toPx())
+        lineTo(x + 22.dp.toPx(), y)
+        lineTo(x, y + 23.dp.toPx())
+        lineTo(x - 22.dp.toPx(), y)
+        close()
+    }
+    drawPath(gem, color = subjectColor.copy(alpha = .78f))
+    drawPath(gem, color = AdventureColors.Cream.copy(alpha = .22f), style = Stroke(width = 2.dp.toPx()))
+    drawLine(AdventureColors.Cream, Offset(x - 10.dp.toPx(), y), Offset(x - 2.dp.toPx(), y + 9.dp.toPx()), 3.dp.toPx(), StrokeCap.Round)
+    drawLine(AdventureColors.Cream, Offset(x - 2.dp.toPx(), y + 9.dp.toPx()), Offset(x + 13.dp.toPx(), y - 10.dp.toPx()), 3.dp.toPx(), StrokeCap.Round)
+}
+
+private fun DrawScope.drawLockLandmark(center: Offset) {
+    val x = center.x
+    val y = center.y - 29.dp.toPx()
+    drawRoundRect(
+        color = Color(0xFF425159).copy(alpha = .88f),
+        topLeft = Offset(x - 25.dp.toPx(), y + 15.dp.toPx()),
+        size = Size(50.dp.toPx(), 32.dp.toPx()),
+        cornerRadius = CornerRadius(10.dp.toPx(), 10.dp.toPx()),
+    )
+    drawRoundRect(
+        color = Color(0xFF8C9CA1).copy(alpha = .72f),
+        topLeft = Offset(x - 15.dp.toPx(), y),
+        size = Size(30.dp.toPx(), 30.dp.toPx()),
+        cornerRadius = CornerRadius(14.dp.toPx(), 14.dp.toPx()),
+        style = Stroke(width = 5.dp.toPx(), cap = StrokeCap.Round),
+    )
+    drawCircle(AdventureColors.Cream.copy(alpha = .88f), 4.dp.toPx(), Offset(x, y + 31.dp.toPx()))
+}
+
+private fun DrawScope.drawTinyStar(center: Offset, color: Color, radius: Float) {
+    drawLine(color, Offset(center.x - radius, center.y), Offset(center.x + radius, center.y), strokeWidth = radius * .45f, cap = StrokeCap.Round)
+    drawLine(color, Offset(center.x, center.y - radius), Offset(center.x, center.y + radius), strokeWidth = radius * .45f, cap = StrokeCap.Round)
+}
+
+@Composable
+private fun MapStartButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    val shape = RoundedCornerShape(13.dp)
+    Box(
+        modifier
+            .height(42.dp)
+            .clip(shape)
+            .background(Brush.verticalGradient(listOf(AdventureColors.GoldBright, AdventureColors.Gold)))
+            .border(1.dp, AdventureColors.Cream.copy(alpha = .65f), shape)
+            .adventurePress(onClick = onClick)
+            .padding(horizontal = 10.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(text, color = AdventureColors.Ink, fontWeight = FontWeight.Black, fontSize = 12.sp, textAlign = TextAlign.Center, maxLines = 1)
+    }
+}
+
+@Composable
+private fun RoadCyclePill(subject: Subject, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    Box(
+        modifier
+            .size(38.dp)
+            .clip(CircleShape)
+            .background(AdventureColors.PanelDark.copy(alpha = .76f))
+            .border(1.dp, adventureSubjectColor(subject).copy(alpha = .62f), CircleShape)
+            .adventurePress(onClick = onClick),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            if (subject == Subject.MATH) Icons.Rounded.Calculate else Icons.Rounded.Science,
+            contentDescription = AdventureDisplayLabels.roadName(subject),
+            tint = adventureSubjectColor(subject),
+            modifier = Modifier.size(21.dp),
         )
     }
 }
@@ -440,37 +905,50 @@ private fun MissionNodeChip(
         node.boss -> AdventureColors.Lavender
         else -> adventureSubjectColor(subject)
     }
-    Column(
+    val selectedScale by animateFloatAsState(if (selected) 1.08f else 1f, label = "missionNodeSelectScale")
+    Box(
         modifier
-            .width(if (node.boss) 118.dp else 106.dp)
-            .clip(RoundedCornerShape(18.dp))
-            .background(Brush.verticalGradient(listOf(color.copy(alpha = .42f), AdventureColors.PanelDark.copy(alpha = .88f))))
-            .border(if (selected) 2.dp else 1.dp, if (selected) AdventureColors.GoldBright else color.copy(alpha = .65f), RoundedCornerShape(18.dp))
+            .width(if (node.locked) 92.dp else if (node.boss) 86.dp else 92.dp)
+            .graphicsLayer {
+                scaleX = selectedScale
+                scaleY = selectedScale
+            }
             .adventurePress(!node.locked, onClick)
-            .padding(8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
+            .padding(2.dp),
     ) {
         Box(
             Modifier
-                .size(42.dp)
-                .clip(CircleShape)
-                .background(color.copy(alpha = .25f))
-                .border(1.dp, color.copy(alpha = .65f), CircleShape),
+                .align(Alignment.Center)
+                .clip(RoundedCornerShape(8.dp))
+                .background(AdventureColors.PanelDark.copy(alpha = if (node.locked) .78f else .88f))
+                .border(1.dp, color.copy(alpha = if (node.locked) .42f else .68f), RoundedCornerShape(8.dp))
+                .padding(horizontal = 7.dp, vertical = 4.dp),
             contentAlignment = Alignment.Center,
         ) {
-            Icon(if (node.locked) Icons.Rounded.Lock else node.icon, contentDescription = null, tint = AdventureColors.Text, modifier = Modifier.size(24.dp))
+            Text(node.title, color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 10.sp, textAlign = TextAlign.Center, maxLines = 1)
         }
-        Spacer(Modifier.height(5.dp))
-        Text(node.title, color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 11.sp, textAlign = TextAlign.Center, maxLines = 2)
-        Text(node.subtitle, color = AdventureColors.Muted, fontSize = 9.sp, textAlign = TextAlign.Center, maxLines = 1)
-        if (selected || (!node.locked && !node.boss && node.topicKey != null)) {
-            Spacer(Modifier.height(5.dp))
+        if (node.locked) {
             Box(
                 Modifier
-                    .size(22.dp)
+                    .align(Alignment.TopCenter)
+                    .offset(y = (-20).dp)
+                    .size(34.dp)
+                    .clip(CircleShape)
+                    .background(AdventureColors.PanelDark.copy(alpha = .80f))
+                    .border(1.dp, AdventureColors.Muted.copy(alpha = .60f), CircleShape),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(Icons.Rounded.Lock, contentDescription = null, tint = AdventureColors.Muted, modifier = Modifier.size(18.dp))
+            }
+        } else if (selected || (!node.boss && node.topicKey != null)) {
+            Box(
+                Modifier
+                    .align(Alignment.TopEnd)
+                    .offset(x = (-5).dp, y = (-14).dp)
+                    .size(24.dp)
                     .clip(CircleShape)
                     .background(if (selected) AdventureColors.Lavender else AdventureColors.Mint)
-                    .border(1.dp, AdventureColors.Text.copy(alpha = .34f), CircleShape),
+                    .border(2.dp, AdventureColors.Text.copy(alpha = .60f), CircleShape),
                 contentAlignment = Alignment.Center,
             ) {
                 Icon(Icons.Rounded.Check, contentDescription = null, tint = AdventureColors.Text, modifier = Modifier.size(15.dp))
@@ -483,24 +961,44 @@ private fun MissionNodeChip(
 private fun DailyQuestDock(summary: GamificationSummary?, error: String?, launching: Boolean) {
     val quest = AdventureAchievementCatalog.quests.first { it.id == "daily_trap_spotter" }
     val progress = if (summary?.quest?.target == quest.target) summary.quest.progress else 0
-    AdventurePanel(shape = RoundedCornerShape(18.dp), modifier = Modifier.fillMaxWidth()) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(Icons.Rounded.TrackChanges, contentDescription = null, tint = AdventureColors.Coral, modifier = Modifier.size(38.dp))
-            Spacer(Modifier.width(12.dp))
+    val shape = RoundedCornerShape(15.dp)
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .height(58.dp)
+            .clip(shape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF0A3147).copy(alpha = .94f), Color(0xFF061D31).copy(alpha = .96f))))
+            .border(1.dp, AdventureColors.BorderSoft, shape)
+            .padding(horizontal = 10.dp, vertical = 7.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Row(Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically) {
+            Icon(Icons.Rounded.TrackChanges, contentDescription = null, tint = AdventureColors.Coral, modifier = Modifier.size(36.dp))
+            Spacer(Modifier.width(10.dp))
             Column(Modifier.weight(1f)) {
-                Text(if (launching) "Opening arena..." else error ?: "Daily Quest", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 13.sp)
-                Text("Beat 2 trap questions", color = AdventureColors.Muted, fontSize = 12.sp)
-                Spacer(Modifier.height(7.dp))
+                Text(if (launching) "Opening arena..." else error ?: "Daily Quest", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp, maxLines = 1)
+                Text("Beat 2 trap questions", color = AdventureColors.Muted, fontSize = 11.sp, maxLines = 1)
+                Spacer(Modifier.height(4.dp))
                 AdventureProgress(
                     progress = progress / quest.target.toFloat(),
                     fill = AdventureColors.Mint,
-                    height = 7.dp,
+                    height = 5.dp,
                 )
             }
-            Spacer(Modifier.width(10.dp))
-            Column(horizontalAlignment = Alignment.End) {
-                Text("$progress/${quest.target}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 12.sp)
-                Text("+${AdventureRewardRules.DAILY_TRAP_REWARD_XP} XP", color = AdventureColors.GoldBright, fontWeight = FontWeight.Black, fontSize = 12.sp)
+            Text("$progress/${quest.target}", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 11.sp)
+            Spacer(Modifier.width(8.dp))
+            Box(
+                Modifier
+                    .size(40.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(AdventureColors.PanelLight.copy(alpha = .72f))
+                    .border(1.dp, AdventureColors.Physics.copy(alpha = .55f), RoundedCornerShape(8.dp)),
+                contentAlignment = Alignment.Center,
+            ) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Icon(Icons.Rounded.Diamond, contentDescription = null, tint = AdventureColors.Physics, modifier = Modifier.size(19.dp))
+                    Text(AdventureRewardRules.DAILY_TRAP_REWARD_XP.toString(), color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 9.sp)
+                }
             }
         }
     }
@@ -510,21 +1008,21 @@ private fun roadNodes(subject: Subject, availability: Map<String, Int>): List<Ro
     val topics = ComprehensiveTaxonomy.topicsFor(subject).filter { availability[it.key] != 0 }
     return if (subject == Subject.MATH) {
         listOf(
-            RoadNode("Treasure Chest", "Coins", null, .07f, .82f, Icons.Rounded.Inventory2),
-            RoadNode("Algebra Grove", labelFor(topics.getOrNull(2)), topics.getOrNull(2)?.key, .44f, .75f, Icons.Rounded.Calculate),
-            RoadNode("Calculus Cliffs", labelFor(topics.getOrNull(8)), topics.getOrNull(8)?.key, .09f, .46f, Icons.Rounded.AutoAwesome),
-            RoadNode("Reward Vault", "Open soon", null, .73f, .31f, Icons.Rounded.Redeem),
-            RoadNode("Boss Arena", "Gold pass", topics.firstOrNull()?.key, .22f, .14f, Icons.Rounded.EmojiEvents, boss = true),
-            RoadNode("Quantum Lab", "Locked", null, .82f, .84f, Icons.Rounded.Lock, locked = true),
+            RoadNode("Treasure Chest", "Coins", null, .18f, .82f, Icons.Rounded.Inventory2),
+            RoadNode("Algebra Grove", labelFor(topics.getOrNull(2)), topics.getOrNull(2)?.key, .50f, .74f, Icons.Rounded.Calculate),
+            RoadNode("Calculus Cliffs", labelFor(topics.getOrNull(8)), topics.getOrNull(8)?.key, .20f, .51f, Icons.Rounded.AutoAwesome),
+            RoadNode("Reward Vault", "Open soon", null, .77f, .31f, Icons.Rounded.Redeem),
+            RoadNode("Boss Arena", "Gold pass", topics.firstOrNull()?.key, .27f, .25f, Icons.Rounded.EmojiEvents, boss = true),
+            RoadNode("Quantum Lab", "Locked", null, .83f, .85f, Icons.Rounded.Lock, locked = true),
         )
     } else {
         listOf(
-            RoadNode("Supply Chest", "Coins", null, .08f, .82f, Icons.Rounded.Inventory2),
-            RoadNode("Motion Pier", labelFor(topics.getOrNull(7)), topics.getOrNull(7)?.key, .45f, .74f, Icons.Rounded.Radar),
-            RoadNode("Force Forge", labelFor(topics.getOrNull(8)), topics.getOrNull(8)?.key, .13f, .47f, Icons.Rounded.Bolt),
-            RoadNode("Circuit Vault", labelFor(topics.getOrNull(5)), topics.getOrNull(5)?.key, .74f, .30f, Icons.Rounded.Science),
-            RoadNode("Boss Arena", "Gold pass", topics.firstOrNull()?.key, .22f, .14f, Icons.Rounded.EmojiEvents, boss = true),
-            RoadNode("Relativity Lab", "Locked", null, .82f, .84f, Icons.Rounded.Lock, locked = true),
+            RoadNode("Supply Chest", "Coins", null, .18f, .82f, Icons.Rounded.Inventory2),
+            RoadNode("Motion Pier", labelFor(topics.getOrNull(7)), topics.getOrNull(7)?.key, .50f, .74f, Icons.Rounded.Radar),
+            RoadNode("Force Forge", labelFor(topics.getOrNull(8)), topics.getOrNull(8)?.key, .20f, .51f, Icons.Rounded.Bolt),
+            RoadNode("Circuit Vault", labelFor(topics.getOrNull(5)), topics.getOrNull(5)?.key, .77f, .31f, Icons.Rounded.Science),
+            RoadNode("Boss Arena", "Gold pass", topics.firstOrNull()?.key, .27f, .25f, Icons.Rounded.EmojiEvents, boss = true),
+            RoadNode("Relativity Lab", "Locked", null, .83f, .85f, Icons.Rounded.Lock, locked = true),
         )
     }
 }
@@ -539,61 +1037,133 @@ fun AdventureMissionsScreen(nav: NavController, examVm: ExamViewModel) {
     val app = remember(context) { GaussApp.from(context) }
     val launcher = rememberMissionLauncher(nav, examVm)
     var subject by remember { mutableStateOf(Subject.MATH) }
-    var topics by remember { mutableStateOf<List<TopicDef>>(emptyList()) }
     var availability by remember { mutableStateOf<Map<String, Int>>(emptyMap()) }
     var summary by remember { mutableStateOf<GamificationSummary?>(null) }
+    var selectedTopic by remember { mutableStateOf<String?>(null) }
+    var selectedNode by remember { mutableStateOf<RoadNode?>(null) }
 
     LaunchedEffect(subject) {
         summary = app.gamification.summary()
         availability = app.questionBank().topicAvailability(subject)
-        topics = ComprehensiveTaxonomy.topicsFor(subject).filter { availability[it.key] != 0 }.take(6)
+        val defaultNode = roadNodes(subject, availability).firstOrNull { !it.boss && !it.locked && it.topicKey != null }
+        selectedTopic = defaultNode?.topicKey
+        selectedNode = defaultNode
     }
 
-    AdventureScreen {
-        Column(
-            Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 14.dp)
-                .padding(bottom = 92.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            ScreenTitle("Challenge Arena", "Choose one clean road. No mixed subjects.")
-            SubjectRoadSwitch(subject, onSubjectChange = { subject = it }, modifier = Modifier.fillMaxWidth())
-            AdventurePanel(modifier = Modifier.fillMaxWidth()) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    MascotPortrait(size = 68.dp)
-                    Spacer(Modifier.width(12.dp))
-                    Column(Modifier.weight(1f)) {
-                        Text("Daily Quest", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 18.sp)
-                        Text("Beat 2 trap questions and keep your focus alive.", color = AdventureColors.Muted, fontSize = 13.sp)
-                        Spacer(Modifier.height(10.dp))
-                        AdventureProgress((summary?.quest?.progress ?: 0) / (summary?.quest?.target ?: 10).toFloat(), fill = AdventureColors.Mint)
-                    }
+    AdventureScreen(includeBottomPadding = false) {
+        FullScreenIslandMap(
+            subject = subject,
+            nodes = roadNodes(subject, availability),
+            selectedTopic = selectedTopic,
+            onSubjectChange = { subject = it },
+            onNodeSelect = { node ->
+                selectedNode = node
+                when {
+                    node.locked -> Unit
+                    node.topicKey != null -> selectedTopic = node.topicKey
+                    node.title.contains("Chest") || node.title.contains("Vault") -> nav.openTab(AdventureTab.REWARDS)
                 }
-            }
-            topics.forEachIndexed { index, topic ->
-                MissionRow(
-                    title = missionName(subject, index),
-                    subtitle = englishTopicLabel(topic),
-                    questions = availability[topic.key] ?: 0,
-                    color = adventureSubjectColor(subject),
-                    onClick = { launcher.start(subject, listOf(topic.key), 12) },
-                )
-            }
-            MissionRow(
-                title = "Boss Arena",
-                subtitle = "A longer streak challenge for ${if (subject == Subject.MATH) "Math" else "Physics"}.",
-                questions = availability.values.sum(),
-                color = AdventureColors.Lavender,
-                boss = true,
-                onClick = { launcher.start(subject, emptyList(), 20) },
+            },
+            modifier = Modifier.fillMaxSize(),
+        )
+
+        MapGameHud(
+            summary = summary,
+            subject = subject,
+            onSubjectChange = { subject = it },
+            onQuest = { launcher.start(subject, emptyList(), 8) },
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .padding(horizontal = 12.dp, vertical = 8.dp),
+        )
+
+        AnimatedVisibility(
+            visible = selectedNode?.topicKey != null && selectedNode?.locked != true,
+            enter = slideInVertically(initialOffsetY = { it / 2 }) + fadeIn(),
+            exit = slideOutVertically(targetOffsetY = { it / 2 }) + fadeOut(),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(horizontal = 12.dp)
+                .padding(bottom = 102.dp),
+        ) {
+            MissionLessonSheet(
+                node = selectedNode,
+                subject = subject,
+                summary = summary,
+                launching = launcher.launching,
+                error = launcher.error,
+                onStart = {
+                    val node = selectedNode
+                    when {
+                        node?.boss == true -> launcher.start(subject, emptyList(), 20)
+                        selectedTopic != null -> launcher.start(subject, listOf(selectedTopic!!), 12)
+                    }
+                },
             )
-            if (launcher.error != null) {
-                Text(launcher.error, color = AdventureColors.Coral, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 4.dp))
+        }
+
+        AdventureBottomNav(AdventureTab.MISSIONS, { nav.openTab(it) }, Modifier.align(Alignment.BottomCenter), immersive = true)
+    }
+}
+
+@Composable
+private fun MissionLessonSheet(
+    node: RoadNode?,
+    subject: Subject,
+    summary: GamificationSummary?,
+    launching: Boolean,
+    error: String?,
+    onStart: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val activeNode = node ?: return
+    if (activeNode.topicKey == null || activeNode.locked) return
+    val quest = AdventureAchievementCatalog.quests.first { it.id == "daily_trap_spotter" }
+    val questProgress = if (summary?.quest?.target == quest.target) summary.quest.progress else 0
+    val questTarget = quest.target
+    Box(
+        modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(18.dp))
+            .background(AdventureColors.PanelDark.copy(alpha = .88f))
+            .border(1.dp, AdventureColors.Gold.copy(alpha = .42f), RoundedCornerShape(18.dp))
+            .padding(12.dp),
+    ) {
+        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(
+                    Modifier
+                        .size(46.dp)
+                        .clip(CircleShape)
+                        .background(adventureSubjectColor(subject).copy(alpha = .24f))
+                        .border(1.dp, AdventureColors.GoldBright.copy(alpha = .52f), CircleShape),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(if (activeNode.boss) Icons.Rounded.EmojiEvents else activeNode.icon, contentDescription = null, tint = AdventureColors.GoldBright, modifier = Modifier.size(24.dp))
+                }
+                Spacer(Modifier.width(10.dp))
+                Column(Modifier.weight(1f)) {
+                    Text(activeNode.title, color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 15.sp, maxLines = 1)
+                    Text(error ?: if (launching) "Opening arena..." else "Stay on one road and clear this island.", color = AdventureColors.Muted, fontWeight = FontWeight.SemiBold, fontSize = 10.sp, maxLines = 1)
+                }
+                Spacer(Modifier.width(10.dp))
+                MapStartButton(if (launching) "Opening" else if (activeNode.boss) "Boss" else "Start", onStart, modifier = Modifier.width(92.dp))
+            }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Rounded.TrackChanges, contentDescription = null, tint = AdventureColors.Coral, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(8.dp))
+                Text("Daily Quest", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 11.sp)
+                Spacer(Modifier.width(8.dp))
+                AdventureProgress(
+                    progress = questProgress / questTarget.coerceAtLeast(1).toFloat(),
+                    fill = AdventureColors.Mint,
+                    height = 5.dp,
+                    modifier = Modifier.weight(1f),
+                )
+                Spacer(Modifier.width(8.dp))
+                Text("$questProgress/$questTarget", color = AdventureColors.Text, fontWeight = FontWeight.Black, fontSize = 10.sp)
             }
         }
-        AdventureBottomNav(AdventureTab.MISSIONS, { nav.openTab(it) }, Modifier.align(Alignment.BottomCenter))
     }
 }
 
@@ -1046,10 +1616,23 @@ private fun roadTitle(subject: Subject): String = if (subject == Subject.MATH) "
 
 @Composable
 fun AdventureRewardScreen(nav: NavController, examVm: ExamViewModel) {
-    val events = remember { AdventureRewardRules.previewRewardEvents() }
-    val reward = remember { AdventureRewardRules.summarize(events) }
-    val missionMeta = remember { events.firstOrNull { it.missionId != null && it.metadata.isNotEmpty() }?.metadata.orEmpty() }
+    val events = remember(examVm.config, examVm.finished, examVm.questions, examVm.attempts.size) {
+        val config = examVm.config
+        if (config != null && examVm.questions.isNotEmpty()) {
+            AdventureRewardEventMapper.fromMission(config, examVm.results())
+        } else {
+            AdventureRewardRules.previewRewardEvents()
+        }
+    }
+    val reward = remember(events) { AdventureRewardRules.summarize(events) }
+    val missionMeta = remember(events) { events.firstOrNull { it.missionId != null && it.metadata.isNotEmpty() }?.metadata.orEmpty() }
     var claimed by remember(reward.id) { mutableStateOf(false) }
+    val claimText = when {
+        examVm.saving -> "Saving Rewards..."
+        claimed -> "Rewards Claimed"
+        examVm.saveError != null && examVm.canRetrySave -> "Retry Save"
+        else -> "Claim Rewards"
+    }
     val backToMap = {
         examVm.reset()
         nav.openTab(AdventureTab.MAP)
@@ -1121,14 +1704,37 @@ fun AdventureRewardScreen(nav: NavController, examVm: ExamViewModel) {
                 gems = reward.gems,
                 gearCount = reward.gearDrops.size,
             )
+            if (examVm.saveError != null) {
+                RewardSaveWarning(examVm.saveError)
+            }
 
             AdventureButton(
-                text = if (claimed) "Rewards Claimed" else "Claim Rewards",
-                onClick = { claimed = true },
-                enabled = !claimed,
+                text = claimText,
+                onClick = {
+                    if (examVm.saveError != null && examVm.canRetrySave) {
+                        examVm.finishAndSave {
+                            claimed = examVm.saveError == null
+                        }
+                    } else {
+                        claimed = true
+                    }
+                },
+                enabled = !claimed && !examVm.saving,
                 modifier = Modifier.fillMaxWidth(),
             )
             AdventureGhostButton("Back to Map", onClick = backToMap, modifier = Modifier.fillMaxWidth())
+        }
+    }
+}
+
+@Composable
+private fun RewardSaveWarning(message: String?) {
+    if (message == null) return
+    AdventurePanel(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp), borderColor = AdventureColors.Coral.copy(alpha = .55f)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(Icons.Rounded.Settings, contentDescription = null, tint = AdventureColors.Coral, modifier = Modifier.size(26.dp))
+            Spacer(Modifier.width(10.dp))
+            Text(message, color = AdventureColors.Text, fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
         }
     }
 }

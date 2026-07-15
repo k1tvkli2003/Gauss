@@ -1,0 +1,26 @@
+{
+    "name": "Gauss — Orbit of Knowledge",
+    "short_name": "Gauss",
+    "id": "./",
+    "start_url": "./#/map",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#070B0C",
+    "theme_color": "#E6A83F",
+    "description": "An offline-first mathematics and physics adventure with 7,353 preserved questions.",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-432.png",
+            "sizes": "432x432",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/Icon-432.png",
+            "sizes": "432x432",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

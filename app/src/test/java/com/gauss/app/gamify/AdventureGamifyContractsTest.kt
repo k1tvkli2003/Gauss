@@ -1,5 +1,13 @@
 package com.gauss.app.gamify
 
+import com.gauss.app.data.AttemptResult
+import com.gauss.app.data.AttemptStatus
+import com.gauss.app.data.ContentBlock
+import com.gauss.app.data.Difficulty
+import com.gauss.app.data.ExamConfig
+import com.gauss.app.data.Question
+import com.gauss.app.data.QuestionProvenance
+import com.gauss.app.data.SourceBank
 import com.gauss.app.data.Subject
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -43,6 +51,55 @@ class AdventureGamifyContractsTest {
         assertEquals(listOf("gear.common.explorer_wand"), summary.gearDrops)
         assertEquals("mission_complete", summary.mascotState)
         assertEquals("claimable", summary.claimState)
+    }
+
+    @Test
+    fun liveMissionRewardEventsUseExamResults() {
+        val config = ExamConfig(
+            subject = Subject.MATH,
+            topicKeys = listOf("quadratic_equations_functions"),
+            sourceBanks = SourceBank.entries.toList(),
+            difficulties = Difficulty.entries.toList(),
+            count = 3,
+        )
+        val results = listOf(
+            AttemptResult(sampleQuestion("q1", hasShortcut = true), AttemptStatus.CORRECT, selectedOption = 0, timeTakenSeconds = 21),
+            AttemptResult(sampleQuestion("q2"), AttemptStatus.CORRECT, selectedOption = 1, timeTakenSeconds = 18),
+            AttemptResult(sampleQuestion("q3"), AttemptStatus.WRONG, selectedOption = 2, timeTakenSeconds = 33),
+        )
+
+        val events = AdventureRewardEventMapper.fromMission(config, results, dayKey = "2026-07-03")
+        val mission = events.first { it.type == AdventureEventType.MissionCompleted }
+        val summary = AdventureRewardRules.summarize(events)
+
+        assertEquals("2", mission.metadata["combo"])
+        assertEquals("66", mission.metadata["accuracy"])
+        assertEquals("1", mission.metadata["focusLeft"])
+        assertEquals(140, summary.xpTotal)
+        assertEquals(120, summary.coins)
+        assertEquals(2, summary.gems)
+        assertEquals(1, summary.focusDelta)
+        assertFalse(events.any { it.type == AdventureEventType.QuestCompleted })
+    }
+
+    @Test
+    fun liveMissionRewardEventsUnlockDailyTrapQuestAtTarget() {
+        val config = ExamConfig(
+            subject = Subject.MATH,
+            topicKeys = listOf("quadratic_equations_functions"),
+            sourceBanks = SourceBank.entries.toList(),
+            difficulties = Difficulty.entries.toList(),
+            count = 2,
+        )
+        val results = listOf(
+            AttemptResult(sampleQuestion("q1", hasShortcut = true), AttemptStatus.CORRECT, selectedOption = 0, timeTakenSeconds = 12),
+            AttemptResult(sampleQuestion("q2", hasShortcut = true), AttemptStatus.CORRECT, selectedOption = 0, timeTakenSeconds = 11),
+        )
+
+        val events = AdventureRewardEventMapper.fromMission(config, results, dayKey = "2026-07-03")
+
+        assertEquals(AdventureRewardRules.DAILY_TRAP_TARGET, events.count { it.type == AdventureEventType.TrapSolved })
+        assertTrue(events.any { it.type == AdventureEventType.QuestCompleted })
     }
 
     @Test
@@ -103,4 +160,27 @@ class AdventureGamifyContractsTest {
         assertTrue(AdventureMascotManifest.states.all { it.contentDescription.isNotBlank() })
         assertNotNull(AdventureMascotManifest.familyDirections.firstOrNull { it.id == "explorer_gauss" })
     }
+
+    private fun sampleQuestion(id: String, hasShortcut: Boolean = false): Question =
+        Question(
+            id = id,
+            subject = Subject.MATH,
+            topicKey = "quadratic_equations_functions",
+            difficulty = Difficulty.HARD,
+            stem = listOf(ContentBlock.Text("Find the shortcut.")),
+            optionBlocks = List(4) { index -> listOf(ContentBlock.Text("${index + 1}")) },
+            correctOptionIndex = 0,
+            solution = listOf(ContentBlock.Text("Use the factor shortcut.")),
+            shortcut = if (hasShortcut) listOf(ContentBlock.Text("Avoid expansion.")) else null,
+            sourceBank = SourceBank.GAUSS,
+            provenance = QuestionProvenance(
+                kind = "fixture",
+                edition = "adventure",
+                questionNumber = null,
+                questionPdf = null,
+                questionPage = null,
+                solutionPage = null,
+                solutionOrigin = "unit-test",
+            ),
+        )
 }

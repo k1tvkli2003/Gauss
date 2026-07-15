@@ -57,7 +57,9 @@
   ],
   "verificationGates": [
     "crop-reference-from-primary-attachment",
+    "generate-reference-oracle-crops-and-measurements",
     "render-native-screen-screenshots",
+    "compare-rendered-screenshots-with-visual-oracle",
     "compare-against-phone-frame",
     "record-mismatches",
     "fix-native-component-not-reference-image"

@@ -1,0 +1,846 @@
+{
+  "version": 1,
+  "generatedBy": "scripts/extract_adventure_reference_oracle.py",
+  "sourceManifest": "docs/adventure-reference-manifest.json",
+  "sourceImage": {
+    "path": "C:\\Users\\K1\\.codex\\attachments\\882a022d-1566-40e7-9b51-cd79fed7d542\\image-1.png",
+    "sha256": "AB6A8E8DF435554FEE27F4A606D29583279666136A00425B44CF89424A872D2C",
+    "widthPx": 1626,
+    "heightPx": 908
+  },
+  "notes": [
+    "Reference crops are documentation/test oracles only, not production Android resources.",
+    "Region boxes are approximate acceptance anchors for hierarchy, color, and layout matching.",
+    "Use rendered screenshots for final visual parity; this oracle only defines the target evidence."
+  ],
+  "frames": [
+    {
+      "id": "map",
+      "title": "Map",
+      "canonicalScreen": "AdventureMapScreen",
+      "route": "map",
+      "sourceFramePx": {
+        "x": 24,
+        "y": 64,
+        "width": 376,
+        "height": 821
+      },
+      "cropPath": "docs/adventure-reference-crops/adventure-reference-map.png",
+      "cropSha256": "C7B20012565825EDA171EE53F637240842BA5216F211525E6BE701FAA27D40BE",
+      "meanColor": "#3F5055",
+      "palette": [
+        "#03192E",
+        "#274E5D",
+        "#2A3140",
+        "#0A253B",
+        "#727F66",
+        "#AABD9B",
+        "#66575B",
+        "#052642"
+      ],
+      "regions": [
+        {
+          "id": "status_bar",
+          "role": "safe-area/time/system",
+          "normalizedFrame": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1.0,
+            "height": 0.055
+          },
+          "sourceFramePx": {
+            "x": 24,
+            "y": 64,
+            "width": 376,
+            "height": 45
+          },
+          "meanColor": "#0B1F33",
+          "palette": [
+            "#01172E",
+            "#01152C",
+            "#041A2E",
+            "#2B3D4C",
+            "#011225"
+          ]
+        },
+        {
+          "id": "level_hud",
+          "role": "level/xp/focus header",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.055,
+            "width": 0.94,
+            "height": 0.085
+          },
+          "sourceFramePx": {
+            "x": 35,
+            "y": 109,
+            "width": 353,
+            "height": 70
+          },
+          "meanColor": "#243336",
+          "palette": [
+            "#071F30",
+            "#061C2B",
+            "#041622",
+            "#B0A167",
+            "#28383C"
+          ]
+        },
+        {
+          "id": "metrics_row",
+          "role": "focus and streak metrics",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.145,
+            "width": 0.94,
+            "height": 0.07
+          },
+          "sourceFramePx": {
+            "x": 35,
+            "y": 183,
+            "width": 353,
+            "height": 57
+          },
+          "meanColor": "#122A3E",
+          "palette": [
+            "#062540",
+            "#072136",
+            "#031930",
+            "#34454E",
+            "#03213B"
+          ]
+        },
+        {
+          "id": "map_stage",
+          "role": "floating-island progression map",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.22,
+            "width": 0.94,
+            "height": 0.62
+          },
+          "sourceFramePx": {
+            "x": 35,
+            "y": 245,
+            "width": 353,
+            "height": 509
+          },
+          "meanColor": "#556462",
+          "palette": [
+            "#0F3047",
+            "#443F4D",
+            "#606C69",
+            "#8C9668",
+            "#B6CCAA"
+          ]
+        },
+        {
+          "id": "primary_cta",
+          "role": "current mission start button",
+          "normalizedFrame": {
+            "x": 0.38,
+            "y": 0.56,
+            "width": 0.31,
+            "height": 0.07
+          },
+          "sourceFramePx": {
+            "x": 167,
+            "y": 524,
+            "width": 117,
+            "height": 57
+          },
+          "meanColor": "#9E7D32",
+          "palette": [
+            "#F4B233",
+            "#262F2F",
+            "#746426",
+            "#E7A632",
+            "#F3BD4A"
+          ]
+        },
+        {
+          "id": "daily_quest",
+          "role": "daily quest dock",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.855,
+            "width": 0.94,
+            "height": 0.07
+          },
+          "sourceFramePx": {
+            "x": 35,
+            "y": 766,
+            "width": 353,
+            "height": 57
+          },
+          "meanColor": "#132E44",
+          "palette": [
+            "#082A43",
+            "#0A2237",
+            "#031C31",
+            "#14334B",
+            "#516475"
+          ]
+        },
+        {
+          "id": "bottom_nav",
+          "role": "four-tab bottom navigation",
+          "normalizedFrame": {
+            "x": 0.0,
+            "y": 0.925,
+            "width": 1.0,
+            "height": 0.075
+          },
+          "sourceFramePx": {
+            "x": 24,
+            "y": 823,
+            "width": 376,
+            "height": 62
+          },
+          "meanColor": "#293B43",
+          "palette": [
+            "#0A2033",
+            "#314750",
+            "#0E293A",
+            "#A89A76",
+            "#061F31"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arena",
+      "title": "Arena",
+      "canonicalScreen": "AdventureArenaScreen",
+      "route": "arena",
+      "sourceFramePx": {
+        "x": 424,
+        "y": 64,
+        "width": 376,
+        "height": 821
+      },
+      "cropPath": "docs/adventure-reference-crops/adventure-reference-arena.png",
+      "cropSha256": "8E43D76F5BDF0A1E20D01EED956A20EEBB173BFA3BF27B8F7ABD4A9BE42EB7E5",
+      "meanColor": "#77837C",
+      "palette": [
+        "#F1EADF",
+        "#013440",
+        "#012936",
+        "#0E3842",
+        "#DEB98C",
+        "#6E9B78",
+        "#EDE7DC",
+        "#6F555C"
+      ],
+      "regions": [
+        {
+          "id": "status_bar",
+          "role": "safe-area/time/system",
+          "normalizedFrame": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1.0,
+            "height": 0.055
+          },
+          "sourceFramePx": {
+            "x": 424,
+            "y": 64,
+            "width": 376,
+            "height": 45
+          },
+          "meanColor": "#093240",
+          "palette": [
+            "#012D3B",
+            "#012C3B",
+            "#012A39",
+            "#032733",
+            "#2A4E59"
+          ]
+        },
+        {
+          "id": "title_header",
+          "role": "back/title/settings",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.055,
+            "width": 0.94,
+            "height": 0.07
+          },
+          "sourceFramePx": {
+            "x": 435,
+            "y": 109,
+            "width": 353,
+            "height": 57
+          },
+          "meanColor": "#123641",
+          "palette": [
+            "#022E3C",
+            "#032029",
+            "#022A37",
+            "#0A333F",
+            "#6C7D82"
+          ]
+        },
+        {
+          "id": "progress_focus",
+          "role": "question progress/focus/timer",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.125,
+            "width": 0.94,
+            "height": 0.065
+          },
+          "sourceFramePx": {
+            "x": 435,
+            "y": 167,
+            "width": 353,
+            "height": 53
+          },
+          "meanColor": "#284456",
+          "palette": [
+            "#8789AD",
+            "#08323E",
+            "#012933",
+            "#03222C",
+            "#052933"
+          ]
+        },
+        {
+          "id": "combo_coach",
+          "role": "combo ribbon and mascot coach",
+          "normalizedFrame": {
+            "x": 0.06,
+            "y": 0.19,
+            "width": 0.88,
+            "height": 0.12
+          },
+          "sourceFramePx": {
+            "x": 447,
+            "y": 220,
+            "width": 331,
+            "height": 99
+          },
+          "meanColor": "#788789",
+          "palette": [
+            "#EFE8DC",
+            "#013340",
+            "#03333F",
+            "#C4BDB1",
+            "#474D66"
+          ]
+        },
+        {
+          "id": "question_card",
+          "role": "RTL question content card",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.285,
+            "width": 0.94,
+            "height": 0.215
+          },
+          "sourceFramePx": {
+            "x": 435,
+            "y": 298,
+            "width": 353,
+            "height": 177
+          },
+          "meanColor": "#E8DFD3",
+          "palette": [
+            "#F1E8DC",
+            "#F0EADE",
+            "#F1E9DD",
+            "#C8B6AB",
+            "#F4EDE2"
+          ]
+        },
+        {
+          "id": "trap_hint",
+          "role": "trap hint/info rail",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.52,
+            "width": 0.94,
+            "height": 0.055
+          },
+          "sourceFramePx": {
+            "x": 435,
+            "y": 491,
+            "width": 353,
+            "height": 45
+          },
+          "meanColor": "#134049",
+          "palette": [
+            "#053A45",
+            "#37565A",
+            "#023541",
+            "#07343F",
+            "#01343F"
+          ]
+        },
+        {
+          "id": "answer_grid",
+          "role": "2x2 answer options",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.595,
+            "width": 0.94,
+            "height": 0.255
+          },
+          "sourceFramePx": {
+            "x": 435,
+            "y": 552,
+            "width": 353,
+            "height": 209
+          },
+          "meanColor": "#ACA694",
+          "palette": [
+            "#898C6C",
+            "#EFEBE0",
+            "#F0E8DF",
+            "#78474C",
+            "#A1CB9D"
+          ]
+        },
+        {
+          "id": "action_row",
+          "role": "scratchpad and check answer",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.875,
+            "width": 0.94,
+            "height": 0.075
+          },
+          "sourceFramePx": {
+            "x": 435,
+            "y": 782,
+            "width": 353,
+            "height": 62
+          },
+          "meanColor": "#8C7938",
+          "palette": [
+            "#F8BA28",
+            "#2C4653",
+            "#133541",
+            "#DDA42E",
+            "#585641"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reward",
+      "title": "Reward",
+      "canonicalScreen": "AdventureRewardScreen",
+      "route": "reward",
+      "sourceFramePx": {
+        "x": 825,
+        "y": 64,
+        "width": 376,
+        "height": 821
+      },
+      "cropPath": "docs/adventure-reference-crops/adventure-reference-reward.png",
+      "cropSha256": "E7BC6942301AA79D3A46A8A28171B0E14E7B28AEB842C8B90C3F470394F715D7",
+      "meanColor": "#394236",
+      "palette": [
+        "#012935",
+        "#10333A",
+        "#706642",
+        "#0B2129",
+        "#CBA54D",
+        "#463F2F",
+        "#01202A",
+        "#1E252A"
+      ],
+      "regions": [
+        {
+          "id": "status_bar",
+          "role": "safe-area/time/system",
+          "normalizedFrame": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1.0,
+            "height": 0.055
+          },
+          "sourceFramePx": {
+            "x": 825,
+            "y": 64,
+            "width": 376,
+            "height": 45
+          },
+          "meanColor": "#0C3243",
+          "palette": [
+            "#012B40",
+            "#01293E",
+            "#022C3E",
+            "#02253C",
+            "#3C5659"
+          ]
+        },
+        {
+          "id": "vault_hero",
+          "role": "mission complete mascot/vault hero",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.06,
+            "width": 0.94,
+            "height": 0.325
+          },
+          "sourceFramePx": {
+            "x": 836,
+            "y": 113,
+            "width": 353,
+            "height": 267
+          },
+          "meanColor": "#59533A",
+          "palette": [
+            "#052732",
+            "#675637",
+            "#3A2F20",
+            "#99804D",
+            "#DABC6F"
+          ]
+        },
+        {
+          "id": "xp_panel",
+          "role": "XP earned and stat trio",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.395,
+            "width": 0.94,
+            "height": 0.175
+          },
+          "sourceFramePx": {
+            "x": 836,
+            "y": 388,
+            "width": 353,
+            "height": 144
+          },
+          "meanColor": "#1E2E34",
+          "palette": [
+            "#192732",
+            "#091D29",
+            "#141F2E",
+            "#172F30",
+            "#5A6652"
+          ]
+        },
+        {
+          "id": "daily_quest",
+          "role": "completed daily quest row",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.585,
+            "width": 0.94,
+            "height": 0.08
+          },
+          "sourceFramePx": {
+            "x": 836,
+            "y": 544,
+            "width": 353,
+            "height": 66
+          },
+          "meanColor": "#1D433E",
+          "palette": [
+            "#022E34",
+            "#7AA075",
+            "#07292E",
+            "#002B30",
+            "#21403A"
+          ]
+        },
+        {
+          "id": "found_panel",
+          "role": "coins gems gear rewards",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.675,
+            "width": 0.94,
+            "height": 0.155
+          },
+          "sourceFramePx": {
+            "x": 836,
+            "y": 618,
+            "width": 353,
+            "height": 127
+          },
+          "meanColor": "#1E3632",
+          "palette": [
+            "#02272E",
+            "#01262D",
+            "#4E5540",
+            "#092225",
+            "#00232A"
+          ]
+        },
+        {
+          "id": "claim_cta",
+          "role": "claim rewards primary action",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.845,
+            "width": 0.94,
+            "height": 0.06
+          },
+          "sourceFramePx": {
+            "x": 836,
+            "y": 758,
+            "width": 353,
+            "height": 49
+          },
+          "meanColor": "#D79724",
+          "palette": [
+            "#F3A61D",
+            "#F8AE24",
+            "#F6AB21",
+            "#734911",
+            "#F2BD51"
+          ]
+        },
+        {
+          "id": "back_cta",
+          "role": "back to map secondary action",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.92,
+            "width": 0.94,
+            "height": 0.06
+          },
+          "sourceFramePx": {
+            "x": 836,
+            "y": 819,
+            "width": 353,
+            "height": 49
+          },
+          "meanColor": "#1F353D",
+          "palette": [
+            "#1B343E",
+            "#1C313C",
+            "#1B333D",
+            "#0C1B1F",
+            "#334950"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "profile",
+      "title": "Profile",
+      "canonicalScreen": "AdventureProfileScreen",
+      "route": "profile",
+      "sourceFramePx": {
+        "x": 1225,
+        "y": 64,
+        "width": 376,
+        "height": 821
+      },
+      "cropPath": "docs/adventure-reference-crops/adventure-reference-profile.png",
+      "cropSha256": "89CF50D9D475B38874ED16AA2D4B41C2B48DF941333A0A63FBE4DEB2AF95850C",
+      "meanColor": "#1E333B",
+      "palette": [
+        "#092730",
+        "#051F28",
+        "#3A474D",
+        "#08222B",
+        "#6D757C",
+        "#1C2E35",
+        "#0B222C",
+        "#07212A"
+      ],
+      "regions": [
+        {
+          "id": "status_bar",
+          "role": "safe-area/time/system",
+          "normalizedFrame": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1.0,
+            "height": 0.055
+          },
+          "sourceFramePx": {
+            "x": 1225,
+            "y": 64,
+            "width": 376,
+            "height": 45
+          },
+          "meanColor": "#0F252D",
+          "palette": [
+            "#061D25",
+            "#081D26",
+            "#051D26",
+            "#20353C",
+            "#051A23"
+          ]
+        },
+        {
+          "id": "title_header",
+          "role": "profile title/settings",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.055,
+            "width": 0.94,
+            "height": 0.055
+          },
+          "sourceFramePx": {
+            "x": 1236,
+            "y": 109,
+            "width": 353,
+            "height": 45
+          },
+          "meanColor": "#152B33",
+          "palette": [
+            "#061E26",
+            "#0A242F",
+            "#0B232F",
+            "#061B23",
+            "#3E4F53"
+          ]
+        },
+        {
+          "id": "profile_header",
+          "role": "mascot/level/league header",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.105,
+            "width": 0.94,
+            "height": 0.13
+          },
+          "sourceFramePx": {
+            "x": 1236,
+            "y": 150,
+            "width": 353,
+            "height": 107
+          },
+          "meanColor": "#253A3D",
+          "palette": [
+            "#09242F",
+            "#102931",
+            "#707C6E",
+            "#041C25",
+            "#0B212A"
+          ]
+        },
+        {
+          "id": "tabs",
+          "role": "mastery/stats/badges/league tabs",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.245,
+            "width": 0.94,
+            "height": 0.045
+          },
+          "sourceFramePx": {
+            "x": 1236,
+            "y": 265,
+            "width": 353,
+            "height": 37
+          },
+          "meanColor": "#0F2A33",
+          "palette": [
+            "#09242F",
+            "#0F2730",
+            "#02181F",
+            "#0A222D",
+            "#2D535A"
+          ]
+        },
+        {
+          "id": "brain_map",
+          "role": "brain mastery panel",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.3,
+            "width": 0.94,
+            "height": 0.21
+          },
+          "sourceFramePx": {
+            "x": 1236,
+            "y": 310,
+            "width": 353,
+            "height": 172
+          },
+          "meanColor": "#273C4E",
+          "palette": [
+            "#08232D",
+            "#6C7A9E",
+            "#0B222D",
+            "#1F3142",
+            "#051F29"
+          ]
+        },
+        {
+          "id": "weak_revenge",
+          "role": "weak topics and revenge queue",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.52,
+            "width": 0.94,
+            "height": 0.17
+          },
+          "sourceFramePx": {
+            "x": 1236,
+            "y": 491,
+            "width": 353,
+            "height": 140
+          },
+          "meanColor": "#1C2E34",
+          "palette": [
+            "#0B272F",
+            "#08242D",
+            "#4F4B4C",
+            "#041E25",
+            "#0D232C"
+          ]
+        },
+        {
+          "id": "badges_shop",
+          "role": "badge wall and cosmetics shop",
+          "normalizedFrame": {
+            "x": 0.03,
+            "y": 0.7,
+            "width": 0.94,
+            "height": 0.17
+          },
+          "sourceFramePx": {
+            "x": 1236,
+            "y": 639,
+            "width": 353,
+            "height": 140
+          },
+          "meanColor": "#29383A",
+          "palette": [
+            "#07232C",
+            "#767065",
+            "#1B2C32",
+            "#041F28",
+            "#0E2229"
+          ]
+        },
+        {
+          "id": "offline_nav",
+          "role": "offline panel and bottom navigation",
+          "normalizedFrame": {
+            "x": 0.0,
+            "y": 0.875,
+            "width": 1.0,
+            "height": 0.125
+          },
+          "sourceFramePx": {
+            "x": 1225,
+            "y": 782,
+            "width": 376,
+            "height": 103
+          },
+          "meanColor": "#173439",
+          "palette": [
+            "#06222B",
+            "#0A262E",
+            "#3E5F5C",
+            "#041F27",
+            "#09212A"
+          ]
+        }
+      ]
+    }
+  ]
+}

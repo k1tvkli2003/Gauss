@@ -12,12 +12,12 @@
 - تصویر temp قبلی مشابه اما غیرهمسان است: `C:\Users\K1\AppData\Local\Temp\codex-clipboard-d033c29e-7b3d-4f44-b849-6c4ffd591bcf.png`, hash `AF47B6A1E1808C885A8FBFBEBB4FE35C6026269F0B9682E388BDE83B2412E2AE`, ابعاد `1693 x 929`
 - از این لحظه هر crop، manifest، visual diff و screenshot gate باید attachment اصلی goal را source of truth بداند.
 - صفحات هدف داخل تصویر: `Map`, `Challenge Arena`, `Reward Vault`, `My Profile`
-- وضعیت فعلی پیاده سازی: یک نسخه موقت با full-screen reference assets و hitbox روی `AdventureScreens.kt`
-- وضعیت فعلی assetهای مرجع تمام صفحه:
-  - `preview_map_full.webp`: 94,130 bytes
-  - `preview_arena_full.webp`: 44,716 bytes
-  - `preview_reward_full.webp`: 73,978 bytes
-  - `preview_profile_full.webp`: 70,926 bytes
+- وضعیت فعلی پیاده سازی در 2026-07-03: هر چهار صفحه production در `AdventureScreens.kt` بومی Compose هستند و helperهای reference/hitbox حذف شده اند.
+- وضعیت فعلی assetهای مرجع تمام صفحه: از `app/src/main/res/drawable-nodpi` حذف شده اند تا production UI از تصویر preview بسته بندی شده تغذیه نشود.
+- وضعیت فعلی reference oracle: `scripts/extract_adventure_reference_oracle.py` چهار crop canonical و `docs/adventure-reference-measurements.json` را از hash پذیرفته شده تولید و check می کند.
+- وضعیت فعلی visual comparison: `scripts/compare_adventure_visual_oracle.py` برای screenshotهای آینده MAE/RMSE/p95 channel error می دهد و self-test دارد.
+- وضعیت فعلی screenshot evidence: `Codex_API35` مسیر قابل اجرا برای install/start/screencap است و اولین Map render در `docs/adventure-rendered-screenshots/` ثبت شده است.
+- وضعیت فعلی gate خودکار: `scripts/verify_adventure_native_contracts.ps1` حذف scaffold، English adventure chrome، hash reference، چهار phone frame، reference oracle، visual comparison self-test، و drawable inventory را کنترل می کند.
 
 ## خط قرمزهای محصول
 
@@ -27,7 +27,7 @@
 - داده آموزشی می تواند زبان خودش را داشته باشد، ولی app strings نباید Persian باشند.
 - مسیر ریاضی و فیزیک نباید در یک road قاطی شود. `Math Road` و `Physics Road` باید taxonomy، map، mission، reward، boss و review queue جدا داشته باشند.
 - استفاده از reusable gamify repo باید به شکل port مفهومی به Kotlin/Compose و contractهای خود Gauss باشد، نه کپی بی کنترل.
-- static reference image فقط scaffold موقت و visual oracle است. خروجی نهایی باید component-native باشد.
+- static reference image فقط visual oracle است. خروجی production باید component-native بماند و gateها جلوی برگشت scaffold را بگیرند.
 - «سنگین بودن» یعنی معماری، مدل داده، component system، test، screenshot gate، و performance budget. پر کردن پروژه با کد بی مصرف هدف نیست.
 
 ## مهارت های اعمال شده
@@ -62,8 +62,8 @@
 | # | مرحله | خروجی قابل تحویل | Gate پذیرش |
 |---:|---|---|---|
 | 1 | ثبت نسخه مرجع و hash در documentation و test metadata | `docs/adventure-native-rebuild-50-step-plan.md` و یک `reference-manifest.json` | hash و ابعاد با فایل ورودی match باشد |
-| 2 | استخراج دقیق چهار viewport از تصویر مرجع | چهار crop canonical برای map/arena/reward/profile | هر crop با محدوده موبایل مرجع align باشد |
-| 3 | ساخت measurement grid برای هر screen | `tmp/adventure-measurements/*.json` شامل top/left/width/height | همه CTAها، nav، cards، heroها و safe areas اندازه داشته باشند |
+| 2 | استخراج دقیق چهار viewport از تصویر مرجع | چهار crop canonical برای map/arena/reward/profile در `docs/adventure-reference-crops/` | هر crop با محدوده موبایل مرجع align باشد و oracle check پاس شود |
+| 3 | ساخت measurement grid برای هر screen | `docs/adventure-reference-measurements.json` شامل frameها، region anchorها، mean color و palette | CTAها، nav، cards، heroها و safe areas anchor داشته باشند |
 | 4 | ساخت color sampling sheet | palette sampled با role پیشنهادی | هر رنگ به semantic token وصل شده باشد، نه raw color |
 | 5 | ساخت typography corpus | corpus English UI strings و sample question data | app strings انگلیسی و long labels تست شده باشند |
 | 6 | تعریف visual mismatch ledger | `docs/adventure-visual-mismatch-ledger.md` | هر اختلاف preview با screenshot واقعی ثبت و بسته شود |
@@ -123,11 +123,11 @@
 | 60 | ساخت mastery dashboard | brain/subject mastery cards، weak topics، revenge queue | topic labels English باشد |
 | 61 | ساخت badge wall و shop panels | badges, `View all`, cosmetics shop | dead button نماند |
 | 62 | ساخت offline panel | offline status و local save claim | با connectivity state واقعی یا stub معتبر وصل باشد |
-| 63 | migration از reference-hitbox screens | حذف تدریجی `ReferencePreviewScreen` از production path | fallback فقط debug یا visual oracle باشد |
+| 63 | migration از reference-hitbox screens | `ReferencePreviewScreen` از production path حذف شد | برگشت scaffold با verifier fail شود |
 | 64 | unit tests برای gamify domain | level, XP, reward, quest, streak, queue | duplicate claim، wrong answer، daily reset تست شوند |
 | 65 | Compose UI tests برای controls | map start, arena answer, reward claim, profile review | هر control واقعا handler داشته باشد |
 | 66 | string audit و grep gate | scan hardcoded app strings و Persian UI chrome | app strings غیر data انگلیسی باشند |
-| 67 | visual screenshot matrix | map/arena/reward/profile در phone sizes و text scale | screenshotها با reference ledger compare شوند |
+| 67 | visual screenshot matrix | map/arena/reward/profile در phone sizes و text scale | screenshotها با `compare_adventure_visual_oracle.py` و mismatch ledger compare شوند |
 | 68 | emulator stabilization | نصب stable API 35/36 یا repair SDK، ساخت AVD قابل اعتماد | `sys.boot_completed=1` و user unlocked و install/start/screencap کار کند |
 | 69 | performance budget pass | asset size، startup، frame time، memory، decode cost | debug claim کافی نیست، trace یا اندازه گیری ثبت شود |
 | 70 | critics freeze audit | audit نهایی بدون edit: UX، function، strings، visual، performance، accessibility | release posture و blockers روشن باشد |
@@ -193,14 +193,16 @@
 
 ## ریسک های شناخته شده فعلی
 
-- AVD فعلی API 37 ناپایدار است: user state در `BOOTING` گیر می کند و `install/start/screencap` قابل اعتماد نیست.
-- فعلا screenهای اضافه شده بیشتر visual scaffold هستند، نه native final implementation.
-- بخشی از assetها از preview crop آمده اند و باید به assetهای مستقل production تبدیل شوند.
+- AVDهای API 37 ناپایدارند: user state در `BOOTING` گیر می کند و `install/start/screencap` قابل اعتماد نیست. `Codex_API35` فعلا مسیر سالم screenshot است.
+- آخرین مقایسه عددی Map روی API35 هنوز mismatch بزرگ دارد: MAE `48.250`، RMSE `72.689`، p95 `211`.
+- چهار صفحه adventure دیگر full-screen reference scaffold نیستند، اما screenshot parity هنوز به emulator/preview پایدار و visual diff نیاز دارد.
+- mascot فعلا با `gauss_mentor.webp` نمایش داده می شود و برای رسیدن به preview باید batch asset مستقل و user-approved از mascot studio تولید و جایگزین شود.
+- durable reward claim/offline replay هنوز به adapter کامل event ledger نیاز دارد، هرچند Reward Vault اکنون از نتایج live mission event می سازد.
 - `questions.json` بزرگ است و data validation باید قبل از اتصال کامل gamify انجام شود.
 
 ## قدم بعدی پیشنهادی
 
-اول Slice 1 و 2 را اجرا کنیم: manifest و measurement oracle، taxonomy جدا، gamify contracts، و validation. بعد Map و Arena را از reference image به component-native تبدیل کنیم، چون core loop بدون این دو صفحه واقعی نمی شود.
+قدم بعدی، بستن سه gate باقی مانده است: emulator/screenshot پایدار برای visual parity، تولید و تایید assetهای mascot/vault/badge مستقل، و durable reward claim/offline replay روی event ledger.
 
 ## Artifactهای دقیق تر
 

@@ -1,0 +1,165 @@
+{
+  "screen": "map",
+  "reference": "docs/adventure-reference-crops/adventure-reference-map.png",
+  "rendered": "docs\\adventure-rendered-screenshots\\gauss-map-api35-2026-07-05-pass11-fullscreen-map.png",
+  "referenceSize": {
+    "width": 376,
+    "height": 821
+  },
+  "renderedInputSize": {
+    "width": 1080,
+    "height": 2400
+  },
+  "meanAbsoluteChannelError": 52.077,
+  "rootMeanSquareChannelError": 74.869,
+  "p95ChannelError": 209,
+  "regions": [
+    {
+      "id": "status_bar",
+      "role": "safe-area/time/system",
+      "boxPx": {
+        "x": 0,
+        "y": 0,
+        "width": 376,
+        "height": 45
+      },
+      "referenceSize": {
+        "width": 376,
+        "height": 45
+      },
+      "renderedInputSize": {
+        "width": 376,
+        "height": 45
+      },
+      "meanAbsoluteChannelError": 25.107,
+      "rootMeanSquareChannelError": 46.19,
+      "p95ChannelError": 91
+    },
+    {
+      "id": "level_hud",
+      "role": "level/xp/focus header",
+      "boxPx": {
+        "x": 11,
+        "y": 45,
+        "width": 354,
+        "height": 70
+      },
+      "referenceSize": {
+        "width": 354,
+        "height": 70
+      },
+      "renderedInputSize": {
+        "width": 354,
+        "height": 70
+      },
+      "meanAbsoluteChannelError": 36.236,
+      "rootMeanSquareChannelError": 68.338,
+      "p95ChannelError": 236
+    },
+    {
+      "id": "metrics_row",
+      "role": "focus and streak metrics",
+      "boxPx": {
+        "x": 11,
+        "y": 119,
+        "width": 354,
+        "height": 58
+      },
+      "referenceSize": {
+        "width": 354,
+        "height": 58
+      },
+      "renderedInputSize": {
+        "width": 354,
+        "height": 58
+      },
+      "meanAbsoluteChannelError": 41.325,
+      "rootMeanSquareChannelError": 64.224,
+      "p95ChannelError": 190
+    },
+    {
+      "id": "map_stage",
+      "role": "floating-island progression map",
+      "boxPx": {
+        "x": 11,
+        "y": 181,
+        "width": 354,
+        "height": 509
+      },
+      "referenceSize": {
+        "width": 354,
+        "height": 509
+      },
+      "renderedInputSize": {
+        "width": 354,
+        "height": 509
+      },
+      "meanAbsoluteChannelError": 63.023,
+      "rootMeanSquareChannelError": 81.643,
+      "p95ChannelError": 205
+    },
+    {
+      "id": "primary_cta",
+      "role": "current mission start button",
+      "boxPx": {
+        "x": 143,
+        "y": 460,
+        "width": 116,
+        "height": 57
+      },
+      "referenceSize": {
+        "width": 116,
+        "height": 57
+      },
+      "renderedInputSize": {
+        "width": 116,
+        "height": 57
+      },
+      "meanAbsoluteChannelError": 68.18,
+      "rootMeanSquareChannelError": 91.372,
+      "p95ChannelError": 230
+    },
+    {
+      "id": "daily_quest",
+      "role": "daily quest dock",
+      "boxPx": {
+        "x": 11,
+        "y": 702,
+        "width": 354,
+        "height": 57
+      },
+      "referenceSize": {
+        "width": 354,
+        "height": 57
+      },
+      "renderedInputSize": {
+        "width": 354,
+        "height": 57
+      },
+      "meanAbsoluteChannelError": 29.663,
+      "rootMeanSquareChannelError": 55.347,
+      "p95ChannelError": 232
+    },
+    {
+      "id": "bottom_nav",
+      "role": "four-tab bottom navigation",
+      "boxPx": {
+        "x": 0,
+        "y": 759,
+        "width": 376,
+        "height": 62
+      },
+      "referenceSize": {
+        "width": 376,
+        "height": 62
+      },
+      "renderedInputSize": {
+        "width": 376,
+        "height": 62
+      },
+      "meanAbsoluteChannelError": 31.703,
+      "rootMeanSquareChannelError": 60.326,
+      "p95ChannelError": 204
+    }
+  ]
+}
