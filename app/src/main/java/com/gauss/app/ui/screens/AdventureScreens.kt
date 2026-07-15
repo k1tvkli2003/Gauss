@@ -1251,7 +1251,7 @@ fun AdventureArenaScreen(nav: NavController, examVm: ExamViewModel) {
         }
     }
 
-    AdventureScreen(includeBottomPadding = false) {
+    AdventureScreen(includeBottomPadding = true) {
         Column(
             Modifier
                 .fillMaxSize()
@@ -1535,6 +1535,7 @@ private fun QuestionCard(question: Question) {
             RichContent(
                 blocks = question.stem,
                 fontSize = 19.sp,
+                color = AdventureColors.Ink,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 30.dp),
@@ -1577,6 +1578,10 @@ private fun AnswerGrid(
                         attempt == null && pendingOption == index -> TileState.Selected
                         else -> TileState.Idle
                     }
+                    val optionColor = when (state) {
+                        TileState.Correct, TileState.Wrong -> Color.White
+                        else -> AdventureColors.Ink
+                    }
                     AnswerTileFrame(
                         label = ('A' + index).toString(),
                         state = state,
@@ -1585,7 +1590,7 @@ private fun AnswerGrid(
                         modifier = Modifier.weight(1f),
                     ) {
                         CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                            RichContent(blocks = blocks, fontSize = 17.sp)
+                            RichContent(blocks = blocks, fontSize = 17.sp, color = optionColor)
                         }
                     }
                 }
@@ -1638,7 +1643,7 @@ fun AdventureRewardScreen(nav: NavController, examVm: ExamViewModel) {
         nav.openTab(AdventureTab.MAP)
     }
 
-    AdventureScreen(includeBottomPadding = false) {
+    AdventureScreen(includeBottomPadding = true) {
         Column(
             Modifier
                 .fillMaxSize()
@@ -1741,13 +1746,13 @@ private fun RewardSaveWarning(message: String?) {
 
 @Composable
 private fun RewardVaultHub(nav: NavController) {
-    AdventureScreen {
+    AdventureScreen(includeBottomPadding = false) {
         Column(
             Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 14.dp)
-                .padding(bottom = 92.dp),
+                .padding(bottom = 118.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
@@ -1855,13 +1860,13 @@ fun AdventureProfileScreen(nav: NavController, examVm: ExamViewModel) {
         revengeCount = app.history.revengeIds().size.takeIf { it > 0 } ?: 8
     }
 
-    AdventureScreen {
+    AdventureScreen(includeBottomPadding = false) {
         Column(
             Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 14.dp)
-                .padding(bottom = 92.dp),
+                .padding(bottom = 118.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             ScreenTitle("My Profile", "Explorer progress, mastery, badges, and league.")
@@ -2192,12 +2197,12 @@ private fun AdventureEmptyState(
     action: String,
     onAction: () -> Unit,
 ) {
-    AdventureScreen {
+    AdventureScreen(includeBottomPadding = false) {
         Column(
             Modifier
                 .fillMaxSize()
                 .padding(horizontal = 18.dp)
-                .padding(bottom = 92.dp),
+                .padding(bottom = 118.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {

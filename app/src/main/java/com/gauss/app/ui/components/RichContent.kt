@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
@@ -64,11 +65,12 @@ fun RichContent(
     blocks: List<ContentBlock>,
     modifier: Modifier = Modifier,
     fontSize: TextUnit = 16.sp,
+    color: Color? = null,
 ) {
     Column(modifier, verticalArrangement = Arrangement.spacedBy(10.dp)) {
         blocks.forEach { block ->
             when (block) {
-                is ContentBlock.Text -> MathText(block.text, fontSize = fontSize)
+                is ContentBlock.Text -> MathText(block.text, fontSize = fontSize, color = color)
                 is ContentBlock.Image -> AssetMedia(block)
             }
         }

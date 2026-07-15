@@ -395,10 +395,11 @@ fun AdventureBottomNav(
         border = BorderStroke(1.dp, AdventureColors.BorderSoft.copy(alpha = if (immersive) .72f else 1f)),
         shadowElevation = if (immersive) 6.dp else 14.dp,
     ) {
+        val navBarInset = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
         Row(
             Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 8.dp, vertical = 7.dp),
+                .padding(start = 8.dp, end = 8.dp, top = 7.dp, bottom = 7.dp + navBarInset),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
