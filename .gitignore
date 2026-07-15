@@ -1,14 +1,55 @@
-# Android / Gradle
+# =============================================================
+# Gauss — root .gitignore
+# Stack: Android/Gradle/Kotlin · Flutter/Dart · Python/Node scripts
+# Nested .gitignore files also apply under flutter_app/ and
+# flutter_app/android/. Patterns without a leading "/" match at
+# any depth; keep it that way for build caches.
+# =============================================================
+
+# --- Android / Gradle / Kotlin ---
 .gradle/
+.kotlin/
 build/
 local.properties
 captures/
 .cxx/
 *.iml
+*.hprof
+# Keep gradle-wrapper.jar tracked (reproducible builds) — do NOT ignore it.
+
+# --- IDE / Editors ---
 .idea/
+*.iws
+*.ipr
+*.swp
+*~
+
+# --- Flutter / Dart (defense-in-depth; flutter_app/ has its own too) ---
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+# Keep flutter_app/pubspec.lock tracked (app lockfile) — do NOT ignore it.
+
+# --- Python scripts (scripts/*.py) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# --- Node scripts (scripts/*.mjs) ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# --- Logs / temp ---
+*.log
 tmp/
 
-# signing — NEVER commit keystores
+# --- Signing — NEVER commit keystores or key material ---
 *.jks
 *.keystore
 *.p8
@@ -16,12 +57,22 @@ tmp/
 *.key
 *.mobileprovision
 keystore.properties
+key.properties
 
-# secrets
+# --- Secrets ---
 .env
-.env.local
+.env.*
+!.env.example
 .secrets/
 
-# misc
+# --- OS cruft ---
 .DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Misc ---
 *.orig.*
