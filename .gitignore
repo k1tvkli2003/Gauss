@@ -19,6 +19,7 @@ captures/
 
 # --- IDE / Editors ---
 .idea/
+.vscode/
 *.iws
 *.ipr
 *.swp
@@ -28,8 +29,14 @@ captures/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
+.packages
 .pub-cache/
 .pub/
+.fvm/flutter_sdk/
+coverage/
+*.lcov
+app.*.symbols
+app.*.map.json
 # Keep flutter_app/pubspec.lock tracked (app lockfile) — do NOT ignore it.
 
 # --- Python scripts (scripts/*.py) ---
@@ -38,16 +45,36 @@ __pycache__/
 .venv/
 venv/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 *.egg-info/
 
 # --- Node scripts (scripts/*.mjs) ---
 node_modules/
+.npm/
+.yarn/cache/
+.pnpm-store/
 npm-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # --- Logs / temp ---
 *.log
 tmp/
+.cache/
+*.tmp
+*.temp
+*.dmp
+hs_err_pid*
+
+# --- Packaged outputs (source assets and docs remain tracked) ---
+*.apk
+*.aab
+*.apks
+*.ipa
+*.xcarchive/
 
 # --- Signing — NEVER commit keystores or key material ---
 *.jks
@@ -63,7 +90,9 @@ key.properties
 .env
 .env.*
 !.env.example
+!.env.*.example
 .secrets/
+secrets.properties
 
 # --- OS cruft ---
 .DS_Store
@@ -75,4 +104,6 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # --- Misc ---
+*.orig
 *.orig.*
+*.rej
