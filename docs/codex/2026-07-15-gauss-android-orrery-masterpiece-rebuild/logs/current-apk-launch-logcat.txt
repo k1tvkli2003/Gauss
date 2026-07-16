@@ -1,0 +1,1497 @@
+--------- beginning of main
+07-15 16:36:57.399  1088  1094 W .gms.persistent: Missing inline cache for void aktq.g()
+07-15 16:36:57.470  1088  2233 W CCTFlatFileLogStore: Excessive logging: 256 events, 365765 bytes from log source PHENOTYPE last 270s
+--------- beginning of system
+07-15 16:36:57.599   619  1902 I ActivityManager: Force stopping com.gauss.app appid=10209 user=0: from pid 3637
+07-15 16:36:57.604   619  1902 I AppsFilter: interaction: PackageSetting{3c0d9b6 com.android.microdroid.empty_payload/10201} -> PackageSetting{9006abd com.gauss.app/10209} BLOCKED
+07-15 16:36:57.607   619   813 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_RESTARTED on user 0
+07-15 16:36:57.611   619   813 I AppWidgetServiceImpl: Updating package stopped masked state for uid 10209 package com.gauss.app isStopped true
+07-15 16:36:57.617  1001  1001 D CarrierSvcBindHelper: onHandleForceStop: [com.gauss.app]
+07-15 16:36:57.617  1001  1001 D CarrierSvcBindHelper: No carrier app for: 0
+07-15 16:36:57.619   416   469 I netd    : tetherGetStats() -> {[]} <0.43ms>
+07-15 16:36:57.684   619  1902 W ActivityTaskManager: callingPackage for (uid=2000, pid=3642) has no WPC
+07-15 16:36:57.709   619  1902 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE
+07-15 16:36:57.710   619  1902 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+07-15 16:36:57.710   619  1902 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+07-15 16:36:57.719   619  1902 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@75c5e3d, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+07-15 16:36:57.719   619  1902 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+07-15 16:36:57.722   619  1902 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+07-15 16:36:57.729  1088  1095 I .gms.persistent: Background concurrent mark compact GC freed 15MB AllocSpace bytes, 2(40KB) LOS objects, 50% free, 22MB/44MB, paused 243us,4.945ms total 351.697ms
+07-15 16:36:57.804   876   996 W Looper  : Drained
+07-15 16:36:57.872   876   996 V WindowManagerShell: Transition requested (#10): android.os.BinderProxy@130cff9 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=32 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.gauss.app/.MainActivity } baseActivity=ComponentInfo{com.gauss.app/com.gauss.app.MainActivity} topActivity=ComponentInfo{com.gauss.app/com.gauss.app.MainActivity} origActivity=null realActivity=ComponentInfo{com.gauss.app/com.gauss.app.MainActivity} numActivities=1 lastActiveTime=301868 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@4bc9b3e} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{b8f2d9f com.gauss.app.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=1080 topActivityLetterboxHeight=2400 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 10 }
+07-15 16:36:57.880   619  1902 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.gauss.app/.MainActivity} with LAUNCH_SINGLE_TOP from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+07-15 16:36:57.888   619   658 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@75c5e3d, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+07-15 16:36:57.898   876   996 W Looper  : Slow dispatch took 33ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda1@27a909e m=0
+07-15 16:36:57.916   479   479 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+07-15 16:36:57.921  1109  1109 W SplitSelectStateCtor: Missing session instanceIds
+07-15 16:36:57.921  1109  1109 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+07-15 16:36:57.925   876   996 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=false, height=527
+07-15 16:36:57.932   619   992 I AppsFilter: interaction: PackageSetting{3c0d9b6 com.android.microdroid.empty_payload/10201} -> PackageSetting{b4c7ff3 com.gauss.app/10209} BLOCKED
+07-15 16:36:57.935   418   418 D Zygote  : Forked child process 3645
+07-15 16:36:57.936   619   668 I ActivityManager: Start proc 3645:com.gauss.app/u0a209 for next-top-activity {com.gauss.app/com.gauss.app.MainActivity}
+07-15 16:36:57.946   619   813 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_UNSTOPPED on user 0
+07-15 16:36:57.947   619   813 I AppWidgetServiceImpl: Updating package stopped masked state for uid 10209 package com.gauss.app isStopped false
+07-15 16:36:57.956  1109  1109 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=32, baseIntent=Intent { flg=0x10000000 cmp=com.gauss.app/.MainActivity }
+07-15 16:36:58.004  3645  3645 I com.gauss.app: Late-enabling -Xcheck:jni
+07-15 16:36:58.087   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:36:58.091   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:36:58.092   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:36:58.093  1088  3625 I PlatformConfigurator: updateFromConfigurations using legacy put method [CONTEXT service_id=204 ]
+07-15 16:36:58.128  1109  1412 D EGL_emulation: app_time_stats: avg=24094.21ms min=24094.21ms max=24094.21ms count=1
+07-15 16:36:58.171   876  1055 D SplashScreenView: Build android.window.SplashScreenView{dba1302 V.E...... ......ID 0,0-0,0}
+07-15 16:36:58.171   876  1055 D SplashScreenView: Icon: view: android.widget.ImageView{f90e413 V.ED..... ......I. 0,0-0,0 #1020504 android:id/splashscreen_icon_view} drawable: com.android.wm.shell.startingsurface.SplashscreenIconDrawableFactory$ImmobileIconDrawable@fe11650 size: 420
+07-15 16:36:58.171   876  1055 D SplashScreenView: Branding: view: android.view.View{9831049 G.ED..... ......I. 0,0-0,0 #1020503 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+07-15 16:36:58.220   619   993 D CoreBackPreview: Window{a53c986 u0 Splash Screen com.gauss.app}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@412f812, mPriority=0, mIsAnimationCallback=false}
+07-15 16:36:58.267  3645  3645 I com.gauss.app: Using CollectorTypeCMC GC.
+07-15 16:36:58.267  3645  3645 W com.gauss.app: Unexpected CPU variant for x86: x86_64.
+07-15 16:36:58.267  3645  3645 W com.gauss.app: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+07-15 16:36:58.305   483   511 I adbd    : jdwp connection from 3645
+07-15 16:36:58.309  3645  3645 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+07-15 16:36:58.372   619   655 V WindowManager: Sent Transition (#10) createdAt=07-15 16:36:57.733 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=32 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.gauss.app/.MainActivity } baseActivity=ComponentInfo{com.gauss.app/com.gauss.app.MainActivity} topActivity=ComponentInfo{com.gauss.app/com.gauss.app.MainActivity} origActivity=null realActivity=ComponentInfo{com.gauss.app/com.gauss.app.MainActivity} numActivities=1 lastActiveTime=301868 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{124835e Task{adffed6 #32 type=standard I=com.gauss.app/.MainActivity}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{546c33f com.gauss.app.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=1080 topActivityLetterboxHeight=2400 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 10 }
+07-15 16:36:58.372   619   655 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+07-15 16:36:58.372   619   655 V WindowManager:     info={id=10 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+07-15 16:36:58.372   619   655 V WindowManager:         {WCT{RemoteToken{124835e Task{adffed6 #32 type=standard I=com.gauss.app/.MainActivity}}} m=OPEN f=NONE leash=Surface(name=Task=32)/@0x842a9e0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+07-15 16:36:58.372   619   655 V WindowManager:         {WCT{RemoteToken{58840c Task{84adf57 #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x3954be3 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}
+07-15 16:36:58.372   619   655 V WindowManager:     ]}
+07-15 16:36:58.379   619   993 W UserManagerService: Requested status bar icon for non-badged user 0
+07-15 16:36:58.385   876  1411 V WindowManagerShell: onTransitionReady(transaction=2658584756622)
+07-15 16:36:58.385   876   996 V WindowManagerShell: onTransitionReady (#10) android.os.BinderProxy@130cff9: {id=10 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@55b92bd} m=OPEN f=NONE leash=Surface(name=Task=32)/@0x8377f81 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@9e140b2} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x6f4fc67 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+07-15 16:36:58.392   876   996 V WindowManagerShell: Playing animation for (#10) android.os.BinderProxy@130cff9@0
+07-15 16:36:58.392   876   996 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@75116c0
+07-15 16:36:58.392   876   996 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@af55ff9
+07-15 16:36:58.392   876   996 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@14deb3e
+07-15 16:36:58.392   876   996 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@bce3d9f
+07-15 16:36:58.392   876   996 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@590deec
+07-15 16:36:58.392   876   996 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+07-15 16:36:58.392   876   996 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@92302b5
+07-15 16:36:58.393   876   996 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@bb97d4a
+07-15 16:36:58.393   876   996 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=10 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@55b92bd} m=OPEN f=NONE leash=Surface(name=Task=32)/@0x8377f81 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@9e140b2} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x6f4fc67 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+07-15 16:36:58.394   876   996 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[OPEN,TO_FRONT] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@5b39db9, appThread = android.app.IApplicationThread$Stub$Proxy@d9eb5fe, debugName = OverlaySwipeBack }}
+07-15 16:36:58.395   876   996 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@87b115f, appThread = android.app.IApplicationThread$Stub$Proxy@a2b87ac, debugName = LauncherToDream }}
+07-15 16:36:58.395   876   996 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@2e75c75, appThread = android.app.IApplicationThread$Stub$Proxy@22c340a, debugName = QuickstepLaunchHome }}
+07-15 16:36:58.395   876   996 V WindowManagerShell:  Delegate animation for (#10) to null
+07-15 16:36:58.395   876   996 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@b3dd36d
+07-15 16:36:58.395   876   996 V WindowManagerShell: start default transition animation, info = {id=10 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@55b92bd} m=OPEN f=NONE leash=Surface(name=Task=32)/@0x8377f81 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@9e140b2} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x6f4fc67 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+07-15 16:36:58.401   876   996 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@19f7298 animAttr=0x13 type=OPEN isEntrance=false
+07-15 16:36:58.408   876   996 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@b652044 animAttr=0x12 type=OPEN isEntrance=true
+07-15 16:36:58.411   876   996 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@b3dd36d
+07-15 16:36:58.448  1109  1412 D EGL_emulation: app_time_stats: avg=274140.28ms min=274140.28ms max=274140.28ms count=1
+07-15 16:36:58.504  3645  3645 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+07-15 16:36:58.504  3645  3645 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+07-15 16:36:58.506  3645  3645 W ziparchive: Unable to open '/data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/base.dm': No such file or directory
+07-15 16:36:58.506  3645  3645 W ziparchive: Unable to open '/data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/base.dm': No such file or directory
+07-15 16:36:58.571   619   732 D ActivityManager: freezing 1645 com.google.android.gms
+07-15 16:36:58.694  3645  3645 D nativeloader: Configuring clns-7 for other apk /data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/lib/x86_64:/data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.gauss.app
+07-15 16:36:58.700   876   996 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#10) android.os.BinderProxy@130cff9@0
+07-15 16:36:58.703   619   655 V WindowManager: Finish Transition (#10): created at 07-15 16:36:57.733 collect-started=50.264ms request-sent=127.211ms started=155.627ms ready=633.181ms sent=635.696ms finished=968.07ms
+07-15 16:36:58.707  1109  1109 D VRI[NexusLauncherActivity]: visibilityChanged oldVisibility=true newVisibility=false
+07-15 16:36:58.708   619   993 W UserManagerService: Requested status bar icon for non-badged user 0
+07-15 16:36:58.708   619   989 W UserManagerService: Requested status bar icon for non-badged user 0
+07-15 16:36:58.708   876   996 V WindowManagerShell: Track 0 became idle
+07-15 16:36:58.708   876   996 V WindowManagerShell: All active transition animations finished
+07-15 16:36:58.711   619   645 I system_server: Background concurrent mark compact GC freed 22MB AllocSpace bytes, 84(1732KB) LOS objects, 48% free, 25MB/49MB, paused 274us,7.204ms total 995.898ms
+07-15 16:36:58.717  1109  1109 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=7}
+07-15 16:36:58.719   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk' with 1 weak references
+07-15 16:36:58.729  3645  3645 V GraphicsEnvironment: Currently set values for:
+07-15 16:36:58.728   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/InputDevices/InputDevices.apk' with 1 weak references
+07-15 16:36:58.728   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk' with 1 weak references
+07-15 16:36:58.729  3645  3645 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+07-15 16:36:58.729  3645  3645 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+07-15 16:36:58.729   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/app/AccessibilityMenu/AccessibilityMenu.apk' with 1 weak references
+07-15 16:36:58.729  3645  3645 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+07-15 16:36:58.729   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '/product/overlay/AccessibilityMenu__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+07-15 16:36:58.729   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/GoogleTTS/GoogleTTS.apk' with 1 weak references
+07-15 16:36:58.729  3645  3645 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+07-15 16:36:58.729   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/talkback/talkback.apk' with 1 weak references
+07-15 16:36:58.729   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.permission/priv-app/GooglePermissionController@350820360/GooglePermissionController.apk' with 1 weak references
+07-15 16:36:58.730   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '/product/overlay/GooglePermissionControllerOverlay.apk' with 1 weak references
+07-15 16:36:58.730   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/Velvet/Velvet.apk' with 1 weak references
+07-15 16:36:58.730   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '/vendor/overlay/EmulatorTalkBackOverlay/EmulatorTalkBackOverlay.apk' with 1 weak references
+07-15 16:36:58.730   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/PrebuiltGmail/PrebuiltGmail.apk' with 1 weak references
+07-15 16:36:58.731   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Drive/Drive.apk' with 1 weak references
+07-15 16:36:58.731   619   647 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk' with 1 weak references
+07-15 16:36:58.735   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:36:58.756   619   993 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ENABLE_FAKE_FOCUS
+07-15 16:36:58.787  3645  3645 E TransactionExecutor: Failed to execute the transaction: tId:-278241849 ClientTransaction{
+07-15 16:36:58.787  3645  3645 E TransactionExecutor: tId:-278241849   transactionItems=[
+07-15 16:36:58.787  3645  3645 E TransactionExecutor: tId:-278241849     LaunchActivityItem{activityToken=android.os.BinderProxy@9d81404,intent=Intent { flg=0x10000000 cmp=com.gauss.app/.MainActivity },ident=40608497,info=ActivityInfo{387f06e com.gauss.app.MainActivity},curConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.55 fontWeightAdjustment=0},overrideConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.3 fontWeightAdjustment=0},deviceId=0,referrer=com.android.shell,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,sceneTransitionInfo=null,profilerInfo=null,assistToken=android.os.BinderProxy@1713eb3,shareableActivityToken=android.os.BinderProxy@fc46c70,activityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1080, 2400), taskFragmentBounds=Rect(0, 0 - 1080, 2400)}}
+07-15 16:36:58.787  3645  3645 E TransactionExecutor: tId:-278241849     ResumeActivityItem{mActivityToken=android.os.BinderProxy@9d81404,procState=-1,updateProcState=false,isForward=true,shouldSendCompatFakeFocus=false}
+07-15 16:36:58.787  3645  3645 E TransactionExecutor: tId:-278241849     Target activity: Not found for token: android.os.BinderProxy@9d81404
+07-15 16:36:58.787  3645  3645 E TransactionExecutor: tId:-278241849   ]
+07-15 16:36:58.787  3645  3645 E TransactionExecutor: tId:-278241849 }
+07-15 16:36:58.787  3645  3645 D AndroidRuntime: Shutting down VM
+--------- beginning of crash
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: FATAL EXCEPTION: main
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: Process: com.gauss.app, PID: 3645
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: java.lang.RuntimeException: Unable to instantiate activity ComponentInfo{com.gauss.app/com.gauss.app.MainActivity}: java.lang.ClassNotFoundException: Didn't find class "com.gauss.app.MainActivity" on path: DexPathList[[zip file "/data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/base.apk"],nativeLibraryDirectories=[/data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/lib/x86_64, /data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/base.apk!/lib/x86_64, /system/lib64, /system_ext/lib64]]
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3954)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: Didn't find class "com.gauss.app.MainActivity" on path: DexPathList[[zip file "/data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/base.apk"],nativeLibraryDirectories=[/data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/lib/x86_64, /data/app/~~gQKlilGjbGrbtV6_azYRiQ==/com.gauss.app-AyXQ1L3LJF-QQctKTDN5bw==/base.apk!/lib/x86_64, /system/lib64, /system_ext/lib64]]
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:637)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:573)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.AppComponentFactory.instantiateActivity(AppComponentFactory.java:95)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at androidx.core.app.CoreComponentFactory.instantiateActivity(CoreComponentFactory.java:44)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.Instrumentation.newActivity(Instrumentation.java:1448)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3941)
+07-15 16:36:58.792  3645  3645 E AndroidRuntime: 	... 13 more
+07-15 16:36:58.806   619  3665 I DropBoxManagerService: add tag=data_app_crash isTagEnabled=true flags=0x2
+07-15 16:36:58.811   619   993 W ActivityTaskManager:   Force finishing activity com.gauss.app/.MainActivity
+07-15 16:36:58.811   876   996 V WindowManagerShell: Transition requested (#11): android.os.BinderProxy@cb5fcb0 TransitionRequestInfo { type = CLOSE, triggerTask = null, pipTask = null, remoteTransition = null, displayChange = null, flags = 16, debugId = 11 }
+07-15 16:36:58.812  1109  1109 D VRI[NexusLauncherActivity]: visibilityChanged oldVisibility=false newVisibility=true
+07-15 16:36:58.818  1109  1109 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=6}
+07-15 16:36:58.817   479   479 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+07-15 16:36:58.821  3645  3645 I Process : Sending signal. PID: 3645 SIG: 9
+07-15 16:36:58.831   483   483 I adbd    : Remote process closed the socket (on MSG_PEEK)
+07-15 16:36:58.832   619   989 I ActivityManager: Process com.gauss.app (pid 3645) has died: fg  TOP 
+07-15 16:36:58.833   418   418 I Zygote  : Process 3645 exited due to signal 9 (Killed)
+07-15 16:36:58.833   619   669 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10209/pid_3645
+07-15 16:36:58.839   619   656 D DisplayManagerService: Drop pending events for gone uid 10209
+07-15 16:36:58.841   619   789 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+07-15 16:36:58.842   619   789 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+07-15 16:36:58.842   619   789 D InetDiagMessage: Destroyed live tcp sockets for uids={10209} in 2ms
+07-15 16:36:58.842   619   789 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+07-15 16:36:58.842   619   789 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+07-15 16:36:58.842   619   789 D InetDiagMessage: Destroyed live tcp sockets for uids={20209} in 0ms
+07-15 16:36:58.854   416   469 I netd    : tetherGetStats() -> {[]} <0.23ms>
+07-15 16:36:58.919  1109  1109 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=31, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity }
+07-15 16:36:58.925  1109  1109 D StatsLog: LAUNCHER_ONRESUME
+07-15 16:36:58.926   876  2416 V WindowManagerShell: onTransitionReady(transaction=2658584756640)
+07-15 16:36:58.926   876   996 V WindowManagerShell: onTransitionReady (#11) android.os.BinderProxy@cb5fcb0: {id=11 t=CLOSE f=0x10 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@ec94ce5} m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP leash=Surface(name=Task=1)/@0xc9a6729 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@f41b3ba} m=CLOSE f=NONE leash=Surface(name=Task=32)/@0xbe29aae sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{b0ec538 token=android.os.Binder@dcddd9b})/@0xb31104f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+07-15 16:36:58.927   876   996 V WindowManagerShell: Playing animation for (#11) android.os.BinderProxy@cb5fcb0@0
+07-15 16:36:58.927   876   996 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@75116c0
+07-15 16:36:58.927   876   996 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@af55ff9
+07-15 16:36:58.927   876   996 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@14deb3e
+07-15 16:36:58.927   876   996 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@bce3d9f
+07-15 16:36:58.927   876   996 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@590deec
+07-15 16:36:58.927   876   996 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+07-15 16:36:58.927   876   996 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@92302b5
+07-15 16:36:58.927   876   996 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@bb97d4a
+07-15 16:36:58.927   876   996 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=11 t=CLOSE f=0x10 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@ec94ce5} m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP leash=Surface(name=Task=1)/@0xc9a6729 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@f41b3ba} m=CLOSE f=NONE leash=Surface(name=Task=32)/@0xbe29aae sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{b0ec538 token=android.os.Binder@dcddd9b})/@0xb31104f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+07-15 16:36:58.927   876   996 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[OPEN,TO_FRONT] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@5b39db9, appThread = android.app.IApplicationThread$Stub$Proxy@d9eb5fe, debugName = OverlaySwipeBack }}
+07-15 16:36:58.927   876   996 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@87b115f, appThread = android.app.IApplicationThread$Stub$Proxy@a2b87ac, debugName = LauncherToDream }}
+07-15 16:36:58.927   876   996 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@2e75c75, appThread = android.app.IApplicationThread$Stub$Proxy@22c340a, debugName = QuickstepLaunchHome }}
+07-15 16:36:58.927   876   996 D RemoteTransitionHandler: Found filterPair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@2e75c75, appThread = android.app.IApplicationThread$Stub$Proxy@22c340a, debugName = QuickstepLaunchHome }}
+07-15 16:36:58.927   876   996 V WindowManagerShell:  Delegate animation for (#11) to RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@2e75c75, appThread = android.app.IApplicationThread$Stub$Proxy@22c340a, debugName = QuickstepLaunchHome }
+07-15 16:36:58.943  1109  1167 D QuickstepModelDelegate: notifyAppTargetEvent action=1 launchLocation=workspace/0/[-1,-1]/[1,1]
+07-15 16:36:58.961  1109  1380 E FrameEvents: addRelease: Did not find frame.
+07-15 16:36:58.966  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:36:58.966  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:36:58.966  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:36:58.966  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:36:58.966  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:36:58.966  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:36:58.971  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+07-15 16:36:58.972   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=2
+07-15 16:36:58.975   619   655 V WindowManager: Sent Transition (#11) createdAt=07-15 16:36:58.811 via request=TransitionRequestInfo { type = CLOSE, triggerTask = null, pipTask = null, remoteTransition = null, displayChange = null, flags = 16, debugId = 11 }
+07-15 16:36:58.975   619   655 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+07-15 16:36:58.975   619   655 V WindowManager:     info={id=11 t=CLOSE f=0x10 trk=0 r=[0@Point(0, 0)] c=[
+07-15 16:36:58.975   619   655 V WindowManager:         {WCT{RemoteToken{58840c Task{84adf57 #1 type=home}}} m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP leash=Surface(name=Task=1)/@0x3954be3 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+07-15 16:36:58.975   619   655 V WindowManager:         {WCT{RemoteToken{124835e Task{adffed6 #32 type=standard I=com.gauss.app/.MainActivity}}} m=CLOSE f=NONE leash=Surface(name=Task=32)/@0x842a9e0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+07-15 16:36:58.975   619   655 V WindowManager:         {null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{b0ec538 token=android.os.Binder@dcddd9b})/@0xf08de35 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}
+07-15 16:36:58.975   619   655 V WindowManager:     ]}
+07-15 16:36:58.976   479   479 D SurfaceFlinger: TransactionTraceWriter: writing file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope
+07-15 16:36:58.977   876   996 V WindowManagerShell:  animated by com.android.wm.shell.transition.RemoteTransitionHandler@bb97d4a
+07-15 16:36:58.977   876   996 W Looper  : Slow dispatch took 50ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0@ba0b1c8 m=0
+07-15 16:36:58.977   876   996 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=true, height=527
+07-15 16:36:58.977   876   996 W Looper  : Slow delivery took 52ms wmshell.main h=android.os.Handler c=com.android.wm.shell.common.ExternalInterfaceBinder$$ExternalSyntheticLambda0@246d261 m=0
+07-15 16:36:58.977   876   996 W Looper  : Drained
+07-15 16:36:58.979   619  1887 W UserManagerService: Requested status bar icon for non-badged user 0
+07-15 16:36:58.985   876  1054 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@449477c
+07-15 16:36:58.985   619   993 D CoreBackPreview: Window{a53c986 u0 Splash Screen com.gauss.app EXITING}: Setting back callback null
+07-15 16:36:58.987   619   992 W InputManager-JNI: Input channel object 'a53c986 Splash Screen com.gauss.app (client)' was disposed without first being removed with the input manager!
+07-15 16:36:59.000  1109  1109 D StateManager: createAtomicAnimation - fromState: Background, toState: Normal, partial trace:
+07-15 16:36:59.000  1109  1109 D StateManager: 	at com.android.quickstep.util.StaggeredWorkspaceAnim.prepareToAnimate(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:22)
+07-15 16:36:59.000  1109  1109 D StateManager: 	at com.android.quickstep.util.StaggeredWorkspaceAnim.<init>(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:4)
+07-15 16:36:59.000  1109  1109 D StateManager: 	at com.android.quickstep.util.StaggeredWorkspaceAnim.<init>(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:1)
+07-15 16:36:59.018   619   750 I ImeTracker: com.google.android.apps.nexuslauncher:33d23737: onRequestHide at ORIGIN_SERVER reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR fromUser false
+07-15 16:36:59.019   619   750 I ImeTracker: com.google.android.apps.nexuslauncher:33d23737: onCancelled at PHASE_SERVER_SHOULD_HIDE
+07-15 16:36:59.031   619  1374 W AppSearchIcing: icing-search-engine.cc:321: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: AppSearch 0-state cache not available, fallback to AGA
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: java.util.concurrent.CompletionException: java.util.NoSuchElementException: No value present
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:308)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:323)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:684)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:486)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2138)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at com.google.android.apps.nexuslauncher.allapps.E0.onResult(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:67)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at android.app.appsearch.SearchSessionUtil$1.lambda$onResult$0(go/retraceme 64eee9e9f568ff45978879ad2ff83146f2618ee8a88278736fbdf5fae931976e:144)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at android.app.appsearch.SearchSessionUtil$1.$r8$lambda$CEk3q8sDAQVhU3rQwVueB8FAj_M(go/retraceme 64eee9e9f568ff45978879ad2ff83146f2618ee8a88278736fbdf5fae931976e:1)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at android.app.appsearch.SearchSessionUtil$1$$ExternalSyntheticLambda0.run(go/retraceme 64eee9e9f568ff45978879ad2ff83146f2618ee8a88278736fbdf5fae931976e:22)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at android.os.Handler.handleCallback(Handler.java:959)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at android.os.Looper.loopOnce(Looper.java:232)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at android.os.Looper.loop(Looper.java:317)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: Caused by: java.util.NoSuchElementException: No value present
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at java.util.Optional.get(Optional.java:143)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	at com.google.android.apps.nexuslauncher.allapps.E0.onResult(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:28)
+07-15 16:36:59.044  1109  1462 D OneSearchSuggestProvider: 	... 8 more
+07-15 16:36:59.048   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=3
+07-15 16:36:59.048   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.053  1109  1462 D OneSearchSuggestProvider: Established or reuse existing binder channel authority=com.google.android.googlequicksearchbox
+07-15 16:36:59.053   440   497 I RanchuHwc: logCompositionFallbackIfChanged: layer 4 CompositionType fallback from 2 to 1
+07-15 16:36:59.053   440   497 I RanchuHwc: logCompositionFallbackIfChanged: layer 3 CompositionType fallback from 2 to 1
+07-15 16:36:59.053   440   497 I RanchuHwc: logCompositionFallbackIfChanged: layer 14 CompositionType fallback from 2 to 1
+07-15 16:36:59.053   440   497 I RanchuHwc: logCompositionFallbackIfChanged: layer 15 CompositionType fallback from 2 to 1
+07-15 16:36:59.057  1272  1272 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3157 
+07-15 16:36:59.068   443   443 I android.hardware.power-service.example: Power isModeSupported: 6
+07-15 16:36:59.095   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:36:59.095   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:36:59.096   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:36:59.122  1418  1418 I A       : (REDACTED) Created gRPC endpoint for service %s
+07-15 16:36:59.130  1272  1272 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 0, locked = false
+07-15 16:36:59.131   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=4
+07-15 16:36:59.131   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.147  1272  1272 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1986 onStartInput(EditorInfo{EditorInfo{packageName=com.google.android.apps.nexuslauncher, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+07-15 16:36:59.148  1272  1272 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 1, locked = false
+07-15 16:36:59.150   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=5
+07-15 16:36:59.151   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.165   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=6
+07-15 16:36:59.165   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.181  1272  1272 I AndroidIME: InputBundleManager.loadActiveInputBundleId():450 loadActiveInputBundleId: und-Latn-x-password, password
+07-15 16:36:59.182   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=7
+07-15 16:36:59.182   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.187   619   993 W PackageConfigPersister: App-specific configuration not found for packageName: com.google.android.apps.nexuslauncher and userId: 0
+07-15 16:36:59.198   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=8
+07-15 16:36:59.198   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.214   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=9
+07-15 16:36:59.214   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.233   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=10
+07-15 16:36:59.233   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.249   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=11
+07-15 16:36:59.249   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.266   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=12
+07-15 16:36:59.266   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.300   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=13
+07-15 16:36:59.300   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.314   619   658 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{26ba2f1 u0 com.gauss.app/.MainActivity t32 f} isExiting}
+07-15 16:36:59.315   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=14
+07-15 16:36:59.315   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.325   479  1155 D PermissionCache: checking android.permission.WAKEUP_SURFACE_FLINGER for uid=10179 => granted (1249 us)
+07-15 16:36:59.325   479  1155 W VsyncModulator: setTransactionSchedule: Unexpected EarlyEnd
+07-15 16:36:59.333   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=15
+07-15 16:36:59.333   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.349   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=16
+07-15 16:36:59.349   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.366   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=17
+07-15 16:36:59.366   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.381   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=18
+07-15 16:36:59.381   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.400   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=19
+07-15 16:36:59.400   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.415   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=20
+07-15 16:36:59.415   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.431   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=21
+07-15 16:36:59.431   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.450   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=22
+07-15 16:36:59.450   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.456  1418  1422 I earchbox:search: Compiler allocated 4555KB to compile java.lang.Object com.google.android.apps.gsa.binaries.velvet.app.ahh.a()
+07-15 16:36:59.465   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=23
+07-15 16:36:59.465   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.482   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=24
+07-15 16:36:59.483   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.487  1109  1412 D EGL_emulation: app_time_stats: avg=16.58ms min=0.46ms max=148.84ms count=38
+07-15 16:36:59.497   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=25
+07-15 16:36:59.498   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.497  1109  1109 W Choreographer: Frame time is 0.081427 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+07-15 16:36:59.517   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=26
+07-15 16:36:59.517   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.535   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=27
+07-15 16:36:59.535   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.549   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=28
+07-15 16:36:59.549   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.566   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=29
+07-15 16:36:59.566   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.585   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=30
+07-15 16:36:59.585   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.588   416  3670 I resolv  : GetAddrInfoHandler::run: {100 262244 100 983140 10144 0}
+07-15 16:36:59.588   416  3671 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:36:59.588   416  3671 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:36:59.588   416  3672 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:36:59.590   416  3671 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:36:59.590   416  3671 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:36:59.591   416  3672 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:36:59.591   416  3672 I resolv  : retrying_poll: 48 retrying_poll getsockopt failed: Connection refused
+07-15 16:36:59.591   416  3671 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:36:59.591   416  3671 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:36:59.591   416  3671 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:36:59.591   416  3672 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:36:59.592   416  3672 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:36:59.592   416  3672 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:36:59.593   416  3672 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:36:59.596   416  3673 I resolv  : GetAddrInfoHandler::run: {100 262244 100 983140 10144 0}
+07-15 16:36:59.596   416  3674 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:36:59.596   416  3674 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:36:59.596   416  3675 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:36:59.597   416  3674 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:36:59.597   416  3674 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:36:59.598   416  3674 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:36:59.598   416  3674 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:36:59.598   416  3674 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:36:59.599   416  3675 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:36:59.600   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=31
+07-15 16:36:59.600   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.600   416  3675 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:36:59.600   416  3675 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:36:59.601   416  3675 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:36:59.601   416  3675 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:36:59.601   416  3675 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:36:59.613  1418  1659 W A       : CompleteServer request has failed and can't show offline suggestions.
+07-15 16:36:59.613  1418  1659 W A       : com.google.frameworks.client.data.android.ac: Http networking stack error
+07-15 16:36:59.613  1418  1659 W A       : 	at com.google.frameworks.client.data.android.x.run(PG:36)
+07-15 16:36:59.613  1418  1659 W A       : 	at com.google.android.libraries.k.x.run(PG:3)
+07-15 16:36:59.613  1418  1659 W A       : 	at com.google.common.n.c.c.run(PG:50)
+07-15 16:36:59.613  1418  1659 W A       : 	at com.google.android.libraries.k.e.run(PG:8)
+07-15 16:36:59.613  1418  1659 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+07-15 16:36:59.613  1418  1659 W A       : 	at com.google.android.libraries.k.d.b.run(PG:74)
+07-15 16:36:59.613  1418  1659 W A       : Caused by: org.chromium.net.impl.ct: Exception in CronetUrlRequest: net::ERR_NAME_NOT_RESOLVED, ErrorCode=1, InternalErrorCode=-105, Retryable=false
+07-15 16:36:59.613  1418  1659 W A       : 	at org.chromium.net.impl.CronetUrlRequest.onError(PG:80)
+07-15 16:36:59.614   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=32
+07-15 16:36:59.615   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.615  1418  1659 W A       : #getSuggestions failed
+07-15 16:36:59.615  1418  1659 W A       : com.google.frameworks.client.data.android.ac: Http networking stack error
+07-15 16:36:59.615  1418  1659 W A       : 	at com.google.frameworks.client.data.android.x.run(PG:36)
+07-15 16:36:59.615  1418  1659 W A       : 	at com.google.android.libraries.k.x.run(PG:3)
+07-15 16:36:59.615  1418  1659 W A       : 	at com.google.common.n.c.c.run(PG:50)
+07-15 16:36:59.615  1418  1659 W A       : 	at com.google.android.libraries.k.e.run(PG:8)
+07-15 16:36:59.615  1418  1659 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+07-15 16:36:59.615  1418  1659 W A       : 	at com.google.android.libraries.k.d.b.run(PG:74)
+07-15 16:36:59.615  1418  1659 W A       : Caused by: org.chromium.net.impl.ct: Exception in CronetUrlRequest: net::ERR_NAME_NOT_RESOLVED, ErrorCode=1, InternalErrorCode=-105, Retryable=false
+07-15 16:36:59.615  1418  1659 W A       : 	at org.chromium.net.impl.CronetUrlRequest.onError(PG:80)
+07-15 16:36:59.615  1109  1109 D SsBaseTemplateCard: No text view can be set up
+07-15 16:36:59.615  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:36:59.615  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:36:59.615  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:36:59.615  1109  1109 I SsBaseTemplateCard: Secondary card pane is null
+07-15 16:36:59.617   876   996 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#11) android.os.BinderProxy@cb5fcb0@0
+07-15 16:36:59.618   619   655 V WindowManager: Finish Transition (#11): created at 07-15 16:36:58.811 collect-started=0.023ms request-sent=0.108ms started=4.677ms ready=110.117ms sent=111.832ms finished=807.308ms
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: Unable to get suggestions from AGA
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: io.grpc.StatusRuntimeException: UNKNOWN
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: 	at k3.e.a(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:77)
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: 	at i3.l.b(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:43)
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: 	at i3.l.a(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:27)
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: 	at i3.z.run(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:7)
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: 	at i3.m2.run(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:19)
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+07-15 16:36:59.619  1109  3668 E OneSearchSuggestProvider: 	at java.lang.Thread.run(Thread.java:1012)
+07-15 16:36:59.621   619  1887 W UserManagerService: Requested status bar icon for non-badged user 0
+07-15 16:36:59.621  1109  1109 D SearchTargetUtil: query= size=0
+07-15 16:36:59.621   619   992 W UserManagerService: Requested status bar icon for non-badged user 0
+07-15 16:36:59.622   876   996 V WindowManagerShell: Track 0 became idle
+07-15 16:36:59.622   876   996 V WindowManagerShell: All active transition animations finished
+07-15 16:36:59.622  1109  1109 I TopTaskTracker: onTaskRemoved: taskId=32
+07-15 16:36:59.622  1109  1109 I TopTaskTracker: onTaskRemoved: taskId=32
+07-15 16:36:59.633   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=33
+07-15 16:36:59.633   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.649   619  3676 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+07-15 16:36:59.651   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=34
+07-15 16:36:59.651   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:36:59.655   619  3676 I EGL_emulation: Opening libGLESv2_emulation.so
+07-15 16:36:59.667   619  3676 W HWUI    : Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+07-15 16:36:59.667   619  3676 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+07-15 16:37:00.004  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:37:00.004  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:37:00.004  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:37:00.004  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:37:00.004  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:37:00.005  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:37:00.005  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:37:00.005  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:37:00.005  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:37:00.005  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:37:00.005  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:37:00.005  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:37:00.005  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+07-15 16:37:00.005  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+07-15 16:37:00.006  1109  1109 D SsBaseTemplateCard: No text view can be set up
+07-15 16:37:00.006  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:37:00.006  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:37:00.006  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:37:00.006  1109  1109 I SsBaseTemplateCard: Secondary card pane is null
+07-15 16:37:00.022  1109  1412 D EGL_emulation: app_time_stats: avg=23.76ms min=0.77ms max=386.86ms count=34
+07-15 16:37:00.023   876   876 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+07-15 16:37:00.025   876  1083 D EGL_emulation: app_time_stats: avg=51426.84ms min=51426.84ms max=51426.84ms count=1
+07-15 16:37:00.032   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=35
+07-15 16:37:00.032   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11566, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missed App frame:UNKNOWN: 88, 11574, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 88, 11574, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11574, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missed App frame:UNKNOWN: 88, 11589, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 88, 11589, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11589, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11611, 100802478, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11635, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.035  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11635, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11643, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11643, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11658, 33395556, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed App frame:UNKNOWN: 88, 11680, 35239341, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 88, 11680, 35239341, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11695, 34744211, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed App frame:UNKNOWN: 88, 11703, 35525977, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 88, 11703, 35525977, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed App frame:UNKNOWN: 88, 11718, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 88, 11718, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11718, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11740, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11740, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11748, 42674496, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11763, 41811112, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11785, 38016015, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11793, 40922603, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11808, 36955230, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11816, 38183092, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11824, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11824, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11832, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11832, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11840, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missing HWUI jank callback for vsyncId: 11840, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11848, 38103668, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11856, 43551444, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11864, 36596956, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11873, 23209542, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11881, 25632948, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11889, 20544123, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11897, 21131739, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11905, 23398538, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11913, 22795837, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 80, 11921, 20854964, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed App frame:UNKNOWN: 88, 11929, 36924411, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.036  1109  1109 W FrameTracker: Missed SF frame:UNKNOWN: 88, 11929, 36924411, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+07-15 16:37:00.038  1109  1138 V PerfettoTrigger: Triggering /system/bin/trigger_perfetto com.android.telemetry.interaction-jank-monitor-9
+07-15 16:37:00.098   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:00.098   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:00.099   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:00.247   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:37:01.103   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:01.103   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:01.103   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:01.865   619  1393 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+07-15 16:37:02.107   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:02.107   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:02.107   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:03.072   416  3680 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:37:03.073   416  3681 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:37:03.073   416  3681 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:03.073   416  3682 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:37:03.074   416  3681 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:03.074   416  3681 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:03.074   416  3681 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:03.074   416  3681 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:03.074   416  3681 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:03.076   416  3682 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:03.077   416  3682 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:03.077   416  3682 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:03.077   416  3682 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:03.077   416  3682 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:03.077   416  3682 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:03.078  1088  3679 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:37:03.111   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:03.111   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:03.111   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:04.113   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:04.113   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:04.114   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:05.115   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:05.116   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:05.116   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:06.119   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:06.119   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:06.119   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:06.346   619   992 D OomAdjuster: Not killing cached processes
+07-15 16:37:06.848   619   619 I ResourceTimer: GetResourceValue count=2678 pvalues=2000,7000,10000,140000
+07-15 16:37:06.848   619   619 I ResourceTimer: RetrieveAttributes count=4217 pvalues=1000,1000,2000,11000
+07-15 16:37:07.121   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:07.121   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:07.121   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:07.453   416  3683 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:37:07.453   416  3684 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:37:07.453   416  3684 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:07.454   416  3684 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:07.454   416  3685 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:37:07.454   416  3684 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:07.457   416  3685 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:07.457   416  3684 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:07.457   416  3684 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:07.457   416  3684 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:07.458   416  3685 I resolv  : retrying_poll: 48 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:07.458   416  3685 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:07.459   416  3685 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:07.459   416  3685 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:07.459   416  3685 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:07.459  1088  3679 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:37:07.641   619   732 D ActivityManager: freezing 1822 com.android.providers.calendar
+07-15 16:37:07.647   619   789 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+07-15 16:37:07.648   619   789 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+07-15 16:37:07.648   619   789 D InetDiagMessage: Destroyed live tcp sockets for uids={10100} in 1ms
+07-15 16:37:08.124   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:08.124   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:08.124   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:09.127   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:09.127   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:09.128   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:10.129   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:10.129   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:10.129   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:10.247   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:37:11.065   619   728 W CpuMonitorService: Current CPU frequency (3413487) is greater than maximum CPU frequency (2) for policy ID (0). Skipping CPU frequency policy
+07-15 16:37:11.065   619   728 W CpuMonitorService: Current CPU frequency (3423637) is greater than maximum CPU frequency (2) for policy ID (1). Skipping CPU frequency policy
+07-15 16:37:11.065   619   728 W CpuMonitorService: Current CPU frequency (3999852) is greater than maximum CPU frequency (2) for policy ID (3). Skipping CPU frequency policy
+07-15 16:37:11.116   619   732 D ActivityManager: freezing 3539 com.android.keychain
+07-15 16:37:11.116   619   732 D ActivityManager: freezing 2829 com.android.settings
+07-15 16:37:11.118   619   732 D ActivityManager: freezing 2791 com.google.android.settings.intelligence
+07-15 16:37:11.132   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:11.132   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:11.133   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:11.235   619   789 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+07-15 16:37:11.235   619   789 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+07-15 16:37:11.236   619   789 D InetDiagMessage: Destroyed live tcp sockets for uids={10140} in 0ms
+07-15 16:37:12.135   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:12.135   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:12.135   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:12.424   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.425   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.425   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.425   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.425   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.426   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.428   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.428   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.428   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:12.429   619   657 I DropBoxManagerService: add tag=system_server_strictmode isTagEnabled=true flags=0x2
+07-15 16:37:13.139   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:13.139   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:13.139   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:13.465   619   992 D OomAdjuster: Not killing cached processes
+07-15 16:37:13.624   416  3686 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:37:13.625   416  3687 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:37:13.625   416  3687 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:13.625   416  3688 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:37:13.626   416  3687 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:13.626   416  3687 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:13.627   416  3687 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:13.627   416  3687 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:13.627   416  3687 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:13.628   416  3688 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:13.629   416  3688 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:13.629   416  3688 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:13.630   416  3688 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:13.630   416  3688 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:13.630   416  3688 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:13.630  1088  3679 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:37:14.141   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:14.142   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:14.142   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:14.406   416   469 I netd    : tetherGetStats() -> {[]} <0.26ms>
+07-15 16:37:15.145   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:15.145   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:15.145   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:15.938   619   782 E WifiScoringParams: Invalid frequency(-1), using 5G as default rssi array
+07-15 16:37:16.148   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:16.149   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:16.149   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:17.151   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:17.151   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:17.151   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:18.154   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:18.154   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:18.154   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:18.747  1343  1730 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+07-15 16:37:19.157   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:19.157   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:19.157   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:19.754   619  1887 D WifiNl80211Manager: Scan result ready event
+07-15 16:37:19.754   619  1887 D WifiNative: Scan result ready event
+07-15 16:37:19.782   619   782 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+07-15 16:37:20.160   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:20.160   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:20.161   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:20.242  1088  2233 W CCTBackstopTask: Backstop checks have failed.
+07-15 16:37:20.248   619  1887 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:37:20.306   416  3692 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:37:20.306   416  3693 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:37:20.306   416  3694 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:37:20.307   416  3693 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:20.308   416  3693 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:20.308   416  3693 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:20.309   416  3693 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:20.309   416  3693 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:20.309   416  3693 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:20.311   416  3694 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:20.312   416  3694 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:20.312   416  3694 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:20.312   416  3694 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:20.312   416  3694 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:20.312   416  3694 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:20.316   416  3695 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:37:20.316   416  3696 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:37:20.316   416  3696 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:20.316   416  3697 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:37:20.316   416  3696 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:20.316   416  3696 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:20.317   416  3696 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:20.317   416  3696 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:20.317   416  3696 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:20.320   416  3697 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:20.321   416  3697 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:20.321   416  3697 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:20.321   416  3697 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:20.322   416  3697 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:20.322   416  3697 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: The BackstopTask future failed!
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: java.io.IOException: bpcw: Failed to process request
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at alfp.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):106)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at akvq.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):575)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at etvv.d(:com.google.android.gms@242335041@24.23.35 (190800-646585959):3)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at etvx.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):42)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at angs.c(:com.google.android.gms@242335041@24.23.35 (190800-646585959):50)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at angs.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):76)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at anmg.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at java.lang.Thread.run(Thread.java:1012)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: Caused by: bpcw: Failed to process request
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at bpgb.b(:com.google.android.gms@242335041@24.23.35 (190800-646585959):19)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at bpgp.onFailed(:com.google.android.gms@242335041@24.23.35 (190800-646585959):13)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at m.mw.onFailed(:com.google.android.gms.dynamite_cronetdynamite@242335041@24.23.35 (190800-0):3)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at m.lw.run(:com.google.android.gms.dynamite_cronetdynamite@242335041@24.23.35 (190800-0):9)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at etxk.execute(:com.google.android.gms@242335041@24.23.35 (190800-646585959):1)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at org.chromium.net.impl.CronetUrlRequest.onNativeAdapterDestroyed(:com.google.android.gms.dynamite_cronetdynamite@242335041@24.23.35 (190800-0):18)
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: Caused by: m.mg: Exception in CronetUrlRequest: net::ERR_NAME_NOT_RESOLVED, ErrorCode=1, InternalErrorCode=-105, Retryable=false
+07-15 16:37:20.328  1088  2233 E CCTBackstopTask: 	at org.chromium.net.impl.CronetUrlRequest.onError(:com.google.android.gms.dynamite_cronetdynamite@242335041@24.23.35 (190800-0):4)
+07-15 16:37:21.164   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:21.164   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:21.164   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:22.166   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:22.166   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:22.167   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:22.780   619  1887 D OomAdjuster: Not killing cached processes
+07-15 16:37:22.811   416   469 I netd    : tetherGetStats() -> {[]} <0.51ms>
+07-15 16:37:23.170   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:23.170   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:23.171   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:24.173   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:24.174   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:24.174   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:25.177   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:25.177   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:25.177   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:26.179   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:26.180   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:26.180   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:27.183   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:27.184   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:27.184   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:28.187   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:28.188   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:28.188   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:28.235   416  3701 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:37:28.236   416  3702 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:37:28.236   416  3703 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:37:28.236   416  3702 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:28.239   416  3702 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:28.240   416  3703 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:28.240   416  3702 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:28.240   416  3703 I resolv  : retrying_poll: 48 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:28.240   416  3703 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:28.241   416  3703 I resolv  : retrying_poll: 48 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:28.241   416  3703 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:28.241   416  3702 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:28.241   416  3703 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:28.241   416  3702 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:28.241   416  3702 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:28.242  1088  3679 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:37:28.822   619   666 D OomAdjuster: Not killing cached processes
+07-15 16:37:29.191   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:29.192   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:29.192   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:30.195   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:30.195   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:30.195   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:30.248   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:37:31.197   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:31.198   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:31.198   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:32.201   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:32.201   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:32.201   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:33.203   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:33.203   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:33.204   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:34.207   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:34.207   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:34.207   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:35.210   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:35.210   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:35.211   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:35.272   619   993 D OomAdjuster: Not killing cached processes
+07-15 16:37:36.213   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:36.213   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:36.214   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:37.217   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:37.217   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:37.218   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:37.835   416   469 I netd    : tetherGetStats() -> {[]} <0.29ms>
+07-15 16:37:38.221   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:38.221   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:38.221   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:39.224   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:39.224   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:39.224   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:40.227   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:40.227   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:40.227   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:40.248   619   989 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:37:40.277   876  1083 D EGL_emulation: app_time_stats: avg=20125.46ms min=247.55ms max=40003.37ms count=2
+07-15 16:37:40.693   619   667 D OomAdjuster: Not killing cached processes
+07-15 16:37:40.698  1088  2235 E WakeLock: GCM_HB_ALARM release without a matched acquire!
+07-15 16:37:40.698  1088  2235 W WakeLock: GCM_HB_ALARM counter does not exist
+07-15 16:37:40.700  1088  2235 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_CONN_ALARM type: 2 triggerAtMillis: 664710]
+07-15 16:37:41.229   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:41.231   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:41.231   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:42.233   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:42.233   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:42.234   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:43.236   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:43.236   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:43.237   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:44.239   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:44.240   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:44.240   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:45.242   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:45.243   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:45.243   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:46.245   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:46.245   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:46.245   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:47.164   416  3705 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:37:47.165   416  3706 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:37:47.165   416  3706 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:47.166   416  3706 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:47.166   416  3706 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:47.167   416  3707 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:37:47.168   416  3706 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:47.168   416  3706 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:47.168   416  3706 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:47.170   416  3707 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:37:47.170   416  3707 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:47.170   416  3707 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:47.171   416  3707 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:37:47.171   416  3707 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:37:47.171   416  3707 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:37:47.171  1088  3679 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:37:47.249   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:47.249   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:47.249   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:48.253   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:48.253   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:48.253   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:49.256   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:49.256   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:49.257   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:50.249   619   989 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:37:50.258   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:50.258   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:50.258   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:51.260   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:51.260   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:51.261   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:52.262   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:52.262   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:52.262   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:53.263   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:53.264   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:53.264   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:54.266   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:54.266   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:54.266   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:55.268   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:55.268   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:55.268   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:56.270   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:56.270   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:56.271   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:57.272   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:57.273   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:57.273   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:58.277   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:58.277   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:58.277   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:59.280   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:59.280   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:59.280   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:37:59.417   619   992 D OomAdjuster: Not killing cached processes
+07-15 16:37:59.431   416   469 I netd    : tetherGetStats() -> {[]} <0.28ms>
+07-15 16:38:00.007  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:38:00.007  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:38:00.007  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:38:00.007  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:38:00.007  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:38:00.007  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:38:00.007  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:38:00.007  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:38:00.007  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:38:00.007  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:38:00.007  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:38:00.007  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:38:00.007  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+07-15 16:38:00.007  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+07-15 16:38:00.008  1109  1109 D SsBaseTemplateCard: No text view can be set up
+07-15 16:38:00.008  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:38:00.008  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:38:00.008  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:38:00.008  1109  1109 I SsBaseTemplateCard: Secondary card pane is null
+07-15 16:38:00.018   876   876 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+07-15 16:38:00.020  1109  1412 D EGL_emulation: app_time_stats: avg=59997.68ms min=59997.68ms max=59997.68ms count=1
+07-15 16:38:00.023   876  1083 D EGL_emulation: app_time_stats: avg=19745.67ms min=19745.67ms max=19745.67ms count=1
+07-15 16:38:00.032   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=36
+07-15 16:38:00.032   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:38:00.250   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:38:00.281   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:00.281   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:00.281   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:01.284   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:01.284   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:01.284   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:02.287   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:02.287   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:02.287   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:03.290   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:03.290   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:03.290   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:04.293   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:04.294   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:04.294   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:04.627  1109  1119 I IPCThreadState: oneway function results for code 2 on binder at 0x75b04ceba720 will be dropped but finished with status UNKNOWN_TRANSACTION
+07-15 16:38:04.627   619   992 D OomAdjuster: Not killing cached processes
+07-15 16:38:04.642   416   469 I netd    : tetherGetStats() -> {[]} <0.07ms>
+07-15 16:38:05.296   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:05.297   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:05.297   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:06.300   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:06.300   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:06.301   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:07.303   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:07.303   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:07.303   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:08.305   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:08.305   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:08.306   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:09.308   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:09.308   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:09.308   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:10.249   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:38:10.310   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:10.310   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:10.310   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:11.312   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:11.312   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:11.312   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:12.314   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:12.314   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:12.314   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:13.317   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:13.318   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:13.318   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:14.320   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:14.320   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:14.320   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:14.469   619   989 D OomAdjuster: Not killing cached processes
+07-15 16:38:15.323   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:15.323   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:15.324   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:16.325   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:16.326   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:16.326   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:17.326   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:17.327   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:17.327   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:18.330   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:18.330   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:18.330   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:18.743  1343  1730 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+07-15 16:38:19.332   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:19.332   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:19.332   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+--------- beginning of kernel
+07-15 16:38:19.923     0     0 I logd    : logdr: UID=2000 GID=2000 PID=3708 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+07-15 16:38:20.249   619   989 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:38:20.271   876  1083 D EGL_emulation: app_time_stats: avg=20248.41ms min=20248.41ms max=20248.41ms count=1
+07-15 16:38:20.333   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:20.333   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:20.333   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:21.337   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:21.337   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:21.337   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:22.338   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:22.339   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:22.339   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:23.341   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:23.341   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:23.342   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:24.344   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:24.345   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:24.345   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:25.347   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:25.347   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:25.347   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:26.351   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:26.351   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:26.352   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:27.355   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:27.355   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:27.355   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:28.358   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:28.358   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:28.358   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:29.360   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:29.360   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:29.360   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:30.249   619   989 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:38:30.362   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:30.362   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:30.362   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:31.365   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:31.365   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:31.366   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:32.368   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:32.368   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:32.368   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:33.370   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:33.370   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:33.370   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:34.372   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:34.372   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:34.372   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:35.375   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:35.375   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:35.375   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:36.377   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:36.378   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:36.378   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:37.379   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:37.380   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:37.380   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:38.382   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:38.382   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:38.383   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:39.385   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:39.385   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:39.385   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:40.249   619  1887 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:38:40.387   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:40.387   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:40.387   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:41.389   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:41.389   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:41.389   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:42.391   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:42.391   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:42.391   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:43.394   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:43.394   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:43.394   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:44.396   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:44.396   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:44.396   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:45.399   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:45.399   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:45.399   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:46.401   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:46.401   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:46.401   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:47.404   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:47.404   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:47.404   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:48.407   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:48.407   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:48.408   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:49.410   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:49.410   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:49.410   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:50.249   619   989 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:38:50.411   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:50.411   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:50.411   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:51.413   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:51.413   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:51.413   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:52.415   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:52.415   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:52.416   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:53.418   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:53.418   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:53.418   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:54.420   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:54.420   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:54.420   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:55.423   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:55.423   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:55.424   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:55.718   619   993 D OomAdjuster: Not killing cached processes
+07-15 16:38:56.426   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:56.426   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:56.426   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:57.428   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:57.428   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:57.428   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:58.026   416  3712 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:38:58.030   416  3713 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:38:58.030   416  3713 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:38:58.030   416  3714 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:38:58.031   416  3713 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:38:58.031   416  3713 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:38:58.032   416  3713 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:38:58.032   416  3713 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:38:58.032   416  3713 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:38:58.033   416  3714 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:38:58.033   416  3714 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:38:58.033   416  3714 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:38:58.034   416  3714 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:38:58.034   416  3714 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:38:58.034   416  3714 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:38:58.034  1088  3711 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:38:58.431   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:58.431   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:58.431   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:59.434   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:59.434   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:38:59.434   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:00.005  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:39:00.005  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:39:00.005  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:39:00.005  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:39:00.005  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:39:00.005  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:39:00.005  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:39:00.005  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:39:00.005  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:39:00.005  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:39:00.005  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:39:00.005  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:39:00.006  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+07-15 16:39:00.006  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+07-15 16:39:00.006   876   876 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+07-15 16:39:00.006  1109  1109 D SsBaseTemplateCard: No text view can be set up
+07-15 16:39:00.006  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:39:00.006  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:39:00.006  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:39:00.006  1109  1109 I SsBaseTemplateCard: Secondary card pane is null
+07-15 16:39:00.017  1109  1412 D EGL_emulation: app_time_stats: avg=59997.65ms min=59997.65ms max=59997.65ms count=1
+07-15 16:39:00.027   876  1083 D EGL_emulation: app_time_stats: avg=39755.52ms min=39755.52ms max=39755.52ms count=1
+07-15 16:39:00.032   479   479 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#104 parentId=101} producedId=3 frameNumber=38 -> producedId=3 frameNumber=37
+07-15 16:39:00.032   479   479 D SurfaceFlinger: TransactionTraceWriter: file=/data/misc/wmtrace/out_of_order_buffers_transactions_trace.winscope already exists
+07-15 16:39:00.251   619   989 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:39:00.436   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:00.436   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:00.436   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:01.438   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:01.438   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:01.438   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:02.441   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:02.441   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:02.441   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:03.137   416  3715 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:39:03.138   416  3716 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:39:03.138   416  3716 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:39:03.137   416  3717 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:39:03.138   416  3716 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:03.138   416  3716 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:03.139   416  3716 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:03.139   416  3716 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:03.139   416  3716 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:39:03.141   416  3717 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:39:03.141   416  3717 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:03.141   416  3717 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:03.143   416  3717 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:03.143   416  3717 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:03.143   416  3717 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:39:03.143  1088  3711 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:39:03.444   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:03.444   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:03.444   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:04.448   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:04.448   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:04.448   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:05.451   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:05.451   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:05.451   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:06.453   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:06.453   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:06.453   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:07.456   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:07.456   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:07.456   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:08.458   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:08.458   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:08.458   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:09.460   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:09.460   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:09.460   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:10.251   619   993 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:39:10.462   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:10.462   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:10.463   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:11.465   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:11.465   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:11.465   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:12.467   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:12.467   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:12.467   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:13.470   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:13.470   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:13.471   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:14.473   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:14.473   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:14.473   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:15.476   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:15.476   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:15.476   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:16.479   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:16.479   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:16.479   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:17.329   416  3718 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:39:17.329   416  3719 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:39:17.329   416  3719 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:39:17.329   416  3720 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:39:17.330   416  3719 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:17.330   416  3719 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:17.330   416  3719 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:17.330   416  3719 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:17.330   416  3719 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:39:17.332   416  3720 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:39:17.333   416  3720 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:17.333   416  3720 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:17.334   416  3720 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:17.334   416  3720 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:17.334   416  3720 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:39:17.334  1088  3711 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:39:17.481   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:17.482   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:17.482   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:18.484   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:18.485   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:18.485   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:18.743  1343  1627 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+07-15 16:39:19.487   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:19.487   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:19.487   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:20.250   619  1887 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:39:20.489   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:20.490   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:20.490   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:21.494   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:21.494   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:21.494   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:22.498   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:22.498   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:22.498   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:23.501   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:23.501   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:23.501   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:24.503   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:24.503   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:24.503   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:25.506   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:25.506   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:25.506   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:25.666   416  3721 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:39:25.666   416  3722 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:39:25.666   416  3722 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:39:25.666   416  3723 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:39:25.666   416  3722 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:25.666   416  3722 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:25.668   416  3722 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:25.668   416  3722 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:25.668   416  3722 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:39:25.670   416  3723 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:39:25.670   416  3723 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:25.670   416  3723 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:25.671   416  3723 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:25.671   416  3723 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:25.671   416  3723 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:39:25.671  1088  3711 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:39:26.508   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:26.508   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:26.508   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:27.511   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:27.511   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:27.512   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:28.514   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:28.514   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:28.514   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:29.516   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:29.517   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:29.517   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:30.250   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:39:30.519   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:30.520   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:30.520   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:31.522   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:31.522   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:31.522   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:32.524   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:32.524   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:32.525   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:33.527   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:33.527   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:33.527   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:34.529   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:34.529   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:34.529   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:34.720   619   667 D OomAdjuster: Not killing cached processes
+07-15 16:39:34.750   619   992 D ActivityManager: sync unfroze 1645 com.google.android.gms for 6
+07-15 16:39:34.752   416  3725 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:39:34.753   416  3726 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:39:34.753   416  3727 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:39:34.753   416  3726 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:39:34.754  1645  2756 I ChimeraPrvdrProxy: Shutting down chimera ContentProvider com.google.android.gms.reminders.provider.RemindersChimeraProvider
+07-15 16:39:34.755   416  3726 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:34.755   416  3726 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:34.756   416  3726 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:34.756   416  3726 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:34.756   416  3726 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:39:34.755   416  3727 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:39:34.756   416  3727 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:34.756   416  3727 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:34.757   416  3727 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:39:34.757   416  3727 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:39:34.757   416  3727 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:39:34.758  1645  3586 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:39:34.760   619  1887 W ProcessStats: Tracking association SourceState{6984cb8 com.google.android.gms.persistent/10143 ImpBg #2041} whose proc state 6 is better than process ProcessState{ec6c939 com.google.android.gms/10143 pkg=com.google.android.gms} proc state 14 (18 skipped)
+07-15 16:39:34.759  1645  1645 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+07-15 16:39:34.761  1088  2233 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.gcm.gmsproc.GcmInGmsTaskService started execution. cause:4 exec_start_elapsed_seconds: 458 [CONTEXT service_id=218 ]
+07-15 16:39:34.761  1088  2233 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.gcm.gmsproc.GcmInGmsTaskService started execution. cause:4 exec_start_elapsed_seconds: 458 [CONTEXT service_id=218 ]
+07-15 16:39:34.766  1645  2756 I GCM-GMS : Registering GMS 745476177629
+07-15 16:39:34.769  1645  2488 I GCM-GMS : Registering GMS for direct boot.
+07-15 16:39:34.773  1645  2756 W GCM-GMS : Failed to get registration: java.io.IOException: AUTHENTICATION_FAILED
+07-15 16:39:34.774  1645  2488 W GCM-GMS : Failed to get direct boot token: java.io.IOException: AUTHENTICATION_FAILED
+07-15 16:39:34.775  1088  2235 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.gcm.gmsproc.GcmInGmsTaskService finished executing. cause:4 result: 3 elapsed_millis: 40 uptime_millis: 40 exec_start_elapsed_seconds: 458 [CONTEXT service_id=218 ]
+07-15 16:39:34.787  1088  2235 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.gcm.gmsproc.GcmInGmsTaskService finished executing. cause:4 result: 3 elapsed_millis: 44 uptime_millis: 44 exec_start_elapsed_seconds: 458 [CONTEXT service_id=218 ]
+07-15 16:39:35.531   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:35.531   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:35.531   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:36.534   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:36.534   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:36.535   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:37.536   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:37.537   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:37.537   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:38.539   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:38.539   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:38.540   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:39.541   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:39.541   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:39.542   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:40.253   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:39:40.543   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:40.543   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:40.543   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:41.545   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:41.545   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:41.545   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:42.548   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:42.548   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:42.548   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:43.550   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:43.550   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:43.550   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:44.554   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:44.554   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:44.554   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:44.805   619   732 D ActivityManager: freezing 1645 com.google.android.gms
+07-15 16:39:45.557   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:45.557   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:45.557   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:46.561   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:46.562   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:46.562   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:47.565   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:47.565   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:47.566   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:48.568   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:48.568   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:48.569   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:49.571   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:49.571   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:49.572   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:50.250   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:39:50.573   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:50.573   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:50.574   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:51.577   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:51.578   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:51.578   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:52.581   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:52.581   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:52.582   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:53.584   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:53.584   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:53.584   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:54.587   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:54.587   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:54.587   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:55.590   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:55.590   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:55.590   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:56.042   619   782 E WifiScoringParams: Invalid frequency(-1), using 5G as default rssi array
+07-15 16:39:56.592   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:56.592   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:56.592   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:57.596   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:57.597   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:57.597   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:58.599   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:58.599   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:58.599   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:59.602   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:59.602   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:59.602   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:39:59.802   619   989 D WifiNl80211Manager: Scan result ready event
+07-15 16:39:59.802   619   989 D WifiNative: Scan result ready event
+07-15 16:39:59.809   619   782 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+07-15 16:40:00.006  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:40:00.006  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:40:00.006  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:40:00.006  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:40:00.006  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:40:00.006  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:40:00.006  1307  1642 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+07-15 16:40:00.006  1307  1642 I AiAiEcho: EchoTargets: 
+07-15 16:40:00.006  1307  1642 I AiAiEcho: Filtered by AiAi flag check: 
+07-15 16:40:00.006  1307  1642 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:40:00.006  1307  1642 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+07-15 16:40:00.006  1307  1642 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+07-15 16:40:00.006  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+07-15 16:40:00.006  1307  1642 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+07-15 16:40:00.007  1109  1109 D SsBaseTemplateCard: No text view can be set up
+07-15 16:40:00.007  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:40:00.007  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:40:00.007  1109  1109 D SsBaseTemplateCard: Passed-in item info is null
+07-15 16:40:00.007  1109  1109 I SsBaseTemplateCard: Secondary card pane is null
+07-15 16:40:00.019   876   876 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+07-15 16:40:00.019  1109  1412 D EGL_emulation: app_time_stats: avg=60001.29ms min=60001.29ms max=60001.29ms count=1
+07-15 16:40:00.023   876  1083 D EGL_emulation: app_time_stats: avg=59996.71ms min=59996.71ms max=59996.71ms count=1
+07-15 16:40:00.252   619   992 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:40:00.603   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:00.604   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:00.604   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:01.607   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:01.607   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:01.608   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:02.611   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:02.611   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:02.612   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:03.601   416  3731 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+07-15 16:40:03.602   416  3732 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+07-15 16:40:03.603   416  3733 I resolv  : res_nmkquery: (QUERY, IN, A)
+07-15 16:40:03.603   416  3732 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:40:03.604   416  3732 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:40:03.604   416  3732 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:40:03.604   416  3732 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:40:03.604   416  3732 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:40:03.605   416  3732 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:40:03.606   416  3733 I resolv  : res_stats_usable_server: too many resolution errors, ignoring server
+07-15 16:40:03.606   416  3733 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:40:03.606   416  3733 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:40:03.607   416  3733 I resolv  : retrying_poll: 47 retrying_poll getsockopt failed: Connection refused
+07-15 16:40:03.607   416  3733 I resolv  : res_nsend: used send_dg 0 terrno: 111
+07-15 16:40:03.607   416  3733 I resolv  : doQuery: rcode=0, ancount=0, return value=-111
+07-15 16:40:03.607  1088  3711 W gclk    : [{0}] Failed to resolve name. status={1}
+07-15 16:40:03.614   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:03.614   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:03.614   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:04.617   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:04.617   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:04.618   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:05.620   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:05.620   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:05.620   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:06.623   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:06.623   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:06.623   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:07.625   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:07.626   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:07.626   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:08.629   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:08.629   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:08.629   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:09.632   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:09.632   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:09.632   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:10.254   619  1887 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:40:10.634   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:10.634   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:10.635   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:11.364   619   728 W CpuMonitorService: Current CPU frequency (5093148) is greater than maximum CPU frequency (2) for policy ID (0). Skipping CPU frequency policy
+07-15 16:40:11.637   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:11.637   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:11.638   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:12.641   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:12.641   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:12.641   619  1887 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:13.642   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:13.642   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:13.642   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:14.644   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:14.645   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:14.645   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:15.648   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:15.648   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:15.648   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:16.650   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:16.650   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:16.650   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:17.652   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:17.652   619   993 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:17.652   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:18.656   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:18.656   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:18.656   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:18.743  1343  1627 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+07-15 16:40:19.658   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:19.658   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:19.658   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:20.254   619   989 W IPCThreadState: Sending oneway calls to frozen process.
+07-15 16:40:20.661   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:20.661   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:20.661   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:21.664   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:21.664   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:21.665   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:22.667   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:22.667   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:22.667   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:23.671   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:23.671   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:23.671   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:24.674   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:24.674   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:24.674   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:25.676   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:25.676   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:25.676   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:26.678   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:26.679   619   989 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:26.679   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:27.681   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:27.681   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:27.681   619   992 W BestClock: java.time.DateTimeException: Missing network time fix
+07-15 16:40:27.736     0     0 I logd    : logdr: UID=2000 GID=2000 PID=3734 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns

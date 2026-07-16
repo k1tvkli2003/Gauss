@@ -13,6 +13,7 @@ class GaussController extends ChangeNotifier {
   final QuestionBankRepository _questionBank;
   final ProgressRepository _progress;
   final List<AttemptRecord> _attempts = [];
+  final Map<String, int> _completedByTopic = {};
   String? _selectedTopicKey;
   bool _ready = false;
   GaussFailure? _fatalError;
@@ -71,11 +72,7 @@ class GaussController extends ChangeNotifier {
   int get xp => _gamification.totalXp;
   double get accuracy =>
       _analytics.totalAnswered == 0 ? 0 : _analytics.accuracy / 100;
-  int completedInTopic(String key) => _attempts
-      .where((item) => item.topicKey == key && item.correct)
-      .map((item) => item.questionId)
-      .toSet()
-      .length;
+  int completedInTopic(String key) => _completedByTopic[key] ?? 0;
 
   Future<void> initialize() async {
     _fatalError = null;
@@ -188,6 +185,20 @@ class GaussController extends ChangeNotifier {
     _attempts
       ..clear()
       ..addAll(values[0] as List<AttemptRecord>);
+    final solvedByTopic = <String, Set<String>>{};
+    for (final attempt in _attempts) {
+      if (!attempt.correct) continue;
+      solvedByTopic
+          .putIfAbsent(attempt.topicKey, () => <String>{})
+          .add(attempt.questionId);
+    }
+    _completedByTopic
+      ..clear()
+      ..addEntries(
+        solvedByTopic.entries.map(
+          (entry) => MapEntry(entry.key, entry.value.length),
+        ),
+      );
     _analytics = values[1] as AnalyticsSnapshot;
     _gamification = values[2] as GamificationSummary;
     _revengeCount = (values[3] as List<String>).length;

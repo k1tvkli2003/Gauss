@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import 'app/gauss_app.dart';
@@ -15,6 +16,15 @@ Future<void> main() async {
     QuestionBankRepository(),
     ProgressRepository(database),
   );
-  await controller.initialize();
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      systemNavigationBarColor: Color(0xFF0B1417),
+      systemNavigationBarIconBrightness: Brightness.light,
+      systemNavigationBarDividerColor: Color(0xFF243337),
+    ),
+  );
   runApp(GaussApp(controller: controller));
+  await controller.initialize();
 }

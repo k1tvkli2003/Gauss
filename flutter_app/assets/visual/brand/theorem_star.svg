@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title desc">
+  <title id="title">Gauss Theorem Star</title>
+  <desc id="desc">An open theorem orbit around a four-rayed proof star with four geometric terminals.</desc>
+  <g fill="none" stroke="#F0C36A" stroke-width="5.2" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M78.5 17.8A43 43 0 1 0 78.5 82.2"/>
+    <path d="M75 63H91"/>
+  </g>
+  <g fill="none" stroke="#07151C" stroke-width="3.2" stroke-linecap="round">
+    <path d="M71.8 56.9A22.5 22.5 0 0 0 56.9 28.2"/>
+    <path d="M43.1 28.2A22.5 22.5 0 0 0 28.2 43.1"/>
+    <path d="M28.2 56.9A22.5 22.5 0 0 0 43.1 71.8"/>
+    <path d="M56.9 71.8A22.5 22.5 0 0 0 71.8 56.9"/>
+  </g>
+  <path fill="#F0C36A" d="M44.8 46Q47.4 37 50 21q2.6 16 5.2 25L50 51.2ZM54 44.8Q63 47.4 79 50q-16 2.6-25 5.2L48.8 50ZM55.2 54Q52.6 63 50 79q-2.6-16-5.2-25L50 48.8ZM46 55.2Q37 52.6 21 50q16-2.6 25-5.2L51.2 50Z"/>
+  <g fill="none" stroke="#F0C36A" stroke-width="4.2" stroke-linejoin="miter">
+    <circle cx="50" cy="14" r="5.5"/>
+    <rect x="9" y="45" width="10" height="10"/>
+    <path d="M86 50 76 43.5v13Z"/>
+    <path d="m50 78.9 7.1 7.1-7.1 7.1-7.1-7.1Z"/>
+  </g>
+  <circle cx="50" cy="50" r="8.3" fill="#F6ECD6"/>
+  <circle cx="50" cy="50" r="5.3" fill="#62AE9C"/>
+</svg>

@@ -1,4 +1,4 @@
-package com.gauss.gauss
+package com.gauss.app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,10 +1,14 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/content_blocks.dart';
+import '../widgets/gauss_brand.dart';
 import '../widgets/scratchpad.dart';
 
 class MissionScreen extends StatefulWidget {
@@ -152,6 +156,11 @@ class _MissionScreenState extends State<MissionScreen> {
         _checked = true;
         if (correct) _correct++;
       });
+      if (correct) {
+        unawaited(HapticFeedback.mediumImpact());
+      } else {
+        unawaited(HapticFeedback.selectionClick());
+      }
     } catch (error) {
       if (!mounted) return;
       setState(() => _operationError = error);
@@ -185,6 +194,7 @@ class _MissionScreenState extends State<MissionScreen> {
       );
       if (!mounted) return;
       setState(() => _checked = true);
+      unawaited(HapticFeedback.selectionClick());
     } catch (error) {
       if (!mounted) return;
       setState(() => _operationError = error);
@@ -212,6 +222,7 @@ class _MissionScreenState extends State<MissionScreen> {
           _completion = completion;
           _finished = true;
         });
+        unawaited(HapticFeedback.heavyImpact());
       } catch (error) {
         if (!mounted) return;
         setState(() => _operationError = error);
@@ -385,200 +396,333 @@ class _QuestionStage extends StatelessWidget {
   final VoidCallback onClose;
 
   @override
-  Widget build(BuildContext context) => SafeArea(
-    child: Column(
+  Widget build(BuildContext context) {
+    final correct = checked && selectedChoice == question.correctChoiceIndex;
+    return Stack(
+      fit: StackFit.expand,
       children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 10, 16, 8),
-          child: Row(
+        const _MissionBackdrop(),
+        SafeArea(
+          child: Column(
             children: [
-              IconButton(
-                onPressed: busy ? null : onClose,
-                tooltip: 'Leave mission',
-                icon: const Icon(Icons.close),
+              _MissionTopBar(
+                index: index,
+                total: total,
+                busy: busy,
+                onClose: onClose,
+                onScratchpad: onScratchpad,
               ),
-              const SizedBox(width: 8),
               Expanded(
-                child: LinearProgressIndicator(
-                  value: (index + 1) / total,
-                  minHeight: 8,
-                  borderRadius: BorderRadius.circular(99),
-                  backgroundColor: GaussColors.line,
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final wide = constraints.maxWidth >= 900;
+                    if (!wide) {
+                      return _QuestionScroll(
+                        question: question,
+                        index: index,
+                        selectedChoice: selectedChoice,
+                        checked: checked,
+                        busy: busy,
+                        showSolution: checked,
+                        onSelect: onSelect,
+                      );
+                    }
+                    return Padding(
+                      padding: const EdgeInsets.fromLTRB(18, 8, 18, 12),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          SizedBox(
+                            width: constraints.maxWidth >= 1200 ? 270 : 238,
+                            child: _CompanionDeck(
+                              checked: checked,
+                              correct: correct,
+                              index: index,
+                              total: total,
+                            ),
+                          ),
+                          const SizedBox(width: 18),
+                          Expanded(
+                            child: _QuestionScroll(
+                              question: question,
+                              index: index,
+                              selectedChoice: selectedChoice,
+                              checked: checked,
+                              busy: busy,
+                              showSolution: false,
+                              onSelect: onSelect,
+                              inset: EdgeInsets.zero,
+                            ),
+                          ),
+                          if (checked) ...[
+                            const SizedBox(width: 18),
+                            SizedBox(
+                              width: constraints.maxWidth >= 1250 ? 350 : 310,
+                              child: SingleChildScrollView(
+                                padding: const EdgeInsets.only(bottom: 12),
+                                child: _SolutionPanel(question: question),
+                              ),
+                            ),
+                          ],
+                        ],
+                      ),
+                    );
+                  },
                 ),
               ),
-              const SizedBox(width: 12),
-              Text(
-                '${index + 1} / $total',
-                style: const TextStyle(fontWeight: FontWeight.w800),
-              ),
-              const SizedBox(width: 4),
-              IconButton(
-                onPressed: busy ? null : onScratchpad,
-                tooltip: 'Open scratchpad',
-                icon: const Icon(Icons.edit_note),
+              _MissionActionBar(
+                question: question,
+                index: index,
+                total: total,
+                selectedChoice: selectedChoice,
+                checked: checked,
+                busy: busy,
+                operationError: operationError,
+                onCheck: onCheck,
+                onSkip: onSkip,
+                onNext: onNext,
               ),
             ],
           ),
         ),
+      ],
+    );
+  }
+}
+
+class _MissionBackdrop extends StatelessWidget {
+  const _MissionBackdrop();
+
+  @override
+  Widget build(BuildContext context) => Stack(
+    fit: StackFit.expand,
+    children: [
+      Image.asset(
+        'assets/visual/map/orrery_atmosphere_portrait.png',
+        fit: BoxFit.cover,
+        cacheWidth: 1200,
+        filterQuality: FilterQuality.low,
+      ),
+      const DecoratedBox(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xD907151C), Color(0xF2050B0D)],
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
+class _MissionTopBar extends StatelessWidget {
+  const _MissionTopBar({
+    required this.index,
+    required this.total,
+    required this.busy,
+    required this.onClose,
+    required this.onScratchpad,
+  });
+
+  final int index;
+  final int total;
+  final bool busy;
+  final VoidCallback onClose;
+  final VoidCallback onScratchpad;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.fromLTRB(10, 8, 10, 5),
+    child: Row(
+      children: [
+        IconButton(
+          onPressed: busy ? null : onClose,
+          tooltip: 'Leave mission',
+          icon: const Icon(Icons.close_rounded),
+        ),
+        const GaussWordmark(width: 92),
+        const SizedBox(width: 12),
         Expanded(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(18, 12, 18, 150),
-            child: Center(
-              child: ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 850),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          question.difficulty.label,
-                          style: const TextStyle(
-                            color: GaussColors.brassLight,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          question.sourceBank.toUpperCase(),
-                          style: const TextStyle(
-                            color: GaussColors.muted,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-                    Container(
-                      padding: const EdgeInsets.all(22),
-                      decoration: BoxDecoration(
-                        color: GaussColors.parchment,
-                        borderRadius: BorderRadius.circular(18),
-                        border: Border.all(
-                          color: GaussColors.brass.withValues(alpha: .5),
-                        ),
-                      ),
-                      child: ContentBlocksView(
-                        blocks: question.stem,
-                        textColor: GaussColors.parchmentInk,
-                        textStyle: Theme.of(context).textTheme.titleLarge,
-                      ),
-                    ),
-                    const SizedBox(height: 18),
-                    for (
-                      var choice = 0;
-                      choice < question.options.length;
-                      choice++
-                    )
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        child: _AnswerChoice(
-                          blocks: question.options[choice],
-                          choice: choice,
-                          selected: selectedChoice == choice,
-                          checked: checked,
-                          correctChoice: question.correctChoiceIndex,
-                          onTap: checked || busy
-                              ? null
-                              : () => onSelect(choice),
-                        ),
-                      ),
-                    if (checked) ...[
-                      const SizedBox(height: 12),
-                      _SolutionPanel(question: question),
-                    ],
-                  ],
-                ),
-              ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(GaussRadii.pill),
+            child: LinearProgressIndicator(
+              value: (index + 1) / total,
+              minHeight: 7,
+              backgroundColor: GaussColors.hairline,
             ),
           ),
         ),
-        DecoratedBox(
-          decoration: const BoxDecoration(
-            color: Color(0xF20C1113),
-            border: Border(top: BorderSide(color: GaussColors.line)),
+        const SizedBox(width: 11),
+        Semantics(
+          label: 'Question ${index + 1} of $total',
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+            decoration: BoxDecoration(
+              color: GaussColors.deepInk.withValues(alpha: .9),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: GaussColors.hairline),
+            ),
+            child: Text(
+              '${index + 1} / $total',
+              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12),
+            ),
           ),
-          child: SafeArea(
-            top: false,
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Center(
-                child: SizedBox(
-                  width: 850,
-                  child: Row(
-                    children: [
-                      if (operationError != null)
-                        const Expanded(
-                          child: Text(
-                            'We could not save this step. Your answer is still here—try again.',
-                            style: TextStyle(
-                              color: GaussColors.error,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        )
-                      else if (checked)
-                        Expanded(
-                          child: Text(
-                            selectedChoice == question.correctChoiceIndex
-                                ? 'Correct — orbit stabilized.'
-                                : question.solutionVerified
-                                ? 'Review the solution, then continue.'
-                                : 'The conflicting explanation is withheld; use the highlighted answer.',
-                            style: TextStyle(
-                              color:
-                                  selectedChoice == question.correctChoiceIndex
-                                  ? GaussColors.teal
-                                  : GaussColors.error,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        )
-                      else
-                        const Spacer(),
-                      if (!checked && !busy && operationError == null) ...[
-                        TextButton(
-                          onPressed: onSkip,
-                          child: const Text('Skip'),
-                        ),
-                        const SizedBox(width: 8),
-                      ],
-                      FilledButton.icon(
-                        onPressed: busy
-                            ? null
-                            : (operationError != null
-                                  ? (checked
-                                        ? onNext
-                                        : (selectedChoice == null
-                                              ? onSkip
-                                              : onCheck))
-                                  : checked
-                                  ? onNext
-                                  : (selectedChoice == null ? null : onCheck)),
-                        icon: busy
-                            ? const SizedBox.square(
-                                dimension: 18,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                ),
-                              )
-                            : Icon(checked ? Icons.arrow_forward : Icons.check),
-                        label: Text(
-                          busy
-                              ? 'Saving…'
-                              : operationError != null
-                              ? 'Try again'
-                              : checked
-                              ? (index == total - 1
-                                    ? 'Finish mission'
-                                    : 'Next question')
-                              : 'Check answer',
-                        ),
-                      ),
-                    ],
+        ),
+        const SizedBox(width: 3),
+        IconButton(
+          onPressed: busy ? null : onScratchpad,
+          tooltip: 'Open scratchpad',
+          icon: const GaussScratchGlyph(color: GaussColors.brassLight),
+        ),
+      ],
+    ),
+  );
+}
+
+class _QuestionScroll extends StatelessWidget {
+  const _QuestionScroll({
+    required this.question,
+    required this.index,
+    required this.selectedChoice,
+    required this.checked,
+    required this.busy,
+    required this.showSolution,
+    required this.onSelect,
+    this.inset = const EdgeInsets.fromLTRB(16, 8, 16, 18),
+  });
+
+  final Question question;
+  final int index;
+  final int? selectedChoice;
+  final bool checked;
+  final bool busy;
+  final bool showSolution;
+  final ValueChanged<int> onSelect;
+  final EdgeInsets inset;
+
+  @override
+  Widget build(BuildContext context) => SingleChildScrollView(
+    padding: inset,
+    child: Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 780),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                Text(
+                  'QUESTION ${index + 1}',
+                  style: const TextStyle(
+                    color: GaussColors.brassLight,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: 1.25,
                   ),
                 ),
+                const Spacer(),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 9,
+                    vertical: 5,
+                  ),
+                  decoration: BoxDecoration(
+                    color: GaussColors.brass.withValues(alpha: .09),
+                    borderRadius: BorderRadius.circular(GaussRadii.pill),
+                    border: Border.all(
+                      color: GaussColors.brass.withValues(alpha: .3),
+                    ),
+                  ),
+                  child: Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text(
+                      question.difficulty.label,
+                      style: const TextStyle(
+                        color: GaussColors.brassLight,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Semantics(
+              container: true,
+              excludeSemantics: true,
+              label: _blocksSemanticLabel(question.stem),
+              child: _QuestionPaper(question: question),
+            ),
+            const SizedBox(height: 15),
+            for (var choice = 0; choice < question.options.length; choice++)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: _AnswerChoice(
+                  blocks: question.options[choice],
+                  choice: choice,
+                  selected: selectedChoice == choice,
+                  checked: checked,
+                  correctChoice: question.correctChoiceIndex,
+                  onTap: checked || busy ? null : () => onSelect(choice),
+                ),
               ),
+            if (showSolution && checked) ...[
+              const SizedBox(height: 6),
+              _SolutionPanel(question: question),
+            ],
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class _QuestionPaper extends StatelessWidget {
+  const _QuestionPaper({required this.question});
+
+  final Question question;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    constraints: const BoxConstraints(minHeight: 142),
+    padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
+    decoration: BoxDecoration(
+      gradient: const LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [Color(0xFFF7EED9), GaussColors.parchment],
+      ),
+      borderRadius: BorderRadius.circular(20),
+      border: Border.all(color: GaussColors.brass.withValues(alpha: .65)),
+      boxShadow: const [
+        BoxShadow(
+          color: Color(0x66000000),
+          blurRadius: 24,
+          offset: Offset(0, 12),
+        ),
+      ],
+    ),
+    child: Stack(
+      children: [
+        Positioned(
+          top: -12,
+          right: -9,
+          child: Opacity(
+            opacity: .08,
+            child: TheoremStarMark(size: 82, darkInk: true),
+          ),
+        ),
+        Directionality(
+          textDirection: TextDirection.rtl,
+          child: ContentBlocksView(
+            blocks: question.stem,
+            textColor: GaussColors.parchmentInk,
+            textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
+              color: GaussColors.parchmentInk,
+              fontFamily: 'Vazirmatn',
+              height: 1.7,
             ),
           ),
         ),
@@ -586,6 +730,270 @@ class _QuestionStage extends StatelessWidget {
     ),
   );
 }
+
+class _CompanionDeck extends StatelessWidget {
+  const _CompanionDeck({
+    required this.checked,
+    required this.correct,
+    required this.index,
+    required this.total,
+  });
+
+  final bool checked;
+  final bool correct;
+  final int index;
+  final int total;
+
+  @override
+  Widget build(BuildContext context) {
+    final message = !checked
+        ? 'Take your time. A clear chain of reasoning is the real win.'
+        : correct
+        ? 'Proof aligned. The next point on the map is ready.'
+        : 'Useful signal. Read the solution, then test the idea again.';
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 18, 16, 16),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            GaussColors.panelHigh.withValues(alpha: .94),
+            GaussColors.ink.withValues(alpha: .96),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: GaussColors.line),
+      ),
+      child: Column(
+        children: [
+          const Text(
+            'MIRA · PROOF COMPANION',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: GaussColors.brassLight,
+              fontSize: 9,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 1,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Expanded(
+            child: AnimatedSwitcher(
+              duration: MediaQuery.disableAnimationsOf(context)
+                  ? Duration.zero
+                  : const Duration(milliseconds: 320),
+              child: Image.asset(
+                checked && correct
+                    ? 'assets/visual/mascot/mira_correct.png'
+                    : 'assets/visual/mascot/mira_thinking.png',
+                key: ValueKey(checked && correct),
+                fit: BoxFit.contain,
+                cacheWidth: 720,
+                filterQuality: FilterQuality.medium,
+                semanticLabel: checked && correct
+                    ? 'Mira celebrates a correct answer.'
+                    : 'Mira is thinking with you.',
+              ),
+            ),
+          ),
+          Text(
+            message,
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: GaussColors.muted, fontSize: 12),
+          ),
+          const SizedBox(height: 13),
+          Text(
+            '${index + 1} of $total',
+            style: const TextStyle(
+              color: GaussColors.signalBright,
+              fontSize: 11,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _MissionActionBar extends StatelessWidget {
+  const _MissionActionBar({
+    required this.question,
+    required this.index,
+    required this.total,
+    required this.selectedChoice,
+    required this.checked,
+    required this.busy,
+    required this.operationError,
+    required this.onCheck,
+    required this.onSkip,
+    required this.onNext,
+  });
+
+  final Question question;
+  final int index;
+  final int total;
+  final int? selectedChoice;
+  final bool checked;
+  final bool busy;
+  final Object? operationError;
+  final VoidCallback onCheck;
+  final VoidCallback onSkip;
+  final VoidCallback onNext;
+
+  VoidCallback? get primaryAction {
+    if (busy) return null;
+    if (operationError != null) {
+      if (checked) return onNext;
+      return selectedChoice == null ? onSkip : onCheck;
+    }
+    if (checked) return onNext;
+    return selectedChoice == null ? null : onCheck;
+  }
+
+  String get primaryLabel {
+    if (busy) return 'Saving…';
+    if (operationError != null) return 'Try again';
+    if (!checked) return 'Check answer';
+    return index == total - 1 ? 'Finish mission' : 'Next question';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isCorrect = selectedChoice == question.correctChoiceIndex;
+    final feedback = operationError != null
+        ? 'This step is still on screen. Try saving it again.'
+        : checked
+        ? isCorrect
+              ? 'Correct. The proof holds.'
+              : question.solutionVerified
+              ? 'Review the reasoning, then continue.'
+              : 'The verified answer is highlighted; the conflicting note stays hidden.'
+        : null;
+    final feedbackColor = operationError != null
+        ? GaussColors.error
+        : isCorrect
+        ? GaussColors.signalBright
+        : GaussColors.brassLight;
+    return DecoratedBox(
+      decoration: const BoxDecoration(
+        color: Color(0xFA0B1417),
+        border: Border(top: BorderSide(color: GaussColors.line)),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x66000000),
+            blurRadius: 20,
+            offset: Offset(0, -8),
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(14, 11, 14, 12),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 980),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final compact = constraints.maxWidth < 560;
+                final controls = Row(
+                  mainAxisSize: compact ? MainAxisSize.max : MainAxisSize.min,
+                  children: [
+                    if (!checked && !busy && operationError == null) ...[
+                      TextButton(onPressed: onSkip, child: const Text('Skip')),
+                      const SizedBox(width: 7),
+                    ],
+                    if (compact)
+                      Expanded(
+                        child: FilledButton.icon(
+                          onPressed: primaryAction,
+                          icon: _PrimaryActionIcon(
+                            busy: busy,
+                            checked: checked,
+                          ),
+                          label: Text(primaryLabel),
+                        ),
+                      )
+                    else
+                      FilledButton.icon(
+                        onPressed: primaryAction,
+                        icon: _PrimaryActionIcon(busy: busy, checked: checked),
+                        label: Text(primaryLabel),
+                      ),
+                  ],
+                );
+                if (!compact) {
+                  return Row(
+                    children: [
+                      if (feedback != null)
+                        Expanded(
+                          child: Text(
+                            feedback,
+                            style: TextStyle(
+                              color: feedbackColor,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        )
+                      else
+                        const Spacer(),
+                      controls,
+                    ],
+                  );
+                }
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    if (feedback != null) ...[
+                      Text(
+                        feedback,
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: feedbackColor,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                    ],
+                    controls,
+                  ],
+                );
+              },
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _PrimaryActionIcon extends StatelessWidget {
+  const _PrimaryActionIcon({required this.busy, required this.checked});
+
+  final bool busy;
+  final bool checked;
+
+  @override
+  Widget build(BuildContext context) => busy
+      ? const SizedBox.square(
+          dimension: 17,
+          child: CircularProgressIndicator(strokeWidth: 2),
+        )
+      : Icon(checked ? Icons.arrow_forward_rounded : Icons.check_rounded);
+}
+
+String _blocksSemanticLabel(List<ContentBlock> blocks) => blocks
+    .map(
+      (block) => switch (block) {
+        TextBlock(:final text) => text,
+        ImageBlock(:final alt) => alt.isEmpty ? 'Question image' : alt,
+      },
+    )
+    .where((text) => text.trim().isNotEmpty)
+    .join('. ');
 
 class _AnswerChoice extends StatelessWidget {
   const _AnswerChoice({
@@ -615,26 +1023,55 @@ class _AnswerChoice extends StatelessWidget {
     return Semantics(
       button: true,
       selected: selected,
-      label: 'Choice ${choice + 1}',
+      excludeSemantics: true,
+      label:
+          'Choice ${choice + 1}. ${_blocksSemanticLabel(blocks)}. '
+          '${isCorrect
+              ? 'Correct answer.'
+              : isWrong
+              ? 'Selected answer, incorrect.'
+              : selected
+              ? 'Selected.'
+              : ''}',
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 180),
+        duration: MediaQuery.disableAnimationsOf(context)
+            ? Duration.zero
+            : const Duration(milliseconds: 180),
         decoration: BoxDecoration(
-          color: isCorrect
-              ? GaussColors.teal.withValues(alpha: .11)
-              : (isWrong
-                    ? GaussColors.error.withValues(alpha: .1)
-                    : GaussColors.raised),
-          borderRadius: BorderRadius.circular(15),
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: isCorrect
+                ? [
+                    GaussColors.signal.withValues(alpha: .19),
+                    GaussColors.deepInk,
+                  ]
+                : isWrong
+                ? [
+                    GaussColors.error.withValues(alpha: .14),
+                    GaussColors.deepInk,
+                  ]
+                : [GaussColors.panelHigh, GaussColors.raised],
+          ),
+          borderRadius: BorderRadius.circular(18),
           border: Border.all(
             color: border,
             width: selected || isCorrect ? 2 : 1,
           ),
+          boxShadow: selected || isCorrect
+              ? [
+                  BoxShadow(
+                    color: border.withValues(alpha: .12),
+                    blurRadius: 16,
+                  ),
+                ]
+              : null,
         ),
         child: InkWell(
           onTap: onTap,
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(18),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
             child: Row(
               children: [
                 Container(
@@ -658,7 +1095,7 @@ class _AnswerChoice extends StatelessWidget {
                                 color: GaussColors.error,
                               )
                             : Text(
-                                '${choice + 1}',
+                                String.fromCharCode(65 + choice),
                                 style: const TextStyle(
                                   fontWeight: FontWeight.w800,
                                 ),
@@ -737,9 +1174,13 @@ class _SolutionPanel extends StatelessWidget {
                       color: GaussColors.brassLight,
                     ),
                     const SizedBox(width: 8),
-                    Text(
-                      'Explanation withheld',
-                      style: Theme.of(context).textTheme.titleMedium,
+                    Expanded(
+                      child: Text(
+                        'Explanation withheld',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
                     ),
                   ],
                 ),
@@ -768,9 +1209,13 @@ class _SolutionPanel extends StatelessWidget {
                   color: GaussColors.brassLight,
                 ),
                 const SizedBox(width: 8),
-                Text(
-                  'Classic solution',
-                  style: Theme.of(context).textTheme.titleMedium,
+                Expanded(
+                  child: Text(
+                    'Classic solution',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                 ),
               ],
             ),
@@ -820,140 +1265,292 @@ class _MissionComplete extends StatelessWidget {
       );
     }
 
-    return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(vertical: 24),
-      child: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 560),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Card(
-              child: Padding(
-                padding: const EdgeInsets.all(30),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      width: 72,
-                      height: 72,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: GaussColors.brass.withValues(alpha: .14),
-                        border: Border.all(
-                          color: GaussColors.brassLight.withValues(alpha: .62),
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: GaussColors.brass.withValues(alpha: .18),
-                            blurRadius: 22,
-                          ),
-                        ],
-                      ),
-                      child: const Icon(
-                        Icons.auto_awesome,
-                        color: GaussColors.brassLight,
-                        size: 38,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Text(
-                      'Orbit complete',
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      '$correct of $total correct',
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '${completion.xpEarned} XP recorded · ${completion.totalXp} total',
-                      style: const TextStyle(
-                        color: GaussColors.teal,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    if (completion.levelAfter > completion.levelBefore) ...[
-                      const SizedBox(height: 8),
-                      Text(
-                        'Level ${completion.levelAfter} reached',
-                        style: const TextStyle(
-                          color: GaussColors.brassLight,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                    ],
-                    if (rewards.isNotEmpty) ...[
-                      const SizedBox(height: 22),
-                      Semantics(
-                        container: true,
-                        label: 'Recorded rewards',
-                        child: Container(
-                          width: double.infinity,
-                          padding: const EdgeInsets.all(14),
-                          decoration: BoxDecoration(
-                            color: GaussColors.ink.withValues(alpha: .48),
-                            borderRadius: BorderRadius.circular(18),
-                            border: Border.all(color: GaussColors.line),
-                          ),
-                          child: Column(
-                            children: [
-                              for (final entry in rewards.entries)
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 5,
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      const Icon(
-                                        Icons.radio_button_checked,
-                                        size: 13,
-                                        color: GaussColors.brassLight,
-                                      ),
-                                      const SizedBox(width: 9),
-                                      Expanded(child: Text(entry.key)),
-                                      Text(
-                                        '+${entry.value} XP',
-                                        style: const TextStyle(
-                                          color: GaussColors.teal,
-                                          fontWeight: FontWeight.w800,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                    const SizedBox(height: 24),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: OutlinedButton(
-                            onPressed: onRetry,
-                            child: const Text('New mission'),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: FilledButton(
-                            onPressed: onMap,
-                            child: const Text('Back to map'),
-                          ),
-                        ),
+    final accuracy = total == 0 ? 0.0 : correct / total;
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        const _MissionBackdrop(),
+        SafeArea(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(18, 18, 18, 28),
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 900),
+                child: Container(
+                  padding: const EdgeInsets.all(22),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        GaussColors.panelHigh.withValues(alpha: .96),
+                        GaussColors.ink.withValues(alpha: .97),
                       ],
                     ),
-                  ],
+                    borderRadius: BorderRadius.circular(28),
+                    border: Border.all(color: GaussColors.line),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0x99000000),
+                        blurRadius: 36,
+                        offset: Offset(0, 18),
+                      ),
+                    ],
+                  ),
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      final wide = constraints.maxWidth >= 650;
+                      final visual = SizedBox(
+                        width: wide ? 280 : double.infinity,
+                        height: wide ? 370 : 260,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            Container(
+                              width: 210,
+                              height: 210,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: GaussColors.brass.withValues(
+                                      alpha: .19,
+                                    ),
+                                    blurRadius: 70,
+                                    spreadRadius: 18,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Image.asset(
+                              accuracy >= .7
+                                  ? 'assets/visual/mascot/mira_correct.png'
+                                  : 'assets/visual/mascot/mira_thinking.png',
+                              fit: BoxFit.contain,
+                              cacheWidth: 820,
+                              filterQuality: FilterQuality.medium,
+                              semanticLabel: accuracy >= .7
+                                  ? 'Mira celebrates the completed mission.'
+                                  : 'Mira considers the completed mission with you.',
+                            ),
+                            Positioned(
+                              bottom: 2,
+                              child: _ScoreSeal(
+                                accuracy: accuracy,
+                                correct: correct,
+                                total: total,
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                      final summary = Column(
+                        crossAxisAlignment: wide
+                            ? CrossAxisAlignment.start
+                            : CrossAxisAlignment.center,
+                        children: [
+                          const GaussWordmark(width: 148),
+                          const SizedBox(height: 16),
+                          Text(
+                            'Mission complete',
+                            textAlign: wide
+                                ? TextAlign.start
+                                : TextAlign.center,
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                          const SizedBox(height: 7),
+                          Text(
+                            correct == total
+                                ? 'Every answer aligned. This orbit now burns brighter.'
+                                : 'A new signal is recorded. Revisit the misses when you are ready.',
+                            textAlign: wide
+                                ? TextAlign.start
+                                : TextAlign.center,
+                            style: const TextStyle(color: GaussColors.muted),
+                          ),
+                          const SizedBox(height: 18),
+                          Row(
+                            mainAxisAlignment: wide
+                                ? MainAxisAlignment.start
+                                : MainAxisAlignment.center,
+                            children: [
+                              _CompletionMetric(
+                                label: 'EARNED',
+                                value: '+${completion.xpEarned} XP',
+                                color: GaussColors.signalBright,
+                              ),
+                              const SizedBox(width: 10),
+                              _CompletionMetric(
+                                label: 'TOTAL',
+                                value: '${completion.totalXp} XP',
+                                color: GaussColors.brassLight,
+                              ),
+                            ],
+                          ),
+                          if (completion.levelAfter >
+                              completion.levelBefore) ...[
+                            const SizedBox(height: 10),
+                            Text(
+                              'Level ${completion.levelAfter} reached',
+                              style: const TextStyle(
+                                color: GaussColors.brassLight,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            ),
+                          ],
+                          if (rewards.isNotEmpty) ...[
+                            const SizedBox(height: 18),
+                            Semantics(
+                              container: true,
+                              label: 'Recorded rewards',
+                              child: Container(
+                                padding: const EdgeInsets.all(14),
+                                decoration: BoxDecoration(
+                                  color: GaussColors.deepInk.withValues(
+                                    alpha: .8,
+                                  ),
+                                  borderRadius: BorderRadius.circular(18),
+                                  border: Border.all(
+                                    color: GaussColors.hairline,
+                                  ),
+                                ),
+                                child: Column(
+                                  children: [
+                                    for (final entry in rewards.entries)
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                          vertical: 5,
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            const TheoremStarMark(size: 18),
+                                            const SizedBox(width: 8),
+                                            Expanded(child: Text(entry.key)),
+                                            Text(
+                                              '+${entry.value} XP',
+                                              style: const TextStyle(
+                                                color: GaussColors.signalBright,
+                                                fontWeight: FontWeight.w900,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                          const SizedBox(height: 22),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: OutlinedButton(
+                                  onPressed: onRetry,
+                                  child: const Text('New mission'),
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              Expanded(
+                                child: FilledButton(
+                                  onPressed: onMap,
+                                  child: const Text('Back to map'),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      );
+                      if (!wide) {
+                        return Column(children: [visual, summary]);
+                      }
+                      return Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          visual,
+                          const SizedBox(width: 28),
+                          Expanded(child: summary),
+                        ],
+                      );
+                    },
+                  ),
                 ),
               ),
             ),
           ),
         ),
-      ),
+      ],
     );
   }
+}
+
+class _ScoreSeal extends StatelessWidget {
+  const _ScoreSeal({
+    required this.accuracy,
+    required this.correct,
+    required this.total,
+  });
+
+  final double accuracy;
+  final int correct;
+  final int total;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+    decoration: BoxDecoration(
+      color: GaussColors.deepInk.withValues(alpha: .95),
+      borderRadius: BorderRadius.circular(GaussRadii.pill),
+      border: Border.all(color: GaussColors.brass),
+      boxShadow: const [BoxShadow(color: Color(0x99000000), blurRadius: 16)],
+    ),
+    child: Text(
+      '$correct / $total · ${(accuracy * 100).round()}%',
+      style: const TextStyle(
+        color: GaussColors.ivory,
+        fontWeight: FontWeight.w900,
+      ),
+    ),
+  );
+}
+
+class _CompletionMetric extends StatelessWidget {
+  const _CompletionMetric({
+    required this.label,
+    required this.value,
+    required this.color,
+  });
+
+  final String label;
+  final String value;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 9),
+    decoration: BoxDecoration(
+      color: GaussColors.deepInk,
+      borderRadius: BorderRadius.circular(14),
+      border: Border.all(color: GaussColors.hairline),
+    ),
+    child: Column(
+      children: [
+        Text(
+          value,
+          style: TextStyle(color: color, fontWeight: FontWeight.w900),
+        ),
+        Text(
+          label,
+          style: const TextStyle(
+            color: GaussColors.fog,
+            fontSize: 8,
+            fontWeight: FontWeight.w800,
+            letterSpacing: .8,
+          ),
+        ),
+      ],
+    ),
+  );
 }
 
 class _MissionLoading extends StatelessWidget {

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
@@ -193,6 +195,18 @@ void main() {
         sourceBanks: const {'nardebam'},
       ),
       isEmpty,
+    );
+  });
+
+  test('all 3,410 bundled media files remain byte-for-byte present', () {
+    final media = Directory('assets/question_media')
+        .listSync(recursive: true, followLinks: false)
+        .whereType<File>()
+        .toList(growable: false);
+    expect(media, hasLength(3410));
+    expect(
+      media.fold<int>(0, (total, file) => total + file.lengthSync()),
+      66450076,
     );
   });
 }

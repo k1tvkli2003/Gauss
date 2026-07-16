@@ -55,9 +55,20 @@ class _AssetMedia extends StatelessWidget {
   final String alt;
   final double? aspectRatio;
 
-  Widget _image({BoxFit fit = BoxFit.contain}) => Image.asset(
+  Widget _image(
+    BuildContext context, {
+    BoxFit fit = BoxFit.contain,
+    bool fullscreen = false,
+  }) => Image.asset(
     'assets/$asset',
     fit: fit,
+    cacheWidth: fullscreen
+        ? 2400
+        : (MediaQuery.sizeOf(context).width *
+                  MediaQuery.devicePixelRatioOf(context))
+              .clamp(600, 1800)
+              .round(),
+    filterQuality: fullscreen ? FilterQuality.medium : FilterQuality.low,
     errorBuilder: (context, error, stackTrace) => Container(
       alignment: Alignment.center,
       color: GaussColors.ink,
@@ -94,7 +105,7 @@ class _AssetMedia extends StatelessWidget {
                       child: InteractiveViewer(
                         minScale: .5,
                         maxScale: 5,
-                        child: Center(child: _image()),
+                        child: Center(child: _image(context, fullscreen: true)),
                       ),
                     ),
                     Positioned(
@@ -117,7 +128,7 @@ class _AssetMedia extends StatelessWidget {
                 aspectRatio: aspectRatio == null || aspectRatio! <= 0
                     ? 1.4
                     : 1 / aspectRatio!,
-                child: _image(),
+                child: _image(context),
               ),
               const Positioned(
                 right: 8,
@@ -146,32 +157,42 @@ class _MixedMathText extends StatelessWidget {
       final resolvedStyle = style?.copyWith(color: color, height: 1.75);
       return Text(text, textAlign: TextAlign.start, style: resolvedStyle);
     }
-    return Wrap(
-      alignment: WrapAlignment.start,
-      crossAxisAlignment: WrapCrossAlignment.center,
-      spacing: 3,
-      runSpacing: 7,
-      children: [
-        for (var index = 0; index < pieces.length; index++)
-          if (pieces[index].isNotEmpty)
-            index.isEven
-                ? Text(
-                    pieces[index],
-                    style: style?.copyWith(color: color, height: 1.7),
-                  )
-                : Directionality(
-                    textDirection: TextDirection.ltr,
-                    child: Math.tex(
+    return LayoutBuilder(
+      builder: (context, constraints) => Wrap(
+        alignment: WrapAlignment.start,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: 3,
+        runSpacing: 7,
+        children: [
+          for (var index = 0; index < pieces.length; index++)
+            if (pieces[index].isNotEmpty)
+              index.isEven
+                  ? Text(
                       pieces[index],
-                      mathStyle: MathStyle.text,
-                      textStyle: style?.copyWith(color: color),
-                      onErrorFallback: (error) => Text(
-                        pieces[index],
-                        style: style?.copyWith(color: color),
+                      style: style?.copyWith(color: color, height: 1.7),
+                    )
+                  : Directionality(
+                      textDirection: TextDirection.ltr,
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          maxWidth: constraints.maxWidth,
+                        ),
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Math.tex(
+                            pieces[index],
+                            mathStyle: MathStyle.text,
+                            textStyle: style?.copyWith(color: color),
+                            onErrorFallback: (error) => Text(
+                              pieces[index],
+                              style: style?.copyWith(color: color),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-      ],
+        ],
+      ),
     );
   }
 }

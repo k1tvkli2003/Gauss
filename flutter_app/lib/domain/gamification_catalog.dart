@@ -285,7 +285,7 @@ abstract final class GaussGamificationCatalog {
       id: 'orbit_atlas',
       localizationKey: 'achievement.orbit_atlas',
       title: 'Stellar cartography',
-      description: 'Master distinct topics across the knowledge map.',
+      description: 'Leave a solved signal in distinct topics across the map.',
       accessibilityLabel: 'Orbit atlas achievement',
       family: AchievementFamily.exploration,
       metric: AchievementMetric.masteredTopics,

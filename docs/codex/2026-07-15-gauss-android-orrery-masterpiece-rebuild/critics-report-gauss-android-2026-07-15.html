@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>گزارش ممیزی — Gauss — Android Orrery Rebuild</title>
+<style>
+@font-face{font-family:Vazirmatn;src:url('file:///C:/Users/K1/.codex/skills/critics/assets/fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400}
+@font-face{font-family:Vazirmatn;src:url('file:///C:/Users/K1/.codex/skills/critics/assets/fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500}
+@font-face{font-family:Vazirmatn;src:url('file:///C:/Users/K1/.codex/skills/critics/assets/fonts/Vazirmatn-SemiBold.woff2') format('woff2');font-weight:600}
+@font-face{font-family:Vazirmatn;src:url('file:///C:/Users/K1/.codex/skills/critics/assets/fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700}
+@page{size:A4;margin:16mm 15mm 18mm; @bottom-center{content:"گزارش ممیزی مستقل · " counter(page) " از " counter(pages);font:400 8pt Vazirmatn;color:#6b7280}}
+*{box-sizing:border-box} body{margin:0;color:#172033;background:#fff;font-family:Vazirmatn,Arial,sans-serif;font-size:10.2pt;line-height:1.85;direction:rtl} h1,h2,h3,h4,p{margin:0} h1,h2,h3{font-weight:700;line-height:1.32} h2{font-size:19pt} h3{font-size:14.5pt} h4{font-size:9.5pt;color:#41516d} p{margin-top:5px} small{font-size:8pt} .ltr{display:inline-block;direction:ltr;unicode-bidi:plaintext;text-align:left;font-family:Vazirmatn,Arial,sans-serif;overflow-wrap:anywhere} .muted{color:#697386} .cover{min-height:250mm;display:flex;flex-direction:column;justify-content:space-between;padding:12mm 7mm 7mm;page-break-after:always;background:linear-gradient(145deg,#101a2e 0%,#152542 65%,#203c64 100%);color:#f8fafc;border-radius:0 0 24px 24px} .cover-top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #8ea1be55;padding-bottom:11mm} .eyebrow{font-size:8.5pt;letter-spacing:.7px;color:#b9c8dd} .confidential{font-size:8.5pt;letter-spacing:.9px;color:#ffc766} .cover h1{font-size:30pt;margin-top:13mm;max-width:90%} .cover .subtitle{font-size:15.5pt;line-height:1.7;color:#d7e2f0;margin-top:6mm;max-width:94%} .cover-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:15mm} .cover-meta div{border-top:1px solid #ffffff44;padding-top:4mm} .cover-meta b{display:block;color:#9cb7de;font-size:8.5pt;font-weight:500} .cover-meta span{font-size:11pt} .cover-bottom{display:flex;justify-content:space-between;align-items:flex-end} .posture{border:1px solid #ffc766;border-radius:999px;color:#ffc766;padding:2.5mm 5mm;font-size:10pt;font-weight:600} .section{margin:0 0 12mm} .section-heading{display:flex;gap:4mm;align-items:flex-start;border-bottom:1px solid #dbe3ee;padding-bottom:4mm;margin:0 0 6mm} .section-number{color:#1f5b98;font-size:10pt;font-weight:700;padding-top:2mm;direction:ltr} .section-heading p{color:#667085;font-size:8.5pt;margin-top:1mm;direction:ltr;text-align:right} .toc{columns:2;column-gap:13mm;padding:0;list-style:none} .toc li{break-inside:avoid;display:grid;grid-template-columns:14mm 1fr;gap:2mm;border-bottom:1px solid #edf1f5;padding:3mm 0} .toc li span:first-child{color:#1f5b98;font-weight:700;direction:ltr} .toc li small{grid-column:2;color:#7a8494;direction:ltr;text-align:right} .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:6mm 0} .metric{min-height:28mm;padding:4mm;border:1px solid #dce5ef;border-radius:4mm;background:#fafcff} .metric b{display:block;font-size:20pt;line-height:1.1} .metric span{display:block;font-size:9pt;margin-top:3mm} .metric small{color:#718096;direction:ltr} .metric.p0 b{color:#9f1239} .metric.p1 b{color:#c2410c} .metric.p2 b{color:#a16207} .metric.p3 b{color:#1d4ed8} .callout{background:#f2f7fc;border-right:3px solid #2c6ca8;padding:4mm 5mm;border-radius:0 3mm 3mm 0;margin-top:5mm} .callout strong{display:block;color:#1c3f66} .two-col{display:grid;grid-template-columns:1fr 1fr;gap:7mm} .panel{border:1px solid #dfe7f0;border-radius:4mm;padding:4mm 5mm;break-inside:avoid} ul{margin:3mm 0 0;padding-right:5mm} li{margin:1.3mm 0} table{width:100%;border-collapse:collapse;font-size:8.7pt;table-layout:fixed} th{background:#173f68;color:#fff;font-weight:600} th,td{border:1px solid #dce5ef;padding:2.6mm;vertical-align:top;text-align:right;overflow-wrap:anywhere} tr:nth-child(even) td{background:#f8fafc} .finding{border:1px solid #dbe4ee;border-top:4px solid #537aa4;border-radius:4mm;padding:5mm;margin:0 0 7mm;break-inside:auto;page-break-inside:auto;position:relative} .finding-page + .finding-page{break-before:page;page-break-before:always;padding-top:4mm} .finding.p0{border-top-color:#be123c} .finding.p1{border-top-color:#ea580c} .finding.p2{border-top-color:#ca8a04} .finding.p3{border-top-color:#2563eb} .finding-top{display:flex;gap:2.5mm;align-items:center;font-size:8.5pt;margin-bottom:2mm} .severity{color:#fff;background:#537aa4;border-radius:999px;padding:1mm 3mm;font-weight:700;direction:ltr} .p0 .severity{background:#be123c} .p1 .severity{background:#ea580c} .p2 .severity{background:#ca8a04} .p3 .severity{background:#2563eb} .finding-index{color:#64748b} .category{margin-right:auto;color:#35516f} .finding-meta{display:flex;flex-wrap:wrap;gap:2mm 8mm;color:#536176;font-size:8.7pt;margin:3mm 0 4mm} .finding-grid{display:grid;grid-template-columns:1fr 1fr;gap:3mm 5mm} .finding-grid section{background:#f8fafc;border-radius:2.5mm;padding:3mm;min-width:0} .finding-grid p,.evidence p{font-size:9pt;line-height:1.75} .steps{padding-right:5mm;font-size:9pt} .evidence{margin-top:4mm;background:#fff7e7;border:1px solid #f8deb0;border-radius:2.5mm;padding:3mm 4mm} .location{font-size:8.3pt!important;color:#5d4b22} .finding-bottom{display:grid;grid-template-columns:1fr 1fr;gap:5mm;border-top:1px dashed #ccd7e4;margin-top:4mm;padding-top:3mm;font-size:8.5pt;color:#46566d} .empty-state{border:1px solid #b9dfcf;background:#f1fbf6;border-radius:5mm;text-align:center;padding:12mm 8mm} .empty-state span{display:inline-flex;align-items:center;justify-content:center;width:12mm;height:12mm;border-radius:50%;background:#197a50;color:white;font-size:16pt} .empty-state h3{margin-top:3mm;color:#125b3a} .closing{background:#101a2e;color:#f7faff;padding:8mm;border-radius:4mm} .closing p{color:#c5d4e7} .page-break{page-break-before:always} @media print{.cover{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.finding-page{break-before:page;page-break-before:always;break-inside:avoid;page-break-inside:avoid;padding-top:4mm}
+.finding-top{display:grid;grid-template-columns:auto 1fr;align-items:center}
+.category{margin-right:0;text-align:left}
+.finding-top{display:none}
+.title-spacer{display:inline-block;margin-bottom:2mm;font-size:8.5pt;font-weight:500}
+.finding-meta{display:block}
+.finding-meta span{display:inline-block;margin:0 0 2mm 6mm}
+.finding-meta .meta-spacer{visibility:hidden;width:12mm;margin-left:0}
+.finding{position:static}
+.finding h3{overflow-wrap:anywhere}
+</style></head><body>
+<section class="cover"><div><div class="cover-top"><div><p class="eyebrow">CRITICS · INDEPENDENT PRODUCT AUDIT</p><p class="eyebrow">گزارش ممیزی مستقل محصول</p></div><p class="confidential">CONFIDENTIAL · AUDIT</p></div><h1>گزارش ممیزی جامع<br>Gauss — Android Orrery Rebuild</h1><p class="subtitle">ممیزی خصمانه و مبتنی بر شواهد از کیفیت محصول، تجربهٔ کاربری، دسترس‌پذیری، پایداری و آمادگی انتشار.</p><div class="cover-meta"><div><b>پروژه / Product</b><span>Gauss — Android Orrery Rebuild</span></div><div><b>تاریخ / Audit date</b><span dir="ltr">2026-07-15</span></div><div><b>خروجی / Report</b><span dir="ltr">critics-report-gauss-android-2026-07-15.pdf</span></div></div></div><div class="cover-bottom"><div><p class="eyebrow">GENERATED</p><p>2026-07-15T17:35:00+03:30</p></div><span class="posture">وضعیت انتشار: مسدود</span></div></section>
+<main>
+<section class="section"><div class="section-heading"><span class="section-number">00</span><div><h2>فهرست و راهنمای خواندن</h2><p>Contents &amp; reading guide</p></div></div><p>یافته‌ها براساس شدت و شواهد مرتب شده‌اند. هر مورد مستقل، قابل‌ردیابی و بدون اعمال تغییر در محصول است.</p><ol class="toc"><li><span>01</span><span>محدوده و روش</span><small>Scope &amp; method</small></li><li><span>02</span><span>خلاصهٔ مدیریتی</span><small>Executive summary</small></li><li><span>03</span><span>پوشش ممیزی</span><small>Coverage ledger</small></li><li><span>04</span><span>یافته‌های اولویت‌بندی‌شده</span><small>Prioritized findings</small></li><li><span>05</span><span>الگوها و ارجاع رفع</span><small>Patterns &amp; remediation</small></li><li><span>06</span><span>محدودیت‌ها و جمع‌بندی</span><small>Limits &amp; closeout</small></li></ol></section>
+<section class="section"><div class="section-heading"><span class="section-number">01</span><div><h2>محدوده و روش</h2><p>Scope &amp; method</p></div></div><div class="two-col"><div class="panel"><h4>محدوده / Scope</h4><ul class=""><li>Map, Practice, Insights, Mission, Feedback and Completion</li><li>Phone and simulated tablet windows</li><li>App icon, splash resources, typography, iconography and brand promise</li><li>State, repository, media decoding and scratchpad performance</li></ul></div><div class="panel"><h4>فرمان‌ها و ابزارها / Commands & tools</h4><ul class=""><li>flutter analyze</li><li>flutter test --reporter expanded</li><li>flutter build apk --debug --target-platform android-x64</li><li>adb install / am start / logcat</li><li>adb screencap / uiautomator dump / wm size / wm density</li></ul></div></div><div class="callout"><strong>اصل ممیزی فقط‌خواندنی / Read-only boundary</strong><p>کد، پیکربندی، محتوا، داده و سرویس‌های محصول در این ممیزی تغییر داده نشده‌اند. PDF صرفاً artifact تحویلیِ بیرون از محصول است.</p></div></section>
+<section class="section page-break"><div class="section-heading"><span class="section-number">02</span><div><h2>خلاصهٔ مدیریتی</h2><p>Executive summary</p></div></div><div class="callout"><strong>وضعیت انتشار / Release posture: مسدود</strong><p>پایهٔ داده و پایداری Gauss ارزشمند و قابل‌حفظ است، اما APK فعلی repository روی Android اجرا نمی‌شود و تجربهٔ دیداری/تعاملی فاصله‌ای بنیادی با پیش‌نمایش پذیرفته‌شدهٔ Orrery of Proofs دارد. محصول برای انتشار و برای ادعای «شاهکار» مسدود است تا launch واقعی، قرارداد دارایی ماژولار، progression خوانا، دسترس‌پذیری و حلقهٔ کامل مأموریت پیاده و با screenshot ثابت شوند.</p></div><div class="metrics"><div class="metric p0"><b>1</b><span>بحرانی</span><small>P0 critical</small></div><div class="metric p1"><b>7</b><span>بالا</span><small>P1 high</small></div><div class="metric p2"><b>8</b><span>میانه</span><small>P2 medium</small></div><div class="metric p3"><b>2</b><span>پایین</span><small>P3 low</small></div></div><div class="two-col"><div class="panel"><h4>ریسک‌های برتر / Top risks</h4><ul class=""><li>ClassNotFoundException در launch APK repository</li><li>شکست قرارداد preview-to-runtime و باقی‌ماندن placeholder art</li><li>برخورد HUD با status bar و شکست در font scale 1.3</li><li>semantics قطعه‌قطعهٔ متن فارسی و ریاضی</li><li>نبود launch/golden/accessibility gates در مجموعه‌تست</li></ul></div><div class="panel"><h4>مهم‌ترین یافته / Highest-impact finding</h4><p>APK مخزن روی Android اجرا نمی‌شود</p></div></div></section>
+<section class="section page-break"><div class="section-heading"><span class="section-number">03</span><div><h2>پوشش ممیزی</h2><p>Coverage ledger</p></div></div><table><thead><tr><th>سطح / Surface</th><th>نتیجه / Status</th><th>حالت‌ها / States</th><th>شواهد یا مانع / Evidence or blocker</th></tr></thead><tbody><tr><td>Android package and launch</td><td>Failed / release blocker</td><td>Install, explicit activity launch, logcat</td><td>APK installs but com.gauss.app.MainActivity is absent; ClassNotFoundException recorded.</td></tr><tr><td>Phone map</td><td>Exercised</td><td>First-use, selected topic, font scale 1.0 and 1.3</td><td>Real Android harness screenshots at 1080x2400.</td></tr><tr><td>Tablet map</td><td>Exercised</td><td>Landscape inspector and portrait-like compact inspector</td><td>Simulated available windows at density 240; landscape screenshot 2560x1600.</td></tr><tr><td>Practice</td><td>Exercised</td><td>First-use filters, selected topic</td><td>Phone runtime screenshot and code trace.</td></tr><tr><td>Insights and achievements</td><td>Exercised</td><td>Zero-history, daily quest, locked badges</td><td>Phone and tablet runtime screenshots plus catalog/UI mapping trace.</td></tr><tr><td>Mission loop</td><td>Exercised</td><td>Question, selected answer, wrong feedback, explanation, tablet layout</td><td>Runtime screenshots and UIAutomator semantics dump.</td></tr><tr><td>Data integrity</td><td>Passed</td><td>Question count, trust boundary, media count, explanations</td><td>27 tests pass; 7,353 questions and 3,410 media preserved.</td></tr><tr><td>Performance</td><td>Partially exercised</td><td>Debug cold launch observation and static hot-path review</td><td>Release/profile frame and memory profiling remain for implementation acceptance.</td></tr><tr><td>Physical device</td><td>Unavailable</td><td>Phone/tablet hardware</td><td>No physical Android device was connected during the frozen audit.</td></tr></tbody></table></section>
+<section class="section page-break"><div class="section-heading"><span class="section-number">04</span><div><h2>یافته‌های اولویت‌بندی‌شده</h2><p>Prioritized findings</p></div></div>
+<article class="finding p0">
+  <div class="finding-top"><span class="finding-index">P0 · یافته 01</span><span class="category">Function / Android packaging</span></div>
+  <h3>یافته 01 — APK مخزن روی Android اجرا نمی‌شود</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P0</b></span><span>دسته / Category: <b>Function / Android packaging</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/android/app/build.gradle.kts; flutter_app/android/app/src/main/kotlin/com/gauss/gauss/MainActivity.kt</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><ul class="steps"><li>APK فعلی را build و نصب کنید.</li><li>activity ثبت‌شدهٔ com.gauss.app/.MainActivity را اجرا کنید.</li><li>logcat را برای ClassNotFoundException بررسی کنید.</li></ul></section>
+    <section><h4>انتظار / Expected</h4><p>کلاس activity با package و applicationId هماهنگ باشد و اولین frame Flutter نمایش داده شود.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>applicationId برابر com.gauss.app است اما MainActivity در package com.gauss.gauss کامپایل می‌شود؛ Android کلاس com.gauss.app.MainActivity را پیدا نمی‌کند.</p></section>
+    <section><h4>اثر / Impact</h4><p>محصول فعلی مستقل از کیفیت UI یا داده، غیرقابل استفاده و غیرقابل انتشار است.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>ClassNotFoundException در logs/current-apk-launch-logcat.txt؛ build.gradle.kts خطوط 10 و 20 در برابر MainActivity.kt خط 1.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/android/app/build.gradle.kts; flutter_app/android/app/src/main/kotlin/com/gauss/gauss/MainActivity.kt</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Android platform / build</b></span><span>معیار راستی‌آزمایی / Verification target: <b>نصب و cold launch APK release repository بدون crash، همراه instrumentation launch smoke.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p1">
+  <div class="finding-top"><span class="finding-index">P1 · یافته 02</span><span class="category">Modernize / Visual fidelity</span></div>
+  <h3>یافته 02 — پیش‌نمایش Orrery به قرارداد runtime تبدیل نشده است</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P1</b></span><span>دسته / Category: <b>Modernize / Visual fidelity</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/screens/map_screen.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><ul class="steps"><li>Mock Preview منتخب Orrery of Proofs را باز کنید.</li><li>Map را در harness روی موبایل یا تبلت باز کنید.</li><li>ماده، عمق، گره‌ها، مسیر، قاب و landmarkها را مقایسه کنید.</li></ul></section>
+    <section><h4>انتظار / Expected</h4><p>ترکیب‌بندی، عمق، ماده، hierarchy و state language مرجع با دارایی‌های ماژولار و کنترل‌های زنده بازتولید شود.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>مرجع به canvas ثابت 1100، حلقه‌های ساده، دایره‌های هم‌شکل و Material Icons تقلیل یافته است.</p></section>
+    <section><h4>اثر / Impact</h4><p>هویت، حافظهٔ بصری و وعدهٔ «شاهکار» از بین رفته و UI placeholder به نظر می‌رسد.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>assets/mock-preview-c-orrery-of-proofs.png در برابر gauss-baseline-phone-map.png و gauss-baseline-tablet-landscape-map.png؛ map_screen.dart خطوط 194 تا 216 و 397 تا 433.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/screens/map_screen.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Product design / Flutter UI / art pipeline</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Asset decomposition manifest و screenshot fidelity review برای phone/tablet با هیچ جایگزین placeholder.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p1">
+  <div class="finding-top"><span class="finding-index">P1 · یافته 03</span><span class="category">Anatomy / Accessibility</span></div>
+  <h3>یافته 03 — HUD موبایل با system insets و متن بزرگ برخورد می‌کند</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P1</b></span><span>دسته / Category: <b>Anatomy / Accessibility</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/screens/map_screen.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><ul class="steps"><li>پنجرهٔ 1080x2400 با density 420 را اجرا کنید.</li><li>font_scale را روی 1.3 بگذارید.</li><li>Map و status bar را مشاهده کنید.</li></ul></section>
+    <section><h4>انتظار / Expected</h4><p>HUD داخل safe bounds بماند، با font scale تا 1.5 بدون overlap و crop تطبیق یابد.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>time/status روی brand و XP می‌افتد؛ labelها و nodeهای canvas از لبه‌ها قطع می‌شوند.</p></section>
+    <section><h4>اثر / Impact</h4><p>خوانایی و لمس کنترل‌ها روی دستگاه واقعی و تنظیمات دسترس‌پذیری آسیب می‌بیند.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>assets/gauss-baseline-phone-font130.png؛ Map HUD در top:16 بدون SafeArea قرار گرفته است.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/screens/map_screen.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Flutter adaptive UI</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Golden/widget tests در font scale 1.0، 1.3 و 1.5 و insets متنوع، بدون overlap/overflow.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p1">
+  <div class="finding-top"><span class="finding-index">P1 · یافته 04</span><span class="category">Gamify / Information architecture</span></div>
+  <h3>یافته 04 — نقشه progression نیست؛ catalog دایره‌ای است</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P1</b></span><span>دسته / Category: <b>Gamify / Information architecture</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/screens/map_screen.dart; flutter_app/lib/domain/gamification_catalog.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>Map first-use را باز و stateهای 29 موضوع را مقایسه کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>current، available، locked، completed، mastered، milestone و مسیر بعدی در یک نگاه خوانا باشند.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>موضوع‌ها تقریباً هم‌ارز، بدون مسیر پیوسته، gate، chest، boss یا landmark دیده می‌شوند.</p></section>
+    <section><h4>اثر / Impact</h4><p>کاربر نمی‌داند کجاست، بعد کجا برود و چرا؛ map-first به wallpaper تبدیل می‌شود.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>Phone/tablet map screenshots و ساخت سه حلقهٔ ثابت در map_screen.dart.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/screens/map_screen.dart; flutter_app/lib/domain/gamification_catalog.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Product progression / Flutter UI</b></span><span>معیار راستی‌آزمایی / Verification target: <b>State matrix کامل و user-flow test که current node و next action را بدون متن راهنما قابل تشخیص کند.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p1">
+  <div class="finding-top"><span class="finding-index">P1 · یافته 05</span><span class="category">Gamify / Mission loop</span></div>
+  <h3>یافته 05 — مأموریت payoff و پیامد جهانی ندارد</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P1</b></span><span>دسته / Category: <b>Gamify / Mission loop</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/screens/mission_screen.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><ul class="steps"><li>یک مأموریت را شروع کنید.</li><li>پاسخ غلط و سپس completion را طی کنید.</li><li>بازخورد، reward reveal و بازگشت به نقشه را مشاهده کنید.</li></ul></section>
+    <section><h4>انتظار / Expected</h4><p>پرسش، واکنش، توضیح، پاداش و روشن‌شدن مسیر یک حلقهٔ احساسی و قابل‌فهم بسازند.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>پرسش و scoring کار می‌کند، اما coach، anticipation، reaction، reward theater و map consequence بصری وجود ندارد.</p></section>
+    <section><h4>اثر / Impact</h4><p>تلاش کاربر به تجربهٔ به‌یادماندنی یا انگیزهٔ ادامه تبدیل نمی‌شود.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>gauss-baseline-phone-mission.png و gauss-baseline-phone-mission-feedback.png؛ completion در یک Card عمومی رندر می‌شود.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/screens/mission_screen.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Gamification / interaction design</b></span><span>معیار راستی‌آزمایی / Verification target: <b>End-to-end mission video/screenshot sequence با reaction، recap، reward ledger و node state change.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p1">
+  <div class="finding-top"><span class="finding-index">P1 · یافته 06</span><span class="category">Accessibility / RTL math</span></div>
+  <h3>یافته 06 — TalkBack عبارت فارسی و ریاضی را به قطعات بی‌معنا می‌شکند</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P1</b></span><span>دسته / Category: <b>Accessibility / RTL math</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/widgets/content_blocks.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><ul class="steps"><li>سؤال mixed Persian/math را باز کنید.</li><li>درخت UIAutomator یا TalkBack را بررسی کنید.</li><li>ترتیب tokenهای A، B، پرانتز و عملگرها را دنبال کنید.</li></ul></section>
+    <section><h4>انتظار / Expected</h4><p>stem و هر choice یک semantic label پیوسته، قابل‌خواندن و locale-aware داشته باشند.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>هر حرف، عملگر و قطعهٔ متن یک node جداست و ترتیب شنیداری معنای عبارت را از بین می‌برد.</p></section>
+    <section><h4>اثر / Impact</h4><p>کاربر screen-reader نمی‌تواند سؤال را بفهمد و mixed-direction نیز مستعد جابه‌جایی بصری است.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>UIAutomator dump مأموریت تبلت بیش از 20 node جدا برای یک stem ثبت کرد؛ renderer از Wrap و tokenهای جدا استفاده می‌کند.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/widgets/content_blocks.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Accessibility / content renderer</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Semantics test و TalkBack recording با یک label درست برای stem و هر choice.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p1">
+  <div class="finding-top"><span class="finding-index">P1 · یافته 07</span><span class="category">Quality engineering</span></div>
+  <h3>یافته 07 — گیت‌های تست، launch و fidelity را پوشش نمی‌دهند</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P1</b></span><span>دسته / Category: <b>Quality engineering</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/test; flutter_app/android</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>27 تست موجود و analyzer را اجرا و سپس APK را launch کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>سبز بودن release gates به معنی امکان launch و سلامت سطوح اصلی روی windowهای پشتیبانی‌شده باشد.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>همهٔ تست‌ها سبزند، اما APK launch نمی‌شود و overlap/fidelity شکست‌خورده هیچ تستی را fail نمی‌کند.</p></section>
+    <section><h4>اثر / Impact</h4><p>ادعای اتمام و انتشار می‌تواند با محصول خراب تکرار شود.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>27 تست pass در برابر crash launch و screenshotهای baseline.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/test; flutter_app/android</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Testing / release engineering</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Instrumentation launch، route smoke، golden phone/tablet، font-scale، semantics و reduced-motion در release checklist.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p1">
+  <div class="finding-top"><span class="finding-index">P1 · یافته 08</span><span class="category">Branding / Android system surfaces</span></div>
+  <h3>یافته 08 — آیکن و نشان فعلی خارج از جهان Gauss است</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P1</b></span><span>دسته / Category: <b>Branding / Android system surfaces</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/android/app/src/main/res/drawable-nodpi/ic_launcher_foreground.png; mipmap-anydpi-v26/ic_launcher.xml</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>launcher foreground و adaptive XML را باز کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>mark اختصاصی، خوانا در اندازهٔ کوچک و هماهنگ با Orrery، شامل foreground/background/monochrome.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>یک knot پاستلی نامرتبط استفاده شده و لایهٔ monochrome وجود ندارد.</p></section>
+    <section><h4>اثر / Impact</h4><p>اولین touchpoint محصول generic و بی‌مالکیت است و themed icons را کامل پشتیبانی نمی‌کند.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>بررسی مستقیم PNG و XML منابع Android.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/android/app/src/main/res/drawable-nodpi/ic_launcher_foreground.png; mipmap-anydpi-v26/ic_launcher.xml</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Brand design / Android resources</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Adaptive icon mask grid، themed icon preview، launcher screenshot و splash هماهنگ.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p2">
+  <div class="finding-top"><span class="finding-index">P2 · یافته 09</span><span class="category">Adaptive tablet UX</span></div>
+  <h3>یافته 09 — مأموریت تبلت بیشتر بوم را بلااستفاده می‌گذارد</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P2</b></span><span>دسته / Category: <b>Adaptive tablet UX</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/screens/mission_screen.dart; flutter_app/lib/widgets/scratchpad.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>Mission را در پنجرهٔ 2560x1600 با density 240 باز کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>layout تبلت از supporting pane برای ابزار، راهنما یا scratchpad استفاده کند.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>سؤال و گزینه‌ها در ستون باریک وسط هستند و بخش اعظم بوم خالی است؛ scratchpad bottom sheet می‌ماند.</p></section>
+    <section><h4>اثر / Impact</h4><p>محصول روی تبلت نسخهٔ کش‌آمدهٔ موبایل به نظر می‌رسد و کارایی فضای بزرگ را از دست می‌دهد.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>assets/gauss-baseline-tablet-landscape-mission.png.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/screens/mission_screen.dart; flutter_app/lib/widgets/scratchpad.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Adaptive layout</b></span><span>معیار راستی‌آزمایی / Verification target: <b>List-detail/supporting-pane screenshots در portrait و landscape، بدون فضای مردهٔ غیرهدفمند.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p2">
+  <div class="finding-top"><span class="finding-index">P2 · یافته 10</span><span class="category">String / Product voice</span></div>
+  <h3>یافته 10 — Practice با زبان ممیزی داخلی با کاربر حرف می‌زند</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P2</b></span><span>دسته / Category: <b>String / Product voice</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/screens/practice_screen.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>Practice first-use را باز و متن filter/archive را بخوانید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>copy کوتاه، انسانی و متمرکز بر انتخاب تمرین باشد.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>واژه‌هایی مانند mission-ready، preserved، contract-checked و conflict جزئیات pipeline را افشا می‌کنند.</p></section>
+    <section><h4>اثر / Impact</h4><p>اعتماد و تمرکز شناختی آسیب می‌بیند و محصول شبیه ابزار داخلی می‌شود.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>assets/gauss-baseline-phone-practice.png و رشته‌های practice_screen.dart.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/screens/practice_screen.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Content design / Practice UX</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Copy inventory بدون اصطلاح داخلی؛ diagnostics جدا و opt-in.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p2">
+  <div class="finding-top"><span class="finding-index">P2 · یافته 11</span><span class="category">First-use UX</span></div>
+  <h3>یافته 11 — Insights اولین جلسه را با دیوار صفرها شروع می‌کند</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P2</b></span><span>دسته / Category: <b>First-use UX</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/screens/insights_screen.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>با دیتابیس پیشرفت خالی، Insights را باز کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>یک next-best-action، پیش‌نمایش پیشرفت و دعوت روشن برای اولین مأموریت دیده شود.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>چهار metric card صفر، quest صفر و badgeهای خاکستری بدون CTA غالب‌اند.</p></section>
+    <section><h4>اثر / Impact</h4><p>صفحه در اولین استفاده مرده و تنبیه‌کننده به نظر می‌رسد.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>assets/gauss-baseline-phone-insights.png.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/screens/insights_screen.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Insights / onboarding</b></span><span>معیار راستی‌آزمایی / Verification target: <b>First-use screenshot با یک CTA اصلی و progressive disclosure آمار.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p2">
+  <div class="finding-top"><span class="finding-index">P2 · یافته 12</span><span class="category">Achievement art</span></div>
+  <h3>یافته 12 — نیاز هنری catalog دستاوردها نادیده گرفته شده است</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P2</b></span><span>دسته / Category: <b>Achievement art</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/domain/gamification_catalog.dart; flutter_app/lib/screens/insights_screen.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>تعریف art requirement در catalog را با badge cards در Insights مقایسه کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>هر family و rarity silhouette و مادهٔ قابل‌جمع‌آوری خود را داشته باشد.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>catalog غنی به چند Material Icon عمومی نگاشت شده است.</p></section>
+    <section><h4>اثر / Impact</h4><p>دستاوردها حافظهٔ بصری، desirability و لحظهٔ reveal ندارند.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>insights_screen.dart خطوط 459 تا 463.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/domain/gamification_catalog.dart; flutter_app/lib/screens/insights_screen.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Gamification art / Insights UI</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Locked/unlocked/rarity asset matrix و reveal screenshot برای هر family.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p2">
+  <div class="finding-top"><span class="finding-index">P2 · یافته 13</span><span class="category">Startup resilience</span></div>
+  <h3>یافته 13 — Initialization پیش از اولین frame انجام می‌شود</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P2</b></span><span>دسته / Category: <b>Startup resilience</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/main.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>main.dart را بررسی و startup را با cold process اجرا کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>branded shell بلافاصله mount شود و bootstrap state قابل‌مشاهده و retry باشد.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>controller.initialize پیش از runApp await می‌شود؛ delay/failure قبل از UI رخ می‌دهد.</p></section>
+    <section><h4>اثر / Impact</h4><p>صفحهٔ سیاه یا startup نامطمئن و نبود recovery واضح.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>main.dart خطوط 18 و 19؛ cold debug harness حدود 6.3 ثانیه مشاهده شد، هرچند معیار release نیست.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/main.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>App bootstrap</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Time-to-first-frame profile، branded loading و injected initialization failure recovery.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p2">
+  <div class="finding-top"><span class="finding-index">P2 · یافته 14</span><span class="category">State performance</span></div>
+  <h3>یافته 14 — Rebuild و analytics با رشد تاریخچه مقیاس‌پذیر نیستند</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P2</b></span><span>دسته / Category: <b>State performance</b></span><span>اطمینان / Confidence: <b>Medium-high</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/state/gauss_controller.dart; flutter_app/lib/app/gauss_app.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>notifyListeners، AnimatedBuilder سطح app و refresh analytics را trace کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>هر تغییر فقط consumerهای لازم را rebuild و metrics را از projectionهای محدود دریافت کند.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>ChangeNotifier سراسری می‌تواند app را rebuild کند و analytics همهٔ attempts را در Dart می‌خواند.</p></section>
+    <section><h4>اثر / Impact</h4><p>در تاریخچهٔ بلندمدت، latency و jank قابل‌افزایش است.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>gauss_app.dart خط 97؛ gauss_controller.dart خط 181 و surrounding refresh flow.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/state/gauss_controller.dart; flutter_app/lib/app/gauss_app.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>State / local data</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Rebuild counts و query benchmarks قبل/بعد با تاریخچهٔ بزرگ fixture.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p2">
+  <div class="finding-top"><span class="finding-index">P2 · یافته 15</span><span class="category">Rendering performance</span></div>
+  <h3>یافته 15 — Media decoding و scratchpad بودجهٔ عملکرد ندارند</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P2</b></span><span>دسته / Category: <b>Rendering performance</b></span><span>اطمینان / Confidence: <b>Medium-high</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/widgets/content_blocks.dart; flutter_app/lib/widgets/scratchpad.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>نمایش media بزرگ و رسم stroke طولانی را در profile mode بررسی کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>تصویر به اندازهٔ نمایش decode و strokeها به‌صورت batch داخل repaint boundary رندر شوند.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>Image.asset بدون cacheWidth/cacheHeight است؛ هر pointer update setState و points نامحدود ایجاد می‌کند.</p></section>
+    <section><h4>اثر / Impact</h4><p>memory spikes، GC و jank در محتوای تصویری یا نقاشی طولانی.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>content_blocks.dart خط 58؛ scratchpad.dart خطوط 71 تا 74.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/widgets/content_blocks.dart; flutter_app/lib/widgets/scratchpad.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Flutter performance</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Profile frame chart، image cache budget و 60-second scratchpad stress test بدون missed-frame regression.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p2">
+  <div class="finding-top"><span class="finding-index">P2 · یافته 16</span><span class="category">Errors / Product integrity</span></div>
+  <h3>یافته 16 — Error و empty states با زبان جهان و privacy مرزبندی نشده‌اند</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P2</b></span><span>دسته / Category: <b>Errors / Product integrity</b></span><span>اطمینان / Confidence: <b>Medium</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/screens/mission_screen.dart; flutter_app/lib/app/gauss_app.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>failureهای initialization، load و write را inject و متن UI را بررسی کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>پیام انسانی، اقدام روشن و diagnostic فنی محلی/اختیاری باشد.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>برخی مسیرها raw error object را نمایش می‌دهند و stateها generic Material هستند.</p></section>
+    <section><h4>اثر / Impact</h4><p>کاربر با اصطلاح فنی یا جزئیات غیرضروری روبه‌رو می‌شود و recovery نامنسجم است.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>عملیات mission error را در state نگه می‌دارد و چند UI path مقدار error را مستقیم interpolate می‌کنند.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/screens/mission_screen.dart; flutter_app/lib/app/gauss_app.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Error handling / content design</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Failure matrix با copy مصوب، retry موفق و عدم نمایش stack/internal path.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p3">
+  <div class="finding-top"><span class="finding-index">P3 · یافته 17</span><span class="category">Typography / Multilingual UI</span></div>
+  <h3>یافته 17 — یک فونت عمومی روی chrome انگلیسی و محتوای فارسی تحمیل شده است</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P3</b></span><span>دسته / Category: <b>Typography / Multilingual UI</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib/app/gauss_theme.dart</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>ThemeData و نمونه‌های English chrome/Persian content را بررسی کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>نقش‌های type مستقل برای Latin display، Latin UI، Persian learning و math با metrics هماهنگ.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>Vazirmatn به‌صورت global fontFamily استفاده شده و wordmark/display شخصیت جدا ندارد.</p></section>
+    <section><h4>اثر / Impact</h4><p>brand voice و hierarchy ضعیف و ترازبندی دوزبانه ناهماهنگ است.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>gauss_theme.dart خط 36 و screenshotهای baseline.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib/app/gauss_theme.dart</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Visual design / typography</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Type specimen و goldenهای English/Persian/math در وزن‌ها و scaleهای پشتیبانی‌شده.</b></span></div>
+</article></section><section class="section finding-page">
+<article class="finding p3">
+  <div class="finding-top"><span class="finding-index">P3 · یافته 18</span><span class="category">Motion / Accessibility</span></div>
+  <h3>یافته 18 — Motion، haptic و reduced-motion contract وجود ندارد</h3>
+  <div class="finding-meta"><span class="meta-spacer" aria-hidden="true">&nbsp;</span><span>شدت / Severity: <b>P3</b></span><span>دسته / Category: <b>Motion / Accessibility</b></span><span>اطمینان / Confidence: <b>High</b></span><span>مسیر / Affected path: <span class="ltr" dir="ltr">flutter_app/lib</span></span></div>
+  <div class="finding-grid">
+    <section><h4>بازتولید / Reproduce</h4><p>state transitionهای map، answer feedback و completion را مشاهده و disableAnimations را جست‌وجو کنید.</p></section>
+    <section><h4>انتظار / Expected</h4><p>زبان حرکتی محدود، هدفمند و دارای مسیر instant برای reduced motion؛ haptic taxonomy روشن.</p></section>
+    <section><h4>مشاهده / Actual</h4><p>interactionها عمدتاً ناگهانی و تخت‌اند و reduced-motion behavior تعریف نشده است.</p></section>
+    <section><h4>اثر / Impact</h4><p>محصول فاقد حس premium است و افزودن motion بعدی بدون guardrail می‌تواند آزاردهنده یا پرهزینه شود.</p></section>
+  </div>
+  <div class="evidence"><h4>شواهد / Evidence</h4><p>نبود motion tokens و reduced-motion branch در source audit.</p><p class="location">مکان: <span class="ltr" dir="ltr">flutter_app/lib</span></p></div>
+  <div class="finding-bottom"><span>مالک محتمل / Likely owner: <b>Interaction design / accessibility</b></span><span>معیار راستی‌آزمایی / Verification target: <b>Motion spec، reduced-motion screenshots و transition tests با disableAnimations.</b></span></div>
+</article></section>
+<section class="section page-break"><div class="section-heading"><span class="section-number">05</span><div><h2>الگوها و ارجاع رفع</h2><p>Patterns &amp; remediation</p></div></div><div class="two-col"><div class="panel"><h4>الگوهای سیستمی / Systemic patterns</h4><ul class=""><li>پیش‌نمایش منتخب بدون decomposition manifest و fidelity gate وارد پیاده‌سازی شد.</li><li>جایگزین‌های موقت CustomPainter و Material Icon بدون expiry condition به محصول نهایی راه یافتند.</li><li>تعریف Done بر build و unit tests تکیه کرد و launch/screenshot واقعی Android را الزام نکرد.</li><li>Modernize تمام سطوح هویت و system surfaces را پوشش نداده بود.</li><li>Practice و Insights به الگوی generic dashboard برگشتند و از جهان map-first جدا شدند.</li></ul></div><div class="panel"><h4>نقاط قوت قابل‌حفظ / Strengths to preserve</h4><ul class=""><li>7,353 سؤال و 3,410 فایل رسانه‌ای کامل حفظ شده‌اند.</li><li>3,681 سؤال mission-ready از 3,672 ردیف preserved به‌صورت صادقانه جدا شده‌اند.</li><li>پیشرفت و reward ledger محلی، تراکنشی و idempotent است.</li><li>domain clock تزریق شده و مرز local-midnight تست دارد.</li><li>auth، monetization، social pressure و backend غیرضروری اضافه نشده است.</li><li>محتوای فارسی واقعی و offline availability پایهٔ ارزشمند محصول‌اند.</li></ul></div></div><div class="panel" style="margin-top:6mm"><h4>نقشهٔ ارجاع رفع / Remediation map</h4><ul class=""><li>P0: package/path Android را اصلاح و launch instrumentation را گیت release کنید.</li><li>Foundation: SafeArea/insets، bootstrap فوری، font-scale/semantics و adaptive window tests را ببندید.</li><li>Brand: mark، wordmark، شعار، adaptive icon، splash، type roles و functional glyph family را فریز کنید.</li><li>Art kit: background، theorem engine، node shells، path، frames، Mira، badges و reward props را ماژولار تولید کنید.</li><li>Map: progression path و state machine واقعی را روی normalized anchors پیاده کنید.</li><li>Mission: mobile stage، tablet supporting pane، semantic math، scratchpad و feedback/reward choreography را بسازید.</li><li>Practice/Insights: به اتاق‌های همان جهان تبدیل و زبان داخلی dataset را حذف کنید.</li><li>Perfect: profile performance، accessibility، failure injection، release install/launch و screenshot matrix نهایی.</li></ul></div></section>
+<section class="section page-break"><div class="section-heading"><span class="section-number">06</span><div><h2>محدودیت‌ها و جمع‌بندی</h2><p>Limits &amp; closeout</p></div></div><div class="panel"><h4>موارد مسدود یا بررسی‌نشده / Blocked or unavailable checks</h4><ul class=""><li>دستگاه فیزیکی Android در مرحلهٔ ممیزی فریز‌شده متصل نبود؛ تبلت با available-window شبیه‌ساز بررسی شد.</li><li>زمان cold launch ثبت‌شده از debug harness است و برای بودجهٔ release معیار نهایی نیست.</li><li>UI baseline از harness بیرون repository گرفته شد که فقط package MainActivity را هماهنگ کرده بود؛ APK repository همچنان launch نمی‌شد.</li><li>پروفایل frame/memory و TalkBack صوتی کامل باید پس از پیاده‌سازی در profile/release انجام شود.</li></ul></div><div class="closing" style="margin-top:7mm"><h3>گزارش فریز شد / Audit frozen</h3><p>این گزارش مبنای پیگیری اصلاحات است. پس از هر تغییر، راستی‌آزمایی مستقل انجام دهید و شواهد جدید ثبت کنید.</p></div></section>
+</main></body></html>

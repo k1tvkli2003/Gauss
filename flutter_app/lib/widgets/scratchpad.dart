@@ -18,7 +18,72 @@ class _ScratchpadSheet extends StatefulWidget {
 }
 
 class _ScratchpadSheetState extends State<_ScratchpadSheet> {
-  final List<Offset?> _points = [];
+  static const _maxRetainedPoints = 12000;
+  static const _maxPointsPerStroke = 2000;
+
+  final List<_InkStroke> _strokes = [];
+  final ValueNotifier<int> _paintRevision = ValueNotifier(0);
+  _InkStroke? _activeStroke;
+  Offset? _lastPoint;
+  int _pointCount = 0;
+
+  bool get _isEmpty => _strokes.isEmpty;
+
+  void _beginStroke(Offset point) {
+    final wasEmpty = _isEmpty;
+    final stroke = _InkStroke(Path()..moveTo(point.dx, point.dy));
+    _strokes.add(stroke);
+    _activeStroke = stroke;
+    _lastPoint = point;
+    _pointCount++;
+    _paintRevision.value++;
+    if (wasEmpty) setState(() {});
+  }
+
+  void _extendStroke(Offset point) {
+    var stroke = _activeStroke;
+    if (stroke == null) {
+      _beginStroke(point);
+      return;
+    }
+    if (stroke.pointCount >= _maxPointsPerStroke) {
+      final last = _lastPoint ?? point;
+      stroke = _InkStroke(Path()..moveTo(last.dx, last.dy));
+      _strokes.add(stroke);
+      _activeStroke = stroke;
+      _pointCount++;
+    }
+    stroke.path.lineTo(point.dx, point.dy);
+    stroke.pointCount++;
+    _lastPoint = point;
+    _pointCount++;
+    while (_pointCount > _maxRetainedPoints && _strokes.length > 1) {
+      final removed = _strokes.removeAt(0);
+      _pointCount -= removed.pointCount;
+    }
+    _paintRevision.value++;
+  }
+
+  void _endStroke() {
+    _activeStroke = null;
+    _lastPoint = null;
+  }
+
+  void _clear() {
+    setState(() {
+      _strokes.clear();
+      _activeStroke = null;
+      _lastPoint = null;
+      _pointCount = 0;
+    });
+    _paintRevision.value++;
+  }
+
+  @override
+  void dispose() {
+    _paintRevision.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => FractionallySizedBox(
@@ -41,9 +106,7 @@ class _ScratchpadSheetState extends State<_ScratchpadSheet> {
                 ),
                 const Spacer(),
                 TextButton.icon(
-                  onPressed: _points.isEmpty
-                      ? null
-                      : () => setState(_points.clear),
+                  onPressed: _isEmpty ? null : _clear,
                   icon: const Icon(Icons.delete_outline),
                   label: const Text('Clear'),
                 ),
@@ -67,13 +130,16 @@ class _ScratchpadSheetState extends State<_ScratchpadSheet> {
               child: LayoutBuilder(
                 builder: (context, constraints) => GestureDetector(
                   behavior: HitTestBehavior.opaque,
-                  onPanStart: (details) =>
-                      setState(() => _points.add(details.localPosition)),
+                  onPanStart: (details) => _beginStroke(details.localPosition),
                   onPanUpdate: (details) =>
-                      setState(() => _points.add(details.localPosition)),
-                  onPanEnd: (_) => setState(() => _points.add(null)),
+                      _extendStroke(details.localPosition),
+                  onPanEnd: (_) => _endStroke(),
+                  onPanCancel: _endStroke,
                   child: CustomPaint(
-                    painter: _ScratchPainter(_points),
+                    painter: _ScratchPainter(
+                      strokes: _strokes,
+                      repaint: _paintRevision,
+                    ),
                     size: Size(constraints.maxWidth, constraints.maxHeight),
                   ),
                 ),
@@ -93,9 +159,18 @@ class _ScratchpadSheetState extends State<_ScratchpadSheet> {
   );
 }
 
+class _InkStroke {
+  _InkStroke(this.path);
+
+  final Path path;
+  int pointCount = 1;
+}
+
 class _ScratchPainter extends CustomPainter {
-  const _ScratchPainter(this.points);
-  final List<Offset?> points;
+  _ScratchPainter({required this.strokes, required Listenable repaint})
+    : super(repaint: repaint);
+
+  final List<_InkStroke> strokes;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -112,13 +187,12 @@ class _ScratchPainter extends CustomPainter {
       ..color = GaussColors.parchmentInk
       ..strokeWidth = 2.4
       ..strokeCap = StrokeCap.round;
-    for (var index = 0; index < points.length - 1; index++) {
-      final from = points[index];
-      final to = points[index + 1];
-      if (from != null && to != null) canvas.drawLine(from, to, ink);
+    for (final stroke in strokes) {
+      canvas.drawPath(stroke.path, ink);
     }
   }
 
   @override
-  bool shouldRepaint(covariant _ScratchPainter oldDelegate) => true;
+  bool shouldRepaint(covariant _ScratchPainter oldDelegate) =>
+      oldDelegate.strokes != strokes;
 }

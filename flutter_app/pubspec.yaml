@@ -62,6 +62,10 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/visual/map/
+    - assets/visual/nodes/
+    - assets/visual/mascot/
+    - assets/visual/brand/
     - assets/question_bank/
     - assets/question_bank/topics/
     # BEGIN GENERATED QUESTION MEDIA ASSETS
@@ -2034,6 +2038,9 @@ flutter:
     # END GENERATED QUESTION MEDIA ASSETS
 
   fonts:
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/manrope_variable.ttf
     - family: Vazirmatn
       fonts:
         - asset: assets/fonts/vazirmatn_regular.ttf

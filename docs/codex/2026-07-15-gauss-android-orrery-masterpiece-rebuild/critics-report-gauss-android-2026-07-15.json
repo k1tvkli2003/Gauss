@@ -1,0 +1,399 @@
+{
+  "metadata": {
+    "product_name": "Gauss — Android Orrery Rebuild",
+    "product_slug": "gauss-android",
+    "audit_date": "2026-07-15",
+    "generated_at": "2026-07-15T17:35:00+03:30",
+    "scope": [
+      "Flutter Android phone",
+      "Flutter Android tablet portrait and landscape",
+      "Data integrity and local persistence",
+      "Brand, navigation, map, mission, practice, insights, states and motion"
+    ]
+  },
+  "summary": {
+    "release_posture": "block",
+    "overview": "پایهٔ داده و پایداری Gauss ارزشمند و قابل‌حفظ است، اما APK فعلی repository روی Android اجرا نمی‌شود و تجربهٔ دیداری/تعاملی فاصله‌ای بنیادی با پیش‌نمایش پذیرفته‌شدهٔ Orrery of Proofs دارد. محصول برای انتشار و برای ادعای «شاهکار» مسدود است تا launch واقعی، قرارداد دارایی ماژولار، progression خوانا، دسترس‌پذیری و حلقهٔ کامل مأموریت پیاده و با screenshot ثابت شوند.",
+    "top_risks": [
+      "ClassNotFoundException در launch APK repository",
+      "شکست قرارداد preview-to-runtime و باقی‌ماندن placeholder art",
+      "برخورد HUD با status bar و شکست در font scale 1.3",
+      "semantics قطعه‌قطعهٔ متن فارسی و ریاضی",
+      "نبود launch/golden/accessibility gates در مجموعه‌تست"
+    ],
+    "scope": [
+      "Map, Practice, Insights, Mission, Feedback and Completion",
+      "Phone and simulated tablet windows",
+      "App icon, splash resources, typography, iconography and brand promise",
+      "State, repository, media decoding and scratchpad performance"
+    ],
+    "commands": [
+      "flutter analyze",
+      "flutter test --reporter expanded",
+      "flutter build apk --debug --target-platform android-x64",
+      "adb install / am start / logcat",
+      "adb screencap / uiautomator dump / wm size / wm density"
+    ]
+  },
+  "coverage": [
+    {
+      "surface": "Android package and launch",
+      "status": "Failed / release blocker",
+      "states": "Install, explicit activity launch, logcat",
+      "evidence": "APK installs but com.gauss.app.MainActivity is absent; ClassNotFoundException recorded."
+    },
+    {
+      "surface": "Phone map",
+      "status": "Exercised",
+      "states": "First-use, selected topic, font scale 1.0 and 1.3",
+      "evidence": "Real Android harness screenshots at 1080x2400."
+    },
+    {
+      "surface": "Tablet map",
+      "status": "Exercised",
+      "states": "Landscape inspector and portrait-like compact inspector",
+      "evidence": "Simulated available windows at density 240; landscape screenshot 2560x1600."
+    },
+    {
+      "surface": "Practice",
+      "status": "Exercised",
+      "states": "First-use filters, selected topic",
+      "evidence": "Phone runtime screenshot and code trace."
+    },
+    {
+      "surface": "Insights and achievements",
+      "status": "Exercised",
+      "states": "Zero-history, daily quest, locked badges",
+      "evidence": "Phone and tablet runtime screenshots plus catalog/UI mapping trace."
+    },
+    {
+      "surface": "Mission loop",
+      "status": "Exercised",
+      "states": "Question, selected answer, wrong feedback, explanation, tablet layout",
+      "evidence": "Runtime screenshots and UIAutomator semantics dump."
+    },
+    {
+      "surface": "Data integrity",
+      "status": "Passed",
+      "states": "Question count, trust boundary, media count, explanations",
+      "evidence": "27 tests pass; 7,353 questions and 3,410 media preserved."
+    },
+    {
+      "surface": "Performance",
+      "status": "Partially exercised",
+      "states": "Debug cold launch observation and static hot-path review",
+      "evidence": "Release/profile frame and memory profiling remain for implementation acceptance."
+    },
+    {
+      "surface": "Physical device",
+      "status": "Unavailable",
+      "states": "Phone/tablet hardware",
+      "evidence": "No physical Android device was connected during the frozen audit."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P0",
+      "confidence": "High",
+      "category": "Function / Android packaging",
+      "title": "APK مخزن روی Android اجرا نمی‌شود",
+      "affected_path": "flutter_app/android/app/build.gradle.kts; flutter_app/android/app/src/main/kotlin/com/gauss/gauss/MainActivity.kt",
+      "reproduction": [
+        "APK فعلی را build و نصب کنید.",
+        "activity ثبت‌شدهٔ com.gauss.app/.MainActivity را اجرا کنید.",
+        "logcat را برای ClassNotFoundException بررسی کنید."
+      ],
+      "expected": "کلاس activity با package و applicationId هماهنگ باشد و اولین frame Flutter نمایش داده شود.",
+      "actual": "applicationId برابر com.gauss.app است اما MainActivity در package com.gauss.gauss کامپایل می‌شود؛ Android کلاس com.gauss.app.MainActivity را پیدا نمی‌کند.",
+      "evidence": "ClassNotFoundException در logs/current-apk-launch-logcat.txt؛ build.gradle.kts خطوط 10 و 20 در برابر MainActivity.kt خط 1.",
+      "impact": "محصول فعلی مستقل از کیفیت UI یا داده، غیرقابل استفاده و غیرقابل انتشار است.",
+      "owner": "Android platform / build",
+      "verification_target": "نصب و cold launch APK release repository بدون crash، همراه instrumentation launch smoke."
+    },
+    {
+      "severity": "P1",
+      "confidence": "High",
+      "category": "Modernize / Visual fidelity",
+      "title": "پیش‌نمایش Orrery به قرارداد runtime تبدیل نشده است",
+      "affected_path": "flutter_app/lib/screens/map_screen.dart",
+      "reproduction": [
+        "Mock Preview منتخب Orrery of Proofs را باز کنید.",
+        "Map را در harness روی موبایل یا تبلت باز کنید.",
+        "ماده، عمق، گره‌ها، مسیر، قاب و landmarkها را مقایسه کنید."
+      ],
+      "expected": "ترکیب‌بندی، عمق، ماده، hierarchy و state language مرجع با دارایی‌های ماژولار و کنترل‌های زنده بازتولید شود.",
+      "actual": "مرجع به canvas ثابت 1100، حلقه‌های ساده، دایره‌های هم‌شکل و Material Icons تقلیل یافته است.",
+      "evidence": "assets/mock-preview-c-orrery-of-proofs.png در برابر gauss-baseline-phone-map.png و gauss-baseline-tablet-landscape-map.png؛ map_screen.dart خطوط 194 تا 216 و 397 تا 433.",
+      "impact": "هویت، حافظهٔ بصری و وعدهٔ «شاهکار» از بین رفته و UI placeholder به نظر می‌رسد.",
+      "owner": "Product design / Flutter UI / art pipeline",
+      "verification_target": "Asset decomposition manifest و screenshot fidelity review برای phone/tablet با هیچ جایگزین placeholder."
+    },
+    {
+      "severity": "P1",
+      "confidence": "High",
+      "category": "Anatomy / Accessibility",
+      "title": "HUD موبایل با system insets و متن بزرگ برخورد می‌کند",
+      "affected_path": "flutter_app/lib/screens/map_screen.dart",
+      "reproduction": [
+        "پنجرهٔ 1080x2400 با density 420 را اجرا کنید.",
+        "font_scale را روی 1.3 بگذارید.",
+        "Map و status bar را مشاهده کنید."
+      ],
+      "expected": "HUD داخل safe bounds بماند، با font scale تا 1.5 بدون overlap و crop تطبیق یابد.",
+      "actual": "time/status روی brand و XP می‌افتد؛ labelها و nodeهای canvas از لبه‌ها قطع می‌شوند.",
+      "evidence": "assets/gauss-baseline-phone-font130.png؛ Map HUD در top:16 بدون SafeArea قرار گرفته است.",
+      "impact": "خوانایی و لمس کنترل‌ها روی دستگاه واقعی و تنظیمات دسترس‌پذیری آسیب می‌بیند.",
+      "owner": "Flutter adaptive UI",
+      "verification_target": "Golden/widget tests در font scale 1.0، 1.3 و 1.5 و insets متنوع، بدون overlap/overflow."
+    },
+    {
+      "severity": "P1",
+      "confidence": "High",
+      "category": "Gamify / Information architecture",
+      "title": "نقشه progression نیست؛ catalog دایره‌ای است",
+      "affected_path": "flutter_app/lib/screens/map_screen.dart; flutter_app/lib/domain/gamification_catalog.dart",
+      "reproduction": "Map first-use را باز و stateهای 29 موضوع را مقایسه کنید.",
+      "expected": "current، available، locked، completed، mastered، milestone و مسیر بعدی در یک نگاه خوانا باشند.",
+      "actual": "موضوع‌ها تقریباً هم‌ارز، بدون مسیر پیوسته، gate، chest، boss یا landmark دیده می‌شوند.",
+      "evidence": "Phone/tablet map screenshots و ساخت سه حلقهٔ ثابت در map_screen.dart.",
+      "impact": "کاربر نمی‌داند کجاست، بعد کجا برود و چرا؛ map-first به wallpaper تبدیل می‌شود.",
+      "owner": "Product progression / Flutter UI",
+      "verification_target": "State matrix کامل و user-flow test که current node و next action را بدون متن راهنما قابل تشخیص کند."
+    },
+    {
+      "severity": "P1",
+      "confidence": "High",
+      "category": "Gamify / Mission loop",
+      "title": "مأموریت payoff و پیامد جهانی ندارد",
+      "affected_path": "flutter_app/lib/screens/mission_screen.dart",
+      "reproduction": [
+        "یک مأموریت را شروع کنید.",
+        "پاسخ غلط و سپس completion را طی کنید.",
+        "بازخورد، reward reveal و بازگشت به نقشه را مشاهده کنید."
+      ],
+      "expected": "پرسش، واکنش، توضیح، پاداش و روشن‌شدن مسیر یک حلقهٔ احساسی و قابل‌فهم بسازند.",
+      "actual": "پرسش و scoring کار می‌کند، اما coach، anticipation، reaction، reward theater و map consequence بصری وجود ندارد.",
+      "evidence": "gauss-baseline-phone-mission.png و gauss-baseline-phone-mission-feedback.png؛ completion در یک Card عمومی رندر می‌شود.",
+      "impact": "تلاش کاربر به تجربهٔ به‌یادماندنی یا انگیزهٔ ادامه تبدیل نمی‌شود.",
+      "owner": "Gamification / interaction design",
+      "verification_target": "End-to-end mission video/screenshot sequence با reaction، recap، reward ledger و node state change."
+    },
+    {
+      "severity": "P1",
+      "confidence": "High",
+      "category": "Accessibility / RTL math",
+      "title": "TalkBack عبارت فارسی و ریاضی را به قطعات بی‌معنا می‌شکند",
+      "affected_path": "flutter_app/lib/widgets/content_blocks.dart",
+      "reproduction": [
+        "سؤال mixed Persian/math را باز کنید.",
+        "درخت UIAutomator یا TalkBack را بررسی کنید.",
+        "ترتیب tokenهای A، B، پرانتز و عملگرها را دنبال کنید."
+      ],
+      "expected": "stem و هر choice یک semantic label پیوسته، قابل‌خواندن و locale-aware داشته باشند.",
+      "actual": "هر حرف، عملگر و قطعهٔ متن یک node جداست و ترتیب شنیداری معنای عبارت را از بین می‌برد.",
+      "evidence": "UIAutomator dump مأموریت تبلت بیش از 20 node جدا برای یک stem ثبت کرد؛ renderer از Wrap و tokenهای جدا استفاده می‌کند.",
+      "impact": "کاربر screen-reader نمی‌تواند سؤال را بفهمد و mixed-direction نیز مستعد جابه‌جایی بصری است.",
+      "owner": "Accessibility / content renderer",
+      "verification_target": "Semantics test و TalkBack recording با یک label درست برای stem و هر choice."
+    },
+    {
+      "severity": "P1",
+      "confidence": "High",
+      "category": "Quality engineering",
+      "title": "گیت‌های تست، launch و fidelity را پوشش نمی‌دهند",
+      "affected_path": "flutter_app/test; flutter_app/android",
+      "reproduction": "27 تست موجود و analyzer را اجرا و سپس APK را launch کنید.",
+      "expected": "سبز بودن release gates به معنی امکان launch و سلامت سطوح اصلی روی windowهای پشتیبانی‌شده باشد.",
+      "actual": "همهٔ تست‌ها سبزند، اما APK launch نمی‌شود و overlap/fidelity شکست‌خورده هیچ تستی را fail نمی‌کند.",
+      "evidence": "27 تست pass در برابر crash launch و screenshotهای baseline.",
+      "impact": "ادعای اتمام و انتشار می‌تواند با محصول خراب تکرار شود.",
+      "owner": "Testing / release engineering",
+      "verification_target": "Instrumentation launch، route smoke، golden phone/tablet، font-scale، semantics و reduced-motion در release checklist."
+    },
+    {
+      "severity": "P1",
+      "confidence": "High",
+      "category": "Branding / Android system surfaces",
+      "title": "آیکن و نشان فعلی خارج از جهان Gauss است",
+      "affected_path": "flutter_app/android/app/src/main/res/drawable-nodpi/ic_launcher_foreground.png; mipmap-anydpi-v26/ic_launcher.xml",
+      "reproduction": "launcher foreground و adaptive XML را باز کنید.",
+      "expected": "mark اختصاصی، خوانا در اندازهٔ کوچک و هماهنگ با Orrery، شامل foreground/background/monochrome.",
+      "actual": "یک knot پاستلی نامرتبط استفاده شده و لایهٔ monochrome وجود ندارد.",
+      "evidence": "بررسی مستقیم PNG و XML منابع Android.",
+      "impact": "اولین touchpoint محصول generic و بی‌مالکیت است و themed icons را کامل پشتیبانی نمی‌کند.",
+      "owner": "Brand design / Android resources",
+      "verification_target": "Adaptive icon mask grid، themed icon preview، launcher screenshot و splash هماهنگ."
+    },
+    {
+      "severity": "P2",
+      "confidence": "High",
+      "category": "Adaptive tablet UX",
+      "title": "مأموریت تبلت بیشتر بوم را بلااستفاده می‌گذارد",
+      "affected_path": "flutter_app/lib/screens/mission_screen.dart; flutter_app/lib/widgets/scratchpad.dart",
+      "reproduction": "Mission را در پنجرهٔ 2560x1600 با density 240 باز کنید.",
+      "expected": "layout تبلت از supporting pane برای ابزار، راهنما یا scratchpad استفاده کند.",
+      "actual": "سؤال و گزینه‌ها در ستون باریک وسط هستند و بخش اعظم بوم خالی است؛ scratchpad bottom sheet می‌ماند.",
+      "evidence": "assets/gauss-baseline-tablet-landscape-mission.png.",
+      "impact": "محصول روی تبلت نسخهٔ کش‌آمدهٔ موبایل به نظر می‌رسد و کارایی فضای بزرگ را از دست می‌دهد.",
+      "owner": "Adaptive layout",
+      "verification_target": "List-detail/supporting-pane screenshots در portrait و landscape، بدون فضای مردهٔ غیرهدفمند."
+    },
+    {
+      "severity": "P2",
+      "confidence": "High",
+      "category": "String / Product voice",
+      "title": "Practice با زبان ممیزی داخلی با کاربر حرف می‌زند",
+      "affected_path": "flutter_app/lib/screens/practice_screen.dart",
+      "reproduction": "Practice first-use را باز و متن filter/archive را بخوانید.",
+      "expected": "copy کوتاه، انسانی و متمرکز بر انتخاب تمرین باشد.",
+      "actual": "واژه‌هایی مانند mission-ready، preserved، contract-checked و conflict جزئیات pipeline را افشا می‌کنند.",
+      "evidence": "assets/gauss-baseline-phone-practice.png و رشته‌های practice_screen.dart.",
+      "impact": "اعتماد و تمرکز شناختی آسیب می‌بیند و محصول شبیه ابزار داخلی می‌شود.",
+      "owner": "Content design / Practice UX",
+      "verification_target": "Copy inventory بدون اصطلاح داخلی؛ diagnostics جدا و opt-in."
+    },
+    {
+      "severity": "P2",
+      "confidence": "High",
+      "category": "First-use UX",
+      "title": "Insights اولین جلسه را با دیوار صفرها شروع می‌کند",
+      "affected_path": "flutter_app/lib/screens/insights_screen.dart",
+      "reproduction": "با دیتابیس پیشرفت خالی، Insights را باز کنید.",
+      "expected": "یک next-best-action، پیش‌نمایش پیشرفت و دعوت روشن برای اولین مأموریت دیده شود.",
+      "actual": "چهار metric card صفر، quest صفر و badgeهای خاکستری بدون CTA غالب‌اند.",
+      "evidence": "assets/gauss-baseline-phone-insights.png.",
+      "impact": "صفحه در اولین استفاده مرده و تنبیه‌کننده به نظر می‌رسد.",
+      "owner": "Insights / onboarding",
+      "verification_target": "First-use screenshot با یک CTA اصلی و progressive disclosure آمار."
+    },
+    {
+      "severity": "P2",
+      "confidence": "High",
+      "category": "Achievement art",
+      "title": "نیاز هنری catalog دستاوردها نادیده گرفته شده است",
+      "affected_path": "flutter_app/lib/domain/gamification_catalog.dart; flutter_app/lib/screens/insights_screen.dart",
+      "reproduction": "تعریف art requirement در catalog را با badge cards در Insights مقایسه کنید.",
+      "expected": "هر family و rarity silhouette و مادهٔ قابل‌جمع‌آوری خود را داشته باشد.",
+      "actual": "catalog غنی به چند Material Icon عمومی نگاشت شده است.",
+      "evidence": "insights_screen.dart خطوط 459 تا 463.",
+      "impact": "دستاوردها حافظهٔ بصری، desirability و لحظهٔ reveal ندارند.",
+      "owner": "Gamification art / Insights UI",
+      "verification_target": "Locked/unlocked/rarity asset matrix و reveal screenshot برای هر family."
+    },
+    {
+      "severity": "P2",
+      "confidence": "High",
+      "category": "Startup resilience",
+      "title": "Initialization پیش از اولین frame انجام می‌شود",
+      "affected_path": "flutter_app/lib/main.dart",
+      "reproduction": "main.dart را بررسی و startup را با cold process اجرا کنید.",
+      "expected": "branded shell بلافاصله mount شود و bootstrap state قابل‌مشاهده و retry باشد.",
+      "actual": "controller.initialize پیش از runApp await می‌شود؛ delay/failure قبل از UI رخ می‌دهد.",
+      "evidence": "main.dart خطوط 18 و 19؛ cold debug harness حدود 6.3 ثانیه مشاهده شد، هرچند معیار release نیست.",
+      "impact": "صفحهٔ سیاه یا startup نامطمئن و نبود recovery واضح.",
+      "owner": "App bootstrap",
+      "verification_target": "Time-to-first-frame profile، branded loading و injected initialization failure recovery."
+    },
+    {
+      "severity": "P2",
+      "confidence": "Medium-high",
+      "category": "State performance",
+      "title": "Rebuild و analytics با رشد تاریخچه مقیاس‌پذیر نیستند",
+      "affected_path": "flutter_app/lib/state/gauss_controller.dart; flutter_app/lib/app/gauss_app.dart",
+      "reproduction": "notifyListeners، AnimatedBuilder سطح app و refresh analytics را trace کنید.",
+      "expected": "هر تغییر فقط consumerهای لازم را rebuild و metrics را از projectionهای محدود دریافت کند.",
+      "actual": "ChangeNotifier سراسری می‌تواند app را rebuild کند و analytics همهٔ attempts را در Dart می‌خواند.",
+      "evidence": "gauss_app.dart خط 97؛ gauss_controller.dart خط 181 و surrounding refresh flow.",
+      "impact": "در تاریخچهٔ بلندمدت، latency و jank قابل‌افزایش است.",
+      "owner": "State / local data",
+      "verification_target": "Rebuild counts و query benchmarks قبل/بعد با تاریخچهٔ بزرگ fixture."
+    },
+    {
+      "severity": "P2",
+      "confidence": "Medium-high",
+      "category": "Rendering performance",
+      "title": "Media decoding و scratchpad بودجهٔ عملکرد ندارند",
+      "affected_path": "flutter_app/lib/widgets/content_blocks.dart; flutter_app/lib/widgets/scratchpad.dart",
+      "reproduction": "نمایش media بزرگ و رسم stroke طولانی را در profile mode بررسی کنید.",
+      "expected": "تصویر به اندازهٔ نمایش decode و strokeها به‌صورت batch داخل repaint boundary رندر شوند.",
+      "actual": "Image.asset بدون cacheWidth/cacheHeight است؛ هر pointer update setState و points نامحدود ایجاد می‌کند.",
+      "evidence": "content_blocks.dart خط 58؛ scratchpad.dart خطوط 71 تا 74.",
+      "impact": "memory spikes، GC و jank در محتوای تصویری یا نقاشی طولانی.",
+      "owner": "Flutter performance",
+      "verification_target": "Profile frame chart، image cache budget و 60-second scratchpad stress test بدون missed-frame regression."
+    },
+    {
+      "severity": "P2",
+      "confidence": "Medium",
+      "category": "Errors / Product integrity",
+      "title": "Error و empty states با زبان جهان و privacy مرزبندی نشده‌اند",
+      "affected_path": "flutter_app/lib/screens/mission_screen.dart; flutter_app/lib/app/gauss_app.dart",
+      "reproduction": "failureهای initialization، load و write را inject و متن UI را بررسی کنید.",
+      "expected": "پیام انسانی، اقدام روشن و diagnostic فنی محلی/اختیاری باشد.",
+      "actual": "برخی مسیرها raw error object را نمایش می‌دهند و stateها generic Material هستند.",
+      "evidence": "عملیات mission error را در state نگه می‌دارد و چند UI path مقدار error را مستقیم interpolate می‌کنند.",
+      "impact": "کاربر با اصطلاح فنی یا جزئیات غیرضروری روبه‌رو می‌شود و recovery نامنسجم است.",
+      "owner": "Error handling / content design",
+      "verification_target": "Failure matrix با copy مصوب، retry موفق و عدم نمایش stack/internal path."
+    },
+    {
+      "severity": "P3",
+      "confidence": "High",
+      "category": "Typography / Multilingual UI",
+      "title": "یک فونت عمومی روی chrome انگلیسی و محتوای فارسی تحمیل شده است",
+      "affected_path": "flutter_app/lib/app/gauss_theme.dart",
+      "reproduction": "ThemeData و نمونه‌های English chrome/Persian content را بررسی کنید.",
+      "expected": "نقش‌های type مستقل برای Latin display، Latin UI، Persian learning و math با metrics هماهنگ.",
+      "actual": "Vazirmatn به‌صورت global fontFamily استفاده شده و wordmark/display شخصیت جدا ندارد.",
+      "evidence": "gauss_theme.dart خط 36 و screenshotهای baseline.",
+      "impact": "brand voice و hierarchy ضعیف و ترازبندی دوزبانه ناهماهنگ است.",
+      "owner": "Visual design / typography",
+      "verification_target": "Type specimen و goldenهای English/Persian/math در وزن‌ها و scaleهای پشتیبانی‌شده."
+    },
+    {
+      "severity": "P3",
+      "confidence": "High",
+      "category": "Motion / Accessibility",
+      "title": "Motion، haptic و reduced-motion contract وجود ندارد",
+      "affected_path": "flutter_app/lib",
+      "reproduction": "state transitionهای map، answer feedback و completion را مشاهده و disableAnimations را جست‌وجو کنید.",
+      "expected": "زبان حرکتی محدود، هدفمند و دارای مسیر instant برای reduced motion؛ haptic taxonomy روشن.",
+      "actual": "interactionها عمدتاً ناگهانی و تخت‌اند و reduced-motion behavior تعریف نشده است.",
+      "evidence": "نبود motion tokens و reduced-motion branch در source audit.",
+      "impact": "محصول فاقد حس premium است و افزودن motion بعدی بدون guardrail می‌تواند آزاردهنده یا پرهزینه شود.",
+      "owner": "Interaction design / accessibility",
+      "verification_target": "Motion spec، reduced-motion screenshots و transition tests با disableAnimations."
+    }
+  ],
+  "patterns": [
+    "پیش‌نمایش منتخب بدون decomposition manifest و fidelity gate وارد پیاده‌سازی شد.",
+    "جایگزین‌های موقت CustomPainter و Material Icon بدون expiry condition به محصول نهایی راه یافتند.",
+    "تعریف Done بر build و unit tests تکیه کرد و launch/screenshot واقعی Android را الزام نکرد.",
+    "Modernize تمام سطوح هویت و system surfaces را پوشش نداده بود.",
+    "Practice و Insights به الگوی generic dashboard برگشتند و از جهان map-first جدا شدند."
+  ],
+  "strengths": [
+    "7,353 سؤال و 3,410 فایل رسانه‌ای کامل حفظ شده‌اند.",
+    "3,681 سؤال mission-ready از 3,672 ردیف preserved به‌صورت صادقانه جدا شده‌اند.",
+    "پیشرفت و reward ledger محلی، تراکنشی و idempotent است.",
+    "domain clock تزریق شده و مرز local-midnight تست دارد.",
+    "auth، monetization، social pressure و backend غیرضروری اضافه نشده است.",
+    "محتوای فارسی واقعی و offline availability پایهٔ ارزشمند محصول‌اند."
+  ],
+  "remediation": [
+    "P0: package/path Android را اصلاح و launch instrumentation را گیت release کنید.",
+    "Foundation: SafeArea/insets، bootstrap فوری، font-scale/semantics و adaptive window tests را ببندید.",
+    "Brand: mark، wordmark، شعار، adaptive icon، splash، type roles و functional glyph family را فریز کنید.",
+    "Art kit: background، theorem engine، node shells، path، frames، Mira، badges و reward props را ماژولار تولید کنید.",
+    "Map: progression path و state machine واقعی را روی normalized anchors پیاده کنید.",
+    "Mission: mobile stage، tablet supporting pane، semantic math، scratchpad و feedback/reward choreography را بسازید.",
+    "Practice/Insights: به اتاق‌های همان جهان تبدیل و زبان داخلی dataset را حذف کنید.",
+    "Perfect: profile performance، accessibility، failure injection، release install/launch و screenshot matrix نهایی."
+  ],
+  "limits": [
+    "دستگاه فیزیکی Android در مرحلهٔ ممیزی فریز‌شده متصل نبود؛ تبلت با available-window شبیه‌ساز بررسی شد.",
+    "زمان cold launch ثبت‌شده از debug harness است و برای بودجهٔ release معیار نهایی نیست.",
+    "UI baseline از harness بیرون repository گرفته شد که فقط package MainActivity را هماهنگ کرده بود؛ APK repository همچنان launch نمی‌شد.",
+    "پروفایل frame/memory و TalkBack صوتی کامل باید پس از پیاده‌سازی در profile/release انجام شود."
+  ]
+}

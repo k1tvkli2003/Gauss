@@ -7,6 +7,7 @@ import '../screens/map_screen.dart';
 import '../screens/mission_screen.dart';
 import '../screens/practice_screen.dart';
 import '../state/gauss_controller.dart';
+import '../widgets/gauss_brand.dart';
 import 'gauss_theme.dart';
 
 class GaussApp extends StatefulWidget {
@@ -18,6 +19,8 @@ class GaussApp extends StatefulWidget {
 }
 
 class _GaussAppState extends State<GaussApp> {
+  bool _listeningForBootstrap = false;
+
   late final GoRouter _router = GoRouter(
     initialLocation: '/map',
     errorBuilder: (context, state) => const _RouteErrorScreen(),
@@ -94,27 +97,127 @@ class _GaussAppState extends State<GaussApp> {
   );
 
   @override
-  Widget build(BuildContext context) => AnimatedBuilder(
-    animation: widget.controller,
-    builder: (context, child) {
-      if (widget.controller.fatalError != null) {
-        return MaterialApp(
-          title: 'Gauss',
-          debugShowCheckedModeBanner: false,
-          theme: buildGaussTheme(),
-          home: _StartupFailureScreen(controller: widget.controller),
-        );
-      }
-      return GaussScope(
-        controller: widget.controller,
-        child: MaterialApp.router(
-          title: 'Gauss',
-          debugShowCheckedModeBanner: false,
-          theme: buildGaussTheme(),
-          routerConfig: _router,
-        ),
+  void initState() {
+    super.initState();
+    _listenForBootstrapIfNeeded();
+  }
+
+  @override
+  void didUpdateWidget(covariant GaussApp oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.controller == widget.controller) return;
+    if (_listeningForBootstrap) {
+      oldWidget.controller.removeListener(_handleBootstrapChange);
+      _listeningForBootstrap = false;
+    }
+    _listenForBootstrapIfNeeded();
+  }
+
+  void _listenForBootstrapIfNeeded() {
+    if (widget.controller.ready || _listeningForBootstrap) return;
+    widget.controller.addListener(_handleBootstrapChange);
+    _listeningForBootstrap = true;
+  }
+
+  void _handleBootstrapChange() {
+    if (!mounted) return;
+    if (widget.controller.ready && _listeningForBootstrap) {
+      widget.controller.removeListener(_handleBootstrapChange);
+      _listeningForBootstrap = false;
+    }
+    setState(() {});
+  }
+
+  @override
+  void dispose() {
+    if (_listeningForBootstrap) {
+      widget.controller.removeListener(_handleBootstrapChange);
+    }
+    _router.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (widget.controller.fatalError != null) {
+      return MaterialApp(
+        title: 'Gauss',
+        debugShowCheckedModeBanner: false,
+        theme: buildGaussTheme(),
+        home: _StartupFailureScreen(controller: widget.controller),
       );
-    },
+    }
+    if (!widget.controller.ready) {
+      return MaterialApp(
+        title: 'Gauss',
+        debugShowCheckedModeBanner: false,
+        theme: buildGaussTheme(),
+        home: const _StartupView(),
+      );
+    }
+    return GaussScope(
+      controller: widget.controller,
+      child: MaterialApp.router(
+        title: 'Gauss',
+        debugShowCheckedModeBanner: false,
+        theme: buildGaussTheme(),
+        routerConfig: _router,
+      ),
+    );
+  }
+}
+
+class _StartupView extends StatelessWidget {
+  const _StartupView();
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    body: Stack(
+      fit: StackFit.expand,
+      children: [
+        Image.asset(
+          'assets/visual/map/orrery_atmosphere_portrait.png',
+          fit: BoxFit.cover,
+          cacheWidth: 1200,
+          filterQuality: FilterQuality.medium,
+        ),
+        const DecoratedBox(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0x3303090B), Color(0xF703090B)],
+              stops: [.25, 1],
+            ),
+          ),
+        ),
+        SafeArea(
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const GaussWordmark(width: 214),
+                const SizedBox(height: 7),
+                const Text(
+                  'Chart what you can prove.',
+                  style: TextStyle(color: GaussColors.muted),
+                ),
+                const SizedBox(height: 30),
+                const SizedBox.square(
+                  dimension: 24,
+                  child: CircularProgressIndicator(strokeWidth: 2.4),
+                ),
+                const SizedBox(height: 12),
+                const Text(
+                  'Opening your offline observatory…',
+                  style: TextStyle(color: GaussColors.fog, fontSize: 12),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
   );
 }
 
@@ -186,20 +289,35 @@ class _AppShell extends StatelessWidget {
   const _AppShell({required this.shell});
   final StatefulNavigationShell shell;
 
-  static const destinations = [
+  static const destinations = <NavigationDestination>[
     NavigationDestination(
-      icon: Icon(Icons.public_outlined),
-      selectedIcon: Icon(Icons.public),
+      icon: GaussNavGlyph(glyph: GaussDestinationGlyph.map, selected: false),
+      selectedIcon: GaussNavGlyph(
+        glyph: GaussDestinationGlyph.map,
+        selected: true,
+      ),
       label: 'Map',
     ),
     NavigationDestination(
-      icon: Icon(Icons.menu_book_outlined),
-      selectedIcon: Icon(Icons.menu_book),
+      icon: GaussNavGlyph(
+        glyph: GaussDestinationGlyph.practice,
+        selected: false,
+      ),
+      selectedIcon: GaussNavGlyph(
+        glyph: GaussDestinationGlyph.practice,
+        selected: true,
+      ),
       label: 'Practice',
     ),
     NavigationDestination(
-      icon: Icon(Icons.insights_outlined),
-      selectedIcon: Icon(Icons.insights),
+      icon: GaussNavGlyph(
+        glyph: GaussDestinationGlyph.insights,
+        selected: false,
+      ),
+      selectedIcon: GaussNavGlyph(
+        glyph: GaussDestinationGlyph.insights,
+        selected: true,
+      ),
       label: 'Insights',
     ),
   ];
@@ -210,56 +328,144 @@ class _AppShell extends StatelessWidget {
   @override
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
-      final expanded = constraints.maxWidth >= 800;
-      if (!expanded) {
+      final useRail = constraints.maxWidth >= 760;
+      final extendRail = constraints.maxWidth >= 1260;
+      if (!useRail) {
         return Scaffold(
           body: shell,
-          bottomNavigationBar: NavigationBar(
-            selectedIndex: shell.currentIndex,
-            destinations: destinations,
-            onDestinationSelected: _go,
+          bottomNavigationBar: DecoratedBox(
+            decoration: const BoxDecoration(
+              border: Border(top: BorderSide(color: GaussColors.hairline)),
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xB803090B),
+                  blurRadius: 24,
+                  offset: Offset(0, -8),
+                ),
+              ],
+            ),
+            child: NavigationBar(
+              selectedIndex: shell.currentIndex,
+              destinations: destinations,
+              onDestinationSelected: _go,
+            ),
           ),
         );
       }
       return Scaffold(
         body: Row(
           children: [
-            NavigationRail(
-              extended: constraints.maxWidth >= 1320,
-              selectedIndex: shell.currentIndex,
-              onDestinationSelected: _go,
-              leading: const Padding(
-                padding: EdgeInsets.symmetric(vertical: 22),
-                child: Icon(
-                  Icons.explore,
-                  color: GaussColors.brassLight,
-                  size: 34,
+            DecoratedBox(
+              decoration: const BoxDecoration(
+                color: GaussColors.ink,
+                border: Border(right: BorderSide(color: GaussColors.hairline)),
+              ),
+              child: SafeArea(
+                right: false,
+                child: NavigationRail(
+                  extended: extendRail,
+                  minWidth: 82,
+                  minExtendedWidth: 188,
+                  groupAlignment: -.58,
+                  selectedIndex: shell.currentIndex,
+                  onDestinationSelected: _go,
+                  leading: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 12, 12, 30),
+                    child: extendRail
+                        ? const GaussWordmark(width: 132)
+                        : const TheoremStarMark(size: 43),
+                  ),
+                  trailing: Expanded(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Padding(
+                        padding: const EdgeInsets.only(bottom: 18),
+                        child: Semantics(
+                          label: 'Offline. All learning content is available.',
+                          child: extendRail
+                              ? const Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    _OfflineDot(),
+                                    SizedBox(width: 8),
+                                    Text(
+                                      'Offline',
+                                      style: TextStyle(
+                                        color: GaussColors.muted,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : const _OfflineDot(),
+                        ),
+                      ),
+                    ),
+                  ),
+                  destinations: const [
+                    NavigationRailDestination(
+                      icon: GaussNavGlyph(
+                        glyph: GaussDestinationGlyph.map,
+                        selected: false,
+                      ),
+                      selectedIcon: GaussNavGlyph(
+                        glyph: GaussDestinationGlyph.map,
+                        selected: true,
+                      ),
+                      label: Text('Map'),
+                    ),
+                    NavigationRailDestination(
+                      icon: GaussNavGlyph(
+                        glyph: GaussDestinationGlyph.practice,
+                        selected: false,
+                      ),
+                      selectedIcon: GaussNavGlyph(
+                        glyph: GaussDestinationGlyph.practice,
+                        selected: true,
+                      ),
+                      label: Text('Practice'),
+                    ),
+                    NavigationRailDestination(
+                      icon: GaussNavGlyph(
+                        glyph: GaussDestinationGlyph.insights,
+                        selected: false,
+                      ),
+                      selectedIcon: GaussNavGlyph(
+                        glyph: GaussDestinationGlyph.insights,
+                        selected: true,
+                      ),
+                      label: Text('Insights'),
+                    ),
+                  ],
                 ),
               ),
-              destinations: const [
-                NavigationRailDestination(
-                  icon: Icon(Icons.public_outlined),
-                  selectedIcon: Icon(Icons.public),
-                  label: Text('Map'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.menu_book_outlined),
-                  selectedIcon: Icon(Icons.menu_book),
-                  label: Text('Practice'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.insights_outlined),
-                  selectedIcon: Icon(Icons.insights),
-                  label: Text('Insights'),
-                ),
-              ],
             ),
-            const VerticalDivider(width: 1),
             Expanded(child: shell),
           ],
         ),
       );
     },
+  );
+}
+
+class _OfflineDot extends StatelessWidget {
+  const _OfflineDot();
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: 9,
+    height: 9,
+    decoration: BoxDecoration(
+      shape: BoxShape.circle,
+      color: GaussColors.signalBright,
+      boxShadow: [
+        BoxShadow(
+          color: GaussColors.signal.withValues(alpha: .48),
+          blurRadius: 9,
+          spreadRadius: 1,
+        ),
+      ],
+    ),
   );
 }
 
