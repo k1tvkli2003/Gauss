@@ -1,4 +1,4 @@
-# گائوس — Gauss
+Gauss
 
 An elite, **native Android** trainer for hard Iranian Konkur-level Math &
 Physics. Dark, zen-hacker aesthetic. Split-screen exam UI with a stylus
