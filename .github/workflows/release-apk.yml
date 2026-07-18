@@ -49,7 +49,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # sdkmanager closes stdin once every licence is accepted. With
+          # pipefail enabled, that makes `yes` report a harmless broken pipe
+          # and incorrectly fails the whole release job.
+          set +o pipefail
           yes | sdkmanager --licenses >/dev/null
+          set -o pipefail
           sdkmanager "platforms;android-36" "build-tools;36.0.0"
 
       - name: Allocate immutable Android version

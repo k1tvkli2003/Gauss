@@ -17,6 +17,8 @@ void main() {
 
     expect(workflow, contains('working-directory: flutter_app'));
     expect(workflow, contains('flutter build apk --release'));
+    expect(workflow, contains('set +o pipefail'));
+    expect(workflow, contains('yes | sdkmanager --licenses >/dev/null'));
     expect(
       workflow,
       contains('flutter_app/build/app/outputs/flutter-apk/app-release.apk'),
