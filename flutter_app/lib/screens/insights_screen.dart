@@ -52,6 +52,10 @@ class InsightsScreen extends StatelessWidget {
               SliverToBoxAdapter(
                 child: _DailyQuestInstrument(quest: gamification.quest),
               ),
+              if (analytics.totalAnswered > 0)
+                SliverToBoxAdapter(
+                  child: _StarChartPanel(heatmap: analytics.heatmap),
+                ),
               if (gamification.achievements.isNotEmpty)
                 SliverToBoxAdapter(
                   child: _SectionHeading(
@@ -100,6 +104,7 @@ class InsightsScreen extends StatelessWidget {
                 child: _ObservationDeck(
                   strongest: strongest,
                   weakTopics: analytics.weakTopics,
+                  distractors: analytics.distractors,
                   topicLabels: topicLabels,
                   recentExams: controller.recentExams,
                 ),
@@ -1157,12 +1162,14 @@ class _ObservationDeck extends StatelessWidget {
   const _ObservationDeck({
     required this.strongest,
     required this.weakTopics,
+    required this.distractors,
     required this.topicLabels,
     required this.recentExams,
   });
 
   final List<({TopicDescriptor topic, int completed})> strongest;
   final List<TopicInsight> weakTopics;
+  final List<DistractorInsight> distractors;
   final Map<String, String> topicLabels;
   final List<RecentExamSummary> recentExams;
 
@@ -1220,6 +1227,24 @@ class _ObservationDeck extends StatelessWidget {
                 ],
               ),
             );
+            final traps = _OrbitRegister(
+              title: 'Recurring traps',
+              accent: GaussColors.warning,
+              child: Column(
+                children: [
+                  for (final trap in distractors.take(5))
+                    _TrapReading(
+                      trap: trap,
+                      label: topicLabels[trap.topicKey] ?? trap.subject.label,
+                    ),
+                  if (distractors.isEmpty)
+                    const _QuietMessage(
+                      text:
+                          'No repeated trap yet. Your misses look random, not patterned.',
+                    ),
+                ],
+              ),
+            );
             final recent = _OrbitRegister(
               title: 'Recent missions',
               accent: GaussColors.violet,
@@ -1230,6 +1255,8 @@ class _ObservationDeck extends StatelessWidget {
                       exam: exam,
                       label: exam.topicKey == 'revenge'
                           ? 'Revisit mistakes'
+                          : exam.topicKey == 'review'
+                          ? 'Review orbit'
                           : topicLabels[exam.topicKey] ?? exam.subject.label,
                     ),
                   if (recentExams.isEmpty)
@@ -1243,6 +1270,8 @@ class _ObservationDeck extends StatelessWidget {
                   solved,
                   const SizedBox(height: 11),
                   focus,
+                  const SizedBox(height: 11),
+                  traps,
                   const SizedBox(height: 11),
                   recent,
                 ],
@@ -1259,7 +1288,14 @@ class _ObservationDeck extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 11),
-                recent,
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: traps),
+                    const SizedBox(width: 11),
+                    Expanded(child: recent),
+                  ],
+                ),
               ],
             );
           },
@@ -1448,6 +1484,403 @@ class _RecentMissionReading extends StatelessWidget {
       ],
     ),
   );
+}
+
+class _TrapReading extends StatelessWidget {
+  const _TrapReading({required this.trap, required this.label});
+
+  final DistractorInsight trap;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    final letter = String.fromCharCode(65 + trap.choiceIndex);
+    return Semantics(
+      container: true,
+      excludeSemantics: true,
+      label:
+          'Recurring trap. Choice $letter in $label caught you ${trap.count} times.',
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 7),
+        child: Row(
+          children: [
+            Container(
+              width: 38,
+              height: 38,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: GaussColors.deepInk,
+                border: Border.all(
+                  color: GaussColors.warning.withValues(alpha: .45),
+                ),
+              ),
+              child: Text(
+                letter,
+                style: const TextStyle(
+                  color: GaussColors.warning,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+            ),
+            const SizedBox(width: 11),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text(
+                      label,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontSize: 12, height: 1.35),
+                    ),
+                  ),
+                  Text(
+                    'Choice $letter keeps luring you here',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: GaussColors.fog,
+                      fontSize: 9.5,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  '${trap.count}×',
+                  style: const TextStyle(
+                    color: GaussColors.warning,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                const Text(
+                  'CAUGHT',
+                  style: TextStyle(
+                    color: GaussColors.fog,
+                    fontSize: 7,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: .35,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _StarChartPanel extends StatelessWidget {
+  const _StarChartPanel({required this.heatmap});
+
+  /// Day-key (`YYYY-MM-DD`) to finalized answer count, from analytics.
+  final Map<String, int> heatmap;
+
+  static const _weeks = 12;
+
+  static String _dayKeyOf(DateTime date) =>
+      '${date.year.toString().padLeft(4, '0')}-'
+      '${date.month.toString().padLeft(2, '0')}-'
+      '${date.day.toString().padLeft(2, '0')}';
+
+  /// Saturday-first row index so the study week reads Sat..Fri top to bottom.
+  static int _rowOf(DateTime date) => (date.weekday + 1) % 7;
+
+  @override
+  Widget build(BuildContext context) {
+    final today = DateTime.now();
+    final chartStart = DateTime(
+      today.year,
+      today.month,
+      today.day,
+    ).subtract(Duration(days: (_weeks - 1) * 7 + _rowOf(today)));
+    final cells = <_StarCell>[];
+    var activeDays = 0;
+    var busiest = 0;
+    for (var column = 0; column < _weeks; column++) {
+      for (var row = 0; row < 7; row++) {
+        final date = chartStart.add(Duration(days: column * 7 + row));
+        if (date.isAfter(today)) continue;
+        final count = heatmap[_dayKeyOf(date)] ?? 0;
+        if (count > 0) {
+          activeDays++;
+          if (count > busiest) busiest = count;
+        }
+        cells.add(
+          _StarCell(
+            column: column,
+            row: row,
+            count: count,
+            isToday:
+                date.year == today.year &&
+                date.month == today.month &&
+                date.day == today.day,
+          ),
+        );
+      }
+    }
+    final monthLabels = List<String>.filled(_weeks, '');
+    String? previousMonth;
+    for (var column = 0; column < _weeks; column++) {
+      final weekStart = chartStart.add(Duration(days: column * 7));
+      final month = _monthName(weekStart.month);
+      if (month != previousMonth) {
+        monthLabels[column] = month;
+        previousMonth = month;
+      }
+    }
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(18, 2, 18, 10),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 1160),
+          child: Semantics(
+            container: true,
+            excludeSemantics: true,
+            label:
+                'Star chart of the last twelve weeks. $activeDays active '
+                '${activeDays == 1 ? 'day' : 'days'}. '
+                '${busiest == 0 ? 'No recorded answers in this window.' : 'Busiest day held $busiest answers.'}',
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(16, 15, 16, 12),
+              decoration: BoxDecoration(
+                color: GaussColors.ink.withValues(alpha: .94),
+                borderRadius: BorderRadius.circular(22),
+                border: Border.all(color: GaussColors.line),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: 18,
+                        height: 2,
+                        decoration: BoxDecoration(
+                          color: GaussColors.brassLight,
+                          borderRadius: BorderRadius.circular(99),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      const Text(
+                        'STAR CHART',
+                        style: TextStyle(
+                          color: GaussColors.brassLight,
+                          fontSize: 9,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1,
+                        ),
+                      ),
+                      const Spacer(),
+                      Text(
+                        '$activeDays lit ${activeDays == 1 ? 'day' : 'days'}',
+                        style: const TextStyle(
+                          color: GaussColors.fog,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  SizedBox(
+                    height: 122,
+                    width: double.infinity,
+                    child: CustomPaint(
+                      painter: _StarChartPainter(
+                        cells: cells,
+                        weeks: _weeks,
+                        busiest: busiest,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 6),
+                  Row(
+                    children: [
+                      for (final label in monthLabels)
+                        Expanded(
+                          child: Text(
+                            label,
+                            maxLines: 1,
+                            overflow: TextOverflow.clip,
+                            style: const TextStyle(
+                              color: GaussColors.fog,
+                              fontSize: 8,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: .5,
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                  const SizedBox(height: 4),
+                  const Text(
+                    'Every answered day lights a star. Brighter stars held more work.',
+                    style: TextStyle(color: GaussColors.fog, fontSize: 10),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  static String _monthName(int month) => const [
+    'JAN',
+    'FEB',
+    'MAR',
+    'APR',
+    'MAY',
+    'JUN',
+    'JUL',
+    'AUG',
+    'SEP',
+    'OCT',
+    'NOV',
+    'DEC',
+  ][month - 1];
+}
+
+class _StarCell {
+  const _StarCell({
+    required this.column,
+    required this.row,
+    required this.count,
+    required this.isToday,
+  });
+
+  final int column;
+  final int row;
+  final int count;
+  final bool isToday;
+}
+
+class _StarChartPainter extends CustomPainter {
+  const _StarChartPainter({
+    required this.cells,
+    required this.weeks,
+    required this.busiest,
+  });
+
+  final List<_StarCell> cells;
+  final int weeks;
+  final int busiest;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final cellWidth = size.width / weeks;
+    final cellHeight = size.height / 7;
+    final orbit = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = .7
+      ..color = GaussColors.brass.withValues(alpha: .08);
+    canvas.drawCircle(
+      Offset(size.width * .18, size.height * 1.35),
+      size.height * 1.5,
+      orbit,
+    );
+    canvas.drawCircle(
+      Offset(size.width * .86, -size.height * .5),
+      size.height * 1.25,
+      orbit,
+    );
+
+    for (final cell in cells) {
+      final center = Offset(
+        cellWidth * (cell.column + .5),
+        cellHeight * (cell.row + .5),
+      );
+      if (cell.count == 0) {
+        canvas.drawCircle(
+          center,
+          1.1,
+          Paint()..color = GaussColors.fog.withValues(alpha: .22),
+        );
+      } else {
+        // Perceptually even ramp: sqrt keeps one answer visible while a heavy
+        // day still reads clearly brighter.
+        final intensity = busiest == 0
+            ? 1.0
+            : (math.sqrt(cell.count / busiest)).clamp(.35, 1.0);
+        final radius = 2.6 + 3.2 * intensity;
+        canvas.drawCircle(
+          center,
+          radius * 1.9,
+          Paint()
+            ..color = GaussColors.brass.withValues(alpha: .16 * intensity)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 5),
+        );
+        _drawStar(
+          canvas,
+          center,
+          radius,
+          Color.lerp(
+            GaussColors.brassLight,
+            GaussColors.ivory,
+            intensity * .55,
+          )!.withValues(alpha: .45 + .55 * intensity),
+        );
+      }
+      if (cell.isToday) {
+        canvas.drawCircle(
+          center,
+          math.min(cellWidth, cellHeight) * .42,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 1
+            ..color = GaussColors.signalBright.withValues(alpha: .65),
+        );
+      }
+    }
+  }
+
+  void _drawStar(Canvas canvas, Offset center, double radius, Color color) {
+    final path = Path();
+    const waist = .34;
+    path.moveTo(center.dx, center.dy - radius);
+    path.quadraticBezierTo(
+      center.dx + radius * waist * .4,
+      center.dy - radius * waist,
+      center.dx + radius,
+      center.dy,
+    );
+    path.quadraticBezierTo(
+      center.dx + radius * waist * .4,
+      center.dy + radius * waist,
+      center.dx,
+      center.dy + radius,
+    );
+    path.quadraticBezierTo(
+      center.dx - radius * waist * .4,
+      center.dy + radius * waist,
+      center.dx - radius,
+      center.dy,
+    );
+    path.quadraticBezierTo(
+      center.dx - radius * waist * .4,
+      center.dy - radius * waist,
+      center.dx,
+      center.dy - radius,
+    );
+    path.close();
+    canvas.drawPath(path, Paint()..color = color);
+  }
+
+  @override
+  bool shouldRepaint(covariant _StarChartPainter oldDelegate) =>
+      oldDelegate.cells != cells || oldDelegate.busiest != busiest;
 }
 
 class _QuietMessage extends StatelessWidget {
