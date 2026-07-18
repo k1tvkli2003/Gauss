@@ -273,6 +273,15 @@ class GaussController extends ChangeNotifier {
     }
   }
 
+  /// Loads the read-only preserved archive of a chapter for the reading room.
+  Future<List<Question>> loadArchive(String topicKey) async {
+    try {
+      return await _questionBank.archiveQuestions(topicKey);
+    } catch (error) {
+      throw MissionLoadFailure(error);
+    }
+  }
+
   Future<void> validateDataset() => _questionBank.validateAllShards();
 }
 

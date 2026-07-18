@@ -1185,6 +1185,16 @@ class _TopicInspector extends StatelessWidget {
                 ),
                 const SizedBox(height: 9),
               ],
+              if (topic.preservedArchiveCount > 0) ...[
+                OutlinedButton.icon(
+                  onPressed: () => context.push('/archive/${topic.key}'),
+                  icon: const Icon(Icons.menu_book_outlined, size: 19),
+                  label: Text(
+                    'Reading room · ${topic.preservedArchiveCount} preserved',
+                  ),
+                ),
+                const SizedBox(height: 9),
+              ],
               FilledButton(
                 onPressed: topic.missionReadyCount == 0
                     ? null
@@ -1371,13 +1381,15 @@ class _MissionDock extends StatelessWidget {
           const SizedBox(width: 9),
           FilledButton(
             onPressed: topic.missionReadyCount == 0
-                ? null
+                ? (topic.preservedArchiveCount == 0
+                      ? null
+                      : () => context.push('/archive/${topic.key}'))
                 : () => _startMission(context, controller, topic),
             style: FilledButton.styleFrom(
               minimumSize: const Size(84, 48),
               padding: const EdgeInsets.symmetric(horizontal: 14),
             ),
-            child: Text(topic.missionReadyCount == 0 ? 'Archive' : 'Start'),
+            child: Text(topic.missionReadyCount == 0 ? 'Read' : 'Start'),
           ),
         ],
       ),

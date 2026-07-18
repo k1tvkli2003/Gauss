@@ -144,6 +144,14 @@ class QuestionBankRepository {
     return questions.take(min(count, questions.length)).toList(growable: false);
   }
 
+  /// The preserved, quarantined half of a chapter: source items whose
+  /// answer/solution mapping is unverified. Read-only surfaces may present
+  /// them with explicit provenance labels; they never enter scored missions.
+  Future<List<Question>> archiveQuestions(String topicKey) async =>
+      (await loadTopic(
+        topicKey,
+      )).where((question) => !question.missionReady).toList(growable: false);
+
   Future<List<Question>> questionsByIds(List<String> ids) async {
     if (ids.isEmpty) return const [];
     final wanted = ids.toSet();

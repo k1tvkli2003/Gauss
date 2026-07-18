@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../domain/models.dart';
+import '../screens/archive_screen.dart';
 import '../screens/insights_screen.dart';
 import '../screens/map_screen.dart';
 import '../screens/mission_screen.dart';
@@ -88,6 +89,11 @@ class _GaussAppState extends State<GaussApp> {
               .clamp(5, 50),
           revenge: true,
         ),
+      ),
+      GoRoute(
+        path: '/archive/:topicKey',
+        builder: (context, state) =>
+            ArchiveScreen(topicKey: state.pathParameters['topicKey']!),
       ),
       GoRoute(
         path: '/review',

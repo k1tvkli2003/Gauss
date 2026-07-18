@@ -888,15 +888,19 @@ class _LaunchDeck extends StatelessWidget {
                   ),
                 ],
               );
-              final button = FilledButton.icon(
-                onPressed: topic.missionReadyCount == 0 ? null : onStart,
-                icon: const Icon(Icons.arrow_forward_rounded),
-                label: Text(
-                  topic.missionReadyCount == 0
-                      ? 'No scored set'
-                      : 'Start mission',
-                ),
-              );
+              final button = topic.missionReadyCount == 0
+                  ? FilledButton.icon(
+                      onPressed: topic.preservedArchiveCount == 0
+                          ? null
+                          : () => context.push('/archive/${topic.key}'),
+                      icon: const Icon(Icons.menu_book_outlined, size: 19),
+                      label: const Text('Reading room'),
+                    )
+                  : FilledButton.icon(
+                      onPressed: onStart,
+                      icon: const Icon(Icons.arrow_forward_rounded),
+                      label: const Text('Start mission'),
+                    );
               if (compact) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
