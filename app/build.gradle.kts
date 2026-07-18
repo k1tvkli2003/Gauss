@@ -10,7 +10,9 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.gauss.app"
+        // This Kotlin/Compose project is retained only as a legacy archive.
+        // The released Flutter product owns com.gauss.app.
+        applicationId = "com.gauss.legacy"
         minSdk = 26
         targetSdk = 35
         versionCode = (System.getenv("GAUSS_VERSION_CODE") ?: "1").toInt()

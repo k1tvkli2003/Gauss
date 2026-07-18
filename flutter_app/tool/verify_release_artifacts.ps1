@@ -188,7 +188,10 @@ if ($null -ne $apksigner) {
     if ($LASTEXITCODE -ne 0 -or $signatureOutput -notmatch 'Verified using v2 scheme.*true') {
         throw 'APK signature verification failed.'
     }
-    $signingStatus = 'PASS (cryptographic signature valid; certificate policy is reported separately)'
+    if ($signatureOutput -match 'CN=Android Debug') {
+        throw 'APK is signed with the Android debug certificate and must not be treated as a release artifact.'
+    }
+    $signingStatus = 'PASS (cryptographic signature valid and non-debug certificate detected)'
 }
 else {
     $signingStatus = 'SKIPPED (apksigner unavailable)'

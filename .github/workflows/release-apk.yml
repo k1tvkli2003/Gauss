@@ -1,66 +1,71 @@
-name: Build & Release APK
+name: Build & Release Gauss Android
 
-# Builds a real, signed **release** APK (never debug bundle) on every push from
-# the native Kotlin/Jetpack-Compose project, then publishes it as a GitHub
-# Release. APK only — no AAB.
+# The only public Android release surface is the Flutter application under
+# flutter_app/.  The root Kotlin module is retained as an explicitly named
+# legacy archive and must never be published as Gauss.
 on:
   push:
-    branches: ["**"]
-    paths-ignore:
-      - "**/*.md"
-      - ".gitignore"
+    branches: [main]
   workflow_dispatch:
 
-concurrency:
-  group: release-apk-${{ github.ref }}
-  cancel-in-progress: true
-
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: gauss-android-release-main
+  cancel-in-progress: false
 
 jobs:
-  build:
-    name: Build signed release APK
-    runs-on: ubuntu-latest
+  release:
+    name: Build, verify, and publish Flutter Android
+    runs-on: ubuntu-24.04
     timeout-minutes: 60
+    permissions:
+      contents: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout exact release commit
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup JDK 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@c1e323688fd81a25caa38c78aa6df2d33d3e20d9 # v4
         with:
           distribution: temurin
           java-version: "17"
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
 
-      - name: Install SDK packages
-        run: sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+      - name: Set up Flutter 3.44.0
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          channel: stable
+          flutter-version: "3.44.0"
+          cache: true
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-
-      # ---- Smart version: 1.0.<run> name, <run> code (always increasing) ----
-      - name: Compute version
-        id: ver
+      - name: Install Android build tools
+        shell: bash
         run: |
-          VNAME="1.0.${{ github.run_number }}"
-          VCODE="${{ github.run_number }}"
-          echo "name=$VNAME" >> "$GITHUB_OUTPUT"
-          echo "code=$VCODE" >> "$GITHUB_OUTPUT"
-          echo "Version → name=$VNAME  code=$VCODE"
+          set -euo pipefail
+          yes | sdkmanager --licenses >/dev/null
+          sdkmanager "platforms;android-36" "build-tools;36.0.0"
 
-      # ---- Resolve the signing keystore. Every CI runner is a fresh VM, so the
-      # AGP debug keystore is regenerated (with a new random cert) on every run
-      # if it isn't provided from secrets. Android refuses to install an APK
-      # over an existing one signed with a different cert, so a silent
-      # fallback here means every "release" silently fails to update on users'
-      # devices. Fail loudly instead of falling back. ----
-      - name: Prepare signing key
-        id: signing
+      - name: Allocate immutable Android version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION_NAME="1.0.${GITHUB_RUN_NUMBER}"
+          VERSION_CODE="${GITHUB_RUN_NUMBER}"
+          TAG="v${VERSION_NAME}"
+          echo "version_name=${VERSION_NAME}" >> "$GITHUB_OUTPUT"
+          echo "version_code=${VERSION_CODE}" >> "$GITHUB_OUTPUT"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+      - name: Restore protected signing identity
+        shell: bash
         env:
           KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
@@ -68,67 +73,102 @@ jobs:
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           set -euo pipefail
-          if [ -z "${KEYSTORE_BASE64:-}" ]; then
-            echo "::error::ANDROID_KEYSTORE_BASE64 (and/or the other ANDROID_KEY* secrets) are not set. Refusing to build a release APK signed with an ephemeral debug key, because every CI runner generates a different one and Android will then refuse to install it as an update over any previously released build. Add ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD / ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD as repository secrets before releasing."
-            exit 1
-          fi
-          KS="$RUNNER_TEMP/gauss-release.keystore"
-          echo "$KEYSTORE_BASE64" | base64 -d > "$KS"
+          : "${KEYSTORE_BASE64:?ANDROID_KEYSTORE_BASE64 is required for a releasable APK.}"
+          : "${KEYSTORE_PASSWORD:?ANDROID_KEYSTORE_PASSWORD is required for a releasable APK.}"
+          : "${KEY_ALIAS:?ANDROID_KEY_ALIAS is required for a releasable APK.}"
+          : "${KEY_PASSWORD:?ANDROID_KEY_PASSWORD is required for a releasable APK.}"
+          KEYSTORE_PATH="$RUNNER_TEMP/gauss-release.jks"
+          printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$KEYSTORE_PATH"
+          chmod 600 "$KEYSTORE_PATH"
           {
-            echo "GAUSS_KEYSTORE_PATH=$KS"
+            echo "GAUSS_KEYSTORE_PATH=$KEYSTORE_PATH"
             echo "GAUSS_KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD"
             echo "GAUSS_KEY_ALIAS=$KEY_ALIAS"
             echo "GAUSS_KEY_PASSWORD=$KEY_PASSWORD"
           } >> "$GITHUB_ENV"
           echo "::add-mask::$KEYSTORE_PASSWORD"
           echo "::add-mask::$KEY_PASSWORD"
-          echo "Using stable keystore from repository secrets."
 
-      - name: Assemble release APK
-        env:
-          GAUSS_VERSION_NAME: ${{ steps.ver.outputs.name }}
-          GAUSS_VERSION_CODE: ${{ steps.ver.outputs.code }}
-        run: |
-          chmod +x ./gradlew
-          ./gradlew :app:assembleRelease --no-daemon --stacktrace
-
-      - name: Locate & rename APK
-        id: apk
+      - name: Resolve Flutter dependencies and quality gates
+        working-directory: flutter_app
+        shell: bash
         run: |
           set -euo pipefail
-          IN="app/build/outputs/apk/release/app-release.apk"
-          if [ ! -f "$IN" ]; then
-            echo "Release APK not found at $IN" >&2
-            find app/build/outputs -name '*.apk' || true
+          flutter pub get
+          flutter analyze --no-pub
+          flutter test --no-pub
+
+      - name: Build universal Flutter release APK
+        working-directory: flutter_app
+        shell: bash
+        env:
+          GAUSS_VERSION_NAME: ${{ steps.version.outputs.version_name }}
+          GAUSS_VERSION_CODE: ${{ steps.version.outputs.version_code }}
+        run: |
+          set -euo pipefail
+          flutter build apk --release --build-name "$GAUSS_VERSION_NAME" --build-number "$GAUSS_VERSION_CODE"
+
+      - name: Verify package, version, alignment, and signing
+        id: verify
+        shell: bash
+        env:
+          VERSION_NAME: ${{ steps.version.outputs.version_name }}
+          VERSION_CODE: ${{ steps.version.outputs.version_code }}
+        run: |
+          set -euo pipefail
+          APK="flutter_app/build/app/outputs/flutter-apk/app-release.apk"
+          test -f "$APK"
+          BUILD_TOOLS="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)"
+          BADGING="$($BUILD_TOOLS/aapt dump badging "$APK")"
+          grep -F "package: name='com.gauss.app'" <<< "$BADGING"
+          grep -F "versionCode='${VERSION_CODE}'" <<< "$BADGING"
+          grep -F "versionName='${VERSION_NAME}'" <<< "$BADGING"
+          "$BUILD_TOOLS/zipalign" -c -v 4 "$APK"
+          SIGNATURE="$($BUILD_TOOLS/apksigner verify --verbose --print-certs "$APK")"
+          grep -F "Verified using v2 scheme (APK Signature Scheme v2): true" <<< "$SIGNATURE"
+          if grep -Fq "Android Debug" <<< "$SIGNATURE"; then
+            echo "Refusing to publish an APK signed with the Android debug certificate." >&2
             exit 1
           fi
-          OUT="gauss-v${{ steps.ver.outputs.name }}.apk"
-          cp "$IN" "$OUT"
-          ls -lh "$OUT"
-          echo "path=$OUT" >> "$GITHUB_OUTPUT"
+          ARTIFACT="$RUNNER_TEMP/gauss-v${VERSION_NAME}-android-universal.apk"
+          CHECKSUMS="$RUNNER_TEMP/SHA256SUMS"
+          cp "$APK" "$ARTIFACT"
+          (
+            cd "$RUNNER_TEMP"
+            sha256sum "$(basename "$ARTIFACT")" > "$(basename "$CHECKSUMS")"
+          )
+          echo "artifact=$ARTIFACT" >> "$GITHUB_OUTPUT"
+          echo "checksums=$CHECKSUMS" >> "$GITHUB_OUTPUT"
 
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: gauss-v${{ steps.ver.outputs.name }}-apk
-          path: ${{ steps.apk.outputs.path }}
-          if-no-files-found: error
-
-      - name: Publish GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v${{ steps.ver.outputs.name }}
-          name: Gauss v${{ steps.ver.outputs.name }}
-          files: ${{ steps.apk.outputs.path }}
-          fail_on_unmatched_files: true
-          generate_release_notes: true
-          body: |
-            ### Gauss v${{ steps.ver.outputs.name }}
-            اپ اندروید شخصی Gauss (Kotlin + Jetpack Compose) — APK امضاشدهٔ release.
-
-            - `versionName`: `${{ steps.ver.outputs.name }}`
-            - `versionCode`: `${{ steps.ver.outputs.code }}`
-
-            فایل `*.apk` پایین رو دانلود و روی گوشی نصب کن.
+      - name: Publish verified Flutter APK
+        shell: bash
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION_NAME: ${{ steps.version.outputs.version_name }}
+          ARTIFACT: ${{ steps.verify.outputs.artifact }}
+          CHECKSUMS: ${{ steps.verify.outputs.checksums }}
+        run: |
+          set -euo pipefail
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            TAG_SHA="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$TAG" --jq '.object.sha')"
+            if [ "$TAG_SHA" != "$GITHUB_SHA" ]; then
+              echo "Existing $TAG points to $TAG_SHA, not $GITHUB_SHA." >&2
+              exit 1
+            fi
+            gh release upload "$TAG" "$ARTIFACT" "$CHECKSUMS" --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$TAG" "$ARTIFACT" "$CHECKSUMS" \
+              --target "$GITHUB_SHA" \
+              --title "Gauss v${VERSION_NAME}" \
+              --notes "Flutter Android release for commit ${GITHUB_SHA}. Includes a signed universal APK and SHA-256 checksum." \
+              --repo "$GITHUB_REPOSITORY"
+          fi
+
+      - name: Remove ephemeral signing material
+        if: always()
+        shell: bash
+        run: |
+          if [ -n "${GAUSS_KEYSTORE_PATH:-}" ] && [ -f "$GAUSS_KEYSTORE_PATH" ]; then
+            rm -f "$GAUSS_KEYSTORE_PATH"
+          fi
