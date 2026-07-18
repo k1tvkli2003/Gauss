@@ -1,6 +1,6 @@
 # State
 
-- Current status: `active`
+- Current status: `done`
 - Last updated: 2026-07-18T23:50:00+03:30
 - Owner: Codex
 
@@ -56,6 +56,6 @@ score them. This is a trust boundary, not an incomplete migration.
 
 ## Remaining
 
-- Validate task docs and the modernize skill change.
-- Final secret/ignored-file/diff audit.
-- Commit and push the complete work to `main`, then remove other branches.
+No required implementation, verification, documentation, or publication work
+remains. Future answer validation or Store distribution would be separate
+explicit projects.

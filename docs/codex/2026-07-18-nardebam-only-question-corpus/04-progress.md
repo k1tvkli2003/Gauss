@@ -19,8 +19,8 @@
 | Release artifacts | complete | Web release and signed v90 APK built and byte-verified |
 | Android continuity | complete | v89→v90 update-in-place; first-install timestamp preserved |
 | Native interaction | complete | Map→Study→Room plus pen stroke and instant clear verified |
-| Durable documentation | active | Task ledgers and modernize guidance being finalized |
-| Git publication | pending | Final main-only commit/push after audit |
+| Durable documentation | complete | Task docs and modernize skill validation passed |
+| Git publication | complete | Implementation commit `df9caeb` pushed to `origin/main` |
 
 ## Notable Defects Found and Closed
 
@@ -39,5 +39,5 @@
 
 ## Next
 
-Validate the completed docs/skill change, audit the final worktree, and publish
-the verified state to `main`.
+No required next step. Preserve signing/version continuity and rerun the
+recorded gates for future releases.

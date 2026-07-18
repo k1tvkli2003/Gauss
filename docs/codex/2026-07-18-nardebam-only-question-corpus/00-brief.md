@@ -1,7 +1,7 @@
 # Source-only corpus and Study Observatory rebuild
 
 - Task ID: `2026-07-18-nardebam-only-question-corpus`
-- Status: `active — implementation and release verification complete; Git publication pending`
+- Status: `done — implementation, release verification, and main publication complete`
 - Created: 2026-07-18T17:43:31
 - Last verified: 2026-07-18T23:50:00+03:30
 - Language: en

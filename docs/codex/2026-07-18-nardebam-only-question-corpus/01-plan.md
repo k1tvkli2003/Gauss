@@ -18,7 +18,7 @@ Android runtime continuity.
 | Add question ink, instant clear, and full-sheet scratchpad | complete | Widget tests plus native Android semantic/drawing proof |
 | Perfect responsive identity, navigation, backgrounds, and deep links | complete | Phone/desktop release captures and URL bootstrap regression |
 | Validate source/web/APK parity, tests, signing, and Android runtime | complete | 49 tests, strict verifier, signed v90 install and runtime proof |
-| Update durable docs/skill guidance and publish main-only Git state | active | Docs and skill validation in progress; Git is the final gate |
+| Update durable docs/skill guidance and publish main-only Git state | complete | Docs/skill validators passed; implementation commit `df9caeb` is on `origin/main` |
 
 ## Authoritative Interfaces
 
@@ -45,6 +45,6 @@ Android runtime continuity.
 
 ## Final Acceptance
 
-All technical and runtime acceptance checks are complete. Remaining work is
-documentation validation, final diff/security audit, commit/push to `main`,
-and deletion of obsolete branches after remote verification.
+All technical, runtime, documentation, security, and publication acceptance
+checks are complete. The implementation commit `df9caeb` is published on
+`origin/main`; the final status-only commit records closure.

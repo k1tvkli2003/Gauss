@@ -44,11 +44,11 @@ local-first experience.
 
 ## Remaining
 
-Only the final repository publication gate remains: validate docs/skill
-changes, audit ignored/secrets/diff state, commit on `main`, push, and delete
-obsolete branches after confirming `origin/main`.
+No required work remains. Independent answer validation, new content,
+distribution, or additional platforms are separate future scopes.
 
 ## Verification
 
 See `05-verification.md` for exact commands, counts, hashes, signing identity,
 launch times, semantic navigation, and drawing/clear evidence. Result: passed.
+The implementation commit `df9caeb` is published on `origin/main`.
