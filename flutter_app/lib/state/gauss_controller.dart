@@ -21,6 +21,7 @@ class GaussController extends ChangeNotifier {
   int _reviewDueCount = 0;
   List<RecentExamSummary> _recentExams = const [];
   ResumableMission? _resumableMission;
+  StudySummary _study = const StudySummary.empty();
   AnalyticsSnapshot _analytics = const AnalyticsSnapshot(
     totalAnswered: 0,
     totalCorrect: 0,
@@ -55,6 +56,7 @@ class GaussController extends ChangeNotifier {
       UnmodifiableListView(_attempts);
   AnalyticsSnapshot get analytics => _analytics;
   GamificationSummary get gamification => _gamification;
+  StudySummary get study => _study;
   int get revengeCount => _revengeCount;
   int get reviewDueCount => _reviewDueCount;
   UnmodifiableListView<RecentExamSummary> get recentExams =>
@@ -75,6 +77,8 @@ class GaussController extends ChangeNotifier {
   double get accuracy =>
       _analytics.totalAnswered == 0 ? 0 : _analytics.accuracy / 100;
   int completedInTopic(String key) => _completedByTopic[key] ?? 0;
+  int studiedInTopic(String key) => _study.topic(key).reflected;
+  int revisitInTopic(String key) => _study.topic(key).revisit;
 
   Future<void> initialize() async {
     _fatalError = null;
@@ -202,6 +206,7 @@ class GaussController extends ChangeNotifier {
       _progress.recentExams(),
       _progress.activeMission(),
       _progress.reviewDueIds(),
+      _progress.studySummary(),
     ]);
     _attempts
       ..clear()
@@ -225,6 +230,7 @@ class GaussController extends ChangeNotifier {
     _revengeCount = (values[3] as List<String>).length;
     _recentExams = values[4] as List<RecentExamSummary>;
     _reviewDueCount = (values[6] as List<String>).length;
+    _study = values[7] as StudySummary;
     await _hydrateActiveMission(values[5] as ActiveMissionRecord?);
   }
 
@@ -297,6 +303,118 @@ class GaussController extends ChangeNotifier {
       return await _questionBank.archiveQuestions(topicKey);
     } catch (error) {
       throw MissionLoadFailure(error);
+    }
+  }
+
+  Future<StudyShelf> loadStudyShelf(
+    String topicKey, {
+    int offset = 0,
+    int? count,
+  }) async {
+    try {
+      final allQuestions = await _questionBank.archiveQuestions(topicKey);
+      final safeOffset = offset.clamp(0, allQuestions.length);
+      final limit = (count ?? allQuestions.length).clamp(
+        1,
+        allQuestions.length,
+      );
+      final questions = allQuestions
+          .skip(safeOffset)
+          .take(limit)
+          .toList(growable: false);
+      final shelfKey = '$topicKey:$safeOffset:$limit';
+      // These first-use statements share one local Drift executor. Sequential
+      // reads are effectively free beside shard decoding and avoid a native
+      // sqlite initialization race observed on Windows test/runtime hosts.
+      final storedRecords = await _progress.studyRecords(topicKey: topicKey);
+      final storedPosition = await _progress.studyPosition(shelfKey);
+      final questionIds = questions.map((question) => question.id).toSet();
+      final records = {
+        for (final record in storedRecords)
+          if (questionIds.contains(record.questionId))
+            record.questionId: record,
+      };
+      var initialIndex = storedPosition ?? -1;
+      if (initialIndex < 0 || initialIndex >= questions.length) {
+        initialIndex = questions.indexWhere(
+          (question) => !records.containsKey(question.id),
+        );
+        if (initialIndex < 0) initialIndex = 0;
+      }
+      return StudyShelf(
+        key: shelfKey,
+        questions: questions,
+        records: records,
+        initialIndex: initialIndex,
+        revisitOnly: false,
+      );
+    } catch (error) {
+      throw StudyLoadFailure(error);
+    }
+  }
+
+  Future<StudyShelf> loadRevisitShelf() async {
+    try {
+      final ids = await _progress.revisitStudyIds();
+      final questions = await _questionBank.questionsByIds(ids);
+      final storedRecords = await _progress.studyRecords();
+      final records = {
+        for (final record in storedRecords)
+          if (ids.contains(record.questionId)) record.questionId: record,
+      };
+      return StudyShelf(
+        key: 'revisit',
+        questions: questions,
+        records: records,
+        initialIndex: 0,
+        revisitOnly: true,
+      );
+    } catch (error) {
+      throw StudyLoadFailure(error);
+    }
+  }
+
+  Future<StudyRecord> saveStudyReflection({
+    required Question question,
+    required String shelfKey,
+    required int? hypothesisChoiceIndex,
+    required StudyReflection reflection,
+  }) async {
+    if (question.missionReady) {
+      throw ArgumentError(
+        'Verified mission items do not use source reflection.',
+      );
+    }
+    try {
+      final record = await _progress.saveStudyReflection(
+        questionId: question.id,
+        topicKey: question.topicKey,
+        shelfKey: shelfKey,
+        hypothesisChoiceIndex: hypothesisChoiceIndex,
+        reflection: reflection,
+      );
+      _study = await _progress.studySummary();
+      notifyListeners();
+      return record;
+    } catch (error) {
+      if (error is GaussFailure) rethrow;
+      throw StudyWriteFailure(error, operation: 'save_study_reflection');
+    }
+  }
+
+  Future<void> saveStudyPosition({
+    required String shelfKey,
+    required Question question,
+    required int position,
+  }) async {
+    try {
+      await _progress.saveStudyPosition(
+        shelfKey: shelfKey,
+        questionId: question.id,
+        position: position,
+      );
+    } catch (error) {
+      throw StudyWriteFailure(error, operation: 'save_study_position');
     }
   }
 

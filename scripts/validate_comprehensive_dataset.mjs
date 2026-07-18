@@ -8,6 +8,8 @@ const root = process.argv.find((arg) => arg.startsWith("--root="))?.slice(7) ?? 
 const strictSource = process.argv.includes("--strict-source-counts");
 const validateAsset = process.argv.includes("--asset");
 const assetRoot = "app/src/main/assets";
+const requiredSourceBank = "nardebam";
+const expectedQuestionCount = 3672;
 
 function walk(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -40,6 +42,7 @@ for (const file of walk(root)) {
     if (!Number.isInteger(q.correct_option_index) || q.correct_option_index < 1 || q.correct_option_index > 4) errors.push(`${at} invalid key`);
     if (!Array.isArray(q.solution) || !q.solution.length) errors.push(`${at} empty solution`);
     if (!q.provenance?.kind || !q.provenance?.edition) errors.push(`${at} incomplete provenance`);
+    if (q.source_bank !== requiredSourceBank) errors.push(`${at} is not a Nardebam source item`);
     const content = [
       ...(Array.isArray(q.stem) ? q.stem : []),
       ...(Array.isArray(q.options) ? q.options.flat() : []),
@@ -61,11 +64,12 @@ for (const file of walk(root)) {
   });
 }
 
-console.log(`Validated ${total} comprehensive questions.`);
+console.log(`Validated ${total} Nardebam comprehensive questions.`);
 for (const topic of topicRows) console.log(`${String(counts.get(`${topic.subject}|${topic.key}`) ?? 0).padStart(5)}  ${topic.subject}/${topic.key}  ${topic.label}`);
 console.log(`Nardebam source counts: math=${sourceNumbers.math.size}, physics=${sourceNumbers.physics.size}`);
 console.log(`Media blocks: ${mediaBlocks}`);
 if (strictSource && (sourceNumbers.math.size !== 2042 || sourceNumbers.physics.size !== 1630)) errors.push("source totals must be math=2042 and physics=1630");
+if (total !== expectedQuestionCount) errors.push(`total rows must be ${expectedQuestionCount}, got ${total}`);
 if (validateAsset) {
   const indexFile = path.join(assetRoot, "question_bank/index.json");
   if (!fs.existsSync(indexFile)) {
@@ -90,6 +94,7 @@ if (validateAsset) {
       for (const row of rows) {
         if (assetIds.has(row.id)) errors.push(`duplicate asset id ${row.id}`);
         assetIds.add(row.id);
+        if (row.source_bank !== requiredSourceBank) errors.push(`asset row ${row.id} is not a Nardebam source item`);
       }
     }
     if (index.total !== assetTotal) errors.push(`asset index total mismatch: index=${index.total} actual=${assetTotal}`);

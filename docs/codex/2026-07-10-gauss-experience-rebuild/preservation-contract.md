@@ -1,37 +1,34 @@
 # Preservation Contract
 
 Frozen: 2026-07-10T22:28:00+03:30  
-Final reconciliation: 2026-07-15T15:10:59+03:30
+Reconciled for source-only corpus: 2026-07-18
 
-| Asset or contract | Source of truth | Class | Final evidence | Allowed change | Acceptance proof |
+| Asset or contract | Source of truth | Class | Current evidence | Allowed change | Acceptance proof |
 |---|---|---|---|---|---|
-| Bundled question bank | `app/src/main/assets/question_bank/**` | immutable | 30 JSON files; 12,654,640 bytes; 7,353 IDs; digest `94d0153f94863ec9ee66e41e28b3c2021144a42350a133e9926b39f1ba8d0713` | Copy/bundle only; typed parsing adapters may classify trust and normalize answer indexes | Exact path/length/SHA equality in Flutter assets, web release, universal APK, and split APKs |
-| Question media | `app/src/main/assets/question_media/**` | immutable | 3,410 files; 66,450,076 bytes; digest `00e4eb33f1215ce8b8cf104baebb7c0b0a858137032f535c1e7b4c3b6ca3c320` | Copy/bundle and lazy-load only | Exact path/length/SHA equality across every built target and all references resolve |
-| Comprehensive source corpus | `data/seed/comprehensive/**` | immutable | 57 JSON files; 17,114,082 bytes; digest `0b3c252159923c98b11e748c826b3137d00f5386df6275d0f623b1c691b10db5` | No content edits | Strict source counts and source/bundle identity reconciliation pass |
-| Stable question identity and answer contract | `Question.id`, `correct_option_index`, typed adapter | immutable semantics | All 7,353 rows parse; answer contract is range checked | Domain exposes a 0-based selected choice only through explicit source conversion | Full-bank contract tests and four-choice boundary tests pass |
-| Dataset trust | `QuestionTrust` and `solutionVerified` | compatible derived policy | 3,681 mission-ready; 3,672 preserved archive; 3,610 displayed solutions; 71 withheld conflicts | Policy may become stricter; relaxation requires an independently verified source and new versioned evidence | No archive row enters missions, XP, SRS, quests, or analytics |
-| Kotlin/Compose product and dirty changes | Existing repository worktree | immutable rollback evidence | Initial unstaged patch hash `01eebba3d1c362cca4b9f988f742874d775fc6b0`; legacy dirty paths remain user-owned | Add Flutter files beside it; no cleanup/reset/revert | Flutter replacement remains under `flutter_app/`; legacy build remains available |
-| Room schema/history | Existing Kotlin database sources | immutable reference | Schema v4 and migrations retained | Flutter uses a different Drift store/schema | Flutter repository tests cover equivalent product contracts without mutating `gauss.db` |
-| Flutter progress | Drift schema v2 + immutable events | derived live state | Resume, attempts, SRS, XP, quest claims, achievements, and analytics tested | Versioned forward migrations only | Idempotency and local-midnight tests pass |
-| User history | Owner statement and new local store | empty initial baseline | Owner confirmed sole use and no prior usage | Initialize new Flutter store; no backfill | First-launch/empty-state invariants pass |
-| Routes/deep links | Flutter router | active compatible interface | `/map`, `/practice`, `/insights`, `/mission/:topicKey`, `/revenge`, `/resume` | Add compatible routes; do not bypass trust guards | Direct URL, missing/archive session, normal mission, and navigation QA pass |
-| Signing configuration | `android/app/build.gradle.kts` | compatible configuration | Package `com.gauss.app`; valid debug-fallback v2 signature | Supply `GAUSS_KEYSTORE_*` for private production signing | APK metadata/signature verification passes; certificate policy reported separately |
-| Fonts | Flutter asset declaration and original Vazirmatn files | compatible copy | Mixed English/Persian UI rendered in browser QA | Preserve files/license and fallback behavior | RTL blocks, joining, semantics, and layout inspection pass |
-| Visual direction | `03-previews.md` and Flutter Orrery implementation | derived/rebuildable | Selected map-first composition implemented on compact and expanded web | Refinement may not obscure learning actions or data truth | No tested overflow; archive/readiness and inspector states remain semantic |
+| Bundled question bank | `app/src/main/assets/question_bank/**` | immutable retained source | 30 JSON files; 6,007,444 bytes; 3,672 IDs | Copy/bundle only; no non-source rows | Exact path/length/SHA equality in Flutter assets, web release, and APK |
+| Question media | `app/src/main/assets/question_media/**` | immutable | 3,410 files; 66,450,076 bytes | Copy/bundle and lazy-load only | Exact path/length/SHA equality across every built target and all references resolve |
+| Comprehensive source corpus | `data/seed/comprehensive/nardebam/**` | immutable retained source | 29 JSON files; 8,703,652 bytes; math=2,042; physics=1,630 | No content edits | Strict source counts and source/bundle identity reconciliation pass |
+| Stable question identity and answer contract | `Question.id`, `correct_option_index`, typed adapter | immutable semantics | All 3,672 rows parse; answer index is range checked | Domain exposes a 0-based selected choice only through explicit conversion | Full-bank contract and four-choice boundary tests pass |
+| Dataset trust | `QuestionTrust` and `solutionVerified` | compatible derived policy | 0 mission-ready; 3,672 preserved archive | Relaxation requires independent versioned evidence | No archive row enters missions, XP, SRS, quests, or scored analytics |
+| Provider provenance | `source_bank` and `provenance` JSON | internal metadata | Retained on all source rows | Never rendered as product branding | User-facing copy scan excludes the provider name |
+| Flutter progress | Drift schema v4 + immutable events/study records | derived live state | Study reflections and per-shelf positions persist; archived source rows never award XP or scored events | Versioned forward migrations only | Repository idempotency, resume, aggregation, and no-XP reflection tests pass |
+| User history | Owner statement and local store | empty initial baseline | Owner confirmed sole use and no prior usage | Initialize new Flutter store; no backfill | First-launch/empty-state invariants pass |
+| Routes/deep links | Flutter router | active compatible interface | `/map`, `/study`, `/insights`, `/study/chapter/:topicKey`, `/study/revisit`; old practice/archive paths redirect | Add compatible routes; do not bypass trust guards | Fresh web direct URLs, bootstrap regression test, and native semantic navigation pass |
+| Signing configuration | `android/app/build.gradle.kts` and `docs/release/android-signing.md` | immutable release identity | Package `com.gauss.app`; v1.0.90 (90) signed by the protected Gauss certificate | Future builds must use `GAUSS_KEYSTORE_*`, a monotonic code, and the same key | Strict verifier passes and Android v89→v90 update preserves first-install time |
+| Fonts | Flutter asset declaration and original font files | compatible copy | Manrope with Vazirmatn fallback | Preserve files/license and fallback behavior | Mixed-direction text, semantics, and layout tests pass |
+| Visual direction | Flutter Study Observatory implementation | derived/rebuildable | Continuous Math/Physics path, astronomical Map/Study/Insights/Room, floating glass navigation | Refinement may not obscure reading actions or data truth | Phone/desktop web captures, Android native captures, overflow/large-text/reduced-motion tests pass |
 
 ## Trust-Preserving Interpretation
 
-Preservation means source bytes, stable identities, provenance, and media remain available. It does not require known-conflicting content to be scored or shown as authoritative. The non-destructive trust policy is specified in `dataset-integrity-policy.md`.
+Preservation now means retaining every row and media asset from the selected source corpus, stable identities, and provenance. It does not mean retaining unrelated generated or legacy question banks, and it never turns an unverified mapping into a scored answer.
 
-## Backup and Rollback
+## Deletion and Recovery Boundary
 
-- No production/staging system was mutated.
-- No live database backup was needed because the owner confirmed the app had never been used.
-- Git/worktree plus the immutable digests above protect source restoration.
-- Kotlin remains available; Flutter is additive.
-- The obsolete map background file remains in the workspace even though it is excluded from the Flutter runtime bundle.
+- On 2026-07-18 the owner explicitly authorized removal of every non-source question dataset from the current tree.
+- Removed material is recoverable from Git history before this migration; it is intentionally absent from current source, bundles, and future builds.
+- No production/staging system or user database was mutated. The owner confirmed the app had not been used.
+- The legacy Android question-bank mirror is source-only so old build tooling cannot silently reintroduce deleted questions.
 
 ## Rollback Trigger
 
-Stop a future cutover if any source count/hash/path/media check fails, a core journey loses behavior, a release build fails, persisted rewards/SRS/analytics diverge from contract tests, or an archive row becomes scorable without a versioned independent validation record.
-
+Stop a future cutover if any retained source count, path, media reference, SHA manifest, UI provenance-copy gate, release build, or trust-policy test fails; or if an archive row becomes scorable without independent versioned validation evidence.

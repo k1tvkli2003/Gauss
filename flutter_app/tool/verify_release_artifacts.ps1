@@ -2,7 +2,8 @@
 param(
     [string]$FlutterRoot,
     [string]$ApkPath,
-    [string]$WebRoot
+    [string]$WebRoot,
+    [switch]$AllowDebugSigningForLocalVerification
 )
 
 Set-StrictMode -Version Latest
@@ -189,9 +190,14 @@ if ($null -ne $apksigner) {
         throw 'APK signature verification failed.'
     }
     if ($signatureOutput -match 'CN=Android Debug') {
-        throw 'APK is signed with the Android debug certificate and must not be treated as a release artifact.'
+        if (-not $AllowDebugSigningForLocalVerification) {
+            throw 'APK is signed with the Android debug certificate and must not be treated as a release artifact.'
+        }
+        $signingStatus = 'DEBUG (local verification only; not publishable)'
     }
-    $signingStatus = 'PASS (cryptographic signature valid and non-debug certificate detected)'
+    else {
+        $signingStatus = 'PASS (cryptographic signature valid and non-debug certificate detected)'
+    }
 }
 else {
     $signingStatus = 'SKIPPED (apksigner unavailable)'

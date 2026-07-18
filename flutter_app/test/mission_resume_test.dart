@@ -13,22 +13,24 @@ import 'package:gauss/widgets/content_blocks.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   late Question sampleQuestion;
+  late Question archiveQuestion;
 
   setUpAll(() async {
     final questionBank = QuestionBankRepository();
     await questionBank.initialize();
-    sampleQuestion = (await questionBank.loadTopic('sets')).first;
+    archiveQuestion = (await questionBank.loadTopic('sets')).first;
+    sampleQuestion = _verifiedMissionFixture();
   });
 
   test(
-    'controller recreation restores the exact next mission question',
+    'controller recreation safely suppresses a source-archive mission',
     () async {
       final database = GaussDatabase(NativeDatabase.memory());
       addTearDown(database.close);
       final questionBank = QuestionBankRepository();
       final first = GaussController(questionBank, ProgressRepository(database));
       await first.initialize();
-      final questions = await first.createMission('sets', count: 5);
+      final questions = [archiveQuestion];
       final startedAt = DateTime(2026, 7, 12, 16);
       await first.startMission(
         sessionId: 'restart-safe',
@@ -62,15 +64,7 @@ void main() {
         isNull,
         reason: '${restarted.fatalError?.cause}',
       );
-      expect(saved, isNotNull);
-      expect(saved!.sessionId, 'restart-safe');
-      expect(
-        saved.questions.map((question) => question.id),
-        questions.map((question) => question.id),
-      );
-      expect(saved.answeredCount, 1);
-      expect(saved.resumeIndex, 1);
-      expect(saved.resumeAttempt, isNull);
+      expect(saved, isNull);
     },
   );
 
@@ -173,6 +167,36 @@ void main() {
     expect(find.text('Question stem'), findsOneWidget);
   });
 }
+
+Question _verifiedMissionFixture() => Question.fromJson({
+  'id': 'verified_mission_fixture',
+  'subject': 'math',
+  'topic_key': 'sets',
+  'difficulty': 'hard',
+  'stem': [
+    {'type': 'text', 'text': 'Fixture question'},
+  ],
+  'options': [
+    [
+      {'type': 'text', 'text': 'A'},
+    ],
+    [
+      {'type': 'text', 'text': 'B'},
+    ],
+    [
+      {'type': 'text', 'text': 'C'},
+    ],
+    [
+      {'type': 'text', 'text': 'D'},
+    ],
+  ],
+  'correct_option_index': 1,
+  'solution': [
+    {'type': 'text', 'text': 'Fixture solution'},
+  ],
+  'smart_shortcut': null,
+  'source_bank': 'verified_fixture',
+});
 
 Future<void> _pumpUntilFound(WidgetTester tester, Finder finder) async {
   for (var attempt = 0; attempt < 100 && finder.evaluate().isEmpty; attempt++) {

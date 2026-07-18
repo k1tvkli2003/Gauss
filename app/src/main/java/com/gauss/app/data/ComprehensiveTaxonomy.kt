@@ -7,7 +7,7 @@ data class TopicDef(
     val subject: Subject,
 )
 
-/** Canonical comprehensive taxonomy from the two Nardebam 1405 books. */
+/** Canonical comprehensive taxonomy from the two 1405 source books. */
 object ComprehensiveTaxonomy {
     private fun topic(subject: Subject, order: Int, key: String, label: String) =
         TopicDef(key, label, order, subject)

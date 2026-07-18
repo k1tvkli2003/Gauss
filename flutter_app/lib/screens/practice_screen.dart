@@ -1,17 +1,22 @@
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
+import '../domain/study_curriculum.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/gauss_brand.dart';
-import '../widgets/mission_start_guard.dart';
 import '../widgets/scratchpad.dart';
 
 String _formatCount(int value) => value.toString().replaceAllMapped(
   RegExp(r'(\d)(?=(\d{3})+(?!\d))'),
   (match) => '${match[1]},',
 );
+
+String _subjectTitle(Subject subject) =>
+    subject == Subject.math ? 'Mathematics' : 'Physics';
 
 class PracticeScreen extends StatefulWidget {
   const PracticeScreen({super.key});
@@ -22,164 +27,126 @@ class PracticeScreen extends StatefulWidget {
 
 class _PracticeScreenState extends State<PracticeScreen> {
   Subject _subject = Subject.math;
-  String? _selectedTopicKey;
-  final Set<Difficulty> _difficulties = {};
-  int _count = 10;
-  bool _answerFirst = false;
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _selectedTopicKey ??= GaussScope.of(
-      context,
-    ).topics.firstWhere((topic) => topic.subject == _subject).key;
+  void _openNode(BuildContext context, StudyPathNode node) {
+    context.push(
+      '/study/chapter/${node.topic.key}'
+      '?offset=${node.offset}&count=${GaussStudyCurriculum.batchSize}',
+    );
   }
 
-  void _selectSubject(Subject subject) {
-    final controller = GaussScope.of(context);
-    setState(() {
-      _subject = subject;
-      _selectedTopicKey = controller.topics
-          .firstWhere((topic) => topic.subject == subject)
-          .key;
-    });
-  }
-
-  Future<void> _startMission() async {
-    final topicKey = _selectedTopicKey;
-    if (topicKey == null) return;
-    final controller = GaussScope.of(context);
-    final topic = controller.topics.firstWhere(
-      (descriptor) => descriptor.key == topicKey,
+  StudyPathNode _continueNode(GaussController controller) {
+    final nodes = [
+      for (final section in GaussStudyCurriculum.forSubject(_subject))
+        ...GaussStudyCurriculum.nodesFor(section, controller.topics),
+    ];
+    return nodes.firstWhere(
+      (node) => controller.study.shelf(node.key).reflected < node.questionCount,
+      orElse: () => nodes.last,
     );
-    if (topic.missionReadyCount == 0) return;
-    final confirmed = await confirmMissionReplacement(
-      context,
-      controller.resumableMission,
-    );
-    if (!confirmed || !mounted) return;
-    final query = <String>['count=$_count'];
-    for (final difficulty in _difficulties) {
-      query.add('difficulty=${Uri.encodeQueryComponent(difficulty.key)}');
-    }
-    if (_answerFirst) query.add('cover=1');
-    await context.push('/mission/$topicKey?${query.join('&')}');
   }
 
   @override
   Widget build(BuildContext context) {
     final controller = GaussScope.of(context);
-    final topics = controller.topics
+    final sections = GaussStudyCurriculum.forSubject(_subject);
+    final continueNode = _continueNode(controller);
+    final subjectQuestions = controller.topics
         .where((topic) => topic.subject == _subject)
-        .toList(growable: false);
-    final selected = topics.firstWhere(
-      (topic) => topic.key == _selectedTopicKey,
-      orElse: () => topics.first,
-    );
+        .fold<int>(0, (total, topic) => total + topic.questionCount);
+    final subjectReflected = sections
+        .expand(
+          (section) =>
+              GaussStudyCurriculum.nodesFor(section, controller.topics),
+        )
+        .fold<int>(
+          0,
+          (total, node) => total + controller.study.shelf(node.key).reflected,
+        );
+
     return Stack(
       fit: StackFit.expand,
       children: [
-        const _PracticeBackdrop(),
+        const _StudyBackdrop(),
         SafeArea(
           bottom: false,
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: _PracticeHeader(
-                  controller: controller,
-                  onScratchpad: () => showScratchpad(context),
-                ),
-              ),
-              SliverToBoxAdapter(
-                child: _PracticeModes(
-                  controller: controller,
-                  onScratchpad: () => showScratchpad(context),
-                ),
-              ),
-              SliverToBoxAdapter(
-                child: _SetComposer(
-                  subject: _subject,
-                  difficulties: _difficulties,
-                  count: _count,
-                  answerFirst: _answerFirst,
-                  totalQuestions: controller.totalQuestions,
-                  onSubject: _selectSubject,
-                  onDifficulty: (difficulty) => setState(() {
-                    if (!_difficulties.remove(difficulty)) {
-                      _difficulties.add(difficulty);
-                    }
-                  }),
-                  onCount: (count) => setState(() => _count = count),
-                  onAnswerFirst: () =>
-                      setState(() => _answerFirst = !_answerFirst),
-                ),
-              ),
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(18, 23, 18, 10),
-                  child: Center(
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 1160),
-                      child: Row(
-                        children: [
-                          Text(
-                            _subject == Subject.math
-                                ? 'Mathematics chapters'
-                                : 'Physics chapters',
-                            style: Theme.of(context).textTheme.titleLarge,
-                          ),
-                          const Spacer(),
-                          Text(
-                            '${topics.length} chapters',
-                            style: const TextStyle(color: GaussColors.fog),
-                          ),
-                        ],
-                      ),
-                    ),
+          child: Padding(
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.sizeOf(context).width < 760 ? 88 : 0,
+            ),
+            child: CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: _StudyHeader(
+                    controller: controller,
+                    subject: _subject,
+                    onScratchpad: () => showScratchpad(context),
                   ),
                 ),
-              ),
-              SliverPadding(
-                padding: const EdgeInsets.fromLTRB(18, 0, 18, 14),
-                sliver: SliverLayoutBuilder(
-                  builder: (context, constraints) {
-                    final columns = constraints.crossAxisExtent >= 1030
-                        ? 3
-                        : constraints.crossAxisExtent >= 650
-                        ? 2
-                        : 1;
-                    return SliverGrid.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: columns,
-                        mainAxisSpacing: 11,
-                        crossAxisSpacing: 11,
-                        childAspectRatio: columns == 1 ? 3.35 : 2.28,
-                      ),
-                      itemCount: topics.length,
-                      itemBuilder: (context, index) {
-                        final topic = topics[index];
-                        return _ChapterTile(
-                          topic: topic,
-                          completed: controller.completedInTopic(topic.key),
-                          selected: topic.key == selected.key,
-                          onTap: () =>
-                              setState(() => _selectedTopicKey = topic.key),
-                        );
-                      },
-                    );
-                  },
+                SliverToBoxAdapter(
+                  child: _SubjectSwitch(
+                    subject: _subject,
+                    onChanged: (subject) => setState(() => _subject = subject),
+                  ),
                 ),
-              ),
-              SliverToBoxAdapter(
-                child: _LaunchDeck(
-                  topic: selected,
-                  completed: controller.completedInTopic(selected.key),
-                  count: _count,
-                  difficultyCount: _difficulties.length,
-                  onStart: _startMission,
+                SliverToBoxAdapter(
+                  child: _ContinueInstrument(
+                    node: continueNode,
+                    snapshot: controller.study.shelf(continueNode.key),
+                    subjectReflected: subjectReflected,
+                    subjectQuestions: subjectQuestions,
+                    onOpen: () => _openNode(context, continueNode),
+                    onMap: () => context.go('/map'),
+                  ),
                 ),
-              ),
-            ],
+                SliverToBoxAdapter(
+                  child: _StudyModes(
+                    revisitCount: controller.study.revisitCount,
+                    onRevisit: () => context.push('/study/revisit'),
+                    onScratchpad: () => showScratchpad(context),
+                    onMap: () => context.go('/map'),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: _SectionHeading(
+                    eyebrow: '${_subjectTitle(_subject).toUpperCase()} ATLAS',
+                    title: '${sections.length} focused sections',
+                    detail:
+                        'Every chapter is divided into calm sets of up to ${GaussStudyCurriculum.batchSize} source questions. Nothing is locked.',
+                  ),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.fromLTRB(18, 0, 18, 126),
+                  sliver: SliverLayoutBuilder(
+                    builder: (context, constraints) {
+                      final columns = constraints.crossAxisExtent >= 1040
+                          ? 2
+                          : 1;
+                      final aspectRatio = columns == 2
+                          ? 1.02
+                          : constraints.crossAxisExtent >= 700
+                          ? 1.55
+                          : .72;
+                      return SliverGrid.builder(
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: columns,
+                          mainAxisSpacing: 14,
+                          crossAxisSpacing: 14,
+                          childAspectRatio: aspectRatio,
+                        ),
+                        itemCount: sections.length,
+                        itemBuilder: (context, index) => _SectionAtlasCard(
+                          number: index + 1,
+                          section: sections[index],
+                          controller: controller,
+                          onOpen: (node) => _openNode(context, node),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],
@@ -187,8 +154,8 @@ class _PracticeScreenState extends State<PracticeScreen> {
   }
 }
 
-class _PracticeBackdrop extends StatelessWidget {
-  const _PracticeBackdrop();
+class _StudyBackdrop extends StatelessWidget {
+  const _StudyBackdrop();
 
   @override
   Widget build(BuildContext context) => Stack(
@@ -197,17 +164,16 @@ class _PracticeBackdrop extends StatelessWidget {
       Image.asset(
         'assets/visual/map/orrery_atmosphere_portrait.png',
         fit: BoxFit.cover,
-        alignment: Alignment.topCenter,
-        cacheWidth: 1100,
-        filterQuality: FilterQuality.low,
+        cacheWidth: 1400,
+        filterQuality: FilterQuality.medium,
       ),
       const DecoratedBox(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xE007151C), GaussColors.abyss],
-            stops: [0, .62],
+            colors: [Color(0xB4061116), Color(0xF503090B)],
+            stops: [.06, .72],
           ),
         ),
       ),
@@ -215,192 +181,396 @@ class _PracticeBackdrop extends StatelessWidget {
   );
 }
 
-class _PracticeHeader extends StatelessWidget {
-  const _PracticeHeader({required this.controller, required this.onScratchpad});
+class _StudyHeader extends StatelessWidget {
+  const _StudyHeader({
+    required this.controller,
+    required this.subject,
+    required this.onScratchpad,
+  });
 
   final GaussController controller;
+  final Subject subject;
   final VoidCallback onScratchpad;
 
   @override
   Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.fromLTRB(18, 20, 18, 10),
+    padding: const EdgeInsets.fromLTRB(20, 18, 12, 9),
     child: Center(
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 1160),
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            final narrow = constraints.maxWidth < 620;
-            return Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Row(
-                        children: [
-                          GaussWordmark(width: 118),
-                          SizedBox(width: 10),
-                          Text(
-                            'PRACTICE DECK',
-                            style: TextStyle(
-                              color: GaussColors.brassLight,
-                              fontSize: 9,
-                              fontWeight: FontWeight.w900,
-                              letterSpacing: 1.2,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 14),
-                      Text(
-                        'Build a proof set',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      const SizedBox(height: 5),
-                      Text(
-                        narrow
-                            ? 'Choose a chapter, tune the set, and begin.'
-                            : 'Choose a chapter, tune the challenge, and draw a focused set from your offline library.',
-                        style: const TextStyle(color: GaussColors.muted),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 12),
-                if (!narrow)
-                  _TinyMetric(
-                    label: 'DUE',
-                    value: '${controller.reviewDueCount}',
-                  ),
-                if (!narrow) const SizedBox(width: 8),
-                if (!narrow)
-                  IconButton(
-                    onPressed: onScratchpad,
-                    tooltip: 'Open scratchpad',
-                    icon: const GaussScratchGlyph(
-                      color: GaussColors.signalBright,
+        constraints: const BoxConstraints(maxWidth: 1180),
+        child: Row(
+          children: [
+            const GaussWordmark(width: 122),
+            const SizedBox(width: 14),
+            Container(width: 1, height: 30, color: GaussColors.hairline),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'STUDY OBSERVATORY',
+                    style: TextStyle(
+                      color: GaussColors.brassLight,
+                      fontSize: 9,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1.35,
                     ),
                   ),
-              ],
-            );
-          },
+                  Text(
+                    '${_formatCount(controller.totalQuestions)} source questions · fully offline',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: GaussColors.fog,
+                      fontSize: 11,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            IconButton.filledTonal(
+              onPressed: onScratchpad,
+              tooltip: 'Open scratchpad',
+              icon: const Icon(Icons.draw_outlined),
+            ),
+          ],
         ),
       ),
     ),
   );
 }
 
-class _TinyMetric extends StatelessWidget {
-  const _TinyMetric({required this.label, required this.value});
+class _SubjectSwitch extends StatelessWidget {
+  const _SubjectSwitch({required this.subject, required this.onChanged});
 
-  final String label;
-  final String value;
+  final Subject subject;
+  final ValueChanged<Subject> onChanged;
 
   @override
-  Widget build(BuildContext context) => Container(
-    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-    decoration: BoxDecoration(
-      color: GaussColors.deepInk.withValues(alpha: .9),
-      borderRadius: BorderRadius.circular(14),
-      border: Border.all(color: GaussColors.hairline),
-    ),
-    child: Column(
-      children: [
-        Text(
-          value,
-          style: const TextStyle(
-            color: GaussColors.signalBright,
-            fontWeight: FontWeight.w900,
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.fromLTRB(18, 8, 18, 14),
+    child: Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 720),
+        child: _StudyGlass(
+          radius: 22,
+          padding: const EdgeInsets.all(6),
+          child: Row(
+            children: [
+              for (final item in Subject.values)
+                Expanded(
+                  child: Semantics(
+                    button: true,
+                    selected: subject == item,
+                    child: InkWell(
+                      onTap: () => onChanged(item),
+                      borderRadius: BorderRadius.circular(17),
+                      child: AnimatedContainer(
+                        duration: MediaQuery.disableAnimationsOf(context)
+                            ? Duration.zero
+                            : const Duration(milliseconds: 180),
+                        height: 52,
+                        decoration: BoxDecoration(
+                          gradient: subject == item
+                              ? LinearGradient(
+                                  colors: item == Subject.math
+                                      ? const [
+                                          Color(0xFFCE9230),
+                                          Color(0xFF8C5B15),
+                                        ]
+                                      : const [
+                                          Color(0xFF3F9F9A),
+                                          Color(0xFF235E66),
+                                        ],
+                                )
+                              : null,
+                          borderRadius: BorderRadius.circular(17),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              item == Subject.math
+                                  ? Icons.functions_rounded
+                                  : Icons.bolt_rounded,
+                              size: 20,
+                              color: subject == item
+                                  ? GaussColors.ivory
+                                  : GaussColors.muted,
+                            ),
+                            const SizedBox(width: 6),
+                            Flexible(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(
+                                  _subjectTitle(item),
+                                  style: TextStyle(
+                                    color: subject == item
+                                        ? GaussColors.ivory
+                                        : GaussColors.muted,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+            ],
           ),
         ),
-        Text(
-          label,
-          style: const TextStyle(
-            color: GaussColors.fog,
-            fontSize: 8,
-            fontWeight: FontWeight.w800,
-            letterSpacing: .7,
+      ),
+    ),
+  );
+}
+
+class _ContinueInstrument extends StatelessWidget {
+  const _ContinueInstrument({
+    required this.node,
+    required this.snapshot,
+    required this.subjectReflected,
+    required this.subjectQuestions,
+    required this.onOpen,
+    required this.onMap,
+  });
+
+  final StudyPathNode node;
+  final StudyTopicSnapshot snapshot;
+  final int subjectReflected;
+  final int subjectQuestions;
+  final VoidCallback onOpen;
+  final VoidCallback onMap;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 18),
+    child: Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 1180),
+        child: _StudyGlass(
+          radius: 28,
+          padding: const EdgeInsets.all(20),
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              final wide = constraints.maxWidth >= 680;
+              final emblem = _OrbitEmblem(
+                progress: node.questionCount == 0
+                    ? 0
+                    : snapshot.reflected / node.questionCount,
+              );
+              final copy = Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    'CONTINUE YOUR ORBIT',
+                    style: TextStyle(
+                      color: GaussColors.brassLight,
+                      fontSize: 9,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1.4,
+                    ),
+                  ),
+                  const SizedBox(height: 7),
+                  Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text(
+                      node.topic.label,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    '${node.setLabel} · ${snapshot.reflected}/${node.questionCount} charted',
+                    style: const TextStyle(
+                      color: GaussColors.fog,
+                      fontSize: 12,
+                    ),
+                  ),
+                  const SizedBox(height: 14),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(99),
+                    child: LinearProgressIndicator(
+                      minHeight: 7,
+                      value: subjectQuestions == 0
+                          ? 0
+                          : subjectReflected / subjectQuestions,
+                      backgroundColor: GaussColors.line,
+                      valueColor: const AlwaysStoppedAnimation(
+                        GaussColors.signalBright,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 7),
+                  Text(
+                    '$subjectReflected of ${_formatCount(subjectQuestions)} questions reflected on',
+                    style: const TextStyle(
+                      color: GaussColors.muted,
+                      fontSize: 10,
+                    ),
+                  ),
+                  const SizedBox(height: 17),
+                  Wrap(
+                    spacing: 10,
+                    runSpacing: 9,
+                    children: [
+                      FilledButton.icon(
+                        onPressed: onOpen,
+                        icon: const Icon(Icons.auto_stories_outlined),
+                        label: Text(
+                          snapshot.reflected == 0 ? 'Begin set' : 'Resume set',
+                        ),
+                      ),
+                      OutlinedButton.icon(
+                        onPressed: onMap,
+                        icon: const Icon(Icons.route_outlined),
+                        label: const Text('View path'),
+                      ),
+                    ],
+                  ),
+                ],
+              );
+              if (!wide) {
+                return Column(
+                  children: [emblem, const SizedBox(height: 16), copy],
+                );
+              }
+              return Row(
+                children: [
+                  emblem,
+                  const SizedBox(width: 26),
+                  Expanded(child: copy),
+                ],
+              );
+            },
           ),
+        ),
+      ),
+    ),
+  );
+}
+
+class _OrbitEmblem extends StatelessWidget {
+  const _OrbitEmblem({required this.progress});
+  final double progress;
+
+  @override
+  Widget build(BuildContext context) => SizedBox.square(
+    dimension: 126,
+    child: Stack(
+      alignment: Alignment.center,
+      children: [
+        SizedBox.square(
+          dimension: 116,
+          child: CircularProgressIndicator(
+            value: progress.clamp(0, 1),
+            strokeWidth: 4,
+            backgroundColor: GaussColors.line,
+            color: GaussColors.brass,
+          ),
+        ),
+        Container(
+          width: 88,
+          height: 88,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: const RadialGradient(
+              colors: [Color(0xFF17353A), GaussColors.deepInk],
+            ),
+            border: Border.all(color: GaussColors.brass, width: 2),
+            boxShadow: [
+              BoxShadow(
+                color: GaussColors.brass.withValues(alpha: .18),
+                blurRadius: 24,
+              ),
+            ],
+          ),
+          child: const Center(child: TheoremStarMark(size: 55)),
         ),
       ],
     ),
   );
 }
 
-class _PracticeModes extends StatelessWidget {
-  const _PracticeModes({required this.controller, required this.onScratchpad});
+class _StudyModes extends StatelessWidget {
+  const _StudyModes({
+    required this.revisitCount,
+    required this.onRevisit,
+    required this.onScratchpad,
+    required this.onMap,
+  });
 
-  final GaussController controller;
+  final int revisitCount;
+  final VoidCallback onRevisit;
   final VoidCallback onScratchpad;
+  final VoidCallback onMap;
 
   @override
   Widget build(BuildContext context) {
-    final modes = <Widget>[
-      if (controller.resumableMission case final saved?)
-        _ModeTile(
-          glyph: GaussDestinationGlyph.map,
-          title: 'Resume mission',
-          detail:
-              '${saved.answeredCount} of ${saved.questions.length} recorded',
-          accent: GaussColors.violet,
-          onTap: () => context.push('/resume'),
-        ),
-      const _ModeTile(
-        glyph: GaussDestinationGlyph.practice,
-        title: 'Focus set',
-        detail: 'Chapter, challenge, and length',
-        accent: GaussColors.brassLight,
+    final modes = [
+      (
+        icon: Icons.loop_rounded,
+        title: 'Revisit orbit',
+        detail: revisitCount == 0
+            ? 'Nothing waiting'
+            : '$revisitCount concepts waiting',
+        onTap: onRevisit,
       ),
-      _ModeTile(
-        glyph: GaussDestinationGlyph.map,
-        title: 'Review orbit',
-        detail: controller.reviewDueCount == 0
-            ? 'No stars are dimming today'
-            : '${controller.reviewDueCount} proofs due before they fade',
-        accent: GaussColors.brassLight,
-        onTap: controller.reviewDueCount == 0
-            ? null
-            : () => context.push('/review?count=10'),
-      ),
-      _ModeTile(
-        glyph: GaussDestinationGlyph.insights,
-        title: 'Revisit mistakes',
-        detail: controller.revengeCount == 0
-            ? 'Nothing due right now'
-            : '${controller.revengeCount} questions ready',
-        accent: GaussColors.signalBright,
-        onTap: controller.revengeCount == 0
-            ? null
-            : () => context.push('/revenge?count=10'),
-      ),
-      _ModeTile(
-        glyph: GaussDestinationGlyph.practice,
-        title: 'Open scratchpad',
-        detail: 'Think freely without starting a set',
-        accent: GaussColors.ice,
+      (
+        icon: Icons.draw_outlined,
+        title: 'Scratchpad',
+        detail: 'Full-sheet freehand work',
         onTap: onScratchpad,
+      ),
+      (
+        icon: Icons.route_outlined,
+        title: 'Path atlas',
+        detail: 'Browse the continuous route',
+        onTap: onMap,
       ),
     ];
     return Padding(
-      padding: const EdgeInsets.fromLTRB(18, 10, 18, 10),
+      padding: const EdgeInsets.fromLTRB(18, 14, 18, 2),
       child: Center(
         child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 1160),
+          constraints: const BoxConstraints(maxWidth: 1180),
           child: LayoutBuilder(
             builder: (context, constraints) {
-              final columns = constraints.maxWidth >= 900
-                  ? modes.length
-                  : constraints.maxWidth >= 560
-                  ? 2
-                  : 1;
-              final width =
-                  (constraints.maxWidth - (columns - 1) * 10) / columns;
-              return Wrap(
-                spacing: 10,
-                runSpacing: 10,
+              final compact = constraints.maxWidth < 720;
+              if (compact) {
+                return Column(
+                  children: [
+                    for (final mode in modes) ...[
+                      _ModePlate(
+                        icon: mode.icon,
+                        title: mode.title,
+                        detail: mode.detail,
+                        onTap: mode.onTap,
+                      ),
+                      const SizedBox(height: 9),
+                    ],
+                  ],
+                );
+              }
+              return Row(
                 children: [
-                  for (final mode in modes) SizedBox(width: width, child: mode),
+                  for (var index = 0; index < modes.length; index++) ...[
+                    if (index > 0) const SizedBox(width: 10),
+                    Expanded(
+                      child: _ModePlate(
+                        icon: modes[index].icon,
+                        title: modes[index].title,
+                        detail: modes[index].detail,
+                        onTap: modes[index].onTap,
+                      ),
+                    ),
+                  ],
                 ],
               );
             },
@@ -411,86 +581,69 @@ class _PracticeModes extends StatelessWidget {
   }
 }
 
-class _ModeTile extends StatelessWidget {
-  const _ModeTile({
-    required this.glyph,
+class _ModePlate extends StatelessWidget {
+  const _ModePlate({
+    required this.icon,
     required this.title,
     required this.detail,
-    required this.accent,
-    this.onTap,
+    required this.onTap,
   });
 
-  final GaussDestinationGlyph glyph;
+  final IconData icon;
   final String title;
   final String detail;
-  final Color accent;
-  final VoidCallback? onTap;
+  final VoidCallback onTap;
 
   @override
-  Widget build(BuildContext context) => Semantics(
-    button: onTap != null,
-    enabled: onTap != null,
-    label: '$title. $detail.',
+  Widget build(BuildContext context) => _StudyGlass(
+    radius: 19,
+    padding: EdgeInsets.zero,
     child: InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(19),
-      child: Container(
-        height: 92,
-        padding: const EdgeInsets.all(14),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              accent.withValues(alpha: .12),
-              GaussColors.raised.withValues(alpha: .94),
-            ],
-          ),
-          borderRadius: BorderRadius.circular(19),
-          border: Border.all(
-            color: onTap == null
-                ? GaussColors.hairline
-                : accent.withValues(alpha: .42),
-          ),
-        ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
         child: Row(
           children: [
             Container(
-              width: 46,
-              height: 46,
-              alignment: Alignment.center,
+              width: 42,
+              height: 42,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: GaussColors.deepInk,
-                border: Border.all(color: accent.withValues(alpha: .55)),
+                borderRadius: BorderRadius.circular(13),
+                color: GaussColors.brass.withValues(alpha: .11),
+                border: Border.all(
+                  color: GaussColors.brass.withValues(alpha: .28),
+                ),
               ),
-              child: GaussNavGlyph(glyph: glyph, selected: true, size: 24),
+              child: Icon(icon, color: GaussColors.brassLight, size: 21),
             ),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(fontWeight: FontWeight.w800),
+                    style: const TextStyle(fontWeight: FontWeight.w900),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     detail,
-                    maxLines: 2,
+                    maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       color: GaussColors.muted,
-                      fontSize: 11,
+                      fontSize: 10,
                     ),
                   ),
                 ],
               ),
             ),
-            if (onTap != null)
-              Icon(Icons.arrow_forward_rounded, color: accent, size: 19),
+            const Icon(
+              Icons.arrow_forward_ios_rounded,
+              size: 14,
+              color: GaussColors.fog,
+            ),
           ],
         ),
       ),
@@ -498,404 +651,248 @@ class _ModeTile extends StatelessWidget {
   );
 }
 
-class _SetComposer extends StatelessWidget {
-  const _SetComposer({
-    required this.subject,
-    required this.difficulties,
-    required this.count,
-    required this.answerFirst,
-    required this.totalQuestions,
-    required this.onSubject,
-    required this.onDifficulty,
-    required this.onCount,
-    required this.onAnswerFirst,
+class _SectionHeading extends StatelessWidget {
+  const _SectionHeading({
+    required this.eyebrow,
+    required this.title,
+    required this.detail,
   });
 
-  final Subject subject;
-  final Set<Difficulty> difficulties;
-  final int count;
-  final bool answerFirst;
-  final int totalQuestions;
-  final ValueChanged<Subject> onSubject;
-  final ValueChanged<Difficulty> onDifficulty;
-  final ValueChanged<int> onCount;
-  final VoidCallback onAnswerFirst;
+  final String eyebrow;
+  final String title;
+  final String detail;
 
   @override
   Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.fromLTRB(18, 10, 18, 0),
+    padding: const EdgeInsets.fromLTRB(20, 24, 20, 13),
     child: Center(
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 1160),
-        child: Container(
-          padding: const EdgeInsets.all(17),
-          decoration: BoxDecoration(
-            color: GaussColors.ink.withValues(alpha: .94),
-            borderRadius: BorderRadius.circular(22),
-            border: Border.all(color: GaussColors.line),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Row(
-                children: [
-                  TheoremStarMark(size: 26),
-                  SizedBox(width: 9),
-                  Text(
-                    'SET COMPOSER',
-                    style: TextStyle(
-                      color: GaussColors.brassLight,
-                      fontSize: 10,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 1.15,
-                    ),
-                  ),
-                ],
+        constraints: const BoxConstraints(maxWidth: 1180),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              eyebrow,
+              style: const TextStyle(
+                color: GaussColors.brassLight,
+                fontSize: 9,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 1.35,
               ),
-              const SizedBox(height: 14),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  _ChoiceToken(
-                    label: 'Math',
-                    selected: subject == Subject.math,
-                    onTap: () => onSubject(Subject.math),
-                  ),
-                  _ChoiceToken(
-                    label: 'Physics',
-                    selected: subject == Subject.physics,
-                    onTap: () => onSubject(Subject.physics),
-                  ),
-                  const SizedBox(width: 5),
-                  for (final value in const [5, 10, 20, 30])
-                    _ChoiceToken(
-                      label: '$value questions',
-                      selected: count == value,
-                      onTap: () => onCount(value),
-                    ),
-                  const SizedBox(width: 5),
-                  _ChoiceToken(
-                    label: 'Answer-first',
-                    selected: answerFirst,
-                    onTap: onAnswerFirst,
-                  ),
-                ],
-              ),
-              if (answerFirst) ...[
-                const SizedBox(height: 10),
-                const Row(
-                  children: [
-                    Icon(
-                      Icons.visibility_off_outlined,
-                      size: 15,
-                      color: GaussColors.brassLight,
-                    ),
-                    SizedBox(width: 7),
-                    Expanded(
-                      child: Text(
-                        'Choices stay covered until you uncover them — derive the answer before it can be recognized.',
-                        style: TextStyle(
-                          color: GaussColors.muted,
-                          fontSize: 10.5,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-              const Divider(height: 25),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  for (final difficulty in Difficulty.values)
-                    _ChoiceToken(
-                      label: difficulty.label,
-                      selected: difficulties.contains(difficulty),
-                      rtl: true,
-                      onTap: () => onDifficulty(difficulty),
-                    ),
-                ],
-              ),
-              const SizedBox(height: 13),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(
-                    Icons.shield_outlined,
-                    size: 17,
-                    color: GaussColors.signalBright,
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      'Your complete ${_formatCount(totalQuestions)}-question library stays on this device. Every practice set uses questions with a clear answer path.',
-                      style: const TextStyle(
-                        color: GaussColors.muted,
-                        fontSize: 11,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-class _ChoiceToken extends StatelessWidget {
-  const _ChoiceToken({
-    required this.label,
-    required this.selected,
-    required this.onTap,
-    this.rtl = false,
-  });
-
-  final String label;
-  final bool selected;
-  final VoidCallback onTap;
-  final bool rtl;
-
-  @override
-  Widget build(BuildContext context) => Semantics(
-    button: true,
-    selected: selected,
-    label: label,
-    child: InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(GaussRadii.pill),
-      child: AnimatedContainer(
-        duration: MediaQuery.disableAnimationsOf(context)
-            ? Duration.zero
-            : const Duration(milliseconds: 170),
-        padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 9),
-        decoration: BoxDecoration(
-          color: selected
-              ? GaussColors.brass.withValues(alpha: .14)
-              : GaussColors.deepInk,
-          borderRadius: BorderRadius.circular(GaussRadii.pill),
-          border: Border.all(
-            color: selected ? GaussColors.brassLight : GaussColors.hairline,
-          ),
-        ),
-        child: Directionality(
-          textDirection: rtl ? TextDirection.rtl : TextDirection.ltr,
-          child: Text(
-            label,
-            style: TextStyle(
-              color: selected ? GaussColors.brassLight : GaussColors.muted,
-              fontSize: 11,
-              fontWeight: FontWeight.w700,
             ),
-          ),
+            const SizedBox(height: 5),
+            Text(title, style: Theme.of(context).textTheme.headlineSmall),
+            const SizedBox(height: 4),
+            Text(
+              detail,
+              style: const TextStyle(
+                color: GaussColors.muted,
+                fontSize: 11,
+                height: 1.45,
+              ),
+            ),
+          ],
         ),
       ),
     ),
   );
 }
 
-class _ChapterTile extends StatelessWidget {
-  const _ChapterTile({
-    required this.topic,
-    required this.completed,
-    required this.selected,
-    required this.onTap,
+class _SectionAtlasCard extends StatelessWidget {
+  const _SectionAtlasCard({
+    required this.number,
+    required this.section,
+    required this.controller,
+    required this.onOpen,
   });
 
-  final TopicDescriptor topic;
-  final int completed;
-  final bool selected;
-  final VoidCallback onTap;
+  final int number;
+  final StudySectionDefinition section;
+  final GaussController controller;
+  final ValueChanged<StudyPathNode> onOpen;
 
   @override
   Widget build(BuildContext context) {
-    final progress = topic.missionReadyCount == 0
-        ? 0.0
-        : (completed / topic.missionReadyCount).clamp(0.0, 1.0);
-    return Semantics(
-      button: true,
-      selected: selected,
-      label:
-          '${topic.label}. ${topic.missionReadyCount == 0 ? 'No scored set yet.' : '$completed solved.'}',
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(20),
-        child: AnimatedContainer(
-          duration: MediaQuery.disableAnimationsOf(context)
-              ? Duration.zero
-              : const Duration(milliseconds: 190),
-          padding: const EdgeInsets.fromLTRB(10, 9, 14, 9),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: selected
-                  ? [
-                      GaussColors.brass.withValues(alpha: .16),
-                      GaussColors.raised,
-                    ]
-                  : [GaussColors.panelHigh, GaussColors.raised],
-            ),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: selected ? GaussColors.brassLight : GaussColors.line,
-              width: selected ? 1.7 : 1,
-            ),
-          ),
-          child: Row(
+    final nodes = GaussStudyCurriculum.nodesFor(section, controller.topics);
+    final topics = [
+      for (final key in section.topicKeys)
+        controller.topics.firstWhere((topic) => topic.key == key),
+    ];
+    final total = nodes.fold<int>(0, (sum, node) => sum + node.questionCount);
+    final reflected = nodes.fold<int>(
+      0,
+      (sum, node) => sum + controller.study.shelf(node.key).reflected,
+    );
+    return _StudyGlass(
+      radius: 24,
+      padding: const EdgeInsets.all(18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
             children: [
-              SizedBox.square(
-                dimension: 76,
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    ColorFiltered(
-                      colorFilter: topic.missionReadyCount == 0
-                          ? const ColorFilter.matrix(<double>[
-                              .4,
-                              .4,
-                              .4,
-                              0,
-                              0,
-                              .4,
-                              .4,
-                              .4,
-                              0,
-                              0,
-                              .4,
-                              .4,
-                              .4,
-                              0,
-                              0,
-                              0,
-                              0,
-                              0,
-                              .6,
-                              0,
-                            ])
-                          : const ColorFilter.mode(
-                              Colors.transparent,
-                              BlendMode.dst,
-                            ),
-                      child: Image.asset(
-                        'assets/visual/nodes/topic_shell.png',
-                        cacheWidth: 360,
-                        filterQuality: FilterQuality.medium,
-                      ),
-                    ),
-                    TopicGlyph(
-                      topicKey: topic.key,
-                      size: 25,
-                      color: selected
-                          ? GaussColors.brassLight
-                          : topic.subject == Subject.math
-                          ? GaussColors.brass
-                          : GaussColors.ice,
+              Container(
+                width: 42,
+                height: 42,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFFE1AD4C), Color(0xFF8B5713)],
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: GaussColors.brass.withValues(alpha: .25),
+                      blurRadius: 16,
                     ),
                   ],
                 ),
+                child: Text(
+                  '$number',
+                  style: const TextStyle(
+                    color: GaussColors.deepInk,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
               ),
-              const SizedBox(width: 10),
+              const SizedBox(width: 12),
               Expanded(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Directionality(
-                      textDirection: TextDirection.rtl,
-                      child: Text(
-                        topic.label,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                          color: GaussColors.ivory,
-                          fontFamily: 'Vazirmatn',
-                          fontWeight: FontWeight.w800,
-                          height: 1.25,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 4),
                     Text(
-                      topic.missionReadyCount == 0
-                          ? 'Study archive · no scored set yet'
-                          : completed == 0
-                          ? 'Ready to begin'
-                          : '$completed solved',
+                      section.title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: GaussColors.muted,
-                        fontSize: 10.5,
-                      ),
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
-                    const SizedBox(height: 7),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(GaussRadii.pill),
-                      child: LinearProgressIndicator(
-                        value: progress,
-                        minHeight: 4,
+                    Text(
+                      '${topics.length} units · ${nodes.length} study sets',
+                      style: const TextStyle(
+                        color: GaussColors.fog,
+                        fontSize: 10,
                       ),
                     ),
                   ],
                 ),
               ),
-              if (selected)
-                const Padding(
-                  padding: EdgeInsets.only(left: 7),
-                  child: TheoremStarMark(size: 24),
+              Text(
+                '$reflected/$total',
+                style: const TextStyle(
+                  color: GaussColors.signalBright,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w900,
                 ),
+              ),
             ],
           ),
-        ),
+          const SizedBox(height: 12),
+          Text(
+            section.subtitle,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              color: GaussColors.muted,
+              fontSize: 11,
+              height: 1.4,
+            ),
+          ),
+          const SizedBox(height: 12),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(99),
+            child: LinearProgressIndicator(
+              minHeight: 5,
+              value: total == 0 ? 0 : reflected / total,
+              backgroundColor: GaussColors.line,
+              color: GaussColors.signal,
+            ),
+          ),
+          const SizedBox(height: 14),
+          Expanded(
+            child: ListView.separated(
+              padding: EdgeInsets.zero,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: topics.length,
+              separatorBuilder: (context, index) => const SizedBox(height: 8),
+              itemBuilder: (context, index) {
+                final topic = topics[index];
+                final topicNodes = nodes
+                    .where((node) => node.topic.key == topic.key)
+                    .toList(growable: false);
+                final topicReflected = topicNodes.fold<int>(
+                  0,
+                  (sum, node) =>
+                      sum + controller.study.shelf(node.key).reflected,
+                );
+                final nextNode = topicNodes.firstWhere(
+                  (node) =>
+                      controller.study.shelf(node.key).reflected <
+                      node.questionCount,
+                  orElse: () => topicNodes.last,
+                );
+                return _UnitRow(
+                  index: index + 1,
+                  topic: topic,
+                  setCount: topicNodes.length,
+                  reflected: topicReflected,
+                  onOpen: () => onOpen(nextNode),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
 }
 
-class _LaunchDeck extends StatelessWidget {
-  const _LaunchDeck({
+class _UnitRow extends StatelessWidget {
+  const _UnitRow({
+    required this.index,
     required this.topic,
-    required this.completed,
-    required this.count,
-    required this.difficultyCount,
-    required this.onStart,
+    required this.setCount,
+    required this.reflected,
+    required this.onOpen,
   });
 
+  final int index;
   final TopicDescriptor topic;
-  final int completed;
-  final int count;
-  final int difficultyCount;
-  final VoidCallback onStart;
+  final int setCount;
+  final int reflected;
+  final VoidCallback onOpen;
 
   @override
-  Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.fromLTRB(18, 2, 18, 28),
-    child: Center(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 1160),
-        child: Container(
-          padding: const EdgeInsets.all(15),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                GaussColors.brass.withValues(alpha: .12),
-                GaussColors.ink.withValues(alpha: .98),
-              ],
+  Widget build(BuildContext context) => Material(
+    color: GaussColors.raised.withValues(alpha: .62),
+    borderRadius: BorderRadius.circular(15),
+    child: InkWell(
+      onTap: onOpen,
+      borderRadius: BorderRadius.circular(15),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 10),
+        child: Row(
+          children: [
+            Container(
+              width: 29,
+              height: 29,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: GaussColors.hairline),
+              ),
+              child: Text(
+                '$index',
+                style: const TextStyle(
+                  color: GaussColors.brassLight,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
             ),
-            borderRadius: BorderRadius.circular(22),
-            border: Border.all(color: GaussColors.brass.withValues(alpha: .4)),
-          ),
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              final compact = constraints.maxWidth < 520;
-              final details = Column(
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Directionality(
@@ -905,61 +902,66 @@ class _LaunchDeck extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        fontFamily: 'Vazirmatn',
-                        fontWeight: FontWeight.w900,
-                        fontSize: 16,
+                        color: GaussColors.ivory,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w800,
                       ),
                     ),
                   ),
-                  const SizedBox(height: 3),
+                  const SizedBox(height: 2),
                   Text(
-                    topic.missionReadyCount == 0
-                        ? 'This chapter is preserved for study, but no scored set is available.'
-                        : '$count questions · ${difficultyCount == 0 ? 'all challenge levels' : '$difficultyCount selected levels'} · $completed solved here',
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
+                    '$setCount sets · $reflected/${topic.questionCount} charted',
                     style: const TextStyle(
                       color: GaussColors.muted,
-                      fontSize: 11,
+                      fontSize: 9,
                     ),
                   ),
                 ],
-              );
-              final button = topic.missionReadyCount == 0
-                  ? FilledButton.icon(
-                      onPressed: topic.preservedArchiveCount == 0
-                          ? null
-                          : () => context.push('/archive/${topic.key}'),
-                      icon: const Icon(Icons.menu_book_outlined, size: 19),
-                      label: const Text('Reading room'),
-                    )
-                  : FilledButton.icon(
-                      onPressed: onStart,
-                      icon: const Icon(Icons.arrow_forward_rounded),
-                      label: const Text('Start mission'),
-                    );
-              if (compact) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [details, const SizedBox(height: 12), button],
-                );
-              }
-              return Row(
-                children: [
-                  TopicGlyph(
-                    topicKey: topic.key,
-                    color: GaussColors.brassLight,
-                    size: 38,
-                  ),
-                  const SizedBox(width: 13),
-                  Expanded(child: details),
-                  const SizedBox(width: 15),
-                  button,
-                ],
-              );
-            },
-          ),
+              ),
+            ),
+            const Icon(
+              Icons.arrow_forward_rounded,
+              color: GaussColors.brassLight,
+              size: 18,
+            ),
+          ],
         ),
+      ),
+    ),
+  );
+}
+
+class _StudyGlass extends StatelessWidget {
+  const _StudyGlass({
+    required this.radius,
+    required this.padding,
+    required this.child,
+  });
+
+  final double radius;
+  final EdgeInsetsGeometry padding;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) => ClipRRect(
+    borderRadius: BorderRadius.circular(radius),
+    child: BackdropFilter(
+      filter: ui.ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+      child: Container(
+        padding: padding,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              GaussColors.panelHigh.withValues(alpha: .88),
+              GaussColors.deepInk.withValues(alpha: .82),
+            ],
+          ),
+          borderRadius: BorderRadius.circular(radius),
+          border: Border.all(color: GaussColors.brass.withValues(alpha: .22)),
+        ),
+        child: child,
       ),
     ),
   );

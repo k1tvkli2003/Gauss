@@ -4188,6 +4188,820 @@ class AchievementProgressCompanion
   }
 }
 
+class $StudyRecordsTable extends StudyRecords
+    with TableInfo<$StudyRecordsTable, StudyRecordRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $StudyRecordsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _questionIdMeta = const VerificationMeta(
+    'questionId',
+  );
+  @override
+  late final GeneratedColumn<String> questionId = GeneratedColumn<String>(
+    'question_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _topicKeyMeta = const VerificationMeta(
+    'topicKey',
+  );
+  @override
+  late final GeneratedColumn<String> topicKey = GeneratedColumn<String>(
+    'topic_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _shelfKeyMeta = const VerificationMeta(
+    'shelfKey',
+  );
+  @override
+  late final GeneratedColumn<String> shelfKey = GeneratedColumn<String>(
+    'shelf_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _hypothesisChoiceIndexMeta =
+      const VerificationMeta('hypothesisChoiceIndex');
+  @override
+  late final GeneratedColumn<int> hypothesisChoiceIndex = GeneratedColumn<int>(
+    'hypothesis_choice_index',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _reflectionMeta = const VerificationMeta(
+    'reflection',
+  );
+  @override
+  late final GeneratedColumn<String> reflection = GeneratedColumn<String>(
+    'reflection',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _firstReflectedAtMeta = const VerificationMeta(
+    'firstReflectedAt',
+  );
+  @override
+  late final GeneratedColumn<int> firstReflectedAt = GeneratedColumn<int>(
+    'first_reflected_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<int> updatedAt = GeneratedColumn<int>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    questionId,
+    topicKey,
+    shelfKey,
+    hypothesisChoiceIndex,
+    reflection,
+    firstReflectedAt,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'study_records';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<StudyRecordRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('question_id')) {
+      context.handle(
+        _questionIdMeta,
+        questionId.isAcceptableOrUnknown(data['question_id']!, _questionIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_questionIdMeta);
+    }
+    if (data.containsKey('topic_key')) {
+      context.handle(
+        _topicKeyMeta,
+        topicKey.isAcceptableOrUnknown(data['topic_key']!, _topicKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_topicKeyMeta);
+    }
+    if (data.containsKey('shelf_key')) {
+      context.handle(
+        _shelfKeyMeta,
+        shelfKey.isAcceptableOrUnknown(data['shelf_key']!, _shelfKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_shelfKeyMeta);
+    }
+    if (data.containsKey('hypothesis_choice_index')) {
+      context.handle(
+        _hypothesisChoiceIndexMeta,
+        hypothesisChoiceIndex.isAcceptableOrUnknown(
+          data['hypothesis_choice_index']!,
+          _hypothesisChoiceIndexMeta,
+        ),
+      );
+    }
+    if (data.containsKey('reflection')) {
+      context.handle(
+        _reflectionMeta,
+        reflection.isAcceptableOrUnknown(data['reflection']!, _reflectionMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_reflectionMeta);
+    }
+    if (data.containsKey('first_reflected_at')) {
+      context.handle(
+        _firstReflectedAtMeta,
+        firstReflectedAt.isAcceptableOrUnknown(
+          data['first_reflected_at']!,
+          _firstReflectedAtMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_firstReflectedAtMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {questionId};
+  @override
+  StudyRecordRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return StudyRecordRow(
+      questionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}question_id'],
+      )!,
+      topicKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}topic_key'],
+      )!,
+      shelfKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}shelf_key'],
+      )!,
+      hypothesisChoiceIndex: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}hypothesis_choice_index'],
+      ),
+      reflection: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}reflection'],
+      )!,
+      firstReflectedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}first_reflected_at'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}updated_at'],
+      )!,
+    );
+  }
+
+  @override
+  $StudyRecordsTable createAlias(String alias) {
+    return $StudyRecordsTable(attachedDatabase, alias);
+  }
+}
+
+class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
+  final String questionId;
+  final String topicKey;
+  final String shelfKey;
+  final int? hypothesisChoiceIndex;
+  final String reflection;
+  final int firstReflectedAt;
+  final int updatedAt;
+  const StudyRecordRow({
+    required this.questionId,
+    required this.topicKey,
+    required this.shelfKey,
+    this.hypothesisChoiceIndex,
+    required this.reflection,
+    required this.firstReflectedAt,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['question_id'] = Variable<String>(questionId);
+    map['topic_key'] = Variable<String>(topicKey);
+    map['shelf_key'] = Variable<String>(shelfKey);
+    if (!nullToAbsent || hypothesisChoiceIndex != null) {
+      map['hypothesis_choice_index'] = Variable<int>(hypothesisChoiceIndex);
+    }
+    map['reflection'] = Variable<String>(reflection);
+    map['first_reflected_at'] = Variable<int>(firstReflectedAt);
+    map['updated_at'] = Variable<int>(updatedAt);
+    return map;
+  }
+
+  StudyRecordsCompanion toCompanion(bool nullToAbsent) {
+    return StudyRecordsCompanion(
+      questionId: Value(questionId),
+      topicKey: Value(topicKey),
+      shelfKey: Value(shelfKey),
+      hypothesisChoiceIndex: hypothesisChoiceIndex == null && nullToAbsent
+          ? const Value.absent()
+          : Value(hypothesisChoiceIndex),
+      reflection: Value(reflection),
+      firstReflectedAt: Value(firstReflectedAt),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory StudyRecordRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return StudyRecordRow(
+      questionId: serializer.fromJson<String>(json['questionId']),
+      topicKey: serializer.fromJson<String>(json['topicKey']),
+      shelfKey: serializer.fromJson<String>(json['shelfKey']),
+      hypothesisChoiceIndex: serializer.fromJson<int?>(
+        json['hypothesisChoiceIndex'],
+      ),
+      reflection: serializer.fromJson<String>(json['reflection']),
+      firstReflectedAt: serializer.fromJson<int>(json['firstReflectedAt']),
+      updatedAt: serializer.fromJson<int>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'questionId': serializer.toJson<String>(questionId),
+      'topicKey': serializer.toJson<String>(topicKey),
+      'shelfKey': serializer.toJson<String>(shelfKey),
+      'hypothesisChoiceIndex': serializer.toJson<int?>(hypothesisChoiceIndex),
+      'reflection': serializer.toJson<String>(reflection),
+      'firstReflectedAt': serializer.toJson<int>(firstReflectedAt),
+      'updatedAt': serializer.toJson<int>(updatedAt),
+    };
+  }
+
+  StudyRecordRow copyWith({
+    String? questionId,
+    String? topicKey,
+    String? shelfKey,
+    Value<int?> hypothesisChoiceIndex = const Value.absent(),
+    String? reflection,
+    int? firstReflectedAt,
+    int? updatedAt,
+  }) => StudyRecordRow(
+    questionId: questionId ?? this.questionId,
+    topicKey: topicKey ?? this.topicKey,
+    shelfKey: shelfKey ?? this.shelfKey,
+    hypothesisChoiceIndex: hypothesisChoiceIndex.present
+        ? hypothesisChoiceIndex.value
+        : this.hypothesisChoiceIndex,
+    reflection: reflection ?? this.reflection,
+    firstReflectedAt: firstReflectedAt ?? this.firstReflectedAt,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  StudyRecordRow copyWithCompanion(StudyRecordsCompanion data) {
+    return StudyRecordRow(
+      questionId: data.questionId.present
+          ? data.questionId.value
+          : this.questionId,
+      topicKey: data.topicKey.present ? data.topicKey.value : this.topicKey,
+      shelfKey: data.shelfKey.present ? data.shelfKey.value : this.shelfKey,
+      hypothesisChoiceIndex: data.hypothesisChoiceIndex.present
+          ? data.hypothesisChoiceIndex.value
+          : this.hypothesisChoiceIndex,
+      reflection: data.reflection.present
+          ? data.reflection.value
+          : this.reflection,
+      firstReflectedAt: data.firstReflectedAt.present
+          ? data.firstReflectedAt.value
+          : this.firstReflectedAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('StudyRecordRow(')
+          ..write('questionId: $questionId, ')
+          ..write('topicKey: $topicKey, ')
+          ..write('shelfKey: $shelfKey, ')
+          ..write('hypothesisChoiceIndex: $hypothesisChoiceIndex, ')
+          ..write('reflection: $reflection, ')
+          ..write('firstReflectedAt: $firstReflectedAt, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    questionId,
+    topicKey,
+    shelfKey,
+    hypothesisChoiceIndex,
+    reflection,
+    firstReflectedAt,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is StudyRecordRow &&
+          other.questionId == this.questionId &&
+          other.topicKey == this.topicKey &&
+          other.shelfKey == this.shelfKey &&
+          other.hypothesisChoiceIndex == this.hypothesisChoiceIndex &&
+          other.reflection == this.reflection &&
+          other.firstReflectedAt == this.firstReflectedAt &&
+          other.updatedAt == this.updatedAt);
+}
+
+class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
+  final Value<String> questionId;
+  final Value<String> topicKey;
+  final Value<String> shelfKey;
+  final Value<int?> hypothesisChoiceIndex;
+  final Value<String> reflection;
+  final Value<int> firstReflectedAt;
+  final Value<int> updatedAt;
+  final Value<int> rowid;
+  const StudyRecordsCompanion({
+    this.questionId = const Value.absent(),
+    this.topicKey = const Value.absent(),
+    this.shelfKey = const Value.absent(),
+    this.hypothesisChoiceIndex = const Value.absent(),
+    this.reflection = const Value.absent(),
+    this.firstReflectedAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  StudyRecordsCompanion.insert({
+    required String questionId,
+    required String topicKey,
+    required String shelfKey,
+    this.hypothesisChoiceIndex = const Value.absent(),
+    required String reflection,
+    required int firstReflectedAt,
+    required int updatedAt,
+    this.rowid = const Value.absent(),
+  }) : questionId = Value(questionId),
+       topicKey = Value(topicKey),
+       shelfKey = Value(shelfKey),
+       reflection = Value(reflection),
+       firstReflectedAt = Value(firstReflectedAt),
+       updatedAt = Value(updatedAt);
+  static Insertable<StudyRecordRow> custom({
+    Expression<String>? questionId,
+    Expression<String>? topicKey,
+    Expression<String>? shelfKey,
+    Expression<int>? hypothesisChoiceIndex,
+    Expression<String>? reflection,
+    Expression<int>? firstReflectedAt,
+    Expression<int>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (questionId != null) 'question_id': questionId,
+      if (topicKey != null) 'topic_key': topicKey,
+      if (shelfKey != null) 'shelf_key': shelfKey,
+      if (hypothesisChoiceIndex != null)
+        'hypothesis_choice_index': hypothesisChoiceIndex,
+      if (reflection != null) 'reflection': reflection,
+      if (firstReflectedAt != null) 'first_reflected_at': firstReflectedAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  StudyRecordsCompanion copyWith({
+    Value<String>? questionId,
+    Value<String>? topicKey,
+    Value<String>? shelfKey,
+    Value<int?>? hypothesisChoiceIndex,
+    Value<String>? reflection,
+    Value<int>? firstReflectedAt,
+    Value<int>? updatedAt,
+    Value<int>? rowid,
+  }) {
+    return StudyRecordsCompanion(
+      questionId: questionId ?? this.questionId,
+      topicKey: topicKey ?? this.topicKey,
+      shelfKey: shelfKey ?? this.shelfKey,
+      hypothesisChoiceIndex:
+          hypothesisChoiceIndex ?? this.hypothesisChoiceIndex,
+      reflection: reflection ?? this.reflection,
+      firstReflectedAt: firstReflectedAt ?? this.firstReflectedAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (questionId.present) {
+      map['question_id'] = Variable<String>(questionId.value);
+    }
+    if (topicKey.present) {
+      map['topic_key'] = Variable<String>(topicKey.value);
+    }
+    if (shelfKey.present) {
+      map['shelf_key'] = Variable<String>(shelfKey.value);
+    }
+    if (hypothesisChoiceIndex.present) {
+      map['hypothesis_choice_index'] = Variable<int>(
+        hypothesisChoiceIndex.value,
+      );
+    }
+    if (reflection.present) {
+      map['reflection'] = Variable<String>(reflection.value);
+    }
+    if (firstReflectedAt.present) {
+      map['first_reflected_at'] = Variable<int>(firstReflectedAt.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<int>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('StudyRecordsCompanion(')
+          ..write('questionId: $questionId, ')
+          ..write('topicKey: $topicKey, ')
+          ..write('shelfKey: $shelfKey, ')
+          ..write('hypothesisChoiceIndex: $hypothesisChoiceIndex, ')
+          ..write('reflection: $reflection, ')
+          ..write('firstReflectedAt: $firstReflectedAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $StudyPositionsTable extends StudyPositions
+    with TableInfo<$StudyPositionsTable, StudyPositionRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $StudyPositionsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _shelfKeyMeta = const VerificationMeta(
+    'shelfKey',
+  );
+  @override
+  late final GeneratedColumn<String> shelfKey = GeneratedColumn<String>(
+    'shelf_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _questionIdMeta = const VerificationMeta(
+    'questionId',
+  );
+  @override
+  late final GeneratedColumn<String> questionId = GeneratedColumn<String>(
+    'question_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _positionMeta = const VerificationMeta(
+    'position',
+  );
+  @override
+  late final GeneratedColumn<int> position = GeneratedColumn<int>(
+    'position',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<int> updatedAt = GeneratedColumn<int>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    shelfKey,
+    questionId,
+    position,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'study_positions';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<StudyPositionRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('shelf_key')) {
+      context.handle(
+        _shelfKeyMeta,
+        shelfKey.isAcceptableOrUnknown(data['shelf_key']!, _shelfKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_shelfKeyMeta);
+    }
+    if (data.containsKey('question_id')) {
+      context.handle(
+        _questionIdMeta,
+        questionId.isAcceptableOrUnknown(data['question_id']!, _questionIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_questionIdMeta);
+    }
+    if (data.containsKey('position')) {
+      context.handle(
+        _positionMeta,
+        position.isAcceptableOrUnknown(data['position']!, _positionMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_positionMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {shelfKey};
+  @override
+  StudyPositionRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return StudyPositionRow(
+      shelfKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}shelf_key'],
+      )!,
+      questionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}question_id'],
+      )!,
+      position: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}position'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}updated_at'],
+      )!,
+    );
+  }
+
+  @override
+  $StudyPositionsTable createAlias(String alias) {
+    return $StudyPositionsTable(attachedDatabase, alias);
+  }
+}
+
+class StudyPositionRow extends DataClass
+    implements Insertable<StudyPositionRow> {
+  final String shelfKey;
+  final String questionId;
+  final int position;
+  final int updatedAt;
+  const StudyPositionRow({
+    required this.shelfKey,
+    required this.questionId,
+    required this.position,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['shelf_key'] = Variable<String>(shelfKey);
+    map['question_id'] = Variable<String>(questionId);
+    map['position'] = Variable<int>(position);
+    map['updated_at'] = Variable<int>(updatedAt);
+    return map;
+  }
+
+  StudyPositionsCompanion toCompanion(bool nullToAbsent) {
+    return StudyPositionsCompanion(
+      shelfKey: Value(shelfKey),
+      questionId: Value(questionId),
+      position: Value(position),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory StudyPositionRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return StudyPositionRow(
+      shelfKey: serializer.fromJson<String>(json['shelfKey']),
+      questionId: serializer.fromJson<String>(json['questionId']),
+      position: serializer.fromJson<int>(json['position']),
+      updatedAt: serializer.fromJson<int>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'shelfKey': serializer.toJson<String>(shelfKey),
+      'questionId': serializer.toJson<String>(questionId),
+      'position': serializer.toJson<int>(position),
+      'updatedAt': serializer.toJson<int>(updatedAt),
+    };
+  }
+
+  StudyPositionRow copyWith({
+    String? shelfKey,
+    String? questionId,
+    int? position,
+    int? updatedAt,
+  }) => StudyPositionRow(
+    shelfKey: shelfKey ?? this.shelfKey,
+    questionId: questionId ?? this.questionId,
+    position: position ?? this.position,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  StudyPositionRow copyWithCompanion(StudyPositionsCompanion data) {
+    return StudyPositionRow(
+      shelfKey: data.shelfKey.present ? data.shelfKey.value : this.shelfKey,
+      questionId: data.questionId.present
+          ? data.questionId.value
+          : this.questionId,
+      position: data.position.present ? data.position.value : this.position,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('StudyPositionRow(')
+          ..write('shelfKey: $shelfKey, ')
+          ..write('questionId: $questionId, ')
+          ..write('position: $position, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(shelfKey, questionId, position, updatedAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is StudyPositionRow &&
+          other.shelfKey == this.shelfKey &&
+          other.questionId == this.questionId &&
+          other.position == this.position &&
+          other.updatedAt == this.updatedAt);
+}
+
+class StudyPositionsCompanion extends UpdateCompanion<StudyPositionRow> {
+  final Value<String> shelfKey;
+  final Value<String> questionId;
+  final Value<int> position;
+  final Value<int> updatedAt;
+  final Value<int> rowid;
+  const StudyPositionsCompanion({
+    this.shelfKey = const Value.absent(),
+    this.questionId = const Value.absent(),
+    this.position = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  StudyPositionsCompanion.insert({
+    required String shelfKey,
+    required String questionId,
+    required int position,
+    required int updatedAt,
+    this.rowid = const Value.absent(),
+  }) : shelfKey = Value(shelfKey),
+       questionId = Value(questionId),
+       position = Value(position),
+       updatedAt = Value(updatedAt);
+  static Insertable<StudyPositionRow> custom({
+    Expression<String>? shelfKey,
+    Expression<String>? questionId,
+    Expression<int>? position,
+    Expression<int>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (shelfKey != null) 'shelf_key': shelfKey,
+      if (questionId != null) 'question_id': questionId,
+      if (position != null) 'position': position,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  StudyPositionsCompanion copyWith({
+    Value<String>? shelfKey,
+    Value<String>? questionId,
+    Value<int>? position,
+    Value<int>? updatedAt,
+    Value<int>? rowid,
+  }) {
+    return StudyPositionsCompanion(
+      shelfKey: shelfKey ?? this.shelfKey,
+      questionId: questionId ?? this.questionId,
+      position: position ?? this.position,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (shelfKey.present) {
+      map['shelf_key'] = Variable<String>(shelfKey.value);
+    }
+    if (questionId.present) {
+      map['question_id'] = Variable<String>(questionId.value);
+    }
+    if (position.present) {
+      map['position'] = Variable<int>(position.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<int>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('StudyPositionsCompanion(')
+          ..write('shelfKey: $shelfKey, ')
+          ..write('questionId: $questionId, ')
+          ..write('position: $position, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$GaussDatabase extends GeneratedDatabase {
   _$GaussDatabase(QueryExecutor e) : super(e);
   $GaussDatabaseManager get managers => $GaussDatabaseManager(this);
@@ -4202,6 +5016,8 @@ abstract class _$GaussDatabase extends GeneratedDatabase {
   late final $QuestProgressTable questProgress = $QuestProgressTable(this);
   late final $AchievementProgressTable achievementProgress =
       $AchievementProgressTable(this);
+  late final $StudyRecordsTable studyRecords = $StudyRecordsTable(this);
+  late final $StudyPositionsTable studyPositions = $StudyPositionsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -4215,6 +5031,8 @@ abstract class _$GaussDatabase extends GeneratedDatabase {
     xpTransactions,
     questProgress,
     achievementProgress,
+    studyRecords,
+    studyPositions,
   ];
 }
 
@@ -7247,6 +8065,441 @@ typedef $$AchievementProgressTableProcessedTableManager =
       AchievementProgressRow,
       PrefetchHooks Function()
     >;
+typedef $$StudyRecordsTableCreateCompanionBuilder =
+    StudyRecordsCompanion Function({
+      required String questionId,
+      required String topicKey,
+      required String shelfKey,
+      Value<int?> hypothesisChoiceIndex,
+      required String reflection,
+      required int firstReflectedAt,
+      required int updatedAt,
+      Value<int> rowid,
+    });
+typedef $$StudyRecordsTableUpdateCompanionBuilder =
+    StudyRecordsCompanion Function({
+      Value<String> questionId,
+      Value<String> topicKey,
+      Value<String> shelfKey,
+      Value<int?> hypothesisChoiceIndex,
+      Value<String> reflection,
+      Value<int> firstReflectedAt,
+      Value<int> updatedAt,
+      Value<int> rowid,
+    });
+
+class $$StudyRecordsTableFilterComposer
+    extends Composer<_$GaussDatabase, $StudyRecordsTable> {
+  $$StudyRecordsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get topicKey => $composableBuilder(
+    column: $table.topicKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get shelfKey => $composableBuilder(
+    column: $table.shelfKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get hypothesisChoiceIndex => $composableBuilder(
+    column: $table.hypothesisChoiceIndex,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get reflection => $composableBuilder(
+    column: $table.reflection,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get firstReflectedAt => $composableBuilder(
+    column: $table.firstReflectedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$StudyRecordsTableOrderingComposer
+    extends Composer<_$GaussDatabase, $StudyRecordsTable> {
+  $$StudyRecordsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get topicKey => $composableBuilder(
+    column: $table.topicKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get shelfKey => $composableBuilder(
+    column: $table.shelfKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get hypothesisChoiceIndex => $composableBuilder(
+    column: $table.hypothesisChoiceIndex,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get reflection => $composableBuilder(
+    column: $table.reflection,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get firstReflectedAt => $composableBuilder(
+    column: $table.firstReflectedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$StudyRecordsTableAnnotationComposer
+    extends Composer<_$GaussDatabase, $StudyRecordsTable> {
+  $$StudyRecordsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get topicKey =>
+      $composableBuilder(column: $table.topicKey, builder: (column) => column);
+
+  GeneratedColumn<String> get shelfKey =>
+      $composableBuilder(column: $table.shelfKey, builder: (column) => column);
+
+  GeneratedColumn<int> get hypothesisChoiceIndex => $composableBuilder(
+    column: $table.hypothesisChoiceIndex,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get reflection => $composableBuilder(
+    column: $table.reflection,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get firstReflectedAt => $composableBuilder(
+    column: $table.firstReflectedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$StudyRecordsTableTableManager
+    extends
+        RootTableManager<
+          _$GaussDatabase,
+          $StudyRecordsTable,
+          StudyRecordRow,
+          $$StudyRecordsTableFilterComposer,
+          $$StudyRecordsTableOrderingComposer,
+          $$StudyRecordsTableAnnotationComposer,
+          $$StudyRecordsTableCreateCompanionBuilder,
+          $$StudyRecordsTableUpdateCompanionBuilder,
+          (
+            StudyRecordRow,
+            BaseReferences<_$GaussDatabase, $StudyRecordsTable, StudyRecordRow>,
+          ),
+          StudyRecordRow,
+          PrefetchHooks Function()
+        > {
+  $$StudyRecordsTableTableManager(_$GaussDatabase db, $StudyRecordsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$StudyRecordsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$StudyRecordsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$StudyRecordsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> questionId = const Value.absent(),
+                Value<String> topicKey = const Value.absent(),
+                Value<String> shelfKey = const Value.absent(),
+                Value<int?> hypothesisChoiceIndex = const Value.absent(),
+                Value<String> reflection = const Value.absent(),
+                Value<int> firstReflectedAt = const Value.absent(),
+                Value<int> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => StudyRecordsCompanion(
+                questionId: questionId,
+                topicKey: topicKey,
+                shelfKey: shelfKey,
+                hypothesisChoiceIndex: hypothesisChoiceIndex,
+                reflection: reflection,
+                firstReflectedAt: firstReflectedAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String questionId,
+                required String topicKey,
+                required String shelfKey,
+                Value<int?> hypothesisChoiceIndex = const Value.absent(),
+                required String reflection,
+                required int firstReflectedAt,
+                required int updatedAt,
+                Value<int> rowid = const Value.absent(),
+              }) => StudyRecordsCompanion.insert(
+                questionId: questionId,
+                topicKey: topicKey,
+                shelfKey: shelfKey,
+                hypothesisChoiceIndex: hypothesisChoiceIndex,
+                reflection: reflection,
+                firstReflectedAt: firstReflectedAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$StudyRecordsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$GaussDatabase,
+      $StudyRecordsTable,
+      StudyRecordRow,
+      $$StudyRecordsTableFilterComposer,
+      $$StudyRecordsTableOrderingComposer,
+      $$StudyRecordsTableAnnotationComposer,
+      $$StudyRecordsTableCreateCompanionBuilder,
+      $$StudyRecordsTableUpdateCompanionBuilder,
+      (
+        StudyRecordRow,
+        BaseReferences<_$GaussDatabase, $StudyRecordsTable, StudyRecordRow>,
+      ),
+      StudyRecordRow,
+      PrefetchHooks Function()
+    >;
+typedef $$StudyPositionsTableCreateCompanionBuilder =
+    StudyPositionsCompanion Function({
+      required String shelfKey,
+      required String questionId,
+      required int position,
+      required int updatedAt,
+      Value<int> rowid,
+    });
+typedef $$StudyPositionsTableUpdateCompanionBuilder =
+    StudyPositionsCompanion Function({
+      Value<String> shelfKey,
+      Value<String> questionId,
+      Value<int> position,
+      Value<int> updatedAt,
+      Value<int> rowid,
+    });
+
+class $$StudyPositionsTableFilterComposer
+    extends Composer<_$GaussDatabase, $StudyPositionsTable> {
+  $$StudyPositionsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get shelfKey => $composableBuilder(
+    column: $table.shelfKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get position => $composableBuilder(
+    column: $table.position,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$StudyPositionsTableOrderingComposer
+    extends Composer<_$GaussDatabase, $StudyPositionsTable> {
+  $$StudyPositionsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get shelfKey => $composableBuilder(
+    column: $table.shelfKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get position => $composableBuilder(
+    column: $table.position,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$StudyPositionsTableAnnotationComposer
+    extends Composer<_$GaussDatabase, $StudyPositionsTable> {
+  $$StudyPositionsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get shelfKey =>
+      $composableBuilder(column: $table.shelfKey, builder: (column) => column);
+
+  GeneratedColumn<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get position =>
+      $composableBuilder(column: $table.position, builder: (column) => column);
+
+  GeneratedColumn<int> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$StudyPositionsTableTableManager
+    extends
+        RootTableManager<
+          _$GaussDatabase,
+          $StudyPositionsTable,
+          StudyPositionRow,
+          $$StudyPositionsTableFilterComposer,
+          $$StudyPositionsTableOrderingComposer,
+          $$StudyPositionsTableAnnotationComposer,
+          $$StudyPositionsTableCreateCompanionBuilder,
+          $$StudyPositionsTableUpdateCompanionBuilder,
+          (
+            StudyPositionRow,
+            BaseReferences<
+              _$GaussDatabase,
+              $StudyPositionsTable,
+              StudyPositionRow
+            >,
+          ),
+          StudyPositionRow,
+          PrefetchHooks Function()
+        > {
+  $$StudyPositionsTableTableManager(
+    _$GaussDatabase db,
+    $StudyPositionsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$StudyPositionsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$StudyPositionsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$StudyPositionsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> shelfKey = const Value.absent(),
+                Value<String> questionId = const Value.absent(),
+                Value<int> position = const Value.absent(),
+                Value<int> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => StudyPositionsCompanion(
+                shelfKey: shelfKey,
+                questionId: questionId,
+                position: position,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String shelfKey,
+                required String questionId,
+                required int position,
+                required int updatedAt,
+                Value<int> rowid = const Value.absent(),
+              }) => StudyPositionsCompanion.insert(
+                shelfKey: shelfKey,
+                questionId: questionId,
+                position: position,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$StudyPositionsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$GaussDatabase,
+      $StudyPositionsTable,
+      StudyPositionRow,
+      $$StudyPositionsTableFilterComposer,
+      $$StudyPositionsTableOrderingComposer,
+      $$StudyPositionsTableAnnotationComposer,
+      $$StudyPositionsTableCreateCompanionBuilder,
+      $$StudyPositionsTableUpdateCompanionBuilder,
+      (
+        StudyPositionRow,
+        BaseReferences<_$GaussDatabase, $StudyPositionsTable, StudyPositionRow>,
+      ),
+      StudyPositionRow,
+      PrefetchHooks Function()
+    >;
 
 class $GaussDatabaseManager {
   final _$GaussDatabase _db;
@@ -7267,4 +8520,8 @@ class $GaussDatabaseManager {
       $$QuestProgressTableTableManager(_db, _db.questProgress);
   $$AchievementProgressTableTableManager get achievementProgress =>
       $$AchievementProgressTableTableManager(_db, _db.achievementProgress);
+  $$StudyRecordsTableTableManager get studyRecords =>
+      $$StudyRecordsTableTableManager(_db, _db.studyRecords);
+  $$StudyPositionsTableTableManager get studyPositions =>
+      $$StudyPositionsTableTableManager(_db, _db.studyPositions);
 }

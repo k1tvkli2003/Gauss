@@ -69,9 +69,15 @@ void main() {
       expect(activity.readAsStringSync(), contains('package com.gauss.app'));
       expect(obsoleteActivity.existsSync(), isFalse);
       expect(manifest, contains('android:name=".MainActivity"'));
-      expect(adaptiveIconV26, contains('@drawable/ic_launcher_theorem_star_safe'));
+      expect(
+        adaptiveIconV26,
+        contains('@drawable/ic_launcher_theorem_star_safe'),
+      );
       expect(adaptiveIconV33, contains('<monochrome'));
-      expect(adaptiveIconV33, contains('@drawable/ic_launcher_theorem_star_safe'));
+      expect(
+        adaptiveIconV33,
+        contains('@drawable/ic_launcher_theorem_star_safe'),
+      );
       expect(
         adaptiveIconV33,
         contains('@drawable/ic_launcher_theorem_star_mono_safe'),
@@ -92,7 +98,11 @@ void main() {
         'android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png',
         'android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png',
       ]) {
-        expect(File(fallback).lengthSync(), greaterThan(1000), reason: fallback);
+        expect(
+          File(fallback).lengthSync(),
+          greaterThan(1000),
+          reason: fallback,
+        );
       }
     },
   );
@@ -101,6 +111,22 @@ void main() {
     final theme = buildGaussTheme();
     expect(theme.textTheme.bodyMedium?.fontFamily, 'Manrope');
     expect(theme.textTheme.bodyMedium?.fontFamilyFallback, ['Vazirmatn']);
+  });
+
+  test('source provenance name stays out of user-facing app copy', () {
+    final surfaces = <File>[
+      ...Directory('lib')
+          .listSync(recursive: true, followLinks: false)
+          .whereType<File>()
+          .where((file) => file.path.endsWith('.dart')),
+      File('web/index.html'),
+      File('web/manifest.json'),
+    ];
+    for (final surface in surfaces) {
+      final copy = surface.readAsStringSync();
+      expect(copy, isNot(contains('Nardebam')), reason: surface.path);
+      expect(copy, isNot(contains('نردبام')), reason: surface.path);
+    }
   });
 
   testWidgets('branded startup renders before repositories are ready', (
@@ -120,7 +146,13 @@ void main() {
     await tester.pump(const Duration(milliseconds: 400));
 
     expect(find.text('Map'), findsOneWidget);
-    expect(find.text('Practice'), findsOneWidget);
+    expect(
+      find.descendant(
+        of: find.byType(NavigationBar),
+        matching: find.text('Study'),
+      ),
+      findsOneWidget,
+    );
     expect(find.text('Insights'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
@@ -197,25 +229,26 @@ void main() {
     );
 
     expect(find.byType(MapScreen), findsOneWidget);
-    expect(find.text('Start'), findsOneWidget);
+    expect(find.text('Study'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('map uses the tablet radial scene without overflow', (
-    tester,
-  ) async {
-    await _pumpMap(
-      tester,
-      controller: controller,
-      size: const Size(1280, 800),
-      textScale: 1,
-      reducedMotion: false,
-    );
+  testWidgets(
+    'map uses the tablet continuous path inspector without overflow',
+    (tester) async {
+      await _pumpMap(
+        tester,
+        controller: controller,
+        size: const Size(1280, 800),
+        textScale: 1,
+        reducedMotion: false,
+      );
 
-    expect(find.byType(MapScreen), findsOneWidget);
-    expect(find.text('MISSION CHART'), findsOneWidget);
-    expect(tester.takeException(), isNull);
-  });
+      expect(find.byType(MapScreen), findsOneWidget);
+      expect(find.text('STUDY INSPECTOR'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
 }
 
 Future<void> _pumpMap(

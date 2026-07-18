@@ -6,6 +6,7 @@ import { topicRows } from "./comprehensive_taxonomy.mjs";
 
 const INPUT = "data/seed/comprehensive";
 const OUTPUT = "app/src/main/assets/question_bank";
+const REQUIRED_SOURCE_BANK = "nardebam";
 
 function walk(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -21,6 +22,9 @@ for (const file of walk(INPUT).filter((file) => !file.endsWith("aliases.json")))
   const rows = JSON.parse(fs.readFileSync(file, "utf8"));
   if (!Array.isArray(rows)) continue;
   for (const row of rows) {
+    if (row.source_bank !== REQUIRED_SOURCE_BANK) {
+      throw new Error(`Refusing non-Nardebam source row ${row.id} in ${file}`);
+    }
     if (ids.has(row.id)) throw new Error(`Duplicate id ${row.id} in ${file}`);
     ids.add(row.id);
     const key = `${row.subject}|${row.topic_key}`;
@@ -41,4 +45,4 @@ for (const topic of topicRows) {
 const aliasFile = path.join(INPUT, "aliases.json");
 const aliases = fs.existsSync(aliasFile) ? JSON.parse(fs.readFileSync(aliasFile, "utf8")) : {};
 fs.writeFileSync(path.join(OUTPUT, "index.json"), JSON.stringify({ schema_version: 2, total: ids.size, topics, aliases }), "utf8");
-console.log(`Wrote ${ids.size} questions across ${topics.length} topic shards -> ${OUTPUT}`);
+console.log(`Wrote ${ids.size} Nardebam questions across ${topics.length} topic shards -> ${OUTPUT}`);

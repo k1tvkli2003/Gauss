@@ -26,7 +26,7 @@ enum class Difficulty(val raw: String, val faLabel: String, val color: Color) {
 }
 
 enum class SourceBank(val raw: String, val faLabel: String) {
-    NARDEBAM("nardebam", "نردبام"),
+    NARDEBAM("nardebam", "آرشیو منبع"),
     GAUSS("gauss", "Gauss");
 
     companion object {

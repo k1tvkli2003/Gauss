@@ -1,3 +1,5 @@
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -6,35 +8,105 @@ import '../domain/models.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/content_blocks.dart';
 import '../widgets/gauss_brand.dart';
+import '../widgets/scratchpad.dart';
 
-/// The reading room: a read-only surface over the preserved half of a
-/// chapter — source items whose answer/solution mapping is unverified.
-/// Nothing here is scored, persisted, or fed to the review orbit; the value
-/// is access to the full library with honest provenance labels.
+/// A calm study room over preserved source questions.
+///
+/// The learner may make a private hypothesis, reveal the source mapping, draw
+/// directly on the prompt, and classify the concept as clear or worth another
+/// pass. None of those actions claim correctness or enter the scored ledger.
 class ArchiveScreen extends StatefulWidget {
-  const ArchiveScreen({required this.topicKey, super.key});
+  const ArchiveScreen({
+    required this.topicKey,
+    this.offset = 0,
+    this.count = 20,
+    this.revisitOnly = false,
+    super.key,
+  });
 
-  final String topicKey;
+  const ArchiveScreen.revisit({super.key})
+    : topicKey = null,
+      offset = 0,
+      count = 20,
+      revisitOnly = true;
+
+  final String? topicKey;
+  final int offset;
+  final int count;
+  final bool revisitOnly;
 
   @override
   State<ArchiveScreen> createState() => _ArchiveScreenState();
 }
 
 class _ArchiveScreenState extends State<ArchiveScreen> {
-  Future<List<Question>>? _archiveFuture;
-  final PageController _pageController = PageController();
-  final Set<int> _revealed = {};
+  StudyShelf? _shelf;
+  Object? _loadError;
+  PageController? _pageController;
+  final Set<String> _revealed = {};
+  final Map<String, int?> _hypotheses = {};
+  final Map<String, StudyRecord> _records = {};
   int _index = 0;
+  bool _loading = true;
+  bool _saving = false;
+  bool _didLoad = false;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _archiveFuture ??= GaussScope.of(context).loadArchive(widget.topicKey);
+    if (_didLoad) return;
+    _didLoad = true;
+    _load();
+  }
+
+  Future<void> _load() async {
+    setState(() {
+      _loading = true;
+      _loadError = null;
+    });
+    try {
+      final controller = GaussScope.of(context);
+      final shelf = widget.revisitOnly
+          ? await controller.loadRevisitShelf()
+          : await controller.loadStudyShelf(
+              widget.topicKey!,
+              offset: widget.offset,
+              count: widget.count,
+            );
+      if (!mounted) return;
+      _pageController?.dispose();
+      _records
+        ..clear()
+        ..addAll(shelf.records);
+      _hypotheses
+        ..clear()
+        ..addEntries(
+          shelf.records.values.map(
+            (record) =>
+                MapEntry(record.questionId, record.hypothesisChoiceIndex),
+          ),
+        );
+      _revealed
+        ..clear()
+        ..addAll(shelf.records.keys);
+      _index = shelf.questions.isEmpty ? 0 : shelf.initialIndex;
+      _pageController = PageController(initialPage: _index);
+      setState(() {
+        _shelf = shelf;
+        _loading = false;
+      });
+    } catch (error) {
+      if (!mounted) return;
+      setState(() {
+        _loadError = error;
+        _loading = false;
+      });
+    }
   }
 
   @override
   void dispose() {
-    _pageController.dispose();
+    _pageController?.dispose();
     super.dispose();
   }
 
@@ -49,7 +121,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   void _goTo(int index, int total) {
     final clamped = index.clamp(0, total - 1);
     if (clamped == _index) return;
-    _pageController.animateToPage(
+    _pageController?.animateToPage(
       clamped,
       duration: MediaQuery.disableAnimationsOf(context)
           ? const Duration(milliseconds: 1)
@@ -58,78 +130,127 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     );
   }
 
+  void _onPageChanged(int index) {
+    final shelf = _shelf;
+    if (shelf == null || index < 0 || index >= shelf.questions.length) return;
+    setState(() => _index = index);
+    if (!shelf.revisitOnly) {
+      GaussScope.of(context).saveStudyPosition(
+        shelfKey: shelf.key,
+        question: shelf.questions[index],
+        position: index,
+      );
+    }
+  }
+
+  void _selectHypothesis(Question question, int choice) {
+    if (_revealed.contains(question.id)) return;
+    setState(() => _hypotheses[question.id] = choice);
+  }
+
+  Future<void> _reflect(Question question, StudyReflection reflection) async {
+    final shelf = _shelf;
+    if (shelf == null || _saving) return;
+    final originalShelf = _records[question.id]?.shelfKey;
+    setState(() => _saving = true);
+    try {
+      final record = await GaussScope.of(context).saveStudyReflection(
+        question: question,
+        shelfKey: originalShelf ?? shelf.key,
+        hypothesisChoiceIndex: _hypotheses[question.id],
+        reflection: reflection,
+      );
+      if (!mounted) return;
+      setState(() => _records[question.id] = record);
+    } finally {
+      if (mounted) setState(() => _saving = false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final controller = GaussScope.of(context);
-    final topic = controller.topics.firstWhere(
-      (item) => item.key == widget.topicKey,
-      orElse: () => controller.topics.first,
-    );
+    final topic = widget.topicKey == null
+        ? null
+        : controller.topics.firstWhere(
+            (item) => item.key == widget.topicKey,
+            orElse: () => controller.topics.first,
+          );
+    final shelf = _shelf;
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
         children: [
           const _ArchiveBackdrop(),
           SafeArea(
-            child: FutureBuilder<List<Question>>(
-              future: _archiveFuture,
-              builder: (context, snapshot) {
-                if (snapshot.hasError) {
-                  return _ArchiveMessage(
-                    title: 'The reading room could not open',
+            child: _loading
+                ? const Center(child: CircularProgressIndicator())
+                : _loadError != null
+                ? _ArchiveMessage(
+                    title: 'The study room could not open',
                     detail:
-                        'The offline archive could not load this chapter. Nothing was changed.',
+                        'The offline library could not load this set. Nothing was changed.',
                     onLeave: _leave,
-                  );
-                }
-                if (!snapshot.hasData) {
-                  return const Center(child: CircularProgressIndicator());
-                }
-                final questions = snapshot.data!;
-                if (questions.isEmpty) {
-                  return _ArchiveMessage(
-                    title: 'Nothing is shelved here',
-                    detail:
-                        'Every question in this chapter is verified and already lives in scored missions.',
+                    onRetry: _load,
+                  )
+                : shelf == null || shelf.questions.isEmpty
+                ? _ArchiveMessage(
+                    title: widget.revisitOnly
+                        ? 'Your revisit orbit is clear'
+                        : 'Nothing is shelved here',
+                    detail: widget.revisitOnly
+                        ? 'Mark a revealed concept as “Revisit later” and it will appear here.'
+                        : 'This study set has no preserved questions.',
                     onLeave: _leave,
-                  );
-                }
-                return Column(
-                  children: [
-                    _ArchiveTopBar(
-                      topic: topic,
-                      index: _index,
-                      total: questions.length,
-                      onClose: _leave,
-                    ),
-                    Expanded(
-                      child: PageView.builder(
-                        controller: _pageController,
-                        onPageChanged: (index) =>
-                            setState(() => _index = index),
-                        itemCount: questions.length,
-                        itemBuilder: (context, index) => _ArchivePage(
-                          question: questions[index],
-                          revealed: _revealed.contains(index),
-                          onReveal: () =>
-                              setState(() => _revealed.add(index)),
+                  )
+                : Column(
+                    children: [
+                      _ArchiveTopBar(
+                        topic: topic,
+                        revisitOnly: widget.revisitOnly,
+                        index: _index,
+                        total: shelf.questions.length,
+                        onClose: _leave,
+                      ),
+                      Expanded(
+                        child: PageView.builder(
+                          controller: _pageController,
+                          onPageChanged: _onPageChanged,
+                          itemCount: shelf.questions.length,
+                          itemBuilder: (context, index) {
+                            final question = shelf.questions[index];
+                            return _ArchivePage(
+                              key: ValueKey('study-${question.id}'),
+                              question: question,
+                              revealed: _revealed.contains(question.id),
+                              hypothesis: _hypotheses[question.id],
+                              record: _records[question.id],
+                              saving: _saving && index == _index,
+                              onHypothesis: (choice) =>
+                                  _selectHypothesis(question, choice),
+                              onReveal: () =>
+                                  setState(() => _revealed.add(question.id)),
+                              onReflection: (reflection) =>
+                                  _reflect(question, reflection),
+                            );
+                          },
                         ),
                       ),
-                    ),
-                    _ArchiveNavBar(
-                      index: _index,
-                      total: questions.length,
-                      onPrevious: _index == 0
-                          ? null
-                          : () => _goTo(_index - 1, questions.length),
-                      onNext: _index == questions.length - 1
-                          ? null
-                          : () => _goTo(_index + 1, questions.length),
-                    ),
-                  ],
-                );
-              },
-            ),
+                      _ArchiveNavBar(
+                        index: _index,
+                        total: shelf.questions.length,
+                        reflected: _records.containsKey(
+                          shelf.questions[_index].id,
+                        ),
+                        onPrevious: _index == 0
+                            ? null
+                            : () => _goTo(_index - 1, shelf.questions.length),
+                        onNext: _index == shelf.questions.length - 1
+                            ? null
+                            : () => _goTo(_index + 1, shelf.questions.length),
+                      ),
+                    ],
+                  ),
           ),
         ],
       ),
@@ -166,12 +287,14 @@ class _ArchiveBackdrop extends StatelessWidget {
 class _ArchiveTopBar extends StatelessWidget {
   const _ArchiveTopBar({
     required this.topic,
+    required this.revisitOnly,
     required this.index,
     required this.total,
     required this.onClose,
   });
 
-  final TopicDescriptor topic;
+  final TopicDescriptor? topic;
+  final bool revisitOnly;
   final int index;
   final int total;
   final VoidCallback onClose;
@@ -193,7 +316,7 @@ class _ArchiveTopBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'READING ROOM',
+                'STUDY ROOM',
                 style: TextStyle(
                   color: GaussColors.brassLight,
                   fontSize: 9,
@@ -202,9 +325,11 @@ class _ArchiveTopBar extends StatelessWidget {
                 ),
               ),
               Directionality(
-                textDirection: TextDirection.rtl,
+                textDirection: revisitOnly
+                    ? TextDirection.ltr
+                    : TextDirection.rtl,
                 child: Text(
-                  topic.label,
+                  revisitOnly ? 'Revisit orbit' : topic!.label,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
@@ -219,7 +344,7 @@ class _ArchiveTopBar extends StatelessWidget {
         ),
         const SizedBox(width: 10),
         Semantics(
-          label: 'Preserved item ${index + 1} of $total',
+          label: 'Study item ${index + 1} of $total',
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             decoration: BoxDecoration(
@@ -242,12 +367,23 @@ class _ArchivePage extends StatelessWidget {
   const _ArchivePage({
     required this.question,
     required this.revealed,
+    required this.hypothesis,
+    required this.record,
+    required this.saving,
+    required this.onHypothesis,
     required this.onReveal,
+    required this.onReflection,
+    super.key,
   });
 
   final Question question;
   final bool revealed;
+  final int? hypothesis;
+  final StudyRecord? record;
+  final bool saving;
+  final ValueChanged<int> onHypothesis;
   final VoidCallback onReveal;
+  final ValueChanged<StudyReflection> onReflection;
 
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
@@ -301,7 +437,6 @@ class _ArchivePage extends StatelessWidget {
             const SizedBox(height: 12),
             Container(
               constraints: const BoxConstraints(minHeight: 142),
-              padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   begin: Alignment.topLeft,
@@ -320,17 +455,35 @@ class _ArchivePage extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Directionality(
-                textDirection: TextDirection.rtl,
-                child: ContentBlocksView(
-                  blocks: question.stem,
-                  textColor: GaussColors.parchmentInk,
-                  textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: GaussColors.parchmentInk,
-                    fontFamily: 'Vazirmatn',
-                    height: 1.7,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
+                child: InlineQuestionScratch(
+                  key: ValueKey('study-ink-${question.id}'),
+                  child: Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: ContentBlocksView(
+                      blocks: question.stem,
+                      textColor: GaussColors.parchmentInk,
+                      textStyle: Theme.of(context).textTheme.titleLarge
+                          ?.copyWith(
+                            color: GaussColors.parchmentInk,
+                            fontFamily: 'Vazirmatn',
+                            height: 1.7,
+                          ),
+                    ),
                   ),
                 ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              revealed
+                  ? 'Your hypothesis is frozen after reveal.'
+                  : 'Choose a private hypothesis, or reveal without one.',
+              style: const TextStyle(
+                color: GaussColors.fog,
+                fontSize: 11,
+                height: 1.4,
               ),
             ),
             const SizedBox(height: 15),
@@ -340,8 +493,11 @@ class _ArchivePage extends StatelessWidget {
                 child: _ArchiveChoice(
                   blocks: question.options[choice],
                   choice: choice,
+                  selected: hypothesis == choice,
+                  enabled: !revealed,
                   markedBySource:
                       revealed && choice == question.correctChoiceIndex,
+                  onTap: () => onHypothesis(choice),
                 ),
               ),
             const SizedBox(height: 6),
@@ -351,8 +507,15 @@ class _ArchivePage extends StatelessWidget {
                 icon: const Icon(Icons.visibility_outlined, size: 19),
                 label: const Text('Reveal the source answer'),
               )
-            else
+            else ...[
               _SourceSolution(question: question),
+              const SizedBox(height: 12),
+              _ReflectionDeck(
+                record: record,
+                saving: saving,
+                onReflection: onReflection,
+              ),
+            ],
           ],
         ),
       ),
@@ -399,62 +562,101 @@ class _ArchiveChoice extends StatelessWidget {
   const _ArchiveChoice({
     required this.blocks,
     required this.choice,
+    required this.selected,
+    required this.enabled,
     required this.markedBySource,
+    required this.onTap,
   });
 
   final List<ContentBlock> blocks;
   final int choice;
+  final bool selected;
+  final bool enabled;
   final bool markedBySource;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    final border = markedBySource ? GaussColors.warning : GaussColors.line;
+    final border = markedBySource
+        ? GaussColors.warning
+        : selected
+        ? GaussColors.brass
+        : GaussColors.line;
     return Semantics(
       container: true,
+      button: enabled,
+      selected: selected,
       label:
           'Choice ${choice + 1}.'
+          '${selected ? ' Your private hypothesis.' : ''}'
           '${markedBySource ? ' Marked as the answer by the unverified source.' : ''}',
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: markedBySource
-                ? [
-                    GaussColors.warning.withValues(alpha: .12),
-                    GaussColors.deepInk,
-                  ]
-                : [GaussColors.panelHigh, GaussColors.raised],
-          ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: enabled ? onTap : null,
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: border, width: markedBySource ? 2 : 1),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
-          child: Row(
-            children: [
-              Container(
-                width: 32,
-                height: 32,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: border),
-                ),
-                child: markedBySource
-                    ? const Icon(
-                        Icons.shield_outlined,
-                        size: 16,
-                        color: GaussColors.warning,
-                      )
-                    : Text(
-                        String.fromCharCode(65 + choice),
-                        style: const TextStyle(fontWeight: FontWeight.w800),
-                      ),
+          child: Ink(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: markedBySource
+                    ? [
+                        GaussColors.warning.withValues(alpha: .12),
+                        GaussColors.deepInk,
+                      ]
+                    : selected
+                    ? [
+                        GaussColors.brass.withValues(alpha: .16),
+                        GaussColors.deepInk,
+                      ]
+                    : [GaussColors.panelHigh, GaussColors.raised],
               ),
-              const SizedBox(width: 14),
-              Expanded(child: ContentBlocksView(blocks: blocks, compact: true)),
-            ],
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: border,
+                width: markedBySource || selected ? 2 : 1,
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
+              child: Row(
+                children: [
+                  Container(
+                    width: 34,
+                    height: 34,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: selected
+                          ? GaussColors.brass.withValues(alpha: .13)
+                          : Colors.transparent,
+                      border: Border.all(color: border),
+                    ),
+                    child: markedBySource
+                        ? const Icon(
+                            Icons.shield_outlined,
+                            size: 16,
+                            color: GaussColors.warning,
+                          )
+                        : selected
+                        ? const Icon(
+                            Icons.edit_note_rounded,
+                            size: 18,
+                            color: GaussColors.brassLight,
+                          )
+                        : Text(
+                            String.fromCharCode(65 + choice),
+                            style: const TextStyle(fontWeight: FontWeight.w800),
+                          ),
+                  ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: ContentBlocksView(blocks: blocks, compact: true),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),
@@ -516,53 +718,238 @@ class _SourceSolution extends StatelessWidget {
   );
 }
 
+class _ReflectionDeck extends StatelessWidget {
+  const _ReflectionDeck({
+    required this.record,
+    required this.saving,
+    required this.onReflection,
+  });
+
+  final StudyRecord? record;
+  final bool saving;
+  final ValueChanged<StudyReflection> onReflection;
+
+  @override
+  Widget build(BuildContext context) {
+    final current = record?.reflection;
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            GaussColors.signal.withValues(alpha: .09),
+            GaussColors.deepInk.withValues(alpha: .96),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: current == null
+              ? GaussColors.line
+              : GaussColors.signal.withValues(alpha: .55),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              const Icon(
+                Icons.self_improvement_outlined,
+                color: GaussColors.signalBright,
+              ),
+              const SizedBox(width: 9),
+              Expanded(
+                child: Text(
+                  current == null
+                      ? 'How does the concept feel now?'
+                      : current == StudyReflection.clear
+                      ? 'Concept marked clear'
+                      : 'Saved to your revisit orbit',
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+              ),
+              if (saving)
+                const SizedBox.square(
+                  dimension: 18,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+            ],
+          ),
+          const SizedBox(height: 7),
+          const Text(
+            'This is your own study signal. It does not grade the source answer or create a score.',
+            style: TextStyle(
+              color: GaussColors.fog,
+              fontSize: 11,
+              height: 1.45,
+            ),
+          ),
+          const SizedBox(height: 14),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final compact = constraints.maxWidth < 480;
+              final clear = _ReflectionButton(
+                icon: Icons.check_circle_outline_rounded,
+                label: 'Concept feels clear',
+                selected: current == StudyReflection.clear,
+                onPressed: saving
+                    ? null
+                    : () => onReflection(StudyReflection.clear),
+              );
+              final revisit = _ReflectionButton(
+                icon: Icons.loop_rounded,
+                label: 'Revisit later',
+                selected: current == StudyReflection.revisit,
+                onPressed: saving
+                    ? null
+                    : () => onReflection(StudyReflection.revisit),
+              );
+              if (compact) {
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [clear, const SizedBox(height: 9), revisit],
+                );
+              }
+              return Row(
+                children: [
+                  Expanded(child: clear),
+                  const SizedBox(width: 10),
+                  Expanded(child: revisit),
+                ],
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ReflectionButton extends StatelessWidget {
+  const _ReflectionButton({
+    required this.icon,
+    required this.label,
+    required this.selected,
+    required this.onPressed,
+  });
+
+  final IconData icon;
+  final String label;
+  final bool selected;
+  final VoidCallback? onPressed;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    selected: selected,
+    button: true,
+    child: selected
+        ? FilledButton.icon(
+            onPressed: onPressed,
+            icon: Icon(icon, size: 19),
+            label: Text(label),
+          )
+        : OutlinedButton.icon(
+            onPressed: onPressed,
+            icon: Icon(icon, size: 19),
+            label: Text(label),
+          ),
+  );
+}
+
 class _ArchiveNavBar extends StatelessWidget {
   const _ArchiveNavBar({
     required this.index,
     required this.total,
+    required this.reflected,
     required this.onPrevious,
     required this.onNext,
   });
 
   final int index;
   final int total;
+  final bool reflected;
   final VoidCallback? onPrevious;
   final VoidCallback? onNext;
 
   @override
-  Widget build(BuildContext context) => DecoratedBox(
-    decoration: const BoxDecoration(
-      color: Color(0xFA0B1417),
-      border: Border(top: BorderSide(color: GaussColors.line)),
-    ),
-    child: Padding(
-      padding: const EdgeInsets.fromLTRB(14, 11, 14, 12),
-      child: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 980),
-          child: Row(
-            children: [
-              OutlinedButton.icon(
-                onPressed: onPrevious,
-                icon: const Icon(Icons.arrow_back_rounded, size: 19),
-                label: const Text('Previous'),
-              ),
-              const Spacer(),
-              Text(
-                '${index + 1} of $total preserved',
-                style: const TextStyle(
-                  color: GaussColors.fog,
-                  fontSize: 11,
-                  fontWeight: FontWeight.w700,
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.fromLTRB(12, 5, 12, 9),
+    child: Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 980),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(22),
+          child: BackdropFilter(
+            filter: ui.ImageFilter.blur(sigmaX: 16, sigmaY: 16),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              decoration: BoxDecoration(
+                color: GaussColors.deepInk.withValues(alpha: .9),
+                borderRadius: BorderRadius.circular(22),
+                border: Border.all(
+                  color: GaussColors.brass.withValues(alpha: .24),
                 ),
               ),
-              const Spacer(),
-              FilledButton.icon(
-                onPressed: onNext,
-                icon: const Icon(Icons.arrow_forward_rounded, size: 19),
-                label: const Text('Next'),
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  final compact = constraints.maxWidth < 480;
+                  final position = Text(
+                    reflected
+                        ? '${index + 1} of $total · charted'
+                        : '${index + 1} of $total',
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: GaussColors.fog,
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  );
+                  if (compact) {
+                    return Row(
+                      children: [
+                        IconButton.outlined(
+                          onPressed: onPrevious,
+                          tooltip: 'Previous question',
+                          icon: const Icon(Icons.arrow_back_rounded, size: 19),
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(child: position),
+                        const SizedBox(width: 8),
+                        IconButton.filled(
+                          onPressed: onNext,
+                          tooltip: 'Next question',
+                          icon: const Icon(
+                            Icons.arrow_forward_rounded,
+                            size: 19,
+                          ),
+                        ),
+                      ],
+                    );
+                  }
+                  return Row(
+                    children: [
+                      OutlinedButton.icon(
+                        onPressed: onPrevious,
+                        icon: const Icon(Icons.arrow_back_rounded, size: 19),
+                        label: const Text('Previous'),
+                      ),
+                      const SizedBox(width: 18),
+                      Expanded(child: position),
+                      const SizedBox(width: 18),
+                      FilledButton.icon(
+                        onPressed: onNext,
+                        icon: const Icon(Icons.arrow_forward_rounded, size: 19),
+                        label: const Text('Next'),
+                      ),
+                    ],
+                  );
+                },
               ),
-            ],
+            ),
           ),
         ),
       ),
@@ -575,11 +962,13 @@ class _ArchiveMessage extends StatelessWidget {
     required this.title,
     required this.detail,
     required this.onLeave,
+    this.onRetry,
   });
 
   final String title;
   final String detail;
   final VoidCallback onLeave;
+  final VoidCallback? onRetry;
 
   @override
   Widget build(BuildContext context) => Center(
@@ -605,7 +994,20 @@ class _ArchiveMessage extends StatelessWidget {
                 style: const TextStyle(color: GaussColors.muted),
               ),
               const SizedBox(height: 20),
-              FilledButton(onPressed: onLeave, child: const Text('Back')),
+              Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                alignment: WrapAlignment.center,
+                children: [
+                  OutlinedButton(onPressed: onLeave, child: const Text('Back')),
+                  if (onRetry != null)
+                    FilledButton.icon(
+                      onPressed: onRetry,
+                      icon: const Icon(Icons.refresh_rounded),
+                      label: const Text('Try again'),
+                    ),
+                ],
+              ),
             ],
           ),
         ),

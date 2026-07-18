@@ -58,3 +58,28 @@ final class MissionWriteFailure extends GaussFailure {
         cause: cause,
       );
 }
+
+final class StudyLoadFailure extends GaussFailure {
+  const StudyLoadFailure(Object cause)
+    : super(
+        code: 'STUDY_SHELF_LOAD_FAILED',
+        category: FailureCategory.dataIntegrity,
+        operation: 'load_study_shelf',
+        retryable: true,
+        safeMessage:
+            'The offline study shelf could not be opened. Your notes are unchanged.',
+        cause: cause,
+      );
+}
+
+final class StudyWriteFailure extends GaussFailure {
+  const StudyWriteFailure(Object cause, {required super.operation})
+    : super(
+        code: 'STUDY_LOCAL_WRITE_FAILED',
+        category: FailureCategory.storage,
+        retryable: true,
+        safeMessage:
+            'This field note could not be saved. Your current page stays open.',
+        cause: cause,
+      );
+}

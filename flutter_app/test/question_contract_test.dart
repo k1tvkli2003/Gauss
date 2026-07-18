@@ -37,7 +37,7 @@ void main() {
             'correct_option_index': sourceAnswer,
             'solution': <Map<String, String>>[],
             'smart_shortcut': null,
-            'source_bank': 'gauss',
+            'source_bank': 'verified_fixture',
           });
 
           expect(question.sourceCorrectOptionIndex, sourceAnswer);
@@ -110,7 +110,7 @@ void main() {
           {'type': 'text', 'text': 'گزینه ۲ صحیح است.'},
         ],
         'smart_shortcut': null,
-        'source_bank': 'gauss',
+        'source_bank': 'verified_fixture',
       });
 
       expect(question.missionReady, isTrue);
@@ -134,71 +134,53 @@ void main() {
           ],
           'correct_option_index': 0,
           'solution': <Map<String, String>>[],
+          'source_bank': 'nardebam',
         }),
         throwsFormatException,
       );
     });
   });
 
-  test('all 7,353 bundled questions satisfy the typed contract', () async {
-    final repository = QuestionBankRepository();
-    await repository.initialize();
-    await repository.validateAllShards();
-    final questions = <Question>[
-      for (final topic in repository.topics)
-        ...await repository.loadTopic(topic.key),
-    ];
-    final quarantined = questions
-        .where((question) => question.trust == QuestionTrust.preservedArchive)
-        .toList(growable: false);
-    expect(repository.declaredTotal, 7353);
-    expect(repository.topics, hasLength(29));
-    expect(
-      repository.topics.fold<int>(
-        0,
-        (total, topic) => total + topic.missionReadyCount,
-      ),
-      3681,
-    );
-    expect(questions, hasLength(7353));
-    expect(quarantined, hasLength(3672));
-    expect(
-      quarantined.every((question) => question.solution.isNotEmpty),
-      isTrue,
-    );
-    expect(
-      questions.where((question) => question.solutionVerified),
-      hasLength(3610),
-    );
-    final missionSignatures = <String>{};
-    for (final question in questions.where(
-      (question) => question.missionReady,
-    )) {
-      final signature = [
-        _blockSignature(question.stem),
-        for (final option in question.options) _blockSignature(option),
-      ].join('\u241f');
+  test(
+    'all 3,672 bundled source questions satisfy the typed contract',
+    () async {
+      final repository = QuestionBankRepository();
+      await repository.initialize();
+      await repository.validateAllShards();
+      final questions = <Question>[
+        for (final topic in repository.topics)
+          ...await repository.loadTopic(topic.key),
+      ];
+      final quarantined = questions
+          .where((question) => question.trust == QuestionTrust.preservedArchive)
+          .toList(growable: false);
+      expect(repository.declaredTotal, 3672);
+      expect(repository.topics, hasLength(29));
       expect(
-        missionSignatures.add(signature),
-        isTrue,
-        reason: 'Duplicate mission-ready content at ${question.id}',
+        repository.topics.fold<int>(
+          0,
+          (total, topic) => total + topic.missionReadyCount,
+        ),
+        0,
       );
-    }
+      expect(questions, hasLength(3672));
+      expect(quarantined, hasLength(3672));
+      expect(
+        questions.every((question) => question.sourceBank == 'nardebam'),
+        isTrue,
+      );
+      expect(questions.where((question) => question.missionReady), isEmpty);
+      expect(
+        quarantined.every((question) => question.solution.isNotEmpty),
+        isTrue,
+      );
+      expect(questions.where((question) => question.solutionVerified), isEmpty);
+      final defaultMission = await repository.createMission('sets', count: 50);
+      expect(defaultMission, isEmpty);
+    },
+  );
 
-    final defaultMission = await repository.createMission('sets', count: 50);
-    expect(defaultMission, isNotEmpty);
-    expect(defaultMission.every((question) => question.missionReady), isTrue);
-    expect(
-      await repository.createMission(
-        'sets',
-        count: 50,
-        sourceBanks: const {'nardebam'},
-      ),
-      isEmpty,
-    );
-  });
-
-  test('all 3,410 bundled media files remain byte-for-byte present', () {
+  test('all 3,410 source media files remain byte-for-byte present', () {
     final media = Directory('assets/question_media')
         .listSync(recursive: true, followLinks: false)
         .whereType<File>()
@@ -210,12 +192,3 @@ void main() {
     );
   });
 }
-
-String _blockSignature(List<ContentBlock> blocks) => blocks
-    .map(
-      (block) => switch (block) {
-        TextBlock(:final text) => text.replaceAll(RegExp(r'\s+'), ' ').trim(),
-        ImageBlock(:final asset) => '[image:$asset]',
-      },
-    )
-    .join('\u241e');

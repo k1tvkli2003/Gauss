@@ -26,6 +26,163 @@ class ProgressRepository {
     await database.customSelect('SELECT 1').getSingle();
   }
 
+  Future<List<StudyRecord>> studyRecords({String? topicKey}) async {
+    final query = database.select(database.studyRecords);
+    if (topicKey != null) {
+      query.where((row) => row.topicKey.equals(topicKey));
+    }
+    query.orderBy([(row) => OrderingTerm.asc(row.firstReflectedAt)]);
+    return (await query.get()).map(_studyRecordFromRow).toList(growable: false);
+  }
+
+  Future<StudyRecord> saveStudyReflection({
+    required String questionId,
+    required String topicKey,
+    required String shelfKey,
+    required int? hypothesisChoiceIndex,
+    required StudyReflection reflection,
+  }) => database.transaction(() async {
+    if (hypothesisChoiceIndex != null &&
+        (hypothesisChoiceIndex < 0 || hypothesisChoiceIndex > 3)) {
+      throw ArgumentError.value(
+        hypothesisChoiceIndex,
+        'hypothesisChoiceIndex',
+        'must use the zero-based four-choice contract',
+      );
+    }
+    final now = _clock().millisecondsSinceEpoch;
+    final existing = await (database.select(
+      database.studyRecords,
+    )..where((row) => row.questionId.equals(questionId))).getSingleOrNull();
+    if (existing != null &&
+        existing.topicKey == topicKey &&
+        existing.shelfKey == shelfKey &&
+        existing.hypothesisChoiceIndex == hypothesisChoiceIndex &&
+        existing.reflection == reflection.key) {
+      return _studyRecordFromRow(existing);
+    }
+    if (existing == null) {
+      await database
+          .into(database.studyRecords)
+          .insert(
+            StudyRecordsCompanion.insert(
+              questionId: questionId,
+              topicKey: topicKey,
+              shelfKey: shelfKey,
+              hypothesisChoiceIndex: Value(hypothesisChoiceIndex),
+              reflection: reflection.key,
+              firstReflectedAt: now,
+              updatedAt: now,
+            ),
+          );
+    } else {
+      if (existing.topicKey != topicKey) {
+        throw StateError('A study record cannot move between chapters.');
+      }
+      await (database.update(
+        database.studyRecords,
+      )..where((row) => row.questionId.equals(questionId))).write(
+        StudyRecordsCompanion(
+          hypothesisChoiceIndex: Value(hypothesisChoiceIndex),
+          shelfKey: Value(shelfKey),
+          reflection: Value(reflection.key),
+          updatedAt: Value(now),
+        ),
+      );
+    }
+    final saved = await (database.select(
+      database.studyRecords,
+    )..where((row) => row.questionId.equals(questionId))).getSingle();
+    return _studyRecordFromRow(saved);
+  });
+
+  Future<void> saveStudyPosition({
+    required String shelfKey,
+    required String questionId,
+    required int position,
+  }) async {
+    if (position < 0) {
+      throw ArgumentError.value(position, 'position', 'cannot be negative');
+    }
+    await database
+        .into(database.studyPositions)
+        .insertOnConflictUpdate(
+          StudyPositionsCompanion.insert(
+            shelfKey: shelfKey,
+            questionId: questionId,
+            position: position,
+            updatedAt: _clock().millisecondsSinceEpoch,
+          ),
+        );
+  }
+
+  Future<int?> studyPosition(String shelfKey) async {
+    final row = await (database.select(
+      database.studyPositions,
+    )..where((item) => item.shelfKey.equals(shelfKey))).getSingleOrNull();
+    return row?.position;
+  }
+
+  Future<List<String>> revisitStudyIds() async {
+    final query = database.select(database.studyRecords)
+      ..where((row) => row.reflection.equals(StudyReflection.revisit.key))
+      ..orderBy([(row) => OrderingTerm.asc(row.updatedAt)]);
+    return (await query.get())
+        .map((row) => row.questionId)
+        .toList(growable: false);
+  }
+
+  Future<StudySummary> studySummary() async {
+    final records = await studyRecords();
+    final byTopic = <String, List<StudyRecord>>{};
+    final byShelf = <String, List<StudyRecord>>{};
+    final heatmap = <String, int>{};
+    var clearCount = 0;
+    var revisitCount = 0;
+    for (final record in records) {
+      byTopic.putIfAbsent(record.topicKey, () => []).add(record);
+      byShelf.putIfAbsent(record.shelfKey, () => []).add(record);
+      if (record.reflection == StudyReflection.clear) {
+        clearCount++;
+      } else {
+        revisitCount++;
+      }
+      final day = _dayKey(record.firstReflectedAt);
+      heatmap[day] = (heatmap[day] ?? 0) + 1;
+    }
+    return StudySummary(
+      totalReflected: records.length,
+      clearCount: clearCount,
+      revisitCount: revisitCount,
+      touchedTopics: byTopic.length,
+      byTopic: {
+        for (final entry in byTopic.entries)
+          entry.key: StudyTopicSnapshot(
+            reflected: entry.value.length,
+            clear: entry.value
+                .where((record) => record.reflection == StudyReflection.clear)
+                .length,
+            revisit: entry.value
+                .where((record) => record.reflection == StudyReflection.revisit)
+                .length,
+          ),
+      },
+      byShelf: {
+        for (final entry in byShelf.entries)
+          entry.key: StudyTopicSnapshot(
+            reflected: entry.value.length,
+            clear: entry.value
+                .where((record) => record.reflection == StudyReflection.clear)
+                .length,
+            revisit: entry.value
+                .where((record) => record.reflection == StudyReflection.revisit)
+                .length,
+          ),
+      },
+      heatmap: heatmap,
+    );
+  }
+
   Future<List<AttemptRecord>> loadAttempts() async {
     final query = database.select(database.attempts)
       ..where((row) => row.examId.isNotNull())
@@ -802,6 +959,16 @@ class ProgressRepository {
     examId: row.examId,
     finalized: row.examId != null,
     errorTag: row.errorTag,
+  );
+
+  StudyRecord _studyRecordFromRow(StudyRecordRow row) => StudyRecord(
+    questionId: row.questionId,
+    topicKey: row.topicKey,
+    shelfKey: row.shelfKey,
+    hypothesisChoiceIndex: row.hypothesisChoiceIndex,
+    reflection: StudyReflection.fromKey(row.reflection),
+    firstReflectedAt: DateTime.fromMillisecondsSinceEpoch(row.firstReflectedAt),
+    updatedAt: DateTime.fromMillisecondsSinceEpoch(row.updatedAt),
   );
 
   static int levelFor(int xp) => math.sqrt(math.max(0, xp) / 160).floor() + 1;

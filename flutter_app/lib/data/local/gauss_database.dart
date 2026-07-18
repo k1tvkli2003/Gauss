@@ -133,6 +133,31 @@ class AchievementProgress extends Table {
   Set<Column<Object>> get primaryKey => {achievementId};
 }
 
+@DataClassName('StudyRecordRow')
+class StudyRecords extends Table {
+  TextColumn get questionId => text()();
+  TextColumn get topicKey => text()();
+  TextColumn get shelfKey => text()();
+  IntColumn get hypothesisChoiceIndex => integer().nullable()();
+  TextColumn get reflection => text()();
+  IntColumn get firstReflectedAt => integer()();
+  IntColumn get updatedAt => integer()();
+
+  @override
+  Set<Column<Object>> get primaryKey => {questionId};
+}
+
+@DataClassName('StudyPositionRow')
+class StudyPositions extends Table {
+  TextColumn get shelfKey => text()();
+  TextColumn get questionId => text()();
+  IntColumn get position => integer()();
+  IntColumn get updatedAt => integer()();
+
+  @override
+  Set<Column<Object>> get primaryKey => {shelfKey};
+}
+
 @DriftDatabase(
   tables: [
     Exams,
@@ -143,6 +168,8 @@ class AchievementProgress extends Table {
     XpTransactions,
     QuestProgress,
     AchievementProgress,
+    StudyRecords,
+    StudyPositions,
   ],
 )
 class GaussDatabase extends _$GaussDatabase {
@@ -160,7 +187,7 @@ class GaussDatabase extends _$GaussDatabase {
       );
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -179,6 +206,12 @@ class GaussDatabase extends _$GaussDatabase {
         // Additive: existing attempts simply have no self-reported miss
         // reason. No rows are rewritten.
         await migrator.addColumn(attempts, attempts.errorTag);
+      }
+      if (from < 4) {
+        // Source-study progress is additive and separate from scored attempts.
+        // Existing missions, SRS rows, rewards, and question data are kept.
+        await migrator.createTable(studyRecords);
+        await migrator.createTable(studyPositions);
       }
     },
     beforeOpen: (details) async {

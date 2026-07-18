@@ -338,7 +338,10 @@ void main() {
     await repository.saveDraftAttempt(
       _attempt('srs-seed', 1, 'q-wrong', false, now),
     );
-    await repository.finalizeMission(sessionId: 'srs-seed', durationSeconds: 30);
+    await repository.finalizeMission(
+      sessionId: 'srs-seed',
+      durationSeconds: 30,
+    );
 
     // Immediately after: only the lapse is due (correct answer waits a day).
     expect(await repository.reviewDueIds(), const ['q-wrong']);
@@ -354,32 +357,35 @@ void main() {
     expect(await repository.revengeIds(), const ['q-wrong']);
   });
 
-  test('mixed-topic review and revenge sessions never mint topic mastery', () async {
-    final now = clockNow;
-    for (final mode in const ['review', 'revenge']) {
-      await repository.startMission(
-        sessionId: 'synthetic-$mode',
-        subject: Subject.math,
-        topicKey: mode,
-        createdAt: now.millisecondsSinceEpoch,
-        questionIds: [for (var i = 0; i < 5; i++) '$mode-q$i'],
-      );
-      for (var i = 0; i < 5; i++) {
-        await repository.saveDraftAttempt(
-          _attempt('synthetic-$mode', i, '$mode-q$i', true, now),
+  test(
+    'mixed-topic review and revenge sessions never mint topic mastery',
+    () async {
+      final now = clockNow;
+      for (final mode in const ['review', 'revenge']) {
+        await repository.startMission(
+          sessionId: 'synthetic-$mode',
+          subject: Subject.math,
+          topicKey: mode,
+          createdAt: now.millisecondsSinceEpoch,
+          questionIds: [for (var i = 0; i < 5; i++) '$mode-q$i'],
+        );
+        for (var i = 0; i < 5; i++) {
+          await repository.saveDraftAttempt(
+            _attempt('synthetic-$mode', i, '$mode-q$i', true, now),
+          );
+        }
+        await repository.finalizeMission(
+          sessionId: 'synthetic-$mode',
+          durationSeconds: 60,
         );
       }
-      await repository.finalizeMission(
-        sessionId: 'synthetic-$mode',
-        durationSeconds: 60,
-      );
-    }
 
-    final masteryEvents = await (database.select(
-      database.gamificationEvents,
-    )..where((row) => row.type.equals('topic_mastered'))).get();
-    expect(masteryEvents, isEmpty);
-  });
+      final masteryEvents = await (database.select(
+        database.gamificationEvents,
+      )..where((row) => row.type.equals('topic_mastered'))).get();
+      expect(masteryEvents, isEmpty);
+    },
+  );
 
   test('miss tags persist through finalization and feed the anatomy', () async {
     final now = clockNow;
@@ -441,6 +447,73 @@ void main() {
       expect(after.streak, 1);
     },
   );
+
+  test(
+    'source reflections are idempotent and never mint scored rewards',
+    () async {
+      final first = await repository.saveStudyReflection(
+        questionId: 'source-q1',
+        topicKey: 'sets',
+        shelfKey: 'sets:0:20',
+        hypothesisChoiceIndex: 2,
+        reflection: StudyReflection.revisit,
+      );
+      final repeated = await repository.saveStudyReflection(
+        questionId: 'source-q1',
+        topicKey: 'sets',
+        shelfKey: 'sets:0:20',
+        hypothesisChoiceIndex: 2,
+        reflection: StudyReflection.revisit,
+      );
+
+      expect(repeated.firstReflectedAt, first.firstReflectedAt);
+      expect(await database.select(database.studyRecords).get(), hasLength(1));
+      expect(await database.select(database.gamificationEvents).get(), isEmpty);
+      expect(await database.select(database.xpTransactions).get(), isEmpty);
+      final summary = await repository.studySummary();
+      expect(summary.totalReflected, 1);
+      expect(summary.revisitCount, 1);
+      expect(summary.clearCount, 0);
+      expect(summary.topic('sets').reflected, 1);
+    },
+  );
+
+  test('a clear reflection removes an item from the revisit orbit', () async {
+    await repository.saveStudyReflection(
+      questionId: 'source-q2',
+      topicKey: 'sets',
+      shelfKey: 'sets:0:20',
+      hypothesisChoiceIndex: null,
+      reflection: StudyReflection.revisit,
+    );
+    expect(await repository.revisitStudyIds(), ['source-q2']);
+
+    clockNow = clockNow.add(const Duration(days: 1));
+    await repository.saveStudyReflection(
+      questionId: 'source-q2',
+      topicKey: 'sets',
+      shelfKey: 'sets:0:20',
+      hypothesisChoiceIndex: 1,
+      reflection: StudyReflection.clear,
+    );
+
+    expect(await repository.revisitStudyIds(), isEmpty);
+    final summary = await repository.studySummary();
+    expect(summary.totalReflected, 1);
+    expect(summary.clearCount, 1);
+    expect(summary.heatmap, {'2026-07-12': 1});
+  });
+
+  test('study position resumes without creating progress', () async {
+    await repository.saveStudyPosition(
+      shelfKey: 'sets:0:20',
+      questionId: 'source-q8',
+      position: 8,
+    );
+
+    expect(await repository.studyPosition('sets:0:20'), 8);
+    expect((await repository.studySummary()).totalReflected, 0);
+  });
 }
 
 Future<MissionCompletion> _completeSingle(

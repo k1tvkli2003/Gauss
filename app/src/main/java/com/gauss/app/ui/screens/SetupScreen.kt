@@ -124,7 +124,7 @@ fun SetupScreen(
                 }
                 SectionLabel("بانک سؤال")
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    listOf("all" to "همه", "nardebam" to "نردبام", "gauss" to "Gauss").forEach { (key, label) ->
+                    listOf("all" to "همه", "nardebam" to "آرشیو منبع").forEach { (key, label) ->
                         FilterChip(selected = sourceMode == key, onClick = { sourceMode = key }, label = { Text(label) })
                     }
                 }

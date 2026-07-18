@@ -40,6 +40,22 @@ enum QuestionTrust {
   bool get canScore => this == QuestionTrust.missionReady;
 }
 
+/// A learner-authored reflection over a preserved source item.
+///
+/// Neither value claims that the imported answer is correct. The distinction
+/// only drives the private study queue: [clear] removes an item from revisit,
+/// while [revisit] keeps it close for another pass.
+enum StudyReflection {
+  clear('clear'),
+  revisit('revisit');
+
+  const StudyReflection(this.key);
+  final String key;
+
+  static StudyReflection fromKey(String value) =>
+      StudyReflection.values.firstWhere((item) => item.key == value);
+}
+
 sealed class ContentBlock {
   const ContentBlock();
 
@@ -145,7 +161,10 @@ class Question {
   factory Question.fromJson(Map<String, dynamic> json) {
     final sourceIndex = json['correct_option_index'] as int;
     final rawOptions = json['options'] as List<dynamic>;
-    final sourceBank = (json['source_bank'] as String?) ?? 'gauss';
+    final sourceBank = json['source_bank'] as String?;
+    if (sourceBank == null || sourceBank.isEmpty) {
+      throw FormatException('Question ${json['id']} has no source bank.');
+    }
     final provenance = json['provenance'] as Map<String, dynamic>?;
     final solution = _blocks(json['solution']);
     final isUnverifiedSourceMapping =
@@ -208,6 +227,97 @@ class Question {
   static List<ContentBlock> _blocks(dynamic value) => (value as List<dynamic>)
       .map((item) => ContentBlock.fromJson(item as Map<String, dynamic>))
       .toList(growable: false);
+}
+
+class StudyRecord {
+  const StudyRecord({
+    required this.questionId,
+    required this.topicKey,
+    required this.shelfKey,
+    required this.hypothesisChoiceIndex,
+    required this.reflection,
+    required this.firstReflectedAt,
+    required this.updatedAt,
+  });
+
+  final String questionId;
+  final String topicKey;
+  final String shelfKey;
+
+  /// The learner's private pre-reveal hypothesis. It is never compared with
+  /// the unverified source mapping and therefore never becomes a score.
+  final int? hypothesisChoiceIndex;
+  final StudyReflection reflection;
+  final DateTime firstReflectedAt;
+  final DateTime updatedAt;
+}
+
+class StudyTopicSnapshot {
+  const StudyTopicSnapshot({
+    required this.reflected,
+    required this.clear,
+    required this.revisit,
+  });
+
+  const StudyTopicSnapshot.empty() : reflected = 0, clear = 0, revisit = 0;
+
+  final int reflected;
+  final int clear;
+  final int revisit;
+}
+
+class StudySummary {
+  const StudySummary({
+    required this.totalReflected,
+    required this.clearCount,
+    required this.revisitCount,
+    required this.touchedTopics,
+    required this.byTopic,
+    required this.byShelf,
+    required this.heatmap,
+  });
+
+  const StudySummary.empty()
+    : totalReflected = 0,
+      clearCount = 0,
+      revisitCount = 0,
+      touchedTopics = 0,
+      byTopic = const {},
+      byShelf = const {},
+      heatmap = const {};
+
+  final int totalReflected;
+  final int clearCount;
+  final int revisitCount;
+  final int touchedTopics;
+  final Map<String, StudyTopicSnapshot> byTopic;
+  final Map<String, StudyTopicSnapshot> byShelf;
+
+  /// Unique first reflections per local calendar day. This is a calm activity
+  /// record, not a streak and not a farmable repeat counter.
+  final Map<String, int> heatmap;
+
+  StudyTopicSnapshot topic(String key) =>
+      byTopic[key] ?? const StudyTopicSnapshot.empty();
+
+  StudyTopicSnapshot shelf(String key) =>
+      byShelf[key] ?? const StudyTopicSnapshot.empty();
+}
+
+class StudyShelf {
+  const StudyShelf({
+    required this.key,
+    required this.questions,
+    required this.records,
+    required this.initialIndex,
+    required this.revisitOnly,
+  });
+
+  final String key;
+  final List<Question> questions;
+  final Map<String, StudyRecord> records;
+  final int initialIndex;
+  final bool revisitOnly;
 }
 
 class AttemptRecord {

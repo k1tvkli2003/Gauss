@@ -1,3 +1,5 @@
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -23,7 +25,6 @@ class _GaussAppState extends State<GaussApp> {
   bool _listeningForBootstrap = false;
 
   late final GoRouter _router = GoRouter(
-    initialLocation: '/map',
     errorBuilder: (context, state) => const _RouteErrorScreen(),
     routes: [
       StatefulShellRoute.indexedStack(
@@ -40,7 +41,7 @@ class _GaussAppState extends State<GaussApp> {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: '/practice',
+                path: '/study',
                 builder: (context, state) => const PracticeScreen(),
               ),
             ],
@@ -76,7 +77,7 @@ class _GaussAppState extends State<GaussApp> {
             count: (requestedCount ?? 10).clamp(5, 50),
             difficulties: difficulties,
             sourceBanks: (state.uri.queryParametersAll['source'] ?? const [])
-                .where(const {'nardebam', 'gauss'}.contains)
+                .where(const {'nardebam'}.contains)
                 .toSet(),
             coverChoices: state.uri.queryParameters['cover'] == '1',
           );
@@ -92,9 +93,22 @@ class _GaussAppState extends State<GaussApp> {
         ),
       ),
       GoRoute(
-        path: '/archive/:topicKey',
-        builder: (context, state) =>
-            ArchiveScreen(topicKey: state.pathParameters['topicKey']!),
+        path: '/study/chapter/:topicKey',
+        builder: (context, state) {
+          final offset = int.tryParse(
+            state.uri.queryParameters['offset'] ?? '',
+          );
+          final count = int.tryParse(state.uri.queryParameters['count'] ?? '');
+          return ArchiveScreen(
+            topicKey: state.pathParameters['topicKey']!,
+            offset: (offset ?? 0).clamp(0, 100000),
+            count: (count ?? 20).clamp(1, 50),
+          );
+        },
+      ),
+      GoRoute(
+        path: '/study/revisit',
+        builder: (context, state) => const ArchiveScreen.revisit(),
       ),
       GoRoute(
         path: '/review',
@@ -106,8 +120,14 @@ class _GaussAppState extends State<GaussApp> {
         ),
       ),
       GoRoute(path: '/', redirect: (context, state) => '/map'),
-      GoRoute(path: '/missions', redirect: (context, state) => '/practice'),
-      GoRoute(path: '/arena', redirect: (context, state) => '/practice'),
+      GoRoute(path: '/practice', redirect: (context, state) => '/study'),
+      GoRoute(path: '/missions', redirect: (context, state) => '/study'),
+      GoRoute(path: '/arena', redirect: (context, state) => '/study'),
+      GoRoute(
+        path: '/archive/:topicKey',
+        redirect: (context, state) =>
+            '/study/chapter/${state.pathParameters['topicKey']}',
+      ),
       GoRoute(path: '/profile', redirect: (context, state) => '/insights'),
     ],
   );
@@ -155,22 +175,6 @@ class _GaussAppState extends State<GaussApp> {
 
   @override
   Widget build(BuildContext context) {
-    if (widget.controller.fatalError != null) {
-      return MaterialApp(
-        title: 'Gauss',
-        debugShowCheckedModeBanner: false,
-        theme: buildGaussTheme(),
-        home: _StartupFailureScreen(controller: widget.controller),
-      );
-    }
-    if (!widget.controller.ready) {
-      return MaterialApp(
-        title: 'Gauss',
-        debugShowCheckedModeBanner: false,
-        theme: buildGaussTheme(),
-        home: const _StartupView(),
-      );
-    }
     return GaussScope(
       controller: widget.controller,
       child: MaterialApp.router(
@@ -178,6 +182,17 @@ class _GaussAppState extends State<GaussApp> {
         debugShowCheckedModeBanner: false,
         theme: buildGaussTheme(),
         routerConfig: _router,
+        builder: (context, child) {
+          // Keep the router mounted while the offline stores open. Replacing a
+          // router app with a temporary MaterialApp resets the browser route to
+          // `/`, which makes refreshed and bookmarked web deep links land on
+          // the map after bootstrap.
+          if (widget.controller.fatalError != null) {
+            return _StartupFailureScreen(controller: widget.controller);
+          }
+          if (!widget.controller.ready) return const _StartupView();
+          return child ?? const SizedBox.shrink();
+        },
       ),
     );
   }
@@ -323,7 +338,7 @@ class _AppShell extends StatelessWidget {
         glyph: GaussDestinationGlyph.practice,
         selected: true,
       ),
-      label: 'Practice',
+      label: 'Study',
     ),
     NavigationDestination(
       icon: GaussNavGlyph(
@@ -348,22 +363,38 @@ class _AppShell extends StatelessWidget {
       final extendRail = constraints.maxWidth >= 1260;
       if (!useRail) {
         return Scaffold(
+          extendBody: true,
           body: shell,
-          bottomNavigationBar: DecoratedBox(
-            decoration: const BoxDecoration(
-              border: Border(top: BorderSide(color: GaussColors.hairline)),
-              boxShadow: [
-                BoxShadow(
-                  color: Color(0xB803090B),
-                  blurRadius: 24,
-                  offset: Offset(0, -8),
+          bottomNavigationBar: SafeArea(
+            minimum: const EdgeInsets.fromLTRB(12, 0, 12, 10),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(26),
+              child: BackdropFilter(
+                filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: GaussColors.deepInk.withValues(alpha: .82),
+                    borderRadius: BorderRadius.circular(26),
+                    border: Border.all(
+                      color: GaussColors.brass.withValues(alpha: .26),
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0xB803090B),
+                        blurRadius: 28,
+                        offset: Offset(0, 10),
+                      ),
+                    ],
+                  ),
+                  child: NavigationBar(
+                    height: 68,
+                    backgroundColor: Colors.transparent,
+                    selectedIndex: shell.currentIndex,
+                    destinations: destinations,
+                    onDestinationSelected: _go,
+                  ),
                 ),
-              ],
-            ),
-            child: NavigationBar(
-              selectedIndex: shell.currentIndex,
-              destinations: destinations,
-              onDestinationSelected: _go,
+              ),
             ),
           ),
         );
@@ -371,88 +402,99 @@ class _AppShell extends StatelessWidget {
       return Scaffold(
         body: Row(
           children: [
-            DecoratedBox(
-              decoration: const BoxDecoration(
-                color: GaussColors.ink,
-                border: Border(right: BorderSide(color: GaussColors.hairline)),
-              ),
-              child: SafeArea(
-                right: false,
-                child: NavigationRail(
-                  extended: extendRail,
-                  minWidth: 82,
-                  minExtendedWidth: 188,
-                  groupAlignment: -.58,
-                  selectedIndex: shell.currentIndex,
-                  onDestinationSelected: _go,
-                  leading: Padding(
-                    padding: const EdgeInsets.fromLTRB(12, 12, 12, 30),
-                    child: extendRail
-                        ? const GaussWordmark(width: 132)
-                        : const TheoremStarMark(size: 43),
-                  ),
-                  trailing: Expanded(
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 18),
-                        child: Semantics(
-                          label: 'Offline. All learning content is available.',
-                          child: extendRail
-                              ? const Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    _OfflineDot(),
-                                    SizedBox(width: 8),
-                                    Text(
-                                      'Offline',
-                                      style: TextStyle(
-                                        color: GaussColors.muted,
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ],
-                                )
-                              : const _OfflineDot(),
+            SafeArea(
+              minimum: const EdgeInsets.all(10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(24),
+                child: BackdropFilter(
+                  filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: GaussColors.deepInk.withValues(alpha: .88),
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(
+                        color: GaussColors.brass.withValues(alpha: .24),
+                      ),
+                    ),
+                    child: NavigationRail(
+                      backgroundColor: Colors.transparent,
+                      extended: extendRail,
+                      minWidth: 82,
+                      minExtendedWidth: 188,
+                      groupAlignment: -.58,
+                      selectedIndex: shell.currentIndex,
+                      onDestinationSelected: _go,
+                      leading: Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 12, 12, 30),
+                        child: extendRail
+                            ? const GaussWordmark(width: 132)
+                            : const TheoremStarMark(size: 43),
+                      ),
+                      trailing: Expanded(
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 18),
+                            child: Semantics(
+                              label:
+                                  'Offline. All learning content is available.',
+                              child: extendRail
+                                  ? const Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        _OfflineDot(),
+                                        SizedBox(width: 8),
+                                        Text(
+                                          'Offline',
+                                          style: TextStyle(
+                                            color: GaussColors.muted,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  : const _OfflineDot(),
+                            ),
+                          ),
                         ),
                       ),
+                      destinations: const [
+                        NavigationRailDestination(
+                          icon: GaussNavGlyph(
+                            glyph: GaussDestinationGlyph.map,
+                            selected: false,
+                          ),
+                          selectedIcon: GaussNavGlyph(
+                            glyph: GaussDestinationGlyph.map,
+                            selected: true,
+                          ),
+                          label: Text('Map'),
+                        ),
+                        NavigationRailDestination(
+                          icon: GaussNavGlyph(
+                            glyph: GaussDestinationGlyph.practice,
+                            selected: false,
+                          ),
+                          selectedIcon: GaussNavGlyph(
+                            glyph: GaussDestinationGlyph.practice,
+                            selected: true,
+                          ),
+                          label: Text('Study'),
+                        ),
+                        NavigationRailDestination(
+                          icon: GaussNavGlyph(
+                            glyph: GaussDestinationGlyph.insights,
+                            selected: false,
+                          ),
+                          selectedIcon: GaussNavGlyph(
+                            glyph: GaussDestinationGlyph.insights,
+                            selected: true,
+                          ),
+                          label: Text('Insights'),
+                        ),
+                      ],
                     ),
                   ),
-                  destinations: const [
-                    NavigationRailDestination(
-                      icon: GaussNavGlyph(
-                        glyph: GaussDestinationGlyph.map,
-                        selected: false,
-                      ),
-                      selectedIcon: GaussNavGlyph(
-                        glyph: GaussDestinationGlyph.map,
-                        selected: true,
-                      ),
-                      label: Text('Map'),
-                    ),
-                    NavigationRailDestination(
-                      icon: GaussNavGlyph(
-                        glyph: GaussDestinationGlyph.practice,
-                        selected: false,
-                      ),
-                      selectedIcon: GaussNavGlyph(
-                        glyph: GaussDestinationGlyph.practice,
-                        selected: true,
-                      ),
-                      label: Text('Practice'),
-                    ),
-                    NavigationRailDestination(
-                      icon: GaussNavGlyph(
-                        glyph: GaussDestinationGlyph.insights,
-                        selected: false,
-                      ),
-                      selectedIcon: GaussNavGlyph(
-                        glyph: GaussDestinationGlyph.insights,
-                        selected: true,
-                      ),
-                      label: Text('Insights'),
-                    ),
-                  ],
                 ),
               ),
             ),

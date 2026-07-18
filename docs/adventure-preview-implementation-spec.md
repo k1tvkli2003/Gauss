@@ -38,13 +38,19 @@
 
 ## Existing App Data Baseline
 
+> Current runtime baseline, updated 2026-07-18: the dataset is Nardebam-only.
+> All retained rows are source-preserved and archive-only; scored missions remain
+> unavailable until independent answer/solution validation exists. The later
+> mission-flow details in this historical preview specification are therefore
+> not current runtime behavior.
+
 Question bank authority:
 
 - `app/src/main/assets/question_bank/index.json`
 - `schema_version`: `2`
-- total questions: `7353`
-- math: `18` topics, `3977` questions
-- physics: `11` topics, `3376` questions
+- total questions: `3672`
+- math: `18` topics, `2042` questions
+- physics: `11` topics, `1630` questions
 
 Current Kotlin authority:
 
@@ -57,40 +63,40 @@ Current Kotlin authority:
 
 | order | key | preview-facing English label | count |
 |---:|---|---|---:|
-| 1 | `sets` | Sets | 76 |
-| 2 | `patterns_sequences` | Patterns & Sequences | 84 |
-| 3 | `quadratic_equations_functions` | Algebra Grove | 149 |
-| 4 | `rational_inequalities_sign` | Rational Inequalities | 135 |
-| 5 | `radicals_algebraic_expressions` | Radicals & Expressions | 107 |
+| 1 | `sets` | Sets | 50 |
+| 2 | `patterns_sequences` | Patterns & Sequences | 50 |
+| 3 | `quadratic_equations_functions` | Algebra Grove | 115 |
+| 4 | `rational_inequalities_sign` | Rational Inequalities | 46 |
+| 5 | `radicals_algebraic_expressions` | Radicals & Expressions | 47 |
 | 6 | `absolute_value_floor` | Absolute Value & Floor | 132 |
-| 7 | `functions` | Functions | 495 |
-| 8 | `trigonometry` | Trigonometry | 476 |
-| 9 | `limits_continuity` | Limits | 401 |
-| 10 | `derivatives` | Calculus | 193 |
-| 11 | `derivative_applications` | Derivative Applications | 279 |
-| 12 | `exponential_logarithmic` | Exponential & Logarithmic | 162 |
-| 13 | `analytic_geometry` | Analytic Geometry | 190 |
-| 14 | `visual_thinking_conics` | Conics | 354 |
-| 15 | `combinatorics` | Combinatorics | 153 |
-| 16 | `probability` | Probability | 272 |
-| 17 | `geometry` | Geometry | 123 |
-| 18 | `statistics` | Statistics | 196 |
+| 7 | `functions` | Functions | 264 |
+| 8 | `trigonometry` | Trigonometry | 236 |
+| 9 | `limits_continuity` | Limits | 215 |
+| 10 | `derivatives` | Calculus | 92 |
+| 11 | `derivative_applications` | Derivative Applications | 219 |
+| 12 | `exponential_logarithmic` | Exponential & Logarithmic | 102 |
+| 13 | `analytic_geometry` | Analytic Geometry | 69 |
+| 14 | `visual_thinking_conics` | Conics | 97 |
+| 15 | `combinatorics` | Combinatorics | 88 |
+| 16 | `probability` | Probability | 113 |
+| 17 | `geometry` | Geometry | 63 |
+| 18 | `statistics` | Statistics | 44 |
 
 ### Physics Road Data
 
 | order | key | preview-facing English label | count |
 |---:|---|---|---:|
-| 1 | `physics_measurement` | Physics Measurement | 110 |
-| 2 | `physical_properties_matter` | Matter Properties | 243 |
-| 3 | `work_energy_power` | Work & Energy | 160 |
-| 4 | `temperature_heat` | Heat | 371 |
-| 5 | `electrostatics` | Electrostatics | 274 |
-| 6 | `current_electricity` | Circuits | 268 |
-| 7 | `magnetism_induction` | Electromagnetism | 381 |
-| 8 | `one_dimensional_motion` | Kinematics | 434 |
-| 9 | `dynamics` | Mechanics | 342 |
-| 10 | `oscillation_waves` | Waves | 529 |
-| 11 | `atomic_nuclear` | Atomic & Nuclear | 264 |
+| 1 | `physics_measurement` | Physics Measurement | 50 |
+| 2 | `physical_properties_matter` | Matter Properties | 121 |
+| 3 | `work_energy_power` | Work & Energy | 94 |
+| 4 | `temperature_heat` | Heat | 123 |
+| 5 | `electrostatics` | Electrostatics | 147 |
+| 6 | `current_electricity` | Circuits | 140 |
+| 7 | `magnetism_induction` | Electromagnetism | 130 |
+| 8 | `one_dimensional_motion` | Kinematics | 248 |
+| 9 | `dynamics` | Mechanics | 155 |
+| 10 | `oscillation_waves` | Waves | 283 |
+| 11 | `atomic_nuclear` | Atomic & Nuclear | 139 |
 
 ## Screen 1: Map
 

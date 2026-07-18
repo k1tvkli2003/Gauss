@@ -1,236 +1,415 @@
 import 'dart:math' as math;
+import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
+import '../domain/study_curriculum.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/gauss_brand.dart';
-import '../widgets/mission_start_guard.dart';
 
-class MapScreen extends StatelessWidget {
+class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
+
+  @override
+  State<MapScreen> createState() => _MapScreenState();
+}
+
+class _MapScreenState extends State<MapScreen> {
+  final GlobalKey<_StudyPathStageState> _pathKey = GlobalKey();
+  Subject _subject = Subject.math;
+  String? _sectionId;
+  String? _selectedNodeKey;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _sectionId ??= GaussStudyCurriculum.forSubject(_subject).first.id;
+  }
+
+  void _selectSubject(GaussController controller, Subject subject) {
+    if (_subject == subject) return;
+    final firstSection = GaussStudyCurriculum.forSubject(subject).first;
+    final firstTopic = controller.topics.firstWhere(
+      (topic) => topic.key == firstSection.topicKeys.first,
+    );
+    setState(() {
+      _subject = subject;
+      _sectionId = firstSection.id;
+      _selectedNodeKey = null;
+    });
+    controller.selectTopic(firstTopic.key);
+  }
+
+  void _selectSection(
+    GaussController controller,
+    StudySectionDefinition section,
+  ) {
+    if (_sectionId == section.id) return;
+    final firstTopic = controller.topics.firstWhere(
+      (topic) => topic.key == section.topicKeys.first,
+    );
+    setState(() {
+      _sectionId = section.id;
+      _selectedNodeKey = null;
+    });
+    controller.selectTopic(firstTopic.key);
+  }
+
+  void _selectNode(GaussController controller, StudyPathNode node) {
+    setState(() => _selectedNodeKey = node.key);
+    controller.selectTopic(node.topic.key);
+  }
 
   @override
   Widget build(BuildContext context) {
     final controller = GaussScope.of(context);
     if (controller.fatalError != null) return const _FatalDatasetView();
+    final sections = GaussStudyCurriculum.forSubject(_subject);
+    final section = sections.firstWhere(
+      (item) => item.id == _sectionId,
+      orElse: () => sections.first,
+    );
+    final nodes = GaussStudyCurriculum.nodesFor(section, controller.topics);
+    final currentIndex = nodes.indexWhere(
+      (node) => controller.study.shelf(node.key).reflected < node.questionCount,
+    );
+    final effectiveCurrent = currentIndex < 0 ? nodes.length - 1 : currentIndex;
+    final selected = nodes.firstWhere(
+      (node) => node.key == _selectedNodeKey,
+      orElse: () => nodes[effectiveCurrent],
+    );
+
     return ColoredBox(
       color: GaussColors.abyss,
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          final showInspector = constraints.maxWidth >= 1040;
-          return Row(
-            children: [
-              Expanded(
-                child: Stack(
-                  children: [
-                    Positioned.fill(
-                      child: _OrreryMap(
-                        controller: controller,
-                        radial: showInspector,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          const _AstronomicalBackdrop(),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final showInspector = constraints.maxWidth >= 1040;
+              return Row(
+                children: [
+                  Expanded(
+                    child: Stack(
+                      children: [
+                        Column(
+                          children: [
+                            SafeArea(
+                              bottom: false,
+                              child: _MapHeader(
+                                controller: controller,
+                                subject: _subject,
+                                sections: sections,
+                                section: section,
+                                onSubject: (subject) =>
+                                    _selectSubject(controller, subject),
+                                onSection: (value) =>
+                                    _selectSection(controller, value),
+                              ),
+                            ),
+                            Expanded(
+                              child: _StudyPathStage(
+                                key: _pathKey,
+                                controller: controller,
+                                section: section,
+                                nodes: nodes,
+                                currentIndex: effectiveCurrent,
+                                selectedKey: selected.key,
+                                onSelected: (node) =>
+                                    _selectNode(controller, node),
+                              ),
+                            ),
+                          ],
+                        ),
+                        PositionedDirectional(
+                          end: 14,
+                          bottom: showInspector ? 18 : 176,
+                          child: _JumpToCurrentButton(
+                            onPressed: () => _pathKey.currentState?.jumpToNode(
+                              effectiveCurrent,
+                            ),
+                          ),
+                        ),
+                        if (!showInspector)
+                          PositionedDirectional(
+                            start: 12,
+                            end: 12,
+                            bottom: constraints.maxWidth < 760 ? 92 : 14,
+                            child: _StudyDock(
+                              node: selected,
+                              snapshot: controller.study.shelf(selected.key),
+                              onOpen: () => _openNode(context, selected),
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                  if (showInspector)
+                    SizedBox(
+                      width: constraints.maxWidth >= 1380 ? 378 : 346,
+                      child: _StudyInspector(
+                        section: section,
+                        node: selected,
+                        snapshot: controller.study.shelf(selected.key),
+                        topicSnapshot: controller.study.topic(
+                          selected.topic.key,
+                        ),
+                        onOpen: () => _openNode(context, selected),
                       ),
                     ),
-                    Positioned(
-                      left: 12,
-                      right: 12,
-                      top: 0,
-                      child: SafeArea(
-                        bottom: false,
-                        child: _MapHud(controller: controller),
-                      ),
-                    ),
-                    if (!showInspector)
-                      Positioned(
-                        left: 12,
-                        right: 12,
-                        bottom: 12,
-                        child: _MissionDock(controller: controller),
-                      ),
-                  ],
-                ),
-              ),
-              if (showInspector)
-                SizedBox(
-                  width: constraints.maxWidth >= 1320 ? 372 : 342,
-                  child: _TopicInspector(controller: controller),
-                ),
-            ],
-          );
-        },
+                ],
+              );
+            },
+          ),
+        ],
       ),
     );
   }
 }
 
-class _MapHud extends StatelessWidget {
-  const _MapHud({required this.controller});
+Future<void> _openNode(
+  BuildContext context,
+  StudyPathNode node,
+) => context.push(
+  '/study/chapter/${node.topic.key}?offset=${node.offset}&count=${GaussStudyCurriculum.batchSize}',
+);
 
-  final GaussController controller;
-
-  @override
-  Widget build(BuildContext context) => LayoutBuilder(
-    builder: (context, constraints) {
-      final compact = constraints.maxWidth < 520;
-      final hasSavedMission = controller.resumableMission != null;
-      return _EtchedFrame(
-        radius: 20,
-        padding: EdgeInsets.symmetric(
-          horizontal: compact ? 11 : 16,
-          vertical: compact ? 9 : 11,
-        ),
-        child: Row(
-          children: [
-            GaussWordmark(width: compact ? 106 : 126),
-            const SizedBox(width: 8),
-            Flexible(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  if (!compact)
-                    const Text(
-                      'Chart what you can prove.',
-                      maxLines: 1,
-                      overflow: TextOverflow.fade,
-                      softWrap: false,
-                      style: TextStyle(color: GaussColors.muted, fontSize: 11),
-                    ),
-                ],
-              ),
-            ),
-            const Spacer(),
-            if (hasSavedMission && !compact) ...[
-              _SavedMissionChip(onPressed: () => context.push('/resume')),
-              const SizedBox(width: 8),
-            ],
-            if (controller.reviewDueCount > 0 && !compact) ...[
-              _ReviewDueChip(
-                count: controller.reviewDueCount,
-                onPressed: () => context.push('/review?count=10'),
-              ),
-              const SizedBox(width: 8),
-            ],
-            _HudMetric(
-              label: 'XP',
-              value: '${controller.xp}',
-              signal: GaussColors.brassLight,
-            ),
-            if (!compact) ...[
-              const SizedBox(width: 7),
-              _HudMetric(
-                label: 'LEVEL',
-                value: '${controller.gamification.level}',
-                signal: GaussColors.signalBright,
-              ),
-            ],
-          ],
-        ),
-      );
-    },
-  );
-}
-
-class _SavedMissionChip extends StatelessWidget {
-  const _SavedMissionChip({required this.onPressed});
-
-  final VoidCallback onPressed;
+class _AstronomicalBackdrop extends StatelessWidget {
+  const _AstronomicalBackdrop();
 
   @override
-  Widget build(BuildContext context) => Semantics(
-    button: true,
-    label: 'Resume saved mission',
-    child: InkWell(
-      onTap: onPressed,
-      borderRadius: BorderRadius.circular(GaussRadii.pill),
-      child: Container(
-        height: 40,
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+  Widget build(BuildContext context) => Stack(
+    fit: StackFit.expand,
+    children: [
+      Image.asset(
+        'assets/visual/map/orrery_atmosphere_portrait.png',
+        fit: BoxFit.cover,
+        alignment: Alignment.topCenter,
+        cacheWidth: 1400,
+        filterQuality: FilterQuality.low,
+      ),
+      const DecoratedBox(
         decoration: BoxDecoration(
-          color: GaussColors.signal.withValues(alpha: .1),
-          borderRadius: BorderRadius.circular(GaussRadii.pill),
-          border: Border.all(color: GaussColors.signal.withValues(alpha: .45)),
-        ),
-        child: const Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.play_arrow_rounded, color: GaussColors.signalBright),
-            SizedBox(width: 4),
-            Text(
-              'Resume',
-              style: TextStyle(
-                color: GaussColors.signalBright,
-                fontSize: 12,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-          ],
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xC407151C), Color(0xE8071115), Color(0xFA03090B)],
+            stops: [0, .48, 1],
+          ),
         ),
       ),
-    ),
+      const CustomPaint(painter: _StarFieldPainter()),
+    ],
   );
 }
 
-class _ReviewDueChip extends StatelessWidget {
-  const _ReviewDueChip({required this.count, required this.onPressed});
-
-  final int count;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) => Semantics(
-    button: true,
-    label:
-        '$count ${count == 1 ? 'proof is' : 'proofs are'} due for review before they fade.',
-    child: InkWell(
-      onTap: onPressed,
-      borderRadius: BorderRadius.circular(GaussRadii.pill),
-      child: Container(
-        height: 40,
-        padding: const EdgeInsets.symmetric(horizontal: 11),
-        decoration: BoxDecoration(
-          color: GaussColors.brass.withValues(alpha: .12),
-          borderRadius: BorderRadius.circular(GaussRadii.pill),
-          border: Border.all(color: GaussColors.brass.withValues(alpha: .5)),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const TheoremStarMark(size: 17),
-            const SizedBox(width: 5),
-            Text(
-              '$count',
-              style: const TextStyle(
-                color: GaussColors.brassLight,
-                fontSize: 12,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-  );
-}
-
-class _HudMetric extends StatelessWidget {
-  const _HudMetric({
-    required this.label,
-    required this.value,
-    required this.signal,
+class _MapHeader extends StatelessWidget {
+  const _MapHeader({
+    required this.controller,
+    required this.subject,
+    required this.sections,
+    required this.section,
+    required this.onSubject,
+    required this.onSection,
   });
 
-  final String label;
-  final String value;
-  final Color signal;
+  final GaussController controller;
+  final Subject subject;
+  final List<StudySectionDefinition> sections;
+  final StudySectionDefinition section;
+  final ValueChanged<Subject> onSubject;
+  final ValueChanged<StudySectionDefinition> onSection;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
+    child: _GlassFrame(
+      radius: 22,
+      padding: const EdgeInsets.fromLTRB(14, 11, 14, 10),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final compact = constraints.maxWidth < 620;
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  GaussWordmark(width: compact ? 104 : 124),
+                  const SizedBox(width: 12),
+                  if (!compact)
+                    const Expanded(
+                      child: Text(
+                        'Chart what you are learning.',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: GaussColors.muted,
+                          fontSize: 11,
+                        ),
+                      ),
+                    )
+                  else
+                    const Spacer(),
+                  _SubjectSwitch(
+                    subject: subject,
+                    onSubject: onSubject,
+                    compact: compact,
+                  ),
+                  const SizedBox(width: 8),
+                  _HeaderMetric(
+                    value: '${controller.study.totalReflected}',
+                    label: compact ? 'MARKS' : 'CHARTED',
+                    color: GaussColors.signalBright,
+                  ),
+                  if (!compact) ...[
+                    const SizedBox(width: 7),
+                    _HeaderMetric(
+                      value: '${controller.study.revisitCount}',
+                      label: 'REVISIT',
+                      color: GaussColors.warning,
+                    ),
+                  ],
+                ],
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 38,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: sections.length,
+                  separatorBuilder: (_, _) => const SizedBox(width: 7),
+                  itemBuilder: (context, index) {
+                    final item = sections[index];
+                    final selected = item.id == section.id;
+                    return Semantics(
+                      button: true,
+                      selected: selected,
+                      label: 'Section ${index + 1}. ${item.title}',
+                      child: ChoiceChip(
+                        selected: selected,
+                        onSelected: (_) => onSection(item),
+                        label: Text(
+                          '${index + 1} · ${item.title}',
+                          maxLines: 1,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    ),
+  );
+}
+
+class _SubjectSwitch extends StatelessWidget {
+  const _SubjectSwitch({
+    required this.subject,
+    required this.onSubject,
+    required this.compact,
+  });
+
+  final Subject subject;
+  final ValueChanged<Subject> onSubject;
+  final bool compact;
 
   @override
   Widget build(BuildContext context) => Container(
-    constraints: const BoxConstraints(minWidth: 56),
-    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+    padding: const EdgeInsets.all(3),
     decoration: BoxDecoration(
-      color: GaussColors.abyss.withValues(alpha: .52),
+      color: GaussColors.abyss.withValues(alpha: .72),
+      borderRadius: BorderRadius.circular(GaussRadii.pill),
+      border: Border.all(color: GaussColors.hairline),
+    ),
+    child: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        _SubjectButton(
+          label: compact ? 'M' : 'Math',
+          selected: subject == Subject.math,
+          onPressed: () => onSubject(Subject.math),
+        ),
+        _SubjectButton(
+          label: compact ? 'P' : 'Physics',
+          selected: subject == Subject.physics,
+          onPressed: () => onSubject(Subject.physics),
+        ),
+      ],
+    ),
+  );
+}
+
+class _SubjectButton extends StatelessWidget {
+  const _SubjectButton({
+    required this.label,
+    required this.selected,
+    required this.onPressed,
+  });
+
+  final String label;
+  final bool selected;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    button: true,
+    selected: selected,
+    child: InkWell(
+      onTap: onPressed,
+      borderRadius: BorderRadius.circular(GaussRadii.pill),
+      child: AnimatedContainer(
+        duration: MediaQuery.disableAnimationsOf(context)
+            ? Duration.zero
+            : const Duration(milliseconds: 170),
+        constraints: const BoxConstraints(minWidth: 44, minHeight: 36),
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        decoration: BoxDecoration(
+          color: selected
+              ? GaussColors.brass.withValues(alpha: .2)
+              : Colors.transparent,
+          borderRadius: BorderRadius.circular(GaussRadii.pill),
+          border: Border.all(
+            color: selected ? GaussColors.brass : Colors.transparent,
+          ),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            color: selected ? GaussColors.brassLight : GaussColors.muted,
+            fontSize: 11,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+class _HeaderMetric extends StatelessWidget {
+  const _HeaderMetric({
+    required this.value,
+    required this.label,
+    required this.color,
+  });
+
+  final String value;
+  final String label;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    constraints: const BoxConstraints(minWidth: 54, minHeight: 44),
+    padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+    decoration: BoxDecoration(
+      color: GaussColors.abyss.withValues(alpha: .56),
       borderRadius: BorderRadius.circular(12),
       border: Border.all(color: GaussColors.hairline),
     ),
@@ -240,18 +419,18 @@ class _HudMetric extends StatelessWidget {
         Text(
           value,
           style: TextStyle(
-            color: signal,
+            color: color,
+            fontSize: 13,
             fontWeight: FontWeight.w900,
-            fontSize: 14,
           ),
         ),
         Text(
           label,
           style: const TextStyle(
             color: GaussColors.fog,
-            fontSize: 8,
-            fontWeight: FontWeight.w800,
-            letterSpacing: .8,
+            fontSize: 7,
+            fontWeight: FontWeight.w900,
+            letterSpacing: .7,
           ),
         ),
       ],
@@ -259,18 +438,41 @@ class _HudMetric extends StatelessWidget {
   );
 }
 
-class _OrreryMap extends StatefulWidget {
-  const _OrreryMap({required this.controller, required this.radial});
+class _StudyPathStage extends StatefulWidget {
+  const _StudyPathStage({
+    required this.controller,
+    required this.section,
+    required this.nodes,
+    required this.currentIndex,
+    required this.selectedKey,
+    required this.onSelected,
+    super.key,
+  });
 
   final GaussController controller;
-  final bool radial;
+  final StudySectionDefinition section;
+  final List<StudyPathNode> nodes;
+  final int currentIndex;
+  final String selectedKey;
+  final ValueChanged<StudyPathNode> onSelected;
 
   @override
-  State<_OrreryMap> createState() => _OrreryMapState();
+  State<_StudyPathStage> createState() => _StudyPathStageState();
 }
 
-class _OrreryMapState extends State<_OrreryMap> {
+class _StudyPathStageState extends State<_StudyPathStage> {
   final ScrollController _scrollController = ScrollController();
+  List<double> _nodeY = const [];
+
+  @override
+  void didUpdateWidget(covariant _StudyPathStage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.section.id != widget.section.id) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (_scrollController.hasClients) _scrollController.jumpTo(0);
+      });
+    }
+  }
 
   @override
   void dispose() {
@@ -278,30 +480,100 @@ class _OrreryMapState extends State<_OrreryMap> {
     super.dispose();
   }
 
+  void jumpToNode(int index) {
+    if (!_scrollController.hasClients || _nodeY.isEmpty) return;
+    final safe = index.clamp(0, _nodeY.length - 1);
+    final target = (_nodeY[safe] - 180).clamp(
+      0.0,
+      _scrollController.position.maxScrollExtent,
+    );
+    _scrollController.animateTo(
+      target,
+      duration: MediaQuery.disableAnimationsOf(context)
+          ? const Duration(milliseconds: 1)
+          : const Duration(milliseconds: 620),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
   @override
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
-      if (widget.radial) {
-        return _RadialScene(
-          controller: widget.controller,
-          size: Size(constraints.maxWidth, constraints.maxHeight),
-        );
-      }
-      final sceneWidth = constraints.maxWidth;
-      final sceneHeight = math.max(2120.0, constraints.maxHeight + 1250);
-      return Scrollbar(
+      final geometry = _PathGeometry.build(
+        width: constraints.maxWidth,
+        nodes: widget.nodes,
+      );
+      _nodeY = geometry.positions.map((position) => position.dy).toList();
+      final sectionReflected = widget.nodes.fold<int>(
+        0,
+        (sum, node) => sum + widget.controller.study.shelf(node.key).reflected,
+      );
+      final sectionTotal = widget.nodes.fold<int>(
+        0,
+        (sum, node) => sum + node.questionCount,
+      );
+      return SingleChildScrollView(
         controller: _scrollController,
-        thumbVisibility: false,
-        child: SingleChildScrollView(
-          controller: _scrollController,
-          physics: const BouncingScrollPhysics(),
-          child: SizedBox(
-            width: sceneWidth,
-            height: sceneHeight,
-            child: _VerticalScene(
-              controller: widget.controller,
-              size: Size(sceneWidth, sceneHeight),
-            ),
+        padding: const EdgeInsets.only(bottom: 190),
+        child: SizedBox(
+          width: constraints.maxWidth,
+          height: geometry.height,
+          child: Stack(
+            clipBehavior: Clip.hardEdge,
+            children: [
+              PositionedDirectional(
+                start: 18,
+                end: 18,
+                top: 12,
+                child: _SectionBanner(
+                  section: widget.section,
+                  reflected: sectionReflected,
+                  total: sectionTotal,
+                ),
+              ),
+              Positioned.fill(
+                child: CustomPaint(
+                  painter: _ContinuousPathPainter(
+                    positions: geometry.positions,
+                    completed: [
+                      for (final node in widget.nodes)
+                        widget.controller.study.shelf(node.key).reflected >=
+                            node.questionCount,
+                    ],
+                  ),
+                ),
+              ),
+              for (final landmark in geometry.landmarks)
+                _PathLandmark(landmark: landmark),
+              for (final header in geometry.unitHeaders)
+                Positioned(
+                  left: 18,
+                  right: 18,
+                  top: header.y,
+                  child: _UnitBanner(
+                    topic: header.topic,
+                    unitNumber: header.unitNumber,
+                    reflected: widget.controller.study
+                        .topic(header.topic.key)
+                        .reflected,
+                  ),
+                ),
+              for (var index = 0; index < widget.nodes.length; index++)
+                Positioned(
+                  left: geometry.positions[index].dx - geometry.nodeSize / 2,
+                  top: geometry.positions[index].dy - geometry.nodeSize / 2,
+                  child: _StudyNode(
+                    node: widget.nodes[index],
+                    size: geometry.nodeSize,
+                    snapshot: widget.controller.study.shelf(
+                      widget.nodes[index].key,
+                    ),
+                    current: index == widget.currentIndex,
+                    selected: widget.nodes[index].key == widget.selectedKey,
+                    onPressed: () => widget.onSelected(widget.nodes[index]),
+                  ),
+                ),
+            ],
           ),
         ),
       );
@@ -309,585 +581,375 @@ class _OrreryMapState extends State<_OrreryMap> {
   );
 }
 
-class _SceneBackdrop extends StatelessWidget {
-  const _SceneBackdrop();
-
-  @override
-  Widget build(BuildContext context) => Stack(
-    fit: StackFit.expand,
-    children: [
-      Image.asset(
-        'assets/visual/map/orrery_atmosphere_portrait.png',
-        fit: BoxFit.cover,
-        alignment: Alignment.center,
-        cacheWidth: 1200,
-        filterQuality: FilterQuality.medium,
-      ),
-      const DecoratedBox(
-        decoration: BoxDecoration(
-          gradient: RadialGradient(
-            radius: 1.05,
-            colors: [Color(0x0013282A), Color(0x3303090B), Color(0xCC03090B)],
-            stops: [0, .68, 1],
-          ),
-        ),
-      ),
-      const CustomPaint(painter: _StarDustPainter()),
-    ],
-  );
-}
-
-class _VerticalScene extends StatelessWidget {
-  const _VerticalScene({required this.controller, required this.size});
-
-  final GaussController controller;
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    final positions = _mobilePositions(size, controller.topics.length);
-    final completed = [
-      for (final topic in controller.topics)
-        controller.completedInTopic(topic.key) > 0,
-    ];
-    return Stack(
-      clipBehavior: Clip.hardEdge,
-      children: [
-        const Positioned.fill(child: _SceneBackdrop()),
-        Positioned.fill(
-          child: CustomPaint(
-            painter: _ProofPathPainter(
-              positions: positions,
-              completed: completed,
-              radial: false,
-            ),
-          ),
-        ),
-        Positioned(
-          left: size.width / 2 - 143,
-          top: 300,
-          child: const _TheoremEngineLandmark(size: 286),
-        ),
-        Positioned(
-          left: size.width / 2 - 126,
-          top: 1585,
-          child: IgnorePointer(
-            child: Opacity(
-              opacity: .72,
-              child: Image.asset(
-                'assets/visual/nodes/boss_observatory.png',
-                width: 252,
-                cacheWidth: 700,
-                filterQuality: FilterQuality.medium,
-              ),
-            ),
-          ),
-        ),
-        for (var i = 0; i < controller.topics.length; i++)
-          Positioned(
-            left: positions[i].dx - 50,
-            top: positions[i].dy - 50,
-            child: _TopicNode(
-              topic: controller.topics[i],
-              index: i,
-              size: 100,
-              selected: controller.selectedTopicKey == controller.topics[i].key,
-              completed: controller.completedInTopic(controller.topics[i].key),
-              onPressed: () => controller.selectTopic(controller.topics[i].key),
-            ),
-          ),
-        const Positioned(
-          left: 0,
-          right: 0,
-          bottom: 0,
-          height: 260,
-          child: IgnorePointer(
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0x0003090B), GaussColors.abyss],
-                ),
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _RadialScene extends StatelessWidget {
-  const _RadialScene({required this.controller, required this.size});
-
-  final GaussController controller;
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    final positions = _radialPositions(size, controller.topics.length);
-    final completed = [
-      for (final topic in controller.topics)
-        controller.completedInTopic(topic.key) > 0,
-    ];
-    final shortest = math.min(size.width, size.height);
-    final nodeSize = (shortest * .105).clamp(78.0, 102.0);
-    final engineSize = (shortest * .29).clamp(212.0, 292.0);
-    return Stack(
-      clipBehavior: Clip.hardEdge,
-      children: [
-        const Positioned.fill(child: _SceneBackdrop()),
-        Positioned.fill(
-          child: CustomPaint(
-            painter: _ProofPathPainter(
-              positions: positions,
-              completed: completed,
-              radial: true,
-            ),
-          ),
-        ),
-        Positioned(
-          left: size.width / 2 - engineSize / 2,
-          top: size.height * .54 - engineSize / 2,
-          child: _TheoremEngineLandmark(size: engineSize),
-        ),
-        for (var i = 0; i < controller.topics.length; i++)
-          Positioned(
-            left: positions[i].dx - nodeSize / 2,
-            top: positions[i].dy - nodeSize / 2,
-            child: _TopicNode(
-              topic: controller.topics[i],
-              index: i,
-              size: nodeSize,
-              selected: controller.selectedTopicKey == controller.topics[i].key,
-              completed: controller.completedInTopic(controller.topics[i].key),
-              onPressed: () => controller.selectTopic(controller.topics[i].key),
-            ),
-          ),
-      ],
-    );
-  }
-}
-
-List<Offset> _mobilePositions(Size size, int count) {
-  final result = <Offset>[];
-  final firstOrbit = <Offset>[
-    Offset(size.width * .25, 184),
-    Offset(size.width * .75, 184),
-    Offset(size.width * .89, 350),
-    Offset(size.width * .78, 590),
-    Offset(size.width * .50, 654),
-    Offset(size.width * .22, 590),
-    Offset(size.width * .11, 350),
-  ];
-  for (var i = 0; i < math.min(7, count); i++) {
-    result.add(firstOrbit[i]);
-  }
-  const columns = [.19, .5, .81];
-  for (var i = 7; i < count; i++) {
-    final local = i - 7;
-    final row = local ~/ 3;
-    var column = local % 3;
-    if (row.isOdd) column = 2 - column;
-    final wobble = math.sin(row * 1.17) * size.width * .025;
-    result.add(Offset(size.width * columns[column] + wobble, 930 + row * 155));
-  }
-  return result;
-}
-
-List<Offset> _radialPositions(Size size, int count) {
-  final center = Offset(size.width / 2, size.height * .54);
-  final shortest = math.min(size.width, size.height);
-  final ringCounts = [7, 11, math.max(0, count - 18)];
-  final radii = [shortest * .18, shortest * .275, shortest * .36];
-  final result = <Offset>[];
-  var index = 0;
-  for (var ring = 0; ring < ringCounts.length; ring++) {
-    final ringCount = ringCounts[ring];
-    if (ringCount == 0) continue;
-    final phase = -math.pi / 2 + ring * .12;
-    for (var slot = 0; slot < ringCount && index < count; slot++, index++) {
-      final angle = phase + math.pi * 2 * slot / ringCount;
-      result.add(
-        center + Offset(math.cos(angle), math.sin(angle)) * radii[ring],
-      );
-    }
-  }
-  return result;
-}
-
-class _ProofPathPainter extends CustomPainter {
-  const _ProofPathPainter({
+class _PathGeometry {
+  const _PathGeometry({
     required this.positions,
-    required this.completed,
-    required this.radial,
+    required this.unitHeaders,
+    required this.landmarks,
+    required this.nodeSize,
+    required this.height,
   });
 
   final List<Offset> positions;
-  final List<bool> completed;
-  final bool radial;
+  final List<_UnitHeaderGeometry> unitHeaders;
+  final List<_LandmarkGeometry> landmarks;
+  final double nodeSize;
+  final double height;
 
-  @override
-  void paint(Canvas canvas, Size size) {
-    final base = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = radial ? 1.1 : 2
-      ..strokeCap = StrokeCap.round
-      ..color = GaussColors.brass.withValues(alpha: radial ? .22 : .28);
-    final active = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = radial ? 2.1 : 3
-      ..strokeCap = StrokeCap.round
-      ..color = GaussColors.brassLight.withValues(alpha: .85);
-    final signal = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = radial ? 1.4 : 2.2
-      ..strokeCap = StrokeCap.round
-      ..color = GaussColors.signal.withValues(alpha: .72);
-
-    if (radial) {
-      final center = Offset(size.width / 2, size.height * .535);
-      final shortest = math.min(size.width, size.height);
-      for (final factor in const [.205, .315, .415]) {
-        canvas.drawCircle(center, shortest * factor, base);
-      }
-      for (var i = 0; i < positions.length; i++) {
-        final vector = positions[i] - center;
-        final inner = center + vector * .91;
-        final outer = center + vector * 1.035;
-        canvas.drawLine(inner, outer, completed[i] ? signal : base);
-      }
-      return;
-    }
-
-    for (var i = 0; i < positions.length - 1; i++) {
-      final from = positions[i];
-      final to = positions[i + 1];
-      final bend = Offset((from.dx + to.dx) / 2, (from.dy + to.dy) / 2);
-      final path = Path()
-        ..moveTo(from.dx, from.dy)
-        ..quadraticBezierTo(
-          bend.dx + (i.isEven ? 16 : -16),
-          bend.dy,
-          to.dx,
-          to.dy,
+  static _PathGeometry build({
+    required double width,
+    required List<StudyPathNode> nodes,
+  }) {
+    final compact = width < 560;
+    final nodeSize = compact ? 76.0 : 86.0;
+    final center = width / 2;
+    final amplitude = math.min(width * (compact ? .28 : .31), 220.0);
+    final positions = <Offset>[];
+    final headers = <_UnitHeaderGeometry>[];
+    final landmarks = <_LandmarkGeometry>[];
+    var y = 190.0;
+    var unitNumber = 0;
+    for (var index = 0; index < nodes.length; index++) {
+      final node = nodes[index];
+      if (node.beginsUnit) {
+        unitNumber++;
+        y += index == 0 ? 76 : 118;
+        headers.add(
+          _UnitHeaderGeometry(
+            topic: node.topic,
+            unitNumber: unitNumber,
+            y: y - 83,
+          ),
         );
-      canvas.drawPath(path, completed[i] ? active : base);
-      if (completed[i]) {
-        canvas.drawCircle(to, 3.1, Paint()..color = GaussColors.signalBright);
       }
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant _ProofPathPainter oldDelegate) =>
-      oldDelegate.positions != positions ||
-      oldDelegate.completed != completed ||
-      oldDelegate.radial != radial;
-}
-
-class _StarDustPainter extends CustomPainter {
-  const _StarDustPainter();
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final random = math.Random(1847);
-    for (
-      var i = 0;
-      i < math.max(50, (size.width * size.height / 8500).round());
-      i++
-    ) {
-      final p = Offset(
-        random.nextDouble() * size.width,
-        random.nextDouble() * size.height,
-      );
-      final radius = random.nextDouble() * .8 + .18;
-      canvas.drawCircle(
-        p,
-        radius,
-        Paint()
-          ..color = GaussColors.ivory.withValues(
-            alpha: random.nextDouble() * .22 + .05,
+      final phase = index * .88 + unitNumber * .22;
+      final x = center + math.sin(phase) * amplitude;
+      positions.add(Offset(x, y));
+      if (index > 2 && index % 7 == 3) {
+        final placeStart = x >= center;
+        landmarks.add(
+          _LandmarkGeometry(
+            top: y - (compact ? 38 : 54),
+            start: placeStart ? 12 : null,
+            end: placeStart ? null : 12,
+            size: compact ? 104 : 146,
+            kind: (index ~/ 7) % 3,
           ),
-      );
+        );
+      }
+      y += compact ? 112 : 122;
     }
+    return _PathGeometry(
+      positions: positions,
+      unitHeaders: headers,
+      landmarks: landmarks,
+      nodeSize: nodeSize,
+      height: y + 150,
+    );
   }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
-class _TheoremEngineLandmark extends StatelessWidget {
-  const _TheoremEngineLandmark({required this.size});
+class _UnitHeaderGeometry {
+  const _UnitHeaderGeometry({
+    required this.topic,
+    required this.unitNumber,
+    required this.y,
+  });
 
+  final TopicDescriptor topic;
+  final int unitNumber;
+  final double y;
+}
+
+class _LandmarkGeometry {
+  const _LandmarkGeometry({
+    required this.top,
+    required this.start,
+    required this.end,
+    required this.size,
+    required this.kind,
+  });
+
+  final double top;
+  final double? start;
+  final double? end;
   final double size;
+  final int kind;
+}
+
+class _SectionBanner extends StatelessWidget {
+  const _SectionBanner({
+    required this.section,
+    required this.reflected,
+    required this.total,
+  });
+
+  final StudySectionDefinition section;
+  final int reflected;
+  final int total;
 
   @override
-  Widget build(BuildContext context) => Semantics(
-    container: true,
-    label: 'Theorem Engine. Core of your mathematics and physics map.',
-    child: SizedBox.square(
-      dimension: size,
-      child: Stack(
-        alignment: Alignment.center,
-        clipBehavior: Clip.none,
-        children: [
-          Container(
-            width: size * .78,
-            height: size * .78,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: GaussColors.brass.withValues(alpha: .2),
-                  blurRadius: size * .19,
-                  spreadRadius: size * .015,
-                ),
-                BoxShadow(
-                  color: GaussColors.signal.withValues(alpha: .08),
-                  blurRadius: size * .28,
-                ),
-              ],
-            ),
-          ),
-          Image.asset(
-            'assets/visual/map/theorem_engine.png',
-            width: size,
-            height: size,
-            cacheWidth: 1200,
-            filterQuality: FilterQuality.medium,
-          ),
-          Positioned(
-            bottom: size * .09,
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: size * .065,
-                vertical: size * .022,
-              ),
-              decoration: BoxDecoration(
-                color: GaussColors.abyss.withValues(alpha: .84),
-                borderRadius: BorderRadius.circular(GaussRadii.pill),
-                border: Border.all(
-                  color: GaussColors.brass.withValues(alpha: .48),
-                ),
-              ),
+  Widget build(BuildContext context) => Center(
+    child: ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 760),
+      child: _GlassFrame(
+        radius: 20,
+        padding: const EdgeInsets.fromLTRB(16, 13, 16, 12),
+        child: Row(
+          children: [
+            const TheoremStarMark(size: 38),
+            const SizedBox(width: 12),
+            Expanded(
               child: Column(
-                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'THEOREM ENGINE',
-                    style: TextStyle(
-                      color: GaussColors.ivory,
-                      fontSize: (size * .033).clamp(9, 12),
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 1,
-                    ),
+                    section.title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
+                  const SizedBox(height: 2),
                   Text(
-                    'Every solved question lights the map',
-                    style: TextStyle(
+                    section.subtitle,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
                       color: GaussColors.muted,
-                      fontSize: (size * .025).clamp(7, 9),
+                      fontSize: 10.5,
+                      height: 1.25,
                     ),
                   ),
                 ],
               ),
             ),
-          ),
-        ],
+            const SizedBox(width: 12),
+            Text(
+              '$reflected / $total',
+              style: const TextStyle(
+                color: GaussColors.signalBright,
+                fontWeight: FontWeight.w900,
+                fontSize: 12,
+              ),
+            ),
+          ],
+        ),
       ),
     ),
   );
 }
 
-enum _NodeState { available, current, completed, referenceOnly }
-
-class _TopicNode extends StatelessWidget {
-  const _TopicNode({
+class _UnitBanner extends StatelessWidget {
+  const _UnitBanner({
     required this.topic,
-    required this.index,
-    required this.size,
-    required this.selected,
-    required this.completed,
-    required this.onPressed,
+    required this.unitNumber,
+    required this.reflected,
   });
 
   final TopicDescriptor topic;
-  final int index;
-  final double size;
-  final bool selected;
-  final int completed;
-  final VoidCallback onPressed;
+  final int unitNumber;
+  final int reflected;
 
-  _NodeState get state {
-    if (topic.missionReadyCount == 0) return _NodeState.referenceOnly;
-    if (selected) return _NodeState.current;
-    if (completed > 0) return _NodeState.completed;
-    return _NodeState.available;
+  @override
+  Widget build(BuildContext context) => Center(
+    child: ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 520),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 9),
+        decoration: BoxDecoration(
+          color: GaussColors.deepInk.withValues(alpha: .9),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: GaussColors.brass.withValues(alpha: .3)),
+        ),
+        child: Row(
+          children: [
+            Text(
+              'UNIT $unitNumber',
+              style: const TextStyle(
+                color: GaussColors.brassLight,
+                fontSize: 9,
+                fontWeight: FontWeight.w900,
+                letterSpacing: .9,
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Directionality(
+                textDirection: TextDirection.rtl,
+                child: Text(
+                  topic.label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    color: GaussColors.ivory,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 8),
+            Text(
+              '$reflected / ${topic.questionCount}',
+              style: const TextStyle(color: GaussColors.fog, fontSize: 9.5),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class _PathLandmark extends StatelessWidget {
+  const _PathLandmark({required this.landmark});
+
+  final _LandmarkGeometry landmark;
+
+  @override
+  Widget build(BuildContext context) {
+    final asset = switch (landmark.kind) {
+      0 => 'assets/visual/map/theorem_engine.png',
+      1 => 'assets/visual/nodes/boss_observatory.png',
+      _ => 'assets/visual/mascot/mira_thinking.png',
+    };
+    return PositionedDirectional(
+      start: landmark.start,
+      end: landmark.end,
+      top: landmark.top,
+      child: IgnorePointer(
+        child: Opacity(
+          opacity: landmark.kind == 2 ? .7 : .58,
+          child: Image.asset(
+            asset,
+            width: landmark.size,
+            height: landmark.size,
+            fit: BoxFit.contain,
+            cacheWidth: 480,
+            filterQuality: FilterQuality.medium,
+          ),
+        ),
+      ),
+    );
   }
+}
+
+class _StudyNode extends StatelessWidget {
+  const _StudyNode({
+    required this.node,
+    required this.size,
+    required this.snapshot,
+    required this.current,
+    required this.selected,
+    required this.onPressed,
+  });
+
+  final StudyPathNode node;
+  final double size;
+  final StudyTopicSnapshot snapshot;
+  final bool current;
+  final bool selected;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     final reducedMotion = MediaQuery.disableAnimationsOf(context);
-    final nodeState = state;
-    final progress = topic.missionReadyCount == 0
-        ? 0.0
-        : (completed / topic.missionReadyCount).clamp(0.0, 1.0);
-    final accent = switch (nodeState) {
-      _NodeState.current => GaussColors.brassLight,
-      _NodeState.completed => GaussColors.signalBright,
-      _NodeState.referenceOnly => GaussColors.fog,
-      _NodeState.available =>
-        topic.subject == Subject.math ? GaussColors.brass : GaussColors.ice,
-    };
-    final semanticState = switch (nodeState) {
-      _NodeState.current => 'Current chapter',
-      _NodeState.completed => '$completed problems solved here',
-      _NodeState.referenceOnly => 'Reference only, no scored set available',
-      _NodeState.available => 'Available',
-    };
+    final progress = (snapshot.reflected / node.questionCount).clamp(0.0, 1.0);
+    final complete = snapshot.reflected >= node.questionCount;
+    final accent = complete
+        ? GaussColors.signalBright
+        : current || selected
+        ? GaussColors.brassLight
+        : node.topic.subject == Subject.math
+        ? GaussColors.brass
+        : GaussColors.ice;
     return Semantics(
       button: true,
       selected: selected,
-      label: '${topic.label}. $semanticState.',
-      hint: 'Double tap to inspect this chapter.',
+      label:
+          '${node.topic.label}. ${node.setLabel}. ${snapshot.reflected} of ${node.questionCount} reflected. ${snapshot.revisit} marked for revisit.',
+      hint: 'Double tap to inspect this study set.',
       child: InkResponse(
         onTap: onPressed,
-        radius: size * .58,
-        containedInkWell: false,
+        radius: size * .62,
         child: AnimatedScale(
           duration: reducedMotion
               ? Duration.zero
-              : const Duration(milliseconds: 260),
+              : const Duration(milliseconds: 220),
           curve: Curves.easeOutBack,
-          scale: selected ? 1.08 : 1,
-          child: SizedBox(
-            width: size,
-            height: size + 38,
-            child: Column(
+          scale: selected ? 1.09 : 1,
+          child: SizedBox.square(
+            dimension: size,
+            child: Stack(
+              alignment: Alignment.center,
+              clipBehavior: Clip.none,
               children: [
-                SizedBox.square(
-                  dimension: size,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    clipBehavior: Clip.none,
-                    children: [
-                      if (selected)
-                        Container(
-                          width: size * .82,
-                          height: size * .82,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            boxShadow: [
-                              BoxShadow(
-                                color: GaussColors.brassLight.withValues(
-                                  alpha: .4,
-                                ),
-                                blurRadius: 24,
-                                spreadRadius: 2,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ColorFiltered(
-                        colorFilter: nodeState == _NodeState.referenceOnly
-                            ? const ColorFilter.matrix(<double>[
-                                .42,
-                                .42,
-                                .42,
-                                0,
-                                0,
-                                .42,
-                                .42,
-                                .42,
-                                0,
-                                0,
-                                .42,
-                                .42,
-                                .42,
-                                0,
-                                0,
-                                0,
-                                0,
-                                0,
-                                .62,
-                                0,
-                              ])
-                            : const ColorFilter.mode(
-                                Colors.transparent,
-                                BlendMode.dst,
-                              ),
-                        child: Image.asset(
-                          'assets/visual/nodes/topic_shell.png',
-                          width: size,
-                          height: size,
-                          cacheWidth: 520,
-                          filterQuality: FilterQuality.medium,
-                        ),
-                      ),
-                      CustomPaint(
-                        size: Size.square(size * .79),
-                        painter: _NodeProgressPainter(
-                          color: accent,
-                          progress: progress,
-                          current: selected,
-                        ),
-                      ),
-                      Positioned(
-                        top: size * .25,
-                        child: TopicGlyph(
-                          topicKey: topic.key,
-                          color: accent,
-                          size: size * .29,
-                        ),
-                      ),
-                      Positioned(
-                        top: size * .08,
-                        right: size * .1,
-                        child: _NodeNumber(index: index + 1),
-                      ),
-                      Positioned(
-                        bottom: size * .1,
-                        left: size * .09,
-                        child: _NodeStatus(state: nodeState),
-                      ),
-                    ],
-                  ),
-                ),
-                Transform.translate(
-                  offset: const Offset(0, -8),
-                  child: Container(
-                    constraints: BoxConstraints(maxWidth: size * .98),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 5,
-                      vertical: 3,
-                    ),
+                if (current || selected)
+                  Container(
+                    width: size * .76,
+                    height: size * .76,
                     decoration: BoxDecoration(
-                      color: GaussColors.abyss.withValues(alpha: .74),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Directionality(
-                      textDirection: TextDirection.rtl,
-                      child: Text(
-                        topic.label,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: nodeState == _NodeState.referenceOnly
-                              ? GaussColors.fog
-                              : GaussColors.ivory,
-                          fontSize: (size * .085).clamp(9.2, 11.5),
-                          fontWeight: selected
-                              ? FontWeight.w800
-                              : FontWeight.w600,
-                          height: 1.15,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: accent.withValues(alpha: .38),
+                          blurRadius: 24,
+                          spreadRadius: 2,
                         ),
-                      ),
+                      ],
                     ),
                   ),
+                Image.asset(
+                  'assets/visual/nodes/topic_shell.png',
+                  width: size,
+                  height: size,
+                  cacheWidth: 360,
+                  filterQuality: FilterQuality.medium,
                 ),
+                CustomPaint(
+                  size: Size.square(size * .79),
+                  painter: _NodeProgressPainter(
+                    color: accent,
+                    progress: progress,
+                    emphasized: current || selected,
+                  ),
+                ),
+                TopicGlyph(
+                  topicKey: node.topic.key,
+                  color: accent,
+                  size: size * .31,
+                ),
+                PositionedDirectional(
+                  end: 3,
+                  top: 2,
+                  child: _NodeNumber(value: node.partIndex + 1),
+                ),
+                if (complete)
+                  const PositionedDirectional(
+                    start: 2,
+                    bottom: 3,
+                    child: _NodeBadge(
+                      icon: Icons.check_rounded,
+                      color: GaussColors.signalBright,
+                    ),
+                  )
+                else if (snapshot.revisit > 0)
+                  const PositionedDirectional(
+                    start: 2,
+                    bottom: 3,
+                    child: _NodeBadge(
+                      icon: Icons.bookmark_outline_rounded,
+                      color: GaussColors.warning,
+                    ),
+                  )
+                else if (current)
+                  const PositionedDirectional(
+                    start: 2,
+                    bottom: 3,
+                    child: _NodeBadge(
+                      icon: Icons.auto_stories_outlined,
+                      color: GaussColors.brassLight,
+                    ),
+                  ),
               ],
             ),
           ),
@@ -901,12 +963,12 @@ class _NodeProgressPainter extends CustomPainter {
   const _NodeProgressPainter({
     required this.color,
     required this.progress,
-    required this.current,
+    required this.emphasized,
   });
 
   final Color color;
   final double progress;
-  final bool current;
+  final bool emphasized;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -918,8 +980,8 @@ class _NodeProgressPainter extends CustomPainter {
       false,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = current ? 2.2 : 1.2
-        ..color = color.withValues(alpha: current ? .72 : .25),
+        ..strokeWidth = emphasized ? 2.2 : 1.2
+        ..color = color.withValues(alpha: emphasized ? .62 : .2),
     );
     if (progress > 0) {
       canvas.drawArc(
@@ -930,7 +992,7 @@ class _NodeProgressPainter extends CustomPainter {
         Paint()
           ..style = PaintingStyle.stroke
           ..strokeCap = StrokeCap.round
-          ..strokeWidth = 3
+          ..strokeWidth = 3.2
           ..color = GaussColors.signalBright,
       );
     }
@@ -940,13 +1002,13 @@ class _NodeProgressPainter extends CustomPainter {
   bool shouldRepaint(covariant _NodeProgressPainter oldDelegate) =>
       oldDelegate.color != color ||
       oldDelegate.progress != progress ||
-      oldDelegate.current != current;
+      oldDelegate.emphasized != emphasized;
 }
 
 class _NodeNumber extends StatelessWidget {
-  const _NodeNumber({required this.index});
+  const _NodeNumber({required this.value});
 
-  final int index;
+  final int value;
 
   @override
   Widget build(BuildContext context) => Container(
@@ -956,137 +1018,243 @@ class _NodeNumber extends StatelessWidget {
     decoration: BoxDecoration(
       shape: BoxShape.circle,
       color: GaussColors.deepInk,
-      border: Border.all(color: GaussColors.brass.withValues(alpha: .58)),
+      border: Border.all(color: GaussColors.brass.withValues(alpha: .6)),
     ),
     child: Text(
-      '$index',
+      '$value',
       style: const TextStyle(
         color: GaussColors.ivory,
         fontSize: 9,
-        fontWeight: FontWeight.w800,
+        fontWeight: FontWeight.w900,
       ),
     ),
   );
 }
 
-class _NodeStatus extends StatelessWidget {
-  const _NodeStatus({required this.state});
+class _NodeBadge extends StatelessWidget {
+  const _NodeBadge({required this.icon, required this.color});
 
-  final _NodeState state;
+  final IconData icon;
+  final Color color;
 
   @override
-  Widget build(BuildContext context) {
-    if (state == _NodeState.available) return const SizedBox.shrink();
-    final color = switch (state) {
-      _NodeState.current => GaussColors.brassLight,
-      _NodeState.completed => GaussColors.signalBright,
-      _NodeState.referenceOnly => GaussColors.fog,
-      _NodeState.available => Colors.transparent,
-    };
-    return Container(
-      width: 24,
-      height: 24,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: GaussColors.deepInk,
-        border: Border.all(color: color),
-      ),
-      child: state == _NodeState.current
-          ? const TheoremStarMark(size: 17)
-          : Icon(
-              state == _NodeState.completed
-                  ? Icons.check_rounded
-                  : Icons.shield_outlined,
-              size: 14,
-              color: color,
-            ),
-    );
-  }
+  Widget build(BuildContext context) => Container(
+    width: 25,
+    height: 25,
+    alignment: Alignment.center,
+    decoration: BoxDecoration(
+      color: GaussColors.deepInk,
+      shape: BoxShape.circle,
+      border: Border.all(color: color),
+    ),
+    child: Icon(icon, size: 14, color: color),
+  );
 }
 
-class _TopicInspector extends StatelessWidget {
-  const _TopicInspector({required this.controller});
+class _ContinuousPathPainter extends CustomPainter {
+  const _ContinuousPathPainter({
+    required this.positions,
+    required this.completed,
+  });
 
-  final GaussController controller;
+  final List<Offset> positions;
+  final List<bool> completed;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (positions.length < 2) return;
+    final path = Path()..moveTo(positions.first.dx, positions.first.dy);
+    for (var index = 1; index < positions.length; index++) {
+      final previous = positions[index - 1];
+      final current = positions[index];
+      final middleY = (previous.dy + current.dy) / 2;
+      path.cubicTo(
+        previous.dx,
+        middleY,
+        current.dx,
+        middleY,
+        current.dx,
+        current.dy,
+      );
+    }
+    canvas.drawPath(
+      path,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 5.4
+        ..strokeCap = StrokeCap.round
+        ..color = const Color(0xB8050B0D),
+    );
+    canvas.drawPath(
+      path,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.5
+        ..strokeCap = StrokeCap.round
+        ..color = GaussColors.brass.withValues(alpha: .38),
+    );
+    for (var index = 0; index < positions.length - 1; index++) {
+      if (!completed[index]) continue;
+      final segment = Path()..moveTo(positions[index].dx, positions[index].dy);
+      final next = positions[index + 1];
+      final middleY = (positions[index].dy + next.dy) / 2;
+      segment.cubicTo(
+        positions[index].dx,
+        middleY,
+        next.dx,
+        middleY,
+        next.dx,
+        next.dy,
+      );
+      canvas.drawPath(
+        segment,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 3
+          ..strokeCap = StrokeCap.round
+          ..color = GaussColors.signalBright.withValues(alpha: .72),
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _ContinuousPathPainter oldDelegate) =>
+      oldDelegate.positions != positions || oldDelegate.completed != completed;
+}
+
+class _StudyDock extends StatelessWidget {
+  const _StudyDock({
+    required this.node,
+    required this.snapshot,
+    required this.onOpen,
+  });
+
+  final StudyPathNode node;
+  final StudyTopicSnapshot snapshot;
+  final VoidCallback onOpen;
+
+  @override
+  Widget build(BuildContext context) => _GlassFrame(
+    radius: 22,
+    padding: const EdgeInsets.fromLTRB(12, 11, 11, 11),
+    child: Row(
+      children: [
+        Container(
+          width: 52,
+          height: 52,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: GaussColors.deepInk,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: GaussColors.brass),
+          ),
+          child: TopicGlyph(
+            topicKey: node.topic.key,
+            color: GaussColors.brassLight,
+            size: 29,
+          ),
+        ),
+        const SizedBox(width: 11),
+        Expanded(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Directionality(
+                textDirection: TextDirection.rtl,
+                child: Text(
+                  node.topic.label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    color: GaussColors.ivory,
+                    fontSize: 13.5,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                '${node.setLabel} · ${snapshot.reflected}/${node.questionCount} charted · ${snapshot.revisit} revisit',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(color: GaussColors.muted, fontSize: 10),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(width: 9),
+        FilledButton(
+          onPressed: onOpen,
+          style: FilledButton.styleFrom(
+            minimumSize: const Size(88, 48),
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+          ),
+          child: const Text('Study'),
+        ),
+      ],
+    ),
+  );
+}
+
+class _StudyInspector extends StatelessWidget {
+  const _StudyInspector({
+    required this.section,
+    required this.node,
+    required this.snapshot,
+    required this.topicSnapshot,
+    required this.onOpen,
+  });
+
+  final StudySectionDefinition section;
+  final StudyPathNode node;
+  final StudyTopicSnapshot snapshot;
+  final StudyTopicSnapshot topicSnapshot;
+  final VoidCallback onOpen;
 
   @override
   Widget build(BuildContext context) {
-    final topic = controller.selectedTopic;
-    final completed = controller.completedInTopic(topic.key);
-    final progress = topic.missionReadyCount == 0
-        ? 0.0
-        : (completed / topic.missionReadyCount).clamp(0.0, 1.0);
-    return DecoratedBox(
-      decoration: const BoxDecoration(
-        color: GaussColors.ink,
-        border: Border(left: BorderSide(color: GaussColors.line)),
-      ),
-      child: SafeArea(
-        left: false,
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
+    final progress = snapshot.reflected / node.questionCount;
+    return Container(
+      margin: const EdgeInsets.fromLTRB(0, 12, 12, 12),
+      child: _GlassFrame(
+        radius: 24,
+        padding: const EdgeInsets.fromLTRB(20, 19, 20, 18),
+        child: SafeArea(
+          left: false,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Row(
-                children: [
-                  Text(
-                    'MISSION CHART',
-                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                      color: GaussColors.brassLight,
-                      letterSpacing: 1.5,
-                    ),
-                  ),
-                  const Spacer(),
-                  const _OfflineBadge(),
-                ],
+              const Text(
+                'STUDY INSPECTOR',
+                style: TextStyle(
+                  color: GaussColors.brassLight,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 1.3,
+                ),
               ),
-              const SizedBox(height: 16),
-              Row(
-                children: [
-                  Expanded(
-                    child: _SubjectSwitch(
-                      subject: Subject.math,
-                      active: topic.subject == Subject.math,
-                      onPressed: () =>
-                          _selectFirstSubject(controller, Subject.math),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: _SubjectSwitch(
-                      subject: Subject.physics,
-                      active: topic.subject == Subject.physics,
-                      onPressed: () =>
-                          _selectFirstSubject(controller, Subject.physics),
-                    ),
-                  ),
-                ],
+              const SizedBox(height: 8),
+              Text(
+                section.title,
+                style: const TextStyle(color: GaussColors.fog, fontSize: 11),
               ),
-              const SizedBox(height: 22),
+              const SizedBox(height: 18),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    width: 62,
-                    height: 62,
+                    width: 64,
+                    height: 64,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       color: GaussColors.deepInk,
                       shape: BoxShape.circle,
                       border: Border.all(color: GaussColors.brass),
-                      boxShadow: [
-                        BoxShadow(
-                          color: GaussColors.brass.withValues(alpha: .13),
-                          blurRadius: 18,
-                        ),
-                      ],
                     ),
                     child: TopicGlyph(
-                      topicKey: topic.key,
+                      topicKey: node.topic.key,
                       color: GaussColors.brassLight,
-                      size: 34,
+                      size: 35,
                     ),
                   ),
                   const SizedBox(width: 13),
@@ -1095,19 +1263,19 @@ class _TopicInspector extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'CHAPTER ${controller.topics.indexOf(topic) + 1}',
+                          'UNIT · ${node.setLabel.toUpperCase()}',
                           style: const TextStyle(
                             color: GaussColors.fog,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w800,
-                            letterSpacing: 1,
+                            fontSize: 9,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: .8,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 5),
                         Directionality(
                           textDirection: TextDirection.rtl,
                           child: Text(
-                            topic.label,
+                            node.topic.label,
                             maxLines: 3,
                             overflow: TextOverflow.ellipsis,
                             style: Theme.of(context).textTheme.titleLarge,
@@ -1119,44 +1287,52 @@ class _TopicInspector extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-              _MasteryStrip(
+              _ProgressReading(
+                label: 'This study set',
+                value: snapshot.reflected,
+                total: node.questionCount,
                 progress: progress,
-                completed: completed,
-                available: topic.missionReadyCount,
+              ),
+              const SizedBox(height: 12),
+              _ProgressReading(
+                label: 'Whole unit',
+                value: topicSnapshot.reflected,
+                total: node.topic.questionCount,
+                progress: topicSnapshot.reflected / node.topic.questionCount,
               ),
               const SizedBox(height: 18),
-              _EtchedFrame(
-                radius: 18,
+              Container(
                 padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: GaussColors.deepInk.withValues(alpha: .72),
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(color: GaussColors.hairline),
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'WHAT THIS CHAPTER TRAINS',
+                      'STUDY LENS',
                       style: TextStyle(
                         color: GaussColors.brassLight,
-                        fontSize: 10,
+                        fontSize: 9,
                         fontWeight: FontWeight.w900,
-                        letterSpacing: 1.1,
+                        letterSpacing: 1,
                       ),
                     ),
-                    const SizedBox(height: 12),
-                    for (final item in _focusAreas(topic.key))
+                    const SizedBox(height: 11),
+                    for (final item in _focusAreas(node.topic.key))
                       Padding(
                         padding: const EdgeInsets.only(bottom: 8),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Padding(
-                              padding: EdgeInsets.only(top: 6),
-                              child: SizedBox.square(
-                                dimension: 5,
-                                child: DecoratedBox(
-                                  decoration: BoxDecoration(
-                                    color: GaussColors.signal,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
+                              padding: EdgeInsets.only(top: 5),
+                              child: Icon(
+                                Icons.circle,
+                                size: 5,
+                                color: GaussColors.signalBright,
                               ),
                             ),
                             const SizedBox(width: 9),
@@ -1165,7 +1341,7 @@ class _TopicInspector extends StatelessWidget {
                                 item,
                                 style: const TextStyle(
                                   color: GaussColors.muted,
-                                  fontSize: 12,
+                                  fontSize: 11.5,
                                   height: 1.35,
                                 ),
                               ),
@@ -1177,48 +1353,42 @@ class _TopicInspector extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              if (controller.resumableMission != null) ...[
-                OutlinedButton.icon(
-                  onPressed: () => context.push('/resume'),
-                  icon: const Icon(Icons.play_arrow_rounded),
-                  label: const Text('Resume saved mission'),
-                ),
-                const SizedBox(height: 9),
-              ],
-              if (topic.preservedArchiveCount > 0) ...[
-                OutlinedButton.icon(
-                  onPressed: () => context.push('/archive/${topic.key}'),
-                  icon: const Icon(Icons.menu_book_outlined, size: 19),
-                  label: Text(
-                    'Reading room · ${topic.preservedArchiveCount} preserved',
-                  ),
-                ),
-                const SizedBox(height: 9),
-              ],
-              FilledButton(
-                onPressed: topic.missionReadyCount == 0
-                    ? null
-                    : () => _startMission(context, controller, topic),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+              if (snapshot.revisit > 0) ...[
+                Row(
                   children: [
-                    Text(
-                      topic.missionReadyCount == 0
-                          ? 'No scored set yet'
-                          : 'Start mission',
+                    const Icon(
+                      Icons.bookmark_outline_rounded,
+                      color: GaussColors.warning,
+                      size: 18,
                     ),
-                    const SizedBox(width: 9),
-                    const Icon(Icons.arrow_forward_rounded, size: 20),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        '${snapshot.revisit} ${snapshot.revisit == 1 ? 'question is' : 'questions are'} waiting for another pass.',
+                        style: const TextStyle(
+                          color: GaussColors.muted,
+                          fontSize: 11,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
+                const SizedBox(height: 12),
+              ],
+              FilledButton.icon(
+                onPressed: onOpen,
+                icon: const Icon(Icons.auto_stories_outlined),
+                label: const Text('Open study set'),
               ),
               const SizedBox(height: 9),
-              Text(
-                topic.missionReadyCount == 0
-                    ? 'This chapter remains safely preserved in your offline library.'
-                    : 'A focused set drawn from ${topic.questionCount} offline questions.',
+              const Text(
+                'Choose a hypothesis, reveal the preserved source, then record your own reflection. Nothing is scored.',
                 textAlign: TextAlign.center,
-                style: const TextStyle(color: GaussColors.fog, fontSize: 10.5),
+                style: TextStyle(
+                  color: GaussColors.fog,
+                  fontSize: 10,
+                  height: 1.35,
+                ),
               ),
             ],
           ),
@@ -1228,218 +1398,78 @@ class _TopicInspector extends StatelessWidget {
   }
 }
 
-class _SubjectSwitch extends StatelessWidget {
-  const _SubjectSwitch({
-    required this.subject,
-    required this.active,
-    required this.onPressed,
-  });
-
-  final Subject subject;
-  final bool active;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) => Semantics(
-    button: true,
-    selected: active,
-    label: subject == Subject.math ? 'Math chapters' : 'Physics chapters',
-    child: InkWell(
-      onTap: onPressed,
-      borderRadius: BorderRadius.circular(13),
-      child: AnimatedContainer(
-        duration: MediaQuery.disableAnimationsOf(context)
-            ? Duration.zero
-            : const Duration(milliseconds: 180),
-        height: 44,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: active
-              ? GaussColors.brass.withValues(alpha: .12)
-              : GaussColors.deepInk,
-          borderRadius: BorderRadius.circular(13),
-          border: Border.all(
-            color: active ? GaussColors.brass : GaussColors.hairline,
-          ),
-        ),
-        child: Text(
-          subject == Subject.math ? 'Math' : 'Physics',
-          style: TextStyle(
-            color: active ? GaussColors.brassLight : GaussColors.muted,
-            fontWeight: FontWeight.w800,
-            fontSize: 12,
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-class _MasteryStrip extends StatelessWidget {
-  const _MasteryStrip({
+class _ProgressReading extends StatelessWidget {
+  const _ProgressReading({
+    required this.label,
+    required this.value,
+    required this.total,
     required this.progress,
-    required this.completed,
-    required this.available,
   });
 
+  final String label;
+  final int value;
+  final int total;
   final double progress;
-  final int completed;
-  final int available;
 
   @override
   Widget build(BuildContext context) => Column(
     children: [
       Row(
         children: [
-          const Text(
-            'Solved here',
-            style: TextStyle(color: GaussColors.muted, fontSize: 12),
+          Expanded(
+            child: Text(
+              label,
+              style: const TextStyle(color: GaussColors.muted, fontSize: 11),
+            ),
           ),
-          const Spacer(),
           Text(
-            available == 0 ? 'Reference only' : '$completed solved',
+            '$value / $total',
             style: const TextStyle(
               color: GaussColors.ivory,
-              fontSize: 12,
-              fontWeight: FontWeight.w800,
+              fontSize: 11,
+              fontWeight: FontWeight.w900,
             ),
           ),
         ],
       ),
-      const SizedBox(height: 8),
+      const SizedBox(height: 7),
       ClipRRect(
         borderRadius: BorderRadius.circular(GaussRadii.pill),
-        child: LinearProgressIndicator(value: progress, minHeight: 8),
+        child: LinearProgressIndicator(
+          value: progress.clamp(0.0, 1.0),
+          minHeight: 8,
+        ),
       ),
     ],
   );
 }
 
-class _MissionDock extends StatelessWidget {
-  const _MissionDock({required this.controller});
+class _JumpToCurrentButton extends StatelessWidget {
+  const _JumpToCurrentButton({required this.onPressed});
 
-  final GaussController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    final topic = controller.selectedTopic;
-    final completed = controller.completedInTopic(topic.key);
-    return _EtchedFrame(
-      radius: 22,
-      padding: const EdgeInsets.fromLTRB(13, 12, 12, 12),
-      child: Row(
-        children: [
-          Container(
-            width: 54,
-            height: 54,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: GaussColors.deepInk,
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: GaussColors.brass),
-            ),
-            child: TopicGlyph(
-              topicKey: topic.key,
-              color: GaussColors.brassLight,
-              size: 31,
-            ),
-          ),
-          const SizedBox(width: 11),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Text(
-                    topic.label,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: GaussColors.ivory,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 14,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  topic.missionReadyCount == 0
-                      ? 'Reference only'
-                      : '$completed solved · ${topic.questionCount} in library',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: GaussColors.muted,
-                    fontSize: 10.5,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(width: 9),
-          FilledButton(
-            onPressed: topic.missionReadyCount == 0
-                ? (topic.preservedArchiveCount == 0
-                      ? null
-                      : () => context.push('/archive/${topic.key}'))
-                : () => _startMission(context, controller, topic),
-            style: FilledButton.styleFrom(
-              minimumSize: const Size(84, 48),
-              padding: const EdgeInsets.symmetric(horizontal: 14),
-            ),
-            child: Text(topic.missionReadyCount == 0 ? 'Read' : 'Start'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _OfflineBadge extends StatelessWidget {
-  const _OfflineBadge();
+  final VoidCallback onPressed;
 
   @override
-  Widget build(BuildContext context) => Semantics(
-    label: 'Offline. All content is available.',
-    child: Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-      decoration: BoxDecoration(
-        color: GaussColors.signal.withValues(alpha: .08),
-        borderRadius: BorderRadius.circular(GaussRadii.pill),
-        border: Border.all(color: GaussColors.signal.withValues(alpha: .26)),
-      ),
-      child: const Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SizedBox.square(
-            dimension: 7,
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                color: GaussColors.signalBright,
-                shape: BoxShape.circle,
-              ),
-            ),
-          ),
-          SizedBox(width: 6),
-          Text(
-            'OFFLINE',
-            style: TextStyle(
-              color: GaussColors.muted,
-              fontSize: 8,
-              fontWeight: FontWeight.w900,
-              letterSpacing: .8,
-            ),
-          ),
-        ],
+  Widget build(BuildContext context) => Tooltip(
+    message: 'Return to current set',
+    child: Semantics(
+      button: true,
+      label: 'Return to the next uncharted study set',
+      child: _GlassFrame(
+        radius: GaussRadii.pill,
+        padding: EdgeInsets.zero,
+        child: IconButton(
+          onPressed: onPressed,
+          icon: const Icon(Icons.my_location_rounded),
+          color: GaussColors.brassLight,
+        ),
       ),
     ),
   );
 }
 
-class _EtchedFrame extends StatelessWidget {
-  const _EtchedFrame({
+class _GlassFrame extends StatelessWidget {
+  const _GlassFrame({
     required this.child,
     required this.padding,
     this.radius = 18,
@@ -1450,92 +1480,95 @@ class _EtchedFrame extends StatelessWidget {
   final double radius;
 
   @override
-  Widget build(BuildContext context) => DecoratedBox(
-    decoration: BoxDecoration(
-      color: GaussColors.ink.withValues(alpha: .94),
-      borderRadius: BorderRadius.circular(radius),
-      border: Border.all(color: GaussColors.line),
-      gradient: LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: [
-          GaussColors.panelHigh.withValues(alpha: .95),
-          GaussColors.ink.withValues(alpha: .97),
-        ],
-      ),
-      boxShadow: const [
-        BoxShadow(
-          color: Color(0x8A000000),
-          blurRadius: 24,
-          offset: Offset(0, 10),
+  Widget build(BuildContext context) => ClipRRect(
+    borderRadius: BorderRadius.circular(radius),
+    child: BackdropFilter(
+      filter: ui.ImageFilter.blur(sigmaX: 14, sigmaY: 14),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: GaussColors.ink.withValues(alpha: .8),
+          borderRadius: BorderRadius.circular(radius),
+          border: Border.all(color: GaussColors.brass.withValues(alpha: .28)),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0x8A000000),
+              blurRadius: 24,
+              offset: Offset(0, 10),
+            ),
+          ],
         ),
-      ],
+        child: Padding(padding: padding, child: child),
+      ),
     ),
-    child: Padding(padding: padding, child: child),
   );
 }
 
-Future<void> _startMission(
-  BuildContext context,
-  GaussController controller,
-  TopicDescriptor topic,
-) async {
-  final confirmed = await confirmMissionReplacement(
-    context,
-    controller.resumableMission,
-  );
-  if (confirmed && context.mounted) {
-    await context.push('/mission/${topic.key}');
+class _StarFieldPainter extends CustomPainter {
+  const _StarFieldPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final random = math.Random(9077);
+    for (var index = 0; index < 150; index++) {
+      final center = Offset(
+        random.nextDouble() * size.width,
+        random.nextDouble() * size.height,
+      );
+      final bright = random.nextDouble() > .88;
+      canvas.drawCircle(
+        center,
+        bright ? 1.15 : .55,
+        Paint()
+          ..color = (bright ? GaussColors.brassLight : GaussColors.ice)
+              .withValues(alpha: bright ? .45 : .22),
+      );
+    }
   }
-}
 
-void _selectFirstSubject(GaussController controller, Subject subject) {
-  final first = controller.topics.firstWhere(
-    (topic) => topic.subject == subject,
-  );
-  controller.selectTopic(first.key);
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
 List<String> _focusAreas(String key) {
   if (key.contains('function') || key.contains('derivative')) {
     return const [
-      'Reading structure from equations and graphs',
-      'Choosing a rigorous solution path',
-      'Checking edge cases before committing',
+      'Read structure from equations and graphs',
+      'Choose a rigorous line of attack',
+      'Check edge cases before committing',
     ];
   }
   if (key.contains('geometry') || key.contains('trigonometry')) {
     return const [
-      'Translating diagrams into exact relationships',
-      'Selecting the decisive theorem',
-      'Verifying every construction step',
+      'Translate diagrams into exact relationships',
+      'Select the decisive theorem',
+      'Verify every construction step',
     ];
   }
   if (key.contains('probability') || key.contains('statistics')) {
     return const [
-      'Defining the sample space precisely',
-      'Separating signal from distracting data',
-      'Testing whether the result is plausible',
+      'Define the sample space precisely',
+      'Separate signal from distracting data',
+      'Test whether the result is plausible',
     ];
   }
   if (key.contains('electric') || key.contains('magnet')) {
     return const [
-      'Mapping physical quantities to a model',
-      'Tracking direction, sign, and units',
-      'Validating the model against the scenario',
+      'Map physical quantities to a model',
+      'Track direction, sign, and units',
+      'Validate the model against the scenario',
     ];
   }
   if (key.contains('motion') || key.contains('dynamic')) {
     return const [
-      'Choosing a useful frame of reference',
-      'Connecting motion diagrams and equations',
-      'Checking signs, units, and limiting cases',
+      'Choose a useful frame of reference',
+      'Connect motion diagrams and equations',
+      'Check signs, units, and limiting cases',
     ];
   }
   return const [
-    'Recognizing the governing structure',
-    'Building a clear chain of reasoning',
-    'Checking the conclusion independently',
+    'Recognize the governing structure',
+    'Build a clear chain of reasoning',
+    'Check the conclusion independently',
   ];
 }
 
@@ -1543,33 +1576,39 @@ class _FatalDatasetView extends StatelessWidget {
   const _FatalDatasetView();
 
   @override
-  Widget build(BuildContext context) => Center(
-    child: ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 520),
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: _EtchedFrame(
-          padding: const EdgeInsets.all(28),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const TheoremStarMark(size: 62, monochrome: true),
-              const SizedBox(height: 18),
-              Text(
-                'The observatory could not verify its archive.',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.titleLarge,
+  Widget build(BuildContext context) => Stack(
+    fit: StackFit.expand,
+    children: [
+      const _AstronomicalBackdrop(),
+      Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 520),
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: _GlassFrame(
+              padding: const EdgeInsets.all(28),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const TheoremStarMark(size: 62, monochrome: true),
+                  const SizedBox(height: 18),
+                  Text(
+                    'The observatory could not verify its library.',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'No source data or field notes were reset. Reopen Gauss to try the local integrity check again.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: GaussColors.muted),
+                  ),
+                ],
               ),
-              const SizedBox(height: 10),
-              const Text(
-                'Your offline questions and local progress were left untouched. Restart Gauss to try the verification again.',
-                textAlign: TextAlign.center,
-                style: TextStyle(color: GaussColors.muted),
-              ),
-            ],
+            ),
           ),
         ),
       ),
-    ),
+    ],
   );
 }

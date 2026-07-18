@@ -962,15 +962,18 @@ class _QuestionPaper extends StatelessWidget {
             child: TheoremStarMark(size: 82, darkInk: true),
           ),
         ),
-        Directionality(
-          textDirection: TextDirection.rtl,
-          child: ContentBlocksView(
-            blocks: question.stem,
-            textColor: GaussColors.parchmentInk,
-            textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
-              color: GaussColors.parchmentInk,
-              fontFamily: 'Vazirmatn',
-              height: 1.7,
+        InlineQuestionScratch(
+          key: ValueKey('mission-ink-${question.id}'),
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: ContentBlocksView(
+              blocks: question.stem,
+              textColor: GaussColors.parchmentInk,
+              textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
+                color: GaussColors.parchmentInk,
+                fontFamily: 'Vazirmatn',
+                height: 1.7,
+              ),
             ),
           ),
         ),
@@ -1394,7 +1397,7 @@ class _SolutionPanel extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  'This Nardebam item remains preserved in the local archive, but its answer and explanation mapping are not verified. Gauss excludes it from scoring instead of presenting uncertain guidance.',
+                  'This source item remains preserved in the local archive, but its answer and explanation mapping are not verified. Gauss excludes it from scoring instead of presenting uncertain guidance.',
                   style: TextStyle(color: GaussColors.muted, height: 1.5),
                 ),
               ],
