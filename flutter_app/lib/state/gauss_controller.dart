@@ -18,6 +18,7 @@ class GaussController extends ChangeNotifier {
   bool _ready = false;
   GaussFailure? _fatalError;
   int _revengeCount = 0;
+  int _reviewDueCount = 0;
   List<RecentExamSummary> _recentExams = const [];
   ResumableMission? _resumableMission;
   AnalyticsSnapshot _analytics = const AnalyticsSnapshot(
@@ -55,6 +56,7 @@ class GaussController extends ChangeNotifier {
   AnalyticsSnapshot get analytics => _analytics;
   GamificationSummary get gamification => _gamification;
   int get revengeCount => _revengeCount;
+  int get reviewDueCount => _reviewDueCount;
   UnmodifiableListView<RecentExamSummary> get recentExams =>
       UnmodifiableListView(_recentExams);
   ResumableMission? get resumableMission => _resumableMission;
@@ -181,6 +183,7 @@ class GaussController extends ChangeNotifier {
       _progress.revengeIds(),
       _progress.recentExams(),
       _progress.activeMission(),
+      _progress.reviewDueIds(),
     ]);
     _attempts
       ..clear()
@@ -203,6 +206,7 @@ class GaussController extends ChangeNotifier {
     _gamification = values[2] as GamificationSummary;
     _revengeCount = (values[3] as List<String>).length;
     _recentExams = values[4] as List<RecentExamSummary>;
+    _reviewDueCount = (values[6] as List<String>).length;
     await _hydrateActiveMission(values[5] as ActiveMissionRecord?);
   }
 
@@ -243,6 +247,22 @@ class GaussController extends ChangeNotifier {
   Future<List<Question>> createRevengeMission({int count = 10}) async {
     try {
       final ids = await _progress.revengeIds();
+      final questions = await _questionBank.questionsByIds(ids);
+      return questions
+          .where((question) => question.missionReady)
+          .take(count)
+          .toList(growable: false);
+    } catch (error) {
+      throw MissionLoadFailure(error);
+    }
+  }
+
+  /// Draws the review orbit: every question whose spaced-repetition timer has
+  /// elapsed, oldest due first — remembered proofs near the forgetting curve
+  /// alongside lapsed mistakes.
+  Future<List<Question>> createReviewMission({int count = 10}) async {
+    try {
+      final ids = await _progress.reviewDueIds();
       final questions = await _questionBank.questionsByIds(ids);
       return questions
           .where((question) => question.missionReady)

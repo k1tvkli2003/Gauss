@@ -105,6 +105,13 @@ class _MapHud extends StatelessWidget {
               _SavedMissionChip(onPressed: () => context.push('/resume')),
               const SizedBox(width: 8),
             ],
+            if (controller.reviewDueCount > 0 && !compact) ...[
+              _ReviewDueChip(
+                count: controller.reviewDueCount,
+                onPressed: () => context.push('/review?count=10'),
+              ),
+              const SizedBox(width: 8),
+            ],
             _HudMetric(
               label: 'XP',
               value: '${controller.xp}',
@@ -154,6 +161,48 @@ class _SavedMissionChip extends StatelessWidget {
               'Resume',
               style: TextStyle(
                 color: GaussColors.signalBright,
+                fontSize: 12,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class _ReviewDueChip extends StatelessWidget {
+  const _ReviewDueChip({required this.count, required this.onPressed});
+
+  final int count;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    button: true,
+    label:
+        '$count ${count == 1 ? 'proof is' : 'proofs are'} due for review before they fade.',
+    child: InkWell(
+      onTap: onPressed,
+      borderRadius: BorderRadius.circular(GaussRadii.pill),
+      child: Container(
+        height: 40,
+        padding: const EdgeInsets.symmetric(horizontal: 11),
+        decoration: BoxDecoration(
+          color: GaussColors.brass.withValues(alpha: .12),
+          borderRadius: BorderRadius.circular(GaussRadii.pill),
+          border: Border.all(color: GaussColors.brass.withValues(alpha: .5)),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const TheoremStarMark(size: 17),
+            const SizedBox(width: 5),
+            Text(
+              '$count',
+              style: const TextStyle(
+                color: GaussColors.brassLight,
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
               ),

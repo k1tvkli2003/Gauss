@@ -323,6 +323,64 @@ void main() {
     },
   );
 
+  test('review orbit surfaces every due card, not only lapses', () async {
+    final now = clockNow;
+    await repository.startMission(
+      sessionId: 'srs-seed',
+      subject: Subject.math,
+      topicKey: 'sets',
+      createdAt: now.millisecondsSinceEpoch,
+      questionIds: const ['q-right', 'q-wrong'],
+    );
+    await repository.saveDraftAttempt(
+      _attempt('srs-seed', 0, 'q-right', true, now),
+    );
+    await repository.saveDraftAttempt(
+      _attempt('srs-seed', 1, 'q-wrong', false, now),
+    );
+    await repository.finalizeMission(sessionId: 'srs-seed', durationSeconds: 30);
+
+    // Immediately after: only the lapse is due (correct answer waits a day).
+    expect(await repository.reviewDueIds(), const ['q-wrong']);
+    expect(await repository.revengeIds(), const ['q-wrong']);
+
+    // A day later the remembered proof approaches the forgetting curve and
+    // enters the review orbit, while revenge still only sees the lapse.
+    clockNow = clockNow.add(const Duration(days: 1, minutes: 1));
+    expect(
+      await repository.reviewDueIds(),
+      containsAll(const ['q-right', 'q-wrong']),
+    );
+    expect(await repository.revengeIds(), const ['q-wrong']);
+  });
+
+  test('mixed-topic review and revenge sessions never mint topic mastery', () async {
+    final now = clockNow;
+    for (final mode in const ['review', 'revenge']) {
+      await repository.startMission(
+        sessionId: 'synthetic-$mode',
+        subject: Subject.math,
+        topicKey: mode,
+        createdAt: now.millisecondsSinceEpoch,
+        questionIds: [for (var i = 0; i < 5; i++) '$mode-q$i'],
+      );
+      for (var i = 0; i < 5; i++) {
+        await repository.saveDraftAttempt(
+          _attempt('synthetic-$mode', i, '$mode-q$i', true, now),
+        );
+      }
+      await repository.finalizeMission(
+        sessionId: 'synthetic-$mode',
+        durationSeconds: 60,
+      );
+    }
+
+    final masteryEvents = await (database.select(
+      database.gamificationEvents,
+    )..where((row) => row.type.equals('topic_mastered'))).get();
+    expect(masteryEvents, isEmpty);
+  });
+
   test(
     'daily quest and streak honor the injected local-day boundary',
     () async {

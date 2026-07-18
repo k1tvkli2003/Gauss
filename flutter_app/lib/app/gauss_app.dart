@@ -89,6 +89,15 @@ class _GaussAppState extends State<GaussApp> {
           revenge: true,
         ),
       ),
+      GoRoute(
+        path: '/review',
+        builder: (context, state) => MissionScreen(
+          topicKey: 'review',
+          count: (int.tryParse(state.uri.queryParameters['count'] ?? '') ?? 10)
+              .clamp(5, 50),
+          review: true,
+        ),
+      ),
       GoRoute(path: '/', redirect: (context, state) => '/map'),
       GoRoute(path: '/missions', redirect: (context, state) => '/practice'),
       GoRoute(path: '/arena', redirect: (context, state) => '/practice'),

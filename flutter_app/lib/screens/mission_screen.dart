@@ -18,6 +18,7 @@ class MissionScreen extends StatefulWidget {
     this.difficulties = const {},
     this.sourceBanks = const {},
     this.revenge = false,
+    this.review = false,
     this.resume = false,
     super.key,
   });
@@ -26,6 +27,7 @@ class MissionScreen extends StatefulWidget {
   final Set<Difficulty> difficulties;
   final Set<String> sourceBanks;
   final bool revenge;
+  final bool review;
   final bool resume;
 
   @override
@@ -49,17 +51,21 @@ class _MissionScreenState extends State<MissionScreen> {
   int _elapsedBeforeResume = 0;
   late String _sourceTopicKey;
 
+  String get _modeKey =>
+      widget.revenge ? 'revenge' : (widget.review ? 'review' : 'mission');
+
   @override
   void initState() {
     super.initState();
-    _sourceTopicKey = widget.revenge ? 'revenge' : widget.topicKey;
+    _sourceTopicKey = widget.revenge
+        ? 'revenge'
+        : (widget.review ? 'review' : widget.topicKey);
     _resetSessionIdentity();
   }
 
   void _resetSessionIdentity() {
     final now = DateTime.now();
-    _sessionId =
-        '${widget.revenge ? 'revenge' : 'mission'}_${now.microsecondsSinceEpoch}_${widget.topicKey}';
+    _sessionId = '${_modeKey}_${now.microsecondsSinceEpoch}_${widget.topicKey}';
     _missionStartedAt = now;
     _questionStartedAt = now;
   }
@@ -93,6 +99,8 @@ class _MissionScreenState extends State<MissionScreen> {
       }
       final questions = widget.revenge
           ? await controller.createRevengeMission(count: widget.count)
+          : widget.review
+          ? await controller.createReviewMission(count: widget.count)
           : await controller.createMission(
               widget.topicKey,
               count: widget.count,
@@ -107,7 +115,7 @@ class _MissionScreenState extends State<MissionScreen> {
       if (questions.isNotEmpty) {
         await controller.startMission(
           sessionId: _sessionId,
-          topicKey: widget.revenge ? 'revenge' : widget.topicKey,
+          topicKey: _sourceTopicKey,
           subject: questions.first.subject,
           createdAt: _missionStartedAt,
           questions: questions,
@@ -249,6 +257,8 @@ class _MissionScreenState extends State<MissionScreen> {
       }
       if (_sourceTopicKey == 'revenge') {
         context.replace('/revenge?count=${_questions.length}');
+      } else if (_sourceTopicKey == 'review') {
+        context.replace('/review?count=${_questions.length}');
       } else {
         context.replace('/mission/$_sourceTopicKey?count=${_questions.length}');
       }
@@ -328,6 +338,8 @@ class _MissionScreenState extends State<MissionScreen> {
             return _MissionError(
               error: widget.resume
                   ? 'There is no saved mission to resume.'
+                  : widget.review
+                  ? 'Nothing is due for review right now. Your recorded proofs are still holding.'
                   : 'No mission-ready questions are available for this topic.',
             );
           }

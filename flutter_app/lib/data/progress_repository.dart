@@ -20,6 +20,7 @@ class ProgressRepository {
   static const _correction = 'correction';
   static const _bonus = 'bonus';
   static const _mastery = 'mastery';
+  static const _syntheticTopicKeys = {'revenge', 'review'};
 
   Future<void> initialize() async {
     await database.customSelect('SELECT 1').getSingle();
@@ -325,7 +326,12 @@ class ProgressRepository {
       );
     }
 
-    if (total >= 5 && score >= 80 && exam.topicKey != null) {
+    // Mixed-topic sessions (revenge, review) are not chapters; letting them
+    // mint `topic_mastered:<mode>` would inflate the orbit-atlas achievement.
+    if (total >= 5 &&
+        score >= 80 &&
+        exam.topicKey != null &&
+        !_syntheticTopicKeys.contains(exam.topicKey)) {
       await _award(
         eventId: 'topic_mastered:${exam.topicKey}',
         type: 'topic_mastered',
@@ -362,6 +368,18 @@ class ProgressRepository {
       )
       ..orderBy([(row) => OrderingTerm.asc(row.dueAt)])
       ..limit(300);
+    return (await query.get()).map((row) => row.questionId).toList();
+  }
+
+  /// Every question whose spaced-repetition timer has elapsed — correct
+  /// answers approaching the forgetting curve as well as lapsed mistakes.
+  /// This is the full review orbit; [revengeIds] remains the lapse-only view.
+  Future<List<String>> reviewDueIds({DateTime? now, int limit = 300}) async {
+    final at = (now ?? _clock()).millisecondsSinceEpoch;
+    final query = database.select(database.srsStates)
+      ..where((row) => row.dueAt.isSmallerOrEqualValue(at))
+      ..orderBy([(row) => OrderingTerm.asc(row.dueAt)])
+      ..limit(limit);
     return (await query.get()).map((row) => row.questionId).toList();
   }
 

@@ -266,7 +266,7 @@ class _PracticeHeader extends StatelessWidget {
                 if (!narrow)
                   _TinyMetric(
                     label: 'DUE',
-                    value: '${controller.revengeCount}',
+                    value: '${controller.reviewDueCount}',
                   ),
                 if (!narrow) const SizedBox(width: 8),
                 if (!narrow)
@@ -346,6 +346,17 @@ class _PracticeModes extends StatelessWidget {
         title: 'Focus set',
         detail: 'Chapter, challenge, and length',
         accent: GaussColors.brassLight,
+      ),
+      _ModeTile(
+        glyph: GaussDestinationGlyph.map,
+        title: 'Review orbit',
+        detail: controller.reviewDueCount == 0
+            ? 'No stars are dimming today'
+            : '${controller.reviewDueCount} proofs due before they fade',
+        accent: GaussColors.brassLight,
+        onTap: controller.reviewDueCount == 0
+            ? null
+            : () => context.push('/review?count=10'),
       ),
       _ModeTile(
         glyph: GaussDestinationGlyph.insights,
