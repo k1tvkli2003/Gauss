@@ -890,6 +890,17 @@ class $AttemptsTable extends Attempts
     type: DriftSqlType.int,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _errorTagMeta = const VerificationMeta(
+    'errorTag',
+  );
+  @override
+  late final GeneratedColumn<String> errorTag = GeneratedColumn<String>(
+    'error_tag',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -903,6 +914,7 @@ class $AttemptsTable extends Attempts
     selectedChoiceIndex,
     timeTakenSeconds,
     solvedAt,
+    errorTag,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -1004,6 +1016,12 @@ class $AttemptsTable extends Attempts
     } else if (isInserting) {
       context.missing(_solvedAtMeta);
     }
+    if (data.containsKey('error_tag')) {
+      context.handle(
+        _errorTagMeta,
+        errorTag.isAcceptableOrUnknown(data['error_tag']!, _errorTagMeta),
+      );
+    }
     return context;
   }
 
@@ -1061,6 +1079,10 @@ class $AttemptsTable extends Attempts
         DriftSqlType.int,
         data['${effectivePrefix}solved_at'],
       )!,
+      errorTag: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}error_tag'],
+      ),
     );
   }
 
@@ -1082,6 +1104,10 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
   final int? selectedChoiceIndex;
   final int timeTakenSeconds;
   final int solvedAt;
+
+  /// Self-reported reason for a wrong answer (careless, gap, misread, time).
+  /// Nullable: tagging is optional and only offered on non-skipped misses.
+  final String? errorTag;
   const AttemptRow({
     required this.id,
     this.examId,
@@ -1094,6 +1120,7 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
     this.selectedChoiceIndex,
     required this.timeTakenSeconds,
     required this.solvedAt,
+    this.errorTag,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -1113,6 +1140,9 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
     }
     map['time_taken_seconds'] = Variable<int>(timeTakenSeconds);
     map['solved_at'] = Variable<int>(solvedAt);
+    if (!nullToAbsent || errorTag != null) {
+      map['error_tag'] = Variable<String>(errorTag);
+    }
     return map;
   }
 
@@ -1133,6 +1163,9 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
           : Value(selectedChoiceIndex),
       timeTakenSeconds: Value(timeTakenSeconds),
       solvedAt: Value(solvedAt),
+      errorTag: errorTag == null && nullToAbsent
+          ? const Value.absent()
+          : Value(errorTag),
     );
   }
 
@@ -1155,6 +1188,7 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
       ),
       timeTakenSeconds: serializer.fromJson<int>(json['timeTakenSeconds']),
       solvedAt: serializer.fromJson<int>(json['solvedAt']),
+      errorTag: serializer.fromJson<String?>(json['errorTag']),
     );
   }
   @override
@@ -1172,6 +1206,7 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
       'selectedChoiceIndex': serializer.toJson<int?>(selectedChoiceIndex),
       'timeTakenSeconds': serializer.toJson<int>(timeTakenSeconds),
       'solvedAt': serializer.toJson<int>(solvedAt),
+      'errorTag': serializer.toJson<String?>(errorTag),
     };
   }
 
@@ -1187,6 +1222,7 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
     Value<int?> selectedChoiceIndex = const Value.absent(),
     int? timeTakenSeconds,
     int? solvedAt,
+    Value<String?> errorTag = const Value.absent(),
   }) => AttemptRow(
     id: id ?? this.id,
     examId: examId.present ? examId.value : this.examId,
@@ -1201,6 +1237,7 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
         : this.selectedChoiceIndex,
     timeTakenSeconds: timeTakenSeconds ?? this.timeTakenSeconds,
     solvedAt: solvedAt ?? this.solvedAt,
+    errorTag: errorTag.present ? errorTag.value : this.errorTag,
   );
   AttemptRow copyWithCompanion(AttemptsCompanion data) {
     return AttemptRow(
@@ -1223,6 +1260,7 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
           ? data.timeTakenSeconds.value
           : this.timeTakenSeconds,
       solvedAt: data.solvedAt.present ? data.solvedAt.value : this.solvedAt,
+      errorTag: data.errorTag.present ? data.errorTag.value : this.errorTag,
     );
   }
 
@@ -1239,7 +1277,8 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
           ..write('status: $status, ')
           ..write('selectedChoiceIndex: $selectedChoiceIndex, ')
           ..write('timeTakenSeconds: $timeTakenSeconds, ')
-          ..write('solvedAt: $solvedAt')
+          ..write('solvedAt: $solvedAt, ')
+          ..write('errorTag: $errorTag')
           ..write(')'))
         .toString();
   }
@@ -1257,6 +1296,7 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
     selectedChoiceIndex,
     timeTakenSeconds,
     solvedAt,
+    errorTag,
   );
   @override
   bool operator ==(Object other) =>
@@ -1272,7 +1312,8 @@ class AttemptRow extends DataClass implements Insertable<AttemptRow> {
           other.status == this.status &&
           other.selectedChoiceIndex == this.selectedChoiceIndex &&
           other.timeTakenSeconds == this.timeTakenSeconds &&
-          other.solvedAt == this.solvedAt);
+          other.solvedAt == this.solvedAt &&
+          other.errorTag == this.errorTag);
 }
 
 class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
@@ -1287,6 +1328,7 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
   final Value<int?> selectedChoiceIndex;
   final Value<int> timeTakenSeconds;
   final Value<int> solvedAt;
+  final Value<String?> errorTag;
   const AttemptsCompanion({
     this.id = const Value.absent(),
     this.examId = const Value.absent(),
@@ -1299,6 +1341,7 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
     this.selectedChoiceIndex = const Value.absent(),
     this.timeTakenSeconds = const Value.absent(),
     this.solvedAt = const Value.absent(),
+    this.errorTag = const Value.absent(),
   });
   AttemptsCompanion.insert({
     this.id = const Value.absent(),
@@ -1312,6 +1355,7 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
     this.selectedChoiceIndex = const Value.absent(),
     required int timeTakenSeconds,
     required int solvedAt,
+    this.errorTag = const Value.absent(),
   }) : sessionId = Value(sessionId),
        missionIndex = Value(missionIndex),
        questionId = Value(questionId),
@@ -1332,6 +1376,7 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
     Expression<int>? selectedChoiceIndex,
     Expression<int>? timeTakenSeconds,
     Expression<int>? solvedAt,
+    Expression<String>? errorTag,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -1346,6 +1391,7 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
         'selected_choice_index': selectedChoiceIndex,
       if (timeTakenSeconds != null) 'time_taken_seconds': timeTakenSeconds,
       if (solvedAt != null) 'solved_at': solvedAt,
+      if (errorTag != null) 'error_tag': errorTag,
     });
   }
 
@@ -1361,6 +1407,7 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
     Value<int?>? selectedChoiceIndex,
     Value<int>? timeTakenSeconds,
     Value<int>? solvedAt,
+    Value<String?>? errorTag,
   }) {
     return AttemptsCompanion(
       id: id ?? this.id,
@@ -1374,6 +1421,7 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
       selectedChoiceIndex: selectedChoiceIndex ?? this.selectedChoiceIndex,
       timeTakenSeconds: timeTakenSeconds ?? this.timeTakenSeconds,
       solvedAt: solvedAt ?? this.solvedAt,
+      errorTag: errorTag ?? this.errorTag,
     );
   }
 
@@ -1413,6 +1461,9 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
     if (solvedAt.present) {
       map['solved_at'] = Variable<int>(solvedAt.value);
     }
+    if (errorTag.present) {
+      map['error_tag'] = Variable<String>(errorTag.value);
+    }
     return map;
   }
 
@@ -1429,7 +1480,8 @@ class AttemptsCompanion extends UpdateCompanion<AttemptRow> {
           ..write('status: $status, ')
           ..write('selectedChoiceIndex: $selectedChoiceIndex, ')
           ..write('timeTakenSeconds: $timeTakenSeconds, ')
-          ..write('solvedAt: $solvedAt')
+          ..write('solvedAt: $solvedAt, ')
+          ..write('errorTag: $errorTag')
           ..write(')'))
         .toString();
   }
@@ -4846,6 +4898,7 @@ typedef $$AttemptsTableCreateCompanionBuilder =
       Value<int?> selectedChoiceIndex,
       required int timeTakenSeconds,
       required int solvedAt,
+      Value<String?> errorTag,
     });
 typedef $$AttemptsTableUpdateCompanionBuilder =
     AttemptsCompanion Function({
@@ -4860,6 +4913,7 @@ typedef $$AttemptsTableUpdateCompanionBuilder =
       Value<int?> selectedChoiceIndex,
       Value<int> timeTakenSeconds,
       Value<int> solvedAt,
+      Value<String?> errorTag,
     });
 
 final class $$AttemptsTableReferences
@@ -4940,6 +4994,11 @@ class $$AttemptsTableFilterComposer
 
   ColumnFilters<int> get solvedAt => $composableBuilder(
     column: $table.solvedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get errorTag => $composableBuilder(
+    column: $table.errorTag,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -5026,6 +5085,11 @@ class $$AttemptsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get errorTag => $composableBuilder(
+    column: $table.errorTag,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   $$ExamsTableOrderingComposer get examId {
     final $$ExamsTableOrderingComposer composer = $composerBuilder(
       composer: this,
@@ -5097,6 +5161,9 @@ class $$AttemptsTableAnnotationComposer
   GeneratedColumn<int> get solvedAt =>
       $composableBuilder(column: $table.solvedAt, builder: (column) => column);
 
+  GeneratedColumn<String> get errorTag =>
+      $composableBuilder(column: $table.errorTag, builder: (column) => column);
+
   $$ExamsTableAnnotationComposer get examId {
     final $$ExamsTableAnnotationComposer composer = $composerBuilder(
       composer: this,
@@ -5160,6 +5227,7 @@ class $$AttemptsTableTableManager
                 Value<int?> selectedChoiceIndex = const Value.absent(),
                 Value<int> timeTakenSeconds = const Value.absent(),
                 Value<int> solvedAt = const Value.absent(),
+                Value<String?> errorTag = const Value.absent(),
               }) => AttemptsCompanion(
                 id: id,
                 examId: examId,
@@ -5172,6 +5240,7 @@ class $$AttemptsTableTableManager
                 selectedChoiceIndex: selectedChoiceIndex,
                 timeTakenSeconds: timeTakenSeconds,
                 solvedAt: solvedAt,
+                errorTag: errorTag,
               ),
           createCompanionCallback:
               ({
@@ -5186,6 +5255,7 @@ class $$AttemptsTableTableManager
                 Value<int?> selectedChoiceIndex = const Value.absent(),
                 required int timeTakenSeconds,
                 required int solvedAt,
+                Value<String?> errorTag = const Value.absent(),
               }) => AttemptsCompanion.insert(
                 id: id,
                 examId: examId,
@@ -5198,6 +5268,7 @@ class $$AttemptsTableTableManager
                 selectedChoiceIndex: selectedChoiceIndex,
                 timeTakenSeconds: timeTakenSeconds,
                 solvedAt: solvedAt,
+                errorTag: errorTag,
               ),
           withReferenceMapper: (p0) => p0
               .map(

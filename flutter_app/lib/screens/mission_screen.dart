@@ -20,6 +20,7 @@ class MissionScreen extends StatefulWidget {
     this.revenge = false,
     this.review = false,
     this.resume = false,
+    this.coverChoices = false,
     super.key,
   });
   final String topicKey;
@@ -29,6 +30,10 @@ class MissionScreen extends StatefulWidget {
   final bool revenge;
   final bool review;
   final bool resume;
+
+  /// Answer-first mode: choices stay covered until explicitly revealed,
+  /// so the answer must be derived before it can be recognized.
+  final bool coverChoices;
 
   @override
   State<MissionScreen> createState() => _MissionScreenState();
@@ -50,6 +55,8 @@ class _MissionScreenState extends State<MissionScreen> {
   MissionCompletion? _completion;
   int _elapsedBeforeResume = 0;
   late String _sourceTopicKey;
+  late bool _choicesRevealed;
+  String? _errorTag;
 
   String get _modeKey =>
       widget.revenge ? 'revenge' : (widget.review ? 'review' : 'mission');
@@ -60,6 +67,7 @@ class _MissionScreenState extends State<MissionScreen> {
     _sourceTopicKey = widget.revenge
         ? 'revenge'
         : (widget.review ? 'review' : widget.topicKey);
+    _choicesRevealed = !widget.coverChoices;
     _resetSessionIdentity();
   }
 
@@ -90,6 +98,8 @@ class _MissionScreenState extends State<MissionScreen> {
         final currentAttempt = saved.resumeAttempt;
         _selectedChoice = currentAttempt?.selectedChoiceIndex;
         _checked = currentAttempt != null;
+        _choicesRevealed = true;
+        _errorTag = currentAttempt?.errorTag;
         _correct = saved.attempts.where((attempt) => attempt.correct).length;
         _elapsedBeforeResume = saved.attempts.fold(
           0,
@@ -244,8 +254,28 @@ class _MissionScreenState extends State<MissionScreen> {
       _selectedChoice = null;
       _checked = false;
       _operationError = null;
+      _choicesRevealed = !widget.coverChoices;
+      _errorTag = null;
       _questionStartedAt = DateTime.now();
     });
+  }
+
+  Future<void> _tagError(MissReason reason) async {
+    final question = _questions[_index];
+    final previous = _errorTag;
+    final next = previous == reason.key ? null : reason.key;
+    setState(() => _errorTag = next);
+    try {
+      await GaussScope.of(context).tagAttempt(
+        sessionId: _sessionId,
+        questionId: question.id,
+        errorTag: next,
+      );
+    } catch (_) {
+      // Tagging is optional metadata; revert quietly instead of blocking
+      // the mission flow with a retry barrier.
+      if (mounted) setState(() => _errorTag = previous);
+    }
   }
 
   void _retryMission() {
@@ -277,6 +307,8 @@ class _MissionScreenState extends State<MissionScreen> {
       _operationError = null;
       _completion = null;
       _elapsedBeforeResume = 0;
+      _choicesRevealed = !widget.coverChoices;
+      _errorTag = null;
       _missionFuture = _loadMission(controller);
     });
   }
@@ -359,11 +391,15 @@ class _MissionScreenState extends State<MissionScreen> {
             selectedChoice: _selectedChoice,
             checked: _checked,
             busy: _saving,
+            covered: !_choicesRevealed,
+            errorTag: _errorTag,
             operationError: _operationError,
             onSelect: (choice) => setState(() => _selectedChoice = choice),
             onCheck: _checkAnswer,
             onSkip: _skipAnswer,
             onNext: _next,
+            onRevealChoices: () => setState(() => _choicesRevealed = true),
+            onTagError: _tagError,
             onScratchpad: () => showScratchpad(context),
             onClose: () async {
               if (await _confirmExit() && context.mounted) {
@@ -385,11 +421,15 @@ class _QuestionStage extends StatelessWidget {
     required this.selectedChoice,
     required this.checked,
     required this.busy,
+    required this.covered,
+    required this.errorTag,
     required this.operationError,
     required this.onSelect,
     required this.onCheck,
     required this.onSkip,
     required this.onNext,
+    required this.onRevealChoices,
+    required this.onTagError,
     required this.onScratchpad,
     required this.onClose,
   });
@@ -399,17 +439,22 @@ class _QuestionStage extends StatelessWidget {
   final int? selectedChoice;
   final bool checked;
   final bool busy;
+  final bool covered;
+  final String? errorTag;
   final Object? operationError;
   final ValueChanged<int> onSelect;
   final VoidCallback onCheck;
   final VoidCallback onSkip;
   final VoidCallback onNext;
+  final VoidCallback onRevealChoices;
+  final ValueChanged<MissReason> onTagError;
   final VoidCallback onScratchpad;
   final VoidCallback onClose;
 
   @override
   Widget build(BuildContext context) {
     final correct = checked && selectedChoice == question.correctChoiceIndex;
+    final wrongPick = checked && selectedChoice != null && !correct;
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -435,8 +480,12 @@ class _QuestionStage extends StatelessWidget {
                         selectedChoice: selectedChoice,
                         checked: checked,
                         busy: busy,
+                        covered: covered,
+                        errorTag: errorTag,
                         showSolution: checked,
                         onSelect: onSelect,
+                        onRevealChoices: onRevealChoices,
+                        onTagError: onTagError,
                       );
                     }
                     return Padding(
@@ -461,8 +510,12 @@ class _QuestionStage extends StatelessWidget {
                               selectedChoice: selectedChoice,
                               checked: checked,
                               busy: busy,
+                              covered: covered,
+                              errorTag: errorTag,
                               showSolution: false,
                               onSelect: onSelect,
+                              onRevealChoices: onRevealChoices,
+                              onTagError: onTagError,
                               inset: EdgeInsets.zero,
                             ),
                           ),
@@ -472,7 +525,20 @@ class _QuestionStage extends StatelessWidget {
                               width: constraints.maxWidth >= 1250 ? 350 : 310,
                               child: SingleChildScrollView(
                                 padding: const EdgeInsets.only(bottom: 12),
-                                child: _SolutionPanel(question: question),
+                                child: Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
+                                  children: [
+                                    if (wrongPick) ...[
+                                      _MissTagBar(
+                                        selected: errorTag,
+                                        onSelect: onTagError,
+                                      ),
+                                      const SizedBox(height: 12),
+                                    ],
+                                    _SolutionPanel(question: question),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -599,8 +665,12 @@ class _QuestionScroll extends StatelessWidget {
     required this.selectedChoice,
     required this.checked,
     required this.busy,
+    required this.covered,
+    required this.errorTag,
     required this.showSolution,
     required this.onSelect,
+    required this.onRevealChoices,
+    required this.onTagError,
     this.inset = const EdgeInsets.fromLTRB(16, 8, 16, 18),
   });
 
@@ -609,8 +679,12 @@ class _QuestionScroll extends StatelessWidget {
   final int? selectedChoice;
   final bool checked;
   final bool busy;
+  final bool covered;
+  final String? errorTag;
   final bool showSolution;
   final ValueChanged<int> onSelect;
+  final VoidCallback onRevealChoices;
+  final ValueChanged<MissReason> onTagError;
   final EdgeInsets inset;
 
   @override
@@ -668,23 +742,185 @@ class _QuestionScroll extends StatelessWidget {
               child: _QuestionPaper(question: question),
             ),
             const SizedBox(height: 15),
-            for (var choice = 0; choice < question.options.length; choice++)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 10),
-                child: _AnswerChoice(
-                  blocks: question.options[choice],
-                  choice: choice,
-                  selected: selectedChoice == choice,
-                  checked: checked,
-                  correctChoice: question.correctChoiceIndex,
-                  onTap: checked || busy ? null : () => onSelect(choice),
+            if (covered && !checked)
+              _CoveredChoicesPanel(onReveal: busy ? null : onRevealChoices)
+            else
+              for (var choice = 0; choice < question.options.length; choice++)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: _AnswerChoice(
+                    blocks: question.options[choice],
+                    choice: choice,
+                    selected: selectedChoice == choice,
+                    checked: checked,
+                    correctChoice: question.correctChoiceIndex,
+                    onTap: checked || busy ? null : () => onSelect(choice),
+                  ),
                 ),
-              ),
             if (showSolution && checked) ...[
-              const SizedBox(height: 6),
+              if (selectedChoice != null &&
+                  selectedChoice != question.correctChoiceIndex) ...[
+                const SizedBox(height: 6),
+                _MissTagBar(selected: errorTag, onSelect: onTagError),
+              ],
+              const SizedBox(height: 12),
               _SolutionPanel(question: question),
             ],
           ],
+        ),
+      ),
+    ),
+  );
+}
+
+class _CoveredChoicesPanel extends StatelessWidget {
+  const _CoveredChoicesPanel({required this.onReveal});
+
+  final VoidCallback? onReveal;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    container: true,
+    label:
+        'Answer-first mode. The four choices are covered. Derive your answer, then uncover them to commit.',
+    child: Container(
+      padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            GaussColors.panelHigh.withValues(alpha: .94),
+            GaussColors.ink.withValues(alpha: .96),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: GaussColors.brass.withValues(alpha: .4)),
+      ),
+      child: Column(
+        children: [
+          const GaussScratchGlyph(color: GaussColors.brassLight, size: 34),
+          const SizedBox(height: 12),
+          const Text(
+            'Choices are covered',
+            style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15),
+          ),
+          const SizedBox(height: 6),
+          const Text(
+            'Derive the answer first — on paper or the scratchpad — so the options cannot whisper. Uncover when your result is ready.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: GaussColors.muted,
+              fontSize: 12,
+              height: 1.45,
+            ),
+          ),
+          const SizedBox(height: 16),
+          FilledButton.icon(
+            onPressed: onReveal,
+            icon: const Icon(Icons.visibility_outlined, size: 19),
+            label: const Text('Uncover the choices'),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+class _MissTagBar extends StatelessWidget {
+  const _MissTagBar({required this.selected, required this.onSelect});
+
+  final String? selected;
+  final ValueChanged<MissReason> onSelect;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    container: true,
+    label:
+        'Why did this one slip? Optional private note; scoring never changes.',
+    child: Container(
+      padding: const EdgeInsets.fromLTRB(15, 13, 15, 13),
+      decoration: BoxDecoration(
+        color: GaussColors.warning.withValues(alpha: .06),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: GaussColors.warning.withValues(alpha: .3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'WHY DID IT SLIP?',
+            style: TextStyle(
+              color: GaussColors.warning,
+              fontSize: 9,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 1,
+            ),
+          ),
+          const SizedBox(height: 9),
+          Wrap(
+            spacing: 7,
+            runSpacing: 7,
+            children: [
+              for (final reason in MissReason.values)
+                _MissTagChip(
+                  reason: reason,
+                  selected: selected == reason.key,
+                  onTap: () => onSelect(reason),
+                ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'A private note to your future self. Scoring never changes.',
+            style: TextStyle(color: GaussColors.fog, fontSize: 9.5),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+class _MissTagChip extends StatelessWidget {
+  const _MissTagChip({
+    required this.reason,
+    required this.selected,
+    required this.onTap,
+  });
+
+  final MissReason reason;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    button: true,
+    selected: selected,
+    label: reason.label,
+    child: InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(GaussRadii.pill),
+      child: AnimatedContainer(
+        duration: MediaQuery.disableAnimationsOf(context)
+            ? Duration.zero
+            : const Duration(milliseconds: 160),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        decoration: BoxDecoration(
+          color: selected
+              ? GaussColors.warning.withValues(alpha: .16)
+              : GaussColors.deepInk,
+          borderRadius: BorderRadius.circular(GaussRadii.pill),
+          border: Border.all(
+            color: selected ? GaussColors.warning : GaussColors.hairline,
+          ),
+        ),
+        child: Text(
+          reason.label,
+          style: TextStyle(
+            color: selected ? GaussColors.warning : GaussColors.muted,
+            fontSize: 11,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
     ),

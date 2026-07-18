@@ -157,6 +157,24 @@ class GaussController extends ChangeNotifier {
     }
   }
 
+  /// Records a self-reported miss reason on an already-saved attempt.
+  /// Descriptive only — never touches scoring, SRS, or rewards.
+  Future<void> tagAttempt({
+    required String sessionId,
+    required String questionId,
+    required String? errorTag,
+  }) async {
+    try {
+      await _progress.tagAttempt(
+        sessionId: sessionId,
+        questionId: questionId,
+        errorTag: errorTag,
+      );
+    } catch (error) {
+      throw MissionWriteFailure(error, operation: 'tag_attempt');
+    }
+  }
+
   Future<MissionCompletion> completeMission({
     required String sessionId,
     required int durationSeconds,

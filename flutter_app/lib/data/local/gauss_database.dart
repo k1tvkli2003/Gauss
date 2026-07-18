@@ -34,6 +34,10 @@ class Attempts extends Table {
   IntColumn get timeTakenSeconds => integer()();
   IntColumn get solvedAt => integer()();
 
+  /// Self-reported reason for a wrong answer (careless, gap, misread, time).
+  /// Nullable: tagging is optional and only offered on non-skipped misses.
+  TextColumn get errorTag => text().nullable()();
+
   @override
   List<Set<Column<Object>>> get uniqueKeys => [
     {sessionId, questionId},
@@ -156,7 +160,7 @@ class GaussDatabase extends _$GaussDatabase {
       );
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 3;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -170,6 +174,11 @@ class GaussDatabase extends _$GaussDatabase {
         await customStatement(
           "UPDATE exams SET status = 'abandoned' WHERE status = 'active'",
         );
+      }
+      if (from < 3) {
+        // Additive: existing attempts simply have no self-reported miss
+        // reason. No rows are rewritten.
+        await migrator.addColumn(attempts, attempts.errorTag);
       }
     },
     beforeOpen: (details) async {

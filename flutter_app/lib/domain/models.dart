@@ -223,6 +223,7 @@ class AttemptRecord {
     required this.at,
     this.examId,
     this.finalized = false,
+    this.errorTag,
   });
 
   final String sessionId;
@@ -237,21 +238,26 @@ class AttemptRecord {
   final int? examId;
   final bool finalized;
 
+  /// Self-reported reason for a miss (see [MissReason]); null when untagged.
+  final String? errorTag;
+
   bool get skipped => selectedChoiceIndex == null;
 
-  AttemptRecord copyWith({int? examId, bool? finalized}) => AttemptRecord(
-    sessionId: sessionId,
-    missionIndex: missionIndex,
-    questionId: questionId,
-    subject: subject,
-    topicKey: topicKey,
-    selectedChoiceIndex: selectedChoiceIndex,
-    correct: correct,
-    elapsedSeconds: elapsedSeconds,
-    at: at,
-    examId: examId ?? this.examId,
-    finalized: finalized ?? this.finalized,
-  );
+  AttemptRecord copyWith({int? examId, bool? finalized, String? errorTag}) =>
+      AttemptRecord(
+        sessionId: sessionId,
+        missionIndex: missionIndex,
+        questionId: questionId,
+        subject: subject,
+        topicKey: topicKey,
+        selectedChoiceIndex: selectedChoiceIndex,
+        correct: correct,
+        elapsedSeconds: elapsedSeconds,
+        at: at,
+        examId: examId ?? this.examId,
+        finalized: finalized ?? this.finalized,
+        errorTag: errorTag ?? this.errorTag,
+      );
 }
 
 class ActiveMissionRecord {
@@ -391,6 +397,25 @@ class DistractorInsight {
   final int count;
 }
 
+/// The fixed vocabulary of self-reported miss reasons.
+enum MissReason {
+  careless('careless', 'Careless slip'),
+  gap('gap', 'Knowledge gap'),
+  misread('misread', 'Misread it'),
+  time('time', 'Ran out of time');
+
+  const MissReason(this.key, this.label);
+  final String key;
+  final String label;
+
+  static MissReason? tryFromKey(String? value) {
+    for (final item in MissReason.values) {
+      if (item.key == value) return item;
+    }
+    return null;
+  }
+}
+
 class AnalyticsSnapshot {
   const AnalyticsSnapshot({
     required this.totalAnswered,
@@ -401,6 +426,7 @@ class AnalyticsSnapshot {
     required this.distractors,
     required this.heatmap,
     required this.streak,
+    this.errorBreakdown = const {},
   });
 
   final int totalAnswered;
@@ -411,6 +437,9 @@ class AnalyticsSnapshot {
   final List<DistractorInsight> distractors;
   final Map<String, int> heatmap;
   final int streak;
+
+  /// Finalized wrong answers grouped by self-reported [MissReason] key.
+  final Map<String, int> errorBreakdown;
 }
 
 class DailyQuest {

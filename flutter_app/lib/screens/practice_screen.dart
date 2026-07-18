@@ -25,6 +25,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
   String? _selectedTopicKey;
   final Set<Difficulty> _difficulties = {};
   int _count = 10;
+  bool _answerFirst = false;
 
   @override
   void didChangeDependencies() {
@@ -61,6 +62,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
     for (final difficulty in _difficulties) {
       query.add('difficulty=${Uri.encodeQueryComponent(difficulty.key)}');
     }
+    if (_answerFirst) query.add('cover=1');
     await context.push('/mission/$topicKey?${query.join('&')}');
   }
 
@@ -99,6 +101,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                   subject: _subject,
                   difficulties: _difficulties,
                   count: _count,
+                  answerFirst: _answerFirst,
                   totalQuestions: controller.totalQuestions,
                   onSubject: _selectSubject,
                   onDifficulty: (difficulty) => setState(() {
@@ -107,6 +110,8 @@ class _PracticeScreenState extends State<PracticeScreen> {
                     }
                   }),
                   onCount: (count) => setState(() => _count = count),
+                  onAnswerFirst: () =>
+                      setState(() => _answerFirst = !_answerFirst),
                 ),
               ),
               SliverToBoxAdapter(
@@ -498,19 +503,23 @@ class _SetComposer extends StatelessWidget {
     required this.subject,
     required this.difficulties,
     required this.count,
+    required this.answerFirst,
     required this.totalQuestions,
     required this.onSubject,
     required this.onDifficulty,
     required this.onCount,
+    required this.onAnswerFirst,
   });
 
   final Subject subject;
   final Set<Difficulty> difficulties;
   final int count;
+  final bool answerFirst;
   final int totalQuestions;
   final ValueChanged<Subject> onSubject;
   final ValueChanged<Difficulty> onDifficulty;
   final ValueChanged<int> onCount;
+  final VoidCallback onAnswerFirst;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -565,8 +574,36 @@ class _SetComposer extends StatelessWidget {
                       selected: count == value,
                       onTap: () => onCount(value),
                     ),
+                  const SizedBox(width: 5),
+                  _ChoiceToken(
+                    label: 'Answer-first',
+                    selected: answerFirst,
+                    onTap: onAnswerFirst,
+                  ),
                 ],
               ),
+              if (answerFirst) ...[
+                const SizedBox(height: 10),
+                const Row(
+                  children: [
+                    Icon(
+                      Icons.visibility_off_outlined,
+                      size: 15,
+                      color: GaussColors.brassLight,
+                    ),
+                    SizedBox(width: 7),
+                    Expanded(
+                      child: Text(
+                        'Choices stay covered until you uncover them — derive the answer before it can be recognized.',
+                        style: TextStyle(
+                          color: GaussColors.muted,
+                          fontSize: 10.5,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
               const Divider(height: 25),
               Wrap(
                 spacing: 8,

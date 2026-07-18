@@ -150,6 +150,7 @@ class ProgressRepository {
                 selectedChoiceIndex: Value(attempt.selectedChoiceIndex),
                 timeTakenSeconds: attempt.elapsedSeconds,
                 solvedAt: attempt.at.millisecondsSinceEpoch,
+                errorTag: Value(attempt.errorTag),
               ),
             );
       } else {
@@ -162,10 +163,26 @@ class ProgressRepository {
             selectedChoiceIndex: Value(attempt.selectedChoiceIndex),
             timeTakenSeconds: Value(attempt.elapsedSeconds),
             solvedAt: Value(attempt.at.millisecondsSinceEpoch),
+            errorTag: Value(attempt.errorTag),
           ),
         );
       }
     });
+  }
+
+  /// Attaches (or clears) a self-reported miss reason on a recorded attempt.
+  /// Purely descriptive: it never changes status, scoring, SRS, or XP.
+  Future<void> tagAttempt({
+    required String sessionId,
+    required String questionId,
+    required String? errorTag,
+  }) async {
+    await (database.update(database.attempts)..where(
+          (row) =>
+              row.sessionId.equals(sessionId) &
+              row.questionId.equals(questionId),
+        ))
+        .write(AttemptsCompanion(errorTag: Value(errorTag)));
   }
 
   Future<MissionCompletion> finalizeMission({
@@ -454,6 +471,12 @@ class ProgressRepository {
       final day = _dayKey(DateTime.fromMillisecondsSinceEpoch(row.solvedAt));
       heatmap[day] = (heatmap[day] ?? 0) + 1;
     }
+    final errorBreakdown = <String, int>{};
+    for (final row in rows) {
+      final tag = row.errorTag;
+      if (row.status != 'wrong' || tag == null) continue;
+      errorBreakdown[tag] = (errorBreakdown[tag] ?? 0) + 1;
+    }
     return AnalyticsSnapshot(
       totalAnswered: rows.length,
       totalCorrect: correctRows.length,
@@ -466,6 +489,7 @@ class ProgressRepository {
       distractors: List.unmodifiable(distractors.take(6)),
       heatmap: Map.unmodifiable(heatmap),
       streak: _streakFromDays(heatmap.keys.toSet(), now: _clock()),
+      errorBreakdown: Map.unmodifiable(errorBreakdown),
     );
   }
 
@@ -777,6 +801,7 @@ class ProgressRepository {
     at: DateTime.fromMillisecondsSinceEpoch(row.solvedAt),
     examId: row.examId,
     finalized: row.examId != null,
+    errorTag: row.errorTag,
   );
 
   static int levelFor(int xp) => math.sqrt(math.max(0, xp) / 160).floor() + 1;

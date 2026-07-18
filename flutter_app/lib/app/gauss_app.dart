@@ -78,6 +78,7 @@ class _GaussAppState extends State<GaussApp> {
             sourceBanks: (state.uri.queryParametersAll['source'] ?? const [])
                 .where(const {'nardebam', 'gauss'}.contains)
                 .toSet(),
+            coverChoices: state.uri.queryParameters['cover'] == '1',
           );
         },
       ),

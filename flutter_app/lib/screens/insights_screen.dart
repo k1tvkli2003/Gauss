@@ -56,6 +56,10 @@ class InsightsScreen extends StatelessWidget {
                 SliverToBoxAdapter(
                   child: _StarChartPanel(heatmap: analytics.heatmap),
                 ),
+              if (analytics.errorBreakdown.isNotEmpty)
+                SliverToBoxAdapter(
+                  child: _MissAnatomyPanel(breakdown: analytics.errorBreakdown),
+                ),
               if (gamification.achievements.isNotEmpty)
                 SliverToBoxAdapter(
                   child: _SectionHeading(
@@ -1484,6 +1488,132 @@ class _RecentMissionReading extends StatelessWidget {
       ],
     ),
   );
+}
+
+class _MissAnatomyPanel extends StatelessWidget {
+  const _MissAnatomyPanel({required this.breakdown});
+
+  /// MissReason key to count, from finalized tagged wrong answers.
+  final Map<String, int> breakdown;
+
+  @override
+  Widget build(BuildContext context) {
+    final total = breakdown.values.fold<int>(0, (sum, value) => sum + value);
+    final rows =
+        MissReason.values
+            .map((reason) => (reason: reason, count: breakdown[reason.key] ?? 0))
+            .where((entry) => entry.count > 0)
+            .toList()
+          ..sort((a, b) => b.count.compareTo(a.count));
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(18, 2, 18, 10),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 1160),
+          child: Semantics(
+            container: true,
+            excludeSemantics: true,
+            label:
+                'Miss anatomy. ${rows.map((entry) => '${entry.reason.label}: ${entry.count}').join('. ')}.',
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(16, 15, 16, 14),
+              decoration: BoxDecoration(
+                color: GaussColors.ink.withValues(alpha: .94),
+                borderRadius: BorderRadius.circular(22),
+                border: Border.all(color: GaussColors.line),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: 18,
+                        height: 2,
+                        decoration: BoxDecoration(
+                          color: GaussColors.warning,
+                          borderRadius: BorderRadius.circular(99),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      const Text(
+                        'MISS ANATOMY',
+                        style: TextStyle(
+                          color: GaussColors.warning,
+                          fontSize: 9,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1,
+                        ),
+                      ),
+                      const Spacer(),
+                      Text(
+                        '$total tagged',
+                        style: const TextStyle(
+                          color: GaussColors.fog,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  for (final entry in rows)
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 9),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 108,
+                            child: Text(
+                              entry.reason.label,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(99),
+                              child: LinearProgressIndicator(
+                                value: total == 0 ? 0 : entry.count / total,
+                                minHeight: 6,
+                                backgroundColor: GaussColors.hairline,
+                                color: GaussColors.warning,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          SizedBox(
+                            width: 28,
+                            child: Text(
+                              '${entry.count}',
+                              textAlign: TextAlign.end,
+                              style: const TextStyle(
+                                color: GaussColors.warning,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  const Text(
+                    'Self-reported reasons for wrong answers. Tag misses inside a mission to sharpen this reading.',
+                    style: TextStyle(color: GaussColors.fog, fontSize: 10),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _TrapReading extends StatelessWidget {

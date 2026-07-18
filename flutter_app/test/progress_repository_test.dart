@@ -381,6 +381,42 @@ void main() {
     expect(masteryEvents, isEmpty);
   });
 
+  test('miss tags persist through finalization and feed the anatomy', () async {
+    final now = clockNow;
+    await repository.startMission(
+      sessionId: 'tagged-miss',
+      subject: Subject.math,
+      topicKey: 'sets',
+      createdAt: now.millisecondsSinceEpoch,
+      questionIds: const ['q-miss'],
+    );
+    await repository.saveDraftAttempt(
+      _attempt('tagged-miss', 0, 'q-miss', false, now),
+    );
+    await repository.tagAttempt(
+      sessionId: 'tagged-miss',
+      questionId: 'q-miss',
+      errorTag: 'careless',
+    );
+    await repository.finalizeMission(
+      sessionId: 'tagged-miss',
+      durationSeconds: 20,
+    );
+
+    final tagged = await repository.analytics();
+    expect(tagged.errorBreakdown, {'careless': 1});
+    final loaded = (await repository.loadAttempts()).single;
+    expect(loaded.errorTag, 'careless');
+
+    // Clearing the tag is honored and the anatomy empties again.
+    await repository.tagAttempt(
+      sessionId: 'tagged-miss',
+      questionId: 'q-miss',
+      errorTag: null,
+    );
+    expect((await repository.analytics()).errorBreakdown, isEmpty);
+  });
+
   test(
     'daily quest and streak honor the injected local-day boundary',
     () async {
