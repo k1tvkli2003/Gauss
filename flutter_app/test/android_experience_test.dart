@@ -33,7 +33,7 @@ void main() {
   });
 
   test(
-    'Android package, activity, and adaptive icon contracts stay aligned',
+    'Android package, activity, and approved Theorem Star icon contracts stay aligned',
     () {
       final gradle = File('android/app/build.gradle.kts').readAsStringSync();
       final activity = File(
@@ -45,9 +45,23 @@ void main() {
       final manifest = File(
         'android/app/src/main/AndroidManifest.xml',
       ).readAsStringSync();
-      final adaptiveIcon = File(
+      final adaptiveIconV26 = File(
+        'android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml',
+      ).readAsStringSync();
+      final adaptiveIconV33 = File(
         'android/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml',
       ).readAsStringSync();
+      final safeForeground = File(
+        'android/app/src/main/res/drawable/ic_launcher_theorem_star_safe.xml',
+      ).readAsStringSync();
+      final splash = File(
+        'android/app/src/main/res/drawable-v21/launch_background.xml',
+      ).readAsStringSync();
+      final canonicalIcon = File(
+        'assets/visual/brand/theorem_star_app_icon.svg',
+      ).readAsStringSync();
+      final webManifest = File('web/manifest.json').readAsStringSync();
+      final webIndex = File('web/index.html').readAsStringSync();
 
       expect(gradle, contains('namespace = "com.gauss.app"'));
       expect(gradle, contains('applicationId = "com.gauss.app"'));
@@ -55,8 +69,31 @@ void main() {
       expect(activity.readAsStringSync(), contains('package com.gauss.app'));
       expect(obsoleteActivity.existsSync(), isFalse);
       expect(manifest, contains('android:name=".MainActivity"'));
-      expect(adaptiveIcon, contains('<monochrome'));
-      expect(adaptiveIcon, contains('@drawable/ic_launcher_theorem_star'));
+      expect(adaptiveIconV26, contains('@drawable/ic_launcher_theorem_star_safe'));
+      expect(adaptiveIconV33, contains('<monochrome'));
+      expect(adaptiveIconV33, contains('@drawable/ic_launcher_theorem_star_safe'));
+      expect(
+        adaptiveIconV33,
+        contains('@drawable/ic_launcher_theorem_star_mono_safe'),
+      );
+      expect(safeForeground, contains('android:insetLeft="18dp"'));
+      expect(splash, contains('@drawable/ic_launcher_theorem_star'));
+      expect(splash, isNot(contains('@drawable/ic_launcher_foreground')));
+      expect(canonicalIcon, contains('Gauss Theorem Star app icon'));
+      expect(canonicalIcon, contains('#62AE9C'));
+      expect(webManifest, contains('icons/Icon-512.png'));
+      expect(webManifest, contains('icons/Icon-maskable-512.png'));
+      expect(webIndex, contains('icons/Icon-192.png'));
+      for (final fallback in [
+        'web/favicon.png',
+        'web/icons/Icon-192.png',
+        'web/icons/Icon-512.png',
+        'web/icons/Icon-maskable-512.png',
+        'android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png',
+        'android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png',
+      ]) {
+        expect(File(fallback).lengthSync(), greaterThan(1000), reason: fallback);
+      }
     },
   );
 
