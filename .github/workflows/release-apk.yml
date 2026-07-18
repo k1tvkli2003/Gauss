@@ -53,7 +53,12 @@ jobs:
           echo "code=$VCODE" >> "$GITHUB_OUTPUT"
           echo "Version → name=$VNAME  code=$VCODE"
 
-      # ---- Resolve the signing keystore (stable from secrets, else debug) ----
+      # ---- Resolve the signing keystore. Every CI runner is a fresh VM, so the
+      # AGP debug keystore is regenerated (with a new random cert) on every run
+      # if it isn't provided from secrets. Android refuses to install an APK
+      # over an existing one signed with a different cert, so a silent
+      # fallback here means every "release" silently fails to update on users'
+      # devices. Fail loudly instead of falling back. ----
       - name: Prepare signing key
         id: signing
         env:
@@ -63,21 +68,21 @@ jobs:
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           set -euo pipefail
-          if [ -n "${KEYSTORE_BASE64:-}" ]; then
-            KS="$RUNNER_TEMP/gauss-release.keystore"
-            echo "$KEYSTORE_BASE64" | base64 -d > "$KS"
-            {
-              echo "GAUSS_KEYSTORE_PATH=$KS"
-              echo "GAUSS_KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD"
-              echo "GAUSS_KEY_ALIAS=$KEY_ALIAS"
-              echo "GAUSS_KEY_PASSWORD=$KEY_PASSWORD"
-            } >> "$GITHUB_ENV"
-            echo "::add-mask::$KEYSTORE_PASSWORD"
-            echo "::add-mask::$KEY_PASSWORD"
-            echo "Using stable keystore from repository secrets."
-          else
-            echo "::warning::No ANDROID_KEYSTORE_BASE64 secret set — the release APK will be signed with the Android debug key. It installs fine, but is not upgrade-compatible across machines. Add ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD / ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD for stable signing."
+          if [ -z "${KEYSTORE_BASE64:-}" ]; then
+            echo "::error::ANDROID_KEYSTORE_BASE64 (and/or the other ANDROID_KEY* secrets) are not set. Refusing to build a release APK signed with an ephemeral debug key, because every CI runner generates a different one and Android will then refuse to install it as an update over any previously released build. Add ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD / ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD as repository secrets before releasing."
+            exit 1
           fi
+          KS="$RUNNER_TEMP/gauss-release.keystore"
+          echo "$KEYSTORE_BASE64" | base64 -d > "$KS"
+          {
+            echo "GAUSS_KEYSTORE_PATH=$KS"
+            echo "GAUSS_KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD"
+            echo "GAUSS_KEY_ALIAS=$KEY_ALIAS"
+            echo "GAUSS_KEY_PASSWORD=$KEY_PASSWORD"
+          } >> "$GITHUB_ENV"
+          echo "::add-mask::$KEYSTORE_PASSWORD"
+          echo "::add-mask::$KEY_PASSWORD"
+          echo "Using stable keystore from repository secrets."
 
       - name: Assemble release APK
         env:
