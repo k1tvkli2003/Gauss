@@ -157,7 +157,9 @@ void main() {
     await tester.pump(const Duration(milliseconds: 220));
 
     expect(controller.study.revisitCount, 1);
-    expect(controller.gamification.totalXp, 0);
+    // Rule v2: the act of charting earns calm XP (4 charted + 8 new unit).
+    // The reward never claims the unverified source mapping is correct.
+    expect(controller.gamification.totalXp, 12);
     expect(find.text('Saved to your revisit orbit'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });

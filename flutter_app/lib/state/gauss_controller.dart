@@ -1,4 +1,5 @@
 import 'dart:collection';
+import 'dart:math' as math;
 
 import 'package:flutter/widgets.dart';
 
@@ -6,6 +7,7 @@ import '../data/progress_repository.dart';
 import '../data/question_bank_repository.dart';
 import '../domain/failures.dart';
 import '../domain/models.dart';
+import '../domain/study_curriculum.dart';
 
 class GaussController extends ChangeNotifier {
   GaussController(this._questionBank, this._progress);
@@ -362,7 +364,7 @@ class GaussController extends ChangeNotifier {
     }
   }
 
-  Future<StudyRecord> saveStudyReflection({
+  Future<StudyReflectionOutcome> saveStudyReflection({
     required Question question,
     required String shelfKey,
     required int? hypothesisChoiceIndex,
@@ -374,21 +376,59 @@ class GaussController extends ChangeNotifier {
       );
     }
     try {
-      final record = await _progress.saveStudyReflection(
+      // Attribution always uses the canonical curriculum slice of the
+      // question, regardless of which surface (chapter shelf, revisit orbit,
+      // filtered browse, deep link) the reflection came from. This keeps
+      // set-completion counting stable.
+      final topicQuestions = await _questionBank.loadTopic(question.topicKey);
+      final index = topicQuestions.indexWhere(
+        (item) => item.id == question.id,
+      );
+      const batch = GaussStudyCurriculum.batchSize;
+      final offset = index < 0 ? 0 : (index ~/ batch) * batch;
+      final canonicalShelfKey = '${question.topicKey}:$offset:$batch';
+      final setSize = math.min(batch, topicQuestions.length - offset);
+      final outcome = await _progress.saveStudyReflection(
         questionId: question.id,
         topicKey: question.topicKey,
-        shelfKey: shelfKey,
+        subjectKey: question.subject.key,
+        shelfKey: canonicalShelfKey,
+        setSize: setSize,
+        topicQuestionCount: topicQuestions.length,
         hypothesisChoiceIndex: hypothesisChoiceIndex,
         reflection: reflection,
       );
       _study = await _progress.studySummary();
       _studyDueCount = (await _progress.studyDueIds()).length;
+      if (outcome.unitCompleted) {
+        await _maybeAwardSectionCompletion(question.topicKey);
+      }
+      _gamification = await _progress.gamificationSummary();
       notifyListeners();
-      return record;
+      return outcome;
     } catch (error) {
       if (error is GaussFailure) rethrow;
       throw StudyWriteFailure(error, operation: 'save_study_reflection');
     }
+  }
+
+  Future<void> _maybeAwardSectionCompletion(String topicKey) async {
+    StudySectionDefinition? section;
+    for (final item in GaussStudyCurriculum.sections) {
+      if (item.topicKeys.contains(topicKey)) {
+        section = item;
+        break;
+      }
+    }
+    if (section == null) return;
+    for (final key in section.topicKeys) {
+      final topic = _questionBank.topicByKey(key);
+      if (_study.topic(key).reflected < topic.questionCount) return;
+    }
+    await _progress.awardSectionCompleted(
+      sectionId: section.id,
+      subjectKey: section.subject.key,
+    );
   }
 
   Future<void> saveStudyPosition({

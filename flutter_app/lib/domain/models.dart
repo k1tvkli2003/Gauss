@@ -320,6 +320,33 @@ class StudyShelf {
   final bool revisitOnly;
 }
 
+/// What a saved reflection produced: the persisted record plus any rewards
+/// the idempotent ledger granted for the act of studying. Rewards celebrate
+/// effort and pacing — they never claim the unverified source is correct.
+class StudyReflectionOutcome {
+  const StudyReflectionOutcome({
+    required this.record,
+    required this.lines,
+    required this.setCompleted,
+    required this.unitCompleted,
+    required this.xpEarned,
+    required this.totalXp,
+    required this.levelBefore,
+    required this.levelAfter,
+  });
+
+  final StudyRecord record;
+  final List<RewardLine> lines;
+  final bool setCompleted;
+  final bool unitCompleted;
+  final int xpEarned;
+  final int totalXp;
+  final int levelBefore;
+  final int levelAfter;
+
+  bool get leveledUp => levelAfter > levelBefore;
+}
+
 class AttemptRecord {
   const AttemptRecord({
     required this.sessionId,

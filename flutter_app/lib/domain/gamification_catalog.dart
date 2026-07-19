@@ -167,19 +167,20 @@ class AchievementSnapshot {
 }
 
 abstract final class GaussGamificationCatalog {
-  static const dailyQuestId = 'daily_useful_questions';
-  static const dailyQuestTitle = 'Chart 10 useful answers';
+  static const dailyQuestId = 'daily_study_reflections';
+  static const dailyQuestTitle = 'Chart ten reflections';
   static const dailyQuestTarget = 10;
   static const dailyQuestRewardXp = 40;
 
   static const manifest = CatalogSeedManifest(
     catalogId: 'gauss_orbit_progression',
-    version: 1,
+    version: 2,
     localizationNamespace: 'gamification.orbit',
     migrationNotes:
-        'Version 1 introduces static, stable definitions. Existing XP, attempts, '
-        'quests, and achievement rows remain untouched; progress is derived from '
-        'the event ledger and recorded mission history.',
+        'Version 2 rebinds every metric to study-native ledger events '
+        '(reflections, cleared revisits, completed sets/units/sections). '
+        'Mission-era XP, events, and quest rows remain untouched history; no '
+        'rows are rewritten and thresholds only ever read derived counts.',
   );
 
   static const _identityReward = CatalogRewardDefinition(
@@ -195,14 +196,14 @@ abstract final class GaussGamificationCatalog {
       id: 'proof_ledger',
       localizationKey: 'achievement.proof_ledger',
       title: 'Luminosity',
-      description: 'Record correct answers across the archive.',
+      description: 'Chart source questions across the archive.',
       accessibilityLabel: 'Proof ledger achievement',
       family: AchievementFamily.mastery,
       metric: AchievementMetric.correctAnswers,
       iconToken: 'proof_mark',
       artRequirement: 'Brass proof mark with one to four engraved star points.',
       antiAbuseRule:
-          'Counts finalized correct answers; repeat XP caps remain independent.',
+          'Counts first reflections only; re-reading a question never double-counts.',
       reward: _identityReward,
       levels: [
         AchievementLevelDefinition(
@@ -239,7 +240,7 @@ abstract final class GaussGamificationCatalog {
       id: 'error_alchemy',
       localizationKey: 'achievement.error_alchemy',
       title: 'Orbital correction',
-      description: 'Turn earlier mistakes into correct answers.',
+      description: 'Turn revisit-marked concepts into cleared ones.',
       accessibilityLabel: 'Error alchemy achievement',
       family: AchievementFamily.correction,
       metric: AchievementMetric.correctedMistakes,
@@ -247,8 +248,8 @@ abstract final class GaussGamificationCatalog {
       artRequirement:
           'Split teal and brass compass with a visible repair seam.',
       antiAbuseRule:
-          'Requires a finalized wrong attempt in an earlier mission and awards '
-          'each corrected question once per session.',
+          'Requires clearing on a later day than the revisit mark; each '
+          'question is corrected at most once.',
       reward: _identityReward,
       levels: [
         AchievementLevelDefinition(
@@ -285,7 +286,7 @@ abstract final class GaussGamificationCatalog {
       id: 'orbit_atlas',
       localizationKey: 'achievement.orbit_atlas',
       title: 'Stellar cartography',
-      description: 'Leave a solved signal in distinct topics across the map.',
+      description: 'Complete whole curriculum units across the map.',
       accessibilityLabel: 'Orbit atlas achievement',
       family: AchievementFamily.exploration,
       metric: AchievementMetric.masteredTopics,
@@ -293,8 +294,8 @@ abstract final class GaussGamificationCatalog {
       artRequirement:
           'Concentric orbit badge with distinct non-color tick marks.',
       antiAbuseRule:
-          'A topic contributes once after a mission of at least five questions '
-          'reaches eighty percent accuracy.',
+          'A unit contributes once, when every one of its questions has been '
+          'charted.',
       reward: _identityReward,
       levels: [
         AchievementLevelDefinition(
@@ -331,7 +332,7 @@ abstract final class GaussGamificationCatalog {
       id: 'gold_transit',
       localizationKey: 'achievement.gold_transit',
       title: 'Zenith passage',
-      description: 'Pass demanding twenty-question gold challenges.',
+      description: 'Complete entire curriculum sections of the sky.',
       accessibilityLabel: 'Gold transit achievement',
       family: AchievementFamily.challenge,
       metric: AchievementMetric.goldChallenges,
@@ -339,8 +340,8 @@ abstract final class GaussGamificationCatalog {
       artRequirement:
           'Gold eclipse silhouette with one to four radial notches.',
       antiAbuseRule:
-          'Requires at least twenty answers, eighty-five percent accuracy, and '
-          'positive recorded duration; each session is idempotent.',
+          'A section counts once, when all of its units are fully charted; '
+          'nine sections exist in total.',
       reward: _identityReward,
       levels: [
         AchievementLevelDefinition(
@@ -353,21 +354,21 @@ abstract final class GaussGamificationCatalog {
         AchievementLevelDefinition(
           id: 'gold_transit_2',
           title: 'Apex',
-          threshold: 5,
+          threshold: 3,
           rarity: AchievementRarity.rare,
           artToken: 'gold_transit_2',
         ),
         AchievementLevelDefinition(
           id: 'gold_transit_3',
           title: 'Meridian',
-          threshold: 20,
+          threshold: 6,
           rarity: AchievementRarity.epic,
           artToken: 'gold_transit_3',
         ),
         AchievementLevelDefinition(
           id: 'gold_transit_4',
           title: 'Solstice',
-          threshold: 50,
+          threshold: 9,
           rarity: AchievementRarity.legendary,
           artToken: 'gold_transit_4',
         ),
@@ -377,7 +378,7 @@ abstract final class GaussGamificationCatalog {
       id: 'steady_signal',
       localizationKey: 'achievement.steady_signal',
       title: 'Steady signal',
-      description: 'Build a calm rhythm of days with recorded work.',
+      description: 'Build a calm rhythm of days with recorded study.',
       accessibilityLabel: 'Steady signal achievement',
       family: AchievementFamily.consistency,
       metric: AchievementMetric.studyRhythm,
@@ -421,15 +422,16 @@ abstract final class GaussGamificationCatalog {
     AchievementDefinition(
       id: 'mission_archive',
       localizationKey: 'achievement.mission_archive',
-      title: 'Mission archive',
-      description: 'Complete missions and preserve a truthful study history.',
-      accessibilityLabel: 'Mission archive achievement',
+      title: 'Set ledger',
+      description: 'Complete study sets and preserve a truthful record.',
+      accessibilityLabel: 'Set ledger achievement',
       family: AchievementFamily.mastery,
       metric: AchievementMetric.completedMissions,
       iconToken: 'archive_seal',
-      artRequirement: 'Layered archive seal with engraved mission ticks.',
+      artRequirement: 'Layered archive seal with engraved set ticks.',
       antiAbuseRule:
-          'Counts only completed persisted exams with at least one attempt.',
+          'A set counts once, when every question in its twenty-item slice '
+          'has been charted; about 190 sets exist in total.',
       reward: _identityReward,
       levels: [
         AchievementLevelDefinition(
@@ -449,14 +451,14 @@ abstract final class GaussGamificationCatalog {
         AchievementLevelDefinition(
           id: 'mission_archive_3',
           title: 'Trajectory',
-          threshold: 100,
+          threshold: 90,
           rarity: AchievementRarity.epic,
           artToken: 'archive_seal_3',
         ),
         AchievementLevelDefinition(
           id: 'mission_archive_4',
           title: 'Deep space',
-          threshold: 500,
+          threshold: 180,
           rarity: AchievementRarity.legendary,
           artToken: 'archive_seal_4',
         ),
@@ -466,7 +468,7 @@ abstract final class GaussGamificationCatalog {
       id: 'dual_lens',
       localizationKey: 'achievement.dual_lens',
       title: 'Dual lens',
-      description: 'Record real work in both mathematics and physics.',
+      description: 'Record real study in both mathematics and physics.',
       accessibilityLabel: 'Dual lens achievement',
       family: AchievementFamily.exploration,
       metric: AchievementMetric.practicedSubjects,
@@ -474,7 +476,7 @@ abstract final class GaussGamificationCatalog {
       artRequirement:
           'Interlocking math and physics lenses with distinct shapes.',
       antiAbuseRule:
-          'Each subject contributes only after a finalized non-skipped answer.',
+          'Each subject contributes only after a first charted reflection.',
       reward: _identityReward,
       levels: [
         AchievementLevelDefinition(
@@ -491,11 +493,11 @@ abstract final class GaussGamificationCatalog {
   static const quests = <QuestDefinition>[
     QuestDefinition(
       id: dailyQuestId,
-      localizationKey: 'quest.daily_useful_questions',
+      localizationKey: 'quest.daily_study_reflections',
       title: dailyQuestTitle,
-      description: 'Answer ten non-skipped questions today.',
+      description: 'Chart ten first reflections today.',
       cadence: QuestCadence.daily,
-      criteriaKey: 'answered_non_skipped_on_local_day',
+      criteriaKey: 'first_reflections_on_local_day',
       target: dailyQuestTarget,
       reward: CatalogRewardDefinition(
         id: 'daily_useful_questions_xp',

@@ -62,20 +62,24 @@ void main() {
       expect(analytics.totalCorrect, 2);
       expect(analytics.accuracy, closeTo(66.666, .01));
       final summary = await repository.gamificationSummary();
+      // The live daily quest is study-native (rule v2); legacy mission
+      // finalization keeps its own history but no longer drives it.
       final quest = summary.quest;
-      expect(quest.progress, 3);
+      expect(quest.progress, 0);
       expect(quest.completed, isFalse);
+      // Catalog v2 achievements read study-native events only; mission
+      // history stays preserved without feeding them.
       expect(
         summary.achievements
             .singleWhere((item) => item.definition.id == 'proof_ledger')
             .current,
-        2,
+        0,
       );
       expect(
         summary.achievements
             .singleWhere((item) => item.definition.id == 'mission_archive')
             .current,
-        1,
+        0,
       );
 
       final correctSrs = await (database.select(
@@ -301,7 +305,9 @@ void main() {
         containsAll(['Gold challenge', 'Daily quest', 'Topic mastery']),
       );
       final summary = await repository.gamificationSummary();
-      expect(summary.quest.completed, isTrue);
+      // Legacy mission quests and events stay in the ledger as history, but
+      // catalog v2 metrics are study-native and read nothing from them.
+      expect(summary.quest.completed, isFalse);
       expect(
         summary.achievements
             .singleWhere(
@@ -309,7 +315,7 @@ void main() {
                   item.definition.metric == AchievementMetric.goldChallenges,
             )
             .current,
-        1,
+        0,
       );
       expect(
         summary.achievements
@@ -318,26 +324,19 @@ void main() {
                   item.definition.metric == AchievementMetric.masteredTopics,
             )
             .current,
-        1,
+        0,
       );
     },
   );
 
   test('revisit reflections come due tomorrow, clear ones rest longer', () async {
-    await repository.saveStudyReflection(
-      questionId: 'study-q1',
-      topicKey: 'sets',
-      shelfKey: 'sets:0:20',
-      hypothesisChoiceIndex: 1,
+    await _reflect(
+      repository,
+      'study-q1',
+      hypothesis: 1,
       reflection: StudyReflection.revisit,
     );
-    await repository.saveStudyReflection(
-      questionId: 'study-q2',
-      topicKey: 'sets',
-      shelfKey: 'sets:0:20',
-      hypothesisChoiceIndex: null,
-      reflection: StudyReflection.clear,
-    );
+    await _reflect(repository, 'study-q2');
 
     // Nothing interrupts the current session: neither card is due today.
     expect(await repository.studyDueIds(), isEmpty);
@@ -353,14 +352,130 @@ void main() {
     expect(await repository.studyDueIds(), const ['study-q1']);
 
     // Clearing the revisit empties the queue and extends its interval.
-    await repository.saveStudyReflection(
-      questionId: 'study-q1',
-      topicKey: 'sets',
-      shelfKey: 'sets:0:20',
-      hypothesisChoiceIndex: 1,
+    await _reflect(
+      repository,
+      'study-q1',
+      hypothesis: 1,
       reflection: StudyReflection.clear,
     );
     expect(await repository.studyDueIds(), isEmpty);
+  });
+
+  test('first reflections earn calm study XP exactly once', () async {
+    final first = await _reflect(
+      repository,
+      'sq1',
+      reflection: StudyReflection.revisit,
+    );
+    expect(first.xpEarned, 12);
+    expect(
+      first.lines.map((line) => line.reason),
+      containsAll(['Question charted', 'New unit reached']),
+    );
+
+    final second = await _reflect(repository, 'sq2');
+    expect(second.xpEarned, 4);
+
+    // Re-saving the identical reflection is a pure no-op.
+    final repeat = await _reflect(repository, 'sq2');
+    expect(repeat.xpEarned, 0);
+    expect(repeat.lines, isEmpty);
+
+    // Flipping the reflection on the same day never re-mints charting XP.
+    final flip = await _reflect(
+      repository,
+      'sq2',
+      reflection: StudyReflection.revisit,
+    );
+    expect(flip.xpEarned, 0);
+  });
+
+  test('clearing a revisit on a later day mints the correction once', () async {
+    await _reflect(repository, 'rq1', reflection: StudyReflection.revisit);
+
+    clockNow = clockNow.add(const Duration(days: 1));
+    final cleared = await _reflect(repository, 'rq1');
+    expect(cleared.xpEarned, ProgressRepository.revisitClearedXp);
+    expect(cleared.lines.single.reason, 'Revisit cleared');
+
+    // A second revisit/clear cycle cannot double-mint the correction.
+    clockNow = clockNow.add(const Duration(days: 1));
+    await _reflect(repository, 'rq1', reflection: StudyReflection.revisit);
+    clockNow = clockNow.add(const Duration(days: 1));
+    final again = await _reflect(repository, 'rq1');
+    expect(again.xpEarned, 0);
+  });
+
+  test('completing a set and a unit mints mastery rewards', () async {
+    final first = await _reflect(
+      repository,
+      'u1',
+      topic: 'mini',
+      shelf: 'mini:0:20',
+      setSize: 2,
+      topicCount: 2,
+    );
+    expect(first.setCompleted, isFalse);
+    expect(first.unitCompleted, isFalse);
+
+    final second = await _reflect(
+      repository,
+      'u2',
+      topic: 'mini',
+      shelf: 'mini:0:20',
+      setSize: 2,
+      topicCount: 2,
+    );
+    expect(second.setCompleted, isTrue);
+    expect(second.unitCompleted, isTrue);
+    expect(
+      second.lines.map((line) => line.reason),
+      containsAll(['Question charted', 'Study set complete', 'Unit complete']),
+    );
+    expect(second.xpEarned, 84);
+
+    final summary = await repository.gamificationSummary();
+    expect(
+      summary.achievements
+          .singleWhere((item) => item.definition.id == 'mission_archive')
+          .current,
+      1,
+    );
+    expect(
+      summary.achievements
+          .singleWhere((item) => item.definition.id == 'orbit_atlas')
+          .current,
+      1,
+    );
+  });
+
+  test('ten first reflections complete the daily study quest', () async {
+    for (var index = 0; index < 10; index++) {
+      await _reflect(repository, 'dq$index');
+    }
+    final summary = await repository.gamificationSummary();
+    expect(summary.quest.completed, isTrue);
+    expect(summary.quest.progress, 10);
+    // 10 charted (40) + new unit (8) + daily quest (40).
+    expect(summary.totalXp, 88);
+    expect(summary.streak, 1);
+  });
+
+  test('study XP honors its daily cap without losing records', () async {
+    for (var index = 0; index < 31; index++) {
+      await _reflect(repository, 'cap$index');
+    }
+    final summary = await repository.gamificationSummary();
+    // Thirty reflections fill the 120-point study cap; the thirty-first is
+    // still recorded but earns no charting XP. Unit touch (8), the daily
+    // quest (40), and the completed twenty-item set (20) remain uncapped.
+    expect(summary.totalXp, 188);
+    expect(
+      summary.achievements
+          .singleWhere((item) => item.definition.id == 'proof_ledger')
+          .current,
+      31,
+    );
   });
 
   test('review orbit surfaces every due card, not only lapses', () async {
@@ -476,7 +591,9 @@ void main() {
       );
 
       final before = await repository.gamificationSummary();
-      expect(before.quest.progress, 1);
+      // Mission XP still lands on its local day; the live (study) quest is
+      // untouched by mission activity.
+      expect(before.quest.progress, 0);
       expect(before.todayXp, 25);
       expect(before.streak, 1);
 
@@ -489,27 +606,37 @@ void main() {
   );
 
   test(
-    'source reflections are idempotent and never mint scored rewards',
+    'source reflections are idempotent and never claim correctness',
     () async {
-      final first = await repository.saveStudyReflection(
-        questionId: 'source-q1',
-        topicKey: 'sets',
-        shelfKey: 'sets:0:20',
-        hypothesisChoiceIndex: 2,
+      final first = await _reflect(
+        repository,
+        'source-q1',
+        hypothesis: 2,
         reflection: StudyReflection.revisit,
       );
-      final repeated = await repository.saveStudyReflection(
-        questionId: 'source-q1',
-        topicKey: 'sets',
-        shelfKey: 'sets:0:20',
-        hypothesisChoiceIndex: 2,
+      final repeated = await _reflect(
+        repository,
+        'source-q1',
+        hypothesis: 2,
         reflection: StudyReflection.revisit,
       );
 
-      expect(repeated.firstReflectedAt, first.firstReflectedAt);
+      expect(
+        repeated.record.firstReflectedAt,
+        first.record.firstReflectedAt,
+      );
+      expect(repeated.xpEarned, 0);
       expect(await database.select(database.studyRecords).get(), hasLength(1));
-      expect(await database.select(database.gamificationEvents).get(), isEmpty);
-      expect(await database.select(database.xpTransactions).get(), isEmpty);
+      // Rule v2 rewards the act of charting (reflected + unit touched), and
+      // the repeated identical call must add nothing to the ledger.
+      expect(
+        await database.select(database.gamificationEvents).get(),
+        hasLength(2),
+      );
+      expect(
+        await database.select(database.xpTransactions).get(),
+        hasLength(2),
+      );
       final summary = await repository.studySummary();
       expect(summary.totalReflected, 1);
       expect(summary.revisitCount, 1);
@@ -519,21 +646,18 @@ void main() {
   );
 
   test('a clear reflection removes an item from the revisit orbit', () async {
-    await repository.saveStudyReflection(
-      questionId: 'source-q2',
-      topicKey: 'sets',
-      shelfKey: 'sets:0:20',
-      hypothesisChoiceIndex: null,
+    await _reflect(
+      repository,
+      'source-q2',
       reflection: StudyReflection.revisit,
     );
     expect(await repository.revisitStudyIds(), ['source-q2']);
 
     clockNow = clockNow.add(const Duration(days: 1));
-    await repository.saveStudyReflection(
-      questionId: 'source-q2',
-      topicKey: 'sets',
-      shelfKey: 'sets:0:20',
-      hypothesisChoiceIndex: 1,
+    await _reflect(
+      repository,
+      'source-q2',
+      hypothesis: 1,
       reflection: StudyReflection.clear,
     );
 
@@ -575,6 +699,27 @@ Future<MissionCompletion> _completeSingle(
   );
   return repository.finalizeMission(sessionId: session, durationSeconds: 15);
 }
+
+Future<StudyReflectionOutcome> _reflect(
+  ProgressRepository repository,
+  String questionId, {
+  String topic = 'sets',
+  String subject = 'math',
+  String shelf = 'sets:0:20',
+  int setSize = 20,
+  int topicCount = 76,
+  int? hypothesis,
+  StudyReflection reflection = StudyReflection.clear,
+}) => repository.saveStudyReflection(
+  questionId: questionId,
+  topicKey: topic,
+  subjectKey: subject,
+  shelfKey: shelf,
+  setSize: setSize,
+  topicQuestionCount: topicCount,
+  hypothesisChoiceIndex: hypothesis,
+  reflection: reflection,
+);
 
 AttemptRecord _attempt(
   String session,

@@ -3,8 +3,8 @@ import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/domain/gamification_catalog.dart';
 
 void main() {
-  test('catalog v1 has stable unique ids and monotonic achievement levels', () {
-    expect(GaussGamificationCatalog.manifest.version, 1);
+  test('catalog v2 has stable unique ids and monotonic achievement levels', () {
+    expect(GaussGamificationCatalog.manifest.version, 2);
     expect(
       GaussGamificationCatalog.achievements.map((item) => item.id).toSet(),
       {
@@ -50,7 +50,7 @@ void main() {
     final active = GaussGamificationCatalog.quests.singleWhere(
       (quest) => quest.active,
     );
-    expect(active.id, 'daily_useful_questions');
+    expect(active.id, 'daily_study_reflections');
     expect(active.target, ProgressRepository.dailyQuestTarget);
     expect(active.reward.amount, ProgressRepository.dailyQuestXp);
     expect(active.cadence, QuestCadence.daily);

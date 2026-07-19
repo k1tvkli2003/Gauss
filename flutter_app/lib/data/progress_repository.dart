@@ -20,7 +20,15 @@ class ProgressRepository {
   static const _correction = 'correction';
   static const _bonus = 'bonus';
   static const _mastery = 'mastery';
+  static const _study = 'study';
   static const _syntheticTopicKeys = {'revenge', 'review'};
+
+  static const studyReflectXp = 4;
+  static const revisitClearedXp = 12;
+  static const setCompletedXp = 20;
+  static const unitCompletedXp = 60;
+  static const unitTouchedXp = 8;
+  static const sectionCompletedXp = 120;
 
   Future<void> initialize() async {
     await database.customSelect('SELECT 1').getSingle();
@@ -35,10 +43,13 @@ class ProgressRepository {
     return (await query.get()).map(_studyRecordFromRow).toList(growable: false);
   }
 
-  Future<StudyRecord> saveStudyReflection({
+  Future<StudyReflectionOutcome> saveStudyReflection({
     required String questionId,
     required String topicKey,
+    required String subjectKey,
     required String shelfKey,
+    required int setSize,
+    required int topicQuestionCount,
     required int? hypothesisChoiceIndex,
     required StudyReflection reflection,
   }) => database.transaction(() async {
@@ -51,6 +62,7 @@ class ProgressRepository {
       );
     }
     final now = _clock().millisecondsSinceEpoch;
+    final xpBefore = await _totalXp();
     final existing = await (database.select(
       database.studyRecords,
     )..where((row) => row.questionId.equals(questionId))).getSingleOrNull();
@@ -59,9 +71,19 @@ class ProgressRepository {
         existing.shelfKey == shelfKey &&
         existing.hypothesisChoiceIndex == hypothesisChoiceIndex &&
         existing.reflection == reflection.key) {
-      return _studyRecordFromRow(existing);
+      return StudyReflectionOutcome(
+        record: _studyRecordFromRow(existing),
+        lines: const [],
+        setCompleted: false,
+        unitCompleted: false,
+        xpEarned: 0,
+        totalXp: xpBefore,
+        levelBefore: levelFor(xpBefore),
+        levelAfter: levelFor(xpBefore),
+      );
     }
-    if (existing == null) {
+    final isFirst = existing == null;
+    if (isFirst) {
       await database
           .into(database.studyRecords)
           .insert(
@@ -91,11 +113,194 @@ class ProgressRepository {
       );
     }
     await _updateStudySrs(questionId, reflection: reflection, now: now);
+
+    // Rule version 2: rewards for the act of studying, granted inside the
+    // same transaction through the idempotent event ledger. Nothing here
+    // claims the unverified source mapping is correct.
+    final dayKey = _dayKey(DateTime.fromMillisecondsSinceEpoch(now));
+    final lines = <RewardLine>[];
+    var setCompleted = false;
+    var unitCompleted = false;
+    if (isFirst) {
+      await _award(
+        eventId: 'study_reflected:$questionId',
+        type: 'study_reflected',
+        requested: studyReflectXp,
+        category: _study,
+        reason: 'Question charted',
+        dayKey: dayKey,
+        createdAt: now,
+        examId: null,
+        subject: subjectKey,
+        topicKey: topicKey,
+        questionId: questionId,
+        lines: lines,
+      );
+      final topicReflected = await _countStudyRecords(topicKey: topicKey);
+      if (topicReflected == 1) {
+        await _award(
+          eventId: 'unit_touched:$topicKey',
+          type: 'unit_touched',
+          requested: unitTouchedXp,
+          category: _bonus,
+          reason: 'New unit reached',
+          dayKey: dayKey,
+          createdAt: now,
+          examId: null,
+          subject: subjectKey,
+          topicKey: topicKey,
+          lines: lines,
+        );
+      }
+      if (setSize > 0) {
+        final setReflected = await _countStudyRecords(shelfKey: shelfKey);
+        if (setReflected >= setSize) {
+          setCompleted = true;
+          await _award(
+            eventId: 'set_completed:$shelfKey',
+            type: 'set_completed',
+            requested: setCompletedXp,
+            category: _mastery,
+            reason: 'Study set complete',
+            dayKey: dayKey,
+            createdAt: now,
+            examId: null,
+            subject: subjectKey,
+            topicKey: topicKey,
+            lines: lines,
+          );
+        }
+      }
+      if (topicQuestionCount > 0 && topicReflected >= topicQuestionCount) {
+        unitCompleted = true;
+        await _award(
+          eventId: 'unit_completed:$topicKey',
+          type: 'unit_completed',
+          requested: unitCompletedXp,
+          category: _mastery,
+          reason: 'Unit complete',
+          dayKey: dayKey,
+          createdAt: now,
+          examId: null,
+          subject: subjectKey,
+          topicKey: topicKey,
+          lines: lines,
+        );
+      }
+      final reflectedToday = await _reflectionsOnDay(dayKey);
+      final questProgressCount = math.min(dailyQuestTarget, reflectedToday);
+      await database
+          .into(database.questProgress)
+          .insertOnConflictUpdate(
+            QuestProgressCompanion.insert(
+              questId: 'daily_study:$dayKey',
+              dayKey: dayKey,
+              title: dailyQuestTitle,
+              progress: questProgressCount,
+              target: dailyQuestTarget,
+              completed: reflectedToday >= dailyQuestTarget,
+              rewardXp: dailyQuestXp,
+              updatedAt: now,
+            ),
+          );
+      if (reflectedToday >= dailyQuestTarget) {
+        await _award(
+          eventId: 'daily_study_completed:$dayKey',
+          type: 'daily_study_completed',
+          requested: dailyQuestXp,
+          category: _bonus,
+          reason: 'Daily observation',
+          dayKey: dayKey,
+          createdAt: now,
+          examId: null,
+          subject: subjectKey,
+          topicKey: topicKey,
+          lines: lines,
+        );
+      }
+    } else if (existing.reflection == StudyReflection.revisit.key &&
+        reflection != StudyReflection.revisit &&
+        _dayKey(DateTime.fromMillisecondsSinceEpoch(existing.updatedAt)) !=
+            dayKey) {
+      await _award(
+        eventId: 'revisit_cleared:$questionId',
+        type: 'revisit_cleared',
+        requested: revisitClearedXp,
+        category: _correction,
+        reason: 'Revisit cleared',
+        dayKey: dayKey,
+        createdAt: now,
+        examId: null,
+        subject: subjectKey,
+        topicKey: topicKey,
+        questionId: questionId,
+        lines: lines,
+      );
+    }
+
+    final xpAfter = await _totalXp();
     final saved = await (database.select(
       database.studyRecords,
     )..where((row) => row.questionId.equals(questionId))).getSingle();
-    return _studyRecordFromRow(saved);
+    return StudyReflectionOutcome(
+      record: _studyRecordFromRow(saved),
+      lines: List.unmodifiable(lines),
+      setCompleted: setCompleted,
+      unitCompleted: unitCompleted,
+      xpEarned: xpAfter - xpBefore,
+      totalXp: xpAfter,
+      levelBefore: levelFor(xpBefore),
+      levelAfter: levelFor(xpAfter),
+    );
   });
+
+  /// Marks a whole curriculum section complete, once, through the same
+  /// idempotent ledger. The caller (controller) owns section membership.
+  Future<void> awardSectionCompleted({
+    required String sectionId,
+    required String subjectKey,
+  }) async {
+    await database.transaction(() async {
+      final now = _clock().millisecondsSinceEpoch;
+      await _award(
+        eventId: 'section_completed:$sectionId',
+        type: 'section_completed',
+        requested: sectionCompletedXp,
+        category: _mastery,
+        reason: 'Section complete',
+        dayKey: _dayKey(DateTime.fromMillisecondsSinceEpoch(now)),
+        createdAt: now,
+        examId: null,
+        subject: subjectKey,
+        topicKey: null,
+        lines: <RewardLine>[],
+      );
+    });
+  }
+
+  Future<int> _countStudyRecords({String? topicKey, String? shelfKey}) async {
+    final count = database.studyRecords.questionId.count();
+    final query = database.selectOnly(database.studyRecords)
+      ..addColumns([count]);
+    if (topicKey != null) {
+      query.where(database.studyRecords.topicKey.equals(topicKey));
+    }
+    if (shelfKey != null) {
+      query.where(database.studyRecords.shelfKey.equals(shelfKey));
+    }
+    return (await query.getSingle()).read(count) ?? 0;
+  }
+
+  Future<int> _reflectionsOnDay(String dayKey) async {
+    final count = database.gamificationEvents.id.count();
+    final query = database.selectOnly(database.gamificationEvents)
+      ..addColumns([count])
+      ..where(
+        database.gamificationEvents.type.equals('study_reflected') &
+            database.gamificationEvents.dayKey.equals(dayKey),
+      );
+    return (await query.getSingle()).read(count) ?? 0;
+  }
 
   /// Spaced revisit scheduling over the shared SRS table. A `revisit`
   /// reflection comes due tomorrow (never immediately, so the study loop is
@@ -731,9 +936,13 @@ class ProgressRepository {
     final today = _dayKey(now);
     final total = await _totalXp();
     final level = levelFor(total);
-    final questRow = await (database.select(
-      database.questProgress,
-    )..where((row) => row.dayKey.equals(today))).getSingleOrNull();
+    final questRow =
+        await (database.select(database.questProgress)..where(
+              (row) =>
+                  row.dayKey.equals(today) &
+                  row.questId.like('daily_study:%'),
+            ))
+            .getSingleOrNull();
     final dayQuery = database.selectOnly(database.xpTransactions)
       ..addColumns([database.xpTransactions.dayKey])
       ..groupBy([database.xpTransactions.dayKey]);
@@ -767,16 +976,19 @@ class ProgressRepository {
     );
   }
 
+  /// Catalog v2 metric sources: every achievement now derives from
+  /// study-native ledger events and records. Mission-era events remain in
+  /// the ledger as history but no longer feed any metric.
   Future<List<AchievementSnapshot>> _achievementSnapshots({
     required int streak,
   }) async {
     final values = await Future.wait<int>([
-      _countAttemptsWithStatus('correct'),
-      _countEvents('mistake_corrected'),
-      _countEvents('topic_mastered'),
-      _countEvents('boss_pass'),
-      _countCompletedMissions(),
-      _countPracticedSubjects(),
+      _countStudyRecords(),
+      _countEvents('revisit_cleared'),
+      _countEvents('unit_completed'),
+      _countEvents('section_completed'),
+      _countEvents('set_completed'),
+      _countStudySubjects(),
     ]);
     return GaussGamificationCatalog.evaluate({
       AchievementMetric.correctAnswers: values[0],
@@ -789,15 +1001,13 @@ class ProgressRepository {
     });
   }
 
-  Future<int> _countAttemptsWithStatus(String status) async {
-    final count = database.attempts.id.count();
-    final query = database.selectOnly(database.attempts)
-      ..addColumns([count])
-      ..where(
-        database.attempts.examId.isNotNull() &
-            database.attempts.status.equals(status),
-      );
-    return (await query.getSingle()).read(count) ?? 0;
+  Future<int> _countStudySubjects() async {
+    final subject = database.gamificationEvents.subject;
+    final query = database.selectOnly(database.gamificationEvents)
+      ..addColumns([subject])
+      ..where(database.gamificationEvents.type.equals('study_reflected'))
+      ..groupBy([subject]);
+    return (await query.get()).length;
   }
 
   Future<int> _countEvents(String type) async {
@@ -806,26 +1016,6 @@ class ProgressRepository {
       ..addColumns([count])
       ..where(database.gamificationEvents.type.equals(type));
     return (await query.getSingle()).read(count) ?? 0;
-  }
-
-  Future<int> _countCompletedMissions() async {
-    final count = database.exams.id.count();
-    final query = database.selectOnly(database.exams)
-      ..addColumns([count])
-      ..where(database.exams.status.equals('completed'));
-    return (await query.getSingle()).read(count) ?? 0;
-  }
-
-  Future<int> _countPracticedSubjects() async {
-    final subject = database.attempts.subject;
-    final query = database.selectOnly(database.attempts)
-      ..addColumns([subject])
-      ..where(
-        database.attempts.examId.isNotNull() &
-            database.attempts.status.isNotValue('skipped'),
-      )
-      ..groupBy([subject]);
-    return (await query.get()).length;
   }
 
   Future<void> _updateSrs(
@@ -880,7 +1070,7 @@ class ProgressRepository {
     required String reason,
     required String dayKey,
     required int createdAt,
-    required int examId,
+    required int? examId,
     required String subject,
     required String? topicKey,
     required List<RewardLine> lines,
@@ -930,6 +1120,7 @@ class ProgressRepository {
     final cap = switch (category) {
       _practice => 200,
       _correction => 120,
+      _study => 120,
       _ => null,
     };
     if (cap == null) return requested;

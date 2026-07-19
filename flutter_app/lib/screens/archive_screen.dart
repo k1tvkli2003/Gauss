@@ -154,14 +154,14 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     final originalShelf = _records[question.id]?.shelfKey;
     setState(() => _saving = true);
     try {
-      final record = await GaussScope.of(context).saveStudyReflection(
+      final outcome = await GaussScope.of(context).saveStudyReflection(
         question: question,
         shelfKey: originalShelf ?? shelf.key,
         hypothesisChoiceIndex: _hypotheses[question.id],
         reflection: reflection,
       );
       if (!mounted) return;
-      setState(() => _records[question.id] = record);
+      setState(() => _records[question.id] = outcome.record);
     } finally {
       if (mounted) setState(() => _saving = false);
     }
