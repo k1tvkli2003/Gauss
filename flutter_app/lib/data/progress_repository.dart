@@ -90,11 +90,57 @@ class ProgressRepository {
         ),
       );
     }
+    await _updateStudySrs(questionId, reflection: reflection, now: now);
     final saved = await (database.select(
       database.studyRecords,
     )..where((row) => row.questionId.equals(questionId))).getSingle();
     return _studyRecordFromRow(saved);
   });
+
+  /// Spaced revisit scheduling over the shared SRS table. A `revisit`
+  /// reflection comes due tomorrow (never immediately, so the study loop is
+  /// not interrupted); a `clear` reflection earns a growing interval. This is
+  /// a private pacing aid — it never claims correctness of source content.
+  Future<void> _updateStudySrs(
+    String questionId, {
+    required StudyReflection reflection,
+    required int now,
+  }) async {
+    final previous = await (database.select(
+      database.srsStates,
+    )..where((row) => row.questionId.equals(questionId))).getSingleOrNull();
+    var ease = previous?.ease ?? 2.5;
+    var reps = previous?.reps ?? 0;
+    var lapses = previous?.lapses ?? 0;
+    var interval = previous?.intervalDays ?? 0;
+    if (reflection == StudyReflection.revisit) {
+      lapses += 1;
+      reps = 0;
+      interval = 1;
+      ease = math.max(1.3, ease - .2);
+    } else {
+      reps += 1;
+      interval = switch (reps) {
+        1 => 3,
+        2 => 7,
+        _ => (interval * ease).ceil(),
+      };
+      ease = math.min(2.8, ease + .1);
+    }
+    await database
+        .into(database.srsStates)
+        .insertOnConflictUpdate(
+          SrsStatesCompanion.insert(
+            questionId: questionId,
+            ease: Value(ease),
+            intervalDays: Value(interval),
+            reps: Value(reps),
+            lapses: Value(lapses),
+            dueAt: now + interval * Duration.millisecondsPerDay,
+            updatedAt: now,
+          ),
+        );
+  }
 
   Future<void> saveStudyPosition({
     required String shelfKey,
@@ -127,9 +173,39 @@ class ProgressRepository {
     final query = database.select(database.studyRecords)
       ..where((row) => row.reflection.equals(StudyReflection.revisit.key))
       ..orderBy([(row) => OrderingTerm.asc(row.updatedAt)]);
-    return (await query.get())
-        .map((row) => row.questionId)
-        .toList(growable: false);
+    final rows = await query.get();
+    if (rows.isEmpty) return const [];
+    final dueByQuestion = <String, int>{};
+    for (final srs in await database.select(database.srsStates).get()) {
+      dueByQuestion[srs.questionId] = srs.dueAt;
+    }
+    // Oldest due first; unscheduled legacy rows sort as immediately due.
+    final ids = rows.map((row) => row.questionId).toList()
+      ..sort(
+        (a, b) => (dueByQuestion[a] ?? 0).compareTo(dueByQuestion[b] ?? 0),
+      );
+    return List.unmodifiable(ids);
+  }
+
+  /// Revisit-marked questions whose spacing timer has elapsed.
+  Future<List<String>> studyDueIds({DateTime? now}) async {
+    final at = (now ?? _clock()).millisecondsSinceEpoch;
+    final revisit = await (database.select(database.studyRecords)..where(
+          (row) => row.reflection.equals(StudyReflection.revisit.key),
+        ))
+        .get();
+    if (revisit.isEmpty) return const [];
+    final dueByQuestion = <String, int>{};
+    for (final srs in await database.select(database.srsStates).get()) {
+      dueByQuestion[srs.questionId] = srs.dueAt;
+    }
+    final due = [
+      for (final row in revisit)
+        if ((dueByQuestion[row.questionId] ?? 0) <= at) row.questionId,
+    ]..sort(
+      (a, b) => (dueByQuestion[a] ?? 0).compareTo(dueByQuestion[b] ?? 0),
+    );
+    return List.unmodifiable(due);
   }
 
   Future<StudySummary> studySummary() async {

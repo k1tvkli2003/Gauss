@@ -323,6 +323,46 @@ void main() {
     },
   );
 
+  test('revisit reflections come due tomorrow, clear ones rest longer', () async {
+    await repository.saveStudyReflection(
+      questionId: 'study-q1',
+      topicKey: 'sets',
+      shelfKey: 'sets:0:20',
+      hypothesisChoiceIndex: 1,
+      reflection: StudyReflection.revisit,
+    );
+    await repository.saveStudyReflection(
+      questionId: 'study-q2',
+      topicKey: 'sets',
+      shelfKey: 'sets:0:20',
+      hypothesisChoiceIndex: null,
+      reflection: StudyReflection.clear,
+    );
+
+    // Nothing interrupts the current session: neither card is due today.
+    expect(await repository.studyDueIds(), isEmpty);
+
+    // Tomorrow the revisit card surfaces; the clear card keeps resting.
+    clockNow = clockNow.add(const Duration(days: 1, minutes: 1));
+    expect(await repository.studyDueIds(), const ['study-q1']);
+    expect(await repository.revisitStudyIds(), const ['study-q1']);
+
+    // Day four: the clear card's first interval (3 days) elapses, but only
+    // revisit-marked cards ever enter the due queue.
+    clockNow = clockNow.add(const Duration(days: 3));
+    expect(await repository.studyDueIds(), const ['study-q1']);
+
+    // Clearing the revisit empties the queue and extends its interval.
+    await repository.saveStudyReflection(
+      questionId: 'study-q1',
+      topicKey: 'sets',
+      shelfKey: 'sets:0:20',
+      hypothesisChoiceIndex: 1,
+      reflection: StudyReflection.clear,
+    );
+    expect(await repository.studyDueIds(), isEmpty);
+  });
+
   test('review orbit surfaces every due card, not only lapses', () async {
     final now = clockNow;
     await repository.startMission(

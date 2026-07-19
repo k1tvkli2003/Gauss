@@ -17,12 +17,15 @@ class GaussController extends ChangeNotifier {
   String? _selectedTopicKey;
   bool _ready = false;
   GaussFailure? _fatalError;
-  int _revengeCount = 0;
-  int _reviewDueCount = 0;
-  List<RecentExamSummary> _recentExams = const [];
+  // Mission-era state, dormant while the corpus has no scored items: nothing
+  // writes these anymore, so they are final defaults rather than live queries.
+  final int _revengeCount = 0;
+  final int _reviewDueCount = 0;
+  int _studyDueCount = 0;
+  final List<RecentExamSummary> _recentExams = const [];
   ResumableMission? _resumableMission;
   StudySummary _study = const StudySummary.empty();
-  AnalyticsSnapshot _analytics = const AnalyticsSnapshot(
+  final AnalyticsSnapshot _analytics = const AnalyticsSnapshot(
     totalAnswered: 0,
     totalCorrect: 0,
     accuracy: 0,
@@ -59,6 +62,9 @@ class GaussController extends ChangeNotifier {
   StudySummary get study => _study;
   int get revengeCount => _revengeCount;
   int get reviewDueCount => _reviewDueCount;
+
+  /// Revisit-marked questions whose spacing timer has elapsed.
+  int get studyDueCount => _studyDueCount;
   UnmodifiableListView<RecentExamSummary> get recentExams =>
       UnmodifiableListView(_recentExams);
   ResumableMission? get resumableMission => _resumableMission;
@@ -198,40 +204,18 @@ class GaussController extends ChangeNotifier {
   }
 
   Future<void> _refreshProgress() async {
+    // Startup loads only what live surfaces consume: the study summary, the
+    // spaced-revisit due queue, and the ledger-backed gamification summary.
+    // Mission-era queries (attempts, analytics, revenge, recent exams,
+    // active-mission hydration) return with their surfaces, not before.
     final values = await Future.wait<Object?>([
-      _progress.loadAttempts(),
-      _progress.analytics(),
       _progress.gamificationSummary(),
-      _progress.revengeIds(),
-      _progress.recentExams(),
-      _progress.activeMission(),
-      _progress.reviewDueIds(),
       _progress.studySummary(),
+      _progress.studyDueIds(),
     ]);
-    _attempts
-      ..clear()
-      ..addAll(values[0] as List<AttemptRecord>);
-    final solvedByTopic = <String, Set<String>>{};
-    for (final attempt in _attempts) {
-      if (!attempt.correct) continue;
-      solvedByTopic
-          .putIfAbsent(attempt.topicKey, () => <String>{})
-          .add(attempt.questionId);
-    }
-    _completedByTopic
-      ..clear()
-      ..addEntries(
-        solvedByTopic.entries.map(
-          (entry) => MapEntry(entry.key, entry.value.length),
-        ),
-      );
-    _analytics = values[1] as AnalyticsSnapshot;
-    _gamification = values[2] as GamificationSummary;
-    _revengeCount = (values[3] as List<String>).length;
-    _recentExams = values[4] as List<RecentExamSummary>;
-    _reviewDueCount = (values[6] as List<String>).length;
-    _study = values[7] as StudySummary;
-    await _hydrateActiveMission(values[5] as ActiveMissionRecord?);
+    _gamification = values[0] as GamificationSummary;
+    _study = values[1] as StudySummary;
+    _studyDueCount = (values[2] as List<String>).length;
   }
 
   Future<ResumableMission?> loadResumableMission() async {
@@ -398,6 +382,7 @@ class GaussController extends ChangeNotifier {
         reflection: reflection,
       );
       _study = await _progress.studySummary();
+      _studyDueCount = (await _progress.studyDueIds()).length;
       notifyListeners();
       return record;
     } catch (error) {

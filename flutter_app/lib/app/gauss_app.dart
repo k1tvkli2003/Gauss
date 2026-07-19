@@ -3,11 +3,9 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../domain/models.dart';
 import '../screens/archive_screen.dart';
 import '../screens/insights_screen.dart';
 import '../screens/map_screen.dart';
-import '../screens/mission_screen.dart';
 import '../screens/practice_screen.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/gauss_brand.dart';
@@ -56,42 +54,16 @@ class _GaussAppState extends State<GaussApp> {
           ),
         ],
       ),
-      GoRoute(
-        path: '/resume',
-        builder: (context, state) =>
-            const MissionScreen(topicKey: 'resume', resume: true),
-      ),
+      // Scored-mission surfaces have no producer in the source-only corpus.
+      // Their deep links land on live surfaces instead of empty error rooms;
+      // the mission screen code is retained for a future verified corpus.
+      GoRoute(path: '/resume', redirect: (context, state) => '/map'),
       GoRoute(
         path: '/mission/:topicKey',
-        builder: (context, state) {
-          final difficulties =
-              (state.uri.queryParametersAll['difficulty'] ?? const [])
-                  .map(Difficulty.tryFromKey)
-                  .whereType<Difficulty>()
-                  .toSet();
-          final requestedCount = int.tryParse(
-            state.uri.queryParameters['count'] ?? '',
-          );
-          return MissionScreen(
-            topicKey: state.pathParameters['topicKey']!,
-            count: (requestedCount ?? 10).clamp(5, 50),
-            difficulties: difficulties,
-            sourceBanks: (state.uri.queryParametersAll['source'] ?? const [])
-                .where(const {'nardebam'}.contains)
-                .toSet(),
-            coverChoices: state.uri.queryParameters['cover'] == '1',
-          );
-        },
+        redirect: (context, state) =>
+            '/study/chapter/${state.pathParameters['topicKey']}',
       ),
-      GoRoute(
-        path: '/revenge',
-        builder: (context, state) => MissionScreen(
-          topicKey: 'revenge',
-          count: (int.tryParse(state.uri.queryParameters['count'] ?? '') ?? 10)
-              .clamp(5, 50),
-          revenge: true,
-        ),
-      ),
+      GoRoute(path: '/revenge', redirect: (context, state) => '/study/revisit'),
       GoRoute(
         path: '/study/chapter/:topicKey',
         builder: (context, state) {
@@ -110,15 +82,7 @@ class _GaussAppState extends State<GaussApp> {
         path: '/study/revisit',
         builder: (context, state) => const ArchiveScreen.revisit(),
       ),
-      GoRoute(
-        path: '/review',
-        builder: (context, state) => MissionScreen(
-          topicKey: 'review',
-          count: (int.tryParse(state.uri.queryParameters['count'] ?? '') ?? 10)
-              .clamp(5, 50),
-          review: true,
-        ),
-      ),
+      GoRoute(path: '/review', redirect: (context, state) => '/study/revisit'),
       GoRoute(path: '/', redirect: (context, state) => '/map'),
       GoRoute(path: '/practice', redirect: (context, state) => '/study'),
       GoRoute(path: '/missions', redirect: (context, state) => '/study'),

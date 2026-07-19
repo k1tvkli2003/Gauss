@@ -102,6 +102,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 SliverToBoxAdapter(
                   child: _StudyModes(
                     revisitCount: controller.study.revisitCount,
+                    dueCount: controller.studyDueCount,
                     onRevisit: () => context.push('/study/revisit'),
                     onScratchpad: () => showScratchpad(context),
                     onMap: () => context.go('/map'),
@@ -501,12 +502,14 @@ class _OrbitEmblem extends StatelessWidget {
 class _StudyModes extends StatelessWidget {
   const _StudyModes({
     required this.revisitCount,
+    required this.dueCount,
     required this.onRevisit,
     required this.onScratchpad,
     required this.onMap,
   });
 
   final int revisitCount;
+  final int dueCount;
   final VoidCallback onRevisit;
   final VoidCallback onScratchpad;
   final VoidCallback onMap;
@@ -519,7 +522,9 @@ class _StudyModes extends StatelessWidget {
         title: 'Revisit orbit',
         detail: revisitCount == 0
             ? 'Nothing waiting'
-            : '$revisitCount concepts waiting',
+            : dueCount == 0
+            ? '$revisitCount shelved · none due yet'
+            : '$dueCount due now · $revisitCount shelved',
         onTap: onRevisit,
       ),
       (

@@ -268,8 +268,8 @@ class _MapHeader extends StatelessWidget {
                   if (!compact) ...[
                     const SizedBox(width: 7),
                     _HeaderMetric(
-                      value: '${controller.study.revisitCount}',
-                      label: 'REVISIT',
+                      value: '${controller.studyDueCount}',
+                      label: 'DUE',
                       color: GaussColors.warning,
                     ),
                   ],
