@@ -250,7 +250,11 @@ class GaussController extends ChangeNotifier {
     }
     final questions = await _questionBank.questionsByIds(record.questionIds);
     if (questions.length != record.questionIds.length) {
-      throw StateError('The active mission references unavailable questions.');
+      // The bank changed underneath this draft — a corpus migration removed
+      // some of its question ids. Preserve the recorded rows, but a stale
+      // draft must retire quietly instead of bricking startup forever.
+      _resumableMission = null;
+      return;
     }
     if (questions.any((question) => !question.missionReady)) {
       // Preserve the draft rows but never resume a source item whose answer

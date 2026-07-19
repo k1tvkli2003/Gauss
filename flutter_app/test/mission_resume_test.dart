@@ -68,6 +68,34 @@ void main() {
     },
   );
 
+  test(
+    'a draft referencing deleted corpus ids retires instead of bricking startup',
+    () async {
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final progress = ProgressRepository(database);
+      // A pre-migration draft: its question id no longer exists anywhere in
+      // the nardebam-only bank.
+      await progress.startMission(
+        sessionId: 'stale-corpus-draft',
+        subject: Subject.math,
+        topicKey: 'sets',
+        createdAt: DateTime(2026, 7, 12, 16).millisecondsSinceEpoch,
+        questionIds: const ['gauss_functions_0001_removed'],
+      );
+
+      final controller = GaussController(QuestionBankRepository(), progress);
+      await controller.initialize();
+
+      expect(
+        controller.fatalError,
+        isNull,
+        reason: '${controller.fatalError?.cause}',
+      );
+      expect(controller.resumableMission, isNull);
+    },
+  );
+
   testWidgets('failed skip exposes a working retry action', (tester) async {
     await tester.binding.setSurfaceSize(const Size(900, 1100));
     addTearDown(() => tester.binding.setSurfaceSize(null));
