@@ -22,6 +22,7 @@ class InsightsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = GaussScope.of(context);
     final study = controller.study;
+    final gamification = controller.gamification;
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -37,6 +38,8 @@ class InsightsScreen extends StatelessWidget {
                 SliverToBoxAdapter(
                   child: _ObservatoryHeader(
                     totalQuestions: controller.totalQuestions,
+                    level: gamification.level,
+                    levelProgress: gamification.levelProgress,
                   ),
                 ),
                 SliverToBoxAdapter(
@@ -50,6 +53,12 @@ class InsightsScreen extends StatelessWidget {
                     study: study,
                     onRevisit: () => context.push('/study/revisit'),
                     onStudy: () => context.go('/study'),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: _DailyQuestInstrument(
+                    quest: gamification.quest,
+                    todayXp: gamification.todayXp,
                   ),
                 ),
                 SliverToBoxAdapter(
@@ -69,14 +78,16 @@ class InsightsScreen extends StatelessWidget {
                 const SliverToBoxAdapter(
                   child: _SectionHeading(
                     eyebrow: 'PRIVATE CONSTELLATION',
-                    title: 'Study seals',
+                    title: 'Theorem seals',
                     detail:
-                        'Quiet milestones for breadth and deliberate return—no streak loss, leaderboard, or score.',
+                        'Engraved milestones for charting, correction, and breadth — no streak loss, leaderboard, or score.',
                   ),
                 ),
                 SliverPadding(
                   padding: const EdgeInsets.fromLTRB(18, 0, 18, 128),
-                  sliver: _StudySealGrid(study: study),
+                  sliver: _AchievementPlateGrid(
+                    achievements: gamification.achievements,
+                  ),
                 ),
               ],
             ),
@@ -116,9 +127,15 @@ class _ObservatoryBackdrop extends StatelessWidget {
 }
 
 class _ObservatoryHeader extends StatelessWidget {
-  const _ObservatoryHeader({required this.totalQuestions});
+  const _ObservatoryHeader({
+    required this.totalQuestions,
+    required this.level,
+    required this.levelProgress,
+  });
 
   final int totalQuestions;
+  final int level;
+  final double levelProgress;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -157,12 +174,215 @@ class _ObservatoryHeader extends StatelessWidget {
                 ],
               ),
             ),
+            _LevelMedallion(level: level, progress: levelProgress),
+            const SizedBox(width: 10),
             const _OfflineSignal(),
           ],
         ),
       ),
     ),
   );
+}
+
+class _LevelMedallion extends StatelessWidget {
+  const _LevelMedallion({required this.level, required this.progress});
+
+  final int level;
+  final double progress;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    label:
+        'Observer level $level. ${(progress * 100).round()} percent toward the next level.',
+    child: SizedBox.square(
+      dimension: 46,
+      child: CustomPaint(
+        painter: _MedallionRingPainter(progress: progress),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '$level',
+              style: const TextStyle(
+                color: GaussColors.ivory,
+                fontSize: 16,
+                fontWeight: FontWeight.w900,
+                height: .95,
+              ),
+            ),
+            const Text(
+              'LVL',
+              style: TextStyle(
+                color: GaussColors.fog,
+                fontSize: 6.5,
+                fontWeight: FontWeight.w800,
+                letterSpacing: .7,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class _MedallionRingPainter extends CustomPainter {
+  const _MedallionRingPainter({required this.progress});
+
+  final double progress;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = size.center(Offset.zero);
+    final radius = (size.shortestSide - 3.5) / 2;
+    canvas.drawCircle(
+      center,
+      radius,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3
+        ..color = GaussColors.hairline,
+    );
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: radius),
+      -math.pi / 2,
+      math.pi * 2 * progress.clamp(0, 1),
+      false,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3
+        ..strokeCap = StrokeCap.round
+        ..color = GaussColors.brassLight,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _MedallionRingPainter oldDelegate) =>
+      oldDelegate.progress != progress;
+}
+
+class _DailyQuestInstrument extends StatelessWidget {
+  const _DailyQuestInstrument({required this.quest, required this.todayXp});
+
+  final DailyQuest quest;
+  final int todayXp;
+
+  @override
+  Widget build(BuildContext context) {
+    final progress = quest.target == 0
+        ? 0.0
+        : (quest.progress / quest.target).clamp(0.0, 1.0);
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(18, 2, 18, 10),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 1180),
+          child: Semantics(
+            container: true,
+            excludeSemantics: true,
+            label:
+                'Daily observation. ${quest.title}. ${quest.progress} of ${quest.target}. Reward ${quest.rewardXp} experience points. ${quest.completed ? 'Complete.' : 'In progress.'} $todayXp experience earned today.',
+            child: _GlassPanel(
+              radius: 22,
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                children: [
+                  SizedBox.square(
+                    dimension: 52,
+                    child: CustomPaint(
+                      painter: _MedallionRingPainter(progress: progress),
+                      child: Center(
+                        child: quest.completed
+                            ? const Icon(
+                                Icons.check_rounded,
+                                size: 22,
+                                color: GaussColors.signalBright,
+                              )
+                            : Text(
+                                '${quest.progress}',
+                                style: const TextStyle(
+                                  color: GaussColors.signalBright,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w900,
+                                ),
+                              ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            const Text(
+                              'DAILY OBSERVATION',
+                              style: TextStyle(
+                                color: GaussColors.signalBright,
+                                fontSize: 9,
+                                fontWeight: FontWeight.w900,
+                                letterSpacing: 1,
+                              ),
+                            ),
+                            const Spacer(),
+                            Text(
+                              '+${quest.rewardXp} XP',
+                              style: const TextStyle(
+                                color: GaussColors.brassLight,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 5),
+                        Text(
+                          quest.title,
+                          style: const TextStyle(fontWeight: FontWeight.w800),
+                        ),
+                        const SizedBox(height: 9),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(99),
+                          child: LinearProgressIndicator(
+                            value: progress,
+                            minHeight: 5,
+                            backgroundColor: GaussColors.hairline,
+                            color: GaussColors.signalBright,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        '${quest.progress}/${quest.target}',
+                        style: const TextStyle(
+                          color: GaussColors.ivory,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                      Text(
+                        '$todayXp XP today',
+                        style: const TextStyle(
+                          color: GaussColors.fog,
+                          fontSize: 9,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _OfflineSignal extends StatelessWidget {
