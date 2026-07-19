@@ -48,3 +48,17 @@ left untouched.
 
 Session dossier (Persian, observatory theme, embedded Vazirmatn/Manrope):
 https://claude.ai/code/artifact/cd46428b-ada5-46ab-82ae-1118264a8b2f
+
+## Post-migration close (2026-07-19)
+
+- Codex shipped the nardebam-only corpus swap + source-only study rebuild on
+  `main` (`df9caebd`): 3,672 preserved items, 0 mission-ready, study room
+  with hypothesis/reveal/revisit persistence. All four tracks survived —
+  they were count-driven by design.
+- Fixed the one real post-migration defect: a stale pre-migration mission
+  draft referencing deleted question ids threw during hydration and bricked
+  startup permanently. Now retires quietly (`02590f6e`, regression-tested).
+- Suite after fix: `flutter analyze` 0 issues, 50/50 tests green. Pushed.
+- User dropped two roadmap ideas permanently: timed exam simulator and
+  per-question persistent scratchpad. Remaining ideas (actionable insights,
+  Mira states) must be re-scoped against the rebuilt study screens.
