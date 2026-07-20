@@ -1,6 +1,8 @@
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:gauss/data/status_widget_bridge.dart';
 import 'package:gauss/app/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
@@ -247,6 +249,40 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
+  testWidgets('the home-screen widget publishes only the two calm numbers', (
+    tester,
+  ) async {
+    final published = <Map<Object?, Object?>>[];
+    const channel = MethodChannel('com.gauss.app/status_widget');
+    tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(channel, (
+      call,
+    ) async {
+      if (call.method == 'publishStatus') {
+        published.add(call.arguments as Map<Object?, Object?>);
+      }
+      return null;
+    });
+    addTearDown(
+      () => tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(
+        channel,
+        null,
+      ),
+    );
+
+    const bridge = _AlwaysOnStatusWidget();
+    await bridge.publish(chartedToday: 7, due: 3);
+
+    expect(published, hasLength(1));
+    expect(published.single, {'chartedToday': 7, 'due': 3});
+
+    // An unsupported host publishes nothing at all.
+    const unsupported = StatusWidgetBridge();
+    if (!unsupported.isSupported) {
+      await unsupported.publish(chartedToday: 9, due: 9);
+      expect(published, hasLength(1));
+    }
+  });
+
   test('the first-run tour is offered once and then stays dismissed', () async {
     expect(controller.needsTour, isTrue);
 
@@ -329,6 +365,15 @@ void main() {
     expect(find.text('Set complete'), findsNothing);
     expect(tester.takeException(), isNull);
   });
+}
+
+/// Reports the widget host as present so the publish path runs on any host
+/// the suite happens to execute on.
+class _AlwaysOnStatusWidget extends StatusWidgetBridge {
+  const _AlwaysOnStatusWidget();
+
+  @override
+  bool get isSupported => true;
 }
 
 class _TestSurface extends StatelessWidget {

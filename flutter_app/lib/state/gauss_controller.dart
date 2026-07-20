@@ -6,17 +6,24 @@ import 'package:flutter/widgets.dart';
 import '../data/backup_service.dart';
 import '../data/progress_repository.dart';
 import '../data/question_bank_repository.dart';
+import '../data/status_widget_bridge.dart';
 import '../domain/failures.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
 
 class GaussController extends ChangeNotifier {
-  GaussController(this._questionBank, this._progress, {BackupService? backups})
-    : _backups = backups ?? BackupService();
+  GaussController(
+    this._questionBank,
+    this._progress, {
+    BackupService? backups,
+    StatusWidgetBridge? statusWidget,
+  }) : _backups = backups ?? BackupService(),
+       _statusWidget = statusWidget ?? const StatusWidgetBridge();
 
   final QuestionBankRepository _questionBank;
   final ProgressRepository _progress;
   final BackupService _backups;
+  final StatusWidgetBridge _statusWidget;
 
   BackupService get backups => _backups;
   final List<AttemptRecord> _attempts = [];
@@ -244,6 +251,20 @@ class GaussController extends ChangeNotifier {
     _study = values[1] as StudySummary;
     _studyDueCount = (values[2] as List<String>).length;
     _needsTour = !(values[3] as bool);
+    await _publishStatusWidget();
+  }
+
+  /// Mirrors today's charted count and the due queue onto the home screen.
+  Future<void> _publishStatusWidget() async {
+    final today = DateTime.now();
+    final dayKey =
+        '${today.year.toString().padLeft(4, '0')}-'
+        '${today.month.toString().padLeft(2, '0')}-'
+        '${today.day.toString().padLeft(2, '0')}';
+    await _statusWidget.publish(
+      chartedToday: _study.heatmap[dayKey] ?? 0,
+      due: _studyDueCount,
+    );
   }
 
   Future<ResumableMission?> loadResumableMission() async {
@@ -462,6 +483,7 @@ class GaussController extends ChangeNotifier {
         await _maybeAwardSectionCompletion(question.topicKey);
       }
       _gamification = await _progress.gamificationSummary();
+      await _publishStatusWidget();
       notifyListeners();
       return outcome;
     } catch (error) {
