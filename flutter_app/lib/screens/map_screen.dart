@@ -265,7 +265,19 @@ class _MapHeader extends StatelessWidget {
                     label: compact ? 'MARKS' : 'CHARTED',
                     color: GaussColors.signalBright,
                   ),
+                  const SizedBox(width: 7),
+                  _HeaderMetric(
+                    value: '${controller.gamification.level}',
+                    label: compact ? 'LVL' : 'LEVEL',
+                    color: GaussColors.brassLight,
+                  ),
                   if (!compact) ...[
+                    const SizedBox(width: 7),
+                    _HeaderMetric(
+                      value: '${controller.gamification.totalXp}',
+                      label: 'XP',
+                      color: GaussColors.ivory,
+                    ),
                     const SizedBox(width: 7),
                     _HeaderMetric(
                       value: '${controller.studyDueCount}',

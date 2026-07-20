@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../app/gauss_theme.dart';
+import '../domain/gamification_catalog.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
 import '../state/gauss_controller.dart';
@@ -456,6 +457,14 @@ class _MetricConstellation extends StatelessWidget {
           child: LayoutBuilder(
             builder: (context, constraints) {
               final columns = constraints.maxWidth >= 800 ? 4 : 2;
+              // The plate stacks icon, value, label, and an optional hint.
+              // Narrow phones get proportionally taller cells so that stack
+              // always fits instead of clipping its last line.
+              final cellWidth =
+                  (constraints.maxWidth - (columns - 1) * 10) / columns;
+              final ratio = columns == 4
+                  ? 1.62
+                  : (cellWidth / 128).clamp(1.05, 1.34);
               return GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -463,7 +472,7 @@ class _MetricConstellation extends StatelessWidget {
                   crossAxisCount: columns,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
-                  childAspectRatio: columns == 4 ? 1.62 : 1.34,
+                  childAspectRatio: ratio,
                 ),
                 itemCount: items.length,
                 itemBuilder: (context, index) {
@@ -526,14 +535,16 @@ class _MetricPlate extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 9),
-        FittedBox(
-          fit: BoxFit.scaleDown,
-          alignment: Alignment.centerLeft,
-          child: Text(
-            value,
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: GaussColors.ivory,
-              fontWeight: FontWeight.w900,
+        Flexible(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              value,
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                color: GaussColors.ivory,
+                fontWeight: FontWeight.w900,
+              ),
             ),
           ),
         ),
@@ -1125,202 +1136,320 @@ class _SectionProgressRow extends StatelessWidget {
   }
 }
 
-class _StudySealGrid extends StatelessWidget {
-  const _StudySealGrid({required this.study});
+class _AchievementPlateGrid extends StatelessWidget {
+  const _AchievementPlateGrid({required this.achievements});
 
-  final StudySummary study;
+  final List<AchievementSnapshot> achievements;
+
+  @override
+  Widget build(BuildContext context) => SliverLayoutBuilder(
+    builder: (context, constraints) {
+      final columns = constraints.crossAxisExtent >= 960
+          ? 3
+          : constraints.crossAxisExtent >= 600
+          ? 2
+          : 1;
+      return SliverGrid.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: columns,
+          mainAxisSpacing: 11,
+          crossAxisSpacing: 11,
+          childAspectRatio: columns == 1 ? 2.35 : 1.5,
+        ),
+        itemCount: achievements.length,
+        itemBuilder: (context, index) =>
+            _AchievementPlate(snapshot: achievements[index]),
+      );
+    },
+  );
+}
+
+class _AchievementPlate extends StatelessWidget {
+  const _AchievementPlate({required this.snapshot});
+
+  final AchievementSnapshot snapshot;
 
   @override
   Widget build(BuildContext context) {
-    final seals = <_SealDefinition>[
-      _SealDefinition(
-        title: 'First coordinate',
-        detail: 'Reflect on one source question.',
-        icon: Icons.explore_outlined,
-        current: study.totalReflected,
-        target: 1,
-      ),
-      _SealDefinition(
-        title: 'Measured orbit',
-        detail: 'Chart 25 questions at your own pace.',
-        icon: Icons.track_changes_outlined,
-        current: study.totalReflected,
-        target: 25,
-      ),
-      _SealDefinition(
-        title: 'Deep reading',
-        detail: 'Chart 100 preserved questions.',
-        icon: Icons.menu_book_outlined,
-        current: study.totalReflected,
-        target: 100,
-      ),
-      _SealDefinition(
-        title: 'Wide sky',
-        detail: 'Touch 10 different curriculum units.',
-        icon: Icons.hub_outlined,
-        current: study.touchedTopics,
-        target: 10,
-      ),
-      _SealDefinition(
-        title: 'Patient cartographer',
-        detail: 'Chart 500 questions without a deadline.',
-        icon: Icons.map_outlined,
-        current: study.totalReflected,
-        target: 500,
-      ),
-      _SealDefinition(
-        title: 'Whole constellation',
-        detail: 'Visit all 29 curriculum units.',
-        icon: Icons.auto_awesome_outlined,
-        current: study.touchedTopics,
-        target: 29,
-      ),
-    ];
-    return SliverLayoutBuilder(
-      builder: (context, constraints) {
-        final columns = constraints.crossAxisExtent >= 960
-            ? 3
-            : constraints.crossAxisExtent >= 600
-            ? 2
-            : 1;
-        return SliverGrid.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: columns,
-            mainAxisSpacing: 11,
-            crossAxisSpacing: 11,
-            childAspectRatio: columns == 1 ? 2.25 : 1.62,
-          ),
-          itemCount: seals.length,
-          itemBuilder: (context, index) => _StudySeal(definition: seals[index]),
-        );
-      },
-    );
-  }
-}
+    final definition = snapshot.definition;
+    final earned = snapshot.earnedLevel;
+    final next = snapshot.nextLevel;
+    final rarity = earned?.rarity ?? next?.rarity ?? AchievementRarity.common;
+    final color = _rarityColor(rarity);
+    final progressLabel = next == null
+        ? 'Constellation complete'
+        : '${snapshot.current} / ${next.threshold} toward ${next.title}';
 
-class _SealDefinition {
-  const _SealDefinition({
-    required this.title,
-    required this.detail,
-    required this.icon,
-    required this.current,
-    required this.target,
-  });
-
-  final String title;
-  final String detail;
-  final IconData icon;
-  final int current;
-  final int target;
-}
-
-class _StudySeal extends StatelessWidget {
-  const _StudySeal({required this.definition});
-
-  final _SealDefinition definition;
-
-  @override
-  Widget build(BuildContext context) {
-    final complete = definition.current >= definition.target;
-    final ratio = (definition.current / definition.target).clamp(0.0, 1.0);
-    return _GlassPanel(
-      radius: 21,
-      padding: const EdgeInsets.all(15),
-      child: Row(
-        children: [
-          Container(
-            width: 54,
-            height: 54,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: complete
-                  ? const RadialGradient(
-                      colors: [Color(0xFFE5B454), Color(0xFF6E4310)],
-                    )
-                  : null,
-              color: complete ? null : GaussColors.raised,
-              border: Border.all(
-                color: complete ? GaussColors.brassLight : GaussColors.line,
+    return Semantics(
+      container: true,
+      excludeSemantics: true,
+      label:
+          '${definition.accessibilityLabel}. ${earned?.title ?? 'Uncharted'}. '
+          '$progressLabel. ${rarity.label} tier.',
+      child: _GlassPanel(
+        radius: 21,
+        padding: const EdgeInsets.all(15),
+        child: Row(
+          children: [
+            SizedBox.square(
+              dimension: 68,
+              child: CustomPaint(
+                painter: _AchievementSealPainter(
+                  family: definition.family,
+                  color: color,
+                  earned: earned != null,
+                  tier: rarity.index + 1,
+                ),
               ),
-              boxShadow: complete
-                  ? [
-                      BoxShadow(
-                        color: GaussColors.brass.withValues(alpha: .25),
-                        blurRadius: 18,
-                      ),
-                    ]
-                  : null,
             ),
-            child: Icon(
-              definition.icon,
-              color: complete ? GaussColors.deepInk : GaussColors.muted,
-            ),
-          ),
-          const SizedBox(width: 13),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  definition.title,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: complete ? GaussColors.ivory : GaussColors.fog,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-                const SizedBox(height: 3),
-                Text(
-                  definition.detail,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: GaussColors.muted,
-                    fontSize: 9,
-                    height: 1.3,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  children: [
-                    Expanded(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(99),
-                        child: LinearProgressIndicator(
-                          minHeight: 4,
-                          value: ratio,
-                          backgroundColor: GaussColors.line,
-                          color: complete
-                              ? GaussColors.brass
-                              : GaussColors.signal,
+            const SizedBox(width: 13),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          definition.title,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: earned == null
+                                ? GaussColors.fog
+                                : GaussColors.ivory,
+                            fontWeight: FontWeight.w900,
+                          ),
                         ),
                       ),
+                      _RarityNotches(count: rarity.index + 1, color: color),
+                    ],
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    earned?.title ?? 'Uncharted',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: color,
+                      fontSize: 10.5,
+                      fontWeight: FontWeight.w800,
                     ),
-                    const SizedBox(width: 8),
-                    Text(
-                      complete
-                          ? 'charted'
-                          : '${definition.current}/${definition.target}',
-                      style: TextStyle(
-                        color: complete
-                            ? GaussColors.brassLight
-                            : GaussColors.fog,
-                        fontSize: 8,
-                        fontWeight: FontWeight.w900,
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    definition.description,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: GaussColors.muted,
+                      fontSize: 10,
+                      height: 1.35,
+                    ),
+                  ),
+                  const SizedBox(height: 9),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(99),
+                    child: LinearProgressIndicator(
+                      value: snapshot.progress,
+                      minHeight: 4,
+                      backgroundColor: GaussColors.line,
+                      color: color,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          progressLabel,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            color: GaussColors.fog,
+                            fontSize: 8.5,
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                      Text(
+                        rarity.label.toUpperCase(),
+                        style: TextStyle(
+                          color: color,
+                          fontSize: 7.5,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: .55,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
+
+class _RarityNotches extends StatelessWidget {
+  const _RarityNotches({required this.count, required this.color});
+
+  final int count;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      for (var index = 0; index < count; index++)
+        Container(
+          width: 3,
+          height: 7 + index * 2,
+          margin: const EdgeInsets.only(left: 2),
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(99),
+          ),
+        ),
+    ],
+  );
+}
+
+/// Engraved brass seals: one distinct instrument silhouette per achievement
+/// family, with rarity encoded as rim ticks so the tier reads without color.
+class _AchievementSealPainter extends CustomPainter {
+  const _AchievementSealPainter({
+    required this.family,
+    required this.color,
+    required this.earned,
+    required this.tier,
+  });
+
+  final AchievementFamily family;
+  final Color color;
+  final bool earned;
+  final int tier;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.save();
+    canvas.translate(size.width / 2, size.height / 2);
+    final radius = size.shortestSide * .43;
+    final dim = earned ? 1.0 : .5;
+    final line = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.6
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round
+      ..color = color.withValues(alpha: dim);
+    final faint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1
+      ..color = color.withValues(alpha: .2 * dim);
+
+    canvas.drawCircle(
+      Offset.zero,
+      radius,
+      Paint()..color = color.withValues(alpha: .07 * dim),
+    );
+    canvas.drawCircle(Offset.zero, radius, line);
+    canvas.drawCircle(Offset.zero, radius * .76, faint);
+    for (var i = 0; i < tier; i++) {
+      final angle = -math.pi / 2 + i * math.pi * 2 / tier;
+      canvas.drawCircle(
+        Offset(math.cos(angle), math.sin(angle)) * radius,
+        2,
+        Paint()..color = color.withValues(alpha: dim),
+      );
+    }
+
+    switch (family) {
+      case AchievementFamily.mastery:
+        for (var i = 0; i < 4; i++) {
+          canvas.save();
+          canvas.rotate(i * math.pi / 2);
+          canvas.drawPath(
+            Path()
+              ..moveTo(-2.6, -2.6)
+              ..quadraticBezierTo(0, -11, 0, -17)
+              ..quadraticBezierTo(0, -11, 2.6, -2.6)
+              ..lineTo(0, 1.8)
+              ..close(),
+            Paint()..color = color.withValues(alpha: dim),
+          );
+          canvas.restore();
+        }
+        canvas.drawCircle(Offset.zero, 4, line);
+      case AchievementFamily.correction:
+        canvas.drawArc(
+          Rect.fromCircle(center: Offset.zero, radius: 14.5),
+          -.2,
+          math.pi * 1.45,
+          false,
+          line,
+        );
+        canvas.drawPath(
+          Path()
+            ..moveTo(-14.5, -7)
+            ..lineTo(-16.5, 1)
+            ..lineTo(-8.5, -1.6),
+          line,
+        );
+        canvas.drawLine(const Offset(-7, 4), const Offset(-1.6, 9.4), line);
+        canvas.drawLine(const Offset(-1.6, 9.4), const Offset(10, -7), line);
+      case AchievementFamily.exploration:
+        canvas.drawCircle(Offset.zero, 15, line);
+        canvas.drawOval(
+          Rect.fromCenter(center: Offset.zero, width: 13, height: 30),
+          line,
+        );
+        canvas.drawLine(const Offset(-15, 0), const Offset(15, 0), line);
+        canvas.drawOval(
+          Rect.fromCenter(center: Offset.zero, width: 29, height: 13),
+          line,
+        );
+      case AchievementFamily.challenge:
+        canvas.drawPath(
+          Path()
+            ..moveTo(0, -17)
+            ..lineTo(15, 0)
+            ..lineTo(0, 17)
+            ..lineTo(-15, 0)
+            ..close(),
+          line,
+        );
+        canvas.drawCircle(Offset.zero, 5.5, line);
+        canvas.drawLine(const Offset(0, -11), const Offset(0, -5), line);
+        canvas.drawLine(const Offset(0, 5), const Offset(0, 11), line);
+      case AchievementFamily.consistency:
+        final wave = Path()..moveTo(-18, 0);
+        for (var x = -18.0; x <= 18; x += 1) {
+          wave.lineTo(x, math.sin(x / 3.7) * 7.5);
+        }
+        canvas.drawPath(wave, line);
+        canvas.drawLine(const Offset(-18, 12), const Offset(18, 12), faint);
+        canvas.drawLine(const Offset(-18, -12), const Offset(18, -12), faint);
+    }
+    canvas.restore();
+  }
+
+  @override
+  bool shouldRepaint(covariant _AchievementSealPainter oldDelegate) =>
+      oldDelegate.family != family ||
+      oldDelegate.color != color ||
+      oldDelegate.earned != earned ||
+      oldDelegate.tier != tier;
+}
+
+Color _rarityColor(AchievementRarity rarity) => switch (rarity) {
+  AchievementRarity.common => GaussColors.muted,
+  AchievementRarity.uncommon => GaussColors.signalBright,
+  AchievementRarity.rare => GaussColors.ice,
+  AchievementRarity.epic => GaussColors.violet,
+  AchievementRarity.legendary => GaussColors.brassLight,
+};
 
 class _GlassPanel extends StatelessWidget {
   const _GlassPanel({

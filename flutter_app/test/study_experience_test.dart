@@ -5,7 +5,9 @@ import 'package:gauss/app/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
+import 'package:gauss/domain/models.dart';
 import 'package:gauss/screens/archive_screen.dart';
+import 'package:gauss/screens/insights_screen.dart';
 import 'package:gauss/screens/practice_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:gauss/widgets/scratchpad.dart';
@@ -163,6 +165,102 @@ void main() {
     expect(find.text('Saved to your revisit orbit'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets('the observatory surfaces level, quest, and catalog seals', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    await tester.pumpWidget(
+      _TestSurface(controller: controller, child: const InsightsScreen()),
+    );
+    await tester.pump();
+    // Discard the mid-resize frame left by the previous surface size.
+    tester.takeException();
+    await tester.pump(const Duration(milliseconds: 60));
+
+    // Level medallion and the study-native daily quest are both live again.
+    expect(find.text('LVL'), findsOneWidget);
+    expect(find.text('DAILY OBSERVATION'), findsOneWidget);
+    expect(find.text('Chart ten reflections'), findsOneWidget);
+    expect(find.text('0/10'), findsOneWidget);
+
+    // The crafted catalog replaced the six inline seals.
+    await _scrollUntil(tester, find.text('Theorem seals'));
+    expect(find.text('Theorem seals'), findsOneWidget);
+    await _scrollUntil(tester, find.text('Luminosity'));
+    expect(find.text('Luminosity'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('the observatory lays out cleanly from 320dp to tablet', (
+    tester,
+  ) async {
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    for (final size in const [
+      Size(320, 700),
+      Size(360, 820),
+      Size(411, 820),
+      Size(800, 600),
+      Size(1180, 900),
+    ]) {
+      await tester.binding.setSurfaceSize(size);
+      await tester.pumpWidget(
+        _TestSurface(controller: controller, child: const InsightsScreen()),
+      );
+      // Let layout settle at the new surface before judging it: the frame
+      // captured mid-resize is a test artifact, not a rendered state.
+      await tester.pump();
+      tester.takeException();
+      await tester.pump(const Duration(milliseconds: 60));
+      expect(
+        tester.takeException(),
+        isNull,
+        reason: 'Insights overflowed at $size',
+      );
+    }
+  });
+
+  testWidgets('completing a set opens the recap with its reward lines', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    final topic = controller.topics.first;
+    final questions = await questionBank.loadTopic(topic.key);
+    // Chart the whole first set except its final question, off-screen.
+    for (final question in questions.take(19)) {
+      await controller.saveStudyReflection(
+        question: question,
+        shelfKey: '${topic.key}:0:20',
+        hypothesisChoiceIndex: null,
+        reflection: StudyReflection.clear,
+      );
+    }
+    await tester.pumpWidget(
+      _TestSurface(
+        controller: controller,
+        child: ArchiveScreen(topicKey: topic.key, count: 20),
+      ),
+    );
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+
+    await tester.ensureVisible(find.text('Reveal the source answer'));
+    await tester.tap(find.text('Reveal the source answer'));
+    await tester.pump(const Duration(milliseconds: 220));
+    await tester.ensureVisible(find.text('Concept feels clear'));
+    await tester.tap(find.text('Concept feels clear'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 320));
+
+    expect(find.text('Set complete'), findsOneWidget);
+    expect(find.text('Study set complete'), findsOneWidget);
+    expect(find.text('Keep charting'), findsOneWidget);
+    await tester.tap(find.text('Keep charting'));
+    for (var pump = 0; pump < 12; pump++) {
+      await tester.pump(const Duration(milliseconds: 60));
+    }
+    expect(find.text('Set complete'), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
 }
 
 class _TestSurface extends StatelessWidget {
@@ -184,6 +282,18 @@ class _TestSurface extends StatelessWidget {
 Future<void> _setPhoneSurface(WidgetTester tester) async {
   await tester.binding.setSurfaceSize(const Size(411, 820));
   addTearDown(() => tester.binding.setSurfaceSize(null));
+}
+
+Future<void> _scrollUntil(
+  WidgetTester tester,
+  Finder finder, {
+  int maxDrags = 25,
+}) async {
+  for (var drag = 0; drag < maxDrags; drag++) {
+    if (finder.evaluate().isNotEmpty) return;
+    await tester.drag(find.byType(CustomScrollView), const Offset(0, -320));
+    await tester.pump(const Duration(milliseconds: 60));
+  }
 }
 
 Future<void> _pumpUntil(

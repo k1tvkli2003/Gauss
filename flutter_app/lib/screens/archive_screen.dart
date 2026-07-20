@@ -162,9 +162,24 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
       );
       if (!mounted) return;
       setState(() => _records[question.id] = outcome.record);
+      if (outcome.lines.isNotEmpty &&
+          (outcome.setCompleted ||
+              outcome.unitCompleted ||
+              outcome.leveledUp)) {
+        await _showRecap(outcome);
+      }
     } finally {
       if (mounted) setState(() => _saving = false);
     }
+  }
+
+  Future<void> _showRecap(StudyReflectionOutcome outcome) async {
+    if (!mounted) return;
+    await showDialog<void>(
+      context: context,
+      barrierColor: GaussColors.abyss.withValues(alpha: .82),
+      builder: (context) => _StudyRecapDialog(outcome: outcome),
+    );
   }
 
   @override
@@ -754,12 +769,10 @@ class _ReflectionDeck extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Icon(
-                Icons.self_improvement_outlined,
-                color: GaussColors.signalBright,
-              ),
-              const SizedBox(width: 9),
+              _MiraCompanion(reflection: current),
+              const SizedBox(width: 11),
               Expanded(
                 child: Text(
                   current == null
@@ -822,6 +835,189 @@ class _ReflectionDeck extends StatelessWidget {
             },
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Mira sits with the learner while the concept settles. She reacts to the
+/// learner's own signal, never to the unverified source key.
+class _MiraCompanion extends StatelessWidget {
+  const _MiraCompanion({required this.reflection});
+
+  final StudyReflection? reflection;
+
+  @override
+  Widget build(BuildContext context) {
+    final settled = reflection == StudyReflection.clear;
+    return SizedBox.square(
+      dimension: 54,
+      child: AnimatedSwitcher(
+        duration: MediaQuery.disableAnimationsOf(context)
+            ? Duration.zero
+            : const Duration(milliseconds: 300),
+        child: Image.asset(
+          settled
+              ? 'assets/visual/mascot/mira_correct.png'
+              : 'assets/visual/mascot/mira_thinking.png',
+          key: ValueKey(settled),
+          fit: BoxFit.contain,
+          cacheHeight: 180,
+          filterQuality: FilterQuality.medium,
+          semanticLabel: settled
+              ? 'Mira marks the concept as settled with you'
+              : 'Mira is thinking with you',
+        ),
+      ),
+    );
+  }
+}
+
+/// A quiet celebration when a set, a unit, or a level completes. It reports
+/// what the ledger recorded — never a claim about the source answer.
+class _StudyRecapDialog extends StatelessWidget {
+  const _StudyRecapDialog({required this.outcome});
+
+  final StudyReflectionOutcome outcome;
+
+  @override
+  Widget build(BuildContext context) {
+    final headline = outcome.unitCompleted
+        ? 'Unit charted'
+        : outcome.setCompleted
+        ? 'Set complete'
+        : 'Level ${outcome.levelAfter}';
+    final detail = outcome.unitCompleted
+        ? 'Every question in this unit now carries your own mark.'
+        : outcome.setCompleted
+        ? 'Twenty coordinates charted. The next set is ready when you are.'
+        : 'Your steady charting moved the observatory forward.';
+    final totals = <String, int>{};
+    for (final line in outcome.lines) {
+      totals.update(
+        line.reason,
+        (value) => value + line.amount,
+        ifAbsent: () => line.amount,
+      );
+    }
+    return Dialog(
+      insetPadding: const EdgeInsets.all(22),
+      backgroundColor: Colors.transparent,
+      child: Semantics(
+        container: true,
+        label:
+            '$headline. $detail. ${outcome.xpEarned} experience recorded. '
+            '${outcome.leveledUp ? 'Level ${outcome.levelAfter} reached.' : ''}',
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 420),
+          padding: const EdgeInsets.fromLTRB(22, 20, 22, 18),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                GaussColors.panelHigh.withValues(alpha: .97),
+                GaussColors.ink.withValues(alpha: .98),
+              ],
+            ),
+            borderRadius: BorderRadius.circular(26),
+            border: Border.all(color: GaussColors.brass.withValues(alpha: .5)),
+            boxShadow: const [
+              BoxShadow(
+                color: Color(0x99000000),
+                blurRadius: 34,
+                offset: Offset(0, 16),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                height: 132,
+                child: Image.asset(
+                  'assets/visual/mascot/mira_correct.png',
+                  fit: BoxFit.contain,
+                  cacheHeight: 400,
+                  filterQuality: FilterQuality.medium,
+                  semanticLabel: 'Mira marks the milestone with you',
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                headline,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+              const SizedBox(height: 6),
+              Text(
+                detail,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: GaussColors.muted,
+                  fontSize: 12,
+                  height: 1.45,
+                ),
+              ),
+              const SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(13),
+                decoration: BoxDecoration(
+                  color: GaussColors.deepInk.withValues(alpha: .82),
+                  borderRadius: BorderRadius.circular(17),
+                  border: Border.all(color: GaussColors.hairline),
+                ),
+                child: Column(
+                  children: [
+                    for (final entry in totals.entries)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 4),
+                        child: Row(
+                          children: [
+                            const TheoremStarMark(size: 16),
+                            const SizedBox(width: 9),
+                            Expanded(
+                              child: Text(
+                                entry.key,
+                                style: const TextStyle(fontSize: 12),
+                              ),
+                            ),
+                            Text(
+                              '+${entry.value} XP',
+                              style: const TextStyle(
+                                color: GaussColors.signalBright,
+                                fontWeight: FontWeight.w900,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    if (outcome.leveledUp) ...[
+                      const Divider(height: 18),
+                      Text(
+                        'Level ${outcome.levelAfter} reached',
+                        style: const TextStyle(
+                          color: GaussColors.brassLight,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+              const SizedBox(height: 16),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('Keep charting'),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
