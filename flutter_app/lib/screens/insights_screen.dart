@@ -67,9 +67,7 @@ class InsightsScreen extends StatelessWidget {
                     child: _SubjectBalanceDial(controller: controller),
                   ),
                 if (study.hypothesisCount > 0)
-                  SliverToBoxAdapter(
-                    child: _HypothesisLedger(study: study),
-                  ),
+                  SliverToBoxAdapter(child: _HypothesisLedger(study: study)),
                 SliverToBoxAdapter(
                   child: _ActivityStarChart(heatmap: study.heatmap),
                 ),
@@ -152,41 +150,60 @@ class _ObservatoryHeader extends StatelessWidget {
     child: Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 1180),
-        child: Row(
-          children: [
-            const GaussWordmark(width: 122),
-            const SizedBox(width: 14),
-            Container(width: 1, height: 30, color: GaussColors.hairline),
-            const SizedBox(width: 14),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'PERSONAL CONSTELLATION',
-                    style: TextStyle(
-                      color: GaussColors.brassLight,
-                      fontSize: 9,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 1.35,
-                    ),
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            // On a narrow phone the wordmark, subtitle, medallion, vault, and
+            // offline pip cannot share one row; the subtitle is the piece
+            // that can stand down.
+            final compact = constraints.maxWidth < 430;
+            return Row(
+              children: [
+                GaussWordmark(width: compact ? 104 : 122),
+                if (!compact) ...[
+                  const SizedBox(width: 14),
+                  Container(width: 1, height: 30, color: GaussColors.hairline),
+                  const SizedBox(width: 14),
+                ] else
+                  const SizedBox(width: 8),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'PERSONAL CONSTELLATION',
+                        style: TextStyle(
+                          color: GaussColors.brassLight,
+                          fontSize: 9,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1.35,
+                        ),
+                      ),
+                      Text(
+                        '${_formatCount(totalQuestions)} preserved coordinates · local to this device',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: GaussColors.fog,
+                          fontSize: 11,
+                        ),
+                      ),
+                    ],
                   ),
-                  Text(
-                    '${_formatCount(totalQuestions)} preserved coordinates · local to this device',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: GaussColors.fog,
-                      fontSize: 11,
-                    ),
+                ),
+                _LevelMedallion(level: level, progress: levelProgress),
+                const SizedBox(width: 6),
+                IconButton(
+                  onPressed: () => context.push('/vault'),
+                  tooltip: 'Progress vault',
+                  icon: const Icon(
+                    Icons.inventory_2_outlined,
+                    color: GaussColors.brassLight,
                   ),
-                ],
-              ),
-            ),
-            _LevelMedallion(level: level, progress: levelProgress),
-            const SizedBox(width: 10),
-            const _OfflineSignal(),
-          ],
+                ),
+                if (!compact) const _OfflineSignal(),
+              ],
+            );
+          },
         ),
       ),
     ),
@@ -851,10 +868,7 @@ class _SubjectBalanceDial extends StatelessWidget {
                             child: const ColoredBox(color: mathColor),
                           ),
                           Expanded(
-                            flex: math.max(
-                              1,
-                              ((1 - mathShare) * 1000).round(),
-                            ),
+                            flex: math.max(1, ((1 - mathShare) * 1000).round()),
                             child: const ColoredBox(color: physicsColor),
                           ),
                         ],
@@ -935,10 +949,7 @@ class _BalanceLegend extends StatelessWidget {
               subject,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w800,
-              ),
+              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800),
             ),
             Text(
               '$charted of ${_formatCount(available)}',

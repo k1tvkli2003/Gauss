@@ -34,6 +34,27 @@ class ProgressRepository {
     await database.customSelect('SELECT 1').getSingle();
   }
 
+  static const tourSeenFlag = 'tour_seen';
+
+  Future<bool> readFlag(String key) async {
+    final row = await (database.select(
+      database.appFlags,
+    )..where((item) => item.key.equals(key))).getSingleOrNull();
+    return row?.value == 'true';
+  }
+
+  Future<void> writeFlag(String key, {required bool value}) async {
+    await database
+        .into(database.appFlags)
+        .insertOnConflictUpdate(
+          AppFlagsCompanion.insert(
+            key: key,
+            value: value ? 'true' : 'false',
+            updatedAt: _clock().millisecondsSinceEpoch,
+          ),
+        );
+  }
+
   Future<List<StudyRecord>> studyRecords({String? topicKey}) async {
     final query = database.select(database.studyRecords);
     if (topicKey != null) {

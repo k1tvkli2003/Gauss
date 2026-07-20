@@ -3,6 +3,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/widgets.dart';
 
+import '../data/backup_service.dart';
 import '../data/progress_repository.dart';
 import '../data/question_bank_repository.dart';
 import '../domain/failures.dart';
@@ -10,10 +11,14 @@ import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
 
 class GaussController extends ChangeNotifier {
-  GaussController(this._questionBank, this._progress);
+  GaussController(this._questionBank, this._progress, {BackupService? backups})
+    : _backups = backups ?? BackupService();
 
   final QuestionBankRepository _questionBank;
   final ProgressRepository _progress;
+  final BackupService _backups;
+
+  BackupService get backups => _backups;
   final List<AttemptRecord> _attempts = [];
   final Map<String, int> _completedByTopic = {};
   String? _selectedTopicKey;
@@ -24,6 +29,7 @@ class GaussController extends ChangeNotifier {
   final int _revengeCount = 0;
   final int _reviewDueCount = 0;
   int _studyDueCount = 0;
+  bool _needsTour = false;
   final List<RecentExamSummary> _recentExams = const [];
   ResumableMission? _resumableMission;
   StudySummary _study = const StudySummary.empty();
@@ -67,6 +73,24 @@ class GaussController extends ChangeNotifier {
 
   /// Revisit-marked questions whose spacing timer has elapsed.
   int get studyDueCount => _studyDueCount;
+
+  /// True until the learner has seen (or dismissed) the first-run tour.
+  bool get needsTour => _needsTour;
+
+  Future<void> markTourSeen() async {
+    if (!_needsTour) return;
+    _needsTour = false;
+    notifyListeners();
+    try {
+      await _progress.writeFlag(
+        ProgressRepository.tourSeenFlag,
+        value: true,
+      );
+    } catch (_) {
+      // A tour that cannot be recorded is a cosmetic loss, not a failure
+      // worth interrupting the learner for; it simply shows again.
+    }
+  }
   UnmodifiableListView<RecentExamSummary> get recentExams =>
       UnmodifiableListView(_recentExams);
   ResumableMission? get resumableMission => _resumableMission;
@@ -214,10 +238,12 @@ class GaussController extends ChangeNotifier {
       _progress.gamificationSummary(),
       _progress.studySummary(),
       _progress.studyDueIds(),
+      _progress.readFlag(ProgressRepository.tourSeenFlag),
     ]);
     _gamification = values[0] as GamificationSummary;
     _study = values[1] as StudySummary;
     _studyDueCount = (values[2] as List<String>).length;
+    _needsTour = !(values[3] as bool);
   }
 
   Future<ResumableMission?> loadResumableMission() async {

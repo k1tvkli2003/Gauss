@@ -8,6 +8,7 @@ import '../app/gauss_theme.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
 import '../state/gauss_controller.dart';
+import '../widgets/first_run_tour.dart';
 import '../widgets/gauss_brand.dart';
 
 class MapScreen extends StatefulWidget {
@@ -165,6 +166,10 @@ class _MapScreenState extends State<MapScreen> {
               );
             },
           ),
+          if (controller.needsTour)
+            Positioned.fill(
+              child: FirstRunTour(onDismiss: controller.markTourSeen),
+            ),
         ],
       ),
     );

@@ -152,6 +152,16 @@ class StudyRecords extends Table {
   Set<Column<Object>> get primaryKey => {questionId};
 }
 
+@DataClassName('AppFlagRow')
+class AppFlags extends Table {
+  TextColumn get key => text()();
+  TextColumn get value => text()();
+  IntColumn get updatedAt => integer()();
+
+  @override
+  Set<Column<Object>> get primaryKey => {key};
+}
+
 @DataClassName('StudyPositionRow')
 class StudyPositions extends Table {
   TextColumn get shelfKey => text()();
@@ -175,6 +185,7 @@ class StudyPositions extends Table {
     AchievementProgress,
     StudyRecords,
     StudyPositions,
+    AppFlags,
   ],
 )
 class GaussDatabase extends _$GaussDatabase {
@@ -192,7 +203,7 @@ class GaussDatabase extends _$GaussDatabase {
       );
 
   @override
-  int get schemaVersion => 5;
+  int get schemaVersion => 6;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -221,6 +232,15 @@ class GaussDatabase extends _$GaussDatabase {
       if (from < 5) {
         // Additive: earlier reflections simply have no recorded alignment.
         await migrator.addColumn(studyRecords, studyRecords.hypothesisMatched);
+      }
+      if (from < 6) {
+        // Small key/value store for one-time UI state. An upgrading learner
+        // has already found their way around, so the tour stays dismissed.
+        await migrator.createTable(appFlags);
+        await customStatement(
+          "INSERT OR IGNORE INTO app_flags (key, value, updated_at) "
+          "VALUES ('tour_seen', 'true', 0)",
+        );
       }
     },
     beforeOpen: (details) async {

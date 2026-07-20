@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../screens/archive_screen.dart';
+import '../screens/backup_screen.dart';
 import '../screens/insights_screen.dart';
 import '../screens/map_screen.dart';
 import '../screens/practice_screen.dart';
@@ -88,6 +89,10 @@ class _GaussAppState extends State<GaussApp> {
       GoRoute(
         path: '/study/gems',
         builder: (context, state) => const ArchiveScreen.gems(),
+      ),
+      GoRoute(
+        path: '/vault',
+        builder: (context, state) => const BackupScreen(),
       ),
       GoRoute(path: '/review', redirect: (context, state) => '/study/revisit'),
       GoRoute(path: '/', redirect: (context, state) => '/map'),

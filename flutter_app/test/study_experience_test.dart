@@ -178,8 +178,11 @@ void main() {
     tester.takeException();
     await tester.pump(const Duration(milliseconds: 60));
 
-    // Level medallion and the study-native daily quest are both live again.
+    // The level medallion rides in the header, always visible.
     expect(find.text('LVL'), findsOneWidget);
+
+    // The study-native daily quest is live again further down the log.
+    await _scrollUntil(tester, find.text('DAILY OBSERVATION'));
     expect(find.text('DAILY OBSERVATION'), findsOneWidget);
     expect(find.text('Chart ten reflections'), findsOneWidget);
     expect(find.text('0/10'), findsOneWidget);
@@ -242,6 +245,19 @@ void main() {
 
     expect(find.text('12 of 20'), findsOneWidget);
     expect(tester.takeException(), isNull);
+  });
+
+  test('the first-run tour is offered once and then stays dismissed', () async {
+    expect(controller.needsTour, isTrue);
+
+    await controller.markTourSeen();
+    expect(controller.needsTour, isFalse);
+
+    // The decision survives a cold start against the same store.
+    final reopened = GaussController(QuestionBankRepository(), progress);
+    await reopened.initialize();
+    addTearDown(reopened.dispose);
+    expect(reopened.needsTour, isFalse);
   });
 
   testWidgets('the observatory lays out cleanly from 320dp to tablet', (
