@@ -364,12 +364,20 @@ class GaussController extends ChangeNotifier {
   }) async {
     try {
       final ids = await loadIds();
-      final questions = await _questionBank.questionsByIds(ids);
       final storedRecords = await _progress.studyRecords();
       final records = {
         for (final record in storedRecords)
           if (ids.contains(record.questionId)) record.questionId: record,
       };
+      // The records already know where each question lives, so only those
+      // shards are opened instead of scanning the whole library.
+      final questions = await _questionBank.questionsByIds(
+        ids,
+        topicByQuestionId: {
+          for (final record in records.values)
+            record.questionId: record.topicKey,
+        },
+      );
       return StudyShelf(
         key: key,
         questions: questions,

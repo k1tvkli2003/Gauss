@@ -5,6 +5,56 @@ import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
 
 void main() {
+  test('topic hints resolve questions without scanning the library', () async {
+    final repository = QuestionBankRepository();
+    await repository.initialize();
+    final lastTopic = repository.topics.last;
+    final firstTopic = repository.topics.first;
+    final lastQuestion = (await repository.loadTopic(lastTopic.key)).last;
+    final firstQuestion = (await repository.loadTopic(firstTopic.key)).first;
+
+    final hinted = QuestionBankRepository();
+    await hinted.initialize();
+    final resolved = await hinted.questionsByIds(
+      [lastQuestion.id, firstQuestion.id],
+      topicByQuestionId: {
+        lastQuestion.id: lastTopic.key,
+        firstQuestion.id: firstTopic.key,
+      },
+    );
+
+    // Order follows the requested ids, and only the two hinted shards were
+    // opened — the other topics stay untouched.
+    expect(
+      resolved.map((question) => question.id),
+      [lastQuestion.id, firstQuestion.id],
+    );
+    for (final topic in hinted.topics) {
+      if (topic.key == lastTopic.key || topic.key == firstTopic.key) continue;
+      expect(
+        hinted.isTopicLoaded(topic.key),
+        isFalse,
+        reason: '${topic.key} should not have been decoded',
+      );
+    }
+  });
+
+  test('a stale topic hint still resolves through the full scan', () async {
+    final repository = QuestionBankRepository();
+    await repository.initialize();
+    final topic = repository.topics.last;
+    final question = (await repository.loadTopic(topic.key)).first;
+
+    final stale = QuestionBankRepository();
+    await stale.initialize();
+    final resolved = await stale.questionsByIds(
+      [question.id],
+      topicByQuestionId: {question.id: 'a_topic_that_no_longer_exists'},
+    );
+
+    expect(resolved.single.id, question.id);
+  });
+
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('answer index boundary', () {

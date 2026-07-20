@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import '../domain/models.dart';
@@ -69,6 +70,11 @@ class QuestionBankRepository {
   TopicDescriptor topicByKey(String key) =>
       topics.firstWhere((topic) => topic.key == key);
 
+  /// Whether a shard has already been decoded into the in-memory cache.
+  /// Exposed so tests can assert that lookups stay narrow.
+  @visibleForTesting
+  bool isTopicLoaded(String key) => _cache.containsKey(key);
+
   Future<List<Question>> loadTopic(String key) async {
     final cached = _cache[key];
     if (cached != null) return cached;
@@ -131,11 +137,41 @@ class QuestionBankRepository {
         topicKey,
       )).where((question) => !question.missionReady).toList(growable: false);
 
-  Future<List<Question>> questionsByIds(List<String> ids) async {
+  /// Resolves questions by id, preserving the order of [ids].
+  ///
+  /// [topicByQuestionId] lets a caller that already knows where its questions
+  /// live (study records store the topic) open only those shards. Without
+  /// hints this must scan the whole library, which costs one decode per
+  /// shard — measurably slow for a single id in a late shard.
+  Future<List<Question>> questionsByIds(
+    List<String> ids, {
+    Map<String, String>? topicByQuestionId,
+  }) async {
     if (ids.isEmpty) return const [];
     final wanted = ids.toSet();
     final found = <String, Question>{};
+
+    final hintedTopics = <String>{};
+    if (topicByQuestionId != null) {
+      for (final id in wanted) {
+        final topicKey = topicByQuestionId[id];
+        if (topicKey != null) hintedTopics.add(topicKey);
+      }
+      for (final topicKey in hintedTopics) {
+        // A stale hint (a topic that no longer exists) simply yields nothing
+        // and falls through to the full scan below.
+        if (!topics.any((topic) => topic.key == topicKey)) continue;
+        for (final question in await loadTopic(topicKey)) {
+          if (wanted.contains(question.id)) found[question.id] = question;
+        }
+      }
+      if (found.length == wanted.length) {
+        return ids.map((id) => found[id]).whereType<Question>().toList();
+      }
+    }
+
     for (final topic in topics) {
+      if (hintedTopics.contains(topic.key)) continue;
       for (final question in await loadTopic(topic.key)) {
         if (wanted.contains(question.id)) found[question.id] = question;
       }
