@@ -62,6 +62,10 @@ class InsightsScreen extends StatelessWidget {
                     todayXp: gamification.todayXp,
                   ),
                 ),
+                if (study.totalReflected > 0)
+                  SliverToBoxAdapter(
+                    child: _SubjectBalanceDial(controller: controller),
+                  ),
                 if (study.hypothesisCount > 0)
                   SliverToBoxAdapter(
                     child: _HypothesisLedger(study: study),
@@ -759,6 +763,194 @@ class _ReflectionGaugePainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _ReflectionGaugePainter oldDelegate) =>
       oldDelegate.clearRatio != clearRatio || oldDelegate.hasData != hasData;
+}
+
+/// Where attention has actually gone. A balance reading, not a target: the
+/// two subjects hold different amounts of material, so the bar shows both
+/// the share of work and the share available.
+class _SubjectBalanceDial extends StatelessWidget {
+  const _SubjectBalanceDial({required this.controller});
+
+  final GaussController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    var mathCharted = 0;
+    var physicsCharted = 0;
+    var mathAvailable = 0;
+    var physicsAvailable = 0;
+    for (final topic in controller.topics) {
+      final charted = controller.study.topic(topic.key).reflected;
+      if (topic.subject == Subject.math) {
+        mathCharted += charted;
+        mathAvailable += topic.questionCount;
+      } else {
+        physicsCharted += charted;
+        physicsAvailable += topic.questionCount;
+      }
+    }
+    final charted = mathCharted + physicsCharted;
+    if (charted == 0) return const SizedBox.shrink();
+    final mathShare = mathCharted / charted;
+    final available = mathAvailable + physicsAvailable;
+    final mathAvailableShare = available == 0 ? .5 : mathAvailable / available;
+    const mathColor = GaussColors.brassLight;
+    const physicsColor = Color(0xFF68C8C0);
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(18, 14, 18, 0),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 1180),
+          child: Semantics(
+            container: true,
+            excludeSemantics: true,
+            label:
+                'Subject balance. Mathematics $mathCharted charted, physics '
+                '$physicsCharted charted. Mathematics holds '
+                '${(mathAvailableShare * 100).round()} percent of the library.',
+            child: _GlassPanel(
+              radius: 24,
+              padding: const EdgeInsets.all(18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.balance_outlined,
+                        color: GaussColors.brassLight,
+                        size: 20,
+                      ),
+                      const SizedBox(width: 9),
+                      Expanded(
+                        child: Text(
+                          'Subject balance',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                      ),
+                      Text(
+                        '${(mathShare * 100).round()}% / '
+                        '${(100 - (mathShare * 100).round())}%',
+                        style: const TextStyle(
+                          color: GaussColors.muted,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 13),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(99),
+                    child: SizedBox(
+                      height: 12,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: math.max(1, (mathShare * 1000).round()),
+                            child: const ColoredBox(color: mathColor),
+                          ),
+                          Expanded(
+                            flex: math.max(
+                              1,
+                              ((1 - mathShare) * 1000).round(),
+                            ),
+                            child: const ColoredBox(color: physicsColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 11),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: _BalanceLegend(
+                          color: mathColor,
+                          subject: 'Mathematics',
+                          charted: mathCharted,
+                          available: mathAvailable,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: _BalanceLegend(
+                          color: physicsColor,
+                          subject: 'Physics',
+                          charted: physicsCharted,
+                          available: physicsAvailable,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 9),
+                  Text(
+                    'The library itself is '
+                    '${(mathAvailableShare * 100).round()}% mathematics, so an '
+                    'even split of attention is not the goal — this is simply '
+                    'where your work has gone.',
+                    style: const TextStyle(
+                      color: GaussColors.fog,
+                      fontSize: 9,
+                      height: 1.4,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _BalanceLegend extends StatelessWidget {
+  const _BalanceLegend({
+    required this.color,
+    required this.subject,
+    required this.charted,
+    required this.available,
+  });
+
+  final Color color;
+  final String subject;
+  final int charted;
+  final int available;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    children: [
+      Container(
+        width: 9,
+        height: 9,
+        decoration: BoxDecoration(shape: BoxShape.circle, color: color),
+      ),
+      const SizedBox(width: 8),
+      Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              subject,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+            Text(
+              '$charted of ${_formatCount(available)}',
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(color: GaussColors.fog, fontSize: 9),
+            ),
+          ],
+        ),
+      ),
+    ],
+  );
 }
 
 /// How often the learner's pre-reveal call agreed with the source-claimed

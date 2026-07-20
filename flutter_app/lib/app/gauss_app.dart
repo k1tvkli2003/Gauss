@@ -75,6 +75,9 @@ class _GaussAppState extends State<GaussApp> {
             topicKey: state.pathParameters['topicKey']!,
             offset: (offset ?? 0).clamp(0, 100000),
             count: (count ?? 20).clamp(1, 50),
+            shuffleSeed: int.tryParse(
+              state.uri.queryParameters['shuffle'] ?? '',
+            ),
           );
         },
       ),

@@ -22,6 +22,7 @@ class ArchiveScreen extends StatefulWidget {
     this.count = 20,
     this.revisitOnly = false,
     this.gemsOnly = false,
+    this.shuffleSeed,
     super.key,
   });
 
@@ -30,20 +31,26 @@ class ArchiveScreen extends StatefulWidget {
       offset = 0,
       count = 20,
       revisitOnly = true,
-      gemsOnly = false;
+      gemsOnly = false,
+      shuffleSeed = null;
 
   const ArchiveScreen.gems({super.key})
     : topicKey = null,
       offset = 0,
       count = 20,
       revisitOnly = true,
-      gemsOnly = true;
+      gemsOnly = true,
+      shuffleSeed = null;
 
   final String? topicKey;
   final int offset;
   final int count;
   final bool revisitOnly;
   final bool gemsOnly;
+
+  /// When set, the same set is presented in a deterministic new order for a
+  /// second pass. Membership, shelf key, and saved marks are unchanged.
+  final int? shuffleSeed;
 
   @override
   State<ArchiveScreen> createState() => _ArchiveScreenState();
@@ -84,6 +91,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
               widget.topicKey!,
               offset: widget.offset,
               count: widget.count,
+              shuffleSeed: widget.shuffleSeed,
             );
       if (!mounted) return;
       _pageController?.dispose();
@@ -185,6 +193,21 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     }
   }
 
+  Future<void> _openJumpSheet(StudyShelf shelf) async {
+    final target = await showModalBottomSheet<int>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => _JumpSheet(
+        shelf: shelf,
+        records: _records,
+        currentIndex: _index,
+      ),
+    );
+    if (target != null && mounted) _goTo(target, shelf.questions.length);
+  }
+
   Future<void> _showRecap(StudyReflectionOutcome outcome) async {
     if (!mounted) return;
     await showDialog<void>(
@@ -240,9 +263,17 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
                         topic: topic,
                         revisitOnly: widget.revisitOnly,
                         gemsOnly: widget.gemsOnly,
+                        shuffled: widget.shuffleSeed != null,
                         index: _index,
                         total: shelf.questions.length,
                         onClose: _leave,
+                        onShuffle: widget.revisitOnly || shelf.questions.length < 3
+                            ? null
+                            : () => context.replace(
+                                '/study/chapter/${widget.topicKey}'
+                                '?offset=${widget.offset}&count=${widget.count}'
+                                '&shuffle=${DateTime.now().millisecondsSinceEpoch % 100000}',
+                              ),
                       ),
                       Expanded(
                         child: PageView.builder(
@@ -280,6 +311,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
                         onNext: _index == shelf.questions.length - 1
                             ? null
                             : () => _goTo(_index + 1, shelf.questions.length),
+                        onJump: () => _openJumpSheet(shelf),
                       ),
                     ],
                   ),
@@ -321,17 +353,21 @@ class _ArchiveTopBar extends StatelessWidget {
     required this.topic,
     required this.revisitOnly,
     required this.gemsOnly,
+    required this.shuffled,
     required this.index,
     required this.total,
     required this.onClose,
+    required this.onShuffle,
   });
 
   final TopicDescriptor? topic;
   final bool revisitOnly;
   final bool gemsOnly;
+  final bool shuffled;
   final int index;
   final int total;
   final VoidCallback onClose;
+  final VoidCallback? onShuffle;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -367,6 +403,8 @@ class _ArchiveTopBar extends StatelessWidget {
                       ? 'Gem shelf'
                       : revisitOnly
                       ? 'Revisit orbit'
+                      : shuffled
+                      ? '${topic!.label} · دور دوم'
                       : topic!.label,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -380,7 +418,18 @@ class _ArchiveTopBar extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(width: 10),
+        if (onShuffle != null)
+          IconButton(
+            onPressed: onShuffle,
+            tooltip: shuffled
+                ? 'Reshuffle this set again'
+                : 'Second pass in a new order',
+            icon: Icon(
+              Icons.shuffle_rounded,
+              color: shuffled ? GaussColors.brassLight : GaussColors.muted,
+            ),
+          ),
+        const SizedBox(width: 4),
         Semantics(
           label: 'Study item ${index + 1} of $total',
           child: Container(
@@ -1232,6 +1281,180 @@ class _ReflectionButton extends StatelessWidget {
   );
 }
 
+/// Jump anywhere in the current set. Each tile carries its own state so the
+/// learner can steer toward unread questions or back to a marked one.
+class _JumpSheet extends StatelessWidget {
+  const _JumpSheet({
+    required this.shelf,
+    required this.records,
+    required this.currentIndex,
+  });
+
+  final StudyShelf shelf;
+  final Map<String, StudyRecord> records;
+  final int currentIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    final firstUnread = shelf.questions.indexWhere(
+      (question) => !records.containsKey(question.id),
+    );
+    return DraggableScrollableSheet(
+      initialChildSize: .62,
+      minChildSize: .35,
+      maxChildSize: .92,
+      expand: false,
+      builder: (context, scrollController) => Container(
+        decoration: const BoxDecoration(
+          color: GaussColors.ink,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
+          border: Border(top: BorderSide(color: GaussColors.line)),
+        ),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 14, 12, 6),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'JUMP TO',
+                          style: TextStyle(
+                            color: GaussColors.brassLight,
+                            fontSize: 9,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                        Text(
+                          '${shelf.questions.length} questions in this set',
+                          style: const TextStyle(
+                            color: GaussColors.fog,
+                            fontSize: 11,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  if (firstUnread >= 0)
+                    TextButton.icon(
+                      onPressed: () => Navigator.of(context).pop(firstUnread),
+                      icon: const Icon(Icons.explore_outlined, size: 18),
+                      label: const Text('First unread'),
+                    ),
+                  IconButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    tooltip: 'Close',
+                    icon: const Icon(Icons.close_rounded),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: GridView.builder(
+                controller: scrollController,
+                padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
+                gridDelegate:
+                    const SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 62,
+                      mainAxisSpacing: 9,
+                      crossAxisSpacing: 9,
+                      childAspectRatio: 1,
+                    ),
+                itemCount: shelf.questions.length,
+                itemBuilder: (context, index) => _JumpTile(
+                  number: index + 1,
+                  current: index == currentIndex,
+                  record: records[shelf.questions[index].id],
+                  onTap: () => Navigator.of(context).pop(index),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _JumpTile extends StatelessWidget {
+  const _JumpTile({
+    required this.number,
+    required this.current,
+    required this.record,
+    required this.onTap,
+  });
+
+  final int number;
+  final bool current;
+  final StudyRecord? record;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final reflection = record?.reflection;
+    final accent = switch (reflection) {
+      null => GaussColors.line,
+      StudyReflection.clear => GaussColors.signalBright,
+      StudyReflection.revisit => GaussColors.warning,
+      StudyReflection.gem => GaussColors.brassLight,
+    };
+    final stateLabel = switch (reflection) {
+      null => 'not charted',
+      StudyReflection.clear => 'clear',
+      StudyReflection.revisit => 'revisit',
+      StudyReflection.gem => 'gem',
+    };
+    return Semantics(
+      button: true,
+      selected: current,
+      label: 'Question $number, $stateLabel',
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(14),
+        child: Container(
+          decoration: BoxDecoration(
+            color: reflection == null
+                ? GaussColors.raised
+                : accent.withValues(alpha: .13),
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: current ? GaussColors.ivory : accent,
+              width: current ? 2 : 1,
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '$number',
+                style: TextStyle(
+                  color: reflection == null ? GaussColors.muted : accent,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 14,
+                ),
+              ),
+              if (reflection != null)
+                Icon(
+                  switch (reflection) {
+                    StudyReflection.clear => Icons.check_rounded,
+                    StudyReflection.revisit => Icons.loop_rounded,
+                    StudyReflection.gem => Icons.auto_awesome_outlined,
+                  },
+                  size: 11,
+                  color: accent,
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _ArchiveNavBar extends StatelessWidget {
   const _ArchiveNavBar({
     required this.index,
@@ -1239,6 +1462,7 @@ class _ArchiveNavBar extends StatelessWidget {
     required this.reflected,
     required this.onPrevious,
     required this.onNext,
+    required this.onJump,
   });
 
   final int index;
@@ -1246,6 +1470,7 @@ class _ArchiveNavBar extends StatelessWidget {
   final bool reflected;
   final VoidCallback? onPrevious;
   final VoidCallback? onNext;
+  final VoidCallback onJump;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -1269,17 +1494,51 @@ class _ArchiveNavBar extends StatelessWidget {
               child: LayoutBuilder(
                 builder: (context, constraints) {
                   final compact = constraints.maxWidth < 480;
-                  final position = Text(
-                    reflected
-                        ? '${index + 1} of $total · charted'
-                        : '${index + 1} of $total',
-                    textAlign: TextAlign.center,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: GaussColors.fog,
-                      fontSize: 11,
-                      fontWeight: FontWeight.w700,
+                  final position = Semantics(
+                    button: true,
+                    label:
+                        'Question ${index + 1} of $total'
+                        '${reflected ? ', charted' : ''}. Jump to a question.',
+                    child: Tooltip(
+                      message: 'Jump to a question',
+                      child: InkWell(
+                        onTap: total <= 1 ? null : onJump,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 6,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Flexible(
+                                child: Text(
+                                  reflected
+                                      ? '${index + 1} of $total · charted'
+                                      : '${index + 1} of $total',
+                                  textAlign: TextAlign.center,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: GaussColors.fog,
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                              if (total > 1) ...[
+                                const SizedBox(width: 5),
+                                const Icon(
+                                  Icons.unfold_more_rounded,
+                                  size: 13,
+                                  color: GaussColors.brassLight,
+                                ),
+                              ],
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
                   );
                   if (compact) {

@@ -192,6 +192,58 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
+  test('a reshuffled pass keeps set membership and marks', () async {
+    final topic = controller.topics.first;
+    final canonical = await controller.loadStudyShelf(topic.key, count: 20);
+    final shuffled = await controller.loadStudyShelf(
+      topic.key,
+      count: 20,
+      shuffleSeed: 7,
+    );
+    final repeated = await controller.loadStudyShelf(
+      topic.key,
+      count: 20,
+      shuffleSeed: 7,
+    );
+
+    List<String> ids(StudyShelf shelf) =>
+        shelf.questions.map((question) => question.id).toList();
+
+    // Same members, same shelf key — only the order moved.
+    expect(ids(shuffled).toSet(), ids(canonical).toSet());
+    expect(shuffled.key, canonical.key);
+    expect(ids(shuffled), isNot(ids(canonical)));
+    // The same seed always produces the same order.
+    expect(ids(repeated), ids(shuffled));
+  });
+
+  testWidgets('the study room can jump to any question in the set', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    final topic = controller.topics.first;
+    await tester.pumpWidget(
+      _TestSurface(
+        controller: controller,
+        child: ArchiveScreen(topicKey: topic.key, count: 20),
+      ),
+    );
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+
+    expect(find.text('1 of 20'), findsOneWidget);
+    await tester.tap(find.text('1 of 20'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+
+    expect(find.text('JUMP TO'), findsOneWidget);
+    await tester.tap(find.text('12'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+
+    expect(find.text('12 of 20'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('the observatory lays out cleanly from 320dp to tablet', (
     tester,
   ) async {

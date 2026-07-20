@@ -300,6 +300,7 @@ class GaussController extends ChangeNotifier {
     String topicKey, {
     int offset = 0,
     int? count,
+    int? shuffleSeed,
   }) async {
     try {
       final allQuestions = await _questionBank.archiveQuestions(topicKey);
@@ -308,10 +309,12 @@ class GaussController extends ChangeNotifier {
         1,
         allQuestions.length,
       );
-      final questions = allQuestions
-          .skip(safeOffset)
-          .take(limit)
-          .toList(growable: false);
+      final questions = allQuestions.skip(safeOffset).take(limit).toList();
+      if (shuffleSeed != null) {
+        // A deliberate second pass over the same set: the order changes, the
+        // membership and its shelf key do not, so progress stays attached.
+        questions.shuffle(math.Random(shuffleSeed));
+      }
       final shelfKey = '$topicKey:$safeOffset:$limit';
       // These first-use statements share one local Drift executor. Sequential
       // reads are effectively free beside shard decoding and avoid a native
@@ -324,7 +327,9 @@ class GaussController extends ChangeNotifier {
           if (questionIds.contains(record.questionId))
             record.questionId: record,
       };
-      var initialIndex = storedPosition ?? -1;
+      // A reshuffled pass starts at its own beginning: the stored position
+      // refers to the canonical order, not this one.
+      var initialIndex = shuffleSeed == null ? (storedPosition ?? -1) : -1;
       if (initialIndex < 0 || initialIndex >= questions.length) {
         initialIndex = questions.indexWhere(
           (question) => !records.containsKey(question.id),
