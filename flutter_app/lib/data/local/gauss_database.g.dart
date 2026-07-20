@@ -4237,6 +4237,20 @@ class $StudyRecordsTable extends StudyRecords
     type: DriftSqlType.int,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _hypothesisMatchedMeta = const VerificationMeta(
+    'hypothesisMatched',
+  );
+  @override
+  late final GeneratedColumn<bool> hypothesisMatched = GeneratedColumn<bool>(
+    'hypothesis_matched',
+    aliasedName,
+    true,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("hypothesis_matched" IN (0, 1))',
+    ),
+  );
   static const VerificationMeta _reflectionMeta = const VerificationMeta(
     'reflection',
   );
@@ -4276,6 +4290,7 @@ class $StudyRecordsTable extends StudyRecords
     topicKey,
     shelfKey,
     hypothesisChoiceIndex,
+    hypothesisMatched,
     reflection,
     firstReflectedAt,
     updatedAt,
@@ -4322,6 +4337,15 @@ class $StudyRecordsTable extends StudyRecords
         hypothesisChoiceIndex.isAcceptableOrUnknown(
           data['hypothesis_choice_index']!,
           _hypothesisChoiceIndexMeta,
+        ),
+      );
+    }
+    if (data.containsKey('hypothesis_matched')) {
+      context.handle(
+        _hypothesisMatchedMeta,
+        hypothesisMatched.isAcceptableOrUnknown(
+          data['hypothesis_matched']!,
+          _hypothesisMatchedMeta,
         ),
       );
     }
@@ -4377,6 +4401,10 @@ class $StudyRecordsTable extends StudyRecords
         DriftSqlType.int,
         data['${effectivePrefix}hypothesis_choice_index'],
       ),
+      hypothesisMatched: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}hypothesis_matched'],
+      ),
       reflection: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}reflection'],
@@ -4403,6 +4431,11 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
   final String topicKey;
   final String shelfKey;
   final int? hypothesisChoiceIndex;
+
+  /// Whether the private hypothesis matched the source-claimed key. Recorded
+  /// only as a personal alignment note — the source key is never verified, so
+  /// this can never become a score.
+  final bool? hypothesisMatched;
   final String reflection;
   final int firstReflectedAt;
   final int updatedAt;
@@ -4411,6 +4444,7 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
     required this.topicKey,
     required this.shelfKey,
     this.hypothesisChoiceIndex,
+    this.hypothesisMatched,
     required this.reflection,
     required this.firstReflectedAt,
     required this.updatedAt,
@@ -4423,6 +4457,9 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
     map['shelf_key'] = Variable<String>(shelfKey);
     if (!nullToAbsent || hypothesisChoiceIndex != null) {
       map['hypothesis_choice_index'] = Variable<int>(hypothesisChoiceIndex);
+    }
+    if (!nullToAbsent || hypothesisMatched != null) {
+      map['hypothesis_matched'] = Variable<bool>(hypothesisMatched);
     }
     map['reflection'] = Variable<String>(reflection);
     map['first_reflected_at'] = Variable<int>(firstReflectedAt);
@@ -4438,6 +4475,9 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
       hypothesisChoiceIndex: hypothesisChoiceIndex == null && nullToAbsent
           ? const Value.absent()
           : Value(hypothesisChoiceIndex),
+      hypothesisMatched: hypothesisMatched == null && nullToAbsent
+          ? const Value.absent()
+          : Value(hypothesisMatched),
       reflection: Value(reflection),
       firstReflectedAt: Value(firstReflectedAt),
       updatedAt: Value(updatedAt),
@@ -4456,6 +4496,7 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
       hypothesisChoiceIndex: serializer.fromJson<int?>(
         json['hypothesisChoiceIndex'],
       ),
+      hypothesisMatched: serializer.fromJson<bool?>(json['hypothesisMatched']),
       reflection: serializer.fromJson<String>(json['reflection']),
       firstReflectedAt: serializer.fromJson<int>(json['firstReflectedAt']),
       updatedAt: serializer.fromJson<int>(json['updatedAt']),
@@ -4469,6 +4510,7 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
       'topicKey': serializer.toJson<String>(topicKey),
       'shelfKey': serializer.toJson<String>(shelfKey),
       'hypothesisChoiceIndex': serializer.toJson<int?>(hypothesisChoiceIndex),
+      'hypothesisMatched': serializer.toJson<bool?>(hypothesisMatched),
       'reflection': serializer.toJson<String>(reflection),
       'firstReflectedAt': serializer.toJson<int>(firstReflectedAt),
       'updatedAt': serializer.toJson<int>(updatedAt),
@@ -4480,6 +4522,7 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
     String? topicKey,
     String? shelfKey,
     Value<int?> hypothesisChoiceIndex = const Value.absent(),
+    Value<bool?> hypothesisMatched = const Value.absent(),
     String? reflection,
     int? firstReflectedAt,
     int? updatedAt,
@@ -4490,6 +4533,9 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
     hypothesisChoiceIndex: hypothesisChoiceIndex.present
         ? hypothesisChoiceIndex.value
         : this.hypothesisChoiceIndex,
+    hypothesisMatched: hypothesisMatched.present
+        ? hypothesisMatched.value
+        : this.hypothesisMatched,
     reflection: reflection ?? this.reflection,
     firstReflectedAt: firstReflectedAt ?? this.firstReflectedAt,
     updatedAt: updatedAt ?? this.updatedAt,
@@ -4504,6 +4550,9 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
       hypothesisChoiceIndex: data.hypothesisChoiceIndex.present
           ? data.hypothesisChoiceIndex.value
           : this.hypothesisChoiceIndex,
+      hypothesisMatched: data.hypothesisMatched.present
+          ? data.hypothesisMatched.value
+          : this.hypothesisMatched,
       reflection: data.reflection.present
           ? data.reflection.value
           : this.reflection,
@@ -4521,6 +4570,7 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
           ..write('topicKey: $topicKey, ')
           ..write('shelfKey: $shelfKey, ')
           ..write('hypothesisChoiceIndex: $hypothesisChoiceIndex, ')
+          ..write('hypothesisMatched: $hypothesisMatched, ')
           ..write('reflection: $reflection, ')
           ..write('firstReflectedAt: $firstReflectedAt, ')
           ..write('updatedAt: $updatedAt')
@@ -4534,6 +4584,7 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
     topicKey,
     shelfKey,
     hypothesisChoiceIndex,
+    hypothesisMatched,
     reflection,
     firstReflectedAt,
     updatedAt,
@@ -4546,6 +4597,7 @@ class StudyRecordRow extends DataClass implements Insertable<StudyRecordRow> {
           other.topicKey == this.topicKey &&
           other.shelfKey == this.shelfKey &&
           other.hypothesisChoiceIndex == this.hypothesisChoiceIndex &&
+          other.hypothesisMatched == this.hypothesisMatched &&
           other.reflection == this.reflection &&
           other.firstReflectedAt == this.firstReflectedAt &&
           other.updatedAt == this.updatedAt);
@@ -4556,6 +4608,7 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
   final Value<String> topicKey;
   final Value<String> shelfKey;
   final Value<int?> hypothesisChoiceIndex;
+  final Value<bool?> hypothesisMatched;
   final Value<String> reflection;
   final Value<int> firstReflectedAt;
   final Value<int> updatedAt;
@@ -4565,6 +4618,7 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
     this.topicKey = const Value.absent(),
     this.shelfKey = const Value.absent(),
     this.hypothesisChoiceIndex = const Value.absent(),
+    this.hypothesisMatched = const Value.absent(),
     this.reflection = const Value.absent(),
     this.firstReflectedAt = const Value.absent(),
     this.updatedAt = const Value.absent(),
@@ -4575,6 +4629,7 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
     required String topicKey,
     required String shelfKey,
     this.hypothesisChoiceIndex = const Value.absent(),
+    this.hypothesisMatched = const Value.absent(),
     required String reflection,
     required int firstReflectedAt,
     required int updatedAt,
@@ -4590,6 +4645,7 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
     Expression<String>? topicKey,
     Expression<String>? shelfKey,
     Expression<int>? hypothesisChoiceIndex,
+    Expression<bool>? hypothesisMatched,
     Expression<String>? reflection,
     Expression<int>? firstReflectedAt,
     Expression<int>? updatedAt,
@@ -4601,6 +4657,7 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
       if (shelfKey != null) 'shelf_key': shelfKey,
       if (hypothesisChoiceIndex != null)
         'hypothesis_choice_index': hypothesisChoiceIndex,
+      if (hypothesisMatched != null) 'hypothesis_matched': hypothesisMatched,
       if (reflection != null) 'reflection': reflection,
       if (firstReflectedAt != null) 'first_reflected_at': firstReflectedAt,
       if (updatedAt != null) 'updated_at': updatedAt,
@@ -4613,6 +4670,7 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
     Value<String>? topicKey,
     Value<String>? shelfKey,
     Value<int?>? hypothesisChoiceIndex,
+    Value<bool?>? hypothesisMatched,
     Value<String>? reflection,
     Value<int>? firstReflectedAt,
     Value<int>? updatedAt,
@@ -4624,6 +4682,7 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
       shelfKey: shelfKey ?? this.shelfKey,
       hypothesisChoiceIndex:
           hypothesisChoiceIndex ?? this.hypothesisChoiceIndex,
+      hypothesisMatched: hypothesisMatched ?? this.hypothesisMatched,
       reflection: reflection ?? this.reflection,
       firstReflectedAt: firstReflectedAt ?? this.firstReflectedAt,
       updatedAt: updatedAt ?? this.updatedAt,
@@ -4648,6 +4707,9 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
         hypothesisChoiceIndex.value,
       );
     }
+    if (hypothesisMatched.present) {
+      map['hypothesis_matched'] = Variable<bool>(hypothesisMatched.value);
+    }
     if (reflection.present) {
       map['reflection'] = Variable<String>(reflection.value);
     }
@@ -4670,6 +4732,7 @@ class StudyRecordsCompanion extends UpdateCompanion<StudyRecordRow> {
           ..write('topicKey: $topicKey, ')
           ..write('shelfKey: $shelfKey, ')
           ..write('hypothesisChoiceIndex: $hypothesisChoiceIndex, ')
+          ..write('hypothesisMatched: $hypothesisMatched, ')
           ..write('reflection: $reflection, ')
           ..write('firstReflectedAt: $firstReflectedAt, ')
           ..write('updatedAt: $updatedAt, ')
@@ -8071,6 +8134,7 @@ typedef $$StudyRecordsTableCreateCompanionBuilder =
       required String topicKey,
       required String shelfKey,
       Value<int?> hypothesisChoiceIndex,
+      Value<bool?> hypothesisMatched,
       required String reflection,
       required int firstReflectedAt,
       required int updatedAt,
@@ -8082,6 +8146,7 @@ typedef $$StudyRecordsTableUpdateCompanionBuilder =
       Value<String> topicKey,
       Value<String> shelfKey,
       Value<int?> hypothesisChoiceIndex,
+      Value<bool?> hypothesisMatched,
       Value<String> reflection,
       Value<int> firstReflectedAt,
       Value<int> updatedAt,
@@ -8114,6 +8179,11 @@ class $$StudyRecordsTableFilterComposer
 
   ColumnFilters<int> get hypothesisChoiceIndex => $composableBuilder(
     column: $table.hypothesisChoiceIndex,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get hypothesisMatched => $composableBuilder(
+    column: $table.hypothesisMatched,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -8162,6 +8232,11 @@ class $$StudyRecordsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<bool> get hypothesisMatched => $composableBuilder(
+    column: $table.hypothesisMatched,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get reflection => $composableBuilder(
     column: $table.reflection,
     builder: (column) => ColumnOrderings(column),
@@ -8200,6 +8275,11 @@ class $$StudyRecordsTableAnnotationComposer
 
   GeneratedColumn<int> get hypothesisChoiceIndex => $composableBuilder(
     column: $table.hypothesisChoiceIndex,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get hypothesisMatched => $composableBuilder(
+    column: $table.hypothesisMatched,
     builder: (column) => column,
   );
 
@@ -8252,6 +8332,7 @@ class $$StudyRecordsTableTableManager
                 Value<String> topicKey = const Value.absent(),
                 Value<String> shelfKey = const Value.absent(),
                 Value<int?> hypothesisChoiceIndex = const Value.absent(),
+                Value<bool?> hypothesisMatched = const Value.absent(),
                 Value<String> reflection = const Value.absent(),
                 Value<int> firstReflectedAt = const Value.absent(),
                 Value<int> updatedAt = const Value.absent(),
@@ -8261,6 +8342,7 @@ class $$StudyRecordsTableTableManager
                 topicKey: topicKey,
                 shelfKey: shelfKey,
                 hypothesisChoiceIndex: hypothesisChoiceIndex,
+                hypothesisMatched: hypothesisMatched,
                 reflection: reflection,
                 firstReflectedAt: firstReflectedAt,
                 updatedAt: updatedAt,
@@ -8272,6 +8354,7 @@ class $$StudyRecordsTableTableManager
                 required String topicKey,
                 required String shelfKey,
                 Value<int?> hypothesisChoiceIndex = const Value.absent(),
+                Value<bool?> hypothesisMatched = const Value.absent(),
                 required String reflection,
                 required int firstReflectedAt,
                 required int updatedAt,
@@ -8281,6 +8364,7 @@ class $$StudyRecordsTableTableManager
                 topicKey: topicKey,
                 shelfKey: shelfKey,
                 hypothesisChoiceIndex: hypothesisChoiceIndex,
+                hypothesisMatched: hypothesisMatched,
                 reflection: reflection,
                 firstReflectedAt: firstReflectedAt,
                 updatedAt: updatedAt,

@@ -21,6 +21,7 @@ class ArchiveScreen extends StatefulWidget {
     this.offset = 0,
     this.count = 20,
     this.revisitOnly = false,
+    this.gemsOnly = false,
     super.key,
   });
 
@@ -28,12 +29,21 @@ class ArchiveScreen extends StatefulWidget {
     : topicKey = null,
       offset = 0,
       count = 20,
-      revisitOnly = true;
+      revisitOnly = true,
+      gemsOnly = false;
+
+  const ArchiveScreen.gems({super.key})
+    : topicKey = null,
+      offset = 0,
+      count = 20,
+      revisitOnly = true,
+      gemsOnly = true;
 
   final String? topicKey;
   final int offset;
   final int count;
   final bool revisitOnly;
+  final bool gemsOnly;
 
   @override
   State<ArchiveScreen> createState() => _ArchiveScreenState();
@@ -66,7 +76,9 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     });
     try {
       final controller = GaussScope.of(context);
-      final shelf = widget.revisitOnly
+      final shelf = widget.gemsOnly
+          ? await controller.loadGemShelf()
+          : widget.revisitOnly
           ? await controller.loadRevisitShelf()
           : await controller.loadStudyShelf(
               widget.topicKey!,
@@ -210,10 +222,14 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
                   )
                 : shelf == null || shelf.questions.isEmpty
                 ? _ArchiveMessage(
-                    title: widget.revisitOnly
+                    title: widget.gemsOnly
+                        ? 'Your gem shelf is empty'
+                        : widget.revisitOnly
                         ? 'Your revisit orbit is clear'
                         : 'Nothing is shelved here',
-                    detail: widget.revisitOnly
+                    detail: widget.gemsOnly
+                        ? 'Mark a revealed question as “Keep as gem” and it will rest here.'
+                        : widget.revisitOnly
                         ? 'Mark a revealed concept as “Revisit later” and it will appear here.'
                         : 'This study set has no preserved questions.',
                     onLeave: _leave,
@@ -223,6 +239,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
                       _ArchiveTopBar(
                         topic: topic,
                         revisitOnly: widget.revisitOnly,
+                        gemsOnly: widget.gemsOnly,
                         index: _index,
                         total: shelf.questions.length,
                         onClose: _leave,
@@ -303,6 +320,7 @@ class _ArchiveTopBar extends StatelessWidget {
   const _ArchiveTopBar({
     required this.topic,
     required this.revisitOnly,
+    required this.gemsOnly,
     required this.index,
     required this.total,
     required this.onClose,
@@ -310,6 +328,7 @@ class _ArchiveTopBar extends StatelessWidget {
 
   final TopicDescriptor? topic;
   final bool revisitOnly;
+  final bool gemsOnly;
   final int index;
   final int total;
   final VoidCallback onClose;
@@ -344,7 +363,11 @@ class _ArchiveTopBar extends StatelessWidget {
                     ? TextDirection.ltr
                     : TextDirection.rtl,
                 child: Text(
-                  revisitOnly ? 'Revisit orbit' : topic!.label,
+                  gemsOnly
+                      ? 'Gem shelf'
+                      : revisitOnly
+                      ? 'Revisit orbit'
+                      : topic!.label,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
@@ -523,6 +546,11 @@ class _ArchivePage extends StatelessWidget {
                 label: const Text('Reveal the source answer'),
               )
             else ...[
+              _HypothesisComparison(
+                hypothesis: hypothesis,
+                sourceKey: question.correctChoiceIndex,
+              ),
+              const SizedBox(height: 12),
               _SourceSolution(question: question),
               const SizedBox(height: 12),
               _ReflectionDeck(
@@ -534,6 +562,139 @@ class _ArchivePage extends StatelessWidget {
           ],
         ),
       ),
+    ),
+  );
+}
+
+/// One glance: what the learner committed to, beside what the source claims.
+/// Agreement is stated as agreement — never as "correct".
+class _HypothesisComparison extends StatelessWidget {
+  const _HypothesisComparison({
+    required this.hypothesis,
+    required this.sourceKey,
+  });
+
+  final int? hypothesis;
+  final int sourceKey;
+
+  static String _letter(int choice) => String.fromCharCode(65 + choice);
+
+  @override
+  Widget build(BuildContext context) {
+    final matched = hypothesis != null && hypothesis == sourceKey;
+    final headline = hypothesis == null
+        ? 'You revealed without committing'
+        : matched
+        ? 'Your call agrees with the source'
+        : 'Your call differs from the source';
+    final accent = hypothesis == null
+        ? GaussColors.fog
+        : matched
+        ? GaussColors.signalBright
+        : GaussColors.warning;
+    return Semantics(
+      container: true,
+      excludeSemantics: true,
+      label:
+          '$headline. '
+          '${hypothesis == null ? '' : 'Your call was choice ${_letter(hypothesis!)}. '}'
+          'The unverified source names choice ${_letter(sourceKey)}.',
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+        decoration: BoxDecoration(
+          color: accent.withValues(alpha: .07),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: accent.withValues(alpha: .32)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              headline,
+              style: TextStyle(
+                color: accent,
+                fontSize: 12,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: _ComparisonChip(
+                    label: 'MY CALL',
+                    value: hypothesis == null ? '—' : _letter(hypothesis!),
+                    color: hypothesis == null
+                        ? GaussColors.fog
+                        : GaussColors.brassLight,
+                  ),
+                ),
+                const SizedBox(width: 9),
+                Expanded(
+                  child: _ComparisonChip(
+                    label: 'SOURCE KEY',
+                    value: _letter(sourceKey),
+                    color: GaussColors.warning,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 9),
+            const Text(
+              'Agreement is not proof: the source key itself was never verified. Trust your own reading of the solution.',
+              style: TextStyle(
+                color: GaussColors.fog,
+                fontSize: 9.5,
+                height: 1.4,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _ComparisonChip extends StatelessWidget {
+  const _ComparisonChip({
+    required this.label,
+    required this.value,
+    required this.color,
+  });
+
+  final String label;
+  final String value;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 8),
+    decoration: BoxDecoration(
+      color: GaussColors.deepInk.withValues(alpha: .72),
+      borderRadius: BorderRadius.circular(12),
+      border: Border.all(color: color.withValues(alpha: .3)),
+    ),
+    child: Row(
+      children: [
+        Text(
+          label,
+          style: const TextStyle(
+            color: GaussColors.fog,
+            fontSize: 8,
+            fontWeight: FontWeight.w900,
+            letterSpacing: .8,
+          ),
+        ),
+        const Spacer(),
+        Text(
+          value,
+          style: TextStyle(
+            color: color,
+            fontSize: 15,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
+      ],
     ),
   );
 }
@@ -775,11 +936,12 @@ class _ReflectionDeck extends StatelessWidget {
               const SizedBox(width: 11),
               Expanded(
                 child: Text(
-                  current == null
-                      ? 'How does the concept feel now?'
-                      : current == StudyReflection.clear
-                      ? 'Concept marked clear'
-                      : 'Saved to your revisit orbit',
+                  switch (current) {
+                    null => 'How does the concept feel now?',
+                    StudyReflection.clear => 'Concept marked clear',
+                    StudyReflection.revisit => 'Saved to your revisit orbit',
+                    StudyReflection.gem => 'Kept on your gem shelf',
+                  },
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
@@ -819,10 +981,24 @@ class _ReflectionDeck extends StatelessWidget {
                     ? null
                     : () => onReflection(StudyReflection.revisit),
               );
+              final gem = _ReflectionButton(
+                icon: Icons.auto_awesome_outlined,
+                label: 'Keep as gem',
+                selected: current == StudyReflection.gem,
+                onPressed: saving
+                    ? null
+                    : () => onReflection(StudyReflection.gem),
+              );
               if (compact) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [clear, const SizedBox(height: 9), revisit],
+                  children: [
+                    clear,
+                    const SizedBox(height: 9),
+                    revisit,
+                    const SizedBox(height: 9),
+                    gem,
+                  ],
                 );
               }
               return Row(
@@ -830,6 +1006,8 @@ class _ReflectionDeck extends StatelessWidget {
                   Expanded(child: clear),
                   const SizedBox(width: 10),
                   Expanded(child: revisit),
+                  const SizedBox(width: 10),
+                  Expanded(child: gem),
                 ],
               );
             },
@@ -849,7 +1027,7 @@ class _MiraCompanion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final settled = reflection == StudyReflection.clear;
+    final settled = reflection != null && !reflection!.needsAnotherPass;
     return SizedBox.square(
       dimension: 54,
       child: AnimatedSwitcher(

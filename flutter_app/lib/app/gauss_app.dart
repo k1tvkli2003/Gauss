@@ -82,6 +82,10 @@ class _GaussAppState extends State<GaussApp> {
         path: '/study/revisit',
         builder: (context, state) => const ArchiveScreen.revisit(),
       ),
+      GoRoute(
+        path: '/study/gems',
+        builder: (context, state) => const ArchiveScreen.gems(),
+      ),
       GoRoute(path: '/review', redirect: (context, state) => '/study/revisit'),
       GoRoute(path: '/', redirect: (context, state) => '/map'),
       GoRoute(path: '/practice', redirect: (context, state) => '/study'),

@@ -103,6 +103,8 @@ class _PracticeScreenState extends State<PracticeScreen> {
                   child: _StudyModes(
                     revisitCount: controller.study.revisitCount,
                     dueCount: controller.studyDueCount,
+                    gemCount: controller.study.gemCount,
+                    onGems: () => context.push('/study/gems'),
                     onRevisit: () => context.push('/study/revisit'),
                     onScratchpad: () => showScratchpad(context),
                     onMap: () => context.go('/map'),
@@ -503,14 +505,18 @@ class _StudyModes extends StatelessWidget {
   const _StudyModes({
     required this.revisitCount,
     required this.dueCount,
+    required this.gemCount,
     required this.onRevisit,
+    required this.onGems,
     required this.onScratchpad,
     required this.onMap,
   });
 
   final int revisitCount;
   final int dueCount;
+  final int gemCount;
   final VoidCallback onRevisit;
+  final VoidCallback onGems;
   final VoidCallback onScratchpad;
   final VoidCallback onMap;
 
@@ -526,6 +532,14 @@ class _StudyModes extends StatelessWidget {
             ? '$revisitCount shelved · none due yet'
             : '$dueCount due now · $revisitCount shelved',
         onTap: onRevisit,
+      ),
+      (
+        icon: Icons.auto_awesome_outlined,
+        title: 'Gem shelf',
+        detail: gemCount == 0
+            ? 'Keep a question you admire'
+            : '$gemCount kept for their ideas',
+        onTap: onGems,
       ),
       (
         icon: Icons.draw_outlined,

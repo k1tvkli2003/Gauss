@@ -51,6 +51,7 @@ class ProgressRepository {
     required int setSize,
     required int topicQuestionCount,
     required int? hypothesisChoiceIndex,
+    required bool? hypothesisMatched,
     required StudyReflection reflection,
   }) => database.transaction(() async {
     if (hypothesisChoiceIndex != null &&
@@ -70,6 +71,7 @@ class ProgressRepository {
         existing.topicKey == topicKey &&
         existing.shelfKey == shelfKey &&
         existing.hypothesisChoiceIndex == hypothesisChoiceIndex &&
+        existing.hypothesisMatched == hypothesisMatched &&
         existing.reflection == reflection.key) {
       return StudyReflectionOutcome(
         record: _studyRecordFromRow(existing),
@@ -92,6 +94,7 @@ class ProgressRepository {
               topicKey: topicKey,
               shelfKey: shelfKey,
               hypothesisChoiceIndex: Value(hypothesisChoiceIndex),
+              hypothesisMatched: Value(hypothesisMatched),
               reflection: reflection.key,
               firstReflectedAt: now,
               updatedAt: now,
@@ -106,6 +109,7 @@ class ProgressRepository {
       )..where((row) => row.questionId.equals(questionId))).write(
         StudyRecordsCompanion(
           hypothesisChoiceIndex: Value(hypothesisChoiceIndex),
+          hypothesisMatched: Value(hypothesisMatched),
           shelfKey: Value(shelfKey),
           reflection: Value(reflection.key),
           updatedAt: Value(now),
@@ -219,7 +223,7 @@ class ProgressRepository {
         );
       }
     } else if (existing.reflection == StudyReflection.revisit.key &&
-        reflection != StudyReflection.revisit &&
+        !reflection.needsAnotherPass &&
         _dayKey(DateTime.fromMillisecondsSinceEpoch(existing.updatedAt)) !=
             dayKey) {
       await _award(
@@ -318,7 +322,7 @@ class ProgressRepository {
     var reps = previous?.reps ?? 0;
     var lapses = previous?.lapses ?? 0;
     var interval = previous?.intervalDays ?? 0;
-    if (reflection == StudyReflection.revisit) {
+    if (reflection.needsAnotherPass) {
       lapses += 1;
       reps = 0;
       interval = 1;
@@ -420,13 +424,23 @@ class ProgressRepository {
     final heatmap = <String, int>{};
     var clearCount = 0;
     var revisitCount = 0;
+    var gemCount = 0;
+    var hypothesisCount = 0;
+    var hypothesisMatchedCount = 0;
     for (final record in records) {
       byTopic.putIfAbsent(record.topicKey, () => []).add(record);
       byShelf.putIfAbsent(record.shelfKey, () => []).add(record);
-      if (record.reflection == StudyReflection.clear) {
-        clearCount++;
-      } else {
-        revisitCount++;
+      switch (record.reflection) {
+        case StudyReflection.clear:
+          clearCount++;
+        case StudyReflection.revisit:
+          revisitCount++;
+        case StudyReflection.gem:
+          gemCount++;
+      }
+      if (record.hypothesisMatched case final matched?) {
+        hypothesisCount++;
+        if (matched) hypothesisMatchedCount++;
       }
       final day = _dayKey(record.firstReflectedAt);
       heatmap[day] = (heatmap[day] ?? 0) + 1;
@@ -435,33 +449,50 @@ class ProgressRepository {
       totalReflected: records.length,
       clearCount: clearCount,
       revisitCount: revisitCount,
+      gemCount: gemCount,
+      hypothesisCount: hypothesisCount,
+      hypothesisMatchedCount: hypothesisMatchedCount,
       touchedTopics: byTopic.length,
       byTopic: {
-        for (final entry in byTopic.entries)
-          entry.key: StudyTopicSnapshot(
-            reflected: entry.value.length,
-            clear: entry.value
-                .where((record) => record.reflection == StudyReflection.clear)
-                .length,
-            revisit: entry.value
-                .where((record) => record.reflection == StudyReflection.revisit)
-                .length,
-          ),
+        for (final entry in byTopic.entries) entry.key: _snapshot(entry.value),
       },
       byShelf: {
-        for (final entry in byShelf.entries)
-          entry.key: StudyTopicSnapshot(
-            reflected: entry.value.length,
-            clear: entry.value
-                .where((record) => record.reflection == StudyReflection.clear)
-                .length,
-            revisit: entry.value
-                .where((record) => record.reflection == StudyReflection.revisit)
-                .length,
-          ),
+        for (final entry in byShelf.entries) entry.key: _snapshot(entry.value),
       },
       heatmap: heatmap,
     );
+  }
+
+  static StudyTopicSnapshot _snapshot(List<StudyRecord> records) {
+    var clear = 0;
+    var revisit = 0;
+    var gem = 0;
+    for (final record in records) {
+      switch (record.reflection) {
+        case StudyReflection.clear:
+          clear++;
+        case StudyReflection.revisit:
+          revisit++;
+        case StudyReflection.gem:
+          gem++;
+      }
+    }
+    return StudyTopicSnapshot(
+      reflected: records.length,
+      clear: clear,
+      revisit: revisit,
+      gem: gem,
+    );
+  }
+
+  /// The keepsake shelf: questions marked as gems, newest first.
+  Future<List<String>> gemStudyIds() async {
+    final query = database.select(database.studyRecords)
+      ..where((row) => row.reflection.equals(StudyReflection.gem.key))
+      ..orderBy([(row) => OrderingTerm.desc(row.updatedAt)]);
+    return (await query.get())
+        .map((row) => row.questionId)
+        .toList(growable: false);
   }
 
   Future<List<AttemptRecord>> loadAttempts() async {
@@ -1233,6 +1264,7 @@ class ProgressRepository {
     topicKey: row.topicKey,
     shelfKey: row.shelfKey,
     hypothesisChoiceIndex: row.hypothesisChoiceIndex,
+    hypothesisMatched: row.hypothesisMatched,
     reflection: StudyReflection.fromKey(row.reflection),
     firstReflectedAt: DateTime.fromMillisecondsSinceEpoch(row.firstReflectedAt),
     updatedAt: DateTime.fromMillisecondsSinceEpoch(row.updatedAt),

@@ -478,6 +478,49 @@ void main() {
     );
   });
 
+  test('gems rest on their own shelf and never ask for another pass', () async {
+    await _reflect(repository, 'gem-1', reflection: StudyReflection.gem);
+    await _reflect(repository, 'plain-1');
+
+    expect(await repository.gemStudyIds(), const ['gem-1']);
+    expect(await repository.revisitStudyIds(), isEmpty);
+
+    // A gem is a settled concept: it never enters the spaced due queue.
+    clockNow = clockNow.add(const Duration(days: 30));
+    expect(await repository.studyDueIds(), isEmpty);
+
+    final summary = await repository.studySummary();
+    expect(summary.gemCount, 1);
+    expect(summary.clearCount, 1);
+    expect(summary.revisitCount, 0);
+    expect(summary.topic('sets').gem, 1);
+
+    // Marking a revisit as a gem clears it from the revisit orbit.
+    await _reflect(repository, 'gem-2', reflection: StudyReflection.revisit);
+    expect(await repository.revisitStudyIds(), const ['gem-2']);
+    clockNow = clockNow.add(const Duration(days: 1));
+    await _reflect(repository, 'gem-2', reflection: StudyReflection.gem);
+    expect(await repository.revisitStudyIds(), isEmpty);
+    expect(await repository.gemStudyIds(), containsAll(['gem-1', 'gem-2']));
+  });
+
+  test('the hypothesis ledger records agreement, not correctness', () async {
+    await _reflect(repository, 'h1', hypothesis: 2, matched: true);
+    await _reflect(repository, 'h2', hypothesis: 0, matched: false);
+    await _reflect(repository, 'h3', hypothesis: 3, matched: true);
+    // Revealing without committing records no alignment at all.
+    await _reflect(repository, 'h4');
+
+    final summary = await repository.studySummary();
+    expect(summary.hypothesisCount, 3);
+    expect(summary.hypothesisMatchedCount, 2);
+    expect(summary.totalReflected, 4);
+
+    // Alignment is descriptive: it grants no XP of its own.
+    final gamification = await repository.gamificationSummary();
+    expect(gamification.totalXp, 4 * ProgressRepository.studyReflectXp + 8);
+  });
+
   test('review orbit surfaces every due card, not only lapses', () async {
     final now = clockNow;
     await repository.startMission(
@@ -709,6 +752,7 @@ Future<StudyReflectionOutcome> _reflect(
   int setSize = 20,
   int topicCount = 76,
   int? hypothesis,
+  bool? matched,
   StudyReflection reflection = StudyReflection.clear,
 }) => repository.saveStudyReflection(
   questionId: questionId,
@@ -718,6 +762,7 @@ Future<StudyReflectionOutcome> _reflect(
   setSize: setSize,
   topicQuestionCount: topicCount,
   hypothesisChoiceIndex: hypothesis,
+  hypothesisMatched: hypothesis == null ? null : (matched ?? false),
   reflection: reflection,
 );
 

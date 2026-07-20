@@ -139,6 +139,11 @@ class StudyRecords extends Table {
   TextColumn get topicKey => text()();
   TextColumn get shelfKey => text()();
   IntColumn get hypothesisChoiceIndex => integer().nullable()();
+
+  /// Whether the private hypothesis matched the source-claimed key. Recorded
+  /// only as a personal alignment note — the source key is never verified, so
+  /// this can never become a score.
+  BoolColumn get hypothesisMatched => boolean().nullable()();
   TextColumn get reflection => text()();
   IntColumn get firstReflectedAt => integer()();
   IntColumn get updatedAt => integer()();
@@ -187,7 +192,7 @@ class GaussDatabase extends _$GaussDatabase {
       );
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 5;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -212,6 +217,10 @@ class GaussDatabase extends _$GaussDatabase {
         // Existing missions, SRS rows, rewards, and question data are kept.
         await migrator.createTable(studyRecords);
         await migrator.createTable(studyPositions);
+      }
+      if (from < 5) {
+        // Additive: earlier reflections simply have no recorded alignment.
+        await migrator.addColumn(studyRecords, studyRecords.hypothesisMatched);
       }
     },
     beforeOpen: (details) async {

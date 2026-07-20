@@ -47,10 +47,17 @@ enum QuestionTrust {
 /// while [revisit] keeps it close for another pass.
 enum StudyReflection {
   clear('clear'),
-  revisit('revisit');
+  revisit('revisit'),
+
+  /// A question worth returning to for its idea, not its difficulty: a
+  /// keepsake shelf the learner curates deliberately.
+  gem('gem');
 
   const StudyReflection(this.key);
   final String key;
+
+  /// Gems are settled concepts too — only [revisit] asks for another pass.
+  bool get needsAnotherPass => this == StudyReflection.revisit;
 
   static StudyReflection fromKey(String value) =>
       StudyReflection.values.firstWhere((item) => item.key == value);
@@ -235,6 +242,7 @@ class StudyRecord {
     required this.topicKey,
     required this.shelfKey,
     required this.hypothesisChoiceIndex,
+    required this.hypothesisMatched,
     required this.reflection,
     required this.firstReflectedAt,
     required this.updatedAt,
@@ -244,9 +252,13 @@ class StudyRecord {
   final String topicKey;
   final String shelfKey;
 
-  /// The learner's private pre-reveal hypothesis. It is never compared with
-  /// the unverified source mapping and therefore never becomes a score.
+  /// The learner's private pre-reveal hypothesis.
   final int? hypothesisChoiceIndex;
+
+  /// Whether that hypothesis agreed with the source-claimed key. Recorded as
+  /// a private alignment note; the source is unverified, so it is never a
+  /// score and never gates a reward.
+  final bool? hypothesisMatched;
   final StudyReflection reflection;
   final DateTime firstReflectedAt;
   final DateTime updatedAt;
@@ -257,13 +269,19 @@ class StudyTopicSnapshot {
     required this.reflected,
     required this.clear,
     required this.revisit,
+    this.gem = 0,
   });
 
-  const StudyTopicSnapshot.empty() : reflected = 0, clear = 0, revisit = 0;
+  const StudyTopicSnapshot.empty()
+    : reflected = 0,
+      clear = 0,
+      revisit = 0,
+      gem = 0;
 
   final int reflected;
   final int clear;
   final int revisit;
+  final int gem;
 }
 
 class StudySummary {
@@ -275,6 +293,9 @@ class StudySummary {
     required this.byTopic,
     required this.byShelf,
     required this.heatmap,
+    this.gemCount = 0,
+    this.hypothesisCount = 0,
+    this.hypothesisMatchedCount = 0,
   });
 
   const StudySummary.empty()
@@ -284,12 +305,23 @@ class StudySummary {
       touchedTopics = 0,
       byTopic = const {},
       byShelf = const {},
-      heatmap = const {};
+      heatmap = const {},
+      gemCount = 0,
+      hypothesisCount = 0,
+      hypothesisMatchedCount = 0;
 
   final int totalReflected;
   final int clearCount;
   final int revisitCount;
   final int touchedTopics;
+
+  /// Questions kept on the gem shelf for their idea.
+  final int gemCount;
+
+  /// Reflections that carried a pre-reveal hypothesis, and how many of those
+  /// agreed with the (unverified) source key.
+  final int hypothesisCount;
+  final int hypothesisMatchedCount;
   final Map<String, StudyTopicSnapshot> byTopic;
   final Map<String, StudyTopicSnapshot> byShelf;
 

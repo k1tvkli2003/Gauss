@@ -343,9 +343,22 @@ class GaussController extends ChangeNotifier {
     }
   }
 
-  Future<StudyShelf> loadRevisitShelf() async {
+  Future<StudyShelf> loadGemShelf() => _loadCuratedShelf(
+    key: 'gems',
+    loadIds: _progress.gemStudyIds,
+  );
+
+  Future<StudyShelf> loadRevisitShelf() => _loadCuratedShelf(
+    key: 'revisit',
+    loadIds: _progress.revisitStudyIds,
+  );
+
+  Future<StudyShelf> _loadCuratedShelf({
+    required String key,
+    required Future<List<String>> Function() loadIds,
+  }) async {
     try {
-      final ids = await _progress.revisitStudyIds();
+      final ids = await loadIds();
       final questions = await _questionBank.questionsByIds(ids);
       final storedRecords = await _progress.studyRecords();
       final records = {
@@ -353,7 +366,7 @@ class GaussController extends ChangeNotifier {
           if (ids.contains(record.questionId)) record.questionId: record,
       };
       return StudyShelf(
-        key: 'revisit',
+        key: key,
         questions: questions,
         records: records,
         initialIndex: 0,
@@ -396,6 +409,12 @@ class GaussController extends ChangeNotifier {
         setSize: setSize,
         topicQuestionCount: topicQuestions.length,
         hypothesisChoiceIndex: hypothesisChoiceIndex,
+        // Alignment with the source-claimed key, recorded only when a
+        // hypothesis existed. The source is unverified, so this is a private
+        // note about agreement — never a correctness score.
+        hypothesisMatched: hypothesisChoiceIndex == null
+            ? null
+            : hypothesisChoiceIndex == question.correctChoiceIndex,
         reflection: reflection,
       );
       _study = await _progress.studySummary();

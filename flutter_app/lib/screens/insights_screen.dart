@@ -62,6 +62,10 @@ class InsightsScreen extends StatelessWidget {
                     todayXp: gamification.todayXp,
                   ),
                 ),
+                if (study.hypothesisCount > 0)
+                  SliverToBoxAdapter(
+                    child: _HypothesisLedger(study: study),
+                  ),
                 SliverToBoxAdapter(
                   child: _ActivityStarChart(heatmap: study.heatmap),
                 ),
@@ -755,6 +759,97 @@ class _ReflectionGaugePainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _ReflectionGaugePainter oldDelegate) =>
       oldDelegate.clearRatio != clearRatio || oldDelegate.hasData != hasData;
+}
+
+/// How often the learner's pre-reveal call agreed with the source-claimed
+/// key. Framed as agreement, never accuracy — the source is unverified.
+class _HypothesisLedger extends StatelessWidget {
+  const _HypothesisLedger({required this.study});
+
+  final StudySummary study;
+
+  @override
+  Widget build(BuildContext context) {
+    final total = study.hypothesisCount;
+    final matched = study.hypothesisMatchedCount;
+    final ratio = total == 0 ? 0.0 : matched / total;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(18, 14, 18, 0),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 1180),
+          child: Semantics(
+            container: true,
+            excludeSemantics: true,
+            label:
+                'Hypothesis ledger. Your call agreed with the unverified '
+                'source key $matched of $total times.',
+            child: _GlassPanel(
+              radius: 24,
+              padding: const EdgeInsets.all(18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.balance_rounded,
+                        color: GaussColors.brassLight,
+                        size: 20,
+                      ),
+                      const SizedBox(width: 9),
+                      Expanded(
+                        child: Text(
+                          'Hypothesis ledger',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                      ),
+                      Text(
+                        '${(ratio * 100).round()}%',
+                        style: const TextStyle(
+                          color: GaussColors.brassLight,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 11),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(99),
+                    child: LinearProgressIndicator(
+                      value: ratio,
+                      minHeight: 6,
+                      backgroundColor: GaussColors.line,
+                      color: GaussColors.brassLight,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Your pre-reveal call agreed with the source key '
+                    '$matched of $total times.',
+                    style: const TextStyle(
+                      color: GaussColors.muted,
+                      fontSize: 11,
+                      height: 1.4,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  const Text(
+                    'The source key is unverified, so this is a record of agreement — not of being right.',
+                    style: TextStyle(
+                      color: GaussColors.fog,
+                      fontSize: 9,
+                      height: 1.4,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _ActivityStarChart extends StatelessWidget {
