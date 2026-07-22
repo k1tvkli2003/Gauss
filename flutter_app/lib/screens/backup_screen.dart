@@ -33,6 +33,13 @@ class _BackupScreenState extends State<BackupScreen> {
   BackupService get _service => GaussScope.of(context).backups;
 
   Future<void> _refresh() async {
+    if (!_service.isSupported) {
+      setState(() {
+        _loading = false;
+        _error = null;
+      });
+      return;
+    }
     setState(() {
       _loading = true;
       _error = null;
@@ -61,9 +68,9 @@ class _BackupScreenState extends State<BackupScreen> {
     try {
       await action();
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(success)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(success)));
       await _refresh();
     } catch (error) {
       if (!mounted) return;
@@ -140,110 +147,212 @@ class _BackupScreenState extends State<BackupScreen> {
         ],
       ),
     ),
-    body: SafeArea(
-      child: _loading
-          ? const Center(child: CircularProgressIndicator())
-          : ListView(
-              padding: const EdgeInsets.fromLTRB(18, 12, 18, 28),
-              children: [
-                const Text(
-                  'Copies of your progress stay on this device, in the app\'s '
-                  'own folder. Nothing is uploaded and nothing is shared.',
-                  style: TextStyle(
-                    color: GaussColors.muted,
-                    fontSize: 12,
-                    height: 1.5,
-                  ),
-                ),
-                const SizedBox(height: 16),
-                if (_pendingRestore) ...[
-                  Container(
-                    padding: const EdgeInsets.all(14),
-                    decoration: BoxDecoration(
-                      color: GaussColors.warning.withValues(alpha: .08),
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(
-                        color: GaussColors.warning.withValues(alpha: .4),
+    body: Stack(
+      fit: StackFit.expand,
+      children: [
+        Image.asset(
+          'assets/visual/map/orrery_atmosphere_portrait.png',
+          fit: BoxFit.cover,
+          alignment: Alignment.topCenter,
+          cacheWidth: 1400,
+          filterQuality: FilterQuality.medium,
+        ),
+        const DecoratedBox(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xB507151C), Color(0xF503090B)],
+            ),
+          ),
+        ),
+        SafeArea(
+          child: !_service.isSupported
+              ? const _BrowserVaultBoundary()
+              : _loading
+              ? const Center(child: CircularProgressIndicator())
+              : ListView(
+                  padding: const EdgeInsets.fromLTRB(18, 12, 18, 28),
+                  children: [
+                    const Text(
+                      'Copies of your progress stay on this device, in the app\'s '
+                      'own folder. Nothing is uploaded and nothing is shared.',
+                      style: TextStyle(
+                        color: GaussColors.muted,
+                        fontSize: 12,
+                        height: 1.5,
                       ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'A restore is waiting',
-                          style: TextStyle(
-                            color: GaussColors.warning,
-                            fontWeight: FontWeight.w900,
+                    const SizedBox(height: 16),
+                    if (_pendingRestore) ...[
+                      Container(
+                        padding: const EdgeInsets.all(14),
+                        decoration: BoxDecoration(
+                          color: GaussColors.warning.withValues(alpha: .08),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: GaussColors.warning.withValues(alpha: .4),
                           ),
                         ),
-                        const SizedBox(height: 6),
-                        const Text(
-                          'It will be applied the next time Gauss opens.',
-                          style: TextStyle(
-                            color: GaussColors.muted,
-                            fontSize: 11,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        OutlinedButton(
-                          onPressed: _busy
-                              ? null
-                              : () => _run(
-                                  _service.cancelPendingRestore,
-                                  'Restore cancelled.',
-                                ),
-                          child: const Text('Cancel the restore'),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                ],
-                FilledButton.icon(
-                  onPressed: _busy
-                      ? null
-                      : () => _run(
-                          () async => _service.createBackup(),
-                          'Progress copied to the vault.',
-                        ),
-                  icon: const Icon(Icons.save_alt_rounded),
-                  label: const Text('Back up now'),
-                ),
-                const SizedBox(height: 20),
-                if (_error != null)
-                  Text(
-                    'The vault could not be read: $_error',
-                    style: const TextStyle(color: GaussColors.error),
-                  )
-                else if (_backups.isEmpty)
-                  const Text(
-                    'No copies yet.',
-                    style: TextStyle(color: GaussColors.fog),
-                  )
-                else
-                  for (final entry in _backups)
-                    Card(
-                      child: ListTile(
-                        leading: const Icon(
-                          Icons.inventory_2_outlined,
-                          color: GaussColors.brassLight,
-                        ),
-                        title: Text(_describe(entry.savedAt)),
-                        subtitle: Text(
-                          '${_size(entry.sizeBytes)} · ${entry.name}',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        trailing: TextButton(
-                          onPressed: _busy
-                              ? null
-                              : () => _confirmRestore(entry),
-                          child: const Text('Restore'),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'A restore is waiting',
+                              style: TextStyle(
+                                color: GaussColors.warning,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            ),
+                            const SizedBox(height: 6),
+                            const Text(
+                              'It will be applied the next time Gauss opens.',
+                              style: TextStyle(
+                                color: GaussColors.muted,
+                                fontSize: 11,
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            OutlinedButton(
+                              onPressed: _busy
+                                  ? null
+                                  : () => _run(
+                                      _service.cancelPendingRestore,
+                                      'Restore cancelled.',
+                                    ),
+                              child: const Text('Cancel the restore'),
+                            ),
+                          ],
                         ),
                       ),
+                      const SizedBox(height: 16),
+                    ],
+                    FilledButton.icon(
+                      onPressed: _busy
+                          ? null
+                          : () => _run(
+                              () async => _service.createBackup(),
+                              'Progress copied to the vault.',
+                            ),
+                      icon: const Icon(Icons.save_alt_rounded),
+                      label: const Text('Back up now'),
                     ),
+                    const SizedBox(height: 20),
+                    if (_error != null)
+                      Text(
+                        'The vault could not be read: $_error',
+                        style: const TextStyle(color: GaussColors.error),
+                      )
+                    else if (_backups.isEmpty)
+                      const Text(
+                        'No copies yet.',
+                        style: TextStyle(color: GaussColors.fog),
+                      )
+                    else
+                      for (final entry in _backups)
+                        Card(
+                          child: ListTile(
+                            leading: const Icon(
+                              Icons.inventory_2_outlined,
+                              color: GaussColors.brassLight,
+                            ),
+                            title: Text(_describe(entry.savedAt)),
+                            subtitle: Text(
+                              '${_size(entry.sizeBytes)} · ${entry.name}',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            trailing: TextButton(
+                              onPressed: _busy
+                                  ? null
+                                  : () => _confirmRestore(entry),
+                              child: const Text('Restore'),
+                            ),
+                          ),
+                        ),
+                  ],
+                ),
+        ),
+      ],
+    ),
+  );
+}
+
+class _BrowserVaultBoundary extends StatelessWidget {
+  const _BrowserVaultBoundary();
+
+  @override
+  Widget build(BuildContext context) => Center(
+    child: SingleChildScrollView(
+      padding: const EdgeInsets.all(24),
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 460),
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(24, 28, 24, 24),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                GaussColors.panelHigh.withValues(alpha: .94),
+                GaussColors.deepInk.withValues(alpha: .97),
               ],
             ),
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(color: GaussColors.brass.withValues(alpha: .32)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: .34),
+                blurRadius: 36,
+                offset: const Offset(0, 18),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 74,
+                height: 74,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: GaussColors.brass.withValues(alpha: .09),
+                  border: Border.all(
+                    color: GaussColors.brassLight.withValues(alpha: .45),
+                  ),
+                ),
+                child: const Icon(
+                  Icons.phonelink_lock_rounded,
+                  size: 34,
+                  color: GaussColors.brassLight,
+                ),
+              ),
+              const SizedBox(height: 20),
+              const Text(
+                'Browser progress stays local',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: GaussColors.ivory,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                'Gauss already keeps this browser\'s progress on this device. '
+                'The Vault copies the native SQLite store, so backup and '
+                'restore controls are available in the Android app only.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: GaussColors.muted,
+                  fontSize: 12.5,
+                  height: 1.55,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     ),
   );
 }

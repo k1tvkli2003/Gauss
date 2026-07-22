@@ -196,7 +196,7 @@ abstract final class GaussGamificationCatalog {
       id: 'proof_ledger',
       localizationKey: 'achievement.proof_ledger',
       title: 'Luminosity',
-      description: 'Chart source questions across the archive.',
+      description: 'Chart questions across the atlas.',
       accessibilityLabel: 'Proof ledger achievement',
       family: AchievementFamily.mastery,
       metric: AchievementMetric.correctAnswers,

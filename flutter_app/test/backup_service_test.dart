@@ -36,7 +36,10 @@ void main() {
 
   test('backing up an absent store fails without creating a file', () async {
     database.deleteSync();
-    await expectLater(service.createBackup, throwsA(isA<FileSystemException>()));
+    await expectLater(
+      service.createBackup,
+      throwsA(isA<FileSystemException>()),
+    );
     expect(await service.listBackups(), isEmpty);
   });
 
@@ -80,4 +83,18 @@ void main() {
     expect(await service.applyPendingRestore(), isFalse);
     expect(database.readAsStringSync(), 'original-progress');
   });
+
+  test(
+    'unsupported startup never touches a platform file-system plugin',
+    () async {
+      final unsupported = BackupService(supportOverride: false);
+
+      expect(unsupported.isSupported, isFalse);
+      expect(await unsupported.applyPendingRestore(), isFalse);
+      await expectLater(
+        unsupported.listBackups(),
+        throwsA(isA<UnsupportedError>()),
+      );
+    },
+  );
 }

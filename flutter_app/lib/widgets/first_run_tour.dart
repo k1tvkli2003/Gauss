@@ -31,9 +31,9 @@ class _FirstRunTourState extends State<FirstRunTour> {
       eyebrow: 'THE STUDY ROOM',
       title: 'Commit, reveal, then decide for yourself',
       detail:
-          'Make a private call before revealing the source answer. The source '
-          'is preserved but unverified, so nothing here is ever marked right '
-          'or wrong — you decide whether the concept felt clear.',
+          'Make a private call before revealing the reference answer. The '
+          'provided key is a study aid, not a Gauss-verified grade, so you '
+          'decide whether the concept felt clear.',
     ),
     _TourStep(
       icon: Icons.loop_rounded,

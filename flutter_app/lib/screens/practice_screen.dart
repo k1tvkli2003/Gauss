@@ -115,7 +115,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                     eyebrow: '${_subjectTitle(_subject).toUpperCase()} ATLAS',
                     title: '${sections.length} focused sections',
                     detail:
-                        'Every chapter is divided into calm sets of up to ${GaussStudyCurriculum.batchSize} source questions. Nothing is locked.',
+                        'Every chapter is divided into calm sets of up to ${GaussStudyCurriculum.batchSize} questions. Nothing is locked.',
                   ),
                 ),
                 SliverPadding(
@@ -221,7 +221,7 @@ class _StudyHeader extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '${_formatCount(controller.totalQuestions)} source questions · fully offline',
+                    '${_formatCount(controller.totalQuestions)} questions · fully offline',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(

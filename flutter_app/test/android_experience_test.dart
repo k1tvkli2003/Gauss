@@ -145,6 +145,12 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
 
+    expect(find.text('Skip'), findsOneWidget);
+    expect(find.byType(NavigationBar), findsNothing);
+    await tester.tap(find.text('Skip'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+
     expect(find.text('Map'), findsOneWidget);
     expect(
       find.descendant(
@@ -217,14 +223,14 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('map survives phone font scale 1.5 and reduced motion', (
+  testWidgets('map survives phone font scale 2.0 and reduced motion', (
     tester,
   ) async {
     await _pumpMap(
       tester,
       controller: controller,
       size: const Size(411, 820),
-      textScale: 1.5,
+      textScale: 2,
       reducedMotion: true,
     );
 

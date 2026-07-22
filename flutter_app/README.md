@@ -6,8 +6,12 @@ This directory is the active, released Gauss Android application.
 flutter pub get
 flutter analyze --no-pub
 flutter test --no-pub
-flutter build apk --release
+flutter build apk --debug
 ```
+
+Release builds require all four external `GAUSS_KEYSTORE_*` values and fail
+closed when the protected Gauss signing identity is unavailable. See
+[`../docs/release/android-signing.md`](../docs/release/android-signing.md).
 
 Install only:
 

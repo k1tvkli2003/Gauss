@@ -29,18 +29,35 @@ class BackupEntry {
 /// copy and [applyPendingRestore] swaps it in during the next cold start,
 /// before the database is opened.
 class BackupService {
-  BackupService({this.overrideRoot});
+  BackupService({this.overrideRoot, @visibleForTesting this.supportOverride});
 
   /// Test seam: keeps the vault inside a temporary directory so the suite
   /// never touches real device storage.
   @visibleForTesting
   final Directory? overrideRoot;
 
+  @visibleForTesting
+  final bool? supportOverride;
+
+  /// Native Android can copy its SQLite file directly. A browser cannot reach
+  /// that file-system surface, so the vault must stand down without invoking
+  /// path_provider (which has no web implementation for this workflow).
+  bool get isSupported => supportOverride ?? (overrideRoot != null || !kIsWeb);
+
   static const databaseFileName = 'gauss_flutter_v1.sqlite';
   static const _pendingRestoreName = 'pending_restore.sqlite';
   static const _backupPrefix = 'gauss-progress-';
 
+  void _requireSupport() {
+    if (!isSupported) {
+      throw UnsupportedError(
+        'The device vault is available in the native Android app.',
+      );
+    }
+  }
+
   Future<Directory> _backupDirectory() async {
+    _requireSupport();
     final root =
         overrideRoot ??
         await getExternalStorageDirectory() ??
@@ -51,11 +68,13 @@ class BackupService {
   }
 
   Future<File> _databaseFile() async {
+    _requireSupport();
     final root = overrideRoot ?? await getApplicationDocumentsDirectory();
     return File('${root.path}${Platform.pathSeparator}$databaseFileName');
   }
 
   Future<File> _pendingRestoreFile() async {
+    _requireSupport();
     final root = overrideRoot ?? await getApplicationDocumentsDirectory();
     return File('${root.path}${Platform.pathSeparator}$_pendingRestoreName');
   }
@@ -152,6 +171,9 @@ class BackupService {
   /// The live database is copied aside first, so a failed swap still leaves a
   /// recoverable file behind. Returns true when a restore was applied.
   Future<bool> applyPendingRestore() async {
+    // Browser startup must not touch path_provider or report a false runtime
+    // error. Browser progress remains in its own local Drift store.
+    if (!isSupported) return false;
     final pending = await _pendingRestoreFile();
     if (!pending.existsSync()) return false;
     final live = await _databaseFile();

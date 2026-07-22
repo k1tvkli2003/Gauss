@@ -7,15 +7,21 @@ question bank and media preserved locally.
 
 ## Active Android app
 
-The only Gauss APK to install or publish is built from `flutter_app/`:
+The only Gauss APK to install or publish is built from `flutter_app/`. Release
+builds fail closed unless the protected Gauss signing identity is present; they
+never fall back to the Android debug certificate:
 
 ```powershell
 cd flutter_app
 flutter pub get
-flutter build apk --release
+flutter build apk --debug
 ```
 
-The output is:
+Use the external `GAUSS_KEYSTORE_*` signing environment described in
+[Android signing continuity](docs/release/android-signing.md) for a release
+build. Never distribute or install a debug APK as an update.
+
+The signed release output is:
 
 ```text
 flutter_app/build/app/outputs/flutter-apk/app-release.apk

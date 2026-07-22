@@ -35,6 +35,17 @@ void main() {
       ),
     );
     expect(flutterGradle, contains('applicationId = "com.gauss.app"'));
+    expect(flutterGradle, contains('Gauss release signing is fail-closed'));
+    expect(flutterGradle, contains('debug-signed release APKs are forbidden'));
+    expect(flutterGradle, isNot(contains('signingConfigs.getByName("debug")')));
+    for (final variable in const [
+      'GAUSS_KEYSTORE_PATH',
+      'GAUSS_KEYSTORE_PASSWORD',
+      'GAUSS_KEY_ALIAS',
+      'GAUSS_KEY_PASSWORD',
+    ]) {
+      expect(flutterGradle, contains(variable));
+    }
     expect(legacyGradle, contains('applicationId = "com.gauss.legacy"'));
     expect(legacyStrings, contains('Gauss Legacy Archive'));
   });

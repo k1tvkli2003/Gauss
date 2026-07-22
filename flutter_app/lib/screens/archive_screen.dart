@@ -199,11 +199,8 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
       isScrollControlled: true,
       useSafeArea: true,
       backgroundColor: Colors.transparent,
-      builder: (context) => _JumpSheet(
-        shelf: shelf,
-        records: _records,
-        currentIndex: _index,
-      ),
+      builder: (context) =>
+          _JumpSheet(shelf: shelf, records: _records, currentIndex: _index),
     );
     if (target != null && mounted) _goTo(target, shelf.questions.length);
   }
@@ -267,7 +264,8 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
                         index: _index,
                         total: shelf.questions.length,
                         onClose: _leave,
-                        onShuffle: widget.revisitOnly || shelf.questions.length < 3
+                        onShuffle:
+                            widget.revisitOnly || shelf.questions.length < 3
                             ? null
                             : () => context.replace(
                                 '/study/chapter/${widget.topicKey}'
@@ -592,7 +590,7 @@ class _ArchivePage extends StatelessWidget {
               OutlinedButton.icon(
                 onPressed: onReveal,
                 icon: const Icon(Icons.visibility_outlined, size: 19),
-                label: const Text('Reveal the source answer'),
+                label: const Text('Reveal reference answer'),
               )
             else ...[
               _HypothesisComparison(
@@ -755,7 +753,7 @@ class _ProvenanceBanner extends StatelessWidget {
   Widget build(BuildContext context) => Semantics(
     container: true,
     label:
-        'Preserved source item. Its answer and explanation are unverified. Reading only; nothing here is scored.',
+        'Reference item. Its provided answer and explanation are not verified by Gauss. Reading only; nothing here is scored.',
     child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
       decoration: BoxDecoration(
@@ -769,7 +767,7 @@ class _ProvenanceBanner extends StatelessWidget {
           SizedBox(width: 9),
           Expanded(
             child: Text(
-              'Preserved source item — answer and explanation unverified. Reading only; nothing here is scored.',
+              'Reference item — the provided answer and explanation are not verified by Gauss. Reading only; nothing here is scored.',
               style: TextStyle(
                 color: GaussColors.muted,
                 fontSize: 11,
@@ -984,15 +982,12 @@ class _ReflectionDeck extends StatelessWidget {
               _MiraCompanion(reflection: current),
               const SizedBox(width: 11),
               Expanded(
-                child: Text(
-                  switch (current) {
-                    null => 'How does the concept feel now?',
-                    StudyReflection.clear => 'Concept marked clear',
-                    StudyReflection.revisit => 'Saved to your revisit orbit',
-                    StudyReflection.gem => 'Kept on your gem shelf',
-                  },
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
+                child: Text(switch (current) {
+                  null => 'How does the concept feel now?',
+                  StudyReflection.clear => 'Concept marked clear',
+                  StudyReflection.revisit => 'Saved to your revisit orbit',
+                  StudyReflection.gem => 'Kept on your gem shelf',
+                }, style: Theme.of(context).textTheme.titleMedium),
               ),
               if (saving)
                 const SizedBox.square(
@@ -1003,7 +998,7 @@ class _ReflectionDeck extends StatelessWidget {
           ),
           const SizedBox(height: 7),
           const Text(
-            'This is your own study signal. It does not grade the source answer or create a score.',
+            'This is your own study signal. It does not grade the reference answer or create a score.',
             style: TextStyle(
               color: GaussColors.fog,
               fontSize: 11,
@@ -1357,13 +1352,12 @@ class _JumpSheet extends StatelessWidget {
               child: GridView.builder(
                 controller: scrollController,
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
-                gridDelegate:
-                    const SliverGridDelegateWithMaxCrossAxisExtent(
-                      maxCrossAxisExtent: 62,
-                      mainAxisSpacing: 9,
-                      crossAxisSpacing: 9,
-                      childAspectRatio: 1,
-                    ),
+                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 62,
+                  mainAxisSpacing: 9,
+                  crossAxisSpacing: 9,
+                  childAspectRatio: 1,
+                ),
                 itemCount: shelf.questions.length,
                 itemBuilder: (context, index) => _JumpTile(
                   number: index + 1,

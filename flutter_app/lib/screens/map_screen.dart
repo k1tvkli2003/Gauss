@@ -8,7 +8,6 @@ import '../app/gauss_theme.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
 import '../state/gauss_controller.dart';
-import '../widgets/first_run_tour.dart';
 import '../widgets/gauss_brand.dart';
 
 class MapScreen extends StatefulWidget {
@@ -166,10 +165,6 @@ class _MapScreenState extends State<MapScreen> {
               );
             },
           ),
-          if (controller.needsTour)
-            Positioned.fill(
-              child: FirstRunTour(onDismiss: controller.markTourSeen),
-            ),
         ],
       ),
     );
@@ -238,13 +233,18 @@ class _MapHeader extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           final compact = constraints.maxWidth < 620;
+          final largeText = MediaQuery.textScalerOf(context).scale(1) >= 1.75;
+          final condensed = compact && largeText;
           return Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
                 children: [
-                  GaussWordmark(width: compact ? 104 : 124),
-                  const SizedBox(width: 12),
+                  if (condensed)
+                    const TheoremStarMark(size: 36)
+                  else
+                    GaussWordmark(width: compact ? 104 : 124),
+                  SizedBox(width: condensed ? 6 : 12),
                   if (!compact)
                     const Expanded(
                       child: Text(
@@ -265,12 +265,14 @@ class _MapHeader extends StatelessWidget {
                     compact: compact,
                   ),
                   const SizedBox(width: 8),
-                  _HeaderMetric(
-                    value: '${controller.study.totalReflected}',
-                    label: compact ? 'MARKS' : 'CHARTED',
-                    color: GaussColors.signalBright,
-                  ),
-                  const SizedBox(width: 7),
+                  if (!condensed) ...[
+                    _HeaderMetric(
+                      value: '${controller.study.totalReflected}',
+                      label: compact ? 'MARKS' : 'CHARTED',
+                      color: GaussColors.signalBright,
+                    ),
+                    const SizedBox(width: 7),
+                  ],
                   _HeaderMetric(
                     value: '${controller.gamification.level}',
                     label: compact ? 'LVL' : 'LEVEL',
@@ -294,7 +296,7 @@ class _MapHeader extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               SizedBox(
-                height: 38,
+                height: condensed ? 52 : 38,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: sections.length,
@@ -538,6 +540,9 @@ class _StudyPathStageState extends State<_StudyPathStage> {
           child: Stack(
             clipBehavior: Clip.hardEdge,
             children: [
+              const Positioned.fill(
+                child: CustomPaint(painter: _StageInstrumentPainter()),
+              ),
               PositionedDirectional(
                 start: 18,
                 end: 18,
@@ -618,43 +623,86 @@ class _PathGeometry {
     required List<StudyPathNode> nodes,
   }) {
     final compact = width < 560;
-    final nodeSize = compact ? 76.0 : 86.0;
+    final expanded = width >= 760;
+    final nodeSize = compact
+        ? 78.0
+        : expanded
+        ? 100.0
+        : 90.0;
     final center = width / 2;
-    final amplitude = math.min(width * (compact ? .28 : .31), 220.0);
+    final amplitude = math.min(
+      width *
+          (compact
+              ? .28
+              : expanded
+              ? .34
+              : .31),
+      expanded ? 270.0 : 225.0,
+    );
     final positions = <Offset>[];
     final headers = <_UnitHeaderGeometry>[];
     final landmarks = <_LandmarkGeometry>[];
-    var y = 190.0;
+    var y = compact ? 188.0 : 194.0;
     var unitNumber = 0;
     for (var index = 0; index < nodes.length; index++) {
       final node = nodes[index];
       if (node.beginsUnit) {
         unitNumber++;
-        y += index == 0 ? 76 : 118;
+        y += index == 0
+            ? compact
+                  ? 76
+                  : 84
+            : compact
+            ? 118
+            : 128;
         headers.add(
           _UnitHeaderGeometry(
             topic: node.topic,
             unitNumber: unitNumber,
-            y: y - 83,
+            y: y - (compact ? 83 : 90),
           ),
         );
       }
-      final phase = index * .88 + unitNumber * .22;
+      final phase = index * .84 + unitNumber * .28;
       final x = center + math.sin(phase) * amplitude;
       positions.add(Offset(x, y));
-      if (index > 2 && index % 7 == 3) {
+      final openingLandmark = index == 0;
+      final intervalLandmark = index > 2 && index % 6 == 4;
+      if (openingLandmark || intervalLandmark) {
         final placeStart = x >= center;
+        final edge = compact
+            ? 4.0
+            : expanded
+            ? 22.0
+            : 12.0;
+        final landmarkSize = openingLandmark
+            ? compact
+                  ? 112.0
+                  : expanded
+                  ? 210.0
+                  : 168.0
+            : compact
+            ? 104.0
+            : expanded
+            ? 176.0
+            : 146.0;
         landmarks.add(
           _LandmarkGeometry(
-            top: y - (compact ? 38 : 54),
-            start: placeStart ? 12 : null,
-            end: placeStart ? null : 12,
-            size: compact ? 104 : 146,
-            kind: (index ~/ 7) % 3,
+            top: openingLandmark
+                ? y + (compact ? 10 : -4)
+                : y - (compact ? 36 : 50),
+            start: placeStart ? edge : null,
+            end: placeStart ? null : edge,
+            size: landmarkSize,
+            kind: openingLandmark ? 0 : 1 + (index ~/ 6) % 2,
           ),
         );
       }
-      y += compact ? 112 : 122;
+      y += compact
+          ? 114
+          : expanded
+          ? 128
+          : 122;
     }
     return _PathGeometry(
       positions: positions,
@@ -833,21 +881,148 @@ class _PathLandmark extends StatelessWidget {
       start: landmark.start,
       end: landmark.end,
       top: landmark.top,
-      child: IgnorePointer(
-        child: Opacity(
-          opacity: landmark.kind == 2 ? .7 : .58,
-          child: Image.asset(
-            asset,
-            width: landmark.size,
-            height: landmark.size,
-            fit: BoxFit.contain,
-            cacheWidth: 480,
-            filterQuality: FilterQuality.medium,
+      child: ExcludeSemantics(
+        child: IgnorePointer(
+          child: SizedBox.square(
+            dimension: landmark.size,
+            child: Stack(
+              alignment: Alignment.center,
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                  width: landmark.size * .58,
+                  height: landmark.size * .58,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color:
+                            (landmark.kind == 2
+                                    ? GaussColors.ice
+                                    : GaussColors.brass)
+                                .withValues(alpha: .16),
+                        blurRadius: landmark.size * .24,
+                        spreadRadius: landmark.size * .025,
+                      ),
+                    ],
+                  ),
+                ),
+                Opacity(
+                  opacity: landmark.kind == 2 ? .9 : .84,
+                  child: Image.asset(
+                    asset,
+                    width: landmark.size,
+                    height: landmark.size,
+                    fit: BoxFit.contain,
+                    cacheWidth: 640,
+                    filterQuality: FilterQuality.medium,
+                  ),
+                ),
+                if (landmark.kind == 0 && landmark.size >= 150)
+                  Positioned(
+                    bottom: 3,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 9,
+                        vertical: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: GaussColors.deepInk.withValues(alpha: .86),
+                        borderRadius: BorderRadius.circular(GaussRadii.pill),
+                        border: Border.all(
+                          color: GaussColors.brass.withValues(alpha: .32),
+                        ),
+                      ),
+                      child: const Text(
+                        'THEOREM ENGINE',
+                        style: TextStyle(
+                          color: GaussColors.brassLight,
+                          fontSize: 7.5,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: .85,
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
+}
+
+/// Quiet astrolabe scaffolding behind the path. It gives wide stages the same
+/// authored astronomical depth as the accepted direction without turning the
+/// continuous learning route back into a set of disconnected orbit menus.
+class _StageInstrumentPainter extends CustomPainter {
+  const _StageInstrumentPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final expanded = size.width >= 760;
+    final majorRadius = math.min(
+      size.width * (expanded ? .58 : .66),
+      expanded ? 460.0 : 310.0,
+    );
+    final orbitPaint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1
+      ..color = GaussColors.brass.withValues(alpha: expanded ? .105 : .075);
+    final finePaint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = .7
+      ..color = GaussColors.ice.withValues(alpha: .055);
+    final pinPaint = Paint()
+      ..color = GaussColors.brassLight.withValues(alpha: .18);
+
+    for (var centerY = 330.0; centerY < size.height + 300; centerY += 720) {
+      final center = Offset(size.width * .5, centerY);
+      for (final scale in const [.58, .79, 1.0]) {
+        canvas.drawOval(
+          Rect.fromCenter(
+            center: center,
+            width: majorRadius * 2 * scale,
+            height: majorRadius * .78 * scale,
+          ),
+          scale == 1 ? orbitPaint : finePaint,
+        );
+      }
+      canvas.drawLine(
+        Offset(center.dx - majorRadius, center.dy),
+        Offset(center.dx + majorRadius, center.dy),
+        finePaint,
+      );
+      canvas.drawLine(
+        Offset(center.dx, center.dy - majorRadius * .39),
+        Offset(center.dx, center.dy + majorRadius * .39),
+        finePaint,
+      );
+      for (var tick = 0; tick < 12; tick++) {
+        final angle = tick * math.pi * 2 / 12;
+        canvas.drawCircle(
+          Offset(
+            center.dx + math.cos(angle) * majorRadius,
+            center.dy + math.sin(angle) * majorRadius * .39,
+          ),
+          tick.isEven ? 1.35 : .8,
+          pinPaint,
+        );
+      }
+      canvas.drawCircle(
+        center,
+        4.5,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1
+          ..color = GaussColors.signalBright.withValues(alpha: .12),
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
 class _StudyNode extends StatelessWidget {
@@ -1399,7 +1574,7 @@ class _StudyInspector extends StatelessWidget {
               ),
               const SizedBox(height: 9),
               const Text(
-                'Choose a hypothesis, reveal the preserved source, then record your own reflection. Nothing is scored.',
+                'Choose a hypothesis, reveal the reference answer, then record your own reflection. Nothing is scored.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: GaussColors.fog,
@@ -1616,7 +1791,7 @@ class _FatalDatasetView extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    'No source data or field notes were reset. Reopen Gauss to try the local integrity check again.',
+                    'No questions or field notes were reset. Reopen Gauss to try the local integrity check again.',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: GaussColors.muted),
                   ),

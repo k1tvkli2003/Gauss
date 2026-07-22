@@ -41,6 +41,7 @@ class InsightsScreen extends StatelessWidget {
                     totalQuestions: controller.totalQuestions,
                     level: gamification.level,
                     levelProgress: gamification.levelProgress,
+                    vaultAvailable: controller.backups.isSupported,
                   ),
                 ),
                 SliverToBoxAdapter(
@@ -76,7 +77,7 @@ class InsightsScreen extends StatelessWidget {
                     eyebrow: 'ATLAS COVERAGE',
                     title: 'Your explored sky',
                     detail:
-                        'Progress means you reflected on a source question. It never implies that its imported answer was verified.',
+                        'Progress means you reflected on a question. It never certifies the provided answer.',
                   ),
                 ),
                 SliverToBoxAdapter(
@@ -138,11 +139,13 @@ class _ObservatoryHeader extends StatelessWidget {
     required this.totalQuestions,
     required this.level,
     required this.levelProgress,
+    required this.vaultAvailable,
   });
 
   final int totalQuestions;
   final int level;
   final double levelProgress;
+  final bool vaultAvailable;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -179,7 +182,7 @@ class _ObservatoryHeader extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '${_formatCount(totalQuestions)} preserved coordinates · local to this device',
+                        '${_formatCount(totalQuestions)} questions · fully offline',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
@@ -191,15 +194,17 @@ class _ObservatoryHeader extends StatelessWidget {
                   ),
                 ),
                 _LevelMedallion(level: level, progress: levelProgress),
-                const SizedBox(width: 6),
-                IconButton(
-                  onPressed: () => context.push('/vault'),
-                  tooltip: 'Progress vault',
-                  icon: const Icon(
-                    Icons.inventory_2_outlined,
-                    color: GaussColors.brassLight,
+                if (vaultAvailable) ...[
+                  const SizedBox(width: 6),
+                  IconButton(
+                    onPressed: () => context.push('/vault'),
+                    tooltip: 'Progress vault',
+                    icon: const Icon(
+                      Icons.inventory_2_outlined,
+                      color: GaussColors.brassLight,
+                    ),
                   ),
-                ),
+                ],
                 if (!compact) const _OfflineSignal(),
               ],
             );
@@ -609,6 +614,7 @@ class _ReflectionInstrument extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final total = math.max(1, study.totalReflected);
+    final compact = MediaQuery.sizeOf(context).width < 620;
     return Padding(
       padding: const EdgeInsets.fromLTRB(18, 14, 18, 0),
       child: Center(
@@ -616,11 +622,11 @@ class _ReflectionInstrument extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 1180),
           child: _GlassPanel(
             radius: 25,
-            padding: const EdgeInsets.all(19),
+            padding: EdgeInsets.all(compact ? 15 : 19),
             child: LayoutBuilder(
               builder: (context, constraints) {
                 final gauge = SizedBox.square(
-                  dimension: 132,
+                  dimension: compact ? 108 : 132,
                   child: CustomPaint(
                     painter: _ReflectionGaugePainter(
                       clearRatio: study.clearCount / total,
@@ -708,7 +714,7 @@ class _ReflectionInstrument extends StatelessWidget {
                 );
                 if (constraints.maxWidth < 620) {
                   return Column(
-                    children: [gauge, const SizedBox(height: 15), copy],
+                    children: [gauge, const SizedBox(height: 11), copy],
                   );
                 }
                 return Row(

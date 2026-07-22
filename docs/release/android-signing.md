@@ -18,6 +18,12 @@ The keystore and its password are never committed, logged, attached to a
 release, or copied into a build cache. GitHub stores the key only as the four
 repository secrets referenced by the release workflow.
 
+`flutter_app/android/app/build.gradle.kts` intentionally fails every release
+task unless `GAUSS_KEYSTORE_PATH`, `GAUSS_KEYSTORE_PASSWORD`,
+`GAUSS_KEY_ALIAS`, and `GAUSS_KEY_PASSWORD` are present and the keystore file
+exists. There is no debug-signing fallback for a release build. Use
+`flutter build apk --debug` for ordinary local development.
+
 ## One-time migration from the bad release
 
 GitHub release `v1.0.84` was a different Kotlin/Compose APK and used a

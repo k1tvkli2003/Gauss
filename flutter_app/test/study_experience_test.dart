@@ -147,11 +147,11 @@ void main() {
 
     expect(find.text('STUDY ROOM'), findsOneWidget);
     expect(find.byTooltip('Draw on this question'), findsOneWidget);
-    expect(find.text('Reveal the source answer'), findsOneWidget);
+    expect(find.text('Reveal reference answer'), findsOneWidget);
 
-    await tester.ensureVisible(find.text('Reveal the source answer'));
+    await tester.ensureVisible(find.text('Reveal reference answer'));
     await tester.pump(const Duration(milliseconds: 180));
-    await tester.tap(find.text('Reveal the source answer'));
+    await tester.tap(find.text('Reveal reference answer'));
     await tester.pump(const Duration(milliseconds: 220));
     expect(find.text('How does the concept feel now?'), findsOneWidget);
 
@@ -347,8 +347,8 @@ void main() {
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
 
-    await tester.ensureVisible(find.text('Reveal the source answer'));
-    await tester.tap(find.text('Reveal the source answer'));
+    await tester.ensureVisible(find.text('Reveal reference answer'));
+    await tester.tap(find.text('Reveal reference answer'));
     await tester.pump(const Duration(milliseconds: 220));
     await tester.ensureVisible(find.text('Concept feels clear'));
     await tester.tap(find.text('Concept feels clear'));

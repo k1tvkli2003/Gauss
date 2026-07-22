@@ -9,6 +9,7 @@ import '../screens/insights_screen.dart';
 import '../screens/map_screen.dart';
 import '../screens/practice_screen.dart';
 import '../state/gauss_controller.dart';
+import '../widgets/first_run_tour.dart';
 import '../widgets/gauss_brand.dart';
 import 'gauss_theme.dart';
 
@@ -333,153 +334,192 @@ class _AppShell extends StatelessWidget {
       shell.goBranch(index, initialLocation: index == shell.currentIndex);
 
   @override
-  Widget build(BuildContext context) => LayoutBuilder(
-    builder: (context, constraints) {
-      final useRail = constraints.maxWidth >= 760;
-      final extendRail = constraints.maxWidth >= 1260;
-      if (!useRail) {
-        return Scaffold(
-          extendBody: true,
-          body: shell,
-          bottomNavigationBar: SafeArea(
-            minimum: const EdgeInsets.fromLTRB(12, 0, 12, 10),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(26),
-              child: BackdropFilter(
-                filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: GaussColors.deepInk.withValues(alpha: .82),
-                    borderRadius: BorderRadius.circular(26),
-                    border: Border.all(
-                      color: GaussColors.brass.withValues(alpha: .26),
-                    ),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color(0xB803090B),
-                        blurRadius: 28,
-                        offset: Offset(0, 10),
-                      ),
-                    ],
-                  ),
-                  child: NavigationBar(
-                    height: 68,
-                    backgroundColor: Colors.transparent,
-                    selectedIndex: shell.currentIndex,
-                    destinations: destinations,
-                    onDestinationSelected: _go,
-                  ),
+  Widget build(BuildContext context) {
+    final controller = GaussScope.of(context);
+    final tourActive = controller.needsTour && shell.currentIndex == 0;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final useRail = constraints.maxWidth >= 760;
+        final extendRail = constraints.maxWidth >= 1260;
+        if (!useRail) {
+          return Scaffold(
+            extendBody: true,
+            body: Stack(
+              fit: StackFit.expand,
+              children: [
+                ExcludeSemantics(
+                  excluding: tourActive,
+                  child: IgnorePointer(ignoring: tourActive, child: shell),
                 ),
-              ),
+                if (tourActive)
+                  FirstRunTour(onDismiss: controller.markTourSeen),
+              ],
             ),
-          ),
-        );
-      }
-      return Scaffold(
-        body: Row(
-          children: [
-            SafeArea(
-              minimum: const EdgeInsets.all(10),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(24),
-                child: BackdropFilter(
-                  filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: GaussColors.deepInk.withValues(alpha: .88),
-                      borderRadius: BorderRadius.circular(24),
-                      border: Border.all(
-                        color: GaussColors.brass.withValues(alpha: .24),
+            bottomNavigationBar: tourActive
+                ? null
+                : SafeArea(
+                    minimum: const EdgeInsets.fromLTRB(12, 0, 12, 10),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(26),
+                      child: BackdropFilter(
+                        filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            color: GaussColors.deepInk.withValues(alpha: .82),
+                            borderRadius: BorderRadius.circular(26),
+                            border: Border.all(
+                              color: GaussColors.brass.withValues(alpha: .26),
+                            ),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0xB803090B),
+                                blurRadius: 28,
+                                offset: Offset(0, 10),
+                              ),
+                            ],
+                          ),
+                          child: NavigationBar(
+                            height: 68,
+                            backgroundColor: Colors.transparent,
+                            selectedIndex: shell.currentIndex,
+                            destinations: destinations,
+                            onDestinationSelected: _go,
+                          ),
+                        ),
                       ),
                     ),
-                    child: NavigationRail(
-                      backgroundColor: Colors.transparent,
-                      extended: extendRail,
-                      minWidth: 82,
-                      minExtendedWidth: 188,
-                      groupAlignment: -.58,
-                      selectedIndex: shell.currentIndex,
-                      onDestinationSelected: _go,
-                      leading: Padding(
-                        padding: const EdgeInsets.fromLTRB(12, 12, 12, 30),
-                        child: extendRail
-                            ? const GaussWordmark(width: 132)
-                            : const TheoremStarMark(size: 43),
-                      ),
-                      trailing: Expanded(
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Padding(
-                            padding: const EdgeInsets.only(bottom: 18),
-                            child: Semantics(
-                              label:
-                                  'Offline. All learning content is available.',
-                              child: extendRail
-                                  ? const Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        _OfflineDot(),
-                                        SizedBox(width: 8),
-                                        Text(
-                                          'Offline',
-                                          style: TextStyle(
-                                            color: GaussColors.muted,
-                                            fontSize: 12,
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  : const _OfflineDot(),
+                  ),
+          );
+        }
+        return Scaffold(
+          body: Stack(
+            fit: StackFit.expand,
+            children: [
+              ExcludeSemantics(
+                excluding: tourActive,
+                child: IgnorePointer(
+                  ignoring: tourActive,
+                  child: Row(
+                    children: [
+                      SafeArea(
+                        minimum: const EdgeInsets.all(10),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(24),
+                          child: BackdropFilter(
+                            filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                color: GaussColors.deepInk.withValues(
+                                  alpha: .88,
+                                ),
+                                borderRadius: BorderRadius.circular(24),
+                                border: Border.all(
+                                  color: GaussColors.brass.withValues(
+                                    alpha: .24,
+                                  ),
+                                ),
+                              ),
+                              child: NavigationRail(
+                                backgroundColor: Colors.transparent,
+                                extended: extendRail,
+                                minWidth: 82,
+                                minExtendedWidth: 188,
+                                groupAlignment: -.58,
+                                selectedIndex: shell.currentIndex,
+                                onDestinationSelected: _go,
+                                leading: Padding(
+                                  padding: const EdgeInsets.fromLTRB(
+                                    12,
+                                    12,
+                                    12,
+                                    30,
+                                  ),
+                                  child: extendRail
+                                      ? const GaussWordmark(width: 132)
+                                      : const TheoremStarMark(size: 43),
+                                ),
+                                trailing: Expanded(
+                                  child: Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                        bottom: 18,
+                                      ),
+                                      child: Semantics(
+                                        label:
+                                            'Offline. All learning content is available.',
+                                        child: extendRail
+                                            ? const Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: [
+                                                  _OfflineDot(),
+                                                  SizedBox(width: 8),
+                                                  Text(
+                                                    'Offline',
+                                                    style: TextStyle(
+                                                      color: GaussColors.muted,
+                                                      fontSize: 12,
+                                                    ),
+                                                  ),
+                                                ],
+                                              )
+                                            : const _OfflineDot(),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                destinations: const [
+                                  NavigationRailDestination(
+                                    icon: GaussNavGlyph(
+                                      glyph: GaussDestinationGlyph.map,
+                                      selected: false,
+                                    ),
+                                    selectedIcon: GaussNavGlyph(
+                                      glyph: GaussDestinationGlyph.map,
+                                      selected: true,
+                                    ),
+                                    label: Text('Map'),
+                                  ),
+                                  NavigationRailDestination(
+                                    icon: GaussNavGlyph(
+                                      glyph: GaussDestinationGlyph.practice,
+                                      selected: false,
+                                    ),
+                                    selectedIcon: GaussNavGlyph(
+                                      glyph: GaussDestinationGlyph.practice,
+                                      selected: true,
+                                    ),
+                                    label: Text('Study'),
+                                  ),
+                                  NavigationRailDestination(
+                                    icon: GaussNavGlyph(
+                                      glyph: GaussDestinationGlyph.insights,
+                                      selected: false,
+                                    ),
+                                    selectedIcon: GaussNavGlyph(
+                                      glyph: GaussDestinationGlyph.insights,
+                                      selected: true,
+                                    ),
+                                    label: Text('Insights'),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
-                      destinations: const [
-                        NavigationRailDestination(
-                          icon: GaussNavGlyph(
-                            glyph: GaussDestinationGlyph.map,
-                            selected: false,
-                          ),
-                          selectedIcon: GaussNavGlyph(
-                            glyph: GaussDestinationGlyph.map,
-                            selected: true,
-                          ),
-                          label: Text('Map'),
-                        ),
-                        NavigationRailDestination(
-                          icon: GaussNavGlyph(
-                            glyph: GaussDestinationGlyph.practice,
-                            selected: false,
-                          ),
-                          selectedIcon: GaussNavGlyph(
-                            glyph: GaussDestinationGlyph.practice,
-                            selected: true,
-                          ),
-                          label: Text('Study'),
-                        ),
-                        NavigationRailDestination(
-                          icon: GaussNavGlyph(
-                            glyph: GaussDestinationGlyph.insights,
-                            selected: false,
-                          ),
-                          selectedIcon: GaussNavGlyph(
-                            glyph: GaussDestinationGlyph.insights,
-                            selected: true,
-                          ),
-                          label: Text('Insights'),
-                        ),
-                      ],
-                    ),
+                      Expanded(child: shell),
+                    ],
                   ),
                 ),
               ),
-            ),
-            Expanded(child: shell),
-          ],
-        ),
-      );
-    },
-  );
+              if (tourActive) FirstRunTour(onDismiss: controller.markTourSeen),
+            ],
+          ),
+        );
+      },
+    );
+  }
 }
 
 class _OfflineDot extends StatelessWidget {
