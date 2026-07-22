@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import 'gauss_brand.dart';
 
@@ -56,7 +57,7 @@ class _FirstRunTourState extends State<FirstRunTour> {
 
   void _next() {
     if (_index == _steps.length - 1) {
-      widget.onDismiss();
+      _dismiss();
       return;
     }
     _controller.nextPage(
@@ -65,6 +66,14 @@ class _FirstRunTourState extends State<FirstRunTour> {
           : const Duration(milliseconds: 260),
       curve: Curves.easeOutCubic,
     );
+  }
+
+  /// Do not transfer the focused tour button to a far-away map action when
+  /// the overlay disappears.  That transfer can make Flutter scroll the path
+  /// to the dock and hide the opening route immediately after first launch.
+  void _dismiss() {
+    FocusManager.instance.primaryFocus?.unfocus();
+    widget.onDismiss();
   }
 
   @override
@@ -133,7 +142,7 @@ class _FirstRunTourState extends State<FirstRunTour> {
                         children: [
                           Expanded(
                             child: TextButton(
-                              onPressed: widget.onDismiss,
+                              onPressed: _dismiss,
                               child: const Text('Skip'),
                             ),
                           ),
@@ -225,7 +234,7 @@ class _TourCard extends StatelessWidget {
               step.eyebrow,
               style: const TextStyle(
                 color: GaussColors.brassLight,
-                fontSize: 9,
+                fontSize: GaussTypeScale.insignia,
                 fontWeight: FontWeight.w900,
                 letterSpacing: 1.3,
               ),

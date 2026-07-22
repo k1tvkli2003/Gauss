@@ -3,11 +3,13 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/content_blocks.dart';
 import '../widgets/gauss_brand.dart';
+import '../widgets/gauss_state_panel.dart';
 import '../widgets/scratchpad.dart';
 
 /// A calm study room over preserved source questions.
@@ -66,6 +68,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   int _index = 0;
   bool _loading = true;
   bool _saving = false;
+  bool _inkActive = false;
   bool _didLoad = false;
 
   @override
@@ -110,6 +113,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
         ..clear()
         ..addAll(shelf.records.keys);
       _index = shelf.questions.isEmpty ? 0 : shelf.initialIndex;
+      _inkActive = false;
       _pageController = PageController(initialPage: _index);
       setState(() {
         _shelf = shelf;
@@ -141,6 +145,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   void _goTo(int index, int total) {
     final clamped = index.clamp(0, total - 1);
     if (clamped == _index) return;
+    if (_inkActive) setState(() => _inkActive = false);
     _pageController?.animateToPage(
       clamped,
       duration: MediaQuery.disableAnimationsOf(context)
@@ -153,7 +158,10 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   void _onPageChanged(int index) {
     final shelf = _shelf;
     if (shelf == null || index < 0 || index >= shelf.questions.length) return;
-    setState(() => _index = index);
+    setState(() {
+      _index = index;
+      _inkActive = false;
+    });
     if (!shelf.revisitOnly) {
       GaussScope.of(context).saveStudyPosition(
         shelfKey: shelf.key,
@@ -231,7 +239,13 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
           const _ArchiveBackdrop(),
           SafeArea(
             child: _loading
-                ? const Center(child: CircularProgressIndicator())
+                ? const GaussStatePanel(
+                    title: 'Opening the study room…',
+                    detail:
+                        'Reading this preserved set and your private study marks from local storage.',
+                    loading: true,
+                    accent: GaussColors.signalBright,
+                  )
                 : _loadError != null
                 ? _ArchiveMessage(
                     title: 'The study room could not open',
@@ -275,7 +289,11 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
                       ),
                       Expanded(
                         child: PageView.builder(
+                          key: const ValueKey('study-room-pages'),
                           controller: _pageController,
+                          physics: _inkActive
+                              ? const NeverScrollableScrollPhysics()
+                              : const PageScrollPhysics(),
                           onPageChanged: _onPageChanged,
                           itemCount: shelf.questions.length,
                           itemBuilder: (context, index) {
@@ -287,6 +305,12 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
                               hypothesis: _hypotheses[question.id],
                               record: _records[question.id],
                               saving: _saving && index == _index,
+                              active: index == _index,
+                              onInkModeChanged: (active) {
+                                if (index == _index && _inkActive != active) {
+                                  setState(() => _inkActive = active);
+                                }
+                              },
                               onHypothesis: (choice) =>
                                   _selectHypothesis(question, choice),
                               onReveal: () =>
@@ -387,7 +411,7 @@ class _ArchiveTopBar extends StatelessWidget {
                 'STUDY ROOM',
                 style: TextStyle(
                   color: GaussColors.brassLight,
-                  fontSize: 9,
+                  fontSize: GaussTypeScale.insignia,
                   fontWeight: FontWeight.w900,
                   letterSpacing: 1.2,
                 ),
@@ -455,6 +479,8 @@ class _ArchivePage extends StatelessWidget {
     required this.hypothesis,
     required this.record,
     required this.saving,
+    required this.active,
+    required this.onInkModeChanged,
     required this.onHypothesis,
     required this.onReveal,
     required this.onReflection,
@@ -466,150 +492,269 @@ class _ArchivePage extends StatelessWidget {
   final int? hypothesis;
   final StudyRecord? record;
   final bool saving;
+  final bool active;
+  final ValueChanged<bool> onInkModeChanged;
   final ValueChanged<int> onHypothesis;
   final VoidCallback onReveal;
   final ValueChanged<StudyReflection> onReflection;
 
   @override
-  Widget build(BuildContext context) => SingleChildScrollView(
-    padding: const EdgeInsets.fromLTRB(16, 8, 16, 18),
-    child: Center(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 780),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const _ProvenanceBanner(),
-            const SizedBox(height: 12),
-            Row(
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final split =
+          constraints.maxWidth >= GaussBreakpoints.studyRoomSplitContent;
+      if (!split) {
+        return SingleChildScrollView(
+          key: const ValueKey('study-room-single-pane'),
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 18),
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 780),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  ..._promptContent(context),
+                  const SizedBox(height: 18),
+                  ..._responseContent(context, includeHeading: false),
+                ],
+              ),
+            ),
+          ),
+        );
+      }
+      return Padding(
+        key: const ValueKey('study-room-split-pane'),
+        padding: const EdgeInsets.fromLTRB(20, 10, 20, 16),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 1240),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Text(
-                  'PRESERVED ITEM',
-                  style: TextStyle(
-                    color: GaussColors.brassLight,
-                    fontSize: 10,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 1.25,
-                  ),
-                ),
-                const Spacer(),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 9,
-                    vertical: 5,
-                  ),
-                  decoration: BoxDecoration(
-                    color: GaussColors.brass.withValues(alpha: .09),
-                    borderRadius: BorderRadius.circular(GaussRadii.pill),
-                    border: Border.all(
-                      color: GaussColors.brass.withValues(alpha: .3),
+                Expanded(
+                  flex: 11,
+                  child: SingleChildScrollView(
+                    key: const ValueKey('study-room-prompt-scroll'),
+                    padding: const EdgeInsets.fromLTRB(2, 2, 10, 18),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: _promptContent(context),
                     ),
                   ),
-                  child: Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Text(
-                      question.difficulty.label,
-                      style: const TextStyle(
-                        color: GaussColors.brassLight,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w700,
+                ),
+                const SizedBox(width: 18),
+                Expanded(
+                  flex: 10,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: GaussColors.deepInk.withValues(alpha: .76),
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(color: GaussColors.hairline),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x66000000),
+                          blurRadius: 24,
+                          offset: Offset(0, 10),
+                        ),
+                      ],
+                    ),
+                    child: SingleChildScrollView(
+                      key: const ValueKey('study-room-response-scroll'),
+                      padding: const EdgeInsets.fromLTRB(18, 18, 18, 22),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: _responseContent(context),
                       ),
                     ),
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 12),
-            Container(
-              constraints: const BoxConstraints(minHeight: 142),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [Color(0xFFF7EED9), GaussColors.parchment],
-                ),
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: GaussColors.brass.withValues(alpha: .65),
-                ),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Color(0x66000000),
-                    blurRadius: 24,
-                    offset: Offset(0, 12),
-                  ),
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
-                child: InlineQuestionScratch(
-                  key: ValueKey('study-ink-${question.id}'),
-                  child: Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: ContentBlocksView(
-                      blocks: question.stem,
-                      textColor: GaussColors.parchmentInk,
-                      textStyle: Theme.of(context).textTheme.titleLarge
-                          ?.copyWith(
-                            color: GaussColors.parchmentInk,
-                            fontFamily: 'Vazirmatn',
-                            height: 1.7,
-                          ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              revealed
-                  ? 'Your hypothesis is frozen after reveal.'
-                  : 'Choose a private hypothesis, or reveal without one.',
+          ),
+        ),
+      );
+    },
+  );
+
+  List<Widget> _promptContent(BuildContext context) => [
+    const _ProvenanceBanner(),
+    const SizedBox(height: 12),
+    Row(
+      children: [
+        const Text(
+          'PRESERVED ITEM',
+          style: TextStyle(
+            color: GaussColors.brassLight,
+            fontSize: GaussTypeScale.insignia,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 1.25,
+          ),
+        ),
+        const Spacer(),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+          decoration: BoxDecoration(
+            color: GaussColors.brass.withValues(alpha: .09),
+            borderRadius: BorderRadius.circular(GaussRadii.pill),
+            border: Border.all(color: GaussColors.brass.withValues(alpha: .3)),
+          ),
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Text(
+              question.difficulty.label,
               style: const TextStyle(
-                color: GaussColors.fog,
-                fontSize: 11,
-                height: 1.4,
+                color: GaussColors.brassLight,
+                fontSize: GaussTypeScale.insignia,
+                fontWeight: FontWeight.w700,
               ),
             ),
-            const SizedBox(height: 15),
-            for (var choice = 0; choice < question.options.length; choice++)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 10),
-                child: _ArchiveChoice(
-                  blocks: question.options[choice],
-                  choice: choice,
-                  selected: hypothesis == choice,
-                  enabled: !revealed,
-                  markedBySource:
-                      revealed && choice == question.correctChoiceIndex,
-                  onTap: () => onHypothesis(choice),
-                ),
+          ),
+        ),
+      ],
+    ),
+    const SizedBox(height: 12),
+    Container(
+      constraints: const BoxConstraints(minHeight: 142),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFFF7EED9), GaussColors.parchment],
+        ),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: GaussColors.brass.withValues(alpha: .65)),
+        boxShadow: const [
+          BoxShadow(
+            color: Color(0x66000000),
+            blurRadius: 24,
+            offset: Offset(0, 12),
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
+        child: InlineQuestionScratch(
+          key: ValueKey('study-ink-${question.id}'),
+          active: active,
+          onDrawingChanged: onInkModeChanged,
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: ContentBlocksView(
+              blocks: question.stem,
+              textColor: GaussColors.parchmentInk,
+              textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
+                color: GaussColors.parchmentInk,
+                fontFamily: 'Vazirmatn',
+                height: 1.7,
               ),
-            const SizedBox(height: 6),
-            if (!revealed)
-              OutlinedButton.icon(
-                onPressed: onReveal,
-                icon: const Icon(Icons.visibility_outlined, size: 19),
-                label: const Text('Reveal reference answer'),
-              )
-            else ...[
-              _HypothesisComparison(
-                hypothesis: hypothesis,
-                sourceKey: question.correctChoiceIndex,
-              ),
-              const SizedBox(height: 12),
-              _SourceSolution(question: question),
-              const SizedBox(height: 12),
-              _ReflectionDeck(
-                record: record,
-                saving: saving,
-                onReflection: onReflection,
-              ),
-            ],
-          ],
+            ),
+          ),
         ),
       ),
     ),
+    const SizedBox(height: 10),
+    Text(
+      revealed
+          ? 'Your hypothesis is frozen after reveal.'
+          : 'Choose a private hypothesis, or reveal without one.',
+      style: const TextStyle(
+        color: GaussColors.fog,
+        fontSize: GaussTypeScale.caption,
+        height: 1.4,
+      ),
+    ),
+  ];
+
+  List<Widget> _responseContent(
+    BuildContext context, {
+    bool includeHeading = true,
+  }) => [
+    if (includeHeading) ...[
+      _WorkspaceHeading(revealed: revealed),
+      const SizedBox(height: 16),
+    ],
+    for (var choice = 0; choice < question.options.length; choice++)
+      Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: _ArchiveChoice(
+          blocks: question.options[choice],
+          choice: choice,
+          selected: hypothesis == choice,
+          enabled: !revealed,
+          markedBySource: revealed && choice == question.correctChoiceIndex,
+          onTap: () => onHypothesis(choice),
+        ),
+      ),
+    const SizedBox(height: 6),
+    if (!revealed)
+      OutlinedButton.icon(
+        onPressed: onReveal,
+        icon: const Icon(Icons.visibility_outlined, size: 19),
+        label: const Text('Reveal reference answer'),
+      )
+    else ...[
+      _HypothesisComparison(
+        hypothesis: hypothesis,
+        sourceKey: question.correctChoiceIndex,
+      ),
+      const SizedBox(height: 12),
+      _SourceSolution(question: question),
+      const SizedBox(height: 12),
+      _ReflectionDeck(
+        record: record,
+        saving: saving,
+        onReflection: onReflection,
+      ),
+    ],
+  ];
+}
+
+class _WorkspaceHeading extends StatelessWidget {
+  const _WorkspaceHeading({required this.revealed});
+
+  final bool revealed;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    children: [
+      Container(
+        width: GaussMetrics.minTouchTarget,
+        height: GaussMetrics.minTouchTarget,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: GaussColors.brass.withValues(alpha: .12),
+          shape: BoxShape.circle,
+          border: Border.all(color: GaussColors.brass.withValues(alpha: .35)),
+        ),
+        child: Icon(
+          revealed ? Icons.history_edu_outlined : Icons.edit_note_rounded,
+          color: GaussColors.brassLight,
+          size: 21,
+        ),
+      ),
+      const SizedBox(width: 12),
+      Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'RESPONSE DECK',
+              style: TextStyle(
+                color: GaussColors.brassLight,
+                fontSize: GaussTypeScale.insignia,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 1.1,
+              ),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              revealed ? 'Source and reflection' : 'Make a private call',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+          ],
+        ),
+      ),
+    ],
   );
 }
 
@@ -691,7 +836,7 @@ class _HypothesisComparison extends StatelessWidget {
               'Agreement is not proof: the source key itself was never verified. Trust your own reading of the solution.',
               style: TextStyle(
                 color: GaussColors.fog,
-                fontSize: 9.5,
+                fontSize: GaussTypeScale.caption,
                 height: 1.4,
               ),
             ),
@@ -727,7 +872,7 @@ class _ComparisonChip extends StatelessWidget {
           label,
           style: const TextStyle(
             color: GaussColors.fog,
-            fontSize: 8,
+            fontSize: GaussTypeScale.insignia,
             fontWeight: FontWeight.w900,
             letterSpacing: .8,
           ),
@@ -1319,7 +1464,7 @@ class _JumpSheet extends StatelessWidget {
                           'JUMP TO',
                           style: TextStyle(
                             color: GaussColors.brassLight,
-                            fontSize: 9,
+                            fontSize: GaussTypeScale.insignia,
                             fontWeight: FontWeight.w900,
                             letterSpacing: 1.2,
                           ),
@@ -1598,47 +1743,26 @@ class _ArchiveMessage extends StatelessWidget {
   final VoidCallback? onRetry;
 
   @override
-  Widget build(BuildContext context) => Center(
-    child: ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 500),
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.all(28),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const TheoremStarMark(size: 52, monochrome: true),
-              const SizedBox(height: 14),
-              Text(
-                title,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(height: 8),
-              Text(
-                detail,
-                textAlign: TextAlign.center,
-                style: const TextStyle(color: GaussColors.muted),
-              ),
-              const SizedBox(height: 20),
-              Wrap(
-                spacing: 10,
-                runSpacing: 10,
-                alignment: WrapAlignment.center,
-                children: [
-                  OutlinedButton(onPressed: onLeave, child: const Text('Back')),
-                  if (onRetry != null)
-                    FilledButton.icon(
-                      onPressed: onRetry,
-                      icon: const Icon(Icons.refresh_rounded),
-                      label: const Text('Try again'),
-                    ),
-                ],
-              ),
-            ],
+  Widget build(BuildContext context) => GaussStatePanel(
+    title: title,
+    detail: detail,
+    icon: onRetry == null
+        ? Icons.auto_stories_outlined
+        : Icons.error_outline_rounded,
+    accent: onRetry == null ? GaussColors.brass : GaussColors.error,
+    actions: Wrap(
+      spacing: 10,
+      runSpacing: 10,
+      alignment: WrapAlignment.center,
+      children: [
+        OutlinedButton(onPressed: onLeave, child: const Text('Back')),
+        if (onRetry != null)
+          FilledButton.icon(
+            onPressed: onRetry,
+            icon: const Icon(Icons.refresh_rounded),
+            label: const Text('Try again'),
           ),
-        ),
-      ),
+      ],
     ),
   );
 }

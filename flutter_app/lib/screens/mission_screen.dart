@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
+import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/content_blocks.dart';
 import '../widgets/gauss_brand.dart';
+import '../widgets/gauss_state_panel.dart';
 import '../widgets/scratchpad.dart';
 
 class MissionScreen extends StatefulWidget {
@@ -852,7 +854,7 @@ class _MissTagBar extends StatelessWidget {
             'WHY DID IT SLIP?',
             style: TextStyle(
               color: GaussColors.warning,
-              fontSize: 9,
+              fontSize: GaussTypeScale.insignia,
               fontWeight: FontWeight.w900,
               letterSpacing: 1,
             ),
@@ -873,7 +875,10 @@ class _MissTagBar extends StatelessWidget {
           const SizedBox(height: 8),
           const Text(
             'A private note to your future self. Scoring never changes.',
-            style: TextStyle(color: GaussColors.fog, fontSize: 9.5),
+            style: TextStyle(
+              color: GaussColors.fog,
+              fontSize: GaussTypeScale.caption,
+            ),
           ),
         ],
       ),
@@ -1023,7 +1028,7 @@ class _CompanionDeck extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: GaussColors.brassLight,
-              fontSize: 9,
+              fontSize: GaussTypeScale.insignia,
               fontWeight: FontWeight.w900,
               letterSpacing: 1,
             ),
@@ -1794,7 +1799,7 @@ class _CompletionMetric extends StatelessWidget {
           label,
           style: const TextStyle(
             color: GaussColors.fog,
-            fontSize: 8,
+            fontSize: GaussTypeScale.insignia,
             fontWeight: FontWeight.w800,
             letterSpacing: .8,
           ),
@@ -1808,15 +1813,11 @@ class _MissionLoading extends StatelessWidget {
   const _MissionLoading();
 
   @override
-  Widget build(BuildContext context) => const Center(
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        CircularProgressIndicator(),
-        SizedBox(height: 14),
-        Text('Charting a mission…'),
-      ],
-    ),
+  Widget build(BuildContext context) => const GaussStatePanel(
+    title: 'Charting a mission…',
+    detail: 'Preparing the verified question route from local storage.',
+    loading: true,
+    accent: GaussColors.signalBright,
   );
 }
 
@@ -1826,55 +1827,29 @@ class _MissionError extends StatelessWidget {
   final VoidCallback? onRetry;
 
   @override
-  Widget build(BuildContext context) => Center(
-    child: ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 500),
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.all(28),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(
-                Icons.error_outline,
-                color: GaussColors.error,
-                size: 42,
-              ),
-              const SizedBox(height: 14),
-              Text(
-                'Mission could not be loaded',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(height: 8),
-              Text(
-                error is String
-                    ? '$error'
-                    : 'The offline archive could not open this mission. Your saved progress is unchanged.',
-                textAlign: TextAlign.center,
-                style: const TextStyle(color: GaussColors.muted),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  if (onRetry != null) ...[
-                    OutlinedButton.icon(
-                      onPressed: onRetry,
-                      icon: const Icon(Icons.refresh),
-                      label: const Text('Try again'),
-                    ),
-                    const SizedBox(width: 10),
-                  ],
-                  FilledButton(
-                    onPressed: () => context.go('/map'),
-                    child: const Text('Return to map'),
-                  ),
-                ],
-              ),
-            ],
+  Widget build(BuildContext context) => GaussStatePanel(
+    title: 'Mission could not be loaded',
+    detail: error is String
+        ? '$error'
+        : 'The offline archive could not open this mission. Your saved progress is unchanged.',
+    icon: Icons.error_outline_rounded,
+    accent: GaussColors.error,
+    actions: Wrap(
+      spacing: 10,
+      runSpacing: 10,
+      alignment: WrapAlignment.center,
+      children: [
+        if (onRetry != null)
+          OutlinedButton.icon(
+            onPressed: onRetry,
+            icon: const Icon(Icons.refresh),
+            label: const Text('Try again'),
           ),
+        FilledButton(
+          onPressed: () => context.go('/map'),
+          child: const Text('Return to map'),
         ),
-      ),
+      ],
     ),
   );
 }

@@ -4,6 +4,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import '../domain/gamification_catalog.dart';
 import '../domain/models.dart';
@@ -24,6 +25,7 @@ class InsightsScreen extends StatelessWidget {
     final controller = GaussScope.of(context);
     final study = controller.study;
     final gamification = controller.gamification;
+    final window = GaussWindowClass.of(context);
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -32,7 +34,7 @@ class InsightsScreen extends StatelessWidget {
           bottom: false,
           child: Padding(
             padding: EdgeInsets.only(
-              bottom: MediaQuery.sizeOf(context).width < 760 ? 88 : 0,
+              bottom: window.isCompact ? GaussMetrics.compactChromeReserve : 0,
             ),
             child: CustomScrollView(
               slivers: [
@@ -176,7 +178,7 @@ class _ObservatoryHeader extends StatelessWidget {
                         'PERSONAL CONSTELLATION',
                         style: TextStyle(
                           color: GaussColors.brassLight,
-                          fontSize: 9,
+                          fontSize: GaussTypeScale.insignia,
                           fontWeight: FontWeight.w900,
                           letterSpacing: 1.35,
                         ),
@@ -229,28 +231,33 @@ class _LevelMedallion extends StatelessWidget {
       dimension: 46,
       child: CustomPaint(
         painter: _MedallionRingPainter(progress: progress),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              '$level',
-              style: const TextStyle(
-                color: GaussColors.ivory,
-                fontSize: 16,
-                fontWeight: FontWeight.w900,
-                height: .95,
-              ),
+        child: Center(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  '$level',
+                  style: const TextStyle(
+                    color: GaussColors.ivory,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w900,
+                    height: .95,
+                  ),
+                ),
+                const Text(
+                  'LVL',
+                  style: TextStyle(
+                    color: GaussColors.fog,
+                    fontSize: GaussTypeScale.insignia,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: .7,
+                  ),
+                ),
+              ],
             ),
-            const Text(
-              'LVL',
-              style: TextStyle(
-                color: GaussColors.fog,
-                fontSize: 6.5,
-                fontWeight: FontWeight.w800,
-                letterSpacing: .7,
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     ),
@@ -345,27 +352,16 @@ class _DailyQuestInstrument extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          children: [
-                            const Text(
-                              'DAILY OBSERVATION',
-                              style: TextStyle(
-                                color: GaussColors.signalBright,
-                                fontSize: 9,
-                                fontWeight: FontWeight.w900,
-                                letterSpacing: 1,
-                              ),
-                            ),
-                            const Spacer(),
-                            Text(
-                              '+${quest.rewardXp} XP',
-                              style: const TextStyle(
-                                color: GaussColors.brassLight,
-                                fontSize: 11,
-                                fontWeight: FontWeight.w900,
-                              ),
-                            ),
-                          ],
+                        const Text(
+                          'DAILY OBSERVATION',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: GaussColors.signalBright,
+                            fontSize: GaussTypeScale.insignia,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 1,
+                          ),
                         ),
                         const SizedBox(height: 5),
                         Text(
@@ -390,6 +386,15 @@ class _DailyQuestInstrument extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
+                        '+${quest.rewardXp} XP',
+                        style: const TextStyle(
+                          color: GaussColors.brassLight,
+                          fontSize: GaussTypeScale.caption,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
                         '${quest.progress}/${quest.target}',
                         style: const TextStyle(
                           color: GaussColors.ivory,
@@ -400,7 +405,7 @@ class _DailyQuestInstrument extends StatelessWidget {
                         '$todayXp XP today',
                         style: const TextStyle(
                           color: GaussColors.fog,
-                          fontSize: 9,
+                          fontSize: GaussTypeScale.insignia,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -486,15 +491,15 @@ class _MetricConstellation extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 1180),
           child: LayoutBuilder(
             builder: (context, constraints) {
-              final columns = constraints.maxWidth >= 800 ? 4 : 2;
-              // The plate stacks icon, value, label, and an optional hint.
-              // Narrow phones get proportionally taller cells so that stack
-              // always fits instead of clipping its last line.
-              final cellWidth =
-                  (constraints.maxWidth - (columns - 1) * 10) / columns;
-              final ratio = columns == 4
-                  ? 1.62
-                  : (cellWidth / 128).clamp(1.05, 1.34);
+              final columns =
+                  constraints.maxWidth >=
+                      GaussBreakpoints.insightsFourMetricsContent
+                  ? 4
+                  : 2;
+              final textScale = MediaQuery.textScalerOf(
+                context,
+              ).scale(1).clamp(1.0, 2.0);
+              final metricHeight = 138 + (textScale - 1) * 34;
               return GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -502,12 +507,13 @@ class _MetricConstellation extends StatelessWidget {
                   crossAxisCount: columns,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
-                  childAspectRatio: ratio,
+                  mainAxisExtent: metricHeight,
                 ),
                 itemCount: items.length,
                 itemBuilder: (context, index) {
                   final item = items[index];
                   return _MetricPlate(
+                    key: ValueKey('insight-metric-$index'),
                     icon: item.icon,
                     value: item.value,
                     label: item.label,
@@ -528,6 +534,7 @@ class _MetricConstellation extends StatelessWidget {
 
 class _MetricPlate extends StatelessWidget {
   const _MetricPlate({
+    super.key,
     required this.icon,
     required this.value,
     required this.label,
@@ -544,7 +551,7 @@ class _MetricPlate extends StatelessWidget {
   @override
   Widget build(BuildContext context) => _GlassPanel(
     radius: 21,
-    padding: const EdgeInsets.all(15),
+    padding: const EdgeInsets.all(14),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -564,7 +571,7 @@ class _MetricPlate extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 9),
+        const SizedBox(height: 7),
         Flexible(
           child: FittedBox(
             fit: BoxFit.scaleDown,
@@ -580,20 +587,25 @@ class _MetricPlate extends StatelessWidget {
         ),
         Text(
           label,
-          maxLines: 1,
+          maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(
             color: GaussColors.fog,
-            fontSize: 10,
+            fontSize: GaussTypeScale.caption,
             fontWeight: FontWeight.w700,
+            height: 1.2,
           ),
         ),
         if (totalHint != null)
           Text(
             totalHint!,
-            maxLines: 1,
+            maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(color: GaussColors.muted, fontSize: 8),
+            style: const TextStyle(
+              color: GaussColors.muted,
+              fontSize: GaussTypeScale.insignia,
+              height: 1.15,
+            ),
           ),
       ],
     ),
@@ -645,7 +657,7 @@ class _ReflectionInstrument extends StatelessWidget {
                             'charted',
                             style: TextStyle(
                               color: GaussColors.fog,
-                              fontSize: 9,
+                              fontSize: GaussTypeScale.insignia,
                             ),
                           ),
                         ],
@@ -660,7 +672,7 @@ class _ReflectionInstrument extends StatelessWidget {
                       'REFLECTION BALANCE',
                       style: TextStyle(
                         color: GaussColors.brassLight,
-                        fontSize: 9,
+                        fontSize: GaussTypeScale.insignia,
                         fontWeight: FontWeight.w900,
                         letterSpacing: 1.35,
                       ),
@@ -911,7 +923,7 @@ class _SubjectBalanceDial extends StatelessWidget {
                     'where your work has gone.',
                     style: const TextStyle(
                       color: GaussColors.fog,
-                      fontSize: 9,
+                      fontSize: GaussTypeScale.caption,
                       height: 1.4,
                     ),
                   ),
@@ -961,7 +973,10 @@ class _BalanceLegend extends StatelessWidget {
               '$charted of ${_formatCount(available)}',
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(color: GaussColors.fog, fontSize: 9),
+              style: const TextStyle(
+                color: GaussColors.fog,
+                fontSize: GaussTypeScale.insignia,
+              ),
             ),
           ],
         ),
@@ -1047,7 +1062,7 @@ class _HypothesisLedger extends StatelessWidget {
                     'The source key is unverified, so this is a record of agreement — not of being right.',
                     style: TextStyle(
                       color: GaussColors.fog,
-                      fontSize: 9,
+                      fontSize: GaussTypeScale.caption,
                       height: 1.4,
                     ),
                   ),
@@ -1116,7 +1131,10 @@ class _ActivityStarChart extends StatelessWidget {
                     ),
                     const Text(
                       'first reflections only',
-                      style: TextStyle(color: GaussColors.muted, fontSize: 9),
+                      style: TextStyle(
+                        color: GaussColors.muted,
+                        fontSize: GaussTypeScale.insignia,
+                      ),
                     ),
                   ],
                 ),
@@ -1145,7 +1163,7 @@ class _ActivityStarChart extends StatelessWidget {
                   'Empty days are simply empty days. Gauss does not erase progress or demand a streak.',
                   style: TextStyle(
                     color: GaussColors.muted,
-                    fontSize: 9,
+                    fontSize: GaussTypeScale.caption,
                     height: 1.4,
                   ),
                 ),
@@ -1228,7 +1246,7 @@ class _SectionHeading extends StatelessWidget {
               eyebrow,
               style: const TextStyle(
                 color: GaussColors.brassLight,
-                fontSize: 9,
+                fontSize: GaussTypeScale.insignia,
                 fontWeight: FontWeight.w900,
                 letterSpacing: 1.35,
               ),
@@ -1421,7 +1439,10 @@ class _SectionProgressRow extends StatelessWidget {
             ),
             Text(
               '$reflected/$total',
-              style: const TextStyle(color: GaussColors.muted, fontSize: 9),
+              style: const TextStyle(
+                color: GaussColors.muted,
+                fontSize: GaussTypeScale.insignia,
+              ),
             ),
           ],
         ),
@@ -1572,7 +1593,7 @@ class _AchievementPlate extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             color: GaussColors.fog,
-                            fontSize: 8.5,
+                            fontSize: GaussTypeScale.insignia,
                           ),
                         ),
                       ),
@@ -1580,7 +1601,7 @@ class _AchievementPlate extends StatelessWidget {
                         rarity.label.toUpperCase(),
                         style: TextStyle(
                           color: color,
-                          fontSize: 7.5,
+                          fontSize: GaussTypeScale.insignia,
                           fontWeight: FontWeight.w900,
                           letterSpacing: .55,
                         ),

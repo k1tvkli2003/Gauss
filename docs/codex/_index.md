@@ -6,3 +6,4 @@
 | `2026-07-15-gauss-android-orrery-masterpiece-rebuild` | Gauss Android Orrery masterpiece rebuild | complete | 2026-07-16 | [Open](2026-07-15-gauss-android-orrery-masterpiece-rebuild/00-brief.md) |
 | `2026-07-18-surface-the-engine` | Surface the engine (SRS review, star-chart, traps, reading room, error tags) | complete | 2026-07-18 | [Open](2026-07-18-surface-the-engine/00-brief.md) |
 | `2026-07-18-nardebam-only-question-corpus` | Source-only Study Observatory corpus and experience | complete | 2026-07-18 | [Open](2026-07-18-nardebam-only-question-corpus/00-brief.md) |
+| `2026-07-22-gauss-adaptive-perfection` | Gauss adaptive UI UX perfection | active | 2026-07-22 | [Open](2026-07-22-gauss-adaptive-perfection/00-brief.md) |

@@ -11,6 +11,7 @@ import '../screens/practice_screen.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/first_run_tour.dart';
 import '../widgets/gauss_brand.dart';
+import 'gauss_design_system.dart';
 import 'gauss_theme.dart';
 
 class GaussApp extends StatefulWidget {
@@ -339,8 +340,9 @@ class _AppShell extends StatelessWidget {
     final tourActive = controller.needsTour && shell.currentIndex == 0;
     return LayoutBuilder(
       builder: (context, constraints) {
-        final useRail = constraints.maxWidth >= 760;
-        final extendRail = constraints.maxWidth >= 1260;
+        final window = GaussWindowClass.fromWidth(constraints.maxWidth);
+        final useRail = window.usesNavigationRail;
+        final extendRail = window.extendsNavigationRail;
         if (!useRail) {
           return Scaffold(
             extendBody: true,
@@ -358,7 +360,12 @@ class _AppShell extends StatelessWidget {
             bottomNavigationBar: tourActive
                 ? null
                 : SafeArea(
-                    minimum: const EdgeInsets.fromLTRB(12, 0, 12, 10),
+                    minimum: const EdgeInsets.fromLTRB(
+                      12,
+                      0,
+                      12,
+                      GaussMetrics.compactNavigationOuterInset,
+                    ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(26),
                       child: BackdropFilter(
@@ -379,7 +386,7 @@ class _AppShell extends StatelessWidget {
                             ],
                           ),
                           child: NavigationBar(
-                            height: 68,
+                            height: GaussMetrics.compactNavigationHeight,
                             backgroundColor: Colors.transparent,
                             selectedIndex: shell.currentIndex,
                             destinations: destinations,

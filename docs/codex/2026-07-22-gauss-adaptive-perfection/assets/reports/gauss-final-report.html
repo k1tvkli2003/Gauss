@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>گزارش نهایی Gauss</title>
+  <style>
+    @font-face { font-family: Vazirmatn; src: url("file:///C:/Users/K1/Desktop/Projects/Gauss/flutter_app/assets/fonts/vazirmatn_regular.ttf"); font-weight: 400; }
+    @font-face { font-family: Vazirmatn; src: url("file:///C:/Users/K1/Desktop/Projects/Gauss/flutter_app/assets/fonts/vazirmatn_bold.ttf"); font-weight: 700; }
+    @font-face { font-family: Manrope; src: url("file:///C:/Users/K1/Desktop/Projects/Gauss/flutter_app/assets/fonts/manrope_variable.ttf"); }
+    :root { --ink:#e9e5d9; --fog:#aeb9ba; --gold:#f4c65e; --mint:#8ee1c4; --panel:#112328; --deep:#061114; --line:#5f5428; }
+    * { box-sizing:border-box; }
+    @page { size:A4; margin:0; }
+    body { margin:0; color:var(--ink); background:var(--deep); font-family:Vazirmatn, sans-serif; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .page { position:relative; min-height:297mm; padding:18mm 18mm 16mm; overflow:hidden; page-break-after:always; background:radial-gradient(circle at 80% 7%,rgba(67,130,128,.22),transparent 24%),radial-gradient(circle at 12% 82%,rgba(204,150,42,.12),transparent 28%),#061114; }
+    .page:last-child { page-break-after:auto; }
+    .stars { position:absolute; inset:0; opacity:.4; background-image:radial-gradient(#f4c65e 1px,transparent 1.5px),radial-gradient(#8ee1c4 .8px,transparent 1px); background-size:47px 47px,79px 79px; background-position:0 0,27px 19px; pointer-events:none; }
+    .content { position:relative; z-index:1; }
+    .eyebrow { color:var(--gold); letter-spacing:.13em; font-family:Manrope,sans-serif; font-size:10pt; font-weight:700; text-transform:uppercase; }
+    h1 { margin:6mm 0 2mm; font-size:34pt; line-height:1.1; color:#f5e7bf; }
+    h2 { margin:0 0 5mm; font-size:20pt; color:#f5e7bf; }
+    h3 { margin:5mm 0 2mm; color:var(--gold); font-size:12pt; }
+    p,li { font-size:10.5pt; line-height:1.95; color:var(--fog); }
+    strong { color:var(--ink); }
+    .rule { height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:8mm 0; }
+    .mark { width:41mm; height:41mm; border:1px solid var(--gold); border-radius:50%; display:grid; place-items:center; color:var(--gold); font-family:Manrope,sans-serif; font-size:31pt; margin:12mm 0; box-shadow:0 0 35px rgba(244,198,94,.18); }
+    .meta { display:grid; grid-template-columns:repeat(3,1fr); gap:3mm; margin-top:11mm; }
+    .chip { border:1px solid #33474a; border-radius:5mm; padding:4mm; background:rgba(17,35,40,.74); font-size:8pt; color:var(--fog); }
+    .chip b { display:block; color:var(--mint); font-family:Manrope,sans-serif; font-size:10pt; margin-top:1mm; direction:ltr; text-align:right; }
+    table { width:100%; border-collapse:separate; border-spacing:0 2.5mm; direction:rtl; }
+    th { color:var(--gold); font-size:9pt; text-align:right; padding:2mm 3mm; }
+    td { background:rgba(17,35,40,.78); border-top:1px solid #31464a; border-bottom:1px solid #31464a; padding:3mm; font-size:8.5pt; color:var(--fog); vertical-align:top; }
+    td:first-child { border-right:1px solid #31464a; border-radius:3mm 0 0 3mm; color:var(--ink); }
+    td:last-child { border-left:1px solid #31464a; border-radius:0 3mm 3mm 0; }
+    .pass { color:var(--mint); font-family:Manrope,sans-serif; font-weight:700; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+    .card { border:1px solid #31464a; background:rgba(17,35,40,.78); border-radius:5mm; padding:5mm; }
+    .card h3 { margin-top:0; }
+    .shot { width:100%; max-height:98mm; object-fit:cover; object-position:top; border-radius:4mm; border:1px solid #665729; background:#0b1417; }
+    .caption { font-size:8pt; color:var(--fog); margin:2mm 0 0; }
+    .metric { font-family:Manrope,sans-serif; font-size:23pt; color:var(--gold); direction:ltr; text-align:right; }
+    .small { font-size:8.5pt; }
+    .page-no { position:absolute; left:18mm; bottom:10mm; color:#718083; font:8pt Manrope,sans-serif; direction:ltr; }
+    .warning { border-right:3px solid var(--gold); background:rgba(244,198,94,.09); padding:4mm 5mm; border-radius:2mm; }
+  </style>
+</head>
+<body>
+  <section class="page"><div class="stars"></div><div class="content">
+    <div class="eyebrow">Gauss · Adaptive Perfection</div>
+    <div class="mark">G</div>
+    <h1>گزارش نهایی<br>بازسازی تطبیقی Gauss</h1>
+    <p>یک تجربهٔ شخصی، آفلاین و نجومی برای یادگیری ریاضی و فیزیک - با مسیر پیوسته، مطالعهٔ عمیق، قلم روی صورت سؤال و حقیقتِ دادهٔ محلی.</p>
+    <div class="rule"></div>
+    <div class="meta"><div class="chip">نسخهٔ Android<b>1.0.106 · 106</b></div><div class="chip">تست Flutter<b>86 / 86</b></div><div class="chip">بانک محتوای حفظ‌شده<b>3,672 پرسش</b></div></div>
+  </div><div class="page-no">01 / 05</div></section>
+  <section class="page"><div class="stars"></div><div class="content">
+    <div class="eyebrow">Verified release truth</div><h2>گیت‌های تحویل</h2>
+    <table><thead><tr><th>گیت</th><th>نتیجه</th><th>شاهد</th></tr></thead><tbody>
+      <tr><td>Static analysis</td><td class="pass">PASS</td><td dir="ltr">dart analyze --fatal-infos · No issues found</td></tr>
+      <tr><td>Flutter suite</td><td class="pass">PASS</td><td>86/86؛ boundaryهای 599/600/1440، text scale، ink، split room، Map orbit و stateها</td></tr>
+      <tr><td>Android artifact</td><td class="pass">PASS</td><td><span dir="ltr">com.gauss.app · 1.0.106 (106)</span> · امضای non-debug معتبر</td></tr>
+      <tr><td>ارتقای درجا</td><td class="pass">PASS</td><td><span dir="ltr">105 → 106</span> با <span dir="ltr">adb install -r</span>؛ first-install ثابت</td></tr>
+      <tr><td>Web release</td><td class="pass">PASS</td><td><span dir="ltr">3,521 files · 131,092,669 bytes · main.dart.js 3,768,732 bytes</span></td></tr>
+      <tr><td>حفظ داده</td><td class="pass">PASS</td><td>30 فایل بانک سؤال و 3,410 فایل media در source، Flutter، Web و APK دقیقاً برابر</td></tr>
+    </tbody></table>
+    <h3>هویت artifact</h3><p class="small" dir="ltr">SHA-256 BD42A22CA047CC04699A4B9133251A15795F14FECE8C4141788D8F0F2E34CD1F<br>141,719,881 bytes</p>
+  </div><div class="page-no">02 / 05</div></section>
+  <section class="page"><div class="stars"></div><div class="content">
+    <div class="eyebrow">Map-first experience</div><h2>مسیر، نه dashboard</h2>
+    <div class="grid"><div class="card"><h3>چه چیزی کامل شد</h3><ul><li>چهار کلاس قطعی پنجره از compact تا wide.</li><li>Map تمام‌صفحه با مسیر پیوسته Math/Physics و nodeهای قابل لمس.</li><li>HUD فشرده، crest زنده، instrument بزرگ، مسیر طلایی و labelهای متصل به node؛ هم‌راستا با رفرنس Map کاربر.</li><li>tour پس از dismiss مسیر را از ابتدا نشان می‌دهد؛ header tablet بدون truncate شدن اطلاعات مهم.</li></ul></div><div class="card"><div class="metric">840dp</div><p>آستانهٔ workspace دوپنجره‌ای Study Room؛ زیر آن جریان خطی و بالای آن سؤال و پاسخ مستقل و هم‌زمان‌اند.</p></div></div>
+    <div class="grid" style="margin-top:5mm"><div><img class="shot" src="../runtime/android-phone-map-copy-reference-v106.png"><p class="caption">Android release · phone Map</p></div><div><img class="shot" src="../runtime/android-tablet-map-copy-reference-v106.png"><p class="caption">Android release · tablet Map</p></div></div>
+  </div><div class="page-no">03 / 05</div></section>
+  <section class="page"><div class="stars"></div><div class="content">
+    <div class="eyebrow">Product craft</div><h2>Study و Insight با رفتار واقعی</h2>
+    <div class="grid"><div class="card"><h3>Study</h3><p>گوشی: یک ستون. Medium: ابزارها به 2x2. فضای بزرگ: ابزارهای یک‌ردیف و atlas بدون nested-scroll.</p><p>قلم روی خود سؤال، پاک‌سازی فوری، سه ضخامت، mouse/stylus/touch و قفل paging در زمان ink آزمایش شده‌اند.</p></div><div class="card"><h3>Insights و Vault</h3><p>metricهای tablet در viewport اول قابل اسکن‌اند. Vault، tour و loading/error/empty/retry به زبان بصری واحد و حالت‌های قابل‌دسترسی رسیده‌اند.</p><p>Manrope برای chrome انگلیسی و Vazirmatn برای متن فارسی؛ کنتراست و microtype اصلاح شده‌اند.</p></div></div>
+    <div class="grid" style="margin-top:5mm"><div><img class="shot" src="../runtime/android-phone-study-v106.png"><p class="caption">Android release · Study</p></div><div><img class="shot" src="../runtime/android-phone-insights-v106.png"><p class="caption">Android release · Insights</p></div></div>
+  </div><div class="page-no">04 / 05</div></section>
+  <section class="page"><div class="stars"></div><div class="content">
+    <div class="eyebrow">Performance and handoff</div><h2>حقیقت عملکرد و ادامهٔ سالم</h2>
+    <div class="grid"><div class="card"><h3>داده و cold path</h3><p>median سه اجرای مستقل: shardهای سنگین <span dir="ltr">31 / 8 / 8 / 5ms</span>، lookup کامل <span dir="ltr">86ms</span>، hinted <span dir="ltr">1ms</span> و cache گرم <span dir="ltr">0ms</span>.</p><p>Android cold launch release: <strong dir="ltr">1,213ms</strong>.</p></div><div class="card"><h3>محدودیت صریح</h3><p>UI p95 در profile برابر <span dir="ltr">6.322ms</span> بود. raster p95 در headless SwiftShader emulator برابر <span dir="ltr">207.100ms</span> است و به‌دلیل renderer نرم‌افزاری، نمایندهٔ سخت‌افزار واقعی یا claim 60Hz نیست.</p></div></div>
+    <div class="warning"><p><strong>باقی‌مانده:</strong> هیچ P0/P1 شناخته‌شده‌ای باقی نمانده است. فقط برای ادعای battery/thermal/raster روی Android واقعی، همین workload باید روی دستگاه فیزیکی یا emulator با GPU host پایدار تکرار شود. این محدودیت هیچ اثری بر build، نصب درجا یا حفظ داده ندارد.</p></div>
+    <div class="rule"></div><p>Gauss اکنون release artifact امضاشده، responsive evidence واقعی، قرارداد حفظ داده و مسیر ادامهٔ روشن دارد.</p>
+  </div><div class="page-no">05 / 05</div></section>
+</body></html>

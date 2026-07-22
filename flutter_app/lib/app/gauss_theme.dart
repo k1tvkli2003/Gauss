@@ -21,7 +21,8 @@ abstract final class GaussColors {
   static const error = Color(0xFFFF7564);
   static const warning = Color(0xFFE6A84C);
   static const muted = Color(0xFF9FA9A8);
-  static const fog = Color(0xFF7F8A8A);
+  // 4.80:1 against panelHigh; safe for normal-size secondary copy.
+  static const fog = Color(0xFF879393);
   static const line = Color(0xFF344448);
   static const hairline = Color(0xFF243337);
 }

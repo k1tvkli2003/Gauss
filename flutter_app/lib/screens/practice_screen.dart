@@ -1,8 +1,10 @@
+import 'dart:math' as math;
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
@@ -49,6 +51,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
   @override
   Widget build(BuildContext context) {
     final controller = GaussScope.of(context);
+    final window = GaussWindowClass.of(context);
     final sections = GaussStudyCurriculum.forSubject(_subject);
     final continueNode = _continueNode(controller);
     final subjectQuestions = controller.topics
@@ -72,7 +75,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
           bottom: false,
           child: Padding(
             padding: EdgeInsets.only(
-              bottom: MediaQuery.sizeOf(context).width < 760 ? 88 : 0,
+              bottom: window.isCompact ? GaussMetrics.compactChromeReserve : 0,
             ),
             child: CustomScrollView(
               slivers: [
@@ -118,34 +121,14 @@ class _PracticeScreenState extends State<PracticeScreen> {
                         'Every chapter is divided into calm sets of up to ${GaussStudyCurriculum.batchSize} questions. Nothing is locked.',
                   ),
                 ),
-                SliverPadding(
-                  padding: const EdgeInsets.fromLTRB(18, 0, 18, 126),
-                  sliver: SliverLayoutBuilder(
-                    builder: (context, constraints) {
-                      final columns = constraints.crossAxisExtent >= 1040
-                          ? 2
-                          : 1;
-                      final aspectRatio = columns == 2
-                          ? 1.02
-                          : constraints.crossAxisExtent >= 700
-                          ? 1.55
-                          : .72;
-                      return SliverGrid.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: columns,
-                          mainAxisSpacing: 14,
-                          crossAxisSpacing: 14,
-                          childAspectRatio: aspectRatio,
-                        ),
-                        itemCount: sections.length,
-                        itemBuilder: (context, index) => _SectionAtlasCard(
-                          number: index + 1,
-                          section: sections[index],
-                          controller: controller,
-                          onOpen: (node) => _openNode(context, node),
-                        ),
-                      );
-                    },
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(18, 0, 18, 40),
+                    child: _SectionAtlas(
+                      sections: sections,
+                      controller: controller,
+                      onOpen: (node) => _openNode(context, node),
+                    ),
                   ),
                 ),
               ],
@@ -215,7 +198,7 @@ class _StudyHeader extends StatelessWidget {
                     'STUDY OBSERVATORY',
                     style: TextStyle(
                       color: GaussColors.brassLight,
-                      fontSize: 9,
+                      fontSize: GaussTypeScale.insignia,
                       fontWeight: FontWeight.w900,
                       letterSpacing: 1.35,
                     ),
@@ -373,7 +356,7 @@ class _ContinueInstrument extends StatelessWidget {
                     'CONTINUE YOUR ORBIT',
                     style: TextStyle(
                       color: GaussColors.brassLight,
-                      fontSize: 9,
+                      fontSize: GaussTypeScale.insignia,
                       fontWeight: FontWeight.w900,
                       letterSpacing: 1.4,
                     ),
@@ -561,12 +544,18 @@ class _StudyModes extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 1180),
           child: LayoutBuilder(
             builder: (context, constraints) {
-              final compact = constraints.maxWidth < 720;
-              if (compact) {
+              final window = GaussWindowClass.fromWidth(
+                math.max(
+                  MediaQuery.sizeOf(context).width,
+                  constraints.maxWidth,
+                ),
+              );
+              if (window.isCompact || constraints.maxWidth < 480) {
                 return Column(
                   children: [
                     for (final mode in modes) ...[
                       _ModePlate(
+                        key: ValueKey('study-mode-${mode.title}'),
                         icon: mode.icon,
                         title: mode.title,
                         detail: mode.detail,
@@ -577,12 +566,33 @@ class _StudyModes extends StatelessWidget {
                   ],
                 );
               }
+              if (window.isMedium) {
+                final plateWidth = (constraints.maxWidth - 10) / 2;
+                return Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: [
+                    for (final mode in modes)
+                      SizedBox(
+                        width: plateWidth,
+                        child: _ModePlate(
+                          key: ValueKey('study-mode-${mode.title}'),
+                          icon: mode.icon,
+                          title: mode.title,
+                          detail: mode.detail,
+                          onTap: mode.onTap,
+                        ),
+                      ),
+                  ],
+                );
+              }
               return Row(
                 children: [
                   for (var index = 0; index < modes.length; index++) ...[
                     if (index > 0) const SizedBox(width: 10),
                     Expanded(
                       child: _ModePlate(
+                        key: ValueKey('study-mode-${modes[index].title}'),
                         icon: modes[index].icon,
                         title: modes[index].title,
                         detail: modes[index].detail,
@@ -602,6 +612,7 @@ class _StudyModes extends StatelessWidget {
 
 class _ModePlate extends StatelessWidget {
   const _ModePlate({
+    super.key,
     required this.icon,
     required this.title,
     required this.detail,
@@ -694,7 +705,7 @@ class _SectionHeading extends StatelessWidget {
               eyebrow,
               style: const TextStyle(
                 color: GaussColors.brassLight,
-                fontSize: 9,
+                fontSize: GaussTypeScale.insignia,
                 fontWeight: FontWeight.w900,
                 letterSpacing: 1.35,
               ),
@@ -712,6 +723,80 @@ class _SectionHeading extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    ),
+  );
+}
+
+class _SectionAtlas extends StatelessWidget {
+  const _SectionAtlas({
+    required this.sections,
+    required this.controller,
+    required this.onOpen,
+  });
+
+  final List<StudySectionDefinition> sections;
+  final GaussController controller;
+  final ValueChanged<StudyPathNode> onOpen;
+
+  @override
+  Widget build(BuildContext context) => Center(
+    child: ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 1180),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final window = GaussWindowClass.fromWidth(
+            math.max(MediaQuery.sizeOf(context).width, constraints.maxWidth),
+          );
+          final usePairs = window.isExpanded && constraints.maxWidth >= 880;
+          if (!usePairs) {
+            return Column(
+              children: [
+                for (var index = 0; index < sections.length; index++) ...[
+                  if (index > 0) const SizedBox(height: 14),
+                  _SectionAtlasCard(
+                    number: index + 1,
+                    section: sections[index],
+                    controller: controller,
+                    onOpen: onOpen,
+                  ),
+                ],
+              ],
+            );
+          }
+
+          return Column(
+            children: [
+              for (var index = 0; index < sections.length; index += 2) ...[
+                if (index > 0) const SizedBox(height: 14),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: _SectionAtlasCard(
+                        number: index + 1,
+                        section: sections[index],
+                        controller: controller,
+                        onOpen: onOpen,
+                      ),
+                    ),
+                    const SizedBox(width: 14),
+                    Expanded(
+                      child: index + 1 < sections.length
+                          ? _SectionAtlasCard(
+                              number: index + 2,
+                              section: sections[index + 1],
+                              controller: controller,
+                              onOpen: onOpen,
+                            )
+                          : const SizedBox.shrink(),
+                    ),
+                  ],
+                ),
+              ],
+            ],
+          );
+        },
       ),
     ),
   );
@@ -828,37 +913,35 @@ class _SectionAtlasCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 14),
-          Expanded(
-            child: ListView.separated(
-              padding: EdgeInsets.zero,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: topics.length,
-              separatorBuilder: (context, index) => const SizedBox(height: 8),
-              itemBuilder: (context, index) {
-                final topic = topics[index];
-                final topicNodes = nodes
-                    .where((node) => node.topic.key == topic.key)
-                    .toList(growable: false);
-                final topicReflected = topicNodes.fold<int>(
-                  0,
-                  (sum, node) =>
-                      sum + controller.study.shelf(node.key).reflected,
-                );
-                final nextNode = topicNodes.firstWhere(
-                  (node) =>
-                      controller.study.shelf(node.key).reflected <
-                      node.questionCount,
-                  orElse: () => topicNodes.last,
-                );
-                return _UnitRow(
-                  index: index + 1,
-                  topic: topic,
-                  setCount: topicNodes.length,
-                  reflected: topicReflected,
-                  onOpen: () => onOpen(nextNode),
-                );
-              },
-            ),
+          ListView.separated(
+            shrinkWrap: true,
+            padding: EdgeInsets.zero,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: topics.length,
+            separatorBuilder: (context, index) => const SizedBox(height: 8),
+            itemBuilder: (context, index) {
+              final topic = topics[index];
+              final topicNodes = nodes
+                  .where((node) => node.topic.key == topic.key)
+                  .toList(growable: false);
+              final topicReflected = topicNodes.fold<int>(
+                0,
+                (sum, node) => sum + controller.study.shelf(node.key).reflected,
+              );
+              final nextNode = topicNodes.firstWhere(
+                (node) =>
+                    controller.study.shelf(node.key).reflected <
+                    node.questionCount,
+                orElse: () => topicNodes.last,
+              );
+              return _UnitRow(
+                index: index + 1,
+                topic: topic,
+                setCount: topicNodes.length,
+                reflected: topicReflected,
+                onOpen: () => onOpen(nextNode),
+              );
+            },
           ),
         ],
       ),
@@ -932,7 +1015,7 @@ class _UnitRow extends StatelessWidget {
                     '$setCount sets · $reflected/${topic.questionCount} charted',
                     style: const TextStyle(
                       color: GaussColors.muted,
-                      fontSize: 9,
+                      fontSize: GaussTypeScale.insignia,
                     ),
                   ),
                 ],

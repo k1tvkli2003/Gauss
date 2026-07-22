@@ -63,6 +63,11 @@ android {
     }
 
     buildTypes {
+        getByName("profile") {
+            // Keep performance probes isolated from the signed personal build
+            // so profiling can never replace or clear the user's live store.
+            applicationIdSuffix = ".profile"
+        }
         release {
             signingConfig = signingConfigs.getByName("release")
         }

@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 
+import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 
-Future<void> showScratchpad(BuildContext context) => showModalBottomSheet<void>(
-  context: context,
-  isScrollControlled: true,
-  useSafeArea: true,
-  backgroundColor: Colors.transparent,
-  builder: (context) => const _ScratchpadSheet(),
-);
+Future<void> showScratchpad(BuildContext context) {
+  final window = GaussWindowClass.of(context);
+  return showModalBottomSheet<void>(
+    context: context,
+    isScrollControlled: true,
+    useSafeArea: true,
+    backgroundColor: Colors.transparent,
+    constraints: window.isCompact
+        ? null
+        : BoxConstraints(maxWidth: window.isWide ? 960 : 820),
+    builder: (context) => const _ScratchpadSheet(),
+  );
+}
 
 /// A non-destructive ink layer that sits directly on a question plate.
 ///
@@ -16,9 +23,19 @@ Future<void> showScratchpad(BuildContext context) => showModalBottomSheet<void>(
 /// interaction remain untouched. Ink is intentionally session-local; closing
 /// the question never mutates the preserved corpus or learner progress.
 class InlineQuestionScratch extends StatefulWidget {
-  const InlineQuestionScratch({required this.child, super.key});
+  const InlineQuestionScratch({
+    required this.child,
+    this.active = true,
+    this.onDrawingChanged,
+    super.key,
+  });
 
   final Widget child;
+
+  /// False for off-screen PageView children. It guarantees that a question
+  /// never keeps intercepting gestures after the learner moves away.
+  final bool active;
+  final ValueChanged<bool>? onDrawingChanged;
 
   @override
   State<InlineQuestionScratch> createState() => _InlineQuestionScratchState();
@@ -29,6 +46,18 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
   final GlobalKey _canvasKey = GlobalKey();
   bool _drawing = false;
   double _strokeWidth = _PenWidth.medium.width;
+
+  @override
+  void didUpdateWidget(covariant InlineQuestionScratch oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (!widget.active && _drawing) _drawing = false;
+  }
+
+  void _setDrawing(bool drawing, {bool notify = true}) {
+    if (_drawing == drawing) return;
+    setState(() => _drawing = drawing);
+    if (notify) widget.onDrawingChanged?.call(drawing);
+  }
 
   @override
   void dispose() {
@@ -66,14 +95,12 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
               toggled: _drawing,
               label: 'Draw directly on this question',
               child: InkResponse(
-                onTap: () => setState(() => _drawing = !_drawing),
+                onTap: widget.active ? () => _setDrawing(!_drawing) : null,
                 radius: 25,
                 child: AnimatedContainer(
-                  duration: MediaQuery.disableAnimationsOf(context)
-                      ? Duration.zero
-                      : const Duration(milliseconds: 160),
-                  width: 44,
-                  height: 44,
+                  duration: GaussMotion.resolve(context, GaussMotion.micro),
+                  width: GaussMetrics.minTouchTarget,
+                  height: GaussMetrics.minTouchTarget,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: _drawing
@@ -106,7 +133,7 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
               widget.child,
               Positioned.fill(
                 child: IgnorePointer(
-                  ignoring: !_drawing,
+                  ignoring: !_drawing || !widget.active,
                   child: MouseRegion(
                     cursor: SystemMouseCursors.precise,
                     child: GestureDetector(
@@ -133,10 +160,8 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
         ),
       ),
       AnimatedSwitcher(
-        duration: MediaQuery.disableAnimationsOf(context)
-            ? Duration.zero
-            : const Duration(milliseconds: 160),
-        child: _drawing
+        duration: GaussMotion.resolve(context, GaussMotion.micro),
+        child: _drawing && widget.active
             ? const Padding(
                 key: ValueKey('inline-scratch-hint'),
                 padding: EdgeInsets.only(top: 7),
@@ -182,95 +207,103 @@ class _ScratchpadSheetState extends State<_ScratchpadSheet> {
   }
 
   @override
-  Widget build(BuildContext context) => FractionallySizedBox(
-    heightFactor: .88,
-    child: Material(
-      color: GaussColors.ink,
-      borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
-      clipBehavior: Clip.antiAlias,
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(18, 12, 8, 10),
-            child: Row(
-              children: [
-                const Icon(Icons.edit_note, color: GaussColors.brassLight),
-                const SizedBox(width: 9),
-                Expanded(
-                  child: Text(
-                    'Scratchpad',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                ),
-                _PenWidthMenu(
-                  color: GaussColors.brassLight,
-                  value: _strokeWidth,
-                  onSelected: (value) => setState(() => _strokeWidth = value),
-                ),
-                AnimatedBuilder(
-                  animation: _ink,
-                  builder: (context, _) => IconButton(
-                    onPressed: _ink.isEmpty ? null : _ink.clear,
-                    tooltip: 'Clear scratchpad',
-                    icon: const Icon(Icons.delete_sweep_outlined),
-                  ),
-                ),
-                IconButton(
-                  onPressed: () => Navigator.pop(context),
-                  tooltip: 'Close scratchpad',
-                  icon: const Icon(Icons.close),
-                ),
-              ],
-            ),
-          ),
-          const Divider(height: 1),
-          Expanded(
-            child: Container(
-              margin: const EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                color: GaussColors.parchment,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              clipBehavior: Clip.antiAlias,
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  final size = Size(
-                    constraints.maxWidth,
-                    constraints.maxHeight,
-                  );
-                  return MouseRegion(
-                    cursor: SystemMouseCursors.precise,
-                    child: GestureDetector(
-                      behavior: HitTestBehavior.opaque,
-                      onPanStart: (details) =>
-                          _ink.begin(details.localPosition, size, _strokeWidth),
-                      onPanUpdate: (details) =>
-                          _ink.extend(details.localPosition, size),
-                      onPanEnd: (_) => _ink.end(),
-                      onPanCancel: _ink.end,
-                      child: CustomPaint(
-                        painter: _ScratchPainter(ink: _ink, drawGrid: true),
-                        size: size,
-                      ),
+  Widget build(BuildContext context) {
+    final window = GaussWindowClass.of(context);
+    return FractionallySizedBox(
+      widthFactor: 1,
+      heightFactor: window.isCompact ? .9 : .84,
+      child: Material(
+        key: const ValueKey('scratchpad-sheet'),
+        color: GaussColors.ink,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+        clipBehavior: Clip.antiAlias,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(18, 12, 8, 10),
+              child: Row(
+                children: [
+                  const Icon(Icons.edit_note, color: GaussColors.brassLight),
+                  const SizedBox(width: 9),
+                  Expanded(
+                    child: Text(
+                      'Scratchpad',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
-                  );
-                },
+                  ),
+                  _PenWidthMenu(
+                    color: GaussColors.brassLight,
+                    value: _strokeWidth,
+                    onSelected: (value) => setState(() => _strokeWidth = value),
+                  ),
+                  AnimatedBuilder(
+                    animation: _ink,
+                    builder: (context, _) => IconButton(
+                      onPressed: _ink.isEmpty ? null : _ink.clear,
+                      tooltip: 'Clear scratchpad',
+                      icon: const Icon(Icons.delete_sweep_outlined),
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () => Navigator.pop(context),
+                    tooltip: 'Close scratchpad',
+                    icon: const Icon(Icons.close),
+                  ),
+                ],
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(18, 0, 18, 16),
-            child: Text(
-              'This working sheet is temporary. Use the pen menu to change line weight.',
-              style: TextStyle(color: GaussColors.muted),
+            const Divider(height: 1),
+            Expanded(
+              child: Container(
+                margin: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  color: GaussColors.parchment,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final size = Size(
+                      constraints.maxWidth,
+                      constraints.maxHeight,
+                    );
+                    return MouseRegion(
+                      cursor: SystemMouseCursors.precise,
+                      child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onPanStart: (details) => _ink.begin(
+                          details.localPosition,
+                          size,
+                          _strokeWidth,
+                        ),
+                        onPanUpdate: (details) =>
+                            _ink.extend(details.localPosition, size),
+                        onPanEnd: (_) => _ink.end(),
+                        onPanCancel: _ink.end,
+                        child: CustomPaint(
+                          painter: _ScratchPainter(ink: _ink, drawGrid: true),
+                          size: size,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ),
-          ),
-        ],
+            const Padding(
+              padding: EdgeInsets.fromLTRB(18, 0, 18, 16),
+              child: Text(
+                'This working sheet is temporary. Use the pen menu to change line weight.',
+                style: TextStyle(color: GaussColors.muted),
+              ),
+            ),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 enum _PenWidth {

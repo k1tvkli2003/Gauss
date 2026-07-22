@@ -4,11 +4,13 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/gauss_brand.dart';
+import '../widgets/gauss_state_panel.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
@@ -22,6 +24,7 @@ class _MapScreenState extends State<MapScreen> {
   Subject _subject = Subject.math;
   String? _sectionId;
   String? _selectedNodeKey;
+  bool? _tourWasVisible;
 
   @override
   void didChangeDependencies() {
@@ -67,6 +70,12 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     final controller = GaussScope.of(context);
     if (controller.fatalError != null) return const _FatalDatasetView();
+    if (_tourWasVisible == true && !controller.needsTour) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _pathKey.currentState?.resetToStart();
+      });
+    }
+    _tourWasVisible = controller.needsTour;
     final sections = GaussStudyCurriculum.forSubject(_subject);
     final section = sections.firstWhere(
       (item) => item.id == _sectionId,
@@ -81,16 +90,24 @@ class _MapScreenState extends State<MapScreen> {
       (node) => node.key == _selectedNodeKey,
       orElse: () => nodes[effectiveCurrent],
     );
+    final mediaWidth = MediaQuery.sizeOf(context).width;
 
     return ColoredBox(
       color: GaussColors.abyss,
       child: Stack(
         fit: StackFit.expand,
         children: [
-          const _AstronomicalBackdrop(),
+          const RepaintBoundary(child: _AstronomicalBackdrop()),
           LayoutBuilder(
             builder: (context, constraints) {
-              final showInspector = constraints.maxWidth >= 1040;
+              final window = GaussWindowClass.fromWidth(
+                math.max(mediaWidth, constraints.maxWidth),
+              );
+              final showInspector = window.showsPersistentInspector;
+              final dockBottom = GaussMetrics.mapDockBottom(window);
+              final bottomObstruction = GaussMetrics.mapBottomObstruction(
+                window,
+              );
               return Row(
                 children: [
                   Expanded(
@@ -119,6 +136,7 @@ class _MapScreenState extends State<MapScreen> {
                                 nodes: nodes,
                                 currentIndex: effectiveCurrent,
                                 selectedKey: selected.key,
+                                bottomObstruction: bottomObstruction,
                                 onSelected: (node) =>
                                     _selectNode(controller, node),
                               ),
@@ -127,7 +145,11 @@ class _MapScreenState extends State<MapScreen> {
                         ),
                         PositionedDirectional(
                           end: 14,
-                          bottom: showInspector ? 18 : 176,
+                          bottom: showInspector
+                              ? 18
+                              : dockBottom +
+                                    GaussMetrics.mapDockHeight +
+                                    GaussMetrics.mapOverlayGap,
                           child: _JumpToCurrentButton(
                             onPressed: () => _pathKey.currentState?.jumpToNode(
                               effectiveCurrent,
@@ -138,7 +160,7 @@ class _MapScreenState extends State<MapScreen> {
                           PositionedDirectional(
                             start: 12,
                             end: 12,
-                            bottom: constraints.maxWidth < 760 ? 92 : 14,
+                            bottom: dockBottom,
                             child: _StudyDock(
                               node: selected,
                               snapshot: controller.study.shelf(selected.key),
@@ -150,7 +172,9 @@ class _MapScreenState extends State<MapScreen> {
                   ),
                   if (showInspector)
                     SizedBox(
-                      width: constraints.maxWidth >= 1380 ? 378 : 346,
+                      width: window.isWide
+                          ? GaussMetrics.mapWideInspectorWidth
+                          : GaussMetrics.mapInspectorWidth,
                       child: _StudyInspector(
                         section: section,
                         node: selected,
@@ -197,7 +221,7 @@ class _AstronomicalBackdrop extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xC407151C), Color(0xE8071115), Color(0xFA03090B)],
+            colors: [Color(0xA407151C), Color(0xD6071115), Color(0xF703090B)],
             stops: [0, .48, 1],
           ),
         ),
@@ -229,12 +253,25 @@ class _MapHeader extends StatelessWidget {
     padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
     child: _GlassFrame(
       radius: 22,
-      padding: const EdgeInsets.fromLTRB(14, 11, 14, 10),
+      padding: const EdgeInsets.fromLTRB(14, 11, 14, 11),
       child: LayoutBuilder(
         builder: (context, constraints) {
           final compact = constraints.maxWidth < 620;
+          final roomy = constraints.maxWidth >= 740;
           final largeText = MediaQuery.textScalerOf(context).scale(1) >= 1.75;
           final condensed = compact && largeText;
+          final sectionTotal = section.topicKeys.fold<int>(
+            0,
+            (sum, key) =>
+                sum +
+                controller.topics
+                    .firstWhere((topic) => topic.key == key)
+                    .questionCount,
+          );
+          final sectionReflected = section.topicKeys.fold<int>(
+            0,
+            (sum, key) => sum + controller.study.topic(key).reflected,
+          );
           return Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -243,17 +280,28 @@ class _MapHeader extends StatelessWidget {
                   if (condensed)
                     const TheoremStarMark(size: 36)
                   else
-                    GaussWordmark(width: compact ? 104 : 124),
+                    GaussWordmark(width: compact ? 96 : 124),
                   SizedBox(width: condensed ? 6 : 12),
-                  if (!compact)
+                  if (roomy)
                     const Expanded(
                       child: Text(
-                        'Chart what you are learning.',
+                        'ORBIT OF KNOWLEDGE',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          color: GaussColors.muted,
-                          fontSize: 11,
+                          color: GaussColors.fog,
+                          fontSize: GaussTypeScale.insignia,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1.1,
+                        ),
+                      ),
+                    )
+                  else if (compact)
+                    Expanded(
+                      child: Center(
+                        child: _MapProgressCrest(
+                          charted: sectionReflected,
+                          total: sectionTotal,
                         ),
                       ),
                     )
@@ -278,51 +326,356 @@ class _MapHeader extends StatelessWidget {
                     label: compact ? 'LVL' : 'LEVEL',
                     color: GaussColors.brassLight,
                   ),
-                  if (!compact) ...[
+                  if (roomy) ...[
                     const SizedBox(width: 7),
                     _HeaderMetric(
                       value: '${controller.gamification.totalXp}',
                       label: 'XP',
                       color: GaussColors.ivory,
                     ),
-                    const SizedBox(width: 7),
-                    _HeaderMetric(
-                      value: '${controller.studyDueCount}',
-                      label: 'DUE',
-                      color: GaussColors.warning,
-                    ),
                   ],
                 ],
               ),
               const SizedBox(height: 10),
-              SizedBox(
-                height: condensed ? 52 : 38,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: sections.length,
-                  separatorBuilder: (_, _) => const SizedBox(width: 7),
-                  itemBuilder: (context, index) {
-                    final item = sections[index];
-                    final selected = item.id == section.id;
-                    return Semantics(
-                      button: true,
-                      selected: selected,
-                      label: 'Section ${index + 1}. ${item.title}',
-                      child: ChoiceChip(
-                        selected: selected,
-                        onSelected: (_) => onSection(item),
-                        label: Text(
-                          '${index + 1} · ${item.title}',
-                          maxLines: 1,
-                        ),
-                      ),
-                    );
-                  },
-                ),
+              _OrbitSelector(
+                section: section,
+                sectionIndex: sections.indexOf(section) + 1,
+                sectionCount: sections.length,
+                reflected: sectionReflected,
+                total: sectionTotal,
+                compact: compact,
+                onPressed: () => _openSectionPicker(context),
               ),
             ],
           );
         },
+      ),
+    ),
+  );
+
+  Future<void> _openSectionPicker(BuildContext context) =>
+      showModalBottomSheet<void>(
+        context: context,
+        backgroundColor: Colors.transparent,
+        builder: (sheetContext) => _SectionPickerSheet(
+          sections: sections,
+          selected: section,
+          onSelected: (value) {
+            Navigator.of(sheetContext).pop();
+            onSection(value);
+          },
+        ),
+      );
+}
+
+class _OrbitSelector extends StatelessWidget {
+  const _OrbitSelector({
+    required this.section,
+    required this.sectionIndex,
+    required this.sectionCount,
+    required this.reflected,
+    required this.total,
+    required this.compact,
+    required this.onPressed,
+  });
+
+  final StudySectionDefinition section;
+  final int sectionIndex;
+  final int sectionCount;
+  final int reflected;
+  final int total;
+  final bool compact;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    button: true,
+    label:
+        'Current orbit $sectionIndex of $sectionCount. ${section.title}. $reflected of $total charted.',
+    hint: 'Double tap to choose another orbit.',
+    child: InkWell(
+      onTap: onPressed,
+      borderRadius: BorderRadius.circular(17),
+      child: Container(
+        constraints: const BoxConstraints(
+          minHeight: GaussMetrics.minTouchTarget,
+        ),
+        padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
+        decoration: BoxDecoration(
+          color: GaussColors.deepInk.withValues(alpha: .62),
+          borderRadius: BorderRadius.circular(17),
+          border: Border.all(color: GaussColors.brass.withValues(alpha: .34)),
+        ),
+        child: Row(
+          children: [
+            _OrbitIndexRing(value: sectionIndex),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    compact
+                        ? 'ORBIT $sectionIndex'
+                        : 'CURRENT ORBIT · $sectionIndex OF $sectionCount',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: GaussColors.brassLight,
+                      fontSize: GaussTypeScale.insignia,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: .85,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    section.title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: GaussColors.ivory,
+                      fontSize: compact ? 13 : 14,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 8),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  '$reflected / $total',
+                  style: const TextStyle(
+                    color: GaussColors.signalBright,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                const SizedBox(height: 1),
+                const Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  color: GaussColors.fog,
+                  size: 15,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+/// A deliberately compact, live progress crest for the phone HUD.  The
+/// theorem star remains the selected identity mark, while the reading beneath
+/// it is bound to the real local study state rather than baked into artwork.
+class _MapProgressCrest extends StatelessWidget {
+  const _MapProgressCrest({required this.charted, required this.total});
+
+  final int charted;
+  final int total;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    label: '$charted of $total questions charted',
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          width: 47,
+          height: 47,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: GaussColors.deepInk.withValues(alpha: .76),
+            border: Border.all(color: GaussColors.brass.withValues(alpha: .46)),
+            boxShadow: [
+              BoxShadow(
+                color: GaussColors.signal.withValues(alpha: .12),
+                blurRadius: 15,
+                spreadRadius: 2,
+              ),
+            ],
+          ),
+          child: const TheoremStarMark(size: 35),
+        ),
+        const SizedBox(height: 2),
+        Text(
+          '$charted / $total',
+          style: const TextStyle(
+            color: GaussColors.signalBright,
+            fontSize: 11,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+class _OrbitIndexRing extends StatelessWidget {
+  const _OrbitIndexRing({required this.value});
+
+  final int value;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: 40,
+    height: 40,
+    alignment: Alignment.center,
+    decoration: BoxDecoration(
+      shape: BoxShape.circle,
+      color: GaussColors.abyss.withValues(alpha: .8),
+      border: Border.all(
+        color: GaussColors.signalBright.withValues(alpha: .72),
+        width: 1.6,
+      ),
+      boxShadow: [
+        BoxShadow(
+          color: GaussColors.signalBright.withValues(alpha: .16),
+          blurRadius: 12,
+        ),
+      ],
+    ),
+    child: Text(
+      '$value',
+      style: const TextStyle(
+        color: GaussColors.ivory,
+        fontSize: 17,
+        fontWeight: FontWeight.w900,
+      ),
+    ),
+  );
+}
+
+class _SectionPickerSheet extends StatelessWidget {
+  const _SectionPickerSheet({
+    required this.sections,
+    required this.selected,
+    required this.onSelected,
+  });
+
+  final List<StudySectionDefinition> sections;
+  final StudySectionDefinition selected;
+  final ValueChanged<StudySectionDefinition> onSelected;
+
+  @override
+  Widget build(BuildContext context) => SafeArea(
+    top: false,
+    child: _GlassFrame(
+      radius: 28,
+      padding: const EdgeInsets.fromLTRB(18, 11, 18, 18),
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxHeight: 440),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Center(
+              child: Container(
+                width: 36,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: GaussColors.fog.withValues(alpha: .44),
+                  borderRadius: BorderRadius.circular(GaussRadii.pill),
+                ),
+              ),
+            ),
+            const SizedBox(height: 13),
+            const Text(
+              'CHOOSE AN ORBIT',
+              style: TextStyle(
+                color: GaussColors.brassLight,
+                fontSize: 10,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 1.1,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Flexible(
+              child: ListView.separated(
+                shrinkWrap: true,
+                itemCount: sections.length,
+                separatorBuilder: (_, _) => const SizedBox(height: 7),
+                itemBuilder: (context, index) {
+                  final item = sections[index];
+                  final isSelected = item.id == selected.id;
+                  return Semantics(
+                    button: true,
+                    selected: isSelected,
+                    label: 'Orbit ${index + 1}. ${item.title}',
+                    child: InkWell(
+                      onTap: () => onSelected(item),
+                      borderRadius: BorderRadius.circular(16),
+                      child: Container(
+                        constraints: const BoxConstraints(minHeight: 58),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 13,
+                          vertical: 9,
+                        ),
+                        decoration: BoxDecoration(
+                          color: isSelected
+                              ? GaussColors.brass.withValues(alpha: .13)
+                              : GaussColors.deepInk.withValues(alpha: .54),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: isSelected
+                                ? GaussColors.brass
+                                : GaussColors.hairline,
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            _OrbitIndexRing(value: index + 1),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    item.title,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                      color: GaussColors.ivory,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 2),
+                                  Text(
+                                    item.subtitle,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                      color: GaussColors.muted,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            if (isSelected)
+                              const Icon(
+                                Icons.check_circle_rounded,
+                                color: GaussColors.signalBright,
+                                size: 22,
+                              ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     ),
   );
@@ -387,7 +740,10 @@ class _SubjectButton extends StatelessWidget {
         duration: MediaQuery.disableAnimationsOf(context)
             ? Duration.zero
             : const Duration(milliseconds: 170),
-        constraints: const BoxConstraints(minWidth: 44, minHeight: 36),
+        constraints: const BoxConstraints(
+          minWidth: GaussMetrics.minTouchTarget,
+          minHeight: GaussMetrics.minTouchTarget,
+        ),
         alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
@@ -425,7 +781,10 @@ class _HeaderMetric extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-    constraints: const BoxConstraints(minWidth: 54, minHeight: 44),
+    constraints: const BoxConstraints(
+      minWidth: 54,
+      minHeight: GaussMetrics.minTouchTarget,
+    ),
     padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
     decoration: BoxDecoration(
       color: GaussColors.abyss.withValues(alpha: .56),
@@ -447,7 +806,7 @@ class _HeaderMetric extends StatelessWidget {
           label,
           style: const TextStyle(
             color: GaussColors.fog,
-            fontSize: 7,
+            fontSize: GaussTypeScale.insignia,
             fontWeight: FontWeight.w900,
             letterSpacing: .7,
           ),
@@ -464,6 +823,7 @@ class _StudyPathStage extends StatefulWidget {
     required this.nodes,
     required this.currentIndex,
     required this.selectedKey,
+    required this.bottomObstruction,
     required this.onSelected,
     super.key,
   });
@@ -473,6 +833,7 @@ class _StudyPathStage extends StatefulWidget {
   final List<StudyPathNode> nodes;
   final int currentIndex;
   final String selectedKey;
+  final double bottomObstruction;
   final ValueChanged<StudyPathNode> onSelected;
 
   @override
@@ -502,7 +863,11 @@ class _StudyPathStageState extends State<_StudyPathStage> {
   void jumpToNode(int index) {
     if (!_scrollController.hasClients || _nodeY.isEmpty) return;
     final safe = index.clamp(0, _nodeY.length - 1);
-    final target = (_nodeY[safe] - 180).clamp(
+    final visibleHeight = math.max(
+      160.0,
+      _scrollController.position.viewportDimension - widget.bottomObstruction,
+    );
+    final target = (_nodeY[safe] - visibleHeight / 2).clamp(
       0.0,
       _scrollController.position.maxScrollExtent,
     );
@@ -515,6 +880,13 @@ class _StudyPathStageState extends State<_StudyPathStage> {
     );
   }
 
+  /// The path is the first meaningful visual after first-run onboarding.  A
+  /// focus transfer from the dismissed overlay must never strand that first
+  /// frame at a lower study set.
+  void resetToStart() {
+    if (_scrollController.hasClients) _scrollController.jumpTo(0);
+  }
+
   @override
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
@@ -523,34 +895,25 @@ class _StudyPathStageState extends State<_StudyPathStage> {
         nodes: widget.nodes,
       );
       _nodeY = geometry.positions.map((position) => position.dy).toList();
-      final sectionReflected = widget.nodes.fold<int>(
-        0,
-        (sum, node) => sum + widget.controller.study.shelf(node.key).reflected,
-      );
-      final sectionTotal = widget.nodes.fold<int>(
-        0,
-        (sum, node) => sum + node.questionCount,
-      );
       return SingleChildScrollView(
         controller: _scrollController,
-        padding: const EdgeInsets.only(bottom: 190),
+        padding: EdgeInsets.only(
+          bottom: widget.bottomObstruction + GaussSpacing.space32,
+        ),
         child: SizedBox(
           width: constraints.maxWidth,
           height: geometry.height,
           child: Stack(
             clipBehavior: Clip.hardEdge,
             children: [
-              const Positioned.fill(
-                child: CustomPaint(painter: _StageInstrumentPainter()),
-              ),
-              PositionedDirectional(
-                start: 18,
-                end: 18,
-                top: 12,
-                child: _SectionBanner(
-                  section: widget.section,
-                  reflected: sectionReflected,
-                  total: sectionTotal,
+              Positioned.fill(
+                child: RepaintBoundary(
+                  child: CustomPaint(
+                    painter: _StageInstrumentPainter(
+                      current: geometry.positions[widget.currentIndex],
+                      nodeSize: geometry.nodeSize,
+                    ),
+                  ),
                 ),
               ),
               Positioned.fill(
@@ -562,24 +925,26 @@ class _StudyPathStageState extends State<_StudyPathStage> {
                         widget.controller.study.shelf(node.key).reflected >=
                             node.questionCount,
                     ],
+                    currentIndex: widget.currentIndex,
                   ),
                 ),
               ),
               for (final landmark in geometry.landmarks)
                 _PathLandmark(landmark: landmark),
-              for (final header in geometry.unitHeaders)
-                Positioned(
-                  left: 18,
-                  right: 18,
-                  top: header.y,
-                  child: _UnitBanner(
-                    topic: header.topic,
-                    unitNumber: header.unitNumber,
-                    reflected: widget.controller.study
-                        .topic(header.topic.key)
-                        .reflected,
+              if (constraints.maxWidth >= 560)
+                for (final header in geometry.unitHeaders)
+                  Positioned(
+                    left: 18,
+                    right: 18,
+                    top: header.y,
+                    child: _UnitBanner(
+                      topic: header.topic,
+                      unitNumber: header.unitNumber,
+                      reflected: widget.controller.study
+                          .topic(header.topic.key)
+                          .reflected,
+                    ),
                   ),
-                ),
               for (var index = 0; index < widget.nodes.length; index++)
                 Positioned(
                   left: geometry.positions[index].dx - geometry.nodeSize / 2,
@@ -594,6 +959,17 @@ class _StudyPathStageState extends State<_StudyPathStage> {
                     selected: widget.nodes[index].key == widget.selectedKey,
                     onPressed: () => widget.onSelected(widget.nodes[index]),
                   ),
+                ),
+              for (var index = 0; index < widget.nodes.length; index++)
+                _PathNodeLabel(
+                  node: widget.nodes[index],
+                  snapshot: widget.controller.study.shelf(
+                    widget.nodes[index].key,
+                  ),
+                  position: geometry.positions[index],
+                  nodeSize: geometry.nodeSize,
+                  stageWidth: constraints.maxWidth,
+                  isCurrent: index == widget.currentIndex,
                 ),
             ],
           ),
@@ -677,7 +1053,7 @@ class _PathGeometry {
             : 12.0;
         final landmarkSize = openingLandmark
             ? compact
-                  ? 112.0
+                  ? 168.0
                   : expanded
                   ? 210.0
                   : 168.0
@@ -699,7 +1075,7 @@ class _PathGeometry {
         );
       }
       y += compact
-          ? 114
+          ? 106
           : expanded
           ? 128
           : 122;
@@ -742,68 +1118,6 @@ class _LandmarkGeometry {
   final int kind;
 }
 
-class _SectionBanner extends StatelessWidget {
-  const _SectionBanner({
-    required this.section,
-    required this.reflected,
-    required this.total,
-  });
-
-  final StudySectionDefinition section;
-  final int reflected;
-  final int total;
-
-  @override
-  Widget build(BuildContext context) => Center(
-    child: ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 760),
-      child: _GlassFrame(
-        radius: 20,
-        padding: const EdgeInsets.fromLTRB(16, 13, 16, 12),
-        child: Row(
-          children: [
-            const TheoremStarMark(size: 38),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    section.title,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    section.subtitle,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: GaussColors.muted,
-                      fontSize: 10.5,
-                      height: 1.25,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(width: 12),
-            Text(
-              '$reflected / $total',
-              style: const TextStyle(
-                color: GaussColors.signalBright,
-                fontWeight: FontWeight.w900,
-                fontSize: 12,
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-  );
-}
-
 class _UnitBanner extends StatelessWidget {
   const _UnitBanner({
     required this.topic,
@@ -832,7 +1146,7 @@ class _UnitBanner extends StatelessWidget {
               'UNIT $unitNumber',
               style: const TextStyle(
                 color: GaussColors.brassLight,
-                fontSize: 9,
+                fontSize: GaussTypeScale.insignia,
                 fontWeight: FontWeight.w900,
                 letterSpacing: .9,
               ),
@@ -856,7 +1170,10 @@ class _UnitBanner extends StatelessWidget {
             const SizedBox(width: 8),
             Text(
               '$reflected / ${topic.questionCount}',
-              style: const TextStyle(color: GaussColors.fog, fontSize: 9.5),
+              style: const TextStyle(
+                color: GaussColors.fog,
+                fontSize: GaussTypeScale.insignia,
+              ),
             ),
           ],
         ),
@@ -937,7 +1254,7 @@ class _PathLandmark extends StatelessWidget {
                         'THEOREM ENGINE',
                         style: TextStyle(
                           color: GaussColors.brassLight,
-                          fontSize: 7.5,
+                          fontSize: GaussTypeScale.insignia,
                           fontWeight: FontWeight.w900,
                           letterSpacing: .85,
                         ),
@@ -957,7 +1274,13 @@ class _PathLandmark extends StatelessWidget {
 /// authored astronomical depth as the accepted direction without turning the
 /// continuous learning route back into a set of disconnected orbit menus.
 class _StageInstrumentPainter extends CustomPainter {
-  const _StageInstrumentPainter();
+  const _StageInstrumentPainter({
+    required this.current,
+    required this.nodeSize,
+  });
+
+  final Offset current;
+  final double nodeSize;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -1019,10 +1342,120 @@ class _StageInstrumentPainter extends CustomPainter {
           ..color = GaussColors.signalBright.withValues(alpha: .12),
       );
     }
+    final focusPaint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+    final focusRect = Rect.fromCircle(center: current, radius: nodeSize * .71);
+    focusPaint
+      ..strokeWidth = 1.3
+      ..color = GaussColors.signalBright.withValues(alpha: .34);
+    canvas.drawArc(focusRect, -.3, math.pi * .72, false, focusPaint);
+    focusPaint
+      ..strokeWidth = 1
+      ..color = GaussColors.brassLight.withValues(alpha: .26);
+    canvas.drawArc(
+      focusRect.inflate(nodeSize * .12),
+      math.pi * .84,
+      math.pi * .62,
+      false,
+      focusPaint,
+    );
+    canvas.drawCircle(
+      current,
+      nodeSize * .92,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = .8
+        ..color = GaussColors.brass.withValues(alpha: .13),
+    );
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+
+/// The reference route keeps the names attached to their instruments, instead
+/// of making people infer every destination from an icon.  This stays live so
+/// Persian curriculum labels and real local progress never get frozen into a
+/// decorative map image.
+class _PathNodeLabel extends StatelessWidget {
+  const _PathNodeLabel({
+    required this.node,
+    required this.snapshot,
+    required this.position,
+    required this.nodeSize,
+    required this.stageWidth,
+    required this.isCurrent,
+  });
+
+  final StudyPathNode node;
+  final StudyTopicSnapshot snapshot;
+  final Offset position;
+  final double nodeSize;
+  final double stageWidth;
+  final bool isCurrent;
+
+  @override
+  Widget build(BuildContext context) {
+    final compact = stageWidth < 560;
+    final width = compact ? 112.0 : 142.0;
+    final rightPreferred =
+        position.dx + nodeSize * .57 + width <= stageWidth - 5;
+    final left = rightPreferred
+        ? position.dx + nodeSize * .57
+        : math.max(5.0, position.dx - nodeSize * .57 - width);
+    final title = node.beginsUnit ? node.topic.label : node.setLabel;
+    return Positioned(
+      left: left,
+      top: position.dy - (compact ? 20 : 24),
+      width: width,
+      child: ExcludeSemantics(
+        child: IgnorePointer(
+          child: AnimatedOpacity(
+            duration: MediaQuery.disableAnimationsOf(context)
+                ? Duration.zero
+                : const Duration(milliseconds: 180),
+            opacity: isCurrent ? 1 : .9,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Text(
+                    title,
+                    maxLines: compact ? 2 : 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: isCurrent ? GaussColors.ivory : GaussColors.fog,
+                      fontSize: compact ? 12 : 13.5,
+                      height: 1.18,
+                      fontWeight: isCurrent ? FontWeight.w900 : FontWeight.w700,
+                      shadows: const [
+                        Shadow(color: Color(0xE8000000), blurRadius: 6),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  '${snapshot.reflected} / ${node.questionCount}',
+                  style: TextStyle(
+                    color: isCurrent
+                        ? GaussColors.signalBright
+                        : GaussColors.signal.withValues(alpha: .86),
+                    fontSize: compact ? 10 : 11,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: .25,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _StudyNode extends StatelessWidget {
@@ -1076,18 +1509,11 @@ class _StudyNode extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 if (current || selected)
-                  Container(
-                    width: size * .76,
-                    height: size * .76,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: accent.withValues(alpha: .38),
-                          blurRadius: 24,
-                          spreadRadius: 2,
-                        ),
-                      ],
+                  CustomPaint(
+                    size: Size.square(size * 1.18),
+                    painter: _CurrentNodeAuraPainter(
+                      accent: accent,
+                      selected: selected,
                     ),
                   ),
                 Image.asset(
@@ -1197,6 +1623,48 @@ class _NodeProgressPainter extends CustomPainter {
       oldDelegate.emphasized != emphasized;
 }
 
+class _CurrentNodeAuraPainter extends CustomPainter {
+  const _CurrentNodeAuraPainter({required this.accent, required this.selected});
+
+  final Color accent;
+  final bool selected;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = size.center(Offset.zero);
+    final ring = Rect.fromCircle(center: center, radius: size.width * .41);
+    final outer = Rect.fromCircle(center: center, radius: size.width * .48);
+    final glow = Paint()
+      ..color = accent.withValues(alpha: selected ? .2 : .15)
+      ..maskFilter = const ui.MaskFilter.blur(ui.BlurStyle.normal, 12);
+    canvas.drawCircle(center, size.width * .34, glow);
+    final arc = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round
+      ..strokeWidth = 2.1
+      ..color = accent.withValues(alpha: .82);
+    canvas.drawArc(ring, -.95, math.pi * .46, false, arc);
+    canvas.drawArc(ring, math.pi * .78, math.pi * .36, false, arc);
+    arc
+      ..strokeWidth = 1
+      ..color = GaussColors.brassLight.withValues(alpha: .48);
+    canvas.drawArc(outer, .1, math.pi * .28, false, arc);
+    canvas.drawArc(outer, math.pi * 1.18, math.pi * .22, false, arc);
+    for (var index = 0; index < 4; index++) {
+      final angle = -.95 + index * math.pi * .5;
+      canvas.drawCircle(
+        center + Offset(math.cos(angle), math.sin(angle)) * size.width * .48,
+        1.6,
+        Paint()..color = GaussColors.brassLight.withValues(alpha: .7),
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _CurrentNodeAuraPainter oldDelegate) =>
+      oldDelegate.accent != accent || oldDelegate.selected != selected;
+}
+
 class _NodeNumber extends StatelessWidget {
   const _NodeNumber({required this.value});
 
@@ -1216,7 +1684,7 @@ class _NodeNumber extends StatelessWidget {
       '$value',
       style: const TextStyle(
         color: GaussColors.ivory,
-        fontSize: 9,
+        fontSize: GaussTypeScale.insignia,
         fontWeight: FontWeight.w900,
       ),
     ),
@@ -1247,10 +1715,12 @@ class _ContinuousPathPainter extends CustomPainter {
   const _ContinuousPathPainter({
     required this.positions,
     required this.completed,
+    required this.currentIndex,
   });
 
   final List<Offset> positions;
   final List<bool> completed;
+  final int currentIndex;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -1273,20 +1743,22 @@ class _ContinuousPathPainter extends CustomPainter {
       path,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 5.4
+        ..strokeWidth = 8.4
         ..strokeCap = StrokeCap.round
-        ..color = const Color(0xB8050B0D),
+        ..color = const Color(0xC803090B),
     );
     canvas.drawPath(
       path,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.5
+        ..strokeWidth = 2.1
         ..strokeCap = StrokeCap.round
-        ..color = GaussColors.brass.withValues(alpha: .38),
+        ..color = GaussColors.brass.withValues(alpha: .46),
     );
     for (var index = 0; index < positions.length - 1; index++) {
-      if (!completed[index]) continue;
+      final isComplete = completed[index];
+      final isCurrentLead = index == currentIndex;
+      if (!isComplete && !isCurrentLead) continue;
       final segment = Path()..moveTo(positions[index].dx, positions[index].dy);
       final next = positions[index + 1];
       final middleY = (positions[index].dy + next.dy) / 2;
@@ -1302,16 +1774,45 @@ class _ContinuousPathPainter extends CustomPainter {
         segment,
         Paint()
           ..style = PaintingStyle.stroke
-          ..strokeWidth = 3
+          ..strokeWidth = isCurrentLead ? 12 : 8
           ..strokeCap = StrokeCap.round
-          ..color = GaussColors.signalBright.withValues(alpha: .72),
+          ..maskFilter = const ui.MaskFilter.blur(ui.BlurStyle.normal, 7)
+          ..color =
+              (isCurrentLead ? GaussColors.brassLight : GaussColors.signal)
+                  .withValues(alpha: isCurrentLead ? .25 : .14),
       );
+      canvas.drawPath(
+        segment,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = isCurrentLead ? 4.6 : 3.4
+          ..strokeCap = StrokeCap.round
+          ..color =
+              (isCurrentLead
+                      ? GaussColors.brassLight
+                      : GaussColors.signalBright)
+                  .withValues(alpha: isCurrentLead ? .86 : .74),
+      );
+      if (isCurrentLead) {
+        for (var marker = 1; marker <= 3; marker++) {
+          final t = marker / 4;
+          final y = positions[index].dy + (next.dy - positions[index].dy) * t;
+          final x = positions[index].dx + (next.dx - positions[index].dx) * t;
+          canvas.drawCircle(
+            Offset(x, y),
+            2.1,
+            Paint()..color = GaussColors.brassLight.withValues(alpha: .82),
+          );
+        }
+      }
     }
   }
 
   @override
   bool shouldRepaint(covariant _ContinuousPathPainter oldDelegate) =>
-      oldDelegate.positions != positions || oldDelegate.completed != completed;
+      oldDelegate.positions != positions ||
+      oldDelegate.completed != completed ||
+      oldDelegate.currentIndex != currentIndex;
 }
 
 class _StudyDock extends StatelessWidget {
@@ -1458,7 +1959,7 @@ class _StudyInspector extends StatelessWidget {
                           'UNIT · ${node.setLabel.toUpperCase()}',
                           style: const TextStyle(
                             color: GaussColors.fog,
-                            fontSize: 9,
+                            fontSize: GaussTypeScale.insignia,
                             fontWeight: FontWeight.w900,
                             letterSpacing: .8,
                           ),
@@ -1507,7 +2008,7 @@ class _StudyInspector extends StatelessWidget {
                       'STUDY LENS',
                       style: TextStyle(
                         color: GaussColors.brassLight,
-                        fontSize: 9,
+                        fontSize: GaussTypeScale.insignia,
                         fontWeight: FontWeight.w900,
                         letterSpacing: 1,
                       ),
@@ -1772,34 +2273,12 @@ class _FatalDatasetView extends StatelessWidget {
     fit: StackFit.expand,
     children: [
       const _AstronomicalBackdrop(),
-      Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 520),
-          child: Padding(
-            padding: const EdgeInsets.all(24),
-            child: _GlassFrame(
-              padding: const EdgeInsets.all(28),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const TheoremStarMark(size: 62, monochrome: true),
-                  const SizedBox(height: 18),
-                  Text(
-                    'The observatory could not verify its library.',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'No questions or field notes were reset. Reopen Gauss to try the local integrity check again.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: GaussColors.muted),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+      const GaussStatePanel(
+        title: 'The observatory could not verify its library',
+        detail:
+            'No questions or field notes were reset. Reopen Gauss to try the local integrity check again.',
+        icon: Icons.folder_off_outlined,
+        accent: GaussColors.error,
       ),
     ],
   );

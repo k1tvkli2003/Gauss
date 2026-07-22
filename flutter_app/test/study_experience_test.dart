@@ -9,6 +9,7 @@ import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/screens/archive_screen.dart';
+import 'package:gauss/screens/backup_screen.dart';
 import 'package:gauss/screens/insights_screen.dart';
 import 'package:gauss/screens/practice_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
@@ -57,6 +58,42 @@ void main() {
     await tester.pump(const Duration(milliseconds: 220));
 
     expect(find.text('4 focused sections'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('study modes stack, pair, and row out by window class', (
+    tester,
+  ) async {
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    const labels = ['Revisit orbit', 'Gem shelf', 'Scratchpad', 'Path atlas'];
+
+    Future<List<Offset>> centersAt(Size size) async {
+      await tester.binding.setSurfaceSize(size);
+      await tester.pumpWidget(
+        _TestSurface(controller: controller, child: const PracticeScreen()),
+      );
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 60));
+      return [
+        for (final label in labels)
+          tester.getCenter(find.byKey(ValueKey('study-mode-$label'))),
+      ];
+    }
+
+    final phone = await centersAt(const Size(411, 900));
+    expect(phone[1].dy, greaterThan(phone[0].dy + 40), reason: '$phone');
+    expect(phone[2].dy, greaterThan(phone[1].dy + 40), reason: '$phone');
+
+    final tablet = await centersAt(const Size(800, 900));
+    expect(tablet[1].dy, closeTo(tablet[0].dy, 1));
+    expect(tablet[3].dy, closeTo(tablet[2].dy, 1));
+    expect(tablet[2].dy, greaterThan(tablet[0].dy + 40));
+
+    final desktop = await centersAt(const Size(1180, 900));
+    expect(
+      desktop.every((point) => (point.dy - desktop.first.dy).abs() < 1),
+      isTrue,
+    );
     expect(tester.takeException(), isNull);
   });
 
@@ -119,6 +156,124 @@ void main() {
     expect(tester.widget<IconButton>(clearFinder).onPressed, isNull);
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets(
+    'study-room ink suspends horizontal paging while the pen is active',
+    (tester) async {
+      await _setPhoneSurface(tester);
+      final topic = controller.topics.first;
+      await tester.pumpWidget(
+        _TestSurface(
+          controller: controller,
+          child: ArchiveScreen(topicKey: topic.key, count: 20),
+        ),
+      );
+      await _pumpUntil(tester, find.text('STUDY ROOM'));
+
+      PageView pages() => tester.widget<PageView>(
+        find.byKey(const ValueKey('study-room-pages')),
+      );
+
+      expect(pages().physics, isA<PageScrollPhysics>());
+      final pen = find.byTooltip('Draw on this question');
+      final target = tester.getSize(pen);
+      expect(target.width, greaterThanOrEqualTo(48));
+      expect(target.height, greaterThanOrEqualTo(48));
+
+      await tester.tap(pen);
+      await tester.pump(const Duration(milliseconds: 160));
+      expect(pages().physics, isA<NeverScrollableScrollPhysics>());
+
+      await tester.tap(find.byTooltip('Stop drawing'));
+      await tester.pump(const Duration(milliseconds: 160));
+      expect(pages().physics, isA<PageScrollPhysics>());
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'study room changes from a single flow to a split workspace at 840dp',
+    (tester) async {
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final topic = controller.topics.first;
+
+      await tester.binding.setSurfaceSize(const Size(839, 900));
+      await tester.pumpWidget(
+        _TestSurface(
+          controller: controller,
+          child: ArchiveScreen(topicKey: topic.key, count: 20),
+        ),
+      );
+      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      expect(
+        find.byKey(const ValueKey('study-room-single-pane')),
+        findsOneWidget,
+      );
+      expect(find.byKey(const ValueKey('study-room-split-pane')), findsNothing);
+
+      await tester.binding.setSurfaceSize(const Size(840, 900));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 60));
+      expect(
+        find.byKey(const ValueKey('study-room-single-pane')),
+        findsNothing,
+      );
+      expect(
+        find.byKey(const ValueKey('study-room-split-pane')),
+        findsOneWidget,
+      );
+      expect(
+        find.byKey(const ValueKey('study-room-prompt-scroll')),
+        findsOneWidget,
+      );
+      expect(
+        find.byKey(const ValueKey('study-room-response-scroll')),
+        findsOneWidget,
+      );
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'scratchpad is full-width on phone and bounded on larger screens',
+    (tester) async {
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+
+      Future<Size> openAt(Size size) async {
+        await tester.binding.setSurfaceSize(size);
+        await tester.pumpWidget(
+          MaterialApp(
+            theme: buildGaussTheme(),
+            home: Builder(
+              builder: (context) => Scaffold(
+                body: Center(
+                  child: FilledButton(
+                    onPressed: () => showScratchpad(context),
+                    child: const Text('Open sheet'),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+        await tester.tap(find.text('Open sheet'));
+        await tester.pumpAndSettle();
+        final sheet = tester.getSize(
+          find.byKey(const ValueKey('scratchpad-sheet')),
+        );
+        await tester.tap(find.byTooltip('Close scratchpad'));
+        await tester.pumpAndSettle();
+        return sheet;
+      }
+
+      final phone = await openAt(const Size(390, 820));
+      expect(phone.width, 390);
+      final tablet = await openAt(const Size(1200, 900));
+      expect(tablet.width, lessThanOrEqualTo(820));
+      expect(tablet.width, greaterThanOrEqualTo(760));
+      expect(tester.takeException(), isNull);
+    },
+  );
 
   testWidgets('study room persists a revisit reflection without scoring', (
     tester,
@@ -324,6 +479,119 @@ void main() {
     }
   });
 
+  testWidgets('insight metrics become one glanceable row on tablet', (
+    tester,
+  ) async {
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.binding.setSurfaceSize(const Size(800, 900));
+    await tester.pumpWidget(
+      _TestSurface(controller: controller, child: const InsightsScreen()),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 60));
+
+    final tabletRows = List.generate(
+      4,
+      (index) =>
+          tester.getTopLeft(find.byKey(ValueKey('insight-metric-$index'))).dy,
+    );
+    expect(tabletRows.every((y) => (y - tabletRows.first).abs() < 1), isTrue);
+
+    await tester.binding.setSurfaceSize(const Size(411, 820));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 60));
+    final phoneTop = tester
+        .getTopLeft(find.byKey(const ValueKey('insight-metric-0')))
+        .dy;
+    expect(
+      tester.getTopLeft(find.byKey(const ValueKey('insight-metric-1'))).dy,
+      closeTo(phoneTop, 1),
+    );
+    expect(
+      tester.getTopLeft(find.byKey(const ValueKey('insight-metric-2'))).dy,
+      greaterThan(phoneTop + 100),
+    );
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets(
+    'core study surfaces survive 200 percent text and reduced motion',
+    (tester) async {
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      for (final size in const [Size(411, 820), Size(1024, 800)]) {
+        await tester.binding.setSurfaceSize(size);
+        for (final surface in const <Widget>[
+          PracticeScreen(),
+          InsightsScreen(),
+        ]) {
+          await tester.pumpWidget(
+            _TestSurface(
+              controller: controller,
+              textScale: 2,
+              reducedMotion: true,
+              child: surface,
+            ),
+          );
+          await tester.pump();
+          await tester.pump(const Duration(milliseconds: 60));
+          expect(
+            tester.takeException(),
+            isNull,
+            reason: '${surface.runtimeType} overflowed at $size and 200% text',
+          );
+        }
+      }
+    },
+  );
+
+  testWidgets(
+    'study room and vault survive accessible phone and tablet layouts',
+    (tester) async {
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final topic = controller.topics.first;
+
+      await tester.binding.setSurfaceSize(const Size(411, 820));
+      await tester.pumpWidget(
+        _TestSurface(
+          controller: controller,
+          textScale: 2,
+          reducedMotion: true,
+          child: ArchiveScreen(topicKey: topic.key, count: 20),
+        ),
+      );
+      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      expect(tester.takeException(), isNull);
+
+      await tester.binding.setSurfaceSize(const Size(1024, 800));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 60));
+      expect(
+        find.byKey(const ValueKey('study-room-split-pane')),
+        findsOneWidget,
+      );
+      expect(tester.takeException(), isNull);
+
+      for (final size in const [Size(411, 820), Size(1024, 800)]) {
+        await tester.binding.setSurfaceSize(size);
+        await tester.pumpWidget(
+          _TestSurface(
+            controller: controller,
+            textScale: 2,
+            reducedMotion: true,
+            child: const BackupScreen(),
+          ),
+        );
+        await _pumpUntil(tester, find.text('Browser progress stays local'));
+        expect(
+          tester.takeException(),
+          isNull,
+          reason: 'Vault overflowed at $size and 200% text',
+        );
+      }
+    },
+  );
+
   testWidgets('completing a set opens the recap with its reward lines', (
     tester,
   ) async {
@@ -377,14 +645,28 @@ class _AlwaysOnStatusWidget extends StatusWidgetBridge {
 }
 
 class _TestSurface extends StatelessWidget {
-  const _TestSurface({required this.controller, required this.child});
+  const _TestSurface({
+    required this.controller,
+    required this.child,
+    this.textScale = 1,
+    this.reducedMotion = false,
+  });
 
   final GaussController controller;
   final Widget child;
+  final double textScale;
+  final bool reducedMotion;
 
   @override
   Widget build(BuildContext context) => MaterialApp(
     theme: buildGaussTheme(),
+    builder: (context, child) => MediaQuery(
+      data: MediaQuery.of(context).copyWith(
+        textScaler: TextScaler.linear(textScale),
+        disableAnimations: reducedMotion,
+      ),
+      child: child!,
+    ),
     home: GaussScope(
       controller: controller,
       child: Scaffold(body: child),
