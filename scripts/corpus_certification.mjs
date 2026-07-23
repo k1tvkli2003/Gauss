@@ -109,13 +109,15 @@ function trustedScreeningRuntime(attestation, batchId, outputFile) {
     attestation.model === "gpt-5.6-luna" &&
     attestation.reasoning === "medium" &&
     Boolean(attestation.thread_id);
+  const expectedTaskName = `/root/${batchId.replace("-", "_")}`;
   const hashBoundParallelWorker =
     attestation.observed_by === "codex_collaboration" &&
     attestation.tool === "spawn_agent" &&
     attestation.model === "gpt-5.6-terra" &&
     attestation.reasoning === "low" &&
     typeof attestation.task_name === "string" &&
-    attestation.task_name.endsWith(batchId.replace("-", "_")) &&
+    (attestation.task_name === expectedTaskName ||
+      attestation.task_name.startsWith(`${expectedTaskName}_retry`)) &&
     typeof attestation.output_sha256 === "string" &&
     fs.existsSync(outputFile) &&
     attestation.output_sha256 === digestFile(outputFile);

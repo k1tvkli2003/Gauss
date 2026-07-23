@@ -25,6 +25,10 @@ For every item:
 4. Apply the repository difficulty rubric. Score all six rubric dimensions and
    give a calibrated confidence from 0 to 1. Do not use `hard` merely because
    the source currently says `hard`.
+   Dimension ranges are strict: `prerequisite_breadth` 0–3,
+   `reasoning_depth` 0–4, `non_routine_insight` 0–4,
+   `representation_translation` 0–3, `computation_load` 0–3, and
+   `distractor_discrimination` 0–3.
 5. Flag truncated Persian, broken formulas, missing diagrams, unrelated
    solution text, placeholder copy, impossible/duplicate options, or any
    ambiguity. If essential media cannot be inspected, return `ambiguous`.

@@ -32,9 +32,16 @@
 | 2026-07-23T19:15:00+03:30 | active | Parallel screening batch 0020 checked 25 function records and all 4 media; 8 accepted, 14 repair, 3 ambiguous. | `logs/screening-0020.md` |
 | 2026-07-23T19:22:00+03:30 | active | Parallel screening batch 0021 checked 25 function records and all 5 media; 13 accepted, 11 repair, 1 ambiguous. | `logs/screening-0021.md` |
 | 2026-07-23T19:24:00+03:30 | active | Parallel screening batch 0022 checked 25 function records and all 16 media; 6 accepted, 18 repair, 1 ambiguous. | `logs/screening-0022.md` |
+| 2026-07-23T19:42:00+03:30 | active | Fresh blind rerun of batch 0023 checked 25 function records and all 22 media; 2 accepted, 12 repair, 11 ambiguous. | `logs/screening-0023.md` |
 | 2026-07-23T19:34:00+03:30 | active | Parallel screening batch 0024 checked 25 function records; 7 accepted, 8 repair, 10 ambiguous. | `logs/screening-0024.md` |
 | 2026-07-23T19:35:00+03:30 | active | Parallel screening batch 0025 checked 25 function records and all 11 media; 3 accepted, 22 repair. | `logs/screening-0025.md` |
 | 2026-07-23T19:36:00+03:30 | active | Parallel screening batch 0026 checked 25 function records and all 5 media; 9 accepted, 16 repair. | `logs/screening-0026.md` |
+| 2026-07-23T20:03:00+03:30 | active | Parallel screening batch 0027 checked 25 function records and both media; 19 repair, 6 ambiguous. | `logs/screening-0027.md` |
+| 2026-07-23T20:04:00+03:30 | active | Parallel screening batch 0028 checked 23 function records and all 32 media; 1 accepted, 22 repair. | `logs/screening-0028.md` |
+| 2026-07-23T20:06:00+03:30 | active | Parallel screening batch 0029 checked 25 function records and all 22 media; 8 accepted, 17 repair. | `logs/screening-0029.md` |
+| 2026-07-23T20:08:00+03:30 | active | Parallel screening batch 0030 checked 16 function records and all 28 media; 11 accepted, 5 repair. | `logs/screening-0030.md` |
+| 2026-07-23T20:10:00+03:30 | active | Parallel screening batch 0031 checked 25 trigonometry records and all 17 media; 17 repair, 8 ambiguous. | `logs/screening-0031.md` |
+| 2026-07-23T20:12:00+03:30 | active | Parallel screening batch 0032 checked 25 trigonometry records and all 28 media; 4 accepted, 8 repair, 13 ambiguous. | `logs/screening-0032.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -62,10 +69,16 @@
 - Screening 0020: 8 accepted, 14 needs repair, 3 ambiguous; cumulative 465 screened and 0 usable.
 - Screening 0021: 13 accepted, 11 needs repair, 1 ambiguous; cumulative 490 screened and 0 usable.
 - Screening 0022: 6 accepted, 18 needs repair, 1 ambiguous; cumulative 515 screened and 0 usable.
-- Screening 0023: first worker invalidated after accidental answer-field exposure; fresh blind rerun pending.
+- Screening 0023: first worker invalidated after accidental answer-field exposure; fresh blind rerun produced 2 accepted, 12 needs repair, 11 ambiguous.
 - Screening 0024: 7 accepted, 8 needs repair, 10 ambiguous.
 - Screening 0025: 3 accepted, 22 needs repair.
-- Screening 0026: 9 accepted, 16 needs repair; cumulative 590 screened and 0 usable.
+- Screening 0026: 9 accepted, 16 needs repair; cumulative 615 screened and 0 usable.
+- Screening 0027: 19 needs repair, 6 ambiguous.
+- Screening 0028: 1 accepted, 22 needs repair.
+- Screening 0029: 8 accepted, 17 needs repair.
+- Screening 0030: 11 accepted, 5 needs repair.
+- Screening 0031: 17 needs repair, 8 ambiguous.
+- Screening 0032: 4 accepted, 8 needs repair, 13 ambiguous; cumulative 754 screened and 0 usable.
 
 ## Next
 - Continue parallel subagent screening from batch 0021 while preserving
