@@ -32,6 +32,9 @@
 | 2026-07-23T19:15:00+03:30 | active | Parallel screening batch 0020 checked 25 function records and all 4 media; 8 accepted, 14 repair, 3 ambiguous. | `logs/screening-0020.md` |
 | 2026-07-23T19:22:00+03:30 | active | Parallel screening batch 0021 checked 25 function records and all 5 media; 13 accepted, 11 repair, 1 ambiguous. | `logs/screening-0021.md` |
 | 2026-07-23T19:24:00+03:30 | active | Parallel screening batch 0022 checked 25 function records and all 16 media; 6 accepted, 18 repair, 1 ambiguous. | `logs/screening-0022.md` |
+| 2026-07-23T19:34:00+03:30 | active | Parallel screening batch 0024 checked 25 function records; 7 accepted, 8 repair, 10 ambiguous. | `logs/screening-0024.md` |
+| 2026-07-23T19:35:00+03:30 | active | Parallel screening batch 0025 checked 25 function records and all 11 media; 3 accepted, 22 repair. | `logs/screening-0025.md` |
+| 2026-07-23T19:36:00+03:30 | active | Parallel screening batch 0026 checked 25 function records and all 5 media; 9 accepted, 16 repair. | `logs/screening-0026.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -59,6 +62,10 @@
 - Screening 0020: 8 accepted, 14 needs repair, 3 ambiguous; cumulative 465 screened and 0 usable.
 - Screening 0021: 13 accepted, 11 needs repair, 1 ambiguous; cumulative 490 screened and 0 usable.
 - Screening 0022: 6 accepted, 18 needs repair, 1 ambiguous; cumulative 515 screened and 0 usable.
+- Screening 0023: first worker invalidated after accidental answer-field exposure; fresh blind rerun pending.
+- Screening 0024: 7 accepted, 8 needs repair, 10 ambiguous.
+- Screening 0025: 3 accepted, 22 needs repair.
+- Screening 0026: 9 accepted, 16 needs repair; cumulative 590 screened and 0 usable.
 
 ## Next
 - Continue parallel subagent screening from batch 0021 while preserving

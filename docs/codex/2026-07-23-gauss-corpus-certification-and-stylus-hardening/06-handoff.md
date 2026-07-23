@@ -3,8 +3,8 @@
 ## Outcome
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
-هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0022،
-515 سؤال غربال شده و batchهای 0018 تا 0022 مطابق دستور جدید کاربر با
+هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0026
+به‌جز 0023، تعداد 590 سؤال غربال شده و batchهای موازی مطابق دستور جدید کاربر با
 ساب‌ایجنت‌های موازی و attestation وابسته به SHA-256 خروجی ادغام شده‌اند.
 
 ## Changed Artifacts
@@ -16,8 +16,9 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - renderer/stylus tests
 
 ## How To Continue
-- batchهای 0001 تا 0022 با attestation مستقل ادغام شده‌اند.
-- batch بعدی قابل ادغام `screening-0023` است؛ بررسی‌ها فقط در ساب‌ایجنت‌های ایزوله
+- batchهای 0001 تا 0022 و 0024 تا 0026 با attestation مستقل ادغام شده‌اند.
+- `screening-0023` به‌دلیل exposure گزارش‌شده توسط worker اول ادغام نشد و
+  fresh blind rerun آن در جریان است؛ بررسی‌ها فقط در ساب‌ایجنت‌های ایزوله
   انجام شوند و خروجی دقیقاً به attestation همان worker هش شود.
 - پس از هر merge، `validate` و `summarize` اجرا و batch بعدی از index انتخاب شود.
 
@@ -45,6 +46,9 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0020: 8 accepted، 14 needs repair، 3 ambiguous؛ چهار رسانه بررسی و graph/domain/formula mismatchها fail closed شدند.
 - screening 0021: 13 accepted، 11 needs repair، 1 ambiguous؛ پنج رسانه بررسی و crop/solution mismatchها قرنطینه شد.
 - screening 0022: 6 accepted، 18 needs repair، 1 ambiguous؛ شانزده رسانه بررسی و placeholder/condition/solution mismatchها قرنطینه شد.
+- screening 0024: 7 accepted، 8 needs repair، 10 ambiguous؛ assetهای blank/cropped/unrelated قرنطینه شد.
+- screening 0025: 3 accepted، 22 needs repair؛ یازده media crop و solution mismatchهای گسترده قرنطینه شد.
+- screening 0026: 9 accepted، 16 needs repair؛ پنج رسانه بررسی و formula/zero/solution mismatchها قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -52,5 +56,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 515 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 590 screened، 0 usable.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
