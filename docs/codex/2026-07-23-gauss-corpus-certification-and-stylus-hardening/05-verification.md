@@ -25,7 +25,8 @@
 | Luna screening 0012 | inspected blind batch + 24 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 9 accepted, 16 needs repair |
 | Luna screening 0013 | inspected blind batch + 32 original media; `merge-screening` | passed | 22 ordered/hash-bound rows; 22 needs repair |
 | Luna screening 0014 | inspected blind batch + 19 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 25 needs repair |
-| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 333 screened; 0 usable |
+| Luna screening 0015 | inspected blind batch + 9 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 25 needs repair |
+| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 358 screened; 0 usable |
 | Static analysis | `flutter analyze --fatal-infos` | passed | No issues found |
 | Full Flutter suite | `flutter test --no-pub --reporter compact` | passed | 94/94 |
 | Corpus TeX gate | full corpus parser test | passed | 3672 questions; 22032 text blocks; >37000 formulas |
