@@ -3,8 +3,8 @@
 ## Outcome
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
-هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. چهار batch نخست Luna Medium
-با 100 سؤال و 28 رسانه اجرا و ادغام شده‌اند.
+هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. پنج batch نخست Luna Medium
+با 125 سؤال و 29 رسانه اجرا و ادغام شده‌اند.
 
 ## Changed Artifacts
 - `data/certification/v1/`
@@ -15,8 +15,8 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - renderer/stylus tests
 
 ## How To Continue
-- batchهای 0001 تا 0004 با attestation مستقل ادغام شده‌اند.
-- batch بعدی `screening-0005` را دقیقاً با `LUNA_SCREENING_PROMPT.md` و یک
+- batchهای 0001 تا 0005 با attestation مستقل ادغام شده‌اند.
+- batch بعدی `screening-0006` را دقیقاً با `LUNA_SCREENING_PROMPT.md` و یک
   runtime attestation مستقل در همین thread اجرا کنید.
 - پس از هر merge، `validate` و `summarize` اجرا و batch بعدی از index انتخاب شود.
 
@@ -26,6 +26,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0002: 25 needs repair و 25 incomplete؛ خرابی غالب، راه‌حل‌های فصل/سؤال دیگر است.
 - screening 0003: 11 accepted، 13 needs repair، 1 ambiguous؛ خرابی غالب digit corruption و mismatch اندیس/رابطه است.
 - screening 0004: 18 accepted، 6 needs repair، 1 ambiguous؛ mismatch اندیس/نسبت و عبارت هدف ناقص قرنطینه شد.
+- screening 0005: 16 accepted و 9 needs repair؛ sign/power/expression mismatch و splice بین دو راه‌حل قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -33,5 +34,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 100 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 125 screened، 0 usable.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
