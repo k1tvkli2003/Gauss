@@ -12,7 +12,8 @@
 | Certification reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound; 0 usable |
 | Weighted sharding | `... shard --size=25 --max-weight=120` | passed | 179 batches; 0 cross-topic; max 120 |
 | Luna screening 0001 | inspected blind batch + 19 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 6 accepted, 17 needs repair, 2 ambiguous |
-| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 25 screened; 0 usable |
+| Luna screening 0002 | inspected blind batch + 6 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 25 needs repair |
+| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 50 screened; 0 usable |
 | Static analysis | `flutter analyze --fatal-infos` | passed | No issues found |
 | Full Flutter suite | `flutter test --no-pub --reporter compact` | passed | 94/94 |
 | Corpus TeX gate | full corpus parser test | passed | 3672 questions; 22032 text blocks; >37000 formulas |
@@ -34,4 +35,4 @@
 - 409 extraction blockers و سایر risk queues در `02-state.md`.
 - هیچ سؤال هنوز certification علمی کامل ندارد و نباید certified ادعا شود.
 - Jules source برای Gauss متصل نیست.
-- از batch 0001، تعداد 19 مورد به‌علت solution/media mismatch یا ابهام همچنان fail-closed هستند.
+- در دو batch نخست، 42 مورد needs repair و 2 مورد ambiguous هستند؛ هیچ‌کدام usable نشده‌اند.
