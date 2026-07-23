@@ -42,6 +42,9 @@
 | 2026-07-23T20:08:00+03:30 | active | Parallel screening batch 0030 checked 16 function records and all 28 media; 11 accepted, 5 repair. | `logs/screening-0030.md` |
 | 2026-07-23T20:10:00+03:30 | active | Parallel screening batch 0031 checked 25 trigonometry records and all 17 media; 17 repair, 8 ambiguous. | `logs/screening-0031.md` |
 | 2026-07-23T20:12:00+03:30 | active | Parallel screening batch 0032 checked 25 trigonometry records and all 28 media; 4 accepted, 8 repair, 13 ambiguous. | `logs/screening-0032.md` |
+| 2026-07-23T20:20:00+03:30 | active | Parallel screening batch 0033 checked 25 trigonometry records and all 26 media; 3 accepted, 13 repair, 9 ambiguous. | `logs/screening-0033.md` |
+| 2026-07-23T20:26:00+03:30 | active | Parallel screening batch 0034 checked 25 trigonometry records and all 4 media; 4 accepted, 21 repair. | `logs/screening-0034.md` |
+| 2026-07-23T20:23:00+03:30 | active | Parallel screening batch 0035 checked 25 trigonometry records and all 13 media; 2 accepted, 23 repair. | `logs/screening-0035.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -79,6 +82,9 @@
 - Screening 0030: 11 accepted, 5 needs repair.
 - Screening 0031: 17 needs repair, 8 ambiguous.
 - Screening 0032: 4 accepted, 8 needs repair, 13 ambiguous; cumulative 754 screened and 0 usable.
+- Screening 0033: 3 accepted, 13 needs repair, 9 ambiguous.
+- Screening 0034: 4 accepted, 21 needs repair.
+- Screening 0035: 2 accepted, 23 needs repair; cumulative 829 screened and 0 usable.
 
 ## Next
 - Continue parallel subagent screening from batch 0021 while preserving

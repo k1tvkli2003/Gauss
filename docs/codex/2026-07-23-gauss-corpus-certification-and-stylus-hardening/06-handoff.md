@@ -3,8 +3,8 @@
 ## Outcome
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
-هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0032
-تعداد 754 سؤال غربال شده و batchهای موازی مطابق دستور جدید کاربر با
+هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0035
+تعداد 829 سؤال غربال شده و batchهای موازی مطابق دستور جدید کاربر با
 ساب‌ایجنت‌های موازی و attestation وابسته به SHA-256 خروجی ادغام شده‌اند.
 
 ## Changed Artifacts
@@ -16,7 +16,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - renderer/stylus tests
 
 ## How To Continue
-- batchهای 0001 تا 0032 با attestation مستقل ادغام شده‌اند.
+- batchهای 0001 تا 0035 با attestation مستقل ادغام شده‌اند.
 - `screening-0023` پس از رد اجرای اول، با worker تازه و blind rerun ادغام شد؛
   بررسی‌ها فقط در ساب‌ایجنت‌های ایزوله
   انجام شوند و خروجی دقیقاً به attestation همان worker هش شود.
@@ -56,6 +56,9 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0030: 11 accepted، 5 needs repair؛ 28 رسانه بررسی و diagramهای misbound/missing قرنطینه شد.
 - screening 0031: 17 needs repair، 8 ambiguous؛ 17 رسانه بررسی و همه‌ی ردیف‌ها fail closed ماندند.
 - screening 0032: 4 accepted، 8 needs repair، 13 ambiguous؛ 28 رسانه بررسی شد.
+- screening 0033: 3 accepted، 13 needs repair، 9 ambiguous؛ 26 رسانه بررسی شد.
+- screening 0034: 4 accepted، 21 needs repair؛ چهار رسانه بررسی و crop/mismatch قرنطینه شد.
+- screening 0035: 2 accepted، 23 needs repair؛ 13 رسانه بررسی و placeholder/scan gaps قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -63,5 +66,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 754 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 829 screened، 0 usable.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
