@@ -29,10 +29,12 @@ unless it is independent, adversarially verified, and internally consistent.
   media hashes must match.
 - Mutation boundary: source shards and media are read-only. Repairs are proposed
   separately and never overwrite the preservation source silently.
-- Screening model: `gpt-5.6-luna`, reasoning `medium`, with prompt version and
-  externally observed Codex runtime attestation, prompt version, and review
-  evidence recorded per item. A model-name string inside model output is not
-  accepted as attestation.
+- Screening runtime: default quality profile `gpt-5.6-luna` / `medium` with an
+  externally observed Codex-app receipt. The user-authorized throughput profile
+  is an isolated `gpt-5.6-terra` / `low` subagent whose task identity and exact
+  output-file SHA-256 are recorded in a collaboration attestation. Prompt
+  version and result evidence remain recorded per item. A model-name string
+  inside model output is never accepted as attestation.
 - Correctness: a screening model cannot certify an answer. Independent solve
   and fresh-context verification are separate gates.
 
@@ -58,8 +60,9 @@ The following lanes stay separate:
 
 1. `source_fidelity`: transcription, option, diagram, printed key, and solution
    mapping to the original source.
-2. `screening`: Luna Medium checks extraction, taxonomy discovery, concepts,
-   and difficulty only; it never sees or certifies the source answer.
+2. `screening`: an attested screening runtime checks extraction, taxonomy
+   discovery, concepts, and difficulty only; it never sees or certifies the
+   source answer.
 3. `answer`: blind solve and fresh-context verification derive the effective
    answer.
 4. `solution`: two evidence-bearing reviewers check completeness and logic.
@@ -73,10 +76,10 @@ pass.
 
 ## Taxonomy workflow
 
-Luna first proposes subtopics and concepts. Proposals are clustered and
-reconciled, then a versioned registry is frozen. Only a second classification
-pass using registered IDs can mark taxonomy `reviewed`; free-form proposals
-never enter runtime directly.
+The screening lane first proposes subtopics and concepts. Proposals are
+clustered and reconciled, then a versioned registry is frozen. Only a second
+classification pass using registered IDs can mark taxonomy `reviewed`;
+free-form proposals never enter runtime directly.
 
 ## Difficulty rubric
 

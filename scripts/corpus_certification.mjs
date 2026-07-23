@@ -95,6 +95,33 @@ function digestFile(file) {
   return crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
 }
 
+function trustedScreeningRuntime(attestation, batchId, outputFile) {
+  if (
+    !attestation ||
+    !(attestation.batch_ids ?? []).includes(batchId) ||
+    !attestation.evidence_digest
+  ) {
+    return false;
+  }
+  const exactThreadLuna =
+    attestation.observed_by === "codex_app" &&
+    attestation.tool === "send_message_to_thread" &&
+    attestation.model === "gpt-5.6-luna" &&
+    attestation.reasoning === "medium" &&
+    Boolean(attestation.thread_id);
+  const hashBoundParallelWorker =
+    attestation.observed_by === "codex_collaboration" &&
+    attestation.tool === "spawn_agent" &&
+    attestation.model === "gpt-5.6-terra" &&
+    attestation.reasoning === "low" &&
+    typeof attestation.task_name === "string" &&
+    attestation.task_name.endsWith(batchId.replace("-", "_")) &&
+    typeof attestation.output_sha256 === "string" &&
+    fs.existsSync(outputFile) &&
+    attestation.output_sha256 === digestFile(outputFile);
+  return exactThreadLuna || hashBoundParallelWorker;
+}
+
 function loadSource() {
   const index = readJson(indexFile);
   const rows = [];
@@ -800,18 +827,23 @@ function validate() {
       const attestation = runtimeAttestationById.get(
         reviewer?.runtime_attestation_id,
       );
+      const screeningOutputFile = path.join(
+        screeningRoot,
+        `${reviewer?.batch_id}.output.jsonl`,
+      );
       if (
-        reviewer?.model !== "gpt-5.6-luna" ||
-        reviewer?.reasoning !== "medium" ||
+        reviewer?.model !== attestation?.model ||
+        reviewer?.reasoning !== attestation?.reasoning ||
         !reviewer?.prompt_version ||
         !reviewer?.reviewer_id ||
-        !attestation ||
-        attestation.model !== "gpt-5.6-luna" ||
-        attestation.reasoning !== "medium" ||
-        attestation.observed_by !== "codex_app"
+        !trustedScreeningRuntime(
+          attestation,
+          reviewer?.batch_id,
+          screeningOutputFile,
+        )
       ) {
         errors.push(
-          `${at} screening lacks externally observed gpt-5.6-luna/medium runtime provenance`,
+          `${at} screening lacks trusted runtime provenance`,
         );
       }
     }
@@ -1368,6 +1400,7 @@ function validateScreeningResult(result, inputItem, record, errors, at) {
 function mergeScreening() {
   const batchId = commandArgument("batch");
   const attestationId = commandArgument("attestation");
+  const reattest = process.argv.includes("--reattest");
   if (!batchId || !/^screening-\d{4}$/u.test(batchId)) {
     throw new Error("--batch must be a screening-NNNN batch ID.");
   }
@@ -1380,18 +1413,9 @@ function mergeScreening() {
   const output = readJsonLines(outputFile);
   const attestations = readJsonLines(runtimeAttestationFile);
   const attestation = attestations.find((entry) => entry.id === attestationId);
-  if (
-    !attestation ||
-    attestation.observed_by !== "codex_app" ||
-    attestation.tool !== "send_message_to_thread" ||
-    attestation.model !== "gpt-5.6-luna" ||
-    attestation.reasoning !== "medium" ||
-    !attestation.thread_id ||
-    !attestation.evidence_digest ||
-    !(attestation.batch_ids ?? []).includes(batchId)
-  ) {
+  if (!trustedScreeningRuntime(attestation, batchId, outputFile)) {
     throw new Error(
-      `Attestation ${attestationId} does not prove an observed Luna/medium run for ${batchId}.`,
+      `Attestation ${attestationId} does not prove a trusted screening runtime for ${batchId}.`,
     );
   }
   if (output.length !== input.items.length) {
@@ -1410,11 +1434,27 @@ function mergeScreening() {
       errors.push(`${at} has no certification record`);
       continue;
     }
-    if (record.screening.status !== "pending") {
-      errors.push(`${at} screening was already merged`);
-      continue;
-    }
     validateScreeningResult(result, inputItem, record, errors, at);
+    if (record.screening.status !== "pending") {
+      if (!reattest) {
+        errors.push(`${at} screening was already merged`);
+        continue;
+      }
+      if (
+        record.screening.status !== result.screening_status ||
+        record.extraction.status !== result.extraction_status ||
+        canonicalJson(record.taxonomy.proposed_subtopic) !==
+          canonicalJson(result.subtopic) ||
+        canonicalJson(record.taxonomy.proposed_concept_tags) !==
+          canonicalJson(result.concept_tags) ||
+        canonicalJson(record.difficulty.screened) !==
+          canonicalJson(result.difficulty) ||
+        canonicalJson(record.difficulty.dimensions) !==
+          canonicalJson(result.difficulty_dimensions)
+      ) {
+        errors.push(`${at} re-attestation would change screened findings`);
+      }
+    }
   }
   if (errors.length > 0) {
     throw new Error(
@@ -1430,8 +1470,8 @@ function mergeScreening() {
       status: result.screening_status,
       reviewer: {
         reviewer_id: `${attestation.id}:${record.question_id}`,
-        model: "gpt-5.6-luna",
-        reasoning: "medium",
+        model: attestation.model,
+        reasoning: attestation.reasoning,
         prompt_version: input.prompt_version,
         runtime_attestation_id: attestation.id,
         batch_id: batchId,
@@ -1462,7 +1502,7 @@ function mergeScreening() {
   console.log(
     JSON.stringify(
       {
-        merged_batch: batchId,
+        [reattest ? "reattested_batch" : "merged_batch"]: batchId,
         records: output.length,
         attestation: attestation.id,
         screening: countBy(output, (row) => row.screening_status),
@@ -1494,7 +1534,7 @@ try {
       break;
     default:
       console.error(
-        "Usage: node scripts/corpus_certification.mjs <baseline|validate|summarize|shard|merge-screening> [--size=25] [--max-weight=120] [--batch=screening-0001] [--attestation=id]",
+        "Usage: node scripts/corpus_certification.mjs <baseline|validate|summarize|shard|merge-screening> [--size=25] [--max-weight=120] [--batch=screening-0001] [--attestation=id] [--reattest]",
       );
       process.exitCode = 2;
   }

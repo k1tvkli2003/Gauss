@@ -27,6 +27,11 @@
 | 2026-07-23T18:49:00+03:30 | active | Screening batch 0015 checked 25 absolute-value/floor records and all 9 media; 25 repair. | `logs/screening-0015.md` |
 | 2026-07-23T18:56:00+03:30 | active | Screening batch 0016 checked 25 absolute-value/floor records and all 9 media; 25 repair. | `logs/screening-0016.md` |
 | 2026-07-23T19:03:00+03:30 | active | Screening batch 0017 checked 25 absolute-value/graph records and all 3 media; 25 repair. | `logs/screening-0017.md` |
+| 2026-07-23T19:10:00+03:30 | active | Parallel screening batch 0018 checked 25 records and all 5 media; 25 repair. | `logs/screening-0018.md` |
+| 2026-07-23T19:12:00+03:30 | active | Parallel screening batch 0019 checked 7 records and all 4 media; 7 repair. | `logs/screening-0019.md` |
+| 2026-07-23T19:15:00+03:30 | active | Parallel screening batch 0020 checked 25 function records and all 4 media; 8 accepted, 14 repair, 3 ambiguous. | `logs/screening-0020.md` |
+| 2026-07-23T19:22:00+03:30 | active | Parallel screening batch 0021 checked 25 function records and all 5 media; 13 accepted, 11 repair, 1 ambiguous. | `logs/screening-0021.md` |
+| 2026-07-23T19:24:00+03:30 | active | Parallel screening batch 0022 checked 25 function records and all 16 media; 6 accepted, 18 repair, 1 ambiguous. | `logs/screening-0022.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -49,8 +54,14 @@
 - Screening 0015: 25 needs repair; cumulative 358 screened and 0 usable.
 - Screening 0016: 25 needs repair; cumulative 383 screened and 0 usable.
 - Screening 0017: 25 needs repair; cumulative 408 screened and 0 usable.
+- Screening 0018: 25 needs repair; cumulative 433 screened and 0 usable.
+- Screening 0019: 7 needs repair; cumulative 440 screened and 0 usable.
+- Screening 0020: 8 accepted, 14 needs repair, 3 ambiguous; cumulative 465 screened and 0 usable.
+- Screening 0021: 13 accepted, 11 needs repair, 1 ambiguous; cumulative 490 screened and 0 usable.
+- Screening 0022: 6 accepted, 18 needs repair, 1 ambiguous; cumulative 515 screened and 0 usable.
 
 ## Next
-- Continue with exact-thread Luna Medium batch 0012 and subsequent topic-confined batches.
+- Continue parallel subagent screening from batch 0021 while preserving
+  output-hash attestations and fail-closed quarantine.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.

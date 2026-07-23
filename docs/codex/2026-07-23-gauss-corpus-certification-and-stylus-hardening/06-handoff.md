@@ -3,8 +3,9 @@
 ## Outcome
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
-هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. شش batch نخست Luna Medium
-با 261 سؤال و 76 رسانه اجرا و ادغام شده‌اند.
+هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0022،
+515 سؤال غربال شده و batchهای 0018 تا 0022 مطابق دستور جدید کاربر با
+ساب‌ایجنت‌های موازی و attestation وابسته به SHA-256 خروجی ادغام شده‌اند.
 
 ## Changed Artifacts
 - `data/certification/v1/`
@@ -15,9 +16,9 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - renderer/stylus tests
 
 ## How To Continue
-- batchهای 0001 تا 0006 با attestation مستقل ادغام شده‌اند.
-- batch بعدی `screening-0012` را دقیقاً با `LUNA_SCREENING_PROMPT.md` و یک
-  runtime attestation مستقل در همین thread اجرا کنید.
+- batchهای 0001 تا 0022 با attestation مستقل ادغام شده‌اند.
+- batch بعدی قابل ادغام `screening-0023` است؛ بررسی‌ها فقط در ساب‌ایجنت‌های ایزوله
+  انجام شوند و خروجی دقیقاً به attestation همان worker هش شود.
 - پس از هر merge، `validate` و `summarize` اجرا و batch بعدی از index انتخاب شود.
 
 ## Done
@@ -39,6 +40,11 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0015: 25 needs repair؛ هر 9 رسانه‌ی واقعی نامرتبط بود و solution تمام ردیف‌ها متعلق به تمرین‌های رادیکال/توان بود، نه معادلات قدرمطلق.
 - screening 0016: 25 needs repair؛ solution یا media با stemهای قدرمطلق/نامعادله جفت نبود و cropهای چندسؤالی/رادیکالی قرنطینه شد.
 - screening 0017: 25 needs repair؛ همه‌ی solutionها رادیکالی و نامرتبط با stemهای نمودار/قدر مطلق بودند و 3 crop گرافی ناقص/نامرتبط قرنطینه شد.
+- screening 0018: 25 needs repair؛ همه‌ی solutionها یا mediaها با stem جفت نبودند و 5 رسانه بررسی شد.
+- screening 0019: 7 needs repair؛ چهار رسانه بررسی و crop/محتوای نامرتبط قرنطینه شد.
+- screening 0020: 8 accepted، 14 needs repair، 3 ambiguous؛ چهار رسانه بررسی و graph/domain/formula mismatchها fail closed شدند.
+- screening 0021: 13 accepted، 11 needs repair، 1 ambiguous؛ پنج رسانه بررسی و crop/solution mismatchها قرنطینه شد.
+- screening 0022: 6 accepted، 18 needs repair، 1 ambiguous؛ شانزده رسانه بررسی و placeholder/condition/solution mismatchها قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -46,5 +52,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 408 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 515 screened، 0 usable.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
