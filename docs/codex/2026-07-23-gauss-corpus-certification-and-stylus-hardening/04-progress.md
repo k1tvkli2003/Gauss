@@ -26,6 +26,7 @@
 | 2026-07-23T18:42:00+03:30 | active | Screening batch 0014 checked 25 absolute-value/floor records and all 19 media; 25 repair. | `logs/screening-0014.md` |
 | 2026-07-23T18:49:00+03:30 | active | Screening batch 0015 checked 25 absolute-value/floor records and all 9 media; 25 repair. | `logs/screening-0015.md` |
 | 2026-07-23T18:56:00+03:30 | active | Screening batch 0016 checked 25 absolute-value/floor records and all 9 media; 25 repair. | `logs/screening-0016.md` |
+| 2026-07-23T19:03:00+03:30 | active | Screening batch 0017 checked 25 absolute-value/graph records and all 3 media; 25 repair. | `logs/screening-0017.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -47,6 +48,7 @@
 - Screening 0014: 25 needs repair; cumulative 333 screened and 0 usable.
 - Screening 0015: 25 needs repair; cumulative 358 screened and 0 usable.
 - Screening 0016: 25 needs repair; cumulative 383 screened and 0 usable.
+- Screening 0017: 25 needs repair; cumulative 408 screened and 0 usable.
 
 ## Next
 - Continue with exact-thread Luna Medium batch 0012 and subsequent topic-confined batches.
