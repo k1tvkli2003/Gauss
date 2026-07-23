@@ -3,8 +3,8 @@
 ## Outcome
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
-هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0041
-تعداد 965 سؤال غربال شده و batchهای موازی مطابق دستور جدید کاربر با
+هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0044
+تعداد 1040 سؤال غربال شده و batchهای موازی مطابق دستور جدید کاربر با
 ساب‌ایجنت‌های موازی و attestation وابسته به SHA-256 خروجی ادغام شده‌اند.
 
 ## Changed Artifacts
@@ -16,7 +16,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - renderer/stylus tests
 
 ## How To Continue
-- batchهای 0001 تا 0041 با attestation مستقل ادغام شده‌اند.
+- batchهای 0001 تا 0044 با attestation مستقل ادغام شده‌اند.
 - `screening-0023` پس از رد اجرای اول، با worker تازه و blind rerun ادغام شد؛
   بررسی‌ها فقط در ساب‌ایجنت‌های ایزوله
   انجام شوند و خروجی دقیقاً به attestation همان worker هش شود.
@@ -65,6 +65,9 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0039: 23 needs repair، 2 ambiguous؛ 26 رسانه بررسی شد.
 - screening 0040: 11 ambiguous؛ 12 رسانه بررسی و همه‌ی rowها fail closed ماند.
 - screening 0041: 8 accepted، 14 needs repair، 3 ambiguous؛ 11 رسانه بررسی شد.
+- screening 0042: 24 needs repair، 1 ambiguous؛ 14 رسانه بررسی شد.
+- screening 0043: 10 needs repair، 15 ambiguous؛ سه رسانه‌ی crop نامرتبط بررسی شد.
+- screening 0044: 25 needs repair؛ 12 رسانه بررسی و placeholder options قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -72,5 +75,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 965 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 1040 screened، 0 usable.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
