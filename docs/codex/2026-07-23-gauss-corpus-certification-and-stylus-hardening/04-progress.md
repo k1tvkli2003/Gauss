@@ -12,6 +12,7 @@
 | 2026-07-23T16:41:00+03:30 | active | Analyzer, full 94-test suite, Web and signed APK 1.0.107 passed. | release verifier |
 | 2026-07-23T16:55:35+03:30 | active | Exact-thread Luna Medium screening batch 0001 inspected 25 records and all 19 referenced media, then merged with external runtime attestation. | `logs/screening-0001.md` |
 | 2026-07-23T16:59:10+03:30 | active | Screening batch 0002 inspected 25 records and all 6 referenced media; all 25 were quarantined for systematic solution mismatch. | `logs/screening-0002.md` |
+| 2026-07-23T17:04:32+03:30 | active | Screening batch 0003 inspected 25 sequence records and all 3 media; 11 accepted, 13 repair, 1 ambiguous. | `logs/screening-0003.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -19,8 +20,9 @@
 - Static and release verification checkpoint.
 - Screening 0001: 6 accepted, 17 needs repair, 2 ambiguous; every item remains non-usable pending the independent scientific lanes.
 - Screening 0002: 25 needs repair; cumulative 50 screened and 0 usable.
+- Screening 0003: 11 accepted, 13 needs repair, 1 ambiguous; cumulative 75 screened and 0 usable.
 
 ## Next
-- Continue with exact-thread Luna Medium batch 0003 and subsequent topic-confined batches.
+- Continue with exact-thread Luna Medium batch 0004 and subsequent topic-confined batches.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
