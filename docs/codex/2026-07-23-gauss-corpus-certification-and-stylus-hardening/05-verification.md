@@ -17,7 +17,8 @@
 | Luna screening 0004 | inspected blind batch; `merge-screening` | passed | 25 ordered/hash-bound rows; 18 accepted, 6 needs repair, 1 ambiguous |
 | Luna screening 0005 | inspected blind batch + 1 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 16 accepted, 9 needs repair |
 | Luna screening 0006 | inspected blind batch + 8 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 15 accepted, 10 needs repair |
-| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 150 screened; 0 usable |
+| Luna screening 0007 | inspected blind batch + 17 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 21 accepted, 3 needs repair, 1 ambiguous |
+| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 175 screened; 0 usable |
 | Static analysis | `flutter analyze --fatal-infos` | passed | No issues found |
 | Full Flutter suite | `flutter test --no-pub --reporter compact` | passed | 94/94 |
 | Corpus TeX gate | full corpus parser test | passed | 3672 questions; 22032 text blocks; >37000 formulas |
@@ -39,4 +40,4 @@
 - 409 extraction blockers و سایر risk queues در `02-state.md`.
 - هیچ سؤال هنوز certification علمی کامل ندارد و نباید certified ادعا شود.
 - Jules source برای Gauss متصل نیست.
-- در شش batch نخست، 80 مورد needs repair و 4 مورد ambiguous هستند؛ هیچ‌کدام usable نشده‌اند.
+- در هفت batch نخست، 83 مورد needs repair و 5 مورد ambiguous هستند؛ هیچ‌کدام usable نشده‌اند.
