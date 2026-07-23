@@ -10,13 +10,15 @@
 | 2026-07-23T16:24:00+03:30 | active | Certification pipeline produced ۳۶۷۲ records, ۳۴۱۰ media hashes and ۱۷۹ topic-confined batches. | `corpus_certification.mjs` |
 | 2026-07-23T16:34:00+03:30 | active | Adversarial stylus findings fixed and focused 24/24 tests passed. | Flutter test output |
 | 2026-07-23T16:41:00+03:30 | active | Analyzer, full 94-test suite, Web and signed APK 1.0.107 passed. | release verifier |
+| 2026-07-23T16:55:35+03:30 | active | Exact-thread Luna Medium screening batch 0001 inspected 25 records and all 19 referenced media, then merged with external runtime attestation. | `logs/screening-0001.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
 - Renderer and stylus hardening.
 - Static and release verification checkpoint.
+- Screening 0001: 6 accepted, 17 needs repair, 2 ambiguous; every item remains non-usable pending the independent scientific lanes.
 
 ## Next
-- Dispatch exact-thread Luna Medium batch 0001, validate output and continue deterministically.
+- Continue with exact-thread Luna Medium batch 0002 and subsequent topic-confined batches.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
