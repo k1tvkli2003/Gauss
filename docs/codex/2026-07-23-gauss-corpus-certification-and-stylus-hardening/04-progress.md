@@ -45,6 +45,12 @@
 | 2026-07-23T20:20:00+03:30 | active | Parallel screening batch 0033 checked 25 trigonometry records and all 26 media; 3 accepted, 13 repair, 9 ambiguous. | `logs/screening-0033.md` |
 | 2026-07-23T20:26:00+03:30 | active | Parallel screening batch 0034 checked 25 trigonometry records and all 4 media; 4 accepted, 21 repair. | `logs/screening-0034.md` |
 | 2026-07-23T20:23:00+03:30 | active | Parallel screening batch 0035 checked 25 trigonometry records and all 13 media; 2 accepted, 23 repair. | `logs/screening-0035.md` |
+| 2026-07-23T20:34:00+03:30 | active | Parallel screening batch 0036 checked 25 trigonometry records and all 22 media; 24 repair, 1 ambiguous. | `logs/screening-0036.md` |
+| 2026-07-23T20:38:00+03:30 | active | Parallel screening batch 0037 checked 25 trigonometry records and all 30 media; 24 repair, 1 ambiguous. | `logs/screening-0037.md` |
+| 2026-07-23T20:55:00+03:30 | active | Corrected screening batch 0038 checked 25 trigonometry records and all 28 media; 25 repair. | `logs/screening-0038.md` |
+| 2026-07-23T20:54:00+03:30 | active | Parallel screening batch 0039 checked 25 trigonometry records and all 26 media; 23 repair, 2 ambiguous. | `logs/screening-0039.md` |
+| 2026-07-23T20:50:00+03:30 | active | Parallel screening batch 0040 checked 11 trigonometry records and all 12 media; 11 ambiguous. | `logs/screening-0040.md` |
+| 2026-07-23T20:54:00+03:30 | active | Parallel screening batch 0041 checked 25 limits records and all 11 media; 8 accepted, 14 repair, 3 ambiguous. | `logs/screening-0041.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -85,6 +91,12 @@
 - Screening 0033: 3 accepted, 13 needs repair, 9 ambiguous.
 - Screening 0034: 4 accepted, 21 needs repair.
 - Screening 0035: 2 accepted, 23 needs repair; cumulative 829 screened and 0 usable.
+- Screening 0036: 24 needs repair, 1 ambiguous.
+- Screening 0037: 24 needs repair, 1 ambiguous.
+- Screening 0038: 25 needs repair after coordinator rejection and worker correction.
+- Screening 0039: 23 needs repair, 2 ambiguous.
+- Screening 0040: 11 ambiguous.
+- Screening 0041: 8 accepted, 14 needs repair, 3 ambiguous; cumulative 965 screened and 0 usable.
 
 ## Next
 - Continue parallel subagent screening from batch 0021 while preserving
