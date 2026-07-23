@@ -4,7 +4,7 @@
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
 هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. شش batch نخست Luna Medium
-با 240 سؤال و 70 رسانه اجرا و ادغام شده‌اند.
+با 261 سؤال و 76 رسانه اجرا و ادغام شده‌اند.
 
 ## Changed Artifacts
 - `data/certification/v1/`
@@ -16,7 +16,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## How To Continue
 - batchهای 0001 تا 0006 با attestation مستقل ادغام شده‌اند.
-- batch بعدی `screening-0011` را دقیقاً با `LUNA_SCREENING_PROMPT.md` و یک
+- batch بعدی `screening-0012` را دقیقاً با `LUNA_SCREENING_PROMPT.md` و یک
   runtime attestation مستقل در همین thread اجرا کنید.
 - پس از هر merge، `validate` و `summarize` اجرا و batch بعدی از index انتخاب شود.
 
@@ -32,6 +32,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0008: 21 accepted و 4 needs repair؛ چهار راه‌حل با تغییر عبارت گویا، رادیکال ناسازگار، تغییر دو طرف معادله و تبدیل رادیکال تو در تو قرنطینه شد.
 - screening 0009: 6 accepted و 9 needs repair؛ تغییر چند معادله رادیکالی، راه‌حل ناقص/مدیای سفید، عدم تطابق گزینه و مقدار، و چندجوابی‌بودن گزینه‌ای قرنطینه شد.
 - screening 0010: 5 accepted، 19 needs repair، 1 ambiguous؛ cropهای نامرتبط، چندجمله‌ای‌های تغییرکرده، صفرهای placeholder و راه‌حل‌های متعلق به سؤال‌های دیگر قرنطینه شد.
+- screening 0011: 13 accepted، 7 needs repair، 1 ambiguous؛ نمودار سفید/نامرتبط، cropهای solution، تغییر چندجمله‌ای، ترتیب ریشه و علامت نادرست قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -39,5 +40,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 240 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 261 screened، 0 usable.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.

@@ -20,6 +20,7 @@
 | 2026-07-23T18:09:08+03:30 | active | Screening batch 0008 checked 25 quadratic/radical records; 21 accepted, 4 repair. | `logs/screening-0008.md` |
 | 2026-07-23T18:13:40+03:30 | active | Screening batch 0009 checked 15 quadratic/radical records and both media; 6 accepted, 9 repair. | `logs/screening-0009.md` |
 | 2026-07-23T18:17:37+03:30 | active | Screening batch 0010 checked 25 rational-inequality records and all 14 media; 5 accepted, 19 repair, 1 ambiguous. | `logs/screening-0010.md` |
+| 2026-07-23T18:22:35+03:30 | active | Screening batch 0011 checked 21 rational-inequality records and all 6 media; 13 accepted, 7 repair, 1 ambiguous. | `logs/screening-0011.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -35,8 +36,9 @@
 - Screening 0008: 21 accepted, 4 needs repair; cumulative 200 screened and 0 usable.
 - Screening 0009: 6 accepted, 9 needs repair; cumulative 215 screened and 0 usable.
 - Screening 0010: 5 accepted, 19 needs repair, 1 ambiguous; cumulative 240 screened and 0 usable.
+- Screening 0011: 13 accepted, 7 needs repair, 1 ambiguous; cumulative 261 screened and 0 usable.
 
 ## Next
-- Continue with exact-thread Luna Medium batch 0011 and subsequent topic-confined batches.
+- Continue with exact-thread Luna Medium batch 0012 and subsequent topic-confined batches.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
