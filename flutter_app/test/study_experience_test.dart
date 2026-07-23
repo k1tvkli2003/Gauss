@@ -1,4 +1,5 @@
 import 'package:drift/native.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -97,36 +98,12 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('inline pen is opt-in and clears its drawing immediately', (
+  testWidgets('Focus Pen writes immediately while finger ink stays opt-in', (
     tester,
   ) async {
-    await tester.binding.setSurfaceSize(const Size(390, 420));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
-    await tester.pumpWidget(
-      MaterialApp(
-        theme: buildGaussTheme(),
-        home: Scaffold(
-          backgroundColor: GaussColors.parchment,
-          body: Center(
-            child: SizedBox(
-              width: 330,
-              child: InlineQuestionScratch(
-                child: Container(
-                  key: const ValueKey('question-plate'),
-                  height: 190,
-                  color: GaussColors.parchment,
-                  alignment: Alignment.center,
-                  child: const Text(
-                    'Question plate',
-                    style: TextStyle(color: GaussColors.parchmentInk),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+    final ink = ScratchInkController();
+    addTearDown(ink.dispose);
+    final plate = await _pumpScratchSurface(tester, ink);
 
     final clearFinder = find.widgetWithIcon(
       IconButton,
@@ -134,26 +111,228 @@ void main() {
     );
     expect(tester.widget<IconButton>(clearFinder).onPressed, isNull);
 
-    await tester.tap(find.byTooltip('Draw on this question'));
-    await tester.pump(const Duration(milliseconds: 180));
-    expect(
-      find.text(
-        'Pen is active · draw on the question, then tap the pen to scroll again.',
-      ),
-      findsOneWidget,
-    );
-
-    final plate = tester.getRect(find.byKey(const ValueKey('question-plate')));
     await tester.dragFrom(
       plate.topLeft + const Offset(40, 50),
       const Offset(120, 55),
     );
+    expect(ink.isEmpty, isTrue, reason: 'finger input must scroll by default');
+
+    final pen = await tester.startGesture(
+      plate.topLeft + const Offset(40, 50),
+      pointer: 7,
+      kind: PointerDeviceKind.stylus,
+    );
+    await pen.moveBy(const Offset(120, 55));
+    await pen.up();
     await tester.pump();
+    expect(ink.strokeCount, 1);
     expect(tester.widget<IconButton>(clearFinder).onPressed, isNotNull);
 
     await tester.tap(clearFinder);
     await tester.pump();
+    expect(ink.isEmpty, isTrue);
     expect(tester.widget<IconButton>(clearFinder).onPressed, isNull);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Focus Pen pressure changes width and cancel rolls back stroke', (
+    tester,
+  ) async {
+    final ink = ScratchInkController();
+    addTearDown(ink.dispose);
+    final plate = await _pumpScratchSurface(tester, ink);
+    final start = plate.topLeft + const Offset(48, 62);
+    final end = start + const Offset(150, 48);
+    final pen = await tester.createGesture(
+      pointer: 11,
+      kind: PointerDeviceKind.stylus,
+    );
+
+    await pen.downWithCustomEvent(
+      start,
+      PointerDownEvent(
+        pointer: 11,
+        position: start,
+        kind: PointerDeviceKind.stylus,
+        pressure: .08,
+        pressureMin: 0,
+        pressureMax: 1,
+      ),
+    );
+    await pen.updateWithCustomEvent(
+      PointerMoveEvent(
+        pointer: 11,
+        position: end,
+        delta: end - start,
+        kind: PointerDeviceKind.stylus,
+        pressure: .96,
+        pressureMin: 0,
+        pressureMax: 1,
+      ),
+    );
+    await tester.pump();
+
+    expect(ink.recordedWidths.length, greaterThanOrEqualTo(2));
+    expect(
+      ink.recordedWidths.reduce((a, b) => a > b ? a : b) -
+          ink.recordedWidths.reduce((a, b) => a < b ? a : b),
+      greaterThan(.5),
+    );
+
+    await pen.cancel();
+    await tester.pump();
+    expect(ink.isEmpty, isTrue, reason: 'a canceled stroke must not survive');
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets(
+    'native palm rejection removes the matching finger gesture only',
+    (tester) async {
+      final ink = ScratchInkController();
+      addTearDown(ink.dispose);
+      final plate = await _pumpScratchSurface(tester, ink);
+
+      await tester.tap(find.byTooltip('Enable finger drawing'));
+      await tester.pump(const Duration(milliseconds: 180));
+      final touch = await tester.startGesture(
+        plate.topLeft + const Offset(36, 70),
+        pointer: 31,
+        kind: PointerDeviceKind.touch,
+      );
+      await touch.moveBy(const Offset(130, 42));
+      await touch.up();
+      await tester.pump();
+      expect(ink.strokeCount, 1);
+
+      final stylus = await tester.startGesture(
+        plate.topLeft + const Offset(50, 115),
+        pointer: 32,
+        kind: PointerDeviceKind.stylus,
+      );
+      await stylus.moveBy(const Offset(90, -25));
+      await stylus.up();
+      await tester.pump();
+      expect(ink.strokeCount, 2);
+
+      ScratchStylusSignals.debugSimulatePalmRejection(androidPointerId: 99);
+      await tester.pump();
+      expect(
+        ink.strokeCount,
+        2,
+        reason: 'an unrelated pointer must do nothing',
+      );
+
+      // Widget-test touch pointers use device 0, mirroring Android pointerId 0.
+      ScratchStylusSignals.debugSimulatePalmRejection(androidPointerId: 0);
+      await tester.pump();
+      expect(
+        ink.strokeCount,
+        1,
+        reason: 'the earlier touch is removed even when stylus ink is newer',
+      );
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('a second touch releases drawing ownership after cancellation', (
+    tester,
+  ) async {
+    final ink = ScratchInkController();
+    final ownership = <bool>[];
+    addTearDown(ink.dispose);
+    final plate = await _pumpScratchSurface(
+      tester,
+      ink,
+      onDrawingChanged: ownership.add,
+    );
+
+    await tester.tap(find.byTooltip('Enable finger drawing'));
+    await tester.pump(const Duration(milliseconds: 180));
+    final first = await tester.startGesture(
+      plate.topLeft + const Offset(40, 70),
+      pointer: 41,
+      kind: PointerDeviceKind.touch,
+    );
+    await first.moveBy(const Offset(35, 12));
+    final second = await tester.startGesture(
+      plate.topLeft + const Offset(95, 85),
+      pointer: 42,
+      kind: PointerDeviceKind.touch,
+    );
+    await tester.pump();
+    await first.up();
+    await second.up();
+    await tester.pump();
+
+    await tester.tap(find.byTooltip('Use Focus Pen only'));
+    await tester.pump(const Duration(milliseconds: 180));
+    expect(ownership, isNotEmpty);
+    expect(ownership.last, isFalse);
+    expect(ink.isEmpty, isTrue, reason: 'the canceled gesture must roll back');
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('controller replacement cancels live ink before disposal', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(390, 420));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final replacement = ScratchInkController();
+    addTearDown(replacement.dispose);
+    replacement.begin(
+      const Offset(10, 10),
+      const Size(100, 100),
+      2.8,
+      kind: PointerDeviceKind.stylus,
+    );
+    replacement.end();
+    var useReplacement = false;
+    late StateSetter rebuild;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: buildGaussTheme(),
+        home: Scaffold(
+          body: StatefulBuilder(
+            builder: (context, setState) {
+              rebuild = setState;
+              return InlineQuestionScratch(
+                controller: useReplacement ? replacement : null,
+                child: Container(
+                  key: const ValueKey('replaceable-question-plate'),
+                  height: 190,
+                  color: GaussColors.parchment,
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
+    final plate = tester.getRect(
+      find.byKey(const ValueKey('replaceable-question-plate')),
+    );
+    final pen = await tester.startGesture(
+      plate.center,
+      pointer: 61,
+      kind: PointerDeviceKind.stylus,
+    );
+    await pen.moveBy(const Offset(30, 20));
+
+    rebuild(() => useReplacement = true);
+    await tester.pump();
+    await tester.pump();
+    await pen.cancel();
+    expect(
+      tester
+          .widget<IconButton>(
+            find.widgetWithIcon(IconButton, Icons.delete_sweep_outlined),
+          )
+          .onPressed,
+      isNotNull,
+      reason: 'pre-existing replacement ink must repaint and remain clearable',
+    );
     expect(tester.takeException(), isNull);
   });
 
@@ -175,7 +354,7 @@ void main() {
       );
 
       expect(pages().physics, isA<PageScrollPhysics>());
-      final pen = find.byTooltip('Draw on this question');
+      final pen = find.byTooltip('Enable finger drawing');
       final target = tester.getSize(pen);
       expect(target.width, greaterThanOrEqualTo(48));
       expect(target.height, greaterThanOrEqualTo(48));
@@ -184,7 +363,7 @@ void main() {
       await tester.pump(const Duration(milliseconds: 160));
       expect(pages().physics, isA<NeverScrollableScrollPhysics>());
 
-      await tester.tap(find.byTooltip('Stop drawing'));
+      await tester.tap(find.byTooltip('Use Focus Pen only'));
       await tester.pump(const Duration(milliseconds: 160));
       expect(pages().physics, isA<PageScrollPhysics>());
       expect(tester.takeException(), isNull);
@@ -301,7 +480,7 @@ void main() {
     await _pumpUntil(tester, find.text('STUDY ROOM'));
 
     expect(find.text('STUDY ROOM'), findsOneWidget);
-    expect(find.byTooltip('Draw on this question'), findsOneWidget);
+    expect(find.byTooltip('Enable finger drawing'), findsOneWidget);
     expect(find.text('Reveal reference answer'), findsOneWidget);
 
     await tester.ensureVisible(find.text('Reveal reference answer'));
@@ -677,6 +856,44 @@ class _TestSurface extends StatelessWidget {
 Future<void> _setPhoneSurface(WidgetTester tester) async {
   await tester.binding.setSurfaceSize(const Size(411, 820));
   addTearDown(() => tester.binding.setSurfaceSize(null));
+}
+
+Future<Rect> _pumpScratchSurface(
+  WidgetTester tester,
+  ScratchInkController ink, {
+  ValueChanged<bool>? onDrawingChanged,
+}) async {
+  await tester.binding.setSurfaceSize(const Size(390, 420));
+  addTearDown(() => tester.binding.setSurfaceSize(null));
+  await tester.pumpWidget(
+    MaterialApp(
+      theme: buildGaussTheme(),
+      home: Scaffold(
+        backgroundColor: GaussColors.parchment,
+        body: Center(
+          child: SizedBox(
+            width: 330,
+            child: InlineQuestionScratch(
+              controller: ink,
+              onDrawingChanged: onDrawingChanged,
+              child: Container(
+                key: const ValueKey('question-plate'),
+                height: 190,
+                color: GaussColors.parchment,
+                alignment: Alignment.center,
+                child: const Text(
+                  'Question plate',
+                  style: TextStyle(color: GaussColors.parchmentInk),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+  await tester.pump();
+  return tester.getRect(find.byKey(const ValueKey('question-plate')));
 }
 
 Future<void> _scrollUntil(

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gauss Luna Screening Output v1",
+  "type": "object",
+  "required": [
+    "question_id",
+    "source_sha256",
+    "screening_status",
+    "extraction_status",
+    "subtopic",
+    "concept_tags",
+    "secondary_concepts",
+    "prerequisites",
+    "difficulty",
+    "difficulty_dimensions",
+    "difficulty_confidence",
+    "issues",
+    "review_summary"
+  ],
+  "properties": {
+    "question_id": { "type": "string" },
+    "source_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "screening_status": {
+      "enum": ["accepted", "needs_repair", "ambiguous"]
+    },
+    "extraction_status": {
+      "enum": ["screened_complete", "incomplete", "ambiguous"]
+    },
+    "subtopic": {
+      "type": "object",
+      "required": ["key", "label_en", "label_fa"],
+      "properties": {
+        "key": { "type": ["string", "null"] },
+        "label_en": { "type": ["string", "null"] },
+        "label_fa": { "type": ["string", "null"] }
+      }
+    },
+    "concept_tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+      "uniqueItems": true
+    },
+    "secondary_concepts": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+      "uniqueItems": true
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+      "uniqueItems": true
+    },
+    "difficulty": {
+      "enum": ["above_average", "hard", "very_hard", "olympiad"]
+    },
+    "difficulty_dimensions": {
+      "type": "object",
+      "required": [
+        "prerequisite_breadth",
+        "reasoning_depth",
+        "non_routine_insight",
+        "representation_translation",
+        "computation_load",
+        "distractor_discrimination"
+      ],
+      "properties": {
+        "prerequisite_breadth": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "reasoning_depth": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "non_routine_insight": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "representation_translation": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "computation_load": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "distractor_discrimination": { "type": "integer", "minimum": 0, "maximum": 3 }
+      }
+    },
+    "difficulty_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "issues": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "review_summary": { "type": "string", "minLength": 1 }
+  }
+}

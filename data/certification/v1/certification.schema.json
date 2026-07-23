@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gauss Question Certification v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "question_id",
+    "source_sha256",
+    "runtime_record_sha256",
+    "referenced_media",
+    "subject",
+    "screening",
+    "taxonomy",
+    "difficulty",
+    "extraction",
+    "source_fidelity",
+    "answer",
+    "solution",
+    "adversarial_verification",
+    "certification",
+    "usable"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "question_id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+    "source_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "runtime_record_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "referenced_media": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["asset", "sha256", "bytes"],
+        "properties": {
+          "asset": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "bytes": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "subject": { "enum": ["math", "physics"] },
+    "taxonomy": {
+      "type": "object",
+      "required": [
+        "registry_version",
+        "section_id",
+        "topic_key",
+        "subtopic_key",
+        "proposed_subtopic",
+        "proposed_concept_tags",
+        "proposed_secondary_concepts",
+        "proposed_prerequisites",
+        "concept_tags",
+        "secondary_concepts",
+        "prerequisites",
+        "status"
+      ],
+      "properties": {
+        "registry_version": { "type": ["string", "null"] },
+        "section_id": { "type": "string" },
+        "topic_key": { "type": "string" },
+        "subtopic_key": { "type": ["string", "null"] },
+        "proposed_subtopic": { "type": ["object", "null"] },
+        "proposed_concept_tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "proposed_secondary_concepts": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "proposed_prerequisites": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "concept_tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "secondary_concepts": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "prerequisites": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "status": { "enum": ["pending", "screened", "reviewed", "rejected"] }
+      }
+    },
+    "difficulty": {
+      "type": "object",
+      "required": [
+        "rubric_version",
+        "source",
+        "screened",
+        "reviewed",
+        "dimensions",
+        "confidence",
+        "anchor_evidence",
+        "status"
+      ],
+      "properties": {
+        "rubric_version": { "const": "gauss-difficulty-v1" },
+        "source": { "enum": ["above_average", "hard", "very_hard", "olympiad"] },
+        "screened": { "type": ["string", "null"], "enum": [null, "above_average", "hard", "very_hard", "olympiad"] },
+        "reviewed": { "type": ["string", "null"], "enum": [null, "above_average", "hard", "very_hard", "olympiad"] },
+        "dimensions": { "type": ["object", "null"] },
+        "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "anchor_evidence": { "type": "array" },
+        "status": { "enum": ["pending", "screened", "reviewed", "rejected"] }
+      }
+    },
+    "extraction": {
+      "type": "object",
+      "required": ["status", "requires_image_review", "signals", "render_gate", "reviews"],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "screened_complete",
+            "verified_complete",
+            "incomplete",
+            "ambiguous"
+          ]
+        },
+        "requires_image_review": { "type": "boolean" },
+        "signals": { "type": "object" },
+        "render_gate": {
+          "type": "object",
+          "required": ["status", "receipt_id"],
+          "properties": {
+            "status": { "enum": ["pending", "passed", "failed"] },
+            "receipt_id": { "type": ["string", "null"] }
+          }
+        },
+        "reviews": { "type": "array" }
+      }
+    },
+    "source_fidelity": {
+      "type": "object",
+      "required": ["status", "reviews"],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "blocked_missing_source",
+            "verified_source",
+            "source_conflict"
+          ]
+        },
+        "reviews": { "type": "array" }
+      }
+    },
+    "answer": {
+      "type": "object",
+      "required": [
+        "source_option",
+        "independent_option",
+        "effective_option",
+        "source_agreement",
+        "correction",
+        "status",
+        "reviews"
+      ],
+      "properties": {
+        "source_option": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "independent_option": { "type": ["integer", "null"], "minimum": 1, "maximum": 4 },
+        "effective_option": { "type": ["integer", "null"], "minimum": 1, "maximum": 4 },
+        "source_agreement": {
+          "enum": ["unverified", "agrees_source", "overrides_source", "ambiguous"]
+        },
+        "correction": { "type": ["object", "null"] },
+        "status": {
+          "enum": [
+            "pending",
+            "source_only",
+            "independently_agrees",
+            "independently_conflicts",
+            "ambiguous",
+            "verified_correct"
+          ]
+        },
+        "reviews": { "type": "array" }
+      }
+    },
+    "solution": {
+      "type": "object",
+      "required": ["status", "reviews"],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "verified_complete_correct",
+            "partial",
+            "incorrect",
+            "mismatched",
+            "ambiguous"
+          ]
+        },
+        "reviews": { "type": "array" }
+      }
+    },
+    "adversarial_verification": {
+      "type": "object",
+      "required": ["status", "reviews"],
+      "properties": {
+        "status": { "enum": ["pending", "passed", "failed", "ambiguous"] },
+        "reviews": { "type": "array" }
+      }
+    },
+    "screening": {
+      "type": "object",
+      "required": ["status", "reviewer"],
+      "properties": {
+        "status": { "enum": ["pending", "accepted", "needs_repair", "ambiguous"] },
+        "reviewer": { "type": ["object", "null"] }
+      }
+    },
+    "certification": {
+      "type": "object",
+      "required": ["status", "reasons"],
+      "properties": {
+        "status": { "enum": ["pending", "quarantined", "certified"] },
+        "reasons": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "usable": { "type": "boolean" }
+  }
+}

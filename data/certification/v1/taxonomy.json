@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "version": "gauss-taxonomy-discovery-v1",
+  "sections": [
+    {
+      "id": "math_algebraic_foundations",
+      "subject": "math",
+      "topics": [
+        "sets",
+        "patterns_sequences",
+        "radicals_algebraic_expressions",
+        "absolute_value_floor",
+        "rational_inequalities_sign"
+      ]
+    },
+    {
+      "id": "math_functions_equations",
+      "subject": "math",
+      "topics": [
+        "quadratic_equations_functions",
+        "functions",
+        "exponential_logarithmic"
+      ]
+    },
+    {
+      "id": "math_calculus",
+      "subject": "math",
+      "topics": [
+        "limits_continuity",
+        "derivatives",
+        "derivative_applications"
+      ]
+    },
+    {
+      "id": "math_geometry_trigonometry",
+      "subject": "math",
+      "topics": [
+        "trigonometry",
+        "analytic_geometry",
+        "visual_thinking_conics",
+        "geometry"
+      ]
+    },
+    {
+      "id": "math_discrete_data",
+      "subject": "math",
+      "topics": [
+        "combinatorics",
+        "probability",
+        "statistics"
+      ]
+    },
+    {
+      "id": "physics_matter_measurement",
+      "subject": "physics",
+      "topics": [
+        "physics_measurement",
+        "physical_properties_matter",
+        "temperature_heat"
+      ]
+    },
+    {
+      "id": "physics_mechanics",
+      "subject": "physics",
+      "topics": [
+        "one_dimensional_motion",
+        "dynamics",
+        "work_energy_power"
+      ]
+    },
+    {
+      "id": "physics_fields_circuits",
+      "subject": "physics",
+      "topics": [
+        "electrostatics",
+        "current_electricity",
+        "magnetism_induction"
+      ]
+    },
+    {
+      "id": "physics_waves_modern",
+      "subject": "physics",
+      "topics": [
+        "oscillation_waves",
+        "atomic_nuclear"
+      ]
+    }
+  ],
+  "subtopics": []
+}

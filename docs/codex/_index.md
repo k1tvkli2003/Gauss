@@ -7,3 +7,4 @@
 | `2026-07-18-surface-the-engine` | Surface the engine (SRS review, star-chart, traps, reading room, error tags) | complete | 2026-07-18 | [Open](2026-07-18-surface-the-engine/00-brief.md) |
 | `2026-07-18-nardebam-only-question-corpus` | Source-only Study Observatory corpus and experience | complete | 2026-07-18 | [Open](2026-07-18-nardebam-only-question-corpus/00-brief.md) |
 | `2026-07-22-gauss-adaptive-perfection` | Gauss adaptive UI UX perfection | active | 2026-07-22 | [Open](2026-07-22-gauss-adaptive-perfection/00-brief.md) |
+| `2026-07-23-gauss-corpus-certification-and-stylus-hardening` | Gauss corpus certification and stylus hardening | active | 2026-07-23 | [Open](2026-07-23-gauss-corpus-certification-and-stylus-hardening/00-brief.md) |
