@@ -35,6 +35,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0011: 13 accepted، 7 needs repair، 1 ambiguous؛ نمودار سفید/نامرتبط، cropهای solution، تغییر چندجمله‌ای، ترتیب ریشه و علامت نادرست قرنطینه شد.
 - screening 0012: 9 accepted و 16 needs repair؛ 24 رسانه‌ی crop/سفید/نامرتبط، راه‌حل ناقص، تغییر معادله و drift علامت/ضریب قرنطینه شد.
 - screening 0013: 22 needs repair؛ هر 32 رسانه‌ی واقعی بررسی و به‌خاطر cropهای سؤال‌های مجاور، splice چندسؤالی، گزینه‌های نامرتبط یا solution ناقص قرنطینه شد.
+- screening 0014: 25 needs repair؛ هر 19 رسانه‌ی واقعی نامرتبط بود و تمام solutionها به‌جای معادلات قدرمطلق/جزءصحیح، تمرین‌های رادیکال و توان بودند.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -42,5 +43,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 308 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 333 screened، 0 usable.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
