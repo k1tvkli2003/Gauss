@@ -4,7 +4,7 @@
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
 هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. شش batch نخست Luna Medium
-با 175 سؤال و 54 رسانه اجرا و ادغام شده‌اند.
+با 200 سؤال و 54 رسانه اجرا و ادغام شده‌اند.
 
 ## Changed Artifacts
 - `data/certification/v1/`
@@ -16,7 +16,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## How To Continue
 - batchهای 0001 تا 0006 با attestation مستقل ادغام شده‌اند.
-- batch بعدی `screening-0008` را دقیقاً با `LUNA_SCREENING_PROMPT.md` و یک
+- batch بعدی `screening-0009` را دقیقاً با `LUNA_SCREENING_PROMPT.md` و یک
   runtime attestation مستقل در همین thread اجرا کنید.
 - پس از هر merge، `validate` و `summarize` اجرا و batch بعدی از index انتخاب شود.
 
@@ -29,6 +29,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0005: 16 accepted و 9 needs repair؛ sign/power/expression mismatch و splice بین دو راه‌حل قرنطینه شد.
 - screening 0006: 15 accepted و 10 needs repair؛ sign drift در transformed roots و multi-question image crops قرنطینه شد.
 - screening 0007: 21 accepted، 3 needs repair، 1 ambiguous؛ نمودار ضروریِ جایگزین‌شده، متغیر `m/a`، تغییر علامت جمله خطی و اختلاف `y=x+8` با `4y+x=8` قرنطینه شد.
+- screening 0008: 21 accepted و 4 needs repair؛ چهار راه‌حل با تغییر عبارت گویا، رادیکال ناسازگار، تغییر دو طرف معادله و تبدیل رادیکال تو در تو قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -36,5 +37,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 175 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 200 screened، 0 usable.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.

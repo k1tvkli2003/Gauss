@@ -17,6 +17,7 @@
 | 2026-07-23T17:15:57+03:30 | active | Screening batch 0005 checked 25 quadratic records and its media; 16 accepted, 9 repair. | `logs/screening-0005.md` |
 | 2026-07-23T17:21:34+03:30 | active | Screening batch 0006 checked 25 quadratic records and all 8 media; 15 accepted, 10 repair. | `logs/screening-0006.md` |
 | 2026-07-23T17:31:26+03:30 | active | Screening batch 0007 checked 25 quadratic records and all 17 media; 21 accepted, 3 repair, 1 ambiguous. | `logs/screening-0007.md` |
+| 2026-07-23T18:09:08+03:30 | active | Screening batch 0008 checked 25 quadratic/radical records; 21 accepted, 4 repair. | `logs/screening-0008.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -29,8 +30,9 @@
 - Screening 0005: 16 accepted, 9 needs repair; cumulative 125 screened and 0 usable.
 - Screening 0006: 15 accepted, 10 needs repair; cumulative 150 screened and 0 usable.
 - Screening 0007: 21 accepted, 3 needs repair, 1 ambiguous; cumulative 175 screened and 0 usable.
+- Screening 0008: 21 accepted, 4 needs repair; cumulative 200 screened and 0 usable.
 
 ## Next
-- Continue with exact-thread Luna Medium batch 0008 and subsequent topic-confined batches.
+- Continue with exact-thread Luna Medium batch 0009 and subsequent topic-confined batches.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
