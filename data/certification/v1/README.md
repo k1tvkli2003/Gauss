@@ -31,10 +31,10 @@ unless it is independent, adversarially verified, and internally consistent.
   separately and never overwrite the preservation source silently.
 - Screening runtime: default quality profile `gpt-5.6-luna` / `medium` with an
   externally observed Codex-app receipt. The user-authorized throughput profile
-  is an isolated `gpt-5.6-terra` / `low` subagent whose task identity and exact
-  output-file SHA-256 are recorded in a collaboration attestation. Prompt
-  version and result evidence remain recorded per item. A model-name string
-  inside model output is never accepted as attestation.
+  is an isolated `gpt-5.6-terra` or `gpt-5.6-sol` / `low` subagent whose task
+  identity and exact output-file SHA-256 are recorded in a collaboration
+  attestation. Prompt version and result evidence remain recorded per item. A
+  model-name string inside model output is never accepted as attestation.
 - Correctness: a screening model cannot certify an answer. Independent solve
   and fresh-context verification are separate gates.
 

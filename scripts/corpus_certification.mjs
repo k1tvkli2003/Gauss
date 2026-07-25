@@ -113,7 +113,7 @@ function trustedScreeningRuntime(attestation, batchId, outputFile) {
   const hashBoundParallelWorker =
     attestation.observed_by === "codex_collaboration" &&
     attestation.tool === "spawn_agent" &&
-    attestation.model === "gpt-5.6-terra" &&
+    ["gpt-5.6-terra", "gpt-5.6-sol"].includes(attestation.model) &&
     attestation.reasoning === "low" &&
     typeof attestation.task_name === "string" &&
     (attestation.task_name === expectedTaskName ||
