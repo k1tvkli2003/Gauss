@@ -169,9 +169,12 @@
 - Screening 0093: 8 accepted, 9 needs repair, 8 ambiguous; 29 Flutter assets inspected and hash-bound; essential diagrams/labels and solution media had mismatches.
 - Screening 0094: 2 accepted, 11 needs repair; 23 Flutter assets inspected and hash-bound; solution media was unrelated or severely truncated.
 - Screening 0095: 9 needs repair; 36 Flutter assets inspected and hash-bound; stem/option media was systematically miscropped; cumulative 2007 screened (54.65%) and 0 usable.
+- Screening 0096: 6 needs repair; 34 Flutter assets inspected and hash-bound; stem/option crops were systematically truncated, blank, or misbound.
+- Screening 0097: 6 needs repair; 35 Flutter assets inspected and hash-bound; option crops were blank or adjacent-page fragments.
+- Screening 0098: 6 needs repair; 34 Flutter assets inspected and hash-bound; media was systematically misassigned/cropped, with an incomplete extraction and a contradictory row; cumulative 2025 screened (55.15%) and 0 usable.
 
 ## Next
-- Continue from screening-0096 while independent workers hold exclusive
+- Continue from screening-0099 while independent workers hold exclusive
   ownership of their output files and output-SHA attestations.
 - Process the deterministic repair queue in parallel with screening; no quarantined
   source is discarded or silently overwritten.
