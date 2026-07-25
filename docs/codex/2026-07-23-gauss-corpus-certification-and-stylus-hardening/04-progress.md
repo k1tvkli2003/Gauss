@@ -156,9 +156,10 @@
 - Screening 0080: 6 needs repair; 35 Flutter assets inspected and hash-bound; stems/options were systematically cropped, blank, or misaligned; cumulative 1828 screened (49.78%) and 0 usable.
 - Screening 0082: 7 needs repair; 35 Flutter assets inspected and hash-bound; crops were unrelated or clipped, including near-blank options; cumulative 1835 screened (49.97%) and 0 usable.
 - Screening 0083: 7 needs repair; 35 Flutter assets inspected and hash-bound; every item had unrelated cropped source-page fragments; cumulative 1842 screened (50.16%) and 0 usable.
+- Screening 0081: 6 needs repair; 35 Flutter assets inspected and hash-bound; stem/option fragments were truncated or unrelated; cumulative 1848 screened (50.33%) and 0 usable.
 
 ## Next
-- Continue from screening-0081 while independent workers hold exclusive
+- Continue from screening-0084 while independent workers hold exclusive
   ownership of their output files and output-SHA attestations.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
