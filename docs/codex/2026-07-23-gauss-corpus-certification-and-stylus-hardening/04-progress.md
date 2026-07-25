@@ -154,6 +154,7 @@
 - Screening 0078: 25 needs repair; no referenced media; all supplied solutions were unrelated.
 - Screening 0079: 13 needs repair; no referenced media; all supplied solutions were unrelated and one essential diagram was absent; cumulative 1822 screened (49.62%) and 0 usable.
 - Screening 0080: 6 needs repair; 35 Flutter assets inspected and hash-bound; stems/options were systematically cropped, blank, or misaligned; cumulative 1828 screened (49.78%) and 0 usable.
+- Screening 0082: 7 needs repair; 35 Flutter assets inspected and hash-bound; crops were unrelated or clipped, including near-blank options; cumulative 1835 screened (49.97%) and 0 usable.
 
 ## Next
 - Continue from screening-0081 while independent workers hold exclusive

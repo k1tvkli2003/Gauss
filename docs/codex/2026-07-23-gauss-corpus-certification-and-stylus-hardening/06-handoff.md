@@ -104,6 +104,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0078: 25 needs repair؛ بدون asset وابسته؛ همه solutionها نامرتبط بودند.
 - screening 0079: 13 needs repair؛ بدون asset وابسته؛ همه solutionها نامرتبط و یک نمودار ضروری مفقود بود.
 - screening 0080: 6 needs repair؛ 35 asset بررسی شد؛ cropهای stem/option به‌طور سیستماتیک ناقص، سفید یا misaligned بودند.
+- screening 0082: 7 needs repair؛ 35 asset بررسی شد؛ cropهای نامرتبط/ناقص و دو option تقریباً سفید قرنطینه شدند.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -111,6 +112,6 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 1828 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 1835 screened، 0 usable.
 - resume point: `screening-0081`; only subagents may perform the blind screening lane.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
