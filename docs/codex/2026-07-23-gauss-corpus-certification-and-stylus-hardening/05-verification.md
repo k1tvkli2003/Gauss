@@ -92,7 +92,8 @@
 | Parallel screening 0079 | isolated Sol subagent; output-SHA attestation; `merge-screening` | passed | 13 rows; 13 needs repair |
 | Parallel screening 0080 | isolated Sol subagent + 35 original media; output-SHA attestation; `merge-screening` | passed | 6 rows; 6 needs repair |
 | Parallel screening 0082 | isolated Sol subagent + 35 original media; output-SHA attestation; `merge-screening` | passed | 7 rows; 7 needs repair |
-| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 1835 screened; 0 usable |
+| Parallel screening 0083 | isolated Sol subagent + 35 original media; output-SHA attestation; `merge-screening` | passed | 7 rows; 7 needs repair |
+| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 1842 screened; 0 usable |
 | Static analysis | `flutter analyze --fatal-infos` | passed | No issues found |
 | Full Flutter suite | `flutter test --no-pub --reporter compact` | passed | 94/94 |
 | Corpus TeX gate | full corpus parser test | passed | 3672 questions; 22032 text blocks; >37000 formulas |
@@ -114,4 +115,4 @@
 - 409 extraction blockers و سایر risk queues در `02-state.md`.
 - هیچ سؤال هنوز certification علمی کامل ندارد و نباید certified ادعا شود.
 - Jules source برای Gauss متصل نیست.
-- پس از 81 خروجی screening معتبر، 1185 مورد needs repair و 179 مورد ambiguous هستند؛ هیچ‌کدام usable نشده‌اند.
+- پس از 82 خروجی screening معتبر، 1192 مورد needs repair و 179 مورد ambiguous هستند؛ هیچ‌کدام usable نشده‌اند.
