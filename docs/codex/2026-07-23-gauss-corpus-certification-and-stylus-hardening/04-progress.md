@@ -150,9 +150,10 @@
 - Screening 0074: 25 needs repair; no referenced media; all supplied solutions were unrelated or contained malformed exponents; cumulative 1712 screened (46.62%) and 0 usable.
 - Screening 0075: 3 accepted, 19 needs repair; 4 Flutter assets inspected and hash-bound; all corroborated unrelated solution drift; cumulative 1734 screened (47.22%) and 0 usable.
 - Screening 0076: 23 needs repair, 2 ambiguous; 1 Flutter asset inspected and unusable; all supplied solutions were unrelated; cumulative 1759 screened (47.90%) and 0 usable.
+- Screening 0077: 24 needs repair, 1 ambiguous; 1 Flutter asset inspected but unrelated to the essential diagram; all supplied solutions were unrelated; cumulative 1784 screened (48.58%) and 0 usable.
 
 ## Next
-- Continue from screening-0077 while independent workers hold exclusive
+- Continue from screening-0078 while independent workers hold exclusive
   ownership of their output files and output-SHA attestations.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
