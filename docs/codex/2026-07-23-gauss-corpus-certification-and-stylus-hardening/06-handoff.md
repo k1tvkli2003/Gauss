@@ -3,8 +3,8 @@
 ## Outcome
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
-هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0044
-تعداد 1040 سؤال غربال شده و batchهای موازی مطابق دستور جدید کاربر با
+هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0050
+تعداد 1180 سؤال (32.14%) غربال شده و batchهای موازی مطابق دستور جدید کاربر با
 ساب‌ایجنت‌های موازی و attestation وابسته به SHA-256 خروجی ادغام شده‌اند.
 
 ## Changed Artifacts
@@ -16,7 +16,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - renderer/stylus tests
 
 ## How To Continue
-- batchهای 0001 تا 0044 با attestation مستقل ادغام شده‌اند.
+- batchهای 0001 تا 0050 با attestation مستقل ادغام شده‌اند.
 - `screening-0023` پس از رد اجرای اول، با worker تازه و blind rerun ادغام شد؛
   بررسی‌ها فقط در ساب‌ایجنت‌های ایزوله
   انجام شوند و خروجی دقیقاً به attestation همان worker هش شود.
@@ -68,6 +68,12 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0042: 24 needs repair، 1 ambiguous؛ 14 رسانه بررسی شد.
 - screening 0043: 10 needs repair، 15 ambiguous؛ سه رسانه‌ی crop نامرتبط بررسی شد.
 - screening 0044: 25 needs repair؛ 12 رسانه بررسی و placeholder options قرنطینه شد.
+- screening 0045: 12 accepted، 11 needs repair، 2 ambiguous؛ سه رسانه بررسی شد.
+- screening 0046: 17 accepted، 8 needs repair؛ دو رسانه بررسی شد.
+- screening 0047: 16 accepted، 3 needs repair، 6 ambiguous؛ 28 رسانه بررسی شد.
+- screening 0048: 19 accepted، 6 needs repair؛ سه crop آلوده قرنطینه شد.
+- screening 0049: 10 accepted، 4 needs repair، 1 ambiguous؛ graph crop قرنطینه شد.
+- screening 0050: 15 accepted، 3 needs repair، 7 ambiguous؛ 15 رسانه بررسی شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -75,5 +81,6 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 1040 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 1180 screened، 0 usable.
+- resume point: `screening-0051`; subagent usage reset is required before blind screening continues.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.

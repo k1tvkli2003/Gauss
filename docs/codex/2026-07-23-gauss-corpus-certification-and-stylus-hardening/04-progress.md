@@ -54,6 +54,12 @@
 | 2026-07-23T21:02:00+03:30 | active | Parallel screening batch 0042 checked 25 limits records and all 14 media; 24 repair, 1 ambiguous. | `logs/screening-0042.md` |
 | 2026-07-23T21:02:00+03:30 | active | Parallel screening batch 0043 checked 25 limits records and all 3 media; 10 repair, 15 ambiguous. | `logs/screening-0043.md` |
 | 2026-07-23T21:02:00+03:30 | active | Parallel screening batch 0044 checked 25 limits records and all 12 media; 25 repair. | `logs/screening-0044.md` |
+| 2026-07-23T21:10:00+03:30 | active | Parallel screening batch 0045 checked 25 limits records and all 3 media; 12 accepted, 11 repair, 2 ambiguous. | `logs/screening-0045.md` |
+| 2026-07-23T21:14:00+03:30 | active | Parallel screening batch 0046 checked 25 limits records and both media; 17 accepted, 8 repair. | `logs/screening-0046.md` |
+| 2026-07-23T21:18:00+03:30 | active | Parallel screening batch 0047 checked 25 limits records and all 28 media; 16 accepted, 3 repair, 6 ambiguous. | `logs/screening-0047.md` |
+| 2026-07-23T21:30:00+03:30 | active | Parallel screening batch 0048 checked 25 limits records and all 3 media; 19 accepted, 6 repair. | `logs/screening-0048.md` |
+| 2026-07-23T21:28:00+03:30 | active | Parallel screening batch 0049 checked 15 limits records and its media; 10 accepted, 4 repair, 1 ambiguous. | `logs/screening-0049.md` |
+| 2026-07-23T21:34:00+03:30 | active | Parallel screening batch 0050 checked 25 derivative records and all 15 media; 15 accepted, 3 repair, 7 ambiguous. | `logs/screening-0050.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -103,9 +109,17 @@
 - Screening 0042: 24 needs repair, 1 ambiguous.
 - Screening 0043: 10 needs repair, 15 ambiguous.
 - Screening 0044: 25 needs repair; cumulative 1040 screened and 0 usable.
+- Screening 0045: 12 accepted, 11 needs repair, 2 ambiguous.
+- Screening 0046: 17 accepted, 8 needs repair.
+- Screening 0047: 16 accepted, 3 needs repair, 6 ambiguous.
+- Screening 0048: 19 accepted, 6 needs repair.
+- Screening 0049: 10 accepted, 4 needs repair, 1 ambiguous.
+- Screening 0050: 15 accepted, 3 needs repair, 7 ambiguous; cumulative 1180 screened (32.14%) and 0 usable.
 
 ## Next
 - Continue parallel subagent screening from batch 0021 while preserving
   output-hash attestations and fail-closed quarantine.
+- Resume from batch 0051 after the subagent usage window resets; do not perform
+  blind screening in the coordinator task.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
