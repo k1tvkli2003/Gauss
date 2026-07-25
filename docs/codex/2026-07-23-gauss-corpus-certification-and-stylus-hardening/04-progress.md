@@ -141,9 +141,10 @@
 - Screening 0064: 2 accepted, 17 needs repair, 6 ambiguous; 24 Flutter assets inspected and hash-bound; cumulative 1516 screened (41.29%) and 0 usable.
 - Screening 0066: 6 accepted, 14 needs repair, 5 ambiguous; 13 Flutter assets inspected and hash-bound.
 - Screening 0068: 2 needs repair; no referenced media; cumulative 1543 screened (42.02%) and 0 usable.
+- Screening 0067: 5 accepted, 18 needs repair, 2 ambiguous; 2 Flutter assets inspected and hash-bound; cumulative 1568 screened (42.70%) and 0 usable.
 
 ## Next
-- Continue from screening-0067 while independent workers hold exclusive
+- Continue from screening-0069 while independent workers hold exclusive
   ownership of their output files and output-SHA attestations.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
