@@ -165,9 +165,10 @@
 - Screening 0089: 9 needs repair; 35 Flutter assets inspected and hash-bound; all were narrow, unrelated strips; cumulative 1922 screened (52.34%) and 0 usable.
 - Screening 0090: 7 needs repair; 35 Flutter assets inspected and hash-bound; several options were blank or miscropped and every solution was unrelated.
 - Screening 0091: 6 needs repair; 30 Flutter assets inspected and hash-bound; all were blank or unrelated strips and every solution was unrelated; cumulative 1935 screened (52.70%) and 0 usable.
+- Screening 0092: 21 accepted, 4 needs repair; 19 Flutter assets inspected and hash-bound; three crops were unrelated or mislabeled and one solution example was inconsistent; cumulative 1960 screened (53.38%) and 0 usable.
 
 ## Next
-- Continue from screening-0092 while independent workers hold exclusive
+- Continue from screening-0093 while independent workers hold exclusive
   ownership of their output files and output-SHA attestations.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
