@@ -133,15 +133,13 @@
 - Screening 0057: 21 needs repair, 4 ambiguous.
 - Screening 0058: 7 accepted, 12 needs repair, 6 ambiguous.
 - Screening 0059: 7 accepted, 18 needs repair; cumulative 1391 screened (37.88%) and 0 usable.
+- Screening 0060: 10 accepted, 15 needs repair; 30 Flutter assets inspected and hash-bound.
+- Screening 0061: 16 accepted, 9 needs repair; 4 Flutter assets inspected and hash-bound.
+- Screening 0062: 10 accepted, 11 needs repair, 1 ambiguous; 30 Flutter assets inspected and hash-bound.
+- Screening 0063: 3 accepted; 7 Flutter assets inspected and hash-bound; cumulative 1466 screened (39.92%) and 0 usable.
 
 ## Next
-- Continue parallel subagent screening from batch 0021 while preserving
-  output-hash attestations and fail-closed quarantine.
-- Continue parallel subagent screening from batch 0054; do not perform blind
-  screening in the coordinator task.
-- Continue from screening-0057 while independent workers hold exclusive
-  ownership of their output files.
-- Continue from screening-0060 while independent workers hold exclusive
-  ownership of their output files.
+- Continue from screening-0064 while independent workers hold exclusive
+  ownership of their output files and output-SHA attestations.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
