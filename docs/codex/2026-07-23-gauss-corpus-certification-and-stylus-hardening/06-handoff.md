@@ -111,6 +111,8 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0085: 7 needs repair؛ 35 asset بررسی شد؛ همه cropها بریده، سفید یا نامرتبط بودند.
 - screening 0086: 9 needs repair؛ 37 asset بررسی شد؛ همه assetها نامرتبط/بریده/سفید/mislabeled بودند؛ diagram ادعاییِ Venn یک تصویر ماشین‌حساب بود.
 - screening 0087: 1 accepted، 16 needs repair؛ 33 asset بررسی شد؛ stem/optionها stripهای بریده یا blank بودند.
+- screening 0088: 4 accepted، 21 needs repair؛ 19 asset بررسی شد؛ cropهای narrow/rotated/misaligned/blank/unrelated قرنطینه شدند.
+- screening 0089: 9 needs repair؛ 35 asset بررسی شد؛ همه stripهای باریک و نامرتبط بودند و option تکراری نیز ثبت شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -118,6 +120,6 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 1888 screened، 0 usable.
-- resume point: `screening-0088`; only subagents may perform the blind screening lane.
+- post-merge validate: 3672 source-bound، 1922 screened، 0 usable.
+- resume point: `screening-0090`; only subagents may perform the blind screening lane.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
