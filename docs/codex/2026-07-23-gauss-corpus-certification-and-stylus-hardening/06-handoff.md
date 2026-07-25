@@ -3,8 +3,8 @@
 ## Outcome
 Checkpoint اجرایی: preservation، renderer، Focus Pen path، certification schema،
 forensic queues، weighted Luna batches و release proof تکمیل شده‌اند. محتوای علمی
-هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0056
-تعداد 1316 سؤال (35.84%) غربال شده و batchهای موازی مطابق دستور جدید کاربر با
+هنوز عمداً `0 certified / 0 usable` است و کار ادامه دارد. تا batch 0059
+تعداد 1391 سؤال (37.88%) غربال شده و batchهای موازی مطابق دستور جدید کاربر با
 ساب‌ایجنت‌های موازی و attestation وابسته به SHA-256 خروجی ادغام شده‌اند.
 
 ## Changed Artifacts
@@ -16,7 +16,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - renderer/stylus tests
 
 ## How To Continue
-- batchهای 0001 تا 0056 با attestation مستقل ادغام شده‌اند.
+- batchهای 0001 تا 0059 با attestation مستقل ادغام شده‌اند.
 - `screening-0023` پس از رد اجرای اول، با worker تازه و blind rerun ادغام شد؛
   بررسی‌ها فقط در ساب‌ایجنت‌های ایزوله
   انجام شوند و خروجی دقیقاً به attestation همان worker هش شود.
@@ -80,6 +80,9 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0054: 18 needs repair، 1 ambiguous؛ 32 crop خراب/سفید/نامرتبط قرنطینه شد.
 - screening 0055: 21 needs repair، 4 ambiguous؛ solutionها و graph cropهای نامرتبط قرنطینه شد.
 - screening 0056: 25 needs repair؛ تمام solutionها با stem نامرتبط بودند.
+- screening 0057: 21 needs repair، 4 ambiguous؛ solution/graph mismatchها قرنطینه شد.
+- screening 0058: 7 accepted، 12 needs repair، 6 ambiguous؛ graph/option cropها قرنطینه شد.
+- screening 0059: 7 accepted، 18 needs repair؛ graph/prose/token/formula mismatchها قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -87,6 +90,6 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 1316 screened، 0 usable.
-- resume point: `screening-0057`; only subagents may perform the blind screening lane.
+- post-merge validate: 3672 source-bound، 1391 screened، 0 usable.
+- resume point: `screening-0060`; only subagents may perform the blind screening lane.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
