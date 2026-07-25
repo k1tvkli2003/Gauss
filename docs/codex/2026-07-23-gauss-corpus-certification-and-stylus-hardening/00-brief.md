@@ -5,6 +5,14 @@
 - Created: 2026-07-23T16:27:34
 - Language: fa
 
+## Repair policy update
+
+Quarantine means a source-preserving repair workflow, not disposal. Every discovered prompt,
+option, formula, media, answer, or solution defect is materialized as a hash-bound ticket in
+`data/certification/v1/repair-queue.jsonl`. Fixes are proposed only in immutable overlays and
+need source fidelity plus independent solve, fresh verification, solution review, and
+adversarial review before any runtime promotion.
+
 ## Request
 تمام ۳۶۷۲ سؤال حفظ‌شده باید قبل از استفاده در مأموریت‌ها از نظر استخراج
 متن/گزینه/تصویر، مبحث و زیرمبحث، سختی، کلید صحیح و راه‌حل کامل بررسی شوند.

@@ -118,11 +118,12 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0092: 21 accepted، 4 needs repair؛ 19 asset بررسی شد؛ cropهای نامرتبط/mislabeled و یک مثال راه‌حل ناسازگار قرنطینه شدند.
 
 ## Remaining
-- Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
+- Luna screening/classification، freeze taxonomy، repair overlay evidence، solve/verify و runtime gate.
 - source PDF و physical Focus Pen proof.
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
 - post-merge validate: 3672 source-bound، 1960 screened، 0 usable.
+- repair queue: 3417 hash-bound tickets؛ 3191 blocking prompt/render و 226 correctness tickets؛ هیچ source حذف نشده است.
 - resume point: `screening-0093`; only subagents may perform the blind screening lane.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.

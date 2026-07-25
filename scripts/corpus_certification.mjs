@@ -24,6 +24,8 @@ const runtimeAttestationFile = path.join(
   certificationRoot,
   "runtime-attestations.jsonl",
 );
+const repairQueueFile = path.join(certificationRoot, "repair-queue.jsonl");
+const repairOverlayFile = path.join(certificationRoot, "repair-overlays.jsonl");
 const screeningRoot = path.join(certificationRoot, "batches", "screening");
 const mismatchReportFile = path.join(
   repoRoot,
@@ -1105,6 +1107,174 @@ function summarize() {
   console.log(JSON.stringify(summary, null, 2));
 }
 
+function repairKind(record, issues) {
+  const evidence = [
+    ...issues,
+    ...record.certification.reasons,
+    ...record.difficulty.anchor_evidence,
+  ]
+    .join(" ")
+    .toLowerCase();
+  if (/media|image|diagram|crop|blank|asset|page fragment|mislabeled/u.test(evidence)) {
+    return "media_rebind_or_reextract";
+  }
+  if (/formula|latex|expression|exponent/u.test(evidence)) {
+    return "formula_transcription";
+  }
+  if (/solution|explanation|worked/u.test(evidence)) {
+    return "solution_rederive";
+  }
+  if (/answer|key|correct_option|conclusion/u.test(evidence)) {
+    return "answer_rederive";
+  }
+  if (/option|choice|distractor/u.test(evidence)) return "option_recovery";
+  return "question_reconstruction";
+}
+
+function repairPriority(record, issues) {
+  const evidence = [...issues, ...record.certification.reasons]
+    .join(" ")
+    .toLowerCase();
+  if (
+    record.extraction.status !== "screened_complete" ||
+    /diagram|media|image|option|formula|missing|placeholder|crop|blank/u.test(
+      evidence,
+    )
+  ) {
+    return "p0_blocking_render_or_prompt";
+  }
+  if (/solution|answer|key|conclusion/u.test(evidence)) {
+    return "p1_blocking_correctness";
+  }
+  return "p2_quality_repair";
+}
+
+function repairIssues(record) {
+  const screeningIssues = record.certification.reasons
+    .filter((reason) => reason.startsWith("screening_issue:"))
+    .map((reason) => reason.slice("screening_issue:".length));
+  const certificationIssues = record.certification.reasons.filter(
+    (reason) =>
+      ![
+        "luna_screening_pending",
+        "source_fidelity_pending",
+        "render_gate_pending",
+        "independent_answer_pending",
+        "fresh_verifier_pending",
+        "adversarial_verification_pending",
+        "solution_verification_pending",
+      ].includes(reason),
+  );
+  return [...new Set([...screeningIssues, ...certificationIssues])].sort();
+}
+
+function buildRepairQueue() {
+  const records = readJsonLines(manifestFile);
+  const tickets = records
+    .map((record) => {
+      const issues = repairIssues(record);
+      const repairRequired =
+        record.screening.status !== "accepted" ||
+        record.extraction.status !== "screened_complete" ||
+        record.solution.status === "mismatched" ||
+        record.answer.status === "independently_conflicts" ||
+        record.source_fidelity.status === "source_conflict" ||
+        issues.length > 0;
+      if (!repairRequired) return null;
+      return {
+        schema_version: 1,
+        ticket_id: `repair:${record.question_id}:${record.source_sha256.slice(0, 12)}`,
+        question_id: record.question_id,
+        source_sha256: record.source_sha256,
+        priority: repairPriority(record, issues),
+        repair_kind: repairKind(record, issues),
+        blocking_issues: issues,
+        source_provenance: record.provenance,
+        current_state: {
+          screening: record.screening.status,
+          extraction: record.extraction.status,
+          source_fidelity: record.source_fidelity.status,
+          answer: record.answer.status,
+          solution: record.solution.status,
+          certification: record.certification.status,
+        },
+        required_evidence: [
+          "source_fidelity",
+          "repair_overlay",
+          "independent_solve",
+          "fresh_verifier",
+          "solution_review",
+          "adversarial_review",
+        ],
+        promotion_status: "pending_evidence",
+      };
+    })
+    .filter(Boolean)
+    .sort((left, right) =>
+      left.priority.localeCompare(right.priority) ||
+      left.question_id.localeCompare(right.question_id),
+    );
+  writeJsonLinesAtomic(repairQueueFile, tickets);
+  console.log(
+    JSON.stringify(
+      {
+        output: path.relative(repoRoot, repairQueueFile),
+        tickets: tickets.length,
+        priorities: countBy(tickets, (ticket) => ticket.priority),
+        repair_kinds: countBy(tickets, (ticket) => ticket.repair_kind),
+      },
+      null,
+      2,
+    ),
+  );
+}
+
+function validateRepairOverlays() {
+  if (!fs.existsSync(repairOverlayFile)) {
+    console.log("Repair overlay validation passed: no overlays proposed yet.");
+    return;
+  }
+  const records = readJsonLines(manifestFile);
+  const recordById = new Map(records.map((record) => [record.question_id, record]));
+  const overlays = readJsonLines(repairOverlayFile);
+  const errors = [];
+  const seen = new Set();
+  for (const [index, overlay] of overlays.entries()) {
+    const at = `repair-overlay:${index + 1}`;
+    const record = recordById.get(overlay.question_id);
+    if (!record) errors.push(`${at} has an unknown question_id`);
+    if (!/^[a-f0-9]{64}$/u.test(overlay.source_sha256 ?? "")) {
+      errors.push(`${at} source_sha256 is invalid`);
+    }
+    if (record && record.source_sha256 !== overlay.source_sha256) {
+      errors.push(`${at} source hash is stale`);
+    }
+    if (seen.has(overlay.question_id)) errors.push(`${at} duplicate question_id`);
+    seen.add(overlay.question_id);
+    if (!new Set(["draft", "under_review", "verified", "rejected"]).has(overlay.status)) {
+      errors.push(`${at} status is invalid`);
+    }
+    if (overlay.status === "verified") {
+      const evidence = overlay.evidence ?? {};
+      for (const key of [
+        "source_fidelity",
+        "independent_solve",
+        "fresh_verifier",
+        "solution_review",
+        "adversarial_review",
+      ]) {
+        if (typeof evidence[key] !== "string" || evidence[key].length < 8) {
+          errors.push(`${at} verified overlay lacks ${key} evidence`);
+        }
+      }
+    }
+  }
+  if (errors.length > 0) {
+    throw new Error(`Repair overlay validation failed with ${errors.length} error(s):\n${errors.map((error) => `- ${error}`).join("\n")}`);
+  }
+  console.log(`Repair overlay validation passed: ${overlays.length} overlay(s).`);
+}
+
 function screeningItem(question, record) {
   return {
     question_id: question.id,
@@ -1537,9 +1707,15 @@ try {
     case "merge-screening":
       mergeScreening();
       break;
+    case "repair-queue":
+      buildRepairQueue();
+      break;
+    case "validate-repairs":
+      validateRepairOverlays();
+      break;
     default:
       console.error(
-        "Usage: node scripts/corpus_certification.mjs <baseline|validate|summarize|shard|merge-screening> [--size=25] [--max-weight=120] [--batch=screening-0001] [--attestation=id] [--reattest]",
+        "Usage: node scripts/corpus_certification.mjs <baseline|validate|summarize|shard|merge-screening|repair-queue|validate-repairs> [--size=25] [--max-weight=120] [--batch=screening-0001] [--attestation=id] [--reattest]",
       );
       process.exitCode = 2;
   }

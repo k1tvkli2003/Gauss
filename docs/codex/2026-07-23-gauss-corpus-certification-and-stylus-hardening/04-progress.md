@@ -170,5 +170,7 @@
 ## Next
 - Continue from screening-0093 while independent workers hold exclusive
   ownership of their output files and output-SHA attestations.
+- Process the deterministic repair queue in parallel with screening; no quarantined
+  source is discarded or silently overwritten.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.

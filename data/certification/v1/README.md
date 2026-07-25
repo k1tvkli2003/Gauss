@@ -117,3 +117,20 @@ batches are topic-confined and weighted by text/media load. `merge-screening`
 rejects missing/reordered/stale IDs, static-blocker acceptance, extra fields,
 invalid rubric scores, unattested model identity, and duplicate merges before
 atomically replacing the derived manifest.
+
+## Repair overlays
+
+Quarantine is a repair queue, never deletion. `repair-queue.jsonl` is a deterministic,
+source-hash-bound worklist generated from current certification evidence; it records the
+repair kind, priority, provenance, and the evidence needed before promotion. It does not
+rewrite source shards or media.
+
+```powershell
+node scripts/corpus_certification.mjs repair-queue
+node scripts/corpus_certification.mjs validate-repairs
+```
+
+Proposed fixes live only in `repair-overlays.jsonl` and conform to
+`repair-overlays.schema.json`. A verified overlay must bind the source hash and provide
+source-fidelity, independent-solve, fresh-verifier, solution-review, and adversarial-review
+evidence. Until then the original remains preserved and the runtime remains fail-closed.

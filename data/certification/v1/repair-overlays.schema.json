@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gauss immutable repair overlay v1",
+  "type": "object",
+  "required": ["schema_version", "question_id", "source_sha256", "status", "patch", "evidence"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "question_id": {"type": "string", "pattern": "^[a-z0-9_-]+$"},
+    "source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "status": {"enum": ["draft", "under_review", "verified", "rejected"]},
+    "patch": {"type": "object"},
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "source_fidelity": {"type": "string"},
+        "independent_solve": {"type": "string"},
+        "fresh_verifier": {"type": "string"},
+        "solution_review": {"type": "string"},
+        "adversarial_review": {"type": "string"}
+      }
+    }
+  }
+}
