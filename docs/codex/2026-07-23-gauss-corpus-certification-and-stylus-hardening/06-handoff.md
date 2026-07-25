@@ -96,6 +96,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0071: 10 accepted، 9 needs repair؛ دو asset خوانا بودند ولی mismatch گزینه/علامت و OCR ناقص در راه‌حل‌ها قرنطینه شد.
 - screening 0070: 13 accepted، 12 needs repair؛ 16 asset بررسی شد. گیت merge ردیف 1599 را ناسازگار یافت و پس از بازبینی کور از accepted به needs repair منتقل شد.
 - screening 0072: 13 needs repair، 12 ambiguous؛ 14 asset بررسی شد و همه solutionهای این batch نامرتبط بودند، پس هیچ ردیفی accepted نشد.
+- screening 0073: 21 needs repair، 4 ambiguous؛ 8 asset بررسی و diagramهای ضروریِ crop‌شده/نامرتبط قرنطینه شد.
 
 ## Remaining
 - Luna screening/classification، freeze taxonomy، solve/verify/repair و runtime gate.
@@ -103,6 +104,6 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 1662 screened، 0 usable.
-- resume point: `screening-0073`; only subagents may perform the blind screening lane.
+- post-merge validate: 3672 source-bound، 1687 screened، 0 usable.
+- resume point: `screening-0074`; only subagents may perform the blind screening lane.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
