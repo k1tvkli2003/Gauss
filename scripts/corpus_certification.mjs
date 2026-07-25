@@ -117,7 +117,10 @@ function trustedScreeningRuntime(attestation, batchId, outputFile) {
     attestation.reasoning === "low" &&
     typeof attestation.task_name === "string" &&
     (attestation.task_name === expectedTaskName ||
-      attestation.task_name.startsWith(`${expectedTaskName}_retry`)) &&
+      (attestation.task_name.startsWith(`${expectedTaskName}_`) &&
+        /^(retry|resume)(?:_|$)/u.test(
+          attestation.task_name.slice(expectedTaskName.length + 1),
+        ))) &&
     typeof attestation.output_sha256 === "string" &&
     fs.existsSync(outputFile) &&
     attestation.output_sha256 === digestFile(outputFile);

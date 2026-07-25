@@ -61,7 +61,10 @@
 | Parallel screening 0048 | isolated subagent + 3 original media; output-SHA attestation; `merge-screening` | passed | 25 rows; 19 accepted, 6 needs repair |
 | Parallel screening 0049 | isolated subagent + 1 original media; output-SHA attestation; `merge-screening` | passed | 15 rows; 10 accepted, 4 needs repair, 1 ambiguous |
 | Parallel screening 0050 | isolated subagent + 15 original media; output-SHA attestation; `merge-screening` | passed | 25 rows; 15 accepted, 3 needs repair, 7 ambiguous |
-| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 1180 screened; 0 usable |
+| Parallel screening 0051 | isolated Sol subagent + 2 original media; output-SHA attestation; `merge-screening` | passed | 25 rows; 20 accepted, 4 needs repair, 1 ambiguous |
+| Parallel screening 0052 | isolated Sol subagent + 2 original media; output-SHA attestation; `merge-screening` | passed | 25 rows; 15 accepted, 8 needs repair, 2 ambiguous |
+| Parallel screening 0053 | isolated Sol subagent + 1 original media; output-SHA attestation; `merge-screening` | passed | 17 rows; 11 accepted, 5 needs repair, 1 ambiguous |
+| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 1247 screened; 0 usable |
 | Static analysis | `flutter analyze --fatal-infos` | passed | No issues found |
 | Full Flutter suite | `flutter test --no-pub --reporter compact` | passed | 94/94 |
 | Corpus TeX gate | full corpus parser test | passed | 3672 questions; 22032 text blocks; >37000 formulas |
@@ -83,5 +86,4 @@
 - 409 extraction blockers و سایر risk queues در `02-state.md`.
 - هیچ سؤال هنوز certification علمی کامل ندارد و نباید certified ادعا شود.
 - Jules source برای Gauss متصل نیست.
-- پس از 50 batch معتبر، 742 مورد needs repair و 119 مورد ambiguous هستند؛ هیچ‌کدام usable نشده‌اند.
-- batchهای 0051 و 0052 به سقف مصرف ساب‌ایجنت خوردند و هیچ خروجی‌ای از آن‌ها ادغام نشد.
+- پس از 53 batch معتبر، 759 مورد needs repair و 123 مورد ambiguous هستند؛ هیچ‌کدام usable نشده‌اند.

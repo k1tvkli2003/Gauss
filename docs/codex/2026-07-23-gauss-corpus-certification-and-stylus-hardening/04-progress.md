@@ -60,6 +60,9 @@
 | 2026-07-23T21:30:00+03:30 | active | Parallel screening batch 0048 checked 25 limits records and all 3 media; 19 accepted, 6 repair. | `logs/screening-0048.md` |
 | 2026-07-23T21:28:00+03:30 | active | Parallel screening batch 0049 checked 15 limits records and its media; 10 accepted, 4 repair, 1 ambiguous. | `logs/screening-0049.md` |
 | 2026-07-23T21:34:00+03:30 | active | Parallel screening batch 0050 checked 25 derivative records and all 15 media; 15 accepted, 3 repair, 7 ambiguous. | `logs/screening-0050.md` |
+| 2026-07-26T00:00:00+03:30 | active | Parallel screening batch 0051 checked 25 derivative records and both media; 20 accepted, 4 repair, 1 ambiguous. | `logs/screening-0051.md` |
+| 2026-07-26T00:00:00+03:30 | active | Parallel screening batch 0052 checked 25 derivative records and both media; 15 accepted, 8 repair, 2 ambiguous. | `logs/screening-0052.md` |
+| 2026-07-26T00:00:00+03:30 | active | Parallel screening batch 0053 checked 17 derivative records and its media; 11 accepted, 5 repair, 1 ambiguous. | `logs/screening-0053.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -115,11 +118,14 @@
 - Screening 0048: 19 accepted, 6 needs repair.
 - Screening 0049: 10 accepted, 4 needs repair, 1 ambiguous.
 - Screening 0050: 15 accepted, 3 needs repair, 7 ambiguous; cumulative 1180 screened (32.14%) and 0 usable.
+- Screening 0051: 20 accepted, 4 needs repair, 1 ambiguous.
+- Screening 0052: 15 accepted, 8 needs repair, 2 ambiguous.
+- Screening 0053: 11 accepted, 5 needs repair, 1 ambiguous; cumulative 1247 screened (33.96%) and 0 usable.
 
 ## Next
 - Continue parallel subagent screening from batch 0021 while preserving
   output-hash attestations and fail-closed quarantine.
-- Resume from batch 0051 after the subagent usage window resets; do not perform
-  blind screening in the coordinator task.
+- Continue parallel subagent screening from batch 0054; do not perform blind
+  screening in the coordinator task.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
