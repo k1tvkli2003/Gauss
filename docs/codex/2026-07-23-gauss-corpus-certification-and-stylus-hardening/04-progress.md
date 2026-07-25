@@ -63,6 +63,9 @@
 | 2026-07-26T00:00:00+03:30 | active | Parallel screening batch 0051 checked 25 derivative records and both media; 20 accepted, 4 repair, 1 ambiguous. | `logs/screening-0051.md` |
 | 2026-07-26T00:00:00+03:30 | active | Parallel screening batch 0052 checked 25 derivative records and both media; 15 accepted, 8 repair, 2 ambiguous. | `logs/screening-0052.md` |
 | 2026-07-26T00:00:00+03:30 | active | Parallel screening batch 0053 checked 17 derivative records and its media; 11 accepted, 5 repair, 1 ambiguous. | `logs/screening-0053.md` |
+| 2026-07-26T00:10:00+03:30 | active | Parallel screening batch 0056 checked 25 derivative records and all 5 media; 25 repair. | `logs/screening-0056.md` |
+| 2026-07-26T00:12:00+03:30 | active | Parallel screening batch 0054 checked 19 derivative records and all 33 media; 18 repair, 1 ambiguous. | `logs/screening-0054.md` |
+| 2026-07-26T00:12:00+03:30 | active | Parallel screening batch 0055 checked 25 derivative records and all 13 media; 21 repair, 4 ambiguous. | `logs/screening-0055.md` |
 
 ## Done So Far
 - Preservation and evidence scaffolding.
@@ -121,11 +124,16 @@
 - Screening 0051: 20 accepted, 4 needs repair, 1 ambiguous.
 - Screening 0052: 15 accepted, 8 needs repair, 2 ambiguous.
 - Screening 0053: 11 accepted, 5 needs repair, 1 ambiguous; cumulative 1247 screened (33.96%) and 0 usable.
+- Screening 0054: 18 needs repair, 1 ambiguous.
+- Screening 0055: 21 needs repair, 4 ambiguous.
+- Screening 0056: 25 needs repair; cumulative 1316 screened (35.84%) and 0 usable.
 
 ## Next
 - Continue parallel subagent screening from batch 0021 while preserving
   output-hash attestations and fail-closed quarantine.
 - Continue parallel subagent screening from batch 0054; do not perform blind
   screening in the coordinator task.
+- Continue from screening-0057 while independent workers hold exclusive
+  ownership of their output files.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
