@@ -199,6 +199,7 @@
 - Screening 0125: 13 accepted, 6 needs repair, 6 ambiguous; cumulative 2508 screened (68.30%) and 0 usable.
 - Screening 0127: 1 needs repair, 1 ambiguous; cumulative 2510 screened (68.36%) and 0 usable.
 - Screening 0126: 13 accepted, 6 needs repair, 6 ambiguous; 14 Flutter media assets were inspected and hash-verified; cumulative 2535 screened (69.04%) and 0 usable.
+- Screening 0130: 11 accepted, 7 needs repair, 3 ambiguous; 32 Flutter media assets were inspected and hash-verified; cumulative 2556 screened (69.61%) and 0 usable.
 
 ## Next
 - Continue from the next sequential batch; 0111/0112 outputs remain pending attestation.
