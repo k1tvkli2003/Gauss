@@ -123,9 +123,12 @@
 | Parallel screening 0110 | isolated Sol subagent + 9 original media; output-SHA attestation; `merge-screening` | passed | 5 rows; 2 accepted, 3 needs repair |
 | Parallel screening 0114 | isolated Sol subagent; output-SHA attestation; `merge-screening` | passed | 25 rows; 9 accepted, 16 needs repair |
 | Parallel screening 0113 | isolated Sol subagent; coordinator fail-closed correction; output-SHA attestation; `merge-screening` | passed | 25 rows; 6 accepted, 17 needs repair, 2 ambiguous |
+| Parallel screening 0115 | isolated Sol subagent; output-SHA attestation; `merge-screening` | passed | 2 rows; 1 accepted, 1 needs repair |
+| Parallel screening 0116 | isolated Sol subagent + 12 original media; output-SHA attestation; `merge-screening` | passed | 25 rows; 16 accepted, 5 needs repair, 4 ambiguous |
 | Flutter baseline suite | `flutter test --no-pub --reporter compact` | passed | 94/94 tests; map/study/scratch responsive and native interaction contracts green |
 | Flutter static analysis | `flutter analyze --fatal-infos` | passed | No issues found |
-| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2263 screened; 0 usable |
+| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2265 screened; 0 usable |
+| Post-merge corpus reconciliation (0116) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2290 screened; 0 usable |
 | Static analysis | `flutter analyze --fatal-infos` | passed | No issues found |
 | Full Flutter suite | `flutter test --no-pub --reporter compact` | passed | 94/94 |
 | Corpus TeX gate | full corpus parser test | passed | 3672 questions; 22032 text blocks; >37000 formulas |
