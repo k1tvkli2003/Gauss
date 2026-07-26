@@ -224,6 +224,9 @@
 - Screening 0150: 15 accepted, 5 needs repair; 32 Flutter media assets inspected; cumulative 3017 screened (82.16%) and 0 usable.
 - Screening 0151: 16 accepted, 4 needs repair, 5 ambiguous; 22 Flutter media assets inspected; cumulative 3042 screened (82.84%) and 0 usable.
 - Screening 0152: 10 needs repair, 1 ambiguous; 21 Flutter media references inspected; cumulative 3053 screened (83.14%) and 0 usable.
+- Screening 0153: 19 accepted, 6 ambiguous; 20 Flutter media assets inspected; cumulative 3078 screened (83.82%) and 0 usable.
+- Screening 0154: one internally inconsistent accepted row was downgraded fail-closed after merge validation; final 13 accepted, 7 needs repair, 4 ambiguous; cumulative 3102 screened (84.47%) and 0 usable.
+- Screening 0155: 7 accepted, 14 needs repair, 1 ambiguous; 31 Flutter media assets inspected; cumulative 3124 screened (85.08%) and 0 usable.
 
 ## Next
 - Continue from the next sequential batch; 0111/0112 outputs remain pending attestation.
