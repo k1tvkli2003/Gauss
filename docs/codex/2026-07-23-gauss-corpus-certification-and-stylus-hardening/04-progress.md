@@ -234,6 +234,9 @@
 - Screening 0160: 4 accepted, 8 needs repair; 17 Flutter media assets inspected; cumulative 3208 screened (87.36%) and 0 usable.
 - Screening 0161: 12 accepted, 10 needs repair, 3 ambiguous; 23 Flutter media assets inspected; cumulative 3233 screened (88.04%) and 0 usable.
 - Screening 0162: 25 needs repair; 28 Flutter media assets inspected; systematic incomplete/cropped media kept quarantined; cumulative 3258 screened (88.73%) and 0 usable.
+- Screening 0163: 20 needs repair, 5 ambiguous; 15 Flutter media assets inspected; incomplete/generic or ambiguous extraction stayed quarantined; cumulative 3283 screened (89.41%) and 0 usable.
+- Screening 0164: 25 needs repair; 22 Flutter media assets inspected; all records incomplete and fail-closed; cumulative 3308 screened (90.09%) and 0 usable.
+- Screening 0165: 25 needs repair; 30 Flutter media assets inspected; generic stems and placeholder options stayed quarantined; cumulative 3333 screened (90.77%) and 0 usable.
 
 ## Next
 - Continue from the next sequential batch; 0111/0112 outputs remain pending attestation.

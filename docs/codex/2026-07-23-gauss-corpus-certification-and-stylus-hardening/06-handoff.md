@@ -128,7 +128,9 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
 - post-merge validate: 3672 source-bound، 2413 screened، 0 usable.
 - repair queue: 2935 hash-bound tickets؛ 2646 blocking prompt/render و 289 correctness tickets؛ هیچ source حذف نشده است.
-- active screening: next sequential batch after 0162; 0111/0112 remain unattested and unmerged.
-- latest screening checkpoint: 3258/3672 (88.73%) taxonomy/extraction screened; 0 usable because solve, source-fidelity, and adversarial gates remain open.
+- active screening: next sequential batch after 0165; 0111/0112 remain unattested and unmerged.
+- latest screening checkpoint: 3333/3672 (90.77%) taxonomy/extraction screened; 0 usable because solve, source-fidelity, and adversarial gates remain open.
+- screening 0163-0165 merged with trusted gpt-5.6-sol/low attestations; all 75 rows remain fail-closed (50 needs-repair/ambiguous plus 25 incomplete).
+- repair queue remains 2935 hash-bound tickets (2646 P0 render/prompt, 289 P1 correctness); no source JSON or media was modified.
 - repair discipline: contradictory/internally inconsistent rows are reclassified, rehashed, and re-attested fail-closed; they are not discarded.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
