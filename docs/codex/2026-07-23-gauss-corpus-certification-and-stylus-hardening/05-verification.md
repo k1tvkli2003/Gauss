@@ -152,6 +152,8 @@
 | Flutter Web release (current) | `flutter build web --release --no-wasm-dry-run` | passed | `build/web` generated successfully |
 | Post-merge corpus reconciliation (0127) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2510 screened (68.36%); 0 usable; 3324 repair tickets |
 | Repair queue regeneration (0127) | `node scripts/corpus_certification.mjs repair-queue` | passed | 3324 hash-bound tickets; 3056 P0 render/prompt, 268 P1 correctness |
+| Post-merge corpus reconciliation (0126) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2535 screened (69.04%); 0 usable; 3311 repair tickets |
+| Repair queue regeneration (0126) | `node scripts/corpus_certification.mjs repair-queue` | passed | 3311 hash-bound tickets; 3043 P0 render/prompt, 268 P1 correctness |
 
 ## Not Run
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
