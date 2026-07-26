@@ -150,6 +150,8 @@
 | Repair queue regeneration (0124) | `node scripts/corpus_certification.mjs repair-queue` | passed | 3337 hash-bound tickets; 3069 P0 render/prompt, 268 P1 correctness |
 | Repair overlay gate (0124) | `node scripts/corpus_certification.mjs validate-repairs` | passed | No overlays proposed; source-preserving repair queue remains fail-closed |
 | Flutter Web release (current) | `flutter build web --release --no-wasm-dry-run` | passed | `build/web` generated successfully |
+| Post-merge corpus reconciliation (0127) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2510 screened (68.36%); 0 usable; 3324 repair tickets |
+| Repair queue regeneration (0127) | `node scripts/corpus_certification.mjs repair-queue` | passed | 3324 hash-bound tickets; 3056 P0 render/prompt, 268 P1 correctness |
 
 ## Not Run
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
