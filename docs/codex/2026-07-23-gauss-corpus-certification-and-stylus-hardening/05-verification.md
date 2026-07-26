@@ -116,7 +116,8 @@
 | Parallel screening 0103 | isolated Sol subagent + 14 original media; output-SHA attestation; `merge-screening` | passed | 25 rows; 23 accepted, 2 needs repair |
 | Parallel screening 0104 | isolated Sol subagent + 29 original media; output-SHA attestation; `merge-screening` | passed | 25 rows; 11 accepted, 2 needs repair, 12 ambiguous |
 | Parallel screening 0105 | isolated Sol subagent + 32 original media; output-SHA attestation; `merge-screening` | passed | 23 rows; 10 accepted, 5 needs repair, 8 ambiguous |
-| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2140 screened; 0 usable |
+| Parallel screening 0106 | isolated Sol subagent; output-SHA attestation; coordinator fail-closed correction; `merge-screening` | passed | 15 rows; 2 accepted, 2 needs repair, 11 ambiguous |
+| Post-merge corpus reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2155 screened; 0 usable |
 | Static analysis | `flutter analyze --fatal-infos` | passed | No issues found |
 | Full Flutter suite | `flutter test --no-pub --reporter compact` | passed | 94/94 |
 | Corpus TeX gate | full corpus parser test | passed | 3672 questions; 22032 text blocks; >37000 formulas |
