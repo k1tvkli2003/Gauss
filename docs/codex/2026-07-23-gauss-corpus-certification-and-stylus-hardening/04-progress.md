@@ -178,9 +178,10 @@
 - Screening 0102: 15 accepted, 9 needs repair, 1 ambiguous; 6 Flutter assets inspected and hash-bound, all legible; cumulative 2067 screened (56.29%) and 0 usable.
 - Screening 0103: 23 accepted, 2 needs repair; 14 Flutter assets inspected and hash-bound; two solution/prompt contradictions were isolated for repair; cumulative 2092 screened (56.97%) and 0 usable.
 - Screening 0104: 11 accepted, 2 needs repair, 12 ambiguous; 29 Flutter assets inspected and hash-bound; dependent diagram crops were incomplete or unrelated, so they remained fail-closed; cumulative 2117 screened (57.65%) and 0 usable.
+- Screening 0105: 10 accepted, 5 needs repair, 8 ambiguous; 32 Flutter assets inspected and hash-bound; five essential figures were recoverable only from solution media, while eight remained fail-closed; cumulative 2140 screened (58.28%) and 0 usable.
 
 ## Next
-- Continue from screening-0105/0106/0107 while independent workers hold exclusive
+- Continue from screening-0106/0107/0108 while independent workers hold exclusive
   ownership of their output files and output-SHA attestations.
 - Process the deterministic repair queue in parallel with screening; no quarantined
   source is discarded or silently overwritten.
