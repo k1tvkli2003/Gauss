@@ -146,6 +146,10 @@
 | Signing continuity | `apksigner` + exact SHA-256 | passed | v2; Gauss fingerprint `F50C...B76844`; non-debug |
 | Zip alignment | `zipalign -c -P 16 -v 4` | passed | verification successful |
 | Release data parity | `tool/verify_release_artifacts.ps1` | passed | 30 bank files and 3410 media identical in source/Flutter/Web/APK |
+| Post-merge corpus reconciliation (0124) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2483 screened (67.62%); 0 usable; 3337 repair tickets |
+| Repair queue regeneration (0124) | `node scripts/corpus_certification.mjs repair-queue` | passed | 3337 hash-bound tickets; 3069 P0 render/prompt, 268 P1 correctness |
+| Repair overlay gate (0124) | `node scripts/corpus_certification.mjs validate-repairs` | passed | No overlays proposed; source-preserving repair queue remains fail-closed |
+| Flutter Web release (current) | `flutter build web --release --no-wasm-dry-run` | passed | `build/web` generated successfully |
 
 ## Not Run
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
