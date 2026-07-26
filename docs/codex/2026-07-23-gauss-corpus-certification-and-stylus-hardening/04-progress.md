@@ -183,9 +183,10 @@
 - Screening 0107: 5 accepted, 13 ambiguous; 13 dependent stem assets were incomplete, unrelated, or cropped.
 - Screening 0108: 1 accepted, 13 needs repair, 3 ambiguous; all 34 Flutter assets were inspected and widespread stem cropping/misalignment was isolated; cumulative 2190 screened (59.64%) and 0 usable.
 - Screening 0109: 18 accepted; all 34 Flutter assets were legible, present, correctly bound, and hash-verified; cumulative 2208 screened (60.13%) and 0 usable.
+- Screening 0110: 2 accepted, 3 needs repair; 9 Flutter assets were legible and hash-verified, while three solution-text/printed-solution contradictions were quarantined; cumulative 2213 screened (60.27%) and 0 usable.
 
 ## Next
-- Continue from screening-0110/0111/0112 while independent workers hold exclusive
+- Continue from screening-0111/0112/0113/0114; 0111/0112 outputs remain pending attestation.
   ownership of their output files and output-SHA attestations.
 - Process the deterministic repair queue in parallel with screening; no quarantined
   source is discarded or silently overwritten.
