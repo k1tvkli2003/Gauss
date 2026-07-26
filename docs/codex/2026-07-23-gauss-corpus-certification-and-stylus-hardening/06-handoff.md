@@ -128,7 +128,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
 - post-merge validate: 3672 source-bound، 2413 screened، 0 usable.
 - repair queue: 3050 hash-bound tickets؛ 2765 blocking prompt/render و 285 correctness tickets؛ هیچ source حذف نشده است.
-- active screening: 0152 dispatched; 0111/0112 remain unattested and unmerged.
-- latest screening checkpoint: 3042/3672 (82.84%) taxonomy/extraction screened; 0 usable because solve, source-fidelity, and adversarial gates remain open.
+- active screening: next sequential batch after 0152; 0111/0112 remain unattested and unmerged.
+- latest screening checkpoint: 3053/3672 (83.14%) taxonomy/extraction screened; 0 usable because solve, source-fidelity, and adversarial gates remain open.
 - repair discipline: contradictory/internally inconsistent rows are reclassified, rehashed, and re-attested fail-closed; they are not discarded.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
