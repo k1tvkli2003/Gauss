@@ -126,7 +126,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 
 ## Verification
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
-- post-merge validate: 3672 source-bound، 2340 screened، 0 usable.
+- post-merge validate: 3672 source-bound، 2413 screened، 0 usable.
 - repair queue: 3345 hash-bound tickets؛ 3101 blocking prompt/render و 244 correctness tickets؛ هیچ source حذف نشده است.
-- active screening: `screening-0111`, `screening-0112`, `screening-0119`; 0111/0112 remain unattested and unmerged.
+- active screening: next sequential batch; 0111/0112 remain unattested and unmerged.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.

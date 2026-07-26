@@ -190,9 +190,12 @@
 - Screening 0116: 16 accepted, 5 needs repair, 4 ambiguous; 12 Flutter assets verified, with malformed formula and mismatched essential figures quarantined; cumulative 2290 screened (62.37%) and 0 usable.
 - Screening 0117: 11 accepted, 14 needs repair; 14 records had incomplete extraction and remained fail-closed.
 - Screening 0118: 25 needs repair, all 25 incomplete; 19 media assets were hash-verified; cumulative 2340 screened (63.73%) and 0 usable.
+- Screening 0119: 25 needs repair, all incomplete; 20 media assets were inspected and hash-verified.
+- Screening 0120: 20 needs repair, 3 ambiguous.
+- Screening 0121: 23 needs repair, 2 ambiguous; cumulative 2413 screened (65.71%) and 0 usable.
 
 ## Next
-- Continue from screening-0111/0112/0119; 0111/0112 outputs remain pending attestation.
+- Continue from the next sequential batch; 0111/0112 outputs remain pending attestation.
   ownership of their output files and output-SHA attestations.
 - Process the deterministic repair queue in parallel with screening; no quarantined
   source is discarded or silently overwritten.
