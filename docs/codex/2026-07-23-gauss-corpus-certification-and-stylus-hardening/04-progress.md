@@ -209,6 +209,11 @@
 - Screening 0135: 1 accepted, 1 needs repair; 3 Flutter media assets inspected; cumulative 2675 screened (72.88%) and 0 usable.
 - Screening 0136: 12 accepted, 9 needs repair; 33 Flutter media assets inspected; cumulative 2696 screened (73.42%) and 0 usable.
 - Screening 0137: 15 accepted, 3 needs repair, 1 ambiguous; 33 Flutter media assets inspected; cumulative 2715 screened (73.94%) and 0 usable.
+- Screening 0138: 4 accepted, 7 needs repair, 4 ambiguous; 33 Flutter media assets inspected; cumulative 2730 screened (74.35%) and 0 usable.
+- Screening 0139: trusted retry; all 25 needs_repair/incomplete after 30 media assets were inspected; cumulative 2755 screened (75.03%) and 0 usable.
+- Screening 0140: 18 needs repair, 7 ambiguous; 24 Flutter media assets inspected; cumulative 2780 screened (75.71%) and 0 usable.
+- Screening 0141: 20 needs repair, 5 ambiguous; 11 Flutter media assets inspected; cumulative 2805 screened (76.39%) and 0 usable.
+- Screening 0142: 16 accepted, 3 needs repair, 6 ambiguous; 14 Flutter media assets inspected; cumulative 2830 screened (77.07%) and 0 usable.
 
 ## Next
 - Continue from the next sequential batch; 0111/0112 outputs remain pending attestation.

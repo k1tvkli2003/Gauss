@@ -161,6 +161,9 @@
 | Coordinator fail-closed repair (0128) | output reclassification + SHA/attestation update | passed | One contradictory accepted row moved to needs_repair; no source JSON/media deleted or overwritten |
 | Post-merge corpus reconciliation (0137) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2715 screened (73.94%); 0 usable; 3184 repair tickets |
 | Repair queue regeneration (0137) | `node scripts/corpus_certification.mjs repair-queue` | passed | 3184 hash-bound tickets; 2911 P0 render/prompt, 273 P1 correctness |
+| Post-merge corpus reconciliation (0142) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 2830 screened (77.07%); 0 usable; 3164 repair tickets |
+| Repair queue regeneration (0142) | `node scripts/corpus_certification.mjs repair-queue` | passed | 3164 hash-bound tickets; 2891 P0 render/prompt, 273 P1 correctness |
+| Trusted retry (0139) | replacement output + retry attestation | passed | Original worker stalled; trusted retry produced 25/25 needs_repair and revalidated all 30 media assets |
 
 ## Not Run
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
