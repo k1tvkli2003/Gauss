@@ -139,6 +139,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening is complete, but certification remains fail-closed: answer source-only, source-PDF fidelity pending/blocked, solution review pending, adversarial review pending, and 2791 repair tickets remain.
 - answer gate progress: 5 records are `verified_correct` after independent blind solve + fresh verifier agreement; permanent evidence is under `evidence/answer-review-0001.jsonl` and `evidence/verify-review-0001.jsonl`. None are usable until the remaining gates pass.
 - answer gate progress: 10 records are now `verified_correct`; slice 0002 evidence is under `evidence/answer-review-0002.jsonl` and `evidence/verify-review-0002.jsonl`. None are usable until source-fidelity, solution, and adversarial gates pass.
+- solution gate progress: 5 of those records are now `verified_complete_correct` after two independent solution reviewers; evidence is under `evidence/solution-review-0001a.jsonl` and `evidence/solution-review-0001b.jsonl`. Source-fidelity and adversarial gates still block runtime admission.
 - screening 0163-0165 merged with trusted gpt-5.6-sol/low attestations; all 75 rows remain fail-closed (50 needs-repair/ambiguous plus 25 incomplete).
 - repair queue remains 2935 hash-bound tickets (2646 P0 render/prompt, 289 P1 correctness); no source JSON or media was modified.
 - repair discipline: contradictory/internally inconsistent rows are reclassified, rehashed, and re-attested fail-closed; they are not discarded.

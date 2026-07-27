@@ -203,6 +203,7 @@
 | Repair overlay gate after full screening | `node scripts/corpus_certification.mjs validate-repairs` | passed | No overlays proposed; source-preserving repair queue remains fail-closed |
 | Blind solve/verifier evidence slice 0001 | `.codex-tmp/answer-review-0001.jsonl` + `.codex-tmp/verify-review-0001.jsonl` | passed | 5/5 independent options agreed; evidence hashes `355781638a469f3a8088e4a79b4ce3ba8f7ff3cd6c3778683ed9e730e5a1a04b`, `531d48eccf9fbf24d3ca566282306a0df4701797705246b5f486f555d63621f8`; no source key was exposed to workers |
 | Blind solve/verifier evidence slice 0002 | `evidence/answer-review-0002.jsonl` + `evidence/verify-review-0002.jsonl` | passed | 5/5 independent options agreed; evidence hashes `517ba0224ccde5238ef86c16d8689c8b939e68957f55e8609d1aece8bf1ef4ed`, `e9d4d265a93ba59e30d5303d80a282df35b5700da9a5193a9fa8e754164f2cf8`; no source key was exposed to workers |
+| Independent solution-review evidence slice 0001 | `evidence/solution-review-0001a.jsonl` + `evidence/solution-review-0001b.jsonl` | passed | 5/5 `holds`, complete, correct from two independent reviewers; evidence hashes `11ad9038d8b319a54e123209bb4452dd2d315aaf100d6ce476a27e2137e40a04`, `22ed67eae6dfa28d570c37ff2ab1f181460019306db33d5ad580b10036c36b1d` |
 | Coordinator fail-closed repair (0154) | output reclassification + SHA/attestation update | passed | One accepted row with nonempty visual issue moved to needs_repair/incomplete; source untouched |
 
 ## Not Run
