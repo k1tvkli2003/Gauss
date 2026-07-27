@@ -74,7 +74,11 @@ abstract final class GaussMetrics {
   static const compactNavigationHeight = 68.0;
   static const compactNavigationOuterInset = 10.0;
   static const compactChromeReserve = 96.0;
-  static const mapDockHeight = 76.0;
+
+  /// The compact mission dock carries a real next-action summary, not merely
+  /// a navigation affordance. Keep the reserved map clearance in step with
+  /// that readable two-line treatment so path nodes never hide behind it.
+  static const mapDockHeight = 92.0;
   static const mapOverlayGap = 12.0;
   static const mapCompactDockBottom = 92.0;
   static const mapRailDockBottom = 14.0;

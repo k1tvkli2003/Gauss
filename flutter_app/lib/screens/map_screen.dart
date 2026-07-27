@@ -164,6 +164,8 @@ class _MapScreenState extends State<MapScreen> {
                             child: _StudyDock(
                               node: selected,
                               snapshot: controller.study.shelf(selected.key),
+                              isCurrent:
+                                  selected.key == nodes[effectiveCurrent].key,
                               onOpen: () => _openNode(context, selected),
                             ),
                           ),
@@ -1398,7 +1400,7 @@ class _PathNodeLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final compact = stageWidth < 560;
-    final width = compact ? 112.0 : 142.0;
+    final width = compact ? 128.0 : 150.0;
     final rightPreferred =
         position.dx + nodeSize * .57 + width <= stageWidth - 5;
     final left = rightPreferred
@@ -1407,49 +1409,90 @@ class _PathNodeLabel extends StatelessWidget {
     final title = node.beginsUnit ? node.topic.label : node.setLabel;
     return Positioned(
       left: left,
-      top: position.dy - (compact ? 20 : 24),
+      top: position.dy - (compact ? 31 : 34),
       width: width,
       child: ExcludeSemantics(
         child: IgnorePointer(
           child: AnimatedOpacity(
-            duration: MediaQuery.disableAnimationsOf(context)
-                ? Duration.zero
-                : const Duration(milliseconds: 180),
+            duration: GaussMotion.resolve(context, GaussMotion.micro),
             opacity: isCurrent ? 1 : .9,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Text(
-                    title,
-                    maxLines: compact ? 2 : 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: isCurrent ? GaussColors.ivory : GaussColors.fog,
-                      fontSize: compact ? 12 : 13.5,
-                      height: 1.18,
-                      fontWeight: isCurrent ? FontWeight.w900 : FontWeight.w700,
-                      shadows: const [
-                        Shadow(color: Color(0xE8000000), blurRadius: 6),
+            child: AnimatedContainer(
+              duration: GaussMotion.resolve(context, GaussMotion.micro),
+              curve: Curves.easeOutCubic,
+              padding: const EdgeInsetsDirectional.fromSTEB(9, 6, 9, 6),
+              decoration: BoxDecoration(
+                color: GaussColors.deepInk.withValues(
+                  alpha: isCurrent ? .84 : .68,
+                ),
+                borderRadius: BorderRadius.circular(11),
+                border: Border.all(
+                  color:
+                      (isCurrent ? GaussColors.signalBright : GaussColors.brass)
+                          .withValues(alpha: isCurrent ? .48 : .22),
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.only(
+                      start: rightPreferred ? 4 : 0,
+                      end: rightPreferred ? 0 : 4,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: Text(
+                            title,
+                            textAlign: TextAlign.start,
+                            maxLines: compact ? 2 : 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: isCurrent
+                                  ? GaussColors.ivory
+                                  : GaussColors.fog,
+                              fontSize: compact ? 12 : 13.5,
+                              height: 1.28,
+                              fontWeight: isCurrent
+                                  ? FontWeight.w900
+                                  : FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 3),
+                        Text(
+                          '${snapshot.reflected} / ${node.questionCount}',
+                          style: TextStyle(
+                            color: isCurrent
+                                ? GaussColors.signalBright
+                                : GaussColors.signal.withValues(alpha: .86),
+                            fontSize: compact ? 10 : 11,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: .25,
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                ),
-                const SizedBox(height: 3),
-                Text(
-                  '${snapshot.reflected} / ${node.questionCount}',
-                  style: TextStyle(
-                    color: isCurrent
-                        ? GaussColors.signalBright
-                        : GaussColors.signal.withValues(alpha: .86),
-                    fontSize: compact ? 10 : 11,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: .25,
+                  Align(
+                    alignment: rightPreferred
+                        ? Alignment.centerLeft
+                        : Alignment.centerRight,
+                    child: Container(
+                      width: 2,
+                      height: isCurrent ? 31 : 23,
+                      decoration: BoxDecoration(
+                        color: isCurrent
+                            ? GaussColors.signalBright
+                            : GaussColors.brassLight.withValues(alpha: .68),
+                        borderRadius: BorderRadius.circular(GaussRadii.pill),
+                      ),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
@@ -1494,6 +1537,7 @@ class _StudyNode extends StatelessWidget {
           '${node.topic.label}. ${node.setLabel}. ${snapshot.reflected} of ${node.questionCount} reflected. ${snapshot.revisit} marked for revisit.',
       hint: 'Double tap to inspect this study set.',
       child: InkResponse(
+        key: ValueKey('map-node-${node.key}'),
         onTap: onPressed,
         radius: size * .62,
         child: AnimatedScale(
@@ -1819,75 +1863,197 @@ class _StudyDock extends StatelessWidget {
   const _StudyDock({
     required this.node,
     required this.snapshot,
+    required this.isCurrent,
     required this.onOpen,
   });
 
   final StudyPathNode node;
   final StudyTopicSnapshot snapshot;
+  final bool isCurrent;
   final VoidCallback onOpen;
 
   @override
-  Widget build(BuildContext context) => _GlassFrame(
-    radius: 22,
-    padding: const EdgeInsets.fromLTRB(12, 11, 11, 11),
-    child: Row(
-      children: [
-        Container(
-          width: 52,
-          height: 52,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: GaussColors.deepInk,
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: GaussColors.brass),
-          ),
-          child: TopicGlyph(
-            topicKey: node.topic.key,
-            color: GaussColors.brassLight,
-            size: 29,
-          ),
-        ),
-        const SizedBox(width: 11),
-        Expanded(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Directionality(
-                textDirection: TextDirection.rtl,
-                child: Text(
-                  node.topic.label,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: GaussColors.ivory,
-                    fontSize: 13.5,
-                    fontWeight: FontWeight.w800,
+  Widget build(BuildContext context) {
+    final isComplete = snapshot.reflected >= node.questionCount;
+    final status = isComplete
+        ? 'SET COMPLETE'
+        : isCurrent
+        ? 'CURRENT MISSION'
+        : 'SELECTED SET';
+    final detail =
+        '${node.setLabel} · ${snapshot.reflected} / '
+        '${node.questionCount} charted'
+        '${snapshot.revisit > 0 ? ' · ${snapshot.revisit} revisit' : ''}';
+    return _GlassFrame(
+      radius: 22,
+      padding: const EdgeInsetsDirectional.fromSTEB(12, 10, 10, 10),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final narrow = constraints.maxWidth < 350;
+          final largeText = MediaQuery.textScalerOf(context).scale(1) >= 1.55;
+          return ConstrainedBox(
+            constraints: const BoxConstraints(minHeight: 72),
+            child: Row(
+              children: [
+                _MissionDockEmblem(
+                  topicKey: node.topic.key,
+                  isCurrent: isCurrent,
+                  isComplete: isComplete,
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Semantics(
+                    container: true,
+                    label:
+                        '$status. ${node.topic.label}. ${snapshot.reflected} of '
+                        '${node.questionCount} questions charted.',
+                    child: ExcludeSemantics(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                width: 7,
+                                height: 7,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: isComplete
+                                      ? GaussColors.signalBright
+                                      : isCurrent
+                                      ? GaussColors.brassLight
+                                      : GaussColors.fog,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color:
+                                          (isComplete
+                                                  ? GaussColors.signalBright
+                                                  : GaussColors.brassLight)
+                                              .withValues(alpha: .3),
+                                      blurRadius: 8,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 6),
+                              Expanded(
+                                child: Text(
+                                  status,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: GaussColors.brassLight,
+                                    fontSize: GaussTypeScale.insignia,
+                                    fontWeight: FontWeight.w900,
+                                    letterSpacing: 1.05,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4),
+                          Directionality(
+                            textDirection: TextDirection.rtl,
+                            child: Text(
+                              node.topic.label,
+                              textAlign: TextAlign.start,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                color: GaussColors.ivory,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w900,
+                                height: 1.25,
+                              ),
+                            ),
+                          ),
+                          if (!largeText) ...[
+                            const SizedBox(height: 3),
+                            Text(
+                              detail,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                color: GaussColors.muted,
+                                fontSize: GaussTypeScale.insignia,
+                                height: 1.2,
+                              ),
+                            ),
+                          ],
+                        ],
+                      ),
+                    ),
                   ),
                 ),
+                const SizedBox(width: 8),
+                FilledButton.icon(
+                  onPressed: onOpen,
+                  style: FilledButton.styleFrom(
+                    minimumSize: Size(narrow ? 76 : 92, 48),
+                    padding: EdgeInsetsDirectional.symmetric(
+                      horizontal: narrow ? 9 : 12,
+                    ),
+                  ),
+                  icon: const Icon(Icons.auto_stories_outlined, size: 18),
+                  label: const Text('Study'),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _MissionDockEmblem extends StatelessWidget {
+  const _MissionDockEmblem({
+    required this.topicKey,
+    required this.isCurrent,
+    required this.isComplete,
+  });
+
+  final String topicKey;
+  final bool isCurrent;
+  final bool isComplete;
+
+  @override
+  Widget build(BuildContext context) {
+    final accent = isComplete
+        ? GaussColors.signalBright
+        : isCurrent
+        ? GaussColors.brassLight
+        : GaussColors.brass;
+    return Container(
+      width: 54,
+      height: 54,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: GaussColors.deepInk.withValues(alpha: .92),
+        borderRadius: BorderRadius.circular(17),
+        border: Border.all(color: accent.withValues(alpha: .8)),
+        boxShadow: [
+          BoxShadow(color: accent.withValues(alpha: .14), blurRadius: 14),
+        ],
+      ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          if (isCurrent || isComplete)
+            Container(
+              width: 39,
+              height: 39,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: accent.withValues(alpha: .34)),
               ),
-              const SizedBox(height: 2),
-              Text(
-                '${node.setLabel} · ${snapshot.reflected}/${node.questionCount} charted · ${snapshot.revisit} revisit',
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(color: GaussColors.muted, fontSize: 10),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(width: 9),
-        FilledButton(
-          onPressed: onOpen,
-          style: FilledButton.styleFrom(
-            minimumSize: const Size(88, 48),
-            padding: const EdgeInsets.symmetric(horizontal: 14),
-          ),
-          child: const Text('Study'),
-        ),
-      ],
-    ),
-  );
+            ),
+          TopicGlyph(topicKey: topicKey, color: accent, size: 29),
+        ],
+      ),
+    );
+  }
 }
 
 class _StudyInspector extends StatelessWidget {
