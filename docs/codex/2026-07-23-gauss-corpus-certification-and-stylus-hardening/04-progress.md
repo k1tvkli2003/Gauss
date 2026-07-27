@@ -256,10 +256,10 @@
 - Independent solve/verifier slice 0001: 5 accepted screened-complete math rows solved blindly by gpt-5.6-sol/xhigh and re-solved by an independent fresh verifier; all 5 agreed with the preserved source option. Answer gate advanced to 5 `verified_correct`; solution/source-fidelity/adversarial gates remain open and usable remains 0.
 - Independent solve/verifier slice 0002: 5 additional accepted screened-complete math rows solved and freshly verified blindly; all 5 agreed with the preserved source option. Answer gate advanced to 10 `verified_correct`; solution/source-fidelity/adversarial gates remain open and usable remains 0.
 - Independent solution-review slice 0001: two fresh xhigh reviewers examined the same five solutions against their stems/options; 5/5 were complete and correct. Solution gate advanced to 5 `verified_complete_correct`; source-fidelity and adversarial gates remain open and usable remains 0.
+- Independent adversarial-review slice 0001: a fresh xhigh adversary attacked the same five answer/solution pairs; 5/5 passed with no blockers. Answer, solution, and adversarial gates now advance for these five records; source-fidelity and render gates still block admission, so usable remains 0.
 
 ## Next
-- Continue from the next sequential batch; 0111/0112 outputs remain pending attestation.
-  ownership of their output files and output-SHA attestations.
+- Screening is complete through 0112 retry; both retry outputs are merged with trusted attestations. Continue with deterministic repair/solve/review slices.
 - Process the deterministic repair queue in parallel with screening; no quarantined
   source is discarded or silently overwritten.
 - Freeze discovered subtopic registry before classification.

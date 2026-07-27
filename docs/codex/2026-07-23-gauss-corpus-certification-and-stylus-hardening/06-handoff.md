@@ -136,10 +136,11 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0172-0174 merged with trusted low-reasoning attestations; all media references were inspected and hash-verified.
 - screening 0175-0177 merged with trusted low-reasoning attestations; all referenced media was inspected and hash-verified.
 - repair queue is now 2814 hash-bound tickets (2520 P0 render/prompt, 294 P1 correctness); no source JSON or media was modified.
-- screening is complete, but certification remains fail-closed: answer source-only, source-PDF fidelity pending/blocked, solution review pending, adversarial review pending, and 2791 repair tickets remain.
+- screening is complete, but certification remains fail-closed: 10 answers are independently verified, 5 solutions are complete/correct, and 5 adversarial reviews pass; source-PDF fidelity and render gates remain pending/blocked, with 2791 repair tickets and 0 usable records.
 - answer gate progress: 5 records are `verified_correct` after independent blind solve + fresh verifier agreement; permanent evidence is under `evidence/answer-review-0001.jsonl` and `evidence/verify-review-0001.jsonl`. None are usable until the remaining gates pass.
 - answer gate progress: 10 records are now `verified_correct`; slice 0002 evidence is under `evidence/answer-review-0002.jsonl` and `evidence/verify-review-0002.jsonl`. None are usable until source-fidelity, solution, and adversarial gates pass.
-- solution gate progress: 5 of those records are now `verified_complete_correct` after two independent solution reviewers; evidence is under `evidence/solution-review-0001a.jsonl` and `evidence/solution-review-0001b.jsonl`. Source-fidelity and adversarial gates still block runtime admission.
+- solution gate progress: 5 of those records are now `verified_complete_correct` after two independent solution reviewers; evidence is under `evidence/solution-review-0001a.jsonl` and `evidence/solution-review-0001b.jsonl`.
+- adversarial gate progress: the same five records passed a fresh independent xhigh adversarial review (`evidence/adversarial-review-0001.jsonl`, SHA-256 `f8cab2cea3d317ae0d7c5dc5c67ef38e7479830468beda7887eb6d12d6b71997`). Source-fidelity and render gates still block runtime admission; usable remains 0.
 - screening 0163-0165 merged with trusted gpt-5.6-sol/low attestations; all 75 rows remain fail-closed (50 needs-repair/ambiguous plus 25 incomplete).
 - repair queue remains 2935 hash-bound tickets (2646 P0 render/prompt, 289 P1 correctness); no source JSON or media was modified.
 - repair discipline: contradictory/internally inconsistent rows are reclassified, rehashed, and re-attested fail-closed; they are not discarded.

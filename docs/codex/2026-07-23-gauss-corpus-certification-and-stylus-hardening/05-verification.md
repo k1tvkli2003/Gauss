@@ -204,13 +204,14 @@
 | Blind solve/verifier evidence slice 0001 | `.codex-tmp/answer-review-0001.jsonl` + `.codex-tmp/verify-review-0001.jsonl` | passed | 5/5 independent options agreed; evidence hashes `355781638a469f3a8088e4a79b4ce3ba8f7ff3cd6c3778683ed9e730e5a1a04b`, `531d48eccf9fbf24d3ca566282306a0df4701797705246b5f486f555d63621f8`; no source key was exposed to workers |
 | Blind solve/verifier evidence slice 0002 | `evidence/answer-review-0002.jsonl` + `evidence/verify-review-0002.jsonl` | passed | 5/5 independent options agreed; evidence hashes `517ba0224ccde5238ef86c16d8689c8b939e68957f55e8609d1aece8bf1ef4ed`, `e9d4d265a93ba59e30d5303d80a282df35b5700da9a5193a9fa8e754164f2cf8`; no source key was exposed to workers |
 | Independent solution-review evidence slice 0001 | `evidence/solution-review-0001a.jsonl` + `evidence/solution-review-0001b.jsonl` | passed | 5/5 `holds`, complete, correct from two independent reviewers; evidence hashes `11ad9038d8b319a54e123209bb4452dd2d315aaf100d6ce476a27e2137e40a04`, `22ed67eae6dfa28d570c37ff2ab1f181460019306db33d5ad580b10036c36b1d` |
+| Independent adversarial-review evidence slice 0001 | `evidence/adversarial-review-0001.jsonl` | passed | 5/5 adversarial attacks passed with no blockers; evidence SHA-256 `f8cab2cea3d317ae0d7c5dc5c67ef38e7479830468beda7887eb6d12d6b71997`; source-fidelity and render gates remain open |
 | Coordinator fail-closed repair (0154) | output reclassification + SHA/attestation update | passed | One accepted row with nonempty visual issue moved to needs_repair/incomplete; source untouched |
 
 ## Not Run
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
 - Android runtime launch/screenshot این slice؛ `adb devices` هیچ target نشان نداد.
 - source-PDF fidelity؛ مسیر اصل PDFها در environment حاضر نیست.
-- mathematical certification؛ 5/3672 answer gates now have independent solve + fresh verifier agreement, but solution/source-fidelity/adversarial gates remain open; screening itself never certified answers.
+- mathematical certification؛ 5/3672 records now have independent solve + verifier, two-reviewer solution confirmation, and adversarial pass; source-fidelity/render gates remain open, and screening itself never certified answers.
 
 ## Known Issues
 - 409 extraction blockers و سایر risk queues در `02-state.md`.
