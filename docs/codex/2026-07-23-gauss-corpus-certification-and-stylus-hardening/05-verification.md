@@ -202,6 +202,7 @@
 | Final screening repair queue regeneration | `node scripts/corpus_certification.mjs repair-queue` | passed | 2791 hash-bound tickets; 2488 P0 render/prompt, 303 P1 correctness |
 | Repair overlay gate after full screening | `node scripts/corpus_certification.mjs validate-repairs` | passed | No overlays proposed; source-preserving repair queue remains fail-closed |
 | Blind solve/verifier evidence slice 0001 | `.codex-tmp/answer-review-0001.jsonl` + `.codex-tmp/verify-review-0001.jsonl` | passed | 5/5 independent options agreed; evidence hashes `355781638a469f3a8088e4a79b4ce3ba8f7ff3cd6c3778683ed9e730e5a1a04b`, `531d48eccf9fbf24d3ca566282306a0df4701797705246b5f486f555d63621f8`; no source key was exposed to workers |
+| Blind solve/verifier evidence slice 0002 | `evidence/answer-review-0002.jsonl` + `evidence/verify-review-0002.jsonl` | passed | 5/5 independent options agreed; evidence hashes `517ba0224ccde5238ef86c16d8689c8b939e68957f55e8609d1aece8bf1ef4ed`, `e9d4d265a93ba59e30d5303d80a282df35b5700da9a5193a9fa8e754164f2cf8`; no source key was exposed to workers |
 | Coordinator fail-closed repair (0154) | output reclassification + SHA/attestation update | passed | One accepted row with nonempty visual issue moved to needs_repair/incomplete; source untouched |
 
 ## Not Run
