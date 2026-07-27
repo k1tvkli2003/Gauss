@@ -238,6 +238,8 @@
 | Jules source-key adjudication 0013 | session `958553139132015389`; adjudicator JSONL | passed with quarantine | `0085` effective option 3 and `0093` effective option 4; 0093 correction is recorded but remains blocked on solution/adversarial completeness |
 | Jules manifest evidence advancement | `data/certification/v1/manifest.jsonl` | passed | Five rows advanced to `verified_complete_correct` solution and `passed` adversarial; `node scripts/corpus_certification.mjs validate` passes; usable remains 0 by design |
 | Jules repair overlay batch 001 | `evidence/jules-repair-001.jsonl`, `data/certification/v1/repair-overlays.jsonl` | passed with quarantine | 10/10 ticket/hash rows validated; 6 draft overlays added source-preservingly, 4 inconsistent tickets remain under review; `validate-repairs` and corpus `validate` pass |
+| Jules repair overlay batch 002 | `evidence/jules-repair-002.jsonl`, `data/certification/v1/repair-overlays.jsonl` | passed with quarantine | 10/10 ticket/hash rows validated; 6 additional source-preserving draft solution replacements added (14 overlays total); four internally inconsistent tickets remain under review; `validate-repairs` and corpus `validate` pass with 3672 source-bound records and 0 usable |
+| Repair queue refresh after Jules batch 002 | `node scripts/corpus_certification.mjs repair-queue` | passed | 2,791 source-bound quarantine tickets regenerated: 2,488 render/prompt P0 and 303 correctness P1; current manifest answer/solution states are reflected without bypassing certification gates |
 
 ## Not Run
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
