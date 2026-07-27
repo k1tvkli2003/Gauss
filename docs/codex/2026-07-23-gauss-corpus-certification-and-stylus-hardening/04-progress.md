@@ -279,6 +279,8 @@
 - Independent solve/verifier slice 0007: five more screened-complete math rows (`0096`–`0100`) agreed blindly (`2,2,3,2,1`), so answer gate is now 35 `verified_correct`.
 - Independent solution-review slice 0006: four rows were complete/correct; `0100` is mathematically correct but partial because the source solution cancels `aq` without excluding the valid nonconstant `q=0` branch. It remains fail-closed with a second draft repair overlay; solution gate is now 28 `verified_complete_correct` and 7 partial.
 - Independent solution-review slice 0004: two fresh xhigh reviewers found all five solutions complete and correct. Solution gate is now 20 `verified_complete_correct`; adversarial review for this slice is pending.
+- Independent solve/verifier slice 0010: five additional screened-complete math rows (`0114`, `0115`, `0116`, `0118`, `0120`) agreed blindly (`1,4,4,3,2`), so answer gate is now 50 `verified_correct`.
+- Independent solution-review slice 0010: two fresh xhigh reviewers found all five source solutions complete and correct. Solution gate is now 43 `verified_complete_correct`; adversarial review for this slice is pending.
 
 ## Next
 - Screening is complete through 0112 retry; both retry outputs are merged with trusted attestations. Continue with deterministic repair/solve/review slices.
@@ -286,3 +288,4 @@
   source is discarded or silently overwritten.
 - Freeze discovered subtopic registry before classification.
 - Start blind solve/adversarial correctness lane after extraction acceptance.
+- Continue with adversarial-review slice 0010, then advance to the next deterministic five-row slice; source-fidelity and render gates remain fail-closed.

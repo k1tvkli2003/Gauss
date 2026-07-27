@@ -167,3 +167,5 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - repair queue remains 2935 hash-bound tickets (2646 P0 render/prompt, 289 P1 correctness); no source JSON or media was modified.
 - repair discipline: contradictory/internally inconsistent rows are reclassified, rehashed, and re-attested fail-closed; they are not discarded.
 - محدودیت‌های اثبات در `05-verification.md` صریح ثبت شده‌اند.
+- latest scientific checkpoint: answer gate 50/3672 (`1.36%`), complete-solution gate 43/3672 (`1.17%`), adversarial gate 38/3672 (`1.03%`) with 2 blocked ambiguous rows; screening remains 100%, but usable remains 0 because source-fidelity/render gates are still pending for every record.
+- slice 0010 evidence is committed under `evidence/answer-review-0010.jsonl`, `evidence/verify-review-0010.jsonl`, `evidence/solution-review-0010a.jsonl`, and `evidence/solution-review-0010b.jsonl`; no source JSON/media changed.
