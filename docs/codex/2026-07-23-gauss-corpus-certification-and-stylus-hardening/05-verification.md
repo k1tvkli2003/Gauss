@@ -192,6 +192,8 @@
 | Repair queue regeneration (0168) | `node scripts/corpus_certification.mjs repair-queue` | passed | 2930 hash-bound tickets; 2640 P0 render/prompt, 290 P1 correctness |
 | Post-merge corpus reconciliation (0171) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 3463 screened (94.31%); 0 usable; 2916 repair tickets |
 | Repair queue regeneration (0171) | `node scripts/corpus_certification.mjs repair-queue` | passed | 2916 hash-bound tickets; 2626 P0 render/prompt, 290 P1 correctness |
+| Post-merge corpus reconciliation (0174) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 3516 screened (95.75%); 0 usable; 2891 repair tickets |
+| Repair queue regeneration (0174) | `node scripts/corpus_certification.mjs repair-queue` | passed | 2891 hash-bound tickets; 2601 P0 render/prompt, 290 P1 correctness |
 | Coordinator fail-closed repair (0154) | output reclassification + SHA/attestation update | passed | One accepted row with nonempty visual issue moved to needs_repair/incomplete; source untouched |
 
 ## Not Run
