@@ -128,11 +128,12 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - Analyzer و 94/94 tests پاس؛ Web و APK امضاشده پاس؛ data/media parity پاس.
 - post-merge validate: 3672 source-bound، 2413 screened، 0 usable.
 - repair queue: 2935 hash-bound tickets؛ 2646 blocking prompt/render و 289 correctness tickets؛ هیچ source حذف نشده است.
-- active screening: next sequential batch after 0168; 0111/0112 remain unattested and unmerged.
-- latest screening checkpoint: 3403/3672 (92.67%) taxonomy/extraction screened; 0 usable because solve, source-fidelity, and adversarial gates remain open.
+- active screening: next sequential batch after 0171; 0111/0112 remain unattested and unmerged.
+- latest screening checkpoint: 3463/3672 (94.31%) taxonomy/extraction screened; 0 usable because solve, source-fidelity, and adversarial gates remain open.
 - screening 0166-0167 merged with trusted gpt-5.6-sol/low attestations; all 50 rows remain fail-closed (38 needs-repair and 12 ambiguous).
 - screening 0168 used its authoritative 20-row source declaration; one accepted generic-option row was downgraded to needs-repair/incomplete and re-attested fail-closed.
-- repair queue is now 2930 hash-bound tickets (2640 P0 render/prompt, 290 P1 correctness); no source JSON or media was modified.
+- screening 0169-0171 merged with trusted low-reasoning attestations; coordinator downgraded two unrelated-solution rows in 0170 to incomplete before merge.
+- repair queue is now 2916 hash-bound tickets (2626 P0 render/prompt, 290 P1 correctness); no source JSON or media was modified.
 - screening 0163-0165 merged with trusted gpt-5.6-sol/low attestations; all 75 rows remain fail-closed (50 needs-repair/ambiguous plus 25 incomplete).
 - repair queue remains 2935 hash-bound tickets (2646 P0 render/prompt, 289 P1 correctness); no source JSON or media was modified.
 - repair discipline: contradictory/internally inconsistent rows are reclassified, rehashed, and re-attested fail-closed; they are not discarded.
