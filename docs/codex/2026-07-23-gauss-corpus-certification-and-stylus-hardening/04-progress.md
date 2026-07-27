@@ -259,6 +259,7 @@
 - Independent adversarial-review slice 0001: a fresh xhigh adversary attacked the same five answer/solution pairs; 5/5 passed with no blockers. Answer, solution, and adversarial gates now advance for these five records; source-fidelity and render gates still block admission, so usable remains 0.
 - Independent solve/verifier slice 0003: five additional screened-complete math rows (`0066`, `0070`–`0073`) were solved and re-solved blindly by xhigh workers; all five agreed (`1,1,2,2,2`). Answer gate is now 15 `verified_correct`.
 - Independent solution-review slice 0002: two fresh xhigh reviewers found all five solutions complete and correct. Solution gate is now 10 `verified_complete_correct`; adversarial review for this slice is in progress, while source-fidelity/render gates still block admission.
+- Independent adversarial-review slice 0002: a fresh xhigh adversary attacked those five answer/solution pairs; all 5 passed with no blockers (`1,1,2,2,2`). Adversarial gate is now 10 passed; source-fidelity/render gates still block admission, so usable remains 0.
 
 ## Next
 - Screening is complete through 0112 retry; both retry outputs are merged with trusted attestations. Continue with deterministic repair/solve/review slices.

@@ -207,6 +207,7 @@
 | Independent adversarial-review evidence slice 0001 | `evidence/adversarial-review-0001.jsonl` | passed | 5/5 adversarial attacks passed with no blockers; evidence SHA-256 `f8cab2cea3d317ae0d7c5dc5c67ef38e7479830468beda7887eb6d12d6b71997`; source-fidelity and render gates remain open |
 | Blind solve/verifier evidence slice 0003 | `evidence/answer-review-0003.jsonl` + `evidence/verify-review-0003.jsonl` | passed | 5/5 independent options agreed (`1,1,2,2,2`); evidence hashes `84d063abf765e55e107c88235fc05ae2f931155b0ac23c941d7edce45c1f2637`, `03a49f7150d67732f3b0ba52bc8247dfb831df8e810223538d922ca08fc4e038`; no source key was exposed |
 | Independent solution-review evidence slice 0002 | `evidence/solution-review-0002a.jsonl` + `evidence/solution-review-0002b.jsonl` | passed | 5/5 `holds`, complete, correct from two independent reviewers; evidence hashes `32de0bcebee67f412a4c65ee2454bdc977c08f6f11c0e7062d4ecf7fb9e602ad`, `601e9c5d96f46079bcca5adaa3de50790051d22d842b4caa71a8769a1bb54601`; adversarial slice pending |
+| Independent adversarial-review evidence slice 0002 | `evidence/adversarial-review-0002.jsonl` | passed | 5/5 adversarial attacks passed with no blockers; evidence SHA-256 `178144cd5d1abd39a34abf6d771e9ac0a78bf4f6ec5426d565481fab0fd0c5f4`; source-fidelity and render gates remain open |
 | Coordinator fail-closed repair (0154) | output reclassification + SHA/attestation update | passed | One accepted row with nonempty visual issue moved to needs_repair/incomplete; source untouched |
 
 ## Not Run
