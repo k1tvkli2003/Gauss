@@ -234,6 +234,9 @@
 | Flutter static and test proof | `flutter_app/lib`, `flutter_app/test` | passed | `dart analyze lib` clean; `flutter test` 94/94 passed, covering rendering, responsive layouts, scratchpad/stylus contracts, offline startup, navigation, and deep links |
 | Flutter release artifact proof | `flutter_app/build/web`, `flutter_app/build/app/outputs/flutter-apk/app-debug.apk` | passed | `flutter build web --release` completed with Wasm dry-run success; `flutter build apk --debug` completed; device/runtime and physical Focus Pen proof remain separate |
 | Coordinator fail-closed repair (0154) | output reclassification + SHA/attestation update | passed | One accepted row with nonempty visual issue moved to needs_repair/incomplete; source untouched |
+| Jules repoless solver/verifier/solution/adversarial batches 0011–0013 | `.jules/gauss-corpus-2026-07-27` raw sessions and hash-bound JSONL artifacts | passed with quarantine | 30/30 rows matched IDs/order/source hashes in every lane; 29 adversarial passes and one blocked repair (`0093` domain guard); no source JSON/media changed |
+| Jules source-key adjudication 0013 | session `958553139132015389`; adjudicator JSONL | passed with quarantine | `0085` effective option 3 and `0093` effective option 4; 0093 correction is recorded but remains blocked on solution/adversarial completeness |
+| Jules manifest evidence advancement | `data/certification/v1/manifest.jsonl` | passed | Five rows advanced to `verified_complete_correct` solution and `passed` adversarial; `node scripts/corpus_certification.mjs validate` passes; usable remains 0 by design |
 
 ## Not Run
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
