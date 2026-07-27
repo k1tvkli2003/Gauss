@@ -200,6 +200,7 @@
 | Repair queue regeneration (0179) | `node scripts/corpus_certification.mjs repair-queue` | passed | 2814 hash-bound tickets; 2520 P0 render/prompt, 294 P1 correctness |
 | Full corpus reconciliation (0111/0112 retries) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 3672 screened (100%); 0 usable; 2791 repair tickets |
 | Final screening repair queue regeneration | `node scripts/corpus_certification.mjs repair-queue` | passed | 2791 hash-bound tickets; 2488 P0 render/prompt, 303 P1 correctness |
+| Repair overlay gate after full screening | `node scripts/corpus_certification.mjs validate-repairs` | passed | No overlays proposed; source-preserving repair queue remains fail-closed |
 | Coordinator fail-closed repair (0154) | output reclassification + SHA/attestation update | passed | One accepted row with nonempty visual issue moved to needs_repair/incomplete; source untouched |
 
 ## Not Run
