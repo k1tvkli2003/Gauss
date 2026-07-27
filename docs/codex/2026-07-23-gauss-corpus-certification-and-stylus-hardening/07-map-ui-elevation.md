@@ -71,6 +71,32 @@ flutter test                                          # 96 tests passed
 flutter build web --release --no-wasm-dry-run         # succeeded
 ```
 
+## Cross-surface visual audit
+
+The same release build was then rendered and inspected at phone, tablet, and
+wide-web widths for the connected Study Observatory, Personal Constellation
+(Insights), and Study Room. The audit did **not** add cosmetic churn where a
+surface already met the hierarchy and responsive criteria:
+
+- Study keeps one clear continuation action, a visibly separate subject
+  choice, and a low-density atlas on large screens.
+- Insights keeps its private/non-scored semantics explicit; zero-progress
+  states have meaning rather than pretending there is an activity chart.
+- Study Room keeps Persian and mixed TeX text live and readable, answer rows
+  remain distinct targets, and the direct-question scratch affordance remains
+  visible without taking over the question card.
+
+Temporary evidence paths:
+
+- `.codex-tmp/study-preview-baseline/`
+- `.codex-tmp/insights-preview-baseline/`
+- `.codex-tmp/archive-preview-baseline/`
+
+The archive inspection is visual/browser proof only. Existing focused Flutter
+tests cover Focus Pen ownership, pressure, cancel rollback, multi-touch, and
+palm-rejection behavior; final hardware release proof still requires a real
+Xiaomi Focus Pen session.
+
 ## Honest remaining proof
 
 This is browser-rendered visual evidence, not a physical Android screen
