@@ -201,13 +201,14 @@
 | Full corpus reconciliation (0111/0112 retries) | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound records; 3672 screened (100%); 0 usable; 2791 repair tickets |
 | Final screening repair queue regeneration | `node scripts/corpus_certification.mjs repair-queue` | passed | 2791 hash-bound tickets; 2488 P0 render/prompt, 303 P1 correctness |
 | Repair overlay gate after full screening | `node scripts/corpus_certification.mjs validate-repairs` | passed | No overlays proposed; source-preserving repair queue remains fail-closed |
+| Blind solve/verifier evidence slice 0001 | `.codex-tmp/answer-review-0001.jsonl` + `.codex-tmp/verify-review-0001.jsonl` | passed | 5/5 independent options agreed; evidence hashes `355781638a469f3a8088e4a79b4ce3ba8f7ff3cd6c3778683ed9e730e5a1a04b`, `531d48eccf9fbf24d3ca566282306a0df4701797705246b5f486f555d63621f8`; no source key was exposed to workers |
 | Coordinator fail-closed repair (0154) | output reclassification + SHA/attestation update | passed | One accepted row with nonempty visual issue moved to needs_repair/incomplete; source untouched |
 
 ## Not Run
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
 - Android runtime launch/screenshot این slice؛ `adb devices` هیچ target نشان نداد.
 - source-PDF fidelity؛ مسیر اصل PDFها در environment حاضر نیست.
-- mathematical certification؛ 0/3672 تا این checkpoint؛ screening فقط taxonomy/extraction/difficulty است و پاسخ را تأیید نمی‌کند.
+- mathematical certification؛ 5/3672 answer gates now have independent solve + fresh verifier agreement, but solution/source-fidelity/adversarial gates remain open; screening itself never certified answers.
 
 ## Known Issues
 - 409 extraction blockers و سایر risk queues در `02-state.md`.

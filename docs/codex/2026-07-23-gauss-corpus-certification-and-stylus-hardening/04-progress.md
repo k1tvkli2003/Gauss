@@ -253,6 +253,7 @@
 - Screening 0179: 10 accepted, 3 needs repair, 1 ambiguous across the authoritative 14-row batch; 10 Flutter assets checked; cumulative 3630 screened (98.86%) and 0 usable.
 - Screening 0111 retry: 7 accepted, 12 needs repair, 2 ambiguous across 21 rows; 33 Flutter media assets inspected; cumulative 3651 screened (99.43%) and 0 usable.
 - Screening 0112 retry: 16 accepted, 5 ambiguous across 21 rows; 32 Flutter media assets inspected; cumulative 3672 screened (100%) and 0 usable.
+- Independent solve/verifier slice 0001: 5 accepted screened-complete math rows solved blindly by gpt-5.6-sol/xhigh and re-solved by an independent fresh verifier; all 5 agreed with the preserved source option. Answer gate advanced to 5 `verified_correct`; solution/source-fidelity/adversarial gates remain open and usable remains 0.
 
 ## Next
 - Continue from the next sequential batch; 0111/0112 outputs remain pending attestation.

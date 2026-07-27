@@ -137,6 +137,7 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - screening 0175-0177 merged with trusted low-reasoning attestations; all referenced media was inspected and hash-verified.
 - repair queue is now 2814 hash-bound tickets (2520 P0 render/prompt, 294 P1 correctness); no source JSON or media was modified.
 - screening is complete, but certification remains fail-closed: answer source-only, source-PDF fidelity pending/blocked, solution review pending, adversarial review pending, and 2791 repair tickets remain.
+- answer gate progress: 5 records are `verified_correct` after independent blind solve + fresh verifier agreement; permanent evidence is under `evidence/answer-review-0001.jsonl` and `evidence/verify-review-0001.jsonl`. None are usable until the remaining gates pass.
 - screening 0163-0165 merged with trusted gpt-5.6-sol/low attestations; all 75 rows remain fail-closed (50 needs-repair/ambiguous plus 25 incomplete).
 - repair queue remains 2935 hash-bound tickets (2646 P0 render/prompt, 289 P1 correctness); no source JSON or media was modified.
 - repair discipline: contradictory/internally inconsistent rows are reclassified, rehashed, and re-attested fail-closed; they are not discarded.
