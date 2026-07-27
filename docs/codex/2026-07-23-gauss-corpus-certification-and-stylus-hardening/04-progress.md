@@ -264,6 +264,8 @@
 - Independent solution-review slice 0003: two fresh xhigh reviewers found all five solutions complete and correct, including explicit attacks on geometry/sequence/indexing ambiguities. Solution gate is now 15 `verified_complete_correct`; adversarial review for this slice is pending.
 - Independent adversarial-review slice 0003: a fresh xhigh adversary attacked those five pairs; all 5 passed with no blockers (`4,4,4,2,2`). Adversarial gate is now 15 passed; source-fidelity/render gates still block admission, so usable remains 0.
 - Independent solve/verifier slice 0005: five additional screened-complete math rows (`0085`–`0089`) were solved and re-solved blindly; all five agreed (`3,2,3,1,4`). Answer gate is now 25 `verified_correct`.
+- Slice 0005 source-key correction: `nardebam_math_1405_0085` preserved source option 4 but received an explicit immutable correction to effective option 3 after two blind reviews plus the adversarial adjudicator; the original key remains retained.
+- Independent adversarial-review slice 0004: a fresh xhigh adversary attacked the five slice-0005 pairs; all 5 passed (`3,2,3,1,4`). Adversarial gate is now 20 passed; source-fidelity/render gates still block admission, so usable remains 0.
 - Independent solution-review slice 0004: two fresh xhigh reviewers found all five solutions complete and correct. Solution gate is now 20 `verified_complete_correct`; adversarial review for this slice is pending.
 
 ## Next
