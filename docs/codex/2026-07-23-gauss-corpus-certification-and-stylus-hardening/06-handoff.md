@@ -144,6 +144,8 @@ forensic queues، weighted Luna batches و release proof تکمیل شده‌ا�
 - answer gate progress: 15 records are now `verified_correct`; slice 0003 evidence is under `evidence/answer-review-0003.jsonl` and `evidence/verify-review-0003.jsonl` (5/5 agreement, `1,1,2,2,2`).
 - solution gate progress: 10 records are now `verified_complete_correct`; slice 0002 evidence is under `evidence/solution-review-0002a.jsonl` and `evidence/solution-review-0002b.jsonl`.
 - adversarial gate progress: 10 records now pass independent adversarial review; slice 0002 evidence is under `evidence/adversarial-review-0002.jsonl` (SHA-256 `178144cd5d1abd39a34abf6d771e9ac0a78bf4f6ec5426d565481fab0fd0c5f4`). Source-fidelity and render gates still block admission; usable remains 0.
+- answer gate progress: 20 records are now `verified_correct`; slice 0004 evidence is under `evidence/answer-review-0004.jsonl` and `evidence/verify-review-0004.jsonl` (5/5 agreement, `4,4,4,2,2`).
+- solution gate progress: 15 records are now `verified_complete_correct`; slice 0003 evidence is under `evidence/solution-review-0003a.jsonl` and `evidence/solution-review-0003b.jsonl`. The matching adversarial slice is pending; source-fidelity/render gates still block admission.
 - screening 0163-0165 merged with trusted gpt-5.6-sol/low attestations; all 75 rows remain fail-closed (50 needs-repair/ambiguous plus 25 incomplete).
 - repair queue remains 2935 hash-bound tickets (2646 P0 render/prompt, 289 P1 correctness); no source JSON or media was modified.
 - repair discipline: contradictory/internally inconsistent rows are reclassified, rehashed, and re-attested fail-closed; they are not discarded.
