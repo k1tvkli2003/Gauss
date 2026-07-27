@@ -268,6 +268,7 @@
 - Independent adversarial-review slice 0004: a fresh xhigh adversary attacked the five slice-0005 pairs; all 5 passed (`3,2,3,1,4`). Adversarial gate is now 20 passed; source-fidelity/render gates still block admission, so usable remains 0.
 - Independent solve/verifier slice 0006: five additional screened-complete math rows (`0090`, `0091`, `0092`, `0093`, `0095`) agreed blindly (`1,4,1,4,1`), so answer gate is now 30 `verified_correct`.
 - Independent solution-review slice 0005: four rows were complete/correct; `0093` is mathematically correct but one reviewer marked it partial because the source solution omits the domain guard before cancellation. It remains fail-closed with a draft, source-preserving repair overlay; solution gate is now 24 `verified_complete_correct` and 6 partial.
+- Independent adversarial-review slice 0005: four rows passed; `0093` independently adjudicated option 4 but stayed blocked because the same source solution omission prevents solution completeness. Adversarial gate is now 24 passed and 1 ambiguous/blocked; usable remains 0.
 - Independent solution-review slice 0004: two fresh xhigh reviewers found all five solutions complete and correct. Solution gate is now 20 `verified_complete_correct`; adversarial review for this slice is pending.
 
 ## Next
