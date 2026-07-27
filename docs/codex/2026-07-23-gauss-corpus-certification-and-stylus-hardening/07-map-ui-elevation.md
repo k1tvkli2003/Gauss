@@ -71,6 +71,14 @@ flutter test                                          # 96 tests passed
 flutter build web --release --no-wasm-dry-run         # succeeded
 ```
 
+Android build proof from the same source state:
+
+```text
+flutter build apk --debug                              # succeeded
+build/app/outputs/flutter-apk/app-debug.apk            # 259,171,451 bytes
+SHA-256 B6E61F8DBB1C2C84AAD9A35A466DC582F983F8B42EC520C2B39C1545B30ED917
+```
+
 ## Cross-surface visual audit
 
 The same release build was then rendered and inspected at phone, tablet, and
