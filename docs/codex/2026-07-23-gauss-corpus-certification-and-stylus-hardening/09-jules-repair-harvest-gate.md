@@ -196,6 +196,19 @@ source-preserving proposed solution addenda only: they do not certify an
 answer, repair a media/extraction blocker, establish source fidelity, or move
 any record into the scored runtime.
 
+## Terminal reconciliation: wave 018–024
+
+After the active scheduler exited and its state lock cleared naturally, one
+final `jules_batch.py harvest` recorded the terminal state without altering
+source data: five sessions are `completed` and `repair-021`/`repair-022` are
+`failed` with the provider error. The harvest reported zero repository
+artifacts for all seven sessions. That does not supersede the persisted
+message evidence: only 018, 020, and 024 had complete exact-order,
+source-hash-bound JSONL and were already structurally validated/materialized.
+019 and 023 lack a complete block; 021 and 022 failed. These four batches
+remain quarantined as unresolved repair tickets, not silently retried,
+dropped, or promoted.
+
 ## Prepared wave 025–031
 
 After excluding every prior repair input and all current overlay IDs, the

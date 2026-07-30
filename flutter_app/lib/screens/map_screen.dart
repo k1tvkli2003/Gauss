@@ -44,6 +44,7 @@ class _MapScreenState extends State<MapScreen> {
       _selectedNodeKey = null;
     });
     controller.selectTopic(firstTopic.key);
+    _resetPathToStart();
   }
 
   void _selectSection(
@@ -59,6 +60,15 @@ class _MapScreenState extends State<MapScreen> {
       _selectedNodeKey = null;
     });
     controller.selectTopic(firstTopic.key);
+    _resetPathToStart();
+  }
+
+  /// A change of subject or orbit is a change of route, not merely a filter.
+  /// Preserve spatial orientation by landing at the beginning of that route.
+  void _resetPathToStart() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _pathKey.currentState?.resetToStart();
+    });
   }
 
   void _selectNode(GaussController controller, StudyPathNode node) {
@@ -707,12 +717,16 @@ class _SubjectSwitch extends StatelessWidget {
       children: [
         _SubjectButton(
           label: compact ? 'M' : 'Math',
+          semanticLabel: 'Mathematics study path',
           selected: subject == Subject.math,
+          key: const ValueKey('map-subject-math'),
           onPressed: () => onSubject(Subject.math),
         ),
         _SubjectButton(
           label: compact ? 'P' : 'Physics',
+          semanticLabel: 'Physics study path',
           selected: subject == Subject.physics,
+          key: const ValueKey('map-subject-physics'),
           onPressed: () => onSubject(Subject.physics),
         ),
       ],
@@ -722,17 +736,22 @@ class _SubjectSwitch extends StatelessWidget {
 
 class _SubjectButton extends StatelessWidget {
   const _SubjectButton({
+    required this.semanticLabel,
     required this.label,
     required this.selected,
     required this.onPressed,
+    super.key,
   });
 
+  final String semanticLabel;
   final String label;
   final bool selected;
   final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) => Semantics(
+    container: true,
+    label: semanticLabel,
     button: true,
     selected: selected,
     child: InkWell(
@@ -927,6 +946,7 @@ class _StudyPathStageState extends State<_StudyPathStage> {
       );
       _nodeY = geometry.positions.map((position) => position.dy).toList();
       return SingleChildScrollView(
+        key: const ValueKey('map-study-path-scroll'),
         controller: _scrollController,
         padding: EdgeInsets.only(
           bottom: widget.bottomObstruction + GaussSpacing.space32,

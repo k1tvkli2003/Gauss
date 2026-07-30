@@ -55,17 +55,42 @@ void main() {
       expect(
         _assetImage('assets/visual/mascot/mira_thinking.png'),
         findsNothing,
-        reason: 'distant landmark art must not compete with the first map frame',
+        reason:
+            'distant landmark art must not compete with the first map frame',
       );
       await tester.tap(find.byKey(const ValueKey('map-node-sets:20:20')));
       await tester.pumpAndSettle();
 
       expect(find.text('SELECTED SET'), findsOneWidget);
       expect(find.bySemanticsLabel(RegExp(r'^SELECTED SET\.')), findsOneWidget);
+
+      final routeScroll = find.byKey(const ValueKey('map-study-path-scroll'));
+      final scrollable = find.descendant(
+        of: routeScroll,
+        matching: find.byType(Scrollable),
+      );
+      await tester.drag(routeScroll, const Offset(0, -320));
+      await tester.pumpAndSettle();
+      expect(
+        tester.state<ScrollableState>(scrollable).position.pixels,
+        greaterThan(0),
+      );
+
+      await tester.tap(find.byKey(const ValueKey('map-subject-physics')));
+      await tester.pumpAndSettle();
+      expect(
+        tester.state<ScrollableState>(scrollable).position.pixels,
+        0,
+        reason: 'a new subject must start at the beginning of its route',
+      );
+      expect(
+        find.bySemanticsLabel(RegExp('Physics study path')),
+        findsOneWidget,
+      );
+
       semantics.dispose();
       expect(find.text('Study'), findsOneWidget);
       expect(tester.takeException(), isNull);
     },
   );
-
 }

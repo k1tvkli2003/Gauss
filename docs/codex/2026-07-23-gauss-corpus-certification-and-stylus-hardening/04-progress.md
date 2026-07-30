@@ -299,6 +299,14 @@
   exact hash-bound JSONL block and remain unresolved; `repair-021` and
   `repair-022` are still external/in progress. Full corpus validation remains
   3672 source-bound records and 0 usable.
+- Jules repair wave 018–024 terminal reconciliation (2026-07-30): the
+  scheduler completed cleanly with five terminal `completed` sessions and two
+  terminal failures (`repair-021`, `repair-022`). A final artifact harvest
+  found no repository artifacts in any session. The only exact output remains
+  the previously validated message evidence for 018/020/024; 019 and 023
+  still provide no complete hash-bound JSONL, while 021 and 022 failed before
+  producing one. All four batches remain quarantined; no repair ticket was
+  discarded or promoted.
 - Next Jules repair wave prepared (2026-07-30): capacity snapshot confirmed 93
   remaining rolling tasks and 15 free slots. `repair-018` through `repair-024`
   are seven independent, ten-row, text-only, source-key-blind
