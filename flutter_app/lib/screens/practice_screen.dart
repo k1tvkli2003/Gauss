@@ -395,7 +395,7 @@ class _ContinueInstrument extends StatelessWidget {
                   ),
                   const SizedBox(height: 7),
                   Text(
-                    '$subjectReflected of ${_formatCount(subjectQuestions)} questions reflected on',
+                    '$subjectReflected of ${_formatCount(subjectQuestions)} question cards reflected',
                     style: const TextStyle(
                       color: GaussColors.muted,
                       fontSize: 10,

@@ -52,6 +52,10 @@ void main() {
     expect(find.text('STUDY OBSERVATORY'), findsOneWidget);
     expect(find.text('Mathematics'), findsOneWidget);
     expect(find.text('Physics'), findsOneWidget);
+    expect(
+      find.text('0 of 2,042 question cards reflected'),
+      findsOneWidget,
+    );
 
     await tester.tap(find.text('Physics'));
     await tester.pump(const Duration(milliseconds: 220));

@@ -2,11 +2,15 @@
 
 ## Summary
 - Result: partial
-- Last verified: 2026-07-30T14:00:00+03:30
+- Last verified: 2026-07-30T14:58:00+03:30
 
 ## Checks
 | Check | Command/Method | Result | Evidence |
 |---|---|---|---|
+| Study Observatory copy contract | `flutter test test/study_experience_test.dart` | passed | 22/22; asserts the truthful `question cards reflected` progress reading alongside subject switching, responsive layout, study-room, and pen checks |
+| Study Observatory static analysis | `dart analyze lib test` | passed | no issues found |
+| Study Observatory release build | `flutter build web --release --no-wasm-dry-run` | passed | Flutter produced `build/web` after the copy correction |
+| Map/Study visual browser QA | release web bundle rendered with local Chromium | passed with preserved follow-up | Map at 411x890 and 900x1180 plus Study at 411x890 inspected; `CURRENT MISSION` wording is recorded but not edited because `map_screen.dart` is user-owned dirty work |
 | Certification syntax | `node --check scripts/corpus_certification.mjs` | passed | valid Node module |
 | Canonical/runtime/media baseline | `node scripts/corpus_certification.mjs baseline` | passed | 3672 records; 3410 files; 66,450,076 bytes |
 | Certification reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound; 0 usable |
