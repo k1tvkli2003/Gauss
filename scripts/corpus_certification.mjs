@@ -1241,6 +1241,28 @@ function validateRepairOverlays() {
   const seen = new Set();
   for (const [index, overlay] of overlays.entries()) {
     const at = `repair-overlay:${index + 1}`;
+    const allowedFields = new Set([
+      "schema_version",
+      "question_id",
+      "source_sha256",
+      "status",
+      "patch",
+      "evidence",
+    ]);
+    const unexpectedFields = Object.keys(overlay).filter(
+      (field) => !allowedFields.has(field),
+    );
+    const missingFields = [...allowedFields].filter(
+      (field) => !Object.hasOwn(overlay, field),
+    );
+    if (unexpectedFields.length || missingFields.length) {
+      errors.push(
+        `${at} has invalid fields (missing=${missingFields.join(",") || "none"}; unexpected=${unexpectedFields.join(",") || "none"})`,
+      );
+    }
+    if (overlay.schema_version !== 1) {
+      errors.push(`${at} schema_version is invalid`);
+    }
     const record = recordById.get(overlay.question_id);
     if (!record) errors.push(`${at} has an unknown question_id`);
     if (!/^[a-f0-9]{64}$/u.test(overlay.source_sha256 ?? "")) {
@@ -1253,6 +1275,48 @@ function validateRepairOverlays() {
     seen.add(overlay.question_id);
     if (!new Set(["draft", "under_review", "verified", "rejected"]).has(overlay.status)) {
       errors.push(`${at} status is invalid`);
+    }
+    if (overlay.status === "draft") {
+      const patch = overlay.patch;
+      if (!patch || typeof patch !== "object" || Array.isArray(patch)) {
+        errors.push(`${at} draft patch is missing`);
+      } else {
+        if (patch.target !== "solution") {
+          errors.push(`${at} draft patch target must be solution`);
+        }
+        if (typeof patch.kind !== "string" || patch.kind.trim().length === 0) {
+          errors.push(`${at} draft patch kind is invalid`);
+        }
+        if (
+          typeof patch.solution_addendum !== "string" ||
+          patch.solution_addendum.trim().length < 8
+        ) {
+          errors.push(`${at} draft patch needs a non-empty solution addendum`);
+        }
+        // Earlier safe drafts used several source-preserving repair kinds and
+        // some did not carry this explicit flag. Missing means they remain
+        // review-only; an explicit destructive value is always rejected. The
+        // stricter Jules-harvest gate requires a canonical addendum plus true.
+        if (patch.preserve_source === false) {
+          errors.push(`${at} draft patch must preserve source`);
+        }
+      }
+      const evidence = overlay.evidence;
+      if (!evidence || typeof evidence !== "object" || Array.isArray(evidence)) {
+        errors.push(`${at} draft evidence is missing`);
+      } else {
+        for (const field of ["independent_solve", "solution_review"]) {
+          if (typeof evidence[field] !== "string" || evidence[field].trim().length < 8) {
+            errors.push(`${at} draft lacks ${field} evidence`);
+          }
+        }
+        if (
+          typeof evidence.fresh_verifier !== "string" &&
+          typeof evidence.adversarial_review !== "string"
+        ) {
+          errors.push(`${at} draft lacks verifier or adversarial evidence`);
+        }
+      }
     }
     if (overlay.status === "verified") {
       const evidence = overlay.evidence ?? {};

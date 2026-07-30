@@ -104,3 +104,18 @@ all correction batches 003–010 structural validation           # passed (80 ro
 node scripts/corpus_certification.mjs validate-repairs          # passed (40 overlays)
 node scripts/corpus_certification.mjs summarize                 # passed
 ```
+
+## Canonical-overlay guard
+
+The corpus validator now also checks the canonical overlay itself, not only an
+incoming Jules payload. Every overlay must have the expected version and six
+top-level fields, bind to an extant source hash, use a known state, and carry a
+non-empty solution patch plus independent-solve and solution-review evidence
+when it is a draft. An explicit `preserve_source: false` is rejected. Older
+source-preserving draft kinds remain review-only for backward compatibility;
+new harvested drafts must meet the stricter addendum contract above.
+
+A negative test temporarily injected `preserve_source: false`, confirmed that
+`validate-repairs` rejected it, and restored the canonical overlay before the
+final passing validation. This defends the repair plane from accidental
+destructive promotions while keeping source JSON and media immutable.
