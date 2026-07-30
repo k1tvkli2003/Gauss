@@ -845,6 +845,13 @@ class _StudyPathStage extends StatefulWidget {
 class _StudyPathStageState extends State<_StudyPathStage> {
   final ScrollController _scrollController = ScrollController();
   List<double> _nodeY = const [];
+  int _landmarkWindow = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(_refreshLandmarkWindow);
+  }
 
   @override
   void didUpdateWidget(covariant _StudyPathStage oldWidget) {
@@ -858,8 +865,30 @@ class _StudyPathStageState extends State<_StudyPathStage> {
 
   @override
   void dispose() {
+    _scrollController.removeListener(_refreshLandmarkWindow);
     _scrollController.dispose();
     super.dispose();
+  }
+
+  /// Keep the full route geometry alive, but defer the expensive decorative
+  /// landmark rasters until they are near the visible scroll window. The
+  /// buffer avoids visible pop-in while preventing distant map art from
+  /// competing with the first useful frame and its local question data.
+  void _refreshLandmarkWindow() {
+    if (!_scrollController.hasClients) return;
+    final nextWindow = (_scrollController.offset / 220).floor();
+    if (nextWindow == _landmarkWindow) return;
+    setState(() => _landmarkWindow = nextWindow);
+  }
+
+  bool _isLandmarkNearViewport(
+    _LandmarkGeometry landmark,
+    double viewportHeight,
+  ) {
+    final top = _scrollController.hasClients ? _scrollController.offset : 0.0;
+    final buffer = math.min(160.0, viewportHeight * .24);
+    return landmark.top + landmark.size >= top - buffer &&
+        landmark.top <= top + viewportHeight + buffer;
   }
 
   void jumpToNode(int index) {
@@ -932,7 +961,8 @@ class _StudyPathStageState extends State<_StudyPathStage> {
                 ),
               ),
               for (final landmark in geometry.landmarks)
-                _PathLandmark(landmark: landmark),
+                if (_isLandmarkNearViewport(landmark, constraints.maxHeight))
+                  _PathLandmark(landmark: landmark),
               if (constraints.maxWidth >= 560)
                 for (final header in geometry.unitHeaders)
                   Positioned(

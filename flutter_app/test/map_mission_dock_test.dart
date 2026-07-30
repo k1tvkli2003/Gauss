@@ -8,6 +8,13 @@ import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/screens/map_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 
+Finder _assetImage(String assetName) => find.byWidgetPredicate(
+  (widget) =>
+      widget is Image &&
+      widget.image is AssetImage &&
+      (widget.image as AssetImage).assetName == assetName,
+);
+
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
@@ -45,6 +52,11 @@ void main() {
         find.bySemanticsLabel(RegExp(r'^CURRENT STUDY\.')),
         findsOneWidget,
       );
+      expect(
+        _assetImage('assets/visual/mascot/mira_thinking.png'),
+        findsNothing,
+        reason: 'distant landmark art must not compete with the first map frame',
+      );
       await tester.tap(find.byKey(const ValueKey('map-node-sets:20:20')));
       await tester.pumpAndSettle();
 
@@ -55,4 +67,5 @@ void main() {
       expect(tester.takeException(), isNull);
     },
   );
+
 }

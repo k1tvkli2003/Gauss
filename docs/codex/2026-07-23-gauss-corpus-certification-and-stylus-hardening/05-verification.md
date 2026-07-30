@@ -2,7 +2,7 @@
 
 ## Summary
 - Result: partial
-- Last verified: 2026-07-30T15:17:00+03:30
+- Last verified: 2026-07-30T15:35:00+03:30
 
 ## Checks
 | Check | Command/Method | Result | Evidence |
@@ -12,6 +12,7 @@
 | Study Observatory release build | `flutter build web --release --no-wasm-dry-run` | passed | Flutter produced `build/web` after the copy correction |
 | Map/Study visual browser QA | release web bundle rendered with local Chromium | passed | Map at 411x890 and 900x1180 plus Study at 411x890 inspected; the unscored dock now says `CURRENT STUDY`, with focused visible-copy and semantics tests |
 | Map study-state terminology | focused map-dock tests, `dart analyze lib test`, `flutter test`, release web build, Chromium phone render | passed | `CURRENT MISSION` is now `CURRENT STUDY` in visible and semantic copy; 98/98 Flutter tests and a fresh 411x890 release render pass while the user-owned header work stays unstaged |
+| Map startup landmark deferral | resource waterfall, focused map tests, release build | passed with bounded claim | the first map frame no longer requests distant `mira_thinking.png` (1,195,442 bytes); browser canvas timing was noisy, so no latency improvement is claimed |
 | Full Flutter regression after UI polish | `flutter test` | passed | 98/98, including question TeX, media decode, responsive study surfaces, Focus Pen contracts, navigation, and benchmark guards |
 | Jules repair wave 018/020/024 partial harvest | exact message extraction, transport validator, canonical materializer | passed with quarantine | 30/30 rows bind to original ticket/order/source hash; 24 drafts added, 6 under-review rows excluded; overlay SHA-256 `37ca00cad5f8ab5796272063ee608e5c865b0b4f48c692737aad120cd557e295` |
 | Jules repair wave 025–031 dispatch readiness | allocator, blind-input assertion, `jules_batch.py validate` | passed locally; remote dispatch deferred | 70 unique text-only rows; all inputs exclude answer keys; live `doctor` and scheduler `--dry-run` each exceeded the bounded 64-second network window, so no session was created |
