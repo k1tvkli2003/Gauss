@@ -1878,7 +1878,7 @@ class _StudyDock extends StatelessWidget {
     final status = isComplete
         ? 'SET COMPLETE'
         : isCurrent
-        ? 'CURRENT MISSION'
+        ? 'CURRENT STUDY'
         : 'SELECTED SET';
     final detail =
         '${node.setLabel} · ${snapshot.reflected} / '
@@ -1895,7 +1895,7 @@ class _StudyDock extends StatelessWidget {
             constraints: const BoxConstraints(minHeight: 72),
             child: Row(
               children: [
-                _MissionDockEmblem(
+                _StudyDockEmblem(
                   topicKey: node.topic.key,
                   isCurrent: isCurrent,
                   isComplete: isComplete,
@@ -2007,8 +2007,8 @@ class _StudyDock extends StatelessWidget {
   }
 }
 
-class _MissionDockEmblem extends StatelessWidget {
-  const _MissionDockEmblem({
+class _StudyDockEmblem extends StatelessWidget {
+  const _StudyDockEmblem({
     required this.topicKey,
     required this.isCurrent,
     required this.isComplete,

@@ -27,11 +27,12 @@ The Study Observatory rendered the grammatically inverted line
 accurately describes a personal study record rather than an answer-correctness
 claim. `study_experience_test.dart` asserts this initial state.
 
-## Preserved follow-up
+## Semantic follow-through
 
-The rendered Map still calls an unscored study path `CURRENT MISSION` even
-though the controller deliberately exposes zero mission-ready questions while
-certification is incomplete. That wording should become a study-specific
-state when the user-owned map edit can be safely reconciled. It is recorded
-here rather than overwritten, because changing that dirty file would risk
-discarding in-progress map work.
+The visual review found that the unscored study path was called
+`CURRENT MISSION` while the controller deliberately exposes zero
+mission-ready questions during certification. The map-header edit owned by
+the user does not overlap the dock implementation, so the dock now says
+`CURRENT STUDY` in both visible copy and accessibility semantics. Its focused
+map-dock test passes, and the independent user-owned compact-header changes
+remain unstaged.

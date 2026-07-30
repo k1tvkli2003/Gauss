@@ -12,7 +12,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets(
-    'the compact map dock distinguishes the current mission from a selected set',
+    'the compact map dock distinguishes the current study set from a selected set',
     (tester) async {
       final semantics = tester.ensureSemantics();
       final database = GaussDatabase(NativeDatabase.memory());
@@ -40,9 +40,9 @@ void main() {
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 400));
 
-      expect(find.text('CURRENT MISSION'), findsOneWidget);
+      expect(find.text('CURRENT STUDY'), findsOneWidget);
       expect(
-        find.bySemanticsLabel(RegExp(r'^CURRENT MISSION\.')),
+        find.bySemanticsLabel(RegExp(r'^CURRENT STUDY\.')),
         findsOneWidget,
       );
       await tester.tap(find.byKey(const ValueKey('map-node-sets:20:20')));
