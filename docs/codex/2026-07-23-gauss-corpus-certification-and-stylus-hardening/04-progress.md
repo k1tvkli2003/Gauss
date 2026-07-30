@@ -284,6 +284,12 @@
 - Independent adversarial-review slice 0010: all five rows passed (`1,4,4,3,2`) with no domain, sign, branch, option-mapping, or completeness blockers. Adversarial gate is now 43 passed; source-fidelity/render gates still block admission, so usable remains 0.
 
 ## Next
+- Jules repair wave 011–017 (2026-07-30): 70/70 source-key-blind correction
+  rows passed exact ticket/order/source-hash/schema validation. The
+  fail-closed materializer admitted only 55 canonical source-preserving
+  solution-addendum drafts (overlay ledger: 40 → 95); 15 concrete
+  `under_review` blockers remain outside the overlay and runtime. Corpus
+  validation still reports 0 usable records.
 - UI reward-loop closure (2026-07-30): the tenth daily study reflection now
   opens a truthful, accessible recap only when it creates the idempotent daily
   quest ledger event. A capped-XP receipt is explicitly non-granting; this is

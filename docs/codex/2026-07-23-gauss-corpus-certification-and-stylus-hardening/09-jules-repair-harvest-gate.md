@@ -119,3 +119,32 @@ A negative test temporarily injected `preserve_source: false`, confirmed that
 `validate-repairs` rejected it, and restored the canonical overlay before the
 final passing validation. This defends the repair plane from accidental
 destructive promotions while keeping source JSON and media immutable.
+
+## Correction harvest: batches 011–017
+
+The seven later, source-key-blind repair sessions completed as message-only
+handoffs. Their complete raw activity pages are retained under ignored
+`.jules` evidence; a terminal session without a change set was not treated as
+an implementation.
+
+Each correction response was extracted from its latest exact JSONL message and
+passed the transport gate against its ten-ticket input. All 70 rows preserved
+ticket ID, question ID, original order, and source SHA-256. The status split
+was 55 `draft` and 15 `under_review`.
+
+`scripts/materialize_jules_repair_drafts.py` is the second fail-closed step.
+It accepts only the canonical draft shape (solution target, addendum kind,
+`preserve_source: true`, three non-empty review observations, and no blocker),
+compares it against the overlay ledger for conflicts, and atomically writes
+only new drafts. It deliberately omits a Jules `effective_option` observation:
+that observation is not a source-key correction or an answer certification.
+
+- Dry run: existing 40 overlays, 55 additions, 15 unresolved rows excluded.
+- Write: 95 overlays, SHA-256
+  `4c990c019cf76e9b2a9c538a01be644a7c6b3dd2b9e954e9a60676c3b503f7b8`.
+- `validate-repairs`, full corpus `validate`, `summarize`, and regenerated
+  `repair-queue` all passed; the queue remains 2,791 and usable remains 0.
+
+This remains a repair proposal ledger. It does not change immutable source
+JSON/media, certify the proposed option, solve source-fidelity, or admit a
+question to runtime.

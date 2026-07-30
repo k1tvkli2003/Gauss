@@ -10,6 +10,9 @@
 | Certification syntax | `node --check scripts/corpus_certification.mjs` | passed | valid Node module |
 | Canonical/runtime/media baseline | `node scripts/corpus_certification.mjs baseline` | passed | 3672 records; 3410 files; 66,450,076 bytes |
 | Certification reconciliation | `node scripts/corpus_certification.mjs validate` | passed | 3672 source-bound; 0 usable |
+| Jules repair wave 011–017 transport | exact JSONL extraction + `validate_jules_repair_harvest.py` | passed with quarantine | 70/70 rows bind to original ticket/order/source hash; 55 drafts and 15 explicit under-review blockers |
+| Jules draft materialization 011–017 | `materialize_jules_repair_drafts.py` dry-run + write | passed with quarantine | canonical addendum-only guard added 55 source-preserving drafts; 15 unresolved rows were not materialized; overlay SHA-256 `4c990c019cf76e9b2a9c538a01be644a7c6b3dd2b9e954e9a60676c3b503f7b8` |
+| Post-materialization corpus gates | `validate-repairs`, `validate`, `summarize`, `repair-queue` | passed | 95 overlays; 3672 source-bound; repair queue 2791; 0 usable |
 | Weighted sharding | `... shard --size=25 --max-weight=120` | passed | 179 batches; 0 cross-topic; max 120 |
 | Luna screening 0001 | inspected blind batch + 19 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 6 accepted, 17 needs repair, 2 ambiguous |
 | Luna screening 0002 | inspected blind batch + 6 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 25 needs repair |
