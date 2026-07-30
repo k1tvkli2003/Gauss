@@ -2,7 +2,7 @@
 
 ## Summary
 - Result: partial
-- Last verified: 2026-07-23T16:41:06+03:30
+- Last verified: 2026-07-30T14:00:00+03:30
 
 ## Checks
 | Check | Command/Method | Result | Evidence |
@@ -13,6 +13,9 @@
 | Jules repair wave 011–017 transport | exact JSONL extraction + `validate_jules_repair_harvest.py` | passed with quarantine | 70/70 rows bind to original ticket/order/source hash; 55 drafts and 15 explicit under-review blockers |
 | Jules draft materialization 011–017 | `materialize_jules_repair_drafts.py` dry-run + write | passed with quarantine | canonical addendum-only guard added 55 source-preserving drafts; 15 unresolved rows were not materialized; overlay SHA-256 `4c990c019cf76e9b2a9c538a01be644a7c6b3dd2b9e954e9a60676c3b503f7b8` |
 | Post-materialization corpus gates | `validate-repairs`, `validate`, `summarize`, `repair-queue` | passed | 95 overlays; 3672 source-bound; repair queue 2791; 0 usable |
+| Deterministic Jules wave 018–024 allocation | `prepare_jules_repair_wave.py` dry-run + write | passed | 294 eligible text-only screened-complete candidates; seven independent 10-row batches selected without prior ticket/overlay overlap |
+| Wave 018–024 blind-input invariant | local Python assertion | passed | 70 unique rows; every prompt/input excludes `correct_option_index` and states that the source answer key is not supplied |
+| Wave 018–024 Jules manifest | `jules_batch.py validate` + quota-aware `run --dry-run` | passed | seven repoless, no-PR tasks; complete Pro snapshot: 93 rolling slots and 15 concurrent slots available |
 | Weighted sharding | `... shard --size=25 --max-weight=120` | passed | 179 batches; 0 cross-topic; max 120 |
 | Luna screening 0001 | inspected blind batch + 19 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 6 accepted, 17 needs repair, 2 ambiguous |
 | Luna screening 0002 | inspected blind batch + 6 original media; `merge-screening` | passed | 25 ordered/hash-bound rows; 25 needs repair |

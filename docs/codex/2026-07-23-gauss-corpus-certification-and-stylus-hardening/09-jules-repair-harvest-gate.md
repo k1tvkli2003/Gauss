@@ -148,3 +148,22 @@ that observation is not a source-key correction or an answer certification.
 This remains a repair proposal ledger. It does not change immutable source
 JSON/media, certify the proposed option, solve source-fidelity, or admit a
 question to runtime.
+
+## Deterministic next-wave allocator
+
+`scripts/prepare_jules_repair_wave.py` converts the derived repair queue into
+exclusive, ignored Jules task inputs without accepting a source answer key. It
+filters for unassigned, text-only math `solution_rederive` tickets whose
+extraction state is `screened_complete`, excludes every prior task input and
+canonical overlay ID, and orders by stable question ID. It exports only:
+
+```text
+ticket_id, question_id, source_sha256, blocking_issues, stem, options, solution
+```
+
+For wave 018–024, 294 eligible tickets yielded seven independent ten-row
+batches. A local blind-input assertion proved all 70 question IDs are unique
+and no prompt or input contains `correct_option_index`. The scheduler manifest
+is repoless and has no automatic PR mode. Session completion remains only a
+harvest trigger; the existing strict extractor and materializer still decide
+whether any draft reaches the derived overlay ledger.

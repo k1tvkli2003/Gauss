@@ -284,6 +284,12 @@
 - Independent adversarial-review slice 0010: all five rows passed (`1,4,4,3,2`) with no domain, sign, branch, option-mapping, or completeness blockers. Adversarial gate is now 43 passed; source-fidelity/render gates still block admission, so usable remains 0.
 
 ## Next
+- Next Jules repair wave prepared (2026-07-30): capacity snapshot confirmed 93
+  remaining rolling tasks and 15 free slots. `repair-018` through `repair-024`
+  are seven independent, ten-row, text-only, source-key-blind
+  `solution_rederive` batches selected deterministically from 294 eligible
+  tickets. Their session state remains external/ignored until raw outputs pass
+  the same extraction and overlay gates.
 - Jules repair wave 011–017 (2026-07-30): 70/70 source-key-blind correction
   rows passed exact ticket/order/source-hash/schema validation. The
   fail-closed materializer admitted only 55 canonical source-preserving
