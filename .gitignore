@@ -69,6 +69,15 @@ tmp/
 *.dmp
 hs_err_pid*
 
+# --- Local Codex / Jules work evidence (never source data) ---
+# These directories retain resumable external-review transcripts, screenshots,
+# and mechanical validation artifacts locally. They are intentionally excluded
+# from Git; verified summaries and durable evidence belong under docs/codex/.
+.jules/
+.codex-tmp/
+.codex-tmp-*
+.tmp_screening_*
+
 # --- Packaged outputs (source assets and docs remain tracked) ---
 *.apk
 *.aab
