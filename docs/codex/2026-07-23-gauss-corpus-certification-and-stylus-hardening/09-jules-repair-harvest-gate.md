@@ -195,3 +195,20 @@ records, 2791 repair tickets, and **0 usable** questions. These overlays are
 source-preserving proposed solution addenda only: they do not certify an
 answer, repair a media/extraction blocker, establish source fidelity, or move
 any record into the scored runtime.
+
+## Prepared wave 025–031
+
+After excluding every prior repair input and all current overlay IDs, the
+deterministic allocator found 224 further eligible text-only math tickets. It
+selected the first 70 into seven ten-row batches (`repair-025` through
+`repair-031`). A local blind-input assertion proved that all question IDs are
+unique and that every payload has precisely
+`ticket_id`, `question_id`, `source_sha256`, `blocking_issues`, `stem`,
+`options`, and `solution`; `correct_option_index` is absent from both input
+and prompt. The repoless manifest validates locally.
+
+Remote dispatch is intentionally pending, not failed-open. A fresh Jules
+quota `doctor` and a scheduler `--dry-run` each exceeded their bounded
+64-second network window. No remote repair session was created without a
+current quota response, and the prepared local inputs remain ignored until
+that attestation is available.

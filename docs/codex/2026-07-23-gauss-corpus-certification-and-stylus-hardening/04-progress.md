@@ -284,6 +284,12 @@
 - Independent adversarial-review slice 0010: all five rows passed (`1,4,4,3,2`) with no domain, sign, branch, option-mapping, or completeness blockers. Adversarial gate is now 43 passed; source-fidelity/render gates still block admission, so usable remains 0.
 
 ## Next
+- Deterministic repair wave 025–031 is locally prepared: 70 additional,
+  unique, text-only, source-key-blind `solution_rederive` candidates remain
+  ready for Jules. Local manifest validation passed. A live Jules `doctor`
+  call and scheduler `--dry-run` both exceeded their bounded 64-second
+  network window, so no new remote session was created without a fresh quota
+  attestation.
 - Jules repair wave 018–024 partial harvest (2026-07-30): the valid,
   terminal message-only outputs for `repair-018`, `repair-020`, and
   `repair-024` passed exact ten-row ticket/order/source-hash/schema gates.
