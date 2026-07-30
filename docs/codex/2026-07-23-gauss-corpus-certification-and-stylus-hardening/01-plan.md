@@ -11,9 +11,9 @@ admission فقط برای certified overlay. هیچ رأی مدل به‌تنه�
 | 1 | done | canonical/runtime/media freeze و SHA-256 reconciliation |
 | 2 | done | Persian/TeX parser hardening و Focus Pen scratch hardening |
 | 3 | done | schema، baseline، risk queues، validator و ۱۷۹ shard وزنی |
-| 4 | active | Luna Medium discovery screening برای ۳۶۷۲ سؤال |
-| 5 | planned | freeze زیرمبحث‌ها و classification pass با registry ثابت |
-| 6 | planned | blind solve، fresh verifier، solution audit و adversarial review |
+| 4 | done | Luna Medium discovery screening برای هر ۳۶۷۲ سؤال با attestation مستقل merge شد. |
+| 5 | active | taxonomy و difficulty برای هر ۳۶۷۲ سؤال screen شده‌اند؛ freeze registry و تثبیت زیرمبحث‌ها باقی است. |
+| 6 | active | blind solve، fresh verifier، solution audit و adversarial review آغاز شده‌اند؛ ۵۰ answer و ۴۸ solution/review کاملِ مستقل ثبت شده و repair draftها هنوز promotion نیستند. |
 | 7 | planned | certified overlay و fail-closed Flutter admission |
 | 8 | active | analyzer/test/build/runtime/docs/release evidence |
 
@@ -26,7 +26,7 @@ admission فقط برای certified overlay. هیچ رأی مدل به‌تنه�
 
 ## Risks
 - PDF اصلی در environment فعلی resolve نشده؛ source-fidelity نهایی نمی‌تواند pass شود.
-- Gauss در منابع Jules متصل نیست؛ session بی‌دسترسی عمداً ساخته نشد.
+- اتصال Jules در این window پاسخ پایدار نمی‌دهد؛ هفت session موجود repair-011 تا repair-017 بدون ساخت session تازه منتظر harvest هستند.
 - خروجی model می‌تواند اشتباه باشد؛ merge با attestation و داوری مستقل fail-closed است.
 - Focus Pen واقعی در دسترس نیست؛ hardware latency/pressure curve هنوز اثبات نشده است.
 
