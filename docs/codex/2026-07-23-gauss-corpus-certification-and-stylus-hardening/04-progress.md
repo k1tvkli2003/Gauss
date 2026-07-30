@@ -284,6 +284,15 @@
 - Independent adversarial-review slice 0010: all five rows passed (`1,4,4,3,2`) with no domain, sign, branch, option-mapping, or completeness blockers. Adversarial gate is now 43 passed; source-fidelity/render gates still block admission, so usable remains 0.
 
 ## Next
+- Jules repair wave 018–024 partial harvest (2026-07-30): the valid,
+  terminal message-only outputs for `repair-018`, `repair-020`, and
+  `repair-024` passed exact ten-row ticket/order/source-hash/schema gates.
+  The source-preserving materializer admitted 24 canonical draft solution
+  addenda (overlay ledger: 95 → 119); six explicit `under_review` rows stayed
+  outside the ledger. `repair-019` and `repair-023` supplied no complete,
+  exact hash-bound JSONL block and remain unresolved; `repair-021` and
+  `repair-022` are still external/in progress. Full corpus validation remains
+  3672 source-bound records and 0 usable.
 - Next Jules repair wave prepared (2026-07-30): capacity snapshot confirmed 93
   remaining rolling tasks and 15 free slots. `repair-018` through `repair-024`
   are seven independent, ten-row, text-only, source-key-blind

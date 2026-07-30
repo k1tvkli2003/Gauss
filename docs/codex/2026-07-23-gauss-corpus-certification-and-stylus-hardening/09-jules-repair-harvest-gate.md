@@ -167,3 +167,31 @@ and no prompt or input contains `correct_option_index`. The scheduler manifest
 is repoless and has no automatic PR mode. Session completion remains only a
 harvest trigger; the existing strict extractor and materializer still decide
 whether any draft reaches the derived overlay ledger.
+
+## Partial correction harvest: wave 018–024
+
+The wave scheduler was still legitimately active for `repair-021` and
+`repair-022`, so its state lock was retained. Five terminal activity records
+were read without changing the scheduler state. Three contained a complete,
+latest JSONL message that exactly matched their own blind ten-ticket input:
+
+| Task | Exact rows | Draft | Under review | Outcome |
+| --- | ---: | ---: | ---: | --- |
+| `repair-018` | 10 | 9 | 1 | transport gate passed |
+| `repair-020` | 10 | 6 | 4 | transport gate passed |
+| `repair-024` | 10 | 9 | 1 | transport gate passed |
+| `repair-019` | 0 | — | — | no complete exact-order hash-bound JSONL block; unresolved |
+| `repair-023` | 0 | — | — | no complete exact-order hash-bound JSONL block; unresolved |
+
+The three accepted messages were first materialized with `--dry-run`: 24 new
+drafts, six explicit under-review records excluded, 119 resulting overlays.
+The write produced overlay SHA-256
+`37ca00cad5f8ab5796272063ee608e5c865b0b4f48c692737aad120cd557e295`.
+The repeated dry run was idempotent (24 existing drafts skipped, zero added).
+
+`validate-repairs`, full-corpus `validate`, `summarize`, and regenerated
+`repair-queue` passed after the write. The corpus remains 3672 source-bound
+records, 2791 repair tickets, and **0 usable** questions. These overlays are
+source-preserving proposed solution addenda only: they do not certify an
+answer, repair a media/extraction blocker, establish source fidelity, or move
+any record into the scored runtime.
