@@ -13,7 +13,7 @@ import argparse
 import hashlib
 import json
 import os
-import sys
+import re
 import tempfile
 from pathlib import Path
 from typing import Any
@@ -35,6 +35,8 @@ EVIDENCE_FIELDS = {
     "solution_review",
     "adversarial_review",
 }
+QUESTION_ID = re.compile(r"^[a-z0-9_-]+$")
+SHA256 = re.compile(r"^[a-f0-9]{64}$")
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -54,13 +56,22 @@ def canonical(row: dict[str, Any], *, source: Path, index: int) -> dict[str, Any
     if set(row) != TRANSPORT_FIELDS:
         raise ValueError(f"{prefix} has unexpected transport fields")
     if row["status"] == "under_review":
-        if row["patch"] != {} or not row["blockers"]:
+        blockers = row["blockers"]
+        if (
+            row["patch"] != {}
+            or not isinstance(blockers, list)
+            or not blockers
+            or any(not isinstance(blocker, str) or not blocker.strip() for blocker in blockers)
+        ):
             raise ValueError(f"{prefix} has an invalid under-review shape")
         return None
     if row["status"] != "draft":
         raise ValueError(f"{prefix} has unsupported status {row['status']!r}")
-    if row["blockers"] != []:
+    if not isinstance(row["blockers"], list) or row["blockers"] != []:
         raise ValueError(f"{prefix} draft retains blockers")
+    option = row["effective_option"]
+    if option is not None and (type(option) is not int or not 1 <= option <= 4):
+        raise ValueError(f"{prefix} has an invalid effective option")
     if not isinstance(row["patch"], dict) or set(row["patch"]) != PATCH_FIELDS:
         raise ValueError(f"{prefix} has an invalid draft patch")
     patch = row["patch"]
@@ -80,9 +91,9 @@ def canonical(row: dict[str, Any], *, source: Path, index: int) -> dict[str, Any
         for key in EVIDENCE_FIELDS
     ):
         raise ValueError(f"{prefix} contains an empty review observation")
-    if not isinstance(row["question_id"], str) or not row["question_id"]:
+    if not isinstance(row["question_id"], str) or not QUESTION_ID.fullmatch(row["question_id"]):
         raise ValueError(f"{prefix} has an invalid question id")
-    if not isinstance(row["source_sha256"], str) or len(row["source_sha256"]) != 64:
+    if not isinstance(row["source_sha256"], str) or not SHA256.fullmatch(row["source_sha256"]):
         raise ValueError(f"{prefix} has an invalid source hash")
     return {
         "schema_version": 1,
