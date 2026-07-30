@@ -450,9 +450,20 @@ void main() {
   });
 
   test('ten first reflections complete the daily study quest', () async {
+    StudyReflectionOutcome? finalReflection;
     for (var index = 0; index < 10; index++) {
-      await _reflect(repository, 'dq$index');
+      final outcome = await _reflect(repository, 'dq$index');
+      if (index == 9) finalReflection = outcome;
     }
+    expect(finalReflection, isNotNull);
+    expect(finalReflection!.dailyQuestCompleted, isTrue);
+    expect(
+      finalReflection.lines.map((line) => line.reason),
+      contains('Daily observation'),
+    );
+    final replay = await _reflect(repository, 'dq9');
+    expect(replay.dailyQuestCompleted, isFalse);
+    expect(replay.xpEarned, 0);
     final summary = await repository.gamificationSummary();
     expect(summary.quest.completed, isTrue);
     expect(summary.quest.progress, 10);

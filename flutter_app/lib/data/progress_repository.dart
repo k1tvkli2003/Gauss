@@ -99,6 +99,7 @@ class ProgressRepository {
         lines: const [],
         setCompleted: false,
         unitCompleted: false,
+        dailyQuestCompleted: false,
         xpEarned: 0,
         totalXp: xpBefore,
         levelBefore: levelFor(xpBefore),
@@ -146,6 +147,7 @@ class ProgressRepository {
     final lines = <RewardLine>[];
     var setCompleted = false;
     var unitCompleted = false;
+    var dailyQuestCompleted = false;
     if (isFirst) {
       await _award(
         eventId: 'study_reflected:$questionId',
@@ -229,7 +231,7 @@ class ProgressRepository {
             ),
           );
       if (reflectedToday >= dailyQuestTarget) {
-        await _award(
+        dailyQuestCompleted = await _award(
           eventId: 'daily_study_completed:$dayKey',
           type: 'daily_study_completed',
           requested: dailyQuestXp,
@@ -272,6 +274,7 @@ class ProgressRepository {
       lines: List.unmodifiable(lines),
       setCompleted: setCompleted,
       unitCompleted: unitCompleted,
+      dailyQuestCompleted: dailyQuestCompleted,
       xpEarned: xpAfter - xpBefore,
       totalXp: xpAfter,
       levelBefore: levelFor(xpBefore),
@@ -1114,7 +1117,11 @@ class ProgressRepository {
         );
   }
 
-  Future<void> _award({
+  /// Returns whether an idempotent event was recorded. A reward can be
+  /// recorded with zero new XP when a category cap is exhausted; callers can
+  /// still present the truthful milestone without treating the presentation as
+  /// a grant authority.
+  Future<bool> _award({
     required String eventId,
     required String type,
     required int requested,
@@ -1131,7 +1138,7 @@ class ProgressRepository {
     final existing = await (database.select(
       database.gamificationEvents,
     )..where((row) => row.id.equals(eventId))).getSingleOrNull();
-    if (existing != null) return;
+    if (existing != null) return false;
     await database
         .into(database.gamificationEvents)
         .insert(
@@ -1147,7 +1154,7 @@ class ProgressRepository {
           ),
         );
     final amount = await _cappedAmount(dayKey, category, requested);
-    if (amount <= 0) return;
+    if (amount <= 0) return true;
     await database
         .into(database.xpTransactions)
         .insert(
@@ -1162,6 +1169,7 @@ class ProgressRepository {
           ),
         );
     lines.add(RewardLine(reason: reason, amount: amount, category: category));
+    return true;
   }
 
   Future<int> _cappedAmount(

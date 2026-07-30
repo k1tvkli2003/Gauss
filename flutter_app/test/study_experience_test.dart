@@ -815,6 +815,46 @@ void main() {
     expect(find.text('Set complete'), findsNothing);
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets('the tenth daily reflection opens a truthful quest recap', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    final topic = controller.topics.first;
+    final questions = await questionBank.loadTopic(topic.key);
+    for (final question in questions.take(9)) {
+      await controller.saveStudyReflection(
+        question: question,
+        shelfKey: '${topic.key}:0:20',
+        hypothesisChoiceIndex: null,
+        reflection: StudyReflection.clear,
+      );
+    }
+    await tester.pumpWidget(
+      _TestSurface(
+        controller: controller,
+        child: ArchiveScreen(topicKey: topic.key, count: 20),
+      ),
+    );
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+
+    await tester.ensureVisible(find.text('Reveal reference answer'));
+    await tester.tap(find.text('Reveal reference answer'));
+    await tester.pump(const Duration(milliseconds: 220));
+    await tester.ensureVisible(find.text('Concept feels clear'));
+    await tester.tap(find.text('Concept feels clear'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 320));
+
+    expect(find.text('Daily observation complete'), findsOneWidget);
+    expect(find.text('Daily observation'), findsOneWidget);
+    expect(
+      find.text('Ten new reflections are safely recorded for today.'),
+      findsOneWidget,
+    );
+    expect(find.text('Keep charting'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
 }
 
 /// Reports the widget host as present so the publish path runs on any host

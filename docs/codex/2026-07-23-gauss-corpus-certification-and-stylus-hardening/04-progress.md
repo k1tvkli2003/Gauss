@@ -284,6 +284,10 @@
 - Independent adversarial-review slice 0010: all five rows passed (`1,4,4,3,2`) with no domain, sign, branch, option-mapping, or completeness blockers. Adversarial gate is now 43 passed; source-fidelity/render gates still block admission, so usable remains 0.
 
 ## Next
+- UI reward-loop closure (2026-07-30): the tenth daily study reflection now
+  opens a truthful, accessible recap only when it creates the idempotent daily
+  quest ledger event. A capped-XP receipt is explicitly non-granting; this is
+  learner-progress UI, not mathematical certification. See `11-daily-quest-receipt.md`.
 - Screening is complete through 0112 retry; both retry outputs are merged with trusted attestations. Continue with deterministic repair/solve/review slices.
 - Process the deterministic repair queue in parallel with screening; no quarantined
   source is discarded or silently overwritten.

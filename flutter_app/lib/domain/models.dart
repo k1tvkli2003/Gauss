@@ -361,6 +361,7 @@ class StudyReflectionOutcome {
     required this.lines,
     required this.setCompleted,
     required this.unitCompleted,
+    required this.dailyQuestCompleted,
     required this.xpEarned,
     required this.totalXp,
     required this.levelBefore,
@@ -371,6 +372,11 @@ class StudyReflectionOutcome {
   final List<RewardLine> lines;
   final bool setCompleted;
   final bool unitCompleted;
+
+  /// True only when this write created today's quest-completion ledger event.
+  /// It is a study milestone, not a claim that an unverified source answer was
+  /// mathematically correct.
+  final bool dailyQuestCompleted;
   final int xpEarned;
   final int totalXp;
   final int levelBefore;

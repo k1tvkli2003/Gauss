@@ -190,10 +190,10 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
       );
       if (!mounted) return;
       setState(() => _records[question.id] = outcome.record);
-      if (outcome.lines.isNotEmpty &&
-          (outcome.setCompleted ||
-              outcome.unitCompleted ||
-              outcome.leveledUp)) {
+      if (outcome.setCompleted ||
+          outcome.unitCompleted ||
+          outcome.dailyQuestCompleted ||
+          outcome.leveledUp) {
         await _showRecap(outcome);
       }
     } finally {
@@ -1253,12 +1253,19 @@ class _StudyRecapDialog extends StatelessWidget {
         ? 'Unit charted'
         : outcome.setCompleted
         ? 'Set complete'
+        : outcome.dailyQuestCompleted
+        ? 'Daily observation complete'
         : 'Level ${outcome.levelAfter}';
     final detail = outcome.unitCompleted
         ? 'Every question in this unit now carries your own mark.'
         : outcome.setCompleted
         ? 'Twenty coordinates charted. The next set is ready when you are.'
+        : outcome.dailyQuestCompleted
+        ? 'Ten new reflections are safely recorded for today.'
         : 'Your steady charting moved the observatory forward.';
+    final receiptDetail = outcome.xpEarned > 0
+        ? '${outcome.xpEarned} experience recorded.'
+        : 'The milestone was recorded; today\'s XP cap is already met.';
     final totals = <String, int>{};
     for (final line in outcome.lines) {
       totals.update(
@@ -1273,7 +1280,7 @@ class _StudyRecapDialog extends StatelessWidget {
       child: Semantics(
         container: true,
         label:
-            '$headline. $detail. ${outcome.xpEarned} experience recorded. '
+            '$headline. $detail. $receiptDetail '
             '${outcome.leveledUp ? 'Level ${outcome.levelAfter} reached.' : ''}',
         child: Container(
           constraints: const BoxConstraints(maxWidth: 420),
@@ -1358,6 +1365,19 @@ class _StudyRecapDialog extends StatelessWidget {
                               ),
                             ),
                           ],
+                        ),
+                      ),
+                    if (totals.isEmpty)
+                      const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 4),
+                        child: Text(
+                          'No additional XP was granted for this receipt.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: GaussColors.muted,
+                            fontSize: 12,
+                            height: 1.35,
+                          ),
                         ),
                       ),
                     if (outcome.leveledUp) ...[

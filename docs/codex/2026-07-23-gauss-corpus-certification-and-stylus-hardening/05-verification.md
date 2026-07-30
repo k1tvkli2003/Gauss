@@ -242,6 +242,8 @@
 | Repair queue refresh after Jules batch 002 | `node scripts/corpus_certification.mjs repair-queue` | passed | 2,791 source-bound quarantine tickets regenerated: 2,488 render/prompt P0 and 303 correctness P1; current manifest answer/solution states are reflected without bypassing certification gates |
 
 ## Not Run
+- Daily quest receipt visual/device check: the widget and web release build
+  passed, but no physical Android device is connected for a live capture.
 - اجرای physical Xiaomi Focus Pen؛ دستگاه متصل نیست.
 - Android runtime launch/screenshot این slice؛ `adb devices` هیچ target نشان نداد.
 - source-PDF fidelity؛ مسیر اصل PDFها در environment حاضر نیست.
