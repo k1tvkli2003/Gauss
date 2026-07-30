@@ -179,112 +179,240 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
   }
 
   @override
-  Widget build(BuildContext context) => Column(
-    crossAxisAlignment: CrossAxisAlignment.stretch,
-    children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+  Widget build(BuildContext context) => AnimatedBuilder(
+    animation: _ink,
+    builder: (context, _) {
+      final hasInk = !_ink.isEmpty;
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          AnimatedBuilder(
-            animation: _ink,
-            builder: (context, _) => IconButton(
-              onPressed: _ink.isEmpty ? null : _ink.clear,
-              tooltip: 'Clear drawing',
-              icon: const Icon(Icons.delete_sweep_outlined),
-              color: GaussColors.parchmentInk,
-              disabledColor: GaussColors.parchmentInk.withValues(alpha: .25),
-            ),
-          ),
-          _PenWidthMenu(
-            color: GaussColors.parchmentInk,
-            value: _strokeWidth,
-            onSelected: (value) => setState(() => _strokeWidth = value),
-          ),
-          const SizedBox(width: 2),
-          Tooltip(
-            message: _fingerInkEnabled
-                ? 'Use Focus Pen only'
-                : 'Enable finger drawing',
-            child: Semantics(
-              button: true,
-              toggled: _fingerInkEnabled,
-              label: 'Finger drawing on this question',
-              child: InkResponse(
-                onTap: widget.active
-                    ? () => _setFingerInkEnabled(!_fingerInkEnabled)
-                    : null,
-                radius: 25,
-                child: AnimatedContainer(
-                  duration: GaussMotion.resolve(context, GaussMotion.micro),
-                  width: GaussMetrics.minTouchTarget,
-                  height: GaussMetrics.minTouchTarget,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: _fingerInkEnabled
-                        ? GaussColors.brass.withValues(alpha: .22)
-                        : Colors.transparent,
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: _fingerInkEnabled
-                          ? GaussColors.brass
-                          : GaussColors.parchmentInk.withValues(alpha: .22),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              // Keep the functional hit areas stable at compact widths; the
+              // written Clear label joins only when it cannot crowd the pen
+              // controls or the live instrument status.
+              final showClearLabel = hasInk && constraints.maxWidth >= 280;
+              return Row(
+                children: [
+                  Expanded(
+                    child: _InlineInkStatus(
+                      hasInk: hasInk,
+                      fingerInkEnabled: _fingerInkEnabled,
                     ),
                   ),
-                  child: Icon(
-                    _fingerInkEnabled
-                        ? Icons.pan_tool_alt_rounded
-                        : Icons.draw_outlined,
-                    color: GaussColors.parchmentInk,
-                    size: 21,
+                  const SizedBox(width: GaussSpacing.space4),
+                  Tooltip(
+                    message: 'Clear ink from this question',
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        AnimatedSwitcher(
+                          duration: GaussMotion.resolve(
+                            context,
+                            GaussMotion.micro,
+                          ),
+                          child: showClearLabel
+                              ? const Padding(
+                                  key: ValueKey('inline-ink-clear-label'),
+                                  padding: EdgeInsets.only(right: 2),
+                                  child: Text(
+                                    'Clear',
+                                    style: TextStyle(
+                                      color: GaussColors.parchmentInk,
+                                      fontSize: GaussTypeScale.caption,
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  ),
+                                )
+                              : const SizedBox.shrink(),
+                        ),
+                        IconButton(
+                          key: const ValueKey('inline-ink-clear'),
+                          onPressed: hasInk ? _ink.clear : null,
+                          tooltip: 'Clear ink from this question',
+                          icon: const Icon(Icons.delete_sweep_outlined),
+                          color: GaussColors.parchmentInk,
+                          disabledColor: GaussColors.parchmentInk.withValues(
+                            alpha: .25,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+                  _PenWidthMenu(
+                    color: GaussColors.parchmentInk,
+                    value: _strokeWidth,
+                    onSelected: (value) => setState(() => _strokeWidth = value),
+                  ),
+                  const SizedBox(width: 2),
+                  Tooltip(
+                    message: _fingerInkEnabled
+                        ? 'Use Focus Pen only'
+                        : 'Enable finger drawing',
+                    child: Semantics(
+                      button: true,
+                      toggled: _fingerInkEnabled,
+                      label: 'Finger drawing on this question',
+                      child: InkResponse(
+                        onTap: widget.active
+                            ? () => _setFingerInkEnabled(!_fingerInkEnabled)
+                            : null,
+                        radius: 25,
+                        child: AnimatedContainer(
+                          duration: GaussMotion.resolve(
+                            context,
+                            GaussMotion.micro,
+                          ),
+                          width: GaussMetrics.minTouchTarget,
+                          height: GaussMetrics.minTouchTarget,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: _fingerInkEnabled
+                                ? GaussColors.brass.withValues(alpha: .22)
+                                : Colors.transparent,
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: _fingerInkEnabled
+                                  ? GaussColors.brass
+                                  : GaussColors.parchmentInk.withValues(
+                                      alpha: .22,
+                                    ),
+                            ),
+                          ),
+                          child: Icon(
+                            _fingerInkEnabled
+                                ? Icons.pan_tool_alt_rounded
+                                : Icons.draw_outlined,
+                            color: GaussColors.parchmentInk,
+                            size: 21,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            },
+          ),
+          const SizedBox(height: GaussSpacing.space4),
+          AnimatedSwitcher(
+            duration: GaussMotion.resolve(context, GaussMotion.micro),
+            child: Text(
+              _fingerInkEnabled
+                  ? 'Touch drawing active · tap the hand to restore scrolling.'
+                  : hasInk
+                  ? 'Ink stays only for this visit · Clear removes it instantly.'
+                  : 'Focus Pen or stylus ready · write directly; fingers keep scrolling.',
+              key: ValueKey('$hasInk-$_fingerInkEnabled'),
+              textAlign: TextAlign.end,
+              style: const TextStyle(
+                color: Color(0xFF6D6045),
+                fontSize: GaussTypeScale.insignia,
+                height: 1.35,
+              ),
+            ),
+          ),
+          const SizedBox(height: 6),
+          ClipRect(
+            child: _ScratchInputSurface(
+              ink: _ink,
+              baseWidth: _strokeWidth,
+              allowTouch: _fingerInkEnabled,
+              active: widget.active,
+              onContactChanged: _setPointerContact,
+              child: Stack(
+                fit: StackFit.passthrough,
+                children: [
+                  widget.child,
+                  Positioned.fill(
+                    child: IgnorePointer(
+                      child: CustomPaint(
+                        key: const ValueKey('inline-ink-canvas'),
+                        painter: _ScratchPainter(ink: _ink, drawGrid: false),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
         ],
+      );
+    },
+  );
+}
+
+/// The inline plate is intentionally a calm writing surface; this small live
+/// badge makes the available instrument state evident without turning the
+/// Persian question itself into a toolbar.
+class _InlineInkStatus extends StatelessWidget {
+  const _InlineInkStatus({
+    required this.hasInk,
+    required this.fingerInkEnabled,
+  });
+
+  final bool hasInk;
+  final bool fingerInkEnabled;
+
+  @override
+  Widget build(BuildContext context) {
+    final (label, icon, accent, semantics) = switch ((
+      hasInk,
+      fingerInkEnabled,
+    )) {
+      (true, _) => (
+        'INK ON PLATE',
+        Icons.gesture_rounded,
+        GaussColors.signal,
+        'Question ink is present. Clear is available.',
       ),
-      const SizedBox(height: 4),
-      AnimatedSwitcher(
-        duration: GaussMotion.resolve(context, GaussMotion.micro),
-        child: Text(
-          _fingerInkEnabled
-              ? 'Touch drawing active · tap the hand to restore scrolling.'
-              : 'Focus Pen or stylus ready · write directly; fingers keep scrolling.',
-          key: ValueKey(_fingerInkEnabled),
-          textAlign: TextAlign.end,
-          style: const TextStyle(
-            color: Color(0xFF6D6045),
-            fontSize: 10,
-            height: 1.35,
-          ),
+      (false, true) => (
+        'FINGER INK',
+        Icons.pan_tool_alt_rounded,
+        GaussColors.brass,
+        'Finger drawing is active on this question.',
+      ),
+      (false, false) => (
+        'PEN READY',
+        Icons.edit_rounded,
+        GaussColors.signal,
+        'Focus Pen or stylus is ready to write on this question.',
+      ),
+    };
+    return Semantics(
+      label: semantics,
+      child: Container(
+        key: const ValueKey('inline-ink-status'),
+        height: GaussMetrics.minTouchTarget,
+        alignment: Alignment.centerLeft,
+        padding: const EdgeInsets.symmetric(horizontal: GaussSpacing.space8),
+        decoration: BoxDecoration(
+          color: accent.withValues(alpha: .09),
+          borderRadius: BorderRadius.circular(GaussRadii.pill),
+          border: Border.all(color: accent.withValues(alpha: .35)),
         ),
-      ),
-      const SizedBox(height: 6),
-      ClipRect(
-        child: _ScratchInputSurface(
-          ink: _ink,
-          baseWidth: _strokeWidth,
-          allowTouch: _fingerInkEnabled,
-          active: widget.active,
-          onContactChanged: _setPointerContact,
-          child: Stack(
-            fit: StackFit.passthrough,
-            children: [
-              widget.child,
-              Positioned.fill(
-                child: IgnorePointer(
-                  child: CustomPaint(
-                    key: const ValueKey('inline-ink-canvas'),
-                    painter: _ScratchPainter(ink: _ink, drawGrid: false),
-                  ),
+        child: Row(
+          children: [
+            Icon(icon, size: 16, color: accent),
+            const SizedBox(width: GaussSpacing.space4),
+            Expanded(
+              child: Text(
+                label,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  color: GaussColors.parchmentInk,
+                  fontSize: GaussTypeScale.insignia,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: .65,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
-    ],
-  );
+    );
+  }
 }
 
 class _ScratchpadSheet extends StatefulWidget {

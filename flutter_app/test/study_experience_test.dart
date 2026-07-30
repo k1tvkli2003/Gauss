@@ -110,6 +110,7 @@ void main() {
       Icons.delete_sweep_outlined,
     );
     expect(tester.widget<IconButton>(clearFinder).onPressed, isNull);
+    expect(find.text('PEN READY'), findsOneWidget);
 
     await tester.dragFrom(
       plate.topLeft + const Offset(40, 50),
@@ -127,6 +128,8 @@ void main() {
     await tester.pump();
     expect(ink.strokeCount, 1);
     expect(tester.widget<IconButton>(clearFinder).onPressed, isNotNull);
+    expect(find.text('INK ON PLATE'), findsOneWidget);
+    expect(find.text('Clear'), findsOneWidget);
 
     await tester.tap(clearFinder);
     await tester.pump();
