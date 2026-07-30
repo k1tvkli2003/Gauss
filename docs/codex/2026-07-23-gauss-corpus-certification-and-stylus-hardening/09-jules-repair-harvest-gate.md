@@ -66,3 +66,41 @@ repair-003 initial harvest                                     # rejected as exp
 This gate is intentionally narrower than certification. A passing output says
 only that the repair proposal is structurally safe to review; it never makes a
 question usable by itself.
+
+## Correction harvest: batches 003–010
+
+The schema-correction responses for all eight batches were re-extracted from
+their saved Jules activity records using
+`scripts/harvest_jules_repair_message.py`. The extractor emits exact UTF-8
+bytes and reports the hash of those persisted bytes, so a Windows newline
+conversion cannot silently break the evidence binding.
+
+All 80 rows passed the structural gate: exact ten-row batch cardinality,
+ticket order, question IDs, source hashes, allowed fields, canonical patch
+shape, review evidence fields, option range, and JSONL syntax. Their outcomes
+remain deliberately conservative:
+
+- 27 rows are source-preserving `draft` solution-addendum proposals.
+- 53 rows are `under_review` with an explicit blocker and remain quarantined.
+- One of the 27 drafts was already present in the overlay with the same source
+  hash, so it was retained rather than overwritten.
+- The other 26 drafts were appended to the derived repair overlay, bringing
+  `repair-overlays.jsonl` from 14 to 40 entries. Its post-write SHA-256 is
+  `54a81944345427141fcf13af66b0a4d9aff02795bcab9efcd85559788b8d5d14`.
+
+`node scripts/corpus_certification.mjs validate-repairs` passed with all 40
+overlays. This is **not** answer certification, source-fidelity proof, or a
+runtime promotion: draft overlays still require independent mathematical,
+render/source, and adversarial review. The 53 unresolved records were not
+discarded, altered, or made available to learners.
+
+## Verification update
+
+```text
+python -m py_compile scripts/harvest_jules_repair_message.py \
+  scripts/validate_jules_repair_harvest.py                    # passed
+repair-003 correction extraction + strict validator            # passed
+all correction batches 003–010 structural validation           # passed (80 rows)
+node scripts/corpus_certification.mjs validate-repairs          # passed (40 overlays)
+node scripts/corpus_certification.mjs summarize                 # passed
+```
