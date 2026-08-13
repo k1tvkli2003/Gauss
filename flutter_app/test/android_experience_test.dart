@@ -707,6 +707,60 @@ void main() {
   });
 
   testWidgets(
+    'phone Map keeps chapter threshold translucent and restores the lesson in the upper route field',
+    (tester) async {
+      const size = Size(390, 844);
+      if (!controller.ready) {
+        await tester.runAsync(controller.initialize);
+      }
+      await controller.selectTopic('patterns_sequences');
+      addTearDown(() => controller.selectTopic('sets'));
+      await _pumpMap(
+        tester,
+        controller: controller,
+        size: size,
+        textScale: 1,
+        reducedMotion: true,
+      );
+
+      final route = tester.getRect(
+        find.byKey(const ValueKey('map-study-path-scroll')),
+      );
+      final gate = find.byKey(const ValueKey('map-section-gate-2'));
+      final lesson = find.byKey(
+        const ValueKey('map-node-patterns_sequences:0:5'),
+      );
+      final gateInstrument = find.descendant(
+        of: gate,
+        matching: find.byKey(const ValueKey('map-section-gate-instrument')),
+      );
+      final gateContainer = tester.widget<Container>(gateInstrument);
+      final decoration = gateContainer.decoration! as BoxDecoration;
+
+      expect(decoration.borderRadius, isNull);
+      expect(decoration.boxShadow, isNull);
+      expect(decoration.border, isA<Border>());
+      expect(
+        tester.getCenter(lesson).dy,
+        lessThan(route.top + route.height * .58),
+        reason:
+            'Restoring a chapter should place its live lesson above the '
+            'dock-owned lower field, not bury it at viewport center.',
+      );
+      final gateRect = tester.getRect(gateInstrument);
+      final lessonRect = tester.getRect(lesson);
+      expect(
+        lessonRect.top - gateRect.bottom,
+        greaterThanOrEqualTo(12),
+        reason:
+            'The chapter annotation needs a readable optical gap before its '
+            'first instrument. gate=$gateRect lesson=$lessonRect',
+      );
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
     'compact Map folds Chapter 1 into Orbit and names five-question nodes by concept',
     (tester) async {
       await _pumpMap(

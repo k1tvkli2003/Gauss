@@ -409,7 +409,12 @@ class _MapHeader extends StatelessWidget {
               key: ValueKey(
                 compact ? 'map-compact-header-frame' : 'map-wide-header-frame',
               ),
-              height: compact ? 108 : 116,
+              // Keep the identity instruments in a deliberate masthead, but
+              // do not let app chrome consume the first third of the route.
+              // Compact Course copy is already encoded by the crest semantics
+              // and the live reading, so its ornamental caption can yield the
+              // vertical space to the actual learning path.
+              height: compact ? 92 : 116,
               child: Column(
                 children: [
                   SizedBox(
@@ -417,7 +422,7 @@ class _MapHeader extends StatelessWidget {
                     // 24dp slot forced an 88dp mark into a 24dp box, so its
                     // transparent top/bottom breathing room made the actual
                     // letters look absent on Android despite valid semantics.
-                    height: compact ? 27 : 36,
+                    height: compact ? 24 : 36,
                     child: Center(
                       child: GaussWordmark(
                         key: ValueKey(
@@ -425,11 +430,11 @@ class _MapHeader extends StatelessWidget {
                               ? 'map-compact-centered-wordmark'
                               : 'map-wide-centered-wordmark',
                         ),
-                        width: compact ? 78 : 104,
+                        width: compact ? 70 : 104,
                       ),
                     ),
                   ),
-                  SizedBox(height: compact ? 1 : 4),
+                  SizedBox(height: compact ? 0 : 4),
                   Expanded(
                     child: Stack(
                       alignment: Alignment.center,
@@ -458,7 +463,7 @@ class _MapHeader extends StatelessWidget {
                           key: const ValueKey('map-course-progress-crest'),
                           reflected: subjectReflected,
                           total: subjectTotal,
-                          tight: tightPhone,
+                          tight: compact || tightPhone,
                         ),
                         Align(
                           alignment: AlignmentDirectional.centerEnd,
@@ -953,22 +958,24 @@ class _MapCourseProgressCrest extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 1),
-              MediaQuery.withClampedTextScaling(
-                maxScaleFactor: 1.35,
-                child: const Text(
-                  'COURSE',
-                  maxLines: 1,
-                  softWrap: false,
-                  style: TextStyle(
-                    color: GaussColors.fog,
-                    fontSize: 7.5,
-                    height: 1,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 1,
+              if (!tight) ...[
+                const SizedBox(height: 1),
+                MediaQuery.withClampedTextScaling(
+                  maxScaleFactor: 1.35,
+                  child: const Text(
+                    'COURSE',
+                    maxLines: 1,
+                    softWrap: false,
+                    style: TextStyle(
+                      color: GaussColors.fog,
+                      fontSize: 7.5,
+                      height: 1,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1,
+                    ),
                   ),
                 ),
-              ),
+              ],
             ],
           ),
         ),
@@ -1125,68 +1132,56 @@ class _OrbitSelector extends StatelessWidget {
       key: const ValueKey('map-active-chapter-summary'),
       width: double.infinity,
       alignment: Alignment.center,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      // Course, chapter, and reading used to become two nested vertical
+      // stacks. A single adaptive constellation line keeps the same complete
+      // identity while returning the route to the first viewport. Wrap is
+      // intentional: 320dp/200% gets a calm second line, never clipped copy.
+      child: Wrap(
+        alignment: WrapAlignment.center,
+        runAlignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: 6,
+        runSpacing: 2,
         children: [
-          Wrap(
-            alignment: WrapAlignment.center,
-            runAlignment: WrapAlignment.center,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            spacing: 6,
-            children: [
-              Text(
-                'CHAPTER $chapterIndex',
-                maxLines: 1,
-                softWrap: false,
-                style: const TextStyle(
-                  color: GaussColors.brassLight,
-                  fontSize: 8.5,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: .7,
-                ),
-              ),
-              Container(
-                width: 3,
-                height: 3,
-                decoration: const BoxDecoration(
-                  color: GaussColors.brass,
-                  shape: BoxShape.circle,
-                ),
-              ),
-              Text(
-                '$chapterReflected / ${activeTopic.questionCount}',
-                maxLines: 1,
-                softWrap: false,
-                style: const TextStyle(
-                  color: GaussColors.signalBright,
-                  fontSize: 9.5,
-                  height: 1.1,
-                  fontWeight: FontWeight.w900,
-                ),
-              ),
-            ],
+          Text(
+            'CHAPTER $chapterIndex',
+            maxLines: 1,
+            softWrap: false,
+            style: const TextStyle(
+              color: GaussColors.brassLight,
+              fontSize: 8.5,
+              fontWeight: FontWeight.w900,
+              letterSpacing: .7,
+            ),
           ),
-          const SizedBox(height: 1),
-          Wrap(
-            alignment: WrapAlignment.center,
-            runAlignment: WrapAlignment.center,
-            spacing: 4,
-            runSpacing: 1,
-            children: [
-              for (final word in activeTopic.label.split(' '))
-                Text(
-                  word,
-                  maxLines: 1,
-                  softWrap: false,
-                  style: TextStyle(
-                    color: GaussColors.ivory,
-                    fontSize: compact ? 11 : 12,
-                    height: 1.18,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-            ],
+          Container(
+            width: 3,
+            height: 3,
+            decoration: const BoxDecoration(
+              color: GaussColors.brass,
+              shape: BoxShape.circle,
+            ),
+          ),
+          Text(
+            activeTopic.label,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: GaussColors.ivory,
+              fontSize: compact ? 10.5 : 12,
+              height: 1.16,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+          Text(
+            '$chapterReflected / ${activeTopic.questionCount}',
+            maxLines: 1,
+            softWrap: false,
+            style: const TextStyle(
+              color: GaussColors.signalBright,
+              fontSize: 9.5,
+              height: 1.1,
+              fontWeight: FontWeight.w900,
+            ),
           ),
         ],
       ),
@@ -1209,9 +1204,9 @@ class _OrbitSelector extends StatelessWidget {
             letterSpacing: .75,
           ),
         ),
-        const SizedBox(height: 3),
+        const SizedBox(height: 2),
         orbitTitle,
-        const SizedBox(height: 5),
+        const SizedBox(height: 3),
         centeredChapter,
       ],
     );
@@ -1233,9 +1228,9 @@ class _OrbitSelector extends StatelessWidget {
           ),
           padding: EdgeInsets.fromLTRB(
             8,
-            reflowCompact ? 6 : 8,
+            reflowCompact ? 6 : 6,
             8,
-            reflowCompact ? 6 : 8,
+            reflowCompact ? 6 : 6,
           ),
           decoration: BoxDecoration(
             color: GaussColors.deepInk.withValues(alpha: .62),
@@ -2283,7 +2278,11 @@ class _StudyPathStageState extends State<_StudyPathStage> {
       160.0,
       _scrollController.position.viewportDimension - widget.bottomObstruction,
     );
-    final target = (_nodeY[safe] - visibleHeight / 2).clamp(
+    // A restored or explicitly targeted lesson belongs in the upper reading
+    // third, not the mathematical center. This keeps its chapter threshold
+    // and the next route segment visible together while the mission dock owns
+    // the lower third of a compact Android viewport.
+    final target = (_nodeY[safe] - visibleHeight * .34).clamp(
       0.0,
       _scrollController.position.maxScrollExtent,
     );
@@ -2524,7 +2523,10 @@ class _PathGeometry {
                     // 90dp shortcut allowed the following lesson node to be
                     // laid out inside the gate on real Android.
                     ? 174.0
-                    : 98 + 20 * (scale - 1)
+                    // At normal text the live one-row annotation measures
+                    // 100dp on a 390dp phone. Geometry owns that same height
+                    // plus the node radius and a 12dp optical moat below.
+                    : 100 + 26 * (scale - 1)
               : 82 + 28 * (scale - 1);
           headers.add(
             _UnitHeaderGeometry(
@@ -2538,7 +2540,7 @@ class _PathGeometry {
               (compact
                   ? accessibilityCompact
                         ? 14
-                        : 44 - 6 * (scale - 1)
+                        : 48
                   : 52);
         }
       }
@@ -2681,35 +2683,44 @@ class _SectionGate extends StatelessWidget {
         ],
       );
 
+      final compactStage = constraints.maxWidth < 560;
       return MediaQuery.withClampedTextScaling(
         maxScaleFactor: accessibilityCompact ? 1.45 : 1.75,
         child: Center(
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 430),
+            constraints: BoxConstraints(maxWidth: compactStage ? 360 : 430),
             child: Semantics(
               container: true,
               label:
                   'Chapter $unitNumber. ${topic.label}. $reflected of ${topic.questionCount} questions charted.',
               child: Container(
-                padding: const EdgeInsetsDirectional.fromSTEB(14, 10, 14, 11),
+                key: const ValueKey('map-section-gate-instrument'),
+                padding: EdgeInsetsDirectional.fromSTEB(
+                  14,
+                  compactStage ? 8 : 10,
+                  14,
+                  compactStage ? 9 : 11,
+                ),
+                // Chapter thresholds are celestial annotations on the map,
+                // not opaque dashboard cards. The restrained edge rails keep
+                // the identity readable while leaving the astronomical route
+                // visibly continuous behind it.
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      GaussColors.deepInk.withValues(alpha: .94),
-                      GaussColors.abyss.withValues(alpha: .82),
+                      Colors.transparent,
+                      GaussColors.deepInk.withValues(
+                        alpha: compactStage ? .24 : .42,
+                      ),
+                      Colors.transparent,
                     ],
+                    stops: const [0, .5, 1],
                   ),
-                  borderRadius: BorderRadius.circular(22),
-                  border: Border.all(
-                    color: GaussColors.brass.withValues(alpha: .42),
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: GaussColors.abyss.withValues(alpha: .44),
-                      blurRadius: 18,
-                      offset: const Offset(0, 8),
+                  border: Border.symmetric(
+                    horizontal: BorderSide(
+                      color: GaussColors.brass.withValues(alpha: .32),
                     ),
-                  ],
+                  ),
                 ),
                 child: accessibilityCompact
                     ? Column(
