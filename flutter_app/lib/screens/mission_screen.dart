@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'dart:math' as math;
+import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -7,16 +9,22 @@ import 'package:go_router/go_router.dart';
 import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
+import '../domain/study_curriculum.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/content_blocks.dart';
 import '../widgets/gauss_brand.dart';
 import '../widgets/gauss_state_panel.dart';
+import '../widgets/orbital_action_control.dart';
+import '../widgets/question_progress_rail.dart';
+import '../widgets/question_manuscript.dart';
 import '../widgets/scratchpad.dart';
+import '../widgets/theorem_lens.dart';
 
 class MissionScreen extends StatefulWidget {
   const MissionScreen({
     required this.topicKey,
-    this.count = 10,
+    this.count = GaussStudyCurriculum.batchSize,
+    this.studyOffset,
     this.difficulties = const {},
     this.sourceBanks = const {},
     this.revenge = false,
@@ -27,6 +35,7 @@ class MissionScreen extends StatefulWidget {
   });
   final String topicKey;
   final int count;
+  final int? studyOffset;
   final Set<Difficulty> difficulties;
   final Set<String> sourceBanks;
   final bool revenge;
@@ -59,6 +68,8 @@ class _MissionScreenState extends State<MissionScreen> {
   late String _sourceTopicKey;
   late bool _choicesRevealed;
   String? _errorTag;
+  final Map<String, ScratchInkController> _inkControllers = {};
+  final Map<String, Timer> _inkClearTimers = {};
 
   String get _modeKey =>
       widget.revenge ? 'revenge' : (widget.review ? 'review' : 'mission');
@@ -78,6 +89,46 @@ class _MissionScreenState extends State<MissionScreen> {
     _sessionId = '${_modeKey}_${now.microsecondsSinceEpoch}_${widget.topicKey}';
     _missionStartedAt = now;
     _questionStartedAt = now;
+  }
+
+  ScratchInkController _inkFor(String slotKey) =>
+      _inkControllers.putIfAbsent(slotKey, ScratchInkController.new);
+
+  bool get _hasQuestionInk => _inkControllers.values.any(
+    (ink) => !ink.isEmpty || ink.canRestoreClearedInk,
+  );
+
+  void _disposeInkControllers() {
+    for (final timer in _inkClearTimers.values) {
+      timer.cancel();
+    }
+    _inkClearTimers.clear();
+    for (final controller in _inkControllers.values) {
+      controller.dispose();
+    }
+    _inkControllers.clear();
+  }
+
+  void _clearQuestionInk(String slotKey) {
+    final ink = _inkFor(slotKey);
+    if (ink.isEmpty) return;
+    ink.clear();
+    _inkClearTimers.remove(slotKey)?.cancel();
+    _inkClearTimers[slotKey] = Timer(const Duration(seconds: 4), () {
+      _inkClearTimers.remove(slotKey);
+      ink.discardLastClear();
+    });
+  }
+
+  void _restoreQuestionInk(String slotKey) {
+    _inkClearTimers.remove(slotKey)?.cancel();
+    _inkFor(slotKey).restoreLastClear();
+  }
+
+  @override
+  void dispose() {
+    _disposeInkControllers();
+    super.dispose();
   }
 
   @override
@@ -113,15 +164,29 @@ class _MissionScreenState extends State<MissionScreen> {
           ? await controller.createRevengeMission(count: widget.count)
           : widget.review
           ? await controller.createReviewMission(count: widget.count)
+          : widget.studyOffset != null
+          ? await controller.createStudySessionMission(
+              widget.topicKey,
+              offset: widget.studyOffset!,
+            )
           : await controller.createMission(
               widget.topicKey,
               count: widget.count,
               difficulties: widget.difficulties,
               sourceBanks: widget.sourceBanks,
             );
-      if (questions.any((question) => !question.missionReady)) {
+      if (!widget.revenge &&
+          !widget.review &&
+          widget.studyOffset != null &&
+          questions.isNotEmpty &&
+          questions.length != GaussStudyCurriculum.batchSize) {
         throw StateError(
-          'Preserved source items cannot enter a scored mission.',
+          'A planned scored mission must contain exactly five questions.',
+        );
+      }
+      if (questions.any((question) => !question.runtimeUsable)) {
+        throw StateError(
+          'A structurally incomplete source item cannot enter a mission.',
         );
       }
       if (questions.isNotEmpty) {
@@ -280,6 +345,52 @@ class _MissionScreenState extends State<MissionScreen> {
     }
   }
 
+  Future<void> _reportCurrentQuestionIssue() async {
+    if (_questions.isEmpty || _saving) return;
+    final question = _questions[_index];
+    final draft = await showModalBottomSheet<_QuestionIssueDraft>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      backgroundColor: Colors.transparent,
+      builder: (sheetContext) => _QuestionIssueSheet(questionId: question.id),
+    );
+    if (draft == null || !mounted) return;
+
+    try {
+      await GaussScope.of(context).reportQuestionIssue(
+        QuestionIssueReport(
+          questionId: question.id,
+          topicKey: question.topicKey,
+          kind: draft.kind,
+          note: draft.note,
+          sessionId: _sessionId,
+          missionIndex: _index,
+          selectedChoiceIndex: _selectedChoice,
+          reportedAt: DateTime.now(),
+        ),
+      );
+      if (!mounted) return;
+      unawaited(HapticFeedback.mediumImpact());
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          const SnackBar(
+            content: Text('Issue saved on this device for repair.'),
+          ),
+        );
+    } catch (_) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          const SnackBar(
+            content: Text('Could not save the report. Please try again.'),
+          ),
+        );
+    }
+  }
+
   void _retryMission() {
     if (widget.resume) {
       if (!_finished) {
@@ -292,11 +403,17 @@ class _MissionScreenState extends State<MissionScreen> {
       } else if (_sourceTopicKey == 'review') {
         context.replace('/review?count=${_questions.length}');
       } else {
-        context.replace('/mission/$_sourceTopicKey?count=${_questions.length}');
+        final offsetQuery = widget.studyOffset == null
+            ? ''
+            : '&offset=${widget.studyOffset}';
+        context.replace(
+          '/mission/$_sourceTopicKey?count=${_questions.length}$offsetQuery',
+        );
       }
       return;
     }
     final controller = GaussScope.of(context);
+    _disposeInkControllers();
     setState(() {
       _resetSessionIdentity();
       _questions = const [];
@@ -317,21 +434,33 @@ class _MissionScreenState extends State<MissionScreen> {
 
   Future<bool> _confirmExit() async {
     if (_saving) return false;
-    if (_index == 0 && _selectedChoice == null && !_checked) return true;
+    final hasInk = _hasQuestionInk;
+    final hasUnsubmittedChoice = !_checked && _selectedChoice != null;
+    if (_index == 0 && !hasUnsubmittedChoice && !_checked && !hasInk) {
+      return true;
+    }
+    final detail = <String>[
+      'Recorded answers and the remaining queue are saved on this device.',
+      if (hasUnsubmittedChoice)
+        'Your selected but unchecked answer has not been recorded.',
+      if (hasInk)
+        'Question ink is temporary and will be cleared when you leave.',
+      'Resume whenever you return.',
+    ].join(' ');
     return await showDialog<bool>(
           context: context,
-          builder: (context) => AlertDialog(
-            title: const Text('Leave this mission?'),
-            content: const Text(
-              'Recorded answers and the remaining queue are saved on this device. Resume whenever you return.',
+          builder: (dialogContext) => AlertDialog(
+            title: Text(
+              hasInk ? 'Leave and clear question ink?' : 'Leave this mission?',
             ),
+            content: Text(detail),
             actions: [
               TextButton(
-                onPressed: () => Navigator.pop(context, false),
-                child: const Text('Stay'),
+                onPressed: () => Navigator.pop(dialogContext, false),
+                child: Text(hasInk ? 'Keep writing' : 'Stay'),
               ),
               FilledButton(
-                onPressed: () => Navigator.pop(context, true),
+                onPressed: () => Navigator.pop(dialogContext, true),
                 child: const Text('Leave'),
               ),
             ],
@@ -345,6 +474,29 @@ class _MissionScreenState extends State<MissionScreen> {
       context.pop();
     } else {
       context.go('/map');
+    }
+  }
+
+  String _missionChapterLabel(Question question) {
+    if (widget.revenge) return 'Revisit Orbit';
+    if (widget.review) return 'Review Orbit';
+    if (widget.resume) return 'Saved Mission';
+    try {
+      final controller = GaussScope.of(context);
+      if (controller.selectedTopic.key == question.topicKey) {
+        return controller.selectedTopic.label;
+      }
+      return question.topicKey
+          .split('_')
+          .where((part) => part.isNotEmpty)
+          .map((part) => '${part[0].toUpperCase()}${part.substring(1)}')
+          .join(' ');
+    } catch (_) {
+      return widget.topicKey
+          .split('_')
+          .where((part) => part.isNotEmpty)
+          .map((part) => '${part[0].toUpperCase()}${part.substring(1)}')
+          .join(' ');
     }
   }
 
@@ -374,7 +526,9 @@ class _MissionScreenState extends State<MissionScreen> {
                   ? 'There is no saved mission to resume.'
                   : widget.review
                   ? 'Nothing is due for review right now. Your recorded proofs are still holding.'
-                  : 'No mission-ready questions are available for this topic.',
+                  : widget.studyOffset != null
+                  ? 'This five-question lesson could not be loaded. Your source data is unchanged.'
+                  : 'No usable questions are available for this topic.',
             );
           }
           if (_finished) {
@@ -386,8 +540,12 @@ class _MissionScreenState extends State<MissionScreen> {
               onRetry: _retryMission,
             );
           }
+          final question = _questions[_index];
+          final inkSlotKey = '$_index:${question.id}';
+          final ink = _inkFor(inkSlotKey);
           return _QuestionStage(
-            question: _questions[_index],
+            question: question,
+            chapterLabel: _missionChapterLabel(question),
             index: _index,
             total: _questions.length,
             selectedChoice: _selectedChoice,
@@ -396,13 +554,17 @@ class _MissionScreenState extends State<MissionScreen> {
             covered: !_choicesRevealed,
             errorTag: _errorTag,
             operationError: _operationError,
+            ink: ink,
             onSelect: (choice) => setState(() => _selectedChoice = choice),
             onCheck: _checkAnswer,
             onSkip: _skipAnswer,
             onNext: _next,
             onRevealChoices: () => setState(() => _choicesRevealed = true),
             onTagError: _tagError,
-            onScratchpad: () => showScratchpad(context),
+            onReportIssue: _reportCurrentQuestionIssue,
+            onScratchpad: () => showScratchpad(context, controller: ink),
+            onClearInk: () => _clearQuestionInk(inkSlotKey),
+            onRestoreInk: () => _restoreQuestionInk(inkSlotKey),
             onClose: () async {
               if (await _confirmExit() && context.mounted) {
                 _leaveMission();
@@ -418,6 +580,7 @@ class _MissionScreenState extends State<MissionScreen> {
 class _QuestionStage extends StatelessWidget {
   const _QuestionStage({
     required this.question,
+    required this.chapterLabel,
     required this.index,
     required this.total,
     required this.selectedChoice,
@@ -426,16 +589,21 @@ class _QuestionStage extends StatelessWidget {
     required this.covered,
     required this.errorTag,
     required this.operationError,
+    required this.ink,
     required this.onSelect,
     required this.onCheck,
     required this.onSkip,
     required this.onNext,
     required this.onRevealChoices,
     required this.onTagError,
+    required this.onReportIssue,
     required this.onScratchpad,
+    required this.onClearInk,
+    required this.onRestoreInk,
     required this.onClose,
   });
   final Question question;
+  final String chapterLabel;
   final int index;
   final int total;
   final int? selectedChoice;
@@ -444,13 +612,17 @@ class _QuestionStage extends StatelessWidget {
   final bool covered;
   final String? errorTag;
   final Object? operationError;
+  final ScratchInkController ink;
   final ValueChanged<int> onSelect;
   final VoidCallback onCheck;
   final VoidCallback onSkip;
   final VoidCallback onNext;
   final VoidCallback onRevealChoices;
   final ValueChanged<MissReason> onTagError;
+  final VoidCallback onReportIssue;
   final VoidCallback onScratchpad;
+  final VoidCallback onClearInk;
+  final VoidCallback onRestoreInk;
   final VoidCallback onClose;
 
   @override
@@ -467,6 +639,7 @@ class _QuestionStage extends StatelessWidget {
               _MissionTopBar(
                 index: index,
                 total: total,
+                chapterLabel: chapterLabel,
                 busy: busy,
                 onClose: onClose,
                 onScratchpad: onScratchpad,
@@ -478,6 +651,7 @@ class _QuestionStage extends StatelessWidget {
                     if (!wide) {
                       return _QuestionScroll(
                         question: question,
+                        ink: ink,
                         index: index,
                         selectedChoice: selectedChoice,
                         checked: checked,
@@ -488,6 +662,7 @@ class _QuestionStage extends StatelessWidget {
                         onSelect: onSelect,
                         onRevealChoices: onRevealChoices,
                         onTagError: onTagError,
+                        onReportIssue: onReportIssue,
                       );
                     }
                     return Padding(
@@ -508,6 +683,7 @@ class _QuestionStage extends StatelessWidget {
                           Expanded(
                             child: _QuestionScroll(
                               question: question,
+                              ink: ink,
                               index: index,
                               selectedChoice: selectedChoice,
                               checked: checked,
@@ -518,6 +694,7 @@ class _QuestionStage extends StatelessWidget {
                               onSelect: onSelect,
                               onRevealChoices: onRevealChoices,
                               onTagError: onTagError,
+                              onReportIssue: onReportIssue,
                               inset: EdgeInsets.zero,
                             ),
                           ),
@@ -552,6 +729,7 @@ class _QuestionStage extends StatelessWidget {
               ),
               _MissionActionBar(
                 question: question,
+                ink: ink,
                 index: index,
                 total: total,
                 selectedChoice: selectedChoice,
@@ -561,6 +739,9 @@ class _QuestionStage extends StatelessWidget {
                 onCheck: onCheck,
                 onSkip: onSkip,
                 onNext: onNext,
+                onOpenInkWorkspace: onScratchpad,
+                onClearInk: onClearInk,
+                onRestoreInk: onRestoreInk,
               ),
             ],
           ),
@@ -600,6 +781,7 @@ class _MissionTopBar extends StatelessWidget {
   const _MissionTopBar({
     required this.index,
     required this.total,
+    required this.chapterLabel,
     required this.busy,
     required this.onClose,
     required this.onScratchpad,
@@ -607,53 +789,62 @@ class _MissionTopBar extends StatelessWidget {
 
   final int index;
   final int total;
+  final String chapterLabel;
   final bool busy;
   final VoidCallback onClose;
   final VoidCallback onScratchpad;
 
   @override
   Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.fromLTRB(10, 8, 10, 5),
-    child: Row(
+    padding: const EdgeInsets.fromLTRB(14, 7, 14, 8),
+    child: Column(
+      key: const ValueKey('mission-question-header'),
+      mainAxisSize: MainAxisSize.min,
       children: [
-        IconButton(
-          onPressed: busy ? null : onClose,
-          tooltip: 'Leave mission',
-          icon: const Icon(Icons.close_rounded),
-        ),
-        const GaussWordmark(width: 92),
-        const SizedBox(width: 12),
-        Expanded(
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(GaussRadii.pill),
-            child: LinearProgressIndicator(
-              value: (index + 1) / total,
-              minHeight: 7,
-              backgroundColor: GaussColors.hairline,
-            ),
+        SizedBox(
+          height: GaussMetrics.minTouchTarget,
+          child: Stack(
+            key: const ValueKey('mission-question-header-axis'),
+            fit: StackFit.expand,
+            children: [
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: IconButton(
+                  key: const ValueKey('mission-close-action'),
+                  onPressed: busy ? null : onClose,
+                  tooltip: 'Leave mission',
+                  icon: const Icon(Icons.close_rounded),
+                ),
+              ),
+              const Align(
+                alignment: Alignment.center,
+                child: GaussWordmark(
+                  key: ValueKey('mission-centered-wordmark'),
+                  width: 82,
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional.centerEnd,
+                child: IconButton(
+                  key: const ValueKey('mission-scratchpad-action'),
+                  onPressed: busy ? null : onScratchpad,
+                  tooltip: 'Open full scratchpad',
+                  icon: const GaussScratchGlyph(color: GaussColors.brassLight),
+                ),
+              ),
+            ],
           ),
         ),
-        const SizedBox(width: 11),
-        Semantics(
-          label: 'Question ${index + 1} of $total',
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-            decoration: BoxDecoration(
-              color: GaussColors.deepInk.withValues(alpha: .9),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: GaussColors.hairline),
-            ),
-            child: Text(
-              '${index + 1} / $total',
-              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12),
-            ),
+        const SizedBox(height: GaussSpacing.space8),
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 560),
+          child: QuestionProgressRail(
+            key: const ValueKey('mission-question-progress'),
+            index: index,
+            total: total,
+            label: chapterLabel,
+            valueKey: const ValueKey('mission-question-position'),
           ),
-        ),
-        const SizedBox(width: 3),
-        IconButton(
-          onPressed: busy ? null : onScratchpad,
-          tooltip: 'Open scratchpad',
-          icon: const GaussScratchGlyph(color: GaussColors.brassLight),
         ),
       ],
     ),
@@ -663,6 +854,7 @@ class _MissionTopBar extends StatelessWidget {
 class _QuestionScroll extends StatelessWidget {
   const _QuestionScroll({
     required this.question,
+    required this.ink,
     required this.index,
     required this.selectedChoice,
     required this.checked,
@@ -673,10 +865,12 @@ class _QuestionScroll extends StatelessWidget {
     required this.onSelect,
     required this.onRevealChoices,
     required this.onTagError,
+    required this.onReportIssue,
     this.inset = const EdgeInsets.fromLTRB(16, 8, 16, 18),
   });
 
   final Question question;
+  final ScratchInkController ink;
   final int index;
   final int? selectedChoice;
   final bool checked;
@@ -687,115 +881,139 @@ class _QuestionScroll extends StatelessWidget {
   final ValueChanged<int> onSelect;
   final VoidCallback onRevealChoices;
   final ValueChanged<MissReason> onTagError;
+  final VoidCallback onReportIssue;
   final EdgeInsets inset;
 
   @override
-  Widget build(BuildContext context) => SingleChildScrollView(
-    padding: inset,
-    child: Center(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 780),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Row(
-              children: [
-                Text(
-                  'QUESTION ${index + 1}',
-                  style: const TextStyle(
-                    color: GaussColors.brassLight,
-                    fontSize: 10,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 1.25,
-                  ),
-                ),
-                const Spacer(),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 9,
-                    vertical: 5,
-                  ),
-                  decoration: BoxDecoration(
-                    color: GaussColors.brass.withValues(alpha: .09),
-                    borderRadius: BorderRadius.circular(GaussRadii.pill),
-                    border: Border.all(
-                      color: GaussColors.brass.withValues(alpha: .3),
-                    ),
-                  ),
-                  child: Directionality(
+  Widget build(BuildContext context) {
+    final textScale = MediaQuery.textScalerOf(context).scale(12);
+    final compact = MediaQuery.sizeOf(context).width < 600;
+    final manuscriptInset = compact
+        ? (textScale >= 18
+              ? const EdgeInsets.fromLTRB(8, 6, 8, 22)
+              : const EdgeInsets.fromLTRB(12, 6, 12, 22))
+        : inset;
+    return SingleChildScrollView(
+      key: const ValueKey('mission-question-scroll'),
+      padding: manuscriptInset,
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 820),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Semantics(
+                container: true,
+                explicitChildNodes: true,
+                label:
+                    'Question ${index + 1}. '
+                    '${_blocksSemanticLabel(question.stem)}',
+                child: QuestionManuscript(
+                  key: const ValueKey('mission-question-paper'),
+                  ink: ink,
+                  questionNumber: index + 1,
+                  difficulty: question.difficulty.label,
+                  onExpandInk: () => showScratchpad(context, controller: ink),
+                  onClearInk: ink.clear,
+                  onRestoreInk: ink.restoreLastClear,
+                  prompt: Directionality(
                     textDirection: TextDirection.rtl,
-                    child: Text(
-                      question.difficulty.label,
-                      style: const TextStyle(
-                        color: GaussColors.brassLight,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w700,
-                      ),
+                    child: ContentBlocksView(
+                      blocks: question.stem,
+                      textColor: GaussColors.parchmentInk,
+                      textStyle: Theme.of(context).textTheme.titleMedium
+                          ?.copyWith(
+                            color: GaussColors.parchmentInk,
+                            fontFamily: 'Vazirmatn',
+                            fontSize: 18,
+                            height: 1.65,
+                          ),
                     ),
                   ),
+                  answers: covered && !checked
+                      ? _CoveredChoicesPanel(
+                          onReveal: busy ? null : onRevealChoices,
+                          manuscript: true,
+                        )
+                      : Column(
+                          key: const ValueKey('mission-answer-manuscript'),
+                          children: [
+                            for (
+                              var choice = 0;
+                              choice < question.options.length;
+                              choice++
+                            )
+                              _AnswerChoice(
+                                blocks: question.options[choice],
+                                choice: choice,
+                                selected: selectedChoice == choice,
+                                checked: checked,
+                                correctChoice: question.correctChoiceIndex,
+                                onTap: checked || busy
+                                    ? null
+                                    : () => onSelect(choice),
+                                manuscript: true,
+                              ),
+                          ],
+                        ),
                 ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Semantics(
-              container: true,
-              excludeSemantics: true,
-              label: _blocksSemanticLabel(question.stem),
-              child: _QuestionPaper(question: question),
-            ),
-            const SizedBox(height: 15),
-            if (covered && !checked)
-              _CoveredChoicesPanel(onReveal: busy ? null : onRevealChoices)
-            else
-              for (var choice = 0; choice < question.options.length; choice++)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: _AnswerChoice(
-                    blocks: question.options[choice],
-                    choice: choice,
-                    selected: selectedChoice == choice,
-                    checked: checked,
-                    correctChoice: question.correctChoiceIndex,
-                    onTap: checked || busy ? null : () => onSelect(choice),
-                  ),
+              ),
+              const SizedBox(height: GaussSpacing.space8),
+              Align(
+                alignment: AlignmentDirectional.centerEnd,
+                child: OrbitalActionControl(
+                  key: const ValueKey('mission-report-question-action'),
+                  semanticLabel: 'Report a problem with this question',
+                  onPressed: busy ? null : onReportIssue,
+                  icon: Icons.flag_outlined,
+                  dimension: 48,
+                  accent: GaussColors.fog,
                 ),
-            if (showSolution && checked) ...[
-              if (selectedChoice != null &&
-                  selectedChoice != question.correctChoiceIndex) ...[
-                const SizedBox(height: 6),
-                _MissTagBar(selected: errorTag, onSelect: onTagError),
+              ),
+              if (showSolution && checked) ...[
+                if (selectedChoice != null &&
+                    selectedChoice != question.correctChoiceIndex) ...[
+                  const SizedBox(height: 6),
+                  _MissTagBar(selected: errorTag, onSelect: onTagError),
+                ],
+                const SizedBox(height: 12),
+                _SolutionPanel(question: question),
               ],
-              const SizedBox(height: 12),
-              _SolutionPanel(question: question),
             ],
-          ],
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class _CoveredChoicesPanel extends StatelessWidget {
-  const _CoveredChoicesPanel({required this.onReveal});
+  const _CoveredChoicesPanel({required this.onReveal, this.manuscript = false});
 
   final VoidCallback? onReveal;
+  final bool manuscript;
 
   @override
   Widget build(BuildContext context) => Semantics(
     container: true,
+    explicitChildNodes: true,
     label:
         'Answer-first mode. The four choices are covered. Derive your answer, then uncover them to commit.',
     child: Container(
+      key: const ValueKey('mission-covered-choices'),
       padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            GaussColors.panelHigh.withValues(alpha: .94),
-            GaussColors.ink.withValues(alpha: .96),
-          ],
-        ),
+        gradient: manuscript
+            ? null
+            : LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  GaussColors.panelHigh.withValues(alpha: .94),
+                  GaussColors.ink.withValues(alpha: .96),
+                ],
+              ),
+        color: manuscript ? const Color(0x12FFFFFF) : null,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: GaussColors.brass.withValues(alpha: .4)),
       ),
@@ -818,10 +1036,14 @@ class _CoveredChoicesPanel extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          FilledButton.icon(
+          OrbitalActionControl(
+            key: const ValueKey('mission-reveal-choices-action'),
+            semanticLabel: 'Uncover answer choices',
+            caption: 'Uncover choices',
             onPressed: onReveal,
-            icon: const Icon(Icons.visibility_outlined, size: 19),
-            label: const Text('Uncover the choices'),
+            icon: Icons.visibility_outlined,
+            dimension: 56,
+            accent: GaussColors.brassLight,
           ),
         ],
       ),
@@ -932,61 +1154,6 @@ class _MissTagChip extends StatelessWidget {
   );
 }
 
-class _QuestionPaper extends StatelessWidget {
-  const _QuestionPaper({required this.question});
-
-  final Question question;
-
-  @override
-  Widget build(BuildContext context) => Container(
-    constraints: const BoxConstraints(minHeight: 142),
-    padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
-    decoration: BoxDecoration(
-      gradient: const LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: [Color(0xFFF7EED9), GaussColors.parchment],
-      ),
-      borderRadius: BorderRadius.circular(20),
-      border: Border.all(color: GaussColors.brass.withValues(alpha: .65)),
-      boxShadow: const [
-        BoxShadow(
-          color: Color(0x66000000),
-          blurRadius: 24,
-          offset: Offset(0, 12),
-        ),
-      ],
-    ),
-    child: Stack(
-      children: [
-        Positioned(
-          top: -12,
-          right: -9,
-          child: Opacity(
-            opacity: .08,
-            child: TheoremStarMark(size: 82, darkInk: true),
-          ),
-        ),
-        InlineQuestionScratch(
-          key: ValueKey('mission-ink-${question.id}'),
-          child: Directionality(
-            textDirection: TextDirection.rtl,
-            child: ContentBlocksView(
-              blocks: question.stem,
-              textColor: GaussColors.parchmentInk,
-              textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: GaussColors.parchmentInk,
-                fontFamily: 'Vazirmatn',
-                height: 1.7,
-              ),
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
 class _CompanionDeck extends StatelessWidget {
   const _CompanionDeck({
     required this.checked,
@@ -1076,6 +1243,7 @@ class _CompanionDeck extends StatelessWidget {
 class _MissionActionBar extends StatelessWidget {
   const _MissionActionBar({
     required this.question,
+    required this.ink,
     required this.index,
     required this.total,
     required this.selectedChoice,
@@ -1085,9 +1253,13 @@ class _MissionActionBar extends StatelessWidget {
     required this.onCheck,
     required this.onSkip,
     required this.onNext,
+    required this.onOpenInkWorkspace,
+    required this.onClearInk,
+    required this.onRestoreInk,
   });
 
   final Question question;
+  final ScratchInkController ink;
   final int index;
   final int total;
   final int? selectedChoice;
@@ -1097,6 +1269,9 @@ class _MissionActionBar extends StatelessWidget {
   final VoidCallback onCheck;
   final VoidCallback onSkip;
   final VoidCallback onNext;
+  final VoidCallback onOpenInkWorkspace;
+  final VoidCallback onClearInk;
+  final VoidCallback onRestoreInk;
 
   VoidCallback? get primaryAction {
     if (busy) return null;
@@ -1117,107 +1292,148 @@ class _MissionActionBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final accessibleActionHeight =
+        MediaQuery.textScalerOf(context).scale(14) >= 20;
     final isCorrect = selectedChoice == question.correctChoiceIndex;
     final feedback = operationError != null
-        ? 'This step is still on screen. Try saving it again.'
+        ? 'Save interrupted. Retry.'
         : checked
         ? isCorrect
-              ? 'Correct. The proof holds.'
+              ? 'Correct. Proof holds.'
               : question.solutionVerified
-              ? 'Review the reasoning, then continue.'
-              : 'The verified answer is highlighted; the conflicting note stays hidden.'
+              ? 'Review the proof, then continue.'
+              : 'Source answer shown. Report anything that looks off.'
         : null;
     final feedbackColor = operationError != null
         ? GaussColors.error
         : isCorrect
         ? GaussColors.signalBright
         : GaussColors.brassLight;
-    return DecoratedBox(
-      decoration: const BoxDecoration(
-        color: Color(0xFA0B1417),
-        border: Border(top: BorderSide(color: GaussColors.line)),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0x66000000),
-            blurRadius: 20,
-            offset: Offset(0, -8),
-          ),
-        ],
-      ),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(14, 11, 14, 12),
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 980),
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                final compact = constraints.maxWidth < 560;
-                final controls = Row(
-                  mainAxisSize: compact ? MainAxisSize.max : MainAxisSize.min,
-                  children: [
-                    if (!checked && !busy && operationError == null) ...[
-                      TextButton(onPressed: onSkip, child: const Text('Skip')),
-                      const SizedBox(width: 7),
-                    ],
-                    if (compact)
-                      Expanded(
-                        child: FilledButton.icon(
-                          onPressed: primaryAction,
-                          icon: _PrimaryActionIcon(
-                            busy: busy,
-                            checked: checked,
-                          ),
-                          label: Text(primaryLabel),
-                        ),
-                      )
-                    else
-                      FilledButton.icon(
-                        onPressed: primaryAction,
-                        icon: _PrimaryActionIcon(busy: busy, checked: checked),
-                        label: Text(primaryLabel),
-                      ),
+    final reading =
+        feedback ??
+        (selectedChoice == null ? 'Select an answer' : 'Ready to check');
+    final compactReading = operationError != null
+        ? 'RETRY'
+        : checked
+        ? isCorrect
+              ? 'PROOF HOLDS'
+              : 'REVIEW'
+        : selectedChoice == null
+        ? 'SELECT'
+        : 'READY';
+    final readingIcon = operationError != null
+        ? Icons.refresh_rounded
+        : checked
+        ? isCorrect
+              ? Icons.verified_rounded
+              : Icons.lightbulb_outline_rounded
+        : selectedChoice == null
+        ? Icons.touch_app_outlined
+        : Icons.adjust_rounded;
+    final safeBottom = math.max(
+      MediaQuery.paddingOf(context).bottom,
+      MediaQuery.viewPaddingOf(context).bottom,
+    );
+    // The stage-level SafeArea normally consumes Android's navigation inset.
+    // Only own a bottom inset here when this dock is embedded without that
+    // ancestor (for example in a focused widget harness). This prevents the
+    // navigation clearance from being counted twice on real devices.
+    final stageAlreadyInset = MediaQuery.paddingOf(context).bottom == 0;
+    final dockBottom = stageAlreadyInset
+        ? 6.0
+        : math.max(10.0, safeBottom + 6.0);
+    return Padding(
+      padding: EdgeInsets.fromLTRB(12, 4, 12, dockBottom),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 460),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(31),
+            child: BackdropFilter(
+              filter: ui.ImageFilter.blur(sigmaX: 16, sigmaY: 16),
+              child: Container(
+                key: const ValueKey('mission-question-action-dock'),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                decoration: BoxDecoration(
+                  color: GaussColors.deepInk.withValues(alpha: .92),
+                  borderRadius: BorderRadius.circular(31),
+                  border: Border.all(
+                    color: GaussColors.brass.withValues(alpha: .26),
+                  ),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color(0x52000000),
+                      blurRadius: 20,
+                      offset: Offset(0, -6),
+                    ),
                   ],
-                );
-                if (!compact) {
-                  return Row(
+                ),
+                child: AnimatedBuilder(
+                  animation: ink,
+                  builder: (context, _) => Row(
                     children: [
-                      if (feedback != null)
-                        Expanded(
-                          child: Text(
-                            feedback,
-                            style: TextStyle(
-                              color: feedbackColor,
-                              fontWeight: FontWeight.w700,
-                            ),
+                      SizedBox.square(
+                        dimension: 52,
+                        child: !checked && !busy && operationError == null
+                            ? IconButton.outlined(
+                                key: const ValueKey('mission-skip-action'),
+                                onPressed: onSkip,
+                                tooltip: 'Skip this question',
+                                icon: const Icon(
+                                  Icons.fast_forward_rounded,
+                                  size: 20,
+                                ),
+                              )
+                            : const SizedBox.shrink(),
+                      ),
+                      const SizedBox(width: GaussSpacing.space8),
+                      Expanded(
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(
+                            minHeight: accessibleActionHeight ? 70 : 52,
                           ),
-                        )
-                      else
-                        const Spacer(),
-                      controls,
-                    ],
-                  );
-                }
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    if (feedback != null) ...[
-                      Text(
-                        feedback,
-                        textAlign: TextAlign.center,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: feedbackColor,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700,
+                          child: AnimatedSwitcher(
+                            duration: GaussMotion.resolve(
+                              context,
+                              GaussMotion.standard,
+                            ),
+                            switchInCurve: Curves.easeOutCubic,
+                            switchOutCurve: Curves.easeInCubic,
+                            child: ink.isEmpty || ink.canRestoreClearedInk
+                                ? ink.canRestoreClearedInk
+                                      ? _MissionInkRestore(
+                                          onRestore: onRestoreInk,
+                                        )
+                                      : _MissionReadinessSignal(
+                                          semanticLabel: reading,
+                                          label: compactReading,
+                                          icon: readingIcon,
+                                          color: feedback == null
+                                              ? GaussColors.fog
+                                              : feedbackColor,
+                                          live: feedback != null,
+                                        )
+                                : _MissionInkControls(
+                                    ink: ink,
+                                    onExpand: onOpenInkWorkspace,
+                                    onClear: onClearInk,
+                                  ),
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 8),
+                      const SizedBox(width: GaussSpacing.space8),
+                      _MissionPrimaryOrbit(
+                        busy: busy,
+                        checked: checked,
+                        finalQuestion: index == total - 1,
+                        operationError: operationError != null,
+                        semanticLabel: primaryLabel,
+                        onPressed: primaryAction,
+                      ),
                     ],
-                    controls,
-                  ],
-                );
-              },
+                  ),
+                ),
+              ),
             ),
           ),
         ),
@@ -1226,26 +1442,168 @@ class _MissionActionBar extends StatelessWidget {
   }
 }
 
-class _PrimaryActionIcon extends StatelessWidget {
-  const _PrimaryActionIcon({required this.busy, required this.checked});
+class _MissionReadinessSignal extends StatelessWidget {
+  const _MissionReadinessSignal({
+    required this.semanticLabel,
+    required this.label,
+    required this.icon,
+    required this.color,
+    required this.live,
+  });
+
+  final String semanticLabel;
+  final String label;
+  final IconData icon;
+  final Color color;
+  final bool live;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    key: const ValueKey('mission-readiness-signal'),
+    liveRegion: live,
+    label: semanticLabel,
+    excludeSemantics: true,
+    child: Center(
+      child: Wrap(
+        alignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: GaussSpacing.space8,
+        runSpacing: GaussSpacing.space4,
+        children: [
+          Icon(icon, size: 16, color: color),
+          Text(
+            label,
+            key: ValueKey('mission-action-reading-$semanticLabel'),
+            textAlign: TextAlign.center,
+            softWrap: true,
+            style: TextStyle(
+              color: color,
+              fontSize: GaussTypeScale.insignia,
+              fontWeight: FontWeight.w900,
+              letterSpacing: .9,
+              height: 1.15,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+class _MissionPrimaryOrbit extends StatelessWidget {
+  const _MissionPrimaryOrbit({
+    required this.busy,
+    required this.checked,
+    required this.finalQuestion,
+    required this.operationError,
+    required this.semanticLabel,
+    required this.onPressed,
+  });
 
   final bool busy;
   final bool checked;
+  final bool finalQuestion;
+  final bool operationError;
+  final String semanticLabel;
+  final VoidCallback? onPressed;
 
   @override
-  Widget build(BuildContext context) => busy
-      ? const SizedBox.square(
-          dimension: 17,
+  Widget build(BuildContext context) {
+    if (busy) {
+      return const SizedBox.square(
+        dimension: 52,
+        child: Padding(
+          padding: EdgeInsets.all(15),
           child: CircularProgressIndicator(strokeWidth: 2),
-        )
-      : Icon(checked ? Icons.arrow_forward_rounded : Icons.check_rounded);
+        ),
+      );
+    }
+    return OrbitalActionControl(
+      key: const ValueKey('mission-primary-action'),
+      semanticLabel: semanticLabel,
+      onPressed: onPressed,
+      icon: operationError
+          ? Icons.refresh_rounded
+          : checked
+          ? finalQuestion
+                ? Icons.flag_rounded
+                : Icons.arrow_forward_rounded
+          : Icons.check_rounded,
+      accent: operationError
+          ? GaussColors.error
+          : checked
+          ? GaussColors.signalBright
+          : GaussColors.brassLight,
+      dimension: 52,
+    );
+  }
+}
+
+class _MissionInkControls extends StatelessWidget {
+  const _MissionInkControls({
+    required this.ink,
+    required this.onExpand,
+    required this.onClear,
+  });
+
+  final ScratchInkController ink;
+  final VoidCallback onExpand;
+  final VoidCallback onClear;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    key: const ValueKey('mission-ink-controls'),
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      IconButton(
+        key: const ValueKey('mission-ink-undo'),
+        onPressed: ink.canUndo ? ink.undo : null,
+        tooltip: 'Undo last ink stroke',
+        icon: const Icon(Icons.undo_rounded),
+      ),
+      IconButton(
+        key: const ValueKey('mission-ink-expand'),
+        onPressed: onExpand,
+        tooltip: 'Open full scratchpad',
+        icon: const Icon(Icons.open_in_full_rounded),
+      ),
+      IconButton(
+        key: const ValueKey('mission-ink-clear'),
+        onPressed: onClear,
+        tooltip: 'Clear question ink',
+        color: GaussColors.error,
+        icon: const Icon(Icons.delete_sweep_outlined),
+      ),
+    ],
+  );
+}
+
+class _MissionInkRestore extends StatelessWidget {
+  const _MissionInkRestore({required this.onRestore});
+
+  final VoidCallback onRestore;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    liveRegion: true,
+    label: 'Question ink cleared. Restore is available for four seconds.',
+    child: Center(
+      child: TextButton.icon(
+        key: const ValueKey('mission-ink-restore'),
+        onPressed: onRestore,
+        icon: const Icon(Icons.undo_rounded, color: GaussColors.brassLight),
+        label: const Text('Restore ink'),
+      ),
+    ),
+  );
 }
 
 String _blocksSemanticLabel(List<ContentBlock> blocks) => blocks
     .map(
       (block) => switch (block) {
-        TextBlock(:final text) => text,
-        ImageBlock(:final alt) => alt.isEmpty ? 'Question image' : alt,
+        TextBlock(:final text) => normalizeLearningDigits(text),
+        ImageBlock(:final alt) =>
+          alt.isEmpty ? 'Question image' : normalizeLearningDigits(alt),
       },
     )
     .where((text) => text.trim().isNotEmpty)
@@ -1259,6 +1617,7 @@ class _AnswerChoice extends StatelessWidget {
     required this.checked,
     required this.correctChoice,
     required this.onTap,
+    this.manuscript = false,
   });
   final List<ContentBlock> blocks;
   final int choice;
@@ -1266,20 +1625,25 @@ class _AnswerChoice extends StatelessWidget {
   final bool checked;
   final int correctChoice;
   final VoidCallback? onTap;
+  final bool manuscript;
 
   @override
   Widget build(BuildContext context) {
     final isCorrect = checked && choice == correctChoice;
     final isWrong = checked && selected && choice != correctChoice;
-    final border = isCorrect
-        ? GaussColors.teal
-        : (isWrong
-              ? GaussColors.error
-              : (selected ? GaussColors.brassLight : GaussColors.line));
+    final tone = isCorrect
+        ? TheoremChoiceTone.positive
+        : isWrong
+        ? TheoremChoiceTone.negative
+        : selected
+        ? TheoremChoiceTone.selected
+        : TheoremChoiceTone.neutral;
     return Semantics(
       button: true,
+      enabled: onTap != null,
       selected: selected,
       excludeSemantics: true,
+      onTap: onTap,
       label:
           'Choice ${choice + 1}. ${_blocksSemanticLabel(blocks)}. '
           '${isCorrect
@@ -1289,83 +1653,58 @@ class _AnswerChoice extends StatelessWidget {
               : selected
               ? 'Selected.'
               : ''}',
-      child: AnimatedContainer(
-        duration: MediaQuery.disableAnimationsOf(context)
-            ? Duration.zero
-            : const Duration(milliseconds: 180),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: isCorrect
-                ? [
-                    GaussColors.signal.withValues(alpha: .19),
-                    GaussColors.deepInk,
-                  ]
-                : isWrong
-                ? [
-                    GaussColors.error.withValues(alpha: .14),
-                    GaussColors.deepInk,
-                  ]
-                : [GaussColors.panelHigh, GaussColors.raised],
-          ),
-          borderRadius: BorderRadius.circular(18),
-          border: Border.all(
-            color: border,
-            width: selected || isCorrect ? 2 : 1,
-          ),
-          boxShadow: selected || isCorrect
-              ? [
-                  BoxShadow(
-                    color: border.withValues(alpha: .12),
-                    blurRadius: 16,
-                  ),
-                ]
-              : null,
-        ),
-        child: InkWell(
-          onTap: onTap,
-          borderRadius: BorderRadius.circular(18),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
-            child: Row(
-              children: [
-                Container(
-                  width: 32,
-                  height: 32,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: border),
-                  ),
-                  child: isCorrect
-                      ? const Icon(
-                          Icons.check,
-                          size: 18,
-                          color: GaussColors.teal,
-                        )
-                      : (isWrong
-                            ? const Icon(
-                                Icons.close,
-                                size: 18,
-                                color: GaussColors.error,
-                              )
-                            : Text(
-                                String.fromCharCode(65 + choice),
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              )),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: ContentBlocksView(blocks: blocks, compact: true),
-                ),
-              ],
+      child: manuscript
+          ? ManuscriptChoiceShell(
+              tone: tone,
+              onTap: onTap,
+              emblem: isCorrect
+                  ? const Icon(
+                      Icons.check_rounded,
+                      size: 18,
+                      color: GaussColors.teal,
+                    )
+                  : isWrong
+                  ? const Icon(
+                      Icons.close_rounded,
+                      size: 18,
+                      color: GaussColors.error,
+                    )
+                  : Text(
+                      String.fromCharCode(65 + choice),
+                      style: const TextStyle(
+                        color: GaussColors.parchmentInk,
+                        fontFamily: 'serif',
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+              child: ContentBlocksView(
+                blocks: blocks,
+                compact: true,
+                textColor: GaussColors.parchmentInk,
+              ),
+            )
+          : TheoremChoiceShell(
+              tone: tone,
+              onTap: onTap,
+              emblem: isCorrect
+                  ? const Icon(
+                      Icons.check_rounded,
+                      size: 18,
+                      color: GaussColors.teal,
+                    )
+                  : isWrong
+                  ? const Icon(
+                      Icons.close_rounded,
+                      size: 18,
+                      color: GaussColors.error,
+                    )
+                  : Text(
+                      String.fromCharCode(65 + choice),
+                      style: const TextStyle(fontWeight: FontWeight.w900),
+                    ),
+              child: ContentBlocksView(blocks: blocks, compact: true),
             ),
-          ),
-        ),
-      ),
     );
   }
 }
@@ -1376,120 +1715,208 @@ class _SolutionPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!question.missionReady) {
-      return Semantics(
-        container: true,
-        label:
-            'Source item quarantined. Its answer and explanation mapping are not verified.',
-        child: Card(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.shield_outlined,
-                      color: GaussColors.brassLight,
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      'Source item quarantined',
+    final certified = question.missionReady && question.solutionVerified;
+    final heading = certified ? 'Classic solution' : 'Source solution';
+    return Semantics(
+      container: true,
+      label: certified
+          ? 'Scientifically reviewed solution.'
+          : 'Source-provided solution shown provisionally for private practice.',
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    certified
+                        ? Icons.lightbulb_outline
+                        : Icons.menu_book_outlined,
+                    color: GaussColors.brassLight,
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      heading,
+                      softWrap: true,
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                const Text(
-                  'This source item remains preserved in the local archive, but its answer and explanation mapping are not verified. Gauss excludes it from scoring instead of presenting uncertain guidance.',
-                  style: TextStyle(color: GaussColors.muted, height: 1.5),
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
-    }
-
-    if (!question.solutionVerified) {
-      return Semantics(
-        container: true,
-        label:
-            'Explanation withheld. The archived explanation conflicts with its answer contract.',
-        child: Card(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Row(
-                  children: [
+                  ),
+                  if (certified)
                     const Icon(
-                      Icons.rule_folder_outlined,
-                      color: GaussColors.brassLight,
+                      Icons.verified_rounded,
+                      size: 18,
+                      color: GaussColors.signalBright,
                     ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        'Explanation withheld',
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                    ),
-                  ],
-                ),
+                ],
+              ),
+              if (!certified) ...[
                 const SizedBox(height: 10),
-                const Text(
-                  'The archived explanation conflicts with this question’s answer contract. Gauss preserves the source text but does not present it as guidance.',
-                  style: TextStyle(color: GaussColors.muted, height: 1.5),
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
-    }
-
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Row(
-              children: [
-                const Icon(
-                  Icons.lightbulb_outline,
-                  color: GaussColors.brassLight,
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    'Classic solution',
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.titleMedium,
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: GaussColors.brass.withValues(alpha: .07),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: GaussColors.brass.withValues(alpha: .22),
+                    ),
+                  ),
+                  child: const Text(
+                    'Shown from the preserved source for private practice. If anything looks inconsistent, use the report action and keep going.',
+                    style: TextStyle(
+                      color: GaussColors.muted,
+                      fontSize: 11.5,
+                      height: 1.45,
+                    ),
                   ),
                 ),
               ],
-            ),
-            const SizedBox(height: 14),
-            ContentBlocksView(blocks: question.solution),
-            if (question.shortcut case final shortcut?) ...[
-              const Divider(height: 28),
-              const Text(
-                'Smart shortcut',
-                style: TextStyle(
-                  color: GaussColors.brassLight,
-                  fontWeight: FontWeight.w800,
+              const SizedBox(height: 14),
+              ContentBlocksView(blocks: question.solution),
+              if (question.shortcut case final shortcut?) ...[
+                const Divider(height: 28),
+                const Text(
+                  'Smart shortcut',
+                  style: TextStyle(
+                    color: GaussColors.brassLight,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                ContentBlocksView(blocks: shortcut),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _QuestionIssueDraft {
+  const _QuestionIssueDraft({required this.kind, required this.note});
+
+  final QuestionIssueKind kind;
+  final String note;
+}
+
+class _QuestionIssueSheet extends StatefulWidget {
+  const _QuestionIssueSheet({required this.questionId});
+
+  final String questionId;
+
+  @override
+  State<_QuestionIssueSheet> createState() => _QuestionIssueSheetState();
+}
+
+class _QuestionIssueSheetState extends State<_QuestionIssueSheet> {
+  var _kind = QuestionIssueKind.questionText;
+  final _note = TextEditingController();
+
+  @override
+  void dispose() {
+    _note.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final keyboard = MediaQuery.viewInsetsOf(context).bottom;
+    return Material(
+      color: Colors.transparent,
+      child: Container(
+        key: const ValueKey('question-issue-sheet'),
+        constraints: const BoxConstraints(maxWidth: 620),
+        margin: const EdgeInsets.all(12),
+        padding: EdgeInsets.fromLTRB(20, 14, 20, 20 + keyboard),
+        decoration: BoxDecoration(
+          color: GaussColors.panelHigh,
+          borderRadius: BorderRadius.circular(28),
+          border: Border.all(color: GaussColors.brass.withValues(alpha: .36)),
+          boxShadow: const [
+            BoxShadow(color: Color(0x99000000), blurRadius: 30),
+          ],
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Center(
+                child: Container(
+                  width: 42,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: GaussColors.fog.withValues(alpha: .4),
+                    borderRadius: BorderRadius.circular(2),
+                  ),
                 ),
               ),
-              const SizedBox(height: 10),
-              ContentBlocksView(blocks: shortcut),
+              const SizedBox(height: 18),
+              const Text(
+                'REPORT QUESTION ISSUE',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: GaussColors.brassLight,
+                  fontSize: GaussTypeScale.insignia,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 1.1,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                widget.questionId,
+                textAlign: TextAlign.center,
+                textDirection: TextDirection.ltr,
+                softWrap: true,
+                style: const TextStyle(
+                  color: GaussColors.fog,
+                  fontSize: 11,
+                  fontFamily: 'Manrope',
+                ),
+              ),
+              const SizedBox(height: 16),
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final kind in QuestionIssueKind.values)
+                    ChoiceChip(
+                      key: ValueKey('question-issue-kind-${kind.key}'),
+                      label: Text(kind.label),
+                      selected: _kind == kind,
+                      onSelected: (_) => setState(() => _kind = kind),
+                    ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                key: const ValueKey('question-issue-note'),
+                controller: _note,
+                minLines: 2,
+                maxLines: 4,
+                maxLength: 500,
+                textCapitalization: TextCapitalization.sentences,
+                decoration: const InputDecoration(
+                  labelText: 'Optional note',
+                  hintText: 'What looked wrong?',
+                ),
+              ),
+              const SizedBox(height: 12),
+              FilledButton.icon(
+                key: const ValueKey('question-issue-save'),
+                onPressed: () => Navigator.pop(
+                  context,
+                  _QuestionIssueDraft(kind: _kind, note: _note.text.trim()),
+                ),
+                icon: const Icon(Icons.bookmark_added_outlined),
+                label: const Text('Save report on this device'),
+              ),
             ],
-          ],
+          ),
         ),
       ),
     );
@@ -1522,222 +1949,538 @@ class _MissionComplete extends StatelessWidget {
     }
 
     final accuracy = total == 0 ? 0.0 : correct / total;
+    final headline = accuracy == 1
+        ? 'Perfect orbit'
+        : accuracy >= .8
+        ? 'Orbit secured'
+        : 'Mission charted';
+    final detail = accuracy == 1
+        ? 'Every proof aligned. This five-point orbit is now complete.'
+        : accuracy >= .8
+        ? 'A strong signal is recorded. The missed coordinate is ready for a calm revisit.'
+        : 'Every miss is now a useful revisit coordinate. Your progress is safely recorded.';
+    final semanticSummary = StringBuffer(
+      '$headline. $correct of $total correct. '
+      '${completion.xpEarned} XP earned. ${completion.totalXp} total XP.',
+    );
+    for (final reward in rewards.entries) {
+      semanticSummary.write(' ${reward.key}, ${reward.value} XP.');
+    }
     return Stack(
       fit: StackFit.expand,
       children: [
         const _MissionBackdrop(),
         SafeArea(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(18, 18, 18, 28),
-            child: Center(
-              child: ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 900),
-                child: Container(
-                  padding: const EdgeInsets.all(22),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        GaussColors.panelHigh.withValues(alpha: .96),
-                        GaussColors.ink.withValues(alpha: .97),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(28),
-                    border: Border.all(color: GaussColors.line),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color(0x99000000),
-                        blurRadius: 36,
-                        offset: Offset(0, 18),
-                      ),
-                    ],
-                  ),
-                  child: LayoutBuilder(
-                    builder: (context, constraints) {
-                      final wide = constraints.maxWidth >= 650;
-                      final visual = SizedBox(
-                        width: wide ? 280 : double.infinity,
-                        height: wide ? 370 : 260,
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            Container(
-                              width: 210,
-                              height: 210,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: GaussColors.brass.withValues(
-                                      alpha: .19,
-                                    ),
-                                    blurRadius: 70,
-                                    spreadRadius: 18,
-                                  ),
-                                ],
+          child: Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  key: const ValueKey('mission-completion-scroll'),
+                  padding: const EdgeInsets.fromLTRB(12, 12, 12, 16),
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 800),
+                      child: Semantics(
+                        key: const ValueKey('mission-completion-screen'),
+                        container: true,
+                        liveRegion: true,
+                        label: semanticSummary.toString(),
+                        child: Container(
+                          padding: const EdgeInsets.all(GaussSpacing.space20),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                GaussColors.panelHigh.withValues(alpha: .96),
+                                GaussColors.ink.withValues(alpha: .98),
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(
+                              GaussRadii.large,
+                            ),
+                            border: Border.all(
+                              color: GaussColors.brass.withValues(alpha: .42),
+                            ),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x99000000),
+                                blurRadius: 36,
+                                offset: Offset(0, 18),
                               ),
-                            ),
-                            Image.asset(
-                              accuracy >= .7
-                                  ? 'assets/visual/mascot/mira_correct.png'
-                                  : 'assets/visual/mascot/mira_thinking.png',
-                              fit: BoxFit.contain,
-                              cacheWidth: 820,
-                              filterQuality: FilterQuality.medium,
-                              semanticLabel: accuracy >= .7
-                                  ? 'Mira celebrates the completed mission.'
-                                  : 'Mira considers the completed mission with you.',
-                            ),
-                            Positioned(
-                              bottom: 2,
-                              child: _ScoreSeal(
+                            ],
+                          ),
+                          child: LayoutBuilder(
+                            builder: (context, constraints) {
+                              final textHeight = MediaQuery.textScalerOf(
+                                context,
+                              ).scale(14);
+                              final wide =
+                                  constraints.maxWidth >= 650 &&
+                                  textHeight < 20;
+                              final visual = _MissionCompletionVisual(
                                 accuracy: accuracy,
                                 correct: correct,
                                 total: total,
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                      final summary = Column(
-                        crossAxisAlignment: wide
-                            ? CrossAxisAlignment.start
-                            : CrossAxisAlignment.center,
-                        children: [
-                          const GaussWordmark(width: 148),
-                          const SizedBox(height: 16),
-                          Text(
-                            'Mission complete',
-                            textAlign: wide
-                                ? TextAlign.start
-                                : TextAlign.center,
-                            style: Theme.of(context).textTheme.headlineMedium,
-                          ),
-                          const SizedBox(height: 7),
-                          Text(
-                            correct == total
-                                ? 'Every answer aligned. This orbit now burns brighter.'
-                                : 'A new signal is recorded. Revisit the misses when you are ready.',
-                            textAlign: wide
-                                ? TextAlign.start
-                                : TextAlign.center,
-                            style: const TextStyle(color: GaussColors.muted),
-                          ),
-                          const SizedBox(height: 18),
-                          Row(
-                            mainAxisAlignment: wide
-                                ? MainAxisAlignment.start
-                                : MainAxisAlignment.center,
-                            children: [
-                              _CompletionMetric(
-                                label: 'EARNED',
-                                value: '+${completion.xpEarned} XP',
-                                color: GaussColors.signalBright,
-                              ),
-                              const SizedBox(width: 10),
-                              _CompletionMetric(
-                                label: 'TOTAL',
-                                value: '${completion.totalXp} XP',
-                                color: GaussColors.brassLight,
-                              ),
-                            ],
-                          ),
-                          if (completion.levelAfter >
-                              completion.levelBefore) ...[
-                            const SizedBox(height: 10),
-                            Text(
-                              'Level ${completion.levelAfter} reached',
-                              style: const TextStyle(
-                                color: GaussColors.brassLight,
-                                fontWeight: FontWeight.w900,
-                              ),
-                            ),
-                          ],
-                          if (rewards.isNotEmpty) ...[
-                            const SizedBox(height: 18),
-                            Semantics(
-                              container: true,
-                              label: 'Recorded rewards',
-                              child: Container(
-                                padding: const EdgeInsets.all(14),
-                                decoration: BoxDecoration(
-                                  color: GaussColors.deepInk.withValues(
-                                    alpha: .8,
-                                  ),
-                                  borderRadius: BorderRadius.circular(18),
-                                  border: Border.all(
-                                    color: GaussColors.hairline,
-                                  ),
-                                ),
-                                child: Column(
+                                compact: !wide,
+                              );
+                              final summary = _MissionCompletionSummary(
+                                total: total,
+                                headline: headline,
+                                detail: detail,
+                                completion: completion,
+                                rewards: rewards,
+                              );
+                              if (!wide) {
+                                return Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
                                   children: [
-                                    for (final entry in rewards.entries)
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                          vertical: 5,
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            const TheoremStarMark(size: 18),
-                                            const SizedBox(width: 8),
-                                            Expanded(child: Text(entry.key)),
-                                            Text(
-                                              '+${entry.value} XP',
-                                              style: const TextStyle(
-                                                color: GaussColors.signalBright,
-                                                fontWeight: FontWeight.w900,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                    visual,
+                                    const SizedBox(
+                                      height: GaussSpacing.space12,
+                                    ),
+                                    summary,
                                   ],
-                                ),
-                              ),
-                            ),
-                          ],
-                          const SizedBox(height: 22),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: OutlinedButton(
-                                  onPressed: onRetry,
-                                  child: const Text('New mission'),
-                                ),
-                              ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: FilledButton(
-                                  onPressed: onMap,
-                                  child: const Text('Back to map'),
-                                ),
-                              ),
-                            ],
+                                );
+                              }
+                              return Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(width: 286, child: visual),
+                                  const SizedBox(width: GaussSpacing.space24),
+                                  Expanded(child: summary),
+                                ],
+                              );
+                            },
                           ),
-                        ],
-                      );
-                      if (!wide) {
-                        return Column(children: [visual, summary]);
-                      }
-                      return Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          visual,
-                          const SizedBox(width: 28),
-                          Expanded(child: summary),
-                        ],
-                      );
-                    },
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
+              _MissionCompletionDock(onRetry: onRetry, onMap: onMap),
+            ],
           ),
         ),
       ],
     );
   }
+}
+
+class _MissionCompletionVisual extends StatelessWidget {
+  const _MissionCompletionVisual({
+    required this.accuracy,
+    required this.correct,
+    required this.total,
+    required this.compact,
+  });
+
+  final double accuracy;
+  final int correct;
+  final int total;
+  final bool compact;
+
+  @override
+  Widget build(BuildContext context) => SizedBox(
+    height: compact ? 218 : 330,
+    child: RepaintBoundary(
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(begin: 0, end: 1),
+        duration: GaussMotion.resolve(
+          context,
+          const Duration(milliseconds: 980),
+        ),
+        curve: Curves.easeOutCubic,
+        builder: (context, reveal, _) => Stack(
+          alignment: Alignment.center,
+          children: [
+            Positioned.fill(
+              child: ExcludeSemantics(
+                child: CustomPaint(
+                  painter: _MissionCompletionOrbitPainter(reveal: reveal),
+                ),
+              ),
+            ),
+            ExcludeSemantics(
+              child: Transform.scale(
+                scale: .94 + reveal * .06,
+                child: Opacity(
+                  opacity: reveal,
+                  child: Image.asset(
+                    accuracy >= .7
+                        ? 'assets/visual/mascot/mira_correct.png'
+                        : 'assets/visual/mascot/mira_thinking.png',
+                    height: compact ? 178 : 264,
+                    fit: BoxFit.contain,
+                    cacheHeight: compact ? 534 : 792,
+                    filterQuality: FilterQuality.medium,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: compact ? 0 : 8,
+              child: _ScoreSeal(
+                accuracy: accuracy,
+                correct: correct,
+                total: total,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class _MissionCompletionSummary extends StatelessWidget {
+  const _MissionCompletionSummary({
+    required this.total,
+    required this.headline,
+    required this.detail,
+    required this.completion,
+    required this.rewards,
+  });
+
+  final int total;
+  final String headline;
+  final String detail;
+  final MissionCompletion completion;
+  final Map<String, int> rewards;
+
+  @override
+  Widget build(BuildContext context) => Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      const Align(
+        alignment: AlignmentDirectional.centerStart,
+        child: GaussWordmark(width: 118),
+      ),
+      const SizedBox(height: GaussSpacing.space12),
+      Text(
+        '$total-QUESTION MISSION',
+        style: const TextStyle(
+          color: GaussColors.brassLight,
+          fontSize: GaussTypeScale.insignia,
+          fontWeight: FontWeight.w900,
+          letterSpacing: 1.25,
+        ),
+      ),
+      const SizedBox(height: GaussSpacing.space4),
+      Text(
+        headline,
+        key: const ValueKey('mission-completion-headline'),
+        style: Theme.of(context).textTheme.headlineSmall,
+      ),
+      const SizedBox(height: GaussSpacing.space8),
+      Text(
+        detail,
+        style: const TextStyle(color: GaussColors.muted, height: 1.5),
+      ),
+      const SizedBox(height: GaussSpacing.space16),
+      _MissionCompletionMetrics(completion: completion),
+      if (completion.levelAfter > completion.levelBefore) ...[
+        const SizedBox(height: GaussSpacing.space12),
+        Semantics(
+          label: 'Level ${completion.levelAfter} reached',
+          child: Container(
+            constraints: const BoxConstraints(minHeight: 48),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+            decoration: BoxDecoration(
+              color: GaussColors.brass.withValues(alpha: .1),
+              borderRadius: BorderRadius.circular(GaussRadii.medium),
+              border: Border.all(
+                color: GaussColors.brass.withValues(alpha: .42),
+              ),
+            ),
+            child: Row(
+              children: [
+                const Icon(
+                  Icons.workspace_premium_rounded,
+                  color: GaussColors.brassLight,
+                ),
+                const SizedBox(width: GaussSpacing.space8),
+                Expanded(
+                  child: Text(
+                    'Level ${completion.levelAfter} reached',
+                    style: const TextStyle(
+                      color: GaussColors.brassLight,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+      const SizedBox(height: GaussSpacing.space12),
+      _MissionRewardReceipt(rewards: rewards),
+    ],
+  );
+}
+
+class _MissionCompletionMetrics extends StatelessWidget {
+  const _MissionCompletionMetrics({required this.completion});
+
+  final MissionCompletion completion;
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final accessible =
+          constraints.maxWidth < 360 ||
+          MediaQuery.textScalerOf(context).scale(14) >= 20;
+      final earned = _CompletionMetric(
+        icon: Icons.auto_awesome_rounded,
+        label: 'THIS MISSION',
+        value: completion.xpEarned > 0
+            ? '+${completion.xpEarned} XP'
+            : 'XP cap met',
+        color: GaussColors.signalBright,
+      );
+      final total = _CompletionMetric(
+        icon: Icons.explore_rounded,
+        label: 'PRIVATE TOTAL',
+        value: '${completion.totalXp} XP',
+        color: GaussColors.brassLight,
+      );
+      if (accessible) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [earned, const SizedBox(height: 8), total],
+        );
+      }
+      return Row(
+        children: [
+          Expanded(child: earned),
+          const SizedBox(width: 8),
+          Expanded(child: total),
+        ],
+      );
+    },
+  );
+}
+
+class _CompletionMetric extends StatelessWidget {
+  const _CompletionMetric({
+    required this.icon,
+    required this.label,
+    required this.value,
+    required this.color,
+  });
+
+  final IconData icon;
+  final String label;
+  final String value;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    constraints: const BoxConstraints(minHeight: 72),
+    padding: const EdgeInsets.all(12),
+    decoration: BoxDecoration(
+      color: GaussColors.deepInk.withValues(alpha: .9),
+      borderRadius: BorderRadius.circular(GaussRadii.medium),
+      border: Border.all(color: color.withValues(alpha: .34)),
+    ),
+    child: Row(
+      children: [
+        Icon(icon, color: color, size: 22),
+        const SizedBox(width: 10),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                label,
+                style: const TextStyle(
+                  color: GaussColors.fog,
+                  fontSize: GaussTypeScale.insignia,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: .65,
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                value,
+                style: TextStyle(color: color, fontWeight: FontWeight.w900),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+class _MissionRewardReceipt extends StatelessWidget {
+  const _MissionRewardReceipt({required this.rewards});
+
+  final Map<String, int> rewards;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    container: true,
+    label: 'Recorded XP receipt',
+    child: Container(
+      key: const ValueKey('mission-reward-receipt'),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: GaussColors.deepInk.withValues(alpha: .78),
+        borderRadius: BorderRadius.circular(GaussRadii.medium),
+        border: Border.all(color: GaussColors.hairline),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const Text(
+            'RECORDED XP',
+            style: TextStyle(
+              color: GaussColors.fog,
+              fontSize: GaussTypeScale.insignia,
+              fontWeight: FontWeight.w900,
+              letterSpacing: .9,
+            ),
+          ),
+          const SizedBox(height: 6),
+          if (rewards.isEmpty)
+            const Text(
+              'Mission recorded. Today’s reward cap was already met.',
+              style: TextStyle(color: GaussColors.muted, height: 1.45),
+            )
+          else
+            for (final reward in rewards.entries)
+              _MissionRewardLine(reason: reward.key, amount: reward.value),
+        ],
+      ),
+    ),
+  );
+}
+
+class _MissionRewardLine extends StatelessWidget {
+  const _MissionRewardLine({required this.reason, required this.amount});
+
+  final String reason;
+  final int amount;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.symmetric(vertical: 5),
+    child: LayoutBuilder(
+      builder: (context, constraints) {
+        final stack =
+            constraints.maxWidth < 250 ||
+            MediaQuery.textScalerOf(context).scale(14) >= 20;
+        final reasonWidget = Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const TheoremStarMark(size: 16),
+            const SizedBox(width: 8),
+            Flexible(child: Text(reason)),
+          ],
+        );
+        final amountWidget = Text(
+          '+$amount XP',
+          textDirection: TextDirection.ltr,
+          style: const TextStyle(
+            color: GaussColors.signalBright,
+            fontWeight: FontWeight.w900,
+          ),
+        );
+        if (stack) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              reasonWidget,
+              const SizedBox(height: 4),
+              Padding(
+                padding: const EdgeInsetsDirectional.only(start: 24),
+                child: amountWidget,
+              ),
+            ],
+          );
+        }
+        return Row(
+          children: [
+            Expanded(child: reasonWidget),
+            const SizedBox(width: 12),
+            amountWidget,
+          ],
+        );
+      },
+    ),
+  );
+}
+
+class _MissionCompletionDock extends StatelessWidget {
+  const _MissionCompletionDock({required this.onRetry, required this.onMap});
+
+  final VoidCallback onRetry;
+  final VoidCallback onMap;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.fromLTRB(12, 5, 12, 10),
+    child: Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 340),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(30),
+          child: BackdropFilter(
+            filter: ui.ImageFilter.blur(sigmaX: 16, sigmaY: 16),
+            child: Container(
+              key: const ValueKey('mission-completion-actions'),
+              padding: const EdgeInsets.fromLTRB(12, 8, 12, 7),
+              decoration: BoxDecoration(
+                color: GaussColors.deepInk.withValues(alpha: .93),
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  color: GaussColors.brass.withValues(alpha: .3),
+                ),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Center(
+                      child: OrbitalActionControl(
+                        key: const ValueKey('mission-retry-action'),
+                        semanticLabel: 'Start another mission',
+                        caption: 'New mission',
+                        onPressed: onRetry,
+                        icon: Icons.replay_rounded,
+                        dimension: 52,
+                        accent: GaussColors.ice,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: GaussSpacing.space12),
+                  Expanded(
+                    child: Center(
+                      child: OrbitalActionControl(
+                        key: const ValueKey('mission-map-action'),
+                        semanticLabel: 'Return to map',
+                        caption: 'Return to map',
+                        onPressed: onMap,
+                        icon: Icons.map_outlined,
+                        dimension: 58,
+                        accent: GaussColors.signalBright,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 class _ScoreSeal extends StatelessWidget {
@@ -1752,61 +2495,105 @@ class _ScoreSeal extends StatelessWidget {
   final int total;
 
   @override
-  Widget build(BuildContext context) => Container(
-    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-    decoration: BoxDecoration(
-      color: GaussColors.deepInk.withValues(alpha: .95),
-      borderRadius: BorderRadius.circular(GaussRadii.pill),
-      border: Border.all(color: GaussColors.brass),
-      boxShadow: const [BoxShadow(color: Color(0x99000000), blurRadius: 16)],
-    ),
-    child: Text(
-      '$correct / $total · ${(accuracy * 100).round()}%',
-      style: const TextStyle(
-        color: GaussColors.ivory,
-        fontWeight: FontWeight.w900,
+  Widget build(BuildContext context) => Semantics(
+    label:
+        '$correct of $total correct, ${(accuracy * 100).round()} percent accuracy',
+    excludeSemantics: true,
+    child: Container(
+      constraints: const BoxConstraints(minHeight: 38),
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+      decoration: BoxDecoration(
+        color: GaussColors.deepInk.withValues(alpha: .96),
+        borderRadius: BorderRadius.circular(GaussRadii.pill),
+        border: Border.all(color: GaussColors.brassLight),
+        boxShadow: const [BoxShadow(color: Color(0x99000000), blurRadius: 16)],
+      ),
+      child: Text(
+        '$correct / $total · ${(accuracy * 100).round()}%',
+        textDirection: TextDirection.ltr,
+        textAlign: TextAlign.center,
+        style: const TextStyle(
+          color: GaussColors.ivory,
+          fontWeight: FontWeight.w900,
+        ),
       ),
     ),
   );
 }
 
-class _CompletionMetric extends StatelessWidget {
-  const _CompletionMetric({
-    required this.label,
-    required this.value,
-    required this.color,
-  });
+class _MissionCompletionOrbitPainter extends CustomPainter {
+  const _MissionCompletionOrbitPainter({required this.reveal});
 
-  final String label;
-  final String value;
-  final Color color;
+  final double reveal;
 
   @override
-  Widget build(BuildContext context) => Container(
-    padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 9),
-    decoration: BoxDecoration(
-      color: GaussColors.deepInk,
-      borderRadius: BorderRadius.circular(14),
-      border: Border.all(color: GaussColors.hairline),
-    ),
-    child: Column(
-      children: [
-        Text(
-          value,
-          style: TextStyle(color: color, fontWeight: FontWeight.w900),
-        ),
-        Text(
-          label,
-          style: const TextStyle(
-            color: GaussColors.fog,
-            fontSize: GaussTypeScale.insignia,
-            fontWeight: FontWeight.w800,
-            letterSpacing: .8,
+  void paint(Canvas canvas, Size size) {
+    final center = size.center(Offset.zero);
+    final radius = math.min(size.width, size.height) * .38;
+    final glow = Paint()
+      ..color = GaussColors.brass.withValues(alpha: .16 * reveal)
+      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 18);
+    canvas.drawCircle(center, radius * .86, glow);
+
+    for (final ratio in const [.62, .82, 1.0]) {
+      canvas.drawCircle(
+        center,
+        radius * ratio,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = ratio == 1 ? 1.2 : .7
+          ..color = GaussColors.brass.withValues(
+            alpha: (ratio == 1 ? .38 : .2) * reveal,
           ),
-        ),
-      ],
-    ),
-  );
+      );
+    }
+
+    final route = Path();
+    final points = <Offset>[];
+    for (var index = 0; index < 5; index++) {
+      final angle = -math.pi / 2 + index * math.pi * 2 / 5;
+      final point = center + Offset(math.cos(angle), math.sin(angle)) * radius;
+      points.add(point);
+      if (index == 0) {
+        route.moveTo(point.dx, point.dy);
+      } else {
+        route.lineTo(point.dx, point.dy);
+      }
+    }
+    route.close();
+    canvas.drawPath(
+      route,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1
+        ..color = GaussColors.brassLight.withValues(alpha: .2 * reveal),
+    );
+
+    for (var index = 0; index < points.length; index++) {
+      final pointReveal = ((reveal * 6) - index).clamp(0.0, 1.0);
+      canvas.drawCircle(
+        points[index],
+        8 * pointReveal,
+        Paint()
+          ..color = GaussColors.brassLight.withValues(alpha: .16 * pointReveal)
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 8),
+      );
+      canvas.drawCircle(
+        points[index],
+        3 + 1.7 * pointReveal,
+        Paint()
+          ..color = Color.lerp(
+            GaussColors.line,
+            GaussColors.signalBright,
+            pointReveal,
+          )!,
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(_MissionCompletionOrbitPainter oldDelegate) =>
+      oldDelegate.reveal != reveal;
 }
 
 class _MissionLoading extends StatelessWidget {
@@ -1835,19 +2622,28 @@ class _MissionError extends StatelessWidget {
     icon: Icons.error_outline_rounded,
     accent: GaussColors.error,
     actions: Wrap(
-      spacing: 10,
-      runSpacing: 10,
+      spacing: GaussSpacing.space24,
+      runSpacing: GaussSpacing.space16,
       alignment: WrapAlignment.center,
       children: [
         if (onRetry != null)
-          OutlinedButton.icon(
+          OrbitalActionControl(
+            key: const ValueKey('mission-load-retry-action'),
+            semanticLabel: 'Try loading the mission again',
+            caption: 'Try again',
             onPressed: onRetry,
-            icon: const Icon(Icons.refresh),
-            label: const Text('Try again'),
+            icon: Icons.refresh_rounded,
+            dimension: 52,
+            accent: GaussColors.error,
           ),
-        FilledButton(
+        OrbitalActionControl(
+          key: const ValueKey('mission-load-map-action'),
+          semanticLabel: 'Return to map',
+          caption: 'Return to map',
           onPressed: () => context.go('/map'),
-          child: const Text('Return to map'),
+          icon: Icons.map_outlined,
+          dimension: 56,
+          accent: GaussColors.brassLight,
         ),
       ],
     ),

@@ -430,8 +430,8 @@ abstract final class GaussGamificationCatalog {
       iconToken: 'archive_seal',
       artRequirement: 'Layered archive seal with engraved set ticks.',
       antiAbuseRule:
-          'A set counts once, when every question in its twenty-item slice '
-          'has been charted; about 190 sets exist in total.',
+          'A five-question micro-lesson counts once, after all five encounter '
+          'slots are recorded; repeated mastery slots cannot mint it twice.',
       reward: _identityReward,
       levels: [
         AchievementLevelDefinition(

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 
 import '../app/gauss_theme.dart';
+import '../domain/learning_content_policy.dart';
 import '../domain/models.dart';
+
+export '../domain/learning_content_policy.dart' show normalizeLearningDigits;
 
 /// One text or TeX run from a mixed Persian/mathematics content block.
 ///
@@ -146,40 +149,12 @@ int _unescapedDollarCount(String source) {
 
 /// Normalizes extraction artifacts only inside TeX runs.
 ///
-/// Persian prose and the JSON corpus are deliberately untouched. TeX number
-/// tokens use ASCII digits for predictable parser metrics while the surrounding
-/// Persian UI keeps its original glyphs.
+/// The JSON corpus is deliberately untouched. Both TeX and surrounding
+/// learning prose render with ASCII digits for stable metrics and a consistent
+/// visual language.
 @visibleForTesting
 String normalizeMathTex(String source) {
-  const digitMap = <String, String>{
-    '۰': '0',
-    '۱': '1',
-    '۲': '2',
-    '۳': '3',
-    '۴': '4',
-    '۵': '5',
-    '۶': '6',
-    '۷': '7',
-    '۸': '8',
-    '۹': '9',
-    '٠': '0',
-    '١': '1',
-    '٢': '2',
-    '٣': '3',
-    '٤': '4',
-    '٥': '5',
-    '٦': '6',
-    '٧': '7',
-    '٨': '8',
-    '٩': '9',
-  };
-  final normalized = StringBuffer();
-  for (final rune in source.runes) {
-    final character = String.fromCharCode(rune);
-    normalized.write(digitMap[character] ?? character);
-  }
-  var value = normalized
-      .toString()
+  var value = normalizeLearningDigits(source)
       // A single JSON backslash before `frac`/`bar` was decoded as the
       // corresponding control character in 57 preserved source runs.
       .replaceAll('\u000crac', r'\frac')
@@ -187,8 +162,7 @@ String normalizeMathTex(String source) {
       .replaceAll(r'\fracrac', r'\frac')
       .replaceAll(r'\timesimes', r'\times')
       .replaceAll('−', '-')
-      .replaceAll('٫', '.')
-      .replaceAll('٪', r'\%');
+      .replaceAll('%', r'\%');
   value = value.replaceAllMapped(
     RegExp(r'\\frac\(([^()]*)\)'),
     (match) => '${r'\frac{'}${match.group(1)}}',
@@ -294,14 +268,37 @@ class _AssetMedia extends StatelessWidget {
               .round(),
     filterQuality: fullscreen ? FilterQuality.medium : FilterQuality.low,
     errorBuilder: (context, error, stackTrace) => Container(
+      key: ValueKey('media-error-$asset'),
       alignment: Alignment.center,
       color: GaussColors.ink,
       child: Padding(
         padding: const EdgeInsets.all(18),
-        child: Text(
-          alt.isEmpty ? 'Image unavailable' : alt,
-          textAlign: TextAlign.center,
-          style: const TextStyle(color: GaussColors.muted),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(
+              Icons.broken_image_outlined,
+              color: GaussColors.error,
+              size: 28,
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Image unavailable',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: GaussColors.ivory,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+            if (alt.isNotEmpty) ...[
+              const SizedBox(height: 4),
+              Text(
+                normalizeLearningDigits(alt),
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: GaussColors.muted),
+              ),
+            ],
+          ],
         ),
       ),
     ),
@@ -311,7 +308,7 @@ class _AssetMedia extends StatelessWidget {
   Widget build(BuildContext context) => Semantics(
     image: true,
     button: true,
-    label: alt,
+    label: alt.isEmpty ? 'Question image' : normalizeLearningDigits(alt),
     hint: 'Open image viewer',
     child: ClipRRect(
       borderRadius: BorderRadius.circular(12),
@@ -378,28 +375,68 @@ class _MixedMathText extends StatelessWidget {
     final segments = parseMathContent(text);
     if (segments.every((segment) => !segment.isMath)) {
       final resolvedStyle = style?.copyWith(color: color, height: 1.75);
-      return Text(text, textAlign: TextAlign.start, style: resolvedStyle);
+      return Text(
+        normalizeLearningDigits(text),
+        textAlign: TextAlign.start,
+        style: resolvedStyle,
+      );
     }
     return LayoutBuilder(
       builder: (context, constraints) {
         final rows = <Widget>[];
         final inline = <Widget>[];
 
-        Widget mathRun(MathContentSegment segment, int index) => Directionality(
-          textDirection: TextDirection.ltr,
-          child: SingleChildScrollView(
-            key: ValueKey(
-              segment.display ? 'display-math-$index' : 'inline-math-$index',
-            ),
-            scrollDirection: Axis.horizontal,
-            child: Math.tex(
-              segment.value,
-              mathStyle: segment.display ? MathStyle.display : MathStyle.text,
-              textStyle: style?.copyWith(color: color, height: 1.25),
-              onErrorFallback: (error) => Text(
-                segment.source,
-                textDirection: TextDirection.ltr,
-                style: style?.copyWith(color: color, height: 1.45),
+        Widget mathRun(MathContentSegment segment, int index) => ConstrainedBox(
+          constraints: constraints.hasBoundedWidth
+              ? BoxConstraints(maxWidth: constraints.maxWidth)
+              : const BoxConstraints(),
+          child: Directionality(
+            textDirection: TextDirection.ltr,
+            child: _MathRunScroller(
+              scrollKey: ValueKey(
+                segment.display ? 'display-math-$index' : 'inline-math-$index',
+              ),
+              indicatorColor: color ?? style?.color ?? GaussColors.parchmentInk,
+              child: Math.tex(
+                segment.value,
+                mathStyle: segment.display ? MathStyle.display : MathStyle.text,
+                textStyle: style?.copyWith(color: color, height: 1.25),
+                onErrorFallback: (error) => Semantics(
+                  label:
+                      'Formula could not be rendered. Source notation follows.',
+                  child: DecoratedBox(
+                    key: ValueKey('math-error-$index'),
+                    decoration: BoxDecoration(
+                      color: GaussColors.error.withValues(alpha: .09),
+                      border: Border.all(
+                        color: GaussColors.error.withValues(alpha: .55),
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 6,
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(
+                            Icons.warning_amber_rounded,
+                            size: 17,
+                            color: GaussColors.error,
+                          ),
+                          const SizedBox(width: 6),
+                          Text(
+                            normalizeLearningDigits(segment.source),
+                            textDirection: TextDirection.ltr,
+                            style: style?.copyWith(color: color, height: 1.45),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
@@ -446,7 +483,7 @@ class _MixedMathText extends StatelessWidget {
           } else {
             inline.add(
               Text(
-                segment.value,
+                normalizeLearningDigits(segment.value),
                 textAlign: TextAlign.start,
                 textDirection: TextDirection.rtl,
                 style: style?.copyWith(color: color, height: 1.7),
@@ -463,4 +500,103 @@ class _MixedMathText extends StatelessWidget {
       },
     );
   }
+}
+
+class _MathRunScroller extends StatefulWidget {
+  const _MathRunScroller({
+    required this.scrollKey,
+    required this.indicatorColor,
+    required this.child,
+  });
+
+  final Key scrollKey;
+  final Color indicatorColor;
+  final Widget child;
+
+  @override
+  State<_MathRunScroller> createState() => _MathRunScrollerState();
+}
+
+class _MathRunScrollerState extends State<_MathRunScroller> {
+  final ScrollController _controller = ScrollController();
+  bool _overflows = false;
+  bool _atEnd = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(_syncMetrics);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _syncMetrics());
+  }
+
+  @override
+  void didUpdateWidget(covariant _MathRunScroller oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _syncMetrics());
+  }
+
+  void _syncMetrics() {
+    if (!mounted || !_controller.hasClients) return;
+    final position = _controller.position;
+    final overflows = position.maxScrollExtent > 1;
+    final atEnd = !overflows || position.pixels >= position.maxScrollExtent - 1;
+    if (overflows == _overflows && atEnd == _atEnd) return;
+    setState(() {
+      _overflows = overflows;
+      _atEnd = atEnd;
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller
+      ..removeListener(_syncMetrics)
+      ..dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    hint: _overflows
+        ? 'Swipe horizontally to read the complete formula.'
+        : null,
+    child: Stack(
+      clipBehavior: Clip.none,
+      children: [
+        ScrollbarTheme(
+          data: ScrollbarTheme.of(context).copyWith(
+            thumbColor: WidgetStatePropertyAll(
+              widget.indicatorColor.withValues(alpha: .5),
+            ),
+            thickness: const WidgetStatePropertyAll(2),
+            radius: const Radius.circular(2),
+          ),
+          child: Scrollbar(
+            controller: _controller,
+            thumbVisibility: _overflows,
+            scrollbarOrientation: ScrollbarOrientation.bottom,
+            child: SingleChildScrollView(
+              key: widget.scrollKey,
+              controller: _controller,
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.only(bottom: _overflows ? 6 : 0),
+              child: widget.child,
+            ),
+          ),
+        ),
+        if (_overflows && !_atEnd)
+          PositionedDirectional(
+            end: 0,
+            bottom: -2,
+            child: IgnorePointer(
+              child: Icon(
+                Icons.swipe_rounded,
+                size: 13,
+                color: widget.indicatorColor.withValues(alpha: .62),
+              ),
+            ),
+          ),
+      ],
+    ),
+  );
 }

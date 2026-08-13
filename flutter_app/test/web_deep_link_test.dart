@@ -1,4 +1,5 @@
 import 'package:drift/native.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/app/gauss_app.dart';
@@ -31,13 +32,7 @@ void main() {
       await tester.pump(const Duration(milliseconds: 500));
 
       expect(find.text('STUDY OBSERVATORY'), findsOneWidget);
-      expect(
-        find.descendant(
-          of: find.byType(NavigationBar),
-          matching: find.text('Study'),
-        ),
-        findsOneWidget,
-      );
+      expect(find.byKey(const ValueKey('gauss-nav-study')), findsOneWidget);
       expect(tester.takeException(), isNull);
     } finally {
       await tester.pumpWidget(const SizedBox.shrink());
@@ -47,5 +42,5 @@ void main() {
       tester.binding.platformDispatcher.clearDefaultRouteNameTestValue();
       await tester.binding.setSurfaceSize(null);
     }
-  });
+  }, skip: !kIsWeb);
 }

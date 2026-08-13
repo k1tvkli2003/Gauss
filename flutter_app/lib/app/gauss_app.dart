@@ -3,10 +3,12 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../domain/study_curriculum.dart';
 import '../screens/archive_screen.dart';
 import '../screens/backup_screen.dart';
 import '../screens/insights_screen.dart';
 import '../screens/map_screen.dart';
+import '../screens/mission_screen.dart';
 import '../screens/practice_screen.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/first_run_tour.dart';
@@ -57,44 +59,75 @@ class _GaussAppState extends State<GaussApp> {
           ),
         ],
       ),
-      // Scored-mission surfaces have no producer in the source-only corpus.
-      // Their deep links land on live surfaces instead of empty error rooms;
-      // the mission screen code is retained for a future verified corpus.
-      GoRoute(path: '/resume', redirect: (context, state) => '/map'),
+      GoRoute(
+        path: '/resume',
+        pageBuilder: (context, state) => _gaussSpatialPage(
+          context: context,
+          state: state,
+          child: const MissionScreen(topicKey: 'resume', resume: true),
+        ),
+      ),
       GoRoute(
         path: '/mission/:topicKey',
-        redirect: (context, state) =>
-            '/study/chapter/${state.pathParameters['topicKey']}',
+        pageBuilder: (context, state) {
+          final offset = int.tryParse(
+            state.uri.queryParameters['offset'] ?? '',
+          );
+          return _gaussSpatialPage(
+            context: context,
+            state: state,
+            child: MissionScreen(
+              topicKey: state.pathParameters['topicKey']!,
+              studyOffset: offset?.clamp(0, 100000),
+            ),
+          );
+        },
       ),
       GoRoute(path: '/revenge', redirect: (context, state) => '/study/revisit'),
       GoRoute(
         path: '/study/chapter/:topicKey',
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           final offset = int.tryParse(
             state.uri.queryParameters['offset'] ?? '',
           );
           final count = int.tryParse(state.uri.queryParameters['count'] ?? '');
-          return ArchiveScreen(
-            topicKey: state.pathParameters['topicKey']!,
-            offset: (offset ?? 0).clamp(0, 100000),
-            count: (count ?? 20).clamp(1, 50),
-            shuffleSeed: int.tryParse(
-              state.uri.queryParameters['shuffle'] ?? '',
+          return _gaussSpatialPage(
+            context: context,
+            state: state,
+            child: ArchiveScreen(
+              topicKey: state.pathParameters['topicKey']!,
+              offset: (offset ?? 0).clamp(0, 100000),
+              count: (count ?? GaussStudyCurriculum.batchSize).clamp(1, 50),
+              shuffleSeed: int.tryParse(
+                state.uri.queryParameters['shuffle'] ?? '',
+              ),
             ),
           );
         },
       ),
       GoRoute(
         path: '/study/revisit',
-        builder: (context, state) => const ArchiveScreen.revisit(),
+        pageBuilder: (context, state) => _gaussSpatialPage(
+          context: context,
+          state: state,
+          child: const ArchiveScreen.revisit(),
+        ),
       ),
       GoRoute(
         path: '/study/gems',
-        builder: (context, state) => const ArchiveScreen.gems(),
+        pageBuilder: (context, state) => _gaussSpatialPage(
+          context: context,
+          state: state,
+          child: const ArchiveScreen.gems(),
+        ),
       ),
       GoRoute(
         path: '/vault',
-        builder: (context, state) => const BackupScreen(),
+        pageBuilder: (context, state) => _gaussSpatialPage(
+          context: context,
+          state: state,
+          child: const BackupScreen(),
+        ),
       ),
       GoRoute(path: '/review', redirect: (context, state) => '/study/revisit'),
       GoRoute(path: '/', redirect: (context, state) => '/map'),
@@ -158,6 +191,11 @@ class _GaussAppState extends State<GaussApp> {
       child: MaterialApp.router(
         title: 'Gauss',
         debugShowCheckedModeBanner: false,
+        // Product chrome is intentionally English/LTR regardless of the
+        // Android system locale. Preserved Persian learning blocks establish
+        // their own local RTL islands in ContentBlocksView.
+        locale: const Locale('en'),
+        supportedLocales: const <Locale>[Locale('en')],
         theme: buildGaussTheme(),
         routerConfig: _router,
         builder: (context, child) {
@@ -294,49 +332,91 @@ class _StartupFailureScreenState extends State<_StartupFailureScreen> {
   );
 }
 
-class _AppShell extends StatelessWidget {
+CustomTransitionPage<void> _gaussSpatialPage({
+  required BuildContext context,
+  required GoRouterState state,
+  required Widget child,
+}) {
+  final enterDuration = GaussMotion.resolve(
+    context,
+    _GaussRouteMotion.detailEnter,
+  );
+  final exitDuration = GaussMotion.resolve(
+    context,
+    _GaussRouteMotion.detailExit,
+  );
+  final reducedMotion = enterDuration == Duration.zero;
+  return CustomTransitionPage<void>(
+    key: state.pageKey,
+    child: child,
+    transitionDuration: enterDuration,
+    reverseTransitionDuration: exitDuration,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      if (reducedMotion) return child;
+
+      final motion = CurvedAnimation(
+        parent: animation,
+        curve: _GaussRouteMotion.enterCurve,
+        reverseCurve: _GaussRouteMotion.exitCurve,
+      );
+      return FadeTransition(
+        key: const ValueKey('gauss-spatial-route-motion'),
+        opacity: motion,
+        child: SlideTransition(
+          position: Tween<Offset>(
+            begin: const Offset(0, _GaussRouteMotion.detailTravel),
+            end: Offset.zero,
+          ).animate(motion),
+          child: ScaleTransition(
+            scale: Tween<double>(
+              begin: _GaussRouteMotion.detailStartScale,
+              end: 1,
+            ).animate(motion),
+            child: child,
+          ),
+        ),
+      );
+    },
+  );
+}
+
+/// The route-level subset of the Gauss Motion Bible.
+///
+/// Peer destinations move laterally while detail/mission surfaces move into
+/// depth. Both grammars use only transform and opacity, keep the shell stable,
+/// and resolve to an immediate state change through [GaussMotion].
+abstract final class _GaussRouteMotion {
+  static const branch = Duration(milliseconds: 280);
+  static const detailEnter = Duration(milliseconds: 340);
+  static const detailExit = Duration(milliseconds: 240);
+
+  static const branchTravel = .034;
+  static const branchStartOpacity = .9;
+  static const detailTravel = .024;
+  static const detailStartScale = .99;
+
+  static const enterCurve = Curves.easeOutCubic;
+  static const exitCurve = Curves.easeInCubic;
+}
+
+class _AppShell extends StatefulWidget {
   const _AppShell({required this.shell});
   final StatefulNavigationShell shell;
 
-  static const destinations = <NavigationDestination>[
-    NavigationDestination(
-      icon: GaussNavGlyph(glyph: GaussDestinationGlyph.map, selected: false),
-      selectedIcon: GaussNavGlyph(
-        glyph: GaussDestinationGlyph.map,
-        selected: true,
-      ),
-      label: 'Map',
-    ),
-    NavigationDestination(
-      icon: GaussNavGlyph(
-        glyph: GaussDestinationGlyph.practice,
-        selected: false,
-      ),
-      selectedIcon: GaussNavGlyph(
-        glyph: GaussDestinationGlyph.practice,
-        selected: true,
-      ),
-      label: 'Study',
-    ),
-    NavigationDestination(
-      icon: GaussNavGlyph(
-        glyph: GaussDestinationGlyph.insights,
-        selected: false,
-      ),
-      selectedIcon: GaussNavGlyph(
-        glyph: GaussDestinationGlyph.insights,
-        selected: true,
-      ),
-      label: 'Insights',
-    ),
-  ];
+  @override
+  State<_AppShell> createState() => _AppShellState();
+}
 
-  void _go(int index) =>
-      shell.goBranch(index, initialLocation: index == shell.currentIndex);
+class _AppShellState extends State<_AppShell> {
+  void _go(int index) => widget.shell.goBranch(
+    index,
+    initialLocation: index == widget.shell.currentIndex,
+  );
 
   @override
   Widget build(BuildContext context) {
     final controller = GaussScope.of(context);
+    final shell = widget.shell;
     final tourActive = controller.needsTour && shell.currentIndex == 0;
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -344,6 +424,9 @@ class _AppShell extends StatelessWidget {
         final useRail = window.usesNavigationRail;
         final extendRail = window.extendsNavigationRail;
         if (!useRail) {
+          final footerSafeBottom = GaussMetrics.compactNavigationSafeBottom(
+            context,
+          );
           return Scaffold(
             extendBody: true,
             body: Stack(
@@ -351,7 +434,13 @@ class _AppShell extends StatelessWidget {
               children: [
                 ExcludeSemantics(
                   excluding: tourActive,
-                  child: IgnorePointer(ignoring: tourActive, child: shell),
+                  child: IgnorePointer(
+                    ignoring: tourActive,
+                    child: _BranchEntrance(
+                      activeIndex: shell.currentIndex,
+                      child: shell,
+                    ),
+                  ),
                 ),
                 if (tourActive)
                   FirstRunTour(onDismiss: controller.markTourSeen),
@@ -359,40 +448,14 @@ class _AppShell extends StatelessWidget {
             ),
             bottomNavigationBar: tourActive
                 ? null
-                : SafeArea(
-                    minimum: const EdgeInsets.fromLTRB(
-                      12,
-                      0,
-                      12,
-                      GaussMetrics.compactNavigationOuterInset,
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(26),
-                      child: BackdropFilter(
-                        filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
-                        child: DecoratedBox(
-                          decoration: BoxDecoration(
-                            color: GaussColors.deepInk.withValues(alpha: .82),
-                            borderRadius: BorderRadius.circular(26),
-                            border: Border.all(
-                              color: GaussColors.brass.withValues(alpha: .26),
-                            ),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0xB803090B),
-                                blurRadius: 28,
-                                offset: Offset(0, 10),
-                              ),
-                            ],
-                          ),
-                          child: NavigationBar(
-                            height: GaussMetrics.compactNavigationHeight,
-                            backgroundColor: Colors.transparent,
-                            selectedIndex: shell.currentIndex,
-                            destinations: destinations,
-                            onDestinationSelected: _go,
-                          ),
-                        ),
+                : Padding(
+                    padding: EdgeInsets.fromLTRB(16, 0, 16, footerSafeBottom),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      heightFactor: 1,
+                      child: _GaussFloatingNavigation(
+                        selectedIndex: shell.currentIndex,
+                        onSelected: _go,
                       ),
                     ),
                   ),
@@ -515,7 +578,12 @@ class _AppShell extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Expanded(child: shell),
+                      Expanded(
+                        child: _BranchEntrance(
+                          activeIndex: shell.currentIndex,
+                          child: shell,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -525,6 +593,286 @@ class _AppShell extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+}
+
+class _GaussFloatingNavigation extends StatelessWidget {
+  const _GaussFloatingNavigation({
+    required this.selectedIndex,
+    required this.onSelected,
+  });
+
+  final int selectedIndex;
+  final ValueChanged<int> onSelected;
+
+  static const _items = <({String label, GaussDestinationGlyph glyph})>[
+    (label: 'Map', glyph: GaussDestinationGlyph.map),
+    (label: 'Study', glyph: GaussDestinationGlyph.practice),
+    (label: 'Insights', glyph: GaussDestinationGlyph.insights),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    // At accessibility scales the three full labels cannot coexist inside a
+    // 320dp viewport without broken words or a bulky two-row footer. The
+    // custom glyphs become the visible navigation language while Tooltip and
+    // Semantics retain every explicit destination name.
+    final symbolOnly = MediaQuery.textScalerOf(context).scale(1) >= 1.3;
+    final itemWidth = symbolOnly ? 58.0 : 82.0;
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(22),
+        boxShadow: [
+          BoxShadow(
+            color: GaussColors.abyss.withValues(alpha: .68),
+            blurRadius: 22,
+            spreadRadius: -6,
+            offset: const Offset(0, 9),
+          ),
+          BoxShadow(
+            color: GaussColors.brass.withValues(alpha: .08),
+            blurRadius: 16,
+            spreadRadius: -8,
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        key: const ValueKey('gauss-floating-navigation-dock'),
+        borderRadius: BorderRadius.circular(22),
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  GaussColors.deepInk.withValues(alpha: .66),
+                  GaussColors.ink.withValues(alpha: .78),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(22),
+              border: Border.all(
+                color: GaussColors.brassLight.withValues(alpha: .22),
+              ),
+            ),
+            child: Semantics(
+              container: true,
+              explicitChildNodes: true,
+              child: SizedBox(
+                height: GaussMetrics.compactNavigationHeight,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    for (var index = 0; index < _items.length; index++)
+                      _GaussNavigationItem(
+                        key: ValueKey(
+                          'gauss-nav-${_items[index].label.toLowerCase()}',
+                        ),
+                        label: _items[index].label,
+                        glyph: _items[index].glyph,
+                        selected: selectedIndex == index,
+                        width: itemWidth,
+                        showLabel: !symbolOnly,
+                        onPressed: () => onSelected(index),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _GaussNavigationItem extends StatelessWidget {
+  const _GaussNavigationItem({
+    required this.label,
+    required this.glyph,
+    required this.selected,
+    required this.width,
+    required this.showLabel,
+    required this.onPressed,
+    super.key,
+  });
+
+  final String label;
+  final GaussDestinationGlyph glyph;
+  final bool selected;
+  final double width;
+  final bool showLabel;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) => SizedBox(
+    width: width,
+    height: GaussMetrics.compactNavigationHeight,
+    child: Tooltip(
+      message: label,
+      child: Semantics(
+        button: true,
+        selected: selected,
+        label: label,
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: onPressed,
+            borderRadius: BorderRadius.circular(20),
+            splashColor: GaussColors.brassLight.withValues(alpha: .12),
+            highlightColor: GaussColors.brassLight.withValues(alpha: .07),
+            focusColor: GaussColors.brassLight.withValues(alpha: .1),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                AnimatedPositioned(
+                  duration: GaussMotion.resolve(context, GaussMotion.micro),
+                  curve: Curves.easeOutCubic,
+                  top: showLabel
+                      ? selected
+                            ? 2
+                            : 4
+                      : selected
+                      ? 11
+                      : 13,
+                  child: AnimatedContainer(
+                    duration: GaussMotion.resolve(context, GaussMotion.micro),
+                    width: selected ? 31 : 29,
+                    height: selected ? 31 : 29,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: selected
+                          ? GaussColors.brass.withValues(alpha: .17)
+                          : Colors.transparent,
+                      border: Border.all(
+                        color: selected
+                            ? GaussColors.brassLight.withValues(alpha: .3)
+                            : Colors.transparent,
+                      ),
+                    ),
+                    child: Center(
+                      child: GaussNavGlyph(glyph: glyph, selected: selected),
+                    ),
+                  ),
+                ),
+                if (showLabel)
+                  Positioned(
+                    left: 2,
+                    right: 2,
+                    bottom: 4,
+                    child: Text(
+                      label,
+                      maxLines: 1,
+                      softWrap: false,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: selected
+                            ? GaussColors.brassLight
+                            : GaussColors.fog,
+                        fontSize: 10,
+                        height: 1,
+                        fontWeight: selected
+                            ? FontWeight.w900
+                            : FontWeight.w700,
+                        letterSpacing: selected ? .25 : .1,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+/// A deliberate, tiny orbit drift makes destination changes feel related to
+/// the map without delaying navigation. It leaves all branch state mounted
+/// and becomes a no-op under the platform's reduced-motion preference.
+class _BranchEntrance extends StatefulWidget {
+  const _BranchEntrance({required this.activeIndex, required this.child});
+
+  final int activeIndex;
+  final Widget child;
+
+  @override
+  State<_BranchEntrance> createState() => _BranchEntranceState();
+}
+
+class _BranchEntranceState extends State<_BranchEntrance>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: _GaussRouteMotion.branch,
+    value: 1,
+  );
+  var _logicalDirection = 1;
+  var _reducedMotion = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final reducedMotion = MediaQuery.disableAnimationsOf(context);
+    if (_reducedMotion == reducedMotion) return;
+    _reducedMotion = reducedMotion;
+    _controller.duration = GaussMotion.resolve(
+      context,
+      _GaussRouteMotion.branch,
+    );
+    if (reducedMotion) {
+      // A preference change during motion settles immediately without
+      // replaying the entrance when full motion is enabled again.
+      _controller.value = 1;
+    }
+  }
+
+  @override
+  void didUpdateWidget(covariant _BranchEntrance oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    final delta = widget.activeIndex - oldWidget.activeIndex;
+    if (delta == 0) return;
+    _logicalDirection = delta.sign;
+    if (_reducedMotion) {
+      _controller.value = 1;
+      return;
+    }
+    _controller.forward(from: 0);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_reducedMotion) return widget.child;
+    final motion = CurvedAnimation(
+      parent: _controller,
+      curve: _GaussRouteMotion.enterCurve,
+    );
+    final readingDirection = Directionality.of(context);
+    final visualDirection = readingDirection == TextDirection.ltr
+        ? _logicalDirection
+        : -_logicalDirection;
+    final position = Tween<Offset>(
+      begin: Offset(_GaussRouteMotion.branchTravel * visualDirection, 0),
+      end: Offset.zero,
+    ).animate(motion);
+    final opacity = Tween<double>(
+      begin: _GaussRouteMotion.branchStartOpacity,
+      end: 1,
+    ).animate(motion);
+    return RepaintBoundary(
+      child: FadeTransition(
+        key: const ValueKey('gauss-branch-route-motion'),
+        opacity: opacity,
+        child: SlideTransition(position: position, child: widget.child),
+      ),
     );
   }
 }

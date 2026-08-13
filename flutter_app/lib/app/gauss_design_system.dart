@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/widgets.dart';
 
 /// The single adaptive vocabulary for every Gauss surface.
@@ -71,16 +73,16 @@ abstract final class GaussSpacing {
 
 abstract final class GaussMetrics {
   static const minTouchTarget = 48.0;
-  static const compactNavigationHeight = 68.0;
+  static const compactNavigationHeight = 58.0;
   static const compactNavigationOuterInset = 10.0;
   static const compactChromeReserve = 96.0;
 
   /// The compact mission dock carries a real next-action summary, not merely
   /// a navigation affordance. Keep the reserved map clearance in step with
   /// that readable two-line treatment so path nodes never hide behind it.
-  static const mapDockHeight = 92.0;
+  static const mapDockHeight = 108.0;
   static const mapOverlayGap = 12.0;
-  static const mapCompactDockBottom = 92.0;
+  static const mapCompactDockBottom = compactNavigationHeight + mapOverlayGap;
   static const mapRailDockBottom = 14.0;
   static const mapInspectorWidth = 346.0;
   static const mapWideInspectorWidth = 378.0;
@@ -95,6 +97,36 @@ abstract final class GaussMetrics {
 
   static double mapScrollEndInset(GaussWindowClass window) =>
       mapBottomObstruction(window) + GaussSpacing.space32;
+
+  /// Keeps the floating compact footer above both gesture and three-button
+  /// system navigation.  `viewPadding` is retained while the keyboard is
+  /// visible; the extra optical inset keeps the app's own glass footer from
+  /// visually touching the Android system controls.
+  static double compactNavigationSafeBottom(BuildContext context) =>
+      math.max(
+        MediaQuery.paddingOf(context).bottom,
+        MediaQuery.viewPaddingOf(context).bottom,
+      ) +
+      compactNavigationOuterInset;
+
+  static double compactNavigationFootprint(BuildContext context) =>
+      compactNavigationHeight + compactNavigationSafeBottom(context);
+
+  /// The content-hugging footer owns no internal system padding; the shell
+  /// keeps Android's safe inset outside its glass. The map therefore clears
+  /// exactly one system inset, the footer, and one visible optical gap.
+  static double compactMapDockBottom(BuildContext context) {
+    // A parent Scaffold may zero the nested MediaQuery padding after laying
+    // out its bottom bar. Reconstructing from the root FlutterView keeps the
+    // Android system inset authoritative inside the Map branch as well.
+    final systemBottom = MediaQueryData.fromView(
+      View.of(context),
+    ).viewPadding.bottom;
+    return compactNavigationHeight +
+        systemBottom +
+        compactNavigationOuterInset +
+        mapOverlayGap;
+  }
 }
 
 abstract final class GaussTypeScale {

@@ -26,6 +26,28 @@ const runtimeAttestationFile = path.join(
 );
 const repairQueueFile = path.join(certificationRoot, "repair-queue.jsonl");
 const repairOverlayFile = path.join(certificationRoot, "repair-overlays.jsonl");
+const renderReceiptsFile = path.join(certificationRoot, "render-receipts.jsonl");
+const sourceFidelityReceiptsFile = path.join(
+  certificationRoot,
+  "source-fidelity-receipts.jsonl",
+);
+const sourceRepairReceiptsFile = path.join(
+  certificationRoot,
+  "source-repair-receipts.jsonl",
+);
+const scientificCorrectionReceiptsFile = path.join(
+  certificationRoot,
+  "scientific-correction-receipts.jsonl",
+);
+const embeddedMediaNumeralReceiptsFile = path.join(
+  certificationRoot,
+  "embedded-media-numeral-receipts.jsonl",
+);
+const certifiedRuntimeFile = path.join(
+  assetRoot,
+  "curriculum",
+  "certified_question_runtime_v1.json",
+);
 const screeningRoot = path.join(certificationRoot, "batches", "screening");
 const mismatchReportFile = path.join(
   repoRoot,
@@ -270,6 +292,36 @@ function imagesOf(blocks) {
     .filter((block) => block?.type === "image")
     .map((block) => block.asset)
     .filter(Boolean);
+}
+
+function effectiveQuestionRow(
+  record,
+  sourceEntry,
+  sourceRepairReceiptById,
+  scientificCorrectionReceiptById = new Map(),
+) {
+  if (
+    ![
+      "verified_repaired_source",
+      "verified_scientific_correction",
+    ].includes(record.source_fidelity?.status)
+  ) {
+    return sourceEntry.runtimeRow;
+  }
+  const review = (record.source_fidelity.reviews ?? []).find(
+    (candidate) =>
+      candidate.role ===
+      (record.source_fidelity.status === "verified_scientific_correction"
+        ? "scientific_correction_reviewer"
+        : "source_repair_reviewer"),
+  );
+  const receipt =
+    record.source_fidelity.status === "verified_scientific_correction"
+      ? scientificCorrectionReceiptById.get(review?.receipt_id)
+      : sourceRepairReceiptById.get(review?.receipt_id);
+  return receipt?.content_patch
+    ? { ...sourceEntry.runtimeRow, ...receipt.content_patch }
+    : sourceEntry.runtimeRow;
 }
 
 function countControlCharacters(value) {
@@ -754,12 +806,205 @@ function validateReview(review, role, option, errors, at) {
   }
 }
 
+function validateCertifiedRuntimeAsset({
+  records,
+  sourceById,
+  sourceSetSha256,
+  renderReceiptById,
+  sourceFidelityReceiptById,
+  sourceRepairReceiptById,
+  scientificCorrectionReceiptById,
+  errors,
+}) {
+  const at = "certified-runtime";
+  if (!fs.existsSync(certifiedRuntimeFile)) {
+    errors.push(`${at} asset is missing`);
+    return;
+  }
+  let runtime;
+  try {
+    runtime = readJson(certifiedRuntimeFile);
+  } catch (error) {
+    errors.push(`${at} JSON is invalid: ${error.message}`);
+    return;
+  }
+  const contractHash = runtime.contract_sha256;
+  const payload = { ...runtime };
+  delete payload.contract_sha256;
+  if (
+    runtime.schema_version !== 1 ||
+    !/^[a-f0-9]{64}$/u.test(contractHash ?? "") ||
+    digest(payload) !== contractHash
+  ) {
+    errors.push(`${at} has an invalid schema or contract hash`);
+  }
+  if (
+    runtime.source_question_count !== expectedQuestionCount ||
+    runtime.source_set_sha256 !== sourceSetSha256 ||
+    runtime.manifest_file_sha256 !== digestFile(manifestFile) ||
+    runtime.render_receipts_file_sha256 !== digestFile(renderReceiptsFile) ||
+    runtime.source_fidelity_receipts_file_sha256 !==
+      digestFile(sourceFidelityReceiptsFile) ||
+    runtime.source_repair_receipts_file_sha256 !==
+      (fs.existsSync(sourceRepairReceiptsFile)
+        ? digestFile(sourceRepairReceiptsFile)
+        : null) ||
+    runtime.scientific_correction_receipts_file_sha256 !==
+      (fs.existsSync(scientificCorrectionReceiptsFile)
+        ? digestFile(scientificCorrectionReceiptsFile)
+        : null) ||
+    runtime.embedded_media_numeral_receipts_file_sha256 !==
+      (fs.existsSync(embeddedMediaNumeralReceiptsFile)
+        ? digestFile(embeddedMediaNumeralReceiptsFile)
+        : null)
+  ) {
+    errors.push(`${at} is stale against certification evidence`);
+  }
+  const usableRecords = records.filter((record) => record.usable);
+  const entries = Array.isArray(runtime.questions) ? runtime.questions : [];
+  const topicKeys = [
+    ...new Set([...sourceById.values()].map((entry) => entry.topic.topic_key)),
+  ];
+  const expectedTopicCounts = Object.fromEntries(
+    topicKeys.map((topicKey) => [
+      topicKey,
+      usableRecords.filter((record) => record.taxonomy.topic_key === topicKey)
+        .length,
+    ]),
+  );
+  if (
+    runtime.mission_ready_count !== usableRecords.length ||
+    entries.length !== usableRecords.length ||
+    canonicalJson(runtime.topic_mission_ready_counts) !==
+      canonicalJson(expectedTopicCounts)
+  ) {
+    errors.push(`${at} does not reconcile usable and per-topic counts`);
+  }
+  const entryById = new Map();
+  const allowedPatchFields = new Set([
+    "stem",
+    "options",
+    "solution",
+    "smart_shortcut",
+  ]);
+  for (const [index, entry] of entries.entries()) {
+    const entryAt = `${at}:${index + 1}:${entry?.question_id ?? "<missing-id>"}`;
+    if (!entry?.question_id || entryById.has(entry.question_id)) {
+      errors.push(`${entryAt} has a missing or duplicate ID`);
+      continue;
+    }
+    entryById.set(entry.question_id, entry);
+    const record = records.find(
+      (candidate) => candidate.question_id === entry.question_id,
+    );
+    const sourceEntry = sourceById.get(entry.question_id);
+    if (!record || !sourceEntry || !record.usable) {
+      errors.push(`${entryAt} is not a currently usable source record`);
+      continue;
+    }
+    const sourceReview = (record.source_fidelity?.reviews ?? []).find(
+      (review) =>
+        review.role ===
+        (record.source_fidelity?.status === "verified_scientific_correction"
+          ? "scientific_correction_reviewer"
+          : record.source_fidelity?.status === "verified_repaired_source"
+            ? "source_repair_reviewer"
+            : "source_fidelity_reviewer"),
+    );
+    const expected = {
+      subject: record.subject,
+      topic_key: record.taxonomy.topic_key,
+      section_id: record.taxonomy.section_id,
+      subtopic_key: record.taxonomy.subtopic_key,
+      concept_tags: record.taxonomy.concept_tags,
+      prerequisites: record.taxonomy.prerequisites,
+      reviewed_difficulty: record.difficulty.reviewed,
+      source_sha256: record.source_sha256,
+      runtime_record_sha256: record.runtime_record_sha256,
+      source_option_index: record.answer.source_option,
+      effective_option_index: record.answer.effective_option,
+      solution_verified: true,
+      render_receipt_id: record.extraction.render_gate.receipt_id,
+      source_fidelity_receipt_id: sourceReview?.receipt_id,
+    };
+    for (const [field, value] of Object.entries(expected)) {
+      if (canonicalJson(entry[field]) !== canonicalJson(value)) {
+        errors.push(`${entryAt} has stale ${field}`);
+      }
+    }
+    if (!renderReceiptById.has(entry.render_receipt_id)) {
+      errors.push(`${entryAt} references a missing render receipt`);
+    }
+    if (!sourceFidelityReceiptById.has(entry.source_fidelity_receipt_id)) {
+      if (!sourceRepairReceiptById.has(entry.source_fidelity_receipt_id)) {
+        if (
+          !scientificCorrectionReceiptById.has(
+            entry.source_fidelity_receipt_id,
+          )
+        ) {
+          errors.push(`${entryAt} references missing source evidence`);
+        }
+      }
+    }
+    let effectiveRow = sourceEntry.runtimeRow;
+    if (entry.content_patch == null) {
+      if (entry.effective_record_sha256 !== entry.runtime_record_sha256) {
+        errors.push(`${entryAt} changes hash without a content patch`);
+      }
+    } else if (
+      typeof entry.content_patch !== "object" ||
+      Array.isArray(entry.content_patch) ||
+      Object.keys(entry.content_patch).length === 0 ||
+      Object.keys(entry.content_patch).some(
+        (field) => !allowedPatchFields.has(field),
+      )
+    ) {
+      errors.push(`${entryAt} has a forbidden content patch`);
+    } else {
+      effectiveRow = { ...sourceEntry.runtimeRow, ...entry.content_patch };
+    }
+    if (digest(effectiveRow) !== entry.effective_record_sha256) {
+      errors.push(`${entryAt} effective record hash is stale`);
+    }
+  }
+  if (
+    usableRecords.some((record) => !entryById.has(record.question_id)) ||
+    entryById.size !== usableRecords.length
+  ) {
+    errors.push(`${at} omits or adds a usable question`);
+  }
+}
+
 function validate() {
   const { rows: sourceEntries } = loadSource();
   const { taxonomy, topicToSection } = loadTaxonomy();
   const mediaIndex = buildMediaIndex(sourceEntries);
   const sourceById = new Map(sourceEntries.map((entry) => [entry.row.id, entry]));
   const records = readJsonLines(manifestFile);
+  const renderReceipts = fs.existsSync(renderReceiptsFile)
+    ? readJsonLines(renderReceiptsFile)
+    : [];
+  const sourceFidelityReceipts = fs.existsSync(sourceFidelityReceiptsFile)
+    ? readJsonLines(sourceFidelityReceiptsFile)
+    : [];
+  const sourceRepairReceipts = fs.existsSync(sourceRepairReceiptsFile)
+    ? readJsonLines(sourceRepairReceiptsFile)
+    : [];
+  const scientificCorrectionReceipts = fs.existsSync(
+    scientificCorrectionReceiptsFile,
+  )
+    ? readJsonLines(scientificCorrectionReceiptsFile)
+    : [];
+  const embeddedMediaNumeralReceipts = fs.existsSync(
+    embeddedMediaNumeralReceiptsFile,
+  )
+    ? readJsonLines(embeddedMediaNumeralReceiptsFile)
+    : [];
+  const renderReceiptById = new Map();
+  const sourceFidelityReceiptById = new Map();
+  const sourceRepairReceiptById = new Map();
+  const scientificCorrectionReceiptById = new Map();
+  const embeddedMediaNumeralReceiptByAsset = new Map();
   const mediaManifest = readJsonLines(mediaManifestFile);
   const mediaManifestByAsset = new Map(
     mediaManifest.map((entry) => [entry.asset, entry]),
@@ -775,6 +1020,387 @@ function validate() {
   const definedSubtopics = new Set(
     (taxonomy.subtopics ?? []).map((subtopic) => subtopic.key),
   );
+  const sourceSetSha256 = digest(
+    records.map((record) => ({
+      question_id: record.question_id,
+      source_sha256: record.source_sha256,
+      runtime_record_sha256: record.runtime_record_sha256,
+      referenced_media: record.referenced_media,
+    })),
+  );
+
+  for (const [index, receipt] of embeddedMediaNumeralReceipts.entries()) {
+    const at = `embedded-media-numeral-receipt:${index + 1}`;
+    if (
+      receipt.schema_version !== 1 ||
+      !receipt.asset ||
+      embeddedMediaNumeralReceiptByAsset.has(receipt.asset) ||
+      !["no_digits", "ascii_only"].includes(receipt.verdict) ||
+      !receipt.reviewer_id ||
+      !receipt.reviewed_on ||
+      !/^[a-f0-9]{64}$/u.test(receipt.sha256 ?? "") ||
+      !fs.existsSync(path.join(assetRoot, receipt.asset)) ||
+      digestFile(path.join(assetRoot, receipt.asset)) !== receipt.sha256
+    ) {
+      errors.push(`${at} is missing, duplicate, stale, or not ASCII-safe`);
+      continue;
+    }
+    embeddedMediaNumeralReceiptByAsset.set(receipt.asset, receipt);
+  }
+
+  for (const [index, receipt] of renderReceipts.entries()) {
+    const at = `render-receipt:${index + 1}`;
+    if (!receipt.receipt_id || renderReceiptById.has(receipt.receipt_id)) {
+      errors.push(`${at} missing or duplicate receipt_id`);
+      continue;
+    }
+    renderReceiptById.set(receipt.receipt_id, receipt);
+    if (
+      receipt.schema_version !== 1 ||
+      receipt.status !== "passed" ||
+      receipt.source_set_sha256 !== sourceSetSha256
+    ) {
+      errors.push(`${at} is stale or did not pass against the current source set`);
+    }
+    if (
+      receipt.assertions?.question_count !== expectedQuestionCount ||
+      receipt.assertions?.text_block_count !== 22032 ||
+      receipt.assertions?.formula_count_minimum < 37001 ||
+      receipt.assertions?.media_asset_count !== expectedMediaCount ||
+      receipt.assertions?.persian_math_200_percent_widget !== "passed" ||
+      receipt.assertions?.english_chrome_under_persian_device_locale !==
+        "passed" ||
+      receipt.assertions?.learning_text_ascii_numerals !== "passed" ||
+      receipt.assertions?.learning_text_ascii_numerals_question_count !==
+        expectedQuestionCount ||
+      receipt.assertions?.learning_text_ascii_numerals_block_count_minimum <
+        22000 ||
+      receipt.assertions?.source_mutation !== "none"
+    ) {
+      errors.push(`${at} lacks the complete parser/media/large-text assertions`);
+    }
+    for (const evidence of [
+      ...(receipt.test_files ?? []),
+      receipt.asset_index,
+      receipt.evidence_log,
+    ].filter(Boolean)) {
+      const evidenceFile = path.join(repoRoot, evidence.path ?? "");
+      if (
+        !evidence.path ||
+        !/^[a-f0-9]{64}$/u.test(evidence.sha256 ?? "") ||
+        !fs.existsSync(evidenceFile) ||
+        digestFile(evidenceFile) !== evidence.sha256
+      ) {
+        errors.push(`${at} has missing or stale evidence file ${evidence.path ?? "<missing>"}`);
+      }
+    }
+    if ((receipt.test_files ?? []).length !== 3) {
+      errors.push(`${at} must bind all three Flutter render/language gate files`);
+    }
+  }
+
+  for (const [index, receipt] of sourceFidelityReceipts.entries()) {
+    const at = `source-fidelity-receipt:${index + 1}`;
+    if (!receipt.receipt_id || sourceFidelityReceiptById.has(receipt.receipt_id)) {
+      errors.push(`${at} missing or duplicate receipt_id`);
+      continue;
+    }
+    sourceFidelityReceiptById.set(receipt.receipt_id, receipt);
+    const record = records.find((candidate) => candidate.question_id === receipt.question_id);
+    if (
+      receipt.schema_version !== 1 ||
+      !record ||
+      receipt.source_sha256 !== record.source_sha256 ||
+      !["matches_source", "source_conflict"].includes(receipt.verdict) ||
+      !receipt.reviewer_id ||
+      !receipt.reviewed_on
+    ) {
+      errors.push(`${at} has invalid identity, source hash, or verdict`);
+      continue;
+    }
+    const requiredFields = ["question_number", "source_option_index", "stem", "solution"];
+    if (
+      receipt.verdict === "matches_source" &&
+      (!requiredFields.every((field) => receipt.verified_fields?.includes(field)) ||
+        !receipt.verified_fields.includes("options") ||
+        receipt.conflict != null)
+    ) {
+      errors.push(`${at} source-match receipt lacks a complete field audit`);
+    }
+    if (
+      receipt.verdict === "source_conflict" &&
+      (!receipt.conflict?.kind || !(receipt.conflict?.fields ?? []).length)
+    ) {
+      errors.push(`${at} conflict receipt lacks field-level conflict evidence`);
+    }
+    for (const [label, evidence] of [
+      ["question", receipt.question_source],
+      ["solution", receipt.solution_source],
+    ]) {
+      if (
+        !evidence?.logical_pdf ||
+        !/^[a-f0-9]{64}$/u.test(evidence.pdf_sha256 ?? "") ||
+        !Number.isInteger(evidence.pdf_ordinal) ||
+        evidence.pdf_ordinal < 1 ||
+        !/^[a-f0-9]{64}$/u.test(evidence.rendered_page_sha256 ?? "") ||
+        evidence.question_number !== record.provenance.question_number
+      ) {
+        errors.push(`${at} has invalid ${label} PDF/page evidence`);
+      }
+    }
+    if (
+      receipt.question_source?.recorded_question_page !== record.provenance.question_page ||
+      receipt.solution_source?.recorded_solution_page !== record.provenance.solution_page
+    ) {
+      errors.push(`${at} provenance page binding is stale`);
+    }
+  }
+
+  for (const [index, receipt] of sourceRepairReceipts.entries()) {
+    const at = `source-repair-receipt:${index + 1}`;
+    if (!receipt.receipt_id || sourceRepairReceiptById.has(receipt.receipt_id)) {
+      errors.push(`${at} missing or duplicate receipt_id`);
+      continue;
+    }
+    sourceRepairReceiptById.set(receipt.receipt_id, receipt);
+    const record = records.find(
+      (candidate) => candidate.question_id === receipt.question_id,
+    );
+    const sourceEntry = sourceById.get(receipt.question_id);
+    const conflictReceipt = sourceFidelityReceiptById.get(
+      receipt.conflict_receipt_id,
+    );
+    if (
+      receipt.schema_version !== 1 ||
+      receipt.verdict !== "repaired_matches_source" ||
+      !record ||
+      !sourceEntry ||
+      receipt.source_sha256 !== record.source_sha256 ||
+      receipt.runtime_record_sha256 !== record.runtime_record_sha256 ||
+      conflictReceipt?.question_id !== receipt.question_id ||
+      conflictReceipt?.verdict !== "source_conflict" ||
+      receipt.conflict_receipt_sha256 !== digest(conflictReceipt) ||
+      !receipt.reviewer_id ||
+      !receipt.reviewed_on
+    ) {
+      errors.push(`${at} has stale identity or conflict evidence`);
+      continue;
+    }
+    const repairedFields = receipt.repaired_fields ?? [];
+    const patch = receipt.content_patch;
+    const allowedPatchFields = new Set([
+      "stem",
+      "options",
+      "solution",
+      "smart_shortcut",
+    ]);
+    if (
+      !Array.isArray(repairedFields) ||
+      repairedFields.length === 0 ||
+      !patch ||
+      typeof patch !== "object" ||
+      Array.isArray(patch) ||
+      canonicalJson([...Object.keys(patch)].sort()) !==
+        canonicalJson([...repairedFields].sort()) ||
+      Object.keys(patch).some((field) => !allowedPatchFields.has(field)) ||
+      repairedFields.some(
+        (field) => !conflictReceipt.conflict?.fields?.includes(field),
+      )
+    ) {
+      errors.push(`${at} patch does not exactly resolve the observed fields`);
+    }
+    const effectiveRow = { ...sourceEntry.runtimeRow, ...patch };
+    if (digest(effectiveRow) !== receipt.effective_record_sha256) {
+      errors.push(`${at} effective record hash is stale`);
+    }
+    if (
+      canonicalJson(receipt.question_source) !==
+        canonicalJson(conflictReceipt.question_source) ||
+      canonicalJson(receipt.solution_source) !==
+        canonicalJson(conflictReceipt.solution_source) ||
+      !["question_number", "source_option_index", "stem", "options", "solution"].every(
+        (field) => receipt.verified_fields?.includes(field),
+      )
+    ) {
+      errors.push(`${at} does not retain complete PDF/source evidence`);
+    }
+    for (const evidence of [
+      receipt.render_evidence?.test_file,
+      receipt.render_evidence?.evidence_log,
+    ]) {
+      const evidenceFile = path.join(repoRoot, evidence?.path ?? "");
+      if (
+        !evidence?.path ||
+        !/^[a-f0-9]{64}$/u.test(evidence.sha256 ?? "") ||
+        !fs.existsSync(evidenceFile) ||
+        digestFile(evidenceFile) !== evidence.sha256
+      ) {
+        errors.push(`${at} has missing or stale render evidence`);
+      }
+    }
+    if (
+      receipt.render_evidence?.assertions?.width_dp !== 320 ||
+      receipt.render_evidence?.assertions?.text_scale_percent !== 200 ||
+      receipt.render_evidence?.assertions?.no_flutter_exception !== true ||
+      receipt.render_evidence?.assertions?.immutable_source_mutation !== "none"
+    ) {
+      errors.push(`${at} lacks the repair render assertions`);
+    }
+    if (receipt.answer_mapping != null) {
+      const mapping = receipt.answer_mapping;
+      if (
+        !Number.isInteger(mapping.from_option) ||
+        !Number.isInteger(mapping.to_option) ||
+        mapping.to_option !== record.answer.source_option ||
+        mapping.source_key_option !== record.answer.source_option ||
+        !mapping.semantic_answer ||
+        mapping.relation !== "same_semantic_answer_after_source_option_recovery"
+      ) {
+        errors.push(`${at} has an invalid answer remapping`);
+      }
+    }
+  }
+
+  for (const [index, receipt] of scientificCorrectionReceipts.entries()) {
+    const at = `scientific-correction-receipt:${index + 1}`;
+    if (
+      !receipt.receipt_id ||
+      scientificCorrectionReceiptById.has(receipt.receipt_id)
+    ) {
+      errors.push(`${at} missing or duplicate receipt_id`);
+      continue;
+    }
+    scientificCorrectionReceiptById.set(receipt.receipt_id, receipt);
+    const record = records.find(
+      (candidate) => candidate.question_id === receipt.question_id,
+    );
+    const sourceEntry = sourceById.get(receipt.question_id);
+    const conflictReceipt = sourceFidelityReceiptById.get(
+      receipt.source_conflict_receipt_id,
+    );
+    if (
+      receipt.schema_version !== 1 ||
+      receipt.verdict !== "scientifically_corrected" ||
+      !record ||
+      !sourceEntry ||
+      receipt.source_sha256 !== record.source_sha256 ||
+      receipt.runtime_record_sha256 !== record.runtime_record_sha256 ||
+      conflictReceipt?.question_id !== receipt.question_id ||
+      conflictReceipt?.verdict !== "source_conflict" ||
+      receipt.source_conflict_receipt_sha256 !== digest(conflictReceipt) ||
+      !receipt.reviewer_id ||
+      !receipt.reviewed_on
+    ) {
+      errors.push(`${at} has stale identity or conflict evidence`);
+      continue;
+    }
+    const correctedFields = receipt.corrected_fields ?? [];
+    const patch = receipt.content_patch;
+    const allowedPatchFields = new Set([
+      "stem",
+      "options",
+      "solution",
+      "smart_shortcut",
+    ]);
+    if (
+      !Array.isArray(correctedFields) ||
+      correctedFields.length === 0 ||
+      !patch ||
+      typeof patch !== "object" ||
+      Array.isArray(patch) ||
+      canonicalJson([...Object.keys(patch)].sort()) !==
+        canonicalJson([...correctedFields].sort()) ||
+      Object.keys(patch).some((field) => !allowedPatchFields.has(field)) ||
+      correctedFields.some(
+        (field) => !conflictReceipt.conflict?.fields?.includes(field),
+      )
+    ) {
+      errors.push(`${at} patch does not exactly resolve the observed fields`);
+    }
+    const effectiveRow = { ...sourceEntry.runtimeRow, ...patch };
+    if (digest(effectiveRow) !== receipt.effective_record_sha256) {
+      errors.push(`${at} effective record hash is stale`);
+    }
+    const mapping = receipt.answer_mapping;
+    if (
+      !Number.isInteger(mapping?.immutable_source_option) ||
+      !Number.isInteger(mapping?.printed_source_option) ||
+      !Number.isInteger(mapping?.effective_option) ||
+      mapping.immutable_source_option !== record.answer.source_option ||
+      mapping.printed_source_option !== mapping.effective_option ||
+      !mapping.semantic_answer ||
+      mapping.relation !==
+        "scientific_override_of_immutable_extracted_key"
+    ) {
+      errors.push(`${at} has an invalid scientific answer mapping`);
+    }
+    if (
+      receipt.classification?.registry_version !== taxonomy.version ||
+      receipt.classification?.section_id !== record.taxonomy.section_id ||
+      receipt.classification?.topic_key !== record.taxonomy.topic_key ||
+      !definedSubtopics.has(receipt.classification?.subtopic_key) ||
+      !(receipt.classification?.concept_tags ?? []).length
+    ) {
+      errors.push(`${at} has an invalid taxonomy adjudication`);
+    }
+    for (const [role, evidence] of Object.entries(
+      receipt.evidence_files ?? {},
+    )) {
+      const evidenceFile = path.join(repoRoot, evidence?.path ?? "");
+      if (
+        !role ||
+        !evidence?.path ||
+        !/^[a-f0-9]{64}$/u.test(evidence.sha256 ?? "") ||
+        !/^[a-f0-9]{64}$/u.test(evidence.row_sha256 ?? "") ||
+        !fs.existsSync(evidenceFile) ||
+        digestFile(evidenceFile) !== evidence.sha256 ||
+        !readJsonLines(evidenceFile).some(
+          (row) =>
+            row.question_id === receipt.question_id &&
+            row.source_sha256 === receipt.source_sha256 &&
+            digest(row) === evidence.row_sha256,
+        )
+      ) {
+        errors.push(`${at} has missing or stale ${role} evidence`);
+      }
+    }
+    if (Object.keys(receipt.evidence_files ?? {}).length < 6) {
+      errors.push(`${at} lacks the complete scientific review evidence set`);
+    }
+    const proofFile = path.join(repoRoot, receipt.proof_evidence?.path ?? "");
+    if (
+      !receipt.proof_evidence?.path ||
+      !fs.existsSync(proofFile) ||
+      digestFile(proofFile) !== receipt.proof_evidence.sha256 ||
+      receipt.proof_evidence.domain_guard_closed !== true ||
+      receipt.proof_evidence.exact_answer !== mapping?.semantic_answer
+    ) {
+      errors.push(`${at} lacks a current exact proof receipt`);
+    }
+    for (const evidence of [
+      receipt.render_evidence?.test_file,
+      receipt.render_evidence?.evidence_log,
+    ]) {
+      const evidenceFile = path.join(repoRoot, evidence?.path ?? "");
+      if (
+        !evidence?.path ||
+        !fs.existsSync(evidenceFile) ||
+        digestFile(evidenceFile) !== evidence.sha256
+      ) {
+        errors.push(`${at} has missing or stale render evidence`);
+      }
+    }
+    if (
+      receipt.render_evidence?.assertions?.width_dp !== 320 ||
+      receipt.render_evidence?.assertions?.text_scale_percent !== 200 ||
+      receipt.render_evidence?.assertions?.no_flutter_exception !== true ||
+      receipt.render_evidence?.assertions?.learning_content_digits !==
+        "ascii" ||
+      receipt.render_evidence?.assertions?.immutable_source_mutation !== "none"
+    ) {
+      errors.push(`${at} lacks scientific-correction render assertions`);
+    }
+  }
 
   for (const [index, record] of records.entries()) {
     const at = `manifest:${index + 1}:${record.question_id ?? "<missing-id>"}`;
@@ -892,11 +1518,76 @@ function validate() {
         }
       }
     }
+    if (record.extraction?.render_gate?.status === "passed") {
+      const receipt = renderReceiptById.get(record.extraction.render_gate.receipt_id);
+      if (!receipt || receipt.status !== "passed") {
+        errors.push(`${at} passed render gate lacks a current receipt`);
+      }
+    }
+    if (
+      [
+        "verified_source",
+        "verified_repaired_source",
+        "verified_scientific_correction",
+        "source_conflict",
+      ].includes(record.source_fidelity?.status)
+    ) {
+      const repaired =
+        record.source_fidelity.status === "verified_repaired_source";
+      const scientificallyCorrected =
+        record.source_fidelity.status === "verified_scientific_correction";
+      const review = (record.source_fidelity.reviews ?? []).find(
+        (candidate) =>
+          candidate.role ===
+          (scientificallyCorrected
+            ? "scientific_correction_reviewer"
+            : repaired
+              ? "source_repair_reviewer"
+              : "source_fidelity_reviewer"),
+      );
+      const receipt = scientificallyCorrected
+        ? scientificCorrectionReceiptById.get(review?.receipt_id)
+        : repaired
+          ? sourceRepairReceiptById.get(review?.receipt_id)
+          : sourceFidelityReceiptById.get(review?.receipt_id);
+      const expectedVerdict = scientificallyCorrected
+        ? "scientifically_corrected"
+        : repaired
+          ? "repaired_matches_source"
+          : record.source_fidelity.status === "verified_source"
+            ? "matches_source"
+            : "source_conflict";
+      if (
+        !review ||
+        !receipt ||
+        receipt.question_id !== record.question_id ||
+        receipt.source_sha256 !== record.source_sha256 ||
+        receipt.reviewer_id !== review.reviewer_id ||
+        receipt.verdict !== expectedVerdict ||
+        digest(receipt) !== review.evidence_digest
+      ) {
+        errors.push(`${at} source-fidelity state lacks a matching hash-bound receipt`);
+      }
+      if (
+        [
+          "verified_source",
+          "verified_repaired_source",
+          "verified_scientific_correction",
+        ].includes(
+          record.source_fidelity.status,
+        ) &&
+        record.extraction.status !== "verified_complete"
+      ) {
+        errors.push(`${at} verified source is not extraction-complete`);
+      }
+    }
     if (record.usable && record.certification?.status !== "certified") {
       errors.push(`${at} usable record is not certified`);
     }
     if (record.certification?.status === "certified") {
       const option = record.answer?.effective_option;
+      const repairMapping = record.answer?.repair_mapping;
+      const reviewOption = repairMapping?.from_option ?? option;
       const answerReviews = record.answer?.reviews ?? [];
       const solver = answerReviews.find((review) => review.role === "solver");
       const verifier = answerReviews.find(
@@ -908,6 +1599,20 @@ function validate() {
       const adversary = (
         record.adversarial_verification?.reviews ?? []
       ).find((review) => review.role === "adversary");
+      const effectiveRow = effectiveQuestionRow(
+        record,
+        sourceEntry,
+        sourceRepairReceiptById,
+        scientificCorrectionReceiptById,
+      );
+      for (const asset of [...new Set(imagesOf(allBlocks(effectiveRow)))]) {
+        const mediaReceipt = embeddedMediaNumeralReceiptByAsset.get(asset);
+        if (!mediaReceipt) {
+          errors.push(
+            `${at} certified embedded media without an ASCII-numeral review: ${asset}`,
+          );
+        }
+      }
       if (record.screening?.status !== "accepted") {
         errors.push(`${at} certified without accepted screening`);
       }
@@ -915,7 +1620,13 @@ function validate() {
         record.extraction?.status !== "verified_complete" ||
         record.extraction?.render_gate?.status !== "passed" ||
         !record.extraction?.render_gate?.receipt_id ||
-        record.source_fidelity?.status !== "verified_source" ||
+        ![
+          "verified_source",
+          "verified_repaired_source",
+          "verified_scientific_correction",
+        ].includes(
+          record.source_fidelity?.status,
+        ) ||
         record.taxonomy?.status !== "reviewed" ||
         record.difficulty?.status !== "reviewed"
       ) {
@@ -932,8 +1643,45 @@ function validate() {
       ) {
         errors.push(`${at} certified without a verified effective answer`);
       }
-      validateReview(solver, "solver", option, errors, at);
-      validateReview(verifier, "verifier", option, errors, at);
+      if (repairMapping != null) {
+        const repairReceipt = sourceRepairReceiptById.get(
+          repairMapping.receipt_id,
+        );
+        if (
+          record.source_fidelity?.status !== "verified_repaired_source" ||
+          !repairReceipt ||
+          repairReceipt.question_id !== record.question_id ||
+          repairMapping.evidence_digest !== digest(repairReceipt) ||
+          repairMapping.to_option !== option ||
+          repairMapping.to_option !== record.answer?.source_option ||
+          repairMapping.source_key_option !== record.answer?.source_option ||
+          repairMapping.semantic_answer !== repairReceipt.answer_mapping?.semantic_answer ||
+          repairMapping.relation !==
+            "same_semantic_answer_after_source_option_recovery"
+        ) {
+          errors.push(`${at} answer repair mapping lacks exact source evidence`);
+        }
+      }
+      if (record.source_fidelity?.status === "verified_scientific_correction") {
+        const correctionReceipt = scientificCorrectionReceiptById.get(
+          record.answer?.correction?.receipt_id,
+        );
+        if (
+          !correctionReceipt ||
+          correctionReceipt.question_id !== record.question_id ||
+          record.answer.correction.evidence_digest !== digest(correctionReceipt) ||
+          correctionReceipt.answer_mapping?.immutable_source_option !==
+            record.answer.source_option ||
+          correctionReceipt.answer_mapping?.effective_option !== option ||
+          correctionReceipt.answer_mapping?.printed_source_option !== option ||
+          correctionReceipt.answer_mapping?.relation !==
+            "scientific_override_of_immutable_extracted_key"
+        ) {
+          errors.push(`${at} scientific correction lacks exact receipt evidence`);
+        }
+      }
+      validateReview(solver, "solver", reviewOption, errors, at);
+      validateReview(verifier, "verifier", reviewOption, errors, at);
       if (
         solver?.reviewer_id &&
         verifier?.reviewer_id &&
@@ -996,7 +1744,7 @@ function validate() {
       ) {
         errors.push(`${at} certified without adversarial verification`);
       } else {
-        validateReview(adversary, "adversary", option, errors, at);
+        validateReview(adversary, "adversary", reviewOption, errors, at);
       }
       if ((record.certification?.reasons ?? []).length !== 0) {
         errors.push(`${at} certified with unresolved reasons`);
@@ -1031,6 +1779,16 @@ function validate() {
       errors.push(`media-only or stale evidence ${asset}`);
     }
   }
+  validateCertifiedRuntimeAsset({
+    records,
+    sourceById,
+    sourceSetSha256,
+    renderReceiptById,
+    sourceFidelityReceiptById,
+    sourceRepairReceiptById,
+    scientificCorrectionReceiptById,
+    errors,
+  });
   if (errors.length > 0) {
     console.error(`Certification validation failed with ${errors.length} error(s).`);
     for (const error of errors.slice(0, 100)) console.error(`- ${error}`);

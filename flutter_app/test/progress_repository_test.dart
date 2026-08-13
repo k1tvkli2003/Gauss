@@ -2,10 +2,13 @@ import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
+import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/gamification_catalog.dart';
 import 'package:gauss/domain/models.dart';
+import 'package:gauss/domain/study_curriculum.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   late GaussDatabase database;
   late ProgressRepository repository;
   late DateTime clockNow;
@@ -26,6 +29,44 @@ void main() {
     expect(ProgressRepository.levelProgress(0), inInclusiveRange(0, 1));
     expect(ProgressRepository.levelProgress(10000), inInclusiveRange(0, 1));
   });
+
+  test(
+    'question issue reports append locally with exact repair context',
+    () async {
+      final first = QuestionIssueReport(
+        questionId: 'nardebam_math_1405_0001',
+        topicKey: 'sets',
+        kind: QuestionIssueKind.answerKey,
+        note: 'Option C looks inconsistent.',
+        sessionId: 'mission-local-1',
+        missionIndex: 2,
+        selectedChoiceIndex: 2,
+        reportedAt: DateTime(2026, 7, 12, 10, 1),
+      );
+      final second = QuestionIssueReport(
+        questionId: 'nardebam_math_1405_0001',
+        topicKey: 'sets',
+        kind: QuestionIssueKind.solution,
+        note: '',
+        sessionId: 'mission-local-2',
+        missionIndex: 0,
+        selectedChoiceIndex: null,
+        reportedAt: DateTime(2026, 7, 12, 10, 2),
+      );
+
+      await repository.saveQuestionIssueReport(first);
+      await repository.saveQuestionIssueReport(second);
+
+      final reports = await repository.questionIssueReports();
+      expect(reports, hasLength(2));
+      expect(reports.map((report) => report.id), [second.id, first.id]);
+      expect(reports.last.questionId, first.questionId);
+      expect(reports.last.kind, QuestionIssueKind.answerKey);
+      expect(reports.last.selectedChoiceIndex, 2);
+      expect(await database.select(database.exams).get(), isEmpty);
+      expect(await database.select(database.attempts).get(), isEmpty);
+    },
+  );
 
   test(
     'mission finalization atomically persists history, SRS, XP, and quest',
@@ -329,37 +370,40 @@ void main() {
     },
   );
 
-  test('revisit reflections come due tomorrow, clear ones rest longer', () async {
-    await _reflect(
-      repository,
-      'study-q1',
-      hypothesis: 1,
-      reflection: StudyReflection.revisit,
-    );
-    await _reflect(repository, 'study-q2');
+  test(
+    'revisit reflections come due tomorrow, clear ones rest longer',
+    () async {
+      await _reflect(
+        repository,
+        'study-q1',
+        hypothesis: 1,
+        reflection: StudyReflection.revisit,
+      );
+      await _reflect(repository, 'study-q2');
 
-    // Nothing interrupts the current session: neither card is due today.
-    expect(await repository.studyDueIds(), isEmpty);
+      // Nothing interrupts the current session: neither card is due today.
+      expect(await repository.studyDueIds(), isEmpty);
 
-    // Tomorrow the revisit card surfaces; the clear card keeps resting.
-    clockNow = clockNow.add(const Duration(days: 1, minutes: 1));
-    expect(await repository.studyDueIds(), const ['study-q1']);
-    expect(await repository.revisitStudyIds(), const ['study-q1']);
+      // Tomorrow the revisit card surfaces; the clear card keeps resting.
+      clockNow = clockNow.add(const Duration(days: 1, minutes: 1));
+      expect(await repository.studyDueIds(), const ['study-q1']);
+      expect(await repository.revisitStudyIds(), const ['study-q1']);
 
-    // Day four: the clear card's first interval (3 days) elapses, but only
-    // revisit-marked cards ever enter the due queue.
-    clockNow = clockNow.add(const Duration(days: 3));
-    expect(await repository.studyDueIds(), const ['study-q1']);
+      // Day four: the clear card's first interval (3 days) elapses, but only
+      // revisit-marked cards ever enter the due queue.
+      clockNow = clockNow.add(const Duration(days: 3));
+      expect(await repository.studyDueIds(), const ['study-q1']);
 
-    // Clearing the revisit empties the queue and extends its interval.
-    await _reflect(
-      repository,
-      'study-q1',
-      hypothesis: 1,
-      reflection: StudyReflection.clear,
-    );
-    expect(await repository.studyDueIds(), isEmpty);
-  });
+      // Clearing the revisit empties the queue and extends its interval.
+      await _reflect(
+        repository,
+        'study-q1',
+        hypothesis: 1,
+        reflection: StudyReflection.clear,
+      );
+      expect(await repository.studyDueIds(), isEmpty);
+    },
+  );
 
   test('first reflections earn calm study XP exactly once', () async {
     final first = await _reflect(
@@ -675,10 +719,7 @@ void main() {
         reflection: StudyReflection.revisit,
       );
 
-      expect(
-        repeated.record.firstReflectedAt,
-        first.record.firstReflectedAt,
-      );
+      expect(repeated.record.firstReflectedAt, first.record.firstReflectedAt);
       expect(repeated.xpEarned, 0);
       expect(await database.select(database.studyRecords).get(), hasLength(1));
       // Rule v2 rewards the act of charting (reflected + unit touched), and
@@ -732,6 +773,167 @@ void main() {
     expect(await repository.studyPosition('sets:0:20'), 8);
     expect((await repository.studySummary()).totalReflected, 0);
   });
+
+  test(
+    'legacy twenty-question shelves migrate by question id without losing progress',
+    () async {
+      final bank = QuestionBankRepository();
+      await bank.initialize();
+      final primary = bank.studyPlan
+          .topic('sets')
+          .sessions[3]
+          .slots
+          .firstWhere((slot) => slot.kind == StudySlotKind.primary);
+      const legacyShelf = 'sets:0:20';
+      await repository.saveStudyReflection(
+        questionId: primary.questionId,
+        topicKey: 'sets',
+        subjectKey: 'math',
+        shelfKey: legacyShelf,
+        setSize: 20,
+        topicQuestionCount: 50,
+        hypothesisChoiceIndex: 2,
+        hypothesisMatched: false,
+        reflection: StudyReflection.revisit,
+      );
+      await repository.saveStudyPosition(
+        shelfKey: legacyShelf,
+        questionId: primary.questionId,
+        position: 14,
+      );
+
+      await repository.migrateStudyPlan(bank.studyPlan);
+      await repository.migrateStudyPlan(bank.studyPlan);
+
+      final record = (await repository.studyRecords()).single;
+      expect(record.questionId, primary.questionId);
+      expect(record.shelfKey, primary.sessionKey);
+      expect(record.hypothesisChoiceIndex, 2);
+      expect(record.reflection, StudyReflection.revisit);
+      expect(await repository.studyEncounteredSlotIds(primary.sessionKey), {
+        primary.id,
+      });
+      final session = bank.studyPlan
+          .topic('sets')
+          .sessions
+          .singleWhere((item) => item.key == primary.sessionKey);
+      expect(
+        await repository.studyPosition(primary.sessionKey),
+        session.slots.indexWhere((slot) => slot.id == primary.id),
+      );
+      // The old resume pointer remains untouched for rollback/forensics.
+      expect(await repository.studyPosition(legacyShelf), 14);
+      expect(
+        (await repository.studySummary()).shelf(primary.sessionKey).reflected,
+        1,
+      );
+
+      final curatedOnly = bank.studyPlan
+          .topic('sets')
+          .sessions[4]
+          .slots
+          .firstWhere((slot) => slot.kind == StudySlotKind.primary);
+      await repository.saveStudyReflection(
+        questionId: curatedOnly.questionId,
+        topicKey: 'sets',
+        subjectKey: 'math',
+        shelfKey: curatedOnly.sessionKey,
+        setSize: 5,
+        topicQuestionCount: 50,
+        hypothesisChoiceIndex: null,
+        hypothesisMatched: null,
+        reflection: StudyReflection.gem,
+      );
+      expect(
+        (await repository.studySummary())
+            .shelf(curatedOnly.sessionKey)
+            .reflected,
+        0,
+        reason: 'A curated reflection is not a planned slot encounter.',
+      );
+    },
+  );
+
+  test(
+    'mastery-review duplicates complete only after their own slot encounters',
+    () async {
+      Future<StudyReflectionOutcome> reflectSlot({
+        required String questionId,
+        required String primaryShelf,
+        required String encounterShelf,
+        required String slotId,
+        required StudySlotKind kind,
+      }) => repository.saveStudyReflection(
+        questionId: questionId,
+        topicKey: 'mini',
+        subjectKey: 'math',
+        shelfKey: primaryShelf,
+        setSize: 5,
+        topicQuestionCount: 7,
+        hypothesisChoiceIndex: null,
+        hypothesisMatched: null,
+        reflection: StudyReflection.clear,
+        encounterSlotId: slotId,
+        encounterShelfKey: encounterShelf,
+        encounterSlotKind: kind,
+        topicSlotCount: 10,
+      );
+
+      for (var index = 0; index < 5; index++) {
+        await reflectSlot(
+          questionId: 'review-$index',
+          primaryShelf: 'mini:0:5',
+          encounterShelf: 'mini:0:5',
+          slotId: 'mini:0:5#$index',
+          kind: StudySlotKind.primary,
+        );
+      }
+      for (var index = 0; index < 2; index++) {
+        await reflectSlot(
+          questionId: 'new-$index',
+          primaryShelf: 'mini:5:5',
+          encounterShelf: 'mini:5:5',
+          slotId: 'mini:5:5#$index',
+          kind: StudySlotKind.primary,
+        );
+      }
+
+      // Three existing StudyRecords do not pre-complete their new review
+      // slots. Only the two primary remainder slots have been encountered.
+      expect((await repository.studySummary()).shelf('mini:5:5').reflected, 2);
+      for (var index = 0; index < 2; index++) {
+        final outcome = await reflectSlot(
+          questionId: 'review-$index',
+          primaryShelf: 'mini:0:5',
+          encounterShelf: 'mini:5:5',
+          slotId: 'mini:5:5#${index + 2}',
+          kind: StudySlotKind.masteryReview,
+        );
+        expect(outcome.setCompleted, isFalse);
+      }
+      final completed = await reflectSlot(
+        questionId: 'review-2',
+        primaryShelf: 'mini:0:5',
+        encounterShelf: 'mini:5:5',
+        slotId: 'mini:5:5#4',
+        kind: StudySlotKind.masteryReview,
+      );
+      expect(completed.setCompleted, isTrue);
+      expect(completed.unitCompleted, isTrue);
+      expect((await repository.studySummary()).shelf('mini:5:5').reflected, 5);
+
+      final replay = await reflectSlot(
+        questionId: 'review-2',
+        primaryShelf: 'mini:0:5',
+        encounterShelf: 'mini:5:5',
+        slotId: 'mini:5:5#4',
+        kind: StudySlotKind.masteryReview,
+      );
+      expect(replay.setCompleted, isFalse);
+      expect(replay.unitCompleted, isFalse);
+      expect(replay.xpEarned, 0);
+    },
+  );
 }
 
 Future<MissionCompletion> _completeSingle(

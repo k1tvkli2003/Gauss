@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.9
+  crypto: ^3.0.7
   drift: ^2.34.1
   drift_flutter: ^0.3.1
   flutter_math_fork: ^0.7.4
@@ -67,6 +68,8 @@ flutter:
     - assets/visual/nodes/
     - assets/visual/mascot/
     - assets/visual/brand/
+    - assets/visual/question/
+    - assets/curriculum/
     - assets/question_bank/
     - assets/question_bank/topics/
     # BEGIN GENERATED QUESTION MEDIA ASSETS

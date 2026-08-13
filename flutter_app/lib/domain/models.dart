@@ -1,8 +1,10 @@
 import 'gamification_catalog.dart';
+import 'learning_content_policy.dart';
+import 'question_certification.dart';
 
 enum Subject {
-  math('math', 'ریاضی'),
-  physics('physics', 'فیزیک');
+  math('math', 'Mathematics'),
+  physics('physics', 'Physics');
 
   const Subject(this.key, this.label);
   final String key;
@@ -13,10 +15,10 @@ enum Subject {
 }
 
 enum Difficulty {
-  aboveAverage('above_average', 'بالاتر از متوسط'),
-  hard('hard', 'سخت'),
-  veryHard('very_hard', 'خیلی سخت'),
-  olympiad('olympiad', 'المپیادی');
+  aboveAverage('above_average', 'Above average'),
+  hard('hard', 'Hard'),
+  veryHard('very_hard', 'Very hard'),
+  olympiad('olympiad', 'Olympiad');
 
   const Difficulty(this.key, this.label);
   final String key;
@@ -37,6 +39,11 @@ enum QuestionTrust {
   missionReady,
   preservedArchive;
 
+  /// Scientific-certification status only.
+  ///
+  /// The private runtime may still present and score a structurally valid
+  /// source item under the owner's provisional-use policy. Keeping this flag
+  /// strict preserves the audit trail without turning it into an access gate.
   bool get canScore => this == QuestionTrust.missionReady;
 }
 
@@ -109,6 +116,38 @@ class TopicDescriptor {
   final int questionCount;
   final int missionReadyCount;
 
+  static const _englishLabels = <String, String>{
+    'sets': 'Sets',
+    'patterns_sequences': 'Patterns & Sequences',
+    'quadratic_equations_functions': 'Quadratics',
+    'rational_inequalities_sign': 'Rational Inequalities',
+    'radicals_algebraic_expressions': 'Radicals & Expressions',
+    'absolute_value_floor': 'Absolute Value & Floor',
+    'functions': 'Functions',
+    'trigonometry': 'Trigonometry',
+    'limits_continuity': 'Limits & Continuity',
+    'derivatives': 'Derivatives',
+    'derivative_applications': 'Derivative Applications',
+    'exponential_logarithmic': 'Exponential & Logarithmic',
+    'analytic_geometry': 'Analytic Geometry',
+    'visual_thinking_conics': 'Visual Thinking & Conics',
+    'combinatorics': 'Combinatorics',
+    'probability': 'Probability',
+    'geometry': 'Geometry',
+    'statistics': 'Statistics',
+    'physics_measurement': 'Physics & Measurement',
+    'physical_properties_matter': 'Properties of Matter',
+    'work_energy_power': 'Work, Energy & Power',
+    'temperature_heat': 'Temperature & Heat',
+    'electrostatics': 'Electrostatics',
+    'current_electricity': 'Current Electricity',
+    'magnetism_induction': 'Magnetism & Induction',
+    'one_dimensional_motion': 'One-Dimensional Motion',
+    'dynamics': 'Dynamics',
+    'oscillation_waves': 'Oscillations & Waves',
+    'atomic_nuclear': 'Atomic & Nuclear Physics',
+  };
+
   int get preservedArchiveCount => questionCount - missionReadyCount;
 
   factory TopicDescriptor.fromJson(
@@ -117,7 +156,16 @@ class TopicDescriptor {
   }) => TopicDescriptor(
     subject: Subject.fromKey(json['subject'] as String),
     key: json['topic_key'] as String,
-    label: json['label'] as String,
+    label:
+        _englishLabels[json['topic_key'] as String] ??
+        (json['topic_key'] as String)
+            .split('_')
+            .map(
+              (part) => part.isEmpty
+                  ? part
+                  : '${part[0].toUpperCase()}${part.substring(1)}',
+            )
+            .join(' '),
     order: json['order'] as int,
     assetPath: 'assets/${json['file'] as String}',
     questionCount: json['count'] as int,
@@ -134,11 +182,13 @@ class Question {
     required this.stem,
     required this.options,
     required this.sourceCorrectOptionIndex,
+    required this.effectiveCorrectOptionIndex,
     required this.solution,
     required this.shortcut,
     required this.sourceBank,
     required this.trust,
     required this.solutionVerified,
+    this.certification,
   });
 
   final String id;
@@ -150,6 +200,10 @@ class Question {
 
   /// Immutable source contract: JSON answer keys are 1...4.
   final int sourceCorrectOptionIndex;
+
+  /// Certified answer mapping after a source-faithful derived repair. This is
+  /// also 1...4 and never overwrites [sourceCorrectOptionIndex].
+  final int effectiveCorrectOptionIndex;
   final List<ContentBlock> solution;
   final List<ContentBlock>? shortcut;
   final String sourceBank;
@@ -159,14 +213,32 @@ class Question {
   /// stay bundled for preservation and never enter scored missions.
   final QuestionTrust trust;
   final bool solutionVerified;
+  final QuestionCertification? certification;
+
+  /// Every successfully parsed source row is available for private practice.
+  ///
+  /// Certification remains visible through [missionReady]; it no longer
+  /// decides whether the owner can open the question. The repository validates
+  /// this structural contract across all 3,672 rows during corpus checks.
+  bool get runtimeUsable =>
+      stem.isNotEmpty &&
+      options.length == 4 &&
+      options.every((option) => option.isNotEmpty) &&
+      correctChoiceIndex >= 0 &&
+      correctChoiceIndex < options.length &&
+      solution.isNotEmpty;
 
   bool get missionReady => trust.canScore;
 
   /// Flutter selection contract: choice indexes are 0...3.
-  int get correctChoiceIndex => sourceCorrectOptionIndex - 1;
+  int get correctChoiceIndex => effectiveCorrectOptionIndex - 1;
 
-  factory Question.fromJson(Map<String, dynamic> json) {
+  factory Question.fromJson(
+    Map<String, dynamic> json, {
+    QuestionCertification? certification,
+  }) {
     final sourceIndex = json['correct_option_index'] as int;
+    final effectiveIndex = certification?.effectiveOptionIndex ?? sourceIndex;
     final rawOptions = json['options'] as List<dynamic>;
     final sourceBank = json['source_bank'] as String?;
     if (sourceBank == null || sourceBank.isEmpty) {
@@ -183,27 +255,48 @@ class Question {
         'Question ${json['id']} has invalid 1-based answer $sourceIndex.',
       );
     }
+    if (effectiveIndex < 1 || effectiveIndex > rawOptions.length) {
+      throw FormatException(
+        'Question ${json['id']} has invalid certified answer $effectiveIndex.',
+      );
+    }
+    if (certification != null &&
+        (certification.questionId != json['id'] ||
+            certification.subjectKey != json['subject'] ||
+            certification.topicKey != json['topic_key'] ||
+            certification.sourceOptionIndex != sourceIndex)) {
+      throw FormatException(
+        'Question ${json['id']} does not match its certification identity.',
+      );
+    }
     return Question(
       id: json['id'] as String,
       subject: Subject.fromKey(json['subject'] as String),
       topicKey: json['topic_key'] as String,
-      difficulty: Difficulty.fromKey(json['difficulty'] as String),
+      difficulty: Difficulty.fromKey(
+        certification?.reviewedDifficultyKey ?? json['difficulty'] as String,
+      ),
       stem: _blocks(json['stem']),
       options: rawOptions
           .map((option) => _blocks(option))
           .toList(growable: false),
       sourceCorrectOptionIndex: sourceIndex,
+      effectiveCorrectOptionIndex: effectiveIndex,
       solution: solution,
       shortcut: json['smart_shortcut'] == null
           ? null
           : _blocks(json['smart_shortcut']),
       sourceBank: sourceBank,
-      trust: isUnverifiedSourceMapping
+      trust: certification != null
+          ? QuestionTrust.missionReady
+          : isUnverifiedSourceMapping
           ? QuestionTrust.preservedArchive
           : QuestionTrust.missionReady,
       solutionVerified:
-          !isUnverifiedSourceMapping &&
-          _solutionAnswerMatches(solution, sourceIndex),
+          certification?.solutionVerified ??
+          (!isUnverifiedSourceMapping &&
+              _solutionAnswerMatches(solution, effectiveIndex)),
+      certification: certification,
     );
   }
 
@@ -214,19 +307,12 @@ class Question {
     final text = solution
         .whereType<TextBlock>()
         .map((block) => block.text)
-        .join(' ')
-        .replaceAll('۱', '1')
-        .replaceAll('۲', '2')
-        .replaceAll('۳', '3')
-        .replaceAll('۴', '4')
-        .replaceAll('١', '1')
-        .replaceAll('٢', '2')
-        .replaceAll('٣', '3')
-        .replaceAll('٤', '4');
+        .join(' ');
+    final normalizedText = normalizeLearningDigits(text);
     final matches = RegExp(
       r'(?:گزینه|option)\s*([1-4])',
       caseSensitive: false,
-    ).allMatches(text);
+    ).allMatches(normalizedText);
     if (matches.isEmpty) return true;
     return int.parse(matches.last.group(1)!) == sourceIndex;
   }
@@ -340,16 +426,39 @@ class StudyShelf {
   const StudyShelf({
     required this.key,
     required this.questions,
+    required this.slots,
     required this.records,
+    required this.encounteredSlotIds,
     required this.initialIndex,
     required this.revisitOnly,
   });
 
   final String key;
   final List<Question> questions;
+  final List<StudyShelfSlot> slots;
   final Map<String, StudyRecord> records;
+  final Set<String> encounteredSlotIds;
   final int initialIndex;
   final bool revisitOnly;
+
+  bool isEncounteredAt(int index) =>
+      !slots[index].planned || encounteredSlotIds.contains(slots[index].id);
+}
+
+class StudyShelfSlot {
+  const StudyShelfSlot({
+    required this.id,
+    required this.questionId,
+    required this.kind,
+    required this.primaryShelfKey,
+    required this.planned,
+  });
+
+  final String id;
+  final String questionId;
+  final String kind;
+  final String primaryShelfKey;
+  final bool planned;
 }
 
 /// What a saved reflection produced: the persisted record plus any rewards
@@ -383,6 +492,101 @@ class StudyReflectionOutcome {
   final int levelAfter;
 
   bool get leveledUp => levelAfter > levelBefore;
+}
+
+/// Private, offline issue categories for owner-reported corpus repairs.
+enum QuestionIssueKind {
+  questionText('question_text', 'Question text'),
+  options('options', 'Answer choices'),
+  answerKey('answer_key', 'Answer key'),
+  solution('solution', 'Solution'),
+  image('image', 'Image or diagram'),
+  other('other', 'Something else');
+
+  const QuestionIssueKind(this.key, this.label);
+  final String key;
+  final String label;
+
+  static QuestionIssueKind fromKey(String value) =>
+      QuestionIssueKind.values.firstWhere((item) => item.key == value);
+}
+
+/// One local-only repair signal attached to an immutable source question.
+///
+/// Reports never rewrite or hide corpus rows. They preserve the exact runtime
+/// context needed for a later repair pass while the question stays playable.
+class QuestionIssueReport {
+  const QuestionIssueReport({
+    required this.questionId,
+    required this.topicKey,
+    required this.kind,
+    required this.note,
+    required this.sessionId,
+    required this.missionIndex,
+    required this.selectedChoiceIndex,
+    required this.reportedAt,
+  });
+
+  final String questionId;
+  final String topicKey;
+  final QuestionIssueKind kind;
+  final String note;
+  final String sessionId;
+  final int missionIndex;
+  final int? selectedChoiceIndex;
+  final DateTime reportedAt;
+
+  String get id => '$questionId:${reportedAt.microsecondsSinceEpoch}';
+
+  Map<String, Object?> toJson() => {
+    'schema_version': 1,
+    'question_id': questionId,
+    'topic_key': topicKey,
+    'kind': kind.key,
+    'note': note,
+    'session_id': sessionId,
+    'mission_index': missionIndex,
+    'selected_choice_index': selectedChoiceIndex,
+    'reported_at': reportedAt.toIso8601String(),
+  };
+
+  factory QuestionIssueReport.fromJson(Map<String, dynamic> json) {
+    if (json['schema_version'] != 1) {
+      throw const FormatException('Unsupported question issue schema.');
+    }
+    final questionId = json['question_id'];
+    final topicKey = json['topic_key'];
+    final kind = json['kind'];
+    final note = json['note'];
+    final sessionId = json['session_id'];
+    final missionIndex = json['mission_index'];
+    final selectedChoiceIndex = json['selected_choice_index'];
+    final reportedAt = DateTime.tryParse(json['reported_at'] as String? ?? '');
+    if (questionId is! String ||
+        questionId.isEmpty ||
+        topicKey is! String ||
+        topicKey.isEmpty ||
+        kind is! String ||
+        note is! String ||
+        sessionId is! String ||
+        sessionId.isEmpty ||
+        missionIndex is! int ||
+        missionIndex < 0 ||
+        (selectedChoiceIndex != null && selectedChoiceIndex is! int) ||
+        reportedAt == null) {
+      throw const FormatException('Malformed question issue report.');
+    }
+    return QuestionIssueReport(
+      questionId: questionId,
+      topicKey: topicKey,
+      kind: QuestionIssueKind.fromKey(kind),
+      note: note,
+      sessionId: sessionId,
+      missionIndex: missionIndex,
+      selectedChoiceIndex: selectedChoiceIndex as int?,
+      reportedAt: reportedAt,
+    );
+  }
 }
 
 class AttemptRecord {
@@ -492,11 +696,17 @@ class ResumableMission {
 
 class RewardLine {
   const RewardLine({
+    required this.eventId,
+    required this.ruleVersion,
     required this.reason,
     required this.amount,
     required this.category,
   });
 
+  /// Stable identity of the authoritative event that produced this line.
+  /// Presentation code may acknowledge it, but must never grant it again.
+  final String eventId;
+  final int ruleVersion;
   final String reason;
   final int amount;
   final String category;
@@ -642,6 +852,9 @@ class GamificationSummary {
     required this.streak,
     required this.quest,
     required this.achievements,
+    this.effectiveDayKey = '',
+    this.clockAdjusted = false,
+    this.streakGraceUsed = false,
   });
 
   final int totalXp;
@@ -651,4 +864,14 @@ class GamificationSummary {
   final int streak;
   final DailyQuest quest;
   final List<AchievementSnapshot> achievements;
+
+  /// Calendar window used by the reward engine. It can intentionally differ
+  /// from the wall clock after a backwards clock change so daily rewards and
+  /// caps cannot be reopened.
+  final String effectiveDayKey;
+  final bool clockAdjusted;
+
+  /// True when the current private rhythm bridges one missed calendar day.
+  /// No currency, purchase, or social mechanic is attached to this grace.
+  final bool streakGraceUsed;
 }

@@ -173,6 +173,24 @@ class StudyPositions extends Table {
   Set<Column<Object>> get primaryKey => {shelfKey};
 }
 
+/// Actual passes through planned curriculum slots.
+///
+/// StudyRecords remains one row per immutable source question. This separate
+/// ledger lets an explicit mastery-review duplicate count only after that
+/// particular five-question session slot was encountered.
+@DataClassName('StudySlotEncounterRow')
+class StudySlotEncounters extends Table {
+  TextColumn get slotId => text()();
+  TextColumn get topicKey => text()();
+  TextColumn get shelfKey => text()();
+  TextColumn get questionId => text()();
+  TextColumn get slotKind => text()();
+  IntColumn get firstEncounteredAt => integer()();
+
+  @override
+  Set<Column<Object>> get primaryKey => {slotId};
+}
+
 @DriftDatabase(
   tables: [
     Exams,
@@ -185,6 +203,7 @@ class StudyPositions extends Table {
     AchievementProgress,
     StudyRecords,
     StudyPositions,
+    StudySlotEncounters,
     AppFlags,
   ],
 )
@@ -203,7 +222,7 @@ class GaussDatabase extends _$GaussDatabase {
       );
 
   @override
-  int get schemaVersion => 6;
+  int get schemaVersion => 7;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -241,6 +260,13 @@ class GaussDatabase extends _$GaussDatabase {
           "INSERT OR IGNORE INTO app_flags (key, value, updated_at) "
           "VALUES ('tour_seen', 'true', 0)",
         );
+      }
+      if (from < 7) {
+        // Reflections are unique by source question, while the new curriculum
+        // may deliberately repeat a question in a mastery-review remainder.
+        // Keep every old row; the controller seeds primary encounters from
+        // the generated plan after the question bank is available.
+        await migrator.createTable(studySlotEncounters);
       }
     },
     beforeOpen: (details) async {

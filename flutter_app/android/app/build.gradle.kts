@@ -63,10 +63,18 @@ android {
     }
 
     buildTypes {
+        getByName("debug") {
+            // Live Android previews must install beside the signed personal
+            // build. A dedicated application id keeps hot reload and QA data
+            // isolated without ever uninstalling or replacing com.gauss.app.
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+        }
         getByName("profile") {
             // Keep performance probes isolated from the signed personal build
             // so profiling can never replace or clear the user's live store.
             applicationIdSuffix = ".profile"
+            versionNameSuffix = "-profile"
         }
         release {
             signingConfig = signingConfigs.getByName("release")

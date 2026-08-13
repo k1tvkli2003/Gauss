@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -5,12 +6,18 @@ import 'package:go_router/go_router.dart';
 
 import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
+import '../domain/failures.dart';
 import '../domain/models.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/content_blocks.dart';
 import '../widgets/gauss_brand.dart';
 import '../widgets/gauss_state_panel.dart';
+import '../widgets/orbital_action_control.dart';
+import '../widgets/question_progress_rail.dart';
+import '../widgets/question_manuscript.dart';
 import '../widgets/scratchpad.dart';
+import '../widgets/study_session_celebration.dart';
+import '../widgets/theorem_lens.dart';
 
 /// A calm study room over preserved source questions.
 ///
@@ -21,7 +28,7 @@ class ArchiveScreen extends StatefulWidget {
   const ArchiveScreen({
     required this.topicKey,
     this.offset = 0,
-    this.count = 20,
+    this.count = 5,
     this.revisitOnly = false,
     this.gemsOnly = false,
     this.shuffleSeed,
@@ -31,7 +38,7 @@ class ArchiveScreen extends StatefulWidget {
   const ArchiveScreen.revisit({super.key})
     : topicKey = null,
       offset = 0,
-      count = 20,
+      count = 5,
       revisitOnly = true,
       gemsOnly = false,
       shuffleSeed = null;
@@ -39,7 +46,7 @@ class ArchiveScreen extends StatefulWidget {
   const ArchiveScreen.gems({super.key})
     : topicKey = null,
       offset = 0,
-      count = 20,
+      count = 5,
       revisitOnly = true,
       gemsOnly = true,
       shuffleSeed = null;
@@ -65,11 +72,15 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   final Set<String> _revealed = {};
   final Map<String, int?> _hypotheses = {};
   final Map<String, StudyRecord> _records = {};
+  final Set<String> _encounteredSlotIds = {};
+  final Map<String, ScratchInkController> _inkControllers = {};
+  final Map<String, Timer> _inkClearTimers = {};
   int _index = 0;
   bool _loading = true;
   bool _saving = false;
   bool _inkActive = false;
   bool _didLoad = false;
+  _PendingReflection? _pendingReflection;
 
   @override
   void didChangeDependencies() {
@@ -101,6 +112,9 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
       _records
         ..clear()
         ..addAll(shelf.records);
+      _encounteredSlotIds
+        ..clear()
+        ..addAll(shelf.encounteredSlotIds);
       _hypotheses
         ..clear()
         ..addEntries(
@@ -114,6 +128,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
         ..addAll(shelf.records.keys);
       _index = shelf.questions.isEmpty ? 0 : shelf.initialIndex;
       _inkActive = false;
+      _pendingReflection = null;
       _pageController = PageController(initialPage: _index);
       setState(() {
         _shelf = shelf;
@@ -131,7 +146,50 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   @override
   void dispose() {
     _pageController?.dispose();
+    _disposeInkControllers();
     super.dispose();
+  }
+
+  ScratchInkController _inkFor(String questionId) =>
+      _inkControllers.putIfAbsent(questionId, ScratchInkController.new);
+
+  bool get _hasQuestionInk => _inkControllers.values.any(
+    (ink) => !ink.isEmpty || ink.canRestoreClearedInk,
+  );
+
+  bool get _hasUncommittedHypothesis => _hypotheses.entries.any(
+    (entry) => entry.value != null && !_records.containsKey(entry.key),
+  );
+
+  void _disposeInkControllers() {
+    for (final timer in _inkClearTimers.values) {
+      timer.cancel();
+    }
+    _inkClearTimers.clear();
+    for (final controller in _inkControllers.values) {
+      controller.dispose();
+    }
+    _inkControllers.clear();
+  }
+
+  void _clearQuestionInk(String questionId) {
+    final ink = _inkFor(questionId);
+    if (ink.isEmpty) return;
+    ink.clear();
+    _inkClearTimers.remove(questionId)?.cancel();
+    _inkClearTimers[questionId] = Timer(const Duration(seconds: 4), () {
+      _inkClearTimers.remove(questionId);
+      ink.discardLastClear();
+    });
+  }
+
+  void _restoreQuestionInk(String questionId) {
+    _inkClearTimers.remove(questionId)?.cancel();
+    _inkFor(questionId).restoreLastClear();
+  }
+
+  void _openQuestionInkWorkspace(String questionId) {
+    showScratchpad(context, controller: _inkFor(questionId));
   }
 
   void _leave() {
@@ -140,6 +198,45 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     } else {
       context.go('/map');
     }
+  }
+
+  Future<bool> _confirmLeave() async {
+    final hasInk = _hasQuestionInk;
+    final hasUncommittedHypothesis = _hasUncommittedHypothesis;
+    if (!hasInk && !hasUncommittedHypothesis) return true;
+    final detail = <String>[
+      'Your completed study marks are saved.',
+      if (hasUncommittedHypothesis)
+        'Your current hypothesis is saved only after you chart or revisit the question.',
+      if (hasInk)
+        'Ink drawn on these question pages is temporary and will be cleared when you leave this room.',
+    ].join(' ');
+    return await showDialog<bool>(
+          context: context,
+          builder: (dialogContext) => AlertDialog(
+            title: Text(
+              hasInk
+                  ? 'Leave and clear question ink?'
+                  : 'Leave without charting this hypothesis?',
+            ),
+            content: Text(detail),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(dialogContext, false),
+                child: Text(hasInk ? 'Keep writing' : 'Keep studying'),
+              ),
+              FilledButton(
+                onPressed: () => Navigator.pop(dialogContext, true),
+                child: const Text('Leave'),
+              ),
+            ],
+          ),
+        ) ??
+        false;
+  }
+
+  Future<void> _requestLeave() async {
+    if (await _confirmLeave() && mounted) _leave();
   }
 
   void _goTo(int index, int total) {
@@ -176,20 +273,47 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     setState(() => _hypotheses[question.id] = choice);
   }
 
-  Future<void> _reflect(Question question, StudyReflection reflection) async {
+  Future<void> _reflect(
+    Question question,
+    StudyShelfSlot slot,
+    StudyReflection reflection,
+  ) async {
     final shelf = _shelf;
     if (shelf == null || _saving) return;
-    final originalShelf = _records[question.id]?.shelfKey;
-    setState(() => _saving = true);
+    setState(() {
+      _saving = true;
+      _pendingReflection = null;
+    });
+    late final StudyReflectionOutcome outcome;
     try {
-      final outcome = await GaussScope.of(context).saveStudyReflection(
+      outcome = await GaussScope.of(context).saveStudyReflection(
         question: question,
-        shelfKey: originalShelf ?? shelf.key,
+        shelfKey: shelf.key,
         hypothesisChoiceIndex: _hypotheses[question.id],
         reflection: reflection,
+        slot: slot,
       );
+    } catch (error) {
       if (!mounted) return;
-      setState(() => _records[question.id] = outcome.record);
+      setState(() {
+        _saving = false;
+        _pendingReflection = _PendingReflection(
+          question: question,
+          slot: slot,
+          reflection: reflection,
+          message: error is GaussFailure
+              ? error.safeMessage
+              : 'This field note could not be saved. Your current page stays open.',
+        );
+      });
+      return;
+    }
+    if (!mounted) return;
+    setState(() {
+      _records[question.id] = outcome.record;
+      if (slot.planned) _encounteredSlotIds.add(slot.id);
+    });
+    try {
       if (outcome.setCompleted ||
           outcome.unitCompleted ||
           outcome.dailyQuestCompleted ||
@@ -201,24 +325,81 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
     }
   }
 
+  void _retryReflection() {
+    final pending = _pendingReflection;
+    if (pending == null || _saving) return;
+    _reflect(pending.question, pending.slot, pending.reflection);
+  }
+
   Future<void> _openJumpSheet(StudyShelf shelf) async {
     final target = await showModalBottomSheet<int>(
       context: context,
       isScrollControlled: true,
       useSafeArea: true,
       backgroundColor: Colors.transparent,
-      builder: (context) =>
-          _JumpSheet(shelf: shelf, records: _records, currentIndex: _index),
+      builder: (context) => _JumpSheet(
+        shelf: shelf,
+        records: _records,
+        encounteredSlotIds: _encounteredSlotIds,
+        currentIndex: _index,
+      ),
     );
     if (target != null && mounted) _goTo(target, shelf.questions.length);
   }
 
   Future<void> _showRecap(StudyReflectionOutcome outcome) async {
     if (!mounted) return;
-    await showDialog<void>(
+    final continuation = _recapContinuation(outcome);
+    final action = await showDialog<_StudyRecapAction>(
       context: context,
       barrierColor: GaussColors.abyss.withValues(alpha: .82),
-      builder: (context) => _StudyRecapDialog(outcome: outcome),
+      builder: (dialogContext) => StudySessionCelebration(
+        outcome: outcome,
+        primaryLabel: continuation?.label ?? 'Keep charting',
+        onPrimary: () => Navigator.of(
+          dialogContext,
+        ).pop(continuation == null ? null : _StudyRecapAction.continueStudy),
+        onStay: continuation == null
+            ? null
+            : () => Navigator.of(dialogContext).pop(),
+      ),
+    );
+    if (!mounted ||
+        action != _StudyRecapAction.continueStudy ||
+        continuation == null) {
+      return;
+    }
+    if (continuation.returnToMap) {
+      context.go('/map');
+    } else {
+      context.replace(continuation.route);
+    }
+  }
+
+  _StudyRecapContinuation? _recapContinuation(StudyReflectionOutcome outcome) {
+    if (!outcome.setCompleted && !outcome.unitCompleted) return null;
+    final shelf = _shelf;
+    final topicKey = widget.topicKey;
+    if (!widget.revisitOnly &&
+        !outcome.unitCompleted &&
+        shelf != null &&
+        topicKey != null) {
+      final topic = GaussScope.of(
+        context,
+      ).topics.firstWhere((item) => item.key == topicKey);
+      final nextOffset = widget.offset + shelf.questions.length;
+      if (nextOffset < topic.questionCount) {
+        return _StudyRecapContinuation(
+          label: 'Continue next session',
+          route:
+              '/study/chapter/$topicKey?offset=$nextOffset&count=${widget.count}',
+        );
+      }
+    }
+    return const _StudyRecapContinuation(
+      label: 'Return to Map',
+      route: '/map',
+      returnToMap: true,
     );
   }
 
@@ -232,116 +413,166 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
             orElse: () => controller.topics.first,
           );
     final shelf = _shelf;
-    return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          const _ArchiveBackdrop(),
-          SafeArea(
-            child: _loading
-                ? const GaussStatePanel(
-                    title: 'Opening the study room…',
-                    detail:
-                        'Reading this preserved set and your private study marks from local storage.',
-                    loading: true,
-                    accent: GaussColors.signalBright,
-                  )
-                : _loadError != null
-                ? _ArchiveMessage(
-                    title: 'The study room could not open',
-                    detail:
-                        'The offline library could not load this set. Nothing was changed.',
-                    onLeave: _leave,
-                    onRetry: _load,
-                  )
-                : shelf == null || shelf.questions.isEmpty
-                ? _ArchiveMessage(
-                    title: widget.gemsOnly
-                        ? 'Your gem shelf is empty'
-                        : widget.revisitOnly
-                        ? 'Your revisit orbit is clear'
-                        : 'Nothing is shelved here',
-                    detail: widget.gemsOnly
-                        ? 'Mark a revealed question as “Keep as gem” and it will rest here.'
-                        : widget.revisitOnly
-                        ? 'Mark a revealed concept as “Revisit later” and it will appear here.'
-                        : 'This study set has no preserved questions.',
-                    onLeave: _leave,
-                  )
-                : Column(
-                    children: [
-                      _ArchiveTopBar(
-                        topic: topic,
-                        revisitOnly: widget.revisitOnly,
-                        gemsOnly: widget.gemsOnly,
-                        shuffled: widget.shuffleSeed != null,
-                        index: _index,
-                        total: shelf.questions.length,
-                        onClose: _leave,
-                        onShuffle:
-                            widget.revisitOnly || shelf.questions.length < 3
-                            ? null
-                            : () => context.replace(
-                                '/study/chapter/${widget.topicKey}'
-                                '?offset=${widget.offset}&count=${widget.count}'
-                                '&shuffle=${DateTime.now().millisecondsSinceEpoch % 100000}',
-                              ),
-                      ),
-                      Expanded(
-                        child: PageView.builder(
-                          key: const ValueKey('study-room-pages'),
-                          controller: _pageController,
-                          physics: _inkActive
-                              ? const NeverScrollableScrollPhysics()
-                              : const PageScrollPhysics(),
-                          onPageChanged: _onPageChanged,
-                          itemCount: shelf.questions.length,
-                          itemBuilder: (context, index) {
-                            final question = shelf.questions[index];
-                            return _ArchivePage(
-                              key: ValueKey('study-${question.id}'),
-                              question: question,
-                              revealed: _revealed.contains(question.id),
-                              hypothesis: _hypotheses[question.id],
-                              record: _records[question.id],
-                              saving: _saving && index == _index,
-                              active: index == _index,
-                              onInkModeChanged: (active) {
-                                if (index == _index && _inkActive != active) {
-                                  setState(() => _inkActive = active);
-                                }
-                              },
-                              onHypothesis: (choice) =>
-                                  _selectHypothesis(question, choice),
-                              onReveal: () =>
-                                  setState(() => _revealed.add(question.id)),
-                              onReflection: (reflection) =>
-                                  _reflect(question, reflection),
-                            );
-                          },
+    return PopScope<Object?>(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (!didPop) await _requestLeave();
+      },
+      child: Scaffold(
+        body: Stack(
+          fit: StackFit.expand,
+          children: [
+            const _ArchiveBackdrop(),
+            SafeArea(
+              child: _loading
+                  ? const GaussStatePanel(
+                      title: 'Opening the study room…',
+                      detail:
+                          'Reading this preserved set and your private study marks from local storage.',
+                      loading: true,
+                      accent: GaussColors.signalBright,
+                    )
+                  : _loadError != null
+                  ? _ArchiveMessage(
+                      title: 'The study room could not open',
+                      detail:
+                          'The offline library could not load this set. Nothing was changed.',
+                      onLeave: _leave,
+                      onRetry: _load,
+                    )
+                  : shelf == null || shelf.questions.isEmpty
+                  ? _ArchiveMessage(
+                      title: widget.gemsOnly
+                          ? 'Your gem shelf is empty'
+                          : widget.revisitOnly
+                          ? 'Your revisit orbit is clear'
+                          : 'Nothing is shelved here',
+                      detail: widget.gemsOnly
+                          ? 'Mark a revealed question as “Keep as gem” and it will rest here.'
+                          : widget.revisitOnly
+                          ? 'Mark a revealed concept as “Revisit later” and it will appear here.'
+                          : 'This study set has no preserved questions.',
+                      onLeave: _leave,
+                    )
+                  : Column(
+                      children: [
+                        _ArchiveTopBar(
+                          topic: topic,
+                          revisitOnly: widget.revisitOnly,
+                          gemsOnly: widget.gemsOnly,
+                          shuffled: widget.shuffleSeed != null,
+                          masteryReview:
+                              shelf.slots[_index].kind == 'mastery_review',
+                          index: _index,
+                          total: shelf.questions.length,
+                          onClose: _requestLeave,
+                          onShuffle:
+                              widget.revisitOnly || shelf.questions.length < 3
+                              ? null
+                              : () => context.replace(
+                                  '/study/chapter/${widget.topicKey}'
+                                  '?offset=${widget.offset}&count=${widget.count}'
+                                  '&shuffle=${DateTime.now().millisecondsSinceEpoch % 100000}',
+                                ),
                         ),
-                      ),
-                      _ArchiveNavBar(
-                        index: _index,
-                        total: shelf.questions.length,
-                        reflected: _records.containsKey(
-                          shelf.questions[_index].id,
+                        Expanded(
+                          child: PageView.builder(
+                            key: const ValueKey('study-room-pages'),
+                            controller: _pageController,
+                            physics: _inkActive
+                                ? const NeverScrollableScrollPhysics()
+                                : const PageScrollPhysics(),
+                            onPageChanged: _onPageChanged,
+                            itemCount: shelf.questions.length,
+                            itemBuilder: (context, index) {
+                              final question = shelf.questions[index];
+                              final slot = shelf.slots[index];
+                              final ink = _inkFor(question.id);
+                              return _ArchivePage(
+                                key: ValueKey('study-${slot.id}'),
+                                question: question,
+                                revealed: _revealed.contains(question.id),
+                                hypothesis: _hypotheses[question.id],
+                                record: _records[question.id],
+                                saving: _saving && index == _index,
+                                saveError:
+                                    _pendingReflection?.question.id ==
+                                        question.id
+                                    ? _pendingReflection!.message
+                                    : null,
+                                active: index == _index,
+                                ink: ink,
+                                questionNumber: index + 1,
+                                onExpandInk: () =>
+                                    _openQuestionInkWorkspace(question.id),
+                                onClearInk: () =>
+                                    _clearQuestionInk(question.id),
+                                onRestoreInk: () =>
+                                    _restoreQuestionInk(question.id),
+                                onInkModeChanged: (active) {
+                                  if (index == _index && _inkActive != active) {
+                                    setState(() => _inkActive = active);
+                                  }
+                                },
+                                onHypothesis: (choice) =>
+                                    _selectHypothesis(question, choice),
+                                onReveal: () =>
+                                    setState(() => _revealed.add(question.id)),
+                                onReflection: (reflection) =>
+                                    _reflect(question, slot, reflection),
+                                onRetryReflection: _retryReflection,
+                              );
+                            },
+                          ),
                         ),
-                        onPrevious: _index == 0
-                            ? null
-                            : () => _goTo(_index - 1, shelf.questions.length),
-                        onNext: _index == shelf.questions.length - 1
-                            ? null
-                            : () => _goTo(_index + 1, shelf.questions.length),
-                        onJump: () => _openJumpSheet(shelf),
-                      ),
-                    ],
-                  ),
-          ),
-        ],
+                        _ArchiveNavBar(
+                          index: _index,
+                          total: shelf.questions.length,
+                          reflected: shelf.slots[_index].planned
+                              ? _encounteredSlotIds.contains(
+                                  shelf.slots[_index].id,
+                                )
+                              : _records.containsKey(
+                                  shelf.questions[_index].id,
+                                ),
+                          ink: _inkFor(shelf.questions[_index].id),
+                          onPrevious: _index == 0
+                              ? null
+                              : () => _goTo(_index - 1, shelf.questions.length),
+                          onNext: _index == shelf.questions.length - 1
+                              ? null
+                              : () => _goTo(_index + 1, shelf.questions.length),
+                          onJump: () => _openJumpSheet(shelf),
+                          onOpenInkWorkspace: () => _openQuestionInkWorkspace(
+                            shelf.questions[_index].id,
+                          ),
+                          onClearInk: () =>
+                              _clearQuestionInk(shelf.questions[_index].id),
+                          onRestoreInk: () =>
+                              _restoreQuestionInk(shelf.questions[_index].id),
+                        ),
+                      ],
+                    ),
+            ),
+          ],
+        ),
       ),
     );
   }
+}
+
+class _PendingReflection {
+  const _PendingReflection({
+    required this.question,
+    required this.slot,
+    required this.reflection,
+    required this.message,
+  });
+
+  final Question question;
+  final StudyShelfSlot slot;
+  final StudyReflection reflection;
+  final String message;
 }
 
 class _ArchiveBackdrop extends StatelessWidget {
@@ -376,6 +607,7 @@ class _ArchiveTopBar extends StatelessWidget {
     required this.revisitOnly,
     required this.gemsOnly,
     required this.shuffled,
+    required this.masteryReview,
     required this.index,
     required this.total,
     required this.onClose,
@@ -386,84 +618,93 @@ class _ArchiveTopBar extends StatelessWidget {
   final bool revisitOnly;
   final bool gemsOnly;
   final bool shuffled;
+  final bool masteryReview;
   final int index;
   final int total;
   final VoidCallback onClose;
   final VoidCallback? onShuffle;
 
+  String get _contextLabel => gemsOnly
+      ? 'Gem shelf'
+      : revisitOnly
+      ? 'Revisit orbit'
+      : shuffled
+      ? '${topic!.label} · Second pass'
+      : topic!.label;
+
   @override
   Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.fromLTRB(10, 8, 14, 5),
-    child: Row(
+    padding: const EdgeInsetsDirectional.fromSTEB(12, 5, 12, 7),
+    child: Column(
+      key: const ValueKey('study-room-header'),
+      mainAxisSize: MainAxisSize.min,
       children: [
-        IconButton(
-          onPressed: onClose,
-          tooltip: 'Leave the reading room',
-          icon: const Icon(Icons.close_rounded),
-        ),
-        const GaussWordmark(width: 92),
-        const SizedBox(width: 12),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        SizedBox(
+          height: 48,
+          child: Stack(
+            key: const ValueKey('study-room-balanced-action-axis'),
+            fit: StackFit.expand,
             children: [
-              const Text(
-                'STUDY ROOM',
-                style: TextStyle(
-                  color: GaussColors.brassLight,
-                  fontSize: GaussTypeScale.insignia,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 1.2,
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: IconButton(
+                  key: const ValueKey('study-room-close-action'),
+                  onPressed: onClose,
+                  tooltip: 'Leave the reading room',
+                  icon: const Icon(Icons.close_rounded),
                 ),
               ),
-              Directionality(
-                textDirection: revisitOnly
-                    ? TextDirection.ltr
-                    : TextDirection.rtl,
-                child: Text(
-                  gemsOnly
-                      ? 'Gem shelf'
-                      : revisitOnly
-                      ? 'Revisit orbit'
-                      : shuffled
-                      ? '${topic!.label} · دور دوم'
-                      : topic!.label,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: GaussColors.ivory,
-                    fontSize: 13,
-                    fontWeight: FontWeight.w800,
+              const Align(
+                alignment: Alignment.center,
+                child: GaussWordmark(
+                  key: ValueKey('study-room-centered-wordmark'),
+                  width: 82,
+                ),
+              ),
+              if (onShuffle != null)
+                Align(
+                  alignment: AlignmentDirectional.centerEnd,
+                  child: IconButton(
+                    key: const ValueKey('study-room-shuffle-action'),
+                    onPressed: onShuffle,
+                    tooltip: shuffled
+                        ? 'Reshuffle this session again'
+                        : 'Second pass in a new order',
+                    icon: Icon(
+                      Icons.shuffle_rounded,
+                      color: shuffled
+                          ? GaussColors.brassLight
+                          : GaussColors.muted,
+                    ),
                   ),
                 ),
-              ),
             ],
           ),
         ),
-        if (onShuffle != null)
-          IconButton(
-            onPressed: onShuffle,
-            tooltip: shuffled
-                ? 'Reshuffle this set again'
-                : 'Second pass in a new order',
-            icon: Icon(
-              Icons.shuffle_rounded,
-              color: shuffled ? GaussColors.brassLight : GaussColors.muted,
-            ),
+        const SizedBox(height: 3),
+        ConstrainedBox(
+          key: const ValueKey('study-room-session-heading'),
+          constraints: const BoxConstraints(maxWidth: 320),
+          child: QuestionProgressRail(
+            index: index,
+            total: total,
+            label: masteryReview ? 'MASTERY REVIEW' : 'STUDY ROOM',
+            valueKey: const ValueKey('study-room-progress-chip'),
           ),
-        const SizedBox(width: 4),
-        Semantics(
-          label: 'Study item ${index + 1} of $total',
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-            decoration: BoxDecoration(
-              color: GaussColors.deepInk.withValues(alpha: .9),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: GaussColors.hairline),
-            ),
-            child: Text(
-              '${index + 1} / $total',
-              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12),
+        ),
+        const SizedBox(height: 5),
+        Directionality(
+          textDirection: revisitOnly ? TextDirection.ltr : TextDirection.rtl,
+          child: Text(
+            _contextLabel,
+            key: const ValueKey('study-room-context-label'),
+            textAlign: TextAlign.center,
+            softWrap: true,
+            style: const TextStyle(
+              color: GaussColors.ivory,
+              fontSize: 13,
+              fontWeight: FontWeight.w800,
+              height: 1.45,
             ),
           ),
         ),
@@ -479,11 +720,18 @@ class _ArchivePage extends StatelessWidget {
     required this.hypothesis,
     required this.record,
     required this.saving,
+    required this.saveError,
     required this.active,
+    required this.ink,
+    required this.questionNumber,
+    required this.onExpandInk,
+    required this.onClearInk,
+    required this.onRestoreInk,
     required this.onInkModeChanged,
     required this.onHypothesis,
     required this.onReveal,
     required this.onReflection,
+    required this.onRetryReflection,
     super.key,
   });
 
@@ -492,11 +740,18 @@ class _ArchivePage extends StatelessWidget {
   final int? hypothesis;
   final StudyRecord? record;
   final bool saving;
+  final String? saveError;
   final bool active;
+  final ScratchInkController ink;
+  final int questionNumber;
+  final VoidCallback onExpandInk;
+  final VoidCallback onClearInk;
+  final VoidCallback onRestoreInk;
   final ValueChanged<bool> onInkModeChanged;
   final ValueChanged<int> onHypothesis;
   final VoidCallback onReveal;
   final ValueChanged<StudyReflection> onReflection;
+  final VoidCallback onRetryReflection;
 
   @override
   Widget build(BuildContext context) => LayoutBuilder(
@@ -513,9 +768,8 @@ class _ArchivePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  ..._promptContent(context),
-                  const SizedBox(height: 18),
-                  ..._responseContent(context, includeHeading: false),
+                  _manuscript(context),
+                  ..._postRevealContent(context),
                 ],
               ),
             ),
@@ -538,7 +792,7 @@ class _ArchivePage extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(2, 2, 10, 18),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: _promptContent(context),
+                      children: [_manuscript(context)],
                     ),
                   ),
                 ),
@@ -563,7 +817,10 @@ class _ArchivePage extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(18, 18, 18, 22),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: _responseContent(context),
+                        children: _postRevealContent(
+                          context,
+                          includeHeading: true,
+                        ),
                       ),
                     ),
                   ),
@@ -576,123 +833,70 @@ class _ArchivePage extends StatelessWidget {
     },
   );
 
-  List<Widget> _promptContent(BuildContext context) => [
-    const _ProvenanceBanner(),
-    const SizedBox(height: 12),
-    Row(
-      children: [
-        const Text(
-          'PRESERVED ITEM',
-          style: TextStyle(
-            color: GaussColors.brassLight,
-            fontSize: GaussTypeScale.insignia,
-            fontWeight: FontWeight.w900,
-            letterSpacing: 1.25,
-          ),
+  Widget _manuscript(BuildContext context) => QuestionManuscript(
+    key: const ValueKey('study-room-question-paper'),
+    ink: ink,
+    active: active,
+    questionNumber: questionNumber,
+    difficulty: question.difficulty.label,
+    onDrawingChanged: onInkModeChanged,
+    onExpandInk: onExpandInk,
+    onClearInk: onClearInk,
+    onRestoreInk: onRestoreInk,
+    prompt: Directionality(
+      key: ValueKey('study-ink-${question.id}'),
+      textDirection: TextDirection.rtl,
+      child: ContentBlocksView(
+        blocks: question.stem,
+        textColor: GaussColors.parchmentInk,
+        textStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
+          color: GaussColors.parchmentInk,
+          fontFamily: 'Vazirmatn',
+          fontSize: 18,
+          height: 1.65,
         ),
-        const Spacer(),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
-          decoration: BoxDecoration(
-            color: GaussColors.brass.withValues(alpha: .09),
-            borderRadius: BorderRadius.circular(GaussRadii.pill),
-            border: Border.all(color: GaussColors.brass.withValues(alpha: .3)),
-          ),
-          child: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Text(
-              question.difficulty.label,
-              style: const TextStyle(
-                color: GaussColors.brassLight,
-                fontSize: GaussTypeScale.insignia,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ),
-        ),
-      ],
+      ),
     ),
-    const SizedBox(height: 12),
-    Container(
-      constraints: const BoxConstraints(minHeight: 142),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFFF7EED9), GaussColors.parchment],
-        ),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: GaussColors.brass.withValues(alpha: .65)),
-        boxShadow: const [
-          BoxShadow(
-            color: Color(0x66000000),
-            blurRadius: 24,
-            offset: Offset(0, 12),
+    answers: Column(
+      key: const ValueKey('study-room-answer-manuscript'),
+      children: [
+        for (var choice = 0; choice < question.options.length; choice++)
+          _ArchiveChoice(
+            blocks: question.options[choice],
+            choice: choice,
+            selected: hypothesis == choice,
+            enabled: !revealed,
+            markedBySource: revealed && choice == question.correctChoiceIndex,
+            onTap: () => onHypothesis(choice),
+            manuscript: true,
+          ),
+        if (!revealed) ...[
+          const SizedBox(height: GaussSpacing.space8),
+          Center(
+            child: OrbitalActionControl(
+              key: const ValueKey('study-room-reveal-source-action'),
+              semanticLabel: 'Reveal the unverified source answer',
+              icon: Icons.visibility_outlined,
+              dimension: 56,
+              accent: const Color(0xFF9D691D),
+              onPressed: onReveal,
+            ),
           ),
         ],
-      ),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
-        child: InlineQuestionScratch(
-          key: ValueKey('study-ink-${question.id}'),
-          active: active,
-          onDrawingChanged: onInkModeChanged,
-          child: Directionality(
-            textDirection: TextDirection.rtl,
-            child: ContentBlocksView(
-              blocks: question.stem,
-              textColor: GaussColors.parchmentInk,
-              textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: GaussColors.parchmentInk,
-                fontFamily: 'Vazirmatn',
-                height: 1.7,
-              ),
-            ),
-          ),
-        ),
-      ),
+      ],
     ),
-    const SizedBox(height: 10),
-    Text(
-      revealed
-          ? 'Your hypothesis is frozen after reveal.'
-          : 'Choose a private hypothesis, or reveal without one.',
-      style: const TextStyle(
-        color: GaussColors.fog,
-        fontSize: GaussTypeScale.caption,
-        height: 1.4,
-      ),
-    ),
-  ];
+  );
 
-  List<Widget> _responseContent(
+  List<Widget> _postRevealContent(
     BuildContext context, {
-    bool includeHeading = true,
+    bool includeHeading = false,
   }) => [
     if (includeHeading) ...[
       _WorkspaceHeading(revealed: revealed),
       const SizedBox(height: 16),
     ],
-    for (var choice = 0; choice < question.options.length; choice++)
-      Padding(
-        padding: const EdgeInsets.only(bottom: 10),
-        child: _ArchiveChoice(
-          blocks: question.options[choice],
-          choice: choice,
-          selected: hypothesis == choice,
-          enabled: !revealed,
-          markedBySource: revealed && choice == question.correctChoiceIndex,
-          onTap: () => onHypothesis(choice),
-        ),
-      ),
-    const SizedBox(height: 6),
-    if (!revealed)
-      OutlinedButton.icon(
-        onPressed: onReveal,
-        icon: const Icon(Icons.visibility_outlined, size: 19),
-        label: const Text('Reveal reference answer'),
-      )
-    else ...[
+    if (revealed) ...[
+      const SizedBox(height: 18),
       _HypothesisComparison(
         hypothesis: hypothesis,
         sourceKey: question.correctChoiceIndex,
@@ -703,7 +907,9 @@ class _ArchivePage extends StatelessWidget {
       _ReflectionDeck(
         record: record,
         saving: saving,
+        saveError: saveError,
         onReflection: onReflection,
+        onRetry: onRetryReflection,
       ),
     ],
   ];
@@ -891,41 +1097,6 @@ class _ComparisonChip extends StatelessWidget {
   );
 }
 
-class _ProvenanceBanner extends StatelessWidget {
-  const _ProvenanceBanner();
-
-  @override
-  Widget build(BuildContext context) => Semantics(
-    container: true,
-    label:
-        'Reference item. Its provided answer and explanation are not verified by Gauss. Reading only; nothing here is scored.',
-    child: Container(
-      padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
-      decoration: BoxDecoration(
-        color: GaussColors.warning.withValues(alpha: .09),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: GaussColors.warning.withValues(alpha: .4)),
-      ),
-      child: const Row(
-        children: [
-          Icon(Icons.shield_outlined, size: 18, color: GaussColors.warning),
-          SizedBox(width: 9),
-          Expanded(
-            child: Text(
-              'Reference item — the provided answer and explanation are not verified by Gauss. Reading only; nothing here is scored.',
-              style: TextStyle(
-                color: GaussColors.muted,
-                fontSize: 11,
-                height: 1.4,
-              ),
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
-}
-
 class _ArchiveChoice extends StatelessWidget {
   const _ArchiveChoice({
     required this.blocks,
@@ -934,6 +1105,7 @@ class _ArchiveChoice extends StatelessWidget {
     required this.enabled,
     required this.markedBySource,
     required this.onTap,
+    this.manuscript = false,
   });
 
   final List<ContentBlock> blocks;
@@ -942,92 +1114,77 @@ class _ArchiveChoice extends StatelessWidget {
   final bool enabled;
   final bool markedBySource;
   final VoidCallback onTap;
+  final bool manuscript;
 
   @override
   Widget build(BuildContext context) {
-    final border = markedBySource
-        ? GaussColors.warning
+    final tone = markedBySource
+        ? TheoremChoiceTone.source
         : selected
-        ? GaussColors.brass
-        : GaussColors.line;
+        ? TheoremChoiceTone.selected
+        : TheoremChoiceTone.neutral;
     return Semantics(
       container: true,
-      button: enabled,
+      button: true,
+      enabled: enabled,
       selected: selected,
+      onTap: enabled ? onTap : null,
       label:
           'Choice ${choice + 1}.'
           '${selected ? ' Your private hypothesis.' : ''}'
           '${markedBySource ? ' Marked as the answer by the unverified source.' : ''}',
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: enabled ? onTap : null,
-          borderRadius: BorderRadius.circular(18),
-          child: Ink(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: markedBySource
-                    ? [
-                        GaussColors.warning.withValues(alpha: .12),
-                        GaussColors.deepInk,
-                      ]
-                    : selected
-                    ? [
-                        GaussColors.brass.withValues(alpha: .16),
-                        GaussColors.deepInk,
-                      ]
-                    : [GaussColors.panelHigh, GaussColors.raised],
-              ),
-              borderRadius: BorderRadius.circular(18),
-              border: Border.all(
-                color: border,
-                width: markedBySource || selected ? 2 : 1,
-              ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
-              child: Row(
-                children: [
-                  Container(
-                    width: 34,
-                    height: 34,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: selected
-                          ? GaussColors.brass.withValues(alpha: .13)
-                          : Colors.transparent,
-                      border: Border.all(color: border),
+      child: manuscript
+          ? ManuscriptChoiceShell(
+              tone: tone,
+              onTap: enabled ? onTap : null,
+              emblem: markedBySource
+                  ? const Icon(
+                      Icons.shield_outlined,
+                      size: 17,
+                      color: Color(0xFF9D691D),
+                    )
+                  : selected
+                  ? const Icon(
+                      Icons.edit_note_rounded,
+                      size: 19,
+                      color: Color(0xFF237E83),
+                    )
+                  : Text(
+                      String.fromCharCode(65 + choice),
+                      style: const TextStyle(
+                        color: GaussColors.parchmentInk,
+                        fontFamily: 'serif',
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
-                    child: markedBySource
-                        ? const Icon(
-                            Icons.shield_outlined,
-                            size: 16,
-                            color: GaussColors.warning,
-                          )
-                        : selected
-                        ? const Icon(
-                            Icons.edit_note_rounded,
-                            size: 18,
-                            color: GaussColors.brassLight,
-                          )
-                        : Text(
-                            String.fromCharCode(65 + choice),
-                            style: const TextStyle(fontWeight: FontWeight.w800),
-                          ),
-                  ),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: ContentBlocksView(blocks: blocks, compact: true),
-                  ),
-                ],
+              child: ContentBlocksView(
+                blocks: blocks,
+                compact: true,
+                textColor: GaussColors.parchmentInk,
               ),
+            )
+          : TheoremChoiceShell(
+              tone: tone,
+              onTap: enabled ? onTap : null,
+              emblem: markedBySource
+                  ? const Icon(
+                      Icons.shield_outlined,
+                      size: 17,
+                      color: GaussColors.warning,
+                    )
+                  : selected
+                  ? const Icon(
+                      Icons.edit_note_rounded,
+                      size: 19,
+                      color: GaussColors.brassLight,
+                    )
+                  : Text(
+                      String.fromCharCode(65 + choice),
+                      style: const TextStyle(fontWeight: FontWeight.w900),
+                    ),
+              child: ContentBlocksView(blocks: blocks, compact: true),
             ),
-          ),
-        ),
-      ),
     );
   }
 }
@@ -1054,8 +1211,7 @@ class _SourceSolution extends StatelessWidget {
               Expanded(
                 child: Text(
                   'Source explanation — unverified',
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
+                  softWrap: true,
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
@@ -1090,12 +1246,16 @@ class _ReflectionDeck extends StatelessWidget {
   const _ReflectionDeck({
     required this.record,
     required this.saving,
+    required this.saveError,
     required this.onReflection,
+    required this.onRetry,
   });
 
   final StudyRecord? record;
   final bool saving;
+  final String? saveError;
   final ValueChanged<StudyReflection> onReflection;
+  final VoidCallback onRetry;
 
   @override
   Widget build(BuildContext context) {
@@ -1150,6 +1310,14 @@ class _ReflectionDeck extends StatelessWidget {
               height: 1.45,
             ),
           ),
+          if (saveError != null) ...[
+            const SizedBox(height: 12),
+            _ReflectionSaveFailure(
+              message: saveError!,
+              retrying: saving,
+              onRetry: onRetry,
+            ),
+          ],
           const SizedBox(height: 14),
           LayoutBuilder(
             builder: (context, constraints) {
@@ -1207,6 +1375,77 @@ class _ReflectionDeck extends StatelessWidget {
   }
 }
 
+class _ReflectionSaveFailure extends StatelessWidget {
+  const _ReflectionSaveFailure({
+    required this.message,
+    required this.retrying,
+    required this.onRetry,
+  });
+
+  final String message;
+  final bool retrying;
+  final VoidCallback onRetry;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    container: true,
+    liveRegion: true,
+    label:
+        'Field note not saved. $message No new mark is shown until the local ledger confirms it.',
+    child: Container(
+      key: const ValueKey('study-reflection-save-failure'),
+      padding: const EdgeInsets.fromLTRB(12, 10, 8, 10),
+      decoration: BoxDecoration(
+        color: GaussColors.warning.withValues(alpha: .1),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: GaussColors.warning.withValues(alpha: .5)),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Icon(
+            Icons.sync_problem_rounded,
+            color: GaussColors.warning,
+            size: 22,
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Field note not saved',
+                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 12),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  message,
+                  style: const TextStyle(
+                    color: GaussColors.fog,
+                    fontSize: 11,
+                    height: 1.35,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          TextButton.icon(
+            onPressed: retrying ? null : onRetry,
+            icon: retrying
+                ? const SizedBox.square(
+                    dimension: 15,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  )
+                : const Icon(Icons.refresh_rounded, size: 18),
+            label: const Text('Retry'),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
 /// Mira sits with the learner while the concept settles. She reacts to the
 /// learner's own signal, never to the unverified source key.
 class _MiraCompanion extends StatelessWidget {
@@ -1240,174 +1479,20 @@ class _MiraCompanion extends StatelessWidget {
   }
 }
 
-/// A quiet celebration when a set, a unit, or a level completes. It reports
+/// A quiet celebration when a session, a unit, or a level completes. It reports
 /// what the ledger recorded — never a claim about the source answer.
-class _StudyRecapDialog extends StatelessWidget {
-  const _StudyRecapDialog({required this.outcome});
+enum _StudyRecapAction { continueStudy }
 
-  final StudyReflectionOutcome outcome;
+class _StudyRecapContinuation {
+  const _StudyRecapContinuation({
+    required this.label,
+    required this.route,
+    this.returnToMap = false,
+  });
 
-  @override
-  Widget build(BuildContext context) {
-    final headline = outcome.unitCompleted
-        ? 'Unit charted'
-        : outcome.setCompleted
-        ? 'Set complete'
-        : outcome.dailyQuestCompleted
-        ? 'Daily observation complete'
-        : 'Level ${outcome.levelAfter}';
-    final detail = outcome.unitCompleted
-        ? 'Every question in this unit now carries your own mark.'
-        : outcome.setCompleted
-        ? 'Twenty coordinates charted. The next set is ready when you are.'
-        : outcome.dailyQuestCompleted
-        ? 'Ten new reflections are safely recorded for today.'
-        : 'Your steady charting moved the observatory forward.';
-    final receiptDetail = outcome.xpEarned > 0
-        ? '${outcome.xpEarned} experience recorded.'
-        : 'The milestone was recorded; today\'s XP cap is already met.';
-    final totals = <String, int>{};
-    for (final line in outcome.lines) {
-      totals.update(
-        line.reason,
-        (value) => value + line.amount,
-        ifAbsent: () => line.amount,
-      );
-    }
-    return Dialog(
-      insetPadding: const EdgeInsets.all(22),
-      backgroundColor: Colors.transparent,
-      child: Semantics(
-        container: true,
-        label:
-            '$headline. $detail. $receiptDetail '
-            '${outcome.leveledUp ? 'Level ${outcome.levelAfter} reached.' : ''}',
-        child: Container(
-          constraints: const BoxConstraints(maxWidth: 420),
-          padding: const EdgeInsets.fromLTRB(22, 20, 22, 18),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                GaussColors.panelHigh.withValues(alpha: .97),
-                GaussColors.ink.withValues(alpha: .98),
-              ],
-            ),
-            borderRadius: BorderRadius.circular(26),
-            border: Border.all(color: GaussColors.brass.withValues(alpha: .5)),
-            boxShadow: const [
-              BoxShadow(
-                color: Color(0x99000000),
-                blurRadius: 34,
-                offset: Offset(0, 16),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(
-                height: 132,
-                child: Image.asset(
-                  'assets/visual/mascot/mira_correct.png',
-                  fit: BoxFit.contain,
-                  cacheHeight: 400,
-                  filterQuality: FilterQuality.medium,
-                  semanticLabel: 'Mira marks the milestone with you',
-                ),
-              ),
-              const SizedBox(height: 12),
-              Text(
-                headline,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
-              const SizedBox(height: 6),
-              Text(
-                detail,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: GaussColors.muted,
-                  fontSize: 12,
-                  height: 1.45,
-                ),
-              ),
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(13),
-                decoration: BoxDecoration(
-                  color: GaussColors.deepInk.withValues(alpha: .82),
-                  borderRadius: BorderRadius.circular(17),
-                  border: Border.all(color: GaussColors.hairline),
-                ),
-                child: Column(
-                  children: [
-                    for (final entry in totals.entries)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 4),
-                        child: Row(
-                          children: [
-                            const TheoremStarMark(size: 16),
-                            const SizedBox(width: 9),
-                            Expanded(
-                              child: Text(
-                                entry.key,
-                                style: const TextStyle(fontSize: 12),
-                              ),
-                            ),
-                            Text(
-                              '+${entry.value} XP',
-                              style: const TextStyle(
-                                color: GaussColors.signalBright,
-                                fontWeight: FontWeight.w900,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    if (totals.isEmpty)
-                      const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 4),
-                        child: Text(
-                          'No additional XP was granted for this receipt.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: GaussColors.muted,
-                            fontSize: 12,
-                            height: 1.35,
-                          ),
-                        ),
-                      ),
-                    if (outcome.leveledUp) ...[
-                      const Divider(height: 18),
-                      Text(
-                        'Level ${outcome.levelAfter} reached',
-                        style: const TextStyle(
-                          color: GaussColors.brassLight,
-                          fontWeight: FontWeight.w900,
-                          fontSize: 12,
-                        ),
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: () => Navigator.of(context).pop(),
-                  child: const Text('Keep charting'),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+  final String label;
+  final String route;
+  final bool returnToMap;
 }
 
 class _ReflectionButton extends StatelessWidget {
@@ -1447,18 +1532,26 @@ class _JumpSheet extends StatelessWidget {
   const _JumpSheet({
     required this.shelf,
     required this.records,
+    required this.encounteredSlotIds,
     required this.currentIndex,
   });
 
   final StudyShelf shelf;
   final Map<String, StudyRecord> records;
+  final Set<String> encounteredSlotIds;
   final int currentIndex;
 
   @override
   Widget build(BuildContext context) {
-    final firstUnread = shelf.questions.indexWhere(
-      (question) => !records.containsKey(question.id),
-    );
+    final firstUnread =
+        List<int>.generate(shelf.questions.length, (index) => index).indexWhere(
+          (index) {
+            final slot = shelf.slots[index];
+            return slot.planned
+                ? !encounteredSlotIds.contains(slot.id)
+                : !records.containsKey(shelf.questions[index].id);
+          },
+        );
     return DraggableScrollableSheet(
       initialChildSize: .62,
       minChildSize: .35,
@@ -1490,7 +1583,7 @@ class _JumpSheet extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          '${shelf.questions.length} questions in this set',
+                          '${shelf.questions.length} questions in this session',
                           style: const TextStyle(
                             color: GaussColors.fog,
                             fontSize: 11,
@@ -1524,12 +1617,21 @@ class _JumpSheet extends StatelessWidget {
                   childAspectRatio: 1,
                 ),
                 itemCount: shelf.questions.length,
-                itemBuilder: (context, index) => _JumpTile(
-                  number: index + 1,
-                  current: index == currentIndex,
-                  record: records[shelf.questions[index].id],
-                  onTap: () => Navigator.of(context).pop(index),
-                ),
+                itemBuilder: (context, index) {
+                  final slot = shelf.slots[index];
+                  final encountered =
+                      !slot.planned || encounteredSlotIds.contains(slot.id);
+                  return _JumpTile(
+                    number: index + 1,
+                    current: index == currentIndex,
+                    record: encountered
+                        ? records[shelf.questions[index].id]
+                        : null,
+                    masteryReview: slot.kind == 'mastery_review',
+                    encountered: encountered,
+                    onTap: () => Navigator.of(context).pop(index),
+                  );
+                },
               ),
             ),
           ],
@@ -1544,12 +1646,16 @@ class _JumpTile extends StatelessWidget {
     required this.number,
     required this.current,
     required this.record,
+    required this.masteryReview,
+    required this.encountered,
     required this.onTap,
   });
 
   final int number;
   final bool current;
   final StudyRecord? record;
+  final bool masteryReview;
+  final bool encountered;
   final VoidCallback onTap;
 
   @override
@@ -1562,6 +1668,7 @@ class _JumpTile extends StatelessWidget {
       StudyReflection.gem => GaussColors.brassLight,
     };
     final stateLabel = switch (reflection) {
+      null when masteryReview && !encountered => 'mastery review pending',
       null => 'not charted',
       StudyReflection.clear => 'clear',
       StudyReflection.revisit => 'revisit',
@@ -1572,6 +1679,7 @@ class _JumpTile extends StatelessWidget {
       selected: current,
       label: 'Question $number, $stateLabel',
       child: InkWell(
+        key: ValueKey('study-room-jump-question-$number'),
         onTap: onTap,
         borderRadius: BorderRadius.circular(14),
         child: Container(
@@ -1619,131 +1727,211 @@ class _ArchiveNavBar extends StatelessWidget {
     required this.index,
     required this.total,
     required this.reflected,
+    required this.ink,
     required this.onPrevious,
     required this.onNext,
+    required this.onJump,
+    required this.onOpenInkWorkspace,
+    required this.onClearInk,
+    required this.onRestoreInk,
+  });
+
+  final int index;
+  final int total;
+  final bool reflected;
+  final ScratchInkController ink;
+  final VoidCallback? onPrevious;
+  final VoidCallback? onNext;
+  final VoidCallback onJump;
+  final VoidCallback onOpenInkWorkspace;
+  final VoidCallback onClearInk;
+  final VoidCallback onRestoreInk;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.fromLTRB(12, 5, 12, 10),
+    child: Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 360),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(28),
+          child: BackdropFilter(
+            filter: ui.ImageFilter.blur(sigmaX: 16, sigmaY: 16),
+            child: Container(
+              key: const ValueKey('study-room-navigation-dock'),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7),
+              decoration: BoxDecoration(
+                color: GaussColors.deepInk.withValues(alpha: .9),
+                borderRadius: BorderRadius.circular(28),
+                border: Border.all(
+                  color: GaussColors.brass.withValues(alpha: .24),
+                ),
+              ),
+              child: AnimatedBuilder(
+                animation: ink,
+                builder: (context, _) => Row(
+                  children: [
+                    IconButton.outlined(
+                      key: const ValueKey('study-room-previous-action'),
+                      onPressed: onPrevious,
+                      tooltip: 'Previous question',
+                      icon: const Icon(Icons.arrow_back_rounded, size: 19),
+                    ),
+                    const SizedBox(width: GaussSpacing.space8),
+                    Expanded(
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          minHeight:
+                              MediaQuery.textScalerOf(context).scale(14) >= 20
+                              ? 70
+                              : 60,
+                        ),
+                        child: AnimatedSwitcher(
+                          duration: GaussMotion.resolve(
+                            context,
+                            GaussMotion.standard,
+                          ),
+                          switchInCurve: Curves.easeOutCubic,
+                          switchOutCurve: Curves.easeInCubic,
+                          child: ink.isEmpty || ink.canRestoreClearedInk
+                              ? ink.canRestoreClearedInk
+                                    ? _ArchiveInkRestore(
+                                        onRestore: onRestoreInk,
+                                      )
+                                    : _ArchiveQuestionPosition(
+                                        index: index,
+                                        total: total,
+                                        reflected: reflected,
+                                        onJump: onJump,
+                                      )
+                              : _ArchiveInkControls(
+                                  ink: ink,
+                                  onExpand: onOpenInkWorkspace,
+                                  onClear: onClearInk,
+                                ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: GaussSpacing.space8),
+                    OrbitalActionControl(
+                      key: const ValueKey('study-room-next-action'),
+                      semanticLabel: 'Next question',
+                      onPressed: onNext,
+                      icon: Icons.arrow_forward_rounded,
+                      dimension: GaussMetrics.minTouchTarget,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+class _ArchiveQuestionPosition extends StatelessWidget {
+  const _ArchiveQuestionPosition({
+    required this.index,
+    required this.total,
+    required this.reflected,
     required this.onJump,
   });
 
   final int index;
   final int total;
   final bool reflected;
-  final VoidCallback? onPrevious;
-  final VoidCallback? onNext;
   final VoidCallback onJump;
 
   @override
-  Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.fromLTRB(12, 5, 12, 9),
-    child: Center(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 980),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(22),
-          child: BackdropFilter(
-            filter: ui.ImageFilter.blur(sigmaX: 16, sigmaY: 16),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-              decoration: BoxDecoration(
-                color: GaussColors.deepInk.withValues(alpha: .9),
-                borderRadius: BorderRadius.circular(22),
-                border: Border.all(
-                  color: GaussColors.brass.withValues(alpha: .24),
-                ),
-              ),
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  final compact = constraints.maxWidth < 480;
-                  final position = Semantics(
-                    button: true,
-                    label:
-                        'Question ${index + 1} of $total'
-                        '${reflected ? ', charted' : ''}. Jump to a question.',
-                    child: Tooltip(
-                      message: 'Jump to a question',
-                      child: InkWell(
-                        onTap: total <= 1 ? null : onJump,
-                        borderRadius: BorderRadius.circular(10),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 8,
-                            vertical: 6,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Flexible(
-                                child: Text(
-                                  reflected
-                                      ? '${index + 1} of $total · charted'
-                                      : '${index + 1} of $total',
-                                  textAlign: TextAlign.center,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    color: GaussColors.fog,
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                              ),
-                              if (total > 1) ...[
-                                const SizedBox(width: 5),
-                                const Icon(
-                                  Icons.unfold_more_rounded,
-                                  size: 13,
-                                  color: GaussColors.brassLight,
-                                ),
-                              ],
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  );
-                  if (compact) {
-                    return Row(
-                      children: [
-                        IconButton.outlined(
-                          onPressed: onPrevious,
-                          tooltip: 'Previous question',
-                          icon: const Icon(Icons.arrow_back_rounded, size: 19),
-                        ),
-                        const SizedBox(width: 8),
-                        Expanded(child: position),
-                        const SizedBox(width: 8),
-                        IconButton.filled(
-                          onPressed: onNext,
-                          tooltip: 'Next question',
-                          icon: const Icon(
-                            Icons.arrow_forward_rounded,
-                            size: 19,
-                          ),
-                        ),
-                      ],
-                    );
-                  }
-                  return Row(
-                    children: [
-                      OutlinedButton.icon(
-                        onPressed: onPrevious,
-                        icon: const Icon(Icons.arrow_back_rounded, size: 19),
-                        label: const Text('Previous'),
-                      ),
-                      const SizedBox(width: 18),
-                      Expanded(child: position),
-                      const SizedBox(width: 18),
-                      FilledButton.icon(
-                        onPressed: onNext,
-                        icon: const Icon(Icons.arrow_forward_rounded, size: 19),
-                        label: const Text('Next'),
-                      ),
-                    ],
-                  );
-                },
-              ),
-            ),
+  Widget build(BuildContext context) => Semantics(
+    button: total > 1,
+    label:
+        'Question ${index + 1} of $total'
+        '${reflected ? ', charted' : ''}. Jump to a question.',
+    child: Tooltip(
+      message: 'Jump to a question',
+      child: InkWell(
+        key: const ValueKey('study-room-jump-action'),
+        onTap: total <= 1 ? null : onJump,
+        borderRadius: BorderRadius.circular(14),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: GaussSpacing.space4,
+            vertical: GaussSpacing.space4,
+          ),
+          child: QuestionProgressRail(
+            index: index,
+            total: total,
+            label: reflected ? 'CHARTED' : 'QUESTION',
+            valueText: '${index + 1} of $total',
+            valueKey: const ValueKey('study-room-navigation-position'),
           ),
         ),
+      ),
+    ),
+  );
+}
+
+class _ArchiveInkControls extends StatelessWidget {
+  const _ArchiveInkControls({
+    required this.ink,
+    required this.onExpand,
+    required this.onClear,
+  });
+
+  final ScratchInkController ink;
+  final VoidCallback onExpand;
+  final VoidCallback onClear;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    container: true,
+    label: 'Question ink controls',
+    child: Row(
+      key: const ValueKey('study-room-ink-controls'),
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        IconButton(
+          key: const ValueKey('study-room-ink-undo'),
+          onPressed: ink.canUndo ? ink.undo : null,
+          tooltip: 'Undo last ink stroke',
+          icon: const Icon(Icons.undo_rounded),
+        ),
+        IconButton(
+          key: const ValueKey('study-room-ink-expand'),
+          onPressed: onExpand,
+          tooltip: 'Open full scratchpad',
+          icon: const Icon(Icons.open_in_full_rounded),
+        ),
+        IconButton(
+          key: const ValueKey('study-room-ink-clear'),
+          onPressed: onClear,
+          tooltip: 'Clear question ink',
+          color: GaussColors.error,
+          icon: const Icon(Icons.delete_sweep_outlined),
+        ),
+      ],
+    ),
+  );
+}
+
+class _ArchiveInkRestore extends StatelessWidget {
+  const _ArchiveInkRestore({required this.onRestore});
+
+  final VoidCallback onRestore;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    liveRegion: true,
+    label: 'Question ink cleared',
+    child: Center(
+      child: TextButton.icon(
+        key: const ValueKey('study-room-ink-restore'),
+        onPressed: onRestore,
+        icon: const Icon(Icons.undo_rounded, color: GaussColors.brassLight),
+        label: const Text('Restore ink'),
       ),
     ),
   );

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "question_id": "nardebam_math_1405_0093",
+  "source_sha256": "1f195ef839c708f090b427c13e285ef13d079273c57934388a1974d4b479af83",
+  "claim": "The requested arithmetic mean equals 1/6 everywhere the two source fractions are defined.",
+  "givens": [
+    "ab=9",
+    "a!=3",
+    "b!=3"
+  ],
+  "identities": [
+    "(3-a)(3-b)=9-3a-3b+ab=18-3a-3b=3(6-a-b)",
+    "mean=(6-a-b)/(2(3-a)(3-b))=(6-a-b)/(6(6-a-b))"
+  ],
+  "domain_closure": {
+    "assumption": "6-a-b=0",
+    "consequences": [
+      "a+b=6",
+      "ab=9",
+      "(a-3)(b-3)=0",
+      "a=3 or b=3",
+      "ab=9 then forces a=b=3"
+    ],
+    "contradiction": "The original fractions are undefined at a=b=3.",
+    "conclusion": "6-a-b!=0 on the defined domain. Cancellation is valid."
+  },
+  "effective_option": 4,
+  "semantic_answer": "1/6",
+  "immutable_source_option": 2,
+  "printed_source_option": 4
+}

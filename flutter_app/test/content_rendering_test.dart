@@ -54,6 +54,15 @@ void main() {
   });
 
   test(
+    'learning digit normalization is view-only and covers both numeral sets',
+    () {
+      const source = 'سؤال ۱۲، گزینه ٣ و پاسخ ۴۵٫۶';
+      expect(normalizeLearningDigits(source), 'سؤال 12، گزینه 3 و پاسخ 45.6');
+      expect(source, 'سؤال ۱۲، گزینه ٣ و پاسخ ۴۵٫۶');
+    },
+  );
+
+  test(
     'every bundled question TeX segment parses without source mutation',
     () async {
       final bank = QuestionBankRepository();
@@ -134,10 +143,10 @@ void main() {
                 child: ContentBlocksView(
                   blocks: [
                     TextBlock(
-                      'عبارت \$x^۲+۲x+۱\$ را ساده کنید.\n'
+                      'عبارت ۱۲ را در \$x^۲+۲x+۱\$ ساده کنید.\n'
                       r'$$\frac{۱}{۲}+\sqrt{۹}=۳٫۵$$',
                     ),
-                    TextBlock('پاسخ: گزینهٔ دوم، زیرا مربع کامل است.'),
+                    TextBlock('پاسخ ٣: گزینهٔ دوم، زیرا مربع کامل است.'),
                   ],
                 ),
               ),
@@ -149,7 +158,19 @@ void main() {
 
       expect(find.byType(Math), findsNWidgets(2));
       expect(find.textContaining('عبارت '), findsOneWidget);
-      expect(find.textContaining('پاسخ:'), findsOneWidget);
+      expect(find.textContaining('پاسخ 3:'), findsOneWidget);
+      final renderedText = tester
+          .widgetList<Text>(
+            find.descendant(
+              of: find.byType(ContentBlocksView),
+              matching: find.byType(Text),
+            ),
+          )
+          .map((widget) => widget.data ?? '')
+          .join(' ');
+      expect(renderedText, isNot(contains(RegExp(r'[۰-۹٠-٩]'))));
+      expect(renderedText, contains('12'));
+      expect(renderedText, contains('3'));
       final inline = tester.getRect(
         find.byKey(const ValueKey('inline-math-1')),
       );

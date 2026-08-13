@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 
@@ -9,7 +10,12 @@ import 'package:flutter/services.dart';
 import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 
-Future<void> showScratchpad(BuildContext context) {
+Future<void> showScratchpad(
+  BuildContext context, {
+  ScratchInkController? controller,
+  double initialStrokeWidth = 2.8,
+  ValueChanged<double>? onStrokeWidthChanged,
+}) {
   final window = GaussWindowClass.of(context);
   return showModalBottomSheet<void>(
     context: context,
@@ -19,7 +25,11 @@ Future<void> showScratchpad(BuildContext context) {
     constraints: window.isCompact
         ? null
         : BoxConstraints(maxWidth: window.isWide ? 960 : 820),
-    builder: (context) => const _ScratchpadSheet(),
+    builder: (context) => _ScratchpadSheet(
+      controller: controller,
+      initialStrokeWidth: initialStrokeWidth,
+      onStrokeWidthChanged: onStrokeWidthChanged,
+    ),
   );
 }
 
@@ -81,6 +91,13 @@ class PalmRejectionSignal {
   final int? eventTimeMillis;
 }
 
+/// The deliberate finger-input mode for a question manuscript.
+///
+/// Hardware stylus input remains available in every mode. [pan] leaves touch
+/// to scrolling and answer controls, [pen] lets a finger write, and [eraser]
+/// removes the nearest complete ink gesture without raster smudging.
+enum QuestionInkMode { pan, pen, eraser }
+
 /// A non-destructive ink layer that sits directly on a question plate.
 ///
 /// A hardware stylus writes immediately without enabling a mode, so the
@@ -91,8 +108,10 @@ class InlineQuestionScratch extends StatefulWidget {
   const InlineQuestionScratch({
     required this.child,
     this.active = true,
+    this.showInlineControls = true,
     this.onDrawingChanged,
     this.controller,
+    this.inputMode = QuestionInkMode.pan,
     super.key,
   });
 
@@ -101,11 +120,13 @@ class InlineQuestionScratch extends StatefulWidget {
   /// False for off-screen PageView children. It guarantees that a question
   /// never keeps intercepting gestures after the learner moves away.
   final bool active;
+  final bool showInlineControls;
   final ValueChanged<bool>? onDrawingChanged;
 
   /// Optional for deterministic tests or a future persisted working layer.
   /// When omitted, this widget owns a session-local controller.
   final ScratchInkController? controller;
+  final QuestionInkMode inputMode;
 
   @override
   State<InlineQuestionScratch> createState() => _InlineQuestionScratchState();
@@ -114,10 +135,10 @@ class InlineQuestionScratch extends StatefulWidget {
 class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
   late ScratchInkController _ink;
   late bool _ownsInk;
-  bool _fingerInkEnabled = false;
   bool _pointerContact = false;
   bool _reportedGestureOwnership = false;
   double _strokeWidth = _PenWidth.medium.width;
+  Timer? _clearHistoryTimer;
 
   @override
   void initState() {
@@ -134,8 +155,14 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
   void didUpdateWidget(covariant InlineQuestionScratch oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.controller != widget.controller) {
+      final hadPendingClear = _clearHistoryTimer != null;
+      _clearHistoryTimer?.cancel();
+      _clearHistoryTimer = null;
       final previousInk = _ink;
       final disposePrevious = _ownsInk;
+      if (hadPendingClear && !disposePrevious) {
+        previousInk.discardLastClear();
+      }
       _adoptController();
       if (disposePrevious) {
         // The child input surface must cancel its old live session before the
@@ -145,17 +172,10 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
         });
       }
     }
-    if (!widget.active && (_fingerInkEnabled || _pointerContact)) {
-      _fingerInkEnabled = false;
+    if (!widget.active && _pointerContact) {
       _pointerContact = false;
       _reportGestureOwnership();
     }
-  }
-
-  void _setFingerInkEnabled(bool enabled) {
-    if (_fingerInkEnabled == enabled) return;
-    setState(() => _fingerInkEnabled = enabled);
-    _reportGestureOwnership();
   }
 
   void _setPointerContact(bool contact) {
@@ -165,14 +185,50 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
   }
 
   void _reportGestureOwnership() {
-    final ownsGesture = widget.active && (_fingerInkEnabled || _pointerContact);
+    final ownsGesture = widget.active && _pointerContact;
     if (_reportedGestureOwnership == ownsGesture) return;
     _reportedGestureOwnership = ownsGesture;
     widget.onDrawingChanged?.call(ownsGesture);
   }
 
+  void _setStrokeWidth(double value) {
+    if (_strokeWidth == value || !mounted) return;
+    setState(() => _strokeWidth = value);
+  }
+
+  void _expandInkWorkspace() {
+    showScratchpad(
+      context,
+      controller: _ink,
+      initialStrokeWidth: _strokeWidth,
+      onStrokeWidthChanged: _setStrokeWidth,
+    );
+  }
+
+  void _clearInlineInk() {
+    if (_ink.isEmpty) return;
+    _ink.clear();
+    _clearHistoryTimer?.cancel();
+    _clearHistoryTimer = Timer(const Duration(seconds: 4), () {
+      _clearHistoryTimer = null;
+      if (mounted) _ink.discardLastClear();
+    });
+  }
+
+  void _restoreInlineInk() {
+    _clearHistoryTimer?.cancel();
+    _clearHistoryTimer = null;
+    _ink.restoreLastClear();
+  }
+
   @override
   void dispose() {
+    final hadPendingClear = _clearHistoryTimer != null;
+    _clearHistoryTimer?.cancel();
+    _clearHistoryTimer = null;
+    if (hadPendingClear && !_ownsInk) {
+      _ink.discardLastClear();
+    }
     if (_reportedGestureOwnership) widget.onDrawingChanged?.call(false);
     if (_ownsInk) _ink.dispose();
     super.dispose();
@@ -183,158 +239,75 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
     animation: _ink,
     builder: (context, _) {
       final hasInk = !_ink.isEmpty;
+      final canRestoreClear = _ink.canRestoreClearedInk;
+      final inkSurface = ClipRect(
+        child: Semantics(
+          container: true,
+          explicitChildNodes: true,
+          label:
+              'Question ink surface. A stylus writes directly; touch remains available for scrolling and answers.',
+          child: _ScratchInputSurface(
+            ink: _ink,
+            baseWidth: _strokeWidth,
+            allowTouch: widget.inputMode != QuestionInkMode.pan,
+            erase: widget.inputMode == QuestionInkMode.eraser,
+            active: widget.active,
+            onContactChanged: _setPointerContact,
+            child: Stack(
+              fit: StackFit.passthrough,
+              children: [
+                widget.child,
+                Positioned.fill(
+                  child: IgnorePointer(
+                    child: CustomPaint(
+                      key: const ValueKey('inline-ink-canvas'),
+                      painter: _ScratchPainter(ink: _ink, drawGrid: false),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+      if (!widget.showInlineControls) return inkSurface;
       return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          LayoutBuilder(
-            builder: (context, constraints) {
-              // Keep the functional hit areas stable at compact widths; the
-              // written Clear label joins only when it cannot crowd the pen
-              // controls or the live instrument status.
-              final showClearLabel = hasInk && constraints.maxWidth >= 280;
-              return Row(
-                children: [
-                  Expanded(
-                    child: _InlineInkStatus(
-                      hasInk: hasInk,
-                      fingerInkEnabled: _fingerInkEnabled,
-                    ),
-                  ),
-                  const SizedBox(width: GaussSpacing.space4),
-                  Tooltip(
-                    message: 'Clear ink from this question',
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        AnimatedSwitcher(
-                          duration: GaussMotion.resolve(
-                            context,
-                            GaussMotion.micro,
-                          ),
-                          child: showClearLabel
-                              ? const Padding(
-                                  key: ValueKey('inline-ink-clear-label'),
-                                  padding: EdgeInsets.only(right: 2),
-                                  child: Text(
-                                    'Clear',
-                                    style: TextStyle(
-                                      color: GaussColors.parchmentInk,
-                                      fontSize: GaussTypeScale.caption,
-                                      fontWeight: FontWeight.w900,
-                                    ),
-                                  ),
-                                )
-                              : const SizedBox.shrink(),
-                        ),
-                        IconButton(
-                          key: const ValueKey('inline-ink-clear'),
-                          onPressed: hasInk ? _ink.clear : null,
-                          tooltip: 'Clear ink from this question',
-                          icon: const Icon(Icons.delete_sweep_outlined),
-                          color: GaussColors.parchmentInk,
-                          disabledColor: GaussColors.parchmentInk.withValues(
-                            alpha: .25,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  _PenWidthMenu(
-                    color: GaussColors.parchmentInk,
-                    value: _strokeWidth,
-                    onSelected: (value) => setState(() => _strokeWidth = value),
-                  ),
-                  const SizedBox(width: 2),
-                  Tooltip(
-                    message: _fingerInkEnabled
-                        ? 'Use Focus Pen only'
-                        : 'Enable finger drawing',
-                    child: Semantics(
-                      button: true,
-                      toggled: _fingerInkEnabled,
-                      label: 'Finger drawing on this question',
-                      child: InkResponse(
-                        onTap: widget.active
-                            ? () => _setFingerInkEnabled(!_fingerInkEnabled)
-                            : null,
-                        radius: 25,
-                        child: AnimatedContainer(
-                          duration: GaussMotion.resolve(
-                            context,
-                            GaussMotion.micro,
-                          ),
-                          width: GaussMetrics.minTouchTarget,
-                          height: GaussMetrics.minTouchTarget,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: _fingerInkEnabled
-                                ? GaussColors.brass.withValues(alpha: .22)
-                                : Colors.transparent,
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: _fingerInkEnabled
-                                  ? GaussColors.brass
-                                  : GaussColors.parchmentInk.withValues(
-                                      alpha: .22,
-                                    ),
-                            ),
-                          ),
-                          child: Icon(
-                            _fingerInkEnabled
-                                ? Icons.pan_tool_alt_rounded
-                                : Icons.draw_outlined,
-                            color: GaussColors.parchmentInk,
-                            size: 21,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              );
-            },
-          ),
-          const SizedBox(height: GaussSpacing.space4),
+          inkSurface,
           AnimatedSwitcher(
-            duration: GaussMotion.resolve(context, GaussMotion.micro),
-            child: Text(
-              _fingerInkEnabled
-                  ? 'Touch drawing active · tap the hand to restore scrolling.'
-                  : hasInk
-                  ? 'Ink stays only for this visit · Clear removes it instantly.'
-                  : 'Focus Pen or stylus ready · write directly; fingers keep scrolling.',
-              key: ValueKey('$hasInk-$_fingerInkEnabled'),
-              textAlign: TextAlign.end,
-              style: const TextStyle(
-                color: Color(0xFF6D6045),
-                fontSize: GaussTypeScale.insignia,
-                height: 1.35,
+            duration: GaussMotion.resolve(context, GaussMotion.standard),
+            reverseDuration: GaussMotion.resolve(context, GaussMotion.micro),
+            switchInCurve: Curves.easeOutCubic,
+            switchOutCurve: Curves.easeInCubic,
+            transitionBuilder: (child, animation) => FadeTransition(
+              opacity: animation,
+              child: SizeTransition(
+                sizeFactor: animation,
+                alignment: AlignmentDirectional.topCenter,
+                child: child,
               ),
             ),
-          ),
-          const SizedBox(height: 6),
-          ClipRect(
-            child: _ScratchInputSurface(
-              ink: _ink,
-              baseWidth: _strokeWidth,
-              allowTouch: _fingerInkEnabled,
-              active: widget.active,
-              onContactChanged: _setPointerContact,
-              child: Stack(
-                fit: StackFit.passthrough,
-                children: [
-                  widget.child,
-                  Positioned.fill(
-                    child: IgnorePointer(
-                      child: CustomPaint(
-                        key: const ValueKey('inline-ink-canvas'),
-                        painter: _ScratchPainter(ink: _ink, drawGrid: false),
-                      ),
+            child: hasInk || canRestoreClear
+                ? Padding(
+                    key: const ValueKey('inline-pen-halo-slot'),
+                    padding: const EdgeInsets.only(top: GaussSpacing.space8),
+                    child: Align(
+                      alignment: AlignmentDirectional.centerEnd,
+                      child: canRestoreClear
+                          ? _ClearInkUndoHalo(onRestore: _restoreInlineInk)
+                          : _PenHalo(
+                              ink: _ink,
+                              strokeWidth: _strokeWidth,
+                              onStrokeWidthChanged: _setStrokeWidth,
+                              onExpand: _expandInkWorkspace,
+                              onClear: _clearInlineInk,
+                            ),
                     ),
+                  )
+                : const SizedBox.shrink(
+                    key: ValueKey('inline-pen-halo-hidden'),
                   ),
-                ],
-              ),
-            ),
           ),
         ],
       );
@@ -342,69 +315,104 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
   );
 }
 
-/// The inline plate is intentionally a calm writing surface; this small live
-/// badge makes the available instrument state evident without turning the
-/// Persian question itself into a toolbar.
-class _InlineInkStatus extends StatelessWidget {
-  const _InlineInkStatus({
-    required this.hasInk,
-    required this.fingerInkEnabled,
+class _PenHalo extends StatelessWidget {
+  const _PenHalo({
+    required this.ink,
+    required this.strokeWidth,
+    required this.onStrokeWidthChanged,
+    required this.onExpand,
+    required this.onClear,
   });
 
-  final bool hasInk;
-  final bool fingerInkEnabled;
+  final ScratchInkController ink;
+  final double strokeWidth;
+  final ValueChanged<double> onStrokeWidthChanged;
+  final VoidCallback onExpand;
+  final VoidCallback onClear;
 
   @override
   Widget build(BuildContext context) {
-    final (label, icon, accent, semantics) = switch ((
-      hasInk,
-      fingerInkEnabled,
-    )) {
-      (true, _) => (
-        'INK ON PLATE',
-        Icons.gesture_rounded,
-        GaussColors.signal,
-        'Question ink is present. Clear is available.',
-      ),
-      (false, true) => (
-        'FINGER INK',
-        Icons.pan_tool_alt_rounded,
-        GaussColors.brass,
-        'Finger drawing is active on this question.',
-      ),
-      (false, false) => (
-        'PEN READY',
-        Icons.edit_rounded,
-        GaussColors.signal,
-        'Focus Pen or stylus is ready to write on this question.',
-      ),
-    };
+    final actionStyle = IconButton.styleFrom(
+      foregroundColor: GaussColors.ivory,
+      disabledForegroundColor: GaussColors.muted.withValues(alpha: .45),
+      minimumSize: const Size.square(GaussMetrics.minTouchTarget),
+      tapTargetSize: MaterialTapTargetSize.padded,
+    );
     return Semantics(
-      label: semantics,
+      container: true,
+      explicitChildNodes: true,
+      label: 'Pen controls',
       child: Container(
-        key: const ValueKey('inline-ink-status'),
-        height: GaussMetrics.minTouchTarget,
-        alignment: Alignment.centerLeft,
-        padding: const EdgeInsets.symmetric(horizontal: GaussSpacing.space8),
-        decoration: BoxDecoration(
-          color: accent.withValues(alpha: .09),
-          borderRadius: BorderRadius.circular(GaussRadii.pill),
-          border: Border.all(color: accent.withValues(alpha: .35)),
+        key: const ValueKey('inline-pen-halo'),
+        constraints: const BoxConstraints(
+          minHeight: GaussMetrics.minTouchTarget,
         ),
-        child: Row(
+        decoration: BoxDecoration(
+          color: GaussColors.deepInk.withValues(alpha: .96),
+          borderRadius: BorderRadius.circular(GaussRadii.pill),
+          border: Border.all(
+            color: GaussColors.brassLight.withValues(alpha: .42),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: GaussColors.deepInk.withValues(alpha: .28),
+              blurRadius: 14,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: GaussSpacing.space4),
+        child: Wrap(
+          alignment: WrapAlignment.end,
+          runAlignment: WrapAlignment.center,
           children: [
-            Icon(icon, size: 16, color: accent),
-            const SizedBox(width: GaussSpacing.space4),
-            Expanded(
-              child: Text(
-                label,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  color: GaussColors.parchmentInk,
-                  fontSize: GaussTypeScale.insignia,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: .65,
+            Tooltip(
+              message: 'Undo last stroke',
+              child: Semantics(
+                label: 'Undo last stroke',
+                button: true,
+                enabled: ink.canUndo,
+                child: IconButton(
+                  key: const ValueKey('inline-ink-undo'),
+                  onPressed: ink.canUndo ? ink.undo : null,
+                  style: actionStyle,
+                  icon: const Icon(Icons.undo_rounded),
+                ),
+              ),
+            ),
+            _PenWidthMenu(
+              color: GaussColors.brassLight,
+              value: strokeWidth,
+              onSelected: onStrokeWidthChanged,
+            ),
+            Tooltip(
+              message: 'Expand ink workspace',
+              child: Semantics(
+                label: 'Expand ink workspace',
+                button: true,
+                child: IconButton(
+                  key: const ValueKey('inline-ink-expand'),
+                  onPressed: onExpand,
+                  style: actionStyle,
+                  icon: const Icon(Icons.open_in_full_rounded),
+                ),
+              ),
+            ),
+            Tooltip(
+              message: 'Clear question ink',
+              child: Semantics(
+                label: 'Clear question ink',
+                button: true,
+                enabled: !ink.isEmpty,
+                child: IconButton(
+                  key: const ValueKey('inline-ink-clear'),
+                  onPressed: ink.isEmpty ? null : onClear,
+                  style: actionStyle.copyWith(
+                    foregroundColor: const WidgetStatePropertyAll(
+                      GaussColors.error,
+                    ),
+                  ),
+                  icon: const Icon(Icons.delete_sweep_outlined),
                 ),
               ),
             ),
@@ -415,20 +423,93 @@ class _InlineInkStatus extends StatelessWidget {
   }
 }
 
+class _ClearInkUndoHalo extends StatelessWidget {
+  const _ClearInkUndoHalo({required this.onRestore});
+
+  final VoidCallback onRestore;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    container: true,
+    liveRegion: true,
+    label: 'Question ink cleared',
+    child: DecoratedBox(
+      decoration: BoxDecoration(
+        color: GaussColors.deepInk.withValues(alpha: .96),
+        borderRadius: BorderRadius.circular(GaussRadii.pill),
+        border: Border.all(
+          color: GaussColors.brassLight.withValues(alpha: .42),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: GaussColors.deepInk.withValues(alpha: .24),
+            blurRadius: 12,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: TextButton.icon(
+        key: const ValueKey('inline-ink-restore'),
+        onPressed: onRestore,
+        style: TextButton.styleFrom(
+          foregroundColor: GaussColors.ivory,
+          minimumSize: const Size(
+            GaussMetrics.minTouchTarget,
+            GaussMetrics.minTouchTarget,
+          ),
+          padding: const EdgeInsets.symmetric(
+            horizontal: GaussSpacing.space16,
+            vertical: GaussSpacing.space8,
+          ),
+        ),
+        icon: const Icon(Icons.undo_rounded, color: GaussColors.brassLight),
+        label: const Text('Restore ink'),
+      ),
+    ),
+  );
+}
+
 class _ScratchpadSheet extends StatefulWidget {
-  const _ScratchpadSheet();
+  const _ScratchpadSheet({
+    this.controller,
+    required this.initialStrokeWidth,
+    this.onStrokeWidthChanged,
+  });
+
+  final ScratchInkController? controller;
+  final double initialStrokeWidth;
+  final ValueChanged<double>? onStrokeWidthChanged;
 
   @override
   State<_ScratchpadSheet> createState() => _ScratchpadSheetState();
 }
 
 class _ScratchpadSheetState extends State<_ScratchpadSheet> {
-  final _ink = ScratchInkController();
-  double _strokeWidth = _PenWidth.medium.width;
+  late final ScratchInkController _ink;
+  late final bool _ownsInk;
+  late double _strokeWidth;
+
+  @override
+  void initState() {
+    super.initState();
+    _ownsInk = widget.controller == null;
+    _ink = widget.controller ?? ScratchInkController();
+    _strokeWidth = widget.initialStrokeWidth;
+  }
+
+  void _setStrokeWidth(double value) {
+    if (_strokeWidth == value) return;
+    setState(() => _strokeWidth = value);
+    widget.onStrokeWidthChanged?.call(value);
+  }
+
+  void _clearInk() {
+    _ink.clear();
+  }
 
   @override
   void dispose() {
-    _ink.dispose();
+    if (_ownsInk) _ink.dispose();
     super.dispose();
   }
 
@@ -445,39 +526,88 @@ class _ScratchpadSheetState extends State<_ScratchpadSheet> {
         clipBehavior: Clip.antiAlias,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(18, 12, 8, 10),
-              child: Row(
-                children: [
-                  const Icon(Icons.edit_note, color: GaussColors.brassLight),
-                  const SizedBox(width: 9),
-                  Expanded(
-                    child: Text(
-                      'Scratchpad',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                  ),
-                  _PenWidthMenu(
+            AnimatedBuilder(
+              animation: _ink,
+              builder: (context, _) => LayoutBuilder(
+                builder: (context, constraints) {
+                  final reflow =
+                      constraints.maxWidth < 360 ||
+                      MediaQuery.textScalerOf(context).scale(14) > 19;
+                  final widthMenu = _PenWidthMenu(
                     color: GaussColors.brassLight,
                     value: _strokeWidth,
-                    onSelected: (value) => setState(() => _strokeWidth = value),
-                  ),
-                  AnimatedBuilder(
-                    animation: _ink,
-                    builder: (context, _) => IconButton(
-                      onPressed: _ink.isEmpty ? null : _ink.clear,
-                      tooltip: 'Clear scratchpad',
-                      icon: const Icon(Icons.delete_sweep_outlined),
-                    ),
-                  ),
-                  IconButton(
+                    onSelected: _setStrokeWidth,
+                  );
+                  final undoLabel = _ink.canRestoreClearedInk
+                      ? 'Restore cleared ink'
+                      : 'Undo last stroke';
+                  final undo = IconButton(
+                    onPressed: _ink.canUndo ? _ink.undo : null,
+                    tooltip: undoLabel,
+                    icon: const Icon(Icons.undo_rounded),
+                  );
+                  final clear = IconButton(
+                    onPressed: _ink.isEmpty ? null : _clearInk,
+                    tooltip: 'Clear scratchpad',
+                    color: GaussColors.error,
+                    icon: const Icon(Icons.delete_sweep_outlined),
+                  );
+                  final close = IconButton(
                     onPressed: () => Navigator.pop(context),
                     tooltip: 'Close scratchpad',
                     icon: const Icon(Icons.close),
-                  ),
-                ],
+                  );
+                  final title = Expanded(
+                    child: Text(
+                      'Scratchpad',
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                  );
+
+                  return Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                      18,
+                      12,
+                      8,
+                      10,
+                    ),
+                    child: reflow
+                        ? Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.edit_note,
+                                    color: GaussColors.brassLight,
+                                  ),
+                                  const SizedBox(width: GaussSpacing.space8),
+                                  title,
+                                  close,
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [widthMenu, undo, clear],
+                              ),
+                            ],
+                          )
+                        : Row(
+                            children: [
+                              const Icon(
+                                Icons.edit_note,
+                                color: GaussColors.brassLight,
+                              ),
+                              const SizedBox(width: GaussSpacing.space8),
+                              title,
+                              widthMenu,
+                              undo,
+                              clear,
+                              close,
+                            ],
+                          ),
+                  );
+                },
               ),
             ),
             const Divider(height: 1),
@@ -495,6 +625,7 @@ class _ScratchpadSheetState extends State<_ScratchpadSheet> {
                     ink: _ink,
                     baseWidth: _strokeWidth,
                     allowTouch: true,
+                    erase: false,
                     child: CustomPaint(
                       key: const ValueKey('scratchpad-ink-canvas'),
                       painter: _ScratchPainter(ink: _ink, drawGrid: true),
@@ -510,7 +641,7 @@ class _ScratchpadSheetState extends State<_ScratchpadSheet> {
                 kIsWeb
                     ? 'Pen pressure is used when the browser reports it. Touch and mouse drawing remain available on this dedicated sheet.'
                     : defaultTargetPlatform == TargetPlatform.android
-                    ? 'Focus Pen pressure is supported. Android palm-rejection signals are honored when the device reports them.'
+                    ? 'Android stylus events provide pressure and palm-rejection signals when the device reports them. Touch drawing is available only in this expanded workspace.'
                     : 'Stylus pressure is supported when the platform reports it. Touch and mouse drawing remain available.',
                 textAlign: TextAlign.center,
                 style: const TextStyle(color: GaussColors.muted, height: 1.35),
@@ -545,33 +676,43 @@ class _PenWidthMenu extends StatelessWidget {
   final ValueChanged<double> onSelected;
 
   @override
-  Widget build(BuildContext context) => PopupMenuButton<double>(
-    tooltip: 'Pen size',
-    initialValue: value,
-    onSelected: onSelected,
-    icon: Icon(Icons.line_weight_rounded, color: color, size: 20),
-    itemBuilder: (context) => [
-      for (final width in _PenWidth.values)
-        PopupMenuItem<double>(
-          value: width.width,
-          child: Row(
-            children: [
-              SizedBox(
-                width: 34,
-                child: Divider(
-                  color: GaussColors.brassLight,
-                  thickness: width.width,
+  Widget build(BuildContext context) => Tooltip(
+    message: 'Pen thickness',
+    child: Semantics(
+      label: 'Pen thickness',
+      button: true,
+      child: SizedBox.square(
+        dimension: GaussMetrics.minTouchTarget,
+        child: PopupMenuButton<double>(
+          tooltip: null,
+          initialValue: value,
+          onSelected: onSelected,
+          icon: Icon(Icons.line_weight_rounded, color: color, size: 20),
+          itemBuilder: (context) => [
+            for (final width in _PenWidth.values)
+              PopupMenuItem<double>(
+                value: width.width,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 34,
+                      child: Divider(
+                        color: GaussColors.brassLight,
+                        thickness: width.width,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Text(width.label),
+                    const Spacer(),
+                    if (value == width.width)
+                      const Icon(Icons.check_rounded, size: 18),
+                  ],
                 ),
               ),
-              const SizedBox(width: 12),
-              Text(width.label),
-              const Spacer(),
-              if (value == width.width)
-                const Icon(Icons.check_rounded, size: 18),
-            ],
-          ),
+          ],
         ),
-    ],
+      ),
+    ),
   );
 }
 
@@ -580,6 +721,7 @@ class _ScratchInputSurface extends StatefulWidget {
     required this.ink,
     required this.baseWidth,
     required this.allowTouch,
+    required this.erase,
     required this.child,
     this.active = true,
     this.onContactChanged,
@@ -588,6 +730,7 @@ class _ScratchInputSurface extends StatefulWidget {
   final ScratchInkController ink;
   final double baseWidth;
   final bool allowTouch;
+  final bool erase;
   final bool active;
   final ValueChanged<bool>? onContactChanged;
   final Widget child;
@@ -650,6 +793,7 @@ class _ScratchInputSurfaceState extends State<_ScratchInputSurface> {
       _surfaceSize,
       widget.baseWidth,
       allowTouch: widget.allowTouch,
+      erase: widget.erase,
     );
     switch (result) {
       case _ScratchBeginResult.accepted:
@@ -662,7 +806,7 @@ class _ScratchInputSurfaceState extends State<_ScratchInputSurface> {
   }
 
   void _onPointerMove(PointerMoveEvent event) {
-    _session.extend(event, _surfaceSize, widget.baseWidth);
+    _session.extend(event, _surfaceSize, widget.baseWidth, erase: widget.erase);
   }
 
   void _onPointerUp(PointerUpEvent event) {
@@ -673,29 +817,32 @@ class _ScratchInputSurfaceState extends State<_ScratchInputSurface> {
     if (_session.cancel(event.pointer)) widget.onContactChanged?.call(false);
   }
 
+  bool _shouldClaimPointer(PointerDownEvent event) {
+    if (!widget.active) return false;
+    if (_ScratchInputSession._isStylus(event.kind)) return true;
+    if (widget.allowTouch &&
+        (event.kind == PointerDeviceKind.touch ||
+            event.kind == PointerDeviceKind.mouse ||
+            event.kind == PointerDeviceKind.unknown)) {
+      return true;
+    }
+    // A palm that lands after the pen must not enter the parent scroll/page
+    // arena. It is claimed here, while the input session below deliberately
+    // ignores it so the live stylus stroke remains the sole ink owner.
+    return _session.hasActiveStylus && event.kind == PointerDeviceKind.touch;
+  }
+
   @override
   Widget build(BuildContext context) {
-    final supportedDevices = widget.allowTouch
-        ? const <PointerDeviceKind>{
-            PointerDeviceKind.touch,
-            PointerDeviceKind.mouse,
-            PointerDeviceKind.stylus,
-            PointerDeviceKind.invertedStylus,
-            PointerDeviceKind.unknown,
-          }
-        : const <PointerDeviceKind>{
-            PointerDeviceKind.stylus,
-            PointerDeviceKind.invertedStylus,
-          };
-    return GestureDetector(
+    return RawGestureDetector(
       behavior: HitTestBehavior.opaque,
-      supportedDevices: supportedDevices,
-      // This recognizer owns the accepted pointer in the gesture arena so a
-      // stylus stroke cannot accidentally page or scroll its parent.
-      onPanStart: (_) {},
-      onPanUpdate: (_) {},
-      onPanEnd: (_) {},
-      onPanCancel: () {},
+      gestures: <Type, GestureRecognizerFactory>{
+        _ScratchGestureRecognizer:
+            GestureRecognizerFactoryWithHandlers<_ScratchGestureRecognizer>(
+              () => _ScratchGestureRecognizer(shouldClaim: _shouldClaimPointer),
+              (recognizer) => recognizer.shouldClaim = _shouldClaimPointer,
+            ),
+      },
       child: Listener(
         key: _surfaceKey,
         behavior: HitTestBehavior.opaque,
@@ -707,6 +854,36 @@ class _ScratchInputSurfaceState extends State<_ScratchInputSurface> {
       ),
     );
   }
+}
+
+/// Claims only pointers that belong to ink, plus palm contacts that arrive
+/// while a stylus is already down. Unlike a pan recognizer this wins on
+/// pointer-down, so the first pen point is both visible and gesture-owned
+/// immediately while ordinary finger scrolling stays untouched.
+class _ScratchGestureRecognizer extends OneSequenceGestureRecognizer {
+  _ScratchGestureRecognizer({required this.shouldClaim});
+
+  bool Function(PointerDownEvent event) shouldClaim;
+
+  @override
+  void addAllowedPointer(PointerDownEvent event) {
+    super.addAllowedPointer(event);
+    resolve(
+      shouldClaim(event)
+          ? GestureDisposition.accepted
+          : GestureDisposition.rejected,
+    );
+    stopTrackingPointer(event.pointer);
+  }
+
+  @override
+  void didStopTrackingLastPointer(int pointer) {}
+
+  @override
+  void handleEvent(PointerEvent event) {}
+
+  @override
+  String get debugDescription => 'scratch input claim';
 }
 
 class _ScratchInputSession {
@@ -721,12 +898,16 @@ class _ScratchInputSession {
   int? _recentTouchAndroidPointerId;
   int? _recentTouchGesture;
   int? _recentTouchEventTimeMillis;
+  bool _erasing = false;
+
+  bool get hasActiveStylus => _activePointer != null && _isStylus(_activeKind!);
 
   _ScratchBeginResult begin(
     PointerDownEvent event,
     Size size,
     double baseWidth, {
     required bool allowTouch,
+    required bool erase,
   }) {
     final stylus = _isStylus(event.kind);
     final accepted =
@@ -756,6 +937,11 @@ class _ScratchInputSession {
     _activeAndroidPointerId = event.device;
     _activeKind = event.kind;
     _smoothedWidth = _effectiveWidth(event, baseWidth);
+    if (erase) {
+      _erasing = true;
+      ink.eraseNearest(event.localPosition, size);
+      return _ScratchBeginResult.accepted;
+    }
     _activeGesture = ink.begin(
       event.localPosition,
       size,
@@ -769,8 +955,17 @@ class _ScratchInputSession {
     return _ScratchBeginResult.accepted;
   }
 
-  void extend(PointerMoveEvent event, Size size, double baseWidth) {
+  void extend(
+    PointerMoveEvent event,
+    Size size,
+    double baseWidth, {
+    required bool erase,
+  }) {
     if (event.pointer != _activePointer) return;
+    if (_erasing || erase) {
+      ink.eraseNearest(event.localPosition, size);
+      return;
+    }
     final target = _effectiveWidth(event, baseWidth);
     _smoothedWidth = _smoothedWidth == null
         ? target
@@ -785,7 +980,7 @@ class _ScratchInputSession {
       _recentTouchGesture = _activeGesture;
       _recentTouchEventTimeMillis = event.timeStamp.inMilliseconds;
     }
-    ink.end();
+    if (!_erasing) ink.end();
     _reset();
     return true;
   }
@@ -795,7 +990,7 @@ class _ScratchInputSession {
         (pointer != null && pointer != _activePointer)) {
       return false;
     }
-    ink.cancelActive();
+    if (!_erasing) ink.cancelActive();
     _reset();
     return true;
   }
@@ -822,6 +1017,7 @@ class _ScratchInputSession {
     _activeGesture = null;
     _activeKind = null;
     _smoothedWidth = null;
+    _erasing = false;
   }
 
   static bool _eventTimesMatch(int? flutterMillis, int? androidMillis) {
@@ -835,19 +1031,26 @@ class _ScratchInputSession {
       kind == PointerDeviceKind.invertedStylus;
 
   static double _effectiveWidth(PointerEvent event, double baseWidth) {
+    const minInkWidth = .8;
+    const maxInkWidth = 7.0;
+    final boundedBaseWidth = baseWidth.isFinite
+        ? baseWidth.clamp(minInkWidth, maxInkWidth).toDouble()
+        : _PenWidth.medium.width;
     if (!_isStylus(event.kind) ||
         !event.pressure.isFinite ||
         !event.pressureMin.isFinite ||
         !event.pressureMax.isFinite ||
         event.pressureMax - event.pressureMin <= .0001) {
-      return baseWidth;
+      return boundedBaseWidth;
     }
     final pressure =
         ((event.pressure - event.pressureMin) /
                 (event.pressureMax - event.pressureMin))
             .clamp(0.0, 1.0);
     final response = .52 + math.pow(pressure, .68) * 1.02;
-    return baseWidth * response;
+    return (boundedBaseWidth * response)
+        .clamp(minInkWidth, maxInkWidth)
+        .toDouble();
   }
 }
 
@@ -864,8 +1067,12 @@ class ScratchInkController extends ChangeNotifier {
   int _pointCount = 0;
   int _nextGesture = 0;
   int _committedRevision = 0;
+  List<_InkStroke>? _clearedStrokes;
+  int? _clearedNextGesture;
 
   bool get isEmpty => _strokes.isEmpty;
+  bool get canUndo => _strokes.isNotEmpty || canRestoreClearedInk;
+  bool get canRestoreClearedInk => _strokes.isEmpty && _clearedStrokes != null;
 
   @visibleForTesting
   int get strokeCount =>
@@ -884,6 +1091,7 @@ class ScratchInkController extends ChangeNotifier {
     required PointerDeviceKind kind,
   }) {
     if (!_drawable(size)) return null;
+    _discardClearHistory();
     final stroke = _InkStroke(kind: kind, gesture: _nextGesture++)
       ..points.add(_InkPoint(_normalize(point, size), width));
     _strokes.add(stroke);
@@ -953,14 +1161,47 @@ class ScratchInkController extends ChangeNotifier {
     if (removed.isEmpty) return false;
     for (final stroke in removed) {
       _strokes.remove(stroke);
+      _activeGestureStrokes.remove(stroke);
       _pointCount -= stroke.points.length;
     }
+    if (_activeStroke?.gesture == gesture) _activeStroke = null;
     _committedRevision++;
     notifyListeners();
     return true;
   }
 
+  /// Erases the nearest whole gesture within a touch-friendly logical radius.
+  /// Whole-stroke erasure keeps vector ink deterministic and fully undoable.
+  bool eraseNearest(Offset point, Size size, {double radius = 22}) {
+    if (!_drawable(size) || _strokes.isEmpty) return false;
+    int? nearestGesture;
+    var nearestDistanceSquared = radius * radius;
+    for (final stroke in _strokes) {
+      for (final inkPoint in stroke.points) {
+        final dx = inkPoint.position.dx * size.width - point.dx;
+        final dy = inkPoint.position.dy * size.height - point.dy;
+        final distanceSquared = dx * dx + dy * dy;
+        if (distanceSquared <= nearestDistanceSquared) {
+          nearestDistanceSquared = distanceSquared;
+          nearestGesture = stroke.gesture;
+        }
+      }
+    }
+    return nearestGesture != null && removeGesture(nearestGesture);
+  }
+
+  void undo() {
+    if (_strokes.isEmpty) {
+      restoreLastClear();
+      return;
+    }
+    removeGesture(_strokes.last.gesture);
+  }
+
   void clear() {
+    if (_strokes.isEmpty) return;
+    _clearedStrokes = _strokes.map(_cloneStroke).toList(growable: false);
+    _clearedNextGesture = _nextGesture;
     _strokes.clear();
     _activeStroke = null;
     _activeGestureStrokes.clear();
@@ -968,6 +1209,37 @@ class ScratchInkController extends ChangeNotifier {
     _committedRevision++;
     notifyListeners();
   }
+
+  bool restoreLastClear() {
+    final cleared = _clearedStrokes;
+    if (_strokes.isNotEmpty || cleared == null) return false;
+    _strokes.addAll(cleared.map(_cloneStroke));
+    _pointCount = _strokes.fold<int>(
+      0,
+      (total, stroke) => total + stroke.points.length,
+    );
+    _nextGesture = math.max(_nextGesture, _clearedNextGesture ?? _nextGesture);
+    _discardClearHistory();
+    _committedRevision++;
+    notifyListeners();
+    return true;
+  }
+
+  void discardLastClear() {
+    if (_clearedStrokes == null) return;
+    _discardClearHistory();
+    notifyListeners();
+  }
+
+  void _discardClearHistory() {
+    _clearedStrokes = null;
+    _clearedNextGesture = null;
+  }
+
+  static _InkStroke _cloneStroke(_InkStroke source) =>
+      _InkStroke(kind: source.kind, gesture: source.gesture)
+        ..points.addAll(source.points)
+        ..committedAt = source.committedAt;
 
   static bool _drawable(Size size) => size.width > 0 && size.height > 0;
 

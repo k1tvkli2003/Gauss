@@ -10,6 +10,7 @@ import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
+import 'package:gauss/domain/study_curriculum.dart';
 import 'package:gauss/screens/map_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:gauss/widgets/content_blocks.dart';
@@ -144,6 +145,34 @@ void main() {
     }
   });
 
+  test('the private Android app exposes no sharing runtime', () {
+    final runtimeSurfaces = <File>[
+      ...Directory('lib')
+          .listSync(recursive: true, followLinks: false)
+          .whereType<File>()
+          .where((file) => file.path.endsWith('.dart')),
+      ...Directory('android')
+          .listSync(recursive: true, followLinks: false)
+          .whereType<File>()
+          .where(
+            (file) => file.path.endsWith('.kt') || file.path.endsWith('.java'),
+          ),
+      File('pubspec.yaml'),
+    ];
+    for (final surface in runtimeSurfaces) {
+      final source = surface.readAsStringSync();
+      expect(source, isNot(contains('Icons.share')), reason: surface.path);
+      expect(source, isNot(contains('Share.share')), reason: surface.path);
+      expect(source, isNot(contains('share_plus')), reason: surface.path);
+      expect(source, isNot(contains('ACTION_SEND')), reason: surface.path);
+      expect(
+        source,
+        isNot(contains('Intent.createChooser')),
+        reason: surface.path,
+      );
+    }
+  });
+
   testWidgets('branded startup renders before repositories are ready', (
     tester,
   ) async {
@@ -156,25 +185,22 @@ void main() {
     expect(find.text('Opening your offline observatory…'), findsOneWidget);
     expect(tester.takeException(), isNull);
 
-    await controller.initialize();
+    await tester.runAsync(controller.initialize);
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
 
     expect(find.text('Skip'), findsOneWidget);
-    expect(find.byType(NavigationBar), findsNothing);
+    expect(
+      find.byKey(const ValueKey('gauss-floating-navigation-dock')),
+      findsNothing,
+    );
     expect(tester.takeException(), isNull);
     await tester.tap(find.text('Skip'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
 
     expect(find.text('Map'), findsOneWidget);
-    expect(
-      find.descendant(
-        of: find.byType(NavigationBar),
-        matching: find.text('Study'),
-      ),
-      findsOneWidget,
-    );
+    expect(find.byKey(const ValueKey('gauss-nav-study')), findsOneWidget);
     expect(find.text('Insights'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
@@ -231,20 +257,26 @@ void main() {
     tester,
   ) async {
     addTearDown(() => tester.binding.setSurfaceSize(null));
-    if (!controller.ready) await controller.initialize();
+    if (!controller.ready) await tester.runAsync(controller.initialize);
     if (controller.needsTour) await controller.markTourSeen();
 
     await tester.binding.setSurfaceSize(const Size(599, 820));
     await tester.pumpWidget(GaussApp(controller: controller));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
-    expect(find.byType(NavigationBar), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('gauss-floating-navigation-dock')),
+      findsOneWidget,
+    );
     expect(find.byType(NavigationRail), findsNothing);
 
     await tester.binding.setSurfaceSize(const Size(600, 820));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 60));
-    expect(find.byType(NavigationBar), findsNothing);
+    expect(
+      find.byKey(const ValueKey('gauss-floating-navigation-dock')),
+      findsNothing,
+    );
     expect(find.byType(NavigationRail), findsOneWidget);
     expect(
       tester.widget<NavigationRail>(find.byType(NavigationRail)).extended,
@@ -315,11 +347,674 @@ void main() {
     );
 
     expect(find.byType(MapScreen), findsOneWidget);
-    expect(find.text('Study'), findsOneWidget);
+    expect(find.byKey(const ValueKey('map-study-dock-action')), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('map orbit selector keeps every section reachable', (
+  testWidgets('map lesson dock clears live footer at 100 and 200 percent text', (
+    tester,
+  ) async {
+    addTearDown(() {
+      tester.platformDispatcher.clearTextScaleFactorTestValue();
+      tester.view.resetPhysicalSize();
+      tester.view.resetDevicePixelRatio();
+      tester.view.resetPadding();
+      tester.view.resetViewPadding();
+    });
+    if (!controller.ready) await tester.runAsync(controller.initialize);
+    if (controller.needsTour) await controller.markTourSeen();
+    tester.platformDispatcher.textScaleFactorTestValue = 1;
+    tester.view.devicePixelRatio = 1;
+    tester.view.padding = const FakeViewPadding(top: 48, bottom: 48);
+    tester.view.viewPadding = const FakeViewPadding(top: 48, bottom: 48);
+
+    tester.view.physicalSize = const Size(320, 760);
+    await tester.pumpWidget(GaussApp(controller: controller));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+
+    for (final textScale in const [1.0, 2.0]) {
+      tester.platformDispatcher.textScaleFactorTestValue = textScale;
+      await tester.pump();
+      for (final size in const [
+        Size(320, 711),
+        Size(320, 760),
+        Size(390, 844),
+        Size(411, 891),
+      ]) {
+        tester.view.physicalSize = size;
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 80));
+
+        final dock = find.byKey(const ValueKey('map-study-dock'));
+        final navigation = find.byKey(
+          const ValueKey('gauss-floating-navigation-dock'),
+        );
+        final copy = find.byKey(const ValueKey('map-study-dock-copy'));
+        final emblem = find.byKey(const ValueKey('map-study-dock-emblem'));
+        final action = find.byKey(const ValueKey('map-study-dock-action'));
+        final mainRow = find.byKey(const ValueKey('map-study-dock-main-row'));
+        final readings = find.byKey(const ValueKey('map-study-dock-readings'));
+        final caseLabel = '$size at ${textScale}x text';
+
+        expect(dock, findsOneWidget, reason: '$caseLabel lesson dock');
+        expect(navigation, findsOneWidget, reason: '$caseLabel footer');
+        expect(
+          readings,
+          textScale >= 1.55 ? findsNothing : findsOneWidget,
+          reason:
+              '$caseLabel uses progressive disclosure for duplicated dock metadata',
+        );
+        final dockRect = tester.getRect(dock);
+        final navigationRect = tester.getRect(navigation);
+        final floatingFooterRect = navigationRect;
+        var destinationWidthSum = 0.0;
+        expect(
+          floatingFooterRect.height,
+          closeTo(GaussMetrics.compactNavigationHeight, .5),
+          reason:
+              '$caseLabel footer glass must hug the destination height with '
+              'no hidden Material safe-area reservoir.',
+        );
+        expect(
+          (floatingFooterRect.center.dx - size.width / 2).abs(),
+          lessThanOrEqualTo(.5),
+          reason: '$caseLabel footer must keep an exact center axis.',
+        );
+        for (final label in const ['map', 'study', 'insights']) {
+          final destination = find.byKey(ValueKey('gauss-nav-$label'));
+          final destinationRect = tester.getRect(destination);
+          destinationWidthSum += destinationRect.width;
+          expect(
+            destinationRect.width,
+            closeTo(textScale >= 1.3 ? 58 : 82, .5),
+          );
+          expect(destinationRect.height, greaterThanOrEqualTo(48));
+          expect(destination.hitTestable(), findsOneWidget);
+          expect(
+            destinationRect.left,
+            greaterThanOrEqualTo(floatingFooterRect.left - .5),
+          );
+          expect(
+            destinationRect.right,
+            lessThanOrEqualTo(floatingFooterRect.right + .5),
+          );
+          final destinationTexts = find.descendant(
+            of: destination,
+            matching: find.byType(Text),
+          );
+          expect(
+            destinationTexts,
+            textScale >= 1.3 ? findsNothing : findsOneWidget,
+            reason:
+                '$caseLabel accessibility footer uses its explicit semantic '
+                'symbol language instead of breaking destination words.',
+          );
+          final semanticLabel =
+              '${label[0].toUpperCase()}${label.substring(1)}';
+          expect(
+            find.descendant(
+              of: destination,
+              matching: find.byWidgetPredicate(
+                (widget) =>
+                    widget is Semantics &&
+                    widget.properties.label == semanticLabel,
+              ),
+            ),
+            findsOneWidget,
+          );
+          for (final text in tester.widgetList<Text>(destinationTexts)) {
+            expect(text.overflow, isNot(TextOverflow.ellipsis));
+          }
+          for (final element in destinationTexts.evaluate()) {
+            final textRect = tester.getRect(
+              find.byElementPredicate((candidate) => candidate == element),
+            );
+            expect(textRect.left, greaterThanOrEqualTo(destinationRect.left));
+            expect(textRect.right, lessThanOrEqualTo(destinationRect.right));
+            expect(textRect.top, greaterThanOrEqualTo(destinationRect.top));
+            expect(textRect.bottom, lessThanOrEqualTo(destinationRect.bottom));
+          }
+        }
+        expect(
+          floatingFooterRect.width,
+          closeTo(destinationWidthSum, .5),
+          reason:
+              '$caseLabel footer frame must exactly hug its measured '
+              'destinations without an arbitrary width reservoir.',
+        );
+        expect(
+          floatingFooterRect.width,
+          lessThanOrEqualTo(size.width - GaussSpacing.space24),
+        );
+        expect(
+          floatingFooterRect.top - dockRect.bottom,
+          greaterThanOrEqualTo(GaussMetrics.mapOverlayGap),
+          reason:
+              '$caseLabel Current Mission must clear the complete floating '
+              'footer frame, not only the NavigationBar inside it.',
+        );
+        expect(
+          size.height - navigationRect.bottom,
+          greaterThanOrEqualTo(48 + GaussMetrics.compactNavigationOuterInset),
+          reason:
+              '$caseLabel footer must clear the Android Home/Back gesture '
+              'region plus its optical gap.',
+        );
+        expect(
+          navigationRect.top - dockRect.bottom,
+          greaterThanOrEqualTo(GaussMetrics.mapOverlayGap),
+          reason:
+              '$caseLabel needs a visible dock/footer optical gap; '
+              'dock=$dockRect nav=$navigationRect',
+        );
+        expect(
+          (dockRect.center.dx - size.width / 2).abs(),
+          lessThanOrEqualTo(.5),
+          reason:
+              '$caseLabel selected lesson instrument must use the screen center axis.',
+        );
+        final allNodes = find.byWidgetPredicate((widget) {
+          final key = widget.key;
+          return key is ValueKey<String> && key.value.startsWith('map-node-');
+        });
+        final liveNodes = allNodes.hitTestable();
+        final pathRect = tester.getRect(
+          find.byKey(const ValueKey('map-study-path-scroll')),
+        );
+        expect(
+          allNodes,
+          findsWidgets,
+          reason:
+              '$caseLabel must keep a real lesson instrument in the map '
+              'viewport; path=$pathRect dock=$dockRect footer=$navigationRect',
+        );
+        final firstNodeRect = tester.getRect(
+          find.byElementPredicate(
+            (candidate) => candidate == allNodes.evaluate().first,
+          ),
+        );
+        expect(
+          pathRect.bottom,
+          greaterThan(dockRect.bottom),
+          reason:
+              '$caseLabel route canvas must continue behind the floating '
+              'mission glass instead of ending in a blank obstruction band.',
+        );
+        expect(
+          liveNodes,
+          findsWidgets,
+          reason:
+              '$caseLabel must keep at least one route node operable; '
+              'path=$pathRect firstNode=$firstNodeRect dock=$dockRect '
+              'navigation=$navigationRect',
+        );
+        for (final element in liveNodes.evaluate()) {
+          final nodeRect = tester.getRect(
+            find.byElementPredicate((candidate) => candidate == element),
+          );
+          expect(
+            nodeRect.overlaps(dockRect),
+            isFalse,
+            reason:
+                '$caseLabel route node must not sit under the lesson dock: '
+                '$nodeRect vs $dockRect',
+          );
+          expect(
+            nodeRect.overlaps(navigationRect),
+            isFalse,
+            reason:
+                '$caseLabel route node must not sit under the footer: '
+                '$nodeRect vs $navigationRect',
+          );
+        }
+
+        final copyRect = tester.getRect(copy);
+        final emblemRect = tester.getRect(emblem);
+        final actionRect = tester.getRect(action);
+        final readingsRect = textScale >= 1.55
+            ? null
+            : tester.getRect(readings);
+        expect(
+          copyRect.overlaps(actionRect),
+          isFalse,
+          reason: '$caseLabel lesson copy and action must never share space',
+        );
+        expect(
+          copyRect.width,
+          lessThan(dockRect.width - 96),
+          reason:
+              '$caseLabel only the central copy plaque may blur the route; '
+              'the dock must not reintroduce a full-width opaque bar.',
+        );
+        expect(emblemRect.overlaps(copyRect), isFalse);
+        expect(emblemRect.overlaps(actionRect), isFalse);
+        if (readingsRect != null) {
+          expect(
+            readingsRect.overlaps(actionRect),
+            isFalse,
+            reason:
+                '$caseLabel wrapped readings and the primary action need a gap',
+          );
+        }
+        expect(actionRect.width, greaterThanOrEqualTo(48));
+        expect(actionRect.height, greaterThanOrEqualTo(48));
+        expect(
+          find.descendant(of: action, matching: find.byType(FilledButton)),
+          findsNothing,
+          reason: '$caseLabel primary lesson action is a symbolic orbit gate.',
+        );
+        expect(
+          find.descendant(of: action, matching: find.text('OPEN')),
+          findsNothing,
+          reason: '$caseLabel action meaning belongs to semantics, not a box.',
+        );
+        if (readingsRect != null) {
+          expect(
+            tester.getRect(mainRow).bottom,
+            lessThanOrEqualTo(readingsRect.top),
+            reason: '$caseLabel metadata belongs on its own adaptive tier',
+          );
+        }
+
+        final dockTexts = find.descendant(
+          of: dock,
+          matching: find.byType(Text),
+        );
+        for (final text in tester.widgetList<Text>(dockTexts)) {
+          expect(
+            text.overflow,
+            isNot(TextOverflow.ellipsis),
+            reason: '$caseLabel must not hide a critical dock phrase',
+          );
+        }
+        for (final element in dockTexts.evaluate()) {
+          final textRect = tester.getRect(
+            find.byElementPredicate((candidate) => candidate == element),
+          );
+          expect(
+            dockRect.contains(textRect.topLeft) &&
+                dockRect.contains(textRect.bottomRight),
+            isTrue,
+            reason:
+                '$caseLabel dock text must stay inside its glass frame: '
+                '${(element.widget as Text).data} at $textRect vs $dockRect',
+          );
+        }
+        expect(tester.takeException(), isNull, reason: '$caseLabel overflow');
+      }
+    }
+  });
+
+  testWidgets('phone map header keeps progress values on one readable line', (
+    tester,
+  ) async {
+    await _pumpMap(
+      tester,
+      controller: controller,
+      size: const Size(390, 844),
+      textScale: 1,
+      reducedMotion: false,
+    );
+
+    expect(find.bySemanticsLabel('0 of 325 questions charted'), findsNothing);
+    final orbitReading = find.textContaining('0 / 325');
+    expect(orbitReading, findsOneWidget);
+    final orbitReadingText = tester.widget<Text>(orbitReading);
+    expect(orbitReadingText.maxLines, 1);
+    expect(orbitReadingText.softWrap, isFalse);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('phone map reveals the first route node above its action dock', (
+    tester,
+  ) async {
+    const size = Size(390, 844);
+    await _pumpMap(
+      tester,
+      controller: controller,
+      size: size,
+      textScale: 1,
+      reducedMotion: true,
+    );
+
+    final section = GaussStudyCurriculum.forSubject(Subject.math).first;
+    final firstNode = GaussStudyCurriculum.nodesFor(
+      section,
+      controller.topics,
+    ).first;
+    final finder = find.byKey(ValueKey('map-node-${firstNode.key}'));
+    expect(finder, findsOneWidget);
+    expect(
+      tester.getCenter(finder).dy,
+      greaterThan(
+        tester
+                .getBottomRight(
+                  find.byKey(const ValueKey('map-orbit-selector')),
+                )
+                .dy +
+            GaussSpacing.space16,
+      ),
+    );
+    expect(
+      tester.getCenter(finder).dy,
+      lessThan(
+        size.height -
+            GaussMetrics.mapBottomObstruction(GaussWindowClass.compact),
+      ),
+    );
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets(
+    'compact Map folds Chapter 1 into Orbit and names five-question nodes by concept',
+    (tester) async {
+      await _pumpMap(
+        tester,
+        controller: controller,
+        size: const Size(390, 844),
+        textScale: 1,
+        reducedMotion: true,
+      );
+
+      final section = GaussStudyCurriculum.forSubject(Subject.math).first;
+      final firstNode = GaussStudyCurriculum.nodesFor(
+        section,
+        controller.topics,
+      ).first;
+      final semanticLabel = controller.studySetLabel(firstNode);
+
+      expect(
+        find.byKey(const ValueKey('map-active-chapter-summary')),
+        findsOneWidget,
+      );
+      expect(find.byKey(const ValueKey('map-section-gate-1')), findsNothing);
+      expect(find.byKey(const ValueKey('map-section-gate-2')), findsOneWidget);
+      expect(find.text('CHAPTER 1'), findsOneWidget);
+      expect(
+        find.descendant(
+          of: find.byKey(const ValueKey('map-study-path-scroll')),
+          matching: find.text(semanticLabel),
+        ),
+        findsOneWidget,
+      );
+      expect(find.text(firstNode.setLabel), findsNothing);
+      expect(semanticLabel, isNot(startsWith('Session')));
+      expect(semanticLabel, 'Finite & Infinite Sets');
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('Dual Orbit subject controls are distinct 48dp targets', (
+    tester,
+  ) async {
+    await _pumpMap(
+      tester,
+      controller: controller,
+      size: const Size(390, 844),
+      textScale: 1,
+      reducedMotion: true,
+    );
+
+    final math = find.byKey(const ValueKey('map-subject-math'));
+    final physics = find.byKey(const ValueKey('map-subject-physics'));
+    final mathRect = tester.getRect(math);
+    final physicsRect = tester.getRect(physics);
+    expect(mathRect.width, greaterThanOrEqualTo(48));
+    expect(mathRect.height, greaterThanOrEqualTo(48));
+    expect(physicsRect.width, greaterThanOrEqualTo(48));
+    expect(physicsRect.height, greaterThanOrEqualTo(48));
+    expect(mathRect.overlaps(physicsRect), isFalse);
+    expect(find.bySemanticsLabel('Mathematics study path'), findsOneWidget);
+    expect(find.bySemanticsLabel('Physics study path'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets(
+    'compact Map header keeps brand, progress, and flanks on exact axes',
+    (tester) async {
+      Future<void> verifyHeader(Size size, double textScale) async {
+        await _pumpMap(
+          tester,
+          controller: controller,
+          size: size,
+          textScale: textScale,
+          reducedMotion: true,
+        );
+
+        final frame = tester.getRect(
+          find.byKey(const ValueKey('map-compact-header-frame')),
+        );
+        final wordmark = tester.getRect(
+          find.byKey(const ValueKey('map-compact-centered-wordmark')),
+        );
+        final crest = tester.getRect(
+          find.byKey(const ValueKey('map-course-progress-crest')),
+        );
+        final leading = tester.getRect(
+          find.byKey(const ValueKey('map-compact-identity-track')),
+        );
+        final trailing = tester.getRect(
+          find.byKey(const ValueKey('map-compact-subject-track')),
+        );
+        final daily = tester.getRect(
+          find.byKey(const ValueKey('map-daily-progress-button')),
+        );
+        final subjects = tester.getRect(
+          find.byKey(const ValueKey('map-subject-dual-orbit')),
+        );
+        final streakOrbit = tester.getRect(
+          find.byKey(const ValueKey('map-daily-streak-orbit')),
+        );
+        final xpOrbit = tester.getRect(
+          find.byKey(const ValueKey('map-daily-xp-orbit')),
+        );
+        final mathOrbit = tester.getRect(
+          find.byKey(const ValueKey('map-subject-math')),
+        );
+        final physicsOrbit = tester.getRect(
+          find.byKey(const ValueKey('map-subject-physics')),
+        );
+
+        expect(wordmark.center.dx, closeTo(frame.center.dx, .5));
+        expect(crest.center.dx, closeTo(frame.center.dx, .5));
+        expect(leading.size, trailing.size);
+        expect(
+          frame.center.dx - leading.center.dx,
+          closeTo(trailing.center.dx - frame.center.dx, .5),
+        );
+        expect(daily.size, subjects.size);
+        expect(daily.center.dy, closeTo(subjects.center.dy, .5));
+        expect(streakOrbit.size, xpOrbit.size);
+        expect(mathOrbit.size, physicsOrbit.size);
+        expect(streakOrbit.size, mathOrbit.size);
+        expect(
+          (streakOrbit.center.dx + xpOrbit.center.dx) / 2,
+          closeTo(daily.center.dx, .5),
+        );
+        expect(
+          (mathOrbit.center.dx + physicsOrbit.center.dx) / 2,
+          closeTo(subjects.center.dx, .5),
+        );
+        expect(streakOrbit.height, greaterThanOrEqualTo(48));
+        expect(xpOrbit.height, greaterThanOrEqualTo(48));
+        expect(wordmark.bottom, lessThanOrEqualTo(daily.top));
+        expect(wordmark.bottom, lessThanOrEqualTo(crest.top));
+        expect(wordmark.bottom, lessThanOrEqualTo(subjects.top));
+        expect(frame.contains(wordmark.topLeft), isTrue);
+        expect(frame.contains(crest.bottomRight), isTrue);
+        expect(tester.takeException(), isNull);
+      }
+
+      await verifyHeader(const Size(390, 844), 1);
+      await verifyHeader(const Size(320, 760), 2);
+    },
+  );
+
+  testWidgets(
+    'compact Map exposes daily streak without crowding subject controls',
+    (tester) async {
+      await _pumpMap(
+        tester,
+        controller: controller,
+        size: const Size(320, 760),
+        textScale: 2,
+        reducedMotion: true,
+      );
+
+      final daily = find.byKey(const ValueKey('map-daily-progress-button'));
+      final math = find.byKey(const ValueKey('map-subject-math'));
+      final physics = find.byKey(const ValueKey('map-subject-physics'));
+      final dailyRect = tester.getRect(daily);
+      expect(dailyRect.height, greaterThanOrEqualTo(48));
+      expect(dailyRect.overlaps(tester.getRect(math)), isFalse);
+      expect(dailyRect.overlaps(tester.getRect(physics)), isFalse);
+      expect(
+        find.bySemanticsLabel(RegExp('Open daily progress.*day streak')),
+        findsOneWidget,
+      );
+
+      await tester.tap(daily);
+      await tester.pumpAndSettle();
+
+      expect(find.text('DAILY ORBIT'), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey('map-gamification-hud')),
+        findsOneWidget,
+      );
+      expect(find.text('DAY STREAK'), findsOneWidget);
+      final sheet = find.byKey(const ValueKey('map-daily-orbit-sheet'));
+      final close = find.byKey(const ValueKey('map-daily-orbit-close'));
+      expect(tester.getRect(close).width, greaterThanOrEqualTo(48));
+      expect(tester.getRect(close).height, greaterThanOrEqualTo(48));
+      for (final text in tester.widgetList<Text>(
+        find.descendant(of: sheet, matching: find.byType(Text)),
+      )) {
+        expect(
+          text.overflow,
+          isNot(TextOverflow.ellipsis),
+          reason: 'Daily Orbit must reflow instead of hiding a phrase.',
+        );
+      }
+      await tester.ensureVisible(
+        find.textContaining('A missed day can use one calm grace day.'),
+      );
+      await tester.pump();
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'Daily Orbit follows its content on tall phones and survives tablet resize',
+    (tester) async {
+      const phoneSize = Size(430, 1000);
+      await _pumpMap(
+        tester,
+        controller: controller,
+        size: phoneSize,
+        textScale: 1,
+        reducedMotion: true,
+        safePadding: const EdgeInsets.only(bottom: 24),
+      );
+
+      await tester.tap(find.byKey(const ValueKey('map-daily-progress-button')));
+      await tester.pumpAndSettle();
+
+      final sheet = find.byKey(const ValueKey('map-daily-orbit-sheet'));
+      final explanation = find.textContaining(
+        'A missed day can use one calm grace day.',
+      );
+      final phoneSheetRect = tester.getRect(sheet);
+      expect(
+        phoneSheetRect.height,
+        lessThan(phoneSize.height * .7),
+        reason: 'A short Daily Orbit must not reserve a tall empty field.',
+      );
+      expect(
+        phoneSheetRect.bottom - tester.getRect(explanation).bottom,
+        inInclusiveRange(24, 48),
+        reason: 'Only the intentional gesture-safe footer gap should remain.',
+      );
+
+      await tester.binding.setSurfaceSize(const Size(800, 1000));
+      await tester.pumpAndSettle();
+      final tabletSheetRect = tester.getRect(sheet);
+      expect(tabletSheetRect.height, lessThanOrEqualTo(760));
+      expect(
+        tester
+            .getRect(find.byKey(const ValueKey('map-gamification-hud')))
+            .width,
+        lessThanOrEqualTo(760),
+      );
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'compact Orbit chapter summary reflows at 320dp and 200 percent text',
+    (tester) async {
+      await _pumpMap(
+        tester,
+        controller: controller,
+        size: const Size(320, 760),
+        textScale: 2,
+        reducedMotion: true,
+      );
+
+      final selector = find.byKey(const ValueKey('map-orbit-selector'));
+      final chapter = find.byKey(const ValueKey('map-active-chapter-summary'));
+      final centerAxis = find.byKey(const ValueKey('map-orbit-center-axis'));
+      final orbitTitle = find.byKey(const ValueKey('map-active-orbit-title'));
+      final selectorRect = tester.getRect(selector);
+      final chapterRect = tester.getRect(chapter);
+      final centerAxisRect = tester.getRect(centerAxis);
+      expect(selectorRect.contains(chapterRect.topLeft), isTrue);
+      expect(selectorRect.contains(chapterRect.bottomRight), isTrue);
+      expect(
+        (centerAxisRect.center.dx - selectorRect.center.dx).abs(),
+        lessThanOrEqualTo(.5),
+        reason:
+            'Equal index and disclosure tracks must keep the selected Orbit '
+            'identity on the exact screen axis.',
+      );
+      expect(
+        (chapterRect.center.dx - selectorRect.center.dx).abs(),
+        lessThanOrEqualTo(.5),
+        reason: 'The selected chapter summary must be truly centered.',
+      );
+      expect(
+        find.descendant(of: orbitTitle, matching: find.text('Algebraic')),
+        findsOneWidget,
+      );
+      expect(
+        find.descendant(of: orbitTitle, matching: find.text('foundations')),
+        findsOneWidget,
+      );
+      final orbitTitleRect = tester.getRect(orbitTitle);
+      for (final word in const ['Algebraic', 'foundations']) {
+        final wordFinder = find.descendant(
+          of: orbitTitle,
+          matching: find.text(word),
+        );
+        final wordText = tester.widget<Text>(wordFinder);
+        expect(wordText.maxLines, 1);
+        expect(wordText.softWrap, isFalse);
+        final wordRect = tester.getRect(wordFinder);
+        expect(wordRect.left, greaterThanOrEqualTo(orbitTitleRect.left - .5));
+        expect(wordRect.right, lessThanOrEqualTo(orbitTitleRect.right + .5));
+        expect(wordRect.top, greaterThanOrEqualTo(orbitTitleRect.top - .5));
+        expect(wordRect.bottom, lessThanOrEqualTo(orbitTitleRect.bottom + .5));
+      }
+      for (final text in tester.widgetList<Text>(
+        find.descendant(of: selector, matching: find.byType(Text)),
+      )) {
+        expect(text.overflow, isNot(TextOverflow.ellipsis));
+      }
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('Orbit Navigator keeps courses and chapters reachable', (
     tester,
   ) async {
     await _pumpMap(
@@ -330,18 +1025,110 @@ void main() {
       reducedMotion: false,
     );
 
-    expect(find.text('ORBIT 1'), findsOneWidget);
-    await tester.tap(find.text('ORBIT 1'));
+    expect(find.byKey(const ValueKey('map-orbit-selector')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('map-orbit-selector')));
     await tester.pumpAndSettle();
 
-    expect(find.text('CHOOSE AN ORBIT'), findsOneWidget);
+    expect(find.byKey(const ValueKey('orbit-navigator')), findsOneWidget);
+    expect(find.text('ORBIT NAVIGATOR'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('orbit-navigator-course-switch')),
+      findsOneWidget,
+    );
     await tester.tap(find.text('Functions and equations'));
     await tester.pumpAndSettle();
 
+    expect(
+      find.byKey(const ValueKey('orbit-navigator-continue')),
+      findsOneWidget,
+    );
+    expect(find.text('Continue here'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('orbit-navigator-continue')));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const ValueKey('orbit-navigator')), findsNothing);
     expect(find.text('Functions and equations'), findsOneWidget);
-    expect(find.text('CHOOSE AN ORBIT'), findsNothing);
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets('Map restores the exact durable learning topic on first frame', (
+    tester,
+  ) async {
+    if (!controller.ready) {
+      await tester.runAsync(controller.initialize);
+    }
+    await controller.selectTopic('patterns_sequences');
+    await _pumpMap(
+      tester,
+      controller: controller,
+      size: const Size(411, 820),
+      textScale: 1,
+      reducedMotion: true,
+    );
+
+    expect(find.text('Patterns & Sequences'), findsWidgets);
+    expect(
+      find.byKey(const ValueKey('map-active-chapter-summary')),
+      findsOneWidget,
+    );
+    final route = find.byKey(const ValueKey('map-study-path-scroll'));
+    final scrollable = find.descendant(
+      of: route,
+      matching: find.byType(Scrollable),
+    );
+    expect(
+      tester.state<ScrollableState>(scrollable).position.pixels,
+      greaterThan(0),
+      reason:
+          'The path camera must restore the selected topic, not leave its '
+          'header and lesson dock pointing at an off-screen route segment.',
+    );
+    final restoredNode = find.byKey(
+      const ValueKey('map-node-patterns_sequences:0:5'),
+    );
+    expect(restoredNode, findsOneWidget);
+    final routeRect = tester.getRect(route);
+    final restoredNodeRect = tester.getRect(restoredNode);
+    expect(
+      routeRect.overlaps(restoredNodeRect),
+      isTrue,
+      reason: 'The exact durable topic node must be visible in the route.',
+    );
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets(
+    'Orbit Navigator reflows at 320dp and 200 percent text without hiding copy',
+    (tester) async {
+      await _pumpMap(
+        tester,
+        controller: controller,
+        size: const Size(320, 700),
+        textScale: 2,
+        reducedMotion: true,
+      );
+
+      await tester.tap(find.byKey(const ValueKey('map-orbit-selector')));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 400));
+
+      final navigator = find.byKey(const ValueKey('orbit-navigator'));
+      expect(navigator, findsOneWidget);
+      final close = find.byKey(const ValueKey('orbit-navigator-close'));
+      expect(tester.getRect(close).width, greaterThanOrEqualTo(48));
+      expect(tester.getRect(close).height, greaterThanOrEqualTo(48));
+      for (final text in tester.widgetList<Text>(
+        find.descendant(of: navigator, matching: find.byType(Text)),
+      )) {
+        expect(
+          text.overflow,
+          isNot(TextOverflow.ellipsis),
+          reason: 'Navigator content must reflow instead of hiding a phrase.',
+        );
+      }
+      expect(tester.takeException(), isNull);
+    },
+  );
 
   testWidgets(
     'map uses the tablet continuous path inspector without overflow',
@@ -367,10 +1154,13 @@ Future<void> _pumpMap(
   required Size size,
   required double textScale,
   required bool reducedMotion,
+  EdgeInsets? safePadding,
 }) async {
   await tester.binding.setSurfaceSize(size);
   addTearDown(() => tester.binding.setSurfaceSize(null));
-  if (!controller.ready) await controller.initialize();
+  if (!controller.ready) {
+    await tester.runAsync(controller.initialize);
+  }
 
   await tester.pumpWidget(
     MaterialApp(
@@ -379,6 +1169,8 @@ Future<void> _pumpMap(
         data: MediaQuery.of(context).copyWith(
           textScaler: TextScaler.linear(textScale),
           disableAnimations: reducedMotion,
+          padding: safePadding,
+          viewPadding: safePadding,
         ),
         child: child!,
       ),

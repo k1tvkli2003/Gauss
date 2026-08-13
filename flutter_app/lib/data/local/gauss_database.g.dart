@@ -5065,6 +5065,434 @@ class StudyPositionsCompanion extends UpdateCompanion<StudyPositionRow> {
   }
 }
 
+class $StudySlotEncountersTable extends StudySlotEncounters
+    with TableInfo<$StudySlotEncountersTable, StudySlotEncounterRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $StudySlotEncountersTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _slotIdMeta = const VerificationMeta('slotId');
+  @override
+  late final GeneratedColumn<String> slotId = GeneratedColumn<String>(
+    'slot_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _topicKeyMeta = const VerificationMeta(
+    'topicKey',
+  );
+  @override
+  late final GeneratedColumn<String> topicKey = GeneratedColumn<String>(
+    'topic_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _shelfKeyMeta = const VerificationMeta(
+    'shelfKey',
+  );
+  @override
+  late final GeneratedColumn<String> shelfKey = GeneratedColumn<String>(
+    'shelf_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _questionIdMeta = const VerificationMeta(
+    'questionId',
+  );
+  @override
+  late final GeneratedColumn<String> questionId = GeneratedColumn<String>(
+    'question_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _slotKindMeta = const VerificationMeta(
+    'slotKind',
+  );
+  @override
+  late final GeneratedColumn<String> slotKind = GeneratedColumn<String>(
+    'slot_kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _firstEncounteredAtMeta =
+      const VerificationMeta('firstEncounteredAt');
+  @override
+  late final GeneratedColumn<int> firstEncounteredAt = GeneratedColumn<int>(
+    'first_encountered_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    slotId,
+    topicKey,
+    shelfKey,
+    questionId,
+    slotKind,
+    firstEncounteredAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'study_slot_encounters';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<StudySlotEncounterRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('slot_id')) {
+      context.handle(
+        _slotIdMeta,
+        slotId.isAcceptableOrUnknown(data['slot_id']!, _slotIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_slotIdMeta);
+    }
+    if (data.containsKey('topic_key')) {
+      context.handle(
+        _topicKeyMeta,
+        topicKey.isAcceptableOrUnknown(data['topic_key']!, _topicKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_topicKeyMeta);
+    }
+    if (data.containsKey('shelf_key')) {
+      context.handle(
+        _shelfKeyMeta,
+        shelfKey.isAcceptableOrUnknown(data['shelf_key']!, _shelfKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_shelfKeyMeta);
+    }
+    if (data.containsKey('question_id')) {
+      context.handle(
+        _questionIdMeta,
+        questionId.isAcceptableOrUnknown(data['question_id']!, _questionIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_questionIdMeta);
+    }
+    if (data.containsKey('slot_kind')) {
+      context.handle(
+        _slotKindMeta,
+        slotKind.isAcceptableOrUnknown(data['slot_kind']!, _slotKindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_slotKindMeta);
+    }
+    if (data.containsKey('first_encountered_at')) {
+      context.handle(
+        _firstEncounteredAtMeta,
+        firstEncounteredAt.isAcceptableOrUnknown(
+          data['first_encountered_at']!,
+          _firstEncounteredAtMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_firstEncounteredAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {slotId};
+  @override
+  StudySlotEncounterRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return StudySlotEncounterRow(
+      slotId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}slot_id'],
+      )!,
+      topicKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}topic_key'],
+      )!,
+      shelfKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}shelf_key'],
+      )!,
+      questionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}question_id'],
+      )!,
+      slotKind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}slot_kind'],
+      )!,
+      firstEncounteredAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}first_encountered_at'],
+      )!,
+    );
+  }
+
+  @override
+  $StudySlotEncountersTable createAlias(String alias) {
+    return $StudySlotEncountersTable(attachedDatabase, alias);
+  }
+}
+
+class StudySlotEncounterRow extends DataClass
+    implements Insertable<StudySlotEncounterRow> {
+  final String slotId;
+  final String topicKey;
+  final String shelfKey;
+  final String questionId;
+  final String slotKind;
+  final int firstEncounteredAt;
+  const StudySlotEncounterRow({
+    required this.slotId,
+    required this.topicKey,
+    required this.shelfKey,
+    required this.questionId,
+    required this.slotKind,
+    required this.firstEncounteredAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['slot_id'] = Variable<String>(slotId);
+    map['topic_key'] = Variable<String>(topicKey);
+    map['shelf_key'] = Variable<String>(shelfKey);
+    map['question_id'] = Variable<String>(questionId);
+    map['slot_kind'] = Variable<String>(slotKind);
+    map['first_encountered_at'] = Variable<int>(firstEncounteredAt);
+    return map;
+  }
+
+  StudySlotEncountersCompanion toCompanion(bool nullToAbsent) {
+    return StudySlotEncountersCompanion(
+      slotId: Value(slotId),
+      topicKey: Value(topicKey),
+      shelfKey: Value(shelfKey),
+      questionId: Value(questionId),
+      slotKind: Value(slotKind),
+      firstEncounteredAt: Value(firstEncounteredAt),
+    );
+  }
+
+  factory StudySlotEncounterRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return StudySlotEncounterRow(
+      slotId: serializer.fromJson<String>(json['slotId']),
+      topicKey: serializer.fromJson<String>(json['topicKey']),
+      shelfKey: serializer.fromJson<String>(json['shelfKey']),
+      questionId: serializer.fromJson<String>(json['questionId']),
+      slotKind: serializer.fromJson<String>(json['slotKind']),
+      firstEncounteredAt: serializer.fromJson<int>(json['firstEncounteredAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'slotId': serializer.toJson<String>(slotId),
+      'topicKey': serializer.toJson<String>(topicKey),
+      'shelfKey': serializer.toJson<String>(shelfKey),
+      'questionId': serializer.toJson<String>(questionId),
+      'slotKind': serializer.toJson<String>(slotKind),
+      'firstEncounteredAt': serializer.toJson<int>(firstEncounteredAt),
+    };
+  }
+
+  StudySlotEncounterRow copyWith({
+    String? slotId,
+    String? topicKey,
+    String? shelfKey,
+    String? questionId,
+    String? slotKind,
+    int? firstEncounteredAt,
+  }) => StudySlotEncounterRow(
+    slotId: slotId ?? this.slotId,
+    topicKey: topicKey ?? this.topicKey,
+    shelfKey: shelfKey ?? this.shelfKey,
+    questionId: questionId ?? this.questionId,
+    slotKind: slotKind ?? this.slotKind,
+    firstEncounteredAt: firstEncounteredAt ?? this.firstEncounteredAt,
+  );
+  StudySlotEncounterRow copyWithCompanion(StudySlotEncountersCompanion data) {
+    return StudySlotEncounterRow(
+      slotId: data.slotId.present ? data.slotId.value : this.slotId,
+      topicKey: data.topicKey.present ? data.topicKey.value : this.topicKey,
+      shelfKey: data.shelfKey.present ? data.shelfKey.value : this.shelfKey,
+      questionId: data.questionId.present
+          ? data.questionId.value
+          : this.questionId,
+      slotKind: data.slotKind.present ? data.slotKind.value : this.slotKind,
+      firstEncounteredAt: data.firstEncounteredAt.present
+          ? data.firstEncounteredAt.value
+          : this.firstEncounteredAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('StudySlotEncounterRow(')
+          ..write('slotId: $slotId, ')
+          ..write('topicKey: $topicKey, ')
+          ..write('shelfKey: $shelfKey, ')
+          ..write('questionId: $questionId, ')
+          ..write('slotKind: $slotKind, ')
+          ..write('firstEncounteredAt: $firstEncounteredAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    slotId,
+    topicKey,
+    shelfKey,
+    questionId,
+    slotKind,
+    firstEncounteredAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is StudySlotEncounterRow &&
+          other.slotId == this.slotId &&
+          other.topicKey == this.topicKey &&
+          other.shelfKey == this.shelfKey &&
+          other.questionId == this.questionId &&
+          other.slotKind == this.slotKind &&
+          other.firstEncounteredAt == this.firstEncounteredAt);
+}
+
+class StudySlotEncountersCompanion
+    extends UpdateCompanion<StudySlotEncounterRow> {
+  final Value<String> slotId;
+  final Value<String> topicKey;
+  final Value<String> shelfKey;
+  final Value<String> questionId;
+  final Value<String> slotKind;
+  final Value<int> firstEncounteredAt;
+  final Value<int> rowid;
+  const StudySlotEncountersCompanion({
+    this.slotId = const Value.absent(),
+    this.topicKey = const Value.absent(),
+    this.shelfKey = const Value.absent(),
+    this.questionId = const Value.absent(),
+    this.slotKind = const Value.absent(),
+    this.firstEncounteredAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  StudySlotEncountersCompanion.insert({
+    required String slotId,
+    required String topicKey,
+    required String shelfKey,
+    required String questionId,
+    required String slotKind,
+    required int firstEncounteredAt,
+    this.rowid = const Value.absent(),
+  }) : slotId = Value(slotId),
+       topicKey = Value(topicKey),
+       shelfKey = Value(shelfKey),
+       questionId = Value(questionId),
+       slotKind = Value(slotKind),
+       firstEncounteredAt = Value(firstEncounteredAt);
+  static Insertable<StudySlotEncounterRow> custom({
+    Expression<String>? slotId,
+    Expression<String>? topicKey,
+    Expression<String>? shelfKey,
+    Expression<String>? questionId,
+    Expression<String>? slotKind,
+    Expression<int>? firstEncounteredAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (slotId != null) 'slot_id': slotId,
+      if (topicKey != null) 'topic_key': topicKey,
+      if (shelfKey != null) 'shelf_key': shelfKey,
+      if (questionId != null) 'question_id': questionId,
+      if (slotKind != null) 'slot_kind': slotKind,
+      if (firstEncounteredAt != null)
+        'first_encountered_at': firstEncounteredAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  StudySlotEncountersCompanion copyWith({
+    Value<String>? slotId,
+    Value<String>? topicKey,
+    Value<String>? shelfKey,
+    Value<String>? questionId,
+    Value<String>? slotKind,
+    Value<int>? firstEncounteredAt,
+    Value<int>? rowid,
+  }) {
+    return StudySlotEncountersCompanion(
+      slotId: slotId ?? this.slotId,
+      topicKey: topicKey ?? this.topicKey,
+      shelfKey: shelfKey ?? this.shelfKey,
+      questionId: questionId ?? this.questionId,
+      slotKind: slotKind ?? this.slotKind,
+      firstEncounteredAt: firstEncounteredAt ?? this.firstEncounteredAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (slotId.present) {
+      map['slot_id'] = Variable<String>(slotId.value);
+    }
+    if (topicKey.present) {
+      map['topic_key'] = Variable<String>(topicKey.value);
+    }
+    if (shelfKey.present) {
+      map['shelf_key'] = Variable<String>(shelfKey.value);
+    }
+    if (questionId.present) {
+      map['question_id'] = Variable<String>(questionId.value);
+    }
+    if (slotKind.present) {
+      map['slot_kind'] = Variable<String>(slotKind.value);
+    }
+    if (firstEncounteredAt.present) {
+      map['first_encountered_at'] = Variable<int>(firstEncounteredAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('StudySlotEncountersCompanion(')
+          ..write('slotId: $slotId, ')
+          ..write('topicKey: $topicKey, ')
+          ..write('shelfKey: $shelfKey, ')
+          ..write('questionId: $questionId, ')
+          ..write('slotKind: $slotKind, ')
+          ..write('firstEncounteredAt: $firstEncounteredAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 class $AppFlagsTable extends AppFlags
     with TableInfo<$AppFlagsTable, AppFlagRow> {
   @override
@@ -5343,6 +5771,8 @@ abstract class _$GaussDatabase extends GeneratedDatabase {
       $AchievementProgressTable(this);
   late final $StudyRecordsTable studyRecords = $StudyRecordsTable(this);
   late final $StudyPositionsTable studyPositions = $StudyPositionsTable(this);
+  late final $StudySlotEncountersTable studySlotEncounters =
+      $StudySlotEncountersTable(this);
   late final $AppFlagsTable appFlags = $AppFlagsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
@@ -5359,6 +5789,7 @@ abstract class _$GaussDatabase extends GeneratedDatabase {
     achievementProgress,
     studyRecords,
     studyPositions,
+    studySlotEncounters,
     appFlags,
   ];
 }
@@ -8848,6 +9279,245 @@ typedef $$StudyPositionsTableProcessedTableManager =
       StudyPositionRow,
       PrefetchHooks Function()
     >;
+typedef $$StudySlotEncountersTableCreateCompanionBuilder =
+    StudySlotEncountersCompanion Function({
+      required String slotId,
+      required String topicKey,
+      required String shelfKey,
+      required String questionId,
+      required String slotKind,
+      required int firstEncounteredAt,
+      Value<int> rowid,
+    });
+typedef $$StudySlotEncountersTableUpdateCompanionBuilder =
+    StudySlotEncountersCompanion Function({
+      Value<String> slotId,
+      Value<String> topicKey,
+      Value<String> shelfKey,
+      Value<String> questionId,
+      Value<String> slotKind,
+      Value<int> firstEncounteredAt,
+      Value<int> rowid,
+    });
+
+class $$StudySlotEncountersTableFilterComposer
+    extends Composer<_$GaussDatabase, $StudySlotEncountersTable> {
+  $$StudySlotEncountersTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get slotId => $composableBuilder(
+    column: $table.slotId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get topicKey => $composableBuilder(
+    column: $table.topicKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get shelfKey => $composableBuilder(
+    column: $table.shelfKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get slotKind => $composableBuilder(
+    column: $table.slotKind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get firstEncounteredAt => $composableBuilder(
+    column: $table.firstEncounteredAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$StudySlotEncountersTableOrderingComposer
+    extends Composer<_$GaussDatabase, $StudySlotEncountersTable> {
+  $$StudySlotEncountersTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get slotId => $composableBuilder(
+    column: $table.slotId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get topicKey => $composableBuilder(
+    column: $table.topicKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get shelfKey => $composableBuilder(
+    column: $table.shelfKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get slotKind => $composableBuilder(
+    column: $table.slotKind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get firstEncounteredAt => $composableBuilder(
+    column: $table.firstEncounteredAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$StudySlotEncountersTableAnnotationComposer
+    extends Composer<_$GaussDatabase, $StudySlotEncountersTable> {
+  $$StudySlotEncountersTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get slotId =>
+      $composableBuilder(column: $table.slotId, builder: (column) => column);
+
+  GeneratedColumn<String> get topicKey =>
+      $composableBuilder(column: $table.topicKey, builder: (column) => column);
+
+  GeneratedColumn<String> get shelfKey =>
+      $composableBuilder(column: $table.shelfKey, builder: (column) => column);
+
+  GeneratedColumn<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get slotKind =>
+      $composableBuilder(column: $table.slotKind, builder: (column) => column);
+
+  GeneratedColumn<int> get firstEncounteredAt => $composableBuilder(
+    column: $table.firstEncounteredAt,
+    builder: (column) => column,
+  );
+}
+
+class $$StudySlotEncountersTableTableManager
+    extends
+        RootTableManager<
+          _$GaussDatabase,
+          $StudySlotEncountersTable,
+          StudySlotEncounterRow,
+          $$StudySlotEncountersTableFilterComposer,
+          $$StudySlotEncountersTableOrderingComposer,
+          $$StudySlotEncountersTableAnnotationComposer,
+          $$StudySlotEncountersTableCreateCompanionBuilder,
+          $$StudySlotEncountersTableUpdateCompanionBuilder,
+          (
+            StudySlotEncounterRow,
+            BaseReferences<
+              _$GaussDatabase,
+              $StudySlotEncountersTable,
+              StudySlotEncounterRow
+            >,
+          ),
+          StudySlotEncounterRow,
+          PrefetchHooks Function()
+        > {
+  $$StudySlotEncountersTableTableManager(
+    _$GaussDatabase db,
+    $StudySlotEncountersTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$StudySlotEncountersTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$StudySlotEncountersTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$StudySlotEncountersTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<String> slotId = const Value.absent(),
+                Value<String> topicKey = const Value.absent(),
+                Value<String> shelfKey = const Value.absent(),
+                Value<String> questionId = const Value.absent(),
+                Value<String> slotKind = const Value.absent(),
+                Value<int> firstEncounteredAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => StudySlotEncountersCompanion(
+                slotId: slotId,
+                topicKey: topicKey,
+                shelfKey: shelfKey,
+                questionId: questionId,
+                slotKind: slotKind,
+                firstEncounteredAt: firstEncounteredAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String slotId,
+                required String topicKey,
+                required String shelfKey,
+                required String questionId,
+                required String slotKind,
+                required int firstEncounteredAt,
+                Value<int> rowid = const Value.absent(),
+              }) => StudySlotEncountersCompanion.insert(
+                slotId: slotId,
+                topicKey: topicKey,
+                shelfKey: shelfKey,
+                questionId: questionId,
+                slotKind: slotKind,
+                firstEncounteredAt: firstEncounteredAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$StudySlotEncountersTableProcessedTableManager =
+    ProcessedTableManager<
+      _$GaussDatabase,
+      $StudySlotEncountersTable,
+      StudySlotEncounterRow,
+      $$StudySlotEncountersTableFilterComposer,
+      $$StudySlotEncountersTableOrderingComposer,
+      $$StudySlotEncountersTableAnnotationComposer,
+      $$StudySlotEncountersTableCreateCompanionBuilder,
+      $$StudySlotEncountersTableUpdateCompanionBuilder,
+      (
+        StudySlotEncounterRow,
+        BaseReferences<
+          _$GaussDatabase,
+          $StudySlotEncountersTable,
+          StudySlotEncounterRow
+        >,
+      ),
+      StudySlotEncounterRow,
+      PrefetchHooks Function()
+    >;
 typedef $$AppFlagsTableCreateCompanionBuilder =
     AppFlagsCompanion Function({
       required String key,
@@ -9031,6 +9701,8 @@ class $GaussDatabaseManager {
       $$StudyRecordsTableTableManager(_db, _db.studyRecords);
   $$StudyPositionsTableTableManager get studyPositions =>
       $$StudyPositionsTableTableManager(_db, _db.studyPositions);
+  $$StudySlotEncountersTableTableManager get studySlotEncounters =>
+      $$StudySlotEncountersTableTableManager(_db, _db.studySlotEncounters);
   $$AppFlagsTableTableManager get appFlags =>
       $$AppFlagsTableTableManager(_db, _db.appFlags);
 }

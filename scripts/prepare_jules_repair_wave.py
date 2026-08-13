@@ -4,7 +4,8 @@ The immutable corpus contains source answer keys, but this allocator never
 reads, exports, or uses that field. It emits only ticket identity, source hash,
 blocking signals, prompt/options/solution text, and a strict output contract.
 Generated operations live in an ignored Jules directory; no source JSON or
-media is changed.
+media is changed. Math remains the default for compatibility, while explicit
+``--subject physics`` or ``--subject any`` runs can drain the wider corpus.
 """
 
 from __future__ import annotations
@@ -17,7 +18,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
-STRICT_PROMPT = """You are a repair specialist for an immutable math-question corpus. Work source-key-blind: the source answer key is not supplied and you must not request, infer, or use it. Do not edit source JSON, media, manifests, or repository files. For each ticket, re-derive only from the supplied stem/options, audit the supplied solution, and propose a source-preserving solution addendum only when it resolves the blocking issue without changing the question.
+STRICT_PROMPT = """You are a repair specialist for an immutable quantitative-question corpus. Work source-key-blind: the source answer key is not supplied and you must not request, infer, or use it. Do not edit source JSON, media, manifests, or repository files. For each ticket, re-derive only from the supplied stem/options, audit the supplied solution, and propose a source-preserving solution addendum only when it resolves the blocking issue without changing the question.
 
 Return exactly one JSON object per ticket in original order, inside one ```jsonl fenced block. There must be no prose outside that block. Every object must have exactly these fields: ticket_id, question_id, source_sha256, status, patch, evidence, effective_option, blockers.
 
@@ -116,6 +117,24 @@ def main() -> int:
     parser.add_argument("--first", required=True, type=int)
     parser.add_argument("--batches", default=7, type=int)
     parser.add_argument("--batch-size", default=10, type=int)
+    parser.add_argument(
+        "--subject",
+        choices=("math", "physics", "any"),
+        default="math",
+        help="Select one subject or all text-only quantitative tickets.",
+    )
+    parser.add_argument(
+        "--repair-kind",
+        choices=("solution_rederive", "formula_transcription"),
+        default="solution_rederive",
+        help="Select the fail-closed repair queue lane to audit.",
+    )
+    parser.add_argument(
+        "--extraction",
+        choices=("screened_complete", "any"),
+        default="screened_complete",
+        help="Keep complete extraction as the safe default; 'any' may yield under-review rows.",
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     if args.first < 1 or args.batches < 1 or args.batch_size < 1:
@@ -142,16 +161,21 @@ def main() -> int:
         question_id = ticket.get("question_id")
         state = ticket.get("current_state")
         if (
-            ticket.get("repair_kind") != "solution_rederive"
+            ticket.get("repair_kind") != args.repair_kind
             or not isinstance(question_id, str)
             or question_id in assigned_before
             or question_id in overlay_ids
             or not isinstance(state, dict)
-            or state.get("extraction") != "screened_complete"
+            or (
+                args.extraction != "any"
+                and state.get("extraction") != args.extraction
+            )
         ):
             continue
         question = questions.get(question_id)
-        if question is None or question.get("subject") != "math":
+        if question is None:
+            continue
+        if args.subject != "any" and question.get("subject") != args.subject:
             continue
         if not (
             all_blocks_text(question.get("stem"))
@@ -177,6 +201,8 @@ def main() -> int:
         raise ValueError(f"only {len(candidates)} eligible source-key-blind tickets; need {needed}")
     selected = candidates[:needed]
     grouped = list(chunks(selected, args.batch_size))
+    title_subject = "quantitative" if args.subject == "any" else args.subject
+    title_kind = args.repair_kind.replace("_", "-")
     manifest = {
         "schemaVersion": 1,
         "batchId": f"gauss-repair-wave-{args.first:03d}-{args.first + args.batches - 1:03d}",
@@ -184,7 +210,10 @@ def main() -> int:
         "tasks": [
             {
                 "id": batch_id,
-                "title": f"Gauss source-preserving math repair batch {batch_id[-3:]}",
+                "title": (
+                    f"Gauss source-preserving {title_subject} {title_kind} batch "
+                    f"{batch_id[-3:]}"
+                ),
                 "promptFile": f"{batch_id}.prompt.md",
                 "metadata": {"input": f"{batch_id}.input.json", "output": f"{batch_id}.jsonl"},
             }
@@ -196,6 +225,9 @@ def main() -> int:
         "workspace": str(args.workspace),
         "eligible": len(candidates),
         "selected": len(selected),
+        "subject": args.subject,
+        "repair_kind": args.repair_kind,
+        "extraction": args.extraction,
         "batches": [
             {"id": batch_id, "question_ids": [row["question_id"] for row in rows]}
             for batch_id, rows in zip(batch_ids, grouped)

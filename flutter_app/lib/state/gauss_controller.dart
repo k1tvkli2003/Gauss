@@ -31,8 +31,8 @@ class GaussController extends ChangeNotifier {
   String? _selectedTopicKey;
   bool _ready = false;
   GaussFailure? _fatalError;
-  // Mission-era state, dormant while the corpus has no scored items: nothing
-  // writes these anymore, so they are final defaults rather than live queries.
+  // These secondary queue counters stay lazy so Android bootstrap does not
+  // decode or query surfaces the learner has not opened yet.
   final int _revengeCount = 0;
   final int _reviewDueCount = 0;
   int _studyDueCount = 0;
@@ -89,15 +89,13 @@ class GaussController extends ChangeNotifier {
     _needsTour = false;
     notifyListeners();
     try {
-      await _progress.writeFlag(
-        ProgressRepository.tourSeenFlag,
-        value: true,
-      );
+      await _progress.writeFlag(ProgressRepository.tourSeenFlag, value: true);
     } catch (_) {
       // A tour that cannot be recorded is a cosmetic loss, not a failure
       // worth interrupting the learner for; it simply shows again.
     }
   }
+
   UnmodifiableListView<RecentExamSummary> get recentExams =>
       UnmodifiableListView(_recentExams);
   ResumableMission? get resumableMission => _resumableMission;
@@ -106,6 +104,7 @@ class GaussController extends ChangeNotifier {
     0,
     (total, topic) => total + topic.missionReadyCount,
   );
+  int get runtimeUsableQuestions => totalQuestions;
   int get preservedArchiveQuestions => totalQuestions - missionReadyQuestions;
   String get selectedTopicKey =>
       _selectedTopicKey ?? _questionBank.topics.first.key;
@@ -119,14 +118,26 @@ class GaussController extends ChangeNotifier {
   int studiedInTopic(String key) => _study.topic(key).reflected;
   int revisitInTopic(String key) => _study.topic(key).revisit;
 
+  /// Human-readable identity for one logical five-question Map node, derived
+  /// from the screened concepts in the generated plan rather than source order.
+  String studySetLabel(StudyPathNode node) =>
+      _questionBank.studyPlan.session(node.topic.key, node.offset).displayLabel;
+
+  bool isStudySessionMissionReady(StudyPathNode node) => _questionBank
+      .isStudySessionMissionReady(node.topic.key, offset: node.offset);
+
+  bool isStudySessionPlayable(StudyPathNode node) =>
+      _questionBank.isStudySessionPlayable(node.topic.key, offset: node.offset);
+
   Future<void> initialize() async {
     _fatalError = null;
     _ready = false;
     try {
       await _questionBank.initialize();
       await _progress.initialize();
+      await _progress.migrateStudyPlan(_questionBank.studyPlan);
       await _refreshProgress();
-      _selectedTopicKey = _questionBank.topics.first.key;
+      await _restoreLearningContext();
       _ready = true;
     } catch (error, stackTrace) {
       _fatalError = StartupFailure(error);
@@ -143,16 +154,77 @@ class GaussController extends ChangeNotifier {
 
   Future<void> retryInitialize() => initialize();
 
-  void selectTopic(String key) {
+  Future<void> selectTopic(String key) async {
     if (_selectedTopicKey == key) return;
     _questionBank.topicByKey(key);
     _selectedTopicKey = key;
     notifyListeners();
+    await _persistLearningContext(key);
+  }
+
+  /// Moves Study to the current incomplete chapter for [subject].
+  ///
+  /// The selected topic is the shared learning context used by both Map and
+  /// Study. Switching subjects therefore changes the real destination instead
+  /// of only changing a local visual filter.
+  Future<void> selectStudySubject(Subject subject) async {
+    if (selectedTopic.subject == subject) return;
+    await selectTopic(_nextStudyTopicForSubject(subject).key);
+  }
+
+  TopicDescriptor _nextStudyTopicForSubject(Subject subject) {
+    final subjectTopics = _questionBank.topics
+        .where((topic) => topic.subject == subject)
+        .toList(growable: false);
+    if (subjectTopics.isEmpty) {
+      throw StateError('No study topics exist for ${subject.key}.');
+    }
+    for (final section in GaussStudyCurriculum.forSubject(subject)) {
+      for (final node in GaussStudyCurriculum.nodesFor(
+        section,
+        _questionBank.topics,
+      )) {
+        if (_study.shelf(node.key).reflected < node.questionCount) {
+          return node.topic;
+        }
+      }
+    }
+    return subjectTopics.last;
+  }
+
+  Future<void> _restoreLearningContext() async {
+    final fallback = _questionBank.topics.first.key;
+    _selectedTopicKey = fallback;
+    String? saved;
+    try {
+      saved = await _progress.readLearningContextTopic();
+    } catch (_) {
+      // Learning context is a convenience. A damaged optional flag must never
+      // prevent the offline question library from opening.
+      return;
+    }
+    if (saved == null) return;
+    if (_questionBank.topics.any((topic) => topic.key == saved)) {
+      _selectedTopicKey = saved;
+      return;
+    }
+    // Heal a key left behind by a renamed or removed chapter. This write is
+    // best-effort for the same reason as every later context update.
+    await _persistLearningContext(fallback);
+  }
+
+  Future<void> _persistLearningContext(String topicKey) async {
+    try {
+      await _progress.writeLearningContextTopic(topicKey);
+    } catch (_) {
+      // The in-memory selection remains truthful and usable even if local
+      // persistence is temporarily unavailable. A future selection can retry.
+    }
   }
 
   Future<List<Question>> createMission(
     String topicKey, {
-    int count = 10,
+    int count = GaussStudyCurriculum.batchSize,
     Set<Difficulty> difficulties = const {},
     Set<String> sourceBanks = const {},
   }) async {
@@ -162,6 +234,20 @@ class GaussController extends ChangeNotifier {
         count: count,
         difficulties: difficulties,
         sourceBanks: sourceBanks,
+      );
+    } catch (error) {
+      throw MissionLoadFailure(error);
+    }
+  }
+
+  Future<List<Question>> createStudySessionMission(
+    String topicKey, {
+    required int offset,
+  }) async {
+    try {
+      return await _questionBank.createStudySessionMission(
+        topicKey,
+        offset: offset,
       );
     } catch (error) {
       throw MissionLoadFailure(error);
@@ -215,6 +301,16 @@ class GaussController extends ChangeNotifier {
       );
     } catch (error) {
       throw MissionWriteFailure(error, operation: 'tag_attempt');
+    }
+  }
+
+  /// Saves a private, offline repair signal without hiding or mutating the
+  /// source question. Reporting is intentionally independent from scoring.
+  Future<void> reportQuestionIssue(QuestionIssueReport report) async {
+    try {
+      await _progress.saveQuestionIssueReport(report);
+    } catch (error) {
+      throw MissionWriteFailure(error, operation: 'report_question_issue');
     }
   }
 
@@ -289,9 +385,9 @@ class GaussController extends ChangeNotifier {
       _resumableMission = null;
       return;
     }
-    if (questions.any((question) => !question.missionReady)) {
-      // Preserve the draft rows but never resume a source item whose answer
-      // contract is quarantined. Starting a new mission retires the draft.
+    if (questions.any((question) => !question.runtimeUsable)) {
+      // Preserve the draft rows, but do not resume a structurally damaged
+      // queue. Certification status alone never retires a private mission.
       _resumableMission = null;
       return;
     }
@@ -305,12 +401,14 @@ class GaussController extends ChangeNotifier {
     );
   }
 
-  Future<List<Question>> createRevengeMission({int count = 10}) async {
+  Future<List<Question>> createRevengeMission({
+    int count = GaussStudyCurriculum.batchSize,
+  }) async {
     try {
       final ids = await _progress.revengeIds();
       final questions = await _questionBank.questionsByIds(ids);
       return questions
-          .where((question) => question.missionReady)
+          .where((question) => question.runtimeUsable)
           .take(count)
           .toList(growable: false);
     } catch (error) {
@@ -321,12 +419,14 @@ class GaussController extends ChangeNotifier {
   /// Draws the review orbit: every question whose spaced-repetition timer has
   /// elapsed, oldest due first — remembered proofs near the forgetting curve
   /// alongside lapsed mistakes.
-  Future<List<Question>> createReviewMission({int count = 10}) async {
+  Future<List<Question>> createReviewMission({
+    int count = GaussStudyCurriculum.batchSize,
+  }) async {
     try {
       final ids = await _progress.reviewDueIds();
       final questions = await _questionBank.questionsByIds(ids);
       return questions
-          .where((question) => question.missionReady)
+          .where((question) => question.runtimeUsable)
           .take(count)
           .toList(growable: false);
     } catch (error) {
@@ -350,24 +450,43 @@ class GaussController extends ChangeNotifier {
     int? shuffleSeed,
   }) async {
     try {
-      final allQuestions = await _questionBank.archiveQuestions(topicKey);
-      final safeOffset = offset.clamp(0, allQuestions.length);
-      final limit = (count ?? allQuestions.length).clamp(
-        1,
-        allQuestions.length,
+      final session = _questionBank.studySession(topicKey, offset);
+      final questions = List<Question>.of(
+        await _questionBank.loadStudySession(topicKey, offset: offset),
       );
-      final questions = allQuestions.skip(safeOffset).take(limit).toList();
+      final slots = [
+        for (final slot in session.slots)
+          StudyShelfSlot(
+            id: slot.id,
+            questionId: slot.questionId,
+            kind: slot.kind.key,
+            primaryShelfKey: slot.primarySessionKey,
+            planned: true,
+          ),
+      ];
       if (shuffleSeed != null) {
         // A deliberate second pass over the same set: the order changes, the
         // membership and its shelf key do not, so progress stays attached.
-        questions.shuffle(math.Random(shuffleSeed));
+        final order = List<int>.generate(questions.length, (index) => index)
+          ..shuffle(math.Random(shuffleSeed));
+        final shuffledQuestions = [for (final index in order) questions[index]];
+        final shuffledSlots = [for (final index in order) slots[index]];
+        questions
+          ..clear()
+          ..addAll(shuffledQuestions);
+        slots
+          ..clear()
+          ..addAll(shuffledSlots);
       }
-      final shelfKey = '$topicKey:$safeOffset:$limit';
+      final shelfKey = session.key;
       // These first-use statements share one local Drift executor. Sequential
       // reads are effectively free beside shard decoding and avoid a native
       // sqlite initialization race observed on Windows test/runtime hosts.
       final storedRecords = await _progress.studyRecords(topicKey: topicKey);
       final storedPosition = await _progress.studyPosition(shelfKey);
+      final encounteredSlotIds = await _progress.studyEncounteredSlotIds(
+        shelfKey,
+      );
       final questionIds = questions.map((question) => question.id).toSet();
       final records = {
         for (final record in storedRecords)
@@ -378,15 +497,17 @@ class GaussController extends ChangeNotifier {
       // refers to the canonical order, not this one.
       var initialIndex = shuffleSeed == null ? (storedPosition ?? -1) : -1;
       if (initialIndex < 0 || initialIndex >= questions.length) {
-        initialIndex = questions.indexWhere(
-          (question) => !records.containsKey(question.id),
+        initialIndex = slots.indexWhere(
+          (slot) => !encounteredSlotIds.contains(slot.id),
         );
         if (initialIndex < 0) initialIndex = 0;
       }
       return StudyShelf(
         key: shelfKey,
         questions: questions,
+        slots: slots,
         records: records,
+        encounteredSlotIds: encounteredSlotIds,
         initialIndex: initialIndex,
         revisitOnly: false,
       );
@@ -395,15 +516,11 @@ class GaussController extends ChangeNotifier {
     }
   }
 
-  Future<StudyShelf> loadGemShelf() => _loadCuratedShelf(
-    key: 'gems',
-    loadIds: _progress.gemStudyIds,
-  );
+  Future<StudyShelf> loadGemShelf() =>
+      _loadCuratedShelf(key: 'gems', loadIds: _progress.gemStudyIds);
 
-  Future<StudyShelf> loadRevisitShelf() => _loadCuratedShelf(
-    key: 'revisit',
-    loadIds: _progress.revisitStudyIds,
-  );
+  Future<StudyShelf> loadRevisitShelf() =>
+      _loadCuratedShelf(key: 'revisit', loadIds: _progress.revisitStudyIds);
 
   Future<StudyShelf> _loadCuratedShelf({
     required String key,
@@ -425,10 +542,22 @@ class GaussController extends ChangeNotifier {
             record.questionId: record.topicKey,
         },
       );
+      final slots = [
+        for (var index = 0; index < questions.length; index++)
+          StudyShelfSlot(
+            id: '$key:$index:${questions[index].id}',
+            questionId: questions[index].id,
+            kind: StudySlotKind.curated.key,
+            primaryShelfKey: records[questions[index].id]?.shelfKey ?? key,
+            planned: false,
+          ),
+      ];
       return StudyShelf(
         key: key,
         questions: questions,
+        slots: slots,
         records: records,
+        encounteredSlotIds: const {},
         initialIndex: 0,
         revisitOnly: true,
       );
@@ -442,40 +571,46 @@ class GaussController extends ChangeNotifier {
     required String shelfKey,
     required int? hypothesisChoiceIndex,
     required StudyReflection reflection,
+    StudyShelfSlot? slot,
   }) async {
-    if (question.missionReady) {
-      throw ArgumentError(
-        'Verified mission items do not use source reflection.',
-      );
-    }
     try {
-      // Attribution always uses the canonical curriculum slice of the
-      // question, regardless of which surface (chapter shelf, revisit orbit,
-      // filtered browse, deep link) the reflection came from. This keeps
-      // set-completion counting stable.
       final topicQuestions = await _questionBank.loadTopic(question.topicKey);
-      final index = topicQuestions.indexWhere(
-        (item) => item.id == question.id,
-      );
-      const batch = GaussStudyCurriculum.batchSize;
-      final offset = index < 0 ? 0 : (index ~/ batch) * batch;
-      final canonicalShelfKey = '${question.topicKey}:$offset:$batch';
-      final setSize = math.min(batch, topicQuestions.length - offset);
+      final primary = _questionBank.primaryStudySlot(question.id);
+      StudySessionSlot? encounter;
+      if (slot?.planned ?? false) {
+        final session = _questionBank.studyPlan
+            .topic(question.topicKey)
+            .sessions
+            .firstWhere((candidate) => candidate.key == shelfKey);
+        encounter = session.slots.firstWhere(
+          (candidate) => candidate.id == slot!.id,
+        );
+        if (encounter.questionId != question.id ||
+            slot!.questionId != question.id) {
+          throw StateError('Study slot does not match the displayed question.');
+        }
+      }
+      final topicPlan = _questionBank.studyPlan.topic(question.topicKey);
       final outcome = await _progress.saveStudyReflection(
         questionId: question.id,
         topicKey: question.topicKey,
         subjectKey: question.subject.key,
-        shelfKey: canonicalShelfKey,
-        setSize: setSize,
+        shelfKey: primary.sessionKey,
+        setSize: GaussStudyCurriculum.batchSize,
         topicQuestionCount: topicQuestions.length,
         hypothesisChoiceIndex: hypothesisChoiceIndex,
-        // Alignment with the source-claimed key, recorded only when a
-        // hypothesis existed. The source is unverified, so this is a private
-        // note about agreement — never a correctness score.
+        // Study reflection is a private learning note, independent from the
+        // scored mission ledger. For an archive item this only means agreement
+        // with the preserved source claim; for a certified item it means
+        // alignment with the verified mapping. Neither path grants mission XP.
         hypothesisMatched: hypothesisChoiceIndex == null
             ? null
             : hypothesisChoiceIndex == question.correctChoiceIndex,
         reflection: reflection,
+        encounterSlotId: encounter?.id,
+        encounterShelfKey: encounter?.sessionKey,
+        encounterSlotKind: encounter?.kind,
+        topicSlotCount: encounter == null ? null : topicPlan.slotCount,
       );
       _study = await _progress.studySummary();
       _studyDueCount = (await _progress.studyDueIds()).length;
@@ -502,8 +637,15 @@ class GaussController extends ChangeNotifier {
     }
     if (section == null) return;
     for (final key in section.topicKeys) {
-      final topic = _questionBank.topicByKey(key);
-      if (_study.topic(key).reflected < topic.questionCount) return;
+      final nodes = GaussStudyCurriculum.nodesFor(
+        section,
+        _questionBank.topics,
+      ).where((node) => node.topic.key == key);
+      if (nodes.any(
+        (node) => _study.shelf(node.key).reflected < node.questionCount,
+      )) {
+        return;
+      }
     }
     await _progress.awardSectionCompleted(
       sectionId: section.id,

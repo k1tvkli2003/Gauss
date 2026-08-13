@@ -2,11 +2,18 @@
 
 ## Summary
 - Result: partial
-- Last verified: 2026-07-30T15:35:00+03:30
+- Last verified: 2026-08-13T17:05:00+03:30
 
 ## Checks
 | Check | Command/Method | Result | Evidence |
 |---|---|---|---|
+| Question 0088 source-fidelity recheck | original-resolution inspection of `math/2.pdf#7` and `math/19.pdf#9`; hash-bound receipt; promoter dry-run/apply; repair reconciliation; runtime build/check; corpus validate/summarize; focused Flutter consumer tests/analyze | passed | all stem/options/solution/key fields match; 50 certified/usable, 2741 quarantined; 24/24 Flutter tests and focused analyze pass; runtime `a617d504…fa79d`; immutable source unchanged; `logs/source-fidelity-0088-recheck-20260813.md` |
+| Receipt-ledger and numeral-ledger preservation | evidence promoter merge invariant + runtime contract hash binding | passed | the two newer source-conflict receipts remain present after generic promotion; runtime now hashes `embedded-media-numeral-receipts.jsonl` and validation rejects stale contracts |
+| English chrome under Persian Android locale | debug APK v117, device `system_locales=fa-IR`, UIAutomator + screenshot + logcat | passed | Map and Study Room chrome/semantics remained English/LTR; `.codex-tmp/android-proof-20260813-language/gauss-fa-device.png`; no RenderFlex/FlutterError/fatal log |
+| Persian question with ASCII numerals | live Study Room under `fa-IR`, UIAutomator semantics scan | passed | Persian prompt remained RTL; formula and options were ASCII; `0` matches for `[۰-۹٠-٩٫٬٪]`; `.codex-tmp/android-proof-20260813-language/gauss-question-fa-device.png` |
+| App-wide language/numeral contract | `flutter test test/english_chrome_contract_test.dart` | passed | 5/5; production-source chrome scan, English model labels, numeral/separator policy, all 3,672 questions and 22,000+ strings, Persian-device locale |
+| Question, stylus, render, and responsive regressions | focused six-file question suite; `android_experience_test.dart`; render/media pair | passed | 42/42 + 24/24 + 6/6; focused analyze no issues |
+| Hash-bound certification after language gate | promote evidence + source repairs + runtime build/check + corpus validate/summarize | passed | 3,672 source-bound, 49 certified/usable; current runtime hash `aecf59e6…b25f`; embedded-media numeral receipt gate enabled |
 | Study Observatory copy contract | `flutter test test/study_experience_test.dart` | passed | 22/22; asserts the truthful `question cards reflected` progress reading alongside subject switching, responsive layout, study-room, and pen checks |
 | Study Observatory static analysis | `dart analyze lib test` | passed | no issues found |
 | Study Observatory release build | `flutter build web --release --no-wasm-dry-run` | passed | Flutter produced `build/web` after the copy correction |
@@ -258,6 +265,12 @@
 | Jules repair overlay batch 001 | `evidence/jules-repair-001.jsonl`, `data/certification/v1/repair-overlays.jsonl` | passed with quarantine | 10/10 ticket/hash rows validated; 6 draft overlays added source-preservingly, 4 inconsistent tickets remain under review; `validate-repairs` and corpus `validate` pass |
 | Jules repair overlay batch 002 | `evidence/jules-repair-002.jsonl`, `data/certification/v1/repair-overlays.jsonl` | passed with quarantine | 10/10 ticket/hash rows validated; 6 additional source-preserving draft solution replacements added (14 overlays total); four internally inconsistent tickets remain under review; `validate-repairs` and corpus `validate` pass with 3672 source-bound records and 0 usable |
 | Repair queue refresh after Jules batch 002 | `node scripts/corpus_certification.mjs repair-queue` | passed | 2,791 source-bound quarantine tickets regenerated: 2,488 render/prompt P0 and 303 correctness P1; current manifest answer/solution states are reflected without bypassing certification gates |
+| Jules repair 044–045 terminal harvest | direct session get + `jules_batch.py harvest` + strict extractors | passed with quarantine | Both sessions `COMPLETED`; 20/20 rows matched order, ticket/question IDs, source hashes, schema, and JSONL syntax; output hashes `42dccd…ff9e0` and `cdfb2d…2bf` |
+| Blind content audit and materialization 044–045 | `python scripts/materialize_content_audited_repairs.py ...` | passed with quarantine | 18 independently re-derived source-preserving addenda admitted; `1806` and `1811` retained fail-closed; overlays 248 → 266, SHA-256 `a23f4c…407e` |
+| Post-044/045 corpus gates | `validate-repairs`; `validate`; `summarize`; `repair-queue` | passed | 266 overlays; 3,672 source-bound; 2,791 quarantine tickets (2,488 P0, 303 P1); 0 usable |
+| Jules repair 043/046 terminal reconciliation | direct `sessions get` + `jules_batch.py harvest` + saved extractor reports | passed | Both sessions live-confirmed `COMPLETED`; 20/20 rows exact-order/hash-bound; output SHA-256 `cc79a58c…2209` and `521f3d68…cc66`; no repository artifacts or PRs |
+| Independent blind-input/content gate 043/046 | `materialize_content_audited_repairs.py` + `content-audit-043-046.json` | passed | Exact safe input fields, prompt payload, and remote session prompt matched; 20/20 math rows accepted; 18 idempotent, 2 new overlays (`1883`, `1937`) |
+| Priority repair and post-wave corpus gates | `nardebam_math_1405_0037`; `validate-repairs`; `validate`; `summarize`; `repair-queue` | passed with quarantine | Unrelated arithmetic solution replaced by a source-preserving set-theory addendum; the nonempty clause remains ambiguous, so no certification/admission; 269 overlays, SHA-256 `18663b92…8556`, 3,672 source-bound, 2,791 quarantined, 0 usable |
 
 ## Not Run
 - Daily quest receipt visual/device check: the widget and web release build
@@ -272,3 +285,31 @@
 - هیچ سؤال هنوز certification علمی کامل ندارد و نباید certified ادعا شود.
 - Jules source برای Gauss متصل نیست.
 - پس از 95 خروجی screening معتبر، 1313 مورد needs repair و 187 مورد ambiguous هستند؛ هیچ‌کدام usable نشده‌اند.
+
+## Provisional runtime admission evidence — 2026-08-13
+
+| Gate | Evidence | Result |
+|---|---|---|
+| Complete source structure | `question_contract_test.dart` | passed: all 3,672 rows load, retain nardebam provenance, have nonempty stem/solution, four nonempty options, and a valid source/effective answer index |
+| Complete lesson reachability | `five_question_session_test.dart` | passed: 744/744 sessions create exactly five runtime-usable questions; all 3,672 primary source IDs are unique and covered |
+| Certification remains strict | `question_contract_test.dart` | passed: 51 certified rows still match the hash-bound runtime map; 3,621 pending-scientific-review rows were not falsely promoted |
+| Local issue persistence | `progress_repository_test.dart` | passed: multiple reports append newest-first with exact question/session/choice context and create no exam/attempt side effects |
+| Mission report UI | `mission_resume_test.dart` | passed: report sheet saves the chosen category, note, question ID, and lesson position; provisional saved missions resume |
+| Focused regression suite | six Flutter test files | passed: 62/62 across corpus, 5-question plan, persistence, mission UI/resume, Map dock, and English chrome |
+| Focused analyzer | eleven changed implementation/test items | passed: no issues |
+| Android build/install | debug APK, emulator-5554 | passed: versionCode 121 installed as `com.gauss.app.debug`; signed `com.gauss.app` remained installed and untouched |
+| Android runtime path | Map → question `nardebam_math_1405_0057` | passed: previously uncertified row opened in the exact five-question mission, accepted a choice, showed source-key feedback and the Persian source solution |
+| Android local report | same question | passed: responsive English issue sheet opened above system navigation and emitted `Issue saved on this device for repair.` |
+| Android runtime logs | post-launch and interaction logcat | passed: no fatal exception, Flutter error, or RenderFlex overflow observed |
+| Full Flutter regression | `flutter test -r compact` | passed: 190 tests; 1 intentional Web-only skip on the Android VM; 0 failures |
+| Full Flutter analyzer | `flutter analyze` | passed: no issues found |
+| Stable stylus footer | focused `study-room ink suspends horizontal paging while the pen is active` test | passed: question paper and compact navigation dock keep identical bounds before and after live ink controls appear |
+| Final Android preview | debug APK versionCode 122, emulator-5554 | passed: build, preserving install, launch, Map render, and selected five-question Mission render |
+| Strict corpus integrity | `node scripts/corpus_certification.mjs validate` | passed: 3,672 source-bound records; 51 scientifically usable records retained without altering the provisional runtime policy |
+| Repair overlay integrity | `node scripts/corpus_certification.mjs validate-repairs` | passed: 272 source-preserving overlays |
+| Dataset tool regression | Python 3.13 `unittest discover` over `scripts/test_*.py` | passed: 27/27; Python 3.13 was selected because it contains the existing `pypdf` runtime |
+
+Scientific certification remains `51/3672`; this is deliberately not claimed
+as complete. Runtime usability is now `3672/3672` under the owner's explicit
+private provisional-use policy, with local reporting as the repair feedback
+loop.

@@ -225,3 +225,96 @@ quota `doctor` and a scheduler `--dry-run` each exceeded their bounded
 64-second network window. No remote repair session was created without a
 current quota response, and the prepared local inputs remain ignored until
 that attestation is available.
+
+## Terminal repair harvest: 044–045
+
+On 2026-08-09 the two previously active, repoless, source-key-blind sessions
+were reconciled directly against the Jules API and both were terminal
+`COMPLETED`:
+
+| Task | Session | Transport artifact | Rows | Draft | Under review |
+| --- | --- | --- | ---: | ---: | ---: |
+| `repair-044` | `sessions/16949113585755100113` | harvested unified diff, `output.jsonl` extracted with `git apply --include` | 10 | 9 | 1 |
+| `repair-045` | `sessions/5362413856214294398` | exact fenced JSONL from the sole `agentMessaged` activity | 10 | 9 | 1 |
+
+Both outputs passed the existing strict transport gate: exact row count,
+original order, ticket ID, question ID, source SHA-256, allowed fields,
+draft/under-review shape, and JSONL syntax. The persisted output hashes are
+`42dccddc534cb941ac5276997b0572bf378f32a0961daab6b7dc26312f6ff9e0`
+for 044 and
+`cdfb2d8dc3576fc7d3d6cab70236d8920aba29da2fc89c5c72a4638bda62c2bf`
+for 045.
+
+The independent blind audit in `content-audit-044-045.json` re-derived all
+twenty questions from stem and options and accepted eighteen addenda. The
+versioned row-level audit is preserved in
+[`logs/repair-044-045.md`](logs/repair-044-045.md). The
+accepted IDs are `1797`, `1798`, `1799`, `1800`, `1801`, `1802`, `1803`,
+`1804`, `1805`, `1807`, `1808`, `1809`, `1810`, `1812`, `1813`, `1814`,
+`1816`, and `1817` in the `nardebam_math_1405_*` namespace. Two rows remain
+fail-closed:
+
+- `nardebam_math_1405_1806`: the literal decimal-digit count is 23,100, but
+  none of the four immutable options matches; no missing digit-domain
+  restriction can be invented.
+- `nardebam_math_1405_1811`: the capped distribution count is 10, but the
+  immutable options are 6–9; option 7 would require an unstated nonempty-box
+  condition.
+
+The audited materializer advanced the derived overlay ledger from 248 to 266
+entries with SHA-256
+`a23f4c054181fe748d4ed2adb9235f866a062de26e66ca38a0a29f868561407e`.
+`validate-repairs`, full-corpus `validate`, `summarize`, and regenerated
+`repair-queue` all passed: 3,672 source-bound rows, 2,791 quarantined tickets
+(2,488 P0 render/prompt and 303 P1 correctness), and **0 usable**. These are
+source-preserving draft solution addenda only; no source JSON/media or source
+answer key changed, and no row bypassed source-fidelity, render, solution,
+answer, or adversarial certification gates.
+
+## Terminal reconciliation: repair 043/046 and priority 0037
+
+On 2026-08-10 bounded direct API reads proved the two tasks still marked
+`active` in the old local batch state were terminal:
+
+| Task | Session | Live state | Rows | Output SHA-256 |
+| --- | --- | --- | ---: | --- |
+| `repair-043` | `sessions/14343518125421771215` | `COMPLETED` | 10 | `cc79a58cbb286df39ad5cd43249c107c194c0909df210b5defddbb29e9562209` |
+| `repair-046` | `sessions/15703792575445043007` | `COMPLETED` | 10 | `521f3d68e942ba0bfeb1ceb23d5b61022b4b01927ffe4fc8b03dbdaf001fcc66` |
+
+Each session had one exact fenced JSONL activity and no repository artifact or
+pull request. The existing extractor/transport reports passed with ten rows,
+original order, ticket/question identity, source hash, schema, and draft shape.
+The independent mathematical audit accepted all twenty addenda. Eighteen were
+already byte-identical in the overlay ledger; only `nardebam_math_1405_1883`
+and `nardebam_math_1405_1937` were new, advancing 266 → 268.
+
+The materializer no longer trusts the audit's `sourceKeyHidden` boolean alone.
+For every audited remote batch it now requires the original input to contain
+exactly `ticket_id`, `question_id`, `source_sha256`, `blocking_issues`, `stem`,
+`options`, and `solution`; validates text-block shape; binds input order and
+hashes to the harvested rows; proves the prompt ends with that exact serialized
+input; and proves the saved remote session prompt equals the local blind prompt.
+This strengthened gate revalidated repair-043/044/045/046. No source answer-key
+field was present in any of those remote payloads.
+
+The priority `nardebam_math_1405_0037` row is fifth in the locally validated,
+repoless repair-061 input and has source hash
+`510c99cc94bf379b1c7fec112cedf582ee228eb8f72e9b753c1df831ca9a5689`.
+Its input has only the seven allowed blind fields and no source-answer field.
+Independent re-derivation proves option 2 is the only pair that is always
+disjoint because `(A-B) ∩ B = ∅`; however, `A-B` is not guaranteed nonempty
+(for example when `A ⊆ B`). A source-preserving addendum now replaces the
+unrelated arithmetic-sequence explanation and records that caveat, advancing
+268 → 269, but the record remains quarantined and uncertified.
+
+The repair-061–078 manifest validates locally (18 independent tasks; manifest
+SHA-256 `89b0823649f959c838dc349995995398dbf7d9962ac365b03a2809f906a8f36c`).
+No new session was dispatched: both a bounded Jules doctor and a quota-only
+pagination call timed out without a complete account-wide capacity snapshot.
+Per the fail-closed quota rule, partial evidence cannot authorize creation.
+
+Final gates passed: 269 unique overlays with current source hashes and SHA-256
+`18663b9241c6faae15a6dd6d052f9ac04c19caea94cc9922da503baada7a8556`;
+3,672 source-bound records; 2,791 quarantined tickets (2,488 P0, 303 P1); and
+**0 usable**. Source question JSON, media, source keys, and runtime admission
+state were unchanged.

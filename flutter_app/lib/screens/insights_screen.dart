@@ -10,6 +10,7 @@ import '../domain/gamification_catalog.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
 import '../state/gauss_controller.dart';
+import '../widgets/gamification_orbit_ribbon.dart';
 import '../widgets/gauss_brand.dart';
 
 String _formatCount(int value) => value.toString().replaceAllMapped(
@@ -60,9 +61,19 @@ class InsightsScreen extends StatelessWidget {
                   ),
                 ),
                 SliverToBoxAdapter(
-                  child: _DailyQuestInstrument(
-                    quest: gamification.quest,
-                    todayXp: gamification.todayXp,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(18, 2, 18, 10),
+                    child: Center(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 1180),
+                        child: GamificationOrbitRibbon(
+                          summary: gamification,
+                          onQuestPressed: gamification.quest.completed
+                              ? null
+                              : () => context.go('/study'),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 if (study.totalReflected > 0)
@@ -90,7 +101,7 @@ class InsightsScreen extends StatelessWidget {
                     eyebrow: 'PRIVATE CONSTELLATION',
                     title: 'Theorem seals',
                     detail:
-                        'Engraved milestones for charting, correction, and breadth — no streak loss, leaderboard, or score.',
+                        'Engraved milestones for charting, correction, and breadth — private, calm, and free of leaderboard pressure.',
                   ),
                 ),
                 SliverPadding(
@@ -151,63 +162,103 @@ class _ObservatoryHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.fromLTRB(20, 18, 18, 13),
+    key: const ValueKey('insights-header'),
+    padding: const EdgeInsets.fromLTRB(18, 18, 18, 14),
     child: Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 1180),
         child: LayoutBuilder(
           builder: (context, constraints) {
-            // On a narrow phone the wordmark, subtitle, medallion, vault, and
-            // offline pip cannot share one row; the subtitle is the piece
-            // that can stand down.
-            final compact = constraints.maxWidth < 430;
-            return Row(
+            final textScale = MediaQuery.textScalerOf(context).scale(1);
+            final compact = constraints.maxWidth < 430 || textScale > 1.25;
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                GaussWordmark(width: compact ? 104 : 122),
-                if (!compact) ...[
-                  const SizedBox(width: 14),
-                  Container(width: 1, height: 30, color: GaussColors.hairline),
-                  const SizedBox(width: 14),
-                ] else
-                  const SizedBox(width: 8),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                SizedBox(
+                  key: const ValueKey('insights-balanced-header-axis'),
+                  height: 50,
+                  child: Stack(
+                    alignment: Alignment.center,
                     children: [
-                      const Text(
-                        'PERSONAL CONSTELLATION',
-                        style: TextStyle(
-                          color: GaussColors.brassLight,
-                          fontSize: GaussTypeScale.insignia,
-                          fontWeight: FontWeight.w900,
-                          letterSpacing: 1.35,
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: SizedBox.square(
+                          key: const ValueKey('insights-level-track'),
+                          dimension: 48,
+                          child: Center(
+                            child: _LevelMedallion(
+                              level: level,
+                              progress: levelProgress,
+                            ),
+                          ),
                         ),
                       ),
-                      Text(
-                        '${_formatCount(totalQuestions)} questions · fully offline',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                          color: GaussColors.fog,
-                          fontSize: 11,
+                      Center(
+                        child: GaussWordmark(
+                          key: const ValueKey('insights-centered-wordmark'),
+                          width: compact ? 112 : 128,
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: SizedBox.square(
+                          key: const ValueKey('insights-status-track'),
+                          dimension: 48,
+                          child: vaultAvailable
+                              ? IconButton(
+                                  key: const ValueKey('insights-vault-action'),
+                                  onPressed: () => context.push('/vault'),
+                                  tooltip: 'Progress vault',
+                                  icon: const Icon(
+                                    Icons.inventory_2_outlined,
+                                    color: GaussColors.brassLight,
+                                  ),
+                                )
+                              : const Center(child: _OfflineSignal()),
                         ),
                       ),
                     ],
                   ),
                 ),
-                _LevelMedallion(level: level, progress: levelProgress),
-                if (vaultAvailable) ...[
-                  const SizedBox(width: 6),
-                  IconButton(
-                    onPressed: () => context.push('/vault'),
-                    tooltip: 'Progress vault',
-                    icon: const Icon(
-                      Icons.inventory_2_outlined,
-                      color: GaussColors.brassLight,
+                const SizedBox(height: 10),
+                const Text(
+                  'PERSONAL CONSTELLATION',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: GaussColors.brassLight,
+                    fontSize: GaussTypeScale.insignia,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: 1.35,
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  '${_formatCount(totalQuestions)} questions · fully offline',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: GaussColors.fog,
+                    fontSize: 11,
+                    height: 1.35,
+                  ),
+                ),
+                if (!compact) ...[
+                  const SizedBox(height: 10),
+                  Center(
+                    child: Container(
+                      width: 72,
+                      height: 1,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.transparent,
+                            GaussColors.brass,
+                            Colors.transparent,
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ],
-                if (!compact) const _OfflineSignal(),
               ],
             );
           },
@@ -297,128 +348,6 @@ class _MedallionRingPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _MedallionRingPainter oldDelegate) =>
       oldDelegate.progress != progress;
-}
-
-class _DailyQuestInstrument extends StatelessWidget {
-  const _DailyQuestInstrument({required this.quest, required this.todayXp});
-
-  final DailyQuest quest;
-  final int todayXp;
-
-  @override
-  Widget build(BuildContext context) {
-    final progress = quest.target == 0
-        ? 0.0
-        : (quest.progress / quest.target).clamp(0.0, 1.0);
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(18, 2, 18, 10),
-      child: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 1180),
-          child: Semantics(
-            container: true,
-            excludeSemantics: true,
-            label:
-                'Daily observation. ${quest.title}. ${quest.progress} of ${quest.target}. Reward ${quest.rewardXp} experience points. ${quest.completed ? 'Complete.' : 'In progress.'} $todayXp experience earned today.',
-            child: _GlassPanel(
-              radius: 22,
-              padding: const EdgeInsets.all(16),
-              child: Row(
-                children: [
-                  SizedBox.square(
-                    dimension: 52,
-                    child: CustomPaint(
-                      painter: _MedallionRingPainter(progress: progress),
-                      child: Center(
-                        child: quest.completed
-                            ? const Icon(
-                                Icons.check_rounded,
-                                size: 22,
-                                color: GaussColors.signalBright,
-                              )
-                            : Text(
-                                '${quest.progress}',
-                                style: const TextStyle(
-                                  color: GaussColors.signalBright,
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w900,
-                                ),
-                              ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'DAILY OBSERVATION',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            color: GaussColors.signalBright,
-                            fontSize: GaussTypeScale.insignia,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 1,
-                          ),
-                        ),
-                        const SizedBox(height: 5),
-                        Text(
-                          quest.title,
-                          style: const TextStyle(fontWeight: FontWeight.w800),
-                        ),
-                        const SizedBox(height: 9),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(99),
-                          child: LinearProgressIndicator(
-                            value: progress,
-                            minHeight: 5,
-                            backgroundColor: GaussColors.hairline,
-                            color: GaussColors.signalBright,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        '+${quest.rewardXp} XP',
-                        style: const TextStyle(
-                          color: GaussColors.brassLight,
-                          fontSize: GaussTypeScale.caption,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        '${quest.progress}/${quest.target}',
-                        style: const TextStyle(
-                          color: GaussColors.ivory,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      Text(
-                        '$todayXp XP today',
-                        style: const TextStyle(
-                          color: GaussColors.fog,
-                          fontSize: GaussTypeScale.insignia,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
 }
 
 class _OfflineSignal extends StatelessWidget {
@@ -1115,28 +1044,68 @@ class _ActivityStarChart extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.auto_graph_rounded,
-                      color: GaussColors.brassLight,
-                      size: 21,
-                    ),
-                    const SizedBox(width: 9),
-                    Expanded(
-                      child: Text(
-                        'Last 28 days',
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                    ),
-                    const Text(
+                LayoutBuilder(
+                  builder: (context, constraints) {
+                    final textScale = MediaQuery.textScalerOf(context).scale(1);
+                    final compact =
+                        constraints.maxWidth < 360 || textScale > 1.35;
+                    final titleText = Text(
+                      'Last 28 days',
+                      textAlign: compact ? TextAlign.center : TextAlign.start,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    );
+                    const qualifier = Text(
                       'first reflections only',
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         color: GaussColors.muted,
                         fontSize: GaussTypeScale.insignia,
                       ),
-                    ),
-                  ],
+                    );
+                    if (compact) {
+                      return Center(
+                        child: Column(
+                          children: [
+                            if (textScale > 1.35) ...[
+                              const Icon(
+                                Icons.auto_graph_rounded,
+                                color: GaussColors.brassLight,
+                                size: 21,
+                              ),
+                              const SizedBox(height: 5),
+                              titleText,
+                            ] else
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(
+                                    Icons.auto_graph_rounded,
+                                    color: GaussColors.brassLight,
+                                    size: 21,
+                                  ),
+                                  const SizedBox(width: 9),
+                                  titleText,
+                                ],
+                              ),
+                            const SizedBox(height: 5),
+                            qualifier,
+                          ],
+                        ),
+                      );
+                    }
+                    return Row(
+                      children: [
+                        const Icon(
+                          Icons.auto_graph_rounded,
+                          color: GaussColors.brassLight,
+                          size: 21,
+                        ),
+                        const SizedBox(width: 9),
+                        Expanded(child: titleText),
+                        qualifier,
+                      ],
+                    );
+                  },
                 ),
                 const SizedBox(height: 13),
                 LayoutBuilder(
@@ -1160,7 +1129,7 @@ class _ActivityStarChart extends StatelessWidget {
                 ),
                 const SizedBox(height: 11),
                 const Text(
-                  'Empty days are simply empty days. Gauss does not erase progress or demand a streak.',
+                  'Daily streak rewards a steady rhythm; one calm grace day can bridge a missed day, and earned XP never disappears.',
                   style: TextStyle(
                     color: GaussColors.muted,
                     fontSize: GaussTypeScale.caption,
@@ -1429,11 +1398,10 @@ class _SectionProgressRow extends StatelessWidget {
             Expanded(
               child: Text(
                 section.title,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w700,
+                  height: 1.3,
                 ),
               ),
             ),
@@ -1469,17 +1437,31 @@ class _AchievementPlateGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) => SliverLayoutBuilder(
     builder: (context, constraints) {
-      final columns = constraints.crossAxisExtent >= 960
+      final textScale = MediaQuery.textScalerOf(context).scale(1);
+      final columns = textScale > 1.15
+          ? 1
+          : constraints.crossAxisExtent >= 1000
           ? 3
-          : constraints.crossAxisExtent >= 600
+          : constraints.crossAxisExtent >= 700
           ? 2
           : 1;
+      if (columns == 1) {
+        return SliverList.builder(
+          itemCount: achievements.length,
+          itemBuilder: (context, index) => Padding(
+            padding: EdgeInsets.only(
+              bottom: index == achievements.length - 1 ? 0 : 11,
+            ),
+            child: _AchievementPlate(snapshot: achievements[index]),
+          ),
+        );
+      }
       return SliverGrid.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: columns,
           mainAxisSpacing: 11,
           crossAxisSpacing: 11,
-          childAspectRatio: columns == 1 ? 2.35 : 1.5,
+          mainAxisExtent: 230,
         ),
         itemCount: achievements.length,
         itemBuilder: (context, index) =>
@@ -1506,114 +1488,181 @@ class _AchievementPlate extends StatelessWidget {
         : '${snapshot.current} / ${next.threshold} toward ${next.title}';
 
     return Semantics(
+      key: ValueKey('achievement-plate-${definition.id}'),
       container: true,
       excludeSemantics: true,
       label:
           '${definition.accessibilityLabel}. ${earned?.title ?? 'Uncharted'}. '
           '$progressLabel. ${rarity.label} tier.',
-      child: _GlassPanel(
-        radius: 21,
-        padding: const EdgeInsets.all(15),
-        child: Row(
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final textScale = MediaQuery.textScalerOf(context).scale(1);
+          final stacked = constraints.maxWidth < 340 || textScale > 1.35;
+          final seal = SizedBox.square(
+            dimension: 68,
+            child: CustomPaint(
+              painter: _AchievementSealPainter(
+                family: definition.family,
+                color: color,
+                earned: earned != null,
+                tier: rarity.index + 1,
+              ),
+            ),
+          );
+          final copy = _AchievementPlateCopy(
+            snapshot: snapshot,
+            rarity: rarity,
+            color: color,
+            progressLabel: progressLabel,
+            centered: stacked,
+          );
+          return _GlassPanel(
+            radius: 21,
+            padding: const EdgeInsets.all(15),
+            child: stacked
+                ? Column(
+                    key: ValueKey(
+                      'achievement-layout-stacked-${definition.id}',
+                    ),
+                    mainAxisSize: MainAxisSize.min,
+                    children: [seal, const SizedBox(height: 12), copy],
+                  )
+                : Row(
+                    key: ValueKey('achievement-layout-inline-${definition.id}'),
+                    children: [
+                      seal,
+                      const SizedBox(width: 13),
+                      Expanded(child: copy),
+                    ],
+                  ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _AchievementPlateCopy extends StatelessWidget {
+  const _AchievementPlateCopy({
+    required this.snapshot,
+    required this.rarity,
+    required this.color,
+    required this.progressLabel,
+    required this.centered,
+  });
+
+  final AchievementSnapshot snapshot;
+  final AchievementRarity rarity;
+  final Color color;
+  final String progressLabel;
+  final bool centered;
+
+  @override
+  Widget build(BuildContext context) {
+    final definition = snapshot.definition;
+    final earned = snapshot.earnedLevel;
+    final alignment = centered
+        ? CrossAxisAlignment.center
+        : CrossAxisAlignment.start;
+    final textAlign = centered ? TextAlign.center : TextAlign.start;
+    return Column(
+      crossAxisAlignment: alignment,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Wrap(
+          alignment: centered ? WrapAlignment.center : WrapAlignment.start,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          spacing: 8,
+          runSpacing: 4,
           children: [
-            SizedBox.square(
-              dimension: 68,
-              child: CustomPaint(
-                painter: _AchievementSealPainter(
-                  family: definition.family,
-                  color: color,
-                  earned: earned != null,
-                  tier: rarity.index + 1,
-                ),
+            Text(
+              definition.title,
+              textAlign: textAlign,
+              style: TextStyle(
+                color: earned == null ? GaussColors.fog : GaussColors.ivory,
+                fontWeight: FontWeight.w900,
               ),
             ),
-            const SizedBox(width: 13),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          definition.title,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            color: earned == null
-                                ? GaussColors.fog
-                                : GaussColors.ivory,
-                            fontWeight: FontWeight.w900,
-                          ),
-                        ),
-                      ),
-                      _RarityNotches(count: rarity.index + 1, color: color),
-                    ],
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    earned?.title ?? 'Uncharted',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: color,
-                      fontSize: 10.5,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                  const SizedBox(height: 6),
-                  Text(
-                    definition.description,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: GaussColors.muted,
-                      fontSize: 10,
-                      height: 1.35,
-                    ),
-                  ),
-                  const SizedBox(height: 9),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(99),
-                    child: LinearProgressIndicator(
-                      value: snapshot.progress,
-                      minHeight: 4,
-                      backgroundColor: GaussColors.line,
-                      color: color,
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          progressLabel,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            color: GaussColors.fog,
-                            fontSize: GaussTypeScale.insignia,
-                          ),
-                        ),
-                      ),
-                      Text(
-                        rarity.label.toUpperCase(),
-                        style: TextStyle(
-                          color: color,
-                          fontSize: GaussTypeScale.insignia,
-                          fontWeight: FontWeight.w900,
-                          letterSpacing: .55,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            _RarityNotches(count: rarity.index + 1, color: color),
           ],
         ),
-      ),
+        const SizedBox(height: 2),
+        Text(
+          earned?.title ?? 'Uncharted',
+          textAlign: textAlign,
+          style: TextStyle(
+            color: color,
+            fontSize: 10.5,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        const SizedBox(height: 6),
+        Text(
+          definition.description,
+          textAlign: textAlign,
+          style: const TextStyle(
+            color: GaussColors.muted,
+            fontSize: 10,
+            height: 1.35,
+          ),
+        ),
+        const SizedBox(height: 9),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(99),
+          child: LinearProgressIndicator(
+            value: snapshot.progress,
+            minHeight: 4,
+            backgroundColor: GaussColors.line,
+            color: color,
+          ),
+        ),
+        const SizedBox(height: 6),
+        if (centered) ...[
+          Text(
+            progressLabel,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              color: GaussColors.fog,
+              fontSize: GaussTypeScale.insignia,
+            ),
+          ),
+          const SizedBox(height: 3),
+          Text(
+            rarity.label.toUpperCase(),
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: color,
+              fontSize: GaussTypeScale.insignia,
+              fontWeight: FontWeight.w900,
+              letterSpacing: .55,
+            ),
+          ),
+        ] else
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Text(
+                  progressLabel,
+                  style: const TextStyle(
+                    color: GaussColors.fog,
+                    fontSize: GaussTypeScale.insignia,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                rarity.label.toUpperCase(),
+                style: TextStyle(
+                  color: color,
+                  fontSize: GaussTypeScale.insignia,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: .55,
+                ),
+              ),
+            ],
+          ),
+      ],
     );
   }
 }

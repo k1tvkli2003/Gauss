@@ -24,7 +24,7 @@ class _FirstRunTourState extends State<FirstRunTour> {
       eyebrow: 'THE PATH',
       title: 'A continuous route, not a scoreboard',
       detail:
-          'Every unit is sliced into short sets of twenty questions. Follow '
+          'Every unit is sliced into focused five-question lessons. Follow '
           'the path in order, or wander — the map remembers where you were.',
     ),
     _TourStep(

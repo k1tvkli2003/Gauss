@@ -1,14 +1,20 @@
+import 'dart:ui' show SemanticsAction;
+
 import 'package:drift/native.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gauss/data/status_widget_bridge.dart';
 import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/data/backup_service.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
+import 'package:gauss/domain/failures.dart';
 import 'package:gauss/domain/models.dart';
+import 'package:gauss/domain/study_curriculum.dart';
 import 'package:gauss/screens/archive_screen.dart';
 import 'package:gauss/screens/backup_screen.dart';
 import 'package:gauss/screens/insights_screen.dart';
@@ -53,7 +59,7 @@ void main() {
     expect(find.text('Mathematics'), findsOneWidget);
     expect(find.text('Physics'), findsOneWidget);
     expect(
-      find.text('0 of 2,042 question cards reflected'),
+      find.bySemanticsLabel('0 of 5 questions charted in this micro-lesson.'),
       findsOneWidget,
     );
 
@@ -62,14 +68,21 @@ void main() {
     await tester.drag(find.byType(CustomScrollView), const Offset(0, -720));
     await tester.pump(const Duration(milliseconds: 220));
 
-    expect(find.text('4 focused sections'), findsOneWidget);
+    for (final sectionId in const [
+      'physics_matter_measurement',
+      'physics_mechanics',
+      'physics_fields_circuits',
+      'physics_waves_modern',
+    ]) {
+      expect(find.byKey(ValueKey('study-section-$sectionId')), findsOneWidget);
+    }
     expect(tester.takeException(), isNull);
   });
 
   testWidgets('study modes stack, pair, and row out by window class', (
     tester,
   ) async {
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+    _restoreSurfaceAfter(tester);
     const labels = ['Revisit orbit', 'Gem shelf', 'Scratchpad', 'Path atlas'];
 
     Future<List<Offset>> centersAt(Size size) async {
@@ -102,19 +115,14 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('Focus Pen writes immediately while finger ink stays opt-in', (
+  testWidgets('stylus writes immediately while inline touch stays available', (
     tester,
   ) async {
     final ink = ScratchInkController();
     addTearDown(ink.dispose);
     final plate = await _pumpScratchSurface(tester, ink);
 
-    final clearFinder = find.widgetWithIcon(
-      IconButton,
-      Icons.delete_sweep_outlined,
-    );
-    expect(tester.widget<IconButton>(clearFinder).onPressed, isNull);
-    expect(find.text('PEN READY'), findsOneWidget);
+    expect(find.byKey(const ValueKey('inline-pen-halo')), findsNothing);
 
     await tester.dragFrom(
       plate.topLeft + const Offset(40, 50),
@@ -129,18 +137,51 @@ void main() {
     );
     await pen.moveBy(const Offset(120, 55));
     await pen.up();
-    await tester.pump();
+    await tester.pumpAndSettle();
     expect(ink.strokeCount, 1);
-    expect(tester.widget<IconButton>(clearFinder).onPressed, isNotNull);
-    expect(find.text('INK ON PLATE'), findsOneWidget);
-    expect(find.text('Clear'), findsOneWidget);
+    expect(find.byKey(const ValueKey('inline-pen-halo')), findsOneWidget);
 
-    await tester.tap(clearFinder);
-    await tester.pump();
+    await tester.tap(find.byKey(const ValueKey('inline-ink-clear')));
+    await tester.pumpAndSettle();
     expect(ink.isEmpty, isTrue);
-    expect(tester.widget<IconButton>(clearFinder).onPressed, isNull);
+    expect(find.byKey(const ValueKey('inline-pen-halo')), findsNothing);
+    expect(find.byKey(const ValueKey('inline-ink-restore')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('inline-ink-restore')));
+    await tester.pumpAndSettle();
+    expect(ink.strokeCount, 1);
+    expect(find.byKey(const ValueKey('inline-pen-halo')), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets(
+    'scratchpad clears instantly and restores from the same toolbar',
+    (tester) async {
+      final ink = ScratchInkController();
+      addTearDown(ink.dispose);
+      final plate = await _pumpExpandedScratchpad(tester, ink);
+      final pen = await tester.startGesture(
+        plate.center,
+        pointer: 9,
+        kind: PointerDeviceKind.stylus,
+      );
+      await pen.moveBy(const Offset(86, 24));
+      await pen.up();
+      await tester.pump();
+      expect(ink.strokeCount, 1);
+
+      await tester.tap(find.byTooltip('Clear scratchpad'));
+      await tester.pump();
+      expect(ink.isEmpty, isTrue);
+      expect(find.text('Clear scratchpad?'), findsNothing);
+      expect(find.byTooltip('Restore cleared ink'), findsOneWidget);
+
+      await tester.tap(find.byTooltip('Restore cleared ink'));
+      await tester.pump();
+      expect(ink.strokeCount, 1);
+      expect(find.byTooltip('Undo last stroke'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
 
   testWidgets('Focus Pen pressure changes width and cancel rolls back stroke', (
     tester,
@@ -197,10 +238,8 @@ void main() {
     (tester) async {
       final ink = ScratchInkController();
       addTearDown(ink.dispose);
-      final plate = await _pumpScratchSurface(tester, ink);
+      final plate = await _pumpExpandedScratchpad(tester, ink);
 
-      await tester.tap(find.byTooltip('Enable finger drawing'));
-      await tester.pump(const Duration(milliseconds: 180));
       final touch = await tester.startGesture(
         plate.topLeft + const Offset(36, 70),
         pointer: 31,
@@ -237,13 +276,13 @@ void main() {
         1,
         reason: 'the earlier touch is removed even when stylus ink is newer',
       );
+      await tester.tap(find.byTooltip('Close scratchpad'));
+      await tester.pumpAndSettle();
       expect(tester.takeException(), isNull);
     },
   );
 
-  testWidgets('a second touch releases drawing ownership after cancellation', (
-    tester,
-  ) async {
+  testWidgets('inline touch never claims drawing ownership', (tester) async {
     final ink = ScratchInkController();
     final ownership = <bool>[];
     addTearDown(ink.dispose);
@@ -253,8 +292,6 @@ void main() {
       onDrawingChanged: ownership.add,
     );
 
-    await tester.tap(find.byTooltip('Enable finger drawing'));
-    await tester.pump(const Duration(milliseconds: 180));
     final first = await tester.startGesture(
       plate.topLeft + const Offset(40, 70),
       pointer: 41,
@@ -271,11 +308,8 @@ void main() {
     await second.up();
     await tester.pump();
 
-    await tester.tap(find.byTooltip('Use Focus Pen only'));
-    await tester.pump(const Duration(milliseconds: 180));
-    expect(ownership, isNotEmpty);
-    expect(ownership.last, isFalse);
-    expect(ink.isEmpty, isTrue, reason: 'the canceled gesture must roll back');
+    expect(ownership, isEmpty);
+    expect(ink.isEmpty, isTrue, reason: 'inline touch must remain non-inking');
     expect(tester.takeException(), isNull);
   });
 
@@ -283,7 +317,7 @@ void main() {
     tester,
   ) async {
     await tester.binding.setSurfaceSize(const Size(390, 420));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+    _restoreSurfaceAfter(tester);
     final replacement = ScratchInkController();
     addTearDown(replacement.dispose);
     replacement.begin(
@@ -351,7 +385,7 @@ void main() {
       await tester.pumpWidget(
         _TestSurface(
           controller: controller,
-          child: ArchiveScreen(topicKey: topic.key, count: 20),
+          child: ArchiveScreen(topicKey: topic.key, count: 5),
         ),
       );
       await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -361,18 +395,81 @@ void main() {
       );
 
       expect(pages().physics, isA<PageScrollPhysics>());
-      final pen = find.byTooltip('Enable finger drawing');
-      final target = tester.getSize(pen);
-      expect(target.width, greaterThanOrEqualTo(48));
-      expect(target.height, greaterThanOrEqualTo(48));
-
-      await tester.tap(pen);
-      await tester.pump(const Duration(milliseconds: 160));
+      final plate = tester.getRect(
+        find.byKey(const ValueKey('inline-ink-canvas')),
+      );
+      final paperBefore = tester.getRect(
+        find.byKey(const ValueKey('study-room-question-paper')),
+      );
+      final dockBefore = tester.getRect(
+        find.byKey(const ValueKey('study-room-navigation-dock')),
+      );
+      expect(
+        find.byKey(const ValueKey('study-room-ink-controls')),
+        findsNothing,
+      );
+      final pen = await tester.startGesture(
+        plate.center,
+        pointer: 77,
+        kind: PointerDeviceKind.stylus,
+      );
+      await tester.pump();
       expect(pages().physics, isA<NeverScrollableScrollPhysics>());
 
-      await tester.tap(find.byTooltip('Use Focus Pen only'));
-      await tester.pump(const Duration(milliseconds: 160));
+      await pen.up();
+      await tester.pump(const Duration(milliseconds: 260));
       expect(pages().physics, isA<PageScrollPhysics>());
+      expect(
+        find.byKey(const ValueKey('inline-pen-halo')),
+        findsNothing,
+        reason: 'Ink tools belong to the fixed session dock, not the prompt.',
+      );
+      expect(
+        find.byKey(const ValueKey('study-room-ink-controls')),
+        findsOneWidget,
+      );
+      expect(
+        tester.getRect(find.byKey(const ValueKey('study-room-question-paper'))),
+        paperBefore,
+        reason: 'Writing must never move the question or its answer list.',
+      );
+      expect(
+        tester.getRect(
+          find.byKey(const ValueKey('study-room-navigation-dock')),
+        ),
+        dockBefore,
+      );
+
+      await tester.tap(find.byKey(const ValueKey('study-room-ink-clear')));
+      await tester.pump(const Duration(milliseconds: 260));
+      expect(
+        find.byKey(const ValueKey('study-room-ink-restore')),
+        findsOneWidget,
+      );
+      expect(
+        tester.getRect(find.byKey(const ValueKey('study-room-question-paper'))),
+        paperBefore,
+      );
+      await tester.tap(find.byKey(const ValueKey('study-room-ink-restore')));
+      await tester.pump(const Duration(milliseconds: 260));
+      expect(
+        find.byKey(const ValueKey('study-room-ink-controls')),
+        findsOneWidget,
+      );
+      await tester.tap(find.byKey(const ValueKey('study-room-close-action')));
+      await tester.pump();
+      expect(find.text('Leave and clear question ink?'), findsOneWidget);
+      expect(
+        find.textContaining('Ink drawn on these question pages is temporary'),
+        findsOneWidget,
+      );
+      await tester.tap(find.text('Keep writing'));
+      await tester.pump();
+      expect(find.text('Leave and clear question ink?'), findsNothing);
+      expect(
+        find.byKey(const ValueKey('study-room-ink-controls')),
+        findsOneWidget,
+      );
       expect(tester.takeException(), isNull);
     },
   );
@@ -380,14 +477,14 @@ void main() {
   testWidgets(
     'study room changes from a single flow to a split workspace at 840dp',
     (tester) async {
-      addTearDown(() => tester.binding.setSurfaceSize(null));
+      _restoreSurfaceAfter(tester);
       final topic = controller.topics.first;
 
       await tester.binding.setSurfaceSize(const Size(839, 900));
       await tester.pumpWidget(
         _TestSurface(
           controller: controller,
-          child: ArchiveScreen(topicKey: topic.key, count: 20),
+          child: ArchiveScreen(topicKey: topic.key, count: 5),
         ),
       );
       await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -420,10 +517,177 @@ void main() {
     },
   );
 
+  testWidgets('study room warns before an uncharted hypothesis is lost', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    final topic = controller.topics.first;
+    await tester.pumpWidget(
+      _TestSurface(
+        controller: controller,
+        child: ArchiveScreen(topicKey: topic.key, count: 5),
+      ),
+    );
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+
+    final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
+    await tester.ensureVisible(firstChoice);
+    expect(
+      tester
+          .getSemantics(firstChoice)
+          .getSemanticsData()
+          .hasAction(SemanticsAction.tap),
+      isTrue,
+      reason: 'TalkBack must be able to set a private hypothesis.',
+    );
+    await tester.tap(firstChoice);
+    await tester.pump();
+    await tester.tap(find.byKey(const ValueKey('study-room-close-action')));
+    await tester.pump();
+
+    expect(
+      find.text('Leave without charting this hypothesis?'),
+      findsOneWidget,
+    );
+    expect(
+      find.textContaining('saved only after you chart or revisit'),
+      findsOneWidget,
+    );
+    await tester.tap(find.text('Keep studying'));
+    await tester.pump();
+    expect(find.text('Leave without charting this hypothesis?'), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets(
+    'study room header keeps a true action axis and reflows at 320dp 200%',
+    (tester) async {
+      _restoreSurfaceAfter(tester);
+      final topic = controller.topics.first;
+
+      Future<void> pumpAt(Size size, {double textScale = 1}) async {
+        await tester.binding.setSurfaceSize(size);
+        await tester.pumpWidget(
+          _TestSurface(
+            controller: controller,
+            textScale: textScale,
+            child: ArchiveScreen(topicKey: topic.key, count: 5),
+          ),
+        );
+        await _pumpUntil(tester, find.text('STUDY ROOM'));
+      }
+
+      await pumpAt(const Size(411, 900));
+      final axis = tester.getRect(
+        find.byKey(const ValueKey('study-room-balanced-action-axis')),
+      );
+      final wordmark = tester.getCenter(
+        find.byKey(const ValueKey('study-room-centered-wordmark')),
+      );
+      final close = tester.getCenter(
+        find.byKey(const ValueKey('study-room-close-action')),
+      );
+      final shuffle = tester.getCenter(
+        find.byKey(const ValueKey('study-room-shuffle-action')),
+      );
+      expect(wordmark.dx, closeTo(axis.center.dx, .5));
+      expect(
+        axis.center.dx - close.dx,
+        closeTo(shuffle.dx - axis.center.dx, .5),
+      );
+
+      await pumpAt(const Size(320, 900), textScale: 2);
+      final compactHeader = tester.getRect(
+        find.byKey(const ValueKey('study-room-header')),
+      );
+      final compactWordmark = tester.getCenter(
+        find.byKey(const ValueKey('study-room-centered-wordmark')),
+      );
+      final closeSize = tester.getSize(
+        find.byKey(const ValueKey('study-room-close-action')),
+      );
+      final shuffleSize = tester.getSize(
+        find.byKey(const ValueKey('study-room-shuffle-action')),
+      );
+      final heading = tester.getRect(
+        find.byKey(const ValueKey('study-room-session-heading')),
+      );
+      final contextLabel = tester.getRect(
+        find.byKey(const ValueKey('study-room-context-label')),
+      );
+      final contextText = tester.widget<Text>(
+        find.byKey(const ValueKey('study-room-context-label')),
+      );
+
+      expect(compactWordmark.dx, closeTo(160, .5));
+      expect(closeSize.width, greaterThanOrEqualTo(48));
+      expect(closeSize.height, greaterThanOrEqualTo(48));
+      expect(shuffleSize.width, greaterThanOrEqualTo(48));
+      expect(shuffleSize.height, greaterThanOrEqualTo(48));
+      expect(heading.bottom, lessThanOrEqualTo(contextLabel.top));
+      expect(compactHeader.left, greaterThanOrEqualTo(0));
+      expect(compactHeader.right, lessThanOrEqualTo(320));
+      expect(contextText.overflow, isNot(TextOverflow.ellipsis));
+      expect(find.text('STUDY ROOM'), findsOneWidget);
+      expect(find.text('1 / 5'), findsOneWidget);
+      expect(find.text('QUESTION 1'), findsOneWidget);
+      final difficulty = tester.getRect(
+        find.byKey(const ValueKey('question-manuscript-difficulty')),
+      );
+      final questionNumber = tester.getRect(
+        find.byKey(const ValueKey('question-manuscript-number')),
+      );
+      final navigation = find.byKey(
+        const ValueKey('study-room-navigation-dock'),
+      );
+      final navigationRect = tester.getRect(navigation);
+      final previousRect = tester.getRect(
+        find.byKey(const ValueKey('study-room-previous-action')),
+      );
+      final nextRect = tester.getRect(
+        find.byKey(const ValueKey('study-room-next-action')),
+      );
+      expect(difficulty.center.dx, closeTo(160, 24));
+      expect(questionNumber.center.dx, closeTo(160, 24));
+      expect(navigationRect.center.dx, closeTo(160, .5));
+      expect(navigationRect.width, lessThanOrEqualTo(296));
+      expect(previousRect.width, greaterThanOrEqualTo(48));
+      expect(previousRect.height, greaterThanOrEqualTo(48));
+      expect(nextRect.width, greaterThanOrEqualTo(48));
+      expect(nextRect.height, greaterThanOrEqualTo(48));
+      expect(previousRect.overlaps(nextRect), isFalse);
+      expect(
+        find.descendant(
+          of: navigation,
+          matching: find.byKey(const ValueKey('question-progress-segments')),
+        ),
+        findsOneWidget,
+      );
+      expect(
+        find.descendant(of: navigation, matching: find.byType(FilledButton)),
+        findsNothing,
+        reason: 'Next is a symbolic orbital control, not another text box.',
+      );
+      for (final text in tester.widgetList<Text>(
+        find.descendant(of: navigation, matching: find.byType(Text)),
+      )) {
+        expect(text.overflow, isNot(TextOverflow.ellipsis));
+      }
+      final layoutException = tester.takeException();
+      expect(
+        layoutException,
+        isNull,
+        reason: layoutException is FlutterError
+            ? layoutException.toStringDeep()
+            : '$layoutException',
+      );
+    },
+  );
+
   testWidgets(
     'scratchpad is full-width on phone and bounded on larger screens',
     (tester) async {
-      addTearDown(() => tester.binding.setSurfaceSize(null));
+      _restoreSurfaceAfter(tester);
 
       Future<Size> openAt(Size size) async {
         await tester.binding.setSurfaceSize(size);
@@ -474,25 +738,48 @@ void main() {
         .studyRecords(topicKey: topic.key)
         .timeout(const Duration(seconds: 10));
     await progress
-        .studyPosition('${topic.key}:0:20')
+        .studyPosition('${topic.key}:0:5')
         .timeout(const Duration(seconds: 10));
-    final preloaded = await controller.loadStudyShelf(topic.key, count: 20);
+    final preloaded = await controller.loadStudyShelf(topic.key, count: 5);
     expect(preloaded.questions, isNotEmpty);
     await tester.pumpWidget(
       _TestSurface(
         controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, count: 20),
+        child: ArchiveScreen(topicKey: topic.key, count: 5),
       ),
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
 
     expect(find.text('STUDY ROOM'), findsOneWidget);
-    expect(find.byTooltip('Enable finger drawing'), findsOneWidget);
-    expect(find.text('Reveal reference answer'), findsOneWidget);
+    expect(find.byKey(const ValueKey('inline-ink-canvas')), findsOneWidget);
+    final revealSource = find.byKey(
+      const ValueKey('study-room-reveal-source-action'),
+    );
+    expect(revealSource, findsOneWidget);
+    expect(
+      find.descendant(of: revealSource, matching: find.byType(Text)),
+      findsNothing,
+      reason: 'The reveal is a fully visible symbol, not a clipped caption.',
+    );
+    expect(tester.getSize(revealSource).width, greaterThanOrEqualTo(48));
+    expect(tester.getSize(revealSource).height, greaterThanOrEqualTo(48));
+    expect(
+      find.descendant(of: revealSource, matching: find.byType(OutlinedButton)),
+      findsNothing,
+    );
+    expect(
+      tester
+          .getSemantics(
+            find.bySemanticsLabel('Reveal the unverified source answer'),
+          )
+          .getSemanticsData()
+          .hasAction(SemanticsAction.tap),
+      isTrue,
+    );
 
-    await tester.ensureVisible(find.text('Reveal reference answer'));
+    await tester.ensureVisible(revealSource);
     await tester.pump(const Duration(milliseconds: 180));
-    await tester.tap(find.text('Reveal reference answer'));
+    await tester.tap(revealSource);
     await tester.pump(const Duration(milliseconds: 220));
     expect(find.text('How does the concept feel now?'), findsOneWidget);
 
@@ -524,9 +811,10 @@ void main() {
     // The level medallion rides in the header, always visible.
     expect(find.text('LVL'), findsOneWidget);
 
-    // The study-native daily quest is live again further down the log.
-    await _scrollUntil(tester, find.text('DAILY OBSERVATION'));
-    expect(find.text('DAILY OBSERVATION'), findsOneWidget);
+    // The unified private-orbit instrument keeps the daily quest live without
+    // splitting the same truth across a second dashboard card.
+    await _scrollUntil(tester, find.text('TODAY · QUEST'));
+    expect(find.text('TODAY · QUEST'), findsOneWidget);
     expect(find.text('Chart ten reflections'), findsOneWidget);
     expect(find.text('0/10'), findsOneWidget);
 
@@ -538,17 +826,17 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  test('a reshuffled pass keeps set membership and marks', () async {
+  test('a reshuffled pass keeps session membership and marks', () async {
     final topic = controller.topics.first;
-    final canonical = await controller.loadStudyShelf(topic.key, count: 20);
+    final canonical = await controller.loadStudyShelf(topic.key, count: 5);
     final shuffled = await controller.loadStudyShelf(
       topic.key,
-      count: 20,
+      count: 5,
       shuffleSeed: 7,
     );
     final repeated = await controller.loadStudyShelf(
       topic.key,
-      count: 20,
+      count: 5,
       shuffleSeed: 7,
     );
 
@@ -563,7 +851,7 @@ void main() {
     expect(ids(repeated), ids(shuffled));
   });
 
-  testWidgets('the study room can jump to any question in the set', (
+  testWidgets('the study room can jump to any question in the session', (
     tester,
   ) async {
     await _setPhoneSurface(tester);
@@ -571,22 +859,22 @@ void main() {
     await tester.pumpWidget(
       _TestSurface(
         controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, count: 20),
+        child: ArchiveScreen(topicKey: topic.key, count: 5),
       ),
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
 
-    expect(find.text('1 of 20'), findsOneWidget);
-    await tester.tap(find.text('1 of 20'));
+    expect(find.text('1 of 5'), findsOneWidget);
+    await tester.tap(find.text('1 of 5'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
 
     expect(find.text('JUMP TO'), findsOneWidget);
-    await tester.tap(find.text('12'));
+    await tester.tap(find.byKey(const ValueKey('study-room-jump-question-4')));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
 
-    expect(find.text('12 of 20'), findsOneWidget);
+    expect(find.text('4 of 5'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -640,7 +928,7 @@ void main() {
   testWidgets('the observatory lays out cleanly from 320dp to tablet', (
     tester,
   ) async {
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+    _restoreSurfaceAfter(tester);
     for (final size in const [
       Size(320, 700),
       Size(360, 820),
@@ -668,7 +956,7 @@ void main() {
   testWidgets('insight metrics become one glanceable row on tablet', (
     tester,
   ) async {
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+    _restoreSurfaceAfter(tester);
 
     await tester.binding.setSurfaceSize(const Size(800, 900));
     await tester.pumpWidget(
@@ -704,7 +992,7 @@ void main() {
   testWidgets(
     'core study surfaces survive 200 percent text and reduced motion',
     (tester) async {
-      addTearDown(() => tester.binding.setSurfaceSize(null));
+      _restoreSurfaceAfter(tester);
       for (final size in const [Size(411, 820), Size(1024, 800)]) {
         await tester.binding.setSurfaceSize(size);
         for (final surface in const <Widget>[
@@ -734,8 +1022,15 @@ void main() {
   testWidgets(
     'study room and vault survive accessible phone and tablet layouts',
     (tester) async {
-      addTearDown(() => tester.binding.setSurfaceSize(null));
+      _restoreSurfaceAfter(tester);
       final topic = controller.topics.first;
+      final vaultController = GaussController(
+        questionBank,
+        progress,
+        backups: _LayoutBackupService(),
+      );
+      await tester.runAsync(vaultController.initialize);
+      addTearDown(vaultController.dispose);
 
       await tester.binding.setSurfaceSize(const Size(411, 820));
       await tester.pumpWidget(
@@ -743,7 +1038,7 @@ void main() {
           controller: controller,
           textScale: 2,
           reducedMotion: true,
-          child: ArchiveScreen(topicKey: topic.key, count: 20),
+          child: ArchiveScreen(topicKey: topic.key, count: 5),
         ),
       );
       await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -762,13 +1057,13 @@ void main() {
         await tester.binding.setSurfaceSize(size);
         await tester.pumpWidget(
           _TestSurface(
-            controller: controller,
+            controller: vaultController,
             textScale: 2,
             reducedMotion: true,
             child: const BackupScreen(),
           ),
         );
-        await _pumpUntil(tester, find.text('Browser progress stays local'));
+        await _pumpUntil(tester, find.text('Back up now'));
         expect(
           tester.takeException(),
           isNull,
@@ -778,45 +1073,208 @@ void main() {
     },
   );
 
-  testWidgets('completing a set opens the recap with its reward lines', (
+  testWidgets('completing a session opens the recap with its reward lines', (
     tester,
   ) async {
     await _setPhoneSurface(tester);
     final topic = controller.topics.first;
-    final questions = await questionBank.loadTopic(topic.key);
-    // Chart the whole first set except its final question, off-screen.
-    for (final question in questions.take(19)) {
-      await controller.saveStudyReflection(
-        question: question,
-        shelfKey: '${topic.key}:0:20',
-        hypothesisChoiceIndex: null,
-        reflection: StudyReflection.clear,
-      );
-    }
-    await tester.pumpWidget(
-      _TestSurface(
-        controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, count: 20),
-      ),
+    final shelf = await controller.loadStudyShelf(topic.key, count: 5);
+    // Chart the whole first session except its final slot, off-screen.
+    await tester.runAsync(() async {
+      for (var index = 0; index < 4; index++) {
+        await controller.saveStudyReflection(
+          question: shelf.questions[index],
+          shelfKey: shelf.key,
+          hypothesisChoiceIndex: null,
+          reflection: StudyReflection.clear,
+          slot: shelf.slots[index],
+        );
+      }
+    });
+    final router = await _pumpRoutedArchive(
+      tester,
+      controller: controller,
+      topicKey: topic.key,
+      count: 5,
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
 
-    await tester.ensureVisible(find.text('Reveal reference answer'));
-    await tester.tap(find.text('Reveal reference answer'));
+    final revealSource = find.byKey(
+      const ValueKey('study-room-reveal-source-action'),
+    );
+    await tester.ensureVisible(revealSource);
+    await tester.tap(revealSource);
     await tester.pump(const Duration(milliseconds: 220));
     await tester.ensureVisible(find.text('Concept feels clear'));
     await tester.tap(find.text('Concept feels clear'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 320));
 
-    expect(find.text('Set complete'), findsOneWidget);
+    expect(find.text('Session complete'), findsOneWidget);
     expect(find.text('Study set complete'), findsOneWidget);
-    expect(find.text('Keep charting'), findsOneWidget);
-    await tester.tap(find.text('Keep charting'));
+    expect(find.text('Continue next session'), findsOneWidget);
+    expect(find.text('Stay here'), findsOneWidget);
+    await tester.tap(find.text('Continue next session'));
     for (var pump = 0; pump < 12; pump++) {
       await tester.pump(const Duration(milliseconds: 60));
     }
-    expect(find.text('Set complete'), findsNothing);
+    expect(find.text('Session complete'), findsNothing);
+    expect(
+      router.routeInformationProvider.value.uri.queryParameters['offset'],
+      '5',
+    );
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('a failed reflection stays in place and retries exactly once', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    controller.dispose();
+    final flakyController = _FailOnceGaussController(questionBank, progress);
+    controller = flakyController;
+    await tester.runAsync(controller.initialize);
+    expect(controller.ready, isTrue);
+    expect(controller.fatalError, isNull);
+    final topic = controller.topics.first;
+    late StudyShelf shelf;
+    late int sessionOffset;
+    await tester.runAsync(() async {
+      for (final session in questionBank.studyPlan.topic(topic.key).sessions) {
+        final candidateOffset = session.index * GaussStudyCurriculum.batchSize;
+        final candidate = await controller.loadStudyShelf(
+          topic.key,
+          offset: candidateOffset,
+          count: GaussStudyCurriculum.batchSize,
+        );
+        if (candidate.questions.first.options.isNotEmpty) {
+          shelf = candidate;
+          sessionOffset = candidateOffset;
+          return;
+        }
+      }
+      throw StateError(
+        '${topic.key} has no five-question session whose first prompt has choices.',
+      );
+    });
+    final question = shelf.questions.first;
+
+    await tester.pumpWidget(
+      _TestSurface(
+        controller: controller,
+        child: ArchiveScreen(
+          topicKey: topic.key,
+          offset: sessionOffset,
+          count: GaussStudyCurriculum.batchSize,
+        ),
+      ),
+    );
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
+    await _pumpUntil(tester, firstChoice);
+    expect(find.text('STUDY ROOM'), findsOneWidget);
+    expect(find.text('Opening the study room…'), findsNothing);
+    expect(find.text('The study room could not open'), findsNothing);
+    expect(firstChoice, findsOneWidget);
+    final inkKey = ValueKey('study-ink-${question.id}');
+    final inkElement = find.byKey(inkKey).evaluate().single;
+
+    await tester.tap(firstChoice);
+    await tester.pump();
+    final revealSource = find.byKey(
+      const ValueKey('study-room-reveal-source-action'),
+    );
+    await tester.ensureVisible(revealSource);
+    await tester.tap(revealSource);
+    await tester.pump(const Duration(milliseconds: 220));
+    await tester.ensureVisible(find.text('Concept feels clear'));
+    await tester.tap(find.text('Concept feels clear'));
+    await tester.pump();
+
+    expect(find.text('Field note not saved'), findsOneWidget);
+    expect(find.text('Retry'), findsOneWidget);
+    expect(find.text('1 / 5'), findsOneWidget);
+    expect(
+      find.bySemanticsLabel(RegExp(r'Choice 1\..*Your private hypothesis\.')),
+      findsOneWidget,
+    );
+    expect(identical(find.byKey(inkKey).evaluate().single, inkElement), isTrue);
+    expect(await progress.studyRecords(topicKey: topic.key), isEmpty);
+
+    await tester.tap(find.text('Retry'));
+    // A second callback from a stale frame must be ignored while retrying.
+    await tester.tap(find.text('Retry'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 320));
+
+    expect(flakyController.saveAttempts, 2);
+    expect(find.text('Field note not saved'), findsNothing);
+    expect(find.text('Concept marked clear'), findsOneWidget);
+    expect(identical(find.byKey(inkKey).evaluate().single, inkElement), isTrue);
+    expect(await progress.studyRecords(topicKey: topic.key), hasLength(1));
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('the terminal unit recap returns to Map in one tap', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    final topic = controller.topics.first;
+    final topicPlan = questionBank.studyPlan.topic(topic.key);
+    final finalOffset =
+        (topicPlan.sessions.length - 1) * GaussStudyCurriculum.batchSize;
+    await tester.runAsync(() async {
+      for (final session in topicPlan.sessions) {
+        final shelf = await controller.loadStudyShelf(
+          topic.key,
+          offset: session.index * GaussStudyCurriculum.batchSize,
+          count: 5,
+        );
+        for (var index = 0; index < shelf.slots.length; index++) {
+          if (session.key == topicPlan.sessions.last.key &&
+              index == shelf.slots.length - 1) {
+            continue;
+          }
+          await controller.saveStudyReflection(
+            question: shelf.questions[index],
+            shelfKey: shelf.key,
+            hypothesisChoiceIndex: null,
+            reflection: StudyReflection.clear,
+            slot: shelf.slots[index],
+          );
+        }
+      }
+    });
+    await _pumpRoutedArchive(
+      tester,
+      controller: controller,
+      topicKey: topic.key,
+      offset: finalOffset,
+      count: 5,
+    );
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+
+    final revealSource = find.byKey(
+      const ValueKey('study-room-reveal-source-action'),
+    );
+    await tester.ensureVisible(revealSource);
+    await tester.tap(revealSource);
+    await tester.pump(const Duration(milliseconds: 220));
+    await tester.ensureVisible(find.text('Concept feels clear'));
+    await tester.tap(find.text('Concept feels clear'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 320));
+
+    expect(find.text('Unit charted'), findsOneWidget);
+    expect(find.text('Return to Map'), findsOneWidget);
+    expect(find.text('Stay here'), findsOneWidget);
+    await tester.tap(find.text('Return to Map'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 320));
+
+    expect(find.text('MAP DESTINATION'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -826,24 +1284,29 @@ void main() {
     await _setPhoneSurface(tester);
     final topic = controller.topics.first;
     final questions = await questionBank.loadTopic(topic.key);
-    for (final question in questions.take(9)) {
-      await controller.saveStudyReflection(
-        question: question,
-        shelfKey: '${topic.key}:0:20',
-        hypothesisChoiceIndex: null,
-        reflection: StudyReflection.clear,
-      );
-    }
+    await tester.runAsync(() async {
+      for (final question in questions.take(9)) {
+        await controller.saveStudyReflection(
+          question: question,
+          shelfKey: '${topic.key}:0:5',
+          hypothesisChoiceIndex: null,
+          reflection: StudyReflection.clear,
+        );
+      }
+    });
     await tester.pumpWidget(
       _TestSurface(
         controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, count: 20),
+        child: ArchiveScreen(topicKey: topic.key, count: 5),
       ),
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
 
-    await tester.ensureVisible(find.text('Reveal reference answer'));
-    await tester.tap(find.text('Reveal reference answer'));
+    final revealSource = find.byKey(
+      const ValueKey('study-room-reveal-source-action'),
+    );
+    await tester.ensureVisible(revealSource);
+    await tester.tap(revealSource);
     await tester.pump(const Duration(milliseconds: 220));
     await tester.ensureVisible(find.text('Concept feels clear'));
     await tester.tap(find.text('Concept feels clear'));
@@ -868,6 +1331,36 @@ class _AlwaysOnStatusWidget extends StatusWidgetBridge {
 
   @override
   bool get isSupported => true;
+}
+
+class _FailOnceGaussController extends GaussController {
+  _FailOnceGaussController(super.questionBank, super.progress);
+
+  int saveAttempts = 0;
+
+  @override
+  Future<StudyReflectionOutcome> saveStudyReflection({
+    required Question question,
+    required String shelfKey,
+    required int? hypothesisChoiceIndex,
+    required StudyReflection reflection,
+    StudyShelfSlot? slot,
+  }) {
+    saveAttempts += 1;
+    if (saveAttempts == 1) {
+      throw StudyWriteFailure(
+        StateError('injected local write failure'),
+        operation: 'save_study_reflection',
+      );
+    }
+    return super.saveStudyReflection(
+      question: question,
+      shelfKey: shelfKey,
+      hypothesisChoiceIndex: hypothesisChoiceIndex,
+      reflection: reflection,
+      slot: slot,
+    );
+  }
 }
 
 class _TestSurface extends StatelessWidget {
@@ -900,9 +1393,63 @@ class _TestSurface extends StatelessWidget {
   );
 }
 
+class _LayoutBackupService extends BackupService {
+  @override
+  bool get isSupported => true;
+
+  @override
+  Future<List<BackupEntry>> listBackups() async => const [];
+
+  @override
+  Future<bool> hasPendingRestore() async => false;
+}
+
 Future<void> _setPhoneSurface(WidgetTester tester) async {
   await tester.binding.setSurfaceSize(const Size(411, 820));
-  addTearDown(() => tester.binding.setSurfaceSize(null));
+  _restoreSurfaceAfter(tester);
+}
+
+void _restoreSurfaceAfter(WidgetTester tester) {
+  addTearDown(() async {
+    await tester.binding.setSurfaceSize(null);
+  });
+}
+
+Future<GoRouter> _pumpRoutedArchive(
+  WidgetTester tester, {
+  required GaussController controller,
+  required String topicKey,
+  int offset = 0,
+  int count = 5,
+}) async {
+  final router = GoRouter(
+    initialLocation: '/study/chapter/$topicKey?offset=$offset&count=$count',
+    routes: [
+      GoRoute(
+        path: '/map',
+        builder: (context, state) =>
+            const Scaffold(body: Center(child: Text('MAP DESTINATION'))),
+      ),
+      GoRoute(
+        path: '/study/chapter/:topicKey',
+        builder: (context, state) => ArchiveScreen(
+          topicKey: state.pathParameters['topicKey']!,
+          offset: int.tryParse(state.uri.queryParameters['offset'] ?? '') ?? 0,
+          count: int.tryParse(state.uri.queryParameters['count'] ?? '') ?? 5,
+        ),
+      ),
+    ],
+  );
+  addTearDown(router.dispose);
+  await tester.pumpWidget(
+    MaterialApp.router(
+      theme: buildGaussTheme(),
+      routerConfig: router,
+      builder: (context, child) =>
+          GaussScope(controller: controller, child: child!),
+    ),
+  );
+  return router;
 }
 
 Future<Rect> _pumpScratchSurface(
@@ -911,7 +1458,7 @@ Future<Rect> _pumpScratchSurface(
   ValueChanged<bool>? onDrawingChanged,
 }) async {
   await tester.binding.setSurfaceSize(const Size(390, 420));
-  addTearDown(() => tester.binding.setSurfaceSize(null));
+  _restoreSurfaceAfter(tester);
   await tester.pumpWidget(
     MaterialApp(
       theme: buildGaussTheme(),
@@ -943,6 +1490,32 @@ Future<Rect> _pumpScratchSurface(
   return tester.getRect(find.byKey(const ValueKey('question-plate')));
 }
 
+Future<Rect> _pumpExpandedScratchpad(
+  WidgetTester tester,
+  ScratchInkController ink,
+) async {
+  await tester.binding.setSurfaceSize(const Size(390, 640));
+  _restoreSurfaceAfter(tester);
+  await tester.pumpWidget(
+    MaterialApp(
+      theme: buildGaussTheme(),
+      home: Builder(
+        builder: (context) => Scaffold(
+          body: Center(
+            child: FilledButton(
+              onPressed: () => showScratchpad(context, controller: ink),
+              child: const Text('Open shared scratchpad'),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+  await tester.tap(find.text('Open shared scratchpad'));
+  await tester.pumpAndSettle();
+  return tester.getRect(find.byKey(const ValueKey('scratchpad-ink-canvas')));
+}
+
 Future<void> _scrollUntil(
   WidgetTester tester,
   Finder finder, {
@@ -953,6 +1526,7 @@ Future<void> _scrollUntil(
     await tester.drag(find.byType(CustomScrollView), const Offset(0, -320));
     await tester.pump(const Duration(milliseconds: 60));
   }
+  fail('Timed out while scrolling for $finder.');
 }
 
 Future<void> _pumpUntil(
@@ -964,4 +1538,5 @@ Future<void> _pumpUntil(
     await tester.pump(const Duration(milliseconds: 100));
     if (finder.evaluate().isNotEmpty) return;
   }
+  fail('Timed out while pumping for $finder.');
 }

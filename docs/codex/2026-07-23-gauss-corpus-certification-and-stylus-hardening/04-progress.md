@@ -3,6 +3,8 @@
 ## Log
 | Time | Status | Entry | Evidence |
 |---|---|---|---|
+| 2026-08-13T17:05:00+03:30 | active | Re-audited question 0088 against exact question/solution PDF renders, explicitly adjudicated its geometric-sequence taxonomy, and closed the historical cohort omission without changing source data. The evidence promoter now merges the receipt ledger instead of deleting newer repair receipts; certified runtime also binds the embedded-media numeral ledger. | `logs/source-fidelity-0088-recheck-20260813.md`; corpus validate 3,672 / 50 usable; runtime `a617d504…fa79d` |
+| 2026-08-13T15:55:00+03:30 | active | English/LTR chrome and ASCII learning numerals became a hash-bound render/certification contract. All 3,672 questions and 22,000+ live learning strings passed; embedded media now fails closed without a `no_digits` or `ascii_only` receipt. Android debug v117 proved both Map and the Persian manuscript under a `fa-IR` device locale, with zero non-ASCII numerals in the question semantics tree. | `english_chrome_contract_test.dart` 5/5; question/Mission/Focus Pen 42/42; Android experience 24/24; render/media 6/6; corpus validate 3,672 / 49 usable; `.codex-tmp/android-proof-20260813-language/` |
 | 2026-07-23T16:27:34 | active | Task docs created. | docs/codex/2026-07-23-gauss-corpus-certification-and-stylus-hardening/ |
 | 2026-07-23T14:40:00+03:30 | active | Full corpus Persian/TeX parser gate reached zero failures. | `flutter_app/test/content_rendering_test.dart` |
 | 2026-07-23T15:25:00+03:30 | active | Focus Pen raw stylus, pressure and palm rollback implemented. | `scratchpad.dart`, `MainActivity.kt` |
@@ -336,3 +338,58 @@
 - Jules repair batch 001 harvest: 10/10 ticket IDs and source hashes matched; 6 source-preserving draft overlays (`0008`, `0009`, `0011`, `0013`, `0020`, `0031`) passed `validate-repairs`. Four tickets (`0001`, `0002`, `0007`, `0014`) stayed `under_review` because the question/option set itself is inconsistent; no source row was discarded.
 - Jules repair batch 002 harvest: 10/10 ticket IDs and source hashes matched; 6 more source-preserving draft solution replacements (`0033`, `0039`, `0041`, `0042`, `0043`, `0045`) passed `validate-repairs`, taking the overlay ledger to 14 drafts. Four tickets (`0035`, `0036`, `0040`, `0060`) remain under review for, respectively, no correct option, duplicated/equivalent options, multiple correct options, and a stem/solution recurrence mismatch. The six effective-option findings are evidence only: immutable source answer keys remain unchanged until independently adjudicated.
 - The repair queue was regenerated from the current manifest after the second harvest: it still contains 2,791 quarantined source-bound tickets (2,488 render/prompt P0 and 303 correctness P1), now with the already-validated answer/solution states reflected in each ticket. Draft overlays do not bypass any source-fidelity, render, or certification gate.
+- Jules repair 044–045 terminal harvest (2026-08-09): both exact sessions were
+  confirmed `COMPLETED` and harvested without creating a new session. All
+  20 rows passed count/order/ID/source-hash/schema transport checks; a separate
+  source-key-blind mathematical audit accepted 18 source-preserving addenda.
+  `nardebam_math_1405_1806` and `nardebam_math_1405_1811` remain quarantined
+  because their derived answers (23,100 and 10) are absent from the immutable
+  option sets. Overlay count is 248 → 266; full gates pass; corpus remains
+  3,672 source-bound, 2,791 quarantined, and 0 usable.
+- Jules repair continuation (2026-08-10): direct API reads confirmed the stale
+  local `repair-043` and `repair-046` tasks were actually terminal `COMPLETED`.
+  Their 20 exact-order/hash-bound rows passed the strengthened blind-input gate
+  and independent content audit; 18 were byte-identical to existing overlays,
+  while `nardebam_math_1405_1883` and `nardebam_math_1405_1937` added two new
+  source-preserving drafts (266 → 268). The priority `0037` set-theory record
+  received a locally re-derived, source-preserving explanation (268 → 269), but
+  remains quarantined because `A-B` need not be nonempty for arbitrary sets.
+  The prepared repoless repair-061 manifest is valid and key-blind, with `0037`
+  at row 5; no new Jules session was created because both bounded doctor and
+  quota pagination checks timed out, so account capacity was not attested.
+
+## 2026-08-13 — complete corpus made provisionally playable
+
+- Decoupled private runtime eligibility from scientific certification without
+  weakening or rewriting the certification ledger.
+- Kept all 3,672 source records immutable and structurally validated.
+- Made all 744 generated five-question nodes launchable from Map and Study.
+- Restored provisional questions in saved missions and spaced-review queues.
+- Replaced the old withheld/quarantine solution card with a truthful
+  `Source solution` presentation and an unobtrusive provenance note.
+- Added a 48dp symbolic report action and a responsive local issue sheet with
+  six repair categories plus an optional 500-character note.
+- Stored each report append-only in the existing local database envelope, so
+  no schema migration or user-progress reset is required.
+- Installed debug preview `com.gauss.app.debug` versionCode 121 beside the
+  signed personal package and verified Map → provisional mission → answer →
+  source solution → issue sheet → saved-report feedback on emulator-5554.
+
+## 2026-08-13 — provisional admission regression closure
+
+- Updated the Study primary action and route-motion proof to the new direct
+  five-question Mission contract instead of the retired archive destination.
+- Gave every jump-sheet question a stable keyed target, so Persian or math
+  numerals elsewhere on the page can never make question navigation
+  ambiguous.
+- Removed a real 6dp footer jump when stylus ink controls replaced the lesson
+  progress rail. The compact dock now holds the smallest height required by
+  its largest live state and stays stationary while writing, clearing, and
+  restoring ink.
+- Full Flutter validation is green: 190 tests passed, one Web-only test was
+  intentionally skipped on the active Android runner, and `flutter analyze`
+  reported no issues.
+- Rebuilt, installed, and launched debug preview versionCode 122 on
+  emulator-5554. The signed `com.gauss.app` package remained untouched; the
+  live Map → selected lesson → provisional Persian Mission route rendered
+  with English chrome and ASCII numerals.

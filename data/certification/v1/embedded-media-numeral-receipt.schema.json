@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gauss-embedded-media-numeral-receipt-v1",
+  "title": "Gauss embedded media numeral review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "asset",
+    "sha256",
+    "verdict",
+    "reviewer_id",
+    "reviewed_on",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "asset": { "type": "string", "pattern": "^question_media/" },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "verdict": { "enum": ["no_digits", "ascii_only"] },
+    "reviewer_id": { "type": "string", "minLength": 1 },
+    "reviewed_on": { "type": "string", "format": "date" },
+    "summary": { "type": "string", "minLength": 12 }
+  }
+}

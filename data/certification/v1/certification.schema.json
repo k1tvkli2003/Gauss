@@ -127,6 +127,8 @@
             "pending",
             "blocked_missing_source",
             "verified_source",
+            "verified_repaired_source",
+            "verified_scientific_correction",
             "source_conflict"
           ]
         },

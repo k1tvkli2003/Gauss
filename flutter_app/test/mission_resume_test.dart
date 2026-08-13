@@ -1,9 +1,14 @@
+import 'dart:ui' show SemanticsAction;
+
 import 'package:drift/native.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
+import 'package:gauss/app/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/screens/mission_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
@@ -14,16 +19,25 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   late Question sampleQuestion;
   late Question archiveQuestion;
+  late Question representativePersianQuestion;
 
   setUpAll(() async {
+    final regular = FontLoader('Vazirmatn')
+      ..addFont(rootBundle.load('assets/fonts/vazirmatn_regular.ttf'));
+    final manrope = FontLoader('Manrope')
+      ..addFont(rootBundle.load('assets/fonts/manrope_variable.ttf'));
+    await Future.wait([regular.load(), manrope.load()]);
     final questionBank = QuestionBankRepository();
     await questionBank.initialize();
     archiveQuestion = (await questionBank.loadTopic('sets')).first;
+    representativePersianQuestion = (await questionBank.loadTopic(
+      'patterns_sequences',
+    )).firstWhere((question) => question.id == 'nardebam_math_1405_0065');
     sampleQuestion = _verifiedMissionFixture();
   });
 
   test(
-    'controller recreation safely suppresses a source-archive mission',
+    'controller recreation resumes provisionally usable source questions',
     () async {
       final database = GaussDatabase(NativeDatabase.memory());
       addTearDown(database.close);
@@ -57,14 +71,16 @@ void main() {
         ProgressRepository(database),
       );
       await restarted.initialize();
-      final saved = restarted.resumableMission;
+      final saved = await restarted.loadResumableMission();
 
       expect(
         restarted.fatalError,
         isNull,
         reason: '${restarted.fatalError?.cause}',
       );
-      expect(saved, isNull);
+      expect(saved, isNotNull);
+      expect(saved!.questions.single.id, archiveQuestion.id);
+      expect(saved.questions.single.runtimeUsable, isTrue);
     },
   );
 
@@ -111,16 +127,514 @@ void main() {
         ),
       ),
     );
-    await _pumpUntilFound(tester, find.text('Skip'));
+    await _pumpUntilFound(
+      tester,
+      find.byKey(const ValueKey('mission-skip-action')),
+    );
 
-    await tester.tap(find.text('Skip'));
-    await _pumpUntilFound(tester, find.text('Try again'));
-    expect(find.text('Try again'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('mission-skip-action')));
+    await _pumpUntilFound(tester, find.bySemanticsLabel('Try again'));
+    expect(find.bySemanticsLabel('Try again'), findsOneWidget);
 
-    await tester.tap(find.text('Try again'));
-    await _pumpUntilFound(tester, find.text('Next question'));
-    expect(find.text('Next question'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+    await _pumpUntilFound(tester, find.bySemanticsLabel('Next question'));
+    expect(find.bySemanticsLabel('Next question'), findsOneWidget);
     expect(controller.savedAttempts, hasLength(1));
+  });
+
+  testWidgets('question issue action saves exact local repair context', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(420, 900));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final database = GaussDatabase(NativeDatabase.memory());
+    addTearDown(database.close);
+    final controller = _MissionTestController(
+      archiveQuestion,
+      database,
+      failFirstSave: false,
+    );
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: buildGaussTheme(),
+        home: GaussScope(
+          controller: controller,
+          child: const MissionScreen(topicKey: 'sets', count: 5),
+        ),
+      ),
+    );
+    final reportAction = find.byKey(
+      const ValueKey('mission-report-question-action'),
+    );
+    await _pumpUntilFound(tester, reportAction);
+    await tester.ensureVisible(reportAction);
+    await tester.tap(reportAction);
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const ValueKey('question-issue-sheet')), findsOneWidget);
+    await tester.tap(
+      find.byKey(const ValueKey('question-issue-kind-answer_key')),
+    );
+    await tester.enterText(
+      find.byKey(const ValueKey('question-issue-note')),
+      'The keyed option looks inconsistent.',
+    );
+    await tester.tap(find.byKey(const ValueKey('question-issue-save')));
+    await tester.pumpAndSettle();
+
+    final reports = await ProgressRepository(database).questionIssueReports();
+    expect(reports, hasLength(1));
+    expect(reports.single.questionId, archiveQuestion.id);
+    expect(reports.single.kind, QuestionIssueKind.answerKey);
+    expect(reports.single.note, 'The keyed option looks inconsistent.');
+    expect(reports.single.missionIndex, 0);
+    expect(find.text('Issue saved on this device for repair.'), findsOneWidget);
+  });
+
+  testWidgets(
+    'mission question chrome stays fixed when stylus controls replace status',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(320, 760));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(sampleQuestion, database);
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaler: const TextScaler.linear(2),
+              disableAnimations: true,
+            ),
+            child: child!,
+          ),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(topicKey: 'sets', count: 5),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+      expect(tester.takeException(), isNull, reason: 'initial mission layout');
+      expect(find.text('QUESTION 1'), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey('mission-answer-manuscript')),
+        findsOneWidget,
+      );
+
+      final header = tester.getRect(
+        find.byKey(const ValueKey('mission-question-header-axis')),
+      );
+      final wordmark = tester.getCenter(
+        find.byKey(const ValueKey('mission-centered-wordmark')),
+      );
+      final close = tester.getRect(
+        find.byKey(const ValueKey('mission-close-action')),
+      );
+      final scratchpad = tester.getRect(
+        find.byKey(const ValueKey('mission-scratchpad-action')),
+      );
+      final paperBefore = tester.getRect(
+        find.byKey(const ValueKey('mission-question-paper')),
+      );
+      final dockBefore = tester.getRect(
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+      expect(wordmark.dx, closeTo(header.center.dx, .5));
+      expect(
+        header.center.dx - close.center.dx,
+        closeTo(scratchpad.center.dx - header.center.dx, .5),
+      );
+      expect(close.width, greaterThanOrEqualTo(48));
+      expect(scratchpad.width, greaterThanOrEqualTo(48));
+      expect(dockBefore.center.dx, closeTo(160, .5));
+      expect(dockBefore.width, lessThanOrEqualTo(296));
+
+      final plate = tester.getRect(
+        find.byKey(const ValueKey('inline-ink-canvas')),
+      );
+      final pen = await tester.startGesture(
+        plate.center,
+        pointer: 91,
+        kind: PointerDeviceKind.stylus,
+      );
+      await pen.moveBy(const Offset(24, 18));
+      await pen.up();
+      await tester.pump(const Duration(milliseconds: 260));
+      expect(tester.takeException(), isNull, reason: 'ink control layout');
+
+      expect(find.byKey(const ValueKey('inline-pen-halo')), findsNothing);
+      expect(
+        find.byKey(const ValueKey('mission-ink-controls')),
+        findsOneWidget,
+      );
+      final paperAfterInk = tester.getRect(
+        find.byKey(const ValueKey('mission-question-paper')),
+      );
+      expect(paperAfterInk.left, closeTo(paperBefore.left, .5));
+      expect(paperAfterInk.right, closeTo(paperBefore.right, .5));
+      expect(paperAfterInk.top, closeTo(paperBefore.top, .5));
+      expect(
+        tester.getRect(
+          find.byKey(const ValueKey('mission-question-action-dock')),
+        ),
+        dockBefore,
+      );
+
+      await tester.tap(find.byKey(const ValueKey('mission-ink-clear')));
+      await tester.pump(const Duration(milliseconds: 260));
+      expect(tester.takeException(), isNull, reason: 'ink restore layout');
+      expect(find.byKey(const ValueKey('mission-ink-restore')), findsOneWidget);
+      await tester.tap(find.byKey(const ValueKey('mission-ink-restore')));
+      await tester.pump(const Duration(milliseconds: 260));
+      expect(tester.takeException(), isNull, reason: 'restored ink layout');
+      expect(
+        find.byKey(const ValueKey('mission-ink-controls')),
+        findsOneWidget,
+      );
+      await tester.tap(find.byKey(const ValueKey('mission-close-action')));
+      await tester.pump();
+      expect(find.text('Leave and clear question ink?'), findsOneWidget);
+      expect(find.textContaining('Question ink is temporary'), findsOneWidget);
+      await tester.tap(find.text('Keep writing'));
+      await tester.pump();
+      expect(find.text('Leave and clear question ink?'), findsNothing);
+      expect(
+        find.byKey(const ValueKey('mission-ink-controls')),
+        findsOneWidget,
+      );
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'representative Persian mission keeps all four choices above the Android dock',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(411, 914));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        representativePersianQuestion,
+        database,
+        failFirstSave: false,
+      );
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              padding: const EdgeInsets.only(top: 24, bottom: 24),
+              viewPadding: const EdgeInsets.only(top: 24, bottom: 24),
+              disableAnimations: true,
+            ),
+            child: child!,
+          ),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(
+              topicKey: 'patterns_sequences',
+              count: 5,
+            ),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+
+      final scroll = tester.getRect(
+        find.byKey(const ValueKey('mission-question-scroll')),
+      );
+      final fourthChoice = tester.getRect(
+        find.bySemanticsLabel(RegExp(r'^Choice 4\. 9\.')),
+      );
+      final dock = tester.getRect(
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+      expect(fourthChoice.top, greaterThanOrEqualTo(scroll.top));
+      expect(fourthChoice.bottom, lessThanOrEqualTo(scroll.bottom + .5));
+      expect(scroll.bottom, lessThanOrEqualTo(dock.top + .5));
+      expect(dock.bottom, lessThanOrEqualTo(914 - 24));
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'checked mission reflows its feedback and complete solution at 320dp 200%',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(320, 900));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        sampleQuestion,
+        database,
+        failFirstSave: false,
+      );
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaler: const TextScaler.linear(2),
+              disableAnimations: true,
+            ),
+            child: child!,
+          ),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(topicKey: 'sets', count: 5),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+
+      final correctChoice = find.bySemanticsLabel(RegExp(r'^Choice 2\. B\.'));
+      await tester.ensureVisible(correctChoice);
+      expect(
+        tester
+            .getSemantics(correctChoice)
+            .getSemanticsData()
+            .hasAction(SemanticsAction.tap),
+        isTrue,
+        reason: 'TalkBack must be able to activate an unchecked answer.',
+      );
+      await tester.tap(correctChoice);
+      await tester.pump();
+      await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+      await _pumpUntilFound(tester, find.text('Classic solution'));
+
+      expect(find.bySemanticsLabel('Next question'), findsOneWidget);
+      expect(controller.savedAttempts, hasLength(1));
+      expect(find.text('Fixture solution'), findsOneWidget);
+      for (final text in tester.widgetList<Text>(find.byType(Text))) {
+        expect(
+          text.overflow,
+          isNot(TextOverflow.ellipsis),
+          reason: 'Question UI must reflow rather than truncate ${text.data}.',
+        );
+      }
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('answer-first reveal is a symbolic 48dp action at 320dp 200%', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(320, 900));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final database = GaussDatabase(NativeDatabase.memory());
+    addTearDown(database.close);
+    final controller = _MissionTestController(
+      sampleQuestion,
+      database,
+      failFirstSave: false,
+    );
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: buildGaussTheme(),
+        builder: (context, child) => MediaQuery(
+          data: MediaQuery.of(context).copyWith(
+            textScaler: const TextScaler.linear(2),
+            disableAnimations: true,
+          ),
+          child: child!,
+        ),
+        home: GaussScope(
+          controller: controller,
+          child: const MissionScreen(
+            topicKey: 'sets',
+            count: 5,
+            coverChoices: true,
+          ),
+        ),
+      ),
+    );
+    await _pumpUntilFound(
+      tester,
+      find.byKey(const ValueKey('mission-covered-choices')),
+    );
+
+    final panel = find.byKey(const ValueKey('mission-covered-choices'));
+    final reveal = find.byKey(const ValueKey('mission-reveal-choices-action'));
+    await tester.ensureVisible(reveal);
+    await tester.pump();
+    expect(tester.getRect(reveal).height, greaterThanOrEqualTo(48));
+    expect(
+      find.descendant(of: panel, matching: find.byType(FilledButton)),
+      findsNothing,
+      reason: 'Reveal is an orbital lens, not a generic text box.',
+    );
+    expect(find.bySemanticsLabel('Uncover answer choices'), findsOneWidget);
+    expect(find.bySemanticsLabel(RegExp(r'^Choice 1\. A\.')), findsNothing);
+
+    await tester.tap(find.bySemanticsLabel('Uncover answer choices'));
+    await tester.pump();
+    expect(find.bySemanticsLabel(RegExp(r'^Choice 1\. A\.')), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets(
+    'five-question completion is celebratory and scroll-safe at 320dp 200%',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(320, 900));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        sampleQuestion,
+        database,
+        failFirstSave: false,
+      );
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaler: const TextScaler.linear(2),
+              disableAnimations: true,
+            ),
+            child: child!,
+          ),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(topicKey: 'sets', count: 5),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+
+      for (var index = 0; index < 5; index++) {
+        final correctChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\. A\.'));
+        await tester.ensureVisible(correctChoice);
+        await tester.tap(correctChoice);
+        await tester.pump();
+        await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+        await tester.pump(const Duration(milliseconds: 260));
+        expect(controller.savedAttempts, hasLength(index + 1));
+        expect(
+          tester.takeException(),
+          isNull,
+          reason: 'checked question $index',
+        );
+
+        expect(
+          find.bySemanticsLabel(
+            index == 4 ? 'Finish mission' : 'Next question',
+          ),
+          findsOneWidget,
+        );
+        await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+        await tester.pump(const Duration(milliseconds: 320));
+      }
+
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-completion-screen')),
+      );
+      await tester.pump();
+
+      expect(find.text('5-QUESTION MISSION'), findsOneWidget);
+      expect(
+        find.text('Perfect orbit'),
+        findsOneWidget,
+        reason: tester
+            .widgetList<Text>(find.byType(Text))
+            .map((text) => text.data)
+            .whereType<String>()
+            .join(' | '),
+      );
+      expect(find.text('+45 XP'), findsWidgets);
+      expect(find.bySemanticsLabel('Start another mission'), findsOneWidget);
+      expect(find.bySemanticsLabel('Return to map'), findsOneWidget);
+
+      final dock = tester.getRect(
+        find.byKey(const ValueKey('mission-completion-actions')),
+      );
+      final retry = tester.getRect(
+        find.byKey(const ValueKey('mission-retry-action')),
+      );
+      final map = tester.getRect(
+        find.byKey(const ValueKey('mission-map-action')),
+      );
+      expect(dock.center.dx, closeTo(160, .5));
+      expect(dock.width, lessThanOrEqualTo(296));
+      expect(retry.height, greaterThanOrEqualTo(48));
+      expect(map.height, greaterThanOrEqualTo(48));
+
+      await tester.ensureVisible(
+        find.byKey(const ValueKey('mission-reward-receipt')),
+      );
+      await tester.pump();
+      for (final text in tester.widgetList<Text>(find.byType(Text))) {
+        expect(
+          text.overflow,
+          isNot(TextOverflow.ellipsis),
+          reason: 'Completion must reflow rather than truncate ${text.data}.',
+        );
+      }
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('leaving never implies an unchecked answer was saved', (
+    tester,
+  ) async {
+    final database = GaussDatabase(NativeDatabase.memory());
+    addTearDown(database.close);
+    final controller = _MissionTestController(sampleQuestion, database);
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: buildGaussTheme(),
+        home: GaussScope(
+          controller: controller,
+          child: const MissionScreen(topicKey: 'sets', count: 5),
+        ),
+      ),
+    );
+    await _pumpUntilFound(
+      tester,
+      find.byKey(const ValueKey('mission-question-action-dock')),
+    );
+
+    final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\. A\.'));
+    await tester.ensureVisible(firstChoice);
+    await tester.pump();
+    await tester.tap(firstChoice);
+    await tester.pump();
+    await tester.tap(find.byKey(const ValueKey('mission-close-action')));
+    await tester.pump();
+
+    expect(find.text('Leave this mission?'), findsOneWidget);
+    expect(
+      find.textContaining(
+        'selected but unchecked answer has not been recorded',
+      ),
+      findsOneWidget,
+    );
+    await tester.tap(find.text('Stay'));
+    await tester.pump();
+    expect(find.text('Leave this mission?'), findsNothing);
+    expect(controller.savedAttempts, isEmpty);
+    expect(tester.takeException(), isNull);
   });
 
   testWidgets('saved mission replacement requires an explicit choice', (
@@ -240,10 +754,14 @@ Future<void> _pumpUntilFound(WidgetTester tester, Finder finder) async {
 }
 
 class _MissionTestController extends GaussController {
-  _MissionTestController(this.question, GaussDatabase database)
-    : super(QuestionBankRepository(), ProgressRepository(database));
+  _MissionTestController(
+    this.question,
+    GaussDatabase database, {
+    this.failFirstSave = true,
+  }) : super(QuestionBankRepository(), ProgressRepository(database));
 
   final Question question;
+  final bool failFirstSave;
   final List<AttemptRecord> savedAttempts = [];
 
   bool _failed = false;
@@ -267,10 +785,38 @@ class _MissionTestController extends GaussController {
 
   @override
   Future<void> recordAttempt(AttemptRecord attempt) async {
-    if (!_failed) {
+    if (failFirstSave && !_failed) {
       _failed = true;
       throw StateError('simulated local write interruption');
     }
     savedAttempts.add(attempt);
   }
+
+  @override
+  Future<MissionCompletion> completeMission({
+    required String sessionId,
+    required int durationSeconds,
+  }) async => const MissionCompletion(
+    examId: 77,
+    xpEarned: 45,
+    totalXp: 245,
+    levelBefore: 1,
+    levelAfter: 2,
+    lines: [
+      RewardLine(
+        eventId: 'question_answered:test',
+        ruleVersion: 1,
+        reason: 'Correct answer',
+        amount: 25,
+        category: 'practice',
+      ),
+      RewardLine(
+        eventId: 'exam_completed:test',
+        ruleVersion: 1,
+        reason: 'Mission complete',
+        amount: 20,
+        category: 'practice',
+      ),
+    ],
+  );
 }

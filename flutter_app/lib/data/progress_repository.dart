@@ -1,9 +1,11 @@
+import 'dart:convert';
 import 'dart:math' as math;
 
 import 'package:drift/drift.dart';
 
 import '../domain/gamification_catalog.dart';
 import '../domain/models.dart';
+import '../domain/study_curriculum.dart';
 import 'local/gauss_database.dart';
 
 class ProgressRepository {
@@ -29,31 +31,221 @@ class ProgressRepository {
   static const unitCompletedXp = 60;
   static const unitTouchedXp = 8;
   static const sectionCompletedXp = 120;
+  static const currentGamificationRuleVersion = 3;
+  static const _latestRewardDayFlag = 'gamification_latest_reward_day';
 
   Future<void> initialize() async {
     await database.customSelect('SELECT 1').getSingle();
   }
 
   static const tourSeenFlag = 'tour_seen';
+  static const learningContextTopicFlag = 'learning_context_topic';
+  static const studyPlanVersionFlag = 'study_plan_version';
+  static const _questionIssueFlagPrefix = 'question_issue_v1:';
 
-  Future<bool> readFlag(String key) async {
+  Future<String?> _readFlagValue(String key) async {
     final row = await (database.select(
       database.appFlags,
     )..where((item) => item.key.equals(key))).getSingleOrNull();
-    return row?.value == 'true';
+    return row?.value;
   }
 
+  Future<bool> readFlag(String key) async =>
+      await _readFlagValue(key) == 'true';
+
   Future<void> writeFlag(String key, {required bool value}) async {
+    await _writeFlagValue(key, value ? 'true' : 'false');
+  }
+
+  Future<String?> readLearningContextTopic() =>
+      _readFlagValue(learningContextTopicFlag);
+
+  Future<void> writeLearningContextTopic(String topicKey) {
+    if (topicKey.isEmpty) {
+      throw ArgumentError.value(topicKey, 'topicKey', 'cannot be empty');
+    }
+    return _writeFlagValue(learningContextTopicFlag, topicKey);
+  }
+
+  /// Appends a local-only corpus repair signal.
+  ///
+  /// AppFlags is intentionally used as an additive envelope so this personal
+  /// workflow does not require a destructive schema migration. Every report
+  /// has its own timestamped key; later reports never overwrite earlier ones.
+  Future<void> saveQuestionIssueReport(QuestionIssueReport report) {
+    if (report.questionId.isEmpty ||
+        report.topicKey.isEmpty ||
+        report.sessionId.isEmpty ||
+        report.missionIndex < 0 ||
+        report.note.length > 500) {
+      throw const FormatException('Invalid question issue report.');
+    }
+    return _writeFlagValue(
+      '$_questionIssueFlagPrefix${report.id}',
+      jsonEncode(report.toJson()),
+    );
+  }
+
+  /// Reads valid reports newest-first. A damaged optional report is ignored;
+  /// it must never prevent the offline library or learning progress opening.
+  Future<List<QuestionIssueReport>> questionIssueReports() async {
+    final rows = await database.select(database.appFlags).get();
+    final reports = <QuestionIssueReport>[];
+    for (final row in rows) {
+      if (!row.key.startsWith(_questionIssueFlagPrefix)) continue;
+      try {
+        final decoded = jsonDecode(row.value);
+        if (decoded is Map<String, dynamic>) {
+          reports.add(QuestionIssueReport.fromJson(decoded));
+        }
+      } catch (_) {
+        // Optional repair metadata is fail-soft; source data and progress stay
+        // untouched even if one local report value is corrupt.
+      }
+    }
+    reports.sort((left, right) => right.reportedAt.compareTo(left.reportedAt));
+    return List.unmodifiable(reports);
+  }
+
+  Future<void> _writeFlagValue(String key, String value) async {
     await database
         .into(database.appFlags)
         .insertOnConflictUpdate(
           AppFlagsCompanion.insert(
             key: key,
-            value: value ? 'true' : 'false',
+            value: value,
             updatedAt: _clock().millisecondsSinceEpoch,
           ),
         );
   }
+
+  /// Returns a monotonic local calendar window for rewards.
+  ///
+  /// The wall clock remains the audit timestamp, but moving it backwards does
+  /// not reopen an older quest or daily cap. Existing ledgers seed the
+  /// watermark after upgrade, so the protection does not start from zero.
+  Future<String> _effectiveRewardDayKey(
+    DateTime observed, {
+    bool advanceWatermark = true,
+  }) async {
+    final candidate = _dayKey(observed);
+    final stored = await _readFlagValue(_latestRewardDayFlag);
+    final latestEventQuery = database.select(database.gamificationEvents)
+      ..orderBy([(row) => OrderingTerm.desc(row.dayKey)])
+      ..limit(1);
+    final latestEvent = (await latestEventQuery.getSingleOrNull())?.dayKey;
+    final anchor = [?stored, ?latestEvent].fold<String?>(null, (latest, value) {
+      if (latest == null || value.compareTo(latest) > 0) return value;
+      return latest;
+    });
+    final effective = anchor == null || candidate.compareTo(anchor) > 0
+        ? candidate
+        : anchor;
+    if (advanceWatermark && stored != effective) {
+      await database
+          .into(database.appFlags)
+          .insertOnConflictUpdate(
+            AppFlagsCompanion.insert(
+              key: _latestRewardDayFlag,
+              value: effective,
+              updatedAt: observed.millisecondsSinceEpoch,
+            ),
+          );
+    }
+    return effective;
+  }
+
+  /// Additively maps legacy 20-question shelves onto the generated five-slot
+  /// plan. Source reflections stay one row per question and retain their
+  /// timestamps; primary slot encounters are seeded so no prior work is lost.
+  Future<void> migrateStudyPlan(GaussStudyPlan plan) async {
+    await database.transaction(() async {
+      final installed =
+          await (database.select(database.appFlags)
+                ..where((row) => row.key.equals(studyPlanVersionFlag)))
+              .getSingleOrNull();
+      if (installed?.value == plan.version) return;
+
+      final records = await database.select(database.studyRecords).get();
+      for (final record in records) {
+        final primary = plan.maybePrimarySlot(record.questionId);
+        // Preserve an unknown historical row instead of deleting or guessing.
+        if (primary == null) continue;
+        if (record.shelfKey != primary.sessionKey) {
+          await (database.update(
+            database.studyRecords,
+          )..where((row) => row.questionId.equals(record.questionId))).write(
+            StudyRecordsCompanion(
+              shelfKey: Value(primary.sessionKey),
+              updatedAt: Value(record.updatedAt),
+            ),
+          );
+        }
+        await database
+            .into(database.studySlotEncounters)
+            .insertOnConflictUpdate(
+              StudySlotEncountersCompanion.insert(
+                slotId: primary.id,
+                topicKey: record.topicKey,
+                shelfKey: primary.sessionKey,
+                questionId: record.questionId,
+                slotKind: primary.kind.key,
+                firstEncounteredAt: record.firstReflectedAt,
+              ),
+            );
+      }
+
+      // A saved old position names the source question, so it can be moved to
+      // that question's canonical five-slot home without relying on raw order.
+      final positions = await database.select(database.studyPositions).get();
+      for (final position in positions) {
+        final primary = plan.maybePrimarySlot(position.questionId);
+        if (primary == null) continue;
+        final current =
+            await (database.select(database.studyPositions)
+                  ..where((row) => row.shelfKey.equals(primary.sessionKey)))
+                .getSingleOrNull();
+        if (current != null && current.updatedAt >= position.updatedAt) {
+          continue;
+        }
+        final session = plan
+            .topic(primary.sessionKey.split(':').first)
+            .sessions
+            .firstWhere((candidate) => candidate.key == primary.sessionKey);
+        final slotIndex = session.slots.indexWhere(
+          (slot) => slot.id == primary.id,
+        );
+        if (slotIndex < 0) continue;
+        await database
+            .into(database.studyPositions)
+            .insertOnConflictUpdate(
+              StudyPositionsCompanion.insert(
+                shelfKey: primary.sessionKey,
+                questionId: position.questionId,
+                position: slotIndex,
+                updatedAt: position.updatedAt,
+              ),
+            );
+      }
+
+      await database
+          .into(database.appFlags)
+          .insertOnConflictUpdate(
+            AppFlagsCompanion.insert(
+              key: studyPlanVersionFlag,
+              value: plan.version,
+              updatedAt: _clock().millisecondsSinceEpoch,
+            ),
+          );
+    });
+  }
+
+  Future<Set<String>> studyEncounteredSlotIds(String shelfKey) async =>
+      (await (database.select(
+            database.studySlotEncounters,
+          )..where((row) => row.shelfKey.equals(shelfKey))).get())
+          .map((row) => row.slotId)
+          .toSet();
 
   Future<List<StudyRecord>> studyRecords({String? topicKey}) async {
     final query = database.select(database.studyRecords);
@@ -68,12 +260,18 @@ class ProgressRepository {
     required String questionId,
     required String topicKey,
     required String subjectKey,
+
+    /// Canonical primary home of the source question.
     required String shelfKey,
     required int setSize,
     required int topicQuestionCount,
     required int? hypothesisChoiceIndex,
     required bool? hypothesisMatched,
     required StudyReflection reflection,
+    String? encounterSlotId,
+    String? encounterShelfKey,
+    StudySlotKind? encounterSlotKind,
+    int? topicSlotCount,
   }) => database.transaction(() async {
     if (hypothesisChoiceIndex != null &&
         (hypothesisChoiceIndex < 0 || hypothesisChoiceIndex > 3)) {
@@ -83,17 +281,69 @@ class ProgressRepository {
         'must use the zero-based four-choice contract',
       );
     }
+    final encounterValues = [
+      encounterSlotId,
+      encounterShelfKey,
+      encounterSlotKind,
+      topicSlotCount,
+    ];
+    if (encounterValues.any((value) => value != null) &&
+        encounterValues.any((value) => value == null)) {
+      throw ArgumentError(
+        'A planned reflection requires slot, shelf, kind, and topic slot count.',
+      );
+    }
     final now = _clock().millisecondsSinceEpoch;
     final xpBefore = await _totalXp();
     final existing = await (database.select(
       database.studyRecords,
     )..where((row) => row.questionId.equals(questionId))).getSingleOrNull();
-    if (existing != null &&
-        existing.topicKey == topicKey &&
-        existing.shelfKey == shelfKey &&
-        existing.hypothesisChoiceIndex == hypothesisChoiceIndex &&
-        existing.hypothesisMatched == hypothesisMatched &&
-        existing.reflection == reflection.key) {
+    final recordChanged =
+        existing == null ||
+        existing.topicKey != topicKey ||
+        existing.shelfKey != shelfKey ||
+        existing.hypothesisChoiceIndex != hypothesisChoiceIndex ||
+        existing.hypothesisMatched != hypothesisMatched ||
+        existing.reflection != reflection.key;
+    final isFirst = existing == null;
+    if (existing != null && existing.topicKey != topicKey) {
+      throw StateError('A study record cannot move between chapters.');
+    }
+
+    var newEncounter = false;
+    var setEncounteredBefore = 0;
+    var topicEncounteredBefore = 0;
+    if (encounterSlotId != null) {
+      setEncounteredBefore = await _countStudyEncounters(
+        shelfKey: encounterShelfKey,
+      );
+      topicEncounteredBefore = await _countStudyEncounters(topicKey: topicKey);
+      final priorEncounter = await (database.select(
+        database.studySlotEncounters,
+      )..where((row) => row.slotId.equals(encounterSlotId))).getSingleOrNull();
+      if (priorEncounter == null) {
+        await database
+            .into(database.studySlotEncounters)
+            .insert(
+              StudySlotEncountersCompanion.insert(
+                slotId: encounterSlotId,
+                topicKey: topicKey,
+                shelfKey: encounterShelfKey!,
+                questionId: questionId,
+                slotKind: encounterSlotKind!.key,
+                firstEncounteredAt: now,
+              ),
+            );
+        newEncounter = true;
+      } else if (priorEncounter.questionId != questionId ||
+          priorEncounter.topicKey != topicKey ||
+          priorEncounter.shelfKey != encounterShelfKey ||
+          priorEncounter.slotKind != encounterSlotKind!.key) {
+        throw StateError('A study slot cannot be rebound to another question.');
+      }
+    }
+
+    if (!recordChanged && !newEncounter) {
       return StudyReflectionOutcome(
         record: _studyRecordFromRow(existing),
         lines: const [],
@@ -106,7 +356,6 @@ class ProgressRepository {
         levelAfter: levelFor(xpBefore),
       );
     }
-    final isFirst = existing == null;
     if (isFirst) {
       await database
           .into(database.studyRecords)
@@ -122,10 +371,7 @@ class ProgressRepository {
               updatedAt: now,
             ),
           );
-    } else {
-      if (existing.topicKey != topicKey) {
-        throw StateError('A study record cannot move between chapters.');
-      }
+    } else if (recordChanged) {
       await (database.update(
         database.studyRecords,
       )..where((row) => row.questionId.equals(questionId))).write(
@@ -138,16 +384,21 @@ class ProgressRepository {
         ),
       );
     }
-    await _updateStudySrs(questionId, reflection: reflection, now: now);
+    if (recordChanged || newEncounter) {
+      await _updateStudySrs(questionId, reflection: reflection, now: now);
+    }
 
-    // Rule version 2: rewards for the act of studying, granted inside the
-    // same transaction through the idempotent event ledger. Nothing here
-    // claims the unverified source mapping is correct.
-    final dayKey = _dayKey(DateTime.fromMillisecondsSinceEpoch(now));
+    // Rule version 3: unique source reflection rewards and per-slot session
+    // rewards share one transaction. Repeated mastery slots can finish a
+    // session only after their own encounter row is written.
+    final dayKey = await _effectiveRewardDayKey(
+      DateTime.fromMillisecondsSinceEpoch(now),
+    );
     final lines = <RewardLine>[];
     var setCompleted = false;
     var unitCompleted = false;
     var dailyQuestCompleted = false;
+    final topicReflected = await _countStudyRecords(topicKey: topicKey);
     if (isFirst) {
       await _award(
         eventId: 'study_reflected:$questionId',
@@ -163,7 +414,6 @@ class ProgressRepository {
         questionId: questionId,
         lines: lines,
       );
-      final topicReflected = await _countStudyRecords(topicKey: topicKey);
       if (topicReflected == 1) {
         await _award(
           eventId: 'unit_touched:$topicKey',
@@ -179,41 +429,65 @@ class ProgressRepository {
           lines: lines,
         );
       }
-      if (setSize > 0) {
-        final setReflected = await _countStudyRecords(shelfKey: shelfKey);
-        if (setReflected >= setSize) {
-          setCompleted = true;
-          await _award(
-            eventId: 'set_completed:$shelfKey',
-            type: 'set_completed',
-            requested: setCompletedXp,
-            category: _mastery,
-            reason: 'Study set complete',
-            dayKey: dayKey,
-            createdAt: now,
-            examId: null,
-            subject: subjectKey,
-            topicKey: topicKey,
-            lines: lines,
-          );
-        }
-      }
-      if (topicQuestionCount > 0 && topicReflected >= topicQuestionCount) {
-        unitCompleted = true;
-        await _award(
-          eventId: 'unit_completed:$topicKey',
-          type: 'unit_completed',
-          requested: unitCompletedXp,
-          category: _mastery,
-          reason: 'Unit complete',
-          dayKey: dayKey,
-          createdAt: now,
-          examId: null,
-          subject: subjectKey,
-          topicKey: topicKey,
-          lines: lines,
-        );
-      }
+    }
+
+    final completedPlannedSet =
+        newEncounter &&
+        setSize > 0 &&
+        setEncounteredBefore < setSize &&
+        await _countStudyEncounters(shelfKey: encounterShelfKey) >= setSize;
+    final completedLegacySet =
+        encounterSlotId == null &&
+        isFirst &&
+        setSize > 0 &&
+        await _countStudyRecords(shelfKey: shelfKey) >= setSize;
+    if (completedPlannedSet || completedLegacySet) {
+      setCompleted = true;
+      final completedShelf = encounterShelfKey ?? shelfKey;
+      await _award(
+        eventId: 'set_completed:$completedShelf',
+        type: 'set_completed',
+        requested: setCompletedXp,
+        category: _mastery,
+        reason: 'Study set complete',
+        dayKey: dayKey,
+        createdAt: now,
+        examId: null,
+        subject: subjectKey,
+        topicKey: topicKey,
+        lines: lines,
+      );
+    }
+
+    final completedPlannedUnit =
+        newEncounter &&
+        topicSlotCount != null &&
+        topicSlotCount > 0 &&
+        topicEncounteredBefore < topicSlotCount &&
+        await _countStudyEncounters(topicKey: topicKey) >= topicSlotCount;
+    final completedLegacyUnit =
+        encounterSlotId == null &&
+        isFirst &&
+        topicQuestionCount > 0 &&
+        topicReflected >= topicQuestionCount;
+    if (completedPlannedUnit || completedLegacyUnit) {
+      unitCompleted = true;
+      await _award(
+        eventId: 'unit_completed:$topicKey',
+        type: 'unit_completed',
+        requested: unitCompletedXp,
+        category: _mastery,
+        reason: 'Unit complete',
+        dayKey: dayKey,
+        createdAt: now,
+        examId: null,
+        subject: subjectKey,
+        topicKey: topicKey,
+        lines: lines,
+      );
+    }
+
+    if (isFirst) {
       final reflectedToday = await _reflectionsOnDay(dayKey);
       final questProgressCount = math.min(dailyQuestTarget, reflectedToday);
       await database
@@ -245,7 +519,8 @@ class ProgressRepository {
           lines: lines,
         );
       }
-    } else if (existing.reflection == StudyReflection.revisit.key &&
+    } else if (recordChanged &&
+        existing.reflection == StudyReflection.revisit.key &&
         !reflection.needsAnotherPass &&
         _dayKey(DateTime.fromMillisecondsSinceEpoch(existing.updatedAt)) !=
             dayKey) {
@@ -296,7 +571,9 @@ class ProgressRepository {
         requested: sectionCompletedXp,
         category: _mastery,
         reason: 'Section complete',
-        dayKey: _dayKey(DateTime.fromMillisecondsSinceEpoch(now)),
+        dayKey: await _effectiveRewardDayKey(
+          DateTime.fromMillisecondsSinceEpoch(now),
+        ),
         createdAt: now,
         examId: null,
         subject: subjectKey,
@@ -315,6 +592,22 @@ class ProgressRepository {
     }
     if (shelfKey != null) {
       query.where(database.studyRecords.shelfKey.equals(shelfKey));
+    }
+    return (await query.getSingle()).read(count) ?? 0;
+  }
+
+  Future<int> _countStudyEncounters({
+    String? topicKey,
+    String? shelfKey,
+  }) async {
+    final count = database.studySlotEncounters.slotId.count();
+    final query = database.selectOnly(database.studySlotEncounters)
+      ..addColumns([count]);
+    if (topicKey != null) {
+      query.where(database.studySlotEncounters.topicKey.equals(topicKey));
+    }
+    if (shelfKey != null) {
+      query.where(database.studySlotEncounters.shelfKey.equals(shelfKey));
     }
     return (await query.getSingle()).read(count) ?? 0;
   }
@@ -423,10 +716,11 @@ class ProgressRepository {
   /// Revisit-marked questions whose spacing timer has elapsed.
   Future<List<String>> studyDueIds({DateTime? now}) async {
     final at = (now ?? _clock()).millisecondsSinceEpoch;
-    final revisit = await (database.select(database.studyRecords)..where(
-          (row) => row.reflection.equals(StudyReflection.revisit.key),
-        ))
-        .get();
+    final revisit =
+        await (database.select(database.studyRecords)..where(
+              (row) => row.reflection.equals(StudyReflection.revisit.key),
+            ))
+            .get();
     if (revisit.isEmpty) return const [];
     final dueByQuestion = <String, int>{};
     for (final srs in await database.select(database.srsStates).get()) {
@@ -435,16 +729,14 @@ class ProgressRepository {
     final due = [
       for (final row in revisit)
         if ((dueByQuestion[row.questionId] ?? 0) <= at) row.questionId,
-    ]..sort(
-      (a, b) => (dueByQuestion[a] ?? 0).compareTo(dueByQuestion[b] ?? 0),
-    );
+    ]..sort((a, b) => (dueByQuestion[a] ?? 0).compareTo(dueByQuestion[b] ?? 0));
     return List.unmodifiable(due);
   }
 
   Future<StudySummary> studySummary() async {
     final records = await studyRecords();
     final byTopic = <String, List<StudyRecord>>{};
-    final byShelf = <String, List<StudyRecord>>{};
+    final legacyByShelf = <String, List<StudyRecord>>{};
     final heatmap = <String, int>{};
     var clearCount = 0;
     var revisitCount = 0;
@@ -453,7 +745,7 @@ class ProgressRepository {
     var hypothesisMatchedCount = 0;
     for (final record in records) {
       byTopic.putIfAbsent(record.topicKey, () => []).add(record);
-      byShelf.putIfAbsent(record.shelfKey, () => []).add(record);
+      legacyByShelf.putIfAbsent(record.shelfKey, () => []).add(record);
       switch (record.reflection) {
         case StudyReflection.clear:
           clearCount++;
@@ -469,6 +761,28 @@ class ProgressRepository {
       final day = _dayKey(record.firstReflectedAt);
       heatmap[day] = (heatmap[day] ?? 0) + 1;
     }
+    final recordById = {
+      for (final record in records) record.questionId: record,
+    };
+    final encounterByShelf = <String, List<StudyRecord>>{};
+    for (final encounter
+        in await database.select(database.studySlotEncounters).get()) {
+      final record = recordById[encounter.questionId];
+      if (record != null) {
+        encounterByShelf.putIfAbsent(encounter.shelfKey, () => []).add(record);
+      }
+    }
+    final installedPlan = await _readFlagValue(studyPlanVersionFlag);
+    final shelfSnapshots = {
+      // Compatibility for repository-level callers that have not installed a
+      // generated plan. Once installed, only actual slot encounters can move
+      // a node; curated reflections never create phantom progress.
+      if (installedPlan == null)
+        for (final entry in legacyByShelf.entries)
+          entry.key: _snapshot(entry.value),
+      for (final entry in encounterByShelf.entries)
+        entry.key: _snapshot(entry.value),
+    };
     return StudySummary(
       totalReflected: records.length,
       clearCount: clearCount,
@@ -480,9 +794,7 @@ class ProgressRepository {
       byTopic: {
         for (final entry in byTopic.entries) entry.key: _snapshot(entry.value),
       },
-      byShelf: {
-        for (final entry in byShelf.entries) entry.key: _snapshot(entry.value),
-      },
+      byShelf: shelfSnapshots,
       heatmap: heatmap,
     );
   }
@@ -730,7 +1042,9 @@ class ProgressRepository {
       );
     }
 
-    final dayKey = _dayKey(DateTime.fromMillisecondsSinceEpoch(completedAt));
+    final dayKey = await _effectiveRewardDayKey(
+      DateTime.fromMillisecondsSinceEpoch(completedAt),
+    );
     final before = await _totalXp();
     final lines = <RewardLine>[];
 
@@ -988,14 +1302,14 @@ class ProgressRepository {
 
   Future<GamificationSummary> gamificationSummary() async {
     final now = _clock();
-    final today = _dayKey(now);
+    final observedDay = _dayKey(now);
+    final today = await _effectiveRewardDayKey(now, advanceWatermark: false);
     final total = await _totalXp();
     final level = levelFor(total);
     final questRow =
         await (database.select(database.questProgress)..where(
               (row) =>
-                  row.dayKey.equals(today) &
-                  row.questId.like('daily_study:%'),
+                  row.dayKey.equals(today) & row.questId.like('daily_study:%'),
             ))
             .getSingleOrNull();
     final dayQuery = database.selectOnly(database.xpTransactions)
@@ -1005,13 +1319,13 @@ class ProgressRepository {
         .map((row) => row.read(database.xpTransactions.dayKey))
         .whereType<String>()
         .toSet();
-    final streak = _streakFromDays(days, now: now);
+    final streak = _streakStatusFromDays(days, now: _dateFromDayKey(today));
     return GamificationSummary(
       totalXp: total,
       todayXp: await _xpForDay(today),
       level: level,
       levelProgress: levelProgress(total, level),
-      streak: streak,
+      streak: streak.activeDays,
       quest: questRow == null
           ? const DailyQuest(
               title: dailyQuestTitle,
@@ -1027,7 +1341,10 @@ class ProgressRepository {
               rewardXp: questRow.rewardXp,
               completed: questRow.completed,
             ),
-      achievements: await _achievementSnapshots(streak: streak),
+      achievements: await _achievementSnapshots(streak: streak.activeDays),
+      effectiveDayKey: today,
+      clockAdjusted: observedDay != today,
+      streakGraceUsed: streak.graceUsed,
     );
   }
 
@@ -1151,6 +1468,7 @@ class ProgressRepository {
             questionId: Value(questionId),
             dayKey: dayKey,
             createdAt: createdAt,
+            ruleVersion: const Value(currentGamificationRuleVersion),
           ),
         );
     final amount = await _cappedAmount(dayKey, category, requested);
@@ -1168,7 +1486,15 @@ class ProgressRepository {
             createdAt: createdAt,
           ),
         );
-    lines.add(RewardLine(reason: reason, amount: amount, category: category));
+    lines.add(
+      RewardLine(
+        eventId: eventId,
+        ruleVersion: currentGamificationRuleVersion,
+        reason: reason,
+        amount: amount,
+        category: category,
+      ),
+    );
     return true;
   }
 
@@ -1211,8 +1537,9 @@ class ProgressRepository {
   }
 
   Future<int> _answeredOnDay(String dayKey) async {
-    final start = DateTime.parse(dayKey).millisecondsSinceEpoch;
-    final end = start + Duration.millisecondsPerDay;
+    final day = _dateFromDayKey(dayKey);
+    final start = day.millisecondsSinceEpoch;
+    final end = _addCalendarDays(day, 1).millisecondsSinceEpoch;
     final count = database.attempts.id.count();
     final query = database.selectOnly(database.attempts)
       ..addColumns([count])
@@ -1253,14 +1580,17 @@ class ProgressRepository {
     ])..where(database.gamificationEvents.examId.equals(examId));
     final rows = await joined.get();
     final lines = rows
-        .map((row) => row.readTable(database.xpTransactions))
-        .map(
-          (row) => RewardLine(
-            reason: row.reason,
-            amount: row.amount,
-            category: row.category,
-          ),
-        )
+        .map((row) {
+          final transaction = row.readTable(database.xpTransactions);
+          final event = row.readTable(database.gamificationEvents);
+          return RewardLine(
+            eventId: event.id,
+            ruleVersion: event.ruleVersion,
+            reason: transaction.reason,
+            amount: transaction.amount,
+            category: transaction.category,
+          );
+        })
         .toList(growable: false);
     final earned = lines.fold<int>(0, (sum, line) => sum + line.amount);
     return MissionCompletion(
@@ -1308,10 +1638,27 @@ class ProgressRepository {
     return ((xp - start) / (end - start)).clamp(0, 1);
   }
 
-  static String _dayKey(DateTime date) =>
-      '${date.year.toString().padLeft(4, '0')}-'
-      '${date.month.toString().padLeft(2, '0')}-'
-      '${date.day.toString().padLeft(2, '0')}';
+  static String _dayKey(DateTime date) {
+    final local = date.isUtc ? date.toLocal() : date;
+    return '${local.year.toString().padLeft(4, '0')}-'
+        '${local.month.toString().padLeft(2, '0')}-'
+        '${local.day.toString().padLeft(2, '0')}';
+  }
+
+  static DateTime _dateFromDayKey(String dayKey) {
+    final parts = dayKey.split('-');
+    if (parts.length != 3) {
+      throw FormatException('Invalid local day key', dayKey);
+    }
+    return DateTime(
+      int.parse(parts[0]),
+      int.parse(parts[1]),
+      int.parse(parts[2]),
+    );
+  }
+
+  static DateTime _addCalendarDays(DateTime day, int amount) =>
+      DateTime(day.year, day.month, day.day + amount);
 
   static bool _sameQueue(List<String> left, List<String> right) {
     if (left.length != right.length) return false;
@@ -1321,17 +1668,61 @@ class ProgressRepository {
     return true;
   }
 
-  static int _streakFromDays(Set<String> days, {DateTime? now}) {
-    if (days.isEmpty) return 0;
-    var day = now ?? DateTime.now();
-    if (!days.contains(_dayKey(day))) {
-      day = day.subtract(const Duration(days: 1));
+  static int _streakFromDays(Set<String> days, {DateTime? now}) =>
+      _streakStatusFromDays(days, now: now ?? DateTime.now()).activeDays;
+
+  /// A shame-free rhythm: today may still be open and one closed calendar day
+  /// may be missed without erasing the chain. The value counts active days,
+  /// never the grace day itself, so absence cannot inflate achievements.
+  static _StreakStatus _streakStatusFromDays(
+    Set<String> days, {
+    required DateTime now,
+  }) {
+    if (days.isEmpty) return const _StreakStatus.empty();
+    final today = _dateFromDayKey(_dayKey(now));
+    late DateTime cursor;
+    var graceUsed = false;
+    if (days.contains(_dayKey(today))) {
+      cursor = today;
+    } else {
+      final yesterday = _addCalendarDays(today, -1);
+      if (days.contains(_dayKey(yesterday))) {
+        cursor = yesterday;
+      } else {
+        final dayBeforeYesterday = _addCalendarDays(today, -2);
+        if (!days.contains(_dayKey(dayBeforeYesterday))) {
+          return const _StreakStatus.empty();
+        }
+        cursor = dayBeforeYesterday;
+        graceUsed = true;
+      }
     }
-    var streak = 0;
-    while (days.contains(_dayKey(day))) {
-      streak++;
-      day = day.subtract(const Duration(days: 1));
+
+    var activeDays = 0;
+    while (true) {
+      if (days.contains(_dayKey(cursor))) {
+        activeDays++;
+        cursor = _addCalendarDays(cursor, -1);
+        continue;
+      }
+      if (!graceUsed) {
+        final beforeGap = _addCalendarDays(cursor, -1);
+        if (days.contains(_dayKey(beforeGap))) {
+          graceUsed = true;
+          cursor = beforeGap;
+          continue;
+        }
+      }
+      break;
     }
-    return streak;
+    return _StreakStatus(activeDays: activeDays, graceUsed: graceUsed);
   }
+}
+
+class _StreakStatus {
+  const _StreakStatus({required this.activeDays, required this.graceUsed});
+  const _StreakStatus.empty() : activeDays = 0, graceUsed = false;
+
+  final int activeDays;
+  final bool graceUsed;
 }

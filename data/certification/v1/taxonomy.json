@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "gauss-taxonomy-discovery-v1",
+  "version": "gauss-taxonomy-v1",
   "sections": [
     {
       "id": "math_algebraic_foundations",
@@ -86,5 +86,3545 @@
       ]
     }
   ],
-  "subtopics": []
+  "subtopics": [
+    {
+      "key": "sets_membership_notation",
+      "topic_key": "sets",
+      "label_en": "Membership and set notation",
+      "label_fa": "عضویت و نمادگذاری مجموعه",
+      "order": 1,
+      "concept_tags": [
+        "set_membership",
+        "subset_relation",
+        "set_notation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "sets_operations_identities",
+      "topic_key": "sets",
+      "label_en": "Set operations and identities",
+      "label_fa": "عملیات و اتحادهای مجموعه",
+      "order": 2,
+      "concept_tags": [
+        "union_intersection",
+        "set_difference",
+        "set_complement"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "sets_finite_infinite_cardinality",
+      "topic_key": "sets",
+      "label_en": "Finite, infinite, and cardinality",
+      "label_fa": "مجموعه‌های متناهی، نامتناهی و شمارش",
+      "order": 3,
+      "concept_tags": [
+        "finite_infinite_sets",
+        "cardinality"
+      ],
+      "prerequisites": [
+        "set_membership"
+      ]
+    },
+    {
+      "key": "sets_intervals_number_line",
+      "topic_key": "sets",
+      "label_en": "Intervals and the number line",
+      "label_fa": "بازه‌ها و محور اعداد",
+      "order": 4,
+      "concept_tags": [
+        "interval_notation",
+        "interval_operations",
+        "number_line"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "sets_venn_diagrams",
+      "topic_key": "sets",
+      "label_en": "Venn diagrams",
+      "label_fa": "نمودارهای ون",
+      "order": 5,
+      "concept_tags": [
+        "venn_diagram",
+        "set_operations"
+      ],
+      "prerequisites": [
+        "set_operations"
+      ]
+    },
+    {
+      "key": "sets_inclusion_exclusion",
+      "topic_key": "sets",
+      "label_en": "Inclusion-exclusion problems",
+      "label_fa": "مسائل اصل شمول و عدم شمول",
+      "order": 6,
+      "concept_tags": [
+        "inclusion_exclusion",
+        "cardinality_modeling"
+      ],
+      "prerequisites": [
+        "cardinality"
+      ]
+    },
+    {
+      "key": "sets_relations_and_proofs",
+      "topic_key": "sets",
+      "label_en": "Set relations and logical claims",
+      "label_fa": "روابط و گزاره‌های مجموعه",
+      "order": 7,
+      "concept_tags": [
+        "set_relations",
+        "logical_reasoning"
+      ],
+      "prerequisites": [
+        "set_operations"
+      ]
+    },
+    {
+      "key": "patterns_sequences_arithmetic",
+      "topic_key": "patterns_sequences",
+      "label_en": "Arithmetic sequences",
+      "label_fa": "دنباله‌های حسابی",
+      "order": 1,
+      "concept_tags": [
+        "arithmetic_sequence",
+        "general_term"
+      ],
+      "prerequisites": [
+        "linear_equations"
+      ]
+    },
+    {
+      "key": "patterns_sequences_geometric",
+      "topic_key": "patterns_sequences",
+      "label_en": "Geometric sequences",
+      "label_fa": "دنباله‌های هندسی",
+      "order": 2,
+      "concept_tags": [
+        "geometric_sequence",
+        "general_term"
+      ],
+      "prerequisites": [
+        "exponents"
+      ]
+    },
+    {
+      "key": "patterns_sequences_recursive",
+      "topic_key": "patterns_sequences",
+      "label_en": "Recursive sequences",
+      "label_fa": "دنباله‌های بازگشتی",
+      "order": 3,
+      "concept_tags": [
+        "recursive_sequence",
+        "term_generation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "patterns_sequences_polynomial",
+      "topic_key": "patterns_sequences",
+      "label_en": "Polynomial sequences",
+      "label_fa": "دنباله‌های چندجمله‌ای",
+      "order": 4,
+      "concept_tags": [
+        "finite_differences",
+        "polynomial_general_term"
+      ],
+      "prerequisites": [
+        "algebraic_expansion"
+      ]
+    },
+    {
+      "key": "patterns_sequences_series_sums",
+      "topic_key": "patterns_sequences",
+      "label_en": "Series and partial sums",
+      "label_fa": "سری‌ها و مجموع جملات",
+      "order": 5,
+      "concept_tags": [
+        "series_sum",
+        "partial_sums"
+      ],
+      "prerequisites": [
+        "sequence_general_term"
+      ]
+    },
+    {
+      "key": "patterns_sequences_telescoping",
+      "topic_key": "patterns_sequences",
+      "label_en": "Telescoping patterns",
+      "label_fa": "الگوهای تلسکوپی",
+      "order": 6,
+      "concept_tags": [
+        "telescoping_sum",
+        "algebraic_cancellation"
+      ],
+      "prerequisites": [
+        "partial_fractions"
+      ]
+    },
+    {
+      "key": "patterns_sequences_visual",
+      "topic_key": "patterns_sequences",
+      "label_en": "Visual and counting patterns",
+      "label_fa": "الگوهای تصویری و شمارشی",
+      "order": 7,
+      "concept_tags": [
+        "visual_pattern",
+        "counting_rule"
+      ],
+      "prerequisites": [
+        "basic_counting"
+      ]
+    },
+    {
+      "key": "patterns_sequences_mixed_models",
+      "topic_key": "patterns_sequences",
+      "label_en": "Mixed sequence models",
+      "label_fa": "مدل‌سازی ترکیبی دنباله",
+      "order": 8,
+      "concept_tags": [
+        "sequence_modeling",
+        "pattern_recognition"
+      ],
+      "prerequisites": [
+        "algebra"
+      ]
+    },
+    {
+      "key": "radicals_exponent_root_rules",
+      "topic_key": "radicals_algebraic_expressions",
+      "label_en": "Exponent and root rules",
+      "label_fa": "قواعد توان و ریشه",
+      "order": 1,
+      "concept_tags": [
+        "fractional_exponents",
+        "nth_roots"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "radicals_simplification",
+      "topic_key": "radicals_algebraic_expressions",
+      "label_en": "Radical simplification",
+      "label_fa": "ساده‌سازی عبارت‌های رادیکالی",
+      "order": 2,
+      "concept_tags": [
+        "radical_simplification",
+        "factor_extraction"
+      ],
+      "prerequisites": [
+        "prime_factorization"
+      ]
+    },
+    {
+      "key": "radicals_rationalization",
+      "topic_key": "radicals_algebraic_expressions",
+      "label_en": "Rationalizing expressions",
+      "label_fa": "گویا کردن عبارت‌ها",
+      "order": 3,
+      "concept_tags": [
+        "rationalization",
+        "conjugates"
+      ],
+      "prerequisites": [
+        "algebraic_identities"
+      ]
+    },
+    {
+      "key": "radicals_identities_factorization",
+      "topic_key": "radicals_algebraic_expressions",
+      "label_en": "Algebraic identities and factorization",
+      "label_fa": "اتحادها و تجزیهٔ جبری",
+      "order": 4,
+      "concept_tags": [
+        "algebraic_identities",
+        "factorization"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "radicals_equations",
+      "topic_key": "radicals_algebraic_expressions",
+      "label_en": "Radical equations",
+      "label_fa": "معادلات رادیکالی",
+      "order": 5,
+      "concept_tags": [
+        "radical_equations",
+        "extraneous_solutions"
+      ],
+      "prerequisites": [
+        "equation_solving"
+      ]
+    },
+    {
+      "key": "radicals_symmetric_nested",
+      "topic_key": "radicals_algebraic_expressions",
+      "label_en": "Symmetric and nested expressions",
+      "label_fa": "عبارت‌های متقارن و تودرتو",
+      "order": 6,
+      "concept_tags": [
+        "symmetric_expressions",
+        "nested_radicals"
+      ],
+      "prerequisites": [
+        "algebraic_identities"
+      ]
+    },
+    {
+      "key": "radicals_domain_comparison",
+      "topic_key": "radicals_algebraic_expressions",
+      "label_en": "Domains and radical comparisons",
+      "label_fa": "دامنه و مقایسهٔ رادیکال‌ها",
+      "order": 7,
+      "concept_tags": [
+        "radical_domain",
+        "radical_comparison"
+      ],
+      "prerequisites": [
+        "inequalities"
+      ]
+    },
+    {
+      "key": "absolute_value_floor_abs_basics",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Absolute-value foundations",
+      "label_fa": "مبانی قدر مطلق",
+      "order": 1,
+      "concept_tags": [
+        "absolute_value_definition",
+        "distance_interpretation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "absolute_value_floor_abs_equations",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Absolute-value equations",
+      "label_fa": "معادلات قدر مطلق",
+      "order": 2,
+      "concept_tags": [
+        "absolute_value_equations",
+        "case_analysis"
+      ],
+      "prerequisites": [
+        "linear_equations"
+      ]
+    },
+    {
+      "key": "absolute_value_floor_abs_inequalities",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Absolute-value inequalities",
+      "label_fa": "نامعادلات قدر مطلق",
+      "order": 3,
+      "concept_tags": [
+        "absolute_value_inequalities",
+        "interval_solution"
+      ],
+      "prerequisites": [
+        "inequalities"
+      ]
+    },
+    {
+      "key": "absolute_value_floor_abs_graphs",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Absolute-value graphs",
+      "label_fa": "نمودارهای قدر مطلق",
+      "order": 4,
+      "concept_tags": [
+        "absolute_value_graphs",
+        "graph_transformations"
+      ],
+      "prerequisites": [
+        "coordinate_plane"
+      ]
+    },
+    {
+      "key": "absolute_value_floor_abs_parameters",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Parameterized absolute value",
+      "label_fa": "قدر مطلق پارامتری",
+      "order": 5,
+      "concept_tags": [
+        "absolute_value_parameters",
+        "case_analysis"
+      ],
+      "prerequisites": [
+        "absolute_value_equations"
+      ]
+    },
+    {
+      "key": "absolute_value_floor_floor_basics",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Floor-function foundations",
+      "label_fa": "مبانی جزء صحیح",
+      "order": 6,
+      "concept_tags": [
+        "floor_function",
+        "integer_part"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "absolute_value_floor_floor_equations",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Floor equations and inequalities",
+      "label_fa": "معادلات و نامعادلات جزء صحیح",
+      "order": 7,
+      "concept_tags": [
+        "floor_equations",
+        "integer_intervals"
+      ],
+      "prerequisites": [
+        "floor_function"
+      ]
+    },
+    {
+      "key": "absolute_value_floor_floor_graphs",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Floor graphs and discontinuities",
+      "label_fa": "نمودار و ناپیوستگی جزء صحیح",
+      "order": 8,
+      "concept_tags": [
+        "floor_graphs",
+        "step_discontinuity"
+      ],
+      "prerequisites": [
+        "floor_function"
+      ]
+    },
+    {
+      "key": "absolute_value_floor_mixed_piecewise",
+      "topic_key": "absolute_value_floor",
+      "label_en": "Mixed piecewise problems",
+      "label_fa": "مسائل ترکیبی و چندضابطه‌ای",
+      "order": 9,
+      "concept_tags": [
+        "piecewise_analysis",
+        "case_partition"
+      ],
+      "prerequisites": [
+        "absolute_value_definition",
+        "floor_function"
+      ]
+    },
+    {
+      "key": "rational_sign_polynomial",
+      "topic_key": "rational_inequalities_sign",
+      "label_en": "Polynomial sign analysis",
+      "label_fa": "تعیین علامت چندجمله‌ای",
+      "order": 1,
+      "concept_tags": [
+        "polynomial_sign",
+        "root_multiplicity"
+      ],
+      "prerequisites": [
+        "factorization"
+      ]
+    },
+    {
+      "key": "rational_sign_tables",
+      "topic_key": "rational_inequalities_sign",
+      "label_en": "Sign tables",
+      "label_fa": "جدول تعیین علامت",
+      "order": 2,
+      "concept_tags": [
+        "sign_table",
+        "critical_points"
+      ],
+      "prerequisites": [
+        "factorization"
+      ]
+    },
+    {
+      "key": "rational_sign_inequalities",
+      "topic_key": "rational_inequalities_sign",
+      "label_en": "Rational inequalities",
+      "label_fa": "نامعادلات گویا",
+      "order": 3,
+      "concept_tags": [
+        "rational_inequalities",
+        "domain_exclusions"
+      ],
+      "prerequisites": [
+        "sign_table"
+      ]
+    },
+    {
+      "key": "rational_sign_absolute",
+      "topic_key": "rational_inequalities_sign",
+      "label_en": "Absolute-value inequalities",
+      "label_fa": "نامعادلات قدر مطلق",
+      "order": 4,
+      "concept_tags": [
+        "absolute_value_inequalities",
+        "interval_solution"
+      ],
+      "prerequisites": [
+        "absolute_value_definition"
+      ]
+    },
+    {
+      "key": "rational_sign_parameters",
+      "topic_key": "rational_inequalities_sign",
+      "label_en": "Parameterized sign problems",
+      "label_fa": "تعیین علامت پارامتری",
+      "order": 5,
+      "concept_tags": [
+        "parameter_inequalities",
+        "root_ordering"
+      ],
+      "prerequisites": [
+        "sign_table"
+      ]
+    },
+    {
+      "key": "rational_sign_domains_roots",
+      "topic_key": "rational_inequalities_sign",
+      "label_en": "Domains, roots, and multiplicity",
+      "label_fa": "دامنه، ریشه و مرتبهٔ ریشه",
+      "order": 6,
+      "concept_tags": [
+        "domain_restrictions",
+        "zeros_and_poles"
+      ],
+      "prerequisites": [
+        "factorization"
+      ]
+    },
+    {
+      "key": "rational_sign_graphical",
+      "topic_key": "rational_inequalities_sign",
+      "label_en": "Graphical sign reasoning",
+      "label_fa": "تحلیل نموداری علامت",
+      "order": 7,
+      "concept_tags": [
+        "graphical_sign",
+        "interval_reasoning"
+      ],
+      "prerequisites": [
+        "coordinate_graphs"
+      ]
+    },
+    {
+      "key": "quadratic_equations_solving",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Solving quadratic equations",
+      "label_fa": "حل معادلات درجهٔ دوم",
+      "order": 1,
+      "concept_tags": [
+        "quadratic_equations",
+        "equation_solving"
+      ],
+      "prerequisites": [
+        "factorization"
+      ]
+    },
+    {
+      "key": "quadratic_discriminant_roots",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Discriminant and root conditions",
+      "label_fa": "دلتا و شرایط ریشه‌ها",
+      "order": 2,
+      "concept_tags": [
+        "discriminant",
+        "root_conditions"
+      ],
+      "prerequisites": [
+        "quadratic_equations"
+      ]
+    },
+    {
+      "key": "quadratic_vieta",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Vieta relations",
+      "label_fa": "روابط ویتا",
+      "order": 3,
+      "concept_tags": [
+        "vieta_relations",
+        "symmetric_root_expressions"
+      ],
+      "prerequisites": [
+        "quadratic_equations"
+      ]
+    },
+    {
+      "key": "quadratic_function_graph",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Quadratic functions and graphs",
+      "label_fa": "تابع و نمودار درجهٔ دوم",
+      "order": 4,
+      "concept_tags": [
+        "quadratic_functions",
+        "parabola_graphs"
+      ],
+      "prerequisites": [
+        "coordinate_plane"
+      ]
+    },
+    {
+      "key": "quadratic_vertex_range",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Vertex, extrema, and range",
+      "label_fa": "رأس، اکسترمم و برد سهمی",
+      "order": 5,
+      "concept_tags": [
+        "quadratic_vertex",
+        "quadratic_range"
+      ],
+      "prerequisites": [
+        "quadratic_functions"
+      ]
+    },
+    {
+      "key": "quadratic_parameters",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Parameterized quadratics",
+      "label_fa": "معادلات درجهٔ دوم پارامتری",
+      "order": 6,
+      "concept_tags": [
+        "quadratic_parameters",
+        "root_conditions"
+      ],
+      "prerequisites": [
+        "discriminant"
+      ]
+    },
+    {
+      "key": "quadratic_radical_rational",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Quadratic-form radical and rational equations",
+      "label_fa": "معادلات رادیکالی و گویای منتهی به درجهٔ دوم",
+      "order": 7,
+      "concept_tags": [
+        "quadratic_substitution",
+        "domain_check"
+      ],
+      "prerequisites": [
+        "quadratic_equations"
+      ]
+    },
+    {
+      "key": "quadratic_models_systems",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Quadratic models and systems",
+      "label_fa": "مدل‌سازی و دستگاه‌های درجهٔ دوم",
+      "order": 8,
+      "concept_tags": [
+        "quadratic_modeling",
+        "systems_of_equations"
+      ],
+      "prerequisites": [
+        "quadratic_equations"
+      ]
+    },
+    {
+      "key": "quadratic_inequalities",
+      "topic_key": "quadratic_equations_functions",
+      "label_en": "Quadratic inequalities",
+      "label_fa": "نامعادلات درجهٔ دوم",
+      "order": 9,
+      "concept_tags": [
+        "quadratic_inequalities",
+        "sign_analysis"
+      ],
+      "prerequisites": [
+        "quadratic_roots"
+      ]
+    },
+    {
+      "key": "functions_definition_evaluation",
+      "topic_key": "functions",
+      "label_en": "Function definition and evaluation",
+      "label_fa": "تعریف و محاسبهٔ مقدار تابع",
+      "order": 1,
+      "concept_tags": [
+        "function_definition",
+        "function_evaluation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "functions_domain_range",
+      "topic_key": "functions",
+      "label_en": "Domain and range",
+      "label_fa": "دامنه و برد تابع",
+      "order": 2,
+      "concept_tags": [
+        "function_domain",
+        "function_range"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "functions_graph_transformations",
+      "topic_key": "functions",
+      "label_en": "Graphs and transformations",
+      "label_fa": "نمودار و انتقال‌های تابع",
+      "order": 3,
+      "concept_tags": [
+        "function_graphs",
+        "graph_transformations"
+      ],
+      "prerequisites": [
+        "coordinate_plane"
+      ]
+    },
+    {
+      "key": "functions_composition",
+      "topic_key": "functions",
+      "label_en": "Function composition",
+      "label_fa": "ترکیب توابع",
+      "order": 4,
+      "concept_tags": [
+        "function_composition",
+        "domain_of_composition"
+      ],
+      "prerequisites": [
+        "function_evaluation"
+      ]
+    },
+    {
+      "key": "functions_inverse",
+      "topic_key": "functions",
+      "label_en": "Inverse functions",
+      "label_fa": "تابع وارون",
+      "order": 5,
+      "concept_tags": [
+        "inverse_functions",
+        "one_to_one"
+      ],
+      "prerequisites": [
+        "function_composition"
+      ]
+    },
+    {
+      "key": "functions_injectivity_monotonicity",
+      "topic_key": "functions",
+      "label_en": "One-to-one and monotonic functions",
+      "label_fa": "یک‌به‌یکی و یکنوایی",
+      "order": 6,
+      "concept_tags": [
+        "injectivity",
+        "monotonicity"
+      ],
+      "prerequisites": [
+        "function_definition"
+      ]
+    },
+    {
+      "key": "functions_piecewise_floor",
+      "topic_key": "functions",
+      "label_en": "Piecewise and floor functions",
+      "label_fa": "توابع چندضابطه‌ای و جزء صحیح",
+      "order": 7,
+      "concept_tags": [
+        "piecewise_functions",
+        "floor_functions"
+      ],
+      "prerequisites": [
+        "intervals"
+      ]
+    },
+    {
+      "key": "functions_functional_equations",
+      "topic_key": "functions",
+      "label_en": "Functional equations",
+      "label_fa": "معادلات تابعی",
+      "order": 8,
+      "concept_tags": [
+        "functional_equations",
+        "algebraic_substitution"
+      ],
+      "prerequisites": [
+        "function_evaluation"
+      ]
+    },
+    {
+      "key": "functions_finite_discrete",
+      "topic_key": "functions",
+      "label_en": "Finite and discrete functions",
+      "label_fa": "توابع متناهی و گسسته",
+      "order": 9,
+      "concept_tags": [
+        "finite_functions",
+        "mapping_relations"
+      ],
+      "prerequisites": [
+        "sets"
+      ]
+    },
+    {
+      "key": "functions_symmetry_periodicity",
+      "topic_key": "functions",
+      "label_en": "Symmetry and periodicity",
+      "label_fa": "تقارن و تناوب تابع",
+      "order": 10,
+      "concept_tags": [
+        "function_parity",
+        "periodicity"
+      ],
+      "prerequisites": [
+        "function_graphs"
+      ]
+    },
+    {
+      "key": "exponential_log_exponent_rules",
+      "topic_key": "exponential_logarithmic",
+      "label_en": "Exponent rules and exponential functions",
+      "label_fa": "قواعد توان و تابع نمایی",
+      "order": 1,
+      "concept_tags": [
+        "exponent_rules",
+        "exponential_functions"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "exponential_log_exponential_equations",
+      "topic_key": "exponential_logarithmic",
+      "label_en": "Exponential equations and inequalities",
+      "label_fa": "معادلات و نامعادلات نمایی",
+      "order": 2,
+      "concept_tags": [
+        "exponential_equations",
+        "exponential_inequalities"
+      ],
+      "prerequisites": [
+        "exponent_rules"
+      ]
+    },
+    {
+      "key": "exponential_log_log_rules",
+      "topic_key": "exponential_logarithmic",
+      "label_en": "Logarithm definitions and rules",
+      "label_fa": "تعریف و قواعد لگاریتم",
+      "order": 3,
+      "concept_tags": [
+        "logarithm_definition",
+        "logarithm_rules"
+      ],
+      "prerequisites": [
+        "exponents"
+      ]
+    },
+    {
+      "key": "exponential_log_log_equations",
+      "topic_key": "exponential_logarithmic",
+      "label_en": "Logarithmic equations and inequalities",
+      "label_fa": "معادلات و نامعادلات لگاریتمی",
+      "order": 4,
+      "concept_tags": [
+        "logarithmic_equations",
+        "domain_restrictions"
+      ],
+      "prerequisites": [
+        "logarithm_rules"
+      ]
+    },
+    {
+      "key": "exponential_log_graph_domain",
+      "topic_key": "exponential_logarithmic",
+      "label_en": "Graphs, domains, and ranges",
+      "label_fa": "نمودار، دامنه و برد نمایی و لگاریتمی",
+      "order": 5,
+      "concept_tags": [
+        "exp_log_graphs",
+        "domain_range"
+      ],
+      "prerequisites": [
+        "function_transformations"
+      ]
+    },
+    {
+      "key": "exponential_log_inverse_composition",
+      "topic_key": "exponential_logarithmic",
+      "label_en": "Inverse and composition relations",
+      "label_fa": "وارون و ترکیب توابع نمایی و لگاریتمی",
+      "order": 6,
+      "concept_tags": [
+        "inverse_relation",
+        "function_composition"
+      ],
+      "prerequisites": [
+        "inverse_functions"
+      ]
+    },
+    {
+      "key": "exponential_log_change_base",
+      "topic_key": "exponential_logarithmic",
+      "label_en": "Change of base and common logs",
+      "label_fa": "تغییر مبنا و لگاریتم دهدهی",
+      "order": 7,
+      "concept_tags": [
+        "change_of_base",
+        "common_logarithms"
+      ],
+      "prerequisites": [
+        "logarithm_rules"
+      ]
+    },
+    {
+      "key": "exponential_log_models_parameters",
+      "topic_key": "exponential_logarithmic",
+      "label_en": "Exponential-log models and parameters",
+      "label_fa": "مدل‌سازی و مسائل پارامتری نمایی–لگاریتمی",
+      "order": 8,
+      "concept_tags": [
+        "exp_log_modeling",
+        "parameter_analysis"
+      ],
+      "prerequisites": [
+        "exp_log_equations"
+      ]
+    },
+    {
+      "key": "limits_laws_algebraic",
+      "topic_key": "limits_continuity",
+      "label_en": "Limit laws and algebraic evaluation",
+      "label_fa": "قوانین حد و محاسبهٔ جبری",
+      "order": 1,
+      "concept_tags": [
+        "limit_laws",
+        "algebraic_evaluation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "limits_indeterminate_factorization",
+      "topic_key": "limits_continuity",
+      "label_en": "Indeterminate forms and factorization",
+      "label_fa": "رفع ابهام با تجزیه",
+      "order": 2,
+      "concept_tags": [
+        "indeterminate_forms",
+        "factorization"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "limits_radicals",
+      "topic_key": "limits_continuity",
+      "label_en": "Radical limits and rationalization",
+      "label_fa": "حدهای رادیکالی و گویاکردن",
+      "order": 3,
+      "concept_tags": [
+        "radical_limits",
+        "rationalization"
+      ],
+      "prerequisites": [
+        "algebraic_identities"
+      ]
+    },
+    {
+      "key": "limits_one_sided_piecewise",
+      "topic_key": "limits_continuity",
+      "label_en": "One-sided and piecewise limits",
+      "label_fa": "حد یک‌طرفه و توابع چندضابطه‌ای",
+      "order": 4,
+      "concept_tags": [
+        "one_sided_limits",
+        "piecewise_analysis"
+      ],
+      "prerequisites": [
+        "function_graphs"
+      ]
+    },
+    {
+      "key": "limits_infinity_asymptotes",
+      "topic_key": "limits_continuity",
+      "label_en": "Limits at infinity and asymptotes",
+      "label_fa": "حد در بی‌نهایت و مجانب‌ها",
+      "order": 5,
+      "concept_tags": [
+        "limits_at_infinity",
+        "asymptotes"
+      ],
+      "prerequisites": [
+        "rational_functions"
+      ]
+    },
+    {
+      "key": "limits_continuity",
+      "topic_key": "limits_continuity",
+      "label_en": "Continuity and parameter matching",
+      "label_fa": "پیوستگی و تعیین پارامتر",
+      "order": 6,
+      "concept_tags": [
+        "continuity",
+        "parameter_matching"
+      ],
+      "prerequisites": [
+        "one_sided_limits"
+      ]
+    },
+    {
+      "key": "limits_floor_absolute",
+      "topic_key": "limits_continuity",
+      "label_en": "Floor and absolute-value limits",
+      "label_fa": "حد جزء صحیح و قدر مطلق",
+      "order": 7,
+      "concept_tags": [
+        "floor_limits",
+        "absolute_value_limits"
+      ],
+      "prerequisites": [
+        "one_sided_limits"
+      ]
+    },
+    {
+      "key": "limits_graphical",
+      "topic_key": "limits_continuity",
+      "label_en": "Graphical limits",
+      "label_fa": "حدهای نموداری",
+      "order": 8,
+      "concept_tags": [
+        "graphical_limits",
+        "one_sided_reading"
+      ],
+      "prerequisites": [
+        "function_graphs"
+      ]
+    },
+    {
+      "key": "limits_trigonometric",
+      "topic_key": "limits_continuity",
+      "label_en": "Trigonometric limits",
+      "label_fa": "حدهای مثلثاتی",
+      "order": 9,
+      "concept_tags": [
+        "trigonometric_limits",
+        "standard_limits"
+      ],
+      "prerequisites": [
+        "trigonometric_identities"
+      ]
+    },
+    {
+      "key": "derivatives_definition_tangent",
+      "topic_key": "derivatives",
+      "label_en": "Derivative definition and tangent",
+      "label_fa": "تعریف مشتق و خط مماس",
+      "order": 1,
+      "concept_tags": [
+        "derivative_definition",
+        "tangent_slope"
+      ],
+      "prerequisites": [
+        "limits"
+      ]
+    },
+    {
+      "key": "derivatives_basic_rules",
+      "topic_key": "derivatives",
+      "label_en": "Basic derivative rules",
+      "label_fa": "قواعد پایهٔ مشتق",
+      "order": 2,
+      "concept_tags": [
+        "basic_derivative_rules",
+        "power_rule"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "derivatives_product_quotient_chain",
+      "topic_key": "derivatives",
+      "label_en": "Product, quotient, and chain rules",
+      "label_fa": "قواعد ضرب، تقسیم و زنجیره‌ای",
+      "order": 3,
+      "concept_tags": [
+        "product_rule",
+        "quotient_rule",
+        "chain_rule"
+      ],
+      "prerequisites": [
+        "basic_derivative_rules"
+      ]
+    },
+    {
+      "key": "derivatives_implicit_parametric",
+      "topic_key": "derivatives",
+      "label_en": "Implicit and parametric differentiation",
+      "label_fa": "مشتق‌گیری ضمنی و پارامتری",
+      "order": 4,
+      "concept_tags": [
+        "implicit_differentiation",
+        "parametric_differentiation"
+      ],
+      "prerequisites": [
+        "chain_rule"
+      ]
+    },
+    {
+      "key": "derivatives_piecewise_one_sided",
+      "topic_key": "derivatives",
+      "label_en": "Piecewise differentiability",
+      "label_fa": "مشتق‌پذیری توابع چندضابطه‌ای",
+      "order": 5,
+      "concept_tags": [
+        "one_sided_derivatives",
+        "differentiability"
+      ],
+      "prerequisites": [
+        "continuity"
+      ]
+    },
+    {
+      "key": "derivatives_higher_order",
+      "topic_key": "derivatives",
+      "label_en": "Higher-order derivatives",
+      "label_fa": "مشتق‌های مرتبهٔ بالاتر",
+      "order": 6,
+      "concept_tags": [
+        "higher_order_derivatives",
+        "derivative_patterns"
+      ],
+      "prerequisites": [
+        "basic_derivative_rules"
+      ]
+    },
+    {
+      "key": "derivatives_special_functions",
+      "topic_key": "derivatives",
+      "label_en": "Trigonometric, exponential, and logarithmic derivatives",
+      "label_fa": "مشتق توابع مثلثاتی، نمایی و لگاریتمی",
+      "order": 7,
+      "concept_tags": [
+        "special_function_derivatives",
+        "chain_rule"
+      ],
+      "prerequisites": [
+        "basic_derivative_rules"
+      ]
+    },
+    {
+      "key": "derivatives_graph_table",
+      "topic_key": "derivatives",
+      "label_en": "Derivatives from graphs and tables",
+      "label_fa": "مشتق از نمودار و جدول",
+      "order": 8,
+      "concept_tags": [
+        "graphical_derivatives",
+        "slope_interpretation"
+      ],
+      "prerequisites": [
+        "function_graphs"
+      ]
+    },
+    {
+      "key": "derivatives_parameters",
+      "topic_key": "derivatives",
+      "label_en": "Parameterized differentiability",
+      "label_fa": "مشتق‌پذیری پارامتری",
+      "order": 9,
+      "concept_tags": [
+        "parameter_differentiability",
+        "matching_conditions"
+      ],
+      "prerequisites": [
+        "piecewise_derivatives"
+      ]
+    },
+    {
+      "key": "derivative_apps_monotonicity",
+      "topic_key": "derivative_applications",
+      "label_en": "Monotonicity and critical points",
+      "label_fa": "یکنوایی و نقاط بحرانی",
+      "order": 1,
+      "concept_tags": [
+        "critical_points",
+        "monotonicity"
+      ],
+      "prerequisites": [
+        "derivative_rules"
+      ]
+    },
+    {
+      "key": "derivative_apps_extrema",
+      "topic_key": "derivative_applications",
+      "label_en": "Local and absolute extrema",
+      "label_fa": "اکسترمم‌های نسبی و مطلق",
+      "order": 2,
+      "concept_tags": [
+        "extrema",
+        "first_derivative_test"
+      ],
+      "prerequisites": [
+        "critical_points"
+      ]
+    },
+    {
+      "key": "derivative_apps_concavity",
+      "topic_key": "derivative_applications",
+      "label_en": "Concavity and inflection",
+      "label_fa": "تقعر و نقطهٔ عطف",
+      "order": 3,
+      "concept_tags": [
+        "concavity",
+        "inflection_points"
+      ],
+      "prerequisites": [
+        "second_derivative"
+      ]
+    },
+    {
+      "key": "derivative_apps_graph_sketching",
+      "topic_key": "derivative_applications",
+      "label_en": "Graph sketching",
+      "label_fa": "رسم و تحلیل نمودار",
+      "order": 4,
+      "concept_tags": [
+        "graph_sketching",
+        "derivative_sign_analysis"
+      ],
+      "prerequisites": [
+        "monotonicity",
+        "concavity"
+      ]
+    },
+    {
+      "key": "derivative_apps_optimization",
+      "topic_key": "derivative_applications",
+      "label_en": "Optimization",
+      "label_fa": "بهینه‌سازی",
+      "order": 5,
+      "concept_tags": [
+        "optimization_modeling",
+        "extrema"
+      ],
+      "prerequisites": [
+        "derivative_rules"
+      ]
+    },
+    {
+      "key": "derivative_apps_tangent_normal",
+      "topic_key": "derivative_applications",
+      "label_en": "Tangent and normal lines",
+      "label_fa": "خط مماس و عمود",
+      "order": 6,
+      "concept_tags": [
+        "tangent_lines",
+        "normal_lines"
+      ],
+      "prerequisites": [
+        "derivative_definition"
+      ]
+    },
+    {
+      "key": "derivative_apps_rates_motion",
+      "topic_key": "derivative_applications",
+      "label_en": "Rates and motion",
+      "label_fa": "نرخ تغییر و حرکت",
+      "order": 7,
+      "concept_tags": [
+        "rates_of_change",
+        "motion_analysis"
+      ],
+      "prerequisites": [
+        "derivative_rules"
+      ]
+    },
+    {
+      "key": "derivative_apps_parameters_roots",
+      "topic_key": "derivative_applications",
+      "label_en": "Parameters, roots, and inequalities",
+      "label_fa": "پارامتر، ریشه و نامعادله با مشتق",
+      "order": 8,
+      "concept_tags": [
+        "parameter_analysis",
+        "root_counting"
+      ],
+      "prerequisites": [
+        "monotonicity"
+      ]
+    },
+    {
+      "key": "trigonometry_angles_unit_circle",
+      "topic_key": "trigonometry",
+      "label_en": "Angles and the unit circle",
+      "label_fa": "زاویه‌ها و دایرهٔ مثلثاتی",
+      "order": 1,
+      "concept_tags": [
+        "unit_circle",
+        "angle_measure"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "trigonometry_values_quadrants",
+      "topic_key": "trigonometry",
+      "label_en": "Trigonometric values and quadrants",
+      "label_fa": "نسبت‌های مثلثاتی و ربع‌ها",
+      "order": 2,
+      "concept_tags": [
+        "trigonometric_values",
+        "quadrant_signs"
+      ],
+      "prerequisites": [
+        "unit_circle"
+      ]
+    },
+    {
+      "key": "trigonometry_identities",
+      "topic_key": "trigonometry",
+      "label_en": "Trigonometric identities",
+      "label_fa": "اتحادهای مثلثاتی",
+      "order": 3,
+      "concept_tags": [
+        "trigonometric_identities",
+        "algebraic_simplification"
+      ],
+      "prerequisites": [
+        "trigonometric_values"
+      ]
+    },
+    {
+      "key": "trigonometry_equations",
+      "topic_key": "trigonometry",
+      "label_en": "Trigonometric equations and inequalities",
+      "label_fa": "معادلات و نامعادلات مثلثاتی",
+      "order": 4,
+      "concept_tags": [
+        "trigonometric_equations",
+        "periodic_solutions"
+      ],
+      "prerequisites": [
+        "unit_circle"
+      ]
+    },
+    {
+      "key": "trigonometry_graphs",
+      "topic_key": "trigonometry",
+      "label_en": "Trigonometric graphs",
+      "label_fa": "نمودارهای مثلثاتی",
+      "order": 5,
+      "concept_tags": [
+        "trigonometric_graphs",
+        "period_amplitude"
+      ],
+      "prerequisites": [
+        "function_transformations"
+      ]
+    },
+    {
+      "key": "trigonometry_triangle_laws",
+      "topic_key": "trigonometry",
+      "label_en": "Sine and cosine laws",
+      "label_fa": "قانون سینوس‌ها و کسینوس‌ها",
+      "order": 6,
+      "concept_tags": [
+        "sine_law",
+        "cosine_law"
+      ],
+      "prerequisites": [
+        "triangle_geometry"
+      ]
+    },
+    {
+      "key": "trigonometry_geometry",
+      "topic_key": "trigonometry",
+      "label_en": "Geometric trigonometry",
+      "label_fa": "کاربرد هندسی مثلثات",
+      "order": 7,
+      "concept_tags": [
+        "right_triangle_trigonometry",
+        "geometric_modeling"
+      ],
+      "prerequisites": [
+        "triangle_geometry"
+      ]
+    },
+    {
+      "key": "trigonometry_inverse_parameters",
+      "topic_key": "trigonometry",
+      "label_en": "Inverse and parameterized trigonometry",
+      "label_fa": "مثلثات وارون و پارامتری",
+      "order": 8,
+      "concept_tags": [
+        "inverse_trigonometry",
+        "parameter_analysis"
+      ],
+      "prerequisites": [
+        "trigonometric_functions"
+      ]
+    },
+    {
+      "key": "analytic_coordinates_distance_midpoint",
+      "topic_key": "analytic_geometry",
+      "label_en": "Coordinates, distance, and midpoint",
+      "label_fa": "مختصات، فاصله و نقطهٔ میانی",
+      "order": 1,
+      "concept_tags": [
+        "coordinate_geometry",
+        "distance_midpoint"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "analytic_lines_slope",
+      "topic_key": "analytic_geometry",
+      "label_en": "Lines and slope",
+      "label_fa": "خط و شیب",
+      "order": 2,
+      "concept_tags": [
+        "line_equations",
+        "slope"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "analytic_parallel_perpendicular",
+      "topic_key": "analytic_geometry",
+      "label_en": "Parallel and perpendicular lines",
+      "label_fa": "خطوط موازی و عمود",
+      "order": 3,
+      "concept_tags": [
+        "parallel_perpendicular",
+        "line_angles"
+      ],
+      "prerequisites": [
+        "slope"
+      ]
+    },
+    {
+      "key": "analytic_point_line_distance",
+      "topic_key": "analytic_geometry",
+      "label_en": "Point-to-line distance",
+      "label_fa": "فاصلهٔ نقطه از خط",
+      "order": 4,
+      "concept_tags": [
+        "point_line_distance",
+        "line_equations"
+      ],
+      "prerequisites": [
+        "distance_formula"
+      ]
+    },
+    {
+      "key": "analytic_transformations_reflections",
+      "topic_key": "analytic_geometry",
+      "label_en": "Coordinate transformations and reflections",
+      "label_fa": "تبدیل و بازتاب مختصاتی",
+      "order": 5,
+      "concept_tags": [
+        "coordinate_transformations",
+        "reflections"
+      ],
+      "prerequisites": [
+        "coordinate_plane"
+      ]
+    },
+    {
+      "key": "analytic_area_polygons",
+      "topic_key": "analytic_geometry",
+      "label_en": "Coordinate area and polygons",
+      "label_fa": "مساحت و چندضلعی در مختصات",
+      "order": 6,
+      "concept_tags": [
+        "coordinate_area",
+        "collinearity"
+      ],
+      "prerequisites": [
+        "determinants"
+      ]
+    },
+    {
+      "key": "analytic_loci_bisectors",
+      "topic_key": "analytic_geometry",
+      "label_en": "Loci and bisectors",
+      "label_fa": "مکان هندسی و نیمسازها",
+      "order": 7,
+      "concept_tags": [
+        "geometric_loci",
+        "bisectors"
+      ],
+      "prerequisites": [
+        "distance_formula"
+      ]
+    },
+    {
+      "key": "analytic_circles_intersections",
+      "topic_key": "analytic_geometry",
+      "label_en": "Coordinate circles and intersections",
+      "label_fa": "دایره و تقاطع در مختصات",
+      "order": 8,
+      "concept_tags": [
+        "coordinate_circles",
+        "line_circle_intersections"
+      ],
+      "prerequisites": [
+        "quadratic_equations"
+      ]
+    },
+    {
+      "key": "conics_circle_equations",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Circle equations",
+      "label_fa": "معادله و مشخصات دایره",
+      "order": 1,
+      "concept_tags": [
+        "circle_equations",
+        "center_radius"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "conics_circle_tangency",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Circle tangency and relative position",
+      "label_fa": "مماس و وضعیت نسبی دایره‌ها",
+      "order": 2,
+      "concept_tags": [
+        "circle_tangency",
+        "relative_circle_position"
+      ],
+      "prerequisites": [
+        "circle_equations"
+      ]
+    },
+    {
+      "key": "conics_circle_loci_geometry",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Circle loci and geometry",
+      "label_fa": "مکان هندسی و هندسهٔ دایره",
+      "order": 3,
+      "concept_tags": [
+        "circle_loci",
+        "circle_geometry"
+      ],
+      "prerequisites": [
+        "distance_formula"
+      ]
+    },
+    {
+      "key": "conics_parabolas",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Parabolas",
+      "label_fa": "سهمی",
+      "order": 4,
+      "concept_tags": [
+        "parabola_equations",
+        "focus_directrix"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "conics_ellipses",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Ellipse geometry",
+      "label_fa": "هندسه و مشخصات بیضی",
+      "order": 5,
+      "concept_tags": [
+        "ellipse_geometry",
+        "ellipse_foci"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "conics_hyperbolas",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Hyperbolas",
+      "label_fa": "هذلولی",
+      "order": 6,
+      "concept_tags": [
+        "hyperbola_equations",
+        "hyperbola_asymptotes"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "conics_eccentricity_directrix",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Eccentricity and directrices",
+      "label_fa": "خروج از مرکز و خطوط هادی",
+      "order": 7,
+      "concept_tags": [
+        "eccentricity",
+        "directrices"
+      ],
+      "prerequisites": [
+        "distance_formula"
+      ]
+    },
+    {
+      "key": "conics_transformations_intersections",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Transformations and intersections",
+      "label_fa": "انتقال و تقاطع مقاطع مخروطی",
+      "order": 8,
+      "concept_tags": [
+        "conic_transformations",
+        "conic_intersections"
+      ],
+      "prerequisites": [
+        "coordinate_transformations"
+      ]
+    },
+    {
+      "key": "conics_tangency_loci",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Tangency and loci",
+      "label_fa": "مماس و مکان هندسی",
+      "order": 9,
+      "concept_tags": [
+        "conic_tangency",
+        "geometric_loci"
+      ],
+      "prerequisites": [
+        "discriminant"
+      ]
+    },
+    {
+      "key": "conics_spatial_visualization",
+      "topic_key": "visual_thinking_conics",
+      "label_en": "Spatial visualization and revolutions",
+      "label_fa": "تجسم فضایی و دوران",
+      "order": 10,
+      "concept_tags": [
+        "spatial_visualization",
+        "solids_of_revolution"
+      ],
+      "prerequisites": [
+        "plane_geometry"
+      ]
+    },
+    {
+      "key": "geometry_angles_parallel",
+      "topic_key": "geometry",
+      "label_en": "Angles and parallel lines",
+      "label_fa": "زاویه‌ها و خطوط موازی",
+      "order": 1,
+      "concept_tags": [
+        "angle_relations",
+        "parallel_lines"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "geometry_triangles_congruence",
+      "topic_key": "geometry",
+      "label_en": "Triangles and congruence",
+      "label_fa": "مثلث و هم‌نهشتی",
+      "order": 2,
+      "concept_tags": [
+        "triangle_geometry",
+        "congruence"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "geometry_similarity",
+      "topic_key": "geometry",
+      "label_en": "Similarity and ratios",
+      "label_fa": "تشابه و تناسب",
+      "order": 3,
+      "concept_tags": [
+        "triangle_similarity",
+        "geometric_ratios"
+      ],
+      "prerequisites": [
+        "ratios"
+      ]
+    },
+    {
+      "key": "geometry_triangle_centers",
+      "topic_key": "geometry",
+      "label_en": "Triangle centers and bisectors",
+      "label_fa": "مراکز و نیمسازهای مثلث",
+      "order": 4,
+      "concept_tags": [
+        "triangle_centers",
+        "cevians"
+      ],
+      "prerequisites": [
+        "triangle_geometry"
+      ]
+    },
+    {
+      "key": "geometry_quadrilaterals",
+      "topic_key": "geometry",
+      "label_en": "Quadrilaterals and polygons",
+      "label_fa": "چهارضلعی‌ها و چندضلعی‌ها",
+      "order": 5,
+      "concept_tags": [
+        "quadrilaterals",
+        "polygon_properties"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "geometry_circles",
+      "topic_key": "geometry",
+      "label_en": "Circle geometry",
+      "label_fa": "هندسهٔ دایره",
+      "order": 6,
+      "concept_tags": [
+        "circle_theorems",
+        "chords_tangents"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "geometry_area_perimeter",
+      "topic_key": "geometry",
+      "label_en": "Area and perimeter",
+      "label_fa": "مساحت و محیط",
+      "order": 7,
+      "concept_tags": [
+        "area",
+        "perimeter"
+      ],
+      "prerequisites": [
+        "basic_geometry"
+      ]
+    },
+    {
+      "key": "geometry_spatial",
+      "topic_key": "geometry",
+      "label_en": "Spatial geometry",
+      "label_fa": "هندسهٔ فضایی",
+      "order": 8,
+      "concept_tags": [
+        "solid_geometry",
+        "spatial_reasoning"
+      ],
+      "prerequisites": [
+        "plane_geometry"
+      ]
+    },
+    {
+      "key": "geometry_loci_proofs",
+      "topic_key": "geometry",
+      "label_en": "Loci and geometric proofs",
+      "label_fa": "مکان هندسی و اثبات",
+      "order": 9,
+      "concept_tags": [
+        "geometric_loci",
+        "proof_reasoning"
+      ],
+      "prerequisites": [
+        "geometry_theorems"
+      ]
+    },
+    {
+      "key": "combinatorics_counting_principles",
+      "topic_key": "combinatorics",
+      "label_en": "Counting principles",
+      "label_fa": "اصول شمارش",
+      "order": 1,
+      "concept_tags": [
+        "counting_principles",
+        "case_partition"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "combinatorics_permutations",
+      "topic_key": "combinatorics",
+      "label_en": "Permutations",
+      "label_fa": "جایگشت",
+      "order": 2,
+      "concept_tags": [
+        "permutations",
+        "arrangements"
+      ],
+      "prerequisites": [
+        "factorials"
+      ]
+    },
+    {
+      "key": "combinatorics_combinations",
+      "topic_key": "combinatorics",
+      "label_en": "Combinations",
+      "label_fa": "ترکیب",
+      "order": 3,
+      "concept_tags": [
+        "combinations",
+        "selection_counting"
+      ],
+      "prerequisites": [
+        "factorials"
+      ]
+    },
+    {
+      "key": "combinatorics_repetition",
+      "topic_key": "combinatorics",
+      "label_en": "Arrangements with repetition",
+      "label_fa": "آرایش با تکرار",
+      "order": 4,
+      "concept_tags": [
+        "multiset_permutations",
+        "repetition"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "combinatorics_stars_bars",
+      "topic_key": "combinatorics",
+      "label_en": "Stars and bars",
+      "label_fa": "ستاره و میله",
+      "order": 5,
+      "concept_tags": [
+        "stars_and_bars",
+        "integer_solution_counting"
+      ],
+      "prerequisites": [
+        "combinations"
+      ]
+    },
+    {
+      "key": "combinatorics_binomial",
+      "topic_key": "combinatorics",
+      "label_en": "Binomial coefficients",
+      "label_fa": "ضرایب دوجمله‌ای",
+      "order": 6,
+      "concept_tags": [
+        "binomial_coefficients",
+        "pascal_triangle"
+      ],
+      "prerequisites": [
+        "combinations"
+      ]
+    },
+    {
+      "key": "combinatorics_inclusion_exclusion",
+      "topic_key": "combinatorics",
+      "label_en": "Inclusion-exclusion",
+      "label_fa": "اصل شمول و عدم شمول",
+      "order": 7,
+      "concept_tags": [
+        "inclusion_exclusion",
+        "overlap_counting"
+      ],
+      "prerequisites": [
+        "counting_principles"
+      ]
+    },
+    {
+      "key": "combinatorics_digits_paths",
+      "topic_key": "combinatorics",
+      "label_en": "Digit, path, and geometric counting",
+      "label_fa": "شمارش ارقام، مسیرها و اشکال",
+      "order": 8,
+      "concept_tags": [
+        "digit_counting",
+        "path_counting"
+      ],
+      "prerequisites": [
+        "counting_principles"
+      ]
+    },
+    {
+      "key": "combinatorics_recurrence_pigeonhole",
+      "topic_key": "combinatorics",
+      "label_en": "Recurrence and pigeonhole",
+      "label_fa": "بازگشت و اصل لانه‌کبوتری",
+      "order": 9,
+      "concept_tags": [
+        "pigeonhole_principle",
+        "recursive_counting"
+      ],
+      "prerequisites": [
+        "counting_principles"
+      ]
+    },
+    {
+      "key": "probability_sample_spaces",
+      "topic_key": "probability",
+      "label_en": "Sample spaces and classical probability",
+      "label_fa": "فضای نمونه و احتمال کلاسیک",
+      "order": 1,
+      "concept_tags": [
+        "sample_spaces",
+        "classical_probability"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "probability_addition_complement",
+      "topic_key": "probability",
+      "label_en": "Addition and complement rules",
+      "label_fa": "قواعد جمع و متمم",
+      "order": 2,
+      "concept_tags": [
+        "probability_addition",
+        "complements"
+      ],
+      "prerequisites": [
+        "events"
+      ]
+    },
+    {
+      "key": "probability_conditional",
+      "topic_key": "probability",
+      "label_en": "Conditional probability",
+      "label_fa": "احتمال شرطی",
+      "order": 3,
+      "concept_tags": [
+        "conditional_probability",
+        "event_intersection"
+      ],
+      "prerequisites": [
+        "classical_probability"
+      ]
+    },
+    {
+      "key": "probability_independence",
+      "topic_key": "probability",
+      "label_en": "Independent events",
+      "label_fa": "رویدادهای مستقل",
+      "order": 4,
+      "concept_tags": [
+        "event_independence",
+        "multiplication_rule"
+      ],
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "key": "probability_total_bayes",
+      "topic_key": "probability",
+      "label_en": "Total probability and Bayes",
+      "label_fa": "احتمال کل و بیز",
+      "order": 5,
+      "concept_tags": [
+        "total_probability",
+        "bayes_rule"
+      ],
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "key": "probability_counting",
+      "topic_key": "probability",
+      "label_en": "Combinatorial probability",
+      "label_fa": "احتمال با شمارش ترکیبی",
+      "order": 6,
+      "concept_tags": [
+        "combinatorial_probability",
+        "outcome_counting"
+      ],
+      "prerequisites": [
+        "combinations"
+      ]
+    },
+    {
+      "key": "probability_repeated_binomial",
+      "topic_key": "probability",
+      "label_en": "Repeated trials and binomial probability",
+      "label_fa": "آزمایش‌های تکراری و احتمال دوجمله‌ای",
+      "order": 7,
+      "concept_tags": [
+        "binomial_probability",
+        "repeated_trials"
+      ],
+      "prerequisites": [
+        "independent_events"
+      ]
+    },
+    {
+      "key": "probability_urn_sampling",
+      "topic_key": "probability",
+      "label_en": "Urns and sampling",
+      "label_fa": "ظرف، مهره و نمونه‌گیری",
+      "order": 8,
+      "concept_tags": [
+        "urn_models",
+        "sampling_probability"
+      ],
+      "prerequisites": [
+        "conditional_probability"
+      ]
+    },
+    {
+      "key": "probability_geometric_expectation",
+      "topic_key": "probability",
+      "label_en": "Geometric probability and expectation",
+      "label_fa": "احتمال هندسی و امید ریاضی",
+      "order": 9,
+      "concept_tags": [
+        "geometric_probability",
+        "expected_value"
+      ],
+      "prerequisites": [
+        "classical_probability"
+      ]
+    },
+    {
+      "key": "statistics_tables_frequencies",
+      "topic_key": "statistics",
+      "label_en": "Data tables and frequencies",
+      "label_fa": "جدول داده و فراوانی",
+      "order": 1,
+      "concept_tags": [
+        "frequency_tables",
+        "data_representation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "statistics_mean_weighted",
+      "topic_key": "statistics",
+      "label_en": "Mean and weighted mean",
+      "label_fa": "میانگین و میانگین وزنی",
+      "order": 2,
+      "concept_tags": [
+        "arithmetic_mean",
+        "weighted_mean"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "statistics_median_mode",
+      "topic_key": "statistics",
+      "label_en": "Median and mode",
+      "label_fa": "میانه و نما",
+      "order": 3,
+      "concept_tags": [
+        "median",
+        "mode"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "statistics_quartiles_percentiles",
+      "topic_key": "statistics",
+      "label_en": "Quartiles and percentiles",
+      "label_fa": "چارک و صدک",
+      "order": 4,
+      "concept_tags": [
+        "quartiles",
+        "percentiles"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "statistics_variance_std",
+      "topic_key": "statistics",
+      "label_en": "Variance and standard deviation",
+      "label_fa": "واریانس و انحراف معیار",
+      "order": 5,
+      "concept_tags": [
+        "variance",
+        "standard_deviation"
+      ],
+      "prerequisites": [
+        "arithmetic_mean"
+      ]
+    },
+    {
+      "key": "statistics_coefficient_variation",
+      "topic_key": "statistics",
+      "label_en": "Coefficient of variation",
+      "label_fa": "ضریب تغییرات",
+      "order": 6,
+      "concept_tags": [
+        "coefficient_of_variation",
+        "relative_dispersion"
+      ],
+      "prerequisites": [
+        "standard_deviation"
+      ]
+    },
+    {
+      "key": "statistics_transformations_combined",
+      "topic_key": "statistics",
+      "label_en": "Transformed and combined data",
+      "label_fa": "تبدیل و ترکیب داده‌ها",
+      "order": 7,
+      "concept_tags": [
+        "data_transformations",
+        "combined_statistics"
+      ],
+      "prerequisites": [
+        "mean",
+        "variance"
+      ]
+    },
+    {
+      "key": "statistics_charts_distributions",
+      "topic_key": "statistics",
+      "label_en": "Charts and distributions",
+      "label_fa": "نمودارها و توزیع داده",
+      "order": 8,
+      "concept_tags": [
+        "statistical_charts",
+        "distribution_shape"
+      ],
+      "prerequisites": [
+        "frequency_tables"
+      ]
+    },
+    {
+      "key": "physics_measurement_units_dimensions",
+      "topic_key": "physics_measurement",
+      "label_en": "Units and dimensions",
+      "label_fa": "یکا و ابعاد",
+      "order": 1,
+      "concept_tags": [
+        "si_units",
+        "dimensional_analysis"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "physics_measurement_scientific_notation",
+      "topic_key": "physics_measurement",
+      "label_en": "Scientific notation and scale",
+      "label_fa": "نماد علمی و مرتبهٔ بزرگی",
+      "order": 2,
+      "concept_tags": [
+        "scientific_notation",
+        "metric_prefixes"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "physics_measurement_precision",
+      "topic_key": "physics_measurement",
+      "label_en": "Precision and significant figures",
+      "label_fa": "دقت و ارقام معنادار",
+      "order": 3,
+      "concept_tags": [
+        "significant_figures",
+        "measurement_precision"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "physics_measurement_uncertainty",
+      "topic_key": "physics_measurement",
+      "label_en": "Uncertainty and error",
+      "label_fa": "عدم قطعیت و خطا",
+      "order": 4,
+      "concept_tags": [
+        "measurement_uncertainty",
+        "error_analysis"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "physics_measurement_instruments",
+      "topic_key": "physics_measurement",
+      "label_en": "Measurement instruments",
+      "label_fa": "ابزارهای اندازه‌گیری",
+      "order": 5,
+      "concept_tags": [
+        "instrument_reading",
+        "measurement_resolution"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "physics_measurement_density",
+      "topic_key": "physics_measurement",
+      "label_en": "Density",
+      "label_fa": "چگالی",
+      "order": 6,
+      "concept_tags": [
+        "density",
+        "mass_volume_relation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "physics_measurement_mixtures",
+      "topic_key": "physics_measurement",
+      "label_en": "Mixtures and density modeling",
+      "label_fa": "مخلوط‌ها و مدل‌سازی چگالی",
+      "order": 7,
+      "concept_tags": [
+        "mixture_density",
+        "volume_balance"
+      ],
+      "prerequisites": [
+        "density"
+      ]
+    },
+    {
+      "key": "physics_measurement_conversions_rates",
+      "topic_key": "physics_measurement",
+      "label_en": "Conversions and rates",
+      "label_fa": "تبدیل یکا و نرخ‌ها",
+      "order": 8,
+      "concept_tags": [
+        "unit_conversion",
+        "compound_units"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "physics_measurement_vectors_scalars",
+      "topic_key": "physics_measurement",
+      "label_en": "Vectors and scalars",
+      "label_fa": "کمیت‌های برداری و نرده‌ای",
+      "order": 9,
+      "concept_tags": [
+        "vectors_scalars",
+        "vector_components"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "matter_pressure_basics",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Pressure fundamentals",
+      "label_fa": "مبانی فشار",
+      "order": 1,
+      "concept_tags": [
+        "pressure",
+        "force_area"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "matter_hydrostatic_pressure",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Hydrostatic pressure",
+      "label_fa": "فشار شارهٔ ساکن",
+      "order": 2,
+      "concept_tags": [
+        "hydrostatic_pressure",
+        "depth_dependence"
+      ],
+      "prerequisites": [
+        "density"
+      ]
+    },
+    {
+      "key": "matter_manometers_atmosphere",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Manometers and atmospheric pressure",
+      "label_fa": "فشارسنج، مانومتر و فشار جو",
+      "order": 3,
+      "concept_tags": [
+        "manometers",
+        "gauge_absolute_pressure"
+      ],
+      "prerequisites": [
+        "hydrostatic_pressure"
+      ]
+    },
+    {
+      "key": "matter_pascal_hydraulics",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Pascal principle and hydraulics",
+      "label_fa": "اصل پاسکال و سامانه‌های هیدرولیکی",
+      "order": 4,
+      "concept_tags": [
+        "pascal_principle",
+        "hydraulic_systems"
+      ],
+      "prerequisites": [
+        "pressure"
+      ]
+    },
+    {
+      "key": "matter_buoyancy",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Buoyancy and Archimedes",
+      "label_fa": "شناوری و اصل ارشمیدس",
+      "order": 5,
+      "concept_tags": [
+        "buoyant_force",
+        "archimedes_principle"
+      ],
+      "prerequisites": [
+        "density"
+      ]
+    },
+    {
+      "key": "matter_continuity_flow",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Fluid continuity and flow",
+      "label_fa": "پیوستگی و شارش شاره",
+      "order": 6,
+      "concept_tags": [
+        "fluid_continuity",
+        "flow_rate"
+      ],
+      "prerequisites": [
+        "volume"
+      ]
+    },
+    {
+      "key": "matter_bernoulli",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Bernoulli principle",
+      "label_fa": "اصل برنولی",
+      "order": 7,
+      "concept_tags": [
+        "bernoulli_principle",
+        "flow_energy"
+      ],
+      "prerequisites": [
+        "fluid_continuity"
+      ]
+    },
+    {
+      "key": "matter_surface_capillarity",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Surface tension and capillarity",
+      "label_fa": "کشش سطحی و موئینگی",
+      "order": 8,
+      "concept_tags": [
+        "surface_tension",
+        "capillarity"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "matter_elasticity",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Elasticity and deformation",
+      "label_fa": "کشسانی و تغییر شکل",
+      "order": 9,
+      "concept_tags": [
+        "stress_strain",
+        "elastic_modulus"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "matter_molecular_states",
+      "topic_key": "physical_properties_matter",
+      "label_en": "Molecular properties and states",
+      "label_fa": "ویژگی مولکولی و حالت‌های ماده",
+      "order": 10,
+      "concept_tags": [
+        "molecular_interactions",
+        "states_of_matter"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "temperature_heat_scales_equilibrium",
+      "topic_key": "temperature_heat",
+      "label_en": "Temperature scales and equilibrium",
+      "label_fa": "مقیاس دما و تعادل گرمایی",
+      "order": 1,
+      "concept_tags": [
+        "temperature_scales",
+        "thermal_equilibrium"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "temperature_heat_linear_expansion",
+      "topic_key": "temperature_heat",
+      "label_en": "Linear expansion",
+      "label_fa": "انبساط طولی",
+      "order": 2,
+      "concept_tags": [
+        "linear_thermal_expansion",
+        "expansion_coefficient"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "temperature_heat_area_volume_expansion",
+      "topic_key": "temperature_heat",
+      "label_en": "Area and volume expansion",
+      "label_fa": "انبساط سطحی و حجمی",
+      "order": 3,
+      "concept_tags": [
+        "area_expansion",
+        "volume_expansion"
+      ],
+      "prerequisites": [
+        "linear_expansion"
+      ]
+    },
+    {
+      "key": "temperature_heat_density_expansion",
+      "topic_key": "temperature_heat",
+      "label_en": "Expansion and density",
+      "label_fa": "انبساط و تغییر چگالی",
+      "order": 4,
+      "concept_tags": [
+        "thermal_density_change",
+        "apparent_expansion"
+      ],
+      "prerequisites": [
+        "volume_expansion"
+      ]
+    },
+    {
+      "key": "temperature_heat_calorimetry",
+      "topic_key": "temperature_heat",
+      "label_en": "Heat capacity and calorimetry",
+      "label_fa": "ظرفیت گرمایی و گرماسنجی",
+      "order": 5,
+      "concept_tags": [
+        "specific_heat",
+        "calorimetry"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "temperature_heat_mixing",
+      "topic_key": "temperature_heat",
+      "label_en": "Thermal mixing",
+      "label_fa": "اختلاط گرمایی",
+      "order": 6,
+      "concept_tags": [
+        "thermal_mixing",
+        "energy_balance"
+      ],
+      "prerequisites": [
+        "calorimetry"
+      ]
+    },
+    {
+      "key": "temperature_heat_phase_change",
+      "topic_key": "temperature_heat",
+      "label_en": "Phase change and latent heat",
+      "label_fa": "تغییر فاز و گرمای نهان",
+      "order": 7,
+      "concept_tags": [
+        "latent_heat",
+        "phase_change"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "temperature_heat_transfer",
+      "topic_key": "temperature_heat",
+      "label_en": "Heat transfer",
+      "label_fa": "انتقال گرما",
+      "order": 8,
+      "concept_tags": [
+        "heat_transfer_modes",
+        "thermal_conductivity"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "temperature_heat_thermometry",
+      "topic_key": "temperature_heat",
+      "label_en": "Thermometry and calibration",
+      "label_fa": "دماسنجی و کالیبراسیون",
+      "order": 9,
+      "concept_tags": [
+        "thermometer_calibration",
+        "linear_scales"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_position_direction",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Position and direction",
+      "label_fa": "مکان و جهت حرکت",
+      "order": 1,
+      "concept_tags": [
+        "position",
+        "motion_direction"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_distance_displacement",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Distance and displacement",
+      "label_fa": "مسافت و جابه‌جایی",
+      "order": 2,
+      "concept_tags": [
+        "distance",
+        "displacement"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_average_speed",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Average speed",
+      "label_fa": "تندی متوسط",
+      "order": 3,
+      "concept_tags": [
+        "average_speed",
+        "distance_time"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_average_velocity",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Average velocity",
+      "label_fa": "سرعت متوسط",
+      "order": 4,
+      "concept_tags": [
+        "average_velocity",
+        "displacement_time"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_uniform",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Uniform motion",
+      "label_fa": "حرکت یکنواخت",
+      "order": 5,
+      "concept_tags": [
+        "uniform_motion",
+        "position_time_relation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_acceleration",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Constant acceleration",
+      "label_fa": "حرکت با شتاب ثابت",
+      "order": 6,
+      "concept_tags": [
+        "constant_acceleration",
+        "kinematic_equations"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_free_fall",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Free fall and vertical motion",
+      "label_fa": "سقوط آزاد و حرکت قائم",
+      "order": 7,
+      "concept_tags": [
+        "free_fall",
+        "vertical_kinematics"
+      ],
+      "prerequisites": [
+        "constant_acceleration"
+      ]
+    },
+    {
+      "key": "motion_1d_position_graphs",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Position-time graphs",
+      "label_fa": "نمودار مکان–زمان",
+      "order": 8,
+      "concept_tags": [
+        "position_time_graphs",
+        "graph_slope"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_velocity_graphs",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Velocity-time graphs",
+      "label_fa": "نمودار سرعت–زمان",
+      "order": 9,
+      "concept_tags": [
+        "velocity_time_graphs",
+        "graph_area"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_acceleration_graphs",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Acceleration-time graphs",
+      "label_fa": "نمودار شتاب–زمان",
+      "order": 10,
+      "concept_tags": [
+        "acceleration_time_graphs",
+        "velocity_change"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_relative",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Relative motion",
+      "label_fa": "حرکت نسبی",
+      "order": 11,
+      "concept_tags": [
+        "relative_motion",
+        "relative_velocity"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "motion_1d_multistage_chase",
+      "topic_key": "one_dimensional_motion",
+      "label_en": "Multi-stage and chase motion",
+      "label_fa": "حرکت چندمرحله‌ای و تعقیب",
+      "order": 12,
+      "concept_tags": [
+        "multi_stage_motion",
+        "meeting_problems"
+      ],
+      "prerequisites": [
+        "kinematic_equations"
+      ]
+    },
+    {
+      "key": "dynamics_newton_fbd",
+      "topic_key": "dynamics",
+      "label_en": "Newton laws and free-body diagrams",
+      "label_fa": "قوانین نیوتن و نمودار جسم آزاد",
+      "order": 1,
+      "concept_tags": [
+        "newton_laws",
+        "free_body_diagrams"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "dynamics_friction_horizontal",
+      "topic_key": "dynamics",
+      "label_en": "Friction on horizontal surfaces",
+      "label_fa": "اصطکاک روی سطح افقی",
+      "order": 2,
+      "concept_tags": [
+        "friction",
+        "normal_force"
+      ],
+      "prerequisites": [
+        "newton_laws"
+      ]
+    },
+    {
+      "key": "dynamics_inclined_planes",
+      "topic_key": "dynamics",
+      "label_en": "Inclined planes",
+      "label_fa": "سطح شیبدار",
+      "order": 3,
+      "concept_tags": [
+        "inclined_plane_dynamics",
+        "force_components"
+      ],
+      "prerequisites": [
+        "newton_laws"
+      ]
+    },
+    {
+      "key": "dynamics_connected_bodies",
+      "topic_key": "dynamics",
+      "label_en": "Connected bodies and tension",
+      "label_fa": "اجسام متصل و کشش نخ",
+      "order": 4,
+      "concept_tags": [
+        "connected_body_dynamics",
+        "tension"
+      ],
+      "prerequisites": [
+        "free_body_diagrams"
+      ]
+    },
+    {
+      "key": "dynamics_elevator_weight",
+      "topic_key": "dynamics",
+      "label_en": "Elevators and apparent weight",
+      "label_fa": "آسانسور و وزن ظاهری",
+      "order": 5,
+      "concept_tags": [
+        "apparent_weight",
+        "elevator_dynamics"
+      ],
+      "prerequisites": [
+        "newton_laws"
+      ]
+    },
+    {
+      "key": "dynamics_springs",
+      "topic_key": "dynamics",
+      "label_en": "Springs and Hooke law",
+      "label_fa": "فنر و قانون هوک",
+      "order": 6,
+      "concept_tags": [
+        "hooke_law",
+        "spring_force"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "dynamics_circular",
+      "topic_key": "dynamics",
+      "label_en": "Circular dynamics",
+      "label_fa": "دینامیک حرکت دایره‌ای",
+      "order": 7,
+      "concept_tags": [
+        "centripetal_dynamics",
+        "circular_motion"
+      ],
+      "prerequisites": [
+        "newton_laws"
+      ]
+    },
+    {
+      "key": "dynamics_drag_terminal",
+      "topic_key": "dynamics",
+      "label_en": "Drag and terminal speed",
+      "label_fa": "نیروی مقاومت و تندی حدی",
+      "order": 8,
+      "concept_tags": [
+        "drag_force",
+        "terminal_speed"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "dynamics_momentum_impulse",
+      "topic_key": "dynamics",
+      "label_en": "Momentum and impulse",
+      "label_fa": "تکانه و ضربه",
+      "order": 9,
+      "concept_tags": [
+        "momentum",
+        "impulse"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "dynamics_equilibrium_force_graphs",
+      "topic_key": "dynamics",
+      "label_en": "Equilibrium and force graphs",
+      "label_fa": "تعادل و نمودار نیرو",
+      "order": 10,
+      "concept_tags": [
+        "force_equilibrium",
+        "force_graphs"
+      ],
+      "prerequisites": [
+        "newton_laws"
+      ]
+    },
+    {
+      "key": "work_energy_work",
+      "topic_key": "work_energy_power",
+      "label_en": "Work by forces",
+      "label_fa": "کار نیروها",
+      "order": 1,
+      "concept_tags": [
+        "mechanical_work",
+        "force_displacement"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "work_energy_theorem",
+      "topic_key": "work_energy_power",
+      "label_en": "Work-energy theorem",
+      "label_fa": "قضیهٔ کار و انرژی",
+      "order": 2,
+      "concept_tags": [
+        "work_energy_theorem",
+        "kinetic_energy"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "work_energy_potential",
+      "topic_key": "work_energy_power",
+      "label_en": "Kinetic and potential energy",
+      "label_fa": "انرژی جنبشی و پتانسیل",
+      "order": 3,
+      "concept_tags": [
+        "kinetic_energy",
+        "potential_energy"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "work_energy_conservation",
+      "topic_key": "work_energy_power",
+      "label_en": "Mechanical-energy conservation",
+      "label_fa": "پایستگی انرژی مکانیکی",
+      "order": 4,
+      "concept_tags": [
+        "mechanical_energy_conservation",
+        "energy_transfer"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "work_energy_springs",
+      "topic_key": "work_energy_power",
+      "label_en": "Elastic energy",
+      "label_fa": "انرژی کشسانی",
+      "order": 5,
+      "concept_tags": [
+        "elastic_potential_energy",
+        "spring_work"
+      ],
+      "prerequisites": [
+        "hooke_law"
+      ]
+    },
+    {
+      "key": "work_energy_power_efficiency",
+      "topic_key": "work_energy_power",
+      "label_en": "Power and efficiency",
+      "label_fa": "توان و بازده",
+      "order": 6,
+      "concept_tags": [
+        "power",
+        "efficiency"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "work_energy_dissipation",
+      "topic_key": "work_energy_power",
+      "label_en": "Friction and energy loss",
+      "label_fa": "اصطکاک و اتلاف انرژی",
+      "order": 7,
+      "concept_tags": [
+        "energy_dissipation",
+        "nonconservative_work"
+      ],
+      "prerequisites": [
+        "energy_conservation"
+      ]
+    },
+    {
+      "key": "work_energy_graphs",
+      "topic_key": "work_energy_power",
+      "label_en": "Energy and work graphs",
+      "label_fa": "نمودارهای کار و انرژی",
+      "order": 8,
+      "concept_tags": [
+        "energy_graphs",
+        "work_from_graphs"
+      ],
+      "prerequisites": [
+        "graph_area"
+      ]
+    },
+    {
+      "key": "work_energy_multibody",
+      "topic_key": "work_energy_power",
+      "label_en": "Multi-body energy systems",
+      "label_fa": "سامانه‌های چندجسمی انرژی",
+      "order": 9,
+      "concept_tags": [
+        "system_energy",
+        "multi_body_modeling"
+      ],
+      "prerequisites": [
+        "energy_conservation"
+      ]
+    },
+    {
+      "key": "electrostatics_charge_coulomb",
+      "topic_key": "electrostatics",
+      "label_en": "Charge and Coulomb law",
+      "label_fa": "بار الکتریکی و قانون کولن",
+      "order": 1,
+      "concept_tags": [
+        "electric_charge",
+        "coulomb_law"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "electrostatics_field",
+      "topic_key": "electrostatics",
+      "label_en": "Electric field",
+      "label_fa": "میدان الکتریکی",
+      "order": 2,
+      "concept_tags": [
+        "electric_field",
+        "point_charge_field"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "electrostatics_field_superposition",
+      "topic_key": "electrostatics",
+      "label_en": "Field superposition",
+      "label_fa": "برهم‌نهی میدان",
+      "order": 3,
+      "concept_tags": [
+        "electric_field_superposition",
+        "vector_addition"
+      ],
+      "prerequisites": [
+        "electric_field"
+      ]
+    },
+    {
+      "key": "electrostatics_equilibrium",
+      "topic_key": "electrostatics",
+      "label_en": "Electrostatic equilibrium",
+      "label_fa": "تعادل الکتروستاتیکی",
+      "order": 4,
+      "concept_tags": [
+        "electrostatic_equilibrium",
+        "zero_field_points"
+      ],
+      "prerequisites": [
+        "coulomb_law"
+      ]
+    },
+    {
+      "key": "electrostatics_potential",
+      "topic_key": "electrostatics",
+      "label_en": "Electric potential",
+      "label_fa": "پتانسیل الکتریکی",
+      "order": 5,
+      "concept_tags": [
+        "electric_potential",
+        "potential_difference"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "electrostatics_energy_work",
+      "topic_key": "electrostatics",
+      "label_en": "Potential energy and work",
+      "label_fa": "انرژی پتانسیل و کار الکتریکی",
+      "order": 6,
+      "concept_tags": [
+        "electric_potential_energy",
+        "electric_work"
+      ],
+      "prerequisites": [
+        "electric_potential"
+      ]
+    },
+    {
+      "key": "electrostatics_conductors",
+      "topic_key": "electrostatics",
+      "label_en": "Conductors and induction",
+      "label_fa": "رساناها و القای الکتریکی",
+      "order": 7,
+      "concept_tags": [
+        "conductors",
+        "electrostatic_induction"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "electrostatics_capacitance",
+      "topic_key": "electrostatics",
+      "label_en": "Capacitance and capacitor networks",
+      "label_fa": "ظرفیت و شبکهٔ خازن‌ها",
+      "order": 8,
+      "concept_tags": [
+        "capacitance",
+        "capacitor_networks"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "electrostatics_capacitor_energy",
+      "topic_key": "electrostatics",
+      "label_en": "Capacitor energy and dielectrics",
+      "label_fa": "انرژی خازن و دی‌الکتریک",
+      "order": 9,
+      "concept_tags": [
+        "capacitor_energy",
+        "dielectrics"
+      ],
+      "prerequisites": [
+        "capacitance"
+      ]
+    },
+    {
+      "key": "electrostatics_charge_sharing",
+      "topic_key": "electrostatics",
+      "label_en": "Charge sharing",
+      "label_fa": "اشتراک و بازتوزیع بار",
+      "order": 10,
+      "concept_tags": [
+        "charge_sharing",
+        "potential_equalization"
+      ],
+      "prerequisites": [
+        "capacitance"
+      ]
+    },
+    {
+      "key": "current_charge_flow",
+      "topic_key": "current_electricity",
+      "label_en": "Current and charge flow",
+      "label_fa": "جریان و شارش بار",
+      "order": 1,
+      "concept_tags": [
+        "electric_current",
+        "charge_flow"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "current_resistance_resistivity",
+      "topic_key": "current_electricity",
+      "label_en": "Resistance and resistivity",
+      "label_fa": "مقاومت و مقاومت ویژه",
+      "order": 2,
+      "concept_tags": [
+        "resistance",
+        "resistivity"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "current_ohm_law",
+      "topic_key": "current_electricity",
+      "label_en": "Ohm law and I-V behavior",
+      "label_fa": "قانون اهم و مشخصهٔ جریان–ولتاژ",
+      "order": 3,
+      "concept_tags": [
+        "ohm_law",
+        "current_voltage_graphs"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "current_series_parallel",
+      "topic_key": "current_electricity",
+      "label_en": "Series and parallel circuits",
+      "label_fa": "مدارهای سری و موازی",
+      "order": 4,
+      "concept_tags": [
+        "series_parallel_circuits",
+        "equivalent_resistance"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "current_kirchhoff",
+      "topic_key": "current_electricity",
+      "label_en": "Kirchhoff circuit analysis",
+      "label_fa": "تحلیل مدار با قوانین کیرشهف",
+      "order": 5,
+      "concept_tags": [
+        "kirchhoff_laws",
+        "circuit_equations"
+      ],
+      "prerequisites": [
+        "ohm_law"
+      ]
+    },
+    {
+      "key": "current_battery_internal",
+      "topic_key": "current_electricity",
+      "label_en": "Batteries and internal resistance",
+      "label_fa": "باتری و مقاومت داخلی",
+      "order": 6,
+      "concept_tags": [
+        "emf",
+        "internal_resistance"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "current_meters",
+      "topic_key": "current_electricity",
+      "label_en": "Ammeters and voltmeters",
+      "label_fa": "آمپرسنج و ولت‌سنج",
+      "order": 7,
+      "concept_tags": [
+        "ammeters",
+        "voltmeters"
+      ],
+      "prerequisites": [
+        "series_parallel_circuits"
+      ]
+    },
+    {
+      "key": "current_power_energy",
+      "topic_key": "current_electricity",
+      "label_en": "Electrical power and energy",
+      "label_fa": "توان و انرژی الکتریکی",
+      "order": 8,
+      "concept_tags": [
+        "electrical_power",
+        "electrical_energy"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "current_rheostat_switching",
+      "topic_key": "current_electricity",
+      "label_en": "Rheostats and circuit switching",
+      "label_fa": "رئوستا و تغییر آرایش مدار",
+      "order": 9,
+      "concept_tags": [
+        "rheostats",
+        "circuit_switching"
+      ],
+      "prerequisites": [
+        "series_parallel_circuits"
+      ]
+    },
+    {
+      "key": "current_maximum_power",
+      "topic_key": "current_electricity",
+      "label_en": "Maximum-power transfer",
+      "label_fa": "بیشینهٔ توان دریافتی",
+      "order": 10,
+      "concept_tags": [
+        "maximum_power_transfer",
+        "load_matching"
+      ],
+      "prerequisites": [
+        "internal_resistance"
+      ]
+    },
+    {
+      "key": "magnetism_field_sources",
+      "topic_key": "magnetism_induction",
+      "label_en": "Magnetic fields and sources",
+      "label_fa": "میدان مغناطیسی و چشمه‌های آن",
+      "order": 1,
+      "concept_tags": [
+        "magnetic_fields",
+        "field_sources"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "magnetism_force_charge",
+      "topic_key": "magnetism_induction",
+      "label_en": "Force on moving charges",
+      "label_fa": "نیرو بر بار متحرک",
+      "order": 2,
+      "concept_tags": [
+        "magnetic_force_on_charge",
+        "lorentz_force"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "magnetism_force_wire",
+      "topic_key": "magnetism_induction",
+      "label_en": "Force on current-carrying wires",
+      "label_fa": "نیرو بر سیم حامل جریان",
+      "order": 3,
+      "concept_tags": [
+        "magnetic_force_on_wire",
+        "current_interaction"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "magnetism_torque_loop",
+      "topic_key": "magnetism_induction",
+      "label_en": "Torque on current loops",
+      "label_fa": "گشتاور حلقهٔ جریان",
+      "order": 4,
+      "concept_tags": [
+        "magnetic_torque",
+        "magnetic_dipole"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "magnetism_particle_motion",
+      "topic_key": "magnetism_induction",
+      "label_en": "Charged-particle motion",
+      "label_fa": "حرکت ذرهٔ باردار در میدان",
+      "order": 5,
+      "concept_tags": [
+        "charged_particle_motion",
+        "magnetic_radius"
+      ],
+      "prerequisites": [
+        "magnetic_force_on_charge"
+      ]
+    },
+    {
+      "key": "magnetism_flux",
+      "topic_key": "magnetism_induction",
+      "label_en": "Magnetic flux",
+      "label_fa": "شار مغناطیسی",
+      "order": 6,
+      "concept_tags": [
+        "magnetic_flux",
+        "area_vector"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "magnetism_faraday_lenz",
+      "topic_key": "magnetism_induction",
+      "label_en": "Faraday and Lenz laws",
+      "label_fa": "قوانین فاراده و لنز",
+      "order": 7,
+      "concept_tags": [
+        "faraday_law",
+        "lenz_law"
+      ],
+      "prerequisites": [
+        "magnetic_flux"
+      ]
+    },
+    {
+      "key": "magnetism_motional_emf",
+      "topic_key": "magnetism_induction",
+      "label_en": "Motional emf",
+      "label_fa": "نیروی محرکهٔ القایی حرکتی",
+      "order": 8,
+      "concept_tags": [
+        "motional_emf",
+        "magnetic_force"
+      ],
+      "prerequisites": [
+        "faraday_law"
+      ]
+    },
+    {
+      "key": "magnetism_inductance",
+      "topic_key": "magnetism_induction",
+      "label_en": "Inductance",
+      "label_fa": "خودالقایی و القای متقابل",
+      "order": 9,
+      "concept_tags": [
+        "inductance",
+        "inductor_energy"
+      ],
+      "prerequisites": [
+        "faraday_law"
+      ]
+    },
+    {
+      "key": "magnetism_ac_transformers",
+      "topic_key": "magnetism_induction",
+      "label_en": "Alternating current and transformers",
+      "label_fa": "جریان متناوب و ترانسفورماتور",
+      "order": 10,
+      "concept_tags": [
+        "alternating_current",
+        "transformers"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_shm_kinematics",
+      "topic_key": "oscillation_waves",
+      "label_en": "SHM kinematics",
+      "label_fa": "سینماتیک نوسان هماهنگ ساده",
+      "order": 1,
+      "concept_tags": [
+        "shm_kinematics",
+        "phase_amplitude"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_shm_energy",
+      "topic_key": "oscillation_waves",
+      "label_en": "SHM energy",
+      "label_fa": "انرژی در نوسان هماهنگ ساده",
+      "order": 2,
+      "concept_tags": [
+        "shm_energy",
+        "energy_exchange"
+      ],
+      "prerequisites": [
+        "simple_harmonic_motion"
+      ]
+    },
+    {
+      "key": "waves_springs",
+      "topic_key": "oscillation_waves",
+      "label_en": "Spring oscillators",
+      "label_fa": "نوسانگرهای فنری",
+      "order": 3,
+      "concept_tags": [
+        "spring_oscillators",
+        "spring_period"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_pendulum",
+      "topic_key": "oscillation_waves",
+      "label_en": "Pendulums",
+      "label_fa": "آونگ",
+      "order": 4,
+      "concept_tags": [
+        "pendulums",
+        "pendulum_period"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_properties_equation",
+      "topic_key": "oscillation_waves",
+      "label_en": "Wave properties and equations",
+      "label_fa": "ویژگی‌ها و معادلهٔ موج",
+      "order": 5,
+      "concept_tags": [
+        "wave_equation",
+        "wave_properties"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_speed_strings",
+      "topic_key": "oscillation_waves",
+      "label_en": "Wave speed and strings",
+      "label_fa": "تندی موج و موج روی تار",
+      "order": 6,
+      "concept_tags": [
+        "wave_speed",
+        "waves_on_strings"
+      ],
+      "prerequisites": [
+        "wave_equation"
+      ]
+    },
+    {
+      "key": "waves_electromagnetic",
+      "topic_key": "oscillation_waves",
+      "label_en": "Electromagnetic waves",
+      "label_fa": "موج‌های الکترومغناطیسی",
+      "order": 7,
+      "concept_tags": [
+        "electromagnetic_waves",
+        "electromagnetic_spectrum"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_superposition_standing",
+      "topic_key": "oscillation_waves",
+      "label_en": "Superposition and standing waves",
+      "label_fa": "برهم‌نهی و موج ایستاده",
+      "order": 8,
+      "concept_tags": [
+        "wave_superposition",
+        "standing_waves"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_sound_intensity",
+      "topic_key": "oscillation_waves",
+      "label_en": "Sound and intensity",
+      "label_fa": "صوت و شدت",
+      "order": 9,
+      "concept_tags": [
+        "sound_intensity",
+        "decibel_scale"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_resonance",
+      "topic_key": "oscillation_waves",
+      "label_en": "Resonance",
+      "label_fa": "تشدید",
+      "order": 10,
+      "concept_tags": [
+        "resonance",
+        "natural_frequency"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_reflection",
+      "topic_key": "oscillation_waves",
+      "label_en": "Wave reflection",
+      "label_fa": "بازتاب موج و نور",
+      "order": 11,
+      "concept_tags": [
+        "wave_reflection",
+        "echo"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_refraction",
+      "topic_key": "oscillation_waves",
+      "label_en": "Refraction and Snell law",
+      "label_fa": "شکست و قانون اسنل",
+      "order": 12,
+      "concept_tags": [
+        "wave_refraction",
+        "snell_law"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_refraction_geometry",
+      "topic_key": "oscillation_waves",
+      "label_en": "Refraction geometry",
+      "label_fa": "هندسهٔ شکست نور",
+      "order": 13,
+      "concept_tags": [
+        "refraction_geometry",
+        "ray_tracing"
+      ],
+      "prerequisites": [
+        "snell_law"
+      ]
+    },
+    {
+      "key": "waves_lenses_mirrors",
+      "topic_key": "oscillation_waves",
+      "label_en": "Lenses and mirrors",
+      "label_fa": "عدسی و آینه",
+      "order": 14,
+      "concept_tags": [
+        "geometric_optics",
+        "image_formation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_interference_diffraction",
+      "topic_key": "oscillation_waves",
+      "label_en": "Interference and diffraction",
+      "label_fa": "تداخل و پراش",
+      "order": 15,
+      "concept_tags": [
+        "wave_interference",
+        "diffraction"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "waves_doppler_echo",
+      "topic_key": "oscillation_waves",
+      "label_en": "Doppler effect and echo",
+      "label_fa": "اثر دوپلر و پژواک",
+      "order": 16,
+      "concept_tags": [
+        "doppler_effect",
+        "echo_timing"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_photons_photoelectric",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Photons and photoelectric effect",
+      "label_fa": "فوتون و اثر فوتوالکتریک",
+      "order": 1,
+      "concept_tags": [
+        "photons",
+        "photoelectric_effect"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_spectra",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Atomic spectra",
+      "label_fa": "طیف‌های اتمی",
+      "order": 2,
+      "concept_tags": [
+        "atomic_spectra",
+        "rydberg_relation"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_bohr_model",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Bohr model",
+      "label_fa": "مدل اتمی بور",
+      "order": 3,
+      "concept_tags": [
+        "bohr_model",
+        "hydrogen_atom"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_energy_transitions",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Energy levels and transitions",
+      "label_fa": "تراز انرژی و گذارها",
+      "order": 4,
+      "concept_tags": [
+        "atomic_energy_levels",
+        "photon_transitions"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_wave_particle",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Wave-particle duality",
+      "label_fa": "دوگانگی موج–ذره",
+      "order": 5,
+      "concept_tags": [
+        "wave_particle_duality",
+        "de_broglie_wavelength"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_radioactivity",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Radioactive decay",
+      "label_fa": "واپاشی پرتوزا",
+      "order": 6,
+      "concept_tags": [
+        "radioactive_decay",
+        "half_life"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_nuclear_reactions",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Nuclear reactions",
+      "label_fa": "واکنش‌های هسته‌ای",
+      "order": 7,
+      "concept_tags": [
+        "nuclear_reactions",
+        "conservation_laws"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_binding_energy",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Mass defect and binding energy",
+      "label_fa": "کاستی جرم و انرژی بستگی",
+      "order": 8,
+      "concept_tags": [
+        "mass_defect",
+        "nuclear_binding_energy"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_fission_fusion",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Fission and fusion",
+      "label_fa": "شکافت و همجوشی",
+      "order": 9,
+      "concept_tags": [
+        "nuclear_fission",
+        "nuclear_fusion"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_nuclear_stability",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Nuclear stability",
+      "label_fa": "پایداری هسته",
+      "order": 10,
+      "concept_tags": [
+        "nuclear_stability",
+        "isotopes"
+      ],
+      "prerequisites": []
+    },
+    {
+      "key": "atomic_relativity",
+      "topic_key": "atomic_nuclear",
+      "label_en": "Special relativity",
+      "label_fa": "نسبیت خاص",
+      "order": 11,
+      "concept_tags": [
+        "special_relativity",
+        "mass_energy_equivalence"
+      ],
+      "prerequisites": []
+    }
+  ]
 }

@@ -33,7 +33,7 @@ void main() {
       });
       await tester.binding.setSurfaceSize(const Size(411, 820));
       addTearDown(() => tester.binding.setSurfaceSize(null));
-      await controller.initialize();
+      await tester.runAsync(controller.initialize);
 
       await tester.pumpWidget(
         MaterialApp(
@@ -47,9 +47,9 @@ void main() {
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 400));
 
-      expect(find.text('CURRENT STUDY'), findsOneWidget);
+      expect(find.text('CURRENT MISSION'), findsOneWidget);
       expect(
-        find.bySemanticsLabel(RegExp(r'^CURRENT STUDY\.')),
+        find.bySemanticsLabel(RegExp(r'^CURRENT MISSION\.')),
         findsOneWidget,
       );
       expect(
@@ -58,11 +58,14 @@ void main() {
         reason:
             'distant landmark art must not compete with the first map frame',
       );
-      await tester.tap(find.byKey(const ValueKey('map-node-sets:20:20')));
+      await tester.tap(find.byKey(const ValueKey('map-node-sets:5:5')));
       await tester.pumpAndSettle();
 
-      expect(find.text('SELECTED SET'), findsOneWidget);
-      expect(find.bySemanticsLabel(RegExp(r'^SELECTED SET\.')), findsOneWidget);
+      expect(find.text('SELECTED LESSON'), findsOneWidget);
+      expect(
+        find.bySemanticsLabel(RegExp(r'^SELECTED LESSON\.')),
+        findsOneWidget,
+      );
 
       final routeScroll = find.byKey(const ValueKey('map-study-path-scroll'));
       final scrollable = find.descendant(
@@ -89,7 +92,6 @@ void main() {
       );
 
       semantics.dispose();
-      expect(find.text('Study'), findsOneWidget);
       expect(tester.takeException(), isNull);
     },
   );
