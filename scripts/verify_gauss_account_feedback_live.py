@@ -158,8 +158,8 @@ def run() -> dict[str, object]:
         if not isinstance(channel_rows, list) or len(channel_rows) != 1:
             raise ProofError("Authenticated content channel did not resolve.")
         release_id = channel_rows[0]["release_id"]
-        _, payload_rows = json_request(
-            f"{url}/rest/v1/rpc/gauss_release_payload",
+        _, manifest_rows = json_request(
+            f"{url}/rest/v1/rpc/gauss_release_manifest",
             method="POST",
             headers=owner_headers,
             value={
@@ -168,8 +168,80 @@ def run() -> dict[str, object]:
                 "p_limit": 2,
             },
         )
-        if not isinstance(payload_rows, list) or len(payload_rows) != 2:
-            raise ProofError("Authenticated content payload did not page exactly.")
+        if (
+            not isinstance(manifest_rows, list)
+            or len(manifest_rows) != 2
+            or any("payload" in row for row in manifest_rows)
+            or [row.get("ordinal") for row in manifest_rows] != [0, 1]
+        ):
+            raise ProofError("Authenticated content manifest did not page exactly.")
+        requested_ids = [row.get("question_id") for row in manifest_rows]
+        requested_revisions = [row.get("revision") for row in manifest_rows]
+        if not all(isinstance(value, str) for value in requested_ids) or not all(
+            isinstance(value, int) for value in requested_revisions
+        ):
+            raise ProofError("Content manifest returned malformed identities.")
+        _, payload_rows = json_request(
+            f"{url}/rest/v1/rpc/gauss_release_payload_batch",
+            method="POST",
+            headers=owner_headers,
+            value={
+                "p_release_id": release_id,
+                "p_question_ids": requested_ids,
+                "p_revisions": requested_revisions,
+            },
+        )
+        if (
+            not isinstance(payload_rows, list)
+            or len(payload_rows) != 2
+            or [row.get("question_id") for row in payload_rows] != requested_ids
+            or [row.get("revision") for row in payload_rows] != requested_revisions
+            or any(not isinstance(row.get("payload"), dict) for row in payload_rows)
+        ):
+            raise ProofError("Authenticated delta payload did not bind exactly.")
+
+        _, artifact_manifest_raw = request(
+            f"{url}/rest/v1/gauss_content_artifacts"
+            f"?select=kind,sha256&release_id=eq.{urllib.parse.quote(release_id)}"
+            "&order=kind.asc",
+            method="GET",
+            headers=owner_headers,
+        )
+        artifact_manifest = json.loads(artifact_manifest_raw)
+        if (
+            not isinstance(artifact_manifest, list)
+            or len(artifact_manifest) != 4
+            or any("payload" in row for row in artifact_manifest)
+        ):
+            raise ProofError("Authenticated artifact manifest did not reconcile.")
+        requested_kind = artifact_manifest[0].get("kind")
+        requested_artifact_hash = artifact_manifest[0].get("sha256")
+        _, artifact_payloads = json_request(
+            f"{url}/rest/v1/rpc/gauss_release_artifact_payloads",
+            method="POST",
+            headers=owner_headers,
+            value={"p_release_id": release_id, "p_kinds": [requested_kind]},
+        )
+        if (
+            not isinstance(artifact_payloads, list)
+            or len(artifact_payloads) != 1
+            or artifact_payloads[0].get("kind") != requested_kind
+            or artifact_payloads[0].get("sha256") != requested_artifact_hash
+            or not isinstance(artifact_payloads[0].get("payload"), dict)
+        ):
+            raise ProofError("Authenticated artifact delta did not bind exactly.")
+
+        anonymous_delta_status, _ = json_request(
+            f"{url}/rest/v1/rpc/gauss_release_manifest",
+            method="POST",
+            headers=auth_headers(key, key),
+            value={
+                "p_release_id": release_id,
+                "p_offset": 0,
+                "p_limit": 1,
+            },
+            expected={401, 403, 404},
+        )
 
         report_id = f"fb_{datetime.now(timezone.utc).timestamp():.6f}".replace(".", "_")
         uploaded_path = f"{owner_id}/{report_id}.png"
@@ -272,7 +344,11 @@ def run() -> dict[str, object]:
         return {
             "temporary_accounts": 2,
             "content_release": release_id,
-            "content_page_rows": len(payload_rows),
+            "content_manifest_rows": len(manifest_rows),
+            "content_delta_payload_rows": len(payload_rows),
+            "artifact_manifest_rows": len(artifact_manifest),
+            "artifact_delta_payload_rows": len(artifact_payloads),
+            "anonymous_delta_status": anonymous_delta_status,
             "owner_feedback_rows": len(owner_rows),
             "cross_account_feedback_rows": len(other_rows),
             "cross_account_insert_rejected": True,

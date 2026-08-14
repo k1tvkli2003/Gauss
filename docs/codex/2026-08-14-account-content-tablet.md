@@ -45,6 +45,12 @@ and landscape first-class Android targets rather than enlarged phone layouts.
 - Added the authenticated `gauss_release_payload` RPC with explicit bounded
   pagination. Live proof at offset 500 returned exactly ordinals 500 and 501;
   anonymous access remains denied.
+- Added migration `202608140005_gauss_content_manifest_delta.sql`: Android now
+  reads a hash-only question manifest in bounded 500-row pages, reuses every
+  exact local `(id, revision, metadata, SHA-256)` match, and requests only cache
+  misses in ordered batches of at most 250. Release artifacts use the same
+  hash-first contract, so an unchanged five-question plan, certification
+  runtime, index, or media manifest is not downloaded again.
 - Published `gauss-2026.08.14.1` to `android-stable`: 3672 stable questions,
   29 topics, four hash-bound artifacts, minimum app build 90, and corpus SHA-256
   `af918908bd86f219ef27865f593eedb152359c0e9825a1319a9c3723badb2966`.
@@ -64,11 +70,13 @@ and landscape first-class Android targets rather than enlarged phone layouts.
   client checks the named channel and atomically activates a verified release.
   Stable question ids preserve the identity used by progress, reports, and
   future revisions while the served revision remains explicit.
-- Precision boundary: Supabase storage/publishing is revision-delta today, but
-  the current Android refresh still downloads the complete question payload of
-  a changed release before activation. A manifest-first client payload cache is
-  still required before claiming network-delta refreshes. This limitation does
-  not affect APK independence, stable identity, rollback, or offline reuse.
+- Content refresh traffic is now genuinely manifest-first and payload-delta.
+  A deterministic real-corpus budget compares uncompressed RPC-equivalent JSON
+  and requires a one-question update, including both question and artifact
+  manifests, to remain below 15% of a complete payload refresh. This is a
+  conservative application-payload gate, not a claim about compressed carrier
+  bytes. Every reused and downloaded row is still reconciled into the complete
+  corpus SHA before atomic activation.
 
 ## Account-bound feedback and private export
 
@@ -140,13 +148,16 @@ and landscape first-class Android targets rather than enlarged phone layouts.
 ## Verification
 
 - `flutter analyze --no-pub`: no issues across the complete project.
-- `flutter test --no-pub`: 223 passed, one intentional benchmark skip.
+- `flutter test --no-pub`: 229 passed, one intentional benchmark skip.
 - Focused Auth matrix: 7/7 passed at 320x760 phone, 800x1280 tablet portrait,
   1280x800 tablet landscape, 100% and 200% text, plus landscape keyboard inset.
 - Account and backup isolation: 9/9 passed.
-- Content release store: 5/5 passed, including atomic activation, offline
+- Content release store: 10/10 passed, including atomic activation, offline
   reopen, corrupt-newer rollback, minimum-build fallback, unsafe-path rejection,
-  and exact 3672-row receipt reconciliation.
+  first-install reuse from bundled assets, one-question payload selection,
+  incomplete-delta rollback, a safe legacy fallback only when the new RPC is
+  genuinely unavailable, the <15% real-corpus transfer budget, and exact
+  3672-row receipt reconciliation.
 - Content publisher: 2/2 Python tests passed; deterministic dry-run reproduced
   the published question/topic counts and corpus hash. Focused Flutter analysis
   over the content/auth integration is clean.
@@ -158,10 +169,23 @@ and landscape first-class Android targets rather than enlarged phone layouts.
   cross-account row 0, cross-account insert rejected, owner PNG round-trip
   true, cross-account PNG read rejected. Post-proof audit found zero temporary
   users, reports, or Storage objects.
+- Migration 005 was applied through the checksum ledger with SHA-256
+  `d6d21d8864f9e637e642bd88e27ff214be3a0ffa7abfaeacfc7830da690082ce`.
+  The refreshed live proof returned two ordered hash-only question descriptors,
+  two exactly bound requested payloads, four artifact descriptors, and one
+  requested artifact payload; the anonymous delta call was rejected with 401.
+  Both temporary accounts and all proof artifacts were removed afterward.
 - Debug APK build 130 installed beside the untouched personal package.
-- Final production-entry debug APK build 140 compiled from `lib/main.dart` at
+- Earlier production-entry debug APK build 140 compiled from `lib/main.dart` at
   250,695,702 bytes with SHA-256
   `305ef5e6eeb58183ad66e2708663d1666e80545d10a3f488a5adaf3653556210`.
+- Manifest-delta production-entry debug APK build 141 compiled from
+  `lib/main.dart`, installed as isolated `com.gauss.app.debug`, and launched on
+  the 2560x1600 tablet emulator. It is 250,711,014 bytes with SHA-256
+  `5f867b22ed1a1df999a32d7dba91cbb28bdadb7a3969f49f52473811038b5f70`.
+  Fresh launch logs contained no FlutterError, RenderFlex, fatal exception, or
+  AndroidRuntime crash; `.codex-tmp/gauss_main_141.png` records the real Auth
+  surface. No command targeted the personal `com.gauss.app` application id.
 - Visual QA APK build 139 installed as `com.gauss.app.debug`; the signed
   `com.gauss.app` package and its data were not replaced.
 - A dedicated `Gauss_Tablet_API35` Pixel Tablet AVD was created with a real
@@ -190,18 +214,14 @@ and landscape first-class Android targets rather than enlarged phone layouts.
 
 ## Remaining release gates
 
-1. Exercise the authenticated remote download through the real Android app
-   after the signup throttle window is available, then prove offline relaunch
-   from the activated cache. Media remains bundled and hash-bound in this
-   release; a future release that introduces new media needs a reviewed Storage
-   delivery lane.
-2. Add the manifest-first revision cache before describing Android content
-   refresh traffic itself as delta-sized; the current server/publisher already
-   reuses unchanged revisions and content updates already avoid APK releases.
-3. Complete the remaining physical-device matrix: Xiaomi Focus Pen hover/button
+1. Exercise the authenticated manifest/delta path through the real Android app,
+   then prove offline relaunch from its activated cache. Existing media remains
+   bundled and hash-bound; a future release that introduces new media still
+   needs a reviewed Storage delivery lane.
+2. Complete the remaining physical-device matrix: Xiaomi Focus Pen hover/button
    behavior cannot be proven by the Android emulator, and process-death plus
    authenticated offline relaunch still need final device evidence.
-4. Continue the Critics/Perfect pass over secondary sheets and completion
+3. Continue the Critics/Perfect pass over secondary sheets and completion
    celebrations; the primary Map, Study, Insights, and five-question Mission
    now have explicit phone, tablet-portrait, tablet-landscape, short-height,
    rotation, and accessible-text contracts.

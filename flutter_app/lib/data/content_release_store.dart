@@ -21,6 +21,26 @@ const _requiredArtifactKinds = <String>{
 
 enum GaussContentSource { bundled, cached, downloaded }
 
+final class GaussContentTransferStats {
+  const GaussContentTransferStats({
+    required this.usedManifestDelta,
+    required this.artifactManifestRows,
+    required this.reusedArtifacts,
+    required this.downloadedArtifacts,
+    required this.questionManifestRows,
+    required this.reusedQuestions,
+    required this.downloadedQuestions,
+  });
+
+  final bool usedManifestDelta;
+  final int artifactManifestRows;
+  final int reusedArtifacts;
+  final int downloadedArtifacts;
+  final int questionManifestRows;
+  final int reusedQuestions;
+  final int downloadedQuestions;
+}
+
 final class GaussContentSnapshot {
   const GaussContentSnapshot({
     required this.bundle,
@@ -29,6 +49,7 @@ final class GaussContentSnapshot {
     this.corpusSha256,
     this.requiredBuild,
     this.refreshError,
+    this.transferStats,
   });
 
   final AssetBundle bundle;
@@ -37,6 +58,7 @@ final class GaussContentSnapshot {
   final String? corpusSha256;
   final int? requiredBuild;
   final Object? refreshError;
+  final GaussContentTransferStats? transferStats;
 
   bool get isRemote => releaseId != null;
 
@@ -47,6 +69,7 @@ final class GaussContentSnapshot {
     corpusSha256: corpusSha256,
     requiredBuild: requiredBuild,
     refreshError: error,
+    transferStats: transferStats,
   );
 
   GaussContentSnapshot requiringBuild(int value) => GaussContentSnapshot(
@@ -56,6 +79,7 @@ final class GaussContentSnapshot {
     corpusSha256: corpusSha256,
     requiredBuild: value,
     refreshError: refreshError,
+    transferStats: transferStats,
   );
 }
 
@@ -87,6 +111,36 @@ final class GaussRemoteArtifact {
   final String kind;
   final String sha256;
   final Map<String, dynamic> payload;
+}
+
+final class GaussRemoteArtifactDescriptor {
+  const GaussRemoteArtifactDescriptor({
+    required this.kind,
+    required this.sha256,
+  });
+
+  final String kind;
+  final String sha256;
+}
+
+final class GaussRemoteQuestionDescriptor {
+  const GaussRemoteQuestionDescriptor({
+    required this.ordinal,
+    required this.questionId,
+    required this.revision,
+    required this.subject,
+    required this.topicKey,
+    required this.difficulty,
+    required this.contentSha256,
+  });
+
+  final int ordinal;
+  final String questionId;
+  final int revision;
+  final String subject;
+  final String topicKey;
+  final String difficulty;
+  final String contentSha256;
 }
 
 final class GaussRemoteQuestionRevision {
@@ -123,7 +177,29 @@ abstract interface class GaussContentApi {
   });
 }
 
-final class SupabaseGaussContentApi implements GaussContentApi {
+abstract interface class GaussDeltaContentApi implements GaussContentApi {
+  Future<List<GaussRemoteArtifactDescriptor>> artifactManifest(
+    String releaseId,
+  );
+
+  Future<List<GaussRemoteArtifact>> artifactBatch(
+    String releaseId,
+    List<String> kinds,
+  );
+
+  Future<List<GaussRemoteQuestionDescriptor>> questionManifestPage(
+    String releaseId, {
+    required int from,
+    required int to,
+  });
+
+  Future<List<GaussRemoteQuestionRevision>> questionBatch(
+    String releaseId,
+    List<GaussRemoteQuestionDescriptor> descriptors,
+  );
+}
+
+final class SupabaseGaussContentApi implements GaussDeltaContentApi {
   SupabaseGaussContentApi(
     this._client, {
     this.requestTimeout = const Duration(seconds: 20),
@@ -178,6 +254,147 @@ final class SupabaseGaussContentApi implements GaussContentApi {
           return GaussRemoteArtifact(
             kind: _requiredString(row, 'kind'),
             sha256: _requiredHash(row, 'sha256'),
+            payload: _requiredMap(row, 'payload'),
+          );
+        })
+        .toList(growable: false);
+  }
+
+  @override
+  Future<List<GaussRemoteArtifactDescriptor>> artifactManifest(
+    String releaseId,
+  ) async {
+    final rows = await _client
+        .from('gauss_content_artifacts')
+        .select('kind,sha256')
+        .eq('release_id', releaseId)
+        .order('kind')
+        .timeout(requestTimeout);
+    return rows
+        .map((raw) {
+          final row = Map<String, dynamic>.from(raw);
+          return GaussRemoteArtifactDescriptor(
+            kind: _requiredString(row, 'kind'),
+            sha256: _requiredHash(row, 'sha256'),
+          );
+        })
+        .toList(growable: false);
+  }
+
+  @override
+  Future<List<GaussRemoteArtifact>> artifactBatch(
+    String releaseId,
+    List<String> kinds,
+  ) async {
+    final rows = await _client
+        .rpc(
+          'gauss_release_artifact_payloads',
+          params: <String, Object?>{
+            'p_release_id': releaseId,
+            'p_kinds': kinds,
+          },
+        )
+        .timeout(requestTimeout);
+    if (rows is! List<dynamic>) {
+      throw const FormatException('Artifact payload RPC returned no row list.');
+    }
+    return rows
+        .map((raw) {
+          if (raw is! Map) {
+            throw const FormatException(
+              'Artifact payload contains a non-object.',
+            );
+          }
+          final row = Map<String, dynamic>.from(raw);
+          return GaussRemoteArtifact(
+            kind: _requiredString(row, 'kind'),
+            sha256: _requiredHash(row, 'sha256'),
+            payload: _requiredMap(row, 'payload'),
+          );
+        })
+        .toList(growable: false);
+  }
+
+  @override
+  Future<List<GaussRemoteQuestionDescriptor>> questionManifestPage(
+    String releaseId, {
+    required int from,
+    required int to,
+  }) async {
+    final rows = await _client
+        .rpc(
+          'gauss_release_manifest',
+          params: <String, Object?>{
+            'p_release_id': releaseId,
+            'p_offset': from,
+            'p_limit': to - from + 1,
+          },
+        )
+        .timeout(requestTimeout);
+    if (rows is! List<dynamic>) {
+      throw const FormatException('Release manifest RPC returned no row list.');
+    }
+    return rows
+        .map((raw) {
+          if (raw is! Map) {
+            throw const FormatException(
+              'Release manifest contains a non-object.',
+            );
+          }
+          final row = Map<String, dynamic>.from(raw);
+          return GaussRemoteQuestionDescriptor(
+            ordinal: _requiredInt(row, 'ordinal'),
+            questionId: _requiredString(row, 'question_id'),
+            revision: _requiredInt(row, 'revision'),
+            subject: _requiredString(row, 'subject'),
+            topicKey: _requiredString(row, 'topic_key'),
+            difficulty: _requiredString(row, 'difficulty'),
+            contentSha256: _requiredHash(row, 'content_sha256'),
+          );
+        })
+        .toList(growable: false);
+  }
+
+  @override
+  Future<List<GaussRemoteQuestionRevision>> questionBatch(
+    String releaseId,
+    List<GaussRemoteQuestionDescriptor> descriptors,
+  ) async {
+    final rows = await _client
+        .rpc(
+          'gauss_release_payload_batch',
+          params: <String, Object?>{
+            'p_release_id': releaseId,
+            'p_question_ids': descriptors
+                .map((descriptor) => descriptor.questionId)
+                .toList(growable: false),
+            'p_revisions': descriptors
+                .map((descriptor) => descriptor.revision)
+                .toList(growable: false),
+          },
+        )
+        .timeout(requestTimeout);
+    if (rows is! List<dynamic>) {
+      throw const FormatException(
+        'Release payload batch RPC returned no row list.',
+      );
+    }
+    return rows
+        .map((raw) {
+          if (raw is! Map) {
+            throw const FormatException(
+              'Release payload batch contains a non-object.',
+            );
+          }
+          final row = Map<String, dynamic>.from(raw);
+          return GaussRemoteQuestionRevision(
+            ordinal: _requiredInt(row, 'ordinal'),
+            questionId: _requiredString(row, 'question_id'),
+            revision: _requiredInt(row, 'revision'),
+            subject: _requiredString(row, 'subject'),
+            topicKey: _requiredString(row, 'topic_key'),
+            difficulty: _requiredString(row, 'difficulty'),
+            contentSha256: _requiredHash(row, 'content_sha256'),
             payload: _requiredMap(row, 'payload'),
           );
         })
@@ -273,7 +490,7 @@ final class GaussContentReleaseStore {
         return active;
       }
       onPhase?.call('Verifying ${release.questionCount} questions…');
-      return await _downloadAndActivate(root, release);
+      return await _downloadAndActivate(root, release, active);
     } catch (error) {
       return active.withRefreshError(error);
     }
@@ -320,9 +537,17 @@ final class GaussContentReleaseStore {
   Future<GaussContentSnapshot> _downloadAndActivate(
     Directory root,
     GaussRemoteRelease release,
+    GaussContentSnapshot active,
   ) async {
     final releaseId = _safeReleaseId(release.id);
-    final artifacts = await _api.artifacts(releaseId);
+    final reusable = _api is GaussDeltaContentApi
+        ? await _loadReusableContent(active.bundle)
+        : const _ReusableContent.empty();
+    final artifactResolution = await _resolveArtifacts(
+      releaseId,
+      reusable.artifacts,
+    );
+    final artifacts = artifactResolution.artifacts;
     final artifactsByKind = <String, GaussRemoteArtifact>{};
     for (final artifact in artifacts) {
       if (!_requiredArtifactKinds.contains(artifact.kind) ||
@@ -338,17 +563,23 @@ final class GaussContentReleaseStore {
       throw const FormatException('Release is missing a required artifact.');
     }
 
-    final revisions = <GaussRemoteQuestionRevision>[];
-    const pageSize = 500;
-    for (var from = 0; from < release.questionCount; from += pageSize) {
-      final to = (from + pageSize - 1).clamp(0, release.questionCount - 1);
-      final page = await _api.questionPage(releaseId, from: from, to: to);
-      if (page.length != to - from + 1) {
-        throw const FormatException('Release question page is incomplete.');
-      }
-      revisions.addAll(page);
-    }
+    final questionResolution = await _resolveQuestions(
+      release,
+      reusable.questions,
+    );
+    final revisions = questionResolution.revisions;
     _validateRevisions(release, revisions);
+    final transferStats = GaussContentTransferStats(
+      usedManifestDelta:
+          artifactResolution.usedManifestDelta ||
+          questionResolution.usedManifestDelta,
+      artifactManifestRows: artifactResolution.manifestRows,
+      reusedArtifacts: artifactResolution.reused,
+      downloadedArtifacts: artifactResolution.downloaded,
+      questionManifestRows: questionResolution.manifestRows,
+      reusedQuestions: questionResolution.reused,
+      downloadedQuestions: questionResolution.downloaded,
+    );
     final artifactHashes = {
       for (final entry in artifactsByKind.entries)
         entry.key: entry.value.sha256,
@@ -429,12 +660,391 @@ final class GaussContentReleaseStore {
         source: GaussContentSource.downloaded,
         releaseId: releaseId,
         corpusSha256: release.corpusSha256,
+        transferStats: transferStats,
       );
     } catch (_) {
       if (await staging.exists()) await staging.delete(recursive: true);
       rethrow;
     }
   }
+
+  Future<_ArtifactResolution> _resolveArtifacts(
+    String releaseId,
+    Map<String, Map<String, dynamic>> reusable,
+  ) async {
+    final api = _api;
+    if (api is! GaussDeltaContentApi) {
+      return _downloadAllArtifacts(releaseId);
+    }
+    try {
+      final manifest = await api.artifactManifest(releaseId);
+      _validateArtifactDescriptors(manifest);
+      final resolved = <String, GaussRemoteArtifact>{};
+      final missing = <GaussRemoteArtifactDescriptor>[];
+      for (final descriptor in manifest) {
+        final candidate = reusable[descriptor.kind];
+        if (candidate != null &&
+            canonicalContentSha256(candidate) == descriptor.sha256) {
+          resolved[descriptor.kind] = GaussRemoteArtifact(
+            kind: descriptor.kind,
+            sha256: descriptor.sha256,
+            payload: candidate,
+          );
+        } else {
+          missing.add(descriptor);
+        }
+      }
+      if (missing.isNotEmpty) {
+        final downloaded = await api.artifactBatch(
+          releaseId,
+          missing.map((descriptor) => descriptor.kind).toList(growable: false),
+        );
+        if (downloaded.length != missing.length) {
+          throw const FormatException('Artifact payload batch is incomplete.');
+        }
+        for (var index = 0; index < missing.length; index++) {
+          final descriptor = missing[index];
+          final artifact = downloaded[index];
+          if (artifact.kind != descriptor.kind ||
+              artifact.sha256 != descriptor.sha256 ||
+              canonicalContentSha256(artifact.payload) != descriptor.sha256 ||
+              resolved.containsKey(artifact.kind)) {
+            throw FormatException(
+              '${descriptor.kind} failed delta artifact binding.',
+            );
+          }
+          resolved[artifact.kind] = artifact;
+        }
+      }
+      return _ArtifactResolution(
+        artifacts: manifest
+            .map((descriptor) => resolved[descriptor.kind]!)
+            .toList(growable: false),
+        usedManifestDelta: true,
+        manifestRows: manifest.length,
+        reused: manifest.length - missing.length,
+        downloaded: missing.length,
+      );
+    } on PostgrestException catch (error) {
+      if (!_isUnavailableDeltaRpc(error)) rethrow;
+      return _downloadAllArtifacts(releaseId);
+    }
+  }
+
+  Future<_ArtifactResolution> _downloadAllArtifacts(String releaseId) async {
+    final artifacts = await _api.artifacts(releaseId);
+    return _ArtifactResolution(
+      artifacts: artifacts,
+      usedManifestDelta: false,
+      manifestRows: 0,
+      reused: 0,
+      downloaded: artifacts.length,
+    );
+  }
+
+  Future<_QuestionResolution> _resolveQuestions(
+    GaussRemoteRelease release,
+    Map<String, _ReusableQuestion> reusable,
+  ) async {
+    final api = _api;
+    if (api is! GaussDeltaContentApi) {
+      return _downloadAllQuestions(release);
+    }
+    try {
+      final descriptors = <GaussRemoteQuestionDescriptor>[];
+      const manifestPageSize = 500;
+      for (
+        var from = 0;
+        from < release.questionCount;
+        from += manifestPageSize
+      ) {
+        final to = (from + manifestPageSize - 1).clamp(
+          0,
+          release.questionCount - 1,
+        );
+        final page = await api.questionManifestPage(
+          release.id,
+          from: from,
+          to: to,
+        );
+        if (page.length != to - from + 1) {
+          throw const FormatException('Release manifest page is incomplete.');
+        }
+        descriptors.addAll(page);
+      }
+      _validateQuestionDescriptors(release, descriptors);
+
+      final resolved = List<GaussRemoteQuestionRevision?>.filled(
+        descriptors.length,
+        null,
+      );
+      final missing = <GaussRemoteQuestionDescriptor>[];
+      for (final descriptor in descriptors) {
+        final candidate = reusable[descriptor.questionId];
+        if (candidate != null &&
+            candidate.revision == descriptor.revision &&
+            candidate.contentSha256 == descriptor.contentSha256 &&
+            _payloadMatchesDescriptor(candidate.payload, descriptor)) {
+          resolved[descriptor.ordinal] = GaussRemoteQuestionRevision(
+            ordinal: descriptor.ordinal,
+            questionId: descriptor.questionId,
+            revision: descriptor.revision,
+            subject: descriptor.subject,
+            topicKey: descriptor.topicKey,
+            difficulty: descriptor.difficulty,
+            contentSha256: descriptor.contentSha256,
+            payload: candidate.payload,
+          );
+        } else {
+          missing.add(descriptor);
+        }
+      }
+
+      const payloadBatchSize = 250;
+      for (var from = 0; from < missing.length; from += payloadBatchSize) {
+        final to = (from + payloadBatchSize).clamp(0, missing.length);
+        final requested = missing.sublist(from, to);
+        final downloaded = await api.questionBatch(release.id, requested);
+        if (downloaded.length != requested.length) {
+          throw const FormatException('Question payload batch is incomplete.');
+        }
+        for (var index = 0; index < requested.length; index++) {
+          final descriptor = requested[index];
+          final revision = downloaded[index];
+          if (!_revisionMatchesDescriptor(revision, descriptor) ||
+              resolved[descriptor.ordinal] != null) {
+            throw FormatException(
+              '${descriptor.questionId} failed delta payload binding.',
+            );
+          }
+          resolved[descriptor.ordinal] = revision;
+        }
+      }
+      if (resolved.any((revision) => revision == null)) {
+        throw const FormatException('Release delta left unresolved questions.');
+      }
+      return _QuestionResolution(
+        revisions: resolved
+            .map((revision) => revision!)
+            .toList(growable: false),
+        usedManifestDelta: true,
+        manifestRows: descriptors.length,
+        reused: descriptors.length - missing.length,
+        downloaded: missing.length,
+      );
+    } on PostgrestException catch (error) {
+      if (!_isUnavailableDeltaRpc(error)) rethrow;
+      return _downloadAllQuestions(release);
+    }
+  }
+
+  Future<_QuestionResolution> _downloadAllQuestions(
+    GaussRemoteRelease release,
+  ) async {
+    final revisions = <GaussRemoteQuestionRevision>[];
+    const pageSize = 500;
+    for (var from = 0; from < release.questionCount; from += pageSize) {
+      final to = (from + pageSize - 1).clamp(0, release.questionCount - 1);
+      final page = await _api.questionPage(release.id, from: from, to: to);
+      if (page.length != to - from + 1) {
+        throw const FormatException('Release question page is incomplete.');
+      }
+      revisions.addAll(page);
+    }
+    return _QuestionResolution(
+      revisions: revisions,
+      usedManifestDelta: false,
+      manifestRows: 0,
+      reused: 0,
+      downloaded: revisions.length,
+    );
+  }
+
+  Future<_ReusableContent> _loadReusableContent(AssetBundle bundle) async {
+    final artifacts = <String, Map<String, dynamic>>{};
+    final questions = <String, _ReusableQuestion>{};
+    try {
+      final decoded = jsonDecode(
+        await bundle.loadString('assets/question_bank/index.json'),
+      );
+      if (decoded is! Map) {
+        throw const FormatException('Local question index is not an object.');
+      }
+      final index = Map<String, dynamic>.from(decoded);
+      final rawTopics = index['topics'];
+      if (rawTopics is! List<dynamic>) {
+        throw const FormatException('Local question index has no topics.');
+      }
+      final topicIds = <String, List<String>>{};
+      var completeIndex = true;
+      var safeQuestionReuse = true;
+      var loadedQuestionCount = 0;
+      for (final rawTopic in rawTopics) {
+        try {
+          if (rawTopic is! Map) {
+            throw const FormatException('Local topic is not an object.');
+          }
+          final topic = Map<String, dynamic>.from(rawTopic);
+          final topicKey = _requiredString(topic, 'topic_key');
+          final relativePath = _requiredString(topic, 'file');
+          final expectedCount = _requiredInt(topic, 'count');
+          final rawRows = jsonDecode(
+            await bundle.loadString('assets/${_safeLogicalPath(relativePath)}'),
+          );
+          if (rawRows is! List<dynamic> || rawRows.length != expectedCount) {
+            throw const FormatException('Local topic count drifted.');
+          }
+          final topicQuestions = <String, _ReusableQuestion>{};
+          final ids = <String>[];
+          for (final rawRow in rawRows) {
+            if (rawRow is! Map) {
+              throw const FormatException('Local question is not an object.');
+            }
+            final payload = Map<String, dynamic>.from(rawRow);
+            final rawRevision = payload.remove('_gauss_revision');
+            final revision = rawRevision ?? 1;
+            final questionId = payload['id'];
+            if (revision is! int ||
+                revision < 1 ||
+                questionId is! String ||
+                !RegExp(_questionIdPattern).hasMatch(questionId) ||
+                topicQuestions.containsKey(questionId)) {
+              throw const FormatException('Local question identity drifted.');
+            }
+            ids.add(questionId);
+            topicQuestions[questionId] = _ReusableQuestion(
+              revision: revision,
+              contentSha256: canonicalContentSha256(payload),
+              payload: payload,
+            );
+          }
+          for (final entry in topicQuestions.entries) {
+            if (questions.containsKey(entry.key)) {
+              safeQuestionReuse = false;
+            } else {
+              questions[entry.key] = entry.value;
+            }
+          }
+          topicIds[topicKey] = ids;
+          loadedQuestionCount += ids.length;
+        } catch (_) {
+          completeIndex = false;
+        }
+      }
+      if (!safeQuestionReuse) questions.clear();
+      if (completeIndex &&
+          index['total'] == loadedQuestionCount &&
+          topicIds.length == rawTopics.length) {
+        artifacts['question_index'] = <String, dynamic>{
+          'schema_version': 1,
+          'index': index,
+          'topic_question_ids': topicIds,
+        };
+      }
+    } catch (_) {
+      questions.clear();
+    }
+
+    await _loadReusableArtifact(
+      bundle,
+      'assets/curriculum/five_question_plan_v1.json',
+      'five_question_plan',
+      artifacts,
+    );
+    await _loadReusableArtifact(
+      bundle,
+      'assets/curriculum/certified_question_runtime_v1.json',
+      'certification_runtime',
+      artifacts,
+    );
+    await _loadReusableArtifact(
+      bundle,
+      'assets/curriculum/media_manifest_v1.json',
+      'media_manifest',
+      artifacts,
+    );
+    return _ReusableContent(artifacts: artifacts, questions: questions);
+  }
+
+  Future<void> _loadReusableArtifact(
+    AssetBundle bundle,
+    String path,
+    String kind,
+    Map<String, Map<String, dynamic>> target,
+  ) async {
+    try {
+      final decoded = jsonDecode(await bundle.loadString(path));
+      if (decoded is Map) target[kind] = Map<String, dynamic>.from(decoded);
+    } catch (_) {
+      // A missing or incompatible local artifact is a cache miss, never a
+      // reason to trust partial data or abandon the verified active release.
+    }
+  }
+
+  void _validateArtifactDescriptors(
+    List<GaussRemoteArtifactDescriptor> descriptors,
+  ) {
+    if (descriptors.length != _requiredArtifactKinds.length) {
+      throw const FormatException('Artifact manifest count drifted.');
+    }
+    final kinds = <String>{};
+    for (final descriptor in descriptors) {
+      if (!_requiredArtifactKinds.contains(descriptor.kind) ||
+          !kinds.add(descriptor.kind) ||
+          !RegExp(_sha256Pattern).hasMatch(descriptor.sha256)) {
+        throw const FormatException('Artifact manifest is invalid.');
+      }
+    }
+  }
+
+  void _validateQuestionDescriptors(
+    GaussRemoteRelease release,
+    List<GaussRemoteQuestionDescriptor> descriptors,
+  ) {
+    if (descriptors.length != release.questionCount) {
+      throw const FormatException('Remote manifest question count drifted.');
+    }
+    final ids = <String>{};
+    for (var index = 0; index < descriptors.length; index++) {
+      final descriptor = descriptors[index];
+      if (descriptor.ordinal != index ||
+          descriptor.revision < 1 ||
+          !RegExp(_questionIdPattern).hasMatch(descriptor.questionId) ||
+          !ids.add(descriptor.questionId) ||
+          (descriptor.subject != 'math' && descriptor.subject != 'physics') ||
+          descriptor.topicKey.isEmpty ||
+          descriptor.difficulty.isEmpty ||
+          !RegExp(_sha256Pattern).hasMatch(descriptor.contentSha256)) {
+        throw FormatException(
+          '${descriptor.questionId} failed manifest binding.',
+        );
+      }
+    }
+  }
+
+  bool _payloadMatchesDescriptor(
+    Map<String, dynamic> payload,
+    GaussRemoteQuestionDescriptor descriptor,
+  ) =>
+      payload['id'] == descriptor.questionId &&
+      payload['subject'] == descriptor.subject &&
+      payload['topic_key'] == descriptor.topicKey &&
+      payload['difficulty'] == descriptor.difficulty &&
+      payload['source_bank'] == 'nardebam' &&
+      canonicalContentSha256(payload) == descriptor.contentSha256;
+
+  bool _revisionMatchesDescriptor(
+    GaussRemoteQuestionRevision revision,
+    GaussRemoteQuestionDescriptor descriptor,
+  ) =>
+      revision.ordinal == descriptor.ordinal &&
+      revision.questionId == descriptor.questionId &&
+      revision.revision == descriptor.revision &&
+      revision.subject == descriptor.subject &&
+      revision.topicKey == descriptor.topicKey &&
+      revision.difficulty == descriptor.difficulty &&
+      revision.contentSha256 == descriptor.contentSha256 &&
+      _payloadMatchesDescriptor(revision.payload, descriptor);
 
   Future<Map<String, String>> _writeReleaseFiles(
     Directory staging, {
@@ -511,6 +1121,11 @@ final class GaussContentReleaseStore {
           'assets/curriculum/five_question_plan_v1.json',
           artifacts['five_question_plan']!.payload,
         );
+    fileHashes['assets/curriculum/media_manifest_v1.json'] = await _writeJson(
+      staging,
+      'assets/curriculum/media_manifest_v1.json',
+      artifacts['media_manifest']!.payload,
+    );
     return fileHashes;
   }
 
@@ -644,6 +1259,64 @@ final class GaussContentReleaseStore {
     }
   }
 }
+
+final class _ArtifactResolution {
+  const _ArtifactResolution({
+    required this.artifacts,
+    required this.usedManifestDelta,
+    required this.manifestRows,
+    required this.reused,
+    required this.downloaded,
+  });
+
+  final List<GaussRemoteArtifact> artifacts;
+  final bool usedManifestDelta;
+  final int manifestRows;
+  final int reused;
+  final int downloaded;
+}
+
+final class _QuestionResolution {
+  const _QuestionResolution({
+    required this.revisions,
+    required this.usedManifestDelta,
+    required this.manifestRows,
+    required this.reused,
+    required this.downloaded,
+  });
+
+  final List<GaussRemoteQuestionRevision> revisions;
+  final bool usedManifestDelta;
+  final int manifestRows;
+  final int reused;
+  final int downloaded;
+}
+
+final class _ReusableContent {
+  const _ReusableContent({required this.artifacts, required this.questions});
+
+  const _ReusableContent.empty()
+    : artifacts = const <String, Map<String, dynamic>>{},
+      questions = const <String, _ReusableQuestion>{};
+
+  final Map<String, Map<String, dynamic>> artifacts;
+  final Map<String, _ReusableQuestion> questions;
+}
+
+final class _ReusableQuestion {
+  const _ReusableQuestion({
+    required this.revision,
+    required this.contentSha256,
+    required this.payload,
+  });
+
+  final int revision;
+  final String contentSha256;
+  final Map<String, dynamic> payload;
+}
+
+bool _isUnavailableDeltaRpc(PostgrestException error) =>
+    error.code == 'PGRST202' || error.code == '42883';
 
 String computeContentCorpusSha256({
   required Map<String, String> artifactHashes,
