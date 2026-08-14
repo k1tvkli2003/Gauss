@@ -18,8 +18,15 @@ import 'gauss_design_system.dart';
 import 'gauss_theme.dart';
 
 class GaussApp extends StatefulWidget {
-  const GaussApp({required this.controller, super.key});
+  const GaussApp({
+    required this.controller,
+    this.accountEmail,
+    this.onSignOut,
+    super.key,
+  });
   final GaussController controller;
+  final String? accountEmail;
+  final Future<void> Function()? onSignOut;
 
   @override
   State<GaussApp> createState() => _GaussAppState();
@@ -35,7 +42,11 @@ class _GaussAppState extends State<GaussApp> {
     errorBuilder: (context, state) => const _RouteErrorScreen(),
     routes: [
       StatefulShellRoute.indexedStack(
-        builder: (context, state, shell) => _AppShell(shell: shell),
+        builder: (context, state, shell) => _AppShell(
+          shell: shell,
+          accountEmail: widget.accountEmail,
+          onSignOut: widget.onSignOut,
+        ),
         branches: [
           StatefulShellBranch(
             routes: [
@@ -200,6 +211,8 @@ class _GaussAppState extends State<GaussApp> {
   Widget build(BuildContext context) {
     return GaussScope(
       controller: widget.controller,
+      accountEmail: widget.accountEmail,
+      onSignOut: widget.onSignOut,
       child: MaterialApp.router(
         title: 'Gauss',
         debugShowCheckedModeBanner: false,
@@ -417,8 +430,10 @@ abstract final class _GaussRouteMotion {
 }
 
 class _AppShell extends StatefulWidget {
-  const _AppShell({required this.shell});
+  const _AppShell({required this.shell, this.accountEmail, this.onSignOut});
   final StatefulNavigationShell shell;
+  final String? accountEmail;
+  final Future<void> Function()? onSignOut;
 
   @override
   State<_AppShell> createState() => _AppShellState();

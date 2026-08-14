@@ -244,10 +244,10 @@ class FeedbackOutboxEntries extends Table {
 class GaussDatabase extends _$GaussDatabase {
   GaussDatabase(super.executor);
 
-  GaussDatabase.defaults()
+  GaussDatabase.defaults({String name = 'gauss_flutter_v1'})
     : super(
         driftDatabase(
-          name: 'gauss_flutter_v1',
+          name: name,
           web: DriftWebOptions(
             sqlite3Wasm: Uri.parse('sqlite3.wasm'),
             driftWorker: Uri.parse('drift_worker.dart.js'),

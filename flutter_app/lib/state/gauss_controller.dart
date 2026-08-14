@@ -697,13 +697,24 @@ class GaussController extends ChangeNotifier {
 class GaussScope extends InheritedNotifier<GaussController> {
   const GaussScope({
     required GaussController controller,
+    this.accountEmail,
+    this.onSignOut,
     required super.child,
     super.key,
   }) : super(notifier: controller);
+
+  final String? accountEmail;
+  final Future<void> Function()? onSignOut;
 
   static GaussController of(BuildContext context) {
     final scope = context.dependOnInheritedWidgetOfExactType<GaussScope>();
     assert(scope != null, 'No GaussScope found in the widget tree.');
     return scope!.notifier!;
   }
+
+  static String? accountEmailOf(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<GaussScope>()?.accountEmail;
+
+  static Future<void> Function()? onSignOutOf(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<GaussScope>()?.onSignOut;
 }

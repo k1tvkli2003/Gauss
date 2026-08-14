@@ -84,6 +84,40 @@ void main() {
     expect(database.readAsStringSync(), 'original-progress');
   });
 
+  test('account vaults never list or restore another account backup', () async {
+    final accountA = BackupService(
+      accountStorageKey: 'aaaaaaaaaaaaaaaaaaaaaaaa',
+      overrideRoot: root,
+    );
+    final accountB = BackupService(
+      accountStorageKey: 'bbbbbbbbbbbbbbbbbbbbbbbb',
+      overrideRoot: root,
+    );
+    final databaseA = File(
+      '${root.path}${Platform.pathSeparator}${accountA.scopedDatabaseFileName}',
+    )..writeAsStringSync('account-a-progress');
+    final databaseB = File(
+      '${root.path}${Platform.pathSeparator}${accountB.scopedDatabaseFileName}',
+    )..writeAsStringSync('account-b-progress');
+
+    final backupA = await accountA.createBackup(now: DateTime(2026, 8, 14, 10));
+    final backupB = await accountB.createBackup(now: DateTime(2026, 8, 14, 11));
+
+    expect((await accountA.listBackups()).map((item) => item.name), [
+      backupA.name,
+    ]);
+    expect((await accountB.listBackups()).map((item) => item.name), [
+      backupB.name,
+    ]);
+    expect(backupA.name, isNot(backupB.name));
+    await expectLater(
+      accountB.stageRestore(backupA),
+      throwsA(isA<FileSystemException>()),
+    );
+    expect(databaseA.readAsStringSync(), 'account-a-progress');
+    expect(databaseB.readAsStringSync(), 'account-b-progress');
+  });
+
   test(
     'unsupported startup never touches a platform file-system plugin',
     () async {

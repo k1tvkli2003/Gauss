@@ -8,3 +8,4 @@
 | `2026-07-18-nardebam-only-question-corpus` | Source-only Study Observatory corpus and experience | complete | 2026-07-18 | [Open](2026-07-18-nardebam-only-question-corpus/00-brief.md) |
 | `2026-07-22-gauss-adaptive-perfection` | Gauss adaptive UI UX perfection | active | 2026-07-22 | [Open](2026-07-22-gauss-adaptive-perfection/00-brief.md) |
 | `2026-07-23-gauss-corpus-certification-and-stylus-hardening` | Gauss corpus certification and stylus hardening | active | 2026-07-23 | [Open](2026-07-23-gauss-corpus-certification-and-stylus-hardening/00-brief.md) |
+| `2026-08-14-account-content-tablet` | Account isolation, versioned question content, and dedicated Android tablet gate | active | 2026-08-14 | [Open](2026-08-14-account-content-tablet.md) |

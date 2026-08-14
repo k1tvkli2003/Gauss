@@ -53,6 +53,8 @@ class InsightsScreen extends StatelessWidget {
                       onOpenVault: controller.backups.isSupported
                           ? () => context.push('/vault')
                           : null,
+                      accountEmail: GaussScope.accountEmailOf(context),
+                      onSignOut: GaussScope.onSignOutOf(context),
                     ),
                   ),
                 ),

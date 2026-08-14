@@ -29,7 +29,17 @@ class BackupEntry {
 /// copy and [applyPendingRestore] swaps it in during the next cold start,
 /// before the database is opened.
 class BackupService {
-  BackupService({this.overrideRoot, @visibleForTesting this.supportOverride});
+  BackupService({
+    this.accountStorageKey,
+    this.overrideRoot,
+    @visibleForTesting this.supportOverride,
+  });
+
+  /// Opaque, filesystem-safe hash of the authenticated account id.
+  ///
+  /// Raw UUIDs and emails never appear in local paths. Null preserves the
+  /// original single-user filename for focused tests and legacy tooling.
+  final String? accountStorageKey;
 
   /// Test seam: keeps the vault inside a temporary directory so the suite
   /// never touches real device storage.
@@ -47,6 +57,20 @@ class BackupService {
   static const databaseFileName = 'gauss_flutter_v1.sqlite';
   static const _pendingRestoreName = 'pending_restore.sqlite';
   static const _backupPrefix = 'gauss-progress-';
+
+  String get databaseName => accountStorageKey == null
+      ? 'gauss_flutter_v1'
+      : 'gauss_flutter_v1_$accountStorageKey';
+
+  String get scopedDatabaseFileName => '$databaseName.sqlite';
+
+  String get _scopedPendingRestoreName => accountStorageKey == null
+      ? _pendingRestoreName
+      : 'pending_restore_$accountStorageKey.sqlite';
+
+  String get _scopedBackupPrefix => accountStorageKey == null
+      ? _backupPrefix
+      : 'gauss-progress-$accountStorageKey-';
 
   void _requireSupport() {
     if (!isSupported) {
@@ -70,13 +94,15 @@ class BackupService {
   Future<File> _databaseFile() async {
     _requireSupport();
     final root = overrideRoot ?? await getApplicationDocumentsDirectory();
-    return File('${root.path}${Platform.pathSeparator}$databaseFileName');
+    return File('${root.path}${Platform.pathSeparator}$scopedDatabaseFileName');
   }
 
   Future<File> _pendingRestoreFile() async {
     _requireSupport();
     final root = overrideRoot ?? await getApplicationDocumentsDirectory();
-    return File('${root.path}${Platform.pathSeparator}$_pendingRestoreName');
+    return File(
+      '${root.path}${Platform.pathSeparator}$_scopedPendingRestoreName',
+    );
   }
 
   static String _stamp(DateTime at) =>
@@ -100,7 +126,7 @@ class BackupService {
     final at = now ?? DateTime.now();
     final target = File(
       '${directory.path}${Platform.pathSeparator}'
-      '$_backupPrefix${_stamp(at)}.sqlite',
+      '$_scopedBackupPrefix${_stamp(at)}.sqlite',
     );
     await source.copy(target.path);
     return BackupEntry(
@@ -135,13 +161,15 @@ class BackupService {
     final entries = <BackupEntry>[];
     for (final entity in directory.listSync()) {
       if (entity is! File) continue;
-      if (!entity.path.endsWith('.sqlite')) continue;
+      final name = entity.uri.pathSegments.last;
+      if (!name.startsWith(_scopedBackupPrefix) || !name.endsWith('.sqlite')) {
+        continue;
+      }
       final stat = entity.statSync();
       entries.add(
         BackupEntry(
           file: entity,
-          savedAt:
-              _stampFromName(entity.uri.pathSegments.last) ?? stat.modified,
+          savedAt: _stampFromName(name) ?? stat.modified,
           sizeBytes: stat.size,
         ),
       );
@@ -154,6 +182,11 @@ class BackupService {
   Future<void> stageRestore(BackupEntry backup) async {
     if (!backup.file.existsSync()) {
       throw const FileSystemException('That backup file is no longer there.');
+    }
+    if (!backup.name.startsWith(_scopedBackupPrefix)) {
+      throw const FileSystemException(
+        'That progress copy belongs to a different account vault.',
+      );
     }
     await backup.file.copy((await _pendingRestoreFile()).path);
   }
@@ -181,7 +214,7 @@ class BackupService {
       final directory = await _backupDirectory();
       await live.copy(
         '${directory.path}${Platform.pathSeparator}'
-        '${_backupPrefix}replaced-${_stamp(DateTime.now())}.sqlite',
+        '${_scopedBackupPrefix}replaced-${_stamp(DateTime.now())}.sqlite',
       );
     }
     await pending.copy(live.path);

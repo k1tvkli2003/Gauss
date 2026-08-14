@@ -790,16 +790,22 @@ class GaussFeedbackToolsSheet extends StatelessWidget {
   const GaussFeedbackToolsSheet({
     required this.controller,
     this.onOpenVault,
+    this.accountEmail,
+    this.onSignOut,
     super.key,
   });
 
   final GaussFeedbackController controller;
   final VoidCallback? onOpenVault;
+  final String? accountEmail;
+  final Future<void> Function()? onSignOut;
 
   static Future<void> show(
     BuildContext context, {
     required GaussFeedbackController controller,
     VoidCallback? onOpenVault,
+    String? accountEmail,
+    Future<void> Function()? onSignOut,
   }) => showModalBottomSheet<void>(
     context: context,
     useRootNavigator: true,
@@ -809,6 +815,8 @@ class GaussFeedbackToolsSheet extends StatelessWidget {
     builder: (_) => GaussFeedbackToolsSheet(
       controller: controller,
       onOpenVault: onOpenVault,
+      accountEmail: accountEmail,
+      onSignOut: onSignOut,
     ),
   );
 
@@ -870,6 +878,110 @@ class GaussFeedbackToolsSheet extends StatelessWidget {
                 onOpenVault!();
               },
             ),
+          if (onSignOut != null) ...[
+            const SizedBox(height: 6),
+            _AccountToolInstrument(
+              accountEmail: accountEmail,
+              onSignOut: onSignOut!,
+            ),
+          ],
+        ],
+      ),
+    ),
+  );
+}
+
+class _AccountToolInstrument extends StatelessWidget {
+  const _AccountToolInstrument({
+    required this.accountEmail,
+    required this.onSignOut,
+  });
+
+  final String? accountEmail;
+  final Future<void> Function() onSignOut;
+
+  Future<void> _confirmSignOut(BuildContext context) async {
+    final approved = await showDialog<bool>(
+      context: context,
+      useRootNavigator: true,
+      builder: (context) => AlertDialog(
+        icon: const Icon(Icons.logout_rounded),
+        title: const Text('Leave this orbit?'),
+        content: const Text(
+          'This account stays intact. Gauss will close its local store before another account can open.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('Stay here'),
+          ),
+          FilledButton(
+            key: const ValueKey('account-confirm-sign-out'),
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text('Sign out'),
+          ),
+        ],
+      ),
+    );
+    if (approved == true) await onSignOut();
+  }
+
+  @override
+  Widget build(BuildContext context) => Material(
+    color: GaussColors.deepInk.withValues(alpha: .72),
+    borderRadius: BorderRadius.circular(18),
+    child: Padding(
+      padding: const EdgeInsets.fromLTRB(14, 12, 10, 12),
+      child: Row(
+        children: [
+          const SizedBox.square(
+            dimension: 44,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Color(0x173C947F),
+              ),
+              child: Icon(
+                Icons.person_outline_rounded,
+                color: GaussColors.signalBright,
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Current orbit',
+                  style: TextStyle(
+                    color: GaussColors.ivory,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                if (accountEmail != null) ...[
+                  const SizedBox(height: 3),
+                  Text(
+                    accountEmail!,
+                    key: const ValueKey('account-email'),
+                    softWrap: true,
+                    style: const TextStyle(
+                      color: GaussColors.fog,
+                      fontSize: GaussTypeScale.caption,
+                      height: 1.4,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          IconButton(
+            key: const ValueKey('account-sign-out'),
+            tooltip: 'Sign out',
+            onPressed: () => _confirmSignOut(context),
+            icon: const Icon(Icons.logout_rounded),
+          ),
         ],
       ),
     ),

@@ -1,0 +1,4 @@
+project_id = "evyjrbwibwrdkjakooor"
+
+[functions.gauss-signup]
+verify_jwt = false
