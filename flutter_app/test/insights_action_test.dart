@@ -171,6 +171,10 @@ void main() {
       expect(levelTrack.size, const Size.square(48));
       expect(statusTrack.size, const Size.square(48));
       expect(
+        find.byKey(const ValueKey('insights-tools-action')),
+        findsOneWidget,
+      );
+      expect(
         find.descendant(
           of: find.byKey(const ValueKey('insights-header')),
           matching: find.byWidgetPredicate(

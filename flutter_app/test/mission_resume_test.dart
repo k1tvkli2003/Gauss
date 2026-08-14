@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:ui' show SemanticsAction;
 
 import 'package:drift/native.dart';
@@ -10,6 +11,8 @@ import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/app/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
+import 'package:gauss/feedback/feedback_capture.dart';
+import 'package:gauss/feedback/feedback_models.dart';
 import 'package:gauss/screens/mission_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:gauss/widgets/mission_start_guard.dart';
@@ -43,6 +46,7 @@ void main() {
       addTearDown(database.close);
       final questionBank = QuestionBankRepository();
       final first = GaussController(questionBank, ProgressRepository(database));
+      addTearDown(first.dispose);
       await first.initialize();
       final questions = [archiveQuestion];
       final startedAt = DateTime(2026, 7, 12, 16);
@@ -70,6 +74,7 @@ void main() {
         QuestionBankRepository(),
         ProgressRepository(database),
       );
+      addTearDown(restarted.dispose);
       await restarted.initialize();
       final saved = await restarted.loadResumableMission();
 
@@ -101,6 +106,7 @@ void main() {
       );
 
       final controller = GaussController(QuestionBankRepository(), progress);
+      addTearDown(controller.dispose);
       await controller.initialize();
 
       expect(
@@ -189,8 +195,67 @@ void main() {
     expect(reports.single.kind, QuestionIssueKind.answerKey);
     expect(reports.single.note, 'The keyed option looks inconsistent.');
     expect(reports.single.missionIndex, 0);
-    expect(find.text('Issue saved on this device for repair.'), findsOneWidget);
+    expect(
+      find.text('Question report saved to the private outbox.'),
+      findsOneWidget,
+    );
   });
+
+  testWidgets(
+    'question report previews and stores an attached surface in the app shell',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(420, 900));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        archiveQuestion,
+        database,
+        failFirstSave: false,
+      );
+      await controller.feedback.initialize();
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          home: GaussScope(
+            controller: controller,
+            child: GaussFeedbackCapture(
+              controller: controller.feedback,
+              routeName: () => '/mission/sets',
+              screenshotProvider: () async =>
+                  GaussFeedbackScreenshot(bytes: _onePixelPng, pixelRatio: 1),
+              child: const MissionScreen(topicKey: 'sets', count: 5),
+            ),
+          ),
+        ),
+      );
+      final reportAction = find.byKey(
+        const ValueKey('mission-report-question-action'),
+      );
+      await _pumpUntilFound(tester, reportAction);
+      await tester.ensureVisible(reportAction);
+      await tester.tap(reportAction);
+      await tester.pumpAndSettle();
+
+      expect(
+        find.byKey(const ValueKey('question-issue-screenshot-preview')),
+        findsOneWidget,
+      );
+      await tester.tap(find.byKey(const ValueKey('question-issue-save')));
+      await tester.pumpAndSettle();
+
+      expect(controller.feedback.entries, hasLength(1));
+      expect(controller.feedback.entries.single.questionId, archiveQuestion.id);
+      expect(controller.feedback.entries.single.hasScreenshot, isTrue);
+      expect(
+        await controller.feedback.readScreenshot(
+          controller.feedback.entries.single,
+        ),
+        isNotNull,
+      );
+    },
+  );
 
   testWidgets(
     'mission question chrome stays fixed when stylus controls replace status',
@@ -752,6 +817,10 @@ Future<void> _pumpUntilFound(WidgetTester tester, Finder finder) async {
       .toList();
   expect(finder, findsOneWidget, reason: 'Visible text: $visibleText');
 }
+
+final Uint8List _onePixelPng = base64Decode(
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
+);
 
 class _MissionTestController extends GaussController {
   _MissionTestController(

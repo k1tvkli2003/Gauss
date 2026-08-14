@@ -191,6 +191,39 @@ class StudySlotEncounters extends Table {
   Set<Column<Object>> get primaryKey => {slotId};
 }
 
+/// Local-first feedback waiting for the authenticated sync lane.
+///
+/// Screenshot bytes live in the same SQLite transaction as their metadata so
+/// a process interruption cannot leave a report pointing at a partial file.
+/// The stable [id] is also the future remote idempotency key.
+@DataClassName('FeedbackOutboxRow')
+class FeedbackOutboxEntries extends Table {
+  TextColumn get id => text()();
+  TextColumn get kind => text()();
+  TextColumn get route => text()();
+  TextColumn get note => text()();
+  TextColumn get questionId => text().nullable()();
+  IntColumn get questionRevision => integer().nullable()();
+  TextColumn get topicKey => text().nullable()();
+  TextColumn get questionIssueKind => text().nullable()();
+  TextColumn get sessionId => text().nullable()();
+  IntColumn get missionIndex => integer().nullable()();
+  IntColumn get selectedChoiceIndex => integer().nullable()();
+  BlobColumn get screenshotPng => blob().nullable()();
+  IntColumn get screenshotWidthPx => integer().nullable()();
+  IntColumn get screenshotHeightPx => integer().nullable()();
+  IntColumn get screenshotByteLength => integer().nullable()();
+  RealColumn get screenshotPixelRatio => real().nullable()();
+  TextColumn get syncState => text().withDefault(const Constant('pending'))();
+  IntColumn get syncAttempts => integer().withDefault(const Constant(0))();
+  TextColumn get lastSyncError => text().nullable()();
+  IntColumn get createdAt => integer()();
+  IntColumn get updatedAt => integer()();
+
+  @override
+  Set<Column<Object>> get primaryKey => {id};
+}
+
 @DriftDatabase(
   tables: [
     Exams,
@@ -204,6 +237,7 @@ class StudySlotEncounters extends Table {
     StudyRecords,
     StudyPositions,
     StudySlotEncounters,
+    FeedbackOutboxEntries,
     AppFlags,
   ],
 )
@@ -222,7 +256,7 @@ class GaussDatabase extends _$GaussDatabase {
       );
 
   @override
-  int get schemaVersion => 7;
+  int get schemaVersion => 8;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -267,6 +301,12 @@ class GaussDatabase extends _$GaussDatabase {
         // Keep every old row; the controller seeds primary encounters from
         // the generated plan after the question bank is available.
         await migrator.createTable(studySlotEncounters);
+      }
+      if (from < 8) {
+        // Additive: existing progress and legacy question reports remain
+        // untouched. New reports gain atomic screenshot storage and a durable
+        // pending/synced state for the forthcoming account-scoped backend.
+        await migrator.createTable(feedbackOutboxEntries);
       }
     },
     beforeOpen: (details) async {

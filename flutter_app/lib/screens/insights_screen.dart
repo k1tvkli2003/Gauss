@@ -9,6 +9,7 @@ import '../app/gauss_theme.dart';
 import '../domain/gamification_catalog.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
+import '../feedback/feedback_capture.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/gamification_orbit_ribbon.dart';
 import '../widgets/gauss_brand.dart';
@@ -45,6 +46,14 @@ class InsightsScreen extends StatelessWidget {
                     level: gamification.level,
                     levelProgress: gamification.levelProgress,
                     vaultAvailable: controller.backups.isSupported,
+                    feedbackCount: controller.feedback.entryCount,
+                    onTools: () => GaussFeedbackToolsSheet.show(
+                      context,
+                      controller: controller.feedback,
+                      onOpenVault: controller.backups.isSupported
+                          ? () => context.push('/vault')
+                          : null,
+                    ),
                   ),
                 ),
                 SliverToBoxAdapter(
@@ -153,12 +162,16 @@ class _ObservatoryHeader extends StatelessWidget {
     required this.level,
     required this.levelProgress,
     required this.vaultAvailable,
+    required this.feedbackCount,
+    required this.onTools,
   });
 
   final int totalQuestions;
   final int level;
   final double levelProgress;
   final bool vaultAvailable;
+  final int feedbackCount;
+  final VoidCallback onTools;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -204,17 +217,23 @@ class _ObservatoryHeader extends StatelessWidget {
                         child: SizedBox.square(
                           key: const ValueKey('insights-status-track'),
                           dimension: 48,
-                          child: vaultAvailable
-                              ? IconButton(
-                                  key: const ValueKey('insights-vault-action'),
-                                  onPressed: () => context.push('/vault'),
-                                  tooltip: 'Progress vault',
-                                  icon: const Icon(
-                                    Icons.inventory_2_outlined,
-                                    color: GaussColors.brassLight,
-                                  ),
-                                )
-                              : const Center(child: _OfflineSignal()),
+                          child: IconButton(
+                            key: const ValueKey('insights-tools-action'),
+                            onPressed: onTools,
+                            tooltip: feedbackCount == 0
+                                ? 'Private tools'
+                                : 'Private tools. $feedbackCount feedback reports.',
+                            icon: Badge(
+                              isLabelVisible: feedbackCount > 0,
+                              label: Text('$feedbackCount'),
+                              child: Icon(
+                                vaultAvailable
+                                    ? Icons.tune_rounded
+                                    : Icons.edit_note_rounded,
+                                color: GaussColors.brassLight,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ],
@@ -348,32 +367,6 @@ class _MedallionRingPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _MedallionRingPainter oldDelegate) =>
       oldDelegate.progress != progress;
-}
-
-class _OfflineSignal extends StatelessWidget {
-  const _OfflineSignal();
-
-  @override
-  Widget build(BuildContext context) => Tooltip(
-    message: 'Private and available offline',
-    child: Container(
-      width: 42,
-      height: 42,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: GaussColors.signal.withValues(alpha: .1),
-        border: Border.all(
-          color: GaussColors.signalBright.withValues(alpha: .35),
-        ),
-      ),
-      child: const Icon(
-        Icons.offline_bolt_outlined,
-        size: 20,
-        color: GaussColors.signalBright,
-      ),
-    ),
-  );
 }
 
 class _MetricConstellation extends StatelessWidget {

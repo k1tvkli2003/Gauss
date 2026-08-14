@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../domain/study_curriculum.dart';
+import '../feedback/feedback_capture.dart';
 import '../screens/archive_screen.dart';
 import '../screens/backup_screen.dart';
 import '../screens/insights_screen.dart';
@@ -26,8 +27,11 @@ class GaussApp extends StatefulWidget {
 
 class _GaussAppState extends State<GaussApp> {
   bool _listeningForBootstrap = false;
+  final ValueNotifier<String> _routeName = ValueNotifier('/');
+  final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey();
 
   late final GoRouter _router = GoRouter(
+    navigatorKey: _rootNavigatorKey,
     errorBuilder: (context, state) => const _RouteErrorScreen(),
     routes: [
       StatefulShellRoute.indexedStack(
@@ -143,9 +147,15 @@ class _GaussAppState extends State<GaussApp> {
     ],
   );
 
+  void _trackRoute() {
+    _routeName.value = _router.routeInformationProvider.value.uri.toString();
+  }
+
   @override
   void initState() {
     super.initState();
+    _trackRoute();
+    _router.routeInformationProvider.addListener(_trackRoute);
     _listenForBootstrapIfNeeded();
   }
 
@@ -180,6 +190,8 @@ class _GaussAppState extends State<GaussApp> {
     if (_listeningForBootstrap) {
       widget.controller.removeListener(_handleBootstrapChange);
     }
+    _router.routeInformationProvider.removeListener(_trackRoute);
+    _routeName.dispose();
     _router.dispose();
     super.dispose();
   }
@@ -207,7 +219,12 @@ class _GaussAppState extends State<GaussApp> {
             return _StartupFailureScreen(controller: widget.controller);
           }
           if (!widget.controller.ready) return const _StartupView();
-          return child ?? const SizedBox.shrink();
+          return GaussFeedbackCapture(
+            controller: widget.controller.feedback,
+            routeName: () => _routeName.value,
+            navigatorKey: _rootNavigatorKey,
+            child: child ?? const SizedBox.shrink(),
+          );
         },
       ),
     );

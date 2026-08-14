@@ -9,7 +9,10 @@ import 'package:go_router/go_router.dart';
 import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import '../domain/models.dart';
+import '../domain/question_reference.dart';
 import '../domain/study_curriculum.dart';
+import '../feedback/feedback_capture.dart';
+import '../feedback/feedback_models.dart';
 import '../state/gauss_controller.dart';
 import '../widgets/content_blocks.dart';
 import '../widgets/gauss_brand.dart';
@@ -348,12 +351,29 @@ class _MissionScreenState extends State<MissionScreen> {
   Future<void> _reportCurrentQuestionIssue() async {
     if (_questions.isEmpty || _saving) return;
     final question = _questions[_index];
+    GaussFeedbackScreenshot? screenshot;
+    try {
+      screenshot = await GaussFeedbackCapture.captureFrom(context);
+    } catch (_) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          const SnackBar(
+            content: Text(
+              'The screen preview was unavailable. You can still save a text report.',
+            ),
+          ),
+        );
+    }
+    if (!mounted) return;
     final draft = await showModalBottomSheet<_QuestionIssueDraft>(
       context: context,
       isScrollControlled: true,
       useSafeArea: true,
       backgroundColor: Colors.transparent,
-      builder: (sheetContext) => _QuestionIssueSheet(questionId: question.id),
+      builder: (sheetContext) =>
+          _QuestionIssueSheet(questionId: question.id, screenshot: screenshot),
     );
     if (draft == null || !mounted) return;
 
@@ -369,6 +389,7 @@ class _MissionScreenState extends State<MissionScreen> {
           selectedChoiceIndex: _selectedChoice,
           reportedAt: DateTime.now(),
         ),
+        screenshot: draft.includeScreenshot ? screenshot : null,
       );
       if (!mounted) return;
       unawaited(HapticFeedback.mediumImpact());
@@ -376,7 +397,7 @@ class _MissionScreenState extends State<MissionScreen> {
         ..hideCurrentSnackBar()
         ..showSnackBar(
           const SnackBar(
-            content: Text('Issue saved on this device for repair.'),
+            content: Text('Question report saved to the private outbox.'),
           ),
         );
     } catch (_) {
@@ -1796,16 +1817,22 @@ class _SolutionPanel extends StatelessWidget {
 }
 
 class _QuestionIssueDraft {
-  const _QuestionIssueDraft({required this.kind, required this.note});
+  const _QuestionIssueDraft({
+    required this.kind,
+    required this.note,
+    required this.includeScreenshot,
+  });
 
   final QuestionIssueKind kind;
   final String note;
+  final bool includeScreenshot;
 }
 
 class _QuestionIssueSheet extends StatefulWidget {
-  const _QuestionIssueSheet({required this.questionId});
+  const _QuestionIssueSheet({required this.questionId, this.screenshot});
 
   final String questionId;
+  final GaussFeedbackScreenshot? screenshot;
 
   @override
   State<_QuestionIssueSheet> createState() => _QuestionIssueSheetState();
@@ -1813,6 +1840,7 @@ class _QuestionIssueSheet extends StatefulWidget {
 
 class _QuestionIssueSheetState extends State<_QuestionIssueSheet> {
   var _kind = QuestionIssueKind.questionText;
+  var _includeScreenshot = true;
   final _note = TextEditingController();
 
   @override
@@ -1867,7 +1895,7 @@ class _QuestionIssueSheetState extends State<_QuestionIssueSheet> {
               ),
               const SizedBox(height: 8),
               Text(
-                widget.questionId,
+                questionDisplayReference(widget.questionId),
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.ltr,
                 softWrap: true,
@@ -1893,6 +1921,51 @@ class _QuestionIssueSheetState extends State<_QuestionIssueSheet> {
                 ],
               ),
               const SizedBox(height: 16),
+              if (widget.screenshot != null) ...[
+                Container(
+                  key: const ValueKey('question-issue-screenshot-preview'),
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: GaussColors.deepInk.withValues(alpha: .72),
+                    borderRadius: BorderRadius.circular(18),
+                    border: Border.all(color: GaussColors.hairline),
+                  ),
+                  child: Column(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: ConstrainedBox(
+                          constraints: const BoxConstraints(maxHeight: 180),
+                          child: Image.memory(
+                            widget.screenshot!.bytes,
+                            fit: BoxFit.contain,
+                            filterQuality: FilterQuality.medium,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Material(
+                        color: Colors.transparent,
+                        child: CheckboxListTile(
+                          key: const ValueKey(
+                            'question-issue-include-screenshot',
+                          ),
+                          value: _includeScreenshot,
+                          contentPadding: EdgeInsets.zero,
+                          title: const Text('Attach this screen'),
+                          subtitle: const Text(
+                            'Pixels are stored exactly as shown and are not redacted.',
+                          ),
+                          onChanged: (value) => setState(
+                            () => _includeScreenshot = value ?? false,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+              ],
               TextField(
                 key: const ValueKey('question-issue-note'),
                 controller: _note,
@@ -1910,7 +1983,12 @@ class _QuestionIssueSheetState extends State<_QuestionIssueSheet> {
                 key: const ValueKey('question-issue-save'),
                 onPressed: () => Navigator.pop(
                   context,
-                  _QuestionIssueDraft(kind: _kind, note: _note.text.trim()),
+                  _QuestionIssueDraft(
+                    kind: _kind,
+                    note: _note.text.trim(),
+                    includeScreenshot:
+                        widget.screenshot != null && _includeScreenshot,
+                  ),
                 ),
                 icon: const Icon(Icons.bookmark_added_outlined),
                 label: const Text('Save report on this device'),

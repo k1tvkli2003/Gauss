@@ -10,6 +10,9 @@ import '../data/status_widget_bridge.dart';
 import '../domain/failures.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
+import '../feedback/feedback_controller.dart';
+import '../feedback/feedback_models.dart';
+import '../feedback/feedback_repository.dart';
 
 class GaussController extends ChangeNotifier {
   GaussController(
@@ -17,15 +20,21 @@ class GaussController extends ChangeNotifier {
     this._progress, {
     BackupService? backups,
     StatusWidgetBridge? statusWidget,
+    GaussFeedbackController? feedback,
   }) : _backups = backups ?? BackupService(),
-       _statusWidget = statusWidget ?? const StatusWidgetBridge();
+       _statusWidget = statusWidget ?? const StatusWidgetBridge(),
+       _feedback =
+           feedback ??
+           GaussFeedbackController(GaussFeedbackRepository(_progress.database));
 
   final QuestionBankRepository _questionBank;
   final ProgressRepository _progress;
   final BackupService _backups;
   final StatusWidgetBridge _statusWidget;
+  final GaussFeedbackController _feedback;
 
   BackupService get backups => _backups;
+  GaussFeedbackController get feedback => _feedback;
   final List<AttemptRecord> _attempts = [];
   final Map<String, int> _completedByTopic = {};
   String? _selectedTopicKey;
@@ -135,6 +144,9 @@ class GaussController extends ChangeNotifier {
     try {
       await _questionBank.initialize();
       await _progress.initialize();
+      // Feedback is intentionally fail-soft: a damaged optional outbox must
+      // never prevent the question bank or the learner's progress from opening.
+      await _feedback.initialize();
       await _progress.migrateStudyPlan(_questionBank.studyPlan);
       await _refreshProgress();
       await _restoreLearningContext();
@@ -306,9 +318,13 @@ class GaussController extends ChangeNotifier {
 
   /// Saves a private, offline repair signal without hiding or mutating the
   /// source question. Reporting is intentionally independent from scoring.
-  Future<void> reportQuestionIssue(QuestionIssueReport report) async {
+  Future<void> reportQuestionIssue(
+    QuestionIssueReport report, {
+    GaussFeedbackScreenshot? screenshot,
+  }) async {
     try {
-      await _progress.saveQuestionIssueReport(report);
+      await _progress.saveQuestionIssueReport(report, screenshot: screenshot);
+      await _feedback.refresh();
     } catch (error) {
       throw MissionWriteFailure(error, operation: 'report_question_issue');
     }
@@ -670,6 +686,12 @@ class GaussController extends ChangeNotifier {
   }
 
   Future<void> validateDataset() => _questionBank.validateAllShards();
+
+  @override
+  void dispose() {
+    _feedback.dispose();
+    super.dispose();
+  }
 }
 
 class GaussScope extends InheritedNotifier<GaussController> {

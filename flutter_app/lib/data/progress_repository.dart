@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:math' as math;
 
 import 'package:drift/drift.dart';
@@ -6,6 +5,8 @@ import 'package:drift/drift.dart';
 import '../domain/gamification_catalog.dart';
 import '../domain/models.dart';
 import '../domain/study_curriculum.dart';
+import '../feedback/feedback_models.dart';
+import '../feedback/feedback_repository.dart';
 import 'local/gauss_database.dart';
 
 class ProgressRepository {
@@ -41,7 +42,6 @@ class ProgressRepository {
   static const tourSeenFlag = 'tour_seen';
   static const learningContextTopicFlag = 'learning_context_topic';
   static const studyPlanVersionFlag = 'study_plan_version';
-  static const _questionIssueFlagPrefix = 'question_issue_v1:';
 
   Future<String?> _readFlagValue(String key) async {
     final row = await (database.select(
@@ -67,12 +67,15 @@ class ProgressRepository {
     return _writeFlagValue(learningContextTopicFlag, topicKey);
   }
 
-  /// Appends a local-only corpus repair signal.
+  /// Appends a local-first corpus repair signal to the feedback outbox.
   ///
-  /// AppFlags is intentionally used as an additive envelope so this personal
-  /// workflow does not require a destructive schema migration. Every report
-  /// has its own timestamped key; later reports never overwrite earlier ones.
-  Future<void> saveQuestionIssueReport(QuestionIssueReport report) {
+  /// Every report keeps its immutable question/session context and remains
+  /// independent from scoring. The outbox id becomes the remote idempotency
+  /// key once account-scoped sync is enabled.
+  Future<void> saveQuestionIssueReport(
+    QuestionIssueReport report, {
+    GaussFeedbackScreenshot? screenshot,
+  }) {
     if (report.questionId.isEmpty ||
         report.topicKey.isEmpty ||
         report.sessionId.isEmpty ||
@@ -80,27 +83,41 @@ class ProgressRepository {
         report.note.length > 500) {
       throw const FormatException('Invalid question issue report.');
     }
-    return _writeFlagValue(
-      '$_questionIssueFlagPrefix${report.id}',
-      jsonEncode(report.toJson()),
-    );
+    return GaussFeedbackRepository(
+      database,
+    ).addQuestionIssue(report, screenshot: screenshot);
   }
 
   /// Reads valid reports newest-first. A damaged optional report is ignored;
   /// it must never prevent the offline library or learning progress opening.
   Future<List<QuestionIssueReport>> questionIssueReports() async {
-    final rows = await database.select(database.appFlags).get();
+    final entries = await GaussFeedbackRepository(database).readEntries();
     final reports = <QuestionIssueReport>[];
-    for (final row in rows) {
-      if (!row.key.startsWith(_questionIssueFlagPrefix)) continue;
+    for (final entry in entries) {
+      if (entry.kind != GaussFeedbackKind.questionIssue ||
+          entry.questionId == null ||
+          entry.topicKey == null ||
+          entry.questionIssueKind == null ||
+          entry.sessionId == null ||
+          entry.missionIndex == null) {
+        continue;
+      }
       try {
-        final decoded = jsonDecode(row.value);
-        if (decoded is Map<String, dynamic>) {
-          reports.add(QuestionIssueReport.fromJson(decoded));
-        }
+        reports.add(
+          QuestionIssueReport(
+            questionId: entry.questionId!,
+            topicKey: entry.topicKey!,
+            kind: QuestionIssueKind.fromKey(entry.questionIssueKind!),
+            note: entry.note,
+            sessionId: entry.sessionId!,
+            missionIndex: entry.missionIndex!,
+            selectedChoiceIndex: entry.selectedChoiceIndex,
+            reportedAt: entry.createdAt.toLocal(),
+          ),
+        );
       } catch (_) {
         // Optional repair metadata is fail-soft; source data and progress stay
-        // untouched even if one local report value is corrupt.
+        // untouched even if one local report row is corrupt.
       }
     }
     reports.sort((left, right) => right.reportedAt.compareTo(left.reportedAt));

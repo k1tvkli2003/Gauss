@@ -5493,6 +5493,1235 @@ class StudySlotEncountersCompanion
   }
 }
 
+class $FeedbackOutboxEntriesTable extends FeedbackOutboxEntries
+    with TableInfo<$FeedbackOutboxEntriesTable, FeedbackOutboxRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $FeedbackOutboxEntriesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
+  @override
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+    'kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _routeMeta = const VerificationMeta('route');
+  @override
+  late final GeneratedColumn<String> route = GeneratedColumn<String>(
+    'route',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _noteMeta = const VerificationMeta('note');
+  @override
+  late final GeneratedColumn<String> note = GeneratedColumn<String>(
+    'note',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _questionIdMeta = const VerificationMeta(
+    'questionId',
+  );
+  @override
+  late final GeneratedColumn<String> questionId = GeneratedColumn<String>(
+    'question_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _questionRevisionMeta = const VerificationMeta(
+    'questionRevision',
+  );
+  @override
+  late final GeneratedColumn<int> questionRevision = GeneratedColumn<int>(
+    'question_revision',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _topicKeyMeta = const VerificationMeta(
+    'topicKey',
+  );
+  @override
+  late final GeneratedColumn<String> topicKey = GeneratedColumn<String>(
+    'topic_key',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _questionIssueKindMeta = const VerificationMeta(
+    'questionIssueKind',
+  );
+  @override
+  late final GeneratedColumn<String> questionIssueKind =
+      GeneratedColumn<String>(
+        'question_issue_kind',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _sessionIdMeta = const VerificationMeta(
+    'sessionId',
+  );
+  @override
+  late final GeneratedColumn<String> sessionId = GeneratedColumn<String>(
+    'session_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _missionIndexMeta = const VerificationMeta(
+    'missionIndex',
+  );
+  @override
+  late final GeneratedColumn<int> missionIndex = GeneratedColumn<int>(
+    'mission_index',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _selectedChoiceIndexMeta =
+      const VerificationMeta('selectedChoiceIndex');
+  @override
+  late final GeneratedColumn<int> selectedChoiceIndex = GeneratedColumn<int>(
+    'selected_choice_index',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _screenshotPngMeta = const VerificationMeta(
+    'screenshotPng',
+  );
+  @override
+  late final GeneratedColumn<Uint8List> screenshotPng =
+      GeneratedColumn<Uint8List>(
+        'screenshot_png',
+        aliasedName,
+        true,
+        type: DriftSqlType.blob,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _screenshotWidthPxMeta = const VerificationMeta(
+    'screenshotWidthPx',
+  );
+  @override
+  late final GeneratedColumn<int> screenshotWidthPx = GeneratedColumn<int>(
+    'screenshot_width_px',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _screenshotHeightPxMeta =
+      const VerificationMeta('screenshotHeightPx');
+  @override
+  late final GeneratedColumn<int> screenshotHeightPx = GeneratedColumn<int>(
+    'screenshot_height_px',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _screenshotByteLengthMeta =
+      const VerificationMeta('screenshotByteLength');
+  @override
+  late final GeneratedColumn<int> screenshotByteLength = GeneratedColumn<int>(
+    'screenshot_byte_length',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _screenshotPixelRatioMeta =
+      const VerificationMeta('screenshotPixelRatio');
+  @override
+  late final GeneratedColumn<double> screenshotPixelRatio =
+      GeneratedColumn<double>(
+        'screenshot_pixel_ratio',
+        aliasedName,
+        true,
+        type: DriftSqlType.double,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _syncStateMeta = const VerificationMeta(
+    'syncState',
+  );
+  @override
+  late final GeneratedColumn<String> syncState = GeneratedColumn<String>(
+    'sync_state',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('pending'),
+  );
+  static const VerificationMeta _syncAttemptsMeta = const VerificationMeta(
+    'syncAttempts',
+  );
+  @override
+  late final GeneratedColumn<int> syncAttempts = GeneratedColumn<int>(
+    'sync_attempts',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _lastSyncErrorMeta = const VerificationMeta(
+    'lastSyncError',
+  );
+  @override
+  late final GeneratedColumn<String> lastSyncError = GeneratedColumn<String>(
+    'last_sync_error',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<int> createdAt = GeneratedColumn<int>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<int> updatedAt = GeneratedColumn<int>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    kind,
+    route,
+    note,
+    questionId,
+    questionRevision,
+    topicKey,
+    questionIssueKind,
+    sessionId,
+    missionIndex,
+    selectedChoiceIndex,
+    screenshotPng,
+    screenshotWidthPx,
+    screenshotHeightPx,
+    screenshotByteLength,
+    screenshotPixelRatio,
+    syncState,
+    syncAttempts,
+    lastSyncError,
+    createdAt,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'feedback_outbox_entries';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<FeedbackOutboxRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('kind')) {
+      context.handle(
+        _kindMeta,
+        kind.isAcceptableOrUnknown(data['kind']!, _kindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kindMeta);
+    }
+    if (data.containsKey('route')) {
+      context.handle(
+        _routeMeta,
+        route.isAcceptableOrUnknown(data['route']!, _routeMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_routeMeta);
+    }
+    if (data.containsKey('note')) {
+      context.handle(
+        _noteMeta,
+        note.isAcceptableOrUnknown(data['note']!, _noteMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_noteMeta);
+    }
+    if (data.containsKey('question_id')) {
+      context.handle(
+        _questionIdMeta,
+        questionId.isAcceptableOrUnknown(data['question_id']!, _questionIdMeta),
+      );
+    }
+    if (data.containsKey('question_revision')) {
+      context.handle(
+        _questionRevisionMeta,
+        questionRevision.isAcceptableOrUnknown(
+          data['question_revision']!,
+          _questionRevisionMeta,
+        ),
+      );
+    }
+    if (data.containsKey('topic_key')) {
+      context.handle(
+        _topicKeyMeta,
+        topicKey.isAcceptableOrUnknown(data['topic_key']!, _topicKeyMeta),
+      );
+    }
+    if (data.containsKey('question_issue_kind')) {
+      context.handle(
+        _questionIssueKindMeta,
+        questionIssueKind.isAcceptableOrUnknown(
+          data['question_issue_kind']!,
+          _questionIssueKindMeta,
+        ),
+      );
+    }
+    if (data.containsKey('session_id')) {
+      context.handle(
+        _sessionIdMeta,
+        sessionId.isAcceptableOrUnknown(data['session_id']!, _sessionIdMeta),
+      );
+    }
+    if (data.containsKey('mission_index')) {
+      context.handle(
+        _missionIndexMeta,
+        missionIndex.isAcceptableOrUnknown(
+          data['mission_index']!,
+          _missionIndexMeta,
+        ),
+      );
+    }
+    if (data.containsKey('selected_choice_index')) {
+      context.handle(
+        _selectedChoiceIndexMeta,
+        selectedChoiceIndex.isAcceptableOrUnknown(
+          data['selected_choice_index']!,
+          _selectedChoiceIndexMeta,
+        ),
+      );
+    }
+    if (data.containsKey('screenshot_png')) {
+      context.handle(
+        _screenshotPngMeta,
+        screenshotPng.isAcceptableOrUnknown(
+          data['screenshot_png']!,
+          _screenshotPngMeta,
+        ),
+      );
+    }
+    if (data.containsKey('screenshot_width_px')) {
+      context.handle(
+        _screenshotWidthPxMeta,
+        screenshotWidthPx.isAcceptableOrUnknown(
+          data['screenshot_width_px']!,
+          _screenshotWidthPxMeta,
+        ),
+      );
+    }
+    if (data.containsKey('screenshot_height_px')) {
+      context.handle(
+        _screenshotHeightPxMeta,
+        screenshotHeightPx.isAcceptableOrUnknown(
+          data['screenshot_height_px']!,
+          _screenshotHeightPxMeta,
+        ),
+      );
+    }
+    if (data.containsKey('screenshot_byte_length')) {
+      context.handle(
+        _screenshotByteLengthMeta,
+        screenshotByteLength.isAcceptableOrUnknown(
+          data['screenshot_byte_length']!,
+          _screenshotByteLengthMeta,
+        ),
+      );
+    }
+    if (data.containsKey('screenshot_pixel_ratio')) {
+      context.handle(
+        _screenshotPixelRatioMeta,
+        screenshotPixelRatio.isAcceptableOrUnknown(
+          data['screenshot_pixel_ratio']!,
+          _screenshotPixelRatioMeta,
+        ),
+      );
+    }
+    if (data.containsKey('sync_state')) {
+      context.handle(
+        _syncStateMeta,
+        syncState.isAcceptableOrUnknown(data['sync_state']!, _syncStateMeta),
+      );
+    }
+    if (data.containsKey('sync_attempts')) {
+      context.handle(
+        _syncAttemptsMeta,
+        syncAttempts.isAcceptableOrUnknown(
+          data['sync_attempts']!,
+          _syncAttemptsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('last_sync_error')) {
+      context.handle(
+        _lastSyncErrorMeta,
+        lastSyncError.isAcceptableOrUnknown(
+          data['last_sync_error']!,
+          _lastSyncErrorMeta,
+        ),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  FeedbackOutboxRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return FeedbackOutboxRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      kind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kind'],
+      )!,
+      route: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}route'],
+      )!,
+      note: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}note'],
+      )!,
+      questionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}question_id'],
+      ),
+      questionRevision: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}question_revision'],
+      ),
+      topicKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}topic_key'],
+      ),
+      questionIssueKind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}question_issue_kind'],
+      ),
+      sessionId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}session_id'],
+      ),
+      missionIndex: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}mission_index'],
+      ),
+      selectedChoiceIndex: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}selected_choice_index'],
+      ),
+      screenshotPng: attachedDatabase.typeMapping.read(
+        DriftSqlType.blob,
+        data['${effectivePrefix}screenshot_png'],
+      ),
+      screenshotWidthPx: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}screenshot_width_px'],
+      ),
+      screenshotHeightPx: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}screenshot_height_px'],
+      ),
+      screenshotByteLength: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}screenshot_byte_length'],
+      ),
+      screenshotPixelRatio: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}screenshot_pixel_ratio'],
+      ),
+      syncState: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}sync_state'],
+      )!,
+      syncAttempts: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}sync_attempts'],
+      )!,
+      lastSyncError: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}last_sync_error'],
+      ),
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}created_at'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}updated_at'],
+      )!,
+    );
+  }
+
+  @override
+  $FeedbackOutboxEntriesTable createAlias(String alias) {
+    return $FeedbackOutboxEntriesTable(attachedDatabase, alias);
+  }
+}
+
+class FeedbackOutboxRow extends DataClass
+    implements Insertable<FeedbackOutboxRow> {
+  final String id;
+  final String kind;
+  final String route;
+  final String note;
+  final String? questionId;
+  final int? questionRevision;
+  final String? topicKey;
+  final String? questionIssueKind;
+  final String? sessionId;
+  final int? missionIndex;
+  final int? selectedChoiceIndex;
+  final Uint8List? screenshotPng;
+  final int? screenshotWidthPx;
+  final int? screenshotHeightPx;
+  final int? screenshotByteLength;
+  final double? screenshotPixelRatio;
+  final String syncState;
+  final int syncAttempts;
+  final String? lastSyncError;
+  final int createdAt;
+  final int updatedAt;
+  const FeedbackOutboxRow({
+    required this.id,
+    required this.kind,
+    required this.route,
+    required this.note,
+    this.questionId,
+    this.questionRevision,
+    this.topicKey,
+    this.questionIssueKind,
+    this.sessionId,
+    this.missionIndex,
+    this.selectedChoiceIndex,
+    this.screenshotPng,
+    this.screenshotWidthPx,
+    this.screenshotHeightPx,
+    this.screenshotByteLength,
+    this.screenshotPixelRatio,
+    required this.syncState,
+    required this.syncAttempts,
+    this.lastSyncError,
+    required this.createdAt,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['kind'] = Variable<String>(kind);
+    map['route'] = Variable<String>(route);
+    map['note'] = Variable<String>(note);
+    if (!nullToAbsent || questionId != null) {
+      map['question_id'] = Variable<String>(questionId);
+    }
+    if (!nullToAbsent || questionRevision != null) {
+      map['question_revision'] = Variable<int>(questionRevision);
+    }
+    if (!nullToAbsent || topicKey != null) {
+      map['topic_key'] = Variable<String>(topicKey);
+    }
+    if (!nullToAbsent || questionIssueKind != null) {
+      map['question_issue_kind'] = Variable<String>(questionIssueKind);
+    }
+    if (!nullToAbsent || sessionId != null) {
+      map['session_id'] = Variable<String>(sessionId);
+    }
+    if (!nullToAbsent || missionIndex != null) {
+      map['mission_index'] = Variable<int>(missionIndex);
+    }
+    if (!nullToAbsent || selectedChoiceIndex != null) {
+      map['selected_choice_index'] = Variable<int>(selectedChoiceIndex);
+    }
+    if (!nullToAbsent || screenshotPng != null) {
+      map['screenshot_png'] = Variable<Uint8List>(screenshotPng);
+    }
+    if (!nullToAbsent || screenshotWidthPx != null) {
+      map['screenshot_width_px'] = Variable<int>(screenshotWidthPx);
+    }
+    if (!nullToAbsent || screenshotHeightPx != null) {
+      map['screenshot_height_px'] = Variable<int>(screenshotHeightPx);
+    }
+    if (!nullToAbsent || screenshotByteLength != null) {
+      map['screenshot_byte_length'] = Variable<int>(screenshotByteLength);
+    }
+    if (!nullToAbsent || screenshotPixelRatio != null) {
+      map['screenshot_pixel_ratio'] = Variable<double>(screenshotPixelRatio);
+    }
+    map['sync_state'] = Variable<String>(syncState);
+    map['sync_attempts'] = Variable<int>(syncAttempts);
+    if (!nullToAbsent || lastSyncError != null) {
+      map['last_sync_error'] = Variable<String>(lastSyncError);
+    }
+    map['created_at'] = Variable<int>(createdAt);
+    map['updated_at'] = Variable<int>(updatedAt);
+    return map;
+  }
+
+  FeedbackOutboxEntriesCompanion toCompanion(bool nullToAbsent) {
+    return FeedbackOutboxEntriesCompanion(
+      id: Value(id),
+      kind: Value(kind),
+      route: Value(route),
+      note: Value(note),
+      questionId: questionId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(questionId),
+      questionRevision: questionRevision == null && nullToAbsent
+          ? const Value.absent()
+          : Value(questionRevision),
+      topicKey: topicKey == null && nullToAbsent
+          ? const Value.absent()
+          : Value(topicKey),
+      questionIssueKind: questionIssueKind == null && nullToAbsent
+          ? const Value.absent()
+          : Value(questionIssueKind),
+      sessionId: sessionId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(sessionId),
+      missionIndex: missionIndex == null && nullToAbsent
+          ? const Value.absent()
+          : Value(missionIndex),
+      selectedChoiceIndex: selectedChoiceIndex == null && nullToAbsent
+          ? const Value.absent()
+          : Value(selectedChoiceIndex),
+      screenshotPng: screenshotPng == null && nullToAbsent
+          ? const Value.absent()
+          : Value(screenshotPng),
+      screenshotWidthPx: screenshotWidthPx == null && nullToAbsent
+          ? const Value.absent()
+          : Value(screenshotWidthPx),
+      screenshotHeightPx: screenshotHeightPx == null && nullToAbsent
+          ? const Value.absent()
+          : Value(screenshotHeightPx),
+      screenshotByteLength: screenshotByteLength == null && nullToAbsent
+          ? const Value.absent()
+          : Value(screenshotByteLength),
+      screenshotPixelRatio: screenshotPixelRatio == null && nullToAbsent
+          ? const Value.absent()
+          : Value(screenshotPixelRatio),
+      syncState: Value(syncState),
+      syncAttempts: Value(syncAttempts),
+      lastSyncError: lastSyncError == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastSyncError),
+      createdAt: Value(createdAt),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory FeedbackOutboxRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return FeedbackOutboxRow(
+      id: serializer.fromJson<String>(json['id']),
+      kind: serializer.fromJson<String>(json['kind']),
+      route: serializer.fromJson<String>(json['route']),
+      note: serializer.fromJson<String>(json['note']),
+      questionId: serializer.fromJson<String?>(json['questionId']),
+      questionRevision: serializer.fromJson<int?>(json['questionRevision']),
+      topicKey: serializer.fromJson<String?>(json['topicKey']),
+      questionIssueKind: serializer.fromJson<String?>(
+        json['questionIssueKind'],
+      ),
+      sessionId: serializer.fromJson<String?>(json['sessionId']),
+      missionIndex: serializer.fromJson<int?>(json['missionIndex']),
+      selectedChoiceIndex: serializer.fromJson<int?>(
+        json['selectedChoiceIndex'],
+      ),
+      screenshotPng: serializer.fromJson<Uint8List?>(json['screenshotPng']),
+      screenshotWidthPx: serializer.fromJson<int?>(json['screenshotWidthPx']),
+      screenshotHeightPx: serializer.fromJson<int?>(json['screenshotHeightPx']),
+      screenshotByteLength: serializer.fromJson<int?>(
+        json['screenshotByteLength'],
+      ),
+      screenshotPixelRatio: serializer.fromJson<double?>(
+        json['screenshotPixelRatio'],
+      ),
+      syncState: serializer.fromJson<String>(json['syncState']),
+      syncAttempts: serializer.fromJson<int>(json['syncAttempts']),
+      lastSyncError: serializer.fromJson<String?>(json['lastSyncError']),
+      createdAt: serializer.fromJson<int>(json['createdAt']),
+      updatedAt: serializer.fromJson<int>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'kind': serializer.toJson<String>(kind),
+      'route': serializer.toJson<String>(route),
+      'note': serializer.toJson<String>(note),
+      'questionId': serializer.toJson<String?>(questionId),
+      'questionRevision': serializer.toJson<int?>(questionRevision),
+      'topicKey': serializer.toJson<String?>(topicKey),
+      'questionIssueKind': serializer.toJson<String?>(questionIssueKind),
+      'sessionId': serializer.toJson<String?>(sessionId),
+      'missionIndex': serializer.toJson<int?>(missionIndex),
+      'selectedChoiceIndex': serializer.toJson<int?>(selectedChoiceIndex),
+      'screenshotPng': serializer.toJson<Uint8List?>(screenshotPng),
+      'screenshotWidthPx': serializer.toJson<int?>(screenshotWidthPx),
+      'screenshotHeightPx': serializer.toJson<int?>(screenshotHeightPx),
+      'screenshotByteLength': serializer.toJson<int?>(screenshotByteLength),
+      'screenshotPixelRatio': serializer.toJson<double?>(screenshotPixelRatio),
+      'syncState': serializer.toJson<String>(syncState),
+      'syncAttempts': serializer.toJson<int>(syncAttempts),
+      'lastSyncError': serializer.toJson<String?>(lastSyncError),
+      'createdAt': serializer.toJson<int>(createdAt),
+      'updatedAt': serializer.toJson<int>(updatedAt),
+    };
+  }
+
+  FeedbackOutboxRow copyWith({
+    String? id,
+    String? kind,
+    String? route,
+    String? note,
+    Value<String?> questionId = const Value.absent(),
+    Value<int?> questionRevision = const Value.absent(),
+    Value<String?> topicKey = const Value.absent(),
+    Value<String?> questionIssueKind = const Value.absent(),
+    Value<String?> sessionId = const Value.absent(),
+    Value<int?> missionIndex = const Value.absent(),
+    Value<int?> selectedChoiceIndex = const Value.absent(),
+    Value<Uint8List?> screenshotPng = const Value.absent(),
+    Value<int?> screenshotWidthPx = const Value.absent(),
+    Value<int?> screenshotHeightPx = const Value.absent(),
+    Value<int?> screenshotByteLength = const Value.absent(),
+    Value<double?> screenshotPixelRatio = const Value.absent(),
+    String? syncState,
+    int? syncAttempts,
+    Value<String?> lastSyncError = const Value.absent(),
+    int? createdAt,
+    int? updatedAt,
+  }) => FeedbackOutboxRow(
+    id: id ?? this.id,
+    kind: kind ?? this.kind,
+    route: route ?? this.route,
+    note: note ?? this.note,
+    questionId: questionId.present ? questionId.value : this.questionId,
+    questionRevision: questionRevision.present
+        ? questionRevision.value
+        : this.questionRevision,
+    topicKey: topicKey.present ? topicKey.value : this.topicKey,
+    questionIssueKind: questionIssueKind.present
+        ? questionIssueKind.value
+        : this.questionIssueKind,
+    sessionId: sessionId.present ? sessionId.value : this.sessionId,
+    missionIndex: missionIndex.present ? missionIndex.value : this.missionIndex,
+    selectedChoiceIndex: selectedChoiceIndex.present
+        ? selectedChoiceIndex.value
+        : this.selectedChoiceIndex,
+    screenshotPng: screenshotPng.present
+        ? screenshotPng.value
+        : this.screenshotPng,
+    screenshotWidthPx: screenshotWidthPx.present
+        ? screenshotWidthPx.value
+        : this.screenshotWidthPx,
+    screenshotHeightPx: screenshotHeightPx.present
+        ? screenshotHeightPx.value
+        : this.screenshotHeightPx,
+    screenshotByteLength: screenshotByteLength.present
+        ? screenshotByteLength.value
+        : this.screenshotByteLength,
+    screenshotPixelRatio: screenshotPixelRatio.present
+        ? screenshotPixelRatio.value
+        : this.screenshotPixelRatio,
+    syncState: syncState ?? this.syncState,
+    syncAttempts: syncAttempts ?? this.syncAttempts,
+    lastSyncError: lastSyncError.present
+        ? lastSyncError.value
+        : this.lastSyncError,
+    createdAt: createdAt ?? this.createdAt,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  FeedbackOutboxRow copyWithCompanion(FeedbackOutboxEntriesCompanion data) {
+    return FeedbackOutboxRow(
+      id: data.id.present ? data.id.value : this.id,
+      kind: data.kind.present ? data.kind.value : this.kind,
+      route: data.route.present ? data.route.value : this.route,
+      note: data.note.present ? data.note.value : this.note,
+      questionId: data.questionId.present
+          ? data.questionId.value
+          : this.questionId,
+      questionRevision: data.questionRevision.present
+          ? data.questionRevision.value
+          : this.questionRevision,
+      topicKey: data.topicKey.present ? data.topicKey.value : this.topicKey,
+      questionIssueKind: data.questionIssueKind.present
+          ? data.questionIssueKind.value
+          : this.questionIssueKind,
+      sessionId: data.sessionId.present ? data.sessionId.value : this.sessionId,
+      missionIndex: data.missionIndex.present
+          ? data.missionIndex.value
+          : this.missionIndex,
+      selectedChoiceIndex: data.selectedChoiceIndex.present
+          ? data.selectedChoiceIndex.value
+          : this.selectedChoiceIndex,
+      screenshotPng: data.screenshotPng.present
+          ? data.screenshotPng.value
+          : this.screenshotPng,
+      screenshotWidthPx: data.screenshotWidthPx.present
+          ? data.screenshotWidthPx.value
+          : this.screenshotWidthPx,
+      screenshotHeightPx: data.screenshotHeightPx.present
+          ? data.screenshotHeightPx.value
+          : this.screenshotHeightPx,
+      screenshotByteLength: data.screenshotByteLength.present
+          ? data.screenshotByteLength.value
+          : this.screenshotByteLength,
+      screenshotPixelRatio: data.screenshotPixelRatio.present
+          ? data.screenshotPixelRatio.value
+          : this.screenshotPixelRatio,
+      syncState: data.syncState.present ? data.syncState.value : this.syncState,
+      syncAttempts: data.syncAttempts.present
+          ? data.syncAttempts.value
+          : this.syncAttempts,
+      lastSyncError: data.lastSyncError.present
+          ? data.lastSyncError.value
+          : this.lastSyncError,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('FeedbackOutboxRow(')
+          ..write('id: $id, ')
+          ..write('kind: $kind, ')
+          ..write('route: $route, ')
+          ..write('note: $note, ')
+          ..write('questionId: $questionId, ')
+          ..write('questionRevision: $questionRevision, ')
+          ..write('topicKey: $topicKey, ')
+          ..write('questionIssueKind: $questionIssueKind, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('missionIndex: $missionIndex, ')
+          ..write('selectedChoiceIndex: $selectedChoiceIndex, ')
+          ..write('screenshotPng: $screenshotPng, ')
+          ..write('screenshotWidthPx: $screenshotWidthPx, ')
+          ..write('screenshotHeightPx: $screenshotHeightPx, ')
+          ..write('screenshotByteLength: $screenshotByteLength, ')
+          ..write('screenshotPixelRatio: $screenshotPixelRatio, ')
+          ..write('syncState: $syncState, ')
+          ..write('syncAttempts: $syncAttempts, ')
+          ..write('lastSyncError: $lastSyncError, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hashAll([
+    id,
+    kind,
+    route,
+    note,
+    questionId,
+    questionRevision,
+    topicKey,
+    questionIssueKind,
+    sessionId,
+    missionIndex,
+    selectedChoiceIndex,
+    $driftBlobEquality.hash(screenshotPng),
+    screenshotWidthPx,
+    screenshotHeightPx,
+    screenshotByteLength,
+    screenshotPixelRatio,
+    syncState,
+    syncAttempts,
+    lastSyncError,
+    createdAt,
+    updatedAt,
+  ]);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is FeedbackOutboxRow &&
+          other.id == this.id &&
+          other.kind == this.kind &&
+          other.route == this.route &&
+          other.note == this.note &&
+          other.questionId == this.questionId &&
+          other.questionRevision == this.questionRevision &&
+          other.topicKey == this.topicKey &&
+          other.questionIssueKind == this.questionIssueKind &&
+          other.sessionId == this.sessionId &&
+          other.missionIndex == this.missionIndex &&
+          other.selectedChoiceIndex == this.selectedChoiceIndex &&
+          $driftBlobEquality.equals(other.screenshotPng, this.screenshotPng) &&
+          other.screenshotWidthPx == this.screenshotWidthPx &&
+          other.screenshotHeightPx == this.screenshotHeightPx &&
+          other.screenshotByteLength == this.screenshotByteLength &&
+          other.screenshotPixelRatio == this.screenshotPixelRatio &&
+          other.syncState == this.syncState &&
+          other.syncAttempts == this.syncAttempts &&
+          other.lastSyncError == this.lastSyncError &&
+          other.createdAt == this.createdAt &&
+          other.updatedAt == this.updatedAt);
+}
+
+class FeedbackOutboxEntriesCompanion
+    extends UpdateCompanion<FeedbackOutboxRow> {
+  final Value<String> id;
+  final Value<String> kind;
+  final Value<String> route;
+  final Value<String> note;
+  final Value<String?> questionId;
+  final Value<int?> questionRevision;
+  final Value<String?> topicKey;
+  final Value<String?> questionIssueKind;
+  final Value<String?> sessionId;
+  final Value<int?> missionIndex;
+  final Value<int?> selectedChoiceIndex;
+  final Value<Uint8List?> screenshotPng;
+  final Value<int?> screenshotWidthPx;
+  final Value<int?> screenshotHeightPx;
+  final Value<int?> screenshotByteLength;
+  final Value<double?> screenshotPixelRatio;
+  final Value<String> syncState;
+  final Value<int> syncAttempts;
+  final Value<String?> lastSyncError;
+  final Value<int> createdAt;
+  final Value<int> updatedAt;
+  final Value<int> rowid;
+  const FeedbackOutboxEntriesCompanion({
+    this.id = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.route = const Value.absent(),
+    this.note = const Value.absent(),
+    this.questionId = const Value.absent(),
+    this.questionRevision = const Value.absent(),
+    this.topicKey = const Value.absent(),
+    this.questionIssueKind = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    this.missionIndex = const Value.absent(),
+    this.selectedChoiceIndex = const Value.absent(),
+    this.screenshotPng = const Value.absent(),
+    this.screenshotWidthPx = const Value.absent(),
+    this.screenshotHeightPx = const Value.absent(),
+    this.screenshotByteLength = const Value.absent(),
+    this.screenshotPixelRatio = const Value.absent(),
+    this.syncState = const Value.absent(),
+    this.syncAttempts = const Value.absent(),
+    this.lastSyncError = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  FeedbackOutboxEntriesCompanion.insert({
+    required String id,
+    required String kind,
+    required String route,
+    required String note,
+    this.questionId = const Value.absent(),
+    this.questionRevision = const Value.absent(),
+    this.topicKey = const Value.absent(),
+    this.questionIssueKind = const Value.absent(),
+    this.sessionId = const Value.absent(),
+    this.missionIndex = const Value.absent(),
+    this.selectedChoiceIndex = const Value.absent(),
+    this.screenshotPng = const Value.absent(),
+    this.screenshotWidthPx = const Value.absent(),
+    this.screenshotHeightPx = const Value.absent(),
+    this.screenshotByteLength = const Value.absent(),
+    this.screenshotPixelRatio = const Value.absent(),
+    this.syncState = const Value.absent(),
+    this.syncAttempts = const Value.absent(),
+    this.lastSyncError = const Value.absent(),
+    required int createdAt,
+    required int updatedAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       kind = Value(kind),
+       route = Value(route),
+       note = Value(note),
+       createdAt = Value(createdAt),
+       updatedAt = Value(updatedAt);
+  static Insertable<FeedbackOutboxRow> custom({
+    Expression<String>? id,
+    Expression<String>? kind,
+    Expression<String>? route,
+    Expression<String>? note,
+    Expression<String>? questionId,
+    Expression<int>? questionRevision,
+    Expression<String>? topicKey,
+    Expression<String>? questionIssueKind,
+    Expression<String>? sessionId,
+    Expression<int>? missionIndex,
+    Expression<int>? selectedChoiceIndex,
+    Expression<Uint8List>? screenshotPng,
+    Expression<int>? screenshotWidthPx,
+    Expression<int>? screenshotHeightPx,
+    Expression<int>? screenshotByteLength,
+    Expression<double>? screenshotPixelRatio,
+    Expression<String>? syncState,
+    Expression<int>? syncAttempts,
+    Expression<String>? lastSyncError,
+    Expression<int>? createdAt,
+    Expression<int>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (kind != null) 'kind': kind,
+      if (route != null) 'route': route,
+      if (note != null) 'note': note,
+      if (questionId != null) 'question_id': questionId,
+      if (questionRevision != null) 'question_revision': questionRevision,
+      if (topicKey != null) 'topic_key': topicKey,
+      if (questionIssueKind != null) 'question_issue_kind': questionIssueKind,
+      if (sessionId != null) 'session_id': sessionId,
+      if (missionIndex != null) 'mission_index': missionIndex,
+      if (selectedChoiceIndex != null)
+        'selected_choice_index': selectedChoiceIndex,
+      if (screenshotPng != null) 'screenshot_png': screenshotPng,
+      if (screenshotWidthPx != null) 'screenshot_width_px': screenshotWidthPx,
+      if (screenshotHeightPx != null)
+        'screenshot_height_px': screenshotHeightPx,
+      if (screenshotByteLength != null)
+        'screenshot_byte_length': screenshotByteLength,
+      if (screenshotPixelRatio != null)
+        'screenshot_pixel_ratio': screenshotPixelRatio,
+      if (syncState != null) 'sync_state': syncState,
+      if (syncAttempts != null) 'sync_attempts': syncAttempts,
+      if (lastSyncError != null) 'last_sync_error': lastSyncError,
+      if (createdAt != null) 'created_at': createdAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  FeedbackOutboxEntriesCompanion copyWith({
+    Value<String>? id,
+    Value<String>? kind,
+    Value<String>? route,
+    Value<String>? note,
+    Value<String?>? questionId,
+    Value<int?>? questionRevision,
+    Value<String?>? topicKey,
+    Value<String?>? questionIssueKind,
+    Value<String?>? sessionId,
+    Value<int?>? missionIndex,
+    Value<int?>? selectedChoiceIndex,
+    Value<Uint8List?>? screenshotPng,
+    Value<int?>? screenshotWidthPx,
+    Value<int?>? screenshotHeightPx,
+    Value<int?>? screenshotByteLength,
+    Value<double?>? screenshotPixelRatio,
+    Value<String>? syncState,
+    Value<int>? syncAttempts,
+    Value<String?>? lastSyncError,
+    Value<int>? createdAt,
+    Value<int>? updatedAt,
+    Value<int>? rowid,
+  }) {
+    return FeedbackOutboxEntriesCompanion(
+      id: id ?? this.id,
+      kind: kind ?? this.kind,
+      route: route ?? this.route,
+      note: note ?? this.note,
+      questionId: questionId ?? this.questionId,
+      questionRevision: questionRevision ?? this.questionRevision,
+      topicKey: topicKey ?? this.topicKey,
+      questionIssueKind: questionIssueKind ?? this.questionIssueKind,
+      sessionId: sessionId ?? this.sessionId,
+      missionIndex: missionIndex ?? this.missionIndex,
+      selectedChoiceIndex: selectedChoiceIndex ?? this.selectedChoiceIndex,
+      screenshotPng: screenshotPng ?? this.screenshotPng,
+      screenshotWidthPx: screenshotWidthPx ?? this.screenshotWidthPx,
+      screenshotHeightPx: screenshotHeightPx ?? this.screenshotHeightPx,
+      screenshotByteLength: screenshotByteLength ?? this.screenshotByteLength,
+      screenshotPixelRatio: screenshotPixelRatio ?? this.screenshotPixelRatio,
+      syncState: syncState ?? this.syncState,
+      syncAttempts: syncAttempts ?? this.syncAttempts,
+      lastSyncError: lastSyncError ?? this.lastSyncError,
+      createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
+    }
+    if (route.present) {
+      map['route'] = Variable<String>(route.value);
+    }
+    if (note.present) {
+      map['note'] = Variable<String>(note.value);
+    }
+    if (questionId.present) {
+      map['question_id'] = Variable<String>(questionId.value);
+    }
+    if (questionRevision.present) {
+      map['question_revision'] = Variable<int>(questionRevision.value);
+    }
+    if (topicKey.present) {
+      map['topic_key'] = Variable<String>(topicKey.value);
+    }
+    if (questionIssueKind.present) {
+      map['question_issue_kind'] = Variable<String>(questionIssueKind.value);
+    }
+    if (sessionId.present) {
+      map['session_id'] = Variable<String>(sessionId.value);
+    }
+    if (missionIndex.present) {
+      map['mission_index'] = Variable<int>(missionIndex.value);
+    }
+    if (selectedChoiceIndex.present) {
+      map['selected_choice_index'] = Variable<int>(selectedChoiceIndex.value);
+    }
+    if (screenshotPng.present) {
+      map['screenshot_png'] = Variable<Uint8List>(screenshotPng.value);
+    }
+    if (screenshotWidthPx.present) {
+      map['screenshot_width_px'] = Variable<int>(screenshotWidthPx.value);
+    }
+    if (screenshotHeightPx.present) {
+      map['screenshot_height_px'] = Variable<int>(screenshotHeightPx.value);
+    }
+    if (screenshotByteLength.present) {
+      map['screenshot_byte_length'] = Variable<int>(screenshotByteLength.value);
+    }
+    if (screenshotPixelRatio.present) {
+      map['screenshot_pixel_ratio'] = Variable<double>(
+        screenshotPixelRatio.value,
+      );
+    }
+    if (syncState.present) {
+      map['sync_state'] = Variable<String>(syncState.value);
+    }
+    if (syncAttempts.present) {
+      map['sync_attempts'] = Variable<int>(syncAttempts.value);
+    }
+    if (lastSyncError.present) {
+      map['last_sync_error'] = Variable<String>(lastSyncError.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<int>(createdAt.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<int>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('FeedbackOutboxEntriesCompanion(')
+          ..write('id: $id, ')
+          ..write('kind: $kind, ')
+          ..write('route: $route, ')
+          ..write('note: $note, ')
+          ..write('questionId: $questionId, ')
+          ..write('questionRevision: $questionRevision, ')
+          ..write('topicKey: $topicKey, ')
+          ..write('questionIssueKind: $questionIssueKind, ')
+          ..write('sessionId: $sessionId, ')
+          ..write('missionIndex: $missionIndex, ')
+          ..write('selectedChoiceIndex: $selectedChoiceIndex, ')
+          ..write('screenshotPng: $screenshotPng, ')
+          ..write('screenshotWidthPx: $screenshotWidthPx, ')
+          ..write('screenshotHeightPx: $screenshotHeightPx, ')
+          ..write('screenshotByteLength: $screenshotByteLength, ')
+          ..write('screenshotPixelRatio: $screenshotPixelRatio, ')
+          ..write('syncState: $syncState, ')
+          ..write('syncAttempts: $syncAttempts, ')
+          ..write('lastSyncError: $lastSyncError, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 class $AppFlagsTable extends AppFlags
     with TableInfo<$AppFlagsTable, AppFlagRow> {
   @override
@@ -5773,6 +7002,8 @@ abstract class _$GaussDatabase extends GeneratedDatabase {
   late final $StudyPositionsTable studyPositions = $StudyPositionsTable(this);
   late final $StudySlotEncountersTable studySlotEncounters =
       $StudySlotEncountersTable(this);
+  late final $FeedbackOutboxEntriesTable feedbackOutboxEntries =
+      $FeedbackOutboxEntriesTable(this);
   late final $AppFlagsTable appFlags = $AppFlagsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
@@ -5790,6 +7021,7 @@ abstract class _$GaussDatabase extends GeneratedDatabase {
     studyRecords,
     studyPositions,
     studySlotEncounters,
+    feedbackOutboxEntries,
     appFlags,
   ];
 }
@@ -9518,6 +10750,553 @@ typedef $$StudySlotEncountersTableProcessedTableManager =
       StudySlotEncounterRow,
       PrefetchHooks Function()
     >;
+typedef $$FeedbackOutboxEntriesTableCreateCompanionBuilder =
+    FeedbackOutboxEntriesCompanion Function({
+      required String id,
+      required String kind,
+      required String route,
+      required String note,
+      Value<String?> questionId,
+      Value<int?> questionRevision,
+      Value<String?> topicKey,
+      Value<String?> questionIssueKind,
+      Value<String?> sessionId,
+      Value<int?> missionIndex,
+      Value<int?> selectedChoiceIndex,
+      Value<Uint8List?> screenshotPng,
+      Value<int?> screenshotWidthPx,
+      Value<int?> screenshotHeightPx,
+      Value<int?> screenshotByteLength,
+      Value<double?> screenshotPixelRatio,
+      Value<String> syncState,
+      Value<int> syncAttempts,
+      Value<String?> lastSyncError,
+      required int createdAt,
+      required int updatedAt,
+      Value<int> rowid,
+    });
+typedef $$FeedbackOutboxEntriesTableUpdateCompanionBuilder =
+    FeedbackOutboxEntriesCompanion Function({
+      Value<String> id,
+      Value<String> kind,
+      Value<String> route,
+      Value<String> note,
+      Value<String?> questionId,
+      Value<int?> questionRevision,
+      Value<String?> topicKey,
+      Value<String?> questionIssueKind,
+      Value<String?> sessionId,
+      Value<int?> missionIndex,
+      Value<int?> selectedChoiceIndex,
+      Value<Uint8List?> screenshotPng,
+      Value<int?> screenshotWidthPx,
+      Value<int?> screenshotHeightPx,
+      Value<int?> screenshotByteLength,
+      Value<double?> screenshotPixelRatio,
+      Value<String> syncState,
+      Value<int> syncAttempts,
+      Value<String?> lastSyncError,
+      Value<int> createdAt,
+      Value<int> updatedAt,
+      Value<int> rowid,
+    });
+
+class $$FeedbackOutboxEntriesTableFilterComposer
+    extends Composer<_$GaussDatabase, $FeedbackOutboxEntriesTable> {
+  $$FeedbackOutboxEntriesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get route => $composableBuilder(
+    column: $table.route,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get note => $composableBuilder(
+    column: $table.note,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get questionRevision => $composableBuilder(
+    column: $table.questionRevision,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get topicKey => $composableBuilder(
+    column: $table.topicKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get questionIssueKind => $composableBuilder(
+    column: $table.questionIssueKind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get missionIndex => $composableBuilder(
+    column: $table.missionIndex,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get selectedChoiceIndex => $composableBuilder(
+    column: $table.selectedChoiceIndex,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<Uint8List> get screenshotPng => $composableBuilder(
+    column: $table.screenshotPng,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get screenshotWidthPx => $composableBuilder(
+    column: $table.screenshotWidthPx,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get screenshotHeightPx => $composableBuilder(
+    column: $table.screenshotHeightPx,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get screenshotByteLength => $composableBuilder(
+    column: $table.screenshotByteLength,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get screenshotPixelRatio => $composableBuilder(
+    column: $table.screenshotPixelRatio,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get syncState => $composableBuilder(
+    column: $table.syncState,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get syncAttempts => $composableBuilder(
+    column: $table.syncAttempts,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get lastSyncError => $composableBuilder(
+    column: $table.lastSyncError,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$FeedbackOutboxEntriesTableOrderingComposer
+    extends Composer<_$GaussDatabase, $FeedbackOutboxEntriesTable> {
+  $$FeedbackOutboxEntriesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get route => $composableBuilder(
+    column: $table.route,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get note => $composableBuilder(
+    column: $table.note,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get questionRevision => $composableBuilder(
+    column: $table.questionRevision,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get topicKey => $composableBuilder(
+    column: $table.topicKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get questionIssueKind => $composableBuilder(
+    column: $table.questionIssueKind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sessionId => $composableBuilder(
+    column: $table.sessionId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get missionIndex => $composableBuilder(
+    column: $table.missionIndex,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get selectedChoiceIndex => $composableBuilder(
+    column: $table.selectedChoiceIndex,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<Uint8List> get screenshotPng => $composableBuilder(
+    column: $table.screenshotPng,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get screenshotWidthPx => $composableBuilder(
+    column: $table.screenshotWidthPx,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get screenshotHeightPx => $composableBuilder(
+    column: $table.screenshotHeightPx,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get screenshotByteLength => $composableBuilder(
+    column: $table.screenshotByteLength,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get screenshotPixelRatio => $composableBuilder(
+    column: $table.screenshotPixelRatio,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get syncState => $composableBuilder(
+    column: $table.syncState,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get syncAttempts => $composableBuilder(
+    column: $table.syncAttempts,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get lastSyncError => $composableBuilder(
+    column: $table.lastSyncError,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$FeedbackOutboxEntriesTableAnnotationComposer
+    extends Composer<_$GaussDatabase, $FeedbackOutboxEntriesTable> {
+  $$FeedbackOutboxEntriesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
+
+  GeneratedColumn<String> get route =>
+      $composableBuilder(column: $table.route, builder: (column) => column);
+
+  GeneratedColumn<String> get note =>
+      $composableBuilder(column: $table.note, builder: (column) => column);
+
+  GeneratedColumn<String> get questionId => $composableBuilder(
+    column: $table.questionId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get questionRevision => $composableBuilder(
+    column: $table.questionRevision,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get topicKey =>
+      $composableBuilder(column: $table.topicKey, builder: (column) => column);
+
+  GeneratedColumn<String> get questionIssueKind => $composableBuilder(
+    column: $table.questionIssueKind,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get sessionId =>
+      $composableBuilder(column: $table.sessionId, builder: (column) => column);
+
+  GeneratedColumn<int> get missionIndex => $composableBuilder(
+    column: $table.missionIndex,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get selectedChoiceIndex => $composableBuilder(
+    column: $table.selectedChoiceIndex,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<Uint8List> get screenshotPng => $composableBuilder(
+    column: $table.screenshotPng,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get screenshotWidthPx => $composableBuilder(
+    column: $table.screenshotWidthPx,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get screenshotHeightPx => $composableBuilder(
+    column: $table.screenshotHeightPx,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get screenshotByteLength => $composableBuilder(
+    column: $table.screenshotByteLength,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<double> get screenshotPixelRatio => $composableBuilder(
+    column: $table.screenshotPixelRatio,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get syncState =>
+      $composableBuilder(column: $table.syncState, builder: (column) => column);
+
+  GeneratedColumn<int> get syncAttempts => $composableBuilder(
+    column: $table.syncAttempts,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get lastSyncError => $composableBuilder(
+    column: $table.lastSyncError,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<int> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$FeedbackOutboxEntriesTableTableManager
+    extends
+        RootTableManager<
+          _$GaussDatabase,
+          $FeedbackOutboxEntriesTable,
+          FeedbackOutboxRow,
+          $$FeedbackOutboxEntriesTableFilterComposer,
+          $$FeedbackOutboxEntriesTableOrderingComposer,
+          $$FeedbackOutboxEntriesTableAnnotationComposer,
+          $$FeedbackOutboxEntriesTableCreateCompanionBuilder,
+          $$FeedbackOutboxEntriesTableUpdateCompanionBuilder,
+          (
+            FeedbackOutboxRow,
+            BaseReferences<
+              _$GaussDatabase,
+              $FeedbackOutboxEntriesTable,
+              FeedbackOutboxRow
+            >,
+          ),
+          FeedbackOutboxRow,
+          PrefetchHooks Function()
+        > {
+  $$FeedbackOutboxEntriesTableTableManager(
+    _$GaussDatabase db,
+    $FeedbackOutboxEntriesTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$FeedbackOutboxEntriesTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$FeedbackOutboxEntriesTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$FeedbackOutboxEntriesTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> kind = const Value.absent(),
+                Value<String> route = const Value.absent(),
+                Value<String> note = const Value.absent(),
+                Value<String?> questionId = const Value.absent(),
+                Value<int?> questionRevision = const Value.absent(),
+                Value<String?> topicKey = const Value.absent(),
+                Value<String?> questionIssueKind = const Value.absent(),
+                Value<String?> sessionId = const Value.absent(),
+                Value<int?> missionIndex = const Value.absent(),
+                Value<int?> selectedChoiceIndex = const Value.absent(),
+                Value<Uint8List?> screenshotPng = const Value.absent(),
+                Value<int?> screenshotWidthPx = const Value.absent(),
+                Value<int?> screenshotHeightPx = const Value.absent(),
+                Value<int?> screenshotByteLength = const Value.absent(),
+                Value<double?> screenshotPixelRatio = const Value.absent(),
+                Value<String> syncState = const Value.absent(),
+                Value<int> syncAttempts = const Value.absent(),
+                Value<String?> lastSyncError = const Value.absent(),
+                Value<int> createdAt = const Value.absent(),
+                Value<int> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => FeedbackOutboxEntriesCompanion(
+                id: id,
+                kind: kind,
+                route: route,
+                note: note,
+                questionId: questionId,
+                questionRevision: questionRevision,
+                topicKey: topicKey,
+                questionIssueKind: questionIssueKind,
+                sessionId: sessionId,
+                missionIndex: missionIndex,
+                selectedChoiceIndex: selectedChoiceIndex,
+                screenshotPng: screenshotPng,
+                screenshotWidthPx: screenshotWidthPx,
+                screenshotHeightPx: screenshotHeightPx,
+                screenshotByteLength: screenshotByteLength,
+                screenshotPixelRatio: screenshotPixelRatio,
+                syncState: syncState,
+                syncAttempts: syncAttempts,
+                lastSyncError: lastSyncError,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String kind,
+                required String route,
+                required String note,
+                Value<String?> questionId = const Value.absent(),
+                Value<int?> questionRevision = const Value.absent(),
+                Value<String?> topicKey = const Value.absent(),
+                Value<String?> questionIssueKind = const Value.absent(),
+                Value<String?> sessionId = const Value.absent(),
+                Value<int?> missionIndex = const Value.absent(),
+                Value<int?> selectedChoiceIndex = const Value.absent(),
+                Value<Uint8List?> screenshotPng = const Value.absent(),
+                Value<int?> screenshotWidthPx = const Value.absent(),
+                Value<int?> screenshotHeightPx = const Value.absent(),
+                Value<int?> screenshotByteLength = const Value.absent(),
+                Value<double?> screenshotPixelRatio = const Value.absent(),
+                Value<String> syncState = const Value.absent(),
+                Value<int> syncAttempts = const Value.absent(),
+                Value<String?> lastSyncError = const Value.absent(),
+                required int createdAt,
+                required int updatedAt,
+                Value<int> rowid = const Value.absent(),
+              }) => FeedbackOutboxEntriesCompanion.insert(
+                id: id,
+                kind: kind,
+                route: route,
+                note: note,
+                questionId: questionId,
+                questionRevision: questionRevision,
+                topicKey: topicKey,
+                questionIssueKind: questionIssueKind,
+                sessionId: sessionId,
+                missionIndex: missionIndex,
+                selectedChoiceIndex: selectedChoiceIndex,
+                screenshotPng: screenshotPng,
+                screenshotWidthPx: screenshotWidthPx,
+                screenshotHeightPx: screenshotHeightPx,
+                screenshotByteLength: screenshotByteLength,
+                screenshotPixelRatio: screenshotPixelRatio,
+                syncState: syncState,
+                syncAttempts: syncAttempts,
+                lastSyncError: lastSyncError,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$FeedbackOutboxEntriesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$GaussDatabase,
+      $FeedbackOutboxEntriesTable,
+      FeedbackOutboxRow,
+      $$FeedbackOutboxEntriesTableFilterComposer,
+      $$FeedbackOutboxEntriesTableOrderingComposer,
+      $$FeedbackOutboxEntriesTableAnnotationComposer,
+      $$FeedbackOutboxEntriesTableCreateCompanionBuilder,
+      $$FeedbackOutboxEntriesTableUpdateCompanionBuilder,
+      (
+        FeedbackOutboxRow,
+        BaseReferences<
+          _$GaussDatabase,
+          $FeedbackOutboxEntriesTable,
+          FeedbackOutboxRow
+        >,
+      ),
+      FeedbackOutboxRow,
+      PrefetchHooks Function()
+    >;
 typedef $$AppFlagsTableCreateCompanionBuilder =
     AppFlagsCompanion Function({
       required String key,
@@ -9703,6 +11482,8 @@ class $GaussDatabaseManager {
       $$StudyPositionsTableTableManager(_db, _db.studyPositions);
   $$StudySlotEncountersTableTableManager get studySlotEncounters =>
       $$StudySlotEncountersTableTableManager(_db, _db.studySlotEncounters);
+  $$FeedbackOutboxEntriesTableTableManager get feedbackOutboxEntries =>
+      $$FeedbackOutboxEntriesTableTableManager(_db, _db.feedbackOutboxEntries);
   $$AppFlagsTableTableManager get appFlags =>
       $$AppFlagsTableTableManager(_db, _db.appFlags);
 }
