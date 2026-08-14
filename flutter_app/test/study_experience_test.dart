@@ -107,11 +107,28 @@ void main() {
     expect(tablet[3].dy, closeTo(tablet[2].dy, 1));
     expect(tablet[2].dy, greaterThan(tablet[0].dy + 40));
 
-    final desktop = await centersAt(const Size(1180, 900));
+    final horizontalTablet = await centersAt(const Size(1280, 800));
     expect(
-      desktop.every((point) => (point.dy - desktop.first.dy).abs() < 1),
+      horizontalTablet.every(
+        (point) => (point.dy - horizontalTablet.first.dy).abs() < 1,
+      ),
       isTrue,
     );
+    expect(
+      tester
+          .getSize(find.byKey(const ValueKey('study-course-instrument')))
+          .width,
+      lessThanOrEqualTo(760),
+    );
+    final mathSections = GaussStudyCurriculum.forSubject(Subject.math);
+    final firstChapter = tester.getTopLeft(
+      find.byKey(ValueKey('study-section-${mathSections[0].id}')),
+    );
+    final secondChapter = tester.getTopLeft(
+      find.byKey(ValueKey('study-section-${mathSections[1].id}')),
+    );
+    expect(secondChapter.dy, closeTo(firstChapter.dy, 1));
+    expect(secondChapter.dx, greaterThan(firstChapter.dx + 400));
     expect(tester.takeException(), isNull);
   });
 
@@ -935,6 +952,8 @@ void main() {
       Size(411, 820),
       Size(800, 600),
       Size(1180, 900),
+      Size(1280, 800),
+      Size(1440, 479),
     ]) {
       await tester.binding.setSurfaceSize(size);
       await tester.pumpWidget(
@@ -958,7 +977,7 @@ void main() {
   ) async {
     _restoreSurfaceAfter(tester);
 
-    await tester.binding.setSurfaceSize(const Size(800, 900));
+    await tester.binding.setSurfaceSize(const Size(1280, 800));
     await tester.pumpWidget(
       _TestSurface(controller: controller, child: const InsightsScreen()),
     );
@@ -972,7 +991,28 @@ void main() {
     );
     expect(tabletRows.every((y) => (y - tabletRows.first).abs() < 1), isTrue);
 
+    await tester.pumpWidget(
+      _TestSurface(
+        controller: controller,
+        textScale: 2,
+        reducedMotion: true,
+        child: const InsightsScreen(),
+      ),
+    );
+    await tester.pump();
+    final accessibleTabletRows = List.generate(
+      4,
+      (index) =>
+          tester.getTopLeft(find.byKey(ValueKey('insight-metric-$index'))).dy,
+    );
+    expect(accessibleTabletRows[1], closeTo(accessibleTabletRows[0], 1));
+    expect(accessibleTabletRows[2], greaterThan(accessibleTabletRows[0] + 180));
+    expect(accessibleTabletRows[3], closeTo(accessibleTabletRows[2], 1));
+
     await tester.binding.setSurfaceSize(const Size(411, 820));
+    await tester.pumpWidget(
+      _TestSurface(controller: controller, child: const InsightsScreen()),
+    );
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 60));
     final phoneTop = tester
@@ -1047,6 +1087,20 @@ void main() {
       await tester.binding.setSurfaceSize(const Size(1024, 800));
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 60));
+      expect(
+        find.byKey(const ValueKey('study-room-single-pane')),
+        findsOneWidget,
+      );
+      expect(tester.takeException(), isNull);
+
+      await tester.pumpWidget(
+        _TestSurface(
+          controller: controller,
+          reducedMotion: true,
+          child: ArchiveScreen(topicKey: topic.key, count: 5),
+        ),
+      );
+      await _pumpUntil(tester, find.text('STUDY ROOM'));
       expect(
         find.byKey(const ValueKey('study-room-split-pane')),
         findsOneWidget,

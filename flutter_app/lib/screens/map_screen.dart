@@ -166,11 +166,16 @@ class _MapScreenState extends State<MapScreen> {
           const RepaintBoundary(child: _AstronomicalBackdrop()),
           LayoutBuilder(
             builder: (context, constraints) {
-              final window = GaussWindowClass.fromWidth(
-                math.max(mediaWidth, constraints.maxWidth),
+              final viewport = GaussViewport.fromSize(
+                Size(
+                  math.max(mediaWidth, constraints.maxWidth),
+                  constraints.maxHeight,
+                ),
               );
-              final showInspector = window.showsPersistentInspector;
+              final window = viewport.widthClass;
               final textScale = MediaQuery.textScalerOf(context).scale(1);
+              final showInspector =
+                  viewport.showsPersistentInspector && textScale < 1.6;
               final accessibleDock = textScale >= 1.55;
               final dockWidth = math.min(
                 math.max(0.0, constraints.maxWidth - GaussSpacing.space24),
@@ -279,6 +284,7 @@ class _MapScreenState extends State<MapScreen> {
                   ),
                   if (showInspector)
                     SizedBox(
+                      key: const ValueKey('map-study-inspector'),
                       width: window.isWide
                           ? GaussMetrics.mapWideInspectorWidth
                           : GaussMetrics.mapInspectorWidth,
@@ -920,13 +926,15 @@ class _MapCourseProgressCrest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final progress = total == 0 ? 0.0 : (reflected / total).clamp(0.0, 1.0);
-    final ringSize = tight ? 44.0 : 48.0;
+    final accessible = MediaQuery.textScalerOf(context).scale(1) >= 1.6;
+    final compactCrest = tight || accessible;
+    final ringSize = compactCrest ? 44.0 : 48.0;
     return Semantics(
       container: true,
       label: '$reflected of $total course questions charted.',
       child: ExcludeSemantics(
         child: SizedBox(
-          width: tight ? 72 : 80,
+          width: compactCrest ? 72 : 80,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -936,7 +944,7 @@ class _MapCourseProgressCrest extends StatelessWidget {
                   painter: _MapCourseProgressPainter(progress: progress),
                   child: Center(
                     child: TheoremStarMark(
-                      size: tight ? 27 : 29,
+                      size: compactCrest ? 27 : 29,
                       semanticLabel: null,
                     ),
                   ),
@@ -958,7 +966,7 @@ class _MapCourseProgressCrest extends StatelessWidget {
                   ),
                 ),
               ),
-              if (!tight) ...[
+              if (!compactCrest) ...[
                 const SizedBox(height: 1),
                 MediaQuery.withClampedTextScaling(
                   maxScaleFactor: 1.35,

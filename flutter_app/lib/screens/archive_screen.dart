@@ -756,8 +756,9 @@ class _ArchivePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
-      final split =
-          constraints.maxWidth >= GaussBreakpoints.studyRoomSplitContent;
+      final viewport = GaussViewport.fromSize(constraints.biggest);
+      final textScale = MediaQuery.textScalerOf(context).scale(1);
+      final split = viewport.supportsTwoPane && textScale < 1.6;
       if (!split) {
         return SingleChildScrollView(
           key: const ValueKey('study-room-single-pane'),

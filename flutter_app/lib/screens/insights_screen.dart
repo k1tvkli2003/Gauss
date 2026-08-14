@@ -415,15 +415,21 @@ class _MetricConstellation extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 1180),
           child: LayoutBuilder(
             builder: (context, constraints) {
-              final columns =
-                  constraints.maxWidth >=
-                      GaussBreakpoints.insightsFourMetricsContent
-                  ? 4
-                  : 2;
               final textScale = MediaQuery.textScalerOf(
                 context,
               ).scale(1).clamp(1.0, 2.0);
-              final metricHeight = 138 + (textScale - 1) * 34;
+              final accessible = textScale >= 1.6;
+              final columns = accessible
+                  ? constraints.maxWidth >= 700
+                        ? 2
+                        : 1
+                  : constraints.maxWidth >=
+                        GaussBreakpoints.insightsFourMetricsContent
+                  ? 4
+                  : 2;
+              final metricHeight = accessible
+                  ? 204.0
+                  : 138 + (textScale - 1) * 34;
               return GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -511,8 +517,7 @@ class _MetricPlate extends StatelessWidget {
         ),
         Text(
           label,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
+          softWrap: true,
           style: const TextStyle(
             color: GaussColors.fog,
             fontSize: GaussTypeScale.caption,
@@ -523,8 +528,7 @@ class _MetricPlate extends StatelessWidget {
         if (totalHint != null)
           Text(
             totalHint!,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
+            softWrap: true,
             style: const TextStyle(
               color: GaussColors.muted,
               fontSize: GaussTypeScale.insignia,
@@ -889,14 +893,12 @@ class _BalanceLegend extends StatelessWidget {
           children: [
             Text(
               subject,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+              softWrap: true,
               style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800),
             ),
             Text(
               '$charted of ${_formatCount(available)}',
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+              softWrap: true,
               style: const TextStyle(
                 color: GaussColors.fog,
                 fontSize: GaussTypeScale.insignia,

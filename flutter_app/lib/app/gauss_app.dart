@@ -22,11 +22,13 @@ class GaussApp extends StatefulWidget {
     required this.controller,
     this.accountEmail,
     this.onSignOut,
+    this.initialLocation,
     super.key,
   });
   final GaussController controller;
   final String? accountEmail;
   final Future<void> Function()? onSignOut;
+  final String? initialLocation;
 
   @override
   State<GaussApp> createState() => _GaussAppState();
@@ -39,6 +41,7 @@ class _GaussAppState extends State<GaussApp> {
 
   late final GoRouter _router = GoRouter(
     navigatorKey: _rootNavigatorKey,
+    initialLocation: widget.initialLocation,
     errorBuilder: (context, state) => const _RouteErrorScreen(),
     routes: [
       StatefulShellRoute.indexedStack(
@@ -452,9 +455,10 @@ class _AppShellState extends State<_AppShell> {
     final tourActive = controller.needsTour && shell.currentIndex == 0;
     return LayoutBuilder(
       builder: (context, constraints) {
-        final window = GaussWindowClass.fromWidth(constraints.maxWidth);
-        final useRail = window.usesNavigationRail;
-        final extendRail = window.extendsNavigationRail;
+        final viewport = GaussViewport.fromSize(constraints.biggest);
+        final useRail = viewport.usesNavigationRail;
+        final extendRail = viewport.extendsNavigationRail;
+        final constrainedLandscape = viewport.isConstrainedLandscape;
         if (!useRail) {
           final footerSafeBottom = GaussMetrics.compactNavigationSafeBottom(
             context,
@@ -522,54 +526,61 @@ class _AppShellState extends State<_AppShell> {
                                 ),
                               ),
                               child: NavigationRail(
+                                key: const ValueKey('gauss-navigation-rail'),
                                 backgroundColor: Colors.transparent,
                                 extended: extendRail,
-                                minWidth: 82,
+                                minWidth: constrainedLandscape ? 72 : 82,
                                 minExtendedWidth: 188,
-                                groupAlignment: -.58,
+                                groupAlignment: constrainedLandscape ? 0 : -.58,
                                 selectedIndex: shell.currentIndex,
                                 onDestinationSelected: _go,
                                 leading: Padding(
-                                  padding: const EdgeInsets.fromLTRB(
+                                  padding: EdgeInsets.fromLTRB(
                                     12,
+                                    constrainedLandscape ? 6 : 12,
                                     12,
-                                    12,
-                                    30,
+                                    constrainedLandscape ? 6 : 30,
                                   ),
                                   child: extendRail
                                       ? const GaussWordmark(width: 132)
-                                      : const TheoremStarMark(size: 43),
+                                      : TheoremStarMark(
+                                          size: constrainedLandscape ? 32 : 43,
+                                        ),
                                 ),
-                                trailing: Expanded(
-                                  child: Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                        bottom: 18,
+                                trailing: constrainedLandscape
+                                    ? const SizedBox.shrink()
+                                    : Expanded(
+                                        child: Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                              bottom: 18,
+                                            ),
+                                            child: Semantics(
+                                              label:
+                                                  'Offline. All learning content is available.',
+                                              child: extendRail
+                                                  ? const Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      children: [
+                                                        _OfflineDot(),
+                                                        SizedBox(width: 8),
+                                                        Text(
+                                                          'Offline',
+                                                          style: TextStyle(
+                                                            color: GaussColors
+                                                                .muted,
+                                                            fontSize: 12,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    )
+                                                  : const _OfflineDot(),
+                                            ),
+                                          ),
+                                        ),
                                       ),
-                                      child: Semantics(
-                                        label:
-                                            'Offline. All learning content is available.',
-                                        child: extendRail
-                                            ? const Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                children: [
-                                                  _OfflineDot(),
-                                                  SizedBox(width: 8),
-                                                  Text(
-                                                    'Offline',
-                                                    style: TextStyle(
-                                                      color: GaussColors.muted,
-                                                      fontSize: 12,
-                                                    ),
-                                                  ),
-                                                ],
-                                              )
-                                            : const _OfflineDot(),
-                                      ),
-                                    ),
-                                  ),
-                                ),
                                 destinations: const [
                                   NavigationRailDestination(
                                     icon: GaussNavGlyph(

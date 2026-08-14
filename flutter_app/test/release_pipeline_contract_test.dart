@@ -14,6 +14,10 @@ void main() {
     final legacyStrings = File(
       '../app/src/main/res/values/strings.xml',
     ).readAsStringSync();
+    final productionMain = File('lib/main.dart').readAsStringSync();
+    final visualPreview = File(
+      'lib/visual_preview_main.dart',
+    ).readAsStringSync();
 
     expect(workflow, contains('working-directory: flutter_app'));
     expect(workflow, contains('flutter build apk --release'));
@@ -48,5 +52,12 @@ void main() {
     }
     expect(legacyGradle, contains('applicationId = "com.gauss.legacy"'));
     expect(legacyStrings, contains('Gauss Legacy Archive'));
+    expect(productionMain, isNot(contains('visual_preview_main')));
+    expect(workflow, isNot(contains('visual_preview_main')));
+    expect(
+      visualPreview,
+      contains("bool.fromEnvironment('GAUSS_VISUAL_PREVIEW')"),
+    );
+    expect(visualPreview, contains("'visual-preview-local-v1'"));
   });
 }

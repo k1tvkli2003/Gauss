@@ -72,10 +72,48 @@ and landscape first-class Android targets rather than enlarged phone layouts.
 - Authentication mode controls stack instead of compressing when text scaling
   or available width requires it. Interactive targets remain at least 48dp.
 
+## Dedicated Android learning surfaces
+
+- Added one two-axis window vocabulary for the whole app. Width and height are
+  classified independently, so a physical tablet in split-screen never
+  inherits a roomy landscape composition merely because the device is large.
+  The canonical pane thresholds are 840dp for two panes and 1200x600dp for a
+  full horizontal-tablet workspace.
+- The app shell now gives medium windows a compact icon rail, a normal
+  1280x800 tablet a labelled navigation rail, and a short 1440x479 window a
+  compact rail again. The rail is content-hugging and clears Android system
+  insets; phone navigation remains a floating glass dock sized around its
+  three controls.
+- Map landscape is a true three-region surface: labelled navigation, the
+  continuous lesson path, and a persistent Study Inspector. Portrait removes
+  the inspector and centers the selected-lesson instrument; 200% text and
+  short windows also collapse safely rather than squeezing the path.
+- Study landscape keeps the subject selector bounded, presents all four study
+  tools on one axis, and lays chapter instruments in two columns. Tablet
+  portrait uses a two-by-two tool rhythm and one-column chapters instead of a
+  stretched landscape layout.
+- Insights landscape exposes four equal metric instruments in one glance,
+  followed by wide reflection and Private Orbit compositions. At 200% text it
+  deliberately reflows to a two-by-two metric grid; compact phones use one or
+  two columns as space permits.
+- Mission landscape no longer spends space on a decorative companion panel.
+  Before checking, the 820dp manuscript is centered and readable. After
+  checking, a 1280x800 tablet becomes a focused Question + Solution workspace;
+  portrait, 200% text, and short-height windows return to one complete vertical
+  reading flow. A real-device-only bug where the Solution pane was gated by
+  the remaining Column height instead of the Android window height was found
+  and repaired.
+- Rotation preserves the selected option, checked state, inline ink controller,
+  and current question while the composition changes. Archive, Vault, Daily
+  Orbit, Map inspector, and metric grids use the same window-first contract.
+- Added a fail-closed visual-preview entry point for Android QA. It requires
+  `GAUSS_VISUAL_PREVIEW=true`, uses an isolated preview-only local account, and
+  is contract-tested to stay out of production `main.dart` and release builds.
+
 ## Verification
 
-- `flutter analyze`: no issues across the complete project.
-- `flutter test`: 210 passed, one intentional benchmark skip.
+- `flutter analyze --no-pub`: no issues across the complete project.
+- `flutter test --no-pub`: 218 passed, one intentional benchmark skip.
 - Focused Auth matrix: 7/7 passed at 320x760 phone, 800x1280 tablet portrait,
   1280x800 tablet landscape, 100% and 200% text, plus landscape keyboard inset.
 - Account and backup isolation: 9/9 passed.
@@ -86,14 +124,25 @@ and landscape first-class Android targets rather than enlarged phone layouts.
   the published question/topic counts and corpus hash. Focused Flutter analysis
   over the content/auth integration is clean.
 - Debug APK build 130 installed beside the untouched personal package.
+- Visual QA APK build 135 installed as `com.gauss.app.debug`; the signed
+  `com.gauss.app` package and its data were not replaced.
 - A dedicated `Gauss_Tablet_API35` Pixel Tablet AVD was created with a real
   2560x1600 / 320dpi Android 15 surface.
 - Runtime captures:
   - `.codex-tmp/gauss_auth_phone_ready.png`;
   - `.codex-tmp/gauss_auth_tablet_portrait.png`;
   - `.codex-tmp/gauss_auth_tablet_landscape.png`.
+- Learning-surface runtime captures:
+  - `.codex-tmp/tablet_landscape_map.png`;
+  - `.codex-tmp/tablet_landscape_study.png`;
+  - `.codex-tmp/tablet_landscape_insights.png`;
+  - `.codex-tmp/tablet_landscape_mission_no_companion_initial.png`;
+  - `.codex-tmp/tablet_landscape_mission_no_companion_checked.png`;
+  - `.codex-tmp/tablet_mission_checked_portrait_real.png`;
+  - `.codex-tmp/tablet_landscape_mission_200pct.png`.
 - Fresh Android logs contained no Flutter exception or fatal crash during the
-  phone and tablet Auth captures.
+  phone/tablet Auth and learning-surface captures, and no RenderFlex overflow
+  occurred through the landscape/portrait/200%-text Mission cycle.
 
 ## Remaining release gates
 
@@ -102,7 +151,10 @@ and landscape first-class Android targets rather than enlarged phone layouts.
    from the activated cache. Media remains bundled and hash-bound in this
    release; a future release that introduces new media needs a reviewed Storage
    delivery lane.
-2. Apply the same phone/tablet-portrait/tablet-landscape composition contract
-   to Map, Current Study, the five-question Mission, stylus tools, and Insights.
-3. Run the complete Android runtime matrix with keyboard, safe areas, 200% text,
-   reduced motion, stylus input, rotation, process death, and offline relaunch.
+2. Complete the remaining physical-device matrix: Xiaomi Focus Pen hover/button
+   behavior cannot be proven by the Android emulator, and process-death plus
+   authenticated offline relaunch still need final device evidence.
+3. Continue the Critics/Perfect pass over secondary sheets and completion
+   celebrations; the primary Map, Study, Insights, and five-question Mission
+   now have explicit phone, tablet-portrait, tablet-landscape, short-height,
+   rotation, and accessible-text contracts.

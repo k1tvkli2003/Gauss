@@ -47,13 +47,105 @@ enum GaussWindowClass {
   };
 }
 
+/// The available vertical space, classified independently from width.
+///
+/// Android windows are dynamic: rotation, split-screen, foldables, and freeform
+/// resizing can all change the usable height without changing the physical
+/// device. Surfaces must therefore gate dense multi-pane compositions on both
+/// axes instead of treating every wide window as a roomy tablet.
+enum GaussWindowHeightClass {
+  compact,
+  medium,
+  expanded;
+
+  static GaussWindowHeightClass fromHeight(double height) {
+    if (height < GaussBreakpoints.mediumHeight) {
+      return GaussWindowHeightClass.compact;
+    }
+    if (height < GaussBreakpoints.expandedHeight) {
+      return GaussWindowHeightClass.medium;
+    }
+    return GaussWindowHeightClass.expanded;
+  }
+
+  bool get isCompact => this == GaussWindowHeightClass.compact;
+  bool get isMedium => this == GaussWindowHeightClass.medium;
+  bool get isExpanded => this == GaussWindowHeightClass.expanded;
+}
+
+/// A two-axis, window-first adaptive profile shared by every Gauss route.
+///
+/// This deliberately does not expose an `isTablet` flag. A physical tablet can
+/// present a compact split-screen window, while a foldable can present an
+/// expanded one. Product decisions are made from the space the app actually
+/// owns at this frame.
+@immutable
+final class GaussViewport {
+  const GaussViewport._({
+    required this.size,
+    required this.widthClass,
+    required this.heightClass,
+  });
+
+  factory GaussViewport.fromSize(Size size) => GaussViewport._(
+    size: size,
+    widthClass: GaussWindowClass.fromWidth(size.width),
+    heightClass: GaussWindowHeightClass.fromHeight(size.height),
+  );
+
+  static GaussViewport of(BuildContext context) =>
+      GaussViewport.fromSize(MediaQuery.sizeOf(context));
+
+  final Size size;
+  final GaussWindowClass widthClass;
+  final GaussWindowHeightClass heightClass;
+
+  bool get isPortrait => size.height > size.width;
+  bool get isLandscape => size.width > size.height;
+  bool get isSquare => size.width == size.height;
+
+  bool get usesNavigationRail => widthClass.usesNavigationRail;
+
+  /// A labelled rail costs vertical as well as horizontal space. In a short
+  /// landscape window the compact icon rail stays usable without squeezing the
+  /// destinations or the brand lockup.
+  bool get extendsNavigationRail =>
+      size.width >= GaussBreakpoints.threePane && !heightClass.isCompact;
+
+  /// Supporting content may sit beside the primary task only when the window
+  /// has both the minimum readable width and non-compact height.
+  bool get supportsTwoPane =>
+      size.width >= GaussBreakpoints.twoPane && !heightClass.isCompact;
+
+  /// Three live panes are reserved for large landscape workspaces. Accessible
+  /// text can still make an individual surface choose a simpler composition.
+  bool get supportsThreePane =>
+      size.width >= GaussBreakpoints.threePane &&
+      size.height >= GaussBreakpoints.threePaneMinHeight;
+
+  bool get showsPersistentInspector =>
+      widthClass.showsPersistentInspector && !heightClass.isCompact;
+
+  bool get isConstrainedLandscape => isLandscape && heightClass.isCompact;
+}
+
 abstract final class GaussBreakpoints {
   static const medium = 600.0;
   static const expanded = 1024.0;
   static const wide = 1440.0;
 
+  /// Canonical adaptive pane thresholds based on the space owned by a route.
+  static const twoPane = 840.0;
+  static const threePane = 1200.0;
+  static const threePaneMinHeight = 600.0;
+
+  /// Height is classified independently so short landscape and split-screen
+  /// windows never inherit a tall-tablet composition.
+  static const mediumHeight = 480.0;
+  static const expandedHeight = 900.0;
+
   /// A split Study Room is useful only when each pane remains readable.
-  static const studyRoomSplitContent = 840.0;
+  static const studyRoomSplitContent = twoPane;
 
   /// Four metrics remain glanceable above this *usable content* width.
   static const insightsFourMetricsContent = 600.0;

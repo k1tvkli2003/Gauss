@@ -434,6 +434,122 @@ void main() {
   );
 
   testWidgets(
+    'mission preserves work while adapting between tablet portrait and landscape',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(800, 1280));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        sampleQuestion,
+        database,
+        failFirstSave: false,
+      );
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              padding: const EdgeInsets.only(top: 24, bottom: 24),
+              viewPadding: const EdgeInsets.only(top: 24, bottom: 24),
+              disableAnimations: true,
+            ),
+            child: child!,
+          ),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(topicKey: 'sets', count: 5),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+
+      expect(find.byKey(const ValueKey('mission-solution-pane')), findsNothing);
+      await tester.tap(find.bySemanticsLabel(RegExp(r'^Choice 2\. B\.')));
+      await tester.pump();
+
+      await tester.binding.setSurfaceSize(const Size(1280, 800));
+      await tester.pump();
+      expect(
+        find.byKey(const ValueKey('mission-adaptive-review-workspace')),
+        findsNothing,
+      );
+      expect(find.byKey(const ValueKey('mission-solution-pane')), findsNothing);
+
+      await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+      await tester.pump();
+      expect(
+        find.byKey(const ValueKey('mission-solution-pane')),
+        findsOneWidget,
+      );
+      expect(find.text('Fixture solution'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'mission rejects squeezed tablet panes at 200 percent or compact height',
+    (tester) async {
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        sampleQuestion,
+        database,
+        failFirstSave: false,
+      );
+
+      Future<void> pumpAt(Size size, double textScale) async {
+        await tester.binding.setSurfaceSize(size);
+        // Flush the view-metrics notification before replacing the route.
+        // This mirrors Android's resize ordering and prevents a stale
+        // pre-rotation View size from influencing the next composition.
+        await tester.pump();
+        await tester.pumpWidget(
+          MaterialApp(
+            theme: buildGaussTheme(),
+            builder: (context, child) => MediaQuery(
+              data: MediaQuery.of(context).copyWith(
+                textScaler: TextScaler.linear(textScale),
+                disableAnimations: true,
+              ),
+              child: child!,
+            ),
+            home: GaussScope(
+              controller: controller,
+              child: MissionScreen(
+                key: ValueKey('mission-${size.width}-$textScale'),
+                topicKey: 'sets',
+                count: 5,
+              ),
+            ),
+          ),
+        );
+        await _pumpUntilFound(
+          tester,
+          find.byKey(const ValueKey('mission-question-action-dock')),
+        );
+        expect(
+          find.byKey(const ValueKey('mission-adaptive-review-workspace')),
+          findsNothing,
+        );
+        expect(
+          find.byKey(const ValueKey('mission-solution-pane')),
+          findsNothing,
+        );
+        expect(tester.takeException(), isNull, reason: '$size @ $textScale');
+      }
+
+      await pumpAt(const Size(1280, 800), 2);
+      await pumpAt(const Size(1440, 479), 1);
+    },
+  );
+
+  testWidgets(
     'checked mission reflows its feedback and complete solution at 320dp 200%',
     (tester) async {
       await tester.binding.setSurfaceSize(const Size(320, 900));

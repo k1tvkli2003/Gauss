@@ -262,8 +262,7 @@ class _BackupScreenState extends State<BackupScreen> {
                                 title: Text(_describe(entry.savedAt)),
                                 subtitle: Text(
                                   '${_size(entry.sizeBytes)} · ${entry.name}',
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
+                                  softWrap: true,
                                 ),
                                 trailing: TextButton(
                                   onPressed: _busy
@@ -348,8 +347,7 @@ class _VaultErrorState extends StatelessWidget {
           const SizedBox(height: GaussSpacing.space8),
           Text(
             '$error',
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
+            softWrap: true,
             textAlign: TextAlign.center,
             style: const TextStyle(
               color: GaussColors.muted,

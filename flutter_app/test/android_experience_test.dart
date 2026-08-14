@@ -127,6 +127,47 @@ void main() {
     expect(GaussWindowClass.medium.usesNavigationRail, isTrue);
     expect(GaussWindowClass.expanded.showsPersistentInspector, isTrue);
     expect(GaussWindowClass.wide.extendsNavigationRail, isTrue);
+
+    expect(
+      GaussWindowHeightClass.fromHeight(479),
+      GaussWindowHeightClass.compact,
+    );
+    expect(
+      GaussWindowHeightClass.fromHeight(480),
+      GaussWindowHeightClass.medium,
+    );
+    expect(
+      GaussWindowHeightClass.fromHeight(899),
+      GaussWindowHeightClass.medium,
+    );
+    expect(
+      GaussWindowHeightClass.fromHeight(900),
+      GaussWindowHeightClass.expanded,
+    );
+
+    final portrait = GaussViewport.fromSize(const Size(800, 1280));
+    expect(portrait.widthClass, GaussWindowClass.medium);
+    expect(portrait.heightClass, GaussWindowHeightClass.expanded);
+    expect(portrait.isPortrait, isTrue);
+    expect(portrait.supportsTwoPane, isFalse);
+
+    final landscape = GaussViewport.fromSize(const Size(1280, 800));
+    expect(landscape.widthClass, GaussWindowClass.expanded);
+    expect(landscape.heightClass, GaussWindowHeightClass.medium);
+    expect(landscape.isLandscape, isTrue);
+    expect(landscape.supportsTwoPane, isTrue);
+    expect(landscape.supportsThreePane, isTrue);
+    expect(landscape.showsPersistentInspector, isTrue);
+    expect(landscape.extendsNavigationRail, isTrue);
+
+    final splitScreen = GaussViewport.fromSize(const Size(900, 479));
+    expect(splitScreen.isConstrainedLandscape, isTrue);
+    expect(splitScreen.supportsTwoPane, isFalse);
+    expect(splitScreen.showsPersistentInspector, isFalse);
+
+    final shortWide = GaussViewport.fromSize(const Size(1440, 479));
+    expect(shortWide.extendsNavigationRail, isFalse);
+    expect(shortWide.supportsThreePane, isFalse);
   });
 
   test('source provenance name stays out of user-facing app copy', () {
@@ -290,6 +331,24 @@ void main() {
     expect(
       tester.widget<NavigationRail>(find.byType(NavigationRail)).extended,
       isTrue,
+    );
+
+    await tester.binding.setSurfaceSize(const Size(1280, 800));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 60));
+    expect(find.byType(NavigationRail), findsOneWidget);
+    expect(
+      tester.widget<NavigationRail>(find.byType(NavigationRail)).extended,
+      isTrue,
+    );
+
+    await tester.binding.setSurfaceSize(const Size(1440, 479));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 60));
+    expect(find.byType(NavigationRail), findsOneWidget);
+    expect(
+      tester.widget<NavigationRail>(find.byType(NavigationRail)).extended,
+      isFalse,
     );
     expect(tester.takeException(), isNull);
   });
@@ -1198,6 +1257,39 @@ void main() {
       expect(find.byType(MapScreen), findsOneWidget);
       expect(find.text('STUDY INSPECTOR'), findsOneWidget);
       expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'map owns dedicated portrait landscape accessible and short tablet states',
+    (tester) async {
+      if (!controller.ready) await tester.runAsync(controller.initialize);
+
+      for (final profile in const [
+        (size: Size(800, 1280), textScale: 1.0, inspector: false),
+        (size: Size(1280, 800), textScale: 1.0, inspector: true),
+        (size: Size(1280, 800), textScale: 2.0, inspector: false),
+        (size: Size(1440, 479), textScale: 1.0, inspector: false),
+      ]) {
+        await _pumpMap(
+          tester,
+          controller: controller,
+          size: profile.size,
+          textScale: profile.textScale,
+          reducedMotion: true,
+        );
+
+        expect(
+          find.byKey(const ValueKey('map-study-inspector')),
+          profile.inspector ? findsOneWidget : findsNothing,
+          reason: '${profile.size} @ ${profile.textScale}',
+        );
+        expect(
+          tester.takeException(),
+          isNull,
+          reason: '${profile.size} @ ${profile.textScale}',
+        );
+      }
     },
   );
 }

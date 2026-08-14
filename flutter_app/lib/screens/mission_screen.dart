@@ -648,8 +648,10 @@ class _QuestionStage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final correct = checked && selectedChoice == question.correctChoiceIndex;
-    final wrongPick = checked && selectedChoice != null && !correct;
+    final wrongPick =
+        checked &&
+        selectedChoice != null &&
+        selectedChoice != question.correctChoiceIndex;
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -668,8 +670,29 @@ class _QuestionStage extends StatelessWidget {
               Expanded(
                 child: LayoutBuilder(
                   builder: (context, constraints) {
-                    final wide = constraints.maxWidth >= 900;
-                    if (!wide) {
+                    // Pane capability belongs to the Android window, not the
+                    // remaining height inside this Column. The top progress
+                    // instrument, action dock, and system safe areas reduce
+                    // [constraints.maxHeight] after the window has already
+                    // qualified as a landscape tablet. Basing the decision on
+                    // that remainder made the solution pane disappear on a
+                    // real 1280x800 Pixel Tablet even though the same surface
+                    // passed a padding-free widget test.
+                    final viewport = GaussViewport.fromSize(
+                      Size(
+                        constraints.maxWidth,
+                        MediaQuery.sizeOf(context).height,
+                      ),
+                    );
+                    final textScale = MediaQuery.textScalerOf(context).scale(1);
+                    final hasReadablePaneHeight =
+                        constraints.maxHeight >= GaussBreakpoints.mediumHeight;
+                    final showReviewWorkspace =
+                        checked &&
+                        viewport.supportsThreePane &&
+                        hasReadablePaneHeight &&
+                        textScale < 1.35;
+                    if (!showReviewWorkspace) {
                       return _QuestionScroll(
                         question: question,
                         ink: ink,
@@ -687,20 +710,11 @@ class _QuestionStage extends StatelessWidget {
                       );
                     }
                     return Padding(
+                      key: const ValueKey('mission-adaptive-review-workspace'),
                       padding: const EdgeInsets.fromLTRB(18, 8, 18, 12),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          SizedBox(
-                            width: constraints.maxWidth >= 1200 ? 270 : 238,
-                            child: _CompanionDeck(
-                              checked: checked,
-                              correct: correct,
-                              index: index,
-                              total: total,
-                            ),
-                          ),
-                          const SizedBox(width: 18),
                           Expanded(
                             child: _QuestionScroll(
                               question: question,
@@ -719,29 +733,27 @@ class _QuestionStage extends StatelessWidget {
                               inset: EdgeInsets.zero,
                             ),
                           ),
-                          if (checked) ...[
-                            const SizedBox(width: 18),
-                            SizedBox(
-                              width: constraints.maxWidth >= 1250 ? 350 : 310,
-                              child: SingleChildScrollView(
-                                padding: const EdgeInsets.only(bottom: 12),
-                                child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
-                                  children: [
-                                    if (wrongPick) ...[
-                                      _MissTagBar(
-                                        selected: errorTag,
-                                        onSelect: onTagError,
-                                      ),
-                                      const SizedBox(height: 12),
-                                    ],
-                                    _SolutionPanel(question: question),
+                          const SizedBox(width: 18),
+                          SizedBox(
+                            key: const ValueKey('mission-solution-pane'),
+                            width: constraints.maxWidth >= 1250 ? 350 : 310,
+                            child: SingleChildScrollView(
+                              padding: const EdgeInsets.only(bottom: 12),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  if (wrongPick) ...[
+                                    _MissTagBar(
+                                      selected: errorTag,
+                                      onSelect: onTagError,
+                                    ),
+                                    const SizedBox(height: 12),
                                   ],
-                                ),
+                                  _SolutionPanel(question: question),
+                                ],
                               ),
                             ),
-                          ],
+                          ),
                         ],
                       ),
                     );
@@ -1173,92 +1185,6 @@ class _MissTagChip extends StatelessWidget {
       ),
     ),
   );
-}
-
-class _CompanionDeck extends StatelessWidget {
-  const _CompanionDeck({
-    required this.checked,
-    required this.correct,
-    required this.index,
-    required this.total,
-  });
-
-  final bool checked;
-  final bool correct;
-  final int index;
-  final int total;
-
-  @override
-  Widget build(BuildContext context) {
-    final message = !checked
-        ? 'Take your time. A clear chain of reasoning is the real win.'
-        : correct
-        ? 'Proof aligned. The next point on the map is ready.'
-        : 'Useful signal. Read the solution, then test the idea again.';
-    return Container(
-      padding: const EdgeInsets.fromLTRB(16, 18, 16, 16),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            GaussColors.panelHigh.withValues(alpha: .94),
-            GaussColors.ink.withValues(alpha: .96),
-          ],
-        ),
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: GaussColors.line),
-      ),
-      child: Column(
-        children: [
-          const Text(
-            'MIRA · PROOF COMPANION',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: GaussColors.brassLight,
-              fontSize: GaussTypeScale.insignia,
-              fontWeight: FontWeight.w900,
-              letterSpacing: 1,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Expanded(
-            child: AnimatedSwitcher(
-              duration: MediaQuery.disableAnimationsOf(context)
-                  ? Duration.zero
-                  : const Duration(milliseconds: 320),
-              child: Image.asset(
-                checked && correct
-                    ? 'assets/visual/mascot/mira_correct.png'
-                    : 'assets/visual/mascot/mira_thinking.png',
-                key: ValueKey(checked && correct),
-                fit: BoxFit.contain,
-                cacheWidth: 720,
-                filterQuality: FilterQuality.medium,
-                semanticLabel: checked && correct
-                    ? 'Mira celebrates a correct answer.'
-                    : 'Mira is thinking with you.',
-              ),
-            ),
-          ),
-          Text(
-            message,
-            textAlign: TextAlign.center,
-            style: const TextStyle(color: GaussColors.muted, fontSize: 12),
-          ),
-          const SizedBox(height: 13),
-          Text(
-            '${index + 1} of $total',
-            style: const TextStyle(
-              color: GaussColors.signalBright,
-              fontSize: 11,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 }
 
 class _MissionActionBar extends StatelessWidget {
