@@ -381,6 +381,7 @@ class _MissionScreenState extends State<MissionScreen> {
       await GaussScope.of(context).reportQuestionIssue(
         QuestionIssueReport(
           questionId: question.id,
+          questionRevision: question.revision,
           topicKey: question.topicKey,
           kind: draft.kind,
           note: draft.note,

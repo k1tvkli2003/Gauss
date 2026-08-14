@@ -9,6 +9,7 @@ import '../app/gauss_design_system.dart';
 import '../app/gauss_theme.dart';
 import '../domain/question_reference.dart';
 import 'feedback_controller.dart';
+import 'feedback_exporter.dart';
 import 'feedback_models.dart';
 import 'feedback_repository.dart';
 
@@ -17,9 +18,9 @@ typedef GaussFeedbackScreenshotProvider =
 
 /// Target-owned adaptation of `flutter.private-feedback-capture` 1.2.2.
 ///
-/// Unlike the canonical component, Gauss intentionally exposes no export or
-/// share path. Reports remain a bounded local-first outbox until authenticated
-/// Supabase sync is connected and explicitly verified.
+/// Gauss keeps the canonical component's reviewed ZIP export but replaces its
+/// share-sheet delivery with Android's private Save Document flow. Reports are
+/// local-first and may sync only through the current account's Supabase RLS.
 class GaussFeedbackCapture extends StatefulWidget {
   const GaussFeedbackCapture({
     required this.controller,
@@ -150,7 +151,10 @@ class _GaussFeedbackCaptureState extends State<GaussFeedbackCapture> {
     try {
       await WidgetsBinding.instance.endOfFrame;
       if (!mounted) return;
-      final action = await _FeedbackCaptureMenu.show(_sheetContext);
+      final action = await _FeedbackCaptureMenu.show(
+        _sheetContext,
+        widget.controller,
+      );
       if (!mounted || action == null) return;
       if (action == _FeedbackCaptureAction.review) {
         await GaussFeedbackEntriesSheet.show(_sheetContext, widget.controller);
@@ -262,17 +266,21 @@ class _GaussFeedbackCaptureState extends State<GaussFeedbackCapture> {
 enum _FeedbackCaptureAction { screenshot, note, review }
 
 class _FeedbackCaptureMenu extends StatelessWidget {
-  const _FeedbackCaptureMenu();
+  const _FeedbackCaptureMenu(this.controller);
 
-  static Future<_FeedbackCaptureAction?> show(BuildContext context) =>
-      showModalBottomSheet<_FeedbackCaptureAction>(
-        context: context,
-        useRootNavigator: true,
-        isScrollControlled: true,
-        useSafeArea: true,
-        backgroundColor: Colors.transparent,
-        builder: (_) => const _FeedbackCaptureMenu(),
-      );
+  final GaussFeedbackController controller;
+
+  static Future<_FeedbackCaptureAction?> show(
+    BuildContext context,
+    GaussFeedbackController controller,
+  ) => showModalBottomSheet<_FeedbackCaptureAction>(
+    context: context,
+    useRootNavigator: true,
+    isScrollControlled: true,
+    useSafeArea: true,
+    backgroundColor: Colors.transparent,
+    builder: (_) => _FeedbackCaptureMenu(controller),
+  );
 
   @override
   Widget build(BuildContext context) => _FeedbackSheetFrame(
@@ -281,11 +289,12 @@ class _FeedbackCaptureMenu extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        const _FeedbackSheetHeading(
+        _FeedbackSheetHeading(
           eyebrow: 'PRIVATE FEEDBACK LENS',
           title: 'Mark what needs attention',
-          detail:
-              'Saved on this device as a private outbox. Nothing is shared or uploaded.',
+          detail: controller.remoteEnabled
+              ? 'Saved on this device first, then synced only to your Gauss account. Nothing is shared.'
+              : 'Saved on this device as a private outbox. Nothing is shared.',
         ),
         const SizedBox(height: 18),
         _FeedbackOrbitAction(
@@ -545,6 +554,78 @@ class GaussFeedbackEntriesSheet extends StatelessWidget {
     }
   }
 
+  Future<void> _export(BuildContext context) async {
+    final approved = await showDialog<bool>(
+      context: context,
+      builder: (context) => Align(
+        alignment: Alignment.center,
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 640),
+          child: AlertDialog(
+            key: const ValueKey('feedback-export-dialog'),
+            scrollable: true,
+            icon: const Icon(Icons.archive_outlined),
+            title: const Text('Export private feedback?'),
+            content: const Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  'The ZIP includes redacted notes, question IDs, revisions and screenshots.',
+                ),
+                SizedBox(height: 12),
+                Text('Screenshot pixels stay unredacted.'),
+                SizedBox(height: 12),
+                Text('Android opens Save — never Share.'),
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context, false),
+                child: const Text('Not now'),
+              ),
+              FilledButton.icon(
+                key: const ValueKey('feedback-confirm-export'),
+                onPressed: () => Navigator.pop(context, true),
+                icon: const Icon(Icons.download_rounded),
+                label: const Text('Choose location'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (approved != true || !context.mounted) return;
+    try {
+      final result = await controller.export();
+      if (!context.mounted) return;
+      if (result.status == GaussFeedbackExportStatus.saved) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('${result.fileName} was saved privately.')),
+        );
+      }
+    } catch (_) {
+      if (!context.mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('The feedback archive could not be exported.'),
+        ),
+      );
+    }
+  }
+
+  Future<void> _retrySync(BuildContext context) async {
+    await controller.syncPending();
+    if (!context.mounted || controller.pendingCount == 0) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text(
+          'Some reports are still safe on this device. Try again when online.',
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) => _FeedbackSheetFrame(
     key: const ValueKey('feedback-entries-sheet'),
@@ -564,7 +645,11 @@ class GaussFeedbackEntriesSheet extends StatelessWidget {
                   : '${entries.length} saved ${entries.length == 1 ? 'signal' : 'signals'}',
               detail: entries.isEmpty
                   ? 'Capture a surface or leave a note whenever something needs attention.'
-                  : 'Reports stay local until the verified account sync lane is connected.',
+                  : controller.remoteEnabled
+                  ? controller.pendingCount == 0
+                        ? 'Every report is safely bound to this Gauss account.'
+                        : 'Reports stay on this device until their private account upload succeeds.'
+                  : 'Reports stay in this account’s on-device outbox.',
             ),
             const SizedBox(height: 14),
             if (entries.isEmpty)
@@ -590,9 +675,38 @@ class GaussFeedbackEntriesSheet extends StatelessWidget {
               ),
             if (entries.isNotEmpty) ...[
               const SizedBox(height: 12),
+              FilledButton.icon(
+                key: const ValueKey('feedback-export-action'),
+                onPressed: controller.busy || controller.syncing
+                    ? null
+                    : () => _export(context),
+                icon: const Icon(Icons.download_rounded),
+                label: const Text('Export private ZIP'),
+              ),
+              if (controller.remoteEnabled && controller.pendingCount > 0) ...[
+                const SizedBox(height: 8),
+                OutlinedButton.icon(
+                  key: const ValueKey('feedback-retry-sync-action'),
+                  onPressed: controller.syncing
+                      ? null
+                      : () => _retrySync(context),
+                  icon: controller.syncing
+                      ? const SizedBox.square(
+                          dimension: 18,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : const Icon(Icons.cloud_upload_outlined),
+                  label: Text(
+                    controller.syncing
+                        ? 'Syncing privately…'
+                        : 'Retry private sync',
+                  ),
+                ),
+              ],
+              const SizedBox(height: 8),
               OutlinedButton.icon(
                 key: const ValueKey('feedback-clear-action'),
-                onPressed: controller.busy
+                onPressed: controller.busy || controller.syncing
                     ? null
                     : () => _confirmClear(context),
                 icon: const Icon(Icons.delete_sweep_outlined),
@@ -628,6 +742,18 @@ class _FeedbackEntryTile extends StatelessWidget {
     final contextLine = entry.questionId == null
         ? entry.route
         : questionDisplayReference(entry.questionId!);
+    final syncLabel = switch (entry.syncState) {
+      GaussFeedbackSyncState.pending =>
+        controller.remoteEnabled
+            ? 'queued for private sync'
+            : 'saved on this device',
+      GaussFeedbackSyncState.syncing => 'syncing to your account',
+      GaussFeedbackSyncState.synced => 'synced to your account',
+      GaussFeedbackSyncState.failed => 'safe locally · sync needs retry',
+    };
+    final attachment = entry.hasScreenshot
+        ? 'Screenshot attached'
+        : 'Text report';
     return Material(
       color: GaussColors.deepInk.withValues(alpha: .72),
       borderRadius: BorderRadius.circular(18),
@@ -665,11 +791,11 @@ class _FeedbackEntryTile extends StatelessWidget {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      entry.hasScreenshot
-                          ? 'Screenshot attached · waiting locally'
-                          : 'Text report · waiting locally',
-                      style: const TextStyle(
-                        color: GaussColors.signalBright,
+                      '$attachment · $syncLabel',
+                      style: TextStyle(
+                        color: entry.syncState == GaussFeedbackSyncState.failed
+                            ? GaussColors.warning
+                            : GaussColors.signalBright,
                         fontSize: GaussTypeScale.caption,
                         height: 1.35,
                       ),
@@ -681,7 +807,9 @@ class _FeedbackEntryTile extends StatelessWidget {
                 dimension: GaussMetrics.minTouchTarget,
                 child: IconButton(
                   tooltip: 'Delete this report',
-                  onPressed: controller.busy ? null : () => _delete(context),
+                  onPressed: controller.busy || controller.syncing
+                      ? null
+                      : () => _delete(context),
                   icon: const Icon(Icons.delete_outline_rounded, size: 21),
                 ),
               ),

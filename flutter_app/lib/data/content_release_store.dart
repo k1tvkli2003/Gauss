@@ -484,7 +484,13 @@ final class GaussContentReleaseStore {
             !usedIds.add(id)) {
           throw FormatException('$topicKey cannot bind question $id.');
         }
-        rows.add(revision.payload);
+        rows.add(<String, dynamic>{
+          ...revision.payload,
+          // Runtime-only delivery metadata. The immutable database payload
+          // and its content hash stay untouched; this binds feedback and
+          // progress diagnostics to the exact served revision.
+          '_gauss_revision': revision.revision,
+        });
       }
       final logicalPath = 'assets/${_safeLogicalPath(relativePath)}';
       fileHashes[logicalPath] = await _writeJson(staging, logicalPath, rows);

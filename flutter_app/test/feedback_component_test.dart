@@ -253,6 +253,80 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
+  testWidgets('private export stays bounded on a landscape tablet', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(1280, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    await controller.addEntry(
+      route: '/insights',
+      note: 'Tablet export layout proof.',
+      kind: GaussFeedbackKind.note,
+    );
+    await tester.pumpWidget(_FeedbackHarness(controller: controller));
+    GaussFeedbackEntriesSheet.show(
+      tester.element(find.text('MAP SURFACE')),
+      controller,
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byKey(const ValueKey('feedback-export-action')));
+    await tester.pumpAndSettle();
+
+    final dialog = find.byKey(const ValueKey('feedback-export-dialog'));
+    expect(dialog, findsOneWidget);
+    expect(tester.getRect(dialog).width, lessThanOrEqualTo(640));
+    expect(
+      tester
+          .getSize(find.byKey(const ValueKey('feedback-confirm-export')))
+          .height,
+      greaterThanOrEqualTo(48),
+    );
+    expect(find.text('Android opens Save — never Share.'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('private export warning remains reachable at 320dp and 200%', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(320, 760));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    await controller.addEntry(
+      route: '/insights',
+      note: 'Accessible export proof.',
+      kind: GaussFeedbackKind.note,
+    );
+    await tester.pumpWidget(
+      _FeedbackHarness(controller: controller, textScale: 2),
+    );
+    GaussFeedbackEntriesSheet.show(
+      tester.element(find.text('MAP SURFACE')),
+      controller,
+    );
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(
+      find.byKey(const ValueKey('feedback-export-action')),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('feedback-export-action')));
+    await tester.pumpAndSettle();
+
+    final dialog = find.byKey(const ValueKey('feedback-export-dialog'));
+    expect(dialog, findsOneWidget);
+    expect(tester.getRect(dialog).left, greaterThanOrEqualTo(0));
+    expect(tester.getRect(dialog).right, lessThanOrEqualTo(320));
+    await tester.ensureVisible(find.text('Android opens Save — never Share.'));
+    await tester.pumpAndSettle();
+    expect(find.text('Android opens Save — never Share.'), findsOneWidget);
+    expect(
+      tester
+          .getSize(find.byKey(const ValueKey('feedback-confirm-export')))
+          .height,
+      greaterThanOrEqualTo(48),
+    );
+    expect(tester.takeException(), isNull);
+  });
+
   for (final tabletSize in const <Size>[Size(800, 1280), Size(1280, 800)]) {
     testWidgets('feedback owns a bounded readable composition at '
         '${tabletSize.width.toInt()}x${tabletSize.height.toInt()}', (

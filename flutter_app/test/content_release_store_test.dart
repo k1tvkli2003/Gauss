@@ -44,6 +44,19 @@ void main() {
             )
             as Map<String, dynamic>;
     expect(remoteIndex['total'], 2);
+    final remoteQuestions =
+        jsonDecode(
+              await downloaded.bundle.loadString(
+                'assets/question_bank/topics/math_sets.json',
+              ),
+            )
+            as List<dynamic>;
+    expect(
+      remoteQuestions.map(
+        (row) => (row as Map<String, dynamic>)['_gauss_revision'],
+      ),
+      everyElement(1),
+    );
     expect(await File('${root.path}/active.json').exists(), isTrue);
 
     final offline = GaussContentReleaseStore(

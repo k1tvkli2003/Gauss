@@ -93,3 +93,14 @@ class GaussFeedbackScreenshot {
   final Uint8List bytes;
   final double pixelRatio;
 }
+
+@immutable
+class GaussFeedbackExportSnapshot {
+  const GaussFeedbackExportSnapshot({
+    required this.entries,
+    required this.screenshots,
+  });
+
+  final List<GaussFeedbackEntry> entries;
+  final Map<String, Uint8List> screenshots;
+}

@@ -60,6 +60,33 @@ and landscape first-class Android targets rather than enlarged phone layouts.
 - Cross-language contract tests independently rebuild the four artifact hashes
   and complete corpus hash from the real 3672-row corpus in both Python and
   Dart, then bind them to the checked-in live release receipt.
+- Question-content edits now require no APK rebuild: the authenticated Android
+  client checks the named channel and atomically activates a verified release.
+  Stable question ids preserve the identity used by progress, reports, and
+  future revisions while the served revision remains explicit.
+- Precision boundary: Supabase storage/publishing is revision-delta today, but
+  the current Android refresh still downloads the complete question payload of
+  a changed release before activation. A manifest-first client payload cache is
+  still required before claiming network-delta refreshes. This limitation does
+  not affect APK independence, stable identity, rollback, or offline reuse.
+
+## Account-bound feedback and private export
+
+- Adapted ReadyUse `flutter.private-feedback-capture` 1.2.2 as a target-owned
+  Gauss snapshot. Reports are persisted in the current account's Drift file
+  before any network attempt and sync only through owner RLS.
+- Every question report carries stable question id plus exact served revision.
+  Screenshot uploads use a private owner-prefixed Storage object and the cloud
+  row carries its SHA-256, content release, session, issue type, and selected
+  choice without shipping any service-role credential.
+- Export is allowed. Gauss builds a private ZIP with redacted notes,
+  question ids/revisions, and optional PNG files, then opens Android Save
+  Document. Social Share/Share Sheet remains absent. Exports omit email,
+  password, access token, Supabase user id, and progress.
+- Migrations `202608140003_gauss_feedback_delivery.sql` and
+  `202608140004_gauss_feedback_storage_cleanup.sql` were applied through the
+  checksum-ledger migration runner. The private bucket permits owner read,
+  insert, update, and delete only.
 
 ## Dedicated adaptive Auth composition
 
@@ -113,7 +140,7 @@ and landscape first-class Android targets rather than enlarged phone layouts.
 ## Verification
 
 - `flutter analyze --no-pub`: no issues across the complete project.
-- `flutter test --no-pub`: 218 passed, one intentional benchmark skip.
+- `flutter test --no-pub`: 223 passed, one intentional benchmark skip.
 - Focused Auth matrix: 7/7 passed at 320x760 phone, 800x1280 tablet portrait,
   1280x800 tablet landscape, 100% and 200% text, plus landscape keyboard inset.
 - Account and backup isolation: 9/9 passed.
@@ -123,8 +150,19 @@ and landscape first-class Android targets rather than enlarged phone layouts.
 - Content publisher: 2/2 Python tests passed; deterministic dry-run reproduced
   the published question/topic counts and corpus hash. Focused Flutter analysis
   over the content/auth integration is clean.
+- Feedback/Auth/content focused matrix: 27/27 passed; after the final
+  runtime-derived accessibility repair the feedback/export subset passed
+  14/14. Tests cover sync retry, revision binding, redaction, credential
+  exclusion, screenshot hashing, tablet bounds, and 320dp/200% reachability.
+- Live two-account feedback/storage proof passed against Supabase: owner row 1,
+  cross-account row 0, cross-account insert rejected, owner PNG round-trip
+  true, cross-account PNG read rejected. Post-proof audit found zero temporary
+  users, reports, or Storage objects.
 - Debug APK build 130 installed beside the untouched personal package.
-- Visual QA APK build 135 installed as `com.gauss.app.debug`; the signed
+- Final production-entry debug APK build 140 compiled from `lib/main.dart` at
+  250,695,702 bytes with SHA-256
+  `305ef5e6eeb58183ad66e2708663d1666e80545d10a3f488a5adaf3653556210`.
+- Visual QA APK build 139 installed as `com.gauss.app.debug`; the signed
   `com.gauss.app` package and its data were not replaced.
 - A dedicated `Gauss_Tablet_API35` Pixel Tablet AVD was created with a real
   2560x1600 / 320dpi Android 15 surface.
@@ -143,6 +181,12 @@ and landscape first-class Android targets rather than enlarged phone layouts.
 - Fresh Android logs contained no Flutter exception or fatal crash during the
   phone/tablet Auth and learning-surface captures, and no RenderFlex overflow
   occurred through the landscape/portrait/200%-text Mission cycle.
+- The feedback runtime created and saved a real ZIP through DocumentsUI in
+  Downloads; the pulled archive contained only `manifest.json` and `report.md`
+  for the text-only fixture and had SHA-256
+  `b5bcbdcf65efd6d78506dd20157bca597695dd87553d4f3cdc79ff89f1fa8b33`.
+  The final tablet and 320dp/200% feedback cycles produced no Flutter,
+  RenderFlex, FATAL, or native export-channel error.
 
 ## Remaining release gates
 
@@ -151,10 +195,13 @@ and landscape first-class Android targets rather than enlarged phone layouts.
    from the activated cache. Media remains bundled and hash-bound in this
    release; a future release that introduces new media needs a reviewed Storage
    delivery lane.
-2. Complete the remaining physical-device matrix: Xiaomi Focus Pen hover/button
+2. Add the manifest-first revision cache before describing Android content
+   refresh traffic itself as delta-sized; the current server/publisher already
+   reuses unchanged revisions and content updates already avoid APK releases.
+3. Complete the remaining physical-device matrix: Xiaomi Focus Pen hover/button
    behavior cannot be proven by the Android emulator, and process-death plus
    authenticated offline relaunch still need final device evidence.
-3. Continue the Critics/Perfect pass over secondary sheets and completion
+4. Continue the Critics/Perfect pass over secondary sheets and completion
    celebrations; the primary Map, Study, Insights, and five-question Mission
    now have explicit phone, tablet-portrait, tablet-landscape, short-height,
    rotation, and accessible-text contracts.

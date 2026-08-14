@@ -176,6 +176,7 @@ class TopicDescriptor {
 class Question {
   const Question({
     required this.id,
+    this.revision = 1,
     required this.subject,
     required this.topicKey,
     required this.difficulty,
@@ -192,6 +193,13 @@ class Question {
   });
 
   final String id;
+
+  /// Monotonic content revision for this stable question identity.
+  ///
+  /// Bundled source rows predate remote delivery and are revision 1. A
+  /// downloaded release injects its reviewed database revision at the cache
+  /// boundary without rewriting the immutable source corpus.
+  final int revision;
   final Subject subject;
   final String topicKey;
   final Difficulty difficulty;
@@ -238,11 +246,15 @@ class Question {
     QuestionCertification? certification,
   }) {
     final sourceIndex = json['correct_option_index'] as int;
+    final revision = json['_gauss_revision'] as int? ?? 1;
     final effectiveIndex = certification?.effectiveOptionIndex ?? sourceIndex;
     final rawOptions = json['options'] as List<dynamic>;
     final sourceBank = json['source_bank'] as String?;
     if (sourceBank == null || sourceBank.isEmpty) {
       throw FormatException('Question ${json['id']} has no source bank.');
+    }
+    if (revision < 1) {
+      throw FormatException('Question ${json['id']} has an invalid revision.');
     }
     final provenance = json['provenance'] as Map<String, dynamic>?;
     final solution = _blocks(json['solution']);
@@ -271,6 +283,7 @@ class Question {
     }
     return Question(
       id: json['id'] as String,
+      revision: revision,
       subject: Subject.fromKey(json['subject'] as String),
       topicKey: json['topic_key'] as String,
       difficulty: Difficulty.fromKey(
@@ -518,6 +531,7 @@ enum QuestionIssueKind {
 class QuestionIssueReport {
   const QuestionIssueReport({
     required this.questionId,
+    this.questionRevision = 1,
     required this.topicKey,
     required this.kind,
     required this.note,
@@ -528,6 +542,7 @@ class QuestionIssueReport {
   });
 
   final String questionId;
+  final int questionRevision;
   final String topicKey;
   final QuestionIssueKind kind;
   final String note;
@@ -539,8 +554,9 @@ class QuestionIssueReport {
   String get id => '$questionId:${reportedAt.microsecondsSinceEpoch}';
 
   Map<String, Object?> toJson() => {
-    'schema_version': 1,
+    'schema_version': 2,
     'question_id': questionId,
+    'question_revision': questionRevision,
     'topic_key': topicKey,
     'kind': kind.key,
     'note': note,
@@ -551,10 +567,12 @@ class QuestionIssueReport {
   };
 
   factory QuestionIssueReport.fromJson(Map<String, dynamic> json) {
-    if (json['schema_version'] != 1) {
+    final schemaVersion = json['schema_version'];
+    if (schemaVersion != 1 && schemaVersion != 2) {
       throw const FormatException('Unsupported question issue schema.');
     }
     final questionId = json['question_id'];
+    final questionRevision = schemaVersion == 1 ? 1 : json['question_revision'];
     final topicKey = json['topic_key'];
     final kind = json['kind'];
     final note = json['note'];
@@ -564,6 +582,8 @@ class QuestionIssueReport {
     final reportedAt = DateTime.tryParse(json['reported_at'] as String? ?? '');
     if (questionId is! String ||
         questionId.isEmpty ||
+        questionRevision is! int ||
+        questionRevision < 1 ||
         topicKey is! String ||
         topicKey.isEmpty ||
         kind is! String ||
@@ -578,6 +598,7 @@ class QuestionIssueReport {
     }
     return QuestionIssueReport(
       questionId: questionId,
+      questionRevision: questionRevision,
       topicKey: topicKey,
       kind: QuestionIssueKind.fromKey(kind),
       note: note,

@@ -185,6 +185,7 @@ class GaussFeedbackRepository {
             route: '/mission/${report.topicKey}',
             note: note,
             questionId: Value(report.questionId),
+            questionRevision: Value(report.questionRevision),
             topicKey: Value(report.topicKey),
             questionIssueKind: Value(report.kind.key),
             sessionId: Value(report.sessionId),
@@ -260,6 +261,103 @@ class GaussFeedbackRepository {
       database.appFlags,
     )..where((row) => row.key.like('$_legacyQuestionPrefix%'))).go();
   });
+
+  Future<void> recoverInterruptedSync(DateTime updatedAt) =>
+      (database.update(database.feedbackOutboxEntries)..where(
+            (row) => row.syncState.equals(GaussFeedbackSyncState.syncing.name),
+          ))
+          .write(
+            FeedbackOutboxEntriesCompanion(
+              syncState: Value(GaussFeedbackSyncState.pending.name),
+              lastSyncError: const Value(
+                'The previous upload was interrupted. Ready to retry.',
+              ),
+              updatedAt: Value(updatedAt.toUtc().millisecondsSinceEpoch),
+            ),
+          );
+
+  Future<List<GaussFeedbackEntry>> readSyncCandidates() async =>
+      (await readEntries())
+          .where(
+            (entry) =>
+                !entry.legacy &&
+                (entry.syncState == GaussFeedbackSyncState.pending ||
+                    entry.syncState == GaussFeedbackSyncState.failed),
+          )
+          .toList(growable: false);
+
+  Future<void> markSyncing(
+    GaussFeedbackEntry entry, {
+    required DateTime updatedAt,
+  }) async {
+    final changed =
+        await (database.update(database.feedbackOutboxEntries)..where(
+              (row) =>
+                  row.id.equals(entry.id) &
+                  row.syncState.isNotIn([GaussFeedbackSyncState.synced.name]),
+            ))
+            .write(
+              FeedbackOutboxEntriesCompanion(
+                syncState: Value(GaussFeedbackSyncState.syncing.name),
+                syncAttempts: Value(entry.syncAttempts + 1),
+                lastSyncError: const Value(null),
+                updatedAt: Value(updatedAt.toUtc().millisecondsSinceEpoch),
+              ),
+            );
+    if (changed != 1) {
+      throw StateError('Feedback ${entry.id} is no longer available to sync.');
+    }
+  }
+
+  Future<void> markSynced(String id, {required DateTime updatedAt}) =>
+      (database.update(
+        database.feedbackOutboxEntries,
+      )..where((row) => row.id.equals(id))).write(
+        FeedbackOutboxEntriesCompanion(
+          syncState: Value(GaussFeedbackSyncState.synced.name),
+          lastSyncError: const Value(null),
+          updatedAt: Value(updatedAt.toUtc().millisecondsSinceEpoch),
+        ),
+      );
+
+  Future<void> markFailed(
+    String id, {
+    required DateTime updatedAt,
+    required String message,
+  }) =>
+      (database.update(
+        database.feedbackOutboxEntries,
+      )..where((row) => row.id.equals(id))).write(
+        FeedbackOutboxEntriesCompanion(
+          syncState: Value(GaussFeedbackSyncState.failed.name),
+          lastSyncError: Value(
+            GaussFeedbackRedactor.redactAndLimit(message, 240),
+          ),
+          updatedAt: Value(updatedAt.toUtc().millisecondsSinceEpoch),
+        ),
+      );
+
+  /// Freezes metadata and screenshot bytes in one SQLite read transaction.
+  /// Export therefore cannot mix two different outbox states.
+  Future<GaussFeedbackExportSnapshot> createExportSnapshot() =>
+      database.transaction(() async {
+        final entries = await readEntries();
+        final screenshots = <String, Uint8List>{};
+        for (final entry in entries) {
+          if (!entry.hasScreenshot) continue;
+          final bytes = await readScreenshot(entry);
+          if (bytes == null) {
+            throw FormatException(
+              'Feedback ${entry.id} has an unreadable screenshot.',
+            );
+          }
+          screenshots[entry.id] = Uint8List.fromList(bytes);
+        }
+        return GaussFeedbackExportSnapshot(
+          entries: List.unmodifiable(entries),
+          screenshots: Map.unmodifiable(screenshots),
+        );
+      });
 
   GaussFeedbackEntry _entryFromTypedResult(TypedResult row) {
     final table = database.feedbackOutboxEntries;

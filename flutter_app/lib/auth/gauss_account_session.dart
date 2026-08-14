@@ -9,6 +9,9 @@ import '../data/content_release_store.dart';
 import '../data/local/gauss_database.dart';
 import '../data/progress_repository.dart';
 import '../data/question_bank_repository.dart';
+import '../feedback/feedback_controller.dart';
+import '../feedback/feedback_repository.dart';
+import '../feedback/feedback_sync.dart';
 import '../state/gauss_controller.dart';
 
 /// Owns every account-scoped runtime object as one disposable boundary.
@@ -65,10 +68,22 @@ class GaussAccountSession {
           return QuestionBankRepository(bundle: contentSnapshot!.bundle);
         })();
     onOpeningPhase?.call('Opening your private orbit…');
+    final feedbackRepository = GaussFeedbackRepository(database);
+    final feedback = GaussFeedbackController(
+      feedbackRepository,
+      syncTarget: contentClient == null
+          ? null
+          : SupabaseGaussFeedbackSyncTarget(
+              client: contentClient,
+              userId: userId,
+              contentReleaseId: contentSnapshot?.releaseId,
+            ),
+    );
     final controller = GaussController(
       questionBank,
       ProgressRepository(database),
       backups: backups,
+      feedback: feedback,
     );
     final session = GaussAccountSession._(
       userId: userId,
