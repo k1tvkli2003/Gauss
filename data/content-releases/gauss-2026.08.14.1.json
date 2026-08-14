@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "release_id": "gauss-2026.08.14.1",
+  "channel": "android-stable",
+  "state": "published",
+  "published_at": "2026-08-14T02:05:28.686415Z",
+  "minimum_app_build": 90,
+  "question_count": 3672,
+  "topic_count": 29,
+  "new_revision_count": 3672,
+  "reused_revision_count": 0,
+  "corpus_sha256": "af918908bd86f219ef27865f593eedb152359c0e9825a1319a9c3723badb2966",
+  "artifact_sha256": {
+    "certification_runtime": "293cdd9c0857e95d271f850766989ca11fbb22246039f6b3fa17bc5082783b41",
+    "five_question_plan": "319e0d8238cc8d8c9e0eff841ec823ef337610eaba96d5c865db42d08451b23e",
+    "media_manifest": "b3e7e4d3a58fe99e24ac0d83bb3f535da9983324b31aca76bd31d12a4a92a02f",
+    "question_index": "82baf2b6fa44d323f2ce1c9c5833f1d784c937a301eb14041754f0728b6b79e3"
+  }
+}

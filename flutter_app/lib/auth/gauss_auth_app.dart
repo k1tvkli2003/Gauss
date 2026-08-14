@@ -9,9 +9,10 @@ import 'gauss_auth_controller.dart';
 import 'gauss_auth_screen.dart';
 
 class GaussAuthApp extends StatefulWidget {
-  const GaussAuthApp({required this.auth, super.key});
+  const GaussAuthApp({required this.auth, required this.appBuild, super.key});
 
   final GaussAuthController auth;
+  final int appBuild;
 
   @override
   State<GaussAuthApp> createState() => _GaussAuthAppState();
@@ -23,6 +24,7 @@ class _GaussAuthAppState extends State<GaussAuthApp> {
   Object? _openError;
   Future<void> _closeFuture = Future<void>.value();
   bool _closingSession = false;
+  String _openingMessage = 'Opening your private orbit…';
 
   @override
   void initState() {
@@ -63,6 +65,7 @@ class _GaussAuthAppState extends State<GaussAuthApp> {
     }
     _openingUserId = userId;
     _openError = null;
+    _openingMessage = 'Opening your private orbit…';
     setState(() {});
     unawaited(_openSession(userId));
   }
@@ -74,7 +77,16 @@ class _GaussAuthAppState extends State<GaussAuthApp> {
     _session = null;
     if (previous != null) await previous.dispose();
     try {
-      final next = await GaussAccountSession.open(userId);
+      final next = await GaussAccountSession.open(
+        userId,
+        contentClient: widget.auth.client,
+        appBuild: widget.appBuild,
+        onOpeningPhase: (message) {
+          if (!mounted || widget.auth.user?.id != userId) return;
+          _openingMessage = message;
+          setState(() {});
+        },
+      );
       if (!mounted || widget.auth.user?.id != userId) {
         await next.dispose();
         return;
@@ -135,7 +147,7 @@ class _GaussAuthAppState extends State<GaussAuthApp> {
       }
       final session = _session;
       if (session == null) {
-        return const _AccountOpeningApp();
+        return _AccountOpeningApp(message: _openingMessage);
       }
       return GaussApp(
         key: ValueKey('gauss-account-${session.storageKey}'),
@@ -148,9 +160,13 @@ class _GaussAuthAppState extends State<GaussAuthApp> {
 }
 
 class _AccountOpeningApp extends StatelessWidget {
-  const _AccountOpeningApp({this.closing = false});
+  const _AccountOpeningApp({
+    this.closing = false,
+    this.message = 'Opening your private orbit…',
+  });
 
   final bool closing;
+  final String message;
 
   @override
   Widget build(BuildContext context) => MaterialApp(
@@ -164,11 +180,7 @@ class _AccountOpeningApp extends StatelessWidget {
           children: [
             const CircularProgressIndicator(),
             const SizedBox(height: 18),
-            Text(
-              closing
-                  ? 'Securing the previous orbit…'
-                  : 'Opening your private orbit…',
-            ),
+            Text(closing ? 'Securing the previous orbit…' : message),
           ],
         ),
       ),

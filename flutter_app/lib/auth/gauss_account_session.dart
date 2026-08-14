@@ -2,8 +2,10 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../data/backup_service.dart';
+import '../data/content_release_store.dart';
 import '../data/local/gauss_database.dart';
 import '../data/progress_repository.dart';
 import '../data/question_bank_repository.dart';
@@ -19,12 +21,14 @@ class GaussAccountSession {
     required this.storageKey,
     required this.database,
     required this.controller,
+    required this.contentSnapshot,
   });
 
   final String userId;
   final String storageKey;
   final GaussDatabase database;
   final GaussController controller;
+  final GaussContentSnapshot? contentSnapshot;
   bool _disposed = false;
 
   static String storageKeyFor(String userId) => sha256
@@ -36,6 +40,9 @@ class GaussAccountSession {
     String userId, {
     @visibleForTesting GaussDatabase? databaseOverride,
     @visibleForTesting QuestionBankRepository? questionBankOverride,
+    SupabaseClient? contentClient,
+    int appBuild = 1,
+    GaussContentPhase? onOpeningPhase,
   }) async {
     final storageKey = storageKeyFor(userId);
     final backups = BackupService(accountStorageKey: storageKey);
@@ -46,8 +53,20 @@ class GaussAccountSession {
     }
     final database =
         databaseOverride ?? GaussDatabase.defaults(name: backups.databaseName);
+    GaussContentSnapshot? contentSnapshot;
+    final questionBank =
+        questionBankOverride ??
+        await (() async {
+          if (contentClient == null) return QuestionBankRepository();
+          contentSnapshot = await GaussContentReleaseStore(
+            api: SupabaseGaussContentApi(contentClient),
+            appBuild: appBuild,
+          ).open(onPhase: onOpeningPhase);
+          return QuestionBankRepository(bundle: contentSnapshot!.bundle);
+        })();
+    onOpeningPhase?.call('Opening your private orbit…');
     final controller = GaussController(
-      questionBankOverride ?? QuestionBankRepository(),
+      questionBank,
       ProgressRepository(database),
       backups: backups,
     );
@@ -56,6 +75,7 @@ class GaussAccountSession {
       storageKey: storageKey,
       database: database,
       controller: controller,
+      contentSnapshot: contentSnapshot,
     );
     try {
       await controller.initialize();
