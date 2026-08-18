@@ -212,6 +212,30 @@ and landscape first-class Android targets rather than enlarged phone layouts.
   The final tablet and 320dp/200% feedback cycles produced no Flutter,
   RenderFlex, FATAL, or native export-channel error.
 
+## Physical-device Auth recovery — 2026-08-18
+
+- Galaxy A73 runtime evidence showed that registration reached the deployed
+  `gauss-signup` boundary and received HTTP 409; this was not an offline or
+  missing-Supabase failure. A fresh public-key health probe returned GoTrue 200,
+  and a non-mutating invalid-input probe reached the function and returned its
+  expected structured 400 response.
+- Registration now treats 409 as a recoverable acknowledgement race/existing
+  account: it privately attempts password sign-in with the credential the owner
+  already supplied, then opens the owner-scoped profile. A wrong credential
+  moves the same form to Sign in and exposes password recovery instead of
+  leaving the owner in a registration dead end. Other function failures remain
+  fail-closed and never trigger a password request.
+- The Supabase transport is isolated behind `GaussAuthGateway`, keeping one
+  controller state owner and allowing deterministic error-path regression
+  coverage without touching live accounts.
+- Focused Auth/controller verification passed 10/10; focused analysis reported
+  no issues. Production-entry debug APK build 142 is 250,712,238 bytes with
+  SHA-256
+  `f99b71c44687c7f46f7d96736ab7b740d65b798312b9532f3bcf27add63dd7bc`.
+  It updated `com.gauss.app.debug` in place on the physical Galaxy A73, launched
+  as the focused Activity, and emitted no immediate Flutter or Android fatal.
+  The signed personal package and all app data remained untouched.
+
 ## Remaining release gates
 
 1. Exercise the authenticated manifest/delta path through the real Android app,
