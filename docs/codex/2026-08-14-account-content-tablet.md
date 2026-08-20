@@ -236,6 +236,29 @@ and landscape first-class Android targets rather than enlarged phone layouts.
   as the focused Activity, and emitted no immediate Flutter or Android fatal.
   The signed personal package and all app data remained untouched.
 
+## Physical-device Auth identity repair — 2026-08-20
+
+- The credentials already visible in the Galaxy A73 Auth form reproduced the
+  contradiction precisely: registration reported an unavailable account while
+  password sign-in returned `invalid_credentials`. A direct Auth request also
+  returned 400, so this was not a Flutter-only message or connectivity fault.
+- The existing Auth row had a primary email and accepted a password update, but
+  it lacked the corresponding email-provider identity required by password
+  sign-in. The existing user was repaired in place through the server-only
+  Admin API by supplying the same email, password, and confirmation state in
+  one update. The user was not deleted or recreated, so its stable ID and any
+  owner-bound records were preserved.
+- Live proof returned repair 200, password Auth 200, a non-empty session, and
+  `gauss_ensure_profile` 200. The temporary repair function was protected by a
+  one-time high-entropy secret, then both the remote function and secret were
+  deleted; a final remote inventory reported both absent. No elevated key or
+  repair source remains in the Android app or repository.
+- Build 142 then signed in on the physical Galaxy A73 and reached the first-run
+  learning-path onboarding. After a force-stop and launcher restart it returned
+  to onboarding rather than Auth (`AUTH_SCREEN_PRESENT=False`), proving native
+  session persistence across process death. The signed personal package and
+  its data were not replaced.
+
 ## Remaining release gates
 
 1. Exercise the authenticated manifest/delta path through the real Android app,
