@@ -10,3 +10,4 @@
 | `2026-07-23-gauss-corpus-certification-and-stylus-hardening` | Gauss corpus certification and stylus hardening | active | 2026-07-23 | [Open](2026-07-23-gauss-corpus-certification-and-stylus-hardening/00-brief.md) |
 | `2026-08-14-readyuse-feedback-outbox` | Account-local feedback sync and private Android ZIP export | complete | 2026-08-14 | [Open](2026-08-14-readyuse-feedback-outbox.md) |
 | `2026-08-14-account-content-tablet` | Account isolation, versioned question content, and dedicated Android tablet gate | active | 2026-08-14 | [Open](2026-08-14-account-content-tablet.md) |
+| `2026-08-21-gauss-android-ui-ux-perfection-and-performance` | Gauss Android UI UX perfection and performance | active | 2026-08-21 | [Open](2026-08-21-gauss-android-ui-ux-perfection-and-performance/00-brief.md) |
