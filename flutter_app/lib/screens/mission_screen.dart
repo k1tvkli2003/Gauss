@@ -1587,6 +1587,7 @@ class _AnswerChoice extends StatelessWidget {
         ? TheoremChoiceTone.selected
         : TheoremChoiceTone.neutral;
     return Semantics(
+      key: ValueKey('mission-choice-$choice'),
       button: true,
       enabled: onTap != null,
       selected: selected,
