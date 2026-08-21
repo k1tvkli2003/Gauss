@@ -36,13 +36,19 @@ Future<void> main() async {
               )
               as Map<String, dynamic>;
       report['environment'] = environment;
+      final isLandscape =
+          (environment['physical_width'] as num) >
+          (environment['physical_height'] as num);
+      final mapMissionActionKey = isLandscape
+          ? 'map-study-inspector-action'
+          : 'map-study-dock-action';
       await File(
         '${outputDirectory.path}${Platform.pathSeparator}map.png',
       ).writeAsBytes(await driver.screenshot());
       report['semantics'] = <String, dynamic>{
         'map_mission_action': await _semanticsIdOrNull(
           driver,
-          find.byValueKey('map-study-dock-action'),
+          find.byValueKey(mapMissionActionKey),
         ),
         'selected_map_node': await _semanticsIdOrNull(
           driver,
@@ -84,7 +90,7 @@ Future<void> main() async {
         'map_to_mission',
         () async {
           await driver.tap(
-            find.byValueKey('map-study-dock-action'),
+            find.byValueKey(mapMissionActionKey),
             timeout: _defaultTimeout,
           );
           await driver.waitFor(

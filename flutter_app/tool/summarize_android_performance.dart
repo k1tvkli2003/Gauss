@@ -158,7 +158,8 @@ Map<String, dynamic> _percentileSummary(
 
 Map<String, dynamic> _distribution(List<num> values) {
   final sorted = values.toList(growable: false)..sort();
-  final mean = sorted.reduce((left, right) => left + right) / sorted.length;
+  final total = sorted.fold<num>(0, (sum, value) => sum + value);
+  final mean = total / sorted.length;
   return <String, dynamic>{
     'min': sorted.first,
     'median': _percentile(sorted, .50),
