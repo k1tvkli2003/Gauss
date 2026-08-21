@@ -1,7 +1,7 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-21T21:06:32+03:30
+- Last updated: 2026-08-21T23:31:00+03:30
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
 - Current phase: P2 — Map scroll/render engine
@@ -10,7 +10,7 @@
 
 ## Current State
 
-P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد. P1 نیز جهت پذیرفته‌شدهٔ Orrery/Astral را به token ramp، production layer manifest، repaint ownership، responsive occupancy، safe-area contract، state matrix، Motion Bible و acceptance positions قابل‌آزمون تبدیل کرد. P2 اکنون علت اصلی benchmark یعنی stage یک‌تکه، scroll-driven rebuild و raster tail سنگین Map را بازسازی می‌کند.
+P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد. P1 نیز جهت پذیرفته‌شدهٔ Orrery/Astral را به token ramp، production layer manifest، repaint ownership، responsive occupancy، safe-area contract، state matrix، Motion Bible و acceptance positions قابل‌آزمون تبدیل کرد. در P2، stage یک‌تکه و scroll-driven `setState` با sliver bandهای lazy، geometry LRU، painter ownership محدود و decode bounded جایگزین شده است. paired profile در همان پنجرهٔ GPU، بهبود `58%` در UI p95 و `51%` در raster p95 را در برابر engine قدیمی نشان داد؛ پنج run نهایی revision ثابت هنوز gate باقی‌مانده است.
 
 ## Decisions
 
@@ -29,10 +29,12 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 | 2026-08-21 | raw timelineهای چندمگابایتی در Git ذخیره نشوند | summary، screenshot و metadata کافی و raw evidence بازتولیدپذیر است | evidence hygiene |
 | 2026-08-21 | raster فقط decoration و live truth همیشه semantic بماند | reference نباید progress، text، ID یا control را به تصویر تخت تبدیل کند | `07-ui-system-and-production-manifest.md` |
 | 2026-08-21 | Map route به viewport band با geometry cache مهاجرت کند | baseline raster-bound و full-stage invalidation است | P1 manifest + P0 benchmark |
+| 2026-08-21 | blur زنده فقط در footprint واقعی header/footer مجاز باشد؛ full-width opaque backing ممنوع بماند | chrome باید بدون محوکردن Map حس شیشه‌ای بدهد و raster tail را منفجر نکند | user correction + paired profile |
+| 2026-08-21 | node و spiral فعلی در P3 polish نشوند و زبان فرمشان از پایه بازسازی شود | route مکانیکی، nodeهای تکراری و اتصال خشک کیفیت direction پذیرفته‌شده را نمی‌رسانند | user visual finding + runtime capture |
 
 ## Blockers
 
-- blocker اجرایی برای P1 وجود ندارد.
+- blocker اجرایی وجود ندارد؛ P2 تا پنج run نهایی revision ثابت هنوز phase-complete نیست.
 - Xiaomi Focus Pen فیزیکی در این baseline در دسترس نبود؛ stylus contract روی Android با `PointerDeviceKind.stylus` اثبات شده، اما latency و palm rejection سخت‌افزاری تا P7 یک physical-device gate باقی می‌ماند.
 
 ## Done
@@ -46,6 +48,8 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 - tablet portrait و landscape واقعی روی `1280×800dp`/`800×1280dp` ثبت شدند؛ هر دو journey نهایی پاس شدند و تنظیمات AVD به `1080×2400 @ 420dpi` برگشت.
 - corpus gate با `3672` source-bound record و asset inventory با `3461` فایل بدون mutation ثبت شد.
 - P1 Design DNA و precision ledger به توکن‌های Flutter تبدیل شد؛ contrast، ramp، breakpoints، manifests و acceptance matrix با 32 regression test پاس شدند.
+- P2 geometry در bandهای bounded و lazy partition شد؛ scroll listener سراسری، moving blurهای میانی و RepaintBoundaryهای تو‌در‌تو حذف شدند و path/node semantics حفظ شد.
+- paired baseline موقت روی commit `08a7817` ثبت شد: engine تازه با footer blur محدود در یک پنجرهٔ میزبان، Map UI p95 را از `13.731ms` به `5.720ms` و raster p95 را از `49.598ms` به `24.319ms` رساند؛ worktree از ثبت Git خارج شد.
 
 ## Remaining
 

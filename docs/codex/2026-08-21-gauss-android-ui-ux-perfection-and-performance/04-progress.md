@@ -14,6 +14,9 @@
 | 2026-08-21T20:23:24+03:30 | phase-complete | گیت P0 پاس شد؛ preservation، baseline، screenshots، semantics و aggregate metrics قفل شدند. P1 آغاز شد. | `05-verification.md` |
 | 2026-08-21T21:06:32+03:30 | phase-complete | P1 به‌صورت اجرایی بسته شد: token ramp، manifest لایه‌ها، geometry/occupancy، state matrix، Motion Bible و screenshot positions هم در docs و هم در Dart ثبت و تست شدند. P2 آغاز شد. | `beb56d6` + 32/32 tests |
 | 2026-08-21T21:43:00+03:30 | active | Map stage یک‌تکه به `CustomScrollView` و bandهای lazy مهاجرت کرد؛ geometry با LRU cache، path repaint با band ownership، raster decode bounded و moving blur حذف شد. | focused analyze + 48/48 tests؛ profile comparison بعدی |
+| 2026-08-21T22:17:00+03:30 | active | اولین پنج run engine، بهبود محدود raster p95 ولی regression median/missed و هم‌زمان drift در journeyهای دست‌نخورده را آشکار کرد؛ نتیجه به‌عنوان pass پذیرفته نشد. | `performance-p2-engine-2b0864d` |
+| 2026-08-21T23:06:00+03:30 | active | viewport تمام‌قد، hit shield پایین و cache bounded ساخته شد؛ 33/33 regression پاس شد، اما cold-AVD پنج‌باره drift شدید GPU و یک UI outlier داشت و باز هم pass اعلام نشد. | `6bb422f` + `performance-p2-engine-v2-6bb422f` |
+| 2026-08-21T23:31:00+03:30 | active | blurهای میانی و repaint layerهای تو‌در‌تو حذف شدند؛ footer شفاف فقط در footprint خودش blur محدود دارد. paired baseline همان لحظه بهبود 58% UI p95 و 51% raster p95 را ثابت کرد. | pilot current `5.720/24.319ms` در برابر `08a7817` برابر `13.731/49.598ms` |
 
 ## انجام‌شده تا اینجا
 
@@ -22,7 +25,8 @@
 - رفرنس‌های پذیرفته‌شده و runtime baseline از هم تفکیک و ثبت شدند.
 - پیشرفت Goal با وزن گیت‌ها تعریف شد تا compile یا حجم کد به‌اشتباه completion حساب نشود.
 - P0 و P1 کامل شدند: کل Goal اکنون 15% است؛ این درصد فقط با عبور گیت بالا رفته است.
+- finding بصری P3 قفل شد: spiral و nodeهای فعلی خشک، تکراری و مکانیکی‌اند و به‌جای polish سطحی باید با زبان مسیر/عمق/حالت تازه بازسازی شوند.
 
 ## مرحله بعد
 
-- P2: تبدیل Map stage یک‌تکه به engine banded/lazy با geometry cache، repaint محدود و benchmark هم‌شرایط.
+- P2: commit نسخهٔ optimized layer/blur و اجرای پنج run نهایی revision-bound؛ سپس P3 بازسازی بنیادی spiral/node/HUD.

@@ -3,8 +3,8 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-21T21:06:32+03:30
-- Scope: P0 baseline + P1 executable UI system/manifest
+- Last verified: 2026-08-21T23:31:00+03:30
+- Scope: P0 baseline + P1 executable UI system/manifest + P2 implementation/pilot evidence
 
 ## بررسی‌ها
 
@@ -36,6 +36,11 @@
 | P2 engine static gate | focused analyze روی Map/geometry/test | passed | No issues found |
 | P2 Map regressions | geometry، dock، Android، HUD، motion و Study suites | passed | 48/48؛ lazy off-screen chapter با scroll دوباره semantic/live می‌شود |
 | P2 geometry/cache unit gate | deterministic band coverage، continuity، LRU و text buckets | passed | 3/3؛ node/header/landmark ownership بدون duplication |
+| P2 bounded viewport regression | full route canvas + bottom hit shield + 520–900px cache | passed | analyzer پاک + 33/33 Map/Android tests |
+| P2 first five-run comparison | engine `2b0864d` در برابر baseline قدیمی | failed as phase gate | raster p95 فقط 7.1% بهتر ولی median/missed بدتر؛ نتیجه پذیرفته نشد |
+| P2 cold-AVD five-run comparison | engine `6bb422f` پس از reboot | inconclusive as absolute baseline | untouched Mission journeys نیز 2–3× کند شدند؛ host/emulator GPU drift ثبت شد |
+| P2 paired same-window baseline | current optimized layers در برابر detached `08a7817` | passed pilot | Map UI p95 `5.720` vs `13.731ms`؛ raster p95 `24.319` vs `49.598ms`؛ memory `168.48` vs `175.94MiB` |
+| P2 glass policy | runtime profile + screenshot inspection | passed pilot | moving-card blur حذف؛ footer blur فقط در bounding box خودش، بدون full-width backing |
 
 ## هنوز اجرا نشده
 
@@ -56,3 +61,4 @@
 - raw Timelineها محلی و بازتولیدپذیر نگه داشته می‌شوند؛ Git فقط aggregate، compact summaries، metadata و visual samples را حمل می‌کند.
 - P1 عمداً composition screenها را تغییر نداد؛ این قرارداد در P2–P6 اجرا و با captureهای ماتریس بسته می‌شود.
 - P2 هنوز phase-complete نیست؛ benchmark پنج‌بارهٔ هم‌شرایط و runtime screenshot/semantics بعد از commit engine لازم است.
+- paired pilot variance محیط را جدا کرد، ولی پنج run نهایی باید روی revision تمیزِ optimized layer/blur ثبت شود؛ pilot تک-run جای آن gate را نمی‌گیرد.

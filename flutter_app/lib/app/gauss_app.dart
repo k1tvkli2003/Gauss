@@ -684,7 +684,7 @@ class _GaussFloatingNavigation extends StatelessWidget {
         key: const ValueKey('gauss-floating-navigation-dock'),
         borderRadius: BorderRadius.circular(22),
         child: BackdropFilter(
-          filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+          filter: ui.ImageFilter.blur(sigmaX: 6, sigmaY: 6),
           child: DecoratedBox(
             decoration: BoxDecoration(
               gradient: LinearGradient(

@@ -2373,30 +2373,26 @@ class _StudyPathBand extends StatelessWidget {
       children: [
         Positioned.fill(
           child: ExcludeSemantics(
-            child: RepaintBoundary(
-              child: CustomPaint(
-                painter: _StageInstrumentPainter(
-                  current: geometry.positions[currentIndex],
-                  nodeSize: geometry.nodeSize,
-                  bandTop: band.top,
-                  sceneHeight: geometry.height,
-                ),
+            child: CustomPaint(
+              painter: _StageInstrumentPainter(
+                current: geometry.positions[currentIndex],
+                nodeSize: geometry.nodeSize,
+                bandTop: band.top,
+                sceneHeight: geometry.height,
               ),
             ),
           ),
         ),
         Positioned.fill(
           child: ExcludeSemantics(
-            child: RepaintBoundary(
-              child: CustomPaint(
-                painter: _ContinuousPathPainter(
-                  positions: geometry.positions,
-                  segmentIndices: band.segmentIndices,
-                  completed: completed,
-                  completedSignature: completedSignature,
-                  currentIndex: currentIndex,
-                  bandTop: band.top,
-                ),
+            child: CustomPaint(
+              painter: _ContinuousPathPainter(
+                positions: geometry.positions,
+                segmentIndices: band.segmentIndices,
+                completed: completed,
+                completedSignature: completedSignature,
+                currentIndex: currentIndex,
+                bandTop: band.top,
               ),
             ),
           ),
@@ -3517,101 +3513,105 @@ class _StudyDock extends StatelessWidget {
           ),
         );
 
-        Widget copy() => ClipRRect(
+        Widget copy() => DecoratedBox(
           key: const ValueKey('map-study-dock-copy'),
-          borderRadius: BorderRadius.circular(18),
-          child: BackdropFilter(
-            filter: ui.ImageFilter.blur(sigmaX: 9, sigmaY: 9),
-            child: DecoratedBox(
-              key: const ValueKey('map-study-dock-plaque'),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    GaussColors.deepInk.withValues(alpha: .48),
-                    GaussColors.ink.withValues(alpha: .62),
-                  ],
-                ),
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(
-                  color: GaussColors.brassLight.withValues(alpha: .2),
-                ),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                GaussColors.deepInk.withValues(alpha: .88),
+                GaussColors.ink.withValues(alpha: .93),
+              ],
+            ),
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(
+              color: GaussColors.brassLight.withValues(alpha: .2),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: GaussColors.abyss.withValues(alpha: .46),
+                blurRadius: 18,
+                spreadRadius: -7,
+                offset: const Offset(0, 8),
               ),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(9, 7, 9, 8),
-                child: ExcludeSemantics(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Wrap(
-                        spacing: GaussSpacing.space8,
-                        crossAxisAlignment: WrapCrossAlignment.center,
-                        alignment: WrapAlignment.center,
-                        children: [
-                          Container(
-                            width: 6,
-                            height: 6,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: isComplete
-                                  ? GaussColors.signalBright
-                                  : isCurrent
-                                  ? GaussColors.brassLight
-                                  : GaussColors.fog,
-                              boxShadow: [
-                                BoxShadow(
-                                  color:
-                                      (isComplete
-                                              ? GaussColors.signalBright
-                                              : GaussColors.brassLight)
-                                          .withValues(alpha: .3),
-                                  blurRadius: 8,
-                                ),
-                              ],
-                            ),
+            ],
+          ),
+          child: KeyedSubtree(
+            key: const ValueKey('map-study-dock-plaque'),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(9, 7, 9, 8),
+              child: ExcludeSemantics(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Wrap(
+                      spacing: GaussSpacing.space8,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      alignment: WrapAlignment.center,
+                      children: [
+                        Container(
+                          width: 6,
+                          height: 6,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: isComplete
+                                ? GaussColors.signalBright
+                                : isCurrent
+                                ? GaussColors.brassLight
+                                : GaussColors.fog,
+                            boxShadow: [
+                              BoxShadow(
+                                color:
+                                    (isComplete
+                                            ? GaussColors.signalBright
+                                            : GaussColors.brassLight)
+                                        .withValues(alpha: .3),
+                                blurRadius: 8,
+                              ),
+                            ],
                           ),
-                          Text(
-                            visualStatus,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              color: GaussColors.brassLight,
-                              fontSize: 8.5,
-                              fontWeight: FontWeight.w900,
-                              letterSpacing: .72,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 3),
-                      Text(
-                        studyLabel,
-                        textAlign: TextAlign.center,
-                        softWrap: true,
-                        style: const TextStyle(
-                          color: GaussColors.ivory,
-                          fontSize: 12.5,
-                          fontWeight: FontWeight.w900,
-                          height: 1.18,
                         ),
-                      ),
-                      if (!accessible) ...[
-                        const SizedBox(height: 2),
                         Text(
-                          node.topic.label,
+                          visualStatus,
                           textAlign: TextAlign.center,
-                          softWrap: true,
                           style: const TextStyle(
-                            color: GaussColors.fog,
-                            fontSize: 9,
-                            fontWeight: FontWeight.w800,
-                            height: 1.18,
+                            color: GaussColors.brassLight,
+                            fontSize: 8.5,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: .72,
                           ),
                         ),
                       ],
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      studyLabel,
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                      style: const TextStyle(
+                        color: GaussColors.ivory,
+                        fontSize: 12.5,
+                        fontWeight: FontWeight.w900,
+                        height: 1.18,
+                      ),
+                    ),
+                    if (!accessible) ...[
+                      const SizedBox(height: 2),
+                      Text(
+                        node.topic.label,
+                        textAlign: TextAlign.center,
+                        softWrap: true,
+                        style: const TextStyle(
+                          color: GaussColors.fog,
+                          fontSize: 9,
+                          fontWeight: FontWeight.w800,
+                          height: 1.18,
+                        ),
+                      ),
                     ],
-                  ),
+                  ],
                 ),
               ),
             ),
@@ -4147,26 +4147,27 @@ class _GlassFrame extends StatelessWidget {
   final Color? backgroundColor;
 
   @override
-  Widget build(BuildContext context) => ClipRRect(
-    borderRadius: BorderRadius.circular(radius),
-    child: BackdropFilter(
-      filter: ui.ImageFilter.blur(sigmaX: 14, sigmaY: 14),
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          color: backgroundColor ?? GaussColors.ink.withValues(alpha: .8),
-          borderRadius: BorderRadius.circular(radius),
-          border: Border.all(color: GaussColors.brass.withValues(alpha: .28)),
-          boxShadow: const [
-            BoxShadow(
-              color: Color(0x8A000000),
-              blurRadius: 24,
-              offset: Offset(0, 10),
-            ),
-          ],
+  Widget build(BuildContext context) => DecoratedBox(
+    decoration: BoxDecoration(
+      color: backgroundColor,
+      gradient: backgroundColor == null
+          ? const LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xF20A171C), Color(0xF50D2025)],
+            )
+          : null,
+      borderRadius: BorderRadius.circular(radius),
+      border: Border.all(color: GaussColors.brass.withValues(alpha: .28)),
+      boxShadow: const [
+        BoxShadow(
+          color: Color(0x8A000000),
+          blurRadius: 24,
+          offset: Offset(0, 10),
         ),
-        child: Padding(padding: padding, child: child),
-      ),
+      ],
     ),
+    child: Padding(padding: padding, child: child),
   );
 }
 

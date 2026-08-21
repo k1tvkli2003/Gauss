@@ -137,7 +137,7 @@ Assets: `orrery_atmosphere_portrait.png` فقط background؛ `theorem_engine.png
 - Map route به bandهای bounded شکسته می‌شود؛ scroll offset فقط viewport window/parallax کوچک را invalidate می‌کند.
 - node shell، progress، label و hit target ownership جدا دارند؛ تغییر selected کل stage را repaint نمی‌کند.
 - ink stroke فقط scratch painter را repaint می‌کند؛ manuscript parent فقط empty↔nonempty، clear/restore و tool-mode boundary را می‌بیند.
-- blur روی moving route/ink/answers ممنوع است. blur ثابت chrome نیز فقط پس از profile و در سطح کوچک مجاز است.
+- blur روی moving route/ink/answers و overlayهای میانی ممنوع است. header/footer می‌توانند فقط داخل bounding box واقعی خودشان blur شفاف و profile‌شده داشته باشند؛ full-width opaque backing یا نوار غیرشفاف پشت chrome ممنوع است.
 
 ## 6. State matrix
 
