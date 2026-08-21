@@ -241,4 +241,4 @@ Assets: `orrery_atmosphere_portrait.png` فقط background؛ `theorem_engine.png
 - [x] Motion Bible و acceptance positions تعریف شد.
 - [x] analyzer و focused tests پاس شدند (`32/32`).
 - [x] validator رسمی work-docs و `git diff --check` پاس شدند.
-- [ ] commit و push.
+- [x] commit `beb56d6` روی `main` به `origin/main` push شد.

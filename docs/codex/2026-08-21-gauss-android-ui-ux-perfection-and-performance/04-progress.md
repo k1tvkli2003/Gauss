@@ -12,7 +12,7 @@
 | 2026-08-21T19:48:00+03:30 | active | semantics، stylus synthesis، signed-package guard و profile-data cold/warm protocol سخت‌گیرانه شد. | `08a7817` |
 | 2026-08-21T20:16:00+03:30 | active | پنج run phone، tablet portrait و tablet landscape ثبت شدند؛ responsive CTA و Dart 3.12 summarizer اصلاح شد. | `798aa03` + `logs/performance-*` |
 | 2026-08-21T20:23:24+03:30 | phase-complete | گیت P0 پاس شد؛ preservation، baseline، screenshots، semantics و aggregate metrics قفل شدند. P1 آغاز شد. | `05-verification.md` |
-| 2026-08-21T21:06:32+03:30 | phase-complete | P1 به‌صورت اجرایی بسته شد: token ramp، manifest لایه‌ها، geometry/occupancy، state matrix، Motion Bible و screenshot positions هم در docs و هم در Dart ثبت و تست شدند. P2 آغاز شد. | `07-ui-system-and-production-manifest.md` + 32/32 tests |
+| 2026-08-21T21:06:32+03:30 | phase-complete | P1 به‌صورت اجرایی بسته شد: token ramp، manifest لایه‌ها، geometry/occupancy، state matrix، Motion Bible و screenshot positions هم در docs و هم در Dart ثبت و تست شدند. P2 آغاز شد. | `beb56d6` + 32/32 tests |
 
 ## انجام‌شده تا اینجا
 
