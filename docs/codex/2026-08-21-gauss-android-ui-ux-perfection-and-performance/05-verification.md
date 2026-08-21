@@ -33,6 +33,9 @@
 | P1 design-system tests | `flutter test --no-pub test/gauss_ui_system_test.dart` | passed | 6/6؛ ramp، occupancy، manifest، assets، contrast، motion |
 | P1 Android UI regression | همان run با `test/android_experience_test.dart` | passed | 26/26؛ مجموع P1 gate برابر 32/32 |
 | P1 production manifest | Dart spec + human-readable contract | passed | `gauss_experience_spec.dart` + `07-ui-system-and-production-manifest.md` |
+| P2 engine static gate | focused analyze روی Map/geometry/test | passed | No issues found |
+| P2 Map regressions | geometry، dock، Android، HUD، motion و Study suites | passed | 48/48؛ lazy off-screen chapter با scroll دوباره semantic/live می‌شود |
+| P2 geometry/cache unit gate | deterministic band coverage، continuity، LRU و text buckets | passed | 3/3؛ node/header/landmark ownership بدون duplication |
 
 ## هنوز اجرا نشده
 
@@ -52,3 +55,4 @@
 - emulator/SwiftShader raster p95 نمایندهٔ GPU گوشی نیست، اما برای before/after هم‌شرایط معتبر است.
 - raw Timelineها محلی و بازتولیدپذیر نگه داشته می‌شوند؛ Git فقط aggregate، compact summaries، metadata و visual samples را حمل می‌کند.
 - P1 عمداً composition screenها را تغییر نداد؛ این قرارداد در P2–P6 اجرا و با captureهای ماتریس بسته می‌شود.
+- P2 هنوز phase-complete نیست؛ benchmark پنج‌بارهٔ هم‌شرایط و runtime screenshot/semantics بعد از commit engine لازم است.

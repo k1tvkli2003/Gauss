@@ -842,7 +842,13 @@ void main() {
         findsOneWidget,
       );
       expect(find.byKey(const ValueKey('map-section-gate-1')), findsNothing);
-      expect(find.byKey(const ValueKey('map-section-gate-2')), findsOneWidget);
+      final nextChapter = find.byKey(const ValueKey('map-section-gate-2'));
+      expect(
+        nextChapter,
+        findsNothing,
+        reason:
+            'A distant chapter must remain lazy until the route approaches it.',
+      );
       expect(find.text('CHAPTER 1'), findsOneWidget);
       expect(
         find.descendant(
@@ -854,6 +860,11 @@ void main() {
       expect(find.text(firstNode.setLabel), findsNothing);
       expect(semanticLabel, isNot(startsWith('Session')));
       expect(semanticLabel, 'Finite & Infinite Sets');
+
+      final route = find.byKey(const ValueKey('map-study-path-scroll'));
+      await tester.dragUntilVisible(nextChapter, route, const Offset(0, -260));
+      await tester.pump();
+      expect(nextChapter, findsOneWidget);
       expect(tester.takeException(), isNull);
     },
   );

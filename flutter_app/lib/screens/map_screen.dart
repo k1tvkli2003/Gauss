@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart' show ScrollCacheExtent;
 import 'package:go_router/go_router.dart';
 
 import '../app/gauss_design_system.dart';
@@ -12,6 +13,7 @@ import '../state/gauss_controller.dart';
 import '../widgets/gauss_brand.dart';
 import '../widgets/gauss_state_panel.dart';
 import '../widgets/map_gamification_hud.dart';
+import '../widgets/map_path_geometry.dart';
 import '../widgets/orbital_action_control.dart';
 
 class MapScreen extends StatefulWidget {
@@ -326,7 +328,12 @@ class _AstronomicalBackdrop extends StatelessWidget {
         'assets/visual/map/orrery_atmosphere_portrait.png',
         fit: BoxFit.cover,
         alignment: Alignment.topCenter,
-        cacheWidth: 1400,
+        cacheWidth: _boundedRasterWidth(
+          context,
+          MediaQuery.sizeOf(context).width,
+          sourceWidth: 941,
+          minimum: 480,
+        ),
         filterQuality: FilterQuality.low,
       ),
       const DecoratedBox(
@@ -2184,16 +2191,9 @@ class _StudyPathStage extends StatefulWidget {
 
 class _StudyPathStageState extends State<_StudyPathStage> {
   final ScrollController _scrollController = ScrollController();
-  List<double> _nodeY = const [];
-  int _landmarkWindow = 0;
-  int _controlWindowEnd = -1;
+  final GaussPathGeometryCache _geometryCache = GaussPathGeometryCache();
+  GaussPathGeometry? _geometry;
   String? _positionedSectionId;
-
-  @override
-  void initState() {
-    super.initState();
-    _scrollController.addListener(_refreshLandmarkWindow);
-  }
 
   @override
   void didUpdateWidget(covariant _StudyPathStage oldWidget) {
@@ -2209,88 +2209,23 @@ class _StudyPathStageState extends State<_StudyPathStage> {
 
   @override
   void dispose() {
-    _scrollController.removeListener(_refreshLandmarkWindow);
     _scrollController.dispose();
     super.dispose();
   }
 
-  /// Keep the full route geometry alive, but defer the expensive decorative
-  /// landmark rasters until they are near the visible scroll window. The
-  /// buffer avoids visible pop-in while preventing distant map art from
-  /// competing with the first useful frame and its local question data.
-  void _refreshLandmarkWindow() {
-    if (!_scrollController.hasClients) return;
-    final nextWindow = (_scrollController.offset / 220).floor();
-    final safeBottom =
-        _scrollController.offset +
-        _scrollController.position.viewportDimension -
-        widget.bottomObstruction -
-        52;
-    final nextControlEnd = _nodeY.lastIndexWhere((y) => y <= safeBottom);
-    if (nextWindow == _landmarkWindow && nextControlEnd == _controlWindowEnd) {
-      return;
-    }
-    setState(() {
-      _landmarkWindow = nextWindow;
-      _controlWindowEnd = nextControlEnd;
-    });
-  }
-
-  bool _isLandmarkNearViewport(
-    _LandmarkGeometry landmark,
-    double viewportHeight,
-  ) {
-    final top = _scrollController.hasClients ? _scrollController.offset : 0.0;
-    final buffer = math.min(160.0, viewportHeight * .24);
-    return landmark.top + landmark.size >= top - buffer &&
-        landmark.top <= top + viewportHeight + buffer;
-  }
-
-  /// A five-question route can contain hundreds of real sessions. Keep its
-  /// geometry deterministic, but materialize only the instruments and labels
-  /// near the visible scroll window. The long path remains continuous without
-  /// making every distant session part of the first-frame widget cost.
-  bool _isNodeNearViewport(
-    Offset position,
-    double viewportHeight,
-    double nodeSize,
-  ) {
-    final top = _scrollController.hasClients ? _scrollController.offset : 0.0;
-    final buffer = math.max(360.0, viewportHeight * .85);
-    return position.dy + nodeSize >= top - buffer &&
-        position.dy - nodeSize <= top + viewportHeight + buffer;
-  }
-
-  /// Keep live instruments and their labels wholly above the floating mission
-  /// controls while allowing the route painter and astronomical stage to run
-  /// continuously behind the glass. This avoids both a dead footer band and
-  /// half-visible/tappable lesson nodes.
-  bool _isNodeClearOfOverlay(
-    Offset position,
-    double viewportHeight,
-    double nodeSize,
-  ) {
-    if (widget.bottomObstruction <= 0) return true;
-    final top = _scrollController.hasClients ? _scrollController.offset : 0.0;
-    final safeBottom = top + viewportHeight - widget.bottomObstruction;
-    // 52dp covers the clamped two-tier phone label while keeping the opening
-    // lesson visible in the 320dp / 200% text stress layout.
-    final nodeAndLabelExtent = math.max(nodeSize / 2, 52.0);
-    return position.dy + nodeAndLabelExtent <= safeBottom;
-  }
-
   void _positionNode(int index, {required bool animate}) {
-    if (!_scrollController.hasClients || _nodeY.isEmpty) return;
-    final safe = index.clamp(0, _nodeY.length - 1);
+    final geometry = _geometry;
+    if (!_scrollController.hasClients || geometry == null) return;
+    final safe = index.clamp(0, geometry.positions.length - 1);
     final visibleHeight = math.max(
       160.0,
-      _scrollController.position.viewportDimension - widget.bottomObstruction,
+      _scrollController.position.viewportDimension,
     );
     // A restored or explicitly targeted lesson belongs in the upper reading
     // third, not the mathematical center. This keeps its chapter threshold
     // and the next route segment visible together while the mission dock owns
     // the lower third of a compact Android viewport.
-    final target = (_nodeY[safe] - visibleHeight * .34).clamp(
+    final target = (geometry.positions[safe].dy - visibleHeight * .34).clamp(
       0.0,
       _scrollController.position.maxScrollExtent,
     );
@@ -2317,15 +2252,19 @@ class _StudyPathStageState extends State<_StudyPathStage> {
   @override
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
-      final geometry = _PathGeometry.build(
+      final geometry = _geometryCache.resolve(
+        sectionId: widget.section.id,
         width: constraints.maxWidth,
         nodes: widget.nodes,
         textScale: MediaQuery.textScalerOf(context).scale(1),
       );
-      final visibleTop = _scrollController.hasClients
-          ? _scrollController.offset
-          : 0.0;
-      _nodeY = geometry.positions.map((position) => position.dy).toList();
+      _geometry = geometry;
+      final completed = List<bool>.unmodifiable([
+        for (final node in widget.nodes)
+          widget.controller.study.shelf(node.key).reflected >=
+              node.questionCount,
+      ]);
+      final completedSignature = Object.hashAll(completed);
       if (_positionedSectionId != widget.section.id) {
         _positionedSectionId = widget.section.id;
         final sectionId = widget.section.id;
@@ -2339,296 +2278,171 @@ class _StudyPathStageState extends State<_StudyPathStage> {
           _positionNode(selectedIndex, animate: false);
         });
       }
-      return SingleChildScrollView(
+      final liveViewportHeight = math.max(
+        160.0,
+        constraints.maxHeight - widget.bottomObstruction,
+      );
+      return Stack(
         key: const ValueKey('map-study-path-scroll'),
-        controller: _scrollController,
-        padding: EdgeInsets.only(
-          bottom: widget.bottomObstruction + GaussSpacing.space32,
-        ),
-        child: SizedBox(
-          width: constraints.maxWidth,
-          height: geometry.height,
-          child: Stack(
-            clipBehavior: Clip.hardEdge,
-            children: [
-              Positioned.fill(
-                child: RepaintBoundary(
-                  child: CustomPaint(
-                    painter: _StageInstrumentPainter(
-                      current: geometry.positions[widget.currentIndex],
-                      nodeSize: geometry.nodeSize,
-                      visibleTop: visibleTop,
-                      visibleHeight: constraints.maxHeight,
-                    ),
-                  ),
-                ),
+        fit: StackFit.expand,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(bottom: widget.bottomObstruction),
+            child: CustomScrollView(
+              key: const ValueKey('map-study-path-scrollable'),
+              controller: _scrollController,
+              scrollCacheExtent: ScrollCacheExtent.pixels(
+                math.min(2400.0, math.max(1600.0, liveViewportHeight * 4)),
               ),
-              Positioned.fill(
-                child: CustomPaint(
-                  painter: _ContinuousPathPainter(
-                    positions: geometry.positions,
-                    completed: [
-                      for (final node in widget.nodes)
-                        widget.controller.study.shelf(node.key).reflected >=
-                            node.questionCount,
-                    ],
-                    currentIndex: widget.currentIndex,
-                    visibleTop: visibleTop,
-                    visibleHeight: constraints.maxHeight,
+              slivers: [
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (context, bandIndex) => _StudyPathBand(
+                      key: ValueKey('map-path-band-$bandIndex'),
+                      band: geometry.bands[bandIndex],
+                      geometry: geometry,
+                      controller: widget.controller,
+                      nodes: widget.nodes,
+                      currentIndex: widget.currentIndex,
+                      selectedKey: widget.selectedKey,
+                      completed: completed,
+                      completedSignature: completedSignature,
+                      stageWidth: constraints.maxWidth,
+                      onSelected: widget.onSelected,
+                    ),
+                    childCount: geometry.bands.length,
+                    addAutomaticKeepAlives: false,
+                    addRepaintBoundaries: true,
+                    addSemanticIndexes: false,
                   ),
                 ),
-              ),
-              for (final landmark in geometry.landmarks)
-                if (_isLandmarkNearViewport(landmark, constraints.maxHeight))
-                  _PathLandmark(landmark: landmark),
-              for (final header in geometry.unitHeaders)
-                Positioned(
-                  key: ValueKey('map-section-gate-${header.unitNumber}'),
-                  left: 12,
-                  right: 12,
-                  top: header.y,
-                  child: _SectionGate(
-                    topic: header.topic,
-                    unitNumber: header.unitNumber,
-                    reflected: widget.controller.study
-                        .topic(header.topic.key)
-                        .reflected,
-                  ),
+                const SliverToBoxAdapter(
+                  child: SizedBox(height: GaussSpacing.space32),
                 ),
-              for (var index = 0; index < widget.nodes.length; index++)
-                if (_isNodeNearViewport(
-                      geometry.positions[index],
-                      constraints.maxHeight,
-                      geometry.nodeSize,
-                    ) &&
-                    _isNodeClearOfOverlay(
-                      geometry.positions[index],
-                      constraints.maxHeight,
-                      geometry.nodeSize,
-                    ))
-                  Positioned(
-                    left: geometry.positions[index].dx - geometry.nodeSize / 2,
-                    top: geometry.positions[index].dy - geometry.nodeSize / 2,
-                    child: _StudyNode(
-                      node: widget.nodes[index],
-                      studyLabel: widget.controller.studySetLabel(
-                        widget.nodes[index],
-                      ),
-                      size: geometry.nodeSize,
-                      snapshot: widget.controller.study.shelf(
-                        widget.nodes[index].key,
-                      ),
-                      current: index == widget.currentIndex,
-                      selected: widget.nodes[index].key == widget.selectedKey,
-                      onPressed: () => widget.onSelected(widget.nodes[index]),
-                    ),
-                  ),
-              for (var index = 0; index < widget.nodes.length; index++)
-                if (_isNodeNearViewport(
-                      geometry.positions[index],
-                      constraints.maxHeight,
-                      geometry.nodeSize,
-                    ) &&
-                    _isNodeClearOfOverlay(
-                      geometry.positions[index],
-                      constraints.maxHeight,
-                      geometry.nodeSize,
-                    ))
-                  _PathNodeLabel(
-                    node: widget.nodes[index],
-                    studyLabel: widget.controller.studySetLabel(
-                      widget.nodes[index],
-                    ),
-                    snapshot: widget.controller.study.shelf(
-                      widget.nodes[index].key,
-                    ),
-                    position: geometry.positions[index],
-                    nodeSize: geometry.nodeSize,
-                    stageWidth: constraints.maxWidth,
-                    isCurrent: index == widget.currentIndex,
-                    selected: widget.nodes[index].key == widget.selectedKey,
-                  ),
-            ],
+              ],
+            ),
           ),
-        ),
+        ],
       );
     },
   );
 }
 
-class _PathGeometry {
-  const _PathGeometry({
-    required this.positions,
-    required this.unitHeaders,
-    required this.landmarks,
-    required this.nodeSize,
-    required this.height,
+class _StudyPathBand extends StatelessWidget {
+  const _StudyPathBand({
+    required this.band,
+    required this.geometry,
+    required this.controller,
+    required this.nodes,
+    required this.currentIndex,
+    required this.selectedKey,
+    required this.completed,
+    required this.completedSignature,
+    required this.stageWidth,
+    required this.onSelected,
+    super.key,
   });
 
-  final List<Offset> positions;
-  final List<_UnitHeaderGeometry> unitHeaders;
-  final List<_LandmarkGeometry> landmarks;
-  final double nodeSize;
-  final double height;
+  final GaussPathBand band;
+  final GaussPathGeometry geometry;
+  final GaussController controller;
+  final List<StudyPathNode> nodes;
+  final int currentIndex;
+  final String selectedKey;
+  final List<bool> completed;
+  final int completedSignature;
+  final double stageWidth;
+  final ValueChanged<StudyPathNode> onSelected;
 
-  static _PathGeometry build({
-    required double width,
-    required List<StudyPathNode> nodes,
-    required double textScale,
-  }) {
-    final compact = width < 560;
-    final expanded = width >= 760;
-    final scale = textScale.clamp(1.0, 2.0).toDouble();
-    final nodeSize = compact
-        ? 72.0
-        : expanded
-        ? 108.0
-        : 96.0;
-    final center = width / 2;
-    final amplitude = math.min(
-      width *
-          (compact
-              ? .25
-              : expanded
-              ? .34
-              : .31),
-      expanded ? 270.0 : 225.0,
-    );
-    final positions = <Offset>[];
-    final headers = <_UnitHeaderGeometry>[];
-    final landmarks = <_LandmarkGeometry>[];
-    // Every curriculum unit has a real visual threshold.  A route is easier
-    // to read as one continuous expedition when a small celestial gate
-    // announces the conceptual shift before the next constellation begins.
-    // This reserve grows with text instead of letting live Persian labels
-    // collide with the first instrument at accessibility sizes.
-    // Keep the opening instrument visually clear of the floating mission dock
-    // on the shortest supported phone while still letting the route rail
-    // continue beneath the glass. The two-pixel top allowance is deliberate:
-    // the 72dp control remains fully visible and its aura may softly crop.
-    var y = compact ? 38.0 : 28.0;
-    var unitNumber = 0;
-    for (var index = 0; index < nodes.length; index++) {
-      final node = nodes[index];
-      if (node.beginsUnit) {
-        unitNumber++;
-        // On phones, Chapter 1 is already live inside the Orbit selector.
-        // Omitting that duplicated gate gives the actual route first-frame
-        // priority while later chapter thresholds remain explicit landmarks.
-        final chapterLivesInSelector = compact && index == 0;
-        if (!chapterLivesInSelector) {
-          y += index == 0
-              ? 10
-              : compact
-              ? 62 + 18 * (scale - 1)
-              : 96 + 22 * (scale - 1);
-          final accessibilityCompact = compact && scale >= 1.55;
-          final gateHeight = compact
-              ? accessibilityCompact
-                    // The live 200% chapter identity is three stacked rows
-                    // (index/name, title, progress). Its geometry must reserve
-                    // the same physical space that _SectionGate paints; a
-                    // 90dp shortcut allowed the following lesson node to be
-                    // laid out inside the gate on real Android.
-                    ? 174.0
-                    // At normal text the live one-row annotation measures
-                    // 100dp on a 390dp phone. Geometry owns that same height
-                    // plus the node radius and a 12dp optical moat below.
-                    : 100 + 26 * (scale - 1)
-              : 82 + 28 * (scale - 1);
-          headers.add(
-            _UnitHeaderGeometry(
-              topic: node.topic,
-              unitNumber: unitNumber,
-              y: y,
+  @override
+  Widget build(BuildContext context) => SizedBox(
+    height: band.height,
+    width: stageWidth,
+    child: Stack(
+      clipBehavior: Clip.hardEdge,
+      children: [
+        Positioned.fill(
+          child: ExcludeSemantics(
+            child: RepaintBoundary(
+              child: CustomPaint(
+                painter: _StageInstrumentPainter(
+                  current: geometry.positions[currentIndex],
+                  nodeSize: geometry.nodeSize,
+                  bandTop: band.top,
+                  sceneHeight: geometry.height,
+                ),
+              ),
             ),
-          );
-          y +=
-              gateHeight +
-              (compact
-                  ? accessibilityCompact
-                        ? 14
-                        : 48
-                  : 52);
-        }
-      }
-      final phase = index * 1.2 + unitNumber * .5;
-      final x = center + math.sin(phase) * amplitude;
-      positions.add(Offset(x, y));
-      final openingLandmark = index == 0;
-      final intervalLandmark = index > 2 && index % 6 == 4;
-      if (openingLandmark || intervalLandmark) {
-        final placeStart = x >= center;
-        final edge = compact
-            ? 4.0
-            : expanded
-            ? 22.0
-            : 12.0;
-        final landmarkSize = openingLandmark
-            ? compact
-                  ? 128.0
-                  : expanded
-                  ? 210.0
-                  : 168.0
-            : compact
-            ? 104.0
-            : expanded
-            ? 176.0
-            : 146.0;
-        landmarks.add(
-          _LandmarkGeometry(
-            top: openingLandmark
-                ? y + (compact ? 20 : -4)
-                : y - (compact ? 36 : 50),
-            start: placeStart ? edge : null,
-            end: placeStart ? null : edge,
-            size: landmarkSize,
-            kind: openingLandmark ? 0 : 1 + (index ~/ 6) % 2,
           ),
-        );
-      }
-      y += compact
-          ? 96 + 32 * (scale - 1)
-          : expanded
-          ? 154
-          : 146;
-    }
-    return _PathGeometry(
-      positions: positions,
-      unitHeaders: headers,
-      landmarks: landmarks,
-      nodeSize: nodeSize,
-      height: y + 150,
-    );
-  }
-}
-
-class _UnitHeaderGeometry {
-  const _UnitHeaderGeometry({
-    required this.topic,
-    required this.unitNumber,
-    required this.y,
-  });
-
-  final TopicDescriptor topic;
-  final int unitNumber;
-  final double y;
-}
-
-class _LandmarkGeometry {
-  const _LandmarkGeometry({
-    required this.top,
-    required this.start,
-    required this.end,
-    required this.size,
-    required this.kind,
-  });
-
-  final double top;
-  final double? start;
-  final double? end;
-  final double size;
-  final int kind;
+        ),
+        Positioned.fill(
+          child: ExcludeSemantics(
+            child: RepaintBoundary(
+              child: CustomPaint(
+                painter: _ContinuousPathPainter(
+                  positions: geometry.positions,
+                  segmentIndices: band.segmentIndices,
+                  completed: completed,
+                  completedSignature: completedSignature,
+                  currentIndex: currentIndex,
+                  bandTop: band.top,
+                ),
+              ),
+            ),
+          ),
+        ),
+        for (final landmarkIndex in band.landmarkIndices)
+          _PathLandmark(
+            landmark: geometry.landmarks[landmarkIndex],
+            localTop: geometry.landmarks[landmarkIndex].top - band.top,
+          ),
+        for (final headerIndex in band.headerIndices)
+          Positioned(
+            key: ValueKey(
+              'map-section-gate-${geometry.unitHeaders[headerIndex].unitNumber}',
+            ),
+            left: 12,
+            right: 12,
+            top: geometry.unitHeaders[headerIndex].y - band.top,
+            child: _SectionGate(
+              topic: geometry.unitHeaders[headerIndex].topic,
+              unitNumber: geometry.unitHeaders[headerIndex].unitNumber,
+              reflected: controller.study
+                  .topic(geometry.unitHeaders[headerIndex].topic.key)
+                  .reflected,
+            ),
+          ),
+        for (final nodeIndex in band.nodeIndices)
+          Positioned(
+            left: geometry.positions[nodeIndex].dx - geometry.nodeSize / 2,
+            top:
+                geometry.positions[nodeIndex].dy -
+                band.top -
+                geometry.nodeSize / 2,
+            child: _StudyNode(
+              node: nodes[nodeIndex],
+              studyLabel: controller.studySetLabel(nodes[nodeIndex]),
+              size: geometry.nodeSize,
+              snapshot: controller.study.shelf(nodes[nodeIndex].key),
+              current: nodeIndex == currentIndex,
+              selected: nodes[nodeIndex].key == selectedKey,
+              onPressed: () => onSelected(nodes[nodeIndex]),
+            ),
+          ),
+        for (final nodeIndex in band.nodeIndices)
+          _PathNodeLabel(
+            node: nodes[nodeIndex],
+            studyLabel: controller.studySetLabel(nodes[nodeIndex]),
+            snapshot: controller.study.shelf(nodes[nodeIndex].key),
+            position: band.localize(geometry.positions[nodeIndex]),
+            nodeSize: geometry.nodeSize,
+            stageWidth: stageWidth,
+            isCurrent: nodeIndex == currentIndex,
+            selected: nodes[nodeIndex].key == selectedKey,
+          ),
+      ],
+    ),
+  );
 }
 
 class _SectionGate extends StatelessWidget {
@@ -2827,9 +2641,10 @@ class _SectionGateNumber extends StatelessWidget {
 }
 
 class _PathLandmark extends StatelessWidget {
-  const _PathLandmark({required this.landmark});
+  const _PathLandmark({required this.landmark, required this.localTop});
 
-  final _LandmarkGeometry landmark;
+  final GaussLandmarkGeometry landmark;
+  final double localTop;
 
   @override
   Widget build(BuildContext context) {
@@ -2841,7 +2656,7 @@ class _PathLandmark extends StatelessWidget {
     return PositionedDirectional(
       start: landmark.start,
       end: landmark.end,
-      top: landmark.top,
+      top: localTop,
       child: ExcludeSemantics(
         child: IgnorePointer(
           child: SizedBox.square(
@@ -2875,7 +2690,12 @@ class _PathLandmark extends StatelessWidget {
                     width: landmark.size,
                     height: landmark.size,
                     fit: BoxFit.contain,
-                    cacheWidth: 640,
+                    cacheWidth: _boundedRasterWidth(
+                      context,
+                      landmark.size,
+                      sourceWidth: 1254,
+                      minimum: 160,
+                    ),
                     filterQuality: FilterQuality.medium,
                   ),
                 ),
@@ -2921,17 +2741,19 @@ class _StageInstrumentPainter extends CustomPainter {
   const _StageInstrumentPainter({
     required this.current,
     required this.nodeSize,
-    required this.visibleTop,
-    required this.visibleHeight,
+    required this.bandTop,
+    required this.sceneHeight,
   });
 
   final Offset current;
   final double nodeSize;
-  final double visibleTop;
-  final double visibleHeight;
+  final double bandTop;
+  final double sceneHeight;
 
   @override
   void paint(Canvas canvas, Size size) {
+    canvas.save();
+    canvas.translate(0, -bandTop);
     final expanded = size.width >= 760;
     final majorRadius = math.min(
       size.width * (expanded ? .58 : .66),
@@ -2949,10 +2771,10 @@ class _StageInstrumentPainter extends CustomPainter {
       ..color = GaussColors.brassLight.withValues(alpha: .18);
 
     final firstCenter = math
-        .max(330.0, ((visibleTop - 380) / 720).floor() * 720 + 330)
+        .max(330.0, ((bandTop - 380) / 720).floor() * 720 + 330)
         .toDouble();
     final lastCenter = math
-        .min(size.height + 300, visibleTop + visibleHeight + 380)
+        .min(sceneHeight + 300, bandTop + size.height + 380)
         .toDouble();
     for (var centerY = firstCenter; centerY < lastCenter; centerY += 720) {
       final center = Offset(size.width * .5, centerY);
@@ -3022,14 +2844,15 @@ class _StageInstrumentPainter extends CustomPainter {
         ..strokeWidth = .8
         ..color = GaussColors.brass.withValues(alpha: .13),
     );
+    canvas.restore();
   }
 
   @override
   bool shouldRepaint(covariant _StageInstrumentPainter oldDelegate) =>
       oldDelegate.current != current ||
       oldDelegate.nodeSize != nodeSize ||
-      oldDelegate.visibleTop != visibleTop ||
-      oldDelegate.visibleHeight != visibleHeight;
+      oldDelegate.bandTop != bandTop ||
+      oldDelegate.sceneHeight != sceneHeight;
 }
 
 /// The reference route keeps the names attached to their instruments, instead
@@ -3255,7 +3078,12 @@ class _StudyNode extends StatelessWidget {
                   'assets/visual/nodes/topic_shell.png',
                   width: size * .96,
                   height: size * .96,
-                  cacheWidth: 360,
+                  cacheWidth: _boundedRasterWidth(
+                    context,
+                    size * .96,
+                    sourceWidth: 1254,
+                    minimum: 144,
+                  ),
                   filterQuality: FilterQuality.medium,
                 ),
                 CustomPaint(
@@ -3405,10 +3233,17 @@ class _CurrentNodeAuraPainter extends CustomPainter {
     final center = size.center(Offset.zero);
     final ring = Rect.fromCircle(center: center, radius: size.width * .41);
     final outer = Rect.fromCircle(center: center, radius: size.width * .48);
+    final glowRect = Rect.fromCircle(center: center, radius: size.width * .46);
     final glow = Paint()
-      ..color = accent.withValues(alpha: selected ? .2 : .15)
-      ..maskFilter = const ui.MaskFilter.blur(ui.BlurStyle.normal, 12);
-    canvas.drawCircle(center, size.width * .34, glow);
+      ..shader = RadialGradient(
+        colors: [
+          accent.withValues(alpha: selected ? .2 : .15),
+          accent.withValues(alpha: .055),
+          accent.withValues(alpha: 0),
+        ],
+        stops: const [0, .56, 1],
+      ).createShader(glowRect);
+    canvas.drawCircle(center, size.width * .46, glow);
     final arc = Paint()
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
@@ -3491,24 +3326,26 @@ class _NodeStatePin extends StatelessWidget {
 class _ContinuousPathPainter extends CustomPainter {
   const _ContinuousPathPainter({
     required this.positions,
+    required this.segmentIndices,
     required this.completed,
+    required this.completedSignature,
     required this.currentIndex,
-    required this.visibleTop,
-    required this.visibleHeight,
+    required this.bandTop,
   });
 
   final List<Offset> positions;
+  final List<int> segmentIndices;
   final List<bool> completed;
+  final int completedSignature;
   final int currentIndex;
-  final double visibleTop;
-  final double visibleHeight;
+  final double bandTop;
 
   @override
   void paint(Canvas canvas, Size size) {
     if (positions.length < 2) return;
-    final paintTop = visibleTop - 300;
-    final paintBottom = visibleTop + visibleHeight + 300;
-    for (var index = 0; index < positions.length - 1; index++) {
+    canvas.save();
+    canvas.translate(0, -bandTop);
+    for (final index in segmentIndices) {
       final isComplete = completed[index];
       final isCurrentLead = index == currentIndex;
       final segment = _segment(positions[index], positions[index + 1]);
@@ -3516,7 +3353,6 @@ class _ContinuousPathPainter extends CustomPainter {
         positions[index],
         positions[index + 1],
       ).inflate(18);
-      if (bounds.bottom < paintTop || bounds.top > paintBottom) continue;
       final metric = segment.computeMetrics().single;
 
       // The route is an inlaid celestial rail: a deep shadow makes it sit in
@@ -3550,7 +3386,6 @@ class _ContinuousPathPainter extends CustomPainter {
               ..style = PaintingStyle.stroke
               ..strokeWidth = isCurrentLead ? 13 : 8
               ..strokeCap = StrokeCap.round
-              ..maskFilter = const ui.MaskFilter.blur(ui.BlurStyle.normal, 8)
               ..color = accent.withValues(alpha: isCurrentLead ? .22 : .12),
           );
         }
@@ -3583,13 +3418,12 @@ class _ContinuousPathPainter extends CustomPainter {
           canvas.drawCircle(
             tangent.position,
             2.2,
-            Paint()
-              ..color = GaussColors.brassLight.withValues(alpha: .88)
-              ..maskFilter = const ui.MaskFilter.blur(ui.BlurStyle.normal, 1),
+            Paint()..color = GaussColors.brassLight.withValues(alpha: .88),
           );
         }
       }
     }
+    canvas.restore();
   }
 
   Path _segment(Offset start, Offset end) {
@@ -3624,10 +3458,10 @@ class _ContinuousPathPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _ContinuousPathPainter oldDelegate) =>
       oldDelegate.positions != positions ||
-      oldDelegate.completed != completed ||
+      oldDelegate.segmentIndices != segmentIndices ||
+      oldDelegate.completedSignature != completedSignature ||
       oldDelegate.currentIndex != currentIndex ||
-      oldDelegate.visibleTop != visibleTop ||
-      oldDelegate.visibleHeight != visibleHeight;
+      oldDelegate.bandTop != bandTop;
 }
 
 class _StudyDock extends StatelessWidget {
@@ -4351,6 +4185,16 @@ class _StarFieldPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
+
+int _boundedRasterWidth(
+  BuildContext context,
+  double logicalWidth, {
+  required int sourceWidth,
+  required int minimum,
+}) => (logicalWidth * MediaQuery.devicePixelRatioOf(context))
+    .ceil()
+    .clamp(minimum, sourceWidth)
+    .toInt();
 
 List<String> _focusAreas(String key) {
   if (key.contains('function') || key.contains('derivative')) {
