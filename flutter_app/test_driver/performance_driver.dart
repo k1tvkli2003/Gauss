@@ -18,6 +18,7 @@ Future<void> main() async {
   );
   final report = <String, dynamic>{
     'captured_at_utc': DateTime.now().toUtc().toIso8601String(),
+    'cache_state': Platform.environment['GAUSS_PERF_CACHE_STATE'],
     'journeys': <String, dynamic>{},
   };
 
@@ -35,6 +36,19 @@ Future<void> main() async {
               )
               as Map<String, dynamic>;
       report['environment'] = environment;
+      await File(
+        '${outputDirectory.path}${Platform.pathSeparator}map.png',
+      ).writeAsBytes(await driver.screenshot());
+      report['semantics'] = <String, dynamic>{
+        'map_mission_action': await _semanticsIdOrNull(
+          driver,
+          find.byValueKey('map-study-dock-action'),
+        ),
+        'selected_map_node': await _semanticsIdOrNull(
+          driver,
+          find.byValueKey('map-node-${environment['selected_node_key']}'),
+        ),
+      };
 
       (report['journeys']
           as Map<String, dynamic>)['map_scroll'] = await _captureJourney(
@@ -80,6 +94,9 @@ Future<void> main() async {
           await Future<void>.delayed(const Duration(milliseconds: 450));
         },
       );
+      await File(
+        '${outputDirectory.path}${Platform.pathSeparator}mission.png',
+      ).writeAsBytes(await driver.screenshot());
 
       final revealChoices = find.byValueKey('mission-reveal-choices-action');
       try {
@@ -93,20 +110,55 @@ Future<void> main() async {
         // Certified questions already expose their choices.
       }
 
+      final writingSpace = find.byValueKey('question-manuscript-writing-space');
+      await driver.scrollIntoView(
+        writingSpace,
+        alignment: 0.5,
+        timeout: _defaultTimeout,
+      );
+      final writingCenter = await driver.getCenter(
+        writingSpace,
+        timeout: _defaultTimeout,
+      );
+      (report['journeys']
+          as Map<
+            String,
+            dynamic
+          >)['mission_stylus_ink'] = await _captureJourney(
+        driver,
+        outputDirectory,
+        'mission_stylus_ink',
+        () async {
+          final response = jsonDecode(
+            await driver.requestData(
+              'stylus:${jsonEncode(<String, dynamic>{'center_x': writingCenter.dx, 'center_y': writingCenter.dy})}',
+              timeout: _defaultTimeout,
+            ),
+          );
+          if (response case <String, dynamic>{'stylus': 'accepted'}) {
+            await driver.waitFor(
+              find.byValueKey('mission-ink-controls'),
+              timeout: _defaultTimeout,
+            );
+            return;
+          }
+          throw StateError('Stylus stroke was not accepted: $response');
+        },
+      );
+      (report['semantics'] as Map<String, dynamic>)['mission_choice'] =
+          await _semanticsIdOrNull(driver, find.byValueKey('mission-choice-0'));
+      (report['semantics'] as Map<String, dynamic>)['mission_ink_controls'] =
+          await _semanticsIdOrNull(
+            driver,
+            find.byValueKey('mission-ink-controls'),
+          );
+
       (report['journeys'] as Map<String, dynamic>)['mission_touch_answer'] =
           await _captureJourney(
             driver,
             outputDirectory,
             'mission_touch_answer',
             () async {
-              final writingSpace = find.byValueKey(
-                'question-manuscript-writing-space',
-              );
-              await driver.scrollIntoView(
-                writingSpace,
-                alignment: 0.5,
-                timeout: _defaultTimeout,
-              );
               await driver.scroll(
                 writingSpace,
                 118,
@@ -140,7 +192,7 @@ Future<void> main() async {
               );
               await Future<void>.delayed(const Duration(milliseconds: 520));
               await driver.waitFor(
-                find.byValueKey('mission-readiness-signal'),
+                find.byValueKey('mission-ink-controls'),
                 timeout: _defaultTimeout,
               );
             },
@@ -181,6 +233,17 @@ Future<void> main() async {
       const JsonEncoder.withIndent('  ').convert(report),
     );
     await driver.close();
+  }
+}
+
+Future<int?> _semanticsIdOrNull(
+  FlutterDriver driver,
+  SerializableFinder finder,
+) async {
+  try {
+    return await driver.getSemanticsId(finder, timeout: _defaultTimeout);
+  } on DriverError {
+    return null;
   }
 }
 

@@ -4,8 +4,10 @@ import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_driver/driver_extension.dart';
 import 'package:go_router/go_router.dart';
@@ -28,6 +30,7 @@ final _harnessReport = <String, dynamic>{};
 Future<void> main() async {
   final startup = Stopwatch()..start();
   enableFlutterDriverExtension(handler: _handleDriverData);
+  SemanticsBinding.instance.ensureSemantics();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   _installFrameReporter();
   SystemChrome.setSystemUIOverlayStyle(
@@ -79,6 +82,18 @@ Future<String> _handleDriverData(String? message) async {
       'ready': _harnessReport['first_frame_us'] != null,
     });
   }
+  if (message?.startsWith('stylus:') ?? false) {
+    final payload = jsonDecode(message!.substring('stylus:'.length));
+    if (payload case <String, dynamic>{
+      'center_x': final num centerX,
+      'center_y': final num centerY,
+    }) {
+      return _performStylusStroke(
+        Offset(centerX.toDouble(), centerY.toDouble()),
+      );
+    }
+    return jsonEncode(<String, dynamic>{'error': 'Invalid stylus payload.'});
+  }
   if (message != 'environment') {
     return jsonEncode(<String, dynamic>{
       'error': 'Unsupported performance harness request.',
@@ -97,6 +112,79 @@ Future<String> _handleDriverData(String? message) async {
     'frame_budget_us': (Duration.microsecondsPerSecond / refreshRate).round(),
     'request_received_us': _harnessReport['first_frame_us'],
     ..._harnessReport,
+  });
+}
+
+Future<String> _performStylusStroke(Offset center) async {
+  const pointer = 701;
+  const device = 701;
+  const kind = PointerDeviceKind.stylus;
+  final start = center + const Offset(-54, -16);
+  GestureBinding.instance.handlePointerEvent(
+    PointerAddedEvent(
+      pointer: pointer,
+      device: device,
+      kind: kind,
+      position: start,
+    ),
+  );
+  GestureBinding.instance.handlePointerEvent(
+    PointerDownEvent(
+      pointer: pointer,
+      device: device,
+      kind: kind,
+      position: start,
+      pressure: .72,
+      pressureMin: 0,
+      pressureMax: 1,
+    ),
+  );
+  var previous = start;
+  for (var step = 1; step <= 14; step++) {
+    final position = start + Offset(step * 8, math.sin(step / 2) * 12);
+    GestureBinding.instance.handlePointerEvent(
+      PointerMoveEvent(
+        timeStamp: Duration(milliseconds: step * 16),
+        pointer: pointer,
+        device: device,
+        kind: kind,
+        position: position,
+        delta: position - previous,
+        pressure: .72,
+        pressureMin: 0,
+        pressureMax: 1,
+      ),
+    );
+    previous = position;
+    await Future<void>.delayed(const Duration(milliseconds: 16));
+  }
+  GestureBinding.instance.handlePointerEvent(
+    PointerUpEvent(
+      timeStamp: const Duration(milliseconds: 240),
+      pointer: pointer,
+      device: device,
+      kind: kind,
+      position: previous,
+      pressureMin: 0,
+      pressureMax: 1,
+    ),
+  );
+  GestureBinding.instance.handlePointerEvent(
+    PointerRemovedEvent(
+      timeStamp: const Duration(milliseconds: 241),
+      pointer: pointer,
+      device: device,
+      kind: kind,
+      position: previous,
+      pressureMin: 0,
+      pressureMax: 1,
+    ),
+  );
+  await SchedulerBinding.instance.endOfFrame;
+  return jsonEncode(<String, dynamic>{
+    'stylus': 'accepted',
+    'points': 16,
+    'pointer_kind': 'stylus',
   });
 }
 

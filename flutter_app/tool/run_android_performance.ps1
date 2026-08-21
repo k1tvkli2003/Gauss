@@ -99,12 +99,21 @@ $deviceProperties = [ordered]@{
     surface_flinger_refresh = Invoke-AdbText shell dumpsys SurfaceFlinger --display-id
 }
 $signedPackageBefore = Get-PackageSnapshot "com.gauss.app"
+$profilePackageBefore = Get-PackageSnapshot "com.gauss.app.profile"
+if ($profilePackageBefore.installed) {
+    $clearResult = Invoke-AdbText shell pm clear "com.gauss.app.profile"
+    if ($clearResult -ne "Success") {
+        throw "Could not reset the isolated profile harness before run 1."
+    }
+}
 
 [ordered]@{
     captured_at_utc = [DateTime]::UtcNow.ToString("o")
     flutter = (& flutter --version --machine | ConvertFrom-Json)
     device = $deviceProperties
+    git_revision = (& git -C (Split-Path $appRoot -Parent) rev-parse HEAD).Trim()
     signed_package_before = $signedPackageBefore
+    isolated_profile_package_before = $profilePackageBefore
     requested_runs = $Runs
 } | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $outputRoot "environment.json") -Encoding utf8
 
@@ -120,6 +129,11 @@ try {
         }
         New-Item -ItemType Directory -Force -Path $runDirectory | Out-Null
         $env:GAUSS_PERF_OUTPUT = $runDirectory
+        $env:GAUSS_PERF_CACHE_STATE = if ($run -eq 1) {
+            "cold-profile-data"
+        } else {
+            "warm-profile-data"
+        }
 
         $arguments = @(
             "drive",
@@ -128,7 +142,7 @@ try {
             "--device-id", $DeviceId,
             "--driver", $driverPath,
             "--target", $targetPath,
-            "--no-keep-app-running"
+            "--keep-app-running"
         )
         & flutter @arguments 2>&1 | Tee-Object -FilePath $logPath
         if ($LASTEXITCODE -ne 0) {
@@ -137,17 +151,66 @@ try {
         if (-not (Test-Path -LiteralPath $journeyPath)) {
             throw "Performance journey did not emit $journeyPath during $runLabel."
         }
+
+        $memInfo = Invoke-AdbText shell dumpsys meminfo "com.gauss.app.profile"
+        $gfxInfo = Invoke-AdbText shell dumpsys gfxinfo "com.gauss.app.profile"
+        $totalPss = if ($memInfo -match "(?m)^\s*TOTAL\s+(\d+)") {
+            [int]$Matches[1]
+        } else {
+            $null
+        }
+        $totalFrames = if ($gfxInfo -match "Total frames rendered:\s*(\d+)") {
+            [int]$Matches[1]
+        } else {
+            $null
+        }
+        $jankyFrames = if ($gfxInfo -match "Janky frames:\s*(\d+)") {
+            [int]$Matches[1]
+        } else {
+            $null
+        }
+        [ordered]@{
+            captured_at_utc = [DateTime]::UtcNow.ToString("o")
+            cache_state = $env:GAUSS_PERF_CACHE_STATE
+            total_pss_kib = $totalPss
+            total_frames_rendered = $totalFrames
+            janky_frames = $jankyFrames
+        } | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $runDirectory "android-runtime.json") -Encoding utf8
+        Invoke-AdbText shell am force-stop "com.gauss.app.profile" | Out-Null
     }
 }
 finally {
     Pop-Location
     $env:GRADLE_OPTS = $originalGradleOptions
     $env:GAUSS_PERF_OUTPUT = $originalPerformanceOutput
+    Remove-Item Env:GAUSS_PERF_CACHE_STATE -ErrorAction SilentlyContinue
 }
 
 $signedPackageAfter = Get-PackageSnapshot "com.gauss.app"
 $preserved = ($signedPackageBefore | ConvertTo-Json -Depth 6 -Compress) -eq
     ($signedPackageAfter | ConvertTo-Json -Depth 6 -Compress)
+$manifestRows = Get-ChildItem -LiteralPath $outputRoot -Directory -Filter "run-*" |
+    Sort-Object Name |
+    ForEach-Object {
+        $journeys = Get-Content -LiteralPath (Join-Path $_.FullName "journeys.json") -Raw | ConvertFrom-Json
+        $runtime = Get-Content -LiteralPath (Join-Path $_.FullName "android-runtime.json") -Raw | ConvertFrom-Json
+        [ordered]@{
+            run = $_.Name
+            git_revision = (& git -C (Split-Path $appRoot -Parent) rev-parse HEAD).Trim()
+            build_mode = "profile"
+            target = $targetPath
+            device_id = $DeviceId
+            refresh_rate_hz = $journeys.environment.refresh_rate_hz
+            cache_state = $runtime.cache_state
+            status = $journeys.status
+            total_pss_kib = $runtime.total_pss_kib
+        } | ConvertTo-Json -Depth 5 -Compress
+    }
+[System.IO.File]::WriteAllLines(
+    (Join-Path $outputRoot "run-manifest.jsonl"),
+    [string[]]$manifestRows,
+    [System.Text.UTF8Encoding]::new($false)
+)
 
 [ordered]@{
     captured_at_utc = [DateTime]::UtcNow.ToString("o")
