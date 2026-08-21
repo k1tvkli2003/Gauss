@@ -2219,7 +2219,7 @@ class _StudyPathStageState extends State<_StudyPathStage> {
     final safe = index.clamp(0, geometry.positions.length - 1);
     final visibleHeight = math.max(
       160.0,
-      _scrollController.position.viewportDimension,
+      _scrollController.position.viewportDimension - widget.bottomObstruction,
     );
     // A restored or explicitly targeted lesson belongs in the upper reading
     // third, not the mathematical center. This keeps its chapter threshold
@@ -2286,42 +2286,52 @@ class _StudyPathStageState extends State<_StudyPathStage> {
         key: const ValueKey('map-study-path-scroll'),
         fit: StackFit.expand,
         children: [
-          Padding(
-            padding: EdgeInsets.only(bottom: widget.bottomObstruction),
-            child: CustomScrollView(
-              key: const ValueKey('map-study-path-scrollable'),
-              controller: _scrollController,
-              scrollCacheExtent: ScrollCacheExtent.pixels(
-                math.min(2400.0, math.max(1600.0, liveViewportHeight * 4)),
-              ),
-              slivers: [
-                SliverList(
-                  delegate: SliverChildBuilderDelegate(
-                    (context, bandIndex) => _StudyPathBand(
-                      key: ValueKey('map-path-band-$bandIndex'),
-                      band: geometry.bands[bandIndex],
-                      geometry: geometry,
-                      controller: widget.controller,
-                      nodes: widget.nodes,
-                      currentIndex: widget.currentIndex,
-                      selectedKey: widget.selectedKey,
-                      completed: completed,
-                      completedSignature: completedSignature,
-                      stageWidth: constraints.maxWidth,
-                      onSelected: widget.onSelected,
-                    ),
-                    childCount: geometry.bands.length,
-                    addAutomaticKeepAlives: false,
-                    addRepaintBoundaries: true,
-                    addSemanticIndexes: false,
-                  ),
-                ),
-                const SliverToBoxAdapter(
-                  child: SizedBox(height: GaussSpacing.space32),
-                ),
-              ],
+          CustomScrollView(
+            key: const ValueKey('map-study-path-scrollable'),
+            controller: _scrollController,
+            scrollCacheExtent: ScrollCacheExtent.pixels(
+              math.min(900.0, math.max(520.0, liveViewportHeight * 1.1)),
             ),
+            slivers: [
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, bandIndex) => _StudyPathBand(
+                    key: ValueKey('map-path-band-$bandIndex'),
+                    band: geometry.bands[bandIndex],
+                    geometry: geometry,
+                    controller: widget.controller,
+                    nodes: widget.nodes,
+                    currentIndex: widget.currentIndex,
+                    selectedKey: widget.selectedKey,
+                    completed: completed,
+                    completedSignature: completedSignature,
+                    stageWidth: constraints.maxWidth,
+                    onSelected: widget.onSelected,
+                  ),
+                  childCount: geometry.bands.length,
+                  addAutomaticKeepAlives: false,
+                  addRepaintBoundaries: true,
+                  addSemanticIndexes: false,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: SizedBox(
+                  height: widget.bottomObstruction + GaussSpacing.space32,
+                ),
+              ),
+            ],
           ),
+          if (widget.bottomObstruction > 0)
+            Positioned(
+              left: 0,
+              right: 0,
+              bottom: 0,
+              height: widget.bottomObstruction,
+              child: const AbsorbPointer(
+                key: ValueKey('map-overlay-hit-shield'),
+                child: SizedBox.expand(),
+              ),
+            ),
         ],
       );
     },
