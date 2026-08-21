@@ -1,0 +1,57 @@
+{
+  "captured_at_utc": "2026-08-21T16:45:20.1196297Z",
+  "flutter": {
+    "frameworkVersion": "3.44.0",
+    "channel": "stable",
+    "repositoryUrl": "https://github.com/flutter/flutter.git",
+    "frameworkRevision": "559ffa3f75e7402d65a8def9c28389a9b2e6fe42",
+    "frameworkCommitDate": "2026-05-15 14:13:13 -0700",
+    "engineRevision": "4c525dac5ebe5971c5708ef73558ed8edcf4a362",
+    "engineCommitDate": "2026-05-15 19:00:04.000Z",
+    "engineContentHash": "fcf463a2242790d1fdcd9d044f533080f5022e18",
+    "engineBuildDate": "2026-05-15 23:05:11.586",
+    "dartSdkVersion": "3.12.0",
+    "devToolsVersion": "2.57.0",
+    "flutterVersion": "3.44.0",
+    "flutterRoot": "C:\\Users\\K1\\develop\\flutter"
+  },
+  "device": {
+    "serial": "emulator-5554",
+    "state": "device",
+    "manufacturer": "Google",
+    "model": "sdk_gphone64_x86_64",
+    "device": "emu64xa",
+    "sdk": "35",
+    "release": "15",
+    "build_fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.043/12960925:userdebug/dev-keys",
+    "wm_size": "Physical size: 1080x2400\nOverride size: 2560x1600",
+    "wm_density": "Physical density: 420\nOverride density: 320",
+    "surface_flinger_refresh": "Display 4619827259835644672 (HWC display 0): port=0 pnpId=GGL displayName=\"EMU_display_0\""
+  },
+  "git_revision": "798aa0309fa876133a8cd962076cc1c380a60818",
+  "signed_package_before": {
+    "installed": true,
+    "package": "com.gauss.app",
+    "metadata": [
+      "versionCode=106 minSdk=26 targetSdk=36",
+      "versionName=1.0.106",
+      "lastUpdateTime=2026-07-23 01:53:36",
+      "dataDir=/data/user/0/com.gauss.app",
+      "firstInstallTime=2026-07-18 13:02:33"
+    ],
+    "metadata_sha256": "9e7f9fa3bd6bd7c2f853bde073ff18e33f5d51cc53946e2c40949088133916af"
+  },
+  "isolated_profile_package_before": {
+    "installed": true,
+    "package": "com.gauss.app.profile",
+    "metadata": [
+      "versionCode=90 minSdk=26 targetSdk=36",
+      "versionName=1.0.90-profile",
+      "lastUpdateTime=2026-08-21 20:09:26",
+      "dataDir=/data/user/0/com.gauss.app.profile",
+      "firstInstallTime=2026-08-21 19:45:02"
+    ],
+    "metadata_sha256": "1cf5f8bdd9e75ba84a2827af9e42cabd0df11d01dd078fc3ce36217e88ef6923"
+  },
+  "requested_runs": 1
+}

@@ -12,6 +12,10 @@
 | Astral Manuscript | User-approved mock preview | concept انتخابی کاربر | direction approved؛ runtime proof خیر | [accepted concept](../2026-08-02-android-perfect-cycle/assets/concepts/question-astral-codex-v1.png) | manuscript واحد، قلم روی سؤال، answer rails و bottom instrument |
 | Current Map | Android runtime baseline | app در worktree فعلی | yes برای baseline؛ no برای acceptance نهایی | [baseline Map](assets/baseline-map-f3edce8.png) | شاهد شلوغی header، label hierarchy و bottom obstruction |
 | Current Mission | Android runtime baseline | app در worktree فعلی | yes برای baseline؛ no برای acceptance نهایی | [baseline Mission](assets/baseline-mission-f3edce8.png) | شاهد dead space، tool dominance، option spacing و dock size |
+| Profile Phone Map | Android profile baseline | `Codex_API35`، 1080×2400 | yes برای P0 baseline | [phone Map](logs/performance-baseline-08a7817/run-01/map.png) | مرجع before برای Map، chrome و bottom obstruction |
+| Profile Phone Mission | Android profile baseline | `Codex_API35`، 1080×2400 | yes برای P0 baseline | [phone Mission](logs/performance-baseline-08a7817/run-01/mission.png) | مرجع before برای prompt، ink، answers و solve dock |
+| Tablet Portrait Map/Mission | Android profile baseline | 800×1280dp | yes برای P0 baseline | [portrait Map](logs/performance-tablet-portrait-08a7817/run-01/map.png)، [portrait Mission](logs/performance-tablet-portrait-08a7817/run-01/mission.png) | فضای عمودی مرده و کشیدگی phone composition را آشکار می‌کند |
+| Tablet Landscape Map/Mission | Android profile baseline | 1280×800dp | yes برای P0 baseline | [landscape Map](logs/performance-tablet-landscape-798aa03/run-01/map.png)، [landscape Mission](logs/performance-tablet-landscape-798aa03/run-01/mission.png) | rail/inspector درست است؛ density و scroll/answer workspace هنوز P3–P5 work queue است |
 
 ## قرارداد مرجع Map
 
@@ -33,6 +37,14 @@
 - Limitations: تصویر، proof runtime یا مختصات ثابت یک دستگاه نیست و app chrome فارسی آن به production منتقل نمی‌شود.
 - Verified: direction approved only; production runtime match remains unverified.
 - Asset: [accepted concept](../2026-08-02-android-perfect-cycle/assets/concepts/question-astral-codex-v1.png)
+
+## Findings ورودی طراحی
+
+- phone Map: header و orbit strip چند مرکز توجه هم‌زمان دارند؛ Mission dock و footer بیش از حد از مسیر را می‌پوشانند.
+- tablet portrait: rail ناوبری مفید است، ولی stage به‌صورت phone بلند کش آمده و پایین Mission فضای مردهٔ زیادی دارد.
+- tablet landscape Map: سه‌پنجره‌ای شدن منطقی است، اما primary CTA و inspector باید در manifest رسمی یکی شوند.
+- tablet landscape Mission: manuscript خواناست، ولی پاسخ‌های پایین و solve instrument باید در pane/scroll اختصاصی بدون overlay مبهم سازمان‌دهی شوند.
+- هر سه viewport از نظر هویت از reference درست استفاده می‌کنند؛ مسئلهٔ بعدی composition، ownership و performance است، نه ساخت direction تازه.
 
 ## گیت بعدی
 

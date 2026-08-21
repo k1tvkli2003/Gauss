@@ -1,0 +1,30 @@
+{
+  "captured_at_utc": "2026-08-21T16:32:38.0340668Z",
+  "requested_runs": 5,
+  "completed_runs": 5,
+  "signed_package_before": {
+    "installed": true,
+    "package": "com.gauss.app",
+    "metadata": [
+      "versionCode=106 minSdk=26 targetSdk=36",
+      "versionName=1.0.106",
+      "lastUpdateTime=2026-07-23 01:53:36",
+      "dataDir=/data/user/0/com.gauss.app",
+      "firstInstallTime=2026-07-18 13:02:33"
+    ],
+    "metadata_sha256": "9e7f9fa3bd6bd7c2f853bde073ff18e33f5d51cc53946e2c40949088133916af"
+  },
+  "signed_package_after": {
+    "installed": true,
+    "package": "com.gauss.app",
+    "metadata": [
+      "versionCode=106 minSdk=26 targetSdk=36",
+      "versionName=1.0.106",
+      "lastUpdateTime=2026-07-23 01:53:36",
+      "dataDir=/data/user/0/com.gauss.app",
+      "firstInstallTime=2026-07-18 13:02:33"
+    ],
+    "metadata_sha256": "9e7f9fa3bd6bd7c2f853bde073ff18e33f5d51cc53946e2c40949088133916af"
+  },
+  "signed_package_preserved": true
+}

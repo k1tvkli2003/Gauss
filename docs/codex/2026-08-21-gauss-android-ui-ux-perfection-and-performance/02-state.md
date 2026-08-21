@@ -1,16 +1,16 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-21T18:06:19+03:30
+- Last updated: 2026-08-21T20:23:24+03:30
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
-- Current phase: P0 — Baseline، instrumentation و preservation
-- Goal progress: 0% until P0 gate passes
+- Current phase: P1 — UI system، geometry و production manifest
+- Goal progress: 8%
 - Product-readiness estimate: 60–65%
 
 ## Current State
 
-سند اجرایی این چرخه بر پایه کد، screenshot و تست‌های فعلی تدوین و به Goal فعال همین thread تبدیل شده است. جهت بصری قبلاً توسط کاربر برای Map و Astral Manuscript تأیید شده، بنابراین concept انتخابی تازه لازم نیست. defectهای اصلی در Map rendering/scroll ownership، bottom chrome، تراکم header، question rebuild scope و stylus/touch interaction مشخص شده‌اند. اجرای P0 آغاز شده است.
+P0 با harness ایزولهٔ profile روی تنها AVD مجاز، پنج اجرای phone و دو اجرای tablet بسته شد. تمام journeyهای نهایی Map، Mission، قلم شبیه‌سازی‌شده، لمس/پاسخ و بازگشت پاس شدند و semantic IDهای کنترل‌های حیاتی ثبت شدند. baseline نشان می‌دهد UI thread غالباً زیر budget است، اما Map scroll و route transitions عمدتاً raster-bound هستند. P1 برای تبدیل جهت پذیرفته‌شدهٔ Orrery/Astral به manifest و geometry اجرایی فعال است.
 
 ## Decisions
 
@@ -24,10 +24,14 @@
 | 2026-08-21 | performance فقط با سناریو و شرایط هم‌سان ادعا شود | probe نرم‌افزاری قدیمی نماینده device واقعی نیست | performance contract |
 | 2026-08-21 | این Goal بدون subagent اجرا شود | دستور پروژه تا اجازه صریح تازه | project AGENTS.md |
 | 2026-08-21 | `01-plan.md` objective الزام‌آور Goal همین thread باشد | جلوگیری از drift بین برنامه و اجرا | user request + active Goal |
+| 2026-08-21 | evidence runner از package ایزولهٔ `com.gauss.app.profile` استفاده کند | نسخهٔ شخصی و dataDir آن در هیچ run پاک، uninstall یا overwrite نشود | package metadata guard |
+| 2026-08-21 | CTA سناریوی performance بر اساس orientation انتخاب شود | phone/portrait از dock و landscape از Study Inspector استفاده می‌کند | responsive runtime evidence |
+| 2026-08-21 | raw timelineهای چندمگابایتی در Git ذخیره نشوند | summary، screenshot و metadata کافی و raw evidence بازتولیدپذیر است | evidence hygiene |
 
 ## Blockers
 
-- دستگاه ADB در لحظه baseline متصل نیست. P0 تا P6 با `Codex_API35` و تست‌های Flutter قابل پیشروی است؛ ادعای physical-device تا اتصال دستگاه ساخته نمی‌شود.
+- blocker اجرایی برای P1 وجود ندارد.
+- Xiaomi Focus Pen فیزیکی در این baseline در دسترس نبود؛ stylus contract روی Android با `PointerDeviceKind.stylus` اثبات شده، اما latency و palm rejection سخت‌افزاری تا P7 یک physical-device gate باقی می‌ماند.
 
 ## Done
 
@@ -35,8 +39,12 @@
 - repo، task history، current screenshots و hot files بررسی شد.
 - دو screenshot runtime فعلی به‌عنوان baseline در `assets/` فریز شد.
 - برنامه مرحله‌ای، وزن Goal، acceptance matrix، preservation contract و performance budgets نوشته شد.
+- harness profile ایزوله، runner پنج‌باره، semantics probe، stylus synthesis و aggregate summarizer ساخته و analyze شدند.
+- پنج run phone با status پاس، semantic IDs معتبر و حفظ کامل package اصلی ثبت شد.
+- tablet portrait و landscape واقعی روی `1280×800dp`/`800×1280dp` ثبت شدند؛ هر دو journey نهایی پاس شدند و تنظیمات AVD به `1080×2400 @ 420dpi` برگشت.
+- corpus gate با `3672` source-bound record و asset inventory با `3461` فایل بدون mutation ثبت شد.
 
 ## Remaining
 
-- اجرای P0 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
+- اجرای P1 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

@@ -69,6 +69,14 @@ tmp/
 *.dmp
 hs_err_pid*
 
+# Reproducible Android profiling keeps compact summaries and one visual sample
+# in Git. Multi-megabyte raw timelines, exploratory pilots, harness-mismatch
+# captures, and duplicate screenshots remain local and can be regenerated.
+docs/codex/**/logs/performance-pilot*/
+docs/codex/**/logs/*harness-mismatch*/
+docs/codex/**/logs/**/*.timeline.json
+docs/codex/**/logs/performance-baseline-*/run-0[2-9]/*.png
+
 # --- Local Codex / Jules work evidence (never source data) ---
 # These directories retain resumable external-review transcripts, screenshots,
 # and mechanical validation artifacts locally. They are intentionally excluded

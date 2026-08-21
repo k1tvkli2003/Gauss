@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-21T16:47:27.940065Z",
+  "git_revision": "798aa0309fa876133a8cd962076cc1c380a60818",
+  "device": {
+    "serial": "emulator-5554",
+    "state": "device",
+    "manufacturer": "Google",
+    "model": "sdk_gphone64_x86_64",
+    "device": "emu64xa",
+    "sdk": "35",
+    "release": "15",
+    "build_fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.043/12960925:userdebug/dev-keys",
+    "wm_size": "Physical size: 1080x2400\nOverride size: 2560x1600",
+    "wm_density": "Physical density: 420\nOverride density: 320",
+    "surface_flinger_refresh": "Display 4619827259835644672 (HWC display 0): port=0 pnpId=GGL displayName=\"EMU_display_0\""
+  },
+  "build_mode": "profile",
+  "runs": 1,
+  "startup_millis": {
+    "controller_ready": {
+      "min": 258.11,
+      "median": 258.11,
+      "mean": 258.11,
+      "max": 258.11
+    },
+    "first_usable_map_frame": {
+      "min": 302.227,
+      "median": 302.227,
+      "mean": 302.227,
+      "max": 302.227
+    }
+  },
+  "retained_total_pss_mib": {
+    "min": 175.1435546875,
+    "median": 175.1435546875,
+    "mean": 175.1435546875,
+    "max": 175.1435546875
+  },
+  "journeys": {
+    "map_scroll": {
+      "run_count": 1,
+      "ui_frame_count": 51,
+      "raster_frame_count": 51,
+      "ui_millis": {
+        "p50": 4.874,
+        "p95": 9.551,
+        "p99": 11.275,
+        "max": 11.275
+      },
+      "raster_millis": {
+        "p50": 16.512,
+        "p95": 34.356,
+        "p99": 41.016,
+        "max": 41.016
+      },
+      "wall_clock_millis": {
+        "min": 25119,
+        "median": 25119,
+        "mean": 25119.0,
+        "max": 25119
+      },
+      "dynamic_budget_missed_frame_ratio": {
+        "min": 0.47058823529411764,
+        "median": 0.47058823529411764,
+        "mean": 0.47058823529411764,
+        "max": 0.47058823529411764
+      }
+    },
+    "map_to_mission": {
+      "run_count": 1,
+      "ui_frame_count": 7,
+      "raster_frame_count": 7,
+      "ui_millis": {
+        "p50": 2.195,
+        "p95": 34.05,
+        "p99": 34.05,
+        "max": 34.05
+      },
+      "raster_millis": {
+        "p50": 17.214,
+        "p95": 25.999,
+        "p99": 25.999,
+        "max": 25.999
+      },
+      "wall_clock_millis": {
+        "min": 627,
+        "median": 627,
+        "mean": 627.0,
+        "max": 627
+      },
+      "dynamic_budget_missed_frame_ratio": {
+        "min": 0.7142857142857143,
+        "median": 0.7142857142857143,
+        "mean": 0.7142857142857143,
+        "max": 0.7142857142857143
+      }
+    },
+    "mission_stylus_ink": {
+      "run_count": 1,
+      "ui_frame_count": 13,
+      "raster_frame_count": 13,
+      "ui_millis": {
+        "p50": 2.843,
+        "p95": 8.341,
+        "p99": 8.341,
+        "max": 8.341
+      },
+      "raster_millis": {
+        "p50": 9.943,
+        "p95": 34.69,
+        "p99": 34.69,
+        "max": 34.69
+      },
+      "wall_clock_millis": {
+        "min": 386,
+        "median": 386,
+        "mean": 386.0,
+        "max": 386
+      },
+      "dynamic_budget_missed_frame_ratio": {
+        "min": 0.3076923076923077,
+        "median": 0.3076923076923077,
+        "mean": 0.3076923076923077,
+        "max": 0.3076923076923077
+      }
+    },
+    "mission_to_map": {
+      "run_count": 1,
+      "ui_frame_count": 5,
+      "raster_frame_count": 5,
+      "ui_millis": {
+        "p50": 5.948,
+        "p95": 14.384,
+        "p99": 14.384,
+        "max": 14.384
+      },
+      "raster_millis": {
+        "p50": 11.193,
+        "p95": 33.728,
+        "p99": 33.728,
+        "max": 33.728
+      },
+      "wall_clock_millis": {
+        "min": 640,
+        "median": 640,
+        "mean": 640.0,
+        "max": 640
+      },
+      "dynamic_budget_missed_frame_ratio": {
+        "min": 0.2,
+        "median": 0.2,
+        "mean": 0.2,
+        "max": 0.2
+      }
+    },
+    "mission_touch_answer": {
+      "run_count": 1,
+      "ui_frame_count": 78,
+      "raster_frame_count": 78,
+      "ui_millis": {
+        "p50": 2.398,
+        "p95": 8.463,
+        "p99": 112.134,
+        "max": 112.134
+      },
+      "raster_millis": {
+        "p50": 5.884,
+        "p95": 8.365,
+        "p99": 11.769,
+        "max": 11.769
+      },
+      "wall_clock_millis": {
+        "min": 2700,
+        "median": 2700,
+        "mean": 2700.0,
+        "max": 2700
+      },
+      "dynamic_budget_missed_frame_ratio": {
+        "min": 0.02564102564102564,
+        "median": 0.02564102564102564,
+        "mean": 0.02564102564102564,
+        "max": 0.02564102564102564
+      }
+    }
+  },
+  "limitations": [
+    "Canonical Codex_API35 emulator evidence uses Android GPU emulation and is not a substitute for physical-device raster proof.",
+    "Stylus input is synthesized through GestureBinding as PointerDeviceKind.stylus; Xiaomi Focus Pen hardware latency remains a physical-device gate.",
+    "Timeline values are profile-mode Flutter engine measurements; wall-clock values include driver synchronization."
+  ]
+}

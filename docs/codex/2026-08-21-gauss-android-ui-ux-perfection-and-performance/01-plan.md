@@ -103,8 +103,8 @@
 
 | فاز | وزن | وضعیت | خروجی پذیرفته‌شده |
 |---|---:|---|---|
-| P0 — Baseline، instrumentation و preservation | 8% | planned | journeyهای تکرارپذیر، trace baseline، hash/data guard و screenshot baseline |
-| P1 — UI system، geometry و production manifest | 7% | planned | token math، surface manifest، motion/precision ledgers و vertical-slice spec |
+| P0 — Baseline، instrumentation و preservation | 8% | completed | journeyهای تکرارپذیر، trace baseline، hash/data guard و screenshot baseline |
+| P1 — UI system، geometry و production manifest | 7% | active | token math، surface manifest، motion/precision ledgers و vertical-slice spec |
 | P2 — بازسازی engine اسکرول و رندر Map | 18% | planned | lazy path bands، cached geometry، narrow repaint، native scroll و benchmark بهتر |
 | P3 — بازسازی بصری و UX کامل Map | 17% | planned | header، navigator، path، node/label، Mission Compass و footer نهایی |
 | P4 — بازسازی Question، answers و stylus | 20% | planned | manuscript فشرده، قلم/لمس بی‌نقص، answer states و solution/completion |
@@ -276,4 +276,3 @@ AVD برای تشخیص و comparison استفاده می‌شود. smoothness �
 - تغییر ناموفق rollback می‌شود؛ با polish بیشتر روی علت غلط ادامه داده نمی‌شود.
 - Goal زمانی complete است که P0 تا P7 پاس، docs به‌روز، `main` push و محدودیت‌های غیرقابل‌اثبات صریح باشند.
 - ایده‌های marginal پس از یک adversarial pass پاک به backlog می‌روند؛ «پرفکشن» به معنی churn بی‌پایان نیست.
-
