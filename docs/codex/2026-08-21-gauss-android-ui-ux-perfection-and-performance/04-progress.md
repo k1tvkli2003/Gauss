@@ -17,6 +17,7 @@
 | 2026-08-21T22:17:00+03:30 | active | اولین پنج run engine، بهبود محدود raster p95 ولی regression median/missed و هم‌زمان drift در journeyهای دست‌نخورده را آشکار کرد؛ نتیجه به‌عنوان pass پذیرفته نشد. | `performance-p2-engine-2b0864d` |
 | 2026-08-21T23:06:00+03:30 | active | viewport تمام‌قد، hit shield پایین و cache bounded ساخته شد؛ 33/33 regression پاس شد، اما cold-AVD پنج‌باره drift شدید GPU و یک UI outlier داشت و باز هم pass اعلام نشد. | `6bb422f` + `performance-p2-engine-v2-6bb422f` |
 | 2026-08-21T23:31:00+03:30 | active | blurهای میانی و repaint layerهای تو‌در‌تو حذف شدند؛ footer شفاف فقط در footprint خودش blur محدود دارد. paired baseline همان لحظه بهبود 58% UI p95 و 51% raster p95 را ثابت کرد. | pilot current `5.720/24.319ms` در برابر `08a7817` برابر `13.731/49.598ms` |
+| 2026-08-21T23:47:24+03:30 | phase-complete | گیت P2 بسته شد: پنج run نهایی exact revision همگی پاس شدند، geometry/semantics حفظ شد و package شخصی دست‌نخورده ماند. P3 بازسازی بنیادی spiral/node/HUD آغاز شد. | `13d6597` + `performance-p2-final-13d6597`؛ Map UI/raster p95=`8.557/28.385ms`، PSS=`157.033MiB` |
 
 ## انجام‌شده تا اینجا
 
@@ -24,9 +25,9 @@
 - scope فقط Android و بدون تغییر dataset/media تثبیت شد.
 - رفرنس‌های پذیرفته‌شده و runtime baseline از هم تفکیک و ثبت شدند.
 - پیشرفت Goal با وزن گیت‌ها تعریف شد تا compile یا حجم کد به‌اشتباه completion حساب نشود.
-- P0 و P1 کامل شدند: کل Goal اکنون 15% است؛ این درصد فقط با عبور گیت بالا رفته است.
+- P0 تا P2 کامل شدند: کل Goal اکنون 33% است؛ این درصد فقط با عبور گیت بالا رفته است.
 - finding بصری P3 قفل شد: spiral و nodeهای فعلی خشک، تکراری و مکانیکی‌اند و به‌جای polish سطحی باید با زبان مسیر/عمق/حالت تازه بازسازی شوند.
 
 ## مرحله بعد
 
-- P2: commit نسخهٔ optimized layer/blur و اجرای پنج run نهایی revision-bound؛ سپس P3 بازسازی بنیادی spiral/node/HUD.
+- P3: بازسازی بنیادی زبان بصری spiral، node، label، landmark، HUD و Mission Compass؛ سپس capture و اصلاح پنج موقعیت مسیر روی Android.

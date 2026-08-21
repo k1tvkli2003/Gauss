@@ -1,16 +1,16 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-21T23:31:00+03:30
+- Last updated: 2026-08-21T23:47:24+03:30
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
-- Current phase: P2 — Map scroll/render engine
-- Goal progress: 15%
+- Current phase: P3 — Map visual and UX rebuild
+- Goal progress: 33%
 - Product-readiness estimate: 63–68%
 
 ## Current State
 
-P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد. P1 نیز جهت پذیرفته‌شدهٔ Orrery/Astral را به token ramp، production layer manifest، repaint ownership، responsive occupancy، safe-area contract، state matrix، Motion Bible و acceptance positions قابل‌آزمون تبدیل کرد. در P2، stage یک‌تکه و scroll-driven `setState` با sliver bandهای lazy، geometry LRU، painter ownership محدود و decode bounded جایگزین شده است. paired profile در همان پنجرهٔ GPU، بهبود `58%` در UI p95 و `51%` در raster p95 را در برابر engine قدیمی نشان داد؛ پنج run نهایی revision ثابت هنوز gate باقی‌مانده است.
+P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد و P1 جهت پذیرفته‌شدهٔ Orrery/Astral را به قرارداد اجرایی تبدیل کرد. P2 نیز کامل شد: stage یک‌تکه و scroll-driven `setState` با sliver bandهای lazy، geometry LRU، painter ownership محدود، viewport cache bounded و decode bounded جایگزین شد. paired profile هم‌زمان در یک پنجرهٔ GPU بهبود `58%` در UI p95 و `51%` در raster p95 را در برابر engine قدیمی ثابت کرد؛ سپس پنج run نهایی exact revision `13d6597` با status کامل، UI p95 برابر `8.557ms`، raster p95 برابر `28.385ms`، PSS میانهٔ `157.033MiB` و signed-package guard بدون تغییر ثبت شد. P3 اکنون زبان بصری خود spiral، node، label، landmark، HUD و Mission Compass را از پایه بازسازی می‌کند؛ این مرحله polish سطحی نیست.
 
 ## Decisions
 
@@ -34,7 +34,7 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 
 ## Blockers
 
-- blocker اجرایی وجود ندارد؛ P2 تا پنج run نهایی revision ثابت هنوز phase-complete نیست.
+- blocker اجرایی برای P3 وجود ندارد.
 - Xiaomi Focus Pen فیزیکی در این baseline در دسترس نبود؛ stylus contract روی Android با `PointerDeviceKind.stylus` اثبات شده، اما latency و palm rejection سخت‌افزاری تا P7 یک physical-device gate باقی می‌ماند.
 
 ## Done
@@ -50,8 +50,9 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 - P1 Design DNA و precision ledger به توکن‌های Flutter تبدیل شد؛ contrast، ramp، breakpoints، manifests و acceptance matrix با 32 regression test پاس شدند.
 - P2 geometry در bandهای bounded و lazy partition شد؛ scroll listener سراسری، moving blurهای میانی و RepaintBoundaryهای تو‌در‌تو حذف شدند و path/node semantics حفظ شد.
 - paired baseline موقت روی commit `08a7817` ثبت شد: engine تازه با footer blur محدود در یک پنجرهٔ میزبان، Map UI p95 را از `13.731ms` به `5.720ms` و raster p95 را از `49.598ms` به `24.319ms` رساند؛ worktree از ثبت Git خارج شد.
+- پنج run نهایی revision-bound روی `13d6597` با 5/5 journey پاس، semantic IDs ثابت، PSS میانهٔ `157.033MiB` و حفظ کامل hash نسخهٔ شخصی ثبت شد؛ P2 با caveat صریح emulator GPU drift بسته شد.
 
 ## Remaining
 
-- اجرای P2 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
+- اجرای P3 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

@@ -3,8 +3,8 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-21T23:31:00+03:30
-- Scope: P0 baseline + P1 executable UI system/manifest + P2 implementation/pilot evidence
+- Last verified: 2026-08-21T23:47:24+03:30
+- Scope: P0 baseline + P1 executable UI system/manifest + P2 closed Map engine
 
 ## بررسی‌ها
 
@@ -41,6 +41,8 @@
 | P2 cold-AVD five-run comparison | engine `6bb422f` پس از reboot | inconclusive as absolute baseline | untouched Mission journeys نیز 2–3× کند شدند؛ host/emulator GPU drift ثبت شد |
 | P2 paired same-window baseline | current optimized layers در برابر detached `08a7817` | passed pilot | Map UI p95 `5.720` vs `13.731ms`؛ raster p95 `24.319` vs `49.598ms`؛ memory `168.48` vs `175.94MiB` |
 | P2 glass policy | runtime profile + screenshot inspection | passed pilot | moving-card blur حذف؛ footer blur فقط در bounding box خودش، بدون full-width backing |
+| P2 final exact-revision profile | `run_android_performance.ps1 -Runs 5` روی `13d6597` | passed | 5/5 run؛ Map UI p95=`8.557ms`، raster p95=`28.385ms`، PSS median=`157.033MiB`؛ [aggregate](logs/performance-p2-final-13d6597/aggregate.json) |
+| P2 final semantics and package guard | five journeys + before/after package metadata | passed | semantic IDs ثابت؛ `com.gauss.app` v106 hash `9e7f9fa3…3916af` قبل/بعد دقیقاً یکسان |
 
 ## هنوز اجرا نشده
 
@@ -51,8 +53,8 @@
 
 ## مشکلات شناخته‌شده
 
-- Map stage یک‌تکه و repaint/rebuild وابسته به scroll دارد.
-- blurهای moving chrome می‌توانند raster cost را بالا ببرند.
+- Map renderer دیگر stage یک‌تکه یا rebuild وابسته به scroll ندارد؛ ریسک فعلی کیفیت بصری route/node در P3 است.
+- blur زندهٔ moving chrome حذف شده و blur footer فقط در footprint محدود خودش باقی مانده است.
 - header، orbit strip، mission/progress/footer تراکم و انسداد بصری دارند.
 - question ink به بیش از یک سطح rebuild متصل است.
 - question manuscript فضای مرده و controls غالب دارد؛ answer access دیر می‌شود.
@@ -60,5 +62,5 @@
 - emulator/SwiftShader raster p95 نمایندهٔ GPU گوشی نیست، اما برای before/after هم‌شرایط معتبر است.
 - raw Timelineها محلی و بازتولیدپذیر نگه داشته می‌شوند؛ Git فقط aggregate، compact summaries، metadata و visual samples را حمل می‌کند.
 - P1 عمداً composition screenها را تغییر نداد؛ این قرارداد در P2–P6 اجرا و با captureهای ماتریس بسته می‌شود.
-- P2 هنوز phase-complete نیست؛ benchmark پنج‌بارهٔ هم‌شرایط و runtime screenshot/semantics بعد از commit engine لازم است.
-- paired pilot variance محیط را جدا کرد، ولی پنج run نهایی باید روی revision تمیزِ optimized layer/blur ثبت شود؛ pilot تک-run جای آن gate را نمی‌گیرد.
+- P2 phase-complete است؛ paired same-window evidence اثر engine را از drift میزبان جدا کرد و پنج run نهایی revision-bound حفظ semantics/package را ثابت کرد.
+- absolute raster اعداد emulator تحت host/GPU drift هستند؛ بهبود tail ادعاشده بر paired same-window comparison تکیه دارد و physical-device proof همچنان در P7 انجام می‌شود.
