@@ -2,7 +2,7 @@
 
 ## Outcome
 
-کار هنوز active است. P0 کامل و Goal برابر 8% است؛ P1 برای تبدیل reference پذیرفته‌شده به system/geometry/production manifest شروع شده است. این فایل پایان کار را اعلام نمی‌کند.
+کار هنوز active است. P0 و P1 کامل و Goal برابر 15% است؛ P2 برای بازسازی engine اسکرول/رندر Map شروع شده است. این فایل پایان کار را اعلام نمی‌کند.
 
 ## Changed Artifacts
 
@@ -10,10 +10,11 @@
 - دو runtime screenshot baseline در `assets/`.
 - یک entry در `docs/codex/_index.md`.
 - harness و evidence فشردهٔ Android phone/tablet برای P0.
+- Design DNA، production manifest، state matrix، Motion Bible و acceptance matrix اجرایی برای P1.
 
 ## How To Continue
 
-1. P1 را با layer manifest، token math، state matrix، precision ledger و Motion Bible کامل کنید.
+1. P2 را با lazy/banded Map، cached geometry و narrow repaint کامل کنید و benchmark هم‌شرایط بگیرید.
 2. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
 3. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
 
@@ -21,10 +22,11 @@
 
 - scope، preservation contract، design thesis، opinion ledger، phase weights، budgets و QA matrix آماده است.
 - P0 با پنج run phone و دو composition تبلت پاس شده است.
+- P1 با analysis و 32 تست design/Android پاس شده است.
 
 ## Remaining
 
-- پیاده‌سازی و verification فازهای P1 تا P7.
+- پیاده‌سازی و verification فازهای P2 تا P7.
 
 ## Verification
 

@@ -3,8 +3,8 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-21T20:23:24+03:30
-- Scope: preservation و performance/visual/semantics baseline روی Android phone و tablet
+- Last verified: 2026-08-21T21:06:32+03:30
+- Scope: P0 baseline + P1 executable UI system/manifest
 
 ## بررسی‌ها
 
@@ -29,10 +29,14 @@
 | AVD discipline and restore | inventory + `wm size`/density before/after | passed | تنها `Codex_API35`؛ restore به 1080×2400 و 420dpi |
 | Corpus preservation | `node scripts/corpus_certification.mjs validate` + `summarize` | passed | 3672 source-bound؛ 51 scientifically usable؛ immutable source untouched |
 | Asset inventory | bounded recursive file inventory | passed | 3461 files؛ 89,279,651 bytes؛ 3410 WebP + 9 PNG + 32 JSON + 6 TTF + 3 SVG + 1 TXT |
+| P1 focused analysis | `flutter analyze --no-pub` روی design system، manifest و test | passed | No issues found |
+| P1 design-system tests | `flutter test --no-pub test/gauss_ui_system_test.dart` | passed | 6/6؛ ramp، occupancy، manifest، assets، contrast، motion |
+| P1 Android UI regression | همان run با `test/android_experience_test.dart` | passed | 26/26؛ مجموع P1 gate برابر 32/32 |
+| P1 production manifest | Dart spec + human-readable contract | passed | `gauss_experience_spec.dart` + `07-ui-system-and-production-manifest.md` |
 
 ## هنوز اجرا نشده
 
-- full Flutter suite پس از تغییرات.
+- full Flutter suite پس از بازسازی‌های runtime.
 - Android debug/profile/release build جدید.
 - runtime screenshot matrix پس از بازسازی.
 - physical-device Xiaomi Focus Pen profile؛ emulator proof جای آن را نمی‌گیرد.
@@ -47,3 +51,4 @@
 - touch/stylus behavior در دستگاه Xiaomi باید با runtime سخت‌افزار خودش نیز تأیید شود.
 - emulator/SwiftShader raster p95 نمایندهٔ GPU گوشی نیست، اما برای before/after هم‌شرایط معتبر است.
 - raw Timelineها محلی و بازتولیدپذیر نگه داشته می‌شوند؛ Git فقط aggregate، compact summaries، metadata و visual samples را حمل می‌کند.
+- P1 عمداً composition screenها را تغییر نداد؛ این قرارداد در P2–P6 اجرا و با captureهای ماتریس بسته می‌شود.

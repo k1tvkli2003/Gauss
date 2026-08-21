@@ -130,6 +130,10 @@ final class GaussViewport {
 }
 
 abstract final class GaussBreakpoints {
+  /// Below this width the compact composition must use its narrow-phone
+  /// reflow: one reading column, no side-by-side explanatory controls, and
+  /// no essential text truncation even at 200% text scale.
+  static const narrowPhone = 360.0;
   static const medium = 600.0;
   static const expanded = 1024.0;
   static const wide = 1440.0;
@@ -152,7 +156,11 @@ abstract final class GaussBreakpoints {
 }
 
 abstract final class GaussSpacing {
+  /// Two-pixel corrections are optical only; structural layout stays on the
+  /// four-pixel rhythm below.
+  static const optical2 = 2.0;
   static const space4 = 4.0;
+  static const optical6 = 6.0;
   static const space8 = 8.0;
   static const space12 = 12.0;
   static const space16 = 16.0;
@@ -161,10 +169,55 @@ abstract final class GaussSpacing {
   static const space32 = 32.0;
   static const space40 = 40.0;
   static const space48 = 48.0;
+  static const space56 = 56.0;
+  static const space64 = 64.0;
+}
+
+/// Physical interaction sizes. Visual glyphs may be smaller, but their live
+/// semantic hit regions must use this ramp.
+abstract final class GaussHitTargets {
+  static const minimum = 48.0;
+  static const standard = 56.0;
+  static const prominent = 64.0;
+  static const hero = 72.0;
+}
+
+abstract final class GaussIconSizes {
+  static const compact = 18.0;
+  static const standard = 20.0;
+  static const navigation = 24.0;
+  static const feature = 28.0;
+  static const hero = 32.0;
+}
+
+/// Borders carry most of the dark-theme depth so moving map content does not
+/// depend on stacked shadows or expensive backdrop blur.
+abstract final class GaussStrokes {
+  static const hairline = 1.0;
+  static const emphasis = 1.5;
+  static const selected = 2.0;
+  static const focus = 3.0;
+}
+
+/// Material depth is deliberately shallow. Large blur is reserved for fixed
+/// chrome and rare completion moments, never for every moving route node.
+abstract final class GaussElevation {
+  static const flat = 0.0;
+  static const raised = 2.0;
+  static const floating = 6.0;
+  static const ceremonial = 12.0;
+}
+
+abstract final class GaussOpacity {
+  static const hairline = .18;
+  static const quiet = .42;
+  static const secondary = .68;
+  static const strong = .88;
+  static const opaque = 1.0;
 }
 
 abstract final class GaussMetrics {
-  static const minTouchTarget = 48.0;
+  static const minTouchTarget = GaussHitTargets.minimum;
   static const compactNavigationHeight = 58.0;
   static const compactNavigationOuterInset = 10.0;
   static const compactChromeReserve = 96.0;
@@ -227,12 +280,49 @@ abstract final class GaussTypeScale {
   static const caption = 11.0;
   static const metadata = 12.0;
   static const body = 14.0;
+  static const bodyLarge = 16.0;
+  static const title = 18.0;
+  static const titleLarge = 22.0;
+  static const headline = 28.0;
+  static const display = 36.0;
+}
+
+/// Occupancy and reflow contracts shared by the Map and Astral Manuscript.
+/// These are ratios of the route-owned content area after system safe insets,
+/// not of the physical display.
+abstract final class GaussComposition {
+  static const mapPhoneHeaderMaxFraction = .23;
+  static const mapTabletHeaderMaxFraction = .18;
+  static const mapPhonePathMinFraction = .55;
+  static const mapTabletPathFraction = .66;
+  static const mapTabletInspectorFraction = .34;
+  static const mapPhoneOverlayMaxFraction = .24;
+
+  static const questionPhonePaperFraction = .94;
+  static const questionTabletPaperFraction = .62;
+  static const questionTabletSupportFraction = .38;
+  static const questionMaxReadingWidth = 820.0;
+  static const questionToolSpineWidth = 56.0;
+  static const questionReasoningMinHeight = 112.0;
+  static const questionReasoningComfortHeight = 176.0;
+  static const questionReasoningMaxCollapsedHeight = 240.0;
+
+  static const accessibilityTextScale = 1.55;
+  static const requiredMaximumTextScale = 2.0;
+
+  static bool usesQuestionSplit(GaussViewport viewport, double textScale) =>
+      viewport.supportsTwoPane &&
+      !viewport.isPortrait &&
+      textScale < accessibilityTextScale;
 }
 
 abstract final class GaussMotion {
   static const micro = Duration(milliseconds: 140);
   static const standard = Duration(milliseconds: 220);
+  static const feedback = Duration(milliseconds: 280);
+  static const emphasized = Duration(milliseconds: 360);
   static const spatial = Duration(milliseconds: 520);
+  static const ceremonial = Duration(milliseconds: 760);
 
   static Duration resolve(BuildContext context, Duration duration) =>
       MediaQuery.disableAnimationsOf(context) ? Duration.zero : duration;

@@ -104,8 +104,8 @@
 | فاز | وزن | وضعیت | خروجی پذیرفته‌شده |
 |---|---:|---|---|
 | P0 — Baseline، instrumentation و preservation | 8% | completed | journeyهای تکرارپذیر، trace baseline، hash/data guard و screenshot baseline |
-| P1 — UI system، geometry و production manifest | 7% | active | token math، surface manifest، motion/precision ledgers و vertical-slice spec |
-| P2 — بازسازی engine اسکرول و رندر Map | 18% | planned | lazy path bands، cached geometry، narrow repaint، native scroll و benchmark بهتر |
+| P1 — UI system، geometry و production manifest | 7% | completed | token math، surface manifest، motion/precision ledgers و vertical-slice spec |
+| P2 — بازسازی engine اسکرول و رندر Map | 18% | active | lazy path bands، cached geometry، narrow repaint، native scroll و benchmark بهتر |
 | P3 — بازسازی بصری و UX کامل Map | 17% | planned | header، navigator، path، node/label، Mission Compass و footer نهایی |
 | P4 — بازسازی Question، answers و stylus | 20% | planned | manuscript فشرده، قلم/لمس بی‌نقص، answer states و solution/completion |
 | P5 — shell، Study، Insights، auth، feedback و tablet | 12% | planned | یکپارچگی همه routeهای ضروری و composition اختصاصی tablet |
