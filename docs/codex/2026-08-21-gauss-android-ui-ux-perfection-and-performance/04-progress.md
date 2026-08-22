@@ -21,6 +21,7 @@
 | 2026-08-23T00:02:00+03:30 | active | vertical slice اصلی P3 بازسازی شد: curve بزرگ‌قطر با tangent مشترک، station سه‌بعدی مستقل Math/Physics، rail-to-socket docking و dissolve پیش از HUD جای shell/node/line مکانیکی را گرفت. | analyze پاک + 41/41 تست + `map-p3-math-rail-fade-live.png` و `map-p3-physics-rail-fade-live.png` محلی |
 | 2026-08-23T01:33:40+03:30 | active | identity raster دارای plate پس از رد بصری کامل حذف شد؛ theorem mark شفاف و مرکزچین با paint چندلایه، Android vector و adaptive safe foreground جای آن را در auth، Splash و launcher گرفت. | analyze پاک؛ 36/36 + 33/33 تست؛ دو debug build/install؛ [Splash](assets/p3-brand-splash-transparent.png) و [Auth](assets/p3-brand-auth-centered.png) زنده |
 | 2026-08-23T02:03:50+03:30 | active | Orbit Navigator از modal بلند و list/form به constellation switcher content-hugging بازسازی شد؛ پنج فصل، تغییر subject، preview منتخب و action نمادین بدون پوشاندن Map یا scroll ثانویه در یک قاب قرار گرفتند. | analyze پاک؛ 41/41 تست؛ debug build/install؛ [Phone](assets/p3-orbit-navigator-constellation.png) و [320dp/200%](assets/p3-orbit-navigator-320dp-200text.png) زنده |
+| 2026-08-23T02:48:54+03:30 | phase-complete | P3 بسته شد: node/aura نخست از Orbit header جدا شد، blank tail انتهای route حذف شد، Mission Compass/footer و landmarkها در matrix هفت‌نمای phone/tablet بدون overlap یا clip پاس شدند. P4 آغاز شد. | `894bdaf`؛ analyzer پاک؛ 42/42 تست؛ [start](assets/p3-map-phone-start.webp)، [end](assets/p3-map-phone-end.webp)، [tablet landscape](assets/p3-map-tablet-landscape.webp)؛ Map UI/raster p95=`4.359/20.250ms` |
 
 ## انجام‌شده تا اینجا
 
@@ -28,12 +29,13 @@
 - scope فقط Android و بدون تغییر dataset/media تثبیت شد.
 - رفرنس‌های پذیرفته‌شده و runtime baseline از هم تفکیک و ثبت شدند.
 - پیشرفت Goal با وزن گیت‌ها تعریف شد تا compile یا حجم کد به‌اشتباه completion حساب نشود.
-- P0 تا P2 کامل شدند: کل Goal اکنون 33% است؛ این درصد فقط با عبور گیت بالا رفته است.
+- P0 تا P3 کامل شدند: کل Goal اکنون 50% است؛ این درصد فقط با عبور گیت بالا رفته است.
 - finding بصری P3 قفل شد: spiral و nodeهای فعلی خشک، تکراری و مکانیکی‌اند و به‌جای polish سطحی باید با زبان مسیر/عمق/حالت تازه بازسازی شوند.
-- هستهٔ route/node همین finding اکنون در code و Android runtime اصلاح شده است؛ P3 تا بسته‌شدن landmark/Mission Compass/footer و matrix responsive همچنان active می‌ماند.
-- identity P3 اکنون از gate بصری عبور کرده است: mark و wordmark در auth محور مشترک دارند، Splash در مرکز واقعی است و هیچ baked/internal plate باقی نمانده؛ P3 برای navigator/landmark/Mission Compass/footer و matrix هنوز active است.
+- هستهٔ route/node همین finding اکنون در code و Android runtime اصلاح شده است؛ bounds واقعی aura/header و tail واقعی scene نیز regression دارند.
+- identity P3 از gate بصری عبور کرده است: mark و wordmark در auth محور مشترک دارند، Splash در مرکز واقعی است و هیچ baked/internal plate باقی نمانده است.
 - Orbit Navigator نیز از gate بصری و responsive عبور کرده است: در حالت عادی content-hugging است، در `320dp` با متن `200%` تمام کنترل‌ها حداقل `48dp` می‌مانند و summary/labels نمی‌شکنند یا ellipsize نمی‌شوند.
+- Mission Compass، footer، landmark hierarchy و matrix کامل مسیر بسته‌اند؛ exact-revision profile و package guard نیز P3 را phase-complete کرده‌اند.
 
 ## مرحله بعد
 
-- P3: تکمیل landmark و Mission Compass/footer روی هستهٔ route/node، identity و Navigator تازه؛ سپس capture و اصلاح پنج موقعیت مسیر روی Android و profile spot-check.
+- P4: بازسازی Writable Astral Manuscript، answer rails، pointer ownership و compositionهای phone/tablet؛ سپس solution/completion و performance proof.

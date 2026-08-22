@@ -1,16 +1,16 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-23T02:03:50+03:30
+- Last updated: 2026-08-23T02:48:54+03:30
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
-- Current phase: P3 — Map visual and UX rebuild
-- Goal progress: 33%
-- Product-readiness estimate: 63–68%
+- Current phase: P4 — Question, answers and stylus rebuild
+- Goal progress: 50%
+- Product-readiness estimate: 71–75%
 
 ## Current State
 
-P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد و P1 جهت پذیرفته‌شدهٔ Orrery/Astral را به قرارداد اجرایی تبدیل کرد. P2 نیز کامل شد: stage یک‌تکه و scroll-driven `setState` با sliver bandهای lazy، geometry LRU، painter ownership محدود، viewport cache bounded و decode bounded جایگزین شد. paired profile هم‌زمان در یک پنجرهٔ GPU بهبود `58%` در UI p95 و `51%` در raster p95 را در برابر engine قدیمی ثابت کرد؛ سپس پنج run نهایی exact revision `13d6597` با status کامل، UI p95 برابر `8.557ms`، raster p95 برابر `28.385ms`، PSS میانهٔ `157.033MiB` و signed-package guard بدون تغییر ثبت شد. در P3، route سینوسیِ chord-based قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شده، Math و Physics هرکدام station سه‌بعدی مستقل و بدون topic-icon overlay دارند، rail در socket خود node فرود می‌آید و محتوای map پیش از ورود به محدودهٔ ثابت Mission Compass/footer بدون backing کدر dissolve می‌شود. identity نیز پس از رد صریح raster دارای plate، به یک theorem mark شفاف و optically centered بازسازی شد: Flutter paint زنده، Splash vector و adaptive foreground یک هندسهٔ مشترک دارند، صفحهٔ ورود mark و wordmark را روی یک محور نگه می‌دارد و هیچ background داخلی پیرامون mark نمی‌کشد. Orbit Navigator هم از sheet بلند و لیست‌محور به constellation switcher جمع‌وجور بازسازی شده است: پنج chapter beacon همیشه در یک نگاه حاضرند، فقط chapter انتخاب‌شده preview زنده دارد، subject در همان قاب عوض می‌شود و action نوشتاری با کنترل نمادین جایگزین شده است. landmark hierarchy، Mission Compass/footer و matrix نهایی P3 هنوز بازند؛ بنابراین فاز هنوز complete نیست.
+P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را بستند. P3 نیز اکنون کامل است: route قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شد؛ Math و Physics station سه‌بعدی مستقل دارند؛ rail در socket node فرود می‌آید؛ header، Theorem mark شفاف و مرکزچین، Orbit Navigator constellation، landmark hierarchy، Mission Compass و footer content-hugging بدون backing کدر یکپارچه شدند. finding آخرِ runtime که نود اول را با Orbit header هم‌پوشان می‌کرد با سنجش envelope واقعی aura بسته شد؛ clearance اضافی فقط در segment نخست جذب شد تا جای تمام نودهای بعدی تغییر نکند. انتهای scene هم از cadence مصنوعی جدا شد تا آخرین micro-lesson داخل میدان زندهٔ مسیر بماند و blank tail بزرگ تولید نشود. گیت نهایی exact revision `894bdaf` شامل 42/42 regression، analyzer کامل پاک، هفت capture phone/tablet، profile spot-check و حفظ کامل `com.gauss.app` v106 است. P4 اکنون روی Writable Astral Manuscript، answer rails، touch/stylus ownership و solution/completion آغاز می‌شود.
 
 ## Decisions
 
@@ -35,10 +35,11 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 | 2026-08-23 | rail با tangent analytic، trim تا socket و occlusion dissolve ساخته شود | chord، elbow، endpoint bead و عبور node زیر HUD حس محصول مبتدی ایجاد می‌کرد | geometry tests + live Android captures |
 | 2026-08-23 | identity raster دارای navy plate حذف و mark فقط به‌صورت transparent live/vector نگه داشته شود | کاربر صریحاً background و off-center composition را رد کرد؛ لوگو باید در auth، Splash و header مستقل از هر plate باشد | user correction + Android auth/splash captures |
 | 2026-08-23 | Orbit Navigator همهٔ فصل‌ها را به‌صورت constellation یک‌نگاه نشان دهد و فقط chapter فعال preview شود | navigation فصل نباید با یک فرم بلند، scroll ثانویه و CTA نوشتاری مسیر اصلی Map را بپوشاند | user UX direction + 320dp/200% runtime proof |
+| 2026-08-23 | clearance Map با bounds بصری کامل node/aura سنجیده شود و scene دقیقاً پس از آخرین محتوای واقعی پایان یابد | center-point کافی نبود و cadence مصنوعی در انتهای مسیر dead air می‌ساخت | user runtime screenshot + geometry/runtime regressions |
 
 ## Blockers
 
-- blocker اجرایی برای P3 وجود ندارد.
+- blocker اجرایی برای P4 وجود ندارد.
 - Xiaomi Focus Pen فیزیکی در این baseline در دسترس نبود؛ stylus contract روی Android با `PointerDeviceKind.stylus` اثبات شده، اما latency و palm rejection سخت‌افزاری تا P7 یک physical-device gate باقی می‌ماند.
 
 ## Done
@@ -60,9 +61,12 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 - mark ردشدهٔ raster و تمام resourceهای plate آن حذف شد؛ Flutter theorem mark چندلایه، Android transparent vector، adaptive safe inset و auth composition روی محور مرکزی بازسازی شدند.
 - گیت identity شامل analyze کامل پاک، 36/36 سپس 33/33 regression، دو debug APK موفق، نصب in-place بستهٔ ایزوله و بررسی زندهٔ Splash/auth/adaptive icon پاس شد؛ `com.gauss.app` v106 و dataDir آن تغییر نکرد.
 - Orbit Navigator با پنج beacon حداقل `48dp`، railهای constellation، subject switch دوحالته، preview تک‌فصل و action نمادین بازسازی شد؛ analyzer پاک، 41/41 regression، debug build/install و runtime در phone عادی و `320dp`/`200%` text پاس شد.
+- Mission Compass و footer در footprint واقعی خودشان بسته شدند؛ مسیر پشت chrome بدون نوار مات باقی ماند و content/gesture shield با safe area واقعی همسو شد.
+- matrix نهایی P3 در phone start/chapter/mid/late/end و tablet portrait/landscape بررسی شد؛ نود اول با bounds کامل aura از header جدا و آخرین نود بدون dead-air tail داخل route field نگه داشته شد.
+- گیت نهایی P3 روی `894bdaf` با analyzer پاک، 42/42 تست، debug APK موفق، نصب in-place و profile spot-check پاس شد؛ Map scroll در نمونهٔ exact-revision به UI/raster p95 برابر `4.359/20.250ms` رسید و signed package/data دست‌نخورده ماند.
 
 ## Remaining
 
-- تکمیل باقی P3: landmark hierarchy، Mission Compass/footer و matrix پنج موقعیت phone/tablet؛ identity و Orbit Navigator اکنون بسته‌اند.
-- اجرای P4 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
+- اجرای P4: بازسازی ownership ink، قرارداد لمس/قلم، manuscript/answer rails و compositionهای phone/tablet.
+- اجرای P5 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

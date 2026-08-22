@@ -2,7 +2,7 @@
 
 ## Outcome
 
-کار هنوز active است. P0 تا P2 کامل و Goal gated برابر 33% است؛ vertical slice مسیر/node، identity شفاف/مرکزچین و Orbit Navigator constellation در P3 پیاده و تست شده‌اند، اما خود P3 تا بسته‌شدن landmark/Mission Compass/footer و matrix کامل Android پایان نیافته است. این فایل پایان کار را اعلام نمی‌کند.
+کار هنوز active است. P0 تا P3 کامل و Goal gated برابر 50% است. Map کامل—engine، route/node، header/identity، Orbit Navigator، landmark، Mission Compass، footer و matrix phone/tablet—از گیت P3 عبور کرده و P4 بازسازی Question/answers/stylus فعال است. این فایل پایان کار را اعلام نمی‌کند.
 
 ## Changed Artifacts
 
@@ -14,10 +14,11 @@
 - دو station سه‌بعدی production برای Math/Physics و route/socket/occlusion system زندهٔ P3.
 - theorem mark شفاف و چندلایه برای Flutter/Android، adaptive foreground اصلاح‌شده و screenshotهای زندهٔ Splash/auth.
 - Orbit Navigator content-hugging با پنج chapter beacon، subject switch، preview تک‌فصل، action نمادین و screenshotهای phone/accessibility.
+- Mission Compass/footer نهایی، geometry بدون header collision/dead-air tail، matrix هفت‌نمای Map و evidence فشردهٔ profile روی exact revision P3.
 
 ## How To Continue
 
-1. P3 را روی vertical slice route/node، identity و Navigator تازه با تکمیل landmark، Mission Compass/footer و پنج موقعیت واقعی Android ببندید.
+1. P4 را با narrow ink ownership و pointer-kind contract شروع کنید؛ manuscript، answer rails و solve instrument را روی phone/tablet بازسازی کنید.
 2. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
 3. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
 
@@ -27,13 +28,11 @@
 - P0 با پنج run phone و دو composition تبلت پاس شده است.
 - P1 با analysis و 32 تست design/Android پاس شده است.
 - P2 با lazy bands، cached geometry، narrow repaint، paired benchmark و پنج run نهایی exact revision پاس شده است.
-- P3 route/node slice با analyze پاک، 41/41 تست و visual comparison زندهٔ Math/Physics پاس شده است؛ این فقط checkpoint فاز است، نه phase-complete.
-- P3 identity slice با vector شفاف، محور auth کمتر از `0.1px`، analyze پاک، regressionهای responsive، دو debug build/install و visual proof زنده پاس شده است؛ این نیز checkpoint فاز است، نه phase-complete.
-- P3 Orbit Navigator slice با constellation پنج‌فصلی، حداقل target برابر `48dp`، حالت accessibility بدون شکستگی، analyze پاک، 41/41 regression و debug build/install پاس شده است؛ این نیز checkpoint فاز است، نه phase-complete.
+- P3 به‌طور کامل با analyzer پاک، 42/42 regression، هفت capture runtime، debug build/install، exact-revision profile spot-check و package/data guard پاس شده است.
 
 ## Remaining
 
-- پیاده‌سازی و verification فازهای P3 تا P7.
+- پیاده‌سازی و verification فازهای P4 تا P7.
 
 ## Verification
 

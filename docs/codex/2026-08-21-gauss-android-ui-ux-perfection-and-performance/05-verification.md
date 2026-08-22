@@ -3,8 +3,8 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-23T02:03:50+03:30
-- Scope: P0 baseline + P1 executable UI system/manifest + P2 closed Map engine + active P3 route/node/identity/navigator slices
+- Last verified: 2026-08-23T02:48:54+03:30
+- Scope: P0–P3 closed; P4 Question/stylus rebuild active
 
 ## بررسی‌ها
 
@@ -56,19 +56,24 @@
 | P3 Orbit Navigator responsive gate | phone عادی + `320dp`/`200%` text روی widget و Android runtime | passed slice | summary فشرده، subject control نمادین در large text، بدون ellipsis/overflow؛ [Phone](assets/p3-orbit-navigator-constellation.png) و [320dp/200%](assets/p3-orbit-navigator-320dp-200text.png) |
 | P3 Navigator regression gate | `flutter analyze --no-pub` + چهار suite اصلی Map/Android/UI | passed | analyzer بدون issue؛ 41/41 test passed |
 | P3 Navigator Android build/install | `flutter build apk --debug --no-pub` + `adb install -r -d` | passed | debug APK در `186.8s` ساخته و نصب in-place موفق شد؛ AVD به `1080×2400 @ 420dpi` و `font_scale=1.0` برگشت |
+| P3 complete Map capture matrix | Android runtime در phone start/chapter/mid/late/end و tablet portrait/landscape | passed | [start](assets/p3-map-phone-start.webp)، [chapter](assets/p3-map-phone-chapter-threshold.webp)، [mid](assets/p3-map-phone-mid.webp)، [late](assets/p3-map-phone-late.webp)، [end](assets/p3-map-phone-end.webp)، [tablet portrait](assets/p3-map-tablet-portrait.webp)، [tablet landscape](assets/p3-map-tablet-landscape.webp)؛ بدون overlap/clip/label collision |
+| P3 first-node/header clearance | keyed aura bounds + Android regression و runtime capture | passed | تمام envelope بصری `map-node-aura-*` زیر Orbit header است؛ 8dp clearance فقط در segment اول بازیابی شد تا جای nodeهای بعدی ثابت بماند |
+| P3 route-end geometry | unit + Android fling-to-end regression | passed | scene پس از آخرین node/label/landmark با tail اپتیکی 24–48dp پایان می‌یابد؛ آخرین lesson بالای Mission Compass و hit-testable است |
+| P3 final static/regression gate | `flutter analyze --no-pub` + چهار suite Map/Android/UI | passed | analyzer بدون issue در `43.8s`؛ 42/42 test passed |
+| P3 exact-revision profile spot-check | `run_android_performance.ps1 -Runs 1` روی `894bdaf5752c84db54e980eb61961406d78fc29a` | passed | 1/1 journey set؛ Map scroll UI p95=`4.359ms`، raster p95=`20.250ms`؛ [aggregate](logs/performance-p3-final-894bdaf/aggregate.json)؛ transition outlierها برای P4/P6 حفظ شدند |
+| P3 final Android/package guard | debug build/install + AVD/package inventory | passed | debug APK در `206.8s` ساخته و in-place نصب شد؛ تنها `Codex_API35` در `1080×2400 @ 420dpi`؛ `com.gauss.app` v106، dataDir و firstInstallTime بدون تغییر |
 
 ## هنوز اجرا نشده
 
 - full Flutter suite پس از بازسازی‌های runtime.
-- Android profile/release build جدید؛ debug build identity پاس شده است.
-- runtime screenshot matrix پس از بازسازی.
+- Android release build جدید؛ profile spot-check P3 و debug build پاس شده‌اند.
 - physical-device Xiaomi Focus Pen profile؛ emulator proof جای آن را نمی‌گیرد.
 
 ## مشکلات شناخته‌شده
 
-- Map renderer دیگر stage یک‌تکه یا rebuild وابسته به scroll ندارد؛ route/node P3 بازطراحی و gate موقت را پاس کرده، ولی P3 تا closure کل HUD/identity/navigator/landmark و responsive capture matrix باز است.
+- Map P3 phase-complete است: renderer، route/node، header/identity/Navigator، landmark/Mission Compass/footer و responsive capture matrix بسته‌اند.
 - blur زندهٔ moving chrome حذف شده و blur footer فقط در footprint محدود خودش باقی مانده است.
-- mission/progress/footer و بعضی landmarkها هنوز برای closure کامل P3 نیاز به بازسازی و matrix دارند؛ identity و Orbit Navigator دیگر finding باز نیستند.
+- یک‌نمونه profile P3 برای regression spot-check است، نه ادعای آماری چند-run؛ proof نهایی چند-run در P7 تکرار می‌شود.
 - question ink به بیش از یک سطح rebuild متصل است.
 - question manuscript فضای مرده و controls غالب دارد؛ answer access دیر می‌شود.
 - touch/stylus behavior در دستگاه Xiaomi باید با runtime سخت‌افزار خودش نیز تأیید شود.
@@ -77,3 +82,4 @@
 - P1 عمداً composition screenها را تغییر نداد؛ این قرارداد در P2–P6 اجرا و با captureهای ماتریس بسته می‌شود.
 - P2 phase-complete است؛ paired same-window evidence اثر engine را از drift میزبان جدا کرد و پنج run نهایی revision-bound حفظ semantics/package را ثابت کرد.
 - absolute raster اعداد emulator تحت host/GPU drift هستند؛ بهبود tail ادعاشده بر paired same-window comparison تکیه دارد و physical-device proof همچنان در P7 انجام می‌شود.
+- outlierهای transition در Map→Mission UI و Mission→Map raster به‌عنوان finding باز P4/P6 نگه داشته شده‌اند و در بستن این فاز پنهان نشده‌اند.
