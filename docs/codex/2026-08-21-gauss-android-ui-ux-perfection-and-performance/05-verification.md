@@ -3,8 +3,8 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-23T01:33:40+03:30
-- Scope: P0 baseline + P1 executable UI system/manifest + P2 closed Map engine + active P3 route/node/identity slices
+- Last verified: 2026-08-23T02:03:50+03:30
+- Scope: P0 baseline + P1 executable UI system/manifest + P2 closed Map engine + active P3 route/node/identity/navigator slices
 
 ## بررسی‌ها
 
@@ -52,6 +52,10 @@
 | P3 identity Android builds | `flutter build apk --debug --no-pub` دو بار، قبل و بعد از inset نهایی | passed | `app-debug.apk` در `172.4s` و `91.9s` ساخته و هر دو بار با `adb install -r -d` موفق نصب شد |
 | P3 Splash/auth visual proof | cold start بستهٔ `com.gauss.app.debug` روی `Codex_API35` | passed slice | [Splash](assets/p3-brand-splash-transparent.png) mark را بدون plate در مرکز واقعی و [Auth](assets/p3-brand-auth-centered.png) mark/wordmark را روی یک محور نشان می‌دهد |
 | P3 package/data guard after identity | AVD/package inventory قبل و بعد | passed | تنها `Codex_API35`؛ `com.gauss.app` v106، dataDir و firstInstallTime بدون تغییر؛ فقط debug package in-place به‌روز شد |
+| P3 Orbit Navigator interaction contract | widget tests روی بازکردن Navigator، subject switch، انتخاب chapter و action | passed | هر پنج chapter beacon حاضر و حداقل `48dp`؛ انتخاب با section ID پایدار؛ CTA نوشتاری و `FilledButton` حذف شده‌اند |
+| P3 Orbit Navigator responsive gate | phone عادی + `320dp`/`200%` text روی widget و Android runtime | passed slice | summary فشرده، subject control نمادین در large text، بدون ellipsis/overflow؛ [Phone](assets/p3-orbit-navigator-constellation.png) و [320dp/200%](assets/p3-orbit-navigator-320dp-200text.png) |
+| P3 Navigator regression gate | `flutter analyze --no-pub` + چهار suite اصلی Map/Android/UI | passed | analyzer بدون issue؛ 41/41 test passed |
+| P3 Navigator Android build/install | `flutter build apk --debug --no-pub` + `adb install -r -d` | passed | debug APK در `186.8s` ساخته و نصب in-place موفق شد؛ AVD به `1080×2400 @ 420dpi` و `font_scale=1.0` برگشت |
 
 ## هنوز اجرا نشده
 
@@ -64,7 +68,7 @@
 
 - Map renderer دیگر stage یک‌تکه یا rebuild وابسته به scroll ندارد؛ route/node P3 بازطراحی و gate موقت را پاس کرده، ولی P3 تا closure کل HUD/identity/navigator/landmark و responsive capture matrix باز است.
 - blur زندهٔ moving chrome حذف شده و blur footer فقط در footprint محدود خودش باقی مانده است.
-- Orbit Navigator، mission/progress/footer و بعضی landmarkها هنوز برای closure کامل P3 نیاز به بازسازی و matrix دارند؛ identity دیگر finding باز نیست.
+- mission/progress/footer و بعضی landmarkها هنوز برای closure کامل P3 نیاز به بازسازی و matrix دارند؛ identity و Orbit Navigator دیگر finding باز نیستند.
 - question ink به بیش از یک سطح rebuild متصل است.
 - question manuscript فضای مرده و controls غالب دارد؛ answer access دیر می‌شود.
 - touch/stylus behavior در دستگاه Xiaomi باید با runtime سخت‌افزار خودش نیز تأیید شود.

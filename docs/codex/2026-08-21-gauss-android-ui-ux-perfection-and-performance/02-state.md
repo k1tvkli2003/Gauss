@@ -1,7 +1,7 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-23T01:33:40+03:30
+- Last updated: 2026-08-23T02:03:50+03:30
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
 - Current phase: P3 — Map visual and UX rebuild
@@ -10,7 +10,7 @@
 
 ## Current State
 
-P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد و P1 جهت پذیرفته‌شدهٔ Orrery/Astral را به قرارداد اجرایی تبدیل کرد. P2 نیز کامل شد: stage یک‌تکه و scroll-driven `setState` با sliver bandهای lazy، geometry LRU، painter ownership محدود، viewport cache bounded و decode bounded جایگزین شد. paired profile هم‌زمان در یک پنجرهٔ GPU بهبود `58%` در UI p95 و `51%` در raster p95 را در برابر engine قدیمی ثابت کرد؛ سپس پنج run نهایی exact revision `13d6597` با status کامل، UI p95 برابر `8.557ms`، raster p95 برابر `28.385ms`، PSS میانهٔ `157.033MiB` و signed-package guard بدون تغییر ثبت شد. در P3، route سینوسیِ chord-based قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شده، Math و Physics هرکدام station سه‌بعدی مستقل و بدون topic-icon overlay دارند، rail در socket خود node فرود می‌آید و محتوای map پیش از ورود به محدودهٔ ثابت Mission Compass/footer بدون backing کدر dissolve می‌شود. identity نیز پس از رد صریح raster دارای plate، به یک theorem mark شفاف و optically centered بازسازی شد: Flutter paint زنده، Splash vector و adaptive foreground یک هندسهٔ مشترک دارند، صفحهٔ ورود mark و wordmark را روی یک محور نگه می‌دارد و هیچ background داخلی پیرامون mark نمی‌کشد. Orbit Navigator، landmark hierarchy، Mission Compass/footer و matrix نهایی P3 هنوز بازند؛ بنابراین فاز هنوز complete نیست.
+P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد و P1 جهت پذیرفته‌شدهٔ Orrery/Astral را به قرارداد اجرایی تبدیل کرد. P2 نیز کامل شد: stage یک‌تکه و scroll-driven `setState` با sliver bandهای lazy، geometry LRU، painter ownership محدود، viewport cache bounded و decode bounded جایگزین شد. paired profile هم‌زمان در یک پنجرهٔ GPU بهبود `58%` در UI p95 و `51%` در raster p95 را در برابر engine قدیمی ثابت کرد؛ سپس پنج run نهایی exact revision `13d6597` با status کامل، UI p95 برابر `8.557ms`، raster p95 برابر `28.385ms`، PSS میانهٔ `157.033MiB` و signed-package guard بدون تغییر ثبت شد. در P3، route سینوسیِ chord-based قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شده، Math و Physics هرکدام station سه‌بعدی مستقل و بدون topic-icon overlay دارند، rail در socket خود node فرود می‌آید و محتوای map پیش از ورود به محدودهٔ ثابت Mission Compass/footer بدون backing کدر dissolve می‌شود. identity نیز پس از رد صریح raster دارای plate، به یک theorem mark شفاف و optically centered بازسازی شد: Flutter paint زنده، Splash vector و adaptive foreground یک هندسهٔ مشترک دارند، صفحهٔ ورود mark و wordmark را روی یک محور نگه می‌دارد و هیچ background داخلی پیرامون mark نمی‌کشد. Orbit Navigator هم از sheet بلند و لیست‌محور به constellation switcher جمع‌وجور بازسازی شده است: پنج chapter beacon همیشه در یک نگاه حاضرند، فقط chapter انتخاب‌شده preview زنده دارد، subject در همان قاب عوض می‌شود و action نوشتاری با کنترل نمادین جایگزین شده است. landmark hierarchy، Mission Compass/footer و matrix نهایی P3 هنوز بازند؛ بنابراین فاز هنوز complete نیست.
 
 ## Decisions
 
@@ -34,6 +34,7 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 | 2026-08-23 | Math و Physics station topology مستقل داشته باشند و topic icon روی node حذف شود | subject باید از silhouette، material و energy language خوانده شود، نه badge چسبانده‌شده | user correction + Android visual comparison |
 | 2026-08-23 | rail با tangent analytic، trim تا socket و occlusion dissolve ساخته شود | chord، elbow، endpoint bead و عبور node زیر HUD حس محصول مبتدی ایجاد می‌کرد | geometry tests + live Android captures |
 | 2026-08-23 | identity raster دارای navy plate حذف و mark فقط به‌صورت transparent live/vector نگه داشته شود | کاربر صریحاً background و off-center composition را رد کرد؛ لوگو باید در auth، Splash و header مستقل از هر plate باشد | user correction + Android auth/splash captures |
+| 2026-08-23 | Orbit Navigator همهٔ فصل‌ها را به‌صورت constellation یک‌نگاه نشان دهد و فقط chapter فعال preview شود | navigation فصل نباید با یک فرم بلند، scroll ثانویه و CTA نوشتاری مسیر اصلی Map را بپوشاند | user UX direction + 320dp/200% runtime proof |
 
 ## Blockers
 
@@ -58,9 +59,10 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 - gate موقت P3 شامل analyze پاک و 41/41 تست geometry/responsive/Android/UI-system پاس شد؛ captureهای phone Math و Physics به‌صورت زنده با footer و Mission Compass بررسی شدند.
 - mark ردشدهٔ raster و تمام resourceهای plate آن حذف شد؛ Flutter theorem mark چندلایه، Android transparent vector، adaptive safe inset و auth composition روی محور مرکزی بازسازی شدند.
 - گیت identity شامل analyze کامل پاک، 36/36 سپس 33/33 regression، دو debug APK موفق، نصب in-place بستهٔ ایزوله و بررسی زندهٔ Splash/auth/adaptive icon پاس شد؛ `com.gauss.app` v106 و dataDir آن تغییر نکرد.
+- Orbit Navigator با پنج beacon حداقل `48dp`، railهای constellation، subject switch دوحالته، preview تک‌فصل و action نمادین بازسازی شد؛ analyzer پاک، 41/41 regression، debug build/install و runtime در phone عادی و `320dp`/`200%` text پاس شد.
 
 ## Remaining
 
-- تکمیل باقی P3: Orbit Navigator، landmark hierarchy، Mission Compass/footer و matrix پنج موقعیت phone/tablet؛ identity اکنون بسته است.
+- تکمیل باقی P3: landmark hierarchy، Mission Compass/footer و matrix پنج موقعیت phone/tablet؛ identity و Orbit Navigator اکنون بسته‌اند.
 - اجرای P4 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

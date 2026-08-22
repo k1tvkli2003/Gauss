@@ -1225,14 +1225,36 @@ void main() {
       find.byKey(const ValueKey('orbit-navigator-course-switch')),
       findsOneWidget,
     );
-    await tester.tap(find.text('Functions and equations'));
+    final mathChapters = GaussStudyCurriculum.forSubject(Subject.math);
+    expect(
+      find.byKey(const ValueKey('orbit-navigator-chapter-list')),
+      findsOneWidget,
+    );
+    for (final chapter in mathChapters) {
+      final beacon = find.byKey(ValueKey('orbit-chapter-${chapter.id}'));
+      expect(beacon, findsOneWidget);
+      expect(tester.getRect(beacon).width, greaterThanOrEqualTo(48));
+      expect(tester.getRect(beacon).height, greaterThanOrEqualTo(48));
+    }
+    await tester.tap(
+      find.byKey(ValueKey('orbit-chapter-${mathChapters[1].id}')),
+    );
     await tester.pumpAndSettle();
 
+    expect(find.text('Functions and equations'), findsOneWidget);
     expect(
       find.byKey(const ValueKey('orbit-navigator-continue')),
       findsOneWidget,
     );
-    expect(find.text('Continue here'), findsOneWidget);
+    expect(find.text('Continue here'), findsNothing);
+    expect(
+      find.descendant(
+        of: find.byKey(const ValueKey('orbit-navigator')),
+        matching: find.byType(FilledButton),
+      ),
+      findsNothing,
+      reason: 'Chapter continuation is a symbolic orbit gate, not a form CTA.',
+    );
     await tester.tap(find.byKey(const ValueKey('orbit-navigator-continue')));
     await tester.pumpAndSettle();
 
@@ -1304,16 +1326,65 @@ void main() {
 
       final navigator = find.byKey(const ValueKey('orbit-navigator'));
       expect(navigator, findsOneWidget);
+      final navigatorRect = tester.getRect(navigator);
       final close = find.byKey(const ValueKey('orbit-navigator-close'));
       expect(tester.getRect(close).width, greaterThanOrEqualTo(48));
       expect(tester.getRect(close).height, greaterThanOrEqualTo(48));
-      for (final text in tester.widgetList<Text>(
-        find.descendant(of: navigator, matching: find.byType(Text)),
-      )) {
+      final header = find.byKey(const ValueKey('orbit-navigator-header'));
+      final courseSummary = find.byKey(
+        const ValueKey('orbit-navigator-course-summary'),
+      );
+      expect(
+        tester.getRect(header).contains(tester.getRect(courseSummary).topLeft),
+        isTrue,
+      );
+      expect(
+        tester
+            .getRect(header)
+            .contains(tester.getRect(courseSummary).bottomRight),
+        isTrue,
+      );
+      final courseSwitch = find.byKey(
+        const ValueKey('orbit-navigator-course-switch'),
+      );
+      expect(
+        find.descendant(of: courseSwitch, matching: find.byType(Text)),
+        findsNothing,
+        reason:
+            'At 200 percent text the dual orbit uses symbols and semantics '
+            'instead of clipping course names.',
+      );
+      final chapters = GaussStudyCurriculum.forSubject(Subject.math);
+      for (final chapter in chapters) {
+        final beacon = find.byKey(ValueKey('orbit-chapter-${chapter.id}'));
+        expect(beacon, findsOneWidget);
+        expect(tester.getRect(beacon).width, greaterThanOrEqualTo(48));
+        expect(tester.getRect(beacon).height, greaterThanOrEqualTo(48));
+      }
+      final navigatorTexts = find.descendant(
+        of: navigator,
+        matching: find.byType(Text),
+      );
+      for (final text in tester.widgetList<Text>(navigatorTexts)) {
         expect(
           text.overflow,
           isNot(TextOverflow.ellipsis),
           reason: 'Navigator content must reflow instead of hiding a phrase.',
+        );
+      }
+      for (final element in navigatorTexts.evaluate()) {
+        final textRect = tester.getRect(
+          find.byElementPredicate((candidate) => candidate == element),
+        );
+        expect(
+          textRect.left,
+          greaterThanOrEqualTo(navigatorRect.left - .5),
+          reason: 'Navigator text escaped its left edge: $textRect',
+        );
+        expect(
+          textRect.right,
+          lessThanOrEqualTo(navigatorRect.right + .5),
+          reason: 'Navigator text escaped its right edge: $textRect',
         );
       }
       expect(tester.takeException(), isNull);
