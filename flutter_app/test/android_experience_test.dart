@@ -767,17 +767,24 @@ void main() {
       controller.topics,
     ).first;
     final finder = find.byKey(ValueKey('map-node-${firstNode.key}'));
+    final aura = find.byKey(ValueKey('map-node-aura-${firstNode.key}'));
+    final orbitSelector = find.byKey(const ValueKey('map-orbit-selector'));
     expect(finder, findsOneWidget);
+    expect(aura, findsOneWidget);
     expect(
       tester.getCenter(finder).dy,
       greaterThan(
-        tester
-                .getBottomRight(
-                  find.byKey(const ValueKey('map-orbit-selector')),
-                )
-                .dy +
-            GaussSpacing.space16,
+        tester.getBottomRight(orbitSelector).dy + GaussSpacing.space16,
       ),
+    );
+    expect(
+      tester.getRect(aura).top,
+      greaterThanOrEqualTo(
+        tester.getBottomRight(orbitSelector).dy + GaussSpacing.space12,
+      ),
+      reason:
+          'The complete selected-station aura must clear the Orbit header, '
+          'not only its mathematical centre.',
     );
     expect(
       tester.getCenter(finder).dy,
@@ -788,6 +795,53 @@ void main() {
     );
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets(
+    'phone map ends with its final lesson in the live route field instead of dead air',
+    (tester) async {
+      const size = Size(390, 844);
+      await _pumpMap(
+        tester,
+        controller: controller,
+        size: size,
+        textScale: 1,
+        reducedMotion: true,
+      );
+
+      final section = GaussStudyCurriculum.forSubject(Subject.math).first;
+      final lastNode = GaussStudyCurriculum.nodesFor(
+        section,
+        controller.topics,
+      ).last;
+      final route = find.byKey(const ValueKey('map-study-path-scrollable'));
+      await tester.fling(route, const Offset(0, -12000), 12000);
+      await tester.pumpAndSettle();
+
+      final lastLesson = find.byKey(ValueKey('map-node-${lastNode.key}'));
+      final pathRect = tester.getRect(
+        find.byKey(const ValueKey('map-study-path-scroll')),
+      );
+      final dockRect = tester.getRect(
+        find.byKey(const ValueKey('map-study-dock')),
+      );
+      expect(lastLesson, findsOneWidget);
+      final lastRect = tester.getRect(lastLesson);
+      expect(
+        lastRect.center.dy,
+        greaterThan(pathRect.top + pathRect.height * .35),
+        reason:
+            'Max scroll must compose the final lesson in the route field, '
+            'not pin it above a viewport of empty sky.',
+      );
+      expect(
+        lastRect.bottom,
+        lessThanOrEqualTo(dockRect.top - GaussMetrics.mapOverlayGap),
+        reason: 'The final lesson still has to clear Mission Compass.',
+      );
+      expect(lastLesson.hitTestable(), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
 
   testWidgets(
     'phone Map keeps chapter threshold translucent and restores the lesson in the upper route field',

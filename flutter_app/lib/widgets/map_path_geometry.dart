@@ -99,11 +99,12 @@ final class GaussPathGeometry {
     final tangents = <Offset>[];
     final headers = <GaussUnitHeaderGeometry>[];
     final landmarks = <GaussLandmarkGeometry>[];
-    var y = compact
-        ? scale >= 1.55
-              ? 18.0
-              : 52.0
-        : 40.0;
+    // The compact first chapter lives in Orbit Navigator, so it has no unit
+    // gate to create vertical clearance. Reserve the complete emphasized
+    // station envelope here (including its 1.28x aura and selected scale),
+    // not merely the 76dp image box; otherwise the first orbit ring touches
+    // the fixed Orbit header even though the node centre technically fits.
+    var y = compact ? 72.0 : 40.0;
     var unitNumber = 0;
 
     // One slow orbital wave spans many micro-lessons. Its radius is hundreds
@@ -210,10 +211,38 @@ final class GaussPathGeometry {
       final cadence = compact
           ? compactCadence[index % compactCadence.length]
           : regularCadence[index % regularCadence.length] + (expanded ? 12 : 0);
-      y += cadence + (compact ? 32 : 22) * (scale - 1);
+      // The extra first-station header clearance is recovered inside the
+      // first rail segment so every later lesson retains its proven position
+      // and bottom-HUD clearance.
+      final firstRailRecovery = compact && index == 0 ? 8.0 : 0.0;
+      y +=
+          cadence -
+          firstRailRecovery +
+          (compact ? 32 : 22) * (scale - 1);
     }
 
-    final height = y + (compact ? 166 : 190);
+    // Finish the authored scene at its last real visual, not one full cadence
+    // plus an arbitrary footer reservoir beyond it. The viewport adds the
+    // live HUD obstruction separately, so retaining the post-last cadence
+    // here strands the final lesson near the top of an otherwise empty
+    // screen at max scroll.
+    final lastNodeBottom = positions.isEmpty
+        ? 0.0
+        : positions.last.dy + nodeSize / 2;
+    final lastHeaderBottom = headers.fold<double>(
+      0,
+      (bottom, header) => math.max(bottom, header.y + header.height),
+    );
+    final lastLandmarkBottom = landmarks.fold<double>(
+      0,
+      (bottom, landmark) => math.max(bottom, landmark.top + landmark.size),
+    );
+    final height =
+        math.max(
+          lastNodeBottom,
+          math.max(lastHeaderBottom, lastLandmarkBottom),
+        ) +
+        (compact ? 32 : 40);
     final bands = GaussPathBand.partition(
       positions: positions,
       headers: headers,

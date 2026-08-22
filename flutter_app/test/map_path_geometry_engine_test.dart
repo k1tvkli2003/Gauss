@@ -47,6 +47,21 @@ void main() {
         .expand((band) => band.segmentIndices)
         .toSet();
     expect(paintedSegments, hasLength(nodes.length - 1));
+
+    final finalVisualBottom = math.max(
+      geometry.positions.last.dy + geometry.nodeSize / 2,
+      geometry.landmarks.fold<double>(
+        0,
+        (bottom, landmark) => math.max(bottom, landmark.top + landmark.size),
+      ),
+    );
+    expect(
+      geometry.height - finalVisualBottom,
+      inInclusiveRange(24, 48),
+      reason:
+          'The scene may keep a small optical tail, but not a blank cadence '
+          'after its final lesson or landmark.',
+    );
   });
 
   test(

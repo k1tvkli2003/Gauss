@@ -3322,7 +3322,12 @@ class _StudyNode extends StatelessWidget {
               children: [
                 if (current || selected)
                   CustomPaint(
-                    size: Size.square(size * 1.28),
+                    key: ValueKey('map-node-aura-${node.key}'),
+                    // The emphasized station itself already scales to 1.13x.
+                    // A 1.18x aura keeps its orbital halo outside the metal
+                    // body without letting the transformed paint envelope
+                    // trespass into compact fixed chrome.
+                    size: Size.square(size * 1.18),
                     painter: _CurrentNodeAuraPainter(
                       accent: accent,
                       selected: selected,
