@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/app/gauss_app.dart';
 import 'package:gauss/app/gauss_design_system.dart';
@@ -452,7 +453,6 @@ void main() {
         final copy = find.byKey(const ValueKey('map-study-dock-copy'));
         final emblem = find.byKey(const ValueKey('map-study-dock-emblem'));
         final action = find.byKey(const ValueKey('map-study-dock-action'));
-        final mainRow = find.byKey(const ValueKey('map-study-dock-main-row'));
         final readings = find.byKey(const ValueKey('map-study-dock-readings'));
         final caseLabel = '$size at ${textScale}x text';
 
@@ -670,9 +670,12 @@ void main() {
         );
         if (readingsRect != null) {
           expect(
-            tester.getRect(mainRow).bottom,
-            lessThanOrEqualTo(readingsRect.top),
-            reason: '$caseLabel metadata belongs on its own adaptive tier',
+            copyRect.contains(readingsRect.topLeft) &&
+                copyRect.contains(readingsRect.bottomRight),
+            isTrue,
+            reason:
+                '$caseLabel five-question progress belongs inside the one '
+                'Mission Compass plaque, not in a second floating strip',
           );
         }
 
@@ -700,7 +703,22 @@ void main() {
                 '${(element.widget as Text).data} at $textRect vs $dockRect',
           );
         }
-        expect(tester.takeException(), isNull, reason: '$caseLabel overflow');
+        final exception = tester.takeException();
+        if (exception case FlutterError error) {
+          final diagnostics = error.diagnostics
+              .map((node) => node.toStringDeep())
+              .join('\n');
+          final overflowingFlexes = tester.allRenderObjects
+              .whereType<RenderFlex>()
+              .where((render) => render.toString().contains('OVERFLOWING'))
+              .map((render) => render.toStringDeep())
+              .join('\n');
+          fail(
+            '$caseLabel overflow\n$diagnostics\n'
+            'Overflowing flexes:\n$overflowingFlexes',
+          );
+        }
+        expect(exception, isNull, reason: '$caseLabel overflow');
       }
     }
   });
@@ -891,6 +909,48 @@ void main() {
     expect(mathRect.overlaps(physicsRect), isFalse);
     expect(find.bySemanticsLabel('Mathematics study path'), findsOneWidget);
     expect(find.bySemanticsLabel('Physics study path'), findsOneWidget);
+
+    final mathSection = GaussStudyCurriculum.forSubject(Subject.math).first;
+    final mathNode = GaussStudyCurriculum.nodesFor(
+      mathSection,
+      controller.topics,
+    ).first;
+    expect(
+      find.byKey(ValueKey('map-node-math-station-${mathNode.key}')),
+      findsOneWidget,
+    );
+    expect(
+      find.descendant(
+        of: find.byKey(ValueKey('map-node-${mathNode.key}')),
+        matching: find.byType(TopicGlyph),
+      ),
+      findsNothing,
+      reason: 'Math identity belongs to the astrolabe body, not an overlay.',
+    );
+
+    await tester.tap(physics);
+    await tester.pumpAndSettle();
+    final physicsSection = GaussStudyCurriculum.forSubject(
+      Subject.physics,
+    ).first;
+    final physicsNode = GaussStudyCurriculum.nodesFor(
+      physicsSection,
+      controller.topics,
+    ).first;
+    expect(
+      find.byKey(ValueKey('map-node-physics-station-${physicsNode.key}')),
+      findsOneWidget,
+    );
+    expect(
+      find.descendant(
+        of: find.byKey(ValueKey('map-node-${physicsNode.key}')),
+        matching: find.byType(TopicGlyph),
+      ),
+      findsNothing,
+      reason: 'Physics identity belongs to the gyroscope body, not an overlay.',
+    );
+    await tester.tap(find.byKey(const ValueKey('map-subject-math')));
+    await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
   });
 

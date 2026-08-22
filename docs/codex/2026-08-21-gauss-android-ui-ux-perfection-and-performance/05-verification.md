@@ -3,8 +3,8 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-21T23:47:24+03:30
-- Scope: P0 baseline + P1 executable UI system/manifest + P2 closed Map engine
+- Last verified: 2026-08-23T00:02:00+03:30
+- Scope: P0 baseline + P1 executable UI system/manifest + P2 closed Map engine + active P3 route/node slice
 
 ## بررسی‌ها
 
@@ -43,6 +43,10 @@
 | P2 glass policy | runtime profile + screenshot inspection | passed pilot | moving-card blur حذف؛ footer blur فقط در bounding box خودش، بدون full-width backing |
 | P2 final exact-revision profile | `run_android_performance.ps1 -Runs 5` روی `13d6597` | passed | 5/5 run؛ Map UI p95=`8.557ms`، raster p95=`28.385ms`، PSS median=`157.033MiB`؛ [aggregate](logs/performance-p2-final-13d6597/aggregate.json) |
 | P2 final semantics and package guard | five journeys + before/after package metadata | passed | semantic IDs ثابت؛ `com.gauss.app` v106 hash `9e7f9fa3…3916af` قبل/بعد دقیقاً یکسان |
+| P3 station assets | decoded image metadata + runtime inspection | passed slice | Math `1254×1254` و Physics `1285×1224`، هر دو `Format32bppArgb` با transparency واقعی و semantic state زنده |
+| P3 route geometry | unit tests روی cadence، lane، shared tangent، bow و contiguous metric | passed | curve واقعی در بیش از 70% segmentها از chord فاصله دارد و در هر station tangent پیوسته است |
+| P3 route/node regressions | `flutter test --no-pub test/map_path_geometry_engine_test.dart test/map_geometry_test.dart test/android_experience_test.dart test/gauss_ui_system_test.dart` | passed | 41/41؛ phone 320dp، 200% text، tablet portrait/landscape، subject swap و semantic node IDs |
+| P3 phone visual slice | Android `com.gauss.app.debug` روی `Codex_API35` | passed slice | Math/Physics current+future station، socket docking، label anchors و HUD dissolve دستی بررسی شد؛ فایل‌های capture محلی‌اند |
 
 ## هنوز اجرا نشده
 
@@ -53,7 +57,7 @@
 
 ## مشکلات شناخته‌شده
 
-- Map renderer دیگر stage یک‌تکه یا rebuild وابسته به scroll ندارد؛ ریسک فعلی کیفیت بصری route/node در P3 است.
+- Map renderer دیگر stage یک‌تکه یا rebuild وابسته به scroll ندارد؛ route/node P3 بازطراحی و gate موقت را پاس کرده، ولی P3 تا closure کل HUD/identity/navigator/landmark و responsive capture matrix باز است.
 - blur زندهٔ moving chrome حذف شده و blur footer فقط در footprint محدود خودش باقی مانده است.
 - header، orbit strip، mission/progress/footer تراکم و انسداد بصری دارند.
 - question ink به بیش از یک سطح rebuild متصل است.

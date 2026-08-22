@@ -10,6 +10,7 @@ import '../domain/study_curriculum.dart';
 final class GaussPathGeometry {
   const GaussPathGeometry({
     required this.positions,
+    required this.tangents,
     required this.unitHeaders,
     required this.landmarks,
     required this.bands,
@@ -18,11 +19,58 @@ final class GaussPathGeometry {
   });
 
   final List<Offset> positions;
+
+  /// Unit-y tangent vectors sampled from the authored orbital curve.
+  /// Keeping them with the geometry lets separately painted lazy bands share
+  /// the exact same curve direction at every lesson station.
+  final List<Offset> tangents;
   final List<GaussUnitHeaderGeometry> unitHeaders;
   final List<GaussLandmarkGeometry> landmarks;
   final List<GaussPathBand> bands;
   final double nodeSize;
   final double height;
+
+  /// A continuous large-radius orbital curve, not straight chords joined at
+  /// lesson stations. The stored analytic tangents make every cubic segment
+  /// meet its neighbours without elbows while preserving visible, gentle
+  /// curvature between nodes.
+  Path pathForSegment(int index) {
+    assert(index >= 0 && index < positions.length - 1);
+    final path = Path();
+    _appendSegment(path, index, moveToStart: true);
+    return path;
+  }
+
+  /// Builds one uninterrupted rail for a contiguous lazy-render band. This
+  /// avoids round-capped mini-lines between stations while allowing active
+  /// progress overlays to keep their own state-specific styling.
+  Path pathForSegments(Iterable<int> indices) {
+    final path = Path();
+    int? previous;
+    for (final index in indices) {
+      assert(index >= 0 && index < positions.length - 1);
+      _appendSegment(path, index, moveToStart: previous != index - 1);
+      previous = index;
+    }
+    return path;
+  }
+
+  void _appendSegment(Path path, int index, {required bool moveToStart}) {
+    final start = positions[index];
+    final end = positions[index + 1];
+    final thirdHeight = (end.dy - start.dy) / 3;
+    final control1 = start + tangents[index] * thirdHeight;
+    final control2 = end - tangents[index + 1] * thirdHeight;
+    if (moveToStart) path.moveTo(start.dx, start.dy);
+    path.cubicTo(
+      control1.dx,
+      control1.dy,
+      control2.dx,
+      control2.dy,
+      end.dx,
+      end.dy,
+    );
+  }
 
   static GaussPathGeometry build({
     required double width,
@@ -33,25 +81,60 @@ final class GaussPathGeometry {
     final expanded = width >= 760;
     final scale = textScale.clamp(1.0, 2.0).toDouble();
     final nodeSize = compact
-        ? 72.0
+        ? 76.0
         : expanded
-        ? 108.0
-        : 96.0;
+        ? 110.0
+        : 94.0;
     final center = width / 2;
     final amplitude = math.min(
       width *
           (compact
-              ? .25
+              ? .27
               : expanded
-              ? .34
-              : .31),
-      expanded ? 270.0 : 225.0,
+              ? .31
+              : .29),
+      expanded ? 246.0 : 184.0,
     );
     final positions = <Offset>[];
+    final tangents = <Offset>[];
     final headers = <GaussUnitHeaderGeometry>[];
     final landmarks = <GaussLandmarkGeometry>[];
-    var y = compact ? 38.0 : 28.0;
+    var y = compact
+        ? scale >= 1.55
+              ? 18.0
+              : 52.0
+        : 40.0;
     var unitNumber = 0;
+
+    // One slow orbital wave spans many micro-lessons. Its radius is hundreds
+    // of logical pixels, so it reads like a small window onto a much larger
+    // celestial circle instead of a zig-zag made from short straight lines.
+    // A restrained second harmonic removes sterile repetition without
+    // introducing kinks or changing the large-radius character.
+    final wavelength = compact
+        ? 1120.0
+        : expanded
+        ? 2000.0
+        : 1380.0;
+    final angularRate = math.pi * 2 / wavelength;
+    const routePhase = -.25;
+    double routeX(double routeY) {
+      final angle = routeY * angularRate + routePhase;
+      final orbit = .92 * math.sin(angle) + .08 * math.sin(2 * angle + .7);
+      return center + amplitude * orbit;
+    }
+
+    Offset routeTangent(double routeY) {
+      final angle = routeY * angularRate + routePhase;
+      final derivative =
+          amplitude *
+          angularRate *
+          (.92 * math.cos(angle) + .16 * math.cos(2 * angle + .7));
+      return Offset(derivative, 1);
+    }
+
+    const compactCadence = <double>[120, 110, 132, 116, 128, 108, 136, 118];
+    const regularCadence = <double>[148, 136, 162, 142, 154, 134, 166, 146];
 
     for (var index = 0; index < nodes.length; index++) {
       final node = nodes[index];
@@ -84,14 +167,14 @@ final class GaussPathGeometry {
               (compact
                   ? accessibilityCompact
                         ? 14
-                        : 48
+                        : 50
                   : 52);
         }
       }
 
-      final phase = index * 1.2 + unitNumber * .5;
-      final x = center + math.sin(phase) * amplitude;
+      final x = routeX(y);
       positions.add(Offset(x, y));
+      tangents.add(routeTangent(y));
       final openingLandmark = index == 0;
       final intervalLandmark = index > 2 && index % 6 == 4;
       if (openingLandmark || intervalLandmark) {
@@ -124,14 +207,13 @@ final class GaussPathGeometry {
           ),
         );
       }
-      y += compact
-          ? 96 + 32 * (scale - 1)
-          : expanded
-          ? 154
-          : 146;
+      final cadence = compact
+          ? compactCadence[index % compactCadence.length]
+          : regularCadence[index % regularCadence.length] + (expanded ? 12 : 0);
+      y += cadence + (compact ? 32 : 22) * (scale - 1);
     }
 
-    final height = y + 150;
+    final height = y + (compact ? 166 : 190);
     final bands = GaussPathBand.partition(
       positions: positions,
       headers: headers,
@@ -142,6 +224,7 @@ final class GaussPathGeometry {
     );
     return GaussPathGeometry(
       positions: List.unmodifiable(positions),
+      tangents: List.unmodifiable(tangents),
       unitHeaders: List.unmodifiable(headers),
       landmarks: List.unmodifiable(landmarks),
       bands: List.unmodifiable(bands),

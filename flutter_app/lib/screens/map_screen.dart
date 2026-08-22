@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show ScrollCacheExtent;
@@ -178,7 +177,6 @@ class _MapScreenState extends State<MapScreen> {
               final textScale = MediaQuery.textScalerOf(context).scale(1);
               final showInspector =
                   viewport.showsPersistentInspector && textScale < 1.6;
-              final accessibleDock = textScale >= 1.55;
               final dockWidth = math.min(
                 math.max(0.0, constraints.maxWidth - GaussSpacing.space24),
                 window.isCompact ? 340.0 : 420.0,
@@ -197,7 +195,10 @@ class _MapScreenState extends State<MapScreen> {
               // The floating instrument no longer owns an opaque full-width
               // panel. Reserve only its measured controls and reading tier so
               // the route retains useful vertical presence behind it.
-              final dockReservedHeight = accessibleDock ? 128.0 : 96.0;
+              // Reserve a small optical safety ring beyond the live compass;
+              // a node may remain visible behind the transparent rail, but
+              // no part of its 48dp hit target may enter the control field.
+              const dockReservedHeight = 94.0;
               final bottomObstruction = showInspector
                   ? GaussMetrics.mapBottomObstruction(window)
                   : dockBottom +
@@ -380,7 +381,7 @@ class _MapHeader extends StatelessWidget {
     // top controls therefore float directly over it; only the actionable
     // orbit selector keeps a glass enclosure. This also returns horizontal
     // room to compact English metrics without weakening their touch targets.
-    padding: const EdgeInsets.fromLTRB(18, 10, 18, 8),
+    padding: const EdgeInsets.fromLTRB(18, 4, 18, 4),
     child: LayoutBuilder(
       builder: (context, constraints) {
         final compact = constraints.maxWidth < 620;
@@ -427,7 +428,7 @@ class _MapHeader extends StatelessWidget {
               // Compact Course copy is already encoded by the crest semantics
               // and the live reading, so its ornamental caption can yield the
               // vertical space to the actual learning path.
-              height: compact ? 92 : 116,
+              height: compact ? 84 : 116,
               child: Column(
                 children: [
                   SizedBox(
@@ -503,7 +504,7 @@ class _MapHeader extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: compact ? 6 : 10),
             _OrbitSelector(
               section: section,
               sectionIndex: sections.indexOf(section) + 1,
@@ -935,7 +936,14 @@ class _MapCourseProgressCrest extends StatelessWidget {
     final progress = total == 0 ? 0.0 : (reflected / total).clamp(0.0, 1.0);
     final accessible = MediaQuery.textScalerOf(context).scale(1) >= 1.6;
     final compactCrest = tight || accessible;
-    final ringSize = compactCrest ? 44.0 : 48.0;
+    // At 200% Android text the live course reading still needs 16dp after
+    // clamping. Give it real room instead of letting the central crest spill
+    // out of the masthead by a couple of pixels.
+    final ringSize = accessible
+        ? 42.0
+        : compactCrest
+        ? 44.0
+        : 48.0;
     return Semantics(
       container: true,
       label: '$reflected of $total course questions charted.',
@@ -957,7 +965,7 @@ class _MapCourseProgressCrest extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 2),
+              SizedBox(height: accessible ? 0 : 2),
               MediaQuery.withClampedTextScaling(
                 maxScaleFactor: 1.35,
                 child: Text(
@@ -2193,6 +2201,7 @@ class _StudyPathStageState extends State<_StudyPathStage> {
   final ScrollController _scrollController = ScrollController();
   final GaussPathGeometryCache _geometryCache = GaussPathGeometryCache();
   GaussPathGeometry? _geometry;
+  GaussPathGeometry? _positionedGeometry;
   String? _positionedSectionId;
 
   @override
@@ -2204,6 +2213,7 @@ class _StudyPathStageState extends State<_StudyPathStage> {
       // blindly resetting to offset zero and visually disagreeing with the
       // restored/selected learning topic.
       _positionedSectionId = null;
+      _positionedGeometry = null;
     }
   }
 
@@ -2265,8 +2275,10 @@ class _StudyPathStageState extends State<_StudyPathStage> {
               node.questionCount,
       ]);
       final completedSignature = Object.hashAll(completed);
-      if (_positionedSectionId != widget.section.id) {
+      if (_positionedSectionId != widget.section.id ||
+          !identical(_positionedGeometry, geometry)) {
         _positionedSectionId = widget.section.id;
+        _positionedGeometry = geometry;
         final sectionId = widget.section.id;
         final selectedIndex = widget.nodes.indexWhere(
           (node) => node.key == widget.selectedKey,
@@ -2286,40 +2298,43 @@ class _StudyPathStageState extends State<_StudyPathStage> {
         key: const ValueKey('map-study-path-scroll'),
         fit: StackFit.expand,
         children: [
-          CustomScrollView(
-            key: const ValueKey('map-study-path-scrollable'),
-            controller: _scrollController,
-            scrollCacheExtent: ScrollCacheExtent.pixels(
-              math.min(900.0, math.max(520.0, liveViewportHeight * 1.1)),
-            ),
-            slivers: [
-              SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (context, bandIndex) => _StudyPathBand(
-                    key: ValueKey('map-path-band-$bandIndex'),
-                    band: geometry.bands[bandIndex],
-                    geometry: geometry,
-                    controller: widget.controller,
-                    nodes: widget.nodes,
-                    currentIndex: widget.currentIndex,
-                    selectedKey: widget.selectedKey,
-                    completed: completed,
-                    completedSignature: completedSignature,
-                    stageWidth: constraints.maxWidth,
-                    onSelected: widget.onSelected,
+          _MapViewportOcclusionFade(
+            bottomObstruction: widget.bottomObstruction,
+            child: CustomScrollView(
+              key: const ValueKey('map-study-path-scrollable'),
+              controller: _scrollController,
+              scrollCacheExtent: ScrollCacheExtent.pixels(
+                math.min(900.0, math.max(520.0, liveViewportHeight * 1.1)),
+              ),
+              slivers: [
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (context, bandIndex) => _StudyPathBand(
+                      key: ValueKey('map-path-band-$bandIndex'),
+                      band: geometry.bands[bandIndex],
+                      geometry: geometry,
+                      controller: widget.controller,
+                      nodes: widget.nodes,
+                      currentIndex: widget.currentIndex,
+                      selectedKey: widget.selectedKey,
+                      completed: completed,
+                      completedSignature: completedSignature,
+                      stageWidth: constraints.maxWidth,
+                      onSelected: widget.onSelected,
+                    ),
+                    childCount: geometry.bands.length,
+                    addAutomaticKeepAlives: false,
+                    addRepaintBoundaries: true,
+                    addSemanticIndexes: false,
                   ),
-                  childCount: geometry.bands.length,
-                  addAutomaticKeepAlives: false,
-                  addRepaintBoundaries: true,
-                  addSemanticIndexes: false,
                 ),
-              ),
-              SliverToBoxAdapter(
-                child: SizedBox(
-                  height: widget.bottomObstruction + GaussSpacing.space32,
+                SliverToBoxAdapter(
+                  child: SizedBox(
+                    height: widget.bottomObstruction + GaussSpacing.space32,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           if (widget.bottomObstruction > 0)
             Positioned(
@@ -2336,6 +2351,51 @@ class _StudyPathStageState extends State<_StudyPathStage> {
       );
     },
   );
+}
+
+/// Dissolves map instruments before they enter the fixed Mission Compass and
+/// shell-footer control field. The astronomical backdrop remains untouched, so
+/// this creates neither an opaque shelf nor the false full-width bar that the
+/// floating HUD replaced.
+class _MapViewportOcclusionFade extends StatelessWidget {
+  const _MapViewportOcclusionFade({
+    required this.bottomObstruction,
+    required this.child,
+  });
+
+  final double bottomObstruction;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    if (bottomObstruction <= 0) return child;
+    return ShaderMask(
+      key: const ValueKey('map-overlay-occlusion-fade'),
+      blendMode: BlendMode.dstIn,
+      shaderCallback: (bounds) {
+        final boundary = (bounds.height - bottomObstruction).clamp(
+          0.0,
+          bounds.height,
+        );
+        final fadeStart = (boundary - GaussSpacing.space32).clamp(
+          0.0,
+          bounds.height,
+        );
+        final fadeEnd = (boundary + GaussSpacing.space12).clamp(
+          fadeStart + .001,
+          bounds.height,
+        );
+        final height = math.max(1.0, bounds.height);
+        return LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: const [Colors.white, Colors.white, Colors.transparent],
+          stops: [0, fadeStart / height, fadeEnd / height],
+        ).createShader(bounds);
+      },
+      child: child,
+    );
+  }
 }
 
 class _StudyPathBand extends StatelessWidget {
@@ -2387,7 +2447,8 @@ class _StudyPathBand extends StatelessWidget {
           child: ExcludeSemantics(
             child: CustomPaint(
               painter: _ContinuousPathPainter(
-                positions: geometry.positions,
+                geometry: geometry,
+                subject: nodes.first.topic.subject,
                 segmentIndices: band.segmentIndices,
                 completed: completed,
                 completedSignature: completedSignature,
@@ -2432,6 +2493,20 @@ class _StudyPathBand extends StatelessWidget {
               snapshot: controller.study.shelf(nodes[nodeIndex].key),
               current: nodeIndex == currentIndex,
               selected: nodes[nodeIndex].key == selectedKey,
+              future: nodeIndex > currentIndex,
+              entryAngle: nodeIndex == 0
+                  ? null
+                  : math.atan2(
+                          geometry.tangents[nodeIndex].dy,
+                          geometry.tangents[nodeIndex].dx,
+                        ) +
+                        math.pi,
+              exitAngle: nodeIndex >= geometry.positions.length - 1
+                  ? null
+                  : math.atan2(
+                      geometry.tangents[nodeIndex].dy,
+                      geometry.tangents[nodeIndex].dx,
+                    ),
               onPressed: () => onSelected(nodes[nodeIndex]),
             ),
           ),
@@ -2891,31 +2966,34 @@ class _PathNodeLabel extends StatelessWidget {
     final compact = stageWidth < 560;
     final largeText = MediaQuery.textScalerOf(context).scale(1) >= 1.55;
     final emphasized = isCurrent || selected;
-    final width = math.min(
+    final desiredWidth = math.min(
       compact
           ? largeText
-                ? 146.0
+                ? 142.0
                 : emphasized
-                ? 132.0
-                : 124.0
-          : 156.0,
-      math.max(compact ? 112.0 : 126.0, stageWidth * (compact ? .4 : .27)),
+                ? 138.0
+                : 132.0
+          : 172.0,
+      math.max(compact ? 120.0 : 138.0, stageWidth * (compact ? .43 : .29)),
     );
-    final rightPreferred =
-        position.dx + nodeSize * .58 + width <= stageWidth - 6;
+    final nodeReach = nodeSize * .61;
+    final leadingCapacity = math.max(0.0, position.dx - nodeReach - 6);
+    final trailingCapacity = math.max(
+      0.0,
+      stageWidth - 6 - (position.dx + nodeReach),
+    );
+    // Central lessons cannot fit the ideal label width on either side at
+    // 320dp. Choose the roomier side and let the label reflow into the exact
+    // available lane instead of clamping a full-width plate through the node.
+    final rightPreferred = trailingCapacity >= leadingCapacity;
+    final availableWidth = rightPreferred ? trailingCapacity : leadingCapacity;
+    final width = math.min(desiredWidth, math.max(92.0, availableWidth));
     final left = rightPreferred
-        ? position.dx + nodeSize * .58
-        : math.max(6.0, position.dx - nodeSize * .58 - width);
-    final anchor = Container(
-      width: emphasized ? 6 : 4,
-      height: emphasized ? 6 : 4,
-      decoration: BoxDecoration(
-        color: emphasized
-            ? GaussColors.signalBright
-            : GaussColors.brassLight.withValues(alpha: .66),
-        shape: BoxShape.circle,
-      ),
-    );
+        ? position.dx + nodeReach
+        : math.max(6.0, position.dx - nodeReach - width);
+    final accent = emphasized
+        ? GaussColors.signalBright
+        : GaussColors.brassLight;
     return Positioned(
       key: ValueKey('map-node-label-${node.key}'),
       left: left,
@@ -2925,37 +3003,39 @@ class _PathNodeLabel extends StatelessWidget {
         child: IgnorePointer(
           child: AnimatedOpacity(
             duration: GaussMotion.resolve(context, GaussMotion.micro),
-            opacity: emphasized ? 1 : .86,
+            opacity: emphasized ? 1 : .94,
             child: MediaQuery.withClampedTextScaling(
               maxScaleFactor: 1.35,
               child: AnimatedContainer(
                 duration: GaussMotion.resolve(context, GaussMotion.micro),
                 curve: Curves.easeOutCubic,
-                padding: EdgeInsetsDirectional.fromSTEB(
-                  emphasized ? 7 : 4,
-                  emphasized ? 5 : 3,
-                  emphasized ? 7 : 4,
-                  emphasized ? 5 : 3,
-                ),
-                decoration: BoxDecoration(
-                  color: GaussColors.deepInk.withValues(
-                    alpha: emphasized ? .64 : .16,
-                  ),
-                  borderRadius: BorderRadius.circular(emphasized ? 14 : 10),
-                  border: Border.all(
-                    color:
-                        (emphasized
-                                ? GaussColors.signalBright
-                                : GaussColors.brass)
-                            .withValues(alpha: emphasized ? .3 : .045),
-                  ),
-                ),
+                padding: const EdgeInsets.symmetric(vertical: 3),
+                decoration: emphasized
+                    ? BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: rightPreferred
+                              ? Alignment.centerLeft
+                              : Alignment.centerRight,
+                          end: rightPreferred
+                              ? Alignment.centerRight
+                              : Alignment.centerLeft,
+                          colors: [
+                            GaussColors.deepInk.withValues(alpha: .58),
+                            GaussColors.deepInk.withValues(alpha: .06),
+                          ],
+                        ),
+                      )
+                    : null,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     if (rightPreferred) ...[
-                      anchor,
-                      const SizedBox(width: GaussSpacing.space8),
+                      _OrbitalLabelAnchor(
+                        pointsTowardStart: true,
+                        color: accent,
+                        emphasized: emphasized,
+                      ),
+                      const SizedBox(width: GaussSpacing.space4),
                     ],
                     Expanded(
                       child: Column(
@@ -2971,8 +3051,10 @@ class _PathNodeLabel extends StatelessWidget {
                             style: TextStyle(
                               color: emphasized
                                   ? GaussColors.ivory
-                                  : GaussColors.fog,
-                              fontSize: compact ? (emphasized ? 10.5 : 10) : 13,
+                                  : GaussColors.ivory.withValues(alpha: .74),
+                              fontSize: compact
+                                  ? (emphasized ? 10.8 : 10.2)
+                                  : 13,
                               height: 1.22,
                               fontWeight: emphasized
                                   ? FontWeight.w900
@@ -2984,7 +3066,7 @@ class _PathNodeLabel extends StatelessWidget {
                           ),
                           const SizedBox(height: 3),
                           Text(
-                            '${snapshot.reflected} / ${node.questionCount} CHARTED',
+                            '${snapshot.reflected} / ${node.questionCount}  ·  ${isCurrent ? 'CURRENT' : 'LESSON'}',
                             textAlign: rightPreferred
                                 ? TextAlign.start
                                 : TextAlign.end,
@@ -2993,7 +3075,7 @@ class _PathNodeLabel extends StatelessWidget {
                               color: emphasized
                                   ? GaussColors.signalBright
                                   : GaussColors.signal.withValues(alpha: .86),
-                              fontSize: compact ? 8.5 : GaussTypeScale.insignia,
+                              fontSize: compact ? 8.2 : GaussTypeScale.insignia,
                               height: 1.2,
                               fontWeight: FontWeight.w900,
                               letterSpacing: .32,
@@ -3003,8 +3085,12 @@ class _PathNodeLabel extends StatelessWidget {
                       ),
                     ),
                     if (!rightPreferred) ...[
-                      const SizedBox(width: GaussSpacing.space8),
-                      anchor,
+                      const SizedBox(width: GaussSpacing.space4),
+                      _OrbitalLabelAnchor(
+                        pointsTowardStart: false,
+                        color: accent,
+                        emphasized: emphasized,
+                      ),
                     ],
                   ],
                 ),
@@ -3017,6 +3103,68 @@ class _PathNodeLabel extends StatelessWidget {
   }
 }
 
+class _OrbitalLabelAnchor extends StatelessWidget {
+  const _OrbitalLabelAnchor({
+    required this.pointsTowardStart,
+    required this.color,
+    required this.emphasized,
+  });
+
+  final bool pointsTowardStart;
+  final Color color;
+  final bool emphasized;
+
+  @override
+  Widget build(BuildContext context) => SizedBox(
+    width: emphasized ? 16 : 12,
+    height: 34,
+    child: CustomPaint(
+      painter: _OrbitalLabelAnchorPainter(
+        pointsTowardStart: pointsTowardStart,
+        color: color,
+        emphasized: emphasized,
+      ),
+    ),
+  );
+}
+
+class _OrbitalLabelAnchorPainter extends CustomPainter {
+  const _OrbitalLabelAnchorPainter({
+    required this.pointsTowardStart,
+    required this.color,
+    required this.emphasized,
+  });
+
+  final bool pointsTowardStart;
+  final Color color;
+  final bool emphasized;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final near = pointsTowardStart ? 0.0 : size.width;
+    final far = pointsTowardStart ? size.width : 0.0;
+    final y = size.height * .5;
+    canvas.drawLine(
+      Offset(near, y),
+      Offset(far, y),
+      Paint()
+        ..strokeWidth = emphasized ? 1.4 : .8
+        ..color = color.withValues(alpha: emphasized ? .72 : .38),
+    );
+    canvas.drawCircle(
+      Offset(near, y),
+      emphasized ? 2.5 : 1.8,
+      Paint()..color = color.withValues(alpha: emphasized ? .95 : .7),
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _OrbitalLabelAnchorPainter oldDelegate) =>
+      oldDelegate.pointsTowardStart != pointsTowardStart ||
+      oldDelegate.color != color ||
+      oldDelegate.emphasized != emphasized;
+}
+
 class _StudyNode extends StatelessWidget {
   const _StudyNode({
     required this.node,
@@ -3025,6 +3173,9 @@ class _StudyNode extends StatelessWidget {
     required this.snapshot,
     required this.current,
     required this.selected,
+    required this.future,
+    required this.entryAngle,
+    required this.exitAngle,
     required this.onPressed,
   });
 
@@ -3034,18 +3185,23 @@ class _StudyNode extends StatelessWidget {
   final StudyTopicSnapshot snapshot;
   final bool current;
   final bool selected;
+  final bool future;
+  final double? entryAngle;
+  final double? exitAngle;
   final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     final reducedMotion = MediaQuery.disableAnimationsOf(context);
-    final progress = (snapshot.reflected / node.questionCount).clamp(0.0, 1.0);
     final complete = snapshot.reflected >= node.questionCount;
+    final mathStation = node.topic.subject == Subject.math;
     final accent = complete
         ? GaussColors.signalBright
         : current || selected
-        ? GaussColors.brassLight
-        : node.topic.subject == Subject.math
+        ? mathStation
+              ? GaussColors.brassLight
+              : GaussColors.ice
+        : mathStation
         ? GaussColors.brass
         : GaussColors.ice;
     return Semantics(
@@ -3065,7 +3221,13 @@ class _StudyNode extends StatelessWidget {
               ? Duration.zero
               : const Duration(milliseconds: 220),
           curve: Curves.easeOutBack,
-          scale: selected ? 1.09 : 1,
+          scale: current
+              ? 1.13
+              : selected
+              ? 1.07
+              : future
+              ? .98
+              : 1,
           child: SizedBox.square(
             dimension: size,
             child: Stack(
@@ -3074,37 +3236,49 @@ class _StudyNode extends StatelessWidget {
               children: [
                 if (current || selected)
                   CustomPaint(
-                    size: Size.square(size * 1.18),
+                    size: Size.square(size * 1.28),
                     painter: _CurrentNodeAuraPainter(
                       accent: accent,
                       selected: selected,
                     ),
                   ),
-                Image.asset(
-                  'assets/visual/nodes/topic_shell.png',
-                  width: size * .96,
-                  height: size * .96,
-                  cacheWidth: _boundedRasterWidth(
-                    context,
-                    size * .96,
-                    sourceWidth: 1254,
-                    minimum: 144,
+                RepaintBoundary(
+                  key: ValueKey(
+                    'map-node-${node.topic.subject.name}-station-${node.key}',
                   ),
-                  filterQuality: FilterQuality.medium,
+                  child: Opacity(
+                    opacity: future && !selected ? .72 : 1,
+                    child: Image.asset(
+                      node.topic.subject == Subject.math
+                          ? 'assets/visual/nodes/math_astrolabe_station_v2.png'
+                          : 'assets/visual/nodes/physics_gyroscope_station_v2.png',
+                      width: size * 1.04,
+                      height: size * 1.04,
+                      fit: BoxFit.contain,
+                      cacheWidth: _boundedRasterWidth(
+                        context,
+                        size * 1.04,
+                        sourceWidth: node.topic.subject == Subject.math
+                            ? 1254
+                            : 1285,
+                        minimum: 192,
+                      ),
+                      filterQuality: FilterQuality.medium,
+                    ),
+                  ),
                 ),
                 CustomPaint(
-                  size: Size.square(size * .88),
-                  painter: _NodeProgressPainter(
-                    color: accent,
-                    progress: progress,
+                  size: Size.square(size),
+                  painter: _SubjectStationOverlayPainter(
+                    subject: node.topic.subject,
+                    accent: accent,
+                    reflected: snapshot.reflected,
                     emphasized: current || selected,
+                    complete: complete,
+                    future: future && !selected,
+                    entryAngle: entryAngle,
+                    exitAngle: exitAngle,
                   ),
-                ),
-                _NodeGlyphCore(
-                  topicKey: node.topic.key,
-                  accent: accent,
-                  emphasized: current || selected,
-                  nodeSize: size,
                 ),
                 PositionedDirectional(
                   end: -3,
@@ -3115,13 +3289,19 @@ class _StudyNode extends StatelessWidget {
                   const PositionedDirectional(
                     start: 2,
                     bottom: 3,
-                    child: _NodeStatePin(color: GaussColors.signalBright),
+                    child: _NodeStateJewel(
+                      color: GaussColors.signalBright,
+                      diamond: true,
+                    ),
                   )
                 else if (snapshot.revisit > 0)
                   const PositionedDirectional(
                     start: 2,
                     bottom: 3,
-                    child: _NodeStatePin(color: GaussColors.warning),
+                    child: _NodeStateJewel(
+                      color: GaussColors.warning,
+                      diamond: false,
+                    ),
                   ),
               ],
             ),
@@ -3132,100 +3312,189 @@ class _StudyNode extends StatelessWidget {
   }
 }
 
-/// The topic mark belongs in a mounted instrument core, not directly on top
-/// of the textured shell.  The shallow glass/lens makes every vector glyph
-/// read as a deliberate part of the node at phone scale.
-class _NodeGlyphCore extends StatelessWidget {
-  const _NodeGlyphCore({
-    required this.topicKey,
+class _SubjectStationOverlayPainter extends CustomPainter {
+  const _SubjectStationOverlayPainter({
+    required this.subject,
     required this.accent,
+    required this.reflected,
     required this.emphasized,
-    required this.nodeSize,
+    required this.complete,
+    required this.future,
+    required this.entryAngle,
+    required this.exitAngle,
   });
 
-  final String topicKey;
+  final Subject subject;
   final Color accent;
+  final int reflected;
   final bool emphasized;
-  final double nodeSize;
-
-  @override
-  Widget build(BuildContext context) {
-    final coreSize = (nodeSize * (emphasized ? .42 : .38))
-        .clamp(28.0, 38.0)
-        .toDouble();
-    return Container(
-      width: coreSize,
-      height: coreSize,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        gradient: RadialGradient(
-          colors: [
-            accent.withValues(alpha: emphasized ? .28 : .2),
-            GaussColors.deepInk.withValues(alpha: .98),
-          ],
-        ),
-        border: Border.all(color: accent.withValues(alpha: .72), width: 1.15),
-        boxShadow: [
-          BoxShadow(
-            color: accent.withValues(alpha: emphasized ? .23 : .12),
-            blurRadius: emphasized ? 10 : 7,
-          ),
-        ],
-      ),
-      child: TopicGlyph(
-        topicKey: topicKey,
-        color: accent,
-        size: coreSize * .52,
-      ),
-    );
-  }
-}
-
-class _NodeProgressPainter extends CustomPainter {
-  const _NodeProgressPainter({
-    required this.color,
-    required this.progress,
-    required this.emphasized,
-  });
-
-  final Color color;
-  final double progress;
-  final bool emphasized;
+  final bool complete;
+  final bool future;
+  final double? entryAngle;
+  final double? exitAngle;
 
   @override
   void paint(Canvas canvas, Size size) {
-    final rect = Offset.zero & size;
-    canvas.drawArc(
-      rect.deflate(2),
-      -math.pi / 2,
-      math.pi * 2,
-      false,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = emphasized ? 2.2 : 1.2
-        ..color = color.withValues(alpha: emphasized ? .62 : .2),
-    );
-    if (progress > 0) {
+    final center = size.center(Offset.zero);
+    final opacity = future ? .58 : 1.0;
+    for (final angle in [entryAngle, exitAngle]) {
+      if (angle != null) {
+        _paintDockingPort(canvas, center, size.shortestSide, angle, opacity);
+      }
+    }
+    _paintLessonBearings(canvas, center, size.shortestSide, opacity);
+    if (complete) {
       canvas.drawArc(
-        rect.deflate(2),
-        -math.pi / 2,
-        math.pi * 2 * progress,
+        Rect.fromCircle(center: center, radius: size.shortestSide * .485),
+        -math.pi * .72,
+        math.pi * 1.44,
         false,
         Paint()
           ..style = PaintingStyle.stroke
           ..strokeCap = StrokeCap.round
-          ..strokeWidth = 3.2
-          ..color = GaussColors.signalBright,
+          ..strokeWidth = 2.1
+          ..color = GaussColors.signalBright.withValues(alpha: .88),
+      );
+    }
+  }
+
+  void _paintDockingPort(
+    Canvas canvas,
+    Offset center,
+    double extent,
+    double angle,
+    double opacity,
+  ) {
+    final metal = subject == Subject.math
+        ? GaussColors.brassLight
+        : GaussColors.ice;
+    canvas.save();
+    canvas.translate(center.dx, center.dy);
+    canvas.rotate(angle);
+    // The live rail terminates just inside this recessed collar.  A short
+    // channel continues beneath the station body, so the connection reads as
+    // one engineered instrument rather than a line touching an image.
+    final portCenter = Offset(extent * .405, 0);
+    final outerRadius = extent * .058;
+    final channelStart = Offset(extent * .338, 0);
+    final channelEnd = Offset(extent * .44, 0);
+    canvas.drawLine(
+      channelStart,
+      channelEnd,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round
+        ..strokeWidth = extent * .054
+        ..color = const Color(0xE603090C),
+    );
+    canvas.drawLine(
+      channelStart,
+      channelEnd,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round
+        ..strokeWidth = extent * .026
+        ..color = metal.withValues(alpha: .78 * opacity),
+    );
+    canvas.drawLine(
+      channelStart,
+      channelEnd,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round
+        ..strokeWidth = extent * .009
+        ..color = accent.withValues(alpha: .9 * opacity),
+    );
+    canvas.drawCircle(
+      portCenter + Offset(0, extent * .018),
+      outerRadius,
+      Paint()
+        ..color = const Color(0xCC010609)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2.5),
+    );
+    canvas.drawCircle(
+      portCenter,
+      outerRadius,
+      Paint()
+        ..shader =
+            RadialGradient(
+              center: const Alignment(-.35, -.42),
+              colors: [
+                metal.withValues(alpha: .9 * opacity),
+                const Color(0xFF132126).withValues(alpha: .98 * opacity),
+              ],
+            ).createShader(
+              Rect.fromCircle(center: portCenter, radius: outerRadius),
+            ),
+    );
+    canvas.drawCircle(
+      portCenter,
+      extent * .034,
+      Paint()..color = const Color(0xFF031014).withValues(alpha: opacity),
+    );
+    canvas.drawCircle(
+      portCenter,
+      extent * .013,
+      Paint()..color = accent.withValues(alpha: .92 * opacity),
+    );
+    canvas.drawCircle(
+      portCenter - Offset(extent * .004, extent * .004),
+      extent * .004,
+      Paint()..color = GaussColors.ivory.withValues(alpha: .82 * opacity),
+    );
+    canvas.restore();
+  }
+
+  void _paintLessonBearings(
+    Canvas canvas,
+    Offset center,
+    double extent,
+    double opacity,
+  ) {
+    final filledCount = reflected.clamp(0, GaussStudyCurriculum.batchSize);
+    final bearingColor = complete ? GaussColors.signalBright : accent;
+    for (var index = 0; index < GaussStudyCurriculum.batchSize; index++) {
+      final angle =
+          math.pi * (.17 + .66 * index / (GaussStudyCurriculum.batchSize - 1));
+      final point =
+          center + Offset(math.cos(angle), math.sin(angle)) * (extent * .315);
+      final filled = index < filledCount;
+      canvas.drawCircle(
+        point + Offset(0, extent * .006),
+        emphasized ? 2.5 : 2.2,
+        Paint()..color = const Color(0xB8010507),
+      );
+      canvas.drawCircle(
+        point,
+        emphasized ? 1.9 : 1.65,
+        Paint()
+          ..color = filled
+              ? bearingColor.withValues(alpha: .96 * opacity)
+              : const Color(0xFF13252B).withValues(alpha: .9 * opacity),
+      );
+      canvas.drawCircle(
+        point,
+        emphasized ? 1.9 : 1.65,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = .8
+          ..color = bearingColor.withValues(
+            alpha: (filled ? .9 : .42) * opacity,
+          ),
       );
     }
   }
 
   @override
-  bool shouldRepaint(covariant _NodeProgressPainter oldDelegate) =>
-      oldDelegate.color != color ||
-      oldDelegate.progress != progress ||
-      oldDelegate.emphasized != emphasized;
+  bool shouldRepaint(covariant _SubjectStationOverlayPainter oldDelegate) =>
+      oldDelegate.subject != subject ||
+      oldDelegate.accent != accent ||
+      oldDelegate.reflected != reflected ||
+      oldDelegate.emphasized != emphasized ||
+      oldDelegate.complete != complete ||
+      oldDelegate.future != future ||
+      oldDelegate.entryAngle != entryAngle ||
+      oldDelegate.exitAngle != exitAngle;
 }
 
 class _CurrentNodeAuraPainter extends CustomPainter {
@@ -3303,35 +3572,35 @@ class _NodeNumber extends StatelessWidget {
   );
 }
 
-class _NodeStatePin extends StatelessWidget {
-  const _NodeStatePin({required this.color});
+class _NodeStateJewel extends StatelessWidget {
+  const _NodeStateJewel({required this.color, required this.diamond});
 
   final Color color;
+  final bool diamond;
 
   @override
-  Widget build(BuildContext context) => Container(
-    width: 11,
-    height: 11,
-    alignment: Alignment.center,
-    decoration: BoxDecoration(
-      color: GaussColors.deepInk,
-      shape: BoxShape.circle,
-      border: Border.all(color: color, width: 1.5),
-      boxShadow: [
-        BoxShadow(color: color.withValues(alpha: .35), blurRadius: 6),
-      ],
-    ),
+  Widget build(BuildContext context) => Transform.rotate(
+    angle: diamond ? math.pi / 4 : 0,
     child: Container(
-      width: 4,
-      height: 4,
-      decoration: BoxDecoration(shape: BoxShape.circle, color: color),
+      width: diamond ? 13 : 11,
+      height: diamond ? 13 : 11,
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: .86),
+        shape: diamond ? BoxShape.rectangle : BoxShape.circle,
+        borderRadius: diamond ? BorderRadius.circular(2.5) : null,
+        border: Border.all(color: GaussColors.ivory.withValues(alpha: .72)),
+        boxShadow: [
+          BoxShadow(color: color.withValues(alpha: .45), blurRadius: 7),
+        ],
+      ),
     ),
   );
 }
 
 class _ContinuousPathPainter extends CustomPainter {
   const _ContinuousPathPainter({
-    required this.positions,
+    required this.geometry,
+    required this.subject,
     required this.segmentIndices,
     required this.completed,
     required this.completedSignature,
@@ -3339,7 +3608,8 @@ class _ContinuousPathPainter extends CustomPainter {
     required this.bandTop,
   });
 
-  final List<Offset> positions;
+  final GaussPathGeometry geometry;
+  final Subject subject;
   final List<int> segmentIndices;
   final List<bool> completed;
   final int completedSignature;
@@ -3348,122 +3618,159 @@ class _ContinuousPathPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    if (positions.length < 2) return;
+    if (geometry.positions.length < 2) return;
+    final subjectMetal = subject == Subject.math
+        ? GaussColors.brass
+        : const Color(0xFF5B9EAC);
+    final subjectHighlight = subject == Subject.math
+        ? GaussColors.brassLight
+        : GaussColors.ice;
     canvas.save();
     canvas.translate(0, -bandTop);
     for (final index in segmentIndices) {
+      final source = geometry.pathForSegment(index);
+      final sourceMetric = source.computeMetrics().single;
+      final trim = math.min(
+        geometry.nodeSize * .405,
+        sourceMetric.length * .32,
+      );
+      final rail = sourceMetric.extractPath(
+        trim,
+        math.max(trim + 1, sourceMetric.length - trim),
+      );
+      final railMetric = rail.computeMetrics().single;
       final isComplete = completed[index];
       final isCurrentLead = index == currentIndex;
-      final segment = _segment(positions[index], positions[index + 1]);
-      final bounds = Rect.fromPoints(
-        positions[index],
-        positions[index + 1],
-      ).inflate(18);
-      final metric = segment.computeMetrics().single;
+      final energized = isComplete || isCurrentLead;
+      final energy = isComplete ? GaussColors.signalBright : subjectHighlight;
+      final bounds = rail.getBounds().inflate(14);
 
-      // The route is an inlaid celestial rail: a deep shadow makes it sit in
-      // the sky, the thin brass line keeps future travel legible, and active
-      // segments receive a restrained energy current rather than a flat line.
-      canvas.drawPath(
-        segment,
-        Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 8
-          ..strokeCap = StrokeCap.round
-          ..color = const Color(0xD803090B),
-      );
-      canvas.drawPath(
-        segment,
-        Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 1.9
-          ..strokeCap = StrokeCap.round
-          ..color = GaussColors.brass.withValues(alpha: .48),
-      );
-
-      if (isComplete || isCurrentLead) {
-        final accent = isCurrentLead
-            ? GaussColors.brassLight
-            : GaussColors.signalBright;
-        if (isCurrentLead || index >= currentIndex - 2) {
-          canvas.drawPath(
-            segment,
-            Paint()
-              ..style = PaintingStyle.stroke
-              ..strokeWidth = isCurrentLead ? 13 : 8
-              ..strokeCap = StrokeCap.round
-              ..color = accent.withValues(alpha: isCurrentLead ? .22 : .12),
-          );
-        }
+      if (energized) {
         canvas.drawPath(
-          segment,
+          rail,
           Paint()
             ..style = PaintingStyle.stroke
-            ..strokeWidth = isCurrentLead ? 4 : 3
+            ..strokeWidth = isCurrentLead ? 9 : 7
             ..strokeCap = StrokeCap.round
-            ..shader = LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                accent.withValues(alpha: .38),
-                accent.withValues(alpha: .94),
-                accent.withValues(alpha: .48),
-              ],
-            ).createShader(bounds),
+            ..color = energy.withValues(alpha: isCurrentLead ? .2 : .12)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4),
         );
-      } else {
-        _drawFutureDashes(canvas, metric);
       }
+      canvas.drawPath(
+        rail,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 6.6
+          ..strokeCap = StrokeCap.round
+          ..color = const Color(0xD8010507),
+      );
+      canvas.drawPath(
+        rail,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 3.9
+          ..strokeCap = StrokeCap.round
+          ..shader = LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              const Color(0xFF111A1D),
+              subjectMetal.withValues(alpha: energized ? .9 : .58),
+              const Color(0xFF071014),
+            ],
+          ).createShader(bounds),
+      );
+      canvas.drawPath(
+        rail,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = energized ? 1.65 : 1.25
+          ..strokeCap = StrokeCap.round
+          ..shader = LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: energized
+                ? [
+                    energy.withValues(alpha: .42),
+                    energy.withValues(alpha: .98),
+                    energy.withValues(alpha: .48),
+                  ]
+                : [
+                    subjectHighlight.withValues(alpha: .22),
+                    subjectMetal.withValues(alpha: .62),
+                    subjectHighlight.withValues(alpha: .18),
+                  ],
+          ).createShader(bounds),
+      );
+      canvas.drawPath(
+        rail,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = .48
+          ..strokeCap = StrokeCap.round
+          ..color = GaussColors.ivory.withValues(alpha: energized ? .46 : .22),
+      );
+
+      final start = railMetric.getTangentForOffset(0)?.position;
+      final end = railMetric.getTangentForOffset(railMetric.length)?.position;
+      if (start != null) _drawCouplerGlow(canvas, start, energy, energized);
+      if (end != null) _drawCouplerGlow(canvas, end, energy, energized);
 
       if (isCurrentLead) {
         for (var marker = 1; marker <= 3; marker++) {
-          final tangent = metric.getTangentForOffset(
-            metric.length * marker / 4,
+          final tangent = railMetric.getTangentForOffset(
+            railMetric.length * marker / 4,
           );
-          if (tangent == null) continue;
-          canvas.drawCircle(
-            tangent.position,
-            2.2,
-            Paint()..color = GaussColors.brassLight.withValues(alpha: .88),
-          );
+          if (tangent != null) {
+            canvas.drawCircle(
+              tangent.position,
+              1.9,
+              Paint()..color = subjectHighlight.withValues(alpha: .9),
+            );
+          }
         }
       }
     }
     canvas.restore();
   }
 
-  Path _segment(Offset start, Offset end) {
-    final middleY = (start.dy + end.dy) / 2;
-    final bend = (end.dx - start.dx) * .24;
-    return Path()
-      ..moveTo(start.dx, start.dy)
-      ..cubicTo(
-        start.dx + bend,
-        middleY,
-        end.dx - bend,
-        middleY,
-        end.dx,
-        end.dy,
-      );
-  }
-
-  void _drawFutureDashes(Canvas canvas, ui.PathMetric metric) {
-    final dashPaint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.7
-      ..strokeCap = StrokeCap.round
-      ..color = GaussColors.brassLight.withValues(alpha: .46);
-    for (var distance = 9.0; distance < metric.length; distance += 14) {
-      canvas.drawPath(
-        metric.extractPath(distance, math.min(distance + 3.2, metric.length)),
-        dashPaint,
-      );
-    }
+  void _drawCouplerGlow(
+    Canvas canvas,
+    Offset position,
+    Color color,
+    bool energized,
+  ) {
+    canvas.drawCircle(
+      position,
+      energized ? 4.2 : 3.2,
+      Paint()
+        ..color = color.withValues(alpha: energized ? .22 : .1)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 3),
+    );
+    canvas.drawCircle(
+      position,
+      energized ? 2.5 : 2.1,
+      Paint()..color = const Color(0xF203090C),
+    );
+    canvas.drawCircle(
+      position,
+      energized ? 1.95 : 1.6,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = .72
+        ..color = color.withValues(alpha: energized ? .88 : .48),
+    );
+    canvas.drawCircle(
+      position,
+      energized ? .72 : .55,
+      Paint()..color = color.withValues(alpha: energized ? .96 : .58),
+    );
   }
 
   @override
   bool shouldRepaint(covariant _ContinuousPathPainter oldDelegate) =>
-      oldDelegate.positions != positions ||
+      oldDelegate.geometry != geometry ||
+      oldDelegate.subject != subject ||
       oldDelegate.segmentIndices != segmentIndices ||
       oldDelegate.completedSignature != completedSignature ||
       oldDelegate.currentIndex != currentIndex ||
@@ -3503,203 +3810,160 @@ class _StudyDock extends StatelessWidget {
               ? 'CURRENT'
               : 'SELECTED'} · ${snapshot.reflected} / ${node.questionCount}'
         : status;
-    return LayoutBuilder(
-      builder: (context, _) {
-        Widget emblem() => ExcludeSemantics(
-          child: _StudyDockEmblem(
-            topicKey: node.topic.key,
-            isCurrent: isCurrent,
-            isComplete: isComplete,
-          ),
-        );
-
-        Widget copy() => DecoratedBox(
-          key: const ValueKey('map-study-dock-copy'),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                GaussColors.deepInk.withValues(alpha: .88),
-                GaussColors.ink.withValues(alpha: .93),
-              ],
-            ),
-            borderRadius: BorderRadius.circular(18),
-            border: Border.all(
-              color: GaussColors.brassLight.withValues(alpha: .2),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: GaussColors.abyss.withValues(alpha: .46),
-                blurRadius: 18,
-                spreadRadius: -7,
-                offset: const Offset(0, 8),
-              ),
-            ],
-          ),
-          child: KeyedSubtree(
-            key: const ValueKey('map-study-dock-plaque'),
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(9, 7, 9, 8),
-              child: ExcludeSemantics(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Wrap(
-                      spacing: GaussSpacing.space8,
-                      crossAxisAlignment: WrapCrossAlignment.center,
-                      alignment: WrapAlignment.center,
-                      children: [
-                        Container(
-                          width: 6,
-                          height: 6,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: isComplete
-                                ? GaussColors.signalBright
-                                : isCurrent
-                                ? GaussColors.brassLight
-                                : GaussColors.fog,
-                            boxShadow: [
-                              BoxShadow(
-                                color:
-                                    (isComplete
-                                            ? GaussColors.signalBright
-                                            : GaussColors.brassLight)
-                                        .withValues(alpha: .3),
-                                blurRadius: 8,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Text(
-                          visualStatus,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            color: GaussColors.brassLight,
-                            fontSize: 8.5,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: .72,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 3),
-                    Text(
-                      studyLabel,
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: const TextStyle(
-                        color: GaussColors.ivory,
-                        fontSize: 12.5,
-                        fontWeight: FontWeight.w900,
-                        height: 1.18,
-                      ),
-                    ),
-                    if (!accessible) ...[
-                      const SizedBox(height: 2),
-                      Text(
-                        node.topic.label,
-                        textAlign: TextAlign.center,
-                        softWrap: true,
-                        style: const TextStyle(
-                          color: GaussColors.fog,
-                          fontSize: 9,
-                          fontWeight: FontWeight.w800,
-                          height: 1.18,
-                        ),
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-            ),
-          ),
-        );
-
-        Widget readings() => ExcludeSemantics(
-          child: Align(
+    final accent = isComplete
+        ? GaussColors.signalBright
+        : isCurrent
+        ? GaussColors.brassLight
+        : GaussColors.brass;
+    return KeyedSubtree(
+      key: const ValueKey('map-study-dock'),
+      child: MediaQuery.withClampedTextScaling(
+        maxScaleFactor: 1.4,
+        child: Semantics(
+          container: true,
+          label:
+              '$status. $studyLabel. ${node.topic.label}. '
+              '${snapshot.reflected} of ${node.questionCount} questions '
+              'charted. Lesson ${node.partIndex + 1} of ${node.partCount}.',
+          child: Stack(
             alignment: Alignment.center,
-            child: Row(
-              key: const ValueKey('map-study-dock-readings'),
-              children: [
-                Expanded(
-                  child: _FiveQuestionTrack(
-                    reflected: snapshot.reflected,
-                    complete: isComplete,
+            children: [
+              Positioned.fill(
+                child: ExcludeSemantics(
+                  child: CustomPaint(
+                    painter: _MissionCompassFramePainter(accent: accent),
                   ),
                 ),
-                const SizedBox(width: GaussSpacing.space8),
-                Text(
-                  'LESSON ${node.partIndex + 1} OF ${node.partCount}',
-                  softWrap: false,
-                  style: const TextStyle(
-                    color: GaussColors.fog,
-                    fontSize: 9,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: .45,
-                  ),
-                ),
-                if (snapshot.revisit > 0)
-                  Padding(
-                    padding: const EdgeInsetsDirectional.only(start: 8),
-                    child: Icon(
-                      Icons.bookmark_outline_rounded,
-                      size: 16,
-                      color: GaussColors.signalBright,
+              ),
+              Row(
+                key: const ValueKey('map-study-dock-main-row'),
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 48,
+                    height: 48,
+                    child: Center(
+                      child: ExcludeSemantics(
+                        child: _StudyDockEmblem(
+                          topicKey: node.topic.key,
+                          isCurrent: isCurrent,
+                          isComplete: isComplete,
+                        ),
+                      ),
                     ),
                   ),
-              ],
-            ),
-          ),
-        );
-
-        final mainRow = Row(
-          key: const ValueKey('map-study-dock-main-row'),
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(width: 50, height: 50, child: Center(child: emblem())),
-            const SizedBox(width: 6),
-            Expanded(child: copy()),
-            const SizedBox(width: 6),
-            SizedBox(
-              width: 50,
-              height: 50,
-              child: _StudyDockAction(onPressed: onOpen),
-            ),
-          ],
-        );
-
-        return KeyedSubtree(
-          key: const ValueKey('map-study-dock'),
-          child: MediaQuery.withClampedTextScaling(
-            maxScaleFactor: 1.4,
-            child: Semantics(
-              container: true,
-              label:
-                  '$status. $studyLabel. ${node.topic.label}. '
-                  '${snapshot.reflected} of ${node.questionCount} questions '
-                  'charted. Lesson ${node.partIndex + 1} of ${node.partCount}.',
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  const Positioned(
-                    left: 40,
-                    right: 40,
-                    top: 24,
-                    child: ExcludeSemantics(
-                      child: SizedBox(
-                        height: 1,
-                        child: DecoratedBox(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.transparent,
-                                GaussColors.brass,
-                                GaussColors.signalBright,
-                                GaussColors.brass,
-                                Colors.transparent,
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: DecoratedBox(
+                      key: const ValueKey('map-study-dock-copy'),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            GaussColors.deepInk.withValues(alpha: .9),
+                            GaussColors.ink.withValues(alpha: .94),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(24),
+                        border: Border.all(
+                          color: accent.withValues(alpha: .24),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: GaussColors.abyss.withValues(alpha: .44),
+                            blurRadius: 16,
+                            spreadRadius: -7,
+                            offset: const Offset(0, 7),
+                          ),
+                        ],
+                      ),
+                      child: KeyedSubtree(
+                        key: const ValueKey('map-study-dock-plaque'),
+                        child: Padding(
+                          padding: EdgeInsets.fromLTRB(
+                            12,
+                            accessible ? 9 : 7,
+                            12,
+                            accessible ? 9 : 7,
+                          ),
+                          child: ExcludeSemantics(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 5,
+                                      height: 5,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: accent,
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: accent.withValues(alpha: .3),
+                                            blurRadius: 7,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(width: 6),
+                                    Flexible(
+                                      child: Text(
+                                        visualStatus,
+                                        textAlign: TextAlign.center,
+                                        softWrap: false,
+                                        style: const TextStyle(
+                                          color: GaussColors.brassLight,
+                                          fontSize: 8.2,
+                                          fontWeight: FontWeight.w900,
+                                          letterSpacing: .62,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 3),
+                                Text(
+                                  studyLabel,
+                                  textAlign: TextAlign.center,
+                                  softWrap: true,
+                                  style: const TextStyle(
+                                    color: GaussColors.ivory,
+                                    fontSize: 12.2,
+                                    fontWeight: FontWeight.w900,
+                                    height: 1.15,
+                                  ),
+                                ),
+                                if (!accessible) ...[
+                                  const SizedBox(height: 5),
+                                  Row(
+                                    key: const ValueKey(
+                                      'map-study-dock-readings',
+                                    ),
+                                    children: [
+                                      Expanded(
+                                        child: _FiveQuestionTrack(
+                                          reflected: snapshot.reflected,
+                                          complete: isComplete,
+                                        ),
+                                      ),
+                                      if (snapshot.revisit > 0)
+                                        const Padding(
+                                          padding: EdgeInsetsDirectional.only(
+                                            start: 5,
+                                          ),
+                                          child: Icon(
+                                            Icons.bookmark_outline_rounded,
+                                            size: 13,
+                                            color: GaussColors.signalBright,
+                                          ),
+                                        ),
+                                    ],
+                                  ),
+                                ],
                               ],
                             ),
                           ),
@@ -3707,32 +3971,59 @@ class _StudyDock extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      mainRow,
-                      if (!accessible) ...[
-                        const SizedBox(height: 5),
-                        Padding(
-                          // The reading remains visually subordinate without
-                          // being squeezed between the two 48dp instruments.
-                          // It sits below them, so using the available width
-                          // is both clearer and safer at 320dp.
-                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 3),
-                          child: readings(),
-                        ),
-                      ],
-                    ],
+                  const SizedBox(width: 6),
+                  SizedBox(
+                    width: 48,
+                    height: 48,
+                    child: _StudyDockAction(onPressed: onOpen),
                   ),
                 ],
               ),
-            ),
+            ],
           ),
-        );
-      },
+        ),
+      ),
     );
   }
+}
+
+class _MissionCompassFramePainter extends CustomPainter {
+  const _MissionCompassFramePainter({required this.accent});
+
+  final Color accent;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final y = size.height / 2;
+    final rail = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.1
+      ..color = GaussColors.brass.withValues(alpha: .48);
+    canvas.drawLine(
+      const Offset(26, 0) + Offset(0, y),
+      Offset(size.width - 26, y),
+      rail,
+    );
+    final orbit = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round
+      ..strokeWidth = 1.3
+      ..color = accent.withValues(alpha: .58);
+    for (final x in [24.0, size.width - 24]) {
+      final rect = Rect.fromCircle(center: Offset(x, y), radius: 25);
+      canvas.drawArc(rect, -.85, math.pi * .55, false, orbit);
+      canvas.drawArc(rect, math.pi * .72, math.pi * .38, false, orbit);
+    }
+    canvas.drawCircle(
+      Offset(size.width / 2, y),
+      1.7,
+      Paint()..color = accent.withValues(alpha: .72),
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _MissionCompassFramePainter oldDelegate) =>
+      oldDelegate.accent != accent;
 }
 
 class _StudyDockAction extends StatelessWidget {

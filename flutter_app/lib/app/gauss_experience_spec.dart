@@ -109,7 +109,10 @@ abstract final class GaussProductionManifest {
       repaintPolicy: GaussRepaintPolicy.viewportBand,
       semantic: true,
       interactive: true,
-      assetPaths: ['assets/visual/nodes/topic_shell.png'],
+      assetPaths: [
+        'assets/visual/nodes/math_astrolabe_station_v2.png',
+        'assets/visual/nodes/physics_gyroscope_station_v2.png',
+      ],
     ),
     GaussLayerSpec(
       id: 'map.chapter-annotations',

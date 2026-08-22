@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
@@ -101,6 +103,110 @@ void main() {
     expect(GaussPathGeometryCache.textScaleBucket(1.55), 2);
     expect(GaussPathGeometryCache.textScaleBucket(3), 2);
   });
+
+  test('large-radius route keeps varied lesson cadence inside safe lanes', () {
+    final geometry = GaussPathGeometry.build(
+      width: 320,
+      nodes: _nodes(28),
+      textScale: 1,
+    );
+    final verticalCadence = <int>{
+      for (var index = 1; index < geometry.positions.length; index++)
+        (geometry.positions[index].dy - geometry.positions[index - 1].dy)
+            .round(),
+    };
+    final horizontalMoves = <int>{
+      for (var index = 1; index < geometry.positions.length; index++)
+        (geometry.positions[index].dx - geometry.positions[index - 1].dx)
+            .round(),
+    };
+
+    expect(verticalCadence.length, greaterThan(5));
+    expect(horizontalMoves.length, greaterThan(8));
+    for (final position in geometry.positions) {
+      expect(position.dx, greaterThan(geometry.nodeSize / 2 + 6));
+      expect(position.dx, lessThan(320 - geometry.nodeSize / 2 - 6));
+    }
+  });
+
+  test('orbital curve shares a tangent across every lesson instrument', () {
+    final geometry = GaussPathGeometry.build(
+      width: 390,
+      nodes: _nodes(22),
+      textScale: 1,
+    );
+    for (var index = 1; index < geometry.positions.length - 1; index++) {
+      final incomingMetric = geometry
+          .pathForSegment(index - 1)
+          .computeMetrics()
+          .single;
+      final outgoingMetric = geometry
+          .pathForSegment(index)
+          .computeMetrics()
+          .single;
+      final incoming = incomingMetric.getTangentForOffset(
+        math.max(0, incomingMetric.length - .01),
+      );
+      final outgoing = outgoingMetric.getTangentForOffset(.01);
+      expect(incoming, isNotNull);
+      expect(outgoing, isNotNull);
+      var difference = (incoming!.angle - outgoing!.angle).abs();
+      if (difference > math.pi) difference = math.pi * 2 - difference;
+      expect(
+        difference,
+        lessThan(.04),
+        reason: 'node $index must not create a visible spline elbow',
+      );
+    }
+  });
+
+  test(
+    'orbital route visibly bows between nodes instead of drawing chords',
+    () {
+      final geometry = GaussPathGeometry.build(
+        width: 390,
+        nodes: _nodes(26),
+        textScale: 1,
+      );
+      final deviations = <double>[];
+      for (var index = 0; index < geometry.positions.length - 1; index++) {
+        final start = geometry.positions[index];
+        final end = geometry.positions[index + 1];
+        final metric = geometry.pathForSegment(index).computeMetrics().single;
+        final midpoint = metric
+            .getTangentForOffset(metric.length * .5)!
+            .position;
+        final chord = end - start;
+        final distance =
+            ((midpoint.dx - start.dx) * chord.dy -
+                    (midpoint.dy - start.dy) * chord.dx)
+                .abs() /
+            chord.distance;
+        deviations.add(distance);
+      }
+
+      expect(
+        deviations.where((distance) => distance >= .8).length,
+        greaterThanOrEqualTo((deviations.length * .7).floor()),
+        reason: 'most stations need a visible circular bow: $deviations',
+      );
+      expect(
+        deviations.reduce(math.max),
+        greaterThan(2.5),
+        reason: 'the route needs at least one broad turn per screenful',
+      );
+      expect(
+        geometry
+            .pathForSegments(
+              List.generate(geometry.positions.length - 1, (index) => index),
+            )
+            .computeMetrics()
+            .length,
+        1,
+        reason: 'contiguous stations must paint as one rail, not capped lines',
+      );
+    },
+  );
 }
 
 List<StudyPathNode> _nodes(int count) => [

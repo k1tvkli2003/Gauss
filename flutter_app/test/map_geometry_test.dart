@@ -140,7 +140,11 @@ void main() {
               math.min(labelRect.bottom, nodeRect.bottom) -
               math.max(labelRect.top, nodeRect.top);
 
-          expect(labelRect.overlaps(nodeRect), isFalse, reason: labelKey);
+          expect(
+            labelRect.overlaps(nodeRect),
+            isFalse,
+            reason: '$labelKey label=$labelRect node=$nodeRect',
+          );
           expect(
             horizontalGap,
             inInclusiveRange(0, 10),
