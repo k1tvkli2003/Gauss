@@ -58,6 +58,9 @@ void main() {
       final safeForeground = File(
         'android/app/src/main/res/drawable/ic_launcher_theorem_star_safe.xml',
       ).readAsStringSync();
+      final vectorForeground = File(
+        'android/app/src/main/res/drawable/ic_launcher_theorem_star.xml',
+      ).readAsStringSync();
       final splash = File(
         'android/app/src/main/res/drawable-v21/launch_background.xml',
       ).readAsStringSync();
@@ -86,7 +89,10 @@ void main() {
         adaptiveIconV33,
         contains('@drawable/ic_launcher_theorem_star_mono_safe'),
       );
-      expect(safeForeground, contains('android:insetLeft="18dp"'));
+      expect(safeForeground, contains('android:insetLeft="14dp"'));
+      expect(vectorForeground, isNot(contains('gauss_icon_background')));
+      expect(vectorForeground, contains('#FFE5A0'));
+      expect(vectorForeground, contains('#62AE9C'));
       expect(splash, contains('@drawable/ic_launcher_theorem_star'));
       expect(splash, isNot(contains('@drawable/ic_launcher_foreground')));
       expect(canonicalIcon, contains('Gauss Theorem Star app icon'));

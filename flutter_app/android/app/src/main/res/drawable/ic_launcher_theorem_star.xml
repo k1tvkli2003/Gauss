@@ -1,37 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Transparent, optically centered Gauss theorem instrument. The launcher
+     supplies its own adaptive mask field; this vector never paints a plate. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
     <group android:translateX="4" android:translateY="4">
+        <!-- Open theorem orbit / geometric G: recessed edge, brass body,
+             and a restrained upper highlight for material depth. -->
         <path
             android:fillColor="@android:color/transparent"
             android:pathData="M78.5,17.8A43,43 0,1 0,78.5,82.2 M75,63L91,63"
-            android:strokeColor="#F0C36A"
-            android:strokeLineCap="square"
+            android:strokeColor="#8A5A18"
+            android:strokeLineCap="round"
             android:strokeLineJoin="round"
-            android:strokeWidth="5.2" />
+            android:strokeWidth="6.3" />
+        <path
+            android:fillColor="@android:color/transparent"
+            android:pathData="M78.5,17.8A43,43 0,1 0,78.5,82.2 M75,63L91,63"
+            android:strokeColor="#D9A744"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="4.7" />
+        <path
+            android:fillColor="@android:color/transparent"
+            android:pathData="M78.5,17.8A43,43 0,1 0,78.5,82.2 M75,63L91,63"
+            android:strokeAlpha="0.72"
+            android:strokeColor="#FFE5A0"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="1.05" />
+
+        <!-- Four broken inner arcs keep the compass legible at small sizes. -->
+        <path
+            android:fillColor="@android:color/transparent"
+            android:pathData="M71.8,56.9A22.5,22.5 0,0 0,56.9,28.2 M43.1,28.2A22.5,22.5 0,0 0,28.2,43.1 M28.2,56.9A22.5,22.5 0,0 0,43.1,71.8 M56.9,71.8A22.5,22.5 0,0 0,71.8,56.9"
+            android:strokeColor="#07151C"
+            android:strokeLineCap="round"
+            android:strokeWidth="4.3" />
         <path
             android:fillColor="@android:color/transparent"
             android:pathData="M71.8,56.9A22.5,22.5 0,0 0,56.9,28.2 M43.1,28.2A22.5,22.5 0,0 0,28.2,43.1 M28.2,56.9A22.5,22.5 0,0 0,43.1,71.8 M56.9,71.8A22.5,22.5 0,0 0,71.8,56.9"
             android:strokeColor="#DCA847"
             android:strokeLineCap="round"
-            android:strokeWidth="3.2" />
+            android:strokeWidth="1.45" />
+
+        <!-- Proof rays. Their 50/50 origin and equal opposing extents make the
+             silhouette geometrically centered rather than merely boxed. -->
         <path
-            android:fillColor="#F0C36A"
-            android:pathData="M44.8,46Q47.4,37 50,21q2.6,16 5.2,25L50,51.2ZM54,44.8Q63,47.4 79,50q-16,2.6 -25,5.2L48.8,50ZM55.2,54Q52.6,63 50,79q-2.6,-16 -5.2,-25L50,48.8ZM46,55.2Q37,52.6 21,50q16,-2.6 25,-5.2L51.2,50Z" />
+            android:fillColor="#8A5A18"
+            android:pathData="M44.8,46Q47.4,37 50,21q2.6,16 5.2,25L50,51.2ZM54,44.8Q63,47.4 79,50q-16,2.6 -25,5.2L48.8,50ZM55.2,54Q52.6,63 50,79q-2.6,-16 -5.2,-25L50,48.8ZM46,55.2Q37,52.6 21,50q16,-2.6 25,-5.2L51.2,50Z"
+            android:strokeColor="#8A5A18"
+            android:strokeLineJoin="round"
+            android:strokeWidth="1.5" />
+        <path
+            android:fillColor="#D9A744"
+            android:pathData="M44.8,46Q47.4,37 50,21q2.6,16 5.2,25L50,51.2ZM54,44.8Q63,47.4 79,50q-16,2.6 -25,5.2L48.8,50ZM55.2,54Q52.6,63 50,79q-2.6,-16 -5.2,-25L50,48.8ZM46,55.2Q37,52.6 21,50q16,-2.6 25,-5.2L51.2,50Z"
+            android:strokeAlpha="0.68"
+            android:strokeColor="#FFE5A0"
+            android:strokeLineJoin="round"
+            android:strokeWidth="0.75" />
+
+        <!-- Circle, square, triangle, and diamond are four modes of proof.
+             The circle path is explicitly centered at y=14 (8.5..19.5). -->
         <path
             android:fillColor="@android:color/transparent"
-            android:pathData="M50,14A5.5,5.5 0,1 0,50,3A5.5,5.5 0,1 0,50,14 M9,45L19,45L19,55L9,55Z M86,50L76,43.5L76,56.5Z M50,78.9L57.1,86L50,93.1L42.9,86Z"
-            android:strokeColor="#F0C36A"
-            android:strokeLineJoin="miter"
+            android:pathData="M50,8.5A5.5,5.5 0,1 0,50,19.5A5.5,5.5 0,1 0,50,8.5 M9,45L19,45L19,55L9,55Z M86,50L76,43.5L76,56.5Z M50,78.9L57.1,86L50,93.1L42.9,86Z"
+            android:strokeColor="#8A5A18"
+            android:strokeLineJoin="round"
+            android:strokeWidth="6.1" />
+        <path
+            android:fillColor="@android:color/transparent"
+            android:pathData="M50,8.5A5.5,5.5 0,1 0,50,19.5A5.5,5.5 0,1 0,50,8.5 M9,45L19,45L19,55L9,55Z M86,50L76,43.5L76,56.5Z M50,78.9L57.1,86L50,93.1L42.9,86Z"
+            android:strokeColor="#D9A744"
+            android:strokeLineJoin="round"
             android:strokeWidth="4.2" />
         <path
-            android:fillColor="#F6ECD6"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M50,8.5A5.5,5.5 0,1 0,50,19.5A5.5,5.5 0,1 0,50,8.5 M9,45L19,45L19,55L9,55Z M86,50L76,43.5L76,56.5Z M50,78.9L57.1,86L50,93.1L42.9,86Z"
+            android:strokeAlpha="0.76"
+            android:strokeColor="#FFE5A0"
+            android:strokeLineJoin="round"
+            android:strokeWidth="0.8" />
+
+        <!-- Point of truth: bright collar, dark recess, teal signal core. -->
+        <path
+            android:fillColor="#D3A348"
             android:pathData="M50,41.7A8.3,8.3 0,1 0,50,58.3A8.3,8.3 0,1 0,50,41.7" />
         <path
+            android:fillColor="#FFF4D7"
+            android:pathData="M48.5,42A7.2,7.2 0,0 0,43,46.2A8.3,8.3 0,0 0,42.2,50.2A7.8,7.8 0,0 1,48.5,42Z" />
+        <path
+            android:fillColor="#07151C"
+            android:pathData="M50,43.9A6.1,6.1 0,1 0,50,56.1A6.1,6.1 0,1 0,50,43.9" />
+        <path
             android:fillColor="#62AE9C"
-            android:pathData="M50,44.7A5.3,5.3 0,1 0,50,55.3A5.3,5.3 0,1 0,50,44.7" />
+            android:pathData="M50,44.9A5.1,5.1 0,1 0,50,55.1A5.1,5.1 0,1 0,50,44.9" />
+        <path
+            android:fillAlpha="0.86"
+            android:fillColor="#E8FFF7"
+            android:pathData="M48.4,46.9A1.15,1.15 0,1 0,48.4,49.2A1.15,1.15 0,1 0,48.4,46.9" />
     </group>
 </vector>

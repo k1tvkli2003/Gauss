@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/app/gauss_theme.dart';
 import 'package:gauss/auth/gauss_auth_controller.dart';
 import 'package:gauss/auth/gauss_auth_screen.dart';
+import 'package:gauss/widgets/gauss_brand.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() {
@@ -79,6 +80,15 @@ void main() {
       expect(find.text('Email'), findsOneWidget);
       expect(find.text('Password'), findsOneWidget);
       expect(find.text('Works offline after sign in'), findsOneWidget);
+      final markRect = tester.getRect(
+        find.byKey(const ValueKey('auth-theorem-mark')),
+      );
+      final wordmarkRect = tester.getRect(find.byType(GaussWordmark));
+      expect(
+        (markRect.center.dx - wordmarkRect.center.dx).abs(),
+        lessThan(.1),
+        reason: 'The transparent theorem mark and wordmark must share a center',
+      );
       expect(
         find.byWidgetPredicate(
           (widget) =>

@@ -196,7 +196,8 @@ class _AuthIdentityStage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             TheoremStarMark(
-              size: horizontal ? 138 : 88,
+              key: const ValueKey('auth-theorem-mark'),
+              size: horizontal ? 142 : 104,
               semanticLabel: 'Gauss theorem star',
             ),
             SizedBox(height: horizontal ? 28 : 16),

@@ -3,8 +3,8 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-23T00:02:00+03:30
-- Scope: P0 baseline + P1 executable UI system/manifest + P2 closed Map engine + active P3 route/node slice
+- Last verified: 2026-08-23T01:33:40+03:30
+- Scope: P0 baseline + P1 executable UI system/manifest + P2 closed Map engine + active P3 route/node/identity slices
 
 ## بررسی‌ها
 
@@ -47,11 +47,16 @@
 | P3 route geometry | unit tests روی cadence، lane، shared tangent، bow و contiguous metric | passed | curve واقعی در بیش از 70% segmentها از chord فاصله دارد و در هر station tangent پیوسته است |
 | P3 route/node regressions | `flutter test --no-pub test/map_path_geometry_engine_test.dart test/map_geometry_test.dart test/android_experience_test.dart test/gauss_ui_system_test.dart` | passed | 41/41؛ phone 320dp، 200% text، tablet portrait/landscape، subject swap و semantic node IDs |
 | P3 phone visual slice | Android `com.gauss.app.debug` روی `Codex_API35` | passed slice | Math/Physics current+future station، socket docking، label anchors و HUD dissolve دستی بررسی شد؛ فایل‌های capture محلی‌اند |
+| P3 transparent identity static gate | `flutter analyze --no-pub` + resource contract tests | passed | analyzer بدون issue؛ vector هیچ `gauss_icon_background` داخلی ندارد، brass highlight و teal core حاضرند و adaptive foreground از safe inset `14dp` استفاده می‌کند |
+| P3 identity responsive gate | auth phone/tablet portrait/landscape در 100% و 200% text + Android regressions | passed | نخست 36/36 و پس از inset نهایی 33/33؛ mark و wordmark در همه compositionها اختلاف محور کمتر از `0.1px` دارند |
+| P3 identity Android builds | `flutter build apk --debug --no-pub` دو بار، قبل و بعد از inset نهایی | passed | `app-debug.apk` در `172.4s` و `91.9s` ساخته و هر دو بار با `adb install -r -d` موفق نصب شد |
+| P3 Splash/auth visual proof | cold start بستهٔ `com.gauss.app.debug` روی `Codex_API35` | passed slice | [Splash](assets/p3-brand-splash-transparent.png) mark را بدون plate در مرکز واقعی و [Auth](assets/p3-brand-auth-centered.png) mark/wordmark را روی یک محور نشان می‌دهد |
+| P3 package/data guard after identity | AVD/package inventory قبل و بعد | passed | تنها `Codex_API35`؛ `com.gauss.app` v106، dataDir و firstInstallTime بدون تغییر؛ فقط debug package in-place به‌روز شد |
 
 ## هنوز اجرا نشده
 
 - full Flutter suite پس از بازسازی‌های runtime.
-- Android debug/profile/release build جدید.
+- Android profile/release build جدید؛ debug build identity پاس شده است.
 - runtime screenshot matrix پس از بازسازی.
 - physical-device Xiaomi Focus Pen profile؛ emulator proof جای آن را نمی‌گیرد.
 
@@ -59,7 +64,7 @@
 
 - Map renderer دیگر stage یک‌تکه یا rebuild وابسته به scroll ندارد؛ route/node P3 بازطراحی و gate موقت را پاس کرده، ولی P3 تا closure کل HUD/identity/navigator/landmark و responsive capture matrix باز است.
 - blur زندهٔ moving chrome حذف شده و blur footer فقط در footprint محدود خودش باقی مانده است.
-- header، orbit strip، mission/progress/footer تراکم و انسداد بصری دارند.
+- Orbit Navigator، mission/progress/footer و بعضی landmarkها هنوز برای closure کامل P3 نیاز به بازسازی و matrix دارند؛ identity دیگر finding باز نیست.
 - question ink به بیش از یک سطح rebuild متصل است.
 - question manuscript فضای مرده و controls غالب دارد؛ answer access دیر می‌شود.
 - touch/stylus behavior در دستگاه Xiaomi باید با runtime سخت‌افزار خودش نیز تأیید شود.

@@ -1,7 +1,7 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-23T00:02:00+03:30
+- Last updated: 2026-08-23T01:33:40+03:30
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
 - Current phase: P3 — Map visual and UX rebuild
@@ -10,7 +10,7 @@
 
 ## Current State
 
-P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد و P1 جهت پذیرفته‌شدهٔ Orrery/Astral را به قرارداد اجرایی تبدیل کرد. P2 نیز کامل شد: stage یک‌تکه و scroll-driven `setState` با sliver bandهای lazy، geometry LRU، painter ownership محدود، viewport cache bounded و decode bounded جایگزین شد. paired profile هم‌زمان در یک پنجرهٔ GPU بهبود `58%` در UI p95 و `51%` در raster p95 را در برابر engine قدیمی ثابت کرد؛ سپس پنج run نهایی exact revision `13d6597` با status کامل، UI p95 برابر `8.557ms`، raster p95 برابر `28.385ms`، PSS میانهٔ `157.033MiB` و signed-package guard بدون تغییر ثبت شد. در P3، route سینوسیِ chord-based قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شده، Math و Physics هرکدام station سه‌بعدی مستقل و بدون topic-icon overlay دارند، rail در socket خود node فرود می‌آید و محتوای map پیش از ورود به محدودهٔ ثابت Mission Compass/footer بدون backing کدر dissolve می‌شود. HUD/identity، navigator، landmark و matrix نهایی P3 هنوز بازند؛ بنابراین فاز هنوز complete نیست.
+P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته شد و P1 جهت پذیرفته‌شدهٔ Orrery/Astral را به قرارداد اجرایی تبدیل کرد. P2 نیز کامل شد: stage یک‌تکه و scroll-driven `setState` با sliver bandهای lazy، geometry LRU، painter ownership محدود، viewport cache bounded و decode bounded جایگزین شد. paired profile هم‌زمان در یک پنجرهٔ GPU بهبود `58%` در UI p95 و `51%` در raster p95 را در برابر engine قدیمی ثابت کرد؛ سپس پنج run نهایی exact revision `13d6597` با status کامل، UI p95 برابر `8.557ms`، raster p95 برابر `28.385ms`، PSS میانهٔ `157.033MiB` و signed-package guard بدون تغییر ثبت شد. در P3، route سینوسیِ chord-based قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شده، Math و Physics هرکدام station سه‌بعدی مستقل و بدون topic-icon overlay دارند، rail در socket خود node فرود می‌آید و محتوای map پیش از ورود به محدودهٔ ثابت Mission Compass/footer بدون backing کدر dissolve می‌شود. identity نیز پس از رد صریح raster دارای plate، به یک theorem mark شفاف و optically centered بازسازی شد: Flutter paint زنده، Splash vector و adaptive foreground یک هندسهٔ مشترک دارند، صفحهٔ ورود mark و wordmark را روی یک محور نگه می‌دارد و هیچ background داخلی پیرامون mark نمی‌کشد. Orbit Navigator، landmark hierarchy، Mission Compass/footer و matrix نهایی P3 هنوز بازند؛ بنابراین فاز هنوز complete نیست.
 
 ## Decisions
 
@@ -33,6 +33,7 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 | 2026-08-21 | node و spiral فعلی در P3 polish نشوند و زبان فرمشان از پایه بازسازی شود | route مکانیکی، nodeهای تکراری و اتصال خشک کیفیت direction پذیرفته‌شده را نمی‌رسانند | user visual finding + runtime capture |
 | 2026-08-23 | Math و Physics station topology مستقل داشته باشند و topic icon روی node حذف شود | subject باید از silhouette، material و energy language خوانده شود، نه badge چسبانده‌شده | user correction + Android visual comparison |
 | 2026-08-23 | rail با tangent analytic، trim تا socket و occlusion dissolve ساخته شود | chord، elbow، endpoint bead و عبور node زیر HUD حس محصول مبتدی ایجاد می‌کرد | geometry tests + live Android captures |
+| 2026-08-23 | identity raster دارای navy plate حذف و mark فقط به‌صورت transparent live/vector نگه داشته شود | کاربر صریحاً background و off-center composition را رد کرد؛ لوگو باید در auth، Splash و header مستقل از هر plate باشد | user correction + Android auth/splash captures |
 
 ## Blockers
 
@@ -55,9 +56,11 @@ P0 با harness ایزولهٔ profile روی تنها AVD مجاز بسته ش�
 - پنج run نهایی revision-bound روی `13d6597` با 5/5 journey پاس، semantic IDs ثابت، PSS میانهٔ `157.033MiB` و حفظ کامل hash نسخهٔ شخصی ثبت شد؛ P2 با caveat صریح emulator GPU drift بسته شد.
 - P3 Map vertical slice روی Android اجرا شد: station سه‌بعدی Math/Physics با alpha واقعی، مسیر بزرگ‌قطر tangent-continuous، socketهای جهت‌دار، پنج progress bearing زنده و fade بدون backing در محدودهٔ HUD ساخته شد.
 - gate موقت P3 شامل analyze پاک و 41/41 تست geometry/responsive/Android/UI-system پاس شد؛ captureهای phone Math و Physics به‌صورت زنده با footer و Mission Compass بررسی شدند.
+- mark ردشدهٔ raster و تمام resourceهای plate آن حذف شد؛ Flutter theorem mark چندلایه، Android transparent vector، adaptive safe inset و auth composition روی محور مرکزی بازسازی شدند.
+- گیت identity شامل analyze کامل پاک، 36/36 سپس 33/33 regression، دو debug APK موفق، نصب in-place بستهٔ ایزوله و بررسی زندهٔ Splash/auth/adaptive icon پاس شد؛ `com.gauss.app` v106 و dataDir آن تغییر نکرد.
 
 ## Remaining
 
-- تکمیل باقی P3: header/brand identity، Orbit Navigator، landmark hierarchy، Mission Compass/footer و matrix پنج موقعیت phone/tablet.
+- تکمیل باقی P3: Orbit Navigator، landmark hierarchy، Mission Compass/footer و matrix پنج موقعیت phone/tablet؛ identity اکنون بسته است.
 - اجرای P4 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

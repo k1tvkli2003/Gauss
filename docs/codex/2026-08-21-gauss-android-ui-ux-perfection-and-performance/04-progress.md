@@ -19,6 +19,7 @@
 | 2026-08-21T23:31:00+03:30 | active | blurهای میانی و repaint layerهای تو‌در‌تو حذف شدند؛ footer شفاف فقط در footprint خودش blur محدود دارد. paired baseline همان لحظه بهبود 58% UI p95 و 51% raster p95 را ثابت کرد. | pilot current `5.720/24.319ms` در برابر `08a7817` برابر `13.731/49.598ms` |
 | 2026-08-21T23:47:24+03:30 | phase-complete | گیت P2 بسته شد: پنج run نهایی exact revision همگی پاس شدند، geometry/semantics حفظ شد و package شخصی دست‌نخورده ماند. P3 بازسازی بنیادی spiral/node/HUD آغاز شد. | `13d6597` + `performance-p2-final-13d6597`؛ Map UI/raster p95=`8.557/28.385ms`، PSS=`157.033MiB` |
 | 2026-08-23T00:02:00+03:30 | active | vertical slice اصلی P3 بازسازی شد: curve بزرگ‌قطر با tangent مشترک، station سه‌بعدی مستقل Math/Physics، rail-to-socket docking و dissolve پیش از HUD جای shell/node/line مکانیکی را گرفت. | analyze پاک + 41/41 تست + `map-p3-math-rail-fade-live.png` و `map-p3-physics-rail-fade-live.png` محلی |
+| 2026-08-23T01:33:40+03:30 | active | identity raster دارای plate پس از رد بصری کامل حذف شد؛ theorem mark شفاف و مرکزچین با paint چندلایه، Android vector و adaptive safe foreground جای آن را در auth، Splash و launcher گرفت. | analyze پاک؛ 36/36 + 33/33 تست؛ دو debug build/install؛ [Splash](assets/p3-brand-splash-transparent.png) و [Auth](assets/p3-brand-auth-centered.png) زنده |
 
 ## انجام‌شده تا اینجا
 
@@ -29,7 +30,8 @@
 - P0 تا P2 کامل شدند: کل Goal اکنون 33% است؛ این درصد فقط با عبور گیت بالا رفته است.
 - finding بصری P3 قفل شد: spiral و nodeهای فعلی خشک، تکراری و مکانیکی‌اند و به‌جای polish سطحی باید با زبان مسیر/عمق/حالت تازه بازسازی شوند.
 - هستهٔ route/node همین finding اکنون در code و Android runtime اصلاح شده است؛ P3 تا بسته‌شدن HUD/identity/navigator/landmark و matrix responsive همچنان active می‌ماند.
+- identity P3 اکنون از gate بصری عبور کرده است: mark و wordmark در auth محور مشترک دارند، Splash در مرکز واقعی است و هیچ baked/internal plate باقی نمانده؛ P3 برای navigator/landmark/Mission Compass/footer و matrix هنوز active است.
 
 ## مرحله بعد
 
-- P3: تثبیت HUD/identity، Orbit Navigator، landmark و Mission Compass روی هستهٔ route/node تازه؛ سپس capture و اصلاح پنج موقعیت مسیر روی Android و profile spot-check.
+- P3: تکمیل Orbit Navigator، landmark و Mission Compass/footer روی هستهٔ route/node و identity تازه؛ سپس capture و اصلاح پنج موقعیت مسیر روی Android و profile spot-check.

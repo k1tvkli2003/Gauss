@@ -50,10 +50,17 @@ class TheoremStarMark extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mark = SizedBox.square(
-      dimension: size,
-      child: CustomPaint(
-        painter: _TheoremStarPainter(monochrome: monochrome, darkInk: darkInk),
+    final mark = RepaintBoundary(
+      child: SizedBox.square(
+        dimension: size,
+        child: CustomPaint(
+          isComplex: true,
+          willChange: false,
+          painter: _TheoremStarPainter(
+            monochrome: monochrome,
+            darkInk: darkInk,
+          ),
+        ),
       ),
     );
     if (semanticLabel == null) return ExcludeSemantics(child: mark);
@@ -73,62 +80,106 @@ class _TheoremStarPainter extends CustomPainter {
     canvas.scale(size.width / 100, size.height / 100);
 
     final brass = darkInk ? GaussColors.parchmentInk : GaussColors.brassLight;
-    final ink = darkInk ? GaussColors.parchmentInk : GaussColors.deepInk;
+    final brassDark = darkInk ? brass : const Color(0xFF8A5A18);
+    final brassMid = darkInk ? brass : const Color(0xFFD9A744);
+    final highlight = darkInk ? brass : const Color(0xFFFFE5A0);
+    final recess = darkInk ? GaussColors.parchmentInk : GaussColors.deepInk;
     final signal = monochrome ? brass : GaussColors.signal;
-    final stroke = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.square
-      ..strokeJoin = StrokeJoin.round
-      ..strokeWidth = 5.2
-      ..color = brass;
-
-    // The open orbit is also a geometric G. The right-side aperture keeps the
-    // silhouette readable inside Android's circle and squircle masks.
-    canvas.drawArc(
-      Rect.fromCircle(center: const Offset(50, 50), radius: 43),
-      .18 * math.pi,
-      1.58 * math.pi,
-      false,
-      stroke,
+    final markBounds = const Rect.fromLTWH(4, 4, 92, 92);
+    final metalShader = LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [highlight, brassMid, brassDark, brass],
+      stops: const [0, .34, .72, 1],
+    ).createShader(markBounds);
+    final outerPath = Path()
+      ..addArc(
+        Rect.fromCircle(center: const Offset(50, 50), radius: 43),
+        .18 * math.pi,
+        1.58 * math.pi,
+      )
+      ..moveTo(75, 63)
+      ..lineTo(91, 63);
+    if (!darkInk) {
+      canvas.save();
+      canvas.translate(0, 1.5);
+      canvas.drawPath(
+        outerPath,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeCap = StrokeCap.round
+          ..strokeJoin = StrokeJoin.round
+          ..strokeWidth = 8
+          ..color = const Color(0xB802070A)
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.6),
+      );
+      canvas.restore();
+    }
+    canvas.drawPath(
+      outerPath,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round
+        ..strokeWidth = 6.3
+        ..color = brassDark,
     );
-    canvas.drawLine(const Offset(75, 63), const Offset(91, 63), stroke);
+    canvas.drawPath(
+      outerPath,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round
+        ..strokeWidth = 4.7
+        ..shader = darkInk ? null : metalShader
+        ..color = brass,
+    );
+    canvas.drawPath(
+      outerPath,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round
+        ..strokeWidth = 1.05
+        ..color = highlight.withValues(alpha: darkInk ? .72 : .62),
+    );
 
-    final inner = Paint()
+    final innerBase = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 3.2
       ..strokeCap = StrokeCap.round
-      ..color = ink;
-    canvas.drawArc(
-      Rect.fromCircle(center: const Offset(50, 50), radius: 22.5),
-      .08 * math.pi,
-      .34 * math.pi,
-      false,
-      inner,
+      ..strokeJoin = StrokeJoin.round
+      ..strokeWidth = 4.3
+      ..color = recess.withValues(alpha: darkInk ? .82 : .94);
+    final innerMetal = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.45
+      ..strokeCap = StrokeCap.round
+      ..shader = darkInk ? null : metalShader
+      ..color = brass;
+    final innerOrbit = Rect.fromCircle(
+      center: const Offset(50, 50),
+      radius: 22.5,
     );
-    canvas.drawArc(
-      Rect.fromCircle(center: const Offset(50, 50), radius: 22.5),
-      .58 * math.pi,
-      .34 * math.pi,
-      false,
-      inner,
-    );
-    canvas.drawArc(
-      Rect.fromCircle(center: const Offset(50, 50), radius: 22.5),
-      1.08 * math.pi,
-      .34 * math.pi,
-      false,
-      inner,
-    );
-    canvas.drawArc(
-      Rect.fromCircle(center: const Offset(50, 50), radius: 22.5),
-      1.58 * math.pi,
-      .34 * math.pi,
-      false,
-      inner,
-    );
+    for (final start in const [.08, .58, 1.08, 1.58]) {
+      canvas.drawArc(
+        innerOrbit,
+        start * math.pi,
+        .34 * math.pi,
+        false,
+        innerBase,
+      );
+      canvas.drawArc(
+        innerOrbit,
+        start * math.pi,
+        .34 * math.pi,
+        false,
+        innerMetal,
+      );
+    }
 
     final rayPaint = Paint()
       ..style = PaintingStyle.fill
+      ..shader = darkInk ? null : metalShader
       ..color = brass;
     for (var turn = 0; turn < 4; turn++) {
       canvas.save();
@@ -140,43 +191,132 @@ class _TheoremStarPainter extends CustomPainter {
         ..quadraticBezierTo(2.6, -13, 5.2, -4)
         ..lineTo(0, 1.2)
         ..close();
+      if (!darkInk) {
+        canvas.save();
+        canvas.translate(0, 1.2);
+        canvas.drawPath(
+          ray,
+          Paint()
+            ..color = const Color(0xB8010507)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.2),
+        );
+        canvas.restore();
+      }
       canvas.drawPath(ray, rayPaint);
+      canvas.drawPath(
+        ray,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = .75
+          ..color = highlight.withValues(alpha: darkInk ? .5 : .64),
+      );
       canvas.restore();
     }
 
+    final terminalPath = Path()
+      ..addOval(Rect.fromCircle(center: const Offset(50, 14), radius: 5.5))
+      ..addRect(
+        Rect.fromCenter(center: const Offset(14, 50), width: 10, height: 10),
+      )
+      ..moveTo(86, 50)
+      ..lineTo(76, 43.5)
+      ..lineTo(76, 56.5)
+      ..close()
+      ..moveTo(50, 78.9)
+      ..lineTo(57.1, 86)
+      ..lineTo(50, 93.1)
+      ..lineTo(42.9, 86)
+      ..close();
+    if (!darkInk) {
+      canvas.save();
+      canvas.translate(0, 1.1);
+      canvas.drawPath(
+        terminalPath,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 6.5
+          ..strokeJoin = StrokeJoin.round
+          ..color = const Color(0xB8010507)
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.3),
+      );
+      canvas.restore();
+    }
     final terminal = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 4.2
-      ..strokeJoin = StrokeJoin.miter
+      ..strokeJoin = StrokeJoin.round
+      ..shader = darkInk ? null : metalShader
       ..color = brass;
-    canvas.drawCircle(const Offset(50, 14), 5.5, terminal);
-    canvas.drawRect(
-      Rect.fromCenter(center: const Offset(14, 50), width: 10, height: 10),
-      terminal,
-    );
+    canvas.drawPath(terminalPath, terminal);
     canvas.drawPath(
-      Path()
-        ..moveTo(86, 50)
-        ..lineTo(76, 43.5)
-        ..lineTo(76, 56.5)
-        ..close(),
-      terminal,
+      terminalPath,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = .8
+        ..strokeJoin = StrokeJoin.round
+        ..color = highlight.withValues(alpha: darkInk ? .58 : .72),
     );
-    canvas.save();
-    canvas.translate(50, 86);
-    canvas.rotate(math.pi / 4);
-    canvas.drawRect(
-      Rect.fromCenter(center: Offset.zero, width: 10, height: 10),
-      terminal,
-    );
-    canvas.restore();
 
+    if (!darkInk && !monochrome) {
+      canvas.drawCircle(
+        const Offset(50, 50),
+        15,
+        Paint()
+          ..shader =
+              RadialGradient(
+                colors: [
+                  signal.withValues(alpha: .28),
+                  signal.withValues(alpha: 0),
+                ],
+              ).createShader(
+                Rect.fromCircle(center: const Offset(50, 50), radius: 15),
+              ),
+      );
+    }
     canvas.drawCircle(
       const Offset(50, 50),
       8.3,
-      Paint()..color = darkInk ? GaussColors.parchment : GaussColors.ivory,
+      Paint()
+        ..shader = darkInk
+            ? null
+            : const RadialGradient(
+                center: Alignment(-.3, -.35),
+                colors: [Color(0xFFFFF4D7), Color(0xFFD3A348)],
+              ).createShader(
+                Rect.fromCircle(center: const Offset(50, 50), radius: 8.3),
+              )
+        ..color = darkInk ? GaussColors.parchment : GaussColors.ivory,
     );
-    canvas.drawCircle(const Offset(50, 50), 5.3, Paint()..color = signal);
+    canvas.drawCircle(
+      const Offset(50, 50),
+      6.1,
+      Paint()..color = darkInk ? GaussColors.parchment : GaussColors.deepInk,
+    );
+    canvas.drawCircle(
+      const Offset(50, 50),
+      5.1,
+      Paint()
+        ..shader = darkInk || monochrome
+            ? null
+            : const RadialGradient(
+                center: Alignment(-.35, -.4),
+                colors: [
+                  Color(0xFFBFF7E6),
+                  Color(0xFF62AE9C),
+                  Color(0xFF176B74),
+                ],
+              ).createShader(
+                Rect.fromCircle(center: const Offset(50, 50), radius: 5.1),
+              )
+        ..color = signal,
+    );
+    if (!darkInk && !monochrome) {
+      canvas.drawCircle(
+        const Offset(48.4, 48.2),
+        1.15,
+        Paint()..color = GaussColors.ivory.withValues(alpha: .82),
+      );
+    }
     canvas.restore();
   }
 
