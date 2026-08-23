@@ -8,7 +8,7 @@ import 'package:gauss/widgets/scratchpad.dart';
 
 void main() {
   testWidgets(
-    'stylus and eraser enter ink on down, pressure stays bounded, undo is immediate',
+    'stylus draws on down, pen erasers are momentary, pressure and undo stay bounded',
     (tester) async {
       final ink = ScratchInkController();
       addTearDown(ink.dispose);
@@ -29,19 +29,58 @@ void main() {
       await stylus.up();
 
       final eraser = await tester.startGesture(
-        plate.topLeft + const Offset(65, 70),
+        plate.topLeft + const Offset(30, 45),
         pointer: 102,
         kind: PointerDeviceKind.invertedStylus,
       );
       await tester.pump();
-      expect(ink.strokeCount, 2);
+      expect(
+        ink.strokeCount,
+        0,
+        reason: 'an inverted pen erases the nearest complete stroke on down',
+      );
       await eraser.cancel();
+      await tester.pump();
+      expect(ink.strokeCount, 0);
+
+      final baselinePen = await tester.startGesture(
+        plate.topLeft + const Offset(80, 90),
+        pointer: 104,
+        kind: PointerDeviceKind.stylus,
+      );
+      await baselinePen.moveBy(const Offset(46, 12));
+      await baselinePen.up();
+      expect(ink.strokeCount, 1);
+
+      final buttonEraser = await tester.createGesture(
+        pointer: 105,
+        kind: PointerDeviceKind.stylus,
+      );
+      final buttonPoint = plate.topLeft + const Offset(80, 90);
+      await buttonEraser.downWithCustomEvent(
+        buttonPoint,
+        PointerDownEvent(
+          pointer: 105,
+          position: buttonPoint,
+          kind: PointerDeviceKind.stylus,
+          buttons: kSecondaryStylusButton,
+        ),
+      );
+      await buttonEraser.up();
       await tester.pump();
       expect(
         ink.strokeCount,
-        1,
-        reason: 'cancel must roll back only the live eraser-end stroke',
+        0,
+        reason: 'a Focus Pen side button acts as a momentary eraser',
       );
+
+      final retainedPen = await tester.startGesture(
+        plate.topLeft + const Offset(48, 64),
+        pointer: 106,
+        kind: PointerDeviceKind.stylus,
+      );
+      await retainedPen.moveBy(const Offset(34, 9));
+      await retainedPen.up();
 
       final pressurePen = await tester.createGesture(
         pointer: 103,

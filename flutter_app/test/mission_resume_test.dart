@@ -258,7 +258,7 @@ void main() {
   );
 
   testWidgets(
-    'mission question chrome stays fixed when stylus controls replace status',
+    'mission chrome stays fixed while contextual tools remain on the manuscript',
     (tester) async {
       await tester.binding.setSurfaceSize(const Size(320, 760));
       addTearDown(() => tester.binding.setSurfaceSize(null));
@@ -335,8 +335,17 @@ void main() {
       expect(tester.takeException(), isNull, reason: 'ink control layout');
 
       expect(find.byKey(const ValueKey('inline-pen-halo')), findsNothing);
+      expect(find.byKey(const ValueKey('mission-ink-controls')), findsNothing);
       expect(
-        find.byKey(const ValueKey('mission-ink-controls')),
+        find.byKey(const ValueKey('mission-readiness-signal')),
+        findsOneWidget,
+      );
+      expect(
+        find.byKey(const ValueKey('manuscript-undo-tool')),
+        findsOneWidget,
+      );
+      expect(
+        find.byKey(const ValueKey('manuscript-eraser-tool')),
         findsOneWidget,
       );
       final paperAfterInk = tester.getRect(
@@ -352,15 +361,18 @@ void main() {
         dockBefore,
       );
 
-      await tester.tap(find.byKey(const ValueKey('mission-ink-clear')));
+      await tester.tap(find.byKey(const ValueKey('manuscript-clear-tool')));
       await tester.pump(const Duration(milliseconds: 260));
       expect(tester.takeException(), isNull, reason: 'ink restore layout');
-      expect(find.byKey(const ValueKey('mission-ink-restore')), findsOneWidget);
-      await tester.tap(find.byKey(const ValueKey('mission-ink-restore')));
+      expect(
+        find.byKey(const ValueKey('manuscript-restore-tool')),
+        findsOneWidget,
+      );
+      await tester.tap(find.byKey(const ValueKey('manuscript-restore-tool')));
       await tester.pump(const Duration(milliseconds: 260));
       expect(tester.takeException(), isNull, reason: 'restored ink layout');
       expect(
-        find.byKey(const ValueKey('mission-ink-controls')),
+        find.byKey(const ValueKey('manuscript-clear-tool')),
         findsOneWidget,
       );
       await tester.tap(find.byKey(const ValueKey('mission-close-action')));
@@ -371,7 +383,7 @@ void main() {
       await tester.pump();
       expect(find.text('Leave and clear question ink?'), findsNothing);
       expect(
-        find.byKey(const ValueKey('mission-ink-controls')),
+        find.byKey(const ValueKey('manuscript-clear-tool')),
         findsOneWidget,
       );
       expect(tester.takeException(), isNull);

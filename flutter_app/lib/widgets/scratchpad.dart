@@ -180,7 +180,7 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
 
   void _setPointerContact(bool contact) {
     if (_pointerContact == contact) return;
-    setState(() => _pointerContact = contact);
+    _pointerContact = contact;
     _reportGestureOwnership();
   }
 
@@ -235,46 +235,48 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
   }
 
   @override
-  Widget build(BuildContext context) => AnimatedBuilder(
-    animation: _ink,
-    builder: (context, _) {
-      final hasInk = !_ink.isEmpty;
-      final canRestoreClear = _ink.canRestoreClearedInk;
-      final inkSurface = ClipRect(
-        child: Semantics(
-          container: true,
-          explicitChildNodes: true,
-          label:
-              'Question ink surface. A stylus writes directly; touch remains available for scrolling and answers.',
-          child: _ScratchInputSurface(
-            ink: _ink,
-            baseWidth: _strokeWidth,
-            allowTouch: widget.inputMode != QuestionInkMode.pan,
-            erase: widget.inputMode == QuestionInkMode.eraser,
-            active: widget.active,
-            onContactChanged: _setPointerContact,
-            child: Stack(
-              fit: StackFit.passthrough,
-              children: [
-                widget.child,
-                Positioned.fill(
-                  child: IgnorePointer(
-                    child: CustomPaint(
-                      key: const ValueKey('inline-ink-canvas'),
-                      painter: _ScratchPainter(ink: _ink, drawGrid: false),
-                    ),
+  Widget build(BuildContext context) {
+    final inkSurface = ClipRect(
+      child: Semantics(
+        container: true,
+        explicitChildNodes: true,
+        label:
+            'Question ink surface. A stylus writes directly; touch remains available for scrolling and answers.',
+        child: _ScratchInputSurface(
+          ink: _ink,
+          baseWidth: _strokeWidth,
+          allowTouch: widget.inputMode != QuestionInkMode.pan,
+          erase: widget.inputMode == QuestionInkMode.eraser,
+          active: widget.active,
+          onContactChanged: _setPointerContact,
+          child: Stack(
+            fit: StackFit.passthrough,
+            children: [
+              widget.child,
+              Positioned.fill(
+                child: IgnorePointer(
+                  child: CustomPaint(
+                    key: const ValueKey('inline-ink-canvas'),
+                    painter: _ScratchPainter(ink: _ink, drawGrid: false),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
-      );
-      if (!widget.showInlineControls) return inkSurface;
-      return Column(
+      ),
+    );
+    // The painter listens to every point directly. The widget tree only needs
+    // semantic ink boundaries; otherwise every stylus move rebuilds the
+    // prompt, media, answers, and manuscript shell.
+    if (!widget.showInlineControls) return inkSurface;
+    return ValueListenableBuilder<ScratchInkStatus>(
+      valueListenable: _ink.status,
+      child: inkSurface,
+      builder: (context, status, surface) => Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          inkSurface,
+          surface!,
           AnimatedSwitcher(
             duration: GaussMotion.resolve(context, GaussMotion.standard),
             reverseDuration: GaussMotion.resolve(context, GaussMotion.micro),
@@ -288,13 +290,13 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
                 child: child,
               ),
             ),
-            child: hasInk || canRestoreClear
+            child: !status.isEmpty || status.canRestoreClearedInk
                 ? Padding(
                     key: const ValueKey('inline-pen-halo-slot'),
                     padding: const EdgeInsets.only(top: GaussSpacing.space8),
                     child: Align(
                       alignment: AlignmentDirectional.centerEnd,
-                      child: canRestoreClear
+                      child: status.canRestoreClearedInk
                           ? _ClearInkUndoHalo(onRestore: _restoreInlineInk)
                           : _PenHalo(
                               ink: _ink,
@@ -310,9 +312,9 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
                   ),
           ),
         ],
-      );
-    },
-  );
+      ),
+    );
+  }
 }
 
 class _PenHalo extends StatelessWidget {
@@ -937,7 +939,7 @@ class _ScratchInputSession {
     _activeAndroidPointerId = event.device;
     _activeKind = event.kind;
     _smoothedWidth = _effectiveWidth(event, baseWidth);
-    if (erase) {
+    if (erase || _requestsEraser(event)) {
       _erasing = true;
       ink.eraseNearest(event.localPosition, size);
       return _ScratchBeginResult.accepted;
@@ -962,7 +964,7 @@ class _ScratchInputSession {
     required bool erase,
   }) {
     if (event.pointer != _activePointer) return;
-    if (_erasing || erase) {
+    if (_erasing || erase || _requestsEraser(event)) {
       ink.eraseNearest(event.localPosition, size);
       return;
     }
@@ -1030,6 +1032,10 @@ class _ScratchInputSession {
       kind == PointerDeviceKind.stylus ||
       kind == PointerDeviceKind.invertedStylus;
 
+  static bool _requestsEraser(PointerEvent event) =>
+      event.kind == PointerDeviceKind.invertedStylus ||
+      (event.buttons & (kPrimaryStylusButton | kSecondaryStylusButton)) != 0;
+
   static double _effectiveWidth(PointerEvent event, double baseWidth) {
     const minInkWidth = .8;
     const maxInkWidth = 7.0;
@@ -1057,6 +1063,30 @@ class _ScratchInputSession {
 enum _ScratchBeginResult { ignored, accepted, canceledActive }
 
 /// Session-local ink history with stroke-level rollback for palm rejection.
+@immutable
+class ScratchInkStatus {
+  const ScratchInkStatus({
+    required this.isEmpty,
+    required this.canUndo,
+    required this.canRestoreClearedInk,
+  });
+
+  final bool isEmpty;
+  final bool canUndo;
+  final bool canRestoreClearedInk;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ScratchInkStatus &&
+          other.isEmpty == isEmpty &&
+          other.canUndo == canUndo &&
+          other.canRestoreClearedInk == canRestoreClearedInk;
+
+  @override
+  int get hashCode => Object.hash(isEmpty, canUndo, canRestoreClearedInk);
+}
+
 class ScratchInkController extends ChangeNotifier {
   static const _maxRetainedPoints = 12000;
   static const _maxPointsPerStroke = 2000;
@@ -1069,10 +1099,32 @@ class ScratchInkController extends ChangeNotifier {
   int _committedRevision = 0;
   List<_InkStroke>? _clearedStrokes;
   int? _clearedNextGesture;
+  final ValueNotifier<ScratchInkStatus> _status = ValueNotifier(
+    const ScratchInkStatus(
+      isEmpty: true,
+      canUndo: false,
+      canRestoreClearedInk: false,
+    ),
+  );
 
   bool get isEmpty => _strokes.isEmpty;
   bool get canUndo => _strokes.isNotEmpty || canRestoreClearedInk;
   bool get canRestoreClearedInk => _strokes.isEmpty && _clearedStrokes != null;
+  ValueListenable<ScratchInkStatus> get status => _status;
+
+  ScratchInkStatus get _currentStatus => ScratchInkStatus(
+    isEmpty: isEmpty,
+    canUndo: canUndo,
+    canRestoreClearedInk: canRestoreClearedInk,
+  );
+
+  void _notifyInkChanged() {
+    final next = _currentStatus;
+    if (_status.value != next) _status.value = next;
+    // Paint listeners still receive every accepted point, while UI listeners
+    // above are isolated to meaningful state boundaries.
+    notifyListeners();
+  }
 
   @visibleForTesting
   int get strokeCount =>
@@ -1100,7 +1152,7 @@ class ScratchInkController extends ChangeNotifier {
       ..add(stroke);
     _activeStroke = stroke;
     _pointCount++;
-    notifyListeners();
+    _notifyInkChanged();
     return stroke.gesture;
   }
 
@@ -1131,7 +1183,7 @@ class ScratchInkController extends ChangeNotifier {
       _pointCount -= removed.points.length;
       _committedRevision++;
     }
-    notifyListeners();
+    _notifyInkChanged();
   }
 
   void end() {
@@ -1151,7 +1203,7 @@ class ScratchInkController extends ChangeNotifier {
     }
     _activeStroke = null;
     _activeGestureStrokes.clear();
-    notifyListeners();
+    _notifyInkChanged();
   }
 
   bool removeGesture(int gesture) {
@@ -1166,7 +1218,7 @@ class ScratchInkController extends ChangeNotifier {
     }
     if (_activeStroke?.gesture == gesture) _activeStroke = null;
     _committedRevision++;
-    notifyListeners();
+    _notifyInkChanged();
     return true;
   }
 
@@ -1207,7 +1259,7 @@ class ScratchInkController extends ChangeNotifier {
     _activeGestureStrokes.clear();
     _pointCount = 0;
     _committedRevision++;
-    notifyListeners();
+    _notifyInkChanged();
   }
 
   bool restoreLastClear() {
@@ -1221,14 +1273,14 @@ class ScratchInkController extends ChangeNotifier {
     _nextGesture = math.max(_nextGesture, _clearedNextGesture ?? _nextGesture);
     _discardClearHistory();
     _committedRevision++;
-    notifyListeners();
+    _notifyInkChanged();
     return true;
   }
 
   void discardLastClear() {
     if (_clearedStrokes == null) return;
     _discardClearHistory();
-    notifyListeners();
+    _notifyInkChanged();
   }
 
   void _discardClearHistory() {
@@ -1247,6 +1299,12 @@ class ScratchInkController extends ChangeNotifier {
     (point.dx / size.width).clamp(0, 1),
     (point.dy / size.height).clamp(0, 1),
   );
+
+  @override
+  void dispose() {
+    _status.dispose();
+    super.dispose();
+  }
 }
 
 class _InkStroke {

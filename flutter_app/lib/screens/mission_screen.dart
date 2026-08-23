@@ -619,9 +619,9 @@ class _QuestionStage extends StatelessWidget {
     required this.onRevealChoices,
     required this.onTagError,
     required this.onReportIssue,
-    required this.onScratchpad,
     required this.onClearInk,
     required this.onRestoreInk,
+    required this.onScratchpad,
     required this.onClose,
   });
   final Question question;
@@ -642,9 +642,9 @@ class _QuestionStage extends StatelessWidget {
   final VoidCallback onRevealChoices;
   final ValueChanged<MissReason> onTagError;
   final VoidCallback onReportIssue;
-  final VoidCallback onScratchpad;
   final VoidCallback onClearInk;
   final VoidCallback onRestoreInk;
+  final VoidCallback onScratchpad;
   final VoidCallback onClose;
 
   @override
@@ -708,6 +708,8 @@ class _QuestionStage extends StatelessWidget {
                         onRevealChoices: onRevealChoices,
                         onTagError: onTagError,
                         onReportIssue: onReportIssue,
+                        onClearInk: onClearInk,
+                        onRestoreInk: onRestoreInk,
                       );
                     }
                     return Padding(
@@ -731,6 +733,8 @@ class _QuestionStage extends StatelessWidget {
                               onRevealChoices: onRevealChoices,
                               onTagError: onTagError,
                               onReportIssue: onReportIssue,
+                              onClearInk: onClearInk,
+                              onRestoreInk: onRestoreInk,
                               inset: EdgeInsets.zero,
                             ),
                           ),
@@ -763,7 +767,6 @@ class _QuestionStage extends StatelessWidget {
               ),
               _MissionActionBar(
                 question: question,
-                ink: ink,
                 index: index,
                 total: total,
                 selectedChoice: selectedChoice,
@@ -773,9 +776,6 @@ class _QuestionStage extends StatelessWidget {
                 onCheck: onCheck,
                 onSkip: onSkip,
                 onNext: onNext,
-                onOpenInkWorkspace: onScratchpad,
-                onClearInk: onClearInk,
-                onRestoreInk: onRestoreInk,
               ),
             ],
           ),
@@ -900,6 +900,8 @@ class _QuestionScroll extends StatelessWidget {
     required this.onRevealChoices,
     required this.onTagError,
     required this.onReportIssue,
+    required this.onClearInk,
+    required this.onRestoreInk,
     this.inset = const EdgeInsets.fromLTRB(16, 8, 16, 18),
   });
 
@@ -916,6 +918,8 @@ class _QuestionScroll extends StatelessWidget {
   final VoidCallback onRevealChoices;
   final ValueChanged<MissReason> onTagError;
   final VoidCallback onReportIssue;
+  final VoidCallback onClearInk;
+  final VoidCallback onRestoreInk;
   final EdgeInsets inset;
 
   @override
@@ -948,8 +952,8 @@ class _QuestionScroll extends StatelessWidget {
                   questionNumber: index + 1,
                   difficulty: question.difficulty.label,
                   onExpandInk: () => showScratchpad(context, controller: ink),
-                  onClearInk: ink.clear,
-                  onRestoreInk: ink.restoreLastClear,
+                  onClearInk: onClearInk,
+                  onRestoreInk: onRestoreInk,
                   prompt: Directionality(
                     textDirection: TextDirection.rtl,
                     child: ContentBlocksView(
@@ -1191,7 +1195,6 @@ class _MissTagChip extends StatelessWidget {
 class _MissionActionBar extends StatelessWidget {
   const _MissionActionBar({
     required this.question,
-    required this.ink,
     required this.index,
     required this.total,
     required this.selectedChoice,
@@ -1201,13 +1204,9 @@ class _MissionActionBar extends StatelessWidget {
     required this.onCheck,
     required this.onSkip,
     required this.onNext,
-    required this.onOpenInkWorkspace,
-    required this.onClearInk,
-    required this.onRestoreInk,
   });
 
   final Question question;
-  final ScratchInkController ink;
   final int index;
   final int total;
   final int? selectedChoice;
@@ -1217,9 +1216,6 @@ class _MissionActionBar extends StatelessWidget {
   final VoidCallback onCheck;
   final VoidCallback onSkip;
   final VoidCallback onNext;
-  final VoidCallback onOpenInkWorkspace;
-  final VoidCallback onClearInk;
-  final VoidCallback onRestoreInk;
 
   VoidCallback? get primaryAction {
     if (busy) return null;
@@ -1316,70 +1312,49 @@ class _MissionActionBar extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: AnimatedBuilder(
-                  animation: ink,
-                  builder: (context, _) => Row(
-                    children: [
-                      SizedBox.square(
-                        dimension: 52,
-                        child: !checked && !busy && operationError == null
-                            ? IconButton.outlined(
-                                key: const ValueKey('mission-skip-action'),
-                                onPressed: onSkip,
-                                tooltip: 'Skip this question',
-                                icon: const Icon(
-                                  Icons.fast_forward_rounded,
-                                  size: 20,
-                                ),
-                              )
-                            : const SizedBox.shrink(),
-                      ),
-                      const SizedBox(width: GaussSpacing.space8),
-                      Expanded(
-                        child: ConstrainedBox(
-                          constraints: BoxConstraints(
-                            minHeight: accessibleActionHeight ? 70 : 52,
-                          ),
-                          child: AnimatedSwitcher(
-                            duration: GaussMotion.resolve(
-                              context,
-                              GaussMotion.standard,
-                            ),
-                            switchInCurve: Curves.easeOutCubic,
-                            switchOutCurve: Curves.easeInCubic,
-                            child: ink.isEmpty || ink.canRestoreClearedInk
-                                ? ink.canRestoreClearedInk
-                                      ? _MissionInkRestore(
-                                          onRestore: onRestoreInk,
-                                        )
-                                      : _MissionReadinessSignal(
-                                          semanticLabel: reading,
-                                          label: compactReading,
-                                          icon: readingIcon,
-                                          color: feedback == null
-                                              ? GaussColors.fog
-                                              : feedbackColor,
-                                          live: feedback != null,
-                                        )
-                                : _MissionInkControls(
-                                    ink: ink,
-                                    onExpand: onOpenInkWorkspace,
-                                    onClear: onClearInk,
-                                  ),
-                          ),
+                child: Row(
+                  children: [
+                    SizedBox.square(
+                      dimension: 52,
+                      child: !checked && !busy && operationError == null
+                          ? IconButton.outlined(
+                              key: const ValueKey('mission-skip-action'),
+                              onPressed: onSkip,
+                              tooltip: 'Skip this question',
+                              icon: const Icon(
+                                Icons.fast_forward_rounded,
+                                size: 20,
+                              ),
+                            )
+                          : const SizedBox.shrink(),
+                    ),
+                    const SizedBox(width: GaussSpacing.space8),
+                    Expanded(
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          minHeight: accessibleActionHeight ? 70 : 52,
+                        ),
+                        child: _MissionReadinessSignal(
+                          semanticLabel: reading,
+                          label: compactReading,
+                          icon: readingIcon,
+                          color: feedback == null
+                              ? GaussColors.fog
+                              : feedbackColor,
+                          live: feedback != null,
                         ),
                       ),
-                      const SizedBox(width: GaussSpacing.space8),
-                      _MissionPrimaryOrbit(
-                        busy: busy,
-                        checked: checked,
-                        finalQuestion: index == total - 1,
-                        operationError: operationError != null,
-                        semanticLabel: primaryLabel,
-                        onPressed: primaryAction,
-                      ),
-                    ],
-                  ),
+                    ),
+                    const SizedBox(width: GaussSpacing.space8),
+                    _MissionPrimaryOrbit(
+                      busy: busy,
+                      checked: checked,
+                      finalQuestion: index == total - 1,
+                      operationError: operationError != null,
+                      semanticLabel: primaryLabel,
+                      onPressed: primaryAction,
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -1485,65 +1460,6 @@ class _MissionPrimaryOrbit extends StatelessWidget {
       dimension: 52,
     );
   }
-}
-
-class _MissionInkControls extends StatelessWidget {
-  const _MissionInkControls({
-    required this.ink,
-    required this.onExpand,
-    required this.onClear,
-  });
-
-  final ScratchInkController ink;
-  final VoidCallback onExpand;
-  final VoidCallback onClear;
-
-  @override
-  Widget build(BuildContext context) => Row(
-    key: const ValueKey('mission-ink-controls'),
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      IconButton(
-        key: const ValueKey('mission-ink-undo'),
-        onPressed: ink.canUndo ? ink.undo : null,
-        tooltip: 'Undo last ink stroke',
-        icon: const Icon(Icons.undo_rounded),
-      ),
-      IconButton(
-        key: const ValueKey('mission-ink-expand'),
-        onPressed: onExpand,
-        tooltip: 'Open full scratchpad',
-        icon: const Icon(Icons.open_in_full_rounded),
-      ),
-      IconButton(
-        key: const ValueKey('mission-ink-clear'),
-        onPressed: onClear,
-        tooltip: 'Clear question ink',
-        color: GaussColors.error,
-        icon: const Icon(Icons.delete_sweep_outlined),
-      ),
-    ],
-  );
-}
-
-class _MissionInkRestore extends StatelessWidget {
-  const _MissionInkRestore({required this.onRestore});
-
-  final VoidCallback onRestore;
-
-  @override
-  Widget build(BuildContext context) => Semantics(
-    liveRegion: true,
-    label: 'Question ink cleared. Restore is available for four seconds.',
-    child: Center(
-      child: TextButton.icon(
-        key: const ValueKey('mission-ink-restore'),
-        onPressed: onRestore,
-        icon: const Icon(Icons.undo_rounded, color: GaussColors.brassLight),
-        label: const Text('Restore ink'),
-      ),
-    ),
-  );
 }
 
 String _blocksSemanticLabel(List<ContentBlock> blocks) => blocks

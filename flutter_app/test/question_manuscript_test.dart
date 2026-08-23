@@ -65,14 +65,7 @@ void main() {
       expect(find.text('QUESTION 1'), findsOneWidget);
       expect(find.text('HARD'), findsOneWidget);
       expect(tester.takeException(), isNull);
-      for (final label in <String>[
-        'Finger pen',
-        'Touch scroll',
-        'Undo last stroke',
-        'Open full scratchpad',
-        'Stroke eraser',
-        'Clear ink',
-      ]) {
+      for (final label in <String>['Finger pen', 'Open full scratchpad']) {
         final control = find.bySemanticsLabel(label);
         expect(control, findsOneWidget, reason: label);
         final rect = tester.getRect(control);
@@ -81,6 +74,10 @@ void main() {
         expect(rect.left, greaterThanOrEqualTo(0), reason: label);
         expect(rect.right, lessThanOrEqualTo(320), reason: label);
       }
+      expect(find.bySemanticsLabel('Touch scroll'), findsNothing);
+      expect(find.bySemanticsLabel('Undo last stroke'), findsNothing);
+      expect(find.bySemanticsLabel('Stroke eraser'), findsNothing);
+      expect(find.bySemanticsLabel('Clear ink'), findsNothing);
     },
   );
 
@@ -172,14 +169,106 @@ void main() {
     final pen = tester.getRect(
       find.byKey(const ValueKey('manuscript-pen-tool')),
     );
-    final pan = tester.getRect(
-      find.byKey(const ValueKey('manuscript-pan-tool')),
+    final expand = tester.getRect(
+      find.byKey(const ValueKey('manuscript-expand-tool')),
     );
     final question = tester.getRect(
       find.byKey(const ValueKey('question-manuscript-number')),
     );
-    expect(pan.top, greaterThan(pen.bottom));
+    expect(expand.top, greaterThan(pen.bottom));
     expect(pen.right, lessThan(question.left));
+    expect(tester.takeException(), isNull);
+  });
+
+  test('ink status publishes boundaries without rebuilding on every point', () {
+    final ink = ScratchInkController();
+    addTearDown(ink.dispose);
+    var statusEvents = 0;
+    ink.status.addListener(() => statusEvents++);
+
+    ink.begin(
+      const Offset(12, 12),
+      const Size(200, 120),
+      2,
+      kind: PointerDeviceKind.stylus,
+    );
+    expect(statusEvents, 1, reason: 'empty to non-empty is semantic');
+    for (var index = 0; index < 40; index++) {
+      ink.extend(
+        Offset(14.0 + index * 2, 14.0 + index),
+        const Size(200, 120),
+        2,
+      );
+    }
+    ink.end();
+    expect(
+      statusEvents,
+      1,
+      reason: 'point sampling must repaint only the ink canvas',
+    );
+
+    ink.clear();
+    expect(statusEvents, 2);
+    ink.restoreLastClear();
+    expect(statusEvents, 3);
+  });
+
+  testWidgets('stylus samples repaint ink without rebuilding live content', (
+    tester,
+  ) async {
+    final ink = ScratchInkController();
+    addTearDown(ink.dispose);
+    var contentBuilds = 0;
+    await tester.binding.setSurfaceSize(const Size(360, 720));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: buildGaussTheme(),
+        home: Scaffold(
+          body: Center(
+            child: SizedBox(
+              width: 320,
+              height: 360,
+              child: InlineQuestionScratch(
+                controller: ink,
+                showInlineControls: false,
+                child: Builder(
+                  builder: (context) {
+                    contentBuilds++;
+                    return const ColoredBox(
+                      key: ValueKey('rebuild-probe-content'),
+                      color: GaussColors.parchment,
+                    );
+                  },
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
+    final initialBuilds = contentBuilds;
+    final rect = tester.getRect(
+      find.byKey(const ValueKey('rebuild-probe-content')),
+    );
+    final pen = await tester.startGesture(
+      rect.topLeft + const Offset(24, 40),
+      pointer: 701,
+      kind: PointerDeviceKind.stylus,
+    );
+    for (var index = 0; index < 30; index++) {
+      await pen.moveBy(const Offset(3, 1));
+    }
+    await pen.up();
+    await tester.pump();
+
+    expect(ink.strokeCount, 1);
+    expect(
+      contentBuilds,
+      initialBuilds,
+      reason: 'pointer contact and stroke samples belong to the paint layer',
+    );
     expect(tester.takeException(), isNull);
   });
 }

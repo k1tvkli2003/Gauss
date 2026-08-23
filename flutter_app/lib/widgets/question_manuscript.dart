@@ -52,10 +52,12 @@ class _QuestionManuscriptState extends State<QuestionManuscript> {
   }
 
   @override
-  Widget build(BuildContext context) => AnimatedBuilder(
-    animation: widget.ink,
-    builder: (context, _) {
-      final accent = widget.ink.isEmpty
+  Widget build(
+    BuildContext context,
+  ) => ValueListenableBuilder<ScratchInkStatus>(
+    valueListenable: widget.ink.status,
+    builder: (context, inkStatus, _) {
+      final accent = inkStatus.isEmpty
           ? GaussColors.brass
           : GaussColors.signalBright;
       return RepaintBoundary(
@@ -116,6 +118,7 @@ class _QuestionManuscriptState extends State<QuestionManuscript> {
                           constraints.maxWidth >= 330 && textScale < 18;
                       final content = _ManuscriptContent(
                         ink: widget.ink,
+                        inkStatus: inkStatus,
                         mode: _mode,
                         questionNumber: widget.questionNumber,
                         difficulty: widget.difficulty,
@@ -126,6 +129,7 @@ class _QuestionManuscriptState extends State<QuestionManuscript> {
                       );
                       final tools = _ManuscriptToolRail(
                         ink: widget.ink,
+                        inkStatus: inkStatus,
                         mode: _mode,
                         vertical: verticalTools,
                         onMode: _selectMode,
@@ -149,12 +153,12 @@ class _QuestionManuscriptState extends State<QuestionManuscript> {
                       return Stack(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 70),
+                            padding: const EdgeInsets.only(left: 60),
                             child: content,
                           ),
                           Positioned(left: 0, top: 0, child: tools),
                           const Positioned(
-                            left: 58,
+                            left: 54,
                             top: 0,
                             bottom: 0,
                             child: _VerticalEngravedRule(),
@@ -176,6 +180,7 @@ class _QuestionManuscriptState extends State<QuestionManuscript> {
 class _ManuscriptContent extends StatelessWidget {
   const _ManuscriptContent({
     required this.ink,
+    required this.inkStatus,
     required this.mode,
     required this.questionNumber,
     required this.difficulty,
@@ -186,6 +191,7 @@ class _ManuscriptContent extends StatelessWidget {
   });
 
   final ScratchInkController ink;
+  final ScratchInkStatus inkStatus;
   final QuestionInkMode mode;
   final int questionNumber;
   final String difficulty;
@@ -211,44 +217,29 @@ class _ManuscriptContent extends StatelessWidget {
         inputMode: mode,
         showInlineControls: false,
         onDrawingChanged: onDrawingChanged,
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(minHeight: 216),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              prompt,
-              const SizedBox(height: GaussSpacing.space24),
-              Semantics(
-                label:
-                    'Writable reasoning space. A hardware stylus writes immediately.',
-                child: Container(
-                  key: const ValueKey('question-manuscript-writing-space'),
-                  constraints: const BoxConstraints(minHeight: 88),
-                  alignment: AlignmentDirectional.topStart,
-                  padding: const EdgeInsets.all(GaussSpacing.space8),
-                  child: ink.isEmpty
-                      ? ExcludeSemantics(
-                          child: Text(
-                            mode == QuestionInkMode.pan
-                                ? 'WRITE WITH STYLUS · TOUCH SCROLLS'
-                                : mode == QuestionInkMode.pen
-                                ? 'FINGER PEN ACTIVE'
-                                : 'STROKE ERASER ACTIVE',
-                            style: TextStyle(
-                              color: GaussColors.parchmentInk.withValues(
-                                alpha: .26,
-                              ),
-                              fontSize: GaussTypeScale.insignia,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: 1,
-                            ),
-                          ),
-                        )
-                      : null,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            prompt,
+            const SizedBox(height: GaussSpacing.space16),
+            Semantics(
+              label:
+                  'Writable reasoning space. A hardware stylus writes immediately.',
+              child: AnimatedContainer(
+                key: const ValueKey('question-manuscript-writing-space'),
+                duration: GaussMotion.resolve(context, GaussMotion.standard),
+                curve: Curves.easeOutCubic,
+                constraints: BoxConstraints(
+                  minHeight: inkStatus.isEmpty ? 112 : 176,
                 ),
+                alignment: AlignmentDirectional.topStart,
+                padding: const EdgeInsets.all(GaussSpacing.space8),
+                child: inkStatus.isEmpty
+                    ? ExcludeSemantics(child: _WritingSpaceSignal(mode: mode))
+                    : null,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       const SizedBox(height: GaussSpacing.space12),
@@ -257,6 +248,52 @@ class _ManuscriptContent extends StatelessWidget {
       answers,
     ],
   );
+}
+
+class _WritingSpaceSignal extends StatelessWidget {
+  const _WritingSpaceSignal({required this.mode});
+
+  final QuestionInkMode mode;
+
+  @override
+  Widget build(BuildContext context) {
+    final label = switch (mode) {
+      QuestionInkMode.pan => 'STYLUS READY · TOUCH SCROLLS',
+      QuestionInkMode.pen => 'FINGER INK ACTIVE',
+      QuestionInkMode.eraser => 'STROKE ERASER ACTIVE',
+    };
+    final accent = mode == QuestionInkMode.pan
+        ? GaussColors.parchmentInk
+        : const Color(0xFF237E83);
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(
+          mode == QuestionInkMode.pan
+              ? Icons.draw_outlined
+              : mode == QuestionInkMode.pen
+              ? Icons.gesture_rounded
+              : Icons.cleaning_services_outlined,
+          size: 15,
+          color: accent.withValues(alpha: .34),
+        ),
+        const SizedBox(width: GaussSpacing.space8),
+        Flexible(
+          child: Text(
+            label,
+            softWrap: true,
+            style: TextStyle(
+              color: accent.withValues(alpha: .34),
+              fontSize: GaussTypeScale.insignia,
+              fontWeight: FontWeight.w800,
+              letterSpacing: .85,
+              height: 1.2,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }
 
 class _ManuscriptQuestionHeader extends StatelessWidget {
@@ -354,6 +391,7 @@ class _ManuscriptQuestionHeader extends StatelessWidget {
 class _ManuscriptToolRail extends StatelessWidget {
   const _ManuscriptToolRail({
     required this.ink,
+    required this.inkStatus,
     required this.mode,
     required this.vertical,
     required this.onMode,
@@ -363,6 +401,7 @@ class _ManuscriptToolRail extends StatelessWidget {
   });
 
   final ScratchInkController ink;
+  final ScratchInkStatus inkStatus;
   final QuestionInkMode mode;
   final bool vertical;
   final ValueChanged<QuestionInkMode> onMode;
@@ -372,57 +411,57 @@ class _ManuscriptToolRail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final returnToScroll = mode != QuestionInkMode.pan;
     final buttons = <Widget>[
       _ManuscriptToolButton(
-        key: const ValueKey('manuscript-pen-tool'),
-        icon: Icons.draw_outlined,
-        label: 'Finger pen',
-        selected: mode == QuestionInkMode.pen,
-        onPressed: () => onMode(QuestionInkMode.pen),
+        key: ValueKey(
+          returnToScroll ? 'manuscript-pan-tool' : 'manuscript-pen-tool',
+        ),
+        icon: returnToScroll
+            ? Icons.pan_tool_alt_outlined
+            : Icons.draw_outlined,
+        label: returnToScroll ? 'Touch scroll' : 'Finger pen',
+        selected: returnToScroll,
+        onPressed: () =>
+            onMode(returnToScroll ? QuestionInkMode.pan : QuestionInkMode.pen),
       ),
-      _ManuscriptToolButton(
-        key: const ValueKey('manuscript-pan-tool'),
-        icon: Icons.pan_tool_alt_outlined,
-        label: 'Touch scroll',
-        selected: mode == QuestionInkMode.pan,
-        onPressed: () => onMode(QuestionInkMode.pan),
-      ),
-      _ManuscriptToolButton(
-        key: const ValueKey('manuscript-undo-tool'),
-        icon: Icons.undo_rounded,
-        label: 'Undo last stroke',
-        onPressed: ink.canUndo ? ink.undo : null,
-      ),
+      if (inkStatus.canUndo && !inkStatus.canRestoreClearedInk)
+        _ManuscriptToolButton(
+          key: const ValueKey('manuscript-undo-tool'),
+          icon: Icons.undo_rounded,
+          label: 'Undo last stroke',
+          onPressed: ink.undo,
+        ),
       _ManuscriptToolButton(
         key: const ValueKey('manuscript-expand-tool'),
         icon: Icons.open_in_full_rounded,
         label: 'Open full scratchpad',
         onPressed: onExpand,
       ),
-      _ManuscriptToolButton(
-        key: const ValueKey('manuscript-eraser-tool'),
-        icon: Icons.cleaning_services_outlined,
-        label: 'Stroke eraser',
-        selected: mode == QuestionInkMode.eraser,
-        onPressed: () => onMode(QuestionInkMode.eraser),
-      ),
-      _ManuscriptToolButton(
-        key: ValueKey(
-          ink.canRestoreClearedInk
-              ? 'manuscript-restore-tool'
-              : 'manuscript-clear-tool',
+      if (!inkStatus.isEmpty && !inkStatus.canRestoreClearedInk)
+        _ManuscriptToolButton(
+          key: const ValueKey('manuscript-eraser-tool'),
+          icon: Icons.cleaning_services_outlined,
+          label: 'Stroke eraser',
+          selected: mode == QuestionInkMode.eraser,
+          onPressed: () => onMode(QuestionInkMode.eraser),
         ),
-        icon: ink.canRestoreClearedInk
-            ? Icons.restore_rounded
-            : Icons.delete_outline_rounded,
-        label: ink.canRestoreClearedInk ? 'Restore cleared ink' : 'Clear ink',
-        danger: !ink.canRestoreClearedInk,
-        onPressed: ink.canRestoreClearedInk
-            ? onRestore
-            : ink.isEmpty
-            ? null
-            : onClear,
-      ),
+      if (!inkStatus.isEmpty || inkStatus.canRestoreClearedInk)
+        _ManuscriptToolButton(
+          key: ValueKey(
+            inkStatus.canRestoreClearedInk
+                ? 'manuscript-restore-tool'
+                : 'manuscript-clear-tool',
+          ),
+          icon: inkStatus.canRestoreClearedInk
+              ? Icons.restore_rounded
+              : Icons.delete_outline_rounded,
+          label: inkStatus.canRestoreClearedInk
+              ? 'Restore cleared ink'
+              : 'Clear ink',
+          danger: !inkStatus.canRestoreClearedInk,
+          onPressed: inkStatus.canRestoreClearedInk ? onRestore : onClear,
+        ),
     ];
     return Semantics(
       container: true,
