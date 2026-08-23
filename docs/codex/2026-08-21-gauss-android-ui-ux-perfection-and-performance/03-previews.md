@@ -16,6 +16,8 @@
 | Profile Phone Mission | Android profile baseline | `Codex_API35`، 1080×2400 | yes برای P0 baseline | [phone Mission](logs/performance-baseline-08a7817/run-01/mission.png) | مرجع before برای prompt، ink، answers و solve dock |
 | Tablet Portrait Map/Mission | Android profile baseline | 800×1280dp | yes برای P0 baseline | [portrait Map](logs/performance-tablet-portrait-08a7817/run-01/map.png)، [portrait Mission](logs/performance-tablet-portrait-08a7817/run-01/mission.png) | فضای عمودی مرده و کشیدگی phone composition را آشکار می‌کند |
 | Tablet Landscape Map/Mission | Android profile baseline | 1280×800dp | yes برای P0 baseline | [landscape Map](logs/performance-tablet-landscape-798aa03/run-01/map.png)، [landscape Mission](logs/performance-tablet-landscape-798aa03/run-01/mission.png) | rail/inspector درست است؛ density و scroll/answer workspace هنوز P3–P5 work queue است |
+| P4 Manuscript — blank phone | Android Profile runtime checkpoint | `df7b17e`، `Codex_API35`، 1080×2400 | yes برای vertical slice phone؛ نه برای گیت کامل P4 | [blank manuscript](assets/p4-manuscript-blank-phone.webp) | prompt، فضای reasoning جمع‌شونده، چهار answer rail و dock مستقل |
+| P4 Manuscript — ink phone | Android Profile runtime checkpoint | `df7b17e`، `Codex_API35`، 1080×2400 | yes برای ink ownership/tool-state slice؛ نه برای hardware latency | [ink manuscript](assets/p4-manuscript-ink-phone.webp) | tool spine زمینه‌ای، ink زنده و نبود کنترل تکراری در action dock |
 
 ## قرارداد مرجع Map
 
@@ -35,7 +37,7 @@
 - Source: user-selected concept preserved in the prior task assets
 - Assumptions: همه متن‌ها، اعداد، stateها و کنترل‌ها در production زنده و semantic خواهند بود.
 - Limitations: تصویر، proof runtime یا مختصات ثابت یک دستگاه نیست و app chrome فارسی آن به production منتقل نمی‌شود.
-- Verified: direction approved only; production runtime match remains unverified.
+- Verified: direction approved؛ vertical slice phone برای prompt/reasoning/answers/tool spine و action dock روی `df7b17e` زنده تأیید شده، اما tablet/large-text/solution/completion و Focus Pen فیزیکی هنوز gate باز هستند.
 - Asset: [accepted concept](../2026-08-02-android-perfect-cycle/assets/concepts/question-astral-codex-v1.png)
 
 ## Findings ورودی طراحی
@@ -48,4 +50,4 @@
 
 ## گیت بعدی
 
-پس از P1، manifest لایه‌ها و composition spec برای یک vertical slice نوشته می‌شود. پس از P3 و P4، reference و runtime با viewport همسان side-by-side مقایسه و هر delta Material در mismatch ledger ثبت می‌شود.
+vertical slice phone اکنون با viewport همسان ثبت شده است. گیت بعدی P4، matrix phone/tablet/large-text و حالت‌های انتخاب، صحیح/غلط، solution، completion و restore است؛ هر delta مادی نسبت به reference باید پیش از phase-complete بسته یا صریحاً ثبت شود.

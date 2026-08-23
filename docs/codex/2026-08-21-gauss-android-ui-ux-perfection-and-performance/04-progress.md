@@ -22,6 +22,7 @@
 | 2026-08-23T01:33:40+03:30 | active | identity raster دارای plate پس از رد بصری کامل حذف شد؛ theorem mark شفاف و مرکزچین با paint چندلایه، Android vector و adaptive safe foreground جای آن را در auth، Splash و launcher گرفت. | analyze پاک؛ 36/36 + 33/33 تست؛ دو debug build/install؛ [Splash](assets/p3-brand-splash-transparent.png) و [Auth](assets/p3-brand-auth-centered.png) زنده |
 | 2026-08-23T02:03:50+03:30 | active | Orbit Navigator از modal بلند و list/form به constellation switcher content-hugging بازسازی شد؛ پنج فصل، تغییر subject، preview منتخب و action نمادین بدون پوشاندن Map یا scroll ثانویه در یک قاب قرار گرفتند. | analyze پاک؛ 41/41 تست؛ debug build/install؛ [Phone](assets/p3-orbit-navigator-constellation.png) و [320dp/200%](assets/p3-orbit-navigator-320dp-200text.png) زنده |
 | 2026-08-23T02:48:54+03:30 | phase-complete | P3 بسته شد: node/aura نخست از Orbit header جدا شد، blank tail انتهای route حذف شد، Mission Compass/footer و landmarkها در matrix هفت‌نمای phone/tablet بدون overlap یا clip پاس شدند. P4 آغاز شد. | `894bdaf`؛ analyzer پاک؛ 42/42 تست؛ [start](assets/p3-map-phone-start.webp)، [end](assets/p3-map-phone-end.webp)، [tablet landscape](assets/p3-map-tablet-landscape.webp)؛ Map UI/raster p95=`4.359/20.250ms` |
+| 2026-08-24T00:46:32+03:30 | active | vertical slice نخست P4 بسته شد: rebuildهای per-point از manuscript حذف، stylus side-button/inverted eraser اضافه، tool spine زمینه‌ای و مالک یگانهٔ ink شد و کنترل‌های تکراری از action dock حذف شدند. | `df7b17e`؛ analyzer پاک؛ 27/27 تست؛ Profile build/install؛ [blank](assets/p4-manuscript-blank-phone.webp) و [ink](assets/p4-manuscript-ink-phone.webp) زنده |
 
 ## انجام‌شده تا اینجا
 
@@ -35,7 +36,8 @@
 - identity P3 از gate بصری عبور کرده است: mark و wordmark در auth محور مشترک دارند، Splash در مرکز واقعی است و هیچ baked/internal plate باقی نمانده است.
 - Orbit Navigator نیز از gate بصری و responsive عبور کرده است: در حالت عادی content-hugging است، در `320dp` با متن `200%` تمام کنترل‌ها حداقل `48dp` می‌مانند و summary/labels نمی‌شکنند یا ellipsize نمی‌شوند.
 - Mission Compass، footer، landmark hierarchy و matrix کامل مسیر بسته‌اند؛ exact-revision profile و package guard نیز P3 را phase-complete کرده‌اند.
+- P4 ownership checkpoint بسته است: stroke point فقط canvas را repaint می‌کند، blank/ink tool state بدون پرش dock تغییر می‌کند، touch-scroll پیش‌فرض حفظ شده و Focus Pen side buttons تست مستقل دارند.
 
 ## مرحله بعد
 
-- P4: بازسازی Writable Astral Manuscript، answer rails، pointer ownership و compositionهای phone/tablet؛ سپس solution/completion و performance proof.
+- P4: تکمیل answer states، solution/completion، restore timing و compositionهای phone/tablet/large-text؛ سپس exact-revision performance proof.
