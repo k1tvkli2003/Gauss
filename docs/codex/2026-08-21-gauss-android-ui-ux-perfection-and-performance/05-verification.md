@@ -3,7 +3,7 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-24T00:46:32+03:30
+- Last verified: 2026-08-24T07:06:37+03:30
 - Scope: P0–P3 closed; P4 Question/stylus rebuild active
 
 ## بررسی‌ها
@@ -62,10 +62,11 @@
 | P3 final static/regression gate | `flutter analyze --no-pub` + چهار suite Map/Android/UI | passed | analyzer بدون issue در `43.8s`؛ 42/42 test passed |
 | P3 exact-revision profile spot-check | `run_android_performance.ps1 -Runs 1` روی `894bdaf5752c84db54e980eb61961406d78fc29a` | passed | 1/1 journey set؛ Map scroll UI p95=`4.359ms`، raster p95=`20.250ms`؛ [aggregate](logs/performance-p3-final-894bdaf/aggregate.json)؛ transition outlierها برای P4/P6 حفظ شدند |
 | P3 final Android/package guard | debug build/install + AVD/package inventory | passed | debug APK در `206.8s` ساخته و in-place نصب شد؛ تنها `Codex_API35` در `1080×2400 @ 420dpi`؛ `com.gauss.app` v106، dataDir و firstInstallTime بدون تغییر |
-| P4 focused Question/Pen regressions | `flutter test --no-pub test/question_manuscript_test.dart test/focus_pen_math_render_test.dart test/mission_resume_test.dart` | passed checkpoint | 27/27؛ semantic status فقط در empty/nonempty/restore عوض می‌شود، 30 move نمونه parent را rebuild نمی‌کند، pressure/palm/inverted/side-button paths پاس‌اند |
+| P4 focused Question/Pen regressions | `flutter test --no-pub test/question_manuscript_test.dart test/focus_pen_math_render_test.dart test/mission_resume_test.dart` | passed checkpoint | 28/28؛ semantic status فقط در empty/nonempty/restore عوض می‌شود، 30 move نمونه parent را rebuild نمی‌کند، pressure/palm/inverted/side-button و answer→review paths پاس‌اند |
 | P4 focused static gate | `flutter analyze --no-pub` روی 3 source و 3 test مرتبط | passed checkpoint | No issues found؛ `88.6s` |
 | P4 Android Profile visual slice | build/install `tool/perf_main.dart` + blank/ink/clear runtime inspection | passed checkpoint | Profile APK در `153.9s` ساخته شد؛ [blank](assets/p4-manuscript-blank-phone.webp) و [ink](assets/p4-manuscript-ink-phone.webp)؛ action dock بدون ابزار ink تکراری |
 | P4 AVD and signed-package guard | AVD inventory + `dumpsys package com.gauss.app` پس از Profile install | passed | تنها `Codex_API35`؛ signed app همان v106، `dataDir=/data/user/0/com.gauss.app` و `firstInstallTime=2026-07-18 13:02:33` |
+| P4 phone answer→review runtime | Finger Ink → wrong choice → Check روی Android Profile | passed checkpoint | Touch Scroll خودکار فعال، correct answer و ابتدای reflection در viewport، solution داخل parchment؛ [runtime](assets/p4-manuscript-review-phone.webp) |
 
 ## هنوز اجرا نشده
 

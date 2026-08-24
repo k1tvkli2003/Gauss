@@ -18,6 +18,7 @@
 | Tablet Landscape Map/Mission | Android profile baseline | 1280×800dp | yes برای P0 baseline | [landscape Map](logs/performance-tablet-landscape-798aa03/run-01/map.png)، [landscape Mission](logs/performance-tablet-landscape-798aa03/run-01/mission.png) | rail/inspector درست است؛ density و scroll/answer workspace هنوز P3–P5 work queue است |
 | P4 Manuscript — blank phone | Android Profile runtime checkpoint | `df7b17e`، `Codex_API35`، 1080×2400 | yes برای vertical slice phone؛ نه برای گیت کامل P4 | [blank manuscript](assets/p4-manuscript-blank-phone.webp) | prompt، فضای reasoning جمع‌شونده، چهار answer rail و dock مستقل |
 | P4 Manuscript — ink phone | Android Profile runtime checkpoint | `df7b17e`، `Codex_API35`، 1080×2400 | yes برای ink ownership/tool-state slice؛ نه برای hardware latency | [ink manuscript](assets/p4-manuscript-ink-phone.webp) | tool spine زمینه‌ای، ink زنده و نبود کنترل تکراری در action dock |
+| P4 Manuscript — review phone | Android Profile runtime checkpoint | `16160f7`، `Codex_API35`، 1080×2400 | yes برای answer→review phone؛ نه برای گیت کامل P4 | [review manuscript](assets/p4-manuscript-review-phone.webp) | پاسخ درست، reflection و solution روی یک parchment؛ بازگشت خودکار Finger Ink به Touch Scroll |
 
 ## قرارداد مرجع Map
 

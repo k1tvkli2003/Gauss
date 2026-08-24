@@ -1,7 +1,7 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-24T00:46:32+03:30
+- Last updated: 2026-08-24T07:06:37+03:30
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
 - Current phase: P4 — Question, answers and stylus rebuild
@@ -66,9 +66,10 @@ P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را
 - matrix نهایی P3 در phone start/chapter/mid/late/end و tablet portrait/landscape بررسی شد؛ نود اول با bounds کامل aura از header جدا و آخرین نود بدون dead-air tail داخل route field نگه داشته شد.
 - گیت نهایی P3 روی `894bdaf` با analyzer پاک، 42/42 تست، debug APK موفق، نصب in-place و profile spot-check پاس شد؛ Map scroll در نمونهٔ exact-revision به UI/raster p95 برابر `4.359/20.250ms` رسید و signed package/data دست‌نخورده ماند.
 - vertical slice نخست P4 روی `df7b17e` با 27/27 تست Question/Focus Pen/Mission، analyzer متمرکز پاک، Profile APK موفق و بررسی Android زندهٔ blank/ink/clear پاس شد؛ ابزارهای تکراری dock حذف و signed `com.gauss.app` v106 دست‌نخورده ماند.
+- checkpoint دوم P4 روی `16160f7` مسیر answer→review را اصلاح کرد: ورود به review حالت Finger Ink را به Touch Scroll برمی‌گرداند، viewport به انتهای پاسخ درست و ابتدای reflection می‌رسد، و reflection/solution به‌جای Card جدا ادامهٔ همان parchment هستند؛ 28/28 تست، analyzer پاک و Android Profile زنده پاس شد.
 
 ## Remaining
 
-- ادامهٔ P4: answer states، solution/completion، restore timing، compositionهای phone/tablet/large-text و performance proof؛ physical Xiaomi Focus Pen تا P7 gate سخت‌افزاری می‌ماند.
+- ادامهٔ P4: completion، restore timing، compositionهای tablet portrait/landscape/large-text و performance proof؛ physical Xiaomi Focus Pen تا P7 gate سخت‌افزاری می‌ماند.
 - اجرای P5 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

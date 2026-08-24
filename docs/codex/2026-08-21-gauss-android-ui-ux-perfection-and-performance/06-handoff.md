@@ -2,7 +2,7 @@
 
 ## Outcome
 
-کار هنوز active است. P0 تا P3 کامل و Goal gated برابر 50% است. Map کامل—engine، route/node، header/identity، Orbit Navigator، landmark، Mission Compass، footer و matrix phone/tablet—از گیت P3 عبور کرده است. در P4، checkpoint نخست Question/stylus روی `df7b17e` پاس شده: narrow ink ownership، contextual tool spine، Focus Pen side-button/inverted eraser و action dock بدون ابزار تکراری در Android Profile زنده‌اند. answer states، solution/completion، responsive matrix و performance gate هنوز بازند؛ این فایل پایان کار را اعلام نمی‌کند.
+کار هنوز active است. P0 تا P3 کامل و Goal gated برابر 50% است. Map کامل—engine، route/node، header/identity، Orbit Navigator، landmark، Mission Compass، footer و matrix phone/tablet—از گیت P3 عبور کرده است. در P4، ownership/stylus checkpoint روی `df7b17e` و answer→review checkpoint روی `16160f7` پاس شده‌اند: ابزار ink مالک یگانه دارند، Focus Pen contracts تست شده‌اند، Finger Ink هنگام Review به Touch Scroll برمی‌گردد و feedback/solution ادامهٔ manuscript است. completion، responsive matrix و performance gate هنوز بازند؛ این فایل پایان کار را اعلام نمی‌کند.
 
 ## Changed Artifacts
 
@@ -16,10 +16,11 @@
 - Orbit Navigator content-hugging با پنج chapter beacon، subject switch، preview تک‌فصل، action نمادین و screenshotهای phone/accessibility.
 - Mission Compass/footer نهایی، geometry بدون header collision/dead-air tail، matrix هفت‌نمای Map و evidence فشردهٔ profile روی exact revision P3.
 - checkpoint نخست Astral Manuscript با status کم‌فرکانس ink، painter مستقل، tool spine زمینه‌ای، pointer contract گسترده و دو capture زندهٔ phone.
+- checkpoint answer→review با transition قابل‌اسکرول، reflection/solution پیوسته و capture زندهٔ phone.
 
 ## How To Continue
 
-1. P4 را از checkpoint `df7b17e` ادامه دهید: answer state/solution/completion و restore timing را کامل و سپس matrix phone/tablet/large-text و performance را ببندید.
+1. P4 را از checkpoint `16160f7` ادامه دهید: completion و restore timing را کامل و سپس matrix phone/tablet/large-text و performance را ببندید.
 2. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
 3. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
 
