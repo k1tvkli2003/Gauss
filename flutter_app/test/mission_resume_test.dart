@@ -391,6 +391,86 @@ void main() {
   );
 
   testWidgets(
+    'checking an answer exits finger ink and reveals review inside the manuscript',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(411, 914));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        sampleQuestion,
+        database,
+        failFirstSave: false,
+      );
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(disableAnimations: false),
+            child: child!,
+          ),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(topicKey: 'sets', count: 5),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+
+      await tester.tap(find.byKey(const ValueKey('manuscript-pen-tool')));
+      await tester.pump();
+      expect(find.byKey(const ValueKey('manuscript-pan-tool')), findsOneWidget);
+
+      final wrongChoice = find.bySemanticsLabel(RegExp(r'^Choice 2\. B\.'));
+      await tester.ensureVisible(wrongChoice);
+      await tester.tap(wrongChoice);
+      await tester.pump();
+      await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+      await tester.pumpAndSettle(const Duration(milliseconds: 80));
+
+      expect(
+        find.byKey(const ValueKey('manuscript-pen-tool')),
+        findsOneWidget,
+        reason: 'Review must restore native finger scrolling.',
+      );
+      expect(find.byKey(const ValueKey('manuscript-pan-tool')), findsNothing);
+      final manuscript = find.byKey(const ValueKey('mission-question-paper'));
+      expect(
+        find.descendant(
+          of: manuscript,
+          matching: find.byKey(const ValueKey('mission-manuscript-solution')),
+        ),
+        findsOneWidget,
+      );
+      expect(
+        find.descendant(
+          of: manuscript,
+          matching: find.text('Fixture solution'),
+        ),
+        findsOneWidget,
+      );
+      final viewport = tester.getRect(
+        find.byKey(const ValueKey('mission-question-scroll')),
+      );
+      final review = tester.getRect(
+        find.byKey(const ValueKey('mission-manuscript-review')),
+      );
+      final reflection = tester.getRect(
+        find.byKey(const ValueKey('mission-manuscript-reflection')),
+      );
+      expect(review.top, lessThan(viewport.bottom));
+      expect(review.bottom, greaterThan(viewport.top));
+      expect(reflection.top, greaterThanOrEqualTo(viewport.top));
+      expect(reflection.top, lessThan(viewport.bottom));
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
     'representative Persian mission keeps all four choices above the Android dock',
     (tester) async {
       await tester.binding.setSurfaceSize(const Size(411, 914));

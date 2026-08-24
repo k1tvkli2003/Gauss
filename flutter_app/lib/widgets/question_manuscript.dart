@@ -24,6 +24,8 @@ class QuestionManuscript extends StatefulWidget {
     required this.onClearInk,
     required this.onRestoreInk,
     this.active = true,
+    this.reviewing = false,
+    this.review,
     this.onDrawingChanged,
     super.key,
   });
@@ -34,6 +36,8 @@ class QuestionManuscript extends StatefulWidget {
   final Widget prompt;
   final Widget answers;
   final bool active;
+  final bool reviewing;
+  final Widget? review;
   final ValueChanged<bool>? onDrawingChanged;
   final VoidCallback onExpandInk;
   final VoidCallback onClearInk;
@@ -45,6 +49,18 @@ class QuestionManuscript extends StatefulWidget {
 
 class _QuestionManuscriptState extends State<QuestionManuscript> {
   QuestionInkMode _mode = QuestionInkMode.pan;
+
+  @override
+  void didUpdateWidget(covariant QuestionManuscript oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.questionNumber != widget.questionNumber ||
+        (!oldWidget.reviewing && widget.reviewing)) {
+      // A new question and the review transition both begin with native touch
+      // scrolling. This prevents a previously selected finger-ink mode from
+      // trapping the user above the answer explanation.
+      _mode = QuestionInkMode.pan;
+    }
+  }
 
   void _selectMode(QuestionInkMode mode) {
     if (_mode == mode) return;
@@ -124,6 +140,7 @@ class _QuestionManuscriptState extends State<QuestionManuscript> {
                         difficulty: widget.difficulty,
                         prompt: widget.prompt,
                         answers: widget.answers,
+                        review: widget.review,
                         active: widget.active,
                         onDrawingChanged: widget.onDrawingChanged,
                       );
@@ -186,6 +203,7 @@ class _ManuscriptContent extends StatelessWidget {
     required this.difficulty,
     required this.prompt,
     required this.answers,
+    required this.review,
     required this.active,
     required this.onDrawingChanged,
   });
@@ -197,6 +215,7 @@ class _ManuscriptContent extends StatelessWidget {
   final String difficulty;
   final Widget prompt;
   final Widget answers;
+  final Widget? review;
   final bool active;
   final ValueChanged<bool>? onDrawingChanged;
 
@@ -246,6 +265,12 @@ class _ManuscriptContent extends StatelessWidget {
       const _EngravedRule(ornament: true),
       const SizedBox(height: GaussSpacing.space16),
       answers,
+      if (review case final review?) ...[
+        const SizedBox(height: GaussSpacing.space20),
+        const _EngravedRule(ornament: true),
+        const SizedBox(height: GaussSpacing.space16),
+        review,
+      ],
     ],
   );
 }

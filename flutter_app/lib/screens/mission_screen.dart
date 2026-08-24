@@ -885,7 +885,7 @@ class _MissionTopBar extends StatelessWidget {
   );
 }
 
-class _QuestionScroll extends StatelessWidget {
+class _QuestionScroll extends StatefulWidget {
   const _QuestionScroll({
     required this.question,
     required this.ink,
@@ -923,16 +923,105 @@ class _QuestionScroll extends StatelessWidget {
   final EdgeInsets inset;
 
   @override
+  State<_QuestionScroll> createState() => _QuestionScrollState();
+}
+
+class _QuestionScrollState extends State<_QuestionScroll> {
+  final ScrollController _scrollController = ScrollController();
+  final GlobalKey _reviewAnchorKey = GlobalKey();
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.checked && widget.showSolution) _scheduleReviewReveal();
+  }
+
+  @override
+  void didUpdateWidget(covariant _QuestionScroll oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    final questionChanged = oldWidget.question.id != widget.question.id;
+    if (questionChanged && !(widget.checked && widget.showSolution)) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted || !_scrollController.hasClients) return;
+        _scrollController.jumpTo(0);
+      });
+    }
+    if (widget.checked &&
+        widget.showSolution &&
+        (!oldWidget.checked || !oldWidget.showSolution || questionChanged)) {
+      _scheduleReviewReveal();
+    }
+  }
+
+  void _scheduleReviewReveal() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      final anchor = _reviewAnchorKey.currentContext;
+      if (anchor == null) return;
+      Scrollable.ensureVisible(
+        anchor,
+        alignment: .34,
+        duration: GaussMotion.resolve(
+          context,
+          const Duration(milliseconds: 420),
+        ),
+        curve: Curves.easeOutCubic,
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final question = widget.question;
+    final ink = widget.ink;
+    final index = widget.index;
+    final selectedChoice = widget.selectedChoice;
+    final checked = widget.checked;
+    final busy = widget.busy;
+    final covered = widget.covered;
+    final errorTag = widget.errorTag;
+    final showSolution = widget.showSolution;
+    final onSelect = widget.onSelect;
+    final onRevealChoices = widget.onRevealChoices;
+    final onTagError = widget.onTagError;
+    final onReportIssue = widget.onReportIssue;
+    final onClearInk = widget.onClearInk;
+    final onRestoreInk = widget.onRestoreInk;
     final textScale = MediaQuery.textScalerOf(context).scale(12);
     final compact = MediaQuery.sizeOf(context).width < 600;
     final manuscriptInset = compact
         ? (textScale >= 18
               ? const EdgeInsets.fromLTRB(8, 6, 8, 22)
               : const EdgeInsets.fromLTRB(12, 6, 12, 22))
-        : inset;
+        : widget.inset;
+    final review = showSolution && checked
+        ? Column(
+            key: const ValueKey('mission-manuscript-review'),
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(key: _reviewAnchorKey, height: 1),
+              if (selectedChoice != null &&
+                  selectedChoice != question.correctChoiceIndex) ...[
+                _MissTagBar(
+                  selected: errorTag,
+                  onSelect: onTagError,
+                  manuscript: true,
+                ),
+                const SizedBox(height: 14),
+              ],
+              _SolutionPanel(question: question, manuscript: true),
+            ],
+          )
+        : null;
     return SingleChildScrollView(
       key: const ValueKey('mission-question-scroll'),
+      controller: _scrollController,
       padding: manuscriptInset,
       child: Center(
         child: ConstrainedBox(
@@ -954,6 +1043,7 @@ class _QuestionScroll extends StatelessWidget {
                   onExpandInk: () => showScratchpad(context, controller: ink),
                   onClearInk: onClearInk,
                   onRestoreInk: onRestoreInk,
+                  reviewing: checked,
                   prompt: Directionality(
                     textDirection: TextDirection.rtl,
                     child: ContentBlocksView(
@@ -994,6 +1084,7 @@ class _QuestionScroll extends StatelessWidget {
                               ),
                           ],
                         ),
+                  review: review,
                 ),
               ),
               const SizedBox(height: GaussSpacing.space8),
@@ -1008,15 +1099,6 @@ class _QuestionScroll extends StatelessWidget {
                   accent: GaussColors.fog,
                 ),
               ),
-              if (showSolution && checked) ...[
-                if (selectedChoice != null &&
-                    selectedChoice != question.correctChoiceIndex) ...[
-                  const SizedBox(height: 6),
-                  _MissTagBar(selected: errorTag, onSelect: onTagError),
-                ],
-                const SizedBox(height: 12),
-                _SolutionPanel(question: question),
-              ],
             ],
           ),
         ),
@@ -1090,60 +1172,82 @@ class _CoveredChoicesPanel extends StatelessWidget {
 }
 
 class _MissTagBar extends StatelessWidget {
-  const _MissTagBar({required this.selected, required this.onSelect});
+  const _MissTagBar({
+    required this.selected,
+    required this.onSelect,
+    this.manuscript = false,
+  });
 
   final String? selected;
   final ValueChanged<MissReason> onSelect;
+  final bool manuscript;
 
   @override
-  Widget build(BuildContext context) => Semantics(
-    container: true,
-    label:
-        'Why did this one slip? Optional private note; scoring never changes.',
-    child: Container(
-      padding: const EdgeInsets.fromLTRB(15, 13, 15, 13),
-      decoration: BoxDecoration(
-        color: GaussColors.warning.withValues(alpha: .06),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: GaussColors.warning.withValues(alpha: .3)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            'WHY DID IT SLIP?',
-            style: TextStyle(
-              color: GaussColors.warning,
-              fontSize: GaussTypeScale.insignia,
-              fontWeight: FontWeight.w900,
-              letterSpacing: 1,
+  Widget build(BuildContext context) {
+    final inkColor = manuscript
+        ? GaussColors.parchmentInk
+        : GaussColors.warning;
+    return Semantics(
+      container: true,
+      label:
+          'Why did this one slip? Optional private note; scoring never changes.',
+      child: Container(
+        key: manuscript
+            ? const ValueKey('mission-manuscript-reflection')
+            : null,
+        padding: const EdgeInsets.fromLTRB(15, 13, 15, 13),
+        decoration: BoxDecoration(
+          color: manuscript
+              ? const Color(0x0F9B4C42)
+              : GaussColors.warning.withValues(alpha: .06),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(
+            color: manuscript
+                ? const Color(0x669B4C42)
+                : GaussColors.warning.withValues(alpha: .3),
+          ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'WHY DID IT SLIP?',
+              style: TextStyle(
+                color: inkColor,
+                fontSize: GaussTypeScale.insignia,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 1,
+              ),
             ),
-          ),
-          const SizedBox(height: 9),
-          Wrap(
-            spacing: 7,
-            runSpacing: 7,
-            children: [
-              for (final reason in MissReason.values)
-                _MissTagChip(
-                  reason: reason,
-                  selected: selected == reason.key,
-                  onTap: () => onSelect(reason),
-                ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          const Text(
-            'A private note to your future self. Scoring never changes.',
-            style: TextStyle(
-              color: GaussColors.fog,
-              fontSize: GaussTypeScale.caption,
+            const SizedBox(height: 9),
+            Wrap(
+              spacing: 7,
+              runSpacing: 7,
+              children: [
+                for (final reason in MissReason.values)
+                  _MissTagChip(
+                    reason: reason,
+                    selected: selected == reason.key,
+                    onTap: () => onSelect(reason),
+                    manuscript: manuscript,
+                  ),
+              ],
             ),
-          ),
-        ],
+            const SizedBox(height: 8),
+            Text(
+              'A private note to your future self. Scoring never changes.',
+              style: TextStyle(
+                color: manuscript
+                    ? GaussColors.parchmentInk.withValues(alpha: .62)
+                    : GaussColors.fog,
+                fontSize: GaussTypeScale.caption,
+              ),
+            ),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class _MissTagChip extends StatelessWidget {
@@ -1151,11 +1255,13 @@ class _MissTagChip extends StatelessWidget {
     required this.reason,
     required this.selected,
     required this.onTap,
+    required this.manuscript,
   });
 
   final MissReason reason;
   final bool selected;
   final VoidCallback onTap;
+  final bool manuscript;
 
   @override
   Widget build(BuildContext context) => Semantics(
@@ -1172,7 +1278,11 @@ class _MissTagChip extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
           color: selected
-              ? GaussColors.warning.withValues(alpha: .16)
+              ? manuscript
+                    ? const Color(0x249B4C42)
+                    : GaussColors.warning.withValues(alpha: .16)
+              : manuscript
+              ? const Color(0x0D17120B)
               : GaussColors.deepInk,
           borderRadius: BorderRadius.circular(GaussRadii.pill),
           border: Border.all(
@@ -1182,7 +1292,13 @@ class _MissTagChip extends StatelessWidget {
         child: Text(
           reason.label,
           style: TextStyle(
-            color: selected ? GaussColors.warning : GaussColors.muted,
+            color: manuscript
+                ? selected
+                      ? const Color(0xFF8B3F38)
+                      : GaussColors.parchmentInk.withValues(alpha: .76)
+                : selected
+                ? GaussColors.warning
+                : GaussColors.muted,
             fontSize: 11,
             fontWeight: FontWeight.w700,
           ),
@@ -1575,87 +1691,117 @@ class _AnswerChoice extends StatelessWidget {
 }
 
 class _SolutionPanel extends StatelessWidget {
-  const _SolutionPanel({required this.question});
+  const _SolutionPanel({required this.question, this.manuscript = false});
+
   final Question question;
+  final bool manuscript;
 
   @override
   Widget build(BuildContext context) {
     final certified = question.missionReady && question.solutionVerified;
     final heading = certified ? 'Classic solution' : 'Source solution';
+    final contentColor = manuscript
+        ? GaussColors.parchmentInk
+        : GaussColors.fog;
+    final headingColor = manuscript
+        ? GaussColors.parchmentInk
+        : GaussColors.brassLight;
+    final content = Padding(
+      padding: EdgeInsets.all(manuscript ? 8 : 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Icon(
+                certified ? Icons.lightbulb_outline : Icons.menu_book_outlined,
+                color: manuscript ? const Color(0xFF247A7D) : headingColor,
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  heading,
+                  softWrap: true,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    color: headingColor,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ),
+              if (certified)
+                Icon(
+                  Icons.verified_rounded,
+                  size: 18,
+                  color: manuscript
+                      ? const Color(0xFF247A7D)
+                      : GaussColors.signalBright,
+                ),
+            ],
+          ),
+          if (!certified) ...[
+            const SizedBox(height: 10),
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: manuscript
+                    ? const Color(0x14247A7D)
+                    : GaussColors.brass.withValues(alpha: .07),
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: manuscript
+                      ? const Color(0x55247A7D)
+                      : GaussColors.brass.withValues(alpha: .22),
+                ),
+              ),
+              child: Text(
+                'Shown from the preserved source for private practice. If anything looks inconsistent, use the report action and keep going.',
+                style: TextStyle(
+                  color: contentColor.withValues(alpha: .66),
+                  fontSize: 11.5,
+                  height: 1.45,
+                ),
+              ),
+            ),
+          ],
+          const SizedBox(height: 14),
+          ContentBlocksView(
+            blocks: question.solution,
+            textColor: manuscript ? GaussColors.parchmentInk : null,
+          ),
+          if (question.shortcut case final shortcut?) ...[
+            Divider(
+              height: 28,
+              color: manuscript
+                  ? GaussColors.parchmentInk.withValues(alpha: .2)
+                  : null,
+            ),
+            Text(
+              'Smart shortcut',
+              style: TextStyle(
+                color: headingColor,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+            const SizedBox(height: 10),
+            ContentBlocksView(
+              blocks: shortcut,
+              textColor: manuscript ? GaussColors.parchmentInk : null,
+            ),
+          ],
+        ],
+      ),
+    );
     return Semantics(
       container: true,
       label: certified
           ? 'Scientifically reviewed solution.'
           : 'Source-provided solution shown provisionally for private practice.',
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                children: [
-                  Icon(
-                    certified
-                        ? Icons.lightbulb_outline
-                        : Icons.menu_book_outlined,
-                    color: GaussColors.brassLight,
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      heading,
-                      softWrap: true,
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                  ),
-                  if (certified)
-                    const Icon(
-                      Icons.verified_rounded,
-                      size: 18,
-                      color: GaussColors.signalBright,
-                    ),
-                ],
-              ),
-              if (!certified) ...[
-                const SizedBox(height: 10),
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: GaussColors.brass.withValues(alpha: .07),
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(
-                      color: GaussColors.brass.withValues(alpha: .22),
-                    ),
-                  ),
-                  child: const Text(
-                    'Shown from the preserved source for private practice. If anything looks inconsistent, use the report action and keep going.',
-                    style: TextStyle(
-                      color: GaussColors.muted,
-                      fontSize: 11.5,
-                      height: 1.45,
-                    ),
-                  ),
-                ),
-              ],
-              const SizedBox(height: 14),
-              ContentBlocksView(blocks: question.solution),
-              if (question.shortcut case final shortcut?) ...[
-                const Divider(height: 28),
-                const Text(
-                  'Smart shortcut',
-                  style: TextStyle(
-                    color: GaussColors.brassLight,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                ContentBlocksView(blocks: shortcut),
-              ],
-            ],
-          ),
-        ),
-      ),
+      child: manuscript
+          ? KeyedSubtree(
+              key: const ValueKey('mission-manuscript-solution'),
+              child: content,
+            )
+          : Card(child: content),
     );
   }
 }
