@@ -1,7 +1,7 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-24T07:06:37+03:30
+- Last updated: 2026-09-04T02:47:01+00:00
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
 - Current phase: P4 — Question, answers and stylus rebuild
@@ -9,6 +9,8 @@
 - Product-readiness estimate: 71–75%
 
 ## Current State
+
+(ادامهٔ چرخهٔ 2026-09-04) در sandbox فعلی Flutter/Dart toolchain، Android SDK و emulator در دسترس نبودند (فقط GitHub source، npm و PyPI قابل‌دسترس‌اند)، بنابراین این چرخه به‌شکل audit statik + تکمیل کدِ contract-driven انجام شد و هرگونه evidence runtime به‌صراحت باز مانده است. سه finding واقعی بسته شد: (1) state `source-warning` که state matrix manifests الزام می‌کرد در mission هیچ‌گاه پیاده نشده بود — answer rail درستِ یک سؤال با پاسخ preserved ولی unverified حالا tone source + shield و semantics صادقانه می‌گیرد و solve instrument «SOURCE ANSWER» amber اعلام می‌کند به‌جای «PROOF HOLDS» (یک test regression تازه در `mission_resume_test.dart` این رفتار و عدمِ regression مسیر verified را می‌فرد). (2) قرارداد `usesQuestionSplit` و fractionهای 62/38 در design system با manifest و implementation verified روی 1280×800 tablet ناسازگار بودند (تست false-positive روی 840dp landscape و fractionها هرگز در code مصرف نمی‌شدند) — گیت به شکل window+stage+text-scale با توکن‌های عرض ثابت `questionSupportPane*` بازنویسی و در mission استفاده شد (refactor حفظ‌کنندهٔ behavior) و dead contract surface پاک شد. (3) توکن‌های reasoning/reading-width به‌جای literals در mission/manuscript سیم شدند. سند manifests و `docs/codex/_index.md` هم‌سو شدند. کل تغییرات statik-review شده‌اند (brace/paren balance + reading کامل diff) ولی analyze/test/build/runtime هنوز باید در محیط دارای toolchain اجرا شوند — این چرخه درصد Goal را بالا نمی‌برد.
 
 P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را بستند. P3 نیز کامل است: route قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شد؛ Math و Physics station سه‌بعدی مستقل دارند؛ rail در socket node فرود می‌آید؛ header، Theorem mark شفاف و مرکزچین، Orbit Navigator constellation، landmark hierarchy، Mission Compass و footer content-hugging بدون backing کدر یکپارچه شدند. finding آخرِ runtime که نود اول را با Orbit header هم‌پوشان می‌کرد با سنجش envelope واقعی aura بسته شد؛ clearance اضافی فقط در segment نخست جذب شد تا جای تمام نودهای بعدی تغییر نکند. انتهای scene هم از cadence مصنوعی جدا شد تا آخرین micro-lesson داخل میدان زندهٔ مسیر بماند و blank tail بزرگ تولید نشود. گیت نهایی exact revision `894bdaf` شامل 42/42 regression، analyzer کامل پاک، هفت capture phone/tablet، profile spot-check و حفظ کامل `com.gauss.app` v106 است. نخستین vertical slice از P4 نیز روی `df7b17e` بسته شد: strokeها فقط painter را در هر point repaint می‌کنند و manuscript تنها مرزهای معنایی ink را می‌بیند؛ تماس قلم دیگر parent را rebuild نمی‌کند؛ inverted stylus و هر دو stylus side button پاک‌کن لحظه‌ای‌اند؛ tool spine با وضعیت ink زمینه‌ای می‌شود؛ و Mission dock دیگر مالک تکراری Undo/Expand/Clear نیست. رندر Profile phone در حالت خالی و دارای ink با Astral Manuscript پذیرفته‌شده مقایسه شد. P4 برای answer states، solution/completion، responsive matrix و performance gate همچنان active است.
 
@@ -37,6 +39,9 @@ P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را
 | 2026-08-23 | Orbit Navigator همهٔ فصل‌ها را به‌صورت constellation یک‌نگاه نشان دهد و فقط chapter فعال preview شود | navigation فصل نباید با یک فرم بلند، scroll ثانویه و CTA نوشتاری مسیر اصلی Map را بپوشاند | user UX direction + 320dp/200% runtime proof |
 | 2026-08-23 | clearance Map با bounds بصری کامل node/aura سنجیده شود و scene دقیقاً پس از آخرین محتوای واقعی پایان یابد | center-point کافی نبود و cadence مصنوعی در انتهای مسیر dead air می‌ساخت | user runtime screenshot + geometry/runtime regressions |
 | 2026-08-24 | ابزارهای ink فقط در tool spine خود manuscript مالکیت داشته باشند و action dock فقط وضعیت/اقدام سؤال را نمایش دهد | کنترل تکراری در دو ناحیه، توجه و state ownership را دوپاره می‌کرد | accepted Question reference + Android Profile runtime |
+| 2026-09-04 | یک correct choice روی پاسخ preserved-unverified هرگز ادعای proof نمی‌کند؛ tone source + shield + اعلام amber «SOURCE ANSWER» | state matrix manifests سطر `source-warning` را الزام می‌کرد و archive همین تمایز را اجرا می‌کرد؛ mission آن را بی‌التماس جا گذاشته بود | manifest state matrix + `_ArchiveChoice` precedent + `Question.solutionVerified` contract |
+| 2026-09-04 | گیت review workspace و عرض pane به‌عنوان توکن‌های `GaussComposition` واحد در design system تعریف و در mission مصرف شوند؛ fractionهای 62/38 و helper 840dp حذف شدند | helper قدیمی با manifest (1200×600) و implementation verified (1280×800) هر دو ناسازگار بود و fractionها سطح قرارداد مرده بودند؛ code روی tablet واقعی verified است، پس قرارداد به آن تنظیم شد | device-verified implementation + manifest line 67/84 + dead-surface audit |
+| 2026-09-04 | بدون toolchain/Dart/Android SDK، هیچ درصد Goal یا «phase complete» ثبت نمی‌شود و evidence statik جدا از evidence runtime گزارش می‌شود | قرارداد evidence پروژه: پیشرفت فقط با analyze/test/runtime evidence گیت می‌شود | project AGENTS.md + plan §11/§13 |
 
 ## Blockers
 
@@ -70,6 +75,7 @@ P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را
 
 ## Remaining
 
-- ادامهٔ P4: completion، restore timing، compositionهای tablet portrait/landscape/large-text و performance proof؛ physical Xiaomi Focus Pen تا P7 gate سخت‌افزاری می‌ماند.
+- **دریافت‌نیافتگی toolchain در sandbox 2026-09-04:** `flutter analyze`، `flutter test`، build APK و هر runtime proof باید در محیط دارای Flutter 3.44.0 + Android SDK اجرا شوند. تغییرات این چرخه (source-warning state، گیت review workspace، توکن‌سازی) کاملاً statik-review شده‌اند؛ تا آن evidence، این چرخه gate P4 را نمی‌بندد.
+- ادامهٔ P4: compositionهای tablet portrait/landscape/large-text با capture runtime و performance proof exact-revision؛ physical Xiaomi Focus Pen تا P7 gate سخت‌افزاری می‌ماند. (completion و restore timing در این چرخه بازبینی و بدون finding باز ماندند: `_MissionComplete`/`StudySessionCelebration` receipt از persisted result هستند و پنجرهٔ 4s clear/restore در mission و study با timerها و semantics هماهنگ‌اند.)
 - اجرای P5 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

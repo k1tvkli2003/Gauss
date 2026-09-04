@@ -675,10 +675,12 @@ class _QuestionStage extends StatelessWidget {
                     // remaining height inside this Column. The top progress
                     // instrument, action dock, and system safe areas reduce
                     // [constraints.maxHeight] after the window has already
-                    // qualified as a landscape tablet. Basing the decision on
-                    // that remainder made the solution pane disappear on a
-                    // real 1280x800 Pixel Tablet even though the same surface
-                    // passed a padding-free widget test.
+                    // qualified as a landscape tablet. The design-system gate
+                    // therefore takes the window viewport and the stage
+                    // remainder separately; basing everything on the remainder
+                    // made the solution pane disappear on a real 1280x800
+                    // Pixel Tablet even though the same surface passed a
+                    // padding-free widget test.
                     final viewport = GaussViewport.fromSize(
                       Size(
                         constraints.maxWidth,
@@ -686,13 +688,12 @@ class _QuestionStage extends StatelessWidget {
                       ),
                     );
                     final textScale = MediaQuery.textScalerOf(context).scale(1);
-                    final hasReadablePaneHeight =
-                        constraints.maxHeight >= GaussBreakpoints.mediumHeight;
-                    final showReviewWorkspace =
-                        checked &&
-                        viewport.supportsThreePane &&
-                        hasReadablePaneHeight &&
-                        textScale < 1.35;
+                    final showReviewWorkspace = checked &&
+                        GaussComposition.usesQuestionSplit(
+                          viewport: viewport,
+                          textScale: textScale,
+                          availableHeight: constraints.maxHeight,
+                        );
                     if (!showReviewWorkspace) {
                       return _QuestionScroll(
                         question: question,
@@ -741,7 +742,10 @@ class _QuestionStage extends StatelessWidget {
                           const SizedBox(width: 18),
                           SizedBox(
                             key: const ValueKey('mission-solution-pane'),
-                            width: constraints.maxWidth >= 1250 ? 350 : 310,
+                            width: constraints.maxWidth >=
+                                    GaussComposition.questionSupportPaneWideAt
+                                ? GaussComposition.questionSupportPaneWideWidth
+                                : GaussComposition.questionSupportPaneWidth,
                             child: SingleChildScrollView(
                               padding: const EdgeInsets.only(bottom: 12),
                               child: Column(
@@ -1025,7 +1029,9 @@ class _QuestionScrollState extends State<_QuestionScroll> {
       padding: manuscriptInset,
       child: Center(
         child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 820),
+          constraints: const BoxConstraints(
+            maxWidth: GaussComposition.questionMaxReadingWidth,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -1077,6 +1083,7 @@ class _QuestionScrollState extends State<_QuestionScroll> {
                                 selected: selectedChoice == choice,
                                 checked: checked,
                                 correctChoice: question.correctChoiceIndex,
+                                solutionVerified: question.solutionVerified,
                                 onTap: checked || busy
                                     ? null
                                     : () => onSelect(choice),
@@ -1355,10 +1362,16 @@ class _MissionActionBar extends StatelessWidget {
     final accessibleActionHeight =
         MediaQuery.textScalerOf(context).scale(14) >= 20;
     final isCorrect = selectedChoice == question.correctChoiceIndex;
+    // A correct choice on a preserved-but-unverified source answer is an
+    // honest source confirmation, never a proof claim.
+    final sourceConfirmed = checked && isCorrect && !question.solutionVerified;
     final feedback = operationError != null
         ? 'Save interrupted. Retry.'
         : checked
-        ? isCorrect
+        ? sourceConfirmed
+              ? 'Source answer confirmed. It is preserved, not scientifically '
+                  'verified. Report anything that looks off.'
+              : isCorrect
               ? 'Correct. Proof holds.'
               : question.solutionVerified
               ? 'Review the proof, then continue.'
@@ -1366,6 +1379,8 @@ class _MissionActionBar extends StatelessWidget {
         : null;
     final feedbackColor = operationError != null
         ? GaussColors.error
+        : sourceConfirmed
+        ? GaussColors.warning
         : isCorrect
         ? GaussColors.signalBright
         : GaussColors.brassLight;
@@ -1375,7 +1390,9 @@ class _MissionActionBar extends StatelessWidget {
     final compactReading = operationError != null
         ? 'RETRY'
         : checked
-        ? isCorrect
+        ? sourceConfirmed
+              ? 'SOURCE ANSWER'
+              : isCorrect
               ? 'PROOF HOLDS'
               : 'REVIEW'
         : selectedChoice == null
@@ -1384,7 +1401,9 @@ class _MissionActionBar extends StatelessWidget {
     final readingIcon = operationError != null
         ? Icons.refresh_rounded
         : checked
-        ? isCorrect
+        ? sourceConfirmed
+              ? Icons.shield_outlined
+              : isCorrect
               ? Icons.verified_rounded
               : Icons.lightbulb_outline_rounded
         : selectedChoice == null
@@ -1596,6 +1615,7 @@ class _AnswerChoice extends StatelessWidget {
     required this.selected,
     required this.checked,
     required this.correctChoice,
+    required this.solutionVerified,
     required this.onTap,
     this.manuscript = false,
   });
@@ -1604,6 +1624,12 @@ class _AnswerChoice extends StatelessWidget {
   final bool selected;
   final bool checked;
   final int correctChoice;
+
+  /// False when the preserved source answer has not passed scientific
+  /// verification. The correct rail then carries the source distinction
+  /// instead of the verified proof seal, so a withheld solution is never
+  /// presented as a classic proof.
+  final bool solutionVerified;
   final VoidCallback? onTap;
   final bool manuscript;
 
@@ -1611,13 +1637,37 @@ class _AnswerChoice extends StatelessWidget {
   Widget build(BuildContext context) {
     final isCorrect = checked && choice == correctChoice;
     final isWrong = checked && selected && choice != correctChoice;
-    final tone = isCorrect
-        ? TheoremChoiceTone.positive
+    final sourceConfirmed = isCorrect && !solutionVerified;
+    final tone = sourceConfirmed
+        ? TheoremChoiceTone.source
         : isWrong
         ? TheoremChoiceTone.negative
         : selected
         ? TheoremChoiceTone.selected
         : TheoremChoiceTone.neutral;
+    final emblem = sourceConfirmed
+        ? Icon(
+            Icons.shield_outlined,
+            size: 17,
+            color: manuscript
+                ? const Color(0xFF9D691D)
+                : GaussColors.warning,
+          )
+        : isCorrect
+        ? const Icon(Icons.check_rounded, size: 18, color: GaussColors.teal)
+        : isWrong
+        ? const Icon(Icons.close_rounded, size: 18, color: GaussColors.error)
+        : Text(
+            String.fromCharCode(65 + choice),
+            style: manuscript
+                ? const TextStyle(
+                    color: GaussColors.parchmentInk,
+                    fontFamily: 'serif',
+                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                  )
+                : const TextStyle(fontWeight: FontWeight.w900),
+          );
     return Semantics(
       key: ValueKey('mission-choice-$choice'),
       button: true,
@@ -1627,7 +1677,9 @@ class _AnswerChoice extends StatelessWidget {
       onTap: onTap,
       label:
           'Choice ${choice + 1}. ${_blocksSemanticLabel(blocks)}. '
-          '${isCorrect
+          '${sourceConfirmed
+              ? 'Marked as the correct answer by the preserved source; not yet scientifically verified.'
+              : isCorrect
               ? 'Correct answer.'
               : isWrong
               ? 'Selected answer, incorrect.'
@@ -1638,27 +1690,7 @@ class _AnswerChoice extends StatelessWidget {
           ? ManuscriptChoiceShell(
               tone: tone,
               onTap: onTap,
-              emblem: isCorrect
-                  ? const Icon(
-                      Icons.check_rounded,
-                      size: 18,
-                      color: GaussColors.teal,
-                    )
-                  : isWrong
-                  ? const Icon(
-                      Icons.close_rounded,
-                      size: 18,
-                      color: GaussColors.error,
-                    )
-                  : Text(
-                      String.fromCharCode(65 + choice),
-                      style: const TextStyle(
-                        color: GaussColors.parchmentInk,
-                        fontFamily: 'serif',
-                        fontSize: 22,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
+              emblem: emblem,
               child: ContentBlocksView(
                 blocks: blocks,
                 compact: true,
@@ -1668,22 +1700,7 @@ class _AnswerChoice extends StatelessWidget {
           : TheoremChoiceShell(
               tone: tone,
               onTap: onTap,
-              emblem: isCorrect
-                  ? const Icon(
-                      Icons.check_rounded,
-                      size: 18,
-                      color: GaussColors.teal,
-                    )
-                  : isWrong
-                  ? const Icon(
-                      Icons.close_rounded,
-                      size: 18,
-                      color: GaussColors.error,
-                    )
-                  : Text(
-                      String.fromCharCode(65 + choice),
-                      style: const TextStyle(fontWeight: FontWeight.w900),
-                    ),
+              emblem: emblem,
               child: ContentBlocksView(blocks: blocks, compact: true),
             ),
     );

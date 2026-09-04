@@ -78,10 +78,10 @@
 
 ### Question occupancy
 
-- phone: parchment هدف `94%` عرض route است؛ margin با حداقل `8dp` در 320dp و `12–16dp` در phone عادی.
-- prompt و answerها در scroll واحدند؛ reasoning field بین `112dp` و `240dp` content-aware است و حالت comfortable برابر `176dp` است.
-- tool spine visual برابر `56dp` است و controlهایش `48dp` target دارند؛ اگر فضا کم شود به contextual row/overlay تبدیل می‌شود، نه اینکه manuscript را له کند.
-- tablet landscape: manuscript `62%` و support/solution pane `38%` عرض content را می‌گیرد؛ هر pane scroll مستقل و state مشترک دارد.
+- phone: manuscript یک reading column با عرض حداکثر `820dp` (توکن `questionMaxReadingWidth`) و centered در عرض window است؛ margin حداقل `8dp` در 320dp و `12–16dp` در phone عادی.
+- prompt و answerها در scroll واحدند؛ reasoning field `112dp` (توکن `questionReasoningMinHeight`) در حالت خالی و `176dp` comfortable (توکن `questionReasoningComfortHeight`) با ink است؛ سطح گسترش، scratchpad sheet کامل است.
+- tool spine در حالت vertical، rule در `54dp` و شروع content در `60dp` است و controlهایش `48dp` target دارند؛ اگر فضا کم شود به contextual row/overlay تبدیل می‌شود، نه اینکه manuscript را له کند.
+- tablet landscape: review workspace تنها با گیت `usesQuestionSplit` باز می‌شود — window سه‌پنجره‌ای (`1200×600dp` به بالا)، stage باقی‌مانده حداقل `480dp` بعد از chrome، و text scale زیر `1.35`. support/solution pane عرض ثابت `310dp` دارد و از `1250dp` به بعد `350dp` (توکن‌های `questionSupportPane*`)؛ تقسیم درصدها روی 1280×800 اندازه‌گیری شد و manuscript را نازک می‌کرد. هر pane scroll مستقل و state مشترک دارد.
 - bottom solve instrument height محتوامحور است و هیچ‌وقت روی آخرین answer rail قرار نمی‌گیرد.
 
 ### Safe-area ownership

@@ -981,6 +981,67 @@ void main() {
     expect(find.byType(SelectableText), findsNothing);
     expect(find.text('Question stem'), findsOneWidget);
   });
+
+  testWidgets(
+    'a correct choice on an unverified source never claims a verified proof',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(390, 844));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        _sourceWarningMissionFixture(),
+        database,
+        failFirstSave: false,
+      );
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(topicKey: 'sets', count: 5),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+      expect(tester.takeException(), isNull, reason: 'initial mission layout');
+
+      final correctChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\. A\.'));
+      await tester.ensureVisible(correctChoice);
+      await tester.tap(correctChoice);
+      await tester.pump();
+      await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+      await tester.pumpAndSettle(const Duration(milliseconds: 80));
+      expect(tester.takeException(), isNull);
+
+      // The correct rail carries the preserved-source distinction instead of
+      // the verified proof seal.
+      expect(
+        find.bySemanticsLabel(
+          contains('Marked as the correct answer by the preserved source'),
+        ),
+        findsOneWidget,
+      );
+      expect(find.byIcon(Icons.shield_outlined), findsWidgets);
+
+      // The solve instrument reports the source answer without a proof claim,
+      // while the solution continues the manuscript truthfully.
+      expect(
+        find.bySemanticsLabel(
+          contains(
+            'Source answer confirmed. It is preserved, not scientifically',
+          ),
+        ),
+        findsOneWidget,
+      );
+      expect(find.text('PROOF HOLDS'), findsNothing);
+      expect(find.text('Source solution'), findsOneWidget);
+    },
+  );
 }
 
 Question _verifiedMissionFixture() => Question.fromJson({
@@ -1011,6 +1072,40 @@ Question _verifiedMissionFixture() => Question.fromJson({
   ],
   'smart_shortcut': null,
   'source_bank': 'verified_fixture',
+});
+
+/// A mission-ready row whose preserved solution points at a different
+/// option than the answer key. [Question.fromJson] then keeps it scorable
+/// but sets `solutionVerified` to false, exercising the source-warning
+/// answer state.
+Question _sourceWarningMissionFixture() => Question.fromJson({
+  'id': 'source_warning_fixture',
+  'subject': 'math',
+  'topic_key': 'sets',
+  'difficulty': 'hard',
+  'stem': [
+    {'type': 'text', 'text': 'Fixture question'},
+  ],
+  'options': [
+    [
+      {'type': 'text', 'text': 'A'},
+    ],
+    [
+      {'type': 'text', 'text': 'B'},
+    ],
+    [
+      {'type': 'text', 'text': 'C'},
+    ],
+    [
+      {'type': 'text', 'text': 'D'},
+    ],
+  ],
+  'correct_option_index': 1,
+  'solution': [
+    {'type': 'text', 'text': 'گزینه 2 است.'},
+  ],
+  'smart_shortcut': null,
+  'source_bank': 'source_fixture',
 });
 
 Future<void> _pumpUntilFound(WidgetTester tester, Finder finder) async {

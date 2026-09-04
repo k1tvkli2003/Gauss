@@ -58,17 +58,56 @@ void main() {
       expect(portraitTablet.widthClass, GaussWindowClass.medium);
       expect(portraitTablet.isPortrait, isTrue);
       expect(landscapeTablet.supportsThreePane, isTrue);
-      expect(GaussComposition.usesQuestionSplit(landscapeTablet, 1), isTrue);
-      expect(GaussComposition.usesQuestionSplit(landscapeTablet, 2), isFalse);
+      // The mission review workspace splits only in a three-pane landscape
+      // window that keeps a readable stage height, and never at 200% text.
+      expect(
+        GaussComposition.usesQuestionSplit(
+          viewport: landscapeTablet,
+          textScale: 1,
+          availableHeight: GaussBreakpoints.mediumHeight,
+        ),
+        isTrue,
+      );
+      expect(
+        GaussComposition.usesQuestionSplit(
+          viewport: landscapeTablet,
+          textScale: GaussComposition.requiredMaximumTextScale,
+          availableHeight: GaussBreakpoints.mediumHeight,
+        ),
+        isFalse,
+      );
+      expect(
+        GaussComposition.usesQuestionSplit(
+          viewport: portraitTablet,
+          textScale: 1,
+          availableHeight: GaussBreakpoints.mediumHeight,
+        ),
+        isFalse,
+        reason: 'portrait windows keep the single-column manuscript',
+      );
+      expect(
+        GaussComposition.usesQuestionSplit(
+          viewport: landscapeTablet,
+          textScale: 1,
+          availableHeight: GaussBreakpoints.mediumHeight - 1,
+        ),
+        isFalse,
+        reason: 'a chrome-reduced stage keeps the single-column manuscript',
+      );
       expect(
         GaussComposition.mapTabletPathFraction +
             GaussComposition.mapTabletInspectorFraction,
         closeTo(1, .0001),
       );
+      // The verified pane steps stay monotonic and the wide step only exists
+      // beyond its threshold.
       expect(
-        GaussComposition.questionTabletPaperFraction +
-            GaussComposition.questionTabletSupportFraction,
-        closeTo(1, .0001),
+        GaussComposition.questionSupportPaneWidth,
+        lessThan(GaussComposition.questionSupportPaneWideWidth),
+      );
+      expect(
+        GaussComposition.questionSupportPaneWideWidth,
+        lessThan(GaussComposition.questionSupportPaneWideAt),
       );
       expect(GaussComposition.mapPhonePathMinFraction, greaterThan(.5));
       expect(GaussComposition.mapPhoneOverlayMaxFraction, lessThan(.25));
@@ -121,10 +160,11 @@ void main() {
       expect(ids.toSet(), hasLength(ids.length));
       expect(
         shots.any(
-          (shot) =>
-              shot.logicalSize == const Size(320, 568) && shot.textScale == 2,
+          (shot) => shot.logicalSize == const Size(320, 568) &&
+              shot.textScale == GaussComposition.requiredMaximumTextScale,
         ),
         isTrue,
+        reason: 'the acceptance matrix must cover the required maximum text',
       );
       expect(
         shots.any(
