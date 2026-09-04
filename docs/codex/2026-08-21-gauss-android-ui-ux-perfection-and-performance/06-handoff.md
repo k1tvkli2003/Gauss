@@ -4,6 +4,8 @@
 
 کار هنوز active است. P0 تا P3 کامل و Goal gated برابر 50% است. Map کامل—engine، route/node، header/identity، Orbit Navigator، landmark، Mission Compass، footer و matrix phone/tablet—از گیت P3 عبور کرده است. در P4، ownership/stylus checkpoint روی `df7b17e` و answer→review checkpoint روی `16160f7` پاس شده‌اند: ابزار ink مالک یگانه دارند، Focus Pen contracts تست شده‌اند، Finger Ink هنگام Review به Touch Scroll برمی‌گردد و feedback/solution ادامهٔ manuscript است. completion، responsive matrix و performance gate هنوز بازند؛ این فایل پایان کار را اعلام نمی‌کند.
 
+**چرخهٔ 2026-09-04 (audit بدون toolchain):** state `source-warning` manifests در answer rails و solve instrument mission پیاده شد (correct choice روی پاسخ preserved-unverified دیگر «PROOF HOLDS» نمی‌گیرد؛ tone source + shield + اعلام amber). قرارداد مردهٔ `usesQuestionSplit`/62-38 در design system با گیت verified جایگزین شد و در mission سیم شد؛ literals reading/reasoning به توکن‌های design system منتقل شدند. همهٔ تغییرات statik-review شده و testهای regression نوشته شده‌اند، اما sandbox فاقد Flutter/Dart/Android SDK بود؛ analyze/test/build/runtime برای این چرخه باز است و درصد Goal تغییر نکرده است.
+
 ## Changed Artifacts
 
 - brief، plan، state، preview ledger، progress و verification این task.
@@ -20,9 +22,10 @@
 
 ## How To Continue
 
-1. P4 را از checkpoint `16160f7` ادامه دهید: completion و restore timing را کامل و سپس matrix phone/tablet/large-text و performance را ببندید.
-2. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
-3. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
+1. در محیط دارای Flutter 3.44.0 + Android SDK، گیت toolchain چرخهٔ 2026-09-04 را اجرا کنید: `flutter analyze --no-pub` و `flutter test --no-pub` (به‌ویژه `test/mission_resume_test.dart` — test source-warning تازه — و `test/gauss_ui_system_test.dart` — قرارداد review workspace بازنویسی‌شده). اگر هر دو پاس شدند، تغییرات behavior-preserving هستند و می‌توانند با یک debug APK + capture review-workspace (1280×800 landscape و phone) به‌عنوان checkpoint P4 ثبت شوند.
+2. P4 را از آن checkpoint ادامه دهید: matrix phone/tablet/large-text و performance proof exact-revision. (completion و restore timing در 2026-09-04 بازبینی و بدون finding باز ماندند.)
+3. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
+4. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
 
 ## Done
 

@@ -254,9 +254,6 @@ abstract final class GaussMetrics {
       ) +
       compactNavigationOuterInset;
 
-  static double compactNavigationFootprint(BuildContext context) =>
-      compactNavigationHeight + compactNavigationSafeBottom(context);
-
   /// The content-hugging footer owns no internal system padding; the shell
   /// keeps Android's safe inset outside its glass. The map therefore clears
   /// exactly one system inset, the footer, and one visible optical gap.
@@ -298,22 +295,43 @@ abstract final class GaussComposition {
   static const mapTabletInspectorFraction = .34;
   static const mapPhoneOverlayMaxFraction = .24;
 
-  static const questionPhonePaperFraction = .94;
-  static const questionTabletPaperFraction = .62;
-  static const questionTabletSupportFraction = .38;
+  /// Single reading column for the manuscript; the stage centers it inside
+  /// whatever width the window owns.
   static const questionMaxReadingWidth = 820.0;
-  static const questionToolSpineWidth = 56.0;
+
+  /// Writable reasoning space: bounded minimum while empty, comfortable once
+  /// ink exists. The full scratchpad sheet is the expansion surface.
   static const questionReasoningMinHeight = 112.0;
   static const questionReasoningComfortHeight = 176.0;
-  static const questionReasoningMaxCollapsedHeight = 240.0;
 
-  static const accessibilityTextScale = 1.55;
+  /// Accessible text can still read the two-pane mission composition, but
+  /// above this scale the review workspace must return to the single column.
+  static const questionSplitTextScaleCeiling = 1.35;
+
+  /// The review workspace pane is a fixed-width reading pane, verified on a
+  /// 1280x800 landscape tablet. A percentage split would stretch the
+  /// manuscript too thin near the 1200dp three-pane threshold.
+  static const questionSupportPaneWidth = 310.0;
+  static const questionSupportPaneWideWidth = 350.0;
+  static const questionSupportPaneWideAt = 1250.0;
+
+  /// The largest text scale the responsive matrix must pass end to end
+  /// (320dp at 200% text, no clipping, no 48dp regression).
   static const requiredMaximumTextScale = 2.0;
 
-  static bool usesQuestionSplit(GaussViewport viewport, double textScale) =>
-      viewport.supportsTwoPane &&
-      !viewport.isPortrait &&
-      textScale < accessibilityTextScale;
+  /// The single gate for the mission review workspace: a landscape window
+  /// that can hold three live panes, a stage that keeps a readable height
+  /// after chrome, and text that still fits the split. The height is the
+  /// stage remainder, while the pane capability comes from the whole window,
+  /// so a real 1280x800 tablet never loses the pane to its own chrome.
+  static bool usesQuestionSplit({
+    required GaussViewport viewport,
+    required double textScale,
+    required double availableHeight,
+  }) =>
+      viewport.supportsThreePane &&
+      availableHeight >= GaussBreakpoints.mediumHeight &&
+      textScale < questionSplitTextScaleCeiling;
 }
 
 abstract final class GaussMotion {

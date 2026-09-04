@@ -249,7 +249,9 @@ class _ManuscriptContent extends StatelessWidget {
                 duration: GaussMotion.resolve(context, GaussMotion.standard),
                 curve: Curves.easeOutCubic,
                 constraints: BoxConstraints(
-                  minHeight: inkStatus.isEmpty ? 112 : 176,
+                  minHeight: inkStatus.isEmpty
+                      ? GaussComposition.questionReasoningMinHeight
+                      : GaussComposition.questionReasoningComfortHeight,
                 ),
                 alignment: AlignmentDirectional.topStart,
                 padding: const EdgeInsets.all(GaussSpacing.space8),
