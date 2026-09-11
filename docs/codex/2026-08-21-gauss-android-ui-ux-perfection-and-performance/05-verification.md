@@ -69,11 +69,11 @@
 | P4 phone answer→review runtime | Finger Ink → wrong choice → Check روی Android Profile | passed checkpoint | Touch Scroll خودکار فعال، correct answer و ابتدای reflection در viewport، solution داخل parchment؛ [runtime](assets/p4-manuscript-review-phone.webp) |
 | P4 completion regression gate | `flutter analyze --no-pub lib/screens/mission_screen.dart test/mission_resume_test.dart test_driver/performance_driver.dart` + پنج suite Question/Focus Pen/Android/UI/Mission | passed checkpoint | analyzer بدون issue در `77.6s`؛ 63/63 test passed؛ skip semantics و 48×48، reduced-motion static، retry reward idempotence، pending-finalize pause/resume و ellipsis-free 320dp/200% پوشش داده شد |
 | P4 completion Profile/package guard | `scripts/refresh_android_preview.ps1 -Device emulator-5554 -Mode profile` + package dump | passed checkpoint | Profile APK `171.6MB` در `165.2s` ساخته و in-place نصب شد؛ `com.gauss.app.profile` v91؛ signed `com.gauss.app` v106/dataDir/firstInstallTime بدون تغییر؛ تنها `Codex_API35` |
+| P4 exact-revision performance gate | `pwsh tool/run_android_performance.ps1 -DeviceId emulator-5554 -Runs 5` روی `3f2cddba788b915dd012253a8e064d9f5c01b1da` | passed phase gate | 5/5 journeys passed؛ Map scroll UI/raster p95=`7.472/20.825ms`، missed median=`20.75%`؛ stylus missed=`0%`؛ answer missed median=`3.45%`؛ [aggregate](logs/performance-p4-final-3f2cddb/aggregate.json)؛ نسبت به P2 در همهٔ این tailها بهتر است؛ emulator GPU caveat باقی است |
 
 ## هنوز اجرا نشده
 
 - full Flutter suite پس از بازسازی‌های runtime.
-- P4 exact-revision 5-run profile proof.
 - Android release build جدید؛ profile spot-check P3 و debug build پاس شده‌اند.
 - physical-device Xiaomi Focus Pen profile؛ emulator proof جای آن را نمی‌گیرد.
 
@@ -82,8 +82,7 @@
 - Map P3 phase-complete است: renderer، route/node، header/identity/Navigator، landmark/Mission Compass/footer و responsive capture matrix بسته‌اند.
 - blur زندهٔ moving chrome حذف شده و blur footer فقط در footprint محدود خودش باقی مانده است.
 - یک‌نمونه profile P3 برای regression spot-check است، نه ادعای آماری چند-run؛ proof نهایی چند-run در P7 تکرار می‌شود.
-- broad ink rebuild و مالکیت تکراری controls در vertical slice phone رفع شده است؛ اثبات نهایی performance چند-run هنوز باز است.
-- manuscript phone جمع‌وجور و answer access نزدیک شده است؛ tablet/large-text و حالت‌های checked/solution/completion هنوز باید کامل بازرسی شوند.
+- P4 phase-complete است؛ tail performance نسبت به P2 بهتر شد ولی missed-frame مطلق روی emulator همچنان در P6/P7 و روی hardware سنجیده می‌شود.
 - touch/stylus behavior در دستگاه Xiaomi باید با runtime سخت‌افزار خودش نیز تأیید شود.
 - emulator/SwiftShader raster p95 نمایندهٔ GPU گوشی نیست، اما برای before/after هم‌شرایط معتبر است.
 - raw Timelineها محلی و بازتولیدپذیر نگه داشته می‌شوند؛ Git فقط aggregate، compact summaries، metadata و visual samples را حمل می‌کند.

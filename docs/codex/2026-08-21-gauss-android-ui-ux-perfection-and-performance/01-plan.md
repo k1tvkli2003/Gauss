@@ -107,8 +107,8 @@
 | P1 — UI system، geometry و production manifest | 7% | completed | token math، surface manifest، motion/precision ledgers و vertical-slice spec |
 | P2 — بازسازی engine اسکرول و رندر Map | 18% | completed | lazy path bands، cached geometry، narrow repaint، native scroll و benchmark بهتر |
 | P3 — بازسازی بصری و UX کامل Map | 17% | completed | header، navigator، path، node/label، Mission Compass و footer نهایی |
-| P4 — بازسازی Question، answers و stylus | 20% | active | manuscript فشرده، قلم/لمس بی‌نقص، answer states و solution/completion |
-| P5 — shell، Study، Insights، auth، feedback و tablet | 12% | planned | یکپارچگی همه routeهای ضروری و composition اختصاصی tablet |
+| P4 — بازسازی Question، answers و stylus | 20% | completed | manuscript فشرده، قلم/لمس بی‌نقص، answer states و solution/completion |
+| P5 — shell، Study، Insights، auth، feedback و tablet | 12% | active | یکپارچگی همه routeهای ضروری و composition اختصاصی tablet |
 | P6 — motion، feedback، reward و accessibility | 8% | planned | Motion Bible اجراشده، reduced motion، haptic/semantic feedback و no-jank proof |
 | P7 — integration، adversarial QA و Android release proof | 10% | planned | suite کامل، matrix بصری، profile comparison، APK/install و clean mismatch ledger |
 

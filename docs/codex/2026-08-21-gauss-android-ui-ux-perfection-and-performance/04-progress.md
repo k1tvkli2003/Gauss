@@ -25,6 +25,7 @@
 | 2026-08-24T00:46:32+03:30 | active | vertical slice نخست P4 بسته شد: rebuildهای per-point از manuscript حذف، stylus side-button/inverted eraser اضافه، tool spine زمینه‌ای و مالک یگانهٔ ink شد و کنترل‌های تکراری از action dock حذف شدند. | `df7b17e`؛ analyzer پاک؛ 27/27 تست؛ Profile build/install؛ [blank](assets/p4-manuscript-blank-phone.webp) و [ink](assets/p4-manuscript-ink-phone.webp) زنده |
 | 2026-08-24T07:06:37+03:30 | active | checkpoint دوم P4 مسیر answer→review را بست: Finger Ink هنگام Check به Touch Scroll برمی‌گردد، اسکرول خودکار correct/feedback را آشکار می‌کند و reflection/solution داخل parchment پیوسته‌اند. | `16160f7`؛ analyzer پاک؛ 28/28 تست؛ Profile build/install؛ [review](assets/p4-manuscript-review-phone.webp) زنده |
 | 2026-09-11T05:07:17+03:30 | active | checkpoint سوم P4 مسیر completion را بست: ceremony bounded با skip semantic و reduced-motion، retry idempotence، pending-finalize pause/resume، reward فقط از receipt و panel responsive بدون ellipsis. | analyzer پاک؛ 63/63 تست در پنج suite؛ Profile build/install v91؛ signed package guard |
+| 2026-09-11T05:22:00+03:30 | phase-complete | P4 با پنج run exact-revision روی `3f2cddb` بسته شد. همهٔ journeyها پاس شدند، Map/Question/transition tail نسبت به P2 بهتر شد و signed package/data حفظ شد. P5 آغاز شد. | [aggregate](logs/performance-p4-final-3f2cddb/aggregate.json)؛ 5/5 run؛ Map scroll UI/raster p95=`7.472/20.825ms`؛ stylus missed=`0` |
 
 ## انجام‌شده تا اینجا
 
@@ -41,7 +42,8 @@
 - P4 ownership checkpoint بسته است: stroke point فقط canvas را repaint می‌کند، blank/ink tool state بدون پرش dock تغییر می‌کند، touch-scroll پیش‌فرض حفظ شده و Focus Pen side buttons تست مستقل دارند.
 - P4 review checkpoint نیز بسته است: finger mode دیگر solution scroll را نمی‌بلعد، ابتدای reflection قطع نمی‌شود و phone review از زبان بصری manuscript خارج نمی‌شود.
 - P4 completion checkpoint بسته است: reveal در یک duration مشخص تمام می‌شود، skip همان receipt را نگه می‌دارد، retry reward را تکرار نمی‌کند و pause/resume در میانهٔ finalize بدون double-commit برمی‌گردد.
+- P4 phase-complete است: ownership، stylus، review، responsive matrix، completion و exact-revision performance proof بسته‌اند.
 
 ## مرحله بعد
 
-- P4: exact-revision 5-run performance proof؛ سپس P5 تا P7. physical Xiaomi Focus Pen تا P7 می‌ماند.
+- P5: shell، Study، Insights، auth، feedback، state systems و tablet. سپس P6/P7.

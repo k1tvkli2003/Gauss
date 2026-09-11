@@ -19,6 +19,7 @@
 | P4 Manuscript — blank phone | Android Profile runtime checkpoint | `df7b17e`، `Codex_API35`، 1080×2400 | yes برای vertical slice phone؛ نه برای گیت کامل P4 | [blank manuscript](assets/p4-manuscript-blank-phone.webp) | prompt، فضای reasoning جمع‌شونده، چهار answer rail و dock مستقل |
 | P4 Manuscript — ink phone | Android Profile runtime checkpoint | `df7b17e`، `Codex_API35`، 1080×2400 | yes برای ink ownership/tool-state slice؛ نه برای hardware latency | [ink manuscript](assets/p4-manuscript-ink-phone.webp) | tool spine زمینه‌ای، ink زنده و نبود کنترل تکراری در action dock |
 | P4 Manuscript — review phone | Android Profile runtime checkpoint | `16160f7`، `Codex_API35`، 1080×2400 | yes برای answer→review phone؛ نه برای گیت کامل P4 | [review manuscript](assets/p4-manuscript-review-phone.webp) | پاسخ درست، reflection و solution روی یک parchment؛ بازگشت خودکار Finger Ink به Touch Scroll |
+| P4 Performance run — map/mission | Android Profile exact-revision | `3f2cddb`، `Codex_API35`، 1080×2400 | yes برای journey/matrix runtime؛ نه برای completion-only capture یا hardware pen | [run map](logs/performance-p4-final-3f2cddb/run-01/map.png)، [run mission](logs/performance-p4-final-3f2cddb/run-01/mission.png) | پنج run پاس؛ ownership/review/performance با aggregate و visual sample قابل بازبینی است |
 
 ## قرارداد مرجع Map
 
