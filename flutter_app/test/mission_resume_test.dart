@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:ui' show SemanticsAction;
 
@@ -794,14 +795,20 @@ void main() {
         tester,
         find.byKey(const ValueKey('mission-question-action-dock')),
       );
-
       for (var index = 0; index < 5; index++) {
         final correctChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\. A\.'));
-        await tester.ensureVisible(correctChoice);
-        await tester.tap(correctChoice);
+        await tester.scrollUntilVisible(
+          correctChoice,
+          160,
+          scrollable: find.byType(Scrollable).first,
+        );
         await tester.pump();
+        await tester.tap(correctChoice, warnIfMissed: false);
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 260));
         await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
         await tester.pump(const Duration(milliseconds: 260));
+        await tester.pump();
         expect(controller.savedAttempts, hasLength(index + 1));
         expect(
           tester.takeException(),
@@ -816,6 +823,7 @@ void main() {
           findsOneWidget,
         );
         await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+        await tester.pump();
         await tester.pump(const Duration(milliseconds: 320));
       }
 
@@ -864,6 +872,182 @@ void main() {
           reason: 'Completion must reflow rather than truncate ${text.data}.',
         );
       }
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'completion ceremony can be skipped and retry never repeats the reward save',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(360, 900));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        sampleQuestion,
+        database,
+        failFirstSave: false,
+      );
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(disableAnimations: false),
+            child: child!,
+          ),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(topicKey: 'sets', count: 5),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+      for (var index = 0; index < 5; index++) {
+        final correctChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\. A\.'));
+        await tester.scrollUntilVisible(
+          correctChoice,
+          160,
+          scrollable: find.byType(Scrollable).first,
+        );
+        await tester.pump();
+        await tester.tap(correctChoice, warnIfMissed: false);
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 260));
+        await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+        await tester.pump(const Duration(milliseconds: 260));
+        await tester.pump();
+        expect(
+          controller.savedAttempts,
+          hasLength(index + 1),
+          reason: 'attempt $index',
+        );
+        await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 320));
+      }
+
+      await tester.pump();
+
+      var completions = 0;
+      completions = controller.completions;
+      expect(completions, 1);
+
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-skip-ritual-action')),
+      );
+      final skip = find.bySemanticsLabel('Skip celebration');
+      expect(skip, findsOneWidget);
+      final skipRect = tester.getRect(
+        find.byKey(const ValueKey('mission-skip-ritual-action')),
+      );
+      expect(skipRect.width, greaterThanOrEqualTo(48));
+      expect(skipRect.height, greaterThanOrEqualTo(48));
+      await tester.tap(skip);
+      await tester.pump(const Duration(milliseconds: 40));
+      expect(tester.takeException(), isNull, reason: 'skip celebration');
+
+      // The persisted truth and action dock must survive the transient scene.
+      expect(find.text('+45 XP'), findsWidgets);
+      expect(find.text('5-QUESTION MISSION'), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey('mission-retry-action')),
+        findsOneWidget,
+      );
+
+      await tester.ensureVisible(
+        find.byKey(const ValueKey('mission-retry-action')),
+      );
+      controller.savedAttempts.clear();
+      await tester.tap(find.byKey(const ValueKey('mission-retry-action')));
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+      expect(controller.savedAttempts, isEmpty);
+      completions = controller.completions;
+      expect(completions, 1);
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
+    'pausing while finalize is pending does not commit twice after resume',
+    (tester) async {
+      await tester.binding.setSurfaceSize(const Size(390, 844));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      final database = GaussDatabase(NativeDatabase.memory());
+      addTearDown(database.close);
+      final controller = _MissionTestController(
+        sampleQuestion,
+        database,
+        failFirstSave: false,
+      );
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          home: GaussScope(
+            controller: controller,
+            child: const MissionScreen(topicKey: 'sets', count: 5),
+          ),
+        ),
+      );
+      await _pumpUntilFound(
+        tester,
+        find.byKey(const ValueKey('mission-question-action-dock')),
+      );
+      Completer<void>? pendingCompletion;
+
+      for (var index = 0; index < 5; index++) {
+        final correctChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\. A\.'));
+        await tester.ensureVisible(correctChoice);
+        await tester.scrollUntilVisible(
+          correctChoice,
+          160,
+          scrollable: find.byType(Scrollable).first,
+        );
+        await tester.pump();
+        await tester.tap(correctChoice, warnIfMissed: false);
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 260));
+        await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+        await tester.pump(const Duration(milliseconds: 260));
+        await tester.pump();
+        expect(
+          controller.savedAttempts,
+          hasLength(index + 1),
+          reason: 'attempt $index',
+        );
+        if (index == 4) {
+          controller.completionGate = Completer<void>();
+          pendingCompletion = controller.completionGate;
+        }
+        await tester.tap(find.byKey(const ValueKey('mission-primary-action')));
+        await tester.pump();
+        if (index == 4) {
+          expect(controller.completions, 1);
+          expect(find.text('+45 XP'), findsNothing);
+        } else {
+          await tester.pump(const Duration(milliseconds: 320));
+        }
+      }
+
+      // Simulate a background/resume cycle while completion is still held in
+      // the repository. UI-only lifecycle changes cannot
+      // replay completion or mutate the saved ledger.
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
+      await tester.pump();
+      tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
+      pendingCompletion!.complete();
+      await tester.pump(const Duration(milliseconds: 760));
+      expect(find.text('+45 XP'), findsWidgets);
+      expect(controller.savedAttempts, hasLength(5));
+      expect(controller.completions, 1);
       expect(tester.takeException(), isNull);
     },
   );
@@ -1040,6 +1224,9 @@ class _MissionTestController extends GaussController {
   final Question question;
   final bool failFirstSave;
   final List<AttemptRecord> savedAttempts = [];
+  Completer<void>? completionGate;
+  int get completions => _completions;
+  int _completions = 0;
 
   bool _failed = false;
 
@@ -1073,27 +1260,33 @@ class _MissionTestController extends GaussController {
   Future<MissionCompletion> completeMission({
     required String sessionId,
     required int durationSeconds,
-  }) async => const MissionCompletion(
-    examId: 77,
-    xpEarned: 45,
-    totalXp: 245,
-    levelBefore: 1,
-    levelAfter: 2,
-    lines: [
-      RewardLine(
-        eventId: 'question_answered:test',
-        ruleVersion: 1,
-        reason: 'Correct answer',
-        amount: 25,
-        category: 'practice',
-      ),
-      RewardLine(
-        eventId: 'exam_completed:test',
-        ruleVersion: 1,
-        reason: 'Mission complete',
-        amount: 20,
-        category: 'practice',
-      ),
-    ],
-  );
+  }) async {
+    _completions++;
+    if (completionGate case final gate?) {
+      await gate.future;
+    }
+    return const MissionCompletion(
+      examId: 77,
+      xpEarned: 45,
+      totalXp: 245,
+      levelBefore: 1,
+      levelAfter: 2,
+      lines: [
+        RewardLine(
+          eventId: 'question_answered:test',
+          ruleVersion: 1,
+          reason: 'Correct answer',
+          amount: 25,
+          category: 'practice',
+        ),
+        RewardLine(
+          eventId: 'exam_completed:test',
+          ruleVersion: 1,
+          reason: 'Mission complete',
+          amount: 20,
+          category: 'practice',
+        ),
+      ],
+    );
+  }
 }

@@ -67,10 +67,13 @@
 | P4 Android Profile visual slice | build/install `tool/perf_main.dart` + blank/ink/clear runtime inspection | passed checkpoint | Profile APK در `153.9s` ساخته شد؛ [blank](assets/p4-manuscript-blank-phone.webp) و [ink](assets/p4-manuscript-ink-phone.webp)؛ action dock بدون ابزار ink تکراری |
 | P4 AVD and signed-package guard | AVD inventory + `dumpsys package com.gauss.app` پس از Profile install | passed | تنها `Codex_API35`؛ signed app همان v106، `dataDir=/data/user/0/com.gauss.app` و `firstInstallTime=2026-07-18 13:02:33` |
 | P4 phone answer→review runtime | Finger Ink → wrong choice → Check روی Android Profile | passed checkpoint | Touch Scroll خودکار فعال، correct answer و ابتدای reflection در viewport، solution داخل parchment؛ [runtime](assets/p4-manuscript-review-phone.webp) |
+| P4 completion regression gate | `flutter analyze --no-pub lib/screens/mission_screen.dart test/mission_resume_test.dart test_driver/performance_driver.dart` + پنج suite Question/Focus Pen/Android/UI/Mission | passed checkpoint | analyzer بدون issue در `77.6s`؛ 63/63 test passed؛ skip semantics و 48×48، reduced-motion static، retry reward idempotence، pending-finalize pause/resume و ellipsis-free 320dp/200% پوشش داده شد |
+| P4 completion Profile/package guard | `scripts/refresh_android_preview.ps1 -Device emulator-5554 -Mode profile` + package dump | passed checkpoint | Profile APK `171.6MB` در `165.2s` ساخته و in-place نصب شد؛ `com.gauss.app.profile` v91؛ signed `com.gauss.app` v106/dataDir/firstInstallTime بدون تغییر؛ تنها `Codex_API35` |
 
 ## هنوز اجرا نشده
 
 - full Flutter suite پس از بازسازی‌های runtime.
+- P4 exact-revision 5-run profile proof.
 - Android release build جدید؛ profile spot-check P3 و debug build پاس شده‌اند.
 - physical-device Xiaomi Focus Pen profile؛ emulator proof جای آن را نمی‌گیرد.
 

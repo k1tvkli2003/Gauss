@@ -143,7 +143,7 @@ Future<void> main() async {
           );
           if (response case <String, dynamic>{'stylus': 'accepted'}) {
             await driver.waitFor(
-              find.byValueKey('mission-ink-controls'),
+              find.byValueKey('manuscript-undo-tool'),
               timeout: _defaultTimeout,
             );
             return;
@@ -156,7 +156,7 @@ Future<void> main() async {
       (report['semantics'] as Map<String, dynamic>)['mission_ink_controls'] =
           await _semanticsIdOrNull(
             driver,
-            find.byValueKey('mission-ink-controls'),
+            find.byValueKey('manuscript-undo-tool'),
           );
 
       (report['journeys'] as Map<String, dynamic>)['mission_touch_answer'] =
@@ -198,7 +198,7 @@ Future<void> main() async {
               );
               await Future<void>.delayed(const Duration(milliseconds: 520));
               await driver.waitFor(
-                find.byValueKey('mission-ink-controls'),
+                find.byValueKey('manuscript-pen-tool'),
                 timeout: _defaultTimeout,
               );
             },

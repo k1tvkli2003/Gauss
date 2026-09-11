@@ -1,7 +1,7 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-08-24T07:06:37+03:30
+- Last updated: 2026-09-11T05:07:17+03:30
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
 - Current phase: P4 — Question, answers and stylus rebuild
@@ -10,7 +10,7 @@
 
 ## Current State
 
-P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را بستند. P3 نیز کامل است: route قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شد؛ Math و Physics station سه‌بعدی مستقل دارند؛ rail در socket node فرود می‌آید؛ header، Theorem mark شفاف و مرکزچین، Orbit Navigator constellation، landmark hierarchy، Mission Compass و footer content-hugging بدون backing کدر یکپارچه شدند. finding آخرِ runtime که نود اول را با Orbit header هم‌پوشان می‌کرد با سنجش envelope واقعی aura بسته شد؛ clearance اضافی فقط در segment نخست جذب شد تا جای تمام نودهای بعدی تغییر نکند. انتهای scene هم از cadence مصنوعی جدا شد تا آخرین micro-lesson داخل میدان زندهٔ مسیر بماند و blank tail بزرگ تولید نشود. گیت نهایی exact revision `894bdaf` شامل 42/42 regression، analyzer کامل پاک، هفت capture phone/tablet، profile spot-check و حفظ کامل `com.gauss.app` v106 است. نخستین vertical slice از P4 نیز روی `df7b17e` بسته شد: strokeها فقط painter را در هر point repaint می‌کنند و manuscript تنها مرزهای معنایی ink را می‌بیند؛ تماس قلم دیگر parent را rebuild نمی‌کند؛ inverted stylus و هر دو stylus side button پاک‌کن لحظه‌ای‌اند؛ tool spine با وضعیت ink زمینه‌ای می‌شود؛ و Mission dock دیگر مالک تکراری Undo/Expand/Clear نیست. رندر Profile phone در حالت خالی و دارای ink با Astral Manuscript پذیرفته‌شده مقایسه شد. P4 برای answer states، solution/completion، responsive matrix و performance gate همچنان active است.
+P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را بستند. P3 نیز کامل است: route قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شد؛ Math و Physics station سه‌بعدی مستقل دارند؛ rail در socket node فرود می‌آید؛ header، Theorem mark شفاف و مرکزچین، Orbit Navigator constellation، landmark hierarchy، Mission Compass و footer content-hugging بدون backing کدر یکپارچه شدند. finding آخرِ runtime که نود اول را با Orbit header هم‌پوشان می‌کرد با سنجش envelope واقعی aura بسته شد؛ clearance اضافی فقط در segment نخست جذب شد تا جای تمام نودهای بعدی تغییر نکند. انتهای scene هم از cadence مصنوعی جدا شد تا آخرین micro-lesson داخل میدان زندهٔ مسیر بماند و blank tail بزرگ تولید نشود. گیت نهایی exact revision `894bdaf` شامل 42/42 regression، analyzer کامل پاک، هفت capture phone/tablet، profile spot-check و حفظ کامل `com.gauss.app` v106 است. نخستین vertical slice از P4 نیز روی `df7b17e` بسته شد: strokeها فقط painter را در هر point repaint می‌کنند و manuscript تنها مرزهای معنایی ink را می‌بیند؛ تماس قلم دیگر parent را rebuild نمی‌کند؛ inverted stylus و هر دو stylus side button پاک‌کن لحظه‌ای‌اند؛ tool spine با وضعیت ink زمینه‌ای می‌شود؛ و Mission dock دیگر مالک تکراری Undo/Expand/Clear نیست. رندر Profile phone در حالت خالی و دارای ink با Astral Manuscript پذیرفته‌شده مقایسه شد. checkpoint completion اکنون یک ceremony bounded دارد: reveal در `GaussMotion.ceremonial` روی یک frame مشخص تمام می‌شود، skip معنایی و `48dp` است، reduced-motion مستقیم صحنهٔ تمام‌شده را می‌سازد، retry فقط یک‌بار ledger/receipt را می‌سازد و lifecycle pause/resume وقتی finalize هنوز pending است دوباره commit نمی‌کند. P4 برای exact-revision performance proof و گیت سخت‌افزاری قلم همچنان active است.
 
 ## Decisions
 
@@ -37,6 +37,7 @@ P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را
 | 2026-08-23 | Orbit Navigator همهٔ فصل‌ها را به‌صورت constellation یک‌نگاه نشان دهد و فقط chapter فعال preview شود | navigation فصل نباید با یک فرم بلند، scroll ثانویه و CTA نوشتاری مسیر اصلی Map را بپوشاند | user UX direction + 320dp/200% runtime proof |
 | 2026-08-23 | clearance Map با bounds بصری کامل node/aura سنجیده شود و scene دقیقاً پس از آخرین محتوای واقعی پایان یابد | center-point کافی نبود و cadence مصنوعی در انتهای مسیر dead air می‌ساخت | user runtime screenshot + geometry/runtime regressions |
 | 2026-08-24 | ابزارهای ink فقط در tool spine خود manuscript مالکیت داشته باشند و action dock فقط وضعیت/اقدام سؤال را نمایش دهد | کنترل تکراری در دو ناحیه، توجه و state ownership را دوپاره می‌کرد | accepted Question reference + Android Profile runtime |
+| 2026-09-11 | celebration یک state صریح و skip/back-resume contract دارد؛ reward فقط از receipt ذخیره‌شده خوانده می‌شود | animation نباید gate برای دادهٔ persisted باشد و retry/lifecycle نباید reward تکراری بسازد | mission completion tests + P4/P6 plan |
 
 ## Blockers
 
@@ -67,9 +68,10 @@ P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را
 - گیت نهایی P3 روی `894bdaf` با analyzer پاک، 42/42 تست، debug APK موفق، نصب in-place و profile spot-check پاس شد؛ Map scroll در نمونهٔ exact-revision به UI/raster p95 برابر `4.359/20.250ms` رسید و signed package/data دست‌نخورده ماند.
 - vertical slice نخست P4 روی `df7b17e` با 27/27 تست Question/Focus Pen/Mission، analyzer متمرکز پاک، Profile APK موفق و بررسی Android زندهٔ blank/ink/clear پاس شد؛ ابزارهای تکراری dock حذف و signed `com.gauss.app` v106 دست‌نخورده ماند.
 - checkpoint دوم P4 روی `16160f7` مسیر answer→review را اصلاح کرد: ورود به review حالت Finger Ink را به Touch Scroll برمی‌گرداند، viewport به انتهای پاسخ درست و ابتدای reflection می‌رسد، و reflection/solution به‌جای Card جدا ادامهٔ همان parchment هستند؛ 28/28 تست، analyzer پاک و Android Profile زنده پاس شد.
+- checkpoint سوم P4 completion را بست: ceremony 760ms با skip و reduced-motion، retry idempotence، pending-finalize pause/resume، bounded visual panel و 63/63 focused regression روی پنج suite پاس شد؛ Profile build/install روی `Codex_API35` انجام شد و signed `com.gauss.app` v106/dataDir دست‌نخورده ماند.
 
 ## Remaining
 
-- ادامهٔ P4: completion، restore timing، compositionهای tablet portrait/landscape/large-text و performance proof؛ physical Xiaomi Focus Pen تا P7 gate سخت‌افزاری می‌ماند.
+- ادامهٔ P4: exact-revision 5-run performance proof؛ سپس P5 تا P7. physical Xiaomi Focus Pen تا P7 gate سخت‌افزاری می‌ماند.
 - اجرای P5 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

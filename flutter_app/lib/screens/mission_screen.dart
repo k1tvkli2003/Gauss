@@ -62,6 +62,7 @@ class _MissionScreenState extends State<MissionScreen> {
   int? _selectedChoice;
   bool _checked = false;
   bool _finished = false;
+  bool _ritualComplete = false;
   bool _saving = false;
   int _correct = 0;
   DateTime _questionStartedAt = DateTime.now();
@@ -309,6 +310,7 @@ class _MissionScreenState extends State<MissionScreen> {
         setState(() {
           _completion = completion;
           _finished = true;
+          _ritualComplete = false;
         });
         unawaited(HapticFeedback.heavyImpact());
       } catch (error) {
@@ -443,6 +445,7 @@ class _MissionScreenState extends State<MissionScreen> {
       _selectedChoice = null;
       _checked = false;
       _finished = false;
+      _ritualComplete = false;
       _saving = false;
       _correct = 0;
       _operationError = null;
@@ -452,6 +455,11 @@ class _MissionScreenState extends State<MissionScreen> {
       _errorTag = null;
       _missionFuture = _loadMission(controller);
     });
+  }
+
+  void _completeRitual() {
+    if (_saving || !_finished || _ritualComplete) return;
+    setState(() => _ritualComplete = true);
   }
 
   Future<bool> _confirmExit() async {
@@ -558,6 +566,8 @@ class _MissionScreenState extends State<MissionScreen> {
               correct: _correct,
               total: _questions.length,
               completion: _completion!,
+              ritualComplete: _ritualComplete,
+              onSkipRitual: _completeRitual,
               onMap: () => context.go('/map'),
               onRetry: _retryMission,
             );
@@ -1996,12 +2006,16 @@ class _MissionComplete extends StatelessWidget {
     required this.correct,
     required this.total,
     required this.completion,
+    required this.ritualComplete,
+    required this.onSkipRitual,
     required this.onMap,
     required this.onRetry,
   });
   final int correct;
   final int total;
   final MissionCompletion completion;
+  final bool ritualComplete;
+  final VoidCallback onSkipRitual;
   final VoidCallback onMap;
   final VoidCallback onRetry;
 
@@ -2044,83 +2058,80 @@ class _MissionComplete extends StatelessWidget {
               Expanded(
                 child: SingleChildScrollView(
                   key: const ValueKey('mission-completion-scroll'),
-                  padding: const EdgeInsets.fromLTRB(12, 12, 12, 16),
+                  padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
                   child: Center(
                     child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 800),
+                      constraints: const BoxConstraints(maxWidth: 860),
                       child: Semantics(
                         key: const ValueKey('mission-completion-screen'),
                         container: true,
                         liveRegion: true,
                         label: semanticSummary.toString(),
-                        child: Container(
-                          padding: const EdgeInsets.all(GaussSpacing.space20),
+                        child: DecoratedBox(
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
                               colors: [
-                                GaussColors.panelHigh.withValues(alpha: .96),
-                                GaussColors.ink.withValues(alpha: .98),
+                                GaussColors.deepInk.withValues(alpha: .82),
+                                GaussColors.abyss.withValues(alpha: .94),
                               ],
                             ),
                             borderRadius: BorderRadius.circular(
                               GaussRadii.large,
                             ),
                             border: Border.all(
-                              color: GaussColors.brass.withValues(alpha: .42),
+                              color: GaussColors.brass.withValues(alpha: .34),
                             ),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x99000000),
-                                blurRadius: 36,
-                                offset: Offset(0, 18),
-                              ),
-                            ],
                           ),
-                          child: LayoutBuilder(
-                            builder: (context, constraints) {
-                              final textHeight = MediaQuery.textScalerOf(
-                                context,
-                              ).scale(14);
-                              final wide =
-                                  constraints.maxWidth >= 650 &&
-                                  textHeight < 20;
-                              final visual = _MissionCompletionVisual(
-                                accuracy: accuracy,
-                                correct: correct,
-                                total: total,
-                                compact: !wide,
-                              );
-                              final summary = _MissionCompletionSummary(
-                                total: total,
-                                headline: headline,
-                                detail: detail,
-                                completion: completion,
-                                rewards: rewards,
-                              );
-                              if (!wide) {
-                                return Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
+                          child: Padding(
+                            padding: const EdgeInsets.all(GaussSpacing.space16),
+                            child: LayoutBuilder(
+                              builder: (context, constraints) {
+                                final textHeight = MediaQuery.textScalerOf(
+                                  context,
+                                ).scale(14);
+                                final wide =
+                                    constraints.maxWidth >= 700 &&
+                                    textHeight < 20;
+                                final visual = _MissionCompletionVisual(
+                                  accuracy: accuracy,
+                                  correct: correct,
+                                  total: total,
+                                  compact: !wide,
+                                  ritualComplete: ritualComplete,
+                                  onSkipRitual: onSkipRitual,
+                                );
+                                final summary = _MissionCompletionSummary(
+                                  total: total,
+                                  headline: headline,
+                                  detail: detail,
+                                  completion: completion,
+                                  rewards: rewards,
+                                );
+                                if (!wide) {
+                                  return Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: [
+                                      visual,
+                                      const SizedBox(
+                                        height: GaussSpacing.space12,
+                                      ),
+                                      summary,
+                                    ],
+                                  );
+                                }
+                                return Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    visual,
-                                    const SizedBox(
-                                      height: GaussSpacing.space12,
-                                    ),
-                                    summary,
+                                    SizedBox(width: 296, child: visual),
+                                    const SizedBox(width: GaussSpacing.space24),
+                                    Expanded(child: summary),
                                   ],
                                 );
-                              }
-                              return Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  SizedBox(width: 286, child: visual),
-                                  const SizedBox(width: GaussSpacing.space24),
-                                  Expanded(child: summary),
-                                ],
-                              );
-                            },
+                              },
+                            ),
                           ),
                         ),
                       ),
@@ -2143,64 +2154,98 @@ class _MissionCompletionVisual extends StatelessWidget {
     required this.correct,
     required this.total,
     required this.compact,
+    required this.ritualComplete,
+    required this.onSkipRitual,
   });
 
   final double accuracy;
   final int correct;
   final int total;
   final bool compact;
+  final bool ritualComplete;
+  final VoidCallback onSkipRitual;
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-    height: compact ? 218 : 330,
-    child: RepaintBoundary(
-      child: TweenAnimationBuilder<double>(
-        tween: Tween(begin: 0, end: 1),
-        duration: GaussMotion.resolve(
-          context,
-          const Duration(milliseconds: 980),
+  Widget build(BuildContext context) {
+    final reducedMotion = MediaQuery.disableAnimationsOf(context);
+    final showRitual = !reducedMotion && !ritualComplete;
+    final ritual = showRitual
+        ? Semantics(
+            container: true,
+            button: true,
+            enabled: true,
+            label: 'Skip celebration',
+            onTap: onSkipRitual,
+            child: IconButton.filledTonal(
+              key: const ValueKey('mission-skip-ritual-action'),
+              tooltip: null,
+              onPressed: onSkipRitual,
+              icon: const Icon(Icons.close_rounded),
+              color: GaussColors.ivory,
+              constraints: const BoxConstraints.tightFor(
+                width: 48,
+                height: 48,
+              ),
+            ),
+          )
+        : const SizedBox.shrink();
+
+    Widget scene(double reveal) => Stack(
+      alignment: Alignment.center,
+      children: [
+        Positioned.fill(
+          child: ExcludeSemantics(
+            child: CustomPaint(
+              painter: _MissionCompletionOrbitPainter(reveal: reveal),
+            ),
+          ),
         ),
-        curve: Curves.easeOutCubic,
-        builder: (context, reveal, _) => Stack(
-          alignment: Alignment.center,
-          children: [
-            Positioned.fill(
-              child: ExcludeSemantics(
-                child: CustomPaint(
-                  painter: _MissionCompletionOrbitPainter(reveal: reveal),
-                ),
+        ExcludeSemantics(
+          child: Transform.scale(
+            scale: .94 + reveal * .06,
+            child: Opacity(
+              opacity: reveal,
+              child: Image.asset(
+                accuracy >= .7
+                    ? 'assets/visual/mascot/mira_correct.png'
+                    : 'assets/visual/mascot/mira_thinking.png',
+                height: compact ? 178 : 264,
+                fit: BoxFit.contain,
+                cacheHeight: compact ? 534 : 792,
+                filterQuality: FilterQuality.medium,
               ),
             ),
-            ExcludeSemantics(
-              child: Transform.scale(
-                scale: .94 + reveal * .06,
-                child: Opacity(
-                  opacity: reveal,
-                  child: Image.asset(
-                    accuracy >= .7
-                        ? 'assets/visual/mascot/mira_correct.png'
-                        : 'assets/visual/mascot/mira_thinking.png',
-                    height: compact ? 178 : 264,
-                    fit: BoxFit.contain,
-                    cacheHeight: compact ? 534 : 792,
-                    filterQuality: FilterQuality.medium,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: compact ? 0 : 8,
-              child: _ScoreSeal(
-                accuracy: accuracy,
-                correct: correct,
-                total: total,
-              ),
-            ),
-          ],
+          ),
         ),
+        Positioned(
+          bottom: compact ? 0 : 8,
+          child: _ScoreSeal(accuracy: accuracy, correct: correct, total: total),
+        ),
+      ],
+    );
+
+    final receipt = SizedBox(
+      height: compact ? 218 : 330,
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: RepaintBoundary(
+              child: showRitual
+                  ? TweenAnimationBuilder<double>(
+                      tween: Tween(begin: 0, end: 1),
+                      duration: GaussMotion.ceremonial,
+                      curve: Curves.easeOutCubic,
+                      builder: (context, reveal, _) => scene(reveal),
+                    )
+                  : scene(1),
+            ),
+          ),
+          if (showRitual) PositionedDirectional(top: 2, end: 2, child: ritual),
+        ],
       ),
-    ),
-  );
+    );
+    return receipt;
+  }
 }
 
 class _MissionCompletionSummary extends StatelessWidget {
@@ -2458,6 +2503,7 @@ class _MissionRewardLine extends StatelessWidget {
           style: const TextStyle(
             color: GaussColors.signalBright,
             fontWeight: FontWeight.w900,
+            fontFeatures: [FontFeature.tabularFigures()],
           ),
         );
         if (stack) {
@@ -2583,6 +2629,7 @@ class _ScoreSeal extends StatelessWidget {
         style: const TextStyle(
           color: GaussColors.ivory,
           fontWeight: FontWeight.w900,
+          fontFeatures: [FontFeature.tabularFigures()],
         ),
       ),
     ),
