@@ -432,6 +432,20 @@ void main() {
       );
       await tester.pump();
       expect(pages().physics, isA<NeverScrollableScrollPhysics>());
+      await pen.moveBy(const Offset(12, 8));
+      await tester.pump(const Duration(milliseconds: 260));
+      expect(
+        tester.getRect(find.byKey(const ValueKey('study-room-question-paper'))),
+        paperBefore,
+        reason: 'Active ink must not resize the paper beneath the pen.',
+      );
+      expect(
+        tester.getRect(
+          find.byKey(const ValueKey('study-room-navigation-dock')),
+        ),
+        dockBefore,
+      );
+      expect(pages().physics, isA<NeverScrollableScrollPhysics>());
 
       await pen.up();
       await tester.pump(const Duration(milliseconds: 260));

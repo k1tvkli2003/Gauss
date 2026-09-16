@@ -6,6 +6,20 @@
 - Modernization mode: `Recompose` برای shell و Map UX، `Radical rebuild` برای Map renderer و question interaction، `Elevate` برای مسیرهای فرعی، `Showpiece` فقط برای milestoneهای کمیاب
 - Accepted visual direction: Gauss Orrery + Astral Manuscript
 
+## قرارداد قطعی ادامه و تحویل — 2026-09-17
+
+این بخش در تعارض با متن تاریخی پایین، معیار جدید پذیرش است. P0 تا P4 بسته‌اند؛ شروع ادامه روی `81044c8`، P5 فعال و پیشرفت گیت‌شده `70%` است. عدد قدیمی آمادگی `78–82%` معیار تحویل نیست.
+
+1. ابتدا regression ارتفاع Manuscript هنگام ink بدون ضعیف‌کردن تست اصلاح و با analyzer، suite کامل و CI همان SHA اثبات شود. تغییر پایان‌خط Gradle و شواهد untracked نامرتبط وارد commit نشوند.
+2. P5 به ترتیب shell/navigation، مسیر کامل Study تا ذخیره/recap/Map، Insights، auth و feedback بسته شود. back/scroll/focus/draft/rotation، loading/empty/error/offline/retry/success/dialog و ترکیب اختصاصی تبلت تست و capture واقعی داشته باشند. account switch/session expiry، content update نامعتبر و feedback retry نباید نشت حساب، ازبین‌رفتن نسخهٔ سالم یا ثبت تکراری ایجاد کنند. پایان P5 برابر `82%` است.
+3. P6 طبق Motion Bible، full/reduced/minimal motion، rapid reversal، lifecycle، TalkBack، focus، contrast و haptic fallback بسته شود. reward فقط از receipt ذخیره‌شده؛ clock تزریق‌شده و تست نیمه‌شب برای quest/streak/reward الزامی‌اند. پایان P6 برابر `90%` است.
+4. P7 شامل analyzer/suite/buildهای debug/profile/release، ماتریس responsive و semantics، مقایسهٔ بصری مرجع/runtime، پنج profile هم‌شرایط، حداقل 10 چرخه Map↔Mission و جلسهٔ طولانی است. محدودیت emulator جای شاهد سخت‌افزار را نمی‌گیرد.
+5. Xiaomi Focus Pen روی دستگاه واقعی گیت قطعی تحویل است: stroke، pressure، eraser/buttons، palm contact، touch-scroll، undo/clear، rotation و pause/resume با مدل دستگاه، OS و APK ثبت شوند. بدون این شاهد، حتی با ریلیز نرم‌افزار، `100%` یا `done` ممنوع است؛ هماهنگی دستگاه با کاربر انجام می‌شود.
+6. تحویل فقط با CI/tag/APK متعلق به کد نهایی، `com.gauss.app`، versionCode افزایشی، امضای اصلی غیر-debug، alignment و SHA-256 معتبر، GitHub Release و آزمون نصب تازه و upgrade در محیط مستقل مجاز کامل است. نسخهٔ شخصی و داده‌هایش دست‌نخورده بمانند؛ نصب روی دستگاه شخصی تأیید جداگانه می‌خواهد. workflow فعلی هر push به main را منتشر می‌کند؛ ریلیز میانی تحویل نهایی نیست.
+7. هیچ Must یا Material باز باقی نماند؛ marginalها backlog هستند. ممیزی علمی تک‌تک 3672 سؤال ادعا نمی‌شود. بدون subagent/PDF/AVD تازه؛ API یا migration جدید فقط اگر ضروری و با طرح سازگاری و تست مستقل باشد.
+
+در پایان هر slice: اصلاح محدود، تست متناسب، شاهد runtime برای تغییر بصری، ثبت شواهد و گیت بعد. تأیید کل هدف فقط پس از بسته‌شدن همهٔ الزامات بالا و هم‌سویی اسناد است.
+
 ## 1. نتیجه مطلوب
 
 گائوس باید مثل یک ابزار یادگیری نجومیِ واقعاً حرفه‌ای حس شود: Map یک مسیر زنده و روان برای انتخاب پنج سؤال بعدی باشد؛ صفحه سؤال یک manuscript قابل نوشتن و خوانا باشد؛ هر لمس پاسخ فوری و واضح بگیرد؛ و هیچ footer، dock، label، animation یا texture مانع خواندن، اسکرول یا تصمیم‌گیری نشود.

@@ -71,9 +71,20 @@
 | P4 completion Profile/package guard | `scripts/refresh_android_preview.ps1 -Device emulator-5554 -Mode profile` + package dump | passed checkpoint | Profile APK `171.6MB` در `165.2s` ساخته و in-place نصب شد؛ `com.gauss.app.profile` v91؛ signed `com.gauss.app` v106/dataDir/firstInstallTime بدون تغییر؛ تنها `Codex_API35` |
 | P4 exact-revision performance gate | `pwsh tool/run_android_performance.ps1 -DeviceId emulator-5554 -Runs 5` روی `3f2cddba788b915dd012253a8e064d9f5c01b1da` | passed phase gate | 5/5 journeys passed؛ Map scroll UI/raster p95=`7.472/20.825ms`، missed median=`20.75%`؛ stylus missed=`0%`؛ answer missed median=`3.45%`؛ [aggregate](logs/performance-p4-final-3f2cddb/aggregate.json)؛ نسبت به P2 در همهٔ این tailها بهتر است؛ emulator GPU caveat باقی است |
 
+## گیت تثبیت — 2026-09-17
+
+| بررسی | دستور/روش | نتیجه | مرز شاهد |
+|---|---|---|---|
+| Analyzer کامل | `flutter analyze --no-pub` | passed، exit 0، 98.7s | worktree اصلاح Manuscript |
+| Full Flutter suite | `flutter test --no-pub --reporter expanded` | passed، exit 0، 250 passed / 1 skipped، 36s | شامل regression تقویت‌شدهٔ geometry حین stroke و قفل paging؛ تنها skip متعلق به `web_deep_link_test.dart` با شرط `!kIsWeb` است |
+| تست مستقل قلم | `flutter test --no-pub test/study_experience_test.dart --plain-name "study-room ink suspends horizontal paging while the pen is active" --reporter expanded` | passed، exit 0، 1/1، 2s | هندسه حین stroke، paging، clear/restore و خروج |
+| اعتبارسنجی اسناد | validator رسمی work-docs + `git diff --check` | passed | ساختار و محتوای اسناد؛ فقط هشدار تبدیل LF به CRLF در Git |
+| CI جاری | `gh run list --limit 3 --json databaseId,headSha,status,conclusion,url` | failed | run `34553314888` روی `81044c8`؛ CI اصلاح هنوز اجرا نشده |
+| Release جاری | `gh release view --json tagName,targetCommitish,url` | نسخهٔ قدیمی | `v1.0.277` روی `1936b0974ab49da2e420c08c9411e4f3b644e52d` |
+
 ## هنوز اجرا نشده
 
-- full Flutter suite پس از بازسازی‌های runtime.
+- full Flutter suite روی نامزد نهایی P7؛ suite گیت تثبیت 2026-09-17 پاس شده است.
 - Android release build جدید؛ profile spot-check P3 و debug build پاس شده‌اند.
 - physical-device Xiaomi Focus Pen profile؛ emulator proof جای آن را نمی‌گیرد.
 

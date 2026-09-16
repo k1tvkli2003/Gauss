@@ -33,7 +33,7 @@
 - scope فقط Android و بدون تغییر dataset/media تثبیت شد.
 - رفرنس‌های پذیرفته‌شده و runtime baseline از هم تفکیک و ثبت شدند.
 - پیشرفت Goal با وزن گیت‌ها تعریف شد تا compile یا حجم کد به‌اشتباه completion حساب نشود.
-- P0 تا P3 کامل شدند: کل Goal اکنون 50% است؛ این درصد فقط با عبور گیت بالا رفته است.
+- P0 تا P4 کامل شدند: کل Goal اکنون 70% است؛ این درصد فقط با عبور گیت بالا رفته است.
 - finding بصری P3 قفل شد: spiral و nodeهای فعلی خشک، تکراری و مکانیکی‌اند و به‌جای polish سطحی باید با زبان مسیر/عمق/حالت تازه بازسازی شوند.
 - هستهٔ route/node همین finding اکنون در code و Android runtime اصلاح شده است؛ bounds واقعی aura/header و tail واقعی scene نیز regression دارند.
 - identity P3 از gate بصری عبور کرده است: mark و wordmark در auth محور مشترک دارند، Splash در مرکز واقعی است و هیچ baked/internal plate باقی نمانده است.
@@ -47,3 +47,10 @@
 ## مرحله بعد
 
 - P5: shell، Study، Insights، auth، feedback، state systems و tablet. سپس P6/P7.
+
+## ادامهٔ 2026-09-17
+
+- قرارداد ادامه تا تحویل کامل ثبت شد؛ Focus Pen فیزیکی گیت قطعی است و پیشرفت همچنان 70% می‌ماند.
+- اصلاح ارتفاع writing space روی 112 ثابت و regression به حرکت قلم در حالت down تعمیم یافت؛ paper/dock ثابت و paging قفل می‌مانند.
+- `flutter analyze --no-pub`: پاک، exit 0، 98.7s. `flutter test --no-pub --reporter expanded`: exit 0، 250 passed / 1 skipped، 36s؛ هیچ تستی حذف یا smoke نشده است.
+- وضعیت زنده GitHub: CI روی `81044c8` شکست‌خورده؛ آخرین release `v1.0.277`. CI اصلاح هنوز منتظر commit/push است. runtime تازه در این checkpoint اجرا نشده.

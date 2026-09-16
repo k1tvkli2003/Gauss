@@ -1,16 +1,16 @@
 # وضعیت
 
 - Current status: `active`
-- Last updated: 2026-09-11T05:07:17+03:30
+- Last updated: 2026-09-17
 - Owner: Codex
 - Baseline revision: `f3edce84a54a89f1be3051ff435659e26d1e9e7c`
 - Current phase: P5 — shell, Study, Insights, auth, feedback and tablet integration
 - Goal progress: 70%
-- Product-readiness estimate: 78–82%
+- Product-readiness estimate: برآورد تاریخی 78–82%؛ تأیید مستقل نشده و معیار تحویل نیست.
 
 ## Current State
 
-P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را بستند. P3 نیز کامل است: route قدیمی با مسیر analytic دارای tangent مشترک و انحنای بزرگ‌قطر جایگزین شد؛ Math و Physics station سه‌بعدی مستقل دارند؛ rail در socket node فرود می‌آید؛ header، Theorem mark شفاف و مرکزچین، Orbit Navigator constellation، landmark hierarchy، Mission Compass و footer content-hugging بدون backing کدر یکپارچه شدند. finding آخرِ runtime که نود اول را با Orbit header هم‌پوشان می‌کرد با سنجش envelope واقعی aura بسته شد؛ clearance اضافی فقط در segment نخست جذب شد تا جای تمام نودهای بعدی تغییر نکند. انتهای scene هم از cadence مصنوعی جدا شد تا آخرین micro-lesson داخل میدان زندهٔ مسیر بماند و blank tail بزرگ تولید نشود. گیت نهایی exact revision `894bdaf` شامل 42/42 regression، analyzer کامل پاک، هفت capture phone/tablet، profile spot-check و حفظ کامل `com.gauss.app` v106 است. نخستین vertical slice از P4 نیز روی `df7b17e` بسته شد: strokeها فقط painter را در هر point repaint می‌کنند و manuscript تنها مرزهای معنایی ink را می‌بیند؛ تماس قلم دیگر parent را rebuild نمی‌کند؛ inverted stylus و هر دو stylus side button پاک‌کن لحظه‌ای‌اند؛ tool spine با وضعیت ink زمینه‌ای می‌شود؛ و Mission dock دیگر مالک تکراری Undo/Expand/Clear نیست. رندر Profile phone در حالت خالی و دارای ink با Astral Manuscript پذیرفته‌شده مقایسه شد. checkpoint completion اکنون یک ceremony bounded دارد: reveal در `GaussMotion.ceremonial` روی یک frame مشخص تمام می‌شود، skip معنایی و `48dp` است، reduced-motion مستقیم صحنهٔ تمام‌شده را می‌سازد، retry فقط یک‌بار ledger/receipt را می‌سازد و lifecycle pause/resume وقتی finalize هنوز pending است دوباره commit نمی‌کند. P4 برای exact-revision performance proof و گیت سخت‌افزاری قلم همچنان active است.
+P0 تا P4 بسته‌اند. P3 روی `894bdaf` با 42 regression و هفت capture، Map/identity/Navigator و clearance ابتدا و انتهای مسیر را بست. P4 ownership قلم، answer→review و completion مبتنی بر receipt را با checkpointهای ثبت‌شده در Done و verification بست؛ گیت سخت‌افزاری قلم در P7 است، نه بازگشایی P4.
 
 گیت exact-revision P4 روی `3f2cddb` با پنج run profile بسته شد: در مقابل P2، tail Map به UI/raster p95 `7.472/20.825ms` و missed ratio میانهٔ `20.75%` رسید؛ mission stylus بدون missed frame و mission answer با median `3.45%` بود. همهٔ journeyها پاس شدند، package اصلی حفظ شد و P4 به‌عنوان phase-complete بسته شد. P5 برای یکپارچه‌سازی shell/Study/Insights/auth/feedback و tablet فعال است؛ physical Xiaomi Focus Pen تا P7 باقی می‌ماند.
 
@@ -18,6 +18,7 @@ P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را
 
 | تاریخ | تصمیم | دلیل | منبع |
 |---|---|---|---|
+| 2026-09-17 | قلم واقعی، ریلیز امضاشده و آزمون upgrade گیت قطعی تحویل‌اند | انتخاب صریح کاربر؛ نبود شاهد سخت‌افزار با caveat جبران نمی‌شود | قرارداد ادامه در `01-plan.md` |
 | 2026-08-21 | یک task تازه برای این چرخه ساخته شود | اسناد July پایان نسخه‌های قبلی را ثبت کرده‌اند و نباید evidence تازه را با آن‌ها مخلوط کرد | work-docs contract + repo state |
 | 2026-08-21 | Map renderer و question interaction بازسازی عمیق شوند | polish ظاهری علت اسکرول و rebuild را رفع نمی‌کند | source inspection + runtime screenshots |
 | 2026-08-21 | accepted Orrery/Astral previews حفظ شوند | جهت محصول انتخاب شده و نیاز به نظرخواهی تازه نیست | user-approved references |
@@ -76,6 +77,7 @@ P0 تا P2 baseline، سیستم اجرایی UI و engine lazy/bounded Map را
 
 ## Remaining
 
+- گیت تثبیت: اصلاح ارتفاع ink و regression حین stroke آماده‌اند؛ analyzer کامل پاک و suite کامل 250 passed / 1 skipped روی worktree پاس شدند. commit/push و CI همان SHA هنوز لازم‌اند؛ CI قبلی `34553314888` شکست خورده و آخرین ریلیز بررسی‌شده `v1.0.277` است.
 - اجرای P5: shell، Study، Insights، auth، feedback، loading/empty/error/offline/dialogs و tablet landscape/portrait.
 - اجرای P6 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

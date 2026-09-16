@@ -2,7 +2,7 @@
 
 ## Outcome
 
-کار هنوز active است. P0 تا P3 کامل و Goal gated برابر 50% است. Map کامل—engine، route/node، header/identity، Orbit Navigator، landmark، Mission Compass، footer و matrix phone/tablet—از گیت P3 عبور کرده است. در P4، ownership/stylus checkpoint روی `df7b17e` و answer→review checkpoint روی `16160f7` پاس شده‌اند: ابزار ink مالک یگانه دارند، Focus Pen contracts تست شده‌اند، Finger Ink هنگام Review به Touch Scroll برمی‌گردد و feedback/solution ادامهٔ manuscript است. completion، responsive matrix و performance gate هنوز بازند؛ این فایل پایان کار را اعلام نمی‌کند.
+کار active است. P0 تا P4 کامل و Goal gated برابر 70% است. P4 با completion و پنج اجرای profile روی `3f2cddb` بسته و در `81044c8` ثبت شده است. P5 فعال است؛ P4 از checkpoint قدیمی دوباره شروع نشود. قرارداد تحویل قطعی 2026-09-17 در `01-plan.md` الزام‌آور است؛ قلم واقعی و ریلیز امضاشده با proof نصب/upgrade پیش‌شرط 100% هستند.
 
 ## Changed Artifacts
 
@@ -20,9 +20,10 @@
 
 ## How To Continue
 
-1. P4 را از checkpoint `16160f7` ادامه دهید: completion و restore timing را کامل و سپس matrix phone/tablet/large-text و performance را ببندید.
+1. گیت تثبیت را ببندید: اصلاح موجود Manuscript ارتفاع را هنگام ink ثابت نگه می‌دارد؛ regression حین stroke هم افزوده شده. analyzer کامل و suite کامل 250 passed / 1 skipped پاس‌اند. commit/push و CI همان SHA لازم است؛ تغییر Gradle پایان‌خط و untrackedهای نامرتبط stage نشوند.
 2. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
 3. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
+4. P5 به ترتیب shell/navigation، Study end-to-end، Insights، auth/feedback و tablet؛ سپس P6/P7. تست سبز جای runtime، قلم واقعی یا release proof نیست.
 
 ## Done
 
@@ -34,8 +35,8 @@
 
 ## Remaining
 
-- پیاده‌سازی و verification فازهای P4 تا P7.
+- پیاده‌سازی و verification فازهای P5 تا P7، قلم واقعی، release نهایی و نصب/upgrade مستقل.
 
 ## Verification
 
-- سند پس از نوشتن با validator رسمی work-docs و `git diff --check` بررسی می‌شود.
+- 2026-09-17: analyzer کامل بدون issue؛ suite کامل 250 passed / 1 skipped، exit 0. CI قدیمی `34553314888` failed و release فعلی `v1.0.277` است؛ CI اصلاح و runtime تازه هنوز اثبات نشده‌اند.

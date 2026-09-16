@@ -248,9 +248,7 @@ class _ManuscriptContent extends StatelessWidget {
                 key: const ValueKey('question-manuscript-writing-space'),
                 duration: GaussMotion.resolve(context, GaussMotion.standard),
                 curve: Curves.easeOutCubic,
-                constraints: BoxConstraints(
-                  minHeight: inkStatus.isEmpty ? 112 : 176,
-                ),
+                constraints: const BoxConstraints(minHeight: 112),
                 alignment: AlignmentDirectional.topStart,
                 padding: const EdgeInsets.all(GaussSpacing.space8),
                 child: inkStatus.isEmpty
