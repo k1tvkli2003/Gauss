@@ -84,6 +84,16 @@
 
 ## هنوز اجرا نشده
 
+### checkpoint CI و rotation — 2026-09-17
+
+- `b6773fb` روی origin/main ثبت شد. run `35157330917` در `Set up Android SDK` با `Failed to find package 'tools'` خاتمه یافت؛ تست Flutter اصلاً اجرا نشد. این failure محیط مستقل از regression قبلی قلم است.
+- metadata upstream action در SHA پین‌شده، default `tools platform-tools` را تأیید کرد. اصلاح ورودی explicit `platform-tools` و تست contract اضافه شد؛ شاهد GitHub برای اصلاح هنوز باز است.
+- `flutter test --no-pub test/release_pipeline_contract_test.dart test/study_experience_test.dart --reporter expanded`: 30 passed، exit 0، 6s. تست rotation مستقل هم 1/1 پاس شد؛ phone→tablet→phone همان سؤال، hypothesis، ink controller، strokeCount و recordedWidths را حفظ کرد.
+- `audit_release_docs.py --timeout 5`: exit 0 و همهٔ markerهای منابع رسمی موجود. actionlint نصب نیست؛ lint مستقل YAML اجرا نشد.
+- دستگاه متصل: هیچ‌کدام؛ AVD inventory: فقط `Codex_API35`. هیچ نصب، پاک‌سازی یا راه‌اندازی runtime در این checkpoint انجام نشد.
+
+### گیت‌های باز
+
 - full Flutter suite روی نامزد نهایی P7؛ suite گیت تثبیت 2026-09-17 پاس شده است.
 - Android release build جدید؛ profile spot-check P3 و debug build پاس شده‌اند.
 - physical-device Xiaomi Focus Pen profile؛ emulator proof جای آن را نمی‌گیرد.

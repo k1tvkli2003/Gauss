@@ -20,7 +20,7 @@
 
 ## How To Continue
 
-1. گیت تثبیت را ببندید: اصلاح موجود Manuscript ارتفاع را هنگام ink ثابت نگه می‌دارد؛ regression حین stroke هم افزوده شده. analyzer کامل و suite کامل 250 passed / 1 skipped پاس‌اند. commit/push و CI همان SHA لازم است؛ تغییر Gradle پایان‌خط و untrackedهای نامرتبط stage نشوند.
+1. گیت تثبیت را ببندید: اصلاح Manuscript و regression حین stroke در `b6773fb` push شدند؛ analyzer کامل و suite کامل 250 passed / 1 skipped پاس‌اند. CI `35157330917` در setup SDK بستهٔ منسوخ `tools` را پیدا نکرد؛ explicit `platform-tools` و تست pipeline آماده‌اند و باید در CI همان SHA اثبات شوند. تغییر Gradle پایان‌خط و untrackedهای نامرتبط stage نشوند.
 2. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
 3. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
 4. P5 به ترتیب shell/navigation، Study end-to-end، Insights، auth/feedback و tablet؛ سپس P6/P7. تست سبز جای runtime، قلم واقعی یا release proof نیست.
@@ -40,3 +40,4 @@
 ## Verification
 
 - 2026-09-17: analyzer کامل بدون issue؛ suite کامل 250 passed / 1 skipped، exit 0. CI قدیمی `34553314888` failed و release فعلی `v1.0.277` است؛ CI اصلاح و runtime تازه هنوز اثبات نشده‌اند.
+- checkpoint بعدی: Study + pipeline برابر 30/30 پاس؛ تست rotation سؤال/hypothesis/committed ink را حفظ کرد. CI اصلاح SDK، Android capture P5، قلم واقعی و release نهایی همچنان بازند.

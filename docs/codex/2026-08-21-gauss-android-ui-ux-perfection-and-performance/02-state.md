@@ -77,7 +77,8 @@ P0 تا P4 بسته‌اند. P3 روی `894bdaf` با 42 regression و هفت c
 
 ## Remaining
 
-- گیت تثبیت: اصلاح ارتفاع ink و regression حین stroke آماده‌اند؛ analyzer کامل پاک و suite کامل 250 passed / 1 skipped روی worktree پاس شدند. commit/push و CI همان SHA هنوز لازم‌اند؛ CI قبلی `34553314888` شکست خورده و آخرین ریلیز بررسی‌شده `v1.0.277` است.
+- گیت تثبیت: اصلاح ارتفاع ink و regression حین stroke در `b6773fb` commit/push شدند؛ analyzer کامل پاک و suite کامل 250 passed / 1 skipped پاس شدند. CI تازه `35157330917` پیش از Flutter در setup SDK با `Failed to find package 'tools'` شکست خورد. ورودی `packages: platform-tools` صریح شد؛ CI اصلاح SDK هنوز لازم است. آخرین ریلیز بررسی‌شده `v1.0.277` است.
+- تست تازهٔ P5 حفظ سؤال، hypothesis و committed ink در چرخش phone→tablet→phone پاس شد؛ این شاهد widget است، نه Android runtime. هیچ دستگاهی متصل نبود؛ AVD موجود فقط `Codex_API35` است.
 - اجرای P5: shell، Study، Insights، auth، feedback، loading/empty/error/offline/dialogs و tablet landscape/portrait.
 - اجرای P6 تا P7 و به‌روزرسانی پیوسته state/progress/verification.
 - commit و push فقط پس از validation سند و سپس در پایان هر فاز پذیرفته‌شده.

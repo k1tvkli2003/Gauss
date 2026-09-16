@@ -37,6 +37,12 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
+        with:
+          # The action default includes the retired SDK package `tools`.
+          # Command-line tools are installed by the action itself; platform
+          # and build-tools versions are installed explicitly below.
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
 
       - name: Set up Flutter 3.44.0
         uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2

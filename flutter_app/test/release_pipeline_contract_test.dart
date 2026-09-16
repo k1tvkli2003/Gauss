@@ -3,6 +3,23 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  test('Android setup does not request the retired tools package', () {
+    final workflow = File(
+      '../.github/workflows/release-apk.yml',
+    ).readAsStringSync();
+    final setupStep = workflow
+        .split('- name: Set up Android SDK')
+        .last
+        .split('- name: Set up Flutter')
+        .first;
+    expect(setupStep, contains('packages: platform-tools'));
+    expect(setupStep, isNot(contains('packages: tools')));
+    expect(
+      workflow,
+      contains('sdkmanager "platforms;android-36" "build-tools;36.0.0"'),
+    );
+  });
+
   test('only Flutter may publish the Gauss Android package', () {
     final workflow = File(
       '../.github/workflows/release-apk.yml',

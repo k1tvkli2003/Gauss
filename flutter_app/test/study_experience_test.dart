@@ -1141,6 +1141,87 @@ void main() {
     },
   );
 
+  testWidgets('study rotation preserves question hypothesis and committed ink', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    final topic = controller.topics.first;
+    late StudyShelf shelf;
+    late int offset;
+    await tester.runAsync(() async {
+      for (final session in questionBank.studyPlan.topic(topic.key).sessions) {
+        final candidateOffset = session.index * GaussStudyCurriculum.batchSize;
+        final candidate = await controller.loadStudyShelf(
+          topic.key,
+          offset: candidateOffset,
+          count: 5,
+        );
+        if (candidate.questions.first.options.isNotEmpty) {
+          shelf = candidate;
+          offset = candidateOffset;
+          return;
+        }
+      }
+      throw StateError('No study session with selectable hypotheses.');
+    });
+    await tester.pumpWidget(
+      _TestSurface(
+        controller: controller,
+        child: ArchiveScreen(topicKey: topic.key, offset: offset, count: 5),
+      ),
+    );
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
+    await tester.ensureVisible(firstChoice);
+    await tester.tap(firstChoice);
+    await tester.pump();
+    final canvas = find.byKey(const ValueKey('inline-ink-canvas'));
+    await tester.ensureVisible(canvas);
+    await tester.pump(const Duration(milliseconds: 260));
+    final pen = await tester.startGesture(
+      tester.getRect(canvas).topLeft + const Offset(24, 24),
+      kind: PointerDeviceKind.stylus,
+      pointer: 81,
+    );
+    await pen.moveBy(const Offset(30, 12));
+    await pen.up();
+    await tester.pump(const Duration(milliseconds: 260));
+    final ink = tester.widget<InlineQuestionScratch>(
+      find.byType(InlineQuestionScratch),
+    ).controller!;
+    expect(ink.strokeCount, 1);
+    final widths = List<double>.of(ink.recordedWidths);
+
+    for (final size in const [Size(1024, 800), Size(411, 820)]) {
+      await tester.binding.setSurfaceSize(size);
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 260));
+      expect(
+        find.byKey(ValueKey('study-ink-${shelf.questions.first.id}')),
+        findsOneWidget,
+      );
+      expect(
+        find.bySemanticsLabel(RegExp(r'Choice 1\..*Your private hypothesis\.')),
+        findsOneWidget,
+      );
+      expect(
+        tester.widget<InlineQuestionScratch>(
+          find.byType(InlineQuestionScratch),
+        ).controller,
+        same(ink),
+      );
+      expect(ink.strokeCount, 1);
+      expect(ink.recordedWidths, widths);
+      expect(
+        tester.widget<PageView>(
+          find.byKey(const ValueKey('study-room-pages')),
+        ).controller!.page,
+        0,
+      );
+      expect(tester.takeException(), isNull, reason: 'Rotation to $size');
+    }
+  });
+
   testWidgets('completing a session opens the recap with its reward lines', (
     tester,
   ) async {

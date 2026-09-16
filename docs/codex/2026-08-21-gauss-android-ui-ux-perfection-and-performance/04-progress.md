@@ -54,3 +54,9 @@
 - اصلاح ارتفاع writing space روی 112 ثابت و regression به حرکت قلم در حالت down تعمیم یافت؛ paper/dock ثابت و paging قفل می‌مانند.
 - `flutter analyze --no-pub`: پاک، exit 0، 98.7s. `flutter test --no-pub --reporter expanded`: exit 0، 250 passed / 1 skipped، 36s؛ هیچ تستی حذف یا smoke نشده است.
 - وضعیت زنده GitHub: CI روی `81044c8` شکست‌خورده؛ آخرین release `v1.0.277`. CI اصلاح هنوز منتظر commit/push است. runtime تازه در این checkpoint اجرا نشده.
+
+### checkpoint پس از push
+
+- `b6773fb` push شد. run `35157330917` در setup SDK پیش از تست‌ها شکست خورد: default action شامل بستهٔ حذف‌شدهٔ `tools` بود. metadata همان SHA از upstream خوانده شد؛ `packages: platform-tools` صریح و regression pipeline افزوده شد. هویت، signing و versioning دست‌نخورده‌اند.
+- آزمون P5 چرخش Study از phone به split tablet و برگشت، سؤال، hypothesis و controller/stroke/widthهای ink را حفظ کرد؛ نقص state در این سناریو بازتولید نشد، کد صفحه تغییر نکرد.
+- دو suite Study و release pipeline: 30 passed، exit 0، 6s. audit رسمی اسناد actions پاس شد؛ actionlint محلی موجود نبود. CI جدید باید اثر اصلاح SDK را اثبات کند.
