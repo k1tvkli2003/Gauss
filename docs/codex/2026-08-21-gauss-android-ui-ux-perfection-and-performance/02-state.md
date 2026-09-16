@@ -77,6 +77,8 @@ P0 تا P4 بسته‌اند. P3 روی `894bdaf` با 42 regression و هفت c
 
 ## Remaining
 
+- P5 continuation: نقص URL جدید/محتوای قدیمی در ArchiveScreen بازتولید و با reload فقط هنگام تغییر هویت مجموعه اصلاح شد؛ guard پاسخ دیررس و regression پاس‌اند. 57 تست مرتبط، analyzer پاک و full suite برابر 253 passed / 1 skipped پاس‌اند؛ Android runtime برای این slice هنوز باز است.
+- CI `35158147125` روی `ad3df3d` از setup SDK و quality gates عبور کرده؛ در آخرین بررسی APK release در حال ساخت بود. این run شامل اصلاح continuation هنوز commit‌نشده نیست.
 - گیت تثبیت: اصلاح ارتفاع ink و regression حین stroke در `b6773fb` commit/push شدند؛ analyzer کامل پاک و suite کامل 250 passed / 1 skipped پاس شدند. CI تازه `35157330917` پیش از Flutter در setup SDK با `Failed to find package 'tools'` شکست خورد. ورودی `packages: platform-tools` صریح شد؛ CI اصلاح SDK هنوز لازم است. آخرین ریلیز بررسی‌شده `v1.0.277` است.
 - تست تازهٔ P5 حفظ سؤال، hypothesis و committed ink در چرخش phone→tablet→phone پاس شد؛ این شاهد widget است، نه Android runtime. هیچ دستگاهی متصل نبود؛ AVD موجود فقط `Codex_API35` است.
 - اجرای P5: shell، Study، Insights، auth، feedback، loading/empty/error/offline/dialogs و tablet landscape/portrait.

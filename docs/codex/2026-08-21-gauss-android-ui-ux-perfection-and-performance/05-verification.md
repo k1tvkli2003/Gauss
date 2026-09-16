@@ -94,6 +94,15 @@
 
 ### گیت‌های باز
 
+### P5 continuation — شاهد قبل/بعد
+
+- تست `completing a session opens the recap with its reward lines` با انتظار سؤال واقعی مجموعهٔ بعد، قبل از اصلاح در `study-ink-nardebam_math_1405_0017` fail شد (0 widget در برابر 1)، با وجود offset=5 در URL.
+- بعد از didUpdateWidget و generation guard: همان تست مستقل 1/1 پاس؛ تست `late study loads cannot replace the current session` هم 1/1 پاس. بارگذاری دیررس offset=5 بعد از offset=10 مجموعهٔ جدید را تغییر نمی‌دهد.
+- چهار suite Study/Mission resume/Study celebration/route motion: 57 passed، exit 0، 9s. analyzer دو فایل: exit 0، no issues، 48s. runtime دستگاه برای این تغییر اجرا نشده است.
+- full suite پس از اصلاح continuation: `flutter test --no-pub --reporter expanded`، exit 0، 253 passed / 1 skipped در 35s؛ skip مخصوص web بدون تغییر است. validator اسناد نیز OK بود.
+
+### باقی‌ماندهٔ نهایی
+
 - full Flutter suite روی نامزد نهایی P7؛ suite گیت تثبیت 2026-09-17 پاس شده است.
 - Android release build جدید؛ profile spot-check P3 و debug build پاس شده‌اند.
 - physical-device Xiaomi Focus Pen profile؛ emulator proof جای آن را نمی‌گیرد.

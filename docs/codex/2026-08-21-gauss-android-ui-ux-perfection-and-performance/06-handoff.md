@@ -24,6 +24,7 @@
 2. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
 3. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
 4. P5 به ترتیب shell/navigation، Study end-to-end، Insights، auth/feedback و tablet؛ سپس P6/P7. تست سبز جای runtime، قلم واقعی یا release proof نیست.
+5. checkpoint جاری: `ad3df3d` push شده؛ CI `35158147125` از setup و quality gates گذشته و release build فعال بود. اصلاح جدید ArchiveScreen برای Continue next session در checkpoint بعدی ثبت می‌شود؛ regression سؤال واقعی بعد و پاسخ دیررس پاس، 57 تست مرتبط، analyzer پاک و full suite برابر 253 passed / 1 skipped پاس‌اند. Android runtime slice و CI revision شامل این اصلاح باز است. دستگاه متصل نبود و RAM آزاد 1.4GiB مانع راه‌اندازی emulator شد.
 
 ## Done
 

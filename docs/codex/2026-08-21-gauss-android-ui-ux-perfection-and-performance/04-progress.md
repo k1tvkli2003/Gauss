@@ -60,3 +60,11 @@
 - `b6773fb` push شد. run `35157330917` در setup SDK پیش از تست‌ها شکست خورد: default action شامل بستهٔ حذف‌شدهٔ `tools` بود. metadata همان SHA از upstream خوانده شد؛ `packages: platform-tools` صریح و regression pipeline افزوده شد. هویت، signing و versioning دست‌نخورده‌اند.
 - آزمون P5 چرخش Study از phone به split tablet و برگشت، سؤال، hypothesis و controller/stroke/widthهای ink را حفظ کرد؛ نقص state در این سناریو بازتولید نشد، کد صفحه تغییر نکرد.
 - دو suite Study و release pipeline: 30 passed، exit 0، 6s. audit رسمی اسناد actions پاس شد؛ actionlint محلی موجود نبود. CI جدید باید اثر اصلاح SDK را اثبات کند.
+
+### P5 — continuation واقعی Study
+
+- اصلاح SDK در `ad3df3d` push شد؛ run `35158147125` از setup، signing restore و quality gates گذشت و APK release در حال ساخت بود.
+- نقص بازتولیدشده: Continue next session آدرس را به offset=5 تغییر می‌داد ولی محتوای جلسهٔ قبلی باقی می‌ماند. assertion تازه روی شناسهٔ سؤال بعد پیش از اصلاح fail و پس از اصلاح pass شد؛ تست قبلی فقط URL را بررسی می‌کرد.
+- علت: ArchiveScreen بارگذاری را یک‌بار در didChangeDependencies انجام می‌داد؛ router همان State را برای ورودی تازه نگه می‌داشت. didUpdateWidget فقط تغییر هویت مجموعه را reload می‌کند؛ rotation عادی state را حفظ می‌کند. load generation پاسخ دیررس مجموعهٔ قبلی و نتیجهٔ save قدیمی را از UI جدید جدا می‌کند؛ transaction داده تغییر نکرده است.
+- تست کنترل‌شدهٔ پاسخ دیررس offset=5 پس از offset=10 پاس شد. چهار suite Study/Mission/celebration/route برابر 57 passed در 9s؛ analyzer دو فایل بدون issue در 48s. suite کامل نهایی این slice برابر 253 passed / 1 skipped، exit 0 در 35s پاس شد؛ skip همان تست مخصوص web است.
+- runtime Android این slice اجرا نشده: دستگاه متصل وجود ندارد و RAM آزاد هنگام بررسی حدود 1.4GiB بود. emulator راه‌اندازی نشد. P5 و Goal همچنان 70% باقی‌اند.

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui' show SemanticsAction;
 
 import 'package:drift/native.dart';
@@ -1228,6 +1229,11 @@ void main() {
     await _setPhoneSurface(tester);
     final topic = controller.topics.first;
     final shelf = await controller.loadStudyShelf(topic.key, count: 5);
+    final nextShelf = await controller.loadStudyShelf(
+      topic.key,
+      offset: 5,
+      count: 5,
+    );
     // Chart the whole first session except its final slot, off-screen.
     await tester.runAsync(() async {
       for (var index = 0; index < 4; index++) {
@@ -1272,6 +1278,67 @@ void main() {
       router.routeInformationProvider.value.uri.queryParameters['offset'],
       '5',
     );
+    expect(
+      find.byKey(ValueKey('study-ink-${nextShelf.questions.first.id}')),
+      findsOneWidget,
+      reason: 'Continuing must load the next set, not only update its URL.',
+    );
+    expect(find.text('1 / 5'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('late study loads cannot replace the current session', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    final topic = controller.topics.first;
+    final shelves = <int, StudyShelf>{};
+    for (final offset in [0, 5, 10]) {
+      shelves[offset] = await controller.loadStudyShelf(
+        topic.key,
+        offset: offset,
+        count: 5,
+      );
+    }
+    final pending = <int, Completer<StudyShelf>>{
+      5: Completer<StudyShelf>(),
+      10: Completer<StudyShelf>(),
+    };
+    controller.dispose();
+    controller = _DeferredShelfController(
+      questionBank,
+      progress,
+      (offset) => offset == 0
+          ? Future.value(shelves[0]!)
+          : pending[offset]!.future,
+    );
+    await tester.runAsync(controller.initialize);
+
+    Future<void> showSet(int offset) async {
+      await tester.pumpWidget(
+        _TestSurface(
+          controller: controller,
+          child: ArchiveScreen(topicKey: topic.key, offset: offset, count: 5),
+        ),
+      );
+      await tester.pump();
+    }
+
+    await showSet(0);
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await showSet(5);
+    await showSet(10);
+    pending[10]!.complete(shelves[10]);
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    final currentQuestion = find.byKey(
+      ValueKey('study-ink-${shelves[10]!.questions.first.id}'),
+    );
+    expect(currentQuestion, findsOneWidget);
+    pending[5]!.complete(shelves[5]);
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 260));
+    expect(currentQuestion, findsOneWidget);
+    expect(find.text('1 / 5'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -1480,6 +1547,20 @@ class _AlwaysOnStatusWidget extends StatusWidgetBridge {
 
   @override
   bool get isSupported => true;
+}
+
+class _DeferredShelfController extends GaussController {
+  _DeferredShelfController(super.questionBank, super.progress, this.load);
+
+  final Future<StudyShelf> Function(int offset) load;
+
+  @override
+  Future<StudyShelf> loadStudyShelf(
+    String topicKey, {
+    int offset = 0,
+    int? count,
+    int? shuffleSeed,
+  }) => load(offset);
 }
 
 class _FailOnceGaussController extends GaussController {

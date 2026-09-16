@@ -80,7 +80,23 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   bool _saving = false;
   bool _inkActive = false;
   bool _didLoad = false;
+  int _loadGeneration = 0;
   _PendingReflection? _pendingReflection;
+
+  @override
+  void didUpdateWidget(covariant ArchiveScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.topicKey != widget.topicKey ||
+        oldWidget.offset != widget.offset ||
+        oldWidget.count != widget.count ||
+        oldWidget.shuffleSeed != widget.shuffleSeed ||
+        oldWidget.revisitOnly != widget.revisitOnly ||
+        oldWidget.gemsOnly != widget.gemsOnly) {
+      // Router replacement can retain this State. Reload only when the set
+      // identity changes, not on rotation or ordinary inherited rebuilds.
+      _load();
+    }
+  }
 
   @override
   void didChangeDependencies() {
@@ -91,9 +107,11 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   }
 
   Future<void> _load() async {
+    final generation = ++_loadGeneration;
     setState(() {
       _loading = true;
       _loadError = null;
+      _saving = false;
     });
     try {
       final controller = GaussScope.of(context);
@@ -107,7 +125,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
               count: widget.count,
               shuffleSeed: widget.shuffleSeed,
             );
-      if (!mounted) return;
+      if (!mounted || generation != _loadGeneration) return;
       _pageController?.dispose();
       _records
         ..clear()
@@ -135,7 +153,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
         _loading = false;
       });
     } catch (error) {
-      if (!mounted) return;
+      if (!mounted || generation != _loadGeneration) return;
       setState(() {
         _loadError = error;
         _loading = false;
@@ -280,6 +298,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
   ) async {
     final shelf = _shelf;
     if (shelf == null || _saving) return;
+    final generation = _loadGeneration;
     setState(() {
       _saving = true;
       _pendingReflection = null;
@@ -294,7 +313,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
         slot: slot,
       );
     } catch (error) {
-      if (!mounted) return;
+      if (!mounted || generation != _loadGeneration) return;
       setState(() {
         _saving = false;
         _pendingReflection = _PendingReflection(
@@ -308,7 +327,7 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
       });
       return;
     }
-    if (!mounted) return;
+    if (!mounted || generation != _loadGeneration) return;
     setState(() {
       _records[question.id] = outcome.record;
       if (slot.planned) _encounteredSlotIds.add(slot.id);
@@ -321,7 +340,9 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
         await _showRecap(outcome);
       }
     } finally {
-      if (mounted) setState(() => _saving = false);
+      if (mounted && generation == _loadGeneration) {
+        setState(() => _saving = false);
+      }
     }
   }
 
