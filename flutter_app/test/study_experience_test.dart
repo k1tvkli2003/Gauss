@@ -9,6 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:gauss/data/status_widget_bridge.dart';
 import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/app/gauss_app.dart';
 import 'package:gauss/data/backup_service.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
@@ -1388,6 +1389,67 @@ void main() {
     );
     expect(reveal, findsOneWidget);
     expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('real Study shuffle control routes and preserves its draft', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    await controller.markTourSeen();
+    final topic = controller.topics.first;
+    final canonical = await controller.loadStudyShelf(topic.key, count: 5);
+    await tester.pumpWidget(
+      GaussApp(
+        controller: controller,
+        initialLocation: '/study/chapter/${topic.key}?offset=0&count=5',
+      ),
+    );
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    final choice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
+    await tester.ensureVisible(choice);
+    await tester.tap(choice);
+    await tester.pump();
+    final room = tester.element(find.byType(ArchiveScreen));
+    final router = GoRouter.of(room);
+    await tester.tap(find.byKey(const ValueKey('study-room-shuffle-action')));
+    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    final seed = int.parse(
+      router.routeInformationProvider.value.uri.queryParameters['shuffle']!,
+    );
+    final expected = await controller.loadStudyShelf(
+      topic.key,
+      count: 5,
+      shuffleSeed: seed,
+    );
+    expect(
+      expected.questions.map((question) => question.id).toSet(),
+      canonical.questions.map((question) => question.id).toSet(),
+    );
+    final pages = tester.widget<PageView>(
+      find.byKey(const ValueKey('study-room-pages')),
+    );
+    for (var index = 0; index < 5; index++) {
+      pages.controller!.jumpToPage(index);
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 260));
+      expect(
+        find.byKey(ValueKey('study-ink-${expected.questions[index].id}')),
+        findsOneWidget,
+        reason: 'Rendered slot must match the seed from the real route.',
+      );
+      if (expected.questions[index].id == canonical.questions.first.id) {
+        expect(
+          find.bySemanticsLabel(
+            RegExp(r'Choice 1\..*Your private hypothesis\.'),
+          ),
+          findsOneWidget,
+        );
+      }
+    }
+    expect(await progress.studyRecords(topicKey: topic.key), isEmpty);
+    expect(tester.takeException(), isNull);
+    await tester.pumpWidget(const SizedBox.shrink());
+    await tester.pump();
   });
 
   testWidgets('late study loads cannot replace the current session', (
