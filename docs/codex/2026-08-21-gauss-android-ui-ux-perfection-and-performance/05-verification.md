@@ -3,10 +3,22 @@
 ## خلاصه
 
 - Result: partial
-- Last verified: 2026-08-24T07:06:37+03:30
-- Scope: P0–P3 closed; P4 Question/stylus rebuild active
+- Last verified: 2026-09-17
+- Scope: P0–P4 closed; P5 Study integration active; Goal 70%
 
 ## بررسی‌ها
+
+### checkpoint محلی shuffle — 2026-09-17
+
+- قبل: `flutter test --no-pub test/study_experience_test.dart --plain-name "shuffling a study set preserves uncharted hypotheses" --reporter expanded` با exit 1؛ انتظار یک semantics `Your private hypothesis.`، واقعی 0.
+- بعد: همان regression با پوشش افزودهٔ reveal و تغییر جلسه، exit 0، 1/1، 2s.
+- `flutter test --no-pub test/study_experience_test.dart test/mission_resume_test.dart test/study_session_celebration_test.dart --reporter expanded`: exit 0، 54 passed، 10s، پس از format.
+- `flutter analyze --no-pub lib/screens/archive_screen.dart test/study_experience_test.dart`: exit 0، No issues found، 68.8s.
+- وضعیت پیش از runtime: diff محلی روی `f321203` بود؛ آن زمان دستگاه متصل نبود. نتیجهٔ بعدی این checkpoint در بند زیر آمده است.
+- تکمیل شاهد: full suite `flutter test --no-pub --reporter expanded` exit 0، `254 passed / 1 skipped`، حدود 32s. analyzer محصول/تست و driver بدون issue. Android shuffle probe روی `Codex_API35` با Profile APK v90 isolated پاس شد: انتخاب UI، واقعی `study-room-shuffle-action`، بازگشت به سؤال اصلی با semantics ID `429`، persisted_records=0 و encountered_slots=0. device رم `Codex_API35`، شروع cold boot بدون snapshot. بستهٔ شخصی v106/dataDir/firstInstallTime/lastUpdateTime دست‌نخورده ماند. فایل‌های PNG و result.json در `logs/study-runtime-f321203-phone-shuffle/` ثبت شدند.
+- گیت کامل محلی نهایی: analyzer کامل بدون issue در 98.8s؛ suite کامل در اجرای نهایی 35s، `254 passed / 1 skipped`، exit 0. skip فقط web deep link روی میزبان غیرweb است.
+- بازتولید driver از `flutter_app`: متغیر `GAUSS_STUDY_OUTPUT` را به پوشهٔ خروجی تازه تنظیم کنید؛ سپس `flutter drive --driver=test_driver/study_shuffle_driver.dart --target=tool/study_runtime_main.dart --dart-define=GAUSS_SHUFFLE_PROBE=true --profile --no-pub -d emulator-5554 --keep-app-running`. دو invocation بدون متغیر خروجی با `GAUSS_STUDY_OUTPUT is required` شکست خوردند؛ invocation صحیح exit 0 و result ثبت کرد. گزینهٔ نامعتبر `--use-existing-application` نیز پیش از اجرا رد شد. این‌ها failure ابزار اجرا هستند، نه regression محصول.
+- مرز پذیرش: شاهد Android فقط حفظ hypothesis در shuffle و نبود ثبت reflection است؛ reveal و تغییر جلسه شاهد widget دارند. screenshotها ذخیره‌اند، اما ابزار مشاهدهٔ تصویر در این نوبت پشتیبانی نشد؛ بازبینی بصری/مقایسه با مرجع، کل P5، CI تغییر تازه و release نهایی بازند. این checkpoint ادعای عملکرد یا frame pacing ندارد.
 
 | بررسی | فرمان/روش | نتیجه | شاهد |
 |---|---|---|---|
@@ -72,6 +84,18 @@
 | P4 exact-revision performance gate | `pwsh tool/run_android_performance.ps1 -DeviceId emulator-5554 -Runs 5` روی `3f2cddba788b915dd012253a8e064d9f5c01b1da` | passed phase gate | 5/5 journeys passed؛ Map scroll UI/raster p95=`7.472/20.825ms`، missed median=`20.75%`؛ stylus missed=`0%`؛ answer missed median=`3.45%`؛ [aggregate](logs/performance-p4-final-3f2cddb/aggregate.json)؛ نسبت به P2 در همهٔ این tailها بهتر است؛ emulator GPU caveat باقی است |
 
 ## گیت تثبیت — 2026-09-17
+
+### تأیید تازهٔ continuation و CI
+
+- CI `35158850067` روی `f321203b1936a233518e16e325f99fd919f60528` با `conclusion=success` تمام شد؛ run اصلاح SDK `35158147125` هم موفق است. failureهای قدیمی پایین، تاریخچه‌اند نه وضعیت جاری CI.
+- تست مستقل recap/next-session پاس؛ کل `study_experience_test.dart` نیز در این بررسی `29/29`، exit 0، پاس شد. assertion واقعی سؤال جدید و پاسخ دیررس در همین suite حاضرند.
+- لاگ CI اولیه `34553314888` مشخصاً شکست geometry هنگام ink داشت: bottom انتظار `979`، واقعی `1043`؛ جهش `64px`. همان regression اکنون پاس است؛ تست صرفاً برای سبزشدن ضعیف نشده است.
+- `Codex_API35` از offline پس از cold boot بدون snapshot به `device` و `sys.boot_completed=1` رسید؛ AVD جدید ساخته نشد.
+- harness اختصاصی Study در `tool/study_runtime_main.dart` و `test_driver/study_runtime_driver.dart` اضافه شد؛ 4 reflection آماده‌سازی، پنجم از UI، recap و سؤال واقعی جلسه بعد. حساب local-only تازه است؛ این harness شاهد ورود کامل از Map یا auth زنده نیست.
+- analyzer نخست دو فایل پاک؛ Profile build `137.3s` و نصب بستهٔ `com.gauss.app.profile` موفق. اجرای نخست driver پیش از اولین frame با null root شکست خورد؛ ready handshake افزوده شد. شاهد runtime موفق هنوز تا نتیجهٔ اجرای مجدد باز است.
+- بستهٔ شخصی پیش از probe: `com.gauss.app` v106، dataDir `/data/user/0/com.gauss.app`، firstInstallTime `2026-07-18 13:02:33`، lastUpdateTime `2026-07-23 01:53:36`؛ هیچ clear/uninstall برای آن اجرا نشده است.
+- Android runtime سه بار روی همین Profile APK موفق شد: دو run قبلی و run renderproof در `logs/study-runtime-f321203-phone-renderproof/`. خروجی آن `status=passed`، save `4→5`، slots `4→5`، سؤال بعد `nardebam_math_1405_0017`، semantics ID `488` و `screenshot_changed_after_continuation=true` را ثبت کرد. hashهای recap/next متفاوت‌اند: `210C…B495` و `3C5B…65DA`.
+- مرز شاهد visual: تصویرهای واقعی runtime ذخیره شدند، اما بازبینی انسانی/normalize frame در این نوبت انجام نشد؛ گیت بصری full P5 باز می‌ماند. driver قبلاً پیش از first frame شکست خورد و handshake آن اصلاح شد.
 
 | بررسی | دستور/روش | نتیجه | مرز شاهد |
 |---|---|---|---|

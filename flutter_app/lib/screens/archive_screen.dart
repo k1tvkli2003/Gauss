@@ -127,6 +127,24 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
             );
       if (!mounted || generation != _loadGeneration) return;
       _pageController?.dispose();
+      // Shuffling retains shelf identity. Keep unsaved work for its members;
+      // a different session must start from its own persisted records.
+      final sameShelf = _shelf?.key == shelf.key;
+      final questionIds = shelf.questions
+          .map((question) => question.id)
+          .toSet();
+      final drafts = sameShelf
+          ? Map<String, int?>.fromEntries(
+              _hypotheses.entries.where(
+                (entry) =>
+                    questionIds.contains(entry.key) &&
+                    !shelf.records.containsKey(entry.key),
+              ),
+            )
+          : <String, int?>{};
+      final revealed = sameShelf
+          ? _revealed.intersection(questionIds)
+          : <String>{};
       _records
         ..clear()
         ..addAll(shelf.records);
@@ -140,10 +158,12 @@ class _ArchiveScreenState extends State<ArchiveScreen> {
             (record) =>
                 MapEntry(record.questionId, record.hypothesisChoiceIndex),
           ),
-        );
+        )
+        ..addAll(drafts);
       _revealed
         ..clear()
-        ..addAll(shelf.records.keys);
+        ..addAll(shelf.records.keys)
+        ..addAll(revealed);
       _index = shelf.questions.isEmpty ? 0 : shelf.initialIndex;
       _inkActive = false;
       _pendingReflection = null;

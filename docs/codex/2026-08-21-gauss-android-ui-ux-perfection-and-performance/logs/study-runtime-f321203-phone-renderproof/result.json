@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "captured_at": "2026-09-16T23:17:42.913171Z",
+  "before": {
+    "topic_key": "sets",
+    "last_question_id": "nardebam_math_1405_0029",
+    "next_question_id": "nardebam_math_1405_0017",
+    "fixture_reflections": 4,
+    "persisted_records": 4,
+    "encountered_slots": 4
+  },
+  "after": {
+    "topic_key": "sets",
+    "last_question_id": "nardebam_math_1405_0029",
+    "next_question_id": "nardebam_math_1405_0017",
+    "fixture_reflections": 4,
+    "persisted_records": 5,
+    "encountered_slots": 5
+  },
+  "next_question_semantics_id": 488,
+  "screenshot_changed_after_continuation": true,
+  "scope": "Four seeded reflections; fifth UI save, recap, next set"
+}

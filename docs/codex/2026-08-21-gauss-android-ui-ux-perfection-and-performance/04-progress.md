@@ -2,6 +2,14 @@
 
 ## Log
 
+### 2026-09-17 — حفظ پیش‌نویس هنگام shuffle
+
+- نقص material: `_load()` هنگام تغییر shuffleSeed، hypothesis ذخیره‌نشده و reveal همان مجموعه را پاک می‌کرد. تست قبل از اصلاح روی نبود semantics انتخاب خصوصی fail شد.
+- اصلاح `ArchiveScreen`: snapshot محدود به shelf یکسان و اعضای آن؛ persisted records مرجع مقدم‌اند. جلسهٔ دیگر draft/reveal قبلی را دریافت نمی‌کند. DB، API و قرارداد source تغییر نکردند.
+- regression تقویت‌شده، حفظ hypothesis و reveal در دو shuffle و پایان عمر draft با تغییر جلسه را بررسی می‌کند. assertion عنوان مخصوص تبلت با کنترل واقعی reflection در گوشی جایگزین شد؛ انتظار انتخاب خصوصی دست‌نخورده ماند.
+- پس از format: 54/54 تست Study/Mission resume/Study celebration پاس، analyzer دو فایل بدون issue در 68.8s. شاهد Android این اصلاح هنوز موجود نیست؛ هیچ دستگاه متصل و فقط `Codex_API35` در موجودی. P5 active، 70%.
+- تکمیل همین checkpoint: full suite `254 passed / 1 skipped` و analyzer کامل 98.8s پاس شدند؛ Android shuffle روی همان AVD و package ایزوله با result `passed`، semantics انتخاب `429` و بدون ثبت reflection پاس شد. تصویرها ذخیره‌اند ولی بازبینی بصری انجام نشده؛ گیت عملکرد، CI و کل P5 بسته نیستند. نتیجهٔ driver تمام شده است؛ برای آن منتظر session منقضی‌شده نمانید.
+
 | زمان | وضعیت | رویداد | شاهد |
 |---|---|---|---|
 | 2026-08-21T18:02:38+03:30 | active | task docs ساخته شد. | task folder + `_index.md` |
@@ -47,6 +55,19 @@
 ## مرحله بعد
 
 - P5: shell، Study، Insights، auth، feedback، state systems و tablet. سپس P6/P7.
+
+## تازه‌ترین checkpoint — Android Study در 2026-09-17
+
+- CI `35158850067` روی `f321203` و CI اصلاح SDK `35158147125` موفق‌اند. تست recap مستقل و کل Study (`29/29`) دوباره پاس شدند.
+- emulator موجود با cold boot بدون snapshot آماده شد؛ موجودی همچنان فقط `Codex_API35` است.
+- harness محدود native برای ذخیره پنجمین reflection، recap، continuation و شناسه واقعی سؤال بعد ساخته شد. build/install Profile موفق؛ driver نخست به‌دلیل جست‌وجوی پیش از `runApp` شکست خورد. ready handshake افزوده و probe در حال تکرار است.
+- وضعیت `70%`، P5 active؛ این شاهد محدود، full journey از Map، tablet، سخت‌افزار قلم یا release نهایی را نمی‌بندد.
+
+## Android Study runtime — 2026-09-17
+
+- سه اجرای runtime روی APK یکسان موفق بود؛ run renderproof ذخیره `4→5`، باز شدن recap، ظاهر شدن سؤال بعد و تغییر واقعی تصویر پس از continuation را در `result.json` ثبت کرد. hash دو capture متفاوت است.
+- کد محصول تغییر نکرد؛ فقط harness برای ready handshake و اثبات تغییر تصویر اصلاح شد. بستهٔ شخصی و dataDir آن دست‌نخورده ماند.
+- گیت visual هنوز باز است: مشاهدهٔ دقیق و normalize compare انجام نشده. P5 شامل shell، Insights، auth/feedback و tablet همچنان باز است؛ پیشرفت `70%`.
 
 ## ادامهٔ 2026-09-17
 

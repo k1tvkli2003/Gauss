@@ -20,11 +20,13 @@
 
 ## How To Continue
 
-1. گیت تثبیت را ببندید: اصلاح Manuscript و regression حین stroke در `b6773fb` push شدند؛ analyzer کامل و suite کامل 250 passed / 1 skipped پاس‌اند. CI `35157330917` در setup SDK بستهٔ منسوخ `tools` را پیدا نکرد؛ explicit `platform-tools` و تست pipeline آماده‌اند و باید در CI همان SHA اثبات شوند. تغییر Gradle پایان‌خط و untrackedهای نامرتبط stage نشوند.
+آخرین checkpoint محلی: حفظ hypothesis و reveal هنگام shuffle در `ArchiveScreen` اصلاح شد. full suite `254 passed / 1 skipped` و Android shuffle probe واقعی روی `Codex_API35` پاس شد؛ شواهد در `logs/study-runtime-f321203-phone-shuffle/` است و بستهٔ شخصی دست‌نخورده ماند. diff هنوز commit نشده؛ CI، tablet/runtime و ادامهٔ P5 باز است. پیشرفت گیت‌شده 70%.
+
+1. گیت تثبیت Manuscript و SDK بسته است: CI اصلاح SDK `35158147125` و continuation `35158850067` با success تمام شدند؛ وضعیت زنده در 2026-09-17 دوباره تأیید شد. قدم فوری، ثبت checkpoint shuffle و بررسی CI همان SHA است. تغییر Gradle پایان‌خط و untrackedهای نامرتبط stage نشوند.
 2. در پایان هر فاز `02-state.md`، `04-progress.md` و `05-verification.md` را به‌روز کنید.
 3. هر فاز پذیرفته‌شده را در commit اتمیک ثبت و سپس phase بعد را شروع کنید.
 4. P5 به ترتیب shell/navigation، Study end-to-end، Insights، auth/feedback و tablet؛ سپس P6/P7. تست سبز جای runtime، قلم واقعی یا release proof نیست.
-5. checkpoint جاری: `ad3df3d` push شده؛ CI `35158147125` از setup و quality gates گذشته و release build فعال بود. اصلاح جدید ArchiveScreen برای Continue next session در checkpoint بعدی ثبت می‌شود؛ regression سؤال واقعی بعد و پاسخ دیررس پاس، 57 تست مرتبط، analyzer پاک و full suite برابر 253 passed / 1 skipped پاس‌اند. Android runtime slice و CI revision شامل این اصلاح باز است. دستگاه متصل نبود و RAM آزاد 1.4GiB مانع راه‌اندازی emulator شد.
+5. Study تازه با اصلاح shuffle در 2026-09-17 برابر `30/30` پاس شد. harness محدود continuation و shuffle همراه checkpoint ثبت می‌شود؛ شاهد renderproof ذخیره `4→5`، recap و سؤال بعد را پوشش می‌دهد. این شاهد ورود از Map، ماتریس Android تبلت، auth/feedback یا مقایسهٔ بصری مرجع نیست. برای driver پایان‌یافته منتظر نمانید؛ مرحلهٔ بعد، بستن مسیر واقعی Map→Study→recap→Map است.
 
 ## Done
 
@@ -40,5 +42,5 @@
 
 ## Verification
 
-- 2026-09-17: analyzer کامل بدون issue؛ suite کامل 250 passed / 1 skipped، exit 0. CI قدیمی `34553314888` failed و release فعلی `v1.0.277` است؛ CI اصلاح و runtime تازه هنوز اثبات نشده‌اند.
-- checkpoint بعدی: Study + pipeline برابر 30/30 پاس؛ تست rotation سؤال/hypothesis/committed ink را حفظ کرد. CI اصلاح SDK، Android capture P5، قلم واقعی و release نهایی همچنان بازند.
+- گیت‌های قدیمی 250/253 تست مربوط به checkpointهای قبلی‌اند؛ full suite ثبت‌شدهٔ shuffle برابر `254 passed / 1 skipped` است. Study مستقل تازه `30/30` و CI زندهٔ `f321203` موفق‌اند؛ CI shuffle باید پس از ثبت همین تغییر تأیید شود.
+- Android shuffle فقط حفظ hypothesis و عدم ثبت reflection را ثابت می‌کند؛ reveal و rotation شاهد widget دارند. ماتریس بصری P5، قلم واقعی، release نهایی و upgrade مستقل بازند.

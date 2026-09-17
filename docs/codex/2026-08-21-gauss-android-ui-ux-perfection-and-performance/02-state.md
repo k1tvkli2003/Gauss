@@ -77,9 +77,10 @@ P0 تا P4 بسته‌اند. P3 روی `894bdaf` با 42 regression و هفت c
 
 ## Remaining
 
-- P5 continuation: نقص URL جدید/محتوای قدیمی در ArchiveScreen بازتولید و با reload فقط هنگام تغییر هویت مجموعه اصلاح شد؛ guard پاسخ دیررس و regression پاس‌اند. 57 تست مرتبط، analyzer پاک و full suite برابر 253 passed / 1 skipped پاس‌اند؛ Android runtime برای این slice هنوز باز است.
-- CI `35158147125` روی `ad3df3d` از setup SDK و quality gates عبور کرده؛ در آخرین بررسی APK release در حال ساخت بود. این run شامل اصلاح continuation هنوز commit‌نشده نیست.
-- گیت تثبیت: اصلاح ارتفاع ink و regression حین stroke در `b6773fb` commit/push شدند؛ analyzer کامل پاک و suite کامل 250 passed / 1 skipped پاس شدند. CI تازه `35157330917` پیش از Flutter در setup SDK با `Failed to find package 'tools'` شکست خورد. ورودی `packages: platform-tools` صریح شد؛ CI اصلاح SDK هنوز لازم است. آخرین ریلیز بررسی‌شده `v1.0.277` است.
+- checkpoint محلی shuffle در 2026-09-17: پاک‌شدن hypothesis ذخیره‌نشده بازتولید و اصلاح شد؛ همان shelf اکنون draft و reveal را فقط برای اعضای خودش حفظ می‌کند، persisted record اولویت دارد. full suite `254 passed / 1 skipped`، analyzer محصول/تست و driver پاس‌اند. Android probe واقعی روی `Codex_API35` و package ایزولهٔ `com.gauss.app.profile` در `logs/study-runtime-f321203-phone-shuffle/` پاس شد؛ بستهٔ شخصی v106/dataDir دست‌نخورده ماند. CI این diff هنوز باز است؛ P5 active، 70%.
+- P5 continuation در `f321203` ثبت و push شده؛ CI همان SHA با run `35158850067` موفق است و در این نوبت دوباره تأیید شد. suite تازه Study با shuffle برابر `30/30` پاس شد. runtime محدود continuation پاس است؛ full journey از Map و گیت بصری همچنان بازند.
+- گیت CI اصلاح SDK روی `ad3df3d` با run `35158147125` موفق است. failureهای `34553314888` و `35157330917` تاریخی‌اند، نه blocker جاری.
+- harness محدود Android Study اضافه و سه بار موفق اجرا شد؛ run renderproof ذخیره `4→5`، recap، سؤال بعد و تغییر تصویر را ثبت کرد. کد محصول تغییر نکرد. گیت بصری، full journey از Map و بقیهٔ P5 باز است.
 - تست تازهٔ P5 حفظ سؤال، hypothesis و committed ink در چرخش phone→tablet→phone پاس شد؛ این شاهد widget است، نه Android runtime. هیچ دستگاهی متصل نبود؛ AVD موجود فقط `Codex_API35` است.
 - اجرای P5: shell، Study، Insights، auth، feedback، loading/empty/error/offline/dialogs و tablet landscape/portrait.
 - اجرای P6 تا P7 و به‌روزرسانی پیوسته state/progress/verification.

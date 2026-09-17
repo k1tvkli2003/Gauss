@@ -1142,86 +1142,92 @@ void main() {
     },
   );
 
-  testWidgets('study rotation preserves question hypothesis and committed ink', (
-    tester,
-  ) async {
-    await _setPhoneSurface(tester);
-    final topic = controller.topics.first;
-    late StudyShelf shelf;
-    late int offset;
-    await tester.runAsync(() async {
-      for (final session in questionBank.studyPlan.topic(topic.key).sessions) {
-        final candidateOffset = session.index * GaussStudyCurriculum.batchSize;
-        final candidate = await controller.loadStudyShelf(
-          topic.key,
-          offset: candidateOffset,
-          count: 5,
-        );
-        if (candidate.questions.first.options.isNotEmpty) {
-          shelf = candidate;
-          offset = candidateOffset;
-          return;
+  testWidgets(
+    'study rotation preserves question hypothesis and committed ink',
+    (tester) async {
+      await _setPhoneSurface(tester);
+      final topic = controller.topics.first;
+      late StudyShelf shelf;
+      late int offset;
+      await tester.runAsync(() async {
+        for (final session
+            in questionBank.studyPlan.topic(topic.key).sessions) {
+          final candidateOffset =
+              session.index * GaussStudyCurriculum.batchSize;
+          final candidate = await controller.loadStudyShelf(
+            topic.key,
+            offset: candidateOffset,
+            count: 5,
+          );
+          if (candidate.questions.first.options.isNotEmpty) {
+            shelf = candidate;
+            offset = candidateOffset;
+            return;
+          }
         }
-      }
-      throw StateError('No study session with selectable hypotheses.');
-    });
-    await tester.pumpWidget(
-      _TestSurface(
-        controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, offset: offset, count: 5),
-      ),
-    );
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
-    final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
-    await tester.ensureVisible(firstChoice);
-    await tester.tap(firstChoice);
-    await tester.pump();
-    final canvas = find.byKey(const ValueKey('inline-ink-canvas'));
-    await tester.ensureVisible(canvas);
-    await tester.pump(const Duration(milliseconds: 260));
-    final pen = await tester.startGesture(
-      tester.getRect(canvas).topLeft + const Offset(24, 24),
-      kind: PointerDeviceKind.stylus,
-      pointer: 81,
-    );
-    await pen.moveBy(const Offset(30, 12));
-    await pen.up();
-    await tester.pump(const Duration(milliseconds: 260));
-    final ink = tester.widget<InlineQuestionScratch>(
-      find.byType(InlineQuestionScratch),
-    ).controller!;
-    expect(ink.strokeCount, 1);
-    final widths = List<double>.of(ink.recordedWidths);
-
-    for (final size in const [Size(1024, 800), Size(411, 820)]) {
-      await tester.binding.setSurfaceSize(size);
+        throw StateError('No study session with selectable hypotheses.');
+      });
+      await tester.pumpWidget(
+        _TestSurface(
+          controller: controller,
+          child: ArchiveScreen(topicKey: topic.key, offset: offset, count: 5),
+        ),
+      );
+      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
+      await tester.ensureVisible(firstChoice);
+      await tester.tap(firstChoice);
       await tester.pump();
+      final canvas = find.byKey(const ValueKey('inline-ink-canvas'));
+      await tester.ensureVisible(canvas);
       await tester.pump(const Duration(milliseconds: 260));
-      expect(
-        find.byKey(ValueKey('study-ink-${shelf.questions.first.id}')),
-        findsOneWidget,
+      final pen = await tester.startGesture(
+        tester.getRect(canvas).topLeft + const Offset(24, 24),
+        kind: PointerDeviceKind.stylus,
+        pointer: 81,
       );
-      expect(
-        find.bySemanticsLabel(RegExp(r'Choice 1\..*Your private hypothesis\.')),
-        findsOneWidget,
-      );
-      expect(
-        tester.widget<InlineQuestionScratch>(
-          find.byType(InlineQuestionScratch),
-        ).controller,
-        same(ink),
-      );
+      await pen.moveBy(const Offset(30, 12));
+      await pen.up();
+      await tester.pump(const Duration(milliseconds: 260));
+      final ink = tester
+          .widget<InlineQuestionScratch>(find.byType(InlineQuestionScratch))
+          .controller!;
       expect(ink.strokeCount, 1);
-      expect(ink.recordedWidths, widths);
-      expect(
-        tester.widget<PageView>(
-          find.byKey(const ValueKey('study-room-pages')),
-        ).controller!.page,
-        0,
-      );
-      expect(tester.takeException(), isNull, reason: 'Rotation to $size');
-    }
-  });
+      final widths = List<double>.of(ink.recordedWidths);
+
+      for (final size in const [Size(1024, 800), Size(411, 820)]) {
+        await tester.binding.setSurfaceSize(size);
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 260));
+        expect(
+          find.byKey(ValueKey('study-ink-${shelf.questions.first.id}')),
+          findsOneWidget,
+        );
+        expect(
+          find.bySemanticsLabel(
+            RegExp(r'Choice 1\..*Your private hypothesis\.'),
+          ),
+          findsOneWidget,
+        );
+        expect(
+          tester
+              .widget<InlineQuestionScratch>(find.byType(InlineQuestionScratch))
+              .controller,
+          same(ink),
+        );
+        expect(ink.strokeCount, 1);
+        expect(ink.recordedWidths, widths);
+        expect(
+          tester
+              .widget<PageView>(find.byKey(const ValueKey('study-room-pages')))
+              .controller!
+              .page,
+          0,
+        );
+        expect(tester.takeException(), isNull, reason: 'Rotation to $size');
+      }
+    },
+  );
 
   testWidgets('completing a session opens the recap with its reward lines', (
     tester,
@@ -1287,6 +1293,103 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
+  testWidgets('shuffling a study set preserves uncharted hypotheses', (
+    tester,
+  ) async {
+    await _setPhoneSurface(tester);
+    final topic = controller.topics.first;
+    final shelf = await controller.loadStudyShelf(topic.key, count: 5);
+    final question = shelf.questions.first;
+    expect(question.options, isNotEmpty);
+
+    Future<void> showSet({int? shuffleSeed, int offset = 0}) async {
+      await tester.pumpWidget(
+        _TestSurface(
+          controller: controller,
+          child: ArchiveScreen(
+            topicKey: topic.key,
+            count: 5,
+            offset: offset,
+            shuffleSeed: shuffleSeed,
+          ),
+        ),
+      );
+      await _pumpUntil(tester, find.text('STUDY ROOM'));
+    }
+
+    await showSet();
+    final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
+    await tester.ensureVisible(firstChoice);
+    await tester.tap(firstChoice);
+    await tester.pump();
+    final shuffled = await controller.loadStudyShelf(
+      topic.key,
+      count: 5,
+      shuffleSeed: 17,
+    );
+    await showSet(shuffleSeed: 17);
+    final pages = tester.widget<PageView>(
+      find.byKey(const ValueKey('study-room-pages')),
+    );
+    pages.controller!.jumpToPage(
+      shuffled.questions.indexWhere((item) => item.id == question.id),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 260));
+    expect(find.byKey(ValueKey('study-ink-${question.id}')), findsOneWidget);
+    expect(
+      find.bySemanticsLabel(RegExp(r'Choice 1\..*Your private hypothesis\.')),
+      findsOneWidget,
+      reason: 'Shuffle changes order, not the learner\'s unsaved answer.',
+    );
+    expect(await progress.studyRecords(topicKey: topic.key), isEmpty);
+
+    final reveal = find.byKey(
+      const ValueKey('study-room-reveal-source-action'),
+    );
+    await tester.ensureVisible(reveal);
+    await tester.tap(reveal);
+    await tester.pump();
+    expect(find.text('Concept feels clear'), findsOneWidget);
+    await showSet(shuffleSeed: 23);
+    final reshuffled = await controller.loadStudyShelf(
+      topic.key,
+      count: 5,
+      shuffleSeed: 23,
+    );
+    tester
+        .widget<PageView>(find.byKey(const ValueKey('study-room-pages')))
+        .controller!
+        .jumpToPage(
+          reshuffled.questions.indexWhere((item) => item.id == question.id),
+        );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 260));
+    expect(find.text('Concept feels clear'), findsOneWidget);
+    expect(reveal, findsNothing);
+    expect(
+      find.bySemanticsLabel(RegExp(r'Choice 1\..*Your private hypothesis\.')),
+      findsOneWidget,
+    );
+
+    // Moving to another session ends this room's temporary draft lifetime.
+    await showSet(offset: 5);
+    await showSet();
+    tester
+        .widget<PageView>(find.byKey(const ValueKey('study-room-pages')))
+        .controller!
+        .jumpToPage(0);
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 260));
+    expect(find.byKey(ValueKey('study-ink-${question.id}')), findsOneWidget);
+    expect(
+      find.bySemanticsLabel(RegExp(r'Choice 1\..*Your private hypothesis\.')),
+      findsNothing,
+    );
+    expect(reveal, findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('late study loads cannot replace the current session', (
     tester,
   ) async {
@@ -1308,9 +1411,8 @@ void main() {
     controller = _DeferredShelfController(
       questionBank,
       progress,
-      (offset) => offset == 0
-          ? Future.value(shelves[0]!)
-          : pending[offset]!.future,
+      (offset) =>
+          offset == 0 ? Future.value(shelves[0]!) : pending[offset]!.future,
     );
     await tester.runAsync(controller.initialize);
 

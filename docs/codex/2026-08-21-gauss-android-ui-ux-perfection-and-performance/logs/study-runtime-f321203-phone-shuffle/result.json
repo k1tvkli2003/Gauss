@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "captured_at": "2026-09-17T10:06:14.278985Z",
+  "before": {
+    "topic_key": "sets",
+    "first_question_id": "nardebam_math_1405_0037",
+    "last_question_id": "nardebam_math_1405_0029",
+    "next_question_id": "nardebam_math_1405_0017",
+    "fixture_reflections": 0,
+    "persisted_records": 0,
+    "encountered_slots": 0
+  },
+  "after": {
+    "topic_key": "sets",
+    "first_question_id": "nardebam_math_1405_0037",
+    "last_question_id": "nardebam_math_1405_0029",
+    "next_question_id": "nardebam_math_1405_0017",
+    "fixture_reflections": 0,
+    "persisted_records": 0,
+    "encountered_slots": 0
+  },
+  "selected_hypothesis_semantics_id": 429,
+  "scope": "Android UI selection, shuffle, original question, no write"
+}
