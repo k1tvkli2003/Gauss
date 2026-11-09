@@ -19,7 +19,7 @@ class _StartupView extends StatelessWidget {
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color(0x3303090B), Color(0xF703090B)],
+              colors: [Color(0x3303090B), GaussScrims.abyssBottom],
               stops: [.25, 1],
             ),
           ),

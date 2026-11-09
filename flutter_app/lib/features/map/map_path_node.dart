@@ -302,7 +302,7 @@ class _SubjectStationOverlayPainter extends CustomPainter {
       canvas.drawCircle(
         point + Offset(0, extent * .006),
         emphasized ? 2.5 : 2.2,
-        Paint()..color = const Color(0xB8010507),
+        Paint()..color = GaussScrims.nodeShadow,
       );
       canvas.drawCircle(
         point,

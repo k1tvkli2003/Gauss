@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gauss/ui/tokens/gauss_tokens.dart';
 
 abstract final class GaussColors {
   static const abyss = Color(0xFF03090B);
@@ -27,12 +28,52 @@ abstract final class GaussColors {
   static const hairline = Color(0xFF243337);
 }
 
+/// Ink tones for marks drawn on parchment. The night-sky accents fail
+/// contrast on paper, so every tone here holds at least 4.5:1 on
+/// [GaussColors.parchment] and may carry text.
+abstract final class GaussParchmentInk {
+  static const teal = Color(0xFF1E6D71);
+  static const tealBright = Color(0xFF2D9BA1); // fills and strokes only
+  static const brass = Color(0xFF855919);
+  static const sepia = Color(0xFF755F3B);
+  static const positive = Color(0xFF256E5A);
+  static const negative = Color(0xFF9A493E);
+  static const negativeDeep = Color(0xFF8B3F38);
+  static const rule = Color(0xFF735C37);
+  static const ruleFaint = Color(0x4A735C37);
+  static const ruleFade = Color(0x7A735C37);
+  static const ruleStrong = Color(0x9A735C37);
+  static const selectedWash = Color(0x2D2D9BA1);
+  static const tealWash = Color(0x141E6D71);
+  static const tealEdge = Color(0x551E6D71);
+  static const negativeWash = Color(0x0F9A493E);
+  static const negativeTint = Color(0x249A493E);
+  static const negativeEdge = Color(0x669A493E);
+}
+
+/// Backdrop scrims laid over the atmosphere art behind live content.
+abstract final class GaussScrims {
+  static const abyssTop = Color(0xA407151C);
+  static const abyssBottom = Color(0xF703090B);
+  static const nodeShadow = Color(0xB8010507);
+}
+
 abstract final class GaussRadii {
   static const small = 10.0;
   static const medium = 16.0;
   static const large = 24.0;
   static const pill = 999.0;
 }
+
+// ButtonStyle.textStyle replaces the inherited style instead of merging, so
+// a family-less style silently fell back to Roboto on Android.
+TextStyle _buttonLabel(FontWeight weight) => TextStyle(
+  fontFamily: 'Manrope',
+  fontFamilyFallback: const ['Vazirmatn'],
+  fontWeight: weight,
+  fontSize: GaussTypeScale.body,
+  letterSpacing: .1,
+);
 
 ThemeData buildGaussTheme() {
   const scheme = ColorScheme.dark(
@@ -111,6 +152,7 @@ ThemeData buildGaussTheme() {
       labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
       labelTextStyle: WidgetStateProperty.resolveWith(
         (states) => TextStyle(
+          fontFamily: 'Manrope',
           color: states.contains(WidgetState.selected)
               ? GaussColors.brassLight
               : GaussColors.fog,
@@ -123,14 +165,16 @@ ThemeData buildGaussTheme() {
     ),
     navigationRailTheme: const NavigationRailThemeData(
       backgroundColor: GaussColors.ink,
-      indicatorColor: Color(0x243C947F),
+      indicatorColor: Color(0x2462AE9C), // signal at 14%
       selectedIconTheme: IconThemeData(color: GaussColors.brassLight),
       unselectedIconTheme: IconThemeData(color: GaussColors.fog),
       selectedLabelTextStyle: TextStyle(
+        fontFamily: 'Manrope',
         color: GaussColors.brassLight,
         fontWeight: FontWeight.w800,
       ),
       unselectedLabelTextStyle: TextStyle(
+        fontFamily: 'Manrope',
         color: GaussColors.fog,
         fontWeight: FontWeight.w600,
       ),
@@ -147,7 +191,7 @@ ThemeData buildGaussTheme() {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(GaussRadii.medium),
         ),
-        textStyle: const TextStyle(fontWeight: FontWeight.w900),
+        textStyle: _buttonLabel(FontWeight.w900),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
@@ -159,14 +203,14 @@ ThemeData buildGaussTheme() {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(GaussRadii.medium),
         ),
-        textStyle: const TextStyle(fontWeight: FontWeight.w700),
+        textStyle: _buttonLabel(FontWeight.w700),
       ),
     ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: GaussColors.brassLight,
         minimumSize: const Size(48, 48),
-        textStyle: const TextStyle(fontWeight: FontWeight.w700),
+        textStyle: _buttonLabel(FontWeight.w700),
       ),
     ),
     cardTheme: CardThemeData(

@@ -58,7 +58,7 @@ class _GaussAuthScreenState extends State<GaussAuthScreen> {
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color(0x7203090B), Color(0xF703090B)],
+              colors: [Color(0x7203090B), GaussScrims.abyssBottom],
               stops: [.05, .82],
             ),
           ),

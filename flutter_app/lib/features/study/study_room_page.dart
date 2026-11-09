@@ -166,7 +166,7 @@ class _ArchivePage extends StatelessWidget {
               semanticLabel: 'Reveal the unverified source answer',
               icon: Icons.visibility_outlined,
               dimension: 56,
-              accent: const Color(0xFF9D691D),
+              accent: GaussParchmentInk.brass,
               onPressed: onReveal,
             ),
           ),
@@ -429,13 +429,13 @@ class _ArchiveChoice extends StatelessWidget {
                   ? const Icon(
                       Icons.shield_outlined,
                       size: 17,
-                      color: Color(0xFF9D691D),
+                      color: GaussParchmentInk.brass,
                     )
                   : selected
                   ? const Icon(
                       Icons.edit_note_rounded,
                       size: 19,
-                      color: Color(0xFF237E83),
+                      color: GaussParchmentInk.teal,
                     )
                   : Text(
                       String.fromCharCode(65 + choice),

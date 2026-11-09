@@ -287,7 +287,7 @@ class _WritingSpaceSignal extends StatelessWidget {
     };
     final accent = mode == QuestionInkMode.pan
         ? GaussColors.parchmentInk
-        : const Color(0xFF237E83);
+        : GaussParchmentInk.teal;
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -530,9 +530,9 @@ class _ManuscriptToolButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = selected
-        ? const Color(0xFF2D9BA1)
+        ? GaussParchmentInk.tealBright
         : danger
-        ? const Color(0xFF7B3A32)
+        ? GaussParchmentInk.negativeDeep
         : GaussColors.parchmentInk;
     return Semantics(
       button: true,
@@ -545,7 +545,9 @@ class _ManuscriptToolButton extends StatelessWidget {
         child: SizedBox.square(
           dimension: GaussMetrics.minTouchTarget,
           child: Material(
-            color: selected ? const Color(0x2D2D9BA1) : const Color(0x12FFFFFF),
+            color: selected
+                ? GaussParchmentInk.selectedWash
+                : const Color(0x12FFFFFF),
             shape: CircleBorder(
               side: BorderSide(
                 color: color.withValues(alpha: onPressed == null ? .18 : .5),
@@ -584,11 +586,11 @@ class ManuscriptChoiceShell extends StatelessWidget {
   final VoidCallback? onTap;
 
   Color get _accent => switch (tone) {
-    TheoremChoiceTone.neutral => const Color(0xFF846B43),
-    TheoremChoiceTone.selected => const Color(0xFF237E83),
-    TheoremChoiceTone.positive => const Color(0xFF27745F),
-    TheoremChoiceTone.negative => const Color(0xFF9A493E),
-    TheoremChoiceTone.source => const Color(0xFF9D691D),
+    TheoremChoiceTone.neutral => GaussParchmentInk.sepia,
+    TheoremChoiceTone.selected => GaussParchmentInk.teal,
+    TheoremChoiceTone.positive => GaussParchmentInk.positive,
+    TheoremChoiceTone.negative => GaussParchmentInk.negative,
+    TheoremChoiceTone.source => GaussParchmentInk.brass,
   };
 
   @override
@@ -659,7 +661,9 @@ class _EngravedRule extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     children: [
-      const Expanded(child: Divider(color: Color(0x4A735C37), height: 1)),
+      const Expanded(
+        child: Divider(color: GaussParchmentInk.ruleFaint, height: 1),
+      ),
       if (ornament) ...[
         const SizedBox(width: GaussSpacing.space8),
         Transform.rotate(
@@ -668,12 +672,14 @@ class _EngravedRule extends StatelessWidget {
             width: 7,
             height: 7,
             decoration: BoxDecoration(
-              border: Border.all(color: const Color(0x9A735C37)),
+              border: Border.all(color: GaussParchmentInk.ruleStrong),
             ),
           ),
         ),
         const SizedBox(width: GaussSpacing.space8),
-        const Expanded(child: Divider(color: Color(0x4A735C37), height: 1)),
+        const Expanded(
+          child: Divider(color: GaussParchmentInk.ruleFaint, height: 1),
+        ),
       ],
     ],
   );
@@ -689,7 +695,11 @@ class _VerticalEngravedRule extends StatelessWidget {
       gradient: LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
-        colors: [Colors.transparent, Color(0x7A735C37), Colors.transparent],
+        colors: [
+          Colors.transparent,
+          GaussParchmentInk.ruleFade,
+          Colors.transparent,
+        ],
       ),
     ),
   );

@@ -599,12 +599,12 @@ class _MissTagBar extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(15, 13, 15, 13),
         decoration: BoxDecoration(
           color: manuscript
-              ? const Color(0x0F9B4C42)
+              ? GaussParchmentInk.negativeWash
               : GaussColors.warning.withValues(alpha: .06),
           borderRadius: BorderRadius.circular(18),
           border: Border.all(
             color: manuscript
-                ? const Color(0x669B4C42)
+                ? GaussParchmentInk.negativeEdge
                 : GaussColors.warning.withValues(alpha: .3),
           ),
         ),
@@ -680,7 +680,7 @@ class _MissTagChip extends StatelessWidget {
         decoration: BoxDecoration(
           color: selected
               ? manuscript
-                    ? const Color(0x249B4C42)
+                    ? GaussParchmentInk.negativeTint
                     : GaussColors.warning.withValues(alpha: .16)
               : manuscript
               ? const Color(0x0D17120B)
@@ -695,7 +695,7 @@ class _MissTagChip extends StatelessWidget {
           style: TextStyle(
             color: manuscript
                 ? selected
-                      ? const Color(0xFF8B3F38)
+                      ? GaussParchmentInk.negativeDeep
                       : GaussColors.parchmentInk.withValues(alpha: .76)
                 : selected
                 ? GaussColors.warning

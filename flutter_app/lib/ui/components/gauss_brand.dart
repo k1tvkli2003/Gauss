@@ -197,7 +197,7 @@ class _TheoremStarPainter extends CustomPainter {
         canvas.drawPath(
           ray,
           Paint()
-            ..color = const Color(0xB8010507)
+            ..color = GaussScrims.nodeShadow
             ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.2),
         );
         canvas.restore();
@@ -236,7 +236,7 @@ class _TheoremStarPainter extends CustomPainter {
           ..style = PaintingStyle.stroke
           ..strokeWidth = 6.5
           ..strokeJoin = StrokeJoin.round
-          ..color = const Color(0xB8010507)
+          ..color = GaussScrims.nodeShadow
           ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.3),
       );
       canvas.restore();
@@ -302,7 +302,7 @@ class _TheoremStarPainter extends CustomPainter {
                 center: Alignment(-.35, -.4),
                 colors: [
                   Color(0xFFBFF7E6),
-                  Color(0xFF62AE9C),
+                  GaussColors.signal,
                   Color(0xFF176B74),
                 ],
               ).createShader(

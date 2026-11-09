@@ -32,6 +32,7 @@ Persian-reading student on Android, in a celestial expedition language
 | Core: study material | `parchment` / `ivory` / `parchmentInk` | `#F2E4C3` / `#F6ECD6` / `#261E12` | questions read as paper, not as a dark form |
 | Accent: direction and action | `brass` / `brassLight` | `#C79238` / `#F0C36A` | the one gesture that says "go here" |
 | Signal: progress and correctness | `signal` / `signalBright` | `#62AE9C` / `#8BD7C0` | teal means solved, mastered, forward |
+| Ink on parchment | `GaussParchmentInk.*` | teal `#1E6D71`, brass `#855919`, sepia `#755F3B`, positive `#256E5A`, negative `#9A493E` | the same roles re-inked to hold 4.5:1 on paper |
 | Status only | `error`, `warning` | `#FF7564`, `#E6A84C` | never decorative |
 | Subject only | `ice` (Physics), `violet` (rare boss/insight) | `#77BFD1`, `#AA83D5` | subject identity, not general decoration |
 

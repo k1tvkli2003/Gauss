@@ -349,7 +349,11 @@ class _AstronomicalBackdrop extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xA407151C), Color(0xD6071115), Color(0xF703090B)],
+            colors: [
+              GaussScrims.abyssTop,
+              Color(0xD6071115),
+              GaussScrims.abyssBottom,
+            ],
             stops: [0, .48, 1],
           ),
         ),

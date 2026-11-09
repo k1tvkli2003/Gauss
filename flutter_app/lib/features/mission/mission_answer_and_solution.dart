@@ -126,7 +126,7 @@ class _SolutionPanel extends StatelessWidget {
             children: [
               Icon(
                 certified ? Icons.lightbulb_outline : Icons.menu_book_outlined,
-                color: manuscript ? const Color(0xFF247A7D) : headingColor,
+                color: manuscript ? GaussParchmentInk.teal : headingColor,
               ),
               const SizedBox(width: 8),
               Expanded(
@@ -144,7 +144,7 @@ class _SolutionPanel extends StatelessWidget {
                   Icons.verified_rounded,
                   size: 18,
                   color: manuscript
-                      ? const Color(0xFF247A7D)
+                      ? GaussParchmentInk.teal
                       : GaussColors.signalBright,
                 ),
             ],
@@ -155,12 +155,12 @@ class _SolutionPanel extends StatelessWidget {
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 color: manuscript
-                    ? const Color(0x14247A7D)
+                    ? GaussParchmentInk.tealWash
                     : GaussColors.brass.withValues(alpha: .07),
                 borderRadius: BorderRadius.circular(14),
                 border: Border.all(
                   color: manuscript
-                      ? const Color(0x55247A7D)
+                      ? GaussParchmentInk.tealEdge
                       : GaussColors.brass.withValues(alpha: .22),
                 ),
               ),
