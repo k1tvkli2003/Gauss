@@ -178,7 +178,10 @@ final class GaussPathGeometry {
       tangents.add(routeTangent(y));
       final openingLandmark = index == 0;
       final intervalLandmark = index > 2 && index % 6 == 4;
-      if (openingLandmark || intervalLandmark) {
+      // Landmarks are decoration. On a narrow phone at accessible text sizes
+      // the lesson labels need that width, so the art yields to live text.
+      final labelsNeedLandmarkRoom = compact && scale >= 1.55;
+      if ((openingLandmark || intervalLandmark) && !labelsNeedLandmarkRoom) {
         final placeStart = x >= center;
         final edge = compact
             ? 4.0

@@ -662,7 +662,7 @@ void main() {
       expect(compactHeader.right, lessThanOrEqualTo(320));
       expect(contextText.overflow, isNot(TextOverflow.ellipsis));
       expect(find.text('Study room'), findsOneWidget);
-      expect(find.text('1 / 5'), findsOneWidget);
+      expect(find.text('1 of 5'), findsOneWidget);
       expect(find.text('Question 1'), findsOneWidget);
       final difficulty = tester.getRect(
         find.byKey(const ValueKey('question-manuscript-difficulty')),
@@ -1316,7 +1316,7 @@ void main() {
       findsOneWidget,
       reason: 'Continuing must load the next set, not only update its URL.',
     );
-    expect(find.text('1 / 5'), findsOneWidget);
+    expect(find.text('1 of 5'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -1528,7 +1528,7 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 260));
     expect(currentQuestion, findsOneWidget);
-    expect(find.text('1 / 5'), findsOneWidget);
+    expect(find.text('1 of 5'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -1600,7 +1600,7 @@ void main() {
 
     expect(find.text('Field note not saved'), findsOneWidget);
     expect(find.text('Retry'), findsOneWidget);
-    expect(find.text('1 / 5'), findsOneWidget);
+    expect(find.text('1 of 5'), findsOneWidget);
     expect(
       find.bySemanticsLabel(RegExp(r'Choice 1\..*Your private hypothesis\.')),
       findsOneWidget,

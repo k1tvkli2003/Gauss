@@ -508,8 +508,6 @@ class _StudyRoomScreenState extends State<StudyRoomScreen> {
                           shuffled: widget.shuffleSeed != null,
                           masteryReview:
                               shelf.slots[_index].kind == 'mastery_review',
-                          index: _index,
-                          total: shelf.questions.length,
                           onClose: _requestLeave,
                           onShuffle:
                               widget.revisitOnly || shelf.questions.length < 3
@@ -653,8 +651,6 @@ class _ArchiveTopBar extends StatelessWidget {
     required this.gemsOnly,
     required this.shuffled,
     required this.masteryReview,
-    required this.index,
-    required this.total,
     required this.onClose,
     required this.onShuffle,
   });
@@ -664,8 +660,6 @@ class _ArchiveTopBar extends StatelessWidget {
   final bool gemsOnly;
   final bool shuffled;
   final bool masteryReview;
-  final int index;
-  final int total;
   final VoidCallback onClose;
   final VoidCallback? onShuffle;
 
@@ -727,14 +721,16 @@ class _ArchiveTopBar extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 3),
-        ConstrainedBox(
+        // Question position lives once, in the interactive bottom rail.
+        Text(
+          masteryReview ? 'Mastery review' : 'Study room',
           key: const ValueKey('study-room-session-heading'),
-          constraints: const BoxConstraints(maxWidth: 320),
-          child: QuestionProgressRail(
-            index: index,
-            total: total,
-            label: masteryReview ? 'Mastery review' : 'Study room',
-            valueKey: const ValueKey('study-room-progress-chip'),
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: GaussColors.brassLight,
+            fontSize: GaussTypeScale.caption,
+            fontWeight: FontWeight.w900,
+            letterSpacing: .2,
           ),
         ),
         const SizedBox(height: 5),
