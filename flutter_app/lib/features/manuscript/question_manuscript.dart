@@ -798,3 +798,46 @@ class _ChoiceSealPainter extends CustomPainter {
   bool shouldRepaint(covariant _ChoiceSealPainter oldDelegate) =>
       oldDelegate.accent != accent || oldDelegate.active != active;
 }
+
+/// Answer rails: one column on phones; two columns once the manuscript is
+/// wide enough (tablets), so short answers stop stretching across 1000dp
+/// with the letter and the value at opposite edges. Row-major order keeps
+/// the reading and traversal order A, B, C, D.
+class ManuscriptAnswerGrid extends StatelessWidget {
+  const ManuscriptAnswerGrid({required this.children, super.key});
+
+  static const twoColumnMinWidth = 640.0;
+
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final accessibleText =
+          MediaQuery.textScalerOf(context).scale(1) >=
+          GaussComposition.accessibilityTextScale;
+      if (constraints.maxWidth < twoColumnMinWidth ||
+          accessibleText ||
+          children.length < 2) {
+        return Column(children: children);
+      }
+      return Column(
+        children: [
+          for (var index = 0; index < children.length; index += 2)
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: children[index]),
+                const SizedBox(width: GaussSpacing.space12),
+                Expanded(
+                  child: index + 1 < children.length
+                      ? children[index + 1]
+                      : const SizedBox.shrink(),
+                ),
+              ],
+            ),
+        ],
+      );
+    },
+  );
+}

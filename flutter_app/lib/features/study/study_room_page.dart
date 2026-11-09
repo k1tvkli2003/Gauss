@@ -145,7 +145,7 @@ class _ArchivePage extends StatelessWidget {
         ),
       ),
     ),
-    answers: Column(
+    answers: ManuscriptAnswerGrid(
       key: const ValueKey('study-room-answer-manuscript'),
       children: [
         for (var choice = 0; choice < question.options.length; choice++)

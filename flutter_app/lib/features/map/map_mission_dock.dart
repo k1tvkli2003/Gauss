@@ -127,7 +127,8 @@ class _StudyDock extends StatelessWidget {
                                         softWrap: false,
                                         style: const TextStyle(
                                           color: GaussColors.brassLight,
-                                          fontSize: 8.2,
+                                          fontSize: GaussTypeScale.insignia,
+                                          height: 1.1,
                                           fontWeight: FontWeight.w900,
                                           letterSpacing: .2,
                                         ),
@@ -245,7 +246,8 @@ class _FiveQuestionTrack extends StatelessWidget {
         softWrap: false,
         style: TextStyle(
           color: complete ? GaussColors.signalBright : GaussColors.ivory,
-          fontSize: 9,
+          fontSize: GaussTypeScale.insignia,
+          height: 1.1,
           fontWeight: FontWeight.w900,
         ),
       ),

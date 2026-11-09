@@ -4,6 +4,7 @@ class _StudyInspector extends StatelessWidget {
   const _StudyInspector({
     required this.section,
     required this.node,
+    required this.upcoming,
     required this.snapshot,
     required this.topicSnapshot,
     required this.missionReady,
@@ -12,6 +13,9 @@ class _StudyInspector extends StatelessWidget {
 
   final StudySectionDefinition section;
   final StudyPathNode node;
+
+  /// The next lessons on this route, from real path data.
+  final List<({String title, int charted, int total})> upcoming;
   final StudyTopicSnapshot snapshot;
   final StudyTopicSnapshot topicSnapshot;
   final bool missionReady;
@@ -27,177 +31,183 @@ class _StudyInspector extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(20, 19, 20, 18),
         child: SafeArea(
           left: false,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const Text(
-                'Study inspector',
-                style: TextStyle(
-                  color: GaussColors.brassLight,
-                  fontSize: GaussTypeScale.caption,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: .2,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                section.title,
-                style: const TextStyle(color: GaussColors.fog, fontSize: 11),
-              ),
-              const SizedBox(height: 18),
-              Row(
-                children: [
-                  Container(
-                    width: 64,
-                    height: 64,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: GaussColors.deepInk,
-                      shape: BoxShape.circle,
-                      border: Border.all(color: GaussColors.brass),
-                    ),
-                    child: TopicGlyph(
-                      topicKey: node.topic.key,
-                      color: GaussColors.brassLight,
-                      size: 35,
-                    ),
+          // Scrolls on short landscape windows and at large text instead of
+          // overflowing the panel.
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const Text(
+                  'Study inspector',
+                  style: TextStyle(
+                    color: GaussColors.brassLight,
+                    fontSize: GaussTypeScale.caption,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: .2,
                   ),
-                  const SizedBox(width: 13),
-                  Expanded(
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  section.title,
+                  style: const TextStyle(color: GaussColors.fog, fontSize: 11),
+                ),
+                const SizedBox(height: 18),
+                Row(
+                  children: [
+                    Container(
+                      width: 64,
+                      height: 64,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: GaussColors.deepInk,
+                        shape: BoxShape.circle,
+                        border: Border.all(color: GaussColors.brass),
+                      ),
+                      child: TopicGlyph(
+                        topicKey: node.topic.key,
+                        color: GaussColors.brassLight,
+                        size: 35,
+                      ),
+                    ),
+                    const SizedBox(width: 13),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Unit · ${node.setLabel}',
+                            style: const TextStyle(
+                              color: GaussColors.fog,
+                              fontSize: GaussTypeScale.caption,
+                              fontWeight: FontWeight.w900,
+                              letterSpacing: .2,
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          Text(
+                            node.topic.label,
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                _ProgressReading(
+                  label: 'This study set',
+                  value: snapshot.reflected,
+                  total: node.questionCount,
+                  progress: progress,
+                ),
+                const SizedBox(height: 12),
+                _ProgressReading(
+                  label: 'Whole unit',
+                  value: topicSnapshot.reflected,
+                  total: node.topic.questionCount,
+                  progress: topicSnapshot.reflected / node.topic.questionCount,
+                ),
+                if (upcoming.isNotEmpty) ...[
+                  const SizedBox(height: 18),
+                  GaussSurface(
+                    tone: GaussSurfaceTone.inset,
+                    radius: 18,
+                    padding: const EdgeInsets.all(15),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Text(
-                          'Unit · ${node.setLabel}',
-                          style: const TextStyle(
-                            color: GaussColors.fog,
+                        const Text(
+                          'Next in this route',
+                          style: TextStyle(
+                            color: GaussColors.brassLight,
                             fontSize: GaussTypeScale.caption,
                             fontWeight: FontWeight.w900,
                             letterSpacing: .2,
                           ),
                         ),
-                        const SizedBox(height: 5),
-                        Text(
-                          node.topic.label,
-                          style: Theme.of(context).textTheme.titleLarge,
-                        ),
+                        const SizedBox(height: 10),
+                        for (final lesson in upcoming)
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 8),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    lesson.title,
+                                    style: const TextStyle(
+                                      color: GaussColors.ivory,
+                                      fontSize: GaussTypeScale.body,
+                                      fontWeight: FontWeight.w700,
+                                      height: 1.3,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(width: 12),
+                                Text(
+                                  '${lesson.charted} / ${lesson.total}',
+                                  style: const TextStyle(
+                                    color: GaussColors.fog,
+                                    fontSize: GaussTypeScale.caption,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                       ],
                     ),
                   ),
                 ],
-              ),
-              const SizedBox(height: 20),
-              _ProgressReading(
-                label: 'This study set',
-                value: snapshot.reflected,
-                total: node.questionCount,
-                progress: progress,
-              ),
-              const SizedBox(height: 12),
-              _ProgressReading(
-                label: 'Whole unit',
-                value: topicSnapshot.reflected,
-                total: node.topic.questionCount,
-                progress: topicSnapshot.reflected / node.topic.questionCount,
-              ),
-              const SizedBox(height: 18),
-              Container(
-                padding: const EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  color: GaussColors.deepInk.withValues(alpha: .72),
-                  borderRadius: BorderRadius.circular(18),
-                  border: Border.all(color: GaussColors.hairline),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Study lens',
-                      style: TextStyle(
-                        color: GaussColors.brassLight,
-                        fontSize: GaussTypeScale.caption,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: .2,
+                // The action follows the lesson it starts; pinning it to the
+                // panel's foot left a dead band on tall tablets.
+                const SizedBox(height: GaussSpacing.space24),
+                if (snapshot.revisit > 0) ...[
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.bookmark_outline_rounded,
+                        color: GaussColors.warning,
+                        size: 18,
                       ),
-                    ),
-                    const SizedBox(height: 11),
-                    for (final item in _focusAreas(node.topic.key))
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 8),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Padding(
-                              padding: EdgeInsets.only(top: 5),
-                              child: Icon(
-                                Icons.circle,
-                                size: 5,
-                                color: GaussColors.signalBright,
-                              ),
-                            ),
-                            const SizedBox(width: 9),
-                            Expanded(
-                              child: Text(
-                                item,
-                                style: const TextStyle(
-                                  color: GaussColors.muted,
-                                  fontSize: 11.5,
-                                  height: 1.35,
-                                ),
-                              ),
-                            ),
-                          ],
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          '${snapshot.revisit} ${snapshot.revisit == 1 ? 'question is' : 'questions are'} waiting for another pass.',
+                          style: const TextStyle(
+                            color: GaussColors.muted,
+                            fontSize: 11,
+                          ),
                         ),
                       ),
-                  ],
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                ],
+                Center(
+                  child: OrbitalActionControl(
+                    key: const ValueKey('map-study-inspector-action'),
+                    semanticLabel: 'Start five-question mission',
+                    caption: 'Start 5',
+                    onPressed: onOpen,
+                    icon: Icons.rocket_launch_rounded,
+                    dimension: 62,
+                  ),
                 ),
-              ),
-              const Spacer(),
-              if (snapshot.revisit > 0) ...[
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.bookmark_outline_rounded,
-                      color: GaussColors.warning,
-                      size: 18,
-                    ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        '${snapshot.revisit} ${snapshot.revisit == 1 ? 'question is' : 'questions are'} waiting for another pass.',
-                        style: const TextStyle(
-                          color: GaussColors.muted,
-                          fontSize: 11,
-                        ),
-                      ),
-                    ),
-                  ],
+                const SizedBox(height: 9),
+                Text(
+                  missionReady
+                      ? 'Five questions are ready. Reviewed evidence remains attached where available.'
+                      : 'Five source questions are available for private practice. Report anything that needs repair.',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: GaussColors.fog,
+                    fontSize: GaussTypeScale.caption,
+                    height: 1.35,
+                  ),
                 ),
-                const SizedBox(height: 12),
               ],
-              Center(
-                child: OrbitalActionControl(
-                  key: const ValueKey('map-study-inspector-action'),
-                  semanticLabel: 'Start five-question mission',
-                  caption: 'Start 5',
-                  onPressed: onOpen,
-                  icon: Icons.rocket_launch_rounded,
-                  dimension: 62,
-                ),
-              ),
-              const SizedBox(height: 9),
-              Text(
-                missionReady
-                    ? 'Five questions are ready. Reviewed evidence remains attached where available.'
-                    : 'Five source questions are available for private practice. Report anything that needs repair.',
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: GaussColors.fog,
-                  fontSize: 10,
-                  height: 1.35,
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),

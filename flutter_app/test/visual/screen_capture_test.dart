@@ -22,9 +22,19 @@ final _routes =
     (Platform.environment['GAUSS_CAPTURE_ROUTES'] ??
             '/map,/study,/insights,/vault,/study/revisit')
         .split(',');
-final _sizes = <String, (Size, double)>{
-  'phone': (const Size(390, 844), 1.0),
-  'narrow-2x': (const Size(320, 640), 2.0),
+const _allSizes = <String, (Size, double)>{
+  'phone': (Size(390, 844), 1.0),
+  'narrow-2x': (Size(320, 640), 2.0),
+  'tab-port': (Size(800, 1280), 1.0),
+  'tab-land': (Size(1280, 800), 1.0),
+  'tab-land-1.5x': (Size(1280, 800), 1.5),
+  'split': (Size(640, 800), 1.0),
+};
+final _sizes = {
+  for (final name
+      in (Platform.environment['GAUSS_CAPTURE_SIZES'] ?? 'phone,narrow-2x')
+          .split(','))
+    name: _allSizes[name]!,
 };
 
 Future<void> _loadFonts() async {
@@ -70,6 +80,13 @@ void main() {
     await tester.runAsync(controller.initialize);
     await tester.runAsync(controller.markTourSeen);
     Directory(_outDir!).createSync(recursive: true);
+    final reports = <String>[];
+    final previous = FlutterError.onError;
+    FlutterError.onError = (details) {
+      reports.add(details.toString());
+      previous?.call(details);
+    };
+    addTearDown(() => FlutterError.onError = previous);
 
     for (final entry in _sizes.entries) {
       final (size, textScale) = entry.value;
@@ -115,9 +132,12 @@ void main() {
           ).writeAsBytesSync(bytes!.buffer.asUint8List());
         });
         final err = tester.takeException();
-        if (err != null) {
-          File('$_outDir/$name.error.txt').writeAsStringSync('$err');
+        if (err != null || reports.isNotEmpty) {
+          File(
+            '$_outDir/$name.error.txt',
+          ).writeAsStringSync('$err\n\n${reports.join('\n---\n')}');
         }
+        reports.clear();
       }
     }
     await tester.pumpWidget(const SizedBox());

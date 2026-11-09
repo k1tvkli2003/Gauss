@@ -79,23 +79,26 @@ class _MapHeader extends StatelessWidget {
               height: compact ? 84 : 116,
               child: Column(
                 children: [
-                  SizedBox(
-                    // Preserve the wordmark's 3:1 intrinsic ratio. The former
-                    // 24dp slot forced an 88dp mark into a 24dp box, so its
-                    // transparent top/bottom breathing room made the actual
-                    // letters look absent on Android despite valid semantics.
-                    height: compact ? 24 : 36,
-                    child: Center(
-                      child: GaussWordmark(
-                        key: ValueKey(
-                          compact
-                              ? 'map-compact-centered-wordmark'
-                              : 'map-wide-centered-wordmark',
+                  // The extended landscape rail already carries the
+                  // wordmark; a second one over the map is duplicate chrome.
+                  if (!GaussViewport.of(context).extendsNavigationRail)
+                    SizedBox(
+                      // Preserve the wordmark's 3:1 intrinsic ratio. The former
+                      // 24dp slot forced an 88dp mark into a 24dp box, so its
+                      // transparent top/bottom breathing room made the actual
+                      // letters look absent on Android despite valid semantics.
+                      height: compact ? 24 : 36,
+                      child: Center(
+                        child: GaussWordmark(
+                          key: ValueKey(
+                            compact
+                                ? 'map-compact-centered-wordmark'
+                                : 'map-wide-centered-wordmark',
+                          ),
+                          width: compact ? 70 : 104,
                         ),
-                        width: compact ? 70 : 104,
                       ),
                     ),
-                  ),
                   SizedBox(height: compact ? 0 : 4),
                   Expanded(
                     child: Stack(
@@ -599,24 +602,6 @@ class _MapCourseProgressCrest extends StatelessWidget {
                   ),
                 ),
               ),
-              if (!compactCrest) ...[
-                const SizedBox(height: 1),
-                MediaQuery.withClampedTextScaling(
-                  maxScaleFactor: 1.35,
-                  child: const Text(
-                    'Course',
-                    maxLines: 1,
-                    softWrap: false,
-                    style: TextStyle(
-                      color: GaussColors.fog,
-                      fontSize: 7.5,
-                      height: 1,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: .2,
-                    ),
-                  ),
-                ),
-              ],
             ],
           ),
         ),

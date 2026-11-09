@@ -98,7 +98,7 @@ class _TheoremLensInsignia extends StatelessWidget {
             softWrap: false,
             style: TextStyle(
               color: GaussColors.parchmentInk.withValues(alpha: .78),
-              fontSize: 8,
+              fontSize: GaussTypeScale.insignia,
               fontWeight: FontWeight.w900,
               letterSpacing: .2,
               height: 1.2,

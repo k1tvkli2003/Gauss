@@ -108,7 +108,8 @@ class _OrbitSelector extends StatelessWidget {
             softWrap: false,
             style: const TextStyle(
               color: GaussColors.brassLight,
-              fontSize: 8.5,
+              fontSize: GaussTypeScale.insignia,
+              height: 1.1,
               fontWeight: FontWeight.w900,
               letterSpacing: .2,
             ),
@@ -137,7 +138,7 @@ class _OrbitSelector extends StatelessWidget {
             softWrap: false,
             style: const TextStyle(
               color: GaussColors.signalBright,
-              fontSize: 9.5,
+              fontSize: GaussTypeScale.insignia,
               height: 1.1,
               fontWeight: FontWeight.w900,
             ),

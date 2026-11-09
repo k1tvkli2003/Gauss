@@ -10,6 +10,7 @@ import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:gauss/ui/components/gauss_brand.dart';
+import 'package:gauss/ui/components/gauss_surface.dart';
 import 'package:gauss/ui/components/gauss_state_panel.dart';
 import 'package:gauss/features/map/map_gamification_hud.dart';
 import 'package:gauss/features/map/map_path_geometry.dart';
@@ -301,6 +302,24 @@ class _MapScreenState extends State<MapScreen> {
                       child: _StudyInspector(
                         section: section,
                         node: selected,
+                        upcoming: [
+                          for (final next
+                              in nodes
+                                  .skip(
+                                    nodes.indexWhere(
+                                          (n) => n.key == selected.key,
+                                        ) +
+                                        1,
+                                  )
+                                  .take(3))
+                            (
+                              title: controller.studySetLabel(next),
+                              charted: controller.study
+                                  .shelf(next.key)
+                                  .reflected,
+                              total: next.questionCount,
+                            ),
+                        ],
                         snapshot: controller.study.shelf(selected.key),
                         topicSnapshot: controller.study.topic(
                           selected.topic.key,
@@ -373,49 +392,6 @@ bool _usesRtlScript(String value) => value.runes.any(
       (rune >= 0x0750 && rune <= 0x077f) ||
       (rune >= 0x08a0 && rune <= 0x08ff),
 );
-
-List<String> _focusAreas(String key) {
-  if (key.contains('function') || key.contains('derivative')) {
-    return const [
-      'Read structure from equations and graphs',
-      'Choose a rigorous line of attack',
-      'Check edge cases before committing',
-    ];
-  }
-  if (key.contains('geometry') || key.contains('trigonometry')) {
-    return const [
-      'Translate diagrams into exact relationships',
-      'Select the decisive theorem',
-      'Verify every construction step',
-    ];
-  }
-  if (key.contains('probability') || key.contains('statistics')) {
-    return const [
-      'Define the sample space precisely',
-      'Separate signal from distracting data',
-      'Test whether the result is plausible',
-    ];
-  }
-  if (key.contains('electric') || key.contains('magnet')) {
-    return const [
-      'Map physical quantities to a model',
-      'Track direction, sign, and units',
-      'Validate the model against the scenario',
-    ];
-  }
-  if (key.contains('motion') || key.contains('dynamic')) {
-    return const [
-      'Choose a useful frame of reference',
-      'Connect motion diagrams and equations',
-      'Check signs, units, and limiting cases',
-    ];
-  }
-  return const [
-    'Recognize the governing structure',
-    'Build a clear chain of reasoning',
-    'Check the conclusion independently',
-  ];
-}
 
 class _FatalDatasetView extends StatelessWidget {
   const _FatalDatasetView();

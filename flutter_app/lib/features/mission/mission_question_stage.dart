@@ -464,7 +464,7 @@ class _QuestionScrollState extends State<_QuestionScroll> {
                           onReveal: busy ? null : onRevealChoices,
                           manuscript: true,
                         )
-                      : Column(
+                      : ManuscriptAnswerGrid(
                           key: const ValueKey('mission-answer-manuscript'),
                           children: [
                             for (
