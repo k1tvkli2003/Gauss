@@ -270,12 +270,12 @@ class _MissionCompletionSummary extends StatelessWidget {
       ),
       const SizedBox(height: GaussSpacing.space12),
       Text(
-        '$total-QUESTION MISSION',
+        '$total-question mission',
         style: const TextStyle(
           color: GaussColors.brassLight,
-          fontSize: GaussTypeScale.insignia,
+          fontSize: GaussTypeScale.caption,
           fontWeight: FontWeight.w900,
-          letterSpacing: 1.25,
+          letterSpacing: .2,
         ),
       ),
       const SizedBox(height: GaussSpacing.space4),
@@ -344,8 +344,8 @@ class _MissionCompletionMetrics extends StatelessWidget {
           constraints.maxWidth < 360 ||
           MediaQuery.textScalerOf(context).scale(14) >= 20;
       final earned = _CompletionMetric(
-        icon: Icons.auto_awesome_rounded,
-        label: 'THIS MISSION',
+        icon: Icons.bolt_rounded,
+        label: 'This mission',
         value: completion.xpEarned > 0
             ? '+${completion.xpEarned} XP'
             : 'XP cap met',
@@ -353,7 +353,7 @@ class _MissionCompletionMetrics extends StatelessWidget {
       );
       final total = _CompletionMetric(
         icon: Icons.explore_rounded,
-        label: 'PRIVATE TOTAL',
+        label: 'Private total',
         value: '${completion.totalXp} XP',
         color: GaussColors.brassLight,
       );
@@ -409,9 +409,9 @@ class _CompletionMetric extends StatelessWidget {
                 label,
                 style: const TextStyle(
                   color: GaussColors.fog,
-                  fontSize: GaussTypeScale.insignia,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: .65,
+                  letterSpacing: .2,
                 ),
               ),
               const SizedBox(height: 2),
@@ -448,12 +448,12 @@ class _MissionRewardReceipt extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Text(
-            'RECORDED XP',
+            'Recorded XP',
             style: TextStyle(
               color: GaussColors.fog,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w900,
-              letterSpacing: .9,
+              letterSpacing: .2,
             ),
           ),
           const SizedBox(height: 6),

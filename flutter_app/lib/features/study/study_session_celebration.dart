@@ -75,15 +75,15 @@ class _StudySessionCelebrationState extends State<StudySessionCelebration>
         ? 'Ten new reflections are safely recorded for today.'
         : 'Your private observatory advanced through steady study.';
     final eyebrow = outcome.setCompleted || outcome.unitCompleted
-        ? 'FIVE-QUESTION MICRO-LESSON'
+        ? 'Five-question micro-lesson'
         : outcome.dailyQuestCompleted
-        ? 'DAILY OBSERVATION'
-        : 'PRIVATE OBSERVATORY';
+        ? 'Daily quest'
+        : 'Private observatory';
     final sealLabel = outcome.setCompleted || outcome.unitCompleted
-        ? '5 / 5  ·  ORBIT CHARTED'
+        ? '5 / 5  ·  Orbit charted'
         : outcome.dailyQuestCompleted
-        ? 'TODAY  ·  CHARTED'
-        : 'LEVEL ${outcome.levelAfter}  ·  ADVANCED';
+        ? 'Today  ·  Charted'
+        : 'Level ${outcome.levelAfter}  ·  Advanced';
     final milestones = _milestonesFor(outcome);
     final rewardTotals = <String, int>{};
     for (final line in outcome.lines) {
@@ -343,7 +343,7 @@ class _CelebrationVisual extends StatelessWidget {
                           color: GaussColors.ivory,
                           fontSize: GaussTypeScale.caption,
                           fontWeight: FontWeight.w900,
-                          letterSpacing: .65,
+                          letterSpacing: .2,
                         ),
                       ),
                     ),
@@ -389,9 +389,9 @@ class _CelebrationSummary extends StatelessWidget {
         eyebrow,
         style: const TextStyle(
           color: GaussColors.brassLight,
-          fontSize: GaussTypeScale.insignia,
+          fontSize: GaussTypeScale.caption,
           fontWeight: FontWeight.w900,
-          letterSpacing: 1.3,
+          letterSpacing: .2,
         ),
       ),
       const SizedBox(height: GaussSpacing.space4),
@@ -434,15 +434,15 @@ class _XpReceiptSummary extends StatelessWidget {
             MediaQuery.textScalerOf(context).scale(14) >= 21;
         final earned = _XpPlate(
           key: const ValueKey('study-xp-earned'),
-          icon: Icons.auto_awesome_rounded,
-          eyebrow: 'THIS RECEIPT',
+          icon: Icons.bolt_rounded,
+          eyebrow: 'This receipt',
           value: earnedDetail,
           accent: GaussColors.signalBright,
         );
         final total = _XpPlate(
           key: const ValueKey('study-xp-total'),
           icon: Icons.explore_rounded,
-          eyebrow: 'PRIVATE TOTAL',
+          eyebrow: 'Private total',
           value: '${outcome.totalXp} XP',
           accent: GaussColors.brassLight,
         );
@@ -500,9 +500,9 @@ class _XpPlate extends StatelessWidget {
                 eyebrow,
                 style: const TextStyle(
                   color: GaussColors.fog,
-                  fontSize: GaussTypeScale.insignia,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: .65,
+                  letterSpacing: .2,
                 ),
               ),
               const SizedBox(height: 2),
@@ -625,12 +625,12 @@ class _RewardReceipt extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Text(
-            'RECORDED XP',
+            'Recorded XP',
             style: TextStyle(
               color: GaussColors.fog,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w900,
-              letterSpacing: .9,
+              letterSpacing: .2,
             ),
           ),
           const SizedBox(height: 6),

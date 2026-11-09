@@ -281,9 +281,9 @@ class _WritingSpaceSignal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final label = switch (mode) {
-      QuestionInkMode.pan => 'STYLUS READY · TOUCH SCROLLS',
-      QuestionInkMode.pen => 'FINGER INK ACTIVE',
-      QuestionInkMode.eraser => 'STROKE ERASER ACTIVE',
+      QuestionInkMode.pan => 'Stylus ready · Touch scrolls',
+      QuestionInkMode.pen => 'Finger ink active',
+      QuestionInkMode.eraser => 'Stroke eraser active',
     };
     final accent = mode == QuestionInkMode.pan
         ? GaussColors.parchmentInk
@@ -307,9 +307,9 @@ class _WritingSpaceSignal extends StatelessWidget {
             softWrap: true,
             style: TextStyle(
               color: accent.withValues(alpha: .34),
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w800,
-              letterSpacing: .85,
+              letterSpacing: .2,
               height: 1.2,
             ),
           ),
@@ -332,19 +332,21 @@ class _ManuscriptQuestionHeader extends StatelessWidget {
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
       final textScaler = MediaQuery.textScalerOf(context);
-      final difficultyText = difficulty.toUpperCase();
-      final questionText = 'QUESTION $questionNumber';
+      final difficultyText = difficulty.isEmpty
+          ? difficulty
+          : '${difficulty[0].toUpperCase()}${difficulty.substring(1).toLowerCase()}';
+      final questionText = 'Question $questionNumber';
       const difficultyStyle = TextStyle(
         fontFamily: 'Manrope',
-        fontSize: GaussTypeScale.insignia,
+        fontSize: GaussTypeScale.caption,
         fontWeight: FontWeight.w900,
-        letterSpacing: 1.2,
+        letterSpacing: .2,
       );
       const questionStyle = TextStyle(
         fontFamily: 'Manrope',
         fontSize: 12,
         fontWeight: FontWeight.w900,
-        letterSpacing: .7,
+        letterSpacing: .2,
       );
       double measuredWidth(String text, TextStyle style) {
         final painter = TextPainter(
@@ -638,8 +640,18 @@ class ManuscriptChoiceShell extends StatelessWidget {
                       Expanded(child: child),
                       const SizedBox(width: GaussSpacing.space8),
                       Icon(
-                        active ? Icons.auto_awesome : Icons.star_border_rounded,
-                        size: 14,
+                        // Shape, not just color, tells the state apart.
+                        switch (tone) {
+                          TheoremChoiceTone.neutral =>
+                            Icons.radio_button_unchecked_rounded,
+                          TheoremChoiceTone.selected =>
+                            Icons.radio_button_checked_rounded,
+                          TheoremChoiceTone.positive =>
+                            Icons.check_circle_rounded,
+                          TheoremChoiceTone.negative => Icons.cancel_rounded,
+                          TheoremChoiceTone.source => Icons.bookmark_rounded,
+                        },
+                        size: 18,
                         color: _accent.withValues(alpha: active ? .9 : .38),
                       ),
                     ],

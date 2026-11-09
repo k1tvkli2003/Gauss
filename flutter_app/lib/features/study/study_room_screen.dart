@@ -733,7 +733,7 @@ class _ArchiveTopBar extends StatelessWidget {
           child: QuestionProgressRail(
             index: index,
             total: total,
-            label: masteryReview ? 'MASTERY REVIEW' : 'STUDY ROOM',
+            label: masteryReview ? 'Mastery review' : 'Study room',
             valueKey: const ValueKey('study-room-progress-chip'),
           ),
         ),

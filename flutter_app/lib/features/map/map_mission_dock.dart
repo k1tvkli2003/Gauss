@@ -22,16 +22,16 @@ class _StudyDock extends StatelessWidget {
     final isComplete = snapshot.reflected >= node.questionCount;
     final accessible = MediaQuery.textScalerOf(context).scale(1) >= 1.55;
     final status = isComplete
-        ? 'LESSON COMPLETE'
+        ? 'Lesson complete'
         : isCurrent
-        ? 'CURRENT MISSION'
-        : 'SELECTED LESSON';
+        ? 'Current mission'
+        : 'Selected lesson';
     final visualStatus = accessible
         ? '${isComplete
-              ? 'COMPLETE'
+              ? 'Complete'
               : isCurrent
-              ? 'CURRENT'
-              : 'SELECTED'} · ${snapshot.reflected} / ${node.questionCount}'
+              ? 'Current'
+              : 'Selected'} · ${snapshot.reflected} / ${node.questionCount}'
         : status;
     final accent = isComplete
         ? GaussColors.signalBright
@@ -142,7 +142,7 @@ class _StudyDock extends StatelessWidget {
                                           color: GaussColors.brassLight,
                                           fontSize: 8.2,
                                           fontWeight: FontWeight.w900,
-                                          letterSpacing: .62,
+                                          letterSpacing: .2,
                                         ),
                                       ),
                                     ),

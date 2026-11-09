@@ -31,7 +31,7 @@ void main() {
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 500));
 
-      expect(find.text('STUDY OBSERVATORY'), findsOneWidget);
+      expect(find.text('Study observatory'), findsOneWidget);
       expect(find.byKey(const ValueKey('gauss-nav-study')), findsOneWidget);
       expect(tester.takeException(), isNull);
     } finally {

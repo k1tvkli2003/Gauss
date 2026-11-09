@@ -47,9 +47,9 @@ void main() {
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 400));
 
-      expect(find.text('CURRENT MISSION'), findsOneWidget);
+      expect(find.text('Current mission'), findsOneWidget);
       expect(
-        find.bySemanticsLabel(RegExp(r'^CURRENT MISSION\.')),
+        find.bySemanticsLabel(RegExp(r'^Current mission\.')),
         findsOneWidget,
       );
       expect(
@@ -61,9 +61,9 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('map-node-sets:5:5')));
       await tester.pumpAndSettle();
 
-      expect(find.text('SELECTED LESSON'), findsOneWidget);
+      expect(find.text('Selected lesson'), findsOneWidget);
       expect(
-        find.bySemanticsLabel(RegExp(r'^SELECTED LESSON\.')),
+        find.bySemanticsLabel(RegExp(r'^Selected lesson\.')),
         findsOneWidget,
       );
 

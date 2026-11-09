@@ -288,7 +288,7 @@ void main() {
         find.byKey(const ValueKey('mission-question-action-dock')),
       );
       expect(tester.takeException(), isNull, reason: 'initial mission layout');
-      expect(find.text('QUESTION 1'), findsOneWidget);
+      expect(find.text('Question 1'), findsOneWidget);
       expect(
         find.byKey(const ValueKey('mission-answer-manuscript')),
         findsOneWidget,
@@ -833,7 +833,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text('5-QUESTION MISSION'), findsOneWidget);
+      expect(find.text('5-question mission'), findsOneWidget);
       expect(
         find.text('Perfect orbit'),
         findsOneWidget,
@@ -953,7 +953,7 @@ void main() {
 
       // The persisted truth and action dock must survive the transient scene.
       expect(find.text('+45 XP'), findsWidgets);
-      expect(find.text('5-QUESTION MISSION'), findsOneWidget);
+      expect(find.text('5-question mission'), findsOneWidget);
       expect(
         find.byKey(const ValueKey('mission-retry-action')),
         findsOneWidget,

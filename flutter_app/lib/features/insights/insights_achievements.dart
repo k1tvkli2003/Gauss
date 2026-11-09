@@ -199,13 +199,13 @@ class _AchievementPlateCopy extends StatelessWidget {
           ),
           const SizedBox(height: 3),
           Text(
-            rarity.label.toUpperCase(),
+            rarity.label,
             textAlign: TextAlign.center,
             style: TextStyle(
               color: color,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w900,
-              letterSpacing: .55,
+              letterSpacing: .2,
             ),
           ),
         ] else
@@ -223,12 +223,12 @@ class _AchievementPlateCopy extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                rarity.label.toUpperCase(),
+                rarity.label,
                 style: TextStyle(
                   color: color,
-                  fontSize: GaussTypeScale.insignia,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: .55,
+                  letterSpacing: .2,
                 ),
               ),
             ],

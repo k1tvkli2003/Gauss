@@ -232,12 +232,12 @@ class _WorkspaceHeading extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'RESPONSE DECK',
+              'Response deck',
               style: TextStyle(
                 color: GaussColors.brassLight,
-                fontSize: GaussTypeScale.insignia,
+                fontSize: GaussTypeScale.caption,
                 fontWeight: FontWeight.w900,
-                letterSpacing: 1.1,
+                letterSpacing: .2,
               ),
             ),
             const SizedBox(height: 2),
@@ -308,8 +308,8 @@ class _HypothesisComparison extends StatelessWidget {
               children: [
                 Expanded(
                   child: _ComparisonChip(
-                    label: 'MY CALL',
-                    value: hypothesis == null ? '—' : _letter(hypothesis!),
+                    label: 'My call',
+                    value: hypothesis == null ? 'None' : _letter(hypothesis!),
                     color: hypothesis == null
                         ? GaussColors.fog
                         : GaussColors.brassLight,
@@ -318,7 +318,7 @@ class _HypothesisComparison extends StatelessWidget {
                 const SizedBox(width: 9),
                 Expanded(
                   child: _ComparisonChip(
-                    label: 'SOURCE KEY',
+                    label: 'Source key',
                     value: _letter(sourceKey),
                     color: GaussColors.warning,
                   ),
@@ -366,9 +366,9 @@ class _ComparisonChip extends StatelessWidget {
           label,
           style: const TextStyle(
             color: GaussColors.fog,
-            fontSize: GaussTypeScale.insignia,
+            fontSize: GaussTypeScale.caption,
             fontWeight: FontWeight.w900,
-            letterSpacing: .8,
+            letterSpacing: .2,
           ),
         ),
         const Spacer(),
@@ -498,7 +498,7 @@ class _SourceSolution extends StatelessWidget {
               const SizedBox(width: 8),
               Expanded(
                 child: Text(
-                  'Source explanation — unverified',
+                  'Source explanation (unverified)',
                   softWrap: true,
                   style: Theme.of(context).textTheme.titleMedium,
                 ),

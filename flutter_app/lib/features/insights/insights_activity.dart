@@ -210,9 +210,9 @@ class _SectionHeading extends StatelessWidget {
               eyebrow,
               style: const TextStyle(
                 color: GaussColors.brassLight,
-                fontSize: GaussTypeScale.insignia,
+                fontSize: GaussTypeScale.caption,
                 fontWeight: FontWeight.w900,
-                letterSpacing: 1.35,
+                letterSpacing: .2,
               ),
             ),
             const SizedBox(height: 5),

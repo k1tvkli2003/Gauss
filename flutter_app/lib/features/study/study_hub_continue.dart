@@ -306,7 +306,7 @@ class _CurrentSectionAxis extends StatelessWidget {
                     MediaQuery.withClampedTextScaling(
                       maxScaleFactor: 1.2,
                       child: Text(
-                        '${_subjectTitle(subject).toUpperCase()} · CHAPTER ${sectionIndex + 1}/$sectionCount',
+                        '${_subjectTitle(subject)} · Chapter ${sectionIndex + 1}/$sectionCount',
                         maxLines: 1,
                         softWrap: false,
                         textAlign: TextAlign.center,
@@ -407,15 +407,15 @@ class _CurrentLessonCopy extends StatelessWidget {
             MediaQuery.withClampedTextScaling(
               maxScaleFactor: 1.2,
               child: Text(
-                'CURRENT STUDY · LESSON ${node.partIndex + 1}/${node.partCount}',
+                'Current study · Lesson ${node.partIndex + 1}/${node.partCount}',
                 maxLines: 1,
                 softWrap: false,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   color: GaussColors.brassLight,
-                  fontSize: GaussTypeScale.insignia,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: .8,
+                  letterSpacing: .2,
                 ),
               ),
             ),
@@ -433,20 +433,20 @@ class _CurrentLessonCopy extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         const Text(
-          'CURRENT STUDY',
+          'Current study',
           textAlign: TextAlign.center,
           style: TextStyle(
             color: GaussColors.brassLight,
-            fontSize: GaussTypeScale.insignia,
+            fontSize: GaussTypeScale.caption,
             fontWeight: FontWeight.w900,
-            letterSpacing: 1.4,
+            letterSpacing: .2,
           ),
         ),
         const SizedBox(height: 3),
         title,
         const SizedBox(height: 3),
         Text(
-          'MICRO-LESSON ${node.partIndex + 1} OF ${node.partCount}',
+          'Micro-lesson ${node.partIndex + 1} of ${node.partCount}',
           textAlign: centered ? TextAlign.center : TextAlign.start,
           style: const TextStyle(color: GaussColors.fog, fontSize: 12),
         ),
@@ -540,7 +540,7 @@ class _ContinueButton extends StatelessWidget {
       child: OrbitalActionControl(
         key: const ValueKey('study-primary-continue'),
         semanticLabel: 'Continue ${node.topic.label}, ${_sessionLabel(node)}',
-        caption: 'NEXT 5',
+        caption: 'Next 5',
         onPressed: onOpen,
         icon: Icons.play_arrow_rounded,
         dimension: 58,

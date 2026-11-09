@@ -65,14 +65,14 @@ class _MissionActionBar extends StatelessWidget {
         feedback ??
         (selectedChoice == null ? 'Select an answer' : 'Ready to check');
     final compactReading = operationError != null
-        ? 'RETRY'
+        ? 'Retry'
         : checked
         ? isCorrect
-              ? 'PROOF HOLDS'
-              : 'REVIEW'
+              ? 'Proof holds'
+              : 'Review'
         : selectedChoice == null
-        ? 'SELECT'
-        : 'READY';
+        ? 'Select'
+        : 'Ready';
     final readingIcon = operationError != null
         ? Icons.refresh_rounded
         : checked
@@ -209,9 +209,9 @@ class _MissionReadinessSignal extends StatelessWidget {
             softWrap: true,
             style: TextStyle(
               color: color,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w900,
-              letterSpacing: .9,
+              letterSpacing: .2,
               height: 1.15,
             ),
           ),

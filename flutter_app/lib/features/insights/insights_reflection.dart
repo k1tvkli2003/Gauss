@@ -57,12 +57,12 @@ class _ReflectionInstrument extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'REFLECTION BALANCE',
+                      'Reflection balance',
                       style: TextStyle(
                         color: GaussColors.brassLight,
-                        fontSize: GaussTypeScale.insignia,
+                        fontSize: GaussTypeScale.caption,
                         fontWeight: FontWeight.w900,
-                        letterSpacing: 1.35,
+                        letterSpacing: .2,
                       ),
                     ),
                     const SizedBox(height: 7),
@@ -76,7 +76,7 @@ class _ReflectionInstrument extends StatelessWidget {
                     ),
                     const SizedBox(height: 7),
                     const Text(
-                      'Clear and revisit are private metacognitive notes—not correctness labels. Change either after any future reading.',
+                      'Clear and revisit are private notes about your thinking, not correctness labels. Change either after any future reading.',
                       style: TextStyle(
                         color: GaussColors.muted,
                         fontSize: 11,
@@ -307,7 +307,7 @@ class _SubjectBalanceDial extends StatelessWidget {
                   Text(
                     'The library itself is '
                     '${(mathAvailableShare * 100).round()}% mathematics, so an '
-                    'even split of attention is not the goal — this is simply '
+                    'even split of attention is not the goal. This is simply '
                     'where your work has gone.',
                     style: const TextStyle(
                       color: GaussColors.fog,
@@ -445,7 +445,7 @@ class _HypothesisLedger extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   const Text(
-                    'The source key is unverified, so this is a record of agreement — not of being right.',
+                    'The source key is unverified, so this is a record of agreement, not of being right.',
                     style: TextStyle(
                       color: GaussColors.fog,
                       fontSize: GaussTypeScale.caption,

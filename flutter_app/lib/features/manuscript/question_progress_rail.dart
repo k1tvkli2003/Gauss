@@ -52,9 +52,9 @@ class QuestionProgressRail extends StatelessWidget {
             softWrap: true,
             style: TextStyle(
               color: accent,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w900,
-              letterSpacing: 1.05,
+              letterSpacing: .2,
               height: 1.1,
             ),
           );

@@ -35,7 +35,7 @@ void main() {
 
       await tester.pumpWidget(_StudySurface(controller: controller));
 
-      expect(find.text('PHYSICS ATLAS'), findsOneWidget);
+      expect(find.text('Physics atlas'), findsOneWidget);
       expect(
         tester
             .widget<Semantics>(
@@ -106,7 +106,7 @@ void main() {
     await tester.pump();
 
     expect(controller.selectedTopic.subject, Subject.physics);
-    expect(find.text('PHYSICS ATLAS'), findsOneWidget);
+    expect(find.text('Physics atlas'), findsOneWidget);
     expect(
       await progress.readLearningContextTopic(),
       controller.selectedTopicKey,

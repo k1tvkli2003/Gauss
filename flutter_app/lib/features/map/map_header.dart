@@ -312,12 +312,12 @@ class _MapHeader extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'DAILY ORBIT',
+                                  'Daily orbit',
                                   style: TextStyle(
                                     color: GaussColors.brassLight,
-                                    fontSize: GaussTypeScale.insignia,
+                                    fontSize: GaussTypeScale.caption,
                                     fontWeight: FontWeight.w900,
-                                    letterSpacing: 1.1,
+                                    letterSpacing: .2,
                                   ),
                                 ),
                                 SizedBox(height: 3),
@@ -450,7 +450,7 @@ class _CompactDailyProgress extends StatelessWidget {
                           child: _DailyOrbitMetric(
                             key: const ValueKey('map-daily-streak-orbit'),
                             value: '${summary.streak}',
-                            label: summary.streakGraceUsed ? 'GRACE' : 'STREAK',
+                            label: summary.streakGraceUsed ? 'Grace' : 'Streak',
                             icon: summary.streakGraceUsed
                                 ? Icons.shield_moon_outlined
                                 : Icons.local_fire_department_rounded,
@@ -463,7 +463,7 @@ class _CompactDailyProgress extends StatelessWidget {
                           child: _DailyOrbitMetric(
                             key: const ValueKey('map-daily-xp-orbit'),
                             value: '${summary.todayXp}',
-                            label: 'TODAY XP',
+                            label: 'Today XP',
                             icon: Icons.bolt_rounded,
                             accent: GaussColors.signalBright,
                             compact: compact,
@@ -644,7 +644,7 @@ class _MapCourseProgressCrest extends StatelessWidget {
                 MediaQuery.withClampedTextScaling(
                   maxScaleFactor: 1.35,
                   child: const Text(
-                    'COURSE',
+                    'Course',
                     maxLines: 1,
                     softWrap: false,
                     style: TextStyle(
@@ -652,7 +652,7 @@ class _MapCourseProgressCrest extends StatelessWidget {
                       fontSize: 7.5,
                       height: 1,
                       fontWeight: FontWeight.w900,
-                      letterSpacing: 1,
+                      letterSpacing: .2,
                     ),
                   ),
                 ),

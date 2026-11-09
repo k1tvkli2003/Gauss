@@ -65,12 +65,12 @@ class _OrbitSelector extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'CURRENT ORBIT · $sectionIndex OF $sectionCount',
+          'Current orbit · $sectionIndex of $sectionCount',
           style: const TextStyle(
             color: GaussColors.brassLight,
-            fontSize: GaussTypeScale.insignia,
+            fontSize: GaussTypeScale.caption,
             fontWeight: FontWeight.w900,
-            letterSpacing: .85,
+            letterSpacing: .2,
           ),
         ),
         const SizedBox(height: 2),
@@ -103,14 +103,14 @@ class _OrbitSelector extends StatelessWidget {
         runSpacing: 2,
         children: [
           Text(
-            'CHAPTER $chapterIndex',
+            'Chapter $chapterIndex',
             maxLines: 1,
             softWrap: false,
             style: const TextStyle(
               color: GaussColors.brassLight,
               fontSize: 8.5,
               fontWeight: FontWeight.w900,
-              letterSpacing: .7,
+              letterSpacing: .2,
             ),
           ),
           Container(
@@ -151,16 +151,16 @@ class _OrbitSelector extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          'ORBIT $sectionIndex  ·  $reflected / $total',
+          'Orbit $sectionIndex  ·  $reflected / $total',
           textAlign: TextAlign.center,
           maxLines: 1,
           softWrap: false,
           style: const TextStyle(
             color: GaussColors.brassLight,
-            fontSize: GaussTypeScale.insignia,
+            fontSize: GaussTypeScale.caption,
             height: 1.05,
             fontWeight: FontWeight.w900,
-            letterSpacing: .75,
+            letterSpacing: .2,
           ),
         ),
         const SizedBox(height: 2),
@@ -352,8 +352,8 @@ class _OrbitNavigatorState extends State<_OrbitNavigator> {
     final selectedIndex = sections.indexWhere((item) => item.id == _section.id);
     final largeText = MediaQuery.textScalerOf(context).scale(1) >= 1.55;
     final courseName = _subject == Subject.math
-        ? (largeText ? 'MATH' : 'MATHEMATICS')
-        : 'PHYSICS';
+        ? (largeText ? 'Math' : 'Mathematics')
+        : 'Physics';
     return KeyedSubtree(
       key: const ValueKey('orbit-navigator'),
       child: _GlassFrame(
@@ -393,13 +393,12 @@ class _OrbitNavigatorState extends State<_OrbitNavigator> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'ORBIT NAVIGATOR',
-                                  softWrap: false,
+                                  'Orbit navigator',
                                   style: TextStyle(
                                     color: GaussColors.brassLight,
-                                    fontSize: GaussTypeScale.insignia,
+                                    fontSize: GaussTypeScale.caption,
                                     fontWeight: FontWeight.w900,
-                                    letterSpacing: 1.05,
+                                    letterSpacing: .2,
                                   ),
                                 ),
                                 const SizedBox(height: 2),
@@ -407,15 +406,15 @@ class _OrbitNavigatorState extends State<_OrbitNavigator> {
                                   key: const ValueKey(
                                     'orbit-navigator-course-summary',
                                   ),
-                                  '$courseName  ·  ${sections.length} CHAPTERS',
-                                  softWrap: false,
+                                  '$courseName  ·  ${sections.length} chapters',
                                   style: const TextStyle(
                                     color: GaussColors.fog,
-                                    fontSize: GaussTypeScale.insignia,
+                                    fontSize: GaussTypeScale.caption,
                                     fontWeight: FontWeight.w800,
-                                    letterSpacing: .5,
+                                    letterSpacing: .2,
                                   ),
                                 ),
+                                const SizedBox(height: GaussSpacing.optical2),
                               ],
                             ),
                           ),
@@ -603,14 +602,14 @@ class _OrbitChapterConstellation extends StatelessWidget {
           MediaQuery.withClampedTextScaling(
             maxScaleFactor: 1.4,
             child: Text(
-              'CHAPTER ${selectedIndex + 1} OF ${sections.length}',
+              'Chapter ${selectedIndex + 1} of ${sections.length}',
               textAlign: TextAlign.center,
               softWrap: false,
               style: const TextStyle(
                 color: GaussColors.fog,
-                fontSize: GaussTypeScale.insignia,
+                fontSize: GaussTypeScale.caption,
                 fontWeight: FontWeight.w900,
-                letterSpacing: .72,
+                letterSpacing: .2,
               ),
             ),
           ),
@@ -810,7 +809,7 @@ class _OrbitChapterPreview extends StatelessWidget {
     );
     final progress = total == 0 ? 0.0 : reflected / total;
     final complete = total > 0 && reflected >= total;
-    final nextLabel = complete ? 'MASTERY REVIEW' : 'NEXT FIVE QUESTIONS';
+    final nextLabel = complete ? 'Mastery review' : 'Next five questions';
     final actionLabel = complete
         ? 'Open chapter ${index + 1} mastery review'
         : 'Continue chapter ${index + 1} at session ${currentIndex + 1}';
@@ -857,12 +856,12 @@ class _OrbitChapterPreview extends StatelessWidget {
                         MediaQuery.withClampedTextScaling(
                           maxScaleFactor: 1.4,
                           child: Text(
-                            'CHAPTER ${index + 1}  ·  ${(progress * 100).round()}% CHARTED',
+                            'Chapter ${index + 1}  ·  ${(progress * 100).round()}% charted',
                             style: const TextStyle(
                               color: GaussColors.brassLight,
-                              fontSize: GaussTypeScale.insignia,
+                              fontSize: GaussTypeScale.caption,
                               fontWeight: FontWeight.w900,
-                              letterSpacing: .62,
+                              letterSpacing: .2,
                             ),
                           ),
                         ),
@@ -926,9 +925,9 @@ class _OrbitChapterPreview extends StatelessWidget {
                                 softWrap: true,
                                 style: const TextStyle(
                                   color: GaussColors.signalBright,
-                                  fontSize: GaussTypeScale.insignia,
+                                  fontSize: GaussTypeScale.caption,
                                   fontWeight: FontWeight.w900,
-                                  letterSpacing: .58,
+                                  letterSpacing: .2,
                                 ),
                               ),
                             ),
@@ -1153,14 +1152,7 @@ class _SubjectOrbitButton extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  if (subject == Subject.math)
-                    Icon(Icons.functions_rounded, color: accent, size: 21)
-                  else
-                    TopicGlyph(
-                      topicKey: 'atomic_nuclear',
-                      color: accent,
-                      size: 22,
-                    ),
+                  SubjectGlyph(subject: subject, color: accent, size: 21),
                   if (!compact) ...[
                     const SizedBox(width: 6),
                     Flexible(

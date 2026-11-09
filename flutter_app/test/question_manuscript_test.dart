@@ -62,8 +62,8 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text('QUESTION 1'), findsOneWidget);
-      expect(find.text('HARD'), findsOneWidget);
+      expect(find.text('Question 1'), findsOneWidget);
+      expect(find.text('Hard'), findsOneWidget);
       expect(tester.takeException(), isNull);
       for (final label in <String>['Finger pen', 'Open full scratchpad']) {
         final control = find.bySemanticsLabel(label);

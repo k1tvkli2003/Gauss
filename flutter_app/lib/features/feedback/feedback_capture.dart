@@ -290,7 +290,7 @@ class _FeedbackCaptureMenu extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         _FeedbackSheetHeading(
-          eyebrow: 'PRIVATE FEEDBACK LENS',
+          eyebrow: 'Private feedback lens',
           title: 'Mark what needs attention',
           detail: controller.remoteEnabled
               ? 'Saved on this device first, then synced only to your Gauss account. Nothing is shared.'
@@ -427,7 +427,7 @@ class _GaussFeedbackComposerState extends State<GaussFeedbackComposer> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const _FeedbackSheetHeading(
-            eyebrow: 'CAPTURE NOTE',
+            eyebrow: 'Capture note',
             title: 'Leave a precise signal',
             detail:
                 'Common credentials in typed text are redacted before storage.',
@@ -576,7 +576,7 @@ class GaussFeedbackEntriesSheet extends StatelessWidget {
                 SizedBox(height: 12),
                 Text('Screenshot pixels stay unredacted.'),
                 SizedBox(height: 12),
-                Text('Android opens Save — never Share.'),
+                Text('Android opens Save, never Share.'),
               ],
             ),
             actions: [
@@ -639,7 +639,7 @@ class GaussFeedbackEntriesSheet extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             _FeedbackSheetHeading(
-              eyebrow: 'PRIVATE OUTBOX',
+              eyebrow: 'Private outbox',
               title: entries.isEmpty
                   ? 'Nothing waiting'
                   : '${entries.length} saved ${entries.length == 1 ? 'signal' : 'signals'}',
@@ -958,7 +958,7 @@ class GaussFeedbackToolsSheet extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const _FeedbackSheetHeading(
-            eyebrow: 'PRIVATE TOOLS',
+            eyebrow: 'Private tools',
             title: 'Feedback lens',
             detail:
                 'Capture visual bugs or ideas without interrupting your learning path.',
@@ -1258,9 +1258,9 @@ class _FeedbackSheetHeading extends StatelessWidget {
         textAlign: TextAlign.center,
         style: const TextStyle(
           color: GaussColors.brassLight,
-          fontSize: GaussTypeScale.insignia,
+          fontSize: GaussTypeScale.caption,
           fontWeight: FontWeight.w900,
-          letterSpacing: 1.2,
+          letterSpacing: .2,
         ),
       ),
       const SizedBox(height: 6),

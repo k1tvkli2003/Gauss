@@ -97,7 +97,7 @@ class _ReflectionDeck extends StatelessWidget {
                     : () => onReflection(StudyReflection.revisit),
               );
               final gem = _ReflectionButton(
-                icon: Icons.auto_awesome_outlined,
+                icon: Icons.diamond_outlined,
                 label: 'Keep as gem',
                 selected: current == StudyReflection.gem,
                 onPressed: saving

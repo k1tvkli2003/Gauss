@@ -205,13 +205,13 @@ class _AuthIdentityStage extends StatelessWidget {
             if (showDetail) ...[
               const SizedBox(height: 20),
               const Text(
-                'CHART YOUR PRIVATE UNIVERSE',
+                'Chart your private universe',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: GaussColors.brassLight,
-                  fontSize: GaussTypeScale.insignia,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: 1.5,
+                  letterSpacing: .2,
                 ),
               ),
               const SizedBox(height: 10),
@@ -282,13 +282,13 @@ class _AuthInstrument extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const Text(
-                      'PRIVATE ORBIT',
+                      'Private orbit',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: GaussColors.brassLight,
-                        fontSize: GaussTypeScale.insignia,
+                        fontSize: GaussTypeScale.caption,
                         fontWeight: FontWeight.w900,
-                        letterSpacing: 1.35,
+                        letterSpacing: .2,
                       ),
                     ),
                     const SizedBox(height: 14),

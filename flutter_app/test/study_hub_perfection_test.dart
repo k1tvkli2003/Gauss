@@ -47,12 +47,12 @@ void main() {
         findsOneWidget,
       );
       expect(find.byKey(const ValueKey('study-today')), findsOneWidget);
-      expect(find.text('CURRENT STUDY'), findsOneWidget);
+      expect(find.text('Current study'), findsOneWidget);
       expect(
         find.byKey(const ValueKey('study-primary-continue')),
         findsOneWidget,
       );
-      expect(find.text('NEXT 5'), findsOneWidget);
+      expect(find.text('Next 5'), findsOneWidget);
       expect(
         find.descendant(
           of: find.byKey(const ValueKey('study-primary-continue')),

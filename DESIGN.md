@@ -47,6 +47,8 @@ Contrast floor: 4.5:1 for normal text, 7:1 preferred for primary copy.
 - Learning content: Vazirmatn, RTL per block, line height 1.55 to 1.7, no
   letter spacing. All numerals in question content render as ASCII `0-9`.
 - Type ramp: 10 (insignia only), 11, 12, 14, 16, 18, 22, 28, 36.
+- Labels are sentence case with tracking of 0.4 or less. All caps is only for
+  insignia of four characters or fewer (LVL, XP).
 - No essential phrase is ellipsized. When space runs out, the composition
   reflows.
 
@@ -70,7 +72,9 @@ ring gesture. Reuse it instead of inventing new decoration.
 ## Iconography
 
 Material rounded glyphs chosen for meaning (route, book, chart, pen,
-eraser). No sparkle, star or lightning icons as generic "magic"; a star
+eraser). One meaning per glyph: the bolt is XP, the summation sign is
+Mathematics, the atom is Physics (`SubjectGlyph`), the diamond is the literal
+Gem shelf. No sparkle, star or lightning icons as generic "magic"; a star
 is allowed only where it literally means a collected star.
 
 ## Copy

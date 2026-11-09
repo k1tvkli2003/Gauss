@@ -15,7 +15,7 @@ class TheoremLensSurface extends StatelessWidget {
   const TheoremLensSurface({
     required this.ink,
     required this.child,
-    this.label = 'THEOREM LENS',
+    this.label = 'Theorem lens',
     super.key,
   });
 
@@ -112,7 +112,7 @@ class _TheoremLensInsignia extends StatelessWidget {
               color: GaussColors.parchmentInk.withValues(alpha: .78),
               fontSize: 8,
               fontWeight: FontWeight.w900,
-              letterSpacing: 1.25,
+              letterSpacing: .2,
               height: 1.2,
             ),
           ),

@@ -548,7 +548,7 @@ class _CoveredChoicesPanel extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           const Text(
-            'Derive the answer first — on paper or the scratchpad — so the options cannot whisper. Uncover when your result is ready.',
+            'Derive the answer first, on paper or the scratchpad, so the options cannot steer you. Uncover them when your result is ready.',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: GaussColors.muted,
@@ -615,9 +615,9 @@ class _MissTagBar extends StatelessWidget {
               'WHY DID IT SLIP?',
               style: TextStyle(
                 color: inkColor,
-                fontSize: GaussTypeScale.insignia,
+                fontSize: GaussTypeScale.caption,
                 fontWeight: FontWeight.w900,
-                letterSpacing: 1,
+                letterSpacing: .2,
               ),
             ),
             const SizedBox(height: 9),

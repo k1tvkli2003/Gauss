@@ -371,12 +371,12 @@ class _SectionGate extends StatelessWidget {
       final stacked = constraints.maxWidth < 360 || textScale >= 1.35;
       final accessibilityCompact = textScale >= 1.55;
       final orbit = Text(
-        'CHAPTER $unitNumber',
+        'Chapter $unitNumber',
         style: const TextStyle(
           color: GaussColors.brassLight,
-          fontSize: GaussTypeScale.insignia,
+          fontSize: GaussTypeScale.caption,
           fontWeight: FontWeight.w900,
-          letterSpacing: 1.05,
+          letterSpacing: .2,
         ),
       );
       final title = Text(
@@ -402,12 +402,12 @@ class _SectionGate extends StatelessWidget {
             size: 16,
           ),
           Text(
-            '$reflected / ${topic.questionCount} CHARTED',
+            '$reflected / ${topic.questionCount} charted',
             style: const TextStyle(
               color: GaussColors.fog,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w800,
-              letterSpacing: .55,
+              letterSpacing: .2,
             ),
           ),
         ],
@@ -623,12 +623,12 @@ class _PathLandmark extends StatelessWidget {
                         ),
                       ),
                       child: const Text(
-                        'THEOREM ENGINE',
+                        'Theorem engine',
                         style: TextStyle(
                           color: GaussColors.brassLight,
-                          fontSize: GaussTypeScale.insignia,
+                          fontSize: GaussTypeScale.caption,
                           fontWeight: FontWeight.w900,
-                          letterSpacing: .85,
+                          letterSpacing: .2,
                         ),
                       ),
                     ),
@@ -893,7 +893,7 @@ class _PathNodeLabel extends StatelessWidget {
                           ),
                           const SizedBox(height: 3),
                           Text(
-                            '${snapshot.reflected} / ${node.questionCount}  ·  ${isCurrent ? 'CURRENT' : 'LESSON'}',
+                            '${snapshot.reflected} / ${node.questionCount}  ·  ${isCurrent ? 'Current' : 'Lesson'}',
                             textAlign: rightPreferred
                                 ? TextAlign.start
                                 : TextAlign.end,

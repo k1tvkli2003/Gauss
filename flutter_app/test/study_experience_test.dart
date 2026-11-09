@@ -57,7 +57,7 @@ void main() {
     );
     await tester.pump();
 
-    expect(find.text('STUDY OBSERVATORY'), findsOneWidget);
+    expect(find.text('Study observatory'), findsOneWidget);
     expect(find.text('Mathematics'), findsOneWidget);
     expect(find.text('Physics'), findsOneWidget);
     expect(
@@ -407,7 +407,7 @@ void main() {
           child: StudyRoomScreen(topicKey: topic.key, count: 5),
         ),
       );
-      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      await _pumpUntil(tester, find.text('Study room'));
 
       PageView pages() => tester.widget<PageView>(
         find.byKey(const ValueKey('study-room-pages')),
@@ -520,7 +520,7 @@ void main() {
           child: StudyRoomScreen(topicKey: topic.key, count: 5),
         ),
       );
-      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      await _pumpUntil(tester, find.text('Study room'));
       expect(
         find.byKey(const ValueKey('study-room-single-pane')),
         findsOneWidget,
@@ -561,7 +561,7 @@ void main() {
         child: StudyRoomScreen(topicKey: topic.key, count: 5),
       ),
     );
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
 
     final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
     await tester.ensureVisible(firstChoice);
@@ -607,7 +607,7 @@ void main() {
             child: StudyRoomScreen(topicKey: topic.key, count: 5),
           ),
         );
-        await _pumpUntil(tester, find.text('STUDY ROOM'));
+        await _pumpUntil(tester, find.text('Study room'));
       }
 
       await pumpAt(const Size(411, 900));
@@ -661,9 +661,9 @@ void main() {
       expect(compactHeader.left, greaterThanOrEqualTo(0));
       expect(compactHeader.right, lessThanOrEqualTo(320));
       expect(contextText.overflow, isNot(TextOverflow.ellipsis));
-      expect(find.text('STUDY ROOM'), findsOneWidget);
+      expect(find.text('Study room'), findsOneWidget);
       expect(find.text('1 / 5'), findsOneWidget);
-      expect(find.text('QUESTION 1'), findsOneWidget);
+      expect(find.text('Question 1'), findsOneWidget);
       final difficulty = tester.getRect(
         find.byKey(const ValueKey('question-manuscript-difficulty')),
       );
@@ -781,9 +781,9 @@ void main() {
         child: StudyRoomScreen(topicKey: topic.key, count: 5),
       ),
     );
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
 
-    expect(find.text('STUDY ROOM'), findsOneWidget);
+    expect(find.text('Study room'), findsOneWidget);
     expect(find.byKey(const ValueKey('inline-ink-canvas')), findsOneWidget);
     final revealSource = find.byKey(
       const ValueKey('study-room-reveal-source-action'),
@@ -846,8 +846,8 @@ void main() {
 
     // The unified private-orbit instrument keeps the daily quest live without
     // splitting the same truth across a second dashboard card.
-    await _scrollUntil(tester, find.text('TODAY · QUEST'));
-    expect(find.text('TODAY · QUEST'), findsOneWidget);
+    await _scrollUntil(tester, find.text('Today · Quest'));
+    expect(find.text('Today · Quest'), findsOneWidget);
     expect(find.text('Chart ten reflections'), findsOneWidget);
     expect(find.text('0/10'), findsOneWidget);
 
@@ -895,14 +895,14 @@ void main() {
         child: StudyRoomScreen(topicKey: topic.key, count: 5),
       ),
     );
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
 
     expect(find.text('1 of 5'), findsOneWidget);
     await tester.tap(find.text('1 of 5'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
 
-    expect(find.text('JUMP TO'), findsOneWidget);
+    expect(find.text('Jump to'), findsOneWidget);
     await tester.tap(find.byKey(const ValueKey('study-room-jump-question-4')));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
@@ -988,10 +988,36 @@ void main() {
     }
   });
 
+  testWidgets('a new learner sees no zero-value metric plates', (tester) async {
+    _restoreSurfaceAfter(tester);
+    await tester.binding.setSurfaceSize(const Size(390, 844));
+    await tester.pumpWidget(
+      _TestSurface(controller: controller, child: const InsightsScreen()),
+    );
+    await tester.pump();
+    expect(find.byKey(const ValueKey('insight-metric-0')), findsNothing);
+    expect(find.text('Your first coordinate is waiting'), findsOneWidget);
+  });
+
   testWidgets('insight metrics become one glanceable row on tablet', (
     tester,
   ) async {
     _restoreSurfaceAfter(tester);
+    // Metrics appear once something is charted; a new learner sees the
+    // first-coordinate empty state instead of four zeros.
+    final shelf = await controller.loadStudyShelf(
+      controller.topics.first.key,
+      count: 5,
+    );
+    await tester.runAsync(
+      () => controller.saveStudyReflection(
+        question: shelf.questions.first,
+        shelfKey: shelf.key,
+        hypothesisChoiceIndex: null,
+        reflection: StudyReflection.clear,
+        slot: shelf.slots.first,
+      ),
+    );
 
     await tester.binding.setSurfaceSize(const Size(1280, 800));
     await tester.pumpWidget(
@@ -1097,7 +1123,7 @@ void main() {
           child: StudyRoomScreen(topicKey: topic.key, count: 5),
         ),
       );
-      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      await _pumpUntil(tester, find.text('Study room'));
       expect(tester.takeException(), isNull);
 
       await tester.binding.setSurfaceSize(const Size(1024, 800));
@@ -1116,7 +1142,7 @@ void main() {
           child: StudyRoomScreen(topicKey: topic.key, count: 5),
         ),
       );
-      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      await _pumpUntil(tester, find.text('Study room'));
       expect(
         find.byKey(const ValueKey('study-room-split-pane')),
         findsOneWidget,
@@ -1174,7 +1200,7 @@ void main() {
           child: StudyRoomScreen(topicKey: topic.key, offset: offset, count: 5),
         ),
       );
-      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      await _pumpUntil(tester, find.text('Study room'));
       final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
       await tester.ensureVisible(firstChoice);
       await tester.tap(firstChoice);
@@ -1259,7 +1285,7 @@ void main() {
       topicKey: topic.key,
       count: 5,
     );
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
 
     final revealSource = find.byKey(
       const ValueKey('study-room-reveal-source-action'),
@@ -1315,7 +1341,7 @@ void main() {
           ),
         ),
       );
-      await _pumpUntil(tester, find.text('STUDY ROOM'));
+      await _pumpUntil(tester, find.text('Study room'));
     }
 
     await showSet();
@@ -1404,7 +1430,7 @@ void main() {
         initialLocation: '/study/chapter/${topic.key}?offset=0&count=5',
       ),
     );
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
     final choice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
     await tester.ensureVisible(choice);
     await tester.tap(choice);
@@ -1412,7 +1438,7 @@ void main() {
     final room = tester.element(find.byType(StudyRoomScreen));
     final router = GoRouter.of(room);
     await tester.tap(find.byKey(const ValueKey('study-room-shuffle-action')));
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
     final seed = int.parse(
       router.routeInformationProvider.value.uri.queryParameters['shuffle']!,
     );
@@ -1489,11 +1515,11 @@ void main() {
     }
 
     await showSet(0);
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
     await showSet(5);
     await showSet(10);
     pending[10]!.complete(shelves[10]);
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
     final currentQuestion = find.byKey(
       ValueKey('study-ink-${shelves[10]!.questions.first.id}'),
     );
@@ -1550,10 +1576,10 @@ void main() {
       ),
     );
     await tester.runAsync(() => Future<void>.delayed(Duration.zero));
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
     final firstChoice = find.bySemanticsLabel(RegExp(r'^Choice 1\.'));
     await _pumpUntil(tester, firstChoice);
-    expect(find.text('STUDY ROOM'), findsOneWidget);
+    expect(find.text('Study room'), findsOneWidget);
     expect(find.text('Opening the study room…'), findsNothing);
     expect(find.text('The study room could not open'), findsNothing);
     expect(firstChoice, findsOneWidget);
@@ -1634,7 +1660,7 @@ void main() {
       offset: finalOffset,
       count: 5,
     );
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
 
     final revealSource = find.byKey(
       const ValueKey('study-room-reveal-source-action'),
@@ -1680,7 +1706,7 @@ void main() {
         child: StudyRoomScreen(topicKey: topic.key, count: 5),
       ),
     );
-    await _pumpUntil(tester, find.text('STUDY ROOM'));
+    await _pumpUntil(tester, find.text('Study room'));
 
     final revealSource = find.byKey(
       const ValueKey('study-room-reveal-source-action'),

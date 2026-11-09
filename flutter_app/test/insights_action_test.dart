@@ -46,7 +46,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text('TODAY · QUEST'), findsOneWidget);
+      expect(find.text('Today · Quest'), findsOneWidget);
       expect(find.text('7 reflections remain · no rush'), findsOneWidget);
       expect(
         find.bySemanticsLabel(
@@ -107,7 +107,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text('TODAY · CHARTED'), findsOneWidget);
+      expect(find.text('Today · Charted'), findsOneWidget);
       expect(find.text('Complete · reward safely recorded'), findsOneWidget);
       expect(
         find.bySemanticsLabel(

@@ -224,12 +224,12 @@ class _RibbonHeader extends StatelessWidget {
           SizedBox(width: GaussSpacing.space8),
           Expanded(
             child: Text(
-              'PRIVATE ORBIT',
+              'Private orbit',
               style: TextStyle(
                 color: GaussColors.brassLight,
-                fontSize: GaussTypeScale.insignia,
+                fontSize: GaussTypeScale.caption,
                 fontWeight: FontWeight.w900,
-                letterSpacing: 1.25,
+                letterSpacing: .2,
               ),
             ),
           ),
@@ -250,12 +250,12 @@ class _RibbonHeader extends StatelessWidget {
             ),
           ),
           child: Text(
-            'ON DEVICE  •  $todayXp XP TODAY',
+            'On device  •  $todayXp XP today',
             style: const TextStyle(
               color: GaussColors.signalBright,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w900,
-              letterSpacing: .55,
+              letterSpacing: .2,
             ),
           ),
         ),
@@ -336,14 +336,14 @@ class _QuestSegment extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      quest.completed ? 'TODAY · CHARTED' : 'TODAY · QUEST',
+                      quest.completed ? 'Today · Charted' : 'Today · Quest',
                       style: TextStyle(
                         color: quest.completed
                             ? GaussColors.signalBright
                             : GaussColors.brassLight,
-                        fontSize: GaussTypeScale.insignia,
+                        fontSize: GaussTypeScale.caption,
                         fontWeight: FontWeight.w900,
-                        letterSpacing: .9,
+                        letterSpacing: .2,
                       ),
                     ),
                     const SizedBox(height: GaussSpacing.space4),
@@ -433,7 +433,7 @@ class _RhythmSegment extends StatelessWidget {
           ),
           const SizedBox(height: GaussSpacing.space8),
           Text(
-            '$streak DAY${streak == 1 ? '' : 'S'}',
+            '$streak day${streak == 1 ? '' : 's'}',
             key: const ValueKey('gamification-streak-value'),
             style: const TextStyle(
               color: GaussColors.ivory,
@@ -444,12 +444,12 @@ class _RhythmSegment extends StatelessWidget {
           ),
           const SizedBox(height: GaussSpacing.space4),
           const Text(
-            'DAILY STREAK',
+            'Daily streak',
             style: TextStyle(
               color: GaussColors.signalBright,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w900,
-              letterSpacing: .65,
+              letterSpacing: .2,
             ),
           ),
           const SizedBox(height: GaussSpacing.space4),
@@ -496,7 +496,7 @@ class _LevelSegment extends StatelessWidget {
               const SizedBox(width: GaussSpacing.space8),
               Expanded(
                 child: Text(
-                  'LEVEL $level',
+                  'Level $level',
                   key: const ValueKey('gamification-level-value'),
                   style: const TextStyle(
                     color: GaussColors.ivory,
@@ -517,7 +517,7 @@ class _LevelSegment extends StatelessWidget {
           ),
           const SizedBox(height: GaussSpacing.space8),
           Text(
-            '$percent% TO LEVEL ${level + 1}',
+            '$percent% to level ${level + 1}',
             style: const TextStyle(
               color: GaussColors.muted,
               fontSize: GaussTypeScale.insignia,
@@ -568,9 +568,9 @@ class _MilestoneSegment extends StatelessWidget {
                 key: const ValueKey('gamification-milestone-state'),
                 style: TextStyle(
                   color: milestone.color,
-                  fontSize: GaussTypeScale.insignia,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: .75,
+                  letterSpacing: .2,
                 ),
               ),
               const SizedBox(height: GaussSpacing.space4),
@@ -718,7 +718,7 @@ class _MilestoneView {
   factory _MilestoneView.from(List<AchievementSnapshot> achievements) {
     if (achievements.isEmpty) {
       return const _MilestoneView(
-        eyebrow: 'MILESTONE CHART',
+        eyebrow: 'Milestone chart',
         title: 'Your first seal is ahead',
         detail: 'A real reflection will begin the private chart.',
         semanticsLabel:
@@ -758,7 +758,7 @@ class _MilestoneView {
           ? '${chosen.definition.title} · every tier charted'
           : 'Next: ${next.title} · ${chosen.current}/${next.threshold}';
       return _MilestoneView(
-        eyebrow: 'EARNED SEAL · ${earnedLevel.rarity.label.toUpperCase()}',
+        eyebrow: 'Earned seal · ${earnedLevel.rarity.label}',
         title: earnedLevel.title,
         detail: detail,
         semanticsLabel:
@@ -770,7 +770,7 @@ class _MilestoneView {
     }
 
     return _MilestoneView(
-      eyebrow: 'NEXT SEAL · ${rarity.label.toUpperCase()}',
+      eyebrow: 'Next seal · ${rarity.label}',
       title: next?.title ?? chosen.definition.title,
       detail:
           '${chosen.definition.title} · ${chosen.current}/${next?.threshold ?? chosen.current}',
@@ -791,7 +791,7 @@ class _MilestoneView {
 }
 
 IconData _familyIcon(AchievementFamily family) => switch (family) {
-  AchievementFamily.mastery => Icons.auto_awesome_rounded,
+  AchievementFamily.mastery => Icons.workspace_premium_rounded,
   AchievementFamily.correction => Icons.explore_rounded,
   AchievementFamily.exploration => Icons.public_rounded,
   AchievementFamily.challenge => Icons.wb_sunny_outlined,

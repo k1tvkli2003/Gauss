@@ -21,15 +21,15 @@ class _FirstRunTourState extends State<FirstRunTour> {
   static const _steps = <_TourStep>[
     _TourStep(
       icon: Icons.route_outlined,
-      eyebrow: 'THE PATH',
+      eyebrow: 'The path',
       title: 'A continuous route, not a scoreboard',
       detail:
           'Every unit is sliced into focused five-question lessons. Follow '
-          'the path in order, or wander — the map remembers where you were.',
+          'the path in order, or wander. The map remembers where you were.',
     ),
     _TourStep(
       icon: Icons.menu_book_outlined,
-      eyebrow: 'THE STUDY ROOM',
+      eyebrow: 'The study room',
       title: 'Commit, reveal, then decide for yourself',
       detail:
           'Make a private call before revealing the reference answer. The '
@@ -38,7 +38,7 @@ class _FirstRunTourState extends State<FirstRunTour> {
     ),
     _TourStep(
       icon: Icons.loop_rounded,
-      eyebrow: 'THE ORBITS',
+      eyebrow: 'The orbits',
       title: 'What you shelve comes back at the right time',
       detail:
           'Mark a concept to revisit and it returns tomorrow, then later and '
@@ -234,9 +234,9 @@ class _TourCard extends StatelessWidget {
               step.eyebrow,
               style: const TextStyle(
                 color: GaussColors.brassLight,
-                fontSize: GaussTypeScale.insignia,
+                fontSize: GaussTypeScale.caption,
                 fontWeight: FontWeight.w900,
-                letterSpacing: 1.3,
+                letterSpacing: .2,
               ),
             ),
             const SizedBox(height: 6),

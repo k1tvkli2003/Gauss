@@ -159,7 +159,7 @@ class _StudyHubScreenState extends State<StudyHubScreen> {
                 ),
                 SliverToBoxAdapter(
                   child: _SectionHeading(
-                    eyebrow: '${_subjectTitle(subject).toUpperCase()} ATLAS',
+                    eyebrow: '${_subjectTitle(subject)} atlas',
                     title: 'Library',
                     countLabel: '${sections.length} chapters',
                     detail:
@@ -301,15 +301,15 @@ class _StudyHeader extends StatelessWidget {
                         'Study Observatory. ${controller.totalQuestions} questions. Fully offline.',
                     excludeSemantics: true,
                     child: Text(
-                      'STUDY OBSERVATORY · ${_formatCount(controller.totalQuestions)} OFFLINE',
+                      'Study observatory · ${_formatCount(controller.totalQuestions)} offline',
                       maxLines: 1,
                       softWrap: false,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         color: GaussColors.brassLight,
-                        fontSize: GaussTypeScale.insignia,
+                        fontSize: GaussTypeScale.caption,
                         fontWeight: FontWeight.w900,
-                        letterSpacing: 1,
+                        letterSpacing: .2,
                       ),
                     ),
                   ),
@@ -321,13 +321,13 @@ class _StudyHeader extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const Text(
-                        'STUDY OBSERVATORY',
+                        'Study observatory',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: GaussColors.brassLight,
-                          fontSize: GaussTypeScale.insignia,
+                          fontSize: GaussTypeScale.caption,
                           fontWeight: FontWeight.w900,
-                          letterSpacing: 1.35,
+                          letterSpacing: .2,
                         ),
                       ),
                       const SizedBox(height: 2),
@@ -354,23 +354,16 @@ class _StudyHeader extends StatelessWidget {
 class _StudyOfflineSignal extends StatelessWidget {
   const _StudyOfflineSignal();
 
+  // A status mark, not a control: no ring or fill, so it never reads as a
+  // button beside the real scratchpad action.
   @override
   Widget build(BuildContext context) => Semantics(
     label: 'Private and fully offline',
-    child: Container(
-      width: 42,
-      height: 42,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: GaussColors.signal.withValues(alpha: .1),
-        border: Border.all(
-          color: GaussColors.signalBright.withValues(alpha: .34),
-        ),
-      ),
-      child: const Icon(
-        Icons.offline_bolt_outlined,
-        size: 20,
+    child: const SizedBox.square(
+      dimension: 42,
+      child: Icon(
+        Icons.offline_pin_outlined,
+        size: 22,
         color: GaussColors.signalBright,
       ),
     ),

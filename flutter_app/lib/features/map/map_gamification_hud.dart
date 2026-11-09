@@ -97,18 +97,18 @@ class MapGamificationHud extends StatelessWidget {
                             ? GaussColors.ice
                             : GaussColors.brassLight,
                         value: '${summary.streak}',
-                        label: 'DAY STREAK',
+                        label: 'Day streak',
                         detail: summary.streakGraceUsed
-                            ? '1-DAY GRACE ACTIVE'
-                            : 'DAILY RHYTHM',
+                            ? '1-day grace active'
+                            : 'Daily rhythm',
                       ),
                       _HudMetric(
                         key: const ValueKey('map-today-xp'),
-                        icon: Icons.auto_awesome_rounded,
+                        icon: Icons.bolt_rounded,
                         accent: GaussColors.signalBright,
                         value: '${summary.todayXp} XP',
-                        label: 'TODAY',
-                        detail: 'SAVED ON DEVICE',
+                        label: 'Today',
+                        detail: 'Saved on device',
                       ),
                       _QuestMetric(
                         quest: summary.quest,
@@ -219,9 +219,9 @@ class _HudMetric extends StatelessWidget {
                 label,
                 style: TextStyle(
                   color: accent,
-                  fontSize: GaussTypeScale.insignia,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: .55,
+                  letterSpacing: .2,
                   height: 1.2,
                 ),
               ),
@@ -297,7 +297,7 @@ class _QuestMetric extends StatelessWidget {
             children: [
               Text(
                 quest.completed
-                    ? 'COMPLETE'
+                    ? 'Complete'
                     : '${math.max(0, quest.progress)}/${math.max(0, quest.target)}',
                 style: const TextStyle(
                   color: GaussColors.ivory,
@@ -308,20 +308,20 @@ class _QuestMetric extends StatelessWidget {
               ),
               const SizedBox(height: GaussSpacing.space4),
               Text(
-                'DAILY QUEST',
+                'Daily quest',
                 style: TextStyle(
                   color: quest.completed
                       ? GaussColors.signalBright
                       : GaussColors.brassLight,
-                  fontSize: GaussTypeScale.insignia,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: .55,
+                  letterSpacing: .2,
                   height: 1.2,
                 ),
               ),
               const SizedBox(height: 2),
               Text(
-                quest.completed ? 'REWARD RECORDED' : 'NO RUSH',
+                quest.completed ? 'Reward recorded' : 'No rush',
                 style: const TextStyle(
                   color: GaussColors.fog,
                   fontSize: GaussTypeScale.insignia,
@@ -368,14 +368,14 @@ class _OpenProgressCue extends StatelessWidget {
             children: [
               Expanded(
                 child: Text(
-                  'OPEN PROGRESS',
+                  'Open progress',
                   textAlign: TextAlign.end,
                   softWrap: true,
                   style: TextStyle(
                     color: GaussColors.brassLight,
-                    fontSize: GaussTypeScale.insignia,
+                    fontSize: GaussTypeScale.caption,
                     fontWeight: FontWeight.w900,
-                    letterSpacing: .55,
+                    letterSpacing: .2,
                   ),
                 ),
               ),

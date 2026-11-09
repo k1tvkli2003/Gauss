@@ -33,7 +33,7 @@ class _StudyModes extends StatelessWidget {
         onTap: onRevisit,
       ),
       (
-        icon: Icons.auto_awesome_outlined,
+        icon: Icons.diamond_outlined,
         title: 'Gem shelf',
         detail: gemCount == 0
             ? 'Keep a question you admire'

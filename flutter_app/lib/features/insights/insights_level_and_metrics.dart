@@ -33,9 +33,9 @@ class _LevelMedallion extends StatelessWidget {
                   'LVL',
                   style: TextStyle(
                     color: GaussColors.fog,
-                    fontSize: GaussTypeScale.insignia,
+                    fontSize: GaussTypeScale.caption,
                     fontWeight: FontWeight.w800,
-                    letterSpacing: .7,
+                    letterSpacing: .2,
                   ),
                 ),
               ],
@@ -86,10 +86,12 @@ class _MetricConstellation extends StatelessWidget {
   const _MetricConstellation({
     required this.study,
     required this.totalQuestions,
+    required this.totalUnits,
   });
 
   final StudySummary study;
   final int totalQuestions;
+  final int totalUnits;
 
   @override
   Widget build(BuildContext context) {
@@ -98,25 +100,25 @@ class _MetricConstellation extends StatelessWidget {
         icon: Icons.auto_stories_outlined,
         value: _formatCount(study.totalReflected),
         label: 'Questions charted',
-        accent: GaussColors.brassLight,
+        accent: GaussColors.brassLight, // the focal metric carries the accent
       ),
       (
         icon: Icons.check_circle_outline_rounded,
         value: _formatCount(study.clearCount),
         label: 'Concepts clear',
-        accent: GaussColors.signalBright,
+        accent: GaussColors.muted,
       ),
       (
         icon: Icons.loop_rounded,
         value: _formatCount(study.revisitCount),
         label: 'Saved to revisit',
-        accent: GaussColors.warning,
+        accent: GaussColors.muted,
       ),
       (
         icon: Icons.hub_outlined,
-        value: '${study.touchedTopics}/29',
+        value: '${study.touchedTopics}/$totalUnits',
         label: 'Units touched',
-        accent: const Color(0xFF73A9D3),
+        accent: GaussColors.muted,
       ),
     ];
     return Padding(
@@ -197,21 +199,7 @@ class _MetricPlate extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Row(
-          children: [
-            Icon(icon, color: accent, size: 20),
-            const Spacer(),
-            Container(
-              width: 6,
-              height: 6,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: accent,
-                boxShadow: [BoxShadow(color: accent, blurRadius: 9)],
-              ),
-            ),
-          ],
-        ),
+        Row(children: [Icon(icon, color: accent, size: 20)]),
         const SizedBox(height: 7),
         Flexible(
           child: FittedBox(

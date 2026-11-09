@@ -152,7 +152,7 @@ final class GaussPathGeometry {
           final gateHeight = compact
               ? accessibilityCompact
                     ? 174.0
-                    : 100 + 26 * (scale - 1)
+                    : 104 + 26 * (scale - 1)
               : 82 + 28 * (scale - 1);
           headers.add(
             GaussUnitHeaderGeometry(

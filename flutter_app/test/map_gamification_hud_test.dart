@@ -13,8 +13,8 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('6'), findsOneWidget);
-    expect(find.text('DAY STREAK'), findsOneWidget);
-    expect(find.text('1-DAY GRACE ACTIVE'), findsOneWidget);
+    expect(find.text('Day streak'), findsOneWidget);
+    expect(find.text('1-day grace active'), findsOneWidget);
     expect(find.text('34 XP'), findsOneWidget);
     expect(find.text('7/10'), findsOneWidget);
     expect(
@@ -97,10 +97,10 @@ void main() {
       ),
     );
     for (final label in const [
-      'DAY STREAK',
-      'DAILY RHYTHM',
-      'SAVED ON DEVICE',
-      'DAILY QUEST',
+      'Day streak',
+      'Daily rhythm',
+      'Saved on device',
+      'Daily quest',
     ]) {
       expect(
         tester.getSize(find.text(label)).height,
@@ -156,8 +156,8 @@ void main() {
     await _pumpHud(tester, summary: summary);
     await tester.pumpAndSettle();
 
-    expect(find.text('COMPLETE'), findsOneWidget);
-    expect(find.text('REWARD RECORDED'), findsOneWidget);
+    expect(find.text('Complete'), findsOneWidget);
+    expect(find.text('Reward recorded'), findsOneWidget);
     final progress = tester.widget<CircularProgressIndicator>(
       find.byType(CircularProgressIndicator),
     );

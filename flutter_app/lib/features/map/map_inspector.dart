@@ -31,12 +31,12 @@ class _StudyInspector extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Text(
-                'STUDY INSPECTOR',
+                'Study inspector',
                 style: TextStyle(
                   color: GaussColors.brassLight,
-                  fontSize: 10,
+                  fontSize: GaussTypeScale.caption,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: 1.3,
+                  letterSpacing: .2,
                 ),
               ),
               const SizedBox(height: 8),
@@ -68,12 +68,12 @@ class _StudyInspector extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'UNIT · ${node.setLabel.toUpperCase()}',
+                          'Unit · ${node.setLabel}',
                           style: const TextStyle(
                             color: GaussColors.fog,
-                            fontSize: GaussTypeScale.insignia,
+                            fontSize: GaussTypeScale.caption,
                             fontWeight: FontWeight.w900,
-                            letterSpacing: .8,
+                            letterSpacing: .2,
                           ),
                         ),
                         const SizedBox(height: 5),
@@ -112,12 +112,12 @@ class _StudyInspector extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'STUDY LENS',
+                      'Study lens',
                       style: TextStyle(
                         color: GaussColors.brassLight,
-                        fontSize: GaussTypeScale.insignia,
+                        fontSize: GaussTypeScale.caption,
                         fontWeight: FontWeight.w900,
-                        letterSpacing: 1,
+                        letterSpacing: .2,
                       ),
                     ),
                     const SizedBox(height: 11),
@@ -179,7 +179,7 @@ class _StudyInspector extends StatelessWidget {
                 child: OrbitalActionControl(
                   key: const ValueKey('map-study-inspector-action'),
                   semanticLabel: 'Start five-question mission',
-                  caption: 'START 5',
+                  caption: 'Start 5',
                   onPressed: onOpen,
                   icon: Icons.rocket_launch_rounded,
                   dimension: 62,

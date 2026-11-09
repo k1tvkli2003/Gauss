@@ -74,11 +74,8 @@ class _SubjectProgressCard extends StatelessWidget {
                   color: accent.withValues(alpha: .11),
                   border: Border.all(color: accent.withValues(alpha: .42)),
                 ),
-                child: Icon(
-                  subject == Subject.math
-                      ? Icons.functions_rounded
-                      : Icons.bolt_rounded,
-                  color: accent,
+                child: Center(
+                  child: SubjectGlyph(subject: subject, color: accent),
                 ),
               ),
               const SizedBox(width: 12),

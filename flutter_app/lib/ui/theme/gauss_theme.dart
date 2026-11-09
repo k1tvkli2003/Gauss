@@ -139,7 +139,7 @@ ThemeData buildGaussTheme() {
       ),
       labelSmall: text.labelSmall?.copyWith(
         fontWeight: FontWeight.w700,
-        letterSpacing: .55,
+        letterSpacing: .2,
       ),
       bodyLarge: text.bodyLarge?.copyWith(height: 1.55),
       bodyMedium: text.bodyMedium?.copyWith(height: 1.48),

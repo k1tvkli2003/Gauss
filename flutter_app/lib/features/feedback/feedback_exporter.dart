@@ -239,7 +239,7 @@ final class GaussFeedbackExporter {
     for (final entry in entries) {
       output
         ..writeln()
-        ..writeln('## ${entry.kind.label} — ${entry.id}')
+        ..writeln('## ${entry.kind.label}: ${entry.id}')
         ..writeln()
         ..writeln('- Route: `${entry.route}`')
         ..writeln('- Created: ${entry.createdAt.toUtc().toIso8601String()}')

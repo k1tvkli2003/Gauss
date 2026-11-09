@@ -48,7 +48,6 @@ class InsightsScreen extends StatelessWidget {
               slivers: [
                 SliverToBoxAdapter(
                   child: _ObservatoryHeader(
-                    totalQuestions: controller.totalQuestions,
                     level: gamification.level,
                     levelProgress: gamification.levelProgress,
                     vaultAvailable: controller.backups.isSupported,
@@ -64,12 +63,16 @@ class InsightsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SliverToBoxAdapter(
-                  child: _MetricConstellation(
-                    study: study,
-                    totalQuestions: controller.totalQuestions,
+                // Four zeros say nothing to a new learner; the reflection
+                // instrument below carries the honest first-run state.
+                if (study.totalReflected > 0)
+                  SliverToBoxAdapter(
+                    child: _MetricConstellation(
+                      study: study,
+                      totalQuestions: controller.totalQuestions,
+                      totalUnits: controller.topics.length,
+                    ),
                   ),
-                ),
                 SliverToBoxAdapter(
                   child: _ReflectionInstrument(
                     study: study,
@@ -104,7 +107,7 @@ class InsightsScreen extends StatelessWidget {
                 ),
                 const SliverToBoxAdapter(
                   child: _SectionHeading(
-                    eyebrow: 'ATLAS COVERAGE',
+                    eyebrow: 'Atlas coverage',
                     title: 'Your explored sky',
                     detail:
                         'Progress means you reflected on a question. It never certifies the provided answer.',
@@ -115,10 +118,10 @@ class InsightsScreen extends StatelessWidget {
                 ),
                 const SliverToBoxAdapter(
                   child: _SectionHeading(
-                    eyebrow: 'PRIVATE CONSTELLATION',
+                    eyebrow: 'Private constellation',
                     title: 'Theorem seals',
                     detail:
-                        'Engraved milestones for charting, correction, and breadth — private, calm, and free of leaderboard pressure.',
+                        'Milestones for charting, correction, and breadth. Private, with no leaderboard.',
                   ),
                 ),
                 SliverPadding(
@@ -166,7 +169,6 @@ class _ObservatoryBackdrop extends StatelessWidget {
 
 class _ObservatoryHeader extends StatelessWidget {
   const _ObservatoryHeader({
-    required this.totalQuestions,
     required this.level,
     required this.levelProgress,
     required this.vaultAvailable,
@@ -174,7 +176,6 @@ class _ObservatoryHeader extends StatelessWidget {
     required this.onTools,
   });
 
-  final int totalQuestions;
   final int level;
   final double levelProgress;
   final bool vaultAvailable;
@@ -249,18 +250,18 @@ class _ObservatoryHeader extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  'PERSONAL CONSTELLATION',
+                  'Personal constellation',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: GaussColors.brassLight,
-                    fontSize: GaussTypeScale.insignia,
+                    fontSize: GaussTypeScale.caption,
                     fontWeight: FontWeight.w900,
-                    letterSpacing: 1.35,
+                    letterSpacing: .2,
                   ),
                 ),
                 const SizedBox(height: 3),
                 Text(
-                  '${_formatCount(totalQuestions)} questions · fully offline',
+                  'Your progress, kept on this device',
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: GaussColors.fog,

@@ -48,12 +48,12 @@ class _JumpSheet extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'JUMP TO',
+                          'Jump to',
                           style: TextStyle(
                             color: GaussColors.brassLight,
-                            fontSize: GaussTypeScale.insignia,
+                            fontSize: GaussTypeScale.caption,
                             fontWeight: FontWeight.w900,
-                            letterSpacing: 1.2,
+                            letterSpacing: .2,
                           ),
                         ),
                         Text(
@@ -183,7 +183,7 @@ class _JumpTile extends StatelessWidget {
                   switch (reflection) {
                     StudyReflection.clear => Icons.check_rounded,
                     StudyReflection.revisit => Icons.loop_rounded,
-                    StudyReflection.gem => Icons.auto_awesome_outlined,
+                    StudyReflection.gem => Icons.diamond_outlined,
                   },
                   size: 11,
                   color: accent,
@@ -338,7 +338,7 @@ class _ArchiveQuestionPosition extends StatelessWidget {
           child: QuestionProgressRail(
             index: index,
             total: total,
-            label: reflected ? 'CHARTED' : 'QUESTION',
+            label: reflected ? 'Charted' : 'Question',
             valueText: '${index + 1} of $total',
             valueKey: const ValueKey('study-room-navigation-position'),
           ),

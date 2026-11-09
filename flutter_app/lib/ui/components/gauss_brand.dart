@@ -2,7 +2,9 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import 'package:gauss/domain/models.dart';
 import 'package:gauss/ui/theme/gauss_theme.dart';
+import 'package:gauss/ui/tokens/gauss_tokens.dart';
 
 /// The ImageGen-directed, production-cleaned Gauss wordmark. Use this instead
 /// of live text wherever the product name acts as identity rather than copy.
@@ -649,4 +651,24 @@ class _TopicGlyphPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _TopicGlyphPainter oldDelegate) =>
       oldDelegate.keyName != keyName || oldDelegate.color != color;
+}
+
+/// The one subject mark used everywhere: summation for Mathematics, the
+/// atom for Physics. The lightning bolt is reserved for XP.
+class SubjectGlyph extends StatelessWidget {
+  const SubjectGlyph({
+    required this.subject,
+    required this.color,
+    this.size = GaussIconSizes.standard,
+    super.key,
+  });
+
+  final Subject subject;
+  final Color color;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) => subject == Subject.math
+      ? Icon(Icons.functions_rounded, color: color, size: size)
+      : TopicGlyph(topicKey: 'atomic_nuclear', color: color, size: size + 1);
 }

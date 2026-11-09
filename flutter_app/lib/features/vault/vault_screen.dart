@@ -137,12 +137,12 @@ class _VaultScreenState extends State<VaultScreen> {
           GaussWordmark(width: 92),
           SizedBox(width: 12),
           Text(
-            'VAULT',
+            'Vault',
             style: TextStyle(
               color: GaussColors.brassLight,
-              fontSize: GaussTypeScale.insignia,
+              fontSize: GaussTypeScale.caption,
               fontWeight: FontWeight.w900,
-              letterSpacing: 1.2,
+              letterSpacing: .2,
             ),
           ),
         ],

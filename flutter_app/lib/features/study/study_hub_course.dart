@@ -26,7 +26,6 @@ class _CourseInstrument extends StatelessWidget {
               final stacked =
                   constraints.maxWidth <
                   _StudyGeometry.compactCourseBreakpoint - 50;
-              final pairedVertical = (constraints.maxWidth - 12) / 2 < 145;
               final options = [
                 for (final item in Subject.values)
                   _CourseOption(
@@ -46,16 +45,14 @@ class _CourseInstrument extends StatelessWidget {
                         options.last,
                       ],
                     )
-                  : SizedBox(
-                      height: pairedVertical ? 96 : 70,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Expanded(child: options.first),
-                          const SizedBox(width: 12),
-                          Expanded(child: options.last),
-                        ],
-                      ),
+                  // Both options share one structure, so they size to the
+                  // same content height; a fixed height clipped real fonts.
+                  : Row(
+                      children: [
+                        Expanded(child: options.first),
+                        const SizedBox(width: 12),
+                        Expanded(child: options.last),
+                      ],
                     );
               final choices = accessible
                   ? MediaQuery.withClampedTextScaling(
@@ -82,10 +79,17 @@ class _CourseInstrument extends StatelessWidget {
                             color: GaussColors.brass.withValues(alpha: .62),
                           ),
                         ),
-                        child: const Icon(
-                          Icons.star_rounded,
-                          size: 8,
-                          color: GaussColors.brassLight,
+                        // The brass orbital ring motif marks the axis
+                        // shared by the two courses.
+                        child: Center(
+                          child: Container(
+                            width: 6,
+                            height: 6,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: GaussColors.brassLight,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -192,12 +196,12 @@ class _CourseOption extends StatelessWidget {
                       color: foreground.withValues(alpha: .28),
                     ),
                   ),
-                  child: Icon(
-                    subject == Subject.math
-                        ? Icons.functions_rounded
-                        : Icons.electric_bolt_rounded,
-                    size: compact ? 17 : 19,
-                    color: foreground,
+                  child: Center(
+                    child: SubjectGlyph(
+                      subject: subject,
+                      size: compact ? 17 : 19,
+                      color: foreground,
+                    ),
                   ),
                 );
                 final copy = Column(
