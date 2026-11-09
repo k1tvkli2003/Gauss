@@ -517,13 +517,6 @@ class _OfflineDot extends StatelessWidget {
     decoration: BoxDecoration(
       shape: BoxShape.circle,
       color: GaussColors.signalBright,
-      boxShadow: [
-        BoxShadow(
-          color: GaussColors.signal.withValues(alpha: .48),
-          blurRadius: 9,
-          spreadRadius: 1,
-        ),
-      ],
     ),
   );
 }

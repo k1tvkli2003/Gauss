@@ -325,12 +325,6 @@ class _CelebrationVisual extends StatelessWidget {
                         color: GaussColors.deepInk.withValues(alpha: .96),
                         borderRadius: BorderRadius.circular(GaussRadii.pill),
                         border: Border.all(color: GaussColors.brassLight),
-                        boxShadow: [
-                          BoxShadow(
-                            color: GaussColors.brass.withValues(alpha: .2),
-                            blurRadius: 18,
-                          ),
-                        ],
                       ),
                       child: Text(
                         sealLabel,

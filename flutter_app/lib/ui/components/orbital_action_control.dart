@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 
 import 'package:gauss/ui/tokens/gauss_tokens.dart';
@@ -7,7 +5,7 @@ import 'package:gauss/ui/theme/gauss_theme.dart';
 
 /// A symbol-first primary action for Gauss' map and study surfaces.
 ///
-/// The visible control is an orbital gate rather than a generic text box. Its
+/// The visible control is a plain filled disc rather than a generic text box. Its
 /// meaning remains explicit to assistive technology and through the optional
 /// external caption, so brand expression never comes at the cost of clarity.
 class OrbitalActionControl extends StatefulWidget {
@@ -107,10 +105,10 @@ class _OrbitalActionControlState extends State<OrbitalActionControl> {
             textAlign: TextAlign.center,
             softWrap: true,
             style: TextStyle(
-              color: enabled ? GaussColors.brassLight : GaussColors.muted,
+              color: enabled ? GaussColors.ivory : GaussColors.muted,
               fontSize: GaussTypeScale.caption,
-              fontWeight: FontWeight.w900,
-              letterSpacing: .45,
+              fontWeight: FontWeight.w800,
+              letterSpacing: .1,
               height: 1.15,
             ),
           ),
@@ -131,55 +129,32 @@ class _OrbitalGatePainter extends CustomPainter {
   final bool enabled;
   final bool pressed;
 
+  // A plain filled disc: the action is the brightest object on the screen,
+  // so it needs no halo, gradient or tick ring to be found.
   @override
   void paint(Canvas canvas, Size size) {
     final center = size.center(Offset.zero);
-    final radius = size.shortestSide / 2;
-    final activeAccent = enabled ? accent : GaussColors.muted;
-
+    final radius = size.shortestSide / 2 - 3;
+    if (!enabled) {
+      canvas.drawCircle(center, radius, Paint()..color = GaussColors.surface);
+      canvas.drawCircle(
+        center,
+        radius - .5,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1
+          ..color = GaussColors.line,
+      );
+      return;
+    }
     canvas.drawCircle(
       center,
-      radius - 3,
+      radius,
       Paint()
-        ..color = GaussColors.deepInk.withValues(alpha: .96)
-        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 7),
+        ..color = pressed
+            ? Color.lerp(accent, GaussColors.brass, .45)!
+            : accent,
     );
-    canvas.drawCircle(
-      center,
-      radius - 6,
-      Paint()
-        ..shader = RadialGradient(
-          colors: [
-            activeAccent.withValues(alpha: enabled ? .96 : .34),
-            GaussColors.brass.withValues(alpha: enabled ? .72 : .2),
-          ],
-          stops: const [.42, 1],
-        ).createShader(Rect.fromCircle(center: center, radius: radius - 6)),
-    );
-
-    final outer = Rect.fromCircle(center: center, radius: radius - 1.5);
-    final ring = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..strokeWidth = pressed ? 2.4 : 1.7
-      ..color = activeAccent.withValues(alpha: enabled ? .92 : .35);
-    for (var index = 0; index < 4; index++) {
-      final start = -.42 + index * math.pi / 2;
-      canvas.drawArc(outer, start, .56, false, ring);
-    }
-
-    final innerRing = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1
-      ..color = GaussColors.abyss.withValues(alpha: .48);
-    canvas.drawCircle(center, radius * .48, innerRing);
-
-    for (var index = 0; index < 4; index++) {
-      final angle = index * math.pi / 2;
-      final marker =
-          center + Offset(math.cos(angle), math.sin(angle)) * (radius - 4.3);
-      canvas.drawCircle(marker, 1.55, Paint()..color = activeAccent);
-    }
   }
 
   @override

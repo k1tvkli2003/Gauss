@@ -164,15 +164,6 @@ class _ConstellationRail extends StatelessWidget {
                             : GaussColors.fog.withValues(alpha: .72),
                         width: step == index ? 2 : 1.2,
                       ),
-                      boxShadow: step == index
-                          ? [
-                              BoxShadow(
-                                color: accent.withValues(alpha: .46),
-                                blurRadius: 14,
-                                spreadRadius: 1,
-                              ),
-                            ]
-                          : null,
                     ),
                     child: Text(
                       '${step + 1}',

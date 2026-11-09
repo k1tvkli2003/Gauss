@@ -205,6 +205,7 @@ class _StudyBackdrop extends StatelessWidget {
     children: [
       Image(
         image: GaussImages.atmosphere,
+        opacity: const AlwaysStoppedAnimation(.42),
         fit: BoxFit.cover,
         filterQuality: FilterQuality.medium,
       ),
@@ -279,8 +280,9 @@ class _StudyHeader extends StatelessWidget {
                       child: SizedBox.square(
                         key: const ValueKey('study-scratch-track'),
                         dimension: _StudyGeometry.controlTrack,
-                        child: IconButton.filledTonal(
+                        child: IconButton(
                           key: const ValueKey('study-header-scratchpad'),
+                          color: GaussColors.ivory,
                           onPressed: onScratchpad,
                           tooltip: 'Open scratchpad',
                           icon: const Icon(Icons.draw_outlined),

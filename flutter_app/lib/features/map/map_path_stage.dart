@@ -261,18 +261,6 @@ class _StudyPathBand extends StatelessWidget {
         Positioned.fill(
           child: ExcludeSemantics(
             child: CustomPaint(
-              painter: _StageInstrumentPainter(
-                current: geometry.positions[currentIndex],
-                nodeSize: geometry.nodeSize,
-                bandTop: band.top,
-                sceneHeight: geometry.height,
-              ),
-            ),
-          ),
-        ),
-        Positioned.fill(
-          child: ExcludeSemantics(
-            child: CustomPaint(
               painter: _ContinuousPathPainter(
                 geometry: geometry,
                 subject: nodes.first.topic.subject,
@@ -530,12 +518,6 @@ class _SectionGateNumber extends StatelessWidget {
       shape: BoxShape.circle,
       color: GaussColors.abyss,
       border: Border.all(color: GaussColors.brassLight.withValues(alpha: .78)),
-      boxShadow: [
-        BoxShadow(
-          color: GaussColors.brassLight.withValues(alpha: .16),
-          blurRadius: 10,
-        ),
-      ],
     ),
     child: Text(
       '$value',
@@ -576,20 +558,7 @@ class _PathLandmark extends StatelessWidget {
                 Container(
                   width: landmark.size * .58,
                   height: landmark.size * .58,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                        color:
-                            (landmark.kind == 2
-                                    ? GaussColors.ice
-                                    : GaussColors.brass)
-                                .withValues(alpha: .16),
-                        blurRadius: landmark.size * .24,
-                        spreadRadius: landmark.size * .025,
-                      ),
-                    ],
-                  ),
+                  decoration: BoxDecoration(shape: BoxShape.circle),
                 ),
                 Image.asset(
                   opacity: AlwaysStoppedAnimation(
@@ -640,127 +609,6 @@ class _PathLandmark extends StatelessWidget {
       ),
     );
   }
-}
-
-/// Quiet astrolabe scaffolding behind the path. It gives wide stages the same
-/// authored astronomical depth as the accepted direction without turning the
-/// continuous learning route back into a set of disconnected orbit menus.
-class _StageInstrumentPainter extends CustomPainter {
-  const _StageInstrumentPainter({
-    required this.current,
-    required this.nodeSize,
-    required this.bandTop,
-    required this.sceneHeight,
-  });
-
-  final Offset current;
-  final double nodeSize;
-  final double bandTop;
-  final double sceneHeight;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    canvas.save();
-    canvas.translate(0, -bandTop);
-    final expanded = size.width >= 760;
-    final majorRadius = math.min(
-      size.width * (expanded ? .58 : .66),
-      expanded ? 460.0 : 310.0,
-    );
-    final orbitPaint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1
-      ..color = GaussColors.brass.withValues(alpha: expanded ? .105 : .075);
-    final finePaint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = .7
-      ..color = GaussColors.ice.withValues(alpha: .055);
-    final pinPaint = Paint()
-      ..color = GaussColors.brassLight.withValues(alpha: .18);
-
-    final firstCenter = math
-        .max(330.0, ((bandTop - 380) / 720).floor() * 720 + 330)
-        .toDouble();
-    final lastCenter = math
-        .min(sceneHeight + 300, bandTop + size.height + 380)
-        .toDouble();
-    for (var centerY = firstCenter; centerY < lastCenter; centerY += 720) {
-      final center = Offset(size.width * .5, centerY);
-      for (final scale in const [.58, .79, 1.0]) {
-        canvas.drawOval(
-          Rect.fromCenter(
-            center: center,
-            width: majorRadius * 2 * scale,
-            height: majorRadius * .78 * scale,
-          ),
-          scale == 1 ? orbitPaint : finePaint,
-        );
-      }
-      canvas.drawLine(
-        Offset(center.dx - majorRadius, center.dy),
-        Offset(center.dx + majorRadius, center.dy),
-        finePaint,
-      );
-      canvas.drawLine(
-        Offset(center.dx, center.dy - majorRadius * .39),
-        Offset(center.dx, center.dy + majorRadius * .39),
-        finePaint,
-      );
-      for (var tick = 0; tick < 12; tick++) {
-        final angle = tick * math.pi * 2 / 12;
-        canvas.drawCircle(
-          Offset(
-            center.dx + math.cos(angle) * majorRadius,
-            center.dy + math.sin(angle) * majorRadius * .39,
-          ),
-          tick.isEven ? 1.35 : .8,
-          pinPaint,
-        );
-      }
-      canvas.drawCircle(
-        center,
-        4.5,
-        Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 1
-          ..color = GaussColors.signalBright.withValues(alpha: .12),
-      );
-    }
-    final focusPaint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round;
-    final focusRect = Rect.fromCircle(center: current, radius: nodeSize * .71);
-    focusPaint
-      ..strokeWidth = 1.3
-      ..color = GaussColors.signalBright.withValues(alpha: .34);
-    canvas.drawArc(focusRect, -.3, math.pi * .72, false, focusPaint);
-    focusPaint
-      ..strokeWidth = 1
-      ..color = GaussColors.brassLight.withValues(alpha: .26);
-    canvas.drawArc(
-      focusRect.inflate(nodeSize * .12),
-      math.pi * .84,
-      math.pi * .62,
-      false,
-      focusPaint,
-    );
-    canvas.drawCircle(
-      current,
-      nodeSize * .92,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = .8
-        ..color = GaussColors.brass.withValues(alpha: .13),
-    );
-    canvas.restore();
-  }
-
-  @override
-  bool shouldRepaint(covariant _StageInstrumentPainter oldDelegate) =>
-      oldDelegate.current != current ||
-      oldDelegate.nodeSize != nodeSize ||
-      oldDelegate.bandTop != bandTop ||
-      oldDelegate.sceneHeight != sceneHeight;
 }
 
 /// The reference route keeps the names attached to their instruments, instead

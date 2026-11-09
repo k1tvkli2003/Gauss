@@ -387,14 +387,6 @@ class TheoremChoiceShell extends StatelessWidget {
                       color: active ? accent : GaussColors.line,
                       width: active ? 1.7 : 1,
                     ),
-                    boxShadow: active
-                        ? [
-                            BoxShadow(
-                              color: accent.withValues(alpha: .13),
-                              blurRadius: 18,
-                            ),
-                          ]
-                        : null,
                   ),
                   child: active
                       ? CustomPaint(

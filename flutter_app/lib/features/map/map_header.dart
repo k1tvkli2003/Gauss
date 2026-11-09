@@ -406,44 +406,6 @@ class _CompactDailyProgress extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    Positioned(
-                      left: compact ? 25 : 42,
-                      right: compact ? 25 : 42,
-                      child: Container(
-                        height: 1,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              accent.withValues(alpha: .22),
-                              GaussColors.brassLight.withValues(alpha: .72),
-                              GaussColors.signalBright.withValues(alpha: .22),
-                            ],
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: accent.withValues(alpha: .18),
-                              blurRadius: 8,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 4,
-                      height: 4,
-                      decoration: BoxDecoration(
-                        color: GaussColors.ivory,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: GaussColors.brassLight.withValues(
-                              alpha: .58,
-                            ),
-                            blurRadius: 7,
-                          ),
-                        ],
-                      ),
-                    ),
                     Row(
                       children: [
                         Expanded(
@@ -508,13 +470,12 @@ class _DailyOrbitMetric extends StatelessWidget {
     ),
     height: 52,
     padding: EdgeInsets.symmetric(horizontal: compact ? 2 : 7),
+    // A quiet tonal chip: the icon carries the metric's color, the chip
+    // itself stays neutral so the header does not compete with the route.
     decoration: BoxDecoration(
-      color: GaussColors.deepInk.withValues(alpha: .56),
+      color: GaussColors.surface.withValues(alpha: .92),
       borderRadius: BorderRadius.circular(compact ? 26 : 18),
-      border: Border.all(color: accent.withValues(alpha: .74)),
-      boxShadow: [
-        BoxShadow(color: accent.withValues(alpha: .1), blurRadius: 10),
-      ],
+      border: Border.all(color: GaussColors.hairline),
     ),
     child: MediaQuery.withClampedTextScaling(
       maxScaleFactor: 1.25,
@@ -563,11 +524,10 @@ class _DailyOrbitMetric extends StatelessWidget {
                   label,
                   maxLines: 1,
                   softWrap: false,
-                  style: TextStyle(
-                    color: accent,
-                    fontSize: 7,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: .45,
+                  style: const TextStyle(
+                    color: GaussColors.fog,
+                    fontSize: GaussTypeScale.insignia,
+                    fontWeight: FontWeight.w700,
                     height: 1,
                   ),
                 ),

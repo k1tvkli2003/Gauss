@@ -223,14 +223,6 @@ class _SectionAtlasCardState extends State<_SectionAtlasCard> {
                               gradient: const LinearGradient(
                                 colors: [Color(0xFFE1AD4C), Color(0xFF8B5713)],
                               ),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: GaussColors.brass.withValues(
-                                    alpha: .25,
-                                  ),
-                                  blurRadius: 16,
-                                ),
-                              ],
                             ),
                             child: Text(
                               '${widget.number}',

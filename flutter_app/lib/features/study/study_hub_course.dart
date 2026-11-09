@@ -141,15 +141,9 @@ class _CourseOption extends StatelessWidget {
             constraints: const BoxConstraints(minHeight: 58),
             padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 7),
             decoration: BoxDecoration(
-              gradient: selected
-                  ? LinearGradient(
-                      colors: subject == Subject.math
-                          ? const [Color(0xFF6F4A16), Color(0xFF2A2117)]
-                          : const [Color(0xFF245E66), Color(0xFF132D35)],
-                    )
-                  : null,
+              // Selection reads from tone and one brass edge, not a gradient.
               color: selected
-                  ? null
+                  ? GaussColors.panelHigh
                   : GaussColors.raised.withValues(alpha: .42),
               borderRadius: BorderRadius.circular(18),
               border: Border.all(
@@ -160,18 +154,6 @@ class _CourseOption extends StatelessWidget {
                           .withValues(alpha: .58)
                     : GaussColors.hairline,
               ),
-              boxShadow: selected
-                  ? [
-                      BoxShadow(
-                        color:
-                            (subject == Subject.math
-                                    ? GaussColors.brass
-                                    : GaussColors.signal)
-                                .withValues(alpha: .12),
-                        blurRadius: 16,
-                      ),
-                    ]
-                  : null,
             ),
             child: LayoutBuilder(
               builder: (context, constraints) {

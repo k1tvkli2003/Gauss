@@ -171,14 +171,6 @@ class _ActivityStar extends StatelessWidget {
                   ? GaussColors.hairline
                   : GaussColors.brassLight.withValues(alpha: strength),
             ),
-            boxShadow: value == 0
-                ? null
-                : [
-                    BoxShadow(
-                      color: GaussColors.brass.withValues(alpha: strength * .4),
-                      blurRadius: 8,
-                    ),
-                  ],
           ),
         ),
       ),

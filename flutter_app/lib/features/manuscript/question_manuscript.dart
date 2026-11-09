@@ -732,23 +732,9 @@ class _ManuscriptFramePainter extends CustomPainter {
       outer,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.5
-        ..color = GaussColors.brass.withValues(alpha: .72),
+        ..strokeWidth = 1
+        ..color = GaussColors.brass.withValues(alpha: .5),
     );
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(
-        (Offset.zero & size).deflate(7),
-        const Radius.circular(18),
-      ),
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = .7
-        ..color = GaussColors.parchmentInk.withValues(alpha: .22),
-    );
-    final glow = Paint()
-      ..color = accent.withValues(alpha: .44)
-      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 8);
-    canvas.drawCircle(Offset(size.width / 2, size.height - 2), 3, glow);
   }
 
   @override
@@ -761,32 +747,20 @@ class _ChoiceEngravingPainter extends CustomPainter {
   final Color accent;
   final bool active;
 
+  // One rounded hairline. The row's state is carried by the trailing glyph
+  // and this stroke's weight, not by notched corners and inner rules.
   @override
   void paint(Canvas canvas, Size size) {
-    const notch = 7.0;
-    final path = Path()
-      ..moveTo(notch, .8)
-      ..lineTo(size.width - notch, .8)
-      ..lineTo(size.width - .8, notch)
-      ..lineTo(size.width - .8, size.height - notch)
-      ..lineTo(size.width - notch, size.height - .8)
-      ..lineTo(notch, size.height - .8)
-      ..lineTo(.8, size.height - notch)
-      ..lineTo(.8, notch)
-      ..close();
-    canvas.drawPath(
-      path,
+    final inset = active ? .75 : .5;
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+        (Offset.zero & size).deflate(inset),
+        const Radius.circular(GaussRadii.small),
+      ),
       Paint()
         ..style = PaintingStyle.stroke
         ..strokeWidth = active ? 1.5 : 1
-        ..color = accent.withValues(alpha: active ? .9 : .56),
-    );
-    canvas.drawLine(
-      const Offset(61, 7),
-      Offset(61, size.height - 7),
-      Paint()
-        ..strokeWidth = .7
-        ..color = accent.withValues(alpha: .34),
+        ..color = accent.withValues(alpha: active ? .9 : .4),
     );
   }
 
@@ -803,18 +777,21 @@ class _ChoiceSealPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final center = size.center(Offset.zero);
-    final ring = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = active ? 1.7 : 1
-      ..color = accent.withValues(alpha: active ? .94 : .58);
-    canvas.drawCircle(center, 22, ring);
-    canvas.drawCircle(center, 17, ring..strokeWidth = .65);
-    for (var index = 0; index < 4; index++) {
-      final angle = index * math.pi / 2;
-      final start = center + Offset(math.cos(angle), math.sin(angle)) * 19;
-      final end = center + Offset(math.cos(angle), math.sin(angle)) * 23;
-      canvas.drawLine(start, end, ring);
+    if (active) {
+      canvas.drawCircle(
+        center,
+        20,
+        Paint()..color = accent.withValues(alpha: .14),
+      );
     }
+    canvas.drawCircle(
+      center,
+      20,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = active ? 1.5 : 1
+        ..color = accent.withValues(alpha: active ? .9 : .5),
+    );
   }
 
   @override

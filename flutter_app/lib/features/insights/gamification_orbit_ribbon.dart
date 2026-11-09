@@ -56,13 +56,6 @@ class GamificationOrbitRibbon extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(GaussRadii.large),
               border: Border.all(color: GaussColors.line),
-              boxShadow: [
-                BoxShadow(
-                  color: GaussColors.brassDeep.withValues(alpha: .16),
-                  blurRadius: 24,
-                  offset: const Offset(0, 10),
-                ),
-              ],
             ),
             child: Padding(
               padding: const EdgeInsets.all(GaussSpacing.space16),
@@ -693,9 +686,6 @@ class _OrbitProgressTrack extends StatelessWidget {
               decoration: BoxDecoration(
                 color: color,
                 borderRadius: BorderRadius.circular(GaussRadii.pill),
-                boxShadow: [
-                  BoxShadow(color: color.withValues(alpha: .3), blurRadius: 8),
-                ],
               ),
             ),
           ),

@@ -269,12 +269,6 @@ class _OrbitIndexRing extends StatelessWidget {
         color: GaussColors.signalBright.withValues(alpha: .72),
         width: 1.6,
       ),
-      boxShadow: [
-        BoxShadow(
-          color: GaussColors.signalBright.withValues(alpha: .16),
-          blurRadius: 12,
-        ),
-      ],
     ),
     child: MediaQuery.withClampedTextScaling(
       maxScaleFactor: 1.35,
@@ -643,9 +637,6 @@ class _OrbitChapterLink extends StatelessWidget {
             color.withValues(alpha: active ? .9 : .5),
           ],
         ),
-        boxShadow: active
-            ? [BoxShadow(color: color.withValues(alpha: .2), blurRadius: 7)]
-            : null,
       ),
     );
   }
@@ -734,15 +725,6 @@ class _OrbitChapterBeacon extends StatelessWidget {
                               alpha: selected ? .82 : .34,
                             ),
                           ),
-                          boxShadow: selected
-                              ? [
-                                  BoxShadow(
-                                    color: accent.withValues(alpha: .24),
-                                    blurRadius: 14,
-                                    spreadRadius: 1,
-                                  ),
-                                ]
-                              : null,
                         ),
                         child: MediaQuery.withClampedTextScaling(
                           maxScaleFactor: 1.3,
@@ -1009,48 +991,6 @@ class _SubjectSwitch extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Positioned(
-              left: compact ? 25 : 42,
-              right: compact ? 25 : 42,
-              child: Container(
-                height: 1,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      GaussColors.brass.withValues(alpha: .18),
-                      GaussColors.brassLight.withValues(alpha: .72),
-                      GaussColors.ice.withValues(alpha: .2),
-                    ],
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color:
-                          (mathSelected
-                                  ? GaussColors.brassLight
-                                  : GaussColors.ice)
-                              .withValues(alpha: .2),
-                      blurRadius: 8,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              child: Container(
-                width: 4,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: GaussColors.ivory,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: GaussColors.brassLight.withValues(alpha: .58),
-                      blurRadius: 7,
-                    ),
-                  ],
-                ),
-              ),
-            ),
             Row(
               children: [
                 Expanded(
@@ -1137,15 +1077,6 @@ class _SubjectOrbitButton extends StatelessWidget {
                     : GaussColors.hairline.withValues(alpha: .78),
                 width: selected ? 1.6 : 1,
               ),
-              boxShadow: selected
-                  ? [
-                      BoxShadow(
-                        color: accent.withValues(alpha: .22),
-                        blurRadius: 14,
-                        spreadRadius: 1,
-                      ),
-                    ]
-                  : null,
             ),
             child: MediaQuery.withClampedTextScaling(
               maxScaleFactor: 1.35,

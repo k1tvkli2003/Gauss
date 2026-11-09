@@ -51,13 +51,6 @@ class _StudyDock extends StatelessWidget {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              Positioned.fill(
-                child: ExcludeSemantics(
-                  child: CustomPaint(
-                    painter: _MissionCompassFramePainter(accent: accent),
-                  ),
-                ),
-              ),
               Row(
                 key: const ValueKey('map-study-dock-main-row'),
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -124,12 +117,6 @@ class _StudyDock extends StatelessWidget {
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: accent,
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: accent.withValues(alpha: .3),
-                                            blurRadius: 7,
-                                          ),
-                                        ],
                                       ),
                                     ),
                                     const SizedBox(width: 6),
@@ -210,45 +197,6 @@ class _StudyDock extends StatelessWidget {
   }
 }
 
-class _MissionCompassFramePainter extends CustomPainter {
-  const _MissionCompassFramePainter({required this.accent});
-
-  final Color accent;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final y = size.height / 2;
-    final rail = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.1
-      ..color = GaussColors.brass.withValues(alpha: .48);
-    canvas.drawLine(
-      const Offset(26, 0) + Offset(0, y),
-      Offset(size.width - 26, y),
-      rail,
-    );
-    final orbit = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..strokeWidth = 1.3
-      ..color = accent.withValues(alpha: .58);
-    for (final x in [24.0, size.width - 24]) {
-      final rect = Rect.fromCircle(center: Offset(x, y), radius: 25);
-      canvas.drawArc(rect, -.85, math.pi * .55, false, orbit);
-      canvas.drawArc(rect, math.pi * .72, math.pi * .38, false, orbit);
-    }
-    canvas.drawCircle(
-      Offset(size.width / 2, y),
-      1.7,
-      Paint()..color = accent.withValues(alpha: .72),
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant _MissionCompassFramePainter oldDelegate) =>
-      oldDelegate.accent != accent;
-}
-
 class _StudyDockAction extends StatelessWidget {
   const _StudyDockAction({required this.onPressed});
 
@@ -285,14 +233,6 @@ class _FiveQuestionTrack extends StatelessWidget {
                   ? GaussColors.brassLight
                   : GaussColors.hairline,
               borderRadius: BorderRadius.circular(GaussRadii.pill),
-              boxShadow: index < reflected
-                  ? [
-                      BoxShadow(
-                        color: GaussColors.signalBright.withValues(alpha: .3),
-                        blurRadius: 5,
-                      ),
-                    ]
-                  : null,
             ),
           ),
         ),
@@ -345,13 +285,6 @@ class _StudyDockEmblem extends StatelessWidget {
           ],
         ),
         border: Border.all(color: accent.withValues(alpha: .78), width: 1.4),
-        boxShadow: [
-          BoxShadow(
-            color: accent.withValues(alpha: .18),
-            blurRadius: 16,
-            spreadRadius: 1,
-          ),
-        ],
       ),
       child: Stack(
         alignment: Alignment.center,

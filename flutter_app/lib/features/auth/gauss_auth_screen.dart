@@ -48,6 +48,7 @@ class _GaussAuthScreenState extends State<GaussAuthScreen> {
       children: [
         Image(
           image: GaussImages.atmosphere,
+          opacity: const AlwaysStoppedAnimation(.42),
           fit: BoxFit.cover,
           alignment: Alignment.topCenter,
           filterQuality: FilterQuality.medium,

@@ -7,22 +7,39 @@ and `AGENTS.md`. Code tokens live in `flutter_app/lib/ui/tokens/`.
 `antislop` filters against this file; `ui-ux-pro-max` supplies Flutter and UX
 checks. Neither replaces it.
 
-Dial: ENERGY 3 / RHYTHM 2 / MOTION 2
+Dial: ENERGY 2 / RHYTHM 2 / MOTION 2
 
-Design Read: a private, single-learner math and physics adventure for one
-Persian-reading student on Android, in a celestial expedition language
-(night sky, brass instruments, parchment manuscripts), dial 3 / 2 / 2.
+Owner direction (2026-11-09): a very smooth, modern environment. Not as
+colorful or ornate as the adventure preview images. Minimal, but never dull.
+Keep the current icons, fonts and illustrated items (stations, landmarks,
+wordmark); remove the ornament around them.
+
+Design Read: a private, single-learner math and physics study app for one
+Persian-reading student on Android, in a quiet night-sky language where the
+illustrated stations and the parchment manuscript are the only rich
+objects, dial 2 / 2 / 2.
 
 ## Identity
 
 - Gauss is an instrument for navigating knowledge, not a dashboard and not a
   school test sheet.
-- The island/orrery Map is the primary surface and fills the screen. HUD,
-  rewards, navigation and lesson actions float over it as game chrome.
+- The Map is the primary surface and fills the screen. Chrome floats over it
+  as calm, opaque tonal panels.
 - A question is one continuous, writable manuscript: prompt, ink and answer
   rails are a single object.
-- Rewards are earned receipts, never pressure. No leagues, no social
-  comparison, no loss-aversion copy.
+- Richness lives in content (station art, parchment, the learner's ink). The
+  interface around it is matte and quiet: no ticks, engraved rings, brackets,
+  grids, starfields or glows as decoration.
+- Rewards are earned receipts, never pressure.
+
+## Surfaces
+
+- One card surface (`GaussSurface`): opaque `surface #101B1E` or
+  `surfaceInset #0B1417`, neutral hairline, radius 20. No gradients, no blur,
+  no brass outlines. `emphasized` marks the single current item.
+- Blur only on the floating navigation (one element).
+- Buttons are plain shapes: a filled brass primary, tonal secondaries, and
+  icon buttons without rings.
 
 ## Palette (2 core + 1 accent + neutrals)
 

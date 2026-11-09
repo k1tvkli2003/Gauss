@@ -334,6 +334,7 @@ class _AstronomicalBackdrop extends StatelessWidget {
     children: [
       Image(
         image: GaussImages.atmosphere,
+        opacity: const AlwaysStoppedAnimation(.42),
         fit: BoxFit.cover,
         alignment: Alignment.topCenter,
         filterQuality: FilterQuality.low,
@@ -352,35 +353,8 @@ class _AstronomicalBackdrop extends StatelessWidget {
           ),
         ),
       ),
-      const CustomPaint(painter: _StarFieldPainter()),
     ],
   );
-}
-
-class _StarFieldPainter extends CustomPainter {
-  const _StarFieldPainter();
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final random = math.Random(9077);
-    for (var index = 0; index < 150; index++) {
-      final center = Offset(
-        random.nextDouble() * size.width,
-        random.nextDouble() * size.height,
-      );
-      final bright = random.nextDouble() > .88;
-      canvas.drawCircle(
-        center,
-        bright ? 1.15 : .55,
-        Paint()
-          ..color = (bright ? GaussColors.brassLight : GaussColors.ice)
-              .withValues(alpha: bright ? .45 : .22),
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
 int _boundedRasterWidth(

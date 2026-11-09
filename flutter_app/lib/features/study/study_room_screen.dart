@@ -627,6 +627,7 @@ class _ArchiveBackdrop extends StatelessWidget {
     children: [
       Image(
         image: GaussImages.atmosphere,
+        opacity: const AlwaysStoppedAnimation(.42),
         fit: BoxFit.cover,
         filterQuality: FilterQuality.low,
       ),

@@ -153,6 +153,7 @@ class _VaultScreenState extends State<VaultScreen> {
       children: [
         Image(
           image: GaussImages.atmosphere,
+          opacity: const AlwaysStoppedAnimation(.42),
           fit: BoxFit.cover,
           alignment: Alignment.topCenter,
           filterQuality: FilterQuality.medium,

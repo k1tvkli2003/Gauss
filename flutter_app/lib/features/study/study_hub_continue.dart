@@ -578,12 +578,6 @@ class _OrbitEmblem extends StatelessWidget {
               colors: [Color(0xFF17353A), GaussColors.deepInk],
             ),
             border: Border.all(color: GaussColors.brass, width: 2),
-            boxShadow: [
-              BoxShadow(
-                color: GaussColors.brass.withValues(alpha: .18),
-                blurRadius: 24,
-              ),
-            ],
           ),
           child: Center(child: TheoremStarMark(size: dimension * .44)),
         ),
