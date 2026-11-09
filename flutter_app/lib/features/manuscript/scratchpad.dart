@@ -252,12 +252,16 @@ class _InlineQuestionScratchState extends State<InlineQuestionScratch> {
           child: Stack(
             fit: StackFit.passthrough,
             children: [
-              widget.child,
+              // Separate layers: a pen sample re-records only the ink layer,
+              // while the prompt, math and answers stay a cached picture.
+              RepaintBoundary(child: widget.child),
               Positioned.fill(
                 child: IgnorePointer(
-                  child: CustomPaint(
-                    key: const ValueKey('inline-ink-canvas'),
-                    painter: _ScratchPainter(ink: _ink, drawGrid: false),
+                  child: RepaintBoundary(
+                    child: CustomPaint(
+                      key: const ValueKey('inline-ink-canvas'),
+                      painter: _ScratchPainter(ink: _ink, drawGrid: false),
+                    ),
                   ),
                 ),
               ),
@@ -628,10 +632,12 @@ class _ScratchpadSheetState extends State<_ScratchpadSheet> {
                     baseWidth: _strokeWidth,
                     allowTouch: true,
                     erase: false,
-                    child: CustomPaint(
-                      key: const ValueKey('scratchpad-ink-canvas'),
-                      painter: _ScratchPainter(ink: _ink, drawGrid: true),
-                      child: const SizedBox.expand(),
+                    child: RepaintBoundary(
+                      child: CustomPaint(
+                        key: const ValueKey('scratchpad-ink-canvas'),
+                        painter: _ScratchPainter(ink: _ink, drawGrid: true),
+                        child: const SizedBox.expand(),
+                      ),
                     ),
                   ),
                 ),
@@ -1335,22 +1341,13 @@ class _ScratchPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    if (drawGrid) {
-      final grid = Paint()
-        ..color = const Color(0xFFBCA778).withValues(alpha: .22)
-        ..strokeWidth = .7;
-      for (var x = 24.0; x < size.width; x += 24) {
-        canvas.drawLine(Offset(x, 0), Offset(x, size.height), grid);
-      }
-      for (var y = 24.0; y < size.height; y += 24) {
-        canvas.drawLine(Offset(0, y), Offset(size.width, y), grid);
-      }
-    }
-
+    // The grid and every committed stroke live in one cached picture, so a
+    // pen sample repaints only the stroke being drawn.
     if (_pictureRevision != ink._committedRevision || _committedSize != size) {
       _committedPicture?.dispose();
       final recorder = ui.PictureRecorder();
       final committedCanvas = Canvas(recorder);
+      if (drawGrid) _drawGrid(committedCanvas, size);
       _drawStrokes(
         committedCanvas,
         size,
@@ -1369,6 +1366,22 @@ class _ScratchPainter extends CustomPainter {
     );
   }
 
+  static void _drawGrid(Canvas canvas, Size size) {
+    final grid = Paint()
+      ..color = const Color(0xFFBCA778).withValues(alpha: .22)
+      ..strokeWidth = .7;
+    for (var x = 24.0; x < size.width; x += 24) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), grid);
+    }
+    for (var y = 24.0; y < size.height; y += 24) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), grid);
+    }
+  }
+
+  /// Width steps finer than this are invisible, so consecutive segments
+  /// within one step share a single path and draw call.
+  static const _widthStep = .25;
+
   static void _drawStrokes(
     Canvas canvas,
     Size size,
@@ -1381,28 +1394,50 @@ class _ScratchPainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round
       ..isAntiAlias = true;
     for (final stroke in strokes) {
-      if (stroke.points.isEmpty) continue;
-      final first = stroke.points.first;
-      if (stroke.points.length == 1) {
+      final points = stroke.points;
+      if (points.isEmpty) continue;
+      if (points.length == 1) {
         canvas.drawCircle(
-          _denormalize(first.position, size),
-          first.width / 2,
+          _denormalize(points.first.position, size),
+          points.first.width / 2,
           Paint()
             ..color = GaussColors.parchmentInk
             ..isAntiAlias = true,
         );
         continue;
       }
-      for (var index = 1; index < stroke.points.length; index++) {
-        final before = stroke.points[index - 1];
-        final current = stroke.points[index];
-        inkPaint.strokeWidth = (before.width + current.width) / 2;
-        canvas.drawLine(
-          _denormalize(before.position, size),
-          _denormalize(current.position, size),
-          inkPaint,
-        );
+      // Quadratic segments through the midpoints of the raw samples: the
+      // curve passes smoothly near every sample instead of turning sharp
+      // corners between them, which is what made fast strokes look faceted.
+      Offset at(int index) => _denormalize(points[index].position, size);
+      final last = points.length - 1;
+      var path = Path();
+      var runWidth = double.nan;
+      var start = at(0);
+      for (var index = 1; index <= last; index++) {
+        final control = at(index - 1);
+        final current = at(index);
+        final end = index == last ? current : (control + current) / 2;
+        final from = index == 1 ? control : start;
+        final width =
+            ((points[index - 1].width + points[index].width) / 2 / _widthStep)
+                .round() *
+            _widthStep;
+        if (width != runWidth) {
+          if (!runWidth.isNaN) {
+            canvas.drawPath(path, inkPaint..strokeWidth = runWidth);
+          }
+          path = Path()..moveTo(from.dx, from.dy);
+          runWidth = width;
+        }
+        if (index == 1) {
+          path.lineTo(end.dx, end.dy);
+        } else {
+          path.quadraticBezierTo(control.dx, control.dy, end.dx, end.dy);
+        }
+        start = end;
       }
+      canvas.drawPath(path, inkPaint..strokeWidth = runWidth);
     }
   }
 
