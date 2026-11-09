@@ -15,7 +15,7 @@
 
 ## Vendored design skills
 
-Project-scope copies live in both `.claude/skills/` (Claude Code) and `.agents/skills/` (Codex); keep the two trees identical. Gauss instructions above win wherever a vendored skill disagrees (Flutter/Android scope, 48dp targets, English chrome, ASCII numerals, map-first composition, no subagents).
+Project-scope copies live in both `.claude/skills/` (Claude Code) and `.agents/skills/` (Codex); keep the two trees in sync (they differ only where a skill names its own tree path). Gauss instructions above win wherever a vendored skill disagrees (Flutter/Android scope, 48dp targets, English chrome, ASCII numerals, map-first composition, no subagents).
 
 - `ui-ux-pro-max` (nextlevelbuilder/ui-ux-pro-max-skill v2.15.0, MIT): searchable design data. Query the Flutter stack first, e.g. `python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<query>" --stack flutter`. Verify each result against Gauss scope before applying it; ignore web-only guidance.
 
