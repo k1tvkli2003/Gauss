@@ -195,30 +195,35 @@ class _SectionHeading extends StatelessWidget {
     child: Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 1180),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              eyebrow,
-              style: const TextStyle(
-                color: GaussColors.brassLight,
-                fontSize: GaussTypeScale.caption,
-                fontWeight: FontWeight.w900,
-                letterSpacing: .2,
+        // Fill the content width so the heading's left edge aligns
+        // with the cards below instead of centering as a narrow block.
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                eyebrow,
+                style: const TextStyle(
+                  color: GaussColors.brassLight,
+                  fontSize: GaussTypeScale.caption,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: .2,
+                ),
               ),
-            ),
-            const SizedBox(height: 5),
-            Text(title, style: Theme.of(context).textTheme.headlineSmall),
-            const SizedBox(height: 5),
-            Text(
-              detail,
-              style: const TextStyle(
-                color: GaussColors.muted,
-                fontSize: 11,
-                height: 1.45,
+              const SizedBox(height: 5),
+              Text(title, style: Theme.of(context).textTheme.headlineSmall),
+              const SizedBox(height: 5),
+              Text(
+                detail,
+                style: const TextStyle(
+                  color: GaussColors.muted,
+                  fontSize: 11,
+                  height: 1.45,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     ),

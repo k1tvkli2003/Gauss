@@ -7,6 +7,19 @@ import 'package:gauss/features/manuscript/scratchpad.dart';
 import 'package:gauss/features/manuscript/theorem_lens.dart';
 
 void main() {
+  test('tablets give the pen room; phones and split panes stay compact', () {
+    double space(double width, double height) =>
+        QuestionManuscript.writingSpaceFor(
+          manuscriptWidth: width,
+          screenHeight: height,
+        );
+    expect(space(360, 800), 112);
+    expect(space(500, 1280), 112, reason: 'phone-width split pane');
+    expect(space(1150, 1280), closeTo(409.6, .01));
+    expect(space(1150, 800), 256);
+    expect(space(1800, 2000), 420, reason: 'capped');
+  });
+
   testWidgets(
     'manuscript reflows at 320dp 200 percent with English tools and 48dp targets',
     (tester) async {

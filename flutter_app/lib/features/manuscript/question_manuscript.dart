@@ -14,6 +14,18 @@ import 'package:gauss/features/manuscript/theorem_lens.dart';
 /// The parchment texture is visual material only. Question content, options,
 /// ink, controls, feedback, and semantics remain live Flutter widgets.
 class QuestionManuscript extends StatefulWidget {
+  /// Phones keep a compact writing band and scroll; a tablet gives the pen
+  /// room in proportion to the screen instead of leaving half of it empty
+  /// below a short manuscript.
+  ///
+  /// Gated on the manuscript's own width, not the device: a phone-width
+  /// split-screen pane on a tablet keeps the compact band.
+  static double writingSpaceFor({
+    required double manuscriptWidth,
+    required double screenHeight,
+  }) =>
+      manuscriptWidth >= 560 ? (screenHeight * .32).clamp(112.0, 420.0) : 112.0;
+
   const QuestionManuscript({
     required this.ink,
     required this.questionNumber,
@@ -244,16 +256,23 @@ class _ManuscriptContent extends StatelessWidget {
             Semantics(
               label:
                   'Writable reasoning space. A hardware stylus writes immediately.',
-              child: AnimatedContainer(
-                key: const ValueKey('question-manuscript-writing-space'),
-                duration: GaussMotion.resolve(context, GaussMotion.standard),
-                curve: Curves.easeOutCubic,
-                constraints: const BoxConstraints(minHeight: 112),
-                alignment: AlignmentDirectional.topStart,
-                padding: const EdgeInsets.all(GaussSpacing.space8),
-                child: inkStatus.isEmpty
-                    ? ExcludeSemantics(child: _WritingSpaceSignal(mode: mode))
-                    : null,
+              child: LayoutBuilder(
+                builder: (context, constraints) => AnimatedContainer(
+                  key: const ValueKey('question-manuscript-writing-space'),
+                  duration: GaussMotion.resolve(context, GaussMotion.standard),
+                  curve: Curves.easeOutCubic,
+                  constraints: BoxConstraints(
+                    minHeight: QuestionManuscript.writingSpaceFor(
+                      manuscriptWidth: constraints.maxWidth,
+                      screenHeight: MediaQuery.sizeOf(context).height,
+                    ),
+                  ),
+                  alignment: AlignmentDirectional.topStart,
+                  padding: const EdgeInsets.all(GaussSpacing.space8),
+                  child: inkStatus.isEmpty
+                      ? ExcludeSemantics(child: _WritingSpaceSignal(mode: mode))
+                      : null,
+                ),
               ),
             ),
           ],
