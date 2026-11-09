@@ -12,13 +12,14 @@ void main() {
     return;
   }
 
-  final directories = mediaRoot
-      .listSync(recursive: true, followLinks: false)
-      .whereType<File>()
-      .map((file) => file.parent.path.replaceAll('\\', '/'))
-      .toSet()
-      .toList()
-    ..sort();
+  final directories =
+      mediaRoot
+          .listSync(recursive: true, followLinks: false)
+          .whereType<File>()
+          .map((file) => file.parent.path.replaceAll('\\', '/'))
+          .toSet()
+          .toList()
+        ..sort();
   final generated = <String>[
     _start,
     for (final directory in directories) '    - $directory/',

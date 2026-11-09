@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
-import 'package:gauss/widgets/map_path_geometry.dart';
+import 'package:gauss/features/map/map_path_geometry.dart';
 
 void main() {
   test('long learning routes partition into contiguous lazy bands', () {

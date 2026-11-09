@@ -3,16 +3,16 @@ import 'dart:math' as math;
 
 import 'package:flutter/widgets.dart';
 
-import '../data/backup_service.dart';
-import '../data/progress_repository.dart';
-import '../data/question_bank_repository.dart';
-import '../data/status_widget_bridge.dart';
-import '../domain/failures.dart';
-import '../domain/models.dart';
-import '../domain/study_curriculum.dart';
-import '../feedback/feedback_controller.dart';
-import '../feedback/feedback_models.dart';
-import '../feedback/feedback_repository.dart';
+import 'package:gauss/data/backup_service.dart';
+import 'package:gauss/data/progress_repository.dart';
+import 'package:gauss/data/question_bank_repository.dart';
+import 'package:gauss/data/status_widget_bridge.dart';
+import 'package:gauss/domain/failures.dart';
+import 'package:gauss/domain/models.dart';
+import 'package:gauss/domain/study_curriculum.dart';
+import 'package:gauss/features/feedback/feedback_controller.dart';
+import 'package:gauss/features/feedback/feedback_models.dart';
+import 'package:gauss/features/feedback/feedback_repository.dart';
 
 class GaussController extends ChangeNotifier {
   GaussController(

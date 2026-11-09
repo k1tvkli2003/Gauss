@@ -1,0 +1,603 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
+
+import 'package:gauss/ui/theme/gauss_theme.dart';
+import 'package:gauss/domain/learning_content_policy.dart';
+import 'package:gauss/domain/models.dart';
+
+export 'package:gauss/domain/learning_content_policy.dart'
+    show normalizeLearningDigits;
+
+/// One text or TeX run from a mixed Persian/mathematics content block.
+///
+/// The source corpus stays immutable. Any delimiter repair or TeX
+/// normalization represented here is a view-only compatibility layer.
+@immutable
+class MathContentSegment {
+  const MathContentSegment.text(this.value)
+    : isMath = false,
+      display = false,
+      source = value;
+
+  const MathContentSegment.math({
+    required this.value,
+    required this.source,
+    required this.display,
+  }) : isMath = true;
+
+  final String value;
+  final String source;
+  final bool isMath;
+  final bool display;
+}
+
+/// Parses `$...$` and `$$...$$` without mutating the bundled source string.
+///
+/// A handful of preserved source explanations have a missing closing dollar
+/// before a newline. When the whole block is unbalanced, the repair is scoped
+/// to odd lines so later Persian prose cannot be swallowed by a TeX widget.
+@visibleForTesting
+List<MathContentSegment> parseMathContent(String source) {
+  final input = _repairUnbalancedDollarLines(source);
+  final segments = <MathContentSegment>[];
+  final text = StringBuffer();
+
+  void flushText() {
+    if (text.isEmpty) return;
+    segments.add(MathContentSegment.text(text.toString()));
+    text.clear();
+  }
+
+  var index = 0;
+  while (index < input.length) {
+    if (input[index] == r'\' &&
+        index + 1 < input.length &&
+        input[index + 1] == r'$') {
+      text.write(r'$');
+      index += 2;
+      continue;
+    }
+    if (input[index] != r'$') {
+      text.write(input[index]);
+      index++;
+      continue;
+    }
+
+    final display = index + 1 < input.length && input[index + 1] == r'$';
+    final delimiter = display ? r'$$' : r'$';
+    final contentStart = index + delimiter.length;
+    final close = _findClosingDelimiter(input, contentStart, delimiter);
+    if (close < 0) {
+      text.write(delimiter);
+      index = contentStart;
+      continue;
+    }
+
+    final raw = input.substring(contentStart, close);
+    if (raw.trim().isEmpty) {
+      text.write(input.substring(index, close + delimiter.length));
+    } else {
+      flushText();
+      segments.add(
+        MathContentSegment.math(
+          value: normalizeMathTex(raw),
+          source: raw,
+          display: display,
+        ),
+      );
+    }
+    index = close + delimiter.length;
+  }
+  flushText();
+  return segments;
+}
+
+int _findClosingDelimiter(String input, int start, String delimiter) {
+  var braceDepth = 0;
+  for (var index = start; index <= input.length - delimiter.length; index++) {
+    if (input[index] == r'\') {
+      index++;
+      continue;
+    }
+    if (input[index] == '{') {
+      braceDepth++;
+      continue;
+    }
+    if (input[index] == '}') {
+      if (braceDepth > 0) braceDepth--;
+      continue;
+    }
+    // Some preserved explanations contain `$P$` inside `\text{...}` while
+    // the whole expression is already delimited by `$...$`. Those nested
+    // dollars are extraction noise, not the end of the outer expression.
+    if (braceDepth > 0) continue;
+    if (!input.startsWith(delimiter, index)) continue;
+    if (delimiter == r'$') {
+      final touchesAnotherDollar =
+          (index > 0 && input[index - 1] == r'$') ||
+          (index + 1 < input.length && input[index + 1] == r'$');
+      if (touchesAnotherDollar) continue;
+    }
+    return index;
+  }
+  return -1;
+}
+
+String _repairUnbalancedDollarLines(String source) {
+  if (_unescapedDollarCount(source).isEven) return source;
+  return source
+      .split('\n')
+      .map((line) => _unescapedDollarCount(line).isOdd ? '$line\$' : line)
+      .join('\n');
+}
+
+int _unescapedDollarCount(String source) {
+  var count = 0;
+  for (var index = 0; index < source.length; index++) {
+    if (source[index] != r'$') continue;
+    var precedingSlashes = 0;
+    for (
+      var cursor = index - 1;
+      cursor >= 0 && source[cursor] == r'\';
+      cursor--
+    ) {
+      precedingSlashes++;
+    }
+    if (precedingSlashes.isEven) count++;
+  }
+  return count;
+}
+
+/// Normalizes extraction artifacts only inside TeX runs.
+///
+/// The JSON corpus is deliberately untouched. Both TeX and surrounding
+/// learning prose render with ASCII digits for stable metrics and a consistent
+/// visual language.
+@visibleForTesting
+String normalizeMathTex(String source) {
+  var value = normalizeLearningDigits(source)
+      // A single JSON backslash before `frac`/`bar` was decoded as the
+      // corresponding control character in 57 preserved source runs.
+      .replaceAll('\u000crac', r'\frac')
+      .replaceAll('\u0008ar', r'\bar')
+      .replaceAll(r'\fracrac', r'\frac')
+      .replaceAll(r'\timesimes', r'\times')
+      .replaceAll('−', '-')
+      .replaceAll('%', r'\%');
+  value = value.replaceAllMapped(
+    RegExp(r'\\frac\(([^()]*)\)'),
+    (match) => '${r'\frac{'}${match.group(1)}}',
+  );
+  value = value.replaceAllMapped(
+    RegExp(r'\\\\\[([A-Za-z\\-])'),
+    (match) => '\\\\{}[${match.group(1)}',
+  );
+  value = value.replaceAllMapped(RegExp(r'\\text\{([^{}]*)\}'), (match) {
+    final body = match.group(1)!;
+    final hasMathCommand = body.contains(r'\');
+    final hasPersian = RegExp(r'[\u0600-\u06ff]').hasMatch(body);
+    return hasMathCommand && !hasPersian
+        ? '${r'\mathrm{'}${body.trim()}}'
+        : match.group(0)!;
+  });
+  return _removeNestedMathDollars(value).trim();
+}
+
+String _removeNestedMathDollars(String source) {
+  final result = StringBuffer();
+  for (var index = 0; index < source.length; index++) {
+    if (source[index] != r'$') {
+      result.write(source[index]);
+      continue;
+    }
+    var precedingSlashes = 0;
+    for (
+      var before = index - 1;
+      before >= 0 && source[before] == r'\';
+      before--
+    ) {
+      precedingSlashes++;
+    }
+    if (precedingSlashes.isOdd) result.write(source[index]);
+  }
+  return result.toString();
+}
+
+class ContentBlocksView extends StatelessWidget {
+  const ContentBlocksView({
+    required this.blocks,
+    this.textStyle,
+    this.textColor,
+    this.compact = false,
+    super.key,
+  });
+
+  final List<ContentBlock> blocks;
+  final TextStyle? textStyle;
+  final Color? textColor;
+  final bool compact;
+
+  @override
+  Widget build(BuildContext context) {
+    final content = Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (final block in blocks)
+          Padding(
+            padding: EdgeInsets.only(bottom: compact ? 4 : 12),
+            child: switch (block) {
+              TextBlock(:final text) => _MixedMathText(
+                text: text,
+                style: textStyle ?? Theme.of(context).textTheme.bodyLarge,
+                color: textColor,
+              ),
+              ImageBlock(:final asset, :final alt, :final aspectRatio) =>
+                _AssetMedia(asset: asset, alt: alt, aspectRatio: aspectRatio),
+            },
+          ),
+      ],
+    );
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: compact ? content : SelectionArea(child: content),
+    );
+  }
+}
+
+class _AssetMedia extends StatelessWidget {
+  const _AssetMedia({
+    required this.asset,
+    required this.alt,
+    required this.aspectRatio,
+  });
+  final String asset;
+  final String alt;
+  final double? aspectRatio;
+
+  Widget _image(
+    BuildContext context, {
+    BoxFit fit = BoxFit.contain,
+    bool fullscreen = false,
+  }) => Image.asset(
+    'assets/$asset',
+    fit: fit,
+    cacheWidth: fullscreen
+        ? 2400
+        : (MediaQuery.sizeOf(context).width *
+                  MediaQuery.devicePixelRatioOf(context))
+              .clamp(600, 1800)
+              .round(),
+    filterQuality: fullscreen ? FilterQuality.medium : FilterQuality.low,
+    errorBuilder: (context, error, stackTrace) => Container(
+      key: ValueKey('media-error-$asset'),
+      alignment: Alignment.center,
+      color: GaussColors.ink,
+      child: Padding(
+        padding: const EdgeInsets.all(18),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(
+              Icons.broken_image_outlined,
+              color: GaussColors.error,
+              size: 28,
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Image unavailable',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: GaussColors.ivory,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+            if (alt.isNotEmpty) ...[
+              const SizedBox(height: 4),
+              Text(
+                normalizeLearningDigits(alt),
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: GaussColors.muted),
+              ),
+            ],
+          ],
+        ),
+      ),
+    ),
+  );
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    image: true,
+    button: true,
+    label: alt.isEmpty ? 'Question image' : normalizeLearningDigits(alt),
+    hint: 'Open image viewer',
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: Material(
+        color: GaussColors.ink,
+        child: InkWell(
+          onTap: () => showDialog<void>(
+            context: context,
+            builder: (context) => Dialog.fullscreen(
+              backgroundColor: GaussColors.voidBlack,
+              child: SafeArea(
+                child: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: InteractiveViewer(
+                        minScale: .5,
+                        maxScale: 5,
+                        child: Center(child: _image(context, fullscreen: true)),
+                      ),
+                    ),
+                    Positioned(
+                      top: 12,
+                      right: 12,
+                      child: IconButton.filledTonal(
+                        onPressed: () => Navigator.pop(context),
+                        tooltip: 'Close image viewer',
+                        icon: const Icon(Icons.close),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          child: Stack(
+            children: [
+              AspectRatio(
+                aspectRatio: aspectRatio == null || aspectRatio! <= 0
+                    ? 1.4
+                    : 1 / aspectRatio!,
+                child: _image(context),
+              ),
+              const Positioned(
+                right: 8,
+                bottom: 8,
+                child: Icon(Icons.zoom_in, color: Colors.white70),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+class _MixedMathText extends StatelessWidget {
+  const _MixedMathText({required this.text, this.style, this.color});
+  final String text;
+  final TextStyle? style;
+  final Color? color;
+
+  @override
+  Widget build(BuildContext context) {
+    final segments = parseMathContent(text);
+    if (segments.every((segment) => !segment.isMath)) {
+      final resolvedStyle = style?.copyWith(color: color, height: 1.75);
+      return Text(
+        normalizeLearningDigits(text),
+        textAlign: TextAlign.start,
+        style: resolvedStyle,
+      );
+    }
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final rows = <Widget>[];
+        final inline = <Widget>[];
+
+        Widget mathRun(MathContentSegment segment, int index) => ConstrainedBox(
+          constraints: constraints.hasBoundedWidth
+              ? BoxConstraints(maxWidth: constraints.maxWidth)
+              : const BoxConstraints(),
+          child: Directionality(
+            textDirection: TextDirection.ltr,
+            child: _MathRunScroller(
+              scrollKey: ValueKey(
+                segment.display ? 'display-math-$index' : 'inline-math-$index',
+              ),
+              indicatorColor: color ?? style?.color ?? GaussColors.parchmentInk,
+              child: Math.tex(
+                segment.value,
+                mathStyle: segment.display ? MathStyle.display : MathStyle.text,
+                textStyle: style?.copyWith(color: color, height: 1.25),
+                onErrorFallback: (error) => Semantics(
+                  label:
+                      'Formula could not be rendered. Source notation follows.',
+                  child: DecoratedBox(
+                    key: ValueKey('math-error-$index'),
+                    decoration: BoxDecoration(
+                      color: GaussColors.error.withValues(alpha: .09),
+                      border: Border.all(
+                        color: GaussColors.error.withValues(alpha: .55),
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 6,
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(
+                            Icons.warning_amber_rounded,
+                            size: 17,
+                            color: GaussColors.error,
+                          ),
+                          const SizedBox(width: 6),
+                          Text(
+                            normalizeLearningDigits(segment.source),
+                            textDirection: TextDirection.ltr,
+                            style: style?.copyWith(color: color, height: 1.45),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+
+        void flushInline() {
+          if (inline.isEmpty) return;
+          rows.add(
+            SizedBox(
+              width: double.infinity,
+              child: Wrap(
+                alignment: WrapAlignment.start,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                spacing: 3,
+                runSpacing: 7,
+                children: List<Widget>.of(inline),
+              ),
+            ),
+          );
+          inline.clear();
+        }
+
+        for (var index = 0; index < segments.length; index++) {
+          final segment = segments[index];
+          if (segment.value.isEmpty) continue;
+          if (segment.isMath && segment.display) {
+            flushInline();
+            rows.add(
+              SizedBox(
+                width: double.infinity,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: ConstrainedBox(
+                    constraints: constraints.hasBoundedWidth
+                        ? BoxConstraints(maxWidth: constraints.maxWidth)
+                        : const BoxConstraints(),
+                    child: mathRun(segment, index),
+                  ),
+                ),
+              ),
+            );
+          } else if (segment.isMath) {
+            inline.add(mathRun(segment, index));
+          } else {
+            inline.add(
+              Text(
+                normalizeLearningDigits(segment.value),
+                textAlign: TextAlign.start,
+                textDirection: TextDirection.rtl,
+                style: style?.copyWith(color: color, height: 1.7),
+              ),
+            );
+          }
+        }
+        flushInline();
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          spacing: 7,
+          children: rows,
+        );
+      },
+    );
+  }
+}
+
+class _MathRunScroller extends StatefulWidget {
+  const _MathRunScroller({
+    required this.scrollKey,
+    required this.indicatorColor,
+    required this.child,
+  });
+
+  final Key scrollKey;
+  final Color indicatorColor;
+  final Widget child;
+
+  @override
+  State<_MathRunScroller> createState() => _MathRunScrollerState();
+}
+
+class _MathRunScrollerState extends State<_MathRunScroller> {
+  final ScrollController _controller = ScrollController();
+  bool _overflows = false;
+  bool _atEnd = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(_syncMetrics);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _syncMetrics());
+  }
+
+  @override
+  void didUpdateWidget(covariant _MathRunScroller oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _syncMetrics());
+  }
+
+  void _syncMetrics() {
+    if (!mounted || !_controller.hasClients) return;
+    final position = _controller.position;
+    final overflows = position.maxScrollExtent > 1;
+    final atEnd = !overflows || position.pixels >= position.maxScrollExtent - 1;
+    if (overflows == _overflows && atEnd == _atEnd) return;
+    setState(() {
+      _overflows = overflows;
+      _atEnd = atEnd;
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller
+      ..removeListener(_syncMetrics)
+      ..dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    hint: _overflows
+        ? 'Swipe horizontally to read the complete formula.'
+        : null,
+    child: Stack(
+      clipBehavior: Clip.none,
+      children: [
+        ScrollbarTheme(
+          data: ScrollbarTheme.of(context).copyWith(
+            thumbColor: WidgetStatePropertyAll(
+              widget.indicatorColor.withValues(alpha: .5),
+            ),
+            thickness: const WidgetStatePropertyAll(2),
+            radius: const Radius.circular(2),
+          ),
+          child: Scrollbar(
+            controller: _controller,
+            thumbVisibility: _overflows,
+            scrollbarOrientation: ScrollbarOrientation.bottom,
+            child: SingleChildScrollView(
+              key: widget.scrollKey,
+              controller: _controller,
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.only(bottom: _overflows ? 6 : 0),
+              child: widget.child,
+            ),
+          ),
+        ),
+        if (_overflows && !_atEnd)
+          PositionedDirectional(
+            end: 0,
+            bottom: -2,
+            child: IgnorePointer(
+              child: Icon(
+                Icons.swipe_rounded,
+                size: 13,
+                color: widget.indicatorColor.withValues(alpha: .62),
+              ),
+            ),
+          ),
+      ],
+    ),
+  );
+}

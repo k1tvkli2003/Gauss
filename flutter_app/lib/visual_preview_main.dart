@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
-import 'app/gauss_app.dart';
-import 'auth/gauss_account_session.dart';
+import 'package:gauss/app/gauss_app.dart';
+import 'package:gauss/features/auth/gauss_account_session.dart';
 
 /// Android-only visual QA entrypoint.
 ///

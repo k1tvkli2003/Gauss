@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/widgets/content_blocks.dart';
+import 'package:gauss/features/manuscript/content_blocks.dart';
 
 const _repair1248 =
     'پاسخ موجود متعلق به سؤال دیگری است. '

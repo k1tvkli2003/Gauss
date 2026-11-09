@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
-import 'package:gauss/widgets/question_manuscript.dart';
-import 'package:gauss/widgets/scratchpad.dart';
-import 'package:gauss/widgets/theorem_lens.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
+import 'package:gauss/features/manuscript/question_manuscript.dart';
+import 'package:gauss/features/manuscript/scratchpad.dart';
+import 'package:gauss/features/manuscript/theorem_lens.dart';
 
 void main() {
   testWidgets(

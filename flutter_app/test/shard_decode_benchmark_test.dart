@@ -13,9 +13,8 @@ void main() {
   test('report decode cost for the heaviest shards', () async {
     final repository = QuestionBankRepository();
     await repository.initialize();
-    final heaviest =
-        repository.topics.toList()
-          ..sort((a, b) => b.questionCount.compareTo(a.questionCount));
+    final heaviest = repository.topics.toList()
+      ..sort((a, b) => b.questionCount.compareTo(a.questionCount));
 
     for (final topic in heaviest.take(4)) {
       final fresh = QuestionBankRepository();

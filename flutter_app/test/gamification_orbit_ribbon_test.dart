@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/gamification_catalog.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/widgets/gamification_orbit_ribbon.dart';
+import 'package:gauss/features/insights/gamification_orbit_ribbon.dart';
 
 void main() {
   testWidgets('renders truthful private progress and earned milestone state', (

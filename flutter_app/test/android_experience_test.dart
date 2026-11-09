@@ -5,18 +5,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/app/gauss_app.dart';
-import 'package:gauss/app/gauss_design_system.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/tokens/gauss_tokens.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
-import 'package:gauss/screens/map_screen.dart';
+import 'package:gauss/features/map/map_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
-import 'package:gauss/widgets/content_blocks.dart';
-import 'package:gauss/widgets/first_run_tour.dart';
-import 'package:gauss/widgets/gauss_brand.dart';
+import 'package:gauss/features/manuscript/content_blocks.dart';
+import 'package:gauss/features/onboarding/first_run_tour.dart';
+import 'package:gauss/ui/components/gauss_brand.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

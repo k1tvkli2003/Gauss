@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
-import 'auth/gauss_auth_app.dart';
-import 'auth/gauss_auth_controller.dart';
-import 'backend/gauss_supabase.dart';
+import 'package:gauss/features/auth/gauss_auth_app.dart';
+import 'package:gauss/features/auth/gauss_auth_controller.dart';
+import 'package:gauss/backend/gauss_supabase.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

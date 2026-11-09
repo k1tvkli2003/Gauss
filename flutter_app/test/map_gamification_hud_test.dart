@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/widgets/map_gamification_hud.dart';
+import 'package:gauss/features/map/map_gamification_hud.dart';
 
 void main() {
   testWidgets('shows truthful daily loop with humane grace semantics', (

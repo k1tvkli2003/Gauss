@@ -1,13 +1,13 @@
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_design_system.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/tokens/gauss_tokens.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/study_curriculum.dart';
-import 'package:gauss/screens/practice_screen.dart';
+import 'package:gauss/features/study/study_hub_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:go_router/go_router.dart';
 
@@ -542,7 +542,7 @@ class _StudyFixture {
       routes: [
         GoRoute(
           path: '/study',
-          builder: (context, state) => const Scaffold(body: PracticeScreen()),
+          builder: (context, state) => const Scaffold(body: StudyHubScreen()),
         ),
         GoRoute(
           path: '/mission/:topicKey',

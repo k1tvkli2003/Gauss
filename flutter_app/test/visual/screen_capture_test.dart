@@ -18,9 +18,10 @@ import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/state/gauss_controller.dart';
 
 final _outDir = Platform.environment['GAUSS_CAPTURE_DIR'];
-final _routes = (Platform.environment['GAUSS_CAPTURE_ROUTES'] ??
-        '/map,/study,/insights,/vault,/study/revisit')
-    .split(',');
+final _routes =
+    (Platform.environment['GAUSS_CAPTURE_ROUTES'] ??
+            '/map,/study,/insights,/vault,/study/revisit')
+        .split(',');
 final _sizes = <String, (Size, double)>{
   'phone': (const Size(390, 844), 1.0),
   'narrow-2x': (const Size(320, 640), 2.0),
@@ -43,9 +44,12 @@ Future<void> _loadFonts() async {
     'assets/fonts/vazirmatn_extrabold.ttf',
     'assets/fonts/vazirmatn_black.ttf',
   ]);
-  final sdk = Platform.environment['FLUTTER_ROOT'] ??
+  final sdk =
+      Platform.environment['FLUTTER_ROOT'] ??
       File(Platform.resolvedExecutable).parent.parent.parent.parent.parent.path;
-  final icons = File('$sdk/bin/cache/artifacts/material_fonts/MaterialIcons-Regular.otf');
+  final icons = File(
+    '$sdk/bin/cache/artifacts/material_fonts/MaterialIcons-Regular.otf',
+  );
   if (icons.existsSync()) {
     final loader = FontLoader('MaterialIcons')
       ..addFont(Future.value(ByteData.sublistView(icons.readAsBytesSync())));
@@ -85,7 +89,9 @@ void main() {
           ),
         );
         for (var i = 0; i < 6; i++) {
-          await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 120)));
+          await tester.runAsync(
+            () => Future<void>.delayed(const Duration(milliseconds: 120)),
+          );
           await tester.pump(const Duration(milliseconds: 300));
         }
         await tester.runAsync(() async {
@@ -97,12 +103,16 @@ void main() {
         await tester.pump(const Duration(milliseconds: 900));
         final boundary =
             key.currentContext!.findRenderObject()! as RenderRepaintBoundary;
-        final name =
-            '${entry.key}${route.replaceAll('/', '_')}'.replaceAll(':', '');
+        final name = '${entry.key}${route.replaceAll('/', '_')}'.replaceAll(
+          ':',
+          '',
+        );
         await tester.runAsync(() async {
           final image = await boundary.toImage(pixelRatio: 1.5);
           final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
-          File('$_outDir/$name.png').writeAsBytesSync(bytes!.buffer.asUint8List());
+          File(
+            '$_outDir/$name.png',
+          ).writeAsBytesSync(bytes!.buffer.asUint8List());
         });
         final err = tester.takeException();
         if (err != null) {

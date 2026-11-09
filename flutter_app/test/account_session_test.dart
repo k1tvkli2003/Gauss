@@ -1,7 +1,7 @@
 import 'package:drift/drift.dart' as drift;
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/auth/gauss_account_session.dart';
+import 'package:gauss/features/auth/gauss_account_session.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 

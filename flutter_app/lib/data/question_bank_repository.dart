@@ -4,9 +4,9 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import '../domain/models.dart';
-import '../domain/question_certification.dart';
-import '../domain/study_curriculum.dart';
+import 'package:gauss/domain/models.dart';
+import 'package:gauss/domain/question_certification.dart';
+import 'package:gauss/domain/study_curriculum.dart';
 
 const _expectedQuestionCount = 3672;
 const _expectedTopicShardCount = 29;

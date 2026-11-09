@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/question_certification.dart';
-import 'package:gauss/widgets/content_blocks.dart';
+import 'package:gauss/features/manuscript/content_blocks.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
-import 'package:gauss/auth/gauss_auth_controller.dart';
-import 'package:gauss/auth/gauss_auth_screen.dart';
-import 'package:gauss/widgets/gauss_brand.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
+import 'package:gauss/features/auth/gauss_auth_controller.dart';
+import 'package:gauss/features/auth/gauss_auth_screen.dart';
+import 'package:gauss/ui/components/gauss_brand.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() {

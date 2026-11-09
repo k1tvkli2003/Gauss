@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:gauss/data/status_widget_bridge.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/app/gauss_app.dart';
 import 'package:gauss/data/backup_service.dart';
 import 'package:gauss/data/local/gauss_database.dart';
@@ -17,12 +17,12 @@ import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/failures.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
-import 'package:gauss/screens/archive_screen.dart';
-import 'package:gauss/screens/backup_screen.dart';
-import 'package:gauss/screens/insights_screen.dart';
-import 'package:gauss/screens/practice_screen.dart';
+import 'package:gauss/features/study/study_room_screen.dart';
+import 'package:gauss/features/vault/vault_screen.dart';
+import 'package:gauss/features/insights/insights_screen.dart';
+import 'package:gauss/features/study/study_hub_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
-import 'package:gauss/widgets/scratchpad.dart';
+import 'package:gauss/features/manuscript/scratchpad.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -53,7 +53,7 @@ void main() {
   ) async {
     await _setPhoneSurface(tester);
     await tester.pumpWidget(
-      _TestSurface(controller: controller, child: const PracticeScreen()),
+      _TestSurface(controller: controller, child: const StudyHubScreen()),
     );
     await tester.pump();
 
@@ -90,7 +90,7 @@ void main() {
     Future<List<Offset>> centersAt(Size size) async {
       await tester.binding.setSurfaceSize(size);
       await tester.pumpWidget(
-        _TestSurface(controller: controller, child: const PracticeScreen()),
+        _TestSurface(controller: controller, child: const StudyHubScreen()),
       );
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 60));
@@ -404,7 +404,7 @@ void main() {
       await tester.pumpWidget(
         _TestSurface(
           controller: controller,
-          child: ArchiveScreen(topicKey: topic.key, count: 5),
+          child: StudyRoomScreen(topicKey: topic.key, count: 5),
         ),
       );
       await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -517,7 +517,7 @@ void main() {
       await tester.pumpWidget(
         _TestSurface(
           controller: controller,
-          child: ArchiveScreen(topicKey: topic.key, count: 5),
+          child: StudyRoomScreen(topicKey: topic.key, count: 5),
         ),
       );
       await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -558,7 +558,7 @@ void main() {
     await tester.pumpWidget(
       _TestSurface(
         controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, count: 5),
+        child: StudyRoomScreen(topicKey: topic.key, count: 5),
       ),
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -604,7 +604,7 @@ void main() {
           _TestSurface(
             controller: controller,
             textScale: textScale,
-            child: ArchiveScreen(topicKey: topic.key, count: 5),
+            child: StudyRoomScreen(topicKey: topic.key, count: 5),
           ),
         );
         await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -778,7 +778,7 @@ void main() {
     await tester.pumpWidget(
       _TestSurface(
         controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, count: 5),
+        child: StudyRoomScreen(topicKey: topic.key, count: 5),
       ),
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -892,7 +892,7 @@ void main() {
     await tester.pumpWidget(
       _TestSurface(
         controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, count: 5),
+        child: StudyRoomScreen(topicKey: topic.key, count: 5),
       ),
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -1052,7 +1052,7 @@ void main() {
       for (final size in const [Size(411, 820), Size(1024, 800)]) {
         await tester.binding.setSurfaceSize(size);
         for (final surface in const <Widget>[
-          PracticeScreen(),
+          StudyHubScreen(),
           InsightsScreen(),
         ]) {
           await tester.pumpWidget(
@@ -1094,7 +1094,7 @@ void main() {
           controller: controller,
           textScale: 2,
           reducedMotion: true,
-          child: ArchiveScreen(topicKey: topic.key, count: 5),
+          child: StudyRoomScreen(topicKey: topic.key, count: 5),
         ),
       );
       await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -1113,7 +1113,7 @@ void main() {
         _TestSurface(
           controller: controller,
           reducedMotion: true,
-          child: ArchiveScreen(topicKey: topic.key, count: 5),
+          child: StudyRoomScreen(topicKey: topic.key, count: 5),
         ),
       );
       await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -1130,7 +1130,7 @@ void main() {
             controller: vaultController,
             textScale: 2,
             reducedMotion: true,
-            child: const BackupScreen(),
+            child: const VaultScreen(),
           ),
         );
         await _pumpUntil(tester, find.text('Back up now'));
@@ -1171,7 +1171,7 @@ void main() {
       await tester.pumpWidget(
         _TestSurface(
           controller: controller,
-          child: ArchiveScreen(topicKey: topic.key, offset: offset, count: 5),
+          child: StudyRoomScreen(topicKey: topic.key, offset: offset, count: 5),
         ),
       );
       await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -1307,7 +1307,7 @@ void main() {
       await tester.pumpWidget(
         _TestSurface(
           controller: controller,
-          child: ArchiveScreen(
+          child: StudyRoomScreen(
             topicKey: topic.key,
             count: 5,
             offset: offset,
@@ -1409,7 +1409,7 @@ void main() {
     await tester.ensureVisible(choice);
     await tester.tap(choice);
     await tester.pump();
-    final room = tester.element(find.byType(ArchiveScreen));
+    final room = tester.element(find.byType(StudyRoomScreen));
     final router = GoRouter.of(room);
     await tester.tap(find.byKey(const ValueKey('study-room-shuffle-action')));
     await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -1482,7 +1482,7 @@ void main() {
       await tester.pumpWidget(
         _TestSurface(
           controller: controller,
-          child: ArchiveScreen(topicKey: topic.key, offset: offset, count: 5),
+          child: StudyRoomScreen(topicKey: topic.key, offset: offset, count: 5),
         ),
       );
       await tester.pump();
@@ -1542,7 +1542,7 @@ void main() {
     await tester.pumpWidget(
       _TestSurface(
         controller: controller,
-        child: ArchiveScreen(
+        child: StudyRoomScreen(
           topicKey: topic.key,
           offset: sessionOffset,
           count: GaussStudyCurriculum.batchSize,
@@ -1677,7 +1677,7 @@ void main() {
     await tester.pumpWidget(
       _TestSurface(
         controller: controller,
-        child: ArchiveScreen(topicKey: topic.key, count: 5),
+        child: StudyRoomScreen(topicKey: topic.key, count: 5),
       ),
     );
     await _pumpUntil(tester, find.text('STUDY ROOM'));
@@ -1826,7 +1826,7 @@ Future<GoRouter> _pumpRoutedArchive(
       ),
       GoRoute(
         path: '/study/chapter/:topicKey',
-        builder: (context, state) => ArchiveScreen(
+        builder: (context, state) => StudyRoomScreen(
           topicKey: state.pathParameters['topicKey']!,
           offset: int.tryParse(state.uri.queryParameters['offset'] ?? '') ?? 0,
           count: int.tryParse(state.uri.queryParameters['count'] ?? '') ?? 5,

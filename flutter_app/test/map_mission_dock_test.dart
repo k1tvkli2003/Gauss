@@ -1,11 +1,11 @@
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
-import 'package:gauss/screens/map_screen.dart';
+import 'package:gauss/features/map/map_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 
 Finder _assetImage(String assetName) => find.byWidgetPredicate(

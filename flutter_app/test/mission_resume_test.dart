@@ -10,14 +10,14 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/feedback/feedback_capture.dart';
-import 'package:gauss/feedback/feedback_models.dart';
-import 'package:gauss/screens/mission_screen.dart';
+import 'package:gauss/features/feedback/feedback_capture.dart';
+import 'package:gauss/features/feedback/feedback_models.dart';
+import 'package:gauss/features/mission/mission_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
-import 'package:gauss/widgets/mission_start_guard.dart';
-import 'package:gauss/widgets/content_blocks.dart';
+import 'package:gauss/features/mission/mission_start_guard.dart';
+import 'package:gauss/features/manuscript/content_blocks.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
