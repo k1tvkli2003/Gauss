@@ -10,6 +10,10 @@ import 'package:gauss/backend/gauss_supabase.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Working set: backdrop, parchment, stations, mascots and the current
+  // question's media fit well inside this; the 100 MB default only raised
+  // the worst case. Android memory-pressure signals still clear the cache.
+  PaintingBinding.instance.imageCache.maximumSizeBytes = 64 << 20;
   GoRouter.optionURLReflectsImperativeAPIs = true;
   final supabase = await GaussSupabase.initialize();
   final auth = GaussAuthController(supabase);
