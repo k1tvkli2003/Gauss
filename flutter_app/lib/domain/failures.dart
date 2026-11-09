@@ -29,7 +29,7 @@ final class StartupFailure extends GaussFailure {
         operation: 'initialize_app',
         retryable: true,
         safeMessage:
-            'The offline archive or local progress store could not be opened safely.',
+            'The question library or progress store on this device could not be opened safely.',
         cause: cause,
       );
 }
@@ -42,7 +42,7 @@ final class MissionLoadFailure extends GaussFailure {
         operation: 'load_mission',
         retryable: true,
         safeMessage:
-            'The offline archive could not open this mission. Saved progress is unchanged.',
+            'This device could not open the lesson. Saved progress is unchanged.',
         cause: cause,
       );
 }

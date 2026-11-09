@@ -64,6 +64,7 @@ class GaussAccountSession {
           contentSnapshot = await GaussContentReleaseStore(
             api: SupabaseGaussContentApi(contentClient),
             appBuild: appBuild,
+            verifyRelease: QuestionBankRepository.verifyBundle,
           ).open(onPhase: onOpeningPhase);
           return QuestionBankRepository(bundle: contentSnapshot!.bundle);
         })();

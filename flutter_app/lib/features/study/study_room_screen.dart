@@ -69,6 +69,12 @@ class StudyRoomScreen extends StatefulWidget {
   State<StudyRoomScreen> createState() => _StudyRoomScreenState();
 }
 
+/// Short technical detail so a load failure can be reported precisely.
+String _loadDiagnostic(Object error) {
+  final text = '$error'.replaceAll(RegExp(r'\s+'), ' ').trim();
+  return '\n\nDetails: ${text.length > 240 ? text.substring(0, 240) : text}';
+}
+
 class _StudyRoomScreenState extends State<StudyRoomScreen> {
   StudyShelf? _shelf;
   Object? _loadError;
@@ -481,7 +487,8 @@ class _StudyRoomScreenState extends State<StudyRoomScreen> {
                   ? _ArchiveMessage(
                       title: 'The study room could not open',
                       detail:
-                          'The offline library could not load this set. Nothing was changed.',
+                          'This device could not load this set. Nothing was changed.'
+                          '${_loadDiagnostic(_loadError!)}',
                       onLeave: _leave,
                       onRetry: _load,
                     )

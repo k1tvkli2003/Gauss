@@ -8,6 +8,7 @@ import 'package:go_router/go_router.dart';
 
 import 'package:gauss/ui/tokens/gauss_tokens.dart';
 import 'package:gauss/ui/theme/gauss_theme.dart';
+import 'package:gauss/domain/failures.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/question_reference.dart';
 import 'package:gauss/domain/study_curriculum.dart';
@@ -626,6 +627,15 @@ class _MissionLoading extends StatelessWidget {
   );
 }
 
+/// A short technical line so a failure can be reported precisely instead of
+/// hiding behind one generic sentence. It names the failing step and the
+/// underlying cause; it never contains answers or personal data.
+String _diagnostic(Object error) {
+  if (error is! GaussFailure) return '';
+  final cause = '${error.cause}'.replaceAll(RegExp(r'\s+'), ' ').trim();
+  return '\n\nDetails: ${error.code}. $cause';
+}
+
 class _MissionError extends StatelessWidget {
   const _MissionError({required this.error, this.onRetry});
   final Object error;
@@ -636,7 +646,8 @@ class _MissionError extends StatelessWidget {
     title: 'Mission could not be loaded',
     detail: error is String
         ? '$error'
-        : 'The offline archive could not open this mission. Your saved progress is unchanged.',
+        : 'This device could not open the lesson. Your saved progress is unchanged.'
+              '${_diagnostic(error)}',
     icon: Icons.error_outline_rounded,
     accent: GaussColors.error,
     actions: Wrap(
