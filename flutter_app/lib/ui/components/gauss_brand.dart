@@ -672,3 +672,13 @@ class SubjectGlyph extends StatelessWidget {
       ? Icon(Icons.functions_rounded, color: color, size: size)
       : TopicGlyph(topicKey: 'atomic_nuclear', color: color, size: size + 1);
 }
+
+/// Shared raster providers. One provider per picture means one decoded
+/// bitmap in the image cache, however many surfaces show it. (Each distinct
+/// `cacheWidth` used to be its own cache entry, so the same 941px backdrop was
+/// decoded up to six times.)
+abstract final class GaussImages {
+  static const atmosphere = AssetImage(
+    'assets/visual/map/orrery_atmosphere_portrait.png',
+  );
+}

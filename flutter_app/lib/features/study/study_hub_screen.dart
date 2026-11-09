@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -10,6 +9,7 @@ import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:gauss/ui/components/gauss_brand.dart';
+import 'package:gauss/ui/components/gauss_surface.dart';
 import 'package:gauss/ui/components/orbital_action_control.dart';
 import 'package:gauss/features/manuscript/scratchpad.dart';
 
@@ -203,10 +203,9 @@ class _StudyBackdrop extends StatelessWidget {
   Widget build(BuildContext context) => Stack(
     fit: StackFit.expand,
     children: [
-      Image.asset(
-        'assets/visual/map/orrery_atmosphere_portrait.png',
+      Image(
+        image: GaussImages.atmosphere,
         fit: BoxFit.cover,
-        cacheWidth: 1400,
         filterQuality: FilterQuality.medium,
       ),
       const DecoratedBox(

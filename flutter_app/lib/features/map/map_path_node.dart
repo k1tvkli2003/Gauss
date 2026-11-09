@@ -86,25 +86,25 @@ class _StudyNode extends StatelessWidget {
                   key: ValueKey(
                     'map-node-${node.topic.subject.name}-station-${node.key}',
                   ),
-                  child: Opacity(
-                    opacity: future && !selected ? .72 : 1,
-                    child: Image.asset(
-                      node.topic.subject == Subject.math
-                          ? 'assets/visual/nodes/math_astrolabe_station_v2.png'
-                          : 'assets/visual/nodes/physics_gyroscope_station_v2.png',
-                      width: size * 1.04,
-                      height: size * 1.04,
-                      fit: BoxFit.contain,
-                      cacheWidth: _boundedRasterWidth(
-                        context,
-                        size * 1.04,
-                        sourceWidth: node.topic.subject == Subject.math
-                            ? 1254
-                            : 1285,
-                        minimum: 192,
-                      ),
-                      filterQuality: FilterQuality.medium,
+                  child: Image.asset(
+                    opacity: AlwaysStoppedAnimation(
+                      future && !selected ? .72 : 1,
                     ),
+                    node.topic.subject == Subject.math
+                        ? 'assets/visual/nodes/math_astrolabe_station_v2.png'
+                        : 'assets/visual/nodes/physics_gyroscope_station_v2.png',
+                    width: size * 1.04,
+                    height: size * 1.04,
+                    fit: BoxFit.contain,
+                    cacheWidth: _boundedRasterWidth(
+                      context,
+                      size * 1.04,
+                      sourceWidth: node.topic.subject == Subject.math
+                          ? 1254
+                          : 1285,
+                      minimum: 192,
+                    ),
+                    filterQuality: FilterQuality.medium,
                   ),
                 ),
                 CustomPaint(

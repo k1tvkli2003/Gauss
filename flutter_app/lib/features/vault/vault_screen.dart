@@ -31,7 +31,7 @@ class _VaultScreenState extends State<VaultScreen> {
     _refresh();
   }
 
-  BackupService get _service => GaussScope.of(context).backups;
+  BackupService get _service => GaussScope.read(context).backups;
 
   Future<void> _refresh() async {
     if (!_service.isSupported) {
@@ -151,11 +151,10 @@ class _VaultScreenState extends State<VaultScreen> {
     body: Stack(
       fit: StackFit.expand,
       children: [
-        Image.asset(
-          'assets/visual/map/orrery_atmosphere_portrait.png',
+        Image(
+          image: GaussImages.atmosphere,
           fit: BoxFit.cover,
           alignment: Alignment.topCenter,
-          cacheWidth: 1400,
           filterQuality: FilterQuality.medium,
         ),
         const DecoratedBox(

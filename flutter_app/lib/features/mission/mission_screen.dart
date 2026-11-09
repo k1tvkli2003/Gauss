@@ -230,7 +230,7 @@ class _MissionScreenState extends State<MissionScreen> {
       _operationError = null;
     });
     try {
-      await GaussScope.of(context).recordAttempt(
+      await GaussScope.read(context).recordAttempt(
         AttemptRecord(
           sessionId: _sessionId,
           missionIndex: _index,
@@ -271,7 +271,7 @@ class _MissionScreenState extends State<MissionScreen> {
       _operationError = null;
     });
     try {
-      await GaussScope.of(context).recordAttempt(
+      await GaussScope.read(context).recordAttempt(
         AttemptRecord(
           sessionId: _sessionId,
           missionIndex: _index,
@@ -305,7 +305,7 @@ class _MissionScreenState extends State<MissionScreen> {
         _operationError = null;
       });
       try {
-        final completion = await GaussScope.of(context).completeMission(
+        final completion = await GaussScope.read(context).completeMission(
           sessionId: _sessionId,
           durationSeconds:
               DateTime.now().difference(_missionStartedAt).inSeconds +
@@ -343,7 +343,7 @@ class _MissionScreenState extends State<MissionScreen> {
     final next = previous == reason.key ? null : reason.key;
     setState(() => _errorTag = next);
     try {
-      await GaussScope.of(context).tagAttempt(
+      await GaussScope.read(context).tagAttempt(
         sessionId: _sessionId,
         questionId: question.id,
         errorTag: next,
@@ -385,7 +385,7 @@ class _MissionScreenState extends State<MissionScreen> {
     if (draft == null || !mounted) return;
 
     try {
-      await GaussScope.of(context).reportQuestionIssue(
+      await GaussScope.read(context).reportQuestionIssue(
         QuestionIssueReport(
           questionId: question.id,
           questionRevision: question.revision,
@@ -423,7 +423,7 @@ class _MissionScreenState extends State<MissionScreen> {
   void _retryMission() {
     if (widget.resume) {
       if (!_finished) {
-        final controller = GaussScope.of(context);
+        final controller = GaussScope.read(context);
         setState(() => _missionFuture = _loadMission(controller));
         return;
       }
@@ -441,7 +441,7 @@ class _MissionScreenState extends State<MissionScreen> {
       }
       return;
     }
-    final controller = GaussScope.of(context);
+    final controller = GaussScope.read(context);
     _disposeInkControllers();
     setState(() {
       _resetSessionIdentity();
@@ -517,7 +517,7 @@ class _MissionScreenState extends State<MissionScreen> {
     if (widget.review) return 'Review Orbit';
     if (widget.resume) return 'Saved Mission';
     try {
-      final controller = GaussScope.of(context);
+      final controller = GaussScope.read(context);
       if (controller.selectedTopic.key == question.topicKey) {
         return controller.selectedTopic.label;
       }

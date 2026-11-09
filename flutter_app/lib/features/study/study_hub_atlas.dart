@@ -490,26 +490,6 @@ class _StudyGlass extends StatelessWidget {
   final Widget child;
 
   @override
-  Widget build(BuildContext context) => ClipRRect(
-    borderRadius: BorderRadius.circular(radius),
-    child: BackdropFilter(
-      filter: ui.ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-      child: Container(
-        padding: padding,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              GaussColors.panelHigh.withValues(alpha: .88),
-              GaussColors.deepInk.withValues(alpha: .82),
-            ],
-          ),
-          borderRadius: BorderRadius.circular(radius),
-          border: Border.all(color: GaussColors.brass.withValues(alpha: .22)),
-        ),
-        child: child,
-      ),
-    ),
-  );
+  Widget build(BuildContext context) =>
+      GaussSurface(radius: radius, padding: padding, child: child);
 }

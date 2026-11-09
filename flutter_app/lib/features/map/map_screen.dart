@@ -332,16 +332,10 @@ class _AstronomicalBackdrop extends StatelessWidget {
   Widget build(BuildContext context) => Stack(
     fit: StackFit.expand,
     children: [
-      Image.asset(
-        'assets/visual/map/orrery_atmosphere_portrait.png',
+      Image(
+        image: GaussImages.atmosphere,
         fit: BoxFit.cover,
         alignment: Alignment.topCenter,
-        cacheWidth: _boundedRasterWidth(
-          context,
-          MediaQuery.sizeOf(context).width,
-          sourceWidth: 941,
-          minimum: 480,
-        ),
         filterQuality: FilterQuality.low,
       ),
       const DecoratedBox(

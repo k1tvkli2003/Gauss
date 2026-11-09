@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -13,6 +12,7 @@ import 'package:gauss/features/feedback/feedback_capture.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:gauss/features/insights/gamification_orbit_ribbon.dart';
 import 'package:gauss/ui/components/gauss_brand.dart';
+import 'package:gauss/ui/components/gauss_surface.dart';
 
 part 'insights_level_and_metrics.dart';
 part 'insights_reflection.dart';
@@ -146,11 +146,10 @@ class _ObservatoryBackdrop extends StatelessWidget {
   Widget build(BuildContext context) => Stack(
     fit: StackFit.expand,
     children: [
-      Image.asset(
-        'assets/visual/map/orrery_atmosphere_portrait.png',
+      Image(
+        image: GaussImages.atmosphere,
         fit: BoxFit.cover,
         alignment: Alignment.topCenter,
-        cacheWidth: 1400,
         filterQuality: FilterQuality.medium,
       ),
       const DecoratedBox(
@@ -308,26 +307,6 @@ class _GlassPanel extends StatelessWidget {
   final Widget child;
 
   @override
-  Widget build(BuildContext context) => ClipRRect(
-    borderRadius: BorderRadius.circular(radius),
-    child: BackdropFilter(
-      filter: ui.ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-      child: Container(
-        padding: padding,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              GaussColors.panelHigh.withValues(alpha: .87),
-              GaussColors.deepInk.withValues(alpha: .82),
-            ],
-          ),
-          borderRadius: BorderRadius.circular(radius),
-          border: Border.all(color: GaussColors.brass.withValues(alpha: .2)),
-        ),
-        child: child,
-      ),
-    ),
-  );
+  Widget build(BuildContext context) =>
+      GaussSurface(radius: radius, padding: padding, child: child);
 }

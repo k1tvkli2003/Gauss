@@ -591,21 +591,21 @@ class _PathLandmark extends StatelessWidget {
                     ],
                   ),
                 ),
-                Opacity(
-                  opacity: landmark.kind == 2 ? .9 : .84,
-                  child: Image.asset(
-                    asset,
-                    width: landmark.size,
-                    height: landmark.size,
-                    fit: BoxFit.contain,
-                    cacheWidth: _boundedRasterWidth(
-                      context,
-                      landmark.size,
-                      sourceWidth: 1254,
-                      minimum: 160,
-                    ),
-                    filterQuality: FilterQuality.medium,
+                Image.asset(
+                  opacity: AlwaysStoppedAnimation(
+                    landmark.kind == 2 ? .9 : .84,
                   ),
+                  asset,
+                  width: landmark.size,
+                  height: landmark.size,
+                  fit: BoxFit.contain,
+                  cacheWidth: _boundedRasterWidth(
+                    context,
+                    landmark.size,
+                    sourceWidth: 1254,
+                    minimum: 160,
+                  ),
+                  filterQuality: FilterQuality.medium,
                 ),
                 if (landmark.kind == 0 && landmark.size >= 150)
                   Positioned(

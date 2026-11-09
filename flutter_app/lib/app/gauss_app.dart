@@ -58,7 +58,8 @@ class _GaussAppState extends State<GaussApp> {
             routes: [
               GoRoute(
                 path: '/map',
-                builder: (context, state) => const MapScreen(),
+                builder: (context, state) =>
+                    const GaussVisibilityGate(child: MapScreen()),
               ),
             ],
           ),
@@ -66,7 +67,8 @@ class _GaussAppState extends State<GaussApp> {
             routes: [
               GoRoute(
                 path: '/study',
-                builder: (context, state) => const StudyHubScreen(),
+                builder: (context, state) =>
+                    const GaussVisibilityGate(child: StudyHubScreen()),
               ),
             ],
           ),
@@ -74,7 +76,8 @@ class _GaussAppState extends State<GaussApp> {
             routes: [
               GoRoute(
                 path: '/insights',
-                builder: (context, state) => const InsightsScreen(),
+                builder: (context, state) =>
+                    const GaussVisibilityGate(child: InsightsScreen()),
               ),
             ],
           ),

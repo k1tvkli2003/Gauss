@@ -56,19 +56,7 @@ class TheoremLensSurface extends StatelessWidget {
                     marked: marked,
                   ),
                   const SizedBox(height: GaussSpacing.space12),
-                  Stack(
-                    children: [
-                      PositionedDirectional(
-                        top: -8,
-                        end: -8,
-                        child: Opacity(
-                          opacity: .055,
-                          child: const TheoremStarMark(size: 88, darkInk: true),
-                        ),
-                      ),
-                      question!,
-                    ],
-                  ),
+                  Stack(children: [question!]),
                 ],
               ),
             ),

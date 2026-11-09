@@ -302,7 +302,7 @@ class _StudyRoomScreenState extends State<StudyRoomScreen> {
       _inkActive = false;
     });
     if (!shelf.revisitOnly) {
-      GaussScope.of(context).saveStudyPosition(
+      GaussScope.read(context).saveStudyPosition(
         shelfKey: shelf.key,
         question: shelf.questions[index],
         position: index,
@@ -329,7 +329,7 @@ class _StudyRoomScreenState extends State<StudyRoomScreen> {
     });
     late final StudyReflectionOutcome outcome;
     try {
-      outcome = await GaussScope.of(context).saveStudyReflection(
+      outcome = await GaussScope.read(context).saveStudyReflection(
         question: question,
         shelfKey: shelf.key,
         hypothesisChoiceIndex: _hypotheses[question.id],
@@ -625,10 +625,9 @@ class _ArchiveBackdrop extends StatelessWidget {
   Widget build(BuildContext context) => Stack(
     fit: StackFit.expand,
     children: [
-      Image.asset(
-        'assets/visual/map/orrery_atmosphere_portrait.png',
+      Image(
+        image: GaussImages.atmosphere,
         fit: BoxFit.cover,
-        cacheWidth: 1200,
         filterQuality: FilterQuality.low,
       ),
       const DecoratedBox(

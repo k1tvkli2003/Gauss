@@ -193,10 +193,9 @@ class _MissionBackdrop extends StatelessWidget {
   Widget build(BuildContext context) => Stack(
     fit: StackFit.expand,
     children: [
-      Image.asset(
-        'assets/visual/map/orrery_atmosphere_portrait.png',
+      Image(
+        image: GaussImages.atmosphere,
         fit: BoxFit.cover,
-        cacheWidth: 1200,
         filterQuality: FilterQuality.low,
       ),
       const DecoratedBox(

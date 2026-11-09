@@ -146,10 +146,9 @@ class _StudySessionCelebrationState extends State<StudySessionCelebration>
                 children: [
                   Positioned.fill(
                     child: ExcludeSemantics(
-                      child: Image.asset(
-                        'assets/visual/map/orrery_atmosphere_portrait.png',
+                      child: Image(
+                        image: GaussImages.atmosphere,
                         fit: BoxFit.cover,
-                        cacheWidth: 900,
                         filterQuality: FilterQuality.low,
                         opacity: const AlwaysStoppedAnimation(.24),
                       ),
@@ -302,17 +301,15 @@ class _CelebrationVisual extends StatelessWidget {
                       painter: _FiveStarOrbitPainter(progress: reveal),
                     ),
                   ),
-                  Opacity(
-                    opacity: mascotOpacity,
-                    child: Transform.scale(
-                      scale: mascotScale,
-                      child: Image.asset(
-                        'assets/visual/mascot/mira_correct.png',
-                        height: compact ? 154 : 248,
-                        fit: BoxFit.contain,
-                        cacheHeight: compact ? 460 : 740,
-                        filterQuality: FilterQuality.medium,
-                      ),
+                  Transform.scale(
+                    scale: mascotScale,
+                    child: Image.asset(
+                      opacity: AlwaysStoppedAnimation(mascotOpacity),
+                      'assets/visual/mascot/mira_correct.png',
+                      height: compact ? 154 : 248,
+                      fit: BoxFit.contain,
+                      cacheHeight: compact ? 460 : 740,
+                      filterQuality: FilterQuality.medium,
                     ),
                   ),
                   Positioned(

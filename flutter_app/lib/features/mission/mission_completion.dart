@@ -199,17 +199,15 @@ class _MissionCompletionVisual extends StatelessWidget {
         ExcludeSemantics(
           child: Transform.scale(
             scale: .94 + reveal * .06,
-            child: Opacity(
-              opacity: reveal,
-              child: Image.asset(
-                accuracy >= .7
-                    ? 'assets/visual/mascot/mira_correct.png'
-                    : 'assets/visual/mascot/mira_thinking.png',
-                height: compact ? 178 : 264,
-                fit: BoxFit.contain,
-                cacheHeight: compact ? 534 : 792,
-                filterQuality: FilterQuality.medium,
-              ),
+            child: Image.asset(
+              opacity: AlwaysStoppedAnimation(reveal),
+              accuracy >= .7
+                  ? 'assets/visual/mascot/mira_correct.png'
+                  : 'assets/visual/mascot/mira_thinking.png',
+              height: compact ? 178 : 264,
+              fit: BoxFit.contain,
+              cacheHeight: compact ? 534 : 792,
+              filterQuality: FilterQuality.medium,
             ),
           ),
         ),

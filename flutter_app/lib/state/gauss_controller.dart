@@ -694,27 +694,108 @@ class GaussController extends ChangeNotifier {
   }
 }
 
-class GaussScope extends InheritedNotifier<GaussController> {
+/// Provides the controller. Dependents rebuild when [notifier] fires, which
+/// is the controller itself unless a [GaussVisibilityGate] substitutes a
+/// gated signal for a hidden surface.
+class GaussScope extends InheritedNotifier<Listenable> {
   const GaussScope({
-    required GaussController controller,
+    required this.controller,
+    Listenable? changes,
     this.accountEmail,
     this.onSignOut,
     required super.child,
     super.key,
-  }) : super(notifier: controller);
+  }) : super(notifier: changes ?? controller);
 
+  final GaussController controller;
   final String? accountEmail;
   final Future<void> Function()? onSignOut;
 
+  /// Reads the controller and rebuilds the caller when it changes. Use in
+  /// `build` and `didChangeDependencies`.
   static GaussController of(BuildContext context) {
     final scope = context.dependOnInheritedWidgetOfExactType<GaussScope>();
     assert(scope != null, 'No GaussScope found in the widget tree.');
-    return scope!.notifier!;
+    return scope!.controller;
+  }
+
+  /// Reads the controller without subscribing. Use in event handlers and
+  /// async callbacks, where a subscription only adds wasted rebuilds.
+  static GaussController read(BuildContext context) {
+    final scope = context.getInheritedWidgetOfExactType<GaussScope>();
+    assert(scope != null, 'No GaussScope found in the widget tree.');
+    return scope!.controller;
   }
 
   static String? accountEmailOf(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<GaussScope>()?.accountEmail;
+      context.getInheritedWidgetOfExactType<GaussScope>()?.accountEmail;
 
   static Future<void> Function()? onSignOutOf(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<GaussScope>()?.onSignOut;
+      context.getInheritedWidgetOfExactType<GaussScope>()?.onSignOut;
+}
+
+/// Holds controller notifications for a surface that is not visible (an
+/// inactive shell branch, or a route covered by an opaque route) and
+/// delivers one rebuild when it becomes visible again. Without it every
+/// recorded answer rebuilt the Map, Study and Insights trees offstage.
+class GaussVisibilityGate extends StatefulWidget {
+  const GaussVisibilityGate({required this.child, super.key});
+
+  final Widget child;
+
+  @override
+  State<GaussVisibilityGate> createState() => _GaussVisibilityGateState();
+}
+
+class _GaussVisibilityGateState extends State<GaussVisibilityGate> {
+  final _changes = _GateSignal();
+  GaussScope? _outer;
+  GaussController? _controller;
+  bool _visible = true;
+  bool _pending = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final outer = context.dependOnInheritedWidgetOfExactType<GaussScope>()!;
+    _outer = outer;
+    if (!identical(outer.controller, _controller)) {
+      _controller?.removeListener(_onControllerChanged);
+      _controller = outer.controller..addListener(_onControllerChanged);
+    }
+    final visible = TickerMode.valuesOf(context).enabled;
+    if (visible && !_visible && _pending) {
+      _pending = false;
+      _changes.fire();
+    }
+    _visible = visible;
+  }
+
+  void _onControllerChanged() {
+    if (_visible) {
+      _changes.fire();
+    } else {
+      _pending = true;
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller?.removeListener(_onControllerChanged);
+    _changes.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => GaussScope(
+    controller: _outer!.controller,
+    changes: _changes,
+    accountEmail: _outer!.accountEmail,
+    onSignOut: _outer!.onSignOut,
+    child: widget.child,
+  );
+}
+
+class _GateSignal extends ChangeNotifier {
+  void fire() => notifyListeners();
 }

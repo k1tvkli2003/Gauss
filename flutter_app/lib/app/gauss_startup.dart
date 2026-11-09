@@ -8,10 +8,9 @@ class _StartupView extends StatelessWidget {
     body: Stack(
       fit: StackFit.expand,
       children: [
-        Image.asset(
-          'assets/visual/map/orrery_atmosphere_portrait.png',
+        Image(
+          image: GaussImages.atmosphere,
           fit: BoxFit.cover,
-          cacheWidth: 1200,
           filterQuality: FilterQuality.medium,
         ),
         const DecoratedBox(

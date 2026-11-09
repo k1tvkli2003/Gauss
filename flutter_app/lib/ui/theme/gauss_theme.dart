@@ -26,6 +26,11 @@ abstract final class GaussColors {
   static const fog = Color(0xFF879393);
   static const line = Color(0xFF344448);
   static const hairline = Color(0xFF243337);
+
+  /// Card and well fills for [GaussSurface]: opaque, one step apart, so
+  /// layering reads without blur.
+  static const surface = Color(0xFF101B1E);
+  static const surfaceInset = Color(0xFF0B1417);
 }
 
 /// Ink tones for marks drawn on parchment. The night-sky accents fail
@@ -62,6 +67,7 @@ abstract final class GaussRadii {
   static const small = 10.0;
   static const medium = 16.0;
   static const large = 24.0;
+  static const card = 20.0;
   static const pill = 999.0;
 }
 

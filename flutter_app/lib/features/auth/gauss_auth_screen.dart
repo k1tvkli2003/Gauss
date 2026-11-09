@@ -46,11 +46,10 @@ class _GaussAuthScreenState extends State<GaussAuthScreen> {
     body: Stack(
       fit: StackFit.expand,
       children: [
-        Image.asset(
-          'assets/visual/map/orrery_atmosphere_portrait.png',
+        Image(
+          image: GaussImages.atmosphere,
           fit: BoxFit.cover,
           alignment: Alignment.topCenter,
-          cacheWidth: 1600,
           filterQuality: FilterQuality.medium,
         ),
         const DecoratedBox(
