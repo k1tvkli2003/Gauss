@@ -94,7 +94,7 @@ class _StartupFailureScreenState extends State<_StartupFailureScreen> {
                 ),
                 const SizedBox(height: 9),
                 const Text(
-                  'The offline archive or local progress store could not be verified. No data was reset. Try opening it again.',
+                  'The question library or progress store on this device could not be verified. No data was reset. Try opening it again.',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: GaussColors.muted),
                 ),

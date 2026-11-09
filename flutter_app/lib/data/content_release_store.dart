@@ -459,6 +459,7 @@ final class GaussContentReleaseStore {
     AssetBundle? fallbackBundle,
     GaussContentRootProvider? rootProvider,
     this.channel = gaussContentChannel,
+    this._verifyRelease,
   }) : _fallback = fallbackBundle ?? rootBundle,
        _rootProvider = rootProvider ?? _defaultRoot;
 
@@ -467,6 +468,11 @@ final class GaussContentReleaseStore {
   final GaussContentRootProvider _rootProvider;
   final int appBuild;
   final String channel;
+
+  /// Proves a staged release can serve lessons before it may become active.
+  /// A release that fails keeps the learner on the previous or bundled
+  /// content instead of replacing a working library with a broken one.
+  final Future<void> Function(AssetBundle bundle)? _verifyRelease;
 
   static Future<Directory> _defaultRoot() async {
     final support = await getApplicationSupportDirectory();
@@ -626,6 +632,8 @@ final class GaussContentReleaseStore {
         corpusSha256: release.corpusSha256,
         manifestSha256: manifestHash,
       );
+
+      await _verifyRelease?.call(_DirectoryAssetBundle(staging, _fallback));
 
       final releasesRoot = Directory(_join(root.path, 'releases'));
       await releasesRoot.create(recursive: true);

@@ -157,6 +157,28 @@ class QuestionBankRepository {
   @visibleForTesting
   bool isTopicLoaded(String key) => _cache.containsKey(key);
 
+  /// Proves a content bundle can actually serve lessons: it initializes, every
+  /// topic decodes and binds to its certification, and every planned
+  /// five-question session resolves. Used to refuse a downloaded release that
+  /// would leave the learner unable to open lessons.
+  static Future<void> verifyBundle(AssetBundle bundle) async {
+    final bank = QuestionBankRepository(bundle: bundle);
+    await bank.initialize();
+    for (final topic in bank.topics) {
+      final plan = bank.studyPlan.topic(topic.key);
+      for (final session in plan.sessions) {
+        final offset = session.index * GaussStudyCurriculum.batchSize;
+        final questions = await bank.createStudySessionMission(
+          topic.key,
+          offset: offset,
+        );
+        if (questions.length != GaussStudyCurriculum.batchSize) {
+          throw DatasetIntegrityException('${session.key} is not usable.');
+        }
+      }
+    }
+  }
+
   Future<List<Question>> loadTopic(String key) async {
     final cached = _cache.remove(key);
     if (cached != null) {
@@ -169,12 +191,24 @@ class QuestionBankRepository {
     final raw = await _bundle.loadString(topic.assetPath, cache: false);
     final questions = (jsonDecode(raw) as List<dynamic>)
         .map((item) {
-          final sourceRow = item as Map<String, dynamic>;
+          // A downloaded content release stamps each row with runtime-only
+          // delivery metadata (`_gauss_revision`). Certification hashes cover
+          // the immutable source row, so the stamp is set aside before the
+          // binding check and restored on the effective row afterwards.
+          // Without this every certified question of a downloaded release
+          // failed its hash and no lesson could open while online.
+          final sourceRow = Map<String, dynamic>.of(
+            item as Map<String, dynamic>,
+          );
+          final deliveryRevision = sourceRow.remove('_gauss_revision');
           final id = sourceRow['id'] as String?;
           final certification = certificationRuntime.questionsById[id];
           try {
             final effectiveRow =
                 certification?.bindAndApply(sourceRow) ?? sourceRow;
+            if (deliveryRevision != null) {
+              effectiveRow['_gauss_revision'] = deliveryRevision;
+            }
             return Question.fromJson(
               effectiveRow,
               certification: certification,
