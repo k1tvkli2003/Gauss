@@ -26,7 +26,7 @@ void main() {
         'lib/domain/models.dart': <RegExp>[
           RegExp(r"^\s*r'\(\?:گزینه\|option\)\\s\*\(\[1-4\]\)',\s*$"),
         ],
-        'lib/widgets/content_blocks.dart': <RegExp>[
+        'lib/features/manuscript/content_blocks.dart': <RegExp>[
           RegExp(r"RegExp\(r'\[\\u0600-\\u06ff\]'\)"),
         ],
       };

@@ -4,9 +4,9 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import '../domain/models.dart';
-import '../domain/question_certification.dart';
-import '../domain/study_curriculum.dart';
+import 'package:gauss/domain/models.dart';
+import 'package:gauss/domain/question_certification.dart';
+import 'package:gauss/domain/study_curriculum.dart';
 
 const _expectedQuestionCount = 3672;
 const _expectedTopicShardCount = 29;
@@ -27,6 +27,12 @@ class QuestionBankRepository {
     : _bundle = bundle ?? rootBundle;
 
   final AssetBundle _bundle;
+
+  /// Decoded topics, least recently used first. Bounded so a long session
+  /// that wanders through many topics does not keep the whole corpus
+  /// decoded (all 29 topics cost about 29 MB of RSS); an evicted topic
+  /// re-decodes in tens of milliseconds when it is needed again.
+  static const maxDecodedTopics = 6;
   final Map<String, List<Question>> _cache = {};
   late final List<TopicDescriptor> topics;
   late final int declaredTotal;
@@ -46,14 +52,21 @@ class QuestionBankRepository {
       // Parse and validate into locals before publishing the late-final state.
       // A retry after a transient asset or validation failure must never try to
       // assign a partially initialized `late final` field a second time.
-      final raw = await _bundle.loadString('assets/question_bank/index.json');
+      final raw = await _bundle.loadString(
+        'assets/question_bank/index.json',
+        cache: false,
+      );
       final root = jsonDecode(raw) as Map<String, dynamic>;
-      final rawCertification = await _bundle.loadString(_certifiedRuntimeAsset);
+      final rawCertification = await _bundle.loadString(
+        _certifiedRuntimeAsset,
+        cache: false,
+      );
       final parsedCertification = CertifiedQuestionRuntime.fromJson(
         jsonDecode(rawCertification) as Map<String, dynamic>,
       );
       final rawPlan = await _bundle.loadString(
         'assets/curriculum/five_question_plan_v1.json',
+        cache: false,
       );
       final parsedPlan = GaussStudyPlan.fromJson(
         jsonDecode(rawPlan) as Map<String, dynamic>,
@@ -145,10 +158,15 @@ class QuestionBankRepository {
   bool isTopicLoaded(String key) => _cache.containsKey(key);
 
   Future<List<Question>> loadTopic(String key) async {
-    final cached = _cache[key];
-    if (cached != null) return cached;
+    final cached = _cache.remove(key);
+    if (cached != null) {
+      _cache[key] = cached; // most recently used
+      return cached;
+    }
     final topic = topicByKey(key);
-    final raw = await _bundle.loadString(topic.assetPath);
+    // The raw JSON is garbage once decoded; the bundle's string cache would
+    // otherwise keep every opened shard resident for the whole session.
+    final raw = await _bundle.loadString(topic.assetPath, cache: false);
     final questions = (jsonDecode(raw) as List<dynamic>)
         .map((item) {
           final sourceRow = item as Map<String, dynamic>;
@@ -209,6 +227,9 @@ class QuestionBankRepository {
       );
     }
     _cache[key] = questions;
+    while (_cache.length > maxDecodedTopics) {
+      _cache.remove(_cache.keys.first);
+    }
     return questions;
   }
 

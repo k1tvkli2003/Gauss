@@ -1,0 +1,862 @@
+import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
+
+import 'package:gauss/ui/tokens/gauss_tokens.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
+import 'package:gauss/ui/components/gauss_brand.dart';
+import 'package:gauss/features/manuscript/scratchpad.dart';
+import 'package:gauss/features/manuscript/theorem_lens.dart';
+
+/// The accepted Gauss question composition: one continuous, writable
+/// manuscript rather than a question card followed by unrelated answer cards.
+///
+/// The parchment texture is visual material only. Question content, options,
+/// ink, controls, feedback, and semantics remain live Flutter widgets.
+class QuestionManuscript extends StatefulWidget {
+  /// Phones keep a compact writing band and scroll; a tablet gives the pen
+  /// room in proportion to the screen instead of leaving half of it empty
+  /// below a short manuscript.
+  ///
+  /// Gated on the manuscript's own width, not the device: a phone-width
+  /// split-screen pane on a tablet keeps the compact band.
+  static double writingSpaceFor({
+    required double manuscriptWidth,
+    required double screenHeight,
+  }) =>
+      manuscriptWidth >= 560 ? (screenHeight * .32).clamp(112.0, 420.0) : 112.0;
+
+  const QuestionManuscript({
+    required this.ink,
+    required this.questionNumber,
+    required this.difficulty,
+    required this.prompt,
+    required this.answers,
+    required this.onExpandInk,
+    required this.onClearInk,
+    required this.onRestoreInk,
+    this.active = true,
+    this.reviewing = false,
+    this.review,
+    this.onDrawingChanged,
+    super.key,
+  });
+
+  final ScratchInkController ink;
+  final int questionNumber;
+  final String difficulty;
+  final Widget prompt;
+  final Widget answers;
+  final bool active;
+  final bool reviewing;
+  final Widget? review;
+  final ValueChanged<bool>? onDrawingChanged;
+  final VoidCallback onExpandInk;
+  final VoidCallback onClearInk;
+  final VoidCallback onRestoreInk;
+
+  @override
+  State<QuestionManuscript> createState() => _QuestionManuscriptState();
+}
+
+class _QuestionManuscriptState extends State<QuestionManuscript> {
+  QuestionInkMode _mode = QuestionInkMode.pan;
+
+  @override
+  void didUpdateWidget(covariant QuestionManuscript oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.questionNumber != widget.questionNumber ||
+        (!oldWidget.reviewing && widget.reviewing)) {
+      // A new question and the review transition both begin with native touch
+      // scrolling. This prevents a previously selected finger-ink mode from
+      // trapping the user above the answer explanation.
+      _mode = QuestionInkMode.pan;
+    }
+  }
+
+  void _selectMode(QuestionInkMode mode) {
+    if (_mode == mode) return;
+    setState(() => _mode = mode);
+  }
+
+  @override
+  Widget build(
+    BuildContext context,
+  ) => ValueListenableBuilder<ScratchInkStatus>(
+    valueListenable: widget.ink.status,
+    builder: (context, inkStatus, _) {
+      final accent = inkStatus.isEmpty
+          ? GaussColors.brass
+          : GaussColors.signalBright;
+      return RepaintBoundary(
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(28),
+            boxShadow: const [
+              BoxShadow(
+                color: Color(0x9A000000),
+                blurRadius: 38,
+                offset: Offset(0, 18),
+              ),
+              BoxShadow(
+                color: Color(0x2639D4D1),
+                blurRadius: 18,
+                spreadRadius: -6,
+              ),
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(28),
+            child: Stack(
+              children: [
+                Positioned.fill(
+                  child: Image.asset(
+                    'assets/visual/question/manuscript_parchment_v1.png',
+                    fit: BoxFit.cover,
+                    alignment: Alignment.topCenter,
+                    cacheWidth: 1500,
+                    filterQuality: FilterQuality.medium,
+                  ),
+                ),
+                const Positioned.fill(
+                  child: ColoredBox(color: Color(0x0D8D601F)),
+                ),
+                Positioned.fill(
+                  child: IgnorePointer(
+                    child: CustomPaint(
+                      painter: _ManuscriptFramePainter(accent: accent),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 14, 12, 18),
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      final textScale = MediaQuery.textScalerOf(
+                        context,
+                      ).scale(12);
+                      // A normal phone manuscript is intentionally a narrow
+                      // writing folio with its tools bound to the left edge.
+                      // Only genuinely compact or large-text compositions
+                      // move the tools above the page. Basing this boundary
+                      // on the manuscript width (rather than the viewport)
+                      // keeps Study and Mission visually identical even when
+                      // their outer gutters differ.
+                      final verticalTools =
+                          constraints.maxWidth >= 330 && textScale < 18;
+                      final content = _ManuscriptContent(
+                        ink: widget.ink,
+                        inkStatus: inkStatus,
+                        mode: _mode,
+                        questionNumber: widget.questionNumber,
+                        difficulty: widget.difficulty,
+                        prompt: widget.prompt,
+                        answers: widget.answers,
+                        review: widget.review,
+                        active: widget.active,
+                        onDrawingChanged: widget.onDrawingChanged,
+                      );
+                      final tools = _ManuscriptToolRail(
+                        ink: widget.ink,
+                        inkStatus: inkStatus,
+                        mode: _mode,
+                        vertical: verticalTools,
+                        onMode: _selectMode,
+                        onExpand: widget.onExpandInk,
+                        onClear: widget.onClearInk,
+                        onRestore: widget.onRestoreInk,
+                      );
+                      if (!verticalTools) {
+                        return Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            tools,
+                            const SizedBox(height: GaussSpacing.space8),
+                            const _EngravedRule(),
+                            const SizedBox(height: GaussSpacing.space8),
+                            content,
+                          ],
+                        );
+                      }
+                      return Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 60),
+                            child: content,
+                          ),
+                          Positioned(left: 0, top: 0, child: tools),
+                          const Positioned(
+                            left: 54,
+                            top: 0,
+                            bottom: 0,
+                            child: _VerticalEngravedRule(),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    },
+  );
+}
+
+class _ManuscriptContent extends StatelessWidget {
+  const _ManuscriptContent({
+    required this.ink,
+    required this.inkStatus,
+    required this.mode,
+    required this.questionNumber,
+    required this.difficulty,
+    required this.prompt,
+    required this.answers,
+    required this.review,
+    required this.active,
+    required this.onDrawingChanged,
+  });
+
+  final ScratchInkController ink;
+  final ScratchInkStatus inkStatus;
+  final QuestionInkMode mode;
+  final int questionNumber;
+  final String difficulty;
+  final Widget prompt;
+  final Widget answers;
+  final Widget? review;
+  final bool active;
+  final ValueChanged<bool>? onDrawingChanged;
+
+  @override
+  Widget build(BuildContext context) => Column(
+    mainAxisSize: MainAxisSize.min,
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: [
+      _ManuscriptQuestionHeader(
+        difficulty: difficulty,
+        questionNumber: questionNumber,
+      ),
+      const SizedBox(height: GaussSpacing.space16),
+      InlineQuestionScratch(
+        key: ValueKey('study-ink-surface-$questionNumber'),
+        controller: ink,
+        active: active,
+        inputMode: mode,
+        showInlineControls: false,
+        onDrawingChanged: onDrawingChanged,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            prompt,
+            const SizedBox(height: GaussSpacing.space16),
+            Semantics(
+              label:
+                  'Writable reasoning space. A hardware stylus writes immediately.',
+              child: LayoutBuilder(
+                builder: (context, constraints) => AnimatedContainer(
+                  key: const ValueKey('question-manuscript-writing-space'),
+                  duration: GaussMotion.resolve(context, GaussMotion.standard),
+                  curve: Curves.easeOutCubic,
+                  constraints: BoxConstraints(
+                    minHeight: QuestionManuscript.writingSpaceFor(
+                      manuscriptWidth: constraints.maxWidth,
+                      screenHeight: MediaQuery.sizeOf(context).height,
+                    ),
+                  ),
+                  alignment: AlignmentDirectional.topStart,
+                  padding: const EdgeInsets.all(GaussSpacing.space8),
+                  child: inkStatus.isEmpty
+                      ? ExcludeSemantics(child: _WritingSpaceSignal(mode: mode))
+                      : null,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      const SizedBox(height: GaussSpacing.space12),
+      const _EngravedRule(ornament: true),
+      const SizedBox(height: GaussSpacing.space16),
+      answers,
+      if (review case final review?) ...[
+        const SizedBox(height: GaussSpacing.space20),
+        const _EngravedRule(ornament: true),
+        const SizedBox(height: GaussSpacing.space16),
+        review,
+      ],
+    ],
+  );
+}
+
+class _WritingSpaceSignal extends StatelessWidget {
+  const _WritingSpaceSignal({required this.mode});
+
+  final QuestionInkMode mode;
+
+  @override
+  Widget build(BuildContext context) {
+    final label = switch (mode) {
+      QuestionInkMode.pan => 'Stylus ready · Touch scrolls',
+      QuestionInkMode.pen => 'Finger ink active',
+      QuestionInkMode.eraser => 'Stroke eraser active',
+    };
+    final accent = mode == QuestionInkMode.pan
+        ? GaussColors.parchmentInk
+        : GaussParchmentInk.teal;
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(
+          mode == QuestionInkMode.pan
+              ? Icons.draw_outlined
+              : mode == QuestionInkMode.pen
+              ? Icons.gesture_rounded
+              : Icons.cleaning_services_outlined,
+          size: 15,
+          color: accent.withValues(alpha: .34),
+        ),
+        const SizedBox(width: GaussSpacing.space8),
+        Flexible(
+          child: Text(
+            label,
+            softWrap: true,
+            style: TextStyle(
+              color: accent.withValues(alpha: .34),
+              fontSize: GaussTypeScale.caption,
+              fontWeight: FontWeight.w800,
+              letterSpacing: .2,
+              height: 1.2,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _ManuscriptQuestionHeader extends StatelessWidget {
+  const _ManuscriptQuestionHeader({
+    required this.difficulty,
+    required this.questionNumber,
+  });
+
+  final String difficulty;
+  final int questionNumber;
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final textScaler = MediaQuery.textScalerOf(context);
+      final difficultyText = difficulty.isEmpty
+          ? difficulty
+          : '${difficulty[0].toUpperCase()}${difficulty.substring(1).toLowerCase()}';
+      final questionText = 'Question $questionNumber';
+      const difficultyStyle = TextStyle(
+        fontFamily: 'Manrope',
+        fontSize: GaussTypeScale.caption,
+        fontWeight: FontWeight.w900,
+        letterSpacing: .2,
+      );
+      const questionStyle = TextStyle(
+        fontFamily: 'Manrope',
+        fontSize: 12,
+        fontWeight: FontWeight.w900,
+        letterSpacing: .2,
+      );
+      double measuredWidth(String text, TextStyle style) {
+        final painter = TextPainter(
+          text: TextSpan(text: text, style: style),
+          textDirection: TextDirection.ltr,
+          textScaler: textScaler,
+          maxLines: 1,
+        )..layout();
+        return painter.width;
+      }
+
+      final inlineWidth =
+          measuredWidth(difficultyText, difficultyStyle) +
+          GaussSpacing.space16 +
+          measuredWidth(questionText, questionStyle) +
+          GaussSpacing.space8 +
+          17;
+      final stacked =
+          textScaler.scale(12) >= 18 ||
+          constraints.maxWidth < inlineWidth.ceilToDouble();
+      final difficultyLabel = Text(
+        difficultyText,
+        key: const ValueKey('question-manuscript-difficulty'),
+        textAlign: stacked ? TextAlign.center : TextAlign.start,
+        softWrap: true,
+        style: difficultyStyle.copyWith(
+          color: GaussColors.parchmentInk.withValues(alpha: .58),
+        ),
+      );
+      final questionLabel = Text(
+        questionText,
+        key: const ValueKey('question-manuscript-number'),
+        textAlign: stacked ? TextAlign.center : TextAlign.start,
+        textDirection: TextDirection.ltr,
+        softWrap: true,
+        style: questionStyle.copyWith(color: GaussColors.parchmentInk),
+      );
+
+      if (stacked) {
+        return Column(
+          key: const ValueKey('question-manuscript-header-stacked'),
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            difficultyLabel,
+            const SizedBox(height: GaussSpacing.space4),
+            questionLabel,
+            const SizedBox(height: GaussSpacing.space4),
+            const Center(child: TheoremStarMark(size: 17, darkInk: true)),
+          ],
+        );
+      }
+
+      return Row(
+        key: const ValueKey('question-manuscript-header-inline'),
+        children: [
+          difficultyLabel,
+          const Spacer(),
+          questionLabel,
+          const SizedBox(width: GaussSpacing.space8),
+          const TheoremStarMark(size: 17, darkInk: true),
+        ],
+      );
+    },
+  );
+}
+
+class _ManuscriptToolRail extends StatelessWidget {
+  const _ManuscriptToolRail({
+    required this.ink,
+    required this.inkStatus,
+    required this.mode,
+    required this.vertical,
+    required this.onMode,
+    required this.onExpand,
+    required this.onClear,
+    required this.onRestore,
+  });
+
+  final ScratchInkController ink;
+  final ScratchInkStatus inkStatus;
+  final QuestionInkMode mode;
+  final bool vertical;
+  final ValueChanged<QuestionInkMode> onMode;
+  final VoidCallback onExpand;
+  final VoidCallback onClear;
+  final VoidCallback onRestore;
+
+  @override
+  Widget build(BuildContext context) {
+    final returnToScroll = mode != QuestionInkMode.pan;
+    final buttons = <Widget>[
+      _ManuscriptToolButton(
+        key: ValueKey(
+          returnToScroll ? 'manuscript-pan-tool' : 'manuscript-pen-tool',
+        ),
+        icon: returnToScroll
+            ? Icons.pan_tool_alt_outlined
+            : Icons.draw_outlined,
+        label: returnToScroll ? 'Touch scroll' : 'Finger pen',
+        selected: returnToScroll,
+        onPressed: () =>
+            onMode(returnToScroll ? QuestionInkMode.pan : QuestionInkMode.pen),
+      ),
+      if (inkStatus.canUndo && !inkStatus.canRestoreClearedInk)
+        _ManuscriptToolButton(
+          key: const ValueKey('manuscript-undo-tool'),
+          icon: Icons.undo_rounded,
+          label: 'Undo last stroke',
+          onPressed: ink.undo,
+        ),
+      _ManuscriptToolButton(
+        key: const ValueKey('manuscript-expand-tool'),
+        icon: Icons.open_in_full_rounded,
+        label: 'Open full scratchpad',
+        onPressed: onExpand,
+      ),
+      if (!inkStatus.isEmpty && !inkStatus.canRestoreClearedInk)
+        _ManuscriptToolButton(
+          key: const ValueKey('manuscript-eraser-tool'),
+          icon: Icons.cleaning_services_outlined,
+          label: 'Stroke eraser',
+          selected: mode == QuestionInkMode.eraser,
+          onPressed: () => onMode(QuestionInkMode.eraser),
+        ),
+      if (!inkStatus.isEmpty || inkStatus.canRestoreClearedInk)
+        _ManuscriptToolButton(
+          key: ValueKey(
+            inkStatus.canRestoreClearedInk
+                ? 'manuscript-restore-tool'
+                : 'manuscript-clear-tool',
+          ),
+          icon: inkStatus.canRestoreClearedInk
+              ? Icons.restore_rounded
+              : Icons.delete_outline_rounded,
+          label: inkStatus.canRestoreClearedInk
+              ? 'Restore cleared ink'
+              : 'Clear ink',
+          danger: !inkStatus.canRestoreClearedInk,
+          onPressed: inkStatus.canRestoreClearedInk ? onRestore : onClear,
+        ),
+    ];
+    return Semantics(
+      container: true,
+      label: 'Manuscript tools',
+      child: vertical
+          ? Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                for (var index = 0; index < buttons.length; index++) ...[
+                  buttons[index],
+                  if (index != buttons.length - 1)
+                    const SizedBox(height: GaussSpacing.space8),
+                ],
+              ],
+            )
+          : Wrap(
+              alignment: WrapAlignment.center,
+              spacing: GaussSpacing.space8,
+              runSpacing: GaussSpacing.space8,
+              children: buttons,
+            ),
+    );
+  }
+}
+
+class _ManuscriptToolButton extends StatelessWidget {
+  const _ManuscriptToolButton({
+    required this.icon,
+    required this.label,
+    required this.onPressed,
+    this.selected = false,
+    this.danger = false,
+    super.key,
+  });
+
+  final IconData icon;
+  final String label;
+  final VoidCallback? onPressed;
+  final bool selected;
+  final bool danger;
+
+  @override
+  Widget build(BuildContext context) {
+    final color = selected
+        ? GaussParchmentInk.tealBright
+        : danger
+        ? GaussParchmentInk.negativeDeep
+        : GaussColors.parchmentInk;
+    return Semantics(
+      button: true,
+      selected: selected,
+      enabled: onPressed != null,
+      label: label,
+      excludeSemantics: true,
+      child: Tooltip(
+        message: label,
+        child: SizedBox.square(
+          dimension: GaussMetrics.minTouchTarget,
+          child: Material(
+            color: selected
+                ? GaussParchmentInk.selectedWash
+                : const Color(0x12FFFFFF),
+            shape: CircleBorder(
+              side: BorderSide(
+                color: color.withValues(alpha: onPressed == null ? .18 : .5),
+                width: selected ? 1.8 : 1,
+              ),
+            ),
+            child: InkWell(
+              customBorder: const CircleBorder(),
+              onTap: onPressed,
+              child: Icon(
+                icon,
+                color: color.withValues(alpha: onPressed == null ? .24 : .9),
+                size: 21,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// A single engraved answer row inside [QuestionManuscript].
+class ManuscriptChoiceShell extends StatelessWidget {
+  const ManuscriptChoiceShell({
+    required this.tone,
+    required this.emblem,
+    required this.child,
+    required this.onTap,
+    super.key,
+  });
+
+  final TheoremChoiceTone tone;
+  final Widget emblem;
+  final Widget child;
+  final VoidCallback? onTap;
+
+  Color get _accent => switch (tone) {
+    TheoremChoiceTone.neutral => GaussParchmentInk.sepia,
+    TheoremChoiceTone.selected => GaussParchmentInk.teal,
+    TheoremChoiceTone.positive => GaussParchmentInk.positive,
+    TheoremChoiceTone.negative => GaussParchmentInk.negative,
+    TheoremChoiceTone.source => GaussParchmentInk.brass,
+  };
+
+  @override
+  Widget build(BuildContext context) {
+    final active = tone != TheoremChoiceTone.neutral;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: GaussSpacing.space8),
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(minHeight: 76),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: onTap,
+            splashColor: _accent.withValues(alpha: .1),
+            highlightColor: _accent.withValues(alpha: .05),
+            child: AnimatedContainer(
+              duration: GaussMotion.resolve(context, GaussMotion.micro),
+              curve: Curves.easeOutCubic,
+              decoration: BoxDecoration(
+                color: active
+                    ? _accent.withValues(alpha: .1)
+                    : const Color(0x18FFFFFF),
+              ),
+              child: CustomPaint(
+                painter: _ChoiceEngravingPainter(
+                  accent: _accent,
+                  active: active,
+                ),
+                child: Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(12, 12, 16, 12),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox.square(
+                        dimension: 50,
+                        child: CustomPaint(
+                          painter: _ChoiceSealPainter(
+                            accent: _accent,
+                            active: active,
+                          ),
+                          child: Center(child: emblem),
+                        ),
+                      ),
+                      const SizedBox(width: GaussSpacing.space12),
+                      Expanded(child: child),
+                      const SizedBox(width: GaussSpacing.space8),
+                      Icon(
+                        // Shape, not just color, tells the state apart.
+                        switch (tone) {
+                          TheoremChoiceTone.neutral =>
+                            Icons.radio_button_unchecked_rounded,
+                          TheoremChoiceTone.selected =>
+                            Icons.radio_button_checked_rounded,
+                          TheoremChoiceTone.positive =>
+                            Icons.check_circle_rounded,
+                          TheoremChoiceTone.negative => Icons.cancel_rounded,
+                          TheoremChoiceTone.source => Icons.bookmark_rounded,
+                        },
+                        size: 18,
+                        color: _accent.withValues(alpha: active ? .9 : .38),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _EngravedRule extends StatelessWidget {
+  const _EngravedRule({this.ornament = false});
+  final bool ornament;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    children: [
+      const Expanded(
+        child: Divider(color: GaussParchmentInk.ruleFaint, height: 1),
+      ),
+      if (ornament) ...[
+        const SizedBox(width: GaussSpacing.space8),
+        Transform.rotate(
+          angle: math.pi / 4,
+          child: Container(
+            width: 7,
+            height: 7,
+            decoration: BoxDecoration(
+              border: Border.all(color: GaussParchmentInk.ruleStrong),
+            ),
+          ),
+        ),
+        const SizedBox(width: GaussSpacing.space8),
+        const Expanded(
+          child: Divider(color: GaussParchmentInk.ruleFaint, height: 1),
+        ),
+      ],
+    ],
+  );
+}
+
+class _VerticalEngravedRule extends StatelessWidget {
+  const _VerticalEngravedRule();
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: 1,
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          Colors.transparent,
+          GaussParchmentInk.ruleFade,
+          Colors.transparent,
+        ],
+      ),
+    ),
+  );
+}
+
+class _ManuscriptFramePainter extends CustomPainter {
+  const _ManuscriptFramePainter({required this.accent});
+  final Color accent;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (size.isEmpty) return;
+    final outer = RRect.fromRectAndRadius(
+      (Offset.zero & size).deflate(1.5),
+      const Radius.circular(23),
+    );
+    canvas.drawRRect(
+      outer,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1
+        ..color = GaussColors.brass.withValues(alpha: .5),
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _ManuscriptFramePainter oldDelegate) =>
+      oldDelegate.accent != accent;
+}
+
+class _ChoiceEngravingPainter extends CustomPainter {
+  const _ChoiceEngravingPainter({required this.accent, required this.active});
+  final Color accent;
+  final bool active;
+
+  // One rounded hairline. The row's state is carried by the trailing glyph
+  // and this stroke's weight, not by notched corners and inner rules.
+  @override
+  void paint(Canvas canvas, Size size) {
+    final inset = active ? .75 : .5;
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+        (Offset.zero & size).deflate(inset),
+        const Radius.circular(GaussRadii.small),
+      ),
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = active ? 1.5 : 1
+        ..color = accent.withValues(alpha: active ? .9 : .4),
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _ChoiceEngravingPainter oldDelegate) =>
+      oldDelegate.accent != accent || oldDelegate.active != active;
+}
+
+class _ChoiceSealPainter extends CustomPainter {
+  const _ChoiceSealPainter({required this.accent, required this.active});
+  final Color accent;
+  final bool active;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = size.center(Offset.zero);
+    if (active) {
+      canvas.drawCircle(
+        center,
+        20,
+        Paint()..color = accent.withValues(alpha: .14),
+      );
+    }
+    canvas.drawCircle(
+      center,
+      20,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = active ? 1.5 : 1
+        ..color = accent.withValues(alpha: active ? .9 : .5),
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _ChoiceSealPainter oldDelegate) =>
+      oldDelegate.accent != accent || oldDelegate.active != active;
+}
+
+/// Answer rails: one column on phones; two columns once the manuscript is
+/// wide enough (tablets), so short answers stop stretching across 1000dp
+/// with the letter and the value at opposite edges. Row-major order keeps
+/// the reading and traversal order A, B, C, D.
+class ManuscriptAnswerGrid extends StatelessWidget {
+  const ManuscriptAnswerGrid({required this.children, super.key});
+
+  static const twoColumnMinWidth = 640.0;
+
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final accessibleText =
+          MediaQuery.textScalerOf(context).scale(1) >=
+          GaussComposition.accessibilityTextScale;
+      if (constraints.maxWidth < twoColumnMinWidth ||
+          accessibleText ||
+          children.length < 2) {
+        return Column(children: children);
+      }
+      return Column(
+        children: [
+          for (var index = 0; index < children.length; index += 2)
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: children[index]),
+                const SizedBox(width: GaussSpacing.space12),
+                Expanded(
+                  child: index + 1 < children.length
+                      ? children[index + 1]
+                      : const SizedBox.shrink(),
+                ),
+              ],
+            ),
+        ],
+      );
+    },
+  );
+}

@@ -5,18 +5,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/app/gauss_app.dart';
-import 'package:gauss/app/gauss_design_system.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/tokens/gauss_tokens.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
-import 'package:gauss/screens/map_screen.dart';
+import 'package:gauss/features/map/map_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
-import 'package:gauss/widgets/content_blocks.dart';
-import 'package:gauss/widgets/first_run_tour.dart';
-import 'package:gauss/widgets/gauss_brand.dart';
+import 'package:gauss/features/manuscript/content_blocks.dart';
+import 'package:gauss/features/onboarding/first_run_tour.dart';
+import 'package:gauss/ui/components/gauss_brand.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -927,7 +927,7 @@ void main() {
         reason:
             'A distant chapter must remain lazy until the route approaches it.',
       );
-      expect(find.text('CHAPTER 1'), findsOneWidget);
+      expect(find.text('Chapter 1'), findsOneWidget);
       expect(
         find.descendant(
           of: find.byKey(const ValueKey('map-study-path-scroll')),
@@ -1121,12 +1121,12 @@ void main() {
       await tester.tap(daily);
       await tester.pumpAndSettle();
 
-      expect(find.text('DAILY ORBIT'), findsOneWidget);
+      expect(find.text('Daily orbit'), findsOneWidget);
       expect(
         find.byKey(const ValueKey('map-gamification-hud')),
         findsOneWidget,
       );
-      expect(find.text('DAY STREAK'), findsOneWidget);
+      expect(find.text('Day streak'), findsOneWidget);
       final sheet = find.byKey(const ValueKey('map-daily-orbit-sheet'));
       final close = find.byKey(const ValueKey('map-daily-orbit-close'));
       expect(tester.getRect(close).width, greaterThanOrEqualTo(48));
@@ -1274,7 +1274,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byKey(const ValueKey('orbit-navigator')), findsOneWidget);
-    expect(find.text('ORBIT NAVIGATOR'), findsOneWidget);
+    expect(find.text('Orbit navigator'), findsOneWidget);
     expect(
       find.byKey(const ValueKey('orbit-navigator-course-switch')),
       findsOneWidget,
@@ -1457,7 +1457,7 @@ void main() {
       );
 
       expect(find.byType(MapScreen), findsOneWidget);
-      expect(find.text('STUDY INSPECTOR'), findsOneWidget);
+      expect(find.text('Study inspector'), findsOneWidget);
       expect(tester.takeException(), isNull);
     },
   );

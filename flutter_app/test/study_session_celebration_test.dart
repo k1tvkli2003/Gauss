@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/widgets/study_session_celebration.dart';
+import 'package:gauss/features/study/study_session_celebration.dart';
 
 void main() {
   testWidgets('shows every authoritative milestone in one truthful receipt', (
@@ -99,9 +99,9 @@ void main() {
       );
 
       expect(find.text('Daily observation complete'), findsOneWidget);
-      expect(find.text('DAILY OBSERVATION'), findsOneWidget);
-      expect(find.text('TODAY  ·  CHARTED'), findsOneWidget);
-      expect(find.text('5 / 5  ·  ORBIT CHARTED'), findsNothing);
+      expect(find.text('Daily quest'), findsOneWidget);
+      expect(find.text('Today  ·  Charted'), findsOneWidget);
+      expect(find.text('5 / 5  ·  Orbit charted'), findsNothing);
       expect(find.text('Five-question orbit complete'), findsNothing);
       expect(find.text('XP cap met'), findsOneWidget);
       expect(
@@ -142,7 +142,7 @@ void main() {
       find.byKey(const ValueKey('five-star-orbit-visual')),
       findsOneWidget,
     );
-    expect(find.text('5 / 5  ·  ORBIT CHARTED'), findsOneWidget);
+    expect(find.text('5 / 5  ·  Orbit charted'), findsOneWidget);
     expect(tester.takeException(), isNull);
 
     await tester.ensureVisible(

@@ -1,11 +1,11 @@
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
-import 'package:gauss/screens/map_screen.dart';
+import 'package:gauss/features/map/map_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 
 Finder _assetImage(String assetName) => find.byWidgetPredicate(
@@ -47,9 +47,9 @@ void main() {
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 400));
 
-      expect(find.text('CURRENT MISSION'), findsOneWidget);
+      expect(find.text('Current mission'), findsOneWidget);
       expect(
-        find.bySemanticsLabel(RegExp(r'^CURRENT MISSION\.')),
+        find.bySemanticsLabel(RegExp(r'^Current mission\.')),
         findsOneWidget,
       );
       expect(
@@ -61,9 +61,9 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('map-node-sets:5:5')));
       await tester.pumpAndSettle();
 
-      expect(find.text('SELECTED LESSON'), findsOneWidget);
+      expect(find.text('Selected lesson'), findsOneWidget);
       expect(
-        find.bySemanticsLabel(RegExp(r'^SELECTED LESSON\.')),
+        find.bySemanticsLabel(RegExp(r'^Selected lesson\.')),
         findsOneWidget,
       );
 

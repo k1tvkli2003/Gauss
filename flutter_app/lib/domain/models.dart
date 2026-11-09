@@ -1,6 +1,6 @@
-import 'gamification_catalog.dart';
-import 'learning_content_policy.dart';
-import 'question_certification.dart';
+import 'package:gauss/domain/gamification_catalog.dart';
+import 'package:gauss/domain/learning_content_policy.dart';
+import 'package:gauss/domain/question_certification.dart';
 
 enum Subject {
   math('math', 'Mathematics'),

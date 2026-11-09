@@ -865,7 +865,10 @@ final class GaussContentReleaseStore {
     final questions = <String, _ReusableQuestion>{};
     try {
       final decoded = jsonDecode(
-        await bundle.loadString('assets/question_bank/index.json'),
+        await bundle.loadString(
+          'assets/question_bank/index.json',
+          cache: false,
+        ),
       );
       if (decoded is! Map) {
         throw const FormatException('Local question index is not an object.');
@@ -889,7 +892,10 @@ final class GaussContentReleaseStore {
           final relativePath = _requiredString(topic, 'file');
           final expectedCount = _requiredInt(topic, 'count');
           final rawRows = jsonDecode(
-            await bundle.loadString('assets/${_safeLogicalPath(relativePath)}'),
+            await bundle.loadString(
+              'assets/${_safeLogicalPath(relativePath)}',
+              cache: false,
+            ),
           );
           if (rawRows is! List<dynamic> || rawRows.length != expectedCount) {
             throw const FormatException('Local topic count drifted.');
@@ -973,7 +979,7 @@ final class GaussContentReleaseStore {
     Map<String, Map<String, dynamic>> target,
   ) async {
     try {
-      final decoded = jsonDecode(await bundle.loadString(path));
+      final decoded = jsonDecode(await bundle.loadString(path, cache: false));
       if (decoded is Map) target[kind] = Map<String, dynamic>.from(decoded);
     } catch (_) {
       // A missing or incompatible local artifact is a cache miss, never a

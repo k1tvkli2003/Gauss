@@ -3,9 +3,34 @@ import 'dart:math' as math;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
-import 'package:gauss/widgets/map_path_geometry.dart';
+import 'package:gauss/features/map/map_path_geometry.dart';
 
 void main() {
+  test(
+    'decorative landmarks yield to labels on a narrow phone at 200% text',
+    () {
+      final nodes = _nodes(12);
+      final regular = GaussPathGeometry.build(
+        width: 320,
+        nodes: nodes,
+        textScale: 1,
+      );
+      final accessible = GaussPathGeometry.build(
+        width: 320,
+        nodes: nodes,
+        textScale: 2,
+      );
+      final tablet = GaussPathGeometry.build(
+        width: 800,
+        nodes: nodes,
+        textScale: 2,
+      );
+      expect(regular.landmarks, isNotEmpty);
+      expect(accessible.landmarks, isEmpty);
+      expect(tablet.landmarks, isNotEmpty);
+    },
+  );
+
   test('long learning routes partition into contiguous lazy bands', () {
     final nodes = _nodes(42);
     final geometry = GaussPathGeometry.build(

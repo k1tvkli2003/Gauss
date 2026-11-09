@@ -2,12 +2,12 @@ import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/screens/insights_screen.dart';
+import 'package:gauss/features/insights/insights_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 
 void main() {
@@ -46,7 +46,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text('TODAY · QUEST'), findsOneWidget);
+      expect(find.text('Today · Quest'), findsOneWidget);
       expect(find.text('7 reflections remain · no rush'), findsOneWidget);
       expect(
         find.bySemanticsLabel(
@@ -107,7 +107,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text('TODAY · CHARTED'), findsOneWidget);
+      expect(find.text('Today · Charted'), findsOneWidget);
       expect(find.text('Complete · reward safely recorded'), findsOneWidget);
       expect(
         find.bySemanticsLabel(

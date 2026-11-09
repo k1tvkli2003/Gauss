@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_design_system.dart';
+import 'package:gauss/ui/tokens/gauss_tokens.dart';
 import 'package:gauss/app/gauss_experience_spec.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 
 void main() {
   test(

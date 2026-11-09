@@ -13,7 +13,7 @@ import 'package:flutter_driver/driver_extension.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:gauss/app/gauss_app.dart';
-import 'package:gauss/auth/gauss_account_session.dart';
+import 'package:gauss/features/auth/gauss_account_session.dart';
 import 'package:gauss/domain/study_curriculum.dart';
 
 const _warmupFrames = 24;

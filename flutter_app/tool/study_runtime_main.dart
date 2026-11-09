@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_driver/driver_extension.dart';
 import 'package:gauss/app/gauss_app.dart';
-import 'package:gauss/auth/gauss_account_session.dart';
+import 'package:gauss/features/auth/gauss_account_session.dart';
 import 'package:gauss/domain/models.dart';
 
 /// Isolated Android continuation probe, never used by the release entrypoint.

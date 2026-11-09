@@ -10,14 +10,14 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/feedback/feedback_capture.dart';
-import 'package:gauss/feedback/feedback_models.dart';
-import 'package:gauss/screens/mission_screen.dart';
+import 'package:gauss/features/feedback/feedback_capture.dart';
+import 'package:gauss/features/feedback/feedback_models.dart';
+import 'package:gauss/features/mission/mission_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
-import 'package:gauss/widgets/mission_start_guard.dart';
-import 'package:gauss/widgets/content_blocks.dart';
+import 'package:gauss/features/mission/mission_start_guard.dart';
+import 'package:gauss/features/manuscript/content_blocks.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -288,7 +288,7 @@ void main() {
         find.byKey(const ValueKey('mission-question-action-dock')),
       );
       expect(tester.takeException(), isNull, reason: 'initial mission layout');
-      expect(find.text('QUESTION 1'), findsOneWidget);
+      expect(find.text('Question 1'), findsOneWidget);
       expect(
         find.byKey(const ValueKey('mission-answer-manuscript')),
         findsOneWidget,
@@ -833,7 +833,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text('5-QUESTION MISSION'), findsOneWidget);
+      expect(find.text('5-question mission'), findsOneWidget);
       expect(
         find.text('Perfect orbit'),
         findsOneWidget,
@@ -953,7 +953,7 @@ void main() {
 
       // The persisted truth and action dock must survive the transient scene.
       expect(find.text('+45 XP'), findsWidgets);
-      expect(find.text('5-QUESTION MISSION'), findsOneWidget);
+      expect(find.text('5-question mission'), findsOneWidget);
       expect(
         find.byKey(const ValueKey('mission-retry-action')),
         findsOneWidget,

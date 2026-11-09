@@ -1,4 +1,4 @@
-import 'models.dart';
+import 'package:gauss/domain/models.dart';
 
 enum StudySlotKind {
   primary('primary'),

@@ -1,12 +1,12 @@
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/screens/practice_screen.dart';
+import 'package:gauss/features/study/study_hub_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 
 void main() {
@@ -35,7 +35,7 @@ void main() {
 
       await tester.pumpWidget(_StudySurface(controller: controller));
 
-      expect(find.text('PHYSICS ATLAS'), findsOneWidget);
+      expect(find.text('Physics atlas'), findsOneWidget);
       expect(
         tester
             .widget<Semantics>(
@@ -106,7 +106,7 @@ void main() {
     await tester.pump();
 
     expect(controller.selectedTopic.subject, Subject.physics);
-    expect(find.text('PHYSICS ATLAS'), findsOneWidget);
+    expect(find.text('Physics atlas'), findsOneWidget);
     expect(
       await progress.readLearningContextTopic(),
       controller.selectedTopicKey,
@@ -141,7 +141,7 @@ class _StudySurface extends StatelessWidget {
     theme: buildGaussTheme(),
     home: GaussScope(
       controller: controller,
-      child: const Scaffold(body: PracticeScreen()),
+      child: const Scaffold(body: StudyHubScreen()),
     ),
   );
 }

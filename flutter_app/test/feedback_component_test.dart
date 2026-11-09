@@ -7,13 +7,13 @@ import 'package:drift/drift.dart' as drift;
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/feedback/feedback_capture.dart';
-import 'package:gauss/feedback/feedback_controller.dart';
-import 'package:gauss/feedback/feedback_models.dart';
-import 'package:gauss/feedback/feedback_repository.dart';
+import 'package:gauss/features/feedback/feedback_capture.dart';
+import 'package:gauss/features/feedback/feedback_controller.dart';
+import 'package:gauss/features/feedback/feedback_models.dart';
+import 'package:gauss/features/feedback/feedback_repository.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -282,7 +282,7 @@ void main() {
           .height,
       greaterThanOrEqualTo(48),
     );
-    expect(find.text('Android opens Save — never Share.'), findsOneWidget);
+    expect(find.text('Android opens Save, never Share.'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -315,9 +315,9 @@ void main() {
     expect(dialog, findsOneWidget);
     expect(tester.getRect(dialog).left, greaterThanOrEqualTo(0));
     expect(tester.getRect(dialog).right, lessThanOrEqualTo(320));
-    await tester.ensureVisible(find.text('Android opens Save — never Share.'));
+    await tester.ensureVisible(find.text('Android opens Save, never Share.'));
     await tester.pumpAndSettle();
-    expect(find.text('Android opens Save — never Share.'), findsOneWidget);
+    expect(find.text('Android opens Save, never Share.'), findsOneWidget);
     expect(
       tester
           .getSize(find.byKey(const ValueKey('feedback-confirm-export')))

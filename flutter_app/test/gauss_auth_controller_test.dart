@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/auth/gauss_auth_controller.dart';
+import 'package:gauss/features/auth/gauss_auth_controller.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() {

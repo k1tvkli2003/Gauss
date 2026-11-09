@@ -5,10 +5,10 @@ import 'package:gauss/app/gauss_app.dart';
 import 'package:gauss/data/local/gauss_database.dart';
 import 'package:gauss/data/progress_repository.dart';
 import 'package:gauss/data/question_bank_repository.dart';
-import 'package:gauss/screens/insights_screen.dart';
-import 'package:gauss/screens/map_screen.dart';
-import 'package:gauss/screens/mission_screen.dart';
-import 'package:gauss/screens/practice_screen.dart';
+import 'package:gauss/features/insights/insights_screen.dart';
+import 'package:gauss/features/map/map_screen.dart';
+import 'package:gauss/features/mission/mission_screen.dart';
+import 'package:gauss/features/study/study_hub_screen.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:go_router/go_router.dart';
 
@@ -42,8 +42,8 @@ void main() {
       await tester.tap(_compactDestination('Study'));
       await tester.pump();
 
-      expect(find.byType(PracticeScreen), findsOneWidget);
-      expect(_routeOf(tester, find.byType(PracticeScreen)), '/study');
+      expect(find.byType(StudyHubScreen), findsOneWidget);
+      expect(_routeOf(tester, find.byType(StudyHubScreen)), '/study');
       var slide = _branchSlide(tester);
       var fade = _branchFade(tester);
       expect(slide.position.value.dx, closeTo(.034, .001));
@@ -117,8 +117,8 @@ void main() {
       expect(routeScale.scale.value, inExclusiveRange(.99, 1));
 
       await tester.pump(const Duration(milliseconds: 140));
-      expect(find.byType(PracticeScreen), findsOneWidget);
-      expect(_routeOf(tester, find.byType(PracticeScreen)), '/study');
+      expect(find.byType(StudyHubScreen), findsOneWidget);
+      expect(_routeOf(tester, find.byType(StudyHubScreen)), '/study');
       expect(tester.takeException(), isNull);
     },
   );
@@ -140,8 +140,8 @@ void main() {
 
       await tester.tap(_compactDestination('Study'));
       await tester.pump();
-      expect(find.byType(PracticeScreen), findsOneWidget);
-      expect(_routeOf(tester, find.byType(PracticeScreen)), '/study');
+      expect(find.byType(StudyHubScreen), findsOneWidget);
+      expect(_routeOf(tester, find.byType(StudyHubScreen)), '/study');
       expect(
         find.byKey(const ValueKey('gauss-branch-route-motion')),
         findsNothing,
@@ -157,8 +157,8 @@ void main() {
 
       await tester.binding.handlePopRoute();
       await tester.pump();
-      expect(find.byType(PracticeScreen), findsOneWidget);
-      expect(_routeOf(tester, find.byType(PracticeScreen)), '/study');
+      expect(find.byType(StudyHubScreen), findsOneWidget);
+      expect(_routeOf(tester, find.byType(StudyHubScreen)), '/study');
       expect(tester.takeException(), isNull);
     },
   );
@@ -184,8 +184,8 @@ void main() {
       find.byKey(const ValueKey('gauss-branch-route-motion')),
       findsNothing,
     );
-    expect(find.byType(PracticeScreen), findsOneWidget);
-    expect(_routeOf(tester, find.byType(PracticeScreen)), '/study');
+    expect(find.byType(StudyHubScreen), findsOneWidget);
+    expect(_routeOf(tester, find.byType(StudyHubScreen)), '/study');
 
     tester.platformDispatcher.accessibilityFeaturesTestValue =
         const FakeAccessibilityFeatures();

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gauss/app/gauss_theme.dart';
+import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/gamification_catalog.dart';
 import 'package:gauss/domain/models.dart';
-import 'package:gauss/widgets/gamification_orbit_ribbon.dart';
+import 'package:gauss/features/insights/gamification_orbit_ribbon.dart';
 
 void main() {
   testWidgets('renders truthful private progress and earned milestone state', (
@@ -13,12 +13,12 @@ void main() {
     await _pumpRibbon(tester, summary: _summary());
     await tester.pumpAndSettle();
 
-    expect(find.text('PRIVATE ORBIT'), findsOneWidget);
-    expect(find.text('ON DEVICE  •  36 XP TODAY'), findsOneWidget);
-    expect(find.text('4 DAYS'), findsOneWidget);
-    expect(find.text('DAILY STREAK'), findsOneWidget);
-    expect(find.text('LEVEL 3'), findsOneWidget);
-    expect(find.textContaining('EARNED SEAL'), findsOneWidget);
+    expect(find.text('Private orbit'), findsOneWidget);
+    expect(find.text('On device  •  36 XP today'), findsOneWidget);
+    expect(find.text('4 days'), findsOneWidget);
+    expect(find.text('Daily streak'), findsOneWidget);
+    expect(find.text('Level 3'), findsOneWidget);
+    expect(find.textContaining('Earned seal'), findsOneWidget);
     expect(
       find.bySemanticsLabel(RegExp('Private offline progress')),
       findsOneWidget,

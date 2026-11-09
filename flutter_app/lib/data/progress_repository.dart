@@ -2,12 +2,12 @@ import 'dart:math' as math;
 
 import 'package:drift/drift.dart';
 
-import '../domain/gamification_catalog.dart';
-import '../domain/models.dart';
-import '../domain/study_curriculum.dart';
-import '../feedback/feedback_models.dart';
-import '../feedback/feedback_repository.dart';
-import 'local/gauss_database.dart';
+import 'package:gauss/domain/gamification_catalog.dart';
+import 'package:gauss/domain/models.dart';
+import 'package:gauss/domain/study_curriculum.dart';
+import 'package:gauss/features/feedback/feedback_models.dart';
+import 'package:gauss/features/feedback/feedback_repository.dart';
+import 'package:gauss/data/local/gauss_database.dart';
 
 class ProgressRepository {
   ProgressRepository(this.database, {DateTime Function()? clock})
