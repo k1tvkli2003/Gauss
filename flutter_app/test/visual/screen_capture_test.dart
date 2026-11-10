@@ -118,6 +118,24 @@ void main() {
           }
         });
         await tester.pump(const Duration(milliseconds: 900));
+        final expand = Platform.environment['GAUSS_CAPTURE_TAP'];
+        if (expand != null) {
+          // Open the part card, then the first chapter, for expanded states.
+          for (final key in expand.split(',')) {
+            final target = find.byKey(ValueKey(key));
+            if (target.evaluate().isEmpty) {
+              await tester.scrollUntilVisible(
+                target,
+                300,
+                scrollable: find.byType(Scrollable).first,
+              );
+            }
+            await tester.ensureVisible(target);
+            await tester.pump(const Duration(milliseconds: 200));
+            await tester.tap(target, warnIfMissed: false);
+            await tester.pump(const Duration(milliseconds: 500));
+          }
+        }
         final boundary =
             key.currentContext!.findRenderObject()! as RenderRepaintBoundary;
         final name = '${entry.key}${route.replaceAll('/', '_')}'.replaceAll(

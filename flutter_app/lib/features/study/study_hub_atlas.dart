@@ -487,14 +487,23 @@ class _ChapterRowState extends State<_ChapterRow> {
                                     ),
                                   ),
                                   const SizedBox(height: 2),
-                                  Text(
-                                    '${widget.units.length} $unitLabel · '
-                                    '${widget.lessonCount} lessons · '
-                                    '${widget.charted}/${widget.total} charted',
-                                    style: const TextStyle(
-                                      color: GaussColors.muted,
-                                      fontSize: GaussTypeScale.caption,
-                                    ),
+                                  Wrap(
+                                    spacing: 10,
+                                    runSpacing: 2,
+                                    children: [
+                                      for (final part in [
+                                        '${widget.units.length} $unitLabel',
+                                        '${widget.lessonCount} lessons',
+                                        '${widget.charted}/${widget.total} charted',
+                                      ])
+                                        Text(
+                                          part,
+                                          style: const TextStyle(
+                                            color: GaussColors.muted,
+                                            fontSize: GaussTypeScale.caption,
+                                          ),
+                                        ),
+                                    ],
                                   ),
                                 ],
                               ),
@@ -532,7 +541,7 @@ class _ChapterRowState extends State<_ChapterRow> {
           ),
           if (_expanded)
             Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+              padding: const EdgeInsets.fromLTRB(6, 0, 6, 10),
               child: Column(
                 children: [
                   for (final unit in widget.units)
@@ -566,6 +575,30 @@ class _UnitTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final done = charted >= unit.questionCount;
+    final count = Text(
+      '$charted/${unit.questionCount}',
+      textAlign: TextAlign.end,
+      style: const TextStyle(
+        color: GaussColors.fog,
+        fontSize: GaussTypeScale.caption,
+        fontWeight: FontWeight.w800,
+      ),
+    );
+    final bar = LinearProgressIndicator(
+      minHeight: 3,
+      value: unit.questionCount == 0 ? 0 : charted / unit.questionCount,
+      backgroundColor: GaussColors.line,
+      color: GaussColors.signal,
+    );
+    final label = Text(
+      unit.label,
+      style: TextStyle(
+        color: unit.isMixed ? GaussColors.muted : GaussColors.ivory,
+        fontSize: GaussTypeScale.body,
+        fontWeight: FontWeight.w700,
+        height: 1.3,
+      ),
+    );
     return Semantics(
       button: true,
       label:
@@ -579,54 +612,66 @@ class _UnitTile extends StatelessWidget {
             minHeight: GaussMetrics.minTouchTarget,
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            child: Row(
-              children: [
-                Icon(
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                // Narrow phones and large text: the whole label gets the full
+                // row and the count moves beside the bar, never mid-word.
+                final stacked =
+                    constraints.maxWidth < 300 ||
+                    MediaQuery.textScalerOf(context).scale(1) >=
+                        GaussComposition.accessibilityTextScale;
+                final icon = Icon(
                   done
                       ? Icons.check_circle_rounded
                       : Icons.radio_button_unchecked_rounded,
                   size: GaussIconSizes.standard,
                   color: done ? GaussColors.signalBright : GaussColors.fog,
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Column(
+                );
+                if (stacked) {
+                  return Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        unit.label,
-                        style: TextStyle(
-                          color: unit.isMixed
-                              ? GaussColors.muted
-                              : GaussColors.ivory,
-                          fontSize: GaussTypeScale.body,
-                          fontWeight: FontWeight.w700,
-                          height: 1.3,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 2),
+                        child: icon,
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            label,
+                            const SizedBox(height: 6),
+                            Row(
+                              children: [
+                                Expanded(child: bar),
+                                const SizedBox(width: 10),
+                                count,
+                              ],
+                            ),
+                          ],
                         ),
                       ),
-                      const SizedBox(height: 4),
-                      LinearProgressIndicator(
-                        minHeight: 3,
-                        value: unit.questionCount == 0
-                            ? 0
-                            : charted / unit.questionCount,
-                        backgroundColor: GaussColors.line,
-                        color: GaussColors.signal,
-                      ),
                     ],
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Text(
-                  '$charted/${unit.questionCount}',
-                  style: const TextStyle(
-                    color: GaussColors.fog,
-                    fontSize: GaussTypeScale.caption,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ],
+                  );
+                }
+                return Row(
+                  children: [
+                    icon,
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [label, const SizedBox(height: 4), bar],
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    // Fixed slot so every unit's bar ends at one edge.
+                    SizedBox(width: 52, child: count),
+                  ],
+                );
+              },
             ),
           ),
         ),
