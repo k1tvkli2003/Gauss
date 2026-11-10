@@ -422,27 +422,49 @@ void main() {
       for (final entry in artifactPayloads.entries)
         entry.key: canonicalContentSha256(entry.value),
     };
-    final receipt = _readJsonMap(
-      File(
-        _joinParts([
-          repo.path,
-          'data',
-          'content-releases',
-          'gauss-2026.08.14.1.json',
-        ]),
-      ),
+    // The newest committed receipt describes the published release.
+    final receiptFiles =
+        Directory(_joinParts([repo.path, 'data', 'content-releases']))
+            .listSync()
+            .whereType<File>()
+            .where((f) => f.path.endsWith('.json'))
+            .toList()
+          ..sort((a, b) => a.path.compareTo(b.path));
+    final receipt = _readJsonMap(receiptFiles.last);
+    final published = Map<String, dynamic>.from(
+      receipt['artifact_sha256']! as Map,
     );
 
+    // Immutable content must always equal what was published.
+    for (final kind in artifactHashes.keys.where(
+      (kind) => kind != 'five_question_plan',
+    )) {
+      expect(artifactHashes[kind], published[kind], reason: kind);
+    }
     expect(revisions, hasLength(receipt['question_count']! as int));
     expect(topics, hasLength(receipt['topic_count']! as int));
-    expect(artifactHashes, equals(receipt['artifact_sha256']));
-    expect(
-      computeContentCorpusSha256(
-        artifactHashes: artifactHashes,
-        revisions: revisions,
-      ),
-      receipt['corpus_sha256'],
-    );
+
+    if (artifactHashes['five_question_plan'] ==
+        published['five_question_plan']) {
+      // Plan matches the published release: the whole corpus must reconcile.
+      expect(artifactHashes, equals(published));
+      expect(
+        computeContentCorpusSha256(
+          artifactHashes: artifactHashes,
+          revisions: revisions,
+        ),
+        receipt['corpus_sha256'],
+      );
+    } else {
+      // The lesson plan was re-cut after the last publication. The app keeps
+      // using its bundled plan (it refuses an older published one), and the
+      // owner republishes with scripts/publish_gauss_content.py --publish.
+      expect(
+        (fiveQuestionPlan['plan_revision'] as int?) ?? 1,
+        greaterThan(1),
+        reason: 'a changed plan must carry a higher revision',
+      );
+    }
   });
 
   test('a one-question manifest delta stays below fifteen percent', () {

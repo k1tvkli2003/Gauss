@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gauss/data/question_bank_repository.dart';
 import 'package:gauss/domain/models.dart';
+import 'package:gauss/domain/study_curriculum.dart';
 import 'package:gauss/domain/question_certification.dart';
 
 void main() {
@@ -325,11 +326,30 @@ void main() {
         repository.studySession('sets', 0).slots.map((slot) => slot.questionId),
       );
 
+      // Certification never gates access: every lesson is playable, including
+      // those that still hold uncertified source rows. (Which lessons are
+      // mission-ready follows the plan's composition, so it is derived, not
+      // hard-coded.)
+      final offsets = [
+        for (
+          var index = 0;
+          index <
+              repository.studyPlan.topic('patterns_sequences').sessions.length;
+          index++
+        )
+          index * GaussStudyCurriculum.batchSize,
+      ];
       expect(
-        repository.isStudySessionMissionReady('patterns_sequences', offset: 0),
-        isFalse,
+        offsets.where(
+          (offset) => !repository.isStudySessionMissionReady(
+            'patterns_sequences',
+            offset: offset,
+          ),
+        ),
+        isNotEmpty,
+        reason: 'some lessons still contain uncertified rows',
       );
-      for (final offset in [0, 20, 30]) {
+      for (final offset in offsets) {
         expect(
           repository.isStudySessionPlayable(
             'patterns_sequences',
@@ -337,15 +357,6 @@ void main() {
           ),
           isTrue,
         );
-        if (offset != 0) {
-          expect(
-            repository.isStudySessionMissionReady(
-              'patterns_sequences',
-              offset: offset,
-            ),
-            isTrue,
-          );
-        }
         final planned = repository.studySession('patterns_sequences', offset);
         final scored = await repository.createStudySessionMission(
           'patterns_sequences',

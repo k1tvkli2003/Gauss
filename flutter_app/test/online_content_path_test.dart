@@ -108,6 +108,29 @@ void main() {
     );
   });
 
+  test(
+    'a release with an older lesson plan never replaces the bundled one',
+    () async {
+      final snapshot = await GaussContentReleaseStore(
+        api: _realCorpusRelease(legacyPlan: true),
+        appBuild: 1000,
+        fallbackBundle: rootBundle,
+        rootProvider: () async => scratch,
+      ).open();
+
+      expect(snapshot.source, GaussContentSource.bundled);
+      expect(snapshot.releaseId, isNull);
+      expect(
+        '${snapshot.refreshError}',
+        contains('older than the one bundled'),
+      );
+      expect(File('${scratch.path}/active.json').existsSync(), isFalse);
+      final bank = QuestionBankRepository(bundle: snapshot.bundle);
+      await bank.initialize();
+      expect(bank.studyPlan.revision, greaterThanOrEqualTo(2));
+    },
+  );
+
   test('the real verifier accepts a healthy release', () async {
     final snapshot = await GaussContentReleaseStore(
       api: _realCorpusRelease(),
@@ -172,7 +195,7 @@ void main() {
 }
 
 /// A release built from the exact bundled corpus, served by an in-memory API.
-GaussContentApi _realCorpusRelease() {
+GaussContentApi _realCorpusRelease({bool legacyPlan = false}) {
   final assets = Directory('assets');
   Map<String, dynamic> readMap(String path) => Map<String, dynamic>.from(
     jsonDecode(File(path).readAsStringSync()) as Map,
@@ -221,9 +244,11 @@ GaussContentApi _realCorpusRelease() {
       'index': index,
       'topic_question_ids': topicIds,
     },
-    'five_question_plan': readMap(
-      'assets/curriculum/five_question_plan_v1.json',
-    ),
+    'five_question_plan': legacyPlan
+        // The plan as an older published release carries it: no revision.
+        ? (readMap('assets/curriculum/five_question_plan_v1.json')
+            ..remove('plan_revision'))
+        : readMap('assets/curriculum/five_question_plan_v1.json'),
     'certification_runtime': readMap(
       'assets/curriculum/certified_question_runtime_v1.json',
     ),

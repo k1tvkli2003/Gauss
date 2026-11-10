@@ -178,6 +178,10 @@ class GaussController extends ChangeNotifier {
   String studySetLabel(StudyPathNode node) =>
       _questionBank.studyPlan.session(node.topic.key, node.offset).displayLabel;
 
+  /// "2/5" when the lesson's unit spans several lessons, otherwise null.
+  String? studySetPart(StudyPathNode node) =>
+      _questionBank.studyPlan.session(node.topic.key, node.offset).partLabel;
+
   bool isStudySessionMissionReady(StudyPathNode node) => _questionBank
       .isStudySessionMissionReady(node.topic.key, offset: node.offset);
 

@@ -183,6 +183,16 @@ class ProgressRepository {
               .getSingleOrNull();
       if (installed?.value == plan.version) return;
 
+      // A different plan re-cuts lessons, so every old lesson-slot marker and
+      // saved lesson position is stale: leaving them would show old progress
+      // on lessons that now hold other questions. Reflections are per source
+      // question and survive; markers and positions are re-seeded from them
+      // below, so no question loses its charted state.
+      if (installed != null) {
+        await database.delete(database.studySlotEncounters).go();
+        await database.delete(database.studyPositions).go();
+      }
+
       final records = await database.select(database.studyRecords).get();
       for (final record in records) {
         final primary = plan.maybePrimarySlot(record.questionId);
