@@ -7,6 +7,7 @@ import 'package:gauss/ui/tokens/gauss_tokens.dart';
 import 'package:gauss/ui/theme/gauss_theme.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
+import 'package:gauss/domain/subtopic_index.dart';
 import 'package:gauss/state/gauss_controller.dart';
 import 'package:gauss/ui/components/gauss_brand.dart';
 import 'package:gauss/ui/components/gauss_surface.dart';
@@ -17,6 +18,19 @@ part 'study_hub_course.dart';
 part 'study_hub_continue.dart';
 part 'study_hub_modes.dart';
 part 'study_hub_atlas.dart';
+
+/// "18 chapters · 120 units" for the parts shown, from the real corpus.
+String _libraryCounts(
+  GaussController controller,
+  List<StudySectionDefinition> sections,
+) {
+  final topicKeys = [for (final section in sections) ...section.topicKeys];
+  final units = topicKeys.fold<int>(
+    0,
+    (sum, key) => sum + controller.subtopics.unitsOf(key).length,
+  );
+  return '${topicKeys.length} chapters · $units units';
+}
 
 String _formatCount(int value) => value.toString().replaceAllMapped(
   RegExp(r'(\d)(?=(\d{3})+(?!\d))'),
@@ -161,9 +175,9 @@ class _StudyHubScreenState extends State<StudyHubScreen> {
                   child: _SectionHeading(
                     eyebrow: '${_subjectTitle(subject)} atlas',
                     title: 'Library',
-                    countLabel: '${sections.length} chapters',
+                    countLabel: _libraryCounts(controller, sections),
                     detail:
-                        'Choose a tool or open any chapter. Every micro-lesson stays one tap away.',
+                        'Each part holds chapters, and each chapter is split into units. Open a unit to jump to the lesson you need.',
                   ),
                 ),
                 SliverToBoxAdapter(

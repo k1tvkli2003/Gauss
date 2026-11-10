@@ -401,7 +401,7 @@ class _OrbitNavigatorState extends State<_OrbitNavigator> {
                                   key: const ValueKey(
                                     'orbit-navigator-course-summary',
                                   ),
-                                  '$courseName  ·  ${sections.length} chapters',
+                                  '$courseName  ·  ${sections.fold<int>(0, (sum, part) => sum + part.topicKeys.length)} chapters',
                                   style: const TextStyle(
                                     color: GaussColors.fog,
                                     fontSize: GaussTypeScale.caption,

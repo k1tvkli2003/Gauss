@@ -33,7 +33,9 @@ class _CourseInstrument extends StatelessWidget {
                     subject: item,
                     selected: subject == item,
                     compactAccessible: accessible,
-                    chapterCount: GaussStudyCurriculum.forSubject(item).length,
+                    chapterCount: GaussStudyCurriculum.forSubject(
+                      item,
+                    ).fold<int>(0, (sum, part) => sum + part.topicKeys.length),
                     onTap: () => onChanged(item),
                   ),
               ];

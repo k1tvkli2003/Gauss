@@ -395,6 +395,7 @@ class StudySummary {
     this.gemCount = 0,
     this.hypothesisCount = 0,
     this.hypothesisMatchedCount = 0,
+    this.reflectedQuestionIds = const {},
   });
 
   const StudySummary.empty()
@@ -407,7 +408,12 @@ class StudySummary {
       heatmap = const {},
       gemCount = 0,
       hypothesisCount = 0,
-      hypothesisMatchedCount = 0;
+      hypothesisMatchedCount = 0,
+      reflectedQuestionIds = const {};
+
+  /// Every question the learner has reflected on at least once. Lets the UI
+  /// report progress per unit without re-deriving it from lesson slots.
+  final Set<String> reflectedQuestionIds;
 
   final int totalReflected;
   final int clearCount;

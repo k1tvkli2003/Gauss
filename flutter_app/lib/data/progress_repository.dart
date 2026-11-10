@@ -813,6 +813,7 @@ class ProgressRepository {
       },
       byShelf: shelfSnapshots,
       heatmap: heatmap,
+      reflectedQuestionIds: {for (final r in records) r.questionId},
     );
   }
 

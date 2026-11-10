@@ -10,6 +10,7 @@ import 'package:gauss/data/status_widget_bridge.dart';
 import 'package:gauss/domain/failures.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/study_curriculum.dart';
+import 'package:gauss/domain/subtopic_index.dart';
 import 'package:gauss/features/feedback/feedback_controller.dart';
 import 'package:gauss/features/feedback/feedback_models.dart';
 import 'package:gauss/features/feedback/feedback_repository.dart';
@@ -84,6 +85,51 @@ class GaussController extends ChangeNotifier {
   AnalyticsSnapshot get analytics => _analytics;
   GamificationSummary get gamification => _gamification;
   StudySummary get study => _study;
+
+  /// Part > Chapter > Unit classification of the shipped corpus.
+  GaussSubtopicIndex get subtopics => _questionBank.subtopicIndex;
+
+  /// How many of [unit]'s questions the learner has reflected on.
+  int unitReflected(StudyUnit unit) =>
+      unit.questionIds.where(_study.reflectedQuestionIds.contains).length;
+
+  /// The lesson to open for [unit]: the first five-question lesson that
+  /// contains one of its uncharted questions, else its first lesson.
+  /// Lessons keep their own keys; a unit only points into them.
+  StudyPathNode? lessonForUnit(StudyUnit unit) {
+    final plan = _questionBank.studyPlan.topic(unit.topicKey);
+    final members = unit.questionIds.toSet();
+    final topic = _questionBank.topicByKey(unit.topicKey);
+    int? firstAny;
+    int? firstOpen;
+    for (final session in plan.sessions) {
+      final primary = session.slots.where(
+        (slot) => slot.kind == StudySlotKind.primary,
+      );
+      final inUnit = primary.where((slot) => members.contains(slot.questionId));
+      if (inUnit.isEmpty) continue;
+      firstAny ??= session.index;
+      if (inUnit.any(
+        (slot) => !_study.reflectedQuestionIds.contains(slot.questionId),
+      )) {
+        firstOpen = session.index;
+        break;
+      }
+    }
+    final index = firstOpen ?? firstAny;
+    if (index == null) return null;
+    final offset = index * GaussStudyCurriculum.batchSize;
+    return StudyPathNode(
+      // Same key and shape GaussStudyCurriculum.nodesFor gives Map lessons.
+      key: '${topic.key}:$offset:${GaussStudyCurriculum.batchSize}',
+      topic: topic,
+      offset: offset,
+      questionCount: GaussStudyCurriculum.batchSize,
+      partIndex: index,
+      partCount: plan.sessions.length,
+    );
+  }
+
   int get revengeCount => _revengeCount;
   int get reviewDueCount => _reviewDueCount;
 

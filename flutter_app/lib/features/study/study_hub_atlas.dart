@@ -248,7 +248,9 @@ class _SectionAtlasCardState extends State<_SectionAtlasCard> {
                               ),
                               const SizedBox(height: 2),
                               Text(
-                                '${topics.length} micro-lessons · ${nodes.length} sessions',
+                                '${topics.length} chapters · '
+                                '${topics.fold<int>(0, (sum, topic) => sum + controller.subtopics.unitsOf(topic.key).length)} units · '
+                                '${nodes.length} lessons',
                                 style: const TextStyle(
                                   color: GaussColors.fog,
                                   fontSize: 10,
@@ -353,14 +355,10 @@ class _SectionAtlasCardState extends State<_SectionAtlasCard> {
                   final topicNodes = nodes
                       .where((node) => node.topic.key == topic.key)
                       .toList(growable: false);
-                  final topicReflected = topicNodes.fold<int>(
+                  final units = controller.subtopics.unitsOf(topic.key);
+                  final charted = units.fold<int>(
                     0,
-                    (sum, node) =>
-                        sum + controller.study.shelf(node.key).reflected,
-                  );
-                  final topicSlots = topicNodes.fold<int>(
-                    0,
-                    (sum, node) => sum + node.questionCount,
+                    (sum, unit) => sum + controller.unitReflected(unit),
                   );
                   final nextNode = topicNodes.firstWhere(
                     (node) =>
@@ -368,13 +366,20 @@ class _SectionAtlasCardState extends State<_SectionAtlasCard> {
                         node.questionCount,
                     orElse: () => topicNodes.last,
                   );
-                  return _UnitRow(
+                  return _ChapterRow(
+                    key: ValueKey('study-chapter-${topic.key}'),
                     index: index + 1,
                     topic: topic,
-                    sessionCount: topicNodes.length,
-                    reflected: topicReflected,
-                    totalSlots: topicSlots,
-                    onOpen: () => widget.onOpen(nextNode),
+                    lessonCount: topicNodes.length,
+                    charted: charted,
+                    total: topic.questionCount,
+                    units: units,
+                    controller: controller,
+                    onContinue: () => widget.onOpen(nextNode),
+                    onOpenUnit: (unit) {
+                      final node = controller.lessonForUnit(unit);
+                      if (node != null) widget.onOpen(node);
+                    },
                   );
                 },
               ),
@@ -385,93 +390,249 @@ class _SectionAtlasCardState extends State<_SectionAtlasCard> {
   }
 }
 
-class _UnitRow extends StatelessWidget {
-  const _UnitRow({
+class _ChapterRow extends StatefulWidget {
+  const _ChapterRow({
+    super.key,
     required this.index,
     required this.topic,
-    required this.sessionCount,
-    required this.reflected,
-    required this.totalSlots,
-    required this.onOpen,
+    required this.lessonCount,
+    required this.charted,
+    required this.total,
+    required this.units,
+    required this.controller,
+    required this.onContinue,
+    required this.onOpenUnit,
   });
 
   final int index;
   final TopicDescriptor topic;
-  final int sessionCount;
-  final int reflected;
-  final int totalSlots;
-  final VoidCallback onOpen;
+  final int lessonCount;
+  final int charted;
+  final int total;
+  final List<StudyUnit> units;
+  final GaussController controller;
+  final VoidCallback onContinue;
+  final ValueChanged<StudyUnit> onOpenUnit;
 
   @override
-  Widget build(BuildContext context) => Material(
-    color: GaussColors.raised.withValues(alpha: .62),
-    borderRadius: BorderRadius.circular(15),
-    child: InkWell(
-      onTap: onOpen,
+  State<_ChapterRow> createState() => _ChapterRowState();
+}
+
+class _ChapterRowState extends State<_ChapterRow> {
+  bool _expanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final unitLabel = widget.units.length == 1 ? 'unit' : 'units';
+    return Material(
+      color: GaussColors.raised.withValues(alpha: .62),
       borderRadius: BorderRadius.circular(15),
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(
-          minHeight: GaussMetrics.minTouchTarget,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 10),
-          child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
             children: [
-              Container(
-                width: 29,
-                height: 29,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: GaussColors.hairline),
-                ),
-                child: Text(
-                  '$index',
-                  style: const TextStyle(
-                    color: GaussColors.brassLight,
-                    fontSize: 10,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 10),
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Directionality(
-                      textDirection: TextDirection.rtl,
-                      child: Text(
-                        topic.label,
-                        style: const TextStyle(
-                          color: GaussColors.ivory,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w800,
+                child: Semantics(
+                  button: true,
+                  expanded: _expanded,
+                  label:
+                      '${widget.topic.label}. ${widget.units.length} $unitLabel, '
+                      '${widget.charted} of ${widget.total} questions charted.',
+                  hint: _expanded ? 'Hide units' : 'Show units',
+                  excludeSemantics: true,
+                  child: InkWell(
+                    key: ValueKey('study-chapter-toggle-${widget.topic.key}'),
+                    onTap: () => setState(() => _expanded = !_expanded),
+                    borderRadius: BorderRadius.circular(15),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        minHeight: GaussMetrics.minTouchTarget,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(11, 10, 4, 10),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 29,
+                              height: 29,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: GaussColors.hairline),
+                              ),
+                              child: Text(
+                                '${widget.index}',
+                                style: const TextStyle(
+                                  color: GaussColors.brassLight,
+                                  fontSize: GaussTypeScale.insignia,
+                                  fontWeight: FontWeight.w900,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Directionality(
+                                    textDirection: TextDirection.rtl,
+                                    child: Text(
+                                      widget.topic.label,
+                                      style: const TextStyle(
+                                        color: GaussColors.ivory,
+                                        fontSize: GaussTypeScale.body,
+                                        fontWeight: FontWeight.w800,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 2),
+                                  Text(
+                                    '${widget.units.length} $unitLabel · '
+                                    '${widget.lessonCount} lessons · '
+                                    '${widget.charted}/${widget.total} charted',
+                                    style: const TextStyle(
+                                      color: GaussColors.muted,
+                                      fontSize: GaussTypeScale.caption,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            AnimatedRotation(
+                              turns: _expanded ? .5 : 0,
+                              duration: GaussMotion.resolve(
+                                context,
+                                GaussMotion.micro,
+                              ),
+                              child: const Icon(
+                                Icons.keyboard_arrow_down_rounded,
+                                color: GaussColors.brassLight,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    const SizedBox(height: 2),
-                    Text(
-                      '$sessionCount sessions · $reflected/$totalSlots slots charted',
-                      style: const TextStyle(
-                        color: GaussColors.muted,
-                        fontSize: GaussTypeScale.insignia,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-              const Icon(
-                Icons.arrow_forward_rounded,
+              IconButton(
+                key: ValueKey('study-chapter-continue-${widget.topic.key}'),
+                onPressed: widget.onContinue,
+                tooltip: 'Continue this chapter',
+                icon: const Icon(Icons.play_arrow_rounded),
                 color: GaussColors.brassLight,
-                size: 18,
+                constraints: const BoxConstraints(
+                  minWidth: GaussMetrics.minTouchTarget,
+                  minHeight: GaussMetrics.minTouchTarget,
+                ),
               ),
             ],
           ),
+          if (_expanded)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+              child: Column(
+                children: [
+                  for (final unit in widget.units)
+                    _UnitTile(
+                      key: ValueKey('study-unit-${unit.key}'),
+                      unit: unit,
+                      charted: widget.controller.unitReflected(unit),
+                      onOpen: () => widget.onOpenUnit(unit),
+                    ),
+                ],
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+class _UnitTile extends StatelessWidget {
+  const _UnitTile({
+    super.key,
+    required this.unit,
+    required this.charted,
+    required this.onOpen,
+  });
+
+  final StudyUnit unit;
+  final int charted;
+  final VoidCallback onOpen;
+
+  @override
+  Widget build(BuildContext context) {
+    final done = charted >= unit.questionCount;
+    return Semantics(
+      button: true,
+      label:
+          '${unit.label}. $charted of ${unit.questionCount} questions charted.',
+      excludeSemantics: true,
+      child: InkWell(
+        onTap: onOpen,
+        borderRadius: BorderRadius.circular(GaussRadii.small),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(
+            minHeight: GaussMetrics.minTouchTarget,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+            child: Row(
+              children: [
+                Icon(
+                  done
+                      ? Icons.check_circle_rounded
+                      : Icons.radio_button_unchecked_rounded,
+                  size: GaussIconSizes.standard,
+                  color: done ? GaussColors.signalBright : GaussColors.fog,
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        unit.label,
+                        style: TextStyle(
+                          color: unit.isMixed
+                              ? GaussColors.muted
+                              : GaussColors.ivory,
+                          fontSize: GaussTypeScale.body,
+                          fontWeight: FontWeight.w700,
+                          height: 1.3,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      LinearProgressIndicator(
+                        minHeight: 3,
+                        value: unit.questionCount == 0
+                            ? 0
+                            : charted / unit.questionCount,
+                        backgroundColor: GaussColors.line,
+                        color: GaussColors.signal,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Text(
+                  '$charted/${unit.questionCount}',
+                  style: const TextStyle(
+                    color: GaussColors.fog,
+                    fontSize: GaussTypeScale.caption,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class _StudyGlass extends StatelessWidget {
