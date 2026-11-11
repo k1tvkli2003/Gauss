@@ -18,6 +18,7 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parents[1]
 MASTER_SIZE = 1024
 BROWSER_CANDIDATES = (
+    Path("/opt/pw-browsers/chromium"),
     Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
     Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"),
     Path(r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"),
@@ -28,6 +29,9 @@ def _browser() -> Path:
     for candidate in BROWSER_CANDIDATES:
         if candidate.exists():
             return candidate
+    import glob
+    for found in sorted(glob.glob("/opt/pw-browsers/chromium-*/chrome-linux*/chrome")):
+        return Path(found)
     raise RuntimeError("Chrome or Microsoft Edge is required to rasterize the SVG masters.")
 
 
@@ -48,6 +52,7 @@ def _render_svg(svg: Path, destination: Path) -> Image.Image:
     command = [
         str(_browser()),
         "--headless=new",
+        "--no-sandbox",
         "--disable-gpu",
         "--hide-scrollbars",
         "--force-device-scale-factor=1",
@@ -82,11 +87,22 @@ def _save(image: Image.Image, destination: Path, size: int, *, circular: bool = 
     output.save(destination, format="PNG", optimize=True)
 
 
+def _round_corners(image: Image.Image) -> Image.Image:
+    # The SVG plate has rx=22 of 108; Chromium paints the page white behind it.
+    mask = Image.new("L", image.size, 0)
+    radius = round(image.width * 22 / 108)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, *image.size), radius=radius, fill=255)
+    image.putalpha(mask)
+    return image
+
+
 def build() -> None:
     assets = ROOT / "assets" / "visual" / "brand"
     with tempfile.TemporaryDirectory(prefix="gauss-brand-icon-") as temp_dir:
         temp = Path(temp_dir)
-        any_icon = _render_svg(assets / "theorem_star_app_icon.svg", temp / "any.png")
+        any_icon = _round_corners(
+            _render_svg(assets / "theorem_star_app_icon.svg", temp / "any.png")
+        )
         maskable_icon = _render_svg(
             assets / "theorem_star_app_icon_maskable.svg", temp / "maskable.png"
         )

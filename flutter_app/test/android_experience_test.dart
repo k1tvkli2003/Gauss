@@ -89,7 +89,7 @@ void main() {
         adaptiveIconV33,
         contains('@drawable/ic_launcher_theorem_star_mono_safe'),
       );
-      expect(safeForeground, contains('android:insetLeft="14dp"'));
+      expect(safeForeground, contains('android:insetLeft="8dp"'));
       expect(vectorForeground, isNot(contains('gauss_icon_background')));
       expect(vectorForeground, contains('#FFE5A0'));
       expect(vectorForeground, contains('#62AE9C'));
