@@ -298,7 +298,8 @@ class _OrbitNavigator extends StatefulWidget {
   final Subject initialSubject;
   final StudySectionDefinition initialSection;
   final Map<Subject, String> lastSectionBySubject;
-  final void Function(Subject, StudySectionDefinition) onContinue;
+  final void Function(Subject, StudySectionDefinition, {String? topicKey})
+  onContinue;
 
   @override
   State<_OrbitNavigator> createState() => _OrbitNavigatorState();
@@ -464,13 +465,29 @@ class _OrbitNavigatorState extends State<_OrbitNavigator> {
                         child: child,
                       ),
                     ),
-                    child: _OrbitChapterPreview(
+                    child: Column(
                       key: ValueKey('orbit-preview-${_section.id}'),
-                      controller: widget.controller,
-                      section: _section,
-                      index: selectedIndex,
-                      sectionCount: sections.length,
-                      onContinue: () => widget.onContinue(_subject, _section),
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _OrbitChapterPreview(
+                          controller: widget.controller,
+                          section: _section,
+                          index: selectedIndex,
+                          sectionCount: sections.length,
+                          onContinue: () =>
+                              widget.onContinue(_subject, _section),
+                        ),
+                        const SizedBox(height: GaussSpacing.space12),
+                        _OrbitChapterList(
+                          controller: widget.controller,
+                          section: _section,
+                          onOpen: (topicKey) => widget.onContinue(
+                            _subject,
+                            _section,
+                            topicKey: topicKey,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -597,7 +614,7 @@ class _OrbitChapterConstellation extends StatelessWidget {
           MediaQuery.withClampedTextScaling(
             maxScaleFactor: 1.4,
             child: Text(
-              'Chapter ${selectedIndex + 1} of ${sections.length}',
+              'Orbit ${selectedIndex + 1} of ${sections.length}',
               textAlign: TextAlign.center,
               softWrap: false,
               style: const TextStyle(
@@ -667,12 +684,12 @@ class _OrbitChapterBeacon extends StatelessWidget {
         ? GaussColors.signalBright
         : GaussColors.fog;
     return Tooltip(
-      message: 'Chapter ${index + 1}: $title',
+      message: 'Orbit ${index + 1}: $title',
       child: Semantics(
         button: true,
         selected: selected,
         label:
-            'Chapter ${index + 1}. $title. ${(progress * 100).round()} percent charted.',
+            'Orbit ${index + 1}. $title. ${(progress * 100).round()} percent charted.',
         child: AnimatedScale(
           duration: GaussMotion.resolve(context, GaussMotion.micro),
           scale: selected ? 1.08 : 1,
@@ -760,7 +777,6 @@ class _OrbitChapterPreview extends StatelessWidget {
     required this.index,
     required this.sectionCount,
     required this.onContinue,
-    super.key,
   });
 
   final GaussController controller;
@@ -794,13 +810,13 @@ class _OrbitChapterPreview extends StatelessWidget {
     final complete = total > 0 && reflected >= total;
     final nextLabel = complete ? 'Mastery review' : 'Next five questions';
     final actionLabel = complete
-        ? 'Open chapter ${index + 1} mastery review'
-        : 'Continue chapter ${index + 1} at session ${currentIndex + 1}';
+        ? 'Open orbit ${index + 1} mastery review'
+        : 'Continue orbit ${index + 1} at lesson ${currentIndex + 1}';
 
     return Semantics(
       container: true,
       label:
-          'Chapter ${index + 1} of $sectionCount. ${section.title}. $reflected of $total charted. Current session ${currentIndex + 1} of ${nodes.length}.',
+          'Orbit ${index + 1} of $sectionCount. ${section.title}. $reflected of $total charted. Current lesson ${currentIndex + 1} of ${nodes.length}.',
       child: DecoratedBox(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -839,7 +855,7 @@ class _OrbitChapterPreview extends StatelessWidget {
                         MediaQuery.withClampedTextScaling(
                           maxScaleFactor: 1.4,
                           child: Text(
-                            'Chapter ${index + 1}  ·  ${(progress * 100).round()}% charted',
+                            'Orbit ${index + 1}  ·  ${(progress * 100).round()}% charted',
                             style: const TextStyle(
                               color: GaussColors.brassLight,
                               fontSize: GaussTypeScale.caption,
@@ -849,13 +865,18 @@ class _OrbitChapterPreview extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: GaussSpacing.space4),
-                        Text(
-                          section.title,
-                          style: const TextStyle(
-                            color: GaussColors.ivory,
-                            fontSize: GaussTypeScale.title,
-                            fontWeight: FontWeight.w900,
-                            height: 1.16,
+                        // Capped so the longest word of a part title
+                        // ("foundations") never breaks mid-word at 200%.
+                        MediaQuery.withClampedTextScaling(
+                          maxScaleFactor: 1.45,
+                          child: Text(
+                            section.title,
+                            style: const TextStyle(
+                              color: GaussColors.ivory,
+                              fontSize: GaussTypeScale.title,
+                              fontWeight: FontWeight.w900,
+                              height: 1.16,
+                            ),
                           ),
                         ),
                       ],
@@ -1101,6 +1122,142 @@ class _SubjectOrbitButton extends StatelessWidget {
                   ],
                 ],
               ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Every chapter of the selected part as a direct jump target, so any of the
+/// 29 chapters is two taps from the Map: open the navigator, pick the chapter.
+class _OrbitChapterList extends StatelessWidget {
+  const _OrbitChapterList({
+    required this.controller,
+    required this.section,
+    required this.onOpen,
+  });
+
+  final GaussController controller;
+  final StudySectionDefinition section;
+  final ValueChanged<String> onOpen;
+
+  @override
+  Widget build(BuildContext context) {
+    final topics = [
+      for (final key in section.topicKeys)
+        controller.topics.firstWhere((topic) => topic.key == key),
+    ];
+    return Column(
+      key: const ValueKey('orbit-navigator-chapters'),
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        const Padding(
+          padding: EdgeInsets.fromLTRB(4, 0, 4, 6),
+          child: Text(
+            'Jump to a chapter',
+            style: TextStyle(
+              color: GaussColors.brassLight,
+              fontSize: GaussTypeScale.caption,
+              fontWeight: FontWeight.w900,
+              letterSpacing: .2,
+            ),
+          ),
+        ),
+        for (var i = 0; i < topics.length; i++)
+          _OrbitChapterRow(
+            key: ValueKey('orbit-chapter-${topics[i].key}'),
+            number: i + 1,
+            topic: topics[i],
+            units: controller.subtopics.unitsOf(topics[i].key).length,
+            charted: controller.study.topic(topics[i].key).reflected,
+            onTap: () => onOpen(topics[i].key),
+          ),
+      ],
+    );
+  }
+}
+
+class _OrbitChapterRow extends StatelessWidget {
+  const _OrbitChapterRow({
+    super.key,
+    required this.number,
+    required this.topic,
+    required this.units,
+    required this.charted,
+    required this.onTap,
+  });
+
+  final int number;
+  final TopicDescriptor topic;
+  final int units;
+  final int charted;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final total = topic.questionCount;
+    final detail =
+        '$units ${units == 1 ? 'unit' : 'units'} · $charted/$total charted';
+    return Semantics(
+      button: true,
+      label:
+          'Chapter $number. ${topic.label}. $detail. Opens its first uncharted lesson.',
+      excludeSemantics: true,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(GaussRadii.small),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(
+            minHeight: GaussMetrics.minTouchTarget,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 26,
+                  child: Text(
+                    '$number',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: GaussColors.brassLight,
+                      fontSize: GaussTypeScale.caption,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        topic.label,
+                        style: const TextStyle(
+                          color: GaussColors.ivory,
+                          fontSize: GaussTypeScale.body,
+                          fontWeight: FontWeight.w800,
+                          height: 1.25,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        detail,
+                        style: const TextStyle(
+                          color: GaussColors.fog,
+                          fontSize: GaussTypeScale.caption,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(
+                  Icons.chevron_right_rounded,
+                  color: GaussColors.brassLight,
+                ),
+              ],
             ),
           ),
         ),

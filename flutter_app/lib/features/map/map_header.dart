@@ -21,7 +21,8 @@ class _MapHeader extends StatelessWidget {
   final int activeTopicReflected;
   final Map<Subject, String> lastSectionBySubject;
   final ValueChanged<Subject> onSubject;
-  final void Function(Subject, StudySectionDefinition) onNavigate;
+  final void Function(Subject, StudySectionDefinition, {String? topicKey})
+  onNavigate;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -180,9 +181,9 @@ class _MapHeader extends StatelessWidget {
       initialSubject: subject,
       initialSection: section,
       lastSectionBySubject: Map.unmodifiable(lastSectionBySubject),
-      onContinue: (nextSubject, nextSection) {
+      onContinue: (nextSubject, nextSection, {topicKey}) {
         Navigator.of(overlayContext).pop();
-        onNavigate(nextSubject, nextSection);
+        onNavigate(nextSubject, nextSection, topicKey: topicKey);
       },
     );
     if (MediaQuery.sizeOf(context).width < GaussBreakpoints.medium) {

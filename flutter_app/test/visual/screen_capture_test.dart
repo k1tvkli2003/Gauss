@@ -133,7 +133,12 @@ void main() {
             await tester.ensureVisible(target);
             await tester.pump(const Duration(milliseconds: 200));
             await tester.tap(target, warnIfMissed: false);
-            await tester.pump(const Duration(milliseconds: 500));
+            for (var i = 0; i < 4; i++) {
+              await tester.runAsync(
+                () => Future<void>.delayed(const Duration(milliseconds: 60)),
+              );
+              await tester.pump(const Duration(milliseconds: 250));
+            }
           }
         }
         final boundary =
