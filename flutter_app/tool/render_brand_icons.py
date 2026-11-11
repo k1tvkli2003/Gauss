@@ -18,6 +18,7 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parents[1]
 MASTER_SIZE = 1024
 BROWSER_CANDIDATES = (
+    Path("/opt/pw-browsers/chromium"),
     Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
     Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"),
     Path(r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"),
@@ -28,6 +29,9 @@ def _browser() -> Path:
     for candidate in BROWSER_CANDIDATES:
         if candidate.exists():
             return candidate
+    import glob
+    for found in sorted(glob.glob("/opt/pw-browsers/chromium-*/chrome-linux*/chrome")):
+        return Path(found)
     raise RuntimeError("Chrome or Microsoft Edge is required to rasterize the SVG masters.")
 
 
@@ -38,7 +42,7 @@ def _render_svg(svg: Path, destination: Path) -> Image.Image:
     canvas = destination.with_suffix(".html")
     canvas.write_text(
         "<!doctype html><html><head><style>"
-        "html,body,img{width:100%;height:100%;margin:0;overflow:hidden;}"
+        "html,body,img{width:100%;height:100%;margin:0;overflow:hidden;background:transparent;}"
         "img{display:block;}"
         "</style></head><body>"
         f'<img src="{escape(svg.resolve().as_uri(), quote=True)}" alt="">'
@@ -48,8 +52,10 @@ def _render_svg(svg: Path, destination: Path) -> Image.Image:
     command = [
         str(_browser()),
         "--headless=new",
+        "--no-sandbox",
         "--disable-gpu",
         "--hide-scrollbars",
+        "--default-background-color=00000000",
         "--force-device-scale-factor=1",
         f"--window-size={MASTER_SIZE},{MASTER_SIZE}",
         f"--screenshot={destination}",
@@ -82,11 +88,22 @@ def _save(image: Image.Image, destination: Path, size: int, *, circular: bool = 
     output.save(destination, format="PNG", optimize=True)
 
 
+def _round_corners(image: Image.Image) -> Image.Image:
+    # The SVG plate has rx=22 of 108; Chromium paints the page white behind it.
+    mask = Image.new("L", image.size, 0)
+    radius = round(image.width * 22 / 108)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, *image.size), radius=radius, fill=255)
+    image.putalpha(mask)
+    return image
+
+
 def build() -> None:
     assets = ROOT / "assets" / "visual" / "brand"
     with tempfile.TemporaryDirectory(prefix="gauss-brand-icon-") as temp_dir:
         temp = Path(temp_dir)
-        any_icon = _render_svg(assets / "theorem_star_app_icon.svg", temp / "any.png")
+        any_icon = _round_corners(
+            _render_svg(assets / "theorem_star_app_icon.svg", temp / "any.png")
+        )
         maskable_icon = _render_svg(
             assets / "theorem_star_app_icon_maskable.svg", temp / "maskable.png"
         )
@@ -108,7 +125,8 @@ def build() -> None:
         }.items():
             _save(any_icon, android / density / "ic_launcher.png", size)
             _save(any_icon, android / density / "ic_launcher_round.png", size, circular=True)
-        _save(maskable_icon, android / "drawable-nodpi" / "ic_launcher_foreground.png", 432)
+        foreground = _render_svg(assets / "theorem_star_foreground.svg", temp / "fg.png")
+        _save(foreground, android / "drawable-nodpi" / "ic_launcher_foreground.png", 432)
 
 
 if __name__ == "__main__":

@@ -34,8 +34,7 @@ class GaussWordmark extends StatelessWidget {
   }
 }
 
-/// The production Gauss mark selected by the user: an open theorem orbit and
-/// four geometric proof terminals around a teal point of truth.
+/// The Gauss mark: a tapered gold G fused with the theorem star and a lapis center.
 class TheoremStarMark extends StatelessWidget {
   const TheoremStarMark({
     this.size = 40,
@@ -76,249 +75,76 @@ class _TheoremStarPainter extends CustomPainter {
   final bool monochrome;
   final bool darkInk;
 
+  // Geometry in the 512 grid of assets/visual/brand/theorem_star.svg.
+  static final Path _glyph = Path()
+    ..moveTo(371, 142)
+    ..cubicTo(339, 109, 299, 88, 256, 88)
+    ..cubicTo(163.2, 88, 88, 163.2, 88, 256)
+    ..cubicTo(88, 348.8, 163.2, 424, 256, 424)
+    ..cubicTo(348.8, 424, 424, 348.8, 424, 256)
+    ..quadraticBezierTo(424, 247, 415, 247)
+    ..lineTo(282, 247)
+    ..lineTo(282, 265)
+    ..lineTo(399.7, 265)
+    ..cubicTo(395, 340, 333, 400, 256, 400)
+    ..cubicTo(176.5, 400, 112, 335.5, 112, 256)
+    ..cubicTo(112, 176.5, 176.5, 112, 256, 112)
+    ..cubicTo(299, 112, 338, 124, 371, 142)
+    ..close();
+  static final Path _star = Path()
+    ..moveTo(256, 134)
+    ..cubicTo(251, 180, 248, 211, 241, 239)
+    ..cubicTo(210, 246, 180, 251, 134, 256)
+    ..cubicTo(180, 261, 210, 266, 241, 273)
+    ..cubicTo(248, 301, 251, 332, 256, 378)
+    ..cubicTo(261, 332, 264, 301, 271, 273)
+    ..cubicTo(310, 266, 361, 265, 414, 265)
+    ..lineTo(414, 247)
+    ..cubicTo(361, 247, 310, 246, 271, 239)
+    ..cubicTo(264, 211, 261, 180, 256, 134)
+    ..close();
+
+  static const _gold = [
+    Color(0xFFF6DDA0),
+    Color(0xFFE9BF65),
+    Color(0xFFC9983F),
+    Color(0xFFEDC776),
+  ];
+
   @override
   void paint(Canvas canvas, Size size) {
     canvas.save();
-    canvas.scale(size.width / 100, size.height / 100);
-
-    final brass = darkInk ? GaussColors.parchmentInk : GaussColors.brassLight;
-    final brassDark = darkInk ? brass : const Color(0xFF8A5A18);
-    final brassMid = darkInk ? brass : const Color(0xFFD9A744);
-    final highlight = darkInk ? brass : const Color(0xFFFFE5A0);
-    final recess = darkInk ? GaussColors.parchmentInk : GaussColors.deepInk;
-    final signal = monochrome ? brass : GaussColors.signal;
-    final markBounds = const Rect.fromLTWH(4, 4, 92, 92);
-    final metalShader = LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [highlight, brassMid, brassDark, brass],
-      stops: const [0, .34, .72, 1],
-    ).createShader(markBounds);
-    final outerPath = Path()
-      ..addArc(
-        Rect.fromCircle(center: const Offset(50, 50), radius: 43),
-        .18 * math.pi,
-        1.58 * math.pi,
-      )
-      ..moveTo(75, 63)
-      ..lineTo(91, 63);
-    if (!darkInk) {
-      canvas.save();
-      canvas.translate(0, 1.5);
-      canvas.drawPath(
-        outerPath,
-        Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeCap = StrokeCap.round
-          ..strokeJoin = StrokeJoin.round
-          ..strokeWidth = 8
-          ..color = const Color(0xB802070A)
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.6),
-      );
-      canvas.restore();
-    }
-    canvas.drawPath(
-      outerPath,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeCap = StrokeCap.round
-        ..strokeJoin = StrokeJoin.round
-        ..strokeWidth = 6.3
-        ..color = brassDark,
-    );
-    canvas.drawPath(
-      outerPath,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeCap = StrokeCap.round
-        ..strokeJoin = StrokeJoin.round
-        ..strokeWidth = 4.7
-        ..shader = darkInk ? null : metalShader
-        ..color = brass,
-    );
-    canvas.drawPath(
-      outerPath,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeCap = StrokeCap.round
-        ..strokeJoin = StrokeJoin.round
-        ..strokeWidth = 1.05
-        ..color = highlight.withValues(alpha: darkInk ? .72 : .62),
-    );
-
-    final innerBase = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round
-      ..strokeWidth = 4.3
-      ..color = recess.withValues(alpha: darkInk ? .82 : .94);
-    final innerMetal = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.45
-      ..strokeCap = StrokeCap.round
-      ..shader = darkInk ? null : metalShader
-      ..color = brass;
-    final innerOrbit = Rect.fromCircle(
-      center: const Offset(50, 50),
-      radius: 22.5,
-    );
-    for (final start in const [.08, .58, 1.08, 1.58]) {
-      canvas.drawArc(
-        innerOrbit,
-        start * math.pi,
-        .34 * math.pi,
-        false,
-        innerBase,
-      );
-      canvas.drawArc(
-        innerOrbit,
-        start * math.pi,
-        .34 * math.pi,
-        false,
-        innerMetal,
-      );
-    }
-
-    final rayPaint = Paint()
+    canvas.scale(size.width / 512, size.height / 512);
+    final flat = darkInk ? GaussColors.parchmentInk : null;
+    final fill = Paint()
       ..style = PaintingStyle.fill
-      ..shader = darkInk ? null : metalShader
-      ..color = brass;
-    for (var turn = 0; turn < 4; turn++) {
-      canvas.save();
-      canvas.translate(50, 50);
-      canvas.rotate(turn * math.pi / 2);
-      final ray = Path()
-        ..moveTo(-5.2, -4)
-        ..quadraticBezierTo(-2.6, -13, 0, -29)
-        ..quadraticBezierTo(2.6, -13, 5.2, -4)
-        ..lineTo(0, 1.2)
-        ..close();
-      if (!darkInk) {
-        canvas.save();
-        canvas.translate(0, 1.2);
-        canvas.drawPath(
-          ray,
-          Paint()
-            ..color = GaussScrims.nodeShadow
-            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.2),
-        );
-        canvas.restore();
-      }
-      canvas.drawPath(ray, rayPaint);
-      canvas.drawPath(
-        ray,
-        Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = .75
-          ..color = highlight.withValues(alpha: darkInk ? .5 : .64),
-      );
-      canvas.restore();
+      ..color = flat ?? GaussColors.brassLight;
+    if (flat == null) {
+      fill.shader = const LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: _gold,
+        stops: [0, .32, .65, 1],
+      ).createShader(const Rect.fromLTWH(88, 88, 336, 336));
     }
-
-    final terminalPath = Path()
-      ..addOval(Rect.fromCircle(center: const Offset(50, 14), radius: 5.5))
-      ..addRect(
-        Rect.fromCenter(center: const Offset(14, 50), width: 10, height: 10),
-      )
-      ..moveTo(86, 50)
-      ..lineTo(76, 43.5)
-      ..lineTo(76, 56.5)
-      ..close()
-      ..moveTo(50, 78.9)
-      ..lineTo(57.1, 86)
-      ..lineTo(50, 93.1)
-      ..lineTo(42.9, 86)
-      ..close();
-    if (!darkInk) {
-      canvas.save();
-      canvas.translate(0, 1.1);
-      canvas.drawPath(
-        terminalPath,
-        Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 6.5
-          ..strokeJoin = StrokeJoin.round
-          ..color = GaussScrims.nodeShadow
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.3),
-      );
-      canvas.restore();
-    }
-    final terminal = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 4.2
-      ..strokeJoin = StrokeJoin.round
-      ..shader = darkInk ? null : metalShader
-      ..color = brass;
-    canvas.drawPath(terminalPath, terminal);
-    canvas.drawPath(
-      terminalPath,
+    canvas.drawPath(_glyph, fill);
+    canvas.drawCircle(
+      const Offset(256, 256),
+      82,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = .8
-        ..strokeJoin = StrokeJoin.round
-        ..color = highlight.withValues(alpha: darkInk ? .58 : .72),
+        ..strokeWidth = 6
+        ..shader = fill.shader
+        ..color = fill.color,
     );
-
-    if (!darkInk && !monochrome) {
-      canvas.drawCircle(
-        const Offset(50, 50),
-        15,
-        Paint()
-          ..shader =
-              RadialGradient(
-                colors: [
-                  signal.withValues(alpha: .28),
-                  signal.withValues(alpha: 0),
-                ],
-              ).createShader(
-                Rect.fromCircle(center: const Offset(50, 50), radius: 15),
-              ),
-      );
-    }
-    canvas.drawCircle(
-      const Offset(50, 50),
-      8.3,
-      Paint()
-        ..shader = darkInk
-            ? null
-            : const RadialGradient(
-                center: Alignment(-.3, -.35),
-                colors: [Color(0xFFFFF4D7), Color(0xFFD3A348)],
-              ).createShader(
-                Rect.fromCircle(center: const Offset(50, 50), radius: 8.3),
-              )
-        ..color = darkInk ? GaussColors.parchment : GaussColors.ivory,
-    );
-    canvas.drawCircle(
-      const Offset(50, 50),
-      6.1,
-      Paint()..color = darkInk ? GaussColors.parchment : GaussColors.deepInk,
-    );
-    canvas.drawCircle(
-      const Offset(50, 50),
-      5.1,
-      Paint()
-        ..shader = darkInk || monochrome
-            ? null
-            : const RadialGradient(
-                center: Alignment(-.35, -.4),
-                colors: [
-                  Color(0xFFBFF7E6),
-                  GaussColors.signal,
-                  Color(0xFF176B74),
-                ],
-              ).createShader(
-                Rect.fromCircle(center: const Offset(50, 50), radius: 5.1),
-              )
-        ..color = signal,
-    );
-    if (!darkInk && !monochrome) {
-      canvas.drawCircle(
-        const Offset(48.4, 48.2),
-        1.15,
-        Paint()..color = GaussColors.ivory.withValues(alpha: .82),
-      );
-    }
+    canvas.drawPath(_star, fill);
+    canvas.drawCircle(const Offset(256, 256), 24, fill);
+    final center = darkInk
+        ? GaussColors.parchment
+        : monochrome
+        ? GaussColors.deepInk
+        : const Color(0xFF101D3F);
+    canvas.drawCircle(const Offset(256, 256), 17, Paint()..color = center);
     canvas.restore();
   }
 
