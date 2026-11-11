@@ -31,50 +31,47 @@ void main() {
     await database.close();
   });
 
-  testWidgets(
-    'Map Study and Insights keep route identity with directional peer motion',
-    (tester) async {
-      await _pumpGauss(tester, controller);
+  testWidgets('Map Study and Insights switch with a quiet fade-through', (
+    tester,
+  ) async {
+    await _pumpGauss(tester, controller);
 
-      expect(find.byType(MapScreen), findsOneWidget);
-      expect(_routeOf(tester, find.byType(MapScreen)), '/map');
+    expect(find.byType(MapScreen), findsOneWidget);
+    expect(_routeOf(tester, find.byType(MapScreen)), '/map');
 
-      await tester.tap(_compactDestination('Study'));
-      await tester.pump();
+    await tester.tap(_compactDestination('Study'));
+    await tester.pump();
 
-      expect(find.byType(StudyHubScreen), findsOneWidget);
-      expect(_routeOf(tester, find.byType(StudyHubScreen)), '/study');
-      var slide = _branchSlide(tester);
-      var fade = _branchFade(tester);
-      expect(slide.position.value.dx, closeTo(.034, .001));
-      expect(slide.position.value.dy, 0);
-      expect(fade.opacity.value, closeTo(.9, .001));
+    expect(find.byType(StudyHubScreen), findsOneWidget);
+    expect(_routeOf(tester, find.byType(StudyHubScreen)), '/study');
+    expect(_branchFade(tester).opacity.value, closeTo(0, .001));
+    expect(
+      _branchFade(tester).child,
+      isNot(isA<SlideTransition>()),
+      reason: 'peer destinations fade; they do not travel',
+    );
 
-      await tester.pump(const Duration(milliseconds: 140));
-      slide = _branchSlide(tester);
-      expect(slide.position.value.dx, inExclusiveRange(0, .034));
-      await tester.pump(const Duration(milliseconds: 180));
-      expect(_branchSlide(tester).position.value, Offset.zero);
-      expect(_branchFade(tester).opacity.value, 1);
+    await tester.pump(const Duration(milliseconds: 110));
+    expect(_branchFade(tester).opacity.value, inExclusiveRange(0, 1));
+    await tester.pump(const Duration(milliseconds: 120));
+    expect(_branchFade(tester).opacity.value, 1);
 
-      await tester.tap(_compactDestination('Insights'));
-      await tester.pump();
-      expect(find.byType(InsightsScreen), findsOneWidget);
-      expect(_routeOf(tester, find.byType(InsightsScreen)), '/insights');
-      expect(_branchSlide(tester).position.value.dx, greaterThan(0));
-      await tester.pump(const Duration(milliseconds: 300));
+    await tester.tap(_compactDestination('Insights'));
+    await tester.pump();
+    expect(find.byType(InsightsScreen), findsOneWidget);
+    expect(_routeOf(tester, find.byType(InsightsScreen)), '/insights');
+    expect(_branchFade(tester).opacity.value, closeTo(0, .001));
+    await tester.pump(const Duration(milliseconds: 300));
 
-      await tester.tap(_compactDestination('Map'));
-      await tester.pump();
-      expect(find.byType(MapScreen), findsOneWidget);
-      expect(_routeOf(tester, find.byType(MapScreen)), '/map');
-      expect(_branchSlide(tester).position.value.dx, lessThan(0));
-      expect(tester.takeException(), isNull);
-    },
-  );
+    await tester.tap(_compactDestination('Map'));
+    await tester.pump();
+    expect(find.byType(MapScreen), findsOneWidget);
+    expect(_routeOf(tester, find.byType(MapScreen)), '/map');
+    expect(tester.takeException(), isNull);
+  });
 
   testWidgets(
-    'detail push rises into depth and back settles toward its source',
+    'detail push fades in after a short delay and fades out on back',
     (tester) async {
       await _pumpGauss(tester, controller);
       await tester.tap(_compactDestination('Study'));
@@ -92,31 +89,24 @@ void main() {
         _routeOf(tester, find.byType(MissionScreen)),
         startsWith('/mission/'),
       );
-      var routeFade = _spatialFade(tester);
-      var routeSlide = _spatialSlide(tester);
-      var routeScale = _spatialScale(tester);
-      expect(routeFade.opacity.value, closeTo(0, .001));
-      expect(routeSlide.position.value.dy, closeTo(.024, .001));
-      expect(routeScale.scale.value, closeTo(.99, .001));
-
-      await tester.pump(const Duration(milliseconds: 170));
-      routeSlide = _spatialSlide(tester);
-      expect(routeSlide.position.value.dy, inExclusiveRange(0, .024));
-      await tester.pump(const Duration(milliseconds: 190));
-      expect(_spatialSlide(tester).position.value, Offset.zero);
-      expect(_spatialScale(tester).scale.value, 1);
+      expect(_spatialFade(tester).opacity.value, closeTo(0, .001));
+      await tester.pump(const Duration(milliseconds: 50));
+      expect(
+        _spatialFade(tester).opacity.value,
+        closeTo(0, .001),
+        reason: 'the incoming page waits 60ms before fading in',
+      );
+      await tester.pump(const Duration(milliseconds: 120));
+      expect(_spatialFade(tester).opacity.value, inExclusiveRange(0, 1));
+      await tester.pump(const Duration(milliseconds: 150));
+      expect(_spatialFade(tester).opacity.value, 1);
 
       await tester.binding.handlePopRoute();
       await tester.pump();
-      await tester.pump(const Duration(milliseconds: 120));
-      routeFade = _spatialFade(tester);
-      routeSlide = _spatialSlide(tester);
-      routeScale = _spatialScale(tester);
-      expect(routeFade.opacity.value, inExclusiveRange(0, 1));
-      expect(routeSlide.position.value.dy, inExclusiveRange(0, .024));
-      expect(routeScale.scale.value, inExclusiveRange(.99, 1));
+      await tester.pump(const Duration(milliseconds: 70));
+      expect(_spatialFade(tester).opacity.value, inExclusiveRange(0, 1));
 
-      await tester.pump(const Duration(milliseconds: 140));
+      await tester.pump(const Duration(milliseconds: 120));
       expect(find.byType(StudyHubScreen), findsOneWidget);
       expect(_routeOf(tester, find.byType(StudyHubScreen)), '/study');
       expect(tester.takeException(), isNull);
@@ -175,7 +165,7 @@ void main() {
       find.byKey(const ValueKey('gauss-branch-route-motion')),
       findsOneWidget,
     );
-    expect(_branchSlide(tester).position.value.dx, greaterThan(0));
+    expect(_branchFade(tester).opacity.value, lessThan(1));
 
     tester.platformDispatcher.accessibilityFeaturesTestValue =
         const FakeAccessibilityFeatures(disableAnimations: true);
@@ -190,7 +180,6 @@ void main() {
     tester.platformDispatcher.accessibilityFeaturesTestValue =
         const FakeAccessibilityFeatures();
     await tester.pump();
-    expect(_branchSlide(tester).position.value, Offset.zero);
     expect(_branchFade(tester).opacity.value, 1);
     expect(tester.takeException(), isNull);
   });
@@ -216,37 +205,7 @@ FadeTransition _branchFade(WidgetTester tester) =>
       find.byKey(const ValueKey('gauss-branch-route-motion')),
     );
 
-SlideTransition _branchSlide(WidgetTester tester) =>
-    tester.widget<SlideTransition>(
-      find
-          .descendant(
-            of: find.byKey(const ValueKey('gauss-branch-route-motion')),
-            matching: find.byType(SlideTransition),
-          )
-          .first,
-    );
-
 FadeTransition _spatialFade(WidgetTester tester) =>
     tester.widget<FadeTransition>(
       find.byKey(const ValueKey('gauss-spatial-route-motion')),
-    );
-
-SlideTransition _spatialSlide(WidgetTester tester) =>
-    tester.widget<SlideTransition>(
-      find
-          .descendant(
-            of: find.byKey(const ValueKey('gauss-spatial-route-motion')),
-            matching: find.byType(SlideTransition),
-          )
-          .first,
-    );
-
-ScaleTransition _spatialScale(WidgetTester tester) =>
-    tester.widget<ScaleTransition>(
-      find
-          .descendant(
-            of: find.byKey(const ValueKey('gauss-spatial-route-motion')),
-            matching: find.byType(ScaleTransition),
-          )
-          .first,
     );

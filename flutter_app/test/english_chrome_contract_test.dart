@@ -143,8 +143,8 @@ void main() {
     expect(Localizations.localeOf(appContext), const Locale('en'));
     expect(Directionality.of(appContext), TextDirection.ltr);
     expect(find.text('Map'), findsOneWidget);
-    expect(find.text('Study'), findsOneWidget);
-    expect(find.text('Insights'), findsOneWidget);
+    expect(find.byTooltip('Study'), findsOneWidget);
+    expect(find.byTooltip('Insights'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 }

@@ -249,7 +249,7 @@ void main() {
 
     expect(find.text('Map'), findsOneWidget);
     expect(find.byKey(const ValueKey('gauss-nav-study')), findsOneWidget);
-    expect(find.text('Insights'), findsOneWidget);
+    expect(find.byKey(const ValueKey('gauss-nav-insights')), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -490,10 +490,7 @@ void main() {
           final destination = find.byKey(ValueKey('gauss-nav-$label'));
           final destinationRect = tester.getRect(destination);
           destinationWidthSum += destinationRect.width;
-          expect(
-            destinationRect.width,
-            closeTo(textScale >= 1.3 ? 58 : 82, .5),
-          );
+          expect(destinationRect.width, greaterThanOrEqualTo(48));
           expect(destinationRect.height, greaterThanOrEqualTo(48));
           expect(destination.hitTestable(), findsOneWidget);
           expect(
@@ -510,10 +507,10 @@ void main() {
           );
           expect(
             destinationTexts,
-            textScale >= 1.3 ? findsNothing : findsOneWidget,
+            label == 'map' ? findsOneWidget : findsNothing,
             reason:
-                '$caseLabel accessibility footer uses its explicit semantic '
-                'symbol language instead of breaking destination words.',
+                '$caseLabel footer labels only the selected destination, so '
+                'the pill stays one row without breaking words.',
           );
           final semanticLabel =
               '${label[0].toUpperCase()}${label.substring(1)}';
@@ -543,7 +540,8 @@ void main() {
         }
         expect(
           floatingFooterRect.width,
-          closeTo(destinationWidthSum, .5),
+          // 6dp pill padding on each side plus two 2dp gaps.
+          closeTo(destinationWidthSum + 16, .5),
           reason:
               '$caseLabel footer frame must exactly hug its measured '
               'destinations without an arbitrary width reservoir.',

@@ -160,6 +160,7 @@ class GaussNavGlyph extends StatelessWidget {
     required this.glyph,
     required this.selected,
     this.size = 25,
+    this.color,
     super.key,
   });
 
@@ -167,12 +168,19 @@ class GaussNavGlyph extends StatelessWidget {
   final bool selected;
   final double size;
 
+  /// Overrides the selected/idle stroke, e.g. dark ink on a filled pill.
+  final Color? color;
+
   @override
   Widget build(BuildContext context) => ExcludeSemantics(
     child: SizedBox.square(
       dimension: size,
       child: CustomPaint(
-        painter: _GaussNavGlyphPainter(glyph: glyph, selected: selected),
+        painter: _GaussNavGlyphPainter(
+          glyph: glyph,
+          selected: selected,
+          color: color,
+        ),
       ),
     ),
   );
@@ -243,16 +251,22 @@ class _GaussScratchGlyphPainter extends CustomPainter {
 }
 
 class _GaussNavGlyphPainter extends CustomPainter {
-  const _GaussNavGlyphPainter({required this.glyph, required this.selected});
+  const _GaussNavGlyphPainter({
+    required this.glyph,
+    required this.selected,
+    this.color,
+  });
 
   final GaussDestinationGlyph glyph;
   final bool selected;
+  final Color? color;
 
   @override
   void paint(Canvas canvas, Size size) {
     canvas.save();
     canvas.scale(size.width / 24, size.height / 24);
-    final color = selected ? GaussColors.brassLight : GaussColors.fog;
+    final color =
+        this.color ?? (selected ? GaussColors.brassLight : GaussColors.fog);
     final paint = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = selected ? 1.8 : 1.55
@@ -325,7 +339,9 @@ class _GaussNavGlyphPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _GaussNavGlyphPainter oldDelegate) =>
-      oldDelegate.glyph != glyph || oldDelegate.selected != selected;
+      oldDelegate.glyph != glyph ||
+      oldDelegate.selected != selected ||
+      oldDelegate.color != color;
 }
 
 class TopicGlyph extends StatelessWidget {
