@@ -7,7 +7,7 @@ const _planVersion = 'registry-unit-five-question-v2';
 /// Monotonic revision of the plan's structure. A downloaded content release
 /// whose plan has a lower revision than the one bundled in the app is ignored
 /// so an older published plan can never undo this structure.
-const _planRevision = 2;
+const _planRevision = 3;
 
 Future<void> main(List<String> arguments) async {
   final root = Directory.current.path.endsWith('flutter_app')
@@ -40,6 +40,16 @@ Future<void> main(List<String> arguments) async {
     for (final raw in taxonomy['subtopics'] as List<dynamic>)
       (raw as Map<String, dynamic>)['key'] as String: raw['order'] as int,
   };
+  // Reviewed placement of questions the frozen manifest left without a unit.
+  final overlay = Map<String, String>.from(
+    (jsonDecode(
+              await File(
+                '${root.path}/data/certification/v1/unit-assignments.json',
+              ).readAsString(),
+            )
+            as Map<String, dynamic>)['assignments']
+        as Map,
+  );
   final recordsByTopic = <String, List<_PlanningRecord>>{};
   await for (final line
       in manifestFile
@@ -65,9 +75,11 @@ Future<void> main(List<String> arguments) async {
     final prerequisites = _strings(
       tax[reviewed ? 'prerequisites' : 'proposed_prerequisites'],
     )..sort();
-    // The registry unit. Questions the registry never classified are not
-    // guessed into one; they form an explicit mixed unit at chapter end.
-    final registryUnit = (tax['subtopic_key'] as String?)?.trim();
+    // The registry unit, from the manifest or the reviewed overlay. Questions
+    // neither placed stay in an explicit mixed unit at chapter end.
+    final registryUnit =
+        ((tax['subtopic_key'] as String?) ?? overlay[row['question_id']])
+            ?.trim();
     final unitKey = registryUnit != null && registryUnit.isNotEmpty
         ? registryUnit
         : '${topicKey}__mixed';

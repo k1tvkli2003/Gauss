@@ -16,7 +16,7 @@ void main() {
 
   test('the unit classification covers every question exactly once', () async {
     final index = bank.subtopicIndex;
-    expect(index.unitCount, greaterThan(250));
+    expect(index.unitCount, greaterThan(240));
 
     final seen = <String>{};
     for (final topic in bank.topics) {

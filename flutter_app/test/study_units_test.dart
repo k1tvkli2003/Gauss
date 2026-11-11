@@ -37,7 +37,7 @@ void main() {
     }
 
     // Counts read from the real corpus, not parts mislabeled as chapters.
-    expect(find.text('18 chapters · 146 units'), findsOneWidget);
+    expect(find.text('18 chapters · 136 units'), findsOneWidget);
 
     final part = find.byKey(
       const ValueKey('study-section-toggle-math_algebraic_foundations'),

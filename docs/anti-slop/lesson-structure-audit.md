@@ -53,9 +53,10 @@ this change.
 
 ## Known limits
 
-- 437 questions (12%) have no registry unit and sit in "Mixed problems".
-- 150 lessons span two adjacent units and 18 span three or four (tiny units);
-  77% of lessons are single-unit.
+- 3 questions have no fitting unit and sit in "Mixed problems" (see below).
+- Unit placement of the 434 formerly unclassified questions is a content review
+  by one reviewer (see below), not the screening pipeline.
+- 168 lessons span two or more adjacent units; 576 of 744 (77%) are single-unit.
 - Lesson/unit correctness of the 3,235 reviewed rows rests on the earlier
   screening review; this audit checked consistency with the source book order,
   not each question's mathematical content.
@@ -70,9 +71,24 @@ Tried to place them into registry units without a review:
   for 11%. For the 437 it yields 6 confident suggestions, and 193 have no
   similar reviewed question at all.
 
-Decision: nothing is auto-assigned (a few wrong placements would break the
-"distribution must be correct" requirement). They stay in "Mixed problems".
-`scripts/suggest_unit_assignments.py` writes `unit-suggestions.json` as a
-review aid only. They need a real review pass (screening reviewer), after
-which the registry unit is filled in the manifest and the index and plan are
-regenerated (plan_revision 3).
+Decision (2026-11-11, owner): place every one by judgment instead.
+
+Done: each question was read (stem, or the printed solution where the stem is
+a scan placeholder) and placed in the registry unit of its own chapter that
+fits it. The result is `data/certification/v1/unit-assignments.json`, an
+overlay; the frozen manifest is untouched. `scripts/build_subtopic_index.py`
+and `flutter_app/tool/generate_five_question_plan.dart` both read it, and the
+build fails if an overlay unit is not in the question's chapter. Plan revision
+is now 3.
+
+- 434 placed. 3 kept in "Mixed problems" with a reason in the overlay:
+  math 0427 (radical-function translation), 0731 and 0732 (function graphs
+  printed inside the trigonometry run).
+- Units: 244 (was 263 plus 27 mixed; empty mixed units disappeared). Lessons
+  still 744; 576 single-unit.
+- Data finding: 331 of the 3,672 shipped questions (65 of these 437) have a
+  scan-placeholder stem ("must be checked against the scan"). Those 65 were
+  placed from the printed solution. The question text of all 331 still needs
+  repair; this is separate from unit placement.
+- Online devices keep the older plan until the owner republishes content
+  (the revision guard prefers the newer bundled plan).

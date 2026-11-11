@@ -16,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 TAXONOMY = ROOT / "data/certification/v1/taxonomy.json"
 MANIFEST = ROOT / "data/certification/v1/manifest.jsonl"
+ASSIGNMENTS = ROOT / "data/certification/v1/unit-assignments.json"
 INDEX = ROOT / "flutter_app/assets/question_bank/index.json"
 OUT = ROOT / "flutter_app/assets/curriculum/subtopic_index_v1.json"
 
@@ -28,14 +29,28 @@ def build() -> str:
         if line.strip():
             row = json.loads(line)
             by_question[row["question_id"]] = row["taxonomy"]
-    # Screened questions without a registry subtopic are not guessed into one;
-    # they sit in an explicit per-chapter "Mixed problems" unit.
-    def unit_key(tax):
-        return tax.get("subtopic_key") or f"{tax['topic_key']}__mixed"
+    # The frozen manifest has no subtopic for 437 screened questions. A
+    # reviewed overlay places them; only questions it keeps out (with a reason)
+    # sit in an explicit per-chapter "Mixed problems" unit.
+    overlay = json.loads(ASSIGNMENTS.read_text(encoding="utf-8"))["assignments"]
+    registry = {s["key"]: s["topic_key"] for s in taxonomy["subtopics"]}
+    for qid, key in overlay.items():
+        tax = by_question[qid]
+        if tax.get("subtopic_key"):
+            sys.exit(f"{qid} already has a manifest subtopic; drop it from the overlay")
+        if registry.get(key) != tax["topic_key"]:
+            sys.exit(f"{qid}: {key} is not a unit of chapter {tax['topic_key']}")
+
+    def unit_key(tax, qid=None):
+        return (
+            tax.get("subtopic_key")
+            or overlay.get(qid)
+            or f"{tax['topic_key']}__mixed"
+        )
 
     counts = {}
-    for tax in by_question.values():
-        counts[unit_key(tax)] = counts.get(unit_key(tax), 0) + 1
+    for qid, tax in by_question.items():
+        counts[unit_key(tax, qid)] = counts.get(unit_key(tax, qid), 0) + 1
     units = [
         {
             "key": s["key"],
@@ -67,7 +82,7 @@ def build() -> str:
         "units": units,
         # question id -> index into `units`
         "question_unit": {
-            qid: index_of[unit_key(tax)]
+            qid: index_of[unit_key(tax, qid)]
             for qid, tax in sorted(by_question.items())
         },
     }
