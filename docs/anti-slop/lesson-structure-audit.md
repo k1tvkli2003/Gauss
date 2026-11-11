@@ -59,3 +59,20 @@ this change.
 - Lesson/unit correctness of the 3,235 reviewed rows rests on the earlier
   screening review; this audit checked consistency with the source book order,
   not each question's mathematical content.
+
+## The 437 unclassified questions (2026-11-11)
+
+Tried to place them into registry units without a review:
+- Overlap with registry concept tags: unusable (different vocabularies;
+  under 1% of reviewed questions classified at any threshold).
+- Nearest reviewed neighbours by shared proposed tags (leave-one-out on
+  reviewed questions): best rule about 96% precision for 20% coverage, 98%
+  for 11%. For the 437 it yields 6 confident suggestions, and 193 have no
+  similar reviewed question at all.
+
+Decision: nothing is auto-assigned (a few wrong placements would break the
+"distribution must be correct" requirement). They stay in "Mixed problems".
+`scripts/suggest_unit_assignments.py` writes `unit-suggestions.json` as a
+review aid only. They need a real review pass (screening reviewer), after
+which the registry unit is filled in the manifest and the index and plan are
+regenerated (plan_revision 3).
