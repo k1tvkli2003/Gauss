@@ -34,7 +34,7 @@ class GaussWordmark extends StatelessWidget {
   }
 }
 
-/// The Gauss mark: an open orbit around a four-pointed star and a teal point.
+/// The Gauss mark: a tapered gold G fused with the theorem star and a lapis center.
 class TheoremStarMark extends StatelessWidget {
   const TheoremStarMark({
     this.size = 40,
@@ -75,39 +75,76 @@ class _TheoremStarPainter extends CustomPainter {
   final bool monochrome;
   final bool darkInk;
 
-  static final Path _star = Path()
-    ..moveTo(50, 27)
-    ..quadraticBezierTo(53.2, 46.8, 73, 50)
-    ..quadraticBezierTo(53.2, 53.2, 50, 73)
-    ..quadraticBezierTo(46.8, 53.2, 27, 50)
-    ..quadraticBezierTo(46.8, 46.8, 50, 27)
+  // Geometry in the 512 grid of assets/visual/brand/theorem_star.svg.
+  static final Path _glyph = Path()
+    ..moveTo(371, 142)
+    ..cubicTo(339, 109, 299, 88, 256, 88)
+    ..cubicTo(163.2, 88, 88, 163.2, 88, 256)
+    ..cubicTo(88, 348.8, 163.2, 424, 256, 424)
+    ..cubicTo(348.8, 424, 424, 348.8, 424, 256)
+    ..quadraticBezierTo(424, 247, 415, 247)
+    ..lineTo(282, 247)
+    ..lineTo(282, 265)
+    ..lineTo(399.7, 265)
+    ..cubicTo(395, 340, 333, 400, 256, 400)
+    ..cubicTo(176.5, 400, 112, 335.5, 112, 256)
+    ..cubicTo(112, 176.5, 176.5, 112, 256, 112)
+    ..cubicTo(299, 112, 338, 124, 371, 142)
     ..close();
+  static final Path _star = Path()
+    ..moveTo(256, 134)
+    ..cubicTo(251, 180, 248, 211, 241, 239)
+    ..cubicTo(210, 246, 180, 251, 134, 256)
+    ..cubicTo(180, 261, 210, 266, 241, 273)
+    ..cubicTo(248, 301, 251, 332, 256, 378)
+    ..cubicTo(261, 332, 264, 301, 271, 273)
+    ..cubicTo(310, 266, 361, 265, 414, 265)
+    ..lineTo(414, 247)
+    ..cubicTo(361, 247, 310, 246, 271, 239)
+    ..cubicTo(264, 211, 261, 180, 256, 134)
+    ..close();
+
+  static const _gold = [
+    Color(0xFFF6DDA0),
+    Color(0xFFE9BF65),
+    Color(0xFFC9983F),
+    Color(0xFFEDC776),
+  ];
 
   @override
   void paint(Canvas canvas, Size size) {
     canvas.save();
-    canvas.scale(size.width / 100, size.height / 100);
-    // The gap on the right makes the ink sit left; nudge it to optical center.
-    canvas.translate(4.5, 0);
-    final brass = darkInk ? GaussColors.parchmentInk : GaussColors.brassLight;
-    final ring = darkInk ? GaussColors.parchment : GaussColors.ivory;
-    final core = darkInk || monochrome ? brass : GaussColors.signal;
-
-    // Open orbit: 260 degrees, gap facing the reader's right.
-    canvas.drawArc(
-      Rect.fromCircle(center: const Offset(50, 50), radius: 33),
-      50 * math.pi / 180,
-      260 * math.pi / 180,
-      false,
+    canvas.scale(size.width / 512, size.height / 512);
+    final flat = darkInk ? GaussColors.parchmentInk : null;
+    final fill = Paint()
+      ..style = PaintingStyle.fill
+      ..color = flat ?? GaussColors.brassLight;
+    if (flat == null) {
+      fill.shader = const LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: _gold,
+        stops: [0, .32, .65, 1],
+      ).createShader(const Rect.fromLTWH(88, 88, 336, 336));
+    }
+    canvas.drawPath(_glyph, fill);
+    canvas.drawCircle(
+      const Offset(256, 256),
+      82,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeCap = StrokeCap.round
-        ..strokeWidth = 6.4
-        ..color = brass,
+        ..strokeWidth = 6
+        ..shader = fill.shader
+        ..color = fill.color,
     );
-    canvas.drawPath(_star, Paint()..color = brass);
-    canvas.drawCircle(const Offset(50, 50), 6.6, Paint()..color = ring);
-    canvas.drawCircle(const Offset(50, 50), 3.9, Paint()..color = core);
+    canvas.drawPath(_star, fill);
+    canvas.drawCircle(const Offset(256, 256), 24, fill);
+    final center = darkInk
+        ? GaussColors.parchment
+        : monochrome
+        ? GaussColors.deepInk
+        : const Color(0xFF101D3F);
+    canvas.drawCircle(const Offset(256, 256), 17, Paint()..color = center);
     canvas.restore();
   }
 

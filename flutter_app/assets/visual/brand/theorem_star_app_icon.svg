@@ -1,11 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" role="img" aria-labelledby="title desc">
-<title id="title">Gauss Theorem Star app icon</title>
-<desc id="desc">An open orbit around a four-pointed star and a teal point on a deep-navy field.</desc>
-<rect width="108" height="108" rx="22" fill="#07151C"/>
-<g transform="translate(8.5 4)">
-<path d="M71.21 24.72A33 33 0 1 0 71.21 75.28" fill="none" stroke="#F0C36A" stroke-width="6.4" stroke-linecap="round"/>
-<path d="M50 27Q53.2 46.8 73 50Q53.2 53.2 50 73Q46.8 53.2 27 50Q46.8 46.8 50 27Z" fill="#F0C36A"/>
-<circle cx="50" cy="50" r="6.6" fill="#F6ECD6"/>
-<circle cx="50" cy="50" r="3.9" fill="#62AE9C"/>
-</g>
+  <title id="title">Gauss Theorem Star app icon</title>
+  <desc id="desc">A tapered gold G fused with the theorem star and a deep lapis center.</desc>
+  <defs>
+    <radialGradient id="lapis" gradientUnits="userSpaceOnUse" cx="225.28" cy="179.2" r="389.12">
+      <stop offset="0" stop-color="#1b305e"/>
+      <stop offset=".58" stop-color="#101d3f"/>
+      <stop offset="1" stop-color="#080f25"/>
+    </radialGradient>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="130" y1="100" x2="386" y2="422">
+      <stop offset="0" stop-color="#f6dda0"/>
+      <stop offset=".32" stop-color="#e9bf65"/>
+      <stop offset=".65" stop-color="#c9983f"/>
+      <stop offset="1" stop-color="#edc776"/>
+    </linearGradient>
+    <filter id="gold-grain" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".65 .2" numOctaves="3" seed="27" stitchTiles="stitch" result="grain"/>
+      <feColorMatrix in="grain" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="faint-grain">
+        <feFuncA type="linear" slope=".2"/>
+      </feComponentTransfer>
+      <feComposite in="faint-grain" in2="SourceAlpha" operator="in" result="clipped-grain"/>
+      <feBlend in="SourceGraphic" in2="clipped-grain" mode="soft-light"/>
+    </filter>
+  </defs>
+  <rect width="108" height="108" rx="22" fill="#07151C"/>
+  <g transform="translate(0 0) scale(0.210938)">
+  <g fill="url(#gold)" filter="url(#gold-grain)">
+    <!-- The outer silhouette stays fixed; the inner contour adds 4px of weight. -->
+    <path d="M371 142
+      C339 109 299 88 256 88
+      C163.2 88 88 163.2 88 256
+      C88 348.8 163.2 424 256 424
+      C348.8 424 424 348.8 424 256
+      Q424 247 415 247
+      H282 V265 H399.7
+      C395 340 333 400 256 400
+      C176.5 400 112 335.5 112 256
+      C112 176.5 176.5 112 256 112
+      C299 112 338 124 371 142Z"/>
+    <circle cx="256" cy="256" r="82" fill="none" stroke="url(#gold)" stroke-width="6"/>
+    <path d="M256 134
+      C251 180 248 211 241 239
+      C210 246 180 251 134 256
+      C180 261 210 266 241 273
+      C248 301 251 332 256 378
+      C261 332 264 301 271 273
+      C310 266 361 265 414 265
+      V247
+      C361 247 310 246 271 239
+      C264 211 261 180 256 134Z"/>
+    <circle cx="256" cy="256" r="24"/>
+  </g>
+  <circle cx="256" cy="256" r="17" fill="url(#lapis)"/>
+  </g>
 </svg>

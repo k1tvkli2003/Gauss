@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Minimal Gauss mark: open orbit, four-pointed star, point of truth. -->
+<!-- Single-color silhouette for themed icons: G, ring, star, hollow center. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-    <group android:translateX="8.5" android:translateY="4">
-        <path
-            android:fillColor="@android:color/transparent"
-            android:pathData="M71.21,24.72A33,33 0,1 0,71.21,75.28"
-            android:strokeColor="#FFFFFFFF"
-            android:strokeLineCap="round"
-            android:strokeWidth="6.4" />
-        <path
-            android:fillColor="#FFFFFFFF"
-            android:pathData="M50,27Q53.2,46.8 73,50Q53.2,53.2 50,73Q46.8,53.2 27,50Q46.8,46.8 50,27Z" />
-        <path
-            android:fillColor="#FFFFFFFF"
-            android:pathData="M50,43.4A6.6,6.6 0,1 0,50,56.6A6.6,6.6 0,1 0,50,43.4Z" />
-        <path
-            android:fillColor="@android:color/transparent"
-            android:pathData="M50,46.1A3.9,3.9 0,1 0,50,53.9A3.9,3.9 0,1 0,50,46.1Z" />
-    </group>
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path android:fillColor="#FFFFFFFF" android:pathData="M371,142C339,109 299,88 256,88C163.2,88 88,163.2 88,256C88,348.8 163.2,424 256,424C348.8,424 424,348.8 424,256Q424,247 415,247H282V265H399.7C395,340 333,400 256,400C176.5,400 112,335.5 112,256C112,176.5 176.5,112 256,112C299,112 338,124 371,142Z" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M256,174A82,82 0,1 0,256,338A82,82 0,1 0,256,174Z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="6" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M256,134C251,180 248,211 241,239C210,246 180,251 134,256C180,261 210,266 241,273C248,301 251,332 256,378C261,332 264,301 271,273C310,266 361,265 414,265V247C361,247 310,246 271,239C264,211 261,180 256,134Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M256,232A24,24 0,1 0,256,280A24,24 0,1 0,256,232ZM256,239A17,17 0,1 1,256,273A17,17 0,1 1,256,239Z" />
 </vector>

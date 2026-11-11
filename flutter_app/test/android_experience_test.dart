@@ -91,16 +91,16 @@ void main() {
       );
       expect(safeForeground, contains('android:insetLeft="8dp"'));
       expect(vectorForeground, isNot(contains('gauss_icon_background')));
-      expect(vectorForeground, contains('#FFE5A0'));
-      expect(vectorForeground, contains('#62AE9C'));
+      expect(vectorForeground, contains('@drawable/ic_launcher_foreground'));
       expect(splash, contains('@drawable/ic_launcher_theorem_star'));
       expect(splash, isNot(contains('@drawable/ic_launcher_foreground')));
       expect(canonicalIcon, contains('Gauss Theorem Star app icon'));
-      expect(canonicalIcon, contains('#62AE9C'));
+      expect(canonicalIcon, contains('lapis'));
       expect(webManifest, contains('icons/Icon-512.png'));
       expect(webManifest, contains('icons/Icon-maskable-512.png'));
       expect(webIndex, contains('icons/Icon-192.png'));
       for (final fallback in [
+        'android/app/src/main/res/drawable-nodpi/ic_launcher_foreground.png',
         'web/favicon.png',
         'web/icons/Icon-192.png',
         'web/icons/Icon-512.png',

@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Minimal Gauss mark: open orbit, four-pointed star, point of truth. -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-    <group android:translateX="8.5" android:translateY="4">
-        <path
-            android:fillColor="@android:color/transparent"
-            android:pathData="M71.21,24.72A33,33 0,1 0,71.21,75.28"
-            android:strokeColor="#F0C36A"
-            android:strokeLineCap="round"
-            android:strokeWidth="6.4" />
-        <path
-            android:fillColor="#F0C36A"
-            android:pathData="M50,27Q53.2,46.8 73,50Q53.2,53.2 50,73Q46.8,53.2 27,50Q46.8,46.8 50,27Z" />
-        <path
-            android:fillColor="#F6ECD6"
-            android:pathData="M50,43.4A6.6,6.6 0,1 0,50,56.6A6.6,6.6 0,1 0,50,43.4Z" />
-        <path
-            android:fillColor="#62AE9C"
-            android:pathData="M50,46.1A3.9,3.9 0,1 0,50,53.9A3.9,3.9 0,1 0,50,46.1Z" />
-    </group>
-</vector>
+<!-- Royal-gold Gauss mark on a transparent canvas; the launcher supplies the plate. -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/ic_launcher_foreground"
+    android:gravity="fill" />

@@ -42,7 +42,7 @@ def _render_svg(svg: Path, destination: Path) -> Image.Image:
     canvas = destination.with_suffix(".html")
     canvas.write_text(
         "<!doctype html><html><head><style>"
-        "html,body,img{width:100%;height:100%;margin:0;overflow:hidden;}"
+        "html,body,img{width:100%;height:100%;margin:0;overflow:hidden;background:transparent;}"
         "img{display:block;}"
         "</style></head><body>"
         f'<img src="{escape(svg.resolve().as_uri(), quote=True)}" alt="">'
@@ -55,6 +55,7 @@ def _render_svg(svg: Path, destination: Path) -> Image.Image:
         "--no-sandbox",
         "--disable-gpu",
         "--hide-scrollbars",
+        "--default-background-color=00000000",
         "--force-device-scale-factor=1",
         f"--window-size={MASTER_SIZE},{MASTER_SIZE}",
         f"--screenshot={destination}",
@@ -124,7 +125,8 @@ def build() -> None:
         }.items():
             _save(any_icon, android / density / "ic_launcher.png", size)
             _save(any_icon, android / density / "ic_launcher_round.png", size, circular=True)
-        _save(maskable_icon, android / "drawable-nodpi" / "ic_launcher_foreground.png", 432)
+        foreground = _render_svg(assets / "theorem_star_foreground.svg", temp / "fg.png")
+        _save(foreground, android / "drawable-nodpi" / "ic_launcher_foreground.png", 432)
 
 
 if __name__ == "__main__":
