@@ -53,7 +53,7 @@ this change.
 
 ## Known limits
 
-- 3 questions have no fitting unit and sit in "Mixed problems" (see below).
+- No question is left in "Mixed problems"; 3 are best-guess placements (below).
 - Unit placement of the 434 formerly unclassified questions is a content review
   by one reviewer (see below), not the screening pipeline.
 - 168 lessons span two or more adjacent units; 576 of 744 (77%) are single-unit.
@@ -81,10 +81,10 @@ and `flutter_app/tool/generate_five_question_plan.dart` both read it, and the
 build fails if an overlay unit is not in the question's chapter. Plan revision
 is now 3.
 
-- 434 placed. 3 kept in "Mixed problems" with a reason in the overlay:
-  math 0427 (radical-function translation), 0731 and 0732 (function graphs
-  printed inside the trigonometry run).
-- Units: 244 (was 263 plus 27 mixed; empty mixed units disappeared). Lessons
+- All 437 placed. Three are best guesses at the nearest graph unit of their
+  chapter: math 0427 (abs-value graphs), 0731 and 0732 (trigonometric graphs;
+  they are function-graph questions printed inside the trigonometry run).
+- Units: 242 (was 263 plus 27 mixed; the mixed units are gone). Lessons
   still 744; 576 single-unit.
 - Data finding: 331 of the 3,672 shipped questions (65 of these 437) have a
   scan-placeholder stem ("must be checked against the scan"). Those 65 were

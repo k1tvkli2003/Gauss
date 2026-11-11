@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "note": "Unit placement for questions whose frozen manifest entry has no registry subtopic_key. The manifest stays immutable; this overlay is read by scripts/build_subtopic_index.py. Placed by content review of the stem (or the printed solution where the stem is a scan placeholder).",
+ "note": "Unit placement for questions whose frozen manifest entry has no registry subtopic_key. The manifest stays immutable; this overlay is read by scripts/build_subtopic_index.py. Placed by content review of the stem (or the printed solution where the stem is a scan placeholder). Three best-guess placements (0427, 0731, 0732) go to the nearest graph unit of their chapter because the content is graph transformation.",
  "assignments": {
   "nardebam_math_1405_0121": "quadratic_vieta",
   "nardebam_math_1405_0173": "quadratic_models_systems",
@@ -435,11 +435,10 @@
   "nardebam_physics_1405_1626": "atomic_radioactivity",
   "nardebam_physics_1405_1628": "atomic_radioactivity",
   "nardebam_physics_1405_1629": "atomic_radioactivity",
-  "nardebam_physics_1405_1630": "atomic_radioactivity"
+  "nardebam_physics_1405_1630": "atomic_radioactivity",
+  "nardebam_math_1405_0427": "absolute_value_floor_abs_graphs",
+  "nardebam_math_1405_0731": "trigonometry_graphs",
+  "nardebam_math_1405_0732": "trigonometry_graphs"
  },
- "kept_in_mixed": {
-  "nardebam_math_1405_0427": "Graph translation of a radical function; no unit of the absolute-value and floor chapter covers it.",
-  "nardebam_math_1405_0731": "Function-transformation monotonicity inside the trigonometry run; no trigonometry unit fits.",
-  "nardebam_math_1405_0732": "Cubic and absolute-value graph inside the trigonometry run; no trigonometry unit fits."
- }
+ "kept_in_mixed": {}
 }

@@ -41,12 +41,12 @@ void main() {
     expect(seen, hasLength(3672));
   });
 
-  test('unclassified questions sit in an explicit Mixed problems unit', () {
+  test('every question has a registry unit and none is left mixed', () {
     final mixed = [
       for (final topic in bank.topics)
         ...bank.subtopicIndex.unitsOf(topic.key).where((u) => u.isMixed),
     ];
-    expect(mixed, isNotEmpty);
+    expect(mixed, isEmpty);
     expect(mixed.every((unit) => unit.label == 'Mixed problems'), isTrue);
     // Mixed units always come last in their chapter.
     for (final topic in bank.topics) {
