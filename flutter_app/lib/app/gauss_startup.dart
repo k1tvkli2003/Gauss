@@ -140,27 +140,19 @@ CustomTransitionPage<void> _gaussSpatialPage({
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       if (reducedMotion) return child;
 
-      final motion = CurvedAnimation(
-        parent: animation,
-        curve: _GaussRouteMotion.enterCurve,
-        reverseCurve: _GaussRouteMotion.exitCurve,
-      );
+      // Enter: wait for the outgoing page to start leaving, then fade in.
+      // Exit (reverse): a short fade out.
+      final delay =
+          _GaussRouteMotion.fadeInDelay.inMicroseconds /
+          _GaussRouteMotion.detailEnter.inMicroseconds;
       return FadeTransition(
         key: const ValueKey('gauss-spatial-route-motion'),
-        opacity: motion,
-        child: SlideTransition(
-          position: Tween<Offset>(
-            begin: const Offset(0, _GaussRouteMotion.detailTravel),
-            end: Offset.zero,
-          ).animate(motion),
-          child: ScaleTransition(
-            scale: Tween<double>(
-              begin: _GaussRouteMotion.detailStartScale,
-              end: 1,
-            ).animate(motion),
-            child: child,
-          ),
+        opacity: CurvedAnimation(
+          parent: animation,
+          curve: Interval(delay, 1, curve: _GaussRouteMotion.enterCurve),
+          reverseCurve: Curves.easeIn,
         ),
+        child: child,
       );
     },
   );

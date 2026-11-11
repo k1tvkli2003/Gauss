@@ -11,6 +11,7 @@
 - Treat responsive composition as a release gate: at 320dp phones, representative phones, tablets, RTL/LTR content, and 200% text, no critical phrase may be clipped or ellipsized, no control may fall below 48dp, and no component, overlay, footer, or dock may collide or be packed into an unreadable row. Reflow the composition instead of shrinking it until it fits.
 - Keep the Android emulator as a living preview after verified UI chunks. Install debug/profile variants beside the signed personal package, refresh and launch the changed route, and capture Android evidence without uninstalling or replacing `com.gauss.app` or its data.
 - Use Duolingo-like path clarity and Clash Royale-like reward/arena feedback as interaction references for motion, transitions, and object positioning, while keeping implementation original and native to the active Flutter Android/web stack.
+- The owner's house UI reference is SonusKt (`docs/design-references/sonuskt-ui-kit.md`): use its floating pill bottom navigation (GlassNavBar), its fade-through route motion, spring/color selection animation, and its component vocabulary in Gauss and in every other project of the owner, ported natively and dressed in each project's own palette.
 - For day-bound quests, rewards, and streaks, inject the domain clock and test local-midnight boundaries. A purely decorative current-time display need not share that clock unless it affects persisted behavior.
 
 ## Vendored design skills

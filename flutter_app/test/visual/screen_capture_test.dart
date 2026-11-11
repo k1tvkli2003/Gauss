@@ -143,17 +143,47 @@ void main() {
         }
         final boundary =
             key.currentContext!.findRenderObject()! as RenderRepaintBoundary;
-        final name = '${entry.key}${route.replaceAll('/', '_')}'.replaceAll(
-          ':',
-          '',
-        );
-        await tester.runAsync(() async {
+        final name = '${entry.key}${route.replaceAll('/', '_')}'
+            .replaceAll(':', '')
+            .replaceAll('?', '_')
+            .replaceAll('=', '');
+        Future<void> shoot(String suffix) => tester.runAsync(() async {
           final image = await boundary.toImage(pixelRatio: 1.5);
           final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
           File(
-            '$_outDir/$name.png',
+            '$_outDir/$name$suffix.png',
           ).writeAsBytesSync(bytes!.buffer.asUint8List());
         });
+        await shoot('');
+        if (Platform.environment['GAUSS_CAPTURE_END'] != null) {
+          // Scroll every vertical scrollable to its end, then capture, so a
+          // list whose last item hides under fixed chrome shows up in review.
+          final lines = <String>[];
+          for (final element in find.byType(Scrollable).evaluate()) {
+            final state = (element as StatefulElement).state as ScrollableState;
+            final position = state.position;
+            if (position.axis != Axis.vertical) continue;
+            final box = element.renderObject as RenderBox?;
+            final origin = box?.localToGlobal(Offset.zero);
+            lines.add(
+              'viewport=${position.viewportDimension.toStringAsFixed(0)} '
+              'max=${position.maxScrollExtent.toStringAsFixed(0)} '
+              'at=${origin?.dy.toStringAsFixed(0)}+${box?.size.height.toStringAsFixed(0)} '
+              'physics=${state.widget.physics.runtimeType}',
+            );
+            // Lazy slivers only estimate their extent, so keep jumping until
+            // the real end stops moving.
+            for (var i = 0; i < 12 && position.maxScrollExtent > 0; i++) {
+              final end = position.maxScrollExtent;
+              position.jumpTo(end);
+              await tester.pump(const Duration(milliseconds: 100));
+              if (position.pixels >= position.maxScrollExtent - .5) break;
+            }
+          }
+          await tester.pump(const Duration(milliseconds: 300));
+          await shoot('_end');
+          File('$_outDir/$name.scroll.txt').writeAsStringSync(lines.join('\n'));
+        }
         final err = tester.takeException();
         if (err != null || reports.isNotEmpty) {
           File(

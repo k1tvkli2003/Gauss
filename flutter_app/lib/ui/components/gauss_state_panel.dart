@@ -37,67 +37,49 @@ class GaussStatePanel extends StatelessWidget {
           container: true,
           liveRegion: liveRegion,
           label: '$title. $detail',
-          child: Container(
-            padding: const EdgeInsets.fromLTRB(26, 28, 26, 24),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  accent.withValues(alpha: .1),
-                  GaussColors.deepInk.withValues(alpha: .97),
-                ],
-              ),
-              borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: accent.withValues(alpha: .38)),
-              boxShadow: const [
-                BoxShadow(
-                  color: Color(0x85000000),
-                  blurRadius: 34,
-                  offset: Offset(0, 16),
-                ),
-              ],
+          // Flat, after the SonusKt EmptyState: the message sits on the
+          // page itself, no tinted card, gradient or shadow around it.
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: GaussSpacing.space40,
+              horizontal: GaussSpacing.space12,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  width: 66,
-                  height: 66,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: accent.withValues(alpha: .09),
-                    border: Border.all(color: accent.withValues(alpha: .38)),
+                SizedBox.square(
+                  dimension: 56,
+                  child: Center(
+                    child: loading
+                        ? SizedBox.square(
+                            dimension: 30,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2.5,
+                              color: accent,
+                            ),
+                          )
+                        : icon == null
+                        ? const TheoremStarMark(size: 56)
+                        : Icon(icon, color: accent, size: 36),
                   ),
-                  child: loading
-                      ? SizedBox.square(
-                          dimension: 30,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2.5,
-                            color: accent,
-                          ),
-                        )
-                      : icon == null
-                      ? const TheoremStarMark(size: 42, monochrome: true)
-                      : Icon(icon, color: accent, size: 31),
                 ),
-                const SizedBox(height: GaussSpacing.space16),
+                const SizedBox(height: 18),
                 ExcludeSemantics(
                   child: Text(
                     title,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleLarge,
+                    textScaler: gaussHeadingScaler(context),
                   ),
                 ),
-                const SizedBox(height: GaussSpacing.space8),
+                const SizedBox(height: 6),
                 ExcludeSemantics(
                   child: Text(
                     detail,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       color: GaussColors.muted,
-                      fontSize: GaussTypeScale.metadata,
+                      fontSize: GaussTypeScale.body,
                       height: 1.5,
                     ),
                   ),

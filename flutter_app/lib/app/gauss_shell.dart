@@ -1,22 +1,16 @@
 part of 'gauss_app.dart';
 
-/// The route-level subset of the Gauss Motion Bible.
-///
-/// Peer destinations move laterally while detail/mission surfaces move into
-/// depth. Both grammars use only transform and opacity, keep the shell stable,
-/// and resolve to an immediate state change through [GaussMotion].
+/// Route motion, ported from SonusKt: a quiet fade-through. The incoming
+/// surface fades in after the outgoing one has started to leave, with no
+/// slide or scale, so navigation reads as calm rather than spatial.
 abstract final class _GaussRouteMotion {
-  static const branch = Duration(milliseconds: 280);
-  static const detailEnter = Duration(milliseconds: 340);
-  static const detailExit = Duration(milliseconds: 240);
+  static const fadeIn = Duration(milliseconds: 220);
+  static const fadeInDelay = Duration(milliseconds: 60);
+  static const fadeOut = Duration(milliseconds: 140);
+  static final detailEnter = fadeInDelay + fadeIn;
+  static const detailExit = fadeOut;
 
-  static const branchTravel = .034;
-  static const branchStartOpacity = .9;
-  static const detailTravel = .024;
-  static const detailStartScale = .99;
-
-  static const enterCurve = Curves.easeOutCubic;
-  static const exitCurve = Curves.easeInCubic;
+  static const enterCurve = Curves.easeOut;
 }
 
 class _AppShell extends StatefulWidget {
@@ -65,6 +59,29 @@ class _AppShellState extends State<_AppShell> {
                     ),
                   ),
                 ),
+                // Soft fade so the last line of content never collides
+                // with the floating bar (SonusKt shell pattern).
+                if (!tourActive)
+                  Positioned(
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    height:
+                        GaussMetrics.compactNavigationFootprint(context) +
+                        GaussSpacing.space16,
+                    child: const IgnorePointer(
+                      child: DecoratedBox(
+                        key: ValueKey('gauss-navigation-scrim'),
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [Color(0x0003090B), Color(0xEB03090B)],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 if (tourActive)
                   FirstRunTour(onDismiss: controller.markTourSeen),
               ],
@@ -227,6 +244,10 @@ class _AppShellState extends State<_AppShell> {
   }
 }
 
+/// The phone footer, ported from the SonusKt `GlassNavBar` the owner chose as
+/// the house pattern: one floating pill, the selected destination filled
+/// with the accent and showing its label, the others icon-only. Showing one
+/// label keeps the bar short at 320dp and 200% text without broken words.
 class _GaussFloatingNavigation extends StatelessWidget {
   const _GaussFloatingNavigation({
     required this.selectedIndex,
@@ -243,79 +264,78 @@ class _GaussFloatingNavigation extends StatelessWidget {
   ];
 
   @override
-  Widget build(BuildContext context) {
-    // At accessibility scales the three full labels cannot coexist inside a
-    // 320dp viewport without broken words or a bulky two-row footer. The
-    // custom glyphs become the visible navigation language while Tooltip and
-    // Semantics retain every explicit destination name.
-    final symbolOnly = MediaQuery.textScalerOf(context).scale(1) >= 1.3;
-    final itemWidth = symbolOnly ? 58.0 : 82.0;
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(22),
-        boxShadow: [
-          BoxShadow(
-            color: GaussColors.abyss.withValues(alpha: .68),
-            blurRadius: 22,
-            spreadRadius: -6,
-            offset: const Offset(0, 9),
-          ),
-          BoxShadow(
-            color: GaussColors.brass.withValues(alpha: .08),
-            blurRadius: 16,
-            spreadRadius: -8,
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        key: const ValueKey('gauss-floating-navigation-dock'),
-        borderRadius: BorderRadius.circular(22),
-        child: BackdropFilter(
-          filter: ui.ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  GaussColors.deepInk.withValues(alpha: .66),
-                  GaussColors.ink.withValues(alpha: .78),
-                ],
-              ),
-              borderRadius: BorderRadius.circular(22),
-              border: Border.all(
-                color: GaussColors.brassLight.withValues(alpha: .22),
-              ),
-            ),
-            child: Semantics(
-              container: true,
-              explicitChildNodes: true,
-              child: SizedBox(
-                height: GaussMetrics.compactNavigationHeight,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    for (var index = 0; index < _items.length; index++)
-                      _GaussNavigationItem(
-                        key: ValueKey(
-                          'gauss-nav-${_items[index].label.toLowerCase()}',
-                        ),
-                        label: _items[index].label,
-                        glyph: _items[index].glyph,
-                        selected: selectedIndex == index,
-                        width: itemWidth,
-                        showLabel: !symbolOnly,
-                        onPressed: () => onSelected(index),
-                      ),
-                  ],
+  Widget build(BuildContext context) => DecoratedBox(
+    key: const ValueKey('gauss-floating-navigation-dock'),
+    // Elevation marks the only chrome that floats above scrolling content.
+    decoration: const ShapeDecoration(
+      shape: StadiumBorder(),
+      shadows: [
+        BoxShadow(
+          color: Color(0x99000000),
+          blurRadius: 36,
+          spreadRadius: -4,
+          offset: Offset(0, 12),
+        ),
+      ],
+    ),
+    child: CustomPaint(
+      foregroundPainter: const _NavigationRimPainter(),
+      child: Container(
+        height: GaussMetrics.compactNavigationHeight,
+        padding: const EdgeInsets.all(6),
+        decoration: ShapeDecoration(
+          shape: const StadiumBorder(),
+          color: GaussColors.surface.withValues(alpha: .9),
+        ),
+        child: Semantics(
+          container: true,
+          explicitChildNodes: true,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              for (var index = 0; index < _items.length; index++) ...[
+                if (index > 0) const SizedBox(width: 2),
+                _GaussNavigationItem(
+                  key: ValueKey(
+                    'gauss-nav-${_items[index].label.toLowerCase()}',
+                  ),
+                  label: _items[index].label,
+                  glyph: _items[index].glyph,
+                  selected: selectedIndex == index,
+                  onPressed: () => onSelected(index),
                 ),
-              ),
-            ),
+              ],
+            ],
           ),
         ),
       ),
+    ),
+  );
+}
+
+/// A light top edge fading toward the bottom gives the pill its rim without
+/// spending the brass accent on a border.
+class _NavigationRimPainter extends CustomPainter {
+  const _NavigationRimPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final rect = (Offset.zero & size).deflate(.5);
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(rect, Radius.circular(size.height / 2)),
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1
+        ..shader = const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0x2EFFFFFF), Color(0x0AFFFFFF)],
+        ).createShader(rect),
     );
   }
+
+  @override
+  bool shouldRepaint(covariant _NavigationRimPainter oldDelegate) => false;
 }
 
 class _GaussNavigationItem extends StatelessWidget {
@@ -323,8 +343,6 @@ class _GaussNavigationItem extends StatelessWidget {
     required this.label,
     required this.glyph,
     required this.selected,
-    required this.width,
-    required this.showLabel,
     required this.onPressed,
     super.key,
   });
@@ -332,91 +350,104 @@ class _GaussNavigationItem extends StatelessWidget {
   final String label;
   final GaussDestinationGlyph glyph;
   final bool selected;
-  final double width;
-  final bool showLabel;
   final VoidCallback onPressed;
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-    width: width,
-    height: GaussMetrics.compactNavigationHeight,
-    child: Tooltip(
+  Widget build(BuildContext context) {
+    final duration = GaussMotion.resolve(context, GaussMotion.standard);
+    final tint = selected ? GaussColors.deepInk : GaussColors.muted;
+    // The single visible label may grow with the system text size, but is
+    // capped so three destinations still fit one row at 320dp.
+    final labelScaler = MediaQuery.textScalerOf(
+      context,
+    ).clamp(maxScaleFactor: 1.3);
+    return Tooltip(
       message: label,
+      excludeFromSemantics: true,
       child: Semantics(
         button: true,
         selected: selected,
         label: label,
+        excludeSemantics: true,
         child: Material(
-          color: Colors.transparent,
+          type: MaterialType.transparency,
           child: InkWell(
             onTap: onPressed,
-            borderRadius: BorderRadius.circular(20),
-            splashColor: GaussColors.brassLight.withValues(alpha: .12),
-            highlightColor: GaussColors.brassLight.withValues(alpha: .07),
-            focusColor: GaussColors.brassLight.withValues(alpha: .1),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                AnimatedPositioned(
-                  duration: GaussMotion.resolve(context, GaussMotion.micro),
-                  curve: Curves.easeOutCubic,
-                  top: showLabel
-                      ? selected
-                            ? 2
-                            : 4
-                      : selected
-                      ? 11
-                      : 13,
-                  child: AnimatedContainer(
-                    duration: GaussMotion.resolve(context, GaussMotion.micro),
-                    width: selected ? 31 : 29,
-                    height: selected ? 31 : 29,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: selected
-                          ? GaussColors.brass.withValues(alpha: .17)
-                          : Colors.transparent,
-                      border: Border.all(
-                        color: selected
-                            ? GaussColors.brassLight.withValues(alpha: .3)
-                            : Colors.transparent,
-                      ),
-                    ),
-                    child: Center(
-                      child: GaussNavGlyph(glyph: glyph, selected: selected),
-                    ),
+            customBorder: const StadiumBorder(),
+            splashColor: GaussColors.brassLight.withValues(alpha: .14),
+            highlightColor: GaussColors.brassLight.withValues(alpha: .08),
+            focusColor: GaussColors.brassLight.withValues(alpha: .16),
+            child: AnimatedContainer(
+              duration: duration,
+              curve: Curves.easeOutCubic,
+              constraints: const BoxConstraints(minHeight: 52, minWidth: 52),
+              padding: EdgeInsets.symmetric(horizontal: selected ? 18 : 15),
+              decoration: ShapeDecoration(
+                shape: const StadiumBorder(),
+                color: selected ? GaussColors.brass : Colors.transparent,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  GaussNavGlyph(
+                    glyph: glyph,
+                    selected: selected,
+                    size: 24,
+                    color: tint,
                   ),
-                ),
-                if (showLabel)
-                  Positioned(
-                    left: 2,
-                    right: 2,
-                    bottom: 4,
-                    child: Text(
-                      label,
-                      maxLines: 1,
-                      softWrap: false,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: selected
-                            ? GaussColors.brassLight
-                            : GaussColors.fog,
-                        fontSize: 10,
-                        height: 1,
-                        fontWeight: selected
-                            ? FontWeight.w900
-                            : FontWeight.w700,
-                        letterSpacing: selected ? .25 : .1,
-                      ),
+                  // AnimatedSize asserts on a zero duration, so reduced
+                  // motion swaps the label in place.
+                  if (duration == Duration.zero)
+                    selected
+                        ? Padding(
+                            padding: const EdgeInsetsDirectional.only(start: 8),
+                            child: Text(
+                              label,
+                              maxLines: 1,
+                              softWrap: false,
+                              textScaler: labelScaler,
+                              style: const TextStyle(
+                                color: GaussColors.deepInk,
+                                fontSize: GaussTypeScale.body,
+                                fontWeight: FontWeight.w800,
+                                height: 1.2,
+                              ),
+                            ),
+                          )
+                        : const SizedBox.shrink()
+                  else
+                    AnimatedSize(
+                      duration: duration,
+                      curve: Curves.easeOutCubic,
+                      alignment: AlignmentDirectional.centerStart,
+                      child: selected
+                          ? Padding(
+                              padding: const EdgeInsetsDirectional.only(
+                                start: 8,
+                              ),
+                              child: Text(
+                                label,
+                                maxLines: 1,
+                                softWrap: false,
+                                textScaler: labelScaler,
+                                style: const TextStyle(
+                                  color: GaussColors.deepInk,
+                                  fontSize: GaussTypeScale.body,
+                                  fontWeight: FontWeight.w800,
+                                  height: 1.2,
+                                ),
+                              ),
+                            )
+                          : const SizedBox.shrink(),
                     ),
-                  ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 /// A deliberate, tiny orbit drift makes destination changes feel related to
@@ -436,10 +467,13 @@ class _BranchEntranceState extends State<_BranchEntrance>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     vsync: this,
-    duration: _GaussRouteMotion.branch,
+    duration: _GaussRouteMotion.fadeIn,
     value: 1,
   );
-  var _logicalDirection = 1;
+  late final Animation<double> _opacity = CurvedAnimation(
+    parent: _controller,
+    curve: _GaussRouteMotion.enterCurve,
+  );
   var _reducedMotion = false;
 
   @override
@@ -450,7 +484,7 @@ class _BranchEntranceState extends State<_BranchEntrance>
     _reducedMotion = reducedMotion;
     _controller.duration = GaussMotion.resolve(
       context,
-      _GaussRouteMotion.branch,
+      _GaussRouteMotion.fadeIn,
     );
     if (reducedMotion) {
       // A preference change during motion settles immediately without
@@ -462,9 +496,7 @@ class _BranchEntranceState extends State<_BranchEntrance>
   @override
   void didUpdateWidget(covariant _BranchEntrance oldWidget) {
     super.didUpdateWidget(oldWidget);
-    final delta = widget.activeIndex - oldWidget.activeIndex;
-    if (delta == 0) return;
-    _logicalDirection = delta.sign;
+    if (widget.activeIndex == oldWidget.activeIndex) return;
     if (_reducedMotion) {
       _controller.value = 1;
       return;
@@ -481,27 +513,11 @@ class _BranchEntranceState extends State<_BranchEntrance>
   @override
   Widget build(BuildContext context) {
     if (_reducedMotion) return widget.child;
-    final motion = CurvedAnimation(
-      parent: _controller,
-      curve: _GaussRouteMotion.enterCurve,
-    );
-    final readingDirection = Directionality.of(context);
-    final visualDirection = readingDirection == TextDirection.ltr
-        ? _logicalDirection
-        : -_logicalDirection;
-    final position = Tween<Offset>(
-      begin: Offset(_GaussRouteMotion.branchTravel * visualDirection, 0),
-      end: Offset.zero,
-    ).animate(motion);
-    final opacity = Tween<double>(
-      begin: _GaussRouteMotion.branchStartOpacity,
-      end: 1,
-    ).animate(motion);
     return RepaintBoundary(
       child: FadeTransition(
         key: const ValueKey('gauss-branch-route-motion'),
-        opacity: opacity,
-        child: SlideTransition(position: position, child: widget.child),
+        opacity: _opacity,
+        child: widget.child,
       ),
     );
   }

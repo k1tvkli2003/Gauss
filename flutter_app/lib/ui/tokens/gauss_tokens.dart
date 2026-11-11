@@ -218,7 +218,7 @@ abstract final class GaussOpacity {
 
 abstract final class GaussMetrics {
   static const minTouchTarget = GaussHitTargets.minimum;
-  static const compactNavigationHeight = 58.0;
+  static const compactNavigationHeight = 64.0;
   static const compactNavigationOuterInset = 10.0;
   static const compactChromeReserve = 96.0;
 
@@ -273,6 +273,12 @@ abstract final class GaussMetrics {
         mapOverlayGap;
   }
 }
+
+/// Large headings grow more slowly than body text, matching Android 14's
+/// nonlinear font scaling, so a 22pt title at 200% stays whole-word on a
+/// 320dp phone. Body copy keeps the full system scale.
+TextScaler gaussHeadingScaler(BuildContext context) =>
+    MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.6);
 
 abstract final class GaussTypeScale {
   /// Reserved for compact insignia such as LVL, never explanatory copy.

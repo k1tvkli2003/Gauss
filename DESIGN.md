@@ -37,7 +37,9 @@ objects, dial 2 / 2 / 2.
 - One card surface (`GaussSurface`): opaque `surface #101B1E` or
   `surfaceInset #0B1417`, neutral hairline, radius 20. No gradients, no blur,
   no brass outlines. `emphasized` marks the single current item.
-- Blur only on the floating navigation (one element).
+- Phone navigation is the SonusKt pill (GlassNavBar): 64dp stadium, the
+  selected destination filled brass with its label, the others icon-only,
+  over a bottom scrim. No blur.
 - Buttons are plain shapes: a filled brass primary, tonal secondaries, and
   icon buttons without rings.
 
@@ -77,6 +79,10 @@ Contrast floor: 4.5:1 for normal text, 7:1 preferred for primary copy.
   inside the real footprint of fixed chrome.
 - Glow marks one thing: current, selected or just-completed. Never resting
   decoration.
+- Motion follows the SonusKt grammar (`docs/design-references/sonuskt-ui-kit.md`):
+  routes fade through (in 220ms after 60ms, out 140ms) with no slide or
+  scale; selection animates color; size changes use a critically damped
+  spring; reveals fade and expand.
 - Motion durations 140/220/280/360/520/760 ms. One focal animation at a time.
   Everything respects reduced motion; animation never produces XP or progress.
 

@@ -245,6 +245,7 @@ class _SectionAtlasCardState extends State<_SectionAtlasCard> {
                               Text(
                                 section.title,
                                 style: Theme.of(context).textTheme.titleLarge,
+                                textScaler: gaussHeadingScaler(context),
                               ),
                               const SizedBox(height: 2),
                               Text(
@@ -283,14 +284,15 @@ class _SectionAtlasCardState extends State<_SectionAtlasCard> {
                             return Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    numberBadge(),
-                                    const SizedBox(width: 12),
-                                    Expanded(child: titleBlock()),
-                                  ],
+                                // The badge sits above the title so long
+                                // words like "mathematics" keep the full
+                                // card width instead of breaking mid-word.
+                                Align(
+                                  alignment: AlignmentDirectional.centerStart,
+                                  child: numberBadge(),
                                 ),
+                                const SizedBox(height: 10),
+                                titleBlock(),
                                 const SizedBox(height: 8),
                                 Row(
                                   children: [
