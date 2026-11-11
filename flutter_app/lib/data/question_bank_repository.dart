@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:gauss/domain/models.dart';
 import 'package:gauss/domain/question_certification.dart';
 import 'package:gauss/domain/study_curriculum.dart';
+import 'package:gauss/domain/subtopic_index.dart';
 
 const _expectedQuestionCount = 3672;
 const _expectedTopicShardCount = 29;
@@ -39,6 +40,9 @@ class QuestionBankRepository {
   late final int declaredMissionReadyTotal;
   late final CertifiedQuestionRuntime certificationRuntime;
   late final GaussStudyPlan studyPlan;
+
+  /// Part > Chapter > Unit classification derived from the frozen taxonomy.
+  GaussSubtopicIndex subtopicIndex = GaussSubtopicIndex.empty();
   Future<void>? _initializing;
   var _initialized = false;
 
@@ -138,6 +142,19 @@ class QuestionBankRepository {
       }
 
       studyPlan = parsedPlan;
+      // Derived presentation data: a missing or unreadable asset only hides
+      // the unit breakdown, it never blocks lessons.
+      try {
+        subtopicIndex = GaussSubtopicIndex.fromJson(
+          jsonDecode(
+                await _bundle.loadString(
+                  'assets/curriculum/subtopic_index_v1.json',
+                  cache: false,
+                ),
+              )
+              as Map<String, dynamic>,
+        );
+      } catch (_) {}
       declaredTotal = parsedTotal;
       declaredMissionReadyTotal = missionReadyTotal;
       certificationRuntime = parsedCertification;

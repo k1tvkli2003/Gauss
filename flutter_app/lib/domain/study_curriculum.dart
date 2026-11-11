@@ -106,12 +106,30 @@ class StudySessionPlan {
     required this.topicKey,
     required this.index,
     required this.slots,
+    this.title,
+    this.unitKey,
+    this.unitPart = 1,
+    this.unitParts = 1,
   });
 
   final String key;
   final String topicKey;
   final int index;
   final List<StudySessionSlot> slots;
+
+  /// Registry-unit title authored by the plan generator, e.g.
+  /// "Venn diagrams" or "Set operations and identities · 2/5".
+  final String? title;
+
+  /// The registry unit most of this lesson's primary questions belong to.
+  final String? unitKey;
+
+  /// Position of this lesson among the lessons of its unit ("2" of "5").
+  final int unitPart;
+  final int unitParts;
+
+  /// "2/5" when the unit spans several lessons, otherwise null.
+  String? get partLabel => unitParts > 1 ? '$unitPart/$unitParts' : null;
 
   int get primaryCount =>
       slots.where((slot) => slot.kind == StudySlotKind.primary).length;
@@ -121,7 +139,7 @@ class StudySessionPlan {
   /// A short, deterministic description of what this five-question set
   /// actually practises. Map nodes use screened concept metadata instead of
   /// exposing implementation copy such as "Session 3 of 10".
-  String get displayLabel => _studySetDisplayLabel(slots);
+  String get displayLabel => title ?? _studySetDisplayLabel(slots);
 
   factory StudySessionPlan.fromJson(Map<String, dynamic> json) {
     final key = json['key'] as String;
@@ -129,6 +147,10 @@ class StudySessionPlan {
       key: key,
       topicKey: json['topic_key'] as String,
       index: json['index'] as int,
+      title: json['title'] as String?,
+      unitKey: json['unit_key'] as String?,
+      unitPart: json['unit_part'] as int? ?? 1,
+      unitParts: json['unit_parts'] as int? ?? 1,
       slots: List<StudySessionSlot>.unmodifiable(
         (json['slots'] as List<dynamic>).map(
           (slot) => StudySessionSlot.fromJson(
@@ -284,6 +306,7 @@ class StudyTopicPlan {
 class GaussStudyPlan {
   GaussStudyPlan._({
     required this.version,
+    required this.revision,
     required this.sourceQuestionCount,
     required Map<String, StudyTopicPlan> byTopic,
   }) : _byTopic = Map.unmodifiable(byTopic),
@@ -295,6 +318,10 @@ class GaussStudyPlan {
        });
 
   final String version;
+
+  /// Monotonic structure revision. A content release whose plan revision is
+  /// lower than the app's bundled plan is ignored (see the release store).
+  final int revision;
   final int sourceQuestionCount;
   final Map<String, StudyTopicPlan> _byTopic;
   final Map<String, StudySessionSlot> _primarySlots;
@@ -416,6 +443,7 @@ class GaussStudyPlan {
       }
     }
     return GaussStudyPlan._(
+      revision: json['plan_revision'] as int? ?? 1,
       version: json['plan_version'] as String,
       sourceQuestionCount: declaredCount,
       byTopic: byTopic,

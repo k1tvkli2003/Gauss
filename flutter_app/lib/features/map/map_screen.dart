@@ -87,8 +87,9 @@ class _MapScreenState extends State<MapScreen> {
   void _navigateToOrbit(
     GaussController controller,
     Subject subject,
-    StudySectionDefinition section,
-  ) {
+    StudySectionDefinition section, {
+    String? topicKey,
+  }) {
     final sections = GaussStudyCurriculum.forSubject(subject);
     final targetSection = sections.firstWhere(
       (item) => item.id == section.id,
@@ -99,13 +100,25 @@ class _MapScreenState extends State<MapScreen> {
       controller.topics,
     );
     final restoresKnownOrbit =
-        _lastSectionBySubject[subject] == targetSection.id;
+        topicKey == null && _lastSectionBySubject[subject] == targetSection.id;
     final preferredNodeKey = restoresKnownOrbit
         ? _lastNodeBySubject[subject]
         : null;
     var nodeIndex = preferredNodeKey == null
         ? -1
         : nodes.indexWhere((node) => node.key == preferredNodeKey);
+    // A chosen chapter opens at its first uncharted lesson (else its first).
+    final chapterNodes = topicKey == null
+        ? const <StudyPathNode>[]
+        : nodes.where((node) => node.topic.key == topicKey).toList();
+    if (nodeIndex < 0 && chapterNodes.isNotEmpty) {
+      final target = chapterNodes.firstWhere(
+        (node) =>
+            controller.study.shelf(node.key).reflected < node.questionCount,
+        orElse: () => chapterNodes.first,
+      );
+      nodeIndex = nodes.indexOf(target);
+    }
     if (nodeIndex < 0) {
       nodeIndex = nodes.indexWhere(
         (node) =>
@@ -114,7 +127,10 @@ class _MapScreenState extends State<MapScreen> {
     }
     if (nodeIndex < 0) nodeIndex = nodes.length - 1;
     final targetNode = nodes[nodeIndex];
-    final routeChanged = _subject != subject || _sectionId != targetSection.id;
+    final routeChanged =
+        _subject != subject ||
+        _sectionId != targetSection.id ||
+        topicKey != null;
     setState(() {
       _subject = subject;
       _sectionId = targetSection.id;
@@ -206,7 +222,33 @@ class _MapScreenState extends State<MapScreen> {
               // Reserve a small optical safety ring beyond the live compass;
               // a node may remain visible behind the transparent rail, but
               // no part of its 48dp hit target may enter the control field.
-              const dockReservedHeight = 94.0;
+              // The dock's title wraps by content. Measure the selected
+              // lesson's title with the dock's own style and width, and
+              // reserve every line beyond the two the base height allows, so
+              // a long unit title can never push the dock into the route.
+              final dockTitle =
+                  TextPainter(
+                    text: TextSpan(
+                      text: controller.studySetLabel(selected),
+                      style: const TextStyle(
+                        fontFamily: 'Manrope',
+                        fontSize: 12.2,
+                        fontWeight: FontWeight.w900,
+                        height: 1.15,
+                      ),
+                    ),
+                    textAlign: TextAlign.center,
+                    textDirection: TextDirection.ltr,
+                    textScaler: TextScaler.linear(math.min(textScale, 1.4)),
+                  )..layout(
+                    maxWidth: math.max(40.0, dockWidth - 48 - 6 - 6 - 48 - 24),
+                  );
+              final titleLines = dockTitle.computeLineMetrics().length;
+              final extraTitleHeight = titleLines > 2
+                  ? (titleLines - 2) * (dockTitle.height / titleLines) + 4
+                  : 0.0;
+              final dockReservedHeight = 94.0 + extraTitleHeight;
+              dockTitle.dispose();
               final bottomObstruction = showInspector
                   ? GaussMetrics.mapBottomObstruction(window)
                   : dockBottom +
@@ -233,11 +275,12 @@ class _MapScreenState extends State<MapScreen> {
                                 lastSectionBySubject: _lastSectionBySubject,
                                 onSubject: (subject) =>
                                     _selectSubject(controller, subject),
-                                onNavigate: (subject, value) =>
+                                onNavigate: (subject, value, {topicKey}) =>
                                     _navigateToOrbit(
                                       controller,
                                       subject,
                                       value,
+                                      topicKey: topicKey,
                                     ),
                               ),
                             ),

@@ -2,7 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 const _batchSize = 5;
-const _planVersion = 'screened-taxonomy-five-question-v1';
+const _planVersion = 'registry-unit-five-question-v2';
+
+/// Monotonic revision of the plan's structure. A downloaded content release
+/// whose plan has a lower revision than the one bundled in the app is ignored
+/// so an older published plan can never undo this structure.
+const _planRevision = 3;
 
 Future<void> main(List<String> arguments) async {
   final root = Directory.current.path.endsWith('flutter_app')
@@ -23,6 +28,28 @@ Future<void> main(List<String> arguments) async {
     for (final raw in index['topics'] as List<dynamic>)
       (raw as Map<String, dynamic>)['topic_key'] as String: raw,
   };
+  final taxonomyFile = File('${root.path}/data/certification/v1/taxonomy.json');
+  final taxonomy =
+      jsonDecode(await taxonomyFile.readAsString()) as Map<String, dynamic>;
+  // Registry unit order is the pedagogical order inside a chapter.
+  final unitLabels = <String, String>{
+    for (final raw in taxonomy['subtopics'] as List<dynamic>)
+      (raw as Map<String, dynamic>)['key'] as String: raw['label_en'] as String,
+  };
+  final unitOrder = <String, int>{
+    for (final raw in taxonomy['subtopics'] as List<dynamic>)
+      (raw as Map<String, dynamic>)['key'] as String: raw['order'] as int,
+  };
+  // Reviewed placement of questions the frozen manifest left without a unit.
+  final overlay = Map<String, String>.from(
+    (jsonDecode(
+              await File(
+                '${root.path}/data/certification/v1/unit-assignments.json',
+              ).readAsString(),
+            )
+            as Map<String, dynamic>)['assignments']
+        as Map,
+  );
   final recordsByTopic = <String, List<_PlanningRecord>>{};
   await for (final line
       in manifestFile
@@ -31,37 +58,44 @@ Future<void> main(List<String> arguments) async {
           .transform(const LineSplitter())) {
     if (line.trim().isEmpty) continue;
     final row = jsonDecode(line) as Map<String, dynamic>;
-    final taxonomy = row['taxonomy'] as Map<String, dynamic>;
+    final tax = row['taxonomy'] as Map<String, dynamic>;
     final difficulty = row['difficulty'] as Map<String, dynamic>;
-    if (taxonomy['status'] != 'screened' ||
-        difficulty['status'] != 'screened') {
-      throw StateError(
-        'Question ${row['question_id']} has no screened planning metadata.',
-      );
-    }
-    final topicKey = taxonomy['topic_key'] as String;
+    final topicKey = tax['topic_key'] as String;
     if (!topicIndex.containsKey(topicKey)) {
       throw StateError('Manifest references unknown topic $topicKey.');
     }
-    final proposedSubtopic =
-        taxonomy['proposed_subtopic'] as Map<String, dynamic>?;
-    final primaryConcepts = _strings(taxonomy['proposed_concept_tags']);
-    final secondaryConcepts = _strings(taxonomy['proposed_secondary_concepts']);
-    final concepts = {...primaryConcepts, ...secondaryConcepts}.toList()
-      ..sort();
-    final prerequisites = _strings(taxonomy['proposed_prerequisites'])..sort();
-    final subtopic = (proposedSubtopic?['key'] as String?)?.trim();
+    // Reviewed rows carry reviewed concepts; screened rows only proposals.
+    final reviewed = tax['status'] == 'reviewed';
+    final concepts = {
+      ..._strings(tax[reviewed ? 'concept_tags' : 'proposed_concept_tags']),
+      ..._strings(
+        tax[reviewed ? 'secondary_concepts' : 'proposed_secondary_concepts'],
+      ),
+    }.toList()..sort();
+    final prerequisites = _strings(
+      tax[reviewed ? 'prerequisites' : 'proposed_prerequisites'],
+    )..sort();
+    // The registry unit, from the manifest or the reviewed overlay. Questions
+    // neither placed stay in an explicit mixed unit at chapter end.
+    final registryUnit =
+        ((tax['subtopic_key'] as String?) ?? overlay[row['question_id']])
+            ?.trim();
+    final unitKey = registryUnit != null && registryUnit.isNotEmpty
+        ? registryUnit
+        : '${topicKey}__mixed';
+    if (registryUnit != null &&
+        registryUnit.isNotEmpty &&
+        !unitOrder.containsKey(registryUnit)) {
+      throw StateError('Unknown registry unit $registryUnit.');
+    }
     final record = _PlanningRecord(
       questionId: row['question_id'] as String,
       topicKey: topicKey,
-      subtopicKey: subtopic?.isNotEmpty == true
-          ? subtopic!
-          : concepts.isNotEmpty
-          ? concepts.first
-          : topicKey,
+      subtopicKey: unitKey,
+      unitOrder: unitOrder[unitKey] ?? 1000,
       concepts: concepts,
       prerequisites: prerequisites,
-      difficulty: difficulty['screened'] as String,
+      difficulty: (difficulty['reviewed'] ?? difficulty['screened']) as String,
     );
     recordsByTopic.putIfAbsent(topicKey, () => []).add(record);
   }
@@ -140,6 +174,7 @@ Future<void> main(List<String> arguments) async {
       });
       totalSlots += slots.length;
     }
+    _assignTitles(sessions, unitLabels);
     topics.add({
       'topic_key': topicKey,
       'source_question_count': expectedCount,
@@ -156,16 +191,17 @@ Future<void> main(List<String> arguments) async {
   final output = <String, dynamic>{
     'schema_version': 1,
     'plan_version': _planVersion,
+    'plan_revision': _planRevision,
     'source_question_count': declaredCount,
     'slot_count': totalSlots,
     'mastery_review_slot_count': reviewSlots,
     'derivation': {
       'source': 'data/certification/v1/manifest.jsonl',
       'grouping': [
-        'screened_subtopic',
-        'screened_concepts',
-        'screened_prerequisites',
-        'screened_difficulty',
+        'registry_unit',
+        'reviewed_prerequisites',
+        'difficulty_progression',
+        'reviewed_concepts',
       ],
       'remainder_policy': 'explicit_mastery_review',
     },
@@ -177,6 +213,54 @@ Future<void> main(List<String> arguments) async {
     'Wrote ${outputFile.path}: $declaredCount primary questions, '
     '$reviewSlots mastery-review slots, $totalSlots total slots.',
   );
+}
+
+/// Titles a lesson by the registry unit most of its primary questions belong
+/// to, with "n/m" when that unit spans several lessons, so a learner can see
+/// where in a unit they are instead of five lessons sharing one name.
+void _assignTitles(
+  List<Map<String, dynamic>> sessions,
+  Map<String, String> unitLabels,
+) {
+  String majority(Map<String, dynamic> session) {
+    final counts = <String, int>{};
+    for (final slot in session['slots'] as List<dynamic>) {
+      slot as Map<String, dynamic>;
+      if (slot['kind'] != 'primary') continue;
+      final unit =
+          (slot['profile'] as Map<String, dynamic>)['subtopic_key'] as String;
+      counts.update(unit, (value) => value + 1, ifAbsent: () => 1);
+    }
+    var best = '';
+    var bestCount = -1;
+    // First maximum wins, which is the earlier unit in registry order.
+    for (final entry in counts.entries) {
+      if (entry.value > bestCount) {
+        best = entry.key;
+        bestCount = entry.value;
+      }
+    }
+    return best;
+  }
+
+  final majorities = [for (final session in sessions) majority(session)];
+  final lessonsInUnit = <String, int>{};
+  for (final unit in majorities) {
+    lessonsInUnit.update(unit, (value) => value + 1, ifAbsent: () => 1);
+  }
+  final seen = <String, int>{};
+  for (var i = 0; i < sessions.length; i++) {
+    final unit = majorities[i];
+    final part = seen.update(unit, (value) => value + 1, ifAbsent: () => 1);
+    final label = unit.endsWith('__mixed')
+        ? 'Mixed problems'
+        : unitLabels[unit] ?? unit;
+    final total = lessonsInUnit[unit]!;
+    sessions[i]['unit_key'] = unit;
+    sessions[i]['title'] = label;
+    sessions[i]['unit_part'] = part;
+    sessions[i]['unit_parts'] = total;
+  }
 }
 
 List<String> _strings(dynamic value) => value is List<dynamic>
@@ -194,34 +278,23 @@ Future<Set<String>> _sourceIds(
       .toSet();
 }
 
+/// Chapter order: registry units in pedagogical order (unclassified last),
+/// each unit easy to hard. Lessons are consecutive fives of this sequence, so
+/// a lesson stays inside one unit and only spills into the next at a boundary.
 List<_PlanningRecord> _conceptualOrder(List<_PlanningRecord> records) {
-  final clusters = <String, List<_PlanningRecord>>{};
+  final byUnit = <String, List<_PlanningRecord>>{};
   for (final record in records) {
-    clusters.putIfAbsent(record.subtopicKey, () => []).add(record);
+    byUnit.putIfAbsent(record.subtopicKey, () => []).add(record);
   }
-  final orderedClusters = clusters.entries.toList()
+  final units = byUnit.entries.toList()
     ..sort((left, right) {
-      final leftDifficulty = left.value
-          .map((record) => record.difficultyRank)
-          .reduce((a, b) => a < b ? a : b);
-      final rightDifficulty = right.value
-          .map((record) => record.difficultyRank)
-          .reduce((a, b) => a < b ? a : b);
-      final difficulty = leftDifficulty.compareTo(rightDifficulty);
-      if (difficulty != 0) return difficulty;
-      final leftPrerequisites = left.value
-          .map((record) => record.prerequisites.length)
-          .reduce((a, b) => a < b ? a : b);
-      final rightPrerequisites = right.value
-          .map((record) => record.prerequisites.length)
-          .reduce((a, b) => a < b ? a : b);
-      final prerequisite = leftPrerequisites.compareTo(rightPrerequisites);
-      if (prerequisite != 0) return prerequisite;
-      return left.key.compareTo(right.key);
+      final order = left.value.first.unitOrder.compareTo(
+        right.value.first.unitOrder,
+      );
+      return order != 0 ? order : left.key.compareTo(right.key);
     });
   return [
-    for (final cluster in orderedClusters)
-      ...(cluster.value..sort(_withinClusterCompare)),
+    for (final unit in units) ...(unit.value..sort(_withinClusterCompare)),
   ];
 }
 
@@ -309,6 +382,7 @@ class _PlanningRecord {
     required this.questionId,
     required this.topicKey,
     required this.subtopicKey,
+    required this.unitOrder,
     required this.concepts,
     required this.prerequisites,
     required this.difficulty,
@@ -317,6 +391,7 @@ class _PlanningRecord {
   final String questionId;
   final String topicKey;
   final String subtopicKey;
+  final int unitOrder;
   final List<String> concepts;
   final List<String> prerequisites;
   final String difficulty;

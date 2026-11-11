@@ -933,11 +933,21 @@ void main() {
           of: find.byKey(const ValueKey('map-study-path-scroll')),
           matching: find.text(semanticLabel),
         ),
-        findsOneWidget,
+        // A unit spans several lessons, so its title repeats along the route;
+        // each lesson is told apart by its part marker below.
+        findsWidgets,
       );
       expect(find.text(firstNode.setLabel), findsNothing);
       expect(semanticLabel, isNot(startsWith('Session')));
-      expect(semanticLabel, 'Finite & Infinite Sets');
+      expect(semanticLabel, 'Set operations and identities');
+      expect(controller.studySetPart(firstNode), '1/5');
+      expect(
+        find.descendant(
+          of: find.byKey(const ValueKey('map-study-path-scroll')),
+          matching: find.textContaining('Current 1/5'),
+        ),
+        findsOneWidget,
+      );
 
       final route = find.byKey(const ValueKey('map-study-path-scroll'));
       await tester.dragUntilVisible(nextChapter, route, const Offset(0, -260));

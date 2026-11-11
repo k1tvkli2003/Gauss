@@ -329,6 +329,7 @@ class _StudyPathBand extends StatelessWidget {
           _PathNodeLabel(
             node: nodes[nodeIndex],
             studyLabel: controller.studySetLabel(nodes[nodeIndex]),
+            studyPart: controller.studySetPart(nodes[nodeIndex]),
             snapshot: controller.study.shelf(nodes[nodeIndex].key),
             position: band.localize(geometry.positions[nodeIndex]),
             nodeSize: geometry.nodeSize,
@@ -619,6 +620,7 @@ class _PathNodeLabel extends StatelessWidget {
   const _PathNodeLabel({
     required this.node,
     required this.studyLabel,
+    required this.studyPart,
     required this.snapshot,
     required this.position,
     required this.nodeSize,
@@ -629,6 +631,9 @@ class _PathNodeLabel extends StatelessWidget {
 
   final StudyPathNode node;
   final String studyLabel;
+
+  /// "2/5" when this lesson's unit spans several lessons.
+  final String? studyPart;
   final StudyTopicSnapshot snapshot;
   final Offset position;
   final double nodeSize;
@@ -741,7 +746,7 @@ class _PathNodeLabel extends StatelessWidget {
                           ),
                           const SizedBox(height: 3),
                           Text(
-                            '${snapshot.reflected} / ${node.questionCount}  ·  ${isCurrent ? 'Current' : 'Lesson'}',
+                            '${snapshot.reflected} / ${node.questionCount}  ·  ${isCurrent ? 'Current' : 'Lesson'}${studyPart == null ? '' : ' $studyPart'}',
                             textAlign: rightPreferred
                                 ? TextAlign.start
                                 : TextAlign.end,

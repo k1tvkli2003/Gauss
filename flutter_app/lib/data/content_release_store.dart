@@ -482,7 +482,14 @@ final class GaussContentReleaseStore {
   Future<GaussContentSnapshot> open({GaussContentPhase? onPhase}) async {
     final root = await _rootProvider();
     await root.create(recursive: true);
-    final active = await _loadActive(root) ?? _bundledSnapshot();
+    var active = await _loadActive(root) ?? _bundledSnapshot();
+    // A cached release carrying an older lesson structure than the app ships
+    // must not keep overriding it; fall back to the bundled content.
+    if (active.source != GaussContentSource.bundled &&
+        await _planRevisionOf(active.bundle) <
+            await _planRevisionOf(_fallback)) {
+      active = _bundledSnapshot();
+    }
     try {
       onPhase?.call('Checking the question atlas…');
       final release = await _api.latestRelease(channel);
@@ -499,6 +506,25 @@ final class GaussContentReleaseStore {
       return await _downloadAndActivate(root, release, active);
     } catch (error) {
       return active.withRefreshError(error);
+    }
+  }
+
+  /// Revision of the lesson plan a bundle serves; 0 when it has none (so a
+  /// bundle without a plan can never block a release).
+  Future<int> _planRevisionOf(AssetBundle bundle) async {
+    try {
+      final json =
+          jsonDecode(
+                await bundle.loadString(
+                  'assets/curriculum/five_question_plan_v1.json',
+                  cache: false,
+                ),
+              )
+              as Map<String, dynamic>;
+      final revision = json['plan_revision'];
+      return revision is int ? revision : 1;
+    } catch (_) {
+      return 0;
     }
   }
 
@@ -567,6 +593,18 @@ final class GaussContentReleaseStore {
     }
     if (!setEquals(artifactsByKind.keys.toSet(), _requiredArtifactKinds)) {
       throw const FormatException('Release is missing a required artifact.');
+    }
+
+    // Never activate a release whose lesson plan is older than the bundled
+    // one: that would silently undo the app's chapter and lesson structure.
+    final releasedPlan = artifactsByKind['five_question_plan']!.payload;
+    final releasedRevision = releasedPlan['plan_revision'] is int
+        ? releasedPlan['plan_revision'] as int
+        : 1;
+    if (releasedRevision < await _planRevisionOf(_fallback)) {
+      throw const FormatException(
+        'Release lesson plan is older than the one bundled with the app.',
+      );
     }
 
     final questionResolution = await _resolveQuestions(

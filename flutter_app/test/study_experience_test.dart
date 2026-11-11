@@ -413,6 +413,13 @@ void main() {
         find.byKey(const ValueKey('study-room-pages')),
       );
 
+      // The first question embeds media; let it finish loading so the paper
+      // is measured at its settled size, not mid image-decode.
+      await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 600)),
+      );
+      await tester.pump(const Duration(milliseconds: 300));
+
       expect(pages().physics, isA<PageScrollPhysics>());
       final plate = tester.getRect(
         find.byKey(const ValueKey('inline-ink-canvas')),
@@ -1690,11 +1697,20 @@ void main() {
     await _setPhoneSurface(tester);
     final topic = controller.topics.first;
     final questions = await questionBank.loadTopic(topic.key);
+    final byId = {for (final question in questions) question.id: question};
+    // Nine reflections taken from later lessons; the lesson that opens below
+    // is untouched, so its first reflection is the day's tenth.
+    final earlier = [
+      for (final session
+          in questionBank.studyPlan.topic(topic.key).sessions.skip(1))
+        for (final slot in session.slots)
+          if (slot.kind == StudySlotKind.primary) slot,
+    ].take(9).toList();
     await tester.runAsync(() async {
-      for (final question in questions.take(9)) {
+      for (final slot in earlier) {
         await controller.saveStudyReflection(
-          question: question,
-          shelfKey: '${topic.key}:0:5',
+          question: byId[slot.questionId]!,
+          shelfKey: slot.sessionKey,
           hypothesisChoiceIndex: null,
           reflection: StudyReflection.clear,
         );

@@ -38,90 +38,66 @@ class GamificationOrbitRibbon extends StatelessWidget {
       label:
           'Private offline progress. ${summary.streak} day daily streak. '
           '${summary.todayXp} experience today. Level ${summary.level}.',
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(GaussRadii.large),
-        child: CustomPaint(
-          painter: const _OrbitRibbonPainter(),
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  GaussColors.panelHigh.withValues(alpha: .97),
-                  GaussColors.deepInk.withValues(alpha: .98),
-                  GaussColors.ink.withValues(alpha: .99),
-                ],
-                stops: const [0, .52, 1],
-              ),
-              borderRadius: BorderRadius.circular(GaussRadii.large),
-              border: Border.all(color: GaussColors.line),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(GaussSpacing.space16),
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  final useWideRibbon =
-                      constraints.maxWidth >= 760 && textScale <= 1.2;
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      _RibbonHeader(todayXp: summary.todayXp),
-                      const SizedBox(height: GaussSpacing.space12),
-                      if (useWideRibbon)
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              width: 154,
-                              child: _RhythmSegment(
-                                streak: summary.streak,
-                                graceUsed: summary.streakGraceUsed,
-                              ),
-                            ),
-                            const SizedBox(width: GaussSpacing.space12),
-                            Expanded(
-                              flex: 3,
-                              child: _QuestSegment(
-                                quest: summary.quest,
-                                todayXp: summary.todayXp,
-                                progress: questProgress,
-                                onPressed: onQuestPressed,
-                              ),
-                            ),
-                            const SizedBox(width: GaussSpacing.space12),
-                            SizedBox(
-                              width: 170,
-                              child: _LevelSegment(
-                                level: summary.level,
-                                progress: summary.levelProgress,
-                              ),
-                            ),
-                            const SizedBox(width: GaussSpacing.space12),
-                            Expanded(
-                              flex: 2,
-                              child: _MilestoneSegment(
-                                milestone: milestone,
-                                onPressed: onMilestonePressed,
-                              ),
-                            ),
-                          ],
-                        )
-                      else
-                        _CompactRibbon(
-                          summary: summary,
-                          questProgress: questProgress,
-                          milestone: milestone,
-                          onQuestPressed: onQuestPressed,
-                          onMilestonePressed: onMilestonePressed,
-                        ),
-                    ],
-                  );
-                },
-              ),
-            ),
-          ),
-        ),
+      // A plain section: the four instruments are the cards, so there is
+      // no outer card around them.
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final useWideRibbon = constraints.maxWidth >= 760 && textScale <= 1.2;
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              _RibbonHeader(todayXp: summary.todayXp),
+              const SizedBox(height: GaussSpacing.space12),
+              if (useWideRibbon)
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: 154,
+                      child: _RhythmSegment(
+                        streak: summary.streak,
+                        graceUsed: summary.streakGraceUsed,
+                      ),
+                    ),
+                    const SizedBox(width: GaussSpacing.space12),
+                    Expanded(
+                      flex: 3,
+                      child: _QuestSegment(
+                        quest: summary.quest,
+                        todayXp: summary.todayXp,
+                        progress: questProgress,
+                        onPressed: onQuestPressed,
+                      ),
+                    ),
+                    const SizedBox(width: GaussSpacing.space12),
+                    SizedBox(
+                      width: 170,
+                      child: _LevelSegment(
+                        level: summary.level,
+                        progress: summary.levelProgress,
+                      ),
+                    ),
+                    const SizedBox(width: GaussSpacing.space12),
+                    Expanded(
+                      flex: 2,
+                      child: _MilestoneSegment(
+                        milestone: milestone,
+                        onPressed: onMilestonePressed,
+                      ),
+                    ),
+                  ],
+                )
+              else
+                _CompactRibbon(
+                  summary: summary,
+                  questProgress: questProgress,
+                  milestone: milestone,
+                  onQuestPressed: onQuestPressed,
+                  onMilestonePressed: onMilestonePressed,
+                ),
+            ],
+          );
+        },
       ),
     );
   }
@@ -211,45 +187,23 @@ class _RibbonHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
-      final identity = const Row(
-        children: [
-          Icon(Icons.radar_rounded, size: 18, color: GaussColors.brassLight),
-          SizedBox(width: GaussSpacing.space8),
-          Expanded(
-            child: Text(
-              'Private orbit',
-              style: TextStyle(
-                color: GaussColors.brassLight,
-                fontSize: GaussTypeScale.caption,
-                fontWeight: FontWeight.w900,
-                letterSpacing: .2,
-              ),
-            ),
-          ),
-        ],
+      final identity = const Text(
+        'Private orbit',
+        style: TextStyle(
+          color: GaussColors.brassLight,
+          fontSize: GaussTypeScale.caption,
+          fontWeight: FontWeight.w900,
+          letterSpacing: .2,
+        ),
       );
       final status = Semantics(
         label: 'Saved on this device. $todayXp experience today.',
-        child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: GaussSpacing.space12,
-            vertical: GaussSpacing.space8,
-          ),
-          decoration: BoxDecoration(
-            color: GaussColors.signal.withValues(alpha: .1),
-            borderRadius: BorderRadius.circular(GaussRadii.pill),
-            border: Border.all(
-              color: GaussColors.signalBright.withValues(alpha: .28),
-            ),
-          ),
-          child: Text(
-            'On device  •  $todayXp XP today',
-            style: const TextStyle(
-              color: GaussColors.signalBright,
-              fontSize: GaussTypeScale.caption,
-              fontWeight: FontWeight.w900,
-              letterSpacing: .2,
-            ),
+        child: Text(
+          'Saved on this device · $todayXp XP today',
+          style: const TextStyle(
+            color: GaussColors.fog,
+            fontSize: GaussTypeScale.caption,
+            fontWeight: FontWeight.w700,
           ),
         ),
       );
@@ -633,10 +587,10 @@ class _InstrumentSegment extends StatelessWidget {
       label: semanticsLabel,
       excludeSemantics: true,
       child: Material(
-        color: GaussColors.abyss.withValues(alpha: .38),
+        color: GaussColors.surface,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(GaussRadii.medium),
-          side: BorderSide(color: accent.withValues(alpha: .22)),
+          side: const BorderSide(color: GaussColors.hairline),
         ),
         clipBehavior: Clip.antiAlias,
         child: onPressed == null
@@ -799,56 +753,4 @@ Color _rarityColor(AchievementRarity rarity) => switch (rarity) {
 double _safeProgress(int current, int target) {
   if (target <= 0) return 0;
   return (current / target).clamp(0.0, 1.0);
-}
-
-/// A low-cost astrolabe engraving. It is decorative only; all live values and
-/// state meaning remain semantic widgets above it.
-class _OrbitRibbonPainter extends CustomPainter {
-  const _OrbitRibbonPainter();
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final brass = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1
-      ..color = GaussColors.brassLight.withValues(alpha: .07);
-    final signal = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1
-      ..color = GaussColors.signalBright.withValues(alpha: .045);
-    final center = Offset(size.width * .88, size.height * .12);
-    final baseRadius = math.min(size.width, size.height) * .36;
-    for (var index = 0; index < 4; index++) {
-      final radius = baseRadius + index * 22;
-      canvas.drawArc(
-        Rect.fromCircle(center: center, radius: radius),
-        math.pi * .42,
-        math.pi * .98,
-        false,
-        index.isEven ? brass : signal,
-      );
-    }
-    final horizon = size.height * .72;
-    canvas.drawLine(
-      Offset(0, horizon),
-      Offset(size.width, horizon - size.width * .035),
-      brass,
-    );
-    final star = Paint()..color = GaussColors.ivory.withValues(alpha: .11);
-    for (final point in const [
-      Offset(.08, .18),
-      Offset(.22, .1),
-      Offset(.52, .19),
-      Offset(.72, .08),
-    ]) {
-      canvas.drawCircle(
-        Offset(size.width * point.dx, size.height * point.dy),
-        1.25,
-        star,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant _OrbitRibbonPainter oldDelegate) => false;
 }
