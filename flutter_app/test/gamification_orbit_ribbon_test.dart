@@ -14,7 +14,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Private orbit'), findsOneWidget);
-    expect(find.text('On device  •  36 XP today'), findsOneWidget);
+    expect(find.text('Saved on this device · 36 XP today'), findsOneWidget);
     expect(find.text('4 days'), findsOneWidget);
     expect(find.text('Daily streak'), findsOneWidget);
     expect(find.text('Level 3'), findsOneWidget);
