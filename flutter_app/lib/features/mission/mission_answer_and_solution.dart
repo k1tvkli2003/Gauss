@@ -8,7 +8,6 @@ class _AnswerChoice extends StatelessWidget {
     required this.checked,
     required this.correctChoice,
     required this.onTap,
-    this.manuscript = false,
   });
   final List<ContentBlock> blocks;
   final int choice;
@@ -16,7 +15,6 @@ class _AnswerChoice extends StatelessWidget {
   final bool checked;
   final int correctChoice;
   final VoidCallback? onTap;
-  final bool manuscript;
 
   @override
   Widget build(BuildContext context) {
@@ -45,58 +43,20 @@ class _AnswerChoice extends StatelessWidget {
               : selected
               ? 'Selected.'
               : ''}',
-      child: manuscript
-          ? ManuscriptChoiceShell(
-              tone: tone,
-              onTap: onTap,
-              emblem: isCorrect
-                  ? const Icon(
-                      Icons.check_rounded,
-                      size: 18,
-                      color: GaussColors.teal,
-                    )
-                  : isWrong
-                  ? const Icon(
-                      Icons.close_rounded,
-                      size: 18,
-                      color: GaussColors.error,
-                    )
-                  : Text(
-                      String.fromCharCode(65 + choice),
-                      style: const TextStyle(
-                        color: GaussColors.parchmentInk,
-                        fontFamily: 'serif',
-                        fontSize: 22,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-              child: ContentBlocksView(
-                blocks: blocks,
-                compact: true,
-                textColor: GaussColors.parchmentInk,
-              ),
-            )
-          : TheoremChoiceShell(
-              tone: tone,
-              onTap: onTap,
-              emblem: isCorrect
-                  ? const Icon(
-                      Icons.check_rounded,
-                      size: 18,
-                      color: GaussColors.teal,
-                    )
-                  : isWrong
-                  ? const Icon(
-                      Icons.close_rounded,
-                      size: 18,
-                      color: GaussColors.error,
-                    )
-                  : Text(
-                      String.fromCharCode(65 + choice),
-                      style: const TextStyle(fontWeight: FontWeight.w900),
-                    ),
-              child: ContentBlocksView(blocks: blocks, compact: true),
-            ),
+      child: ManuscriptChoiceShell(
+        tone: tone,
+        onTap: onTap,
+        emblem: isCorrect
+            ? const Icon(Icons.check_rounded)
+            : isWrong
+            ? const Icon(Icons.close_rounded)
+            : Text('${choice + 1}'),
+        child: ContentBlocksView(
+          blocks: blocks,
+          compact: true,
+          textColor: GaussColors.parchmentInk,
+        ),
+      ),
     );
   }
 }

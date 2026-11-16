@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -678,84 +677,74 @@ class _ArchiveTopBar extends StatelessWidget {
       ? '${topic!.label} · Second pass'
       : topic!.label;
 
+  // One axis: leave, where you are, reshuffle. The session heading and the
+  // set name sit centered between the two controls; a missing shuffle keeps
+  // an equal blank so the title stays on the screen's center line.
   @override
   Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsetsDirectional.fromSTEB(12, 5, 12, 7),
-    child: Column(
-      key: const ValueKey('study-room-header'),
-      mainAxisSize: MainAxisSize.min,
+    key: const ValueKey('study-room-header'),
+    padding: const EdgeInsets.fromLTRB(8, 6, 8, 6),
+    child: Row(
+      key: const ValueKey('study-room-balanced-action-axis'),
       children: [
-        SizedBox(
-          height: 48,
-          child: Stack(
-            key: const ValueKey('study-room-balanced-action-axis'),
-            fit: StackFit.expand,
+        IconButton(
+          key: const ValueKey('study-room-close-action'),
+          onPressed: onClose,
+          tooltip: 'Leave the study room',
+          icon: const Icon(Icons.close_rounded),
+        ),
+        const SizedBox(width: GaussSpacing.space4),
+        Expanded(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Align(
-                alignment: AlignmentDirectional.centerStart,
-                child: IconButton(
-                  key: const ValueKey('study-room-close-action'),
-                  onPressed: onClose,
-                  tooltip: 'Leave the reading room',
-                  icon: const Icon(Icons.close_rounded),
+              Text(
+                masteryReview ? 'Mastery review' : 'Study room',
+                key: const ValueKey('study-room-session-heading'),
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: GaussColors.brassLight,
+                  fontSize: GaussTypeScale.caption,
+                  fontWeight: FontWeight.w900,
+                  height: 1.3,
                 ),
               ),
-              const Align(
-                alignment: Alignment.center,
-                child: GaussWordmark(
-                  key: ValueKey('study-room-centered-wordmark'),
-                  width: 82,
-                ),
-              ),
-              if (onShuffle != null)
-                Align(
-                  alignment: AlignmentDirectional.centerEnd,
-                  child: IconButton(
-                    key: const ValueKey('study-room-shuffle-action'),
-                    onPressed: onShuffle,
-                    tooltip: shuffled
-                        ? 'Reshuffle this session again'
-                        : 'Second pass in a new order',
-                    icon: Icon(
-                      Icons.shuffle_rounded,
-                      color: shuffled
-                          ? GaussColors.brassLight
-                          : GaussColors.muted,
-                    ),
+              const SizedBox(height: 2),
+              Directionality(
+                textDirection: revisitOnly
+                    ? TextDirection.ltr
+                    : TextDirection.rtl,
+                child: Text(
+                  _contextLabel,
+                  key: const ValueKey('study-room-context-label'),
+                  textAlign: TextAlign.center,
+                  softWrap: true,
+                  style: const TextStyle(
+                    color: GaussColors.ivory,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w800,
+                    height: 1.4,
                   ),
                 ),
+              ),
             ],
           ),
         ),
-        const SizedBox(height: 3),
-        // Question position lives once, in the interactive bottom rail.
-        Text(
-          masteryReview ? 'Mastery review' : 'Study room',
-          key: const ValueKey('study-room-session-heading'),
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: GaussColors.brassLight,
-            fontSize: GaussTypeScale.caption,
-            fontWeight: FontWeight.w900,
-            letterSpacing: .2,
-          ),
-        ),
-        const SizedBox(height: 5),
-        Directionality(
-          textDirection: revisitOnly ? TextDirection.ltr : TextDirection.rtl,
-          child: Text(
-            _contextLabel,
-            key: const ValueKey('study-room-context-label'),
-            textAlign: TextAlign.center,
-            softWrap: true,
-            style: const TextStyle(
-              color: GaussColors.ivory,
-              fontSize: 13,
-              fontWeight: FontWeight.w800,
-              height: 1.45,
+        const SizedBox(width: GaussSpacing.space4),
+        if (onShuffle != null)
+          IconButton(
+            key: const ValueKey('study-room-shuffle-action'),
+            onPressed: onShuffle,
+            tooltip: shuffled
+                ? 'Reshuffle this session again'
+                : 'Second pass in a new order',
+            icon: Icon(
+              Icons.shuffle_rounded,
+              color: shuffled ? GaussColors.brassLight : GaussColors.muted,
             ),
-          ),
-        ),
+          )
+        else
+          const SizedBox.square(dimension: GaussMetrics.minTouchTarget),
       ],
     ),
   );

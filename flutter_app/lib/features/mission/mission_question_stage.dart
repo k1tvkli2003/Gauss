@@ -12,6 +12,7 @@ class _QuestionStage extends StatelessWidget {
     required this.covered,
     required this.errorTag,
     required this.operationError,
+    required this.outcomes,
     required this.ink,
     required this.onSelect,
     required this.onCheck,
@@ -35,6 +36,7 @@ class _QuestionStage extends StatelessWidget {
   final bool covered;
   final String? errorTag;
   final Object? operationError;
+  final Map<int, bool> outcomes;
   final ScratchInkController ink;
   final ValueChanged<int> onSelect;
   final VoidCallback onCheck;
@@ -65,6 +67,7 @@ class _QuestionStage extends StatelessWidget {
                 index: index,
                 total: total,
                 chapterLabel: chapterLabel,
+                outcomes: outcomes,
                 busy: busy,
                 onClose: onClose,
                 onScratchpad: onScratchpad,
@@ -217,6 +220,7 @@ class _MissionTopBar extends StatelessWidget {
     required this.index,
     required this.total,
     required this.chapterLabel,
+    required this.outcomes,
     required this.busy,
     required this.onClose,
     required this.onScratchpad,
@@ -225,63 +229,50 @@ class _MissionTopBar extends StatelessWidget {
   final int index;
   final int total;
   final String chapterLabel;
+  final Map<int, bool> outcomes;
   final bool busy;
   final VoidCallback onClose;
   final VoidCallback onScratchpad;
 
+  // One axis: leave, the session meter, the full scratchpad. The wordmark
+  // gave no information here and pushed the question down by a whole row.
   @override
   Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.fromLTRB(14, 7, 14, 8),
-    child: Column(
-      key: const ValueKey('mission-question-header'),
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(
-          height: GaussMetrics.minTouchTarget,
-          child: Stack(
-            key: const ValueKey('mission-question-header-axis'),
-            fit: StackFit.expand,
-            children: [
-              Align(
-                alignment: AlignmentDirectional.centerStart,
-                child: IconButton(
-                  key: const ValueKey('mission-close-action'),
-                  onPressed: busy ? null : onClose,
-                  tooltip: 'Leave mission',
-                  icon: const Icon(Icons.close_rounded),
-                ),
+    key: const ValueKey('mission-question-header'),
+    padding: const EdgeInsets.fromLTRB(8, 6, 8, 6),
+    child: Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 720),
+        child: Row(
+          key: const ValueKey('mission-question-header-axis'),
+          children: [
+            IconButton(
+              key: const ValueKey('mission-close-action'),
+              onPressed: busy ? null : onClose,
+              tooltip: 'Leave mission',
+              icon: const Icon(Icons.close_rounded),
+            ),
+            const SizedBox(width: GaussSpacing.space4),
+            Expanded(
+              child: QuestionProgressRail(
+                key: const ValueKey('mission-question-progress'),
+                index: index,
+                total: total,
+                label: chapterLabel,
+                outcomes: outcomes,
+                valueKey: const ValueKey('mission-question-position'),
               ),
-              const Align(
-                alignment: Alignment.center,
-                child: GaussWordmark(
-                  key: ValueKey('mission-centered-wordmark'),
-                  width: 82,
-                ),
-              ),
-              Align(
-                alignment: AlignmentDirectional.centerEnd,
-                child: IconButton(
-                  key: const ValueKey('mission-scratchpad-action'),
-                  onPressed: busy ? null : onScratchpad,
-                  tooltip: 'Open full scratchpad',
-                  icon: const GaussScratchGlyph(color: GaussColors.brassLight),
-                ),
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(width: GaussSpacing.space4),
+            IconButton(
+              key: const ValueKey('mission-scratchpad-action'),
+              onPressed: busy ? null : onScratchpad,
+              tooltip: 'Open full scratchpad',
+              icon: const GaussScratchGlyph(color: GaussColors.brassLight),
+            ),
+          ],
         ),
-        const SizedBox(height: GaussSpacing.space8),
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 560),
-          child: QuestionProgressRail(
-            key: const ValueKey('mission-question-progress'),
-            index: index,
-            total: total,
-            label: chapterLabel,
-            valueKey: const ValueKey('mission-question-position'),
-          ),
-        ),
-      ],
+      ),
     ),
   );
 }
@@ -481,7 +472,6 @@ class _QuestionScrollState extends State<_QuestionScroll> {
                                 onTap: checked || busy
                                     ? null
                                     : () => onSelect(choice),
-                                manuscript: true,
                               ),
                           ],
                         ),
@@ -612,7 +602,7 @@ class _MissTagBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'WHY DID IT SLIP?',
+              'Why did it slip?',
               style: TextStyle(
                 color: inkColor,
                 fontSize: GaussTypeScale.caption,

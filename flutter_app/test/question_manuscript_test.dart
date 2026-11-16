@@ -149,49 +149,53 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('normal phone keeps the manuscript tools on its left spine', (
-    tester,
-  ) async {
-    final ink = ScratchInkController();
-    addTearDown(ink.dispose);
-    await tester.binding.setSurfaceSize(const Size(411, 900));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+  testWidgets(
+    'normal phone keeps the standing tools beside the question title',
+    (tester) async {
+      final ink = ScratchInkController();
+      addTearDown(ink.dispose);
+      await tester.binding.setSurfaceSize(const Size(411, 900));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
 
-    await tester.pumpWidget(
-      MaterialApp(
-        theme: buildGaussTheme(),
-        home: Scaffold(
-          body: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 28),
-            child: QuestionManuscript(
-              ink: ink,
-              questionNumber: 1,
-              difficulty: 'Hard',
-              onExpandInk: () {},
-              onClearInk: ink.clear,
-              onRestoreInk: ink.restoreLastClear,
-              prompt: const SizedBox(height: 120),
-              answers: const SizedBox(height: 320),
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: buildGaussTheme(),
+          home: Scaffold(
+            body: SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(horizontal: 28),
+              child: QuestionManuscript(
+                ink: ink,
+                questionNumber: 1,
+                difficulty: 'Hard',
+                onExpandInk: () {},
+                onClearInk: ink.clear,
+                onRestoreInk: ink.restoreLastClear,
+                prompt: const SizedBox(height: 120),
+                answers: const SizedBox(height: 320),
+              ),
             ),
           ),
         ),
-      ),
-    );
-    await tester.pump();
+      );
+      await tester.pump();
 
-    final pen = tester.getRect(
-      find.byKey(const ValueKey('manuscript-pen-tool')),
-    );
-    final expand = tester.getRect(
-      find.byKey(const ValueKey('manuscript-expand-tool')),
-    );
-    final question = tester.getRect(
-      find.byKey(const ValueKey('question-manuscript-number')),
-    );
-    expect(expand.top, greaterThan(pen.bottom));
-    expect(pen.right, lessThan(question.left));
-    expect(tester.takeException(), isNull);
-  });
+      final pen = tester.getRect(
+        find.byKey(const ValueKey('manuscript-pen-tool')),
+      );
+      final expand = tester.getRect(
+        find.byKey(const ValueKey('manuscript-expand-tool')),
+      );
+      final question = tester.getRect(
+        find.byKey(const ValueKey('question-manuscript-number')),
+      );
+      // One header row: question identity at the start, tools at the end,
+      // so the prompt keeps the paper's full width.
+      expect(expand.top, closeTo(pen.top, .5));
+      expect(pen.left, greaterThan(question.right));
+      expect(find.byKey(const ValueKey('manuscript-undo-tool')), findsNothing);
+      expect(tester.takeException(), isNull);
+    },
+  );
 
   test('ink status publishes boundaries without rebuilding on every point', () {
     final ink = ScratchInkController();

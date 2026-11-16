@@ -622,7 +622,7 @@ void main() {
         find.byKey(const ValueKey('study-room-balanced-action-axis')),
       );
       final wordmark = tester.getCenter(
-        find.byKey(const ValueKey('study-room-centered-wordmark')),
+        find.byKey(const ValueKey('study-room-session-heading')),
       );
       final close = tester.getCenter(
         find.byKey(const ValueKey('study-room-close-action')),
@@ -641,7 +641,7 @@ void main() {
         find.byKey(const ValueKey('study-room-header')),
       );
       final compactWordmark = tester.getCenter(
-        find.byKey(const ValueKey('study-room-centered-wordmark')),
+        find.byKey(const ValueKey('study-room-session-heading')),
       );
       final closeSize = tester.getSize(
         find.byKey(const ValueKey('study-room-close-action')),
@@ -687,8 +687,10 @@ void main() {
       final nextRect = tester.getRect(
         find.byKey(const ValueKey('study-room-next-action')),
       );
-      expect(difficulty.center.dx, closeTo(160, 24));
-      expect(questionNumber.center.dx, closeTo(160, 24));
+      // Identity stacks on one start edge above the tools at 200% text.
+      expect(questionNumber.bottom, lessThanOrEqualTo(difficulty.top));
+      expect(difficulty.right, lessThanOrEqualTo(320));
+      expect(questionNumber.left, greaterThanOrEqualTo(0));
       expect(navigationRect.center.dx, closeTo(160, .5));
       expect(navigationRect.width, lessThanOrEqualTo(296));
       expect(previousRect.width, greaterThanOrEqualTo(48));

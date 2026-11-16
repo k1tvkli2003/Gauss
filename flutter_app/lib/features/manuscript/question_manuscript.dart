@@ -2,9 +2,9 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import 'package:gauss/domain/models.dart';
 import 'package:gauss/ui/tokens/gauss_tokens.dart';
 import 'package:gauss/ui/theme/gauss_theme.dart';
-import 'package:gauss/ui/components/gauss_brand.dart';
 import 'package:gauss/features/manuscript/scratchpad.dart';
 import 'package:gauss/features/manuscript/theorem_lens.dart';
 
@@ -80,127 +80,137 @@ class _QuestionManuscriptState extends State<QuestionManuscript> {
   }
 
   @override
-  Widget build(
-    BuildContext context,
-  ) => ValueListenableBuilder<ScratchInkStatus>(
-    valueListenable: widget.ink.status,
-    builder: (context, inkStatus, _) {
-      final accent = inkStatus.isEmpty
-          ? GaussColors.brass
-          : GaussColors.signalBright;
-      return RepaintBoundary(
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(28),
-            boxShadow: const [
-              BoxShadow(
-                color: Color(0x9A000000),
-                blurRadius: 38,
-                offset: Offset(0, 18),
-              ),
-              BoxShadow(
-                color: Color(0x2639D4D1),
-                blurRadius: 18,
-                spreadRadius: -6,
-              ),
-            ],
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(28),
-            child: Stack(
-              children: [
-                Positioned.fill(
-                  child: Image.asset(
-                    'assets/visual/question/manuscript_parchment_v1.png',
-                    fit: BoxFit.cover,
-                    alignment: Alignment.topCenter,
-                    cacheWidth: 1500,
-                    filterQuality: FilterQuality.medium,
+  Widget build(BuildContext context) =>
+      ValueListenableBuilder<ScratchInkStatus>(
+        valueListenable: widget.ink.status,
+        builder: (context, inkStatus, _) {
+          final accent = inkStatus.isEmpty
+              ? GaussColors.brass
+              : GaussColors.signalBright;
+          return RepaintBoundary(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(28),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color(0x80000000),
+                    blurRadius: 24,
+                    offset: Offset(0, 10),
                   ),
-                ),
-                const Positioned.fill(
-                  child: ColoredBox(color: Color(0x0D8D601F)),
-                ),
-                Positioned.fill(
-                  child: IgnorePointer(
-                    child: CustomPaint(
-                      painter: _ManuscriptFramePainter(accent: accent),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(28),
+                child: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'assets/visual/question/manuscript_parchment_v1.png',
+                        fit: BoxFit.cover,
+                        alignment: Alignment.topCenter,
+                        // Decode near the paper's real size on a phone; the
+                        // texture is soft, so a tablet upscale stays clean.
+                        cacheWidth: 1080,
+                        filterQuality: FilterQuality.low,
+                      ),
                     ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(12, 14, 12, 18),
-                  child: LayoutBuilder(
-                    builder: (context, constraints) {
-                      final textScale = MediaQuery.textScalerOf(
-                        context,
-                      ).scale(12);
-                      // A normal phone manuscript is intentionally a narrow
-                      // writing folio with its tools bound to the left edge.
-                      // Only genuinely compact or large-text compositions
-                      // move the tools above the page. Basing this boundary
-                      // on the manuscript width (rather than the viewport)
-                      // keeps Study and Mission visually identical even when
-                      // their outer gutters differ.
-                      final verticalTools =
-                          constraints.maxWidth >= 330 && textScale < 18;
-                      final content = _ManuscriptContent(
-                        ink: widget.ink,
-                        inkStatus: inkStatus,
-                        mode: _mode,
-                        questionNumber: widget.questionNumber,
-                        difficulty: widget.difficulty,
-                        prompt: widget.prompt,
-                        answers: widget.answers,
-                        review: widget.review,
-                        active: widget.active,
-                        onDrawingChanged: widget.onDrawingChanged,
-                      );
-                      final tools = _ManuscriptToolRail(
-                        ink: widget.ink,
-                        inkStatus: inkStatus,
-                        mode: _mode,
-                        vertical: verticalTools,
-                        onMode: _selectMode,
-                        onExpand: widget.onExpandInk,
-                        onClear: widget.onClearInk,
-                        onRestore: widget.onRestoreInk,
-                      );
-                      if (!verticalTools) {
-                        return Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            tools,
-                            const SizedBox(height: GaussSpacing.space8),
-                            const _EngravedRule(),
-                            const SizedBox(height: GaussSpacing.space8),
-                            content,
-                          ],
-                        );
-                      }
-                      return Stack(
+                    Positioned.fill(
+                      child: IgnorePointer(
+                        child: CustomPaint(
+                          painter: _ManuscriptFramePainter(accent: accent),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 12, 16, 18),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 60),
-                            child: content,
+                          _ManuscriptHeaderBar(
+                            meta: _ManuscriptQuestionHeader(
+                              difficulty: widget.difficulty,
+                              questionNumber: widget.questionNumber,
+                            ),
+                            tools: _ManuscriptToolRail(
+                              ink: widget.ink,
+                              inkStatus: inkStatus,
+                              mode: _mode,
+                              onMode: _selectMode,
+                              onExpand: widget.onExpandInk,
+                              onClear: widget.onClearInk,
+                              onRestore: widget.onRestoreInk,
+                            ),
                           ),
-                          Positioned(left: 0, top: 0, child: tools),
-                          const Positioned(
-                            left: 54,
-                            top: 0,
-                            bottom: 0,
-                            child: _VerticalEngravedRule(),
+                          const SizedBox(height: GaussSpacing.space12),
+                          const _EngravedRule(),
+                          const SizedBox(height: GaussSpacing.space16),
+                          _ManuscriptContent(
+                            ink: widget.ink,
+                            inkStatus: inkStatus,
+                            mode: _mode,
+                            questionNumber: widget.questionNumber,
+                            prompt: widget.prompt,
+                            answers: widget.answers,
+                            review: widget.review,
+                            active: widget.active,
+                            onDrawingChanged: widget.onDrawingChanged,
+                            inkTools: _ManuscriptToolRail(
+                              ink: widget.ink,
+                              inkStatus: inkStatus,
+                              mode: _mode,
+                              editing: true,
+                              onMode: _selectMode,
+                              onExpand: widget.onExpandInk,
+                              onClear: widget.onClearInk,
+                              onRestore: widget.onRestoreInk,
+                            ),
                           ),
                         ],
-                      );
-                    },
-                  ),
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
-          ),
-        ),
+          );
+        },
+      );
+}
+
+/// Question identity on the start side, ink tools on the end side. When the
+/// row cannot hold both at the current width and text size, the tools drop
+/// below the identity instead of squeezing it.
+class _ManuscriptHeaderBar extends StatelessWidget {
+  const _ManuscriptHeaderBar({required this.meta, required this.tools});
+
+  final Widget meta;
+  final Widget tools;
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final textScale = MediaQuery.textScalerOf(context).scale(1);
+      final inline = constraints.maxWidth >= 300 && textScale < 1.5;
+      if (inline) {
+        return Row(
+          key: const ValueKey('question-manuscript-header-inline'),
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(child: meta),
+            const SizedBox(width: GaussSpacing.space8),
+            tools,
+          ],
+        );
+      }
+      return Column(
+        key: const ValueKey('question-manuscript-header-stacked'),
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          meta,
+          const SizedBox(height: GaussSpacing.space12),
+          Align(alignment: AlignmentDirectional.centerStart, child: tools),
+        ],
       );
     },
   );
@@ -212,19 +222,19 @@ class _ManuscriptContent extends StatelessWidget {
     required this.inkStatus,
     required this.mode,
     required this.questionNumber,
-    required this.difficulty,
     required this.prompt,
     required this.answers,
     required this.review,
     required this.active,
     required this.onDrawingChanged,
+    required this.inkTools,
   });
 
   final ScratchInkController ink;
   final ScratchInkStatus inkStatus;
   final QuestionInkMode mode;
   final int questionNumber;
-  final String difficulty;
+  final Widget inkTools;
   final Widget prompt;
   final Widget answers;
   final Widget? review;
@@ -236,47 +246,57 @@ class _ManuscriptContent extends StatelessWidget {
     mainAxisSize: MainAxisSize.min,
     crossAxisAlignment: CrossAxisAlignment.stretch,
     children: [
-      _ManuscriptQuestionHeader(
-        difficulty: difficulty,
-        questionNumber: questionNumber,
-      ),
-      const SizedBox(height: GaussSpacing.space16),
-      InlineQuestionScratch(
-        key: ValueKey('study-ink-surface-$questionNumber'),
-        controller: ink,
-        active: active,
-        inputMode: mode,
-        showInlineControls: false,
-        onDrawingChanged: onDrawingChanged,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            prompt,
-            const SizedBox(height: GaussSpacing.space16),
-            Semantics(
-              label:
-                  'Writable reasoning space. A hardware stylus writes immediately.',
-              child: LayoutBuilder(
-                builder: (context, constraints) => AnimatedContainer(
-                  key: const ValueKey('question-manuscript-writing-space'),
-                  duration: GaussMotion.resolve(context, GaussMotion.standard),
-                  curve: Curves.easeOutCubic,
-                  constraints: BoxConstraints(
-                    minHeight: QuestionManuscript.writingSpaceFor(
-                      manuscriptWidth: constraints.maxWidth,
-                      screenHeight: MediaQuery.sizeOf(context).height,
+      Stack(
+        children: [
+          InlineQuestionScratch(
+            key: ValueKey('study-ink-surface-$questionNumber'),
+            controller: ink,
+            active: active,
+            inputMode: mode,
+            showInlineControls: false,
+            onDrawingChanged: onDrawingChanged,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                prompt,
+                const SizedBox(height: GaussSpacing.space16),
+                Semantics(
+                  label:
+                      'Writable reasoning space. A hardware stylus writes immediately.',
+                  child: LayoutBuilder(
+                    builder: (context, constraints) => AnimatedContainer(
+                      key: const ValueKey('question-manuscript-writing-space'),
+                      duration: GaussMotion.resolve(
+                        context,
+                        GaussMotion.standard,
+                      ),
+                      curve: Curves.easeOutCubic,
+                      constraints: BoxConstraints(
+                        minHeight: QuestionManuscript.writingSpaceFor(
+                          manuscriptWidth: constraints.maxWidth,
+                          screenHeight: MediaQuery.sizeOf(context).height,
+                        ),
+                      ),
+                      alignment: AlignmentDirectional.topStart,
+                      padding: const EdgeInsets.all(GaussSpacing.space8),
+                      // Faint notebook ruling marks the writable band, so the
+                      // empty space reads as paper to work on, not a gap.
+                      foregroundDecoration: const _RuledPaperDecoration(),
+                      child: inkStatus.isEmpty
+                          ? ExcludeSemantics(
+                              child: _WritingSpaceSignal(mode: mode),
+                            )
+                          : null,
                     ),
                   ),
-                  alignment: AlignmentDirectional.topStart,
-                  padding: const EdgeInsets.all(GaussSpacing.space8),
-                  child: inkStatus.isEmpty
-                      ? ExcludeSemantics(child: _WritingSpaceSignal(mode: mode))
-                      : null,
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
+          ),
+          // Painted above the ink surface, so taps reach the tools and never
+          // start a stroke.
+          PositionedDirectional(end: 0, bottom: 0, child: inkTools),
+        ],
       ),
       const SizedBox(height: GaussSpacing.space12),
       const _EngravedRule(ornament: true),
@@ -300,9 +320,10 @@ class _WritingSpaceSignal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final label = switch (mode) {
-      QuestionInkMode.pan => 'Stylus ready · Touch scrolls',
-      QuestionInkMode.pen => 'Finger ink active',
-      QuestionInkMode.eraser => 'Stroke eraser active',
+      QuestionInkMode.pan =>
+        'Work it out here. A stylus writes; a finger scrolls.',
+      QuestionInkMode.pen => 'Finger pen on. Write anywhere on the page.',
+      QuestionInkMode.eraser => 'Eraser on. Touch a stroke to remove it.',
     };
     final accent = mode == QuestionInkMode.pan
         ? GaussColors.parchmentInk
@@ -317,7 +338,7 @@ class _WritingSpaceSignal extends StatelessWidget {
               ? Icons.gesture_rounded
               : Icons.cleaning_services_outlined,
           size: 15,
-          color: accent.withValues(alpha: .34),
+          color: accent.withValues(alpha: .5),
         ),
         const SizedBox(width: GaussSpacing.space8),
         Flexible(
@@ -325,11 +346,10 @@ class _WritingSpaceSignal extends StatelessWidget {
             label,
             softWrap: true,
             style: TextStyle(
-              color: accent.withValues(alpha: .34),
+              color: accent.withValues(alpha: .62),
               fontSize: GaussTypeScale.caption,
-              fontWeight: FontWeight.w800,
-              letterSpacing: .2,
-              height: 1.2,
+              fontWeight: FontWeight.w700,
+              height: 1.3,
             ),
           ),
         ),
@@ -347,89 +367,122 @@ class _ManuscriptQuestionHeader extends StatelessWidget {
   final String difficulty;
   final int questionNumber;
 
+  /// Difficulty as a level out of four, so it reads by shape as well.
+  int get _level {
+    final index = Difficulty.values.indexWhere(
+      (item) => item.label.toLowerCase() == difficulty.toLowerCase(),
+    );
+    return index < 0 ? 0 : index + 1;
+  }
+
   @override
-  Widget build(BuildContext context) => LayoutBuilder(
-    builder: (context, constraints) {
-      final textScaler = MediaQuery.textScalerOf(context);
-      final difficultyText = difficulty.isEmpty
-          ? difficulty
-          : '${difficulty[0].toUpperCase()}${difficulty.substring(1).toLowerCase()}';
-      final questionText = 'Question $questionNumber';
-      const difficultyStyle = TextStyle(
-        fontFamily: 'Manrope',
-        fontSize: GaussTypeScale.caption,
-        fontWeight: FontWeight.w900,
-        letterSpacing: .2,
-      );
-      const questionStyle = TextStyle(
-        fontFamily: 'Manrope',
-        fontSize: 12,
-        fontWeight: FontWeight.w900,
-        letterSpacing: .2,
-      );
-      double measuredWidth(String text, TextStyle style) {
-        final painter = TextPainter(
-          text: TextSpan(text: text, style: style),
+  Widget build(BuildContext context) {
+    final difficultyText = difficulty.isEmpty
+        ? difficulty
+        : '${difficulty[0].toUpperCase()}${difficulty.substring(1).toLowerCase()}';
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          'Question $questionNumber',
+          key: const ValueKey('question-manuscript-number'),
           textDirection: TextDirection.ltr,
-          textScaler: textScaler,
-          maxLines: 1,
-        )..layout();
-        return painter.width;
-      }
-
-      final inlineWidth =
-          measuredWidth(difficultyText, difficultyStyle) +
-          GaussSpacing.space16 +
-          measuredWidth(questionText, questionStyle) +
-          GaussSpacing.space8 +
-          17;
-      final stacked =
-          textScaler.scale(12) >= 18 ||
-          constraints.maxWidth < inlineWidth.ceilToDouble();
-      final difficultyLabel = Text(
-        difficultyText,
-        key: const ValueKey('question-manuscript-difficulty'),
-        textAlign: stacked ? TextAlign.center : TextAlign.start,
-        softWrap: true,
-        style: difficultyStyle.copyWith(
-          color: GaussColors.parchmentInk.withValues(alpha: .58),
+          softWrap: true,
+          style: const TextStyle(
+            fontFamily: 'Manrope',
+            color: GaussColors.parchmentInk,
+            fontSize: 17,
+            fontWeight: FontWeight.w900,
+            height: 1.2,
+          ),
         ),
-      );
-      final questionLabel = Text(
-        questionText,
-        key: const ValueKey('question-manuscript-number'),
-        textAlign: stacked ? TextAlign.center : TextAlign.start,
-        textDirection: TextDirection.ltr,
-        softWrap: true,
-        style: questionStyle.copyWith(color: GaussColors.parchmentInk),
-      );
-
-      if (stacked) {
-        return Column(
-          key: const ValueKey('question-manuscript-header-stacked'),
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            difficultyLabel,
-            const SizedBox(height: GaussSpacing.space4),
-            questionLabel,
-            const SizedBox(height: GaussSpacing.space4),
-            const Center(child: TheoremStarMark(size: 17, darkInk: true)),
-          ],
-        );
-      }
-
-      return Row(
-        key: const ValueKey('question-manuscript-header-inline'),
-        children: [
-          difficultyLabel,
-          const Spacer(),
-          questionLabel,
-          const SizedBox(width: GaussSpacing.space8),
-          const TheoremStarMark(size: 17, darkInk: true),
+        if (difficultyText.isNotEmpty) ...[
+          const SizedBox(height: GaussSpacing.space4),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (_level > 0) ...[
+                _DifficultyBars(level: _level),
+                const SizedBox(width: 6),
+              ],
+              Flexible(
+                child: Text(
+                  difficultyText,
+                  key: const ValueKey('question-manuscript-difficulty'),
+                  softWrap: true,
+                  style: TextStyle(
+                    fontFamily: 'Manrope',
+                    color: GaussColors.parchmentInk.withValues(alpha: .72),
+                    fontSize: GaussTypeScale.caption,
+                    fontWeight: FontWeight.w800,
+                    height: 1.2,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
-      );
-    },
+      ],
+    );
+  }
+}
+
+class _DifficultyBars extends StatelessWidget {
+  const _DifficultyBars({required this.level});
+
+  final int level;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    mainAxisSize: MainAxisSize.min,
+    crossAxisAlignment: CrossAxisAlignment.end,
+    children: [
+      for (var bar = 1; bar <= 4; bar++) ...[
+        if (bar > 1) const SizedBox(width: 2),
+        Container(
+          width: 3,
+          height: 4.0 + bar * 2,
+          decoration: BoxDecoration(
+            color: bar <= level
+                ? GaussParchmentInk.sepia
+                : GaussColors.parchmentInk.withValues(alpha: .18),
+            borderRadius: BorderRadius.circular(1.5),
+          ),
+        ),
+      ],
+    ],
   );
+}
+
+/// Paints two faint ruled lines across the writing band.
+class _RuledPaperDecoration extends Decoration {
+  const _RuledPaperDecoration();
+
+  @override
+  BoxPainter createBoxPainter([VoidCallback? onChanged]) =>
+      const _RuledPaperPainter();
+}
+
+class _RuledPaperPainter extends BoxPainter {
+  const _RuledPaperPainter();
+
+  @override
+  void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
+    final size = configuration.size;
+    if (size == null || size.isEmpty) return;
+    final paint = Paint()
+      ..color = GaussColors.parchmentInk.withValues(alpha: .1)
+      ..strokeWidth = 1;
+    const spacing = 34.0;
+    for (var y = spacing + 8; y < size.height - 4; y += spacing) {
+      canvas.drawLine(
+        offset + Offset(4, y),
+        offset + Offset(size.width - 4, y),
+        paint,
+      );
+    }
+  }
 }
 
 class _ManuscriptToolRail extends StatelessWidget {
@@ -437,52 +490,60 @@ class _ManuscriptToolRail extends StatelessWidget {
     required this.ink,
     required this.inkStatus,
     required this.mode,
-    required this.vertical,
     required this.onMode,
     required this.onExpand,
     required this.onClear,
     required this.onRestore,
+    this.editing = false,
   });
 
   final ScratchInkController ink;
   final ScratchInkStatus inkStatus;
   final QuestionInkMode mode;
-  final bool vertical;
   final ValueChanged<QuestionInkMode> onMode;
   final VoidCallback onExpand;
   final VoidCallback onClear;
   final VoidCallback onRestore;
 
+  /// The header carries the two standing tools (pen mode, full pad). The
+  /// tools that only exist once ink exists (undo, eraser, clear or restore)
+  /// float over the writing band's corner instead, so ink appearing never
+  /// resizes the paper under the pen.
+  final bool editing;
+
   @override
   Widget build(BuildContext context) {
     final returnToScroll = mode != QuestionInkMode.pan;
     final buttons = <Widget>[
-      _ManuscriptToolButton(
-        key: ValueKey(
-          returnToScroll ? 'manuscript-pan-tool' : 'manuscript-pen-tool',
+      if (!editing)
+        _ManuscriptToolButton(
+          key: ValueKey(
+            returnToScroll ? 'manuscript-pan-tool' : 'manuscript-pen-tool',
+          ),
+          icon: returnToScroll
+              ? Icons.pan_tool_alt_outlined
+              : Icons.draw_outlined,
+          label: returnToScroll ? 'Touch scroll' : 'Finger pen',
+          selected: returnToScroll,
+          onPressed: () => onMode(
+            returnToScroll ? QuestionInkMode.pan : QuestionInkMode.pen,
+          ),
         ),
-        icon: returnToScroll
-            ? Icons.pan_tool_alt_outlined
-            : Icons.draw_outlined,
-        label: returnToScroll ? 'Touch scroll' : 'Finger pen',
-        selected: returnToScroll,
-        onPressed: () =>
-            onMode(returnToScroll ? QuestionInkMode.pan : QuestionInkMode.pen),
-      ),
-      if (inkStatus.canUndo && !inkStatus.canRestoreClearedInk)
+      if (editing && inkStatus.canUndo && !inkStatus.canRestoreClearedInk)
         _ManuscriptToolButton(
           key: const ValueKey('manuscript-undo-tool'),
           icon: Icons.undo_rounded,
           label: 'Undo last stroke',
           onPressed: ink.undo,
         ),
-      _ManuscriptToolButton(
-        key: const ValueKey('manuscript-expand-tool'),
-        icon: Icons.open_in_full_rounded,
-        label: 'Open full scratchpad',
-        onPressed: onExpand,
-      ),
-      if (!inkStatus.isEmpty && !inkStatus.canRestoreClearedInk)
+      if (!editing)
+        _ManuscriptToolButton(
+          key: const ValueKey('manuscript-expand-tool'),
+          icon: Icons.open_in_full_rounded,
+          label: 'Open full scratchpad',
+          onPressed: onExpand,
+        ),
+      if (editing && !inkStatus.isEmpty && !inkStatus.canRestoreClearedInk)
         _ManuscriptToolButton(
           key: const ValueKey('manuscript-eraser-tool'),
           icon: Icons.cleaning_services_outlined,
@@ -490,7 +551,7 @@ class _ManuscriptToolRail extends StatelessWidget {
           selected: mode == QuestionInkMode.eraser,
           onPressed: () => onMode(QuestionInkMode.eraser),
         ),
-      if (!inkStatus.isEmpty || inkStatus.canRestoreClearedInk)
+      if (editing && (!inkStatus.isEmpty || inkStatus.canRestoreClearedInk))
         _ManuscriptToolButton(
           key: ValueKey(
             inkStatus.canRestoreClearedInk
@@ -507,27 +568,15 @@ class _ManuscriptToolRail extends StatelessWidget {
           onPressed: inkStatus.canRestoreClearedInk ? onRestore : onClear,
         ),
     ];
+    if (buttons.isEmpty) return const SizedBox.shrink();
     return Semantics(
       container: true,
-      label: 'Manuscript tools',
-      child: vertical
-          ? Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                for (var index = 0; index < buttons.length; index++) ...[
-                  buttons[index],
-                  if (index != buttons.length - 1)
-                    const SizedBox(height: GaussSpacing.space8),
-                ],
-              ],
-            )
-          : Wrap(
-              alignment: WrapAlignment.center,
-              spacing: GaussSpacing.space8,
-              runSpacing: GaussSpacing.space8,
-              children: buttons,
-            ),
+      label: editing ? 'Ink tools' : 'Manuscript tools',
+      child: Wrap(
+        spacing: GaussSpacing.space4,
+        runSpacing: GaussSpacing.space4,
+        children: buttons,
+      ),
     );
   }
 }
@@ -566,9 +615,13 @@ class _ManuscriptToolButton extends StatelessWidget {
         child: SizedBox.square(
           dimension: GaussMetrics.minTouchTarget,
           child: Material(
+            // Near-opaque paper, so a tool floating over ink stays legible.
             color: selected
-                ? GaussParchmentInk.selectedWash
-                : const Color(0x12FFFFFF),
+                ? Color.alphaBlend(
+                    GaussParchmentInk.selectedWash,
+                    GaussColors.parchment,
+                  )
+                : GaussColors.parchment.withValues(alpha: .94),
             shape: CircleBorder(
               side: BorderSide(
                 color: color.withValues(alpha: onPressed == null ? .18 : .5),
@@ -591,13 +644,21 @@ class _ManuscriptToolButton extends StatelessWidget {
   }
 }
 
-/// A single engraved answer row inside [QuestionManuscript].
+/// One answer row inside [QuestionManuscript].
+///
+/// The row follows the content's reading direction (right-to-left for the
+/// Persian source), so the choice number sits where the eye starts, as on a
+/// printed test sheet. State is carried by the badge shape and fill as well
+/// as color: a number while open, a check or a cross once checked. Fill and
+/// edge colors animate (SonusKt selection grammar); a checked result gives
+/// the badge one short settle so the outcome registers.
 class ManuscriptChoiceShell extends StatelessWidget {
   const ManuscriptChoiceShell({
     required this.tone,
     required this.emblem,
     required this.child,
     required this.onTap,
+    this.textDirection = TextDirection.rtl,
     super.key,
   });
 
@@ -605,6 +666,7 @@ class ManuscriptChoiceShell extends StatelessWidget {
   final Widget emblem;
   final Widget child;
   final VoidCallback? onTap;
+  final TextDirection textDirection;
 
   Color get _accent => switch (tone) {
     TheoremChoiceTone.neutral => GaussParchmentInk.sepia,
@@ -617,65 +679,93 @@ class ManuscriptChoiceShell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final active = tone != TheoremChoiceTone.neutral;
+    final accent = _accent;
+    final duration = GaussMotion.resolve(
+      context,
+      const Duration(milliseconds: 220),
+    );
+    final settles =
+        tone == TheoremChoiceTone.positive ||
+        tone == TheoremChoiceTone.negative;
+    final badge = AnimatedContainer(
+      duration: duration,
+      curve: Curves.easeOutCubic,
+      width: 40,
+      height: 40,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: active ? accent : Colors.transparent,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: active ? accent : accent.withValues(alpha: .55),
+          width: 1.5,
+        ),
+      ),
+      child: IconTheme.merge(
+        data: IconThemeData(
+          color: active ? GaussColors.parchment : GaussColors.parchmentInk,
+          size: 22,
+        ),
+        child: DefaultTextStyle.merge(
+          style: TextStyle(
+            fontFamily: 'Manrope',
+            color: active ? GaussColors.parchment : GaussColors.parchmentInk,
+            fontSize: 17,
+            fontWeight: FontWeight.w900,
+            height: 1,
+          ),
+          child: emblem,
+        ),
+      ),
+    );
     return Padding(
       padding: const EdgeInsets.only(bottom: GaussSpacing.space8),
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(minHeight: 76),
+      child: Directionality(
+        textDirection: textDirection,
         child: Material(
           color: Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: onTap,
-            splashColor: _accent.withValues(alpha: .1),
-            highlightColor: _accent.withValues(alpha: .05),
+            splashColor: accent.withValues(alpha: .12),
+            highlightColor: accent.withValues(alpha: .06),
             child: AnimatedContainer(
-              duration: GaussMotion.resolve(context, GaussMotion.micro),
+              duration: duration,
               curve: Curves.easeOutCubic,
+              constraints: const BoxConstraints(minHeight: 60),
+              padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 14, 10),
               decoration: BoxDecoration(
                 color: active
-                    ? _accent.withValues(alpha: .1)
-                    : const Color(0x18FFFFFF),
+                    ? accent.withValues(alpha: .12)
+                    : const Color(0x1FFFFFFF),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: active ? accent : accent.withValues(alpha: .28),
+                  width: active ? 1.5 : 1,
+                ),
               ),
-              child: CustomPaint(
-                painter: _ChoiceEngravingPainter(
-                  accent: _accent,
-                  active: active,
-                ),
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(12, 12, 16, 12),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox.square(
-                        dimension: 50,
-                        child: CustomPaint(
-                          painter: _ChoiceSealPainter(
-                            accent: _accent,
-                            active: active,
+              child: Row(
+                children: [
+                  settles
+                      ? TweenAnimationBuilder<double>(
+                          key: ValueKey(tone),
+                          tween: Tween(begin: 1.18, end: 1),
+                          duration: GaussMotion.resolve(
+                            context,
+                            const Duration(milliseconds: 360),
                           ),
-                          child: Center(child: emblem),
-                        ),
-                      ),
-                      const SizedBox(width: GaussSpacing.space12),
-                      Expanded(child: child),
-                      const SizedBox(width: GaussSpacing.space8),
-                      Icon(
-                        // Shape, not just color, tells the state apart.
-                        switch (tone) {
-                          TheoremChoiceTone.neutral =>
-                            Icons.radio_button_unchecked_rounded,
-                          TheoremChoiceTone.selected =>
-                            Icons.radio_button_checked_rounded,
-                          TheoremChoiceTone.positive =>
-                            Icons.check_circle_rounded,
-                          TheoremChoiceTone.negative => Icons.cancel_rounded,
-                          TheoremChoiceTone.source => Icons.bookmark_rounded,
-                        },
-                        size: 18,
-                        color: _accent.withValues(alpha: active ? .9 : .38),
-                      ),
-                    ],
-                  ),
-                ),
+                          curve: Curves.easeOutBack,
+                          builder: (context, scale, child) =>
+                              Transform.scale(scale: scale, child: child),
+                          child: badge,
+                        )
+                      : badge,
+                  const SizedBox(width: GaussSpacing.space12),
+                  Expanded(child: child),
+                ],
               ),
             ),
           ),
@@ -716,26 +806,6 @@ class _EngravedRule extends StatelessWidget {
   );
 }
 
-class _VerticalEngravedRule extends StatelessWidget {
-  const _VerticalEngravedRule();
-
-  @override
-  Widget build(BuildContext context) => Container(
-    width: 1,
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [
-          Colors.transparent,
-          GaussParchmentInk.ruleFade,
-          Colors.transparent,
-        ],
-      ),
-    ),
-  );
-}
-
 class _ManuscriptFramePainter extends CustomPainter {
   const _ManuscriptFramePainter({required this.accent});
   final Color accent;
@@ -759,63 +829,6 @@ class _ManuscriptFramePainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _ManuscriptFramePainter oldDelegate) =>
       oldDelegate.accent != accent;
-}
-
-class _ChoiceEngravingPainter extends CustomPainter {
-  const _ChoiceEngravingPainter({required this.accent, required this.active});
-  final Color accent;
-  final bool active;
-
-  // One rounded hairline. The row's state is carried by the trailing glyph
-  // and this stroke's weight, not by notched corners and inner rules.
-  @override
-  void paint(Canvas canvas, Size size) {
-    final inset = active ? .75 : .5;
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(
-        (Offset.zero & size).deflate(inset),
-        const Radius.circular(GaussRadii.small),
-      ),
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = active ? 1.5 : 1
-        ..color = accent.withValues(alpha: active ? .9 : .4),
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant _ChoiceEngravingPainter oldDelegate) =>
-      oldDelegate.accent != accent || oldDelegate.active != active;
-}
-
-class _ChoiceSealPainter extends CustomPainter {
-  const _ChoiceSealPainter({required this.accent, required this.active});
-  final Color accent;
-  final bool active;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final center = size.center(Offset.zero);
-    if (active) {
-      canvas.drawCircle(
-        center,
-        20,
-        Paint()..color = accent.withValues(alpha: .14),
-      );
-    }
-    canvas.drawCircle(
-      center,
-      20,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = active ? 1.5 : 1
-        ..color = accent.withValues(alpha: active ? .9 : .5),
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant _ChoiceSealPainter oldDelegate) =>
-      oldDelegate.accent != accent || oldDelegate.active != active;
 }
 
 /// Answer rails: one column on phones; two columns once the manuscript is

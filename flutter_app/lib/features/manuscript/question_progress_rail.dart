@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:gauss/ui/tokens/gauss_tokens.dart';
 import 'package:gauss/ui/theme/gauss_theme.dart';
 
-/// Five question positions presented as one compact constellation instrument.
+/// Session progress as one segmented meter (SonusKt `Meter` grammar).
 ///
-/// Labels and values remain live English chrome. Each numbered position is
-/// visible without relying on color, and the composition reflows vertically
-/// instead of shrinking when 200% text needs more room.
+/// Each segment is one question. Answered segments carry their outcome:
+/// teal for a correct answer, coral for a miss or skip, so the five
+/// results read at a glance without numbered circles crowding the header.
+/// The position is always stated in text as well, never by color alone.
+/// Labels and values remain live English chrome and the header reflows
+/// vertically instead of shrinking when 200% text needs more room.
 class QuestionProgressRail extends StatelessWidget {
   const QuestionProgressRail({
     required this.index,
@@ -16,6 +19,7 @@ class QuestionProgressRail extends StatelessWidget {
     this.accent = GaussColors.brassLight,
     this.valueKey,
     this.valueText,
+    this.outcomes = const {},
     super.key,
   }) : assert(total > 0),
        assert(index >= 0),
@@ -28,162 +32,145 @@ class QuestionProgressRail extends StatelessWidget {
   final Key? valueKey;
   final String? valueText;
 
+  /// Recorded results by question index: true correct, false missed.
+  final Map<int, bool> outcomes;
+
   @override
-  Widget build(BuildContext context) => Semantics(
-    container: true,
-    label: '$label. Question ${index + 1} of $total.',
-    child: ExcludeSemantics(
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          final scaledInsignia = MediaQuery.textScalerOf(
-            context,
-          ).scale(GaussTypeScale.insignia);
-          final stackHeader =
-              constraints.maxWidth < 210 ||
-              (scaledInsignia >= 18 && constraints.maxWidth < 420);
-          final rail = _ConstellationRail(
-            index: index,
-            total: total,
-            accent: accent,
-          );
-          final labelWidget = Text(
-            label,
-            textAlign: stackHeader ? TextAlign.center : TextAlign.start,
-            softWrap: true,
-            style: TextStyle(
-              color: accent,
-              fontSize: GaussTypeScale.caption,
-              fontWeight: FontWeight.w900,
-              letterSpacing: .2,
-              height: 1.1,
-            ),
-          );
-          final valueWidget = Text(
-            valueText ?? '${index + 1} / $total',
-            key: valueKey,
-            textAlign: stackHeader ? TextAlign.center : TextAlign.end,
-            softWrap: true,
-            style: const TextStyle(
-              color: GaussColors.ivory,
-              fontSize: GaussTypeScale.caption,
-              fontWeight: FontWeight.w900,
-              height: 1.1,
-            ),
-          );
-          if (stackHeader) {
-            return Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                labelWidget,
-                const SizedBox(height: GaussSpacing.space4),
-                rail,
-                const SizedBox(height: GaussSpacing.space4),
-                valueWidget,
-              ],
+  Widget build(BuildContext context) {
+    final correct = outcomes.values.where((value) => value).length;
+    return Semantics(
+      container: true,
+      label:
+          '$label. Question ${index + 1} of $total.'
+          '${outcomes.isEmpty ? '' : ' $correct of ${outcomes.length} answered correctly.'}',
+      child: ExcludeSemantics(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final scaledInsignia = MediaQuery.textScalerOf(
+              context,
+            ).scale(GaussTypeScale.insignia);
+            final stackHeader =
+                constraints.maxWidth < 210 ||
+                (scaledInsignia >= 18 && constraints.maxWidth < 420);
+            final rail = _SegmentedMeter(
+              index: index,
+              total: total,
+              accent: accent,
+              outcomes: outcomes,
             );
-          }
-          return Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
+            final labelWidget = Text(
+              label,
+              textAlign: stackHeader ? TextAlign.center : TextAlign.start,
+              softWrap: true,
+              style: const TextStyle(
+                color: GaussColors.ivory,
+                fontSize: GaussTypeScale.caption,
+                fontWeight: FontWeight.w800,
+                height: 1.2,
+              ),
+            );
+            final valueWidget = Text(
+              valueText ?? '${index + 1} / $total',
+              key: valueKey,
+              textAlign: stackHeader ? TextAlign.center : TextAlign.end,
+              softWrap: true,
+              style: TextStyle(
+                color: accent,
+                fontSize: GaussTypeScale.caption,
+                fontWeight: FontWeight.w900,
+                height: 1.2,
+                fontFeatures: const [FontFeature.tabularFigures()],
+              ),
+            );
+            if (stackHeader) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Expanded(child: labelWidget),
-                  const SizedBox(width: GaussSpacing.space8),
+                  labelWidget,
+                  const SizedBox(height: GaussSpacing.space8),
+                  rail,
+                  const SizedBox(height: GaussSpacing.space8),
                   valueWidget,
                 ],
-              ),
-              const SizedBox(height: GaussSpacing.space4),
-              rail,
-            ],
-          );
-        },
+              );
+            }
+            return Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
+                  children: [
+                    Expanded(child: labelWidget),
+                    const SizedBox(width: GaussSpacing.space8),
+                    valueWidget,
+                  ],
+                ),
+                const SizedBox(height: GaussSpacing.space8),
+                rail,
+              ],
+            );
+          },
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
-class _ConstellationRail extends StatelessWidget {
-  const _ConstellationRail({
+class _SegmentedMeter extends StatelessWidget {
+  const _SegmentedMeter({
     required this.index,
     required this.total,
     required this.accent,
+    required this.outcomes,
   });
 
   final int index;
   final int total;
   final Color accent;
+  final Map<int, bool> outcomes;
+
+  Color _fill(int step) {
+    final outcome = outcomes[step];
+    if (outcome != null) {
+      return outcome ? GaussColors.signalBright : GaussColors.error;
+    }
+    if (step == index) return accent;
+    if (step < index) return GaussColors.signal.withValues(alpha: .7);
+    return GaussColors.ivory.withValues(alpha: .14);
+  }
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-    key: const ValueKey('question-progress-segments'),
-    height: 34,
-    child: Stack(
-      alignment: Alignment.center,
-      children: [
-        PositionedDirectional(
-          start: 14,
-          end: 14,
-          child: Container(
-            height: 2,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  accent.withValues(alpha: .12),
-                  GaussColors.brass.withValues(alpha: .48),
-                  GaussColors.hairline,
-                  accent.withValues(alpha: .12),
-                ],
-              ),
-            ),
-          ),
-        ),
-        Row(
-          children: [
-            for (var step = 0; step < total; step++)
-              Expanded(
-                child: Center(
-                  child: AnimatedContainer(
-                    key: ValueKey('question-progress-segment-$step'),
-                    duration: GaussMotion.resolve(context, GaussMotion.micro),
-                    width: step == index ? 32 : 26,
-                    height: step == index ? 32 : 26,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: step < index
-                          ? GaussColors.signal.withValues(alpha: .2)
-                          : step == index
-                          ? GaussColors.deepInk
-                          : GaussColors.abyss.withValues(alpha: .9),
-                      border: Border.all(
-                        color: step < index
-                            ? GaussColors.signalBright
-                            : step == index
-                            ? accent
-                            : GaussColors.fog.withValues(alpha: .72),
-                        width: step == index ? 2 : 1.2,
-                      ),
-                    ),
-                    child: Text(
-                      '${step + 1}',
-                      style: TextStyle(
-                        color: step < index
-                            ? GaussColors.signalBright
-                            : step == index
-                            ? GaussColors.brassLight
-                            : GaussColors.ivory,
-                        fontSize: step == index ? 12 : 10,
-                        fontWeight: FontWeight.w900,
-                        height: 1,
-                      ),
-                    ),
-                  ),
+  Widget build(BuildContext context) {
+    // Meter values ease over 450ms, as in SonusKt; reduced motion snaps.
+    final duration = GaussMotion.resolve(
+      context,
+      const Duration(milliseconds: 450),
+    );
+    return SizedBox(
+      key: const ValueKey('question-progress-segments'),
+      height: 8,
+      child: Row(
+        children: [
+          for (var step = 0; step < total; step++) ...[
+            if (step > 0) const SizedBox(width: 4),
+            Expanded(
+              // The current question's segment is wider, so position also
+              // reads by shape.
+              flex: step == index ? 3 : 2,
+              child: AnimatedContainer(
+                key: ValueKey('question-progress-segment-$step'),
+                duration: duration,
+                curve: Curves.easeOutCubic,
+                height: step == index ? 8 : 6,
+                decoration: ShapeDecoration(
+                  color: _fill(step),
+                  shape: const StadiumBorder(),
                 ),
               ),
+            ),
           ],
-        ),
-      ],
-    ),
-  );
+        ],
+      ),
+    );
+  }
 }

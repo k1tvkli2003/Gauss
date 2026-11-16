@@ -54,6 +54,38 @@ Future<void> _loadFonts() async {
     'assets/fonts/vazirmatn_extrabold.ttf',
     'assets/fonts/vazirmatn_black.ttf',
   ]);
+  // flutter_math_fork registers its KaTeX faces under package-scoped family
+  // names; without them every formula renders as missing-glyph boxes.
+  const katex = 'packages/flutter_math_fork/lib/katex_fonts/fonts';
+  final families = <String, List<String>>{};
+  for (final face in const [
+    'AMS-Regular',
+    'Caligraphic-Bold',
+    'Caligraphic-Regular',
+    'Fraktur-Bold',
+    'Fraktur-Regular',
+    'Main-Bold',
+    'Main-BoldItalic',
+    'Main-Italic',
+    'Main-Regular',
+    'Math-BoldItalic',
+    'Math-Italic',
+    'SansSerif-Bold',
+    'SansSerif-Italic',
+    'SansSerif-Regular',
+    'Script-Regular',
+    'Size1-Regular',
+    'Size2-Regular',
+    'Size3-Regular',
+    'Size4-Regular',
+    'Typewriter-Regular',
+  ]) {
+    final family = 'packages/flutter_math_fork/KaTeX_${face.split('-').first}';
+    families.putIfAbsent(family, () => []).add('$katex/KaTeX_$face.ttf');
+  }
+  for (final entry in families.entries) {
+    await family(entry.key, entry.value);
+  }
   final sdk =
       Platform.environment['FLUTTER_ROOT'] ??
       File(Platform.resolvedExecutable).parent.parent.parent.parent.parent.path;

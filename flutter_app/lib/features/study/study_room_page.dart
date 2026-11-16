@@ -156,7 +156,6 @@ class _ArchivePage extends StatelessWidget {
             enabled: !revealed,
             markedBySource: revealed && choice == question.correctChoiceIndex,
             onTap: () => onHypothesis(choice),
-            manuscript: true,
           ),
         if (!revealed) ...[
           const SizedBox(height: GaussSpacing.space8),
@@ -263,7 +262,7 @@ class _HypothesisComparison extends StatelessWidget {
   final int? hypothesis;
   final int sourceKey;
 
-  static String _letter(int choice) => String.fromCharCode(65 + choice);
+  static String _letter(int choice) => '${choice + 1}';
 
   @override
   Widget build(BuildContext context) {
@@ -393,7 +392,6 @@ class _ArchiveChoice extends StatelessWidget {
     required this.enabled,
     required this.markedBySource,
     required this.onTap,
-    this.manuscript = false,
   });
 
   final List<ContentBlock> blocks;
@@ -402,7 +400,6 @@ class _ArchiveChoice extends StatelessWidget {
   final bool enabled;
   final bool markedBySource;
   final VoidCallback onTap;
-  final bool manuscript;
 
   @override
   Widget build(BuildContext context) {
@@ -421,58 +418,20 @@ class _ArchiveChoice extends StatelessWidget {
           'Choice ${choice + 1}.'
           '${selected ? ' Your private hypothesis.' : ''}'
           '${markedBySource ? ' Marked as the answer by the unverified source.' : ''}',
-      child: manuscript
-          ? ManuscriptChoiceShell(
-              tone: tone,
-              onTap: enabled ? onTap : null,
-              emblem: markedBySource
-                  ? const Icon(
-                      Icons.shield_outlined,
-                      size: 17,
-                      color: GaussParchmentInk.brass,
-                    )
-                  : selected
-                  ? const Icon(
-                      Icons.edit_note_rounded,
-                      size: 19,
-                      color: GaussParchmentInk.teal,
-                    )
-                  : Text(
-                      String.fromCharCode(65 + choice),
-                      style: const TextStyle(
-                        color: GaussColors.parchmentInk,
-                        fontFamily: 'serif',
-                        fontSize: 22,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-              child: ContentBlocksView(
-                blocks: blocks,
-                compact: true,
-                textColor: GaussColors.parchmentInk,
-              ),
-            )
-          : TheoremChoiceShell(
-              tone: tone,
-              onTap: enabled ? onTap : null,
-              emblem: markedBySource
-                  ? const Icon(
-                      Icons.shield_outlined,
-                      size: 17,
-                      color: GaussColors.warning,
-                    )
-                  : selected
-                  ? const Icon(
-                      Icons.edit_note_rounded,
-                      size: 19,
-                      color: GaussColors.brassLight,
-                    )
-                  : Text(
-                      String.fromCharCode(65 + choice),
-                      style: const TextStyle(fontWeight: FontWeight.w900),
-                    ),
-              child: ContentBlocksView(blocks: blocks, compact: true),
-            ),
+      child: ManuscriptChoiceShell(
+        tone: tone,
+        onTap: enabled ? onTap : null,
+        emblem: markedBySource
+            ? const Icon(Icons.bookmark_rounded, size: 20)
+            : selected
+            ? const Icon(Icons.edit_note_rounded)
+            : Text('${choice + 1}'),
+        child: ContentBlocksView(
+          blocks: blocks,
+          compact: true,
+          textColor: GaussColors.parchmentInk,
+        ),
+      ),
     );
   }
 }
