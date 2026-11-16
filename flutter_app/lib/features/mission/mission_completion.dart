@@ -539,50 +539,48 @@ class _MissionCompletionDock extends StatelessWidget {
         constraints: const BoxConstraints(maxWidth: 340),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
-          child: BackdropFilter(
-            filter: ui.ImageFilter.blur(sigmaX: 16, sigmaY: 16),
-            child: Container(
-              key: const ValueKey('mission-completion-actions'),
-              padding: const EdgeInsets.fromLTRB(12, 8, 12, 7),
-              decoration: BoxDecoration(
-                color: GaussColors.deepInk.withValues(alpha: .93),
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(
-                  color: GaussColors.brass.withValues(alpha: .3),
+          // Opaque dock: the blur under a 93% fill was not visible.
+          child: Container(
+            key: const ValueKey('mission-completion-actions'),
+            padding: const EdgeInsets.fromLTRB(12, 8, 12, 7),
+            decoration: BoxDecoration(
+              color: GaussColors.deepInk,
+              borderRadius: BorderRadius.circular(30),
+              border: Border.all(
+                color: GaussColors.brass.withValues(alpha: .3),
+              ),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Center(
+                    child: OrbitalActionControl(
+                      key: const ValueKey('mission-retry-action'),
+                      semanticLabel: 'Start another mission',
+                      caption: 'New mission',
+                      onPressed: onRetry,
+                      icon: Icons.replay_rounded,
+                      dimension: 52,
+                      accent: GaussColors.ice,
+                    ),
+                  ),
                 ),
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Center(
-                      child: OrbitalActionControl(
-                        key: const ValueKey('mission-retry-action'),
-                        semanticLabel: 'Start another mission',
-                        caption: 'New mission',
-                        onPressed: onRetry,
-                        icon: Icons.replay_rounded,
-                        dimension: 52,
-                        accent: GaussColors.ice,
-                      ),
+                const SizedBox(width: GaussSpacing.space12),
+                Expanded(
+                  child: Center(
+                    child: OrbitalActionControl(
+                      key: const ValueKey('mission-map-action'),
+                      semanticLabel: 'Return to map',
+                      caption: 'Return to map',
+                      onPressed: onMap,
+                      icon: Icons.map_outlined,
+                      dimension: 58,
+                      accent: GaussColors.signalBright,
                     ),
                   ),
-                  const SizedBox(width: GaussSpacing.space12),
-                  Expanded(
-                    child: Center(
-                      child: OrbitalActionControl(
-                        key: const ValueKey('mission-map-action'),
-                        semanticLabel: 'Return to map',
-                        caption: 'Return to map',
-                        onPressed: onMap,
-                        icon: Icons.map_outlined,
-                        dimension: 58,
-                        accent: GaussColors.signalBright,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
