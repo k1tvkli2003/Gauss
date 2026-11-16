@@ -417,13 +417,9 @@ class _VaultEmptyState extends StatelessWidget {
 
 BoxDecoration _vaultStateDecoration({Color accent = GaussColors.brass}) =>
     BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: [
-          accent.withValues(alpha: .08),
-          GaussColors.deepInk.withValues(alpha: .95),
-        ],
+      color: Color.alphaBlend(
+        accent.withValues(alpha: .06),
+        GaussColors.deepInk,
       ),
       borderRadius: BorderRadius.circular(20),
       border: Border.all(color: accent.withValues(alpha: .34)),
@@ -441,14 +437,7 @@ class _BrowserVaultBoundary extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.fromLTRB(24, 28, 24, 24),
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                GaussColors.panelHigh.withValues(alpha: .94),
-                GaussColors.deepInk.withValues(alpha: .97),
-              ],
-            ),
+            color: GaussColors.panelHigh,
             borderRadius: BorderRadius.circular(24),
             border: Border.all(color: GaussColors.brass.withValues(alpha: .32)),
             boxShadow: [

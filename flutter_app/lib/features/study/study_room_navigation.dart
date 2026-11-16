@@ -227,76 +227,68 @@ class _ArchiveNavBar extends StatelessWidget {
     child: Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 360),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(28),
-          child: BackdropFilter(
-            filter: ui.ImageFilter.blur(sigmaX: 16, sigmaY: 16),
-            child: Container(
-              key: const ValueKey('study-room-navigation-dock'),
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7),
-              decoration: BoxDecoration(
-                color: GaussColors.deepInk.withValues(alpha: .9),
-                borderRadius: BorderRadius.circular(28),
-                border: Border.all(
-                  color: GaussColors.brass.withValues(alpha: .24),
+        // Opaque, no backdrop blur: the dock sits over a static backdrop
+        // and a blur would re-rasterize on every page swipe and ink frame.
+        child: Container(
+          key: const ValueKey('study-room-navigation-dock'),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7),
+          decoration: BoxDecoration(
+            color: GaussColors.deepInk,
+            borderRadius: BorderRadius.circular(28),
+            border: Border.all(color: GaussColors.hairline),
+          ),
+          child: AnimatedBuilder(
+            animation: ink,
+            builder: (context, _) => Row(
+              children: [
+                IconButton.outlined(
+                  key: const ValueKey('study-room-previous-action'),
+                  onPressed: onPrevious,
+                  tooltip: 'Previous question',
+                  icon: const Icon(Icons.arrow_back_rounded, size: 19),
                 ),
-              ),
-              child: AnimatedBuilder(
-                animation: ink,
-                builder: (context, _) => Row(
-                  children: [
-                    IconButton.outlined(
-                      key: const ValueKey('study-room-previous-action'),
-                      onPressed: onPrevious,
-                      tooltip: 'Previous question',
-                      icon: const Icon(Icons.arrow_back_rounded, size: 19),
+                const SizedBox(width: GaussSpacing.space8),
+                Expanded(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minHeight:
+                          MediaQuery.textScalerOf(context).scale(14) >= 20
+                          ? 70
+                          : 60,
                     ),
-                    const SizedBox(width: GaussSpacing.space8),
-                    Expanded(
-                      child: ConstrainedBox(
-                        constraints: BoxConstraints(
-                          minHeight:
-                              MediaQuery.textScalerOf(context).scale(14) >= 20
-                              ? 70
-                              : 60,
-                        ),
-                        child: AnimatedSwitcher(
-                          duration: GaussMotion.resolve(
-                            context,
-                            GaussMotion.standard,
-                          ),
-                          switchInCurve: Curves.easeOutCubic,
-                          switchOutCurve: Curves.easeInCubic,
-                          child: ink.isEmpty || ink.canRestoreClearedInk
-                              ? ink.canRestoreClearedInk
-                                    ? _ArchiveInkRestore(
-                                        onRestore: onRestoreInk,
-                                      )
-                                    : _ArchiveQuestionPosition(
-                                        index: index,
-                                        total: total,
-                                        reflected: reflected,
-                                        onJump: onJump,
-                                      )
-                              : _ArchiveInkControls(
-                                  ink: ink,
-                                  onExpand: onOpenInkWorkspace,
-                                  onClear: onClearInk,
-                                ),
-                        ),
+                    child: AnimatedSwitcher(
+                      duration: GaussMotion.resolve(
+                        context,
+                        GaussMotion.standard,
                       ),
+                      switchInCurve: Curves.easeOutCubic,
+                      switchOutCurve: Curves.easeInCubic,
+                      child: ink.isEmpty || ink.canRestoreClearedInk
+                          ? ink.canRestoreClearedInk
+                                ? _ArchiveInkRestore(onRestore: onRestoreInk)
+                                : _ArchiveQuestionPosition(
+                                    index: index,
+                                    total: total,
+                                    reflected: reflected,
+                                    onJump: onJump,
+                                  )
+                          : _ArchiveInkControls(
+                              ink: ink,
+                              onExpand: onOpenInkWorkspace,
+                              onClear: onClearInk,
+                            ),
                     ),
-                    const SizedBox(width: GaussSpacing.space8),
-                    OrbitalActionControl(
-                      key: const ValueKey('study-room-next-action'),
-                      semanticLabel: 'Next question',
-                      onPressed: onNext,
-                      icon: Icons.arrow_forward_rounded,
-                      dimension: GaussMetrics.minTouchTarget,
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+                const SizedBox(width: GaussSpacing.space8),
+                OrbitalActionControl(
+                  key: const ValueKey('study-room-next-action'),
+                  semanticLabel: 'Next question',
+                  onPressed: onNext,
+                  icon: Icons.arrow_forward_rounded,
+                  dimension: GaussMetrics.minTouchTarget,
+                ),
+              ],
             ),
           ),
         ),

@@ -223,11 +223,11 @@ class _SectionAtlasCardState extends State<_SectionAtlasCard> {
                             width: 42,
                             height: 42,
                             alignment: Alignment.center,
+                            // Flat brass, the same numbered-badge shape the
+                            // question choices use.
                             decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: const LinearGradient(
-                                colors: [Color(0xFFE1AD4C), Color(0xFF8B5713)],
-                              ),
+                              color: GaussColors.brass,
+                              borderRadius: BorderRadius.circular(12),
                             ),
                             child: Text(
                               '${widget.number}',

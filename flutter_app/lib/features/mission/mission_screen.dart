@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:math' as math;
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -78,6 +77,9 @@ class _MissionScreenState extends State<MissionScreen> {
   late String _sourceTopicKey;
   late bool _choicesRevealed;
   String? _errorTag;
+
+  /// Recorded result per mission index, for the session meter.
+  final Map<int, bool> _outcomes = {};
   final Map<String, ScratchInkController> _inkControllers = {};
   final Map<String, Timer> _inkClearTimers = {};
 
@@ -164,6 +166,13 @@ class _MissionScreenState extends State<MissionScreen> {
         _choicesRevealed = true;
         _errorTag = currentAttempt?.errorTag;
         _correct = saved.attempts.where((attempt) => attempt.correct).length;
+        _outcomes
+          ..clear()
+          ..addEntries(
+            saved.attempts.map(
+              (attempt) => MapEntry(attempt.missionIndex, attempt.correct),
+            ),
+          );
         _elapsedBeforeResume = saved.attempts.fold(
           0,
           (total, attempt) => total + attempt.elapsedSeconds,
@@ -249,6 +258,7 @@ class _MissionScreenState extends State<MissionScreen> {
       if (!mounted) return;
       setState(() {
         _checked = true;
+        _outcomes[_index] = correct;
         if (correct) _correct++;
       });
       if (correct) {
@@ -288,7 +298,10 @@ class _MissionScreenState extends State<MissionScreen> {
         ),
       );
       if (!mounted) return;
-      setState(() => _checked = true);
+      setState(() {
+        _checked = true;
+        _outcomes[_index] = false;
+      });
       unawaited(HapticFeedback.selectionClick());
     } catch (error) {
       if (!mounted) return;
@@ -454,6 +467,7 @@ class _MissionScreenState extends State<MissionScreen> {
       _ritualComplete = false;
       _saving = false;
       _correct = 0;
+      _outcomes.clear();
       _operationError = null;
       _completion = null;
       _elapsedBeforeResume = 0;
@@ -592,6 +606,7 @@ class _MissionScreenState extends State<MissionScreen> {
             covered: !_choicesRevealed,
             errorTag: _errorTag,
             operationError: _operationError,
+            outcomes: _outcomes,
             ink: ink,
             onSelect: (choice) => setState(() => _selectedChoice = choice),
             onCheck: _checkAnswer,

@@ -115,112 +115,107 @@ class _AppShellState extends State<_AppShell> {
                         minimum: const EdgeInsets.all(10),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(24),
-                          child: BackdropFilter(
-                            filter: ui.ImageFilter.blur(sigmaX: 18, sigmaY: 18),
-                            child: DecoratedBox(
-                              decoration: BoxDecoration(
-                                color: GaussColors.deepInk.withValues(
-                                  alpha: .88,
-                                ),
-                                borderRadius: BorderRadius.circular(24),
-                                border: Border.all(
-                                  color: GaussColors.brass.withValues(
-                                    alpha: .24,
-                                  ),
-                                ),
+                          // Opaque rail: a blur behind an 88% fill was
+                          // invisible but re-sampled the live map every frame.
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                              color: GaussColors.deepInk,
+                              borderRadius: BorderRadius.circular(24),
+                              border: Border.all(
+                                color: GaussColors.brass.withValues(alpha: .24),
                               ),
-                              child: NavigationRail(
-                                key: const ValueKey('gauss-navigation-rail'),
-                                backgroundColor: Colors.transparent,
-                                extended: extendRail,
-                                minWidth: constrainedLandscape ? 72 : 82,
-                                minExtendedWidth: 188,
-                                groupAlignment: constrainedLandscape ? 0 : -.58,
-                                selectedIndex: shell.currentIndex,
-                                onDestinationSelected: _go,
-                                leading: Padding(
-                                  padding: EdgeInsets.fromLTRB(
-                                    12,
-                                    constrainedLandscape ? 6 : 12,
-                                    12,
-                                    constrainedLandscape ? 6 : 30,
-                                  ),
-                                  child: extendRail
-                                      ? const GaussWordmark(width: 132)
-                                      : TheoremStarMark(
-                                          size: constrainedLandscape ? 32 : 43,
-                                        ),
+                            ),
+                            child: NavigationRail(
+                              key: const ValueKey('gauss-navigation-rail'),
+                              backgroundColor: Colors.transparent,
+                              extended: extendRail,
+                              minWidth: constrainedLandscape ? 72 : 82,
+                              minExtendedWidth: 188,
+                              groupAlignment: constrainedLandscape ? 0 : -.58,
+                              selectedIndex: shell.currentIndex,
+                              onDestinationSelected: _go,
+                              leading: Padding(
+                                padding: EdgeInsets.fromLTRB(
+                                  12,
+                                  constrainedLandscape ? 6 : 12,
+                                  12,
+                                  constrainedLandscape ? 6 : 30,
                                 ),
-                                trailing: constrainedLandscape
-                                    ? const SizedBox.shrink()
-                                    : Expanded(
-                                        child: Align(
-                                          alignment: Alignment.bottomCenter,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              bottom: 18,
-                                            ),
-                                            child: Semantics(
-                                              label:
-                                                  'Offline. All learning content is available.',
-                                              child: extendRail
-                                                  ? const Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      children: [
-                                                        _OfflineDot(),
-                                                        SizedBox(width: 8),
-                                                        Text(
-                                                          'Offline',
-                                                          style: TextStyle(
-                                                            color: GaussColors
-                                                                .muted,
-                                                            fontSize: 12,
-                                                          ),
+                                child: extendRail
+                                    ? const GaussWordmark(width: 132)
+                                    : TheoremStarMark(
+                                        size: constrainedLandscape ? 32 : 43,
+                                      ),
+                              ),
+                              trailing: constrainedLandscape
+                                  ? const SizedBox.shrink()
+                                  : Expanded(
+                                      child: Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                            bottom: 18,
+                                          ),
+                                          child: Semantics(
+                                            label:
+                                                'Offline. All learning content is available.',
+                                            child: extendRail
+                                                ? const Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      _OfflineDot(),
+                                                      SizedBox(width: 8),
+                                                      Text(
+                                                        'Offline',
+                                                        style: TextStyle(
+                                                          color:
+                                                              GaussColors.muted,
+                                                          fontSize: 12,
                                                         ),
-                                                      ],
-                                                    )
-                                                  : const _OfflineDot(),
-                                            ),
+                                                      ),
+                                                    ],
+                                                  )
+                                                : const _OfflineDot(),
                                           ),
                                         ),
                                       ),
-                                destinations: const [
-                                  NavigationRailDestination(
-                                    icon: GaussNavGlyph(
-                                      glyph: GaussDestinationGlyph.map,
-                                      selected: false,
                                     ),
-                                    selectedIcon: GaussNavGlyph(
-                                      glyph: GaussDestinationGlyph.map,
-                                      selected: true,
-                                    ),
-                                    label: Text('Map'),
+                              destinations: const [
+                                NavigationRailDestination(
+                                  icon: GaussNavGlyph(
+                                    glyph: GaussDestinationGlyph.map,
+                                    selected: false,
                                   ),
-                                  NavigationRailDestination(
-                                    icon: GaussNavGlyph(
-                                      glyph: GaussDestinationGlyph.practice,
-                                      selected: false,
-                                    ),
-                                    selectedIcon: GaussNavGlyph(
-                                      glyph: GaussDestinationGlyph.practice,
-                                      selected: true,
-                                    ),
-                                    label: Text('Study'),
+                                  selectedIcon: GaussNavGlyph(
+                                    glyph: GaussDestinationGlyph.map,
+                                    selected: true,
                                   ),
-                                  NavigationRailDestination(
-                                    icon: GaussNavGlyph(
-                                      glyph: GaussDestinationGlyph.insights,
-                                      selected: false,
-                                    ),
-                                    selectedIcon: GaussNavGlyph(
-                                      glyph: GaussDestinationGlyph.insights,
-                                      selected: true,
-                                    ),
-                                    label: Text('Insights'),
+                                  label: Text('Map'),
+                                ),
+                                NavigationRailDestination(
+                                  icon: GaussNavGlyph(
+                                    glyph: GaussDestinationGlyph.practice,
+                                    selected: false,
                                   ),
-                                ],
-                              ),
+                                  selectedIcon: GaussNavGlyph(
+                                    glyph: GaussDestinationGlyph.practice,
+                                    selected: true,
+                                  ),
+                                  label: Text('Study'),
+                                ),
+                                NavigationRailDestination(
+                                  icon: GaussNavGlyph(
+                                    glyph: GaussDestinationGlyph.insights,
+                                    selected: false,
+                                  ),
+                                  selectedIcon: GaussNavGlyph(
+                                    glyph: GaussDestinationGlyph.insights,
+                                    selected: true,
+                                  ),
+                                  label: Text('Insights'),
+                                ),
+                              ],
                             ),
                           ),
                         ),

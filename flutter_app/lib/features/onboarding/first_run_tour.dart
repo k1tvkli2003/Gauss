@@ -198,14 +198,7 @@ class _TourCard extends StatelessWidget {
     child: Container(
       padding: const EdgeInsets.all(22),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            GaussColors.panelHigh.withValues(alpha: .96),
-            GaussColors.ink.withValues(alpha: .97),
-          ],
-        ),
+        color: GaussColors.panelHigh,
         borderRadius: BorderRadius.circular(24),
         border: Border.all(color: GaussColors.brass.withValues(alpha: .38)),
       ),

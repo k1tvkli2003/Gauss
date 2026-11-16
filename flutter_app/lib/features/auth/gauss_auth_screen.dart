@@ -1,5 +1,3 @@
-import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
 
 import 'package:gauss/ui/tokens/gauss_tokens.dart';
@@ -262,140 +260,136 @@ class _AuthInstrument extends StatelessWidget {
       final creating = controller.mode == GaussAuthMode.createAccount;
       return ClipRRect(
         borderRadius: BorderRadius.circular(30),
-        child: BackdropFilter(
-          filter: ui.ImageFilter.blur(sigmaX: 20, sigmaY: 20),
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              color: GaussColors.deepInk.withValues(alpha: .9),
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(
-                color: GaussColors.brass.withValues(alpha: .48),
-              ),
-              boxShadow: const [
-                BoxShadow(color: Color(0xB0000000), blurRadius: 34),
-              ],
-            ),
-            child: Padding(
-              padding: EdgeInsets.all(compact ? 18 : 26),
-              child: AutofillGroup(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const Text(
-                      'Private orbit',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: GaussColors.brassLight,
-                        fontSize: GaussTypeScale.caption,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: .2,
-                      ),
+        // Near-opaque card: no live blur over the animated sky.
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            color: GaussColors.deepInk.withValues(alpha: .96),
+            borderRadius: BorderRadius.circular(30),
+            border: Border.all(color: GaussColors.brass.withValues(alpha: .48)),
+            boxShadow: const [
+              BoxShadow(color: Color(0xB0000000), blurRadius: 34),
+            ],
+          ),
+          child: Padding(
+            padding: EdgeInsets.all(compact ? 18 : 26),
+            child: AutofillGroup(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const Text(
+                    'Private orbit',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: GaussColors.brassLight,
+                      fontSize: GaussTypeScale.caption,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: .2,
                     ),
-                    const SizedBox(height: 14),
-                    _AuthModeSelector(
-                      mode: controller.mode,
-                      enabled: !controller.busy,
-                      onChanged: controller.setMode,
+                  ),
+                  const SizedBox(height: 14),
+                  _AuthModeSelector(
+                    mode: controller.mode,
+                    enabled: !controller.busy,
+                    onChanged: controller.setMode,
+                  ),
+                  const SizedBox(height: 20),
+                  TextField(
+                    key: const ValueKey('auth-email-field'),
+                    controller: email,
+                    focusNode: emailFocus,
+                    enabled: !controller.busy,
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
+                    autofillHints: const [AutofillHints.email],
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    onSubmitted: (_) => passwordFocus.requestFocus(),
+                    decoration: const InputDecoration(
+                      labelText: 'Email',
+                      hintText: 'you@example.com',
+                      prefixIcon: Icon(Icons.alternate_email_rounded),
                     ),
-                    const SizedBox(height: 20),
-                    TextField(
-                      key: const ValueKey('auth-email-field'),
-                      controller: email,
-                      focusNode: emailFocus,
-                      enabled: !controller.busy,
-                      keyboardType: TextInputType.emailAddress,
-                      textInputAction: TextInputAction.next,
-                      autofillHints: const [AutofillHints.email],
-                      autocorrect: false,
-                      enableSuggestions: false,
-                      onSubmitted: (_) => passwordFocus.requestFocus(),
-                      decoration: const InputDecoration(
-                        labelText: 'Email',
-                        hintText: 'you@example.com',
-                        prefixIcon: Icon(Icons.alternate_email_rounded),
-                      ),
-                    ),
-                    const SizedBox(height: 14),
-                    TextField(
-                      key: const ValueKey('auth-password-field'),
-                      controller: password,
-                      focusNode: passwordFocus,
-                      enabled: !controller.busy,
-                      obscureText: obscurePassword,
-                      keyboardType: TextInputType.visiblePassword,
-                      textInputAction: TextInputAction.done,
-                      autofillHints: creating
-                          ? const [AutofillHints.newPassword]
-                          : const [AutofillHints.password],
-                      autocorrect: false,
-                      enableSuggestions: false,
-                      onSubmitted: (_) => onSubmit(),
-                      decoration: InputDecoration(
-                        labelText: 'Password',
-                        helperText: creating ? 'At least 10 characters' : null,
-                        prefixIcon: const Icon(Icons.lock_outline_rounded),
-                        suffixIcon: IconButton(
-                          key: const ValueKey('auth-password-visibility'),
-                          tooltip: obscurePassword
-                              ? 'Show password'
-                              : 'Hide password',
-                          onPressed: controller.busy ? null : onTogglePassword,
-                          icon: Icon(
-                            obscurePassword
-                                ? Icons.visibility_outlined
-                                : Icons.visibility_off_outlined,
-                          ),
+                  ),
+                  const SizedBox(height: 14),
+                  TextField(
+                    key: const ValueKey('auth-password-field'),
+                    controller: password,
+                    focusNode: passwordFocus,
+                    enabled: !controller.busy,
+                    obscureText: obscurePassword,
+                    keyboardType: TextInputType.visiblePassword,
+                    textInputAction: TextInputAction.done,
+                    autofillHints: creating
+                        ? const [AutofillHints.newPassword]
+                        : const [AutofillHints.password],
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    onSubmitted: (_) => onSubmit(),
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                      helperText: creating ? 'At least 10 characters' : null,
+                      prefixIcon: const Icon(Icons.lock_outline_rounded),
+                      suffixIcon: IconButton(
+                        key: const ValueKey('auth-password-visibility'),
+                        tooltip: obscurePassword
+                            ? 'Show password'
+                            : 'Hide password',
+                        onPressed: controller.busy ? null : onTogglePassword,
+                        icon: Icon(
+                          obscurePassword
+                              ? Icons.visibility_outlined
+                              : Icons.visibility_off_outlined,
                         ),
                       ),
                     ),
-                    if (controller.message != null) ...[
-                      const SizedBox(height: 14),
-                      Semantics(
-                        liveRegion: true,
-                        child: Text(
-                          controller.message!,
-                          key: const ValueKey('auth-message'),
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            color: GaussColors.warning,
-                            fontSize: GaussTypeScale.metadata,
-                            height: 1.45,
-                          ),
+                  ),
+                  if (controller.message != null) ...[
+                    const SizedBox(height: 14),
+                    Semantics(
+                      liveRegion: true,
+                      child: Text(
+                        controller.message!,
+                        key: const ValueKey('auth-message'),
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: GaussColors.warning,
+                          fontSize: GaussTypeScale.metadata,
+                          height: 1.45,
                         ),
                       ),
-                    ],
-                    const SizedBox(height: 20),
-                    _OrbitSubmitAction(
-                      creating: creating,
-                      busy: controller.busy,
-                      onPressed: controller.busy ? null : onSubmit,
-                    ),
-                    if (!creating) ...[
-                      const SizedBox(height: 4),
-                      TextButton(
-                        key: const ValueKey('auth-forgot-password'),
-                        onPressed: controller.busy
-                            ? null
-                            : () => controller.resendRecovery(email.text),
-                        child: const Text('Forgot password?'),
-                      ),
-                    ],
-                    const SizedBox(height: 12),
-                    _AuthAssuranceRow(
-                      icon: creating
-                          ? Icons.verified_user_outlined
-                          : Icons.lock_person_outlined,
-                      text: creating
-                          ? 'No email verification'
-                          : 'Private progress. Synced securely.',
-                    ),
-                    const SizedBox(height: 8),
-                    const _AuthAssuranceRow(
-                      icon: Icons.cloud_done_outlined,
-                      text: 'Works offline after sign in',
                     ),
                   ],
-                ),
+                  const SizedBox(height: 20),
+                  _OrbitSubmitAction(
+                    creating: creating,
+                    busy: controller.busy,
+                    onPressed: controller.busy ? null : onSubmit,
+                  ),
+                  if (!creating) ...[
+                    const SizedBox(height: 4),
+                    TextButton(
+                      key: const ValueKey('auth-forgot-password'),
+                      onPressed: controller.busy
+                          ? null
+                          : () => controller.resendRecovery(email.text),
+                      child: const Text('Forgot password?'),
+                    ),
+                  ],
+                  const SizedBox(height: 12),
+                  _AuthAssuranceRow(
+                    icon: creating
+                        ? Icons.verified_user_outlined
+                        : Icons.lock_person_outlined,
+                    text: creating
+                        ? 'No email verification'
+                        : 'Private progress. Synced securely.',
+                  ),
+                  const SizedBox(height: 8),
+                  const _AuthAssuranceRow(
+                    icon: Icons.cloud_done_outlined,
+                    text: 'Works offline after sign in',
+                  ),
+                ],
               ),
             ),
           ),

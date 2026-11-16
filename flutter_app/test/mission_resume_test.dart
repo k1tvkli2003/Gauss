@@ -297,8 +297,8 @@ void main() {
       final header = tester.getRect(
         find.byKey(const ValueKey('mission-question-header-axis')),
       );
-      final wordmark = tester.getCenter(
-        find.byKey(const ValueKey('mission-centered-wordmark')),
+      final progress = tester.getCenter(
+        find.byKey(const ValueKey('mission-question-progress')),
       );
       final close = tester.getRect(
         find.byKey(const ValueKey('mission-close-action')),
@@ -312,7 +312,7 @@ void main() {
       final dockBefore = tester.getRect(
         find.byKey(const ValueKey('mission-question-action-dock')),
       );
-      expect(wordmark.dx, closeTo(header.center.dx, .5));
+      expect(progress.dx, closeTo(header.center.dx, .5));
       expect(
         header.center.dx - close.center.dx,
         closeTo(scratchpad.center.dx - header.center.dx, .5),
