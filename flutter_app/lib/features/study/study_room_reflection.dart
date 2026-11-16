@@ -21,13 +21,9 @@ class _ReflectionDeck extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            GaussColors.signal.withValues(alpha: .09),
-            GaussColors.deepInk.withValues(alpha: .96),
-          ],
+        color: Color.alphaBlend(
+          GaussColors.signal.withValues(alpha: .07),
+          GaussColors.deepInk,
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(

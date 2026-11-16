@@ -45,15 +45,7 @@ class MapGamificationHud extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           child: Ink(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  GaussColors.panelHigh.withValues(alpha: .92),
-                  GaussColors.deepInk.withValues(alpha: .95),
-                  GaussColors.abyss.withValues(alpha: .94),
-                ],
-              ),
+              color: GaussColors.deepInk.withValues(alpha: .96),
               borderRadius: BorderRadius.circular(GaussRadii.large),
               border: Border.all(
                 color: GaussColors.brassLight.withValues(alpha: .28),

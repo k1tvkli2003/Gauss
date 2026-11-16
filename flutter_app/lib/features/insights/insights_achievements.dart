@@ -158,12 +158,14 @@ class _AchievementPlateCopy extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 2),
+        // Earned levels speak in their rarity color; an unearned plate
+        // stays neutral so it never reads as already won.
         Text(
           earned?.title ?? 'Uncharted',
           textAlign: textAlign,
           style: TextStyle(
-            color: color,
-            fontSize: 10.5,
+            color: earned == null ? GaussColors.muted : color,
+            fontSize: GaussTypeScale.caption + 1,
             fontWeight: FontWeight.w800,
           ),
         ),
@@ -173,7 +175,7 @@ class _AchievementPlateCopy extends StatelessWidget {
           textAlign: textAlign,
           style: const TextStyle(
             color: GaussColors.muted,
-            fontSize: 10,
+            fontSize: GaussTypeScale.caption + 1,
             height: 1.35,
           ),
         ),
